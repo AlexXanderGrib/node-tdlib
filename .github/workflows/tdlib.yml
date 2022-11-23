@@ -1,0 +1,119 @@
+name: Prebuild TDLib
+on:
+  workflow_dispatch:
+    inputs:
+      tdlib:
+        description: "TDLib git ref (e.g. v1.8.0 or a commit hash)"
+        type: string
+        required: true
+
+jobs:
+  build-linux-x64:
+    name: Build TDLib on Linux x86_64 (glibc)
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: "tdlib/td"
+          ref: ${{ inputs.tdlib }}
+      - name: Install gperf
+        run: sudo apt-get install -y -q gperf clang-14 libc++-dev libc++abi-dev tar wget
+      - name: Install latest CMake
+        run: |
+          wget https://github.com/Kitware/CMake/releases/download/v3.25.0/cmake-3.25.0-linux-x86_64.sh 
+          chmod +x ./cmake-*.sh
+          mkdir cmake
+          ./cmake-*.sh --prefix=./cmake --skip-license
+          sudo cp -RTv ./cmake /usr/
+          cmake --version
+
+      - name: Build TDLib
+        run: |
+          mkdir -p build && cd build
+          cmake  -DCMAKE_CXX_COMPILER=/usr/bin/clang++-14 -DCMAKE_C_COMPILER=/usr/bin/clang-14 \
+            -DCMAKE_BUILD_TYPE=Release -DTD_ENABLE_LTO=ON -DCMAKE_INSTALL_PREFIX:PATH=../tdlib \
+            -DCMAKE_AR=/usr/bin/llvm-ar-14 -DCMAKE_NM=/usr/bin/llvm-nm-14 \
+            -DCMAKE_OBJDUMP=/usr/bin/llvm-objdump-14 -DCMAKE_RANLIB=/usr/bin/llvm-ranlib-14 \
+            -DOPENSSL_USE_STATIC_LIBS=TRUE -DZLIB_USE_STATIC_LIBS=TRUE  ..
+          cmake --build . --target tdjson -- -j 3
+          cd ..
+      - name: Strip
+        run: strip build/libtdjson.so
+      - name: Info
+        run: |
+          uname -a
+          ldd --version
+          openssl version
+          ldd build/libtdjson.so
+      - uses: actions/upload-artifact@v3
+        with:
+          name: tdlib-linux-x64
+          path: build/libtdjson.so
+
+  build-macos-x64:
+    name: Build TDLib on macOS x86_64
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: "tdlib/td"
+          ref: ${{ inputs.tdlib }}
+      - name: Install dependencies
+        run: HOMEBREW_NO_INSTALL_CLEANUP=1 brew install gperf openssl zlib cmake
+      - name: CMake version
+        run: cmake --version
+      - name: Build TDLib
+        run: |
+          mkdir -p build && cd build
+          cmake -DCMAKE_BUILD_TYPE=Release \
+            -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl \
+            -DZLIB_INCLUDE_DIR=/usr/local/opt/zlib/include \
+            -DZLIB_LIBRARY=/usr/local/opt/zlib/lib/libz.a \
+            -DOPENSSL_USE_STATIC_LIBS=TRUE -DZLIB_USE_STATIC_LIBS=TRUE ..
+          cmake --build . --target tdjson -- -j 3
+          cd ..
+      - name: Info
+        run: |
+          uname -a
+          /usr/local/opt/openssl/bin/openssl version
+          otool -L build/libtdjson.dylib
+      - uses: actions/upload-artifact@v3
+        with:
+          name: tdlib-macos-x64
+          path: build/libtdjson.dylib
+  
+  build-windows-x64:
+    name: Build TDLib on Windows x86_64
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: "tdlib/td"
+          ref: ${{ inputs.tdlib }}
+      - name: vcpkg cache
+        uses: actions/cache@v3
+        with:
+          path: '~\AppData\Local\vcpkg\archives'
+          key: windows-vcpkg-${{ github.run_id }}
+          restore-keys: |
+            windows-vcpkg-
+      - name: Install dependencies using vcpkg
+        run: vcpkg install gperf:x64-windows-static openssl:x64-windows-static zlib:x64-windows-static
+      - name: CMake version
+        run: cmake --version
+      - name: Build TDLib
+        shell: pwsh
+        run: |
+          mkdir build
+          cd build
+          cmake -A x64 `
+            -DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake `
+            -DVCPKG_TARGET_TRIPLET=x64-windows-static `
+            -DOPENSSL_USE_STATIC_LIBS=TRUE -DZLIB_USE_STATIC_LIBS=TRUE ..
+          cmake --build . --target tdjson --config Release --parallel 2
+          cd ..
+        # It should be possible to print the dependencies using dumpbin.exe
+      - uses: actions/upload-artifact@v3
+        with:
+          name: tdlib-windows-x64
+          path: build\Release\tdjson.dll
