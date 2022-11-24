@@ -4,6 +4,7 @@ on:
     inputs:
       tdlib:
         # https://github.com/tdlib/td/search?q=Update+version+to&type=commits
+        # bbe37ee594d97f3c7820dd23ebcd9c9b8dac51a0 - 1.8.8
         description: "TDLib git ref (e.g. v1.8.0 or a commit hash)"
         type: string
         required: true
@@ -37,6 +38,6 @@ jobs:
           ref: ${{ inputs.tdlib }}
       - name: Build for WASM
         run: |
-          cd td/examples/web
+          cd examples/web
           ./build-openssl.sh
           ./build-tdlib.sh
