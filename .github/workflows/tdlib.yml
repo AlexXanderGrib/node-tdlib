@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       tdlib:
+        # https://github.com/tdlib/td/search?q=Update+version+to&type=commits
         description: "TDLib git ref (e.g. v1.8.0 or a commit hash)"
         type: string
         required: true
@@ -97,7 +98,7 @@ jobs:
         with:
           name: tdlib-macos-x64
           path: build/libtdjson.dylib
-  
+
   build-windows-x64:
     name: Build TDLib on Windows 64
     runs-on: windows-2022
@@ -147,12 +148,20 @@ jobs:
             tdlib-windows-x64
             meta
             schema
+
+      - run: |
+          mv tdlib-macos-x64/* ./
+          mv tdlib-linux-x64/* ./
+          mv tdlib-windows-x64/* ./
+          mv meta/* ./
+          mv schema/* ./
+
       - uses: actions/upload-artifact@v3
         with:
-          name: dist
+          name: td
           path: |
-            tdlib-macos-x64/libtdjson.dylib
-            tdlib-linux-x64/libtdjson.so
-            tdlib-windows-x64/tdjson.dll
-            meta/meta.yml
-            schema/td_api.tl
+            libtdjson.dylib
+            libtdjson.so
+            tdjson.dll
+            meta.yml
+            td_api.tl
