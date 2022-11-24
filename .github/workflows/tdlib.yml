@@ -76,13 +76,13 @@ jobs:
       - name: Update Homebrew
         run: |
           brew update --preinstall
+          mkdir -p .github
           cat "$(brew --repository)/Library/Taps/homebrew/homebrew-core/Formula/foo.rb" > .github/brew-formulae
       - name: Configure Homebrew cache
         uses: actions/cache@v2
         with:
           path: |
-            ~/Library/Caches/Homebrew/foo--*
-            ~/Library/Caches/Homebrew/downloads/*--foo-*
+            ~/Library/Caches/Homebrew
           key: brew-${{ hashFiles('.github/brew-formulae') }}
           restore-keys: brew-
       - name: Install dependencies
