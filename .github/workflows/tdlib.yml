@@ -49,7 +49,22 @@ jobs:
         with:
           name: tdlib-linux-x64
           path: build/libtdjson.so
+      - name: Get Meta
+        run: |
+          rm meta.yml -f
+          TDLIB_VERSION=`grep -oP "(?<=project\\(TDLib VERSION ).*?(?= LANGUAGES CXX C\\))" CMakeLists.txt`
+          TDLIB_COMMIT_HASH=`git rev-parse HEAD`
 
+          echo "version: $TDLIB_VERSION" >> meta.yml
+          echo "commit-hash: $TDLIB_COMMIT_HASH" >> meta.yml
+      - uses: actions/upload-artifact@v3
+        with:
+          name: meta
+          path: meta.yml
+      - uses: actions/upload-artifact@v3
+        with:
+          name: schema.tl
+          path: td/generate/scheme/td_api.tl
   build-macos-x64:
     name: Build TDLib on macOS x86_64
     runs-on: macos-latest
@@ -71,7 +86,7 @@ jobs:
           key: brew-${{ hashFiles('.github/brew-formulae') }}
           restore-keys: brew-
       - name: Install dependencies
-        run: HOMEBREW_NO_INSTALL_CLEANUP=1 brew install gperf openssl zlib cmake
+        run: HOMEBREW_NO_INSTALL_CLEANUP=1 brew install gperf openssl zlib
       - name: CMake version
         run: cmake --version
       - name: Build TDLib
