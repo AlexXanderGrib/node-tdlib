@@ -35,7 +35,7 @@ jobs:
             -DCMAKE_AR=/usr/bin/llvm-ar-14 -DCMAKE_NM=/usr/bin/llvm-nm-14 \
             -DCMAKE_OBJDUMP=/usr/bin/llvm-objdump-14 -DCMAKE_RANLIB=/usr/bin/llvm-ranlib-14 \
             -DOPENSSL_USE_STATIC_LIBS=TRUE -DZLIB_USE_STATIC_LIBS=TRUE  ..
-          cmake --build . --target tdjson -- -j 3
+          cmake --build . --target tdjson -- -j 2
           cd ..
       - name: Strip
         run: strip build/libtdjson.so
@@ -66,6 +66,7 @@ jobs:
         run: |
           mkdir -p build && cd build
           cmake -DCMAKE_BUILD_TYPE=Release \
+            -DTD_ENABLE_LTO=ON \
             -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl \
             -DZLIB_INCLUDE_DIR=/usr/local/opt/zlib/include \
             -DZLIB_LIBRARY=/usr/local/opt/zlib/lib/libz.a \
@@ -83,8 +84,8 @@ jobs:
           path: build/libtdjson.dylib
   
   build-windows-x64:
-    name: Build TDLib on Windows x86_64
-    runs-on: windows-2019
+    name: Build TDLib on Windows 64
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v3
         with:
