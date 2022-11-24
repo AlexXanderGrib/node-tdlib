@@ -13,10 +13,6 @@ jobs:
     name: Build TDLib for Web
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-        with:
-          repository: "tdlib/td"
-          ref: ${{ inputs.tdlib }}
       - name: Install gperf
         run: sudo apt-get install -y -q gperf clang-14 libc++-dev libc++abi-dev tar wget
       - name: Install latest CMake
@@ -35,11 +31,12 @@ jobs:
           ./emsdk install 3.1.1
           ./emsdk activate 3.1.1
           source ./emsdk_env.sh
-          cd ..
-
+      - uses: actions/checkout@v3
+        with:
+          repository: "tdlib/td"
+          ref: ${{ inputs.tdlib }}
       - name: Build for WASM
         run: |
-          cd examples/web
+          cd td/examples/web
           ./build-openssl.sh
           ./build-tdlib.sh
-
