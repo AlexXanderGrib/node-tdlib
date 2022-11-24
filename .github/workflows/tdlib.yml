@@ -58,6 +58,18 @@ jobs:
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
+      - name: Update Homebrew
+        run: |
+          brew update --preinstall
+          cat "$(brew --repository)/Library/Taps/homebrew/homebrew-core/Formula/foo.rb" > .github/brew-formulae
+      - name: Configure Homebrew cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/Library/Caches/Homebrew/foo--*
+            ~/Library/Caches/Homebrew/downloads/*--foo-*
+          key: brew-${{ hashFiles('.github/brew-formulae') }}
+          restore-keys: brew-
       - name: Install dependencies
         run: HOMEBREW_NO_INSTALL_CLEANUP=1 brew install gperf openssl zlib cmake
       - name: CMake version
