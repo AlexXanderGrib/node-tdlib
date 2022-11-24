@@ -24,7 +24,12 @@ jobs:
           ./cmake-*.sh --prefix=./cmake --skip-license
           sudo cp -RTv ./cmake /usr/
           cmake --version
-      - name: Install emscripten
+      - uses: actions/checkout@v3
+        with:
+          repository: "tdlib/td"
+          ref: ${{ inputs.tdlib }}
+
+      - name: Build for WASM
         run: |
           git clone https://github.com/emscripten-core/emsdk.git
           cd emsdk
@@ -32,12 +37,8 @@ jobs:
           ./emsdk install 3.1.1
           ./emsdk activate 3.1.1
           source ./emsdk_env.sh
-      - uses: actions/checkout@v3
-        with:
-          repository: "tdlib/td"
-          ref: ${{ inputs.tdlib }}
-      - name: Build for WASM
-        run: |
+          cd ..
+
           cd example/web
           ./build-openssl.sh
           ./build-tdlib.sh
