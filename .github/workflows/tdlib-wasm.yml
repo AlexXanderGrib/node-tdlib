@@ -38,6 +38,7 @@ jobs:
           ref: ${{ inputs.tdlib }}
       - name: Build for WASM
         run: |
+          ls
           cd examples/web
           ./build-openssl.sh
           ./build-tdlib.sh
