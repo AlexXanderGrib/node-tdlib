@@ -1,7 +1,6 @@
-/* eslint-disable unicorn/prefer-module */
 import path from "path";
-import url from "url";
 import type { TDLib, TDLibClient } from "../shared/client";
+import { getAddonFolderPath } from "./path";
 
 export interface Addon {
   td_client_create(): TDLibClient;
@@ -22,31 +21,39 @@ export interface Addon {
 /**
  *
  *
- * @return {string}  {string}
+ * @param {string} [addonPath]
+ * @return {Addon}  {Addon}
  */
-function getCurrentPath(): string {
-  if (typeof __dirname === "string") {
-    return __dirname;
-  }
+async function loadAddon(addonPath?: string): Promise<Addon> {
+  addonPath ??= path.resolve(getAddonFolderPath(), "../../build/Release/td.node");
+  const addon: Addon = await import(addonPath);
 
-  if (typeof import.meta?.url === "string") {
-    return url.fileURLToPath(import.meta.url);
-  }
-
-  throw new Error("Unable to get current path");
+  return addon;
 }
 
 /**
  *
  *
- * @param {string} [addonPath]
- * @return {Addon}  {Addon}
+ * @return {string}  {string}
  */
-async function loadAddon(addonPath?: string): Promise<Addon> {
-  addonPath ??= path.resolve(getCurrentPath(), "../../build/Release/td.node");
-  const addon: Addon = await import(addonPath);
+function getTDLibName(): string {
+  switch (process.platform) {
+    case "win32": {
+      return "tdjson.dll";
+    }
 
-  return addon;
+    case "linux": {
+      return "libtdjson.so";
+    }
+
+    case "darwin": {
+      return "libtdjson.dylib";
+    }
+
+    default: {
+      throw new Error(`There is no precompiled TDLib for "${process.platform}"`);
+    }
+  }
 }
 
 /**
@@ -61,12 +68,15 @@ export class TDLibAddon implements TDLib {
    *
    *
    * @static
-   * @param {string} tdlibPath
+   * @param {string} [tdlibPath] Resolves to prebuild TDLib for your platform
    * @param {string} [addonPath]
    * @return {Promise<TDLib>}
    * @memberof TDLibAddon
    */
-  static async create(tdlibPath: string, addonPath?: string): Promise<TDLib> {
+  static async create(
+    tdlibPath = path.resolve(getAddonFolderPath(), "../../td", getTDLibName()),
+    addonPath?: string
+  ): Promise<TDLib> {
     const addon = await loadAddon(addonPath);
     addon.load_tdjson(tdlibPath);
 

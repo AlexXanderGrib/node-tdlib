@@ -6,6 +6,7 @@
     "test": "jest",
     "clean:dist": "rm -rf dist",
     "clean:gyp": "node-gyp clean",
+    "build:types": "node scripts/generate-types.js",
     "build:dist": "rollup -c",
     "build:docs": "typedoc",
     "build:gyp": "node-gyp rebuild",
@@ -30,6 +31,16 @@
       "require": "./index.js",
       "import": "./index.mjs",
       "types": "./index.d.ts"
+    },
+    "./addon": {
+      "require": "./addon.js",
+      "import": "./addon.mjs",
+      "types": "./addon.d.ts"
+    },
+    "./types": {
+      "require": "./types.js",
+      "import": "./types.mjs",
+      "types": "./types.d.ts"
     }
   },
   "publishConfig": {
@@ -63,12 +74,17 @@
     "index.js",
     "index.mjs",
     "index.d.ts",
+    "addon.js",
+    "addon.mjs",
+    "addon.d.ts",
+    "types.d.ts",
     "README.md",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
     "LICENSE.txt",
     "SECURITY.md",
-    "CODE_OF_CONDUCT.md"
+    "CODE_OF_CONDUCT.md",
+    "td/"
   ],
   "author": "Alexander Gribochkin <me@alexxgrib.me> (https://alexxgrib.me/)",
   "license": "MIT",
@@ -81,6 +97,7 @@
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
+    "dotenv": "^16.0.3",
     "eslint": "^8.28.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
