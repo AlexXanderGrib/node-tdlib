@@ -1,1 +1,1 @@
-module.exports = require("./dist/cjs/types");
+module.exports = require("./dist/types.js");

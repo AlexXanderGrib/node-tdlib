@@ -34,7 +34,7 @@
 
 #### Defined in
 
-dist/cjs/client.d.ts:4
+dist/client.d.ts:4
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-dist/cjs/event-bus.d.ts:1
+dist/event-bus.d.ts:1
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-dist/cjs/event-bus.d.ts:2
+dist/event-bus.d.ts:2
 
 ## Variables
 
@@ -92,6 +92,6 @@ dist/cjs/event-bus.d.ts:2
 
 #### Defined in
 
-dist/cjs/shared/client.d.ts:1
+dist/shared/client.d.ts:1
 
-dist/cjs/shared/client.d.ts:2
+dist/shared/client.d.ts:2

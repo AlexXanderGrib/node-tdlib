@@ -6,6 +6,7 @@ import prettier from "rollup-plugin-prettier";
 
 import packageJson from "./package.json" assert { type: "json" };
 import prettierConfig from "./.prettierrc.json" assert { type: "json" };
+import replace from "@rollup/plugin-replace";
 
 /** @type {import('rollup').RollupOptions} */
 const config = {
@@ -16,7 +17,7 @@ const config = {
   ],
   output: [
     {
-      dir: "./dist/cjs",
+      dir: "./dist",
       format: "commonjs",
       exports: "named",
       preserveModules: true,
@@ -28,10 +29,11 @@ const config = {
         objectShorthand: true
       },
       externalLiveBindings: false,
-      minifyInternalExports: true
+      minifyInternalExports: true,
+      plugins: [replace({ values: { "process.env.__filename": "__filename" } })]
     },
     {
-      dir: "./dist/esm",
+      dir: "./dist",
       format: "module",
       exports: "named",
       preserveModules: true,
@@ -43,7 +45,14 @@ const config = {
         objectShorthand: true
       },
       externalLiveBindings: false,
-      minifyInternalExports: true
+      minifyInternalExports: true,
+      plugins: [
+        replace({
+          values: {
+            "process.env.__filename": "new URL('', import.meta.url).pathname"
+          }
+        })
+      ]
     }
   ],
   treeshake: {

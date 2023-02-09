@@ -4,10 +4,16 @@
 
 ## Table of contents
 
-### Namespaces
+### References
 
-- [default](addon.default.md)
+- [default](addon.md#default)
 
 ### Classes
 
 - [TDLibAddon](../classes/addon.TDLibAddon.md)
+
+## References
+
+### default
+
+Renames and re-exports [TDLibAddon](../classes/addon.TDLibAddon.md)

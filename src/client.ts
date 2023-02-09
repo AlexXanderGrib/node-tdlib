@@ -1,10 +1,16 @@
 import type { TDLib, TDLibClient } from "./shared/client";
-import type { error, Update, __functions } from "./generated/types";
+import type { error, Update, $MethodsDict } from "./generated/types";
 import * as JSON from "./json";
-import { AsyncData } from "./async";
+import { AsyncData } from "./shared/async";
 import { EventBus, Observable } from "./event-bus";
 
 type OmitType<T extends { _: string }> = Omit<T, "_">;
+
+const enum ClientState {
+  RUNNING = "RUNNING",
+  STOPPED = "STOPPED",
+  PAUSED = "PAUSED"
+}
 
 /**
  *
@@ -28,7 +34,7 @@ export class TDError extends Error implements error {
    */
   constructor(
     message: string,
-    { code = 0, method = "[Placeholder]", parameters = {} as unknown } = {}
+    { code = Number.NaN, method = "unknown method", parameters = {} as unknown } = {}
   ) {
     super(message);
     this.code = code;
@@ -47,7 +53,7 @@ export class Client {
   private readonly _client: TDLibClient;
   private readonly _requests: Map<number, AsyncData> = new Map();
   private readonly _updates: EventBus<Update> = new EventBus();
-  private _stopped = false;
+  private _state = ClientState.PAUSED;
 
   /**
    * Creates an instance of Client.
@@ -58,27 +64,41 @@ export class Client {
     this._client = _adapter.create();
   }
 
+  readonly api = new Proxy(
+    Object.freeze({}) as {
+      readonly [key in keyof $MethodsDict]: (
+        parameters: OmitType<Parameters<$MethodsDict[key]>[0]>
+      ) => Promise<ReturnType<$MethodsDict[key]>>;
+    },
+    {
+      get: (_target, method) => {
+        return (parameters: any) =>
+          this.invoke(method as keyof $MethodsDict, parameters);
+      }
+    }
+  );
+
   /**
    *
    *
-   * @template {keyof __functions} T
+   * @template {keyof $MethodsDict} T
    * @param {T} method
    * @param {object} parameters
-   * @return {object}  {Promise<ReturnType<__functions[T]>>}
+   * @return {object}  {Promise<ReturnType<$MethodsDict[T]>>}
    * @throws {TDError} - {@link TDError}
    * @memberof Client
    */
-  async invoke<T extends keyof __functions>(
+  async invoke<T extends keyof $MethodsDict>(
     method: T,
-    parameters: OmitType<Parameters<__functions[T]>[0]>
-  ): Promise<ReturnType<__functions[T]>> {
+    parameters: OmitType<Parameters<$MethodsDict[T]>[0]>
+  ): Promise<ReturnType<$MethodsDict[T]>> {
     const extra = Math.random();
-    Object.assign(parameters, { _: method, "@extra": extra });
-    this._adapter.send(this._client, JSON.serialize(parameters));
 
-    const result = new AsyncData<ReturnType<__functions[T]>>(() => {
-      /** empty */
+    assignTemporary(parameters, { _: method, "@extra": extra }, (merged) => {
+      this._adapter.send(this._client, JSON.serialize(merged));
     });
+
+    const result = new AsyncData<ReturnType<$MethodsDict[T]>>();
 
     this._requests.set(extra, result);
     return result.catch((error: error) => {
@@ -93,8 +113,9 @@ export class Client {
    * @memberof Client
    */
   private async _thread() {
-    while (!this._stopped) {
+    while (this._state === ClientState.RUNNING) {
       const value = await this._adapter.receive(this._client, 3000);
+
       if (!value) {
         continue;
       }
@@ -147,10 +168,32 @@ export class Client {
   /**
    *
    *
+   * @return {this}
    * @memberof Client
    */
   start() {
-    this._thread();
+    if (this._state === ClientState.PAUSED) {
+      this._state = ClientState.RUNNING;
+      this._thread();
+      return this;
+    }
+
+    throw new Error("Cannot start: This client is running or destroyed");
+  }
+
+  /**
+   *
+   *
+   * @return {this}
+   * @memberof Client
+   */
+  pause() {
+    if (this._state === ClientState.RUNNING) {
+      this._state = ClientState.PAUSED;
+      return this;
+    }
+
+    throw new Error("Cannot pause: This client is paused or destroyed");
   }
 
   /**
@@ -159,10 +202,38 @@ export class Client {
    * @return {void}
    * @memberof Client
    */
-  stop(): void {
-    if (this._stopped) return;
+  destroy(): void {
+    if (this._state === ClientState.STOPPED) return;
 
-    this._stopped = true;
+    this._state = ClientState.STOPPED;
+    this._updates.complete();
     this._adapter.destroy(this._client);
   }
+}
+
+/**
+ *
+ *
+ * @template T
+ * @template X
+ * @template R
+ * @param {T} object
+ * @param {X} data
+ * @param {function(merged: X): R} callback
+ * @return {R}
+ */
+function assignTemporary<T extends {}, X extends Record<string, unknown>, R = void>(
+  object: T,
+  data: X,
+  callback: (merged: X & T) => R
+): R {
+  const merged = Object.assign(object, data);
+  const result = callback(merged);
+
+  for (const key of Object.keys(data)) {
+    // eslint-disable-next-line security/detect-object-injection
+    delete (object as any)[key];
+  }
+
+  return result;
 }

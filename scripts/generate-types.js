@@ -109,6 +109,15 @@ function parseTd(declarationWithCommends) {
 
   return parsed;
 }
+/**
+ *
+ *
+ * @param {string} comment
+ * @return {string}
+ */
+function splitComments(comment) {
+  return comment.replace(/\n/g, "\n * \n * ");
+}
 
 /**
  *
@@ -153,7 +162,7 @@ export type ${getInputAlias(declaration.name)} = {
     .map(
       ([key, value]) => `
     /**
-     * ${(declaration.comments?.[key] ?? "").replace(/\n/g, "\n * ")}
+     * ${splitComments(declaration.comments?.[key] ?? "")}
      * @type {${getInputAlias(value)}} {@link ${value}}
      */
     readonly ${key}?: ${getInputAlias(value)};
@@ -163,9 +172,11 @@ export type ${getInputAlias(declaration.name)} = {
 };
 
 /**
- * ${declaration.comments?.description ?? ""}
+ * ${splitComments(declaration.comments?.description ?? "")}
  * 
- * @param {${getInputAlias(declaration.name)}} parameters
+ * @param {${getInputAlias(declaration.name)}} parameters {@link ${getInputAlias(
+    declaration.name
+  )}}
  * @return {${declaration.result}} {@link ${declaration.result}}
  */
 export type ${declaration.name} = (parameters: ${getInputAlias(
@@ -195,15 +206,22 @@ export type ${declaration.name} = {
       .map(
         ([key, value]) => `
       /**
-       * ${(declaration.comments?.[key] ?? "").replace(/\n/g, "\n * \n * ")}
+       * ${splitComments(declaration.comments?.[key] ?? "")}
        * @type {${value}} {@link ${value}}
        */
-      ${key}: ${value}
+      ${key}: ${value}${
+          declaration.comments?.[key].includes("may be null") ? "| null" : ""
+        }
     `
       )
       .join("\n")}
   }
   
+
+/**
+ * Version of {@link ${declaration.name}} for method parameters.
+ * ${splitComments(declaration.comments?.description ?? "")}
+ */
 export type ${getInputAlias(declaration.name)} = {
   readonly _: "${declaration.name}";
   
@@ -211,10 +229,12 @@ export type ${getInputAlias(declaration.name)} = {
     .map(
       ([key, value]) => `
     /**
-     * ${(declaration.comments?.[key] ?? "").replace(/\n/g, "\n * \n * ")}
+     * ${splitComments(declaration.comments?.[key] ?? "")}
      * @type {${value}} {@link ${value}}
      */
-    readonly ${key}?: ${getInputAlias(value)}
+    readonly ${key}?: ${getInputAlias(value)} ${
+        declaration.comments?.[key].includes("may be null") ? "| null" : ""
+      }
   `
     )
     .join("\n")}
@@ -276,12 +296,57 @@ types.forEach((declaration) => {
   }
 });
 
+/**
+ *
+ *
+ * @param {string[]} strings
+ * @return {string}
+ */
+function getCommonStart(strings) {
+  let commonStart = "";
+
+  strings.forEach((string, index) => {
+    if (index === 0) {
+      commonStart = string;
+      return;
+    }
+
+    if (string.startsWith(commonStart)) return;
+
+    for (let i = 0; i < commonStart.length; i++) {
+      if (commonStart[i] === string[i]) continue;
+
+      commonStart = commonStart.slice(0, i);
+      break;
+    }
+  });
+
+  return commonStart;
+}
+
 Object.values(namespaces).forEach((ref) => {
   Object.entries(ref.joins).forEach(([key, set]) => {
     const types = [...set];
     const inputs = types.map((type) => getInputAlias(type));
+    const generateEnum = types.length > 1;
 
-    ref.types.push(`
+    if (generateEnum) {
+      const enumName = key + "$Type";
+      const commonStart = getCommonStart(types);
+
+      ref.types.unshift(`export const enum ${enumName} {
+        ${types
+          .map((type) => {
+            let keyName = type.slice(commonStart.length);
+            if (keyName.length < 2) keyName = type[0].toUpperCase() + type.slice(1);
+
+            return `${keyName} = "${type}",`;
+          })
+          .join("\n")}
+      }`);
+    }
+
+    ref.types.push(`  
 /**
  * Any of:
 ${types.map((type) => ` * - {@link ${type}}`).join("\n")}
@@ -289,6 +354,7 @@ ${types.map((type) => ` * - {@link ${type}}`).join("\n")}
 export type ${key} = ${types.join(" | ")}
 
 /**
+ * Version of {@link ${key}} for method parameters.
  * Any of:
 ${inputs.map((type) => ` * - {@link ${type}}`).join("\n")}
  */
@@ -312,7 +378,13 @@ functions.forEach((declaration) => {
 });
 
 Object.values(namespaces).forEach((ref) => {
-  ref.types.push(`export type __functions = {
+  ref.types.unshift(`export const enum $Methods {
+    ${Object.keys(ref.functions)
+      .map((name) => `${name} = "${name}",`)
+      .join("\n")}
+  }`);
+
+  ref.types.push(`export type $MethodsDict = {
     ${Object.keys(ref.functions)
       .map((name) => `readonly ${name}: ${name};`)
       .join("\n")}

@@ -1,2 +1,2 @@
-export * from "./dist/esm/types.mjs";
-export { default } from "./dist/esm/types.mjs";
+export * from "./dist/types.mjs";
+export { default } from "./dist/types.mjs";

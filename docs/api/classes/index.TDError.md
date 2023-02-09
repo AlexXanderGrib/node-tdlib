@@ -16,7 +16,7 @@
 
 ## Implements
 
-- [`error`](../modules/types.md#error-1)
+- [`error`](../modules/index.types.default.md#error-1)
 
 ## Table of contents
 
@@ -59,7 +59,7 @@ Error.constructor
 
 #### Defined in
 
-dist/cjs/client.d.ts:26
+dist/client.d.ts:26
 
 ## Properties
 
@@ -73,7 +73,7 @@ error.\_
 
 #### Defined in
 
-dist/cjs/client.d.ts:16
+dist/client.d.ts:16
 
 ___
 
@@ -87,7 +87,7 @@ error.code
 
 #### Defined in
 
-dist/cjs/client.d.ts:17
+dist/client.d.ts:17
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-dist/cjs/client.d.ts:18
+dist/client.d.ts:18
 
 ___
 
@@ -107,4 +107,4 @@ ___
 
 #### Defined in
 
-dist/cjs/client.d.ts:19
+dist/client.d.ts:19

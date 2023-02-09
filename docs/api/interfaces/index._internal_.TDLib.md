@@ -31,7 +31,7 @@
 
 #### Defined in
 
-dist/cjs/shared/client.d.ts:4
+dist/shared/client.d.ts:4
 
 ## Methods
 
@@ -45,7 +45,7 @@ typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
 
 #### Defined in
 
-dist/cjs/shared/client.d.ts:5
+dist/shared/client.d.ts:5
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-dist/cjs/shared/client.d.ts:6
+dist/shared/client.d.ts:6
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-dist/cjs/shared/client.d.ts:7
+dist/shared/client.d.ts:7
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-dist/cjs/shared/client.d.ts:8
+dist/shared/client.d.ts:8
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-dist/cjs/shared/client.d.ts:9
+dist/shared/client.d.ts:9
 
 ___
 
@@ -148,4 +148,4 @@ ___
 
 #### Defined in
 
-dist/cjs/shared/client.d.ts:10
+dist/shared/client.d.ts:10

@@ -50,7 +50,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:35
+dist/addon/addon.d.ts:35
 
 ## Properties
 
@@ -60,7 +60,7 @@ dist/cjs/addon/addon.d.ts:35
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:19
+dist/addon/addon.d.ts:19
 
 ## Accessors
 
@@ -82,7 +82,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:42
+dist/addon/addon.d.ts:42
 
 ## Methods
 
@@ -106,7 +106,7 @@ typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:49
+dist/addon/addon.d.ts:49
 
 ___
 
@@ -134,7 +134,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:56
+dist/addon/addon.d.ts:56
 
 ___
 
@@ -165,7 +165,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:65
+dist/addon/addon.d.ts:65
 
 ___
 
@@ -196,7 +196,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:74
+dist/addon/addon.d.ts:74
 
 ___
 
@@ -225,7 +225,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:82
+dist/addon/addon.d.ts:82
 
 ___
 
@@ -253,7 +253,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:89
+dist/addon/addon.d.ts:89
 
 ___
 
@@ -280,4 +280,4 @@ TDLibAddon
 
 #### Defined in
 
-dist/cjs/addon/addon.d.ts:29
+dist/addon/addon.d.ts:29

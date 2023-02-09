@@ -1,6 +1,7 @@
 import path from "path";
 import type { TDLib, TDLibClient } from "../shared/client";
 import { getAddonFolderPath } from "./path";
+import { createRequire } from "module";
 
 export interface Addon {
   td_client_create(): TDLibClient;
@@ -25,8 +26,14 @@ export interface Addon {
  * @return {Addon}  {Addon}
  */
 async function loadAddon(addonPath?: string): Promise<Addon> {
-  addonPath ??= path.resolve(getAddonFolderPath(), "../../build/Release/td.node");
-  const addon: Addon = await import(addonPath);
+  const baseDirectory = getAddonFolderPath();
+  addonPath ??= "../../build/Release/td.node";
+  addonPath = path.isAbsolute(addonPath)
+    ? addonPath
+    : path.resolve(baseDirectory, addonPath);
+
+  const load = createRequire(baseDirectory);
+  const addon: Addon = load(addonPath);
 
   return addon;
 }

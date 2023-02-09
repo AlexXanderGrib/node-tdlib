@@ -1,1 +1,1 @@
-module.exports = require("./dist/cjs/addon");
+module.exports = require("./dist/addon.js");

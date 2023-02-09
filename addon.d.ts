@@ -1,2 +1,2 @@
-export * from "./dist/cjs/addon";
-export { default } from "./dist/cjs/addon";
+export * from "./dist/addon";
+export { default } from "./dist/addon";

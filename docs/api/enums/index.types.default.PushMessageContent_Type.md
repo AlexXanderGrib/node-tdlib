@@ -1,0 +1,340 @@
+[TDLib](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [types](../modules/index.types.md) / [default](../modules/index.types.default.md) / PushMessageContent$Type
+
+# Enumeration: PushMessageContent$Type
+
+[types](../modules/index.types.md).[default](../modules/index.types.default.md).PushMessageContent$Type
+
+## Table of contents
+
+### Enumeration Members
+
+- [Animation](index.types.default.PushMessageContent_Type.md#animation)
+- [Audio](index.types.default.PushMessageContent_Type.md#audio)
+- [BasicGroupChatCreate](index.types.default.PushMessageContent_Type.md#basicgroupchatcreate)
+- [ChatAddMembers](index.types.default.PushMessageContent_Type.md#chataddmembers)
+- [ChatChangePhoto](index.types.default.PushMessageContent_Type.md#chatchangephoto)
+- [ChatChangeTitle](index.types.default.PushMessageContent_Type.md#chatchangetitle)
+- [ChatDeleteMember](index.types.default.PushMessageContent_Type.md#chatdeletemember)
+- [ChatJoinByLink](index.types.default.PushMessageContent_Type.md#chatjoinbylink)
+- [ChatJoinByRequest](index.types.default.PushMessageContent_Type.md#chatjoinbyrequest)
+- [ChatSetTheme](index.types.default.PushMessageContent_Type.md#chatsettheme)
+- [Contact](index.types.default.PushMessageContent_Type.md#contact)
+- [ContactRegistered](index.types.default.PushMessageContent_Type.md#contactregistered)
+- [Document](index.types.default.PushMessageContent_Type.md#document)
+- [Game](index.types.default.PushMessageContent_Type.md#game)
+- [GameScore](index.types.default.PushMessageContent_Type.md#gamescore)
+- [Hidden](index.types.default.PushMessageContent_Type.md#hidden)
+- [Invoice](index.types.default.PushMessageContent_Type.md#invoice)
+- [Location](index.types.default.PushMessageContent_Type.md#location)
+- [MediaAlbum](index.types.default.PushMessageContent_Type.md#mediaalbum)
+- [MessageForwards](index.types.default.PushMessageContent_Type.md#messageforwards)
+- [Photo](index.types.default.PushMessageContent_Type.md#photo)
+- [Poll](index.types.default.PushMessageContent_Type.md#poll)
+- [RecurringPayment](index.types.default.PushMessageContent_Type.md#recurringpayment)
+- [ScreenshotTaken](index.types.default.PushMessageContent_Type.md#screenshottaken)
+- [Sticker](index.types.default.PushMessageContent_Type.md#sticker)
+- [SuggestProfilePhoto](index.types.default.PushMessageContent_Type.md#suggestprofilephoto)
+- [Text](index.types.default.PushMessageContent_Type.md#text)
+- [Video](index.types.default.PushMessageContent_Type.md#video)
+- [VideoNote](index.types.default.PushMessageContent_Type.md#videonote)
+- [VoiceNote](index.types.default.PushMessageContent_Type.md#voicenote)
+
+## Enumeration Members
+
+### Animation
+
+• **Animation** = ``"pushMessageContentAnimation"``
+
+#### Defined in
+
+dist/generated/types.d.ts:926
+
+___
+
+### Audio
+
+• **Audio** = ``"pushMessageContentAudio"``
+
+#### Defined in
+
+dist/generated/types.d.ts:927
+
+___
+
+### BasicGroupChatCreate
+
+• **BasicGroupChatCreate** = ``"pushMessageContentBasicGroupChatCreate"``
+
+#### Defined in
+
+dist/generated/types.d.ts:943
+
+___
+
+### ChatAddMembers
+
+• **ChatAddMembers** = ``"pushMessageContentChatAddMembers"``
+
+#### Defined in
+
+dist/generated/types.d.ts:944
+
+___
+
+### ChatChangePhoto
+
+• **ChatChangePhoto** = ``"pushMessageContentChatChangePhoto"``
+
+#### Defined in
+
+dist/generated/types.d.ts:945
+
+___
+
+### ChatChangeTitle
+
+• **ChatChangeTitle** = ``"pushMessageContentChatChangeTitle"``
+
+#### Defined in
+
+dist/generated/types.d.ts:946
+
+___
+
+### ChatDeleteMember
+
+• **ChatDeleteMember** = ``"pushMessageContentChatDeleteMember"``
+
+#### Defined in
+
+dist/generated/types.d.ts:948
+
+___
+
+### ChatJoinByLink
+
+• **ChatJoinByLink** = ``"pushMessageContentChatJoinByLink"``
+
+#### Defined in
+
+dist/generated/types.d.ts:949
+
+___
+
+### ChatJoinByRequest
+
+• **ChatJoinByRequest** = ``"pushMessageContentChatJoinByRequest"``
+
+#### Defined in
+
+dist/generated/types.d.ts:950
+
+___
+
+### ChatSetTheme
+
+• **ChatSetTheme** = ``"pushMessageContentChatSetTheme"``
+
+#### Defined in
+
+dist/generated/types.d.ts:947
+
+___
+
+### Contact
+
+• **Contact** = ``"pushMessageContentContact"``
+
+#### Defined in
+
+dist/generated/types.d.ts:928
+
+___
+
+### ContactRegistered
+
+• **ContactRegistered** = ``"pushMessageContentContactRegistered"``
+
+#### Defined in
+
+dist/generated/types.d.ts:929
+
+___
+
+### Document
+
+• **Document** = ``"pushMessageContentDocument"``
+
+#### Defined in
+
+dist/generated/types.d.ts:930
+
+___
+
+### Game
+
+• **Game** = ``"pushMessageContentGame"``
+
+#### Defined in
+
+dist/generated/types.d.ts:931
+
+___
+
+### GameScore
+
+• **GameScore** = ``"pushMessageContentGameScore"``
+
+#### Defined in
+
+dist/generated/types.d.ts:932
+
+___
+
+### Hidden
+
+• **Hidden** = ``"pushMessageContentHidden"``
+
+#### Defined in
+
+dist/generated/types.d.ts:925
+
+___
+
+### Invoice
+
+• **Invoice** = ``"pushMessageContentInvoice"``
+
+#### Defined in
+
+dist/generated/types.d.ts:933
+
+___
+
+### Location
+
+• **Location** = ``"pushMessageContentLocation"``
+
+#### Defined in
+
+dist/generated/types.d.ts:934
+
+___
+
+### MediaAlbum
+
+• **MediaAlbum** = ``"pushMessageContentMediaAlbum"``
+
+#### Defined in
+
+dist/generated/types.d.ts:954
+
+___
+
+### MessageForwards
+
+• **MessageForwards** = ``"pushMessageContentMessageForwards"``
+
+#### Defined in
+
+dist/generated/types.d.ts:953
+
+___
+
+### Photo
+
+• **Photo** = ``"pushMessageContentPhoto"``
+
+#### Defined in
+
+dist/generated/types.d.ts:935
+
+___
+
+### Poll
+
+• **Poll** = ``"pushMessageContentPoll"``
+
+#### Defined in
+
+dist/generated/types.d.ts:936
+
+___
+
+### RecurringPayment
+
+• **RecurringPayment** = ``"pushMessageContentRecurringPayment"``
+
+#### Defined in
+
+dist/generated/types.d.ts:951
+
+___
+
+### ScreenshotTaken
+
+• **ScreenshotTaken** = ``"pushMessageContentScreenshotTaken"``
+
+#### Defined in
+
+dist/generated/types.d.ts:937
+
+___
+
+### Sticker
+
+• **Sticker** = ``"pushMessageContentSticker"``
+
+#### Defined in
+
+dist/generated/types.d.ts:938
+
+___
+
+### SuggestProfilePhoto
+
+• **SuggestProfilePhoto** = ``"pushMessageContentSuggestProfilePhoto"``
+
+#### Defined in
+
+dist/generated/types.d.ts:952
+
+___
+
+### Text
+
+• **Text** = ``"pushMessageContentText"``
+
+#### Defined in
+
+dist/generated/types.d.ts:939
+
+___
+
+### Video
+
+• **Video** = ``"pushMessageContentVideo"``
+
+#### Defined in
+
+dist/generated/types.d.ts:940
+
+___
+
+### VideoNote
+
+• **VideoNote** = ``"pushMessageContentVideoNote"``
+
+#### Defined in
+
+dist/generated/types.d.ts:941
+
+___
+
+### VoiceNote
+
+• **VoiceNote** = ``"pushMessageContentVoiceNote"``
+
+#### Defined in
+
+dist/generated/types.d.ts:942

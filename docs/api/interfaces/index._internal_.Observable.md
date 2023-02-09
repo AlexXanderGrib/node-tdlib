@@ -35,7 +35,7 @@
 
 #### Defined in
 
-dist/cjs/event-bus.d.ts:4
+dist/event-bus.d.ts:4
 
 ___
 
@@ -61,4 +61,4 @@ ___
 
 #### Defined in
 
-dist/cjs/event-bus.d.ts:5
+dist/event-bus.d.ts:5

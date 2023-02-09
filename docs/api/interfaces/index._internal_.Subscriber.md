@@ -30,7 +30,7 @@
 
 #### Defined in
 
-dist/cjs/event-bus.d.ts:10
+dist/event-bus.d.ts:10
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-dist/cjs/event-bus.d.ts:9
+dist/event-bus.d.ts:9
 
 ___
 
@@ -70,4 +70,4 @@ ___
 
 #### Defined in
 
-dist/cjs/event-bus.d.ts:8
+dist/event-bus.d.ts:8

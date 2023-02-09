@@ -13,10 +13,14 @@ describe("Updates", () => {
     await client.invoke("setLogVerbosityLevel", { new_verbosity_level: 0 });
   });
 
+  afterAll(() => {
+    client.destroy();
+    expect(client["_state"]).toBe("STOPPED");
+  });
+
   test("Updates", async () => {
     const apiHash = process.env.TELEGRAM_API_HASH || "";
     const version = await client.invoke("getOption", { name: "version" });
-    console.log({ version });
 
     await client.invoke("setTdlibParameters", {
       api_hash: apiHash,
