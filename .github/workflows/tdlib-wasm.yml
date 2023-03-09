@@ -42,3 +42,8 @@ jobs:
           cd example/web
           ./build-openssl.sh
           ./build-tdlib.sh
+          ./copy-tdlib.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: tdlib-js
+          path: example/web/tdweb/src/prebuilt/release/*
