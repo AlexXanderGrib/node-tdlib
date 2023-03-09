@@ -114,6 +114,8 @@ jobs:
           key: windows-vcpkg-${{ github.run_id }}
           restore-keys: |
             windows-vcpkg-
+      - name: Update
+        run: vcpkg update
       - name: Install dependencies using vcpkg
         run: vcpkg install gperf:x64-windows-static openssl:x64-windows-static zlib:x64-windows-static
       - name: CMake version
