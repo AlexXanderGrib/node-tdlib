@@ -107,7 +107,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:642
+dist/client.d.ts:656
 
 ___
 
@@ -131,6 +131,7 @@ ___
 | :------ | :------ |
 | `acceptCall` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`acceptCall$Input`](../modules/index.types.default.md#acceptcall$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `acceptTermsOfService` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`acceptTermsOfService$Input`](../modules/index.types.default.md#accepttermsofservice$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `addApplicationChangelog` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addApplicationChangelog$Input`](../modules/index.types.default.md#addapplicationchangelog$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `addChatMember` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addChatMember$Input`](../modules/index.types.default.md#addchatmember$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `addChatMembers` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addChatMembers$Input`](../modules/index.types.default.md#addchatmembers$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `addChatToList` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addChatToList$Input`](../modules/index.types.default.md#addchattolist$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
@@ -147,7 +148,7 @@ ___
 | `addRecentlyFoundChat` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addRecentlyFoundChat$Input`](../modules/index.types.default.md#addrecentlyfoundchat$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `addSavedAnimation` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addSavedAnimation$Input`](../modules/index.types.default.md#addsavedanimation$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `addSavedNotificationSound` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addSavedNotificationSound$Input`](../modules/index.types.default.md#addsavednotificationsound$input)\>) => `Promise`<[`notificationSound`](../modules/index.types.default.md#notificationsound-1)\> |
-| `addStickerToSet` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addStickerToSet$Input`](../modules/index.types.default.md#addstickertoset$input)\>) => `Promise`<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\> |
+| `addStickerToSet` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addStickerToSet$Input`](../modules/index.types.default.md#addstickertoset$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `answerCallbackQuery` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`answerCallbackQuery$Input`](../modules/index.types.default.md#answercallbackquery$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `answerCustomQuery` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`answerCustomQuery$Input`](../modules/index.types.default.md#answercustomquery$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `answerInlineQuery` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`answerInlineQuery$Input`](../modules/index.types.default.md#answerinlinequery$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
@@ -231,6 +232,7 @@ ___
 | `deleteRevokedChatInviteLink` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`deleteRevokedChatInviteLink$Input`](../modules/index.types.default.md#deleterevokedchatinvitelink$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `deleteSavedCredentials` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`deleteSavedCredentials$Input`](../modules/index.types.default.md#deletesavedcredentials$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `deleteSavedOrderInfo` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`deleteSavedOrderInfo$Input`](../modules/index.types.default.md#deletesavedorderinfo$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `deleteStickerSet` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`deleteStickerSet$Input`](../modules/index.types.default.md#deletestickerset$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `destroy` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`destroy$Input`](../modules/index.types.default.md#destroy$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `disableAllSupergroupUsernames` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`disableAllSupergroupUsernames$Input`](../modules/index.types.default.md#disableallsupergroupusernames$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `disableProxy` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`disableProxy$Input`](../modules/index.types.default.md#disableproxy$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
@@ -279,6 +281,8 @@ ___
 | `getBasicGroup` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getBasicGroup$Input`](../modules/index.types.default.md#getbasicgroup$input)\>) => `Promise`<[`basicGroup`](../modules/index.types.default.md#basicgroup-1)\> |
 | `getBasicGroupFullInfo` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getBasicGroupFullInfo$Input`](../modules/index.types.default.md#getbasicgroupfullinfo$input)\>) => `Promise`<[`basicGroupFullInfo`](../modules/index.types.default.md#basicgroupfullinfo-1)\> |
 | `getBlockedMessageSenders` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getBlockedMessageSenders$Input`](../modules/index.types.default.md#getblockedmessagesenders$input)\>) => `Promise`<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\> |
+| `getBotInfoDescription` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getBotInfoDescription$Input`](../modules/index.types.default.md#getbotinfodescription$input)\>) => `Promise`<[`text`](../modules/index.types.default.md#text-1)\> |
+| `getBotInfoShortDescription` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getBotInfoShortDescription$Input`](../modules/index.types.default.md#getbotinfoshortdescription$input)\>) => `Promise`<[`text`](../modules/index.types.default.md#text-1)\> |
 | `getCallbackQueryAnswer` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getCallbackQueryAnswer$Input`](../modules/index.types.default.md#getcallbackqueryanswer$input)\>) => `Promise`<[`callbackQueryAnswer`](../modules/index.types.default.md#callbackqueryanswer-1)\> |
 | `getCallbackQueryMessage` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getCallbackQueryMessage$Input`](../modules/index.types.default.md#getcallbackquerymessage$input)\>) => `Promise`<[`message`](../modules/index.types.default.md#message-1)\> |
 | `getChat` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getChat$Input`](../modules/index.types.default.md#getchat$input)\>) => `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\> |
@@ -346,6 +350,7 @@ ___
 | `getInlineGameHighScores` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getInlineGameHighScores$Input`](../modules/index.types.default.md#getinlinegamehighscores$input)\>) => `Promise`<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\> |
 | `getInlineQueryResults` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getInlineQueryResults$Input`](../modules/index.types.default.md#getinlinequeryresults$input)\>) => `Promise`<[`inlineQueryResults`](../modules/index.types.default.md#inlinequeryresults-1)\> |
 | `getInstalledStickerSets` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getInstalledStickerSets$Input`](../modules/index.types.default.md#getinstalledstickersets$input)\>) => `Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\> |
+| `getInternalLink` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getInternalLink$Input`](../modules/index.types.default.md#getinternallink$input)\>) => `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\> |
 | `getInternalLinkType` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getInternalLinkType$Input`](../modules/index.types.default.md#getinternallinktype$input)\>) => `Promise`<[`InternalLinkType`](../modules/index.types.default.md#internallinktype)\> |
 | `getJsonString` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getJsonString$Input`](../modules/index.types.default.md#getjsonstring$input)\>) => `Promise`<[`text`](../modules/index.types.default.md#text-1)\> |
 | `getJsonValue` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getJsonValue$Input`](../modules/index.types.default.md#getjsonvalue$input)\>) => `Promise`<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\> |
@@ -376,7 +381,7 @@ ___
 | `getMessageStatistics` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getMessageStatistics$Input`](../modules/index.types.default.md#getmessagestatistics$input)\>) => `Promise`<[`messageStatistics`](../modules/index.types.default.md#messagestatistics-1)\> |
 | `getMessageThread` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getMessageThread$Input`](../modules/index.types.default.md#getmessagethread$input)\>) => `Promise`<[`messageThreadInfo`](../modules/index.types.default.md#messagethreadinfo-1)\> |
 | `getMessageThreadHistory` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getMessageThreadHistory$Input`](../modules/index.types.default.md#getmessagethreadhistory$input)\>) => `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\> |
-| `getMessageViewers` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getMessageViewers$Input`](../modules/index.types.default.md#getmessageviewers$input)\>) => `Promise`<[`users`](../modules/index.types.default.md#users-1)\> |
+| `getMessageViewers` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getMessageViewers$Input`](../modules/index.types.default.md#getmessageviewers$input)\>) => `Promise`<[`messageViewers`](../modules/index.types.default.md#messageviewers-1)\> |
 | `getMessages` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getMessages$Input`](../modules/index.types.default.md#getmessages$input)\>) => `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\> |
 | `getNetworkStatistics` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getNetworkStatistics$Input`](../modules/index.types.default.md#getnetworkstatistics$input)\>) => `Promise`<[`networkStatistics`](../modules/index.types.default.md#networkstatistics-1)\> |
 | `getOption` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getOption$Input`](../modules/index.types.default.md#getoption$input)\>) => `Promise`<[`OptionValue`](../modules/index.types.default.md#optionvalue)\> |
@@ -440,6 +445,7 @@ ___
 | `getUserSupportInfo` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getUserSupportInfo$Input`](../modules/index.types.default.md#getusersupportinfo$input)\>) => `Promise`<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\> |
 | `getVideoChatAvailableParticipants` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getVideoChatAvailableParticipants$Input`](../modules/index.types.default.md#getvideochatavailableparticipants$input)\>) => `Promise`<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\> |
 | `getVideoChatRtmpUrl` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getVideoChatRtmpUrl$Input`](../modules/index.types.default.md#getvideochatrtmpurl$input)\>) => `Promise`<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\> |
+| `getWebAppLinkUrl` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getWebAppLinkUrl$Input`](../modules/index.types.default.md#getwebapplinkurl$input)\>) => `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\> |
 | `getWebAppUrl` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getWebAppUrl$Input`](../modules/index.types.default.md#getwebappurl$input)\>) => `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\> |
 | `getWebPageInstantView` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getWebPageInstantView$Input`](../modules/index.types.default.md#getwebpageinstantview$input)\>) => `Promise`<[`webPageInstantView`](../modules/index.types.default.md#webpageinstantview-1)\> |
 | `getWebPagePreview` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getWebPagePreview$Input`](../modules/index.types.default.md#getwebpagepreview$input)\>) => `Promise`<[`webPage`](../modules/index.types.default.md#webpage-1)\> |
@@ -547,6 +553,7 @@ ___
 | `searchStickers` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`searchStickers$Input`](../modules/index.types.default.md#searchstickers$input)\>) => `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\> |
 | `searchUserByPhoneNumber` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`searchUserByPhoneNumber$Input`](../modules/index.types.default.md#searchuserbyphonenumber$input)\>) => `Promise`<[`user`](../modules/index.types.default.md#user-1)\> |
 | `searchUserByToken` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`searchUserByToken$Input`](../modules/index.types.default.md#searchuserbytoken$input)\>) => `Promise`<[`user`](../modules/index.types.default.md#user-1)\> |
+| `searchWebApp` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`searchWebApp$Input`](../modules/index.types.default.md#searchwebapp$input)\>) => `Promise`<[`foundWebApp`](../modules/index.types.default.md#foundwebapp-1)\> |
 | `sendAuthenticationFirebaseSms` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`sendAuthenticationFirebaseSms$Input`](../modules/index.types.default.md#sendauthenticationfirebasesms$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `sendBotStartMessage` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`sendBotStartMessage$Input`](../modules/index.types.default.md#sendbotstartmessage$input)\>) => `Promise`<[`message`](../modules/index.types.default.md#message-1)\> |
 | `sendCallDebugInformation` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`sendCallDebugInformation$Input`](../modules/index.types.default.md#sendcalldebuginformation$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
@@ -573,6 +580,8 @@ ___
 | `setAutosaveSettings` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setAutosaveSettings$Input`](../modules/index.types.default.md#setautosavesettings$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setBackground` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setBackground$Input`](../modules/index.types.default.md#setbackground$input)\>) => `Promise`<[`background`](../modules/index.types.default.md#background-1)\> |
 | `setBio` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setBio$Input`](../modules/index.types.default.md#setbio$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `setBotInfoDescription` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setBotInfoDescription$Input`](../modules/index.types.default.md#setbotinfodescription$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `setBotInfoShortDescription` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setBotInfoShortDescription$Input`](../modules/index.types.default.md#setbotinfoshortdescription$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setBotUpdatesStatus` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setBotUpdatesStatus$Input`](../modules/index.types.default.md#setbotupdatesstatus$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setChatAvailableReactions` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setChatAvailableReactions$Input`](../modules/index.types.default.md#setchatavailablereactions$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setChatClientData` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setChatClientData$Input`](../modules/index.types.default.md#setchatclientdata$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
@@ -590,6 +599,7 @@ ___
 | `setChatTheme` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setChatTheme$Input`](../modules/index.types.default.md#setchattheme$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setChatTitle` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setChatTitle$Input`](../modules/index.types.default.md#setchattitle$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setCommands` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setCommands$Input`](../modules/index.types.default.md#setcommands$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `setCustomEmojiStickerSetThumbnail` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setCustomEmojiStickerSetThumbnail$Input`](../modules/index.types.default.md#setcustomemojistickersetthumbnail$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setCustomLanguagePack` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setCustomLanguagePack$Input`](../modules/index.types.default.md#setcustomlanguagepack$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setCustomLanguagePackString` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setCustomLanguagePackString$Input`](../modules/index.types.default.md#setcustomlanguagepackstring$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setDatabaseEncryptionKey` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setDatabaseEncryptionKey$Input`](../modules/index.types.default.md#setdatabaseencryptionkey$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
@@ -624,8 +634,12 @@ ___
 | `setProfilePhoto` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setProfilePhoto$Input`](../modules/index.types.default.md#setprofilephoto$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setRecoveryEmailAddress` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setRecoveryEmailAddress$Input`](../modules/index.types.default.md#setrecoveryemailaddress$input)\>) => `Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\> |
 | `setScopeNotificationSettings` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setScopeNotificationSettings$Input`](../modules/index.types.default.md#setscopenotificationsettings$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `setStickerEmojis` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setStickerEmojis$Input`](../modules/index.types.default.md#setstickeremojis$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `setStickerKeywords` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setStickerKeywords$Input`](../modules/index.types.default.md#setstickerkeywords$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `setStickerMaskPosition` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setStickerMaskPosition$Input`](../modules/index.types.default.md#setstickermaskposition$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setStickerPositionInSet` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setStickerPositionInSet$Input`](../modules/index.types.default.md#setstickerpositioninset$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
-| `setStickerSetThumbnail` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setStickerSetThumbnail$Input`](../modules/index.types.default.md#setstickersetthumbnail$input)\>) => `Promise`<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\> |
+| `setStickerSetThumbnail` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setStickerSetThumbnail$Input`](../modules/index.types.default.md#setstickersetthumbnail$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
+| `setStickerSetTitle` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setStickerSetTitle$Input`](../modules/index.types.default.md#setstickersettitle$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setSupergroupStickerSet` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setSupergroupStickerSet$Input`](../modules/index.types.default.md#setsupergroupstickerset$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setSupergroupUsername` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setSupergroupUsername$Input`](../modules/index.types.default.md#setsupergroupusername$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
 | `setTdlibParameters` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setTdlibParameters$Input`](../modules/index.types.default.md#settdlibparameters$input)\>) => `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\> |
@@ -723,7 +737,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:650
+dist/client.d.ts:664
 
 ## Methods
 
@@ -741,7 +755,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:671
+dist/client.d.ts:685
 
 ___
 
@@ -778,7 +792,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:635
+dist/client.d.ts:649
 
 ___
 
@@ -796,7 +810,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:664
+dist/client.d.ts:678
 
 ___
 
@@ -814,4 +828,4 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:657
+dist/client.d.ts:671

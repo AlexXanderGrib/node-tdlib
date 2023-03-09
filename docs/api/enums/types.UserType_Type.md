@@ -21,7 +21,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:1619
+dist/generated/types.d.ts:1650
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1618
+dist/generated/types.d.ts:1649
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1617
+dist/generated/types.d.ts:1648
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1620
+dist/generated/types.d.ts:1651

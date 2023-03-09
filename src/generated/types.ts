@@ -191,6 +191,8 @@ export const enum $Methods {
   shareChatWithBot = "shareChatWithBot",
   getInlineQueryResults = "getInlineQueryResults",
   answerInlineQuery = "answerInlineQuery",
+  searchWebApp = "searchWebApp",
+  getWebAppLinkUrl = "getWebAppLinkUrl",
   getWebAppUrl = "getWebAppUrl",
   sendWebAppData = "sendWebAppData",
   openWebApp = "openWebApp",
@@ -211,6 +213,7 @@ export const enum $Methods {
   viewMessages = "viewMessages",
   openMessageContent = "openMessageContent",
   clickAnimatedEmojiMessage = "clickAnimatedEmojiMessage",
+  getInternalLink = "getInternalLink",
   getInternalLinkType = "getInternalLinkType",
   getExternalLinkInfo = "getExternalLinkInfo",
   getExternalLink = "getExternalLink",
@@ -430,6 +433,10 @@ export const enum $Methods {
   getMenuButton = "getMenuButton",
   setDefaultGroupAdministratorRights = "setDefaultGroupAdministratorRights",
   setDefaultChannelAdministratorRights = "setDefaultChannelAdministratorRights",
+  setBotInfoDescription = "setBotInfoDescription",
+  getBotInfoDescription = "getBotInfoDescription",
+  setBotInfoShortDescription = "setBotInfoShortDescription",
+  getBotInfoShortDescription = "getBotInfoShortDescription",
   getActiveSessions = "getActiveSessions",
   terminateSession = "terminateSession",
   terminateAllOtherSessions = "terminateAllOtherSessions",
@@ -540,8 +547,14 @@ export const enum $Methods {
   createNewStickerSet = "createNewStickerSet",
   addStickerToSet = "addStickerToSet",
   setStickerSetThumbnail = "setStickerSetThumbnail",
+  setCustomEmojiStickerSetThumbnail = "setCustomEmojiStickerSetThumbnail",
+  setStickerSetTitle = "setStickerSetTitle",
+  deleteStickerSet = "deleteStickerSet",
   setStickerPositionInSet = "setStickerPositionInSet",
   removeStickerFromSet = "removeStickerFromSet",
+  setStickerEmojis = "setStickerEmojis",
+  setStickerKeywords = "setStickerKeywords",
+  setStickerMaskPosition = "setStickerMaskPosition",
   getMapThumbnailFile = "getMapThumbnailFile",
   getPremiumLimit = "getPremiumLimit",
   getPremiumFeatures = "getPremiumFeatures",
@@ -560,10 +573,11 @@ export const enum $Methods {
   getCountryCode = "getCountryCode",
   getPhoneNumberInfo = "getPhoneNumberInfo",
   getPhoneNumberInfoSync = "getPhoneNumberInfoSync",
-  getApplicationDownloadLink = "getApplicationDownloadLink",
   getDeepLinkInfo = "getDeepLinkInfo",
   getApplicationConfig = "getApplicationConfig",
+  addApplicationChangelog = "addApplicationChangelog",
   saveApplicationLogEvent = "saveApplicationLogEvent",
+  getApplicationDownloadLink = "getApplicationDownloadLink",
   addProxy = "addProxy",
   editProxy = "editProxy",
   enableProxy = "enableProxy",
@@ -698,6 +712,7 @@ export const enum Update$Type {
   AnimatedEmojiMessageClicked = "updateAnimatedEmojiMessageClicked",
   AnimationSearchParameters = "updateAnimationSearchParameters",
   SuggestedActions = "updateSuggestedActions",
+  AddChatMembersPrivacyForbidden = "updateAddChatMembersPrivacyForbidden",
   AutosaveSettings = "updateAutosaveSettings",
   NewInlineQuery = "updateNewInlineQuery",
   NewChosenInlineResult = "updateNewChosenInlineResult",
@@ -831,9 +846,9 @@ export const enum InternalLinkType$Type {
   AttachmentMenuBot = "internalLinkTypeAttachmentMenuBot",
   AuthenticationCode = "internalLinkTypeAuthenticationCode",
   Background = "internalLinkTypeBackground",
+  BotAddToChannel = "internalLinkTypeBotAddToChannel",
   BotStart = "internalLinkTypeBotStart",
   BotStartInGroup = "internalLinkTypeBotStartInGroup",
-  BotAddToChannel = "internalLinkTypeBotAddToChannel",
   ChangePhoneNumber = "internalLinkTypeChangePhoneNumber",
   ChatInvite = "internalLinkTypeChatInvite",
   DefaultMessageAutoDeleteTimerSettings = "internalLinkTypeDefaultMessageAutoDeleteTimerSettings",
@@ -862,7 +877,8 @@ export const enum InternalLinkType$Type {
   UnsupportedProxy = "internalLinkTypeUnsupportedProxy",
   UserPhoneNumber = "internalLinkTypeUserPhoneNumber",
   UserToken = "internalLinkTypeUserToken",
-  VideoChat = "internalLinkTypeVideoChat"
+  VideoChat = "internalLinkTypeVideoChat",
+  WebApp = "internalLinkTypeWebApp"
 }
 
 export const enum TargetChat$Type {
@@ -1156,6 +1172,11 @@ export const enum CallbackQueryPayload$Type {
   Data = "callbackQueryPayloadData",
   DataWithPassword = "callbackQueryPayloadDataWithPassword",
   Game = "callbackQueryPayloadGame"
+}
+
+export const enum InlineQueryResultsButtonType$Type {
+  StartBot = "inlineQueryResultsButtonTypeStartBot",
+  WebApp = "inlineQueryResultsButtonTypeWebApp"
 }
 
 export const enum InlineQueryResult$Type {
@@ -1645,6 +1666,18 @@ export const enum NotificationSettingsScope$Type {
   PrivateChats = "notificationSettingsScopePrivateChats",
   GroupChats = "notificationSettingsScopeGroupChats",
   ChannelChats = "notificationSettingsScopeChannelChats"
+}
+
+export const enum MessageSource$Type {
+  ChatHistory = "messageSourceChatHistory",
+  MessageThreadHistory = "messageSourceMessageThreadHistory",
+  ForumTopicHistory = "messageSourceForumTopicHistory",
+  HistoryPreview = "messageSourceHistoryPreview",
+  ChatList = "messageSourceChatList",
+  Search = "messageSourceSearch",
+  ChatEventLog = "messageSourceChatEventLog",
+  Notification = "messageSourceNotification",
+  Other = "messageSourceOther"
 }
 
 export const enum MessageSendingState$Type {
@@ -2673,6 +2706,12 @@ export type authorizationStateWaitPassword = {
   has_recovery_email_address: Bool;
 
   /**
+   * True, if some Telegram Passport elements were saved
+   * @type {Bool} {@link Bool}
+   */
+  has_passport_data: Bool;
+
+  /**
    * Pattern of the email address to which the recovery email was sent; empty until a recovery email has been sent
    * @type {string} {@link string}
    */
@@ -2699,6 +2738,12 @@ export type authorizationStateWaitPassword$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly has_recovery_email_address?: Bool$Input;
+
+  /**
+   * True, if some Telegram Passport elements were saved
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_passport_data?: Bool$Input;
 
   /**
    * Pattern of the email address to which the recovery email was sent; empty until a recovery email has been sent
@@ -3841,9 +3886,7 @@ export type stickerFullTypeCustomEmoji = {
   custom_emoji_id: int64;
 
   /**
-   * True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, or another appropriate color in other places.
-   *
-   * -The sticker must not be repainted on chat photos
+   * True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, white color on chat photos, or another appropriate color in other places
    * @type {Bool} {@link Bool}
    */
   needs_repainting: Bool;
@@ -3863,9 +3906,7 @@ export type stickerFullTypeCustomEmoji$Input = {
   readonly custom_emoji_id?: int64;
 
   /**
-   * True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, or another appropriate color in other places.
-   *
-   * -The sticker must not be repainted on chat photos
+   * True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, white color on chat photos, or another appropriate color in other places
    * @type {Bool} {@link Bool}
    */
   readonly needs_repainting?: Bool$Input;
@@ -5111,7 +5152,7 @@ export type venue$Input = {
   readonly type?: string;
 };
 
-/** Describes a game */
+/** Describes a game. Use getInternalLink with internalLinkTypeGame to share the game */
 export type game = {
   _: "game";
 
@@ -5122,7 +5163,7 @@ export type game = {
   id: int64;
 
   /**
-   * Game short name. To share a game use the URL https://t.me/{bot_username}?game={game_short_name}
+   * Game short name
    * @type {string} {@link string}
    */
   short_name: string;
@@ -5140,7 +5181,7 @@ export type game = {
   text: formattedText;
 
   /**
-   * Describes a game
+   * Describes a game. Use getInternalLink with internalLinkTypeGame to share the game
    * @type {string} {@link string}
    */
   description: string;
@@ -5160,7 +5201,7 @@ export type game = {
 
 /**
  * Version of {@link game} for method parameters.
- * Describes a game
+ * Describes a game. Use getInternalLink with internalLinkTypeGame to share the game
  */
 export type game$Input = {
   readonly _: "game";
@@ -5172,7 +5213,7 @@ export type game$Input = {
   readonly id?: int64;
 
   /**
-   * Game short name. To share a game use the URL https://t.me/{bot_username}?game={game_short_name}
+   * Game short name
    * @type {string} {@link string}
    */
   readonly short_name?: string;
@@ -5190,7 +5231,7 @@ export type game$Input = {
   readonly text?: formattedText$Input;
 
   /**
-   * Describes a game
+   * Describes a game. Use getInternalLink with internalLinkTypeGame to share the game
    * @type {string} {@link string}
    */
   readonly description?: string;
@@ -5203,6 +5244,79 @@ export type game$Input = {
 
   /**
    * Game animation; may be null
+   * @type {animation} {@link animation}
+   */
+  readonly animation?: animation$Input | null;
+};
+
+/** Describes a Web App. Use getInternalLink with internalLinkTypeWebApp to share the Web App */
+export type webApp = {
+  _: "webApp";
+
+  /**
+   * Web App short name
+   * @type {string} {@link string}
+   */
+  short_name: string;
+
+  /**
+   * Web App title
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Describes a Web App. Use getInternalLink with internalLinkTypeWebApp to share the Web App
+   * @type {string} {@link string}
+   */
+  description: string;
+
+  /**
+   * Web App photo
+   * @type {photo} {@link photo}
+   */
+  photo: photo;
+
+  /**
+   * Web App animation; may be null
+   * @type {animation} {@link animation}
+   */
+  animation: animation | null;
+};
+
+/**
+ * Version of {@link webApp} for method parameters.
+ * Describes a Web App. Use getInternalLink with internalLinkTypeWebApp to share the Web App
+ */
+export type webApp$Input = {
+  readonly _: "webApp";
+
+  /**
+   * Web App short name
+   * @type {string} {@link string}
+   */
+  readonly short_name?: string;
+
+  /**
+   * Web App title
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Describes a Web App. Use getInternalLink with internalLinkTypeWebApp to share the Web App
+   * @type {string} {@link string}
+   */
+  readonly description?: string;
+
+  /**
+   * Web App photo
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input;
+
+  /**
+   * Web App animation; may be null
    * @type {animation} {@link animation}
    */
   readonly animation?: animation$Input | null;
@@ -6173,7 +6287,7 @@ export type chatPermissions = {
    * True, if the user can send text messages, contacts, invoices, locations, and venues
    * @type {Bool} {@link Bool}
    */
-  can_send_messages: Bool;
+  can_send_basic_messages: Bool;
 
   /**
    * True, if the user can send music files
@@ -6265,7 +6379,7 @@ export type chatPermissions$Input = {
    * True, if the user can send text messages, contacts, invoices, locations, and venues
    * @type {Bool} {@link Bool}
    */
-  readonly can_send_messages?: Bool$Input;
+  readonly can_send_basic_messages?: Bool$Input;
 
   /**
    * True, if the user can send music files
@@ -7009,7 +7123,7 @@ export type botInfo = {
    * The text that is shown on the bot's profile page and is sent together with the link when users share the bot
    * @type {string} {@link string}
    */
-  share_text: string;
+  short_description: string;
 
   /**
    * Contains information about a bot
@@ -7065,7 +7179,7 @@ export type botInfo$Input = {
    * The text that is shown on the bot's profile page and is sent together with the link when users share the bot
    * @type {string} {@link string}
    */
-  readonly share_text?: string;
+  readonly short_description?: string;
 
   /**
    * Contains information about a bot
@@ -9621,6 +9735,68 @@ export type chatMessageSenders$Input = {
   readonly senders?: vector$Input<chatMessageSender$Input>;
 };
 
+/** Represents a viewer of a message */
+export type messageViewer = {
+  _: "messageViewer";
+
+  /**
+   * User identifier of the viewer
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Approximate point in time (Unix timestamp) when the message was viewed
+   * @type {int32} {@link int32}
+   */
+  view_date: int32;
+};
+
+/**
+ * Version of {@link messageViewer} for method parameters.
+ * Represents a viewer of a message
+ */
+export type messageViewer$Input = {
+  readonly _: "messageViewer";
+
+  /**
+   * User identifier of the viewer
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Approximate point in time (Unix timestamp) when the message was viewed
+   * @type {int32} {@link int32}
+   */
+  readonly view_date?: int32;
+};
+
+/** Represents a list of message viewers */
+export type messageViewers = {
+  _: "messageViewers";
+
+  /**
+   * List of message viewers
+   * @type {vector<messageViewer>} {@link vector<messageViewer>}
+   */
+  viewers: vector<messageViewer>;
+};
+
+/**
+ * Version of {@link messageViewers} for method parameters.
+ * Represents a list of message viewers
+ */
+export type messageViewers$Input = {
+  readonly _: "messageViewers";
+
+  /**
+   * List of message viewers
+   * @type {vector<messageViewer>} {@link vector<messageViewer>}
+   */
+  readonly viewers?: vector$Input<messageViewer$Input>;
+};
+
 /** The message was originally sent by a known user */
 export type messageForwardOriginUser = {
   _: "messageForwardOriginUser";
@@ -10152,6 +10328,12 @@ export type unreadReaction$Input = {
 /** The message is being sent now, but has not yet been delivered to the server */
 export type messageSendingStatePending = {
   _: "messageSendingStatePending";
+
+  /**
+   * Non-persistent message sending identifier, specified by the application
+   * @type {int32} {@link int32}
+   */
+  sending_id: int32;
 };
 
 /**
@@ -10160,6 +10342,12 @@ export type messageSendingStatePending = {
  */
 export type messageSendingStatePending$Input = {
   readonly _: "messageSendingStatePending";
+
+  /**
+   * Non-persistent message sending identifier, specified by the application
+   * @type {int32} {@link int32}
+   */
+  readonly sending_id?: int32;
 };
 
 /** The message failed to be sent */
@@ -11011,6 +11199,123 @@ export type messageCalendar$Input = {
   readonly days?: vector$Input<messageCalendarDay$Input>;
 };
 
+/** The message is from a chat history */
+export type messageSourceChatHistory = {
+  _: "messageSourceChatHistory";
+};
+
+/**
+ * Version of {@link messageSourceChatHistory} for method parameters.
+ * The message is from a chat history
+ */
+export type messageSourceChatHistory$Input = {
+  readonly _: "messageSourceChatHistory";
+};
+
+/** The message is from a message thread history */
+export type messageSourceMessageThreadHistory = {
+  _: "messageSourceMessageThreadHistory";
+};
+
+/**
+ * Version of {@link messageSourceMessageThreadHistory} for method parameters.
+ * The message is from a message thread history
+ */
+export type messageSourceMessageThreadHistory$Input = {
+  readonly _: "messageSourceMessageThreadHistory";
+};
+
+/** The message is from a forum topic history */
+export type messageSourceForumTopicHistory = {
+  _: "messageSourceForumTopicHistory";
+};
+
+/**
+ * Version of {@link messageSourceForumTopicHistory} for method parameters.
+ * The message is from a forum topic history
+ */
+export type messageSourceForumTopicHistory$Input = {
+  readonly _: "messageSourceForumTopicHistory";
+};
+
+/** The message is from chat, message thread or forum topic history preview */
+export type messageSourceHistoryPreview = {
+  _: "messageSourceHistoryPreview";
+};
+
+/**
+ * Version of {@link messageSourceHistoryPreview} for method parameters.
+ * The message is from chat, message thread or forum topic history preview
+ */
+export type messageSourceHistoryPreview$Input = {
+  readonly _: "messageSourceHistoryPreview";
+};
+
+/** The message is from a chat list or a forum topic list */
+export type messageSourceChatList = {
+  _: "messageSourceChatList";
+};
+
+/**
+ * Version of {@link messageSourceChatList} for method parameters.
+ * The message is from a chat list or a forum topic list
+ */
+export type messageSourceChatList$Input = {
+  readonly _: "messageSourceChatList";
+};
+
+/** The message is from search results, including file downloads, local file list, outgoing document messages, calendar */
+export type messageSourceSearch = {
+  _: "messageSourceSearch";
+};
+
+/**
+ * Version of {@link messageSourceSearch} for method parameters.
+ * The message is from search results, including file downloads, local file list, outgoing document messages, calendar
+ */
+export type messageSourceSearch$Input = {
+  readonly _: "messageSourceSearch";
+};
+
+/** The message is from a chat event log */
+export type messageSourceChatEventLog = {
+  _: "messageSourceChatEventLog";
+};
+
+/**
+ * Version of {@link messageSourceChatEventLog} for method parameters.
+ * The message is from a chat event log
+ */
+export type messageSourceChatEventLog$Input = {
+  readonly _: "messageSourceChatEventLog";
+};
+
+/** The message is from a notification */
+export type messageSourceNotification = {
+  _: "messageSourceNotification";
+};
+
+/**
+ * Version of {@link messageSourceNotification} for method parameters.
+ * The message is from a notification
+ */
+export type messageSourceNotification$Input = {
+  readonly _: "messageSourceNotification";
+};
+
+/** The message is from some other source */
+export type messageSourceOther = {
+  _: "messageSourceOther";
+};
+
+/**
+ * Version of {@link messageSourceOther} for method parameters.
+ * The message is from some other source
+ */
+export type messageSourceOther$Input = {
+  readonly _: "messageSourceOther";
+};
+
 /** Describes a sponsored message */
 export type sponsoredMessage = {
   _: "sponsoredMessage";
@@ -11056,6 +11361,18 @@ export type sponsoredMessage = {
    * @type {MessageContent} {@link MessageContent}
    */
   content: MessageContent;
+
+  /**
+   * If non-empty, information about the sponsor to be shown along with the message
+   * @type {string} {@link string}
+   */
+  sponsor_info: string;
+
+  /**
+   * If non-empty, additional information about the sponsored message to be shown along with the message
+   * @type {string} {@link string}
+   */
+  additional_info: string;
 };
 
 /**
@@ -11106,6 +11423,18 @@ export type sponsoredMessage$Input = {
    * @type {MessageContent} {@link MessageContent}
    */
   readonly content?: MessageContent$Input;
+
+  /**
+   * If non-empty, information about the sponsor to be shown along with the message
+   * @type {string} {@link string}
+   */
+  readonly sponsor_info?: string;
+
+  /**
+   * If non-empty, additional information about the sponsored message to be shown along with the message
+   * @type {string} {@link string}
+   */
+  readonly additional_info?: string;
 };
 
 /** Contains a list of sponsored messages */
@@ -13801,10 +14130,10 @@ export type loginUrlInfoOpen = {
   url: string;
 
   /**
-   * True, if there is no need to show an ordinary open URL confirm
+   * True, if there is no need to show an ordinary open URL confirmation
    * @type {Bool} {@link Bool}
    */
-  skip_confirm: Bool;
+  skip_confirmation: Bool;
 };
 
 /**
@@ -13821,10 +14150,10 @@ export type loginUrlInfoOpen$Input = {
   readonly url?: string;
 
   /**
-   * True, if there is no need to show an ordinary open URL confirm
+   * True, if there is no need to show an ordinary open URL confirmation
    * @type {Bool} {@link Bool}
    */
-  readonly skip_confirm?: Bool$Input;
+  readonly skip_confirmation?: Bool$Input;
 };
 
 /** An authorization confirmation dialog needs to be shown to the user */
@@ -13850,7 +14179,7 @@ export type loginUrlInfoRequestConfirmation = {
   bot_user_id: int53;
 
   /**
-   * True, if the user needs to be requested to give the permission to the bot to send them messages
+   * True, if the user must be asked for the permission to the bot to send them messages
    * @type {Bool} {@link Bool}
    */
   request_write_access: Bool;
@@ -13882,10 +14211,59 @@ export type loginUrlInfoRequestConfirmation$Input = {
   readonly bot_user_id?: int53;
 
   /**
-   * True, if the user needs to be requested to give the permission to the bot to send them messages
+   * True, if the user must be asked for the permission to the bot to send them messages
    * @type {Bool} {@link Bool}
    */
   readonly request_write_access?: Bool$Input;
+};
+
+/** Contains information about a Web App found by its short name */
+export type foundWebApp = {
+  _: "foundWebApp";
+
+  /**
+   * The Web App
+   * @type {webApp} {@link webApp}
+   */
+  web_app: webApp;
+
+  /**
+   * True, if the user must be asked for the permission to the bot to send them messages
+   * @type {Bool} {@link Bool}
+   */
+  request_write_access: Bool;
+
+  /**
+   * True, if there is no need to show an ordinary open URL confirmation before opening the Web App. The field must be ignored and confirmation must be shown anyway if the Web App link was hidden
+   * @type {Bool} {@link Bool}
+   */
+  skip_confirmation: Bool;
+};
+
+/**
+ * Version of {@link foundWebApp} for method parameters.
+ * Contains information about a Web App found by its short name
+ */
+export type foundWebApp$Input = {
+  readonly _: "foundWebApp";
+
+  /**
+   * The Web App
+   * @type {webApp} {@link webApp}
+   */
+  readonly web_app?: webApp$Input;
+
+  /**
+   * True, if the user must be asked for the permission to the bot to send them messages
+   * @type {Bool} {@link Bool}
+   */
+  readonly request_write_access?: Bool$Input;
+
+  /**
+   * True, if there is no need to show an ordinary open URL confirmation before opening the Web App. The field must be ignored and confirmation must be shown anyway if the Web App link was hidden
+   * @type {Bool} {@link Bool}
+   */
+  readonly skip_confirmation?: Bool$Input;
 };
 
 /** Contains information about a Web App */
@@ -21297,7 +21675,7 @@ export type messagePoll$Input = {
   readonly poll?: poll$Input;
 };
 
-/** A message with an invoice from a bot */
+/** A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice */
 export type messageInvoice = {
   _: "messageInvoice";
 
@@ -21308,7 +21686,7 @@ export type messageInvoice = {
   title: string;
 
   /**
-   * A message with an invoice from a bot
+   * A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice
    * @type {formattedText} {@link formattedText}
    */
   description: formattedText;
@@ -21332,7 +21710,7 @@ export type messageInvoice = {
   total_amount: int53;
 
   /**
-   * Unique invoice bot start_parameter. To share an invoice use the URL https://t.me/{bot_username}?start={start_parameter}
+   * Unique invoice bot start_parameter to be passed to getInternalLink
    * @type {string} {@link string}
    */
   start_parameter: string;
@@ -21364,7 +21742,7 @@ export type messageInvoice = {
 
 /**
  * Version of {@link messageInvoice} for method parameters.
- * A message with an invoice from a bot
+ * A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice
  */
 export type messageInvoice$Input = {
   readonly _: "messageInvoice";
@@ -21376,7 +21754,7 @@ export type messageInvoice$Input = {
   readonly title?: string;
 
   /**
-   * A message with an invoice from a bot
+   * A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice
    * @type {formattedText} {@link formattedText}
    */
   readonly description?: formattedText$Input;
@@ -21400,7 +21778,7 @@ export type messageInvoice$Input = {
   readonly total_amount?: int53;
 
   /**
-   * Unique invoice bot start_parameter. To share an invoice use the URL https://t.me/{bot_username}?start={start_parameter}
+   * Unique invoice bot start_parameter to be passed to getInternalLink
    * @type {string} {@link string}
    */
   readonly start_parameter?: string;
@@ -22595,6 +22973,12 @@ export type messageWebsiteConnected$Input = {
 /** The user allowed the bot to send messages */
 export type messageBotWriteAccessAllowed = {
   _: "messageBotWriteAccessAllowed";
+
+  /**
+   * Information about the Web App, which requested the access; may be null if none or the Web App was opened from the attachment menu
+   * @type {webApp} {@link webApp}
+   */
+  web_app: webApp | null;
 };
 
 /**
@@ -22603,6 +22987,12 @@ export type messageBotWriteAccessAllowed = {
  */
 export type messageBotWriteAccessAllowed$Input = {
   readonly _: "messageBotWriteAccessAllowed";
+
+  /**
+   * Information about the Web App, which requested the access; may be null if none or the Web App was opened from the attachment menu
+   * @type {webApp} {@link webApp}
+   */
+  readonly web_app?: webApp$Input | null;
 };
 
 /** Data from a Web App has been sent to a bot */
@@ -23231,6 +23621,12 @@ export type messageSendOptions = {
    * @type {MessageSchedulingState} {@link MessageSchedulingState}
    */
   scheduling_state: MessageSchedulingState;
+
+  /**
+   * Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates
+   * @type {int32} {@link int32}
+   */
+  sending_id: int32;
 };
 
 /**
@@ -23269,6 +23665,12 @@ export type messageSendOptions$Input = {
    * @type {MessageSchedulingState} {@link MessageSchedulingState}
    */
   readonly scheduling_state?: MessageSchedulingState$Input;
+
+  /**
+   * Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates
+   * @type {int32} {@link int32}
+   */
+  readonly sending_id?: int32;
 };
 
 /** Options to be used when a message content is copied without reference to the original sender. Service messages and messageInvoice can't be copied */
@@ -25636,10 +26038,10 @@ export type emojiCategory = {
   name: string;
 
   /**
-   * Unique identifier of the custom emoji, which represents icon of the category
-   * @type {int64} {@link int64}
+   * Custom emoji sticker, which represents icon of the category
+   * @type {sticker} {@link sticker}
    */
-  icon_custom_emoji_id: int64;
+  icon: sticker;
 
   /**
    * List of emojis in the category
@@ -25662,10 +26064,10 @@ export type emojiCategory$Input = {
   readonly name?: string;
 
   /**
-   * Unique identifier of the custom emoji, which represents icon of the category
-   * @type {int64} {@link int64}
+   * Custom emoji sticker, which represents icon of the category
+   * @type {sticker} {@link sticker}
    */
-  readonly icon_custom_emoji_id?: int64;
+  readonly icon?: sticker$Input;
 
   /**
    * List of emojis in the category
@@ -27438,6 +27840,12 @@ export type addedReaction = {
    * @type {MessageSender} {@link MessageSender}
    */
   sender_id: MessageSender;
+
+  /**
+   * Point in time (Unix timestamp) when the reaction was added
+   * @type {int32} {@link int32}
+   */
+  date: int32;
 };
 
 /**
@@ -27458,6 +27866,12 @@ export type addedReaction$Input = {
    * @type {MessageSender} {@link MessageSender}
    */
   readonly sender_id?: MessageSender$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the reaction was added
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
 };
 
 /** Represents a list of reactions added to a message */
@@ -28059,7 +28473,7 @@ export type attachmentMenuBot = {
   supports_settings: Bool;
 
   /**
-   * True, if the user needs to be requested to give the permission to the bot to send them messages
+   * True, if the user must be asked for the permission to the bot to send them messages
    * @type {Bool} {@link Bool}
    */
   request_write_access: Bool;
@@ -28169,7 +28583,7 @@ export type attachmentMenuBot$Input = {
   readonly supports_settings?: Bool$Input;
 
   /**
-   * True, if the user needs to be requested to give the permission to the bot to send them messages
+   * True, if the user must be asked for the permission to the bot to send them messages
    * @type {Bool} {@link Bool}
    */
   readonly request_write_access?: Bool$Input;
@@ -30272,6 +30686,93 @@ export type inlineQueryResultVoiceNote$Input = {
   readonly title?: string;
 };
 
+/** Describes the button that opens a private chat with the bot and sends a start message to the bot with the given parameter */
+export type inlineQueryResultsButtonTypeStartBot = {
+  _: "inlineQueryResultsButtonTypeStartBot";
+
+  /**
+   * The parameter for the bot start message
+   * @type {string} {@link string}
+   */
+  parameter: string;
+};
+
+/**
+ * Version of {@link inlineQueryResultsButtonTypeStartBot} for method parameters.
+ * Describes the button that opens a private chat with the bot and sends a start message to the bot with the given parameter
+ */
+export type inlineQueryResultsButtonTypeStartBot$Input = {
+  readonly _: "inlineQueryResultsButtonTypeStartBot";
+
+  /**
+   * The parameter for the bot start message
+   * @type {string} {@link string}
+   */
+  readonly parameter?: string;
+};
+
+/** Describes the button that opens a Web App by calling getWebAppUrl */
+export type inlineQueryResultsButtonTypeWebApp = {
+  _: "inlineQueryResultsButtonTypeWebApp";
+
+  /**
+   * An HTTP URL to pass to getWebAppUrl
+   * @type {string} {@link string}
+   */
+  url: string;
+};
+
+/**
+ * Version of {@link inlineQueryResultsButtonTypeWebApp} for method parameters.
+ * Describes the button that opens a Web App by calling getWebAppUrl
+ */
+export type inlineQueryResultsButtonTypeWebApp$Input = {
+  readonly _: "inlineQueryResultsButtonTypeWebApp";
+
+  /**
+   * An HTTP URL to pass to getWebAppUrl
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+};
+
+/** Represents a button to be shown above inline query results */
+export type inlineQueryResultsButton = {
+  _: "inlineQueryResultsButton";
+
+  /**
+   * The text of the button
+   * @type {string} {@link string}
+   */
+  text: string;
+
+  /**
+   * Type of the button
+   * @type {InlineQueryResultsButtonType} {@link InlineQueryResultsButtonType}
+   */
+  type: InlineQueryResultsButtonType;
+};
+
+/**
+ * Version of {@link inlineQueryResultsButton} for method parameters.
+ * Represents a button to be shown above inline query results
+ */
+export type inlineQueryResultsButton$Input = {
+  readonly _: "inlineQueryResultsButton";
+
+  /**
+   * The text of the button
+   * @type {string} {@link string}
+   */
+  readonly text?: string;
+
+  /**
+   * Type of the button
+   * @type {InlineQueryResultsButtonType} {@link InlineQueryResultsButtonType}
+   */
+  readonly type?: InlineQueryResultsButtonType$Input;
+};
+
 /** Represents the results of the inline query. Use sendInlineQueryResultMessage to send the result of the query */
 export type inlineQueryResults = {
   _: "inlineQueryResults";
@@ -30283,10 +30784,10 @@ export type inlineQueryResults = {
   inline_query_id: int64;
 
   /**
-   * The offset for the next request. If empty, there are no more results
-   * @type {string} {@link string}
+   * Button to be shown above inline query results; may be null
+   * @type {inlineQueryResultsButton} {@link inlineQueryResultsButton}
    */
-  next_offset: string;
+  button: inlineQueryResultsButton | null;
 
   /**
    * Results of the query
@@ -30295,16 +30796,10 @@ export type inlineQueryResults = {
   results: vector<InlineQueryResult>;
 
   /**
-   * If non-empty, this text must be shown on the button, which opens a private chat with the bot and sends the bot a start message with the switch_pm_parameter
+   * The offset for the next request. If empty, there are no more results
    * @type {string} {@link string}
    */
-  switch_pm_text: string;
-
-  /**
-   * Parameter for the bot start message
-   * @type {string} {@link string}
-   */
-  switch_pm_parameter: string;
+  next_offset: string;
 };
 
 /**
@@ -30321,10 +30816,10 @@ export type inlineQueryResults$Input = {
   readonly inline_query_id?: int64;
 
   /**
-   * The offset for the next request. If empty, there are no more results
-   * @type {string} {@link string}
+   * Button to be shown above inline query results; may be null
+   * @type {inlineQueryResultsButton} {@link inlineQueryResultsButton}
    */
-  readonly next_offset?: string;
+  readonly button?: inlineQueryResultsButton$Input | null;
 
   /**
    * Results of the query
@@ -30333,16 +30828,10 @@ export type inlineQueryResults$Input = {
   readonly results?: vector$Input<InlineQueryResult$Input>;
 
   /**
-   * If non-empty, this text must be shown on the button, which opens a private chat with the bot and sends the bot a start message with the switch_pm_parameter
+   * The offset for the next request. If empty, there are no more results
    * @type {string} {@link string}
    */
-  readonly switch_pm_text?: string;
-
-  /**
-   * Parameter for the bot start message
-   * @type {string} {@link string}
-   */
-  readonly switch_pm_parameter?: string;
+  readonly next_offset?: string;
 };
 
 /** The payload for a general callback button */
@@ -37602,6 +38091,49 @@ export type internalLinkTypeBackground$Input = {
   readonly background_name?: string;
 };
 
+/** The link is a link to a Telegram bot, which is supposed to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
+-ask the current user to select a channel chat to add the bot to as an administrator. Then, call getChatMember to receive the current bot rights in the chat and if the bot already is an administrator,
+-check that the current user can edit its administrator rights and combine received rights with the requested administrator rights. Then, show confirmation box to the user, and call setChatMemberStatus with the chosen chat and confirmed rights */
+export type internalLinkTypeBotAddToChannel = {
+  _: "internalLinkTypeBotAddToChannel";
+
+  /**
+   * Username of the bot
+   * @type {string} {@link string}
+   */
+  bot_username: string;
+
+  /**
+   * Expected administrator rights for the bot
+   * @type {chatAdministratorRights} {@link chatAdministratorRights}
+   */
+  administrator_rights: chatAdministratorRights;
+};
+
+/**
+ * Version of {@link internalLinkTypeBotAddToChannel} for method parameters.
+ * The link is a link to a Telegram bot, which is supposed to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
+ *
+ * -ask the current user to select a channel chat to add the bot to as an administrator. Then, call getChatMember to receive the current bot rights in the chat and if the bot already is an administrator,
+ *
+ * -check that the current user can edit its administrator rights and combine received rights with the requested administrator rights. Then, show confirmation box to the user, and call setChatMemberStatus with the chosen chat and confirmed rights
+ */
+export type internalLinkTypeBotAddToChannel$Input = {
+  readonly _: "internalLinkTypeBotAddToChannel";
+
+  /**
+   * Username of the bot
+   * @type {string} {@link string}
+   */
+  readonly bot_username?: string;
+
+  /**
+   * Expected administrator rights for the bot
+   * @type {chatAdministratorRights} {@link chatAdministratorRights}
+   */
+  readonly administrator_rights?: chatAdministratorRights$Input;
+};
+
 /** The link is a link to a chat with a Telegram bot. Call searchPublicChat with the given bot username, check that the user is a bot, show START button in the chat with the bot,
 -and then call sendBotStartMessage with the given start parameter after the button is pressed */
 export type internalLinkTypeBotStart = {
@@ -37716,49 +38248,6 @@ export type internalLinkTypeBotStartInGroup$Input = {
    * @type {chatAdministratorRights} {@link chatAdministratorRights}
    */
   readonly administrator_rights?: chatAdministratorRights$Input | null;
-};
-
-/** The link is a link to a Telegram bot, which is supposed to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
--ask the current user to select a channel chat to add the bot to as an administrator. Then, call getChatMember to receive the current bot rights in the chat and if the bot already is an administrator,
--check that the current user can edit its administrator rights and combine received rights with the requested administrator rights. Then, show confirmation box to the user, and call setChatMemberStatus with the chosen chat and confirmed rights */
-export type internalLinkTypeBotAddToChannel = {
-  _: "internalLinkTypeBotAddToChannel";
-
-  /**
-   * Username of the bot
-   * @type {string} {@link string}
-   */
-  bot_username: string;
-
-  /**
-   * Expected administrator rights for the bot
-   * @type {chatAdministratorRights} {@link chatAdministratorRights}
-   */
-  administrator_rights: chatAdministratorRights;
-};
-
-/**
- * Version of {@link internalLinkTypeBotAddToChannel} for method parameters.
- * The link is a link to a Telegram bot, which is supposed to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
- *
- * -ask the current user to select a channel chat to add the bot to as an administrator. Then, call getChatMember to receive the current bot rights in the chat and if the bot already is an administrator,
- *
- * -check that the current user can edit its administrator rights and combine received rights with the requested administrator rights. Then, show confirmation box to the user, and call setChatMemberStatus with the chosen chat and confirmed rights
- */
-export type internalLinkTypeBotAddToChannel$Input = {
-  readonly _: "internalLinkTypeBotAddToChannel";
-
-  /**
-   * Username of the bot
-   * @type {string} {@link string}
-   */
-  readonly bot_username?: string;
-
-  /**
-   * Expected administrator rights for the bot
-   * @type {chatAdministratorRights} {@link chatAdministratorRights}
-   */
-  readonly administrator_rights?: chatAdministratorRights$Input;
 };
 
 /** The link is a link to the change phone number section of the app */
@@ -38151,7 +38640,7 @@ export type internalLinkTypePhoneNumberConfirmation$Input = {
   readonly phone_number?: string;
 };
 
-/** The link is a link to the Premium features screen of the applcation from which the user can subscribe to Telegram Premium. Call getPremiumFeatures with the given referrer to process the link */
+/** The link is a link to the Premium features screen of the application from which the user can subscribe to Telegram Premium. Call getPremiumFeatures with the given referrer to process the link */
 export type internalLinkTypePremiumFeatures = {
   _: "internalLinkTypePremiumFeatures";
 
@@ -38164,7 +38653,7 @@ export type internalLinkTypePremiumFeatures = {
 
 /**
  * Version of {@link internalLinkTypePremiumFeatures} for method parameters.
- * The link is a link to the Premium features screen of the applcation from which the user can subscribe to Telegram Premium. Call getPremiumFeatures with the given referrer to process the link
+ * The link is a link to the Premium features screen of the application from which the user can subscribe to Telegram Premium. Call getPremiumFeatures with the given referrer to process the link
  */
 export type internalLinkTypePremiumFeatures$Input = {
   readonly _: "internalLinkTypePremiumFeatures";
@@ -38515,6 +39004,58 @@ export type internalLinkTypeVideoChat$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_live_stream?: Bool$Input;
+};
+
+/** The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot, then call searchWebApp with the received bot and the given web_app_short_name.
+-Process received foundWebApp by showing a confirmation dialog if needed, then calling getWebAppLinkUrl and opening the returned URL */
+export type internalLinkTypeWebApp = {
+  _: "internalLinkTypeWebApp";
+
+  /**
+   * Username of the bot that owns the Web App
+   * @type {string} {@link string}
+   */
+  bot_username: string;
+
+  /**
+   * Short name of the Web App
+   * @type {string} {@link string}
+   */
+  web_app_short_name: string;
+
+  /**
+   * Start parameter to be passed to getWebAppLinkUrl
+   * @type {string} {@link string}
+   */
+  start_parameter: string;
+};
+
+/**
+ * Version of {@link internalLinkTypeWebApp} for method parameters.
+ * The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot, then call searchWebApp with the received bot and the given web_app_short_name.
+ *
+ * -Process received foundWebApp by showing a confirmation dialog if needed, then calling getWebAppLinkUrl and opening the returned URL
+ */
+export type internalLinkTypeWebApp$Input = {
+  readonly _: "internalLinkTypeWebApp";
+
+  /**
+   * Username of the bot that owns the Web App
+   * @type {string} {@link string}
+   */
+  readonly bot_username?: string;
+
+  /**
+   * Short name of the Web App
+   * @type {string} {@link string}
+   */
+  readonly web_app_short_name?: string;
+
+  /**
+   * Start parameter to be passed to getWebAppLinkUrl
+   * @type {string} {@link string}
+   */
+  readonly start_parameter?: string;
 };
 
 /** Contains an HTTPS link to a message in a supergroup or channel, or a forum topic */
@@ -40582,30 +41123,30 @@ export type inputSticker = {
   _: "inputSticker";
 
   /**
-   * File with the sticker; must fit in a 512x512 square. For WEBP stickers and masks the file must be in PNG format, which will be converted to WEBP server-side.
+   * File with the sticker; must fit in a 512x512 square. For WEBP stickers the file must be in WEBP or PNG format, which will be converted to WEBP server-side.
    *
-   * -Otherwise, the file must be local or uploaded within a week. See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
+   * -See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
    * @type {InputFile} {@link InputFile}
    */
   sticker: InputFile;
 
   /**
-   * Emojis corresponding to the sticker
+   * String with 1-20 emoji corresponding to the sticker
    * @type {string} {@link string}
    */
   emojis: string;
-
-  /**
-   * Sticker format
-   * @type {StickerFormat} {@link StickerFormat}
-   */
-  format: StickerFormat;
 
   /**
    * Position where the mask is placed; pass null if not specified
    * @type {maskPosition} {@link maskPosition}
    */
   mask_position: maskPosition;
+
+  /**
+   * List of up to 20 keywords with total length up to 64 characters, which can be used to find the sticker
+   * @type {vector<string>} {@link vector<string>}
+   */
+  keywords: vector<string>;
 };
 
 /**
@@ -40616,30 +41157,30 @@ export type inputSticker$Input = {
   readonly _: "inputSticker";
 
   /**
-   * File with the sticker; must fit in a 512x512 square. For WEBP stickers and masks the file must be in PNG format, which will be converted to WEBP server-side.
+   * File with the sticker; must fit in a 512x512 square. For WEBP stickers the file must be in WEBP or PNG format, which will be converted to WEBP server-side.
    *
-   * -Otherwise, the file must be local or uploaded within a week. See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
+   * -See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
    * @type {InputFile} {@link InputFile}
    */
   readonly sticker?: InputFile$Input;
 
   /**
-   * Emojis corresponding to the sticker
+   * String with 1-20 emoji corresponding to the sticker
    * @type {string} {@link string}
    */
   readonly emojis?: string;
-
-  /**
-   * Sticker format
-   * @type {StickerFormat} {@link StickerFormat}
-   */
-  readonly format?: StickerFormat$Input;
 
   /**
    * Position where the mask is placed; pass null if not specified
    * @type {maskPosition} {@link maskPosition}
    */
   readonly mask_position?: maskPosition$Input;
+
+  /**
+   * List of up to 20 keywords with total length up to 64 characters, which can be used to find the sticker
+   * @type {vector<string>} {@link vector<string>}
+   */
+  readonly keywords?: vector$Input<string>;
 };
 
 /** Represents a date range */
@@ -45300,6 +45841,43 @@ export type updateSuggestedActions$Input = {
   readonly removed_actions?: vector$Input<SuggestedAction$Input>;
 };
 
+/** Adding users to a chat has failed because of their privacy settings. An invite link can be shared with the users if appropriate */
+export type updateAddChatMembersPrivacyForbidden = {
+  _: "updateAddChatMembersPrivacyForbidden";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Identifiers of users, which weren't added because of their privacy settings
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  user_ids: vector<int53>;
+};
+
+/**
+ * Version of {@link updateAddChatMembersPrivacyForbidden} for method parameters.
+ * Adding users to a chat has failed because of their privacy settings. An invite link can be shared with the users if appropriate
+ */
+export type updateAddChatMembersPrivacyForbidden$Input = {
+  readonly _: "updateAddChatMembersPrivacyForbidden";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifiers of users, which weren't added because of their privacy settings
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly user_ids?: vector$Input<int53>;
+};
+
 /** Autosave settings for some type of chats were updated */
 export type updateAutosaveSettings = {
   _: "updateAutosaveSettings";
@@ -47303,6 +47881,19 @@ export type Game$Input = game$Input;
 
 /**
  * Any of:
+ * - {@link webApp}
+ */
+export type WebApp = webApp;
+
+/**
+ * Version of {@link WebApp} for method parameters.
+ * Any of:
+ * - {@link webApp$Input}
+ */
+export type WebApp$Input = webApp$Input;
+
+/**
+ * Any of:
  * - {@link poll}
  */
 export type Poll = poll;
@@ -48103,6 +48694,32 @@ export type ChatMessageSenders$Input = chatMessageSenders$Input;
 
 /**
  * Any of:
+ * - {@link messageViewer}
+ */
+export type MessageViewer = messageViewer;
+
+/**
+ * Version of {@link MessageViewer} for method parameters.
+ * Any of:
+ * - {@link messageViewer$Input}
+ */
+export type MessageViewer$Input = messageViewer$Input;
+
+/**
+ * Any of:
+ * - {@link messageViewers}
+ */
+export type MessageViewers = messageViewers;
+
+/**
+ * Version of {@link MessageViewers} for method parameters.
+ * Any of:
+ * - {@link messageViewers$Input}
+ */
+export type MessageViewers$Input = messageViewers$Input;
+
+/**
+ * Any of:
  * - {@link messageForwardOriginUser}
  * - {@link messageForwardOriginChat}
  * - {@link messageForwardOriginHiddenUser}
@@ -48336,6 +48953,53 @@ export type MessageCalendar = messageCalendar;
  * - {@link messageCalendar$Input}
  */
 export type MessageCalendar$Input = messageCalendar$Input;
+
+/**
+ * Any of:
+ * - {@link messageSourceChatHistory}
+ * - {@link messageSourceMessageThreadHistory}
+ * - {@link messageSourceForumTopicHistory}
+ * - {@link messageSourceHistoryPreview}
+ * - {@link messageSourceChatList}
+ * - {@link messageSourceSearch}
+ * - {@link messageSourceChatEventLog}
+ * - {@link messageSourceNotification}
+ * - {@link messageSourceOther}
+ */
+export type MessageSource =
+  | messageSourceChatHistory
+  | messageSourceMessageThreadHistory
+  | messageSourceForumTopicHistory
+  | messageSourceHistoryPreview
+  | messageSourceChatList
+  | messageSourceSearch
+  | messageSourceChatEventLog
+  | messageSourceNotification
+  | messageSourceOther;
+
+/**
+ * Version of {@link MessageSource} for method parameters.
+ * Any of:
+ * - {@link messageSourceChatHistory$Input}
+ * - {@link messageSourceMessageThreadHistory$Input}
+ * - {@link messageSourceForumTopicHistory$Input}
+ * - {@link messageSourceHistoryPreview$Input}
+ * - {@link messageSourceChatList$Input}
+ * - {@link messageSourceSearch$Input}
+ * - {@link messageSourceChatEventLog$Input}
+ * - {@link messageSourceNotification$Input}
+ * - {@link messageSourceOther$Input}
+ */
+export type MessageSource$Input =
+  | messageSourceChatHistory$Input
+  | messageSourceMessageThreadHistory$Input
+  | messageSourceForumTopicHistory$Input
+  | messageSourceHistoryPreview$Input
+  | messageSourceChatList$Input
+  | messageSourceSearch$Input
+  | messageSourceChatEventLog$Input
+  | messageSourceNotification$Input
+  | messageSourceOther$Input;
 
 /**
  * Any of:
@@ -48905,6 +49569,19 @@ export type LoginUrlInfo = loginUrlInfoOpen | loginUrlInfoRequestConfirmation;
 export type LoginUrlInfo$Input =
   | loginUrlInfoOpen$Input
   | loginUrlInfoRequestConfirmation$Input;
+
+/**
+ * Any of:
+ * - {@link foundWebApp}
+ */
+export type FoundWebApp = foundWebApp;
+
+/**
+ * Version of {@link FoundWebApp} for method parameters.
+ * Any of:
+ * - {@link foundWebApp$Input}
+ */
+export type FoundWebApp$Input = foundWebApp$Input;
 
 /**
  * Any of:
@@ -51581,6 +52258,38 @@ export type InlineQueryResult$Input =
 
 /**
  * Any of:
+ * - {@link inlineQueryResultsButtonTypeStartBot}
+ * - {@link inlineQueryResultsButtonTypeWebApp}
+ */
+export type InlineQueryResultsButtonType =
+  | inlineQueryResultsButtonTypeStartBot
+  | inlineQueryResultsButtonTypeWebApp;
+
+/**
+ * Version of {@link InlineQueryResultsButtonType} for method parameters.
+ * Any of:
+ * - {@link inlineQueryResultsButtonTypeStartBot$Input}
+ * - {@link inlineQueryResultsButtonTypeWebApp$Input}
+ */
+export type InlineQueryResultsButtonType$Input =
+  | inlineQueryResultsButtonTypeStartBot$Input
+  | inlineQueryResultsButtonTypeWebApp$Input;
+
+/**
+ * Any of:
+ * - {@link inlineQueryResultsButton}
+ */
+export type InlineQueryResultsButton = inlineQueryResultsButton;
+
+/**
+ * Version of {@link InlineQueryResultsButton} for method parameters.
+ * Any of:
+ * - {@link inlineQueryResultsButton$Input}
+ */
+export type InlineQueryResultsButton$Input = inlineQueryResultsButton$Input;
+
+/**
+ * Any of:
  * - {@link inlineQueryResults}
  */
 export type InlineQueryResults = inlineQueryResults;
@@ -53172,9 +53881,9 @@ export type TargetChat$Input =
  * - {@link internalLinkTypeAttachmentMenuBot}
  * - {@link internalLinkTypeAuthenticationCode}
  * - {@link internalLinkTypeBackground}
+ * - {@link internalLinkTypeBotAddToChannel}
  * - {@link internalLinkTypeBotStart}
  * - {@link internalLinkTypeBotStartInGroup}
- * - {@link internalLinkTypeBotAddToChannel}
  * - {@link internalLinkTypeChangePhoneNumber}
  * - {@link internalLinkTypeChatInvite}
  * - {@link internalLinkTypeDefaultMessageAutoDeleteTimerSettings}
@@ -53204,15 +53913,16 @@ export type TargetChat$Input =
  * - {@link internalLinkTypeUserPhoneNumber}
  * - {@link internalLinkTypeUserToken}
  * - {@link internalLinkTypeVideoChat}
+ * - {@link internalLinkTypeWebApp}
  */
 export type InternalLinkType =
   | internalLinkTypeActiveSessions
   | internalLinkTypeAttachmentMenuBot
   | internalLinkTypeAuthenticationCode
   | internalLinkTypeBackground
+  | internalLinkTypeBotAddToChannel
   | internalLinkTypeBotStart
   | internalLinkTypeBotStartInGroup
-  | internalLinkTypeBotAddToChannel
   | internalLinkTypeChangePhoneNumber
   | internalLinkTypeChatInvite
   | internalLinkTypeDefaultMessageAutoDeleteTimerSettings
@@ -53241,7 +53951,8 @@ export type InternalLinkType =
   | internalLinkTypeUnsupportedProxy
   | internalLinkTypeUserPhoneNumber
   | internalLinkTypeUserToken
-  | internalLinkTypeVideoChat;
+  | internalLinkTypeVideoChat
+  | internalLinkTypeWebApp;
 
 /**
  * Version of {@link InternalLinkType} for method parameters.
@@ -53250,9 +53961,9 @@ export type InternalLinkType =
  * - {@link internalLinkTypeAttachmentMenuBot$Input}
  * - {@link internalLinkTypeAuthenticationCode$Input}
  * - {@link internalLinkTypeBackground$Input}
+ * - {@link internalLinkTypeBotAddToChannel$Input}
  * - {@link internalLinkTypeBotStart$Input}
  * - {@link internalLinkTypeBotStartInGroup$Input}
- * - {@link internalLinkTypeBotAddToChannel$Input}
  * - {@link internalLinkTypeChangePhoneNumber$Input}
  * - {@link internalLinkTypeChatInvite$Input}
  * - {@link internalLinkTypeDefaultMessageAutoDeleteTimerSettings$Input}
@@ -53282,15 +53993,16 @@ export type InternalLinkType =
  * - {@link internalLinkTypeUserPhoneNumber$Input}
  * - {@link internalLinkTypeUserToken$Input}
  * - {@link internalLinkTypeVideoChat$Input}
+ * - {@link internalLinkTypeWebApp$Input}
  */
 export type InternalLinkType$Input =
   | internalLinkTypeActiveSessions$Input
   | internalLinkTypeAttachmentMenuBot$Input
   | internalLinkTypeAuthenticationCode$Input
   | internalLinkTypeBackground$Input
+  | internalLinkTypeBotAddToChannel$Input
   | internalLinkTypeBotStart$Input
   | internalLinkTypeBotStartInGroup$Input
-  | internalLinkTypeBotAddToChannel$Input
   | internalLinkTypeChangePhoneNumber$Input
   | internalLinkTypeChatInvite$Input
   | internalLinkTypeDefaultMessageAutoDeleteTimerSettings$Input
@@ -53319,7 +54031,8 @@ export type InternalLinkType$Input =
   | internalLinkTypeUnsupportedProxy$Input
   | internalLinkTypeUserPhoneNumber$Input
   | internalLinkTypeUserToken$Input
-  | internalLinkTypeVideoChat$Input;
+  | internalLinkTypeVideoChat$Input
+  | internalLinkTypeWebApp$Input;
 
 /**
  * Any of:
@@ -54269,6 +54982,7 @@ export type BotCommandScope$Input =
  * - {@link updateAnimatedEmojiMessageClicked}
  * - {@link updateAnimationSearchParameters}
  * - {@link updateSuggestedActions}
+ * - {@link updateAddChatMembersPrivacyForbidden}
  * - {@link updateAutosaveSettings}
  * - {@link updateNewInlineQuery}
  * - {@link updateNewChosenInlineResult}
@@ -54378,6 +55092,7 @@ export type Update =
   | updateAnimatedEmojiMessageClicked
   | updateAnimationSearchParameters
   | updateSuggestedActions
+  | updateAddChatMembersPrivacyForbidden
   | updateAutosaveSettings
   | updateNewInlineQuery
   | updateNewChosenInlineResult
@@ -54489,6 +55204,7 @@ export type Update =
  * - {@link updateAnimatedEmojiMessageClicked$Input}
  * - {@link updateAnimationSearchParameters$Input}
  * - {@link updateSuggestedActions$Input}
+ * - {@link updateAddChatMembersPrivacyForbidden$Input}
  * - {@link updateAutosaveSettings$Input}
  * - {@link updateNewInlineQuery$Input}
  * - {@link updateNewChosenInlineResult$Input}
@@ -54598,6 +55314,7 @@ export type Update$Input =
   | updateAnimatedEmojiMessageClicked$Input
   | updateAnimationSearchParameters$Input
   | updateSuggestedActions$Input
+  | updateAddChatMembersPrivacyForbidden$Input
   | updateAutosaveSettings$Input
   | updateNewInlineQuery$Input
   | updateNewChosenInlineResult$Input
@@ -54945,6 +55662,8 @@ export type $MethodsDict = {
   readonly shareChatWithBot: shareChatWithBot;
   readonly getInlineQueryResults: getInlineQueryResults;
   readonly answerInlineQuery: answerInlineQuery;
+  readonly searchWebApp: searchWebApp;
+  readonly getWebAppLinkUrl: getWebAppLinkUrl;
   readonly getWebAppUrl: getWebAppUrl;
   readonly sendWebAppData: sendWebAppData;
   readonly openWebApp: openWebApp;
@@ -54965,6 +55684,7 @@ export type $MethodsDict = {
   readonly viewMessages: viewMessages;
   readonly openMessageContent: openMessageContent;
   readonly clickAnimatedEmojiMessage: clickAnimatedEmojiMessage;
+  readonly getInternalLink: getInternalLink;
   readonly getInternalLinkType: getInternalLinkType;
   readonly getExternalLinkInfo: getExternalLinkInfo;
   readonly getExternalLink: getExternalLink;
@@ -55184,6 +55904,10 @@ export type $MethodsDict = {
   readonly getMenuButton: getMenuButton;
   readonly setDefaultGroupAdministratorRights: setDefaultGroupAdministratorRights;
   readonly setDefaultChannelAdministratorRights: setDefaultChannelAdministratorRights;
+  readonly setBotInfoDescription: setBotInfoDescription;
+  readonly getBotInfoDescription: getBotInfoDescription;
+  readonly setBotInfoShortDescription: setBotInfoShortDescription;
+  readonly getBotInfoShortDescription: getBotInfoShortDescription;
   readonly getActiveSessions: getActiveSessions;
   readonly terminateSession: terminateSession;
   readonly terminateAllOtherSessions: terminateAllOtherSessions;
@@ -55294,8 +56018,14 @@ export type $MethodsDict = {
   readonly createNewStickerSet: createNewStickerSet;
   readonly addStickerToSet: addStickerToSet;
   readonly setStickerSetThumbnail: setStickerSetThumbnail;
+  readonly setCustomEmojiStickerSetThumbnail: setCustomEmojiStickerSetThumbnail;
+  readonly setStickerSetTitle: setStickerSetTitle;
+  readonly deleteStickerSet: deleteStickerSet;
   readonly setStickerPositionInSet: setStickerPositionInSet;
   readonly removeStickerFromSet: removeStickerFromSet;
+  readonly setStickerEmojis: setStickerEmojis;
+  readonly setStickerKeywords: setStickerKeywords;
+  readonly setStickerMaskPosition: setStickerMaskPosition;
   readonly getMapThumbnailFile: getMapThumbnailFile;
   readonly getPremiumLimit: getPremiumLimit;
   readonly getPremiumFeatures: getPremiumFeatures;
@@ -55314,10 +56044,11 @@ export type $MethodsDict = {
   readonly getCountryCode: getCountryCode;
   readonly getPhoneNumberInfo: getPhoneNumberInfo;
   readonly getPhoneNumberInfoSync: getPhoneNumberInfoSync;
-  readonly getApplicationDownloadLink: getApplicationDownloadLink;
   readonly getDeepLinkInfo: getDeepLinkInfo;
   readonly getApplicationConfig: getApplicationConfig;
+  readonly addApplicationChangelog: addApplicationChangelog;
   readonly saveApplicationLogEvent: saveApplicationLogEvent;
+  readonly getApplicationDownloadLink: getApplicationDownloadLink;
   readonly addProxy: addProxy;
   readonly editProxy: editProxy;
   readonly enableProxy: enableProxy;
@@ -56576,9 +57307,11 @@ export type getMessageViewers$Input = {
  * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if message.can_get_viewers == true
  *
  * @param {getMessageViewers$Input} parameters {@link getMessageViewers$Input}
- * @return {Users} {@link Users}
+ * @return {MessageViewers} {@link MessageViewers}
  */
-export type getMessageViewers = (parameters: getMessageViewers$Input) => Users;
+export type getMessageViewers = (
+  parameters: getMessageViewers$Input
+) => MessageViewers;
 
 /** Returns information about a file; this is an offline request */
 export type getFile$Input = {
@@ -57908,7 +58641,7 @@ export type translateText$Input = {
   readonly text?: formattedText$Input;
 
   /**
-   * ISO language code of the language to which the message is translated. Must be one of
+   * Language code of the language to which the message is translated. Must be one of
    *
    * -"af", "sq", "am", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN", "zh", "zh-Hans", "zh-TW", "zh-Hant", "co", "hr", "cs", "da", "nl", "en", "eo", "et",
    *
@@ -57947,7 +58680,7 @@ export type translateMessageText$Input = {
   readonly message_id?: int53;
 
   /**
-   * ISO language code of the language to which the message is translated. Must be one of
+   * Language code of the language to which the message is translated. Must be one of
    *
    * -"af", "sq", "am", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN", "zh", "zh-Hans", "zh-TW", "zh-Hant", "co", "hr", "cs", "da", "nl", "en", "eo", "et",
    *
@@ -60081,6 +60814,12 @@ export type answerInlineQuery$Input = {
   readonly is_personal?: Bool$Input;
 
   /**
+   * Button to be shown above inline query results; pass null if none
+   * @type {inlineQueryResultsButton$Input} {@link inlineQueryResultsButton}
+   */
+  readonly button?: inlineQueryResultsButton$Input;
+
+  /**
    * The results of the query
    * @type {vector$Input<InputInlineQueryResult$Input>} {@link vector<InputInlineQueryResult>}
    */
@@ -60097,18 +60836,6 @@ export type answerInlineQuery$Input = {
    * @type {string} {@link string}
    */
   readonly next_offset?: string;
-
-  /**
-   * If non-empty, this text must be shown on the button that opens a private chat with the bot and sends a start message to the bot with the parameter switch_pm_parameter
-   * @type {string} {@link string}
-   */
-  readonly switch_pm_text?: string;
-
-  /**
-   * The parameter for the bot start message
-   * @type {string} {@link string}
-   */
-  readonly switch_pm_parameter?: string;
 };
 
 /**
@@ -60119,7 +60846,87 @@ export type answerInlineQuery$Input = {
  */
 export type answerInlineQuery = (parameters: answerInlineQuery$Input) => Ok;
 
-/** Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp button is pressed */
+/** Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found */
+export type searchWebApp$Input = {
+  readonly _: "searchWebApp";
+
+  /**
+   * Identifier of the target bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Short name of the Web App
+   * @type {string} {@link string}
+   */
+  readonly web_app_short_name?: string;
+};
+
+/**
+ * Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
+ *
+ * @param {searchWebApp$Input} parameters {@link searchWebApp$Input}
+ * @return {FoundWebApp} {@link FoundWebApp}
+ */
+export type searchWebApp = (parameters: searchWebApp$Input) => FoundWebApp;
+
+/** Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked */
+export type getWebAppLinkUrl$Input = {
+  readonly _: "getWebAppLinkUrl";
+
+  /**
+   * Identifier of the chat in which the link was clicked; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the target bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Short name of the Web App
+   * @type {string} {@link string}
+   */
+  readonly web_app_short_name?: string;
+
+  /**
+   * Start parameter from internalLinkTypeWebApp
+   * @type {string} {@link string}
+   */
+  readonly start_parameter?: string;
+
+  /**
+   * Preferred Web App theme; pass null to use the default theme
+   * @type {themeParameters$Input} {@link themeParameters}
+   */
+  readonly theme?: themeParameters$Input;
+
+  /**
+   * Short name of the application; 0-64 English letters, digits, and underscores
+   * @type {string} {@link string}
+   */
+  readonly application_name?: string;
+
+  /**
+   * Pass true if the current user allowed the bot to send them messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly allow_write_access?: Bool$Input;
+};
+
+/**
+ * Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
+ *
+ * @param {getWebAppLinkUrl$Input} parameters {@link getWebAppLinkUrl$Input}
+ * @return {HttpUrl} {@link HttpUrl}
+ */
+export type getWebAppLinkUrl = (parameters: getWebAppLinkUrl$Input) => HttpUrl;
+
+/** Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp or inlineQueryResultsButtonTypeWebApp button is pressed */
 export type getWebAppUrl$Input = {
   readonly _: "getWebAppUrl";
 
@@ -60130,7 +60937,7 @@ export type getWebAppUrl$Input = {
   readonly bot_user_id?: int53;
 
   /**
-   * The URL from the keyboardButtonTypeWebApp button
+   * The URL from the keyboardButtonTypeWebApp or inlineQueryResultsButtonTypeWebApp button
    * @type {string} {@link string}
    */
   readonly url?: string;
@@ -60149,7 +60956,7 @@ export type getWebAppUrl$Input = {
 };
 
 /**
- * Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp button is pressed
+ * Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp or inlineQueryResultsButtonTypeWebApp button is pressed
  *
  * @param {getWebAppUrl$Input} parameters {@link getWebAppUrl$Input}
  * @return {HttpUrl} {@link HttpUrl}
@@ -60683,19 +61490,19 @@ export type viewMessages$Input = {
   readonly chat_id?: int53;
 
   /**
-   * If not 0, a message thread identifier in which the messages are being viewed
-   * @type {int53} {@link int53}
-   */
-  readonly message_thread_id?: int53;
-
-  /**
    * The identifiers of the messages being viewed
    * @type {vector$Input<int53>} {@link vector<int53>}
    */
   readonly message_ids?: vector$Input<int53>;
 
   /**
-   * Pass true to mark as read the specified messages even the chat is closed
+   * Source of the message view
+   * @type {MessageSource$Input} {@link MessageSource}
+   */
+  readonly source?: MessageSource$Input;
+
+  /**
+   * Pass true to mark as read the specified messages even the chat is closed; pass null to guess the source based on chat open state
    * @type {Bool$Input} {@link Bool}
    */
   readonly force_read?: Bool$Input;
@@ -60765,6 +61572,31 @@ export type clickAnimatedEmojiMessage$Input = {
 export type clickAnimatedEmojiMessage = (
   parameters: clickAnimatedEmojiMessage$Input
 ) => Sticker;
+
+/** Returns an HTTPS or a tg: link with the given type. Can be called before authorization */
+export type getInternalLink$Input = {
+  readonly _: "getInternalLink";
+
+  /**
+   * Expected type of the link
+   * @type {InternalLinkType$Input} {@link InternalLinkType}
+   */
+  readonly type?: InternalLinkType$Input;
+
+  /**
+   * Pass true to create an HTTPS link (only available for some link types); pass false to create a tg: link
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_http?: Bool$Input;
+};
+
+/**
+ * Returns an HTTPS or a tg: link with the given type. Can be called before authorization
+ *
+ * @param {getInternalLink$Input} parameters {@link getInternalLink$Input}
+ * @return {HttpUrl} {@link HttpUrl}
+ */
+export type getInternalLink = (parameters: getInternalLink$Input) => HttpUrl;
 
 /** Returns information about the type of an internal link. Returns a 404 error if the link is not internal. Can be called before authorization */
 export type getInternalLinkType$Input = {
@@ -61024,7 +61856,7 @@ export type createNewBasicGroupChat$Input = {
   readonly _: "createNewBasicGroupChat";
 
   /**
-   * Identifiers of users to be added to the basic group
+   * Identifiers of users to be added to the basic group; may be empty to create a basic group without other members
    * @type {vector$Input<int53>} {@link vector<int53>}
    */
   readonly user_ids?: vector$Input<int53>;
@@ -66330,6 +67162,100 @@ export type setDefaultChannelAdministratorRights = (
   parameters: setDefaultChannelAdministratorRights$Input
 ) => Ok;
 
+/** Sets the text shown in the chat with the bot if the chat is empty; bots only */
+export type setBotInfoDescription$Input = {
+  readonly _: "setBotInfoDescription";
+
+  /**
+   * A two-letter ISO 639-1 language code. If empty, the description will be shown to all users, for which language there are no dedicated description
+   * @type {string} {@link string}
+   */
+  readonly language_code?: string;
+
+  /**
+   * Sets the text shown in the chat with the bot if the chat is empty; bots only
+   * @type {string} {@link string}
+   */
+  readonly description?: string;
+};
+
+/**
+ * Sets the text shown in the chat with the bot if the chat is empty; bots only
+ *
+ * @param {setBotInfoDescription$Input} parameters {@link setBotInfoDescription$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBotInfoDescription = (parameters: setBotInfoDescription$Input) => Ok;
+
+/** Returns the text shown in the chat with the bot if the chat is empty in the given language; bots only */
+export type getBotInfoDescription$Input = {
+  readonly _: "getBotInfoDescription";
+
+  /**
+   * A two-letter ISO 639-1 language code or an empty string
+   * @type {string} {@link string}
+   */
+  readonly language_code?: string;
+};
+
+/**
+ * Returns the text shown in the chat with the bot if the chat is empty in the given language; bots only
+ *
+ * @param {getBotInfoDescription$Input} parameters {@link getBotInfoDescription$Input}
+ * @return {Text} {@link Text}
+ */
+export type getBotInfoDescription = (
+  parameters: getBotInfoDescription$Input
+) => Text;
+
+/** Sets the text shown on the bot's profile page and sent together with the link when users share the bot; bots only */
+export type setBotInfoShortDescription$Input = {
+  readonly _: "setBotInfoShortDescription";
+
+  /**
+   * A two-letter ISO 639-1 language code. If empty, the short description will be shown to all users, for which language there are no dedicated description
+   * @type {string} {@link string}
+   */
+  readonly language_code?: string;
+
+  /**
+   * New bot's short description on the specified language
+   * @type {string} {@link string}
+   */
+  readonly short_description?: string;
+};
+
+/**
+ * Sets the text shown on the bot's profile page and sent together with the link when users share the bot; bots only
+ *
+ * @param {setBotInfoShortDescription$Input} parameters {@link setBotInfoShortDescription$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBotInfoShortDescription = (
+  parameters: setBotInfoShortDescription$Input
+) => Ok;
+
+/** Returns the text shown on the bot's profile page and sent together with the link when users share the bot in the given language; bots only */
+export type getBotInfoShortDescription$Input = {
+  readonly _: "getBotInfoShortDescription";
+
+  /**
+   * A two-letter ISO 639-1 language code or an empty string
+   * @type {string} {@link string}
+   */
+  readonly language_code?: string;
+};
+
+/**
+ * Returns the text shown on the bot's profile page and sent together with the link when users share the bot in the given language; bots only
+ *
+ * @param {getBotInfoShortDescription$Input} parameters {@link getBotInfoShortDescription$Input}
+ * @return {Text} {@link Text}
+ */
+export type getBotInfoShortDescription = (
+  parameters: getBotInfoShortDescription$Input
+) => Text;
+
 /** Returns all active sessions of the current user */
 export type getActiveSessions$Input = {
   readonly _: "getActiveSessions";
@@ -67430,7 +68356,7 @@ export type addCustomServerLanguagePack$Input = {
   readonly _: "addCustomServerLanguagePack";
 
   /**
-   * Identifier of a language pack to be added; may be different from a name that is used in an "https://t.me/setlanguage/" link
+   * Identifier of a language pack to be added
    * @type {string} {@link string}
    */
   readonly language_pack_id?: string;
@@ -68809,10 +69735,18 @@ export type uploadStickerFile$Input = {
   readonly user_id?: int53;
 
   /**
-   * Sticker file to upload
-   * @type {inputSticker$Input} {@link inputSticker}
+   * Sticker format
+   * @type {StickerFormat$Input} {@link StickerFormat}
    */
-  readonly sticker?: inputSticker$Input;
+  readonly sticker_format?: StickerFormat$Input;
+
+  /**
+   * File file to upload; must fit in a 512x512 square. For WEBP stickers the file must be in WEBP or PNG format, which will be converted to WEBP server-side.
+   *
+   * -See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
+   * @type {InputFile$Input} {@link InputFile}
+   */
+  readonly sticker?: InputFile$Input;
 };
 
 /**
@@ -68888,10 +69822,22 @@ export type createNewStickerSet$Input = {
   readonly name?: string;
 
   /**
+   * Format of the stickers in the set
+   * @type {StickerFormat$Input} {@link StickerFormat}
+   */
+  readonly sticker_format?: StickerFormat$Input;
+
+  /**
    * Type of the stickers in the set
    * @type {StickerType$Input} {@link StickerType}
    */
   readonly sticker_type?: StickerType$Input;
+
+  /**
+   * Pass true if stickers in the sticker set must be repainted; for custom emoji sticker sets only
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly needs_repainting?: Bool$Input;
 
   /**
    * List of stickers to be added to the set; must be non-empty. All stickers must have the same format. For TGS stickers, uploadStickerFile must be used before the sticker is shown
@@ -68916,7 +69862,7 @@ export type createNewStickerSet = (
   parameters: createNewStickerSet$Input
 ) => StickerSet;
 
-/** Adds a new sticker to a set; for bots only. Returns the sticker set */
+/** Adds a new sticker to a set; for bots only */
 export type addStickerToSet$Input = {
   readonly _: "addStickerToSet";
 
@@ -68940,14 +69886,14 @@ export type addStickerToSet$Input = {
 };
 
 /**
- * Adds a new sticker to a set; for bots only. Returns the sticker set
+ * Adds a new sticker to a set; for bots only
  *
  * @param {addStickerToSet$Input} parameters {@link addStickerToSet$Input}
- * @return {StickerSet} {@link StickerSet}
+ * @return {Ok} {@link Ok}
  */
-export type addStickerToSet = (parameters: addStickerToSet$Input) => StickerSet;
+export type addStickerToSet = (parameters: addStickerToSet$Input) => Ok;
 
-/** Sets a sticker set thumbnail; for bots only. Returns the sticker set */
+/** Sets a sticker set thumbnail; for bots only */
 export type setStickerSetThumbnail$Input = {
   readonly _: "setStickerSetThumbnail";
 
@@ -68971,14 +69917,85 @@ export type setStickerSetThumbnail$Input = {
 };
 
 /**
- * Sets a sticker set thumbnail; for bots only. Returns the sticker set
+ * Sets a sticker set thumbnail; for bots only
  *
  * @param {setStickerSetThumbnail$Input} parameters {@link setStickerSetThumbnail$Input}
- * @return {StickerSet} {@link StickerSet}
+ * @return {Ok} {@link Ok}
  */
 export type setStickerSetThumbnail = (
   parameters: setStickerSetThumbnail$Input
-) => StickerSet;
+) => Ok;
+
+/** Sets a custom emoji sticker set thumbnail; for bots only */
+export type setCustomEmojiStickerSetThumbnail$Input = {
+  readonly _: "setCustomEmojiStickerSetThumbnail";
+
+  /**
+   * Sticker set name
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * Identifier of the custom emoji from the sticker set, which will be set as sticker set thumbnail; pass 0 to remove the sticker set thumbnail
+   * @type {int64} {@link int64}
+   */
+  readonly custom_emoji_id?: int64;
+};
+
+/**
+ * Sets a custom emoji sticker set thumbnail; for bots only
+ *
+ * @param {setCustomEmojiStickerSetThumbnail$Input} parameters {@link setCustomEmojiStickerSetThumbnail$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setCustomEmojiStickerSetThumbnail = (
+  parameters: setCustomEmojiStickerSetThumbnail$Input
+) => Ok;
+
+/** Sets a sticker set title; for bots only */
+export type setStickerSetTitle$Input = {
+  readonly _: "setStickerSetTitle";
+
+  /**
+   * Sticker set name
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * New sticker set title
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+};
+
+/**
+ * Sets a sticker set title; for bots only
+ *
+ * @param {setStickerSetTitle$Input} parameters {@link setStickerSetTitle$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setStickerSetTitle = (parameters: setStickerSetTitle$Input) => Ok;
+
+/** Deleted a sticker set; for bots only */
+export type deleteStickerSet$Input = {
+  readonly _: "deleteStickerSet";
+
+  /**
+   * Sticker set name
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+};
+
+/**
+ * Deleted a sticker set; for bots only
+ *
+ * @param {deleteStickerSet$Input} parameters {@link deleteStickerSet$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type deleteStickerSet = (parameters: deleteStickerSet$Input) => Ok;
 
 /** Changes the position of a sticker in the set to which it belongs; for bots only. The sticker set must have been created by the bot */
 export type setStickerPositionInSet$Input = {
@@ -69025,6 +70042,83 @@ export type removeStickerFromSet$Input = {
  * @return {Ok} {@link Ok}
  */
 export type removeStickerFromSet = (parameters: removeStickerFromSet$Input) => Ok;
+
+/** Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot */
+export type setStickerEmojis$Input = {
+  readonly _: "setStickerEmojis";
+
+  /**
+   * Sticker
+   * @type {InputFile$Input} {@link InputFile}
+   */
+  readonly sticker?: InputFile$Input;
+
+  /**
+   * New string with 1-20 emoji corresponding to the sticker
+   * @type {string} {@link string}
+   */
+  readonly emojis?: string;
+};
+
+/**
+ * Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+ *
+ * @param {setStickerEmojis$Input} parameters {@link setStickerEmojis$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setStickerEmojis = (parameters: setStickerEmojis$Input) => Ok;
+
+/** Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot */
+export type setStickerKeywords$Input = {
+  readonly _: "setStickerKeywords";
+
+  /**
+   * Sticker
+   * @type {InputFile$Input} {@link InputFile}
+   */
+  readonly sticker?: InputFile$Input;
+
+  /**
+   * List of up to 20 keywords with total length up to 64 characters, which can be used to find the sticker
+   * @type {vector$Input<string>} {@link vector<string>}
+   */
+  readonly keywords?: vector$Input<string>;
+};
+
+/**
+ * Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+ *
+ * @param {setStickerKeywords$Input} parameters {@link setStickerKeywords$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setStickerKeywords = (parameters: setStickerKeywords$Input) => Ok;
+
+/** Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot */
+export type setStickerMaskPosition$Input = {
+  readonly _: "setStickerMaskPosition";
+
+  /**
+   * Sticker
+   * @type {InputFile$Input} {@link InputFile}
+   */
+  readonly sticker?: InputFile$Input;
+
+  /**
+   * Position where the mask is placed; pass null to remove mask position
+   * @type {maskPosition$Input} {@link maskPosition}
+   */
+  readonly mask_position?: maskPosition$Input;
+};
+
+/**
+ * Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot
+ *
+ * @param {setStickerMaskPosition$Input} parameters {@link setStickerMaskPosition$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setStickerMaskPosition = (
+  parameters: setStickerMaskPosition$Input
+) => Ok;
 
 /** Returns information about a file with a map thumbnail in PNG format. Only map thumbnail files with size less than 1MB can be downloaded */
 export type getMapThumbnailFile$Input = {
@@ -69426,21 +70520,6 @@ export type getPhoneNumberInfoSync = (
   parameters: getPhoneNumberInfoSync$Input
 ) => PhoneNumberInfo;
 
-/** Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram */
-export type getApplicationDownloadLink$Input = {
-  readonly _: "getApplicationDownloadLink";
-};
-
-/**
- * Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram
- *
- * @param {getApplicationDownloadLink$Input} parameters {@link getApplicationDownloadLink$Input}
- * @return {HttpUrl} {@link HttpUrl}
- */
-export type getApplicationDownloadLink = (
-  parameters: getApplicationDownloadLink$Input
-) => HttpUrl;
-
 /** Returns information about a tg:// deep link. Use "tg://need_update_for_some_feature" or "tg:some_unsupported_feature" for testing. Returns a 404 error for unknown links. Can be called before authorization */
 export type getDeepLinkInfo$Input = {
   readonly _: "getDeepLinkInfo";
@@ -69475,6 +70554,27 @@ export type getApplicationConfig = (
   parameters: getApplicationConfig$Input
 ) => JsonValue;
 
+/** Adds server-provided application changelog as messages to the chat 777000 (Telegram); for official applications only */
+export type addApplicationChangelog$Input = {
+  readonly _: "addApplicationChangelog";
+
+  /**
+   * The previous application version
+   * @type {string} {@link string}
+   */
+  readonly previous_application_version?: string;
+};
+
+/**
+ * Adds server-provided application changelog as messages to the chat 777000 (Telegram); for official applications only
+ *
+ * @param {addApplicationChangelog$Input} parameters {@link addApplicationChangelog$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type addApplicationChangelog = (
+  parameters: addApplicationChangelog$Input
+) => Ok;
+
 /** Saves application log event on the server. Can be called before authorization */
 export type saveApplicationLogEvent$Input = {
   readonly _: "saveApplicationLogEvent";
@@ -69507,6 +70607,21 @@ export type saveApplicationLogEvent$Input = {
 export type saveApplicationLogEvent = (
   parameters: saveApplicationLogEvent$Input
 ) => Ok;
+
+/** Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram */
+export type getApplicationDownloadLink$Input = {
+  readonly _: "getApplicationDownloadLink";
+};
+
+/**
+ * Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram
+ *
+ * @param {getApplicationDownloadLink$Input} parameters {@link getApplicationDownloadLink$Input}
+ * @return {HttpUrl} {@link HttpUrl}
+ */
+export type getApplicationDownloadLink = (
+  parameters: getApplicationDownloadLink$Input
+) => HttpUrl;
 
 /** Adds a proxy server for network requests. Can be called before authorization */
 export type addProxy$Input = {

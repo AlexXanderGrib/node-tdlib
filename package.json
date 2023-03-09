@@ -1,12 +1,12 @@
 {
   "name": "tdlib-native",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "🚀 Telegram TDLib native nodejs wrapper",
   "scripts": {
     "test": "jest",
     "clean:dist": "rm -rf dist",
     "clean:gyp": "node-gyp clean",
-    "build:types": "node scripts/generate-types.js",
+    "build:types": "node scripts/generate-types.js && node scripts/generate-meta.js",
     "build:dist": "rollup -c",
     "build:docs": "typedoc",
     "build:gyp": "node-gyp rebuild",
@@ -88,30 +88,30 @@
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "dotenv": "^16.0.3",
-    "eslint": "^8.28.0",
+    "eslint": "^8.35.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-security": "^1.5.0",
-    "eslint-plugin-unicorn": "^45.0.0",
-    "glob": "^8.1.0",
-    "husky": "^8.0.2",
-    "jest": "^29.3.1",
-    "node-gyp": "^9.3.0",
-    "prettier": "^2.8.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^3.4.0",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-unicorn": "^46.0.0",
+    "glob": "^9.2.1",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "node-gyp": "^9.3.1",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.4.0",
+    "rollup": "^3.18.0",
     "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-prettier": "^3.0.0",
     "rollup-plugin-typescript2": "^0.34.1",
-    "ts-jest": "^29.0.3",
+    "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
-    "typedoc": "^0.23.21",
-    "typedoc-plugin-markdown": "^3.13.6",
+    "typedoc": "^0.23.26",
+    "typedoc-plugin-markdown": "^3.14.0",
     "typedoc-plugin-missing-exports": "^1.0.0",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.5"
   },
   "husky": {
     "hooks": {
@@ -123,6 +123,6 @@
     "node": ">=14"
   },
   "dependencies": {
-    "node-addon-api": "^5.0.0"
+    "node-addon-api": "^6.0.0"
   }
 }

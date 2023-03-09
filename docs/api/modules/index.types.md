@@ -50,6 +50,7 @@
 - [GroupCallVideoQuality$Type](../enums/index.types.GroupCallVideoQuality_Type.md)
 - [InlineKeyboardButtonType$Type](../enums/index.types.InlineKeyboardButtonType_Type.md)
 - [InlineQueryResult$Type](../enums/index.types.InlineQueryResult_Type.md)
+- [InlineQueryResultsButtonType$Type](../enums/index.types.InlineQueryResultsButtonType_Type.md)
 - [InputBackground$Type](../enums/index.types.InputBackground_Type.md)
 - [InputChatPhoto$Type](../enums/index.types.InputChatPhoto_Type.md)
 - [InputCredentials$Type](../enums/index.types.InputCredentials_Type.md)
@@ -73,6 +74,7 @@
 - [MessageSchedulingState$Type](../enums/index.types.MessageSchedulingState_Type.md)
 - [MessageSender$Type](../enums/index.types.MessageSender_Type.md)
 - [MessageSendingState$Type](../enums/index.types.MessageSendingState_Type.md)
+- [MessageSource$Type](../enums/index.types.MessageSource_Type.md)
 - [NetworkStatisticsEntry$Type](../enums/index.types.NetworkStatisticsEntry_Type.md)
 - [NetworkType$Type](../enums/index.types.NetworkType_Type.md)
 - [NotificationGroupType$Type](../enums/index.types.NotificationGroupType_Type.md)
@@ -418,6 +420,8 @@
 - [FoundFileDownloads$Input](index.types.md#foundfiledownloads$input)
 - [FoundMessages](index.types.md#foundmessages)
 - [FoundMessages$Input](index.types.md#foundmessages$input)
+- [FoundWebApp](index.types.md#foundwebapp)
+- [FoundWebApp$Input](index.types.md#foundwebapp$input)
 - [Game](index.types.md#game)
 - [Game$Input](index.types.md#game$input)
 - [GameHighScore](index.types.md#gamehighscore)
@@ -458,6 +462,10 @@
 - [InlineQueryResult$Input](index.types.md#inlinequeryresult$input)
 - [InlineQueryResults](index.types.md#inlinequeryresults)
 - [InlineQueryResults$Input](index.types.md#inlinequeryresults$input)
+- [InlineQueryResultsButton](index.types.md#inlinequeryresultsbutton)
+- [InlineQueryResultsButton$Input](index.types.md#inlinequeryresultsbutton$input)
+- [InlineQueryResultsButtonType](index.types.md#inlinequeryresultsbuttontype)
+- [InlineQueryResultsButtonType$Input](index.types.md#inlinequeryresultsbuttontype$input)
 - [InputBackground](index.types.md#inputbackground)
 - [InputBackground$Input](index.types.md#inputbackground$input)
 - [InputChatPhoto](index.types.md#inputchatphoto)
@@ -576,10 +584,16 @@
 - [MessageSenders$Input](index.types.md#messagesenders$input)
 - [MessageSendingState](index.types.md#messagesendingstate)
 - [MessageSendingState$Input](index.types.md#messagesendingstate$input)
+- [MessageSource](index.types.md#messagesource)
+- [MessageSource$Input](index.types.md#messagesource$input)
 - [MessageStatistics](index.types.md#messagestatistics)
 - [MessageStatistics$Input](index.types.md#messagestatistics$input)
 - [MessageThreadInfo](index.types.md#messagethreadinfo)
 - [MessageThreadInfo$Input](index.types.md#messagethreadinfo$input)
+- [MessageViewer](index.types.md#messageviewer)
+- [MessageViewer$Input](index.types.md#messageviewer$input)
+- [MessageViewers](index.types.md#messageviewers)
+- [MessageViewers$Input](index.types.md#messageviewers$input)
 - [Messages](index.types.md#messages)
 - [Messages$Input](index.types.md#messages$input)
 - [Minithumbnail](index.types.md#minithumbnail)
@@ -884,6 +898,8 @@
 - [VideoNote$Input](index.types.md#videonote$input)
 - [VoiceNote](index.types.md#voicenote)
 - [VoiceNote$Input](index.types.md#voicenote$input)
+- [WebApp](index.types.md#webapp)
+- [WebApp$Input](index.types.md#webapp$input)
 - [WebAppInfo](index.types.md#webappinfo)
 - [WebAppInfo$Input](index.types.md#webappinfo$input)
 - [WebPage](index.types.md#webpage)
@@ -896,6 +912,8 @@
 - [acceptTermsOfService$Input](index.types.md#accepttermsofservice$input)
 - [accountTtl](index.types.md#accountttl-1)
 - [accountTtl$Input](index.types.md#accountttl$input-1)
+- [addApplicationChangelog](index.types.md#addapplicationchangelog)
+- [addApplicationChangelog$Input](index.types.md#addapplicationchangelog$input)
 - [addChatMember](index.types.md#addchatmember)
 - [addChatMember$Input](index.types.md#addchatmember$input)
 - [addChatMembers](index.types.md#addchatmembers)
@@ -1637,6 +1655,8 @@
 - [deleteSavedCredentials$Input](index.types.md#deletesavedcredentials$input)
 - [deleteSavedOrderInfo](index.types.md#deletesavedorderinfo)
 - [deleteSavedOrderInfo$Input](index.types.md#deletesavedorderinfo$input)
+- [deleteStickerSet](index.types.md#deletestickerset)
+- [deleteStickerSet$Input](index.types.md#deletestickerset$input)
 - [destroy](index.types.md#destroy)
 - [destroy$Input](index.types.md#destroy$input)
 - [deviceTokenApplePush](index.types.md#devicetokenapplepush)
@@ -1824,6 +1844,8 @@
 - [foundFileDownloads$Input](index.types.md#foundfiledownloads$input-1)
 - [foundMessages](index.types.md#foundmessages-1)
 - [foundMessages$Input](index.types.md#foundmessages$input-1)
+- [foundWebApp](index.types.md#foundwebapp-1)
+- [foundWebApp$Input](index.types.md#foundwebapp$input-1)
 - [game](index.types.md#game-1)
 - [game$Input](index.types.md#game$input-1)
 - [gameHighScore](index.types.md#gamehighscore-1)
@@ -1868,6 +1890,10 @@
 - [getBasicGroupFullInfo$Input](index.types.md#getbasicgroupfullinfo$input)
 - [getBlockedMessageSenders](index.types.md#getblockedmessagesenders)
 - [getBlockedMessageSenders$Input](index.types.md#getblockedmessagesenders$input)
+- [getBotInfoDescription](index.types.md#getbotinfodescription)
+- [getBotInfoDescription$Input](index.types.md#getbotinfodescription$input)
+- [getBotInfoShortDescription](index.types.md#getbotinfoshortdescription)
+- [getBotInfoShortDescription$Input](index.types.md#getbotinfoshortdescription$input)
 - [getCallbackQueryAnswer](index.types.md#getcallbackqueryanswer)
 - [getCallbackQueryAnswer$Input](index.types.md#getcallbackqueryanswer$input)
 - [getCallbackQueryMessage](index.types.md#getcallbackquerymessage)
@@ -2002,6 +2028,8 @@
 - [getInlineQueryResults$Input](index.types.md#getinlinequeryresults$input)
 - [getInstalledStickerSets](index.types.md#getinstalledstickersets)
 - [getInstalledStickerSets$Input](index.types.md#getinstalledstickersets$input)
+- [getInternalLink](index.types.md#getinternallink)
+- [getInternalLink$Input](index.types.md#getinternallink$input)
 - [getInternalLinkType](index.types.md#getinternallinktype)
 - [getInternalLinkType$Input](index.types.md#getinternallinktype$input)
 - [getJsonString](index.types.md#getjsonstring)
@@ -2190,6 +2218,8 @@
 - [getVideoChatAvailableParticipants$Input](index.types.md#getvideochatavailableparticipants$input)
 - [getVideoChatRtmpUrl](index.types.md#getvideochatrtmpurl)
 - [getVideoChatRtmpUrl$Input](index.types.md#getvideochatrtmpurl$input)
+- [getWebAppLinkUrl](index.types.md#getwebapplinkurl)
+- [getWebAppLinkUrl$Input](index.types.md#getwebapplinkurl$input)
 - [getWebAppUrl](index.types.md#getwebappurl)
 - [getWebAppUrl$Input](index.types.md#getwebappurl$input)
 - [getWebPageInstantView](index.types.md#getwebpageinstantview)
@@ -2278,6 +2308,12 @@
 - [inlineQueryResultVoiceNote$Input](index.types.md#inlinequeryresultvoicenote$input)
 - [inlineQueryResults](index.types.md#inlinequeryresults-1)
 - [inlineQueryResults$Input](index.types.md#inlinequeryresults$input-1)
+- [inlineQueryResultsButton](index.types.md#inlinequeryresultsbutton-1)
+- [inlineQueryResultsButton$Input](index.types.md#inlinequeryresultsbutton$input-1)
+- [inlineQueryResultsButtonTypeStartBot](index.types.md#inlinequeryresultsbuttontypestartbot)
+- [inlineQueryResultsButtonTypeStartBot$Input](index.types.md#inlinequeryresultsbuttontypestartbot$input)
+- [inlineQueryResultsButtonTypeWebApp](index.types.md#inlinequeryresultsbuttontypewebapp)
+- [inlineQueryResultsButtonTypeWebApp$Input](index.types.md#inlinequeryresultsbuttontypewebapp$input)
 - [inputBackgroundLocal](index.types.md#inputbackgroundlocal)
 - [inputBackgroundLocal$Input](index.types.md#inputbackgroundlocal$input)
 - [inputBackgroundRemote](index.types.md#inputbackgroundremote)
@@ -2497,6 +2533,8 @@
 - [internalLinkTypeUserToken$Input](index.types.md#internallinktypeusertoken$input)
 - [internalLinkTypeVideoChat](index.types.md#internallinktypevideochat)
 - [internalLinkTypeVideoChat$Input](index.types.md#internallinktypevideochat$input)
+- [internalLinkTypeWebApp](index.types.md#internallinktypewebapp)
+- [internalLinkTypeWebApp$Input](index.types.md#internallinktypewebapp$input)
 - [inviteGroupCallParticipants](index.types.md#invitegroupcallparticipants)
 - [inviteGroupCallParticipants$Input](index.types.md#invitegroupcallparticipants$input)
 - [invoice](index.types.md#invoice-1)
@@ -2745,6 +2783,24 @@
 - [messageSendingStateFailed$Input](index.types.md#messagesendingstatefailed$input)
 - [messageSendingStatePending](index.types.md#messagesendingstatepending)
 - [messageSendingStatePending$Input](index.types.md#messagesendingstatepending$input)
+- [messageSourceChatEventLog](index.types.md#messagesourcechateventlog)
+- [messageSourceChatEventLog$Input](index.types.md#messagesourcechateventlog$input)
+- [messageSourceChatHistory](index.types.md#messagesourcechathistory)
+- [messageSourceChatHistory$Input](index.types.md#messagesourcechathistory$input)
+- [messageSourceChatList](index.types.md#messagesourcechatlist)
+- [messageSourceChatList$Input](index.types.md#messagesourcechatlist$input)
+- [messageSourceForumTopicHistory](index.types.md#messagesourceforumtopichistory)
+- [messageSourceForumTopicHistory$Input](index.types.md#messagesourceforumtopichistory$input)
+- [messageSourceHistoryPreview](index.types.md#messagesourcehistorypreview)
+- [messageSourceHistoryPreview$Input](index.types.md#messagesourcehistorypreview$input)
+- [messageSourceMessageThreadHistory](index.types.md#messagesourcemessagethreadhistory)
+- [messageSourceMessageThreadHistory$Input](index.types.md#messagesourcemessagethreadhistory$input)
+- [messageSourceNotification](index.types.md#messagesourcenotification)
+- [messageSourceNotification$Input](index.types.md#messagesourcenotification$input)
+- [messageSourceOther](index.types.md#messagesourceother)
+- [messageSourceOther$Input](index.types.md#messagesourceother$input)
+- [messageSourceSearch](index.types.md#messagesourcesearch)
+- [messageSourceSearch$Input](index.types.md#messagesourcesearch$input)
 - [messageStatistics](index.types.md#messagestatistics-1)
 - [messageStatistics$Input](index.types.md#messagestatistics$input-1)
 - [messageSticker](index.types.md#messagesticker)
@@ -2773,6 +2829,10 @@
 - [messageVideoChatStarted$Input](index.types.md#messagevideochatstarted$input)
 - [messageVideoNote](index.types.md#messagevideonote)
 - [messageVideoNote$Input](index.types.md#messagevideonote$input)
+- [messageViewer](index.types.md#messageviewer-1)
+- [messageViewer$Input](index.types.md#messageviewer$input-1)
+- [messageViewers](index.types.md#messageviewers-1)
+- [messageViewers$Input](index.types.md#messageviewers$input-1)
 - [messageVoiceNote](index.types.md#messagevoicenote)
 - [messageVoiceNote$Input](index.types.md#messagevoicenote$input)
 - [messageWebAppDataReceived](index.types.md#messagewebappdatareceived)
@@ -3475,6 +3535,8 @@
 - [searchUserByPhoneNumber$Input](index.types.md#searchuserbyphonenumber$input)
 - [searchUserByToken](index.types.md#searchuserbytoken)
 - [searchUserByToken$Input](index.types.md#searchuserbytoken$input)
+- [searchWebApp](index.types.md#searchwebapp)
+- [searchWebApp$Input](index.types.md#searchwebapp$input)
 - [seconds](index.types.md#seconds-1)
 - [seconds$Input](index.types.md#seconds$input-1)
 - [secretChat](index.types.md#secretchat-1)
@@ -3577,6 +3639,10 @@
 - [setBackground$Input](index.types.md#setbackground$input)
 - [setBio](index.types.md#setbio)
 - [setBio$Input](index.types.md#setbio$input)
+- [setBotInfoDescription](index.types.md#setbotinfodescription)
+- [setBotInfoDescription$Input](index.types.md#setbotinfodescription$input)
+- [setBotInfoShortDescription](index.types.md#setbotinfoshortdescription)
+- [setBotInfoShortDescription$Input](index.types.md#setbotinfoshortdescription$input)
 - [setBotUpdatesStatus](index.types.md#setbotupdatesstatus)
 - [setBotUpdatesStatus$Input](index.types.md#setbotupdatesstatus$input)
 - [setChatAvailableReactions](index.types.md#setchatavailablereactions)
@@ -3611,6 +3677,8 @@
 - [setChatTitle$Input](index.types.md#setchattitle$input)
 - [setCommands](index.types.md#setcommands)
 - [setCommands$Input](index.types.md#setcommands$input)
+- [setCustomEmojiStickerSetThumbnail](index.types.md#setcustomemojistickersetthumbnail)
+- [setCustomEmojiStickerSetThumbnail$Input](index.types.md#setcustomemojistickersetthumbnail$input)
 - [setCustomLanguagePack](index.types.md#setcustomlanguagepack)
 - [setCustomLanguagePack$Input](index.types.md#setcustomlanguagepack$input)
 - [setCustomLanguagePackString](index.types.md#setcustomlanguagepackstring)
@@ -3679,10 +3747,18 @@
 - [setRecoveryEmailAddress$Input](index.types.md#setrecoveryemailaddress$input)
 - [setScopeNotificationSettings](index.types.md#setscopenotificationsettings)
 - [setScopeNotificationSettings$Input](index.types.md#setscopenotificationsettings$input)
+- [setStickerEmojis](index.types.md#setstickeremojis)
+- [setStickerEmojis$Input](index.types.md#setstickeremojis$input)
+- [setStickerKeywords](index.types.md#setstickerkeywords)
+- [setStickerKeywords$Input](index.types.md#setstickerkeywords$input)
+- [setStickerMaskPosition](index.types.md#setstickermaskposition)
+- [setStickerMaskPosition$Input](index.types.md#setstickermaskposition$input)
 - [setStickerPositionInSet](index.types.md#setstickerpositioninset)
 - [setStickerPositionInSet$Input](index.types.md#setstickerpositioninset$input)
 - [setStickerSetThumbnail](index.types.md#setstickersetthumbnail)
 - [setStickerSetThumbnail$Input](index.types.md#setstickersetthumbnail$input)
+- [setStickerSetTitle](index.types.md#setstickersettitle)
+- [setStickerSetTitle$Input](index.types.md#setstickersettitle$input)
 - [setSupergroupStickerSet](index.types.md#setsupergroupstickerset)
 - [setSupergroupStickerSet$Input](index.types.md#setsupergroupstickerset$input)
 - [setSupergroupUsername](index.types.md#setsupergroupusername)
@@ -4045,6 +4121,8 @@
 - [updateActiveEmojiReactions$Input](index.types.md#updateactiveemojireactions$input)
 - [updateActiveNotifications](index.types.md#updateactivenotifications)
 - [updateActiveNotifications$Input](index.types.md#updateactivenotifications$input)
+- [updateAddChatMembersPrivacyForbidden](index.types.md#updateaddchatmembersprivacyforbidden)
+- [updateAddChatMembersPrivacyForbidden$Input](index.types.md#updateaddchatmembersprivacyforbidden$input)
 - [updateAnimatedEmojiMessageClicked](index.types.md#updateanimatedemojimessageclicked)
 - [updateAnimatedEmojiMessageClicked$Input](index.types.md#updateanimatedemojimessageclicked$input)
 - [updateAnimationSearchParameters](index.types.md#updateanimationsearchparameters)
@@ -4355,6 +4433,8 @@
 - [viewTrendingStickerSets$Input](index.types.md#viewtrendingstickersets$input)
 - [voiceNote](index.types.md#voicenote-1)
 - [voiceNote$Input](index.types.md#voicenote$input-1)
+- [webApp](index.types.md#webapp-1)
+- [webApp$Input](index.types.md#webapp$input-1)
 - [webAppInfo](index.types.md#webappinfo-1)
 - [webAppInfo$Input](index.types.md#webappinfo$input-1)
 - [webPage](index.types.md#webpage-1)
@@ -4376,6 +4456,7 @@
 | :------ | :------ |
 | `acceptCall` | [`acceptCall`](index.types.default.md#acceptcall) |
 | `acceptTermsOfService` | [`acceptTermsOfService`](index.types.default.md#accepttermsofservice) |
+| `addApplicationChangelog` | [`addApplicationChangelog`](index.types.default.md#addapplicationchangelog) |
 | `addChatMember` | [`addChatMember`](index.types.default.md#addchatmember) |
 | `addChatMembers` | [`addChatMembers`](index.types.default.md#addchatmembers) |
 | `addChatToList` | [`addChatToList`](index.types.default.md#addchattolist) |
@@ -4476,6 +4557,7 @@
 | `deleteRevokedChatInviteLink` | [`deleteRevokedChatInviteLink`](index.types.default.md#deleterevokedchatinvitelink) |
 | `deleteSavedCredentials` | [`deleteSavedCredentials`](index.types.default.md#deletesavedcredentials) |
 | `deleteSavedOrderInfo` | [`deleteSavedOrderInfo`](index.types.default.md#deletesavedorderinfo) |
+| `deleteStickerSet` | [`deleteStickerSet`](index.types.default.md#deletestickerset) |
 | `destroy` | [`destroy`](index.types.default.md#destroy) |
 | `disableAllSupergroupUsernames` | [`disableAllSupergroupUsernames`](index.types.default.md#disableallsupergroupusernames) |
 | `disableProxy` | [`disableProxy`](index.types.default.md#disableproxy) |
@@ -4524,6 +4606,8 @@
 | `getBasicGroup` | [`getBasicGroup`](index.types.default.md#getbasicgroup) |
 | `getBasicGroupFullInfo` | [`getBasicGroupFullInfo`](index.types.default.md#getbasicgroupfullinfo) |
 | `getBlockedMessageSenders` | [`getBlockedMessageSenders`](index.types.default.md#getblockedmessagesenders) |
+| `getBotInfoDescription` | [`getBotInfoDescription`](index.types.default.md#getbotinfodescription) |
+| `getBotInfoShortDescription` | [`getBotInfoShortDescription`](index.types.default.md#getbotinfoshortdescription) |
 | `getCallbackQueryAnswer` | [`getCallbackQueryAnswer`](index.types.default.md#getcallbackqueryanswer) |
 | `getCallbackQueryMessage` | [`getCallbackQueryMessage`](index.types.default.md#getcallbackquerymessage) |
 | `getChat` | [`getChat`](index.types.default.md#getchat) |
@@ -4591,6 +4675,7 @@
 | `getInlineGameHighScores` | [`getInlineGameHighScores`](index.types.default.md#getinlinegamehighscores) |
 | `getInlineQueryResults` | [`getInlineQueryResults`](index.types.default.md#getinlinequeryresults) |
 | `getInstalledStickerSets` | [`getInstalledStickerSets`](index.types.default.md#getinstalledstickersets) |
+| `getInternalLink` | [`getInternalLink`](index.types.default.md#getinternallink) |
 | `getInternalLinkType` | [`getInternalLinkType`](index.types.default.md#getinternallinktype) |
 | `getJsonString` | [`getJsonString`](index.types.default.md#getjsonstring) |
 | `getJsonValue` | [`getJsonValue`](index.types.default.md#getjsonvalue) |
@@ -4685,6 +4770,7 @@
 | `getUserSupportInfo` | [`getUserSupportInfo`](index.types.default.md#getusersupportinfo) |
 | `getVideoChatAvailableParticipants` | [`getVideoChatAvailableParticipants`](index.types.default.md#getvideochatavailableparticipants) |
 | `getVideoChatRtmpUrl` | [`getVideoChatRtmpUrl`](index.types.default.md#getvideochatrtmpurl) |
+| `getWebAppLinkUrl` | [`getWebAppLinkUrl`](index.types.default.md#getwebapplinkurl) |
 | `getWebAppUrl` | [`getWebAppUrl`](index.types.default.md#getwebappurl) |
 | `getWebPageInstantView` | [`getWebPageInstantView`](index.types.default.md#getwebpageinstantview) |
 | `getWebPagePreview` | [`getWebPagePreview`](index.types.default.md#getwebpagepreview) |
@@ -4792,6 +4878,7 @@
 | `searchStickers` | [`searchStickers`](index.types.default.md#searchstickers) |
 | `searchUserByPhoneNumber` | [`searchUserByPhoneNumber`](index.types.default.md#searchuserbyphonenumber) |
 | `searchUserByToken` | [`searchUserByToken`](index.types.default.md#searchuserbytoken) |
+| `searchWebApp` | [`searchWebApp`](index.types.default.md#searchwebapp) |
 | `sendAuthenticationFirebaseSms` | [`sendAuthenticationFirebaseSms`](index.types.default.md#sendauthenticationfirebasesms) |
 | `sendBotStartMessage` | [`sendBotStartMessage`](index.types.default.md#sendbotstartmessage) |
 | `sendCallDebugInformation` | [`sendCallDebugInformation`](index.types.default.md#sendcalldebuginformation) |
@@ -4818,6 +4905,8 @@
 | `setAutosaveSettings` | [`setAutosaveSettings`](index.types.default.md#setautosavesettings) |
 | `setBackground` | [`setBackground`](index.types.default.md#setbackground) |
 | `setBio` | [`setBio`](index.types.default.md#setbio) |
+| `setBotInfoDescription` | [`setBotInfoDescription`](index.types.default.md#setbotinfodescription) |
+| `setBotInfoShortDescription` | [`setBotInfoShortDescription`](index.types.default.md#setbotinfoshortdescription) |
 | `setBotUpdatesStatus` | [`setBotUpdatesStatus`](index.types.default.md#setbotupdatesstatus) |
 | `setChatAvailableReactions` | [`setChatAvailableReactions`](index.types.default.md#setchatavailablereactions) |
 | `setChatClientData` | [`setChatClientData`](index.types.default.md#setchatclientdata) |
@@ -4835,6 +4924,7 @@
 | `setChatTheme` | [`setChatTheme`](index.types.default.md#setchattheme) |
 | `setChatTitle` | [`setChatTitle`](index.types.default.md#setchattitle) |
 | `setCommands` | [`setCommands`](index.types.default.md#setcommands) |
+| `setCustomEmojiStickerSetThumbnail` | [`setCustomEmojiStickerSetThumbnail`](index.types.default.md#setcustomemojistickersetthumbnail) |
 | `setCustomLanguagePack` | [`setCustomLanguagePack`](index.types.default.md#setcustomlanguagepack) |
 | `setCustomLanguagePackString` | [`setCustomLanguagePackString`](index.types.default.md#setcustomlanguagepackstring) |
 | `setDatabaseEncryptionKey` | [`setDatabaseEncryptionKey`](index.types.default.md#setdatabaseencryptionkey) |
@@ -4869,8 +4959,12 @@
 | `setProfilePhoto` | [`setProfilePhoto`](index.types.default.md#setprofilephoto) |
 | `setRecoveryEmailAddress` | [`setRecoveryEmailAddress`](index.types.default.md#setrecoveryemailaddress) |
 | `setScopeNotificationSettings` | [`setScopeNotificationSettings`](index.types.default.md#setscopenotificationsettings) |
+| `setStickerEmojis` | [`setStickerEmojis`](index.types.default.md#setstickeremojis) |
+| `setStickerKeywords` | [`setStickerKeywords`](index.types.default.md#setstickerkeywords) |
+| `setStickerMaskPosition` | [`setStickerMaskPosition`](index.types.default.md#setstickermaskposition) |
 | `setStickerPositionInSet` | [`setStickerPositionInSet`](index.types.default.md#setstickerpositioninset) |
 | `setStickerSetThumbnail` | [`setStickerSetThumbnail`](index.types.default.md#setstickersetthumbnail) |
+| `setStickerSetTitle` | [`setStickerSetTitle`](index.types.default.md#setstickersettitle) |
 | `setSupergroupStickerSet` | [`setSupergroupStickerSet`](index.types.default.md#setsupergroupstickerset) |
 | `setSupergroupUsername` | [`setSupergroupUsername`](index.types.default.md#setsupergroupusername) |
 | `setTdlibParameters` | [`setTdlibParameters`](index.types.default.md#settdlibparameters) |
@@ -4950,7 +5044,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:44916
+dist/generated/types.d.ts:45503
 
 ___
 
@@ -4963,7 +5057,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43707
+dist/generated/types.d.ts:44290
 
 ___
 
@@ -4977,7 +5071,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43713
+dist/generated/types.d.ts:44296
 
 ___
 
@@ -4990,7 +5084,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42596
+dist/generated/types.d.ts:43155
 
 ___
 
@@ -5004,7 +5098,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42602
+dist/generated/types.d.ts:43161
 
 ___
 
@@ -5017,7 +5111,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42607
+dist/generated/types.d.ts:43166
 
 ___
 
@@ -5031,7 +5125,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42613
+dist/generated/types.d.ts:43172
 
 ___
 
@@ -5044,7 +5138,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41332
+dist/generated/types.d.ts:41891
 
 ___
 
@@ -5058,7 +5152,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41338
+dist/generated/types.d.ts:41897
 
 ___
 
@@ -5071,7 +5165,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39887
+dist/generated/types.d.ts:40386
 
 ___
 
@@ -5085,7 +5179,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39893
+dist/generated/types.d.ts:40392
 
 ___
 
@@ -5098,7 +5192,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39714
+dist/generated/types.d.ts:40202
 
 ___
 
@@ -5112,7 +5206,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39720
+dist/generated/types.d.ts:40208
 
 ___
 
@@ -5125,7 +5219,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39626
+dist/generated/types.d.ts:40114
 
 ___
 
@@ -5139,7 +5233,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39632
+dist/generated/types.d.ts:40120
 
 ___
 
@@ -5152,7 +5246,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42651
+dist/generated/types.d.ts:43210
 
 ___
 
@@ -5166,7 +5260,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42657
+dist/generated/types.d.ts:43216
 
 ___
 
@@ -5179,7 +5273,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42712
+dist/generated/types.d.ts:43271
 
 ___
 
@@ -5193,7 +5287,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42718
+dist/generated/types.d.ts:43277
 
 ___
 
@@ -5206,7 +5300,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42701
+dist/generated/types.d.ts:43260
 
 ___
 
@@ -5220,7 +5314,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42707
+dist/generated/types.d.ts:43266
 
 ___
 
@@ -5233,7 +5327,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39637
+dist/generated/types.d.ts:40125
 
 ___
 
@@ -5247,7 +5341,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39643
+dist/generated/types.d.ts:40131
 
 ___
 
@@ -5260,7 +5354,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39265
+dist/generated/types.d.ts:39753
 
 ___
 
@@ -5274,7 +5368,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39271
+dist/generated/types.d.ts:39759
 
 ___
 
@@ -5294,7 +5388,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39247
+dist/generated/types.d.ts:39735
 
 ___
 
@@ -5315,7 +5409,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39260
+dist/generated/types.d.ts:39748
 
 ___
 
@@ -5339,7 +5433,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39357
+dist/generated/types.d.ts:39845
 
 ___
 
@@ -5364,7 +5458,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39374
+dist/generated/types.d.ts:39862
 
 ___
 
@@ -5377,7 +5471,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44115
+dist/generated/types.d.ts:44700
 
 ___
 
@@ -5391,7 +5485,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44121
+dist/generated/types.d.ts:44706
 
 ___
 
@@ -5404,7 +5498,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44126
+dist/generated/types.d.ts:44711
 
 ___
 
@@ -5418,7 +5512,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44132
+dist/generated/types.d.ts:44717
 
 ___
 
@@ -5431,7 +5525,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44176
+dist/generated/types.d.ts:44761
 
 ___
 
@@ -5445,7 +5539,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44182
+dist/generated/types.d.ts:44767
 
 ___
 
@@ -5458,7 +5552,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44165
+dist/generated/types.d.ts:44750
 
 ___
 
@@ -5472,7 +5566,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44171
+dist/generated/types.d.ts:44756
 
 ___
 
@@ -5488,7 +5582,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44140
+dist/generated/types.d.ts:44725
 
 ___
 
@@ -5505,7 +5599,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44149
+dist/generated/types.d.ts:44734
 
 ___
 
@@ -5518,7 +5612,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42618
+dist/generated/types.d.ts:43177
 
 ___
 
@@ -5532,7 +5626,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42624
+dist/generated/types.d.ts:43183
 
 ___
 
@@ -5545,7 +5639,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42629
+dist/generated/types.d.ts:43188
 
 ___
 
@@ -5559,7 +5653,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42635
+dist/generated/types.d.ts:43194
 
 ___
 
@@ -5572,7 +5666,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43297
+dist/generated/types.d.ts:43880
 
 ___
 
@@ -5586,7 +5680,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43303
+dist/generated/types.d.ts:43886
 
 ___
 
@@ -5601,7 +5695,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43269
+dist/generated/types.d.ts:43852
 
 ___
 
@@ -5617,7 +5711,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43277
+dist/generated/types.d.ts:43860
 
 ___
 
@@ -5632,7 +5726,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43284
+dist/generated/types.d.ts:43867
 
 ___
 
@@ -5648,7 +5742,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43292
+dist/generated/types.d.ts:43875
 
 ___
 
@@ -5661,7 +5755,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43308
+dist/generated/types.d.ts:43891
 
 ___
 
@@ -5675,7 +5769,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43314
+dist/generated/types.d.ts:43897
 
 ___
 
@@ -5688,7 +5782,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41310
+dist/generated/types.d.ts:41869
 
 ___
 
@@ -5702,7 +5796,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41316
+dist/generated/types.d.ts:41875
 
 ___
 
@@ -5715,7 +5809,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41321
+dist/generated/types.d.ts:41880
 
 ___
 
@@ -5729,7 +5823,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41327
+dist/generated/types.d.ts:41886
 
 ___
 
@@ -5742,7 +5836,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40281
+dist/generated/types.d.ts:40780
 
 ___
 
@@ -5756,7 +5850,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40287
+dist/generated/types.d.ts:40786
 
 ___
 
@@ -5769,7 +5863,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40292
+dist/generated/types.d.ts:40791
 
 ___
 
@@ -5783,7 +5877,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40298
+dist/generated/types.d.ts:40797
 
 ___
 
@@ -5797,7 +5891,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39206
+dist/generated/types.d.ts:39694
 
 ___
 
@@ -5812,7 +5906,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39213
+dist/generated/types.d.ts:39701
 
 ___
 
@@ -5825,7 +5919,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39819
+dist/generated/types.d.ts:40318
 
 ___
 
@@ -5839,7 +5933,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39825
+dist/generated/types.d.ts:40324
 
 ___
 
@@ -5858,7 +5952,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44544
+dist/generated/types.d.ts:45129
 
 ___
 
@@ -5878,7 +5972,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44556
+dist/generated/types.d.ts:45141
 
 ___
 
@@ -5891,7 +5985,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39830
+dist/generated/types.d.ts:40329
 
 ___
 
@@ -5905,7 +5999,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39836
+dist/generated/types.d.ts:40335
 
 ___
 
@@ -5918,7 +6012,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40025
+dist/generated/types.d.ts:40524
 
 ___
 
@@ -5932,7 +6026,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40031
+dist/generated/types.d.ts:40530
 
 ___
 
@@ -5945,7 +6039,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39841
+dist/generated/types.d.ts:40340
 
 ___
 
@@ -5959,7 +6053,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39847
+dist/generated/types.d.ts:40346
 
 ___
 
@@ -5972,7 +6066,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39194
+dist/generated/types.d.ts:39682
 
 ___
 
@@ -5986,7 +6080,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39200
+dist/generated/types.d.ts:39688
 
 ___
 
@@ -5999,7 +6093,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42561
+dist/generated/types.d.ts:43120
 
 ___
 
@@ -6013,7 +6107,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42567
+dist/generated/types.d.ts:43126
 
 ___
 
@@ -6030,7 +6124,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42338
+dist/generated/types.d.ts:42897
 
 ___
 
@@ -6048,7 +6142,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42348
+dist/generated/types.d.ts:42907
 
 ___
 
@@ -6061,7 +6155,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42388
+dist/generated/types.d.ts:42947
 
 ___
 
@@ -6075,7 +6169,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42394
+dist/generated/types.d.ts:42953
 
 ___
 
@@ -6096,7 +6190,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42542
+dist/generated/types.d.ts:43101
 
 ___
 
@@ -6118,7 +6212,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42556
+dist/generated/types.d.ts:43115
 
 ___
 
@@ -6131,7 +6225,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42353
+dist/generated/types.d.ts:42912
 
 ___
 
@@ -6145,7 +6239,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42359
+dist/generated/types.d.ts:42918
 
 ___
 
@@ -6158,7 +6252,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42377
+dist/generated/types.d.ts:42936
 
 ___
 
@@ -6172,7 +6266,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42383
+dist/generated/types.d.ts:42942
 
 ___
 
@@ -6186,7 +6280,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42365
+dist/generated/types.d.ts:42924
 
 ___
 
@@ -6201,7 +6295,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42372
+dist/generated/types.d.ts:42931
 
 ___
 
@@ -6219,7 +6313,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42415
+dist/generated/types.d.ts:42974
 
 ___
 
@@ -6238,7 +6332,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42426
+dist/generated/types.d.ts:42985
 
 ___
 
@@ -6251,7 +6345,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42848
+dist/generated/types.d.ts:43431
 
 ___
 
@@ -6265,7 +6359,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42854
+dist/generated/types.d.ts:43437
 
 ___
 
@@ -6280,7 +6374,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42835
+dist/generated/types.d.ts:43418
 
 ___
 
@@ -6296,7 +6390,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42843
+dist/generated/types.d.ts:43426
 
 ___
 
@@ -6312,7 +6406,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43368
+dist/generated/types.d.ts:43951
 
 ___
 
@@ -6329,7 +6423,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43377
+dist/generated/types.d.ts:43960
 
 ___
 
@@ -6342,7 +6436,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40823
+dist/generated/types.d.ts:41371
 
 ___
 
@@ -6356,7 +6450,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40829
+dist/generated/types.d.ts:41377
 
 ___
 
@@ -6383,7 +6477,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42185
+dist/generated/types.d.ts:42744
 
 ___
 
@@ -6411,7 +6505,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42205
+dist/generated/types.d.ts:42764
 
 ___
 
@@ -6430,7 +6524,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40886
+dist/generated/types.d.ts:41434
 
 ___
 
@@ -6450,7 +6544,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40898
+dist/generated/types.d.ts:41446
 
 ___
 
@@ -6463,7 +6557,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40058
+dist/generated/types.d.ts:40557
 
 ___
 
@@ -6477,7 +6571,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40064
+dist/generated/types.d.ts:40563
 
 ___
 
@@ -6490,7 +6584,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39948
+dist/generated/types.d.ts:40447
 
 ___
 
@@ -6504,7 +6598,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39954
+dist/generated/types.d.ts:40453
 
 ___
 
@@ -6517,7 +6611,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40069
+dist/generated/types.d.ts:40568
 
 ___
 
@@ -6531,7 +6625,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40075
+dist/generated/types.d.ts:40574
 
 ___
 
@@ -6545,7 +6639,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40800
+dist/generated/types.d.ts:41348
 
 ___
 
@@ -6560,7 +6654,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40807
+dist/generated/types.d.ts:41355
 
 ___
 
@@ -6573,7 +6667,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42989
+dist/generated/types.d.ts:43572
 
 ___
 
@@ -6587,7 +6681,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42995
+dist/generated/types.d.ts:43578
 
 ___
 
@@ -6643,7 +6737,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42935
+dist/generated/types.d.ts:43518
 
 ___
 
@@ -6700,7 +6794,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42984
+dist/generated/types.d.ts:43567
 
 ___
 
@@ -6713,7 +6807,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43011
+dist/generated/types.d.ts:43594
 
 ___
 
@@ -6727,7 +6821,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43017
+dist/generated/types.d.ts:43600
 
 ___
 
@@ -6740,7 +6834,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43000
+dist/generated/types.d.ts:43583
 
 ___
 
@@ -6754,7 +6848,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43006
+dist/generated/types.d.ts:43589
 
 ___
 
@@ -6767,7 +6861,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40705
+dist/generated/types.d.ts:41253
 
 ___
 
@@ -6781,7 +6875,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40711
+dist/generated/types.d.ts:41259
 
 ___
 
@@ -6794,7 +6888,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40716
+dist/generated/types.d.ts:41264
 
 ___
 
@@ -6808,7 +6902,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40722
+dist/generated/types.d.ts:41270
 
 ___
 
@@ -6821,7 +6915,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40171
+dist/generated/types.d.ts:40670
 
 ___
 
@@ -6835,7 +6929,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40177
+dist/generated/types.d.ts:40676
 
 ___
 
@@ -6848,7 +6942,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40193
+dist/generated/types.d.ts:40692
 
 ___
 
@@ -6862,7 +6956,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40199
+dist/generated/types.d.ts:40698
 
 ___
 
@@ -6875,7 +6969,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40204
+dist/generated/types.d.ts:40703
 
 ___
 
@@ -6889,7 +6983,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40210
+dist/generated/types.d.ts:40709
 
 ___
 
@@ -6902,7 +6996,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40237
+dist/generated/types.d.ts:40736
 
 ___
 
@@ -6916,7 +7010,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40243
+dist/generated/types.d.ts:40742
 
 ___
 
@@ -6929,7 +7023,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40215
+dist/generated/types.d.ts:40714
 
 ___
 
@@ -6943,7 +7037,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40221
+dist/generated/types.d.ts:40720
 
 ___
 
@@ -6956,7 +7050,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40226
+dist/generated/types.d.ts:40725
 
 ___
 
@@ -6970,7 +7064,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40232
+dist/generated/types.d.ts:40731
 
 ___
 
@@ -6983,7 +7077,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40182
+dist/generated/types.d.ts:40681
 
 ___
 
@@ -6997,7 +7091,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40188
+dist/generated/types.d.ts:40687
 
 ___
 
@@ -7010,7 +7104,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40248
+dist/generated/types.d.ts:40747
 
 ___
 
@@ -7024,7 +7118,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40254
+dist/generated/types.d.ts:40753
 
 ___
 
@@ -7037,7 +7131,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40259
+dist/generated/types.d.ts:40758
 
 ___
 
@@ -7051,7 +7145,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40265
+dist/generated/types.d.ts:40764
 
 ___
 
@@ -7064,7 +7158,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40270
+dist/generated/types.d.ts:40769
 
 ___
 
@@ -7078,7 +7172,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40276
+dist/generated/types.d.ts:40775
 
 ___
 
@@ -7093,7 +7187,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40751
+dist/generated/types.d.ts:41299
 
 ___
 
@@ -7109,7 +7203,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40759
+dist/generated/types.d.ts:41307
 
 ___
 
@@ -7122,7 +7216,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40764
+dist/generated/types.d.ts:41312
 
 ___
 
@@ -7136,7 +7230,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40770
+dist/generated/types.d.ts:41318
 
 ___
 
@@ -7149,7 +7243,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39852
+dist/generated/types.d.ts:40351
 
 ___
 
@@ -7163,7 +7257,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39858
+dist/generated/types.d.ts:40357
 
 ___
 
@@ -7176,7 +7270,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40101
+dist/generated/types.d.ts:40600
 
 ___
 
@@ -7190,7 +7284,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40107
+dist/generated/types.d.ts:40606
 
 ___
 
@@ -7208,7 +7302,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40085
+dist/generated/types.d.ts:40584
 
 ___
 
@@ -7227,7 +7321,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40096
+dist/generated/types.d.ts:40595
 
 ___
 
@@ -7240,7 +7334,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40112
+dist/generated/types.d.ts:40611
 
 ___
 
@@ -7254,7 +7348,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40118
+dist/generated/types.d.ts:40617
 
 ___
 
@@ -7273,7 +7367,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40129
+dist/generated/types.d.ts:40628
 
 ___
 
@@ -7293,7 +7387,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40141
+dist/generated/types.d.ts:40640
 
 ___
 
@@ -7306,7 +7400,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40375
+dist/generated/types.d.ts:40874
 
 ___
 
@@ -7320,7 +7414,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40381
+dist/generated/types.d.ts:40880
 
 ___
 
@@ -7333,7 +7427,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40386
+dist/generated/types.d.ts:40885
 
 ___
 
@@ -7347,7 +7441,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40392
+dist/generated/types.d.ts:40891
 
 ___
 
@@ -7360,7 +7454,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40845
+dist/generated/types.d.ts:41393
 
 ___
 
@@ -7374,7 +7468,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40851
+dist/generated/types.d.ts:41399
 
 ___
 
@@ -7387,7 +7481,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40655
+dist/generated/types.d.ts:41203
 
 ___
 
@@ -7401,7 +7495,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40661
+dist/generated/types.d.ts:41209
 
 ___
 
@@ -7414,7 +7508,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39937
+dist/generated/types.d.ts:40436
 
 ___
 
@@ -7428,7 +7522,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39943
+dist/generated/types.d.ts:40442
 
 ___
 
@@ -7441,7 +7535,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39898
+dist/generated/types.d.ts:40397
 
 ___
 
@@ -7455,7 +7549,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39904
+dist/generated/types.d.ts:40403
 
 ___
 
@@ -7468,7 +7562,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39791
+dist/generated/types.d.ts:40290
 
 ___
 
@@ -7482,7 +7576,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39797
+dist/generated/types.d.ts:40296
 
 ___
 
@@ -7495,7 +7589,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39876
+dist/generated/types.d.ts:40375
 
 ___
 
@@ -7509,7 +7603,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39882
+dist/generated/types.d.ts:40381
 
 ___
 
@@ -7523,7 +7617,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39864
+dist/generated/types.d.ts:40363
 
 ___
 
@@ -7538,7 +7632,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39871
+dist/generated/types.d.ts:40370
 
 ___
 
@@ -7551,7 +7645,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39909
+dist/generated/types.d.ts:40408
 
 ___
 
@@ -7565,7 +7659,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39915
+dist/generated/types.d.ts:40414
 
 ___
 
@@ -7578,7 +7672,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40788
+dist/generated/types.d.ts:41336
 
 ___
 
@@ -7592,7 +7686,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40794
+dist/generated/types.d.ts:41342
 
 ___
 
@@ -7614,7 +7708,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43825
+dist/generated/types.d.ts:44408
 
 ___
 
@@ -7637,7 +7731,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43840
+dist/generated/types.d.ts:44423
 
 ___
 
@@ -7651,7 +7745,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40776
+dist/generated/types.d.ts:41324
 
 ___
 
@@ -7666,7 +7760,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40783
+dist/generated/types.d.ts:41331
 
 ___
 
@@ -7680,7 +7774,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44491
+dist/generated/types.d.ts:45076
 
 ___
 
@@ -7695,7 +7789,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44498
+dist/generated/types.d.ts:45083
 
 ___
 
@@ -7708,7 +7802,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44468
+dist/generated/types.d.ts:45053
 
 ___
 
@@ -7722,7 +7816,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44474
+dist/generated/types.d.ts:45059
 
 ___
 
@@ -7735,7 +7829,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44479
+dist/generated/types.d.ts:45064
 
 ___
 
@@ -7749,7 +7843,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44485
+dist/generated/types.d.ts:45070
 
 ___
 
@@ -7762,7 +7856,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44446
+dist/generated/types.d.ts:45031
 
 ___
 
@@ -7776,7 +7870,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44452
+dist/generated/types.d.ts:45037
 
 ___
 
@@ -7789,7 +7883,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44457
+dist/generated/types.d.ts:45042
 
 ___
 
@@ -7803,7 +7897,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44463
+dist/generated/types.d.ts:45048
 
 ___
 
@@ -7816,7 +7910,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43343
+dist/generated/types.d.ts:43926
 
 ___
 
@@ -7830,7 +7924,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43349
+dist/generated/types.d.ts:43932
 
 ___
 
@@ -7846,7 +7940,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40691
+dist/generated/types.d.ts:41239
 
 ___
 
@@ -7863,7 +7957,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40700
+dist/generated/types.d.ts:41248
 
 ___
 
@@ -7876,7 +7970,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40834
+dist/generated/types.d.ts:41382
 
 ___
 
@@ -7890,7 +7984,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40840
+dist/generated/types.d.ts:41388
 
 ___
 
@@ -7903,7 +7997,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40856
+dist/generated/types.d.ts:41404
 
 ___
 
@@ -7917,7 +8011,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40862
+dist/generated/types.d.ts:41410
 
 ___
 
@@ -7935,7 +8029,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43387
+dist/generated/types.d.ts:43970
 
 ___
 
@@ -7954,7 +8048,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43398
+dist/generated/types.d.ts:43981
 
 ___
 
@@ -7969,7 +8063,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43405
+dist/generated/types.d.ts:43988
 
 ___
 
@@ -7985,7 +8079,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43413
+dist/generated/types.d.ts:43996
 
 ___
 
@@ -7998,7 +8092,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39591
+dist/generated/types.d.ts:40079
 
 ___
 
@@ -8012,7 +8106,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39597
+dist/generated/types.d.ts:40085
 
 ___
 
@@ -8025,7 +8119,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43794
+dist/generated/types.d.ts:44377
 
 ___
 
@@ -8039,7 +8133,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43800
+dist/generated/types.d.ts:44383
 
 ___
 
@@ -8052,7 +8146,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43805
+dist/generated/types.d.ts:44388
 
 ___
 
@@ -8066,7 +8160,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43811
+dist/generated/types.d.ts:44394
 
 ___
 
@@ -8083,7 +8177,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44191
+dist/generated/types.d.ts:44776
 
 ___
 
@@ -8101,7 +8195,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44201
+dist/generated/types.d.ts:44786
 
 ___
 
@@ -8114,7 +8208,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39725
+dist/generated/types.d.ts:40213
 
 ___
 
@@ -8128,7 +8222,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39731
+dist/generated/types.d.ts:40219
 
 ___
 
@@ -8141,7 +8235,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44293
+dist/generated/types.d.ts:44878
 
 ___
 
@@ -8155,7 +8249,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44299
+dist/generated/types.d.ts:44884
 
 ___
 
@@ -8168,7 +8262,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41288
+dist/generated/types.d.ts:41847
 
 ___
 
@@ -8182,7 +8276,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41294
+dist/generated/types.d.ts:41853
 
 ___
 
@@ -8195,7 +8289,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41277
+dist/generated/types.d.ts:41836
 
 ___
 
@@ -8209,7 +8303,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41283
+dist/generated/types.d.ts:41842
 
 ___
 
@@ -8222,7 +8316,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42859
+dist/generated/types.d.ts:43442
 
 ___
 
@@ -8236,7 +8330,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42865
+dist/generated/types.d.ts:43448
 
 ___
 
@@ -8249,7 +8343,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44061
+dist/generated/types.d.ts:44646
 
 ___
 
@@ -8263,7 +8357,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44067
+dist/generated/types.d.ts:44652
 
 ___
 
@@ -8276,7 +8370,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41572
+dist/generated/types.d.ts:42131
 
 ___
 
@@ -8290,7 +8384,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41578
+dist/generated/types.d.ts:42137
 
 ___
 
@@ -8303,7 +8397,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44409
+dist/generated/types.d.ts:44994
 
 ___
 
@@ -8317,7 +8411,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44415
+dist/generated/types.d.ts:45000
 
 ___
 
@@ -8330,7 +8424,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41526
+dist/generated/types.d.ts:42085
 
 ___
 
@@ -8344,7 +8438,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41532
+dist/generated/types.d.ts:42091
 
 ___
 
@@ -8357,7 +8451,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44337
+dist/generated/types.d.ts:44922
 
 ___
 
@@ -8371,7 +8465,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44343
+dist/generated/types.d.ts:44928
 
 ___
 
@@ -8395,7 +8489,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43234
+dist/generated/types.d.ts:43817
 
 ___
 
@@ -8420,7 +8514,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43251
+dist/generated/types.d.ts:43834
 
 ___
 
@@ -8434,7 +8528,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42663
+dist/generated/types.d.ts:43222
 
 ___
 
@@ -8449,7 +8543,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42670
+dist/generated/types.d.ts:43229
 
 ___
 
@@ -8462,7 +8556,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39648
+dist/generated/types.d.ts:40136
 
 ___
 
@@ -8476,7 +8570,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39654
+dist/generated/types.d.ts:40142
 
 ___
 
@@ -8489,7 +8583,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39139
+dist/generated/types.d.ts:39627
 
 ___
 
@@ -8503,7 +8597,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39145
+dist/generated/types.d.ts:39633
 
 ___
 
@@ -8516,7 +8610,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40618
+dist/generated/types.d.ts:41166
 
 ___
 
@@ -8530,7 +8624,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40624
+dist/generated/types.d.ts:41172
 
 ___
 
@@ -8543,7 +8637,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40677
+dist/generated/types.d.ts:41225
 
 ___
 
@@ -8557,7 +8651,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40683
+dist/generated/types.d.ts:41231
 
 ___
 
@@ -8572,7 +8666,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39289
+dist/generated/types.d.ts:39777
 
 ___
 
@@ -8588,7 +8682,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39297
+dist/generated/types.d.ts:39785
 
 ___
 
@@ -8601,7 +8695,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39276
+dist/generated/types.d.ts:39764
 
 ___
 
@@ -8615,7 +8709,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39282
+dist/generated/types.d.ts:39770
 
 ___
 
@@ -8628,7 +8722,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42308
+dist/generated/types.d.ts:42867
 
 ___
 
@@ -8642,7 +8736,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42314
+dist/generated/types.d.ts:42873
 
 ___
 
@@ -8655,7 +8749,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42297
+dist/generated/types.d.ts:42856
 
 ___
 
@@ -8669,7 +8763,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42303
+dist/generated/types.d.ts:42862
 
 ___
 
@@ -8684,7 +8778,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42321
+dist/generated/types.d.ts:42880
 
 ___
 
@@ -8700,7 +8794,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42329
+dist/generated/types.d.ts:42888
 
 ___
 
@@ -8713,7 +8807,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42640
+dist/generated/types.d.ts:43199
 
 ___
 
@@ -8727,7 +8821,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42646
+dist/generated/types.d.ts:43205
 
 ___
 
@@ -8740,7 +8834,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39981
+dist/generated/types.d.ts:40480
 
 ___
 
@@ -8754,7 +8848,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39987
+dist/generated/types.d.ts:40486
 
 ___
 
@@ -8767,7 +8861,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39992
+dist/generated/types.d.ts:40491
 
 ___
 
@@ -8781,7 +8875,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39998
+dist/generated/types.d.ts:40497
 
 ___
 
@@ -8794,7 +8888,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42242
+dist/generated/types.d.ts:42801
 
 ___
 
@@ -8808,7 +8902,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42248
+dist/generated/types.d.ts:42807
 
 ___
 
@@ -8821,7 +8915,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41801
+dist/generated/types.d.ts:42360
 
 ___
 
@@ -8835,7 +8929,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41807
+dist/generated/types.d.ts:42366
 
 ___
 
@@ -8848,7 +8942,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41812
+dist/generated/types.d.ts:42371
 
 ___
 
@@ -8862,7 +8956,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41818
+dist/generated/types.d.ts:42377
 
 ___
 
@@ -8875,7 +8969,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39218
+dist/generated/types.d.ts:39706
 
 ___
 
@@ -8889,7 +8983,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39224
+dist/generated/types.d.ts:39712
 
 ___
 
@@ -8902,7 +8996,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39434
+dist/generated/types.d.ts:39922
 
 ___
 
@@ -8916,7 +9010,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39440
+dist/generated/types.d.ts:39928
 
 ___
 
@@ -8929,7 +9023,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40607
+dist/generated/types.d.ts:41155
 
 ___
 
@@ -8943,7 +9037,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40613
+dist/generated/types.d.ts:41161
 
 ___
 
@@ -8956,7 +9050,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44326
+dist/generated/types.d.ts:44911
 
 ___
 
@@ -8970,7 +9064,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44332
+dist/generated/types.d.ts:44917
 
 ___
 
@@ -8983,7 +9077,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43963
+dist/generated/types.d.ts:44548
 
 ___
 
@@ -8997,7 +9091,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43969
+dist/generated/types.d.ts:44554
 
 ___
 
@@ -9026,7 +9120,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43990
+dist/generated/types.d.ts:44575
 
 ___
 
@@ -9056,7 +9150,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44012
+dist/generated/types.d.ts:44597
 
 ___
 
@@ -9070,7 +9164,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42573
+dist/generated/types.d.ts:43132
 
 ___
 
@@ -9085,7 +9179,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42580
+dist/generated/types.d.ts:43139
 
 ___
 
@@ -9098,7 +9192,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39324
+dist/generated/types.d.ts:39812
 
 ___
 
@@ -9112,7 +9206,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39330
+dist/generated/types.d.ts:39818
 
 ___
 
@@ -9125,7 +9219,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41049
+dist/generated/types.d.ts:41608
 
 ___
 
@@ -9139,7 +9233,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41055
+dist/generated/types.d.ts:41614
 
 ___
 
@@ -9152,7 +9246,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41027
+dist/generated/types.d.ts:41586
 
 ___
 
@@ -9166,7 +9260,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41033
+dist/generated/types.d.ts:41592
 
 ___
 
@@ -9179,7 +9273,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41038
+dist/generated/types.d.ts:41597
 
 ___
 
@@ -9193,7 +9287,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41044
+dist/generated/types.d.ts:41603
 
 ___
 
@@ -9206,7 +9300,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41060
+dist/generated/types.d.ts:41619
 
 ___
 
@@ -9220,7 +9314,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41066
+dist/generated/types.d.ts:41625
 
 ___
 
@@ -9233,7 +9327,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40530
+dist/generated/types.d.ts:41051
 
 ___
 
@@ -9247,7 +9341,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40536
+dist/generated/types.d.ts:41057
 
 ___
 
@@ -9260,7 +9354,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40629
+dist/generated/types.d.ts:41177
 
 ___
 
@@ -9274,7 +9368,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40635
+dist/generated/types.d.ts:41183
 
 ___
 
@@ -9287,7 +9381,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40519
+dist/generated/types.d.ts:41040
 
 ___
 
@@ -9301,7 +9395,34 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40525
+dist/generated/types.d.ts:41046
+
+___
+
+### FoundWebApp
+
+Ƭ **FoundWebApp**: [`foundWebApp`](index.types.default.md#foundwebapp-1)
+
+Any of:
+- [foundWebApp](index.types.md#foundwebapp-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:41553
+
+___
+
+### FoundWebApp$Input
+
+Ƭ **FoundWebApp$Input**: [`foundWebApp$Input`](index.types.default.md#foundwebapp$input-1)
+
+Version of [FoundWebApp](index.types.md#foundwebapp) for method parameters.
+Any of:
+- [foundWebApp$Input](index.types.md#foundwebapp$input-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:41559
 
 ___
 
@@ -9314,7 +9435,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39758
+dist/generated/types.d.ts:40246
 
 ___
 
@@ -9328,7 +9449,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39764
+dist/generated/types.d.ts:40252
 
 ___
 
@@ -9341,7 +9462,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42870
+dist/generated/types.d.ts:43453
 
 ___
 
@@ -9355,7 +9476,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42876
+dist/generated/types.d.ts:43459
 
 ___
 
@@ -9368,7 +9489,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42881
+dist/generated/types.d.ts:43464
 
 ___
 
@@ -9382,7 +9503,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42887
+dist/generated/types.d.ts:43470
 
 ___
 
@@ -9395,7 +9516,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42490
+dist/generated/types.d.ts:43049
 
 ___
 
@@ -9409,7 +9530,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42496
+dist/generated/types.d.ts:43055
 
 ___
 
@@ -9422,7 +9543,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42399
+dist/generated/types.d.ts:42958
 
 ___
 
@@ -9436,7 +9557,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42405
+dist/generated/types.d.ts:42964
 
 ___
 
@@ -9449,7 +9570,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42523
+dist/generated/types.d.ts:43082
 
 ___
 
@@ -9463,7 +9584,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42529
+dist/generated/types.d.ts:43088
 
 ___
 
@@ -9476,7 +9597,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42512
+dist/generated/types.d.ts:43071
 
 ___
 
@@ -9490,7 +9611,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42518
+dist/generated/types.d.ts:43077
 
 ___
 
@@ -9503,7 +9624,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42479
+dist/generated/types.d.ts:43038
 
 ___
 
@@ -9517,7 +9638,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42485
+dist/generated/types.d.ts:43044
 
 ___
 
@@ -9530,7 +9651,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42446
+dist/generated/types.d.ts:43005
 
 ___
 
@@ -9544,7 +9665,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42452
+dist/generated/types.d.ts:43011
 
 ___
 
@@ -9557,7 +9678,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42457
+dist/generated/types.d.ts:43016
 
 ___
 
@@ -9571,7 +9692,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42463
+dist/generated/types.d.ts:43022
 
 ___
 
@@ -9586,7 +9707,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42433
+dist/generated/types.d.ts:42992
 
 ___
 
@@ -9602,7 +9723,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42441
+dist/generated/types.d.ts:43000
 
 ___
 
@@ -9615,7 +9736,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42501
+dist/generated/types.d.ts:43060
 
 ___
 
@@ -9629,7 +9750,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42507
+dist/generated/types.d.ts:43066
 
 ___
 
@@ -9642,7 +9763,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43354
+dist/generated/types.d.ts:43937
 
 ___
 
@@ -9656,7 +9777,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43360
+dist/generated/types.d.ts:43943
 
 ___
 
@@ -9669,7 +9790,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42734
+dist/generated/types.d.ts:43293
 
 ___
 
@@ -9683,7 +9804,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42740
+dist/generated/types.d.ts:43299
 
 ___
 
@@ -9696,7 +9817,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41594
+dist/generated/types.d.ts:42153
 
 ___
 
@@ -9710,7 +9831,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41600
+dist/generated/types.d.ts:42159
 
 ___
 
@@ -9723,7 +9844,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42675
+dist/generated/types.d.ts:43234
 
 ___
 
@@ -9737,7 +9858,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42681
+dist/generated/types.d.ts:43240
 
 ___
 
@@ -9750,7 +9871,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40964
+dist/generated/types.d.ts:41512
 
 ___
 
@@ -9764,7 +9885,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40970
+dist/generated/types.d.ts:41518
 
 ___
 
@@ -9785,7 +9906,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40945
+dist/generated/types.d.ts:41493
 
 ___
 
@@ -9807,7 +9928,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40959
+dist/generated/types.d.ts:41507
 
 ___
 
@@ -9831,7 +9952,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42800
+dist/generated/types.d.ts:43359
 
 ___
 
@@ -9856,7 +9977,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42817
+dist/generated/types.d.ts:43376
 
 ___
 
@@ -9869,7 +9990,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42822
+dist/generated/types.d.ts:43405
 
 ___
 
@@ -9883,7 +10004,63 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42828
+dist/generated/types.d.ts:43411
+
+___
+
+### InlineQueryResultsButton
+
+Ƭ **InlineQueryResultsButton**: [`inlineQueryResultsButton`](index.types.default.md#inlinequeryresultsbutton-1)
+
+Any of:
+- [inlineQueryResultsButton](index.types.md#inlinequeryresultsbutton-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:43394
+
+___
+
+### InlineQueryResultsButton$Input
+
+Ƭ **InlineQueryResultsButton$Input**: [`inlineQueryResultsButton$Input`](index.types.default.md#inlinequeryresultsbutton$input-1)
+
+Version of [InlineQueryResultsButton](index.types.md#inlinequeryresultsbutton) for method parameters.
+Any of:
+- [inlineQueryResultsButton$Input](index.types.md#inlinequeryresultsbutton$input-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:43400
+
+___
+
+### InlineQueryResultsButtonType
+
+Ƭ **InlineQueryResultsButtonType**: [`inlineQueryResultsButtonTypeStartBot`](index.types.default.md#inlinequeryresultsbuttontypestartbot) \| [`inlineQueryResultsButtonTypeWebApp`](index.types.default.md#inlinequeryresultsbuttontypewebapp)
+
+Any of:
+- [inlineQueryResultsButtonTypeStartBot](index.types.md#inlinequeryresultsbuttontypestartbot)
+- [inlineQueryResultsButtonTypeWebApp](index.types.md#inlinequeryresultsbuttontypewebapp)
+
+#### Defined in
+
+dist/generated/types.d.ts:43382
+
+___
+
+### InlineQueryResultsButtonType$Input
+
+Ƭ **InlineQueryResultsButtonType$Input**: [`inlineQueryResultsButtonTypeStartBot$Input`](index.types.default.md#inlinequeryresultsbuttontypestartbot$input) \| [`inlineQueryResultsButtonTypeWebApp$Input`](index.types.default.md#inlinequeryresultsbuttontypewebapp$input)
+
+Version of [InlineQueryResultsButtonType](index.types.md#inlinequeryresultsbuttontype) for method parameters.
+Any of:
+- [inlineQueryResultsButtonTypeStartBot$Input](index.types.md#inlinequeryresultsbuttontypestartbot$input)
+- [inlineQueryResultsButtonTypeWebApp$Input](index.types.md#inlinequeryresultsbuttontypewebapp$input)
+
+#### Defined in
+
+dist/generated/types.d.ts:43389
 
 ___
 
@@ -9897,7 +10074,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43320
+dist/generated/types.d.ts:43903
 
 ___
 
@@ -9912,7 +10089,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43327
+dist/generated/types.d.ts:43910
 
 ___
 
@@ -9928,7 +10105,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39923
+dist/generated/types.d.ts:40422
 
 ___
 
@@ -9945,7 +10122,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39932
+dist/generated/types.d.ts:40431
 
 ___
 
@@ -9961,7 +10138,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41412
+dist/generated/types.d.ts:41971
 
 ___
 
@@ -9978,7 +10155,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41421
+dist/generated/types.d.ts:41980
 
 ___
 
@@ -9994,7 +10171,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39448
+dist/generated/types.d.ts:39936
 
 ___
 
@@ -10011,7 +10188,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39457
+dist/generated/types.d.ts:39945
 
 ___
 
@@ -10024,7 +10201,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41605
+dist/generated/types.d.ts:42164
 
 ___
 
@@ -10038,7 +10215,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41611
+dist/generated/types.d.ts:42170
 
 ___
 
@@ -10062,7 +10239,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42767
+dist/generated/types.d.ts:43326
 
 ___
 
@@ -10087,7 +10264,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42784
+dist/generated/types.d.ts:43343
 
 ___
 
@@ -10101,7 +10278,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41497
+dist/generated/types.d.ts:42056
 
 ___
 
@@ -10116,7 +10293,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41504
+dist/generated/types.d.ts:42063
 
 ___
 
@@ -10145,7 +10322,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42101
+dist/generated/types.d.ts:42660
 
 ___
 
@@ -10175,7 +10352,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42123
+dist/generated/types.d.ts:42682
 
 ___
 
@@ -10200,7 +10377,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41685
+dist/generated/types.d.ts:42244
 
 ___
 
@@ -10226,7 +10403,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41703
+dist/generated/types.d.ts:42262
 
 ___
 
@@ -10239,7 +10416,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41850
+dist/generated/types.d.ts:42409
 
 ___
 
@@ -10253,7 +10430,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41856
+dist/generated/types.d.ts:42415
 
 ___
 
@@ -10274,7 +10451,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41831
+dist/generated/types.d.ts:42390
 
 ___
 
@@ -10296,7 +10473,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41845
+dist/generated/types.d.ts:42404
 
 ___
 
@@ -10309,7 +10486,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41627
+dist/generated/types.d.ts:42186
 
 ___
 
@@ -10323,7 +10500,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41633
+dist/generated/types.d.ts:42192
 
 ___
 
@@ -10336,7 +10513,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44398
+dist/generated/types.d.ts:44983
 
 ___
 
@@ -10350,7 +10527,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44404
+dist/generated/types.d.ts:44989
 
 ___
 
@@ -10363,7 +10540,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42039
+dist/generated/types.d.ts:42598
 
 ___
 
@@ -10377,7 +10554,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42045
+dist/generated/types.d.ts:42604
 
 ___
 
@@ -10390,7 +10567,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39161
+dist/generated/types.d.ts:39649
 
 ___
 
@@ -10404,7 +10581,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39167
+dist/generated/types.d.ts:39655
 
 ___
 
@@ -10417,7 +10594,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39172
+dist/generated/types.d.ts:39660
 
 ___
 
@@ -10431,7 +10608,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39178
+dist/generated/types.d.ts:39666
 
 ___
 
@@ -10444,7 +10621,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39183
+dist/generated/types.d.ts:39671
 
 ___
 
@@ -10458,22 +10635,22 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39189
+dist/generated/types.d.ts:39677
 
 ___
 
 ### InternalLinkType
 
-Ƭ **InternalLinkType**: [`internalLinkTypeActiveSessions`](index.types.default.md#internallinktypeactivesessions) \| [`internalLinkTypeAttachmentMenuBot`](index.types.default.md#internallinktypeattachmentmenubot) \| [`internalLinkTypeAuthenticationCode`](index.types.default.md#internallinktypeauthenticationcode) \| [`internalLinkTypeBackground`](index.types.default.md#internallinktypebackground) \| [`internalLinkTypeBotStart`](index.types.default.md#internallinktypebotstart) \| [`internalLinkTypeBotStartInGroup`](index.types.default.md#internallinktypebotstartingroup) \| [`internalLinkTypeBotAddToChannel`](index.types.default.md#internallinktypebotaddtochannel) \| [`internalLinkTypeChangePhoneNumber`](index.types.default.md#internallinktypechangephonenumber) \| [`internalLinkTypeChatInvite`](index.types.default.md#internallinktypechatinvite) \| [`internalLinkTypeDefaultMessageAutoDeleteTimerSettings`](index.types.default.md#internallinktypedefaultmessageautodeletetimersettings) \| [`internalLinkTypeEditProfileSettings`](index.types.default.md#internallinktypeeditprofilesettings) \| [`internalLinkTypeFilterSettings`](index.types.default.md#internallinktypefiltersettings) \| [`internalLinkTypeGame`](index.types.default.md#internallinktypegame) \| [`internalLinkTypeInstantView`](index.types.default.md#internallinktypeinstantview) \| [`internalLinkTypeInvoice`](index.types.default.md#internallinktypeinvoice) \| [`internalLinkTypeLanguagePack`](index.types.default.md#internallinktypelanguagepack) \| [`internalLinkTypeLanguageSettings`](index.types.default.md#internallinktypelanguagesettings) \| [`internalLinkTypeMessage`](index.types.default.md#internallinktypemessage) \| [`internalLinkTypeMessageDraft`](index.types.default.md#internallinktypemessagedraft) \| [`internalLinkTypePassportDataRequest`](index.types.default.md#internallinktypepassportdatarequest) \| [`internalLinkTypePhoneNumberConfirmation`](index.types.default.md#internallinktypephonenumberconfirmation) \| [`internalLinkTypePremiumFeatures`](index.types.default.md#internallinktypepremiumfeatures) \| [`internalLinkTypePrivacyAndSecuritySettings`](index.types.default.md#internallinktypeprivacyandsecuritysettings) \| [`internalLinkTypeProxy`](index.types.default.md#internallinktypeproxy) \| [`internalLinkTypePublicChat`](index.types.default.md#internallinktypepublicchat) \| [`internalLinkTypeQrCodeAuthentication`](index.types.default.md#internallinktypeqrcodeauthentication) \| [`internalLinkTypeRestorePurchases`](index.types.default.md#internallinktyperestorepurchases) \| [`internalLinkTypeSettings`](index.types.default.md#internallinktypesettings) \| [`internalLinkTypeStickerSet`](index.types.default.md#internallinktypestickerset) \| [`internalLinkTypeTheme`](index.types.default.md#internallinktypetheme) \| [`internalLinkTypeThemeSettings`](index.types.default.md#internallinktypethemesettings) \| [`internalLinkTypeUnknownDeepLink`](index.types.default.md#internallinktypeunknowndeeplink) \| [`internalLinkTypeUnsupportedProxy`](index.types.default.md#internallinktypeunsupportedproxy) \| [`internalLinkTypeUserPhoneNumber`](index.types.default.md#internallinktypeuserphonenumber) \| [`internalLinkTypeUserToken`](index.types.default.md#internallinktypeusertoken) \| [`internalLinkTypeVideoChat`](index.types.default.md#internallinktypevideochat)
+Ƭ **InternalLinkType**: [`internalLinkTypeActiveSessions`](index.types.default.md#internallinktypeactivesessions) \| [`internalLinkTypeAttachmentMenuBot`](index.types.default.md#internallinktypeattachmentmenubot) \| [`internalLinkTypeAuthenticationCode`](index.types.default.md#internallinktypeauthenticationcode) \| [`internalLinkTypeBackground`](index.types.default.md#internallinktypebackground) \| [`internalLinkTypeBotAddToChannel`](index.types.default.md#internallinktypebotaddtochannel) \| [`internalLinkTypeBotStart`](index.types.default.md#internallinktypebotstart) \| [`internalLinkTypeBotStartInGroup`](index.types.default.md#internallinktypebotstartingroup) \| [`internalLinkTypeChangePhoneNumber`](index.types.default.md#internallinktypechangephonenumber) \| [`internalLinkTypeChatInvite`](index.types.default.md#internallinktypechatinvite) \| [`internalLinkTypeDefaultMessageAutoDeleteTimerSettings`](index.types.default.md#internallinktypedefaultmessageautodeletetimersettings) \| [`internalLinkTypeEditProfileSettings`](index.types.default.md#internallinktypeeditprofilesettings) \| [`internalLinkTypeFilterSettings`](index.types.default.md#internallinktypefiltersettings) \| [`internalLinkTypeGame`](index.types.default.md#internallinktypegame) \| [`internalLinkTypeInstantView`](index.types.default.md#internallinktypeinstantview) \| [`internalLinkTypeInvoice`](index.types.default.md#internallinktypeinvoice) \| [`internalLinkTypeLanguagePack`](index.types.default.md#internallinktypelanguagepack) \| [`internalLinkTypeLanguageSettings`](index.types.default.md#internallinktypelanguagesettings) \| [`internalLinkTypeMessage`](index.types.default.md#internallinktypemessage) \| [`internalLinkTypeMessageDraft`](index.types.default.md#internallinktypemessagedraft) \| [`internalLinkTypePassportDataRequest`](index.types.default.md#internallinktypepassportdatarequest) \| [`internalLinkTypePhoneNumberConfirmation`](index.types.default.md#internallinktypephonenumberconfirmation) \| [`internalLinkTypePremiumFeatures`](index.types.default.md#internallinktypepremiumfeatures) \| [`internalLinkTypePrivacyAndSecuritySettings`](index.types.default.md#internallinktypeprivacyandsecuritysettings) \| [`internalLinkTypeProxy`](index.types.default.md#internallinktypeproxy) \| [`internalLinkTypePublicChat`](index.types.default.md#internallinktypepublicchat) \| [`internalLinkTypeQrCodeAuthentication`](index.types.default.md#internallinktypeqrcodeauthentication) \| [`internalLinkTypeRestorePurchases`](index.types.default.md#internallinktyperestorepurchases) \| [`internalLinkTypeSettings`](index.types.default.md#internallinktypesettings) \| [`internalLinkTypeStickerSet`](index.types.default.md#internallinktypestickerset) \| [`internalLinkTypeTheme`](index.types.default.md#internallinktypetheme) \| [`internalLinkTypeThemeSettings`](index.types.default.md#internallinktypethemesettings) \| [`internalLinkTypeUnknownDeepLink`](index.types.default.md#internallinktypeunknowndeeplink) \| [`internalLinkTypeUnsupportedProxy`](index.types.default.md#internallinktypeunsupportedproxy) \| [`internalLinkTypeUserPhoneNumber`](index.types.default.md#internallinktypeuserphonenumber) \| [`internalLinkTypeUserToken`](index.types.default.md#internallinktypeusertoken) \| [`internalLinkTypeVideoChat`](index.types.default.md#internallinktypevideochat) \| [`internalLinkTypeWebApp`](index.types.default.md#internallinktypewebapp)
 
 Any of:
 - [internalLinkTypeActiveSessions](index.types.md#internallinktypeactivesessions)
 - [internalLinkTypeAttachmentMenuBot](index.types.md#internallinktypeattachmentmenubot)
 - [internalLinkTypeAuthenticationCode](index.types.md#internallinktypeauthenticationcode)
 - [internalLinkTypeBackground](index.types.md#internallinktypebackground)
+- [internalLinkTypeBotAddToChannel](index.types.md#internallinktypebotaddtochannel)
 - [internalLinkTypeBotStart](index.types.md#internallinktypebotstart)
 - [internalLinkTypeBotStartInGroup](index.types.md#internallinktypebotstartingroup)
-- [internalLinkTypeBotAddToChannel](index.types.md#internallinktypebotaddtochannel)
 - [internalLinkTypeChangePhoneNumber](index.types.md#internallinktypechangephonenumber)
 - [internalLinkTypeChatInvite](index.types.md#internallinktypechatinvite)
 - [internalLinkTypeDefaultMessageAutoDeleteTimerSettings](index.types.md#internallinktypedefaultmessageautodeletetimersettings)
@@ -10503,16 +10680,17 @@ Any of:
 - [internalLinkTypeUserPhoneNumber](index.types.md#internallinktypeuserphonenumber)
 - [internalLinkTypeUserToken](index.types.md#internallinktypeusertoken)
 - [internalLinkTypeVideoChat](index.types.md#internallinktypevideochat)
+- [internalLinkTypeWebApp](index.types.md#internallinktypewebapp)
 
 #### Defined in
 
-dist/generated/types.d.ts:43895
+dist/generated/types.d.ts:44479
 
 ___
 
 ### InternalLinkType$Input
 
-Ƭ **InternalLinkType$Input**: [`internalLinkTypeActiveSessions$Input`](index.types.default.md#internallinktypeactivesessions$input) \| [`internalLinkTypeAttachmentMenuBot$Input`](index.types.default.md#internallinktypeattachmentmenubot$input) \| [`internalLinkTypeAuthenticationCode$Input`](index.types.default.md#internallinktypeauthenticationcode$input) \| [`internalLinkTypeBackground$Input`](index.types.default.md#internallinktypebackground$input) \| [`internalLinkTypeBotStart$Input`](index.types.default.md#internallinktypebotstart$input) \| [`internalLinkTypeBotStartInGroup$Input`](index.types.default.md#internallinktypebotstartingroup$input) \| [`internalLinkTypeBotAddToChannel$Input`](index.types.default.md#internallinktypebotaddtochannel$input) \| [`internalLinkTypeChangePhoneNumber$Input`](index.types.default.md#internallinktypechangephonenumber$input) \| [`internalLinkTypeChatInvite$Input`](index.types.default.md#internallinktypechatinvite$input) \| [`internalLinkTypeDefaultMessageAutoDeleteTimerSettings$Input`](index.types.default.md#internallinktypedefaultmessageautodeletetimersettings$input) \| [`internalLinkTypeEditProfileSettings$Input`](index.types.default.md#internallinktypeeditprofilesettings$input) \| [`internalLinkTypeFilterSettings$Input`](index.types.default.md#internallinktypefiltersettings$input) \| [`internalLinkTypeGame$Input`](index.types.default.md#internallinktypegame$input) \| [`internalLinkTypeInstantView$Input`](index.types.default.md#internallinktypeinstantview$input) \| [`internalLinkTypeInvoice$Input`](index.types.default.md#internallinktypeinvoice$input) \| [`internalLinkTypeLanguagePack$Input`](index.types.default.md#internallinktypelanguagepack$input) \| [`internalLinkTypeLanguageSettings$Input`](index.types.default.md#internallinktypelanguagesettings$input) \| [`internalLinkTypeMessage$Input`](index.types.default.md#internallinktypemessage$input) \| [`internalLinkTypeMessageDraft$Input`](index.types.default.md#internallinktypemessagedraft$input) \| [`internalLinkTypePassportDataRequest$Input`](index.types.default.md#internallinktypepassportdatarequest$input) \| [`internalLinkTypePhoneNumberConfirmation$Input`](index.types.default.md#internallinktypephonenumberconfirmation$input) \| [`internalLinkTypePremiumFeatures$Input`](index.types.default.md#internallinktypepremiumfeatures$input) \| [`internalLinkTypePrivacyAndSecuritySettings$Input`](index.types.default.md#internallinktypeprivacyandsecuritysettings$input) \| [`internalLinkTypeProxy$Input`](index.types.default.md#internallinktypeproxy$input) \| [`internalLinkTypePublicChat$Input`](index.types.default.md#internallinktypepublicchat$input) \| [`internalLinkTypeQrCodeAuthentication$Input`](index.types.default.md#internallinktypeqrcodeauthentication$input) \| [`internalLinkTypeRestorePurchases$Input`](index.types.default.md#internallinktyperestorepurchases$input) \| [`internalLinkTypeSettings$Input`](index.types.default.md#internallinktypesettings$input) \| [`internalLinkTypeStickerSet$Input`](index.types.default.md#internallinktypestickerset$input) \| [`internalLinkTypeTheme$Input`](index.types.default.md#internallinktypetheme$input) \| [`internalLinkTypeThemeSettings$Input`](index.types.default.md#internallinktypethemesettings$input) \| [`internalLinkTypeUnknownDeepLink$Input`](index.types.default.md#internallinktypeunknowndeeplink$input) \| [`internalLinkTypeUnsupportedProxy$Input`](index.types.default.md#internallinktypeunsupportedproxy$input) \| [`internalLinkTypeUserPhoneNumber$Input`](index.types.default.md#internallinktypeuserphonenumber$input) \| [`internalLinkTypeUserToken$Input`](index.types.default.md#internallinktypeusertoken$input) \| [`internalLinkTypeVideoChat$Input`](index.types.default.md#internallinktypevideochat$input)
+Ƭ **InternalLinkType$Input**: [`internalLinkTypeActiveSessions$Input`](index.types.default.md#internallinktypeactivesessions$input) \| [`internalLinkTypeAttachmentMenuBot$Input`](index.types.default.md#internallinktypeattachmentmenubot$input) \| [`internalLinkTypeAuthenticationCode$Input`](index.types.default.md#internallinktypeauthenticationcode$input) \| [`internalLinkTypeBackground$Input`](index.types.default.md#internallinktypebackground$input) \| [`internalLinkTypeBotAddToChannel$Input`](index.types.default.md#internallinktypebotaddtochannel$input) \| [`internalLinkTypeBotStart$Input`](index.types.default.md#internallinktypebotstart$input) \| [`internalLinkTypeBotStartInGroup$Input`](index.types.default.md#internallinktypebotstartingroup$input) \| [`internalLinkTypeChangePhoneNumber$Input`](index.types.default.md#internallinktypechangephonenumber$input) \| [`internalLinkTypeChatInvite$Input`](index.types.default.md#internallinktypechatinvite$input) \| [`internalLinkTypeDefaultMessageAutoDeleteTimerSettings$Input`](index.types.default.md#internallinktypedefaultmessageautodeletetimersettings$input) \| [`internalLinkTypeEditProfileSettings$Input`](index.types.default.md#internallinktypeeditprofilesettings$input) \| [`internalLinkTypeFilterSettings$Input`](index.types.default.md#internallinktypefiltersettings$input) \| [`internalLinkTypeGame$Input`](index.types.default.md#internallinktypegame$input) \| [`internalLinkTypeInstantView$Input`](index.types.default.md#internallinktypeinstantview$input) \| [`internalLinkTypeInvoice$Input`](index.types.default.md#internallinktypeinvoice$input) \| [`internalLinkTypeLanguagePack$Input`](index.types.default.md#internallinktypelanguagepack$input) \| [`internalLinkTypeLanguageSettings$Input`](index.types.default.md#internallinktypelanguagesettings$input) \| [`internalLinkTypeMessage$Input`](index.types.default.md#internallinktypemessage$input) \| [`internalLinkTypeMessageDraft$Input`](index.types.default.md#internallinktypemessagedraft$input) \| [`internalLinkTypePassportDataRequest$Input`](index.types.default.md#internallinktypepassportdatarequest$input) \| [`internalLinkTypePhoneNumberConfirmation$Input`](index.types.default.md#internallinktypephonenumberconfirmation$input) \| [`internalLinkTypePremiumFeatures$Input`](index.types.default.md#internallinktypepremiumfeatures$input) \| [`internalLinkTypePrivacyAndSecuritySettings$Input`](index.types.default.md#internallinktypeprivacyandsecuritysettings$input) \| [`internalLinkTypeProxy$Input`](index.types.default.md#internallinktypeproxy$input) \| [`internalLinkTypePublicChat$Input`](index.types.default.md#internallinktypepublicchat$input) \| [`internalLinkTypeQrCodeAuthentication$Input`](index.types.default.md#internallinktypeqrcodeauthentication$input) \| [`internalLinkTypeRestorePurchases$Input`](index.types.default.md#internallinktyperestorepurchases$input) \| [`internalLinkTypeSettings$Input`](index.types.default.md#internallinktypesettings$input) \| [`internalLinkTypeStickerSet$Input`](index.types.default.md#internallinktypestickerset$input) \| [`internalLinkTypeTheme$Input`](index.types.default.md#internallinktypetheme$input) \| [`internalLinkTypeThemeSettings$Input`](index.types.default.md#internallinktypethemesettings$input) \| [`internalLinkTypeUnknownDeepLink$Input`](index.types.default.md#internallinktypeunknowndeeplink$input) \| [`internalLinkTypeUnsupportedProxy$Input`](index.types.default.md#internallinktypeunsupportedproxy$input) \| [`internalLinkTypeUserPhoneNumber$Input`](index.types.default.md#internallinktypeuserphonenumber$input) \| [`internalLinkTypeUserToken$Input`](index.types.default.md#internallinktypeusertoken$input) \| [`internalLinkTypeVideoChat$Input`](index.types.default.md#internallinktypevideochat$input) \| [`internalLinkTypeWebApp$Input`](index.types.default.md#internallinktypewebapp$input)
 
 Version of [InternalLinkType](index.types.md#internallinktype) for method parameters.
 Any of:
@@ -10520,9 +10698,9 @@ Any of:
 - [internalLinkTypeAttachmentMenuBot$Input](index.types.md#internallinktypeattachmentmenubot$input)
 - [internalLinkTypeAuthenticationCode$Input](index.types.md#internallinktypeauthenticationcode$input)
 - [internalLinkTypeBackground$Input](index.types.md#internallinktypebackground$input)
+- [internalLinkTypeBotAddToChannel$Input](index.types.md#internallinktypebotaddtochannel$input)
 - [internalLinkTypeBotStart$Input](index.types.md#internallinktypebotstart$input)
 - [internalLinkTypeBotStartInGroup$Input](index.types.md#internallinktypebotstartingroup$input)
-- [internalLinkTypeBotAddToChannel$Input](index.types.md#internallinktypebotaddtochannel$input)
 - [internalLinkTypeChangePhoneNumber$Input](index.types.md#internallinktypechangephonenumber$input)
 - [internalLinkTypeChatInvite$Input](index.types.md#internallinktypechatinvite$input)
 - [internalLinkTypeDefaultMessageAutoDeleteTimerSettings$Input](index.types.md#internallinktypedefaultmessageautodeletetimersettings$input)
@@ -10552,10 +10730,11 @@ Any of:
 - [internalLinkTypeUserPhoneNumber$Input](index.types.md#internallinktypeuserphonenumber$input)
 - [internalLinkTypeUserToken$Input](index.types.md#internallinktypeusertoken$input)
 - [internalLinkTypeVideoChat$Input](index.types.md#internallinktypevideochat$input)
+- [internalLinkTypeWebApp$Input](index.types.md#internallinktypewebapp$input)
 
 #### Defined in
 
-dist/generated/types.d.ts:43936
+dist/generated/types.d.ts:44521
 
 ___
 
@@ -10568,7 +10747,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41365
+dist/generated/types.d.ts:41924
 
 ___
 
@@ -10582,7 +10761,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41371
+dist/generated/types.d.ts:41930
 
 ___
 
@@ -10595,7 +10774,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43612
+dist/generated/types.d.ts:44195
 
 ___
 
@@ -10609,7 +10788,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43618
+dist/generated/types.d.ts:44201
 
 ___
 
@@ -10627,7 +10806,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43628
+dist/generated/types.d.ts:44211
 
 ___
 
@@ -10646,7 +10825,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43639
+dist/generated/types.d.ts:44222
 
 ___
 
@@ -10659,7 +10838,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40926
+dist/generated/types.d.ts:41474
 
 ___
 
@@ -10673,7 +10852,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40932
+dist/generated/types.d.ts:41480
 
 ___
 
@@ -10692,7 +10871,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40909
+dist/generated/types.d.ts:41457
 
 ___
 
@@ -10712,7 +10891,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40921
+dist/generated/types.d.ts:41469
 
 ___
 
@@ -10725,7 +10904,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41354
+dist/generated/types.d.ts:41913
 
 ___
 
@@ -10739,7 +10918,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41360
+dist/generated/types.d.ts:41919
 
 ___
 
@@ -10752,7 +10931,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43059
+dist/generated/types.d.ts:43642
 
 ___
 
@@ -10766,7 +10945,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43065
+dist/generated/types.d.ts:43648
 
 ___
 
@@ -10779,7 +10958,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43037
+dist/generated/types.d.ts:43620
 
 ___
 
@@ -10793,7 +10972,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43043
+dist/generated/types.d.ts:43626
 
 ___
 
@@ -10808,7 +10987,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43024
+dist/generated/types.d.ts:43607
 
 ___
 
@@ -10824,7 +11003,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43032
+dist/generated/types.d.ts:43615
 
 ___
 
@@ -10837,7 +11016,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43048
+dist/generated/types.d.ts:43631
 
 ___
 
@@ -10851,7 +11030,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43054
+dist/generated/types.d.ts:43637
 
 ___
 
@@ -10864,7 +11043,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39412
+dist/generated/types.d.ts:39900
 
 ___
 
@@ -10878,7 +11057,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39418
+dist/generated/types.d.ts:39906
 
 ___
 
@@ -10891,7 +11070,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43070
+dist/generated/types.d.ts:43653
 
 ___
 
@@ -10905,7 +11084,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43076
+dist/generated/types.d.ts:43659
 
 ___
 
@@ -10918,7 +11097,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39736
+dist/generated/types.d.ts:40224
 
 ___
 
@@ -10932,7 +11111,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39742
+dist/generated/types.d.ts:40230
 
 ___
 
@@ -10947,7 +11126,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44797
+dist/generated/types.d.ts:45384
 
 ___
 
@@ -10963,7 +11142,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44805
+dist/generated/types.d.ts:45392
 
 ___
 
@@ -10976,7 +11155,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44821
+dist/generated/types.d.ts:45408
 
 ___
 
@@ -10990,7 +11169,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44827
+dist/generated/types.d.ts:45414
 
 ___
 
@@ -11003,7 +11182,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44810
+dist/generated/types.d.ts:45397
 
 ___
 
@@ -11017,7 +11196,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44816
+dist/generated/types.d.ts:45403
 
 ___
 
@@ -11031,7 +11210,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40993
+dist/generated/types.d.ts:41541
 
 ___
 
@@ -11046,7 +11225,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41000
+dist/generated/types.d.ts:41548
 
 ___
 
@@ -11062,7 +11241,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39521
+dist/generated/types.d.ts:40009
 
 ___
 
@@ -11079,7 +11258,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39530
+dist/generated/types.d.ts:40018
 
 ___
 
@@ -11092,7 +11271,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39535
+dist/generated/types.d.ts:40023
 
 ___
 
@@ -11106,7 +11285,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39541
+dist/generated/types.d.ts:40029
 
 ___
 
@@ -11119,7 +11298,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40497
+dist/generated/types.d.ts:41018
 
 ___
 
@@ -11133,7 +11312,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40503
+dist/generated/types.d.ts:41024
 
 ___
 
@@ -11146,7 +11325,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43718
+dist/generated/types.d.ts:44301
 
 ___
 
@@ -11160,7 +11339,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43724
+dist/generated/types.d.ts:44307
 
 ___
 
@@ -11173,7 +11352,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40574
+dist/generated/types.d.ts:41095
 
 ___
 
@@ -11187,7 +11366,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40580
+dist/generated/types.d.ts:41101
 
 ___
 
@@ -11200,7 +11379,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40563
+dist/generated/types.d.ts:41084
 
 ___
 
@@ -11214,7 +11393,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40569
+dist/generated/types.d.ts:41090
 
 ___
 
@@ -11286,7 +11465,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41920
+dist/generated/types.d.ts:42479
 
 ___
 
@@ -11359,7 +11538,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41985
+dist/generated/types.d.ts:42544
 
 ___
 
@@ -11372,7 +11551,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42074
+dist/generated/types.d.ts:42633
 
 ___
 
@@ -11386,7 +11565,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42080
+dist/generated/types.d.ts:42639
 
 ___
 
@@ -11402,7 +11581,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41512
+dist/generated/types.d.ts:42071
 
 ___
 
@@ -11419,7 +11598,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41521
+dist/generated/types.d.ts:42080
 
 ___
 
@@ -11434,7 +11613,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43435
+dist/generated/types.d.ts:44018
 
 ___
 
@@ -11450,7 +11629,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43443
+dist/generated/types.d.ts:44026
 
 ___
 
@@ -11463,7 +11642,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40429
+dist/generated/types.d.ts:40950
 
 ___
 
@@ -11477,7 +11656,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40435
+dist/generated/types.d.ts:40956
 
 ___
 
@@ -11494,7 +11673,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40401
+dist/generated/types.d.ts:40922
 
 ___
 
@@ -11512,7 +11691,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40411
+dist/generated/types.d.ts:40932
 
 ___
 
@@ -11525,7 +11704,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40462
+dist/generated/types.d.ts:40983
 
 ___
 
@@ -11539,7 +11718,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40468
+dist/generated/types.d.ts:40989
 
 ___
 
@@ -11552,7 +11731,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43941
+dist/generated/types.d.ts:44526
 
 ___
 
@@ -11566,7 +11745,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43947
+dist/generated/types.d.ts:44532
 
 ___
 
@@ -11579,7 +11758,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43952
+dist/generated/types.d.ts:44537
 
 ___
 
@@ -11593,7 +11772,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43958
+dist/generated/types.d.ts:44543
 
 ___
 
@@ -11606,7 +11785,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40541
+dist/generated/types.d.ts:41062
 
 ___
 
@@ -11620,7 +11799,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40547
+dist/generated/types.d.ts:41068
 
 ___
 
@@ -11633,7 +11812,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40552
+dist/generated/types.d.ts:41073
 
 ___
 
@@ -11647,7 +11826,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40558
+dist/generated/types.d.ts:41079
 
 ___
 
@@ -11660,7 +11839,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40451
+dist/generated/types.d.ts:40972
 
 ___
 
@@ -11674,7 +11853,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40457
+dist/generated/types.d.ts:40978
 
 ___
 
@@ -11687,7 +11866,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40440
+dist/generated/types.d.ts:40961
 
 ___
 
@@ -11701,7 +11880,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40446
+dist/generated/types.d.ts:40967
 
 ___
 
@@ -11715,7 +11894,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42051
+dist/generated/types.d.ts:42610
 
 ___
 
@@ -11730,7 +11909,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42058
+dist/generated/types.d.ts:42617
 
 ___
 
@@ -11743,7 +11922,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42063
+dist/generated/types.d.ts:42622
 
 ___
 
@@ -11757,7 +11936,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42069
+dist/generated/types.d.ts:42628
 
 ___
 
@@ -11771,7 +11950,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40352
+dist/generated/types.d.ts:40851
 
 ___
 
@@ -11786,7 +11965,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40359
+dist/generated/types.d.ts:40858
 
 ___
 
@@ -11799,7 +11978,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40364
+dist/generated/types.d.ts:40863
 
 ___
 
@@ -11813,7 +11992,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40370
+dist/generated/types.d.ts:40869
 
 ___
 
@@ -11827,7 +12006,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40485
+dist/generated/types.d.ts:41006
 
 ___
 
@@ -11842,7 +12021,50 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40492
+dist/generated/types.d.ts:41013
+
+___
+
+### MessageSource
+
+Ƭ **MessageSource**: [`messageSourceChatHistory`](index.types.default.md#messagesourcechathistory) \| [`messageSourceMessageThreadHistory`](index.types.default.md#messagesourcemessagethreadhistory) \| [`messageSourceForumTopicHistory`](index.types.default.md#messagesourceforumtopichistory) \| [`messageSourceHistoryPreview`](index.types.default.md#messagesourcehistorypreview) \| [`messageSourceChatList`](index.types.default.md#messagesourcechatlist) \| [`messageSourceSearch`](index.types.default.md#messagesourcesearch) \| [`messageSourceChatEventLog`](index.types.default.md#messagesourcechateventlog) \| [`messageSourceNotification`](index.types.default.md#messagesourcenotification) \| [`messageSourceOther`](index.types.default.md#messagesourceother)
+
+Any of:
+- [messageSourceChatHistory](index.types.md#messagesourcechathistory)
+- [messageSourceMessageThreadHistory](index.types.md#messagesourcemessagethreadhistory)
+- [messageSourceForumTopicHistory](index.types.md#messagesourceforumtopichistory)
+- [messageSourceHistoryPreview](index.types.md#messagesourcehistorypreview)
+- [messageSourceChatList](index.types.md#messagesourcechatlist)
+- [messageSourceSearch](index.types.md#messagesourcesearch)
+- [messageSourceChatEventLog](index.types.md#messagesourcechateventlog)
+- [messageSourceNotification](index.types.md#messagesourcenotification)
+- [messageSourceOther](index.types.md#messagesourceother)
+
+#### Defined in
+
+dist/generated/types.d.ts:41114
+
+___
+
+### MessageSource$Input
+
+Ƭ **MessageSource$Input**: [`messageSourceChatHistory$Input`](index.types.default.md#messagesourcechathistory$input) \| [`messageSourceMessageThreadHistory$Input`](index.types.default.md#messagesourcemessagethreadhistory$input) \| [`messageSourceForumTopicHistory$Input`](index.types.default.md#messagesourceforumtopichistory$input) \| [`messageSourceHistoryPreview$Input`](index.types.default.md#messagesourcehistorypreview$input) \| [`messageSourceChatList$Input`](index.types.default.md#messagesourcechatlist$input) \| [`messageSourceSearch$Input`](index.types.default.md#messagesourcesearch$input) \| [`messageSourceChatEventLog$Input`](index.types.default.md#messagesourcechateventlog$input) \| [`messageSourceNotification$Input`](index.types.default.md#messagesourcenotification$input) \| [`messageSourceOther$Input`](index.types.default.md#messagesourceother$input)
+
+Version of [MessageSource](index.types.md#messagesource) for method parameters.
+Any of:
+- [messageSourceChatHistory$Input](index.types.md#messagesourcechathistory$input)
+- [messageSourceMessageThreadHistory$Input](index.types.md#messagesourcemessagethreadhistory$input)
+- [messageSourceForumTopicHistory$Input](index.types.md#messagesourceforumtopichistory$input)
+- [messageSourceHistoryPreview$Input](index.types.md#messagesourcehistorypreview$input)
+- [messageSourceChatList$Input](index.types.md#messagesourcechatlist$input)
+- [messageSourceSearch$Input](index.types.md#messagesourcesearch$input)
+- [messageSourceChatEventLog$Input](index.types.md#messagesourcechateventlog$input)
+- [messageSourceNotification$Input](index.types.md#messagesourcenotification$input)
+- [messageSourceOther$Input](index.types.md#messagesourceother$input)
+
+#### Defined in
+
+dist/generated/types.d.ts:41128
 
 ___
 
@@ -11855,7 +12077,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44503
+dist/generated/types.d.ts:45088
 
 ___
 
@@ -11869,7 +12091,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44509
+dist/generated/types.d.ts:45094
 
 ___
 
@@ -11882,7 +12104,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41016
+dist/generated/types.d.ts:41575
 
 ___
 
@@ -11896,7 +12118,61 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41022
+dist/generated/types.d.ts:41581
+
+___
+
+### MessageViewer
+
+Ƭ **MessageViewer**: [`messageViewer`](index.types.default.md#messageviewer-1)
+
+Any of:
+- [messageViewer](index.types.md#messageviewer-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:40896
+
+___
+
+### MessageViewer$Input
+
+Ƭ **MessageViewer$Input**: [`messageViewer$Input`](index.types.default.md#messageviewer$input-1)
+
+Version of [MessageViewer](index.types.md#messageviewer) for method parameters.
+Any of:
+- [messageViewer$Input](index.types.md#messageviewer$input-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:40902
+
+___
+
+### MessageViewers
+
+Ƭ **MessageViewers**: [`messageViewers`](index.types.default.md#messageviewers-1)
+
+Any of:
+- [messageViewers](index.types.md#messageviewers-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:40907
+
+___
+
+### MessageViewers$Input
+
+Ƭ **MessageViewers$Input**: [`messageViewers$Input`](index.types.default.md#messageviewers$input-1)
+
+Version of [MessageViewers](index.types.md#messageviewers) for method parameters.
+Any of:
+- [messageViewers$Input](index.types.md#messageviewers$input-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:40913
 
 ___
 
@@ -11909,7 +12185,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40508
+dist/generated/types.d.ts:41029
 
 ___
 
@@ -11923,7 +12199,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40514
+dist/generated/types.d.ts:41035
 
 ___
 
@@ -11936,7 +12212,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39473
+dist/generated/types.d.ts:39961
 
 ___
 
@@ -11950,7 +12226,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39479
+dist/generated/types.d.ts:39967
 
 ___
 
@@ -11963,7 +12239,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44104
+dist/generated/types.d.ts:44689
 
 ___
 
@@ -11977,7 +12253,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44110
+dist/generated/types.d.ts:44695
 
 ___
 
@@ -11991,7 +12267,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44092
+dist/generated/types.d.ts:44677
 
 ___
 
@@ -12006,7 +12282,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44099
+dist/generated/types.d.ts:44684
 
 ___
 
@@ -12023,7 +12299,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44076
+dist/generated/types.d.ts:44661
 
 ___
 
@@ -12041,7 +12317,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44086
+dist/generated/types.d.ts:44671
 
 ___
 
@@ -12054,7 +12330,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43573
+dist/generated/types.d.ts:44156
 
 ___
 
@@ -12068,7 +12344,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43579
+dist/generated/types.d.ts:44162
 
 ___
 
@@ -12081,7 +12357,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43584
+dist/generated/types.d.ts:44167
 
 ___
 
@@ -12095,7 +12371,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43590
+dist/generated/types.d.ts:44173
 
 ___
 
@@ -12111,7 +12387,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43537
+dist/generated/types.d.ts:44120
 
 ___
 
@@ -12128,7 +12404,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43546
+dist/generated/types.d.ts:44129
 
 ___
 
@@ -12143,7 +12419,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40642
+dist/generated/types.d.ts:41190
 
 ___
 
@@ -12159,7 +12435,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40650
+dist/generated/types.d.ts:41198
 
 ___
 
@@ -12172,7 +12448,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43551
+dist/generated/types.d.ts:44134
 
 ___
 
@@ -12186,7 +12462,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43557
+dist/generated/types.d.ts:44140
 
 ___
 
@@ -12199,7 +12475,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43562
+dist/generated/types.d.ts:44145
 
 ___
 
@@ -12213,7 +12489,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43568
+dist/generated/types.d.ts:44151
 
 ___
 
@@ -12229,7 +12505,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43520
+dist/generated/types.d.ts:44103
 
 ___
 
@@ -12246,7 +12522,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43529
+dist/generated/types.d.ts:44112
 
 ___
 
@@ -12259,7 +12535,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39229
+dist/generated/types.d.ts:39717
 
 ___
 
@@ -12273,7 +12549,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39235
+dist/generated/types.d.ts:39723
 
 ___
 
@@ -12289,7 +12565,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43598
+dist/generated/types.d.ts:44181
 
 ___
 
@@ -12306,7 +12582,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43607
+dist/generated/types.d.ts:44190
 
 ___
 
@@ -12319,7 +12595,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41376
+dist/generated/types.d.ts:41935
 
 ___
 
@@ -12333,7 +12609,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41382
+dist/generated/types.d.ts:41941
 
 ___
 
@@ -12374,7 +12650,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41216
+dist/generated/types.d.ts:41775
 
 ___
 
@@ -12416,7 +12692,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41250
+dist/generated/types.d.ts:41809
 
 ___
 
@@ -12429,7 +12705,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41114
+dist/generated/types.d.ts:41673
 
 ___
 
@@ -12443,7 +12719,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41120
+dist/generated/types.d.ts:41679
 
 ___
 
@@ -12458,7 +12734,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41138
+dist/generated/types.d.ts:41697
 
 ___
 
@@ -12474,7 +12750,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41146
+dist/generated/types.d.ts:41705
 
 ___
 
@@ -12487,7 +12763,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41125
+dist/generated/types.d.ts:41684
 
 ___
 
@@ -12501,7 +12777,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41131
+dist/generated/types.d.ts:41690
 
 ___
 
@@ -12514,7 +12790,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41177
+dist/generated/types.d.ts:41736
 
 ___
 
@@ -12528,7 +12804,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41183
+dist/generated/types.d.ts:41742
 
 ___
 
@@ -12541,7 +12817,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41166
+dist/generated/types.d.ts:41725
 
 ___
 
@@ -12555,7 +12831,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41172
+dist/generated/types.d.ts:41731
 
 ___
 
@@ -12570,7 +12846,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41153
+dist/generated/types.d.ts:41712
 
 ___
 
@@ -12586,7 +12862,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41161
+dist/generated/types.d.ts:41720
 
 ___
 
@@ -12599,7 +12875,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41779
+dist/generated/types.d.ts:42338
 
 ___
 
@@ -12613,7 +12889,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41785
+dist/generated/types.d.ts:42344
 
 ___
 
@@ -12638,7 +12914,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41650
+dist/generated/types.d.ts:42209
 
 ___
 
@@ -12664,7 +12940,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41668
+dist/generated/types.d.ts:42227
 
 ___
 
@@ -12677,7 +12953,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41746
+dist/generated/types.d.ts:42305
 
 ___
 
@@ -12691,7 +12967,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41752
+dist/generated/types.d.ts:42311
 
 ___
 
@@ -12712,7 +12988,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41727
+dist/generated/types.d.ts:42286
 
 ___
 
@@ -12734,7 +13010,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41741
+dist/generated/types.d.ts:42300
 
 ___
 
@@ -12759,7 +13035,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41549
+dist/generated/types.d.ts:42108
 
 ___
 
@@ -12785,7 +13061,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41567
+dist/generated/types.d.ts:42126
 
 ___
 
@@ -12798,7 +13074,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41708
+dist/generated/types.d.ts:42267
 
 ___
 
@@ -12812,7 +13088,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41714
+dist/generated/types.d.ts:42273
 
 ___
 
@@ -12825,7 +13101,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41790
+dist/generated/types.d.ts:42349
 
 ___
 
@@ -12839,7 +13115,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41796
+dist/generated/types.d.ts:42355
 
 ___
 
@@ -12852,7 +13128,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41768
+dist/generated/types.d.ts:42327
 
 ___
 
@@ -12866,7 +13142,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41774
+dist/generated/types.d.ts:42333
 
 ___
 
@@ -12879,7 +13155,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41757
+dist/generated/types.d.ts:42316
 
 ___
 
@@ -12893,7 +13169,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41763
+dist/generated/types.d.ts:42322
 
 ___
 
@@ -12906,7 +13182,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39379
+dist/generated/types.d.ts:39867
 
 ___
 
@@ -12920,7 +13196,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39385
+dist/generated/types.d.ts:39873
 
 ___
 
@@ -12933,7 +13209,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41452
+dist/generated/types.d.ts:42011
 
 ___
 
@@ -12947,7 +13223,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41458
+dist/generated/types.d.ts:42017
 
 ___
 
@@ -12960,7 +13236,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41441
+dist/generated/types.d.ts:42000
 
 ___
 
@@ -12974,7 +13250,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41447
+dist/generated/types.d.ts:42006
 
 ___
 
@@ -12989,7 +13265,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41428
+dist/generated/types.d.ts:41987
 
 ___
 
@@ -13005,7 +13281,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41436
+dist/generated/types.d.ts:41995
 
 ___
 
@@ -13018,7 +13294,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41485
+dist/generated/types.d.ts:42044
 
 ___
 
@@ -13032,7 +13308,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41491
+dist/generated/types.d.ts:42050
 
 ___
 
@@ -13045,7 +13321,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41474
+dist/generated/types.d.ts:42033
 
 ___
 
@@ -13059,7 +13335,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41480
+dist/generated/types.d.ts:42039
 
 ___
 
@@ -13072,7 +13348,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41583
+dist/generated/types.d.ts:42142
 
 ___
 
@@ -13086,7 +13362,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41589
+dist/generated/types.d.ts:42148
 
 ___
 
@@ -13099,7 +13375,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41616
+dist/generated/types.d.ts:42175
 
 ___
 
@@ -13113,7 +13389,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41622
+dist/generated/types.d.ts:42181
 
 ___
 
@@ -13126,7 +13402,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42585
+dist/generated/types.d.ts:43144
 
 ___
 
@@ -13140,7 +13416,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42591
+dist/generated/types.d.ts:43150
 
 ___
 
@@ -13153,7 +13429,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41299
+dist/generated/types.d.ts:41858
 
 ___
 
@@ -13167,7 +13443,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41305
+dist/generated/types.d.ts:41864
 
 ___
 
@@ -13180,7 +13456,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39659
+dist/generated/types.d.ts:40147
 
 ___
 
@@ -13194,7 +13470,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39665
+dist/generated/types.d.ts:40153
 
 ___
 
@@ -13207,7 +13483,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39462
+dist/generated/types.d.ts:39950
 
 ___
 
@@ -13221,7 +13497,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39468
+dist/generated/types.d.ts:39956
 
 ___
 
@@ -13234,7 +13510,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44514
+dist/generated/types.d.ts:45099
 
 ___
 
@@ -13248,7 +13524,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44520
+dist/generated/types.d.ts:45105
 
 ___
 
@@ -13261,7 +13537,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39769
+dist/generated/types.d.ts:40268
 
 ___
 
@@ -13275,7 +13551,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39775
+dist/generated/types.d.ts:40274
 
 ___
 
@@ -13288,7 +13564,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39602
+dist/generated/types.d.ts:40090
 
 ___
 
@@ -13302,7 +13578,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39608
+dist/generated/types.d.ts:40096
 
 ___
 
@@ -13316,7 +13592,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39614
+dist/generated/types.d.ts:40102
 
 ___
 
@@ -13331,7 +13607,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39621
+dist/generated/types.d.ts:40109
 
 ___
 
@@ -13358,7 +13634,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43124
+dist/generated/types.d.ts:43707
 
 ___
 
@@ -13386,7 +13662,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43144
+dist/generated/types.d.ts:43727
 
 ___
 
@@ -13399,7 +13675,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43188
+dist/generated/types.d.ts:43771
 
 ___
 
@@ -13413,7 +13689,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43194
+dist/generated/types.d.ts:43777
 
 ___
 
@@ -13426,7 +13702,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43160
+dist/generated/types.d.ts:43743
 
 ___
 
@@ -13440,7 +13716,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43166
+dist/generated/types.d.ts:43749
 
 ___
 
@@ -13453,7 +13729,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43149
+dist/generated/types.d.ts:43732
 
 ___
 
@@ -13467,7 +13743,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43155
+dist/generated/types.d.ts:43738
 
 ___
 
@@ -13489,7 +13765,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43090
+dist/generated/types.d.ts:43673
 
 ___
 
@@ -13512,7 +13788,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43105
+dist/generated/types.d.ts:43688
 
 ___
 
@@ -13525,7 +13801,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39959
+dist/generated/types.d.ts:40458
 
 ___
 
@@ -13539,7 +13815,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39965
+dist/generated/types.d.ts:40464
 
 ___
 
@@ -13555,7 +13831,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43174
+dist/generated/types.d.ts:43757
 
 ___
 
@@ -13572,7 +13848,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43183
+dist/generated/types.d.ts:43766
 
 ___
 
@@ -13585,7 +13861,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43199
+dist/generated/types.d.ts:43782
 
 ___
 
@@ -13599,7 +13875,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43205
+dist/generated/types.d.ts:43788
 
 ___
 
@@ -13612,7 +13888,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39970
+dist/generated/types.d.ts:40469
 
 ___
 
@@ -13626,7 +13902,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39976
+dist/generated/types.d.ts:40475
 
 ___
 
@@ -13639,7 +13915,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39780
+dist/generated/types.d.ts:40279
 
 ___
 
@@ -13653,7 +13929,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39786
+dist/generated/types.d.ts:40285
 
 ___
 
@@ -13666,7 +13942,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44387
+dist/generated/types.d.ts:44972
 
 ___
 
@@ -13680,7 +13956,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44393
+dist/generated/types.d.ts:44978
 
 ___
 
@@ -13693,7 +13969,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44376
+dist/generated/types.d.ts:44961
 
 ___
 
@@ -13707,7 +13983,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44382
+dist/generated/types.d.ts:44967
 
 ___
 
@@ -13722,7 +13998,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44363
+dist/generated/types.d.ts:44948
 
 ___
 
@@ -13738,7 +14014,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44371
+dist/generated/types.d.ts:44956
 
 ___
 
@@ -13752,7 +14028,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40868
+dist/generated/types.d.ts:41416
 
 ___
 
@@ -13767,7 +14043,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40875
+dist/generated/types.d.ts:41423
 
 ___
 
@@ -13809,7 +14085,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43477
+dist/generated/types.d.ts:44060
 
 ___
 
@@ -13852,7 +14128,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43512
+dist/generated/types.d.ts:44095
 
 ___
 
@@ -13865,7 +14141,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43256
+dist/generated/types.d.ts:43839
 
 ___
 
@@ -13879,7 +14155,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43262
+dist/generated/types.d.ts:43845
 
 ___
 
@@ -13893,7 +14169,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40417
+dist/generated/types.d.ts:40938
 
 ___
 
@@ -13908,7 +14184,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40424
+dist/generated/types.d.ts:40945
 
 ___
 
@@ -13921,7 +14197,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40727
+dist/generated/types.d.ts:41275
 
 ___
 
@@ -13935,7 +14211,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40733
+dist/generated/types.d.ts:41281
 
 ___
 
@@ -13948,7 +14224,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40738
+dist/generated/types.d.ts:41286
 
 ___
 
@@ -13962,7 +14238,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40744
+dist/generated/types.d.ts:41292
 
 ___
 
@@ -13975,7 +14251,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39390
+dist/generated/types.d.ts:39878
 
 ___
 
@@ -13989,7 +14265,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39396
+dist/generated/types.d.ts:39884
 
 ___
 
@@ -14002,7 +14278,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39423
+dist/generated/types.d.ts:39911
 
 ___
 
@@ -14016,7 +14292,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39429
+dist/generated/types.d.ts:39917
 
 ___
 
@@ -14032,7 +14308,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40978
+dist/generated/types.d.ts:41526
 
 ___
 
@@ -14049,7 +14325,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40987
+dist/generated/types.d.ts:41535
 
 ___
 
@@ -14064,7 +14340,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43420
+dist/generated/types.d.ts:44003
 
 ___
 
@@ -14080,7 +14356,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43428
+dist/generated/types.d.ts:44011
 
 ___
 
@@ -14109,7 +14385,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41087
+dist/generated/types.d.ts:41646
 
 ___
 
@@ -14139,7 +14415,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41109
+dist/generated/types.d.ts:41668
 
 ___
 
@@ -14152,7 +14428,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42468
+dist/generated/types.d.ts:43027
 
 ___
 
@@ -14166,7 +14442,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42474
+dist/generated/types.d.ts:43033
 
 ___
 
@@ -14179,7 +14455,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41398
+dist/generated/types.d.ts:41957
 
 ___
 
@@ -14193,7 +14469,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41404
+dist/generated/types.d.ts:41963
 
 ___
 
@@ -14206,7 +14482,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44154
+dist/generated/types.d.ts:44739
 
 ___
 
@@ -14220,7 +14496,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44160
+dist/generated/types.d.ts:44745
 
 ___
 
@@ -14233,7 +14509,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40666
+dist/generated/types.d.ts:41214
 
 ___
 
@@ -14247,7 +14523,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40672
+dist/generated/types.d.ts:41220
 
 ___
 
@@ -14276,7 +14552,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42144
+dist/generated/types.d.ts:42703
 
 ___
 
@@ -14306,7 +14582,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42166
+dist/generated/types.d.ts:42725
 
 ___
 
@@ -14319,7 +14595,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44315
+dist/generated/types.d.ts:44900
 
 ___
 
@@ -14333,7 +14609,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44321
+dist/generated/types.d.ts:44906
 
 ___
 
@@ -14346,7 +14622,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40340
+dist/generated/types.d.ts:40839
 
 ___
 
@@ -14360,7 +14636,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40346
+dist/generated/types.d.ts:40845
 
 ___
 
@@ -14375,7 +14651,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40327
+dist/generated/types.d.ts:40826
 
 ___
 
@@ -14391,7 +14667,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40335
+dist/generated/types.d.ts:40834
 
 ___
 
@@ -14404,7 +14680,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42723
+dist/generated/types.d.ts:43282
 
 ___
 
@@ -14418,7 +14694,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42729
+dist/generated/types.d.ts:43288
 
 ___
 
@@ -14431,7 +14707,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43772
+dist/generated/types.d.ts:44355
 
 ___
 
@@ -14445,7 +14721,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43778
+dist/generated/types.d.ts:44361
 
 ___
 
@@ -14474,7 +14750,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43745
+dist/generated/types.d.ts:44328
 
 ___
 
@@ -14504,7 +14780,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43767
+dist/generated/types.d.ts:44350
 
 ___
 
@@ -14517,7 +14793,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43783
+dist/generated/types.d.ts:44366
 
 ___
 
@@ -14531,7 +14807,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43789
+dist/generated/types.d.ts:44372
 
 ___
 
@@ -14544,7 +14820,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41387
+dist/generated/types.d.ts:41946
 
 ___
 
@@ -14558,7 +14834,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41393
+dist/generated/types.d.ts:41952
 
 ___
 
@@ -14573,7 +14849,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42688
+dist/generated/types.d.ts:43247
 
 ___
 
@@ -14589,7 +14865,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42696
+dist/generated/types.d.ts:43255
 
 ___
 
@@ -14602,7 +14878,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40585
+dist/generated/types.d.ts:41133
 
 ___
 
@@ -14616,7 +14892,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40591
+dist/generated/types.d.ts:41139
 
 ___
 
@@ -14629,7 +14905,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40596
+dist/generated/types.d.ts:41144
 
 ___
 
@@ -14643,7 +14919,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40602
+dist/generated/types.d.ts:41150
 
 ___
 
@@ -14658,7 +14934,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44433
+dist/generated/types.d.ts:45018
 
 ___
 
@@ -14674,7 +14950,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44441
+dist/generated/types.d.ts:45026
 
 ___
 
@@ -14687,7 +14963,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44420
+dist/generated/types.d.ts:45005
 
 ___
 
@@ -14701,7 +14977,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44426
+dist/generated/types.d.ts:45011
 
 ___
 
@@ -14714,7 +14990,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39670
+dist/generated/types.d.ts:40158
 
 ___
 
@@ -14728,7 +15004,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39676
+dist/generated/types.d.ts:40164
 
 ___
 
@@ -14743,7 +15019,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39548
+dist/generated/types.d.ts:40036
 
 ___
 
@@ -14759,7 +15035,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39556
+dist/generated/types.d.ts:40044
 
 ___
 
@@ -14774,7 +15050,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39578
+dist/generated/types.d.ts:40066
 
 ___
 
@@ -14790,7 +15066,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39586
+dist/generated/types.d.ts:40074
 
 ___
 
@@ -14803,7 +15079,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42253
+dist/generated/types.d.ts:42812
 
 ___
 
@@ -14817,7 +15093,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42259
+dist/generated/types.d.ts:42818
 
 ___
 
@@ -14830,7 +15106,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42264
+dist/generated/types.d.ts:42823
 
 ___
 
@@ -14844,7 +15120,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42270
+dist/generated/types.d.ts:42829
 
 ___
 
@@ -14857,7 +15133,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42275
+dist/generated/types.d.ts:42834
 
 ___
 
@@ -14871,7 +15147,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42281
+dist/generated/types.d.ts:42840
 
 ___
 
@@ -14886,7 +15162,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39563
+dist/generated/types.d.ts:40051
 
 ___
 
@@ -14902,7 +15178,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39571
+dist/generated/types.d.ts:40059
 
 ___
 
@@ -14915,7 +15191,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42231
+dist/generated/types.d.ts:42790
 
 ___
 
@@ -14929,7 +15205,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42237
+dist/generated/types.d.ts:42796
 
 ___
 
@@ -14942,7 +15218,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44039
+dist/generated/types.d.ts:44624
 
 ___
 
@@ -14956,7 +15232,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44045
+dist/generated/types.d.ts:44630
 
 ___
 
@@ -14969,7 +15245,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44028
+dist/generated/types.d.ts:44613
 
 ___
 
@@ -14983,7 +15259,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44034
+dist/generated/types.d.ts:44619
 
 ___
 
@@ -14996,7 +15272,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44017
+dist/generated/types.d.ts:44602
 
 ___
 
@@ -15010,7 +15286,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44023
+dist/generated/types.d.ts:44608
 
 ___
 
@@ -15023,7 +15299,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44050
+dist/generated/types.d.ts:44635
 
 ___
 
@@ -15037,7 +15313,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44056
+dist/generated/types.d.ts:44641
 
 ___
 
@@ -15051,7 +15327,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43211
+dist/generated/types.d.ts:43794
 
 ___
 
@@ -15066,7 +15342,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43218
+dist/generated/types.d.ts:43801
 
 ___
 
@@ -15079,7 +15355,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39150
+dist/generated/types.d.ts:39638
 
 ___
 
@@ -15093,7 +15369,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39156
+dist/generated/types.d.ts:39644
 
 ___
 
@@ -15113,7 +15389,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44275
+dist/generated/types.d.ts:44860
 
 ___
 
@@ -15134,7 +15410,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44288
+dist/generated/types.d.ts:44873
 
 ___
 
@@ -15147,7 +15423,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40303
+dist/generated/types.d.ts:40802
 
 ___
 
@@ -15161,7 +15437,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40309
+dist/generated/types.d.ts:40808
 
 ___
 
@@ -15174,7 +15450,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40314
+dist/generated/types.d.ts:40813
 
 ___
 
@@ -15188,7 +15464,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40320
+dist/generated/types.d.ts:40819
 
 ___
 
@@ -15208,7 +15484,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40153
+dist/generated/types.d.ts:40652
 
 ___
 
@@ -15229,7 +15505,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40166
+dist/generated/types.d.ts:40665
 
 ___
 
@@ -15242,7 +15518,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44246
+dist/generated/types.d.ts:44831
 
 ___
 
@@ -15256,7 +15532,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44252
+dist/generated/types.d.ts:44837
 
 ___
 
@@ -15272,7 +15548,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44232
+dist/generated/types.d.ts:44817
 
 ___
 
@@ -15289,7 +15565,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44241
+dist/generated/types.d.ts:44826
 
 ___
 
@@ -15302,7 +15578,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44257
+dist/generated/types.d.ts:44842
 
 ___
 
@@ -15316,7 +15592,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44263
+dist/generated/types.d.ts:44848
 
 ___
 
@@ -15331,7 +15607,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43847
+dist/generated/types.d.ts:44430
 
 ___
 
@@ -15347,7 +15623,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43855
+dist/generated/types.d.ts:44438
 
 ___
 
@@ -15360,7 +15636,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39401
+dist/generated/types.d.ts:39889
 
 ___
 
@@ -15374,7 +15650,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39407
+dist/generated/types.d.ts:39895
 
 ___
 
@@ -15387,7 +15663,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39335
+dist/generated/types.d.ts:39823
 
 ___
 
@@ -15401,7 +15677,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39341
+dist/generated/types.d.ts:39829
 
 ___
 
@@ -15414,7 +15690,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44865
+dist/generated/types.d.ts:45452
 
 ___
 
@@ -15428,7 +15704,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44871
+dist/generated/types.d.ts:45458
 
 ___
 
@@ -15441,7 +15717,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44843
+dist/generated/types.d.ts:45430
 
 ___
 
@@ -15455,7 +15731,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44849
+dist/generated/types.d.ts:45436
 
 ___
 
@@ -15468,7 +15744,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44854
+dist/generated/types.d.ts:45441
 
 ___
 
@@ -15482,7 +15758,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44860
+dist/generated/types.d.ts:45447
 
 ___
 
@@ -15495,7 +15771,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44876
+dist/generated/types.d.ts:45463
 
 ___
 
@@ -15509,7 +15785,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44882
+dist/generated/types.d.ts:45469
 
 ___
 
@@ -15522,7 +15798,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44887
+dist/generated/types.d.ts:45474
 
 ___
 
@@ -15536,7 +15812,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44893
+dist/generated/types.d.ts:45480
 
 ___
 
@@ -15549,7 +15825,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44898
+dist/generated/types.d.ts:45485
 
 ___
 
@@ -15563,7 +15839,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44904
+dist/generated/types.d.ts:45491
 
 ___
 
@@ -15576,7 +15852,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44909
+dist/generated/types.d.ts:45496
 
 ___
 
@@ -15590,7 +15866,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44915
+dist/generated/types.d.ts:45502
 
 ___
 
@@ -15603,7 +15879,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44304
+dist/generated/types.d.ts:44889
 
 ___
 
@@ -15617,7 +15893,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44310
+dist/generated/types.d.ts:44895
 
 ___
 
@@ -15630,7 +15906,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39313
+dist/generated/types.d.ts:39801
 
 ___
 
@@ -15644,7 +15920,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39319
+dist/generated/types.d.ts:39807
 
 ___
 
@@ -15657,7 +15933,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39302
+dist/generated/types.d.ts:39790
 
 ___
 
@@ -15671,7 +15947,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39308
+dist/generated/types.d.ts:39796
 
 ___
 
@@ -15703,7 +15979,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42009
+dist/generated/types.d.ts:42568
 
 ___
 
@@ -15736,7 +16012,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42034
+dist/generated/types.d.ts:42593
 
 ___
 
@@ -15750,7 +16026,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44349
+dist/generated/types.d.ts:44934
 
 ___
 
@@ -15765,7 +16041,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44356
+dist/generated/types.d.ts:44941
 
 ___
 
@@ -15778,7 +16054,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41343
+dist/generated/types.d.ts:41902
 
 ___
 
@@ -15792,7 +16068,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41349
+dist/generated/types.d.ts:41908
 
 ___
 
@@ -15805,7 +16081,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43332
+dist/generated/types.d.ts:43915
 
 ___
 
@@ -15819,7 +16095,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43338
+dist/generated/types.d.ts:43921
 
 ___
 
@@ -15832,7 +16108,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39507
+dist/generated/types.d.ts:39995
 
 ___
 
@@ -15846,7 +16122,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39513
+dist/generated/types.d.ts:40001
 
 ___
 
@@ -15865,7 +16141,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39490
+dist/generated/types.d.ts:39978
 
 ___
 
@@ -15885,7 +16161,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39502
+dist/generated/types.d.ts:39990
 
 ___
 
@@ -15904,7 +16180,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44212
+dist/generated/types.d.ts:44797
 
 ___
 
@@ -15924,7 +16200,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44224
+dist/generated/types.d.ts:44809
 
 ___
 
@@ -15937,7 +16213,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42286
+dist/generated/types.d.ts:42845
 
 ___
 
@@ -15951,7 +16227,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42292
+dist/generated/types.d.ts:42851
 
 ___
 
@@ -15964,7 +16240,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40473
+dist/generated/types.d.ts:40994
 
 ___
 
@@ -15978,13 +16254,13 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40479
+dist/generated/types.d.ts:41000
 
 ___
 
 ### Update
 
-Ƭ **Update**: [`updateAuthorizationState`](index.types.default.md#updateauthorizationstate) \| [`updateNewMessage`](index.types.default.md#updatenewmessage) \| [`updateMessageSendAcknowledged`](index.types.default.md#updatemessagesendacknowledged) \| [`updateMessageSendSucceeded`](index.types.default.md#updatemessagesendsucceeded) \| [`updateMessageSendFailed`](index.types.default.md#updatemessagesendfailed) \| [`updateMessageContent`](index.types.default.md#updatemessagecontent) \| [`updateMessageEdited`](index.types.default.md#updatemessageedited) \| [`updateMessageIsPinned`](index.types.default.md#updatemessageispinned) \| [`updateMessageInteractionInfo`](index.types.default.md#updatemessageinteractioninfo) \| [`updateMessageContentOpened`](index.types.default.md#updatemessagecontentopened) \| [`updateMessageMentionRead`](index.types.default.md#updatemessagementionread) \| [`updateMessageUnreadReactions`](index.types.default.md#updatemessageunreadreactions) \| [`updateMessageLiveLocationViewed`](index.types.default.md#updatemessagelivelocationviewed) \| [`updateNewChat`](index.types.default.md#updatenewchat) \| [`updateChatTitle`](index.types.default.md#updatechattitle) \| [`updateChatPhoto`](index.types.default.md#updatechatphoto) \| [`updateChatPermissions`](index.types.default.md#updatechatpermissions) \| [`updateChatLastMessage`](index.types.default.md#updatechatlastmessage) \| [`updateChatPosition`](index.types.default.md#updatechatposition) \| [`updateChatReadInbox`](index.types.default.md#updatechatreadinbox) \| [`updateChatReadOutbox`](index.types.default.md#updatechatreadoutbox) \| [`updateChatActionBar`](index.types.default.md#updatechatactionbar) \| [`updateChatAvailableReactions`](index.types.default.md#updatechatavailablereactions) \| [`updateChatDraftMessage`](index.types.default.md#updatechatdraftmessage) \| [`updateChatMessageSender`](index.types.default.md#updatechatmessagesender) \| [`updateChatMessageAutoDeleteTime`](index.types.default.md#updatechatmessageautodeletetime) \| [`updateChatNotificationSettings`](index.types.default.md#updatechatnotificationsettings) \| [`updateChatPendingJoinRequests`](index.types.default.md#updatechatpendingjoinrequests) \| [`updateChatReplyMarkup`](index.types.default.md#updatechatreplymarkup) \| [`updateChatTheme`](index.types.default.md#updatechattheme) \| [`updateChatUnreadMentionCount`](index.types.default.md#updatechatunreadmentioncount) \| [`updateChatUnreadReactionCount`](index.types.default.md#updatechatunreadreactioncount) \| [`updateChatVideoChat`](index.types.default.md#updatechatvideochat) \| [`updateChatDefaultDisableNotification`](index.types.default.md#updatechatdefaultdisablenotification) \| [`updateChatHasProtectedContent`](index.types.default.md#updatechathasprotectedcontent) \| [`updateChatIsTranslatable`](index.types.default.md#updatechatistranslatable) \| [`updateChatIsMarkedAsUnread`](index.types.default.md#updatechatismarkedasunread) \| [`updateChatIsBlocked`](index.types.default.md#updatechatisblocked) \| [`updateChatHasScheduledMessages`](index.types.default.md#updatechathasscheduledmessages) \| [`updateChatFilters`](index.types.default.md#updatechatfilters) \| [`updateChatOnlineMemberCount`](index.types.default.md#updatechatonlinemembercount) \| [`updateForumTopicInfo`](index.types.default.md#updateforumtopicinfo) \| [`updateScopeNotificationSettings`](index.types.default.md#updatescopenotificationsettings) \| [`updateNotification`](index.types.default.md#updatenotification) \| [`updateNotificationGroup`](index.types.default.md#updatenotificationgroup) \| [`updateActiveNotifications`](index.types.default.md#updateactivenotifications) \| [`updateHavePendingNotifications`](index.types.default.md#updatehavependingnotifications) \| [`updateDeleteMessages`](index.types.default.md#updatedeletemessages) \| [`updateChatAction`](index.types.default.md#updatechataction) \| [`updateUserStatus`](index.types.default.md#updateuserstatus) \| [`updateUser`](index.types.default.md#updateuser) \| [`updateBasicGroup`](index.types.default.md#updatebasicgroup) \| [`updateSupergroup`](index.types.default.md#updatesupergroup) \| [`updateSecretChat`](index.types.default.md#updatesecretchat) \| [`updateUserFullInfo`](index.types.default.md#updateuserfullinfo) \| [`updateBasicGroupFullInfo`](index.types.default.md#updatebasicgroupfullinfo) \| [`updateSupergroupFullInfo`](index.types.default.md#updatesupergroupfullinfo) \| [`updateServiceNotification`](index.types.default.md#updateservicenotification) \| [`updateFile`](index.types.default.md#updatefile) \| [`updateFileGenerationStart`](index.types.default.md#updatefilegenerationstart) \| [`updateFileGenerationStop`](index.types.default.md#updatefilegenerationstop) \| [`updateFileDownloads`](index.types.default.md#updatefiledownloads) \| [`updateFileAddedToDownloads`](index.types.default.md#updatefileaddedtodownloads) \| [`updateFileDownload`](index.types.default.md#updatefiledownload) \| [`updateFileRemovedFromDownloads`](index.types.default.md#updatefileremovedfromdownloads) \| [`updateCall`](index.types.default.md#updatecall) \| [`updateGroupCall`](index.types.default.md#updategroupcall) \| [`updateGroupCallParticipant`](index.types.default.md#updategroupcallparticipant) \| [`updateNewCallSignalingData`](index.types.default.md#updatenewcallsignalingdata) \| [`updateUserPrivacySettingRules`](index.types.default.md#updateuserprivacysettingrules) \| [`updateUnreadMessageCount`](index.types.default.md#updateunreadmessagecount) \| [`updateUnreadChatCount`](index.types.default.md#updateunreadchatcount) \| [`updateOption`](index.types.default.md#updateoption) \| [`updateStickerSet`](index.types.default.md#updatestickerset) \| [`updateInstalledStickerSets`](index.types.default.md#updateinstalledstickersets) \| [`updateTrendingStickerSets`](index.types.default.md#updatetrendingstickersets) \| [`updateRecentStickers`](index.types.default.md#updaterecentstickers) \| [`updateFavoriteStickers`](index.types.default.md#updatefavoritestickers) \| [`updateSavedAnimations`](index.types.default.md#updatesavedanimations) \| [`updateSavedNotificationSounds`](index.types.default.md#updatesavednotificationsounds) \| [`updateSelectedBackground`](index.types.default.md#updateselectedbackground) \| [`updateChatThemes`](index.types.default.md#updatechatthemes) \| [`updateLanguagePackStrings`](index.types.default.md#updatelanguagepackstrings) \| [`updateConnectionState`](index.types.default.md#updateconnectionstate) \| [`updateTermsOfService`](index.types.default.md#updatetermsofservice) \| [`updateUsersNearby`](index.types.default.md#updateusersnearby) \| [`updateAttachmentMenuBots`](index.types.default.md#updateattachmentmenubots) \| [`updateWebAppMessageSent`](index.types.default.md#updatewebappmessagesent) \| [`updateActiveEmojiReactions`](index.types.default.md#updateactiveemojireactions) \| [`updateDefaultReactionType`](index.types.default.md#updatedefaultreactiontype) \| [`updateDiceEmojis`](index.types.default.md#updatediceemojis) \| [`updateAnimatedEmojiMessageClicked`](index.types.default.md#updateanimatedemojimessageclicked) \| [`updateAnimationSearchParameters`](index.types.default.md#updateanimationsearchparameters) \| [`updateSuggestedActions`](index.types.default.md#updatesuggestedactions) \| [`updateAutosaveSettings`](index.types.default.md#updateautosavesettings) \| [`updateNewInlineQuery`](index.types.default.md#updatenewinlinequery) \| [`updateNewChosenInlineResult`](index.types.default.md#updatenewchoseninlineresult) \| [`updateNewCallbackQuery`](index.types.default.md#updatenewcallbackquery) \| [`updateNewInlineCallbackQuery`](index.types.default.md#updatenewinlinecallbackquery) \| [`updateNewShippingQuery`](index.types.default.md#updatenewshippingquery) \| [`updateNewPreCheckoutQuery`](index.types.default.md#updatenewprecheckoutquery) \| [`updateNewCustomEvent`](index.types.default.md#updatenewcustomevent) \| [`updateNewCustomQuery`](index.types.default.md#updatenewcustomquery) \| [`updatePoll`](index.types.default.md#updatepoll) \| [`updatePollAnswer`](index.types.default.md#updatepollanswer) \| [`updateChatMember`](index.types.default.md#updatechatmember) \| [`updateNewChatJoinRequest`](index.types.default.md#updatenewchatjoinrequest)
+Ƭ **Update**: [`updateAuthorizationState`](index.types.default.md#updateauthorizationstate) \| [`updateNewMessage`](index.types.default.md#updatenewmessage) \| [`updateMessageSendAcknowledged`](index.types.default.md#updatemessagesendacknowledged) \| [`updateMessageSendSucceeded`](index.types.default.md#updatemessagesendsucceeded) \| [`updateMessageSendFailed`](index.types.default.md#updatemessagesendfailed) \| [`updateMessageContent`](index.types.default.md#updatemessagecontent) \| [`updateMessageEdited`](index.types.default.md#updatemessageedited) \| [`updateMessageIsPinned`](index.types.default.md#updatemessageispinned) \| [`updateMessageInteractionInfo`](index.types.default.md#updatemessageinteractioninfo) \| [`updateMessageContentOpened`](index.types.default.md#updatemessagecontentopened) \| [`updateMessageMentionRead`](index.types.default.md#updatemessagementionread) \| [`updateMessageUnreadReactions`](index.types.default.md#updatemessageunreadreactions) \| [`updateMessageLiveLocationViewed`](index.types.default.md#updatemessagelivelocationviewed) \| [`updateNewChat`](index.types.default.md#updatenewchat) \| [`updateChatTitle`](index.types.default.md#updatechattitle) \| [`updateChatPhoto`](index.types.default.md#updatechatphoto) \| [`updateChatPermissions`](index.types.default.md#updatechatpermissions) \| [`updateChatLastMessage`](index.types.default.md#updatechatlastmessage) \| [`updateChatPosition`](index.types.default.md#updatechatposition) \| [`updateChatReadInbox`](index.types.default.md#updatechatreadinbox) \| [`updateChatReadOutbox`](index.types.default.md#updatechatreadoutbox) \| [`updateChatActionBar`](index.types.default.md#updatechatactionbar) \| [`updateChatAvailableReactions`](index.types.default.md#updatechatavailablereactions) \| [`updateChatDraftMessage`](index.types.default.md#updatechatdraftmessage) \| [`updateChatMessageSender`](index.types.default.md#updatechatmessagesender) \| [`updateChatMessageAutoDeleteTime`](index.types.default.md#updatechatmessageautodeletetime) \| [`updateChatNotificationSettings`](index.types.default.md#updatechatnotificationsettings) \| [`updateChatPendingJoinRequests`](index.types.default.md#updatechatpendingjoinrequests) \| [`updateChatReplyMarkup`](index.types.default.md#updatechatreplymarkup) \| [`updateChatTheme`](index.types.default.md#updatechattheme) \| [`updateChatUnreadMentionCount`](index.types.default.md#updatechatunreadmentioncount) \| [`updateChatUnreadReactionCount`](index.types.default.md#updatechatunreadreactioncount) \| [`updateChatVideoChat`](index.types.default.md#updatechatvideochat) \| [`updateChatDefaultDisableNotification`](index.types.default.md#updatechatdefaultdisablenotification) \| [`updateChatHasProtectedContent`](index.types.default.md#updatechathasprotectedcontent) \| [`updateChatIsTranslatable`](index.types.default.md#updatechatistranslatable) \| [`updateChatIsMarkedAsUnread`](index.types.default.md#updatechatismarkedasunread) \| [`updateChatIsBlocked`](index.types.default.md#updatechatisblocked) \| [`updateChatHasScheduledMessages`](index.types.default.md#updatechathasscheduledmessages) \| [`updateChatFilters`](index.types.default.md#updatechatfilters) \| [`updateChatOnlineMemberCount`](index.types.default.md#updatechatonlinemembercount) \| [`updateForumTopicInfo`](index.types.default.md#updateforumtopicinfo) \| [`updateScopeNotificationSettings`](index.types.default.md#updatescopenotificationsettings) \| [`updateNotification`](index.types.default.md#updatenotification) \| [`updateNotificationGroup`](index.types.default.md#updatenotificationgroup) \| [`updateActiveNotifications`](index.types.default.md#updateactivenotifications) \| [`updateHavePendingNotifications`](index.types.default.md#updatehavependingnotifications) \| [`updateDeleteMessages`](index.types.default.md#updatedeletemessages) \| [`updateChatAction`](index.types.default.md#updatechataction) \| [`updateUserStatus`](index.types.default.md#updateuserstatus) \| [`updateUser`](index.types.default.md#updateuser) \| [`updateBasicGroup`](index.types.default.md#updatebasicgroup) \| [`updateSupergroup`](index.types.default.md#updatesupergroup) \| [`updateSecretChat`](index.types.default.md#updatesecretchat) \| [`updateUserFullInfo`](index.types.default.md#updateuserfullinfo) \| [`updateBasicGroupFullInfo`](index.types.default.md#updatebasicgroupfullinfo) \| [`updateSupergroupFullInfo`](index.types.default.md#updatesupergroupfullinfo) \| [`updateServiceNotification`](index.types.default.md#updateservicenotification) \| [`updateFile`](index.types.default.md#updatefile) \| [`updateFileGenerationStart`](index.types.default.md#updatefilegenerationstart) \| [`updateFileGenerationStop`](index.types.default.md#updatefilegenerationstop) \| [`updateFileDownloads`](index.types.default.md#updatefiledownloads) \| [`updateFileAddedToDownloads`](index.types.default.md#updatefileaddedtodownloads) \| [`updateFileDownload`](index.types.default.md#updatefiledownload) \| [`updateFileRemovedFromDownloads`](index.types.default.md#updatefileremovedfromdownloads) \| [`updateCall`](index.types.default.md#updatecall) \| [`updateGroupCall`](index.types.default.md#updategroupcall) \| [`updateGroupCallParticipant`](index.types.default.md#updategroupcallparticipant) \| [`updateNewCallSignalingData`](index.types.default.md#updatenewcallsignalingdata) \| [`updateUserPrivacySettingRules`](index.types.default.md#updateuserprivacysettingrules) \| [`updateUnreadMessageCount`](index.types.default.md#updateunreadmessagecount) \| [`updateUnreadChatCount`](index.types.default.md#updateunreadchatcount) \| [`updateOption`](index.types.default.md#updateoption) \| [`updateStickerSet`](index.types.default.md#updatestickerset) \| [`updateInstalledStickerSets`](index.types.default.md#updateinstalledstickersets) \| [`updateTrendingStickerSets`](index.types.default.md#updatetrendingstickersets) \| [`updateRecentStickers`](index.types.default.md#updaterecentstickers) \| [`updateFavoriteStickers`](index.types.default.md#updatefavoritestickers) \| [`updateSavedAnimations`](index.types.default.md#updatesavedanimations) \| [`updateSavedNotificationSounds`](index.types.default.md#updatesavednotificationsounds) \| [`updateSelectedBackground`](index.types.default.md#updateselectedbackground) \| [`updateChatThemes`](index.types.default.md#updatechatthemes) \| [`updateLanguagePackStrings`](index.types.default.md#updatelanguagepackstrings) \| [`updateConnectionState`](index.types.default.md#updateconnectionstate) \| [`updateTermsOfService`](index.types.default.md#updatetermsofservice) \| [`updateUsersNearby`](index.types.default.md#updateusersnearby) \| [`updateAttachmentMenuBots`](index.types.default.md#updateattachmentmenubots) \| [`updateWebAppMessageSent`](index.types.default.md#updatewebappmessagesent) \| [`updateActiveEmojiReactions`](index.types.default.md#updateactiveemojireactions) \| [`updateDefaultReactionType`](index.types.default.md#updatedefaultreactiontype) \| [`updateDiceEmojis`](index.types.default.md#updatediceemojis) \| [`updateAnimatedEmojiMessageClicked`](index.types.default.md#updateanimatedemojimessageclicked) \| [`updateAnimationSearchParameters`](index.types.default.md#updateanimationsearchparameters) \| [`updateSuggestedActions`](index.types.default.md#updatesuggestedactions) \| [`updateAddChatMembersPrivacyForbidden`](index.types.default.md#updateaddchatmembersprivacyforbidden) \| [`updateAutosaveSettings`](index.types.default.md#updateautosavesettings) \| [`updateNewInlineQuery`](index.types.default.md#updatenewinlinequery) \| [`updateNewChosenInlineResult`](index.types.default.md#updatenewchoseninlineresult) \| [`updateNewCallbackQuery`](index.types.default.md#updatenewcallbackquery) \| [`updateNewInlineCallbackQuery`](index.types.default.md#updatenewinlinecallbackquery) \| [`updateNewShippingQuery`](index.types.default.md#updatenewshippingquery) \| [`updateNewPreCheckoutQuery`](index.types.default.md#updatenewprecheckoutquery) \| [`updateNewCustomEvent`](index.types.default.md#updatenewcustomevent) \| [`updateNewCustomQuery`](index.types.default.md#updatenewcustomquery) \| [`updatePoll`](index.types.default.md#updatepoll) \| [`updatePollAnswer`](index.types.default.md#updatepollanswer) \| [`updateChatMember`](index.types.default.md#updatechatmember) \| [`updateNewChatJoinRequest`](index.types.default.md#updatenewchatjoinrequest)
 
 Any of:
 - [updateAuthorizationState](index.types.md#updateauthorizationstate)
@@ -16081,6 +16357,7 @@ Any of:
 - [updateAnimatedEmojiMessageClicked](index.types.md#updateanimatedemojimessageclicked)
 - [updateAnimationSearchParameters](index.types.md#updateanimationsearchparameters)
 - [updateSuggestedActions](index.types.md#updatesuggestedactions)
+- [updateAddChatMembersPrivacyForbidden](index.types.md#updateaddchatmembersprivacyforbidden)
 - [updateAutosaveSettings](index.types.md#updateautosavesettings)
 - [updateNewInlineQuery](index.types.md#updatenewinlinequery)
 - [updateNewChosenInlineResult](index.types.md#updatenewchoseninlineresult)
@@ -16097,13 +16374,13 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44667
+dist/generated/types.d.ts:45253
 
 ___
 
 ### Update$Input
 
-Ƭ **Update$Input**: [`updateAuthorizationState$Input`](index.types.default.md#updateauthorizationstate$input) \| [`updateNewMessage$Input`](index.types.default.md#updatenewmessage$input) \| [`updateMessageSendAcknowledged$Input`](index.types.default.md#updatemessagesendacknowledged$input) \| [`updateMessageSendSucceeded$Input`](index.types.default.md#updatemessagesendsucceeded$input) \| [`updateMessageSendFailed$Input`](index.types.default.md#updatemessagesendfailed$input) \| [`updateMessageContent$Input`](index.types.default.md#updatemessagecontent$input) \| [`updateMessageEdited$Input`](index.types.default.md#updatemessageedited$input) \| [`updateMessageIsPinned$Input`](index.types.default.md#updatemessageispinned$input) \| [`updateMessageInteractionInfo$Input`](index.types.default.md#updatemessageinteractioninfo$input) \| [`updateMessageContentOpened$Input`](index.types.default.md#updatemessagecontentopened$input) \| [`updateMessageMentionRead$Input`](index.types.default.md#updatemessagementionread$input) \| [`updateMessageUnreadReactions$Input`](index.types.default.md#updatemessageunreadreactions$input) \| [`updateMessageLiveLocationViewed$Input`](index.types.default.md#updatemessagelivelocationviewed$input) \| [`updateNewChat$Input`](index.types.default.md#updatenewchat$input) \| [`updateChatTitle$Input`](index.types.default.md#updatechattitle$input) \| [`updateChatPhoto$Input`](index.types.default.md#updatechatphoto$input) \| [`updateChatPermissions$Input`](index.types.default.md#updatechatpermissions$input) \| [`updateChatLastMessage$Input`](index.types.default.md#updatechatlastmessage$input) \| [`updateChatPosition$Input`](index.types.default.md#updatechatposition$input) \| [`updateChatReadInbox$Input`](index.types.default.md#updatechatreadinbox$input) \| [`updateChatReadOutbox$Input`](index.types.default.md#updatechatreadoutbox$input) \| [`updateChatActionBar$Input`](index.types.default.md#updatechatactionbar$input) \| [`updateChatAvailableReactions$Input`](index.types.default.md#updatechatavailablereactions$input) \| [`updateChatDraftMessage$Input`](index.types.default.md#updatechatdraftmessage$input) \| [`updateChatMessageSender$Input`](index.types.default.md#updatechatmessagesender$input) \| [`updateChatMessageAutoDeleteTime$Input`](index.types.default.md#updatechatmessageautodeletetime$input) \| [`updateChatNotificationSettings$Input`](index.types.default.md#updatechatnotificationsettings$input) \| [`updateChatPendingJoinRequests$Input`](index.types.default.md#updatechatpendingjoinrequests$input) \| [`updateChatReplyMarkup$Input`](index.types.default.md#updatechatreplymarkup$input) \| [`updateChatTheme$Input`](index.types.default.md#updatechattheme$input) \| [`updateChatUnreadMentionCount$Input`](index.types.default.md#updatechatunreadmentioncount$input) \| [`updateChatUnreadReactionCount$Input`](index.types.default.md#updatechatunreadreactioncount$input) \| [`updateChatVideoChat$Input`](index.types.default.md#updatechatvideochat$input) \| [`updateChatDefaultDisableNotification$Input`](index.types.default.md#updatechatdefaultdisablenotification$input) \| [`updateChatHasProtectedContent$Input`](index.types.default.md#updatechathasprotectedcontent$input) \| [`updateChatIsTranslatable$Input`](index.types.default.md#updatechatistranslatable$input) \| [`updateChatIsMarkedAsUnread$Input`](index.types.default.md#updatechatismarkedasunread$input) \| [`updateChatIsBlocked$Input`](index.types.default.md#updatechatisblocked$input) \| [`updateChatHasScheduledMessages$Input`](index.types.default.md#updatechathasscheduledmessages$input) \| [`updateChatFilters$Input`](index.types.default.md#updatechatfilters$input) \| [`updateChatOnlineMemberCount$Input`](index.types.default.md#updatechatonlinemembercount$input) \| [`updateForumTopicInfo$Input`](index.types.default.md#updateforumtopicinfo$input) \| [`updateScopeNotificationSettings$Input`](index.types.default.md#updatescopenotificationsettings$input) \| [`updateNotification$Input`](index.types.default.md#updatenotification$input) \| [`updateNotificationGroup$Input`](index.types.default.md#updatenotificationgroup$input) \| [`updateActiveNotifications$Input`](index.types.default.md#updateactivenotifications$input) \| [`updateHavePendingNotifications$Input`](index.types.default.md#updatehavependingnotifications$input) \| [`updateDeleteMessages$Input`](index.types.default.md#updatedeletemessages$input) \| [`updateChatAction$Input`](index.types.default.md#updatechataction$input) \| [`updateUserStatus$Input`](index.types.default.md#updateuserstatus$input) \| [`updateUser$Input`](index.types.default.md#updateuser$input) \| [`updateBasicGroup$Input`](index.types.default.md#updatebasicgroup$input) \| [`updateSupergroup$Input`](index.types.default.md#updatesupergroup$input) \| [`updateSecretChat$Input`](index.types.default.md#updatesecretchat$input) \| [`updateUserFullInfo$Input`](index.types.default.md#updateuserfullinfo$input) \| [`updateBasicGroupFullInfo$Input`](index.types.default.md#updatebasicgroupfullinfo$input) \| [`updateSupergroupFullInfo$Input`](index.types.default.md#updatesupergroupfullinfo$input) \| [`updateServiceNotification$Input`](index.types.default.md#updateservicenotification$input) \| [`updateFile$Input`](index.types.default.md#updatefile$input) \| [`updateFileGenerationStart$Input`](index.types.default.md#updatefilegenerationstart$input) \| [`updateFileGenerationStop$Input`](index.types.default.md#updatefilegenerationstop$input) \| [`updateFileDownloads$Input`](index.types.default.md#updatefiledownloads$input) \| [`updateFileAddedToDownloads$Input`](index.types.default.md#updatefileaddedtodownloads$input) \| [`updateFileDownload$Input`](index.types.default.md#updatefiledownload$input) \| [`updateFileRemovedFromDownloads$Input`](index.types.default.md#updatefileremovedfromdownloads$input) \| [`updateCall$Input`](index.types.default.md#updatecall$input) \| [`updateGroupCall$Input`](index.types.default.md#updategroupcall$input) \| [`updateGroupCallParticipant$Input`](index.types.default.md#updategroupcallparticipant$input) \| [`updateNewCallSignalingData$Input`](index.types.default.md#updatenewcallsignalingdata$input) \| [`updateUserPrivacySettingRules$Input`](index.types.default.md#updateuserprivacysettingrules$input) \| [`updateUnreadMessageCount$Input`](index.types.default.md#updateunreadmessagecount$input) \| [`updateUnreadChatCount$Input`](index.types.default.md#updateunreadchatcount$input) \| [`updateOption$Input`](index.types.default.md#updateoption$input) \| [`updateStickerSet$Input`](index.types.default.md#updatestickerset$input) \| [`updateInstalledStickerSets$Input`](index.types.default.md#updateinstalledstickersets$input) \| [`updateTrendingStickerSets$Input`](index.types.default.md#updatetrendingstickersets$input) \| [`updateRecentStickers$Input`](index.types.default.md#updaterecentstickers$input) \| [`updateFavoriteStickers$Input`](index.types.default.md#updatefavoritestickers$input) \| [`updateSavedAnimations$Input`](index.types.default.md#updatesavedanimations$input) \| [`updateSavedNotificationSounds$Input`](index.types.default.md#updatesavednotificationsounds$input) \| [`updateSelectedBackground$Input`](index.types.default.md#updateselectedbackground$input) \| [`updateChatThemes$Input`](index.types.default.md#updatechatthemes$input) \| [`updateLanguagePackStrings$Input`](index.types.default.md#updatelanguagepackstrings$input) \| [`updateConnectionState$Input`](index.types.default.md#updateconnectionstate$input) \| [`updateTermsOfService$Input`](index.types.default.md#updatetermsofservice$input) \| [`updateUsersNearby$Input`](index.types.default.md#updateusersnearby$input) \| [`updateAttachmentMenuBots$Input`](index.types.default.md#updateattachmentmenubots$input) \| [`updateWebAppMessageSent$Input`](index.types.default.md#updatewebappmessagesent$input) \| [`updateActiveEmojiReactions$Input`](index.types.default.md#updateactiveemojireactions$input) \| [`updateDefaultReactionType$Input`](index.types.default.md#updatedefaultreactiontype$input) \| [`updateDiceEmojis$Input`](index.types.default.md#updatediceemojis$input) \| [`updateAnimatedEmojiMessageClicked$Input`](index.types.default.md#updateanimatedemojimessageclicked$input) \| [`updateAnimationSearchParameters$Input`](index.types.default.md#updateanimationsearchparameters$input) \| [`updateSuggestedActions$Input`](index.types.default.md#updatesuggestedactions$input) \| [`updateAutosaveSettings$Input`](index.types.default.md#updateautosavesettings$input) \| [`updateNewInlineQuery$Input`](index.types.default.md#updatenewinlinequery$input) \| [`updateNewChosenInlineResult$Input`](index.types.default.md#updatenewchoseninlineresult$input) \| [`updateNewCallbackQuery$Input`](index.types.default.md#updatenewcallbackquery$input) \| [`updateNewInlineCallbackQuery$Input`](index.types.default.md#updatenewinlinecallbackquery$input) \| [`updateNewShippingQuery$Input`](index.types.default.md#updatenewshippingquery$input) \| [`updateNewPreCheckoutQuery$Input`](index.types.default.md#updatenewprecheckoutquery$input) \| [`updateNewCustomEvent$Input`](index.types.default.md#updatenewcustomevent$input) \| [`updateNewCustomQuery$Input`](index.types.default.md#updatenewcustomquery$input) \| [`updatePoll$Input`](index.types.default.md#updatepoll$input) \| [`updatePollAnswer$Input`](index.types.default.md#updatepollanswer$input) \| [`updateChatMember$Input`](index.types.default.md#updatechatmember$input) \| [`updateNewChatJoinRequest$Input`](index.types.default.md#updatenewchatjoinrequest$input)
+Ƭ **Update$Input**: [`updateAuthorizationState$Input`](index.types.default.md#updateauthorizationstate$input) \| [`updateNewMessage$Input`](index.types.default.md#updatenewmessage$input) \| [`updateMessageSendAcknowledged$Input`](index.types.default.md#updatemessagesendacknowledged$input) \| [`updateMessageSendSucceeded$Input`](index.types.default.md#updatemessagesendsucceeded$input) \| [`updateMessageSendFailed$Input`](index.types.default.md#updatemessagesendfailed$input) \| [`updateMessageContent$Input`](index.types.default.md#updatemessagecontent$input) \| [`updateMessageEdited$Input`](index.types.default.md#updatemessageedited$input) \| [`updateMessageIsPinned$Input`](index.types.default.md#updatemessageispinned$input) \| [`updateMessageInteractionInfo$Input`](index.types.default.md#updatemessageinteractioninfo$input) \| [`updateMessageContentOpened$Input`](index.types.default.md#updatemessagecontentopened$input) \| [`updateMessageMentionRead$Input`](index.types.default.md#updatemessagementionread$input) \| [`updateMessageUnreadReactions$Input`](index.types.default.md#updatemessageunreadreactions$input) \| [`updateMessageLiveLocationViewed$Input`](index.types.default.md#updatemessagelivelocationviewed$input) \| [`updateNewChat$Input`](index.types.default.md#updatenewchat$input) \| [`updateChatTitle$Input`](index.types.default.md#updatechattitle$input) \| [`updateChatPhoto$Input`](index.types.default.md#updatechatphoto$input) \| [`updateChatPermissions$Input`](index.types.default.md#updatechatpermissions$input) \| [`updateChatLastMessage$Input`](index.types.default.md#updatechatlastmessage$input) \| [`updateChatPosition$Input`](index.types.default.md#updatechatposition$input) \| [`updateChatReadInbox$Input`](index.types.default.md#updatechatreadinbox$input) \| [`updateChatReadOutbox$Input`](index.types.default.md#updatechatreadoutbox$input) \| [`updateChatActionBar$Input`](index.types.default.md#updatechatactionbar$input) \| [`updateChatAvailableReactions$Input`](index.types.default.md#updatechatavailablereactions$input) \| [`updateChatDraftMessage$Input`](index.types.default.md#updatechatdraftmessage$input) \| [`updateChatMessageSender$Input`](index.types.default.md#updatechatmessagesender$input) \| [`updateChatMessageAutoDeleteTime$Input`](index.types.default.md#updatechatmessageautodeletetime$input) \| [`updateChatNotificationSettings$Input`](index.types.default.md#updatechatnotificationsettings$input) \| [`updateChatPendingJoinRequests$Input`](index.types.default.md#updatechatpendingjoinrequests$input) \| [`updateChatReplyMarkup$Input`](index.types.default.md#updatechatreplymarkup$input) \| [`updateChatTheme$Input`](index.types.default.md#updatechattheme$input) \| [`updateChatUnreadMentionCount$Input`](index.types.default.md#updatechatunreadmentioncount$input) \| [`updateChatUnreadReactionCount$Input`](index.types.default.md#updatechatunreadreactioncount$input) \| [`updateChatVideoChat$Input`](index.types.default.md#updatechatvideochat$input) \| [`updateChatDefaultDisableNotification$Input`](index.types.default.md#updatechatdefaultdisablenotification$input) \| [`updateChatHasProtectedContent$Input`](index.types.default.md#updatechathasprotectedcontent$input) \| [`updateChatIsTranslatable$Input`](index.types.default.md#updatechatistranslatable$input) \| [`updateChatIsMarkedAsUnread$Input`](index.types.default.md#updatechatismarkedasunread$input) \| [`updateChatIsBlocked$Input`](index.types.default.md#updatechatisblocked$input) \| [`updateChatHasScheduledMessages$Input`](index.types.default.md#updatechathasscheduledmessages$input) \| [`updateChatFilters$Input`](index.types.default.md#updatechatfilters$input) \| [`updateChatOnlineMemberCount$Input`](index.types.default.md#updatechatonlinemembercount$input) \| [`updateForumTopicInfo$Input`](index.types.default.md#updateforumtopicinfo$input) \| [`updateScopeNotificationSettings$Input`](index.types.default.md#updatescopenotificationsettings$input) \| [`updateNotification$Input`](index.types.default.md#updatenotification$input) \| [`updateNotificationGroup$Input`](index.types.default.md#updatenotificationgroup$input) \| [`updateActiveNotifications$Input`](index.types.default.md#updateactivenotifications$input) \| [`updateHavePendingNotifications$Input`](index.types.default.md#updatehavependingnotifications$input) \| [`updateDeleteMessages$Input`](index.types.default.md#updatedeletemessages$input) \| [`updateChatAction$Input`](index.types.default.md#updatechataction$input) \| [`updateUserStatus$Input`](index.types.default.md#updateuserstatus$input) \| [`updateUser$Input`](index.types.default.md#updateuser$input) \| [`updateBasicGroup$Input`](index.types.default.md#updatebasicgroup$input) \| [`updateSupergroup$Input`](index.types.default.md#updatesupergroup$input) \| [`updateSecretChat$Input`](index.types.default.md#updatesecretchat$input) \| [`updateUserFullInfo$Input`](index.types.default.md#updateuserfullinfo$input) \| [`updateBasicGroupFullInfo$Input`](index.types.default.md#updatebasicgroupfullinfo$input) \| [`updateSupergroupFullInfo$Input`](index.types.default.md#updatesupergroupfullinfo$input) \| [`updateServiceNotification$Input`](index.types.default.md#updateservicenotification$input) \| [`updateFile$Input`](index.types.default.md#updatefile$input) \| [`updateFileGenerationStart$Input`](index.types.default.md#updatefilegenerationstart$input) \| [`updateFileGenerationStop$Input`](index.types.default.md#updatefilegenerationstop$input) \| [`updateFileDownloads$Input`](index.types.default.md#updatefiledownloads$input) \| [`updateFileAddedToDownloads$Input`](index.types.default.md#updatefileaddedtodownloads$input) \| [`updateFileDownload$Input`](index.types.default.md#updatefiledownload$input) \| [`updateFileRemovedFromDownloads$Input`](index.types.default.md#updatefileremovedfromdownloads$input) \| [`updateCall$Input`](index.types.default.md#updatecall$input) \| [`updateGroupCall$Input`](index.types.default.md#updategroupcall$input) \| [`updateGroupCallParticipant$Input`](index.types.default.md#updategroupcallparticipant$input) \| [`updateNewCallSignalingData$Input`](index.types.default.md#updatenewcallsignalingdata$input) \| [`updateUserPrivacySettingRules$Input`](index.types.default.md#updateuserprivacysettingrules$input) \| [`updateUnreadMessageCount$Input`](index.types.default.md#updateunreadmessagecount$input) \| [`updateUnreadChatCount$Input`](index.types.default.md#updateunreadchatcount$input) \| [`updateOption$Input`](index.types.default.md#updateoption$input) \| [`updateStickerSet$Input`](index.types.default.md#updatestickerset$input) \| [`updateInstalledStickerSets$Input`](index.types.default.md#updateinstalledstickersets$input) \| [`updateTrendingStickerSets$Input`](index.types.default.md#updatetrendingstickersets$input) \| [`updateRecentStickers$Input`](index.types.default.md#updaterecentstickers$input) \| [`updateFavoriteStickers$Input`](index.types.default.md#updatefavoritestickers$input) \| [`updateSavedAnimations$Input`](index.types.default.md#updatesavedanimations$input) \| [`updateSavedNotificationSounds$Input`](index.types.default.md#updatesavednotificationsounds$input) \| [`updateSelectedBackground$Input`](index.types.default.md#updateselectedbackground$input) \| [`updateChatThemes$Input`](index.types.default.md#updatechatthemes$input) \| [`updateLanguagePackStrings$Input`](index.types.default.md#updatelanguagepackstrings$input) \| [`updateConnectionState$Input`](index.types.default.md#updateconnectionstate$input) \| [`updateTermsOfService$Input`](index.types.default.md#updatetermsofservice$input) \| [`updateUsersNearby$Input`](index.types.default.md#updateusersnearby$input) \| [`updateAttachmentMenuBots$Input`](index.types.default.md#updateattachmentmenubots$input) \| [`updateWebAppMessageSent$Input`](index.types.default.md#updatewebappmessagesent$input) \| [`updateActiveEmojiReactions$Input`](index.types.default.md#updateactiveemojireactions$input) \| [`updateDefaultReactionType$Input`](index.types.default.md#updatedefaultreactiontype$input) \| [`updateDiceEmojis$Input`](index.types.default.md#updatediceemojis$input) \| [`updateAnimatedEmojiMessageClicked$Input`](index.types.default.md#updateanimatedemojimessageclicked$input) \| [`updateAnimationSearchParameters$Input`](index.types.default.md#updateanimationsearchparameters$input) \| [`updateSuggestedActions$Input`](index.types.default.md#updatesuggestedactions$input) \| [`updateAddChatMembersPrivacyForbidden$Input`](index.types.default.md#updateaddchatmembersprivacyforbidden$input) \| [`updateAutosaveSettings$Input`](index.types.default.md#updateautosavesettings$input) \| [`updateNewInlineQuery$Input`](index.types.default.md#updatenewinlinequery$input) \| [`updateNewChosenInlineResult$Input`](index.types.default.md#updatenewchoseninlineresult$input) \| [`updateNewCallbackQuery$Input`](index.types.default.md#updatenewcallbackquery$input) \| [`updateNewInlineCallbackQuery$Input`](index.types.default.md#updatenewinlinecallbackquery$input) \| [`updateNewShippingQuery$Input`](index.types.default.md#updatenewshippingquery$input) \| [`updateNewPreCheckoutQuery$Input`](index.types.default.md#updatenewprecheckoutquery$input) \| [`updateNewCustomEvent$Input`](index.types.default.md#updatenewcustomevent$input) \| [`updateNewCustomQuery$Input`](index.types.default.md#updatenewcustomquery$input) \| [`updatePoll$Input`](index.types.default.md#updatepoll$input) \| [`updatePollAnswer$Input`](index.types.default.md#updatepollanswer$input) \| [`updateChatMember$Input`](index.types.default.md#updatechatmember$input) \| [`updateNewChatJoinRequest$Input`](index.types.default.md#updatenewchatjoinrequest$input)
 
 Version of [Update](index.types.md#update) for method parameters.
 Any of:
@@ -16201,6 +16478,7 @@ Any of:
 - [updateAnimatedEmojiMessageClicked$Input](index.types.md#updateanimatedemojimessageclicked$input)
 - [updateAnimationSearchParameters$Input](index.types.md#updateanimationsearchparameters$input)
 - [updateSuggestedActions$Input](index.types.md#updatesuggestedactions$input)
+- [updateAddChatMembersPrivacyForbidden$Input](index.types.md#updateaddchatmembersprivacyforbidden$input)
 - [updateAutosaveSettings$Input](index.types.md#updateautosavesettings$input)
 - [updateNewInlineQuery$Input](index.types.md#updatenewinlinequery$input)
 - [updateNewChosenInlineResult$Input](index.types.md#updatenewchoseninlineresult$input)
@@ -16217,7 +16495,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44779
+dist/generated/types.d.ts:45366
 
 ___
 
@@ -16230,7 +16508,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44784
+dist/generated/types.d.ts:45371
 
 ___
 
@@ -16244,7 +16522,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44790
+dist/generated/types.d.ts:45377
 
 ___
 
@@ -16257,7 +16535,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40014
+dist/generated/types.d.ts:40513
 
 ___
 
@@ -16271,7 +16549,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40020
+dist/generated/types.d.ts:40519
 
 ___
 
@@ -16284,7 +16562,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40036
+dist/generated/types.d.ts:40535
 
 ___
 
@@ -16298,7 +16576,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40042
+dist/generated/types.d.ts:40541
 
 ___
 
@@ -16311,7 +16589,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42745
+dist/generated/types.d.ts:43304
 
 ___
 
@@ -16325,7 +16603,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42751
+dist/generated/types.d.ts:43310
 
 ___
 
@@ -16346,7 +16624,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43688
+dist/generated/types.d.ts:44271
 
 ___
 
@@ -16368,7 +16646,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43702
+dist/generated/types.d.ts:44285
 
 ___
 
@@ -16388,7 +16666,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43651
+dist/generated/types.d.ts:44234
 
 ___
 
@@ -16409,7 +16687,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43664
+dist/generated/types.d.ts:44247
 
 ___
 
@@ -16422,7 +16700,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43669
+dist/generated/types.d.ts:44252
 
 ___
 
@@ -16436,7 +16714,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:43675
+dist/generated/types.d.ts:44258
 
 ___
 
@@ -16454,7 +16732,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42215
+dist/generated/types.d.ts:42774
 
 ___
 
@@ -16473,7 +16751,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:42226
+dist/generated/types.d.ts:42785
 
 ___
 
@@ -16486,7 +16764,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44832
+dist/generated/types.d.ts:45419
 
 ___
 
@@ -16500,7 +16778,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44838
+dist/generated/types.d.ts:45425
 
 ___
 
@@ -16516,7 +16794,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39805
+dist/generated/types.d.ts:40304
 
 ___
 
@@ -16533,7 +16811,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39814
+dist/generated/types.d.ts:40313
 
 ___
 
@@ -16546,7 +16824,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40003
+dist/generated/types.d.ts:40502
 
 ___
 
@@ -16560,7 +16838,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40009
+dist/generated/types.d.ts:40508
 
 ___
 
@@ -16573,7 +16851,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40047
+dist/generated/types.d.ts:40546
 
 ___
 
@@ -16587,7 +16865,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40053
+dist/generated/types.d.ts:40552
 
 ___
 
@@ -16600,7 +16878,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41463
+dist/generated/types.d.ts:42022
 
 ___
 
@@ -16614,7 +16892,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41469
+dist/generated/types.d.ts:42028
 
 ___
 
@@ -16628,7 +16906,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44526
+dist/generated/types.d.ts:45111
 
 ___
 
@@ -16643,7 +16921,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:44533
+dist/generated/types.d.ts:45118
 
 ___
 
@@ -16656,7 +16934,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39747
+dist/generated/types.d.ts:40235
 
 ___
 
@@ -16670,7 +16948,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39753
+dist/generated/types.d.ts:40241
 
 ___
 
@@ -16683,7 +16961,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39681
+dist/generated/types.d.ts:40169
 
 ___
 
@@ -16697,7 +16975,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39687
+dist/generated/types.d.ts:40175
 
 ___
 
@@ -16710,7 +16988,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40812
+dist/generated/types.d.ts:41360
 
 ___
 
@@ -16724,7 +17002,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:40818
+dist/generated/types.d.ts:41366
 
 ___
 
@@ -16737,7 +17015,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39692
+dist/generated/types.d.ts:40180
 
 ___
 
@@ -16751,7 +17029,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39698
+dist/generated/types.d.ts:40186
 
 ___
 
@@ -16764,7 +17042,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39703
+dist/generated/types.d.ts:40191
 
 ___
 
@@ -16778,7 +17056,34 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:39709
+dist/generated/types.d.ts:40197
+
+___
+
+### WebApp
+
+Ƭ **WebApp**: [`webApp`](index.types.default.md#webapp-1)
+
+Any of:
+- [webApp](index.types.md#webapp-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:40257
+
+___
+
+### WebApp$Input
+
+Ƭ **WebApp$Input**: [`webApp$Input`](index.types.default.md#webapp$input-1)
+
+Version of [WebApp](index.types.md#webapp) for method parameters.
+Any of:
+- [webApp$Input](index.types.md#webapp$input-1)
+
+#### Defined in
+
+dist/generated/types.d.ts:40263
 
 ___
 
@@ -16791,7 +17096,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41005
+dist/generated/types.d.ts:41564
 
 ___
 
@@ -16805,7 +17110,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41011
+dist/generated/types.d.ts:41570
 
 ___
 
@@ -16818,7 +17123,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41266
+dist/generated/types.d.ts:41825
 
 ___
 
@@ -16832,7 +17137,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41272
+dist/generated/types.d.ts:41831
 
 ___
 
@@ -16845,7 +17150,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41255
+dist/generated/types.d.ts:41814
 
 ___
 
@@ -16859,7 +17164,7 @@ Any of:
 
 #### Defined in
 
-dist/generated/types.d.ts:41261
+dist/generated/types.d.ts:41820
 
 ___
 
@@ -16887,7 +17192,7 @@ Accepts an incoming call
 
 #### Defined in
 
-dist/generated/types.d.ts:52246
+dist/generated/types.d.ts:52930
 
 ___
 
@@ -16907,7 +17212,7 @@ Accepts an incoming call
 
 #### Defined in
 
-dist/generated/types.d.ts:52227
+dist/generated/types.d.ts:52911
 
 ___
 
@@ -16935,7 +17240,7 @@ Accepts Telegram terms of services
 
 #### Defined in
 
-dist/generated/types.d.ts:56741
+dist/generated/types.d.ts:57637
 
 ___
 
@@ -16954,7 +17259,7 @@ Accepts Telegram terms of services
 
 #### Defined in
 
-dist/generated/types.d.ts:56727
+dist/generated/types.d.ts:57623
 
 ___
 
@@ -16973,7 +17278,7 @@ Contains information about the period of inactivity after which the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:30820
+dist/generated/types.d.ts:31233
 
 ___
 
@@ -16993,7 +17298,54 @@ Contains information about the period of inactivity after which the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:30832
+dist/generated/types.d.ts:31245
+
+___
+
+### addApplicationChangelog
+
+Ƭ **addApplicationChangelog**: (`parameters`: [`addApplicationChangelog$Input`](index.types.default.md#addapplicationchangelog$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Adds server-provided application changelog as messages to the chat 777000 (Telegram); for official applications only
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`addApplicationChangelog$Input`](index.types.default.md#addapplicationchangelog$input) | [addApplicationChangelog$Input](index.types.md#addapplicationchangelog$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:57797
+
+___
+
+### addApplicationChangelog$Input
+
+Ƭ **addApplicationChangelog$Input**: `Object`
+
+Adds server-provided application changelog as messages to the chat 777000 (Telegram); for official applications only
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"addApplicationChangelog"`` | - |
+| `previous_application_version?` | `string` | The previous application version |
+
+#### Defined in
+
+dist/generated/types.d.ts:57783
 
 ___
 
@@ -17021,7 +17373,7 @@ Adds a new member to a chat. Members can't be added to private or secret chats
 
 #### Defined in
 
-dist/generated/types.d.ts:50880
+dist/generated/types.d.ts:51564
 
 ___
 
@@ -17042,7 +17394,7 @@ Adds a new member to a chat. Members can't be added to private or secret chats
 
 #### Defined in
 
-dist/generated/types.d.ts:50856
+dist/generated/types.d.ts:51540
 
 ___
 
@@ -17070,7 +17422,7 @@ Adds multiple new members to a chat. Currently, this method is only available fo
 
 #### Defined in
 
-dist/generated/types.d.ts:50901
+dist/generated/types.d.ts:51585
 
 ___
 
@@ -17090,7 +17442,7 @@ Adds multiple new members to a chat. Currently, this method is only available fo
 
 #### Defined in
 
-dist/generated/types.d.ts:50882
+dist/generated/types.d.ts:51566
 
 ___
 
@@ -17118,7 +17470,7 @@ Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive c
 
 #### Defined in
 
-dist/generated/types.d.ts:50249
+dist/generated/types.d.ts:50933
 
 ___
 
@@ -17138,7 +17490,7 @@ Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive c
 
 #### Defined in
 
-dist/generated/types.d.ts:50230
+dist/generated/types.d.ts:50914
 
 ___
 
@@ -17166,7 +17518,7 @@ Adds a user to the contact list or edits an existing contact by their user ident
 
 #### Defined in
 
-dist/generated/types.d.ts:53132
+dist/generated/types.d.ts:53816
 
 ___
 
@@ -17182,11 +17534,11 @@ Adds a user to the contact list or edits an existing contact by their user ident
 | :------ | :------ | :------ |
 | `_` | ``"addContact"`` | - |
 | `contact?` | [`contact$Input`](index.types.default.md#contact$input-1) | The contact to add or edit; phone number may be empty and needs to be specified only if known, vCard is ignored |
-| `share_phone_number?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true to share the current user's phone number with the new contact. A corresponding rule to userPrivacySettingShowPhoneNumber will be added if needed.    -Use the field userFullInfo.need_phone_number_privacy_exception to check whether the current user needs to be asked to share their phone number |
+| `share_phone_number?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true to share the current user's phone number with the new contact. A corresponding rule to userPrivacySettingShowPhoneNumber will be added if needed. -Use the field userFullInfo.need_phone_number_privacy_exception to check whether the current user needs to be asked to share their phone number |
 
 #### Defined in
 
-dist/generated/types.d.ts:53111
+dist/generated/types.d.ts:53795
 
 ___
 
@@ -17214,7 +17566,7 @@ Adds a custom server language pack to the list of installed language packs in cu
 
 #### Defined in
 
-dist/generated/types.d.ts:55281
+dist/generated/types.d.ts:56039
 
 ___
 
@@ -17229,11 +17581,11 @@ Adds a custom server language pack to the list of installed language packs in cu
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"addCustomServerLanguagePack"`` | - |
-| `language_pack_id?` | `string` | Identifier of a language pack to be added; may be different from a name that is used in an "https://t.me/setlanguage/" link |
+| `language_pack_id?` | `string` | Identifier of a language pack to be added |
 
 #### Defined in
 
-dist/generated/types.d.ts:55267
+dist/generated/types.d.ts:56025
 
 ___
 
@@ -17263,7 +17615,7 @@ Adds a new sticker to the list of favorite stickers. The new sticker is added to
 
 #### Defined in
 
-dist/generated/types.d.ts:53738
+dist/generated/types.d.ts:54422
 
 ___
 
@@ -17283,7 +17635,7 @@ Adds a new sticker to the list of favorite stickers. The new sticker is added to
 
 #### Defined in
 
-dist/generated/types.d.ts:53722
+dist/generated/types.d.ts:54406
 
 ___
 
@@ -17313,7 +17665,7 @@ Adds a file from a message to the list of file downloads. Download progress and 
 
 #### Defined in
 
-dist/generated/types.d.ts:51633
+dist/generated/types.d.ts:52317
 
 ___
 
@@ -17336,7 +17688,7 @@ Adds a file from a message to the list of file downloads. Download progress and 
 
 #### Defined in
 
-dist/generated/types.d.ts:51602
+dist/generated/types.d.ts:52286
 
 ___
 
@@ -17364,7 +17716,7 @@ Adds a local message to a chat. The message is persistent across application res
 
 #### Defined in
 
-dist/generated/types.d.ts:47973
+dist/generated/types.d.ts:48574
 
 ___
 
@@ -17387,7 +17739,7 @@ Adds a local message to a chat. The message is persistent across application res
 
 #### Defined in
 
-dist/generated/types.d.ts:47939
+dist/generated/types.d.ts:48540
 
 ___
 
@@ -17415,7 +17767,7 @@ Adds a message to TDLib internal log. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:57200
+dist/generated/types.d.ts:58112
 
 ___
 
@@ -17435,7 +17787,7 @@ Adds a message to TDLib internal log. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:57181
+dist/generated/types.d.ts:58093
 
 ___
 
@@ -17463,7 +17815,7 @@ Adds a reaction to a message. Use getMessageAvailableReactions to receive the li
 
 #### Defined in
 
-dist/generated/types.d.ts:48772
+dist/generated/types.d.ts:49373
 
 ___
 
@@ -17486,7 +17838,7 @@ Adds a reaction to a message. Use getMessageAvailableReactions to receive the li
 
 #### Defined in
 
-dist/generated/types.d.ts:48738
+dist/generated/types.d.ts:49339
 
 ___
 
@@ -17514,7 +17866,7 @@ Adds the specified data to data usage statistics. Can be called before authoriza
 
 #### Defined in
 
-dist/generated/types.d.ts:55901
+dist/generated/types.d.ts:56659
 
 ___
 
@@ -17533,7 +17885,7 @@ Adds the specified data to data usage statistics. Can be called before authoriza
 
 #### Defined in
 
-dist/generated/types.d.ts:55887
+dist/generated/types.d.ts:56645
 
 ___
 
@@ -17561,7 +17913,7 @@ Adds a proxy server for network requests. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:56953
+dist/generated/types.d.ts:57865
 
 ___
 
@@ -17583,7 +17935,7 @@ Adds a proxy server for network requests. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:56924
+dist/generated/types.d.ts:57836
 
 ___
 
@@ -17613,7 +17965,7 @@ Manually adds a new sticker to the list of recently used stickers. The new stick
 
 #### Defined in
 
-dist/generated/types.d.ts:53671
+dist/generated/types.d.ts:54355
 
 ___
 
@@ -17634,7 +17986,7 @@ Manually adds a new sticker to the list of recently used stickers. The new stick
 
 #### Defined in
 
-dist/generated/types.d.ts:53650
+dist/generated/types.d.ts:54334
 
 ___
 
@@ -17662,7 +18014,7 @@ Adds a chat to the list of recently found chats. The chat is added to the beginn
 
 #### Defined in
 
-dist/generated/types.d.ts:46711
+dist/generated/types.d.ts:47312
 
 ___
 
@@ -17681,7 +18033,7 @@ Adds a chat to the list of recently found chats. The chat is added to the beginn
 
 #### Defined in
 
-dist/generated/types.d.ts:46697
+dist/generated/types.d.ts:47298
 
 ___
 
@@ -17709,7 +18061,7 @@ Manually adds a new animation to the list of saved animations. The new animation
 
 #### Defined in
 
-dist/generated/types.d.ts:53909
+dist/generated/types.d.ts:54593
 
 ___
 
@@ -17728,7 +18080,7 @@ Manually adds a new animation to the list of saved animations. The new animation
 
 #### Defined in
 
-dist/generated/types.d.ts:53895
+dist/generated/types.d.ts:54579
 
 ___
 
@@ -17756,7 +18108,7 @@ Adds a new notification sound to the list of saved notification sounds. The new 
 
 #### Defined in
 
-dist/generated/types.d.ts:51122
+dist/generated/types.d.ts:51806
 
 ___
 
@@ -17775,19 +18127,19 @@ Adds a new notification sound to the list of saved notification sounds. The new 
 
 #### Defined in
 
-dist/generated/types.d.ts:51108
+dist/generated/types.d.ts:51792
 
 ___
 
 ### addStickerToSet
 
-Ƭ **addStickerToSet**: (`parameters`: [`addStickerToSet$Input`](index.types.default.md#addstickertoset$input)) => [`StickerSet`](index.types.default.md#stickerset)
+Ƭ **addStickerToSet**: (`parameters`: [`addStickerToSet$Input`](index.types.default.md#addstickertoset$input)) => [`Ok`](index.types.default.md#ok)
 
 #### Type declaration
 
-▸ (`parameters`): [`StickerSet`](index.types.default.md#stickerset)
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
 
-Adds a new sticker to a set; for bots only. Returns the sticker set
+Adds a new sticker to a set; for bots only
 
 ##### Parameters
 
@@ -17797,13 +18149,13 @@ Adds a new sticker to a set; for bots only. Returns the sticker set
 
 ##### Returns
 
-[`StickerSet`](index.types.default.md#stickerset)
+[`Ok`](index.types.default.md#ok)
 
-[StickerSet](index.types.md#stickerset)
+[Ok](index.types.md#ok)
 
 #### Defined in
 
-dist/generated/types.d.ts:56472
+dist/generated/types.d.ts:57247
 
 ___
 
@@ -17811,7 +18163,7 @@ ___
 
 Ƭ **addStickerToSet$Input**: `Object`
 
-Adds a new sticker to a set; for bots only. Returns the sticker set
+Adds a new sticker to a set; for bots only
 
 #### Type declaration
 
@@ -17824,7 +18176,7 @@ Adds a new sticker to a set; for bots only. Returns the sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:56448
+dist/generated/types.d.ts:57223
 
 ___
 
@@ -17839,12 +18191,13 @@ Represents a reaction applied to a message
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"addedReaction"`` | - |
+| `date` | [`int32`](index.types.default.md#int32-1) | Point in time (Unix timestamp) when the reaction was added |
 | `sender_id` | [`MessageSender`](index.types.default.md#messagesender) | Identifier of the chat member, applied the reaction |
 | `type` | [`ReactionType`](index.types.default.md#reactiontype) | Type of the reaction |
 
 #### Defined in
 
-dist/generated/types.d.ts:23156
+dist/generated/types.d.ts:23496
 
 ___
 
@@ -17860,12 +18213,13 @@ Represents a reaction applied to a message
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"addedReaction"`` | - |
+| `date?` | [`int32`](index.types.default.md#int32-1) | Point in time (Unix timestamp) when the reaction was added |
 | `sender_id?` | [`MessageSender$Input`](index.types.default.md#messagesender$input) | Identifier of the chat member, applied the reaction |
 | `type?` | [`ReactionType$Input`](index.types.default.md#reactiontype$input) | Type of the reaction |
 
 #### Defined in
 
-dist/generated/types.d.ts:23173
+dist/generated/types.d.ts:23518
 
 ___
 
@@ -17886,7 +18240,7 @@ Represents a list of reactions added to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:23187
+dist/generated/types.d.ts:23537
 
 ___
 
@@ -17908,7 +18262,7 @@ Represents a list of reactions added to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:23209
+dist/generated/types.d.ts:23559
 
 ___
 
@@ -17932,7 +18286,7 @@ Describes an address
 
 #### Defined in
 
-dist/generated/types.d.ts:14426
+dist/generated/types.d.ts:14746
 
 ___
 
@@ -17957,7 +18311,7 @@ Describes an address
 
 #### Defined in
 
-dist/generated/types.d.ts:14463
+dist/generated/types.d.ts:14783
 
 ___
 
@@ -17978,7 +18332,7 @@ Animated variant of a chat photo in MPEG4 format
 
 #### Defined in
 
-dist/generated/types.d.ts:5101
+dist/generated/types.d.ts:5199
 
 ___
 
@@ -18000,7 +18354,7 @@ Animated variant of a chat photo in MPEG4 format
 
 #### Defined in
 
-dist/generated/types.d.ts:5123
+dist/generated/types.d.ts:5221
 
 ___
 
@@ -18023,7 +18377,7 @@ Describes an animated or custom representation of an emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:4232
+dist/generated/types.d.ts:4269
 
 ___
 
@@ -18047,7 +18401,7 @@ Describes an animated or custom representation of an emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:4264
+dist/generated/types.d.ts:4301
 
 ___
 
@@ -18074,7 +18428,7 @@ Describes an animation file. The animation must be encoded in GIF or MPEG4 forma
 
 #### Defined in
 
-dist/generated/types.d.ts:3564
+dist/generated/types.d.ts:3601
 
 ___
 
@@ -18102,7 +18456,7 @@ Describes an animation file. The animation must be encoded in GIF or MPEG4 forma
 
 #### Defined in
 
-dist/generated/types.d.ts:3616
+dist/generated/types.d.ts:3653
 
 ___
 
@@ -18121,7 +18475,7 @@ Represents a list of animations
 
 #### Defined in
 
-dist/generated/types.d.ts:23421
+dist/generated/types.d.ts:23771
 
 ___
 
@@ -18141,7 +18495,7 @@ Represents a list of animations
 
 #### Defined in
 
-dist/generated/types.d.ts:23433
+dist/generated/types.d.ts:23783
 
 ___
 
@@ -18169,7 +18523,7 @@ Sets the result of a callback query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49573
+dist/generated/types.d.ts:50236
 
 ___
 
@@ -18192,7 +18546,7 @@ Sets the result of a callback query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49539
+dist/generated/types.d.ts:50202
 
 ___
 
@@ -18220,7 +18574,7 @@ Answers a custom query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:56783
+dist/generated/types.d.ts:57679
 
 ___
 
@@ -18240,7 +18594,7 @@ Answers a custom query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:56764
+dist/generated/types.d.ts:57660
 
 ___
 
@@ -18268,7 +18622,7 @@ Sets the result of an inline query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49368
+dist/generated/types.d.ts:49964
 
 ___
 
@@ -18283,17 +18637,16 @@ Sets the result of an inline query; for bots only
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"answerInlineQuery"`` | - |
+| `button?` | [`inlineQueryResultsButton$Input`](index.types.default.md#inlinequeryresultsbutton$input-1) | Button to be shown above inline query results; pass null if none |
 | `cache_time?` | [`int32`](index.types.default.md#int32-1) | Allowed time to cache the results of the query, in seconds |
 | `inline_query_id?` | [`int64`](index.types.default.md#int64-1) | Identifier of the inline query |
 | `is_personal?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true if results may be cached and returned only for the user that sent the query. By default, results may be returned to any user who sends the same query |
 | `next_offset?` | `string` | Offset for the next inline query; pass an empty string if there are no more results |
 | `results?` | [`vector$Input`](index.types.default.md#vector$input)<[`InputInlineQueryResult$Input`](index.types.default.md#inputinlinequeryresult$input)\> | The results of the query |
-| `switch_pm_parameter?` | `string` | The parameter for the bot start message |
-| `switch_pm_text?` | `string` | If non-empty, this text must be shown on the button that opens a private chat with the bot and sends a start message to the bot with the parameter switch_pm_parameter |
 
 #### Defined in
 
-dist/generated/types.d.ts:49324
+dist/generated/types.d.ts:49925
 
 ___
 
@@ -18321,7 +18674,7 @@ Sets the result of a pre-checkout query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49620
+dist/generated/types.d.ts:50283
 
 ___
 
@@ -18341,7 +18694,7 @@ Sets the result of a pre-checkout query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49601
+dist/generated/types.d.ts:50264
 
 ___
 
@@ -18369,7 +18722,7 @@ Sets the result of a shipping query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49599
+dist/generated/types.d.ts:50262
 
 ___
 
@@ -18390,7 +18743,7 @@ Sets the result of a shipping query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49575
+dist/generated/types.d.ts:50238
 
 ___
 
@@ -18418,7 +18771,7 @@ Sets the result of interaction with a Web App and sends corresponding message on
 
 #### Defined in
 
-dist/generated/types.d.ts:49511
+dist/generated/types.d.ts:50174
 
 ___
 
@@ -18438,7 +18791,7 @@ Sets the result of interaction with a Web App and sends corresponding message on
 
 #### Defined in
 
-dist/generated/types.d.ts:49492
+dist/generated/types.d.ts:50155
 
 ___
 
@@ -18466,7 +18819,7 @@ Informs server about a purchase through App Store. For official applications onl
 
 #### Defined in
 
-dist/generated/types.d.ts:56694
+dist/generated/types.d.ts:57590
 
 ___
 
@@ -18486,7 +18839,7 @@ Informs server about a purchase through App Store. For official applications onl
 
 #### Defined in
 
-dist/generated/types.d.ts:56675
+dist/generated/types.d.ts:57571
 
 ___
 
@@ -18514,7 +18867,7 @@ Informs server about a purchase through Google Play. For official applications o
 
 #### Defined in
 
-dist/generated/types.d.ts:56725
+dist/generated/types.d.ts:57621
 
 ___
 
@@ -18536,7 +18889,7 @@ Informs server about a purchase through Google Play. For official applications o
 
 #### Defined in
 
-dist/generated/types.d.ts:56696
+dist/generated/types.d.ts:57592
 
 ___
 
@@ -18560,7 +18913,7 @@ Represents a bot, which can be added to attachment menu
 | `macos_icon` | [`file`](index.types.default.md#file-1) \| ``null`` | Attachment menu icon for the bot in TGS format for the official native macOS app; may be null |
 | `name` | `string` | Name for the bot in attachment menu |
 | `name_color` | [`attachmentMenuBotColor`](index.types.default.md#attachmentmenubotcolor-1) \| ``null`` | Color to highlight selected name of the bot if appropriate; may be null |
-| `request_write_access` | [`Bool`](index.types.default.md#bool) | True, if the user needs to be requested to give the permission to the bot to send them messages |
+| `request_write_access` | [`Bool`](index.types.default.md#bool) | True, if the user must be asked for the permission to the bot to send them messages |
 | `supports_bot_chats` | [`Bool`](index.types.default.md#bool) | True, if the bot supports opening from attachment menu in private chats with other bots |
 | `supports_channel_chats` | [`Bool`](index.types.default.md#bool) | True, if the bot supports opening from attachment menu in channel chats |
 | `supports_group_chats` | [`Bool`](index.types.default.md#bool) | True, if the bot supports opening from attachment menu in basic group and supergroup chats |
@@ -18571,7 +18924,7 @@ Represents a bot, which can be added to attachment menu
 
 #### Defined in
 
-dist/generated/types.d.ts:23649
+dist/generated/types.d.ts:23999
 
 ___
 
@@ -18596,7 +18949,7 @@ Represents a bot, which can be added to attachment menu
 | `macos_icon?` | [`file$Input`](index.types.default.md#file$input-1) \| ``null`` | Attachment menu icon for the bot in TGS format for the official native macOS app; may be null |
 | `name?` | `string` | Name for the bot in attachment menu |
 | `name_color?` | [`attachmentMenuBotColor$Input`](index.types.default.md#attachmentmenubotcolor$input-1) \| ``null`` | Color to highlight selected name of the bot if appropriate; may be null |
-| `request_write_access?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user needs to be requested to give the permission to the bot to send them messages |
+| `request_write_access?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user must be asked for the permission to the bot to send them messages |
 | `supports_bot_chats?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the bot supports opening from attachment menu in private chats with other bots |
 | `supports_channel_chats?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the bot supports opening from attachment menu in channel chats |
 | `supports_group_chats?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the bot supports opening from attachment menu in basic group and supergroup chats |
@@ -18607,7 +18960,7 @@ Represents a bot, which can be added to attachment menu
 
 #### Defined in
 
-dist/generated/types.d.ts:23741
+dist/generated/types.d.ts:24091
 
 ___
 
@@ -18627,7 +18980,7 @@ Describes a color to highlight a bot added to attachment menu
 
 #### Defined in
 
-dist/generated/types.d.ts:23618
+dist/generated/types.d.ts:23968
 
 ___
 
@@ -18648,7 +19001,7 @@ Describes a color to highlight a bot added to attachment menu
 
 #### Defined in
 
-dist/generated/types.d.ts:23635
+dist/generated/types.d.ts:23985
 
 ___
 
@@ -18675,7 +19028,7 @@ Describes an audio file. Audio is usually in MP3 or M4A format
 
 #### Defined in
 
-dist/generated/types.d.ts:3665
+dist/generated/types.d.ts:3702
 
 ___
 
@@ -18703,7 +19056,7 @@ Describes an audio file. Audio is usually in MP3 or M4A format
 
 #### Defined in
 
-dist/generated/types.d.ts:3717
+dist/generated/types.d.ts:3754
 
 ___
 
@@ -18725,7 +19078,7 @@ Information about the authentication code that was sent
 
 #### Defined in
 
-dist/generated/types.d.ts:1956
+dist/generated/types.d.ts:1987
 
 ___
 
@@ -18748,7 +19101,7 @@ Information about the authentication code that was sent
 
 #### Defined in
 
-dist/generated/types.d.ts:1983
+dist/generated/types.d.ts:2014
 
 ___
 
@@ -18767,7 +19120,7 @@ An authentication code is delivered via a phone call to the specified phone numb
 
 #### Defined in
 
-dist/generated/types.d.ts:1780
+dist/generated/types.d.ts:1811
 
 ___
 
@@ -18787,7 +19140,7 @@ An authentication code is delivered via a phone call to the specified phone numb
 
 #### Defined in
 
-dist/generated/types.d.ts:1792
+dist/generated/types.d.ts:1823
 
 ___
 
@@ -18807,7 +19160,7 @@ An authentication code is delivered via Firebase Authentication to the official 
 
 #### Defined in
 
-dist/generated/types.d.ts:1884
+dist/generated/types.d.ts:1915
 
 ___
 
@@ -18828,7 +19181,7 @@ An authentication code is delivered via Firebase Authentication to the official 
 
 #### Defined in
 
-dist/generated/types.d.ts:1901
+dist/generated/types.d.ts:1932
 
 ___
 
@@ -18849,7 +19202,7 @@ An authentication code is delivered via Firebase Authentication to the official 
 
 #### Defined in
 
-dist/generated/types.d.ts:1915
+dist/generated/types.d.ts:1946
 
 ___
 
@@ -18871,7 +19224,7 @@ An authentication code is delivered via Firebase Authentication to the official 
 
 #### Defined in
 
-dist/generated/types.d.ts:1937
+dist/generated/types.d.ts:1968
 
 ___
 
@@ -18890,7 +19243,7 @@ An authentication code is delivered by an immediately canceled call to the speci
 
 #### Defined in
 
-dist/generated/types.d.ts:1801
+dist/generated/types.d.ts:1832
 
 ___
 
@@ -18910,7 +19263,7 @@ An authentication code is delivered by an immediately canceled call to the speci
 
 #### Defined in
 
-dist/generated/types.d.ts:1813
+dist/generated/types.d.ts:1844
 
 ___
 
@@ -18930,7 +19283,7 @@ An authentication code is delivered to https://fragment.com. The user must be lo
 
 #### Defined in
 
-dist/generated/types.d.ts:1853
+dist/generated/types.d.ts:1884
 
 ___
 
@@ -18951,7 +19304,7 @@ An authentication code is delivered to https://fragment.com. The user must be lo
 
 #### Defined in
 
-dist/generated/types.d.ts:1870
+dist/generated/types.d.ts:1901
 
 ___
 
@@ -18971,7 +19324,7 @@ An authentication code is delivered by an immediately canceled call to the speci
 
 #### Defined in
 
-dist/generated/types.d.ts:1822
+dist/generated/types.d.ts:1853
 
 ___
 
@@ -18992,7 +19345,7 @@ An authentication code is delivered by an immediately canceled call to the speci
 
 #### Defined in
 
-dist/generated/types.d.ts:1839
+dist/generated/types.d.ts:1870
 
 ___
 
@@ -19011,7 +19364,7 @@ An authentication code is delivered via an SMS message to the specified phone nu
 
 #### Defined in
 
-dist/generated/types.d.ts:1759
+dist/generated/types.d.ts:1790
 
 ___
 
@@ -19031,7 +19384,7 @@ An authentication code is delivered via an SMS message to the specified phone nu
 
 #### Defined in
 
-dist/generated/types.d.ts:1771
+dist/generated/types.d.ts:1802
 
 ___
 
@@ -19050,7 +19403,7 @@ An authentication code is delivered via a private Telegram message, which can be
 
 #### Defined in
 
-dist/generated/types.d.ts:1738
+dist/generated/types.d.ts:1769
 
 ___
 
@@ -19070,7 +19423,7 @@ An authentication code is delivered via a private Telegram message, which can be
 
 #### Defined in
 
-dist/generated/types.d.ts:1750
+dist/generated/types.d.ts:1781
 
 ___
 
@@ -19089,7 +19442,7 @@ TDLib client is in its final state. All databases are closed and all resources a
 
 #### Defined in
 
-dist/generated/types.d.ts:2484
+dist/generated/types.d.ts:2525
 
 ___
 
@@ -19110,7 +19463,7 @@ TDLib client is in its final state. All databases are closed and all resources a
 
 #### Defined in
 
-dist/generated/types.d.ts:2493
+dist/generated/types.d.ts:2534
 
 ___
 
@@ -19128,7 +19481,7 @@ TDLib is closing, all subsequent queries will be answered with the error 500. No
 
 #### Defined in
 
-dist/generated/types.d.ts:2472
+dist/generated/types.d.ts:2513
 
 ___
 
@@ -19147,7 +19500,7 @@ TDLib is closing, all subsequent queries will be answered with the error 500. No
 
 #### Defined in
 
-dist/generated/types.d.ts:2479
+dist/generated/types.d.ts:2520
 
 ___
 
@@ -19165,7 +19518,7 @@ The user is currently logging out
 
 #### Defined in
 
-dist/generated/types.d.ts:2461
+dist/generated/types.d.ts:2502
 
 ___
 
@@ -19184,7 +19537,7 @@ The user is currently logging out
 
 #### Defined in
 
-dist/generated/types.d.ts:2468
+dist/generated/types.d.ts:2509
 
 ___
 
@@ -19202,7 +19555,7 @@ The user has been successfully authorized. TDLib is now ready to answer general 
 
 #### Defined in
 
-dist/generated/types.d.ts:2450
+dist/generated/types.d.ts:2491
 
 ___
 
@@ -19221,7 +19574,7 @@ The user has been successfully authorized. TDLib is now ready to answer general 
 
 #### Defined in
 
-dist/generated/types.d.ts:2457
+dist/generated/types.d.ts:2498
 
 ___
 
@@ -19240,7 +19593,7 @@ TDLib needs the user's authentication code to authorize. Call checkAuthenticatio
 
 #### Defined in
 
-dist/generated/types.d.ts:2343
+dist/generated/types.d.ts:2374
 
 ___
 
@@ -19260,7 +19613,7 @@ TDLib needs the user's authentication code to authorize. Call checkAuthenticatio
 
 #### Defined in
 
-dist/generated/types.d.ts:2355
+dist/generated/types.d.ts:2386
 
 ___
 
@@ -19280,7 +19633,7 @@ TDLib needs the user's email address to authorize. Call setAuthenticationEmailAd
 
 #### Defined in
 
-dist/generated/types.d.ts:2261
+dist/generated/types.d.ts:2292
 
 ___
 
@@ -19301,7 +19654,7 @@ TDLib needs the user's email address to authorize. Call setAuthenticationEmailAd
 
 #### Defined in
 
-dist/generated/types.d.ts:2278
+dist/generated/types.d.ts:2309
 
 ___
 
@@ -19323,7 +19676,7 @@ TDLib needs the user's authentication code sent to an email address to authorize
 
 #### Defined in
 
-dist/generated/types.d.ts:2292
+dist/generated/types.d.ts:2323
 
 ___
 
@@ -19346,7 +19699,7 @@ TDLib needs the user's authentication code sent to an email address to authorize
 
 #### Defined in
 
-dist/generated/types.d.ts:2319
+dist/generated/types.d.ts:2350
 
 ___
 
@@ -19365,7 +19718,7 @@ The user needs to confirm authorization on another logged in device by scanning 
 
 #### Defined in
 
-dist/generated/types.d.ts:2364
+dist/generated/types.d.ts:2395
 
 ___
 
@@ -19385,7 +19738,7 @@ The user needs to confirm authorization on another logged in device by scanning 
 
 #### Defined in
 
-dist/generated/types.d.ts:2376
+dist/generated/types.d.ts:2407
 
 ___
 
@@ -19401,13 +19754,14 @@ The user has been authorized, but needs to enter a 2-step verification password 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"authorizationStateWaitPassword"`` | - |
+| `has_passport_data` | [`Bool`](index.types.default.md#bool) | True, if some Telegram Passport elements were saved |
 | `has_recovery_email_address` | [`Bool`](index.types.default.md#bool) | True, if a recovery email address has been set up |
 | `password_hint` | `string` | Hint for the password; may be empty |
 | `recovery_email_address_pattern` | `string` | Pattern of the email address to which the recovery email was sent; empty until a recovery email has been sent |
 
 #### Defined in
 
-dist/generated/types.d.ts:2407
+dist/generated/types.d.ts:2438
 
 ___
 
@@ -19425,13 +19779,14 @@ The user has been authorized, but needs to enter a 2-step verification password 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"authorizationStateWaitPassword"`` | - |
+| `has_passport_data?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if some Telegram Passport elements were saved |
 | `has_recovery_email_address?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if a recovery email address has been set up |
 | `password_hint?` | `string` | Hint for the password; may be empty |
 | `recovery_email_address_pattern?` | `string` | Pattern of the email address to which the recovery email was sent; empty until a recovery email has been sent |
 
 #### Defined in
 
-dist/generated/types.d.ts:2431
+dist/generated/types.d.ts:2467
 
 ___
 
@@ -19449,7 +19804,7 @@ TDLib needs the user's phone number to authorize. Call setAuthenticationPhoneNum
 
 #### Defined in
 
-dist/generated/types.d.ts:2250
+dist/generated/types.d.ts:2281
 
 ___
 
@@ -19468,7 +19823,7 @@ TDLib needs the user's phone number to authorize. Call setAuthenticationPhoneNum
 
 #### Defined in
 
-dist/generated/types.d.ts:2257
+dist/generated/types.d.ts:2288
 
 ___
 
@@ -19487,7 +19842,7 @@ The user is unregistered and need to accept terms of service and enter their fir
 
 #### Defined in
 
-dist/generated/types.d.ts:2385
+dist/generated/types.d.ts:2416
 
 ___
 
@@ -19507,7 +19862,7 @@ The user is unregistered and need to accept terms of service and enter their fir
 
 #### Defined in
 
-dist/generated/types.d.ts:2397
+dist/generated/types.d.ts:2428
 
 ___
 
@@ -19525,7 +19880,7 @@ Initializetion parameters are needed. Call setTdlibParameters to provide them
 
 #### Defined in
 
-dist/generated/types.d.ts:2239
+dist/generated/types.d.ts:2270
 
 ___
 
@@ -19544,7 +19899,7 @@ Initializetion parameters are needed. Call setTdlibParameters to provide them
 
 #### Defined in
 
-dist/generated/types.d.ts:2246
+dist/generated/types.d.ts:2277
 
 ___
 
@@ -19570,7 +19925,7 @@ Contains auto-download settings
 
 #### Defined in
 
-dist/generated/types.d.ts:33175
+dist/generated/types.d.ts:33632
 
 ___
 
@@ -19597,7 +19952,7 @@ Contains auto-download settings
 
 #### Defined in
 
-dist/generated/types.d.ts:33222
+dist/generated/types.d.ts:33679
 
 ___
 
@@ -19618,7 +19973,7 @@ Contains auto-download settings presets for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:33266
+dist/generated/types.d.ts:33723
 
 ___
 
@@ -19640,7 +19995,7 @@ Contains auto-download settings presets for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:33288
+dist/generated/types.d.ts:33745
 
 ___
 
@@ -19662,7 +20017,7 @@ Describes autosave settings
 
 #### Defined in
 
-dist/generated/types.d.ts:33433
+dist/generated/types.d.ts:33890
 
 ___
 
@@ -19685,7 +20040,7 @@ Describes autosave settings
 
 #### Defined in
 
-dist/generated/types.d.ts:33460
+dist/generated/types.d.ts:33917
 
 ___
 
@@ -19705,7 +20060,7 @@ Contains autosave settings for a chat, which overrides default settings for the 
 
 #### Defined in
 
-dist/generated/types.d.ts:33402
+dist/generated/types.d.ts:33859
 
 ___
 
@@ -19726,7 +20081,7 @@ Contains autosave settings for a chat, which overrides default settings for the 
 
 #### Defined in
 
-dist/generated/types.d.ts:33419
+dist/generated/types.d.ts:33876
 
 ___
 
@@ -19744,7 +20099,7 @@ Autosave settings applied to all channel chats without chat-specific settings
 
 #### Defined in
 
-dist/generated/types.d.ts:33329
+dist/generated/types.d.ts:33786
 
 ___
 
@@ -19763,7 +20118,7 @@ Autosave settings applied to all channel chats without chat-specific settings
 
 #### Defined in
 
-dist/generated/types.d.ts:33336
+dist/generated/types.d.ts:33793
 
 ___
 
@@ -19782,7 +20137,7 @@ Autosave settings applied to a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:33340
+dist/generated/types.d.ts:33797
 
 ___
 
@@ -19802,7 +20157,7 @@ Autosave settings applied to a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:33352
+dist/generated/types.d.ts:33809
 
 ___
 
@@ -19820,7 +20175,7 @@ Autosave settings applied to all basic group and supergroup chats without chat-s
 
 #### Defined in
 
-dist/generated/types.d.ts:33318
+dist/generated/types.d.ts:33775
 
 ___
 
@@ -19839,7 +20194,7 @@ Autosave settings applied to all basic group and supergroup chats without chat-s
 
 #### Defined in
 
-dist/generated/types.d.ts:33325
+dist/generated/types.d.ts:33782
 
 ___
 
@@ -19857,7 +20212,7 @@ Autosave settings applied to all private chats without chat-specific settings
 
 #### Defined in
 
-dist/generated/types.d.ts:33307
+dist/generated/types.d.ts:33764
 
 ___
 
@@ -19876,7 +20231,7 @@ Autosave settings applied to all private chats without chat-specific settings
 
 #### Defined in
 
-dist/generated/types.d.ts:33314
+dist/generated/types.d.ts:33771
 
 ___
 
@@ -19896,7 +20251,7 @@ Represents an available reaction
 
 #### Defined in
 
-dist/generated/types.d.ts:23228
+dist/generated/types.d.ts:23578
 
 ___
 
@@ -19917,7 +20272,7 @@ Represents an available reaction
 
 #### Defined in
 
-dist/generated/types.d.ts:23245
+dist/generated/types.d.ts:23595
 
 ___
 
@@ -19939,7 +20294,7 @@ Represents a list of reactions that can be added to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:23259
+dist/generated/types.d.ts:23609
 
 ___
 
@@ -19962,7 +20317,7 @@ Represents a list of reactions that can be added to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:23286
+dist/generated/types.d.ts:23636
 
 ___
 
@@ -19986,7 +20341,7 @@ Describes a chat background
 
 #### Defined in
 
-dist/generated/types.d.ts:28583
+dist/generated/types.d.ts:28996
 
 ___
 
@@ -20011,7 +20366,7 @@ Describes a chat background
 
 #### Defined in
 
-dist/generated/types.d.ts:28620
+dist/generated/types.d.ts:29033
 
 ___
 
@@ -20030,7 +20385,7 @@ Describes a freeform gradient fill of a background
 
 #### Defined in
 
-dist/generated/types.d.ts:28459
+dist/generated/types.d.ts:28872
 
 ___
 
@@ -20050,7 +20405,7 @@ Describes a freeform gradient fill of a background
 
 #### Defined in
 
-dist/generated/types.d.ts:28471
+dist/generated/types.d.ts:28884
 
 ___
 
@@ -20071,7 +20426,7 @@ Describes a gradient fill of a background
 
 #### Defined in
 
-dist/generated/types.d.ts:28418
+dist/generated/types.d.ts:28831
 
 ___
 
@@ -20093,7 +20448,7 @@ Describes a gradient fill of a background
 
 #### Defined in
 
-dist/generated/types.d.ts:28440
+dist/generated/types.d.ts:28853
 
 ___
 
@@ -20112,7 +20467,7 @@ Describes a solid fill of a background
 
 #### Defined in
 
-dist/generated/types.d.ts:28397
+dist/generated/types.d.ts:28810
 
 ___
 
@@ -20132,7 +20487,7 @@ Describes a solid fill of a background
 
 #### Defined in
 
-dist/generated/types.d.ts:28409
+dist/generated/types.d.ts:28822
 
 ___
 
@@ -20151,7 +20506,7 @@ A filled background
 
 #### Defined in
 
-dist/generated/types.d.ts:28562
+dist/generated/types.d.ts:28975
 
 ___
 
@@ -20171,7 +20526,7 @@ A filled background
 
 #### Defined in
 
-dist/generated/types.d.ts:28574
+dist/generated/types.d.ts:28987
 
 ___
 
@@ -20193,7 +20548,7 @@ A PNG or TGV (gzipped subset of SVG with MIME type "application/x-tgwallpattern"
 
 #### Defined in
 
-dist/generated/types.d.ts:28511
+dist/generated/types.d.ts:28924
 
 ___
 
@@ -20216,7 +20571,7 @@ A PNG or TGV (gzipped subset of SVG with MIME type "application/x-tgwallpattern"
 
 #### Defined in
 
-dist/generated/types.d.ts:28538
+dist/generated/types.d.ts:28951
 
 ___
 
@@ -20236,7 +20591,7 @@ A wallpaper in JPEG format
 
 #### Defined in
 
-dist/generated/types.d.ts:28480
+dist/generated/types.d.ts:28893
 
 ___
 
@@ -20257,7 +20612,7 @@ A wallpaper in JPEG format
 
 #### Defined in
 
-dist/generated/types.d.ts:28497
+dist/generated/types.d.ts:28910
 
 ___
 
@@ -20276,7 +20631,7 @@ Contains a list of backgrounds
 
 #### Defined in
 
-dist/generated/types.d.ts:28654
+dist/generated/types.d.ts:29067
 
 ___
 
@@ -20296,7 +20651,7 @@ Contains a list of backgrounds
 
 #### Defined in
 
-dist/generated/types.d.ts:28666
+dist/generated/types.d.ts:29079
 
 ___
 
@@ -20324,7 +20679,7 @@ Bans a member in a chat. Members can't be banned in private or secret chats. In 
 
 #### Defined in
 
-dist/generated/types.d.ts:50958
+dist/generated/types.d.ts:51642
 
 ___
 
@@ -20346,7 +20701,7 @@ Bans a member in a chat. Members can't be banned in private or secret chats. In 
 
 #### Defined in
 
-dist/generated/types.d.ts:50929
+dist/generated/types.d.ts:51613
 
 ___
 
@@ -20366,7 +20721,7 @@ Describes an action associated with a bank card number
 
 #### Defined in
 
-dist/generated/types.d.ts:14364
+dist/generated/types.d.ts:14684
 
 ___
 
@@ -20387,7 +20742,7 @@ Describes an action associated with a bank card number
 
 #### Defined in
 
-dist/generated/types.d.ts:14381
+dist/generated/types.d.ts:14701
 
 ___
 
@@ -20407,7 +20762,7 @@ Information about a bank card
 
 #### Defined in
 
-dist/generated/types.d.ts:14395
+dist/generated/types.d.ts:14715
 
 ___
 
@@ -20428,7 +20783,7 @@ Information about a bank card
 
 #### Defined in
 
-dist/generated/types.d.ts:14412
+dist/generated/types.d.ts:14732
 
 ___
 
@@ -20451,7 +20806,7 @@ Represents a basic group of 0-200 users (must be upgraded to a supergroup to acc
 
 #### Defined in
 
-dist/generated/types.d.ts:7389
+dist/generated/types.d.ts:7487
 
 ___
 
@@ -20475,7 +20830,7 @@ Represents a basic group of 0-200 users (must be upgraded to a supergroup to acc
 
 #### Defined in
 
-dist/generated/types.d.ts:7421
+dist/generated/types.d.ts:7519
 
 ___
 
@@ -20501,7 +20856,7 @@ Contains full information about a basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:7450
+dist/generated/types.d.ts:7548
 
 ___
 
@@ -20528,7 +20883,7 @@ Contains full information about a basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:7497
+dist/generated/types.d.ts:7595
 
 ___
 
@@ -20556,7 +20911,7 @@ Blocks an original sender of a message in the Replies chat
 
 #### Defined in
 
-dist/generated/types.d.ts:53088
+dist/generated/types.d.ts:53772
 
 ___
 
@@ -20578,7 +20933,7 @@ Blocks an original sender of a message in the Replies chat
 
 #### Defined in
 
-dist/generated/types.d.ts:53059
+dist/generated/types.d.ts:53743
 
 ___
 
@@ -20618,7 +20973,7 @@ Represents a command supported by a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:4894
+dist/generated/types.d.ts:4992
 
 ___
 
@@ -20639,7 +20994,7 @@ Represents a command supported by a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:4911
+dist/generated/types.d.ts:5009
 
 ___
 
@@ -20657,7 +21012,7 @@ A scope covering all group and supergroup chat administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:35035
+dist/generated/types.d.ts:35492
 
 ___
 
@@ -20676,7 +21031,7 @@ A scope covering all group and supergroup chat administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:35042
+dist/generated/types.d.ts:35499
 
 ___
 
@@ -20694,7 +21049,7 @@ A scope covering all group and supergroup chats
 
 #### Defined in
 
-dist/generated/types.d.ts:35024
+dist/generated/types.d.ts:35481
 
 ___
 
@@ -20713,7 +21068,7 @@ A scope covering all group and supergroup chats
 
 #### Defined in
 
-dist/generated/types.d.ts:35031
+dist/generated/types.d.ts:35488
 
 ___
 
@@ -20731,7 +21086,7 @@ A scope covering all private chats
 
 #### Defined in
 
-dist/generated/types.d.ts:35013
+dist/generated/types.d.ts:35470
 
 ___
 
@@ -20750,7 +21105,7 @@ A scope covering all private chats
 
 #### Defined in
 
-dist/generated/types.d.ts:35020
+dist/generated/types.d.ts:35477
 
 ___
 
@@ -20769,7 +21124,7 @@ A scope covering all members of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:35046
+dist/generated/types.d.ts:35503
 
 ___
 
@@ -20789,7 +21144,7 @@ A scope covering all members of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:35058
+dist/generated/types.d.ts:35515
 
 ___
 
@@ -20808,7 +21163,7 @@ A scope covering all administrators of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:35067
+dist/generated/types.d.ts:35524
 
 ___
 
@@ -20828,7 +21183,7 @@ A scope covering all administrators of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:35079
+dist/generated/types.d.ts:35536
 
 ___
 
@@ -20848,7 +21203,7 @@ A scope covering a member of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:35088
+dist/generated/types.d.ts:35545
 
 ___
 
@@ -20869,7 +21224,7 @@ A scope covering a member of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:35105
+dist/generated/types.d.ts:35562
 
 ___
 
@@ -20887,7 +21242,7 @@ A scope covering all users
 
 #### Defined in
 
-dist/generated/types.d.ts:35002
+dist/generated/types.d.ts:35459
 
 ___
 
@@ -20906,7 +21261,7 @@ A scope covering all users
 
 #### Defined in
 
-dist/generated/types.d.ts:35009
+dist/generated/types.d.ts:35466
 
 ___
 
@@ -20926,7 +21281,7 @@ Contains a list of bot commands
 
 #### Defined in
 
-dist/generated/types.d.ts:4925
+dist/generated/types.d.ts:5023
 
 ___
 
@@ -20947,7 +21302,7 @@ Contains a list of bot commands
 
 #### Defined in
 
-dist/generated/types.d.ts:4942
+dist/generated/types.d.ts:5040
 
 ___
 
@@ -20969,11 +21324,11 @@ Contains information about a bot
 | `description` | `string` | Contains information about a bot |
 | `menu_button` | [`botMenuButton`](index.types.default.md#botmenubutton-1) \| ``null`` | Information about a button to show instead of the bot commands menu button; may be null if ordinary bot commands menu must be shown |
 | `photo` | [`photo`](index.types.default.md#photo-1) \| ``null`` | Photo shown in the chat with the bot if the chat is empty; may be null |
-| `share_text` | `string` | The text that is shown on the bot's profile page and is sent together with the link when users share the bot |
+| `short_description` | `string` | The text that is shown on the bot's profile page and is sent together with the link when users share the bot |
 
 #### Defined in
 
-dist/generated/types.d.ts:6046
+dist/generated/types.d.ts:6144
 
 ___
 
@@ -20996,11 +21351,11 @@ Contains information about a bot
 | `description?` | `string` | Contains information about a bot |
 | `menu_button?` | [`botMenuButton$Input`](index.types.default.md#botmenubutton$input-1) \| ``null`` | Information about a button to show instead of the bot commands menu button; may be null if ordinary bot commands menu must be shown |
 | `photo?` | [`photo$Input`](index.types.default.md#photo$input-1) \| ``null`` | Photo shown in the chat with the bot if the chat is empty; may be null |
-| `share_text?` | `string` | The text that is shown on the bot's profile page and is sent together with the link when users share the bot |
+| `short_description?` | `string` | The text that is shown on the bot's profile page and is sent together with the link when users share the bot |
 
 #### Defined in
 
-dist/generated/types.d.ts:6093
+dist/generated/types.d.ts:6191
 
 ___
 
@@ -21020,7 +21375,7 @@ Describes a button to be shown instead of bot commands menu button
 
 #### Defined in
 
-dist/generated/types.d.ts:4956
+dist/generated/types.d.ts:5054
 
 ___
 
@@ -21041,7 +21396,7 @@ Describes a button to be shown instead of bot commands menu button
 
 #### Defined in
 
-dist/generated/types.d.ts:4973
+dist/generated/types.d.ts:5071
 
 ___
 
@@ -21076,7 +21431,7 @@ Describes a call
 
 #### Defined in
 
-dist/generated/types.d.ts:22982
+dist/generated/types.d.ts:23322
 
 ___
 
@@ -21100,7 +21455,7 @@ Describes a call
 
 #### Defined in
 
-dist/generated/types.d.ts:23014
+dist/generated/types.d.ts:23354
 
 ___
 
@@ -21118,7 +21473,7 @@ The call was ended before the conversation started. It was declined by the other
 
 #### Defined in
 
-dist/generated/types.d.ts:21767
+dist/generated/types.d.ts:22107
 
 ___
 
@@ -21137,7 +21492,7 @@ The call was ended before the conversation started. It was declined by the other
 
 #### Defined in
 
-dist/generated/types.d.ts:21774
+dist/generated/types.d.ts:22114
 
 ___
 
@@ -21155,7 +21510,7 @@ The call was ended during the conversation because the users were disconnected
 
 #### Defined in
 
-dist/generated/types.d.ts:21778
+dist/generated/types.d.ts:22118
 
 ___
 
@@ -21174,7 +21529,7 @@ The call was ended during the conversation because the users were disconnected
 
 #### Defined in
 
-dist/generated/types.d.ts:21785
+dist/generated/types.d.ts:22125
 
 ___
 
@@ -21192,7 +21547,7 @@ The call wasn't discarded, or the reason is unknown
 
 #### Defined in
 
-dist/generated/types.d.ts:21745
+dist/generated/types.d.ts:22085
 
 ___
 
@@ -21211,7 +21566,7 @@ The call wasn't discarded, or the reason is unknown
 
 #### Defined in
 
-dist/generated/types.d.ts:21752
+dist/generated/types.d.ts:22092
 
 ___
 
@@ -21229,7 +21584,7 @@ The call was ended because one of the parties hung up
 
 #### Defined in
 
-dist/generated/types.d.ts:21789
+dist/generated/types.d.ts:22129
 
 ___
 
@@ -21248,7 +21603,7 @@ The call was ended because one of the parties hung up
 
 #### Defined in
 
-dist/generated/types.d.ts:21796
+dist/generated/types.d.ts:22136
 
 ___
 
@@ -21266,7 +21621,7 @@ The call was ended before the conversation started. It was canceled by the calle
 
 #### Defined in
 
-dist/generated/types.d.ts:21756
+dist/generated/types.d.ts:22096
 
 ___
 
@@ -21285,7 +21640,7 @@ The call was ended before the conversation started. It was canceled by the calle
 
 #### Defined in
 
-dist/generated/types.d.ts:21763
+dist/generated/types.d.ts:22103
 
 ___
 
@@ -21304,7 +21659,7 @@ Contains the call identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:22004
+dist/generated/types.d.ts:22344
 
 ___
 
@@ -21324,7 +21679,7 @@ Contains the call identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:22016
+dist/generated/types.d.ts:22356
 
 ___
 
@@ -21342,7 +21697,7 @@ The speech was distorted
 
 #### Defined in
 
-dist/generated/types.d.ts:22916
+dist/generated/types.d.ts:23256
 
 ___
 
@@ -21361,7 +21716,7 @@ The speech was distorted
 
 #### Defined in
 
-dist/generated/types.d.ts:22923
+dist/generated/types.d.ts:23263
 
 ___
 
@@ -21379,7 +21734,7 @@ The video was distorted
 
 #### Defined in
 
-dist/generated/types.d.ts:22960
+dist/generated/types.d.ts:23300
 
 ___
 
@@ -21398,7 +21753,7 @@ The video was distorted
 
 #### Defined in
 
-dist/generated/types.d.ts:22967
+dist/generated/types.d.ts:23307
 
 ___
 
@@ -21416,7 +21771,7 @@ The call ended unexpectedly
 
 #### Defined in
 
-dist/generated/types.d.ts:22949
+dist/generated/types.d.ts:23289
 
 ___
 
@@ -21435,7 +21790,7 @@ The call ended unexpectedly
 
 #### Defined in
 
-dist/generated/types.d.ts:22956
+dist/generated/types.d.ts:23296
 
 ___
 
@@ -21453,7 +21808,7 @@ The user heard their own voice
 
 #### Defined in
 
-dist/generated/types.d.ts:22883
+dist/generated/types.d.ts:23223
 
 ___
 
@@ -21472,7 +21827,7 @@ The user heard their own voice
 
 #### Defined in
 
-dist/generated/types.d.ts:22890
+dist/generated/types.d.ts:23230
 
 ___
 
@@ -21490,7 +21845,7 @@ The other side kept disappearing
 
 #### Defined in
 
-dist/generated/types.d.ts:22905
+dist/generated/types.d.ts:23245
 
 ___
 
@@ -21509,7 +21864,7 @@ The other side kept disappearing
 
 #### Defined in
 
-dist/generated/types.d.ts:22912
+dist/generated/types.d.ts:23252
 
 ___
 
@@ -21527,7 +21882,7 @@ The user heard background noise
 
 #### Defined in
 
-dist/generated/types.d.ts:22894
+dist/generated/types.d.ts:23234
 
 ___
 
@@ -21546,7 +21901,7 @@ The user heard background noise
 
 #### Defined in
 
-dist/generated/types.d.ts:22901
+dist/generated/types.d.ts:23241
 
 ___
 
@@ -21564,7 +21919,7 @@ The video was pixelated
 
 #### Defined in
 
-dist/generated/types.d.ts:22971
+dist/generated/types.d.ts:23311
 
 ___
 
@@ -21583,7 +21938,7 @@ The video was pixelated
 
 #### Defined in
 
-dist/generated/types.d.ts:22978
+dist/generated/types.d.ts:23318
 
 ___
 
@@ -21601,7 +21956,7 @@ The user couldn't hear the other side
 
 #### Defined in
 
-dist/generated/types.d.ts:22927
+dist/generated/types.d.ts:23267
 
 ___
 
@@ -21620,7 +21975,7 @@ The user couldn't hear the other side
 
 #### Defined in
 
-dist/generated/types.d.ts:22934
+dist/generated/types.d.ts:23274
 
 ___
 
@@ -21638,7 +21993,7 @@ The other side couldn't hear the user
 
 #### Defined in
 
-dist/generated/types.d.ts:22938
+dist/generated/types.d.ts:23278
 
 ___
 
@@ -21657,7 +22012,7 @@ The other side couldn't hear the user
 
 #### Defined in
 
-dist/generated/types.d.ts:22945
+dist/generated/types.d.ts:23285
 
 ___
 
@@ -21680,7 +22035,7 @@ Specifies the supported call protocols
 
 #### Defined in
 
-dist/generated/types.d.ts:21800
+dist/generated/types.d.ts:22140
 
 ___
 
@@ -21704,7 +22059,7 @@ Specifies the supported call protocols
 
 #### Defined in
 
-dist/generated/types.d.ts:21832
+dist/generated/types.d.ts:22172
 
 ___
 
@@ -21727,7 +22082,7 @@ Describes a server for relaying call data
 
 #### Defined in
 
-dist/generated/types.d.ts:21943
+dist/generated/types.d.ts:22283
 
 ___
 
@@ -21751,7 +22106,7 @@ Describes a server for relaying call data
 
 #### Defined in
 
-dist/generated/types.d.ts:21975
+dist/generated/types.d.ts:22315
 
 ___
 
@@ -21771,7 +22126,7 @@ A Telegram call reflector
 
 #### Defined in
 
-dist/generated/types.d.ts:21861
+dist/generated/types.d.ts:22201
 
 ___
 
@@ -21792,7 +22147,7 @@ A Telegram call reflector
 
 #### Defined in
 
-dist/generated/types.d.ts:21878
+dist/generated/types.d.ts:22218
 
 ___
 
@@ -21814,7 +22169,7 @@ A WebRTC server
 
 #### Defined in
 
-dist/generated/types.d.ts:21892
+dist/generated/types.d.ts:22232
 
 ___
 
@@ -21837,7 +22192,7 @@ A WebRTC server
 
 #### Defined in
 
-dist/generated/types.d.ts:21919
+dist/generated/types.d.ts:22259
 
 ___
 
@@ -21859,7 +22214,7 @@ The call has ended successfully
 
 #### Defined in
 
-dist/generated/types.d.ts:22170
+dist/generated/types.d.ts:22510
 
 ___
 
@@ -21882,7 +22237,7 @@ The call has ended successfully
 
 #### Defined in
 
-dist/generated/types.d.ts:22197
+dist/generated/types.d.ts:22537
 
 ___
 
@@ -21901,7 +22256,7 @@ The call has ended with an error
 
 #### Defined in
 
-dist/generated/types.d.ts:22221
+dist/generated/types.d.ts:22561
 
 ___
 
@@ -21921,7 +22276,7 @@ The call has ended with an error
 
 #### Defined in
 
-dist/generated/types.d.ts:22233
+dist/generated/types.d.ts:22573
 
 ___
 
@@ -21939,7 +22294,7 @@ The call has been answered and encryption keys are being exchanged
 
 #### Defined in
 
-dist/generated/types.d.ts:22077
+dist/generated/types.d.ts:22417
 
 ___
 
@@ -21958,7 +22313,7 @@ The call has been answered and encryption keys are being exchanged
 
 #### Defined in
 
-dist/generated/types.d.ts:22084
+dist/generated/types.d.ts:22424
 
 ___
 
@@ -21976,7 +22331,7 @@ The call is hanging up after discardCall has been called
 
 #### Defined in
 
-dist/generated/types.d.ts:22159
+dist/generated/types.d.ts:22499
 
 ___
 
@@ -21995,7 +22350,7 @@ The call is hanging up after discardCall has been called
 
 #### Defined in
 
-dist/generated/types.d.ts:22166
+dist/generated/types.d.ts:22506
 
 ___
 
@@ -22015,7 +22370,7 @@ The call is pending, waiting to be accepted by a user
 
 #### Defined in
 
-dist/generated/types.d.ts:22046
+dist/generated/types.d.ts:22386
 
 ___
 
@@ -22036,7 +22391,7 @@ The call is pending, waiting to be accepted by a user
 
 #### Defined in
 
-dist/generated/types.d.ts:22063
+dist/generated/types.d.ts:22403
 
 ___
 
@@ -22060,7 +22415,7 @@ The call is ready to use
 
 #### Defined in
 
-dist/generated/types.d.ts:22088
+dist/generated/types.d.ts:22428
 
 ___
 
@@ -22085,7 +22440,7 @@ The call is ready to use
 
 #### Defined in
 
-dist/generated/types.d.ts:22125
+dist/generated/types.d.ts:22465
 
 ___
 
@@ -22106,7 +22461,7 @@ Contains a bot's answer to a callback query
 
 #### Defined in
 
-dist/generated/types.d.ts:25671
+dist/generated/types.d.ts:26084
 
 ___
 
@@ -22128,7 +22483,7 @@ Contains a bot's answer to a callback query
 
 #### Defined in
 
-dist/generated/types.d.ts:25693
+dist/generated/types.d.ts:26106
 
 ___
 
@@ -22147,7 +22502,7 @@ The payload for a general callback button
 
 #### Defined in
 
-dist/generated/types.d.ts:25598
+dist/generated/types.d.ts:26011
 
 ___
 
@@ -22167,7 +22522,7 @@ The payload for a general callback button
 
 #### Defined in
 
-dist/generated/types.d.ts:25610
+dist/generated/types.d.ts:26023
 
 ___
 
@@ -22187,7 +22542,7 @@ The payload for a callback button requiring password
 
 #### Defined in
 
-dist/generated/types.d.ts:25619
+dist/generated/types.d.ts:26032
 
 ___
 
@@ -22208,7 +22563,7 @@ The payload for a callback button requiring password
 
 #### Defined in
 
-dist/generated/types.d.ts:25636
+dist/generated/types.d.ts:26049
 
 ___
 
@@ -22227,7 +22582,7 @@ The payload for a game callback button
 
 #### Defined in
 
-dist/generated/types.d.ts:25650
+dist/generated/types.d.ts:26063
 
 ___
 
@@ -22247,7 +22602,7 @@ The payload for a game callback button
 
 #### Defined in
 
-dist/generated/types.d.ts:25662
+dist/generated/types.d.ts:26075
 
 ___
 
@@ -22275,7 +22630,7 @@ Checks whether Telegram Premium purchase is possible. Must be called before in-s
 
 #### Defined in
 
-dist/generated/types.d.ts:56673
+dist/generated/types.d.ts:57569
 
 ___
 
@@ -22294,7 +22649,7 @@ Checks whether Telegram Premium purchase is possible. Must be called before in-s
 
 #### Defined in
 
-dist/generated/types.d.ts:56659
+dist/generated/types.d.ts:57555
 
 ___
 
@@ -22322,7 +22677,7 @@ Checks whether the current session can be used to transfer a chat ownership to a
 
 #### Defined in
 
-dist/generated/types.d.ts:50969
+dist/generated/types.d.ts:51653
 
 ___
 
@@ -22340,7 +22695,7 @@ Checks whether the current session can be used to transfer a chat ownership to a
 
 #### Defined in
 
-dist/generated/types.d.ts:50960
+dist/generated/types.d.ts:51644
 
 ___
 
@@ -22358,7 +22713,7 @@ The session can be used
 
 #### Defined in
 
-dist/generated/types.d.ts:28840
+dist/generated/types.d.ts:29253
 
 ___
 
@@ -22377,7 +22732,7 @@ The session can be used
 
 #### Defined in
 
-dist/generated/types.d.ts:28847
+dist/generated/types.d.ts:29260
 
 ___
 
@@ -22395,7 +22750,7 @@ The 2-step verification needs to be enabled first
 
 #### Defined in
 
-dist/generated/types.d.ts:28851
+dist/generated/types.d.ts:29264
 
 ___
 
@@ -22414,7 +22769,7 @@ The 2-step verification needs to be enabled first
 
 #### Defined in
 
-dist/generated/types.d.ts:28858
+dist/generated/types.d.ts:29271
 
 ___
 
@@ -22433,7 +22788,7 @@ The 2-step verification was enabled recently, user needs to wait
 
 #### Defined in
 
-dist/generated/types.d.ts:28862
+dist/generated/types.d.ts:29275
 
 ___
 
@@ -22453,7 +22808,7 @@ The 2-step verification was enabled recently, user needs to wait
 
 #### Defined in
 
-dist/generated/types.d.ts:28874
+dist/generated/types.d.ts:29287
 
 ___
 
@@ -22472,7 +22827,7 @@ The session was created recently, user needs to wait
 
 #### Defined in
 
-dist/generated/types.d.ts:28883
+dist/generated/types.d.ts:29296
 
 ___
 
@@ -22492,7 +22847,7 @@ The session was created recently, user needs to wait
 
 #### Defined in
 
-dist/generated/types.d.ts:28895
+dist/generated/types.d.ts:29308
 
 ___
 
@@ -22520,7 +22875,7 @@ Stops the downloading of a file. If a file has already been downloaded, does not
 
 #### Defined in
 
-dist/generated/types.d.ts:51418
+dist/generated/types.d.ts:52102
 
 ___
 
@@ -22540,7 +22895,7 @@ Stops the downloading of a file. If a file has already been downloaded, does not
 
 #### Defined in
 
-dist/generated/types.d.ts:51399
+dist/generated/types.d.ts:52083
 
 ___
 
@@ -22568,7 +22923,7 @@ Cancels reset of 2-step verification password. The method can be called if passw
 
 #### Defined in
 
-dist/generated/types.d.ts:46133
+dist/generated/types.d.ts:46734
 
 ___
 
@@ -22586,7 +22941,7 @@ Cancels reset of 2-step verification password. The method can be called if passw
 
 #### Defined in
 
-dist/generated/types.d.ts:46124
+dist/generated/types.d.ts:46725
 
 ___
 
@@ -22614,7 +22969,7 @@ Stops the preliminary uploading of a file. Supported only for files uploaded by 
 
 #### Defined in
 
-dist/generated/types.d.ts:51484
+dist/generated/types.d.ts:52168
 
 ___
 
@@ -22633,7 +22988,7 @@ Stops the preliminary uploading of a file. Supported only for files uploaded by 
 
 #### Defined in
 
-dist/generated/types.d.ts:51470
+dist/generated/types.d.ts:52154
 
 ___
 
@@ -22663,7 +23018,7 @@ Changes imported contacts using the list of contacts saved on the device. Import
 
 #### Defined in
 
-dist/generated/types.d.ts:53226
+dist/generated/types.d.ts:53910
 
 ___
 
@@ -22683,7 +23038,7 @@ Changes imported contacts using the list of contacts saved on the device. Import
 
 #### Defined in
 
-dist/generated/types.d.ts:53210
+dist/generated/types.d.ts:53894
 
 ___
 
@@ -22711,7 +23066,7 @@ Changes the phone number of the user and sends an authentication code to the use
 
 #### Defined in
 
-dist/generated/types.d.ts:54195
+dist/generated/types.d.ts:54879
 
 ___
 
@@ -22731,7 +23086,7 @@ Changes the phone number of the user and sends an authentication code to the use
 
 #### Defined in
 
-dist/generated/types.d.ts:54176
+dist/generated/types.d.ts:54860
 
 ___
 
@@ -22759,7 +23114,7 @@ Installs/uninstalls or activates/archives a sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:53594
+dist/generated/types.d.ts:54278
 
 ___
 
@@ -22780,7 +23135,7 @@ Installs/uninstalls or activates/archives a sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:53570
+dist/generated/types.d.ts:54254
 
 ___
 
@@ -22830,7 +23185,7 @@ A chat. (Can be a private chat, basic group, supergroup, or secret chat)
 
 #### Defined in
 
-dist/generated/types.d.ts:10487
+dist/generated/types.d.ts:10766
 
 ___
 
@@ -22881,7 +23236,7 @@ A chat. (Can be a private chat, basic group, supergroup, or secret chat)
 
 #### Defined in
 
-dist/generated/types.d.ts:10654
+dist/generated/types.d.ts:10933
 
 ___
 
@@ -22899,7 +23254,7 @@ The chat is a private or secret chat and the other user can be added to the cont
 
 #### Defined in
 
-dist/generated/types.d.ts:11010
+dist/generated/types.d.ts:11289
 
 ___
 
@@ -22918,7 +23273,7 @@ The chat is a private or secret chat and the other user can be added to the cont
 
 #### Defined in
 
-dist/generated/types.d.ts:11017
+dist/generated/types.d.ts:11296
 
 ___
 
@@ -22936,7 +23291,7 @@ The chat is a recently created group chat to which new members can be invited
 
 #### Defined in
 
-dist/generated/types.d.ts:10965
+dist/generated/types.d.ts:11244
 
 ___
 
@@ -22955,7 +23310,7 @@ The chat is a recently created group chat to which new members can be invited
 
 #### Defined in
 
-dist/generated/types.d.ts:10972
+dist/generated/types.d.ts:11251
 
 ___
 
@@ -22976,7 +23331,7 @@ The chat is a private chat with an administrator of a chat to which the user sen
 
 #### Defined in
 
-dist/generated/types.d.ts:11032
+dist/generated/types.d.ts:11311
 
 ___
 
@@ -22998,7 +23353,7 @@ The chat is a private chat with an administrator of a chat to which the user sen
 
 #### Defined in
 
-dist/generated/types.d.ts:11054
+dist/generated/types.d.ts:11333
 
 ___
 
@@ -23019,7 +23374,7 @@ The chat is a private or secret chat, which can be reported using the method rep
 
 #### Defined in
 
-dist/generated/types.d.ts:10977
+dist/generated/types.d.ts:11256
 
 ___
 
@@ -23042,7 +23397,7 @@ The chat is a private or secret chat, which can be reported using the method rep
 
 #### Defined in
 
-dist/generated/types.d.ts:10996
+dist/generated/types.d.ts:11275
 
 ___
 
@@ -23061,7 +23416,7 @@ The chat can be reported as spam using the method reportChat with the reason cha
 
 #### Defined in
 
-dist/generated/types.d.ts:10933
+dist/generated/types.d.ts:11212
 
 ___
 
@@ -23081,7 +23436,7 @@ The chat can be reported as spam using the method reportChat with the reason cha
 
 #### Defined in
 
-dist/generated/types.d.ts:10945
+dist/generated/types.d.ts:11224
 
 ___
 
@@ -23099,7 +23454,7 @@ The chat is a location-based supergroup, which can be reported as having unrelat
 
 #### Defined in
 
-dist/generated/types.d.ts:10954
+dist/generated/types.d.ts:11233
 
 ___
 
@@ -23118,7 +23473,7 @@ The chat is a location-based supergroup, which can be reported as having unrelat
 
 #### Defined in
 
-dist/generated/types.d.ts:10961
+dist/generated/types.d.ts:11240
 
 ___
 
@@ -23136,7 +23491,7 @@ The chat is a private or secret chat with a mutual contact and the user's phone 
 
 #### Defined in
 
-dist/generated/types.d.ts:11021
+dist/generated/types.d.ts:11300
 
 ___
 
@@ -23155,7 +23510,7 @@ The chat is a private or secret chat with a mutual contact and the user's phone 
 
 #### Defined in
 
-dist/generated/types.d.ts:11028
+dist/generated/types.d.ts:11307
 
 ___
 
@@ -23173,7 +23528,7 @@ The user has canceled the previous action
 
 #### Defined in
 
-dist/generated/types.d.ts:21157
+dist/generated/types.d.ts:21497
 
 ___
 
@@ -23192,7 +23547,7 @@ The user has canceled the previous action
 
 #### Defined in
 
-dist/generated/types.d.ts:21164
+dist/generated/types.d.ts:21504
 
 ___
 
@@ -23210,7 +23565,7 @@ The user is picking a contact to send
 
 #### Defined in
 
-dist/generated/types.d.ts:21082
+dist/generated/types.d.ts:21422
 
 ___
 
@@ -23229,7 +23584,7 @@ The user is picking a contact to send
 
 #### Defined in
 
-dist/generated/types.d.ts:21089
+dist/generated/types.d.ts:21429
 
 ___
 
@@ -23247,7 +23602,7 @@ The user is picking a location or venue to send
 
 #### Defined in
 
-dist/generated/types.d.ts:21071
+dist/generated/types.d.ts:21411
 
 ___
 
@@ -23266,7 +23621,7 @@ The user is picking a location or venue to send
 
 #### Defined in
 
-dist/generated/types.d.ts:21078
+dist/generated/types.d.ts:21418
 
 ___
 
@@ -23284,7 +23639,7 @@ The user is picking a sticker to send
 
 #### Defined in
 
-dist/generated/types.d.ts:21060
+dist/generated/types.d.ts:21400
 
 ___
 
@@ -23303,7 +23658,7 @@ The user is picking a sticker to send
 
 #### Defined in
 
-dist/generated/types.d.ts:21067
+dist/generated/types.d.ts:21407
 
 ___
 
@@ -23321,7 +23676,7 @@ The user is recording a video
 
 #### Defined in
 
-dist/generated/types.d.ts:20954
+dist/generated/types.d.ts:21294
 
 ___
 
@@ -23340,7 +23695,7 @@ The user is recording a video
 
 #### Defined in
 
-dist/generated/types.d.ts:20961
+dist/generated/types.d.ts:21301
 
 ___
 
@@ -23358,7 +23713,7 @@ The user is recording a video note
 
 #### Defined in
 
-dist/generated/types.d.ts:21104
+dist/generated/types.d.ts:21444
 
 ___
 
@@ -23377,7 +23732,7 @@ The user is recording a video note
 
 #### Defined in
 
-dist/generated/types.d.ts:21111
+dist/generated/types.d.ts:21451
 
 ___
 
@@ -23395,7 +23750,7 @@ The user is recording a voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:20986
+dist/generated/types.d.ts:21326
 
 ___
 
@@ -23414,7 +23769,7 @@ The user is recording a voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:20993
+dist/generated/types.d.ts:21333
 
 ___
 
@@ -23432,7 +23787,7 @@ The user has started to play a game
 
 #### Defined in
 
-dist/generated/types.d.ts:21093
+dist/generated/types.d.ts:21433
 
 ___
 
@@ -23451,7 +23806,7 @@ The user has started to play a game
 
 #### Defined in
 
-dist/generated/types.d.ts:21100
+dist/generated/types.d.ts:21440
 
 ___
 
@@ -23469,7 +23824,7 @@ The user is typing a message
 
 #### Defined in
 
-dist/generated/types.d.ts:20943
+dist/generated/types.d.ts:21283
 
 ___
 
@@ -23488,7 +23843,7 @@ The user is typing a message
 
 #### Defined in
 
-dist/generated/types.d.ts:20950
+dist/generated/types.d.ts:21290
 
 ___
 
@@ -23507,7 +23862,7 @@ The user is uploading a document
 
 #### Defined in
 
-dist/generated/types.d.ts:21039
+dist/generated/types.d.ts:21379
 
 ___
 
@@ -23527,7 +23882,7 @@ The user is uploading a document
 
 #### Defined in
 
-dist/generated/types.d.ts:21051
+dist/generated/types.d.ts:21391
 
 ___
 
@@ -23546,7 +23901,7 @@ The user is uploading a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:21018
+dist/generated/types.d.ts:21358
 
 ___
 
@@ -23566,7 +23921,7 @@ The user is uploading a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:21030
+dist/generated/types.d.ts:21370
 
 ___
 
@@ -23585,7 +23940,7 @@ The user is uploading a video
 
 #### Defined in
 
-dist/generated/types.d.ts:20965
+dist/generated/types.d.ts:21305
 
 ___
 
@@ -23605,7 +23960,7 @@ The user is uploading a video
 
 #### Defined in
 
-dist/generated/types.d.ts:20977
+dist/generated/types.d.ts:21317
 
 ___
 
@@ -23624,7 +23979,7 @@ The user is uploading a video note
 
 #### Defined in
 
-dist/generated/types.d.ts:21115
+dist/generated/types.d.ts:21455
 
 ___
 
@@ -23644,7 +23999,7 @@ The user is uploading a video note
 
 #### Defined in
 
-dist/generated/types.d.ts:21127
+dist/generated/types.d.ts:21467
 
 ___
 
@@ -23663,7 +24018,7 @@ The user is uploading a voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:20997
+dist/generated/types.d.ts:21337
 
 ___
 
@@ -23683,7 +24038,7 @@ The user is uploading a voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:21009
+dist/generated/types.d.ts:21349
 
 ___
 
@@ -23702,7 +24057,7 @@ The user is watching animations sent by the other party by clicking on an animat
 
 #### Defined in
 
-dist/generated/types.d.ts:21136
+dist/generated/types.d.ts:21476
 
 ___
 
@@ -23722,7 +24077,7 @@ The user is watching animations sent by the other party by clicking on an animat
 
 #### Defined in
 
-dist/generated/types.d.ts:21148
+dist/generated/types.d.ts:21488
 
 ___
 
@@ -23743,7 +24098,7 @@ Contains information about a chat administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:6331
+dist/generated/types.d.ts:6429
 
 ___
 
@@ -23765,7 +24120,7 @@ Contains information about a chat administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:6353
+dist/generated/types.d.ts:6451
 
 ___
 
@@ -23795,7 +24150,7 @@ Describes rights of the administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:5499
+dist/generated/types.d.ts:5597
 
 ___
 
@@ -23826,7 +24181,7 @@ Describes rights of the administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:5566
+dist/generated/types.d.ts:5664
 
 ___
 
@@ -23845,7 +24200,7 @@ Represents a list of chat administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:6372
+dist/generated/types.d.ts:6470
 
 ___
 
@@ -23865,7 +24220,7 @@ Represents a list of chat administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:6384
+dist/generated/types.d.ts:6482
 
 ___
 
@@ -23883,7 +24238,7 @@ All reactions are available in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:10414
+dist/generated/types.d.ts:10693
 
 ___
 
@@ -23902,7 +24257,7 @@ All reactions are available in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:10421
+dist/generated/types.d.ts:10700
 
 ___
 
@@ -23921,7 +24276,7 @@ Only specific reactions are available in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:10425
+dist/generated/types.d.ts:10704
 
 ___
 
@@ -23941,7 +24296,7 @@ Only specific reactions are available in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:10437
+dist/generated/types.d.ts:10716
 
 ___
 
@@ -23963,7 +24318,7 @@ Represents a chat event
 
 #### Defined in
 
-dist/generated/types.d.ts:26949
+dist/generated/types.d.ts:27362
 
 ___
 
@@ -23986,7 +24341,7 @@ Represents a chat event
 
 #### Defined in
 
-dist/generated/types.d.ts:26976
+dist/generated/types.d.ts:27389
 
 ___
 
@@ -24006,7 +24361,7 @@ The chat active usernames were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26448
+dist/generated/types.d.ts:26861
 
 ___
 
@@ -24027,7 +24382,7 @@ The chat active usernames were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26465
+dist/generated/types.d.ts:26878
 
 ___
 
@@ -24047,7 +24402,7 @@ The chat available reactions were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26107
+dist/generated/types.d.ts:26520
 
 ___
 
@@ -24068,7 +24423,7 @@ The chat available reactions were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26124
+dist/generated/types.d.ts:26537
 
 ___
 
@@ -24088,7 +24443,7 @@ The chat description was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26138
+dist/generated/types.d.ts:26551
 
 ___
 
@@ -24109,7 +24464,7 @@ The chat description was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26155
+dist/generated/types.d.ts:26568
 
 ___
 
@@ -24128,7 +24483,7 @@ A new forum topic was created
 
 #### Defined in
 
-dist/generated/types.d.ts:26803
+dist/generated/types.d.ts:27216
 
 ___
 
@@ -24148,7 +24503,7 @@ A new forum topic was created
 
 #### Defined in
 
-dist/generated/types.d.ts:26815
+dist/generated/types.d.ts:27228
 
 ___
 
@@ -24167,7 +24522,7 @@ A forum topic was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:26897
+dist/generated/types.d.ts:27310
 
 ___
 
@@ -24187,7 +24542,7 @@ A forum topic was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:26909
+dist/generated/types.d.ts:27322
 
 ___
 
@@ -24207,7 +24562,7 @@ A forum topic was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:26824
+dist/generated/types.d.ts:27237
 
 ___
 
@@ -24228,7 +24583,7 @@ A forum topic was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:26841
+dist/generated/types.d.ts:27254
 
 ___
 
@@ -24248,7 +24603,7 @@ A pinned forum topic was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26918
+dist/generated/types.d.ts:27331
 
 ___
 
@@ -24269,7 +24624,7 @@ A pinned forum topic was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26935
+dist/generated/types.d.ts:27348
 
 ___
 
@@ -24288,7 +24643,7 @@ A forum topic was closed or reopened
 
 #### Defined in
 
-dist/generated/types.d.ts:26855
+dist/generated/types.d.ts:27268
 
 ___
 
@@ -24308,7 +24663,7 @@ A forum topic was closed or reopened
 
 #### Defined in
 
-dist/generated/types.d.ts:26867
+dist/generated/types.d.ts:27280
 
 ___
 
@@ -24327,7 +24682,7 @@ The General forum topic was hidden or unhidden
 
 #### Defined in
 
-dist/generated/types.d.ts:26876
+dist/generated/types.d.ts:27289
 
 ___
 
@@ -24347,7 +24702,7 @@ The General forum topic was hidden or unhidden
 
 #### Defined in
 
-dist/generated/types.d.ts:26888
+dist/generated/types.d.ts:27301
 
 ___
 
@@ -24366,7 +24721,7 @@ The has_aggressive_anti_spam_enabled setting of a supergroup was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26542
+dist/generated/types.d.ts:26955
 
 ___
 
@@ -24386,7 +24741,7 @@ The has_aggressive_anti_spam_enabled setting of a supergroup was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26554
+dist/generated/types.d.ts:26967
 
 ___
 
@@ -24405,7 +24760,7 @@ The has_protected_content setting of a channel was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26479
+dist/generated/types.d.ts:26892
 
 ___
 
@@ -24425,7 +24780,7 @@ The has_protected_content setting of a channel was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26491
+dist/generated/types.d.ts:26904
 
 ___
 
@@ -24444,7 +24799,7 @@ A revoked chat invite link was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:26636
+dist/generated/types.d.ts:27049
 
 ___
 
@@ -24464,7 +24819,7 @@ A revoked chat invite link was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:26648
+dist/generated/types.d.ts:27061
 
 ___
 
@@ -24484,7 +24839,7 @@ A chat invite link was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:26584
+dist/generated/types.d.ts:26997
 
 ___
 
@@ -24505,7 +24860,7 @@ A chat invite link was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:26601
+dist/generated/types.d.ts:27014
 
 ___
 
@@ -24524,7 +24879,7 @@ A chat invite link was revoked
 
 #### Defined in
 
-dist/generated/types.d.ts:26615
+dist/generated/types.d.ts:27028
 
 ___
 
@@ -24544,7 +24899,7 @@ A chat invite link was revoked
 
 #### Defined in
 
-dist/generated/types.d.ts:26627
+dist/generated/types.d.ts:27040
 
 ___
 
@@ -24563,7 +24918,7 @@ The can_invite_users permission of a supergroup chat was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26500
+dist/generated/types.d.ts:26913
 
 ___
 
@@ -24583,7 +24938,7 @@ The can_invite_users permission of a supergroup chat was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26512
+dist/generated/types.d.ts:26925
 
 ___
 
@@ -24602,7 +24957,7 @@ The is_all_history_available setting of a supergroup was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26521
+dist/generated/types.d.ts:26934
 
 ___
 
@@ -24622,7 +24977,7 @@ The is_all_history_available setting of a supergroup was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26533
+dist/generated/types.d.ts:26946
 
 ___
 
@@ -24641,7 +24996,7 @@ The is_forum setting of a channel was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26782
+dist/generated/types.d.ts:27195
 
 ___
 
@@ -24661,7 +25016,7 @@ The is_forum setting of a channel was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26794
+dist/generated/types.d.ts:27207
 
 ___
 
@@ -24681,7 +25036,7 @@ The linked chat of a supergroup was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26169
+dist/generated/types.d.ts:26582
 
 ___
 
@@ -24702,7 +25057,7 @@ The linked chat of a supergroup was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26186
+dist/generated/types.d.ts:26599
 
 ___
 
@@ -24722,7 +25077,7 @@ The supergroup location was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26200
+dist/generated/types.d.ts:26613
 
 ___
 
@@ -24743,7 +25098,7 @@ The supergroup location was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26217
+dist/generated/types.d.ts:26630
 
 ___
 
@@ -24774,7 +25129,7 @@ Represents a set of filters used to obtain a chat event log
 
 #### Defined in
 
-dist/generated/types.d.ts:27021
+dist/generated/types.d.ts:27434
 
 ___
 
@@ -24806,7 +25161,7 @@ Represents a set of filters used to obtain a chat event log
 
 #### Defined in
 
-dist/generated/types.d.ts:27093
+dist/generated/types.d.ts:27506
 
 ___
 
@@ -24826,7 +25181,7 @@ A new chat member was invited
 
 #### Defined in
 
-dist/generated/types.d.ts:25983
+dist/generated/types.d.ts:26396
 
 ___
 
@@ -24847,7 +25202,7 @@ A new chat member was invited
 
 #### Defined in
 
-dist/generated/types.d.ts:26000
+dist/generated/types.d.ts:26413
 
 ___
 
@@ -24865,7 +25220,7 @@ A new member joined the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:25920
+dist/generated/types.d.ts:26333
 
 ___
 
@@ -24884,7 +25239,7 @@ A new member joined the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:25927
+dist/generated/types.d.ts:26340
 
 ___
 
@@ -24903,7 +25258,7 @@ A new member joined the chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:25931
+dist/generated/types.d.ts:26344
 
 ___
 
@@ -24923,7 +25278,7 @@ A new member joined the chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:25943
+dist/generated/types.d.ts:26356
 
 ___
 
@@ -24943,7 +25298,7 @@ A new member was accepted to the chat by an administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:25952
+dist/generated/types.d.ts:26365
 
 ___
 
@@ -24964,7 +25319,7 @@ A new member was accepted to the chat by an administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:25969
+dist/generated/types.d.ts:26382
 
 ___
 
@@ -24982,7 +25337,7 @@ A member left the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:26014
+dist/generated/types.d.ts:26427
 
 ___
 
@@ -25001,7 +25356,7 @@ A member left the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:26021
+dist/generated/types.d.ts:26434
 
 ___
 
@@ -25022,7 +25377,7 @@ A chat member has gained/lost administrator status, or the list of their adminis
 
 #### Defined in
 
-dist/generated/types.d.ts:26025
+dist/generated/types.d.ts:26438
 
 ___
 
@@ -25044,7 +25399,7 @@ A chat member has gained/lost administrator status, or the list of their adminis
 
 #### Defined in
 
-dist/generated/types.d.ts:26047
+dist/generated/types.d.ts:26460
 
 ___
 
@@ -25065,7 +25420,7 @@ A chat member was restricted/unrestricted or banned/unbanned, or the list of the
 
 #### Defined in
 
-dist/generated/types.d.ts:26066
+dist/generated/types.d.ts:26479
 
 ___
 
@@ -25087,7 +25442,7 @@ A chat member was restricted/unrestricted or banned/unbanned, or the list of the
 
 #### Defined in
 
-dist/generated/types.d.ts:26088
+dist/generated/types.d.ts:26501
 
 ___
 
@@ -25107,7 +25462,7 @@ The message auto-delete timer was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26231
+dist/generated/types.d.ts:26644
 
 ___
 
@@ -25128,7 +25483,7 @@ The message auto-delete timer was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26248
+dist/generated/types.d.ts:26661
 
 ___
 
@@ -25148,7 +25503,7 @@ A message was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:25826
+dist/generated/types.d.ts:26239
 
 ___
 
@@ -25169,7 +25524,7 @@ A message was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:25843
+dist/generated/types.d.ts:26256
 
 ___
 
@@ -25189,7 +25544,7 @@ A message was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:25795
+dist/generated/types.d.ts:26208
 
 ___
 
@@ -25210,7 +25565,7 @@ A message was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:25812
+dist/generated/types.d.ts:26225
 
 ___
 
@@ -25229,7 +25584,7 @@ A message was pinned
 
 #### Defined in
 
-dist/generated/types.d.ts:25857
+dist/generated/types.d.ts:26270
 
 ___
 
@@ -25249,7 +25604,7 @@ A message was pinned
 
 #### Defined in
 
-dist/generated/types.d.ts:25869
+dist/generated/types.d.ts:26282
 
 ___
 
@@ -25268,7 +25623,7 @@ A message was unpinned
 
 #### Defined in
 
-dist/generated/types.d.ts:25878
+dist/generated/types.d.ts:26291
 
 ___
 
@@ -25288,7 +25643,7 @@ A message was unpinned
 
 #### Defined in
 
-dist/generated/types.d.ts:25890
+dist/generated/types.d.ts:26303
 
 ___
 
@@ -25308,7 +25663,7 @@ The chat permissions was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26262
+dist/generated/types.d.ts:26675
 
 ___
 
@@ -25329,7 +25684,7 @@ The chat permissions was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26279
+dist/generated/types.d.ts:26692
 
 ___
 
@@ -25349,7 +25704,7 @@ The chat photo was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26293
+dist/generated/types.d.ts:26706
 
 ___
 
@@ -25370,7 +25725,7 @@ The chat photo was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26310
+dist/generated/types.d.ts:26723
 
 ___
 
@@ -25389,7 +25744,7 @@ A poll in a message was stopped
 
 #### Defined in
 
-dist/generated/types.d.ts:25899
+dist/generated/types.d.ts:26312
 
 ___
 
@@ -25409,7 +25764,7 @@ A poll in a message was stopped
 
 #### Defined in
 
-dist/generated/types.d.ts:25911
+dist/generated/types.d.ts:26324
 
 ___
 
@@ -25428,7 +25783,7 @@ The sign_messages setting of a channel was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26563
+dist/generated/types.d.ts:26976
 
 ___
 
@@ -25448,7 +25803,7 @@ The sign_messages setting of a channel was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26575
+dist/generated/types.d.ts:26988
 
 ___
 
@@ -25468,7 +25823,7 @@ The slow_mode_delay setting of a supergroup was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26324
+dist/generated/types.d.ts:26737
 
 ___
 
@@ -25489,7 +25844,7 @@ The slow_mode_delay setting of a supergroup was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26341
+dist/generated/types.d.ts:26754
 
 ___
 
@@ -25509,7 +25864,7 @@ The supergroup sticker set was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26355
+dist/generated/types.d.ts:26768
 
 ___
 
@@ -25530,7 +25885,7 @@ The supergroup sticker set was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26372
+dist/generated/types.d.ts:26785
 
 ___
 
@@ -25550,7 +25905,7 @@ The chat title was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26386
+dist/generated/types.d.ts:26799
 
 ___
 
@@ -25571,7 +25926,7 @@ The chat title was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26403
+dist/generated/types.d.ts:26816
 
 ___
 
@@ -25591,7 +25946,7 @@ The chat editable username was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26417
+dist/generated/types.d.ts:26830
 
 ___
 
@@ -25612,7 +25967,7 @@ The chat editable username was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26434
+dist/generated/types.d.ts:26847
 
 ___
 
@@ -25631,7 +25986,7 @@ A video chat was created
 
 #### Defined in
 
-dist/generated/types.d.ts:26657
+dist/generated/types.d.ts:27070
 
 ___
 
@@ -25651,7 +26006,7 @@ A video chat was created
 
 #### Defined in
 
-dist/generated/types.d.ts:26669
+dist/generated/types.d.ts:27082
 
 ___
 
@@ -25670,7 +26025,7 @@ A video chat was ended
 
 #### Defined in
 
-dist/generated/types.d.ts:26678
+dist/generated/types.d.ts:27091
 
 ___
 
@@ -25690,7 +26045,7 @@ A video chat was ended
 
 #### Defined in
 
-dist/generated/types.d.ts:26690
+dist/generated/types.d.ts:27103
 
 ___
 
@@ -25709,7 +26064,7 @@ The mute_new_participants setting of a video chat was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26699
+dist/generated/types.d.ts:27112
 
 ___
 
@@ -25729,7 +26084,7 @@ The mute_new_participants setting of a video chat was toggled
 
 #### Defined in
 
-dist/generated/types.d.ts:26711
+dist/generated/types.d.ts:27124
 
 ___
 
@@ -25749,7 +26104,7 @@ A video chat participant was muted or unmuted
 
 #### Defined in
 
-dist/generated/types.d.ts:26720
+dist/generated/types.d.ts:27133
 
 ___
 
@@ -25770,7 +26125,7 @@ A video chat participant was muted or unmuted
 
 #### Defined in
 
-dist/generated/types.d.ts:26737
+dist/generated/types.d.ts:27150
 
 ___
 
@@ -25790,7 +26145,7 @@ A video chat participant volume level was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26751
+dist/generated/types.d.ts:27164
 
 ___
 
@@ -25811,7 +26166,7 @@ A video chat participant volume level was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:26768
+dist/generated/types.d.ts:27181
 
 ___
 
@@ -25830,7 +26185,7 @@ Contains a list of chat events
 
 #### Defined in
 
-dist/generated/types.d.ts:27000
+dist/generated/types.d.ts:27413
 
 ___
 
@@ -25850,7 +26205,7 @@ Contains a list of chat events
 
 #### Defined in
 
-dist/generated/types.d.ts:27012
+dist/generated/types.d.ts:27425
 
 ___
 
@@ -25869,7 +26224,7 @@ Represents a filter of user chats
 | `exclude_muted` | [`Bool`](index.types.default.md#bool) | True, if muted chats need to be excluded |
 | `exclude_read` | [`Bool`](index.types.default.md#bool) | True, if read chats need to be excluded |
 | `excluded_chat_ids` | [`vector`](index.types.default.md#vector)<[`int53`](index.types.default.md#int53-1)\> | The chat identifiers of always excluded chats in the filtered chat list. There can be up to getOption("chat_filter_chosen_chat_count_max") always excluded non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium |
-| `icon_name` | `string` | The chosen icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown",    -"Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work", "Airplane", "Book", "Light", "Like", "Money", "Note", "Palette".    -If empty, use getChatFilterDefaultIconName to get default icon name for the filter |
+| `icon_name` | `string` | The chosen icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", -"Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work", "Airplane", "Book", "Light", "Like", "Money", "Note", "Palette". -If empty, use getChatFilterDefaultIconName to get default icon name for the filter |
 | `include_bots` | [`Bool`](index.types.default.md#bool) | True, if bots need to be included |
 | `include_channels` | [`Bool`](index.types.default.md#bool) | True, if channels need to be included |
 | `include_contacts` | [`Bool`](index.types.default.md#bool) | True, if contacts need to be included |
@@ -25881,7 +26236,7 @@ Represents a filter of user chats
 
 #### Defined in
 
-dist/generated/types.d.ts:10011
+dist/generated/types.d.ts:10290
 
 ___
 
@@ -25901,7 +26256,7 @@ Represents a filter of user chats
 | `exclude_muted?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if muted chats need to be excluded |
 | `exclude_read?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if read chats need to be excluded |
 | `excluded_chat_ids?` | [`vector$Input`](index.types.default.md#vector$input)<[`int53`](index.types.default.md#int53-1)\> | The chat identifiers of always excluded chats in the filtered chat list. There can be up to getOption("chat_filter_chosen_chat_count_max") always excluded non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium |
-| `icon_name?` | `string` | The chosen icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown",    -"Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work", "Airplane", "Book", "Light", "Like", "Money", "Note", "Palette".    -If empty, use getChatFilterDefaultIconName to get default icon name for the filter |
+| `icon_name?` | `string` | The chosen icon name for short filter representation. If non-empty, must be one of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", -"Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work", "Airplane", "Book", "Light", "Like", "Money", "Note", "Palette". -If empty, use getChatFilterDefaultIconName to get default icon name for the filter |
 | `include_bots?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if bots need to be included |
 | `include_channels?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if channels need to be included |
 | `include_contacts?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if contacts need to be included |
@@ -25913,7 +26268,7 @@ Represents a filter of user chats
 
 #### Defined in
 
-dist/generated/types.d.ts:10087
+dist/generated/types.d.ts:10366
 
 ___
 
@@ -25928,13 +26283,13 @@ Contains basic information about a chat filter
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"chatFilterInfo"`` | - |
-| `icon_name` | `string` | The chosen or default icon name for short filter representation. One of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown",    -"Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work", "Airplane", "Book", "Light", "Like", "Money", "Note", "Palette" |
+| `icon_name` | `string` | The chosen or default icon name for short filter representation. One of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", -"Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work", "Airplane", "Book", "Light", "Like", "Money", "Note", "Palette" |
 | `id` | [`int32`](index.types.default.md#int32-1) | Unique chat filter identifier |
 | `title` | `string` | The title of the filter; 1-12 characters without line feeds |
 
 #### Defined in
 
-dist/generated/types.d.ts:10160
+dist/generated/types.d.ts:10439
 
 ___
 
@@ -25950,13 +26305,13 @@ Contains basic information about a chat filter
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"chatFilterInfo"`` | - |
-| `icon_name?` | `string` | The chosen or default icon name for short filter representation. One of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown",    -"Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work", "Airplane", "Book", "Light", "Like", "Money", "Note", "Palette" |
+| `icon_name?` | `string` | The chosen or default icon name for short filter representation. One of "All", "Unread", "Unmuted", "Bots", "Channels", "Groups", "Private", "Custom", "Setup", "Cat", "Crown", -"Favorite", "Flower", "Game", "Home", "Love", "Mask", "Party", "Sport", "Study", "Trade", "Travel", "Work", "Airplane", "Book", "Light", "Like", "Money", "Note", "Palette" |
 | `id?` | [`int32`](index.types.default.md#int32-1) | Unique chat filter identifier |
 | `title?` | `string` | The title of the filter; 1-12 characters without line feeds |
 
 #### Defined in
 
-dist/generated/types.d.ts:10184
+dist/generated/types.d.ts:10463
 
 ___
 
@@ -25986,7 +26341,7 @@ Contains a chat invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:6879
+dist/generated/types.d.ts:6977
 
 ___
 
@@ -26017,7 +26372,7 @@ Contains a chat invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:6946
+dist/generated/types.d.ts:7044
 
 ___
 
@@ -26038,7 +26393,7 @@ Describes a chat administrator with a number of active and revoked chat invite l
 
 #### Defined in
 
-dist/generated/types.d.ts:7041
+dist/generated/types.d.ts:7139
 
 ___
 
@@ -26060,7 +26415,7 @@ Describes a chat administrator with a number of active and revoked chat invite l
 
 #### Defined in
 
-dist/generated/types.d.ts:7063
+dist/generated/types.d.ts:7161
 
 ___
 
@@ -26079,7 +26434,7 @@ Contains a list of chat invite link counts
 
 #### Defined in
 
-dist/generated/types.d.ts:7082
+dist/generated/types.d.ts:7180
 
 ___
 
@@ -26099,7 +26454,7 @@ Contains a list of chat invite link counts
 
 #### Defined in
 
-dist/generated/types.d.ts:7094
+dist/generated/types.d.ts:7192
 
 ___
 
@@ -26127,7 +26482,7 @@ Contains information about a chat invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:7175
+dist/generated/types.d.ts:7273
 
 ___
 
@@ -26156,7 +26511,7 @@ Contains information about a chat invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:7232
+dist/generated/types.d.ts:7330
 
 ___
 
@@ -26177,7 +26532,7 @@ Describes a chat member joined a chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:7103
+dist/generated/types.d.ts:7201
 
 ___
 
@@ -26199,7 +26554,7 @@ Describes a chat member joined a chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:7125
+dist/generated/types.d.ts:7223
 
 ___
 
@@ -26219,7 +26574,7 @@ Contains a list of chat members joined a chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:7144
+dist/generated/types.d.ts:7242
 
 ___
 
@@ -26240,7 +26595,7 @@ Contains a list of chat members joined a chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:7161
+dist/generated/types.d.ts:7259
 
 ___
 
@@ -26260,7 +26615,7 @@ Contains a list of chat invite links
 
 #### Defined in
 
-dist/generated/types.d.ts:7010
+dist/generated/types.d.ts:7108
 
 ___
 
@@ -26281,7 +26636,7 @@ Contains a list of chat invite links
 
 #### Defined in
 
-dist/generated/types.d.ts:7027
+dist/generated/types.d.ts:7125
 
 ___
 
@@ -26302,7 +26657,7 @@ Describes a user that sent a join request and waits for administrator approval
 
 #### Defined in
 
-dist/generated/types.d.ts:7286
+dist/generated/types.d.ts:7384
 
 ___
 
@@ -26324,7 +26679,7 @@ Describes a user that sent a join request and waits for administrator approval
 
 #### Defined in
 
-dist/generated/types.d.ts:7308
+dist/generated/types.d.ts:7406
 
 ___
 
@@ -26344,7 +26699,7 @@ Contains a list of requests to join a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:7327
+dist/generated/types.d.ts:7425
 
 ___
 
@@ -26365,7 +26720,7 @@ Contains a list of requests to join a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:7344
+dist/generated/types.d.ts:7442
 
 ___
 
@@ -26385,7 +26740,7 @@ Contains information about pending join requests for a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:7358
+dist/generated/types.d.ts:7456
 
 ___
 
@@ -26406,7 +26761,7 @@ Contains information about pending join requests for a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:7375
+dist/generated/types.d.ts:7473
 
 ___
 
@@ -26424,7 +26779,7 @@ A list of chats usually located at the top of the main chat list. Unmuted chats 
 
 #### Defined in
 
-dist/generated/types.d.ts:10268
+dist/generated/types.d.ts:10547
 
 ___
 
@@ -26443,7 +26798,7 @@ A list of chats usually located at the top of the main chat list. Unmuted chats 
 
 #### Defined in
 
-dist/generated/types.d.ts:10275
+dist/generated/types.d.ts:10554
 
 ___
 
@@ -26462,7 +26817,7 @@ A list of chats belonging to a chat filter
 
 #### Defined in
 
-dist/generated/types.d.ts:10279
+dist/generated/types.d.ts:10558
 
 ___
 
@@ -26482,7 +26837,7 @@ A list of chats belonging to a chat filter
 
 #### Defined in
 
-dist/generated/types.d.ts:10291
+dist/generated/types.d.ts:10570
 
 ___
 
@@ -26500,7 +26855,7 @@ A main list of chats
 
 #### Defined in
 
-dist/generated/types.d.ts:10257
+dist/generated/types.d.ts:10536
 
 ___
 
@@ -26519,7 +26874,7 @@ A main list of chats
 
 #### Defined in
 
-dist/generated/types.d.ts:10264
+dist/generated/types.d.ts:10543
 
 ___
 
@@ -26538,7 +26893,7 @@ Contains a list of chat lists
 
 #### Defined in
 
-dist/generated/types.d.ts:10300
+dist/generated/types.d.ts:10579
 
 ___
 
@@ -26558,7 +26913,7 @@ Contains a list of chat lists
 
 #### Defined in
 
-dist/generated/types.d.ts:10312
+dist/generated/types.d.ts:10591
 
 ___
 
@@ -26578,7 +26933,7 @@ Represents a location to which a chat is connected
 
 #### Defined in
 
-dist/generated/types.d.ts:4987
+dist/generated/types.d.ts:5085
 
 ___
 
@@ -26599,7 +26954,7 @@ Represents a location to which a chat is connected
 
 #### Defined in
 
-dist/generated/types.d.ts:5004
+dist/generated/types.d.ts:5102
 
 ___
 
@@ -26621,7 +26976,7 @@ Describes a user or a chat as a member of another chat
 
 #### Defined in
 
-dist/generated/types.d.ts:6562
+dist/generated/types.d.ts:6660
 
 ___
 
@@ -26644,7 +26999,7 @@ Describes a user or a chat as a member of another chat
 
 #### Defined in
 
-dist/generated/types.d.ts:6589
+dist/generated/types.d.ts:6687
 
 ___
 
@@ -26666,7 +27021,7 @@ The user is a member of the chat and has some additional privileges. In basic gr
 
 #### Defined in
 
-dist/generated/types.d.ts:6435
+dist/generated/types.d.ts:6533
 
 ___
 
@@ -26690,7 +27045,7 @@ The user is a member of the chat and has some additional privileges. In basic gr
 
 #### Defined in
 
-dist/generated/types.d.ts:6459
+dist/generated/types.d.ts:6557
 
 ___
 
@@ -26709,7 +27064,7 @@ The user or the chat was banned (and hence is not a member of the chat). Implies
 
 #### Defined in
 
-dist/generated/types.d.ts:6541
+dist/generated/types.d.ts:6639
 
 ___
 
@@ -26729,7 +27084,7 @@ The user or the chat was banned (and hence is not a member of the chat). Implies
 
 #### Defined in
 
-dist/generated/types.d.ts:6553
+dist/generated/types.d.ts:6651
 
 ___
 
@@ -26750,7 +27105,7 @@ The user is the owner of the chat and has all the administrator privileges
 
 #### Defined in
 
-dist/generated/types.d.ts:6393
+dist/generated/types.d.ts:6491
 
 ___
 
@@ -26772,7 +27127,7 @@ The user is the owner of the chat and has all the administrator privileges
 
 #### Defined in
 
-dist/generated/types.d.ts:6415
+dist/generated/types.d.ts:6513
 
 ___
 
@@ -26790,7 +27145,7 @@ The user or the chat is not a chat member
 
 #### Defined in
 
-dist/generated/types.d.ts:6530
+dist/generated/types.d.ts:6628
 
 ___
 
@@ -26809,7 +27164,7 @@ The user or the chat is not a chat member
 
 #### Defined in
 
-dist/generated/types.d.ts:6537
+dist/generated/types.d.ts:6635
 
 ___
 
@@ -26827,7 +27182,7 @@ The user is a member of the chat, without any additional privileges or restricti
 
 #### Defined in
 
-dist/generated/types.d.ts:6478
+dist/generated/types.d.ts:6576
 
 ___
 
@@ -26846,7 +27201,7 @@ The user is a member of the chat, without any additional privileges or restricti
 
 #### Defined in
 
-dist/generated/types.d.ts:6485
+dist/generated/types.d.ts:6583
 
 ___
 
@@ -26867,7 +27222,7 @@ The user is under certain restrictions in the chat. Not supported in basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:6489
+dist/generated/types.d.ts:6587
 
 ___
 
@@ -26889,7 +27244,7 @@ The user is under certain restrictions in the chat. Not supported in basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:6511
+dist/generated/types.d.ts:6609
 
 ___
 
@@ -26909,7 +27264,7 @@ Contains a list of chat members
 
 #### Defined in
 
-dist/generated/types.d.ts:6613
+dist/generated/types.d.ts:6711
 
 ___
 
@@ -26930,7 +27285,7 @@ Contains a list of chat members
 
 #### Defined in
 
-dist/generated/types.d.ts:6630
+dist/generated/types.d.ts:6728
 
 ___
 
@@ -26948,7 +27303,7 @@ Returns the owner and administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:6655
+dist/generated/types.d.ts:6753
 
 ___
 
@@ -26967,7 +27322,7 @@ Returns the owner and administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:6662
+dist/generated/types.d.ts:6760
 
 ___
 
@@ -26985,7 +27340,7 @@ Returns users banned from the chat; can be used only by administrators in a supe
 
 #### Defined in
 
-dist/generated/types.d.ts:6709
+dist/generated/types.d.ts:6807
 
 ___
 
@@ -27004,7 +27359,7 @@ Returns users banned from the chat; can be used only by administrators in a supe
 
 #### Defined in
 
-dist/generated/types.d.ts:6716
+dist/generated/types.d.ts:6814
 
 ___
 
@@ -27022,7 +27377,7 @@ Returns bot members of the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:6720
+dist/generated/types.d.ts:6818
 
 ___
 
@@ -27041,7 +27396,7 @@ Returns bot members of the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:6727
+dist/generated/types.d.ts:6825
 
 ___
 
@@ -27059,7 +27414,7 @@ Returns contacts of the user
 
 #### Defined in
 
-dist/generated/types.d.ts:6644
+dist/generated/types.d.ts:6742
 
 ___
 
@@ -27078,7 +27433,7 @@ Returns contacts of the user
 
 #### Defined in
 
-dist/generated/types.d.ts:6651
+dist/generated/types.d.ts:6749
 
 ___
 
@@ -27096,7 +27451,7 @@ Returns all chat members, including restricted chat members
 
 #### Defined in
 
-dist/generated/types.d.ts:6666
+dist/generated/types.d.ts:6764
 
 ___
 
@@ -27115,7 +27470,7 @@ Returns all chat members, including restricted chat members
 
 #### Defined in
 
-dist/generated/types.d.ts:6673
+dist/generated/types.d.ts:6771
 
 ___
 
@@ -27134,7 +27489,7 @@ Returns users which can be mentioned in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:6677
+dist/generated/types.d.ts:6775
 
 ___
 
@@ -27154,7 +27509,7 @@ Returns users which can be mentioned in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:6689
+dist/generated/types.d.ts:6787
 
 ___
 
@@ -27172,7 +27527,7 @@ Returns users under certain restrictions in the chat; can be used only by admini
 
 #### Defined in
 
-dist/generated/types.d.ts:6698
+dist/generated/types.d.ts:6796
 
 ___
 
@@ -27191,7 +27546,7 @@ Returns users under certain restrictions in the chat; can be used only by admini
 
 #### Defined in
 
-dist/generated/types.d.ts:6705
+dist/generated/types.d.ts:6803
 
 ___
 
@@ -27211,7 +27566,7 @@ Represents a message sender, which can be used to send messages in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:8192
+dist/generated/types.d.ts:8290
 
 ___
 
@@ -27232,7 +27587,7 @@ Represents a message sender, which can be used to send messages in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:8209
+dist/generated/types.d.ts:8307
 
 ___
 
@@ -27251,7 +27606,7 @@ Represents a list of message senders, which can be used to send messages in a ch
 
 #### Defined in
 
-dist/generated/types.d.ts:8223
+dist/generated/types.d.ts:8321
 
 ___
 
@@ -27271,7 +27626,7 @@ Represents a list of message senders, which can be used to send messages in a ch
 
 #### Defined in
 
-dist/generated/types.d.ts:8235
+dist/generated/types.d.ts:8333
 
 ___
 
@@ -27291,7 +27646,7 @@ Describes a chat located nearby
 
 #### Defined in
 
-dist/generated/types.d.ts:10849
+dist/generated/types.d.ts:11128
 
 ___
 
@@ -27312,7 +27667,7 @@ Describes a chat located nearby
 
 #### Defined in
 
-dist/generated/types.d.ts:10866
+dist/generated/types.d.ts:11145
 
 ___
 
@@ -27340,7 +27695,7 @@ Contains information about notification settings for a chat or a froum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:9694
+dist/generated/types.d.ts:9973
 
 ___
 
@@ -27369,7 +27724,7 @@ Contains information about notification settings for a chat or a froum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:9751
+dist/generated/types.d.ts:10030
 
 ___
 
@@ -27390,8 +27745,8 @@ Describes actions that a user is allowed to take in a chat
 | `can_manage_topics` | [`Bool`](index.types.default.md#bool) | True, if the user can manage topics |
 | `can_pin_messages` | [`Bool`](index.types.default.md#bool) | True, if the user can pin messages |
 | `can_send_audios` | [`Bool`](index.types.default.md#bool) | True, if the user can send music files |
+| `can_send_basic_messages` | [`Bool`](index.types.default.md#bool) | True, if the user can send text messages, contacts, invoices, locations, and venues |
 | `can_send_documents` | [`Bool`](index.types.default.md#bool) | True, if the user can send documents |
-| `can_send_messages` | [`Bool`](index.types.default.md#bool) | True, if the user can send text messages, contacts, invoices, locations, and venues |
 | `can_send_other_messages` | [`Bool`](index.types.default.md#bool) | True, if the user can send animations, games, stickers, and dice and use inline bots |
 | `can_send_photos` | [`Bool`](index.types.default.md#bool) | True, if the user can send audio photos |
 | `can_send_polls` | [`Bool`](index.types.default.md#bool) | True, if the user can send polls |
@@ -27401,7 +27756,7 @@ Describes actions that a user is allowed to take in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:5348
+dist/generated/types.d.ts:5446
 
 ___
 
@@ -27423,8 +27778,8 @@ Describes actions that a user is allowed to take in a chat
 | `can_manage_topics?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can manage topics |
 | `can_pin_messages?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can pin messages |
 | `can_send_audios?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can send music files |
+| `can_send_basic_messages?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can send text messages, contacts, invoices, locations, and venues |
 | `can_send_documents?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can send documents |
-| `can_send_messages?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can send text messages, contacts, invoices, locations, and venues |
 | `can_send_other_messages?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can send animations, games, stickers, and dice and use inline bots |
 | `can_send_photos?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can send audio photos |
 | `can_send_polls?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user can send polls |
@@ -27434,7 +27789,7 @@ Describes actions that a user is allowed to take in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:5425
+dist/generated/types.d.ts:5523
 
 ___
 
@@ -27459,7 +27814,7 @@ Describes a chat or user profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:5142
+dist/generated/types.d.ts:5240
 
 ___
 
@@ -27485,7 +27840,7 @@ Describes a chat or user profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:5184
+dist/generated/types.d.ts:5282
 
 ___
 
@@ -27508,7 +27863,7 @@ Contains basic information about the photo of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:4729
+dist/generated/types.d.ts:4827
 
 ___
 
@@ -27532,7 +27887,7 @@ Contains basic information about the photo of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:4761
+dist/generated/types.d.ts:4859
 
 ___
 
@@ -27552,7 +27907,7 @@ Information about the sticker, which was used to create the chat photo. The stic
 
 #### Defined in
 
-dist/generated/types.d.ts:5070
+dist/generated/types.d.ts:5168
 
 ___
 
@@ -27573,7 +27928,7 @@ Information about the sticker, which was used to create the chat photo. The stic
 
 #### Defined in
 
-dist/generated/types.d.ts:5087
+dist/generated/types.d.ts:5185
 
 ___
 
@@ -27592,7 +27947,7 @@ Information about the custom emoji, which was used to create the chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:5049
+dist/generated/types.d.ts:5147
 
 ___
 
@@ -27612,7 +27967,7 @@ Information about the custom emoji, which was used to create the chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:5061
+dist/generated/types.d.ts:5159
 
 ___
 
@@ -27632,7 +27987,7 @@ Information about the sticker, which was used to create the chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:5018
+dist/generated/types.d.ts:5116
 
 ___
 
@@ -27653,7 +28008,7 @@ Information about the sticker, which was used to create the chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:5035
+dist/generated/types.d.ts:5133
 
 ___
 
@@ -27673,7 +28028,7 @@ Contains a list of chat or user profile photos
 
 #### Defined in
 
-dist/generated/types.d.ts:5223
+dist/generated/types.d.ts:5321
 
 ___
 
@@ -27694,7 +28049,7 @@ Contains a list of chat or user profile photos
 
 #### Defined in
 
-dist/generated/types.d.ts:5240
+dist/generated/types.d.ts:5338
 
 ___
 
@@ -27716,7 +28071,7 @@ Describes a position of a chat in a chat list
 
 #### Defined in
 
-dist/generated/types.d.ts:10363
+dist/generated/types.d.ts:10642
 
 ___
 
@@ -27739,7 +28094,7 @@ Describes a position of a chat in a chat list
 
 #### Defined in
 
-dist/generated/types.d.ts:10390
+dist/generated/types.d.ts:10669
 
 ___
 
@@ -27757,7 +28112,7 @@ The chat has child abuse related content
 
 #### Defined in
 
-dist/generated/types.d.ts:31426
+dist/generated/types.d.ts:31839
 
 ___
 
@@ -27776,7 +28131,7 @@ The chat has child abuse related content
 
 #### Defined in
 
-dist/generated/types.d.ts:31433
+dist/generated/types.d.ts:31846
 
 ___
 
@@ -27794,7 +28149,7 @@ The chat contains copyrighted content
 
 #### Defined in
 
-dist/generated/types.d.ts:31437
+dist/generated/types.d.ts:31850
 
 ___
 
@@ -27813,7 +28168,7 @@ The chat contains copyrighted content
 
 #### Defined in
 
-dist/generated/types.d.ts:31444
+dist/generated/types.d.ts:31857
 
 ___
 
@@ -27831,7 +28186,7 @@ A custom reason provided by the user
 
 #### Defined in
 
-dist/generated/types.d.ts:31492
+dist/generated/types.d.ts:31905
 
 ___
 
@@ -27850,7 +28205,7 @@ A custom reason provided by the user
 
 #### Defined in
 
-dist/generated/types.d.ts:31499
+dist/generated/types.d.ts:31912
 
 ___
 
@@ -27868,7 +28223,7 @@ The chat represents a fake account
 
 #### Defined in
 
-dist/generated/types.d.ts:31459
+dist/generated/types.d.ts:31872
 
 ___
 
@@ -27887,7 +28242,7 @@ The chat represents a fake account
 
 #### Defined in
 
-dist/generated/types.d.ts:31466
+dist/generated/types.d.ts:31879
 
 ___
 
@@ -27905,7 +28260,7 @@ The chat has illegal drugs related content
 
 #### Defined in
 
-dist/generated/types.d.ts:31470
+dist/generated/types.d.ts:31883
 
 ___
 
@@ -27924,7 +28279,7 @@ The chat has illegal drugs related content
 
 #### Defined in
 
-dist/generated/types.d.ts:31477
+dist/generated/types.d.ts:31890
 
 ___
 
@@ -27942,7 +28297,7 @@ The chat contains messages with personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:31481
+dist/generated/types.d.ts:31894
 
 ___
 
@@ -27961,7 +28316,7 @@ The chat contains messages with personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:31488
+dist/generated/types.d.ts:31901
 
 ___
 
@@ -27979,7 +28334,7 @@ The chat contains pornographic messages
 
 #### Defined in
 
-dist/generated/types.d.ts:31415
+dist/generated/types.d.ts:31828
 
 ___
 
@@ -27998,7 +28353,7 @@ The chat contains pornographic messages
 
 #### Defined in
 
-dist/generated/types.d.ts:31422
+dist/generated/types.d.ts:31835
 
 ___
 
@@ -28016,7 +28371,7 @@ The chat contains spam messages
 
 #### Defined in
 
-dist/generated/types.d.ts:31393
+dist/generated/types.d.ts:31806
 
 ___
 
@@ -28035,7 +28390,7 @@ The chat contains spam messages
 
 #### Defined in
 
-dist/generated/types.d.ts:31400
+dist/generated/types.d.ts:31813
 
 ___
 
@@ -28053,7 +28408,7 @@ The location-based chat is unrelated to its stated location
 
 #### Defined in
 
-dist/generated/types.d.ts:31448
+dist/generated/types.d.ts:31861
 
 ___
 
@@ -28072,7 +28427,7 @@ The location-based chat is unrelated to its stated location
 
 #### Defined in
 
-dist/generated/types.d.ts:31455
+dist/generated/types.d.ts:31868
 
 ___
 
@@ -28090,7 +28445,7 @@ The chat promotes violence
 
 #### Defined in
 
-dist/generated/types.d.ts:31404
+dist/generated/types.d.ts:31817
 
 ___
 
@@ -28109,7 +28464,7 @@ The chat promotes violence
 
 #### Defined in
 
-dist/generated/types.d.ts:31411
+dist/generated/types.d.ts:31824
 
 ___
 
@@ -28127,7 +28482,7 @@ The chat is sponsored by the user's MTProxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:10321
+dist/generated/types.d.ts:10600
 
 ___
 
@@ -28146,7 +28501,7 @@ The chat is sponsored by the user's MTProxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:10328
+dist/generated/types.d.ts:10607
 
 ___
 
@@ -28166,7 +28521,7 @@ The chat contains a public service announcement
 
 #### Defined in
 
-dist/generated/types.d.ts:10332
+dist/generated/types.d.ts:10611
 
 ___
 
@@ -28187,7 +28542,7 @@ The chat contains a public service announcement
 
 #### Defined in
 
-dist/generated/types.d.ts:10349
+dist/generated/types.d.ts:10628
 
 ___
 
@@ -28209,7 +28564,7 @@ Contains statistics about administrator actions done by a user
 
 #### Defined in
 
-dist/generated/types.d.ts:34474
+dist/generated/types.d.ts:34931
 
 ___
 
@@ -28232,7 +28587,7 @@ Contains statistics about administrator actions done by a user
 
 #### Defined in
 
-dist/generated/types.d.ts:34501
+dist/generated/types.d.ts:34958
 
 ___
 
@@ -28265,7 +28620,7 @@ A detailed statistics about a channel chat
 
 #### Defined in
 
-dist/generated/types.d.ts:34727
+dist/generated/types.d.ts:35184
 
 ___
 
@@ -28299,7 +28654,7 @@ A detailed statistics about a channel chat
 
 #### Defined in
 
-dist/generated/types.d.ts:34809
+dist/generated/types.d.ts:35266
 
 ___
 
@@ -28319,7 +28674,7 @@ Contains statistics about number of new members invited by a user
 
 #### Defined in
 
-dist/generated/types.d.ts:34525
+dist/generated/types.d.ts:34982
 
 ___
 
@@ -28340,7 +28695,7 @@ Contains statistics about number of new members invited by a user
 
 #### Defined in
 
-dist/generated/types.d.ts:34542
+dist/generated/types.d.ts:34999
 
 ___
 
@@ -28361,7 +28716,7 @@ Contains statistics about interactions with a message
 
 #### Defined in
 
-dist/generated/types.d.ts:34392
+dist/generated/types.d.ts:34849
 
 ___
 
@@ -28383,7 +28738,7 @@ Contains statistics about interactions with a message
 
 #### Defined in
 
-dist/generated/types.d.ts:34414
+dist/generated/types.d.ts:34871
 
 ___
 
@@ -28404,7 +28759,7 @@ Contains statistics about messages sent by a user
 
 #### Defined in
 
-dist/generated/types.d.ts:34433
+dist/generated/types.d.ts:34890
 
 ___
 
@@ -28426,7 +28781,7 @@ Contains statistics about messages sent by a user
 
 #### Defined in
 
-dist/generated/types.d.ts:34455
+dist/generated/types.d.ts:34912
 
 ___
 
@@ -28460,7 +28815,7 @@ A detailed statistics about a supergroup chat
 
 #### Defined in
 
-dist/generated/types.d.ts:34556
+dist/generated/types.d.ts:35013
 
 ___
 
@@ -28495,7 +28850,7 @@ A detailed statistics about a supergroup chat
 
 #### Defined in
 
-dist/generated/types.d.ts:34643
+dist/generated/types.d.ts:35100
 
 ___
 
@@ -28516,7 +28871,7 @@ Describes a chat theme
 
 #### Defined in
 
-dist/generated/types.d.ts:28778
+dist/generated/types.d.ts:29191
 
 ___
 
@@ -28538,7 +28893,7 @@ Describes a chat theme
 
 #### Defined in
 
-dist/generated/types.d.ts:28800
+dist/generated/types.d.ts:29213
 
 ___
 
@@ -28557,7 +28912,7 @@ A basic group (a chat with 0-200 other users)
 
 #### Defined in
 
-dist/generated/types.d.ts:9928
+dist/generated/types.d.ts:10207
 
 ___
 
@@ -28577,7 +28932,7 @@ A basic group (a chat with 0-200 other users)
 
 #### Defined in
 
-dist/generated/types.d.ts:9940
+dist/generated/types.d.ts:10219
 
 ___
 
@@ -28596,7 +28951,7 @@ An ordinary chat with a user
 
 #### Defined in
 
-dist/generated/types.d.ts:9907
+dist/generated/types.d.ts:10186
 
 ___
 
@@ -28616,7 +28971,7 @@ An ordinary chat with a user
 
 #### Defined in
 
-dist/generated/types.d.ts:9919
+dist/generated/types.d.ts:10198
 
 ___
 
@@ -28636,7 +28991,7 @@ A secret chat with a user
 
 #### Defined in
 
-dist/generated/types.d.ts:9980
+dist/generated/types.d.ts:10259
 
 ___
 
@@ -28657,7 +29012,7 @@ A secret chat with a user
 
 #### Defined in
 
-dist/generated/types.d.ts:9997
+dist/generated/types.d.ts:10276
 
 ___
 
@@ -28677,7 +29032,7 @@ A supergroup or channel (with unlimited members)
 
 #### Defined in
 
-dist/generated/types.d.ts:9949
+dist/generated/types.d.ts:10228
 
 ___
 
@@ -28698,7 +29053,7 @@ A supergroup or channel (with unlimited members)
 
 #### Defined in
 
-dist/generated/types.d.ts:9966
+dist/generated/types.d.ts:10245
 
 ___
 
@@ -28718,7 +29073,7 @@ Represents a list of chats
 
 #### Defined in
 
-dist/generated/types.d.ts:10818
+dist/generated/types.d.ts:11097
 
 ___
 
@@ -28739,7 +29094,7 @@ Represents a list of chats
 
 #### Defined in
 
-dist/generated/types.d.ts:10835
+dist/generated/types.d.ts:11114
 
 ___
 
@@ -28759,7 +29114,7 @@ Represents a list of chats located nearby
 
 #### Defined in
 
-dist/generated/types.d.ts:10880
+dist/generated/types.d.ts:11159
 
 ___
 
@@ -28780,7 +29135,7 @@ Represents a list of chats located nearby
 
 #### Defined in
 
-dist/generated/types.d.ts:10897
+dist/generated/types.d.ts:11176
 
 ___
 
@@ -28808,7 +29163,7 @@ Checks the authentication token of a bot; to log in as a bot. Works only when th
 
 #### Defined in
 
-dist/generated/types.d.ts:45819
+dist/generated/types.d.ts:46420
 
 ___
 
@@ -28827,7 +29182,7 @@ Checks the authentication token of a bot; to log in as a bot. Works only when th
 
 #### Defined in
 
-dist/generated/types.d.ts:45805
+dist/generated/types.d.ts:46406
 
 ___
 
@@ -28855,7 +29210,7 @@ Checks the authentication code. Works only when the current authorization state 
 
 #### Defined in
 
-dist/generated/types.d.ts:45678
+dist/generated/types.d.ts:46279
 
 ___
 
@@ -28874,7 +29229,7 @@ Checks the authentication code. Works only when the current authorization state 
 
 #### Defined in
 
-dist/generated/types.d.ts:45664
+dist/generated/types.d.ts:46265
 
 ___
 
@@ -28902,7 +29257,7 @@ Checks the authentication of a email address. Works only when the current author
 
 #### Defined in
 
-dist/generated/types.d.ts:45662
+dist/generated/types.d.ts:46263
 
 ___
 
@@ -28921,7 +29276,7 @@ Checks the authentication of a email address. Works only when the current author
 
 #### Defined in
 
-dist/generated/types.d.ts:45648
+dist/generated/types.d.ts:46249
 
 ___
 
@@ -28949,7 +29304,7 @@ Checks the 2-step verification password for correctness. Works only when the cur
 
 #### Defined in
 
-dist/generated/types.d.ts:45734
+dist/generated/types.d.ts:46335
 
 ___
 
@@ -28968,7 +29323,7 @@ Checks the 2-step verification password for correctness. Works only when the cur
 
 #### Defined in
 
-dist/generated/types.d.ts:45720
+dist/generated/types.d.ts:46321
 
 ___
 
@@ -28996,7 +29351,7 @@ Checks whether a 2-step verification password recovery code sent to an email add
 
 #### Defined in
 
-dist/generated/types.d.ts:45761
+dist/generated/types.d.ts:46362
 
 ___
 
@@ -29015,7 +29370,7 @@ Checks whether a 2-step verification password recovery code sent to an email add
 
 #### Defined in
 
-dist/generated/types.d.ts:45747
+dist/generated/types.d.ts:46348
 
 ___
 
@@ -29043,7 +29398,7 @@ Checks the authentication code sent to confirm a new phone number of the user
 
 #### Defined in
 
-dist/generated/types.d.ts:54222
+dist/generated/types.d.ts:54906
 
 ___
 
@@ -29062,7 +29417,7 @@ Checks the authentication code sent to confirm a new phone number of the user
 
 #### Defined in
 
-dist/generated/types.d.ts:54208
+dist/generated/types.d.ts:54892
 
 ___
 
@@ -29090,7 +29445,7 @@ Checks the validity of an invite link for a chat and returns information about t
 
 #### Defined in
 
-dist/generated/types.d.ts:52095
+dist/generated/types.d.ts:52779
 
 ___
 
@@ -29109,7 +29464,7 @@ Checks the validity of an invite link for a chat and returns information about t
 
 #### Defined in
 
-dist/generated/types.d.ts:52081
+dist/generated/types.d.ts:52765
 
 ___
 
@@ -29137,7 +29492,7 @@ Checks whether a username can be set for a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46775
+dist/generated/types.d.ts:47376
 
 ___
 
@@ -29157,7 +29512,7 @@ Checks whether a username can be set for a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46756
+dist/generated/types.d.ts:47357
 
 ___
 
@@ -29175,7 +29530,7 @@ The username can be set
 
 #### Defined in
 
-dist/generated/types.d.ts:28904
+dist/generated/types.d.ts:29317
 
 ___
 
@@ -29194,7 +29549,7 @@ The username can be set
 
 #### Defined in
 
-dist/generated/types.d.ts:28911
+dist/generated/types.d.ts:29324
 
 ___
 
@@ -29212,7 +29567,7 @@ The user has too many chats with username, one of them must be made private firs
 
 #### Defined in
 
-dist/generated/types.d.ts:28948
+dist/generated/types.d.ts:29361
 
 ___
 
@@ -29231,7 +29586,7 @@ The user has too many chats with username, one of them must be made private firs
 
 #### Defined in
 
-dist/generated/types.d.ts:28955
+dist/generated/types.d.ts:29368
 
 ___
 
@@ -29249,7 +29604,7 @@ The user can't be a member of a public supergroup
 
 #### Defined in
 
-dist/generated/types.d.ts:28959
+dist/generated/types.d.ts:29372
 
 ___
 
@@ -29268,7 +29623,7 @@ The user can't be a member of a public supergroup
 
 #### Defined in
 
-dist/generated/types.d.ts:28966
+dist/generated/types.d.ts:29379
 
 ___
 
@@ -29286,7 +29641,7 @@ The username is invalid
 
 #### Defined in
 
-dist/generated/types.d.ts:28915
+dist/generated/types.d.ts:29328
 
 ___
 
@@ -29305,7 +29660,7 @@ The username is invalid
 
 #### Defined in
 
-dist/generated/types.d.ts:28922
+dist/generated/types.d.ts:29335
 
 ___
 
@@ -29323,7 +29678,7 @@ The username is occupied
 
 #### Defined in
 
-dist/generated/types.d.ts:28926
+dist/generated/types.d.ts:29339
 
 ___
 
@@ -29342,7 +29697,7 @@ The username is occupied
 
 #### Defined in
 
-dist/generated/types.d.ts:28933
+dist/generated/types.d.ts:29346
 
 ___
 
@@ -29360,7 +29715,7 @@ The username can be purchased at fragment.com
 
 #### Defined in
 
-dist/generated/types.d.ts:28937
+dist/generated/types.d.ts:29350
 
 ___
 
@@ -29379,7 +29734,7 @@ The username can be purchased at fragment.com
 
 #### Defined in
 
-dist/generated/types.d.ts:28944
+dist/generated/types.d.ts:29357
 
 ___
 
@@ -29407,7 +29762,7 @@ Checks whether the maximum number of owned public chats has been reached. Return
 
 #### Defined in
 
-dist/generated/types.d.ts:46807
+dist/generated/types.d.ts:47408
 
 ___
 
@@ -29426,7 +29781,7 @@ Checks whether the maximum number of owned public chats has been reached. Return
 
 #### Defined in
 
-dist/generated/types.d.ts:46793
+dist/generated/types.d.ts:47394
 
 ___
 
@@ -29454,7 +29809,7 @@ Checks the email address verification code for Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:56205
+dist/generated/types.d.ts:56963
 
 ___
 
@@ -29473,7 +29828,7 @@ Checks the email address verification code for Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:56191
+dist/generated/types.d.ts:56949
 
 ___
 
@@ -29501,7 +29856,7 @@ Checks the login email address authentication
 
 #### Defined in
 
-dist/generated/types.d.ts:45991
+dist/generated/types.d.ts:46592
 
 ___
 
@@ -29520,7 +29875,7 @@ Checks the login email address authentication
 
 #### Defined in
 
-dist/generated/types.d.ts:45977
+dist/generated/types.d.ts:46578
 
 ___
 
@@ -29548,7 +29903,7 @@ Checks whether a 2-step verification password recovery code sent to an email add
 
 #### Defined in
 
-dist/generated/types.d.ts:46085
+dist/generated/types.d.ts:46686
 
 ___
 
@@ -29567,7 +29922,7 @@ Checks whether a 2-step verification password recovery code sent to an email add
 
 #### Defined in
 
-dist/generated/types.d.ts:46071
+dist/generated/types.d.ts:46672
 
 ___
 
@@ -29595,7 +29950,7 @@ Checks phone number confirmation code
 
 #### Defined in
 
-dist/generated/types.d.ts:56331
+dist/generated/types.d.ts:57089
 
 ___
 
@@ -29614,7 +29969,7 @@ Checks phone number confirmation code
 
 #### Defined in
 
-dist/generated/types.d.ts:56317
+dist/generated/types.d.ts:57075
 
 ___
 
@@ -29642,7 +29997,7 @@ Checks the phone number verification code for Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:56162
+dist/generated/types.d.ts:56920
 
 ___
 
@@ -29661,7 +30016,7 @@ Checks the phone number verification code for Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:56148
+dist/generated/types.d.ts:56906
 
 ___
 
@@ -29689,7 +30044,7 @@ Checks the 2-step verification recovery email address verification code
 
 #### Defined in
 
-dist/generated/types.d.ts:46047
+dist/generated/types.d.ts:46648
 
 ___
 
@@ -29708,7 +30063,7 @@ Checks the 2-step verification recovery email address verification code
 
 #### Defined in
 
-dist/generated/types.d.ts:46033
+dist/generated/types.d.ts:46634
 
 ___
 
@@ -29736,7 +30091,7 @@ Checks whether a name can be used for a new sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:56405
+dist/generated/types.d.ts:57170
 
 ___
 
@@ -29755,7 +30110,7 @@ Checks whether a name can be used for a new sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:56391
+dist/generated/types.d.ts:57156
 
 ___
 
@@ -29773,7 +30128,7 @@ The name is invalid
 
 #### Defined in
 
-dist/generated/types.d.ts:28981
+dist/generated/types.d.ts:29394
 
 ___
 
@@ -29792,7 +30147,7 @@ The name is invalid
 
 #### Defined in
 
-dist/generated/types.d.ts:28988
+dist/generated/types.d.ts:29401
 
 ___
 
@@ -29810,7 +30165,7 @@ The name is occupied
 
 #### Defined in
 
-dist/generated/types.d.ts:28992
+dist/generated/types.d.ts:29405
 
 ___
 
@@ -29829,7 +30184,7 @@ The name is occupied
 
 #### Defined in
 
-dist/generated/types.d.ts:28999
+dist/generated/types.d.ts:29412
 
 ___
 
@@ -29847,7 +30202,7 @@ The name can be set
 
 #### Defined in
 
-dist/generated/types.d.ts:28970
+dist/generated/types.d.ts:29383
 
 ___
 
@@ -29866,7 +30221,7 @@ The name can be set
 
 #### Defined in
 
-dist/generated/types.d.ts:28977
+dist/generated/types.d.ts:29390
 
 ___
 
@@ -29894,7 +30249,7 @@ Removes potentially dangerous characters from the name of a file. The encoding o
 
 #### Defined in
 
-dist/generated/types.d.ts:48967
+dist/generated/types.d.ts:49568
 
 ___
 
@@ -29913,7 +30268,7 @@ Removes potentially dangerous characters from the name of a file. The encoding o
 
 #### Defined in
 
-dist/generated/types.d.ts:48953
+dist/generated/types.d.ts:49554
 
 ___
 
@@ -29941,7 +30296,7 @@ Clears message drafts in all chats
 
 #### Defined in
 
-dist/generated/types.d.ts:51079
+dist/generated/types.d.ts:51763
 
 ___
 
@@ -29960,7 +30315,7 @@ Clears message drafts in all chats
 
 #### Defined in
 
-dist/generated/types.d.ts:51065
+dist/generated/types.d.ts:51749
 
 ___
 
@@ -29988,7 +30343,7 @@ Clears the list of all autosave settings exceptions. The method is guaranteed to
 
 #### Defined in
 
-dist/generated/types.d.ts:55987
+dist/generated/types.d.ts:56745
 
 ___
 
@@ -30006,7 +30361,7 @@ Clears the list of all autosave settings exceptions. The method is guaranteed to
 
 #### Defined in
 
-dist/generated/types.d.ts:55978
+dist/generated/types.d.ts:56736
 
 ___
 
@@ -30034,7 +30389,7 @@ Clears all imported contacts, contact list remains unchanged
 
 #### Defined in
 
-dist/generated/types.d.ts:53237
+dist/generated/types.d.ts:53921
 
 ___
 
@@ -30052,7 +30407,7 @@ Clears all imported contacts, contact list remains unchanged
 
 #### Defined in
 
-dist/generated/types.d.ts:53228
+dist/generated/types.d.ts:53912
 
 ___
 
@@ -30080,7 +30435,7 @@ Clears the list of recently used emoji statuses
 
 #### Defined in
 
-dist/generated/types.d.ts:51340
+dist/generated/types.d.ts:52024
 
 ___
 
@@ -30098,7 +30453,7 @@ Clears the list of recently used emoji statuses
 
 #### Defined in
 
-dist/generated/types.d.ts:51331
+dist/generated/types.d.ts:52015
 
 ___
 
@@ -30126,7 +30481,7 @@ Clears the list of recently used reactions
 
 #### Defined in
 
-dist/generated/types.d.ts:48736
+dist/generated/types.d.ts:49337
 
 ___
 
@@ -30144,7 +30499,7 @@ Clears the list of recently used reactions
 
 #### Defined in
 
-dist/generated/types.d.ts:48727
+dist/generated/types.d.ts:49328
 
 ___
 
@@ -30172,7 +30527,7 @@ Clears the list of recently used stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53708
+dist/generated/types.d.ts:54392
 
 ___
 
@@ -30191,7 +30546,7 @@ Clears the list of recently used stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53694
+dist/generated/types.d.ts:54378
 
 ___
 
@@ -30219,7 +30574,7 @@ Clears the list of recently found chats
 
 #### Defined in
 
-dist/generated/types.d.ts:46738
+dist/generated/types.d.ts:47339
 
 ___
 
@@ -30237,7 +30592,7 @@ Clears the list of recently found chats
 
 #### Defined in
 
-dist/generated/types.d.ts:46729
+dist/generated/types.d.ts:47330
 
 ___
 
@@ -30265,7 +30620,7 @@ Informs TDLib that a message with an animated emoji was clicked by the user. Ret
 
 #### Defined in
 
-dist/generated/types.d.ts:49902
+dist/generated/types.d.ts:50565
 
 ___
 
@@ -30285,7 +30640,7 @@ Informs TDLib that a message with an animated emoji was clicked by the user. Ret
 
 #### Defined in
 
-dist/generated/types.d.ts:49883
+dist/generated/types.d.ts:50546
 
 ___
 
@@ -30313,7 +30668,7 @@ Informs TDLib that the user clicked Premium subscription button on the Premium f
 
 #### Defined in
 
-dist/generated/types.d.ts:56646
+dist/generated/types.d.ts:57542
 
 ___
 
@@ -30331,7 +30686,7 @@ Informs TDLib that the user clicked Premium subscription button on the Premium f
 
 #### Defined in
 
-dist/generated/types.d.ts:56637
+dist/generated/types.d.ts:57533
 
 ___
 
@@ -30359,7 +30714,7 @@ Closes the TDLib instance. All databases will be flushed to disk and properly cl
 
 #### Defined in
 
-dist/generated/types.d.ts:45841
+dist/generated/types.d.ts:46442
 
 ___
 
@@ -30377,7 +30732,7 @@ Closes the TDLib instance. All databases will be flushed to disk and properly cl
 
 #### Defined in
 
-dist/generated/types.d.ts:45832
+dist/generated/types.d.ts:46433
 
 ___
 
@@ -30405,7 +30760,7 @@ Informs TDLib that the chat is closed by the user. Many useful activities depend
 
 #### Defined in
 
-dist/generated/types.d.ts:49823
+dist/generated/types.d.ts:50486
 
 ___
 
@@ -30424,7 +30779,7 @@ Informs TDLib that the chat is closed by the user. Many useful activities depend
 
 #### Defined in
 
-dist/generated/types.d.ts:49809
+dist/generated/types.d.ts:50472
 
 ___
 
@@ -30452,7 +30807,7 @@ Closes a secret chat, effectively transferring its state to secretChatStateClose
 
 #### Defined in
 
-dist/generated/types.d.ts:54880
+dist/generated/types.d.ts:55638
 
 ___
 
@@ -30471,7 +30826,7 @@ Closes a secret chat, effectively transferring its state to secretChatStateClose
 
 #### Defined in
 
-dist/generated/types.d.ts:54866
+dist/generated/types.d.ts:55624
 
 ___
 
@@ -30499,7 +30854,7 @@ Informs TDLib that a previously opened Web App was closed
 
 #### Defined in
 
-dist/generated/types.d.ts:49490
+dist/generated/types.d.ts:50153
 
 ___
 
@@ -30518,7 +30873,7 @@ Informs TDLib that a previously opened Web App was closed
 
 #### Defined in
 
-dist/generated/types.d.ts:49476
+dist/generated/types.d.ts:50139
 
 ___
 
@@ -30537,7 +30892,7 @@ Represents a closed vector path. The path begins at the end point of the last co
 
 #### Defined in
 
-dist/generated/types.d.ts:3430
+dist/generated/types.d.ts:3467
 
 ___
 
@@ -30557,7 +30912,7 @@ Represents a closed vector path. The path begins at the end point of the last co
 
 #### Defined in
 
-dist/generated/types.d.ts:3442
+dist/generated/types.d.ts:3479
 
 ___
 
@@ -30585,7 +30940,7 @@ Confirms QR code authentication on another device. Returns created session on su
 
 #### Defined in
 
-dist/generated/types.d.ts:45871
+dist/generated/types.d.ts:46472
 
 ___
 
@@ -30604,7 +30959,7 @@ Confirms QR code authentication on another device. Returns created session on su
 
 #### Defined in
 
-dist/generated/types.d.ts:45857
+dist/generated/types.d.ts:46458
 
 ___
 
@@ -30631,7 +30986,7 @@ Contains information about one website the current user is logged in with Telegr
 
 #### Defined in
 
-dist/generated/types.d.ts:31271
+dist/generated/types.d.ts:31684
 
 ___
 
@@ -30659,7 +31014,7 @@ Contains information about one website the current user is logged in with Telegr
 
 #### Defined in
 
-dist/generated/types.d.ts:31323
+dist/generated/types.d.ts:31736
 
 ___
 
@@ -30678,7 +31033,7 @@ Contains a list of websites the current user is logged in with Telegram
 
 #### Defined in
 
-dist/generated/types.d.ts:31372
+dist/generated/types.d.ts:31785
 
 ___
 
@@ -30698,7 +31053,7 @@ Contains a list of websites the current user is logged in with Telegram
 
 #### Defined in
 
-dist/generated/types.d.ts:31384
+dist/generated/types.d.ts:31797
 
 ___
 
@@ -30716,7 +31071,7 @@ Currently establishing a connection to the Telegram servers
 
 #### Defined in
 
-dist/generated/types.d.ts:33506
+dist/generated/types.d.ts:33963
 
 ___
 
@@ -30735,7 +31090,7 @@ Currently establishing a connection to the Telegram servers
 
 #### Defined in
 
-dist/generated/types.d.ts:33513
+dist/generated/types.d.ts:33970
 
 ___
 
@@ -30753,7 +31108,7 @@ Currently establishing a connection with a proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:33495
+dist/generated/types.d.ts:33952
 
 ___
 
@@ -30772,7 +31127,7 @@ Currently establishing a connection with a proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:33502
+dist/generated/types.d.ts:33959
 
 ___
 
@@ -30790,7 +31145,7 @@ There is a working connection to the Telegram servers
 
 #### Defined in
 
-dist/generated/types.d.ts:33528
+dist/generated/types.d.ts:33985
 
 ___
 
@@ -30809,7 +31164,7 @@ There is a working connection to the Telegram servers
 
 #### Defined in
 
-dist/generated/types.d.ts:33535
+dist/generated/types.d.ts:33992
 
 ___
 
@@ -30827,7 +31182,7 @@ Downloading data received while the application was offline
 
 #### Defined in
 
-dist/generated/types.d.ts:33517
+dist/generated/types.d.ts:33974
 
 ___
 
@@ -30846,7 +31201,7 @@ Downloading data received while the application was offline
 
 #### Defined in
 
-dist/generated/types.d.ts:33524
+dist/generated/types.d.ts:33981
 
 ___
 
@@ -30864,7 +31219,7 @@ Currently waiting for the network to become available. Use setNetworkType to cha
 
 #### Defined in
 
-dist/generated/types.d.ts:33484
+dist/generated/types.d.ts:33941
 
 ___
 
@@ -30883,7 +31238,7 @@ Currently waiting for the network to become available. Use setNetworkType to cha
 
 #### Defined in
 
-dist/generated/types.d.ts:33491
+dist/generated/types.d.ts:33948
 
 ___
 
@@ -30906,7 +31261,7 @@ Describes a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:4293
+dist/generated/types.d.ts:4330
 
 ___
 
@@ -30930,7 +31285,7 @@ Describes a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:4325
+dist/generated/types.d.ts:4362
 
 ___
 
@@ -30949,7 +31304,7 @@ Contains a counter
 
 #### Defined in
 
-dist/generated/types.d.ts:33860
+dist/generated/types.d.ts:34317
 
 ___
 
@@ -30969,7 +31324,7 @@ Contains a counter
 
 #### Defined in
 
-dist/generated/types.d.ts:33872
+dist/generated/types.d.ts:34329
 
 ___
 
@@ -30988,7 +31343,7 @@ Contains information about countries
 
 #### Defined in
 
-dist/generated/types.d.ts:14292
+dist/generated/types.d.ts:14612
 
 ___
 
@@ -31008,7 +31363,7 @@ Contains information about countries
 
 #### Defined in
 
-dist/generated/types.d.ts:14304
+dist/generated/types.d.ts:14624
 
 ___
 
@@ -31031,7 +31386,7 @@ Contains information about a country
 
 #### Defined in
 
-dist/generated/types.d.ts:14231
+dist/generated/types.d.ts:14551
 
 ___
 
@@ -31055,7 +31410,7 @@ Contains information about a country
 
 #### Defined in
 
-dist/generated/types.d.ts:14263
+dist/generated/types.d.ts:14583
 
 ___
 
@@ -31083,7 +31438,7 @@ Returns an existing chat corresponding to a known basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:50071
+dist/generated/types.d.ts:50755
 
 ___
 
@@ -31103,7 +31458,7 @@ Returns an existing chat corresponding to a known basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:50052
+dist/generated/types.d.ts:50736
 
 ___
 
@@ -31131,7 +31486,7 @@ Creates a new call
 
 #### Defined in
 
-dist/generated/types.d.ts:52225
+dist/generated/types.d.ts:52909
 
 ___
 
@@ -31152,7 +31507,7 @@ Creates a new call
 
 #### Defined in
 
-dist/generated/types.d.ts:52201
+dist/generated/types.d.ts:52885
 
 ___
 
@@ -31180,7 +31535,7 @@ Creates new chat filter. Returns information about the created chat filter. Ther
 
 #### Defined in
 
-dist/generated/types.d.ts:50281
+dist/generated/types.d.ts:50965
 
 ___
 
@@ -31199,7 +31554,7 @@ Creates new chat filter. Returns information about the created chat filter. Ther
 
 #### Defined in
 
-dist/generated/types.d.ts:50267
+dist/generated/types.d.ts:50951
 
 ___
 
@@ -31227,7 +31582,7 @@ Creates a new invite link for a chat. Available for basic groups, supergroups, a
 
 #### Defined in
 
-dist/generated/types.d.ts:51863
+dist/generated/types.d.ts:52547
 
 ___
 
@@ -31250,7 +31605,7 @@ Creates a new invite link for a chat. Available for basic groups, supergroups, a
 
 #### Defined in
 
-dist/generated/types.d.ts:51829
+dist/generated/types.d.ts:52513
 
 ___
 
@@ -31278,7 +31633,7 @@ Creates a topic in a forum supergroup chat; requires can_manage_topics rights in
 
 #### Defined in
 
-dist/generated/types.d.ts:48412
+dist/generated/types.d.ts:49013
 
 ___
 
@@ -31299,7 +31654,7 @@ Creates a topic in a forum supergroup chat; requires can_manage_topics rights in
 
 #### Defined in
 
-dist/generated/types.d.ts:48388
+dist/generated/types.d.ts:48989
 
 ___
 
@@ -31327,7 +31682,7 @@ Creates a link for the given invoice; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:55079
+dist/generated/types.d.ts:55837
 
 ___
 
@@ -31346,7 +31701,7 @@ Creates a link for the given invoice; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:55065
+dist/generated/types.d.ts:55823
 
 ___
 
@@ -31374,7 +31729,7 @@ Creates a new basic group and sends a corresponding messageBasicGroupChatCreate.
 
 #### Defined in
 
-dist/generated/types.d.ts:50134
+dist/generated/types.d.ts:50818
 
 ___
 
@@ -31391,11 +31746,11 @@ Creates a new basic group and sends a corresponding messageBasicGroupChatCreate.
 | `_` | ``"createNewBasicGroupChat"`` | - |
 | `message_auto_delete_time?` | [`int32`](index.types.default.md#int32-1) | Message auto-delete time value, in seconds; must be from 0 up to 365 * 86400 and be divisible by 86400. If 0, then messages aren't deleted automatically |
 | `title?` | `string` | Title of the new basic group; 1-128 characters |
-| `user_ids?` | [`vector$Input`](index.types.default.md#vector$input)<[`int53`](index.types.default.md#int53-1)\> | Identifiers of users to be added to the basic group |
+| `user_ids?` | [`vector$Input`](index.types.default.md#vector$input)<[`int53`](index.types.default.md#int53-1)\> | Identifiers of users to be added to the basic group; may be empty to create a basic group without other members |
 
 #### Defined in
 
-dist/generated/types.d.ts:50110
+dist/generated/types.d.ts:50794
 
 ___
 
@@ -31423,7 +31778,7 @@ Creates a new secret chat. Returns the newly created chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50196
+dist/generated/types.d.ts:50880
 
 ___
 
@@ -31442,7 +31797,7 @@ Creates a new secret chat. Returns the newly created chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50182
+dist/generated/types.d.ts:50866
 
 ___
 
@@ -31470,7 +31825,7 @@ Creates a new sticker set. Returns the newly created sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:56446
+dist/generated/types.d.ts:57221
 
 ___
 
@@ -31486,7 +31841,9 @@ Creates a new sticker set. Returns the newly created sticker set
 | :------ | :------ | :------ |
 | `_` | ``"createNewStickerSet"`` | - |
 | `name?` | `string` | Sticker set name. Can contain only English letters, digits and underscores. Must end with *"_by_<bot username>"* (*<bot_username>* is case insensitive) for bots; 1-64 characters |
+| `needs_repainting?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true if stickers in the sticker set must be repainted; for custom emoji sticker sets only |
 | `source?` | `string` | Source of the sticker set; may be empty if unknown |
+| `sticker_format?` | [`StickerFormat$Input`](index.types.default.md#stickerformat$input) | Format of the stickers in the set |
 | `sticker_type?` | [`StickerType$Input`](index.types.default.md#stickertype$input) | Type of the stickers in the set |
 | `stickers?` | [`vector$Input`](index.types.default.md#vector$input)<[`inputSticker$Input`](index.types.default.md#inputsticker$input-1)\> | List of stickers to be added to the set; must be non-empty. All stickers must have the same format. For TGS stickers, uploadStickerFile must be used before the sticker is shown |
 | `title?` | `string` | Sticker set title; 1-64 characters |
@@ -31494,7 +31851,7 @@ Creates a new sticker set. Returns the newly created sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:56407
+dist/generated/types.d.ts:57172
 
 ___
 
@@ -31522,7 +31879,7 @@ Creates a new supergroup or channel and sends a corresponding messageSupergroupC
 
 #### Defined in
 
-dist/generated/types.d.ts:50180
+dist/generated/types.d.ts:50864
 
 ___
 
@@ -31547,7 +31904,7 @@ Creates a new supergroup or channel and sends a corresponding messageSupergroupC
 
 #### Defined in
 
-dist/generated/types.d.ts:50136
+dist/generated/types.d.ts:50820
 
 ___
 
@@ -31575,7 +31932,7 @@ Returns an existing chat corresponding to a given user
 
 #### Defined in
 
-dist/generated/types.d.ts:50050
+dist/generated/types.d.ts:50734
 
 ___
 
@@ -31595,7 +31952,7 @@ Returns an existing chat corresponding to a given user
 
 #### Defined in
 
-dist/generated/types.d.ts:50031
+dist/generated/types.d.ts:50715
 
 ___
 
@@ -31623,7 +31980,7 @@ Returns an existing chat corresponding to a known secret chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50108
+dist/generated/types.d.ts:50792
 
 ___
 
@@ -31642,7 +31999,7 @@ Returns an existing chat corresponding to a known secret chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50094
+dist/generated/types.d.ts:50778
 
 ___
 
@@ -31670,7 +32027,7 @@ Returns an existing chat corresponding to a known supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:50092
+dist/generated/types.d.ts:50776
 
 ___
 
@@ -31690,7 +32047,7 @@ Returns an existing chat corresponding to a known supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:50073
+dist/generated/types.d.ts:50757
 
 ___
 
@@ -31718,7 +32075,7 @@ Creates a new temporary password for processing payments
 
 #### Defined in
 
-dist/generated/types.d.ts:46154
+dist/generated/types.d.ts:46755
 
 ___
 
@@ -31738,7 +32095,7 @@ Creates a new temporary password for processing payments
 
 #### Defined in
 
-dist/generated/types.d.ts:46135
+dist/generated/types.d.ts:46736
 
 ___
 
@@ -31766,7 +32123,7 @@ Creates a video chat (a group call bound to a chat). Available only for basic gr
 
 #### Defined in
 
-dist/generated/types.d.ts:52444
+dist/generated/types.d.ts:53128
 
 ___
 
@@ -31788,7 +32145,7 @@ Creates a video chat (a group call bound to a chat). Available only for basic gr
 
 #### Defined in
 
-dist/generated/types.d.ts:52415
+dist/generated/types.d.ts:53099
 
 ___
 
@@ -31807,7 +32164,7 @@ Contains the result of a custom request
 
 #### Defined in
 
-dist/generated/types.d.ts:25712
+dist/generated/types.d.ts:26125
 
 ___
 
@@ -31827,7 +32184,7 @@ Contains the result of a custom request
 
 #### Defined in
 
-dist/generated/types.d.ts:25724
+dist/generated/types.d.ts:26137
 
 ___
 
@@ -31846,7 +32203,7 @@ Contains database statistics
 
 #### Defined in
 
-dist/generated/types.d.ts:32966
+dist/generated/types.d.ts:33423
 
 ___
 
@@ -31866,7 +32223,7 @@ Contains database statistics
 
 #### Defined in
 
-dist/generated/types.d.ts:32978
+dist/generated/types.d.ts:33435
 
 ___
 
@@ -31887,7 +32244,7 @@ Represents a date according to the Gregorian calendar
 
 #### Defined in
 
-dist/generated/types.d.ts:15785
+dist/generated/types.d.ts:16105
 
 ___
 
@@ -31909,7 +32266,7 @@ Represents a date according to the Gregorian calendar
 
 #### Defined in
 
-dist/generated/types.d.ts:15807
+dist/generated/types.d.ts:16127
 
 ___
 
@@ -31929,7 +32286,7 @@ Represents a date range
 
 #### Defined in
 
-dist/generated/types.d.ts:34247
+dist/generated/types.d.ts:34704
 
 ___
 
@@ -31950,7 +32307,7 @@ Represents a date range
 
 #### Defined in
 
-dist/generated/types.d.ts:34264
+dist/generated/types.d.ts:34721
 
 ___
 
@@ -31970,7 +32327,7 @@ File with the date it was uploaded
 
 #### Defined in
 
-dist/generated/types.d.ts:15611
+dist/generated/types.d.ts:15931
 
 ___
 
@@ -31991,7 +32348,7 @@ File with the date it was uploaded
 
 #### Defined in
 
-dist/generated/types.d.ts:15628
+dist/generated/types.d.ts:15948
 
 ___
 
@@ -32011,7 +32368,7 @@ Contains information about a tg: deep link
 
 #### Defined in
 
-dist/generated/types.d.ts:33944
+dist/generated/types.d.ts:34401
 
 ___
 
@@ -32032,7 +32389,7 @@ Contains information about a tg: deep link
 
 #### Defined in
 
-dist/generated/types.d.ts:33961
+dist/generated/types.d.ts:34418
 
 ___
 
@@ -32062,7 +32419,7 @@ Deletes the account of the current user, deleting all information associated wit
 
 #### Defined in
 
-dist/generated/types.d.ts:55552
+dist/generated/types.d.ts:56310
 
 ___
 
@@ -32083,7 +32440,7 @@ Deletes the account of the current user, deleting all information associated wit
 
 #### Defined in
 
-dist/generated/types.d.ts:55531
+dist/generated/types.d.ts:56289
 
 ___
 
@@ -32111,7 +32468,7 @@ Deletes all call messages
 
 #### Defined in
 
-dist/generated/types.d.ts:47192
+dist/generated/types.d.ts:47793
 
 ___
 
@@ -32130,7 +32487,7 @@ Deletes all call messages
 
 #### Defined in
 
-dist/generated/types.d.ts:47178
+dist/generated/types.d.ts:47779
 
 ___
 
@@ -32158,7 +32515,7 @@ Deletes all revoked chat invite links created by a given chat administrator. Req
 
 #### Defined in
 
-dist/generated/types.d.ts:52079
+dist/generated/types.d.ts:52763
 
 ___
 
@@ -32178,7 +32535,7 @@ Deletes all revoked chat invite links created by a given chat administrator. Req
 
 #### Defined in
 
-dist/generated/types.d.ts:52060
+dist/generated/types.d.ts:52744
 
 ___
 
@@ -32208,7 +32565,7 @@ Deletes a chat along with all messages in the corresponding chat for all chat me
 
 #### Defined in
 
-dist/generated/types.d.ts:46985
+dist/generated/types.d.ts:47586
 
 ___
 
@@ -32228,7 +32585,7 @@ Deletes a chat along with all messages in the corresponding chat for all chat me
 
 #### Defined in
 
-dist/generated/types.d.ts:46969
+dist/generated/types.d.ts:47570
 
 ___
 
@@ -32256,7 +32613,7 @@ Deletes existing chat filter
 
 #### Defined in
 
-dist/generated/types.d.ts:50318
+dist/generated/types.d.ts:51002
 
 ___
 
@@ -32275,7 +32632,7 @@ Deletes existing chat filter
 
 #### Defined in
 
-dist/generated/types.d.ts:50304
+dist/generated/types.d.ts:50988
 
 ___
 
@@ -32303,7 +32660,7 @@ Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46966
+dist/generated/types.d.ts:47567
 
 ___
 
@@ -32324,7 +32681,7 @@ Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46942
+dist/generated/types.d.ts:47543
 
 ___
 
@@ -32352,7 +32709,7 @@ Deletes all messages between the specified dates in a chat. Supported only for p
 
 #### Defined in
 
-dist/generated/types.d.ts:48051
+dist/generated/types.d.ts:48652
 
 ___
 
@@ -32374,7 +32731,7 @@ Deletes all messages between the specified dates in a chat. Supported only for p
 
 #### Defined in
 
-dist/generated/types.d.ts:48022
+dist/generated/types.d.ts:48623
 
 ___
 
@@ -32402,7 +32759,7 @@ Deletes all messages sent by the specified message sender in a chat. Supported o
 
 #### Defined in
 
-dist/generated/types.d.ts:48020
+dist/generated/types.d.ts:48621
 
 ___
 
@@ -32422,7 +32779,7 @@ Deletes all messages sent by the specified message sender in a chat. Supported o
 
 #### Defined in
 
-dist/generated/types.d.ts:48001
+dist/generated/types.d.ts:48602
 
 ___
 
@@ -32450,7 +32807,7 @@ Deletes the default reply markup from a chat. Must be called after a one-time ke
 
 #### Defined in
 
-dist/generated/types.d.ts:49765
+dist/generated/types.d.ts:50428
 
 ___
 
@@ -32470,7 +32827,7 @@ Deletes the default reply markup from a chat. Must be called after a one-time ke
 
 #### Defined in
 
-dist/generated/types.d.ts:49746
+dist/generated/types.d.ts:50409
 
 ___
 
@@ -32498,7 +32855,7 @@ Deletes commands supported by the bot for the given user scope and language; for
 
 #### Defined in
 
-dist/generated/types.d.ts:54296
+dist/generated/types.d.ts:54980
 
 ___
 
@@ -32518,7 +32875,7 @@ Deletes commands supported by the bot for the given user scope and language; for
 
 #### Defined in
 
-dist/generated/types.d.ts:54277
+dist/generated/types.d.ts:54961
 
 ___
 
@@ -32546,7 +32903,7 @@ Deletes a file from the TDLib file cache
 
 #### Defined in
 
-dist/generated/types.d.ts:51599
+dist/generated/types.d.ts:52283
 
 ___
 
@@ -32565,7 +32922,7 @@ Deletes a file from the TDLib file cache
 
 #### Defined in
 
-dist/generated/types.d.ts:51585
+dist/generated/types.d.ts:52269
 
 ___
 
@@ -32593,7 +32950,7 @@ Deletes all messages in a forum topic; requires can_delete_messages administrato
 
 #### Defined in
 
-dist/generated/types.d.ts:48672
+dist/generated/types.d.ts:49273
 
 ___
 
@@ -32613,7 +32970,7 @@ Deletes all messages in a forum topic; requires can_delete_messages administrato
 
 #### Defined in
 
-dist/generated/types.d.ts:48653
+dist/generated/types.d.ts:49254
 
 ___
 
@@ -32643,7 +33000,7 @@ Deletes all information about a language pack in the current localization target
 
 #### Defined in
 
-dist/generated/types.d.ts:55358
+dist/generated/types.d.ts:56116
 
 ___
 
@@ -32663,7 +33020,7 @@ Deletes all information about a language pack in the current localization target
 
 #### Defined in
 
-dist/generated/types.d.ts:55342
+dist/generated/types.d.ts:56100
 
 ___
 
@@ -32691,7 +33048,7 @@ Deletes messages
 
 #### Defined in
 
-dist/generated/types.d.ts:47999
+dist/generated/types.d.ts:48600
 
 ___
 
@@ -32712,7 +33069,7 @@ Deletes messages
 
 #### Defined in
 
-dist/generated/types.d.ts:47975
+dist/generated/types.d.ts:48576
 
 ___
 
@@ -32740,7 +33097,7 @@ Deletes a Telegram Passport element
 
 #### Defined in
 
-dist/generated/types.d.ts:56077
+dist/generated/types.d.ts:56835
 
 ___
 
@@ -32759,7 +33116,7 @@ Deletes a Telegram Passport element
 
 #### Defined in
 
-dist/generated/types.d.ts:56063
+dist/generated/types.d.ts:56821
 
 ___
 
@@ -32787,7 +33144,7 @@ Deletes a profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:54047
+dist/generated/types.d.ts:54731
 
 ___
 
@@ -32806,7 +33163,7 @@ Deletes a profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:54033
+dist/generated/types.d.ts:54717
 
 ___
 
@@ -32834,7 +33191,7 @@ Deletes revoked chat invite links. Requires administrator privileges and can_inv
 
 #### Defined in
 
-dist/generated/types.d.ts:52058
+dist/generated/types.d.ts:52742
 
 ___
 
@@ -32854,7 +33211,7 @@ Deletes revoked chat invite links. Requires administrator privileges and can_inv
 
 #### Defined in
 
-dist/generated/types.d.ts:52039
+dist/generated/types.d.ts:52723
 
 ___
 
@@ -32882,7 +33239,7 @@ Deletes saved credentials for all payment provider bots
 
 #### Defined in
 
-dist/generated/types.d.ts:55063
+dist/generated/types.d.ts:55821
 
 ___
 
@@ -32900,7 +33257,7 @@ Deletes saved credentials for all payment provider bots
 
 #### Defined in
 
-dist/generated/types.d.ts:55054
+dist/generated/types.d.ts:55812
 
 ___
 
@@ -32928,7 +33285,7 @@ Deletes saved order information
 
 #### Defined in
 
-dist/generated/types.d.ts:55052
+dist/generated/types.d.ts:55810
 
 ___
 
@@ -32946,7 +33303,54 @@ Deletes saved order information
 
 #### Defined in
 
-dist/generated/types.d.ts:55043
+dist/generated/types.d.ts:55801
+
+___
+
+### deleteStickerSet
+
+Ƭ **deleteStickerSet**: (`parameters`: [`deleteStickerSet$Input`](index.types.default.md#deletestickerset$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Deleted a sticker set; for bots only
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteStickerSet$Input`](index.types.default.md#deletestickerset$input) | [deleteStickerSet$Input](index.types.md#deletestickerset$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:57331
+
+___
+
+### deleteStickerSet$Input
+
+Ƭ **deleteStickerSet$Input**: `Object`
+
+Deleted a sticker set; for bots only
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"deleteStickerSet"`` | - |
+| `name?` | `string` | Sticker set name |
+
+#### Defined in
+
+dist/generated/types.d.ts:57317
 
 ___
 
@@ -32976,7 +33380,7 @@ Closes the TDLib instance, destroying all local data without a proper logout. Th
 
 #### Defined in
 
-dist/generated/types.d.ts:45855
+dist/generated/types.d.ts:46456
 
 ___
 
@@ -32995,7 +33399,7 @@ Closes the TDLib instance, destroying all local data without a proper logout. Th
 
 #### Defined in
 
-dist/generated/types.d.ts:45844
+dist/generated/types.d.ts:46445
 
 ___
 
@@ -33015,7 +33419,7 @@ A token for Apple Push Notification service
 
 #### Defined in
 
-dist/generated/types.d.ts:28085
+dist/generated/types.d.ts:28498
 
 ___
 
@@ -33036,7 +33440,7 @@ A token for Apple Push Notification service
 
 #### Defined in
 
-dist/generated/types.d.ts:28102
+dist/generated/types.d.ts:28515
 
 ___
 
@@ -33057,7 +33461,7 @@ A token for Apple Push Notification service VoIP notifications
 
 #### Defined in
 
-dist/generated/types.d.ts:28116
+dist/generated/types.d.ts:28529
 
 ___
 
@@ -33079,7 +33483,7 @@ A token for Apple Push Notification service VoIP notifications
 
 #### Defined in
 
-dist/generated/types.d.ts:28138
+dist/generated/types.d.ts:28551
 
 ___
 
@@ -33098,7 +33502,7 @@ A token for BlackBerry Push Service
 
 #### Defined in
 
-dist/generated/types.d.ts:28303
+dist/generated/types.d.ts:28716
 
 ___
 
@@ -33118,7 +33522,7 @@ A token for BlackBerry Push Service
 
 #### Defined in
 
-dist/generated/types.d.ts:28315
+dist/generated/types.d.ts:28728
 
 ___
 
@@ -33138,7 +33542,7 @@ A token for Firebase Cloud Messaging
 
 #### Defined in
 
-dist/generated/types.d.ts:28054
+dist/generated/types.d.ts:28467
 
 ___
 
@@ -33159,7 +33563,7 @@ A token for Firebase Cloud Messaging
 
 #### Defined in
 
-dist/generated/types.d.ts:28071
+dist/generated/types.d.ts:28484
 
 ___
 
@@ -33179,7 +33583,7 @@ A token for HUAWEI Push Service
 
 #### Defined in
 
-dist/generated/types.d.ts:28345
+dist/generated/types.d.ts:28758
 
 ___
 
@@ -33200,7 +33604,7 @@ A token for HUAWEI Push Service
 
 #### Defined in
 
-dist/generated/types.d.ts:28362
+dist/generated/types.d.ts:28775
 
 ___
 
@@ -33219,7 +33623,7 @@ A token for Microsoft Push Notification Service
 
 #### Defined in
 
-dist/generated/types.d.ts:28178
+dist/generated/types.d.ts:28591
 
 ___
 
@@ -33239,7 +33643,7 @@ A token for Microsoft Push Notification Service
 
 #### Defined in
 
-dist/generated/types.d.ts:28190
+dist/generated/types.d.ts:28603
 
 ___
 
@@ -33258,7 +33662,7 @@ A token for Microsoft Push Notification Service VoIP channel
 
 #### Defined in
 
-dist/generated/types.d.ts:28199
+dist/generated/types.d.ts:28612
 
 ___
 
@@ -33278,7 +33682,7 @@ A token for Microsoft Push Notification Service VoIP channel
 
 #### Defined in
 
-dist/generated/types.d.ts:28211
+dist/generated/types.d.ts:28624
 
 ___
 
@@ -33297,7 +33701,7 @@ A token for Simple Push API for Firefox OS
 
 #### Defined in
 
-dist/generated/types.d.ts:28261
+dist/generated/types.d.ts:28674
 
 ___
 
@@ -33317,7 +33721,7 @@ A token for Simple Push API for Firefox OS
 
 #### Defined in
 
-dist/generated/types.d.ts:28273
+dist/generated/types.d.ts:28686
 
 ___
 
@@ -33336,7 +33740,7 @@ A token for Tizen Push Service
 
 #### Defined in
 
-dist/generated/types.d.ts:28324
+dist/generated/types.d.ts:28737
 
 ___
 
@@ -33356,7 +33760,7 @@ A token for Tizen Push Service
 
 #### Defined in
 
-dist/generated/types.d.ts:28336
+dist/generated/types.d.ts:28749
 
 ___
 
@@ -33375,7 +33779,7 @@ A token for Ubuntu Push Client service
 
 #### Defined in
 
-dist/generated/types.d.ts:28282
+dist/generated/types.d.ts:28695
 
 ___
 
@@ -33395,7 +33799,7 @@ A token for Ubuntu Push Client service
 
 #### Defined in
 
-dist/generated/types.d.ts:28294
+dist/generated/types.d.ts:28707
 
 ___
 
@@ -33416,7 +33820,7 @@ A token for web Push API
 
 #### Defined in
 
-dist/generated/types.d.ts:28220
+dist/generated/types.d.ts:28633
 
 ___
 
@@ -33438,7 +33842,7 @@ A token for web Push API
 
 #### Defined in
 
-dist/generated/types.d.ts:28242
+dist/generated/types.d.ts:28655
 
 ___
 
@@ -33457,7 +33861,7 @@ A token for Windows Push Notification Services
 
 #### Defined in
 
-dist/generated/types.d.ts:28157
+dist/generated/types.d.ts:28570
 
 ___
 
@@ -33477,7 +33881,7 @@ A token for Windows Push Notification Services
 
 #### Defined in
 
-dist/generated/types.d.ts:28169
+dist/generated/types.d.ts:28582
 
 ___
 
@@ -33496,7 +33900,7 @@ A regular animated sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:23442
+dist/generated/types.d.ts:23792
 
 ___
 
@@ -33516,7 +33920,7 @@ A regular animated sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:23454
+dist/generated/types.d.ts:23804
 
 ___
 
@@ -33539,7 +33943,7 @@ Animated stickers to be combined into a slot machine
 
 #### Defined in
 
-dist/generated/types.d.ts:23463
+dist/generated/types.d.ts:23813
 
 ___
 
@@ -33563,7 +33967,7 @@ Animated stickers to be combined into a slot machine
 
 #### Defined in
 
-dist/generated/types.d.ts:23495
+dist/generated/types.d.ts:23845
 
 ___
 
@@ -33591,7 +33995,7 @@ Disables all active non-editable usernames of a supergroup or channel, requires 
 
 #### Defined in
 
-dist/generated/types.d.ts:54586
+dist/generated/types.d.ts:55344
 
 ___
 
@@ -33610,7 +34014,7 @@ Disables all active non-editable usernames of a supergroup or channel, requires 
 
 #### Defined in
 
-dist/generated/types.d.ts:54572
+dist/generated/types.d.ts:55330
 
 ___
 
@@ -33638,7 +34042,7 @@ Disables the currently enabled proxy. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:57016
+dist/generated/types.d.ts:57928
 
 ___
 
@@ -33656,7 +34060,7 @@ Disables the currently enabled proxy. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:57007
+dist/generated/types.d.ts:57919
 
 ___
 
@@ -33684,7 +34088,7 @@ Discards a call
 
 #### Defined in
 
-dist/generated/types.d.ts:52303
+dist/generated/types.d.ts:52987
 
 ___
 
@@ -33707,7 +34111,7 @@ Discards a call
 
 #### Defined in
 
-dist/generated/types.d.ts:52269
+dist/generated/types.d.ts:52953
 
 ___
 
@@ -33735,7 +34139,7 @@ Disconnects all websites from the current user's Telegram account
 
 #### Defined in
 
-dist/generated/types.d.ts:54520
+dist/generated/types.d.ts:55278
 
 ___
 
@@ -33753,7 +34157,7 @@ Disconnects all websites from the current user's Telegram account
 
 #### Defined in
 
-dist/generated/types.d.ts:54511
+dist/generated/types.d.ts:55269
 
 ___
 
@@ -33781,7 +34185,7 @@ Disconnects website from the current user's Telegram account
 
 #### Defined in
 
-dist/generated/types.d.ts:54509
+dist/generated/types.d.ts:55267
 
 ___
 
@@ -33800,7 +34204,7 @@ Disconnects website from the current user's Telegram account
 
 #### Defined in
 
-dist/generated/types.d.ts:54495
+dist/generated/types.d.ts:55253
 
 ___
 
@@ -33823,7 +34227,7 @@ Describes a document of any type
 
 #### Defined in
 
-dist/generated/types.d.ts:3766
+dist/generated/types.d.ts:3803
 
 ___
 
@@ -33847,7 +34251,7 @@ Describes a document of any type
 
 #### Defined in
 
-dist/generated/types.d.ts:3798
+dist/generated/types.d.ts:3835
 
 ___
 
@@ -33887,7 +34291,7 @@ Downloads a file from the cloud. Download progress and completion of the downloa
 
 #### Defined in
 
-dist/generated/types.d.ts:51376
+dist/generated/types.d.ts:52060
 
 ___
 
@@ -33910,7 +34314,7 @@ Downloads a file from the cloud. Download progress and completion of the downloa
 
 #### Defined in
 
-dist/generated/types.d.ts:51342
+dist/generated/types.d.ts:52026
 
 ___
 
@@ -33931,7 +34335,7 @@ Contains number of being downloaded and recently downloaded files found
 
 #### Defined in
 
-dist/generated/types.d.ts:9579
+dist/generated/types.d.ts:9858
 
 ___
 
@@ -33953,7 +34357,7 @@ Contains number of being downloaded and recently downloaded files found
 
 #### Defined in
 
-dist/generated/types.d.ts:9601
+dist/generated/types.d.ts:9880
 
 ___
 
@@ -33974,7 +34378,7 @@ Contains information about a message draft
 
 #### Defined in
 
-dist/generated/types.d.ts:9866
+dist/generated/types.d.ts:10145
 
 ___
 
@@ -33996,7 +34400,7 @@ Contains information about a message draft
 
 #### Defined in
 
-dist/generated/types.d.ts:9888
+dist/generated/types.d.ts:10167
 
 ___
 
@@ -34024,7 +34428,7 @@ Edits existing chat filter. Returns information about the edited chat filter
 
 #### Defined in
 
-dist/generated/types.d.ts:50302
+dist/generated/types.d.ts:50986
 
 ___
 
@@ -34044,7 +34448,7 @@ Edits existing chat filter. Returns information about the edited chat filter
 
 #### Defined in
 
-dist/generated/types.d.ts:50283
+dist/generated/types.d.ts:50967
 
 ___
 
@@ -34072,7 +34476,7 @@ Edits a non-primary invite link for a chat. Available for basic groups, supergro
 
 #### Defined in
 
-dist/generated/types.d.ts:51904
+dist/generated/types.d.ts:52588
 
 ___
 
@@ -34096,7 +34500,7 @@ Edits a non-primary invite link for a chat. Available for basic groups, supergro
 
 #### Defined in
 
-dist/generated/types.d.ts:51865
+dist/generated/types.d.ts:52549
 
 ___
 
@@ -34124,7 +34528,7 @@ Edits information about a custom local language pack in the current localization
 
 #### Defined in
 
-dist/generated/types.d.ts:55318
+dist/generated/types.d.ts:56076
 
 ___
 
@@ -34143,7 +34547,7 @@ Edits information about a custom local language pack in the current localization
 
 #### Defined in
 
-dist/generated/types.d.ts:55304
+dist/generated/types.d.ts:56062
 
 ___
 
@@ -34171,7 +34575,7 @@ Edits title and icon of a topic in a forum supergroup chat; requires can_manage_
 
 #### Defined in
 
-dist/generated/types.d.ts:48448
+dist/generated/types.d.ts:49049
 
 ___
 
@@ -34194,7 +34598,7 @@ Edits title and icon of a topic in a forum supergroup chat; requires can_manage_
 
 #### Defined in
 
-dist/generated/types.d.ts:48414
+dist/generated/types.d.ts:49015
 
 ___
 
@@ -34222,7 +34626,7 @@ Edits the caption of an inline message sent via a bot; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:48328
+dist/generated/types.d.ts:48929
 
 ___
 
@@ -34243,7 +34647,7 @@ Edits the caption of an inline message sent via a bot; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:48304
+dist/generated/types.d.ts:48905
 
 ___
 
@@ -34271,7 +34675,7 @@ Edits the content of a live location in an inline message sent via a bot; for bo
 
 #### Defined in
 
-dist/generated/types.d.ts:48276
+dist/generated/types.d.ts:48877
 
 ___
 
@@ -34294,7 +34698,7 @@ Edits the content of a live location in an inline message sent via a bot; for bo
 
 #### Defined in
 
-dist/generated/types.d.ts:48242
+dist/generated/types.d.ts:48843
 
 ___
 
@@ -34322,7 +34726,7 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Defined in
 
-dist/generated/types.d.ts:48302
+dist/generated/types.d.ts:48903
 
 ___
 
@@ -34343,7 +34747,7 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Defined in
 
-dist/generated/types.d.ts:48278
+dist/generated/types.d.ts:48879
 
 ___
 
@@ -34371,7 +34775,7 @@ Edits the reply markup of an inline message sent via a bot; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:48349
+dist/generated/types.d.ts:48950
 
 ___
 
@@ -34391,7 +34795,7 @@ Edits the reply markup of an inline message sent via a bot; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:48330
+dist/generated/types.d.ts:48931
 
 ___
 
@@ -34419,7 +34823,7 @@ Edits the text of an inline text or game message sent via a bot; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:48240
+dist/generated/types.d.ts:48841
 
 ___
 
@@ -34440,7 +34844,7 @@ Edits the text of an inline text or game message sent via a bot; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:48216
+dist/generated/types.d.ts:48817
 
 ___
 
@@ -34468,7 +34872,7 @@ Edits the message content caption. Returns the edited message after the edit is 
 
 #### Defined in
 
-dist/generated/types.d.ts:48188
+dist/generated/types.d.ts:48789
 
 ___
 
@@ -34490,7 +34894,7 @@ Edits the message content caption. Returns the edited message after the edit is 
 
 #### Defined in
 
-dist/generated/types.d.ts:48159
+dist/generated/types.d.ts:48760
 
 ___
 
@@ -34518,7 +34922,7 @@ Edits the message content of a live location. Messages can be edited for a limit
 
 #### Defined in
 
-dist/generated/types.d.ts:48123
+dist/generated/types.d.ts:48724
 
 ___
 
@@ -34542,7 +34946,7 @@ Edits the message content of a live location. Messages can be edited for a limit
 
 #### Defined in
 
-dist/generated/types.d.ts:48084
+dist/generated/types.d.ts:48685
 
 ___
 
@@ -34572,7 +34976,7 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Defined in
 
-dist/generated/types.d.ts:48157
+dist/generated/types.d.ts:48758
 
 ___
 
@@ -34595,7 +34999,7 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Defined in
 
-dist/generated/types.d.ts:48126
+dist/generated/types.d.ts:48727
 
 ___
 
@@ -34623,7 +35027,7 @@ Edits the message reply markup; for bots only. Returns the edited message after 
 
 #### Defined in
 
-dist/generated/types.d.ts:48214
+dist/generated/types.d.ts:48815
 
 ___
 
@@ -34644,7 +35048,7 @@ Edits the message reply markup; for bots only. Returns the edited message after 
 
 #### Defined in
 
-dist/generated/types.d.ts:48190
+dist/generated/types.d.ts:48791
 
 ___
 
@@ -34672,7 +35076,7 @@ Edits the time when a scheduled message will be sent. Scheduling state of all me
 
 #### Defined in
 
-dist/generated/types.d.ts:48375
+dist/generated/types.d.ts:48976
 
 ___
 
@@ -34693,7 +35097,7 @@ Edits the time when a scheduled message will be sent. Scheduling state of all me
 
 #### Defined in
 
-dist/generated/types.d.ts:48351
+dist/generated/types.d.ts:48952
 
 ___
 
@@ -34721,7 +35125,7 @@ Edits the text of a message (or a text of a game message). Returns the edited me
 
 #### Defined in
 
-dist/generated/types.d.ts:48082
+dist/generated/types.d.ts:48683
 
 ___
 
@@ -34743,7 +35147,7 @@ Edits the text of a message (or a text of a game message). Returns the edited me
 
 #### Defined in
 
-dist/generated/types.d.ts:48053
+dist/generated/types.d.ts:48654
 
 ___
 
@@ -34771,7 +35175,7 @@ Edits an existing proxy server for network requests. Can be called before author
 
 #### Defined in
 
-dist/generated/types.d.ts:56989
+dist/generated/types.d.ts:57901
 
 ___
 
@@ -34794,7 +35198,7 @@ Edits an existing proxy server for network requests. Can be called before author
 
 #### Defined in
 
-dist/generated/types.d.ts:56955
+dist/generated/types.d.ts:57867
 
 ___
 
@@ -34813,7 +35217,7 @@ An authentication token received through Apple ID
 
 #### Defined in
 
-dist/generated/types.d.ts:2059
+dist/generated/types.d.ts:2090
 
 ___
 
@@ -34833,7 +35237,7 @@ An authentication token received through Apple ID
 
 #### Defined in
 
-dist/generated/types.d.ts:2071
+dist/generated/types.d.ts:2102
 
 ___
 
@@ -34852,7 +35256,7 @@ An authentication code delivered to a user's email address
 
 #### Defined in
 
-dist/generated/types.d.ts:2038
+dist/generated/types.d.ts:2069
 
 ___
 
@@ -34872,7 +35276,7 @@ An authentication code delivered to a user's email address
 
 #### Defined in
 
-dist/generated/types.d.ts:2050
+dist/generated/types.d.ts:2081
 
 ___
 
@@ -34892,7 +35296,7 @@ Information about the email address authentication code that was sent
 
 #### Defined in
 
-dist/generated/types.d.ts:2007
+dist/generated/types.d.ts:2038
 
 ___
 
@@ -34913,7 +35317,7 @@ Information about the email address authentication code that was sent
 
 #### Defined in
 
-dist/generated/types.d.ts:2024
+dist/generated/types.d.ts:2055
 
 ___
 
@@ -34932,7 +35336,7 @@ An authentication token received through Google ID
 
 #### Defined in
 
-dist/generated/types.d.ts:2080
+dist/generated/types.d.ts:2111
 
 ___
 
@@ -34952,7 +35356,7 @@ An authentication token received through Google ID
 
 #### Defined in
 
-dist/generated/types.d.ts:2092
+dist/generated/types.d.ts:2123
 
 ___
 
@@ -34971,7 +35375,7 @@ Represents a list of emoji categories
 
 #### Defined in
 
-dist/generated/types.d.ts:21691
+dist/generated/types.d.ts:22031
 
 ___
 
@@ -34991,7 +35395,7 @@ Represents a list of emoji categories
 
 #### Defined in
 
-dist/generated/types.d.ts:21703
+dist/generated/types.d.ts:22043
 
 ___
 
@@ -35007,12 +35411,12 @@ Contains a list of similar emoji to search for in getStickers and searchStickers
 | :------ | :------ | :------ |
 | `_` | ``"emojiCategory"`` | - |
 | `emojis` | [`vector`](index.types.default.md#vector)<`string`\> | List of emojis in the category |
-| `icon_custom_emoji_id` | [`int64`](index.types.default.md#int64-1) | Unique identifier of the custom emoji, which represents icon of the category |
+| `icon` | [`sticker`](index.types.default.md#sticker-1) | Custom emoji sticker, which represents icon of the category |
 | `name` | `string` | Name of the category |
 
 #### Defined in
 
-dist/generated/types.d.ts:21650
+dist/generated/types.d.ts:21990
 
 ___
 
@@ -35029,12 +35433,12 @@ Contains a list of similar emoji to search for in getStickers and searchStickers
 | :------ | :------ | :------ |
 | `_` | ``"emojiCategory"`` | - |
 | `emojis?` | [`vector$Input`](index.types.default.md#vector$input)<`string`\> | List of emojis in the category |
-| `icon_custom_emoji_id?` | [`int64`](index.types.default.md#int64-1) | Unique identifier of the custom emoji, which represents icon of the category |
+| `icon?` | [`sticker$Input`](index.types.default.md#sticker$input-1) | Custom emoji sticker, which represents icon of the category |
 | `name?` | `string` | Name of the category |
 
 #### Defined in
 
-dist/generated/types.d.ts:21672
+dist/generated/types.d.ts:22012
 
 ___
 
@@ -35052,7 +35456,7 @@ The category must be used for chat photo emoji selection
 
 #### Defined in
 
-dist/generated/types.d.ts:21734
+dist/generated/types.d.ts:22074
 
 ___
 
@@ -35071,7 +35475,7 @@ The category must be used for chat photo emoji selection
 
 #### Defined in
 
-dist/generated/types.d.ts:21741
+dist/generated/types.d.ts:22081
 
 ___
 
@@ -35089,7 +35493,7 @@ The category must be used by default
 
 #### Defined in
 
-dist/generated/types.d.ts:21712
+dist/generated/types.d.ts:22052
 
 ___
 
@@ -35108,7 +35512,7 @@ The category must be used by default
 
 #### Defined in
 
-dist/generated/types.d.ts:21719
+dist/generated/types.d.ts:22059
 
 ___
 
@@ -35126,7 +35530,7 @@ The category must be used for emoji status selection
 
 #### Defined in
 
-dist/generated/types.d.ts:21723
+dist/generated/types.d.ts:22063
 
 ___
 
@@ -35145,7 +35549,7 @@ The category must be used for emoji status selection
 
 #### Defined in
 
-dist/generated/types.d.ts:21730
+dist/generated/types.d.ts:22070
 
 ___
 
@@ -35173,7 +35577,7 @@ Contains information about a emoji reaction
 
 #### Defined in
 
-dist/generated/types.d.ts:23310
+dist/generated/types.d.ts:23660
 
 ___
 
@@ -35202,7 +35606,7 @@ Contains information about a emoji reaction
 
 #### Defined in
 
-dist/generated/types.d.ts:23367
+dist/generated/types.d.ts:23717
 
 ___
 
@@ -35221,7 +35625,7 @@ Describes a custom emoji to be shown instead of the Telegram Premium badge
 
 #### Defined in
 
-dist/generated/types.d.ts:5752
+dist/generated/types.d.ts:5850
 
 ___
 
@@ -35241,7 +35645,7 @@ Describes a custom emoji to be shown instead of the Telegram Premium badge
 
 #### Defined in
 
-dist/generated/types.d.ts:5764
+dist/generated/types.d.ts:5862
 
 ___
 
@@ -35260,7 +35664,7 @@ Contains a list of emoji statuses
 
 #### Defined in
 
-dist/generated/types.d.ts:5773
+dist/generated/types.d.ts:5871
 
 ___
 
@@ -35280,7 +35684,7 @@ Contains a list of emoji statuses
 
 #### Defined in
 
-dist/generated/types.d.ts:5785
+dist/generated/types.d.ts:5883
 
 ___
 
@@ -35299,7 +35703,7 @@ Represents a list of emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:21275
+dist/generated/types.d.ts:21615
 
 ___
 
@@ -35319,7 +35723,7 @@ Represents a list of emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:21287
+dist/generated/types.d.ts:21627
 
 ___
 
@@ -35347,7 +35751,7 @@ Enables a proxy. Only one proxy can be enabled at a time. Can be called before a
 
 #### Defined in
 
-dist/generated/types.d.ts:57005
+dist/generated/types.d.ts:57917
 
 ___
 
@@ -35366,7 +35770,7 @@ Enables a proxy. Only one proxy can be enabled at a time. Can be called before a
 
 #### Defined in
 
-dist/generated/types.d.ts:56991
+dist/generated/types.d.ts:57903
 
 ___
 
@@ -35387,7 +35791,7 @@ Contains encrypted Telegram Passport data credentials
 
 #### Defined in
 
-dist/generated/types.d.ts:17022
+dist/generated/types.d.ts:17342
 
 ___
 
@@ -35409,7 +35813,7 @@ Contains encrypted Telegram Passport data credentials
 
 #### Defined in
 
-dist/generated/types.d.ts:17044
+dist/generated/types.d.ts:17364
 
 ___
 
@@ -35436,7 +35840,7 @@ Contains information about an encrypted Telegram Passport element; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:17063
+dist/generated/types.d.ts:17383
 
 ___
 
@@ -35464,7 +35868,7 @@ Contains information about an encrypted Telegram Passport element; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:17115
+dist/generated/types.d.ts:17435
 
 ___
 
@@ -35492,7 +35896,7 @@ Ends a group call. Requires groupCall.can_be_managed
 
 #### Defined in
 
-dist/generated/types.d.ts:52984
+dist/generated/types.d.ts:53668
 
 ___
 
@@ -35511,7 +35915,7 @@ Ends a group call. Requires groupCall.can_be_managed
 
 #### Defined in
 
-dist/generated/types.d.ts:52970
+dist/generated/types.d.ts:53654
 
 ___
 
@@ -35539,7 +35943,7 @@ Ends recording of an active group call. Requires groupCall.can_be_managed group 
 
 #### Defined in
 
-dist/generated/types.d.ts:52785
+dist/generated/types.d.ts:53469
 
 ___
 
@@ -35558,7 +35962,7 @@ Ends recording of an active group call. Requires groupCall.can_be_managed group 
 
 #### Defined in
 
-dist/generated/types.d.ts:52771
+dist/generated/types.d.ts:53455
 
 ___
 
@@ -35586,7 +35990,7 @@ Ends screen sharing in a joined group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52638
+dist/generated/types.d.ts:53322
 
 ___
 
@@ -35605,7 +36009,7 @@ Ends screen sharing in a joined group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52624
+dist/generated/types.d.ts:53308
 
 ___
 
@@ -35625,7 +36029,7 @@ An object of this type can be returned on every function call, in case of an err
 
 #### Defined in
 
-dist/generated/types.d.ts:1696
+dist/generated/types.d.ts:1727
 
 ___
 
@@ -35646,7 +36050,7 @@ An object of this type can be returned on every function call, in case of an err
 
 #### Defined in
 
-dist/generated/types.d.ts:1713
+dist/generated/types.d.ts:1744
 
 ___
 
@@ -35669,7 +36073,7 @@ Represents a file
 
 #### Defined in
 
-dist/generated/types.d.ts:2794
+dist/generated/types.d.ts:2835
 
 ___
 
@@ -35693,7 +36097,7 @@ Represents a file
 
 #### Defined in
 
-dist/generated/types.d.ts:2826
+dist/generated/types.d.ts:2867
 
 ___
 
@@ -35716,7 +36120,7 @@ Describes a file added to file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:9518
+dist/generated/types.d.ts:9797
 
 ___
 
@@ -35740,7 +36144,7 @@ Describes a file added to file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:9550
+dist/generated/types.d.ts:9829
 
 ___
 
@@ -35759,7 +36163,7 @@ Contains size of downloaded prefix of a file
 
 #### Defined in
 
-dist/generated/types.d.ts:33923
+dist/generated/types.d.ts:34380
 
 ___
 
@@ -35779,7 +36183,7 @@ Contains size of downloaded prefix of a file
 
 #### Defined in
 
-dist/generated/types.d.ts:33935
+dist/generated/types.d.ts:34392
 
 ___
 
@@ -35798,7 +36202,7 @@ Contains a part of a file
 
 #### Defined in
 
-dist/generated/types.d.ts:32564
+dist/generated/types.d.ts:33021
 
 ___
 
@@ -35818,7 +36222,7 @@ Contains a part of a file
 
 #### Defined in
 
-dist/generated/types.d.ts:32576
+dist/generated/types.d.ts:33033
 
 ___
 
@@ -35836,7 +36240,7 @@ The file is an animation
 
 #### Defined in
 
-dist/generated/types.d.ts:32596
+dist/generated/types.d.ts:33053
 
 ___
 
@@ -35855,7 +36259,7 @@ The file is an animation
 
 #### Defined in
 
-dist/generated/types.d.ts:32603
+dist/generated/types.d.ts:33060
 
 ___
 
@@ -35873,7 +36277,7 @@ The file is an audio file
 
 #### Defined in
 
-dist/generated/types.d.ts:32607
+dist/generated/types.d.ts:33064
 
 ___
 
@@ -35892,7 +36296,7 @@ The file is an audio file
 
 #### Defined in
 
-dist/generated/types.d.ts:32614
+dist/generated/types.d.ts:33071
 
 ___
 
@@ -35910,7 +36314,7 @@ The file is a document
 
 #### Defined in
 
-dist/generated/types.d.ts:32618
+dist/generated/types.d.ts:33075
 
 ___
 
@@ -35929,7 +36333,7 @@ The file is a document
 
 #### Defined in
 
-dist/generated/types.d.ts:32625
+dist/generated/types.d.ts:33082
 
 ___
 
@@ -35947,7 +36351,7 @@ The data is not a file
 
 #### Defined in
 
-dist/generated/types.d.ts:32585
+dist/generated/types.d.ts:33042
 
 ___
 
@@ -35966,7 +36370,7 @@ The data is not a file
 
 #### Defined in
 
-dist/generated/types.d.ts:32592
+dist/generated/types.d.ts:33049
 
 ___
 
@@ -35984,7 +36388,7 @@ The file is a notification sound
 
 #### Defined in
 
-dist/generated/types.d.ts:32629
+dist/generated/types.d.ts:33086
 
 ___
 
@@ -36003,7 +36407,7 @@ The file is a notification sound
 
 #### Defined in
 
-dist/generated/types.d.ts:32636
+dist/generated/types.d.ts:33093
 
 ___
 
@@ -36021,7 +36425,7 @@ The file is a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:32640
+dist/generated/types.d.ts:33097
 
 ___
 
@@ -36040,7 +36444,7 @@ The file is a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:32647
+dist/generated/types.d.ts:33104
 
 ___
 
@@ -36058,7 +36462,7 @@ The file is a profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:32651
+dist/generated/types.d.ts:33108
 
 ___
 
@@ -36077,7 +36481,7 @@ The file is a profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:32658
+dist/generated/types.d.ts:33115
 
 ___
 
@@ -36095,7 +36499,7 @@ The file was sent to a secret chat (the file type is not known to the server)
 
 #### Defined in
 
-dist/generated/types.d.ts:32662
+dist/generated/types.d.ts:33119
 
 ___
 
@@ -36114,7 +36518,7 @@ The file was sent to a secret chat (the file type is not known to the server)
 
 #### Defined in
 
-dist/generated/types.d.ts:32669
+dist/generated/types.d.ts:33126
 
 ___
 
@@ -36132,7 +36536,7 @@ The file is a thumbnail of a file from a secret chat
 
 #### Defined in
 
-dist/generated/types.d.ts:32673
+dist/generated/types.d.ts:33130
 
 ___
 
@@ -36151,7 +36555,7 @@ The file is a thumbnail of a file from a secret chat
 
 #### Defined in
 
-dist/generated/types.d.ts:32680
+dist/generated/types.d.ts:33137
 
 ___
 
@@ -36169,7 +36573,7 @@ The file is a file from Secure storage used for storing Telegram Passport files
 
 #### Defined in
 
-dist/generated/types.d.ts:32684
+dist/generated/types.d.ts:33141
 
 ___
 
@@ -36188,7 +36592,7 @@ The file is a file from Secure storage used for storing Telegram Passport files
 
 #### Defined in
 
-dist/generated/types.d.ts:32691
+dist/generated/types.d.ts:33148
 
 ___
 
@@ -36206,7 +36610,7 @@ The file is a sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:32695
+dist/generated/types.d.ts:33152
 
 ___
 
@@ -36225,7 +36629,7 @@ The file is a sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:32702
+dist/generated/types.d.ts:33159
 
 ___
 
@@ -36243,7 +36647,7 @@ The file is a thumbnail of another file
 
 #### Defined in
 
-dist/generated/types.d.ts:32706
+dist/generated/types.d.ts:33163
 
 ___
 
@@ -36262,7 +36666,7 @@ The file is a thumbnail of another file
 
 #### Defined in
 
-dist/generated/types.d.ts:32713
+dist/generated/types.d.ts:33170
 
 ___
 
@@ -36280,7 +36684,7 @@ The file type is not yet known
 
 #### Defined in
 
-dist/generated/types.d.ts:32717
+dist/generated/types.d.ts:33174
 
 ___
 
@@ -36299,7 +36703,7 @@ The file type is not yet known
 
 #### Defined in
 
-dist/generated/types.d.ts:32724
+dist/generated/types.d.ts:33181
 
 ___
 
@@ -36317,7 +36721,7 @@ The file is a video
 
 #### Defined in
 
-dist/generated/types.d.ts:32728
+dist/generated/types.d.ts:33185
 
 ___
 
@@ -36336,7 +36740,7 @@ The file is a video
 
 #### Defined in
 
-dist/generated/types.d.ts:32735
+dist/generated/types.d.ts:33192
 
 ___
 
@@ -36354,7 +36758,7 @@ The file is a video note
 
 #### Defined in
 
-dist/generated/types.d.ts:32739
+dist/generated/types.d.ts:33196
 
 ___
 
@@ -36373,7 +36777,7 @@ The file is a video note
 
 #### Defined in
 
-dist/generated/types.d.ts:32746
+dist/generated/types.d.ts:33203
 
 ___
 
@@ -36391,7 +36795,7 @@ The file is a voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:32750
+dist/generated/types.d.ts:33207
 
 ___
 
@@ -36410,7 +36814,7 @@ The file is a voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:32757
+dist/generated/types.d.ts:33214
 
 ___
 
@@ -36428,7 +36832,7 @@ The file is a wallpaper or a background pattern
 
 #### Defined in
 
-dist/generated/types.d.ts:32761
+dist/generated/types.d.ts:33218
 
 ___
 
@@ -36447,7 +36851,7 @@ The file is a wallpaper or a background pattern
 
 #### Defined in
 
-dist/generated/types.d.ts:32768
+dist/generated/types.d.ts:33225
 
 ___
 
@@ -36475,7 +36879,7 @@ Finishes the file generation
 
 #### Defined in
 
-dist/generated/types.d.ts:51557
+dist/generated/types.d.ts:52241
 
 ___
 
@@ -36495,7 +36899,7 @@ Finishes the file generation
 
 #### Defined in
 
-dist/generated/types.d.ts:51538
+dist/generated/types.d.ts:52222
 
 ___
 
@@ -36513,7 +36917,7 @@ Settings for Firebase Authentication in the official Android application
 
 #### Defined in
 
-dist/generated/types.d.ts:23043
+dist/generated/types.d.ts:23383
 
 ___
 
@@ -36532,7 +36936,7 @@ Settings for Firebase Authentication in the official Android application
 
 #### Defined in
 
-dist/generated/types.d.ts:23050
+dist/generated/types.d.ts:23390
 
 ___
 
@@ -36552,7 +36956,7 @@ Settings for Firebase Authentication in the official iOS application
 
 #### Defined in
 
-dist/generated/types.d.ts:23054
+dist/generated/types.d.ts:23394
 
 ___
 
@@ -36573,7 +36977,7 @@ Settings for Firebase Authentication in the official iOS application
 
 #### Defined in
 
-dist/generated/types.d.ts:23071
+dist/generated/types.d.ts:23411
 
 ___
 
@@ -36588,12 +36992,12 @@ A text with some entities
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"formattedText"`` | - |
-| `entities` | [`vector`](index.types.default.md#vector)<[`textEntity`](index.types.default.md#textentity-1)\> | Entities contained in the text. Entities can be nested, but must not mutually intersect with each other.    -Pre, Code and PreCode entities can't contain other entities. Bold, Italic, Underline, Strikethrough, and Spoiler entities can contain and can be part of any other entities. All other entities can't contain each other |
+| `entities` | [`vector`](index.types.default.md#vector)<[`textEntity`](index.types.default.md#textentity-1)\> | Entities contained in the text. Entities can be nested, but must not mutually intersect with each other. -Pre, Code and PreCode entities can't contain other entities. Bold, Italic, Underline, Strikethrough, and Spoiler entities can contain and can be part of any other entities. All other entities can't contain each other |
 | `text` | `string` | The text |
 
 #### Defined in
 
-dist/generated/types.d.ts:2163
+dist/generated/types.d.ts:2194
 
 ___
 
@@ -36609,12 +37013,12 @@ A text with some entities
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"formattedText"`` | - |
-| `entities?` | [`vector$Input`](index.types.default.md#vector$input)<[`textEntity$Input`](index.types.default.md#textentity$input-1)\> | Entities contained in the text. Entities can be nested, but must not mutually intersect with each other.    -Pre, Code and PreCode entities can't contain other entities. Bold, Italic, Underline, Strikethrough, and Spoiler entities can contain and can be part of any other entities. All other entities can't contain each other |
+| `entities?` | [`vector$Input`](index.types.default.md#vector$input)<[`textEntity$Input`](index.types.default.md#textentity$input-1)\> | Entities contained in the text. Entities can be nested, but must not mutually intersect with each other. -Pre, Code and PreCode entities can't contain other entities. Bold, Italic, Underline, Strikethrough, and Spoiler entities can contain and can be part of any other entities. All other entities can't contain each other |
 | `text?` | `string` | The text |
 
 #### Defined in
 
-dist/generated/types.d.ts:2182
+dist/generated/types.d.ts:2213
 
 ___
 
@@ -36642,7 +37046,7 @@ Describes a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:12051
+dist/generated/types.d.ts:12371
 
 ___
 
@@ -36671,7 +37075,7 @@ Describes a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:12108
+dist/generated/types.d.ts:12428
 
 ___
 
@@ -36691,7 +37095,7 @@ Describes a forum topic icon
 
 #### Defined in
 
-dist/generated/types.d.ts:11919
+dist/generated/types.d.ts:12239
 
 ___
 
@@ -36712,7 +37116,7 @@ Describes a forum topic icon
 
 #### Defined in
 
-dist/generated/types.d.ts:11936
+dist/generated/types.d.ts:12256
 
 ___
 
@@ -36739,7 +37143,7 @@ Contains basic information about a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:11950
+dist/generated/types.d.ts:12270
 
 ___
 
@@ -36767,7 +37171,7 @@ Contains basic information about a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:12002
+dist/generated/types.d.ts:12322
 
 ___
 
@@ -36790,7 +37194,7 @@ Describes a list of forum topics
 
 #### Defined in
 
-dist/generated/types.d.ts:12162
+dist/generated/types.d.ts:12482
 
 ___
 
@@ -36814,7 +37218,7 @@ Describes a list of forum topics
 
 #### Defined in
 
-dist/generated/types.d.ts:12194
+dist/generated/types.d.ts:12514
 
 ___
 
@@ -36842,7 +37246,7 @@ Forwards previously sent messages. Returns the forwarded messages in the same or
 
 #### Defined in
 
-dist/generated/types.d.ts:47897
+dist/generated/types.d.ts:48498
 
 ___
 
@@ -36868,7 +37272,7 @@ Forwards previously sent messages. Returns the forwarded messages in the same or
 
 #### Defined in
 
-dist/generated/types.d.ts:47848
+dist/generated/types.d.ts:48449
 
 ___
 
@@ -36889,7 +37293,7 @@ Contains a list of messages found by a search in a given chat
 
 #### Defined in
 
-dist/generated/types.d.ts:9231
+dist/generated/types.d.ts:9391
 
 ___
 
@@ -36911,7 +37315,7 @@ Contains a list of messages found by a search in a given chat
 
 #### Defined in
 
-dist/generated/types.d.ts:9253
+dist/generated/types.d.ts:9413
 
 ___
 
@@ -36932,7 +37336,7 @@ Contains a list of downloaded files, found by a search
 
 #### Defined in
 
-dist/generated/types.d.ts:9620
+dist/generated/types.d.ts:9899
 
 ___
 
@@ -36954,7 +37358,7 @@ Contains a list of downloaded files, found by a search
 
 #### Defined in
 
-dist/generated/types.d.ts:9642
+dist/generated/types.d.ts:9921
 
 ___
 
@@ -36975,7 +37379,7 @@ Contains a list of messages found by a search
 
 #### Defined in
 
-dist/generated/types.d.ts:9190
+dist/generated/types.d.ts:9350
 
 ___
 
@@ -36997,7 +37401,50 @@ Contains a list of messages found by a search
 
 #### Defined in
 
-dist/generated/types.d.ts:9212
+dist/generated/types.d.ts:9372
+
+___
+
+### foundWebApp
+
+Ƭ **foundWebApp**: `Object`
+
+Contains information about a Web App found by its short name
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"foundWebApp"`` | - |
+| `request_write_access` | [`Bool`](index.types.default.md#bool) | True, if the user must be asked for the permission to the bot to send them messages |
+| `skip_confirmation` | [`Bool`](index.types.default.md#bool) | True, if there is no need to show an ordinary open URL confirmation before opening the Web App. The field must be ignored and confirmation must be shown anyway if the Web App link was hidden |
+| `web_app` | [`webApp`](index.types.default.md#webapp-1) | The Web App |
+
+#### Defined in
+
+dist/generated/types.d.ts:12096
+
+___
+
+### foundWebApp$Input
+
+Ƭ **foundWebApp$Input**: `Object`
+
+Version of [foundWebApp](index.types.md#foundwebapp-1) for method parameters.
+Contains information about a Web App found by its short name
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"foundWebApp"`` | - |
+| `request_write_access?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user must be asked for the permission to the bot to send them messages |
+| `skip_confirmation?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if there is no need to show an ordinary open URL confirmation before opening the Web App. The field must be ignored and confirmation must be shown anyway if the Web App link was hidden |
+| `web_app?` | [`webApp$Input`](index.types.default.md#webapp$input-1) | The Web App |
+
+#### Defined in
+
+dist/generated/types.d.ts:12118
 
 ___
 
@@ -37005,7 +37452,7 @@ ___
 
 Ƭ **game**: `Object`
 
-Describes a game
+Describes a game. Use getInternalLink with internalLinkTypeGame to share the game
 
 #### Type declaration
 
@@ -37013,16 +37460,16 @@ Describes a game
 | :------ | :------ | :------ |
 | `_` | ``"game"`` | - |
 | `animation` | [`animation`](index.types.default.md#animation-1) \| ``null`` | Game animation; may be null |
-| `description` | `string` | Describes a game |
+| `description` | `string` | Describes a game. Use getInternalLink with internalLinkTypeGame to share the game |
 | `id` | [`int64`](index.types.default.md#int64-1) | Unique game identifier |
 | `photo` | [`photo`](index.types.default.md#photo-1) | Game photo |
-| `short_name` | `string` | Game short name. To share a game use the URL https://t.me/{bot_username}?game={game_short_name} |
+| `short_name` | `string` | Game short name |
 | `text` | [`formattedText`](index.types.default.md#formattedtext-1) | Game text, usually containing scoreboards for a game |
 | `title` | `string` | Game title |
 
 #### Defined in
 
-dist/generated/types.d.ts:4466
+dist/generated/types.d.ts:4503
 
 ___
 
@@ -37031,7 +37478,7 @@ ___
 Ƭ **game$Input**: `Object`
 
 Version of [game](index.types.md#game-1) for method parameters.
-Describes a game
+Describes a game. Use getInternalLink with internalLinkTypeGame to share the game
 
 #### Type declaration
 
@@ -37039,16 +37486,16 @@ Describes a game
 | :------ | :------ | :------ |
 | `_` | ``"game"`` | - |
 | `animation?` | [`animation$Input`](index.types.default.md#animation$input-1) \| ``null`` | Game animation; may be null |
-| `description?` | `string` | Describes a game |
+| `description?` | `string` | Describes a game. Use getInternalLink with internalLinkTypeGame to share the game |
 | `id?` | [`int64`](index.types.default.md#int64-1) | Unique game identifier |
 | `photo?` | [`photo$Input`](index.types.default.md#photo$input-1) | Game photo |
-| `short_name?` | `string` | Game short name. To share a game use the URL https://t.me/{bot_username}?game={game_short_name} |
+| `short_name?` | `string` | Game short name |
 | `text?` | [`formattedText$Input`](index.types.default.md#formattedtext$input-1) | Game text, usually containing scoreboards for a game |
 | `title?` | `string` | Game title |
 
 #### Defined in
 
-dist/generated/types.d.ts:4508
+dist/generated/types.d.ts:4545
 
 ___
 
@@ -37069,7 +37516,7 @@ Contains one row of the game high score table
 
 #### Defined in
 
-dist/generated/types.d.ts:25733
+dist/generated/types.d.ts:26146
 
 ___
 
@@ -37091,7 +37538,7 @@ Contains one row of the game high score table
 
 #### Defined in
 
-dist/generated/types.d.ts:25755
+dist/generated/types.d.ts:26168
 
 ___
 
@@ -37110,7 +37557,7 @@ Contains a list of game high scores
 
 #### Defined in
 
-dist/generated/types.d.ts:25774
+dist/generated/types.d.ts:26187
 
 ___
 
@@ -37130,7 +37577,7 @@ Contains a list of game high scores
 
 #### Defined in
 
-dist/generated/types.d.ts:25786
+dist/generated/types.d.ts:26199
 
 ___
 
@@ -37158,7 +37605,7 @@ Returns the period of inactivity after which the account of the current user wil
 
 #### Defined in
 
-dist/generated/types.d.ts:55528
+dist/generated/types.d.ts:56286
 
 ___
 
@@ -37176,7 +37623,7 @@ Returns the period of inactivity after which the account of the current user wil
 
 #### Defined in
 
-dist/generated/types.d.ts:55519
+dist/generated/types.d.ts:56277
 
 ___
 
@@ -37204,7 +37651,7 @@ Returns all active live locations that need to be updated by the application. Th
 
 #### Defined in
 
-dist/generated/types.d.ts:47224
+dist/generated/types.d.ts:47825
 
 ___
 
@@ -37222,7 +37669,7 @@ Returns all active live locations that need to be updated by the application. Th
 
 #### Defined in
 
-dist/generated/types.d.ts:47215
+dist/generated/types.d.ts:47816
 
 ___
 
@@ -37250,7 +37697,7 @@ Returns all active sessions of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54397
+dist/generated/types.d.ts:55155
 
 ___
 
@@ -37268,7 +37715,7 @@ Returns all active sessions of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54388
+dist/generated/types.d.ts:55146
 
 ___
 
@@ -37296,7 +37743,7 @@ Returns all available Telegram Passport elements
 
 #### Defined in
 
-dist/generated/types.d.ts:56040
+dist/generated/types.d.ts:56798
 
 ___
 
@@ -37315,7 +37762,7 @@ Returns all available Telegram Passport elements
 
 #### Defined in
 
-dist/generated/types.d.ts:56026
+dist/generated/types.d.ts:56784
 
 ___
 
@@ -37343,7 +37790,7 @@ Returns an animated emoji corresponding to a given emoji. Returns a 404 error if
 
 #### Defined in
 
-dist/generated/types.d.ts:53828
+dist/generated/types.d.ts:54512
 
 ___
 
@@ -37362,7 +37809,7 @@ Returns an animated emoji corresponding to a given emoji. Returns a 404 error if
 
 #### Defined in
 
-dist/generated/types.d.ts:53814
+dist/generated/types.d.ts:54498
 
 ___
 
@@ -37390,7 +37837,7 @@ Returns application config, provided by the server. Can be called before authori
 
 #### Defined in
 
-dist/generated/types.d.ts:56896
+dist/generated/types.d.ts:57781
 
 ___
 
@@ -37408,7 +37855,7 @@ Returns application config, provided by the server. Can be called before authori
 
 #### Defined in
 
-dist/generated/types.d.ts:56887
+dist/generated/types.d.ts:57772
 
 ___
 
@@ -37436,7 +37883,7 @@ Returns the link for downloading official Telegram application to be used when t
 
 #### Defined in
 
-dist/generated/types.d.ts:56869
+dist/generated/types.d.ts:57834
 
 ___
 
@@ -37454,7 +37901,7 @@ Returns the link for downloading official Telegram application to be used when t
 
 #### Defined in
 
-dist/generated/types.d.ts:56860
+dist/generated/types.d.ts:57825
 
 ___
 
@@ -37482,7 +37929,7 @@ Returns a list of archived sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:53452
+dist/generated/types.d.ts:54136
 
 ___
 
@@ -37503,7 +37950,7 @@ Returns a list of archived sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:53428
+dist/generated/types.d.ts:54112
 
 ___
 
@@ -37531,7 +37978,7 @@ Returns a list of sticker sets attached to a file, including regular, mask, and 
 
 #### Defined in
 
-dist/generated/types.d.ts:53494
+dist/generated/types.d.ts:54178
 
 ___
 
@@ -37550,7 +37997,7 @@ Returns a list of sticker sets attached to a file, including regular, mask, and 
 
 #### Defined in
 
-dist/generated/types.d.ts:53480
+dist/generated/types.d.ts:54164
 
 ___
 
@@ -37578,7 +38025,7 @@ Returns information about a bot that can be added to attachment menu
 
 #### Defined in
 
-dist/generated/types.d.ts:51270
+dist/generated/types.d.ts:51954
 
 ___
 
@@ -37597,7 +38044,7 @@ Returns information about a bot that can be added to attachment menu
 
 #### Defined in
 
-dist/generated/types.d.ts:51256
+dist/generated/types.d.ts:51940
 
 ___
 
@@ -37625,7 +38072,7 @@ Returns the current authorization state; this is an offline request. For informa
 
 #### Defined in
 
-dist/generated/types.d.ts:45501
+dist/generated/types.d.ts:46102
 
 ___
 
@@ -37643,7 +38090,7 @@ Returns the current authorization state; this is an offline request. For informa
 
 #### Defined in
 
-dist/generated/types.d.ts:45492
+dist/generated/types.d.ts:46093
 
 ___
 
@@ -37671,7 +38118,7 @@ Returns auto-download settings presets for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:55923
+dist/generated/types.d.ts:56681
 
 ___
 
@@ -37689,7 +38136,7 @@ Returns auto-download settings presets for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:55914
+dist/generated/types.d.ts:56672
 
 ___
 
@@ -37717,7 +38164,7 @@ Returns autosave settings for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:55955
+dist/generated/types.d.ts:56713
 
 ___
 
@@ -37735,7 +38182,7 @@ Returns autosave settings for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:55946
+dist/generated/types.d.ts:56704
 
 ___
 
@@ -37763,7 +38210,7 @@ Constructs a persistent HTTP URL for a background
 
 #### Defined in
 
-dist/generated/types.d.ts:55127
+dist/generated/types.d.ts:55885
 
 ___
 
@@ -37783,7 +38230,7 @@ Constructs a persistent HTTP URL for a background
 
 #### Defined in
 
-dist/generated/types.d.ts:55108
+dist/generated/types.d.ts:55866
 
 ___
 
@@ -37811,7 +38258,7 @@ Returns backgrounds installed by the user
 
 #### Defined in
 
-dist/generated/types.d.ts:55106
+dist/generated/types.d.ts:55864
 
 ___
 
@@ -37830,7 +38277,7 @@ Returns backgrounds installed by the user
 
 #### Defined in
 
-dist/generated/types.d.ts:55092
+dist/generated/types.d.ts:55850
 
 ___
 
@@ -37858,7 +38305,7 @@ Returns information about a bank card
 
 #### Defined in
 
-dist/generated/types.d.ts:56003
+dist/generated/types.d.ts:56761
 
 ___
 
@@ -37877,7 +38324,7 @@ Returns information about a bank card
 
 #### Defined in
 
-dist/generated/types.d.ts:55989
+dist/generated/types.d.ts:56747
 
 ___
 
@@ -37905,7 +38352,7 @@ Returns information about a basic group by its identifier. This is an offline re
 
 #### Defined in
 
-dist/generated/types.d.ts:46224
+dist/generated/types.d.ts:46825
 
 ___
 
@@ -37924,7 +38371,7 @@ Returns information about a basic group by its identifier. This is an offline re
 
 #### Defined in
 
-dist/generated/types.d.ts:46210
+dist/generated/types.d.ts:46811
 
 ___
 
@@ -37952,7 +38399,7 @@ Returns full information about a basic group by its identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:46240
+dist/generated/types.d.ts:46841
 
 ___
 
@@ -37971,7 +38418,7 @@ Returns full information about a basic group by its identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:46226
+dist/generated/types.d.ts:46827
 
 ___
 
@@ -37999,7 +38446,7 @@ Returns users and chats that were blocked by the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:53109
+dist/generated/types.d.ts:53793
 
 ___
 
@@ -38019,7 +38466,101 @@ Returns users and chats that were blocked by the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:53090
+dist/generated/types.d.ts:53774
+
+___
+
+### getBotInfoDescription
+
+Ƭ **getBotInfoDescription**: (`parameters`: [`getBotInfoDescription$Input`](index.types.default.md#getbotinfodescription$input)) => [`Text`](index.types.default.md#text)
+
+#### Type declaration
+
+▸ (`parameters`): [`Text`](index.types.default.md#text)
+
+Returns the text shown in the chat with the bot if the chat is empty in the given language; bots only
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getBotInfoDescription$Input`](index.types.default.md#getbotinfodescription$input) | [getBotInfoDescription$Input](index.types.md#getbotinfodescription$input) |
+
+##### Returns
+
+[`Text`](index.types.default.md#text)
+
+[Text](index.types.md#text)
+
+#### Defined in
+
+dist/generated/types.d.ts:55107
+
+___
+
+### getBotInfoDescription$Input
+
+Ƭ **getBotInfoDescription$Input**: `Object`
+
+Returns the text shown in the chat with the bot if the chat is empty in the given language; bots only
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"getBotInfoDescription"`` | - |
+| `language_code?` | `string` | A two-letter ISO 639-1 language code or an empty string |
+
+#### Defined in
+
+dist/generated/types.d.ts:55093
+
+___
+
+### getBotInfoShortDescription
+
+Ƭ **getBotInfoShortDescription**: (`parameters`: [`getBotInfoShortDescription$Input`](index.types.default.md#getbotinfoshortdescription$input)) => [`Text`](index.types.default.md#text)
+
+#### Type declaration
+
+▸ (`parameters`): [`Text`](index.types.default.md#text)
+
+Returns the text shown on the bot's profile page and sent together with the link when users share the bot in the given language; bots only
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getBotInfoShortDescription$Input`](index.types.default.md#getbotinfoshortdescription$input) | [getBotInfoShortDescription$Input](index.types.md#getbotinfoshortdescription$input) |
+
+##### Returns
+
+[`Text`](index.types.default.md#text)
+
+[Text](index.types.md#text)
+
+#### Defined in
+
+dist/generated/types.d.ts:55144
+
+___
+
+### getBotInfoShortDescription$Input
+
+Ƭ **getBotInfoShortDescription$Input**: `Object`
+
+Returns the text shown on the bot's profile page and sent together with the link when users share the bot in the given language; bots only
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"getBotInfoShortDescription"`` | - |
+| `language_code?` | `string` | A two-letter ISO 639-1 language code or an empty string |
+
+#### Defined in
+
+dist/generated/types.d.ts:55130
 
 ___
 
@@ -38047,7 +38588,7 @@ Sends a callback query to a bot and returns an answer. Returns an error with cod
 
 #### Defined in
 
-dist/generated/types.d.ts:49537
+dist/generated/types.d.ts:50200
 
 ___
 
@@ -38068,7 +38609,7 @@ Sends a callback query to a bot and returns an answer. Returns an error with cod
 
 #### Defined in
 
-dist/generated/types.d.ts:49513
+dist/generated/types.d.ts:50176
 
 ___
 
@@ -38096,7 +38637,7 @@ Returns information about a message with the callback button that originated a c
 
 #### Defined in
 
-dist/generated/types.d.ts:46412
+dist/generated/types.d.ts:47013
 
 ___
 
@@ -38117,7 +38658,7 @@ Returns information about a message with the callback button that originated a c
 
 #### Defined in
 
-dist/generated/types.d.ts:46388
+dist/generated/types.d.ts:46989
 
 ___
 
@@ -38145,7 +38686,7 @@ Returns information about a chat by its identifier, this is an offline request i
 
 #### Defined in
 
-dist/generated/types.d.ts:46304
+dist/generated/types.d.ts:46905
 
 ___
 
@@ -38164,7 +38705,7 @@ Returns information about a chat by its identifier, this is an offline request i
 
 #### Defined in
 
-dist/generated/types.d.ts:46290
+dist/generated/types.d.ts:46891
 
 ___
 
@@ -38192,7 +38733,7 @@ Returns a list of administrators of the chat with their custom titles
 
 #### Defined in
 
-dist/generated/types.d.ts:51063
+dist/generated/types.d.ts:51747
 
 ___
 
@@ -38211,7 +38752,7 @@ Returns a list of administrators of the chat with their custom titles
 
 #### Defined in
 
-dist/generated/types.d.ts:51049
+dist/generated/types.d.ts:51733
 
 ___
 
@@ -38239,7 +38780,7 @@ Returns list of message sender identifiers, which can be used to send messages i
 
 #### Defined in
 
-dist/generated/types.d.ts:47671
+dist/generated/types.d.ts:48272
 
 ___
 
@@ -38258,7 +38799,7 @@ Returns list of message sender identifiers, which can be used to send messages i
 
 #### Defined in
 
-dist/generated/types.d.ts:47657
+dist/generated/types.d.ts:48258
 
 ___
 
@@ -38286,7 +38827,7 @@ Returns a list of service actions taken by chat members and administrators in th
 
 #### Defined in
 
-dist/generated/types.d.ts:54921
+dist/generated/types.d.ts:55679
 
 ___
 
@@ -38310,7 +38851,7 @@ Returns a list of service actions taken by chat members and administrators in th
 
 #### Defined in
 
-dist/generated/types.d.ts:54882
+dist/generated/types.d.ts:55640
 
 ___
 
@@ -38338,7 +38879,7 @@ Returns information about a chat filter by its identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:50265
+dist/generated/types.d.ts:50949
 
 ___
 
@@ -38357,7 +38898,7 @@ Returns information about a chat filter by its identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:50251
+dist/generated/types.d.ts:50935
 
 ___
 
@@ -38385,7 +38926,7 @@ Returns default icon name for a filter. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:50366
+dist/generated/types.d.ts:51050
 
 ___
 
@@ -38404,7 +38945,7 @@ Returns default icon name for a filter. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:50352
+dist/generated/types.d.ts:51036
 
 ___
 
@@ -38434,7 +38975,7 @@ Returns messages in a chat. The messages are returned in a reverse chronological
 
 #### Defined in
 
-dist/generated/types.d.ts:46899
+dist/generated/types.d.ts:47500
 
 ___
 
@@ -38452,13 +38993,13 @@ Returns messages in a chat. The messages are returned in a reverse chronological
 | `_` | ``"getChatHistory"`` | - |
 | `chat_id?` | [`int53`](index.types.default.md#int53-1) | Chat identifier |
 | `from_message_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the message starting from which history must be fetched; use 0 to get results from the last message |
-| `limit?` | [`int32`](index.types.default.md#int32-1) | The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than or equal to -offset.    -For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit |
+| `limit?` | [`int32`](index.types.default.md#int32-1) | The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than or equal to -offset. -For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit |
 | `offset?` | [`int32`](index.types.default.md#int32-1) | Specify 0 to get results from exactly the from_message_id or a negative offset up to 99 to get additionally some newer messages |
 | `only_local?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true to get only messages that are available without sending network requests |
 
 #### Defined in
 
-dist/generated/types.d.ts:46861
+dist/generated/types.d.ts:47462
 
 ___
 
@@ -38486,7 +39027,7 @@ Returns information about an invite link. Requires administrator privileges and 
 
 #### Defined in
 
-dist/generated/types.d.ts:51925
+dist/generated/types.d.ts:52609
 
 ___
 
@@ -38506,7 +39047,7 @@ Returns information about an invite link. Requires administrator privileges and 
 
 #### Defined in
 
-dist/generated/types.d.ts:51906
+dist/generated/types.d.ts:52590
 
 ___
 
@@ -38534,7 +39075,7 @@ Returns list of chat administrators with number of their invite links. Requires 
 
 #### Defined in
 
-dist/generated/types.d.ts:51941
+dist/generated/types.d.ts:52625
 
 ___
 
@@ -38553,7 +39094,7 @@ Returns list of chat administrators with number of their invite links. Requires 
 
 #### Defined in
 
-dist/generated/types.d.ts:51927
+dist/generated/types.d.ts:52611
 
 ___
 
@@ -38581,7 +39122,7 @@ Returns chat members joined a chat via an invite link. Requires administrator pr
 
 #### Defined in
 
-dist/generated/types.d.ts:52013
+dist/generated/types.d.ts:52697
 
 ___
 
@@ -38603,7 +39144,7 @@ Returns chat members joined a chat via an invite link. Requires administrator pr
 
 #### Defined in
 
-dist/generated/types.d.ts:51984
+dist/generated/types.d.ts:52668
 
 ___
 
@@ -38631,7 +39172,7 @@ Returns invite links for a chat created by specified administrator. Requires adm
 
 #### Defined in
 
-dist/generated/types.d.ts:51982
+dist/generated/types.d.ts:52666
 
 ___
 
@@ -38655,7 +39196,7 @@ Returns invite links for a chat created by specified administrator. Requires adm
 
 #### Defined in
 
-dist/generated/types.d.ts:51943
+dist/generated/types.d.ts:52627
 
 ___
 
@@ -38683,7 +39224,7 @@ Returns pending join requests in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52147
+dist/generated/types.d.ts:52831
 
 ___
 
@@ -38706,7 +39247,7 @@ Returns pending join requests in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52113
+dist/generated/types.d.ts:52797
 
 ___
 
@@ -38734,7 +39275,7 @@ Returns chat lists to which the chat can be added. This is an offline request
 
 #### Defined in
 
-dist/generated/types.d.ts:50228
+dist/generated/types.d.ts:50912
 
 ___
 
@@ -38753,7 +39294,7 @@ Returns chat lists to which the chat can be added. This is an offline request
 
 #### Defined in
 
-dist/generated/types.d.ts:50214
+dist/generated/types.d.ts:50898
 
 ___
 
@@ -38781,7 +39322,7 @@ Returns information about a single member of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:51016
+dist/generated/types.d.ts:51700
 
 ___
 
@@ -38801,7 +39342,7 @@ Returns information about a single member of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50997
+dist/generated/types.d.ts:51681
 
 ___
 
@@ -38829,7 +39370,7 @@ Returns the last message sent in a chat no later than the specified date
 
 #### Defined in
 
-dist/generated/types.d.ts:47245
+dist/generated/types.d.ts:47846
 
 ___
 
@@ -38849,7 +39390,7 @@ Returns the last message sent in a chat no later than the specified date
 
 #### Defined in
 
-dist/generated/types.d.ts:47226
+dist/generated/types.d.ts:47827
 
 ___
 
@@ -38877,7 +39418,7 @@ Returns information about the next messages of the specified type in the chat sp
 
 #### Defined in
 
-dist/generated/types.d.ts:47305
+dist/generated/types.d.ts:47906
 
 ___
 
@@ -38898,7 +39439,7 @@ Returns information about the next messages of the specified type in the chat sp
 
 #### Defined in
 
-dist/generated/types.d.ts:47281
+dist/generated/types.d.ts:47882
 
 ___
 
@@ -38926,7 +39467,7 @@ Returns approximate number of messages of the specified type in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:47331
+dist/generated/types.d.ts:47932
 
 ___
 
@@ -38947,7 +39488,7 @@ Returns approximate number of messages of the specified type in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:47307
+dist/generated/types.d.ts:47908
 
 ___
 
@@ -38975,7 +39516,7 @@ Returns approximate 1-based position of a message among messages, which can be f
 
 #### Defined in
 
-dist/generated/types.d.ts:47362
+dist/generated/types.d.ts:47963
 
 ___
 
@@ -38997,7 +39538,7 @@ Returns approximate 1-based position of a message among messages, which can be f
 
 #### Defined in
 
-dist/generated/types.d.ts:47333
+dist/generated/types.d.ts:47934
 
 ___
 
@@ -39025,7 +39566,7 @@ Returns list of chats with non-default notification settings
 
 #### Defined in
 
-dist/generated/types.d.ts:51159
+dist/generated/types.d.ts:51843
 
 ___
 
@@ -39045,7 +39586,7 @@ Returns list of chats with non-default notification settings
 
 #### Defined in
 
-dist/generated/types.d.ts:51140
+dist/generated/types.d.ts:51824
 
 ___
 
@@ -39073,7 +39614,7 @@ Returns information about a newest pinned message in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46386
+dist/generated/types.d.ts:46987
 
 ___
 
@@ -39092,7 +39633,7 @@ Returns information about a newest pinned message in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46372
+dist/generated/types.d.ts:46973
 
 ___
 
@@ -39120,7 +39661,7 @@ Returns all scheduled messages in a chat. The messages are returned in a reverse
 
 #### Defined in
 
-dist/generated/types.d.ts:47378
+dist/generated/types.d.ts:47979
 
 ___
 
@@ -39139,7 +39680,7 @@ Returns all scheduled messages in a chat. The messages are returned in a reverse
 
 #### Defined in
 
-dist/generated/types.d.ts:47364
+dist/generated/types.d.ts:47965
 
 ___
 
@@ -39169,7 +39710,7 @@ Returns sparse positions of messages of the specified type in the chat to be use
 
 #### Defined in
 
-dist/generated/types.d.ts:47279
+dist/generated/types.d.ts:47880
 
 ___
 
@@ -39192,7 +39733,7 @@ Returns sparse positions of messages of the specified type in the chat to be use
 
 #### Defined in
 
-dist/generated/types.d.ts:47248
+dist/generated/types.d.ts:47849
 
 ___
 
@@ -39220,7 +39761,7 @@ Returns sponsored messages to be shown in a chat; for channel chats only
 
 #### Defined in
 
-dist/generated/types.d.ts:47425
+dist/generated/types.d.ts:48026
 
 ___
 
@@ -39239,7 +39780,7 @@ Returns sponsored messages to be shown in a chat; for channel chats only
 
 #### Defined in
 
-dist/generated/types.d.ts:47411
+dist/generated/types.d.ts:48012
 
 ___
 
@@ -39267,7 +39808,7 @@ Returns detailed statistics about a chat. Currently, this method can be used onl
 
 #### Defined in
 
-dist/generated/types.d.ts:55704
+dist/generated/types.d.ts:56462
 
 ___
 
@@ -39287,7 +39828,7 @@ Returns detailed statistics about a chat. Currently, this method can be used onl
 
 #### Defined in
 
-dist/generated/types.d.ts:55685
+dist/generated/types.d.ts:56443
 
 ___
 
@@ -39315,7 +39856,7 @@ Returns an ordered list of chats from the beginning of a chat list. For informat
 
 #### Defined in
 
-dist/generated/types.d.ts:46557
+dist/generated/types.d.ts:47158
 
 ___
 
@@ -39335,7 +39876,7 @@ Returns an ordered list of chats from the beginning of a chat list. For informat
 
 #### Defined in
 
-dist/generated/types.d.ts:46538
+dist/generated/types.d.ts:47139
 
 ___
 
@@ -39363,7 +39904,7 @@ Returns list of commands supported by the bot for the given user scope and langu
 
 #### Defined in
 
-dist/generated/types.d.ts:54317
+dist/generated/types.d.ts:55001
 
 ___
 
@@ -39383,7 +39924,7 @@ Returns list of commands supported by the bot for the given user scope and langu
 
 #### Defined in
 
-dist/generated/types.d.ts:54298
+dist/generated/types.d.ts:54982
 
 ___
 
@@ -39411,7 +39952,7 @@ Returns all website where the current user used Telegram to log in
 
 #### Defined in
 
-dist/generated/types.d.ts:54493
+dist/generated/types.d.ts:55251
 
 ___
 
@@ -39429,7 +39970,7 @@ Returns all website where the current user used Telegram to log in
 
 #### Defined in
 
-dist/generated/types.d.ts:54484
+dist/generated/types.d.ts:55242
 
 ___
 
@@ -39457,7 +39998,7 @@ Returns all user contacts
 
 #### Defined in
 
-dist/generated/types.d.ts:53159
+dist/generated/types.d.ts:53843
 
 ___
 
@@ -39475,7 +40016,7 @@ Returns all user contacts
 
 #### Defined in
 
-dist/generated/types.d.ts:53150
+dist/generated/types.d.ts:53834
 
 ___
 
@@ -39503,7 +40044,7 @@ Returns information about existing countries. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:56810
+dist/generated/types.d.ts:57706
 
 ___
 
@@ -39521,7 +40062,7 @@ Returns information about existing countries. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:56801
+dist/generated/types.d.ts:57697
 
 ___
 
@@ -39549,7 +40090,7 @@ Uses the current IP address to find the current country. Returns two-letter ISO 
 
 #### Defined in
 
-dist/generated/types.d.ts:56821
+dist/generated/types.d.ts:57717
 
 ___
 
@@ -39567,7 +40108,7 @@ Uses the current IP address to find the current country. Returns two-letter ISO 
 
 #### Defined in
 
-dist/generated/types.d.ts:56812
+dist/generated/types.d.ts:57708
 
 ___
 
@@ -39595,7 +40136,7 @@ Returns a list of public chats of the specified type, owned by the user
 
 #### Defined in
 
-dist/generated/types.d.ts:46791
+dist/generated/types.d.ts:47392
 
 ___
 
@@ -39614,7 +40155,7 @@ Returns a list of public chats of the specified type, owned by the user
 
 #### Defined in
 
-dist/generated/types.d.ts:46777
+dist/generated/types.d.ts:47378
 
 ___
 
@@ -39642,7 +40183,7 @@ Returns all updates needed to restore current TDLib state, i.e. all actual updat
 
 #### Defined in
 
-dist/generated/types.d.ts:45882
+dist/generated/types.d.ts:46483
 
 ___
 
@@ -39660,7 +40201,7 @@ Returns all updates needed to restore current TDLib state, i.e. all actual updat
 
 #### Defined in
 
-dist/generated/types.d.ts:45873
+dist/generated/types.d.ts:46474
 
 ___
 
@@ -39688,7 +40229,7 @@ Returns TGS stickers with generic animations for custom emoji reactions
 
 #### Defined in
 
-dist/generated/types.d.ts:48699
+dist/generated/types.d.ts:49300
 
 ___
 
@@ -39706,7 +40247,7 @@ Returns TGS stickers with generic animations for custom emoji reactions
 
 #### Defined in
 
-dist/generated/types.d.ts:48690
+dist/generated/types.d.ts:49291
 
 ___
 
@@ -39734,7 +40275,7 @@ Returns list of custom emoji stickers by their identifiers. Stickers are returne
 
 #### Defined in
 
-dist/generated/types.d.ts:53860
+dist/generated/types.d.ts:54544
 
 ___
 
@@ -39753,7 +40294,7 @@ Returns list of custom emoji stickers by their identifiers. Stickers are returne
 
 #### Defined in
 
-dist/generated/types.d.ts:53846
+dist/generated/types.d.ts:54530
 
 ___
 
@@ -39781,7 +40322,7 @@ Returns database statistics
 
 #### Defined in
 
-dist/generated/types.d.ts:55794
+dist/generated/types.d.ts:56552
 
 ___
 
@@ -39799,7 +40340,7 @@ Returns database statistics
 
 #### Defined in
 
-dist/generated/types.d.ts:55785
+dist/generated/types.d.ts:56543
 
 ___
 
@@ -39827,7 +40368,7 @@ Returns information about a tg:// deep link. Use "tg://need_update_for_some_feat
 
 #### Defined in
 
-dist/generated/types.d.ts:56885
+dist/generated/types.d.ts:57770
 
 ___
 
@@ -39846,7 +40387,7 @@ Returns information about a tg:// deep link. Use "tg://need_update_for_some_feat
 
 #### Defined in
 
-dist/generated/types.d.ts:56871
+dist/generated/types.d.ts:57756
 
 ___
 
@@ -39874,7 +40415,7 @@ Returns default list of custom emoji stickers for placing on a chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:53871
+dist/generated/types.d.ts:54555
 
 ___
 
@@ -39892,7 +40433,7 @@ Returns default list of custom emoji stickers for placing on a chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:53862
+dist/generated/types.d.ts:54546
 
 ___
 
@@ -39920,7 +40461,7 @@ Returns default emoji statuses
 
 #### Defined in
 
-dist/generated/types.d.ts:51329
+dist/generated/types.d.ts:52013
 
 ___
 
@@ -39938,7 +40479,7 @@ Returns default emoji statuses
 
 #### Defined in
 
-dist/generated/types.d.ts:51320
+dist/generated/types.d.ts:52004
 
 ___
 
@@ -39966,7 +40507,7 @@ Returns default message auto-delete time setting for new chats
 
 #### Defined in
 
-dist/generated/types.d.ts:55579
+dist/generated/types.d.ts:56337
 
 ___
 
@@ -39984,7 +40525,7 @@ Returns default message auto-delete time setting for new chats
 
 #### Defined in
 
-dist/generated/types.d.ts:55570
+dist/generated/types.d.ts:56328
 
 ___
 
@@ -40012,7 +40553,7 @@ Returns default list of custom emoji stickers for placing on a profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:53882
+dist/generated/types.d.ts:54566
 
 ___
 
@@ -40030,7 +40571,7 @@ Returns default list of custom emoji stickers for placing on a profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:53873
+dist/generated/types.d.ts:54557
 
 ___
 
@@ -40058,7 +40599,7 @@ Returns available emojis categories
 
 #### Defined in
 
-dist/generated/types.d.ts:53812
+dist/generated/types.d.ts:54496
 
 ___
 
@@ -40077,7 +40618,7 @@ Returns available emojis categories
 
 #### Defined in
 
-dist/generated/types.d.ts:53798
+dist/generated/types.d.ts:54482
 
 ___
 
@@ -40105,7 +40646,7 @@ Returns information about a emoji reaction. Returns a 404 error if the reaction 
 
 #### Defined in
 
-dist/generated/types.d.ts:48688
+dist/generated/types.d.ts:49289
 
 ___
 
@@ -40124,7 +40665,7 @@ Returns information about a emoji reaction. Returns a 404 error if the reaction 
 
 #### Defined in
 
-dist/generated/types.d.ts:48674
+dist/generated/types.d.ts:49275
 
 ___
 
@@ -40152,7 +40693,7 @@ Returns an HTTP URL which can be used to automatically log in to the translation
 
 #### Defined in
 
-dist/generated/types.d.ts:53844
+dist/generated/types.d.ts:54528
 
 ___
 
@@ -40171,7 +40712,7 @@ Returns an HTTP URL which can be used to automatically log in to the translation
 
 #### Defined in
 
-dist/generated/types.d.ts:53830
+dist/generated/types.d.ts:54514
 
 ___
 
@@ -40199,7 +40740,7 @@ Returns an HTTP URL which can be used to automatically authorize the current use
 
 #### Defined in
 
-dist/generated/types.d.ts:49955
+dist/generated/types.d.ts:50639
 
 ___
 
@@ -40219,7 +40760,7 @@ Returns an HTTP URL which can be used to automatically authorize the current use
 
 #### Defined in
 
-dist/generated/types.d.ts:49936
+dist/generated/types.d.ts:50620
 
 ___
 
@@ -40247,7 +40788,7 @@ Returns information about an action to be done when the current user clicks an e
 
 #### Defined in
 
-dist/generated/types.d.ts:49934
+dist/generated/types.d.ts:50618
 
 ___
 
@@ -40266,7 +40807,7 @@ Returns information about an action to be done when the current user clicks an e
 
 #### Defined in
 
-dist/generated/types.d.ts:49920
+dist/generated/types.d.ts:50604
 
 ___
 
@@ -40294,7 +40835,7 @@ Returns favorite stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53719
+dist/generated/types.d.ts:54403
 
 ___
 
@@ -40312,7 +40853,7 @@ Returns favorite stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53710
+dist/generated/types.d.ts:54394
 
 ___
 
@@ -40340,7 +40881,7 @@ Returns information about a file; this is an offline request
 
 #### Defined in
 
-dist/generated/types.d.ts:46491
+dist/generated/types.d.ts:47092
 
 ___
 
@@ -40359,7 +40900,7 @@ Returns information about a file; this is an offline request
 
 #### Defined in
 
-dist/generated/types.d.ts:46477
+dist/generated/types.d.ts:47078
 
 ___
 
@@ -40387,7 +40928,7 @@ Returns file downloaded prefix size from a given offset, in bytes
 
 #### Defined in
 
-dist/generated/types.d.ts:51397
+dist/generated/types.d.ts:52081
 
 ___
 
@@ -40407,7 +40948,7 @@ Returns file downloaded prefix size from a given offset, in bytes
 
 #### Defined in
 
-dist/generated/types.d.ts:51378
+dist/generated/types.d.ts:52062
 
 ___
 
@@ -40435,7 +40976,7 @@ Returns the extension of a file, guessed by its MIME type. Returns an empty stri
 
 #### Defined in
 
-dist/generated/types.d.ts:48951
+dist/generated/types.d.ts:49552
 
 ___
 
@@ -40454,7 +40995,7 @@ Returns the extension of a file, guessed by its MIME type. Returns an empty stri
 
 #### Defined in
 
-dist/generated/types.d.ts:48937
+dist/generated/types.d.ts:49538
 
 ___
 
@@ -40482,7 +41023,7 @@ Returns the MIME type of a file, guessed by its extension. Returns an empty stri
 
 #### Defined in
 
-dist/generated/types.d.ts:48935
+dist/generated/types.d.ts:49536
 
 ___
 
@@ -40501,7 +41042,7 @@ Returns the MIME type of a file, guessed by its extension. Returns an empty stri
 
 #### Defined in
 
-dist/generated/types.d.ts:48921
+dist/generated/types.d.ts:49522
 
 ___
 
@@ -40529,7 +41070,7 @@ Returns information about a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:48469
+dist/generated/types.d.ts:49070
 
 ___
 
@@ -40549,7 +41090,7 @@ Returns information about a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:48450
+dist/generated/types.d.ts:49051
 
 ___
 
@@ -40577,7 +41118,7 @@ Returns list of custom emojis, which can be used as forum topic icon by all user
 
 #### Defined in
 
-dist/generated/types.d.ts:48386
+dist/generated/types.d.ts:48987
 
 ___
 
@@ -40595,7 +41136,7 @@ Returns list of custom emojis, which can be used as forum topic icon by all user
 
 #### Defined in
 
-dist/generated/types.d.ts:48377
+dist/generated/types.d.ts:48978
 
 ___
 
@@ -40623,7 +41164,7 @@ Returns an HTTPS link to a topic in a forum chat. This is an offline request
 
 #### Defined in
 
-dist/generated/types.d.ts:48490
+dist/generated/types.d.ts:49091
 
 ___
 
@@ -40643,7 +41184,7 @@ Returns an HTTPS link to a topic in a forum chat. This is an offline request
 
 #### Defined in
 
-dist/generated/types.d.ts:48471
+dist/generated/types.d.ts:49072
 
 ___
 
@@ -40671,7 +41212,7 @@ Returns found forum topics in a forum chat. This is a temporary method for getti
 
 #### Defined in
 
-dist/generated/types.d.ts:48531
+dist/generated/types.d.ts:49132
 
 ___
 
@@ -40695,7 +41236,7 @@ Returns found forum topics in a forum chat. This is a temporary method for getti
 
 #### Defined in
 
-dist/generated/types.d.ts:48492
+dist/generated/types.d.ts:49093
 
 ___
 
@@ -40723,7 +41264,7 @@ Returns the high scores for a game and some part of the high score table in the 
 
 #### Defined in
 
-dist/generated/types.d.ts:49723
+dist/generated/types.d.ts:50386
 
 ___
 
@@ -40744,7 +41285,7 @@ Returns the high scores for a game and some part of the high score table in the 
 
 #### Defined in
 
-dist/generated/types.d.ts:49699
+dist/generated/types.d.ts:50362
 
 ___
 
@@ -40772,7 +41313,7 @@ Returns information about a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52492
+dist/generated/types.d.ts:53176
 
 ___
 
@@ -40791,7 +41332,7 @@ Returns information about a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52478
+dist/generated/types.d.ts:53162
 
 ___
 
@@ -40819,7 +41360,7 @@ Returns invite link to a video chat in a public chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52722
+dist/generated/types.d.ts:53406
 
 ___
 
@@ -40839,7 +41380,7 @@ Returns invite link to a video chat in a public chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52703
+dist/generated/types.d.ts:53387
 
 ___
 
@@ -40867,7 +41408,7 @@ Returns a file with a segment of a group call stream in a modified OGG format fo
 
 #### Defined in
 
-dist/generated/types.d.ts:53036
+dist/generated/types.d.ts:53720
 
 ___
 
@@ -40890,7 +41431,7 @@ Returns a file with a segment of a group call stream in a modified OGG format fo
 
 #### Defined in
 
-dist/generated/types.d.ts:53002
+dist/generated/types.d.ts:53686
 
 ___
 
@@ -40918,7 +41459,7 @@ Returns information about available group call streams
 
 #### Defined in
 
-dist/generated/types.d.ts:53000
+dist/generated/types.d.ts:53684
 
 ___
 
@@ -40937,7 +41478,7 @@ Returns information about available group call streams
 
 #### Defined in
 
-dist/generated/types.d.ts:52986
+dist/generated/types.d.ts:53670
 
 ___
 
@@ -40965,7 +41506,7 @@ Returns a list of common group chats with a given user. Chats are sorted by thei
 
 #### Defined in
 
-dist/generated/types.d.ts:46858
+dist/generated/types.d.ts:47459
 
 ___
 
@@ -40986,7 +41527,7 @@ Returns a list of common group chats with a given user. Chats are sorted by thei
 
 #### Defined in
 
-dist/generated/types.d.ts:46834
+dist/generated/types.d.ts:47435
 
 ___
 
@@ -41014,7 +41555,7 @@ Returns the total number of imported contacts
 
 #### Defined in
 
-dist/generated/types.d.ts:53207
+dist/generated/types.d.ts:53891
 
 ___
 
@@ -41032,7 +41573,7 @@ Returns the total number of imported contacts
 
 #### Defined in
 
-dist/generated/types.d.ts:53198
+dist/generated/types.d.ts:53882
 
 ___
 
@@ -41060,7 +41601,7 @@ Returns a list of recently inactive supergroups and channels. Can be used when u
 
 #### Defined in
 
-dist/generated/types.d.ts:46832
+dist/generated/types.d.ts:47433
 
 ___
 
@@ -41078,7 +41619,7 @@ Returns a list of recently inactive supergroups and channels. Can be used when u
 
 #### Defined in
 
-dist/generated/types.d.ts:46823
+dist/generated/types.d.ts:47424
 
 ___
 
@@ -41106,7 +41647,7 @@ Returns game high scores and some part of the high score table in the range of t
 
 #### Defined in
 
-dist/generated/types.d.ts:49744
+dist/generated/types.d.ts:50407
 
 ___
 
@@ -41126,7 +41667,7 @@ Returns game high scores and some part of the high score table in the range of t
 
 #### Defined in
 
-dist/generated/types.d.ts:49725
+dist/generated/types.d.ts:50388
 
 ___
 
@@ -41154,7 +41695,7 @@ Sends an inline query to a bot and returns its results. Returns an error with co
 
 #### Defined in
 
-dist/generated/types.d.ts:49322
+dist/generated/types.d.ts:49923
 
 ___
 
@@ -41177,7 +41718,7 @@ Sends an inline query to a bot and returns its results. Returns an error with co
 
 #### Defined in
 
-dist/generated/types.d.ts:49288
+dist/generated/types.d.ts:49889
 
 ___
 
@@ -41205,7 +41746,7 @@ Returns a list of installed sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:53426
+dist/generated/types.d.ts:54110
 
 ___
 
@@ -41224,7 +41765,55 @@ Returns a list of installed sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:53412
+dist/generated/types.d.ts:54096
+
+___
+
+### getInternalLink
+
+Ƭ **getInternalLink**: (`parameters`: [`getInternalLink$Input`](index.types.default.md#getinternallink$input)) => [`HttpUrl`](index.types.default.md#httpurl)
+
+#### Type declaration
+
+▸ (`parameters`): [`HttpUrl`](index.types.default.md#httpurl)
+
+Returns an HTTPS or a tg: link with the given type. Can be called before authorization
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getInternalLink$Input`](index.types.default.md#getinternallink$input) | [getInternalLink$Input](index.types.md#getinternallink$input) |
+
+##### Returns
+
+[`HttpUrl`](index.types.default.md#httpurl)
+
+[HttpUrl](index.types.md#httpurl)
+
+#### Defined in
+
+dist/generated/types.d.ts:50586
+
+___
+
+### getInternalLink$Input
+
+Ƭ **getInternalLink$Input**: `Object`
+
+Returns an HTTPS or a tg: link with the given type. Can be called before authorization
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"getInternalLink"`` | - |
+| `is_http?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true to create an HTTPS link (only available for some link types); pass false to create a tg: link |
+| `type?` | [`InternalLinkType$Input`](index.types.default.md#internallinktype$input) | Expected type of the link |
+
+#### Defined in
+
+dist/generated/types.d.ts:50567
 
 ___
 
@@ -41252,7 +41841,7 @@ Returns information about the type of an internal link. Returns a 404 error if t
 
 #### Defined in
 
-dist/generated/types.d.ts:49918
+dist/generated/types.d.ts:50602
 
 ___
 
@@ -41271,7 +41860,7 @@ Returns information about the type of an internal link. Returns a 404 error if t
 
 #### Defined in
 
-dist/generated/types.d.ts:49904
+dist/generated/types.d.ts:50588
 
 ___
 
@@ -41299,7 +41888,7 @@ Converts a JsonValue object to corresponding JSON-serialized string. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:49030
+dist/generated/types.d.ts:49631
 
 ___
 
@@ -41318,7 +41907,7 @@ Converts a JsonValue object to corresponding JSON-serialized string. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:49016
+dist/generated/types.d.ts:49617
 
 ___
 
@@ -41346,7 +41935,7 @@ Converts a JSON-serialized string to corresponding JsonValue object. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:49014
+dist/generated/types.d.ts:49615
 
 ___
 
@@ -41365,7 +41954,7 @@ Converts a JSON-serialized string to corresponding JsonValue object. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:49000
+dist/generated/types.d.ts:49601
 
 ___
 
@@ -41393,7 +41982,7 @@ Returns information about a language pack. Returned language pack identifier may
 
 #### Defined in
 
-dist/generated/types.d.ts:55228
+dist/generated/types.d.ts:55986
 
 ___
 
@@ -41412,7 +42001,7 @@ Returns information about a language pack. Returned language pack identifier may
 
 #### Defined in
 
-dist/generated/types.d.ts:55214
+dist/generated/types.d.ts:55972
 
 ___
 
@@ -41440,7 +42029,7 @@ Returns a string stored in the local database from the specified localization ta
 
 #### Defined in
 
-dist/generated/types.d.ts:48998
+dist/generated/types.d.ts:49599
 
 ___
 
@@ -41462,7 +42051,7 @@ Returns a string stored in the local database from the specified localization ta
 
 #### Defined in
 
-dist/generated/types.d.ts:48969
+dist/generated/types.d.ts:49570
 
 ___
 
@@ -41490,7 +42079,7 @@ Returns strings from a language pack in the current localization target by their
 
 #### Defined in
 
-dist/generated/types.d.ts:55249
+dist/generated/types.d.ts:56007
 
 ___
 
@@ -41510,7 +42099,7 @@ Returns strings from a language pack in the current localization target by their
 
 #### Defined in
 
-dist/generated/types.d.ts:55230
+dist/generated/types.d.ts:55988
 
 ___
 
@@ -41538,7 +42127,7 @@ Returns information about the current localization target. This is an offline re
 
 #### Defined in
 
-dist/generated/types.d.ts:55212
+dist/generated/types.d.ts:55970
 
 ___
 
@@ -41557,7 +42146,7 @@ Returns information about the current localization target. This is an offline re
 
 #### Defined in
 
-dist/generated/types.d.ts:55198
+dist/generated/types.d.ts:55956
 
 ___
 
@@ -41585,7 +42174,7 @@ Returns information about currently used log stream for internal logging of TDLi
 
 #### Defined in
 
-dist/generated/types.d.ts:57102
+dist/generated/types.d.ts:58014
 
 ___
 
@@ -41603,7 +42192,7 @@ Returns information about currently used log stream for internal logging of TDLi
 
 #### Defined in
 
-dist/generated/types.d.ts:57093
+dist/generated/types.d.ts:58005
 
 ___
 
@@ -41631,7 +42220,7 @@ Returns current verbosity level for a specified TDLib internal log tag. Can be c
 
 #### Defined in
 
-dist/generated/types.d.ts:57179
+dist/generated/types.d.ts:58091
 
 ___
 
@@ -41650,7 +42239,7 @@ Returns current verbosity level for a specified TDLib internal log tag. Can be c
 
 #### Defined in
 
-dist/generated/types.d.ts:57165
+dist/generated/types.d.ts:58077
 
 ___
 
@@ -41678,7 +42267,7 @@ Returns list of available TDLib internal log tags, for example, ["actor", "binlo
 
 #### Defined in
 
-dist/generated/types.d.ts:57142
+dist/generated/types.d.ts:58054
 
 ___
 
@@ -41696,7 +42285,7 @@ Returns list of available TDLib internal log tags, for example, ["actor", "binlo
 
 #### Defined in
 
-dist/generated/types.d.ts:57133
+dist/generated/types.d.ts:58045
 
 ___
 
@@ -41724,7 +42313,7 @@ Returns current verbosity level of the internal logging of TDLib. Can be called 
 
 #### Defined in
 
-dist/generated/types.d.ts:57131
+dist/generated/types.d.ts:58043
 
 ___
 
@@ -41742,7 +42331,7 @@ Returns current verbosity level of the internal logging of TDLib. Can be called 
 
 #### Defined in
 
-dist/generated/types.d.ts:57122
+dist/generated/types.d.ts:58034
 
 ___
 
@@ -41772,7 +42361,7 @@ Returns an HTTP URL which can be used to automatically authorize the user on a w
 
 #### Defined in
 
-dist/generated/types.d.ts:49210
+dist/generated/types.d.ts:49811
 
 ___
 
@@ -41795,7 +42384,7 @@ Returns an HTTP URL which can be used to automatically authorize the user on a w
 
 #### Defined in
 
-dist/generated/types.d.ts:49179
+dist/generated/types.d.ts:49780
 
 ___
 
@@ -41823,7 +42412,7 @@ Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The
 
 #### Defined in
 
-dist/generated/types.d.ts:49176
+dist/generated/types.d.ts:49777
 
 ___
 
@@ -41844,7 +42433,7 @@ Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The
 
 #### Defined in
 
-dist/generated/types.d.ts:49152
+dist/generated/types.d.ts:49753
 
 ___
 
@@ -41872,7 +42461,7 @@ Returns information about a file with a map thumbnail in PNG format. Only map th
 
 #### Defined in
 
-dist/generated/types.d.ts:56576
+dist/generated/types.d.ts:57472
 
 ___
 
@@ -41896,7 +42485,7 @@ Returns information about a file with a map thumbnail in PNG format. Only map th
 
 #### Defined in
 
-dist/generated/types.d.ts:56537
+dist/generated/types.d.ts:57433
 
 ___
 
@@ -41924,7 +42513,7 @@ Replaces text entities with Markdown formatting in a human-friendly format. Enti
 
 #### Defined in
 
-dist/generated/types.d.ts:48919
+dist/generated/types.d.ts:49520
 
 ___
 
@@ -41943,7 +42532,7 @@ Replaces text entities with Markdown formatting in a human-friendly format. Enti
 
 #### Defined in
 
-dist/generated/types.d.ts:48905
+dist/generated/types.d.ts:49506
 
 ___
 
@@ -41971,7 +42560,7 @@ Returns the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:46176
+dist/generated/types.d.ts:46777
 
 ___
 
@@ -41989,7 +42578,7 @@ Returns the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:46167
+dist/generated/types.d.ts:46768
 
 ___
 
@@ -42017,7 +42606,7 @@ Returns menu button set by the bot for the given user; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:54354
+dist/generated/types.d.ts:55038
 
 ___
 
@@ -42036,7 +42625,7 @@ Returns menu button set by the bot for the given user; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:54340
+dist/generated/types.d.ts:55024
 
 ___
 
@@ -42064,7 +42653,7 @@ Returns information about a message
 
 #### Defined in
 
-dist/generated/types.d.ts:46325
+dist/generated/types.d.ts:46926
 
 ___
 
@@ -42084,7 +42673,7 @@ Returns information about a message
 
 #### Defined in
 
-dist/generated/types.d.ts:46306
+dist/generated/types.d.ts:46907
 
 ___
 
@@ -42112,7 +42701,7 @@ Returns reactions added for a message, along with their sender
 
 #### Defined in
 
-dist/generated/types.d.ts:48834
+dist/generated/types.d.ts:49435
 
 ___
 
@@ -42135,7 +42724,7 @@ Returns reactions added for a message, along with their sender
 
 #### Defined in
 
-dist/generated/types.d.ts:48800
+dist/generated/types.d.ts:49401
 
 ___
 
@@ -42163,7 +42752,7 @@ Returns reactions, which can be added to a message. The list can change after up
 
 #### Defined in
 
-dist/generated/types.d.ts:48725
+dist/generated/types.d.ts:49326
 
 ___
 
@@ -42184,7 +42773,7 @@ Returns reactions, which can be added to a message. The list can change after up
 
 #### Defined in
 
-dist/generated/types.d.ts:48701
+dist/generated/types.d.ts:49302
 
 ___
 
@@ -42212,7 +42801,7 @@ Returns an HTML code for embedding the message. Available only for messages in s
 
 #### Defined in
 
-dist/generated/types.d.ts:47529
+dist/generated/types.d.ts:48130
 
 ___
 
@@ -42233,7 +42822,7 @@ Returns an HTML code for embedding the message. Available only for messages in s
 
 #### Defined in
 
-dist/generated/types.d.ts:47505
+dist/generated/types.d.ts:48106
 
 ___
 
@@ -42261,7 +42850,7 @@ Returns information about a file with messages exported from another application
 
 #### Defined in
 
-dist/generated/types.d.ts:51769
+dist/generated/types.d.ts:52453
 
 ___
 
@@ -42280,7 +42869,7 @@ Returns information about a file with messages exported from another application
 
 #### Defined in
 
-dist/generated/types.d.ts:51755
+dist/generated/types.d.ts:52439
 
 ___
 
@@ -42308,7 +42897,7 @@ Returns a confirmation text to be shown to the user before starting message impo
 
 #### Defined in
 
-dist/generated/types.d.ts:51785
+dist/generated/types.d.ts:52469
 
 ___
 
@@ -42327,7 +42916,7 @@ Returns a confirmation text to be shown to the user before starting message impo
 
 #### Defined in
 
-dist/generated/types.d.ts:51771
+dist/generated/types.d.ts:52455
 
 ___
 
@@ -42355,7 +42944,7 @@ Returns an HTTPS link to a message in a chat. Available only for already sent me
 
 #### Defined in
 
-dist/generated/types.d.ts:47503
+dist/generated/types.d.ts:48104
 
 ___
 
@@ -42378,7 +42967,7 @@ Returns an HTTPS link to a message in a chat. Available only for already sent me
 
 #### Defined in
 
-dist/generated/types.d.ts:47469
+dist/generated/types.d.ts:48070
 
 ___
 
@@ -42406,7 +42995,7 @@ Returns information about a public or private message link. Can be called for an
 
 #### Defined in
 
-dist/generated/types.d.ts:47545
+dist/generated/types.d.ts:48146
 
 ___
 
@@ -42425,7 +43014,7 @@ Returns information about a public or private message link. Can be called for an
 
 #### Defined in
 
-dist/generated/types.d.ts:47531
+dist/generated/types.d.ts:48132
 
 ___
 
@@ -42453,7 +43042,7 @@ Returns information about a message, if it is available without sending network 
 
 #### Defined in
 
-dist/generated/types.d.ts:46346
+dist/generated/types.d.ts:46947
 
 ___
 
@@ -42473,7 +43062,7 @@ Returns information about a message, if it is available without sending network 
 
 #### Defined in
 
-dist/generated/types.d.ts:46327
+dist/generated/types.d.ts:46928
 
 ___
 
@@ -42501,7 +43090,7 @@ Returns forwarded copies of a channel message to different public channels. For 
 
 #### Defined in
 
-dist/generated/types.d.ts:47409
+dist/generated/types.d.ts:48010
 
 ___
 
@@ -42523,7 +43112,7 @@ Returns forwarded copies of a channel message to different public channels. For 
 
 #### Defined in
 
-dist/generated/types.d.ts:47380
+dist/generated/types.d.ts:47981
 
 ___
 
@@ -42551,7 +43140,7 @@ Returns detailed statistics about a message. Can be used only if message.can_get
 
 #### Defined in
 
-dist/generated/types.d.ts:55730
+dist/generated/types.d.ts:56488
 
 ___
 
@@ -42572,7 +43161,7 @@ Returns detailed statistics about a message. Can be used only if message.can_get
 
 #### Defined in
 
-dist/generated/types.d.ts:55706
+dist/generated/types.d.ts:56464
 
 ___
 
@@ -42600,7 +43189,7 @@ Returns information about a message thread. Can be used only if message.can_get_
 
 #### Defined in
 
-dist/generated/types.d.ts:46454
+dist/generated/types.d.ts:47055
 
 ___
 
@@ -42620,7 +43209,7 @@ Returns information about a message thread. Can be used only if message.can_get_
 
 #### Defined in
 
-dist/generated/types.d.ts:46435
+dist/generated/types.d.ts:47036
 
 ___
 
@@ -42650,7 +43239,7 @@ Returns messages in a message thread of a message. Can be used only if message.c
 
 #### Defined in
 
-dist/generated/types.d.ts:46940
+dist/generated/types.d.ts:47541
 
 ___
 
@@ -42668,23 +43257,23 @@ Returns messages in a message thread of a message. Can be used only if message.c
 | `_` | ``"getMessageThreadHistory"`` | - |
 | `chat_id?` | [`int53`](index.types.default.md#int53-1) | Chat identifier |
 | `from_message_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the message starting from which history must be fetched; use 0 to get results from the last message |
-| `limit?` | [`int32`](index.types.default.md#int32-1) | The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than or equal to -offset.    -For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit |
+| `limit?` | [`int32`](index.types.default.md#int32-1) | The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than or equal to -offset. -For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit |
 | `message_id?` | [`int53`](index.types.default.md#int53-1) | Message identifier, which thread history needs to be returned |
 | `offset?` | [`int32`](index.types.default.md#int32-1) | Specify 0 to get results from exactly the from_message_id or a negative offset up to 99 to get additionally some newer messages |
 
 #### Defined in
 
-dist/generated/types.d.ts:46902
+dist/generated/types.d.ts:47503
 
 ___
 
 ### getMessageViewers
 
-Ƭ **getMessageViewers**: (`parameters`: [`getMessageViewers$Input`](index.types.default.md#getmessageviewers$input)) => [`Users`](index.types.default.md#users)
+Ƭ **getMessageViewers**: (`parameters`: [`getMessageViewers$Input`](index.types.default.md#getmessageviewers$input)) => [`MessageViewers`](index.types.default.md#messageviewers)
 
 #### Type declaration
 
-▸ (`parameters`): [`Users`](index.types.default.md#users)
+▸ (`parameters`): [`MessageViewers`](index.types.default.md#messageviewers)
 
 Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if message.can_get_viewers == true
 
@@ -42696,13 +43285,13 @@ Returns viewers of a recent outgoing message in a basic group or a supergroup ch
 
 ##### Returns
 
-[`Users`](index.types.default.md#users)
+[`MessageViewers`](index.types.default.md#messageviewers)
 
-[Users](index.types.md#users)
+[MessageViewers](index.types.md#messageviewers)
 
 #### Defined in
 
-dist/generated/types.d.ts:46475
+dist/generated/types.d.ts:47076
 
 ___
 
@@ -42722,7 +43311,7 @@ Returns viewers of a recent outgoing message in a basic group or a supergroup ch
 
 #### Defined in
 
-dist/generated/types.d.ts:46456
+dist/generated/types.d.ts:47057
 
 ___
 
@@ -42750,7 +43339,7 @@ Returns information about messages. If a message is not found, returns null on t
 
 #### Defined in
 
-dist/generated/types.d.ts:46433
+dist/generated/types.d.ts:47034
 
 ___
 
@@ -42770,7 +43359,7 @@ Returns information about messages. If a message is not found, returns null on t
 
 #### Defined in
 
-dist/generated/types.d.ts:46414
+dist/generated/types.d.ts:47015
 
 ___
 
@@ -42798,7 +43387,7 @@ Returns network data usage statistics. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:55885
+dist/generated/types.d.ts:56643
 
 ___
 
@@ -42817,7 +43406,7 @@ Returns network data usage statistics. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:55871
+dist/generated/types.d.ts:56629
 
 ___
 
@@ -42845,7 +43434,7 @@ Returns the value of an option by its name. (Check the list of available options
 
 #### Defined in
 
-dist/generated/types.d.ts:55480
+dist/generated/types.d.ts:56238
 
 ___
 
@@ -42864,7 +43453,7 @@ Returns the value of an option by its name. (Check the list of available options
 
 #### Defined in
 
-dist/generated/types.d.ts:55466
+dist/generated/types.d.ts:56224
 
 ___
 
@@ -42892,7 +43481,7 @@ Returns a Telegram Passport authorization form for sharing data with a service
 
 #### Defined in
 
-dist/generated/types.d.ts:56236
+dist/generated/types.d.ts:56994
 
 ___
 
@@ -42914,7 +43503,7 @@ Returns a Telegram Passport authorization form for sharing data with a service
 
 #### Defined in
 
-dist/generated/types.d.ts:56207
+dist/generated/types.d.ts:56965
 
 ___
 
@@ -42942,7 +43531,7 @@ Returns already available Telegram Passport elements suitable for completing a T
 
 #### Defined in
 
-dist/generated/types.d.ts:56257
+dist/generated/types.d.ts:57015
 
 ___
 
@@ -42962,7 +43551,7 @@ Returns already available Telegram Passport elements suitable for completing a T
 
 #### Defined in
 
-dist/generated/types.d.ts:56238
+dist/generated/types.d.ts:56996
 
 ___
 
@@ -42990,7 +43579,7 @@ Returns one of the available Telegram Passport elements
 
 #### Defined in
 
-dist/generated/types.d.ts:56024
+dist/generated/types.d.ts:56782
 
 ___
 
@@ -43010,7 +43599,7 @@ Returns one of the available Telegram Passport elements
 
 #### Defined in
 
-dist/generated/types.d.ts:56005
+dist/generated/types.d.ts:56763
 
 ___
 
@@ -43038,7 +43627,7 @@ Returns the current state of 2-step verification
 
 #### Defined in
 
-dist/generated/types.d.ts:45909
+dist/generated/types.d.ts:46510
 
 ___
 
@@ -43056,7 +43645,7 @@ Returns the current state of 2-step verification
 
 #### Defined in
 
-dist/generated/types.d.ts:45900
+dist/generated/types.d.ts:46501
 
 ___
 
@@ -43084,7 +43673,7 @@ Returns an invoice payment form. This method must be called when the user presse
 
 #### Defined in
 
-dist/generated/types.d.ts:54942
+dist/generated/types.d.ts:55700
 
 ___
 
@@ -43104,7 +43693,7 @@ Returns an invoice payment form. This method must be called when the user presse
 
 #### Defined in
 
-dist/generated/types.d.ts:54923
+dist/generated/types.d.ts:55681
 
 ___
 
@@ -43132,7 +43721,7 @@ Returns information about a successful payment
 
 #### Defined in
 
-dist/generated/types.d.ts:55030
+dist/generated/types.d.ts:55788
 
 ___
 
@@ -43152,7 +43741,7 @@ Returns information about a successful payment
 
 #### Defined in
 
-dist/generated/types.d.ts:55011
+dist/generated/types.d.ts:55769
 
 ___
 
@@ -43180,7 +43769,7 @@ Returns information about a phone number by its prefix. Can be called before aut
 
 #### Defined in
 
-dist/generated/types.d.ts:56837
+dist/generated/types.d.ts:57733
 
 ___
 
@@ -43199,7 +43788,7 @@ Returns information about a phone number by its prefix. Can be called before aut
 
 #### Defined in
 
-dist/generated/types.d.ts:56823
+dist/generated/types.d.ts:57719
 
 ___
 
@@ -43227,7 +43816,7 @@ Returns information about a phone number by its prefix synchronously. getCountri
 
 #### Defined in
 
-dist/generated/types.d.ts:56858
+dist/generated/types.d.ts:57754
 
 ___
 
@@ -43247,7 +43836,7 @@ Returns information about a phone number by its prefix synchronously. getCountri
 
 #### Defined in
 
-dist/generated/types.d.ts:56839
+dist/generated/types.d.ts:57735
 
 ___
 
@@ -43275,7 +43864,7 @@ Returns users voted for the specified option in a non-anonymous polls. For optim
 
 #### Defined in
 
-dist/generated/types.d.ts:49108
+dist/generated/types.d.ts:49709
 
 ___
 
@@ -43298,7 +43887,7 @@ Returns users voted for the specified option in a non-anonymous polls. For optim
 
 #### Defined in
 
-dist/generated/types.d.ts:49074
+dist/generated/types.d.ts:49675
 
 ___
 
@@ -43326,7 +43915,7 @@ Returns an IETF language tag of the language preferred in the country, which mus
 
 #### Defined in
 
-dist/generated/types.d.ts:56114
+dist/generated/types.d.ts:56872
 
 ___
 
@@ -43345,7 +43934,7 @@ Returns an IETF language tag of the language preferred in the country, which mus
 
 #### Defined in
 
-dist/generated/types.d.ts:56100
+dist/generated/types.d.ts:56858
 
 ___
 
@@ -43373,7 +43962,7 @@ Returns information about features, available to Premium users
 
 #### Defined in
 
-dist/generated/types.d.ts:56608
+dist/generated/types.d.ts:57504
 
 ___
 
@@ -43392,7 +43981,7 @@ Returns information about features, available to Premium users
 
 #### Defined in
 
-dist/generated/types.d.ts:56594
+dist/generated/types.d.ts:57490
 
 ___
 
@@ -43420,7 +44009,7 @@ Returns information about a limit, increased for Premium users. Returns a 404 er
 
 #### Defined in
 
-dist/generated/types.d.ts:56592
+dist/generated/types.d.ts:57488
 
 ___
 
@@ -43439,7 +44028,7 @@ Returns information about a limit, increased for Premium users. Returns a 404 er
 
 #### Defined in
 
-dist/generated/types.d.ts:56578
+dist/generated/types.d.ts:57474
 
 ___
 
@@ -43467,7 +44056,7 @@ Returns state of Telegram Premium subscription and promotion videos for Premium 
 
 #### Defined in
 
-dist/generated/types.d.ts:56657
+dist/generated/types.d.ts:57553
 
 ___
 
@@ -43485,7 +44074,7 @@ Returns state of Telegram Premium subscription and promotion videos for Premium 
 
 #### Defined in
 
-dist/generated/types.d.ts:56648
+dist/generated/types.d.ts:57544
 
 ___
 
@@ -43513,7 +44102,7 @@ Returns examples of premium stickers for demonstration purposes
 
 #### Defined in
 
-dist/generated/types.d.ts:56619
+dist/generated/types.d.ts:57515
 
 ___
 
@@ -43531,7 +44120,7 @@ Returns examples of premium stickers for demonstration purposes
 
 #### Defined in
 
-dist/generated/types.d.ts:56610
+dist/generated/types.d.ts:57506
 
 ___
 
@@ -43559,7 +44148,7 @@ Returns premium stickers from regular sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:53410
+dist/generated/types.d.ts:54094
 
 ___
 
@@ -43578,7 +44167,7 @@ Returns premium stickers from regular sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:53396
+dist/generated/types.d.ts:54080
 
 ___
 
@@ -43606,7 +44195,7 @@ Returns list of proxies that are currently set up. Can be called before authoriz
 
 #### Defined in
 
-dist/generated/types.d.ts:57043
+dist/generated/types.d.ts:57955
 
 ___
 
@@ -43624,7 +44213,7 @@ Returns list of proxies that are currently set up. Can be called before authoriz
 
 #### Defined in
 
-dist/generated/types.d.ts:57034
+dist/generated/types.d.ts:57946
 
 ___
 
@@ -43652,7 +44241,7 @@ Returns an HTTPS link, which can be used to add a proxy. Available only for SOCK
 
 #### Defined in
 
-dist/generated/types.d.ts:57059
+dist/generated/types.d.ts:57971
 
 ___
 
@@ -43671,7 +44260,7 @@ Returns an HTTPS link, which can be used to add a proxy. Available only for SOCK
 
 #### Defined in
 
-dist/generated/types.d.ts:57045
+dist/generated/types.d.ts:57957
 
 ___
 
@@ -43699,7 +44288,7 @@ Returns a globally unique push notification subscription identifier for identifi
 
 #### Defined in
 
-dist/generated/types.d.ts:55411
+dist/generated/types.d.ts:56169
 
 ___
 
@@ -43718,7 +44307,7 @@ Returns a globally unique push notification subscription identifier for identifi
 
 #### Defined in
 
-dist/generated/types.d.ts:55397
+dist/generated/types.d.ts:56155
 
 ___
 
@@ -43746,7 +44335,7 @@ Returns recent emoji statuses
 
 #### Defined in
 
-dist/generated/types.d.ts:51318
+dist/generated/types.d.ts:52002
 
 ___
 
@@ -43764,7 +44353,7 @@ Returns recent emoji statuses
 
 #### Defined in
 
-dist/generated/types.d.ts:51309
+dist/generated/types.d.ts:51993
 
 ___
 
@@ -43792,7 +44381,7 @@ Returns up to 20 recently used inline bots in the order of their last usage
 
 #### Defined in
 
-dist/generated/types.d.ts:53936
+dist/generated/types.d.ts:54620
 
 ___
 
@@ -43810,7 +44399,7 @@ Returns up to 20 recently used inline bots in the order of their last usage
 
 #### Defined in
 
-dist/generated/types.d.ts:53927
+dist/generated/types.d.ts:54611
 
 ___
 
@@ -43838,7 +44427,7 @@ Returns a list of recently used stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53647
+dist/generated/types.d.ts:54331
 
 ___
 
@@ -43857,7 +44446,7 @@ Returns a list of recently used stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53633
+dist/generated/types.d.ts:54317
 
 ___
 
@@ -43885,7 +44474,7 @@ Returns recently opened chats, this is an offline request. Returns chats in the 
 
 #### Defined in
 
-dist/generated/types.d.ts:46754
+dist/generated/types.d.ts:47355
 
 ___
 
@@ -43904,7 +44493,7 @@ Returns recently opened chats, this is an offline request. Returns chats in the 
 
 #### Defined in
 
-dist/generated/types.d.ts:46740
+dist/generated/types.d.ts:47341
 
 ___
 
@@ -43932,7 +44521,7 @@ Returns t.me URLs recently visited by a newly registered user
 
 #### Defined in
 
-dist/generated/types.d.ts:55427
+dist/generated/types.d.ts:56185
 
 ___
 
@@ -43951,7 +44540,7 @@ Returns t.me URLs recently visited by a newly registered user
 
 #### Defined in
 
-dist/generated/types.d.ts:55413
+dist/generated/types.d.ts:56171
 
 ___
 
@@ -43979,7 +44568,7 @@ Returns recommended chat filters for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:50350
+dist/generated/types.d.ts:51034
 
 ___
 
@@ -43997,7 +44586,7 @@ Returns recommended chat filters for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:50341
+dist/generated/types.d.ts:51025
 
 ___
 
@@ -44025,7 +44614,7 @@ Returns a 2-step verification recovery email address that was previously set up.
 
 #### Defined in
 
-dist/generated/types.d.ts:46007
+dist/generated/types.d.ts:46608
 
 ___
 
@@ -44044,7 +44633,7 @@ Returns a 2-step verification recovery email address that was previously set up.
 
 #### Defined in
 
-dist/generated/types.d.ts:45993
+dist/generated/types.d.ts:46594
 
 ___
 
@@ -44074,7 +44663,7 @@ Returns information about a file by its remote ID; this is an offline request. C
 
 #### Defined in
 
-dist/generated/types.d.ts:46515
+dist/generated/types.d.ts:47116
 
 ___
 
@@ -44095,7 +44684,7 @@ Returns information about a file by its remote ID; this is an offline request. C
 
 #### Defined in
 
-dist/generated/types.d.ts:46494
+dist/generated/types.d.ts:47095
 
 ___
 
@@ -44125,7 +44714,7 @@ Returns information about a message that is replied by a given message. Also, re
 
 #### Defined in
 
-dist/generated/types.d.ts:46370
+dist/generated/types.d.ts:46971
 
 ___
 
@@ -44146,7 +44735,7 @@ Returns information about a message that is replied by a given message. Also, re
 
 #### Defined in
 
-dist/generated/types.d.ts:46349
+dist/generated/types.d.ts:46950
 
 ___
 
@@ -44174,7 +44763,7 @@ Returns saved animations
 
 #### Defined in
 
-dist/generated/types.d.ts:53893
+dist/generated/types.d.ts:54577
 
 ___
 
@@ -44192,7 +44781,7 @@ Returns saved animations
 
 #### Defined in
 
-dist/generated/types.d.ts:53884
+dist/generated/types.d.ts:54568
 
 ___
 
@@ -44220,7 +44809,7 @@ Returns saved notification sound by its identifier. Returns a 404 error if there
 
 #### Defined in
 
-dist/generated/types.d.ts:51095
+dist/generated/types.d.ts:51779
 
 ___
 
@@ -44239,7 +44828,7 @@ Returns saved notification sound by its identifier. Returns a 404 error if there
 
 #### Defined in
 
-dist/generated/types.d.ts:51081
+dist/generated/types.d.ts:51765
 
 ___
 
@@ -44267,7 +44856,7 @@ Returns list of saved notification sounds. If a sound isn't in the list, then de
 
 #### Defined in
 
-dist/generated/types.d.ts:51106
+dist/generated/types.d.ts:51790
 
 ___
 
@@ -44285,7 +44874,7 @@ Returns list of saved notification sounds. If a sound isn't in the list, then de
 
 #### Defined in
 
-dist/generated/types.d.ts:51097
+dist/generated/types.d.ts:51781
 
 ___
 
@@ -44313,7 +44902,7 @@ Returns saved order information. Returns a 404 error if there is no saved order 
 
 #### Defined in
 
-dist/generated/types.d.ts:55041
+dist/generated/types.d.ts:55799
 
 ___
 
@@ -44331,7 +44920,7 @@ Returns saved order information. Returns a 404 error if there is no saved order 
 
 #### Defined in
 
-dist/generated/types.d.ts:55032
+dist/generated/types.d.ts:55790
 
 ___
 
@@ -44359,7 +44948,7 @@ Returns the notification settings for chats of a given type
 
 #### Defined in
 
-dist/generated/types.d.ts:51175
+dist/generated/types.d.ts:51859
 
 ___
 
@@ -44378,7 +44967,7 @@ Returns the notification settings for chats of a given type
 
 #### Defined in
 
-dist/generated/types.d.ts:51161
+dist/generated/types.d.ts:51845
 
 ___
 
@@ -44406,7 +44995,7 @@ Returns information about a secret chat by its identifier. This is an offline re
 
 #### Defined in
 
-dist/generated/types.d.ts:46288
+dist/generated/types.d.ts:46889
 
 ___
 
@@ -44425,7 +45014,7 @@ Returns information about a secret chat by its identifier. This is an offline re
 
 #### Defined in
 
-dist/generated/types.d.ts:46274
+dist/generated/types.d.ts:46875
 
 ___
 
@@ -44453,7 +45042,7 @@ Loads an asynchronous or a zoomed in statistical graph
 
 #### Defined in
 
-dist/generated/types.d.ts:55756
+dist/generated/types.d.ts:56514
 
 ___
 
@@ -44474,7 +45063,7 @@ Loads an asynchronous or a zoomed in statistical graph
 
 #### Defined in
 
-dist/generated/types.d.ts:55732
+dist/generated/types.d.ts:56490
 
 ___
 
@@ -44502,7 +45091,7 @@ Returns emoji corresponding to a sticker. The list is only for informational pur
 
 #### Defined in
 
-dist/generated/types.d.ts:53770
+dist/generated/types.d.ts:54454
 
 ___
 
@@ -44521,7 +45110,7 @@ Returns emoji corresponding to a sticker. The list is only for informational pur
 
 #### Defined in
 
-dist/generated/types.d.ts:53756
+dist/generated/types.d.ts:54440
 
 ___
 
@@ -44549,7 +45138,7 @@ Returns information about a sticker set by its identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:53510
+dist/generated/types.d.ts:54194
 
 ___
 
@@ -44568,7 +45157,7 @@ Returns information about a sticker set by its identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:53496
+dist/generated/types.d.ts:54180
 
 ___
 
@@ -44596,7 +45185,7 @@ Returns stickers from the installed sticker sets that correspond to any of the g
 
 #### Defined in
 
-dist/generated/types.d.ts:53368
+dist/generated/types.d.ts:54052
 
 ___
 
@@ -44618,7 +45207,7 @@ Returns stickers from the installed sticker sets that correspond to any of the g
 
 #### Defined in
 
-dist/generated/types.d.ts:53339
+dist/generated/types.d.ts:54023
 
 ___
 
@@ -44646,7 +45235,7 @@ Returns storage usage statistics. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:55772
+dist/generated/types.d.ts:56530
 
 ___
 
@@ -44665,7 +45254,7 @@ Returns storage usage statistics. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:55758
+dist/generated/types.d.ts:56516
 
 ___
 
@@ -44693,7 +45282,7 @@ Quickly returns approximate storage usage statistics. Can be called before autho
 
 #### Defined in
 
-dist/generated/types.d.ts:55783
+dist/generated/types.d.ts:56541
 
 ___
 
@@ -44711,7 +45300,7 @@ Quickly returns approximate storage usage statistics. Can be called before autho
 
 #### Defined in
 
-dist/generated/types.d.ts:55774
+dist/generated/types.d.ts:56532
 
 ___
 
@@ -44739,7 +45328,7 @@ Returns suggested name for saving a file in a given directory
 
 #### Defined in
 
-dist/generated/types.d.ts:51439
+dist/generated/types.d.ts:52123
 
 ___
 
@@ -44759,7 +45348,7 @@ Returns suggested name for saving a file in a given directory
 
 #### Defined in
 
-dist/generated/types.d.ts:51420
+dist/generated/types.d.ts:52104
 
 ___
 
@@ -44787,7 +45376,7 @@ Returns a suggested name for a new sticker set with a given title
 
 #### Defined in
 
-dist/generated/types.d.ts:56389
+dist/generated/types.d.ts:57154
 
 ___
 
@@ -44806,7 +45395,7 @@ Returns a suggested name for a new sticker set with a given title
 
 #### Defined in
 
-dist/generated/types.d.ts:56375
+dist/generated/types.d.ts:57140
 
 ___
 
@@ -44836,7 +45425,7 @@ Returns a list of basic group and supergroup chats, which can be used as a discu
 
 #### Defined in
 
-dist/generated/types.d.ts:46821
+dist/generated/types.d.ts:47422
 
 ___
 
@@ -44855,7 +45444,7 @@ Returns a list of basic group and supergroup chats, which can be used as a discu
 
 #### Defined in
 
-dist/generated/types.d.ts:46810
+dist/generated/types.d.ts:47411
 
 ___
 
@@ -44883,7 +45472,7 @@ Returns information about a supergroup or a channel by its identifier. This is a
 
 #### Defined in
 
-dist/generated/types.d.ts:46256
+dist/generated/types.d.ts:46857
 
 ___
 
@@ -44902,7 +45491,7 @@ Returns information about a supergroup or a channel by its identifier. This is a
 
 #### Defined in
 
-dist/generated/types.d.ts:46242
+dist/generated/types.d.ts:46843
 
 ___
 
@@ -44930,7 +45519,7 @@ Returns full information about a supergroup or a channel by its identifier, cach
 
 #### Defined in
 
-dist/generated/types.d.ts:46272
+dist/generated/types.d.ts:46873
 
 ___
 
@@ -44949,7 +45538,7 @@ Returns full information about a supergroup or a channel by its identifier, cach
 
 #### Defined in
 
-dist/generated/types.d.ts:46258
+dist/generated/types.d.ts:46859
 
 ___
 
@@ -44977,7 +45566,7 @@ Returns information about members or banned users in a supergroup or channel. Ca
 
 #### Defined in
 
-dist/generated/types.d.ts:54864
+dist/generated/types.d.ts:55622
 
 ___
 
@@ -44999,7 +45588,7 @@ Returns information about members or banned users in a supergroup or channel. Ca
 
 #### Defined in
 
-dist/generated/types.d.ts:54835
+dist/generated/types.d.ts:55593
 
 ___
 
@@ -45027,7 +45616,7 @@ Returns a user that can be contacted to get support
 
 #### Defined in
 
-dist/generated/types.d.ts:55090
+dist/generated/types.d.ts:55848
 
 ___
 
@@ -45045,7 +45634,7 @@ Returns a user that can be contacted to get support
 
 #### Defined in
 
-dist/generated/types.d.ts:55081
+dist/generated/types.d.ts:55839
 
 ___
 
@@ -45073,7 +45662,7 @@ Returns information about the current temporary password
 
 #### Defined in
 
-dist/generated/types.d.ts:46165
+dist/generated/types.d.ts:46766
 
 ___
 
@@ -45091,7 +45680,7 @@ Returns information about the current temporary password
 
 #### Defined in
 
-dist/generated/types.d.ts:46156
+dist/generated/types.d.ts:46757
 
 ___
 
@@ -45119,7 +45708,7 @@ Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numb
 
 #### Defined in
 
-dist/generated/types.d.ts:48866
+dist/generated/types.d.ts:49467
 
 ___
 
@@ -45138,7 +45727,7 @@ Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numb
 
 #### Defined in
 
-dist/generated/types.d.ts:48852
+dist/generated/types.d.ts:49453
 
 ___
 
@@ -45166,7 +45755,7 @@ Converts a themeParameters object to corresponding JSON-serialized string. Can b
 
 #### Defined in
 
-dist/generated/types.d.ts:49046
+dist/generated/types.d.ts:49647
 
 ___
 
@@ -45185,7 +45774,7 @@ Converts a themeParameters object to corresponding JSON-serialized string. Can b
 
 #### Defined in
 
-dist/generated/types.d.ts:49032
+dist/generated/types.d.ts:49633
 
 ___
 
@@ -45213,7 +45802,7 @@ Returns up to 8 emoji statuses, which must be shown right after the default Prem
 
 #### Defined in
 
-dist/generated/types.d.ts:51307
+dist/generated/types.d.ts:51991
 
 ___
 
@@ -45231,7 +45820,7 @@ Returns up to 8 emoji statuses, which must be shown right after the default Prem
 
 #### Defined in
 
-dist/generated/types.d.ts:51298
+dist/generated/types.d.ts:51982
 
 ___
 
@@ -45259,7 +45848,7 @@ Returns a list of frequently used chats. Supported only if the chat info databas
 
 #### Defined in
 
-dist/generated/types.d.ts:46674
+dist/generated/types.d.ts:47275
 
 ___
 
@@ -45279,7 +45868,7 @@ Returns a list of frequently used chats. Supported only if the chat info databas
 
 #### Defined in
 
-dist/generated/types.d.ts:46655
+dist/generated/types.d.ts:47256
 
 ___
 
@@ -45307,7 +45896,7 @@ Returns a list of trending sticker sets. For optimal performance, the number of 
 
 #### Defined in
 
-dist/generated/types.d.ts:53478
+dist/generated/types.d.ts:54162
 
 ___
 
@@ -45328,7 +45917,7 @@ Returns a list of trending sticker sets. For optimal performance, the number of 
 
 #### Defined in
 
-dist/generated/types.d.ts:53454
+dist/generated/types.d.ts:54138
 
 ___
 
@@ -45356,7 +45945,7 @@ Returns information about a user by their identifier. This is an offline request
 
 #### Defined in
 
-dist/generated/types.d.ts:46192
+dist/generated/types.d.ts:46793
 
 ___
 
@@ -45375,7 +45964,7 @@ Returns information about a user by their identifier. This is an offline request
 
 #### Defined in
 
-dist/generated/types.d.ts:46178
+dist/generated/types.d.ts:46779
 
 ___
 
@@ -45403,7 +45992,7 @@ Returns full information about a user by their identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:46208
+dist/generated/types.d.ts:46809
 
 ___
 
@@ -45422,7 +46011,7 @@ Returns full information about a user by their identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:46194
+dist/generated/types.d.ts:46795
 
 ___
 
@@ -45450,7 +46039,7 @@ Returns an HTTPS link, which can be used to get information about the current us
 
 #### Defined in
 
-dist/generated/types.d.ts:54233
+dist/generated/types.d.ts:54917
 
 ___
 
@@ -45468,7 +46057,7 @@ Returns an HTTPS link, which can be used to get information about the current us
 
 #### Defined in
 
-dist/generated/types.d.ts:54224
+dist/generated/types.d.ts:54908
 
 ___
 
@@ -45496,7 +46085,7 @@ Returns the current privacy settings
 
 #### Defined in
 
-dist/generated/types.d.ts:55464
+dist/generated/types.d.ts:56222
 
 ___
 
@@ -45515,7 +46104,7 @@ Returns the current privacy settings
 
 #### Defined in
 
-dist/generated/types.d.ts:55450
+dist/generated/types.d.ts:56208
 
 ___
 
@@ -45543,7 +46132,7 @@ Returns the profile photos of a user. Personal and public photo aren't returned
 
 #### Defined in
 
-dist/generated/types.d.ts:53337
+dist/generated/types.d.ts:54021
 
 ___
 
@@ -45564,7 +46153,7 @@ Returns the profile photos of a user. Personal and public photo aren't returned
 
 #### Defined in
 
-dist/generated/types.d.ts:53313
+dist/generated/types.d.ts:53997
 
 ___
 
@@ -45592,7 +46181,7 @@ Returns support information for the given user; for Telegram support only
 
 #### Defined in
 
-dist/generated/types.d.ts:57216
+dist/generated/types.d.ts:58128
 
 ___
 
@@ -45611,7 +46200,7 @@ Returns support information for the given user; for Telegram support only
 
 #### Defined in
 
-dist/generated/types.d.ts:57202
+dist/generated/types.d.ts:58114
 
 ___
 
@@ -45639,7 +46228,7 @@ Returns list of participant identifiers, on whose behalf a video chat in the cha
 
 #### Defined in
 
-dist/generated/types.d.ts:52392
+dist/generated/types.d.ts:53076
 
 ___
 
@@ -45658,7 +46247,7 @@ Returns list of participant identifiers, on whose behalf a video chat in the cha
 
 #### Defined in
 
-dist/generated/types.d.ts:52378
+dist/generated/types.d.ts:53062
 
 ___
 
@@ -45686,7 +46275,7 @@ Returns RTMP URL for streaming to the chat; requires creator privileges
 
 #### Defined in
 
-dist/generated/types.d.ts:52460
+dist/generated/types.d.ts:53144
 
 ___
 
@@ -45705,7 +46294,60 @@ Returns RTMP URL for streaming to the chat; requires creator privileges
 
 #### Defined in
 
-dist/generated/types.d.ts:52446
+dist/generated/types.d.ts:53130
+
+___
+
+### getWebAppLinkUrl
+
+Ƭ **getWebAppLinkUrl**: (`parameters`: [`getWebAppLinkUrl$Input`](index.types.default.md#getwebapplinkurl$input)) => [`HttpUrl`](index.types.default.md#httpurl)
+
+#### Type declaration
+
+▸ (`parameters`): [`HttpUrl`](index.types.default.md#httpurl)
+
+Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getWebAppLinkUrl$Input`](index.types.default.md#getwebapplinkurl$input) | [getWebAppLinkUrl$Input](index.types.md#getwebapplinkurl$input) |
+
+##### Returns
+
+[`HttpUrl`](index.types.default.md#httpurl)
+
+[HttpUrl](index.types.md#httpurl)
+
+#### Defined in
+
+dist/generated/types.d.ts:50031
+
+___
+
+### getWebAppLinkUrl$Input
+
+Ƭ **getWebAppLinkUrl$Input**: `Object`
+
+Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"getWebAppLinkUrl"`` | - |
+| `allow_write_access?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true if the current user allowed the bot to send them messages |
+| `application_name?` | `string` | Short name of the application; 0-64 English letters, digits, and underscores |
+| `bot_user_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the target bot |
+| `chat_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the chat in which the link was clicked; pass 0 if none |
+| `start_parameter?` | `string` | Start parameter from internalLinkTypeWebApp |
+| `theme?` | [`themeParameters$Input`](index.types.default.md#themeparameters$input-1) | Preferred Web App theme; pass null to use the default theme |
+| `web_app_short_name?` | `string` | Short name of the Web App |
+
+#### Defined in
+
+dist/generated/types.d.ts:49987
 
 ___
 
@@ -45717,7 +46359,7 @@ ___
 
 ▸ (`parameters`): [`HttpUrl`](index.types.default.md#httpurl)
 
-Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp button is pressed
+Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp or inlineQueryResultsButtonTypeWebApp button is pressed
 
 ##### Parameters
 
@@ -45733,7 +46375,7 @@ Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp button 
 
 #### Defined in
 
-dist/generated/types.d.ts:49399
+dist/generated/types.d.ts:50062
 
 ___
 
@@ -45741,7 +46383,7 @@ ___
 
 Ƭ **getWebAppUrl$Input**: `Object`
 
-Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp button is pressed
+Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp or inlineQueryResultsButtonTypeWebApp button is pressed
 
 #### Type declaration
 
@@ -45751,11 +46393,11 @@ Returns an HTTPS URL of a Web App to open after keyboardButtonTypeWebApp button 
 | `application_name?` | `string` | Short name of the application; 0-64 English letters, digits, and underscores |
 | `bot_user_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the target bot |
 | `theme?` | [`themeParameters$Input`](index.types.default.md#themeparameters$input-1) | Preferred Web App theme; pass null to use the default theme |
-| `url?` | `string` | The URL from the keyboardButtonTypeWebApp button |
+| `url?` | `string` | The URL from the keyboardButtonTypeWebApp or inlineQueryResultsButtonTypeWebApp button |
 
 #### Defined in
 
-dist/generated/types.d.ts:49370
+dist/generated/types.d.ts:50033
 
 ___
 
@@ -45783,7 +46425,7 @@ Returns an instant view version of a web page if available. Returns a 404 error 
 
 #### Defined in
 
-dist/generated/types.d.ts:54010
+dist/generated/types.d.ts:54694
 
 ___
 
@@ -45803,7 +46445,7 @@ Returns an instant view version of a web page if available. Returns a 404 error 
 
 #### Defined in
 
-dist/generated/types.d.ts:53991
+dist/generated/types.d.ts:54675
 
 ___
 
@@ -45831,7 +46473,7 @@ Returns a web page preview by the text of the message. Do not call this function
 
 #### Defined in
 
-dist/generated/types.d.ts:53989
+dist/generated/types.d.ts:54673
 
 ___
 
@@ -45850,7 +46492,7 @@ Returns a web page preview by the text of the message. Do not call this function
 
 #### Defined in
 
-dist/generated/types.d.ts:53975
+dist/generated/types.d.ts:54659
 
 ___
 
@@ -45889,7 +46531,7 @@ Describes a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:22399
+dist/generated/types.d.ts:22739
 
 ___
 
@@ -45929,7 +46571,7 @@ Describes a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:22511
+dist/generated/types.d.ts:22851
 
 ___
 
@@ -45948,7 +46590,7 @@ Contains the group call identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:22025
+dist/generated/types.d.ts:22365
 
 ___
 
@@ -45968,7 +46610,7 @@ Contains the group call identifier
 
 #### Defined in
 
-dist/generated/types.d.ts:22037
+dist/generated/types.d.ts:22377
 
 ___
 
@@ -46004,7 +46646,7 @@ Represents a group call participant
 
 #### Defined in
 
-dist/generated/types.d.ts:22692
+dist/generated/types.d.ts:23032
 
 ___
 
@@ -46041,7 +46683,7 @@ Represents a group call participant
 
 #### Defined in
 
-dist/generated/types.d.ts:22789
+dist/generated/types.d.ts:23129
 
 ___
 
@@ -46062,7 +46704,7 @@ Contains information about a group call participant's video channel
 
 #### Defined in
 
-dist/generated/types.d.ts:22651
+dist/generated/types.d.ts:22991
 
 ___
 
@@ -46084,7 +46726,7 @@ Contains information about a group call participant's video channel
 
 #### Defined in
 
-dist/generated/types.d.ts:22673
+dist/generated/types.d.ts:23013
 
 ___
 
@@ -46104,7 +46746,7 @@ Describes a recently speaking participant in a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:22368
+dist/generated/types.d.ts:22708
 
 ___
 
@@ -46125,7 +46767,7 @@ Describes a recently speaking participant in a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:22385
+dist/generated/types.d.ts:22725
 
 ___
 
@@ -46146,7 +46788,7 @@ Describes an available stream in a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:22275
+dist/generated/types.d.ts:22615
 
 ___
 
@@ -46168,7 +46810,7 @@ Describes an available stream in a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:22297
+dist/generated/types.d.ts:22637
 
 ___
 
@@ -46187,7 +46829,7 @@ Represents a list of group call streams
 
 #### Defined in
 
-dist/generated/types.d.ts:22316
+dist/generated/types.d.ts:22656
 
 ___
 
@@ -46207,7 +46849,7 @@ Represents a list of group call streams
 
 #### Defined in
 
-dist/generated/types.d.ts:22328
+dist/generated/types.d.ts:22668
 
 ___
 
@@ -46225,7 +46867,7 @@ The best available video quality
 
 #### Defined in
 
-dist/generated/types.d.ts:22264
+dist/generated/types.d.ts:22604
 
 ___
 
@@ -46244,7 +46886,7 @@ The best available video quality
 
 #### Defined in
 
-dist/generated/types.d.ts:22271
+dist/generated/types.d.ts:22611
 
 ___
 
@@ -46262,7 +46904,7 @@ The medium video quality
 
 #### Defined in
 
-dist/generated/types.d.ts:22253
+dist/generated/types.d.ts:22593
 
 ___
 
@@ -46281,7 +46923,7 @@ The medium video quality
 
 #### Defined in
 
-dist/generated/types.d.ts:22260
+dist/generated/types.d.ts:22600
 
 ___
 
@@ -46299,7 +46941,7 @@ The worst available video quality
 
 #### Defined in
 
-dist/generated/types.d.ts:22242
+dist/generated/types.d.ts:22582
 
 ___
 
@@ -46318,7 +46960,7 @@ The worst available video quality
 
 #### Defined in
 
-dist/generated/types.d.ts:22249
+dist/generated/types.d.ts:22589
 
 ___
 
@@ -46338,7 +46980,7 @@ Describes a group of video synchronization source identifiers
 
 #### Defined in
 
-dist/generated/types.d.ts:22620
+dist/generated/types.d.ts:22960
 
 ___
 
@@ -46359,7 +47001,7 @@ Describes a group of video synchronization source identifiers
 
 #### Defined in
 
-dist/generated/types.d.ts:22637
+dist/generated/types.d.ts:22977
 
 ___
 
@@ -46378,7 +47020,7 @@ Contains a list of hashtags
 
 #### Defined in
 
-dist/generated/types.d.ts:28819
+dist/generated/types.d.ts:29232
 
 ___
 
@@ -46398,7 +47040,7 @@ Contains a list of hashtags
 
 #### Defined in
 
-dist/generated/types.d.ts:28831
+dist/generated/types.d.ts:29244
 
 ___
 
@@ -46426,7 +47068,7 @@ Hides a suggested action
 
 #### Defined in
 
-dist/generated/types.d.ts:49150
+dist/generated/types.d.ts:49751
 
 ___
 
@@ -46445,7 +47087,7 @@ Hides a suggested action
 
 #### Defined in
 
-dist/generated/types.d.ts:49136
+dist/generated/types.d.ts:49737
 
 ___
 
@@ -46464,7 +47106,7 @@ Contains an HTTP URL
 
 #### Defined in
 
-dist/generated/types.d.ts:23851
+dist/generated/types.d.ts:24201
 
 ___
 
@@ -46484,7 +47126,7 @@ Contains an HTTP URL
 
 #### Defined in
 
-dist/generated/types.d.ts:23863
+dist/generated/types.d.ts:24213
 
 ___
 
@@ -46508,7 +47150,7 @@ An identity document
 
 #### Defined in
 
-dist/generated/types.d.ts:15937
+dist/generated/types.d.ts:16257
 
 ___
 
@@ -46533,7 +47175,7 @@ An identity document
 
 #### Defined in
 
-dist/generated/types.d.ts:15974
+dist/generated/types.d.ts:16294
 
 ___
 
@@ -46561,7 +47203,7 @@ Adds new contacts or edits existing contacts by their phone numbers; contacts' u
 
 #### Defined in
 
-dist/generated/types.d.ts:53148
+dist/generated/types.d.ts:53832
 
 ___
 
@@ -46580,7 +47222,7 @@ Adds new contacts or edits existing contacts by their phone numbers; contacts' u
 
 #### Defined in
 
-dist/generated/types.d.ts:53134
+dist/generated/types.d.ts:53818
 
 ___
 
@@ -46608,7 +47250,7 @@ Imports messages exported from another app
 
 #### Defined in
 
-dist/generated/types.d.ts:51811
+dist/generated/types.d.ts:52495
 
 ___
 
@@ -46629,7 +47271,7 @@ Imports messages exported from another app
 
 #### Defined in
 
-dist/generated/types.d.ts:51787
+dist/generated/types.d.ts:52471
 
 ___
 
@@ -46649,7 +47291,7 @@ Represents the result of an importContacts request
 
 #### Defined in
 
-dist/generated/types.d.ts:23524
+dist/generated/types.d.ts:23874
 
 ___
 
@@ -46670,7 +47312,7 @@ Represents the result of an importContacts request
 
 #### Defined in
 
-dist/generated/types.d.ts:23541
+dist/generated/types.d.ts:23891
 
 ___
 
@@ -46690,7 +47332,7 @@ Represents a single button in an inline keyboard
 
 #### Defined in
 
-dist/generated/types.d.ts:11560
+dist/generated/types.d.ts:11839
 
 ___
 
@@ -46711,7 +47353,7 @@ Represents a single button in an inline keyboard
 
 #### Defined in
 
-dist/generated/types.d.ts:11577
+dist/generated/types.d.ts:11856
 
 ___
 
@@ -46729,7 +47371,7 @@ A button to buy something. This button must be in the first column and row of th
 
 #### Defined in
 
-dist/generated/types.d.ts:11528
+dist/generated/types.d.ts:11807
 
 ___
 
@@ -46748,7 +47390,7 @@ A button to buy something. This button must be in the first column and row of th
 
 #### Defined in
 
-dist/generated/types.d.ts:11535
+dist/generated/types.d.ts:11814
 
 ___
 
@@ -46767,7 +47409,7 @@ A button that sends a callback query to a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:11444
+dist/generated/types.d.ts:11723
 
 ___
 
@@ -46787,7 +47429,7 @@ A button that sends a callback query to a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:11456
+dist/generated/types.d.ts:11735
 
 ___
 
@@ -46805,7 +47447,7 @@ A button with a game that sends a callback query to a bot. This button must be i
 
 #### Defined in
 
-dist/generated/types.d.ts:11486
+dist/generated/types.d.ts:11765
 
 ___
 
@@ -46824,7 +47466,7 @@ A button with a game that sends a callback query to a bot. This button must be i
 
 #### Defined in
 
-dist/generated/types.d.ts:11493
+dist/generated/types.d.ts:11772
 
 ___
 
@@ -46843,7 +47485,7 @@ A button that asks for the 2-step verification password of the current user and 
 
 #### Defined in
 
-dist/generated/types.d.ts:11465
+dist/generated/types.d.ts:11744
 
 ___
 
@@ -46863,7 +47505,7 @@ A button that asks for the 2-step verification password of the current user and 
 
 #### Defined in
 
-dist/generated/types.d.ts:11477
+dist/generated/types.d.ts:11756
 
 ___
 
@@ -46884,7 +47526,7 @@ A button that opens a specified URL and automatically authorize the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:11382
+dist/generated/types.d.ts:11661
 
 ___
 
@@ -46906,7 +47548,7 @@ A button that opens a specified URL and automatically authorize the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:11404
+dist/generated/types.d.ts:11683
 
 ___
 
@@ -46926,7 +47568,7 @@ A button that forces an inline query to the bot to be inserted in the input fiel
 
 #### Defined in
 
-dist/generated/types.d.ts:11497
+dist/generated/types.d.ts:11776
 
 ___
 
@@ -46947,7 +47589,7 @@ A button that forces an inline query to the bot to be inserted in the input fiel
 
 #### Defined in
 
-dist/generated/types.d.ts:11514
+dist/generated/types.d.ts:11793
 
 ___
 
@@ -46966,7 +47608,7 @@ A button that opens a specified URL
 
 #### Defined in
 
-dist/generated/types.d.ts:11361
+dist/generated/types.d.ts:11640
 
 ___
 
@@ -46986,7 +47628,7 @@ A button that opens a specified URL
 
 #### Defined in
 
-dist/generated/types.d.ts:11373
+dist/generated/types.d.ts:11652
 
 ___
 
@@ -47005,7 +47647,7 @@ A button with a user reference to be handled in the same way as textEntityTypeMe
 
 #### Defined in
 
-dist/generated/types.d.ts:11539
+dist/generated/types.d.ts:11818
 
 ___
 
@@ -47025,7 +47667,7 @@ A button with a user reference to be handled in the same way as textEntityTypeMe
 
 #### Defined in
 
-dist/generated/types.d.ts:11551
+dist/generated/types.d.ts:11830
 
 ___
 
@@ -47044,7 +47686,7 @@ A button that opens a Web App by calling openWebApp
 
 #### Defined in
 
-dist/generated/types.d.ts:11423
+dist/generated/types.d.ts:11702
 
 ___
 
@@ -47064,7 +47706,7 @@ A button that opens a Web App by calling openWebApp
 
 #### Defined in
 
-dist/generated/types.d.ts:11435
+dist/generated/types.d.ts:11714
 
 ___
 
@@ -47085,7 +47727,7 @@ Represents an animation file
 
 #### Defined in
 
-dist/generated/types.d.ts:25240
+dist/generated/types.d.ts:25590
 
 ___
 
@@ -47107,7 +47749,7 @@ Represents an animation file
 
 #### Defined in
 
-dist/generated/types.d.ts:25262
+dist/generated/types.d.ts:25612
 
 ___
 
@@ -47131,7 +47773,7 @@ Represents a link to an article or web page
 
 #### Defined in
 
-dist/generated/types.d.ts:25005
+dist/generated/types.d.ts:25355
 
 ___
 
@@ -47156,7 +47798,7 @@ Represents a link to an article or web page
 
 #### Defined in
 
-dist/generated/types.d.ts:25042
+dist/generated/types.d.ts:25392
 
 ___
 
@@ -47176,7 +47818,7 @@ Represents an audio file
 
 #### Defined in
 
-dist/generated/types.d.ts:25281
+dist/generated/types.d.ts:25631
 
 ___
 
@@ -47197,7 +47839,7 @@ Represents an audio file
 
 #### Defined in
 
-dist/generated/types.d.ts:25298
+dist/generated/types.d.ts:25648
 
 ___
 
@@ -47218,7 +47860,7 @@ Represents a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:25076
+dist/generated/types.d.ts:25426
 
 ___
 
@@ -47240,7 +47882,7 @@ Represents a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:25098
+dist/generated/types.d.ts:25448
 
 ___
 
@@ -47262,7 +47904,7 @@ Represents a document
 
 #### Defined in
 
-dist/generated/types.d.ts:25312
+dist/generated/types.d.ts:25662
 
 ___
 
@@ -47285,7 +47927,7 @@ Represents a document
 
 #### Defined in
 
-dist/generated/types.d.ts:25339
+dist/generated/types.d.ts:25689
 
 ___
 
@@ -47305,7 +47947,7 @@ Represents information about a game
 
 #### Defined in
 
-dist/generated/types.d.ts:25209
+dist/generated/types.d.ts:25559
 
 ___
 
@@ -47326,7 +47968,7 @@ Represents information about a game
 
 #### Defined in
 
-dist/generated/types.d.ts:25226
+dist/generated/types.d.ts:25576
 
 ___
 
@@ -47348,7 +47990,7 @@ Represents a point on the map
 
 #### Defined in
 
-dist/generated/types.d.ts:25117
+dist/generated/types.d.ts:25467
 
 ___
 
@@ -47371,7 +48013,7 @@ Represents a point on the map
 
 #### Defined in
 
-dist/generated/types.d.ts:25144
+dist/generated/types.d.ts:25494
 
 ___
 
@@ -47393,7 +48035,7 @@ Represents a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:25363
+dist/generated/types.d.ts:25713
 
 ___
 
@@ -47416,7 +48058,7 @@ Represents a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:25390
+dist/generated/types.d.ts:25740
 
 ___
 
@@ -47436,7 +48078,7 @@ Represents a sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:25414
+dist/generated/types.d.ts:25764
 
 ___
 
@@ -47457,7 +48099,7 @@ Represents a sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:25431
+dist/generated/types.d.ts:25781
 
 ___
 
@@ -47478,7 +48120,7 @@ Represents information about a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:25168
+dist/generated/types.d.ts:25518
 
 ___
 
@@ -47500,7 +48142,7 @@ Represents information about a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:25190
+dist/generated/types.d.ts:25540
 
 ___
 
@@ -47522,7 +48164,7 @@ Represents a video
 
 #### Defined in
 
-dist/generated/types.d.ts:25445
+dist/generated/types.d.ts:25795
 
 ___
 
@@ -47545,7 +48187,7 @@ Represents a video
 
 #### Defined in
 
-dist/generated/types.d.ts:25472
+dist/generated/types.d.ts:25822
 
 ___
 
@@ -47566,7 +48208,7 @@ Represents a voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:25496
+dist/generated/types.d.ts:25846
 
 ___
 
@@ -47588,7 +48230,7 @@ Represents a voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:25518
+dist/generated/types.d.ts:25868
 
 ___
 
@@ -47603,15 +48245,14 @@ Represents the results of the inline query. Use sendInlineQueryResultMessage to 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"inlineQueryResults"`` | - |
+| `button` | [`inlineQueryResultsButton`](index.types.default.md#inlinequeryresultsbutton-1) \| ``null`` | Button to be shown above inline query results; may be null |
 | `inline_query_id` | [`int64`](index.types.default.md#int64-1) | Unique identifier of the inline query |
 | `next_offset` | `string` | The offset for the next request. If empty, there are no more results |
 | `results` | [`vector`](index.types.default.md#vector)<[`InlineQueryResult`](index.types.default.md#inlinequeryresult)\> | Results of the query |
-| `switch_pm_parameter` | `string` | Parameter for the bot start message |
-| `switch_pm_text` | `string` | If non-empty, this text must be shown on the button, which opens a private chat with the bot and sends the bot a start message with the switch_pm_parameter |
 
 #### Defined in
 
-dist/generated/types.d.ts:25537
+dist/generated/types.d.ts:25960
 
 ___
 
@@ -47627,15 +48268,133 @@ Represents the results of the inline query. Use sendInlineQueryResultMessage to 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"inlineQueryResults"`` | - |
+| `button?` | [`inlineQueryResultsButton$Input`](index.types.default.md#inlinequeryresultsbutton$input-1) \| ``null`` | Button to be shown above inline query results; may be null |
 | `inline_query_id?` | [`int64`](index.types.default.md#int64-1) | Unique identifier of the inline query |
 | `next_offset?` | `string` | The offset for the next request. If empty, there are no more results |
 | `results?` | [`vector$Input`](index.types.default.md#vector$input)<[`InlineQueryResult$Input`](index.types.default.md#inlinequeryresult$input)\> | Results of the query |
-| `switch_pm_parameter?` | `string` | Parameter for the bot start message |
-| `switch_pm_text?` | `string` | If non-empty, this text must be shown on the button, which opens a private chat with the bot and sends the bot a start message with the switch_pm_parameter |
 
 #### Defined in
 
-dist/generated/types.d.ts:25569
+dist/generated/types.d.ts:25987
+
+___
+
+### inlineQueryResultsButton
+
+Ƭ **inlineQueryResultsButton**: `Object`
+
+Represents a button to be shown above inline query results
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"inlineQueryResultsButton"`` | - |
+| `text` | `string` | The text of the button |
+| `type` | [`InlineQueryResultsButtonType`](index.types.default.md#inlinequeryresultsbuttontype) | Type of the button |
+
+#### Defined in
+
+dist/generated/types.d.ts:25929
+
+___
+
+### inlineQueryResultsButton$Input
+
+Ƭ **inlineQueryResultsButton$Input**: `Object`
+
+Version of [inlineQueryResultsButton](index.types.md#inlinequeryresultsbutton-1) for method parameters.
+Represents a button to be shown above inline query results
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"inlineQueryResultsButton"`` | - |
+| `text?` | `string` | The text of the button |
+| `type?` | [`InlineQueryResultsButtonType$Input`](index.types.default.md#inlinequeryresultsbuttontype$input) | Type of the button |
+
+#### Defined in
+
+dist/generated/types.d.ts:25946
+
+___
+
+### inlineQueryResultsButtonTypeStartBot
+
+Ƭ **inlineQueryResultsButtonTypeStartBot**: `Object`
+
+Describes the button that opens a private chat with the bot and sends a start message to the bot with the given parameter
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"inlineQueryResultsButtonTypeStartBot"`` | - |
+| `parameter` | `string` | The parameter for the bot start message |
+
+#### Defined in
+
+dist/generated/types.d.ts:25887
+
+___
+
+### inlineQueryResultsButtonTypeStartBot$Input
+
+Ƭ **inlineQueryResultsButtonTypeStartBot$Input**: `Object`
+
+Version of [inlineQueryResultsButtonTypeStartBot](index.types.md#inlinequeryresultsbuttontypestartbot) for method parameters.
+Describes the button that opens a private chat with the bot and sends a start message to the bot with the given parameter
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"inlineQueryResultsButtonTypeStartBot"`` | - |
+| `parameter?` | `string` | The parameter for the bot start message |
+
+#### Defined in
+
+dist/generated/types.d.ts:25899
+
+___
+
+### inlineQueryResultsButtonTypeWebApp
+
+Ƭ **inlineQueryResultsButtonTypeWebApp**: `Object`
+
+Describes the button that opens a Web App by calling getWebAppUrl
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"inlineQueryResultsButtonTypeWebApp"`` | - |
+| `url` | `string` | An HTTP URL to pass to getWebAppUrl |
+
+#### Defined in
+
+dist/generated/types.d.ts:25908
+
+___
+
+### inlineQueryResultsButtonTypeWebApp$Input
+
+Ƭ **inlineQueryResultsButtonTypeWebApp$Input**: `Object`
+
+Version of [inlineQueryResultsButtonTypeWebApp](index.types.md#inlinequeryresultsbuttontypewebapp) for method parameters.
+Describes the button that opens a Web App by calling getWebAppUrl
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"inlineQueryResultsButtonTypeWebApp"`` | - |
+| `url?` | `string` | An HTTP URL to pass to getWebAppUrl |
+
+#### Defined in
+
+dist/generated/types.d.ts:25920
 
 ___
 
@@ -47654,7 +48413,7 @@ A background from a local file
 
 #### Defined in
 
-dist/generated/types.d.ts:28675
+dist/generated/types.d.ts:29088
 
 ___
 
@@ -47674,7 +48433,7 @@ A background from a local file
 
 #### Defined in
 
-dist/generated/types.d.ts:28687
+dist/generated/types.d.ts:29100
 
 ___
 
@@ -47693,7 +48452,7 @@ A background from the server
 
 #### Defined in
 
-dist/generated/types.d.ts:28696
+dist/generated/types.d.ts:29109
 
 ___
 
@@ -47713,7 +48472,7 @@ A background from the server
 
 #### Defined in
 
-dist/generated/types.d.ts:28708
+dist/generated/types.d.ts:29121
 
 ___
 
@@ -47733,7 +48492,7 @@ An animation in MPEG4 format; must be square, at most 10 seconds long, have widt
 
 #### Defined in
 
-dist/generated/types.d.ts:5296
+dist/generated/types.d.ts:5394
 
 ___
 
@@ -47754,7 +48513,7 @@ An animation in MPEG4 format; must be square, at most 10 seconds long, have widt
 
 #### Defined in
 
-dist/generated/types.d.ts:5313
+dist/generated/types.d.ts:5411
 
 ___
 
@@ -47773,7 +48532,7 @@ A previously used profile photo of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:5254
+dist/generated/types.d.ts:5352
 
 ___
 
@@ -47793,7 +48552,7 @@ A previously used profile photo of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:5266
+dist/generated/types.d.ts:5364
 
 ___
 
@@ -47812,7 +48571,7 @@ A static photo in JPEG format
 
 #### Defined in
 
-dist/generated/types.d.ts:5275
+dist/generated/types.d.ts:5373
 
 ___
 
@@ -47832,7 +48591,7 @@ A static photo in JPEG format
 
 #### Defined in
 
-dist/generated/types.d.ts:5287
+dist/generated/types.d.ts:5385
 
 ___
 
@@ -47851,7 +48610,7 @@ A sticker on a custom background
 
 #### Defined in
 
-dist/generated/types.d.ts:5327
+dist/generated/types.d.ts:5425
 
 ___
 
@@ -47871,7 +48630,7 @@ A sticker on a custom background
 
 #### Defined in
 
-dist/generated/types.d.ts:5339
+dist/generated/types.d.ts:5437
 
 ___
 
@@ -47890,7 +48649,7 @@ Applies if a user enters new credentials using Apple Pay
 
 #### Defined in
 
-dist/generated/types.d.ts:14925
+dist/generated/types.d.ts:15245
 
 ___
 
@@ -47910,7 +48669,7 @@ Applies if a user enters new credentials using Apple Pay
 
 #### Defined in
 
-dist/generated/types.d.ts:14937
+dist/generated/types.d.ts:15257
 
 ___
 
@@ -47929,7 +48688,7 @@ Applies if a user enters new credentials using Google Pay
 
 #### Defined in
 
-dist/generated/types.d.ts:14946
+dist/generated/types.d.ts:15266
 
 ___
 
@@ -47949,7 +48708,7 @@ Applies if a user enters new credentials using Google Pay
 
 #### Defined in
 
-dist/generated/types.d.ts:14958
+dist/generated/types.d.ts:15278
 
 ___
 
@@ -47969,7 +48728,7 @@ Applies if a user enters new credentials on a payment provider website
 
 #### Defined in
 
-dist/generated/types.d.ts:14894
+dist/generated/types.d.ts:15214
 
 ___
 
@@ -47990,7 +48749,7 @@ Applies if a user enters new credentials on a payment provider website
 
 #### Defined in
 
-dist/generated/types.d.ts:14911
+dist/generated/types.d.ts:15231
 
 ___
 
@@ -48009,7 +48768,7 @@ Applies if a user chooses some previously saved payment credentials. To use thei
 
 #### Defined in
 
-dist/generated/types.d.ts:14873
+dist/generated/types.d.ts:15193
 
 ___
 
@@ -48029,7 +48788,7 @@ Applies if a user chooses some previously saved payment credentials. To use thei
 
 #### Defined in
 
-dist/generated/types.d.ts:14885
+dist/generated/types.d.ts:15205
 
 ___
 
@@ -48050,7 +48809,7 @@ A file generated by the application
 
 #### Defined in
 
-dist/generated/types.d.ts:2921
+dist/generated/types.d.ts:2962
 
 ___
 
@@ -48072,7 +48831,7 @@ A file generated by the application
 
 #### Defined in
 
-dist/generated/types.d.ts:2943
+dist/generated/types.d.ts:2984
 
 ___
 
@@ -48091,7 +48850,7 @@ A file defined by its unique ID
 
 #### Defined in
 
-dist/generated/types.d.ts:2855
+dist/generated/types.d.ts:2896
 
 ___
 
@@ -48111,7 +48870,7 @@ A file defined by its unique ID
 
 #### Defined in
 
-dist/generated/types.d.ts:2867
+dist/generated/types.d.ts:2908
 
 ___
 
@@ -48130,7 +48889,7 @@ A file defined by a local path
 
 #### Defined in
 
-dist/generated/types.d.ts:2900
+dist/generated/types.d.ts:2941
 
 ___
 
@@ -48150,7 +48909,7 @@ A file defined by a local path
 
 #### Defined in
 
-dist/generated/types.d.ts:2912
+dist/generated/types.d.ts:2953
 
 ___
 
@@ -48170,7 +48929,7 @@ A file defined by its remote ID. The remote ID is guaranteed to be usable only i
 
 #### Defined in
 
-dist/generated/types.d.ts:2877
+dist/generated/types.d.ts:2918
 
 ___
 
@@ -48192,7 +48951,7 @@ A file defined by its remote ID. The remote ID is guaranteed to be usable only i
 
 #### Defined in
 
-dist/generated/types.d.ts:2891
+dist/generated/types.d.ts:2932
 
 ___
 
@@ -48216,7 +48975,7 @@ An identity document to be saved to Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16008
+dist/generated/types.d.ts:16328
 
 ___
 
@@ -48241,7 +49000,7 @@ An identity document to be saved to Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16045
+dist/generated/types.d.ts:16365
 
 ___
 
@@ -48270,7 +49029,7 @@ Represents a link to an animated GIF or an animated (i.e., without sound) H.264/
 
 #### Defined in
 
-dist/generated/types.d.ts:23903
+dist/generated/types.d.ts:24253
 
 ___
 
@@ -48300,7 +49059,7 @@ Represents a link to an animated GIF or an animated (i.e., without sound) H.264/
 
 #### Defined in
 
-dist/generated/types.d.ts:23965
+dist/generated/types.d.ts:24315
 
 ___
 
@@ -48328,7 +49087,7 @@ Represents a link to an article or web page
 
 #### Defined in
 
-dist/generated/types.d.ts:24024
+dist/generated/types.d.ts:24374
 
 ___
 
@@ -48357,7 +49116,7 @@ Represents a link to an article or web page
 
 #### Defined in
 
-dist/generated/types.d.ts:24081
+dist/generated/types.d.ts:24431
 
 ___
 
@@ -48382,7 +49141,7 @@ Represents a link to an MP3 audio file
 
 #### Defined in
 
-dist/generated/types.d.ts:24135
+dist/generated/types.d.ts:24485
 
 ___
 
@@ -48408,7 +49167,7 @@ Represents a link to an MP3 audio file
 
 #### Defined in
 
-dist/generated/types.d.ts:24177
+dist/generated/types.d.ts:24527
 
 ___
 
@@ -48433,7 +49192,7 @@ Represents a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:24216
+dist/generated/types.d.ts:24566
 
 ___
 
@@ -48459,7 +49218,7 @@ Represents a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:24258
+dist/generated/types.d.ts:24608
 
 ___
 
@@ -48487,7 +49246,7 @@ Represents a link to a file
 
 #### Defined in
 
-dist/generated/types.d.ts:24297
+dist/generated/types.d.ts:24647
 
 ___
 
@@ -48516,7 +49275,7 @@ Represents a link to a file
 
 #### Defined in
 
-dist/generated/types.d.ts:24354
+dist/generated/types.d.ts:24704
 
 ___
 
@@ -48537,7 +49296,7 @@ Represents a game
 
 #### Defined in
 
-dist/generated/types.d.ts:24408
+dist/generated/types.d.ts:24758
 
 ___
 
@@ -48559,7 +49318,7 @@ Represents a game
 
 #### Defined in
 
-dist/generated/types.d.ts:24430
+dist/generated/types.d.ts:24780
 
 ___
 
@@ -48586,7 +49345,7 @@ Represents a point on the map
 
 #### Defined in
 
-dist/generated/types.d.ts:24449
+dist/generated/types.d.ts:24799
 
 ___
 
@@ -48614,7 +49373,7 @@ Represents a point on the map
 
 #### Defined in
 
-dist/generated/types.d.ts:24501
+dist/generated/types.d.ts:24851
 
 ___
 
@@ -48641,7 +49400,7 @@ Represents link to a JPEG image
 
 #### Defined in
 
-dist/generated/types.d.ts:24550
+dist/generated/types.d.ts:24900
 
 ___
 
@@ -48669,7 +49428,7 @@ Represents link to a JPEG image
 
 #### Defined in
 
-dist/generated/types.d.ts:24602
+dist/generated/types.d.ts:24952
 
 ___
 
@@ -48694,7 +49453,7 @@ Represents a link to a WEBP, TGS, or WEBM sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:24651
+dist/generated/types.d.ts:25001
 
 ___
 
@@ -48720,7 +49479,7 @@ Represents a link to a WEBP, TGS, or WEBM sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:24693
+dist/generated/types.d.ts:25043
 
 ___
 
@@ -48745,7 +49504,7 @@ Represents information about a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:24732
+dist/generated/types.d.ts:25082
 
 ___
 
@@ -48771,7 +49530,7 @@ Represents information about a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:24774
+dist/generated/types.d.ts:25124
 
 ___
 
@@ -48800,7 +49559,7 @@ Represents a link to a page containing an embedded video player or a video file
 
 #### Defined in
 
-dist/generated/types.d.ts:24813
+dist/generated/types.d.ts:25163
 
 ___
 
@@ -48830,7 +49589,7 @@ Represents a link to a page containing an embedded video player or a video file
 
 #### Defined in
 
-dist/generated/types.d.ts:24875
+dist/generated/types.d.ts:25225
 
 ___
 
@@ -48854,7 +49613,7 @@ Represents a link to an opus-encoded audio file within an OGG container, single 
 
 #### Defined in
 
-dist/generated/types.d.ts:24934
+dist/generated/types.d.ts:25284
 
 ___
 
@@ -48879,7 +49638,7 @@ Represents a link to an opus-encoded audio file within an OGG container, single 
 
 #### Defined in
 
-dist/generated/types.d.ts:24971
+dist/generated/types.d.ts:25321
 
 ___
 
@@ -48899,7 +49658,7 @@ An invoice from a message of the type messageInvoice
 
 #### Defined in
 
-dist/generated/types.d.ts:15415
+dist/generated/types.d.ts:15735
 
 ___
 
@@ -48920,7 +49679,7 @@ An invoice from a message of the type messageInvoice
 
 #### Defined in
 
-dist/generated/types.d.ts:15432
+dist/generated/types.d.ts:15752
 
 ___
 
@@ -48939,7 +49698,7 @@ An invoice from a link of the type internalLinkTypeInvoice
 
 #### Defined in
 
-dist/generated/types.d.ts:15446
+dist/generated/types.d.ts:15766
 
 ___
 
@@ -48959,7 +49718,7 @@ An invoice from a link of the type internalLinkTypeInvoice
 
 #### Defined in
 
-dist/generated/types.d.ts:15458
+dist/generated/types.d.ts:15778
 
 ___
 
@@ -48985,7 +49744,7 @@ An animation message (GIF-style).
 
 #### Defined in
 
-dist/generated/types.d.ts:19760
+dist/generated/types.d.ts:20100
 
 ___
 
@@ -49012,7 +49771,7 @@ An animation message (GIF-style).
 
 #### Defined in
 
-dist/generated/types.d.ts:19807
+dist/generated/types.d.ts:20147
 
 ___
 
@@ -49036,7 +49795,7 @@ An audio message
 
 #### Defined in
 
-dist/generated/types.d.ts:19851
+dist/generated/types.d.ts:20191
 
 ___
 
@@ -49061,7 +49820,7 @@ An audio message
 
 #### Defined in
 
-dist/generated/types.d.ts:19888
+dist/generated/types.d.ts:20228
 
 ___
 
@@ -49080,7 +49839,7 @@ A message containing a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:20410
+dist/generated/types.d.ts:20750
 
 ___
 
@@ -49100,7 +49859,7 @@ A message containing a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:20422
+dist/generated/types.d.ts:20762
 
 ___
 
@@ -49120,7 +49879,7 @@ A dice message
 
 #### Defined in
 
-dist/generated/types.d.ts:20431
+dist/generated/types.d.ts:20771
 
 ___
 
@@ -49141,7 +49900,7 @@ A dice message
 
 #### Defined in
 
-dist/generated/types.d.ts:20448
+dist/generated/types.d.ts:20788
 
 ___
 
@@ -49163,7 +49922,7 @@ A document message (general file)
 
 #### Defined in
 
-dist/generated/types.d.ts:19922
+dist/generated/types.d.ts:20262
 
 ___
 
@@ -49186,7 +49945,7 @@ A document message (general file)
 
 #### Defined in
 
-dist/generated/types.d.ts:19949
+dist/generated/types.d.ts:20289
 
 ___
 
@@ -49208,7 +49967,7 @@ A forwarded message
 
 #### Defined in
 
-dist/generated/types.d.ts:20705
+dist/generated/types.d.ts:21045
 
 ___
 
@@ -49231,7 +49990,7 @@ A forwarded message
 
 #### Defined in
 
-dist/generated/types.d.ts:20732
+dist/generated/types.d.ts:21072
 
 ___
 
@@ -49251,7 +50010,7 @@ A message with a game; not supported for channels or secret chats
 
 #### Defined in
 
-dist/generated/types.d.ts:20462
+dist/generated/types.d.ts:20802
 
 ___
 
@@ -49272,7 +50031,7 @@ A message with a game; not supported for channels or secret chats
 
 #### Defined in
 
-dist/generated/types.d.ts:20479
+dist/generated/types.d.ts:20819
 
 ___
 
@@ -49302,7 +50061,7 @@ A message with an invoice; can be used only by bots
 
 #### Defined in
 
-dist/generated/types.d.ts:20493
+dist/generated/types.d.ts:20833
 
 ___
 
@@ -49333,7 +50092,7 @@ A message with an invoice; can be used only by bots
 
 #### Defined in
 
-dist/generated/types.d.ts:20560
+dist/generated/types.d.ts:20900
 
 ___
 
@@ -49355,7 +50114,7 @@ A message with a location
 
 #### Defined in
 
-dist/generated/types.d.ts:20338
+dist/generated/types.d.ts:20678
 
 ___
 
@@ -49378,7 +50137,7 @@ A message with a location
 
 #### Defined in
 
-dist/generated/types.d.ts:20365
+dist/generated/types.d.ts:20705
 
 ___
 
@@ -49404,7 +50163,7 @@ A photo message
 
 #### Defined in
 
-dist/generated/types.d.ts:19973
+dist/generated/types.d.ts:20313
 
 ___
 
@@ -49431,7 +50190,7 @@ A photo message
 
 #### Defined in
 
-dist/generated/types.d.ts:20020
+dist/generated/types.d.ts:20360
 
 ___
 
@@ -49456,7 +50215,7 @@ A message with a poll. Polls can't be sent to secret chats. Polls can be sent on
 
 #### Defined in
 
-dist/generated/types.d.ts:20624
+dist/generated/types.d.ts:20964
 
 ___
 
@@ -49482,7 +50241,7 @@ A message with a poll. Polls can't be sent to secret chats. Polls can be sent on
 
 #### Defined in
 
-dist/generated/types.d.ts:20666
+dist/generated/types.d.ts:21006
 
 ___
 
@@ -49505,7 +50264,7 @@ A sticker message
 
 #### Defined in
 
-dist/generated/types.d.ts:20064
+dist/generated/types.d.ts:20404
 
 ___
 
@@ -49529,7 +50288,7 @@ A sticker message
 
 #### Defined in
 
-dist/generated/types.d.ts:20096
+dist/generated/types.d.ts:20436
 
 ___
 
@@ -49550,7 +50309,7 @@ A text message
 
 #### Defined in
 
-dist/generated/types.d.ts:19719
+dist/generated/types.d.ts:20059
 
 ___
 
@@ -49572,7 +50331,7 @@ A text message
 
 #### Defined in
 
-dist/generated/types.d.ts:19741
+dist/generated/types.d.ts:20081
 
 ___
 
@@ -49591,7 +50350,7 @@ A message with information about a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:20389
+dist/generated/types.d.ts:20729
 
 ___
 
@@ -49611,7 +50370,7 @@ A message with information about a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:20401
+dist/generated/types.d.ts:20741
 
 ___
 
@@ -49639,7 +50398,7 @@ A video message
 
 #### Defined in
 
-dist/generated/types.d.ts:20125
+dist/generated/types.d.ts:20465
 
 ___
 
@@ -49668,7 +50427,7 @@ A video message
 
 #### Defined in
 
-dist/generated/types.d.ts:20182
+dist/generated/types.d.ts:20522
 
 ___
 
@@ -49690,7 +50449,7 @@ A video note message
 
 #### Defined in
 
-dist/generated/types.d.ts:20236
+dist/generated/types.d.ts:20576
 
 ___
 
@@ -49713,7 +50472,7 @@ A video note message
 
 #### Defined in
 
-dist/generated/types.d.ts:20263
+dist/generated/types.d.ts:20603
 
 ___
 
@@ -49735,7 +50494,7 @@ A voice note message
 
 #### Defined in
 
-dist/generated/types.d.ts:20287
+dist/generated/types.d.ts:20627
 
 ___
 
@@ -49758,7 +50517,7 @@ A voice note message
 
 #### Defined in
 
-dist/generated/types.d.ts:20314
+dist/generated/types.d.ts:20654
 
 ___
 
@@ -49777,7 +50536,7 @@ A Telegram Passport element to be saved containing the user's address
 
 #### Defined in
 
-dist/generated/types.d.ts:16519
+dist/generated/types.d.ts:16839
 
 ___
 
@@ -49797,7 +50556,7 @@ A Telegram Passport element to be saved containing the user's address
 
 #### Defined in
 
-dist/generated/types.d.ts:16531
+dist/generated/types.d.ts:16851
 
 ___
 
@@ -49816,7 +50575,7 @@ A Telegram Passport element to be saved containing the user's bank statement
 
 #### Defined in
 
-dist/generated/types.d.ts:16561
+dist/generated/types.d.ts:16881
 
 ___
 
@@ -49836,7 +50595,7 @@ A Telegram Passport element to be saved containing the user's bank statement
 
 #### Defined in
 
-dist/generated/types.d.ts:16573
+dist/generated/types.d.ts:16893
 
 ___
 
@@ -49855,7 +50614,7 @@ A Telegram Passport element to be saved containing the user's driver license
 
 #### Defined in
 
-dist/generated/types.d.ts:16456
+dist/generated/types.d.ts:16776
 
 ___
 
@@ -49875,7 +50634,7 @@ A Telegram Passport element to be saved containing the user's driver license
 
 #### Defined in
 
-dist/generated/types.d.ts:16468
+dist/generated/types.d.ts:16788
 
 ___
 
@@ -49894,7 +50653,7 @@ A Telegram Passport element to be saved containing the user's email address
 
 #### Defined in
 
-dist/generated/types.d.ts:16666
+dist/generated/types.d.ts:16986
 
 ___
 
@@ -49914,7 +50673,7 @@ A Telegram Passport element to be saved containing the user's email address
 
 #### Defined in
 
-dist/generated/types.d.ts:16678
+dist/generated/types.d.ts:16998
 
 ___
 
@@ -49935,7 +50694,7 @@ Contains the description of an error in a Telegram Passport element; for bots on
 
 #### Defined in
 
-dist/generated/types.d.ts:17363
+dist/generated/types.d.ts:17683
 
 ___
 
@@ -49957,7 +50716,7 @@ Contains the description of an error in a Telegram Passport element; for bots on
 
 #### Defined in
 
-dist/generated/types.d.ts:17385
+dist/generated/types.d.ts:17705
 
 ___
 
@@ -49977,7 +50736,7 @@ A data field contains an error. The error is considered resolved when the field'
 
 #### Defined in
 
-dist/generated/types.d.ts:17185
+dist/generated/types.d.ts:17505
 
 ___
 
@@ -49998,7 +50757,7 @@ A data field contains an error. The error is considered resolved when the field'
 
 #### Defined in
 
-dist/generated/types.d.ts:17202
+dist/generated/types.d.ts:17522
 
 ___
 
@@ -50017,7 +50776,7 @@ The file contains an error. The error is considered resolved when the file chang
 
 #### Defined in
 
-dist/generated/types.d.ts:17321
+dist/generated/types.d.ts:17641
 
 ___
 
@@ -50037,7 +50796,7 @@ The file contains an error. The error is considered resolved when the file chang
 
 #### Defined in
 
-dist/generated/types.d.ts:17333
+dist/generated/types.d.ts:17653
 
 ___
 
@@ -50056,7 +50815,7 @@ The list of attached files contains an error. The error is considered resolved w
 
 #### Defined in
 
-dist/generated/types.d.ts:17342
+dist/generated/types.d.ts:17662
 
 ___
 
@@ -50076,7 +50835,7 @@ The list of attached files contains an error. The error is considered resolved w
 
 #### Defined in
 
-dist/generated/types.d.ts:17354
+dist/generated/types.d.ts:17674
 
 ___
 
@@ -50095,7 +50854,7 @@ The front side of the document contains an error. The error is considered resolv
 
 #### Defined in
 
-dist/generated/types.d.ts:17216
+dist/generated/types.d.ts:17536
 
 ___
 
@@ -50115,7 +50874,7 @@ The front side of the document contains an error. The error is considered resolv
 
 #### Defined in
 
-dist/generated/types.d.ts:17228
+dist/generated/types.d.ts:17548
 
 ___
 
@@ -50134,7 +50893,7 @@ The reverse side of the document contains an error. The error is considered reso
 
 #### Defined in
 
-dist/generated/types.d.ts:17237
+dist/generated/types.d.ts:17557
 
 ___
 
@@ -50154,7 +50913,7 @@ The reverse side of the document contains an error. The error is considered reso
 
 #### Defined in
 
-dist/generated/types.d.ts:17249
+dist/generated/types.d.ts:17569
 
 ___
 
@@ -50173,7 +50932,7 @@ The selfie contains an error. The error is considered resolved when the file wit
 
 #### Defined in
 
-dist/generated/types.d.ts:17258
+dist/generated/types.d.ts:17578
 
 ___
 
@@ -50193,7 +50952,7 @@ The selfie contains an error. The error is considered resolved when the file wit
 
 #### Defined in
 
-dist/generated/types.d.ts:17270
+dist/generated/types.d.ts:17590
 
 ___
 
@@ -50212,7 +50971,7 @@ One of the files containing the translation of the document contains an error. T
 
 #### Defined in
 
-dist/generated/types.d.ts:17279
+dist/generated/types.d.ts:17599
 
 ___
 
@@ -50232,7 +50991,7 @@ One of the files containing the translation of the document contains an error. T
 
 #### Defined in
 
-dist/generated/types.d.ts:17291
+dist/generated/types.d.ts:17611
 
 ___
 
@@ -50251,7 +51010,7 @@ The translation of the document contains an error. The error is considered resol
 
 #### Defined in
 
-dist/generated/types.d.ts:17300
+dist/generated/types.d.ts:17620
 
 ___
 
@@ -50271,7 +51030,7 @@ The translation of the document contains an error. The error is considered resol
 
 #### Defined in
 
-dist/generated/types.d.ts:17312
+dist/generated/types.d.ts:17632
 
 ___
 
@@ -50290,7 +51049,7 @@ The element contains an error in an unspecified place. The error will be conside
 
 #### Defined in
 
-dist/generated/types.d.ts:17164
+dist/generated/types.d.ts:17484
 
 ___
 
@@ -50310,7 +51069,7 @@ The element contains an error in an unspecified place. The error will be conside
 
 #### Defined in
 
-dist/generated/types.d.ts:17176
+dist/generated/types.d.ts:17496
 
 ___
 
@@ -50329,7 +51088,7 @@ A Telegram Passport element to be saved containing the user's identity card
 
 #### Defined in
 
-dist/generated/types.d.ts:16477
+dist/generated/types.d.ts:16797
 
 ___
 
@@ -50349,7 +51108,7 @@ A Telegram Passport element to be saved containing the user's identity card
 
 #### Defined in
 
-dist/generated/types.d.ts:16489
+dist/generated/types.d.ts:16809
 
 ___
 
@@ -50368,7 +51127,7 @@ A Telegram Passport element to be saved containing the user's internal passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16498
+dist/generated/types.d.ts:16818
 
 ___
 
@@ -50388,7 +51147,7 @@ A Telegram Passport element to be saved containing the user's internal passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16510
+dist/generated/types.d.ts:16830
 
 ___
 
@@ -50407,7 +51166,7 @@ A Telegram Passport element to be saved containing the user's passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16435
+dist/generated/types.d.ts:16755
 
 ___
 
@@ -50427,7 +51186,7 @@ A Telegram Passport element to be saved containing the user's passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16447
+dist/generated/types.d.ts:16767
 
 ___
 
@@ -50446,7 +51205,7 @@ A Telegram Passport element to be saved containing the user's passport registrat
 
 #### Defined in
 
-dist/generated/types.d.ts:16603
+dist/generated/types.d.ts:16923
 
 ___
 
@@ -50466,7 +51225,7 @@ A Telegram Passport element to be saved containing the user's passport registrat
 
 #### Defined in
 
-dist/generated/types.d.ts:16615
+dist/generated/types.d.ts:16935
 
 ___
 
@@ -50485,7 +51244,7 @@ A Telegram Passport element to be saved containing the user's personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:16414
+dist/generated/types.d.ts:16734
 
 ___
 
@@ -50505,7 +51264,7 @@ A Telegram Passport element to be saved containing the user's personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:16426
+dist/generated/types.d.ts:16746
 
 ___
 
@@ -50524,7 +51283,7 @@ A Telegram Passport element to be saved containing the user's phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:16645
+dist/generated/types.d.ts:16965
 
 ___
 
@@ -50544,7 +51303,7 @@ A Telegram Passport element to be saved containing the user's phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:16657
+dist/generated/types.d.ts:16977
 
 ___
 
@@ -50563,7 +51322,7 @@ A Telegram Passport element to be saved containing the user's rental agreement
 
 #### Defined in
 
-dist/generated/types.d.ts:16582
+dist/generated/types.d.ts:16902
 
 ___
 
@@ -50583,7 +51342,7 @@ A Telegram Passport element to be saved containing the user's rental agreement
 
 #### Defined in
 
-dist/generated/types.d.ts:16594
+dist/generated/types.d.ts:16914
 
 ___
 
@@ -50602,7 +51361,7 @@ A Telegram Passport element to be saved containing the user's temporary registra
 
 #### Defined in
 
-dist/generated/types.d.ts:16624
+dist/generated/types.d.ts:16944
 
 ___
 
@@ -50622,7 +51381,7 @@ A Telegram Passport element to be saved containing the user's temporary registra
 
 #### Defined in
 
-dist/generated/types.d.ts:16636
+dist/generated/types.d.ts:16956
 
 ___
 
@@ -50641,7 +51400,7 @@ A Telegram Passport element to be saved containing the user's utility bill
 
 #### Defined in
 
-dist/generated/types.d.ts:16540
+dist/generated/types.d.ts:16860
 
 ___
 
@@ -50661,7 +51420,7 @@ A Telegram Passport element to be saved containing the user's utility bill
 
 #### Defined in
 
-dist/generated/types.d.ts:16552
+dist/generated/types.d.ts:16872
 
 ___
 
@@ -50681,7 +51440,7 @@ A personal document to be saved to Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16110
+dist/generated/types.d.ts:16430
 
 ___
 
@@ -50702,7 +51461,7 @@ A personal document to be saved to Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16127
+dist/generated/types.d.ts:16447
 
 ___
 
@@ -50717,14 +51476,14 @@ A sticker to be added to a sticker set
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"inputSticker"`` | - |
-| `emojis` | `string` | Emojis corresponding to the sticker |
-| `format` | [`StickerFormat`](index.types.default.md#stickerformat) | Sticker format |
+| `emojis` | `string` | String with 1-20 emoji corresponding to the sticker |
+| `keywords` | [`vector`](index.types.default.md#vector)<`string`\> | List of up to 20 keywords with total length up to 64 characters, which can be used to find the sticker |
 | `mask_position` | [`maskPosition`](index.types.default.md#maskposition-1) | Position where the mask is placed; pass null if not specified |
-| `sticker` | [`InputFile`](index.types.default.md#inputfile) | File with the sticker; must fit in a 512x512 square. For WEBP stickers and masks the file must be in PNG format, which will be converted to WEBP server-side.    -Otherwise, the file must be local or uploaded within a week. See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements |
+| `sticker` | [`InputFile`](index.types.default.md#inputfile) | File with the sticker; must fit in a 512x512 square. For WEBP stickers the file must be in WEBP or PNG format, which will be converted to WEBP server-side. -See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements |
 
 #### Defined in
 
-dist/generated/types.d.ts:34192
+dist/generated/types.d.ts:34649
 
 ___
 
@@ -50740,14 +51499,14 @@ A sticker to be added to a sticker set
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"inputSticker"`` | - |
-| `emojis?` | `string` | Emojis corresponding to the sticker |
-| `format?` | [`StickerFormat$Input`](index.types.default.md#stickerformat$input) | Sticker format |
+| `emojis?` | `string` | String with 1-20 emoji corresponding to the sticker |
+| `keywords?` | [`vector$Input`](index.types.default.md#vector$input)<`string`\> | List of up to 20 keywords with total length up to 64 characters, which can be used to find the sticker |
 | `mask_position?` | [`maskPosition$Input`](index.types.default.md#maskposition$input-1) | Position where the mask is placed; pass null if not specified |
-| `sticker?` | [`InputFile$Input`](index.types.default.md#inputfile$input) | File with the sticker; must fit in a 512x512 square. For WEBP stickers and masks the file must be in PNG format, which will be converted to WEBP server-side.    -Otherwise, the file must be local or uploaded within a week. See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements |
+| `sticker?` | [`InputFile$Input`](index.types.default.md#inputfile$input) | File with the sticker; must fit in a 512x512 square. For WEBP stickers the file must be in WEBP or PNG format, which will be converted to WEBP server-side. -See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements |
 
 #### Defined in
 
-dist/generated/types.d.ts:34221
+dist/generated/types.d.ts:34678
 
 ___
 
@@ -50768,7 +51527,7 @@ A thumbnail to be sent along with a file; must be in JPEG or WEBP format for sti
 
 #### Defined in
 
-dist/generated/types.d.ts:19544
+dist/generated/types.d.ts:19874
 
 ___
 
@@ -50790,7 +51549,7 @@ A thumbnail to be sent along with a file; must be in JPEG or WEBP format for sti
 
 #### Defined in
 
-dist/generated/types.d.ts:19566
+dist/generated/types.d.ts:19896
 
 ___
 
@@ -50844,7 +51603,7 @@ The link is a link to the active sessions section of the application. Use getAct
 
 #### Defined in
 
-dist/generated/types.d.ts:31586
+dist/generated/types.d.ts:31999
 
 ___
 
@@ -50863,7 +51622,7 @@ The link is a link to the active sessions section of the application. Use getAct
 
 #### Defined in
 
-dist/generated/types.d.ts:31593
+dist/generated/types.d.ts:32006
 
 ___
 
@@ -50887,7 +51646,7 @@ The link is a link to an attachment menu bot to be opened in the specified or a 
 
 #### Defined in
 
-dist/generated/types.d.ts:31600
+dist/generated/types.d.ts:32013
 
 ___
 
@@ -50915,7 +51674,7 @@ The link is a link to an attachment menu bot to be opened in the specified or a 
 
 #### Defined in
 
-dist/generated/types.d.ts:31628
+dist/generated/types.d.ts:32041
 
 ___
 
@@ -50934,7 +51693,7 @@ The link contains an authentication code. Call checkAuthenticationCode with the 
 
 #### Defined in
 
-dist/generated/types.d.ts:31647
+dist/generated/types.d.ts:32060
 
 ___
 
@@ -50954,7 +51713,7 @@ The link contains an authentication code. Call checkAuthenticationCode with the 
 
 #### Defined in
 
-dist/generated/types.d.ts:31659
+dist/generated/types.d.ts:32072
 
 ___
 
@@ -50973,7 +51732,7 @@ The link is a link to a background. Call searchBackground with the given backgro
 
 #### Defined in
 
-dist/generated/types.d.ts:31668
+dist/generated/types.d.ts:32081
 
 ___
 
@@ -50993,7 +51752,7 @@ The link is a link to a background. Call searchBackground with the given backgro
 
 #### Defined in
 
-dist/generated/types.d.ts:31680
+dist/generated/types.d.ts:32093
 
 ___
 
@@ -51015,7 +51774,7 @@ The link is a link to a Telegram bot, which is supposed to be added to a channel
 
 #### Defined in
 
-dist/generated/types.d.ts:31791
+dist/generated/types.d.ts:32104
 
 ___
 
@@ -51040,7 +51799,7 @@ The link is a link to a Telegram bot, which is supposed to be added to a channel
 
 #### Defined in
 
-dist/generated/types.d.ts:31812
+dist/generated/types.d.ts:32125
 
 ___
 
@@ -51062,7 +51821,7 @@ The link is a link to a chat with a Telegram bot. Call searchPublicChat with the
 
 #### Defined in
 
-dist/generated/types.d.ts:31690
+dist/generated/types.d.ts:32140
 
 ___
 
@@ -51086,7 +51845,7 @@ The link is a link to a chat with a Telegram bot. Call searchPublicChat with the
 
 #### Defined in
 
-dist/generated/types.d.ts:31714
+dist/generated/types.d.ts:32164
 
 ___
 
@@ -51112,7 +51871,7 @@ The link is a link to a Telegram bot, which is supposed to be added to a group c
 
 #### Defined in
 
-dist/generated/types.d.ts:31738
+dist/generated/types.d.ts:32188
 
 ___
 
@@ -51144,7 +51903,7 @@ The link is a link to a Telegram bot, which is supposed to be added to a group c
 
 #### Defined in
 
-dist/generated/types.d.ts:31770
+dist/generated/types.d.ts:32220
 
 ___
 
@@ -51162,7 +51921,7 @@ The link is a link to the change phone number section of the app
 
 #### Defined in
 
-dist/generated/types.d.ts:31826
+dist/generated/types.d.ts:32239
 
 ___
 
@@ -51181,7 +51940,7 @@ The link is a link to the change phone number section of the app
 
 #### Defined in
 
-dist/generated/types.d.ts:31833
+dist/generated/types.d.ts:32246
 
 ___
 
@@ -51200,7 +51959,7 @@ The link is a chat invite link. Call checkChatInviteLink with the given invite l
 
 #### Defined in
 
-dist/generated/types.d.ts:31837
+dist/generated/types.d.ts:32250
 
 ___
 
@@ -51220,7 +51979,7 @@ The link is a chat invite link. Call checkChatInviteLink with the given invite l
 
 #### Defined in
 
-dist/generated/types.d.ts:31849
+dist/generated/types.d.ts:32262
 
 ___
 
@@ -51238,7 +51997,7 @@ The link is a link to the default message auto-delete timer settings section of 
 
 #### Defined in
 
-dist/generated/types.d.ts:31858
+dist/generated/types.d.ts:32271
 
 ___
 
@@ -51257,7 +52016,7 @@ The link is a link to the default message auto-delete timer settings section of 
 
 #### Defined in
 
-dist/generated/types.d.ts:31865
+dist/generated/types.d.ts:32278
 
 ___
 
@@ -51275,7 +52034,7 @@ The link is a link to the edit profile section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:31869
+dist/generated/types.d.ts:32282
 
 ___
 
@@ -51294,7 +52053,7 @@ The link is a link to the edit profile section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:31876
+dist/generated/types.d.ts:32289
 
 ___
 
@@ -51312,7 +52071,7 @@ The link is a link to the filter section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:31880
+dist/generated/types.d.ts:32293
 
 ___
 
@@ -51331,7 +52090,7 @@ The link is a link to the filter section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:31887
+dist/generated/types.d.ts:32300
 
 ___
 
@@ -51351,7 +52110,7 @@ The link is a link to a game. Call searchPublicChat with the given bot username,
 
 #### Defined in
 
-dist/generated/types.d.ts:31891
+dist/generated/types.d.ts:32304
 
 ___
 
@@ -51372,7 +52131,7 @@ The link is a link to a game. Call searchPublicChat with the given bot username,
 
 #### Defined in
 
-dist/generated/types.d.ts:31908
+dist/generated/types.d.ts:32321
 
 ___
 
@@ -51392,7 +52151,7 @@ The link must be opened in an Instant View. Call getWebPageInstantView with the 
 
 #### Defined in
 
-dist/generated/types.d.ts:31922
+dist/generated/types.d.ts:32335
 
 ___
 
@@ -51413,7 +52172,7 @@ The link must be opened in an Instant View. Call getWebPageInstantView with the 
 
 #### Defined in
 
-dist/generated/types.d.ts:31939
+dist/generated/types.d.ts:32352
 
 ___
 
@@ -51432,7 +52191,7 @@ The link is a link to an invoice. Call getPaymentForm with the given invoice nam
 
 #### Defined in
 
-dist/generated/types.d.ts:31953
+dist/generated/types.d.ts:32366
 
 ___
 
@@ -51452,7 +52211,7 @@ The link is a link to an invoice. Call getPaymentForm with the given invoice nam
 
 #### Defined in
 
-dist/generated/types.d.ts:31965
+dist/generated/types.d.ts:32378
 
 ___
 
@@ -51471,7 +52230,7 @@ The link is a link to a language pack. Call getLanguagePackInfo with the given l
 
 #### Defined in
 
-dist/generated/types.d.ts:31974
+dist/generated/types.d.ts:32387
 
 ___
 
@@ -51491,7 +52250,7 @@ The link is a link to a language pack. Call getLanguagePackInfo with the given l
 
 #### Defined in
 
-dist/generated/types.d.ts:31986
+dist/generated/types.d.ts:32399
 
 ___
 
@@ -51509,7 +52268,7 @@ The link is a link to the language section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:31995
+dist/generated/types.d.ts:32408
 
 ___
 
@@ -51528,7 +52287,7 @@ The link is a link to the language section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:32002
+dist/generated/types.d.ts:32415
 
 ___
 
@@ -51547,7 +52306,7 @@ The link is a link to a Telegram message or a forum topic. Call getMessageLinkIn
 
 #### Defined in
 
-dist/generated/types.d.ts:32006
+dist/generated/types.d.ts:32419
 
 ___
 
@@ -51567,7 +52326,7 @@ The link is a link to a Telegram message or a forum topic. Call getMessageLinkIn
 
 #### Defined in
 
-dist/generated/types.d.ts:32018
+dist/generated/types.d.ts:32431
 
 ___
 
@@ -51587,7 +52346,7 @@ The link contains a message draft text. A share screen needs to be shown to the 
 
 #### Defined in
 
-dist/generated/types.d.ts:32027
+dist/generated/types.d.ts:32440
 
 ___
 
@@ -51608,7 +52367,7 @@ The link contains a message draft text. A share screen needs to be shown to the 
 
 #### Defined in
 
-dist/generated/types.d.ts:32044
+dist/generated/types.d.ts:32457
 
 ___
 
@@ -51624,14 +52383,14 @@ The link contains a request of Telegram passport data. Call getPassportAuthoriza
 | :------ | :------ | :------ |
 | `_` | ``"internalLinkTypePassportDataRequest"`` | - |
 | `bot_user_id` | [`int53`](index.types.default.md#int53-1) | User identifier of the service's bot |
-| `callback_url` | `string` | An HTTP URL to open once the request is finished, canceled, or failed with the parameters tg_passport=success, tg_passport=cancel, or tg_passport=error&error=... respectively.    -If empty, then onActivityResult method must be used to return response on Android, or the link tgbot{bot_user_id}://passport/success or tgbot{bot_user_id}://passport/cancel must be opened otherwise |
+| `callback_url` | `string` | An HTTP URL to open once the request is finished, canceled, or failed with the parameters tg_passport=success, tg_passport=cancel, or tg_passport=error&error=... respectively. -If empty, then onActivityResult method must be used to return response on Android, or the link tgbot{bot_user_id}://passport/success or tgbot{bot_user_id}://passport/cancel must be opened otherwise |
 | `nonce` | `string` | Unique request identifier provided by the service |
 | `public_key` | `string` | Service's public key |
 | `scope` | `string` | Telegram Passport element types requested by the service |
 
 #### Defined in
 
-dist/generated/types.d.ts:32058
+dist/generated/types.d.ts:32471
 
 ___
 
@@ -51648,14 +52407,14 @@ The link contains a request of Telegram passport data. Call getPassportAuthoriza
 | :------ | :------ | :------ |
 | `_` | ``"internalLinkTypePassportDataRequest"`` | - |
 | `bot_user_id?` | [`int53`](index.types.default.md#int53-1) | User identifier of the service's bot |
-| `callback_url?` | `string` | An HTTP URL to open once the request is finished, canceled, or failed with the parameters tg_passport=success, tg_passport=cancel, or tg_passport=error&error=... respectively.    -If empty, then onActivityResult method must be used to return response on Android, or the link tgbot{bot_user_id}://passport/success or tgbot{bot_user_id}://passport/cancel must be opened otherwise |
+| `callback_url?` | `string` | An HTTP URL to open once the request is finished, canceled, or failed with the parameters tg_passport=success, tg_passport=cancel, or tg_passport=error&error=... respectively. -If empty, then onActivityResult method must be used to return response on Android, or the link tgbot{bot_user_id}://passport/success or tgbot{bot_user_id}://passport/cancel must be opened otherwise |
 | `nonce?` | `string` | Unique request identifier provided by the service |
 | `public_key?` | `string` | Service's public key |
 | `scope?` | `string` | Telegram Passport element types requested by the service |
 
 #### Defined in
 
-dist/generated/types.d.ts:32092
+dist/generated/types.d.ts:32505
 
 ___
 
@@ -51675,7 +52434,7 @@ The link can be used to confirm ownership of a phone number to prevent account d
 
 #### Defined in
 
-dist/generated/types.d.ts:32123
+dist/generated/types.d.ts:32536
 
 ___
 
@@ -51696,7 +52455,7 @@ The link can be used to confirm ownership of a phone number to prevent account d
 
 #### Defined in
 
-dist/generated/types.d.ts:32140
+dist/generated/types.d.ts:32553
 
 ___
 
@@ -51704,7 +52463,7 @@ ___
 
 Ƭ **internalLinkTypePremiumFeatures**: `Object`
 
-The link is a link to the Premium features screen of the applcation from which the user can subscribe to Telegram Premium. Call getPremiumFeatures with the given referrer to process the link
+The link is a link to the Premium features screen of the application from which the user can subscribe to Telegram Premium. Call getPremiumFeatures with the given referrer to process the link
 
 #### Type declaration
 
@@ -51715,7 +52474,7 @@ The link is a link to the Premium features screen of the applcation from which t
 
 #### Defined in
 
-dist/generated/types.d.ts:32154
+dist/generated/types.d.ts:32567
 
 ___
 
@@ -51724,7 +52483,7 @@ ___
 Ƭ **internalLinkTypePremiumFeatures$Input**: `Object`
 
 Version of [internalLinkTypePremiumFeatures](index.types.md#internallinktypepremiumfeatures) for method parameters.
-The link is a link to the Premium features screen of the applcation from which the user can subscribe to Telegram Premium. Call getPremiumFeatures with the given referrer to process the link
+The link is a link to the Premium features screen of the application from which the user can subscribe to Telegram Premium. Call getPremiumFeatures with the given referrer to process the link
 
 #### Type declaration
 
@@ -51735,7 +52494,7 @@ The link is a link to the Premium features screen of the applcation from which t
 
 #### Defined in
 
-dist/generated/types.d.ts:32166
+dist/generated/types.d.ts:32579
 
 ___
 
@@ -51753,7 +52512,7 @@ The link is a link to the privacy and security section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:32175
+dist/generated/types.d.ts:32588
 
 ___
 
@@ -51772,7 +52531,7 @@ The link is a link to the privacy and security section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:32182
+dist/generated/types.d.ts:32595
 
 ___
 
@@ -51793,7 +52552,7 @@ The link is a link to a proxy. Call addProxy with the given parameters to proces
 
 #### Defined in
 
-dist/generated/types.d.ts:32186
+dist/generated/types.d.ts:32599
 
 ___
 
@@ -51815,7 +52574,7 @@ The link is a link to a proxy. Call addProxy with the given parameters to proces
 
 #### Defined in
 
-dist/generated/types.d.ts:32208
+dist/generated/types.d.ts:32621
 
 ___
 
@@ -51834,7 +52593,7 @@ The link is a link to a chat by its username. Call searchPublicChat with the giv
 
 #### Defined in
 
-dist/generated/types.d.ts:32227
+dist/generated/types.d.ts:32640
 
 ___
 
@@ -51854,7 +52613,7 @@ The link is a link to a chat by its username. Call searchPublicChat with the giv
 
 #### Defined in
 
-dist/generated/types.d.ts:32239
+dist/generated/types.d.ts:32652
 
 ___
 
@@ -51873,7 +52632,7 @@ The link can be used to login the current user on another device, but it must be
 
 #### Defined in
 
-dist/generated/types.d.ts:32249
+dist/generated/types.d.ts:32662
 
 ___
 
@@ -51894,7 +52653,7 @@ The link can be used to login the current user on another device, but it must be
 
 #### Defined in
 
-dist/generated/types.d.ts:32258
+dist/generated/types.d.ts:32671
 
 ___
 
@@ -51912,7 +52671,7 @@ The link forces restore of App Store purchases when opened. For official iOS app
 
 #### Defined in
 
-dist/generated/types.d.ts:32262
+dist/generated/types.d.ts:32675
 
 ___
 
@@ -51931,7 +52690,7 @@ The link forces restore of App Store purchases when opened. For official iOS app
 
 #### Defined in
 
-dist/generated/types.d.ts:32269
+dist/generated/types.d.ts:32682
 
 ___
 
@@ -51949,7 +52708,7 @@ The link is a link to application settings
 
 #### Defined in
 
-dist/generated/types.d.ts:32273
+dist/generated/types.d.ts:32686
 
 ___
 
@@ -51968,7 +52727,7 @@ The link is a link to application settings
 
 #### Defined in
 
-dist/generated/types.d.ts:32280
+dist/generated/types.d.ts:32693
 
 ___
 
@@ -51988,7 +52747,7 @@ The link is a link to a sticker set. Call searchStickerSet with the given sticke
 
 #### Defined in
 
-dist/generated/types.d.ts:32284
+dist/generated/types.d.ts:32697
 
 ___
 
@@ -52009,7 +52768,7 @@ The link is a link to a sticker set. Call searchStickerSet with the given sticke
 
 #### Defined in
 
-dist/generated/types.d.ts:32301
+dist/generated/types.d.ts:32714
 
 ___
 
@@ -52028,7 +52787,7 @@ The link is a link to a theme. TDLib has no theme support yet
 
 #### Defined in
 
-dist/generated/types.d.ts:32315
+dist/generated/types.d.ts:32728
 
 ___
 
@@ -52048,7 +52807,7 @@ The link is a link to a theme. TDLib has no theme support yet
 
 #### Defined in
 
-dist/generated/types.d.ts:32327
+dist/generated/types.d.ts:32740
 
 ___
 
@@ -52066,7 +52825,7 @@ The link is a link to the theme section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:32336
+dist/generated/types.d.ts:32749
 
 ___
 
@@ -52085,7 +52844,7 @@ The link is a link to the theme section of the app settings
 
 #### Defined in
 
-dist/generated/types.d.ts:32343
+dist/generated/types.d.ts:32756
 
 ___
 
@@ -52104,7 +52863,7 @@ The link is an unknown tg: link. Call getDeepLinkInfo to process the link
 
 #### Defined in
 
-dist/generated/types.d.ts:32347
+dist/generated/types.d.ts:32760
 
 ___
 
@@ -52124,7 +52883,7 @@ The link is an unknown tg: link. Call getDeepLinkInfo to process the link
 
 #### Defined in
 
-dist/generated/types.d.ts:32359
+dist/generated/types.d.ts:32772
 
 ___
 
@@ -52142,7 +52901,7 @@ The link is a link to an unsupported proxy. An alert can be shown to the user
 
 #### Defined in
 
-dist/generated/types.d.ts:32368
+dist/generated/types.d.ts:32781
 
 ___
 
@@ -52161,7 +52920,7 @@ The link is a link to an unsupported proxy. An alert can be shown to the user
 
 #### Defined in
 
-dist/generated/types.d.ts:32375
+dist/generated/types.d.ts:32788
 
 ___
 
@@ -52180,7 +52939,7 @@ The link is a link to a user by its phone number. Call searchUserByPhoneNumber w
 
 #### Defined in
 
-dist/generated/types.d.ts:32379
+dist/generated/types.d.ts:32792
 
 ___
 
@@ -52200,7 +52959,7 @@ The link is a link to a user by its phone number. Call searchUserByPhoneNumber w
 
 #### Defined in
 
-dist/generated/types.d.ts:32391
+dist/generated/types.d.ts:32804
 
 ___
 
@@ -52219,7 +52978,7 @@ The link is a link to a user by a temporary token. Call searchUserByToken with t
 
 #### Defined in
 
-dist/generated/types.d.ts:32400
+dist/generated/types.d.ts:32813
 
 ___
 
@@ -52239,7 +52998,7 @@ The link is a link to a user by a temporary token. Call searchUserByToken with t
 
 #### Defined in
 
-dist/generated/types.d.ts:32412
+dist/generated/types.d.ts:32825
 
 ___
 
@@ -52260,7 +53019,7 @@ The link is a link to a video chat. Call searchPublicChat with the given chat us
 
 #### Defined in
 
-dist/generated/types.d.ts:32421
+dist/generated/types.d.ts:32834
 
 ___
 
@@ -52282,7 +53041,53 @@ The link is a link to a video chat. Call searchPublicChat with the given chat us
 
 #### Defined in
 
-dist/generated/types.d.ts:32443
+dist/generated/types.d.ts:32856
+
+___
+
+### internalLinkTypeWebApp
+
+Ƭ **internalLinkTypeWebApp**: `Object`
+
+The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot, then call searchWebApp with the received bot and the given web_app_short_name.
+-Process received foundWebApp by showing a confirmation dialog if needed, then calling getWebAppLinkUrl and opening the returned URL
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"internalLinkTypeWebApp"`` | - |
+| `bot_username` | `string` | Username of the bot that owns the Web App |
+| `start_parameter` | `string` | Start parameter to be passed to getWebAppLinkUrl |
+| `web_app_short_name` | `string` | Short name of the Web App |
+
+#### Defined in
+
+dist/generated/types.d.ts:32876
+
+___
+
+### internalLinkTypeWebApp$Input
+
+Ƭ **internalLinkTypeWebApp$Input**: `Object`
+
+Version of [internalLinkTypeWebApp](index.types.md#internallinktypewebapp) for method parameters.
+The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot, then call searchWebApp with the received bot and the given web_app_short_name.
+
+-Process received foundWebApp by showing a confirmation dialog if needed, then calling getWebAppLinkUrl and opening the returned URL
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"internalLinkTypeWebApp"`` | - |
+| `bot_username?` | `string` | Username of the bot that owns the Web App |
+| `start_parameter?` | `string` | Start parameter to be passed to getWebAppLinkUrl |
+| `web_app_short_name?` | `string` | Short name of the Web App |
+
+#### Defined in
+
+dist/generated/types.d.ts:32900
 
 ___
 
@@ -52310,7 +53115,7 @@ Invites users to an active group call. Sends a service message of type messageIn
 
 #### Defined in
 
-dist/generated/types.d.ts:52701
+dist/generated/types.d.ts:53385
 
 ___
 
@@ -52330,7 +53135,7 @@ Invites users to an active group call. Sends a service message of type messageIn
 
 #### Defined in
 
-dist/generated/types.d.ts:52682
+dist/generated/types.d.ts:53366
 
 ___
 
@@ -52361,7 +53166,7 @@ Product invoice
 
 #### Defined in
 
-dist/generated/types.d.ts:14609
+dist/generated/types.d.ts:14929
 
 ___
 
@@ -52393,7 +53198,7 @@ Product invoice
 
 #### Defined in
 
-dist/generated/types.d.ts:14681
+dist/generated/types.d.ts:15001
 
 ___
 
@@ -52421,7 +53226,7 @@ Adds the current user as a new member to a chat. Private and secret chats can't 
 
 #### Defined in
 
-dist/generated/types.d.ts:50838
+dist/generated/types.d.ts:51522
 
 ___
 
@@ -52440,7 +53245,7 @@ Adds the current user as a new member to a chat. Private and secret chats can't 
 
 #### Defined in
 
-dist/generated/types.d.ts:50824
+dist/generated/types.d.ts:51508
 
 ___
 
@@ -52468,7 +53273,7 @@ Uses an invite link to add the current user to the chat if possible. May return 
 
 #### Defined in
 
-dist/generated/types.d.ts:52111
+dist/generated/types.d.ts:52795
 
 ___
 
@@ -52487,7 +53292,7 @@ Uses an invite link to add the current user to the chat if possible. May return 
 
 #### Defined in
 
-dist/generated/types.d.ts:52097
+dist/generated/types.d.ts:52781
 
 ___
 
@@ -52515,7 +53320,7 @@ Joins an active group call. Returns join response payload for tgcalls
 
 #### Defined in
 
-dist/generated/types.d.ts:52575
+dist/generated/types.d.ts:53259
 
 ___
 
@@ -52540,7 +53345,7 @@ Joins an active group call. Returns join response payload for tgcalls
 
 #### Defined in
 
-dist/generated/types.d.ts:52531
+dist/generated/types.d.ts:53215
 
 ___
 
@@ -52560,7 +53365,7 @@ Represents one member of a JSON object
 
 #### Defined in
 
-dist/generated/types.d.ts:30425
+dist/generated/types.d.ts:30838
 
 ___
 
@@ -52581,7 +53386,7 @@ Represents one member of a JSON object
 
 #### Defined in
 
-dist/generated/types.d.ts:30442
+dist/generated/types.d.ts:30855
 
 ___
 
@@ -52600,7 +53405,7 @@ Represents a JSON array
 
 #### Defined in
 
-dist/generated/types.d.ts:30530
+dist/generated/types.d.ts:30943
 
 ___
 
@@ -52620,7 +53425,7 @@ Represents a JSON array
 
 #### Defined in
 
-dist/generated/types.d.ts:30542
+dist/generated/types.d.ts:30955
 
 ___
 
@@ -52639,7 +53444,7 @@ Represents a boolean JSON value
 
 #### Defined in
 
-dist/generated/types.d.ts:30467
+dist/generated/types.d.ts:30880
 
 ___
 
@@ -52659,7 +53464,7 @@ Represents a boolean JSON value
 
 #### Defined in
 
-dist/generated/types.d.ts:30479
+dist/generated/types.d.ts:30892
 
 ___
 
@@ -52677,7 +53482,7 @@ Represents a null JSON value
 
 #### Defined in
 
-dist/generated/types.d.ts:30456
+dist/generated/types.d.ts:30869
 
 ___
 
@@ -52696,7 +53501,7 @@ Represents a null JSON value
 
 #### Defined in
 
-dist/generated/types.d.ts:30463
+dist/generated/types.d.ts:30876
 
 ___
 
@@ -52715,7 +53520,7 @@ Represents a numeric JSON value
 
 #### Defined in
 
-dist/generated/types.d.ts:30488
+dist/generated/types.d.ts:30901
 
 ___
 
@@ -52735,7 +53540,7 @@ Represents a numeric JSON value
 
 #### Defined in
 
-dist/generated/types.d.ts:30500
+dist/generated/types.d.ts:30913
 
 ___
 
@@ -52754,7 +53559,7 @@ Represents a JSON object
 
 #### Defined in
 
-dist/generated/types.d.ts:30551
+dist/generated/types.d.ts:30964
 
 ___
 
@@ -52774,7 +53579,7 @@ Represents a JSON object
 
 #### Defined in
 
-dist/generated/types.d.ts:30563
+dist/generated/types.d.ts:30976
 
 ___
 
@@ -52793,7 +53598,7 @@ Represents a string JSON value
 
 #### Defined in
 
-dist/generated/types.d.ts:30509
+dist/generated/types.d.ts:30922
 
 ___
 
@@ -52813,7 +53618,7 @@ Represents a string JSON value
 
 #### Defined in
 
-dist/generated/types.d.ts:30521
+dist/generated/types.d.ts:30934
 
 ___
 
@@ -52833,7 +53638,7 @@ Represents a single button in a bot keyboard
 
 #### Defined in
 
-dist/generated/types.d.ts:11330
+dist/generated/types.d.ts:11609
 
 ___
 
@@ -52854,7 +53659,7 @@ Represents a single button in a bot keyboard
 
 #### Defined in
 
-dist/generated/types.d.ts:11347
+dist/generated/types.d.ts:11626
 
 ___
 
@@ -52882,7 +53687,7 @@ A button that requests a chat to be shared by the current user; available only i
 
 #### Defined in
 
-dist/generated/types.d.ts:11198
+dist/generated/types.d.ts:11477
 
 ___
 
@@ -52911,7 +53716,7 @@ A button that requests a chat to be shared by the current user; available only i
 
 #### Defined in
 
-dist/generated/types.d.ts:11255
+dist/generated/types.d.ts:11534
 
 ___
 
@@ -52929,7 +53734,7 @@ A button that sends the user's location when pressed; available only in private 
 
 #### Defined in
 
-dist/generated/types.d.ts:11095
+dist/generated/types.d.ts:11374
 
 ___
 
@@ -52948,7 +53753,7 @@ A button that sends the user's location when pressed; available only in private 
 
 #### Defined in
 
-dist/generated/types.d.ts:11102
+dist/generated/types.d.ts:11381
 
 ___
 
@@ -52966,7 +53771,7 @@ A button that sends the user's phone number when pressed; available only in priv
 
 #### Defined in
 
-dist/generated/types.d.ts:11084
+dist/generated/types.d.ts:11363
 
 ___
 
@@ -52985,7 +53790,7 @@ A button that sends the user's phone number when pressed; available only in priv
 
 #### Defined in
 
-dist/generated/types.d.ts:11091
+dist/generated/types.d.ts:11370
 
 ___
 
@@ -53005,7 +53810,7 @@ A button that allows the user to create and send a poll when pressed; available 
 
 #### Defined in
 
-dist/generated/types.d.ts:11106
+dist/generated/types.d.ts:11385
 
 ___
 
@@ -53026,7 +53831,7 @@ A button that allows the user to create and send a poll when pressed; available 
 
 #### Defined in
 
-dist/generated/types.d.ts:11123
+dist/generated/types.d.ts:11402
 
 ___
 
@@ -53049,7 +53854,7 @@ A button that requests a user to be shared by the current user; available only i
 
 #### Defined in
 
-dist/generated/types.d.ts:11137
+dist/generated/types.d.ts:11416
 
 ___
 
@@ -53073,7 +53878,7 @@ A button that requests a user to be shared by the current user; available only i
 
 #### Defined in
 
-dist/generated/types.d.ts:11169
+dist/generated/types.d.ts:11448
 
 ___
 
@@ -53091,7 +53896,7 @@ A simple button, with text that must be sent when the button is pressed
 
 #### Defined in
 
-dist/generated/types.d.ts:11073
+dist/generated/types.d.ts:11352
 
 ___
 
@@ -53110,7 +53915,7 @@ A simple button, with text that must be sent when the button is pressed
 
 #### Defined in
 
-dist/generated/types.d.ts:11080
+dist/generated/types.d.ts:11359
 
 ___
 
@@ -53129,7 +53934,7 @@ A button that opens a Web App by calling getWebAppUrl
 
 #### Defined in
 
-dist/generated/types.d.ts:11309
+dist/generated/types.d.ts:11588
 
 ___
 
@@ -53149,7 +53954,7 @@ A button that opens a Web App by calling getWebAppUrl
 
 #### Defined in
 
-dist/generated/types.d.ts:11321
+dist/generated/types.d.ts:11600
 
 ___
 
@@ -53169,7 +53974,7 @@ Portion of the price of a product (e.g., "delivery cost", "tax amount")
 
 #### Defined in
 
-dist/generated/types.d.ts:14578
+dist/generated/types.d.ts:14898
 
 ___
 
@@ -53190,7 +53995,7 @@ Portion of the price of a product (e.g., "delivery cost", "tax amount")
 
 #### Defined in
 
-dist/generated/types.d.ts:14595
+dist/generated/types.d.ts:14915
 
 ___
 
@@ -53221,7 +54026,7 @@ Contains information about a language pack
 
 #### Defined in
 
-dist/generated/types.d.ts:27317
+dist/generated/types.d.ts:27730
 
 ___
 
@@ -53253,7 +54058,7 @@ Contains information about a language pack
 
 #### Defined in
 
-dist/generated/types.d.ts:27389
+dist/generated/types.d.ts:27802
 
 ___
 
@@ -53273,7 +54078,7 @@ Represents one language pack string
 
 #### Defined in
 
-dist/generated/types.d.ts:27265
+dist/generated/types.d.ts:27678
 
 ___
 
@@ -53294,7 +54099,7 @@ Represents one language pack string
 
 #### Defined in
 
-dist/generated/types.d.ts:27282
+dist/generated/types.d.ts:27695
 
 ___
 
@@ -53312,7 +54117,7 @@ A deleted language pack string, the value must be taken from the built-in Englis
 
 #### Defined in
 
-dist/generated/types.d.ts:27254
+dist/generated/types.d.ts:27667
 
 ___
 
@@ -53331,7 +54136,7 @@ A deleted language pack string, the value must be taken from the built-in Englis
 
 #### Defined in
 
-dist/generated/types.d.ts:27261
+dist/generated/types.d.ts:27674
 
 ___
 
@@ -53350,7 +54155,7 @@ An ordinary language pack string
 
 #### Defined in
 
-dist/generated/types.d.ts:27162
+dist/generated/types.d.ts:27575
 
 ___
 
@@ -53370,7 +54175,7 @@ An ordinary language pack string
 
 #### Defined in
 
-dist/generated/types.d.ts:27174
+dist/generated/types.d.ts:27587
 
 ___
 
@@ -53394,7 +54199,7 @@ A language pack string which has different forms based on the number of some obj
 
 #### Defined in
 
-dist/generated/types.d.ts:27183
+dist/generated/types.d.ts:27596
 
 ___
 
@@ -53419,7 +54224,7 @@ A language pack string which has different forms based on the number of some obj
 
 #### Defined in
 
-dist/generated/types.d.ts:27220
+dist/generated/types.d.ts:27633
 
 ___
 
@@ -53438,7 +54243,7 @@ Contains a list of language pack strings
 
 #### Defined in
 
-dist/generated/types.d.ts:27296
+dist/generated/types.d.ts:27709
 
 ___
 
@@ -53458,7 +54263,7 @@ Contains a list of language pack strings
 
 #### Defined in
 
-dist/generated/types.d.ts:27308
+dist/generated/types.d.ts:27721
 
 ___
 
@@ -53486,7 +54291,7 @@ Removes the current user from chat members. Private and secret chats can't be le
 
 #### Defined in
 
-dist/generated/types.d.ts:50854
+dist/generated/types.d.ts:51538
 
 ___
 
@@ -53505,7 +54310,7 @@ Removes the current user from chat members. Private and secret chats can't be le
 
 #### Defined in
 
-dist/generated/types.d.ts:50840
+dist/generated/types.d.ts:51524
 
 ___
 
@@ -53533,7 +54338,7 @@ Leaves a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52968
+dist/generated/types.d.ts:53652
 
 ___
 
@@ -53552,7 +54357,7 @@ Leaves a group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52954
+dist/generated/types.d.ts:53638
 
 ___
 
@@ -53580,7 +54385,7 @@ Loads more chats from a chat list. The loaded chats and their positions in the c
 
 #### Defined in
 
-dist/generated/types.d.ts:46536
+dist/generated/types.d.ts:47137
 
 ___
 
@@ -53600,7 +54405,7 @@ Loads more chats from a chat list. The loaded chats and their positions in the c
 
 #### Defined in
 
-dist/generated/types.d.ts:46517
+dist/generated/types.d.ts:47118
 
 ___
 
@@ -53628,7 +54433,7 @@ Loads more participants of a group call. The loaded participants will be receive
 
 #### Defined in
 
-dist/generated/types.d.ts:52952
+dist/generated/types.d.ts:53636
 
 ___
 
@@ -53648,7 +54453,7 @@ Loads more participants of a group call. The loaded participants will be receive
 
 #### Defined in
 
-dist/generated/types.d.ts:52933
+dist/generated/types.d.ts:53617
 
 ___
 
@@ -53674,7 +54479,7 @@ Represents a local file
 
 #### Defined in
 
-dist/generated/types.d.ts:2630
+dist/generated/types.d.ts:2671
 
 ___
 
@@ -53701,7 +54506,7 @@ Represents a local file
 
 #### Defined in
 
-dist/generated/types.d.ts:2677
+dist/generated/types.d.ts:2718
 
 ___
 
@@ -53720,7 +54525,7 @@ Contains information about the current localization target
 
 #### Defined in
 
-dist/generated/types.d.ts:27458
+dist/generated/types.d.ts:27871
 
 ___
 
@@ -53740,7 +54545,7 @@ Contains information about the current localization target
 
 #### Defined in
 
-dist/generated/types.d.ts:27470
+dist/generated/types.d.ts:27883
 
 ___
 
@@ -53761,7 +54566,7 @@ Describes a location on planet Earth
 
 #### Defined in
 
-dist/generated/types.d.ts:4354
+dist/generated/types.d.ts:4391
 
 ___
 
@@ -53783,7 +54588,7 @@ Describes a location on planet Earth
 
 #### Defined in
 
-dist/generated/types.d.ts:4376
+dist/generated/types.d.ts:4413
 
 ___
 
@@ -53811,7 +54616,7 @@ Closes the TDLib instance after a proper logout. Requires an available network c
 
 #### Defined in
 
-dist/generated/types.d.ts:45830
+dist/generated/types.d.ts:46431
 
 ___
 
@@ -53829,7 +54634,7 @@ Closes the TDLib instance after a proper logout. Requires an available network c
 
 #### Defined in
 
-dist/generated/types.d.ts:45821
+dist/generated/types.d.ts:46422
 
 ___
 
@@ -53847,7 +54652,7 @@ The log is written to stderr or an OS specific log
 
 #### Defined in
 
-dist/generated/types.d.ts:38843
+dist/generated/types.d.ts:39331
 
 ___
 
@@ -53866,7 +54671,7 @@ The log is written to stderr or an OS specific log
 
 #### Defined in
 
-dist/generated/types.d.ts:38850
+dist/generated/types.d.ts:39338
 
 ___
 
@@ -53884,7 +54689,7 @@ The log is written nowhere
 
 #### Defined in
 
-dist/generated/types.d.ts:38895
+dist/generated/types.d.ts:39383
 
 ___
 
@@ -53903,7 +54708,7 @@ The log is written nowhere
 
 #### Defined in
 
-dist/generated/types.d.ts:38902
+dist/generated/types.d.ts:39390
 
 ___
 
@@ -53924,7 +54729,7 @@ The log is written to a file
 
 #### Defined in
 
-dist/generated/types.d.ts:38854
+dist/generated/types.d.ts:39342
 
 ___
 
@@ -53946,7 +54751,7 @@ The log is written to a file
 
 #### Defined in
 
-dist/generated/types.d.ts:38876
+dist/generated/types.d.ts:39364
 
 ___
 
@@ -53965,7 +54770,7 @@ Contains a list of available TDLib internal log tags
 
 #### Defined in
 
-dist/generated/types.d.ts:38927
+dist/generated/types.d.ts:39415
 
 ___
 
@@ -53985,7 +54790,7 @@ Contains a list of available TDLib internal log tags
 
 #### Defined in
 
-dist/generated/types.d.ts:38939
+dist/generated/types.d.ts:39427
 
 ___
 
@@ -54004,7 +54809,7 @@ Contains a TDLib internal log verbosity level
 
 #### Defined in
 
-dist/generated/types.d.ts:38906
+dist/generated/types.d.ts:39394
 
 ___
 
@@ -54024,7 +54829,7 @@ Contains a TDLib internal log verbosity level
 
 #### Defined in
 
-dist/generated/types.d.ts:38918
+dist/generated/types.d.ts:39406
 
 ___
 
@@ -54039,12 +54844,12 @@ An HTTP URL needs to be open
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"loginUrlInfoOpen"`` | - |
-| `skip_confirm` | [`Bool`](index.types.default.md#bool) | True, if there is no need to show an ordinary open URL confirm |
+| `skip_confirmation` | [`Bool`](index.types.default.md#bool) | True, if there is no need to show an ordinary open URL confirmation |
 | `url` | `string` | The URL to open |
 
 #### Defined in
 
-dist/generated/types.d.ts:11735
+dist/generated/types.d.ts:12014
 
 ___
 
@@ -54060,12 +54865,12 @@ An HTTP URL needs to be open
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"loginUrlInfoOpen"`` | - |
-| `skip_confirm?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if there is no need to show an ordinary open URL confirm |
+| `skip_confirmation?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if there is no need to show an ordinary open URL confirmation |
 | `url?` | `string` | The URL to open |
 
 #### Defined in
 
-dist/generated/types.d.ts:11752
+dist/generated/types.d.ts:12031
 
 ___
 
@@ -54082,12 +54887,12 @@ An authorization confirmation dialog needs to be shown to the user
 | `_` | ``"loginUrlInfoRequestConfirmation"`` | - |
 | `bot_user_id` | [`int53`](index.types.default.md#int53-1) | User identifier of a bot linked with the website |
 | `domain` | `string` | A domain of the URL |
-| `request_write_access` | [`Bool`](index.types.default.md#bool) | True, if the user needs to be requested to give the permission to the bot to send them messages |
+| `request_write_access` | [`Bool`](index.types.default.md#bool) | True, if the user must be asked for the permission to the bot to send them messages |
 | `url` | `string` | An HTTP URL to be opened |
 
 #### Defined in
 
-dist/generated/types.d.ts:11766
+dist/generated/types.d.ts:12045
 
 ___
 
@@ -54105,12 +54910,12 @@ An authorization confirmation dialog needs to be shown to the user
 | `_` | ``"loginUrlInfoRequestConfirmation"`` | - |
 | `bot_user_id?` | [`int53`](index.types.default.md#int53-1) | User identifier of a bot linked with the website |
 | `domain?` | `string` | A domain of the URL |
-| `request_write_access?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user needs to be requested to give the permission to the bot to send them messages |
+| `request_write_access?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user must be asked for the permission to the bot to send them messages |
 | `url?` | `string` | An HTTP URL to be opened |
 
 #### Defined in
 
-dist/generated/types.d.ts:11793
+dist/generated/types.d.ts:12072
 
 ___
 
@@ -54128,7 +54933,7 @@ The mask is placed relatively to the chin
 
 #### Defined in
 
-dist/generated/types.d.ts:3225
+dist/generated/types.d.ts:3266
 
 ___
 
@@ -54147,7 +54952,7 @@ The mask is placed relatively to the chin
 
 #### Defined in
 
-dist/generated/types.d.ts:3232
+dist/generated/types.d.ts:3273
 
 ___
 
@@ -54165,7 +54970,7 @@ The mask is placed relatively to the eyes
 
 #### Defined in
 
-dist/generated/types.d.ts:3203
+dist/generated/types.d.ts:3244
 
 ___
 
@@ -54184,7 +54989,7 @@ The mask is placed relatively to the eyes
 
 #### Defined in
 
-dist/generated/types.d.ts:3210
+dist/generated/types.d.ts:3251
 
 ___
 
@@ -54202,7 +55007,7 @@ The mask is placed relatively to the forehead
 
 #### Defined in
 
-dist/generated/types.d.ts:3192
+dist/generated/types.d.ts:3233
 
 ___
 
@@ -54221,7 +55026,7 @@ The mask is placed relatively to the forehead
 
 #### Defined in
 
-dist/generated/types.d.ts:3199
+dist/generated/types.d.ts:3240
 
 ___
 
@@ -54239,7 +55044,7 @@ The mask is placed relatively to the mouth
 
 #### Defined in
 
-dist/generated/types.d.ts:3214
+dist/generated/types.d.ts:3255
 
 ___
 
@@ -54258,7 +55063,7 @@ The mask is placed relatively to the mouth
 
 #### Defined in
 
-dist/generated/types.d.ts:3221
+dist/generated/types.d.ts:3262
 
 ___
 
@@ -54280,7 +55085,7 @@ Position on a photo where a mask is placed
 
 #### Defined in
 
-dist/generated/types.d.ts:3236
+dist/generated/types.d.ts:3277
 
 ___
 
@@ -54303,7 +55108,7 @@ Position on a photo where a mask is placed
 
 #### Defined in
 
-dist/generated/types.d.ts:3263
+dist/generated/types.d.ts:3304
 
 ___
 
@@ -54360,7 +55165,7 @@ Describes a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8758
+dist/generated/types.d.ts:8918
 
 ___
 
@@ -54418,7 +55223,7 @@ Describes a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8960
+dist/generated/types.d.ts:9120
 
 ___
 
@@ -54438,7 +55243,7 @@ A message with an animated emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:17888
+dist/generated/types.d.ts:18208
 
 ___
 
@@ -54459,7 +55264,7 @@ A message with an animated emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:17905
+dist/generated/types.d.ts:18225
 
 ___
 
@@ -54481,7 +55286,7 @@ An animation message (GIF-style).
 
 #### Defined in
 
-dist/generated/types.d.ts:17435
+dist/generated/types.d.ts:17755
 
 ___
 
@@ -54504,7 +55309,7 @@ An animation message (GIF-style).
 
 #### Defined in
 
-dist/generated/types.d.ts:17462
+dist/generated/types.d.ts:17782
 
 ___
 
@@ -54524,7 +55329,7 @@ An audio message
 
 #### Defined in
 
-dist/generated/types.d.ts:17486
+dist/generated/types.d.ts:17806
 
 ___
 
@@ -54545,7 +55350,7 @@ An audio message
 
 #### Defined in
 
-dist/generated/types.d.ts:17503
+dist/generated/types.d.ts:17823
 
 ___
 
@@ -54564,7 +55369,7 @@ Contains default auto-delete timer setting for new chats
 
 #### Defined in
 
-dist/generated/types.d.ts:30841
+dist/generated/types.d.ts:31254
 
 ___
 
@@ -54584,7 +55389,7 @@ Contains default auto-delete timer setting for new chats
 
 #### Defined in
 
-dist/generated/types.d.ts:30853
+dist/generated/types.d.ts:31266
 
 ___
 
@@ -54604,7 +55409,7 @@ A newly created basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:18278
+dist/generated/types.d.ts:18598
 
 ___
 
@@ -54625,7 +55430,7 @@ A newly created basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:18295
+dist/generated/types.d.ts:18615
 
 ___
 
@@ -54637,13 +55442,14 @@ The user allowed the bot to send messages
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `_` | ``"messageBotWriteAccessAllowed"`` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"messageBotWriteAccessAllowed"`` | - |
+| `web_app` | [`webApp`](index.types.default.md#webapp-1) \| ``null`` | Information about the Web App, which requested the access; may be null if none or the Web App was opened from the attachment menu |
 
 #### Defined in
 
-dist/generated/types.d.ts:19107
+dist/generated/types.d.ts:19427
 
 ___
 
@@ -54656,13 +55462,14 @@ The user allowed the bot to send messages
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `_` | ``"messageBotWriteAccessAllowed"`` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"messageBotWriteAccessAllowed"`` | - |
+| `web_app?` | [`webApp$Input`](index.types.default.md#webapp$input-1) \| ``null`` | Information about the Web App, which requested the access; may be null if none or the Web App was opened from the attachment menu |
 
 #### Defined in
 
-dist/generated/types.d.ts:19114
+dist/generated/types.d.ts:19439
 
 ___
 
@@ -54682,7 +55489,7 @@ Contains information about found messages, split by days according to the option
 
 #### Defined in
 
-dist/generated/types.d.ts:9375
+dist/generated/types.d.ts:9535
 
 ___
 
@@ -54703,7 +55510,7 @@ Contains information about found messages, split by days according to the option
 
 #### Defined in
 
-dist/generated/types.d.ts:9392
+dist/generated/types.d.ts:9552
 
 ___
 
@@ -54723,7 +55530,7 @@ Contains information about found messages sent on a specific day
 
 #### Defined in
 
-dist/generated/types.d.ts:9344
+dist/generated/types.d.ts:9504
 
 ___
 
@@ -54744,7 +55551,7 @@ Contains information about found messages sent on a specific day
 
 #### Defined in
 
-dist/generated/types.d.ts:9361
+dist/generated/types.d.ts:9521
 
 ___
 
@@ -54765,7 +55572,7 @@ A message with information about an ended call
 
 #### Defined in
 
-dist/generated/types.d.ts:18133
+dist/generated/types.d.ts:18453
 
 ___
 
@@ -54787,7 +55594,7 @@ A message with information about an ended call
 
 #### Defined in
 
-dist/generated/types.d.ts:18155
+dist/generated/types.d.ts:18475
 
 ___
 
@@ -54806,7 +55613,7 @@ New chat members were added
 
 #### Defined in
 
-dist/generated/types.d.ts:18383
+dist/generated/types.d.ts:18703
 
 ___
 
@@ -54826,7 +55633,7 @@ New chat members were added
 
 #### Defined in
 
-dist/generated/types.d.ts:18395
+dist/generated/types.d.ts:18715
 
 ___
 
@@ -54845,7 +55652,7 @@ An updated chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:18351
+dist/generated/types.d.ts:18671
 
 ___
 
@@ -54865,7 +55672,7 @@ An updated chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:18363
+dist/generated/types.d.ts:18683
 
 ___
 
@@ -54884,7 +55691,7 @@ An updated chat title
 
 #### Defined in
 
-dist/generated/types.d.ts:18330
+dist/generated/types.d.ts:18650
 
 ___
 
@@ -54904,7 +55711,7 @@ An updated chat title
 
 #### Defined in
 
-dist/generated/types.d.ts:18342
+dist/generated/types.d.ts:18662
 
 ___
 
@@ -54923,7 +55730,7 @@ A chat member was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:18426
+dist/generated/types.d.ts:18746
 
 ___
 
@@ -54943,7 +55750,7 @@ A chat member was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:18438
+dist/generated/types.d.ts:18758
 
 ___
 
@@ -54961,7 +55768,7 @@ A deleted chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:18372
+dist/generated/types.d.ts:18692
 
 ___
 
@@ -54980,7 +55787,7 @@ A deleted chat photo
 
 #### Defined in
 
-dist/generated/types.d.ts:18379
+dist/generated/types.d.ts:18699
 
 ___
 
@@ -54998,7 +55805,7 @@ A new member joined the chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:18404
+dist/generated/types.d.ts:18724
 
 ___
 
@@ -55017,7 +55824,7 @@ A new member joined the chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:18411
+dist/generated/types.d.ts:18731
 
 ___
 
@@ -55035,7 +55842,7 @@ A new member was accepted to the chat by an administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:18415
+dist/generated/types.d.ts:18735
 
 ___
 
@@ -55054,7 +55861,7 @@ A new member was accepted to the chat by an administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:18422
+dist/generated/types.d.ts:18742
 
 ___
 
@@ -55074,7 +55881,7 @@ The auto-delete or self-destruct timer for messages in the chat has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:18552
+dist/generated/types.d.ts:18872
 
 ___
 
@@ -55095,7 +55902,7 @@ The auto-delete or self-destruct timer for messages in the chat has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:18569
+dist/generated/types.d.ts:18889
 
 ___
 
@@ -55114,7 +55921,7 @@ A theme in the chat has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:18531
+dist/generated/types.d.ts:18851
 
 ___
 
@@ -55134,7 +55941,7 @@ A theme in the chat has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:18543
+dist/generated/types.d.ts:18863
 
 ___
 
@@ -55154,7 +55961,7 @@ The current user shared a chat, which was requested by the bot
 
 #### Defined in
 
-dist/generated/types.d.ts:19055
+dist/generated/types.d.ts:19375
 
 ___
 
@@ -55175,7 +55982,7 @@ The current user shared a chat, which was requested by the bot
 
 #### Defined in
 
-dist/generated/types.d.ts:19072
+dist/generated/types.d.ts:19392
 
 ___
 
@@ -55195,7 +56002,7 @@ A supergroup has been created from a basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:18468
+dist/generated/types.d.ts:18788
 
 ___
 
@@ -55216,7 +56023,7 @@ A supergroup has been created from a basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:18485
+dist/generated/types.d.ts:18805
 
 ___
 
@@ -55235,7 +56042,7 @@ A basic group was upgraded to a supergroup and was deactivated as the result
 
 #### Defined in
 
-dist/generated/types.d.ts:18447
+dist/generated/types.d.ts:18767
 
 ___
 
@@ -55255,7 +56062,7 @@ A basic group was upgraded to a supergroup and was deactivated as the result
 
 #### Defined in
 
-dist/generated/types.d.ts:18459
+dist/generated/types.d.ts:18779
 
 ___
 
@@ -55274,7 +56081,7 @@ A message with a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:17867
+dist/generated/types.d.ts:18187
 
 ___
 
@@ -55294,7 +56101,7 @@ A message with a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:17879
+dist/generated/types.d.ts:18199
 
 ___
 
@@ -55312,7 +56119,7 @@ A contact has registered with Telegram
 
 #### Defined in
 
-dist/generated/types.d.ts:19013
+dist/generated/types.d.ts:19333
 
 ___
 
@@ -55331,7 +56138,7 @@ A contact has registered with Telegram
 
 #### Defined in
 
-dist/generated/types.d.ts:19020
+dist/generated/types.d.ts:19340
 
 ___
 
@@ -55352,7 +56159,7 @@ Options to be used when a message content is copied without reference to the ori
 
 #### Defined in
 
-dist/generated/types.d.ts:19678
+dist/generated/types.d.ts:20018
 
 ___
 
@@ -55374,7 +56181,7 @@ Options to be used when a message content is copied without reference to the ori
 
 #### Defined in
 
-dist/generated/types.d.ts:19700
+dist/generated/types.d.ts:20040
 
 ___
 
@@ -55393,7 +56200,7 @@ A non-standard action has happened in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18718
+dist/generated/types.d.ts:19038
 
 ___
 
@@ -55413,7 +56220,7 @@ A non-standard action has happened in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18730
+dist/generated/types.d.ts:19050
 
 ___
 
@@ -55436,7 +56243,7 @@ A dice message. The dice value is randomly generated by the server
 
 #### Defined in
 
-dist/generated/types.d.ts:17919
+dist/generated/types.d.ts:18239
 
 ___
 
@@ -55460,7 +56267,7 @@ A dice message. The dice value is randomly generated by the server
 
 #### Defined in
 
-dist/generated/types.d.ts:17951
+dist/generated/types.d.ts:18271
 
 ___
 
@@ -55480,7 +56287,7 @@ A document message (general file)
 
 #### Defined in
 
-dist/generated/types.d.ts:17517
+dist/generated/types.d.ts:17837
 
 ___
 
@@ -55501,7 +56308,7 @@ A document message (general file)
 
 #### Defined in
 
-dist/generated/types.d.ts:17534
+dist/generated/types.d.ts:17854
 
 ___
 
@@ -55519,7 +56326,7 @@ A self-destructed photo message
 
 #### Defined in
 
-dist/generated/types.d.ts:17599
+dist/generated/types.d.ts:17919
 
 ___
 
@@ -55538,7 +56345,7 @@ A self-destructed photo message
 
 #### Defined in
 
-dist/generated/types.d.ts:17606
+dist/generated/types.d.ts:17926
 
 ___
 
@@ -55556,7 +56363,7 @@ A self-destructed video message
 
 #### Defined in
 
-dist/generated/types.d.ts:17692
+dist/generated/types.d.ts:18012
 
 ___
 
@@ -55575,7 +56382,7 @@ A self-destructed video message
 
 #### Defined in
 
-dist/generated/types.d.ts:17699
+dist/generated/types.d.ts:18019
 
 ___
 
@@ -55595,7 +56402,7 @@ The media is a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:15528
+dist/generated/types.d.ts:15848
 
 ___
 
@@ -55616,7 +56423,7 @@ The media is a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:15545
+dist/generated/types.d.ts:15865
 
 ___
 
@@ -55639,7 +56446,7 @@ The media is hidden until the invoice is paid
 
 #### Defined in
 
-dist/generated/types.d.ts:15467
+dist/generated/types.d.ts:15787
 
 ___
 
@@ -55663,7 +56470,7 @@ The media is hidden until the invoice is paid
 
 #### Defined in
 
-dist/generated/types.d.ts:15499
+dist/generated/types.d.ts:15819
 
 ___
 
@@ -55682,7 +56489,7 @@ The media is unuspported
 
 #### Defined in
 
-dist/generated/types.d.ts:15590
+dist/generated/types.d.ts:15910
 
 ___
 
@@ -55702,7 +56509,7 @@ The media is unuspported
 
 #### Defined in
 
-dist/generated/types.d.ts:15602
+dist/generated/types.d.ts:15922
 
 ___
 
@@ -55722,7 +56529,7 @@ The media is a video
 
 #### Defined in
 
-dist/generated/types.d.ts:15559
+dist/generated/types.d.ts:15879
 
 ___
 
@@ -55743,7 +56550,7 @@ The media is a video
 
 #### Defined in
 
-dist/generated/types.d.ts:15576
+dist/generated/types.d.ts:15896
 
 ___
 
@@ -55762,7 +56569,7 @@ The messages was exported from a group chat
 
 #### Defined in
 
-dist/generated/types.d.ts:29077
+dist/generated/types.d.ts:29490
 
 ___
 
@@ -55782,7 +56589,7 @@ The messages was exported from a group chat
 
 #### Defined in
 
-dist/generated/types.d.ts:29089
+dist/generated/types.d.ts:29502
 
 ___
 
@@ -55801,7 +56608,7 @@ The messages was exported from a private chat
 
 #### Defined in
 
-dist/generated/types.d.ts:29056
+dist/generated/types.d.ts:29469
 
 ___
 
@@ -55821,7 +56628,7 @@ The messages was exported from a private chat
 
 #### Defined in
 
-dist/generated/types.d.ts:29068
+dist/generated/types.d.ts:29481
 
 ___
 
@@ -55839,7 +56646,7 @@ The messages was exported from a chat of unknown type
 
 #### Defined in
 
-dist/generated/types.d.ts:29098
+dist/generated/types.d.ts:29511
 
 ___
 
@@ -55858,7 +56665,7 @@ The messages was exported from a chat of unknown type
 
 #### Defined in
 
-dist/generated/types.d.ts:29105
+dist/generated/types.d.ts:29518
 
 ___
 
@@ -55878,7 +56685,7 @@ A forum topic has been created
 
 #### Defined in
 
-dist/generated/types.d.ts:18583
+dist/generated/types.d.ts:18903
 
 ___
 
@@ -55899,7 +56706,7 @@ A forum topic has been created
 
 #### Defined in
 
-dist/generated/types.d.ts:18600
+dist/generated/types.d.ts:18920
 
 ___
 
@@ -55920,7 +56727,7 @@ A forum topic has been edited
 
 #### Defined in
 
-dist/generated/types.d.ts:18614
+dist/generated/types.d.ts:18934
 
 ___
 
@@ -55942,7 +56749,7 @@ A forum topic has been edited
 
 #### Defined in
 
-dist/generated/types.d.ts:18636
+dist/generated/types.d.ts:18956
 
 ___
 
@@ -55961,7 +56768,7 @@ A forum topic has been closed or opened
 
 #### Defined in
 
-dist/generated/types.d.ts:18655
+dist/generated/types.d.ts:18975
 
 ___
 
@@ -55981,7 +56788,7 @@ A forum topic has been closed or opened
 
 #### Defined in
 
-dist/generated/types.d.ts:18667
+dist/generated/types.d.ts:18987
 
 ___
 
@@ -56000,7 +56807,7 @@ A General forum topic has been hidden or unhidden
 
 #### Defined in
 
-dist/generated/types.d.ts:18676
+dist/generated/types.d.ts:18996
 
 ___
 
@@ -56020,7 +56827,7 @@ A General forum topic has been hidden or unhidden
 
 #### Defined in
 
-dist/generated/types.d.ts:18688
+dist/generated/types.d.ts:19008
 
 ___
 
@@ -56043,7 +56850,7 @@ Contains information about a forwarded message
 
 #### Defined in
 
-dist/generated/types.d.ts:8421
+dist/generated/types.d.ts:8571
 
 ___
 
@@ -56067,7 +56874,7 @@ Contains information about a forwarded message
 
 #### Defined in
 
-dist/generated/types.d.ts:8453
+dist/generated/types.d.ts:8603
 
 ___
 
@@ -56088,7 +56895,7 @@ The message was originally a post in a channel
 
 #### Defined in
 
-dist/generated/types.d.ts:8317
+dist/generated/types.d.ts:8467
 
 ___
 
@@ -56110,7 +56917,7 @@ The message was originally a post in a channel
 
 #### Defined in
 
-dist/generated/types.d.ts:8339
+dist/generated/types.d.ts:8489
 
 ___
 
@@ -56130,7 +56937,7 @@ The message was originally sent on behalf of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:8265
+dist/generated/types.d.ts:8415
 
 ___
 
@@ -56151,7 +56958,7 @@ The message was originally sent on behalf of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:8282
+dist/generated/types.d.ts:8432
 
 ___
 
@@ -56170,7 +56977,7 @@ The message was originally sent by a user, which is hidden by their privacy sett
 
 #### Defined in
 
-dist/generated/types.d.ts:8296
+dist/generated/types.d.ts:8446
 
 ___
 
@@ -56190,7 +56997,7 @@ The message was originally sent by a user, which is hidden by their privacy sett
 
 #### Defined in
 
-dist/generated/types.d.ts:8308
+dist/generated/types.d.ts:8458
 
 ___
 
@@ -56209,7 +57016,7 @@ The message was imported from an exported message history
 
 #### Defined in
 
-dist/generated/types.d.ts:8358
+dist/generated/types.d.ts:8508
 
 ___
 
@@ -56229,7 +57036,7 @@ The message was imported from an exported message history
 
 #### Defined in
 
-dist/generated/types.d.ts:8370
+dist/generated/types.d.ts:8520
 
 ___
 
@@ -56248,7 +57055,7 @@ The message was originally sent by a known user
 
 #### Defined in
 
-dist/generated/types.d.ts:8244
+dist/generated/types.d.ts:8394
 
 ___
 
@@ -56268,7 +57075,7 @@ The message was originally sent by a known user
 
 #### Defined in
 
-dist/generated/types.d.ts:8256
+dist/generated/types.d.ts:8406
 
 ___
 
@@ -56287,7 +57094,7 @@ A message with a game
 
 #### Defined in
 
-dist/generated/types.d.ts:17980
+dist/generated/types.d.ts:18300
 
 ___
 
@@ -56307,7 +57114,7 @@ A message with a game
 
 #### Defined in
 
-dist/generated/types.d.ts:17992
+dist/generated/types.d.ts:18312
 
 ___
 
@@ -56328,7 +57135,7 @@ A new high score was achieved in a game
 
 #### Defined in
 
-dist/generated/types.d.ts:18739
+dist/generated/types.d.ts:19059
 
 ___
 
@@ -56350,7 +57157,7 @@ A new high score was achieved in a game
 
 #### Defined in
 
-dist/generated/types.d.ts:18761
+dist/generated/types.d.ts:19081
 
 ___
 
@@ -56372,7 +57179,7 @@ Telegram Premium was gifted to the user
 
 #### Defined in
 
-dist/generated/types.d.ts:18962
+dist/generated/types.d.ts:19282
 
 ___
 
@@ -56395,7 +57202,7 @@ Telegram Premium was gifted to the user
 
 #### Defined in
 
-dist/generated/types.d.ts:18989
+dist/generated/types.d.ts:19309
 
 ___
 
@@ -56417,7 +57224,7 @@ Contains information about interactions with a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8594
+dist/generated/types.d.ts:8744
 
 ___
 
@@ -56440,7 +57247,7 @@ Contains information about interactions with a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8621
+dist/generated/types.d.ts:8771
 
 ___
 
@@ -56460,7 +57267,7 @@ A message with information about an invite to a video chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18247
+dist/generated/types.d.ts:18567
 
 ___
 
@@ -56481,7 +57288,7 @@ A message with information about an invite to a video chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18264
+dist/generated/types.d.ts:18584
 
 ___
 
@@ -56489,7 +57296,7 @@ ___
 
 Ƭ **messageInvoice**: `Object`
 
-A message with an invoice from a bot
+A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice
 
 #### Type declaration
 
@@ -56497,19 +57304,19 @@ A message with an invoice from a bot
 | :------ | :------ | :------ |
 | `_` | ``"messageInvoice"`` | - |
 | `currency` | `string` | Currency for the product price |
-| `description` | [`formattedText`](index.types.default.md#formattedtext-1) | A message with an invoice from a bot |
+| `description` | [`formattedText`](index.types.default.md#formattedtext-1) | A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice |
 | `extended_media` | [`MessageExtendedMedia`](index.types.default.md#messageextendedmedia) \| ``null`` | Extended media attached to the invoice; may be null |
 | `is_test` | [`Bool`](index.types.default.md#bool) | True, if the invoice is a test invoice |
 | `need_shipping_address` | [`Bool`](index.types.default.md#bool) | True, if the shipping address must be specified |
 | `photo` | [`photo`](index.types.default.md#photo-1) \| ``null`` | Product photo; may be null |
 | `receipt_message_id` | [`int53`](index.types.default.md#int53-1) | The identifier of the message with the receipt, after the product has been purchased |
-| `start_parameter` | `string` | Unique invoice bot start_parameter. To share an invoice use the URL https://t.me/{bot_username}?start={start_parameter} |
+| `start_parameter` | `string` | Unique invoice bot start_parameter to be passed to getInternalLink |
 | `title` | `string` | Product title |
 | `total_amount` | [`int53`](index.types.default.md#int53-1) | Product total price in the smallest units of the currency |
 
 #### Defined in
 
-dist/generated/types.d.ts:18022
+dist/generated/types.d.ts:18342
 
 ___
 
@@ -56518,7 +57325,7 @@ ___
 Ƭ **messageInvoice$Input**: `Object`
 
 Version of [messageInvoice](index.types.md#messageinvoice) for method parameters.
-A message with an invoice from a bot
+A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice
 
 #### Type declaration
 
@@ -56526,19 +57333,19 @@ A message with an invoice from a bot
 | :------ | :------ | :------ |
 | `_` | ``"messageInvoice"`` | - |
 | `currency?` | `string` | Currency for the product price |
-| `description?` | [`formattedText$Input`](index.types.default.md#formattedtext$input-1) | A message with an invoice from a bot |
+| `description?` | [`formattedText$Input`](index.types.default.md#formattedtext$input-1) | A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice |
 | `extended_media?` | [`MessageExtendedMedia$Input`](index.types.default.md#messageextendedmedia$input) \| ``null`` | Extended media attached to the invoice; may be null |
 | `is_test?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the invoice is a test invoice |
 | `need_shipping_address?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the shipping address must be specified |
 | `photo?` | [`photo$Input`](index.types.default.md#photo$input-1) \| ``null`` | Product photo; may be null |
 | `receipt_message_id?` | [`int53`](index.types.default.md#int53-1) | The identifier of the message with the receipt, after the product has been purchased |
-| `start_parameter?` | `string` | Unique invoice bot start_parameter. To share an invoice use the URL https://t.me/{bot_username}?start={start_parameter} |
+| `start_parameter?` | `string` | Unique invoice bot start_parameter to be passed to getInternalLink |
 | `title?` | `string` | Product title |
 | `total_amount?` | [`int53`](index.types.default.md#int53-1) | Product total price in the smallest units of the currency |
 
 #### Defined in
 
-dist/generated/types.d.ts:18079
+dist/generated/types.d.ts:18399
 
 ___
 
@@ -56558,7 +57365,7 @@ Contains an HTTPS link to a message in a supergroup or channel, or a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:32462
+dist/generated/types.d.ts:32919
 
 ___
 
@@ -56579,7 +57386,7 @@ Contains an HTTPS link to a message in a supergroup or channel, or a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:32479
+dist/generated/types.d.ts:32936
 
 ___
 
@@ -56603,7 +57410,7 @@ Contains information about a link to a message or a forum topic in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:32493
+dist/generated/types.d.ts:32950
 
 ___
 
@@ -56628,7 +57435,7 @@ Contains information about a link to a message or a forum topic in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:32530
+dist/generated/types.d.ts:32987
 
 ___
 
@@ -56651,7 +57458,7 @@ A message with a location
 
 #### Defined in
 
-dist/generated/types.d.ts:17785
+dist/generated/types.d.ts:18105
 
 ___
 
@@ -56675,7 +57482,7 @@ A message with a location
 
 #### Defined in
 
-dist/generated/types.d.ts:17817
+dist/generated/types.d.ts:18137
 
 ___
 
@@ -56695,7 +57502,7 @@ Telegram Passport data has been received; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:19191
+dist/generated/types.d.ts:19521
 
 ___
 
@@ -56716,7 +57523,7 @@ Telegram Passport data has been received; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:19208
+dist/generated/types.d.ts:19538
 
 ___
 
@@ -56735,7 +57542,7 @@ Telegram Passport data has been sent to a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:19170
+dist/generated/types.d.ts:19500
 
 ___
 
@@ -56755,7 +57562,7 @@ Telegram Passport data has been sent to a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:19182
+dist/generated/types.d.ts:19512
 
 ___
 
@@ -56780,7 +57587,7 @@ A payment has been completed
 
 #### Defined in
 
-dist/generated/types.d.ts:18780
+dist/generated/types.d.ts:19100
 
 ___
 
@@ -56806,7 +57613,7 @@ A payment has been completed
 
 #### Defined in
 
-dist/generated/types.d.ts:18822
+dist/generated/types.d.ts:19142
 
 ___
 
@@ -56833,7 +57640,7 @@ A payment has been completed; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:18861
+dist/generated/types.d.ts:19181
 
 ___
 
@@ -56861,7 +57668,7 @@ A payment has been completed; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:18913
+dist/generated/types.d.ts:19233
 
 ___
 
@@ -56883,7 +57690,7 @@ A photo message
 
 #### Defined in
 
-dist/generated/types.d.ts:17548
+dist/generated/types.d.ts:17868
 
 ___
 
@@ -56906,7 +57713,7 @@ A photo message
 
 #### Defined in
 
-dist/generated/types.d.ts:17575
+dist/generated/types.d.ts:17895
 
 ___
 
@@ -56925,7 +57732,7 @@ A message has been pinned
 
 #### Defined in
 
-dist/generated/types.d.ts:18499
+dist/generated/types.d.ts:18819
 
 ___
 
@@ -56945,7 +57752,7 @@ A message has been pinned
 
 #### Defined in
 
-dist/generated/types.d.ts:18511
+dist/generated/types.d.ts:18831
 
 ___
 
@@ -56964,7 +57771,7 @@ A message with a poll
 
 #### Defined in
 
-dist/generated/types.d.ts:18001
+dist/generated/types.d.ts:18321
 
 ___
 
@@ -56984,7 +57791,7 @@ A message with a poll
 
 #### Defined in
 
-dist/generated/types.d.ts:18013
+dist/generated/types.d.ts:18333
 
 ___
 
@@ -57005,7 +57812,7 @@ Contains information about a message in a specific position
 
 #### Defined in
 
-dist/generated/types.d.ts:9272
+dist/generated/types.d.ts:9432
 
 ___
 
@@ -57027,7 +57834,7 @@ Contains information about a message in a specific position
 
 #### Defined in
 
-dist/generated/types.d.ts:9294
+dist/generated/types.d.ts:9454
 
 ___
 
@@ -57047,7 +57854,7 @@ Contains a list of message positions
 
 #### Defined in
 
-dist/generated/types.d.ts:9313
+dist/generated/types.d.ts:9473
 
 ___
 
@@ -57068,7 +57875,7 @@ Contains a list of message positions
 
 #### Defined in
 
-dist/generated/types.d.ts:9330
+dist/generated/types.d.ts:9490
 
 ___
 
@@ -57089,7 +57896,7 @@ A user in the chat came within proximity alert range
 
 #### Defined in
 
-dist/generated/types.d.ts:19222
+dist/generated/types.d.ts:19552
 
 ___
 
@@ -57111,7 +57918,7 @@ A user in the chat came within proximity alert range
 
 #### Defined in
 
-dist/generated/types.d.ts:19244
+dist/generated/types.d.ts:19574
 
 ___
 
@@ -57133,7 +57940,7 @@ Contains information about a reaction to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8543
+dist/generated/types.d.ts:8693
 
 ___
 
@@ -57156,7 +57963,7 @@ Contains information about a reaction to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8570
+dist/generated/types.d.ts:8720
 
 ___
 
@@ -57179,7 +57986,7 @@ Contains information about replies to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8482
+dist/generated/types.d.ts:8632
 
 ___
 
@@ -57203,7 +58010,7 @@ Contains information about replies to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8514
+dist/generated/types.d.ts:8664
 
 ___
 
@@ -57222,7 +58029,7 @@ The message will be sent at the specified date
 
 #### Defined in
 
-dist/generated/types.d.ts:19585
+dist/generated/types.d.ts:19915
 
 ___
 
@@ -57242,7 +58049,7 @@ The message will be sent at the specified date
 
 #### Defined in
 
-dist/generated/types.d.ts:19597
+dist/generated/types.d.ts:19927
 
 ___
 
@@ -57260,7 +58067,7 @@ The message will be sent when the peer will be online. Applicable to private cha
 
 #### Defined in
 
-dist/generated/types.d.ts:19606
+dist/generated/types.d.ts:19936
 
 ___
 
@@ -57279,7 +58086,7 @@ The message will be sent when the peer will be online. Applicable to private cha
 
 #### Defined in
 
-dist/generated/types.d.ts:19613
+dist/generated/types.d.ts:19943
 
 ___
 
@@ -57297,7 +58104,7 @@ A screenshot of a message in the chat has been taken
 
 #### Defined in
 
-dist/generated/types.d.ts:18520
+dist/generated/types.d.ts:18840
 
 ___
 
@@ -57316,7 +58123,7 @@ A screenshot of a message in the chat has been taken
 
 #### Defined in
 
-dist/generated/types.d.ts:18527
+dist/generated/types.d.ts:18847
 
 ___
 
@@ -57335,11 +58142,12 @@ Options to be used when a message is sent
 | `from_background` | [`Bool`](index.types.default.md#bool) | Pass true if the message is sent from the background |
 | `protect_content` | [`Bool`](index.types.default.md#bool) | Pass true if the content of the message must be protected from forwarding and saving; for bots only |
 | `scheduling_state` | [`MessageSchedulingState`](index.types.default.md#messageschedulingstate) | Message scheduling state; pass null to send message immediately. Messages sent to a secret chat, live location messages and self-destructing messages can't be scheduled |
+| `sending_id` | [`int32`](index.types.default.md#int32-1) | Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates |
 | `update_order_of_installed_sticker_sets` | [`Bool`](index.types.default.md#bool) | Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum |
 
 #### Defined in
 
-dist/generated/types.d.ts:19617
+dist/generated/types.d.ts:19947
 
 ___
 
@@ -57359,11 +58167,12 @@ Options to be used when a message is sent
 | `from_background?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true if the message is sent from the background |
 | `protect_content?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true if the content of the message must be protected from forwarding and saving; for bots only |
 | `scheduling_state?` | [`MessageSchedulingState$Input`](index.types.default.md#messageschedulingstate$input) | Message scheduling state; pass null to send message immediately. Messages sent to a secret chat, live location messages and self-destructing messages can't be scheduled |
+| `sending_id?` | [`int32`](index.types.default.md#int32-1) | Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates |
 | `update_order_of_installed_sticker_sets?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum |
 
 #### Defined in
 
-dist/generated/types.d.ts:19649
+dist/generated/types.d.ts:19984
 
 ___
 
@@ -57382,7 +58191,7 @@ The message was sent on behalf of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:8140
+dist/generated/types.d.ts:8238
 
 ___
 
@@ -57402,7 +58211,7 @@ The message was sent on behalf of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:8152
+dist/generated/types.d.ts:8250
 
 ___
 
@@ -57421,7 +58230,7 @@ The message was sent by a known user
 
 #### Defined in
 
-dist/generated/types.d.ts:8119
+dist/generated/types.d.ts:8217
 
 ___
 
@@ -57441,7 +58250,7 @@ The message was sent by a known user
 
 #### Defined in
 
-dist/generated/types.d.ts:8131
+dist/generated/types.d.ts:8229
 
 ___
 
@@ -57461,7 +58270,7 @@ Represents a list of message senders
 
 #### Defined in
 
-dist/generated/types.d.ts:8161
+dist/generated/types.d.ts:8259
 
 ___
 
@@ -57482,7 +58291,7 @@ Represents a list of message senders
 
 #### Defined in
 
-dist/generated/types.d.ts:8178
+dist/generated/types.d.ts:8276
 
 ___
 
@@ -57505,7 +58314,7 @@ The message failed to be sent
 
 #### Defined in
 
-dist/generated/types.d.ts:8697
+dist/generated/types.d.ts:8857
 
 ___
 
@@ -57529,7 +58338,7 @@ The message failed to be sent
 
 #### Defined in
 
-dist/generated/types.d.ts:8729
+dist/generated/types.d.ts:8889
 
 ___
 
@@ -57541,13 +58350,14 @@ The message is being sent now, but has not yet been delivered to the server
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `_` | ``"messageSendingStatePending"`` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"messageSendingStatePending"`` | - |
+| `sending_id` | [`int32`](index.types.default.md#int32-1) | Non-persistent message sending identifier, specified by the application |
 
 #### Defined in
 
-dist/generated/types.d.ts:8686
+dist/generated/types.d.ts:8836
 
 ___
 
@@ -57560,13 +58370,347 @@ The message is being sent now, but has not yet been delivered to the server
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `_` | ``"messageSendingStatePending"`` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"messageSendingStatePending"`` | - |
+| `sending_id?` | [`int32`](index.types.default.md#int32-1) | Non-persistent message sending identifier, specified by the application |
 
 #### Defined in
 
-dist/generated/types.d.ts:8693
+dist/generated/types.d.ts:8848
+
+___
+
+### messageSourceChatEventLog
+
+Ƭ **messageSourceChatEventLog**: `Object`
+
+The message is from a chat event log
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceChatEventLog"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9632
+
+___
+
+### messageSourceChatEventLog$Input
+
+Ƭ **messageSourceChatEventLog$Input**: `Object`
+
+Version of [messageSourceChatEventLog](index.types.md#messagesourcechateventlog) for method parameters.
+The message is from a chat event log
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceChatEventLog"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9639
+
+___
+
+### messageSourceChatHistory
+
+Ƭ **messageSourceChatHistory**: `Object`
+
+The message is from a chat history
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceChatHistory"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9566
+
+___
+
+### messageSourceChatHistory$Input
+
+Ƭ **messageSourceChatHistory$Input**: `Object`
+
+Version of [messageSourceChatHistory](index.types.md#messagesourcechathistory) for method parameters.
+The message is from a chat history
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceChatHistory"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9573
+
+___
+
+### messageSourceChatList
+
+Ƭ **messageSourceChatList**: `Object`
+
+The message is from a chat list or a forum topic list
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceChatList"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9610
+
+___
+
+### messageSourceChatList$Input
+
+Ƭ **messageSourceChatList$Input**: `Object`
+
+Version of [messageSourceChatList](index.types.md#messagesourcechatlist) for method parameters.
+The message is from a chat list or a forum topic list
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceChatList"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9617
+
+___
+
+### messageSourceForumTopicHistory
+
+Ƭ **messageSourceForumTopicHistory**: `Object`
+
+The message is from a forum topic history
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceForumTopicHistory"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9588
+
+___
+
+### messageSourceForumTopicHistory$Input
+
+Ƭ **messageSourceForumTopicHistory$Input**: `Object`
+
+Version of [messageSourceForumTopicHistory](index.types.md#messagesourceforumtopichistory) for method parameters.
+The message is from a forum topic history
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceForumTopicHistory"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9595
+
+___
+
+### messageSourceHistoryPreview
+
+Ƭ **messageSourceHistoryPreview**: `Object`
+
+The message is from chat, message thread or forum topic history preview
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceHistoryPreview"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9599
+
+___
+
+### messageSourceHistoryPreview$Input
+
+Ƭ **messageSourceHistoryPreview$Input**: `Object`
+
+Version of [messageSourceHistoryPreview](index.types.md#messagesourcehistorypreview) for method parameters.
+The message is from chat, message thread or forum topic history preview
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceHistoryPreview"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9606
+
+___
+
+### messageSourceMessageThreadHistory
+
+Ƭ **messageSourceMessageThreadHistory**: `Object`
+
+The message is from a message thread history
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceMessageThreadHistory"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9577
+
+___
+
+### messageSourceMessageThreadHistory$Input
+
+Ƭ **messageSourceMessageThreadHistory$Input**: `Object`
+
+Version of [messageSourceMessageThreadHistory](index.types.md#messagesourcemessagethreadhistory) for method parameters.
+The message is from a message thread history
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceMessageThreadHistory"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9584
+
+___
+
+### messageSourceNotification
+
+Ƭ **messageSourceNotification**: `Object`
+
+The message is from a notification
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceNotification"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9643
+
+___
+
+### messageSourceNotification$Input
+
+Ƭ **messageSourceNotification$Input**: `Object`
+
+Version of [messageSourceNotification](index.types.md#messagesourcenotification) for method parameters.
+The message is from a notification
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceNotification"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9650
+
+___
+
+### messageSourceOther
+
+Ƭ **messageSourceOther**: `Object`
+
+The message is from some other source
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceOther"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9654
+
+___
+
+### messageSourceOther$Input
+
+Ƭ **messageSourceOther$Input**: `Object`
+
+Version of [messageSourceOther](index.types.md#messagesourceother) for method parameters.
+The message is from some other source
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceOther"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9661
+
+___
+
+### messageSourceSearch
+
+Ƭ **messageSourceSearch**: `Object`
+
+The message is from search results, including file downloads, local file list, outgoing document messages, calendar
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceSearch"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9621
+
+___
+
+### messageSourceSearch$Input
+
+Ƭ **messageSourceSearch$Input**: `Object`
+
+Version of [messageSourceSearch](index.types.md#messagesourcesearch) for method parameters.
+The message is from search results, including file downloads, local file list, outgoing document messages, calendar
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `_` | ``"messageSourceSearch"`` |
+
+#### Defined in
+
+dist/generated/types.d.ts:9628
 
 ___
 
@@ -57585,7 +58729,7 @@ A detailed statistics about a message
 
 #### Defined in
 
-dist/generated/types.d.ts:34888
+dist/generated/types.d.ts:35345
 
 ___
 
@@ -57605,7 +58749,7 @@ A detailed statistics about a message
 
 #### Defined in
 
-dist/generated/types.d.ts:34900
+dist/generated/types.d.ts:35357
 
 ___
 
@@ -57625,7 +58769,7 @@ A sticker message
 
 #### Defined in
 
-dist/generated/types.d.ts:17610
+dist/generated/types.d.ts:17930
 
 ___
 
@@ -57646,7 +58790,7 @@ A sticker message
 
 #### Defined in
 
-dist/generated/types.d.ts:17627
+dist/generated/types.d.ts:17947
 
 ___
 
@@ -57665,7 +58809,7 @@ A profile photo was suggested to a user in a private chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18697
+dist/generated/types.d.ts:19017
 
 ___
 
@@ -57685,7 +58829,7 @@ A profile photo was suggested to a user in a private chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18709
+dist/generated/types.d.ts:19029
 
 ___
 
@@ -57704,7 +58848,7 @@ A newly created supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:18309
+dist/generated/types.d.ts:18629
 
 ___
 
@@ -57724,7 +58868,7 @@ A newly created supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:18321
+dist/generated/types.d.ts:18641
 
 ___
 
@@ -57744,7 +58888,7 @@ A text message
 
 #### Defined in
 
-dist/generated/types.d.ts:17404
+dist/generated/types.d.ts:17724
 
 ___
 
@@ -57765,7 +58909,7 @@ A text message
 
 #### Defined in
 
-dist/generated/types.d.ts:17421
+dist/generated/types.d.ts:17741
 
 ___
 
@@ -57789,7 +58933,7 @@ Contains information about a message thread
 
 #### Defined in
 
-dist/generated/types.d.ts:11848
+dist/generated/types.d.ts:12168
 
 ___
 
@@ -57814,7 +58958,7 @@ Contains information about a message thread
 
 #### Defined in
 
-dist/generated/types.d.ts:11885
+dist/generated/types.d.ts:12205
 
 ___
 
@@ -57832,7 +58976,7 @@ Message content that is not supported in the current TDLib version
 
 #### Defined in
 
-dist/generated/types.d.ts:19263
+dist/generated/types.d.ts:19593
 
 ___
 
@@ -57851,7 +58995,7 @@ Message content that is not supported in the current TDLib version
 
 #### Defined in
 
-dist/generated/types.d.ts:19270
+dist/generated/types.d.ts:19600
 
 ___
 
@@ -57871,7 +59015,7 @@ The current user shared a user, which was requested by the bot
 
 #### Defined in
 
-dist/generated/types.d.ts:19024
+dist/generated/types.d.ts:19344
 
 ___
 
@@ -57892,7 +59036,7 @@ The current user shared a user, which was requested by the bot
 
 #### Defined in
 
-dist/generated/types.d.ts:19041
+dist/generated/types.d.ts:19361
 
 ___
 
@@ -57911,7 +59055,7 @@ A message with information about a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:17846
+dist/generated/types.d.ts:18166
 
 ___
 
@@ -57931,7 +59075,7 @@ A message with information about a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:17858
+dist/generated/types.d.ts:18178
 
 ___
 
@@ -57953,7 +59097,7 @@ A video message
 
 #### Defined in
 
-dist/generated/types.d.ts:17641
+dist/generated/types.d.ts:17961
 
 ___
 
@@ -57976,7 +59120,7 @@ A video message
 
 #### Defined in
 
-dist/generated/types.d.ts:17668
+dist/generated/types.d.ts:17988
 
 ___
 
@@ -57995,7 +59139,7 @@ A message with information about an ended video chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18226
+dist/generated/types.d.ts:18546
 
 ___
 
@@ -58015,7 +59159,7 @@ A message with information about an ended video chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18238
+dist/generated/types.d.ts:18558
 
 ___
 
@@ -58035,7 +59179,7 @@ A new video chat was scheduled
 
 #### Defined in
 
-dist/generated/types.d.ts:18174
+dist/generated/types.d.ts:18494
 
 ___
 
@@ -58056,7 +59200,7 @@ A new video chat was scheduled
 
 #### Defined in
 
-dist/generated/types.d.ts:18191
+dist/generated/types.d.ts:18511
 
 ___
 
@@ -58075,7 +59219,7 @@ A newly created video chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18205
+dist/generated/types.d.ts:18525
 
 ___
 
@@ -58095,7 +59239,7 @@ A newly created video chat
 
 #### Defined in
 
-dist/generated/types.d.ts:18217
+dist/generated/types.d.ts:18537
 
 ___
 
@@ -58116,7 +59260,7 @@ A video note message
 
 #### Defined in
 
-dist/generated/types.d.ts:17703
+dist/generated/types.d.ts:18023
 
 ___
 
@@ -58138,7 +59282,87 @@ A video note message
 
 #### Defined in
 
-dist/generated/types.d.ts:17725
+dist/generated/types.d.ts:18045
+
+___
+
+### messageViewer
+
+Ƭ **messageViewer**: `Object`
+
+Represents a viewer of a message
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"messageViewer"`` | - |
+| `user_id` | [`int53`](index.types.default.md#int53-1) | User identifier of the viewer |
+| `view_date` | [`int32`](index.types.default.md#int32-1) | Approximate point in time (Unix timestamp) when the message was viewed |
+
+#### Defined in
+
+dist/generated/types.d.ts:8342
+
+___
+
+### messageViewer$Input
+
+Ƭ **messageViewer$Input**: `Object`
+
+Version of [messageViewer](index.types.md#messageviewer-1) for method parameters.
+Represents a viewer of a message
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"messageViewer"`` | - |
+| `user_id?` | [`int53`](index.types.default.md#int53-1) | User identifier of the viewer |
+| `view_date?` | [`int32`](index.types.default.md#int32-1) | Approximate point in time (Unix timestamp) when the message was viewed |
+
+#### Defined in
+
+dist/generated/types.d.ts:8359
+
+___
+
+### messageViewers
+
+Ƭ **messageViewers**: `Object`
+
+Represents a list of message viewers
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"messageViewers"`` | - |
+| `viewers` | [`vector`](index.types.default.md#vector)<[`messageViewer`](index.types.default.md#messageviewer-1)\> | List of message viewers |
+
+#### Defined in
+
+dist/generated/types.d.ts:8373
+
+___
+
+### messageViewers$Input
+
+Ƭ **messageViewers$Input**: `Object`
+
+Version of [messageViewers](index.types.md#messageviewers-1) for method parameters.
+Represents a list of message viewers
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"messageViewers"`` | - |
+| `viewers?` | [`vector$Input`](index.types.default.md#vector$input)<[`messageViewer$Input`](index.types.default.md#messageviewer$input-1)\> | List of message viewers |
+
+#### Defined in
+
+dist/generated/types.d.ts:8385
 
 ___
 
@@ -58159,7 +59383,7 @@ A voice note message
 
 #### Defined in
 
-dist/generated/types.d.ts:17744
+dist/generated/types.d.ts:18064
 
 ___
 
@@ -58181,7 +59405,7 @@ A voice note message
 
 #### Defined in
 
-dist/generated/types.d.ts:17766
+dist/generated/types.d.ts:18086
 
 ___
 
@@ -58201,7 +59425,7 @@ Data from a Web App has been received; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:19139
+dist/generated/types.d.ts:19469
 
 ___
 
@@ -58222,7 +59446,7 @@ Data from a Web App has been received; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:19156
+dist/generated/types.d.ts:19486
 
 ___
 
@@ -58241,7 +59465,7 @@ Data from a Web App has been sent to a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:19118
+dist/generated/types.d.ts:19448
 
 ___
 
@@ -58261,7 +59485,7 @@ Data from a Web App has been sent to a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:19130
+dist/generated/types.d.ts:19460
 
 ___
 
@@ -58280,7 +59504,7 @@ The current user has connected a website by logging in using Telegram Login Widg
 
 #### Defined in
 
-dist/generated/types.d.ts:19086
+dist/generated/types.d.ts:19406
 
 ___
 
@@ -58300,7 +59524,7 @@ The current user has connected a website by logging in using Telegram Login Widg
 
 #### Defined in
 
-dist/generated/types.d.ts:19098
+dist/generated/types.d.ts:19418
 
 ___
 
@@ -58320,7 +59544,7 @@ Contains a list of messages
 
 #### Defined in
 
-dist/generated/types.d.ts:9159
+dist/generated/types.d.ts:9319
 
 ___
 
@@ -58341,7 +59565,7 @@ Contains a list of messages
 
 #### Defined in
 
-dist/generated/types.d.ts:9176
+dist/generated/types.d.ts:9336
 
 ___
 
@@ -58362,7 +59586,7 @@ Thumbnail image of a very poor quality and low resolution
 
 #### Defined in
 
-dist/generated/types.d.ts:3023
+dist/generated/types.d.ts:3064
 
 ___
 
@@ -58384,7 +59608,7 @@ Thumbnail image of a very poor quality and low resolution
 
 #### Defined in
 
-dist/generated/types.d.ts:3045
+dist/generated/types.d.ts:3086
 
 ___
 
@@ -58404,7 +59628,7 @@ A full list of available network statistic entries
 
 #### Defined in
 
-dist/generated/types.d.ts:33144
+dist/generated/types.d.ts:33601
 
 ___
 
@@ -58425,7 +59649,7 @@ A full list of available network statistic entries
 
 #### Defined in
 
-dist/generated/types.d.ts:33161
+dist/generated/types.d.ts:33618
 
 ___
 
@@ -58447,7 +59671,7 @@ Contains information about the total amount of data that was used for calls
 
 #### Defined in
 
-dist/generated/types.d.ts:33093
+dist/generated/types.d.ts:33550
 
 ___
 
@@ -58470,7 +59694,7 @@ Contains information about the total amount of data that was used for calls
 
 #### Defined in
 
-dist/generated/types.d.ts:33120
+dist/generated/types.d.ts:33577
 
 ___
 
@@ -58492,7 +59716,7 @@ Contains information about the total amount of data that was used to send and re
 
 #### Defined in
 
-dist/generated/types.d.ts:33042
+dist/generated/types.d.ts:33499
 
 ___
 
@@ -58515,7 +59739,7 @@ Contains information about the total amount of data that was used to send and re
 
 #### Defined in
 
-dist/generated/types.d.ts:33069
+dist/generated/types.d.ts:33526
 
 ___
 
@@ -58533,7 +59757,7 @@ A mobile network
 
 #### Defined in
 
-dist/generated/types.d.ts:32998
+dist/generated/types.d.ts:33455
 
 ___
 
@@ -58552,7 +59776,7 @@ A mobile network
 
 #### Defined in
 
-dist/generated/types.d.ts:33005
+dist/generated/types.d.ts:33462
 
 ___
 
@@ -58570,7 +59794,7 @@ A mobile roaming network
 
 #### Defined in
 
-dist/generated/types.d.ts:33009
+dist/generated/types.d.ts:33466
 
 ___
 
@@ -58589,7 +59813,7 @@ A mobile roaming network
 
 #### Defined in
 
-dist/generated/types.d.ts:33016
+dist/generated/types.d.ts:33473
 
 ___
 
@@ -58607,7 +59831,7 @@ The network is not available
 
 #### Defined in
 
-dist/generated/types.d.ts:32987
+dist/generated/types.d.ts:33444
 
 ___
 
@@ -58626,7 +59850,7 @@ The network is not available
 
 #### Defined in
 
-dist/generated/types.d.ts:32994
+dist/generated/types.d.ts:33451
 
 ___
 
@@ -58644,7 +59868,7 @@ A different network type (e.g., Ethernet network)
 
 #### Defined in
 
-dist/generated/types.d.ts:33031
+dist/generated/types.d.ts:33488
 
 ___
 
@@ -58663,7 +59887,7 @@ A different network type (e.g., Ethernet network)
 
 #### Defined in
 
-dist/generated/types.d.ts:33038
+dist/generated/types.d.ts:33495
 
 ___
 
@@ -58681,7 +59905,7 @@ A Wi-Fi network
 
 #### Defined in
 
-dist/generated/types.d.ts:33020
+dist/generated/types.d.ts:33477
 
 ___
 
@@ -58700,7 +59924,7 @@ A Wi-Fi network
 
 #### Defined in
 
-dist/generated/types.d.ts:33027
+dist/generated/types.d.ts:33484
 
 ___
 
@@ -58722,7 +59946,7 @@ Contains information about a notification
 
 #### Defined in
 
-dist/generated/types.d.ts:30239
+dist/generated/types.d.ts:30652
 
 ___
 
@@ -58745,7 +59969,7 @@ Contains information about a notification
 
 #### Defined in
 
-dist/generated/types.d.ts:30266
+dist/generated/types.d.ts:30679
 
 ___
 
@@ -58768,7 +59992,7 @@ Describes a group of notifications
 
 #### Defined in
 
-dist/generated/types.d.ts:30290
+dist/generated/types.d.ts:30703
 
 ___
 
@@ -58792,7 +60016,7 @@ Describes a group of notifications
 
 #### Defined in
 
-dist/generated/types.d.ts:30322
+dist/generated/types.d.ts:30735
 
 ___
 
@@ -58810,7 +60034,7 @@ A group containing notifications of type notificationTypeNewCall
 
 #### Defined in
 
-dist/generated/types.d.ts:30136
+dist/generated/types.d.ts:30549
 
 ___
 
@@ -58829,7 +60053,7 @@ A group containing notifications of type notificationTypeNewCall
 
 #### Defined in
 
-dist/generated/types.d.ts:30143
+dist/generated/types.d.ts:30556
 
 ___
 
@@ -58847,7 +60071,7 @@ A group containing notifications of type notificationTypeNewMessage and notifica
 
 #### Defined in
 
-dist/generated/types.d.ts:30114
+dist/generated/types.d.ts:30527
 
 ___
 
@@ -58866,7 +60090,7 @@ A group containing notifications of type notificationTypeNewMessage and notifica
 
 #### Defined in
 
-dist/generated/types.d.ts:30121
+dist/generated/types.d.ts:30534
 
 ___
 
@@ -58884,7 +60108,7 @@ A group containing notifications of type notificationTypeNewMessage and notifica
 
 #### Defined in
 
-dist/generated/types.d.ts:30103
+dist/generated/types.d.ts:30516
 
 ___
 
@@ -58903,7 +60127,7 @@ A group containing notifications of type notificationTypeNewMessage and notifica
 
 #### Defined in
 
-dist/generated/types.d.ts:30110
+dist/generated/types.d.ts:30523
 
 ___
 
@@ -58921,7 +60145,7 @@ A group containing a notification of type notificationTypeNewSecretChat
 
 #### Defined in
 
-dist/generated/types.d.ts:30125
+dist/generated/types.d.ts:30538
 
 ___
 
@@ -58940,7 +60164,7 @@ A group containing a notification of type notificationTypeNewSecretChat
 
 #### Defined in
 
-dist/generated/types.d.ts:30132
+dist/generated/types.d.ts:30545
 
 ___
 
@@ -58958,7 +60182,7 @@ Notification settings applied to all channel chats when the corresponding chat s
 
 #### Defined in
 
-dist/generated/types.d.ts:9683
+dist/generated/types.d.ts:9962
 
 ___
 
@@ -58977,7 +60201,7 @@ Notification settings applied to all channel chats when the corresponding chat s
 
 #### Defined in
 
-dist/generated/types.d.ts:9690
+dist/generated/types.d.ts:9969
 
 ___
 
@@ -58995,7 +60219,7 @@ Notification settings applied to all basic group and supergroup chats when the c
 
 #### Defined in
 
-dist/generated/types.d.ts:9672
+dist/generated/types.d.ts:9951
 
 ___
 
@@ -59014,7 +60238,7 @@ Notification settings applied to all basic group and supergroup chats when the c
 
 #### Defined in
 
-dist/generated/types.d.ts:9679
+dist/generated/types.d.ts:9958
 
 ___
 
@@ -59032,7 +60256,7 @@ Notification settings applied to all private and secret chats when the correspon
 
 #### Defined in
 
-dist/generated/types.d.ts:9661
+dist/generated/types.d.ts:9940
 
 ___
 
@@ -59051,7 +60275,7 @@ Notification settings applied to all private and secret chats when the correspon
 
 #### Defined in
 
-dist/generated/types.d.ts:9668
+dist/generated/types.d.ts:9947
 
 ___
 
@@ -59075,7 +60299,7 @@ Describes a notification sound in MP3 format
 
 #### Defined in
 
-dist/generated/types.d.ts:30147
+dist/generated/types.d.ts:30560
 
 ___
 
@@ -59100,7 +60324,7 @@ Describes a notification sound in MP3 format
 
 #### Defined in
 
-dist/generated/types.d.ts:30184
+dist/generated/types.d.ts:30597
 
 ___
 
@@ -59119,7 +60343,7 @@ Contains a list of notification sounds
 
 #### Defined in
 
-dist/generated/types.d.ts:30218
+dist/generated/types.d.ts:30631
 
 ___
 
@@ -59139,7 +60363,7 @@ Contains a list of notification sounds
 
 #### Defined in
 
-dist/generated/types.d.ts:30230
+dist/generated/types.d.ts:30643
 
 ___
 
@@ -59158,7 +60382,7 @@ New call was received
 
 #### Defined in
 
-dist/generated/types.d.ts:30021
+dist/generated/types.d.ts:30434
 
 ___
 
@@ -59178,7 +60402,7 @@ New call was received
 
 #### Defined in
 
-dist/generated/types.d.ts:30033
+dist/generated/types.d.ts:30446
 
 ___
 
@@ -59198,7 +60422,7 @@ New message was received
 
 #### Defined in
 
-dist/generated/types.d.ts:29979
+dist/generated/types.d.ts:30392
 
 ___
 
@@ -59219,7 +60443,7 @@ New message was received
 
 #### Defined in
 
-dist/generated/types.d.ts:29996
+dist/generated/types.d.ts:30409
 
 ___
 
@@ -59242,7 +60466,7 @@ New message was received through a push notification
 
 #### Defined in
 
-dist/generated/types.d.ts:30042
+dist/generated/types.d.ts:30455
 
 ___
 
@@ -59266,7 +60490,7 @@ New message was received through a push notification
 
 #### Defined in
 
-dist/generated/types.d.ts:30074
+dist/generated/types.d.ts:30487
 
 ___
 
@@ -59284,7 +60508,7 @@ New secret chat was created
 
 #### Defined in
 
-dist/generated/types.d.ts:30010
+dist/generated/types.d.ts:30423
 
 ___
 
@@ -59303,7 +60527,7 @@ New secret chat was created
 
 #### Defined in
 
-dist/generated/types.d.ts:30017
+dist/generated/types.d.ts:30430
 
 ___
 
@@ -59321,7 +60545,7 @@ An object of this type is returned on a successful function call for certain fun
 
 #### Defined in
 
-dist/generated/types.d.ts:1727
+dist/generated/types.d.ts:1758
 
 ___
 
@@ -59340,7 +60564,7 @@ An object of this type is returned on a successful function call for certain fun
 
 #### Defined in
 
-dist/generated/types.d.ts:1734
+dist/generated/types.d.ts:1765
 
 ___
 
@@ -59368,7 +60592,7 @@ Informs TDLib that the chat is opened by the user. Many useful activities depend
 
 #### Defined in
 
-dist/generated/types.d.ts:49807
+dist/generated/types.d.ts:50470
 
 ___
 
@@ -59387,7 +60611,7 @@ Informs TDLib that the chat is opened by the user. Many useful activities depend
 
 #### Defined in
 
-dist/generated/types.d.ts:49793
+dist/generated/types.d.ts:50456
 
 ___
 
@@ -59417,7 +60641,7 @@ Informs TDLib that the message content has been opened (e.g., the user has opene
 
 #### Defined in
 
-dist/generated/types.d.ts:49881
+dist/generated/types.d.ts:50544
 
 ___
 
@@ -59438,7 +60662,7 @@ Informs TDLib that the message content has been opened (e.g., the user has opene
 
 #### Defined in
 
-dist/generated/types.d.ts:49860
+dist/generated/types.d.ts:50523
 
 ___
 
@@ -59468,7 +60692,7 @@ Informs TDLib that a Web App is being opened from attachment menu, a botMenuButt
 
 #### Defined in
 
-dist/generated/types.d.ts:49474
+dist/generated/types.d.ts:50137
 
 ___
 
@@ -59494,7 +60718,7 @@ Informs TDLib that a Web App is being opened from attachment menu, a botMenuButt
 
 #### Defined in
 
-dist/generated/types.d.ts:49428
+dist/generated/types.d.ts:50091
 
 ___
 
@@ -59522,7 +60746,7 @@ Optimizes storage usage, i.e. deletes some files and returns new storage usage s
 
 #### Defined in
 
-dist/generated/types.d.ts:55850
+dist/generated/types.d.ts:56608
 
 ___
 
@@ -59549,7 +60773,7 @@ Optimizes storage usage, i.e. deletes some files and returns new storage usage s
 
 #### Defined in
 
-dist/generated/types.d.ts:55796
+dist/generated/types.d.ts:56554
 
 ___
 
@@ -59568,7 +60792,7 @@ Represents a boolean option
 
 #### Defined in
 
-dist/generated/types.d.ts:30351
+dist/generated/types.d.ts:30764
 
 ___
 
@@ -59588,7 +60812,7 @@ Represents a boolean option
 
 #### Defined in
 
-dist/generated/types.d.ts:30363
+dist/generated/types.d.ts:30776
 
 ___
 
@@ -59606,7 +60830,7 @@ Represents an unknown option or an option which has a default value
 
 #### Defined in
 
-dist/generated/types.d.ts:30372
+dist/generated/types.d.ts:30785
 
 ___
 
@@ -59625,7 +60849,7 @@ Represents an unknown option or an option which has a default value
 
 #### Defined in
 
-dist/generated/types.d.ts:30379
+dist/generated/types.d.ts:30792
 
 ___
 
@@ -59644,7 +60868,7 @@ Represents an integer option
 
 #### Defined in
 
-dist/generated/types.d.ts:30383
+dist/generated/types.d.ts:30796
 
 ___
 
@@ -59664,7 +60888,7 @@ Represents an integer option
 
 #### Defined in
 
-dist/generated/types.d.ts:30395
+dist/generated/types.d.ts:30808
 
 ___
 
@@ -59683,7 +60907,7 @@ Represents a string option
 
 #### Defined in
 
-dist/generated/types.d.ts:30404
+dist/generated/types.d.ts:30817
 
 ___
 
@@ -59703,7 +60927,7 @@ Represents a string option
 
 #### Defined in
 
-dist/generated/types.d.ts:30416
+dist/generated/types.d.ts:30829
 
 ___
 
@@ -59725,7 +60949,7 @@ Order information
 
 #### Defined in
 
-dist/generated/types.d.ts:14750
+dist/generated/types.d.ts:15070
 
 ___
 
@@ -59748,7 +60972,7 @@ Order information
 
 #### Defined in
 
-dist/generated/types.d.ts:14777
+dist/generated/types.d.ts:15097
 
 ___
 
@@ -59767,7 +60991,7 @@ An invisible anchor on a page, which can be used in a URL to open the page from 
 
 #### Defined in
 
-dist/generated/types.d.ts:13170
+dist/generated/types.d.ts:13490
 
 ___
 
@@ -59787,7 +61011,7 @@ An invisible anchor on a page, which can be used in a URL to open the page from 
 
 #### Defined in
 
-dist/generated/types.d.ts:13182
+dist/generated/types.d.ts:13502
 
 ___
 
@@ -59808,7 +61032,7 @@ An animation
 
 #### Defined in
 
-dist/generated/types.d.ts:13274
+dist/generated/types.d.ts:13594
 
 ___
 
@@ -59830,7 +61054,7 @@ An animation
 
 #### Defined in
 
-dist/generated/types.d.ts:13296
+dist/generated/types.d.ts:13616
 
 ___
 
@@ -59850,7 +61074,7 @@ An audio file
 
 #### Defined in
 
-dist/generated/types.d.ts:13315
+dist/generated/types.d.ts:13635
 
 ___
 
@@ -59871,7 +61095,7 @@ An audio file
 
 #### Defined in
 
-dist/generated/types.d.ts:13332
+dist/generated/types.d.ts:13652
 
 ___
 
@@ -59891,7 +61115,7 @@ The author and publishing date of a page
 
 #### Defined in
 
-dist/generated/types.d.ts:12992
+dist/generated/types.d.ts:13312
 
 ___
 
@@ -59912,7 +61136,7 @@ The author and publishing date of a page
 
 #### Defined in
 
-dist/generated/types.d.ts:13009
+dist/generated/types.d.ts:13329
 
 ___
 
@@ -59932,7 +61156,7 @@ A block quote
 
 #### Defined in
 
-dist/generated/types.d.ts:13212
+dist/generated/types.d.ts:13532
 
 ___
 
@@ -59953,7 +61177,7 @@ A block quote
 
 #### Defined in
 
-dist/generated/types.d.ts:13229
+dist/generated/types.d.ts:13549
 
 ___
 
@@ -59973,7 +61197,7 @@ Contains a caption of an instant view web page block, consisting of a text and a
 
 #### Defined in
 
-dist/generated/types.d.ts:12680
+dist/generated/types.d.ts:13000
 
 ___
 
@@ -59994,7 +61218,7 @@ Contains a caption of an instant view web page block, consisting of a text and a
 
 #### Defined in
 
-dist/generated/types.d.ts:12697
+dist/generated/types.d.ts:13017
 
 ___
 
@@ -60015,7 +61239,7 @@ A link to a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:13714
+dist/generated/types.d.ts:14034
 
 ___
 
@@ -60037,7 +61261,7 @@ A link to a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:13736
+dist/generated/types.d.ts:14056
 
 ___
 
@@ -60057,7 +61281,7 @@ A collage
 
 #### Defined in
 
-dist/generated/types.d.ts:13652
+dist/generated/types.d.ts:13972
 
 ___
 
@@ -60078,7 +61302,7 @@ A collage
 
 #### Defined in
 
-dist/generated/types.d.ts:13669
+dist/generated/types.d.ts:13989
 
 ___
 
@@ -60097,7 +61321,7 @@ A page cover
 
 #### Defined in
 
-dist/generated/types.d.ts:13469
+dist/generated/types.d.ts:13789
 
 ___
 
@@ -60117,7 +61341,7 @@ A page cover
 
 #### Defined in
 
-dist/generated/types.d.ts:13481
+dist/generated/types.d.ts:13801
 
 ___
 
@@ -60138,7 +61362,7 @@ A collapsible block
 
 #### Defined in
 
-dist/generated/types.d.ts:13806
+dist/generated/types.d.ts:14126
 
 ___
 
@@ -60160,7 +61384,7 @@ A collapsible block
 
 #### Defined in
 
-dist/generated/types.d.ts:13828
+dist/generated/types.d.ts:14148
 
 ___
 
@@ -60178,7 +61402,7 @@ An empty block separating a page
 
 #### Defined in
 
-dist/generated/types.d.ts:13159
+dist/generated/types.d.ts:13479
 
 ___
 
@@ -60197,7 +61421,7 @@ An empty block separating a page
 
 #### Defined in
 
-dist/generated/types.d.ts:13166
+dist/generated/types.d.ts:13486
 
 ___
 
@@ -60223,7 +61447,7 @@ An embedded web page
 
 #### Defined in
 
-dist/generated/types.d.ts:13490
+dist/generated/types.d.ts:13810
 
 ___
 
@@ -60250,7 +61474,7 @@ An embedded web page
 
 #### Defined in
 
-dist/generated/types.d.ts:13537
+dist/generated/types.d.ts:13857
 
 ___
 
@@ -60274,7 +61498,7 @@ An embedded post
 
 #### Defined in
 
-dist/generated/types.d.ts:13581
+dist/generated/types.d.ts:13901
 
 ___
 
@@ -60299,7 +61523,7 @@ An embedded post
 
 #### Defined in
 
-dist/generated/types.d.ts:13618
+dist/generated/types.d.ts:13938
 
 ___
 
@@ -60318,7 +61542,7 @@ The footer of a page
 
 #### Defined in
 
-dist/generated/types.d.ts:13138
+dist/generated/types.d.ts:13458
 
 ___
 
@@ -60338,7 +61562,7 @@ The footer of a page
 
 #### Defined in
 
-dist/generated/types.d.ts:13150
+dist/generated/types.d.ts:13470
 
 ___
 
@@ -60357,7 +61581,7 @@ A header
 
 #### Defined in
 
-dist/generated/types.d.ts:13023
+dist/generated/types.d.ts:13343
 
 ___
 
@@ -60377,7 +61601,7 @@ A header
 
 #### Defined in
 
-dist/generated/types.d.ts:13035
+dist/generated/types.d.ts:13355
 
 ___
 
@@ -60395,7 +61619,7 @@ The content must be center-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12753
+dist/generated/types.d.ts:13073
 
 ___
 
@@ -60414,7 +61638,7 @@ The content must be center-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12760
+dist/generated/types.d.ts:13080
 
 ___
 
@@ -60432,7 +61656,7 @@ The content must be left-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12742
+dist/generated/types.d.ts:13062
 
 ___
 
@@ -60451,7 +61675,7 @@ The content must be left-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12749
+dist/generated/types.d.ts:13069
 
 ___
 
@@ -60469,7 +61693,7 @@ The content must be right-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12764
+dist/generated/types.d.ts:13084
 
 ___
 
@@ -60488,7 +61712,7 @@ The content must be right-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12771
+dist/generated/types.d.ts:13091
 
 ___
 
@@ -60507,7 +61731,7 @@ A kicker
 
 #### Defined in
 
-dist/generated/types.d.ts:13065
+dist/generated/types.d.ts:13385
 
 ___
 
@@ -60527,7 +61751,7 @@ A kicker
 
 #### Defined in
 
-dist/generated/types.d.ts:13077
+dist/generated/types.d.ts:13397
 
 ___
 
@@ -60546,7 +61770,7 @@ A list of data blocks
 
 #### Defined in
 
-dist/generated/types.d.ts:13191
+dist/generated/types.d.ts:13511
 
 ___
 
@@ -60566,7 +61790,7 @@ A list of data blocks
 
 #### Defined in
 
-dist/generated/types.d.ts:13203
+dist/generated/types.d.ts:13523
 
 ___
 
@@ -60586,7 +61810,7 @@ Describes an item of a list page block
 
 #### Defined in
 
-dist/generated/types.d.ts:12711
+dist/generated/types.d.ts:13031
 
 ___
 
@@ -60607,7 +61831,7 @@ Describes an item of a list page block
 
 #### Defined in
 
-dist/generated/types.d.ts:12728
+dist/generated/types.d.ts:13048
 
 ___
 
@@ -60630,7 +61854,7 @@ A map
 
 #### Defined in
 
-dist/generated/types.d.ts:13878
+dist/generated/types.d.ts:14198
 
 ___
 
@@ -60654,7 +61878,7 @@ A map
 
 #### Defined in
 
-dist/generated/types.d.ts:13910
+dist/generated/types.d.ts:14230
 
 ___
 
@@ -60673,7 +61897,7 @@ A text paragraph
 
 #### Defined in
 
-dist/generated/types.d.ts:13086
+dist/generated/types.d.ts:13406
 
 ___
 
@@ -60693,7 +61917,7 @@ A text paragraph
 
 #### Defined in
 
-dist/generated/types.d.ts:13098
+dist/generated/types.d.ts:13418
 
 ___
 
@@ -60714,7 +61938,7 @@ A photo
 
 #### Defined in
 
-dist/generated/types.d.ts:13346
+dist/generated/types.d.ts:13666
 
 ___
 
@@ -60736,7 +61960,7 @@ A photo
 
 #### Defined in
 
-dist/generated/types.d.ts:13368
+dist/generated/types.d.ts:13688
 
 ___
 
@@ -60756,7 +61980,7 @@ A preformatted text paragraph
 
 #### Defined in
 
-dist/generated/types.d.ts:13107
+dist/generated/types.d.ts:13427
 
 ___
 
@@ -60777,7 +62001,7 @@ A preformatted text paragraph
 
 #### Defined in
 
-dist/generated/types.d.ts:13124
+dist/generated/types.d.ts:13444
 
 ___
 
@@ -60797,7 +62021,7 @@ A pull quote
 
 #### Defined in
 
-dist/generated/types.d.ts:13243
+dist/generated/types.d.ts:13563
 
 ___
 
@@ -60818,7 +62042,7 @@ A pull quote
 
 #### Defined in
 
-dist/generated/types.d.ts:13260
+dist/generated/types.d.ts:13580
 
 ___
 
@@ -60842,7 +62066,7 @@ Contains information about a related article
 
 #### Defined in
 
-dist/generated/types.d.ts:12879
+dist/generated/types.d.ts:13199
 
 ___
 
@@ -60867,7 +62091,7 @@ Contains information about a related article
 
 #### Defined in
 
-dist/generated/types.d.ts:12916
+dist/generated/types.d.ts:13236
 
 ___
 
@@ -60887,7 +62111,7 @@ Related articles
 
 #### Defined in
 
-dist/generated/types.d.ts:13847
+dist/generated/types.d.ts:14167
 
 ___
 
@@ -60908,7 +62132,7 @@ Related articles
 
 #### Defined in
 
-dist/generated/types.d.ts:13864
+dist/generated/types.d.ts:14184
 
 ___
 
@@ -60928,7 +62152,7 @@ A slideshow
 
 #### Defined in
 
-dist/generated/types.d.ts:13683
+dist/generated/types.d.ts:14003
 
 ___
 
@@ -60949,7 +62173,7 @@ A slideshow
 
 #### Defined in
 
-dist/generated/types.d.ts:13700
+dist/generated/types.d.ts:14020
 
 ___
 
@@ -60968,7 +62192,7 @@ A subheader
 
 #### Defined in
 
-dist/generated/types.d.ts:13044
+dist/generated/types.d.ts:13364
 
 ___
 
@@ -60988,7 +62212,7 @@ A subheader
 
 #### Defined in
 
-dist/generated/types.d.ts:13056
+dist/generated/types.d.ts:13376
 
 ___
 
@@ -61007,7 +62231,7 @@ The subtitle of a page
 
 #### Defined in
 
-dist/generated/types.d.ts:12971
+dist/generated/types.d.ts:13291
 
 ___
 
@@ -61027,7 +62251,7 @@ The subtitle of a page
 
 #### Defined in
 
-dist/generated/types.d.ts:12983
+dist/generated/types.d.ts:13303
 
 ___
 
@@ -61049,7 +62273,7 @@ A table
 
 #### Defined in
 
-dist/generated/types.d.ts:13755
+dist/generated/types.d.ts:14075
 
 ___
 
@@ -61072,7 +62296,7 @@ A table
 
 #### Defined in
 
-dist/generated/types.d.ts:13782
+dist/generated/types.d.ts:14102
 
 ___
 
@@ -61096,7 +62320,7 @@ Represents a cell of a table
 
 #### Defined in
 
-dist/generated/types.d.ts:12808
+dist/generated/types.d.ts:13128
 
 ___
 
@@ -61121,7 +62345,7 @@ Represents a cell of a table
 
 #### Defined in
 
-dist/generated/types.d.ts:12845
+dist/generated/types.d.ts:13165
 
 ___
 
@@ -61140,7 +62364,7 @@ The title of a page
 
 #### Defined in
 
-dist/generated/types.d.ts:12950
+dist/generated/types.d.ts:13270
 
 ___
 
@@ -61160,7 +62384,7 @@ The title of a page
 
 #### Defined in
 
-dist/generated/types.d.ts:12962
+dist/generated/types.d.ts:13282
 
 ___
 
@@ -61178,7 +62402,7 @@ The content must be bottom-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12797
+dist/generated/types.d.ts:13117
 
 ___
 
@@ -61197,7 +62421,7 @@ The content must be bottom-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12804
+dist/generated/types.d.ts:13124
 
 ___
 
@@ -61215,7 +62439,7 @@ The content must be middle-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12786
+dist/generated/types.d.ts:13106
 
 ___
 
@@ -61234,7 +62458,7 @@ The content must be middle-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12793
+dist/generated/types.d.ts:13113
 
 ___
 
@@ -61252,7 +62476,7 @@ The content must be top-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12775
+dist/generated/types.d.ts:13095
 
 ___
 
@@ -61271,7 +62495,7 @@ The content must be top-aligned
 
 #### Defined in
 
-dist/generated/types.d.ts:12782
+dist/generated/types.d.ts:13102
 
 ___
 
@@ -61293,7 +62517,7 @@ A video
 
 #### Defined in
 
-dist/generated/types.d.ts:13387
+dist/generated/types.d.ts:13707
 
 ___
 
@@ -61316,7 +62540,7 @@ A video
 
 #### Defined in
 
-dist/generated/types.d.ts:13414
+dist/generated/types.d.ts:13734
 
 ___
 
@@ -61336,7 +62560,7 @@ A voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:13438
+dist/generated/types.d.ts:13758
 
 ___
 
@@ -61357,7 +62581,7 @@ A voice note
 
 #### Defined in
 
-dist/generated/types.d.ts:13455
+dist/generated/types.d.ts:13775
 
 ___
 
@@ -61385,7 +62609,7 @@ Parses Markdown entities in a human-friendly format, ignoring markup errors. Can
 
 #### Defined in
 
-dist/generated/types.d.ts:48903
+dist/generated/types.d.ts:49504
 
 ___
 
@@ -61404,7 +62628,7 @@ Parses Markdown entities in a human-friendly format, ignoring markup errors. Can
 
 #### Defined in
 
-dist/generated/types.d.ts:48889
+dist/generated/types.d.ts:49490
 
 ___
 
@@ -61432,7 +62656,7 @@ Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, Code, Pre, 
 
 #### Defined in
 
-dist/generated/types.d.ts:48887
+dist/generated/types.d.ts:49488
 
 ___
 
@@ -61452,7 +62676,7 @@ Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, Code, Pre, 
 
 #### Defined in
 
-dist/generated/types.d.ts:48868
+dist/generated/types.d.ts:49469
 
 ___
 
@@ -61473,7 +62697,7 @@ Contains information about a Telegram Passport authorization form that was reque
 
 #### Defined in
 
-dist/generated/types.d.ts:16950
+dist/generated/types.d.ts:17270
 
 ___
 
@@ -61495,7 +62719,7 @@ Contains information about a Telegram Passport authorization form that was reque
 
 #### Defined in
 
-dist/generated/types.d.ts:16972
+dist/generated/types.d.ts:17292
 
 ___
 
@@ -61514,7 +62738,7 @@ A Telegram Passport element containing the user's address
 
 #### Defined in
 
-dist/generated/types.d.ts:16246
+dist/generated/types.d.ts:16566
 
 ___
 
@@ -61534,7 +62758,7 @@ A Telegram Passport element containing the user's address
 
 #### Defined in
 
-dist/generated/types.d.ts:16258
+dist/generated/types.d.ts:16578
 
 ___
 
@@ -61553,7 +62777,7 @@ A Telegram Passport element containing the user's bank statement
 
 #### Defined in
 
-dist/generated/types.d.ts:16288
+dist/generated/types.d.ts:16608
 
 ___
 
@@ -61573,7 +62797,7 @@ A Telegram Passport element containing the user's bank statement
 
 #### Defined in
 
-dist/generated/types.d.ts:16300
+dist/generated/types.d.ts:16620
 
 ___
 
@@ -61592,7 +62816,7 @@ A Telegram Passport element containing the user's driver license
 
 #### Defined in
 
-dist/generated/types.d.ts:16183
+dist/generated/types.d.ts:16503
 
 ___
 
@@ -61612,7 +62836,7 @@ A Telegram Passport element containing the user's driver license
 
 #### Defined in
 
-dist/generated/types.d.ts:16195
+dist/generated/types.d.ts:16515
 
 ___
 
@@ -61631,7 +62855,7 @@ A Telegram Passport element containing the user's email address
 
 #### Defined in
 
-dist/generated/types.d.ts:16393
+dist/generated/types.d.ts:16713
 
 ___
 
@@ -61651,7 +62875,7 @@ A Telegram Passport element containing the user's email address
 
 #### Defined in
 
-dist/generated/types.d.ts:16405
+dist/generated/types.d.ts:16725
 
 ___
 
@@ -61672,7 +62896,7 @@ Contains the description of an error in a Telegram Passport element
 
 #### Defined in
 
-dist/generated/types.d.ts:16837
+dist/generated/types.d.ts:17157
 
 ___
 
@@ -61694,7 +62918,7 @@ Contains the description of an error in a Telegram Passport element
 
 #### Defined in
 
-dist/generated/types.d.ts:16859
+dist/generated/types.d.ts:17179
 
 ___
 
@@ -61713,7 +62937,7 @@ One of the data fields contains an error. The error will be considered resolved 
 
 #### Defined in
 
-dist/generated/types.d.ts:16719
+dist/generated/types.d.ts:17039
 
 ___
 
@@ -61733,7 +62957,7 @@ One of the data fields contains an error. The error will be considered resolved 
 
 #### Defined in
 
-dist/generated/types.d.ts:16731
+dist/generated/types.d.ts:17051
 
 ___
 
@@ -61752,7 +62976,7 @@ The file contains an error. The error will be considered resolved when the file 
 
 #### Defined in
 
-dist/generated/types.d.ts:16805
+dist/generated/types.d.ts:17125
 
 ___
 
@@ -61772,7 +62996,7 @@ The file contains an error. The error will be considered resolved when the file 
 
 #### Defined in
 
-dist/generated/types.d.ts:16817
+dist/generated/types.d.ts:17137
 
 ___
 
@@ -61790,7 +63014,7 @@ The list of attached files contains an error. The error will be considered resol
 
 #### Defined in
 
-dist/generated/types.d.ts:16826
+dist/generated/types.d.ts:17146
 
 ___
 
@@ -61809,7 +63033,7 @@ The list of attached files contains an error. The error will be considered resol
 
 #### Defined in
 
-dist/generated/types.d.ts:16833
+dist/generated/types.d.ts:17153
 
 ___
 
@@ -61827,7 +63051,7 @@ The front side of the document contains an error. The error will be considered r
 
 #### Defined in
 
-dist/generated/types.d.ts:16740
+dist/generated/types.d.ts:17060
 
 ___
 
@@ -61846,7 +63070,7 @@ The front side of the document contains an error. The error will be considered r
 
 #### Defined in
 
-dist/generated/types.d.ts:16747
+dist/generated/types.d.ts:17067
 
 ___
 
@@ -61864,7 +63088,7 @@ The reverse side of the document contains an error. The error will be considered
 
 #### Defined in
 
-dist/generated/types.d.ts:16751
+dist/generated/types.d.ts:17071
 
 ___
 
@@ -61883,7 +63107,7 @@ The reverse side of the document contains an error. The error will be considered
 
 #### Defined in
 
-dist/generated/types.d.ts:16758
+dist/generated/types.d.ts:17078
 
 ___
 
@@ -61901,7 +63125,7 @@ The selfie with the document contains an error. The error will be considered res
 
 #### Defined in
 
-dist/generated/types.d.ts:16762
+dist/generated/types.d.ts:17082
 
 ___
 
@@ -61920,7 +63144,7 @@ The selfie with the document contains an error. The error will be considered res
 
 #### Defined in
 
-dist/generated/types.d.ts:16769
+dist/generated/types.d.ts:17089
 
 ___
 
@@ -61939,7 +63163,7 @@ One of files with the translation of the document contains an error. The error w
 
 #### Defined in
 
-dist/generated/types.d.ts:16773
+dist/generated/types.d.ts:17093
 
 ___
 
@@ -61959,7 +63183,7 @@ One of files with the translation of the document contains an error. The error w
 
 #### Defined in
 
-dist/generated/types.d.ts:16785
+dist/generated/types.d.ts:17105
 
 ___
 
@@ -61977,7 +63201,7 @@ The translation of the document contains an error. The error will be considered 
 
 #### Defined in
 
-dist/generated/types.d.ts:16794
+dist/generated/types.d.ts:17114
 
 ___
 
@@ -61996,7 +63220,7 @@ The translation of the document contains an error. The error will be considered 
 
 #### Defined in
 
-dist/generated/types.d.ts:16801
+dist/generated/types.d.ts:17121
 
 ___
 
@@ -62014,7 +63238,7 @@ The element contains an error in an unspecified place. The error will be conside
 
 #### Defined in
 
-dist/generated/types.d.ts:16708
+dist/generated/types.d.ts:17028
 
 ___
 
@@ -62033,7 +63257,7 @@ The element contains an error in an unspecified place. The error will be conside
 
 #### Defined in
 
-dist/generated/types.d.ts:16715
+dist/generated/types.d.ts:17035
 
 ___
 
@@ -62052,7 +63276,7 @@ A Telegram Passport element containing the user's identity card
 
 #### Defined in
 
-dist/generated/types.d.ts:16204
+dist/generated/types.d.ts:16524
 
 ___
 
@@ -62072,7 +63296,7 @@ A Telegram Passport element containing the user's identity card
 
 #### Defined in
 
-dist/generated/types.d.ts:16216
+dist/generated/types.d.ts:16536
 
 ___
 
@@ -62091,7 +63315,7 @@ A Telegram Passport element containing the user's internal passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16225
+dist/generated/types.d.ts:16545
 
 ___
 
@@ -62111,7 +63335,7 @@ A Telegram Passport element containing the user's internal passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16237
+dist/generated/types.d.ts:16557
 
 ___
 
@@ -62130,7 +63354,7 @@ A Telegram Passport element containing the user's passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16162
+dist/generated/types.d.ts:16482
 
 ___
 
@@ -62150,7 +63374,7 @@ A Telegram Passport element containing the user's passport
 
 #### Defined in
 
-dist/generated/types.d.ts:16174
+dist/generated/types.d.ts:16494
 
 ___
 
@@ -62169,7 +63393,7 @@ A Telegram Passport element containing the user's passport registration pages
 
 #### Defined in
 
-dist/generated/types.d.ts:16330
+dist/generated/types.d.ts:16650
 
 ___
 
@@ -62189,7 +63413,7 @@ A Telegram Passport element containing the user's passport registration pages
 
 #### Defined in
 
-dist/generated/types.d.ts:16342
+dist/generated/types.d.ts:16662
 
 ___
 
@@ -62208,7 +63432,7 @@ A Telegram Passport element containing the user's personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:16141
+dist/generated/types.d.ts:16461
 
 ___
 
@@ -62228,7 +63452,7 @@ A Telegram Passport element containing the user's personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:16153
+dist/generated/types.d.ts:16473
 
 ___
 
@@ -62247,7 +63471,7 @@ A Telegram Passport element containing the user's phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:16372
+dist/generated/types.d.ts:16692
 
 ___
 
@@ -62267,7 +63491,7 @@ A Telegram Passport element containing the user's phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:16384
+dist/generated/types.d.ts:16704
 
 ___
 
@@ -62286,7 +63510,7 @@ A Telegram Passport element containing the user's rental agreement
 
 #### Defined in
 
-dist/generated/types.d.ts:16309
+dist/generated/types.d.ts:16629
 
 ___
 
@@ -62306,7 +63530,7 @@ A Telegram Passport element containing the user's rental agreement
 
 #### Defined in
 
-dist/generated/types.d.ts:16321
+dist/generated/types.d.ts:16641
 
 ___
 
@@ -62325,7 +63549,7 @@ A Telegram Passport element containing the user's temporary registration
 
 #### Defined in
 
-dist/generated/types.d.ts:16351
+dist/generated/types.d.ts:16671
 
 ___
 
@@ -62345,7 +63569,7 @@ A Telegram Passport element containing the user's temporary registration
 
 #### Defined in
 
-dist/generated/types.d.ts:16363
+dist/generated/types.d.ts:16683
 
 ___
 
@@ -62363,7 +63587,7 @@ A Telegram Passport element containing the user's address
 
 #### Defined in
 
-dist/generated/types.d.ts:15697
+dist/generated/types.d.ts:16017
 
 ___
 
@@ -62382,7 +63606,7 @@ A Telegram Passport element containing the user's address
 
 #### Defined in
 
-dist/generated/types.d.ts:15704
+dist/generated/types.d.ts:16024
 
 ___
 
@@ -62400,7 +63624,7 @@ A Telegram Passport element containing the user's bank statement
 
 #### Defined in
 
-dist/generated/types.d.ts:15719
+dist/generated/types.d.ts:16039
 
 ___
 
@@ -62419,7 +63643,7 @@ A Telegram Passport element containing the user's bank statement
 
 #### Defined in
 
-dist/generated/types.d.ts:15726
+dist/generated/types.d.ts:16046
 
 ___
 
@@ -62437,7 +63661,7 @@ A Telegram Passport element containing the user's driver license
 
 #### Defined in
 
-dist/generated/types.d.ts:15664
+dist/generated/types.d.ts:15984
 
 ___
 
@@ -62456,7 +63680,7 @@ A Telegram Passport element containing the user's driver license
 
 #### Defined in
 
-dist/generated/types.d.ts:15671
+dist/generated/types.d.ts:15991
 
 ___
 
@@ -62474,7 +63698,7 @@ A Telegram Passport element containing the user's email address
 
 #### Defined in
 
-dist/generated/types.d.ts:15774
+dist/generated/types.d.ts:16094
 
 ___
 
@@ -62493,7 +63717,7 @@ A Telegram Passport element containing the user's email address
 
 #### Defined in
 
-dist/generated/types.d.ts:15781
+dist/generated/types.d.ts:16101
 
 ___
 
@@ -62511,7 +63735,7 @@ A Telegram Passport element containing the user's identity card
 
 #### Defined in
 
-dist/generated/types.d.ts:15675
+dist/generated/types.d.ts:15995
 
 ___
 
@@ -62530,7 +63754,7 @@ A Telegram Passport element containing the user's identity card
 
 #### Defined in
 
-dist/generated/types.d.ts:15682
+dist/generated/types.d.ts:16002
 
 ___
 
@@ -62548,7 +63772,7 @@ A Telegram Passport element containing the user's internal passport
 
 #### Defined in
 
-dist/generated/types.d.ts:15686
+dist/generated/types.d.ts:16006
 
 ___
 
@@ -62567,7 +63791,7 @@ A Telegram Passport element containing the user's internal passport
 
 #### Defined in
 
-dist/generated/types.d.ts:15693
+dist/generated/types.d.ts:16013
 
 ___
 
@@ -62585,7 +63809,7 @@ A Telegram Passport element containing the user's passport
 
 #### Defined in
 
-dist/generated/types.d.ts:15653
+dist/generated/types.d.ts:15973
 
 ___
 
@@ -62604,7 +63828,7 @@ A Telegram Passport element containing the user's passport
 
 #### Defined in
 
-dist/generated/types.d.ts:15660
+dist/generated/types.d.ts:15980
 
 ___
 
@@ -62622,7 +63846,7 @@ A Telegram Passport element containing the registration page of the user's passp
 
 #### Defined in
 
-dist/generated/types.d.ts:15741
+dist/generated/types.d.ts:16061
 
 ___
 
@@ -62641,7 +63865,7 @@ A Telegram Passport element containing the registration page of the user's passp
 
 #### Defined in
 
-dist/generated/types.d.ts:15748
+dist/generated/types.d.ts:16068
 
 ___
 
@@ -62659,7 +63883,7 @@ A Telegram Passport element containing the user's personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:15642
+dist/generated/types.d.ts:15962
 
 ___
 
@@ -62678,7 +63902,7 @@ A Telegram Passport element containing the user's personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:15649
+dist/generated/types.d.ts:15969
 
 ___
 
@@ -62696,7 +63920,7 @@ A Telegram Passport element containing the user's phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:15763
+dist/generated/types.d.ts:16083
 
 ___
 
@@ -62715,7 +63939,7 @@ A Telegram Passport element containing the user's phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:15770
+dist/generated/types.d.ts:16090
 
 ___
 
@@ -62733,7 +63957,7 @@ A Telegram Passport element containing the user's rental agreement
 
 #### Defined in
 
-dist/generated/types.d.ts:15730
+dist/generated/types.d.ts:16050
 
 ___
 
@@ -62752,7 +63976,7 @@ A Telegram Passport element containing the user's rental agreement
 
 #### Defined in
 
-dist/generated/types.d.ts:15737
+dist/generated/types.d.ts:16057
 
 ___
 
@@ -62770,7 +63994,7 @@ A Telegram Passport element containing the user's temporary registration
 
 #### Defined in
 
-dist/generated/types.d.ts:15752
+dist/generated/types.d.ts:16072
 
 ___
 
@@ -62789,7 +64013,7 @@ A Telegram Passport element containing the user's temporary registration
 
 #### Defined in
 
-dist/generated/types.d.ts:15759
+dist/generated/types.d.ts:16079
 
 ___
 
@@ -62807,7 +64031,7 @@ A Telegram Passport element containing the user's utility bill
 
 #### Defined in
 
-dist/generated/types.d.ts:15708
+dist/generated/types.d.ts:16028
 
 ___
 
@@ -62826,7 +64050,7 @@ A Telegram Passport element containing the user's utility bill
 
 #### Defined in
 
-dist/generated/types.d.ts:15715
+dist/generated/types.d.ts:16035
 
 ___
 
@@ -62845,7 +64069,7 @@ A Telegram Passport element containing the user's utility bill
 
 #### Defined in
 
-dist/generated/types.d.ts:16267
+dist/generated/types.d.ts:16587
 
 ___
 
@@ -62865,7 +64089,7 @@ A Telegram Passport element containing the user's utility bill
 
 #### Defined in
 
-dist/generated/types.d.ts:16279
+dist/generated/types.d.ts:16599
 
 ___
 
@@ -62884,7 +64108,7 @@ Contains information about saved Telegram Passport elements
 
 #### Defined in
 
-dist/generated/types.d.ts:16687
+dist/generated/types.d.ts:17007
 
 ___
 
@@ -62904,7 +64128,7 @@ Contains information about saved Telegram Passport elements
 
 #### Defined in
 
-dist/generated/types.d.ts:16699
+dist/generated/types.d.ts:17019
 
 ___
 
@@ -62924,7 +64148,7 @@ Contains information about a Telegram Passport elements and corresponding errors
 
 #### Defined in
 
-dist/generated/types.d.ts:16991
+dist/generated/types.d.ts:17311
 
 ___
 
@@ -62945,7 +64169,7 @@ Contains information about a Telegram Passport elements and corresponding errors
 
 #### Defined in
 
-dist/generated/types.d.ts:17008
+dist/generated/types.d.ts:17328
 
 ___
 
@@ -62964,7 +64188,7 @@ Contains a description of the required Telegram Passport element that was reques
 
 #### Defined in
 
-dist/generated/types.d.ts:16929
+dist/generated/types.d.ts:17249
 
 ___
 
@@ -62984,7 +64208,7 @@ Contains a description of the required Telegram Passport element that was reques
 
 #### Defined in
 
-dist/generated/types.d.ts:16941
+dist/generated/types.d.ts:17261
 
 ___
 
@@ -63006,7 +64230,7 @@ Contains information about a Telegram Passport element that was requested by a s
 
 #### Defined in
 
-dist/generated/types.d.ts:16878
+dist/generated/types.d.ts:17198
 
 ___
 
@@ -63029,7 +64253,7 @@ Contains information about a Telegram Passport element that was requested by a s
 
 #### Defined in
 
-dist/generated/types.d.ts:16905
+dist/generated/types.d.ts:17225
 
 ___
 
@@ -63054,7 +64278,7 @@ Represents the current state of 2-step verification
 
 #### Defined in
 
-dist/generated/types.d.ts:2497
+dist/generated/types.d.ts:2538
 
 ___
 
@@ -63080,7 +64304,7 @@ Represents the current state of 2-step verification
 
 #### Defined in
 
-dist/generated/types.d.ts:2539
+dist/generated/types.d.ts:2580
 
 ___
 
@@ -63111,7 +64335,7 @@ Contains information about an invoice payment form
 
 #### Defined in
 
-dist/generated/types.d.ts:15091
+dist/generated/types.d.ts:15411
 
 ___
 
@@ -63143,7 +64367,7 @@ Contains information about an invoice payment form
 
 #### Defined in
 
-dist/generated/types.d.ts:15163
+dist/generated/types.d.ts:15483
 
 ___
 
@@ -63163,7 +64387,7 @@ Describes an additional payment option
 
 #### Defined in
 
-dist/generated/types.d.ts:15060
+dist/generated/types.d.ts:15380
 
 ___
 
@@ -63184,7 +64408,7 @@ Describes an additional payment option
 
 #### Defined in
 
-dist/generated/types.d.ts:15077
+dist/generated/types.d.ts:15397
 
 ___
 
@@ -63203,7 +64427,7 @@ Some other payment provider, for which a web payment form must be shown
 
 #### Defined in
 
-dist/generated/types.d.ts:15039
+dist/generated/types.d.ts:15359
 
 ___
 
@@ -63223,7 +64447,7 @@ Some other payment provider, for which a web payment form must be shown
 
 #### Defined in
 
-dist/generated/types.d.ts:15051
+dist/generated/types.d.ts:15371
 
 ___
 
@@ -63242,7 +64466,7 @@ Smart Glocal payment provider
 
 #### Defined in
 
-dist/generated/types.d.ts:14967
+dist/generated/types.d.ts:15287
 
 ___
 
@@ -63262,7 +64486,7 @@ Smart Glocal payment provider
 
 #### Defined in
 
-dist/generated/types.d.ts:14979
+dist/generated/types.d.ts:15299
 
 ___
 
@@ -63284,7 +64508,7 @@ Stripe payment provider
 
 #### Defined in
 
-dist/generated/types.d.ts:14988
+dist/generated/types.d.ts:15308
 
 ___
 
@@ -63307,7 +64531,7 @@ Stripe payment provider
 
 #### Defined in
 
-dist/generated/types.d.ts:15015
+dist/generated/types.d.ts:15335
 
 ___
 
@@ -63336,7 +64560,7 @@ Contains information about a successful payment
 
 #### Defined in
 
-dist/generated/types.d.ts:15294
+dist/generated/types.d.ts:15614
 
 ___
 
@@ -63366,7 +64590,7 @@ Contains information about a successful payment
 
 #### Defined in
 
-dist/generated/types.d.ts:15356
+dist/generated/types.d.ts:15676
 
 ___
 
@@ -63386,7 +64610,7 @@ Contains the result of a payment request
 
 #### Defined in
 
-dist/generated/types.d.ts:15263
+dist/generated/types.d.ts:15583
 
 ___
 
@@ -63407,7 +64631,7 @@ Contains the result of a payment request
 
 #### Defined in
 
-dist/generated/types.d.ts:15280
+dist/generated/types.d.ts:15600
 
 ___
 
@@ -63435,7 +64659,7 @@ Contains the user's personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:15826
+dist/generated/types.d.ts:16146
 
 ___
 
@@ -63464,7 +64688,7 @@ Contains the user's personal details
 
 #### Defined in
 
-dist/generated/types.d.ts:15883
+dist/generated/types.d.ts:16203
 
 ___
 
@@ -63484,7 +64708,7 @@ A personal document, containing some information about a user
 
 #### Defined in
 
-dist/generated/types.d.ts:16079
+dist/generated/types.d.ts:16399
 
 ___
 
@@ -63505,7 +64729,7 @@ A personal document, containing some information about a user
 
 #### Defined in
 
-dist/generated/types.d.ts:16096
+dist/generated/types.d.ts:16416
 
 ___
 
@@ -63529,7 +64753,7 @@ Contains settings for the authentication of the user's phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:23085
+dist/generated/types.d.ts:23425
 
 ___
 
@@ -63554,7 +64778,7 @@ Contains settings for the authentication of the user's phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:23122
+dist/generated/types.d.ts:23462
 
 ___
 
@@ -63576,7 +64800,7 @@ Contains information about a phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:14313
+dist/generated/types.d.ts:14633
 
 ___
 
@@ -63599,7 +64823,7 @@ Contains information about a phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:14340
+dist/generated/types.d.ts:14660
 
 ___
 
@@ -63620,7 +64844,7 @@ Describes a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:3827
+dist/generated/types.d.ts:3864
 
 ___
 
@@ -63642,7 +64866,7 @@ Describes a photo
 
 #### Defined in
 
-dist/generated/types.d.ts:3849
+dist/generated/types.d.ts:3886
 
 ___
 
@@ -63665,7 +64889,7 @@ Describes an image in JPEG format
 
 #### Defined in
 
-dist/generated/types.d.ts:2962
+dist/generated/types.d.ts:3003
 
 ___
 
@@ -63689,7 +64913,7 @@ Describes an image in JPEG format
 
 #### Defined in
 
-dist/generated/types.d.ts:2994
+dist/generated/types.d.ts:3035
 
 ___
 
@@ -63717,7 +64941,7 @@ Pins a message in a chat; requires can_pin_messages rights or can_edit_messages 
 
 #### Defined in
 
-dist/generated/types.d.ts:50764
+dist/generated/types.d.ts:51448
 
 ___
 
@@ -63739,7 +64963,7 @@ Pins a message in a chat; requires can_pin_messages rights or can_edit_messages 
 
 #### Defined in
 
-dist/generated/types.d.ts:50735
+dist/generated/types.d.ts:51419
 
 ___
 
@@ -63767,7 +64991,7 @@ Computes time needed to receive a response from a Telegram server through a prox
 
 #### Defined in
 
-dist/generated/types.d.ts:57075
+dist/generated/types.d.ts:57987
 
 ___
 
@@ -63786,7 +65010,7 @@ Computes time needed to receive a response from a Telegram server through a prox
 
 #### Defined in
 
-dist/generated/types.d.ts:57061
+dist/generated/types.d.ts:57973
 
 ___
 
@@ -63806,7 +65030,7 @@ A point on a Cartesian plane
 
 #### Defined in
 
-dist/generated/types.d.ts:34909
+dist/generated/types.d.ts:35366
 
 ___
 
@@ -63827,7 +65051,7 @@ A point on a Cartesian plane
 
 #### Defined in
 
-dist/generated/types.d.ts:34926
+dist/generated/types.d.ts:35383
 
 ___
 
@@ -63855,7 +65079,7 @@ Describes a poll
 
 #### Defined in
 
-dist/generated/types.d.ts:4547
+dist/generated/types.d.ts:4645
 
 ___
 
@@ -63884,7 +65108,7 @@ Describes a poll
 
 #### Defined in
 
-dist/generated/types.d.ts:4604
+dist/generated/types.d.ts:4702
 
 ___
 
@@ -63907,7 +65131,7 @@ Describes one answer option of a poll
 
 #### Defined in
 
-dist/generated/types.d.ts:3451
+dist/generated/types.d.ts:3488
 
 ___
 
@@ -63931,7 +65155,7 @@ Describes one answer option of a poll
 
 #### Defined in
 
-dist/generated/types.d.ts:3483
+dist/generated/types.d.ts:3520
 
 ___
 
@@ -63951,7 +65175,7 @@ A poll in quiz mode, which has exactly one correct answer option and can be answ
 
 #### Defined in
 
-dist/generated/types.d.ts:3533
+dist/generated/types.d.ts:3570
 
 ___
 
@@ -63972,7 +65196,7 @@ A poll in quiz mode, which has exactly one correct answer option and can be answ
 
 #### Defined in
 
-dist/generated/types.d.ts:3550
+dist/generated/types.d.ts:3587
 
 ___
 
@@ -63991,7 +65215,7 @@ A regular poll
 
 #### Defined in
 
-dist/generated/types.d.ts:3512
+dist/generated/types.d.ts:3549
 
 ___
 
@@ -64011,7 +65235,7 @@ A regular poll
 
 #### Defined in
 
-dist/generated/types.d.ts:3524
+dist/generated/types.d.ts:3561
 
 ___
 
@@ -64041,7 +65265,7 @@ Preliminary uploads a file to the cloud before sending it in a message, which ca
 
 #### Defined in
 
-dist/generated/types.d.ts:51468
+dist/generated/types.d.ts:52152
 
 ___
 
@@ -64063,7 +65287,7 @@ Preliminary uploads a file to the cloud before sending it in a message, which ca
 
 #### Defined in
 
-dist/generated/types.d.ts:51442
+dist/generated/types.d.ts:52126
 
 ___
 
@@ -64081,7 +65305,7 @@ Ability to change position of the main chat list, archive and mute all new chats
 
 #### Defined in
 
-dist/generated/types.d.ts:27677
+dist/generated/types.d.ts:28090
 
 ___
 
@@ -64100,7 +65324,7 @@ Ability to change position of the main chat list, archive and mute all new chats
 
 #### Defined in
 
-dist/generated/types.d.ts:27684
+dist/generated/types.d.ts:28097
 
 ___
 
@@ -64118,7 +65342,7 @@ Profile photo animation on message and chat screens
 
 #### Defined in
 
-dist/generated/types.d.ts:27710
+dist/generated/types.d.ts:28123
 
 ___
 
@@ -64137,7 +65361,7 @@ Profile photo animation on message and chat screens
 
 #### Defined in
 
-dist/generated/types.d.ts:27717
+dist/generated/types.d.ts:28130
 
 ___
 
@@ -64155,7 +65379,7 @@ Allowed to set a premium appllication icons
 
 #### Defined in
 
-dist/generated/types.d.ts:27732
+dist/generated/types.d.ts:28145
 
 ___
 
@@ -64174,7 +65398,7 @@ Allowed to set a premium appllication icons
 
 #### Defined in
 
-dist/generated/types.d.ts:27739
+dist/generated/types.d.ts:28152
 
 ___
 
@@ -64192,7 +65416,7 @@ Allowed to use custom emoji stickers in message texts and captions
 
 #### Defined in
 
-dist/generated/types.d.ts:27666
+dist/generated/types.d.ts:28079
 
 ___
 
@@ -64211,7 +65435,7 @@ Allowed to use custom emoji stickers in message texts and captions
 
 #### Defined in
 
-dist/generated/types.d.ts:27673
+dist/generated/types.d.ts:28086
 
 ___
 
@@ -64229,7 +65453,7 @@ Disabled ads
 
 #### Defined in
 
-dist/generated/types.d.ts:27633
+dist/generated/types.d.ts:28046
 
 ___
 
@@ -64248,7 +65472,7 @@ Disabled ads
 
 #### Defined in
 
-dist/generated/types.d.ts:27640
+dist/generated/types.d.ts:28053
 
 ___
 
@@ -64266,7 +65490,7 @@ A emoji status shown along with the user's name
 
 #### Defined in
 
-dist/generated/types.d.ts:27699
+dist/generated/types.d.ts:28112
 
 ___
 
@@ -64285,7 +65509,7 @@ A emoji status shown along with the user's name
 
 #### Defined in
 
-dist/generated/types.d.ts:27706
+dist/generated/types.d.ts:28119
 
 ___
 
@@ -64303,7 +65527,7 @@ The ability to set a custom emoji as a forum topic icon
 
 #### Defined in
 
-dist/generated/types.d.ts:27721
+dist/generated/types.d.ts:28134
 
 ___
 
@@ -64322,7 +65546,7 @@ The ability to set a custom emoji as a forum topic icon
 
 #### Defined in
 
-dist/generated/types.d.ts:27728
+dist/generated/types.d.ts:28141
 
 ___
 
@@ -64340,7 +65564,7 @@ Improved download speed
 
 #### Defined in
 
-dist/generated/types.d.ts:27611
+dist/generated/types.d.ts:28024
 
 ___
 
@@ -64359,7 +65583,7 @@ Improved download speed
 
 #### Defined in
 
-dist/generated/types.d.ts:27618
+dist/generated/types.d.ts:28031
 
 ___
 
@@ -64377,7 +65601,7 @@ Increased limits
 
 #### Defined in
 
-dist/generated/types.d.ts:27589
+dist/generated/types.d.ts:28002
 
 ___
 
@@ -64396,7 +65620,7 @@ Increased limits
 
 #### Defined in
 
-dist/generated/types.d.ts:27596
+dist/generated/types.d.ts:28009
 
 ___
 
@@ -64414,7 +65638,7 @@ Increased maximum upload file size
 
 #### Defined in
 
-dist/generated/types.d.ts:27600
+dist/generated/types.d.ts:28013
 
 ___
 
@@ -64433,7 +65657,7 @@ Increased maximum upload file size
 
 #### Defined in
 
-dist/generated/types.d.ts:27607
+dist/generated/types.d.ts:28020
 
 ___
 
@@ -64451,7 +65675,7 @@ A badge in the user's profile
 
 #### Defined in
 
-dist/generated/types.d.ts:27688
+dist/generated/types.d.ts:28101
 
 ___
 
@@ -64470,7 +65694,7 @@ A badge in the user's profile
 
 #### Defined in
 
-dist/generated/types.d.ts:27695
+dist/generated/types.d.ts:28108
 
 ___
 
@@ -64490,7 +65714,7 @@ Describes a promotion animation for a Premium feature
 
 #### Defined in
 
-dist/generated/types.d.ts:27910
+dist/generated/types.d.ts:28323
 
 ___
 
@@ -64511,7 +65735,7 @@ Describes a promotion animation for a Premium feature
 
 #### Defined in
 
-dist/generated/types.d.ts:27927
+dist/generated/types.d.ts:28340
 
 ___
 
@@ -64529,7 +65753,7 @@ Allowed to translate chat messages real-time
 
 #### Defined in
 
-dist/generated/types.d.ts:27743
+dist/generated/types.d.ts:28156
 
 ___
 
@@ -64548,7 +65772,7 @@ Allowed to translate chat messages real-time
 
 #### Defined in
 
-dist/generated/types.d.ts:27750
+dist/generated/types.d.ts:28163
 
 ___
 
@@ -64566,7 +65790,7 @@ Allowed to use more reactions
 
 #### Defined in
 
-dist/generated/types.d.ts:27644
+dist/generated/types.d.ts:28057
 
 ___
 
@@ -64585,7 +65809,7 @@ Allowed to use more reactions
 
 #### Defined in
 
-dist/generated/types.d.ts:27651
+dist/generated/types.d.ts:28064
 
 ___
 
@@ -64603,7 +65827,7 @@ Allowed to use premium stickers with unique effects
 
 #### Defined in
 
-dist/generated/types.d.ts:27655
+dist/generated/types.d.ts:28068
 
 ___
 
@@ -64622,7 +65846,7 @@ Allowed to use premium stickers with unique effects
 
 #### Defined in
 
-dist/generated/types.d.ts:27662
+dist/generated/types.d.ts:28075
 
 ___
 
@@ -64640,7 +65864,7 @@ The ability to convert voice notes to text
 
 #### Defined in
 
-dist/generated/types.d.ts:27622
+dist/generated/types.d.ts:28035
 
 ___
 
@@ -64659,7 +65883,7 @@ The ability to convert voice notes to text
 
 #### Defined in
 
-dist/generated/types.d.ts:27629
+dist/generated/types.d.ts:28042
 
 ___
 
@@ -64680,7 +65904,7 @@ Contains information about features, available to Premium users
 
 #### Defined in
 
-dist/generated/types.d.ts:27795
+dist/generated/types.d.ts:28208
 
 ___
 
@@ -64702,7 +65926,7 @@ Contains information about features, available to Premium users
 
 #### Defined in
 
-dist/generated/types.d.ts:27817
+dist/generated/types.d.ts:28230
 
 ___
 
@@ -64723,7 +65947,7 @@ Contains information about a limit, increased for Premium users
 
 #### Defined in
 
-dist/generated/types.d.ts:27754
+dist/generated/types.d.ts:28167
 
 ___
 
@@ -64745,7 +65969,7 @@ Contains information about a limit, increased for Premium users
 
 #### Defined in
 
-dist/generated/types.d.ts:27776
+dist/generated/types.d.ts:28189
 
 ___
 
@@ -64763,7 +65987,7 @@ The maximum length of the user's bio
 
 #### Defined in
 
-dist/generated/types.d.ts:27578
+dist/generated/types.d.ts:27991
 
 ___
 
@@ -64782,7 +66006,7 @@ The maximum length of the user's bio
 
 #### Defined in
 
-dist/generated/types.d.ts:27585
+dist/generated/types.d.ts:27998
 
 ___
 
@@ -64800,7 +66024,7 @@ The maximum length of sent media caption
 
 #### Defined in
 
-dist/generated/types.d.ts:27567
+dist/generated/types.d.ts:27980
 
 ___
 
@@ -64819,7 +66043,7 @@ The maximum length of sent media caption
 
 #### Defined in
 
-dist/generated/types.d.ts:27574
+dist/generated/types.d.ts:27987
 
 ___
 
@@ -64837,7 +66061,7 @@ The maximum number of pinned and always included, or always excluded chats in a 
 
 #### Defined in
 
-dist/generated/types.d.ts:27545
+dist/generated/types.d.ts:27958
 
 ___
 
@@ -64856,7 +66080,7 @@ The maximum number of pinned and always included, or always excluded chats in a 
 
 #### Defined in
 
-dist/generated/types.d.ts:27552
+dist/generated/types.d.ts:27965
 
 ___
 
@@ -64874,7 +66098,7 @@ The maximum number of chat filters
 
 #### Defined in
 
-dist/generated/types.d.ts:27534
+dist/generated/types.d.ts:27947
 
 ___
 
@@ -64893,7 +66117,7 @@ The maximum number of chat filters
 
 #### Defined in
 
-dist/generated/types.d.ts:27541
+dist/generated/types.d.ts:27954
 
 ___
 
@@ -64911,7 +66135,7 @@ The maximum number of created public chats
 
 #### Defined in
 
-dist/generated/types.d.ts:27501
+dist/generated/types.d.ts:27914
 
 ___
 
@@ -64930,7 +66154,7 @@ The maximum number of created public chats
 
 #### Defined in
 
-dist/generated/types.d.ts:27508
+dist/generated/types.d.ts:27921
 
 ___
 
@@ -64948,7 +66172,7 @@ The maximum number of favorite stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:27523
+dist/generated/types.d.ts:27936
 
 ___
 
@@ -64967,7 +66191,7 @@ The maximum number of favorite stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:27530
+dist/generated/types.d.ts:27943
 
 ___
 
@@ -64985,7 +66209,7 @@ The maximum number of pinned chats in the archive chat list
 
 #### Defined in
 
-dist/generated/types.d.ts:27556
+dist/generated/types.d.ts:27969
 
 ___
 
@@ -65004,7 +66228,7 @@ The maximum number of pinned chats in the archive chat list
 
 #### Defined in
 
-dist/generated/types.d.ts:27563
+dist/generated/types.d.ts:27976
 
 ___
 
@@ -65022,7 +66246,7 @@ The maximum number of pinned chats in the main chat list
 
 #### Defined in
 
-dist/generated/types.d.ts:27490
+dist/generated/types.d.ts:27903
 
 ___
 
@@ -65041,7 +66265,7 @@ The maximum number of pinned chats in the main chat list
 
 #### Defined in
 
-dist/generated/types.d.ts:27497
+dist/generated/types.d.ts:27910
 
 ___
 
@@ -65059,7 +66283,7 @@ The maximum number of saved animations
 
 #### Defined in
 
-dist/generated/types.d.ts:27512
+dist/generated/types.d.ts:27925
 
 ___
 
@@ -65078,7 +66302,7 @@ The maximum number of saved animations
 
 #### Defined in
 
-dist/generated/types.d.ts:27519
+dist/generated/types.d.ts:27932
 
 ___
 
@@ -65096,7 +66320,7 @@ The maximum number of joined supergroups and channels
 
 #### Defined in
 
-dist/generated/types.d.ts:27479
+dist/generated/types.d.ts:27892
 
 ___
 
@@ -65115,7 +66339,7 @@ The maximum number of joined supergroups and channels
 
 #### Defined in
 
-dist/generated/types.d.ts:27486
+dist/generated/types.d.ts:27899
 
 ___
 
@@ -65139,7 +66363,7 @@ Describes an option for buying Telegram Premium to a user
 
 #### Defined in
 
-dist/generated/types.d.ts:5630
+dist/generated/types.d.ts:5728
 
 ___
 
@@ -65164,7 +66388,7 @@ Describes an option for buying Telegram Premium to a user
 
 #### Defined in
 
-dist/generated/types.d.ts:5667
+dist/generated/types.d.ts:5765
 
 ___
 
@@ -65183,7 +66407,7 @@ A user tried to use a Premium feature
 
 #### Defined in
 
-dist/generated/types.d.ts:27857
+dist/generated/types.d.ts:28270
 
 ___
 
@@ -65203,7 +66427,7 @@ A user tried to use a Premium feature
 
 #### Defined in
 
-dist/generated/types.d.ts:27869
+dist/generated/types.d.ts:28282
 
 ___
 
@@ -65222,7 +66446,7 @@ A limit was exceeded
 
 #### Defined in
 
-dist/generated/types.d.ts:27836
+dist/generated/types.d.ts:28249
 
 ___
 
@@ -65242,7 +66466,7 @@ A limit was exceeded
 
 #### Defined in
 
-dist/generated/types.d.ts:27848
+dist/generated/types.d.ts:28261
 
 ___
 
@@ -65261,7 +66485,7 @@ A user opened an internal link of the type internalLinkTypePremiumFeatures
 
 #### Defined in
 
-dist/generated/types.d.ts:27878
+dist/generated/types.d.ts:28291
 
 ___
 
@@ -65281,7 +66505,7 @@ A user opened an internal link of the type internalLinkTypePremiumFeatures
 
 #### Defined in
 
-dist/generated/types.d.ts:27890
+dist/generated/types.d.ts:28303
 
 ___
 
@@ -65299,7 +66523,7 @@ A user opened the Premium features screen from settings
 
 #### Defined in
 
-dist/generated/types.d.ts:27899
+dist/generated/types.d.ts:28312
 
 ___
 
@@ -65318,7 +66542,7 @@ A user opened the Premium features screen from settings
 
 #### Defined in
 
-dist/generated/types.d.ts:27906
+dist/generated/types.d.ts:28319
 
 ___
 
@@ -65339,7 +66563,7 @@ Contains state of Telegram Premium subscription and promotion videos for Premium
 
 #### Defined in
 
-dist/generated/types.d.ts:27941
+dist/generated/types.d.ts:28354
 
 ___
 
@@ -65361,7 +66585,7 @@ Contains state of Telegram Premium subscription and promotion videos for Premium
 
 #### Defined in
 
-dist/generated/types.d.ts:27963
+dist/generated/types.d.ts:28376
 
 ___
 
@@ -65383,7 +66607,7 @@ Describes an option for buying or upgrading Telegram Premium for self
 
 #### Defined in
 
-dist/generated/types.d.ts:5701
+dist/generated/types.d.ts:5799
 
 ___
 
@@ -65406,7 +66630,7 @@ Describes an option for buying or upgrading Telegram Premium for self
 
 #### Defined in
 
-dist/generated/types.d.ts:5728
+dist/generated/types.d.ts:5826
 
 ___
 
@@ -65434,7 +66658,7 @@ Handles a pending join request in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52173
+dist/generated/types.d.ts:52857
 
 ___
 
@@ -65455,7 +66679,7 @@ Handles a pending join request in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52149
+dist/generated/types.d.ts:52833
 
 ___
 
@@ -65483,7 +66707,7 @@ Handles all pending join requests for a given link in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52199
+dist/generated/types.d.ts:52883
 
 ___
 
@@ -65504,7 +66728,7 @@ Handles all pending join requests for a given link in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52175
+dist/generated/types.d.ts:52859
 
 ___
 
@@ -65532,7 +66756,7 @@ Handles a push notification. Returns error with code 406 if the push notificatio
 
 #### Defined in
 
-dist/generated/types.d.ts:55395
+dist/generated/types.d.ts:56153
 
 ___
 
@@ -65551,7 +66775,7 @@ Handles a push notification. Returns error with code 406 if the push notificatio
 
 #### Defined in
 
-dist/generated/types.d.ts:55381
+dist/generated/types.d.ts:56139
 
 ___
 
@@ -65575,7 +66799,7 @@ Describes a user profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:4658
+dist/generated/types.d.ts:4756
 
 ___
 
@@ -65600,7 +66824,7 @@ Describes a user profile photo
 
 #### Defined in
 
-dist/generated/types.d.ts:4695
+dist/generated/types.d.ts:4793
 
 ___
 
@@ -65619,7 +66843,7 @@ Represents a list of proxy servers
 
 #### Defined in
 
-dist/generated/types.d.ts:34171
+dist/generated/types.d.ts:34628
 
 ___
 
@@ -65639,7 +66863,7 @@ Represents a list of proxy servers
 
 #### Defined in
 
-dist/generated/types.d.ts:34183
+dist/generated/types.d.ts:34640
 
 ___
 
@@ -65663,7 +66887,7 @@ Contains information about a proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:34100
+dist/generated/types.d.ts:34557
 
 ___
 
@@ -65688,7 +66912,7 @@ Contains information about a proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:34137
+dist/generated/types.d.ts:34594
 
 ___
 
@@ -65709,7 +66933,7 @@ A HTTP transparent proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:34038
+dist/generated/types.d.ts:34495
 
 ___
 
@@ -65731,7 +66955,7 @@ A HTTP transparent proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:34060
+dist/generated/types.d.ts:34517
 
 ___
 
@@ -65750,7 +66974,7 @@ An MTProto proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:34079
+dist/generated/types.d.ts:34536
 
 ___
 
@@ -65770,7 +66994,7 @@ An MTProto proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:34091
+dist/generated/types.d.ts:34548
 
 ___
 
@@ -65790,7 +67014,7 @@ A SOCKS5 proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:34007
+dist/generated/types.d.ts:34464
 
 ___
 
@@ -65811,7 +67035,7 @@ A SOCKS5 proxy server
 
 #### Defined in
 
-dist/generated/types.d.ts:34024
+dist/generated/types.d.ts:34481
 
 ___
 
@@ -65829,7 +67053,7 @@ The chat is public, because it has an active username
 
 #### Defined in
 
-dist/generated/types.d.ts:10911
+dist/generated/types.d.ts:11190
 
 ___
 
@@ -65848,7 +67072,7 @@ The chat is public, because it has an active username
 
 #### Defined in
 
-dist/generated/types.d.ts:10918
+dist/generated/types.d.ts:11197
 
 ___
 
@@ -65866,7 +67090,7 @@ The chat is public, because it is a location-based supergroup
 
 #### Defined in
 
-dist/generated/types.d.ts:10922
+dist/generated/types.d.ts:11201
 
 ___
 
@@ -65885,7 +67109,7 @@ The chat is public, because it is a location-based supergroup
 
 #### Defined in
 
-dist/generated/types.d.ts:10929
+dist/generated/types.d.ts:11208
 
 ___
 
@@ -65906,7 +67130,7 @@ An animation message (GIF-style).
 
 #### Defined in
 
-dist/generated/types.d.ts:29130
+dist/generated/types.d.ts:29543
 
 ___
 
@@ -65928,7 +67152,7 @@ An animation message (GIF-style).
 
 #### Defined in
 
-dist/generated/types.d.ts:29152
+dist/generated/types.d.ts:29565
 
 ___
 
@@ -65948,7 +67172,7 @@ An audio message
 
 #### Defined in
 
-dist/generated/types.d.ts:29171
+dist/generated/types.d.ts:29584
 
 ___
 
@@ -65969,7 +67193,7 @@ An audio message
 
 #### Defined in
 
-dist/generated/types.d.ts:29188
+dist/generated/types.d.ts:29601
 
 ___
 
@@ -65987,7 +67211,7 @@ A newly created basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:29697
+dist/generated/types.d.ts:30110
 
 ___
 
@@ -66006,7 +67230,7 @@ A newly created basic group
 
 #### Defined in
 
-dist/generated/types.d.ts:29704
+dist/generated/types.d.ts:30117
 
 ___
 
@@ -66027,7 +67251,7 @@ New chat members were invited to a group
 
 #### Defined in
 
-dist/generated/types.d.ts:29708
+dist/generated/types.d.ts:30121
 
 ___
 
@@ -66049,7 +67273,7 @@ New chat members were invited to a group
 
 #### Defined in
 
-dist/generated/types.d.ts:29730
+dist/generated/types.d.ts:30143
 
 ___
 
@@ -66067,7 +67291,7 @@ A chat photo was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:29749
+dist/generated/types.d.ts:30162
 
 ___
 
@@ -66086,7 +67310,7 @@ A chat photo was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:29756
+dist/generated/types.d.ts:30169
 
 ___
 
@@ -66105,7 +67329,7 @@ A chat title was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:29760
+dist/generated/types.d.ts:30173
 
 ___
 
@@ -66125,7 +67349,7 @@ A chat title was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:29772
+dist/generated/types.d.ts:30185
 
 ___
 
@@ -66146,7 +67370,7 @@ A chat member was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:29802
+dist/generated/types.d.ts:30215
 
 ___
 
@@ -66168,7 +67392,7 @@ A chat member was deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:29824
+dist/generated/types.d.ts:30237
 
 ___
 
@@ -66186,7 +67410,7 @@ A new member joined the chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:29843
+dist/generated/types.d.ts:30256
 
 ___
 
@@ -66205,7 +67429,7 @@ A new member joined the chat via an invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:29850
+dist/generated/types.d.ts:30263
 
 ___
 
@@ -66223,7 +67447,7 @@ A new member was accepted to the chat by an administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:29854
+dist/generated/types.d.ts:30267
 
 ___
 
@@ -66242,7 +67466,7 @@ A new member was accepted to the chat by an administrator
 
 #### Defined in
 
-dist/generated/types.d.ts:29861
+dist/generated/types.d.ts:30274
 
 ___
 
@@ -66261,7 +67485,7 @@ A chat theme was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:29781
+dist/generated/types.d.ts:30194
 
 ___
 
@@ -66281,7 +67505,7 @@ A chat theme was edited
 
 #### Defined in
 
-dist/generated/types.d.ts:29793
+dist/generated/types.d.ts:30206
 
 ___
 
@@ -66301,7 +67525,7 @@ A message with a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:29202
+dist/generated/types.d.ts:29615
 
 ___
 
@@ -66322,7 +67546,7 @@ A message with a user contact
 
 #### Defined in
 
-dist/generated/types.d.ts:29219
+dist/generated/types.d.ts:29632
 
 ___
 
@@ -66340,7 +67564,7 @@ A contact has registered with Telegram
 
 #### Defined in
 
-dist/generated/types.d.ts:29233
+dist/generated/types.d.ts:29646
 
 ___
 
@@ -66359,7 +67583,7 @@ A contact has registered with Telegram
 
 #### Defined in
 
-dist/generated/types.d.ts:29240
+dist/generated/types.d.ts:29653
 
 ___
 
@@ -66379,7 +67603,7 @@ A document message (a general file)
 
 #### Defined in
 
-dist/generated/types.d.ts:29244
+dist/generated/types.d.ts:29657
 
 ___
 
@@ -66400,7 +67624,7 @@ A document message (a general file)
 
 #### Defined in
 
-dist/generated/types.d.ts:29261
+dist/generated/types.d.ts:29674
 
 ___
 
@@ -66420,7 +67644,7 @@ A message with a game
 
 #### Defined in
 
-dist/generated/types.d.ts:29275
+dist/generated/types.d.ts:29688
 
 ___
 
@@ -66441,7 +67665,7 @@ A message with a game
 
 #### Defined in
 
-dist/generated/types.d.ts:29292
+dist/generated/types.d.ts:29705
 
 ___
 
@@ -66462,7 +67686,7 @@ A new high score was achieved in a game
 
 #### Defined in
 
-dist/generated/types.d.ts:29306
+dist/generated/types.d.ts:29719
 
 ___
 
@@ -66484,7 +67708,7 @@ A new high score was achieved in a game
 
 #### Defined in
 
-dist/generated/types.d.ts:29328
+dist/generated/types.d.ts:29741
 
 ___
 
@@ -66503,7 +67727,7 @@ A general message with hidden content
 
 #### Defined in
 
-dist/generated/types.d.ts:29109
+dist/generated/types.d.ts:29522
 
 ___
 
@@ -66523,7 +67747,7 @@ A general message with hidden content
 
 #### Defined in
 
-dist/generated/types.d.ts:29121
+dist/generated/types.d.ts:29534
 
 ___
 
@@ -66543,7 +67767,7 @@ A message with an invoice from a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:29347
+dist/generated/types.d.ts:29760
 
 ___
 
@@ -66564,7 +67788,7 @@ A message with an invoice from a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:29364
+dist/generated/types.d.ts:29777
 
 ___
 
@@ -66584,7 +67808,7 @@ A message with a location
 
 #### Defined in
 
-dist/generated/types.d.ts:29378
+dist/generated/types.d.ts:29791
 
 ___
 
@@ -66605,7 +67829,7 @@ A message with a location
 
 #### Defined in
 
-dist/generated/types.d.ts:29395
+dist/generated/types.d.ts:29808
 
 ___
 
@@ -66628,7 +67852,7 @@ A media album
 
 #### Defined in
 
-dist/generated/types.d.ts:29918
+dist/generated/types.d.ts:30331
 
 ___
 
@@ -66652,7 +67876,7 @@ A media album
 
 #### Defined in
 
-dist/generated/types.d.ts:29950
+dist/generated/types.d.ts:30363
 
 ___
 
@@ -66671,7 +67895,7 @@ A forwarded messages
 
 #### Defined in
 
-dist/generated/types.d.ts:29897
+dist/generated/types.d.ts:30310
 
 ___
 
@@ -66691,7 +67915,7 @@ A forwarded messages
 
 #### Defined in
 
-dist/generated/types.d.ts:29909
+dist/generated/types.d.ts:30322
 
 ___
 
@@ -66713,7 +67937,7 @@ A photo message
 
 #### Defined in
 
-dist/generated/types.d.ts:29409
+dist/generated/types.d.ts:29822
 
 ___
 
@@ -66736,7 +67960,7 @@ A photo message
 
 #### Defined in
 
-dist/generated/types.d.ts:29436
+dist/generated/types.d.ts:29849
 
 ___
 
@@ -66757,7 +67981,7 @@ A message with a poll
 
 #### Defined in
 
-dist/generated/types.d.ts:29460
+dist/generated/types.d.ts:29873
 
 ___
 
@@ -66779,7 +68003,7 @@ A message with a poll
 
 #### Defined in
 
-dist/generated/types.d.ts:29482
+dist/generated/types.d.ts:29895
 
 ___
 
@@ -66798,7 +68022,7 @@ A new recurrent payment was made by the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:29865
+dist/generated/types.d.ts:30278
 
 ___
 
@@ -66818,7 +68042,7 @@ A new recurrent payment was made by the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:29877
+dist/generated/types.d.ts:30290
 
 ___
 
@@ -66836,7 +68060,7 @@ A screenshot of a message in the chat has been taken
 
 #### Defined in
 
-dist/generated/types.d.ts:29501
+dist/generated/types.d.ts:29914
 
 ___
 
@@ -66855,7 +68079,7 @@ A screenshot of a message in the chat has been taken
 
 #### Defined in
 
-dist/generated/types.d.ts:29508
+dist/generated/types.d.ts:29921
 
 ___
 
@@ -66876,7 +68100,7 @@ A message with a sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:29512
+dist/generated/types.d.ts:29925
 
 ___
 
@@ -66898,7 +68122,7 @@ A message with a sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:29534
+dist/generated/types.d.ts:29947
 
 ___
 
@@ -66916,7 +68140,7 @@ A profile photo was suggested to the user
 
 #### Defined in
 
-dist/generated/types.d.ts:29886
+dist/generated/types.d.ts:30299
 
 ___
 
@@ -66935,7 +68159,7 @@ A profile photo was suggested to the user
 
 #### Defined in
 
-dist/generated/types.d.ts:29893
+dist/generated/types.d.ts:30306
 
 ___
 
@@ -66955,7 +68179,7 @@ A text message
 
 #### Defined in
 
-dist/generated/types.d.ts:29553
+dist/generated/types.d.ts:29966
 
 ___
 
@@ -66976,7 +68200,7 @@ A text message
 
 #### Defined in
 
-dist/generated/types.d.ts:29570
+dist/generated/types.d.ts:29983
 
 ___
 
@@ -66998,7 +68222,7 @@ A video message
 
 #### Defined in
 
-dist/generated/types.d.ts:29584
+dist/generated/types.d.ts:29997
 
 ___
 
@@ -67021,7 +68245,7 @@ A video message
 
 #### Defined in
 
-dist/generated/types.d.ts:29611
+dist/generated/types.d.ts:30024
 
 ___
 
@@ -67041,7 +68265,7 @@ A video note message
 
 #### Defined in
 
-dist/generated/types.d.ts:29635
+dist/generated/types.d.ts:30048
 
 ___
 
@@ -67062,7 +68286,7 @@ A video note message
 
 #### Defined in
 
-dist/generated/types.d.ts:29652
+dist/generated/types.d.ts:30065
 
 ___
 
@@ -67082,7 +68306,7 @@ A voice note message
 
 #### Defined in
 
-dist/generated/types.d.ts:29666
+dist/generated/types.d.ts:30079
 
 ___
 
@@ -67103,7 +68327,7 @@ A voice note message
 
 #### Defined in
 
-dist/generated/types.d.ts:29683
+dist/generated/types.d.ts:30096
 
 ___
 
@@ -67122,7 +68346,7 @@ Contains a globally unique push receiver identifier, which can be used to identi
 
 #### Defined in
 
-dist/generated/types.d.ts:28376
+dist/generated/types.d.ts:28789
 
 ___
 
@@ -67142,7 +68366,7 @@ Contains a globally unique push receiver identifier, which can be used to identi
 
 #### Defined in
 
-dist/generated/types.d.ts:28388
+dist/generated/types.d.ts:28801
 
 ___
 
@@ -67170,7 +68394,7 @@ Rates recognized speech in a video note or a voice note message
 
 #### Defined in
 
-dist/generated/types.d.ts:47655
+dist/generated/types.d.ts:48256
 
 ___
 
@@ -67191,7 +68415,7 @@ Rates recognized speech in a video note or a voice note message
 
 #### Defined in
 
-dist/generated/types.d.ts:47631
+dist/generated/types.d.ts:48232
 
 ___
 
@@ -67210,7 +68434,7 @@ A reaction with a custom emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:8400
+dist/generated/types.d.ts:8550
 
 ___
 
@@ -67230,7 +68454,7 @@ A reaction with a custom emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:8412
+dist/generated/types.d.ts:8562
 
 ___
 
@@ -67249,7 +68473,7 @@ A reaction with an emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:8379
+dist/generated/types.d.ts:8529
 
 ___
 
@@ -67269,7 +68493,7 @@ A reaction with an emoji
 
 #### Defined in
 
-dist/generated/types.d.ts:8391
+dist/generated/types.d.ts:8541
 
 ___
 
@@ -67297,7 +68521,7 @@ Marks all mentions in a chat as read
 
 #### Defined in
 
-dist/generated/types.d.ts:49971
+dist/generated/types.d.ts:50655
 
 ___
 
@@ -67316,7 +68540,7 @@ Marks all mentions in a chat as read
 
 #### Defined in
 
-dist/generated/types.d.ts:49957
+dist/generated/types.d.ts:50641
 
 ___
 
@@ -67344,7 +68568,7 @@ Marks all reactions in a chat or a forum topic as read
 
 #### Defined in
 
-dist/generated/types.d.ts:50008
+dist/generated/types.d.ts:50692
 
 ___
 
@@ -67363,7 +68587,7 @@ Marks all reactions in a chat or a forum topic as read
 
 #### Defined in
 
-dist/generated/types.d.ts:49994
+dist/generated/types.d.ts:50678
 
 ___
 
@@ -67391,7 +68615,7 @@ Marks all mentions in a forum topic as read
 
 #### Defined in
 
-dist/generated/types.d.ts:49992
+dist/generated/types.d.ts:50676
 
 ___
 
@@ -67411,7 +68635,7 @@ Marks all mentions in a forum topic as read
 
 #### Defined in
 
-dist/generated/types.d.ts:49973
+dist/generated/types.d.ts:50657
 
 ___
 
@@ -67439,7 +68663,7 @@ Marks all reactions in a forum topic as read
 
 #### Defined in
 
-dist/generated/types.d.ts:50029
+dist/generated/types.d.ts:50713
 
 ___
 
@@ -67459,7 +68683,7 @@ Marks all reactions in a forum topic as read
 
 #### Defined in
 
-dist/generated/types.d.ts:50010
+dist/generated/types.d.ts:50694
 
 ___
 
@@ -67487,7 +68711,7 @@ Reads a part of a file from the TDLib file cache and returns read bytes. This me
 
 #### Defined in
 
-dist/generated/types.d.ts:51583
+dist/generated/types.d.ts:52267
 
 ___
 
@@ -67508,7 +68732,7 @@ Reads a part of a file from the TDLib file cache and returns read bytes. This me
 
 #### Defined in
 
-dist/generated/types.d.ts:51559
+dist/generated/types.d.ts:52243
 
 ___
 
@@ -67536,7 +68760,7 @@ Recognizes speech in a video note or a voice note message. The message must be s
 
 #### Defined in
 
-dist/generated/types.d.ts:47629
+dist/generated/types.d.ts:48230
 
 ___
 
@@ -67556,7 +68780,7 @@ Recognizes speech in a video note or a voice note message. The message must be s
 
 #### Defined in
 
-dist/generated/types.d.ts:47610
+dist/generated/types.d.ts:48211
 
 ___
 
@@ -67576,7 +68800,7 @@ Describes a recommended chat filter
 
 #### Defined in
 
-dist/generated/types.d.ts:10205
+dist/generated/types.d.ts:10484
 
 ___
 
@@ -67597,7 +68821,7 @@ Describes a recommended chat filter
 
 #### Defined in
 
-dist/generated/types.d.ts:10222
+dist/generated/types.d.ts:10501
 
 ___
 
@@ -67616,7 +68840,7 @@ Contains a list of recommended chat filters
 
 #### Defined in
 
-dist/generated/types.d.ts:10236
+dist/generated/types.d.ts:10515
 
 ___
 
@@ -67636,7 +68860,7 @@ Contains a list of recommended chat filters
 
 #### Defined in
 
-dist/generated/types.d.ts:10248
+dist/generated/types.d.ts:10527
 
 ___
 
@@ -67664,7 +68888,7 @@ Recovers the 2-step verification password with a password recovery code sent to 
 
 #### Defined in
 
-dist/generated/types.d.ts:45787
+dist/generated/types.d.ts:46388
 
 ___
 
@@ -67685,7 +68909,7 @@ Recovers the 2-step verification password with a password recovery code sent to 
 
 #### Defined in
 
-dist/generated/types.d.ts:45763
+dist/generated/types.d.ts:46364
 
 ___
 
@@ -67713,7 +68937,7 @@ Recovers the 2-step verification password using a recovery code sent to an email
 
 #### Defined in
 
-dist/generated/types.d.ts:46111
+dist/generated/types.d.ts:46712
 
 ___
 
@@ -67734,7 +68958,7 @@ Recovers the 2-step verification password using a recovery code sent to an email
 
 #### Defined in
 
-dist/generated/types.d.ts:46087
+dist/generated/types.d.ts:46688
 
 ___
 
@@ -67753,7 +68977,7 @@ Contains information about the current recovery email address
 
 #### Defined in
 
-dist/generated/types.d.ts:2578
+dist/generated/types.d.ts:2619
 
 ___
 
@@ -67773,7 +68997,7 @@ Contains information about the current recovery email address
 
 #### Defined in
 
-dist/generated/types.d.ts:2590
+dist/generated/types.d.ts:2631
 
 ___
 
@@ -67801,7 +69025,7 @@ Registers the currently used device for receiving push notifications. Returns a 
 
 #### Defined in
 
-dist/generated/types.d.ts:55379
+dist/generated/types.d.ts:56137
 
 ___
 
@@ -67821,7 +69045,7 @@ Registers the currently used device for receiving push notifications. Returns a 
 
 #### Defined in
 
-dist/generated/types.d.ts:55360
+dist/generated/types.d.ts:56118
 
 ___
 
@@ -67849,7 +69073,7 @@ Finishes user registration. Works only when the current authorization state is a
 
 #### Defined in
 
-dist/generated/types.d.ts:45718
+dist/generated/types.d.ts:46319
 
 ___
 
@@ -67869,7 +69093,7 @@ Finishes user registration. Works only when the current authorization state is a
 
 #### Defined in
 
-dist/generated/types.d.ts:45699
+dist/generated/types.d.ts:46300
 
 ___
 
@@ -67884,7 +69108,7 @@ Represents a remote file
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"remoteFile"`` | - |
-| `id` | `string` | Remote file identifier; may be empty. Can be used by the current user across application restarts or even from other devices. Uniquely identifies a file, but a file can have a lot of different valid identifiers.    -If the ID starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known.    -If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string.    -Application must generate the file by downloading it to the specified location |
+| `id` | `string` | Remote file identifier; may be empty. Can be used by the current user across application restarts or even from other devices. Uniquely identifies a file, but a file can have a lot of different valid identifiers. -If the ID starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known. -If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string. -Application must generate the file by downloading it to the specified location |
 | `is_uploading_active` | [`Bool`](index.types.default.md#bool) | True, if the file is currently being uploaded (or a remote copy is being generated by some other means) |
 | `is_uploading_completed` | [`Bool`](index.types.default.md#bool) | True, if a remote copy is fully available |
 | `unique_id` | `string` | Unique file identifier; may be empty if unknown. The unique file identifier which is the same for the same file even for different users and is persistent over time |
@@ -67892,7 +69116,7 @@ Represents a remote file
 
 #### Defined in
 
-dist/generated/types.d.ts:2721
+dist/generated/types.d.ts:2762
 
 ___
 
@@ -67908,7 +69132,7 @@ Represents a remote file
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"remoteFile"`` | - |
-| `id?` | `string` | Remote file identifier; may be empty. Can be used by the current user across application restarts or even from other devices. Uniquely identifies a file, but a file can have a lot of different valid identifiers.    -If the ID starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known.    -If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string.    -Application must generate the file by downloading it to the specified location |
+| `id?` | `string` | Remote file identifier; may be empty. Can be used by the current user across application restarts or even from other devices. Uniquely identifies a file, but a file can have a lot of different valid identifiers. -If the ID starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known. -If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string. -Application must generate the file by downloading it to the specified location |
 | `is_uploading_active?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the file is currently being uploaded (or a remote copy is being generated by some other means) |
 | `is_uploading_completed?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if a remote copy is fully available |
 | `unique_id?` | `string` | Unique file identifier; may be empty if unknown. The unique file identifier which is the same for the same file even for different users and is persistent over time |
@@ -67916,7 +69140,7 @@ Represents a remote file
 
 #### Defined in
 
-dist/generated/types.d.ts:2759
+dist/generated/types.d.ts:2800
 
 ___
 
@@ -67944,7 +69168,7 @@ Removes all files from the file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:51717
+dist/generated/types.d.ts:52401
 
 ___
 
@@ -67965,7 +69189,7 @@ Removes all files from the file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:51693
+dist/generated/types.d.ts:52377
 
 ___
 
@@ -67993,7 +69217,7 @@ Removes background from the list of installed backgrounds
 
 #### Defined in
 
-dist/generated/types.d.ts:55185
+dist/generated/types.d.ts:55943
 
 ___
 
@@ -68012,7 +69236,7 @@ Removes background from the list of installed backgrounds
 
 #### Defined in
 
-dist/generated/types.d.ts:55171
+dist/generated/types.d.ts:55929
 
 ___
 
@@ -68040,7 +69264,7 @@ Removes a chat action bar without any other action
 
 #### Defined in
 
-dist/generated/types.d.ts:55595
+dist/generated/types.d.ts:56353
 
 ___
 
@@ -68059,7 +69283,7 @@ Removes a chat action bar without any other action
 
 #### Defined in
 
-dist/generated/types.d.ts:55581
+dist/generated/types.d.ts:56339
 
 ___
 
@@ -68087,7 +69311,7 @@ Removes users from the contact list
 
 #### Defined in
 
-dist/generated/types.d.ts:53196
+dist/generated/types.d.ts:53880
 
 ___
 
@@ -68106,7 +69330,7 @@ Removes users from the contact list
 
 #### Defined in
 
-dist/generated/types.d.ts:53182
+dist/generated/types.d.ts:53866
 
 ___
 
@@ -68134,7 +69358,7 @@ Removes a sticker from the list of favorite stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53754
+dist/generated/types.d.ts:54438
 
 ___
 
@@ -68153,7 +69377,7 @@ Removes a sticker from the list of favorite stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53740
+dist/generated/types.d.ts:54424
 
 ___
 
@@ -68181,7 +69405,7 @@ Removes a file from the file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:51691
+dist/generated/types.d.ts:52375
 
 ___
 
@@ -68201,7 +69425,7 @@ Removes a file from the file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:51672
+dist/generated/types.d.ts:52356
 
 ___
 
@@ -68229,7 +69453,7 @@ Removes a reaction from a message. A chosen reaction can always be removed
 
 #### Defined in
 
-dist/generated/types.d.ts:48798
+dist/generated/types.d.ts:49399
 
 ___
 
@@ -68250,7 +69474,7 @@ Removes a reaction from a message. A chosen reaction can always be removed
 
 #### Defined in
 
-dist/generated/types.d.ts:48774
+dist/generated/types.d.ts:49375
 
 ___
 
@@ -68278,7 +69502,7 @@ Removes an active notification from notification list. Needs to be called only i
 
 #### Defined in
 
-dist/generated/types.d.ts:47446
+dist/generated/types.d.ts:48047
 
 ___
 
@@ -68298,7 +69522,7 @@ Removes an active notification from notification list. Needs to be called only i
 
 #### Defined in
 
-dist/generated/types.d.ts:47427
+dist/generated/types.d.ts:48028
 
 ___
 
@@ -68326,7 +69550,7 @@ Removes a group of active notifications. Needs to be called only if the notifica
 
 #### Defined in
 
-dist/generated/types.d.ts:47467
+dist/generated/types.d.ts:48068
 
 ___
 
@@ -68346,7 +69570,7 @@ Removes a group of active notifications. Needs to be called only if the notifica
 
 #### Defined in
 
-dist/generated/types.d.ts:47448
+dist/generated/types.d.ts:48049
 
 ___
 
@@ -68374,7 +69598,7 @@ Removes a proxy server. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:57032
+dist/generated/types.d.ts:57944
 
 ___
 
@@ -68393,7 +69617,7 @@ Removes a proxy server. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:57018
+dist/generated/types.d.ts:57930
 
 ___
 
@@ -68421,7 +69645,7 @@ Removes a hashtag from the list of recently used hashtags
 
 #### Defined in
 
-dist/generated/types.d.ts:53973
+dist/generated/types.d.ts:54657
 
 ___
 
@@ -68440,7 +69664,7 @@ Removes a hashtag from the list of recently used hashtags
 
 #### Defined in
 
-dist/generated/types.d.ts:53959
+dist/generated/types.d.ts:54643
 
 ___
 
@@ -68468,7 +69692,7 @@ Removes a sticker from the list of recently used stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53692
+dist/generated/types.d.ts:54376
 
 ___
 
@@ -68488,7 +69712,7 @@ Removes a sticker from the list of recently used stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:53673
+dist/generated/types.d.ts:54357
 
 ___
 
@@ -68516,7 +69740,7 @@ Removes a chat from the list of recently found chats
 
 #### Defined in
 
-dist/generated/types.d.ts:46727
+dist/generated/types.d.ts:47328
 
 ___
 
@@ -68535,7 +69759,7 @@ Removes a chat from the list of recently found chats
 
 #### Defined in
 
-dist/generated/types.d.ts:46713
+dist/generated/types.d.ts:47314
 
 ___
 
@@ -68563,7 +69787,7 @@ Removes an animation from the list of saved animations
 
 #### Defined in
 
-dist/generated/types.d.ts:53925
+dist/generated/types.d.ts:54609
 
 ___
 
@@ -68582,7 +69806,7 @@ Removes an animation from the list of saved animations
 
 #### Defined in
 
-dist/generated/types.d.ts:53911
+dist/generated/types.d.ts:54595
 
 ___
 
@@ -68610,7 +69834,7 @@ Removes a notification sound from the list of saved notification sounds
 
 #### Defined in
 
-dist/generated/types.d.ts:51138
+dist/generated/types.d.ts:51822
 
 ___
 
@@ -68629,7 +69853,7 @@ Removes a notification sound from the list of saved notification sounds
 
 #### Defined in
 
-dist/generated/types.d.ts:51124
+dist/generated/types.d.ts:51808
 
 ___
 
@@ -68657,7 +69881,7 @@ Removes a sticker from the set to which it belongs; for bots only. The sticker s
 
 #### Defined in
 
-dist/generated/types.d.ts:56535
+dist/generated/types.d.ts:57368
 
 ___
 
@@ -68676,7 +69900,7 @@ Removes a sticker from the set to which it belongs; for bots only. The sticker s
 
 #### Defined in
 
-dist/generated/types.d.ts:56521
+dist/generated/types.d.ts:57354
 
 ___
 
@@ -68704,7 +69928,7 @@ Removes a chat from the list of frequently used chats. Supported only if the cha
 
 #### Defined in
 
-dist/generated/types.d.ts:46695
+dist/generated/types.d.ts:47296
 
 ___
 
@@ -68724,7 +69948,7 @@ Removes a chat from the list of frequently used chats. Supported only if the cha
 
 #### Defined in
 
-dist/generated/types.d.ts:46676
+dist/generated/types.d.ts:47277
 
 ___
 
@@ -68752,7 +69976,7 @@ Changes order of active usernames of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54137
+dist/generated/types.d.ts:54821
 
 ___
 
@@ -68771,7 +69995,7 @@ Changes order of active usernames of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54123
+dist/generated/types.d.ts:54807
 
 ___
 
@@ -68799,7 +70023,7 @@ Changes the order of chat filters
 
 #### Defined in
 
-dist/generated/types.d.ts:50339
+dist/generated/types.d.ts:51023
 
 ___
 
@@ -68819,7 +70043,7 @@ Changes the order of chat filters
 
 #### Defined in
 
-dist/generated/types.d.ts:50320
+dist/generated/types.d.ts:51004
 
 ___
 
@@ -68847,7 +70071,7 @@ Changes the order of installed sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:53631
+dist/generated/types.d.ts:54315
 
 ___
 
@@ -68867,7 +70091,7 @@ Changes the order of installed sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:53612
+dist/generated/types.d.ts:54296
 
 ___
 
@@ -68895,7 +70119,7 @@ Changes order of active usernames of a supergroup or channel, requires owner pri
 
 #### Defined in
 
-dist/generated/types.d.ts:54607
+dist/generated/types.d.ts:55365
 
 ___
 
@@ -68915,7 +70139,7 @@ Changes order of active usernames of a supergroup or channel, requires owner pri
 
 #### Defined in
 
-dist/generated/types.d.ts:54588
+dist/generated/types.d.ts:55346
 
 ___
 
@@ -68943,7 +70167,7 @@ Replaces current primary invite link for a chat with a new primary invite link. 
 
 #### Defined in
 
-dist/generated/types.d.ts:51827
+dist/generated/types.d.ts:52511
 
 ___
 
@@ -68962,7 +70186,7 @@ Replaces current primary invite link for a chat with a new primary invite link. 
 
 #### Defined in
 
-dist/generated/types.d.ts:51813
+dist/generated/types.d.ts:52497
 
 ___
 
@@ -68990,7 +70214,7 @@ Replaces the current RTMP URL for streaming to the chat; requires creator privil
 
 #### Defined in
 
-dist/generated/types.d.ts:52476
+dist/generated/types.d.ts:53160
 
 ___
 
@@ -69009,7 +70233,7 @@ Replaces the current RTMP URL for streaming to the chat; requires creator privil
 
 #### Defined in
 
-dist/generated/types.d.ts:52462
+dist/generated/types.d.ts:53146
 
 ___
 
@@ -69029,7 +70253,7 @@ Instructs application to force a reply to this message
 
 #### Defined in
 
-dist/generated/types.d.ts:11612
+dist/generated/types.d.ts:11891
 
 ___
 
@@ -69050,7 +70274,7 @@ Instructs application to force a reply to this message
 
 #### Defined in
 
-dist/generated/types.d.ts:11629
+dist/generated/types.d.ts:11908
 
 ___
 
@@ -69069,7 +70293,7 @@ Contains an inline keyboard layout
 
 #### Defined in
 
-dist/generated/types.d.ts:11714
+dist/generated/types.d.ts:11993
 
 ___
 
@@ -69089,7 +70313,7 @@ Contains an inline keyboard layout
 
 #### Defined in
 
-dist/generated/types.d.ts:11726
+dist/generated/types.d.ts:12005
 
 ___
 
@@ -69108,7 +70332,7 @@ Instructs application to remove the keyboard once this message has been received
 
 #### Defined in
 
-dist/generated/types.d.ts:11591
+dist/generated/types.d.ts:11870
 
 ___
 
@@ -69128,7 +70352,7 @@ Instructs application to remove the keyboard once this message has been received
 
 #### Defined in
 
-dist/generated/types.d.ts:11603
+dist/generated/types.d.ts:11882
 
 ___
 
@@ -69152,7 +70376,7 @@ Contains a custom keyboard layout to quickly reply to bots
 
 #### Defined in
 
-dist/generated/types.d.ts:11643
+dist/generated/types.d.ts:11922
 
 ___
 
@@ -69177,7 +70401,7 @@ Contains a custom keyboard layout to quickly reply to bots
 
 #### Defined in
 
-dist/generated/types.d.ts:11680
+dist/generated/types.d.ts:11959
 
 ___
 
@@ -69205,7 +70429,7 @@ Reports a chat to the Telegram moderators. A chat can be reported only from the 
 
 #### Defined in
 
-dist/generated/types.d.ts:55626
+dist/generated/types.d.ts:56384
 
 ___
 
@@ -69227,7 +70451,7 @@ Reports a chat to the Telegram moderators. A chat can be reported only from the 
 
 #### Defined in
 
-dist/generated/types.d.ts:55597
+dist/generated/types.d.ts:56355
 
 ___
 
@@ -69255,7 +70479,7 @@ Reports a chat photo to the Telegram moderators. A chat photo can be reported on
 
 #### Defined in
 
-dist/generated/types.d.ts:55657
+dist/generated/types.d.ts:56415
 
 ___
 
@@ -69277,7 +70501,7 @@ Reports a chat photo to the Telegram moderators. A chat photo can be reported on
 
 #### Defined in
 
-dist/generated/types.d.ts:55628
+dist/generated/types.d.ts:56386
 
 ___
 
@@ -69305,7 +70529,7 @@ Reports reactions set on a message to the Telegram moderators. Reactions on a me
 
 #### Defined in
 
-dist/generated/types.d.ts:55683
+dist/generated/types.d.ts:56441
 
 ___
 
@@ -69326,7 +70550,7 @@ Reports reactions set on a message to the Telegram moderators. Reactions on a me
 
 #### Defined in
 
-dist/generated/types.d.ts:55659
+dist/generated/types.d.ts:56417
 
 ___
 
@@ -69354,7 +70578,7 @@ Reports a false deletion of a message by aggressive anti-spam checks; requires a
 
 #### Defined in
 
-dist/generated/types.d.ts:54833
+dist/generated/types.d.ts:55591
 
 ___
 
@@ -69374,7 +70598,7 @@ Reports a false deletion of a message by aggressive anti-spam checks; requires a
 
 #### Defined in
 
-dist/generated/types.d.ts:54814
+dist/generated/types.d.ts:55572
 
 ___
 
@@ -69402,7 +70626,7 @@ Reports messages in a supergroup as spam; requires administrator rights in the s
 
 #### Defined in
 
-dist/generated/types.d.ts:54812
+dist/generated/types.d.ts:55570
 
 ___
 
@@ -69422,7 +70646,7 @@ Reports messages in a supergroup as spam; requires administrator rights in the s
 
 #### Defined in
 
-dist/generated/types.d.ts:54793
+dist/generated/types.d.ts:55551
 
 ___
 
@@ -69450,7 +70674,7 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 #### Defined in
 
-dist/generated/types.d.ts:45745
+dist/generated/types.d.ts:46346
 
 ___
 
@@ -69468,7 +70692,7 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 #### Defined in
 
-dist/generated/types.d.ts:45736
+dist/generated/types.d.ts:46337
 
 ___
 
@@ -69496,7 +70720,7 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 #### Defined in
 
-dist/generated/types.d.ts:46069
+dist/generated/types.d.ts:46670
 
 ___
 
@@ -69514,7 +70738,7 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 #### Defined in
 
-dist/generated/types.d.ts:46060
+dist/generated/types.d.ts:46661
 
 ___
 
@@ -69544,7 +70768,7 @@ Requests QR code authentication by scanning a QR code on another logged in devic
 
 #### Defined in
 
-dist/generated/types.d.ts:45697
+dist/generated/types.d.ts:46298
 
 ___
 
@@ -69564,7 +70788,7 @@ Requests QR code authentication by scanning a QR code on another logged in devic
 
 #### Defined in
 
-dist/generated/types.d.ts:45681
+dist/generated/types.d.ts:46282
 
 ___
 
@@ -69594,7 +70818,7 @@ Resends an authentication code to the user. Works only when the current authoriz
 
 #### Defined in
 
-dist/generated/types.d.ts:45646
+dist/generated/types.d.ts:46247
 
 ___
 
@@ -69613,7 +70837,7 @@ Resends an authentication code to the user. Works only when the current authoriz
 
 #### Defined in
 
-dist/generated/types.d.ts:45635
+dist/generated/types.d.ts:46236
 
 ___
 
@@ -69641,7 +70865,7 @@ Resends the authentication code sent to confirm a new phone number for the curre
 
 #### Defined in
 
-dist/generated/types.d.ts:54206
+dist/generated/types.d.ts:54890
 
 ___
 
@@ -69659,7 +70883,7 @@ Resends the authentication code sent to confirm a new phone number for the curre
 
 #### Defined in
 
-dist/generated/types.d.ts:54197
+dist/generated/types.d.ts:54881
 
 ___
 
@@ -69687,7 +70911,7 @@ Resends the code to verify an email address to be added to a user's Telegram Pas
 
 #### Defined in
 
-dist/generated/types.d.ts:56189
+dist/generated/types.d.ts:56947
 
 ___
 
@@ -69705,7 +70929,7 @@ Resends the code to verify an email address to be added to a user's Telegram Pas
 
 #### Defined in
 
-dist/generated/types.d.ts:56180
+dist/generated/types.d.ts:56938
 
 ___
 
@@ -69733,7 +70957,7 @@ Resends the login email address verification code
 
 #### Defined in
 
-dist/generated/types.d.ts:45975
+dist/generated/types.d.ts:46576
 
 ___
 
@@ -69751,7 +70975,7 @@ Resends the login email address verification code
 
 #### Defined in
 
-dist/generated/types.d.ts:45966
+dist/generated/types.d.ts:46567
 
 ___
 
@@ -69781,7 +71005,7 @@ Resends messages which failed to send. Can be called only for messages for which
 
 #### Defined in
 
-dist/generated/types.d.ts:47921
+dist/generated/types.d.ts:48522
 
 ___
 
@@ -69802,7 +71026,7 @@ Resends messages which failed to send. Can be called only for messages for which
 
 #### Defined in
 
-dist/generated/types.d.ts:47900
+dist/generated/types.d.ts:48501
 
 ___
 
@@ -69830,7 +71054,7 @@ Resends phone number confirmation code
 
 #### Defined in
 
-dist/generated/types.d.ts:56315
+dist/generated/types.d.ts:57073
 
 ___
 
@@ -69848,7 +71072,7 @@ Resends phone number confirmation code
 
 #### Defined in
 
-dist/generated/types.d.ts:56306
+dist/generated/types.d.ts:57064
 
 ___
 
@@ -69876,7 +71100,7 @@ Resends the code to verify a phone number to be added to a user's Telegram Passp
 
 #### Defined in
 
-dist/generated/types.d.ts:56146
+dist/generated/types.d.ts:56904
 
 ___
 
@@ -69894,7 +71118,7 @@ Resends the code to verify a phone number to be added to a user's Telegram Passp
 
 #### Defined in
 
-dist/generated/types.d.ts:56137
+dist/generated/types.d.ts:56895
 
 ___
 
@@ -69922,7 +71146,7 @@ Resends the 2-step verification recovery email address verification code
 
 #### Defined in
 
-dist/generated/types.d.ts:46058
+dist/generated/types.d.ts:46659
 
 ___
 
@@ -69940,7 +71164,7 @@ Resends the 2-step verification recovery email address verification code
 
 #### Defined in
 
-dist/generated/types.d.ts:46049
+dist/generated/types.d.ts:46650
 
 ___
 
@@ -69968,7 +71192,7 @@ Resets all notification settings to their default values. By default, all chats 
 
 #### Defined in
 
-dist/generated/types.d.ts:51207
+dist/generated/types.d.ts:51891
 
 ___
 
@@ -69986,7 +71210,7 @@ Resets all notification settings to their default values. By default, all chats 
 
 #### Defined in
 
-dist/generated/types.d.ts:51198
+dist/generated/types.d.ts:51882
 
 ___
 
@@ -70014,7 +71238,7 @@ Resets list of installed backgrounds to its default value
 
 #### Defined in
 
-dist/generated/types.d.ts:55196
+dist/generated/types.d.ts:55954
 
 ___
 
@@ -70032,7 +71256,7 @@ Resets list of installed backgrounds to its default value
 
 #### Defined in
 
-dist/generated/types.d.ts:55187
+dist/generated/types.d.ts:55945
 
 ___
 
@@ -70060,7 +71284,7 @@ Resets all network data usage statistics to zero. Can be called before authoriza
 
 #### Defined in
 
-dist/generated/types.d.ts:55912
+dist/generated/types.d.ts:56670
 
 ___
 
@@ -70078,7 +71302,7 @@ Resets all network data usage statistics to zero. Can be called before authoriza
 
 #### Defined in
 
-dist/generated/types.d.ts:55903
+dist/generated/types.d.ts:56661
 
 ___
 
@@ -70106,7 +71330,7 @@ Removes 2-step verification password without previous password and access to rec
 
 #### Defined in
 
-dist/generated/types.d.ts:46122
+dist/generated/types.d.ts:46723
 
 ___
 
@@ -70124,7 +71348,7 @@ Removes 2-step verification password without previous password and access to rec
 
 #### Defined in
 
-dist/generated/types.d.ts:46113
+dist/generated/types.d.ts:46714
 
 ___
 
@@ -70143,7 +71367,7 @@ The password reset request was declined
 
 #### Defined in
 
-dist/generated/types.d.ts:29035
+dist/generated/types.d.ts:29448
 
 ___
 
@@ -70163,7 +71387,7 @@ The password reset request was declined
 
 #### Defined in
 
-dist/generated/types.d.ts:29047
+dist/generated/types.d.ts:29460
 
 ___
 
@@ -70181,7 +71405,7 @@ The password was reset
 
 #### Defined in
 
-dist/generated/types.d.ts:29003
+dist/generated/types.d.ts:29416
 
 ___
 
@@ -70200,7 +71424,7 @@ The password was reset
 
 #### Defined in
 
-dist/generated/types.d.ts:29010
+dist/generated/types.d.ts:29423
 
 ___
 
@@ -70219,7 +71443,7 @@ The password reset request is pending
 
 #### Defined in
 
-dist/generated/types.d.ts:29014
+dist/generated/types.d.ts:29427
 
 ___
 
@@ -70239,7 +71463,7 @@ The password reset request is pending
 
 #### Defined in
 
-dist/generated/types.d.ts:29026
+dist/generated/types.d.ts:29439
 
 ___
 
@@ -70269,7 +71493,7 @@ Revokes invite link for a chat. Available for basic groups, supergroups, and cha
 
 #### Defined in
 
-dist/generated/types.d.ts:52037
+dist/generated/types.d.ts:52721
 
 ___
 
@@ -70290,7 +71514,7 @@ Revokes invite link for a chat. Available for basic groups, supergroups, and cha
 
 #### Defined in
 
-dist/generated/types.d.ts:52016
+dist/generated/types.d.ts:52700
 
 ___
 
@@ -70318,7 +71542,7 @@ Revokes invite link for a group call. Requires groupCall.can_be_managed group ca
 
 #### Defined in
 
-dist/generated/types.d.ts:52738
+dist/generated/types.d.ts:53422
 
 ___
 
@@ -70337,7 +71561,7 @@ Revokes invite link for a group call. Requires groupCall.can_be_managed group ca
 
 #### Defined in
 
-dist/generated/types.d.ts:52724
+dist/generated/types.d.ts:53408
 
 ___
 
@@ -70356,7 +71580,7 @@ An anchor
 
 #### Defined in
 
-dist/generated/types.d.ts:12597
+dist/generated/types.d.ts:12917
 
 ___
 
@@ -70376,7 +71600,7 @@ An anchor
 
 #### Defined in
 
-dist/generated/types.d.ts:12609
+dist/generated/types.d.ts:12929
 
 ___
 
@@ -70397,7 +71621,7 @@ A link to an anchor on the same web page
 
 #### Defined in
 
-dist/generated/types.d.ts:12618
+dist/generated/types.d.ts:12938
 
 ___
 
@@ -70419,7 +71643,7 @@ A link to an anchor on the same web page
 
 #### Defined in
 
-dist/generated/types.d.ts:12640
+dist/generated/types.d.ts:12960
 
 ___
 
@@ -70438,7 +71662,7 @@ A bold rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12244
+dist/generated/types.d.ts:12564
 
 ___
 
@@ -70458,7 +71682,7 @@ A bold rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12256
+dist/generated/types.d.ts:12576
 
 ___
 
@@ -70478,7 +71702,7 @@ A rich text email link
 
 #### Defined in
 
-dist/generated/types.d.ts:12390
+dist/generated/types.d.ts:12710
 
 ___
 
@@ -70499,7 +71723,7 @@ A rich text email link
 
 #### Defined in
 
-dist/generated/types.d.ts:12407
+dist/generated/types.d.ts:12727
 
 ___
 
@@ -70518,7 +71742,7 @@ A fixed-width rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12328
+dist/generated/types.d.ts:12648
 
 ___
 
@@ -70538,7 +71762,7 @@ A fixed-width rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12340
+dist/generated/types.d.ts:12660
 
 ___
 
@@ -70559,7 +71783,7 @@ A small image inside the text
 
 #### Defined in
 
-dist/generated/types.d.ts:12515
+dist/generated/types.d.ts:12835
 
 ___
 
@@ -70581,7 +71805,7 @@ A small image inside the text
 
 #### Defined in
 
-dist/generated/types.d.ts:12537
+dist/generated/types.d.ts:12857
 
 ___
 
@@ -70600,7 +71824,7 @@ An italicized rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12265
+dist/generated/types.d.ts:12585
 
 ___
 
@@ -70620,7 +71844,7 @@ An italicized rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12277
+dist/generated/types.d.ts:12597
 
 ___
 
@@ -70639,7 +71863,7 @@ A marked rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12463
+dist/generated/types.d.ts:12783
 
 ___
 
@@ -70659,7 +71883,7 @@ A marked rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12475
+dist/generated/types.d.ts:12795
 
 ___
 
@@ -70679,7 +71903,7 @@ A rich text phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:12484
+dist/generated/types.d.ts:12804
 
 ___
 
@@ -70700,7 +71924,7 @@ A rich text phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:12501
+dist/generated/types.d.ts:12821
 
 ___
 
@@ -70719,7 +71943,7 @@ A plain text
 
 #### Defined in
 
-dist/generated/types.d.ts:12223
+dist/generated/types.d.ts:12543
 
 ___
 
@@ -70739,7 +71963,7 @@ A plain text
 
 #### Defined in
 
-dist/generated/types.d.ts:12235
+dist/generated/types.d.ts:12555
 
 ___
 
@@ -70760,7 +71984,7 @@ A reference to a richTexts object on the same web page
 
 #### Defined in
 
-dist/generated/types.d.ts:12556
+dist/generated/types.d.ts:12876
 
 ___
 
@@ -70782,7 +72006,7 @@ A reference to a richTexts object on the same web page
 
 #### Defined in
 
-dist/generated/types.d.ts:12578
+dist/generated/types.d.ts:12898
 
 ___
 
@@ -70801,7 +72025,7 @@ A strikethrough rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12307
+dist/generated/types.d.ts:12627
 
 ___
 
@@ -70821,7 +72045,7 @@ A strikethrough rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12319
+dist/generated/types.d.ts:12639
 
 ___
 
@@ -70840,7 +72064,7 @@ A subscript rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12421
+dist/generated/types.d.ts:12741
 
 ___
 
@@ -70860,7 +72084,7 @@ A subscript rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12433
+dist/generated/types.d.ts:12753
 
 ___
 
@@ -70879,7 +72103,7 @@ A superscript rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12442
+dist/generated/types.d.ts:12762
 
 ___
 
@@ -70899,7 +72123,7 @@ A superscript rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12454
+dist/generated/types.d.ts:12774
 
 ___
 
@@ -70918,7 +72142,7 @@ An underlined rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12286
+dist/generated/types.d.ts:12606
 
 ___
 
@@ -70938,7 +72162,7 @@ An underlined rich text
 
 #### Defined in
 
-dist/generated/types.d.ts:12298
+dist/generated/types.d.ts:12618
 
 ___
 
@@ -70959,7 +72183,7 @@ A rich text URL link
 
 #### Defined in
 
-dist/generated/types.d.ts:12349
+dist/generated/types.d.ts:12669
 
 ___
 
@@ -70981,7 +72205,7 @@ A rich text URL link
 
 #### Defined in
 
-dist/generated/types.d.ts:12371
+dist/generated/types.d.ts:12691
 
 ___
 
@@ -71000,7 +72224,7 @@ A concatenation of rich texts
 
 #### Defined in
 
-dist/generated/types.d.ts:12659
+dist/generated/types.d.ts:12979
 
 ___
 
@@ -71020,7 +72244,7 @@ A concatenation of rich texts
 
 #### Defined in
 
-dist/generated/types.d.ts:12671
+dist/generated/types.d.ts:12991
 
 ___
 
@@ -71040,7 +72264,7 @@ Represents an RTMP URL
 
 #### Defined in
 
-dist/generated/types.d.ts:22337
+dist/generated/types.d.ts:22677
 
 ___
 
@@ -71061,7 +72285,7 @@ Represents an RTMP URL
 
 #### Defined in
 
-dist/generated/types.d.ts:22354
+dist/generated/types.d.ts:22694
 
 ___
 
@@ -71089,7 +72313,7 @@ Saves application log event on the server. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:56922
+dist/generated/types.d.ts:57823
 
 ___
 
@@ -71110,7 +72334,7 @@ Saves application log event on the server. Can be called before authorization
 
 #### Defined in
 
-dist/generated/types.d.ts:56898
+dist/generated/types.d.ts:57799
 
 ___
 
@@ -71130,7 +72354,7 @@ Contains information about saved payment credentials
 
 #### Defined in
 
-dist/generated/types.d.ts:14842
+dist/generated/types.d.ts:15162
 
 ___
 
@@ -71151,7 +72375,7 @@ Contains information about saved payment credentials
 
 #### Defined in
 
-dist/generated/types.d.ts:14859
+dist/generated/types.d.ts:15179
 
 ___
 
@@ -71172,7 +72396,7 @@ Contains autosave settings for an autosave settings scope
 
 #### Defined in
 
-dist/generated/types.d.ts:33361
+dist/generated/types.d.ts:33818
 
 ___
 
@@ -71194,7 +72418,7 @@ Contains autosave settings for an autosave settings scope
 
 #### Defined in
 
-dist/generated/types.d.ts:33383
+dist/generated/types.d.ts:33840
 
 ___
 
@@ -71217,7 +72441,7 @@ Contains information about notification settings for several chats
 
 #### Defined in
 
-dist/generated/types.d.ts:9805
+dist/generated/types.d.ts:10084
 
 ___
 
@@ -71241,7 +72465,7 @@ Contains information about notification settings for several chats
 
 #### Defined in
 
-dist/generated/types.d.ts:9837
+dist/generated/types.d.ts:10116
 
 ___
 
@@ -71269,7 +72493,7 @@ Searches for a background by its name
 
 #### Defined in
 
-dist/generated/types.d.ts:55143
+dist/generated/types.d.ts:55901
 
 ___
 
@@ -71288,7 +72512,7 @@ Searches for a background by its name
 
 #### Defined in
 
-dist/generated/types.d.ts:55129
+dist/generated/types.d.ts:55887
 
 ___
 
@@ -71316,7 +72540,7 @@ Searches for call messages. Returns the results in reverse chronological order (
 
 #### Defined in
 
-dist/generated/types.d.ts:47155
+dist/generated/types.d.ts:47756
 
 ___
 
@@ -71337,7 +72561,7 @@ Searches for call messages. Returns the results in reverse chronological order (
 
 #### Defined in
 
-dist/generated/types.d.ts:47131
+dist/generated/types.d.ts:47732
 
 ___
 
@@ -71365,7 +72589,7 @@ Searches for a specified query in the first name, last name and usernames of the
 
 #### Defined in
 
-dist/generated/types.d.ts:51047
+dist/generated/types.d.ts:51731
 
 ___
 
@@ -71387,7 +72611,7 @@ Searches for a specified query in the first name, last name and usernames of the
 
 #### Defined in
 
-dist/generated/types.d.ts:51018
+dist/generated/types.d.ts:51702
 
 ___
 
@@ -71419,7 +72643,7 @@ Searches for messages with given words in the chat. Returns the results in rever
 
 #### Defined in
 
-dist/generated/types.d.ts:47044
+dist/generated/types.d.ts:47645
 
 ___
 
@@ -71439,7 +72663,7 @@ Searches for messages with given words in the chat. Returns the results in rever
 | `chat_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the chat in which to search messages |
 | `filter?` | [`SearchMessagesFilter$Input`](index.types.default.md#searchmessagesfilter$input) | Additional filter for messages to search; pass null to search for all messages |
 | `from_message_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the message starting from which history must be fetched; use 0 to get results from the last message |
-| `limit?` | [`int32`](index.types.default.md#int32-1) | The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than -offset.    -For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit |
+| `limit?` | [`int32`](index.types.default.md#int32-1) | The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than -offset. -For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit |
 | `message_thread_id?` | [`int53`](index.types.default.md#int53-1) | If not 0, only messages in the specified thread will be returned; supergroups only |
 | `offset?` | [`int32`](index.types.default.md#int32-1) | Specify 0 to get results from exactly the from_message_id or a negative offset to get the specified message and some newer messages |
 | `query?` | `string` | Query to search for |
@@ -71447,7 +72671,7 @@ Searches for messages with given words in the chat. Returns the results in rever
 
 #### Defined in
 
-dist/generated/types.d.ts:46989
+dist/generated/types.d.ts:47590
 
 ___
 
@@ -71475,7 +72699,7 @@ Returns information about the recent locations of chat members that were sent to
 
 #### Defined in
 
-dist/generated/types.d.ts:47213
+dist/generated/types.d.ts:47814
 
 ___
 
@@ -71495,7 +72719,7 @@ Returns information about the recent locations of chat members that were sent to
 
 #### Defined in
 
-dist/generated/types.d.ts:47194
+dist/generated/types.d.ts:47795
 
 ___
 
@@ -71523,7 +72747,7 @@ Searches for the specified query in the title and username of already known chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46613
+dist/generated/types.d.ts:47214
 
 ___
 
@@ -71543,7 +72767,7 @@ Searches for the specified query in the title and username of already known chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46594
+dist/generated/types.d.ts:47195
 
 ___
 
@@ -71573,7 +72797,7 @@ Returns a list of users and location-based supergroups nearby. The list of users
 
 #### Defined in
 
-dist/generated/types.d.ts:46653
+dist/generated/types.d.ts:47254
 
 ___
 
@@ -71593,7 +72817,7 @@ Returns a list of users and location-based supergroups nearby. The list of users
 
 #### Defined in
 
-dist/generated/types.d.ts:46637
+dist/generated/types.d.ts:47238
 
 ___
 
@@ -71621,7 +72845,7 @@ Searches for the specified query in the title and username of already known chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46634
+dist/generated/types.d.ts:47235
 
 ___
 
@@ -71641,7 +72865,7 @@ Searches for the specified query in the title and username of already known chat
 
 #### Defined in
 
-dist/generated/types.d.ts:46615
+dist/generated/types.d.ts:47216
 
 ___
 
@@ -71669,7 +72893,7 @@ Searches for the specified query in the first names, last names and usernames of
 
 #### Defined in
 
-dist/generated/types.d.ts:53180
+dist/generated/types.d.ts:53864
 
 ___
 
@@ -71689,7 +72913,7 @@ Searches for the specified query in the first names, last names and usernames of
 
 #### Defined in
 
-dist/generated/types.d.ts:53161
+dist/generated/types.d.ts:53845
 
 ___
 
@@ -71717,7 +72941,7 @@ Searches for emojis by keywords. Supported only if the file database is enabled
 
 #### Defined in
 
-dist/generated/types.d.ts:53796
+dist/generated/types.d.ts:54480
 
 ___
 
@@ -71738,7 +72962,7 @@ Searches for emojis by keywords. Supported only if the file database is enabled
 
 #### Defined in
 
-dist/generated/types.d.ts:53772
+dist/generated/types.d.ts:54456
 
 ___
 
@@ -71766,7 +72990,7 @@ Searches for files in the file download list or recently downloaded files from t
 
 #### Defined in
 
-dist/generated/types.d.ts:51753
+dist/generated/types.d.ts:52437
 
 ___
 
@@ -71789,7 +73013,7 @@ Searches for files in the file download list or recently downloaded files from t
 
 #### Defined in
 
-dist/generated/types.d.ts:51719
+dist/generated/types.d.ts:52403
 
 ___
 
@@ -71817,7 +73041,7 @@ Searches for recently used hashtags by their prefix
 
 #### Defined in
 
-dist/generated/types.d.ts:53957
+dist/generated/types.d.ts:54641
 
 ___
 
@@ -71837,7 +73061,7 @@ Searches for recently used hashtags by their prefix
 
 #### Defined in
 
-dist/generated/types.d.ts:53938
+dist/generated/types.d.ts:54622
 
 ___
 
@@ -71865,7 +73089,7 @@ Searches for installed sticker sets by looking for specified query in their titl
 
 #### Defined in
 
-dist/generated/types.d.ts:53552
+dist/generated/types.d.ts:54236
 
 ___
 
@@ -71886,7 +73110,7 @@ Searches for installed sticker sets by looking for specified query in their titl
 
 #### Defined in
 
-dist/generated/types.d.ts:53528
+dist/generated/types.d.ts:54212
 
 ___
 
@@ -71916,7 +73140,7 @@ Searches for messages in all chats except secret chats. Returns the results in r
 
 #### Defined in
 
-dist/generated/types.d.ts:47093
+dist/generated/types.d.ts:47694
 
 ___
 
@@ -71942,7 +73166,7 @@ Searches for messages in all chats except secret chats. Returns the results in r
 
 #### Defined in
 
-dist/generated/types.d.ts:47047
+dist/generated/types.d.ts:47648
 
 ___
 
@@ -71960,7 +73184,7 @@ Returns only animation messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20767
+dist/generated/types.d.ts:21107
 
 ___
 
@@ -71979,7 +73203,7 @@ Returns only animation messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20774
+dist/generated/types.d.ts:21114
 
 ___
 
@@ -71997,7 +73221,7 @@ Returns only audio messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20778
+dist/generated/types.d.ts:21118
 
 ___
 
@@ -72016,7 +73240,7 @@ Returns only audio messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20785
+dist/generated/types.d.ts:21125
 
 ___
 
@@ -72034,7 +73258,7 @@ Returns only messages containing chat photos
 
 #### Defined in
 
-dist/generated/types.d.ts:20855
+dist/generated/types.d.ts:21195
 
 ___
 
@@ -72053,7 +73277,7 @@ Returns only messages containing chat photos
 
 #### Defined in
 
-dist/generated/types.d.ts:20862
+dist/generated/types.d.ts:21202
 
 ___
 
@@ -72071,7 +73295,7 @@ Returns only document messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20789
+dist/generated/types.d.ts:21129
 
 ___
 
@@ -72090,7 +73314,7 @@ Returns only document messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20796
+dist/generated/types.d.ts:21136
 
 ___
 
@@ -72108,7 +73332,7 @@ Returns all found messages, no filter is applied
 
 #### Defined in
 
-dist/generated/types.d.ts:20756
+dist/generated/types.d.ts:21096
 
 ___
 
@@ -72127,7 +73351,7 @@ Returns all found messages, no filter is applied
 
 #### Defined in
 
-dist/generated/types.d.ts:20763
+dist/generated/types.d.ts:21103
 
 ___
 
@@ -72145,7 +73369,7 @@ Returns only failed to send messages. This filter can be used only if the messag
 
 #### Defined in
 
-dist/generated/types.d.ts:20921
+dist/generated/types.d.ts:21261
 
 ___
 
@@ -72164,7 +73388,7 @@ Returns only failed to send messages. This filter can be used only if the messag
 
 #### Defined in
 
-dist/generated/types.d.ts:20928
+dist/generated/types.d.ts:21268
 
 ___
 
@@ -72182,7 +73406,7 @@ Returns only messages with mentions of the current user, or messages that are re
 
 #### Defined in
 
-dist/generated/types.d.ts:20888
+dist/generated/types.d.ts:21228
 
 ___
 
@@ -72201,7 +73425,7 @@ Returns only messages with mentions of the current user, or messages that are re
 
 #### Defined in
 
-dist/generated/types.d.ts:20895
+dist/generated/types.d.ts:21235
 
 ___
 
@@ -72219,7 +73443,7 @@ Returns only photo messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20800
+dist/generated/types.d.ts:21140
 
 ___
 
@@ -72238,7 +73462,7 @@ Returns only photo messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20807
+dist/generated/types.d.ts:21147
 
 ___
 
@@ -72256,7 +73480,7 @@ Returns only photo and video messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20833
+dist/generated/types.d.ts:21173
 
 ___
 
@@ -72275,7 +73499,7 @@ Returns only photo and video messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20840
+dist/generated/types.d.ts:21180
 
 ___
 
@@ -72293,7 +73517,7 @@ Returns only pinned messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20932
+dist/generated/types.d.ts:21272
 
 ___
 
@@ -72312,7 +73536,7 @@ Returns only pinned messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20939
+dist/generated/types.d.ts:21279
 
 ___
 
@@ -72330,7 +73554,7 @@ Returns only messages with unread mentions of the current user, or messages that
 
 #### Defined in
 
-dist/generated/types.d.ts:20899
+dist/generated/types.d.ts:21239
 
 ___
 
@@ -72349,7 +73573,7 @@ Returns only messages with unread mentions of the current user, or messages that
 
 #### Defined in
 
-dist/generated/types.d.ts:20906
+dist/generated/types.d.ts:21246
 
 ___
 
@@ -72367,7 +73591,7 @@ Returns only messages with unread reactions for the current user. When using thi
 
 #### Defined in
 
-dist/generated/types.d.ts:20910
+dist/generated/types.d.ts:21250
 
 ___
 
@@ -72386,7 +73610,7 @@ Returns only messages with unread reactions for the current user. When using thi
 
 #### Defined in
 
-dist/generated/types.d.ts:20917
+dist/generated/types.d.ts:21257
 
 ___
 
@@ -72404,7 +73628,7 @@ Returns only messages containing URLs
 
 #### Defined in
 
-dist/generated/types.d.ts:20844
+dist/generated/types.d.ts:21184
 
 ___
 
@@ -72423,7 +73647,7 @@ Returns only messages containing URLs
 
 #### Defined in
 
-dist/generated/types.d.ts:20851
+dist/generated/types.d.ts:21191
 
 ___
 
@@ -72441,7 +73665,7 @@ Returns only video messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20811
+dist/generated/types.d.ts:21151
 
 ___
 
@@ -72460,7 +73684,7 @@ Returns only video messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20818
+dist/generated/types.d.ts:21158
 
 ___
 
@@ -72478,7 +73702,7 @@ Returns only video note messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20866
+dist/generated/types.d.ts:21206
 
 ___
 
@@ -72497,7 +73721,7 @@ Returns only video note messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20873
+dist/generated/types.d.ts:21213
 
 ___
 
@@ -72515,7 +73739,7 @@ Returns only voice and video note messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20877
+dist/generated/types.d.ts:21217
 
 ___
 
@@ -72534,7 +73758,7 @@ Returns only voice and video note messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20884
+dist/generated/types.d.ts:21224
 
 ___
 
@@ -72552,7 +73776,7 @@ Returns only voice note messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20822
+dist/generated/types.d.ts:21162
 
 ___
 
@@ -72571,7 +73795,7 @@ Returns only voice note messages
 
 #### Defined in
 
-dist/generated/types.d.ts:20829
+dist/generated/types.d.ts:21169
 
 ___
 
@@ -72599,7 +73823,7 @@ Searches for outgoing messages with content of the type messageDocument in all c
 
 #### Defined in
 
-dist/generated/types.d.ts:47176
+dist/generated/types.d.ts:47777
 
 ___
 
@@ -72619,7 +73843,7 @@ Searches for outgoing messages with content of the type messageDocument in all c
 
 #### Defined in
 
-dist/generated/types.d.ts:47157
+dist/generated/types.d.ts:47758
 
 ___
 
@@ -72647,7 +73871,7 @@ Searches a public chat by its username. Currently, only private chats, supergrou
 
 #### Defined in
 
-dist/generated/types.d.ts:46573
+dist/generated/types.d.ts:47174
 
 ___
 
@@ -72666,7 +73890,7 @@ Searches a public chat by its username. Currently, only private chats, supergrou
 
 #### Defined in
 
-dist/generated/types.d.ts:46559
+dist/generated/types.d.ts:47160
 
 ___
 
@@ -72696,7 +73920,7 @@ Searches public chats by looking for specified query in their username and title
 
 #### Defined in
 
-dist/generated/types.d.ts:46592
+dist/generated/types.d.ts:47193
 
 ___
 
@@ -72716,7 +73940,7 @@ Searches public chats by looking for specified query in their username and title
 
 #### Defined in
 
-dist/generated/types.d.ts:46576
+dist/generated/types.d.ts:47177
 
 ___
 
@@ -72744,7 +73968,7 @@ Searches for messages in secret chats. Returns the results in reverse chronologi
 
 #### Defined in
 
-dist/generated/types.d.ts:47129
+dist/generated/types.d.ts:47730
 
 ___
 
@@ -72767,7 +73991,7 @@ Searches for messages in secret chats. Returns the results in reverse chronologi
 
 #### Defined in
 
-dist/generated/types.d.ts:47095
+dist/generated/types.d.ts:47696
 
 ___
 
@@ -72795,7 +74019,7 @@ Searches for a sticker set by its name
 
 #### Defined in
 
-dist/generated/types.d.ts:53526
+dist/generated/types.d.ts:54210
 
 ___
 
@@ -72814,7 +74038,7 @@ Searches for a sticker set by its name
 
 #### Defined in
 
-dist/generated/types.d.ts:53512
+dist/generated/types.d.ts:54196
 
 ___
 
@@ -72842,7 +74066,7 @@ Searches for ordinary sticker sets by looking for specified query in their title
 
 #### Defined in
 
-dist/generated/types.d.ts:53568
+dist/generated/types.d.ts:54252
 
 ___
 
@@ -72861,7 +74085,7 @@ Searches for ordinary sticker sets by looking for specified query in their title
 
 #### Defined in
 
-dist/generated/types.d.ts:53554
+dist/generated/types.d.ts:54238
 
 ___
 
@@ -72889,7 +74113,7 @@ Searches for stickers from public sticker sets that correspond to any of the giv
 
 #### Defined in
 
-dist/generated/types.d.ts:53394
+dist/generated/types.d.ts:54078
 
 ___
 
@@ -72910,7 +74134,7 @@ Searches for stickers from public sticker sets that correspond to any of the giv
 
 #### Defined in
 
-dist/generated/types.d.ts:53370
+dist/generated/types.d.ts:54054
 
 ___
 
@@ -72938,7 +74162,7 @@ Searches a user by their phone number. Returns a 404 error if the user can't be 
 
 #### Defined in
 
-dist/generated/types.d.ts:53295
+dist/generated/types.d.ts:53979
 
 ___
 
@@ -72957,7 +74181,7 @@ Searches a user by their phone number. Returns a 404 error if the user can't be 
 
 #### Defined in
 
-dist/generated/types.d.ts:53281
+dist/generated/types.d.ts:53965
 
 ___
 
@@ -72985,7 +74209,7 @@ Searches a user by a token from the user's link
 
 #### Defined in
 
-dist/generated/types.d.ts:54249
+dist/generated/types.d.ts:54933
 
 ___
 
@@ -73004,7 +74228,55 @@ Searches a user by a token from the user's link
 
 #### Defined in
 
-dist/generated/types.d.ts:54235
+dist/generated/types.d.ts:54919
+
+___
+
+### searchWebApp
+
+Ƭ **searchWebApp**: (`parameters`: [`searchWebApp$Input`](index.types.default.md#searchwebapp$input)) => [`FoundWebApp`](index.types.default.md#foundwebapp)
+
+#### Type declaration
+
+▸ (`parameters`): [`FoundWebApp`](index.types.default.md#foundwebapp)
+
+Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`searchWebApp$Input`](index.types.default.md#searchwebapp$input) | [searchWebApp$Input](index.types.md#searchwebapp$input) |
+
+##### Returns
+
+[`FoundWebApp`](index.types.default.md#foundwebapp)
+
+[FoundWebApp](index.types.md#foundwebapp)
+
+#### Defined in
+
+dist/generated/types.d.ts:49985
+
+___
+
+### searchWebApp$Input
+
+Ƭ **searchWebApp$Input**: `Object`
+
+Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"searchWebApp"`` | - |
+| `bot_user_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the target bot |
+| `web_app_short_name?` | `string` | Short name of the Web App |
+
+#### Defined in
+
+dist/generated/types.d.ts:49966
 
 ___
 
@@ -73023,7 +74295,7 @@ Contains a value representing a number of seconds
 
 #### Defined in
 
-dist/generated/types.d.ts:33902
+dist/generated/types.d.ts:34359
 
 ___
 
@@ -73043,7 +74315,7 @@ Contains a value representing a number of seconds
 
 #### Defined in
 
-dist/generated/types.d.ts:33914
+dist/generated/types.d.ts:34371
 
 ___
 
@@ -73060,14 +74332,14 @@ Represents a secret chat
 | `_` | ``"secretChat"`` | - |
 | `id` | [`int32`](index.types.default.md#int32-1) | Secret chat identifier |
 | `is_outbound` | [`Bool`](index.types.default.md#bool) | True, if the chat was created by the current user; false otherwise |
-| `key_hash` | [`bytes`](index.types.default.md#bytes-1) | Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 little-endian bytes, which must be split into groups of 2 bits, each denoting a pixel of one of 4 colors FFFFFF, D5E6F3, 2D5775, and 2F99C9.    -The pixels must be used to make a 12x12 square image filled from left to right, top to bottom. Alternatively, the first 32 bytes of the hash can be converted to the hexadecimal format and printed as 32 2-digit hex numbers |
-| `layer` | [`int32`](index.types.default.md#int32-1) | Secret chat layer; determines features supported by the chat partner's application. Nested text entities and underline and strikethrough entities are supported if the layer >= 101,    -files bigger than 2000MB are supported if the layer >= 143, spoiler and custom emoji text entities are supported if the layer >= 144 |
+| `key_hash` | [`bytes`](index.types.default.md#bytes-1) | Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 little-endian bytes, which must be split into groups of 2 bits, each denoting a pixel of one of 4 colors FFFFFF, D5E6F3, 2D5775, and 2F99C9. -The pixels must be used to make a 12x12 square image filled from left to right, top to bottom. Alternatively, the first 32 bytes of the hash can be converted to the hexadecimal format and printed as 32 2-digit hex numbers |
+| `layer` | [`int32`](index.types.default.md#int32-1) | Secret chat layer; determines features supported by the chat partner's application. Nested text entities and underline and strikethrough entities are supported if the layer >= 101, -files bigger than 2000MB are supported if the layer >= 143, spoiler and custom emoji text entities are supported if the layer >= 144 |
 | `state` | [`SecretChatState`](index.types.default.md#secretchatstate) | State of the secret chat |
 | `user_id` | [`int53`](index.types.default.md#int53-1) | Identifier of the chat partner |
 
 #### Defined in
 
-dist/generated/types.d.ts:8040
+dist/generated/types.d.ts:8138
 
 ___
 
@@ -73085,14 +74357,14 @@ Represents a secret chat
 | `_` | ``"secretChat"`` | - |
 | `id?` | [`int32`](index.types.default.md#int32-1) | Secret chat identifier |
 | `is_outbound?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the chat was created by the current user; false otherwise |
-| `key_hash?` | [`bytes`](index.types.default.md#bytes-1) | Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 little-endian bytes, which must be split into groups of 2 bits, each denoting a pixel of one of 4 colors FFFFFF, D5E6F3, 2D5775, and 2F99C9.    -The pixels must be used to make a 12x12 square image filled from left to right, top to bottom. Alternatively, the first 32 bytes of the hash can be converted to the hexadecimal format and printed as 32 2-digit hex numbers |
-| `layer?` | [`int32`](index.types.default.md#int32-1) | Secret chat layer; determines features supported by the chat partner's application. Nested text entities and underline and strikethrough entities are supported if the layer >= 101,    -files bigger than 2000MB are supported if the layer >= 143, spoiler and custom emoji text entities are supported if the layer >= 144 |
+| `key_hash?` | [`bytes`](index.types.default.md#bytes-1) | Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 little-endian bytes, which must be split into groups of 2 bits, each denoting a pixel of one of 4 colors FFFFFF, D5E6F3, 2D5775, and 2F99C9. -The pixels must be used to make a 12x12 square image filled from left to right, top to bottom. Alternatively, the first 32 bytes of the hash can be converted to the hexadecimal format and printed as 32 2-digit hex numbers |
+| `layer?` | [`int32`](index.types.default.md#int32-1) | Secret chat layer; determines features supported by the chat partner's application. Nested text entities and underline and strikethrough entities are supported if the layer >= 101, -files bigger than 2000MB are supported if the layer >= 143, spoiler and custom emoji text entities are supported if the layer >= 144 |
 | `state?` | [`SecretChatState$Input`](index.types.default.md#secretchatstate$input) | State of the secret chat |
 | `user_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the chat partner |
 
 #### Defined in
 
-dist/generated/types.d.ts:8081
+dist/generated/types.d.ts:8179
 
 ___
 
@@ -73110,7 +74382,7 @@ The secret chat is closed
 
 #### Defined in
 
-dist/generated/types.d.ts:8029
+dist/generated/types.d.ts:8127
 
 ___
 
@@ -73129,7 +74401,7 @@ The secret chat is closed
 
 #### Defined in
 
-dist/generated/types.d.ts:8036
+dist/generated/types.d.ts:8134
 
 ___
 
@@ -73147,7 +74419,7 @@ The secret chat is not yet created; waiting for the other user to get online
 
 #### Defined in
 
-dist/generated/types.d.ts:8007
+dist/generated/types.d.ts:8105
 
 ___
 
@@ -73166,7 +74438,7 @@ The secret chat is not yet created; waiting for the other user to get online
 
 #### Defined in
 
-dist/generated/types.d.ts:8014
+dist/generated/types.d.ts:8112
 
 ___
 
@@ -73184,7 +74456,7 @@ The secret chat is ready to use
 
 #### Defined in
 
-dist/generated/types.d.ts:8018
+dist/generated/types.d.ts:8116
 
 ___
 
@@ -73203,7 +74475,7 @@ The secret chat is ready to use
 
 #### Defined in
 
-dist/generated/types.d.ts:8025
+dist/generated/types.d.ts:8123
 
 ___
 
@@ -73231,7 +74503,7 @@ Sends Firebase Authentication SMS to the phone number of the user. Works only wh
 
 #### Defined in
 
-dist/generated/types.d.ts:45803
+dist/generated/types.d.ts:46404
 
 ___
 
@@ -73250,7 +74522,7 @@ Sends Firebase Authentication SMS to the phone number of the user. Works only wh
 
 #### Defined in
 
-dist/generated/types.d.ts:45789
+dist/generated/types.d.ts:46390
 
 ___
 
@@ -73278,7 +74550,7 @@ Invites a bot to a chat (if it is not yet a member) and sends it the /start comm
 
 #### Defined in
 
-dist/generated/types.d.ts:47800
+dist/generated/types.d.ts:48401
 
 ___
 
@@ -73299,7 +74571,7 @@ Invites a bot to a chat (if it is not yet a member) and sends it the /start comm
 
 #### Defined in
 
-dist/generated/types.d.ts:47776
+dist/generated/types.d.ts:48377
 
 ___
 
@@ -73327,7 +74599,7 @@ Sends debug information for a call to Telegram servers
 
 #### Defined in
 
-dist/generated/types.d.ts:52355
+dist/generated/types.d.ts:53039
 
 ___
 
@@ -73347,7 +74619,7 @@ Sends debug information for a call to Telegram servers
 
 #### Defined in
 
-dist/generated/types.d.ts:52336
+dist/generated/types.d.ts:53020
 
 ___
 
@@ -73375,7 +74647,7 @@ Sends log file for a call to Telegram servers
 
 #### Defined in
 
-dist/generated/types.d.ts:52376
+dist/generated/types.d.ts:53060
 
 ___
 
@@ -73395,7 +74667,7 @@ Sends log file for a call to Telegram servers
 
 #### Defined in
 
-dist/generated/types.d.ts:52357
+dist/generated/types.d.ts:53041
 
 ___
 
@@ -73423,7 +74695,7 @@ Sends a call rating
 
 #### Defined in
 
-dist/generated/types.d.ts:52334
+dist/generated/types.d.ts:53018
 
 ___
 
@@ -73445,7 +74717,7 @@ Sends a call rating
 
 #### Defined in
 
-dist/generated/types.d.ts:52305
+dist/generated/types.d.ts:52989
 
 ___
 
@@ -73473,7 +74745,7 @@ Sends call signaling data
 
 #### Defined in
 
-dist/generated/types.d.ts:52267
+dist/generated/types.d.ts:52951
 
 ___
 
@@ -73493,7 +74765,7 @@ Sends call signaling data
 
 #### Defined in
 
-dist/generated/types.d.ts:52248
+dist/generated/types.d.ts:52932
 
 ___
 
@@ -73521,7 +74793,7 @@ Sends a notification about user activity in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:49791
+dist/generated/types.d.ts:50454
 
 ___
 
@@ -73542,7 +74814,7 @@ Sends a notification about user activity in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:49767
+dist/generated/types.d.ts:50430
 
 ___
 
@@ -73570,7 +74842,7 @@ Sends a notification about a screenshot taken in a chat. Supported only in priva
 
 #### Defined in
 
-dist/generated/types.d.ts:47937
+dist/generated/types.d.ts:48538
 
 ___
 
@@ -73589,7 +74861,7 @@ Sends a notification about a screenshot taken in a chat. Supported only in priva
 
 #### Defined in
 
-dist/generated/types.d.ts:47923
+dist/generated/types.d.ts:48524
 
 ___
 
@@ -73617,7 +74889,7 @@ Sends a custom request; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:56762
+dist/generated/types.d.ts:57658
 
 ___
 
@@ -73637,7 +74909,7 @@ Sends a custom request; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:56743
+dist/generated/types.d.ts:57639
 
 ___
 
@@ -73665,7 +74937,7 @@ Sends a code to verify an email address to be added to a user's Telegram Passpor
 
 #### Defined in
 
-dist/generated/types.d.ts:56178
+dist/generated/types.d.ts:56936
 
 ___
 
@@ -73684,7 +74956,7 @@ Sends a code to verify an email address to be added to a user's Telegram Passpor
 
 #### Defined in
 
-dist/generated/types.d.ts:56164
+dist/generated/types.d.ts:56922
 
 ___
 
@@ -73712,7 +74984,7 @@ Sends the result of an inline query as a message. Returns the sent message. Alwa
 
 #### Defined in
 
-dist/generated/types.d.ts:47846
+dist/generated/types.d.ts:48447
 
 ___
 
@@ -73737,7 +75009,7 @@ Sends the result of an inline query as a message. Returns the sent message. Alwa
 
 #### Defined in
 
-dist/generated/types.d.ts:47802
+dist/generated/types.d.ts:48403
 
 ___
 
@@ -73765,7 +75037,7 @@ Sends a message. Returns the sent message
 
 #### Defined in
 
-dist/generated/types.d.ts:47733
+dist/generated/types.d.ts:48334
 
 ___
 
@@ -73789,7 +75061,7 @@ Sends a message. Returns the sent message
 
 #### Defined in
 
-dist/generated/types.d.ts:47694
+dist/generated/types.d.ts:48295
 
 ___
 
@@ -73817,7 +75089,7 @@ Sends 2-10 messages grouped together into an album. Currently, only audio, docum
 
 #### Defined in
 
-dist/generated/types.d.ts:47774
+dist/generated/types.d.ts:48375
 
 ___
 
@@ -73841,7 +75113,7 @@ Sends 2-10 messages grouped together into an album. Currently, only audio, docum
 
 #### Defined in
 
-dist/generated/types.d.ts:47735
+dist/generated/types.d.ts:48336
 
 ___
 
@@ -73869,7 +75141,7 @@ Sends a Telegram Passport authorization form, effectively sharing data with the 
 
 #### Defined in
 
-dist/generated/types.d.ts:56278
+dist/generated/types.d.ts:57036
 
 ___
 
@@ -73889,7 +75161,7 @@ Sends a Telegram Passport authorization form, effectively sharing data with the 
 
 #### Defined in
 
-dist/generated/types.d.ts:56259
+dist/generated/types.d.ts:57017
 
 ___
 
@@ -73917,7 +75189,7 @@ Sends a filled-out payment form to the bot for final verification
 
 #### Defined in
 
-dist/generated/types.d.ts:55009
+dist/generated/types.d.ts:55767
 
 ___
 
@@ -73941,7 +75213,7 @@ Sends a filled-out payment form to the bot for final verification
 
 #### Defined in
 
-dist/generated/types.d.ts:54970
+dist/generated/types.d.ts:55728
 
 ___
 
@@ -73969,7 +75241,7 @@ Sends phone number confirmation code to handle links of the type internalLinkTyp
 
 #### Defined in
 
-dist/generated/types.d.ts:56304
+dist/generated/types.d.ts:57062
 
 ___
 
@@ -73990,7 +75262,7 @@ Sends phone number confirmation code to handle links of the type internalLinkTyp
 
 #### Defined in
 
-dist/generated/types.d.ts:56280
+dist/generated/types.d.ts:57038
 
 ___
 
@@ -74018,7 +75290,7 @@ Sends a code to verify a phone number to be added to a user's Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:56135
+dist/generated/types.d.ts:56893
 
 ___
 
@@ -74038,7 +75310,7 @@ Sends a code to verify a phone number to be added to a user's Telegram Passport
 
 #### Defined in
 
-dist/generated/types.d.ts:56116
+dist/generated/types.d.ts:56874
 
 ___
 
@@ -74066,7 +75338,7 @@ Sends data received from a keyboardButtonTypeWebApp Web App to a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:49425
+dist/generated/types.d.ts:50088
 
 ___
 
@@ -74087,7 +75359,7 @@ Sends data received from a keyboardButtonTypeWebApp Web App to a bot
 
 #### Defined in
 
-dist/generated/types.d.ts:49401
+dist/generated/types.d.ts:50064
 
 ___
 
@@ -74106,7 +75378,7 @@ Information about the message sent by answerWebAppQuery
 
 #### Defined in
 
-dist/generated/types.d.ts:23830
+dist/generated/types.d.ts:24180
 
 ___
 
@@ -74126,7 +75398,7 @@ Information about the message sent by answerWebAppQuery
 
 #### Defined in
 
-dist/generated/types.d.ts:23842
+dist/generated/types.d.ts:24192
 
 ___
 
@@ -74162,7 +75434,7 @@ Contains information about one session in a Telegram application used by the cur
 
 #### Defined in
 
-dist/generated/types.d.ts:31049
+dist/generated/types.d.ts:31462
 
 ___
 
@@ -74199,7 +75471,7 @@ Contains information about one session in a Telegram application used by the cur
 
 #### Defined in
 
-dist/generated/types.d.ts:31146
+dist/generated/types.d.ts:31559
 
 ___
 
@@ -74217,7 +75489,7 @@ The session is running on an Android device
 
 #### Defined in
 
-dist/generated/types.d.ts:30862
+dist/generated/types.d.ts:31275
 
 ___
 
@@ -74236,7 +75508,7 @@ The session is running on an Android device
 
 #### Defined in
 
-dist/generated/types.d.ts:30869
+dist/generated/types.d.ts:31282
 
 ___
 
@@ -74254,7 +75526,7 @@ The session is running on a generic Apple device
 
 #### Defined in
 
-dist/generated/types.d.ts:30873
+dist/generated/types.d.ts:31286
 
 ___
 
@@ -74273,7 +75545,7 @@ The session is running on a generic Apple device
 
 #### Defined in
 
-dist/generated/types.d.ts:30880
+dist/generated/types.d.ts:31293
 
 ___
 
@@ -74291,7 +75563,7 @@ The session is running on the Brave browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30884
+dist/generated/types.d.ts:31297
 
 ___
 
@@ -74310,7 +75582,7 @@ The session is running on the Brave browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30891
+dist/generated/types.d.ts:31304
 
 ___
 
@@ -74328,7 +75600,7 @@ The session is running on the Chrome browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30895
+dist/generated/types.d.ts:31308
 
 ___
 
@@ -74347,7 +75619,7 @@ The session is running on the Chrome browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30902
+dist/generated/types.d.ts:31315
 
 ___
 
@@ -74365,7 +75637,7 @@ The session is running on the Edge browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30906
+dist/generated/types.d.ts:31319
 
 ___
 
@@ -74384,7 +75656,7 @@ The session is running on the Edge browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30913
+dist/generated/types.d.ts:31326
 
 ___
 
@@ -74402,7 +75674,7 @@ The session is running on the Firefox browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30917
+dist/generated/types.d.ts:31330
 
 ___
 
@@ -74421,7 +75693,7 @@ The session is running on the Firefox browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30924
+dist/generated/types.d.ts:31337
 
 ___
 
@@ -74439,7 +75711,7 @@ The session is running on an iPad device
 
 #### Defined in
 
-dist/generated/types.d.ts:30928
+dist/generated/types.d.ts:31341
 
 ___
 
@@ -74458,7 +75730,7 @@ The session is running on an iPad device
 
 #### Defined in
 
-dist/generated/types.d.ts:30935
+dist/generated/types.d.ts:31348
 
 ___
 
@@ -74476,7 +75748,7 @@ The session is running on an iPhone device
 
 #### Defined in
 
-dist/generated/types.d.ts:30939
+dist/generated/types.d.ts:31352
 
 ___
 
@@ -74495,7 +75767,7 @@ The session is running on an iPhone device
 
 #### Defined in
 
-dist/generated/types.d.ts:30946
+dist/generated/types.d.ts:31359
 
 ___
 
@@ -74513,7 +75785,7 @@ The session is running on a Linux device
 
 #### Defined in
 
-dist/generated/types.d.ts:30950
+dist/generated/types.d.ts:31363
 
 ___
 
@@ -74532,7 +75804,7 @@ The session is running on a Linux device
 
 #### Defined in
 
-dist/generated/types.d.ts:30957
+dist/generated/types.d.ts:31370
 
 ___
 
@@ -74550,7 +75822,7 @@ The session is running on a Mac device
 
 #### Defined in
 
-dist/generated/types.d.ts:30961
+dist/generated/types.d.ts:31374
 
 ___
 
@@ -74569,7 +75841,7 @@ The session is running on a Mac device
 
 #### Defined in
 
-dist/generated/types.d.ts:30968
+dist/generated/types.d.ts:31381
 
 ___
 
@@ -74587,7 +75859,7 @@ The session is running on the Opera browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30972
+dist/generated/types.d.ts:31385
 
 ___
 
@@ -74606,7 +75878,7 @@ The session is running on the Opera browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30979
+dist/generated/types.d.ts:31392
 
 ___
 
@@ -74624,7 +75896,7 @@ The session is running on the Safari browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30983
+dist/generated/types.d.ts:31396
 
 ___
 
@@ -74643,7 +75915,7 @@ The session is running on the Safari browser
 
 #### Defined in
 
-dist/generated/types.d.ts:30990
+dist/generated/types.d.ts:31403
 
 ___
 
@@ -74661,7 +75933,7 @@ The session is running on an Ubuntu device
 
 #### Defined in
 
-dist/generated/types.d.ts:30994
+dist/generated/types.d.ts:31407
 
 ___
 
@@ -74680,7 +75952,7 @@ The session is running on an Ubuntu device
 
 #### Defined in
 
-dist/generated/types.d.ts:31001
+dist/generated/types.d.ts:31414
 
 ___
 
@@ -74698,7 +75970,7 @@ The session is running on an unknown type of device
 
 #### Defined in
 
-dist/generated/types.d.ts:31005
+dist/generated/types.d.ts:31418
 
 ___
 
@@ -74717,7 +75989,7 @@ The session is running on an unknown type of device
 
 #### Defined in
 
-dist/generated/types.d.ts:31012
+dist/generated/types.d.ts:31425
 
 ___
 
@@ -74735,7 +76007,7 @@ The session is running on the Vivaldi browser
 
 #### Defined in
 
-dist/generated/types.d.ts:31016
+dist/generated/types.d.ts:31429
 
 ___
 
@@ -74754,7 +76026,7 @@ The session is running on the Vivaldi browser
 
 #### Defined in
 
-dist/generated/types.d.ts:31023
+dist/generated/types.d.ts:31436
 
 ___
 
@@ -74772,7 +76044,7 @@ The session is running on a Windows device
 
 #### Defined in
 
-dist/generated/types.d.ts:31027
+dist/generated/types.d.ts:31440
 
 ___
 
@@ -74791,7 +76063,7 @@ The session is running on a Windows device
 
 #### Defined in
 
-dist/generated/types.d.ts:31034
+dist/generated/types.d.ts:31447
 
 ___
 
@@ -74809,7 +76081,7 @@ The session is running on an Xbox console
 
 #### Defined in
 
-dist/generated/types.d.ts:31038
+dist/generated/types.d.ts:31451
 
 ___
 
@@ -74828,7 +76100,7 @@ The session is running on an Xbox console
 
 #### Defined in
 
-dist/generated/types.d.ts:31045
+dist/generated/types.d.ts:31458
 
 ___
 
@@ -74848,7 +76120,7 @@ Contains a list of sessions
 
 #### Defined in
 
-dist/generated/types.d.ts:31240
+dist/generated/types.d.ts:31653
 
 ___
 
@@ -74869,7 +76141,7 @@ Contains a list of sessions
 
 #### Defined in
 
-dist/generated/types.d.ts:31257
+dist/generated/types.d.ts:31670
 
 ___
 
@@ -74897,7 +76169,7 @@ Changes the period of inactivity after which the account of the current user wil
 
 #### Defined in
 
-dist/generated/types.d.ts:55517
+dist/generated/types.d.ts:56275
 
 ___
 
@@ -74916,7 +76188,7 @@ Changes the period of inactivity after which the account of the current user wil
 
 #### Defined in
 
-dist/generated/types.d.ts:55503
+dist/generated/types.d.ts:56261
 
 ___
 
@@ -74944,7 +76216,7 @@ Succeeds after a specified amount of time has passed. Can be called before initi
 
 #### Defined in
 
-dist/generated/types.d.ts:56799
+dist/generated/types.d.ts:57695
 
 ___
 
@@ -74963,7 +76235,7 @@ Succeeds after a specified amount of time has passed. Can be called before initi
 
 #### Defined in
 
-dist/generated/types.d.ts:56785
+dist/generated/types.d.ts:57681
 
 ___
 
@@ -74991,7 +76263,7 @@ Sets the email address of the user and sends an authentication code to the email
 
 #### Defined in
 
-dist/generated/types.d.ts:45632
+dist/generated/types.d.ts:46233
 
 ___
 
@@ -75010,7 +76282,7 @@ Sets the email address of the user and sends an authentication code to the email
 
 #### Defined in
 
-dist/generated/types.d.ts:45618
+dist/generated/types.d.ts:46219
 
 ___
 
@@ -75040,7 +76312,7 @@ Sets the phone number of the user and sends an authentication code to the user. 
 
 #### Defined in
 
-dist/generated/types.d.ts:45616
+dist/generated/types.d.ts:46217
 
 ___
 
@@ -75061,7 +76333,7 @@ Sets the phone number of the user and sends an authentication code to the user. 
 
 #### Defined in
 
-dist/generated/types.d.ts:45595
+dist/generated/types.d.ts:46196
 
 ___
 
@@ -75089,7 +76361,7 @@ Sets auto-download settings
 
 #### Defined in
 
-dist/generated/types.d.ts:55944
+dist/generated/types.d.ts:56702
 
 ___
 
@@ -75109,7 +76381,7 @@ Sets auto-download settings
 
 #### Defined in
 
-dist/generated/types.d.ts:55925
+dist/generated/types.d.ts:56683
 
 ___
 
@@ -75137,7 +76409,7 @@ Sets autosave settings for the given scope. The method is guaranteed to work onl
 
 #### Defined in
 
-dist/generated/types.d.ts:55976
+dist/generated/types.d.ts:56734
 
 ___
 
@@ -75157,7 +76429,7 @@ Sets autosave settings for the given scope. The method is guaranteed to work onl
 
 #### Defined in
 
-dist/generated/types.d.ts:55957
+dist/generated/types.d.ts:56715
 
 ___
 
@@ -75185,7 +76457,7 @@ Changes the background selected by the user; adds background to the list of inst
 
 #### Defined in
 
-dist/generated/types.d.ts:55169
+dist/generated/types.d.ts:55927
 
 ___
 
@@ -75206,7 +76478,7 @@ Changes the background selected by the user; adds background to the list of inst
 
 #### Defined in
 
-dist/generated/types.d.ts:55145
+dist/generated/types.d.ts:55903
 
 ___
 
@@ -75234,7 +76506,7 @@ Changes the bio of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54084
+dist/generated/types.d.ts:54768
 
 ___
 
@@ -75253,7 +76525,103 @@ Changes the bio of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54070
+dist/generated/types.d.ts:54754
+
+___
+
+### setBotInfoDescription
+
+Ƭ **setBotInfoDescription**: (`parameters`: [`setBotInfoDescription$Input`](index.types.default.md#setbotinfodescription$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Sets the text shown in the chat with the bot if the chat is empty; bots only
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBotInfoDescription$Input`](index.types.default.md#setbotinfodescription$input) | [setBotInfoDescription$Input](index.types.md#setbotinfodescription$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:55091
+
+___
+
+### setBotInfoDescription$Input
+
+Ƭ **setBotInfoDescription$Input**: `Object`
+
+Sets the text shown in the chat with the bot if the chat is empty; bots only
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"setBotInfoDescription"`` | - |
+| `description?` | `string` | Sets the text shown in the chat with the bot if the chat is empty; bots only |
+| `language_code?` | `string` | A two-letter ISO 639-1 language code. If empty, the description will be shown to all users, for which language there are no dedicated description |
+
+#### Defined in
+
+dist/generated/types.d.ts:55072
+
+___
+
+### setBotInfoShortDescription
+
+Ƭ **setBotInfoShortDescription**: (`parameters`: [`setBotInfoShortDescription$Input`](index.types.default.md#setbotinfoshortdescription$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Sets the text shown on the bot's profile page and sent together with the link when users share the bot; bots only
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBotInfoShortDescription$Input`](index.types.default.md#setbotinfoshortdescription$input) | [setBotInfoShortDescription$Input](index.types.md#setbotinfoshortdescription$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:55128
+
+___
+
+### setBotInfoShortDescription$Input
+
+Ƭ **setBotInfoShortDescription$Input**: `Object`
+
+Sets the text shown on the bot's profile page and sent together with the link when users share the bot; bots only
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"setBotInfoShortDescription"`` | - |
+| `language_code?` | `string` | A two-letter ISO 639-1 language code. If empty, the short description will be shown to all users, for which language there are no dedicated description |
+| `short_description?` | `string` | New bot's short description on the specified language |
+
+#### Defined in
+
+dist/generated/types.d.ts:55109
 
 ___
 
@@ -75281,7 +76649,7 @@ Informs the server about the number of pending bot updates if they haven't been 
 
 #### Defined in
 
-dist/generated/types.d.ts:56352
+dist/generated/types.d.ts:57110
 
 ___
 
@@ -75301,7 +76669,7 @@ Informs the server about the number of pending bot updates if they haven't been 
 
 #### Defined in
 
-dist/generated/types.d.ts:56333
+dist/generated/types.d.ts:57091
 
 ___
 
@@ -75329,7 +76697,7 @@ Changes reactions, available in a chat. Available for basic groups, supergroups,
 
 #### Defined in
 
-dist/generated/types.d.ts:50626
+dist/generated/types.d.ts:51310
 
 ___
 
@@ -75349,7 +76717,7 @@ Changes reactions, available in a chat. Available for basic groups, supergroups,
 
 #### Defined in
 
-dist/generated/types.d.ts:50607
+dist/generated/types.d.ts:51291
 
 ___
 
@@ -75377,7 +76745,7 @@ Changes application-specific data associated with a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50647
+dist/generated/types.d.ts:51331
 
 ___
 
@@ -75397,7 +76765,7 @@ Changes application-specific data associated with a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50628
+dist/generated/types.d.ts:51312
 
 ___
 
@@ -75425,7 +76793,7 @@ Changes information about a chat. Available for basic groups, supergroups, and c
 
 #### Defined in
 
-dist/generated/types.d.ts:50668
+dist/generated/types.d.ts:51352
 
 ___
 
@@ -75445,7 +76813,7 @@ Changes information about a chat. Available for basic groups, supergroups, and c
 
 #### Defined in
 
-dist/generated/types.d.ts:50649
+dist/generated/types.d.ts:51333
 
 ___
 
@@ -75473,7 +76841,7 @@ Changes the discussion group of a channel chat; requires can_change_info adminis
 
 #### Defined in
 
-dist/generated/types.d.ts:50691
+dist/generated/types.d.ts:51375
 
 ___
 
@@ -75489,11 +76857,11 @@ Changes the discussion group of a channel chat; requires can_change_info adminis
 | :------ | :------ | :------ |
 | `_` | ``"setChatDiscussionGroup"`` | - |
 | `chat_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the channel chat. Pass 0 to remove a link from the supergroup passed in the second argument to a linked channel chat (requires can_pin_messages rights in the supergroup) |
-| `discussion_chat_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of a new channel's discussion group. Use 0 to remove the discussion group. Use the method getSuitableDiscussionChats to find all suitable groups.    -Basic group chats must be first upgraded to supergroup chats. If new chat members don't have access to old messages in the supergroup, then toggleSupergroupIsAllHistoryAvailable must be used first to change that |
+| `discussion_chat_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of a new channel's discussion group. Use 0 to remove the discussion group. Use the method getSuitableDiscussionChats to find all suitable groups. -Basic group chats must be first upgraded to supergroup chats. If new chat members don't have access to old messages in the supergroup, then toggleSupergroupIsAllHistoryAvailable must be used first to change that |
 
 #### Defined in
 
-dist/generated/types.d.ts:50670
+dist/generated/types.d.ts:51354
 
 ___
 
@@ -75521,7 +76889,7 @@ Changes the draft message in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50500
+dist/generated/types.d.ts:51184
 
 ___
 
@@ -75542,7 +76910,7 @@ Changes the draft message in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50476
+dist/generated/types.d.ts:51160
 
 ___
 
@@ -75570,7 +76938,7 @@ Changes the location of a chat. Available only for some location-based supergrou
 
 #### Defined in
 
-dist/generated/types.d.ts:50712
+dist/generated/types.d.ts:51396
 
 ___
 
@@ -75590,7 +76958,7 @@ Changes the location of a chat. Available only for some location-based supergrou
 
 #### Defined in
 
-dist/generated/types.d.ts:50693
+dist/generated/types.d.ts:51377
 
 ___
 
@@ -75618,7 +76986,7 @@ Changes the status of a chat member, needs appropriate privileges. This function
 
 #### Defined in
 
-dist/generated/types.d.ts:50927
+dist/generated/types.d.ts:51611
 
 ___
 
@@ -75639,7 +77007,7 @@ Changes the status of a chat member, needs appropriate privileges. This function
 
 #### Defined in
 
-dist/generated/types.d.ts:50903
+dist/generated/types.d.ts:51587
 
 ___
 
@@ -75669,7 +77037,7 @@ Changes the message auto-delete or self-destruct (for secret chats) time in a ch
 
 #### Defined in
 
-dist/generated/types.d.ts:50432
+dist/generated/types.d.ts:51116
 
 ___
 
@@ -75690,7 +77058,7 @@ Changes the message auto-delete or self-destruct (for secret chats) time in a ch
 
 #### Defined in
 
-dist/generated/types.d.ts:50411
+dist/generated/types.d.ts:51095
 
 ___
 
@@ -75718,7 +77086,7 @@ Selects a message sender to send messages in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:47692
+dist/generated/types.d.ts:48293
 
 ___
 
@@ -75738,7 +77106,7 @@ Selects a message sender to send messages in a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:47673
+dist/generated/types.d.ts:48274
 
 ___
 
@@ -75766,7 +77134,7 @@ Changes the notification settings of a chat. Notification settings of a chat wit
 
 #### Defined in
 
-dist/generated/types.d.ts:50521
+dist/generated/types.d.ts:51205
 
 ___
 
@@ -75786,7 +77154,7 @@ Changes the notification settings of a chat. Notification settings of a chat wit
 
 #### Defined in
 
-dist/generated/types.d.ts:50502
+dist/generated/types.d.ts:51186
 
 ___
 
@@ -75814,7 +77182,7 @@ Changes the chat members permissions. Supported only for basic groups and superg
 
 #### Defined in
 
-dist/generated/types.d.ts:50453
+dist/generated/types.d.ts:51137
 
 ___
 
@@ -75834,7 +77202,7 @@ Changes the chat members permissions. Supported only for basic groups and superg
 
 #### Defined in
 
-dist/generated/types.d.ts:50434
+dist/generated/types.d.ts:51118
 
 ___
 
@@ -75862,7 +77230,7 @@ Changes the photo of a chat. Supported only for basic groups, supergroups and ch
 
 #### Defined in
 
-dist/generated/types.d.ts:50408
+dist/generated/types.d.ts:51092
 
 ___
 
@@ -75882,7 +77250,7 @@ Changes the photo of a chat. Supported only for basic groups, supergroups and ch
 
 #### Defined in
 
-dist/generated/types.d.ts:50389
+dist/generated/types.d.ts:51073
 
 ___
 
@@ -75910,7 +77278,7 @@ Changes the slow mode delay of a chat. Available only for supergroups; requires 
 
 #### Defined in
 
-dist/generated/types.d.ts:50733
+dist/generated/types.d.ts:51417
 
 ___
 
@@ -75930,7 +77298,7 @@ Changes the slow mode delay of a chat. Available only for supergroups; requires 
 
 #### Defined in
 
-dist/generated/types.d.ts:50714
+dist/generated/types.d.ts:51398
 
 ___
 
@@ -75958,7 +77326,7 @@ Changes the chat theme. Supported only in private and secret chats
 
 #### Defined in
 
-dist/generated/types.d.ts:50474
+dist/generated/types.d.ts:51158
 
 ___
 
@@ -75978,7 +77346,7 @@ Changes the chat theme. Supported only in private and secret chats
 
 #### Defined in
 
-dist/generated/types.d.ts:50455
+dist/generated/types.d.ts:51139
 
 ___
 
@@ -76006,7 +77374,7 @@ Changes the chat title. Supported only for basic groups, supergroups and channel
 
 #### Defined in
 
-dist/generated/types.d.ts:50387
+dist/generated/types.d.ts:51071
 
 ___
 
@@ -76026,7 +77394,7 @@ Changes the chat title. Supported only for basic groups, supergroups and channel
 
 #### Defined in
 
-dist/generated/types.d.ts:50368
+dist/generated/types.d.ts:51052
 
 ___
 
@@ -76054,7 +77422,7 @@ Sets the list of commands supported by the bot for the given user scope and lang
 
 #### Defined in
 
-dist/generated/types.d.ts:54275
+dist/generated/types.d.ts:54959
 
 ___
 
@@ -76075,7 +77443,55 @@ Sets the list of commands supported by the bot for the given user scope and lang
 
 #### Defined in
 
-dist/generated/types.d.ts:54251
+dist/generated/types.d.ts:54935
+
+___
+
+### setCustomEmojiStickerSetThumbnail
+
+Ƭ **setCustomEmojiStickerSetThumbnail**: (`parameters`: [`setCustomEmojiStickerSetThumbnail$Input`](index.types.default.md#setcustomemojistickersetthumbnail$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Sets a custom emoji sticker set thumbnail; for bots only
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setCustomEmojiStickerSetThumbnail$Input`](index.types.default.md#setcustomemojistickersetthumbnail$input) | [setCustomEmojiStickerSetThumbnail$Input](index.types.md#setcustomemojistickersetthumbnail$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:57294
+
+___
+
+### setCustomEmojiStickerSetThumbnail$Input
+
+Ƭ **setCustomEmojiStickerSetThumbnail$Input**: `Object`
+
+Sets a custom emoji sticker set thumbnail; for bots only
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"setCustomEmojiStickerSetThumbnail"`` | - |
+| `custom_emoji_id?` | [`int64`](index.types.default.md#int64-1) | Identifier of the custom emoji from the sticker set, which will be set as sticker set thumbnail; pass 0 to remove the sticker set thumbnail |
+| `name?` | `string` | Sticker set name |
+
+#### Defined in
+
+dist/generated/types.d.ts:57275
 
 ___
 
@@ -76103,7 +77519,7 @@ Adds or changes a custom local language pack to the current localization target
 
 #### Defined in
 
-dist/generated/types.d.ts:55302
+dist/generated/types.d.ts:56060
 
 ___
 
@@ -76123,7 +77539,7 @@ Adds or changes a custom local language pack to the current localization target
 
 #### Defined in
 
-dist/generated/types.d.ts:55283
+dist/generated/types.d.ts:56041
 
 ___
 
@@ -76151,7 +77567,7 @@ Adds, edits or deletes a string in a custom local language pack. Can be called b
 
 #### Defined in
 
-dist/generated/types.d.ts:55339
+dist/generated/types.d.ts:56097
 
 ___
 
@@ -76171,7 +77587,7 @@ Adds, edits or deletes a string in a custom local language pack. Can be called b
 
 #### Defined in
 
-dist/generated/types.d.ts:55320
+dist/generated/types.d.ts:56078
 
 ___
 
@@ -76199,7 +77615,7 @@ Changes the database encryption key. Usually the encryption key is never changed
 
 #### Defined in
 
-dist/generated/types.d.ts:45898
+dist/generated/types.d.ts:46499
 
 ___
 
@@ -76218,7 +77634,7 @@ Changes the database encryption key. Usually the encryption key is never changed
 
 #### Defined in
 
-dist/generated/types.d.ts:45884
+dist/generated/types.d.ts:46485
 
 ___
 
@@ -76246,7 +77662,7 @@ Sets default administrator rights for adding the bot to channel chats; for bots 
 
 #### Defined in
 
-dist/generated/types.d.ts:54386
+dist/generated/types.d.ts:55070
 
 ___
 
@@ -76265,7 +77681,7 @@ Sets default administrator rights for adding the bot to channel chats; for bots 
 
 #### Defined in
 
-dist/generated/types.d.ts:54372
+dist/generated/types.d.ts:55056
 
 ___
 
@@ -76293,7 +77709,7 @@ Sets default administrator rights for adding the bot to basic group and supergro
 
 #### Defined in
 
-dist/generated/types.d.ts:54370
+dist/generated/types.d.ts:55054
 
 ___
 
@@ -76312,7 +77728,7 @@ Sets default administrator rights for adding the bot to basic group and supergro
 
 #### Defined in
 
-dist/generated/types.d.ts:54356
+dist/generated/types.d.ts:55040
 
 ___
 
@@ -76340,7 +77756,7 @@ Changes the default message auto-delete time for new chats
 
 #### Defined in
 
-dist/generated/types.d.ts:55568
+dist/generated/types.d.ts:56326
 
 ___
 
@@ -76359,7 +77775,7 @@ Changes the default message auto-delete time for new chats
 
 #### Defined in
 
-dist/generated/types.d.ts:55554
+dist/generated/types.d.ts:56312
 
 ___
 
@@ -76387,7 +77803,7 @@ Changes type of default reaction for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:48850
+dist/generated/types.d.ts:49451
 
 ___
 
@@ -76406,7 +77822,7 @@ Changes type of default reaction for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:48836
+dist/generated/types.d.ts:49437
 
 ___
 
@@ -76434,7 +77850,7 @@ Changes the emoji status of the current user; for Telegram Premium users only
 
 #### Defined in
 
-dist/generated/types.d.ts:54158
+dist/generated/types.d.ts:54842
 
 ___
 
@@ -76454,7 +77870,7 @@ Changes the emoji status of the current user; for Telegram Premium users only
 
 #### Defined in
 
-dist/generated/types.d.ts:54139
+dist/generated/types.d.ts:54823
 
 ___
 
@@ -76482,7 +77898,7 @@ Informs TDLib on a file generation progress
 
 #### Defined in
 
-dist/generated/types.d.ts:51536
+dist/generated/types.d.ts:52220
 
 ___
 
@@ -76503,7 +77919,7 @@ Informs TDLib on a file generation progress
 
 #### Defined in
 
-dist/generated/types.d.ts:51512
+dist/generated/types.d.ts:52196
 
 ___
 
@@ -76531,7 +77947,7 @@ Changes the notification settings of a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:48557
+dist/generated/types.d.ts:49158
 
 ___
 
@@ -76552,7 +77968,7 @@ Changes the notification settings of a forum topic
 
 #### Defined in
 
-dist/generated/types.d.ts:48533
+dist/generated/types.d.ts:49134
 
 ___
 
@@ -76580,7 +77996,7 @@ Updates the game score of the specified user in the game; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49661
+dist/generated/types.d.ts:50324
 
 ___
 
@@ -76604,7 +78020,7 @@ Updates the game score of the specified user in the game; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49622
+dist/generated/types.d.ts:50285
 
 ___
 
@@ -76632,7 +78048,7 @@ Informs TDLib that speaking state of a participant of an active group has change
 
 #### Defined in
 
-dist/generated/types.d.ts:52853
+dist/generated/types.d.ts:53537
 
 ___
 
@@ -76653,7 +78069,7 @@ Informs TDLib that speaking state of a participant of an active group has change
 
 #### Defined in
 
-dist/generated/types.d.ts:52829
+dist/generated/types.d.ts:53513
 
 ___
 
@@ -76681,7 +78097,7 @@ Changes volume level of a participant of an active group call. If the current us
 
 #### Defined in
 
-dist/generated/types.d.ts:52905
+dist/generated/types.d.ts:53589
 
 ___
 
@@ -76702,7 +78118,7 @@ Changes volume level of a participant of an active group call. If the current us
 
 #### Defined in
 
-dist/generated/types.d.ts:52881
+dist/generated/types.d.ts:53565
 
 ___
 
@@ -76730,7 +78146,7 @@ Sets group call title. Requires groupCall.can_be_managed group call flag
 
 #### Defined in
 
-dist/generated/types.d.ts:52659
+dist/generated/types.d.ts:53343
 
 ___
 
@@ -76750,7 +78166,7 @@ Sets group call title. Requires groupCall.can_be_managed group call flag
 
 #### Defined in
 
-dist/generated/types.d.ts:52640
+dist/generated/types.d.ts:53324
 
 ___
 
@@ -76778,7 +78194,7 @@ Changes the period of inactivity after which sessions will automatically be term
 
 #### Defined in
 
-dist/generated/types.d.ts:54482
+dist/generated/types.d.ts:55240
 
 ___
 
@@ -76797,7 +78213,7 @@ Changes the period of inactivity after which sessions will automatically be term
 
 #### Defined in
 
-dist/generated/types.d.ts:54468
+dist/generated/types.d.ts:55226
 
 ___
 
@@ -76825,7 +78241,7 @@ Updates the game score of the specified user in a game; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49697
+dist/generated/types.d.ts:50360
 
 ___
 
@@ -76848,7 +78264,7 @@ Updates the game score of the specified user in a game; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:49663
+dist/generated/types.d.ts:50326
 
 ___
 
@@ -76876,7 +78292,7 @@ Changes the location of the current user. Needs to be called if getOption("is_lo
 
 #### Defined in
 
-dist/generated/types.d.ts:54174
+dist/generated/types.d.ts:54858
 
 ___
 
@@ -76895,7 +78311,7 @@ Changes the location of the current user. Needs to be called if getOption("is_lo
 
 #### Defined in
 
-dist/generated/types.d.ts:54160
+dist/generated/types.d.ts:54844
 
 ___
 
@@ -76923,7 +78339,7 @@ Sets new log stream for internal logging of TDLib. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:57091
+dist/generated/types.d.ts:58003
 
 ___
 
@@ -76942,7 +78358,7 @@ Sets new log stream for internal logging of TDLib. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:57077
+dist/generated/types.d.ts:57989
 
 ___
 
@@ -76970,7 +78386,7 @@ Sets the verbosity level for a specified TDLib internal log tag. Can be called s
 
 #### Defined in
 
-dist/generated/types.d.ts:57163
+dist/generated/types.d.ts:58075
 
 ___
 
@@ -76990,7 +78406,7 @@ Sets the verbosity level for a specified TDLib internal log tag. Can be called s
 
 #### Defined in
 
-dist/generated/types.d.ts:57144
+dist/generated/types.d.ts:58056
 
 ___
 
@@ -77018,7 +78434,7 @@ Sets the verbosity level of the internal logging of TDLib. Can be called synchro
 
 #### Defined in
 
-dist/generated/types.d.ts:57120
+dist/generated/types.d.ts:58032
 
 ___
 
@@ -77033,11 +78449,11 @@ Sets the verbosity level of the internal logging of TDLib. Can be called synchro
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"setLogVerbosityLevel"`` | - |
-| `new_verbosity_level?` | [`int32`](index.types.default.md#int32-1) | New value of the verbosity level for logging. Value 0 corresponds to fatal errors, value 1 corresponds to errors, value 2 corresponds to warnings and debug warnings,    -value 3 corresponds to informational, value 4 corresponds to debug, value 5 corresponds to verbose debug, value greater than 5 and up to 1023 can be used to enable even more logging |
+| `new_verbosity_level?` | [`int32`](index.types.default.md#int32-1) | New value of the verbosity level for logging. Value 0 corresponds to fatal errors, value 1 corresponds to errors, value 2 corresponds to warnings and debug warnings, -value 3 corresponds to informational, value 4 corresponds to debug, value 5 corresponds to verbose debug, value greater than 5 and up to 1023 can be used to enable even more logging |
 
 #### Defined in
 
-dist/generated/types.d.ts:57104
+dist/generated/types.d.ts:58016
 
 ___
 
@@ -77067,7 +78483,7 @@ Changes the login email address of the user. The change will not be applied unti
 
 #### Defined in
 
-dist/generated/types.d.ts:45964
+dist/generated/types.d.ts:46565
 
 ___
 
@@ -77087,7 +78503,7 @@ Changes the login email address of the user. The change will not be applied unti
 
 #### Defined in
 
-dist/generated/types.d.ts:45948
+dist/generated/types.d.ts:46549
 
 ___
 
@@ -77115,7 +78531,7 @@ Sets menu button for the given user or for all users; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:54338
+dist/generated/types.d.ts:55022
 
 ___
 
@@ -77135,7 +78551,7 @@ Sets menu button for the given user or for all users; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:54319
+dist/generated/types.d.ts:55003
 
 ___
 
@@ -77163,7 +78579,7 @@ Changes the first and last name of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54068
+dist/generated/types.d.ts:54752
 
 ___
 
@@ -77183,7 +78599,7 @@ Changes the first and last name of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54049
+dist/generated/types.d.ts:54733
 
 ___
 
@@ -77213,7 +78629,7 @@ Sets the current network type. Can be called before authorization. Calling this 
 
 #### Defined in
 
-dist/generated/types.d.ts:55869
+dist/generated/types.d.ts:56627
 
 ___
 
@@ -77233,7 +78649,7 @@ Sets the current network type. Can be called before authorization. Calling this 
 
 #### Defined in
 
-dist/generated/types.d.ts:55853
+dist/generated/types.d.ts:56611
 
 ___
 
@@ -77261,7 +78677,7 @@ Sets the value of an option. (Check the list of available options on https://cor
 
 #### Defined in
 
-dist/generated/types.d.ts:55501
+dist/generated/types.d.ts:56259
 
 ___
 
@@ -77281,7 +78697,7 @@ Sets the value of an option. (Check the list of available options on https://cor
 
 #### Defined in
 
-dist/generated/types.d.ts:55482
+dist/generated/types.d.ts:56240
 
 ___
 
@@ -77309,7 +78725,7 @@ Adds an element to the user's Telegram Passport. May return an error with a mess
 
 #### Defined in
 
-dist/generated/types.d.ts:56061
+dist/generated/types.d.ts:56819
 
 ___
 
@@ -77329,7 +78745,7 @@ Adds an element to the user's Telegram Passport. May return an error with a mess
 
 #### Defined in
 
-dist/generated/types.d.ts:56042
+dist/generated/types.d.ts:56800
 
 ___
 
@@ -77357,7 +78773,7 @@ Informs the user that some of the elements in their Telegram Passport contain er
 
 #### Defined in
 
-dist/generated/types.d.ts:56098
+dist/generated/types.d.ts:56856
 
 ___
 
@@ -77377,7 +78793,7 @@ Informs the user that some of the elements in their Telegram Passport contain er
 
 #### Defined in
 
-dist/generated/types.d.ts:56079
+dist/generated/types.d.ts:56837
 
 ___
 
@@ -77405,7 +78821,7 @@ Changes the 2-step verification password for the current user. If a new recovery
 
 #### Defined in
 
-dist/generated/types.d.ts:45945
+dist/generated/types.d.ts:46546
 
 ___
 
@@ -77428,7 +78844,7 @@ Changes the 2-step verification password for the current user. If a new recovery
 
 #### Defined in
 
-dist/generated/types.d.ts:45911
+dist/generated/types.d.ts:46512
 
 ___
 
@@ -77456,7 +78872,7 @@ Changes the order of pinned chats
 
 #### Defined in
 
-dist/generated/types.d.ts:51254
+dist/generated/types.d.ts:51938
 
 ___
 
@@ -77476,7 +78892,7 @@ Changes the order of pinned chats
 
 #### Defined in
 
-dist/generated/types.d.ts:51235
+dist/generated/types.d.ts:51919
 
 ___
 
@@ -77504,7 +78920,7 @@ Changes the order of pinned forum topics
 
 #### Defined in
 
-dist/generated/types.d.ts:48651
+dist/generated/types.d.ts:49252
 
 ___
 
@@ -77524,7 +78940,7 @@ Changes the order of pinned forum topics
 
 #### Defined in
 
-dist/generated/types.d.ts:48632
+dist/generated/types.d.ts:49233
 
 ___
 
@@ -77552,7 +78968,7 @@ Changes the user answer to a poll. A poll in quiz mode can be answered only once
 
 #### Defined in
 
-dist/generated/types.d.ts:49072
+dist/generated/types.d.ts:49673
 
 ___
 
@@ -77573,7 +78989,7 @@ Changes the user answer to a poll. A poll in quiz mode can be answered only once
 
 #### Defined in
 
-dist/generated/types.d.ts:49048
+dist/generated/types.d.ts:49649
 
 ___
 
@@ -77601,7 +79017,7 @@ Changes a profile photo for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54031
+dist/generated/types.d.ts:54715
 
 ___
 
@@ -77621,7 +79037,7 @@ Changes a profile photo for the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54012
+dist/generated/types.d.ts:54696
 
 ___
 
@@ -77651,7 +79067,7 @@ Changes the 2-step verification recovery email address of the user. If a new rec
 
 #### Defined in
 
-dist/generated/types.d.ts:46031
+dist/generated/types.d.ts:46632
 
 ___
 
@@ -77672,7 +79088,7 @@ Changes the 2-step verification recovery email address of the user. If a new rec
 
 #### Defined in
 
-dist/generated/types.d.ts:46010
+dist/generated/types.d.ts:46611
 
 ___
 
@@ -77700,7 +79116,7 @@ Changes notification settings for chats of a given type
 
 #### Defined in
 
-dist/generated/types.d.ts:51196
+dist/generated/types.d.ts:51880
 
 ___
 
@@ -77720,7 +79136,151 @@ Changes notification settings for chats of a given type
 
 #### Defined in
 
-dist/generated/types.d.ts:51177
+dist/generated/types.d.ts:51861
+
+___
+
+### setStickerEmojis
+
+Ƭ **setStickerEmojis**: (`parameters`: [`setStickerEmojis$Input`](index.types.default.md#setstickeremojis$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setStickerEmojis$Input`](index.types.default.md#setstickeremojis$input) | [setStickerEmojis$Input](index.types.md#setstickeremojis$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:57389
+
+___
+
+### setStickerEmojis$Input
+
+Ƭ **setStickerEmojis$Input**: `Object`
+
+Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"setStickerEmojis"`` | - |
+| `emojis?` | `string` | New string with 1-20 emoji corresponding to the sticker |
+| `sticker?` | [`InputFile$Input`](index.types.default.md#inputfile$input) | Sticker |
+
+#### Defined in
+
+dist/generated/types.d.ts:57370
+
+___
+
+### setStickerKeywords
+
+Ƭ **setStickerKeywords**: (`parameters`: [`setStickerKeywords$Input`](index.types.default.md#setstickerkeywords$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setStickerKeywords$Input`](index.types.default.md#setstickerkeywords$input) | [setStickerKeywords$Input](index.types.md#setstickerkeywords$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:57410
+
+___
+
+### setStickerKeywords$Input
+
+Ƭ **setStickerKeywords$Input**: `Object`
+
+Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"setStickerKeywords"`` | - |
+| `keywords?` | [`vector$Input`](index.types.default.md#vector$input)<`string`\> | List of up to 20 keywords with total length up to 64 characters, which can be used to find the sticker |
+| `sticker?` | [`InputFile$Input`](index.types.default.md#inputfile$input) | Sticker |
+
+#### Defined in
+
+dist/generated/types.d.ts:57391
+
+___
+
+### setStickerMaskPosition
+
+Ƭ **setStickerMaskPosition**: (`parameters`: [`setStickerMaskPosition$Input`](index.types.default.md#setstickermaskposition$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setStickerMaskPosition$Input`](index.types.default.md#setstickermaskposition$input) | [setStickerMaskPosition$Input](index.types.md#setstickermaskposition$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:57431
+
+___
+
+### setStickerMaskPosition$Input
+
+Ƭ **setStickerMaskPosition$Input**: `Object`
+
+Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"setStickerMaskPosition"`` | - |
+| `mask_position?` | [`maskPosition$Input`](index.types.default.md#maskposition$input-1) | Position where the mask is placed; pass null to remove mask position |
+| `sticker?` | [`InputFile$Input`](index.types.default.md#inputfile$input) | Sticker |
+
+#### Defined in
+
+dist/generated/types.d.ts:57412
 
 ___
 
@@ -77748,7 +79308,7 @@ Changes the position of a sticker in the set to which it belongs; for bots only.
 
 #### Defined in
 
-dist/generated/types.d.ts:56519
+dist/generated/types.d.ts:57352
 
 ___
 
@@ -77768,19 +79328,19 @@ Changes the position of a sticker in the set to which it belongs; for bots only.
 
 #### Defined in
 
-dist/generated/types.d.ts:56500
+dist/generated/types.d.ts:57333
 
 ___
 
 ### setStickerSetThumbnail
 
-Ƭ **setStickerSetThumbnail**: (`parameters`: [`setStickerSetThumbnail$Input`](index.types.default.md#setstickersetthumbnail$input)) => [`StickerSet`](index.types.default.md#stickerset)
+Ƭ **setStickerSetThumbnail**: (`parameters`: [`setStickerSetThumbnail$Input`](index.types.default.md#setstickersetthumbnail$input)) => [`Ok`](index.types.default.md#ok)
 
 #### Type declaration
 
-▸ (`parameters`): [`StickerSet`](index.types.default.md#stickerset)
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
 
-Sets a sticker set thumbnail; for bots only. Returns the sticker set
+Sets a sticker set thumbnail; for bots only
 
 ##### Parameters
 
@@ -77790,13 +79350,13 @@ Sets a sticker set thumbnail; for bots only. Returns the sticker set
 
 ##### Returns
 
-[`StickerSet`](index.types.default.md#stickerset)
+[`Ok`](index.types.default.md#ok)
 
-[StickerSet](index.types.md#stickerset)
+[Ok](index.types.md#ok)
 
 #### Defined in
 
-dist/generated/types.d.ts:56498
+dist/generated/types.d.ts:57273
 
 ___
 
@@ -77804,7 +79364,7 @@ ___
 
 Ƭ **setStickerSetThumbnail$Input**: `Object`
 
-Sets a sticker set thumbnail; for bots only. Returns the sticker set
+Sets a sticker set thumbnail; for bots only
 
 #### Type declaration
 
@@ -77817,7 +79377,55 @@ Sets a sticker set thumbnail; for bots only. Returns the sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:56474
+dist/generated/types.d.ts:57249
+
+___
+
+### setStickerSetTitle
+
+Ƭ **setStickerSetTitle**: (`parameters`: [`setStickerSetTitle$Input`](index.types.default.md#setstickersettitle$input)) => [`Ok`](index.types.default.md#ok)
+
+#### Type declaration
+
+▸ (`parameters`): [`Ok`](index.types.default.md#ok)
+
+Sets a sticker set title; for bots only
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setStickerSetTitle$Input`](index.types.default.md#setstickersettitle$input) | [setStickerSetTitle$Input](index.types.md#setstickersettitle$input) |
+
+##### Returns
+
+[`Ok`](index.types.default.md#ok)
+
+[Ok](index.types.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:57315
+
+___
+
+### setStickerSetTitle$Input
+
+Ƭ **setStickerSetTitle$Input**: `Object`
+
+Sets a sticker set title; for bots only
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"setStickerSetTitle"`` | - |
+| `name?` | `string` | Sticker set name |
+| `title?` | `string` | New sticker set title |
+
+#### Defined in
+
+dist/generated/types.d.ts:57296
 
 ___
 
@@ -77845,7 +79453,7 @@ Changes the sticker set of a supergroup; requires can_change_info administrator 
 
 #### Defined in
 
-dist/generated/types.d.ts:54628
+dist/generated/types.d.ts:55386
 
 ___
 
@@ -77865,7 +79473,7 @@ Changes the sticker set of a supergroup; requires can_change_info administrator 
 
 #### Defined in
 
-dist/generated/types.d.ts:54609
+dist/generated/types.d.ts:55367
 
 ___
 
@@ -77893,7 +79501,7 @@ Changes the editable username of a supergroup or channel, requires owner privile
 
 #### Defined in
 
-dist/generated/types.d.ts:54541
+dist/generated/types.d.ts:55299
 
 ___
 
@@ -77913,7 +79521,7 @@ Changes the editable username of a supergroup or channel, requires owner privile
 
 #### Defined in
 
-dist/generated/types.d.ts:54522
+dist/generated/types.d.ts:55280
 
 ___
 
@@ -77941,7 +79549,7 @@ Sets the parameters for TDLib initialization. Works only when the current author
 
 #### Defined in
 
-dist/generated/types.d.ts:45592
+dist/generated/types.d.ts:46193
 
 ___
 
@@ -77975,7 +79583,7 @@ Sets the parameters for TDLib initialization. Works only when the current author
 
 #### Defined in
 
-dist/generated/types.d.ts:45503
+dist/generated/types.d.ts:46104
 
 ___
 
@@ -78003,7 +79611,7 @@ Changes a personal profile photo of a contact user
 
 #### Defined in
 
-dist/generated/types.d.ts:53258
+dist/generated/types.d.ts:53942
 
 ___
 
@@ -78023,7 +79631,7 @@ Changes a personal profile photo of a contact user
 
 #### Defined in
 
-dist/generated/types.d.ts:53239
+dist/generated/types.d.ts:53923
 
 ___
 
@@ -78051,7 +79659,7 @@ Changes user privacy settings
 
 #### Defined in
 
-dist/generated/types.d.ts:55448
+dist/generated/types.d.ts:56206
 
 ___
 
@@ -78071,7 +79679,7 @@ Changes user privacy settings
 
 #### Defined in
 
-dist/generated/types.d.ts:55429
+dist/generated/types.d.ts:56187
 
 ___
 
@@ -78099,7 +79707,7 @@ Sets support information for the given user; for Telegram support only
 
 #### Defined in
 
-dist/generated/types.d.ts:57237
+dist/generated/types.d.ts:58149
 
 ___
 
@@ -78119,7 +79727,7 @@ Sets support information for the given user; for Telegram support only
 
 #### Defined in
 
-dist/generated/types.d.ts:57218
+dist/generated/types.d.ts:58130
 
 ___
 
@@ -78147,7 +79755,7 @@ Changes the editable username of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54100
+dist/generated/types.d.ts:54784
 
 ___
 
@@ -78166,7 +79774,7 @@ Changes the editable username of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54086
+dist/generated/types.d.ts:54770
 
 ___
 
@@ -78194,7 +79802,7 @@ Changes default participant identifier, on whose behalf a video chat in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52413
+dist/generated/types.d.ts:53097
 
 ___
 
@@ -78214,7 +79822,7 @@ Changes default participant identifier, on whose behalf a video chat in the chat
 
 #### Defined in
 
-dist/generated/types.d.ts:52394
+dist/generated/types.d.ts:53078
 
 ___
 
@@ -78242,7 +79850,7 @@ Shares a chat after pressing a keyboardButtonTypeRequestChat button with the bot
 
 #### Defined in
 
-dist/generated/types.d.ts:49286
+dist/generated/types.d.ts:49887
 
 ___
 
@@ -78260,12 +79868,12 @@ Shares a chat after pressing a keyboardButtonTypeRequestChat button with the bot
 | `button_id?` | [`int32`](index.types.default.md#int32-1) | Identifier of the button |
 | `chat_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the chat with the bot |
 | `message_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the message with the button |
-| `only_check?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true to check that the chat can be shared by the button instead of actually sharing it. Doesn't check bot_is_member and bot_administrator_rights restrictions.    -If the bot must be a member, then all chats from getGroupsInCommon and all chats, where the user can add the bot, are suitable. In the latter case the bot will be automatically added to the chat.    -If the bot must be an administrator, then all chats, where the bot already has requested rights or can be added to administrators by the user, are suitable. In the latter case the bot will be automatically granted requested rights |
+| `only_check?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true to check that the chat can be shared by the button instead of actually sharing it. Doesn't check bot_is_member and bot_administrator_rights restrictions. -If the bot must be a member, then all chats from getGroupsInCommon and all chats, where the user can add the bot, are suitable. In the latter case the bot will be automatically added to the chat. -If the bot must be an administrator, then all chats, where the bot already has requested rights or can be added to administrators by the user, are suitable. In the latter case the bot will be automatically granted requested rights |
 | `shared_chat_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the shared chat |
 
 #### Defined in
 
-dist/generated/types.d.ts:49248
+dist/generated/types.d.ts:49849
 
 ___
 
@@ -78293,7 +79901,7 @@ Shares the phone number of the current user with a mutual contact. Supposed to b
 
 #### Defined in
 
-dist/generated/types.d.ts:53311
+dist/generated/types.d.ts:53995
 
 ___
 
@@ -78312,7 +79920,7 @@ Shares the phone number of the current user with a mutual contact. Supposed to b
 
 #### Defined in
 
-dist/generated/types.d.ts:53297
+dist/generated/types.d.ts:53981
 
 ___
 
@@ -78340,7 +79948,7 @@ Shares a user after pressing a keyboardButtonTypeRequestUser button with the bot
 
 #### Defined in
 
-dist/generated/types.d.ts:49246
+dist/generated/types.d.ts:49847
 
 ___
 
@@ -78363,7 +79971,7 @@ Shares a user after pressing a keyboardButtonTypeRequestUser button with the bot
 
 #### Defined in
 
-dist/generated/types.d.ts:49212
+dist/generated/types.d.ts:49813
 
 ___
 
@@ -78384,7 +79992,7 @@ One shipping option
 
 #### Defined in
 
-dist/generated/types.d.ts:14801
+dist/generated/types.d.ts:15121
 
 ___
 
@@ -78406,7 +80014,7 @@ One shipping option
 
 #### Defined in
 
-dist/generated/types.d.ts:14823
+dist/generated/types.d.ts:15143
 
 ___
 
@@ -78425,7 +80033,7 @@ The speech recognition failed
 
 #### Defined in
 
-dist/generated/types.d.ts:23597
+dist/generated/types.d.ts:23947
 
 ___
 
@@ -78445,7 +80053,7 @@ The speech recognition failed
 
 #### Defined in
 
-dist/generated/types.d.ts:23609
+dist/generated/types.d.ts:23959
 
 ___
 
@@ -78464,7 +80072,7 @@ The speech recognition is ongoing
 
 #### Defined in
 
-dist/generated/types.d.ts:23555
+dist/generated/types.d.ts:23905
 
 ___
 
@@ -78484,7 +80092,7 @@ The speech recognition is ongoing
 
 #### Defined in
 
-dist/generated/types.d.ts:23567
+dist/generated/types.d.ts:23917
 
 ___
 
@@ -78503,7 +80111,7 @@ The speech recognition successfully finished
 
 #### Defined in
 
-dist/generated/types.d.ts:23576
+dist/generated/types.d.ts:23926
 
 ___
 
@@ -78523,7 +80131,7 @@ The speech recognition successfully finished
 
 #### Defined in
 
-dist/generated/types.d.ts:23588
+dist/generated/types.d.ts:23938
 
 ___
 
@@ -78538,6 +80146,7 @@ Describes a sponsored message
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"sponsoredMessage"`` | - |
+| `additional_info` | `string` | If non-empty, additional information about the sponsored message to be shown along with the message |
 | `content` | [`MessageContent`](index.types.default.md#messagecontent) | Content of the message. Currently, can be only of the type messageText |
 | `is_recommended` | [`Bool`](index.types.default.md#bool) | True, if the message needs to be labeled as "recommended" instead of "sponsored" |
 | `link` | [`InternalLinkType`](index.types.default.md#internallinktype) \| ``null`` | An internal link to be opened when the sponsored message is clicked; may be null if the sponsor chat needs to be opened instead |
@@ -78545,10 +80154,11 @@ Describes a sponsored message
 | `show_chat_photo` | [`Bool`](index.types.default.md#bool) | True, if the sponsor's chat photo must be shown |
 | `sponsor_chat_id` | [`int53`](index.types.default.md#int53-1) | Sponsor chat identifier; 0 if the sponsor chat is accessible through an invite link |
 | `sponsor_chat_info` | [`chatInviteLinkInfo`](index.types.default.md#chatinvitelinkinfo-1) \| ``null`` | Information about the sponsor chat; may be null unless sponsor_chat_id == 0 |
+| `sponsor_info` | `string` | If non-empty, information about the sponsor to be shown along with the message |
 
 #### Defined in
 
-dist/generated/types.d.ts:9406
+dist/generated/types.d.ts:9665
 
 ___
 
@@ -78564,6 +80174,7 @@ Describes a sponsored message
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"sponsoredMessage"`` | - |
+| `additional_info?` | `string` | If non-empty, additional information about the sponsored message to be shown along with the message |
 | `content?` | [`MessageContent$Input`](index.types.default.md#messagecontent$input) | Content of the message. Currently, can be only of the type messageText |
 | `is_recommended?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the message needs to be labeled as "recommended" instead of "sponsored" |
 | `link?` | [`InternalLinkType$Input`](index.types.default.md#internallinktype$input) \| ``null`` | An internal link to be opened when the sponsored message is clicked; may be null if the sponsor chat needs to be opened instead |
@@ -78571,10 +80182,11 @@ Describes a sponsored message
 | `show_chat_photo?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the sponsor's chat photo must be shown |
 | `sponsor_chat_id?` | [`int53`](index.types.default.md#int53-1) | Sponsor chat identifier; 0 if the sponsor chat is accessible through an invite link |
 | `sponsor_chat_info?` | [`chatInviteLinkInfo$Input`](index.types.default.md#chatinvitelinkinfo$input-1) \| ``null`` | Information about the sponsor chat; may be null unless sponsor_chat_id == 0 |
+| `sponsor_info?` | `string` | If non-empty, information about the sponsor to be shown along with the message |
 
 #### Defined in
 
-dist/generated/types.d.ts:9448
+dist/generated/types.d.ts:9717
 
 ___
 
@@ -78594,7 +80206,7 @@ Contains a list of sponsored messages
 
 #### Defined in
 
-dist/generated/types.d.ts:9487
+dist/generated/types.d.ts:9766
 
 ___
 
@@ -78615,7 +80227,7 @@ Contains a list of sponsored messages
 
 #### Defined in
 
-dist/generated/types.d.ts:9504
+dist/generated/types.d.ts:9783
 
 ___
 
@@ -78643,7 +80255,7 @@ Starts recording of an active group call. Requires groupCall.can_be_managed grou
 
 #### Defined in
 
-dist/generated/types.d.ts:52769
+dist/generated/types.d.ts:53453
 
 ___
 
@@ -78665,7 +80277,7 @@ Starts recording of an active group call. Requires groupCall.can_be_managed grou
 
 #### Defined in
 
-dist/generated/types.d.ts:52740
+dist/generated/types.d.ts:53424
 
 ___
 
@@ -78693,7 +80305,7 @@ Starts screen sharing in a joined group call. Returns join response payload for 
 
 #### Defined in
 
-dist/generated/types.d.ts:52601
+dist/generated/types.d.ts:53285
 
 ___
 
@@ -78714,7 +80326,7 @@ Starts screen sharing in a joined group call. Returns join response payload for 
 
 #### Defined in
 
-dist/generated/types.d.ts:52577
+dist/generated/types.d.ts:53261
 
 ___
 
@@ -78742,7 +80354,7 @@ Starts a scheduled group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52508
+dist/generated/types.d.ts:53192
 
 ___
 
@@ -78761,7 +80373,7 @@ Starts a scheduled group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52494
+dist/generated/types.d.ts:53178
 
 ___
 
@@ -78780,7 +80392,7 @@ The graph data to be asynchronously loaded through getStatisticalGraph
 
 #### Defined in
 
-dist/generated/types.d.ts:34350
+dist/generated/types.d.ts:34807
 
 ___
 
@@ -78800,7 +80412,7 @@ The graph data to be asynchronously loaded through getStatisticalGraph
 
 #### Defined in
 
-dist/generated/types.d.ts:34362
+dist/generated/types.d.ts:34819
 
 ___
 
@@ -78820,7 +80432,7 @@ A graph data
 
 #### Defined in
 
-dist/generated/types.d.ts:34319
+dist/generated/types.d.ts:34776
 
 ___
 
@@ -78841,7 +80453,7 @@ A graph data
 
 #### Defined in
 
-dist/generated/types.d.ts:34336
+dist/generated/types.d.ts:34793
 
 ___
 
@@ -78860,7 +80472,7 @@ An error message to be shown to the user instead of the graph
 
 #### Defined in
 
-dist/generated/types.d.ts:34371
+dist/generated/types.d.ts:34828
 
 ___
 
@@ -78880,7 +80492,7 @@ An error message to be shown to the user instead of the graph
 
 #### Defined in
 
-dist/generated/types.d.ts:34383
+dist/generated/types.d.ts:34840
 
 ___
 
@@ -78901,7 +80513,7 @@ A value with information about its recent changes
 
 #### Defined in
 
-dist/generated/types.d.ts:34278
+dist/generated/types.d.ts:34735
 
 ___
 
@@ -78923,7 +80535,7 @@ A value with information about its recent changes
 
 #### Defined in
 
-dist/generated/types.d.ts:34300
+dist/generated/types.d.ts:34757
 
 ___
 
@@ -78951,7 +80563,7 @@ Describes a sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:3868
+dist/generated/types.d.ts:3905
 
 ___
 
@@ -78980,7 +80592,7 @@ Describes a sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:3925
+dist/generated/types.d.ts:3962
 
 ___
 
@@ -78998,7 +80610,7 @@ The sticker is an animation in TGS format
 
 #### Defined in
 
-dist/generated/types.d.ts:3298
+dist/generated/types.d.ts:3339
 
 ___
 
@@ -79017,7 +80629,7 @@ The sticker is an animation in TGS format
 
 #### Defined in
 
-dist/generated/types.d.ts:3305
+dist/generated/types.d.ts:3346
 
 ___
 
@@ -79035,7 +80647,7 @@ The sticker is a video in WEBM format
 
 #### Defined in
 
-dist/generated/types.d.ts:3309
+dist/generated/types.d.ts:3350
 
 ___
 
@@ -79054,7 +80666,7 @@ The sticker is a video in WEBM format
 
 #### Defined in
 
-dist/generated/types.d.ts:3316
+dist/generated/types.d.ts:3357
 
 ___
 
@@ -79072,7 +80684,7 @@ The sticker is an image in WEBP format
 
 #### Defined in
 
-dist/generated/types.d.ts:3287
+dist/generated/types.d.ts:3328
 
 ___
 
@@ -79091,7 +80703,7 @@ The sticker is an image in WEBP format
 
 #### Defined in
 
-dist/generated/types.d.ts:3294
+dist/generated/types.d.ts:3335
 
 ___
 
@@ -79107,11 +80719,11 @@ The sticker is a custom emoji to be used inside message text and caption. Curren
 | :------ | :------ | :------ |
 | `_` | ``"stickerFullTypeCustomEmoji"`` | - |
 | `custom_emoji_id` | [`int64`](index.types.default.md#int64-1) | Identifier of the custom emoji |
-| `needs_repainting` | [`Bool`](index.types.default.md#bool) | True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, or another appropriate color in other places.    -The sticker must not be repainted on chat photos |
+| `needs_repainting` | [`Bool`](index.types.default.md#bool) | True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, white color on chat photos, or another appropriate color in other places |
 
 #### Defined in
 
-dist/generated/types.d.ts:3395
+dist/generated/types.d.ts:3436
 
 ___
 
@@ -79128,11 +80740,11 @@ The sticker is a custom emoji to be used inside message text and caption. Curren
 | :------ | :------ | :------ |
 | `_` | ``"stickerFullTypeCustomEmoji"`` | - |
 | `custom_emoji_id?` | [`int64`](index.types.default.md#int64-1) | Identifier of the custom emoji |
-| `needs_repainting?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, or another appropriate color in other places.    -The sticker must not be repainted on chat photos |
+| `needs_repainting?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, white color on chat photos, or another appropriate color in other places |
 
 #### Defined in
 
-dist/generated/types.d.ts:3414
+dist/generated/types.d.ts:3453
 
 ___
 
@@ -79151,7 +80763,7 @@ The sticker is a mask in WEBP format to be placed on photos or videos
 
 #### Defined in
 
-dist/generated/types.d.ts:3374
+dist/generated/types.d.ts:3415
 
 ___
 
@@ -79171,7 +80783,7 @@ The sticker is a mask in WEBP format to be placed on photos or videos
 
 #### Defined in
 
-dist/generated/types.d.ts:3386
+dist/generated/types.d.ts:3427
 
 ___
 
@@ -79190,7 +80802,7 @@ The sticker is a regular sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:3353
+dist/generated/types.d.ts:3394
 
 ___
 
@@ -79210,7 +80822,7 @@ The sticker is a regular sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:3365
+dist/generated/types.d.ts:3406
 
 ___
 
@@ -79241,7 +80853,7 @@ Represents a sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:21296
+dist/generated/types.d.ts:21636
 
 ___
 
@@ -79273,7 +80885,7 @@ Represents a sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:21368
+dist/generated/types.d.ts:21708
 
 ___
 
@@ -79304,7 +80916,7 @@ Represents short information about a sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:21437
+dist/generated/types.d.ts:21777
 
 ___
 
@@ -79336,7 +80948,7 @@ Represents short information about a sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:21509
+dist/generated/types.d.ts:21849
 
 ___
 
@@ -79356,7 +80968,7 @@ Represents a list of sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:21578
+dist/generated/types.d.ts:21918
 
 ___
 
@@ -79377,7 +80989,7 @@ Represents a list of sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:21595
+dist/generated/types.d.ts:21935
 
 ___
 
@@ -79395,7 +81007,7 @@ The sticker is a custom emoji to be used inside message text and caption
 
 #### Defined in
 
-dist/generated/types.d.ts:3342
+dist/generated/types.d.ts:3383
 
 ___
 
@@ -79414,7 +81026,7 @@ The sticker is a custom emoji to be used inside message text and caption
 
 #### Defined in
 
-dist/generated/types.d.ts:3349
+dist/generated/types.d.ts:3390
 
 ___
 
@@ -79432,7 +81044,7 @@ The sticker is a mask in WEBP format to be placed on photos or videos
 
 #### Defined in
 
-dist/generated/types.d.ts:3331
+dist/generated/types.d.ts:3372
 
 ___
 
@@ -79451,7 +81063,7 @@ The sticker is a mask in WEBP format to be placed on photos or videos
 
 #### Defined in
 
-dist/generated/types.d.ts:3338
+dist/generated/types.d.ts:3379
 
 ___
 
@@ -79469,7 +81081,7 @@ The sticker is a regular sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:3320
+dist/generated/types.d.ts:3361
 
 ___
 
@@ -79488,7 +81100,7 @@ The sticker is a regular sticker
 
 #### Defined in
 
-dist/generated/types.d.ts:3327
+dist/generated/types.d.ts:3368
 
 ___
 
@@ -79507,7 +81119,7 @@ Represents a list of stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:21254
+dist/generated/types.d.ts:21594
 
 ___
 
@@ -79527,7 +81139,7 @@ Represents a list of stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:21266
+dist/generated/types.d.ts:21606
 
 ___
 
@@ -79555,7 +81167,7 @@ Stops a poll. A poll in a message can be stopped when the message has can_be_edi
 
 #### Defined in
 
-dist/generated/types.d.ts:49134
+dist/generated/types.d.ts:49735
 
 ___
 
@@ -79576,7 +81188,7 @@ Stops a poll. A poll in a message can be stopped when the message has can_be_edi
 
 #### Defined in
 
-dist/generated/types.d.ts:49110
+dist/generated/types.d.ts:49711
 
 ___
 
@@ -79597,7 +81209,7 @@ Contains the exact storage usage statistics split by chats and file type
 
 #### Defined in
 
-dist/generated/types.d.ts:32864
+dist/generated/types.d.ts:33321
 
 ___
 
@@ -79619,7 +81231,7 @@ Contains the exact storage usage statistics split by chats and file type
 
 #### Defined in
 
-dist/generated/types.d.ts:32886
+dist/generated/types.d.ts:33343
 
 ___
 
@@ -79641,7 +81253,7 @@ Contains the storage usage statistics for a specific chat
 
 #### Defined in
 
-dist/generated/types.d.ts:32813
+dist/generated/types.d.ts:33270
 
 ___
 
@@ -79664,7 +81276,7 @@ Contains the storage usage statistics for a specific chat
 
 #### Defined in
 
-dist/generated/types.d.ts:32840
+dist/generated/types.d.ts:33297
 
 ___
 
@@ -79685,7 +81297,7 @@ Contains the storage usage statistics for a specific file type
 
 #### Defined in
 
-dist/generated/types.d.ts:32772
+dist/generated/types.d.ts:33229
 
 ___
 
@@ -79707,7 +81319,7 @@ Contains the storage usage statistics for a specific file type
 
 #### Defined in
 
-dist/generated/types.d.ts:32794
+dist/generated/types.d.ts:33251
 
 ___
 
@@ -79730,7 +81342,7 @@ Contains approximate storage usage statistics, excluding files of unknown file t
 
 #### Defined in
 
-dist/generated/types.d.ts:32905
+dist/generated/types.d.ts:33362
 
 ___
 
@@ -79754,7 +81366,7 @@ Contains approximate storage usage statistics, excluding files of unknown file t
 
 #### Defined in
 
-dist/generated/types.d.ts:32937
+dist/generated/types.d.ts:33394
 
 ___
 
@@ -79775,7 +81387,7 @@ The user gifted Telegram Premium to another user
 
 #### Defined in
 
-dist/generated/types.d.ts:28013
+dist/generated/types.d.ts:28426
 
 ___
 
@@ -79797,7 +81409,7 @@ The user gifted Telegram Premium to another user
 
 #### Defined in
 
-dist/generated/types.d.ts:28035
+dist/generated/types.d.ts:28448
 
 ___
 
@@ -79817,7 +81429,7 @@ The user subscribed to Telegram Premium
 
 #### Defined in
 
-dist/generated/types.d.ts:27982
+dist/generated/types.d.ts:28395
 
 ___
 
@@ -79838,7 +81450,7 @@ The user subscribed to Telegram Premium
 
 #### Defined in
 
-dist/generated/types.d.ts:27999
+dist/generated/types.d.ts:28412
 
 ___
 
@@ -79866,7 +81478,7 @@ Suggests a profile photo to another regular user with common messages
 
 #### Defined in
 
-dist/generated/types.d.ts:53279
+dist/generated/types.d.ts:53963
 
 ___
 
@@ -79886,7 +81498,7 @@ Suggests a profile photo to another regular user with common messages
 
 #### Defined in
 
-dist/generated/types.d.ts:53260
+dist/generated/types.d.ts:53944
 
 ___
 
@@ -79904,7 +81516,7 @@ Suggests the user to check whether they still remember their 2-step verification
 
 #### Defined in
 
-dist/generated/types.d.ts:33763
+dist/generated/types.d.ts:34220
 
 ___
 
@@ -79923,7 +81535,7 @@ Suggests the user to check whether they still remember their 2-step verification
 
 #### Defined in
 
-dist/generated/types.d.ts:33770
+dist/generated/types.d.ts:34227
 
 ___
 
@@ -79941,7 +81553,7 @@ Suggests the user to check whether authorization phone number is correct and cha
 
 #### Defined in
 
-dist/generated/types.d.ts:33774
+dist/generated/types.d.ts:34231
 
 ___
 
@@ -79960,7 +81572,7 @@ Suggests the user to check whether authorization phone number is correct and cha
 
 #### Defined in
 
-dist/generated/types.d.ts:33781
+dist/generated/types.d.ts:34238
 
 ___
 
@@ -79979,7 +81591,7 @@ Suggests the user to convert specified supergroup to a broadcast group
 
 #### Defined in
 
-dist/generated/types.d.ts:33796
+dist/generated/types.d.ts:34253
 
 ___
 
@@ -79999,7 +81611,7 @@ Suggests the user to convert specified supergroup to a broadcast group
 
 #### Defined in
 
-dist/generated/types.d.ts:33808
+dist/generated/types.d.ts:34265
 
 ___
 
@@ -80017,7 +81629,7 @@ Suggests the user to enable "archive_and_mute_new_chats_from_unknown_users" opti
 
 #### Defined in
 
-dist/generated/types.d.ts:33752
+dist/generated/types.d.ts:34209
 
 ___
 
@@ -80036,7 +81648,7 @@ Suggests the user to enable "archive_and_mute_new_chats_from_unknown_users" opti
 
 #### Defined in
 
-dist/generated/types.d.ts:33759
+dist/generated/types.d.ts:34216
 
 ___
 
@@ -80055,7 +81667,7 @@ Suggests the user to set a 2-step verification password to be able to log in aga
 
 #### Defined in
 
-dist/generated/types.d.ts:33817
+dist/generated/types.d.ts:34274
 
 ___
 
@@ -80075,7 +81687,7 @@ Suggests the user to set a 2-step verification password to be able to log in aga
 
 #### Defined in
 
-dist/generated/types.d.ts:33829
+dist/generated/types.d.ts:34286
 
 ___
 
@@ -80093,7 +81705,7 @@ Suggests the user to subscribe to the Premium subscription with annual payments
 
 #### Defined in
 
-dist/generated/types.d.ts:33849
+dist/generated/types.d.ts:34306
 
 ___
 
@@ -80112,7 +81724,7 @@ Suggests the user to subscribe to the Premium subscription with annual payments
 
 #### Defined in
 
-dist/generated/types.d.ts:33856
+dist/generated/types.d.ts:34313
 
 ___
 
@@ -80130,7 +81742,7 @@ Suggests the user to upgrade the Premium subscription from monthly payments to a
 
 #### Defined in
 
-dist/generated/types.d.ts:33838
+dist/generated/types.d.ts:34295
 
 ___
 
@@ -80149,7 +81761,7 @@ Suggests the user to upgrade the Premium subscription from monthly payments to a
 
 #### Defined in
 
-dist/generated/types.d.ts:33845
+dist/generated/types.d.ts:34302
 
 ___
 
@@ -80167,7 +81779,7 @@ Suggests the user to view a hint about the meaning of one and two check marks on
 
 #### Defined in
 
-dist/generated/types.d.ts:33785
+dist/generated/types.d.ts:34242
 
 ___
 
@@ -80186,7 +81798,7 @@ Suggests the user to view a hint about the meaning of one and two check marks on
 
 #### Defined in
 
-dist/generated/types.d.ts:33792
+dist/generated/types.d.ts:34249
 
 ___
 
@@ -80216,7 +81828,7 @@ Represents a supergroup or channel with zero or more members (subscribers in the
 | `is_verified` | [`Bool`](index.types.default.md#bool) | True, if the supergroup or channel is verified |
 | `join_by_request` | [`Bool`](index.types.default.md#bool) | True, if all users directly joining the supergroup need to be approved by supergroup administrators. Always false for channels and supergroups without username, location, or a linked chat |
 | `join_to_send_messages` | [`Bool`](index.types.default.md#bool) | True, if users need to join the supergroup before they can send messages. Always true for channels and non-discussion supergroups |
-| `member_count` | [`int32`](index.types.default.md#int32-1) | Number of members in the supergroup or channel; 0 if unknown. Currently, it is guaranteed to be known only if the supergroup or channel was received    -through searchPublicChats, searchChatsNearby, getInactiveSupergroupChats, getSuitableDiscussionChats, getGroupsInCommon, or getUserPrivacySettingRules |
+| `member_count` | [`int32`](index.types.default.md#int32-1) | Number of members in the supergroup or channel; 0 if unknown. Currently, it is guaranteed to be known only if the supergroup or channel was received -through searchPublicChats, searchChatsNearby, getInactiveSupergroupChats, getSuitableDiscussionChats, getGroupsInCommon, or getUserPrivacySettingRules |
 | `restriction_reason` | `string` | If non-empty, contains a human-readable description of the reason why access to this supergroup or channel must be restricted |
 | `sign_messages` | [`Bool`](index.types.default.md#bool) | True, if messages sent to the channel need to contain information about the sender. This field is only applicable to channels |
 | `status` | [`ChatMemberStatus`](index.types.default.md#chatmemberstatus) | Status of the current user in the supergroup or channel; custom title will always be empty |
@@ -80224,7 +81836,7 @@ Represents a supergroup or channel with zero or more members (subscribers in the
 
 #### Defined in
 
-dist/generated/types.d.ts:7543
+dist/generated/types.d.ts:7641
 
 ___
 
@@ -80257,7 +81869,7 @@ Represents a supergroup or channel with zero or more members (subscribers in the
 | `is_verified?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the supergroup or channel is verified |
 | `join_by_request?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if all users directly joining the supergroup need to be approved by supergroup administrators. Always false for channels and supergroups without username, location, or a linked chat |
 | `join_to_send_messages?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if users need to join the supergroup before they can send messages. Always true for channels and non-discussion supergroups |
-| `member_count?` | [`int32`](index.types.default.md#int32-1) | Number of members in the supergroup or channel; 0 if unknown. Currently, it is guaranteed to be known only if the supergroup or channel was received    -through searchPublicChats, searchChatsNearby, getInactiveSupergroupChats, getSuitableDiscussionChats, getGroupsInCommon, or getUserPrivacySettingRules |
+| `member_count?` | [`int32`](index.types.default.md#int32-1) | Number of members in the supergroup or channel; 0 if unknown. Currently, it is guaranteed to be known only if the supergroup or channel was received -through searchPublicChats, searchChatsNearby, getInactiveSupergroupChats, getSuitableDiscussionChats, getGroupsInCommon, or getUserPrivacySettingRules |
 | `restriction_reason?` | `string` | If non-empty, contains a human-readable description of the reason why access to this supergroup or channel must be restricted |
 | `sign_messages?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if messages sent to the channel need to contain information about the sender. This field is only applicable to channels |
 | `status?` | [`ChatMemberStatus$Input`](index.types.default.md#chatmemberstatus$input) | Status of the current user in the supergroup or channel; custom title will always be empty |
@@ -80265,7 +81877,7 @@ Represents a supergroup or channel with zero or more members (subscribers in the
 
 #### Defined in
 
-dist/generated/types.d.ts:7646
+dist/generated/types.d.ts:7744
 
 ___
 
@@ -80294,7 +81906,7 @@ Contains full information about a supergroup or channel
 | `has_aggressive_anti_spam_enabled` | [`Bool`](index.types.default.md#bool) | True, if aggressive anti-spam checks are enabled in the supergroup. The value of this field is only available to chat administrators |
 | `has_hidden_members` | [`Bool`](index.types.default.md#bool) | True, if non-administrators can receive only administrators and bots using getSupergroupMembers or searchChatMembers |
 | `invite_link` | [`chatInviteLink`](index.types.default.md#chatinvitelink-1) \| ``null`` | Primary invite link for the chat; may be null. For chat administrators with can_invite_users right only |
-| `is_all_history_available` | [`Bool`](index.types.default.md#bool) | True, if new chat members will have access to old messages. In public, discussion, of forum groups and all channels, old messages are always available,    -so this option affects only private non-forum supergroups without a linked chat. The value of this field is only available to chat administrators |
+| `is_all_history_available` | [`Bool`](index.types.default.md#bool) | True, if new chat members will have access to old messages. In public, discussion, of forum groups and all channels, old messages are always available, -so this option affects only private non-forum supergroups without a linked chat. The value of this field is only available to chat administrators |
 | `linked_chat_id` | [`int53`](index.types.default.md#int53-1) | Chat identifier of a discussion group for the channel, or a channel, for which the supergroup is the designated discussion group; 0 if none or unknown |
 | `location` | [`chatLocation`](index.types.default.md#chatlocation-1) \| ``null`` | Location to which the supergroup is connected; may be null |
 | `member_count` | [`int32`](index.types.default.md#int32-1) | Number of members in the supergroup or channel; 0 if unknown |
@@ -80308,7 +81920,7 @@ Contains full information about a supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:7742
+dist/generated/types.d.ts:7840
 
 ___
 
@@ -80338,7 +81950,7 @@ Contains full information about a supergroup or channel
 | `has_aggressive_anti_spam_enabled?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if aggressive anti-spam checks are enabled in the supergroup. The value of this field is only available to chat administrators |
 | `has_hidden_members?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if non-administrators can receive only administrators and bots using getSupergroupMembers or searchChatMembers |
 | `invite_link?` | [`chatInviteLink$Input`](index.types.default.md#chatinvitelink$input-1) \| ``null`` | Primary invite link for the chat; may be null. For chat administrators with can_invite_users right only |
-| `is_all_history_available?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if new chat members will have access to old messages. In public, discussion, of forum groups and all channels, old messages are always available,    -so this option affects only private non-forum supergroups without a linked chat. The value of this field is only available to chat administrators |
+| `is_all_history_available?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if new chat members will have access to old messages. In public, discussion, of forum groups and all channels, old messages are always available, -so this option affects only private non-forum supergroups without a linked chat. The value of this field is only available to chat administrators |
 | `linked_chat_id?` | [`int53`](index.types.default.md#int53-1) | Chat identifier of a discussion group for the channel, or a channel, for which the supergroup is the designated discussion group; 0 if none or unknown |
 | `location?` | [`chatLocation$Input`](index.types.default.md#chatlocation$input-1) \| ``null`` | Location to which the supergroup is connected; may be null |
 | `member_count?` | [`int32`](index.types.default.md#int32-1) | Number of members in the supergroup or channel; 0 if unknown |
@@ -80352,7 +81964,7 @@ Contains full information about a supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:7876
+dist/generated/types.d.ts:7974
 
 ___
 
@@ -80370,7 +81982,7 @@ Returns the owner and administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:6763
+dist/generated/types.d.ts:6861
 
 ___
 
@@ -80389,7 +82001,7 @@ Returns the owner and administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:6770
+dist/generated/types.d.ts:6868
 
 ___
 
@@ -80408,7 +82020,7 @@ Returns users banned from the supergroup or channel; can be used only by adminis
 
 #### Defined in
 
-dist/generated/types.d.ts:6816
+dist/generated/types.d.ts:6914
 
 ___
 
@@ -80428,7 +82040,7 @@ Returns users banned from the supergroup or channel; can be used only by adminis
 
 #### Defined in
 
-dist/generated/types.d.ts:6828
+dist/generated/types.d.ts:6926
 
 ___
 
@@ -80446,7 +82058,7 @@ Returns bot members of the supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:6868
+dist/generated/types.d.ts:6966
 
 ___
 
@@ -80465,7 +82077,7 @@ Returns bot members of the supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:6875
+dist/generated/types.d.ts:6973
 
 ___
 
@@ -80484,7 +82096,7 @@ Returns contacts of the user, which are members of the supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:6742
+dist/generated/types.d.ts:6840
 
 ___
 
@@ -80504,7 +82116,7 @@ Returns contacts of the user, which are members of the supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:6754
+dist/generated/types.d.ts:6852
 
 ___
 
@@ -80524,7 +82136,7 @@ Returns users which can be mentioned in the supergroup
 
 #### Defined in
 
-dist/generated/types.d.ts:6837
+dist/generated/types.d.ts:6935
 
 ___
 
@@ -80545,7 +82157,7 @@ Returns users which can be mentioned in the supergroup
 
 #### Defined in
 
-dist/generated/types.d.ts:6854
+dist/generated/types.d.ts:6952
 
 ___
 
@@ -80563,7 +82175,7 @@ Returns recently active users in reverse chronological order
 
 #### Defined in
 
-dist/generated/types.d.ts:6731
+dist/generated/types.d.ts:6829
 
 ___
 
@@ -80582,7 +82194,7 @@ Returns recently active users in reverse chronological order
 
 #### Defined in
 
-dist/generated/types.d.ts:6738
+dist/generated/types.d.ts:6836
 
 ___
 
@@ -80601,7 +82213,7 @@ Returns restricted supergroup members; can be used only by administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:6795
+dist/generated/types.d.ts:6893
 
 ___
 
@@ -80621,7 +82233,7 @@ Returns restricted supergroup members; can be used only by administrators
 
 #### Defined in
 
-dist/generated/types.d.ts:6807
+dist/generated/types.d.ts:6905
 
 ___
 
@@ -80640,7 +82252,7 @@ Used to search for supergroup or channel members via a (string) query
 
 #### Defined in
 
-dist/generated/types.d.ts:6774
+dist/generated/types.d.ts:6872
 
 ___
 
@@ -80660,7 +82272,7 @@ Used to search for supergroup or channel members via a (string) query
 
 #### Defined in
 
-dist/generated/types.d.ts:6786
+dist/generated/types.d.ts:6884
 
 ___
 
@@ -80688,7 +82300,7 @@ Fetches the latest versions of all strings from a language pack in the current l
 
 #### Defined in
 
-dist/generated/types.d.ts:55265
+dist/generated/types.d.ts:56023
 
 ___
 
@@ -80707,7 +82319,7 @@ Fetches the latest versions of all strings from a language pack in the current l
 
 #### Defined in
 
-dist/generated/types.d.ts:55251
+dist/generated/types.d.ts:56009
 
 ___
 
@@ -80727,7 +82339,7 @@ Represents a URL linking to an internal Telegram entity
 
 #### Defined in
 
-dist/generated/types.d.ts:33700
+dist/generated/types.d.ts:34157
 
 ___
 
@@ -80748,7 +82360,7 @@ Represents a URL linking to an internal Telegram entity
 
 #### Defined in
 
-dist/generated/types.d.ts:33717
+dist/generated/types.d.ts:34174
 
 ___
 
@@ -80767,7 +82379,7 @@ A chat invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:33658
+dist/generated/types.d.ts:34115
 
 ___
 
@@ -80787,7 +82399,7 @@ A chat invite link
 
 #### Defined in
 
-dist/generated/types.d.ts:33670
+dist/generated/types.d.ts:34127
 
 ___
 
@@ -80806,7 +82418,7 @@ A URL linking to a sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:33679
+dist/generated/types.d.ts:34136
 
 ___
 
@@ -80826,7 +82438,7 @@ A URL linking to a sticker set
 
 #### Defined in
 
-dist/generated/types.d.ts:33691
+dist/generated/types.d.ts:34148
 
 ___
 
@@ -80845,7 +82457,7 @@ A URL linking to a public supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:33637
+dist/generated/types.d.ts:34094
 
 ___
 
@@ -80865,7 +82477,7 @@ A URL linking to a public supergroup or channel
 
 #### Defined in
 
-dist/generated/types.d.ts:33649
+dist/generated/types.d.ts:34106
 
 ___
 
@@ -80884,7 +82496,7 @@ A URL linking to a user
 
 #### Defined in
 
-dist/generated/types.d.ts:33616
+dist/generated/types.d.ts:34073
 
 ___
 
@@ -80904,7 +82516,7 @@ A URL linking to a user
 
 #### Defined in
 
-dist/generated/types.d.ts:33628
+dist/generated/types.d.ts:34085
 
 ___
 
@@ -80923,7 +82535,7 @@ Contains a list of t.me URLs
 
 #### Defined in
 
-dist/generated/types.d.ts:33731
+dist/generated/types.d.ts:34188
 
 ___
 
@@ -80943,7 +82555,7 @@ Contains a list of t.me URLs
 
 #### Defined in
 
-dist/generated/types.d.ts:33743
+dist/generated/types.d.ts:34200
 
 ___
 
@@ -80965,7 +82577,7 @@ The chat needs to be chosen by the user among chats of the specified types
 
 #### Defined in
 
-dist/generated/types.d.ts:31514
+dist/generated/types.d.ts:31927
 
 ___
 
@@ -80988,7 +82600,7 @@ The chat needs to be chosen by the user among chats of the specified types
 
 #### Defined in
 
-dist/generated/types.d.ts:31541
+dist/generated/types.d.ts:31954
 
 ___
 
@@ -81006,7 +82618,7 @@ The currently opened chat needs to be kept
 
 #### Defined in
 
-dist/generated/types.d.ts:31503
+dist/generated/types.d.ts:31916
 
 ___
 
@@ -81025,7 +82637,7 @@ The currently opened chat needs to be kept
 
 #### Defined in
 
-dist/generated/types.d.ts:31510
+dist/generated/types.d.ts:31923
 
 ___
 
@@ -81044,7 +82656,7 @@ The chat needs to be open with the provided internal link
 
 #### Defined in
 
-dist/generated/types.d.ts:31565
+dist/generated/types.d.ts:31978
 
 ___
 
@@ -81064,7 +82676,7 @@ The chat needs to be open with the provided internal link
 
 #### Defined in
 
-dist/generated/types.d.ts:31577
+dist/generated/types.d.ts:31990
 
 ___
 
@@ -81084,7 +82696,7 @@ Returns information about the availability of a temporary password, which can be
 
 #### Defined in
 
-dist/generated/types.d.ts:2599
+dist/generated/types.d.ts:2640
 
 ___
 
@@ -81105,7 +82717,7 @@ Returns information about the availability of a temporary password, which can be
 
 #### Defined in
 
-dist/generated/types.d.ts:2616
+dist/generated/types.d.ts:2657
 
 ___
 
@@ -81133,7 +82745,7 @@ Terminates all other sessions of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54424
+dist/generated/types.d.ts:55182
 
 ___
 
@@ -81151,7 +82763,7 @@ Terminates all other sessions of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54415
+dist/generated/types.d.ts:55173
 
 ___
 
@@ -81179,7 +82791,7 @@ Terminates a session of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54413
+dist/generated/types.d.ts:55171
 
 ___
 
@@ -81198,7 +82810,7 @@ Terminates a session of the current user
 
 #### Defined in
 
-dist/generated/types.d.ts:54399
+dist/generated/types.d.ts:55157
 
 ___
 
@@ -81219,7 +82831,7 @@ Contains Telegram terms of service
 
 #### Defined in
 
-dist/generated/types.d.ts:2198
+dist/generated/types.d.ts:2229
 
 ___
 
@@ -81241,7 +82853,7 @@ Contains Telegram terms of service
 
 #### Defined in
 
-dist/generated/types.d.ts:2220
+dist/generated/types.d.ts:2251
 
 ___
 
@@ -81260,7 +82872,7 @@ A simple object containing a sequence of bytes; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39031
+dist/generated/types.d.ts:39519
 
 ___
 
@@ -81280,7 +82892,7 @@ A simple object containing a sequence of bytes; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39043
+dist/generated/types.d.ts:39531
 
 ___
 
@@ -81308,7 +82920,7 @@ Returns the received bytes; for testing only. This is an offline method. Can be 
 
 #### Defined in
 
-dist/generated/types.d.ts:57280
+dist/generated/types.d.ts:58192
 
 ___
 
@@ -81327,7 +82939,7 @@ Returns the received bytes; for testing only. This is an offline method. Can be 
 
 #### Defined in
 
-dist/generated/types.d.ts:57266
+dist/generated/types.d.ts:58178
 
 ___
 
@@ -81355,7 +82967,7 @@ Does nothing; for testing only. This is an offline method. Can be called before 
 
 #### Defined in
 
-dist/generated/types.d.ts:57248
+dist/generated/types.d.ts:58160
 
 ___
 
@@ -81373,7 +82985,7 @@ Does nothing; for testing only. This is an offline method. Can be called before 
 
 #### Defined in
 
-dist/generated/types.d.ts:57239
+dist/generated/types.d.ts:58151
 
 ___
 
@@ -81401,7 +83013,7 @@ Returns the received string; for testing only. This is an offline method. Can be
 
 #### Defined in
 
-dist/generated/types.d.ts:57264
+dist/generated/types.d.ts:58176
 
 ___
 
@@ -81420,7 +83032,7 @@ Returns the received string; for testing only. This is an offline method. Can be
 
 #### Defined in
 
-dist/generated/types.d.ts:57250
+dist/generated/types.d.ts:58162
 
 ___
 
@@ -81448,7 +83060,7 @@ Returns the received vector of numbers; for testing only. This is an offline met
 
 #### Defined in
 
-dist/generated/types.d.ts:57296
+dist/generated/types.d.ts:58208
 
 ___
 
@@ -81467,7 +83079,7 @@ Returns the received vector of numbers; for testing only. This is an offline met
 
 #### Defined in
 
-dist/generated/types.d.ts:57282
+dist/generated/types.d.ts:58194
 
 ___
 
@@ -81495,7 +83107,7 @@ Returns the received vector of objects containing a number; for testing only. Th
 
 #### Defined in
 
-dist/generated/types.d.ts:57312
+dist/generated/types.d.ts:58224
 
 ___
 
@@ -81514,7 +83126,7 @@ Returns the received vector of objects containing a number; for testing only. Th
 
 #### Defined in
 
-dist/generated/types.d.ts:57298
+dist/generated/types.d.ts:58210
 
 ___
 
@@ -81542,7 +83154,7 @@ Returns the received vector of strings; for testing only. This is an offline met
 
 #### Defined in
 
-dist/generated/types.d.ts:57328
+dist/generated/types.d.ts:58240
 
 ___
 
@@ -81561,7 +83173,7 @@ Returns the received vector of strings; for testing only. This is an offline met
 
 #### Defined in
 
-dist/generated/types.d.ts:57314
+dist/generated/types.d.ts:58226
 
 ___
 
@@ -81589,7 +83201,7 @@ Returns the received vector of objects containing a string; for testing only. Th
 
 #### Defined in
 
-dist/generated/types.d.ts:57344
+dist/generated/types.d.ts:58256
 
 ___
 
@@ -81608,7 +83220,7 @@ Returns the received vector of objects containing a string; for testing only. Th
 
 #### Defined in
 
-dist/generated/types.d.ts:57330
+dist/generated/types.d.ts:58242
 
 ___
 
@@ -81636,7 +83248,7 @@ Forces an updates.getDifference call to the Telegram servers; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:57418
+dist/generated/types.d.ts:58330
 
 ___
 
@@ -81654,7 +83266,7 @@ Forces an updates.getDifference call to the Telegram servers; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:57409
+dist/generated/types.d.ts:58321
 
 ___
 
@@ -81673,7 +83285,7 @@ A simple object containing a number; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:38989
+dist/generated/types.d.ts:39477
 
 ___
 
@@ -81693,7 +83305,7 @@ A simple object containing a number; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39001
+dist/generated/types.d.ts:39489
 
 ___
 
@@ -81721,7 +83333,7 @@ Sends a simple network request to the Telegram servers; for testing only. Can be
 
 #### Defined in
 
-dist/generated/types.d.ts:57371
+dist/generated/types.d.ts:58283
 
 ___
 
@@ -81739,7 +83351,7 @@ Sends a simple network request to the Telegram servers; for testing only. Can be
 
 #### Defined in
 
-dist/generated/types.d.ts:57362
+dist/generated/types.d.ts:58274
 
 ___
 
@@ -81767,7 +83379,7 @@ Sends a simple network request to the Telegram servers via proxy; for testing on
 
 #### Defined in
 
-dist/generated/types.d.ts:57407
+dist/generated/types.d.ts:58319
 
 ___
 
@@ -81790,7 +83402,7 @@ Sends a simple network request to the Telegram servers via proxy; for testing on
 
 #### Defined in
 
-dist/generated/types.d.ts:57373
+dist/generated/types.d.ts:58285
 
 ___
 
@@ -81818,7 +83430,7 @@ Returns the specified error and ensures that the Error object is used; for testi
 
 #### Defined in
 
-dist/generated/types.d.ts:57445
+dist/generated/types.d.ts:58357
 
 ___
 
@@ -81837,7 +83449,7 @@ Returns the specified error and ensures that the Error object is used; for testi
 
 #### Defined in
 
-dist/generated/types.d.ts:57431
+dist/generated/types.d.ts:58343
 
 ___
 
@@ -81865,7 +83477,7 @@ Returns the squared received number; for testing only. This is an offline method
 
 #### Defined in
 
-dist/generated/types.d.ts:57360
+dist/generated/types.d.ts:58272
 
 ___
 
@@ -81884,7 +83496,7 @@ Returns the squared received number; for testing only. This is an offline method
 
 #### Defined in
 
-dist/generated/types.d.ts:57346
+dist/generated/types.d.ts:58258
 
 ___
 
@@ -81903,7 +83515,7 @@ A simple object containing a string; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39010
+dist/generated/types.d.ts:39498
 
 ___
 
@@ -81923,7 +83535,7 @@ A simple object containing a string; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39022
+dist/generated/types.d.ts:39510
 
 ___
 
@@ -81951,7 +83563,7 @@ Does nothing and ensures that the Update object is used; for testing only. This 
 
 #### Defined in
 
-dist/generated/types.d.ts:57429
+dist/generated/types.d.ts:58341
 
 ___
 
@@ -81969,7 +83581,7 @@ Does nothing and ensures that the Update object is used; for testing only. This 
 
 #### Defined in
 
-dist/generated/types.d.ts:57420
+dist/generated/types.d.ts:58332
 
 ___
 
@@ -81988,7 +83600,7 @@ A simple object containing a vector of numbers; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39052
+dist/generated/types.d.ts:39540
 
 ___
 
@@ -82008,7 +83620,7 @@ A simple object containing a vector of numbers; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39064
+dist/generated/types.d.ts:39552
 
 ___
 
@@ -82027,7 +83639,7 @@ A simple object containing a vector of objects that hold a number; for testing o
 
 #### Defined in
 
-dist/generated/types.d.ts:39073
+dist/generated/types.d.ts:39561
 
 ___
 
@@ -82047,7 +83659,7 @@ A simple object containing a vector of objects that hold a number; for testing o
 
 #### Defined in
 
-dist/generated/types.d.ts:39085
+dist/generated/types.d.ts:39573
 
 ___
 
@@ -82066,7 +83678,7 @@ A simple object containing a vector of strings; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39094
+dist/generated/types.d.ts:39582
 
 ___
 
@@ -82086,7 +83698,7 @@ A simple object containing a vector of strings; for testing only
 
 #### Defined in
 
-dist/generated/types.d.ts:39106
+dist/generated/types.d.ts:39594
 
 ___
 
@@ -82105,7 +83717,7 @@ A simple object containing a vector of objects that hold a string; for testing o
 
 #### Defined in
 
-dist/generated/types.d.ts:39115
+dist/generated/types.d.ts:39603
 
 ___
 
@@ -82125,7 +83737,7 @@ A simple object containing a vector of objects that hold a string; for testing o
 
 #### Defined in
 
-dist/generated/types.d.ts:39127
+dist/generated/types.d.ts:39615
 
 ___
 
@@ -82144,7 +83756,7 @@ Contains some text
 
 #### Defined in
 
-dist/generated/types.d.ts:33881
+dist/generated/types.d.ts:34338
 
 ___
 
@@ -82164,7 +83776,7 @@ Contains some text
 
 #### Defined in
 
-dist/generated/types.d.ts:33893
+dist/generated/types.d.ts:34350
 
 ___
 
@@ -82183,7 +83795,7 @@ Contains a list of text entities
 
 #### Defined in
 
-dist/generated/types.d.ts:2142
+dist/generated/types.d.ts:2173
 
 ___
 
@@ -82203,7 +83815,7 @@ Contains a list of text entities
 
 #### Defined in
 
-dist/generated/types.d.ts:2154
+dist/generated/types.d.ts:2185
 
 ___
 
@@ -82224,7 +83836,7 @@ Represents a part of the text that needs to be formatted in some unusual way
 
 #### Defined in
 
-dist/generated/types.d.ts:2101
+dist/generated/types.d.ts:2132
 
 ___
 
@@ -82246,7 +83858,7 @@ Represents a part of the text that needs to be formatted in some unusual way
 
 #### Defined in
 
-dist/generated/types.d.ts:2123
+dist/generated/types.d.ts:2154
 
 ___
 
@@ -82264,7 +83876,7 @@ A bank card number. The getBankCardInfo method can be used to get information ab
 
 #### Defined in
 
-dist/generated/types.d.ts:19351
+dist/generated/types.d.ts:19681
 
 ___
 
@@ -82283,7 +83895,7 @@ A bank card number. The getBankCardInfo method can be used to get information ab
 
 #### Defined in
 
-dist/generated/types.d.ts:19358
+dist/generated/types.d.ts:19688
 
 ___
 
@@ -82301,7 +83913,7 @@ A bold text
 
 #### Defined in
 
-dist/generated/types.d.ts:19362
+dist/generated/types.d.ts:19692
 
 ___
 
@@ -82320,7 +83932,7 @@ A bold text
 
 #### Defined in
 
-dist/generated/types.d.ts:19369
+dist/generated/types.d.ts:19699
 
 ___
 
@@ -82338,7 +83950,7 @@ A bot command, beginning with "/"
 
 #### Defined in
 
-dist/generated/types.d.ts:19307
+dist/generated/types.d.ts:19637
 
 ___
 
@@ -82357,7 +83969,7 @@ A bot command, beginning with "/"
 
 #### Defined in
 
-dist/generated/types.d.ts:19314
+dist/generated/types.d.ts:19644
 
 ___
 
@@ -82375,7 +83987,7 @@ A cashtag text, beginning with "$" and consisting of capital English letters (e.
 
 #### Defined in
 
-dist/generated/types.d.ts:19296
+dist/generated/types.d.ts:19626
 
 ___
 
@@ -82394,7 +84006,7 @@ A cashtag text, beginning with "$" and consisting of capital English letters (e.
 
 #### Defined in
 
-dist/generated/types.d.ts:19303
+dist/generated/types.d.ts:19633
 
 ___
 
@@ -82412,7 +84024,7 @@ Text that must be formatted as if inside a code HTML tag
 
 #### Defined in
 
-dist/generated/types.d.ts:19417
+dist/generated/types.d.ts:19747
 
 ___
 
@@ -82431,7 +84043,7 @@ Text that must be formatted as if inside a code HTML tag
 
 #### Defined in
 
-dist/generated/types.d.ts:19424
+dist/generated/types.d.ts:19754
 
 ___
 
@@ -82450,7 +84062,7 @@ A custom emoji. The text behind a custom emoji must be an emoji. Only premium us
 
 #### Defined in
 
-dist/generated/types.d.ts:19502
+dist/generated/types.d.ts:19832
 
 ___
 
@@ -82470,7 +84082,7 @@ A custom emoji. The text behind a custom emoji must be an emoji. Only premium us
 
 #### Defined in
 
-dist/generated/types.d.ts:19514
+dist/generated/types.d.ts:19844
 
 ___
 
@@ -82488,7 +84100,7 @@ An email address
 
 #### Defined in
 
-dist/generated/types.d.ts:19329
+dist/generated/types.d.ts:19659
 
 ___
 
@@ -82507,7 +84119,7 @@ An email address
 
 #### Defined in
 
-dist/generated/types.d.ts:19336
+dist/generated/types.d.ts:19666
 
 ___
 
@@ -82525,7 +84137,7 @@ A hashtag text, beginning with "#"
 
 #### Defined in
 
-dist/generated/types.d.ts:19285
+dist/generated/types.d.ts:19615
 
 ___
 
@@ -82544,7 +84156,7 @@ A hashtag text, beginning with "#"
 
 #### Defined in
 
-dist/generated/types.d.ts:19292
+dist/generated/types.d.ts:19622
 
 ___
 
@@ -82562,7 +84174,7 @@ An italic text
 
 #### Defined in
 
-dist/generated/types.d.ts:19373
+dist/generated/types.d.ts:19703
 
 ___
 
@@ -82581,7 +84193,7 @@ An italic text
 
 #### Defined in
 
-dist/generated/types.d.ts:19380
+dist/generated/types.d.ts:19710
 
 ___
 
@@ -82600,7 +84212,7 @@ A media timestamp
 
 #### Defined in
 
-dist/generated/types.d.ts:19523
+dist/generated/types.d.ts:19853
 
 ___
 
@@ -82620,7 +84232,7 @@ A media timestamp
 
 #### Defined in
 
-dist/generated/types.d.ts:19535
+dist/generated/types.d.ts:19865
 
 ___
 
@@ -82638,7 +84250,7 @@ A mention of a user, a supergroup, or a channel by their username
 
 #### Defined in
 
-dist/generated/types.d.ts:19274
+dist/generated/types.d.ts:19604
 
 ___
 
@@ -82657,7 +84269,7 @@ A mention of a user, a supergroup, or a channel by their username
 
 #### Defined in
 
-dist/generated/types.d.ts:19281
+dist/generated/types.d.ts:19611
 
 ___
 
@@ -82676,7 +84288,7 @@ A text shows instead of a raw mention of the user (e.g., when the user has no us
 
 #### Defined in
 
-dist/generated/types.d.ts:19481
+dist/generated/types.d.ts:19811
 
 ___
 
@@ -82696,7 +84308,7 @@ A text shows instead of a raw mention of the user (e.g., when the user has no us
 
 #### Defined in
 
-dist/generated/types.d.ts:19493
+dist/generated/types.d.ts:19823
 
 ___
 
@@ -82714,7 +84326,7 @@ A phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:19340
+dist/generated/types.d.ts:19670
 
 ___
 
@@ -82733,7 +84345,7 @@ A phone number
 
 #### Defined in
 
-dist/generated/types.d.ts:19347
+dist/generated/types.d.ts:19677
 
 ___
 
@@ -82751,7 +84363,7 @@ Text that must be formatted as if inside a pre HTML tag
 
 #### Defined in
 
-dist/generated/types.d.ts:19428
+dist/generated/types.d.ts:19758
 
 ___
 
@@ -82770,7 +84382,7 @@ Text that must be formatted as if inside a pre HTML tag
 
 #### Defined in
 
-dist/generated/types.d.ts:19435
+dist/generated/types.d.ts:19765
 
 ___
 
@@ -82789,7 +84401,7 @@ Text that must be formatted as if inside pre, and code HTML tags
 
 #### Defined in
 
-dist/generated/types.d.ts:19439
+dist/generated/types.d.ts:19769
 
 ___
 
@@ -82809,7 +84421,7 @@ Text that must be formatted as if inside pre, and code HTML tags
 
 #### Defined in
 
-dist/generated/types.d.ts:19451
+dist/generated/types.d.ts:19781
 
 ___
 
@@ -82827,7 +84439,7 @@ A spoiler text
 
 #### Defined in
 
-dist/generated/types.d.ts:19406
+dist/generated/types.d.ts:19736
 
 ___
 
@@ -82846,7 +84458,7 @@ A spoiler text
 
 #### Defined in
 
-dist/generated/types.d.ts:19413
+dist/generated/types.d.ts:19743
 
 ___
 
@@ -82864,7 +84476,7 @@ A strikethrough text
 
 #### Defined in
 
-dist/generated/types.d.ts:19395
+dist/generated/types.d.ts:19725
 
 ___
 
@@ -82883,7 +84495,7 @@ A strikethrough text
 
 #### Defined in
 
-dist/generated/types.d.ts:19402
+dist/generated/types.d.ts:19732
 
 ___
 
@@ -82902,7 +84514,7 @@ A text description shown instead of a raw URL
 
 #### Defined in
 
-dist/generated/types.d.ts:19460
+dist/generated/types.d.ts:19790
 
 ___
 
@@ -82922,7 +84534,7 @@ A text description shown instead of a raw URL
 
 #### Defined in
 
-dist/generated/types.d.ts:19472
+dist/generated/types.d.ts:19802
 
 ___
 
@@ -82940,7 +84552,7 @@ An underlined text
 
 #### Defined in
 
-dist/generated/types.d.ts:19384
+dist/generated/types.d.ts:19714
 
 ___
 
@@ -82959,7 +84571,7 @@ An underlined text
 
 #### Defined in
 
-dist/generated/types.d.ts:19391
+dist/generated/types.d.ts:19721
 
 ___
 
@@ -82977,7 +84589,7 @@ An HTTP URL
 
 #### Defined in
 
-dist/generated/types.d.ts:19318
+dist/generated/types.d.ts:19648
 
 ___
 
@@ -82996,7 +84608,7 @@ An HTTP URL
 
 #### Defined in
 
-dist/generated/types.d.ts:19325
+dist/generated/types.d.ts:19655
 
 ___
 
@@ -83014,7 +84626,7 @@ The text uses HTML-style formatting. The same as Telegram Bot API "HTML" parse m
 
 #### Defined in
 
-dist/generated/types.d.ts:33996
+dist/generated/types.d.ts:34453
 
 ___
 
@@ -83033,7 +84645,7 @@ The text uses HTML-style formatting. The same as Telegram Bot API "HTML" parse m
 
 #### Defined in
 
-dist/generated/types.d.ts:34003
+dist/generated/types.d.ts:34460
 
 ___
 
@@ -83052,7 +84664,7 @@ The text uses Markdown-style formatting
 
 #### Defined in
 
-dist/generated/types.d.ts:33975
+dist/generated/types.d.ts:34432
 
 ___
 
@@ -83072,7 +84684,7 @@ The text uses Markdown-style formatting
 
 #### Defined in
 
-dist/generated/types.d.ts:33987
+dist/generated/types.d.ts:34444
 
 ___
 
@@ -83097,7 +84709,7 @@ Contains parameters of the application theme
 
 #### Defined in
 
-dist/generated/types.d.ts:14497
+dist/generated/types.d.ts:14817
 
 ___
 
@@ -83123,7 +84735,7 @@ Contains parameters of the application theme
 
 #### Defined in
 
-dist/generated/types.d.ts:14539
+dist/generated/types.d.ts:14859
 
 ___
 
@@ -83146,7 +84758,7 @@ Describes theme settings
 
 #### Defined in
 
-dist/generated/types.d.ts:28717
+dist/generated/types.d.ts:29130
 
 ___
 
@@ -83170,7 +84782,7 @@ Describes theme settings
 
 #### Defined in
 
-dist/generated/types.d.ts:28749
+dist/generated/types.d.ts:29162
 
 ___
 
@@ -83192,7 +84804,7 @@ Represents a thumbnail
 
 #### Defined in
 
-dist/generated/types.d.ts:3141
+dist/generated/types.d.ts:3182
 
 ___
 
@@ -83215,7 +84827,7 @@ Represents a thumbnail
 
 #### Defined in
 
-dist/generated/types.d.ts:3168
+dist/generated/types.d.ts:3209
 
 ___
 
@@ -83233,7 +84845,7 @@ The thumbnail is in static GIF format. It will be used only for some bot inline 
 
 #### Defined in
 
-dist/generated/types.d.ts:3075
+dist/generated/types.d.ts:3116
 
 ___
 
@@ -83252,7 +84864,7 @@ The thumbnail is in static GIF format. It will be used only for some bot inline 
 
 #### Defined in
 
-dist/generated/types.d.ts:3082
+dist/generated/types.d.ts:3123
 
 ___
 
@@ -83270,7 +84882,7 @@ The thumbnail is in JPEG format
 
 #### Defined in
 
-dist/generated/types.d.ts:3064
+dist/generated/types.d.ts:3105
 
 ___
 
@@ -83289,7 +84901,7 @@ The thumbnail is in JPEG format
 
 #### Defined in
 
-dist/generated/types.d.ts:3071
+dist/generated/types.d.ts:3112
 
 ___
 
@@ -83307,7 +84919,7 @@ The thumbnail is in MPEG4 format. It will be used only for some animations and v
 
 #### Defined in
 
-dist/generated/types.d.ts:3086
+dist/generated/types.d.ts:3127
 
 ___
 
@@ -83326,7 +84938,7 @@ The thumbnail is in MPEG4 format. It will be used only for some animations and v
 
 #### Defined in
 
-dist/generated/types.d.ts:3093
+dist/generated/types.d.ts:3134
 
 ___
 
@@ -83344,7 +84956,7 @@ The thumbnail is in PNG format. It will be used only for background patterns
 
 #### Defined in
 
-dist/generated/types.d.ts:3097
+dist/generated/types.d.ts:3138
 
 ___
 
@@ -83363,7 +84975,7 @@ The thumbnail is in PNG format. It will be used only for background patterns
 
 #### Defined in
 
-dist/generated/types.d.ts:3104
+dist/generated/types.d.ts:3145
 
 ___
 
@@ -83381,7 +84993,7 @@ The thumbnail is in TGS format. It will be used only for TGS sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:3108
+dist/generated/types.d.ts:3149
 
 ___
 
@@ -83400,7 +85012,7 @@ The thumbnail is in TGS format. It will be used only for TGS sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:3115
+dist/generated/types.d.ts:3156
 
 ___
 
@@ -83418,7 +85030,7 @@ The thumbnail is in WEBM format. It will be used only for WEBM sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:3119
+dist/generated/types.d.ts:3160
 
 ___
 
@@ -83437,7 +85049,7 @@ The thumbnail is in WEBM format. It will be used only for WEBM sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:3126
+dist/generated/types.d.ts:3167
 
 ___
 
@@ -83455,7 +85067,7 @@ The thumbnail is in WEBP format. It will be used only for some stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:3130
+dist/generated/types.d.ts:3171
 
 ___
 
@@ -83474,7 +85086,7 @@ The thumbnail is in WEBP format. It will be used only for some stickers
 
 #### Defined in
 
-dist/generated/types.d.ts:3137
+dist/generated/types.d.ts:3178
 
 ___
 
@@ -83502,7 +85114,7 @@ Changes pause state of all files in the file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:51670
+dist/generated/types.d.ts:52354
 
 ___
 
@@ -83521,7 +85133,7 @@ Changes pause state of all files in the file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:51656
+dist/generated/types.d.ts:52340
 
 ___
 
@@ -83549,7 +85161,7 @@ Adds or removes a bot to attachment menu. Bot can be added to attachment menu, o
 
 #### Defined in
 
-dist/generated/types.d.ts:51296
+dist/generated/types.d.ts:51980
 
 ___
 
@@ -83570,7 +85182,7 @@ Adds or removes a bot to attachment menu. Bot can be added to attachment menu, o
 
 #### Defined in
 
-dist/generated/types.d.ts:51272
+dist/generated/types.d.ts:51956
 
 ___
 
@@ -83598,7 +85210,7 @@ Changes the value of the default disable_notification parameter, used when a mes
 
 #### Defined in
 
-dist/generated/types.d.ts:50605
+dist/generated/types.d.ts:51289
 
 ___
 
@@ -83618,7 +85230,7 @@ Changes the value of the default disable_notification parameter, used when a mes
 
 #### Defined in
 
-dist/generated/types.d.ts:50586
+dist/generated/types.d.ts:51270
 
 ___
 
@@ -83646,7 +85258,7 @@ Changes the ability of users to save, forward, or copy chat content. Supported o
 
 #### Defined in
 
-dist/generated/types.d.ts:50542
+dist/generated/types.d.ts:51226
 
 ___
 
@@ -83666,7 +85278,7 @@ Changes the ability of users to save, forward, or copy chat content. Supported o
 
 #### Defined in
 
-dist/generated/types.d.ts:50523
+dist/generated/types.d.ts:51207
 
 ___
 
@@ -83694,7 +85306,7 @@ Changes the marked as unread state of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50584
+dist/generated/types.d.ts:51268
 
 ___
 
@@ -83714,7 +85326,7 @@ Changes the marked as unread state of a chat
 
 #### Defined in
 
-dist/generated/types.d.ts:50565
+dist/generated/types.d.ts:51249
 
 ___
 
@@ -83742,7 +85354,7 @@ Changes the pinned state of a chat. There can be up to getOption("pinned_chat_co
 
 #### Defined in
 
-dist/generated/types.d.ts:51233
+dist/generated/types.d.ts:51917
 
 ___
 
@@ -83763,7 +85375,7 @@ Changes the pinned state of a chat. There can be up to getOption("pinned_chat_co
 
 #### Defined in
 
-dist/generated/types.d.ts:51209
+dist/generated/types.d.ts:51893
 
 ___
 
@@ -83791,7 +85403,7 @@ Changes the tranlatable state of a chat; for Telegram Premium users only
 
 #### Defined in
 
-dist/generated/types.d.ts:50563
+dist/generated/types.d.ts:51247
 
 ___
 
@@ -83811,7 +85423,7 @@ Changes the tranlatable state of a chat; for Telegram Premium users only
 
 #### Defined in
 
-dist/generated/types.d.ts:50544
+dist/generated/types.d.ts:51228
 
 ___
 
@@ -83839,7 +85451,7 @@ Changes pause state of a file in the file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:51654
+dist/generated/types.d.ts:52338
 
 ___
 
@@ -83859,7 +85471,7 @@ Changes pause state of a file in the file download list
 
 #### Defined in
 
-dist/generated/types.d.ts:51635
+dist/generated/types.d.ts:52319
 
 ___
 
@@ -83887,7 +85499,7 @@ Toggles whether a topic is closed in a forum supergroup chat; requires can_manag
 
 #### Defined in
 
-dist/generated/types.d.ts:48583
+dist/generated/types.d.ts:49184
 
 ___
 
@@ -83908,7 +85520,7 @@ Toggles whether a topic is closed in a forum supergroup chat; requires can_manag
 
 #### Defined in
 
-dist/generated/types.d.ts:48559
+dist/generated/types.d.ts:49160
 
 ___
 
@@ -83936,7 +85548,7 @@ Changes the pinned state of a forum topic; requires can_manage_topics administra
 
 #### Defined in
 
-dist/generated/types.d.ts:48630
+dist/generated/types.d.ts:49231
 
 ___
 
@@ -83957,7 +85569,7 @@ Changes the pinned state of a forum topic; requires can_manage_topics administra
 
 #### Defined in
 
-dist/generated/types.d.ts:48606
+dist/generated/types.d.ts:49207
 
 ___
 
@@ -83985,7 +85597,7 @@ Toggles whether a General topic is hidden in a forum supergroup chat; requires c
 
 #### Defined in
 
-dist/generated/types.d.ts:48604
+dist/generated/types.d.ts:49205
 
 ___
 
@@ -84005,7 +85617,7 @@ Toggles whether a General topic is hidden in a forum supergroup chat; requires c
 
 #### Defined in
 
-dist/generated/types.d.ts:48585
+dist/generated/types.d.ts:49186
 
 ___
 
@@ -84033,7 +85645,7 @@ Toggles whether the current user will receive a notification when the group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52529
+dist/generated/types.d.ts:53213
 
 ___
 
@@ -84053,7 +85665,7 @@ Toggles whether the current user will receive a notification when the group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52510
+dist/generated/types.d.ts:53194
 
 ___
 
@@ -84081,7 +85693,7 @@ Toggles whether current user's video is enabled
 
 #### Defined in
 
-dist/generated/types.d.ts:52827
+dist/generated/types.d.ts:53511
 
 ___
 
@@ -84101,7 +85713,7 @@ Toggles whether current user's video is enabled
 
 #### Defined in
 
-dist/generated/types.d.ts:52808
+dist/generated/types.d.ts:53492
 
 ___
 
@@ -84129,7 +85741,7 @@ Toggles whether current user's video is paused
 
 #### Defined in
 
-dist/generated/types.d.ts:52806
+dist/generated/types.d.ts:53490
 
 ___
 
@@ -84149,7 +85761,7 @@ Toggles whether current user's video is paused
 
 #### Defined in
 
-dist/generated/types.d.ts:52787
+dist/generated/types.d.ts:53471
 
 ___
 
@@ -84177,7 +85789,7 @@ Toggles whether new participants of a group call can be unmuted only by administ
 
 #### Defined in
 
-dist/generated/types.d.ts:52680
+dist/generated/types.d.ts:53364
 
 ___
 
@@ -84197,7 +85809,7 @@ Toggles whether new participants of a group call can be unmuted only by administ
 
 #### Defined in
 
-dist/generated/types.d.ts:52661
+dist/generated/types.d.ts:53345
 
 ___
 
@@ -84225,7 +85837,7 @@ Toggles whether a group call participant hand is rased
 
 #### Defined in
 
-dist/generated/types.d.ts:52931
+dist/generated/types.d.ts:53615
 
 ___
 
@@ -84246,7 +85858,7 @@ Toggles whether a group call participant hand is rased
 
 #### Defined in
 
-dist/generated/types.d.ts:52907
+dist/generated/types.d.ts:53591
 
 ___
 
@@ -84274,7 +85886,7 @@ Toggles whether a participant of an active group call is muted, unmuted, or allo
 
 #### Defined in
 
-dist/generated/types.d.ts:52879
+dist/generated/types.d.ts:53563
 
 ___
 
@@ -84295,7 +85907,7 @@ Toggles whether a participant of an active group call is muted, unmuted, or allo
 
 #### Defined in
 
-dist/generated/types.d.ts:52855
+dist/generated/types.d.ts:53539
 
 ___
 
@@ -84323,7 +85935,7 @@ Pauses or unpauses screen sharing in a joined group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52622
+dist/generated/types.d.ts:53306
 
 ___
 
@@ -84343,7 +85955,7 @@ Pauses or unpauses screen sharing in a joined group call
 
 #### Defined in
 
-dist/generated/types.d.ts:52603
+dist/generated/types.d.ts:53287
 
 ___
 
@@ -84371,7 +85983,7 @@ Changes the block state of a message sender. Currently, only users and supergrou
 
 #### Defined in
 
-dist/generated/types.d.ts:53057
+dist/generated/types.d.ts:53741
 
 ___
 
@@ -84391,7 +86003,7 @@ Changes the block state of a message sender. Currently, only users and supergrou
 
 #### Defined in
 
-dist/generated/types.d.ts:53038
+dist/generated/types.d.ts:53722
 
 ___
 
@@ -84419,7 +86031,7 @@ Toggles whether a session can accept incoming calls
 
 #### Defined in
 
-dist/generated/types.d.ts:54445
+dist/generated/types.d.ts:55203
 
 ___
 
@@ -84439,7 +86051,7 @@ Toggles whether a session can accept incoming calls
 
 #### Defined in
 
-dist/generated/types.d.ts:54426
+dist/generated/types.d.ts:55184
 
 ___
 
@@ -84467,7 +86079,7 @@ Toggles whether a session can accept incoming secret chats
 
 #### Defined in
 
-dist/generated/types.d.ts:54466
+dist/generated/types.d.ts:55224
 
 ___
 
@@ -84487,7 +86099,7 @@ Toggles whether a session can accept incoming secret chats
 
 #### Defined in
 
-dist/generated/types.d.ts:54447
+dist/generated/types.d.ts:55205
 
 ___
 
@@ -84515,7 +86127,7 @@ Toggles whether aggressive anti-spam checks are enabled in the supergroup. Can b
 
 #### Defined in
 
-dist/generated/types.d.ts:54754
+dist/generated/types.d.ts:55512
 
 ___
 
@@ -84535,7 +86147,7 @@ Toggles whether aggressive anti-spam checks are enabled in the supergroup. Can b
 
 #### Defined in
 
-dist/generated/types.d.ts:54735
+dist/generated/types.d.ts:55493
 
 ___
 
@@ -84563,7 +86175,7 @@ Toggles whether non-administrators can receive only administrators and bots usin
 
 #### Defined in
 
-dist/generated/types.d.ts:54733
+dist/generated/types.d.ts:55491
 
 ___
 
@@ -84583,7 +86195,7 @@ Toggles whether non-administrators can receive only administrators and bots usin
 
 #### Defined in
 
-dist/generated/types.d.ts:54714
+dist/generated/types.d.ts:55472
 
 ___
 
@@ -84611,7 +86223,7 @@ Toggles whether the message history of a supergroup is available to new members;
 
 #### Defined in
 
-dist/generated/types.d.ts:54712
+dist/generated/types.d.ts:55470
 
 ___
 
@@ -84631,7 +86243,7 @@ Toggles whether the message history of a supergroup is available to new members;
 
 #### Defined in
 
-dist/generated/types.d.ts:54693
+dist/generated/types.d.ts:55451
 
 ___
 
@@ -84659,7 +86271,7 @@ Upgrades supergroup to a broadcast group; requires owner privileges in the super
 
 #### Defined in
 
-dist/generated/types.d.ts:54791
+dist/generated/types.d.ts:55549
 
 ___
 
@@ -84678,7 +86290,7 @@ Upgrades supergroup to a broadcast group; requires owner privileges in the super
 
 #### Defined in
 
-dist/generated/types.d.ts:54777
+dist/generated/types.d.ts:55535
 
 ___
 
@@ -84706,7 +86318,7 @@ Toggles whether the supergroup is a forum; requires owner privileges in the supe
 
 #### Defined in
 
-dist/generated/types.d.ts:54775
+dist/generated/types.d.ts:55533
 
 ___
 
@@ -84726,7 +86338,7 @@ Toggles whether the supergroup is a forum; requires owner privileges in the supe
 
 #### Defined in
 
-dist/generated/types.d.ts:54756
+dist/generated/types.d.ts:55514
 
 ___
 
@@ -84754,7 +86366,7 @@ Toggles whether all users directly joining the supergroup need to be approved by
 
 #### Defined in
 
-dist/generated/types.d.ts:54691
+dist/generated/types.d.ts:55449
 
 ___
 
@@ -84774,7 +86386,7 @@ Toggles whether all users directly joining the supergroup need to be approved by
 
 #### Defined in
 
-dist/generated/types.d.ts:54672
+dist/generated/types.d.ts:55430
 
 ___
 
@@ -84802,7 +86414,7 @@ Toggles whether joining is mandatory to send messages to a discussion supergroup
 
 #### Defined in
 
-dist/generated/types.d.ts:54670
+dist/generated/types.d.ts:55428
 
 ___
 
@@ -84822,7 +86434,7 @@ Toggles whether joining is mandatory to send messages to a discussion supergroup
 
 #### Defined in
 
-dist/generated/types.d.ts:54651
+dist/generated/types.d.ts:55409
 
 ___
 
@@ -84850,7 +86462,7 @@ Toggles whether sender signature is added to sent messages in a channel; require
 
 #### Defined in
 
-dist/generated/types.d.ts:54649
+dist/generated/types.d.ts:55407
 
 ___
 
@@ -84870,7 +86482,7 @@ Toggles whether sender signature is added to sent messages in a channel; require
 
 #### Defined in
 
-dist/generated/types.d.ts:54630
+dist/generated/types.d.ts:55388
 
 ___
 
@@ -84900,7 +86512,7 @@ Changes active state for a username of a supergroup or channel, requires owner p
 
 #### Defined in
 
-dist/generated/types.d.ts:54570
+dist/generated/types.d.ts:55328
 
 ___
 
@@ -84922,7 +86534,7 @@ Changes active state for a username of a supergroup or channel, requires owner p
 
 #### Defined in
 
-dist/generated/types.d.ts:54544
+dist/generated/types.d.ts:55302
 
 ___
 
@@ -84950,7 +86562,7 @@ Changes active state for a username of the current user. The editable username c
 
 #### Defined in
 
-dist/generated/types.d.ts:54121
+dist/generated/types.d.ts:54805
 
 ___
 
@@ -84970,7 +86582,7 @@ Changes active state for a username of the current user. The editable username c
 
 #### Defined in
 
-dist/generated/types.d.ts:54102
+dist/generated/types.d.ts:54786
 
 ___
 
@@ -84988,7 +86600,7 @@ A category containing frequently used private chats with bot users
 
 #### Defined in
 
-dist/generated/types.d.ts:33550
+dist/generated/types.d.ts:34007
 
 ___
 
@@ -85007,7 +86619,7 @@ A category containing frequently used private chats with bot users
 
 #### Defined in
 
-dist/generated/types.d.ts:33557
+dist/generated/types.d.ts:34014
 
 ___
 
@@ -85025,7 +86637,7 @@ A category containing frequently used chats used for calls
 
 #### Defined in
 
-dist/generated/types.d.ts:33594
+dist/generated/types.d.ts:34051
 
 ___
 
@@ -85044,7 +86656,7 @@ A category containing frequently used chats used for calls
 
 #### Defined in
 
-dist/generated/types.d.ts:33601
+dist/generated/types.d.ts:34058
 
 ___
 
@@ -85062,7 +86674,7 @@ A category containing frequently used channels
 
 #### Defined in
 
-dist/generated/types.d.ts:33572
+dist/generated/types.d.ts:34029
 
 ___
 
@@ -85081,7 +86693,7 @@ A category containing frequently used channels
 
 #### Defined in
 
-dist/generated/types.d.ts:33579
+dist/generated/types.d.ts:34036
 
 ___
 
@@ -85099,7 +86711,7 @@ A category containing frequently used chats used to forward messages
 
 #### Defined in
 
-dist/generated/types.d.ts:33605
+dist/generated/types.d.ts:34062
 
 ___
 
@@ -85118,7 +86730,7 @@ A category containing frequently used chats used to forward messages
 
 #### Defined in
 
-dist/generated/types.d.ts:33612
+dist/generated/types.d.ts:34069
 
 ___
 
@@ -85136,7 +86748,7 @@ A category containing frequently used basic groups and supergroups
 
 #### Defined in
 
-dist/generated/types.d.ts:33561
+dist/generated/types.d.ts:34018
 
 ___
 
@@ -85155,7 +86767,7 @@ A category containing frequently used basic groups and supergroups
 
 #### Defined in
 
-dist/generated/types.d.ts:33568
+dist/generated/types.d.ts:34025
 
 ___
 
@@ -85173,7 +86785,7 @@ A category containing frequently used chats with inline bots sorted by their usa
 
 #### Defined in
 
-dist/generated/types.d.ts:33583
+dist/generated/types.d.ts:34040
 
 ___
 
@@ -85192,7 +86804,7 @@ A category containing frequently used chats with inline bots sorted by their usa
 
 #### Defined in
 
-dist/generated/types.d.ts:33590
+dist/generated/types.d.ts:34047
 
 ___
 
@@ -85210,7 +86822,7 @@ A category containing frequently used private chats with non-bot users
 
 #### Defined in
 
-dist/generated/types.d.ts:33539
+dist/generated/types.d.ts:33996
 
 ___
 
@@ -85229,7 +86841,7 @@ A category containing frequently used private chats with non-bot users
 
 #### Defined in
 
-dist/generated/types.d.ts:33546
+dist/generated/types.d.ts:34003
 
 ___
 
@@ -85257,7 +86869,7 @@ Changes the owner of a chat. The current user must be a current owner of the cha
 
 #### Defined in
 
-dist/generated/types.d.ts:50995
+dist/generated/types.d.ts:51679
 
 ___
 
@@ -85278,7 +86890,7 @@ Changes the owner of a chat. The current user must be a current owner of the cha
 
 #### Defined in
 
-dist/generated/types.d.ts:50971
+dist/generated/types.d.ts:51655
 
 ___
 
@@ -85306,7 +86918,7 @@ Extracts text or caption of the given message and translates it to the given lan
 
 #### Defined in
 
-dist/generated/types.d.ts:47608
+dist/generated/types.d.ts:48209
 
 ___
 
@@ -85323,11 +86935,11 @@ Extracts text or caption of the given message and translates it to the given lan
 | `_` | ``"translateMessageText"`` | - |
 | `chat_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the chat to which the message belongs |
 | `message_id?` | [`int53`](index.types.default.md#int53-1) | Identifier of the message |
-| `to_language_code?` | `string` | ISO language code of the language to which the message is translated. Must be one of    -"af", "sq", "am", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN", "zh", "zh-Hans", "zh-TW", "zh-Hant", "co", "hr", "cs", "da", "nl", "en", "eo", "et",    -"fi", "fr", "fy", "gl", "ka", "de", "el", "gu", "ht", "ha", "haw", "he", "iw", "hi", "hmn", "hu", "is", "ig", "id", "in", "ga", "it", "ja", "jv", "kn", "kk", "km", "rw", "ko",    -"ku", "ky", "lo", "la", "lv", "lt", "lb", "mk", "mg", "ms", "ml", "mt", "mi", "mr", "mn", "my", "ne", "no", "ny", "or", "ps", "fa", "pl", "pt", "pa", "ro", "ru", "sm", "gd", "sr",    -"st", "sn", "sd", "si", "sk", "sl", "so", "es", "su", "sw", "sv", "tl", "tg", "ta", "tt", "te", "th", "tr", "tk", "uk", "ur", "ug", "uz", "vi", "cy", "xh", "yi", "ji", "yo", "zu" |
+| `to_language_code?` | `string` | Language code of the language to which the message is translated. Must be one of -"af", "sq", "am", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN", "zh", "zh-Hans", "zh-TW", "zh-Hant", "co", "hr", "cs", "da", "nl", "en", "eo", "et", -"fi", "fr", "fy", "gl", "ka", "de", "el", "gu", "ht", "ha", "haw", "he", "iw", "hi", "hmn", "hu", "is", "ig", "id", "in", "ga", "it", "ja", "jv", "kn", "kk", "km", "rw", "ko", -"ku", "ky", "lo", "la", "lv", "lt", "lb", "mk", "mg", "ms", "ml", "mt", "mi", "mr", "mn", "my", "ne", "no", "ny", "or", "ps", "fa", "pl", "pt", "pa", "ro", "ru", "sm", "gd", "sr", -"st", "sn", "sd", "si", "sk", "sl", "so", "es", "su", "sw", "sv", "tl", "tg", "ta", "tt", "te", "th", "tr", "tk", "uk", "ur", "ug", "uz", "vi", "cy", "xh", "yi", "ji", "yo", "zu" |
 
 #### Defined in
 
-dist/generated/types.d.ts:47576
+dist/generated/types.d.ts:48177
 
 ___
 
@@ -85355,7 +86967,7 @@ Translates a text to the given language. If the current user is a Telegram Premi
 
 #### Defined in
 
-dist/generated/types.d.ts:47574
+dist/generated/types.d.ts:48175
 
 ___
 
@@ -85371,11 +86983,11 @@ Translates a text to the given language. If the current user is a Telegram Premi
 | :------ | :------ | :------ |
 | `_` | ``"translateText"`` | - |
 | `text?` | [`formattedText$Input`](index.types.default.md#formattedtext$input-1) | Text to translate |
-| `to_language_code?` | `string` | ISO language code of the language to which the message is translated. Must be one of    -"af", "sq", "am", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN", "zh", "zh-Hans", "zh-TW", "zh-Hant", "co", "hr", "cs", "da", "nl", "en", "eo", "et",    -"fi", "fr", "fy", "gl", "ka", "de", "el", "gu", "ht", "ha", "haw", "he", "iw", "hi", "hmn", "hu", "is", "ig", "id", "in", "ga", "it", "ja", "jv", "kn", "kk", "km", "rw", "ko",    -"ku", "ky", "lo", "la", "lv", "lt", "lb", "mk", "mg", "ms", "ml", "mt", "mi", "mr", "mn", "my", "ne", "no", "ny", "or", "ps", "fa", "pl", "pt", "pa", "ro", "ru", "sm", "gd", "sr",    -"st", "sn", "sd", "si", "sk", "sl", "so", "es", "su", "sw", "sv", "tl", "tg", "ta", "tt", "te", "th", "tr", "tk", "uk", "ur", "ug", "uz", "vi", "cy", "xh", "yi", "ji", "yo", "zu" |
+| `to_language_code?` | `string` | Language code of the language to which the message is translated. Must be one of -"af", "sq", "am", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN", "zh", "zh-Hans", "zh-TW", "zh-Hant", "co", "hr", "cs", "da", "nl", "en", "eo", "et", -"fi", "fr", "fy", "gl", "ka", "de", "el", "gu", "ht", "ha", "haw", "he", "iw", "hi", "hmn", "hu", "is", "ig", "id", "in", "ga", "it", "ja", "jv", "kn", "kk", "km", "rw", "ko", -"ku", "ky", "lo", "la", "lv", "lt", "lb", "mk", "mg", "ms", "ml", "mt", "mi", "mr", "mn", "my", "ne", "no", "ny", "or", "ps", "fa", "pl", "pt", "pa", "ro", "ru", "sm", "gd", "sr", -"st", "sn", "sd", "si", "sk", "sl", "so", "es", "su", "sw", "sv", "tl", "tg", "ta", "tt", "te", "th", "tr", "tk", "uk", "ur", "ug", "uz", "vi", "cy", "xh", "yi", "ji", "yo", "zu" |
 
 #### Defined in
 
-dist/generated/types.d.ts:47547
+dist/generated/types.d.ts:48148
 
 ___
 
@@ -85396,7 +87008,7 @@ Represents a list of trending sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:21609
+dist/generated/types.d.ts:21949
 
 ___
 
@@ -85418,7 +87030,7 @@ Represents a list of trending sticker sets
 
 #### Defined in
 
-dist/generated/types.d.ts:21631
+dist/generated/types.d.ts:21971
 
 ___
 
@@ -85446,7 +87058,7 @@ Removes all pinned messages from a chat; requires can_pin_messages rights in the
 
 #### Defined in
 
-dist/generated/types.d.ts:50801
+dist/generated/types.d.ts:51485
 
 ___
 
@@ -85465,7 +87077,7 @@ Removes all pinned messages from a chat; requires can_pin_messages rights in the
 
 #### Defined in
 
-dist/generated/types.d.ts:50787
+dist/generated/types.d.ts:51471
 
 ___
 
@@ -85493,7 +87105,7 @@ Removes all pinned messages from a forum topic; requires can_pin_messages rights
 
 #### Defined in
 
-dist/generated/types.d.ts:50822
+dist/generated/types.d.ts:51506
 
 ___
 
@@ -85513,7 +87125,7 @@ Removes all pinned messages from a forum topic; requires can_pin_messages rights
 
 #### Defined in
 
-dist/generated/types.d.ts:50803
+dist/generated/types.d.ts:51487
 
 ___
 
@@ -85541,7 +87153,7 @@ Removes a pinned message from a chat; requires can_pin_messages rights in the gr
 
 #### Defined in
 
-dist/generated/types.d.ts:50785
+dist/generated/types.d.ts:51469
 
 ___
 
@@ -85561,7 +87173,7 @@ Removes a pinned message from a chat; requires can_pin_messages rights in the gr
 
 #### Defined in
 
-dist/generated/types.d.ts:50766
+dist/generated/types.d.ts:51450
 
 ___
 
@@ -85582,7 +87194,7 @@ Contains information about an unread reaction to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8645
+dist/generated/types.d.ts:8795
 
 ___
 
@@ -85604,7 +87216,7 @@ Contains information about an unread reaction to a message
 
 #### Defined in
 
-dist/generated/types.d.ts:8667
+dist/generated/types.d.ts:8817
 
 ___
 
@@ -85623,7 +87235,7 @@ The list of active emoji reactions has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37983
+dist/generated/types.d.ts:38440
 
 ___
 
@@ -85643,7 +87255,7 @@ The list of active emoji reactions has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37995
+dist/generated/types.d.ts:38452
 
 ___
 
@@ -85662,7 +87274,7 @@ Contains active notifications that was shown on previous application launches. T
 
 #### Defined in
 
-dist/generated/types.d.ts:36680
+dist/generated/types.d.ts:37137
 
 ___
 
@@ -85682,7 +87294,48 @@ Contains active notifications that was shown on previous application launches. T
 
 #### Defined in
 
-dist/generated/types.d.ts:36692
+dist/generated/types.d.ts:37149
+
+___
+
+### updateAddChatMembersPrivacyForbidden
+
+Ƭ **updateAddChatMembersPrivacyForbidden**: `Object`
+
+Adding users to a chat has failed because of their privacy settings. An invite link can be shared with the users if appropriate
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"updateAddChatMembersPrivacyForbidden"`` | - |
+| `chat_id` | [`int53`](index.types.default.md#int53-1) | Chat identifier |
+| `user_ids` | [`vector`](index.types.default.md#vector)<[`int53`](index.types.default.md#int53-1)\> | Identifiers of users, which weren't added because of their privacy settings |
+
+#### Defined in
+
+dist/generated/types.d.ts:38606
+
+___
+
+### updateAddChatMembersPrivacyForbidden$Input
+
+Ƭ **updateAddChatMembersPrivacyForbidden$Input**: `Object`
+
+Version of [updateAddChatMembersPrivacyForbidden](index.types.md#updateaddchatmembersprivacyforbidden) for method parameters.
+Adding users to a chat has failed because of their privacy settings. An invite link can be shared with the users if appropriate
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"updateAddChatMembersPrivacyForbidden"`` | - |
+| `chat_id?` | [`int53`](index.types.default.md#int53-1) | Chat identifier |
+| `user_ids?` | [`vector$Input`](index.types.default.md#vector$input)<[`int53`](index.types.default.md#int53-1)\> | Identifiers of users, which weren't added because of their privacy settings |
+
+#### Defined in
+
+dist/generated/types.d.ts:38623
 
 ___
 
@@ -85703,7 +87356,7 @@ Some animated emoji message was clicked and a big animated sticker must be playe
 
 #### Defined in
 
-dist/generated/types.d.ts:38046
+dist/generated/types.d.ts:38503
 
 ___
 
@@ -85725,7 +87378,7 @@ Some animated emoji message was clicked and a big animated sticker must be playe
 
 #### Defined in
 
-dist/generated/types.d.ts:38068
+dist/generated/types.d.ts:38525
 
 ___
 
@@ -85745,7 +87398,7 @@ The parameters of animation search through getOption("animation_search_bot_usern
 
 #### Defined in
 
-dist/generated/types.d.ts:38087
+dist/generated/types.d.ts:38544
 
 ___
 
@@ -85766,7 +87419,7 @@ The parameters of animation search through getOption("animation_search_bot_usern
 
 #### Defined in
 
-dist/generated/types.d.ts:38104
+dist/generated/types.d.ts:38561
 
 ___
 
@@ -85785,7 +87438,7 @@ The list of bots added to attachment menu has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37941
+dist/generated/types.d.ts:38398
 
 ___
 
@@ -85805,7 +87458,7 @@ The list of bots added to attachment menu has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37953
+dist/generated/types.d.ts:38410
 
 ___
 
@@ -85824,7 +87477,7 @@ The user authorization state has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35119
+dist/generated/types.d.ts:35576
 
 ___
 
@@ -85844,7 +87497,7 @@ The user authorization state has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35131
+dist/generated/types.d.ts:35588
 
 ___
 
@@ -85864,7 +87517,7 @@ Autosave settings for some type of chats were updated
 
 #### Defined in
 
-dist/generated/types.d.ts:38149
+dist/generated/types.d.ts:38637
 
 ___
 
@@ -85885,7 +87538,7 @@ Autosave settings for some type of chats were updated
 
 #### Defined in
 
-dist/generated/types.d.ts:38166
+dist/generated/types.d.ts:38654
 
 ___
 
@@ -85904,7 +87557,7 @@ Some data of a basic group has changed. This update is guaranteed to come before
 
 #### Defined in
 
-dist/generated/types.d.ts:36886
+dist/generated/types.d.ts:37343
 
 ___
 
@@ -85924,7 +87577,7 @@ Some data of a basic group has changed. This update is guaranteed to come before
 
 #### Defined in
 
-dist/generated/types.d.ts:36898
+dist/generated/types.d.ts:37355
 
 ___
 
@@ -85944,7 +87597,7 @@ Some data in basicGroupFullInfo has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36980
+dist/generated/types.d.ts:37437
 
 ___
 
@@ -85965,7 +87618,7 @@ Some data in basicGroupFullInfo has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36997
+dist/generated/types.d.ts:37454
 
 ___
 
@@ -85984,7 +87637,7 @@ New call was created or information about a call was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37320
+dist/generated/types.d.ts:37777
 
 ___
 
@@ -86004,7 +87657,7 @@ New call was created or information about a call was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37332
+dist/generated/types.d.ts:37789
 
 ___
 
@@ -86026,7 +87679,7 @@ A message sender activity in the chat has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36783
+dist/generated/types.d.ts:37240
 
 ___
 
@@ -86049,7 +87702,7 @@ A message sender activity in the chat has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36810
+dist/generated/types.d.ts:37267
 
 ___
 
@@ -86069,7 +87722,7 @@ The chat action bar was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35863
+dist/generated/types.d.ts:36320
 
 ___
 
@@ -86090,7 +87743,7 @@ The chat action bar was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35880
+dist/generated/types.d.ts:36337
 
 ___
 
@@ -86110,7 +87763,7 @@ The chat available reactions were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35894
+dist/generated/types.d.ts:36351
 
 ___
 
@@ -86131,7 +87784,7 @@ The chat available reactions were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35911
+dist/generated/types.d.ts:36368
 
 ___
 
@@ -86151,7 +87804,7 @@ The value of the default disable_notification parameter, used when a message is 
 
 #### Defined in
 
-dist/generated/types.d.ts:36245
+dist/generated/types.d.ts:36702
 
 ___
 
@@ -86172,7 +87825,7 @@ The value of the default disable_notification parameter, used when a message is 
 
 #### Defined in
 
-dist/generated/types.d.ts:36262
+dist/generated/types.d.ts:36719
 
 ___
 
@@ -86193,7 +87846,7 @@ A chat draft has changed. Be aware that the update may come in the currently ope
 
 #### Defined in
 
-dist/generated/types.d.ts:35925
+dist/generated/types.d.ts:36382
 
 ___
 
@@ -86215,7 +87868,7 @@ A chat draft has changed. Be aware that the update may come in the currently ope
 
 #### Defined in
 
-dist/generated/types.d.ts:35947
+dist/generated/types.d.ts:36404
 
 ___
 
@@ -86235,7 +87888,7 @@ The list of chat filters or a chat filter has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36431
+dist/generated/types.d.ts:36888
 
 ___
 
@@ -86256,7 +87909,7 @@ The list of chat filters or a chat filter has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36448
+dist/generated/types.d.ts:36905
 
 ___
 
@@ -86276,7 +87929,7 @@ A chat content was allowed or restricted for saving
 
 #### Defined in
 
-dist/generated/types.d.ts:36276
+dist/generated/types.d.ts:36733
 
 ___
 
@@ -86297,7 +87950,7 @@ A chat content was allowed or restricted for saving
 
 #### Defined in
 
-dist/generated/types.d.ts:36293
+dist/generated/types.d.ts:36750
 
 ___
 
@@ -86317,7 +87970,7 @@ A chat's has_scheduled_messages field has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36400
+dist/generated/types.d.ts:36857
 
 ___
 
@@ -86338,7 +87991,7 @@ A chat's has_scheduled_messages field has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36417
+dist/generated/types.d.ts:36874
 
 ___
 
@@ -86358,7 +88011,7 @@ A chat was blocked or unblocked
 
 #### Defined in
 
-dist/generated/types.d.ts:36369
+dist/generated/types.d.ts:36826
 
 ___
 
@@ -86379,7 +88032,7 @@ A chat was blocked or unblocked
 
 #### Defined in
 
-dist/generated/types.d.ts:36386
+dist/generated/types.d.ts:36843
 
 ___
 
@@ -86399,7 +88052,7 @@ A chat was marked as unread or was read
 
 #### Defined in
 
-dist/generated/types.d.ts:36338
+dist/generated/types.d.ts:36795
 
 ___
 
@@ -86420,7 +88073,7 @@ A chat was marked as unread or was read
 
 #### Defined in
 
-dist/generated/types.d.ts:36355
+dist/generated/types.d.ts:36812
 
 ___
 
@@ -86440,7 +88093,7 @@ Translation of chat messages was enabled or disabled
 
 #### Defined in
 
-dist/generated/types.d.ts:36307
+dist/generated/types.d.ts:36764
 
 ___
 
@@ -86461,7 +88114,7 @@ Translation of chat messages was enabled or disabled
 
 #### Defined in
 
-dist/generated/types.d.ts:36324
+dist/generated/types.d.ts:36781
 
 ___
 
@@ -86482,7 +88135,7 @@ The last message of a chat was changed. If last_message is null, then the last m
 
 #### Defined in
 
-dist/generated/types.d.ts:35719
+dist/generated/types.d.ts:36176
 
 ___
 
@@ -86504,7 +88157,7 @@ The last message of a chat was changed. If last_message is null, then the last m
 
 #### Defined in
 
-dist/generated/types.d.ts:35741
+dist/generated/types.d.ts:36198
 
 ___
 
@@ -86528,7 +88181,7 @@ User rights changed in a chat; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38700
+dist/generated/types.d.ts:39188
 
 ___
 
@@ -86553,7 +88206,7 @@ User rights changed in a chat; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38737
+dist/generated/types.d.ts:39225
 
 ___
 
@@ -86573,7 +88226,7 @@ The message auto-delete or self-destruct timer setting for a chat was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35997
+dist/generated/types.d.ts:36454
 
 ___
 
@@ -86594,7 +88247,7 @@ The message auto-delete or self-destruct timer setting for a chat was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36014
+dist/generated/types.d.ts:36471
 
 ___
 
@@ -86614,7 +88267,7 @@ The message sender that is selected to send messages in a chat has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35966
+dist/generated/types.d.ts:36423
 
 ___
 
@@ -86635,7 +88288,7 @@ The message sender that is selected to send messages in a chat has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35983
+dist/generated/types.d.ts:36440
 
 ___
 
@@ -86655,7 +88308,7 @@ Notification settings for a chat were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36028
+dist/generated/types.d.ts:36485
 
 ___
 
@@ -86676,7 +88329,7 @@ Notification settings for a chat were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36045
+dist/generated/types.d.ts:36502
 
 ___
 
@@ -86697,7 +88350,7 @@ The number of online group members has changed. This update with non-zero number
 
 #### Defined in
 
-dist/generated/types.d.ts:36463
+dist/generated/types.d.ts:36920
 
 ___
 
@@ -86720,7 +88373,7 @@ The number of online group members has changed. This update with non-zero number
 
 #### Defined in
 
-dist/generated/types.d.ts:36482
+dist/generated/types.d.ts:36939
 
 ___
 
@@ -86740,7 +88393,7 @@ The chat pending join requests were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36059
+dist/generated/types.d.ts:36516
 
 ___
 
@@ -86761,7 +88414,7 @@ The chat pending join requests were changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36076
+dist/generated/types.d.ts:36533
 
 ___
 
@@ -86781,7 +88434,7 @@ Chat permissions was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35688
+dist/generated/types.d.ts:36145
 
 ___
 
@@ -86802,7 +88455,7 @@ Chat permissions was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35705
+dist/generated/types.d.ts:36162
 
 ___
 
@@ -86822,7 +88475,7 @@ A chat photo was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35657
+dist/generated/types.d.ts:36114
 
 ___
 
@@ -86843,7 +88496,7 @@ A chat photo was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35674
+dist/generated/types.d.ts:36131
 
 ___
 
@@ -86863,7 +88516,7 @@ The position of a chat in a chat list has changed. An updateChatLastMessage or u
 
 #### Defined in
 
-dist/generated/types.d.ts:35760
+dist/generated/types.d.ts:36217
 
 ___
 
@@ -86884,7 +88537,7 @@ The position of a chat in a chat list has changed. An updateChatLastMessage or u
 
 #### Defined in
 
-dist/generated/types.d.ts:35777
+dist/generated/types.d.ts:36234
 
 ___
 
@@ -86905,7 +88558,7 @@ Incoming messages were read or the number of unread messages has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35791
+dist/generated/types.d.ts:36248
 
 ___
 
@@ -86927,7 +88580,7 @@ Incoming messages were read or the number of unread messages has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35813
+dist/generated/types.d.ts:36270
 
 ___
 
@@ -86947,7 +88600,7 @@ Outgoing messages were read
 
 #### Defined in
 
-dist/generated/types.d.ts:35832
+dist/generated/types.d.ts:36289
 
 ___
 
@@ -86968,7 +88621,7 @@ Outgoing messages were read
 
 #### Defined in
 
-dist/generated/types.d.ts:35849
+dist/generated/types.d.ts:36306
 
 ___
 
@@ -86988,7 +88641,7 @@ The default chat reply markup was changed. Can occur because new messages with r
 
 #### Defined in
 
-dist/generated/types.d.ts:36090
+dist/generated/types.d.ts:36547
 
 ___
 
@@ -87009,7 +88662,7 @@ The default chat reply markup was changed. Can occur because new messages with r
 
 #### Defined in
 
-dist/generated/types.d.ts:36107
+dist/generated/types.d.ts:36564
 
 ___
 
@@ -87029,7 +88682,7 @@ The chat theme was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36121
+dist/generated/types.d.ts:36578
 
 ___
 
@@ -87050,7 +88703,7 @@ The chat theme was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36138
+dist/generated/types.d.ts:36595
 
 ___
 
@@ -87069,7 +88722,7 @@ The list of available chat themes has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37806
+dist/generated/types.d.ts:38263
 
 ___
 
@@ -87089,7 +88742,7 @@ The list of available chat themes has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37818
+dist/generated/types.d.ts:38275
 
 ___
 
@@ -87109,7 +88762,7 @@ The title of a chat was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35626
+dist/generated/types.d.ts:36083
 
 ___
 
@@ -87130,7 +88783,7 @@ The title of a chat was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35643
+dist/generated/types.d.ts:36100
 
 ___
 
@@ -87150,7 +88803,7 @@ The chat unread_mention_count has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36152
+dist/generated/types.d.ts:36609
 
 ___
 
@@ -87171,7 +88824,7 @@ The chat unread_mention_count has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36169
+dist/generated/types.d.ts:36626
 
 ___
 
@@ -87191,7 +88844,7 @@ The chat unread_reaction_count has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36183
+dist/generated/types.d.ts:36640
 
 ___
 
@@ -87212,7 +88865,7 @@ The chat unread_reaction_count has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36200
+dist/generated/types.d.ts:36657
 
 ___
 
@@ -87232,7 +88885,7 @@ A chat video chat state has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36214
+dist/generated/types.d.ts:36671
 
 ___
 
@@ -87253,7 +88906,7 @@ A chat video chat state has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36231
+dist/generated/types.d.ts:36688
 
 ___
 
@@ -87272,7 +88925,7 @@ The connection state has changed. This update must be used only to show a human-
 
 #### Defined in
 
-dist/generated/types.d.ts:37868
+dist/generated/types.d.ts:38325
 
 ___
 
@@ -87292,7 +88945,7 @@ The connection state has changed. This update must be used only to show a human-
 
 #### Defined in
 
-dist/generated/types.d.ts:37880
+dist/generated/types.d.ts:38337
 
 ___
 
@@ -87311,7 +88964,7 @@ The type of default reaction has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:38004
+dist/generated/types.d.ts:38461
 
 ___
 
@@ -87331,7 +88984,7 @@ The type of default reaction has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:38016
+dist/generated/types.d.ts:38473
 
 ___
 
@@ -87353,7 +89006,7 @@ Some messages were deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:36732
+dist/generated/types.d.ts:37189
 
 ___
 
@@ -87376,7 +89029,7 @@ Some messages were deleted
 
 #### Defined in
 
-dist/generated/types.d.ts:36759
+dist/generated/types.d.ts:37216
 
 ___
 
@@ -87395,7 +89048,7 @@ The list of supported dice emojis has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:38025
+dist/generated/types.d.ts:38482
 
 ___
 
@@ -87415,7 +89068,7 @@ The list of supported dice emojis has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:38037
+dist/generated/types.d.ts:38494
 
 ___
 
@@ -87434,7 +89087,7 @@ The list of favorite stickers was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37712
+dist/generated/types.d.ts:38169
 
 ___
 
@@ -87454,7 +89107,7 @@ The list of favorite stickers was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37724
+dist/generated/types.d.ts:38181
 
 ___
 
@@ -87473,7 +89126,7 @@ Information about a file was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37073
+dist/generated/types.d.ts:37530
 
 ___
 
@@ -87493,7 +89146,7 @@ Information about a file was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37085
+dist/generated/types.d.ts:37542
 
 ___
 
@@ -87513,7 +89166,7 @@ A file was added to the file download list. This update is sent only after file 
 
 #### Defined in
 
-dist/generated/types.d.ts:37207
+dist/generated/types.d.ts:37664
 
 ___
 
@@ -87534,7 +89187,7 @@ A file was added to the file download list. This update is sent only after file 
 
 #### Defined in
 
-dist/generated/types.d.ts:37224
+dist/generated/types.d.ts:37681
 
 ___
 
@@ -87556,7 +89209,7 @@ A file download was changed. This update is sent only after file download list i
 
 #### Defined in
 
-dist/generated/types.d.ts:37238
+dist/generated/types.d.ts:37695
 
 ___
 
@@ -87579,7 +89232,7 @@ A file download was changed. This update is sent only after file download list i
 
 #### Defined in
 
-dist/generated/types.d.ts:37265
+dist/generated/types.d.ts:37722
 
 ___
 
@@ -87600,7 +89253,7 @@ The state of the file download list has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37166
+dist/generated/types.d.ts:37623
 
 ___
 
@@ -87622,7 +89275,7 @@ The state of the file download list has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37188
+dist/generated/types.d.ts:37645
 
 ___
 
@@ -87644,7 +89297,7 @@ The file generation process needs to be started by the application
 
 #### Defined in
 
-dist/generated/types.d.ts:37094
+dist/generated/types.d.ts:37551
 
 ___
 
@@ -87667,7 +89320,7 @@ The file generation process needs to be started by the application
 
 #### Defined in
 
-dist/generated/types.d.ts:37121
+dist/generated/types.d.ts:37578
 
 ___
 
@@ -87686,7 +89339,7 @@ File generation is no longer needed
 
 #### Defined in
 
-dist/generated/types.d.ts:37145
+dist/generated/types.d.ts:37602
 
 ___
 
@@ -87706,7 +89359,7 @@ File generation is no longer needed
 
 #### Defined in
 
-dist/generated/types.d.ts:37157
+dist/generated/types.d.ts:37614
 
 ___
 
@@ -87726,7 +89379,7 @@ A file was removed from the file download list. This update is sent only after f
 
 #### Defined in
 
-dist/generated/types.d.ts:37289
+dist/generated/types.d.ts:37746
 
 ___
 
@@ -87747,7 +89400,7 @@ A file was removed from the file download list. This update is sent only after f
 
 #### Defined in
 
-dist/generated/types.d.ts:37306
+dist/generated/types.d.ts:37763
 
 ___
 
@@ -87767,7 +89420,7 @@ Basic information about a topic in a forum chat was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36496
+dist/generated/types.d.ts:36953
 
 ___
 
@@ -87788,7 +89441,7 @@ Basic information about a topic in a forum chat was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36513
+dist/generated/types.d.ts:36970
 
 ___
 
@@ -87807,7 +89460,7 @@ Information about a group call was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37341
+dist/generated/types.d.ts:37798
 
 ___
 
@@ -87827,7 +89480,7 @@ Information about a group call was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37353
+dist/generated/types.d.ts:37810
 
 ___
 
@@ -87847,7 +89500,7 @@ Information about a group call participant was changed. The updates are sent onl
 
 #### Defined in
 
-dist/generated/types.d.ts:37362
+dist/generated/types.d.ts:37819
 
 ___
 
@@ -87868,7 +89521,7 @@ Information about a group call participant was changed. The updates are sent onl
 
 #### Defined in
 
-dist/generated/types.d.ts:37379
+dist/generated/types.d.ts:37836
 
 ___
 
@@ -87888,7 +89541,7 @@ Describes whether there are some pending notification updates. Can be used to pr
 
 #### Defined in
 
-dist/generated/types.d.ts:36701
+dist/generated/types.d.ts:37158
 
 ___
 
@@ -87909,7 +89562,7 @@ Describes whether there are some pending notification updates. Can be used to pr
 
 #### Defined in
 
-dist/generated/types.d.ts:36718
+dist/generated/types.d.ts:37175
 
 ___
 
@@ -87929,7 +89582,7 @@ The list of installed sticker sets was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37619
+dist/generated/types.d.ts:38076
 
 ___
 
@@ -87950,7 +89603,7 @@ The list of installed sticker sets was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37636
+dist/generated/types.d.ts:38093
 
 ___
 
@@ -87971,7 +89624,7 @@ Some language pack strings have been updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37827
+dist/generated/types.d.ts:38284
 
 ___
 
@@ -87993,7 +89646,7 @@ Some language pack strings have been updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37849
+dist/generated/types.d.ts:38306
 
 ___
 
@@ -88014,7 +89667,7 @@ The message content has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35277
+dist/generated/types.d.ts:35734
 
 ___
 
@@ -88036,7 +89689,7 @@ The message content has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35299
+dist/generated/types.d.ts:35756
 
 ___
 
@@ -88056,7 +89709,7 @@ The message content was opened. Updates voice note messages to "listened", video
 
 #### Defined in
 
-dist/generated/types.d.ts:35451
+dist/generated/types.d.ts:35908
 
 ___
 
@@ -88077,7 +89730,7 @@ The message content was opened. Updates voice note messages to "listened", video
 
 #### Defined in
 
-dist/generated/types.d.ts:35468
+dist/generated/types.d.ts:35925
 
 ___
 
@@ -88099,7 +89752,7 @@ A message was edited. Changes in the message content will come in a separate upd
 
 #### Defined in
 
-dist/generated/types.d.ts:35318
+dist/generated/types.d.ts:35775
 
 ___
 
@@ -88122,7 +89775,7 @@ A message was edited. Changes in the message content will come in a separate upd
 
 #### Defined in
 
-dist/generated/types.d.ts:35345
+dist/generated/types.d.ts:35802
 
 ___
 
@@ -88143,7 +89796,7 @@ The information about interactions with a message has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35410
+dist/generated/types.d.ts:35867
 
 ___
 
@@ -88165,7 +89818,7 @@ The information about interactions with a message has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35432
+dist/generated/types.d.ts:35889
 
 ___
 
@@ -88186,7 +89839,7 @@ The message pinned state was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35369
+dist/generated/types.d.ts:35826
 
 ___
 
@@ -88208,7 +89861,7 @@ The message pinned state was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35391
+dist/generated/types.d.ts:35848
 
 ___
 
@@ -88228,7 +89881,7 @@ A message with a live location was viewed. When the update is received, the appl
 
 #### Defined in
 
-dist/generated/types.d.ts:35574
+dist/generated/types.d.ts:36031
 
 ___
 
@@ -88249,7 +89902,7 @@ A message with a live location was viewed. When the update is received, the appl
 
 #### Defined in
 
-dist/generated/types.d.ts:35591
+dist/generated/types.d.ts:36048
 
 ___
 
@@ -88270,7 +89923,7 @@ A message with an unread mention was read
 
 #### Defined in
 
-dist/generated/types.d.ts:35482
+dist/generated/types.d.ts:35939
 
 ___
 
@@ -88292,7 +89945,7 @@ A message with an unread mention was read
 
 #### Defined in
 
-dist/generated/types.d.ts:35504
+dist/generated/types.d.ts:35961
 
 ___
 
@@ -88313,7 +89966,7 @@ A request to send a message has reached the Telegram server. This doesn't mean t
 
 #### Defined in
 
-dist/generated/types.d.ts:35162
+dist/generated/types.d.ts:35619
 
 ___
 
@@ -88336,7 +89989,7 @@ A request to send a message has reached the Telegram server. This doesn't mean t
 
 #### Defined in
 
-dist/generated/types.d.ts:35181
+dist/generated/types.d.ts:35638
 
 ___
 
@@ -88358,7 +90011,7 @@ A message failed to send. Be aware that some messages being sent can be irrecove
 
 #### Defined in
 
-dist/generated/types.d.ts:35226
+dist/generated/types.d.ts:35683
 
 ___
 
@@ -88381,7 +90034,7 @@ A message failed to send. Be aware that some messages being sent can be irrecove
 
 #### Defined in
 
-dist/generated/types.d.ts:35253
+dist/generated/types.d.ts:35710
 
 ___
 
@@ -88401,7 +90054,7 @@ A message has been successfully sent
 
 #### Defined in
 
-dist/generated/types.d.ts:35195
+dist/generated/types.d.ts:35652
 
 ___
 
@@ -88422,7 +90075,7 @@ A message has been successfully sent
 
 #### Defined in
 
-dist/generated/types.d.ts:35212
+dist/generated/types.d.ts:35669
 
 ___
 
@@ -88444,7 +90097,7 @@ The list of unread reactions added to a message was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35523
+dist/generated/types.d.ts:35980
 
 ___
 
@@ -88467,7 +90120,7 @@ The list of unread reactions added to a message was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:35550
+dist/generated/types.d.ts:36007
 
 ___
 
@@ -88487,7 +90140,7 @@ New call signaling data arrived
 
 #### Defined in
 
-dist/generated/types.d.ts:37393
+dist/generated/types.d.ts:37850
 
 ___
 
@@ -88508,7 +90161,7 @@ New call signaling data arrived
 
 #### Defined in
 
-dist/generated/types.d.ts:37410
+dist/generated/types.d.ts:37867
 
 ___
 
@@ -88532,7 +90185,7 @@ A new incoming callback query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38312
+dist/generated/types.d.ts:38800
 
 ___
 
@@ -88557,7 +90210,7 @@ A new incoming callback query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38349
+dist/generated/types.d.ts:38837
 
 ___
 
@@ -88576,7 +90229,7 @@ A new chat has been loaded/created. This update is guaranteed to come before the
 
 #### Defined in
 
-dist/generated/types.d.ts:35605
+dist/generated/types.d.ts:36062
 
 ___
 
@@ -88596,7 +90249,7 @@ A new chat has been loaded/created. This update is guaranteed to come before the
 
 #### Defined in
 
-dist/generated/types.d.ts:35617
+dist/generated/types.d.ts:36074
 
 ___
 
@@ -88618,7 +90271,7 @@ A user sent a join request to a chat; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38771
+dist/generated/types.d.ts:39259
 
 ___
 
@@ -88641,7 +90294,7 @@ A user sent a join request to a chat; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38798
+dist/generated/types.d.ts:39286
 
 ___
 
@@ -88664,7 +90317,7 @@ The user has chosen a result of an inline query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38251
+dist/generated/types.d.ts:38739
 
 ___
 
@@ -88688,7 +90341,7 @@ The user has chosen a result of an inline query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38283
+dist/generated/types.d.ts:38771
 
 ___
 
@@ -88707,7 +90360,7 @@ A new incoming event; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38576
+dist/generated/types.d.ts:39064
 
 ___
 
@@ -88727,7 +90380,7 @@ A new incoming event; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38588
+dist/generated/types.d.ts:39076
 
 ___
 
@@ -88748,7 +90401,7 @@ A new incoming query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38597
+dist/generated/types.d.ts:39085
 
 ___
 
@@ -88770,7 +90423,7 @@ A new incoming query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38619
+dist/generated/types.d.ts:39107
 
 ___
 
@@ -88793,7 +90446,7 @@ A new incoming callback query from a message sent via a bot; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38383
+dist/generated/types.d.ts:38871
 
 ___
 
@@ -88817,7 +90470,7 @@ A new incoming callback query from a message sent via a bot; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38415
+dist/generated/types.d.ts:38903
 
 ___
 
@@ -88841,7 +90494,7 @@ A new incoming inline query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38180
+dist/generated/types.d.ts:38668
 
 ___
 
@@ -88866,7 +90519,7 @@ A new incoming inline query; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38217
+dist/generated/types.d.ts:38705
 
 ___
 
@@ -88885,7 +90538,7 @@ A new message was received; can also be an outgoing message
 
 #### Defined in
 
-dist/generated/types.d.ts:35140
+dist/generated/types.d.ts:35597
 
 ___
 
@@ -88905,7 +90558,7 @@ A new message was received; can also be an outgoing message
 
 #### Defined in
 
-dist/generated/types.d.ts:35152
+dist/generated/types.d.ts:35609
 
 ___
 
@@ -88930,7 +90583,7 @@ A new incoming pre-checkout query; for bots only. Contains full information abou
 
 #### Defined in
 
-dist/generated/types.d.ts:38495
+dist/generated/types.d.ts:38983
 
 ___
 
@@ -88956,7 +90609,7 @@ A new incoming pre-checkout query; for bots only. Contains full information abou
 
 #### Defined in
 
-dist/generated/types.d.ts:38537
+dist/generated/types.d.ts:39025
 
 ___
 
@@ -88978,7 +90631,7 @@ A new incoming shipping query; for bots only. Only for invoices with flexible pr
 
 #### Defined in
 
-dist/generated/types.d.ts:38444
+dist/generated/types.d.ts:38932
 
 ___
 
@@ -89001,7 +90654,7 @@ A new incoming shipping query; for bots only. Only for invoices with flexible pr
 
 #### Defined in
 
-dist/generated/types.d.ts:38471
+dist/generated/types.d.ts:38959
 
 ___
 
@@ -89021,7 +90674,7 @@ A notification was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36558
+dist/generated/types.d.ts:37015
 
 ___
 
@@ -89042,7 +90695,7 @@ A notification was changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36575
+dist/generated/types.d.ts:37032
 
 ___
 
@@ -89068,7 +90721,7 @@ A list of active notifications in a notification group has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36589
+dist/generated/types.d.ts:37046
 
 ___
 
@@ -89095,7 +90748,7 @@ A list of active notifications in a notification group has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36636
+dist/generated/types.d.ts:37093
 
 ___
 
@@ -89115,7 +90768,7 @@ An option changed its value
 
 #### Defined in
 
-dist/generated/types.d.ts:37567
+dist/generated/types.d.ts:38024
 
 ___
 
@@ -89136,7 +90789,7 @@ An option changed its value
 
 #### Defined in
 
-dist/generated/types.d.ts:37584
+dist/generated/types.d.ts:38041
 
 ___
 
@@ -89155,7 +90808,7 @@ A poll was updated; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38638
+dist/generated/types.d.ts:39126
 
 ___
 
@@ -89175,7 +90828,7 @@ A poll was updated; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38650
+dist/generated/types.d.ts:39138
 
 ___
 
@@ -89196,7 +90849,7 @@ A user changed the answer to a poll; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38659
+dist/generated/types.d.ts:39147
 
 ___
 
@@ -89218,7 +90871,7 @@ A user changed the answer to a poll; for bots only
 
 #### Defined in
 
-dist/generated/types.d.ts:38681
+dist/generated/types.d.ts:39169
 
 ___
 
@@ -89238,7 +90891,7 @@ The list of recently used stickers was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37681
+dist/generated/types.d.ts:38138
 
 ___
 
@@ -89259,7 +90912,7 @@ The list of recently used stickers was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37698
+dist/generated/types.d.ts:38155
 
 ___
 
@@ -89278,7 +90931,7 @@ The list of saved animations was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37733
+dist/generated/types.d.ts:38190
 
 ___
 
@@ -89298,7 +90951,7 @@ The list of saved animations was updated
 
 #### Defined in
 
-dist/generated/types.d.ts:37745
+dist/generated/types.d.ts:38202
 
 ___
 
@@ -89317,7 +90970,7 @@ The list of saved notifications sounds was updated. This update may not be sent 
 
 #### Defined in
 
-dist/generated/types.d.ts:37754
+dist/generated/types.d.ts:38211
 
 ___
 
@@ -89337,7 +90990,7 @@ The list of saved notifications sounds was updated. This update may not be sent 
 
 #### Defined in
 
-dist/generated/types.d.ts:37766
+dist/generated/types.d.ts:38223
 
 ___
 
@@ -89357,7 +91010,7 @@ Notification settings for some type of chats were updated
 
 #### Defined in
 
-dist/generated/types.d.ts:36527
+dist/generated/types.d.ts:36984
 
 ___
 
@@ -89378,7 +91031,7 @@ Notification settings for some type of chats were updated
 
 #### Defined in
 
-dist/generated/types.d.ts:36544
+dist/generated/types.d.ts:37001
 
 ___
 
@@ -89397,7 +91050,7 @@ Some data of a secret chat has changed. This update is guaranteed to come before
 
 #### Defined in
 
-dist/generated/types.d.ts:36928
+dist/generated/types.d.ts:37385
 
 ___
 
@@ -89417,7 +91070,7 @@ Some data of a secret chat has changed. This update is guaranteed to come before
 
 #### Defined in
 
-dist/generated/types.d.ts:36940
+dist/generated/types.d.ts:37397
 
 ___
 
@@ -89437,7 +91090,7 @@ The selected background has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37775
+dist/generated/types.d.ts:38232
 
 ___
 
@@ -89458,7 +91111,7 @@ The selected background has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37792
+dist/generated/types.d.ts:38249
 
 ___
 
@@ -89478,7 +91131,7 @@ A service notification from the server was received. Upon receiving this the app
 
 #### Defined in
 
-dist/generated/types.d.ts:37042
+dist/generated/types.d.ts:37499
 
 ___
 
@@ -89499,7 +91152,7 @@ A service notification from the server was received. Upon receiving this the app
 
 #### Defined in
 
-dist/generated/types.d.ts:37059
+dist/generated/types.d.ts:37516
 
 ___
 
@@ -89518,7 +91171,7 @@ A sticker set has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37598
+dist/generated/types.d.ts:38055
 
 ___
 
@@ -89538,7 +91191,7 @@ A sticker set has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37610
+dist/generated/types.d.ts:38067
 
 ___
 
@@ -89558,7 +91211,7 @@ The list of suggested to the user actions has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:38118
+dist/generated/types.d.ts:38575
 
 ___
 
@@ -89579,7 +91232,7 @@ The list of suggested to the user actions has changed
 
 #### Defined in
 
-dist/generated/types.d.ts:38135
+dist/generated/types.d.ts:38592
 
 ___
 
@@ -89598,7 +91251,7 @@ Some data of a supergroup or a channel has changed. This update is guaranteed to
 
 #### Defined in
 
-dist/generated/types.d.ts:36907
+dist/generated/types.d.ts:37364
 
 ___
 
@@ -89618,7 +91271,7 @@ Some data of a supergroup or a channel has changed. This update is guaranteed to
 
 #### Defined in
 
-dist/generated/types.d.ts:36919
+dist/generated/types.d.ts:37376
 
 ___
 
@@ -89638,7 +91291,7 @@ Some data in supergroupFullInfo has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37011
+dist/generated/types.d.ts:37468
 
 ___
 
@@ -89659,7 +91312,7 @@ Some data in supergroupFullInfo has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37028
+dist/generated/types.d.ts:37485
 
 ___
 
@@ -89679,7 +91332,7 @@ New terms of service must be accepted by the user. If the terms of service are d
 
 #### Defined in
 
-dist/generated/types.d.ts:37889
+dist/generated/types.d.ts:38346
 
 ___
 
@@ -89700,7 +91353,7 @@ New terms of service must be accepted by the user. If the terms of service are d
 
 #### Defined in
 
-dist/generated/types.d.ts:37906
+dist/generated/types.d.ts:38363
 
 ___
 
@@ -89720,7 +91373,7 @@ The list of trending sticker sets was updated or some of them were viewed
 
 #### Defined in
 
-dist/generated/types.d.ts:37650
+dist/generated/types.d.ts:38107
 
 ___
 
@@ -89741,7 +91394,7 @@ The list of trending sticker sets was updated or some of them were viewed
 
 #### Defined in
 
-dist/generated/types.d.ts:37667
+dist/generated/types.d.ts:38124
 
 ___
 
@@ -89765,7 +91418,7 @@ Number of unread chats, i.e. with unread messages or marked as unread, has chang
 
 #### Defined in
 
-dist/generated/types.d.ts:37496
+dist/generated/types.d.ts:37953
 
 ___
 
@@ -89790,7 +91443,7 @@ Number of unread chats, i.e. with unread messages or marked as unread, has chang
 
 #### Defined in
 
-dist/generated/types.d.ts:37533
+dist/generated/types.d.ts:37990
 
 ___
 
@@ -89811,7 +91464,7 @@ Number of unread messages in a chat list has changed. This update is sent only i
 
 #### Defined in
 
-dist/generated/types.d.ts:37455
+dist/generated/types.d.ts:37912
 
 ___
 
@@ -89833,7 +91486,7 @@ Number of unread messages in a chat list has changed. This update is sent only i
 
 #### Defined in
 
-dist/generated/types.d.ts:37477
+dist/generated/types.d.ts:37934
 
 ___
 
@@ -89852,7 +91505,7 @@ Some data of a user has changed. This update is guaranteed to come before the us
 
 #### Defined in
 
-dist/generated/types.d.ts:36865
+dist/generated/types.d.ts:37322
 
 ___
 
@@ -89872,7 +91525,7 @@ Some data of a user has changed. This update is guaranteed to come before the us
 
 #### Defined in
 
-dist/generated/types.d.ts:36877
+dist/generated/types.d.ts:37334
 
 ___
 
@@ -89892,7 +91545,7 @@ Some data in userFullInfo has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36949
+dist/generated/types.d.ts:37406
 
 ___
 
@@ -89913,7 +91566,7 @@ Some data in userFullInfo has been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:36966
+dist/generated/types.d.ts:37423
 
 ___
 
@@ -89933,7 +91586,7 @@ Some privacy setting rules have been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37424
+dist/generated/types.d.ts:37881
 
 ___
 
@@ -89954,7 +91607,7 @@ Some privacy setting rules have been changed
 
 #### Defined in
 
-dist/generated/types.d.ts:37441
+dist/generated/types.d.ts:37898
 
 ___
 
@@ -89974,7 +91627,7 @@ The user went online or offline
 
 #### Defined in
 
-dist/generated/types.d.ts:36834
+dist/generated/types.d.ts:37291
 
 ___
 
@@ -89995,7 +91648,7 @@ The user went online or offline
 
 #### Defined in
 
-dist/generated/types.d.ts:36851
+dist/generated/types.d.ts:37308
 
 ___
 
@@ -90014,7 +91667,7 @@ The list of users nearby has changed. The update is guaranteed to be sent only 6
 
 #### Defined in
 
-dist/generated/types.d.ts:37920
+dist/generated/types.d.ts:38377
 
 ___
 
@@ -90034,7 +91687,7 @@ The list of users nearby has changed. The update is guaranteed to be sent only 6
 
 #### Defined in
 
-dist/generated/types.d.ts:37932
+dist/generated/types.d.ts:38389
 
 ___
 
@@ -90053,7 +91706,7 @@ A message was sent by an opened Web App, so the Web App needs to be closed
 
 #### Defined in
 
-dist/generated/types.d.ts:37962
+dist/generated/types.d.ts:38419
 
 ___
 
@@ -90073,7 +91726,7 @@ A message was sent by an opened Web App, so the Web App needs to be closed
 
 #### Defined in
 
-dist/generated/types.d.ts:37974
+dist/generated/types.d.ts:38431
 
 ___
 
@@ -90092,7 +91745,7 @@ Contains a list of updates
 
 #### Defined in
 
-dist/generated/types.d.ts:38822
+dist/generated/types.d.ts:39310
 
 ___
 
@@ -90112,7 +91765,7 @@ Contains a list of updates
 
 #### Defined in
 
-dist/generated/types.d.ts:38834
+dist/generated/types.d.ts:39322
 
 ___
 
@@ -90140,7 +91793,7 @@ Creates a new supergroup from an existing basic group and sends a corresponding 
 
 #### Defined in
 
-dist/generated/types.d.ts:50212
+dist/generated/types.d.ts:50896
 
 ___
 
@@ -90159,7 +91812,7 @@ Creates a new supergroup from an existing basic group and sends a corresponding 
 
 #### Defined in
 
-dist/generated/types.d.ts:50198
+dist/generated/types.d.ts:50882
 
 ___
 
@@ -90187,7 +91840,7 @@ Uploads a file with a sticker; returns the uploaded file
 
 #### Defined in
 
-dist/generated/types.d.ts:56373
+dist/generated/types.d.ts:57138
 
 ___
 
@@ -90202,12 +91855,13 @@ Uploads a file with a sticker; returns the uploaded file
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `_` | ``"uploadStickerFile"`` | - |
-| `sticker?` | [`inputSticker$Input`](index.types.default.md#inputsticker$input-1) | Sticker file to upload |
+| `sticker?` | [`InputFile$Input`](index.types.default.md#inputfile$input) | File file to upload; must fit in a 512x512 square. For WEBP stickers the file must be in WEBP or PNG format, which will be converted to WEBP server-side. -See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements |
+| `sticker_format?` | [`StickerFormat$Input`](index.types.default.md#stickerformat$input) | Sticker format |
 | `user_id?` | [`int53`](index.types.default.md#int53-1) | Sticker file owner; ignored for regular users |
 
 #### Defined in
 
-dist/generated/types.d.ts:56354
+dist/generated/types.d.ts:57112
 
 ___
 
@@ -90245,7 +91899,7 @@ Represents a user
 
 #### Defined in
 
-dist/generated/types.d.ts:5835
+dist/generated/types.d.ts:5933
 
 ___
 
@@ -90284,7 +91938,7 @@ Represents a user
 
 #### Defined in
 
-dist/generated/types.d.ts:5942
+dist/generated/types.d.ts:6040
 
 ___
 
@@ -90308,15 +91962,15 @@ Contains full information about a user
 | `has_restricted_voice_and_video_note_messages` | [`Bool`](index.types.default.md#bool) | True, if voice and video notes can't be sent or forwarded to the user |
 | `is_blocked` | [`Bool`](index.types.default.md#bool) | True, if the user is blocked by the current user |
 | `need_phone_number_privacy_exception` | [`Bool`](index.types.default.md#bool) | True, if the current user needs to explicitly allow to share their phone number with the user when the method addContact is used |
-| `personal_photo` | [`chatPhoto`](index.types.default.md#chatphoto-1) \| ``null`` | User profile photo set by the current user for the contact; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown.    -If non-null, then it is the same photo as in user.profile_photo and chat.photo. This photo isn't returned in the list of user photos |
-| `photo` | [`chatPhoto`](index.types.default.md#chatphoto-1) \| ``null`` | User profile photo; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown.    -If non-null and personal_photo is null, then it is the same photo as in user.profile_photo and chat.photo |
+| `personal_photo` | [`chatPhoto`](index.types.default.md#chatphoto-1) \| ``null`` | User profile photo set by the current user for the contact; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown. -If non-null, then it is the same photo as in user.profile_photo and chat.photo. This photo isn't returned in the list of user photos |
+| `photo` | [`chatPhoto`](index.types.default.md#chatphoto-1) \| ``null`` | User profile photo; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown. -If non-null and personal_photo is null, then it is the same photo as in user.profile_photo and chat.photo |
 | `premium_gift_options` | [`vector`](index.types.default.md#vector)<[`premiumPaymentOption`](index.types.default.md#premiumpaymentoption-1)\> | The list of available options for gifting Telegram Premium to the user |
-| `public_photo` | [`chatPhoto`](index.types.default.md#chatphoto-1) \| ``null`` | User profile photo visible if the main photo is hidden by privacy settings; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown.    -If non-null and both photo and personal_photo are null, then it is the same photo as in user.profile_photo and chat.photo. This photo isn't returned in the list of user photos |
+| `public_photo` | [`chatPhoto`](index.types.default.md#chatphoto-1) \| ``null`` | User profile photo visible if the main photo is hidden by privacy settings; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown. -If non-null and both photo and personal_photo are null, then it is the same photo as in user.profile_photo and chat.photo. This photo isn't returned in the list of user photos |
 | `supports_video_calls` | [`Bool`](index.types.default.md#bool) | True, if a video call can be created with the user |
 
 #### Defined in
 
-dist/generated/types.d.ts:6137
+dist/generated/types.d.ts:6235
 
 ___
 
@@ -90341,15 +91995,15 @@ Contains full information about a user
 | `has_restricted_voice_and_video_note_messages?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if voice and video notes can't be sent or forwarded to the user |
 | `is_blocked?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the user is blocked by the current user |
 | `need_phone_number_privacy_exception?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if the current user needs to explicitly allow to share their phone number with the user when the method addContact is used |
-| `personal_photo?` | [`chatPhoto$Input`](index.types.default.md#chatphoto$input-1) \| ``null`` | User profile photo set by the current user for the contact; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown.    -If non-null, then it is the same photo as in user.profile_photo and chat.photo. This photo isn't returned in the list of user photos |
-| `photo?` | [`chatPhoto$Input`](index.types.default.md#chatphoto$input-1) \| ``null`` | User profile photo; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown.    -If non-null and personal_photo is null, then it is the same photo as in user.profile_photo and chat.photo |
+| `personal_photo?` | [`chatPhoto$Input`](index.types.default.md#chatphoto$input-1) \| ``null`` | User profile photo set by the current user for the contact; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown. -If non-null, then it is the same photo as in user.profile_photo and chat.photo. This photo isn't returned in the list of user photos |
+| `photo?` | [`chatPhoto$Input`](index.types.default.md#chatphoto$input-1) \| ``null`` | User profile photo; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown. -If non-null and personal_photo is null, then it is the same photo as in user.profile_photo and chat.photo |
 | `premium_gift_options?` | [`vector$Input`](index.types.default.md#vector$input)<[`premiumPaymentOption$Input`](index.types.default.md#premiumpaymentoption$input-1)\> | The list of available options for gifting Telegram Premium to the user |
-| `public_photo?` | [`chatPhoto$Input`](index.types.default.md#chatphoto$input-1) \| ``null`` | User profile photo visible if the main photo is hidden by privacy settings; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown.    -If non-null and both photo and personal_photo are null, then it is the same photo as in user.profile_photo and chat.photo. This photo isn't returned in the list of user photos |
+| `public_photo?` | [`chatPhoto$Input`](index.types.default.md#chatphoto$input-1) \| ``null`` | User profile photo visible if the main photo is hidden by privacy settings; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown. -If non-null and both photo and personal_photo are null, then it is the same photo as in user.profile_photo and chat.photo. This photo isn't returned in the list of user photos |
 | `supports_video_calls?` | [`Bool$Input`](index.types.default.md#bool$input) | True, if a video call can be created with the user |
 
 #### Defined in
 
-dist/generated/types.d.ts:6220
+dist/generated/types.d.ts:6318
 
 ___
 
@@ -90369,7 +92023,7 @@ Contains an HTTPS URL, which can be used to get information about a user
 
 #### Defined in
 
-dist/generated/types.d.ts:23872
+dist/generated/types.d.ts:24222
 
 ___
 
@@ -90390,7 +92044,7 @@ Contains an HTTPS URL, which can be used to get information about a user
 
 #### Defined in
 
-dist/generated/types.d.ts:23889
+dist/generated/types.d.ts:24239
 
 ___
 
@@ -90408,7 +92062,7 @@ A privacy setting for managing whether the user can be called
 
 #### Defined in
 
-dist/generated/types.d.ts:30776
+dist/generated/types.d.ts:31189
 
 ___
 
@@ -90427,7 +92081,7 @@ A privacy setting for managing whether the user can be called
 
 #### Defined in
 
-dist/generated/types.d.ts:30783
+dist/generated/types.d.ts:31196
 
 ___
 
@@ -90445,7 +92099,7 @@ A privacy setting for managing whether the user can be invited to chats
 
 #### Defined in
 
-dist/generated/types.d.ts:30765
+dist/generated/types.d.ts:31178
 
 ___
 
@@ -90464,7 +92118,7 @@ A privacy setting for managing whether the user can be invited to chats
 
 #### Defined in
 
-dist/generated/types.d.ts:30772
+dist/generated/types.d.ts:31185
 
 ___
 
@@ -90482,7 +92136,7 @@ A privacy setting for managing whether the user can be found by their phone numb
 
 #### Defined in
 
-dist/generated/types.d.ts:30798
+dist/generated/types.d.ts:31211
 
 ___
 
@@ -90501,7 +92155,7 @@ A privacy setting for managing whether the user can be found by their phone numb
 
 #### Defined in
 
-dist/generated/types.d.ts:30805
+dist/generated/types.d.ts:31218
 
 ___
 
@@ -90519,7 +92173,7 @@ A privacy setting for managing whether peer-to-peer connections can be used for 
 
 #### Defined in
 
-dist/generated/types.d.ts:30787
+dist/generated/types.d.ts:31200
 
 ___
 
@@ -90538,7 +92192,7 @@ A privacy setting for managing whether peer-to-peer connections can be used for 
 
 #### Defined in
 
-dist/generated/types.d.ts:30794
+dist/generated/types.d.ts:31207
 
 ___
 
@@ -90556,7 +92210,7 @@ A privacy setting for managing whether the user can receive voice and video mess
 
 #### Defined in
 
-dist/generated/types.d.ts:30809
+dist/generated/types.d.ts:31222
 
 ___
 
@@ -90575,7 +92229,7 @@ A privacy setting for managing whether the user can receive voice and video mess
 
 #### Defined in
 
-dist/generated/types.d.ts:30816
+dist/generated/types.d.ts:31229
 
 ___
 
@@ -90593,7 +92247,7 @@ A rule to allow all users to do something
 
 #### Defined in
 
-dist/generated/types.d.ts:30572
+dist/generated/types.d.ts:30985
 
 ___
 
@@ -90612,7 +92266,7 @@ A rule to allow all users to do something
 
 #### Defined in
 
-dist/generated/types.d.ts:30579
+dist/generated/types.d.ts:30992
 
 ___
 
@@ -90631,7 +92285,7 @@ A rule to allow all members of certain specified basic groups and supergroups to
 
 #### Defined in
 
-dist/generated/types.d.ts:30615
+dist/generated/types.d.ts:31028
 
 ___
 
@@ -90651,7 +92305,7 @@ A rule to allow all members of certain specified basic groups and supergroups to
 
 #### Defined in
 
-dist/generated/types.d.ts:30627
+dist/generated/types.d.ts:31040
 
 ___
 
@@ -90669,7 +92323,7 @@ A rule to allow all of a user's contacts to do something
 
 #### Defined in
 
-dist/generated/types.d.ts:30583
+dist/generated/types.d.ts:30996
 
 ___
 
@@ -90688,7 +92342,7 @@ A rule to allow all of a user's contacts to do something
 
 #### Defined in
 
-dist/generated/types.d.ts:30590
+dist/generated/types.d.ts:31003
 
 ___
 
@@ -90707,7 +92361,7 @@ A rule to allow certain specified users to do something
 
 #### Defined in
 
-dist/generated/types.d.ts:30594
+dist/generated/types.d.ts:31007
 
 ___
 
@@ -90727,7 +92381,7 @@ A rule to allow certain specified users to do something
 
 #### Defined in
 
-dist/generated/types.d.ts:30606
+dist/generated/types.d.ts:31019
 
 ___
 
@@ -90745,7 +92399,7 @@ A rule to restrict all users from doing something
 
 #### Defined in
 
-dist/generated/types.d.ts:30636
+dist/generated/types.d.ts:31049
 
 ___
 
@@ -90764,7 +92418,7 @@ A rule to restrict all users from doing something
 
 #### Defined in
 
-dist/generated/types.d.ts:30643
+dist/generated/types.d.ts:31056
 
 ___
 
@@ -90783,7 +92437,7 @@ A rule to restrict all members of specified basic groups and supergroups from do
 
 #### Defined in
 
-dist/generated/types.d.ts:30679
+dist/generated/types.d.ts:31092
 
 ___
 
@@ -90803,7 +92457,7 @@ A rule to restrict all members of specified basic groups and supergroups from do
 
 #### Defined in
 
-dist/generated/types.d.ts:30691
+dist/generated/types.d.ts:31104
 
 ___
 
@@ -90821,7 +92475,7 @@ A rule to restrict all contacts of a user from doing something
 
 #### Defined in
 
-dist/generated/types.d.ts:30647
+dist/generated/types.d.ts:31060
 
 ___
 
@@ -90840,7 +92494,7 @@ A rule to restrict all contacts of a user from doing something
 
 #### Defined in
 
-dist/generated/types.d.ts:30654
+dist/generated/types.d.ts:31067
 
 ___
 
@@ -90859,7 +92513,7 @@ A rule to restrict all specified users from doing something
 
 #### Defined in
 
-dist/generated/types.d.ts:30658
+dist/generated/types.d.ts:31071
 
 ___
 
@@ -90879,7 +92533,7 @@ A rule to restrict all specified users from doing something
 
 #### Defined in
 
-dist/generated/types.d.ts:30670
+dist/generated/types.d.ts:31083
 
 ___
 
@@ -90898,7 +92552,7 @@ A list of privacy rules. Rules are matched in the specified order. The first mat
 
 #### Defined in
 
-dist/generated/types.d.ts:30700
+dist/generated/types.d.ts:31113
 
 ___
 
@@ -90918,7 +92572,7 @@ A list of privacy rules. Rules are matched in the specified order. The first mat
 
 #### Defined in
 
-dist/generated/types.d.ts:30712
+dist/generated/types.d.ts:31125
 
 ___
 
@@ -90936,7 +92590,7 @@ A privacy setting for managing whether a link to the user's account is included 
 
 #### Defined in
 
-dist/generated/types.d.ts:30743
+dist/generated/types.d.ts:31156
 
 ___
 
@@ -90955,7 +92609,7 @@ A privacy setting for managing whether a link to the user's account is included 
 
 #### Defined in
 
-dist/generated/types.d.ts:30750
+dist/generated/types.d.ts:31163
 
 ___
 
@@ -90973,7 +92627,7 @@ A privacy setting for managing whether the user's phone number is visible
 
 #### Defined in
 
-dist/generated/types.d.ts:30754
+dist/generated/types.d.ts:31167
 
 ___
 
@@ -90992,7 +92646,7 @@ A privacy setting for managing whether the user's phone number is visible
 
 #### Defined in
 
-dist/generated/types.d.ts:30761
+dist/generated/types.d.ts:31174
 
 ___
 
@@ -91010,7 +92664,7 @@ A privacy setting for managing whether the user's profile photo is visible
 
 #### Defined in
 
-dist/generated/types.d.ts:30732
+dist/generated/types.d.ts:31145
 
 ___
 
@@ -91029,7 +92683,7 @@ A privacy setting for managing whether the user's profile photo is visible
 
 #### Defined in
 
-dist/generated/types.d.ts:30739
+dist/generated/types.d.ts:31152
 
 ___
 
@@ -91047,7 +92701,7 @@ A privacy setting for managing whether the user's online status is visible
 
 #### Defined in
 
-dist/generated/types.d.ts:30721
+dist/generated/types.d.ts:31134
 
 ___
 
@@ -91066,7 +92720,7 @@ A privacy setting for managing whether the user's online status is visible
 
 #### Defined in
 
-dist/generated/types.d.ts:30728
+dist/generated/types.d.ts:31141
 
 ___
 
@@ -91084,7 +92738,7 @@ The user status was never changed
 
 #### Defined in
 
-dist/generated/types.d.ts:21168
+dist/generated/types.d.ts:21508
 
 ___
 
@@ -91103,7 +92757,7 @@ The user status was never changed
 
 #### Defined in
 
-dist/generated/types.d.ts:21175
+dist/generated/types.d.ts:21515
 
 ___
 
@@ -91121,7 +92775,7 @@ The user is offline, but was online last month
 
 #### Defined in
 
-dist/generated/types.d.ts:21243
+dist/generated/types.d.ts:21583
 
 ___
 
@@ -91140,7 +92794,7 @@ The user is offline, but was online last month
 
 #### Defined in
 
-dist/generated/types.d.ts:21250
+dist/generated/types.d.ts:21590
 
 ___
 
@@ -91158,7 +92812,7 @@ The user is offline, but was online last week
 
 #### Defined in
 
-dist/generated/types.d.ts:21232
+dist/generated/types.d.ts:21572
 
 ___
 
@@ -91177,7 +92831,7 @@ The user is offline, but was online last week
 
 #### Defined in
 
-dist/generated/types.d.ts:21239
+dist/generated/types.d.ts:21579
 
 ___
 
@@ -91196,7 +92850,7 @@ The user is offline
 
 #### Defined in
 
-dist/generated/types.d.ts:21200
+dist/generated/types.d.ts:21540
 
 ___
 
@@ -91216,7 +92870,7 @@ The user is offline
 
 #### Defined in
 
-dist/generated/types.d.ts:21212
+dist/generated/types.d.ts:21552
 
 ___
 
@@ -91235,7 +92889,7 @@ The user is online
 
 #### Defined in
 
-dist/generated/types.d.ts:21179
+dist/generated/types.d.ts:21519
 
 ___
 
@@ -91255,7 +92909,7 @@ The user is online
 
 #### Defined in
 
-dist/generated/types.d.ts:21191
+dist/generated/types.d.ts:21531
 
 ___
 
@@ -91273,7 +92927,7 @@ The user was online recently
 
 #### Defined in
 
-dist/generated/types.d.ts:21221
+dist/generated/types.d.ts:21561
 
 ___
 
@@ -91292,7 +92946,7 @@ The user was online recently
 
 #### Defined in
 
-dist/generated/types.d.ts:21228
+dist/generated/types.d.ts:21568
 
 ___
 
@@ -91313,7 +92967,7 @@ Contains custom information about the user
 
 #### Defined in
 
-dist/generated/types.d.ts:38948
+dist/generated/types.d.ts:39436
 
 ___
 
@@ -91335,7 +92989,7 @@ Contains custom information about the user
 
 #### Defined in
 
-dist/generated/types.d.ts:38970
+dist/generated/types.d.ts:39458
 
 ___
 
@@ -91359,7 +93013,7 @@ A bot (see https://core.telegram.org/bots)
 
 #### Defined in
 
-dist/generated/types.d.ts:4812
+dist/generated/types.d.ts:4910
 
 ___
 
@@ -91384,7 +93038,7 @@ A bot (see https://core.telegram.org/bots)
 
 #### Defined in
 
-dist/generated/types.d.ts:4849
+dist/generated/types.d.ts:4947
 
 ___
 
@@ -91402,7 +93056,7 @@ A deleted user or deleted bot. No information on the user besides the user ident
 
 #### Defined in
 
-dist/generated/types.d.ts:4801
+dist/generated/types.d.ts:4899
 
 ___
 
@@ -91421,7 +93075,7 @@ A deleted user or deleted bot. No information on the user besides the user ident
 
 #### Defined in
 
-dist/generated/types.d.ts:4808
+dist/generated/types.d.ts:4906
 
 ___
 
@@ -91439,7 +93093,7 @@ A regular user
 
 #### Defined in
 
-dist/generated/types.d.ts:4790
+dist/generated/types.d.ts:4888
 
 ___
 
@@ -91458,7 +93112,7 @@ A regular user
 
 #### Defined in
 
-dist/generated/types.d.ts:4797
+dist/generated/types.d.ts:4895
 
 ___
 
@@ -91476,7 +93130,7 @@ No information on the user besides the user identifier is available, yet this us
 
 #### Defined in
 
-dist/generated/types.d.ts:4883
+dist/generated/types.d.ts:4981
 
 ___
 
@@ -91495,7 +93149,7 @@ No information on the user besides the user identifier is available, yet this us
 
 #### Defined in
 
-dist/generated/types.d.ts:4890
+dist/generated/types.d.ts:4988
 
 ___
 
@@ -91516,7 +93170,7 @@ Describes usernames assigned to a user, a supergroup, or a channel
 
 #### Defined in
 
-dist/generated/types.d.ts:5794
+dist/generated/types.d.ts:5892
 
 ___
 
@@ -91538,7 +93192,7 @@ Describes usernames assigned to a user, a supergroup, or a channel
 
 #### Defined in
 
-dist/generated/types.d.ts:5816
+dist/generated/types.d.ts:5914
 
 ___
 
@@ -91558,7 +93212,7 @@ Represents a list of users
 
 #### Defined in
 
-dist/generated/types.d.ts:6300
+dist/generated/types.d.ts:6398
 
 ___
 
@@ -91579,7 +93233,7 @@ Represents a list of users
 
 #### Defined in
 
-dist/generated/types.d.ts:6317
+dist/generated/types.d.ts:6415
 
 ___
 
@@ -91607,7 +93261,7 @@ Validates the order information provided by a user and returns the available shi
 
 #### Defined in
 
-dist/generated/types.d.ts:54968
+dist/generated/types.d.ts:55726
 
 ___
 
@@ -91628,7 +93282,7 @@ Validates the order information provided by a user and returns the available shi
 
 #### Defined in
 
-dist/generated/types.d.ts:54944
+dist/generated/types.d.ts:55702
 
 ___
 
@@ -91648,7 +93302,7 @@ Contains a temporary identifier of validated order information, which is stored 
 
 #### Defined in
 
-dist/generated/types.d.ts:15232
+dist/generated/types.d.ts:15552
 
 ___
 
@@ -91669,7 +93323,7 @@ Contains a temporary identifier of validated order information, which is stored 
 
 #### Defined in
 
-dist/generated/types.d.ts:15249
+dist/generated/types.d.ts:15569
 
 ___
 
@@ -91722,7 +93376,7 @@ A cubic Bézier curve to a given point
 
 #### Defined in
 
-dist/generated/types.d.ts:34961
+dist/generated/types.d.ts:35418
 
 ___
 
@@ -91744,7 +93398,7 @@ A cubic Bézier curve to a given point
 
 #### Defined in
 
-dist/generated/types.d.ts:34983
+dist/generated/types.d.ts:35440
 
 ___
 
@@ -91763,7 +93417,7 @@ A straight line to a given point
 
 #### Defined in
 
-dist/generated/types.d.ts:34940
+dist/generated/types.d.ts:35397
 
 ___
 
@@ -91783,7 +93437,7 @@ A straight line to a given point
 
 #### Defined in
 
-dist/generated/types.d.ts:34952
+dist/generated/types.d.ts:35409
 
 ___
 
@@ -91807,7 +93461,7 @@ Describes a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:4395
+dist/generated/types.d.ts:4432
 
 ___
 
@@ -91832,7 +93486,7 @@ Describes a venue
 
 #### Defined in
 
-dist/generated/types.d.ts:4432
+dist/generated/types.d.ts:4469
 
 ___
 
@@ -91860,7 +93514,7 @@ Describes a video file
 
 #### Defined in
 
-dist/generated/types.d.ts:3979
+dist/generated/types.d.ts:4016
 
 ___
 
@@ -91889,7 +93543,7 @@ Describes a video file
 
 #### Defined in
 
-dist/generated/types.d.ts:4036
+dist/generated/types.d.ts:4073
 
 ___
 
@@ -91910,7 +93564,7 @@ Describes a video chat
 
 #### Defined in
 
-dist/generated/types.d.ts:10446
+dist/generated/types.d.ts:10725
 
 ___
 
@@ -91932,7 +93586,7 @@ Describes a video chat
 
 #### Defined in
 
-dist/generated/types.d.ts:10468
+dist/generated/types.d.ts:10747
 
 ___
 
@@ -91957,7 +93611,7 @@ Describes a video note. The video must be equal in width and height, cropped to 
 
 #### Defined in
 
-dist/generated/types.d.ts:4090
+dist/generated/types.d.ts:4127
 
 ___
 
@@ -91983,7 +93637,7 @@ Describes a video note. The video must be equal in width and height, cropped to 
 
 #### Defined in
 
-dist/generated/types.d.ts:4132
+dist/generated/types.d.ts:4169
 
 ___
 
@@ -92013,7 +93667,7 @@ Informs TDLib that messages are being viewed by the user. Sponsored messages mus
 
 #### Defined in
 
-dist/generated/types.d.ts:49857
+dist/generated/types.d.ts:50520
 
 ___
 
@@ -92030,13 +93684,13 @@ Informs TDLib that messages are being viewed by the user. Sponsored messages mus
 | :------ | :------ | :------ |
 | `_` | ``"viewMessages"`` | - |
 | `chat_id?` | [`int53`](index.types.default.md#int53-1) | Chat identifier |
-| `force_read?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true to mark as read the specified messages even the chat is closed |
+| `force_read?` | [`Bool$Input`](index.types.default.md#bool$input) | Pass true to mark as read the specified messages even the chat is closed; pass null to guess the source based on chat open state |
 | `message_ids?` | [`vector$Input`](index.types.default.md#vector$input)<[`int53`](index.types.default.md#int53-1)\> | The identifiers of the messages being viewed |
-| `message_thread_id?` | [`int53`](index.types.default.md#int53-1) | If not 0, a message thread identifier in which the messages are being viewed |
+| `source?` | [`MessageSource$Input`](index.types.default.md#messagesource$input) | Source of the message view |
 
 #### Defined in
 
-dist/generated/types.d.ts:49826
+dist/generated/types.d.ts:50489
 
 ___
 
@@ -92064,7 +93718,7 @@ Informs TDLib that the user viewed detailed information about a Premium feature 
 
 #### Defined in
 
-dist/generated/types.d.ts:56635
+dist/generated/types.d.ts:57531
 
 ___
 
@@ -92083,7 +93737,7 @@ Informs TDLib that the user viewed detailed information about a Premium feature 
 
 #### Defined in
 
-dist/generated/types.d.ts:56621
+dist/generated/types.d.ts:57517
 
 ___
 
@@ -92111,7 +93765,7 @@ Informs the server that some trending sticker sets have been viewed by the user
 
 #### Defined in
 
-dist/generated/types.d.ts:53610
+dist/generated/types.d.ts:54294
 
 ___
 
@@ -92130,7 +93784,7 @@ Informs the server that some trending sticker sets have been viewed by the user
 
 #### Defined in
 
-dist/generated/types.d.ts:53596
+dist/generated/types.d.ts:54280
 
 ___
 
@@ -92153,7 +93807,7 @@ Describes a voice note. The voice note must be encoded with the Opus codec, and 
 
 #### Defined in
 
-dist/generated/types.d.ts:4171
+dist/generated/types.d.ts:4208
 
 ___
 
@@ -92177,7 +93831,54 @@ Describes a voice note. The voice note must be encoded with the Opus codec, and 
 
 #### Defined in
 
-dist/generated/types.d.ts:4203
+dist/generated/types.d.ts:4240
+
+___
+
+### webApp
+
+Ƭ **webApp**: `Object`
+
+Describes a Web App. Use getInternalLink with internalLinkTypeWebApp to share the Web App
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"webApp"`` | - |
+| `animation` | [`animation`](index.types.default.md#animation-1) \| ``null`` | Web App animation; may be null |
+| `description` | `string` | Describes a Web App. Use getInternalLink with internalLinkTypeWebApp to share the Web App |
+| `photo` | [`photo`](index.types.default.md#photo-1) | Web App photo |
+| `short_name` | `string` | Web App short name |
+| `title` | `string` | Web App title |
+
+#### Defined in
+
+dist/generated/types.d.ts:4584
+
+___
+
+### webApp$Input
+
+Ƭ **webApp$Input**: `Object`
+
+Version of [webApp](index.types.md#webapp-1) for method parameters.
+Describes a Web App. Use getInternalLink with internalLinkTypeWebApp to share the Web App
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_` | ``"webApp"`` | - |
+| `animation?` | [`animation$Input`](index.types.default.md#animation$input-1) \| ``null`` | Web App animation; may be null |
+| `description?` | `string` | Describes a Web App. Use getInternalLink with internalLinkTypeWebApp to share the Web App |
+| `photo?` | [`photo$Input`](index.types.default.md#photo$input-1) | Web App photo |
+| `short_name?` | `string` | Web App short name |
+| `title?` | `string` | Web App title |
+
+#### Defined in
+
+dist/generated/types.d.ts:4616
 
 ___
 
@@ -92197,7 +93898,7 @@ Contains information about a Web App
 
 #### Defined in
 
-dist/generated/types.d.ts:11817
+dist/generated/types.d.ts:12137
 
 ___
 
@@ -92218,7 +93919,7 @@ Contains information about a Web App
 
 #### Defined in
 
-dist/generated/types.d.ts:11834
+dist/generated/types.d.ts:12154
 
 ___
 
@@ -92257,7 +93958,7 @@ Describes a web page preview
 
 #### Defined in
 
-dist/generated/types.d.ts:14010
+dist/generated/types.d.ts:14330
 
 ___
 
@@ -92297,7 +93998,7 @@ Describes a web page preview
 
 #### Defined in
 
-dist/generated/types.d.ts:14122
+dist/generated/types.d.ts:14442
 
 ___
 
@@ -92321,7 +94022,7 @@ Describes an instant view page for a web page
 
 #### Defined in
 
-dist/generated/types.d.ts:13939
+dist/generated/types.d.ts:14259
 
 ___
 
@@ -92346,7 +94047,7 @@ Describes an instant view page for a web page
 
 #### Defined in
 
-dist/generated/types.d.ts:13976
+dist/generated/types.d.ts:14296
 
 ___
 
@@ -92374,7 +94075,7 @@ Writes a part of a generated file. This method is intended to be used only if th
 
 #### Defined in
 
-dist/generated/types.d.ts:51510
+dist/generated/types.d.ts:52194
 
 ___
 
@@ -92395,4 +94096,4 @@ Writes a part of a generated file. This method is intended to be used only if th
 
 #### Defined in
 
-dist/generated/types.d.ts:51486
+dist/generated/types.d.ts:52170

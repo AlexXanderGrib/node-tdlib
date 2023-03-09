@@ -30,7 +30,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:1383
+dist/generated/types.d.ts:1403
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1385
+dist/generated/types.d.ts:1405
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1380
+dist/generated/types.d.ts:1400
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1390
+dist/generated/types.d.ts:1410
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1381
+dist/generated/types.d.ts:1401
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1382
+dist/generated/types.d.ts:1402
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1379
+dist/generated/types.d.ts:1399
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1387
+dist/generated/types.d.ts:1407
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1378
+dist/generated/types.d.ts:1398
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1389
+dist/generated/types.d.ts:1409
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1386
+dist/generated/types.d.ts:1406
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1388
+dist/generated/types.d.ts:1408
 
 ___
 
@@ -150,4 +150,4 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1384
+dist/generated/types.d.ts:1404

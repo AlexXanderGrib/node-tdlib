@@ -44,6 +44,7 @@
 - [UserPhoneNumber](index.types.InternalLinkType_Type.md#userphonenumber)
 - [UserToken](index.types.InternalLinkType_Type.md#usertoken)
 - [VideoChat](index.types.InternalLinkType_Type.md#videochat)
+- [WebApp](index.types.InternalLinkType_Type.md#webapp)
 
 ## Enumeration Members
 
@@ -53,7 +54,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:804
+dist/generated/types.d.ts:819
 
 ___
 
@@ -63,7 +64,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:805
+dist/generated/types.d.ts:820
 
 ___
 
@@ -73,7 +74,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:806
+dist/generated/types.d.ts:821
 
 ___
 
@@ -83,7 +84,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:807
+dist/generated/types.d.ts:822
 
 ___
 
@@ -93,7 +94,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:810
+dist/generated/types.d.ts:823
 
 ___
 
@@ -103,7 +104,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:808
+dist/generated/types.d.ts:824
 
 ___
 
@@ -113,7 +114,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:809
+dist/generated/types.d.ts:825
 
 ___
 
@@ -123,7 +124,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:811
+dist/generated/types.d.ts:826
 
 ___
 
@@ -133,7 +134,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:812
+dist/generated/types.d.ts:827
 
 ___
 
@@ -143,7 +144,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:813
+dist/generated/types.d.ts:828
 
 ___
 
@@ -153,7 +154,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:814
+dist/generated/types.d.ts:829
 
 ___
 
@@ -163,7 +164,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:815
+dist/generated/types.d.ts:830
 
 ___
 
@@ -173,7 +174,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:816
+dist/generated/types.d.ts:831
 
 ___
 
@@ -183,7 +184,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:817
+dist/generated/types.d.ts:832
 
 ___
 
@@ -193,7 +194,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:818
+dist/generated/types.d.ts:833
 
 ___
 
@@ -203,7 +204,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:819
+dist/generated/types.d.ts:834
 
 ___
 
@@ -213,7 +214,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:820
+dist/generated/types.d.ts:835
 
 ___
 
@@ -223,7 +224,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:821
+dist/generated/types.d.ts:836
 
 ___
 
@@ -233,7 +234,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:822
+dist/generated/types.d.ts:837
 
 ___
 
@@ -243,7 +244,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:823
+dist/generated/types.d.ts:838
 
 ___
 
@@ -253,7 +254,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:824
+dist/generated/types.d.ts:839
 
 ___
 
@@ -263,7 +264,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:825
+dist/generated/types.d.ts:840
 
 ___
 
@@ -273,7 +274,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:826
+dist/generated/types.d.ts:841
 
 ___
 
@@ -283,7 +284,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:827
+dist/generated/types.d.ts:842
 
 ___
 
@@ -293,7 +294,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:828
+dist/generated/types.d.ts:843
 
 ___
 
@@ -303,7 +304,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:829
+dist/generated/types.d.ts:844
 
 ___
 
@@ -313,7 +314,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:830
+dist/generated/types.d.ts:845
 
 ___
 
@@ -323,7 +324,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:831
+dist/generated/types.d.ts:846
 
 ___
 
@@ -333,7 +334,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:832
+dist/generated/types.d.ts:847
 
 ___
 
@@ -343,7 +344,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:833
+dist/generated/types.d.ts:848
 
 ___
 
@@ -353,7 +354,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:834
+dist/generated/types.d.ts:849
 
 ___
 
@@ -363,7 +364,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:835
+dist/generated/types.d.ts:850
 
 ___
 
@@ -373,7 +374,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:836
+dist/generated/types.d.ts:851
 
 ___
 
@@ -383,7 +384,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:837
+dist/generated/types.d.ts:852
 
 ___
 
@@ -393,7 +394,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:838
+dist/generated/types.d.ts:853
 
 ___
 
@@ -403,4 +404,14 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:839
+dist/generated/types.d.ts:854
+
+___
+
+### WebApp
+
+• **WebApp** = ``"internalLinkTypeWebApp"``
+
+#### Defined in
+
+dist/generated/types.d.ts:855

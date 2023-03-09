@@ -27,6 +27,7 @@ TDLib / [Modules](modules.md)
 
 - **TS friendly.** Unlike [`tdl`](https://npmjs.com/package/tdl) this package declarations use dictionary for methods instead of intersection type, making editor hints load almost immediate.
 - **Secure.** The library has only 1 dependency - `node-addon-api` for building TDLib addon
+
 ## 📦 Installation
 
 - **Using `npm`**
@@ -61,13 +62,21 @@ async function init() {
   // Call any tdlib method
   await client.api.setLogVerbosityLevel({ new_verbosity_level: 0 });
 
+  // Subscribe to updates
+  client.updates.subscribe(console.log);
+
   // Pause receiving updates. Will freeze method all running API calls
-  client.pause();
+  // client.pause();
   // Resume pause
-  client.start();
-
+  // client.start();
   // Destroy
-  client.destroy();
+  // client.destroy();
 }
+```
 
+**Usage with RxJS**
+
+```typescript
+// Observable will complete after client.destroy() call 
+const updates = new Observable(client.updates.toRxObserver());
 ```

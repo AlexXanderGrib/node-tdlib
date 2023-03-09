@@ -10,6 +10,7 @@
 
 - [acceptCall](types._Methods.md#acceptcall)
 - [acceptTermsOfService](types._Methods.md#accepttermsofservice)
+- [addApplicationChangelog](types._Methods.md#addapplicationchangelog)
 - [addChatMember](types._Methods.md#addchatmember)
 - [addChatMembers](types._Methods.md#addchatmembers)
 - [addChatToList](types._Methods.md#addchattolist)
@@ -110,6 +111,7 @@
 - [deleteRevokedChatInviteLink](types._Methods.md#deleterevokedchatinvitelink)
 - [deleteSavedCredentials](types._Methods.md#deletesavedcredentials)
 - [deleteSavedOrderInfo](types._Methods.md#deletesavedorderinfo)
+- [deleteStickerSet](types._Methods.md#deletestickerset)
 - [destroy](types._Methods.md#destroy)
 - [disableAllSupergroupUsernames](types._Methods.md#disableallsupergroupusernames)
 - [disableProxy](types._Methods.md#disableproxy)
@@ -158,6 +160,8 @@
 - [getBasicGroup](types._Methods.md#getbasicgroup)
 - [getBasicGroupFullInfo](types._Methods.md#getbasicgroupfullinfo)
 - [getBlockedMessageSenders](types._Methods.md#getblockedmessagesenders)
+- [getBotInfoDescription](types._Methods.md#getbotinfodescription)
+- [getBotInfoShortDescription](types._Methods.md#getbotinfoshortdescription)
 - [getCallbackQueryAnswer](types._Methods.md#getcallbackqueryanswer)
 - [getCallbackQueryMessage](types._Methods.md#getcallbackquerymessage)
 - [getChat](types._Methods.md#getchat)
@@ -225,6 +229,7 @@
 - [getInlineGameHighScores](types._Methods.md#getinlinegamehighscores)
 - [getInlineQueryResults](types._Methods.md#getinlinequeryresults)
 - [getInstalledStickerSets](types._Methods.md#getinstalledstickersets)
+- [getInternalLink](types._Methods.md#getinternallink)
 - [getInternalLinkType](types._Methods.md#getinternallinktype)
 - [getJsonString](types._Methods.md#getjsonstring)
 - [getJsonValue](types._Methods.md#getjsonvalue)
@@ -319,6 +324,7 @@
 - [getUserSupportInfo](types._Methods.md#getusersupportinfo)
 - [getVideoChatAvailableParticipants](types._Methods.md#getvideochatavailableparticipants)
 - [getVideoChatRtmpUrl](types._Methods.md#getvideochatrtmpurl)
+- [getWebAppLinkUrl](types._Methods.md#getwebapplinkurl)
 - [getWebAppUrl](types._Methods.md#getwebappurl)
 - [getWebPageInstantView](types._Methods.md#getwebpageinstantview)
 - [getWebPagePreview](types._Methods.md#getwebpagepreview)
@@ -426,6 +432,7 @@
 - [searchStickers](types._Methods.md#searchstickers)
 - [searchUserByPhoneNumber](types._Methods.md#searchuserbyphonenumber)
 - [searchUserByToken](types._Methods.md#searchuserbytoken)
+- [searchWebApp](types._Methods.md#searchwebapp)
 - [sendAuthenticationFirebaseSms](types._Methods.md#sendauthenticationfirebasesms)
 - [sendBotStartMessage](types._Methods.md#sendbotstartmessage)
 - [sendCallDebugInformation](types._Methods.md#sendcalldebuginformation)
@@ -452,6 +459,8 @@
 - [setAutosaveSettings](types._Methods.md#setautosavesettings)
 - [setBackground](types._Methods.md#setbackground)
 - [setBio](types._Methods.md#setbio)
+- [setBotInfoDescription](types._Methods.md#setbotinfodescription)
+- [setBotInfoShortDescription](types._Methods.md#setbotinfoshortdescription)
 - [setBotUpdatesStatus](types._Methods.md#setbotupdatesstatus)
 - [setChatAvailableReactions](types._Methods.md#setchatavailablereactions)
 - [setChatClientData](types._Methods.md#setchatclientdata)
@@ -469,6 +478,7 @@
 - [setChatTheme](types._Methods.md#setchattheme)
 - [setChatTitle](types._Methods.md#setchattitle)
 - [setCommands](types._Methods.md#setcommands)
+- [setCustomEmojiStickerSetThumbnail](types._Methods.md#setcustomemojistickersetthumbnail)
 - [setCustomLanguagePack](types._Methods.md#setcustomlanguagepack)
 - [setCustomLanguagePackString](types._Methods.md#setcustomlanguagepackstring)
 - [setDatabaseEncryptionKey](types._Methods.md#setdatabaseencryptionkey)
@@ -503,8 +513,12 @@
 - [setProfilePhoto](types._Methods.md#setprofilephoto)
 - [setRecoveryEmailAddress](types._Methods.md#setrecoveryemailaddress)
 - [setScopeNotificationSettings](types._Methods.md#setscopenotificationsettings)
+- [setStickerEmojis](types._Methods.md#setstickeremojis)
+- [setStickerKeywords](types._Methods.md#setstickerkeywords)
+- [setStickerMaskPosition](types._Methods.md#setstickermaskposition)
 - [setStickerPositionInSet](types._Methods.md#setstickerpositioninset)
 - [setStickerSetThumbnail](types._Methods.md#setstickersetthumbnail)
+- [setStickerSetTitle](types._Methods.md#setstickersettitle)
 - [setSupergroupStickerSet](types._Methods.md#setsupergroupstickerset)
 - [setSupergroupUsername](types._Methods.md#setsupergroupusername)
 - [setTdlibParameters](types._Methods.md#settdlibparameters)
@@ -590,7 +604,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:314
+dist/generated/types.d.ts:317
 
 ___
 
@@ -600,7 +614,17 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:546
+dist/generated/types.d.ts:559
+
+___
+
+### addApplicationChangelog
+
+• **addApplicationChangelog** = ``"addApplicationChangelog"``
+
+#### Defined in
+
+dist/generated/types.d.ts:569
 
 ___
 
@@ -610,7 +634,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:252
+dist/generated/types.d.ts:255
 
 ___
 
@@ -620,7 +644,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:253
+dist/generated/types.d.ts:256
 
 ___
 
@@ -630,7 +654,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:221
+dist/generated/types.d.ts:224
 
 ___
 
@@ -640,7 +664,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:353
+dist/generated/types.d.ts:356
 
 ___
 
@@ -650,7 +674,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:470
+dist/generated/types.d.ts:477
 
 ___
 
@@ -660,7 +684,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:385
+dist/generated/types.d.ts:388
 
 ___
 
@@ -670,7 +694,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:289
+dist/generated/types.d.ts:292
 
 ___
 
@@ -690,7 +714,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:573
+dist/generated/types.d.ts:587
 
 ___
 
@@ -710,7 +734,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:501
+dist/generated/types.d.ts:508
 
 ___
 
@@ -720,7 +744,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:558
+dist/generated/types.d.ts:572
 
 ___
 
@@ -730,7 +754,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:381
+dist/generated/types.d.ts:384
 
 ___
 
@@ -750,7 +774,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:396
+dist/generated/types.d.ts:399
 
 ___
 
@@ -760,7 +784,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:264
+dist/generated/types.d.ts:267
 
 ___
 
@@ -770,7 +794,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:532
+dist/generated/types.d.ts:539
 
 ___
 
@@ -780,7 +804,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:191
+dist/generated/types.d.ts:193
 
 ___
 
@@ -790,7 +814,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:548
+dist/generated/types.d.ts:561
 
 ___
 
@@ -810,7 +834,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:193
+dist/generated/types.d.ts:195
 
 ___
 
@@ -820,7 +844,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:192
+dist/generated/types.d.ts:194
 
 ___
 
@@ -830,7 +854,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:189
+dist/generated/types.d.ts:191
 
 ___
 
@@ -840,7 +864,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:544
+dist/generated/types.d.ts:557
 
 ___
 
@@ -850,7 +874,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:545
+dist/generated/types.d.ts:558
 
 ___
 
@@ -860,7 +884,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:255
+dist/generated/types.d.ts:258
 
 ___
 
@@ -870,7 +894,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:351
+dist/generated/types.d.ts:354
 
 ___
 
@@ -880,7 +904,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:543
+dist/generated/types.d.ts:556
 
 ___
 
@@ -890,7 +914,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:256
+dist/generated/types.d.ts:259
 
 ___
 
@@ -900,7 +924,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:280
+dist/generated/types.d.ts:283
 
 ___
 
@@ -920,7 +944,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:283
+dist/generated/types.d.ts:286
 
 ___
 
@@ -930,7 +954,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:359
+dist/generated/types.d.ts:362
 
 ___
 
@@ -940,7 +964,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:412
+dist/generated/types.d.ts:415
 
 ___
 
@@ -950,7 +974,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:377
+dist/generated/types.d.ts:380
 
 ___
 
@@ -1010,7 +1034,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:414
+dist/generated/types.d.ts:417
 
 ___
 
@@ -1020,7 +1044,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:308
+dist/generated/types.d.ts:311
 
 ___
 
@@ -1050,7 +1074,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:520
+dist/generated/types.d.ts:527
 
 ___
 
@@ -1080,7 +1104,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:526
+dist/generated/types.d.ts:533
 
 ___
 
@@ -1090,7 +1114,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:517
+dist/generated/types.d.ts:524
 
 ___
 
@@ -1110,7 +1134,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:530
+dist/generated/types.d.ts:537
 
 ___
 
@@ -1130,7 +1154,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:261
+dist/generated/types.d.ts:264
 
 ___
 
@@ -1140,7 +1164,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:507
+dist/generated/types.d.ts:514
 
 ___
 
@@ -1150,7 +1174,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:360
+dist/generated/types.d.ts:363
 
 ___
 
@@ -1160,7 +1184,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:277
+dist/generated/types.d.ts:280
 
 ___
 
@@ -1180,7 +1204,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:383
+dist/generated/types.d.ts:386
 
 ___
 
@@ -1200,7 +1224,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:204
+dist/generated/types.d.ts:206
 
 ___
 
@@ -1210,7 +1234,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:541
+dist/generated/types.d.ts:554
 
 ___
 
@@ -1230,7 +1254,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:201
+dist/generated/types.d.ts:203
 
 ___
 
@@ -1240,7 +1264,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:449
+dist/generated/types.d.ts:456
 
 ___
 
@@ -1250,7 +1274,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:188
+dist/generated/types.d.ts:190
 
 ___
 
@@ -1270,7 +1294,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:213
+dist/generated/types.d.ts:216
 
 ___
 
@@ -1280,7 +1304,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:313
+dist/generated/types.d.ts:316
 
 ___
 
@@ -1290,7 +1314,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:223
+dist/generated/types.d.ts:226
 
 ___
 
@@ -1300,7 +1324,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:299
+dist/generated/types.d.ts:302
 
 ___
 
@@ -1320,7 +1344,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:458
+dist/generated/types.d.ts:465
 
 ___
 
@@ -1330,7 +1354,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:216
+dist/generated/types.d.ts:219
 
 ___
 
@@ -1340,7 +1364,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:218
+dist/generated/types.d.ts:221
 
 ___
 
@@ -1350,7 +1374,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:531
+dist/generated/types.d.ts:538
 
 ___
 
@@ -1360,7 +1384,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:217
+dist/generated/types.d.ts:220
 
 ___
 
@@ -1370,7 +1394,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:212
+dist/generated/types.d.ts:215
 
 ___
 
@@ -1380,7 +1404,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:215
+dist/generated/types.d.ts:218
 
 ___
 
@@ -1390,7 +1414,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:214
+dist/generated/types.d.ts:217
 
 ___
 
@@ -1410,7 +1434,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:322
+dist/generated/types.d.ts:325
 
 ___
 
@@ -1420,7 +1444,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:485
+dist/generated/types.d.ts:492
 
 ___
 
@@ -1440,7 +1464,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:307
+dist/generated/types.d.ts:310
 
 ___
 
@@ -1460,7 +1484,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:225
+dist/generated/types.d.ts:228
 
 ___
 
@@ -1500,7 +1524,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:198
+dist/generated/types.d.ts:200
 
 ___
 
@@ -1510,7 +1534,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:418
+dist/generated/types.d.ts:421
 
 ___
 
@@ -1520,7 +1544,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:288
+dist/generated/types.d.ts:291
 
 ___
 
@@ -1540,7 +1564,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:474
+dist/generated/types.d.ts:481
 
 ___
 
@@ -1560,7 +1584,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:512
+dist/generated/types.d.ts:519
 
 ___
 
@@ -1570,7 +1594,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:404
+dist/generated/types.d.ts:407
 
 ___
 
@@ -1580,7 +1604,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:306
+dist/generated/types.d.ts:309
 
 ___
 
@@ -1590,7 +1614,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:457
+dist/generated/types.d.ts:464
 
 ___
 
@@ -1600,7 +1624,17 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:456
+dist/generated/types.d.ts:463
+
+___
+
+### deleteStickerSet
+
+• **deleteStickerSet** = ``"deleteStickerSet"``
+
+#### Defined in
+
+dist/generated/types.d.ts:543
 
 ___
 
@@ -1620,7 +1654,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:435
+dist/generated/types.d.ts:442
 
 ___
 
@@ -1630,7 +1664,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:561
+dist/generated/types.d.ts:575
 
 ___
 
@@ -1640,7 +1674,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:316
+dist/generated/types.d.ts:319
 
 ___
 
@@ -1650,7 +1684,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:432
+dist/generated/types.d.ts:439
 
 ___
 
@@ -1660,7 +1694,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:431
+dist/generated/types.d.ts:438
 
 ___
 
@@ -1670,7 +1704,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:278
+dist/generated/types.d.ts:281
 
 ___
 
@@ -1680,7 +1714,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:224
+dist/generated/types.d.ts:227
 
 ___
 
@@ -1690,7 +1724,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:300
+dist/generated/types.d.ts:303
 
 ___
 
@@ -1700,7 +1734,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:472
+dist/generated/types.d.ts:479
 
 ___
 
@@ -1830,7 +1864,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:559
+dist/generated/types.d.ts:573
 
 ___
 
@@ -1840,7 +1874,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:560
+dist/generated/types.d.ts:574
 
 ___
 
@@ -1850,7 +1884,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:347
+dist/generated/types.d.ts:350
 
 ___
 
@@ -1860,7 +1894,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:338
+dist/generated/types.d.ts:341
 
 ___
 
@@ -1870,7 +1904,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:331
+dist/generated/types.d.ts:334
 
 ___
 
@@ -1880,7 +1914,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:286
+dist/generated/types.d.ts:289
 
 ___
 
@@ -1900,7 +1934,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:484
+dist/generated/types.d.ts:491
 
 ___
 
@@ -1920,7 +1954,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:424
+dist/generated/types.d.ts:431
 
 ___
 
@@ -1930,7 +1964,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:510
+dist/generated/types.d.ts:517
 
 ___
 
@@ -1940,7 +1974,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:390
+dist/generated/types.d.ts:393
 
 ___
 
@@ -1950,7 +1984,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:556
+dist/generated/types.d.ts:568
 
 ___
 
@@ -1960,7 +1994,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:554
+dist/generated/types.d.ts:571
 
 ___
 
@@ -1970,7 +2004,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:370
+dist/generated/types.d.ts:373
 
 ___
 
@@ -1980,7 +2014,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:372
+dist/generated/types.d.ts:375
 
 ___
 
@@ -1990,7 +2024,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:272
+dist/generated/types.d.ts:275
 
 ___
 
@@ -2010,7 +2044,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:503
+dist/generated/types.d.ts:510
 
 ___
 
@@ -2020,7 +2054,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:505
+dist/generated/types.d.ts:512
 
 ___
 
@@ -2030,7 +2064,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:461
+dist/generated/types.d.ts:468
 
 ___
 
@@ -2040,7 +2074,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:460
+dist/generated/types.d.ts:467
 
 ___
 
@@ -2050,7 +2084,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:508
+dist/generated/types.d.ts:515
 
 ___
 
@@ -2080,7 +2114,27 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:352
+dist/generated/types.d.ts:355
+
+___
+
+### getBotInfoDescription
+
+• **getBotInfoDescription** = ``"getBotInfoDescription"``
+
+#### Defined in
+
+dist/generated/types.d.ts:428
+
+___
+
+### getBotInfoShortDescription
+
+• **getBotInfoShortDescription** = ``"getBotInfoShortDescription"``
+
+#### Defined in
+
+dist/generated/types.d.ts:430
 
 ___
 
@@ -2090,7 +2144,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:190
+dist/generated/types.d.ts:192
 
 ___
 
@@ -2120,7 +2174,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:260
+dist/generated/types.d.ts:263
 
 ___
 
@@ -2140,7 +2194,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:450
+dist/generated/types.d.ts:457
 
 ___
 
@@ -2150,7 +2204,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:222
+dist/generated/types.d.ts:225
 
 ___
 
@@ -2160,7 +2214,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:228
+dist/generated/types.d.ts:231
 
 ___
 
@@ -2180,7 +2234,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:301
+dist/generated/types.d.ts:304
 
 ___
 
@@ -2190,7 +2244,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:302
+dist/generated/types.d.ts:305
 
 ___
 
@@ -2200,7 +2254,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:304
+dist/generated/types.d.ts:307
 
 ___
 
@@ -2210,7 +2264,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:303
+dist/generated/types.d.ts:306
 
 ___
 
@@ -2220,7 +2274,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:310
+dist/generated/types.d.ts:313
 
 ___
 
@@ -2230,7 +2284,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:220
+dist/generated/types.d.ts:223
 
 ___
 
@@ -2240,7 +2294,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:258
+dist/generated/types.d.ts:261
 
 ___
 
@@ -2290,7 +2344,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:266
+dist/generated/types.d.ts:269
 
 ___
 
@@ -2340,7 +2394,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:492
+dist/generated/types.d.ts:499
 
 ___
 
@@ -2360,7 +2414,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:419
+dist/generated/types.d.ts:422
 
 ___
 
@@ -2370,7 +2424,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:430
+dist/generated/types.d.ts:437
 
 ___
 
@@ -2380,7 +2434,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:355
+dist/generated/types.d.ts:358
 
 ___
 
@@ -2390,7 +2444,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:550
+dist/generated/types.d.ts:563
 
 ___
 
@@ -2400,7 +2454,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:551
+dist/generated/types.d.ts:564
 
 ___
 
@@ -2440,7 +2494,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:392
+dist/generated/types.d.ts:395
 
 ___
 
@@ -2450,7 +2504,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:497
+dist/generated/types.d.ts:504
 
 ___
 
@@ -2460,7 +2514,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:555
+dist/generated/types.d.ts:567
 
 ___
 
@@ -2470,7 +2524,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:393
+dist/generated/types.d.ts:396
 
 ___
 
@@ -2480,7 +2534,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:276
+dist/generated/types.d.ts:279
 
 ___
 
@@ -2490,7 +2544,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:487
+dist/generated/types.d.ts:494
 
 ___
 
@@ -2500,7 +2554,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:394
+dist/generated/types.d.ts:397
 
 ___
 
@@ -2510,7 +2564,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:389
+dist/generated/types.d.ts:392
 
 ___
 
@@ -2530,7 +2584,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:391
+dist/generated/types.d.ts:394
 
 ___
 
@@ -2540,7 +2594,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:207
+dist/generated/types.d.ts:210
 
 ___
 
@@ -2550,7 +2604,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:206
+dist/generated/types.d.ts:209
 
 ___
 
@@ -2560,7 +2614,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:384
+dist/generated/types.d.ts:387
 
 ___
 
@@ -2580,7 +2634,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:279
+dist/generated/types.d.ts:282
 
 ___
 
@@ -2650,7 +2704,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:196
+dist/generated/types.d.ts:198
 
 ___
 
@@ -2660,7 +2714,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:325
+dist/generated/types.d.ts:328
 
 ___
 
@@ -2670,7 +2724,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:335
+dist/generated/types.d.ts:338
 
 ___
 
@@ -2680,7 +2734,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:349
+dist/generated/types.d.ts:352
 
 ___
 
@@ -2690,7 +2744,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:348
+dist/generated/types.d.ts:351
 
 ___
 
@@ -2710,7 +2764,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:358
+dist/generated/types.d.ts:361
 
 ___
 
@@ -2730,7 +2784,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:197
+dist/generated/types.d.ts:199
 
 ___
 
@@ -2750,7 +2804,17 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:369
+dist/generated/types.d.ts:372
+
+___
+
+### getInternalLink
+
+• **getInternalLink** = ``"getInternalLink"``
+
+#### Defined in
+
+dist/generated/types.d.ts:207
 
 ___
 
@@ -2760,7 +2824,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:205
+dist/generated/types.d.ts:208
 
 ___
 
@@ -2790,7 +2854,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:467
+dist/generated/types.d.ts:474
 
 ___
 
@@ -2810,7 +2874,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:468
+dist/generated/types.d.ts:475
 
 ___
 
@@ -2820,7 +2884,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:466
+dist/generated/types.d.ts:473
 
 ___
 
@@ -2830,7 +2894,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:567
+dist/generated/types.d.ts:581
 
 ___
 
@@ -2840,7 +2904,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:572
+dist/generated/types.d.ts:586
 
 ___
 
@@ -2850,7 +2914,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:570
+dist/generated/types.d.ts:584
 
 ___
 
@@ -2860,7 +2924,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:569
+dist/generated/types.d.ts:583
 
 ___
 
@@ -2890,7 +2954,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:536
+dist/generated/types.d.ts:549
 
 ___
 
@@ -2920,7 +2984,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:421
+dist/generated/types.d.ts:424
 
 ___
 
@@ -2970,7 +3034,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:295
+dist/generated/types.d.ts:298
 
 ___
 
@@ -2980,7 +3044,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:296
+dist/generated/types.d.ts:299
 
 ___
 
@@ -3030,7 +3094,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:493
+dist/generated/types.d.ts:500
 
 ___
 
@@ -3080,7 +3144,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:500
+dist/generated/types.d.ts:507
 
 ___
 
@@ -3090,7 +3154,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:481
+dist/generated/types.d.ts:488
 
 ___
 
@@ -3100,7 +3164,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:521
+dist/generated/types.d.ts:528
 
 ___
 
@@ -3110,7 +3174,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:522
+dist/generated/types.d.ts:529
 
 ___
 
@@ -3120,7 +3184,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:509
+dist/generated/types.d.ts:516
 
 ___
 
@@ -3140,7 +3204,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:451
+dist/generated/types.d.ts:458
 
 ___
 
@@ -3150,7 +3214,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:454
+dist/generated/types.d.ts:461
 
 ___
 
@@ -3160,7 +3224,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:552
+dist/generated/types.d.ts:565
 
 ___
 
@@ -3170,7 +3234,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:553
+dist/generated/types.d.ts:566
 
 ___
 
@@ -3190,7 +3254,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:514
+dist/generated/types.d.ts:521
 
 ___
 
@@ -3200,7 +3264,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:538
+dist/generated/types.d.ts:551
 
 ___
 
@@ -3210,7 +3274,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:537
+dist/generated/types.d.ts:550
 
 ___
 
@@ -3220,7 +3284,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:542
+dist/generated/types.d.ts:555
 
 ___
 
@@ -3230,7 +3294,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:539
+dist/generated/types.d.ts:552
 
 ___
 
@@ -3240,7 +3304,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:368
+dist/generated/types.d.ts:371
 
 ___
 
@@ -3250,7 +3314,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:563
+dist/generated/types.d.ts:577
 
 ___
 
@@ -3260,7 +3324,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:564
+dist/generated/types.d.ts:578
 
 ___
 
@@ -3270,7 +3334,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:477
+dist/generated/types.d.ts:484
 
 ___
 
@@ -3280,7 +3344,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:275
+dist/generated/types.d.ts:278
 
 ___
 
@@ -3290,7 +3354,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:398
+dist/generated/types.d.ts:401
 
 ___
 
@@ -3300,7 +3364,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:380
+dist/generated/types.d.ts:383
 
 ___
 
@@ -3320,7 +3384,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:478
+dist/generated/types.d.ts:485
 
 ___
 
@@ -3330,7 +3394,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:227
+dist/generated/types.d.ts:230
 
 ___
 
@@ -3370,7 +3434,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:395
+dist/generated/types.d.ts:398
 
 ___
 
@@ -3380,7 +3444,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:262
+dist/generated/types.d.ts:265
 
 ___
 
@@ -3390,7 +3454,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:263
+dist/generated/types.d.ts:266
 
 ___
 
@@ -3400,7 +3464,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:455
+dist/generated/types.d.ts:462
 
 ___
 
@@ -3410,7 +3474,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:267
+dist/generated/types.d.ts:270
 
 ___
 
@@ -3430,7 +3494,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:494
+dist/generated/types.d.ts:501
 
 ___
 
@@ -3440,7 +3504,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:387
+dist/generated/types.d.ts:390
 
 ___
 
@@ -3450,7 +3514,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:373
+dist/generated/types.d.ts:376
 
 ___
 
@@ -3460,7 +3524,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:366
+dist/generated/types.d.ts:369
 
 ___
 
@@ -3470,7 +3534,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:495
+dist/generated/types.d.ts:502
 
 ___
 
@@ -3480,7 +3544,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:496
+dist/generated/types.d.ts:503
 
 ___
 
@@ -3490,7 +3554,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:281
+dist/generated/types.d.ts:284
 
 ___
 
@@ -3500,7 +3564,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:529
+dist/generated/types.d.ts:536
 
 ___
 
@@ -3540,7 +3604,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:448
+dist/generated/types.d.ts:455
 
 ___
 
@@ -3550,7 +3614,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:459
+dist/generated/types.d.ts:466
 
 ___
 
@@ -3590,7 +3654,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:274
+dist/generated/types.d.ts:277
 
 ___
 
@@ -3610,7 +3674,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:371
+dist/generated/types.d.ts:374
 
 ___
 
@@ -3640,7 +3704,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:415
+dist/generated/types.d.ts:418
 
 ___
 
@@ -3650,7 +3714,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:480
+dist/generated/types.d.ts:487
 
 ___
 
@@ -3660,7 +3724,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:365
+dist/generated/types.d.ts:368
 
 ___
 
@@ -3670,7 +3734,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:574
+dist/generated/types.d.ts:588
 
 ___
 
@@ -3680,7 +3744,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:320
+dist/generated/types.d.ts:323
 
 ___
 
@@ -3690,7 +3754,17 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:323
+dist/generated/types.d.ts:326
+
+___
+
+### getWebAppLinkUrl
+
+• **getWebAppLinkUrl** = ``"getWebAppLinkUrl"``
+
+#### Defined in
+
+dist/generated/types.d.ts:186
 
 ___
 
@@ -3700,7 +3774,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:185
+dist/generated/types.d.ts:187
 
 ___
 
@@ -3710,7 +3784,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:402
+dist/generated/types.d.ts:405
 
 ___
 
@@ -3720,7 +3794,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:401
+dist/generated/types.d.ts:404
 
 ___
 
@@ -3740,7 +3814,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:354
+dist/generated/types.d.ts:357
 
 ___
 
@@ -3750,7 +3824,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:297
+dist/generated/types.d.ts:300
 
 ___
 
@@ -3760,7 +3834,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:334
+dist/generated/types.d.ts:337
 
 ___
 
@@ -3770,7 +3844,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:250
+dist/generated/types.d.ts:253
 
 ___
 
@@ -3780,7 +3854,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:309
+dist/generated/types.d.ts:312
 
 ___
 
@@ -3790,7 +3864,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:328
+dist/generated/types.d.ts:331
 
 ___
 
@@ -3800,7 +3874,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:251
+dist/generated/types.d.ts:254
 
 ___
 
@@ -3810,7 +3884,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:346
+dist/generated/types.d.ts:349
 
 ___
 
@@ -3830,7 +3904,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:345
+dist/generated/types.d.ts:348
 
 ___
 
@@ -3850,7 +3924,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:200
+dist/generated/types.d.ts:202
 
 ___
 
@@ -3860,7 +3934,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:203
+dist/generated/types.d.ts:205
 
 ___
 
@@ -3870,7 +3944,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:187
+dist/generated/types.d.ts:189
 
 ___
 
@@ -3880,7 +3954,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:498
+dist/generated/types.d.ts:505
 
 ___
 
@@ -3910,7 +3984,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:246
+dist/generated/types.d.ts:249
 
 ___
 
@@ -3920,7 +3994,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:565
+dist/generated/types.d.ts:579
 
 ___
 
@@ -3930,7 +4004,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:282
+dist/generated/types.d.ts:285
 
 ___
 
@@ -3940,7 +4014,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:311
+dist/generated/types.d.ts:314
 
 ___
 
@@ -3950,7 +4024,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:312
+dist/generated/types.d.ts:315
 
 ___
 
@@ -3960,7 +4034,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:476
+dist/generated/types.d.ts:483
 
 ___
 
@@ -3980,7 +4054,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:208
+dist/generated/types.d.ts:211
 
 ___
 
@@ -3990,7 +4064,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:210
+dist/generated/types.d.ts:213
 
 ___
 
@@ -4000,7 +4074,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:209
+dist/generated/types.d.ts:212
 
 ___
 
@@ -4010,7 +4084,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:211
+dist/generated/types.d.ts:214
 
 ___
 
@@ -4020,7 +4094,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:287
+dist/generated/types.d.ts:290
 
 ___
 
@@ -4060,7 +4134,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:475
+dist/generated/types.d.ts:482
 
 ___
 
@@ -4080,7 +4154,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:293
+dist/generated/types.d.ts:296
 
 ___
 
@@ -4090,7 +4164,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:464
+dist/generated/types.d.ts:471
 
 ___
 
@@ -4100,7 +4174,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:488
+dist/generated/types.d.ts:495
 
 ___
 
@@ -4110,7 +4184,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:357
+dist/generated/types.d.ts:360
 
 ___
 
@@ -4120,7 +4194,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:386
+dist/generated/types.d.ts:389
 
 ___
 
@@ -4130,7 +4204,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:292
+dist/generated/types.d.ts:295
 
 ___
 
@@ -4170,7 +4244,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:562
+dist/generated/types.d.ts:576
 
 ___
 
@@ -4180,7 +4254,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:400
+dist/generated/types.d.ts:403
 
 ___
 
@@ -4190,7 +4264,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:382
+dist/generated/types.d.ts:385
 
 ___
 
@@ -4210,7 +4284,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:397
+dist/generated/types.d.ts:400
 
 ___
 
@@ -4220,7 +4294,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:265
+dist/generated/types.d.ts:268
 
 ___
 
@@ -4230,7 +4304,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:535
+dist/generated/types.d.ts:545
 
 ___
 
@@ -4250,7 +4324,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:409
+dist/generated/types.d.ts:412
 
 ___
 
@@ -4260,7 +4334,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:226
+dist/generated/types.d.ts:229
 
 ___
 
@@ -4270,7 +4344,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:379
+dist/generated/types.d.ts:382
 
 ___
 
@@ -4280,7 +4354,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:436
+dist/generated/types.d.ts:443
 
 ___
 
@@ -4290,7 +4364,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:298
+dist/generated/types.d.ts:301
 
 ___
 
@@ -4300,7 +4374,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:324
+dist/generated/types.d.ts:327
 
 ___
 
@@ -4310,7 +4384,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:489
+dist/generated/types.d.ts:496
 
 ___
 
@@ -4320,7 +4394,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:490
+dist/generated/types.d.ts:497
 
 ___
 
@@ -4330,7 +4404,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:491
+dist/generated/types.d.ts:498
 
 ___
 
@@ -4340,7 +4414,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:447
+dist/generated/types.d.ts:454
 
 ___
 
@@ -4350,7 +4424,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:446
+dist/generated/types.d.ts:453
 
 ___
 
@@ -4400,7 +4474,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:413
+dist/generated/types.d.ts:416
 
 ___
 
@@ -4410,7 +4484,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:519
+dist/generated/types.d.ts:526
 
 ___
 
@@ -4440,7 +4514,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:525
+dist/generated/types.d.ts:532
 
 ___
 
@@ -4450,7 +4524,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:516
+dist/generated/types.d.ts:523
 
 ___
 
@@ -4470,7 +4544,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:269
+dist/generated/types.d.ts:272
 
 ___
 
@@ -4480,7 +4554,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:465
+dist/generated/types.d.ts:472
 
 ___
 
@@ -4490,7 +4564,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:502
+dist/generated/types.d.ts:509
 
 ___
 
@@ -4510,7 +4584,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:305
+dist/generated/types.d.ts:308
 
 ___
 
@@ -4520,7 +4594,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:336
+dist/generated/types.d.ts:339
 
 ___
 
@@ -4530,7 +4604,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:557
+dist/generated/types.d.ts:570
 
 ___
 
@@ -4540,7 +4614,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:462
+dist/generated/types.d.ts:469
 
 ___
 
@@ -4560,7 +4634,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:259
+dist/generated/types.d.ts:262
 
 ___
 
@@ -4620,7 +4694,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:356
+dist/generated/types.d.ts:359
 
 ___
 
@@ -4630,7 +4704,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:388
+dist/generated/types.d.ts:391
 
 ___
 
@@ -4640,7 +4714,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:294
+dist/generated/types.d.ts:297
 
 ___
 
@@ -4650,7 +4724,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:399
+dist/generated/types.d.ts:402
 
 ___
 
@@ -4660,7 +4734,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:375
+dist/generated/types.d.ts:378
 
 ___
 
@@ -4720,7 +4794,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:374
+dist/generated/types.d.ts:377
 
 ___
 
@@ -4730,7 +4804,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:376
+dist/generated/types.d.ts:379
 
 ___
 
@@ -4740,7 +4814,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:367
+dist/generated/types.d.ts:370
 
 ___
 
@@ -4750,7 +4824,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:363
+dist/generated/types.d.ts:366
 
 ___
 
@@ -4760,7 +4834,17 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:416
+dist/generated/types.d.ts:419
+
+___
+
+### searchWebApp
+
+• **searchWebApp** = ``"searchWebApp"``
+
+#### Defined in
+
+dist/generated/types.d.ts:185
 
 ___
 
@@ -4790,7 +4874,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:318
+dist/generated/types.d.ts:321
 
 ___
 
@@ -4800,7 +4884,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:319
+dist/generated/types.d.ts:322
 
 ___
 
@@ -4810,7 +4894,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:317
+dist/generated/types.d.ts:320
 
 ___
 
@@ -4820,7 +4904,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:315
+dist/generated/types.d.ts:318
 
 ___
 
@@ -4830,7 +4914,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:199
+dist/generated/types.d.ts:201
 
 ___
 
@@ -4850,7 +4934,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:547
+dist/generated/types.d.ts:560
 
 ___
 
@@ -4860,7 +4944,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:518
+dist/generated/types.d.ts:525
 
 ___
 
@@ -4900,7 +4984,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:523
+dist/generated/types.d.ts:530
 
 ___
 
@@ -4910,7 +4994,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:453
+dist/generated/types.d.ts:460
 
 ___
 
@@ -4920,7 +5004,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:524
+dist/generated/types.d.ts:531
 
 ___
 
@@ -4930,7 +5014,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:515
+dist/generated/types.d.ts:522
 
 ___
 
@@ -4940,7 +5024,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:186
+dist/generated/types.d.ts:188
 
 ___
 
@@ -4950,7 +5034,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:483
+dist/generated/types.d.ts:490
 
 ___
 
@@ -4960,7 +5044,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:549
+dist/generated/types.d.ts:562
 
 ___
 
@@ -4990,7 +5074,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:504
+dist/generated/types.d.ts:511
 
 ___
 
@@ -5000,7 +5084,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:506
+dist/generated/types.d.ts:513
 
 ___
 
@@ -5010,7 +5094,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:463
+dist/generated/types.d.ts:470
 
 ___
 
@@ -5020,7 +5104,27 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:406
+dist/generated/types.d.ts:409
+
+___
+
+### setBotInfoDescription
+
+• **setBotInfoDescription** = ``"setBotInfoDescription"``
+
+#### Defined in
+
+dist/generated/types.d.ts:427
+
+___
+
+### setBotInfoShortDescription
+
+• **setBotInfoShortDescription** = ``"setBotInfoShortDescription"``
+
+#### Defined in
+
+dist/generated/types.d.ts:429
 
 ___
 
@@ -5030,7 +5134,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:527
+dist/generated/types.d.ts:534
 
 ___
 
@@ -5040,7 +5144,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:240
+dist/generated/types.d.ts:243
 
 ___
 
@@ -5050,7 +5154,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:241
+dist/generated/types.d.ts:244
 
 ___
 
@@ -5060,7 +5164,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:242
+dist/generated/types.d.ts:245
 
 ___
 
@@ -5070,7 +5174,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:243
+dist/generated/types.d.ts:246
 
 ___
 
@@ -5080,7 +5184,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:234
+dist/generated/types.d.ts:237
 
 ___
 
@@ -5090,7 +5194,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:244
+dist/generated/types.d.ts:247
 
 ___
 
@@ -5100,7 +5204,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:254
+dist/generated/types.d.ts:257
 
 ___
 
@@ -5110,7 +5214,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:231
+dist/generated/types.d.ts:234
 
 ___
 
@@ -5130,7 +5234,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:235
+dist/generated/types.d.ts:238
 
 ___
 
@@ -5140,7 +5244,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:232
+dist/generated/types.d.ts:235
 
 ___
 
@@ -5150,7 +5254,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:230
+dist/generated/types.d.ts:233
 
 ___
 
@@ -5160,7 +5264,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:245
+dist/generated/types.d.ts:248
 
 ___
 
@@ -5170,7 +5274,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:233
+dist/generated/types.d.ts:236
 
 ___
 
@@ -5180,7 +5284,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:229
+dist/generated/types.d.ts:232
 
 ___
 
@@ -5190,7 +5294,17 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:417
+dist/generated/types.d.ts:420
+
+___
+
+### setCustomEmojiStickerSetThumbnail
+
+• **setCustomEmojiStickerSetThumbnail** = ``"setCustomEmojiStickerSetThumbnail"``
+
+#### Defined in
+
+dist/generated/types.d.ts:541
 
 ___
 
@@ -5200,7 +5314,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:471
+dist/generated/types.d.ts:478
 
 ___
 
@@ -5210,7 +5324,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:473
+dist/generated/types.d.ts:480
 
 ___
 
@@ -5230,7 +5344,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:423
+dist/generated/types.d.ts:426
 
 ___
 
@@ -5240,7 +5354,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:422
+dist/generated/types.d.ts:425
 
 ___
 
@@ -5250,7 +5364,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:486
+dist/generated/types.d.ts:493
 
 ___
 
@@ -5270,7 +5384,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:410
+dist/generated/types.d.ts:413
 
 ___
 
@@ -5280,7 +5394,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:285
+dist/generated/types.d.ts:288
 
 ___
 
@@ -5300,7 +5414,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:194
+dist/generated/types.d.ts:196
 
 ___
 
@@ -5310,7 +5424,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:341
+dist/generated/types.d.ts:344
 
 ___
 
@@ -5320,7 +5434,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:343
+dist/generated/types.d.ts:346
 
 ___
 
@@ -5330,7 +5444,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:332
+dist/generated/types.d.ts:335
 
 ___
 
@@ -5340,7 +5454,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:429
+dist/generated/types.d.ts:436
 
 ___
 
@@ -5350,7 +5464,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:195
+dist/generated/types.d.ts:197
 
 ___
 
@@ -5360,7 +5474,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:411
+dist/generated/types.d.ts:414
 
 ___
 
@@ -5370,7 +5484,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:566
+dist/generated/types.d.ts:580
 
 ___
 
@@ -5380,7 +5494,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:571
+dist/generated/types.d.ts:585
 
 ___
 
@@ -5390,7 +5504,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:568
+dist/generated/types.d.ts:582
 
 ___
 
@@ -5410,7 +5524,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:420
+dist/generated/types.d.ts:423
 
 ___
 
@@ -5420,7 +5534,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:405
+dist/generated/types.d.ts:408
 
 ___
 
@@ -5430,7 +5544,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:499
+dist/generated/types.d.ts:506
 
 ___
 
@@ -5440,7 +5554,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:482
+dist/generated/types.d.ts:489
 
 ___
 
@@ -5450,7 +5564,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:511
+dist/generated/types.d.ts:518
 
 ___
 
@@ -5460,7 +5574,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:513
+dist/generated/types.d.ts:520
 
 ___
 
@@ -5480,7 +5594,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:271
+dist/generated/types.d.ts:274
 
 ___
 
@@ -5510,7 +5624,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:403
+dist/generated/types.d.ts:406
 
 ___
 
@@ -5530,7 +5644,37 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:268
+dist/generated/types.d.ts:271
+
+___
+
+### setStickerEmojis
+
+• **setStickerEmojis** = ``"setStickerEmojis"``
+
+#### Defined in
+
+dist/generated/types.d.ts:546
+
+___
+
+### setStickerKeywords
+
+• **setStickerKeywords** = ``"setStickerKeywords"``
+
+#### Defined in
+
+dist/generated/types.d.ts:547
+
+___
+
+### setStickerMaskPosition
+
+• **setStickerMaskPosition** = ``"setStickerMaskPosition"``
+
+#### Defined in
+
+dist/generated/types.d.ts:548
 
 ___
 
@@ -5540,7 +5684,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:534
+dist/generated/types.d.ts:544
 
 ___
 
@@ -5550,7 +5694,17 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:533
+dist/generated/types.d.ts:540
+
+___
+
+### setStickerSetTitle
+
+• **setStickerSetTitle** = ``"setStickerSetTitle"``
+
+#### Defined in
+
+dist/generated/types.d.ts:542
 
 ___
 
@@ -5560,7 +5714,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:437
+dist/generated/types.d.ts:444
 
 ___
 
@@ -5570,7 +5724,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:433
+dist/generated/types.d.ts:440
 
 ___
 
@@ -5590,7 +5744,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:361
+dist/generated/types.d.ts:364
 
 ___
 
@@ -5600,7 +5754,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:479
+dist/generated/types.d.ts:486
 
 ___
 
@@ -5610,7 +5764,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:575
+dist/generated/types.d.ts:589
 
 ___
 
@@ -5620,7 +5774,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:407
+dist/generated/types.d.ts:410
 
 ___
 
@@ -5630,7 +5784,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:321
+dist/generated/types.d.ts:324
 
 ___
 
@@ -5650,7 +5804,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:364
+dist/generated/types.d.ts:367
 
 ___
 
@@ -5670,7 +5824,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:337
+dist/generated/types.d.ts:340
 
 ___
 
@@ -5680,7 +5834,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:329
+dist/generated/types.d.ts:332
 
 ___
 
@@ -5690,7 +5844,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:326
+dist/generated/types.d.ts:329
 
 ___
 
@@ -5710,7 +5864,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:362
+dist/generated/types.d.ts:365
 
 ___
 
@@ -5720,7 +5874,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:469
+dist/generated/types.d.ts:476
 
 ___
 
@@ -5730,7 +5884,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:426
+dist/generated/types.d.ts:433
 
 ___
 
@@ -5740,7 +5894,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:425
+dist/generated/types.d.ts:432
 
 ___
 
@@ -5750,7 +5904,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:578
+dist/generated/types.d.ts:592
 
 ___
 
@@ -5760,7 +5914,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:576
+dist/generated/types.d.ts:590
 
 ___
 
@@ -5770,7 +5924,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:577
+dist/generated/types.d.ts:591
 
 ___
 
@@ -5780,7 +5934,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:579
+dist/generated/types.d.ts:593
 
 ___
 
@@ -5790,7 +5944,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:580
+dist/generated/types.d.ts:594
 
 ___
 
@@ -5800,7 +5954,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:581
+dist/generated/types.d.ts:595
 
 ___
 
@@ -5810,7 +5964,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:582
+dist/generated/types.d.ts:596
 
 ___
 
@@ -5820,7 +5974,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:586
+dist/generated/types.d.ts:600
 
 ___
 
@@ -5830,7 +5984,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:584
+dist/generated/types.d.ts:598
 
 ___
 
@@ -5840,7 +5994,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:585
+dist/generated/types.d.ts:599
 
 ___
 
@@ -5850,7 +6004,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:588
+dist/generated/types.d.ts:602
 
 ___
 
@@ -5860,7 +6014,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:583
+dist/generated/types.d.ts:597
 
 ___
 
@@ -5870,7 +6024,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:587
+dist/generated/types.d.ts:601
 
 ___
 
@@ -5880,7 +6034,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:291
+dist/generated/types.d.ts:294
 
 ___
 
@@ -5890,7 +6044,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:273
+dist/generated/types.d.ts:276
 
 ___
 
@@ -5900,7 +6054,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:239
+dist/generated/types.d.ts:242
 
 ___
 
@@ -5910,7 +6064,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:236
+dist/generated/types.d.ts:239
 
 ___
 
@@ -5920,7 +6074,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:238
+dist/generated/types.d.ts:241
 
 ___
 
@@ -5930,7 +6084,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:270
+dist/generated/types.d.ts:273
 
 ___
 
@@ -5940,7 +6094,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:237
+dist/generated/types.d.ts:240
 
 ___
 
@@ -5950,7 +6104,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:290
+dist/generated/types.d.ts:293
 
 ___
 
@@ -5990,7 +6144,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:327
+dist/generated/types.d.ts:330
 
 ___
 
@@ -6000,7 +6154,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:340
+dist/generated/types.d.ts:343
 
 ___
 
@@ -6010,7 +6164,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:339
+dist/generated/types.d.ts:342
 
 ___
 
@@ -6020,7 +6174,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:333
+dist/generated/types.d.ts:336
 
 ___
 
@@ -6030,7 +6184,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:344
+dist/generated/types.d.ts:347
 
 ___
 
@@ -6040,7 +6194,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:342
+dist/generated/types.d.ts:345
 
 ___
 
@@ -6050,7 +6204,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:330
+dist/generated/types.d.ts:333
 
 ___
 
@@ -6060,7 +6214,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:350
+dist/generated/types.d.ts:353
 
 ___
 
@@ -6070,7 +6224,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:427
+dist/generated/types.d.ts:434
 
 ___
 
@@ -6080,7 +6234,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:428
+dist/generated/types.d.ts:435
 
 ___
 
@@ -6090,7 +6244,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:443
+dist/generated/types.d.ts:450
 
 ___
 
@@ -6100,7 +6254,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:442
+dist/generated/types.d.ts:449
 
 ___
 
@@ -6110,7 +6264,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:441
+dist/generated/types.d.ts:448
 
 ___
 
@@ -6120,7 +6274,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:445
+dist/generated/types.d.ts:452
 
 ___
 
@@ -6130,7 +6284,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:444
+dist/generated/types.d.ts:451
 
 ___
 
@@ -6140,7 +6294,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:440
+dist/generated/types.d.ts:447
 
 ___
 
@@ -6150,7 +6304,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:439
+dist/generated/types.d.ts:446
 
 ___
 
@@ -6160,7 +6314,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:438
+dist/generated/types.d.ts:445
 
 ___
 
@@ -6170,7 +6324,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:434
+dist/generated/types.d.ts:441
 
 ___
 
@@ -6180,7 +6334,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:408
+dist/generated/types.d.ts:411
 
 ___
 
@@ -6190,7 +6344,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:257
+dist/generated/types.d.ts:260
 
 ___
 
@@ -6220,7 +6374,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:248
+dist/generated/types.d.ts:251
 
 ___
 
@@ -6230,7 +6384,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:249
+dist/generated/types.d.ts:252
 
 ___
 
@@ -6240,7 +6394,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:247
+dist/generated/types.d.ts:250
 
 ___
 
@@ -6250,7 +6404,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:219
+dist/generated/types.d.ts:222
 
 ___
 
@@ -6260,7 +6414,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:528
+dist/generated/types.d.ts:535
 
 ___
 
@@ -6270,7 +6424,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:452
+dist/generated/types.d.ts:459
 
 ___
 
@@ -6280,7 +6434,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:202
+dist/generated/types.d.ts:204
 
 ___
 
@@ -6290,7 +6444,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:540
+dist/generated/types.d.ts:553
 
 ___
 
@@ -6300,7 +6454,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:378
+dist/generated/types.d.ts:381
 
 ___
 
@@ -6310,4 +6464,4 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:284
+dist/generated/types.d.ts:287

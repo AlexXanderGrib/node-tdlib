@@ -26,7 +26,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:1342
+dist/generated/types.d.ts:1362
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1348
+dist/generated/types.d.ts:1368
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1349
+dist/generated/types.d.ts:1369
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1343
+dist/generated/types.d.ts:1363
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1344
+dist/generated/types.d.ts:1364
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1345
+dist/generated/types.d.ts:1365
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1346
+dist/generated/types.d.ts:1366
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1347
+dist/generated/types.d.ts:1367
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1341
+dist/generated/types.d.ts:1361

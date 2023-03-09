@@ -20,7 +20,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:1634
+dist/generated/types.d.ts:1665
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1633
+dist/generated/types.d.ts:1664
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1632
+dist/generated/types.d.ts:1663
