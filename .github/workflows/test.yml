@@ -22,7 +22,7 @@ jobs:
         run: touch .env
 
       - name: Run jest
-        run: yarn test -- --coverage
+        run: yarn test --coverage --forceExit
 
       - name: Upload coverage to Codecov
         run: npx codecov
