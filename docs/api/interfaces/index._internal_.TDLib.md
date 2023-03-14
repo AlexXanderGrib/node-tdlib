@@ -31,21 +31,21 @@
 
 #### Defined in
 
-dist/shared/client.d.ts:4
+dist/shared/client.d.ts:5
 
 ## Methods
 
 ### create
 
-▸ **create**(): typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
+▸ **create**(): [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
 
 #### Returns
 
-typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
+[`TDLibClient`](../modules/index._internal_.md#tdlibclient)
 
 #### Defined in
 
-dist/shared/client.d.ts:5
+dist/shared/client.d.ts:6
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `client` | typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
 
 #### Returns
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:6
+dist/shared/client.d.ts:7
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `client` | ``null`` \| typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | ``null`` \| [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
 | `json` | `string` |
 
 #### Returns
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:7
+dist/shared/client.d.ts:8
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `client` | typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
 | `timeout` | `number` |
 
 #### Returns
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:8
+dist/shared/client.d.ts:9
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `client` | typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
 | `json` | `string` |
 
 #### Returns
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:9
+dist/shared/client.d.ts:10
 
 ___
 
@@ -148,4 +148,4 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:10
+dist/shared/client.d.ts:11

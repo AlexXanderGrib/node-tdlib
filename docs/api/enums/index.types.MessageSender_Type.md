@@ -19,7 +19,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:1603
+dist/generated/types.d.ts:1605
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:1602
+dist/generated/types.d.ts:1604

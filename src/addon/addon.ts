@@ -96,6 +96,7 @@ export class TDLibAddon implements TDLib {
    * @memberof TDLibAddon
    */
   private constructor(private readonly _addon: Addon) {}
+  readonly _isTDLib = true;
 
   /**
    *

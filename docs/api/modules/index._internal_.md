@@ -14,11 +14,8 @@
 
 - [OmitType](index._internal_.md#omittype)
 - [Subscription](index._internal_.md#subscription)
-- [Unsubscribe](index._internal_.md#unsubscribe)
-
-### Variables
-
 - [TDLibClient](index._internal_.md#tdlibclient)
+- [Unsubscribe](index._internal_.md#unsubscribe)
 
 ## Type Aliases
 
@@ -68,6 +65,22 @@ dist/event-bus.d.ts:1
 
 ___
 
+### TDLibClient
+
+Ƭ **TDLibClient**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `__type` | ``"TDLibClient"`` |
+
+#### Defined in
+
+dist/shared/client.d.ts:1
+
+___
+
 ### Unsubscribe
 
 Ƭ **Unsubscribe**: () => `void`
@@ -83,15 +96,3 @@ ___
 #### Defined in
 
 dist/event-bus.d.ts:2
-
-## Variables
-
-### TDLibClient
-
-• `Const` **TDLibClient**: unique `symbol`
-
-#### Defined in
-
-dist/shared/client.d.ts:1
-
-dist/shared/client.d.ts:2

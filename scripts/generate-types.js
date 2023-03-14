@@ -18,15 +18,17 @@ const primitiveComments = {
 
 const primitives = {
   vector: false,
-  "vector<T>": "Array<T>",
   "vector$Input<T>": "ReadonlyArray<T>",
+  "vector<T>": "Array<T>",
   boolFalse: "false",
   boolTrue: "true",
+  int64$Input: "string | bigint",
   int64: "string",
   int32: "number",
   int53: "number",
   double: "number",
   string: false,
+  bytes$Input: "string | Uint8Array",
   bytes: "string"
 };
 
@@ -136,11 +138,12 @@ function getInputAlias(typename) {
     return `${name}$Input<${getInputAlias(generic)}>`;
   }
 
-  if (typename in primitives) {
+  const inputName = `${typename}$Input`;
+  if (typename in primitives && !(inputName in primitives)) {
     return String(typename);
   }
 
-  return `${typename}$Input`;
+  return inputName;
 }
 
 /**
@@ -283,7 +286,8 @@ types.forEach((declaration) => {
   const ref = (namespaces[namespace] ??= {
     types: [],
     joins: {},
-    functions: {}
+    functions: {},
+    syncFunctions: new Set()
   });
 
   if (!declaration.result.includes(" ")) {
@@ -371,10 +375,16 @@ functions.forEach((declaration) => {
   const ref = (namespaces[namespace] ??= {
     types: [],
     joins: {},
-    functions: {}
+    functions: {},
+    syncFunctions: new Set()
   });
 
-  ref.functions[declaration.name] = generateFunction(declaration);
+  const code = generateFunction(declaration);
+  ref.functions[declaration.name] = code;
+
+  if (code.includes("Can be called synchronously")) {
+    ref.syncFunctions.add(declaration.name);
+  }
 });
 
 Object.values(namespaces).forEach((ref) => {
@@ -386,6 +396,13 @@ Object.values(namespaces).forEach((ref) => {
 
   ref.types.push(`export type $MethodsDict = {
     ${Object.keys(ref.functions)
+      .map((name) => `readonly ${name}: ${name};`)
+      .join("\n")}
+  }`);
+
+  ref.types.push(`export type $SyncMethodsDict = {
+    ${Object.keys(ref.functions)
+      .filter((name) => ref.syncFunctions.has(name))
       .map((name) => `readonly ${name}: ${name};`)
       .join("\n")}
   }`);

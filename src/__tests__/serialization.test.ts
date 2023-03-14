@@ -2,16 +2,19 @@ import { TDLibAddon } from "../addon";
 import { Client, TDError } from "../client";
 import { randomBytes } from "crypto";
 import { Meta } from "../generated/meta";
+import type { error } from "../types";
 
-describe("Client Serialization", () => {
+let adapter: any;
+
+describe("Client Serialization (async)", () => {
   let client: Client;
 
   beforeAll(async () => {
-    const adapter = await TDLibAddon.create();
+    adapter ??= await TDLibAddon.create();
 
     client = new Client(adapter);
+    client.syncApi.setLogVerbosityLevel({ new_verbosity_level: 0 });
     client.start();
-    await client.api.setLogVerbosityLevel({ new_verbosity_level: 0 });
   });
 
   const string = 'Test {"_": "Passed"}';
@@ -34,6 +37,24 @@ describe("Client Serialization", () => {
       _: "testBytes",
       value: bytes.toString("base64")
     });
+
+    const resultRaw = await client.api.testCallBytes({
+      x: bytes
+    });
+
+    expect(resultRaw).toEqual({
+      _: "testBytes",
+      value: bytes.toString("hex")
+    });
+
+    const resultUint8 = await client.api.testCallBytes({
+      x: new Uint8Array(bytes)
+    });
+
+    expect(resultUint8).toEqual({
+      _: "testBytes",
+      value: bytes.toString("hex")
+    });
   });
 
   test("testCallEmpty", async () => {
@@ -55,6 +76,7 @@ describe("Client Serialization", () => {
     const result = await client.api.testCallVectorString({
       x: [string, int64]
     });
+
     expect(result).toEqual({ _: "testVectorString", value: [string, int64] });
   });
 
@@ -85,5 +107,41 @@ describe("Client Serialization", () => {
 
     const commitHash = await client.api.getOption({ name: "commit_hash" });
     expect(commitHash).toEqual({ _: "optionValueString", value: Meta.commitHash });
+  });
+});
+
+describe("Client Serialization (sync)", () => {
+  let client: Client;
+
+  beforeAll(async () => {
+    adapter ??= await TDLibAddon.create();
+
+    client = new Client(adapter);
+    client.syncApi.setLogVerbosityLevel({ new_verbosity_level: 0 });
+    client.start();
+  });
+
+  test("version", () => {
+    const version = client.syncApi.getOption({ name: "version" });
+    expect(version).toEqual({ _: "optionValueString", value: Meta.version });
+
+    const commitHash = client.syncApi.getOption({ name: "commit_hash" });
+    expect(commitHash).toEqual({ _: "optionValueString", value: Meta.commitHash });
+  });
+
+  test("error", () => {
+    const input: error = {
+      _: "error",
+      code: 1337,
+      message: "Test"
+    };
+
+    try {
+      client.syncApi.testReturnError({ error: input });
+      fail("Should throw error");
+    } catch (error) {
+      expect(error).toBeInstanceOf(TDError);
+      expect(error).toMatchObject(input);
+    }
   });
 });

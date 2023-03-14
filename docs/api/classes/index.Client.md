@@ -21,6 +21,7 @@
 - [\_thread](index.Client.md#_thread)
 - [\_updates](index.Client.md#_updates)
 - [api](index.Client.md#api)
+- [syncApi](index.Client.md#syncapi)
 
 ### Accessors
 
@@ -29,6 +30,7 @@
 ### Methods
 
 - [destroy](index.Client.md#destroy)
+- [execute](index.Client.md#execute)
 - [invoke](index.Client.md#invoke)
 - [pause](index.Client.md#pause)
 - [start](index.Client.md#start)
@@ -107,7 +109,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:656
+dist/client.d.ts:693
 
 ___
 
@@ -721,6 +723,45 @@ ___
 
 dist/client.d.ts:50
 
+___
+
+### syncApi
+
+• `Readonly` **syncApi**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `addLogMessage` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`addLogMessage$Input`](../modules/index.types.default.md#addlogmessage$input)\>) => [`ok`](../modules/index.types.default.md#ok-1) |
+| `cleanFileName` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`cleanFileName$Input`](../modules/index.types.default.md#cleanfilename$input)\>) => [`text`](../modules/index.types.default.md#text-1) |
+| `getChatFilterDefaultIconName` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getChatFilterDefaultIconName$Input`](../modules/index.types.default.md#getchatfilterdefaulticonname$input)\>) => [`text`](../modules/index.types.default.md#text-1) |
+| `getFileExtension` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getFileExtension$Input`](../modules/index.types.default.md#getfileextension$input)\>) => [`text`](../modules/index.types.default.md#text-1) |
+| `getFileMimeType` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getFileMimeType$Input`](../modules/index.types.default.md#getfilemimetype$input)\>) => [`text`](../modules/index.types.default.md#text-1) |
+| `getJsonString` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getJsonString$Input`](../modules/index.types.default.md#getjsonstring$input)\>) => [`text`](../modules/index.types.default.md#text-1) |
+| `getJsonValue` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getJsonValue$Input`](../modules/index.types.default.md#getjsonvalue$input)\>) => [`JsonValue`](../modules/index.types.default.md#jsonvalue) |
+| `getLanguagePackString` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getLanguagePackString$Input`](../modules/index.types.default.md#getlanguagepackstring$input)\>) => [`LanguagePackStringValue`](../modules/index.types.default.md#languagepackstringvalue) |
+| `getLogStream` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getLogStream$Input`](../modules/index.types.default.md#getlogstream$input)\>) => [`LogStream`](../modules/index.types.default.md#logstream) |
+| `getLogTagVerbosityLevel` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getLogTagVerbosityLevel$Input`](../modules/index.types.default.md#getlogtagverbositylevel$input)\>) => [`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1) |
+| `getLogTags` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getLogTags$Input`](../modules/index.types.default.md#getlogtags$input)\>) => [`logTags`](../modules/index.types.default.md#logtags-1) |
+| `getLogVerbosityLevel` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getLogVerbosityLevel$Input`](../modules/index.types.default.md#getlogverbositylevel$input)\>) => [`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1) |
+| `getMarkdownText` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getMarkdownText$Input`](../modules/index.types.default.md#getmarkdowntext$input)\>) => [`formattedText`](../modules/index.types.default.md#formattedtext-1) |
+| `getOption` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getOption$Input`](../modules/index.types.default.md#getoption$input)\>) => [`OptionValue`](../modules/index.types.default.md#optionvalue) |
+| `getPhoneNumberInfoSync` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getPhoneNumberInfoSync$Input`](../modules/index.types.default.md#getphonenumberinfosync$input)\>) => [`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1) |
+| `getPushReceiverId` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getPushReceiverId$Input`](../modules/index.types.default.md#getpushreceiverid$input)\>) => [`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1) |
+| `getTextEntities` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getTextEntities$Input`](../modules/index.types.default.md#gettextentities$input)\>) => [`textEntities`](../modules/index.types.default.md#textentities-1) |
+| `getThemeParametersJsonString` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`getThemeParametersJsonString$Input`](../modules/index.types.default.md#getthemeparametersjsonstring$input)\>) => [`text`](../modules/index.types.default.md#text-1) |
+| `parseMarkdown` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`parseMarkdown$Input`](../modules/index.types.default.md#parsemarkdown$input)\>) => [`formattedText`](../modules/index.types.default.md#formattedtext-1) |
+| `parseTextEntities` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`parseTextEntities$Input`](../modules/index.types.default.md#parsetextentities$input)\>) => [`formattedText`](../modules/index.types.default.md#formattedtext-1) |
+| `setLogStream` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setLogStream$Input`](../modules/index.types.default.md#setlogstream$input)\>) => [`ok`](../modules/index.types.default.md#ok-1) |
+| `setLogTagVerbosityLevel` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setLogTagVerbosityLevel$Input`](../modules/index.types.default.md#setlogtagverbositylevel$input)\>) => [`ok`](../modules/index.types.default.md#ok-1) |
+| `setLogVerbosityLevel` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`setLogVerbosityLevel$Input`](../modules/index.types.default.md#setlogverbositylevel$input)\>) => [`ok`](../modules/index.types.default.md#ok-1) |
+| `testReturnError` | (`parameters`: [`OmitType`](../modules/index._internal_.md#omittype)<[`testReturnError$Input`](../modules/index.types.default.md#testreturnerror$input)\>) => [`error`](../modules/index.types.default.md#error-1) |
+
+#### Defined in
+
+dist/client.d.ts:639
+
 ## Accessors
 
 ### updates
@@ -737,7 +778,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:664
+dist/client.d.ts:701
 
 ## Methods
 
@@ -755,7 +796,44 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:685
+dist/client.d.ts:722
+
+___
+
+### execute
+
+▸ **execute**<`T`\>(`method`, `parameters`): `ReturnType`<[`$SyncMethodsDict`](../modules/index.types.default.md#$syncmethodsdict)[`T`]\>
+
+**`Throws`**
+
+- [TDError](index.TDError.md)
+
+**`Memberof`**
+
+Client
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends keyof [`$SyncMethodsDict`](../modules/index.types.default.md#$syncmethodsdict) |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `method` | `T` |
+| `parameters` | [`OmitType`](../modules/index._internal_.md#omittype)<`Parameters`<[`$MethodsDict`](../modules/index.types.default.md#$methodsdict)[`T`]\>[``0``]\> |
+
+#### Returns
+
+`ReturnType`<[`$SyncMethodsDict`](../modules/index.types.default.md#$syncmethodsdict)[`T`]\>
+
+{Promise<ReturnType<$SyncMethodsDict[T]>>}
+
+#### Defined in
+
+dist/client.d.ts:686
 
 ___
 
@@ -792,7 +870,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:649
+dist/client.d.ts:675
 
 ___
 
@@ -810,7 +888,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:678
+dist/client.d.ts:715
 
 ___
 
@@ -828,4 +906,4 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:671
+dist/client.d.ts:708

@@ -9,8 +9,8 @@ describe("Updates", () => {
   beforeAll(async () => {
     const adapter = await TDLibAddon.create();
     client = new Client(adapter);
+    client.syncApi.setLogVerbosityLevel({ new_verbosity_level: 0 });
     client.start();
-    await client.invoke("setLogVerbosityLevel", { new_verbosity_level: 0 });
   });
 
   afterAll(() => {

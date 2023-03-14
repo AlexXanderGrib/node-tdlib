@@ -22,8 +22,8 @@ export const enum AsyncState {
  */
 export class AsyncData<T = any> extends Promise<T> {
   private _state = AsyncState.PENDING;
-  private _resolve: Resolve<T>;
-  private _reject: Reject;
+  private readonly _resolve: Resolve<T>;
+  private readonly _reject: Reject;
 
   /**
    *
@@ -40,11 +40,7 @@ export class AsyncData<T = any> extends Promise<T> {
    * @param {function(): void} executor
    * @memberof AsyncData
    */
-  constructor(
-    executor: Executor<T> = () => {
-      /* empty */
-    }
-  ) {
+  constructor(executor: Executor<T> = noop) {
     let _resolve: Resolve<T> = noop;
     let _reject: Reject = noop;
 
@@ -78,7 +74,7 @@ export class AsyncData<T = any> extends Promise<T> {
    * @memberof AsyncData
    */
   resolve(value: T | PromiseLike<T>): this {
-    this._resolve?.(value);
+    this._resolve(value);
     return this;
   }
 
@@ -90,7 +86,7 @@ export class AsyncData<T = any> extends Promise<T> {
    * @memberof AsyncData
    */
   reject(reason: unknown): this {
-    this._reject?.(reason);
+    this._reject(reason);
     return this;
   }
 }

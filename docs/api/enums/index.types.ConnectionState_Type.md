@@ -22,7 +22,7 @@
 
 #### Defined in
 
-dist/generated/types.d.ts:778
+dist/generated/types.d.ts:780
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:777
+dist/generated/types.d.ts:779
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:780
+dist/generated/types.d.ts:782
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:779
+dist/generated/types.d.ts:781
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-dist/generated/types.d.ts:776
+dist/generated/types.d.ts:778

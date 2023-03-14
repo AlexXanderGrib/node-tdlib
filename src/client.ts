@@ -1,5 +1,10 @@
 import type { TDLib, TDLibClient } from "./shared/client";
-import type { error, Update, $MethodsDict } from "./generated/types";
+import type {
+  error,
+  Update,
+  $MethodsDict,
+  $SyncMethodsDict
+} from "./generated/types";
 import * as JSON from "./json";
 import { AsyncData } from "./shared/async";
 import { EventBus, Observable } from "./event-bus";
@@ -78,6 +83,20 @@ export class Client {
     }
   );
 
+  readonly syncApi = new Proxy(
+    Object.freeze({}) as {
+      readonly [key in keyof $SyncMethodsDict]: (
+        parameters: OmitType<Parameters<$SyncMethodsDict[key]>[0]>
+      ) => ReturnType<$SyncMethodsDict[key]>;
+    },
+    {
+      get: (_target, method) => {
+        return (parameters: any) =>
+          this.execute(method as keyof $SyncMethodsDict, parameters);
+      }
+    }
+  );
+
   /**
    *
    *
@@ -104,6 +123,94 @@ export class Client {
     return result.catch((error: error) => {
       throw new TDError(error.message, { code: error.code, method, parameters });
     });
+  }
+
+  /**
+   *
+   *
+   * @template {keyof $SyncMethodsDict} T
+   * @param {TDLib|Client} executor
+   * @param {T} method
+   * @param {object} parameters
+   * @return {object}  {Promise<ReturnType<$SyncMethodsDict[T]>>}
+   * @throws {TDError} - {@link TDError}
+   * @memberof Client
+   */
+  static execute<T extends keyof $SyncMethodsDict>(
+    executor: TDLib | Client,
+    method: T,
+    parameters: OmitType<Parameters<$MethodsDict[T]>[0]>
+  ): ReturnType<$SyncMethodsDict[T]> {
+    let adapter: TDLib;
+    let client: TDLibClient | undefined;
+
+    if (executor instanceof Client) {
+      adapter = executor._adapter;
+      client = executor._client;
+    } else if (executor._isTDLib) {
+      adapter = executor;
+    } else {
+      throw new TDError("Invalid executor passed", {
+        code: -100,
+        method,
+        parameters
+      });
+    }
+
+    const extra = Math.random();
+
+    const value = assignTemporary(
+      parameters,
+      { _: method, "@extra": extra },
+      (merged) => {
+        // eslint-disable-next-line unicorn/no-null
+        return adapter.execute(client ?? null, JSON.serialize(merged));
+      }
+    );
+
+    if (!value) {
+      throw new TDError("Method returned null", { method, parameters });
+    }
+
+    let data: unknown;
+
+    try {
+      data = JSON.deserialize(value);
+
+      if (typeof data !== "object" || !data || !("_" in data)) {
+        throw new Error("Returned not an object");
+      }
+    } catch {
+      throw new TDError("Method returned invalid json", { method, parameters });
+    }
+
+    if (data._ === "error") {
+      const error = data as error;
+      throw new TDError(error.message, { code: error.code, method, parameters });
+    }
+
+    if ("@extra" in data && data["@extra"]) {
+      delete data["@extra"];
+    }
+
+    return data as ReturnType<$SyncMethodsDict[T]>;
+  }
+
+  /**
+   *
+   *
+   * @template {keyof $SyncMethodsDict} T
+   * @param {T} method
+   * @param {object} parameters
+   * @return {object}  {Promise<ReturnType<$SyncMethodsDict[T]>>}
+   * @throws {TDError} - {@link TDError}
+   * @memberof Client
+   */
+  execute<T extends keyof $SyncMethodsDict>(
+    method: T,
+    parameters: OmitType<Parameters<$MethodsDict[T]>[0]>
+  ): ReturnType<$SyncMethodsDict[T]> {
+    return Client.execute(this, method, parameters);
   }
 
   /**
@@ -207,6 +314,12 @@ export class Client {
 
     this._state = ClientState.STOPPED;
     this._updates.complete();
+
+    for (const async of this._requests.values()) {
+      async.reject(new TDError("Client is destroyed", { code: -1 }));
+    }
+
+    this._requests.clear();
     this._adapter.destroy(this._client);
   }
 }

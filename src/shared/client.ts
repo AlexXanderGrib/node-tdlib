@@ -1,7 +1,7 @@
-declare const TDLibClient: unique symbol;
-export type TDLibClient = typeof TDLibClient;
+export type TDLibClient = { __type: "TDLibClient" };
 
 export interface TDLib {
+  readonly _isTDLib: true;
   readonly name: string;
 
   create(): TDLibClient;

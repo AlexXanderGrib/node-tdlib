@@ -1,6 +1,8 @@
 /** String of bytes in HEX or Base64 */
 export type bytes = string;
 
+export type bytes$Input = string | Uint8Array;
+
 /** (float64) */
 export type double = number;
 
@@ -13,13 +15,15 @@ export type int32 = number;
 /** String digits. Use BigInt for handling this */
 export type int64 = string;
 
+export type int64$Input = string | bigint;
+
 export type boolTrue = true;
 
 export type boolFalse = false;
 
-export type vector$Input<T> = ReadonlyArray<T>;
-
 export type vector<T> = Array<T>;
+
+export type vector$Input<T> = ReadonlyArray<T>;
 
 export const enum $Methods {
   getAuthorizationState = "getAuthorizationState",
@@ -2094,7 +2098,7 @@ export type authenticationCodeTypeFirebaseAndroid$Input = {
    * Nonce to pass to the SafetyNet Attestation API
    * @type {bytes} {@link bytes}
    */
-  readonly nonce?: bytes;
+  readonly nonce?: bytes$Input;
 
   /**
    * Length of the code
@@ -3479,7 +3483,7 @@ export type minithumbnail$Input = {
    * The thumbnail in JPEG format
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /** The thumbnail is in JPEG format */
@@ -3903,7 +3907,7 @@ export type stickerFullTypeCustomEmoji$Input = {
    * Identifier of the custom emoji
    * @type {int64} {@link int64}
    */
-  readonly custom_emoji_id?: int64;
+  readonly custom_emoji_id?: int64$Input;
 
   /**
    * True, if the sticker must be repainted to a text color in messages, the color of the Telegram Premium badge in emoji status, white color on chat photos, or another appropriate color in other places
@@ -4512,13 +4516,13 @@ export type sticker$Input = {
    * Unique sticker identifier within the set; 0 if none
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * The identifier of the sticker set to which the sticker belongs; 0 if none
    * @type {int64} {@link int64}
    */
-  readonly set_id?: int64;
+  readonly set_id?: int64$Input;
 
   /**
    * Sticker width; as defined by the sender
@@ -4766,7 +4770,7 @@ export type videoNote$Input = {
    * A waveform representation of the video note's audio in 5-bit format; may be empty if unknown
    * @type {bytes} {@link bytes}
    */
-  readonly waveform?: bytes;
+  readonly waveform?: bytes$Input;
 
   /**
    * Video width and height; as defined by the sender
@@ -4851,7 +4855,7 @@ export type voiceNote$Input = {
    * A waveform representation of the voice note in 5-bit format
    * @type {bytes} {@link bytes}
    */
-  readonly waveform?: bytes;
+  readonly waveform?: bytes$Input;
 
   /**
    * MIME type of the file; as defined by the sender
@@ -5210,7 +5214,7 @@ export type game$Input = {
    * Unique game identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Game short name
@@ -5398,7 +5402,7 @@ export type poll$Input = {
    * Unique poll identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Poll question; 1-300 characters
@@ -5507,7 +5511,7 @@ export type profilePhoto$Input = {
    * Photo identifier; 0 for an empty photo. Can be used to find a photo in a list of user profile photos
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * A small (160x160) user profile photo. The file can be downloaded only before the photo is changed
@@ -5913,13 +5917,13 @@ export type chatPhotoStickerTypeRegularOrMask$Input = {
    * Sticker set identifier
    * @type {int64} {@link int64}
    */
-  readonly sticker_set_id?: int64;
+  readonly sticker_set_id?: int64$Input;
 
   /**
    * Identifier of the sticker in the set
    * @type {int64} {@link int64}
    */
-  readonly sticker_id?: int64;
+  readonly sticker_id?: int64$Input;
 };
 
 /** Information about the custom emoji, which was used to create the chat photo */
@@ -5944,7 +5948,7 @@ export type chatPhotoStickerTypeCustomEmoji$Input = {
    * Identifier of the custom emoji
    * @type {int64} {@link int64}
    */
-  readonly custom_emoji_id?: int64;
+  readonly custom_emoji_id?: int64$Input;
 };
 
 /** Information about the sticker, which was used to create the chat photo. The sticker is shown at the center of the photo and occupies at most 67% of it */
@@ -6091,7 +6095,7 @@ export type chatPhoto$Input = {
    * Unique photo identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Point in time (Unix timestamp) when the photo has been added
@@ -6189,7 +6193,7 @@ export type inputChatPhotoPrevious$Input = {
    * Identifier of the current user's profile photo to reuse
    * @type {int64} {@link int64}
    */
-  readonly chat_photo_id?: int64;
+  readonly chat_photo_id?: int64$Input;
 };
 
 /** A static photo in JPEG format */
@@ -6785,7 +6789,7 @@ export type emojiStatus$Input = {
    * Identifier of the custom emoji in stickerFormatTgs format
    * @type {int64} {@link int64}
    */
-  readonly custom_emoji_id?: int64;
+  readonly custom_emoji_id?: int64$Input;
 };
 
 /** Contains a list of emoji statuses */
@@ -9421,7 +9425,7 @@ export type supergroupFullInfo$Input = {
    * Identifier of the supergroup sticker set; 0 if none
    * @type {int64} {@link int64}
    */
-  readonly sticker_set_id?: int64;
+  readonly sticker_set_id?: int64$Input;
 
   /**
    * Location to which the supergroup is connected; may be null
@@ -9575,7 +9579,7 @@ export type secretChat$Input = {
    * -The pixels must be used to make a 12x12 square image filled from left to right, top to bottom. Alternatively, the first 32 bytes of the hash can be converted to the hexadecimal format and printed as 32 2-digit hex numbers
    * @type {bytes} {@link bytes}
    */
-  readonly key_hash?: bytes;
+  readonly key_hash?: bytes$Input;
 
   /**
    * Secret chat layer; determines features supported by the chat partner's application. Nested text entities and underline and strikethrough entities are supported if the layer >= 101,
@@ -10005,7 +10009,7 @@ export type reactionTypeCustomEmoji$Input = {
    * Unique identifier of the custom emoji
    * @type {int64} {@link int64}
    */
-  readonly custom_emoji_id?: int64;
+  readonly custom_emoji_id?: int64$Input;
 };
 
 /** Contains information about a forwarded message */
@@ -10883,7 +10887,7 @@ export type message$Input = {
    * Unique identifier of an album this message belongs to. Only audios, documents, photos and videos can be grouped together in albums
    * @type {int64} {@link int64}
    */
-  readonly media_album_id?: int64;
+  readonly media_album_id?: int64$Input;
 
   /**
    * If non-empty, contains a human-readable description of the reason why access to this message must be restricted
@@ -11778,7 +11782,7 @@ export type chatNotificationSettings$Input = {
    * Identifier of the notification sound to be played; 0 if sound is disabled
    * @type {int64} {@link int64}
    */
-  readonly sound_id?: int64;
+  readonly sound_id?: int64$Input;
 
   /**
    * If true, show_preview is ignored and the value for the relevant type of chat or the forum chat is used instead
@@ -11869,7 +11873,7 @@ export type scopeNotificationSettings$Input = {
    * Identifier of the notification sound to be played; 0 if sound is disabled
    * @type {int64} {@link int64}
    */
-  readonly sound_id?: int64;
+  readonly sound_id?: int64$Input;
 
   /**
    * True, if message content must be displayed in notifications
@@ -12527,7 +12531,7 @@ export type chatPosition$Input = {
    * A parameter used to determine order of the chat in the chat list. Chats must be sorted by the pair (order, chat.id) in descending order
    * @type {int64} {@link int64}
    */
-  readonly order?: int64;
+  readonly order?: int64$Input;
 
   /**
    * True, if the chat is pinned in the chat list
@@ -13794,7 +13798,7 @@ export type inlineKeyboardButtonTypeCallback$Input = {
    * Data to be sent to the bot via a callback query
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /** A button that asks for the 2-step verification password of the current user and then sends a callback query to a bot */
@@ -13819,7 +13823,7 @@ export type inlineKeyboardButtonTypeCallbackWithPassword$Input = {
    * Data to be sent to the bot via a callback query
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /** A button with a game that sends a callback query to a bot. This button must be in the first column and row of the keyboard and can be attached only to a message with content of the type messageGame */
@@ -14294,7 +14298,7 @@ export type webAppInfo$Input = {
    * Unique identifier for the Web App launch
    * @type {int64} {@link int64}
    */
-  readonly launch_id?: int64;
+  readonly launch_id?: int64$Input;
 
   /**
    * A Web App URL to open in a web view
@@ -14422,7 +14426,7 @@ export type forumTopicIcon$Input = {
    * Unique identifier of the custom emoji shown on the topic icon; 0 if none
    * @type {int64} {@link int64}
    */
-  readonly custom_emoji_id?: int64;
+  readonly custom_emoji_id?: int64$Input;
 };
 
 /** Contains basic information about a forum topic */
@@ -18272,7 +18276,7 @@ export type paymentForm$Input = {
    * The payment form identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Full information about the invoice
@@ -20515,19 +20519,19 @@ export type encryptedCredentials$Input = {
    * The encrypted credentials
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 
   /**
    * The decrypted data hash
    * @type {bytes} {@link bytes}
    */
-  readonly hash?: bytes;
+  readonly hash?: bytes$Input;
 
   /**
    * Secret for data decryption, encrypted with the service's public key
    * @type {bytes} {@link bytes}
    */
-  readonly secret?: bytes;
+  readonly secret?: bytes$Input;
 };
 
 /** Contains information about an encrypted Telegram Passport element; for bots only */
@@ -20606,7 +20610,7 @@ export type encryptedPassportElement$Input = {
    * Encrypted JSON-encoded data about the user
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 
   /**
    * The front side of an identity document
@@ -20673,7 +20677,7 @@ export type inputPassportElementErrorSourceUnspecified$Input = {
    * Current hash of the entire element
    * @type {bytes} {@link bytes}
    */
-  readonly element_hash?: bytes;
+  readonly element_hash?: bytes$Input;
 };
 
 /** A data field contains an error. The error is considered resolved when the field's value changes */
@@ -20710,7 +20714,7 @@ export type inputPassportElementErrorSourceDataField$Input = {
    * Current data hash
    * @type {bytes} {@link bytes}
    */
-  readonly data_hash?: bytes;
+  readonly data_hash?: bytes$Input;
 };
 
 /** The front side of the document contains an error. The error is considered resolved when the file with the front side of the document changes */
@@ -20735,7 +20739,7 @@ export type inputPassportElementErrorSourceFrontSide$Input = {
    * Current hash of the file containing the front side
    * @type {bytes} {@link bytes}
    */
-  readonly file_hash?: bytes;
+  readonly file_hash?: bytes$Input;
 };
 
 /** The reverse side of the document contains an error. The error is considered resolved when the file with the reverse side of the document changes */
@@ -20760,7 +20764,7 @@ export type inputPassportElementErrorSourceReverseSide$Input = {
    * Current hash of the file containing the reverse side
    * @type {bytes} {@link bytes}
    */
-  readonly file_hash?: bytes;
+  readonly file_hash?: bytes$Input;
 };
 
 /** The selfie contains an error. The error is considered resolved when the file with the selfie changes */
@@ -20785,7 +20789,7 @@ export type inputPassportElementErrorSourceSelfie$Input = {
    * Current hash of the file containing the selfie
    * @type {bytes} {@link bytes}
    */
-  readonly file_hash?: bytes;
+  readonly file_hash?: bytes$Input;
 };
 
 /** One of the files containing the translation of the document contains an error. The error is considered resolved when the file with the translation changes */
@@ -20810,7 +20814,7 @@ export type inputPassportElementErrorSourceTranslationFile$Input = {
    * Current hash of the file containing the translation
    * @type {bytes} {@link bytes}
    */
-  readonly file_hash?: bytes;
+  readonly file_hash?: bytes$Input;
 };
 
 /** The translation of the document contains an error. The error is considered resolved when the list of files changes */
@@ -20835,7 +20839,7 @@ export type inputPassportElementErrorSourceTranslationFiles$Input = {
    * Current hashes of all files with the translation
    * @type {vector<bytes>} {@link vector<bytes>}
    */
-  readonly file_hashes?: vector$Input<bytes>;
+  readonly file_hashes?: vector$Input<bytes$Input>;
 };
 
 /** The file contains an error. The error is considered resolved when the file changes */
@@ -20860,7 +20864,7 @@ export type inputPassportElementErrorSourceFile$Input = {
    * Current hash of the file which has the error
    * @type {bytes} {@link bytes}
    */
-  readonly file_hash?: bytes;
+  readonly file_hash?: bytes$Input;
 };
 
 /** The list of attached files contains an error. The error is considered resolved when the file list changes */
@@ -20885,7 +20889,7 @@ export type inputPassportElementErrorSourceFiles$Input = {
    * Current hashes of all attached files
    * @type {vector<bytes>} {@link vector<bytes>}
    */
-  readonly file_hashes?: vector$Input<bytes>;
+  readonly file_hashes?: vector$Input<bytes$Input>;
 };
 
 /** Contains the description of an error in a Telegram Passport element; for bots only */
@@ -22427,7 +22431,7 @@ export type messageForumTopicEdited$Input = {
    * New unique identifier of the custom emoji shown on the topic icon; 0 if none. Must be ignored if edit_icon_custom_emoji_id is false
    * @type {int64} {@link int64}
    */
-  readonly icon_custom_emoji_id?: int64;
+  readonly icon_custom_emoji_id?: int64$Input;
 };
 
 /** A forum topic has been closed or opened */
@@ -22570,7 +22574,7 @@ export type messageGameScore$Input = {
    * Identifier of the game; may be different from the games presented in the message with the game
    * @type {int64} {@link int64}
    */
-  readonly game_id?: int64;
+  readonly game_id?: int64$Input;
 
   /**
    * New score
@@ -22770,7 +22774,7 @@ export type messagePaymentSuccessfulBot$Input = {
    * Invoice payload
    * @type {bytes} {@link bytes}
    */
-  readonly invoice_payload?: bytes;
+  readonly invoice_payload?: bytes$Input;
 
   /**
    * Identifier of the shipping option chosen by the user; may be empty if not applicable
@@ -23473,7 +23477,7 @@ export type textEntityTypeCustomEmoji$Input = {
    * Unique identifier of the custom emoji
    * @type {int64} {@link int64}
    */
-  readonly custom_emoji_id?: int64;
+  readonly custom_emoji_id?: int64$Input;
 };
 
 /** A media timestamp */
@@ -24454,7 +24458,7 @@ export type inputMessageVoiceNote$Input = {
    * Waveform representation of the voice note in 5-bit format
    * @type {bytes} {@link bytes}
    */
-  readonly waveform?: bytes;
+  readonly waveform?: bytes$Input;
 
   /**
    * Voice note caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
@@ -24778,7 +24782,7 @@ export type inputMessageInvoice$Input = {
    * The invoice payload
    * @type {bytes} {@link bytes}
    */
-  readonly payload?: bytes;
+  readonly payload?: bytes$Input;
 
   /**
    * Payment provider token
@@ -25697,7 +25701,7 @@ export type stickerSet$Input = {
    * Identifier of the sticker set
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Title of the sticker set
@@ -25866,7 +25870,7 @@ export type stickerSetInfo$Input = {
    * Identifier of the sticker set
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Title of the sticker set
@@ -26306,7 +26310,7 @@ export type callServerTypeTelegramReflector$Input = {
    * A peer tag to be used with the reflector
    * @type {bytes} {@link bytes}
    */
-  readonly peer_tag?: bytes;
+  readonly peer_tag?: bytes$Input;
 
   /**
    * True, if the server uses TCP instead of UDP
@@ -26422,7 +26426,7 @@ export type callServer$Input = {
    * Server identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Server IPv4 address
@@ -26619,7 +26623,7 @@ export type callStateReady$Input = {
    * Call encryption key
    * @type {bytes} {@link bytes}
    */
-  readonly encryption_key?: bytes;
+  readonly encryption_key?: bytes$Input;
 
   /**
    * Encryption key emojis fingerprint
@@ -30813,7 +30817,7 @@ export type inlineQueryResults$Input = {
    * Unique identifier of the inline query
    * @type {int64} {@link int64}
    */
-  readonly inline_query_id?: int64;
+  readonly inline_query_id?: int64$Input;
 
   /**
    * Button to be shown above inline query results; may be null
@@ -30856,7 +30860,7 @@ export type callbackQueryPayloadData$Input = {
    * Data that was attached to the callback button
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /** The payload for a callback button requiring password */
@@ -30893,7 +30897,7 @@ export type callbackQueryPayloadDataWithPassword$Input = {
    * Data that was attached to the callback button
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /** The payload for a game callback button */
@@ -31765,13 +31769,13 @@ export type chatEventStickerSetChanged$Input = {
    * Previous identifier of the chat sticker set; 0 if none
    * @type {int64} {@link int64}
    */
-  readonly old_sticker_set_id?: int64;
+  readonly old_sticker_set_id?: int64$Input;
 
   /**
    * New identifier of the chat sticker set; 0 if none
    * @type {int64} {@link int64}
    */
-  readonly new_sticker_set_id?: int64;
+  readonly new_sticker_set_id?: int64$Input;
 };
 
 /** The chat title was changed */
@@ -32485,7 +32489,7 @@ export type chatEvent$Input = {
    * Chat event identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Point in time (Unix timestamp) when the event happened
@@ -34168,7 +34172,7 @@ export type pushReceiverId$Input = {
    * The globally unique identifier of push notification subscription
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 };
 
 /** Describes a solid fill of a background */
@@ -34445,7 +34449,7 @@ export type background$Input = {
    * Unique background identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * True, if this is one of default backgrounds
@@ -34550,7 +34554,7 @@ export type inputBackgroundRemote$Input = {
    * The background identifier
    * @type {int64} {@link int64}
    */
-  readonly background_id?: int64;
+  readonly background_id?: int64$Input;
 };
 
 /** Describes theme settings */
@@ -36309,7 +36313,7 @@ export type notificationSound$Input = {
    * Unique identifier of the notification sound
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Duration of the sound, in seconds
@@ -36561,7 +36565,7 @@ export type optionValueInteger$Input = {
    * The value of the option
    * @type {int64} {@link int64}
    */
-  readonly value?: int64;
+  readonly value?: int64$Input;
 };
 
 /** Represents a string option */
@@ -37453,7 +37457,7 @@ export type session$Input = {
    * Session identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * True, if this session is the current session
@@ -37665,7 +37669,7 @@ export type connectedWebsite$Input = {
    * Website identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * The domain name of the website
@@ -39202,7 +39206,7 @@ export type filePart$Input = {
    * File bytes
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /** The data is not a file */
@@ -40529,7 +40533,7 @@ export type tMeUrlTypeStickerSet$Input = {
    * Identifier of the sticker set
    * @type {int64} {@link int64}
    */
-  readonly sticker_set_id?: int64;
+  readonly sticker_set_id?: int64$Input;
 };
 
 /** Represents a URL linking to an internal Telegram entity */
@@ -44067,7 +44071,7 @@ export type updateNotificationGroup$Input = {
    * Identifier of the notification sound to be played; 0 if sound is disabled
    * @type {int64} {@link int64}
    */
-  readonly notification_sound_id?: int64;
+  readonly notification_sound_id?: int64$Input;
 
   /**
    * Total number of unread notifications in the group, can be bigger than number of active notifications
@@ -44622,7 +44626,7 @@ export type updateFileGenerationStart$Input = {
    * Unique identifier for the generation process
    * @type {int64} {@link int64}
    */
-  readonly generation_id?: int64;
+  readonly generation_id?: int64$Input;
 
   /**
    * The path to a file from which a new file is generated; may be empty
@@ -44665,7 +44669,7 @@ export type updateFileGenerationStop$Input = {
    * Unique identifier for the generation process
    * @type {int64} {@link int64}
    */
-  readonly generation_id?: int64;
+  readonly generation_id?: int64$Input;
 };
 
 /** The state of the file download list has changed */
@@ -44973,7 +44977,7 @@ export type updateNewCallSignalingData$Input = {
    * The data
    * @type {bytes} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /** Some privacy setting rules have been changed */
@@ -45243,7 +45247,7 @@ export type updateInstalledStickerSets$Input = {
    * The new list of installed ordinary sticker sets
    * @type {vector<int64>} {@link vector<int64>}
    */
-  readonly sticker_set_ids?: vector$Input<int64>;
+  readonly sticker_set_ids?: vector$Input<int64$Input>;
 };
 
 /** The list of trending sticker sets was updated or some of them were viewed */
@@ -45392,7 +45396,7 @@ export type updateSavedNotificationSounds$Input = {
    * The new list of identifiers of saved notification sounds
    * @type {vector<int64>} {@link vector<int64>}
    */
-  readonly notification_sound_ids?: vector$Input<int64>;
+  readonly notification_sound_ids?: vector$Input<int64$Input>;
 };
 
 /** The selected background has changed */
@@ -45640,7 +45644,7 @@ export type updateWebAppMessageSent$Input = {
    * Identifier of Web App launch
    * @type {int64} {@link int64}
    */
-  readonly web_app_launch_id?: int64;
+  readonly web_app_launch_id?: int64$Input;
 };
 
 /** The list of active emoji reactions has changed */
@@ -45967,7 +45971,7 @@ export type updateNewInlineQuery$Input = {
    * Unique query identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Identifier of the user who sent the query
@@ -46125,7 +46129,7 @@ export type updateNewCallbackQuery$Input = {
    * Unique query identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Identifier of the user who sent the query
@@ -46149,7 +46153,7 @@ export type updateNewCallbackQuery$Input = {
    * Identifier that uniquely corresponds to the chat to which the message was sent
    * @type {int64} {@link int64}
    */
-  readonly chat_instance?: int64;
+  readonly chat_instance?: int64$Input;
 
   /**
    * Query payload
@@ -46204,7 +46208,7 @@ export type updateNewInlineCallbackQuery$Input = {
    * Unique query identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Identifier of the user who sent the query
@@ -46222,7 +46226,7 @@ export type updateNewInlineCallbackQuery$Input = {
    * An identifier uniquely corresponding to the chat a message was sent to
    * @type {int64} {@link int64}
    */
-  readonly chat_instance?: int64;
+  readonly chat_instance?: int64$Input;
 
   /**
    * Query payload
@@ -46271,7 +46275,7 @@ export type updateNewShippingQuery$Input = {
    * Unique query identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Identifier of the user who sent the query
@@ -46350,7 +46354,7 @@ export type updateNewPreCheckoutQuery$Input = {
    * Unique query identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * Identifier of the user who sent the query
@@ -46374,7 +46378,7 @@ export type updateNewPreCheckoutQuery$Input = {
    * Invoice payload
    * @type {bytes} {@link bytes}
    */
-  readonly invoice_payload?: bytes;
+  readonly invoice_payload?: bytes$Input;
 
   /**
    * Identifier of a shipping option chosen by the user; may be empty if not applicable
@@ -46448,7 +46452,7 @@ export type updateNewCustomQuery$Input = {
    * The query identifier
    * @type {int64} {@link int64}
    */
-  readonly id?: int64;
+  readonly id?: int64$Input;
 
   /**
    * JSON-serialized query data
@@ -46522,7 +46526,7 @@ export type updatePollAnswer$Input = {
    * Unique poll identifier
    * @type {int64} {@link int64}
    */
-  readonly poll_id?: int64;
+  readonly poll_id?: int64$Input;
 
   /**
    * The user, who changed the answer to the poll
@@ -46954,7 +46958,7 @@ export type testBytes$Input = {
    * Bytes
    * @type {bytes} {@link bytes}
    */
-  readonly value?: bytes;
+  readonly value?: bytes$Input;
 };
 
 /** A simple object containing a vector of numbers; for testing only */
@@ -47118,9 +47122,9 @@ export type Int64 = int64;
 /**
  * Version of {@link Int64} for method parameters.
  * Any of:
- * - {@link int64}
+ * - {@link int64$Input}
  */
-export type Int64$Input = int64;
+export type Int64$Input = int64$Input;
 
 /**
  * Any of:
@@ -47131,9 +47135,9 @@ export type Bytes = bytes;
 /**
  * Version of {@link Bytes} for method parameters.
  * Any of:
- * - {@link bytes}
+ * - {@link bytes$Input}
  */
-export type Bytes$Input = bytes;
+export type Bytes$Input = bytes$Input;
 
 /**
  * Any of:
@@ -56082,6 +56086,33 @@ export type $MethodsDict = {
   readonly testReturnError: testReturnError;
 };
 
+export type $SyncMethodsDict = {
+  readonly getTextEntities: getTextEntities;
+  readonly parseTextEntities: parseTextEntities;
+  readonly parseMarkdown: parseMarkdown;
+  readonly getMarkdownText: getMarkdownText;
+  readonly getFileMimeType: getFileMimeType;
+  readonly getFileExtension: getFileExtension;
+  readonly cleanFileName: cleanFileName;
+  readonly getLanguagePackString: getLanguagePackString;
+  readonly getJsonValue: getJsonValue;
+  readonly getJsonString: getJsonString;
+  readonly getThemeParametersJsonString: getThemeParametersJsonString;
+  readonly getChatFilterDefaultIconName: getChatFilterDefaultIconName;
+  readonly getPushReceiverId: getPushReceiverId;
+  readonly getOption: getOption;
+  readonly getPhoneNumberInfoSync: getPhoneNumberInfoSync;
+  readonly setLogStream: setLogStream;
+  readonly getLogStream: getLogStream;
+  readonly setLogVerbosityLevel: setLogVerbosityLevel;
+  readonly getLogVerbosityLevel: getLogVerbosityLevel;
+  readonly getLogTags: getLogTags;
+  readonly setLogTagVerbosityLevel: setLogTagVerbosityLevel;
+  readonly getLogTagVerbosityLevel: getLogTagVerbosityLevel;
+  readonly addLogMessage: addLogMessage;
+  readonly testReturnError: testReturnError;
+};
+
 /** Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization */
 export type getAuthorizationState$Input = {
   readonly _: "getAuthorizationState";
@@ -56121,9 +56152,9 @@ export type setTdlibParameters$Input = {
 
   /**
    * Encryption key for the database. If the encryption key is invalid, then an error with code 401 will be returned
-   * @type {bytes} {@link bytes}
+   * @type {bytes$Input} {@link bytes}
    */
-  readonly database_encryption_key?: bytes;
+  readonly database_encryption_key?: bytes$Input;
 
   /**
    * Pass true to keep information about downloaded and uploaded files between application restarts
@@ -56580,9 +56611,9 @@ export type setDatabaseEncryptionKey$Input = {
 
   /**
    * New encryption key
-   * @type {bytes} {@link bytes}
+   * @type {bytes$Input} {@link bytes}
    */
-  readonly new_encryption_key?: bytes;
+  readonly new_encryption_key?: bytes$Input;
 };
 
 /**
@@ -57219,9 +57250,9 @@ export type getCallbackQueryMessage$Input = {
 
   /**
    * Identifier of the callback query
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly callback_query_id?: int64;
+  readonly callback_query_id?: int64$Input;
 };
 
 /**
@@ -58965,9 +58996,9 @@ export type sendInlineQueryResultMessage$Input = {
 
   /**
    * Identifier of the inline query
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly query_id?: int64;
+  readonly query_id?: int64$Input;
 
   /**
    * Identifier of the inline result
@@ -59720,9 +59751,9 @@ export type editForumTopic$Input = {
 
   /**
    * Identifier of the new custom emoji for topic icon; pass 0 to remove the custom emoji. Ignored if edit_icon_custom_emoji is false. Telegram Premium users can use any custom emoji, other users can use only a custom emoji returned by getForumTopicDefaultIcons
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly icon_custom_emoji_id?: int64;
+  readonly icon_custom_emoji_id?: int64$Input;
 };
 
 /**
@@ -60803,9 +60834,9 @@ export type answerInlineQuery$Input = {
 
   /**
    * Identifier of the inline query
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly inline_query_id?: int64;
+  readonly inline_query_id?: int64$Input;
 
   /**
    * Pass true if results may be cached and returned only for the user that sent the query. By default, results may be returned to any user who sends the same query
@@ -61058,9 +61089,9 @@ export type closeWebApp$Input = {
 
   /**
    * Identifier of Web App launch, received from openWebApp
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly web_app_launch_id?: int64;
+  readonly web_app_launch_id?: int64$Input;
 };
 
 /**
@@ -61137,9 +61168,9 @@ export type answerCallbackQuery$Input = {
 
   /**
    * Identifier of the callback query
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly callback_query_id?: int64;
+  readonly callback_query_id?: int64$Input;
 
   /**
    * Text of the answer
@@ -61180,9 +61211,9 @@ export type answerShippingQuery$Input = {
 
   /**
    * Identifier of the shipping query
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly shipping_query_id?: int64;
+  readonly shipping_query_id?: int64$Input;
 
   /**
    * Available shipping options
@@ -61211,9 +61242,9 @@ export type answerPreCheckoutQuery$Input = {
 
   /**
    * Identifier of the pre-checkout query
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly pre_checkout_query_id?: int64;
+  readonly pre_checkout_query_id?: int64$Input;
 
   /**
    * An error message, empty on success
@@ -63048,9 +63079,9 @@ export type getSavedNotificationSound$Input = {
 
   /**
    * Identifier of the notification sound
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly notification_sound_id?: int64;
+  readonly notification_sound_id?: int64$Input;
 };
 
 /**
@@ -63105,9 +63136,9 @@ export type removeSavedNotificationSound$Input = {
 
   /**
    * Identifier of the notification sound
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly notification_sound_id?: int64;
+  readonly notification_sound_id?: int64$Input;
 };
 
 /**
@@ -63563,9 +63594,9 @@ export type writeGeneratedFilePart$Input = {
 
   /**
    * The identifier of the generation process
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly generation_id?: int64;
+  readonly generation_id?: int64$Input;
 
   /**
    * The offset from which to write the data to the file
@@ -63575,9 +63606,9 @@ export type writeGeneratedFilePart$Input = {
 
   /**
    * The data to write
-   * @type {bytes} {@link bytes}
+   * @type {bytes$Input} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /**
@@ -63596,9 +63627,9 @@ export type setFileGenerationProgress$Input = {
 
   /**
    * The identifier of the generation process
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly generation_id?: int64;
+  readonly generation_id?: int64$Input;
 
   /**
    * Expected size of the generated file, in bytes; 0 if unknown
@@ -63629,9 +63660,9 @@ export type finishFileGeneration$Input = {
 
   /**
    * The identifier of the generation process
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly generation_id?: int64;
+  readonly generation_id?: int64$Input;
 
   /**
    * If passed, the file generation has failed and must be terminated; pass null if the file generation succeeded
@@ -64522,9 +64553,9 @@ export type sendCallSignalingData$Input = {
 
   /**
    * The data
-   * @type {bytes} {@link bytes}
+   * @type {bytes$Input} {@link bytes}
    */
-  readonly data?: bytes;
+  readonly data?: bytes$Input;
 };
 
 /**
@@ -64565,9 +64596,9 @@ export type discardCall$Input = {
 
   /**
    * Identifier of the connection used during the call
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly connection_id?: int64;
+  readonly connection_id?: int64$Input;
 };
 
 /**
@@ -65992,9 +66023,9 @@ export type getArchivedStickerSets$Input = {
 
   /**
    * Identifier of the sticker set from which to return the result
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly offset_sticker_set_id?: int64;
+  readonly offset_sticker_set_id?: int64$Input;
 
   /**
    * The maximum number of sticker sets to return; up to 100
@@ -66073,9 +66104,9 @@ export type getStickerSet$Input = {
 
   /**
    * Identifier of the sticker set
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly set_id?: int64;
+  readonly set_id?: int64$Input;
 };
 
 /**
@@ -66163,9 +66194,9 @@ export type changeStickerSet$Input = {
 
   /**
    * Identifier of the sticker set
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly set_id?: int64;
+  readonly set_id?: int64$Input;
 
   /**
    * The new value of is_installed
@@ -66194,9 +66225,9 @@ export type viewTrendingStickerSets$Input = {
 
   /**
    * Identifiers of viewed trending sticker sets
-   * @type {vector$Input<int64>} {@link vector<int64>}
+   * @type {vector$Input<int64$Input>} {@link vector<int64>}
    */
-  readonly sticker_set_ids?: vector$Input<int64>;
+  readonly sticker_set_ids?: vector$Input<int64$Input>;
 };
 
 /**
@@ -66221,9 +66252,9 @@ export type reorderInstalledStickerSets$Input = {
 
   /**
    * Identifiers of installed sticker sets in the new correct order
-   * @type {vector$Input<int64>} {@link vector<int64>}
+   * @type {vector$Input<int64$Input>} {@link vector<int64>}
    */
-  readonly sticker_set_ids?: vector$Input<int64>;
+  readonly sticker_set_ids?: vector$Input<int64$Input>;
 };
 
 /**
@@ -66500,9 +66531,9 @@ export type getCustomEmojiStickers$Input = {
 
   /**
    * Identifiers of custom emoji stickers. At most 200 custom emoji stickers can be received simultaneously
-   * @type {vector$Input<int64>} {@link vector<int64>}
+   * @type {vector$Input<int64$Input>} {@link vector<int64>}
    */
-  readonly custom_emoji_ids?: vector$Input<int64>;
+  readonly custom_emoji_ids?: vector$Input<int64$Input>;
 };
 
 /**
@@ -66732,9 +66763,9 @@ export type deleteProfilePhoto$Input = {
 
   /**
    * Identifier of the profile photo to delete
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly profile_photo_id?: int64;
+  readonly profile_photo_id?: int64$Input;
 };
 
 /**
@@ -67275,9 +67306,9 @@ export type terminateSession$Input = {
 
   /**
    * Session identifier
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly session_id?: int64;
+  readonly session_id?: int64$Input;
 };
 
 /**
@@ -67309,9 +67340,9 @@ export type toggleSessionCanAcceptCalls$Input = {
 
   /**
    * Session identifier
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly session_id?: int64;
+  readonly session_id?: int64$Input;
 
   /**
    * Pass true to allow accepting incoming calls by the session; pass false otherwise
@@ -67336,9 +67367,9 @@ export type toggleSessionCanAcceptSecretChats$Input = {
 
   /**
    * Session identifier
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly session_id?: int64;
+  readonly session_id?: int64$Input;
 
   /**
    * Pass true to allow accepring secret chats by the session; pass false otherwise
@@ -67397,9 +67428,9 @@ export type disconnectWebsite$Input = {
 
   /**
    * Website identifier
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly website_id?: int64;
+  readonly website_id?: int64$Input;
 };
 
 /**
@@ -67544,9 +67575,9 @@ export type setSupergroupStickerSet$Input = {
 
   /**
    * New value of the supergroup sticker set identifier. Use 0 to remove the supergroup sticker set
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly sticker_set_id?: int64;
+  readonly sticker_set_id?: int64$Input;
 };
 
 /**
@@ -67897,9 +67928,9 @@ export type getChatEventLog$Input = {
 
   /**
    * Identifier of an event from which to return results. Use 0 to get results from the latest events
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly from_event_id?: int64;
+  readonly from_event_id?: int64$Input;
 
   /**
    * The maximum number of events to return; up to 100
@@ -67998,9 +68029,9 @@ export type sendPaymentForm$Input = {
 
   /**
    * Payment form identifier returned by getPaymentForm
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly payment_form_id?: int64;
+  readonly payment_form_id?: int64$Input;
 
   /**
    * Identifier returned by validateOrderInfo, or an empty string
@@ -68235,9 +68266,9 @@ export type removeBackground$Input = {
 
   /**
    * The background identifier
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly background_id?: int64;
+  readonly background_id?: int64$Input;
 };
 
 /**
@@ -69938,9 +69969,9 @@ export type setCustomEmojiStickerSetThumbnail$Input = {
 
   /**
    * Identifier of the custom emoji from the sticker set, which will be set as sticker set thumbnail; pass 0 to remove the sticker set thumbnail
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly custom_emoji_id?: int64;
+  readonly custom_emoji_id?: int64$Input;
 };
 
 /**
@@ -70296,9 +70327,9 @@ export type assignAppStoreTransaction$Input = {
 
   /**
    * App Store receipt
-   * @type {bytes} {@link bytes}
+   * @type {bytes$Input} {@link bytes}
    */
-  readonly receipt?: bytes;
+  readonly receipt?: bytes$Input;
 
   /**
    * Transaction purpose
@@ -70408,9 +70439,9 @@ export type answerCustomQuery$Input = {
 
   /**
    * Identifier of a custom query
-   * @type {int64} {@link int64}
+   * @type {int64$Input} {@link int64}
    */
-  readonly custom_query_id?: int64;
+  readonly custom_query_id?: int64$Input;
 
   /**
    * JSON-serialized answer to the query
@@ -71045,9 +71076,9 @@ export type testCallBytes$Input = {
 
   /**
    * Bytes to return
-   * @type {bytes} {@link bytes}
+   * @type {bytes$Input} {@link bytes}
    */
-  readonly x?: bytes;
+  readonly x?: bytes$Input;
 };
 
 /**

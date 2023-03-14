@@ -1,3 +1,6 @@
+// Credit: @Bannerets
+// Source: https://github.com/Bannerets/tdl/blob/master/packages/tdl-tdlib-addon/td.cpp
+
 #include <napi.h>
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__)

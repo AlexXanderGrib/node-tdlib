@@ -88,7 +88,7 @@ dist/addon/addon.d.ts:42
 
 ### create
 
-▸ **create**(): typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
+▸ **create**(): [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
 
 **`Memberof`**
 
@@ -96,7 +96,7 @@ TDLibAddon
 
 #### Returns
 
-typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
+[`TDLibClient`](../modules/index._internal_.md#tdlibclient)
 
 {TDLibClient}
 
@@ -122,7 +122,7 @@ TDLibAddon
 
 | Name | Type |
 | :------ | :------ |
-| `client` | typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
 
 #### Returns
 
@@ -150,7 +150,7 @@ TDLibAddon
 
 | Name | Type |
 | :------ | :------ |
-| `client` | ``null`` \| typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | ``null`` \| [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
 | `json` | `string` |
 
 #### Returns
@@ -181,7 +181,7 @@ TDLibAddon
 
 | Name | Type |
 | :------ | :------ |
-| `client` | typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
 | `timeout` | `number` |
 
 #### Returns
@@ -212,7 +212,7 @@ TDLibAddon
 
 | Name | Type |
 | :------ | :------ |
-| `client` | typeof [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
 | `json` | `string` |
 
 #### Returns
