@@ -12,6 +12,7 @@
 
 ### Properties
 
+- [\_isTDLib](index._internal_.TDLib.md#_istdlib)
 - [name](index._internal_.TDLib.md#name)
 
 ### Methods
@@ -25,13 +26,23 @@
 
 ## Properties
 
+### \_isTDLib
+
+• `Readonly` **\_isTDLib**: ``true``
+
+#### Defined in
+
+dist/shared/client.d.ts:5
+
+___
+
 ### name
 
 • `Readonly` **name**: `string`
 
 #### Defined in
 
-dist/shared/client.d.ts:5
+dist/shared/client.d.ts:6
 
 ## Methods
 
@@ -45,7 +56,7 @@ dist/shared/client.d.ts:5
 
 #### Defined in
 
-dist/shared/client.d.ts:6
+dist/shared/client.d.ts:7
 
 ___
 
@@ -65,7 +76,7 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:7
+dist/shared/client.d.ts:8
 
 ___
 
@@ -86,7 +97,7 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:8
+dist/shared/client.d.ts:9
 
 ___
 
@@ -107,7 +118,7 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:9
+dist/shared/client.d.ts:10
 
 ___
 
@@ -128,7 +139,7 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:10
+dist/shared/client.d.ts:11
 
 ___
 
@@ -148,4 +159,4 @@ ___
 
 #### Defined in
 
-dist/shared/client.d.ts:11
+dist/shared/client.d.ts:12

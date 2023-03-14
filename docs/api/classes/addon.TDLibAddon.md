@@ -21,6 +21,7 @@
 ### Properties
 
 - [\_addon](addon.TDLibAddon.md#_addon)
+- [\_isTDLib](addon.TDLibAddon.md#_istdlib)
 
 ### Accessors
 
@@ -62,6 +63,20 @@ dist/addon/addon.d.ts:35
 
 dist/addon/addon.d.ts:19
 
+___
+
+### \_isTDLib
+
+• `Readonly` **\_isTDLib**: ``true``
+
+#### Implementation of
+
+[TDLib](../interfaces/index._internal_.TDLib.md).[_isTDLib](../interfaces/index._internal_.TDLib.md#_istdlib)
+
+#### Defined in
+
+dist/addon/addon.d.ts:36
+
 ## Accessors
 
 ### name
@@ -82,7 +97,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/addon/addon.d.ts:42
+dist/addon/addon.d.ts:43
 
 ## Methods
 
@@ -106,7 +121,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/addon/addon.d.ts:49
+dist/addon/addon.d.ts:50
 
 ___
 
@@ -134,7 +149,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/addon/addon.d.ts:56
+dist/addon/addon.d.ts:57
 
 ___
 
@@ -165,7 +180,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/addon/addon.d.ts:65
+dist/addon/addon.d.ts:66
 
 ___
 
@@ -196,7 +211,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/addon/addon.d.ts:74
+dist/addon/addon.d.ts:75
 
 ___
 
@@ -225,7 +240,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/addon/addon.d.ts:82
+dist/addon/addon.d.ts:83
 
 ___
 
@@ -253,7 +268,7 @@ TDLibAddon
 
 #### Defined in
 
-dist/addon/addon.d.ts:89
+dist/addon/addon.d.ts:90
 
 ___
 

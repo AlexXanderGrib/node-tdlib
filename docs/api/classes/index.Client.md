@@ -34,6 +34,7 @@
 - [invoke](index.Client.md#invoke)
 - [pause](index.Client.md#pause)
 - [start](index.Client.md#start)
+- [execute](index.Client.md#execute-1)
 
 ## Constructors
 
@@ -109,7 +110,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:693
+dist/client.d.ts:705
 
 ___
 
@@ -778,7 +779,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:701
+dist/client.d.ts:713
 
 ## Methods
 
@@ -796,7 +797,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:722
+dist/client.d.ts:734
 
 ___
 
@@ -833,7 +834,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:686
+dist/client.d.ts:698
 
 ___
 
@@ -888,7 +889,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:715
+dist/client.d.ts:727
 
 ___
 
@@ -906,4 +907,42 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:708
+dist/client.d.ts:720
+
+___
+
+### execute
+
+▸ `Static` **execute**<`T`\>(`executor`, `method`, `parameters`): `ReturnType`<[`$SyncMethodsDict`](../modules/index.types.default.md#$syncmethodsdict)[`T`]\>
+
+**`Throws`**
+
+- [TDError](index.TDError.md)
+
+**`Memberof`**
+
+Client
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends keyof [`$SyncMethodsDict`](../modules/index.types.default.md#$syncmethodsdict) |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `executor` | [`Client`](index.Client.md) \| [`TDLib`](../interfaces/index._internal_.TDLib.md) |
+| `method` | `T` |
+| `parameters` | [`OmitType`](../modules/index._internal_.md#omittype)<`Parameters`<[`$MethodsDict`](../modules/index.types.default.md#$methodsdict)[`T`]\>[``0``]\> |
+
+#### Returns
+
+`ReturnType`<[`$SyncMethodsDict`](../modules/index.types.default.md#$syncmethodsdict)[`T`]\>
+
+{Promise<ReturnType<$SyncMethodsDict[T]>>}
+
+#### Defined in
+
+dist/client.d.ts:687

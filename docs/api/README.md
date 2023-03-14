@@ -25,7 +25,7 @@ TDLib / [Modules](modules.md)
 
   <!-- TODO: get accurate statistic -->
 
-- **TS friendly.** Unlike [`tdl`](https://npmjs.com/package/tdl) this package declarations use dictionary for methods instead of intersection type, making editor hints load almost immediate.
+- **Better DX.** Unlike [`tdl`](https://npmjs.com/package/tdl) this package declarations use dictionary for methods instead of intersection type, making editor hints load almost immediate.
 - **Secure.** The library has only 1 dependency - `node-addon-api` for building TDLib addon
 
 ## 📦 Installation
@@ -54,13 +54,20 @@ import { TDLibAddon } from "tdlib-native/addon";
 async function init() {
   // Loading addon
   const adapter = await TDLibAddon.create();
+
+  // Make TDLib shut up. Immediately
+  Client.execute(adapter, "setLogVerbosityLevel", {
+    new_verbosity_level: 0
+  })
+
   const client = new Client(adapter);
 
   // Start polling responses from TDLib
   client.start();
 
   // Call any tdlib method
-  await client.api.setLogVerbosityLevel({ new_verbosity_level: 0 });
+  await client.api.getOption({ name: "version" });
+  // => Promise { _: "optionValueString", value: "1.8.12" }
 
   // Subscribe to updates
   client.updates.subscribe(console.log);
