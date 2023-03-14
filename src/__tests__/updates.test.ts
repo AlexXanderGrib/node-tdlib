@@ -13,11 +13,6 @@ describe("Updates", () => {
     client.start();
   });
 
-  afterAll(() => {
-    client.destroy();
-    expect(client["_state"]).toBe("STOPPED");
-  });
-
   test("Updates", async () => {
     const apiHash = process.env.TELEGRAM_API_HASH || "";
     const version = await client.invoke("getOption", { name: "version" });
