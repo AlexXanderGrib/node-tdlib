@@ -274,7 +274,7 @@ ___
 
 ### create
 
-▸ `Static` **create**(`tdlibPath?`, `addonPath?`): `Promise`<[`TDLib`](../interfaces/index._internal_.TDLib.md)\>
+▸ `Static` **create**(`tdlibPath?`, `addonPath?`): `Promise`<[`TDLibAddon`](addon.TDLibAddon.md)\>
 
 **`Static`**
 
@@ -291,7 +291,7 @@ TDLibAddon
 
 #### Returns
 
-`Promise`<[`TDLib`](../interfaces/index._internal_.TDLib.md)\>
+`Promise`<[`TDLibAddon`](addon.TDLibAddon.md)\>
 
 #### Defined in
 

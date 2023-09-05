@@ -10,7 +10,7 @@ import replace from "@rollup/plugin-replace";
 
 /** @type {import('rollup').RollupOptions} */
 const config = {
-  input: [...glob.globSync("./src/{index,addon,types}.ts")],
+  input: [...glob.globSync("./src/{index,addon,types,markup}.ts")],
   external: [
     ...builtinModules,
     ...Object.keys({ ...packageJson.devDependencies, ...packageJson.dependencies })

@@ -6,6 +6,7 @@
 
 ### References
 
+- [Markup](index.md#markup)
 - [default](index.md#default)
 
 ### Modules
@@ -14,6 +15,7 @@
 
 ### Namespaces
 
+- [markup](index.markup.md)
 - [types](index.types.md)
 
 ### Classes
@@ -22,6 +24,12 @@
 - [TDError](../classes/index.TDError.md)
 
 ## References
+
+### Markup
+
+Renames and re-exports [markup](index.markup.md)
+
+___
 
 ### default
 

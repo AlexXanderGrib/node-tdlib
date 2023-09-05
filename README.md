@@ -1,4 +1,4 @@
-# Quality Package Template
+# TDLib Native
 
 [![Test Status](https://github.com/AlexXanderGrib/node-tdlib/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-tdlib)
 [![Downloads](https://img.shields.io/npm/dt/tdlib-native.svg)](https://npmjs.com/package/tdlib-native)
@@ -65,7 +65,7 @@ async function init() {
 
   // Call any tdlib method
   await client.api.getOption({ name: "version" });
-  // => Promise { _: "optionValueString", value: "1.8.12" }
+  // => Promise { _: "optionValueString", value: "1.8.13" }
 
   // Subscribe to updates
   client.updates.subscribe(console.log);
@@ -74,8 +74,10 @@ async function init() {
   // client.pause();
   // Resume pause
   // client.start();
+
   // Destroy
-  // client.destroy();
+  await client.api.close({});
+  client.destroy();
 }
 ```
 

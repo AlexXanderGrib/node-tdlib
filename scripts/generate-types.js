@@ -1,3 +1,4 @@
+// @ts-check
 const { readFileSync, writeFileSync } = require("fs");
 const { resolve } = require("path");
 const prettier = require("prettier");
@@ -8,11 +9,16 @@ const label = "Typings";
 console.time(label);
 
 const primitiveComments = {
-  bytes: "String of bytes in HEX or Base64",
-  int64: "String digits. Use BigInt for handling this",
+  bytes: "(string) of bytes in Base64",
+  bytes$Input: "String in Base64 or Uint8Array. Will be converted to Base64",
+
+  int64: "(string) of digits. Use BigInt for handling this",
+  int64$Input: "String or BigInt. Will be converted to String",
+
   int53:
-    "(float64) Number ranging from Number.MIN_SAFE_INTEGER to Number.MAX_SAFE_INTEGER",
-  int32: "(int32) Number ranging from -2147483648 to 2147483647",
+    "(float64) Integer number ranging from Number.MIN_SAFE_INTEGER to Number.MAX_SAFE_INTEGER",
+
+  int32: "(int32) Integer number ranging from -2147483648 to 2147483647",
   double: "(float64)"
 };
 
@@ -32,6 +38,8 @@ const primitives = {
   bytes: "string"
 };
 
+const typeType = "_";
+
 /**
  * @typedef {{
  *  namespace?: string;
@@ -50,7 +58,7 @@ const letter = /^\w/;
  *
  *
  * @param {string} declarationWithCommends
- * @returns {Declaration}
+ * @returns {Declaration|undefined}
  */
 function parseTd(declarationWithCommends) {
   const mainRegex =
@@ -91,19 +99,20 @@ function parseTd(declarationWithCommends) {
 
   if (!match) return;
 
-  parsed.name = match.groups.name;
-  parsed.result = match.groups.result;
+  parsed.name = match.groups?.name ?? "";
+  parsed.result = match.groups?.result ?? "";
 
-  if (match.groups.id) parsed.id = parseInt(match.groups.id, 16);
-  if (match.groups.namespace) parsed.namespace = match.groups.namespace;
+  if (match.groups?.id) parsed.id = parseInt(match.groups.id, 16);
+  if (match.groups?.namespace) parsed.namespace = match.groups.namespace;
 
   parsed.body = {};
 
-  if (match.groups.body) {
+  if (match.groups?.body) {
     const text = match.groups.body;
     let pair = bodyRegex.exec(text);
 
     while (pair !== null) {
+      // @ts-ignore
       parsed.body[pair.groups.key] = pair.groups.value;
       pair = bodyRegex.exec(text);
     }
@@ -111,6 +120,24 @@ function parseTd(declarationWithCommends) {
 
   return parsed;
 }
+
+class Namespace {
+  /** @type {Declaration[]} */
+  declarations = [];
+
+  /** @type {Record<string, Set<string>>} */
+  joins = {};
+
+  /** @type {string[]} */
+  types = [];
+
+  /** @type {Record<string, string>} */
+  functions = {};
+
+  /** @type {Set<string>} */
+  syncFunctions = new Set();
+}
+
 /**
  *
  *
@@ -118,7 +145,7 @@ function parseTd(declarationWithCommends) {
  * @return {string}
  */
 function splitComments(comment) {
-  return comment.replace(/\n/g, "\n * \n * ");
+  return comment.replace(/\n/g, "\n * \n * ").replace(/\* -/g, "* - ");
 }
 
 /**
@@ -153,13 +180,11 @@ function getInputAlias(typename) {
  */
 function generateFunction(declaration) {
   const text = `
-${
-  declaration.comments?.description
-    ? `/** ${declaration.comments.description} */`
-    : ""
-}
+/**
+ * ${splitComments(declaration.comments?.description ?? "")}
+ */
 export type ${getInputAlias(declaration.name)} = {
-  readonly _: "${declaration.name}";
+  readonly ${typeType}: "${declaration.name}";
 
   ${Object.entries(declaration.body)
     .map(
@@ -168,7 +193,28 @@ export type ${getInputAlias(declaration.name)} = {
      * ${splitComments(declaration.comments?.[key] ?? "")}
      * @type {${getInputAlias(value)}} {@link ${value}}
      */
-    readonly ${key}?: ${getInputAlias(value)};
+    readonly ${key}?: ${getInputAlias(value)}${
+        allowsNull(declaration.comments?.[key]) ? "| null" : ""
+      };
+  `
+    )
+    .join("\n")}
+};
+
+/**
+ * ${splitComments(declaration.comments?.description ?? "")}
+ */
+export type ${getInputAlias(declaration.name).replace("$Input", "$DirectInput")} = {
+  ${Object.entries(declaration.body)
+    .map(
+      ([key, value]) => `
+    /**
+     * ${splitComments(declaration.comments?.[key] ?? "")}
+     * @type {${getInputAlias(value)}} {@link ${value}}
+     */
+    readonly ${key}?: ${getInputAlias(value)}${
+        allowsNull(declaration.comments?.[key]) ? "| null" : ""
+      };
   `
     )
     .join("\n")}
@@ -192,18 +238,27 @@ export type ${declaration.name} = (parameters: ${getInputAlias(
 
 /**
  *
+ * @param {string | undefined} comment
+ * @returns {boolean}
+ */
+function allowsNull(comment) {
+  if (!comment) return false;
+
+  return comment.includes("may be null") || comment.includes("pass null");
+}
+
+/**
+ *
  *
  * @param {Declaration} declaration
  */
 function generateType(declaration) {
   return `
-${
-  declaration.comments?.description
-    ? `/** ${declaration.comments.description} */`
-    : ""
-}  
+/**
+ * ${splitComments(declaration.comments?.description ?? "")}
+ */
 export type ${declaration.name} = {
-    _: "${declaration.name}";
+    ${typeType}: "${declaration.name}";
     
     ${Object.entries(declaration.body)
       .map(
@@ -212,9 +267,7 @@ export type ${declaration.name} = {
        * ${splitComments(declaration.comments?.[key] ?? "")}
        * @type {${value}} {@link ${value}}
        */
-      ${key}: ${value}${
-          declaration.comments?.[key].includes("may be null") ? "| null" : ""
-        }
+      ${key}: ${value}${allowsNull(declaration.comments?.[key]) ? "| null" : ""}
     `
       )
       .join("\n")}
@@ -223,10 +276,11 @@ export type ${declaration.name} = {
 
 /**
  * Version of {@link ${declaration.name}} for method parameters.
+ * 
  * ${splitComments(declaration.comments?.description ?? "")}
  */
 export type ${getInputAlias(declaration.name)} = {
-  readonly _: "${declaration.name}";
+  readonly ${typeType}: "${declaration.name}";
   
   ${Object.entries(declaration.body)
     .map(
@@ -236,12 +290,27 @@ export type ${getInputAlias(declaration.name)} = {
      * @type {${value}} {@link ${value}}
      */
     readonly ${key}?: ${getInputAlias(value)} ${
-        declaration.comments?.[key].includes("may be null") ? "| null" : ""
+        allowsNull(declaration.comments?.[key]) ? "| null" : ""
       }
   `
     )
     .join("\n")}
 }`;
+}
+
+/**
+ *
+ * @param {string} name
+ * @param {Record<string, string>|Array<[string, string]>} values
+ */
+function createEnum(name, values) {
+  const entries = Array.isArray(values) ? values : Object.entries(values);
+
+  return `export const ${name} = Object.freeze({
+    ${entries.map(([key, value]) => `${key}: "${value}"`)}
+  } as const);
+  
+  export type ${name} = (typeof ${name})[keyof typeof ${name}]`;
 }
 
 /**
@@ -277,18 +346,15 @@ function parse(text) {
 
 const [typesText, functionsText] = text.split("---functions---");
 const globalNamespace = "__global";
+
+/** @type {Record<string, Namespace>} */
 const namespaces = {};
 
 const types = parse(typesText);
 types.forEach((declaration) => {
   const namespace = declaration.namespace ?? globalNamespace;
-
-  const ref = (namespaces[namespace] ??= {
-    types: [],
-    joins: {},
-    functions: {},
-    syncFunctions: new Set()
-  });
+  const ref = (namespaces[namespace] ??= new Namespace());
+  ref.declarations.push(declaration);
 
   if (!declaration.result.includes(" ")) {
     const set = (ref.joins[declaration.result] ??= new Set());
@@ -338,16 +404,17 @@ Object.values(namespaces).forEach((ref) => {
       const enumName = key + "$Type";
       const commonStart = getCommonStart(types);
 
-      ref.types.unshift(`export const enum ${enumName} {
-        ${types
-          .map((type) => {
-            let keyName = type.slice(commonStart.length);
-            if (keyName.length < 2) keyName = type[0].toUpperCase() + type.slice(1);
+      const entries = types.map((type) => {
+        let keyName = type.slice(commonStart.length);
+        if (keyName.length < 2) keyName = type[0].toUpperCase() + type.slice(1);
 
-            return `${keyName} = "${type}",`;
-          })
-          .join("\n")}
-      }`);
+        /** @type {[string, string]} */
+        const result = [keyName, type];
+
+        return result;
+      });
+
+      ref.types.unshift(createEnum(enumName, entries));
     }
 
     ref.types.push(`  
@@ -362,7 +429,7 @@ export type ${key} = ${types.join(" | ")}
  * Any of:
 ${inputs.map((type) => ` * - {@link ${type}}`).join("\n")}
  */
-export type ${key}$Input = ${inputs.join(" | ")}
+export type ${getInputAlias(key)} = ${inputs.join(" | ")}
   `);
   });
 });
@@ -372,12 +439,8 @@ const functions = parse(functionsText);
 functions.forEach((declaration) => {
   const namespace = declaration.namespace ?? globalNamespace;
 
-  const ref = (namespaces[namespace] ??= {
-    types: [],
-    joins: {},
-    functions: {},
-    syncFunctions: new Set()
-  });
+  const ref = (namespaces[namespace] ??= new Namespace());
+  ref.declarations.push(declaration);
 
   const code = generateFunction(declaration);
   ref.functions[declaration.name] = code;
@@ -387,12 +450,35 @@ functions.forEach((declaration) => {
   }
 });
 
+/**
+ * @param {string} name
+ * @param {Namespace} ref
+ */
+function getMethodType(name, ref) {
+  const declaration = ref.declarations.find(
+    (declaration) => declaration.name === name
+  );
+
+  return {
+    input: getInputAlias(name),
+    result: declaration?.result,
+    comment: declaration?.comments.description
+  };
+}
+
 Object.values(namespaces).forEach((ref) => {
-  ref.types.unshift(`export const enum $Methods {
-    ${Object.keys(ref.functions)
-      .map((name) => `${name} = "${name}",`)
-      .join("\n")}
-  }`);
+  ref.types.unshift(
+    createEnum(
+      "$Methods",
+      Object.keys(ref.functions).map((name) => {
+        /**
+         * @type {[string, string]}
+         */
+        const result = [name, name];
+        return result;
+      })
+    )
+  );
 
   ref.types.push(`export type $MethodsDict = {
     ${Object.keys(ref.functions)
@@ -406,10 +492,106 @@ Object.values(namespaces).forEach((ref) => {
       .map((name) => `readonly ${name}: ${name};`)
       .join("\n")}
   }`);
+
+  ref.types.push(`
+  
+  /** 
+   * Convenience class for API calls
+   * 
+   * @class 
+   */
+  export class $AsyncApi {
+    
+    /** 
+     * Constructs {@link $AsyncApi}
+     * 
+     * @param {object} client
+     */
+    constructor(private readonly client: { 
+      invoke(method: string, parameters: unknown): Promise<unknown> 
+    }) {
+      Object.freeze(this)
+    }
+
+    ${Object.keys(ref.functions)
+      .map((name) => {
+        const { comment = "", input, result } = getMethodType(name, ref);
+        const alias = input.replace("$Input", "$DirectInput");
+
+        return `
+          /**
+           * ${splitComments(comment)}
+           * 
+           * @param {${alias}} parameters {@link ${input}}
+           * @return {Promise<${result}>} Promise<{@link ${result}}>
+           */
+          async ${name}(parameters: ${alias}): Promise<${result}> {
+            const result = await this.client.invoke("${name}", parameters);
+            return result as ${result};
+          }
+
+        `;
+      })
+      .join("\n")}
+  }
+  
+  Object.freeze($AsyncApi);
+  Object.freeze($AsyncApi.prototype);`);
+
+  ref.types.push(`
+  
+  /** 
+   * Convenience class for sync API calls 
+   * 
+   * @class 
+   */
+  export class $SyncApi {
+    
+    /** 
+     * Constructs {@link $SyncApi}
+     * 
+     * @param {object} client
+     */
+    constructor(private readonly client: { 
+      execute(method: string, parameters: unknown): unknown 
+    }) {
+      Object.freeze(this)
+    }
+
+    ${Object.keys(ref.functions)
+      .filter((name) => ref.syncFunctions.has(name))
+      .map((name) => {
+        const { comment = "", input, result } = getMethodType(name, ref);
+        const alias = input.replace("$Input", "$DirectInput");
+
+        return `
+          /**
+           * ${splitComments(comment)}
+           * 
+           * @param {${alias}} parameters - {@link ${input}}
+           * @return {${result}} {@link ${result}}
+           */
+          ${name}(parameters: ${alias}): ${result} {
+            return this.client.execute("${name}", parameters) as ${result};
+          }
+
+        `;
+      })
+      .join("\n")}
+  }
+  
+  Object.freeze($SyncApi);
+  Object.freeze($SyncApi.prototype);`);
 });
 
+/** @type {string[]} */
 const results = [];
 
+/**
+ *
+ * @param {Namespace} ref
+ * @returns
+ */
 function joinNamespace(ref) {
   return `${ref.types.join("\n\n")}
   
@@ -435,9 +617,13 @@ Object.entries(primitives).forEach(([name, value]) => {
   `);
 });
 
+results.unshift("/* istanbul ignore file */");
+
 console.timeLog(label, "Generated");
 
 const result = results.join("\n\n");
+
+// @ts-ignore
 const formatted = prettier.format(result, {
   ...prettierConfig,
   parser: "typescript"

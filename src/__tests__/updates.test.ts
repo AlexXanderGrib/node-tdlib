@@ -3,19 +3,30 @@ import { Client } from "../client";
 import type { Update } from "../generated/types";
 import "dotenv/config";
 
+let adapter: TDLibAddon;
+
 describe("Updates", () => {
   let client: Client;
 
   beforeAll(async () => {
-    const adapter = await TDLibAddon.create();
+    adapter ??= await TDLibAddon.create();
+    Client.execute(adapter, "setLogVerbosityLevel", { new_verbosity_level: 0 });
+
+    expect(adapter.name).toBe("addon");
+    adapter.setLogFatalErrorCallback(console.error);
+
     client = new Client(adapter);
-    client.syncApi.setLogVerbosityLevel({ new_verbosity_level: 0 });
     client.start();
+  });
+
+  afterAll(async () => {
+    await client.api.close({});
+    client.destroy();
   });
 
   test("Updates", async () => {
     const apiHash = process.env.TELEGRAM_API_HASH || "";
-    const version = await client.invoke("getOption", { name: "version" });
+    const version = await client.api.getOption({ name: "version" });
 
     await client.invoke("setTdlibParameters", {
       api_hash: apiHash,

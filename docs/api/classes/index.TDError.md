@@ -29,7 +29,12 @@
 - [\_](index.TDError.md#_)
 - [code](index.TDError.md#code)
 - [method](index.TDError.md#method)
+- [name](index.TDError.md#name)
 - [parameters](index.TDError.md#parameters)
+
+### Methods
+
+- [toJSON](index.TDError.md#tojson)
 
 ## Constructors
 
@@ -59,7 +64,7 @@ Error.constructor
 
 #### Defined in
 
-dist/client.d.ts:26
+dist/client.d.ts:27
 
 ## Properties
 
@@ -101,6 +106,20 @@ dist/client.d.ts:18
 
 ___
 
+### name
+
+• **name**: `string`
+
+#### Overrides
+
+Error.name
+
+#### Defined in
+
+dist/client.d.ts:20
+
+___
+
 ### parameters
 
 • `Readonly` **parameters**: `unknown`
@@ -108,3 +127,30 @@ ___
 #### Defined in
 
 dist/client.d.ts:19
+
+## Methods
+
+### toJSON
+
+▸ **toJSON**(): `Object`
+
+**`Memberof`**
+
+TDError
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `_` | `string` |
+| `code` | `number` |
+| `message` | `string` |
+| `method` | `string` |
+| `name` | `string` |
+| `parameters` | `unknown` |
+
+#### Defined in
+
+dist/client.d.ts:38

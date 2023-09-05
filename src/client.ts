@@ -1,13 +1,11 @@
 import type { TDLib, TDLibClient } from "./shared/client";
-import type {
-  error,
-  Update,
-  $MethodsDict,
-  $SyncMethodsDict
-} from "./generated/types";
+import { error, Update, $AsyncApi, $SyncApi, $MethodsDict } from "./generated/types";
 import * as JSON from "./json";
 import { AsyncData } from "./shared/async";
 import { EventBus, Observable } from "./event-bus";
+import debug from "debug";
+
+const debugJson = debug("tdlib-native:json");
 
 type OmitType<T extends { _: string }> = Omit<T, "_">;
 
@@ -31,6 +29,8 @@ export class TDError extends Error implements error {
   readonly method: string;
   readonly parameters: unknown;
 
+  override name = "TDError";
+
   /**
    * Creates an instance of TDError.
    * @param {string} message
@@ -46,6 +46,23 @@ export class TDError extends Error implements error {
     this.method = method;
     this.parameters = parameters;
   }
+
+  /**
+   *
+   *
+   * @return {object}
+   * @memberof TDError
+   */
+  toJSON() {
+    return {
+      _: this._,
+      name: this.name,
+      message: this.message,
+      code: this.code,
+      method: this.method,
+      parameters: this.parameters
+    };
+  }
 }
 
 /**
@@ -56,79 +73,66 @@ export class TDError extends Error implements error {
  */
 export class Client {
   private readonly _client: TDLibClient;
-  private readonly _requests: Map<number, AsyncData> = new Map();
+  private readonly _requests: Map<number, AsyncData<any>> = new Map();
   private readonly _updates: EventBus<Update> = new EventBus();
+  private readonly _adapter: TDLib;
   private _state = ClientState.PAUSED;
 
   /**
    * Creates an instance of Client.
-   * @param {TDLib} _adapter
+   * @param {TDLib} adapter
    * @memberof Client
    */
-  constructor(private readonly _adapter: TDLib) {
-    this._client = _adapter.create();
+  constructor(adapter: TDLib) {
+    this._adapter = adapter;
+    this._client = adapter.create();
+    Object.seal(this);
   }
 
-  readonly api = new Proxy(
-    Object.freeze({}) as {
-      readonly [key in keyof $MethodsDict]: (
-        parameters: OmitType<Parameters<$MethodsDict[key]>[0]>
-      ) => Promise<ReturnType<$MethodsDict[key]>>;
-    },
-    {
-      get: (_target, method) => {
-        return (parameters: any) =>
-          this.invoke(method as keyof $MethodsDict, parameters);
-      }
-    }
-  );
-
-  readonly syncApi = new Proxy(
-    Object.freeze({}) as {
-      readonly [key in keyof $SyncMethodsDict]: (
-        parameters: OmitType<Parameters<$SyncMethodsDict[key]>[0]>
-      ) => ReturnType<$SyncMethodsDict[key]>;
-    },
-    {
-      get: (_target, method) => {
-        return (parameters: any) =>
-          this.execute(method as keyof $SyncMethodsDict, parameters);
-      }
-    }
-  );
+  readonly api = new $AsyncApi(this);
+  readonly syncApi = new $SyncApi(this);
 
   /**
    *
    *
-   * @template {keyof $MethodsDict} T
+   * @template {keyof $AsyncApi} T
    * @param {T} method
    * @param {object} parameters
-   * @return {object}  {Promise<ReturnType<$MethodsDict[T]>>}
+   * @return {object}  {Promise<ReturnType<$AsyncApi[T]>>}
    * @throws {TDError} - {@link TDError}
    * @memberof Client
    */
-  async invoke<T extends keyof $MethodsDict>(
+  async invoke<T extends keyof $AsyncApi>(
     method: T,
-    parameters: OmitType<Parameters<$MethodsDict[T]>[0]>
+    parameters: Parameters<$AsyncApi[T]>[0]
   ): Promise<ReturnType<$MethodsDict[T]>> {
     const extra = Math.random();
+    const data = new AsyncData();
 
     assignTemporary(parameters, { _: method, "@extra": extra }, (merged) => {
-      this._adapter.send(this._client, JSON.serialize(merged));
+      const value = JSON.serialize(merged);
+      debugJson("Sent %s", value);
+      this._adapter.send(this._client, value);
     });
 
-    const result = new AsyncData<ReturnType<$MethodsDict[T]>>();
+    this._requests.set(extra, data);
 
-    this._requests.set(extra, result);
-    return result.catch((error: error) => {
-      throw new TDError(error.message, { code: error.code, method, parameters });
-    });
+    try {
+      return await data;
+    } catch (error) {
+      if (typeof error === "object" && error && "_" in error) {
+        const value = error as error;
+        throw new TDError(value.message, { code: value.code, method, parameters });
+      }
+
+      throw error;
+    }
   }
 
   /**
    *
    *
-   * @template {keyof $SyncMethodsDict} T
+   * @template {keyof $SyncApi} T
    * @param {TDLib|Client} executor
    * @param {T} method
    * @param {object} parameters
@@ -136,11 +140,11 @@ export class Client {
    * @throws {TDError} - {@link TDError}
    * @memberof Client
    */
-  static execute<T extends keyof $SyncMethodsDict>(
+  static execute<T extends keyof $SyncApi>(
     executor: TDLib | Client,
     method: T,
-    parameters: OmitType<Parameters<$MethodsDict[T]>[0]>
-  ): ReturnType<$SyncMethodsDict[T]> {
+    parameters: Parameters<$SyncApi[T]>[0]
+  ): ReturnType<$SyncApi[T]> {
     let adapter: TDLib;
     let client: TDLibClient | undefined;
 
@@ -163,10 +167,15 @@ export class Client {
       parameters,
       { _: method, "@extra": extra },
       (merged) => {
+        const value = JSON.serialize(merged);
+        debugJson("Sent sync %s", value);
+
         // eslint-disable-next-line unicorn/no-null
-        return adapter.execute(client ?? null, JSON.serialize(merged));
+        return adapter.execute(client ?? null, value);
       }
     );
+
+    debugJson("Received sync %s", value);
 
     if (!value) {
       throw new TDError("Method returned null", { method, parameters });
@@ -178,7 +187,7 @@ export class Client {
       data = JSON.deserialize(value);
 
       if (typeof data !== "object" || !data || !("_" in data)) {
-        throw new Error("Returned not an object");
+        throw new TDError("Returned not an object", { method, parameters });
       }
     } catch {
       throw new TDError("Method returned invalid json", { method, parameters });
@@ -193,23 +202,23 @@ export class Client {
       delete data["@extra"];
     }
 
-    return data as ReturnType<$SyncMethodsDict[T]>;
+    return data as ReturnType<$SyncApi[T]>;
   }
 
   /**
    *
    *
-   * @template {keyof $SyncMethodsDict} T
+   * @template {keyof $SyncApi} T
    * @param {T} method
    * @param {object} parameters
-   * @return {object}  {Promise<ReturnType<$SyncMethodsDict[T]>>}
+   * @return {object}  {Promise<ReturnType<$SyncApi[T]>>}
    * @throws {TDError} - {@link TDError}
    * @memberof Client
    */
-  execute<T extends keyof $SyncMethodsDict>(
+  execute<T extends keyof $SyncApi>(
     method: T,
     parameters: OmitType<Parameters<$MethodsDict[T]>[0]>
-  ): ReturnType<$SyncMethodsDict[T]> {
+  ): ReturnType<$SyncApi[T]> {
     return Client.execute(this, method, parameters);
   }
 
@@ -222,6 +231,7 @@ export class Client {
   private async _thread() {
     while (this._state === ClientState.RUNNING) {
       const value = await this._adapter.receive(this._client, 3000);
+      debugJson("Received %s", value);
 
       if (!value) {
         continue;
@@ -278,7 +288,7 @@ export class Client {
    * @return {this}
    * @memberof Client
    */
-  start() {
+  start(): this {
     if (this._state === ClientState.PAUSED) {
       this._state = ClientState.RUNNING;
       this._thread();
@@ -294,7 +304,7 @@ export class Client {
    * @return {this}
    * @memberof Client
    */
-  pause() {
+  pause(): this {
     if (this._state === ClientState.RUNNING) {
       this._state = ClientState.PAUSED;
       return this;

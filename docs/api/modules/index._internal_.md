@@ -4,6 +4,11 @@
 
 ## Table of contents
 
+### Classes
+
+- [InlineKeyboardBuilder](../classes/index._internal_.InlineKeyboardBuilder.md)
+- [KeyboardBuilder](../classes/index._internal_.KeyboardBuilder.md)
+
 ### Interfaces
 
 - [Observable](../interfaces/index._internal_.Observable.md)
@@ -12,12 +17,33 @@
 
 ### Type Aliases
 
+- [KeyboardOptions](index._internal_.md#keyboardoptions)
 - [OmitType](index._internal_.md#omittype)
 - [Subscription](index._internal_.md#subscription)
 - [TDLibClient](index._internal_.md#tdlibclient)
 - [Unsubscribe](index._internal_.md#unsubscribe)
 
 ## Type Aliases
+
+### KeyboardOptions
+
+Ƭ **KeyboardOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `oneTime` | `boolean` |
+| `persistent` | `boolean` |
+| `personal` | `boolean` |
+| `placeholder` | `string` |
+| `resize` | `boolean` |
+
+#### Defined in
+
+dist/markup.d.ts:25
+
+___
 
 ### OmitType
 

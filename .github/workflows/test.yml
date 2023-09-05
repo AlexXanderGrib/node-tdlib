@@ -16,13 +16,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: yarn
+        run: npm install
 
       - name: Create empty .env
         run: touch .env
 
       - name: Run jest
-        run: yarn test --coverage --forceExit
+        run: npm test -- --coverage --forceExit
         env:
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}

@@ -4,17 +4,22 @@ import { randomBytes } from "crypto";
 import { Meta } from "../generated/meta";
 import type { error } from "../types";
 
-let adapter: any;
+let adapter: TDLibAddon;
 
 describe("Client Serialization (async)", () => {
   let client: Client;
 
   beforeAll(async () => {
     adapter ??= await TDLibAddon.create();
+    Client.execute(adapter, "setLogVerbosityLevel", { new_verbosity_level: 0 });
 
     client = new Client(adapter);
-    client.syncApi.setLogVerbosityLevel({ new_verbosity_level: 0 });
     client.start();
+  });
+
+  afterAll(async () => {
+    await client.api.close({});
+    client.destroy();
   });
 
   const string = 'Test {"_": "Passed"}';
@@ -44,7 +49,7 @@ describe("Client Serialization (async)", () => {
 
     expect(resultRaw).toEqual({
       _: "testBytes",
-      value: bytes.toString("hex")
+      value: bytes.toString("base64")
     });
 
     const resultUint8 = await client.api.testCallBytes({
@@ -53,7 +58,7 @@ describe("Client Serialization (async)", () => {
 
     expect(resultUint8).toEqual({
       _: "testBytes",
-      value: bytes.toString("hex")
+      value: bytes.toString("base64")
     });
   });
 
@@ -108,6 +113,22 @@ describe("Client Serialization (async)", () => {
     const commitHash = await client.api.getOption({ name: "commit_hash" });
     expect(commitHash).toEqual({ _: "optionValueString", value: Meta.commitHash });
   });
+
+  test("error", async () => {
+    const input: error = {
+      _: "error",
+      code: 1337,
+      message: "Test"
+    };
+
+    try {
+      await client.api.testReturnError({ error: input });
+      fail("Should throw error");
+    } catch (error) {
+      expect(error).toBeInstanceOf(TDError);
+      expect(error).toMatchObject(input);
+    }
+  });
 });
 
 describe("Client Serialization (sync)", () => {
@@ -119,6 +140,11 @@ describe("Client Serialization (sync)", () => {
     client = new Client(adapter);
     client.syncApi.setLogVerbosityLevel({ new_verbosity_level: 0 });
     client.start();
+  });
+
+  afterAll(async () => {
+    await client.api.close({});
+    client.destroy();
   });
 
   test("version", () => {

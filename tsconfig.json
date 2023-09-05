@@ -35,8 +35,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "stripInternal": true,
-    "importsNotUsedAsValues": "error"
+    "stripInternal": true
   },
   "exclude": [
     "dist",

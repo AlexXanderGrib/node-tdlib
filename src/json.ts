@@ -1,3 +1,5 @@
+import { encode } from "./base64";
+
 const mainKey = /"_":/g;
 const tdKey = /"@type":/g;
 
@@ -14,7 +16,7 @@ function replacer(_key: keyof any, value: unknown): any {
   }
 
   if (typeof value === "object" && value instanceof Uint8Array) {
-    return [...value].map((value) => value.toString(16).padStart(2, "0")).join("");
+    return encode(value);
   }
 
   if (
@@ -25,7 +27,7 @@ function replacer(_key: keyof any, value: unknown): any {
     "data" in value &&
     Array.isArray(value.data)
   ) {
-    return value.data.map((value) => value.toString(16).padStart(2, "0")).join("");
+    return encode(value.data);
   }
 
   return value;
@@ -51,6 +53,6 @@ export function serialize(data: unknown): string {
  * @param {string} json
  * @return {T}  {T}
  */
-export function deserialize<T>(json: string): T {
+export function deserialize<T = unknown>(json: string): T {
   return JSON.parse(json.replace(tdKey, '"_":'));
 }

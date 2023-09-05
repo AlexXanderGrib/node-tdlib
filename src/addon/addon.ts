@@ -83,7 +83,7 @@ export class TDLibAddon implements TDLib {
   static async create(
     tdlibPath = path.resolve(getAddonFolderPath(), "../../td", getTDLibName()),
     addonPath?: string
-  ): Promise<TDLib> {
+  ): Promise<TDLibAddon> {
     const addon = await loadAddon(addonPath);
     addon.load_tdjson(tdlibPath);
 
