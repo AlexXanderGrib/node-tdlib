@@ -96,6 +96,7 @@ export const $Methods = Object.freeze({
   searchChatsNearby: "searchChatsNearby",
   getTopChats: "getTopChats",
   removeTopChat: "removeTopChat",
+  searchRecentlyFoundChats: "searchRecentlyFoundChats",
   addRecentlyFoundChat: "addRecentlyFoundChat",
   removeRecentlyFoundChat: "removeRecentlyFoundChat",
   clearRecentlyFoundChats: "clearRecentlyFoundChats",
@@ -126,6 +127,7 @@ export const $Methods = Object.freeze({
   getChatScheduledMessages: "getChatScheduledMessages",
   getMessagePublicForwards: "getMessagePublicForwards",
   getChatSponsoredMessages: "getChatSponsoredMessages",
+  clickChatSponsoredMessage: "clickChatSponsoredMessage",
   removeNotification: "removeNotification",
   removeNotificationGroup: "removeNotificationGroup",
   getMessageLink: "getMessageLink",
@@ -143,7 +145,6 @@ export const $Methods = Object.freeze({
   sendInlineQueryResultMessage: "sendInlineQueryResultMessage",
   forwardMessages: "forwardMessages",
   resendMessages: "resendMessages",
-  sendChatScreenshotTakenNotification: "sendChatScreenshotTakenNotification",
   addLocalMessage: "addLocalMessage",
   deleteMessages: "deleteMessages",
   deleteChatMessagesBySender: "deleteChatMessagesBySender",
@@ -245,6 +246,7 @@ export const $Methods = Object.freeze({
   editChatFolder: "editChatFolder",
   deleteChatFolder: "deleteChatFolder",
   getChatFolderChatsToLeave: "getChatFolderChatsToLeave",
+  getChatFolderChatCount: "getChatFolderChatCount",
   reorderChatFolders: "reorderChatFolders",
   getRecommendedChatFolders: "getRecommendedChatFolders",
   getChatFolderDefaultIconName: "getChatFolderDefaultIconName",
@@ -257,6 +259,8 @@ export const $Methods = Object.freeze({
   addChatFolderByInviteLink: "addChatFolderByInviteLink",
   getChatFolderNewChats: "getChatFolderNewChats",
   processChatFolderNewChats: "processChatFolderNewChats",
+  getArchiveChatListSettings: "getArchiveChatListSettings",
+  setArchiveChatListSettings: "setArchiveChatListSettings",
   setChatTitle: "setChatTitle",
   setChatPhoto: "setChatPhoto",
   setChatMessageAutoDeleteTime: "setChatMessageAutoDeleteTime",
@@ -302,6 +306,26 @@ export const $Methods = Object.freeze({
   toggleChatIsPinned: "toggleChatIsPinned",
   setPinnedChats: "setPinnedChats",
   readChatList: "readChatList",
+  getStory: "getStory",
+  canSendStory: "canSendStory",
+  sendStory: "sendStory",
+  editStory: "editStory",
+  setStoryPrivacySettings: "setStoryPrivacySettings",
+  toggleStoryIsPinned: "toggleStoryIsPinned",
+  deleteStory: "deleteStory",
+  getStoryNotificationSettingsExceptions: "getStoryNotificationSettingsExceptions",
+  loadActiveStories: "loadActiveStories",
+  setChatActiveStoriesList: "setChatActiveStoriesList",
+  getChatActiveStories: "getChatActiveStories",
+  getChatPinnedStories: "getChatPinnedStories",
+  getArchivedStories: "getArchivedStories",
+  openStory: "openStory",
+  closeStory: "closeStory",
+  getStoryAvailableReactions: "getStoryAvailableReactions",
+  setStoryReaction: "setStoryReaction",
+  getStoryViewers: "getStoryViewers",
+  reportStory: "reportStory",
+  activateStoryStealthMode: "activateStoryStealthMode",
   getAttachmentMenuBot: "getAttachmentMenuBot",
   toggleBotIsAddedToAttachmentMenu: "toggleBotIsAddedToAttachmentMenu",
   getThemedEmojiStatuses: "getThemedEmojiStatuses",
@@ -380,7 +404,7 @@ export const $Methods = Object.freeze({
   endGroupCall: "endGroupCall",
   getGroupCallStreams: "getGroupCallStreams",
   getGroupCallStreamSegment: "getGroupCallStreamSegment",
-  toggleMessageSenderIsBlocked: "toggleMessageSenderIsBlocked",
+  setMessageSenderBlockList: "setMessageSenderBlockList",
   blockMessageSenderFromReplies: "blockMessageSenderFromReplies",
   getBlockedMessageSenders: "getBlockedMessageSenders",
   addContact: "addContact",
@@ -391,6 +415,8 @@ export const $Methods = Object.freeze({
   getImportedContactCount: "getImportedContactCount",
   changeImportedContacts: "changeImportedContacts",
   clearImportedContacts: "clearImportedContacts",
+  setCloseFriends: "setCloseFriends",
+  getCloseFriends: "getCloseFriends",
   setUserPersonalProfilePhoto: "setUserPersonalProfilePhoto",
   suggestUserProfilePhoto: "suggestUserProfilePhoto",
   searchUserByPhoneNumber: "searchUserByPhoneNumber",
@@ -459,7 +485,7 @@ export const $Methods = Object.freeze({
   getBotName: "getBotName",
   setBotProfilePhoto: "setBotProfilePhoto",
   toggleBotUsernameIsActive: "toggleBotUsernameIsActive",
-  reorderActiveBotUsernames: "reorderActiveBotUsernames",
+  reorderBotActiveUsernames: "reorderBotActiveUsernames",
   setBotInfoDescription: "setBotInfoDescription",
   getBotInfoDescription: "getBotInfoDescription",
   setBotInfoShortDescription: "setBotInfoShortDescription",
@@ -690,7 +716,7 @@ export const Update$Type = Object.freeze({
   ChatHasProtectedContent: "updateChatHasProtectedContent",
   ChatIsTranslatable: "updateChatIsTranslatable",
   ChatIsMarkedAsUnread: "updateChatIsMarkedAsUnread",
-  ChatIsBlocked: "updateChatIsBlocked",
+  ChatBlockList: "updateChatBlockList",
   ChatHasScheduledMessages: "updateChatHasScheduledMessages",
   ChatFolders: "updateChatFolders",
   ChatOnlineMemberCount: "updateChatOnlineMemberCount",
@@ -725,6 +751,13 @@ export const Update$Type = Object.freeze({
   UserPrivacySettingRules: "updateUserPrivacySettingRules",
   UnreadMessageCount: "updateUnreadMessageCount",
   UnreadChatCount: "updateUnreadChatCount",
+  Story: "updateStory",
+  StoryDeleted: "updateStoryDeleted",
+  StorySendSucceeded: "updateStorySendSucceeded",
+  StorySendFailed: "updateStorySendFailed",
+  ChatActiveStories: "updateChatActiveStories",
+  StoryListChatCount: "updateStoryListChatCount",
+  StoryStealthMode: "updateStoryStealthMode",
   Option: "updateOption",
   StickerSet: "updateStickerSet",
   InstalledStickerSets: "updateInstalledStickerSets",
@@ -827,6 +860,7 @@ export const SuggestedAction$Type = Object.freeze({
   ConvertToBroadcastGroup: "suggestedActionConvertToBroadcastGroup",
   SetPassword: "suggestedActionSetPassword",
   UpgradePremium: "suggestedActionUpgradePremium",
+  RestorePremium: "suggestedActionRestorePremium",
   SubscribeToAnnualPremium: "suggestedActionSubscribeToAnnualPremium"
 } as const);
 
@@ -902,6 +936,7 @@ export const FileType$Type = Object.freeze({
   Document: "fileTypeDocument",
   NotificationSound: "fileTypeNotificationSound",
   Photo: "fileTypePhoto",
+  PhotoStory: "fileTypePhotoStory",
   ProfilePhoto: "fileTypeProfilePhoto",
   Secret: "fileTypeSecret",
   SecretThumbnail: "fileTypeSecretThumbnail",
@@ -911,11 +946,19 @@ export const FileType$Type = Object.freeze({
   Unknown: "fileTypeUnknown",
   Video: "fileTypeVideo",
   VideoNote: "fileTypeVideoNote",
+  VideoStory: "fileTypeVideoStory",
   VoiceNote: "fileTypeVoiceNote",
   Wallpaper: "fileTypeWallpaper"
 } as const);
 
 export type FileType$Type = (typeof FileType$Type)[keyof typeof FileType$Type];
+
+export const BlockList$Type = Object.freeze({
+  Main: "blockListMain",
+  Stories: "blockListStories"
+} as const);
+
+export type BlockList$Type = (typeof BlockList$Type)[keyof typeof BlockList$Type];
 
 export const InternalLinkType$Type = Object.freeze({
   ActiveSessions: "internalLinkTypeActiveSessions",
@@ -949,6 +992,7 @@ export const InternalLinkType$Type = Object.freeze({
   RestorePurchases: "internalLinkTypeRestorePurchases",
   Settings: "internalLinkTypeSettings",
   StickerSet: "internalLinkTypeStickerSet",
+  Story: "internalLinkTypeStory",
   Theme: "internalLinkTypeTheme",
   ThemeSettings: "internalLinkTypeThemeSettings",
   UnknownDeepLink: "internalLinkTypeUnknownDeepLink",
@@ -970,21 +1014,21 @@ export const TargetChat$Type = Object.freeze({
 
 export type TargetChat$Type = (typeof TargetChat$Type)[keyof typeof TargetChat$Type];
 
-export const ChatReportReason$Type = Object.freeze({
-  Spam: "chatReportReasonSpam",
-  Violence: "chatReportReasonViolence",
-  Pornography: "chatReportReasonPornography",
-  ChildAbuse: "chatReportReasonChildAbuse",
-  Copyright: "chatReportReasonCopyright",
-  UnrelatedLocation: "chatReportReasonUnrelatedLocation",
-  Fake: "chatReportReasonFake",
-  IllegalDrugs: "chatReportReasonIllegalDrugs",
-  PersonalDetails: "chatReportReasonPersonalDetails",
-  Custom: "chatReportReasonCustom"
+export const ReportReason$Type = Object.freeze({
+  Spam: "reportReasonSpam",
+  Violence: "reportReasonViolence",
+  Pornography: "reportReasonPornography",
+  ChildAbuse: "reportReasonChildAbuse",
+  Copyright: "reportReasonCopyright",
+  UnrelatedLocation: "reportReasonUnrelatedLocation",
+  Fake: "reportReasonFake",
+  IllegalDrugs: "reportReasonIllegalDrugs",
+  PersonalDetails: "reportReasonPersonalDetails",
+  Custom: "reportReasonCustom"
 } as const);
 
-export type ChatReportReason$Type =
-  (typeof ChatReportReason$Type)[keyof typeof ChatReportReason$Type];
+export type ReportReason$Type =
+  (typeof ReportReason$Type)[keyof typeof ReportReason$Type];
 
 export const SessionType$Type = Object.freeze({
   Android: "sessionTypeAndroid",
@@ -1014,6 +1058,7 @@ export const UserPrivacySetting$Type = Object.freeze({
   ShowProfilePhoto: "userPrivacySettingShowProfilePhoto",
   ShowLinkInForwardedMessages: "userPrivacySettingShowLinkInForwardedMessages",
   ShowPhoneNumber: "userPrivacySettingShowPhoneNumber",
+  ShowBio: "userPrivacySettingShowBio",
   AllowChatInvites: "userPrivacySettingAllowChatInvites",
   AllowCalls: "userPrivacySettingAllowCalls",
   AllowPeerToPeerCalls: "userPrivacySettingAllowPeerToPeerCalls",
@@ -1038,6 +1083,16 @@ export const UserPrivacySettingRule$Type = Object.freeze({
 
 export type UserPrivacySettingRule$Type =
   (typeof UserPrivacySettingRule$Type)[keyof typeof UserPrivacySettingRule$Type];
+
+export const StoryPrivacySettings$Type = Object.freeze({
+  Everyone: "storyPrivacySettingsEveryone",
+  Contacts: "storyPrivacySettingsContacts",
+  CloseFriends: "storyPrivacySettingsCloseFriends",
+  SelectedContacts: "storyPrivacySettingsSelectedContacts"
+} as const);
+
+export type StoryPrivacySettings$Type =
+  (typeof StoryPrivacySettings$Type)[keyof typeof StoryPrivacySettings$Type];
 
 export const JsonValue$Type = Object.freeze({
   Null: "jsonValueNull",
@@ -1095,6 +1150,7 @@ export const PushMessageContent$Type = Object.freeze({
   Poll: "pushMessageContentPoll",
   ScreenshotTaken: "pushMessageContentScreenshotTaken",
   Sticker: "pushMessageContentSticker",
+  Story: "pushMessageContentStory",
   Text: "pushMessageContentText",
   Video: "pushMessageContentVideo",
   VideoNote: "pushMessageContentVideoNote",
@@ -1166,6 +1222,17 @@ export const CanTransferOwnershipResult$Type = Object.freeze({
 export type CanTransferOwnershipResult$Type =
   (typeof CanTransferOwnershipResult$Type)[keyof typeof CanTransferOwnershipResult$Type];
 
+export const CanSendStoryResult$Type = Object.freeze({
+  Ok: "canSendStoryResultOk",
+  PremiumNeeded: "canSendStoryResultPremiumNeeded",
+  ActiveStoryLimitExceeded: "canSendStoryResultActiveStoryLimitExceeded",
+  WeeklyLimitExceeded: "canSendStoryResultWeeklyLimitExceeded",
+  MonthlyLimitExceeded: "canSendStoryResultMonthlyLimitExceeded"
+} as const);
+
+export type CanSendStoryResult$Type =
+  (typeof CanSendStoryResult$Type)[keyof typeof CanSendStoryResult$Type];
+
 export const InputBackground$Type = Object.freeze({
   Local: "inputBackgroundLocal",
   Remote: "inputBackgroundRemote",
@@ -1222,12 +1289,25 @@ export type StorePaymentPurpose$Type =
 export const PremiumSource$Type = Object.freeze({
   LimitExceeded: "premiumSourceLimitExceeded",
   Feature: "premiumSourceFeature",
+  StoryFeature: "premiumSourceStoryFeature",
   Link: "premiumSourceLink",
   Settings: "premiumSourceSettings"
 } as const);
 
 export type PremiumSource$Type =
   (typeof PremiumSource$Type)[keyof typeof PremiumSource$Type];
+
+export const PremiumStoryFeature$Type = Object.freeze({
+  PriorityOrder: "premiumStoryFeaturePriorityOrder",
+  StealthMode: "premiumStoryFeatureStealthMode",
+  PermanentViewsHistory: "premiumStoryFeaturePermanentViewsHistory",
+  CustomExpirationDuration: "premiumStoryFeatureCustomExpirationDuration",
+  SaveStories: "premiumStoryFeatureSaveStories",
+  LinksAndFormatting: "premiumStoryFeatureLinksAndFormatting"
+} as const);
+
+export type PremiumStoryFeature$Type =
+  (typeof PremiumStoryFeature$Type)[keyof typeof PremiumStoryFeature$Type];
 
 export const PremiumFeature$Type = Object.freeze({
   IncreasedLimits: "premiumFeatureIncreasedLimits",
@@ -1244,7 +1324,8 @@ export const PremiumFeature$Type = Object.freeze({
   AnimatedProfilePhoto: "premiumFeatureAnimatedProfilePhoto",
   ForumTopicIcon: "premiumFeatureForumTopicIcon",
   AppIcons: "premiumFeatureAppIcons",
-  RealTimeChatTranslation: "premiumFeatureRealTimeChatTranslation"
+  RealTimeChatTranslation: "premiumFeatureRealTimeChatTranslation",
+  UpgradedStories: "premiumFeatureUpgradedStories"
 } as const);
 
 export type PremiumFeature$Type =
@@ -1262,7 +1343,11 @@ export const PremiumLimitType$Type = Object.freeze({
   CaptionLength: "premiumLimitTypeCaptionLength",
   BioLength: "premiumLimitTypeBioLength",
   ChatFolderInviteLinkCount: "premiumLimitTypeChatFolderInviteLinkCount",
-  ShareableChatFolderCount: "premiumLimitTypeShareableChatFolderCount"
+  ShareableChatFolderCount: "premiumLimitTypeShareableChatFolderCount",
+  ActiveStoryCount: "premiumLimitTypeActiveStoryCount",
+  WeeklySentStoryCount: "premiumLimitTypeWeeklySentStoryCount",
+  MonthlySentStoryCount: "premiumLimitTypeMonthlySentStoryCount",
+  StoryCaptionLength: "premiumLimitTypeStoryCaptionLength"
 } as const);
 
 export type PremiumLimitType$Type =
@@ -1462,6 +1547,47 @@ export const CallDiscardReason$Type = Object.freeze({
 export type CallDiscardReason$Type =
   (typeof CallDiscardReason$Type)[keyof typeof CallDiscardReason$Type];
 
+export const StoryList$Type = Object.freeze({
+  Main: "storyListMain",
+  Archive: "storyListArchive"
+} as const);
+
+export type StoryList$Type = (typeof StoryList$Type)[keyof typeof StoryList$Type];
+
+export const InputStoryContent$Type = Object.freeze({
+  Photo: "inputStoryContentPhoto",
+  Video: "inputStoryContentVideo"
+} as const);
+
+export type InputStoryContent$Type =
+  (typeof InputStoryContent$Type)[keyof typeof InputStoryContent$Type];
+
+export const StoryContent$Type = Object.freeze({
+  Photo: "storyContentPhoto",
+  Video: "storyContentVideo",
+  Unsupported: "storyContentUnsupported"
+} as const);
+
+export type StoryContent$Type =
+  (typeof StoryContent$Type)[keyof typeof StoryContent$Type];
+
+export const InputStoryAreaType$Type = Object.freeze({
+  Location: "inputStoryAreaTypeLocation",
+  FoundVenue: "inputStoryAreaTypeFoundVenue",
+  PreviousVenue: "inputStoryAreaTypePreviousVenue"
+} as const);
+
+export type InputStoryAreaType$Type =
+  (typeof InputStoryAreaType$Type)[keyof typeof InputStoryAreaType$Type];
+
+export const StoryAreaType$Type = Object.freeze({
+  Location: "storyAreaTypeLocation",
+  Venue: "storyAreaTypeVenue"
+} as const);
+
+export type StoryAreaType$Type =
+  (typeof StoryAreaType$Type)[keyof typeof StoryAreaType$Type];
+
 export const EmojiCategoryType$Type = Object.freeze({
   Default: "emojiCategoryTypeDefault",
   EmojiStatus: "emojiCategoryTypeEmojiStatus",
@@ -1542,6 +1668,7 @@ export const InputMessageContent$Type = Object.freeze({
   Game: "inputMessageGame",
   Invoice: "inputMessageInvoice",
   Poll: "inputMessagePoll",
+  Story: "inputMessageStory",
   Forwarded: "inputMessageForwarded"
 } as const);
 
@@ -1601,6 +1728,7 @@ export const MessageContent$Type = Object.freeze({
   Dice: "messageDice",
   Game: "messageGame",
   Poll: "messagePoll",
+  Story: "messageStory",
   Invoice: "messageInvoice",
   Call: "messageCall",
   VideoChatScheduled: "messageVideoChatScheduled",
@@ -1955,6 +2083,16 @@ export const NotificationSettingsScope$Type = Object.freeze({
 export type NotificationSettingsScope$Type =
   (typeof NotificationSettingsScope$Type)[keyof typeof NotificationSettingsScope$Type];
 
+export const MessageSponsorType$Type = Object.freeze({
+  Bot: "messageSponsorTypeBot",
+  PublicChannel: "messageSponsorTypePublicChannel",
+  PrivateChannel: "messageSponsorTypePrivateChannel",
+  Website: "messageSponsorTypeWebsite"
+} as const);
+
+export type MessageSponsorType$Type =
+  (typeof MessageSponsorType$Type)[keyof typeof MessageSponsorType$Type];
+
 export const MessageSource$Type = Object.freeze({
   ChatHistory: "messageSourceChatHistory",
   MessageThreadHistory: "messageSourceMessageThreadHistory",
@@ -1964,11 +2102,20 @@ export const MessageSource$Type = Object.freeze({
   Search: "messageSourceSearch",
   ChatEventLog: "messageSourceChatEventLog",
   Notification: "messageSourceNotification",
+  Screenshot: "messageSourceScreenshot",
   Other: "messageSourceOther"
 } as const);
 
 export type MessageSource$Type =
   (typeof MessageSource$Type)[keyof typeof MessageSource$Type];
+
+export const MessageReplyTo$Type = Object.freeze({
+  Message: "messageReplyToMessage",
+  Story: "messageReplyToStory"
+} as const);
+
+export type MessageReplyTo$Type =
+  (typeof MessageReplyTo$Type)[keyof typeof MessageReplyTo$Type];
 
 export const MessageSendingState$Type = Object.freeze({
   Pending: "messageSendingStatePending",
@@ -3606,7 +3753,7 @@ export type remoteFile = {
   /**
    * Remote file identifier; may be empty. Can be used by the current user across application restarts or even from other devices. Uniquely identifies a file, but a file can have a lot of different valid identifiers.
    *
-   * - If the ID starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known.
+   * - If the identifier starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known.
    *
    * - If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string.
    *
@@ -3651,7 +3798,7 @@ export type remoteFile$Input = {
   /**
    * Remote file identifier; may be empty. Can be used by the current user across application restarts or even from other devices. Uniquely identifies a file, but a file can have a lot of different valid identifiers.
    *
-   * - If the ID starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known.
+   * - If the identifier starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known.
    *
    * - If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string.
    *
@@ -3762,7 +3909,7 @@ export type file$Input = {
 };
 
 /**
- * A file defined by its unique ID
+ * A file defined by its unique identifier
  */
 export type inputFileId = {
   _: "inputFileId";
@@ -3777,7 +3924,7 @@ export type inputFileId = {
 /**
  * Version of {@link inputFileId} for method parameters.
  *
- * A file defined by its unique ID
+ * A file defined by its unique identifier
  */
 export type inputFileId$Input = {
   readonly _: "inputFileId";
@@ -3790,7 +3937,7 @@ export type inputFileId$Input = {
 };
 
 /**
- * A file defined by its remote ID. The remote ID is guaranteed to be usable only if the corresponding file is still accessible to the user and known to TDLib.
+ * A file defined by its remote identifier. The remote identifier is guaranteed to be usable only if the corresponding file is still accessible to the user and known to TDLib.
  *
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  */
@@ -3807,7 +3954,7 @@ export type inputFileRemote = {
 /**
  * Version of {@link inputFileRemote} for method parameters.
  *
- * A file defined by its remote ID. The remote ID is guaranteed to be usable only if the corresponding file is still accessible to the user and known to TDLib.
+ * A file defined by its remote identifier. The remote identifier is guaranteed to be usable only if the corresponding file is still accessible to the user and known to TDLib.
  *
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  */
@@ -4046,7 +4193,7 @@ export type thumbnailFormatJpeg$Input = {
 };
 
 /**
- * The thumbnail is in static GIF format. It will be used only for some bot inline results
+ * The thumbnail is in static GIF format. It will be used only for some bot inline query results
  */
 export type thumbnailFormatGif = {
   _: "thumbnailFormatGif";
@@ -4055,7 +4202,7 @@ export type thumbnailFormatGif = {
 /**
  * Version of {@link thumbnailFormatGif} for method parameters.
  *
- * The thumbnail is in static GIF format. It will be used only for some bot inline results
+ * The thumbnail is in static GIF format. It will be used only for some bot inline query results
  */
 export type thumbnailFormatGif$Input = {
   readonly _: "thumbnailFormatGif";
@@ -6020,10 +6167,10 @@ export type poll = {
   total_voter_count: int32;
 
   /**
-   * User identifiers of recent voters, if the poll is non-anonymous
-   * @type {vector<int53>} {@link vector<int53>}
+   * Identifiers of recent voters, if the poll is non-anonymous
+   * @type {vector<MessageSender>} {@link vector<MessageSender>}
    */
-  recent_voter_user_ids: vector<int53>;
+  recent_voter_ids: vector<MessageSender>;
 
   /**
    * True, if the poll is anonymous
@@ -6089,10 +6236,10 @@ export type poll$Input = {
   readonly total_voter_count?: int32;
 
   /**
-   * User identifiers of recent voters, if the poll is non-anonymous
-   * @type {vector<int53>} {@link vector<int53>}
+   * Identifiers of recent voters, if the poll is non-anonymous
+   * @type {vector<MessageSender>} {@link vector<MessageSender>}
    */
-  readonly recent_voter_user_ids?: vector$Input<int53>;
+  readonly recent_voter_ids?: vector$Input<MessageSender$Input>;
 
   /**
    * True, if the poll is anonymous
@@ -7684,6 +7831,12 @@ export type emojiStatus = {
    * @type {int64} {@link int64}
    */
   custom_emoji_id: int64;
+
+  /**
+   * Point in time (Unix timestamp) when the status will expire; 0 if never
+   * @type {int32} {@link int32}
+   */
+  expiration_date: int32;
 };
 
 /**
@@ -7699,34 +7852,40 @@ export type emojiStatus$Input = {
    * @type {int64} {@link int64}
    */
   readonly custom_emoji_id?: int64$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the status will expire; 0 if never
+   * @type {int32} {@link int32}
+   */
+  readonly expiration_date?: int32;
 };
 
 /**
- * Contains a list of emoji statuses
+ * Contains a list of custom emoji identifiers, which can be set as emoji statuses
  */
 export type emojiStatuses = {
   _: "emojiStatuses";
 
   /**
-   * The list of emoji statuses
-   * @type {vector<emojiStatus>} {@link vector<emojiStatus>}
+   * The list of custom emoji identifiers
+   * @type {vector<int64>} {@link vector<int64>}
    */
-  emoji_statuses: vector<emojiStatus>;
+  custom_emoji_ids: vector<int64>;
 };
 
 /**
  * Version of {@link emojiStatuses} for method parameters.
  *
- * Contains a list of emoji statuses
+ * Contains a list of custom emoji identifiers, which can be set as emoji statuses
  */
 export type emojiStatuses$Input = {
   readonly _: "emojiStatuses";
 
   /**
-   * The list of emoji statuses
-   * @type {vector<emojiStatus>} {@link vector<emojiStatus>}
+   * The list of custom emoji identifiers
+   * @type {vector<int64>} {@link vector<int64>}
    */
-  readonly emoji_statuses?: vector$Input<emojiStatus$Input>;
+  readonly custom_emoji_ids?: vector$Input<int64$Input>;
 };
 
 /**
@@ -7848,6 +8007,12 @@ export type user = {
   is_mutual_contact: Bool;
 
   /**
+   * The user is a close friend of the current user; implies that the user is a contact
+   * @type {Bool} {@link Bool}
+   */
+  is_close_friend: Bool;
+
+  /**
    * True, if the user is verified
    * @type {Bool} {@link Bool}
    */
@@ -7882,6 +8047,18 @@ export type user = {
    * @type {Bool} {@link Bool}
    */
   is_fake: Bool;
+
+  /**
+   * True, if the user has non-expired stories available to the current user
+   * @type {Bool} {@link Bool}
+   */
+  has_active_stories: Bool;
+
+  /**
+   * True, if the user has unread non-expired stories available to the current user
+   * @type {Bool} {@link Bool}
+   */
+  has_unread_active_stories: Bool;
 
   /**
    * If false, the user is inaccessible, and the only information known about the user is inside this class. Identifier of the user can't be passed to any method
@@ -7977,6 +8154,12 @@ export type user$Input = {
   readonly is_mutual_contact?: Bool$Input;
 
   /**
+   * The user is a close friend of the current user; implies that the user is a contact
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_close_friend?: Bool$Input;
+
+  /**
    * True, if the user is verified
    * @type {Bool} {@link Bool}
    */
@@ -8011,6 +8194,18 @@ export type user$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_fake?: Bool$Input;
+
+  /**
+   * True, if the user has non-expired stories available to the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_active_stories?: Bool$Input;
+
+  /**
+   * True, if the user has unread non-expired stories available to the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_unread_active_stories?: Bool$Input;
 
   /**
    * If false, the user is inaccessible, and the only information known about the user is inside this class. Identifier of the user can't be passed to any method
@@ -8228,10 +8423,10 @@ export type userFullInfo = {
   public_photo: chatPhoto | null;
 
   /**
-   * True, if the user is blocked by the current user
-   * @type {Bool} {@link Bool}
+   * Block list to which the user is added; may be null if none
+   * @type {BlockList} {@link BlockList}
    */
-  is_blocked: Bool;
+  block_list: BlockList | null;
 
   /**
    * True, if the user can be called
@@ -8264,6 +8459,12 @@ export type userFullInfo = {
   has_restricted_voice_and_video_note_messages: Bool;
 
   /**
+   * True, if the user has pinned stories
+   * @type {Bool} {@link Bool}
+   */
+  has_pinned_stories: Bool;
+
+  /**
    * True, if the current user needs to explicitly allow to share their phone number with the user when the method addContact is used
    * @type {Bool} {@link Bool}
    */
@@ -8288,7 +8489,7 @@ export type userFullInfo = {
   group_in_common_count: int32;
 
   /**
-   * For bots, information about the bot; may be null
+   * For bots, information about the bot; may be null if the user isn't a bot
    * @type {botInfo} {@link botInfo}
    */
   bot_info: botInfo | null;
@@ -8327,10 +8528,10 @@ export type userFullInfo$Input = {
   readonly public_photo?: chatPhoto$Input | null;
 
   /**
-   * True, if the user is blocked by the current user
-   * @type {Bool} {@link Bool}
+   * Block list to which the user is added; may be null if none
+   * @type {BlockList} {@link BlockList}
    */
-  readonly is_blocked?: Bool$Input;
+  readonly block_list?: BlockList$Input | null;
 
   /**
    * True, if the user can be called
@@ -8363,6 +8564,12 @@ export type userFullInfo$Input = {
   readonly has_restricted_voice_and_video_note_messages?: Bool$Input;
 
   /**
+   * True, if the user has pinned stories
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_pinned_stories?: Bool$Input;
+
+  /**
    * True, if the current user needs to explicitly allow to share their phone number with the user when the method addContact is used
    * @type {Bool} {@link Bool}
    */
@@ -8387,7 +8594,7 @@ export type userFullInfo$Input = {
   readonly group_in_common_count?: int32;
 
   /**
-   * For bots, information about the bot; may be null
+   * For bots, information about the bot; may be null if the user isn't a bot
    * @type {botInfo} {@link botInfo}
    */
   readonly bot_info?: botInfo$Input | null;
@@ -10324,12 +10531,6 @@ export type supergroupFullInfo = {
   can_hide_members: Bool;
 
   /**
-   * True, if the chat username can be changed
-   * @type {Bool} {@link Bool}
-   */
-  can_set_username: Bool;
-
-  /**
    * True, if the supergroup sticker set can be changed
    * @type {Bool} {@link Bool}
    */
@@ -10374,7 +10575,7 @@ export type supergroupFullInfo = {
   sticker_set_id: int64;
 
   /**
-   * Location to which the supergroup is connected; may be null
+   * Location to which the supergroup is connected; may be null if none
    * @type {chatLocation} {@link chatLocation}
    */
   location: chatLocation | null;
@@ -10485,12 +10686,6 @@ export type supergroupFullInfo$Input = {
   readonly can_hide_members?: Bool$Input;
 
   /**
-   * True, if the chat username can be changed
-   * @type {Bool} {@link Bool}
-   */
-  readonly can_set_username?: Bool$Input;
-
-  /**
    * True, if the supergroup sticker set can be changed
    * @type {Bool} {@link Bool}
    */
@@ -10535,7 +10730,7 @@ export type supergroupFullInfo$Input = {
   readonly sticker_set_id?: int64$Input;
 
   /**
-   * Location to which the supergroup is connected; may be null
+   * Location to which the supergroup is connected; may be null if none
    * @type {chatLocation} {@link chatLocation}
    */
   readonly location?: chatLocation$Input | null;
@@ -11610,6 +11805,86 @@ export type messageSendingStateFailed$Input = {
 };
 
 /**
+ * Describes a replied message
+ */
+export type messageReplyToMessage = {
+  _: "messageReplyToMessage";
+
+  /**
+   * The identifier of the chat to which the replied message belongs; ignored for outgoing replies. For example, messages in the Replies chat are replies to messages in different chats
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * The identifier of the replied message
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+};
+
+/**
+ * Version of {@link messageReplyToMessage} for method parameters.
+ *
+ * Describes a replied message
+ */
+export type messageReplyToMessage$Input = {
+  readonly _: "messageReplyToMessage";
+
+  /**
+   * The identifier of the chat to which the replied message belongs; ignored for outgoing replies. For example, messages in the Replies chat are replies to messages in different chats
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The identifier of the replied message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Describes a replied story
+ */
+export type messageReplyToStory = {
+  _: "messageReplyToStory";
+
+  /**
+   * The identifier of the sender of the replied story. Currently, stories can be replied only in the sender's chat
+   * @type {int53} {@link int53}
+   */
+  story_sender_chat_id: int53;
+
+  /**
+   * The identifier of the replied story
+   * @type {int32} {@link int32}
+   */
+  story_id: int32;
+};
+
+/**
+ * Version of {@link messageReplyToStory} for method parameters.
+ *
+ * Describes a replied story
+ */
+export type messageReplyToStory$Input = {
+  readonly _: "messageReplyToStory";
+
+  /**
+   * The identifier of the sender of the replied story. Currently, stories can be replied only in the sender's chat
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the replied story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
  * Describes a message
  */
 export type message = {
@@ -11634,13 +11909,13 @@ export type message = {
   chat_id: int53;
 
   /**
-   * The sending state of the message; may be null
+   * The sending state of the message; may be null if the message isn't being sent and didn't fail to be sent
    * @type {MessageSendingState} {@link MessageSendingState}
    */
   sending_state: MessageSendingState | null;
 
   /**
-   * The scheduling state of the message; may be null
+   * The scheduling state of the message; may be null if the message isn't scheduled
    * @type {MessageSchedulingState} {@link MessageSchedulingState}
    */
   scheduling_state: MessageSchedulingState | null;
@@ -11760,13 +12035,13 @@ export type message = {
   edit_date: int32;
 
   /**
-   * Information about the initial message sender; may be null
+   * Information about the initial message sender; may be null if none or unknown
    * @type {messageForwardInfo} {@link messageForwardInfo}
    */
   forward_info: messageForwardInfo | null;
 
   /**
-   * Information about interactions with the message; may be null
+   * Information about interactions with the message; may be null if none
    * @type {messageInteractionInfo} {@link messageInteractionInfo}
    */
   interaction_info: messageInteractionInfo | null;
@@ -11778,16 +12053,10 @@ export type message = {
   unread_reactions: vector<unreadReaction>;
 
   /**
-   * If non-zero, the identifier of the chat to which the replied message belongs; Currently, only messages in the Replies chat can have different reply_in_chat_id and chat_id
-   * @type {int53} {@link int53}
+   * Information about the message or the story this message is replying to; may be null if none
+   * @type {MessageReplyTo} {@link MessageReplyTo}
    */
-  reply_in_chat_id: int53;
-
-  /**
-   * If non-zero, the identifier of the message this message is replying to; can be the identifier of a deleted message
-   * @type {int53} {@link int53}
-   */
-  reply_to_message_id: int53;
+  reply_to: MessageReplyTo | null;
 
   /**
    * If non-zero, the identifier of the message thread the message belongs to; unique within the chat to which the message belongs
@@ -11844,7 +12113,7 @@ export type message = {
   content: MessageContent;
 
   /**
-   * Reply markup for the message; may be null
+   * Reply markup for the message; may be null if none
    * @type {ReplyMarkup} {@link ReplyMarkup}
    */
   reply_markup: ReplyMarkup | null;
@@ -11877,13 +12146,13 @@ export type message$Input = {
   readonly chat_id?: int53;
 
   /**
-   * The sending state of the message; may be null
+   * The sending state of the message; may be null if the message isn't being sent and didn't fail to be sent
    * @type {MessageSendingState} {@link MessageSendingState}
    */
   readonly sending_state?: MessageSendingState$Input | null;
 
   /**
-   * The scheduling state of the message; may be null
+   * The scheduling state of the message; may be null if the message isn't scheduled
    * @type {MessageSchedulingState} {@link MessageSchedulingState}
    */
   readonly scheduling_state?: MessageSchedulingState$Input | null;
@@ -12003,13 +12272,13 @@ export type message$Input = {
   readonly edit_date?: int32;
 
   /**
-   * Information about the initial message sender; may be null
+   * Information about the initial message sender; may be null if none or unknown
    * @type {messageForwardInfo} {@link messageForwardInfo}
    */
   readonly forward_info?: messageForwardInfo$Input | null;
 
   /**
-   * Information about interactions with the message; may be null
+   * Information about interactions with the message; may be null if none
    * @type {messageInteractionInfo} {@link messageInteractionInfo}
    */
   readonly interaction_info?: messageInteractionInfo$Input | null;
@@ -12021,16 +12290,10 @@ export type message$Input = {
   readonly unread_reactions?: vector$Input<unreadReaction$Input>;
 
   /**
-   * If non-zero, the identifier of the chat to which the replied message belongs; Currently, only messages in the Replies chat can have different reply_in_chat_id and chat_id
-   * @type {int53} {@link int53}
+   * Information about the message or the story this message is replying to; may be null if none
+   * @type {MessageReplyTo} {@link MessageReplyTo}
    */
-  readonly reply_in_chat_id?: int53;
-
-  /**
-   * If non-zero, the identifier of the message this message is replying to; can be the identifier of a deleted message
-   * @type {int53} {@link int53}
-   */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * If non-zero, the identifier of the message thread the message belongs to; unique within the chat to which the message belongs
@@ -12087,7 +12350,7 @@ export type message$Input = {
   readonly content?: MessageContent$Input;
 
   /**
-   * Reply markup for the message; may be null
+   * Reply markup for the message; may be null if none
    * @type {ReplyMarkup} {@link ReplyMarkup}
    */
   readonly reply_markup?: ReplyMarkup$Input | null;
@@ -12538,6 +12801,22 @@ export type messageSourceNotification$Input = {
 };
 
 /**
+ * The message was screenshotted; the source must be used only if the message content was visible during the screenshot
+ */
+export type messageSourceScreenshot = {
+  _: "messageSourceScreenshot";
+};
+
+/**
+ * Version of {@link messageSourceScreenshot} for method parameters.
+ *
+ * The message was screenshotted; the source must be used only if the message content was visible during the screenshot
+ */
+export type messageSourceScreenshot$Input = {
+  readonly _: "messageSourceScreenshot";
+};
+
+/**
  * The message is from some other source
  */
 export type messageSourceOther = {
@@ -12551,6 +12830,218 @@ export type messageSourceOther = {
  */
 export type messageSourceOther$Input = {
   readonly _: "messageSourceOther";
+};
+
+/**
+ * The sponsor is a bot
+ */
+export type messageSponsorTypeBot = {
+  _: "messageSponsorTypeBot";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  bot_user_id: int53;
+
+  /**
+   * An internal link to be opened when the sponsored message is clicked
+   * @type {InternalLinkType} {@link InternalLinkType}
+   */
+  link: InternalLinkType;
+};
+
+/**
+ * Version of {@link messageSponsorTypeBot} for method parameters.
+ *
+ * The sponsor is a bot
+ */
+export type messageSponsorTypeBot$Input = {
+  readonly _: "messageSponsorTypeBot";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * An internal link to be opened when the sponsored message is clicked
+   * @type {InternalLinkType} {@link InternalLinkType}
+   */
+  readonly link?: InternalLinkType$Input;
+};
+
+/**
+ * The sponsor is a public channel chat
+ */
+export type messageSponsorTypePublicChannel = {
+  _: "messageSponsorTypePublicChannel";
+
+  /**
+   * Sponsor chat identifier
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * An internal link to be opened when the sponsored message is clicked; may be null if the sponsor chat needs to be opened instead
+   * @type {InternalLinkType} {@link InternalLinkType}
+   */
+  link: InternalLinkType | null;
+};
+
+/**
+ * Version of {@link messageSponsorTypePublicChannel} for method parameters.
+ *
+ * The sponsor is a public channel chat
+ */
+export type messageSponsorTypePublicChannel$Input = {
+  readonly _: "messageSponsorTypePublicChannel";
+
+  /**
+   * Sponsor chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * An internal link to be opened when the sponsored message is clicked; may be null if the sponsor chat needs to be opened instead
+   * @type {InternalLinkType} {@link InternalLinkType}
+   */
+  readonly link?: InternalLinkType$Input | null;
+};
+
+/**
+ * The sponsor is a private channel chat
+ */
+export type messageSponsorTypePrivateChannel = {
+  _: "messageSponsorTypePrivateChannel";
+
+  /**
+   * Title of the chat
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Invite link for the channel
+   * @type {string} {@link string}
+   */
+  invite_link: string;
+};
+
+/**
+ * Version of {@link messageSponsorTypePrivateChannel} for method parameters.
+ *
+ * The sponsor is a private channel chat
+ */
+export type messageSponsorTypePrivateChannel$Input = {
+  readonly _: "messageSponsorTypePrivateChannel";
+
+  /**
+   * Title of the chat
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Invite link for the channel
+   * @type {string} {@link string}
+   */
+  readonly invite_link?: string;
+};
+
+/**
+ * The sponsor is a website
+ */
+export type messageSponsorTypeWebsite = {
+  _: "messageSponsorTypeWebsite";
+
+  /**
+   * URL of the website
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * Name of the website
+   * @type {string} {@link string}
+   */
+  name: string;
+};
+
+/**
+ * Version of {@link messageSponsorTypeWebsite} for method parameters.
+ *
+ * The sponsor is a website
+ */
+export type messageSponsorTypeWebsite$Input = {
+  readonly _: "messageSponsorTypeWebsite";
+
+  /**
+   * URL of the website
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * Name of the website
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+};
+
+/**
+ * Information about the sponsor of a message
+ */
+export type messageSponsor = {
+  _: "messageSponsor";
+
+  /**
+   * Type of the sponsor
+   * @type {MessageSponsorType} {@link MessageSponsorType}
+   */
+  type: MessageSponsorType;
+
+  /**
+   * Photo of the sponsor; may be null if must not be shown
+   * @type {chatPhotoInfo} {@link chatPhotoInfo}
+   */
+  photo: chatPhotoInfo | null;
+
+  /**
+   * Additional optional information about the sponsor to be shown along with the message
+   * @type {string} {@link string}
+   */
+  info: string;
+};
+
+/**
+ * Version of {@link messageSponsor} for method parameters.
+ *
+ * Information about the sponsor of a message
+ */
+export type messageSponsor$Input = {
+  readonly _: "messageSponsor";
+
+  /**
+   * Type of the sponsor
+   * @type {MessageSponsorType} {@link MessageSponsorType}
+   */
+  readonly type?: MessageSponsorType$Input;
+
+  /**
+   * Photo of the sponsor; may be null if must not be shown
+   * @type {chatPhotoInfo} {@link chatPhotoInfo}
+   */
+  readonly photo?: chatPhotoInfo$Input | null;
+
+  /**
+   * Additional optional information about the sponsor to be shown along with the message
+   * @type {string} {@link string}
+   */
+  readonly info?: string;
 };
 
 /**
@@ -12572,40 +13063,16 @@ export type sponsoredMessage = {
   is_recommended: Bool;
 
   /**
-   * Sponsor chat identifier; 0 if the sponsor chat is accessible through an invite link
-   * @type {int53} {@link int53}
-   */
-  sponsor_chat_id: int53;
-
-  /**
-   * Information about the sponsor chat; may be null unless sponsor_chat_id == 0
-   * @type {chatInviteLinkInfo} {@link chatInviteLinkInfo}
-   */
-  sponsor_chat_info: chatInviteLinkInfo | null;
-
-  /**
-   * True, if the sponsor's chat photo must be shown
-   * @type {Bool} {@link Bool}
-   */
-  show_chat_photo: Bool;
-
-  /**
-   * An internal link to be opened when the sponsored message is clicked; may be null if the sponsor chat needs to be opened instead
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  link: InternalLinkType | null;
-
-  /**
    * Content of the message. Currently, can be only of the type messageText
    * @type {MessageContent} {@link MessageContent}
    */
   content: MessageContent;
 
   /**
-   * If non-empty, information about the sponsor to be shown along with the message
-   * @type {string} {@link string}
+   * Information about the sponsor of the message
+   * @type {messageSponsor} {@link messageSponsor}
    */
-  sponsor_info: string;
+  sponsor: messageSponsor;
 
   /**
    * If non-empty, additional information about the sponsored message to be shown along with the message
@@ -12635,40 +13102,16 @@ export type sponsoredMessage$Input = {
   readonly is_recommended?: Bool$Input;
 
   /**
-   * Sponsor chat identifier; 0 if the sponsor chat is accessible through an invite link
-   * @type {int53} {@link int53}
-   */
-  readonly sponsor_chat_id?: int53;
-
-  /**
-   * Information about the sponsor chat; may be null unless sponsor_chat_id == 0
-   * @type {chatInviteLinkInfo} {@link chatInviteLinkInfo}
-   */
-  readonly sponsor_chat_info?: chatInviteLinkInfo$Input | null;
-
-  /**
-   * True, if the sponsor's chat photo must be shown
-   * @type {Bool} {@link Bool}
-   */
-  readonly show_chat_photo?: Bool$Input;
-
-  /**
-   * An internal link to be opened when the sponsored message is clicked; may be null if the sponsor chat needs to be opened instead
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  readonly link?: InternalLinkType$Input | null;
-
-  /**
    * Content of the message. Currently, can be only of the type messageText
    * @type {MessageContent} {@link MessageContent}
    */
   readonly content?: MessageContent$Input;
 
   /**
-   * If non-empty, information about the sponsor to be shown along with the message
-   * @type {string} {@link string}
+   * Information about the sponsor of the message
+   * @type {messageSponsor} {@link messageSponsor}
    */
-  readonly sponsor_info?: string;
+  readonly sponsor?: messageSponsor$Input;
 
   /**
    * If non-empty, additional information about the sponsored message to be shown along with the message
@@ -12970,7 +13413,7 @@ export type chatNotificationSettings = {
   use_default_sound: Bool;
 
   /**
-   * Identifier of the notification sound to be played; 0 if sound is disabled
+   * Identifier of the notification sound to be played for messages; 0 if sound is disabled
    * @type {int64} {@link int64}
    */
   sound_id: int64;
@@ -12986,6 +13429,42 @@ export type chatNotificationSettings = {
    * @type {Bool} {@link Bool}
    */
   show_preview: Bool;
+
+  /**
+   * If true, mute_stories is ignored and the value for the relevant type of chat is used instead
+   * @type {Bool} {@link Bool}
+   */
+  use_default_mute_stories: Bool;
+
+  /**
+   * True, if story notifications are disabled for the chat
+   * @type {Bool} {@link Bool}
+   */
+  mute_stories: Bool;
+
+  /**
+   * If true, the value for the relevant type of chat is used instead of story_sound_id
+   * @type {Bool} {@link Bool}
+   */
+  use_default_story_sound: Bool;
+
+  /**
+   * Identifier of the notification sound to be played for stories; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  story_sound_id: int64;
+
+  /**
+   * If true, show_story_sender is ignored and the value for the relevant type of chat is used instead
+   * @type {Bool} {@link Bool}
+   */
+  use_default_show_story_sender: Bool;
+
+  /**
+   * True, if the sender of stories must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  show_story_sender: Bool;
 
   /**
    * If true, disable_pinned_message_notifications is ignored and the value for the relevant type of chat or the forum chat is used instead
@@ -13039,7 +13518,7 @@ export type chatNotificationSettings$Input = {
   readonly use_default_sound?: Bool$Input;
 
   /**
-   * Identifier of the notification sound to be played; 0 if sound is disabled
+   * Identifier of the notification sound to be played for messages; 0 if sound is disabled
    * @type {int64} {@link int64}
    */
   readonly sound_id?: int64$Input;
@@ -13055,6 +13534,42 @@ export type chatNotificationSettings$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly show_preview?: Bool$Input;
+
+  /**
+   * If true, mute_stories is ignored and the value for the relevant type of chat is used instead
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_mute_stories?: Bool$Input;
+
+  /**
+   * True, if story notifications are disabled for the chat
+   * @type {Bool} {@link Bool}
+   */
+  readonly mute_stories?: Bool$Input;
+
+  /**
+   * If true, the value for the relevant type of chat is used instead of story_sound_id
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_story_sound?: Bool$Input;
+
+  /**
+   * Identifier of the notification sound to be played for stories; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  readonly story_sound_id?: int64$Input;
+
+  /**
+   * If true, show_story_sender is ignored and the value for the relevant type of chat is used instead
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_show_story_sender?: Bool$Input;
+
+  /**
+   * True, if the sender of stories must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_story_sender?: Bool$Input;
 
   /**
    * If true, disable_pinned_message_notifications is ignored and the value for the relevant type of chat or the forum chat is used instead
@@ -13106,6 +13621,30 @@ export type scopeNotificationSettings = {
   show_preview: Bool;
 
   /**
+   * If true, mute_stories is ignored and story notifications are received only for the first 5 chats from topChatCategoryUsers
+   * @type {Bool} {@link Bool}
+   */
+  use_default_mute_stories: Bool;
+
+  /**
+   * True, if story notifications are disabled for the chat
+   * @type {Bool} {@link Bool}
+   */
+  mute_stories: Bool;
+
+  /**
+   * Identifier of the notification sound to be played for stories; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  story_sound_id: int64;
+
+  /**
+   * True, if the sender of stories must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  show_story_sender: Bool;
+
+  /**
    * True, if notifications for incoming pinned messages will be created as for an ordinary unread message
    * @type {Bool} {@link Bool}
    */
@@ -13143,6 +13682,30 @@ export type scopeNotificationSettings$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly show_preview?: Bool$Input;
+
+  /**
+   * If true, mute_stories is ignored and story notifications are received only for the first 5 chats from topChatCategoryUsers
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_mute_stories?: Bool$Input;
+
+  /**
+   * True, if story notifications are disabled for the chat
+   * @type {Bool} {@link Bool}
+   */
+  readonly mute_stories?: Bool$Input;
+
+  /**
+   * Identifier of the notification sound to be played for stories; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  readonly story_sound_id?: int64$Input;
+
+  /**
+   * True, if the sender of stories must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_story_sender?: Bool$Input;
 
   /**
    * True, if notifications for incoming pinned messages will be created as for an ordinary unread message
@@ -13586,6 +14149,12 @@ export type chatFolderInfo = {
   icon: chatFolderIcon;
 
   /**
+   * True, if at least one link has been created for the folder
+   * @type {Bool} {@link Bool}
+   */
+  is_shareable: Bool;
+
+  /**
    * True, if the chat folder has invite links created by the current user
    * @type {Bool} {@link Bool}
    */
@@ -13617,6 +14186,12 @@ export type chatFolderInfo$Input = {
    * @type {chatFolderIcon} {@link chatFolderIcon}
    */
   readonly icon?: chatFolderIcon$Input;
+
+  /**
+   * True, if at least one link has been created for the folder
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_shareable?: Bool$Input;
 
   /**
    * True, if the chat folder has invite links created by the current user
@@ -13823,6 +14398,58 @@ export type recommendedChatFolders$Input = {
    * @type {vector<recommendedChatFolder>} {@link vector<recommendedChatFolder>}
    */
   readonly chat_folders?: vector$Input<recommendedChatFolder$Input>;
+};
+
+/**
+ * Contains settings for automatic moving of chats to and from the Archive chat lists
+ */
+export type archiveChatListSettings = {
+  _: "archiveChatListSettings";
+
+  /**
+   * True, if new chats from non-contacts will be automatically archived and muted. Can be set to true only if the option "can_archive_and_mute_new_chats_from_unknown_users" is true
+   * @type {Bool} {@link Bool}
+   */
+  archive_and_mute_new_chats_from_unknown_users: Bool;
+
+  /**
+   * True, if unmuted chats will be kept in the Archive chat list when they get a new message
+   * @type {Bool} {@link Bool}
+   */
+  keep_unmuted_chats_archived: Bool;
+
+  /**
+   * True, if unmuted chats, that are always included or pinned in a folder, will be kept in the Archive chat list when they get a new message. Ignored if keep_unmuted_chats_archived == true
+   * @type {Bool} {@link Bool}
+   */
+  keep_chats_from_folders_archived: Bool;
+};
+
+/**
+ * Version of {@link archiveChatListSettings} for method parameters.
+ *
+ * Contains settings for automatic moving of chats to and from the Archive chat lists
+ */
+export type archiveChatListSettings$Input = {
+  readonly _: "archiveChatListSettings";
+
+  /**
+   * True, if new chats from non-contacts will be automatically archived and muted. Can be set to true only if the option "can_archive_and_mute_new_chats_from_unknown_users" is true
+   * @type {Bool} {@link Bool}
+   */
+  readonly archive_and_mute_new_chats_from_unknown_users?: Bool$Input;
+
+  /**
+   * True, if unmuted chats will be kept in the Archive chat list when they get a new message
+   * @type {Bool} {@link Bool}
+   */
+  readonly keep_unmuted_chats_archived?: Bool$Input;
+
+  /**
+   * True, if unmuted chats, that are always included or pinned in a folder, will be kept in the Archive chat list when they get a new message. Ignored if keep_unmuted_chats_archived == true
+   * @type {Bool} {@link Bool}
+   */
+  readonly keep_chats_from_folders_archived?: Bool$Input;
 };
 
 /**
@@ -14166,7 +14793,7 @@ export type chat = {
   permissions: chatPermissions;
 
   /**
-   * Last message in the chat; may be null
+   * Last message in the chat; may be null if none or unknown
    * @type {message} {@link message}
    */
   last_message: message | null;
@@ -14182,6 +14809,12 @@ export type chat = {
    * @type {MessageSender} {@link MessageSender}
    */
   message_sender_id: MessageSender | null;
+
+  /**
+   * Block list to which the chat is added; may be null if none
+   * @type {BlockList} {@link BlockList}
+   */
+  block_list: BlockList | null;
 
   /**
    * True, if chat content can't be saved locally, forwarded, or copied
@@ -14200,12 +14833,6 @@ export type chat = {
    * @type {Bool} {@link Bool}
    */
   is_marked_as_unread: Bool;
-
-  /**
-   * True, if the chat is blocked by the current user and private messages from the chat can't be received
-   * @type {Bool} {@link Bool}
-   */
-  is_blocked: Bool;
 
   /**
    * True, if the chat has scheduled messages
@@ -14298,7 +14925,7 @@ export type chat = {
   theme_name: string;
 
   /**
-   * Information about actions which must be possible to do through the chat action bar; may be null
+   * Information about actions which must be possible to do through the chat action bar; may be null if none
    * @type {ChatActionBar} {@link ChatActionBar}
    */
   action_bar: ChatActionBar | null;
@@ -14310,7 +14937,7 @@ export type chat = {
   video_chat: videoChat;
 
   /**
-   * Information about pending join requests; may be null
+   * Information about pending join requests; may be null if none
    * @type {chatJoinRequestsInfo} {@link chatJoinRequestsInfo}
    */
   pending_join_requests: chatJoinRequestsInfo | null;
@@ -14322,7 +14949,7 @@ export type chat = {
   reply_markup_message_id: int53;
 
   /**
-   * A draft of a message in the chat; may be null
+   * A draft of a message in the chat; may be null if none
    * @type {draftMessage} {@link draftMessage}
    */
   draft_message: draftMessage | null;
@@ -14373,7 +15000,7 @@ export type chat$Input = {
   readonly permissions?: chatPermissions$Input;
 
   /**
-   * Last message in the chat; may be null
+   * Last message in the chat; may be null if none or unknown
    * @type {message} {@link message}
    */
   readonly last_message?: message$Input | null;
@@ -14389,6 +15016,12 @@ export type chat$Input = {
    * @type {MessageSender} {@link MessageSender}
    */
   readonly message_sender_id?: MessageSender$Input | null;
+
+  /**
+   * Block list to which the chat is added; may be null if none
+   * @type {BlockList} {@link BlockList}
+   */
+  readonly block_list?: BlockList$Input | null;
 
   /**
    * True, if chat content can't be saved locally, forwarded, or copied
@@ -14407,12 +15040,6 @@ export type chat$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_marked_as_unread?: Bool$Input;
-
-  /**
-   * True, if the chat is blocked by the current user and private messages from the chat can't be received
-   * @type {Bool} {@link Bool}
-   */
-  readonly is_blocked?: Bool$Input;
 
   /**
    * True, if the chat has scheduled messages
@@ -14505,7 +15132,7 @@ export type chat$Input = {
   readonly theme_name?: string;
 
   /**
-   * Information about actions which must be possible to do through the chat action bar; may be null
+   * Information about actions which must be possible to do through the chat action bar; may be null if none
    * @type {ChatActionBar} {@link ChatActionBar}
    */
   readonly action_bar?: ChatActionBar$Input | null;
@@ -14517,7 +15144,7 @@ export type chat$Input = {
   readonly video_chat?: videoChat$Input;
 
   /**
-   * Information about pending join requests; may be null
+   * Information about pending join requests; may be null if none
    * @type {chatJoinRequestsInfo} {@link chatJoinRequestsInfo}
    */
   readonly pending_join_requests?: chatJoinRequestsInfo$Input | null;
@@ -14529,7 +15156,7 @@ export type chat$Input = {
   readonly reply_markup_message_id?: int53;
 
   /**
-   * A draft of a message in the chat; may be null
+   * A draft of a message in the chat; may be null if none
    * @type {draftMessage} {@link draftMessage}
    */
   readonly draft_message?: draftMessage$Input | null;
@@ -14694,7 +15321,7 @@ export type publicChatTypeIsLocationBased$Input = {
 };
 
 /**
- * The chat can be reported as spam using the method reportChat with the reason chatReportReasonSpam. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
+ * The chat can be reported as spam using the method reportChat with the reason reportReasonSpam. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
  */
 export type chatActionBarReportSpam = {
   _: "chatActionBarReportSpam";
@@ -14709,7 +15336,7 @@ export type chatActionBarReportSpam = {
 /**
  * Version of {@link chatActionBarReportSpam} for method parameters.
  *
- * The chat can be reported as spam using the method reportChat with the reason chatReportReasonSpam. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
+ * The chat can be reported as spam using the method reportChat with the reason reportReasonSpam. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
  */
 export type chatActionBarReportSpam$Input = {
   readonly _: "chatActionBarReportSpam";
@@ -14722,7 +15349,7 @@ export type chatActionBarReportSpam$Input = {
 };
 
 /**
- * The chat is a location-based supergroup, which can be reported as having unrelated location using the method reportChat with the reason chatReportReasonUnrelatedLocation
+ * The chat is a location-based supergroup, which can be reported as having unrelated location using the method reportChat with the reason reportReasonUnrelatedLocation
  */
 export type chatActionBarReportUnrelatedLocation = {
   _: "chatActionBarReportUnrelatedLocation";
@@ -14731,7 +15358,7 @@ export type chatActionBarReportUnrelatedLocation = {
 /**
  * Version of {@link chatActionBarReportUnrelatedLocation} for method parameters.
  *
- * The chat is a location-based supergroup, which can be reported as having unrelated location using the method reportChat with the reason chatReportReasonUnrelatedLocation
+ * The chat is a location-based supergroup, which can be reported as having unrelated location using the method reportChat with the reason reportReasonUnrelatedLocation
  */
 export type chatActionBarReportUnrelatedLocation$Input = {
   readonly _: "chatActionBarReportUnrelatedLocation";
@@ -14754,7 +15381,7 @@ export type chatActionBarInviteMembers$Input = {
 };
 
 /**
- * The chat is a private or secret chat, which can be reported using the method reportChat, or the other user can be blocked using the method toggleMessageSenderIsBlocked,
+ * The chat is a private or secret chat, which can be reported using the method reportChat, or the other user can be blocked using the method setMessageSenderBlockList,
  *
  * - or the other user can be added to the contact list using the method addContact. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
  */
@@ -14777,7 +15404,7 @@ export type chatActionBarReportAddBlock = {
 /**
  * Version of {@link chatActionBarReportAddBlock} for method parameters.
  *
- * The chat is a private or secret chat, which can be reported using the method reportChat, or the other user can be blocked using the method toggleMessageSenderIsBlocked,
+ * The chat is a private or secret chat, which can be reported using the method reportChat, or the other user can be blocked using the method setMessageSenderBlockList,
  *
  * - or the other user can be added to the contact list using the method addContact. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
  */
@@ -15970,7 +16597,7 @@ export type messageThreadInfo = {
   messages: vector<message>;
 
   /**
-   * A draft of a message in the message thread; may be null
+   * A draft of a message in the message thread; may be null if none
    * @type {draftMessage} {@link draftMessage}
    */
   draft_message: draftMessage | null;
@@ -16015,7 +16642,7 @@ export type messageThreadInfo$Input = {
   readonly messages?: vector$Input<message$Input>;
 
   /**
-   * A draft of a message in the message thread; may be null
+   * A draft of a message in the message thread; may be null if none
    * @type {draftMessage} {@link draftMessage}
    */
   readonly draft_message?: draftMessage$Input | null;
@@ -16086,7 +16713,7 @@ export type forumTopicInfo = {
   icon: forumTopicIcon;
 
   /**
-   * Date the topic was created
+   * Point in time (Unix timestamp) when the topic was created
    * @type {int32} {@link int32}
    */
   creation_date: int32;
@@ -16149,7 +16776,7 @@ export type forumTopicInfo$Input = {
   readonly icon?: forumTopicIcon$Input;
 
   /**
-   * Date the topic was created
+   * Point in time (Unix timestamp) when the topic was created
    * @type {int32} {@link int32}
    */
   readonly creation_date?: int32;
@@ -16246,7 +16873,7 @@ export type forumTopic = {
   notification_settings: chatNotificationSettings;
 
   /**
-   * A draft of a message in the topic; may be null
+   * A draft of a message in the topic; may be null if none
    * @type {draftMessage} {@link draftMessage}
    */
   draft_message: draftMessage | null;
@@ -16315,7 +16942,7 @@ export type forumTopic$Input = {
   readonly notification_settings?: chatNotificationSettings$Input;
 
   /**
-   * A draft of a message in the topic; may be null
+   * A draft of a message in the topic; may be null if none
    * @type {draftMessage} {@link draftMessage}
    */
   readonly draft_message?: draftMessage$Input | null;
@@ -18828,6 +19455,18 @@ export type webPage = {
   voice_note: voiceNote | null;
 
   /**
+   * The identifier of the sender of the previewed story; 0 if none
+   * @type {int53} {@link int53}
+   */
+  story_sender_chat_id: int53;
+
+  /**
+   * The identifier of the previewed story; 0 if none
+   * @type {int32} {@link int32}
+   */
+  story_id: int32;
+
+  /**
    * Version of web page instant view (currently, can be 1 or 2); 0 if none
    * @type {int32} {@link int32}
    */
@@ -18961,6 +19600,18 @@ export type webPage$Input = {
    * @type {voiceNote} {@link voiceNote}
    */
   readonly voice_note?: voiceNote$Input | null;
+
+  /**
+   * The identifier of the sender of the previewed story; 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the previewed story; 0 if none
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
 
   /**
    * Version of web page instant view (currently, can be 1 or 2); 0 if none
@@ -21158,10 +21809,10 @@ export type identityDocument = {
   number: string;
 
   /**
-   * Document expiry date; may be null if not applicable
+   * Document expiration date; may be null if not applicable
    * @type {date} {@link date}
    */
-  expiry_date: date | null;
+  expiration_date: date | null;
 
   /**
    * Front side of the document
@@ -21203,10 +21854,10 @@ export type identityDocument$Input = {
   readonly number?: string;
 
   /**
-   * Document expiry date; may be null if not applicable
+   * Document expiration date; may be null if not applicable
    * @type {date} {@link date}
    */
-  readonly expiry_date?: date$Input | null;
+  readonly expiration_date?: date$Input | null;
 
   /**
    * Front side of the document
@@ -21246,10 +21897,10 @@ export type inputIdentityDocument = {
   number: string;
 
   /**
-   * Document expiry date; pass null if not applicable
+   * Document expiration date; pass null if not applicable
    * @type {date} {@link date}
    */
-  expiry_date: date | null;
+  expiration_date: date | null;
 
   /**
    * Front side of the document
@@ -21291,10 +21942,10 @@ export type inputIdentityDocument$Input = {
   readonly number?: string;
 
   /**
-   * Document expiry date; pass null if not applicable
+   * Document expiration date; pass null if not applicable
    * @type {date} {@link date}
    */
-  readonly expiry_date?: date$Input | null;
+  readonly expiration_date?: date$Input | null;
 
   /**
    * Front side of the document
@@ -23858,6 +24509,58 @@ export type messagePoll$Input = {
 };
 
 /**
+ * A message with a forwarded story
+ */
+export type messageStory = {
+  _: "messageStory";
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  story_sender_chat_id: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  story_id: int32;
+
+  /**
+   * True, if the story was automatically forwarded because of a mention of the user
+   * @type {Bool} {@link Bool}
+   */
+  via_mention: Bool;
+};
+
+/**
+ * Version of {@link messageStory} for method parameters.
+ *
+ * A message with a forwarded story
+ */
+export type messageStory$Input = {
+  readonly _: "messageStory";
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * True, if the story was automatically forwarded because of a mention of the user
+   * @type {Bool} {@link Bool}
+   */
+  readonly via_mention?: Bool$Input;
+};
+
+/**
  * A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice
  */
 export type messageInvoice = {
@@ -25550,7 +26253,7 @@ export type messageProximityAlertTriggered$Input = {
 };
 
 /**
- * Message content that is not supported in the current TDLib version
+ * A message content that is not supported in the current TDLib version
  */
 export type messageUnsupported = {
   _: "messageUnsupported";
@@ -25559,7 +26262,7 @@ export type messageUnsupported = {
 /**
  * Version of {@link messageUnsupported} for method parameters.
  *
- * Message content that is not supported in the current TDLib version
+ * A message content that is not supported in the current TDLib version
  */
 export type messageUnsupported$Input = {
   readonly _: "messageUnsupported";
@@ -26004,7 +26707,7 @@ export type messageSchedulingStateSendAtDate = {
   _: "messageSchedulingStateSendAtDate";
 
   /**
-   * Date the message will be sent. The date must be within 367 days in the future
+   * Point in time (Unix timestamp) when the message will be sent. The date must be within 367 days in the future
    * @type {int32} {@link int32}
    */
   send_date: int32;
@@ -26019,7 +26722,7 @@ export type messageSchedulingStateSendAtDate$Input = {
   readonly _: "messageSchedulingStateSendAtDate";
 
   /**
-   * Date the message will be sent. The date must be within 367 days in the future
+   * Point in time (Unix timestamp) when the message will be sent. The date must be within 367 days in the future
    * @type {int32} {@link int32}
    */
   readonly send_date?: int32;
@@ -27407,6 +28110,46 @@ export type inputMessagePoll$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_closed?: Bool$Input;
+};
+
+/**
+ * A message with a forwarded story. Stories can't be sent to secret chats. A story can be forwarded only if story.can_be_forwarded
+ */
+export type inputMessageStory = {
+  _: "inputMessageStory";
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  story_sender_chat_id: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  story_id: int32;
+};
+
+/**
+ * Version of {@link inputMessageStory} for method parameters.
+ *
+ * A message with a forwarded story. Stories can't be sent to secret chats. A story can be forwarded only if story.can_be_forwarded
+ */
+export type inputMessageStory$Input = {
+  readonly _: "inputMessageStory";
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
 };
 
 /**
@@ -28798,6 +29541,1266 @@ export type emojiCategoryTypeChatPhoto$Input = {
 };
 
 /**
+ * Represents a viewer of a story
+ */
+export type storyViewer = {
+  _: "storyViewer";
+
+  /**
+   * User identifier of the viewer
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Approximate point in time (Unix timestamp) when the story was viewed
+   * @type {int32} {@link int32}
+   */
+  view_date: int32;
+
+  /**
+   * Block list to which the user is added; may be null if none
+   * @type {BlockList} {@link BlockList}
+   */
+  block_list: BlockList | null;
+
+  /**
+   * Type of the reaction that was chosen by the user; may be null if none
+   * @type {ReactionType} {@link ReactionType}
+   */
+  chosen_reaction_type: ReactionType | null;
+};
+
+/**
+ * Version of {@link storyViewer} for method parameters.
+ *
+ * Represents a viewer of a story
+ */
+export type storyViewer$Input = {
+  readonly _: "storyViewer";
+
+  /**
+   * User identifier of the viewer
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Approximate point in time (Unix timestamp) when the story was viewed
+   * @type {int32} {@link int32}
+   */
+  readonly view_date?: int32;
+
+  /**
+   * Block list to which the user is added; may be null if none
+   * @type {BlockList} {@link BlockList}
+   */
+  readonly block_list?: BlockList$Input | null;
+
+  /**
+   * Type of the reaction that was chosen by the user; may be null if none
+   * @type {ReactionType} {@link ReactionType}
+   */
+  readonly chosen_reaction_type?: ReactionType$Input | null;
+};
+
+/**
+ * Represents a list of story viewers
+ */
+export type storyViewers = {
+  _: "storyViewers";
+
+  /**
+   * Approximate total number of story viewers found
+   * @type {int32} {@link int32}
+   */
+  total_count: int32;
+
+  /**
+   * List of story viewers
+   * @type {vector<storyViewer>} {@link vector<storyViewer>}
+   */
+  viewers: vector<storyViewer>;
+
+  /**
+   * The offset for the next request. If empty, there are no more results
+   * @type {string} {@link string}
+   */
+  next_offset: string;
+};
+
+/**
+ * Version of {@link storyViewers} for method parameters.
+ *
+ * Represents a list of story viewers
+ */
+export type storyViewers$Input = {
+  readonly _: "storyViewers";
+
+  /**
+   * Approximate total number of story viewers found
+   * @type {int32} {@link int32}
+   */
+  readonly total_count?: int32;
+
+  /**
+   * List of story viewers
+   * @type {vector<storyViewer>} {@link vector<storyViewer>}
+   */
+  readonly viewers?: vector$Input<storyViewer$Input>;
+
+  /**
+   * The offset for the next request. If empty, there are no more results
+   * @type {string} {@link string}
+   */
+  readonly next_offset?: string;
+};
+
+/**
+ * Describes position of a clickable rectangle area on a story media
+ */
+export type storyAreaPosition = {
+  _: "storyAreaPosition";
+
+  /**
+   * The abscissa of the rectangle's center, as a percentage of the media width
+   * @type {double} {@link double}
+   */
+  x_percentage: double;
+
+  /**
+   * The ordinate of the rectangle's center, as a percentage of the media height
+   * @type {double} {@link double}
+   */
+  y_percentage: double;
+
+  /**
+   * The width of the rectangle, as a percentage of the media width
+   * @type {double} {@link double}
+   */
+  width_percentage: double;
+
+  /**
+   * The ordinate of the rectangle's center, as a percentage of the media height
+   * @type {double} {@link double}
+   */
+  height_percentage: double;
+
+  /**
+   * Clockwise rotation angle of the rectangle, in degrees; 0-360
+   * @type {double} {@link double}
+   */
+  rotation_angle: double;
+};
+
+/**
+ * Version of {@link storyAreaPosition} for method parameters.
+ *
+ * Describes position of a clickable rectangle area on a story media
+ */
+export type storyAreaPosition$Input = {
+  readonly _: "storyAreaPosition";
+
+  /**
+   * The abscissa of the rectangle's center, as a percentage of the media width
+   * @type {double} {@link double}
+   */
+  readonly x_percentage?: double;
+
+  /**
+   * The ordinate of the rectangle's center, as a percentage of the media height
+   * @type {double} {@link double}
+   */
+  readonly y_percentage?: double;
+
+  /**
+   * The width of the rectangle, as a percentage of the media width
+   * @type {double} {@link double}
+   */
+  readonly width_percentage?: double;
+
+  /**
+   * The ordinate of the rectangle's center, as a percentage of the media height
+   * @type {double} {@link double}
+   */
+  readonly height_percentage?: double;
+
+  /**
+   * Clockwise rotation angle of the rectangle, in degrees; 0-360
+   * @type {double} {@link double}
+   */
+  readonly rotation_angle?: double;
+};
+
+/**
+ * An area pointing to a location
+ */
+export type storyAreaTypeLocation = {
+  _: "storyAreaTypeLocation";
+
+  /**
+   * The location
+   * @type {location} {@link location}
+   */
+  location: location;
+};
+
+/**
+ * Version of {@link storyAreaTypeLocation} for method parameters.
+ *
+ * An area pointing to a location
+ */
+export type storyAreaTypeLocation$Input = {
+  readonly _: "storyAreaTypeLocation";
+
+  /**
+   * The location
+   * @type {location} {@link location}
+   */
+  readonly location?: location$Input;
+};
+
+/**
+ * An area pointing to a venue
+ */
+export type storyAreaTypeVenue = {
+  _: "storyAreaTypeVenue";
+
+  /**
+   * Information about the venue
+   * @type {venue} {@link venue}
+   */
+  venue: venue;
+};
+
+/**
+ * Version of {@link storyAreaTypeVenue} for method parameters.
+ *
+ * An area pointing to a venue
+ */
+export type storyAreaTypeVenue$Input = {
+  readonly _: "storyAreaTypeVenue";
+
+  /**
+   * Information about the venue
+   * @type {venue} {@link venue}
+   */
+  readonly venue?: venue$Input;
+};
+
+/**
+ * Describes a clickable rectangle area on a story media
+ */
+export type storyArea = {
+  _: "storyArea";
+
+  /**
+   * Position of the area
+   * @type {storyAreaPosition} {@link storyAreaPosition}
+   */
+  position: storyAreaPosition;
+
+  /**
+   * Type of the area
+   * @type {StoryAreaType} {@link StoryAreaType}
+   */
+  type: StoryAreaType;
+};
+
+/**
+ * Version of {@link storyArea} for method parameters.
+ *
+ * Describes a clickable rectangle area on a story media
+ */
+export type storyArea$Input = {
+  readonly _: "storyArea";
+
+  /**
+   * Position of the area
+   * @type {storyAreaPosition} {@link storyAreaPosition}
+   */
+  readonly position?: storyAreaPosition$Input;
+
+  /**
+   * Type of the area
+   * @type {StoryAreaType} {@link StoryAreaType}
+   */
+  readonly type?: StoryAreaType$Input;
+};
+
+/**
+ * An area pointing to a location
+ */
+export type inputStoryAreaTypeLocation = {
+  _: "inputStoryAreaTypeLocation";
+
+  /**
+   * The location
+   * @type {location} {@link location}
+   */
+  location: location;
+};
+
+/**
+ * Version of {@link inputStoryAreaTypeLocation} for method parameters.
+ *
+ * An area pointing to a location
+ */
+export type inputStoryAreaTypeLocation$Input = {
+  readonly _: "inputStoryAreaTypeLocation";
+
+  /**
+   * The location
+   * @type {location} {@link location}
+   */
+  readonly location?: location$Input;
+};
+
+/**
+ * An area pointing to a venue found by the bot getOption("venue_search_bot_username")
+ */
+export type inputStoryAreaTypeFoundVenue = {
+  _: "inputStoryAreaTypeFoundVenue";
+
+  /**
+   * Identifier of the inline query, used to found the venue
+   * @type {int64} {@link int64}
+   */
+  query_id: int64;
+
+  /**
+   * Identifier of the inline query result
+   * @type {string} {@link string}
+   */
+  result_id: string;
+};
+
+/**
+ * Version of {@link inputStoryAreaTypeFoundVenue} for method parameters.
+ *
+ * An area pointing to a venue found by the bot getOption("venue_search_bot_username")
+ */
+export type inputStoryAreaTypeFoundVenue$Input = {
+  readonly _: "inputStoryAreaTypeFoundVenue";
+
+  /**
+   * Identifier of the inline query, used to found the venue
+   * @type {int64} {@link int64}
+   */
+  readonly query_id?: int64$Input;
+
+  /**
+   * Identifier of the inline query result
+   * @type {string} {@link string}
+   */
+  readonly result_id?: string;
+};
+
+/**
+ * An area pointing to a venue already added to the story
+ */
+export type inputStoryAreaTypePreviousVenue = {
+  _: "inputStoryAreaTypePreviousVenue";
+
+  /**
+   * Provider of the venue
+   * @type {string} {@link string}
+   */
+  venue_provider: string;
+
+  /**
+   * Identifier of the venue in the provider database
+   * @type {string} {@link string}
+   */
+  venue_id: string;
+};
+
+/**
+ * Version of {@link inputStoryAreaTypePreviousVenue} for method parameters.
+ *
+ * An area pointing to a venue already added to the story
+ */
+export type inputStoryAreaTypePreviousVenue$Input = {
+  readonly _: "inputStoryAreaTypePreviousVenue";
+
+  /**
+   * Provider of the venue
+   * @type {string} {@link string}
+   */
+  readonly venue_provider?: string;
+
+  /**
+   * Identifier of the venue in the provider database
+   * @type {string} {@link string}
+   */
+  readonly venue_id?: string;
+};
+
+/**
+ * Describes a clickable rectangle area on a story media to be added
+ */
+export type inputStoryArea = {
+  _: "inputStoryArea";
+
+  /**
+   * Position of the area
+   * @type {storyAreaPosition} {@link storyAreaPosition}
+   */
+  position: storyAreaPosition;
+
+  /**
+   * Type of the area
+   * @type {InputStoryAreaType} {@link InputStoryAreaType}
+   */
+  type: InputStoryAreaType;
+};
+
+/**
+ * Version of {@link inputStoryArea} for method parameters.
+ *
+ * Describes a clickable rectangle area on a story media to be added
+ */
+export type inputStoryArea$Input = {
+  readonly _: "inputStoryArea";
+
+  /**
+   * Position of the area
+   * @type {storyAreaPosition} {@link storyAreaPosition}
+   */
+  readonly position?: storyAreaPosition$Input;
+
+  /**
+   * Type of the area
+   * @type {InputStoryAreaType} {@link InputStoryAreaType}
+   */
+  readonly type?: InputStoryAreaType$Input;
+};
+
+/**
+ * Contains a list of story areas to be added
+ */
+export type inputStoryAreas = {
+  _: "inputStoryAreas";
+
+  /**
+   * List of 0-10 input story areas
+   * @type {vector<inputStoryArea>} {@link vector<inputStoryArea>}
+   */
+  areas: vector<inputStoryArea>;
+};
+
+/**
+ * Version of {@link inputStoryAreas} for method parameters.
+ *
+ * Contains a list of story areas to be added
+ */
+export type inputStoryAreas$Input = {
+  readonly _: "inputStoryAreas";
+
+  /**
+   * List of 0-10 input story areas
+   * @type {vector<inputStoryArea>} {@link vector<inputStoryArea>}
+   */
+  readonly areas?: vector$Input<inputStoryArea$Input>;
+};
+
+/**
+ * Describes a video file sent in a story
+ */
+export type storyVideo = {
+  _: "storyVideo";
+
+  /**
+   * Duration of the video, in seconds
+   * @type {double} {@link double}
+   */
+  duration: double;
+
+  /**
+   * Video width
+   * @type {int32} {@link int32}
+   */
+  width: int32;
+
+  /**
+   * Video height
+   * @type {int32} {@link int32}
+   */
+  height: int32;
+
+  /**
+   * True, if stickers were added to the video. The list of corresponding sticker sets can be received using getAttachedStickerSets
+   * @type {Bool} {@link Bool}
+   */
+  has_stickers: Bool;
+
+  /**
+   * True, if the video has no sound
+   * @type {Bool} {@link Bool}
+   */
+  is_animation: Bool;
+
+  /**
+   * Video minithumbnail; may be null
+   * @type {minithumbnail} {@link minithumbnail}
+   */
+  minithumbnail: minithumbnail | null;
+
+  /**
+   * Video thumbnail in JPEG or MPEG4 format; may be null
+   * @type {thumbnail} {@link thumbnail}
+   */
+  thumbnail: thumbnail | null;
+
+  /**
+   * Size of file prefix, which is supposed to be preloaded, in bytes
+   * @type {int32} {@link int32}
+   */
+  preload_prefix_size: int32;
+
+  /**
+   * File containing the video
+   * @type {file} {@link file}
+   */
+  video: file;
+};
+
+/**
+ * Version of {@link storyVideo} for method parameters.
+ *
+ * Describes a video file sent in a story
+ */
+export type storyVideo$Input = {
+  readonly _: "storyVideo";
+
+  /**
+   * Duration of the video, in seconds
+   * @type {double} {@link double}
+   */
+  readonly duration?: double;
+
+  /**
+   * Video width
+   * @type {int32} {@link int32}
+   */
+  readonly width?: int32;
+
+  /**
+   * Video height
+   * @type {int32} {@link int32}
+   */
+  readonly height?: int32;
+
+  /**
+   * True, if stickers were added to the video. The list of corresponding sticker sets can be received using getAttachedStickerSets
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_stickers?: Bool$Input;
+
+  /**
+   * True, if the video has no sound
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_animation?: Bool$Input;
+
+  /**
+   * Video minithumbnail; may be null
+   * @type {minithumbnail} {@link minithumbnail}
+   */
+  readonly minithumbnail?: minithumbnail$Input | null;
+
+  /**
+   * Video thumbnail in JPEG or MPEG4 format; may be null
+   * @type {thumbnail} {@link thumbnail}
+   */
+  readonly thumbnail?: thumbnail$Input | null;
+
+  /**
+   * Size of file prefix, which is supposed to be preloaded, in bytes
+   * @type {int32} {@link int32}
+   */
+  readonly preload_prefix_size?: int32;
+
+  /**
+   * File containing the video
+   * @type {file} {@link file}
+   */
+  readonly video?: file$Input;
+};
+
+/**
+ * A photo story
+ */
+export type storyContentPhoto = {
+  _: "storyContentPhoto";
+
+  /**
+   * The photo
+   * @type {photo} {@link photo}
+   */
+  photo: photo;
+};
+
+/**
+ * Version of {@link storyContentPhoto} for method parameters.
+ *
+ * A photo story
+ */
+export type storyContentPhoto$Input = {
+  readonly _: "storyContentPhoto";
+
+  /**
+   * The photo
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input;
+};
+
+/**
+ * A video story
+ */
+export type storyContentVideo = {
+  _: "storyContentVideo";
+
+  /**
+   * The video in MPEG4 format
+   * @type {storyVideo} {@link storyVideo}
+   */
+  video: storyVideo;
+
+  /**
+   * Alternative version of the video in MPEG4 format, encoded by x264 codec; may be null
+   * @type {storyVideo} {@link storyVideo}
+   */
+  alternative_video: storyVideo | null;
+};
+
+/**
+ * Version of {@link storyContentVideo} for method parameters.
+ *
+ * A video story
+ */
+export type storyContentVideo$Input = {
+  readonly _: "storyContentVideo";
+
+  /**
+   * The video in MPEG4 format
+   * @type {storyVideo} {@link storyVideo}
+   */
+  readonly video?: storyVideo$Input;
+
+  /**
+   * Alternative version of the video in MPEG4 format, encoded by x264 codec; may be null
+   * @type {storyVideo} {@link storyVideo}
+   */
+  readonly alternative_video?: storyVideo$Input | null;
+};
+
+/**
+ * A story content that is not supported in the current TDLib version
+ */
+export type storyContentUnsupported = {
+  _: "storyContentUnsupported";
+};
+
+/**
+ * Version of {@link storyContentUnsupported} for method parameters.
+ *
+ * A story content that is not supported in the current TDLib version
+ */
+export type storyContentUnsupported$Input = {
+  readonly _: "storyContentUnsupported";
+};
+
+/**
+ * A photo story
+ */
+export type inputStoryContentPhoto = {
+  _: "inputStoryContentPhoto";
+
+  /**
+   * Photo to send. The photo must be at most 10 MB in size. The photo size must be 1080x1920
+   * @type {InputFile} {@link InputFile}
+   */
+  photo: InputFile;
+
+  /**
+   * File identifiers of the stickers added to the photo, if applicable
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  added_sticker_file_ids: vector<int32>;
+};
+
+/**
+ * Version of {@link inputStoryContentPhoto} for method parameters.
+ *
+ * A photo story
+ */
+export type inputStoryContentPhoto$Input = {
+  readonly _: "inputStoryContentPhoto";
+
+  /**
+   * Photo to send. The photo must be at most 10 MB in size. The photo size must be 1080x1920
+   * @type {InputFile} {@link InputFile}
+   */
+  readonly photo?: InputFile$Input;
+
+  /**
+   * File identifiers of the stickers added to the photo, if applicable
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  readonly added_sticker_file_ids?: vector$Input<int32>;
+};
+
+/**
+ * A video story
+ */
+export type inputStoryContentVideo = {
+  _: "inputStoryContentVideo";
+
+  /**
+   * Video to be sent. The video size must be 720x1280. The video must be streamable and stored in MPEG4 format, after encoding with x265 codec and key frames added each second
+   * @type {InputFile} {@link InputFile}
+   */
+  video: InputFile;
+
+  /**
+   * File identifiers of the stickers added to the video, if applicable
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  added_sticker_file_ids: vector<int32>;
+
+  /**
+   * Precise duration of the video, in seconds; 0-60
+   * @type {double} {@link double}
+   */
+  duration: double;
+
+  /**
+   * True, if the video has no sound
+   * @type {Bool} {@link Bool}
+   */
+  is_animation: Bool;
+};
+
+/**
+ * Version of {@link inputStoryContentVideo} for method parameters.
+ *
+ * A video story
+ */
+export type inputStoryContentVideo$Input = {
+  readonly _: "inputStoryContentVideo";
+
+  /**
+   * Video to be sent. The video size must be 720x1280. The video must be streamable and stored in MPEG4 format, after encoding with x265 codec and key frames added each second
+   * @type {InputFile} {@link InputFile}
+   */
+  readonly video?: InputFile$Input;
+
+  /**
+   * File identifiers of the stickers added to the video, if applicable
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  readonly added_sticker_file_ids?: vector$Input<int32>;
+
+  /**
+   * Precise duration of the video, in seconds; 0-60
+   * @type {double} {@link double}
+   */
+  readonly duration?: double;
+
+  /**
+   * True, if the video has no sound
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_animation?: Bool$Input;
+};
+
+/**
+ * The list of stories, shown in the main chat list and folder chat lists
+ */
+export type storyListMain = {
+  _: "storyListMain";
+};
+
+/**
+ * Version of {@link storyListMain} for method parameters.
+ *
+ * The list of stories, shown in the main chat list and folder chat lists
+ */
+export type storyListMain$Input = {
+  readonly _: "storyListMain";
+};
+
+/**
+ * The list of stories, shown in the Arvhive chat list
+ */
+export type storyListArchive = {
+  _: "storyListArchive";
+};
+
+/**
+ * Version of {@link storyListArchive} for method parameters.
+ *
+ * The list of stories, shown in the Arvhive chat list
+ */
+export type storyListArchive$Input = {
+  readonly _: "storyListArchive";
+};
+
+/**
+ * Contains information about interactions with a story
+ */
+export type storyInteractionInfo = {
+  _: "storyInteractionInfo";
+
+  /**
+   * Number of times the story was viewed
+   * @type {int32} {@link int32}
+   */
+  view_count: int32;
+
+  /**
+   * Number of reactions added to the story
+   * @type {int32} {@link int32}
+   */
+  reaction_count: int32;
+
+  /**
+   * Identifiers of at most 3 recent viewers of the story
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  recent_viewer_user_ids: vector<int53>;
+};
+
+/**
+ * Version of {@link storyInteractionInfo} for method parameters.
+ *
+ * Contains information about interactions with a story
+ */
+export type storyInteractionInfo$Input = {
+  readonly _: "storyInteractionInfo";
+
+  /**
+   * Number of times the story was viewed
+   * @type {int32} {@link int32}
+   */
+  readonly view_count?: int32;
+
+  /**
+   * Number of reactions added to the story
+   * @type {int32} {@link int32}
+   */
+  readonly reaction_count?: int32;
+
+  /**
+   * Identifiers of at most 3 recent viewers of the story
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly recent_viewer_user_ids?: vector$Input<int53>;
+};
+
+/**
+ * Represents a story
+ */
+export type story = {
+  _: "story";
+
+  /**
+   * Unique story identifier among stories of the given sender
+   * @type {int32} {@link int32}
+   */
+  id: int32;
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  sender_chat_id: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the story was published
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+
+  /**
+   * True, if the story is being sent by the current user
+   * @type {Bool} {@link Bool}
+   */
+  is_being_sent: Bool;
+
+  /**
+   * True, if the story is being edited by the current user
+   * @type {Bool} {@link Bool}
+   */
+  is_being_edited: Bool;
+
+  /**
+   * True, if the story was edited
+   * @type {Bool} {@link Bool}
+   */
+  is_edited: Bool;
+
+  /**
+   * True, if the story is saved in the sender's profile and will be available there after expiration
+   * @type {Bool} {@link Bool}
+   */
+  is_pinned: Bool;
+
+  /**
+   * True, if the story is visible only for the current user
+   * @type {Bool} {@link Bool}
+   */
+  is_visible_only_for_self: Bool;
+
+  /**
+   * True, if the story can be forwarded as a message. Otherwise, screenshots and saving of the story content must be also forbidden
+   * @type {Bool} {@link Bool}
+   */
+  can_be_forwarded: Bool;
+
+  /**
+   * True, if the story can be replied in the chat with the story sender
+   * @type {Bool} {@link Bool}
+   */
+  can_be_replied: Bool;
+
+  /**
+   * True, if users viewed the story can be received through getStoryViewers
+   * @type {Bool} {@link Bool}
+   */
+  can_get_viewers: Bool;
+
+  /**
+   * True, if users viewed the story can't be received, because the story has expired more than getOption("story_viewers_expiration_delay") seconds ago
+   * @type {Bool} {@link Bool}
+   */
+  has_expired_viewers: Bool;
+
+  /**
+   * Information about interactions with the story; may be null if the story isn't owned or there were no interactions
+   * @type {storyInteractionInfo} {@link storyInteractionInfo}
+   */
+  interaction_info: storyInteractionInfo | null;
+
+  /**
+   * Type of the chosen reaction; may be null if none
+   * @type {ReactionType} {@link ReactionType}
+   */
+  chosen_reaction_type: ReactionType | null;
+
+  /**
+   * Privacy rules affecting story visibility; may be approximate for non-owned stories
+   * @type {StoryPrivacySettings} {@link StoryPrivacySettings}
+   */
+  privacy_settings: StoryPrivacySettings;
+
+  /**
+   * Content of the story
+   * @type {StoryContent} {@link StoryContent}
+   */
+  content: StoryContent;
+
+  /**
+   * Clickable areas to be shown on the story content
+   * @type {vector<storyArea>} {@link vector<storyArea>}
+   */
+  areas: vector<storyArea>;
+
+  /**
+   * Caption of the story
+   * @type {formattedText} {@link formattedText}
+   */
+  caption: formattedText;
+};
+
+/**
+ * Version of {@link story} for method parameters.
+ *
+ * Represents a story
+ */
+export type story$Input = {
+  readonly _: "story";
+
+  /**
+   * Unique story identifier among stories of the given sender
+   * @type {int32} {@link int32}
+   */
+  readonly id?: int32;
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly sender_chat_id?: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the story was published
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+
+  /**
+   * True, if the story is being sent by the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_being_sent?: Bool$Input;
+
+  /**
+   * True, if the story is being edited by the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_being_edited?: Bool$Input;
+
+  /**
+   * True, if the story was edited
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_edited?: Bool$Input;
+
+  /**
+   * True, if the story is saved in the sender's profile and will be available there after expiration
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_pinned?: Bool$Input;
+
+  /**
+   * True, if the story is visible only for the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_visible_only_for_self?: Bool$Input;
+
+  /**
+   * True, if the story can be forwarded as a message. Otherwise, screenshots and saving of the story content must be also forbidden
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_forwarded?: Bool$Input;
+
+  /**
+   * True, if the story can be replied in the chat with the story sender
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_replied?: Bool$Input;
+
+  /**
+   * True, if users viewed the story can be received through getStoryViewers
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_get_viewers?: Bool$Input;
+
+  /**
+   * True, if users viewed the story can't be received, because the story has expired more than getOption("story_viewers_expiration_delay") seconds ago
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_expired_viewers?: Bool$Input;
+
+  /**
+   * Information about interactions with the story; may be null if the story isn't owned or there were no interactions
+   * @type {storyInteractionInfo} {@link storyInteractionInfo}
+   */
+  readonly interaction_info?: storyInteractionInfo$Input | null;
+
+  /**
+   * Type of the chosen reaction; may be null if none
+   * @type {ReactionType} {@link ReactionType}
+   */
+  readonly chosen_reaction_type?: ReactionType$Input | null;
+
+  /**
+   * Privacy rules affecting story visibility; may be approximate for non-owned stories
+   * @type {StoryPrivacySettings} {@link StoryPrivacySettings}
+   */
+  readonly privacy_settings?: StoryPrivacySettings$Input;
+
+  /**
+   * Content of the story
+   * @type {StoryContent} {@link StoryContent}
+   */
+  readonly content?: StoryContent$Input;
+
+  /**
+   * Clickable areas to be shown on the story content
+   * @type {vector<storyArea>} {@link vector<storyArea>}
+   */
+  readonly areas?: vector$Input<storyArea$Input>;
+
+  /**
+   * Caption of the story
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input;
+};
+
+/**
+ * Represents a list of stories
+ */
+export type stories = {
+  _: "stories";
+
+  /**
+   * Approximate total number of stories found
+   * @type {int32} {@link int32}
+   */
+  total_count: int32;
+
+  /**
+   * The list of stories
+   * @type {vector<story>} {@link vector<story>}
+   */
+  stories: vector<story>;
+};
+
+/**
+ * Version of {@link stories} for method parameters.
+ *
+ * Represents a list of stories
+ */
+export type stories$Input = {
+  readonly _: "stories";
+
+  /**
+   * Approximate total number of stories found
+   * @type {int32} {@link int32}
+   */
+  readonly total_count?: int32;
+
+  /**
+   * The list of stories
+   * @type {vector<story>} {@link vector<story>}
+   */
+  readonly stories?: vector$Input<story$Input>;
+};
+
+/**
+ * Contains basic information about a story
+ */
+export type storyInfo = {
+  _: "storyInfo";
+
+  /**
+   * Unique story identifier among stories of the given sender
+   * @type {int32} {@link int32}
+   */
+  story_id: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the story was published
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+
+  /**
+   * True, if the story is available only to close friends
+   * @type {Bool} {@link Bool}
+   */
+  is_for_close_friends: Bool;
+};
+
+/**
+ * Version of {@link storyInfo} for method parameters.
+ *
+ * Contains basic information about a story
+ */
+export type storyInfo$Input = {
+  readonly _: "storyInfo";
+
+  /**
+   * Unique story identifier among stories of the given sender
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the story was published
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+
+  /**
+   * True, if the story is available only to close friends
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_for_close_friends?: Bool$Input;
+};
+
+/**
+ * Describes active stories posted by a chat
+ */
+export type chatActiveStories = {
+  _: "chatActiveStories";
+
+  /**
+   * Identifier of the chat that posted the stories
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Identifier of the story list in which the stories are shown; may be null if the stories aren't shown in a story list
+   * @type {StoryList} {@link StoryList}
+   */
+  list: StoryList | null;
+
+  /**
+   * A parameter used to determine order of the stories in the story list; 0 if the stories doesn't need to be shown in the story list. Stories must be sorted by the pair (order, story_sender_chat_id) in descending order
+   * @type {int53} {@link int53}
+   */
+  order: int53;
+
+  /**
+   * Identifier of the last read active story
+   * @type {int32} {@link int32}
+   */
+  max_read_story_id: int32;
+
+  /**
+   * Basic information about the stories; use getStory to get full information about the stories. The stories are in a chronological order (i.e., in order of increasing story identifiers)
+   * @type {vector<storyInfo>} {@link vector<storyInfo>}
+   */
+  stories: vector<storyInfo>;
+};
+
+/**
+ * Version of {@link chatActiveStories} for method parameters.
+ *
+ * Describes active stories posted by a chat
+ */
+export type chatActiveStories$Input = {
+  readonly _: "chatActiveStories";
+
+  /**
+   * Identifier of the chat that posted the stories
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the story list in which the stories are shown; may be null if the stories aren't shown in a story list
+   * @type {StoryList} {@link StoryList}
+   */
+  readonly list?: StoryList$Input | null;
+
+  /**
+   * A parameter used to determine order of the stories in the story list; 0 if the stories doesn't need to be shown in the story list. Stories must be sorted by the pair (order, story_sender_chat_id) in descending order
+   * @type {int53} {@link int53}
+   */
+  readonly order?: int53;
+
+  /**
+   * Identifier of the last read active story
+   * @type {int32} {@link int32}
+   */
+  readonly max_read_story_id?: int32;
+
+  /**
+   * Basic information about the stories; use getStory to get full information about the stories. The stories are in a chronological order (i.e., in order of increasing story identifiers)
+   * @type {vector<storyInfo>} {@link vector<storyInfo>}
+   */
+  readonly stories?: vector$Input<storyInfo$Input>;
+};
+
+/**
  * The call wasn't discarded, or the reason is unknown
  */
 export type callDiscardReasonEmpty = {
@@ -28902,7 +30905,7 @@ export type callProtocol = {
   min_layer: int32;
 
   /**
-   * The maximum supported API layer; use 65
+   * The maximum supported API layer; use 92
    * @type {int32} {@link int32}
    */
   max_layer: int32;
@@ -28941,7 +30944,7 @@ export type callProtocol$Input = {
   readonly min_layer?: int32;
 
   /**
-   * The maximum supported API layer; use 65
+   * The maximum supported API layer; use 92
    * @type {int32} {@link int32}
    */
   readonly max_layer?: int32;
@@ -36382,6 +38385,70 @@ export type premiumLimitTypeShareableChatFolderCount$Input = {
 };
 
 /**
+ * The maximum number of active stories
+ */
+export type premiumLimitTypeActiveStoryCount = {
+  _: "premiumLimitTypeActiveStoryCount";
+};
+
+/**
+ * Version of {@link premiumLimitTypeActiveStoryCount} for method parameters.
+ *
+ * The maximum number of active stories
+ */
+export type premiumLimitTypeActiveStoryCount$Input = {
+  readonly _: "premiumLimitTypeActiveStoryCount";
+};
+
+/**
+ * The maximum number of stories sent per week
+ */
+export type premiumLimitTypeWeeklySentStoryCount = {
+  _: "premiumLimitTypeWeeklySentStoryCount";
+};
+
+/**
+ * Version of {@link premiumLimitTypeWeeklySentStoryCount} for method parameters.
+ *
+ * The maximum number of stories sent per week
+ */
+export type premiumLimitTypeWeeklySentStoryCount$Input = {
+  readonly _: "premiumLimitTypeWeeklySentStoryCount";
+};
+
+/**
+ * The maximum number of stories sent per month
+ */
+export type premiumLimitTypeMonthlySentStoryCount = {
+  _: "premiumLimitTypeMonthlySentStoryCount";
+};
+
+/**
+ * Version of {@link premiumLimitTypeMonthlySentStoryCount} for method parameters.
+ *
+ * The maximum number of stories sent per month
+ */
+export type premiumLimitTypeMonthlySentStoryCount$Input = {
+  readonly _: "premiumLimitTypeMonthlySentStoryCount";
+};
+
+/**
+ * The maximum length of captions of sent stories
+ */
+export type premiumLimitTypeStoryCaptionLength = {
+  _: "premiumLimitTypeStoryCaptionLength";
+};
+
+/**
+ * Version of {@link premiumLimitTypeStoryCaptionLength} for method parameters.
+ *
+ * The maximum length of captions of sent stories
+ */
+export type premiumLimitTypeStoryCaptionLength$Input = {
+  readonly _: "premiumLimitTypeStoryCaptionLength";
+};
+
+/**
  * Increased limits
  */
 export type premiumFeatureIncreasedLimits = {
@@ -36542,7 +38609,7 @@ export type premiumFeatureProfileBadge$Input = {
 };
 
 /**
- * A emoji status shown along with the user's name
+ * An emoji status shown along with the user's name
  */
 export type premiumFeatureEmojiStatus = {
   _: "premiumFeatureEmojiStatus";
@@ -36551,7 +38618,7 @@ export type premiumFeatureEmojiStatus = {
 /**
  * Version of {@link premiumFeatureEmojiStatus} for method parameters.
  *
- * A emoji status shown along with the user's name
+ * An emoji status shown along with the user's name
  */
 export type premiumFeatureEmojiStatus$Input = {
   readonly _: "premiumFeatureEmojiStatus";
@@ -36619,6 +38686,118 @@ export type premiumFeatureRealTimeChatTranslation = {
  */
 export type premiumFeatureRealTimeChatTranslation$Input = {
   readonly _: "premiumFeatureRealTimeChatTranslation";
+};
+
+/**
+ * Allowed to use many additional features for stories
+ */
+export type premiumFeatureUpgradedStories = {
+  _: "premiumFeatureUpgradedStories";
+};
+
+/**
+ * Version of {@link premiumFeatureUpgradedStories} for method parameters.
+ *
+ * Allowed to use many additional features for stories
+ */
+export type premiumFeatureUpgradedStories$Input = {
+  readonly _: "premiumFeatureUpgradedStories";
+};
+
+/**
+ * User stories are displayed before stories of non-premium contacts
+ */
+export type premiumStoryFeaturePriorityOrder = {
+  _: "premiumStoryFeaturePriorityOrder";
+};
+
+/**
+ * Version of {@link premiumStoryFeaturePriorityOrder} for method parameters.
+ *
+ * User stories are displayed before stories of non-premium contacts
+ */
+export type premiumStoryFeaturePriorityOrder$Input = {
+  readonly _: "premiumStoryFeaturePriorityOrder";
+};
+
+/**
+ * The ability to hide the fact that the user viewed other's stories
+ */
+export type premiumStoryFeatureStealthMode = {
+  _: "premiumStoryFeatureStealthMode";
+};
+
+/**
+ * Version of {@link premiumStoryFeatureStealthMode} for method parameters.
+ *
+ * The ability to hide the fact that the user viewed other's stories
+ */
+export type premiumStoryFeatureStealthMode$Input = {
+  readonly _: "premiumStoryFeatureStealthMode";
+};
+
+/**
+ * The ability to check who opened the current user's stories after they expire
+ */
+export type premiumStoryFeaturePermanentViewsHistory = {
+  _: "premiumStoryFeaturePermanentViewsHistory";
+};
+
+/**
+ * Version of {@link premiumStoryFeaturePermanentViewsHistory} for method parameters.
+ *
+ * The ability to check who opened the current user's stories after they expire
+ */
+export type premiumStoryFeaturePermanentViewsHistory$Input = {
+  readonly _: "premiumStoryFeaturePermanentViewsHistory";
+};
+
+/**
+ * The ability to set custom expiration duration for stories
+ */
+export type premiumStoryFeatureCustomExpirationDuration = {
+  _: "premiumStoryFeatureCustomExpirationDuration";
+};
+
+/**
+ * Version of {@link premiumStoryFeatureCustomExpirationDuration} for method parameters.
+ *
+ * The ability to set custom expiration duration for stories
+ */
+export type premiumStoryFeatureCustomExpirationDuration$Input = {
+  readonly _: "premiumStoryFeatureCustomExpirationDuration";
+};
+
+/**
+ * The ability to save other's unprotected stories
+ */
+export type premiumStoryFeatureSaveStories = {
+  _: "premiumStoryFeatureSaveStories";
+};
+
+/**
+ * Version of {@link premiumStoryFeatureSaveStories} for method parameters.
+ *
+ * The ability to save other's unprotected stories
+ */
+export type premiumStoryFeatureSaveStories$Input = {
+  readonly _: "premiumStoryFeatureSaveStories";
+};
+
+/**
+ * The ability to use links and formatting in story caption
+ */
+export type premiumStoryFeatureLinksAndFormatting = {
+  _: "premiumStoryFeatureLinksAndFormatting";
+};
+
+/**
+ * Version of {@link premiumStoryFeatureLinksAndFormatting} for method parameters.
+ *
+ * The ability to use links and formatting in story caption
+ */
+export type premiumStoryFeatureLinksAndFormatting$Input = {
+  readonly _: "premiumStoryFeatureLinksAndFormatting";
 };
 
 /**
@@ -36779,6 +38958,34 @@ export type premiumSourceFeature$Input = {
    * @type {PremiumFeature} {@link PremiumFeature}
    */
   readonly feature?: PremiumFeature$Input;
+};
+
+/**
+ * A user tried to use a Premium story feature
+ */
+export type premiumSourceStoryFeature = {
+  _: "premiumSourceStoryFeature";
+
+  /**
+   * The used feature
+   * @type {PremiumStoryFeature} {@link PremiumStoryFeature}
+   */
+  feature: PremiumStoryFeature;
+};
+
+/**
+ * Version of {@link premiumSourceStoryFeature} for method parameters.
+ *
+ * A user tried to use a Premium story feature
+ */
+export type premiumSourceStoryFeature$Input = {
+  readonly _: "premiumSourceStoryFeature";
+
+  /**
+   * The used feature
+   * @type {PremiumStoryFeature} {@link PremiumStoryFeature}
+   */
+  readonly feature?: PremiumStoryFeature$Input;
 };
 
 /**
@@ -37938,6 +40145,110 @@ export type hashtags$Input = {
 };
 
 /**
+ * A story can be sent
+ */
+export type canSendStoryResultOk = {
+  _: "canSendStoryResultOk";
+};
+
+/**
+ * Version of {@link canSendStoryResultOk} for method parameters.
+ *
+ * A story can be sent
+ */
+export type canSendStoryResultOk$Input = {
+  readonly _: "canSendStoryResultOk";
+};
+
+/**
+ * The user must subscribe to Telegram Premium to be able to post stories
+ */
+export type canSendStoryResultPremiumNeeded = {
+  _: "canSendStoryResultPremiumNeeded";
+};
+
+/**
+ * Version of {@link canSendStoryResultPremiumNeeded} for method parameters.
+ *
+ * The user must subscribe to Telegram Premium to be able to post stories
+ */
+export type canSendStoryResultPremiumNeeded$Input = {
+  readonly _: "canSendStoryResultPremiumNeeded";
+};
+
+/**
+ * The limit for the number of active stories exceeded. The user can buy Telegram Premium, delete an active story, or wait for the oldest story to expire
+ */
+export type canSendStoryResultActiveStoryLimitExceeded = {
+  _: "canSendStoryResultActiveStoryLimitExceeded";
+};
+
+/**
+ * Version of {@link canSendStoryResultActiveStoryLimitExceeded} for method parameters.
+ *
+ * The limit for the number of active stories exceeded. The user can buy Telegram Premium, delete an active story, or wait for the oldest story to expire
+ */
+export type canSendStoryResultActiveStoryLimitExceeded$Input = {
+  readonly _: "canSendStoryResultActiveStoryLimitExceeded";
+};
+
+/**
+ * The weekly limit for the number of posted stories exceeded. The user needs to buy Telegram Premium or wait specified time
+ */
+export type canSendStoryResultWeeklyLimitExceeded = {
+  _: "canSendStoryResultWeeklyLimitExceeded";
+
+  /**
+   * Time left before the user can send the next story
+   * @type {int32} {@link int32}
+   */
+  retry_after: int32;
+};
+
+/**
+ * Version of {@link canSendStoryResultWeeklyLimitExceeded} for method parameters.
+ *
+ * The weekly limit for the number of posted stories exceeded. The user needs to buy Telegram Premium or wait specified time
+ */
+export type canSendStoryResultWeeklyLimitExceeded$Input = {
+  readonly _: "canSendStoryResultWeeklyLimitExceeded";
+
+  /**
+   * Time left before the user can send the next story
+   * @type {int32} {@link int32}
+   */
+  readonly retry_after?: int32;
+};
+
+/**
+ * The monthly limit for the number of posted stories exceeded. The user needs to buy Telegram Premium or wait specified time
+ */
+export type canSendStoryResultMonthlyLimitExceeded = {
+  _: "canSendStoryResultMonthlyLimitExceeded";
+
+  /**
+   * Time left before the user can send the next story
+   * @type {int32} {@link int32}
+   */
+  retry_after: int32;
+};
+
+/**
+ * Version of {@link canSendStoryResultMonthlyLimitExceeded} for method parameters.
+ *
+ * The monthly limit for the number of posted stories exceeded. The user needs to buy Telegram Premium or wait specified time
+ */
+export type canSendStoryResultMonthlyLimitExceeded$Input = {
+  readonly _: "canSendStoryResultMonthlyLimitExceeded";
+
+  /**
+   * Time left before the user can send the next story
+   * @type {int32} {@link int32}
+   */
+  readonly retry_after?: int32;
+};
+
+/**
  * The session can be used
  */
 export type canTransferOwnershipResultOk = {
@@ -38886,6 +41197,34 @@ export type pushMessageContentSticker$Input = {
 };
 
 /**
+ * A message with a story
+ */
+export type pushMessageContentStory = {
+  _: "pushMessageContentStory";
+
+  /**
+   * True, if the message is a pinned message with the specified content
+   * @type {Bool} {@link Bool}
+   */
+  is_pinned: Bool;
+};
+
+/**
+ * Version of {@link pushMessageContentStory} for method parameters.
+ *
+ * A message with a story
+ */
+export type pushMessageContentStory$Input = {
+  readonly _: "pushMessageContentStory";
+
+  /**
+   * True, if the message is a pinned message with the specified content
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_pinned?: Bool$Input;
+};
+
+/**
  * A text message
  */
 export type pushMessageContentText = {
@@ -39322,7 +41661,7 @@ export type pushMessageContentChatJoinByRequest$Input = {
 };
 
 /**
- * A new recurrent payment was made by the current user
+ * A new recurring payment was made by the current user
  */
 export type pushMessageContentRecurringPayment = {
   _: "pushMessageContentRecurringPayment";
@@ -39337,7 +41676,7 @@ export type pushMessageContentRecurringPayment = {
 /**
  * Version of {@link pushMessageContentRecurringPayment} for method parameters.
  *
- * A new recurrent payment was made by the current user
+ * A new recurring payment was made by the current user
  */
 export type pushMessageContentRecurringPayment$Input = {
   readonly _: "pushMessageContentRecurringPayment";
@@ -39560,7 +41899,7 @@ export type notificationTypeNewPushMessage = {
   _: "notificationTypeNewPushMessage";
 
   /**
-   * The message identifier. The message will not be available in the chat history, but the ID can be used in viewMessages, or as reply_to_message_id
+   * The message identifier. The message will not be available in the chat history, but the identifier can be used in viewMessages, or as a message to reply
    * @type {int53} {@link int53}
    */
   message_id: int53;
@@ -39599,7 +41938,7 @@ export type notificationTypeNewPushMessage$Input = {
   readonly _: "notificationTypeNewPushMessage";
 
   /**
-   * The message identifier. The message will not be available in the chat history, but the ID can be used in viewMessages, or as reply_to_message_id
+   * The message identifier. The message will not be available in the chat history, but the identifier can be used in viewMessages, or as a message to reply
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
@@ -40246,6 +42585,106 @@ export type jsonValueObject$Input = {
 };
 
 /**
+ * The story can be viewed by everyone
+ */
+export type storyPrivacySettingsEveryone = {
+  _: "storyPrivacySettingsEveryone";
+
+  /**
+   * Identifiers of the users that can't see the story; always unknown and empty for non-owned stories
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  except_user_ids: vector<int53>;
+};
+
+/**
+ * Version of {@link storyPrivacySettingsEveryone} for method parameters.
+ *
+ * The story can be viewed by everyone
+ */
+export type storyPrivacySettingsEveryone$Input = {
+  readonly _: "storyPrivacySettingsEveryone";
+
+  /**
+   * Identifiers of the users that can't see the story; always unknown and empty for non-owned stories
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly except_user_ids?: vector$Input<int53>;
+};
+
+/**
+ * The story can be viewed by all contacts except chosen users
+ */
+export type storyPrivacySettingsContacts = {
+  _: "storyPrivacySettingsContacts";
+
+  /**
+   * User identifiers of the contacts that can't see the story; always unknown and empty for non-owned stories
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  except_user_ids: vector<int53>;
+};
+
+/**
+ * Version of {@link storyPrivacySettingsContacts} for method parameters.
+ *
+ * The story can be viewed by all contacts except chosen users
+ */
+export type storyPrivacySettingsContacts$Input = {
+  readonly _: "storyPrivacySettingsContacts";
+
+  /**
+   * User identifiers of the contacts that can't see the story; always unknown and empty for non-owned stories
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly except_user_ids?: vector$Input<int53>;
+};
+
+/**
+ * The story can be viewed by all close friends
+ */
+export type storyPrivacySettingsCloseFriends = {
+  _: "storyPrivacySettingsCloseFriends";
+};
+
+/**
+ * Version of {@link storyPrivacySettingsCloseFriends} for method parameters.
+ *
+ * The story can be viewed by all close friends
+ */
+export type storyPrivacySettingsCloseFriends$Input = {
+  readonly _: "storyPrivacySettingsCloseFriends";
+};
+
+/**
+ * The story can be viewed by certain specified users
+ */
+export type storyPrivacySettingsSelectedContacts = {
+  _: "storyPrivacySettingsSelectedContacts";
+
+  /**
+   * Identifiers of the users; always unknown and empty for non-owned stories
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  user_ids: vector<int53>;
+};
+
+/**
+ * Version of {@link storyPrivacySettingsSelectedContacts} for method parameters.
+ *
+ * The story can be viewed by certain specified users
+ */
+export type storyPrivacySettingsSelectedContacts$Input = {
+  readonly _: "storyPrivacySettingsSelectedContacts";
+
+  /**
+   * Identifiers of the users; always unknown and empty for non-owned stories
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly user_ids?: vector$Input<int53>;
+};
+
+/**
  * A rule to allow all users to do something
  */
 export type userPrivacySettingRuleAllowAll = {
@@ -40262,7 +42701,7 @@ export type userPrivacySettingRuleAllowAll$Input = {
 };
 
 /**
- * A rule to allow all of a user's contacts to do something
+ * A rule to allow all contacts of the user to do something
  */
 export type userPrivacySettingRuleAllowContacts = {
   _: "userPrivacySettingRuleAllowContacts";
@@ -40271,7 +42710,7 @@ export type userPrivacySettingRuleAllowContacts = {
 /**
  * Version of {@link userPrivacySettingRuleAllowContacts} for method parameters.
  *
- * A rule to allow all of a user's contacts to do something
+ * A rule to allow all contacts of the user to do something
  */
 export type userPrivacySettingRuleAllowContacts$Input = {
   readonly _: "userPrivacySettingRuleAllowContacts";
@@ -40350,7 +42789,7 @@ export type userPrivacySettingRuleRestrictAll$Input = {
 };
 
 /**
- * A rule to restrict all contacts of a user from doing something
+ * A rule to restrict all contacts of the user from doing something
  */
 export type userPrivacySettingRuleRestrictContacts = {
   _: "userPrivacySettingRuleRestrictContacts";
@@ -40359,7 +42798,7 @@ export type userPrivacySettingRuleRestrictContacts = {
 /**
  * Version of {@link userPrivacySettingRuleRestrictContacts} for method parameters.
  *
- * A rule to restrict all contacts of a user from doing something
+ * A rule to restrict all contacts of the user from doing something
  */
 export type userPrivacySettingRuleRestrictContacts$Input = {
   readonly _: "userPrivacySettingRuleRestrictContacts";
@@ -40511,6 +42950,22 @@ export type userPrivacySettingShowPhoneNumber = {
  */
 export type userPrivacySettingShowPhoneNumber$Input = {
   readonly _: "userPrivacySettingShowPhoneNumber";
+};
+
+/**
+ * A privacy setting for managing whether the user's bio is visible
+ */
+export type userPrivacySettingShowBio = {
+  _: "userPrivacySettingShowBio";
+};
+
+/**
+ * Version of {@link userPrivacySettingShowBio} for method parameters.
+ *
+ * A privacy setting for managing whether the user's bio is visible
+ */
+export type userPrivacySettingShowBio$Input = {
+  readonly _: "userPrivacySettingShowBio";
 };
 
 /**
@@ -41348,161 +43803,161 @@ export type connectedWebsites$Input = {
 /**
  * The chat contains spam messages
  */
-export type chatReportReasonSpam = {
-  _: "chatReportReasonSpam";
+export type reportReasonSpam = {
+  _: "reportReasonSpam";
 };
 
 /**
- * Version of {@link chatReportReasonSpam} for method parameters.
+ * Version of {@link reportReasonSpam} for method parameters.
  *
  * The chat contains spam messages
  */
-export type chatReportReasonSpam$Input = {
-  readonly _: "chatReportReasonSpam";
+export type reportReasonSpam$Input = {
+  readonly _: "reportReasonSpam";
 };
 
 /**
  * The chat promotes violence
  */
-export type chatReportReasonViolence = {
-  _: "chatReportReasonViolence";
+export type reportReasonViolence = {
+  _: "reportReasonViolence";
 };
 
 /**
- * Version of {@link chatReportReasonViolence} for method parameters.
+ * Version of {@link reportReasonViolence} for method parameters.
  *
  * The chat promotes violence
  */
-export type chatReportReasonViolence$Input = {
-  readonly _: "chatReportReasonViolence";
+export type reportReasonViolence$Input = {
+  readonly _: "reportReasonViolence";
 };
 
 /**
  * The chat contains pornographic messages
  */
-export type chatReportReasonPornography = {
-  _: "chatReportReasonPornography";
+export type reportReasonPornography = {
+  _: "reportReasonPornography";
 };
 
 /**
- * Version of {@link chatReportReasonPornography} for method parameters.
+ * Version of {@link reportReasonPornography} for method parameters.
  *
  * The chat contains pornographic messages
  */
-export type chatReportReasonPornography$Input = {
-  readonly _: "chatReportReasonPornography";
+export type reportReasonPornography$Input = {
+  readonly _: "reportReasonPornography";
 };
 
 /**
  * The chat has child abuse related content
  */
-export type chatReportReasonChildAbuse = {
-  _: "chatReportReasonChildAbuse";
+export type reportReasonChildAbuse = {
+  _: "reportReasonChildAbuse";
 };
 
 /**
- * Version of {@link chatReportReasonChildAbuse} for method parameters.
+ * Version of {@link reportReasonChildAbuse} for method parameters.
  *
  * The chat has child abuse related content
  */
-export type chatReportReasonChildAbuse$Input = {
-  readonly _: "chatReportReasonChildAbuse";
+export type reportReasonChildAbuse$Input = {
+  readonly _: "reportReasonChildAbuse";
 };
 
 /**
  * The chat contains copyrighted content
  */
-export type chatReportReasonCopyright = {
-  _: "chatReportReasonCopyright";
+export type reportReasonCopyright = {
+  _: "reportReasonCopyright";
 };
 
 /**
- * Version of {@link chatReportReasonCopyright} for method parameters.
+ * Version of {@link reportReasonCopyright} for method parameters.
  *
  * The chat contains copyrighted content
  */
-export type chatReportReasonCopyright$Input = {
-  readonly _: "chatReportReasonCopyright";
+export type reportReasonCopyright$Input = {
+  readonly _: "reportReasonCopyright";
 };
 
 /**
  * The location-based chat is unrelated to its stated location
  */
-export type chatReportReasonUnrelatedLocation = {
-  _: "chatReportReasonUnrelatedLocation";
+export type reportReasonUnrelatedLocation = {
+  _: "reportReasonUnrelatedLocation";
 };
 
 /**
- * Version of {@link chatReportReasonUnrelatedLocation} for method parameters.
+ * Version of {@link reportReasonUnrelatedLocation} for method parameters.
  *
  * The location-based chat is unrelated to its stated location
  */
-export type chatReportReasonUnrelatedLocation$Input = {
-  readonly _: "chatReportReasonUnrelatedLocation";
+export type reportReasonUnrelatedLocation$Input = {
+  readonly _: "reportReasonUnrelatedLocation";
 };
 
 /**
  * The chat represents a fake account
  */
-export type chatReportReasonFake = {
-  _: "chatReportReasonFake";
+export type reportReasonFake = {
+  _: "reportReasonFake";
 };
 
 /**
- * Version of {@link chatReportReasonFake} for method parameters.
+ * Version of {@link reportReasonFake} for method parameters.
  *
  * The chat represents a fake account
  */
-export type chatReportReasonFake$Input = {
-  readonly _: "chatReportReasonFake";
+export type reportReasonFake$Input = {
+  readonly _: "reportReasonFake";
 };
 
 /**
  * The chat has illegal drugs related content
  */
-export type chatReportReasonIllegalDrugs = {
-  _: "chatReportReasonIllegalDrugs";
+export type reportReasonIllegalDrugs = {
+  _: "reportReasonIllegalDrugs";
 };
 
 /**
- * Version of {@link chatReportReasonIllegalDrugs} for method parameters.
+ * Version of {@link reportReasonIllegalDrugs} for method parameters.
  *
  * The chat has illegal drugs related content
  */
-export type chatReportReasonIllegalDrugs$Input = {
-  readonly _: "chatReportReasonIllegalDrugs";
+export type reportReasonIllegalDrugs$Input = {
+  readonly _: "reportReasonIllegalDrugs";
 };
 
 /**
  * The chat contains messages with personal details
  */
-export type chatReportReasonPersonalDetails = {
-  _: "chatReportReasonPersonalDetails";
+export type reportReasonPersonalDetails = {
+  _: "reportReasonPersonalDetails";
 };
 
 /**
- * Version of {@link chatReportReasonPersonalDetails} for method parameters.
+ * Version of {@link reportReasonPersonalDetails} for method parameters.
  *
  * The chat contains messages with personal details
  */
-export type chatReportReasonPersonalDetails$Input = {
-  readonly _: "chatReportReasonPersonalDetails";
+export type reportReasonPersonalDetails$Input = {
+  readonly _: "reportReasonPersonalDetails";
 };
 
 /**
  * A custom reason provided by the user
  */
-export type chatReportReasonCustom = {
-  _: "chatReportReasonCustom";
+export type reportReasonCustom = {
+  _: "reportReasonCustom";
 };
 
 /**
- * Version of {@link chatReportReasonCustom} for method parameters.
+ * Version of {@link reportReasonCustom} for method parameters.
  *
  * A custom reason provided by the user
  */
-export type chatReportReasonCustom$Input = {
-  readonly _: "chatReportReasonCustom";
+export type reportReasonCustom$Input = {
+  readonly _: "reportReasonCustom";
 };
 
 /**
@@ -42602,6 +45057,46 @@ export type internalLinkTypeStickerSet$Input = {
 };
 
 /**
+ * The link is a link to a story. Call searchPublicChat with the given sender username, then call getStory with the received chat identifier and the given story identifier
+ */
+export type internalLinkTypeStory = {
+  _: "internalLinkTypeStory";
+
+  /**
+   * Username of the sender of the story
+   * @type {string} {@link string}
+   */
+  story_sender_username: string;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  story_id: int32;
+};
+
+/**
+ * Version of {@link internalLinkTypeStory} for method parameters.
+ *
+ * The link is a link to a story. Call searchPublicChat with the given sender username, then call getStory with the received chat identifier and the given story identifier
+ */
+export type internalLinkTypeStory$Input = {
+  readonly _: "internalLinkTypeStory";
+
+  /**
+   * Username of the sender of the story
+   * @type {string} {@link string}
+   */
+  readonly story_sender_username?: string;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
  * The link is a link to a theme. TDLib has no theme support yet
  */
 export type internalLinkTypeTheme = {
@@ -42982,6 +45477,38 @@ export type messageLinkInfo$Input = {
 };
 
 /**
+ * The main block list that disallows writing messages to the current user, receiving their status and photo, viewing of stories, and some other actions
+ */
+export type blockListMain = {
+  _: "blockListMain";
+};
+
+/**
+ * Version of {@link blockListMain} for method parameters.
+ *
+ * The main block list that disallows writing messages to the current user, receiving their status and photo, viewing of stories, and some other actions
+ */
+export type blockListMain$Input = {
+  readonly _: "blockListMain";
+};
+
+/**
+ * The block list that disallows viewing of stories of the current user
+ */
+export type blockListStories = {
+  _: "blockListStories";
+};
+
+/**
+ * Version of {@link blockListStories} for method parameters.
+ *
+ * The block list that disallows viewing of stories of the current user
+ */
+export type blockListStories$Input = {
+  readonly _: "blockListStories";
+};
+
+/**
  * Contains a part of a file
  */
 export type filePart = {
@@ -43103,6 +45630,22 @@ export type fileTypePhoto = {
  */
 export type fileTypePhoto$Input = {
   readonly _: "fileTypePhoto";
+};
+
+/**
+ * The file is a photo published as a story
+ */
+export type fileTypePhotoStory = {
+  _: "fileTypePhotoStory";
+};
+
+/**
+ * Version of {@link fileTypePhotoStory} for method parameters.
+ *
+ * The file is a photo published as a story
+ */
+export type fileTypePhotoStory$Input = {
+  readonly _: "fileTypePhotoStory";
 };
 
 /**
@@ -43247,6 +45790,22 @@ export type fileTypeVideoNote = {
  */
 export type fileTypeVideoNote$Input = {
   readonly _: "fileTypeVideoNote";
+};
+
+/**
+ * The file is a video published as a story
+ */
+export type fileTypeVideoStory = {
+  _: "fileTypeVideoStory";
+};
+
+/**
+ * Version of {@link fileTypeVideoStory} for method parameters.
+ *
+ * The file is a video published as a story
+ */
+export type fileTypeVideoStory$Input = {
+  readonly _: "fileTypeVideoStory";
 };
 
 /**
@@ -43850,6 +46409,12 @@ export type autoDownloadSettings = {
   preload_next_audio: Bool;
 
   /**
+   * True, if stories needs to be preloaded
+   * @type {Bool} {@link Bool}
+   */
+  preload_stories: Bool;
+
+  /**
    * True, if "use less data for calls" option needs to be enabled
    * @type {Bool} {@link Bool}
    */
@@ -43905,6 +46470,12 @@ export type autoDownloadSettings$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly preload_next_audio?: Bool$Input;
+
+  /**
+   * True, if stories needs to be preloaded
+   * @type {Bool} {@link Bool}
+   */
+  readonly preload_stories?: Bool$Input;
 
   /**
    * True, if "use less data for calls" option needs to be enabled
@@ -44570,7 +47141,7 @@ export type tMeUrls$Input = {
 };
 
 /**
- * Suggests the user to enable "archive_and_mute_new_chats_from_unknown_users" option
+ * Suggests the user to enable archive_and_mute_new_chats_from_unknown_users setting in archiveChatListSettings
  */
 export type suggestedActionEnableArchiveAndMuteNewChats = {
   _: "suggestedActionEnableArchiveAndMuteNewChats";
@@ -44579,7 +47150,7 @@ export type suggestedActionEnableArchiveAndMuteNewChats = {
 /**
  * Version of {@link suggestedActionEnableArchiveAndMuteNewChats} for method parameters.
  *
- * Suggests the user to enable "archive_and_mute_new_chats_from_unknown_users" option
+ * Suggests the user to enable archive_and_mute_new_chats_from_unknown_users setting in archiveChatListSettings
  */
 export type suggestedActionEnableArchiveAndMuteNewChats$Input = {
   readonly _: "suggestedActionEnableArchiveAndMuteNewChats";
@@ -44703,6 +47274,22 @@ export type suggestedActionUpgradePremium = {
  */
 export type suggestedActionUpgradePremium$Input = {
   readonly _: "suggestedActionUpgradePremium";
+};
+
+/**
+ * Suggests the user to restore a recently expired Premium subscription
+ */
+export type suggestedActionRestorePremium = {
+  _: "suggestedActionRestorePremium";
+};
+
+/**
+ * Version of {@link suggestedActionRestorePremium} for method parameters.
+ *
+ * Suggests the user to restore a recently expired Premium subscription
+ */
+export type suggestedActionRestorePremium$Input = {
+  readonly _: "suggestedActionRestorePremium";
 };
 
 /**
@@ -47976,8 +50563,8 @@ export type updateChatIsMarkedAsUnread$Input = {
 /**
  * A chat was blocked or unblocked
  */
-export type updateChatIsBlocked = {
-  _: "updateChatIsBlocked";
+export type updateChatBlockList = {
+  _: "updateChatBlockList";
 
   /**
    * Chat identifier
@@ -47986,19 +50573,19 @@ export type updateChatIsBlocked = {
   chat_id: int53;
 
   /**
-   * New value of is_blocked
-   * @type {Bool} {@link Bool}
+   * Block list to which the chat is added; may be null if none
+   * @type {BlockList} {@link BlockList}
    */
-  is_blocked: Bool;
+  block_list: BlockList | null;
 };
 
 /**
- * Version of {@link updateChatIsBlocked} for method parameters.
+ * Version of {@link updateChatBlockList} for method parameters.
  *
  * A chat was blocked or unblocked
  */
-export type updateChatIsBlocked$Input = {
-  readonly _: "updateChatIsBlocked";
+export type updateChatBlockList$Input = {
+  readonly _: "updateChatBlockList";
 
   /**
    * Chat identifier
@@ -48007,10 +50594,10 @@ export type updateChatIsBlocked$Input = {
   readonly chat_id?: int53;
 
   /**
-   * New value of is_blocked
-   * @type {Bool} {@link Bool}
+   * Block list to which the chat is added; may be null if none
+   * @type {BlockList} {@link BlockList}
    */
-  readonly is_blocked?: Bool$Input;
+  readonly block_list?: BlockList$Input | null;
 };
 
 /**
@@ -48300,13 +50887,13 @@ export type updateNotificationGroup = {
   total_count: int32;
 
   /**
-   * List of added group notifications, sorted by notification ID
+   * List of added group notifications, sorted by notification identifier
    * @type {vector<notification>} {@link vector<notification>}
    */
   added_notifications: vector<notification>;
 
   /**
-   * Identifiers of removed group notifications, sorted by notification ID
+   * Identifiers of removed group notifications, sorted by notification identifier
    * @type {vector<int32>} {@link vector<int32>}
    */
   removed_notification_ids: vector<int32>;
@@ -48357,13 +50944,13 @@ export type updateNotificationGroup$Input = {
   readonly total_count?: int32;
 
   /**
-   * List of added group notifications, sorted by notification ID
+   * List of added group notifications, sorted by notification identifier
    * @type {vector<notification>} {@link vector<notification>}
    */
   readonly added_notifications?: vector$Input<notification$Input>;
 
   /**
-   * Identifiers of removed group notifications, sorted by notification ID
+   * Identifiers of removed group notifications, sorted by notification identifier
    * @type {vector<int32>} {@link vector<int32>}
    */
   readonly removed_notification_ids?: vector$Input<int32>;
@@ -49507,6 +52094,286 @@ export type updateUnreadChatCount$Input = {
    * @type {int32} {@link int32}
    */
   readonly marked_as_unread_unmuted_count?: int32;
+};
+
+/**
+ * A story was changed
+ */
+export type updateStory = {
+  _: "updateStory";
+
+  /**
+   * The new information about the story
+   * @type {story} {@link story}
+   */
+  story: story;
+};
+
+/**
+ * Version of {@link updateStory} for method parameters.
+ *
+ * A story was changed
+ */
+export type updateStory$Input = {
+  readonly _: "updateStory";
+
+  /**
+   * The new information about the story
+   * @type {story} {@link story}
+   */
+  readonly story?: story$Input;
+};
+
+/**
+ * A story became inaccessible
+ */
+export type updateStoryDeleted = {
+  _: "updateStoryDeleted";
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  story_sender_chat_id: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  story_id: int32;
+};
+
+/**
+ * Version of {@link updateStoryDeleted} for method parameters.
+ *
+ * A story became inaccessible
+ */
+export type updateStoryDeleted$Input = {
+  readonly _: "updateStoryDeleted";
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
+ * A story has been successfully sent
+ */
+export type updateStorySendSucceeded = {
+  _: "updateStorySendSucceeded";
+
+  /**
+   * The sent story
+   * @type {story} {@link story}
+   */
+  story: story;
+
+  /**
+   * The previous temporary story identifier
+   * @type {int32} {@link int32}
+   */
+  old_story_id: int32;
+};
+
+/**
+ * Version of {@link updateStorySendSucceeded} for method parameters.
+ *
+ * A story has been successfully sent
+ */
+export type updateStorySendSucceeded$Input = {
+  readonly _: "updateStorySendSucceeded";
+
+  /**
+   * The sent story
+   * @type {story} {@link story}
+   */
+  readonly story?: story$Input;
+
+  /**
+   * The previous temporary story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly old_story_id?: int32;
+};
+
+/**
+ * A story failed to send. If the story sending is canceled, then updateStoryDeleted will be received instead of this update
+ */
+export type updateStorySendFailed = {
+  _: "updateStorySendFailed";
+
+  /**
+   * The failed to send story
+   * @type {story} {@link story}
+   */
+  story: story;
+
+  /**
+   * The cause of the failure; may be null if unknown
+   * @type {CanSendStoryResult} {@link CanSendStoryResult}
+   */
+  error: CanSendStoryResult | null;
+
+  /**
+   * An error code
+   * @type {int32} {@link int32}
+   */
+  error_code: int32;
+
+  /**
+   * Error message
+   * @type {string} {@link string}
+   */
+  error_message: string;
+};
+
+/**
+ * Version of {@link updateStorySendFailed} for method parameters.
+ *
+ * A story failed to send. If the story sending is canceled, then updateStoryDeleted will be received instead of this update
+ */
+export type updateStorySendFailed$Input = {
+  readonly _: "updateStorySendFailed";
+
+  /**
+   * The failed to send story
+   * @type {story} {@link story}
+   */
+  readonly story?: story$Input;
+
+  /**
+   * The cause of the failure; may be null if unknown
+   * @type {CanSendStoryResult} {@link CanSendStoryResult}
+   */
+  readonly error?: CanSendStoryResult$Input | null;
+
+  /**
+   * An error code
+   * @type {int32} {@link int32}
+   */
+  readonly error_code?: int32;
+
+  /**
+   * Error message
+   * @type {string} {@link string}
+   */
+  readonly error_message?: string;
+};
+
+/**
+ * The list of active stories posted by a specific chat has changed
+ */
+export type updateChatActiveStories = {
+  _: "updateChatActiveStories";
+
+  /**
+   * The new list of active stories
+   * @type {chatActiveStories} {@link chatActiveStories}
+   */
+  active_stories: chatActiveStories;
+};
+
+/**
+ * Version of {@link updateChatActiveStories} for method parameters.
+ *
+ * The list of active stories posted by a specific chat has changed
+ */
+export type updateChatActiveStories$Input = {
+  readonly _: "updateChatActiveStories";
+
+  /**
+   * The new list of active stories
+   * @type {chatActiveStories} {@link chatActiveStories}
+   */
+  readonly active_stories?: chatActiveStories$Input;
+};
+
+/**
+ * Number of chats in a story list has changed
+ */
+export type updateStoryListChatCount = {
+  _: "updateStoryListChatCount";
+
+  /**
+   * The story list
+   * @type {StoryList} {@link StoryList}
+   */
+  story_list: StoryList;
+
+  /**
+   * Approximate total number of chats with active stories in the list
+   * @type {int32} {@link int32}
+   */
+  chat_count: int32;
+};
+
+/**
+ * Version of {@link updateStoryListChatCount} for method parameters.
+ *
+ * Number of chats in a story list has changed
+ */
+export type updateStoryListChatCount$Input = {
+  readonly _: "updateStoryListChatCount";
+
+  /**
+   * The story list
+   * @type {StoryList} {@link StoryList}
+   */
+  readonly story_list?: StoryList$Input;
+
+  /**
+   * Approximate total number of chats with active stories in the list
+   * @type {int32} {@link int32}
+   */
+  readonly chat_count?: int32;
+};
+
+/**
+ * Story stealth mode settings have changed
+ */
+export type updateStoryStealthMode = {
+  _: "updateStoryStealthMode";
+
+  /**
+   * Point in time (Unix timestamp) until stealth mode is active; 0 if it is disabled
+   * @type {int32} {@link int32}
+   */
+  active_until_date: int32;
+
+  /**
+   * Point in time (Unix timestamp) when stealth mode can be enabled again; 0 if there is no active cooldown
+   * @type {int32} {@link int32}
+   */
+  cooldown_until_date: int32;
+};
+
+/**
+ * Version of {@link updateStoryStealthMode} for method parameters.
+ *
+ * Story stealth mode settings have changed
+ */
+export type updateStoryStealthMode$Input = {
+  readonly _: "updateStoryStealthMode";
+
+  /**
+   * Point in time (Unix timestamp) until stealth mode is active; 0 if it is disabled
+   * @type {int32} {@link int32}
+   */
+  readonly active_until_date?: int32;
+
+  /**
+   * Point in time (Unix timestamp) when stealth mode can be enabled again; 0 if there is no active cooldown
+   * @type {int32} {@link int32}
+   */
+  readonly cooldown_until_date?: int32;
 };
 
 /**
@@ -50962,10 +53829,10 @@ export type updatePollAnswer = {
   poll_id: int64;
 
   /**
-   * The user, who changed the answer to the poll
-   * @type {int53} {@link int53}
+   * Identifier of the message sender that changed the answer to the poll
+   * @type {MessageSender} {@link MessageSender}
    */
-  user_id: int53;
+  voter_id: MessageSender;
 
   /**
    * 0-based identifiers of answer options, chosen by the user
@@ -50989,10 +53856,10 @@ export type updatePollAnswer$Input = {
   readonly poll_id?: int64$Input;
 
   /**
-   * The user, who changed the answer to the poll
-   * @type {int53} {@link int53}
+   * Identifier of the message sender that changed the answer to the poll
+   * @type {MessageSender} {@link MessageSender}
    */
-  readonly user_id?: int53;
+  readonly voter_id?: MessageSender$Input;
 
   /**
    * 0-based identifiers of answer options, chosen by the user
@@ -53434,6 +56301,23 @@ export type MessageSendingState$Input =
 
 /**
  * Any of:
+ * - {@link messageReplyToMessage}
+ * - {@link messageReplyToStory}
+ */
+export type MessageReplyTo = messageReplyToMessage | messageReplyToStory;
+
+/**
+ * Version of {@link MessageReplyTo} for method parameters.
+ * Any of:
+ * - {@link messageReplyToMessage$Input}
+ * - {@link messageReplyToStory$Input}
+ */
+export type MessageReplyTo$Input =
+  | messageReplyToMessage$Input
+  | messageReplyToStory$Input;
+
+/**
+ * Any of:
  * - {@link message}
  */
 export type Message = message;
@@ -53546,6 +56430,7 @@ export type MessageCalendar$Input = messageCalendar$Input;
  * - {@link messageSourceSearch}
  * - {@link messageSourceChatEventLog}
  * - {@link messageSourceNotification}
+ * - {@link messageSourceScreenshot}
  * - {@link messageSourceOther}
  */
 export type MessageSource =
@@ -53557,6 +56442,7 @@ export type MessageSource =
   | messageSourceSearch
   | messageSourceChatEventLog
   | messageSourceNotification
+  | messageSourceScreenshot
   | messageSourceOther;
 
 /**
@@ -53570,6 +56456,7 @@ export type MessageSource =
  * - {@link messageSourceSearch$Input}
  * - {@link messageSourceChatEventLog$Input}
  * - {@link messageSourceNotification$Input}
+ * - {@link messageSourceScreenshot$Input}
  * - {@link messageSourceOther$Input}
  */
 export type MessageSource$Input =
@@ -53581,7 +56468,48 @@ export type MessageSource$Input =
   | messageSourceSearch$Input
   | messageSourceChatEventLog$Input
   | messageSourceNotification$Input
+  | messageSourceScreenshot$Input
   | messageSourceOther$Input;
+
+/**
+ * Any of:
+ * - {@link messageSponsorTypeBot}
+ * - {@link messageSponsorTypePublicChannel}
+ * - {@link messageSponsorTypePrivateChannel}
+ * - {@link messageSponsorTypeWebsite}
+ */
+export type MessageSponsorType =
+  | messageSponsorTypeBot
+  | messageSponsorTypePublicChannel
+  | messageSponsorTypePrivateChannel
+  | messageSponsorTypeWebsite;
+
+/**
+ * Version of {@link MessageSponsorType} for method parameters.
+ * Any of:
+ * - {@link messageSponsorTypeBot$Input}
+ * - {@link messageSponsorTypePublicChannel$Input}
+ * - {@link messageSponsorTypePrivateChannel$Input}
+ * - {@link messageSponsorTypeWebsite$Input}
+ */
+export type MessageSponsorType$Input =
+  | messageSponsorTypeBot$Input
+  | messageSponsorTypePublicChannel$Input
+  | messageSponsorTypePrivateChannel$Input
+  | messageSponsorTypeWebsite$Input;
+
+/**
+ * Any of:
+ * - {@link messageSponsor}
+ */
+export type MessageSponsor = messageSponsor;
+
+/**
+ * Version of {@link MessageSponsor} for method parameters.
+ * Any of:
+ * - {@link messageSponsor$Input}
+ */
+export type MessageSponsor$Input = messageSponsor$Input;
 
 /**
  * Any of:
@@ -53840,6 +56768,19 @@ export type RecommendedChatFolders = recommendedChatFolders;
  * - {@link recommendedChatFolders$Input}
  */
 export type RecommendedChatFolders$Input = recommendedChatFolders$Input;
+
+/**
+ * Any of:
+ * - {@link archiveChatListSettings}
+ */
+export type ArchiveChatListSettings = archiveChatListSettings;
+
+/**
+ * Version of {@link ArchiveChatListSettings} for method parameters.
+ * Any of:
+ * - {@link archiveChatListSettings$Input}
+ */
+export type ArchiveChatListSettings$Input = archiveChatListSettings$Input;
 
 /**
  * Any of:
@@ -55449,6 +58390,7 @@ export type InputPassportElementError$Input = inputPassportElementError$Input;
  * - {@link messageDice}
  * - {@link messageGame}
  * - {@link messagePoll}
+ * - {@link messageStory}
  * - {@link messageInvoice}
  * - {@link messageCall}
  * - {@link messageVideoChatScheduled}
@@ -55512,6 +58454,7 @@ export type MessageContent =
   | messageDice
   | messageGame
   | messagePoll
+  | messageStory
   | messageInvoice
   | messageCall
   | messageVideoChatScheduled
@@ -55577,6 +58520,7 @@ export type MessageContent =
  * - {@link messageDice$Input}
  * - {@link messageGame$Input}
  * - {@link messagePoll$Input}
+ * - {@link messageStory$Input}
  * - {@link messageInvoice$Input}
  * - {@link messageCall$Input}
  * - {@link messageVideoChatScheduled$Input}
@@ -55640,6 +58584,7 @@ export type MessageContent$Input =
   | messageDice$Input
   | messageGame$Input
   | messagePoll$Input
+  | messageStory$Input
   | messageInvoice$Input
   | messageCall$Input
   | messageVideoChatScheduled$Input
@@ -55851,6 +58796,7 @@ export type MessageCopyOptions$Input = messageCopyOptions$Input;
  * - {@link inputMessageGame}
  * - {@link inputMessageInvoice}
  * - {@link inputMessagePoll}
+ * - {@link inputMessageStory}
  * - {@link inputMessageForwarded}
  */
 export type InputMessageContent =
@@ -55870,6 +58816,7 @@ export type InputMessageContent =
   | inputMessageGame
   | inputMessageInvoice
   | inputMessagePoll
+  | inputMessageStory
   | inputMessageForwarded;
 
 /**
@@ -55891,6 +58838,7 @@ export type InputMessageContent =
  * - {@link inputMessageGame$Input}
  * - {@link inputMessageInvoice$Input}
  * - {@link inputMessagePoll$Input}
+ * - {@link inputMessageStory$Input}
  * - {@link inputMessageForwarded$Input}
  */
 export type InputMessageContent$Input =
@@ -55910,6 +58858,7 @@ export type InputMessageContent$Input =
   | inputMessageGame$Input
   | inputMessageInvoice$Input
   | inputMessagePoll$Input
+  | inputMessageStory$Input
   | inputMessageForwarded$Input;
 
 /**
@@ -56223,6 +59172,257 @@ export type EmojiCategoryType$Input =
   | emojiCategoryTypeDefault$Input
   | emojiCategoryTypeEmojiStatus$Input
   | emojiCategoryTypeChatPhoto$Input;
+
+/**
+ * Any of:
+ * - {@link storyViewer}
+ */
+export type StoryViewer = storyViewer;
+
+/**
+ * Version of {@link StoryViewer} for method parameters.
+ * Any of:
+ * - {@link storyViewer$Input}
+ */
+export type StoryViewer$Input = storyViewer$Input;
+
+/**
+ * Any of:
+ * - {@link storyViewers}
+ */
+export type StoryViewers = storyViewers;
+
+/**
+ * Version of {@link StoryViewers} for method parameters.
+ * Any of:
+ * - {@link storyViewers$Input}
+ */
+export type StoryViewers$Input = storyViewers$Input;
+
+/**
+ * Any of:
+ * - {@link storyAreaPosition}
+ */
+export type StoryAreaPosition = storyAreaPosition;
+
+/**
+ * Version of {@link StoryAreaPosition} for method parameters.
+ * Any of:
+ * - {@link storyAreaPosition$Input}
+ */
+export type StoryAreaPosition$Input = storyAreaPosition$Input;
+
+/**
+ * Any of:
+ * - {@link storyAreaTypeLocation}
+ * - {@link storyAreaTypeVenue}
+ */
+export type StoryAreaType = storyAreaTypeLocation | storyAreaTypeVenue;
+
+/**
+ * Version of {@link StoryAreaType} for method parameters.
+ * Any of:
+ * - {@link storyAreaTypeLocation$Input}
+ * - {@link storyAreaTypeVenue$Input}
+ */
+export type StoryAreaType$Input =
+  | storyAreaTypeLocation$Input
+  | storyAreaTypeVenue$Input;
+
+/**
+ * Any of:
+ * - {@link storyArea}
+ */
+export type StoryArea = storyArea;
+
+/**
+ * Version of {@link StoryArea} for method parameters.
+ * Any of:
+ * - {@link storyArea$Input}
+ */
+export type StoryArea$Input = storyArea$Input;
+
+/**
+ * Any of:
+ * - {@link inputStoryAreaTypeLocation}
+ * - {@link inputStoryAreaTypeFoundVenue}
+ * - {@link inputStoryAreaTypePreviousVenue}
+ */
+export type InputStoryAreaType =
+  | inputStoryAreaTypeLocation
+  | inputStoryAreaTypeFoundVenue
+  | inputStoryAreaTypePreviousVenue;
+
+/**
+ * Version of {@link InputStoryAreaType} for method parameters.
+ * Any of:
+ * - {@link inputStoryAreaTypeLocation$Input}
+ * - {@link inputStoryAreaTypeFoundVenue$Input}
+ * - {@link inputStoryAreaTypePreviousVenue$Input}
+ */
+export type InputStoryAreaType$Input =
+  | inputStoryAreaTypeLocation$Input
+  | inputStoryAreaTypeFoundVenue$Input
+  | inputStoryAreaTypePreviousVenue$Input;
+
+/**
+ * Any of:
+ * - {@link inputStoryArea}
+ */
+export type InputStoryArea = inputStoryArea;
+
+/**
+ * Version of {@link InputStoryArea} for method parameters.
+ * Any of:
+ * - {@link inputStoryArea$Input}
+ */
+export type InputStoryArea$Input = inputStoryArea$Input;
+
+/**
+ * Any of:
+ * - {@link inputStoryAreas}
+ */
+export type InputStoryAreas = inputStoryAreas;
+
+/**
+ * Version of {@link InputStoryAreas} for method parameters.
+ * Any of:
+ * - {@link inputStoryAreas$Input}
+ */
+export type InputStoryAreas$Input = inputStoryAreas$Input;
+
+/**
+ * Any of:
+ * - {@link storyVideo}
+ */
+export type StoryVideo = storyVideo;
+
+/**
+ * Version of {@link StoryVideo} for method parameters.
+ * Any of:
+ * - {@link storyVideo$Input}
+ */
+export type StoryVideo$Input = storyVideo$Input;
+
+/**
+ * Any of:
+ * - {@link storyContentPhoto}
+ * - {@link storyContentVideo}
+ * - {@link storyContentUnsupported}
+ */
+export type StoryContent =
+  | storyContentPhoto
+  | storyContentVideo
+  | storyContentUnsupported;
+
+/**
+ * Version of {@link StoryContent} for method parameters.
+ * Any of:
+ * - {@link storyContentPhoto$Input}
+ * - {@link storyContentVideo$Input}
+ * - {@link storyContentUnsupported$Input}
+ */
+export type StoryContent$Input =
+  | storyContentPhoto$Input
+  | storyContentVideo$Input
+  | storyContentUnsupported$Input;
+
+/**
+ * Any of:
+ * - {@link inputStoryContentPhoto}
+ * - {@link inputStoryContentVideo}
+ */
+export type InputStoryContent = inputStoryContentPhoto | inputStoryContentVideo;
+
+/**
+ * Version of {@link InputStoryContent} for method parameters.
+ * Any of:
+ * - {@link inputStoryContentPhoto$Input}
+ * - {@link inputStoryContentVideo$Input}
+ */
+export type InputStoryContent$Input =
+  | inputStoryContentPhoto$Input
+  | inputStoryContentVideo$Input;
+
+/**
+ * Any of:
+ * - {@link storyListMain}
+ * - {@link storyListArchive}
+ */
+export type StoryList = storyListMain | storyListArchive;
+
+/**
+ * Version of {@link StoryList} for method parameters.
+ * Any of:
+ * - {@link storyListMain$Input}
+ * - {@link storyListArchive$Input}
+ */
+export type StoryList$Input = storyListMain$Input | storyListArchive$Input;
+
+/**
+ * Any of:
+ * - {@link storyInteractionInfo}
+ */
+export type StoryInteractionInfo = storyInteractionInfo;
+
+/**
+ * Version of {@link StoryInteractionInfo} for method parameters.
+ * Any of:
+ * - {@link storyInteractionInfo$Input}
+ */
+export type StoryInteractionInfo$Input = storyInteractionInfo$Input;
+
+/**
+ * Any of:
+ * - {@link story}
+ */
+export type Story = story;
+
+/**
+ * Version of {@link Story} for method parameters.
+ * Any of:
+ * - {@link story$Input}
+ */
+export type Story$Input = story$Input;
+
+/**
+ * Any of:
+ * - {@link stories}
+ */
+export type Stories = stories;
+
+/**
+ * Version of {@link Stories} for method parameters.
+ * Any of:
+ * - {@link stories$Input}
+ */
+export type Stories$Input = stories$Input;
+
+/**
+ * Any of:
+ * - {@link storyInfo}
+ */
+export type StoryInfo = storyInfo;
+
+/**
+ * Version of {@link StoryInfo} for method parameters.
+ * Any of:
+ * - {@link storyInfo$Input}
+ */
+export type StoryInfo$Input = storyInfo$Input;
+
+/**
+ * Any of:
+ * - {@link chatActiveStories}
+ */
+export type ChatActiveStories = chatActiveStories;
+
+/**
+ * Version of {@link ChatActiveStories} for method parameters.
+ * Any of:
+ * - {@link chatActiveStories$Input}
+ */
+export type ChatActiveStories$Input = chatActiveStories$Input;
 
 /**
  * Any of:
@@ -57329,6 +60529,10 @@ export type LocalizationTargetInfo$Input = localizationTargetInfo$Input;
  * - {@link premiumLimitTypeBioLength}
  * - {@link premiumLimitTypeChatFolderInviteLinkCount}
  * - {@link premiumLimitTypeShareableChatFolderCount}
+ * - {@link premiumLimitTypeActiveStoryCount}
+ * - {@link premiumLimitTypeWeeklySentStoryCount}
+ * - {@link premiumLimitTypeMonthlySentStoryCount}
+ * - {@link premiumLimitTypeStoryCaptionLength}
  */
 export type PremiumLimitType =
   | premiumLimitTypeSupergroupCount
@@ -57342,7 +60546,11 @@ export type PremiumLimitType =
   | premiumLimitTypeCaptionLength
   | premiumLimitTypeBioLength
   | premiumLimitTypeChatFolderInviteLinkCount
-  | premiumLimitTypeShareableChatFolderCount;
+  | premiumLimitTypeShareableChatFolderCount
+  | premiumLimitTypeActiveStoryCount
+  | premiumLimitTypeWeeklySentStoryCount
+  | premiumLimitTypeMonthlySentStoryCount
+  | premiumLimitTypeStoryCaptionLength;
 
 /**
  * Version of {@link PremiumLimitType} for method parameters.
@@ -57359,6 +60567,10 @@ export type PremiumLimitType =
  * - {@link premiumLimitTypeBioLength$Input}
  * - {@link premiumLimitTypeChatFolderInviteLinkCount$Input}
  * - {@link premiumLimitTypeShareableChatFolderCount$Input}
+ * - {@link premiumLimitTypeActiveStoryCount$Input}
+ * - {@link premiumLimitTypeWeeklySentStoryCount$Input}
+ * - {@link premiumLimitTypeMonthlySentStoryCount$Input}
+ * - {@link premiumLimitTypeStoryCaptionLength$Input}
  */
 export type PremiumLimitType$Input =
   | premiumLimitTypeSupergroupCount$Input
@@ -57372,7 +60584,11 @@ export type PremiumLimitType$Input =
   | premiumLimitTypeCaptionLength$Input
   | premiumLimitTypeBioLength$Input
   | premiumLimitTypeChatFolderInviteLinkCount$Input
-  | premiumLimitTypeShareableChatFolderCount$Input;
+  | premiumLimitTypeShareableChatFolderCount$Input
+  | premiumLimitTypeActiveStoryCount$Input
+  | premiumLimitTypeWeeklySentStoryCount$Input
+  | premiumLimitTypeMonthlySentStoryCount$Input
+  | premiumLimitTypeStoryCaptionLength$Input;
 
 /**
  * Any of:
@@ -57391,6 +60607,7 @@ export type PremiumLimitType$Input =
  * - {@link premiumFeatureForumTopicIcon}
  * - {@link premiumFeatureAppIcons}
  * - {@link premiumFeatureRealTimeChatTranslation}
+ * - {@link premiumFeatureUpgradedStories}
  */
 export type PremiumFeature =
   | premiumFeatureIncreasedLimits
@@ -57407,7 +60624,8 @@ export type PremiumFeature =
   | premiumFeatureAnimatedProfilePhoto
   | premiumFeatureForumTopicIcon
   | premiumFeatureAppIcons
-  | premiumFeatureRealTimeChatTranslation;
+  | premiumFeatureRealTimeChatTranslation
+  | premiumFeatureUpgradedStories;
 
 /**
  * Version of {@link PremiumFeature} for method parameters.
@@ -57427,6 +60645,7 @@ export type PremiumFeature =
  * - {@link premiumFeatureForumTopicIcon$Input}
  * - {@link premiumFeatureAppIcons$Input}
  * - {@link premiumFeatureRealTimeChatTranslation$Input}
+ * - {@link premiumFeatureUpgradedStories$Input}
  */
 export type PremiumFeature$Input =
   | premiumFeatureIncreasedLimits$Input
@@ -57443,7 +60662,43 @@ export type PremiumFeature$Input =
   | premiumFeatureAnimatedProfilePhoto$Input
   | premiumFeatureForumTopicIcon$Input
   | premiumFeatureAppIcons$Input
-  | premiumFeatureRealTimeChatTranslation$Input;
+  | premiumFeatureRealTimeChatTranslation$Input
+  | premiumFeatureUpgradedStories$Input;
+
+/**
+ * Any of:
+ * - {@link premiumStoryFeaturePriorityOrder}
+ * - {@link premiumStoryFeatureStealthMode}
+ * - {@link premiumStoryFeaturePermanentViewsHistory}
+ * - {@link premiumStoryFeatureCustomExpirationDuration}
+ * - {@link premiumStoryFeatureSaveStories}
+ * - {@link premiumStoryFeatureLinksAndFormatting}
+ */
+export type PremiumStoryFeature =
+  | premiumStoryFeaturePriorityOrder
+  | premiumStoryFeatureStealthMode
+  | premiumStoryFeaturePermanentViewsHistory
+  | premiumStoryFeatureCustomExpirationDuration
+  | premiumStoryFeatureSaveStories
+  | premiumStoryFeatureLinksAndFormatting;
+
+/**
+ * Version of {@link PremiumStoryFeature} for method parameters.
+ * Any of:
+ * - {@link premiumStoryFeaturePriorityOrder$Input}
+ * - {@link premiumStoryFeatureStealthMode$Input}
+ * - {@link premiumStoryFeaturePermanentViewsHistory$Input}
+ * - {@link premiumStoryFeatureCustomExpirationDuration$Input}
+ * - {@link premiumStoryFeatureSaveStories$Input}
+ * - {@link premiumStoryFeatureLinksAndFormatting$Input}
+ */
+export type PremiumStoryFeature$Input =
+  | premiumStoryFeaturePriorityOrder$Input
+  | premiumStoryFeatureStealthMode$Input
+  | premiumStoryFeaturePermanentViewsHistory$Input
+  | premiumStoryFeatureCustomExpirationDuration$Input
+  | premiumStoryFeatureSaveStories$Input
+  | premiumStoryFeatureLinksAndFormatting$Input;
 
 /**
  * Any of:
@@ -57475,12 +60730,14 @@ export type PremiumFeatures$Input = premiumFeatures$Input;
  * Any of:
  * - {@link premiumSourceLimitExceeded}
  * - {@link premiumSourceFeature}
+ * - {@link premiumSourceStoryFeature}
  * - {@link premiumSourceLink}
  * - {@link premiumSourceSettings}
  */
 export type PremiumSource =
   | premiumSourceLimitExceeded
   | premiumSourceFeature
+  | premiumSourceStoryFeature
   | premiumSourceLink
   | premiumSourceSettings;
 
@@ -57489,12 +60746,14 @@ export type PremiumSource =
  * Any of:
  * - {@link premiumSourceLimitExceeded$Input}
  * - {@link premiumSourceFeature$Input}
+ * - {@link premiumSourceStoryFeature$Input}
  * - {@link premiumSourceLink$Input}
  * - {@link premiumSourceSettings$Input}
  */
 export type PremiumSource$Input =
   | premiumSourceLimitExceeded$Input
   | premiumSourceFeature$Input
+  | premiumSourceStoryFeature$Input
   | premiumSourceLink$Input
   | premiumSourceSettings$Input;
 
@@ -57726,6 +60985,37 @@ export type Hashtags$Input = hashtags$Input;
 
 /**
  * Any of:
+ * - {@link canSendStoryResultOk}
+ * - {@link canSendStoryResultPremiumNeeded}
+ * - {@link canSendStoryResultActiveStoryLimitExceeded}
+ * - {@link canSendStoryResultWeeklyLimitExceeded}
+ * - {@link canSendStoryResultMonthlyLimitExceeded}
+ */
+export type CanSendStoryResult =
+  | canSendStoryResultOk
+  | canSendStoryResultPremiumNeeded
+  | canSendStoryResultActiveStoryLimitExceeded
+  | canSendStoryResultWeeklyLimitExceeded
+  | canSendStoryResultMonthlyLimitExceeded;
+
+/**
+ * Version of {@link CanSendStoryResult} for method parameters.
+ * Any of:
+ * - {@link canSendStoryResultOk$Input}
+ * - {@link canSendStoryResultPremiumNeeded$Input}
+ * - {@link canSendStoryResultActiveStoryLimitExceeded$Input}
+ * - {@link canSendStoryResultWeeklyLimitExceeded$Input}
+ * - {@link canSendStoryResultMonthlyLimitExceeded$Input}
+ */
+export type CanSendStoryResult$Input =
+  | canSendStoryResultOk$Input
+  | canSendStoryResultPremiumNeeded$Input
+  | canSendStoryResultActiveStoryLimitExceeded$Input
+  | canSendStoryResultWeeklyLimitExceeded$Input
+  | canSendStoryResultMonthlyLimitExceeded$Input;
+
+/**
+ * Any of:
  * - {@link canTransferOwnershipResultOk}
  * - {@link canTransferOwnershipResultPasswordNeeded}
  * - {@link canTransferOwnershipResultPasswordTooFresh}
@@ -57871,6 +61161,7 @@ export type MessageFileType$Input =
  * - {@link pushMessageContentPoll}
  * - {@link pushMessageContentScreenshotTaken}
  * - {@link pushMessageContentSticker}
+ * - {@link pushMessageContentStory}
  * - {@link pushMessageContentText}
  * - {@link pushMessageContentVideo}
  * - {@link pushMessageContentVideoNote}
@@ -57904,6 +61195,7 @@ export type PushMessageContent =
   | pushMessageContentPoll
   | pushMessageContentScreenshotTaken
   | pushMessageContentSticker
+  | pushMessageContentStory
   | pushMessageContentText
   | pushMessageContentVideo
   | pushMessageContentVideoNote
@@ -57939,6 +61231,7 @@ export type PushMessageContent =
  * - {@link pushMessageContentPoll$Input}
  * - {@link pushMessageContentScreenshotTaken$Input}
  * - {@link pushMessageContentSticker$Input}
+ * - {@link pushMessageContentStory$Input}
  * - {@link pushMessageContentText$Input}
  * - {@link pushMessageContentVideo$Input}
  * - {@link pushMessageContentVideoNote$Input}
@@ -57972,6 +61265,7 @@ export type PushMessageContent$Input =
   | pushMessageContentPoll$Input
   | pushMessageContentScreenshotTaken$Input
   | pushMessageContentSticker$Input
+  | pushMessageContentStory$Input
   | pushMessageContentText$Input
   | pushMessageContentVideo$Input
   | pushMessageContentVideoNote$Input
@@ -58173,6 +61467,33 @@ export type JsonValue$Input =
 
 /**
  * Any of:
+ * - {@link storyPrivacySettingsEveryone}
+ * - {@link storyPrivacySettingsContacts}
+ * - {@link storyPrivacySettingsCloseFriends}
+ * - {@link storyPrivacySettingsSelectedContacts}
+ */
+export type StoryPrivacySettings =
+  | storyPrivacySettingsEveryone
+  | storyPrivacySettingsContacts
+  | storyPrivacySettingsCloseFriends
+  | storyPrivacySettingsSelectedContacts;
+
+/**
+ * Version of {@link StoryPrivacySettings} for method parameters.
+ * Any of:
+ * - {@link storyPrivacySettingsEveryone$Input}
+ * - {@link storyPrivacySettingsContacts$Input}
+ * - {@link storyPrivacySettingsCloseFriends$Input}
+ * - {@link storyPrivacySettingsSelectedContacts$Input}
+ */
+export type StoryPrivacySettings$Input =
+  | storyPrivacySettingsEveryone$Input
+  | storyPrivacySettingsContacts$Input
+  | storyPrivacySettingsCloseFriends$Input
+  | storyPrivacySettingsSelectedContacts$Input;
+
+/**
+ * Any of:
  * - {@link userPrivacySettingRuleAllowAll}
  * - {@link userPrivacySettingRuleAllowContacts}
  * - {@link userPrivacySettingRuleAllowUsers}
@@ -58233,6 +61554,7 @@ export type UserPrivacySettingRules$Input = userPrivacySettingRules$Input;
  * - {@link userPrivacySettingShowProfilePhoto}
  * - {@link userPrivacySettingShowLinkInForwardedMessages}
  * - {@link userPrivacySettingShowPhoneNumber}
+ * - {@link userPrivacySettingShowBio}
  * - {@link userPrivacySettingAllowChatInvites}
  * - {@link userPrivacySettingAllowCalls}
  * - {@link userPrivacySettingAllowPeerToPeerCalls}
@@ -58244,6 +61566,7 @@ export type UserPrivacySetting =
   | userPrivacySettingShowProfilePhoto
   | userPrivacySettingShowLinkInForwardedMessages
   | userPrivacySettingShowPhoneNumber
+  | userPrivacySettingShowBio
   | userPrivacySettingAllowChatInvites
   | userPrivacySettingAllowCalls
   | userPrivacySettingAllowPeerToPeerCalls
@@ -58257,6 +61580,7 @@ export type UserPrivacySetting =
  * - {@link userPrivacySettingShowProfilePhoto$Input}
  * - {@link userPrivacySettingShowLinkInForwardedMessages$Input}
  * - {@link userPrivacySettingShowPhoneNumber$Input}
+ * - {@link userPrivacySettingShowBio$Input}
  * - {@link userPrivacySettingAllowChatInvites$Input}
  * - {@link userPrivacySettingAllowCalls$Input}
  * - {@link userPrivacySettingAllowPeerToPeerCalls$Input}
@@ -58268,6 +61592,7 @@ export type UserPrivacySetting$Input =
   | userPrivacySettingShowProfilePhoto$Input
   | userPrivacySettingShowLinkInForwardedMessages$Input
   | userPrivacySettingShowPhoneNumber$Input
+  | userPrivacySettingShowBio$Input
   | userPrivacySettingAllowChatInvites$Input
   | userPrivacySettingAllowCalls$Input
   | userPrivacySettingAllowPeerToPeerCalls$Input
@@ -58433,54 +61758,54 @@ export type ConnectedWebsites$Input = connectedWebsites$Input;
 
 /**
  * Any of:
- * - {@link chatReportReasonSpam}
- * - {@link chatReportReasonViolence}
- * - {@link chatReportReasonPornography}
- * - {@link chatReportReasonChildAbuse}
- * - {@link chatReportReasonCopyright}
- * - {@link chatReportReasonUnrelatedLocation}
- * - {@link chatReportReasonFake}
- * - {@link chatReportReasonIllegalDrugs}
- * - {@link chatReportReasonPersonalDetails}
- * - {@link chatReportReasonCustom}
+ * - {@link reportReasonSpam}
+ * - {@link reportReasonViolence}
+ * - {@link reportReasonPornography}
+ * - {@link reportReasonChildAbuse}
+ * - {@link reportReasonCopyright}
+ * - {@link reportReasonUnrelatedLocation}
+ * - {@link reportReasonFake}
+ * - {@link reportReasonIllegalDrugs}
+ * - {@link reportReasonPersonalDetails}
+ * - {@link reportReasonCustom}
  */
-export type ChatReportReason =
-  | chatReportReasonSpam
-  | chatReportReasonViolence
-  | chatReportReasonPornography
-  | chatReportReasonChildAbuse
-  | chatReportReasonCopyright
-  | chatReportReasonUnrelatedLocation
-  | chatReportReasonFake
-  | chatReportReasonIllegalDrugs
-  | chatReportReasonPersonalDetails
-  | chatReportReasonCustom;
+export type ReportReason =
+  | reportReasonSpam
+  | reportReasonViolence
+  | reportReasonPornography
+  | reportReasonChildAbuse
+  | reportReasonCopyright
+  | reportReasonUnrelatedLocation
+  | reportReasonFake
+  | reportReasonIllegalDrugs
+  | reportReasonPersonalDetails
+  | reportReasonCustom;
 
 /**
- * Version of {@link ChatReportReason} for method parameters.
+ * Version of {@link ReportReason} for method parameters.
  * Any of:
- * - {@link chatReportReasonSpam$Input}
- * - {@link chatReportReasonViolence$Input}
- * - {@link chatReportReasonPornography$Input}
- * - {@link chatReportReasonChildAbuse$Input}
- * - {@link chatReportReasonCopyright$Input}
- * - {@link chatReportReasonUnrelatedLocation$Input}
- * - {@link chatReportReasonFake$Input}
- * - {@link chatReportReasonIllegalDrugs$Input}
- * - {@link chatReportReasonPersonalDetails$Input}
- * - {@link chatReportReasonCustom$Input}
+ * - {@link reportReasonSpam$Input}
+ * - {@link reportReasonViolence$Input}
+ * - {@link reportReasonPornography$Input}
+ * - {@link reportReasonChildAbuse$Input}
+ * - {@link reportReasonCopyright$Input}
+ * - {@link reportReasonUnrelatedLocation$Input}
+ * - {@link reportReasonFake$Input}
+ * - {@link reportReasonIllegalDrugs$Input}
+ * - {@link reportReasonPersonalDetails$Input}
+ * - {@link reportReasonCustom$Input}
  */
-export type ChatReportReason$Input =
-  | chatReportReasonSpam$Input
-  | chatReportReasonViolence$Input
-  | chatReportReasonPornography$Input
-  | chatReportReasonChildAbuse$Input
-  | chatReportReasonCopyright$Input
-  | chatReportReasonUnrelatedLocation$Input
-  | chatReportReasonFake$Input
-  | chatReportReasonIllegalDrugs$Input
-  | chatReportReasonPersonalDetails$Input
-  | chatReportReasonCustom$Input;
+export type ReportReason$Input =
+  | reportReasonSpam$Input
+  | reportReasonViolence$Input
+  | reportReasonPornography$Input
+  | reportReasonChildAbuse$Input
+  | reportReasonCopyright$Input
+  | reportReasonUnrelatedLocation$Input
+  | reportReasonFake$Input
+  | reportReasonIllegalDrugs$Input
+  | reportReasonPersonalDetails$Input
+  | reportReasonCustom$Input;
 
 /**
  * Any of:
@@ -58537,6 +61862,7 @@ export type TargetChat$Input =
  * - {@link internalLinkTypeRestorePurchases}
  * - {@link internalLinkTypeSettings}
  * - {@link internalLinkTypeStickerSet}
+ * - {@link internalLinkTypeStory}
  * - {@link internalLinkTypeTheme}
  * - {@link internalLinkTypeThemeSettings}
  * - {@link internalLinkTypeUnknownDeepLink}
@@ -58577,6 +61903,7 @@ export type InternalLinkType =
   | internalLinkTypeRestorePurchases
   | internalLinkTypeSettings
   | internalLinkTypeStickerSet
+  | internalLinkTypeStory
   | internalLinkTypeTheme
   | internalLinkTypeThemeSettings
   | internalLinkTypeUnknownDeepLink
@@ -58619,6 +61946,7 @@ export type InternalLinkType =
  * - {@link internalLinkTypeRestorePurchases$Input}
  * - {@link internalLinkTypeSettings$Input}
  * - {@link internalLinkTypeStickerSet$Input}
+ * - {@link internalLinkTypeStory$Input}
  * - {@link internalLinkTypeTheme$Input}
  * - {@link internalLinkTypeThemeSettings$Input}
  * - {@link internalLinkTypeUnknownDeepLink$Input}
@@ -58659,6 +61987,7 @@ export type InternalLinkType$Input =
   | internalLinkTypeRestorePurchases$Input
   | internalLinkTypeSettings$Input
   | internalLinkTypeStickerSet$Input
+  | internalLinkTypeStory$Input
   | internalLinkTypeTheme$Input
   | internalLinkTypeThemeSettings$Input
   | internalLinkTypeUnknownDeepLink$Input
@@ -58696,6 +62025,21 @@ export type MessageLinkInfo$Input = messageLinkInfo$Input;
 
 /**
  * Any of:
+ * - {@link blockListMain}
+ * - {@link blockListStories}
+ */
+export type BlockList = blockListMain | blockListStories;
+
+/**
+ * Version of {@link BlockList} for method parameters.
+ * Any of:
+ * - {@link blockListMain$Input}
+ * - {@link blockListStories$Input}
+ */
+export type BlockList$Input = blockListMain$Input | blockListStories$Input;
+
+/**
+ * Any of:
  * - {@link filePart}
  */
 export type FilePart = filePart;
@@ -58715,6 +62059,7 @@ export type FilePart$Input = filePart$Input;
  * - {@link fileTypeDocument}
  * - {@link fileTypeNotificationSound}
  * - {@link fileTypePhoto}
+ * - {@link fileTypePhotoStory}
  * - {@link fileTypeProfilePhoto}
  * - {@link fileTypeSecret}
  * - {@link fileTypeSecretThumbnail}
@@ -58724,6 +62069,7 @@ export type FilePart$Input = filePart$Input;
  * - {@link fileTypeUnknown}
  * - {@link fileTypeVideo}
  * - {@link fileTypeVideoNote}
+ * - {@link fileTypeVideoStory}
  * - {@link fileTypeVoiceNote}
  * - {@link fileTypeWallpaper}
  */
@@ -58734,6 +62080,7 @@ export type FileType =
   | fileTypeDocument
   | fileTypeNotificationSound
   | fileTypePhoto
+  | fileTypePhotoStory
   | fileTypeProfilePhoto
   | fileTypeSecret
   | fileTypeSecretThumbnail
@@ -58743,6 +62090,7 @@ export type FileType =
   | fileTypeUnknown
   | fileTypeVideo
   | fileTypeVideoNote
+  | fileTypeVideoStory
   | fileTypeVoiceNote
   | fileTypeWallpaper;
 
@@ -58755,6 +62103,7 @@ export type FileType =
  * - {@link fileTypeDocument$Input}
  * - {@link fileTypeNotificationSound$Input}
  * - {@link fileTypePhoto$Input}
+ * - {@link fileTypePhotoStory$Input}
  * - {@link fileTypeProfilePhoto$Input}
  * - {@link fileTypeSecret$Input}
  * - {@link fileTypeSecretThumbnail$Input}
@@ -58764,6 +62113,7 @@ export type FileType =
  * - {@link fileTypeUnknown$Input}
  * - {@link fileTypeVideo$Input}
  * - {@link fileTypeVideoNote$Input}
+ * - {@link fileTypeVideoStory$Input}
  * - {@link fileTypeVoiceNote$Input}
  * - {@link fileTypeWallpaper$Input}
  */
@@ -58774,6 +62124,7 @@ export type FileType$Input =
   | fileTypeDocument$Input
   | fileTypeNotificationSound$Input
   | fileTypePhoto$Input
+  | fileTypePhotoStory$Input
   | fileTypeProfilePhoto$Input
   | fileTypeSecret$Input
   | fileTypeSecretThumbnail$Input
@@ -58783,6 +62134,7 @@ export type FileType$Input =
   | fileTypeUnknown$Input
   | fileTypeVideo$Input
   | fileTypeVideoNote$Input
+  | fileTypeVideoStory$Input
   | fileTypeVoiceNote$Input
   | fileTypeWallpaper$Input;
 
@@ -59138,6 +62490,7 @@ export type TMeUrls$Input = tMeUrls$Input;
  * - {@link suggestedActionConvertToBroadcastGroup}
  * - {@link suggestedActionSetPassword}
  * - {@link suggestedActionUpgradePremium}
+ * - {@link suggestedActionRestorePremium}
  * - {@link suggestedActionSubscribeToAnnualPremium}
  */
 export type SuggestedAction =
@@ -59148,6 +62501,7 @@ export type SuggestedAction =
   | suggestedActionConvertToBroadcastGroup
   | suggestedActionSetPassword
   | suggestedActionUpgradePremium
+  | suggestedActionRestorePremium
   | suggestedActionSubscribeToAnnualPremium;
 
 /**
@@ -59160,6 +62514,7 @@ export type SuggestedAction =
  * - {@link suggestedActionConvertToBroadcastGroup$Input}
  * - {@link suggestedActionSetPassword$Input}
  * - {@link suggestedActionUpgradePremium$Input}
+ * - {@link suggestedActionRestorePremium$Input}
  * - {@link suggestedActionSubscribeToAnnualPremium$Input}
  */
 export type SuggestedAction$Input =
@@ -59170,6 +62525,7 @@ export type SuggestedAction$Input =
   | suggestedActionConvertToBroadcastGroup$Input
   | suggestedActionSetPassword$Input
   | suggestedActionUpgradePremium$Input
+  | suggestedActionRestorePremium$Input
   | suggestedActionSubscribeToAnnualPremium$Input;
 
 /**
@@ -59560,7 +62916,7 @@ export type BotCommandScope$Input =
  * - {@link updateChatHasProtectedContent}
  * - {@link updateChatIsTranslatable}
  * - {@link updateChatIsMarkedAsUnread}
- * - {@link updateChatIsBlocked}
+ * - {@link updateChatBlockList}
  * - {@link updateChatHasScheduledMessages}
  * - {@link updateChatFolders}
  * - {@link updateChatOnlineMemberCount}
@@ -59595,6 +62951,13 @@ export type BotCommandScope$Input =
  * - {@link updateUserPrivacySettingRules}
  * - {@link updateUnreadMessageCount}
  * - {@link updateUnreadChatCount}
+ * - {@link updateStory}
+ * - {@link updateStoryDeleted}
+ * - {@link updateStorySendSucceeded}
+ * - {@link updateStorySendFailed}
+ * - {@link updateChatActiveStories}
+ * - {@link updateStoryListChatCount}
+ * - {@link updateStoryStealthMode}
  * - {@link updateOption}
  * - {@link updateStickerSet}
  * - {@link updateInstalledStickerSets}
@@ -59671,7 +63034,7 @@ export type Update =
   | updateChatHasProtectedContent
   | updateChatIsTranslatable
   | updateChatIsMarkedAsUnread
-  | updateChatIsBlocked
+  | updateChatBlockList
   | updateChatHasScheduledMessages
   | updateChatFolders
   | updateChatOnlineMemberCount
@@ -59706,6 +63069,13 @@ export type Update =
   | updateUserPrivacySettingRules
   | updateUnreadMessageCount
   | updateUnreadChatCount
+  | updateStory
+  | updateStoryDeleted
+  | updateStorySendSucceeded
+  | updateStorySendFailed
+  | updateChatActiveStories
+  | updateStoryListChatCount
+  | updateStoryStealthMode
   | updateOption
   | updateStickerSet
   | updateInstalledStickerSets
@@ -59784,7 +63154,7 @@ export type Update =
  * - {@link updateChatHasProtectedContent$Input}
  * - {@link updateChatIsTranslatable$Input}
  * - {@link updateChatIsMarkedAsUnread$Input}
- * - {@link updateChatIsBlocked$Input}
+ * - {@link updateChatBlockList$Input}
  * - {@link updateChatHasScheduledMessages$Input}
  * - {@link updateChatFolders$Input}
  * - {@link updateChatOnlineMemberCount$Input}
@@ -59819,6 +63189,13 @@ export type Update =
  * - {@link updateUserPrivacySettingRules$Input}
  * - {@link updateUnreadMessageCount$Input}
  * - {@link updateUnreadChatCount$Input}
+ * - {@link updateStory$Input}
+ * - {@link updateStoryDeleted$Input}
+ * - {@link updateStorySendSucceeded$Input}
+ * - {@link updateStorySendFailed$Input}
+ * - {@link updateChatActiveStories$Input}
+ * - {@link updateStoryListChatCount$Input}
+ * - {@link updateStoryStealthMode$Input}
  * - {@link updateOption$Input}
  * - {@link updateStickerSet$Input}
  * - {@link updateInstalledStickerSets$Input}
@@ -59895,7 +63272,7 @@ export type Update$Input =
   | updateChatHasProtectedContent$Input
   | updateChatIsTranslatable$Input
   | updateChatIsMarkedAsUnread$Input
-  | updateChatIsBlocked$Input
+  | updateChatBlockList$Input
   | updateChatHasScheduledMessages$Input
   | updateChatFolders$Input
   | updateChatOnlineMemberCount$Input
@@ -59930,6 +63307,13 @@ export type Update$Input =
   | updateUserPrivacySettingRules$Input
   | updateUnreadMessageCount$Input
   | updateUnreadChatCount$Input
+  | updateStory$Input
+  | updateStoryDeleted$Input
+  | updateStorySendSucceeded$Input
+  | updateStorySendFailed$Input
+  | updateChatActiveStories$Input
+  | updateStoryListChatCount$Input
+  | updateStoryStealthMode$Input
   | updateOption$Input
   | updateStickerSet$Input
   | updateInstalledStickerSets$Input
@@ -60197,6 +63581,7 @@ export type $MethodsDict = {
   readonly searchChatsNearby: searchChatsNearby;
   readonly getTopChats: getTopChats;
   readonly removeTopChat: removeTopChat;
+  readonly searchRecentlyFoundChats: searchRecentlyFoundChats;
   readonly addRecentlyFoundChat: addRecentlyFoundChat;
   readonly removeRecentlyFoundChat: removeRecentlyFoundChat;
   readonly clearRecentlyFoundChats: clearRecentlyFoundChats;
@@ -60227,6 +63612,7 @@ export type $MethodsDict = {
   readonly getChatScheduledMessages: getChatScheduledMessages;
   readonly getMessagePublicForwards: getMessagePublicForwards;
   readonly getChatSponsoredMessages: getChatSponsoredMessages;
+  readonly clickChatSponsoredMessage: clickChatSponsoredMessage;
   readonly removeNotification: removeNotification;
   readonly removeNotificationGroup: removeNotificationGroup;
   readonly getMessageLink: getMessageLink;
@@ -60244,7 +63630,6 @@ export type $MethodsDict = {
   readonly sendInlineQueryResultMessage: sendInlineQueryResultMessage;
   readonly forwardMessages: forwardMessages;
   readonly resendMessages: resendMessages;
-  readonly sendChatScreenshotTakenNotification: sendChatScreenshotTakenNotification;
   readonly addLocalMessage: addLocalMessage;
   readonly deleteMessages: deleteMessages;
   readonly deleteChatMessagesBySender: deleteChatMessagesBySender;
@@ -60346,6 +63731,7 @@ export type $MethodsDict = {
   readonly editChatFolder: editChatFolder;
   readonly deleteChatFolder: deleteChatFolder;
   readonly getChatFolderChatsToLeave: getChatFolderChatsToLeave;
+  readonly getChatFolderChatCount: getChatFolderChatCount;
   readonly reorderChatFolders: reorderChatFolders;
   readonly getRecommendedChatFolders: getRecommendedChatFolders;
   readonly getChatFolderDefaultIconName: getChatFolderDefaultIconName;
@@ -60358,6 +63744,8 @@ export type $MethodsDict = {
   readonly addChatFolderByInviteLink: addChatFolderByInviteLink;
   readonly getChatFolderNewChats: getChatFolderNewChats;
   readonly processChatFolderNewChats: processChatFolderNewChats;
+  readonly getArchiveChatListSettings: getArchiveChatListSettings;
+  readonly setArchiveChatListSettings: setArchiveChatListSettings;
   readonly setChatTitle: setChatTitle;
   readonly setChatPhoto: setChatPhoto;
   readonly setChatMessageAutoDeleteTime: setChatMessageAutoDeleteTime;
@@ -60403,6 +63791,26 @@ export type $MethodsDict = {
   readonly toggleChatIsPinned: toggleChatIsPinned;
   readonly setPinnedChats: setPinnedChats;
   readonly readChatList: readChatList;
+  readonly getStory: getStory;
+  readonly canSendStory: canSendStory;
+  readonly sendStory: sendStory;
+  readonly editStory: editStory;
+  readonly setStoryPrivacySettings: setStoryPrivacySettings;
+  readonly toggleStoryIsPinned: toggleStoryIsPinned;
+  readonly deleteStory: deleteStory;
+  readonly getStoryNotificationSettingsExceptions: getStoryNotificationSettingsExceptions;
+  readonly loadActiveStories: loadActiveStories;
+  readonly setChatActiveStoriesList: setChatActiveStoriesList;
+  readonly getChatActiveStories: getChatActiveStories;
+  readonly getChatPinnedStories: getChatPinnedStories;
+  readonly getArchivedStories: getArchivedStories;
+  readonly openStory: openStory;
+  readonly closeStory: closeStory;
+  readonly getStoryAvailableReactions: getStoryAvailableReactions;
+  readonly setStoryReaction: setStoryReaction;
+  readonly getStoryViewers: getStoryViewers;
+  readonly reportStory: reportStory;
+  readonly activateStoryStealthMode: activateStoryStealthMode;
   readonly getAttachmentMenuBot: getAttachmentMenuBot;
   readonly toggleBotIsAddedToAttachmentMenu: toggleBotIsAddedToAttachmentMenu;
   readonly getThemedEmojiStatuses: getThemedEmojiStatuses;
@@ -60481,7 +63889,7 @@ export type $MethodsDict = {
   readonly endGroupCall: endGroupCall;
   readonly getGroupCallStreams: getGroupCallStreams;
   readonly getGroupCallStreamSegment: getGroupCallStreamSegment;
-  readonly toggleMessageSenderIsBlocked: toggleMessageSenderIsBlocked;
+  readonly setMessageSenderBlockList: setMessageSenderBlockList;
   readonly blockMessageSenderFromReplies: blockMessageSenderFromReplies;
   readonly getBlockedMessageSenders: getBlockedMessageSenders;
   readonly addContact: addContact;
@@ -60492,6 +63900,8 @@ export type $MethodsDict = {
   readonly getImportedContactCount: getImportedContactCount;
   readonly changeImportedContacts: changeImportedContacts;
   readonly clearImportedContacts: clearImportedContacts;
+  readonly setCloseFriends: setCloseFriends;
+  readonly getCloseFriends: getCloseFriends;
   readonly setUserPersonalProfilePhoto: setUserPersonalProfilePhoto;
   readonly suggestUserProfilePhoto: suggestUserProfilePhoto;
   readonly searchUserByPhoneNumber: searchUserByPhoneNumber;
@@ -60559,7 +63969,7 @@ export type $MethodsDict = {
   readonly getBotName: getBotName;
   readonly setBotProfilePhoto: setBotProfilePhoto;
   readonly toggleBotUsernameIsActive: toggleBotUsernameIsActive;
-  readonly reorderActiveBotUsernames: reorderActiveBotUsernames;
+  readonly reorderBotActiveUsernames: reorderBotActiveUsernames;
   readonly setBotInfoDescription: setBotInfoDescription;
   readonly getBotInfoDescription: getBotInfoDescription;
   readonly setBotInfoShortDescription: setBotInfoShortDescription;
@@ -61422,7 +64832,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a chat by its identifier, this is an offline request if the current user is not a bot
+   * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
    *
    * @param {getChat$DirectInput} parameters {@link getChat$Input}
    * @return {Promise<Chat>} Promise<{@link Chat}>
@@ -61546,7 +64956,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a file by its remote ID; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
+   * Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
    *
    * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
    *
@@ -61607,7 +65017,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Searches for the specified query in the title and username of already known chats, this is an offline request. Returns chats in the order seen in the main chat list
+   * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
    *
    * @param {searchChats$DirectInput} parameters {@link searchChats$Input}
    * @return {Promise<Chats>} Promise<{@link Chats}>
@@ -61646,7 +65056,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns a list of frequently used chats. Supported only if the chat info database is enabled
+   * Returns a list of frequently used chats
    *
    * @param {getTopChats$DirectInput} parameters {@link getTopChats$Input}
    * @return {Promise<Chats>} Promise<{@link Chats}>
@@ -61665,6 +65075,19 @@ export class $AsyncApi {
   async removeTopChat(parameters: removeTopChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("removeTopChat", parameters);
     return result as Ok;
+  }
+
+  /**
+   * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
+   *
+   * @param {searchRecentlyFoundChats$DirectInput} parameters {@link searchRecentlyFoundChats$Input}
+   * @return {Promise<Chats>} Promise<{@link Chats}>
+   */
+  async searchRecentlyFoundChats(
+    parameters: searchRecentlyFoundChats$DirectInput
+  ): Promise<Chats> {
+    const result = await this.client.invoke("searchRecentlyFoundChats", parameters);
+    return result as Chats;
   }
 
   /**
@@ -61707,7 +65130,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns recently opened chats, this is an offline request. Returns chats in the order of last opening
+   * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
    *
    * @param {getRecentlyOpenedChats$DirectInput} parameters {@link getRecentlyOpenedChats$Input}
    * @return {Promise<Chats>} Promise<{@link Chats}>
@@ -62089,6 +65512,19 @@ export class $AsyncApi {
   }
 
   /**
+   * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+   *
+   * @param {clickChatSponsoredMessage$DirectInput} parameters {@link clickChatSponsoredMessage$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async clickChatSponsoredMessage(
+    parameters: clickChatSponsoredMessage$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("clickChatSponsoredMessage", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
    *
    * @param {removeNotification$DirectInput} parameters {@link removeNotification$Input}
@@ -62305,22 +65741,6 @@ export class $AsyncApi {
   async resendMessages(parameters: resendMessages$DirectInput): Promise<Messages> {
     const result = await this.client.invoke("resendMessages", parameters);
     return result as Messages;
-  }
-
-  /**
-   * Sends a notification about a screenshot taken in a chat. Supported only in private and secret chats
-   *
-   * @param {sendChatScreenshotTakenNotification$DirectInput} parameters {@link sendChatScreenshotTakenNotification$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
-   */
-  async sendChatScreenshotTakenNotification(
-    parameters: sendChatScreenshotTakenNotification$DirectInput
-  ): Promise<Ok> {
-    const result = await this.client.invoke(
-      "sendChatScreenshotTakenNotification",
-      parameters
-    );
-    return result as Ok;
   }
 
   /**
@@ -62938,14 +66358,16 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns users voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
+   * Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
    *
    * @param {getPollVoters$DirectInput} parameters {@link getPollVoters$Input}
-   * @return {Promise<Users>} Promise<{@link Users}>
+   * @return {Promise<MessageSenders>} Promise<{@link MessageSenders}>
    */
-  async getPollVoters(parameters: getPollVoters$DirectInput): Promise<Users> {
+  async getPollVoters(
+    parameters: getPollVoters$DirectInput
+  ): Promise<MessageSenders> {
     const result = await this.client.invoke("getPollVoters", parameters);
-    return result as Users;
+    return result as MessageSenders;
   }
 
   /**
@@ -63607,6 +67029,19 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns approximate number of chats in a being created chat folder. Main and archive chat lists must be fully preloaded for this function to work correctly
+   *
+   * @param {getChatFolderChatCount$DirectInput} parameters {@link getChatFolderChatCount$Input}
+   * @return {Promise<Count>} Promise<{@link Count}>
+   */
+  async getChatFolderChatCount(
+    parameters: getChatFolderChatCount$DirectInput
+  ): Promise<Count> {
+    const result = await this.client.invoke("getChatFolderChatCount", parameters);
+    return result as Count;
+  }
+
+  /**
    * Changes the order of chat folders
    *
    * @param {reorderChatFolders$DirectInput} parameters {@link reorderChatFolders$Input}
@@ -63769,6 +67204,38 @@ export class $AsyncApi {
     parameters: processChatFolderNewChats$DirectInput
   ): Promise<Ok> {
     const result = await this.client.invoke("processChatFolderNewChats", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns settings for automatic moving of chats to and from the Archive chat lists
+   *
+   * @param {getArchiveChatListSettings$DirectInput} parameters {@link getArchiveChatListSettings$Input}
+   * @return {Promise<ArchiveChatListSettings>} Promise<{@link ArchiveChatListSettings}>
+   */
+  async getArchiveChatListSettings(
+    parameters: getArchiveChatListSettings$DirectInput
+  ): Promise<ArchiveChatListSettings> {
+    const result = await this.client.invoke(
+      "getArchiveChatListSettings",
+      parameters
+    );
+    return result as ArchiveChatListSettings;
+  }
+
+  /**
+   * Changes settings for automatic moving of chats to and from the Archive chat lists
+   *
+   * @param {setArchiveChatListSettings$DirectInput} parameters {@link setArchiveChatListSettings$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setArchiveChatListSettings(
+    parameters: setArchiveChatListSettings$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "setArchiveChatListSettings",
+      parameters
+    );
     return result as Ok;
   }
 
@@ -64261,7 +67728,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of chats with non-default notification settings
+   * Returns list of chats with non-default notification settings for new messages
    *
    * @param {getChatNotificationSettingsExceptions$DirectInput} parameters {@link getChatNotificationSettingsExceptions$Input}
    * @return {Promise<Chats>} Promise<{@link Chats}>
@@ -64354,6 +67821,262 @@ export class $AsyncApi {
    */
   async readChatList(parameters: readChatList$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("readChatList", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns a story
+   *
+   * @param {getStory$DirectInput} parameters {@link getStory$Input}
+   * @return {Promise<Story>} Promise<{@link Story}>
+   */
+  async getStory(parameters: getStory$DirectInput): Promise<Story> {
+    const result = await this.client.invoke("getStory", parameters);
+    return result as Story;
+  }
+
+  /**
+   * Checks whether the current user can send a story
+   *
+   * @param {canSendStory$DirectInput} parameters {@link canSendStory$Input}
+   * @return {Promise<CanSendStoryResult>} Promise<{@link CanSendStoryResult}>
+   */
+  async canSendStory(
+    parameters: canSendStory$DirectInput
+  ): Promise<CanSendStoryResult> {
+    const result = await this.client.invoke("canSendStory", parameters);
+    return result as CanSendStoryResult;
+  }
+
+  /**
+   * Sends a new story. Returns a temporary story
+   *
+   * @param {sendStory$DirectInput} parameters {@link sendStory$Input}
+   * @return {Promise<Story>} Promise<{@link Story}>
+   */
+  async sendStory(parameters: sendStory$DirectInput): Promise<Story> {
+    const result = await this.client.invoke("sendStory", parameters);
+    return result as Story;
+  }
+
+  /**
+   * Changes content and caption of a previously sent story
+   *
+   * @param {editStory$DirectInput} parameters {@link editStory$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async editStory(parameters: editStory$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("editStory", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes privacy settings of a previously sent story
+   *
+   * @param {setStoryPrivacySettings$DirectInput} parameters {@link setStoryPrivacySettings$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setStoryPrivacySettings(
+    parameters: setStoryPrivacySettings$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setStoryPrivacySettings", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Toggles whether a story is accessible after expiration
+   *
+   * @param {toggleStoryIsPinned$DirectInput} parameters {@link toggleStoryIsPinned$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async toggleStoryIsPinned(
+    parameters: toggleStoryIsPinned$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("toggleStoryIsPinned", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Deletes a previously sent story
+   *
+   * @param {deleteStory$DirectInput} parameters {@link deleteStory$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteStory(parameters: deleteStory$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("deleteStory", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns list of chats with non-default notification settings for stories
+   *
+   * @param {getStoryNotificationSettingsExceptions$DirectInput} parameters {@link getStoryNotificationSettingsExceptions$Input}
+   * @return {Promise<Chats>} Promise<{@link Chats}>
+   */
+  async getStoryNotificationSettingsExceptions(
+    parameters: getStoryNotificationSettingsExceptions$DirectInput
+  ): Promise<Chats> {
+    const result = await this.client.invoke(
+      "getStoryNotificationSettingsExceptions",
+      parameters
+    );
+    return result as Chats;
+  }
+
+  /**
+   * Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
+   *
+   * - the pair (active_stories.order, active_stories.story_sender_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
+   *
+   * @param {loadActiveStories$DirectInput} parameters {@link loadActiveStories$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async loadActiveStories(parameters: loadActiveStories$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("loadActiveStories", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes story list in which stories from the chat are shown
+   *
+   * @param {setChatActiveStoriesList$DirectInput} parameters {@link setChatActiveStoriesList$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setChatActiveStoriesList(
+    parameters: setChatActiveStoriesList$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setChatActiveStoriesList", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns the list of active stories posted by the given chat
+   *
+   * @param {getChatActiveStories$DirectInput} parameters {@link getChatActiveStories$Input}
+   * @return {Promise<ChatActiveStories>} Promise<{@link ChatActiveStories}>
+   */
+  async getChatActiveStories(
+    parameters: getChatActiveStories$DirectInput
+  ): Promise<ChatActiveStories> {
+    const result = await this.client.invoke("getChatActiveStories", parameters);
+    return result as ChatActiveStories;
+  }
+
+  /**
+   * Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+   *
+   * - For optimal performance, the number of returned stories is chosen by TDLib
+   *
+   * @param {getChatPinnedStories$DirectInput} parameters {@link getChatPinnedStories$Input}
+   * @return {Promise<Stories>} Promise<{@link Stories}>
+   */
+  async getChatPinnedStories(
+    parameters: getChatPinnedStories$DirectInput
+  ): Promise<Stories> {
+    const result = await this.client.invoke("getChatPinnedStories", parameters);
+    return result as Stories;
+  }
+
+  /**
+   * Returns the list of all stories of the current user. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+   *
+   * - For optimal performance, the number of returned stories is chosen by TDLib
+   *
+   * @param {getArchivedStories$DirectInput} parameters {@link getArchivedStories$Input}
+   * @return {Promise<Stories>} Promise<{@link Stories}>
+   */
+  async getArchivedStories(
+    parameters: getArchivedStories$DirectInput
+  ): Promise<Stories> {
+    const result = await this.client.invoke("getArchivedStories", parameters);
+    return result as Stories;
+  }
+
+  /**
+   * Informs TDLib that a story is opened and is being viewed by the user
+   *
+   * @param {openStory$DirectInput} parameters {@link openStory$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async openStory(parameters: openStory$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("openStory", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Informs TDLib that a story is closed by the user
+   *
+   * @param {closeStory$DirectInput} parameters {@link closeStory$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async closeStory(parameters: closeStory$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("closeStory", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns reactions, which can be chosen for a story
+   *
+   * @param {getStoryAvailableReactions$DirectInput} parameters {@link getStoryAvailableReactions$Input}
+   * @return {Promise<AvailableReactions>} Promise<{@link AvailableReactions}>
+   */
+  async getStoryAvailableReactions(
+    parameters: getStoryAvailableReactions$DirectInput
+  ): Promise<AvailableReactions> {
+    const result = await this.client.invoke(
+      "getStoryAvailableReactions",
+      parameters
+    );
+    return result as AvailableReactions;
+  }
+
+  /**
+   * Changes chosen reaction on a story
+   *
+   * @param {setStoryReaction$DirectInput} parameters {@link setStoryReaction$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setStoryReaction(parameters: setStoryReaction$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("setStoryReaction", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns viewers of a story. The method can be called if story.can_get_viewers == true
+   *
+   * @param {getStoryViewers$DirectInput} parameters {@link getStoryViewers$Input}
+   * @return {Promise<StoryViewers>} Promise<{@link StoryViewers}>
+   */
+  async getStoryViewers(
+    parameters: getStoryViewers$DirectInput
+  ): Promise<StoryViewers> {
+    const result = await this.client.invoke("getStoryViewers", parameters);
+    return result as StoryViewers;
+  }
+
+  /**
+   * Reports a story to the Telegram moderators
+   *
+   * @param {reportStory$DirectInput} parameters {@link reportStory$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async reportStory(parameters: reportStory$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("reportStory", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Activates stealth mode for stories, which hides all views of stories from the current user in the last "story_stealth_mode_past_period" seconds
+   *
+   * - and for the next "story_stealth_mode_future_period" seconds; for Telegram Premium users only
+   *
+   * @param {activateStoryStealthMode$DirectInput} parameters {@link activateStoryStealthMode$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async activateStoryStealthMode(
+    parameters: activateStoryStealthMode$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("activateStoryStealthMode", parameters);
     return result as Ok;
   }
 
@@ -65414,18 +69137,15 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the block state of a message sender. Currently, only users and supergroup chats can be blocked
+   * Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
    *
-   * @param {toggleMessageSenderIsBlocked$DirectInput} parameters {@link toggleMessageSenderIsBlocked$Input}
+   * @param {setMessageSenderBlockList$DirectInput} parameters {@link setMessageSenderBlockList$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
    */
-  async toggleMessageSenderIsBlocked(
-    parameters: toggleMessageSenderIsBlocked$DirectInput
+  async setMessageSenderBlockList(
+    parameters: setMessageSenderBlockList$DirectInput
   ): Promise<Ok> {
-    const result = await this.client.invoke(
-      "toggleMessageSenderIsBlocked",
-      parameters
-    );
+    const result = await this.client.invoke("setMessageSenderBlockList", parameters);
     return result as Ok;
   }
 
@@ -65483,7 +69203,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns all user contacts
+   * Returns all contacts of the user
    *
    * @param {getContacts$DirectInput} parameters {@link getContacts$Input}
    * @return {Promise<Users>} Promise<{@link Users}>
@@ -65554,6 +69274,28 @@ export class $AsyncApi {
   ): Promise<Ok> {
     const result = await this.client.invoke("clearImportedContacts", parameters);
     return result as Ok;
+  }
+
+  /**
+   * Changes the list of close friends of the current user
+   *
+   * @param {setCloseFriends$DirectInput} parameters {@link setCloseFriends$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setCloseFriends(parameters: setCloseFriends$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("setCloseFriends", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns all close friends of the current user
+   *
+   * @param {getCloseFriends$DirectInput} parameters {@link getCloseFriends$Input}
+   * @return {Promise<Users>} Promise<{@link Users}>
+   */
+  async getCloseFriends(parameters: getCloseFriends$DirectInput): Promise<Users> {
+    const result = await this.client.invoke("getCloseFriends", parameters);
+    return result as Users;
   }
 
   /**
@@ -66205,7 +69947,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the phone number of the user and sends an authentication code to the user's new phone number. On success, returns information about the sent code
+   * Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
    *
    * @param {changePhoneNumber$DirectInput} parameters {@link changePhoneNumber$Input}
    * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
@@ -66409,13 +70151,13 @@ export class $AsyncApi {
   /**
    * Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
    *
-   * @param {reorderActiveBotUsernames$DirectInput} parameters {@link reorderActiveBotUsernames$Input}
+   * @param {reorderBotActiveUsernames$DirectInput} parameters {@link reorderBotActiveUsernames$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
    */
-  async reorderActiveBotUsernames(
-    parameters: reorderActiveBotUsernames$DirectInput
+  async reorderBotActiveUsernames(
+    parameters: reorderBotActiveUsernames$DirectInput
   ): Promise<Ok> {
-    const result = await this.client.invoke("reorderActiveBotUsernames", parameters);
+    const result = await this.client.invoke("reorderBotActiveUsernames", parameters);
     return result as Ok;
   }
 
@@ -67090,7 +70832,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Fetches the latest versions of all strings from a language pack in the current localization target from the server. This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
+   * Fetches the latest versions of all strings from a language pack in the current localization target from the server.
+   *
+   * - This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
    *
    * @param {synchronizeLanguagePack$DirectInput} parameters {@link synchronizeLanguagePack$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -68341,7 +72085,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Adds server-provided application changelog as messages to the chat 777000 (Telegram); for official applications only. Returns a 404 error if nothing changed
+   * Adds server-provided application changelog as messages to the chat 777000 (Telegram) or as a stories; for official applications only. Returns a 404 error if nothing changed
    *
    * @param {addApplicationChangelog$DirectInput} parameters {@link addApplicationChangelog$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -70756,7 +74500,7 @@ export type getSecretChat$DirectInput = {
 export type getSecretChat = (parameters: getSecretChat$Input) => SecretChat;
 
 /**
- * Returns information about a chat by its identifier, this is an offline request if the current user is not a bot
+ * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
  */
 export type getChat$Input = {
   readonly _: "getChat";
@@ -70769,7 +74513,7 @@ export type getChat$Input = {
 };
 
 /**
- * Returns information about a chat by its identifier, this is an offline request if the current user is not a bot
+ * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
  */
 export type getChat$DirectInput = {
   /**
@@ -70780,7 +74524,7 @@ export type getChat$DirectInput = {
 };
 
 /**
- * Returns information about a chat by its identifier, this is an offline request if the current user is not a bot
+ * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
  *
  * @param {getChat$Input} parameters {@link getChat$Input}
  * @return {Chat} {@link Chat}
@@ -71186,7 +74930,7 @@ export type getFile$DirectInput = {
 export type getFile = (parameters: getFile$Input) => File;
 
 /**
- * Returns information about a file by its remote ID; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
  *
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  */
@@ -71207,7 +74951,7 @@ export type getRemoteFile$Input = {
 };
 
 /**
- * Returns information about a file by its remote ID; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
  *
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  */
@@ -71226,7 +74970,7 @@ export type getRemoteFile$DirectInput = {
 };
 
 /**
- * Returns information about a file by its remote ID; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
  *
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  *
@@ -71394,7 +75138,7 @@ export type searchPublicChats$DirectInput = {
 export type searchPublicChats = (parameters: searchPublicChats$Input) => Chats;
 
 /**
- * Searches for the specified query in the title and username of already known chats, this is an offline request. Returns chats in the order seen in the main chat list
+ * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
  */
 export type searchChats$Input = {
   readonly _: "searchChats";
@@ -71413,7 +75157,7 @@ export type searchChats$Input = {
 };
 
 /**
- * Searches for the specified query in the title and username of already known chats, this is an offline request. Returns chats in the order seen in the main chat list
+ * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
  */
 export type searchChats$DirectInput = {
   /**
@@ -71430,7 +75174,7 @@ export type searchChats$DirectInput = {
 };
 
 /**
- * Searches for the specified query in the title and username of already known chats, this is an offline request. Returns chats in the order seen in the main chat list
+ * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
  *
  * @param {searchChats$Input} parameters {@link searchChats$Input}
  * @return {Chats} {@link Chats}
@@ -71520,7 +75264,7 @@ export type searchChatsNearby$DirectInput = {
 export type searchChatsNearby = (parameters: searchChatsNearby$Input) => ChatsNearby;
 
 /**
- * Returns a list of frequently used chats. Supported only if the chat info database is enabled
+ * Returns a list of frequently used chats
  */
 export type getTopChats$Input = {
   readonly _: "getTopChats";
@@ -71539,7 +75283,7 @@ export type getTopChats$Input = {
 };
 
 /**
- * Returns a list of frequently used chats. Supported only if the chat info database is enabled
+ * Returns a list of frequently used chats
  */
 export type getTopChats$DirectInput = {
   /**
@@ -71556,7 +75300,7 @@ export type getTopChats$DirectInput = {
 };
 
 /**
- * Returns a list of frequently used chats. Supported only if the chat info database is enabled
+ * Returns a list of frequently used chats
  *
  * @param {getTopChats$Input} parameters {@link getTopChats$Input}
  * @return {Chats} {@link Chats}
@@ -71606,6 +75350,52 @@ export type removeTopChat$DirectInput = {
  * @return {Ok} {@link Ok}
  */
 export type removeTopChat = (parameters: removeTopChat$Input) => Ok;
+
+/**
+ * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
+ */
+export type searchRecentlyFoundChats$Input = {
+  readonly _: "searchRecentlyFoundChats";
+
+  /**
+   * Query to search for
+   * @type {string} {@link string}
+   */
+  readonly query?: string;
+
+  /**
+   * The maximum number of chats to be returned
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
+ */
+export type searchRecentlyFoundChats$DirectInput = {
+  /**
+   * Query to search for
+   * @type {string} {@link string}
+   */
+  readonly query?: string;
+
+  /**
+   * The maximum number of chats to be returned
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
+ *
+ * @param {searchRecentlyFoundChats$Input} parameters {@link searchRecentlyFoundChats$Input}
+ * @return {Chats} {@link Chats}
+ */
+export type searchRecentlyFoundChats = (
+  parameters: searchRecentlyFoundChats$Input
+) => Chats;
 
 /**
  * Adds a chat to the list of recently found chats. The chat is added to the beginning of the list. If the chat is already in the list, it will be removed from the list first
@@ -71696,7 +75486,7 @@ export type clearRecentlyFoundChats = (
 ) => Ok;
 
 /**
- * Returns recently opened chats, this is an offline request. Returns chats in the order of last opening
+ * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
  */
 export type getRecentlyOpenedChats$Input = {
   readonly _: "getRecentlyOpenedChats";
@@ -71709,7 +75499,7 @@ export type getRecentlyOpenedChats$Input = {
 };
 
 /**
- * Returns recently opened chats, this is an offline request. Returns chats in the order of last opening
+ * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
  */
 export type getRecentlyOpenedChats$DirectInput = {
   /**
@@ -71720,7 +75510,7 @@ export type getRecentlyOpenedChats$DirectInput = {
 };
 
 /**
- * Returns recently opened chats, this is an offline request. Returns chats in the order of last opening
+ * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
  *
  * @param {getRecentlyOpenedChats$Input} parameters {@link getRecentlyOpenedChats$Input}
  * @return {Chats} {@link Chats}
@@ -73200,6 +76990,52 @@ export type getChatSponsoredMessages = (
 ) => SponsoredMessages;
 
 /**
+ * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+ */
+export type clickChatSponsoredMessage$Input = {
+  readonly _: "clickChatSponsoredMessage";
+
+  /**
+   * Chat identifier of the sponsored message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the sponsored message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+ */
+export type clickChatSponsoredMessage$DirectInput = {
+  /**
+   * Chat identifier of the sponsored message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the sponsored message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+ *
+ * @param {clickChatSponsoredMessage$Input} parameters {@link clickChatSponsoredMessage$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type clickChatSponsoredMessage = (
+  parameters: clickChatSponsoredMessage$Input
+) => Ok;
+
+/**
  * Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
  */
 export type removeNotification$Input = {
@@ -73792,10 +77628,10 @@ export type sendMessage$Input = {
   readonly message_thread_id?: int53;
 
   /**
-   * Identifier of the replied message; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * Options to be used to send the message; pass null to use default options
@@ -73833,10 +77669,10 @@ export type sendMessage$DirectInput = {
   readonly message_thread_id?: int53;
 
   /**
-   * Identifier of the replied message; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * Options to be used to send the message; pass null to use default options
@@ -73884,10 +77720,10 @@ export type sendMessageAlbum$Input = {
   readonly message_thread_id?: int53;
 
   /**
-   * Identifier of a replied message; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * Options to be used to send the messages; pass null to use default options
@@ -73925,10 +77761,10 @@ export type sendMessageAlbum$DirectInput = {
   readonly message_thread_id?: int53;
 
   /**
-   * Identifier of a replied message; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * Options to be used to send the messages; pass null to use default options
@@ -74032,10 +77868,10 @@ export type sendInlineQueryResultMessage$Input = {
   readonly message_thread_id?: int53;
 
   /**
-   * Identifier of a replied message; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * Options to be used to send the message; pass null to use default options
@@ -74050,7 +77886,7 @@ export type sendInlineQueryResultMessage$Input = {
   readonly query_id?: int64$Input;
 
   /**
-   * Identifier of the inline result
+   * Identifier of the inline query result
    * @type {string} {@link string}
    */
   readonly result_id?: string;
@@ -74079,10 +77915,10 @@ export type sendInlineQueryResultMessage$DirectInput = {
   readonly message_thread_id?: int53;
 
   /**
-   * Identifier of a replied message; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * Options to be used to send the message; pass null to use default options
@@ -74097,7 +77933,7 @@ export type sendInlineQueryResultMessage$DirectInput = {
   readonly query_id?: int64$Input;
 
   /**
-   * Identifier of the inline result
+   * Identifier of the inline query result
    * @type {string} {@link string}
    */
   readonly result_id?: string;
@@ -74286,40 +78122,6 @@ export type resendMessages$DirectInput = {
 export type resendMessages = (parameters: resendMessages$Input) => Messages;
 
 /**
- * Sends a notification about a screenshot taken in a chat. Supported only in private and secret chats
- */
-export type sendChatScreenshotTakenNotification$Input = {
-  readonly _: "sendChatScreenshotTakenNotification";
-
-  /**
-   * Chat identifier
-   * @type {int53} {@link int53}
-   */
-  readonly chat_id?: int53;
-};
-
-/**
- * Sends a notification about a screenshot taken in a chat. Supported only in private and secret chats
- */
-export type sendChatScreenshotTakenNotification$DirectInput = {
-  /**
-   * Chat identifier
-   * @type {int53} {@link int53}
-   */
-  readonly chat_id?: int53;
-};
-
-/**
- * Sends a notification about a screenshot taken in a chat. Supported only in private and secret chats
- *
- * @param {sendChatScreenshotTakenNotification$Input} parameters {@link sendChatScreenshotTakenNotification$Input}
- * @return {Ok} {@link Ok}
- */
-export type sendChatScreenshotTakenNotification = (
-  parameters: sendChatScreenshotTakenNotification$Input
-) => Ok;
-
-/**
  * Adds a local message to a chat. The message is persistent across application restarts only if the message database is used. Returns the added message
  */
 export type addLocalMessage$Input = {
@@ -74338,10 +78140,10 @@ export type addLocalMessage$Input = {
   readonly sender_id?: MessageSender$Input;
 
   /**
-   * Identifier of the replied message; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * Pass true to disable notification for the message
@@ -74373,10 +78175,10 @@ export type addLocalMessage$DirectInput = {
   readonly sender_id?: MessageSender$Input;
 
   /**
-   * Identifier of the replied message; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 
   /**
    * Pass true to disable notification for the message
@@ -76786,7 +80588,7 @@ export type setPollAnswer$DirectInput = {
 export type setPollAnswer = (parameters: setPollAnswer$Input) => Ok;
 
 /**
- * Returns users voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
+ * Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
  */
 export type getPollVoters$Input = {
   readonly _: "getPollVoters";
@@ -76810,20 +80612,20 @@ export type getPollVoters$Input = {
   readonly option_id?: int32;
 
   /**
-   * Number of users to skip in the result; must be non-negative
+   * Number of voters to skip in the result; must be non-negative
    * @type {int32} {@link int32}
    */
   readonly offset?: int32;
 
   /**
-   * The maximum number of users to be returned; must be positive and can't be greater than 50. For optimal performance, the number of returned users is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
+   * The maximum number of voters to be returned; must be positive and can't be greater than 50. For optimal performance, the number of returned voters is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
    * @type {int32} {@link int32}
    */
   readonly limit?: int32;
 };
 
 /**
- * Returns users voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
+ * Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
  */
 export type getPollVoters$DirectInput = {
   /**
@@ -76845,25 +80647,25 @@ export type getPollVoters$DirectInput = {
   readonly option_id?: int32;
 
   /**
-   * Number of users to skip in the result; must be non-negative
+   * Number of voters to skip in the result; must be non-negative
    * @type {int32} {@link int32}
    */
   readonly offset?: int32;
 
   /**
-   * The maximum number of users to be returned; must be positive and can't be greater than 50. For optimal performance, the number of returned users is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
+   * The maximum number of voters to be returned; must be positive and can't be greater than 50. For optimal performance, the number of returned voters is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
    * @type {int32} {@link int32}
    */
   readonly limit?: int32;
 };
 
 /**
- * Returns users voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
+ * Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
  *
  * @param {getPollVoters$Input} parameters {@link getPollVoters$Input}
- * @return {Users} {@link Users}
+ * @return {MessageSenders} {@link MessageSenders}
  */
-export type getPollVoters = (parameters: getPollVoters$Input) => Users;
+export type getPollVoters = (parameters: getPollVoters$Input) => MessageSenders;
 
 /**
  * Stops a poll. A poll in a message can be stopped when the message has can_be_edited flag set
@@ -77282,7 +81084,7 @@ export type getInlineQueryResults$Input = {
   readonly query?: string;
 
   /**
-   * Offset of the first entry to return
+   * Offset of the first entry to return; use empty string to get the first chunk of results
    * @type {string} {@link string}
    */
   readonly offset?: string;
@@ -77317,7 +81119,7 @@ export type getInlineQueryResults$DirectInput = {
   readonly query?: string;
 
   /**
-   * Offset of the first entry to return
+   * Offset of the first entry to return; use empty string to get the first chunk of results
    * @type {string} {@link string}
    */
   readonly offset?: string;
@@ -77742,10 +81544,10 @@ export type openWebApp$Input = {
   readonly message_thread_id?: int53;
 
   /**
-   * Identifier of the replied message for the message sent by the Web App; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story for the message sent by the Web App; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 };
 
 /**
@@ -77791,10 +81593,10 @@ export type openWebApp$DirectInput = {
   readonly message_thread_id?: int53;
 
   /**
-   * Identifier of the replied message for the message sent by the Web App; 0 if none
-   * @type {int53} {@link int53}
+   * Identifier of the replied message or story for the message sent by the Web App; pass null if none
+   * @type {MessageReplyTo$Input} {@link MessageReplyTo}
    */
-  readonly reply_to_message_id?: int53;
+  readonly reply_to?: MessageReplyTo$Input | null;
 };
 
 /**
@@ -79708,6 +83510,40 @@ export type getChatFolderChatsToLeave = (
 ) => Chats;
 
 /**
+ * Returns approximate number of chats in a being created chat folder. Main and archive chat lists must be fully preloaded for this function to work correctly
+ */
+export type getChatFolderChatCount$Input = {
+  readonly _: "getChatFolderChatCount";
+
+  /**
+   * The new chat folder
+   * @type {chatFolder$Input} {@link chatFolder}
+   */
+  readonly folder?: chatFolder$Input;
+};
+
+/**
+ * Returns approximate number of chats in a being created chat folder. Main and archive chat lists must be fully preloaded for this function to work correctly
+ */
+export type getChatFolderChatCount$DirectInput = {
+  /**
+   * The new chat folder
+   * @type {chatFolder$Input} {@link chatFolder}
+   */
+  readonly folder?: chatFolder$Input;
+};
+
+/**
+ * Returns approximate number of chats in a being created chat folder. Main and archive chat lists must be fully preloaded for this function to work correctly
+ *
+ * @param {getChatFolderChatCount$Input} parameters {@link getChatFolderChatCount$Input}
+ * @return {Count} {@link Count}
+ */
+export type getChatFolderChatCount = (
+  parameters: getChatFolderChatCount$Input
+) => Count;
+
+/**
  * Changes the order of chat folders
  */
 export type reorderChatFolders$Input = {
@@ -80207,6 +84043,62 @@ export type processChatFolderNewChats$DirectInput = {
  */
 export type processChatFolderNewChats = (
   parameters: processChatFolderNewChats$Input
+) => Ok;
+
+/**
+ * Returns settings for automatic moving of chats to and from the Archive chat lists
+ */
+export type getArchiveChatListSettings$Input = {
+  readonly _: "getArchiveChatListSettings";
+};
+
+/**
+ * Returns settings for automatic moving of chats to and from the Archive chat lists
+ */
+export type getArchiveChatListSettings$DirectInput = {};
+
+/**
+ * Returns settings for automatic moving of chats to and from the Archive chat lists
+ *
+ * @param {getArchiveChatListSettings$Input} parameters {@link getArchiveChatListSettings$Input}
+ * @return {ArchiveChatListSettings} {@link ArchiveChatListSettings}
+ */
+export type getArchiveChatListSettings = (
+  parameters: getArchiveChatListSettings$Input
+) => ArchiveChatListSettings;
+
+/**
+ * Changes settings for automatic moving of chats to and from the Archive chat lists
+ */
+export type setArchiveChatListSettings$Input = {
+  readonly _: "setArchiveChatListSettings";
+
+  /**
+   * New settings
+   * @type {archiveChatListSettings$Input} {@link archiveChatListSettings}
+   */
+  readonly settings?: archiveChatListSettings$Input;
+};
+
+/**
+ * Changes settings for automatic moving of chats to and from the Archive chat lists
+ */
+export type setArchiveChatListSettings$DirectInput = {
+  /**
+   * New settings
+   * @type {archiveChatListSettings$Input} {@link archiveChatListSettings}
+   */
+  readonly settings?: archiveChatListSettings$Input;
+};
+
+/**
+ * Changes settings for automatic moving of chats to and from the Archive chat lists
+ *
+ * @param {setArchiveChatListSettings$Input} parameters {@link setArchiveChatListSettings$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setArchiveChatListSettings = (
+  parameters: setArchiveChatListSettings$Input
 ) => Ok;
 
 /**
@@ -81922,7 +85814,7 @@ export type removeSavedNotificationSound = (
 ) => Ok;
 
 /**
- * Returns list of chats with non-default notification settings
+ * Returns list of chats with non-default notification settings for new messages
  */
 export type getChatNotificationSettingsExceptions$Input = {
   readonly _: "getChatNotificationSettingsExceptions";
@@ -81941,7 +85833,7 @@ export type getChatNotificationSettingsExceptions$Input = {
 };
 
 /**
- * Returns list of chats with non-default notification settings
+ * Returns list of chats with non-default notification settings for new messages
  */
 export type getChatNotificationSettingsExceptions$DirectInput = {
   /**
@@ -81958,7 +85850,7 @@ export type getChatNotificationSettingsExceptions$DirectInput = {
 };
 
 /**
- * Returns list of chats with non-default notification settings
+ * Returns list of chats with non-default notification settings for new messages
  *
  * @param {getChatNotificationSettingsExceptions$Input} parameters {@link getChatNotificationSettingsExceptions$Input}
  * @return {Chats} {@link Chats}
@@ -82200,6 +86092,1016 @@ export type readChatList$DirectInput = {
  * @return {Ok} {@link Ok}
  */
 export type readChatList = (parameters: readChatList$Input) => Ok;
+
+/**
+ * Returns a story
+ */
+export type getStory$Input = {
+  readonly _: "getStory";
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Pass true to get only locally available information without sending network requests
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly only_local?: Bool$Input;
+};
+
+/**
+ * Returns a story
+ */
+export type getStory$DirectInput = {
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Pass true to get only locally available information without sending network requests
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly only_local?: Bool$Input;
+};
+
+/**
+ * Returns a story
+ *
+ * @param {getStory$Input} parameters {@link getStory$Input}
+ * @return {Story} {@link Story}
+ */
+export type getStory = (parameters: getStory$Input) => Story;
+
+/**
+ * Checks whether the current user can send a story
+ */
+export type canSendStory$Input = {
+  readonly _: "canSendStory";
+};
+
+/**
+ * Checks whether the current user can send a story
+ */
+export type canSendStory$DirectInput = {};
+
+/**
+ * Checks whether the current user can send a story
+ *
+ * @param {canSendStory$Input} parameters {@link canSendStory$Input}
+ * @return {CanSendStoryResult} {@link CanSendStoryResult}
+ */
+export type canSendStory = (parameters: canSendStory$Input) => CanSendStoryResult;
+
+/**
+ * Sends a new story. Returns a temporary story
+ */
+export type sendStory$Input = {
+  readonly _: "sendStory";
+
+  /**
+   * Content of the story
+   * @type {InputStoryContent$Input} {@link InputStoryContent}
+   */
+  readonly content?: InputStoryContent$Input;
+
+  /**
+   * Clickable rectangle areas to be shown on the story media; pass null if none
+   * @type {inputStoryAreas$Input} {@link inputStoryAreas}
+   */
+  readonly areas?: inputStoryAreas$Input | null;
+
+  /**
+   * Story caption; pass null to use an empty caption; 0-getOption("story_caption_length_max") characters
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input | null;
+
+  /**
+   * The privacy settings for the story
+   * @type {StoryPrivacySettings$Input} {@link StoryPrivacySettings}
+   */
+  readonly privacy_settings?: StoryPrivacySettings$Input;
+
+  /**
+   * Period after which the story is moved to archive, in seconds; must be one of 6 * 3600, 12 * 3600, 86400, or 2 * 86400 for Telegram Premium users, and 86400 otherwise
+   * @type {int32} {@link int32}
+   */
+  readonly active_period?: int32;
+
+  /**
+   * Pass true to keep the story accessible after expiration
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_pinned?: Bool$Input;
+
+  /**
+   * Pass true if the content of the story must be protected from forwarding and screenshotting
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly protect_content?: Bool$Input;
+};
+
+/**
+ * Sends a new story. Returns a temporary story
+ */
+export type sendStory$DirectInput = {
+  /**
+   * Content of the story
+   * @type {InputStoryContent$Input} {@link InputStoryContent}
+   */
+  readonly content?: InputStoryContent$Input;
+
+  /**
+   * Clickable rectangle areas to be shown on the story media; pass null if none
+   * @type {inputStoryAreas$Input} {@link inputStoryAreas}
+   */
+  readonly areas?: inputStoryAreas$Input | null;
+
+  /**
+   * Story caption; pass null to use an empty caption; 0-getOption("story_caption_length_max") characters
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input | null;
+
+  /**
+   * The privacy settings for the story
+   * @type {StoryPrivacySettings$Input} {@link StoryPrivacySettings}
+   */
+  readonly privacy_settings?: StoryPrivacySettings$Input;
+
+  /**
+   * Period after which the story is moved to archive, in seconds; must be one of 6 * 3600, 12 * 3600, 86400, or 2 * 86400 for Telegram Premium users, and 86400 otherwise
+   * @type {int32} {@link int32}
+   */
+  readonly active_period?: int32;
+
+  /**
+   * Pass true to keep the story accessible after expiration
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_pinned?: Bool$Input;
+
+  /**
+   * Pass true if the content of the story must be protected from forwarding and screenshotting
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly protect_content?: Bool$Input;
+};
+
+/**
+ * Sends a new story. Returns a temporary story
+ *
+ * @param {sendStory$Input} parameters {@link sendStory$Input}
+ * @return {Story} {@link Story}
+ */
+export type sendStory = (parameters: sendStory$Input) => Story;
+
+/**
+ * Changes content and caption of a previously sent story
+ */
+export type editStory$Input = {
+  readonly _: "editStory";
+
+  /**
+   * Identifier of the story to edit
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * New content of the story; pass null to keep the current content
+   * @type {InputStoryContent$Input} {@link InputStoryContent}
+   */
+  readonly content?: InputStoryContent$Input | null;
+
+  /**
+   * New clickable rectangle areas to be shown on the story media; pass null to keep the current areas. Areas can't be edited if story content isn't changed
+   * @type {inputStoryAreas$Input} {@link inputStoryAreas}
+   */
+  readonly areas?: inputStoryAreas$Input | null;
+
+  /**
+   * New story caption; pass null to keep the current caption
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input | null;
+};
+
+/**
+ * Changes content and caption of a previously sent story
+ */
+export type editStory$DirectInput = {
+  /**
+   * Identifier of the story to edit
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * New content of the story; pass null to keep the current content
+   * @type {InputStoryContent$Input} {@link InputStoryContent}
+   */
+  readonly content?: InputStoryContent$Input | null;
+
+  /**
+   * New clickable rectangle areas to be shown on the story media; pass null to keep the current areas. Areas can't be edited if story content isn't changed
+   * @type {inputStoryAreas$Input} {@link inputStoryAreas}
+   */
+  readonly areas?: inputStoryAreas$Input | null;
+
+  /**
+   * New story caption; pass null to keep the current caption
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input | null;
+};
+
+/**
+ * Changes content and caption of a previously sent story
+ *
+ * @param {editStory$Input} parameters {@link editStory$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type editStory = (parameters: editStory$Input) => Ok;
+
+/**
+ * Changes privacy settings of a previously sent story
+ */
+export type setStoryPrivacySettings$Input = {
+  readonly _: "setStoryPrivacySettings";
+
+  /**
+   * Identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * The new privacy settigs for the story
+   * @type {StoryPrivacySettings$Input} {@link StoryPrivacySettings}
+   */
+  readonly privacy_settings?: StoryPrivacySettings$Input;
+};
+
+/**
+ * Changes privacy settings of a previously sent story
+ */
+export type setStoryPrivacySettings$DirectInput = {
+  /**
+   * Identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * The new privacy settigs for the story
+   * @type {StoryPrivacySettings$Input} {@link StoryPrivacySettings}
+   */
+  readonly privacy_settings?: StoryPrivacySettings$Input;
+};
+
+/**
+ * Changes privacy settings of a previously sent story
+ *
+ * @param {setStoryPrivacySettings$Input} parameters {@link setStoryPrivacySettings$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setStoryPrivacySettings = (
+  parameters: setStoryPrivacySettings$Input
+) => Ok;
+
+/**
+ * Toggles whether a story is accessible after expiration
+ */
+export type toggleStoryIsPinned$Input = {
+  readonly _: "toggleStoryIsPinned";
+
+  /**
+   * Identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Pass true to make the story accessible after expiration; pass false to make it private
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_pinned?: Bool$Input;
+};
+
+/**
+ * Toggles whether a story is accessible after expiration
+ */
+export type toggleStoryIsPinned$DirectInput = {
+  /**
+   * Identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Pass true to make the story accessible after expiration; pass false to make it private
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_pinned?: Bool$Input;
+};
+
+/**
+ * Toggles whether a story is accessible after expiration
+ *
+ * @param {toggleStoryIsPinned$Input} parameters {@link toggleStoryIsPinned$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type toggleStoryIsPinned = (parameters: toggleStoryIsPinned$Input) => Ok;
+
+/**
+ * Deletes a previously sent story
+ */
+export type deleteStory$Input = {
+  readonly _: "deleteStory";
+
+  /**
+   * Identifier of the story to delete
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
+ * Deletes a previously sent story
+ */
+export type deleteStory$DirectInput = {
+  /**
+   * Identifier of the story to delete
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
+ * Deletes a previously sent story
+ *
+ * @param {deleteStory$Input} parameters {@link deleteStory$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type deleteStory = (parameters: deleteStory$Input) => Ok;
+
+/**
+ * Returns list of chats with non-default notification settings for stories
+ */
+export type getStoryNotificationSettingsExceptions$Input = {
+  readonly _: "getStoryNotificationSettingsExceptions";
+};
+
+/**
+ * Returns list of chats with non-default notification settings for stories
+ */
+export type getStoryNotificationSettingsExceptions$DirectInput = {};
+
+/**
+ * Returns list of chats with non-default notification settings for stories
+ *
+ * @param {getStoryNotificationSettingsExceptions$Input} parameters {@link getStoryNotificationSettingsExceptions$Input}
+ * @return {Chats} {@link Chats}
+ */
+export type getStoryNotificationSettingsExceptions = (
+  parameters: getStoryNotificationSettingsExceptions$Input
+) => Chats;
+
+/**
+ * Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
+ *
+ * - the pair (active_stories.order, active_stories.story_sender_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
+ */
+export type loadActiveStories$Input = {
+  readonly _: "loadActiveStories";
+
+  /**
+   * The story list in which to load active stories
+   * @type {StoryList$Input} {@link StoryList}
+   */
+  readonly story_list?: StoryList$Input;
+};
+
+/**
+ * Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
+ *
+ * - the pair (active_stories.order, active_stories.story_sender_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
+ */
+export type loadActiveStories$DirectInput = {
+  /**
+   * The story list in which to load active stories
+   * @type {StoryList$Input} {@link StoryList}
+   */
+  readonly story_list?: StoryList$Input;
+};
+
+/**
+ * Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
+ *
+ * - the pair (active_stories.order, active_stories.story_sender_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
+ *
+ * @param {loadActiveStories$Input} parameters {@link loadActiveStories$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type loadActiveStories = (parameters: loadActiveStories$Input) => Ok;
+
+/**
+ * Changes story list in which stories from the chat are shown
+ */
+export type setChatActiveStoriesList$Input = {
+  readonly _: "setChatActiveStoriesList";
+
+  /**
+   * Identifier of the chat that posted stories
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * New list for active stories posted by the chat
+   * @type {StoryList$Input} {@link StoryList}
+   */
+  readonly story_list?: StoryList$Input;
+};
+
+/**
+ * Changes story list in which stories from the chat are shown
+ */
+export type setChatActiveStoriesList$DirectInput = {
+  /**
+   * Identifier of the chat that posted stories
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * New list for active stories posted by the chat
+   * @type {StoryList$Input} {@link StoryList}
+   */
+  readonly story_list?: StoryList$Input;
+};
+
+/**
+ * Changes story list in which stories from the chat are shown
+ *
+ * @param {setChatActiveStoriesList$Input} parameters {@link setChatActiveStoriesList$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setChatActiveStoriesList = (
+  parameters: setChatActiveStoriesList$Input
+) => Ok;
+
+/**
+ * Returns the list of active stories posted by the given chat
+ */
+export type getChatActiveStories$Input = {
+  readonly _: "getChatActiveStories";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Returns the list of active stories posted by the given chat
+ */
+export type getChatActiveStories$DirectInput = {
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Returns the list of active stories posted by the given chat
+ *
+ * @param {getChatActiveStories$Input} parameters {@link getChatActiveStories$Input}
+ * @return {ChatActiveStories} {@link ChatActiveStories}
+ */
+export type getChatActiveStories = (
+  parameters: getChatActiveStories$Input
+) => ChatActiveStories;
+
+/**
+ * Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ *
+ * - For optimal performance, the number of returned stories is chosen by TDLib
+ */
+export type getChatPinnedStories$Input = {
+  readonly _: "getChatPinnedStories";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the story starting from which stories must be returned; use 0 to get results from the last story
+   * @type {int32} {@link int32}
+   */
+  readonly from_story_id?: int32;
+
+  /**
+   * The maximum number of stories to be returned
+   *
+   * - For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ *
+ * - For optimal performance, the number of returned stories is chosen by TDLib
+ */
+export type getChatPinnedStories$DirectInput = {
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the story starting from which stories must be returned; use 0 to get results from the last story
+   * @type {int32} {@link int32}
+   */
+  readonly from_story_id?: int32;
+
+  /**
+   * The maximum number of stories to be returned
+   *
+   * - For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ *
+ * - For optimal performance, the number of returned stories is chosen by TDLib
+ *
+ * @param {getChatPinnedStories$Input} parameters {@link getChatPinnedStories$Input}
+ * @return {Stories} {@link Stories}
+ */
+export type getChatPinnedStories = (
+  parameters: getChatPinnedStories$Input
+) => Stories;
+
+/**
+ * Returns the list of all stories of the current user. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ *
+ * - For optimal performance, the number of returned stories is chosen by TDLib
+ */
+export type getArchivedStories$Input = {
+  readonly _: "getArchivedStories";
+
+  /**
+   * Identifier of the story starting from which stories must be returned; use 0 to get results from the last story
+   * @type {int32} {@link int32}
+   */
+  readonly from_story_id?: int32;
+
+  /**
+   * The maximum number of stories to be returned
+   *
+   * - For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns the list of all stories of the current user. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ *
+ * - For optimal performance, the number of returned stories is chosen by TDLib
+ */
+export type getArchivedStories$DirectInput = {
+  /**
+   * Identifier of the story starting from which stories must be returned; use 0 to get results from the last story
+   * @type {int32} {@link int32}
+   */
+  readonly from_story_id?: int32;
+
+  /**
+   * The maximum number of stories to be returned
+   *
+   * - For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns the list of all stories of the current user. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ *
+ * - For optimal performance, the number of returned stories is chosen by TDLib
+ *
+ * @param {getArchivedStories$Input} parameters {@link getArchivedStories$Input}
+ * @return {Stories} {@link Stories}
+ */
+export type getArchivedStories = (parameters: getArchivedStories$Input) => Stories;
+
+/**
+ * Informs TDLib that a story is opened and is being viewed by the user
+ */
+export type openStory$Input = {
+  readonly _: "openStory";
+
+  /**
+   * The identifier of the sender of the opened story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
+ * Informs TDLib that a story is opened and is being viewed by the user
+ */
+export type openStory$DirectInput = {
+  /**
+   * The identifier of the sender of the opened story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
+ * Informs TDLib that a story is opened and is being viewed by the user
+ *
+ * @param {openStory$Input} parameters {@link openStory$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type openStory = (parameters: openStory$Input) => Ok;
+
+/**
+ * Informs TDLib that a story is closed by the user
+ */
+export type closeStory$Input = {
+  readonly _: "closeStory";
+
+  /**
+   * The identifier of the sender of the story to close
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
+ * Informs TDLib that a story is closed by the user
+ */
+export type closeStory$DirectInput = {
+  /**
+   * The identifier of the sender of the story to close
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
+ * Informs TDLib that a story is closed by the user
+ *
+ * @param {closeStory$Input} parameters {@link closeStory$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type closeStory = (parameters: closeStory$Input) => Ok;
+
+/**
+ * Returns reactions, which can be chosen for a story
+ */
+export type getStoryAvailableReactions$Input = {
+  readonly _: "getStoryAvailableReactions";
+
+  /**
+   * Number of reaction per row, 5-25
+   * @type {int32} {@link int32}
+   */
+  readonly row_size?: int32;
+};
+
+/**
+ * Returns reactions, which can be chosen for a story
+ */
+export type getStoryAvailableReactions$DirectInput = {
+  /**
+   * Number of reaction per row, 5-25
+   * @type {int32} {@link int32}
+   */
+  readonly row_size?: int32;
+};
+
+/**
+ * Returns reactions, which can be chosen for a story
+ *
+ * @param {getStoryAvailableReactions$Input} parameters {@link getStoryAvailableReactions$Input}
+ * @return {AvailableReactions} {@link AvailableReactions}
+ */
+export type getStoryAvailableReactions = (
+  parameters: getStoryAvailableReactions$Input
+) => AvailableReactions;
+
+/**
+ * Changes chosen reaction on a story
+ */
+export type setStoryReaction$Input = {
+  readonly _: "setStoryReaction";
+
+  /**
+   * The identifier of the sender of the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Type of the reaction to set; pass null to remove the reaction. `reactionTypeCustomEmoji` reactions can be used only by Telegram Premium users
+   * @type {ReactionType$Input} {@link ReactionType}
+   */
+  readonly reaction_type?: ReactionType$Input | null;
+
+  /**
+   * Pass true if the reaction needs to be added to recent reactions
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly update_recent_reactions?: Bool$Input;
+};
+
+/**
+ * Changes chosen reaction on a story
+ */
+export type setStoryReaction$DirectInput = {
+  /**
+   * The identifier of the sender of the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the story
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Type of the reaction to set; pass null to remove the reaction. `reactionTypeCustomEmoji` reactions can be used only by Telegram Premium users
+   * @type {ReactionType$Input} {@link ReactionType}
+   */
+  readonly reaction_type?: ReactionType$Input | null;
+
+  /**
+   * Pass true if the reaction needs to be added to recent reactions
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly update_recent_reactions?: Bool$Input;
+};
+
+/**
+ * Changes chosen reaction on a story
+ *
+ * @param {setStoryReaction$Input} parameters {@link setStoryReaction$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setStoryReaction = (parameters: setStoryReaction$Input) => Ok;
+
+/**
+ * Returns viewers of a story. The method can be called if story.can_get_viewers == true
+ */
+export type getStoryViewers$Input = {
+  readonly _: "getStoryViewers";
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Query to search for in names and usernames of the viewers; may be empty to get all relevant viewers
+   * @type {string} {@link string}
+   */
+  readonly query?: string;
+
+  /**
+   * Pass true to get only contacts; pass false to get all relevant viewers
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly only_contacts?: Bool$Input;
+
+  /**
+   * Pass true to get viewers with reaction first; pass false to get viewers sorted just by view_date
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly prefer_with_reaction?: Bool$Input;
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of story viewers to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns viewers of a story. The method can be called if story.can_get_viewers == true
+ */
+export type getStoryViewers$DirectInput = {
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * Query to search for in names and usernames of the viewers; may be empty to get all relevant viewers
+   * @type {string} {@link string}
+   */
+  readonly query?: string;
+
+  /**
+   * Pass true to get only contacts; pass false to get all relevant viewers
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly only_contacts?: Bool$Input;
+
+  /**
+   * Pass true to get viewers with reaction first; pass false to get viewers sorted just by view_date
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly prefer_with_reaction?: Bool$Input;
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of story viewers to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns viewers of a story. The method can be called if story.can_get_viewers == true
+ *
+ * @param {getStoryViewers$Input} parameters {@link getStoryViewers$Input}
+ * @return {StoryViewers} {@link StoryViewers}
+ */
+export type getStoryViewers = (parameters: getStoryViewers$Input) => StoryViewers;
+
+/**
+ * Reports a story to the Telegram moderators
+ */
+export type reportStory$Input = {
+  readonly _: "reportStory";
+
+  /**
+   * The identifier of the sender of the story to report
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the story to report
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * The reason for reporting the story
+   * @type {ReportReason$Input} {@link ReportReason}
+   */
+  readonly reason?: ReportReason$Input;
+
+  /**
+   * Additional report details; 0-1024 characters
+   * @type {string} {@link string}
+   */
+  readonly text?: string;
+};
+
+/**
+ * Reports a story to the Telegram moderators
+ */
+export type reportStory$DirectInput = {
+  /**
+   * The identifier of the sender of the story to report
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * The identifier of the story to report
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * The reason for reporting the story
+   * @type {ReportReason$Input} {@link ReportReason}
+   */
+  readonly reason?: ReportReason$Input;
+
+  /**
+   * Additional report details; 0-1024 characters
+   * @type {string} {@link string}
+   */
+  readonly text?: string;
+};
+
+/**
+ * Reports a story to the Telegram moderators
+ *
+ * @param {reportStory$Input} parameters {@link reportStory$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type reportStory = (parameters: reportStory$Input) => Ok;
+
+/**
+ * Activates stealth mode for stories, which hides all views of stories from the current user in the last "story_stealth_mode_past_period" seconds
+ *
+ * - and for the next "story_stealth_mode_future_period" seconds; for Telegram Premium users only
+ */
+export type activateStoryStealthMode$Input = {
+  readonly _: "activateStoryStealthMode";
+};
+
+/**
+ * Activates stealth mode for stories, which hides all views of stories from the current user in the last "story_stealth_mode_past_period" seconds
+ *
+ * - and for the next "story_stealth_mode_future_period" seconds; for Telegram Premium users only
+ */
+export type activateStoryStealthMode$DirectInput = {};
+
+/**
+ * Activates stealth mode for stories, which hides all views of stories from the current user in the last "story_stealth_mode_past_period" seconds
+ *
+ * - and for the next "story_stealth_mode_future_period" seconds; for Telegram Premium users only
+ *
+ * @param {activateStoryStealthMode$Input} parameters {@link activateStoryStealthMode$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type activateStoryStealthMode = (
+  parameters: activateStoryStealthMode$Input
+) => Ok;
 
 /**
  * Returns information about a bot that can be added to attachment menu
@@ -85704,7 +90606,7 @@ export type toggleGroupCallParticipantIsMuted$Input = {
   readonly participant_id?: MessageSender$Input;
 
   /**
-   * Pass true to mute the user; pass false to unmute the them
+   * Pass true to mute the user; pass false to unmute them
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_muted?: Bool$Input;
@@ -85727,7 +90629,7 @@ export type toggleGroupCallParticipantIsMuted$DirectInput = {
   readonly participant_id?: MessageSender$Input;
 
   /**
-   * Pass true to mute the user; pass false to unmute the them
+   * Pass true to mute the user; pass false to unmute them
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_muted?: Bool$Input;
@@ -86086,10 +90988,10 @@ export type getGroupCallStreamSegment = (
 ) => FilePart;
 
 /**
- * Changes the block state of a message sender. Currently, only users and supergroup chats can be blocked
+ * Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
  */
-export type toggleMessageSenderIsBlocked$Input = {
-  readonly _: "toggleMessageSenderIsBlocked";
+export type setMessageSenderBlockList$Input = {
+  readonly _: "setMessageSenderBlockList";
 
   /**
    * Identifier of a message sender to block/unblock
@@ -86098,16 +91000,16 @@ export type toggleMessageSenderIsBlocked$Input = {
   readonly sender_id?: MessageSender$Input;
 
   /**
-   * New value of is_blocked
-   * @type {Bool$Input} {@link Bool}
+   * New block list for the message sender; pass null to unblock the message sender
+   * @type {BlockList$Input} {@link BlockList}
    */
-  readonly is_blocked?: Bool$Input;
+  readonly block_list?: BlockList$Input | null;
 };
 
 /**
- * Changes the block state of a message sender. Currently, only users and supergroup chats can be blocked
+ * Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
  */
-export type toggleMessageSenderIsBlocked$DirectInput = {
+export type setMessageSenderBlockList$DirectInput = {
   /**
    * Identifier of a message sender to block/unblock
    * @type {MessageSender$Input} {@link MessageSender}
@@ -86115,20 +91017,20 @@ export type toggleMessageSenderIsBlocked$DirectInput = {
   readonly sender_id?: MessageSender$Input;
 
   /**
-   * New value of is_blocked
-   * @type {Bool$Input} {@link Bool}
+   * New block list for the message sender; pass null to unblock the message sender
+   * @type {BlockList$Input} {@link BlockList}
    */
-  readonly is_blocked?: Bool$Input;
+  readonly block_list?: BlockList$Input | null;
 };
 
 /**
- * Changes the block state of a message sender. Currently, only users and supergroup chats can be blocked
+ * Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
  *
- * @param {toggleMessageSenderIsBlocked$Input} parameters {@link toggleMessageSenderIsBlocked$Input}
+ * @param {setMessageSenderBlockList$Input} parameters {@link setMessageSenderBlockList$Input}
  * @return {Ok} {@link Ok}
  */
-export type toggleMessageSenderIsBlocked = (
-  parameters: toggleMessageSenderIsBlocked$Input
+export type setMessageSenderBlockList = (
+  parameters: setMessageSenderBlockList$Input
 ) => Ok;
 
 /**
@@ -86208,6 +91110,12 @@ export type getBlockedMessageSenders$Input = {
   readonly _: "getBlockedMessageSenders";
 
   /**
+   * Block list from which to return users
+   * @type {BlockList$Input} {@link BlockList}
+   */
+  readonly block_list?: BlockList$Input;
+
+  /**
    * Number of users and chats to skip in the result; must be non-negative
    * @type {int32} {@link int32}
    */
@@ -86224,6 +91132,12 @@ export type getBlockedMessageSenders$Input = {
  * Returns users and chats that were blocked by the current user
  */
 export type getBlockedMessageSenders$DirectInput = {
+  /**
+   * Block list from which to return users
+   * @type {BlockList$Input} {@link BlockList}
+   */
+  readonly block_list?: BlockList$Input;
+
   /**
    * Number of users and chats to skip in the result; must be non-negative
    * @type {int32} {@link int32}
@@ -86328,19 +91242,19 @@ export type importContacts$DirectInput = {
 export type importContacts = (parameters: importContacts$Input) => ImportedContacts;
 
 /**
- * Returns all user contacts
+ * Returns all contacts of the user
  */
 export type getContacts$Input = {
   readonly _: "getContacts";
 };
 
 /**
- * Returns all user contacts
+ * Returns all contacts of the user
  */
 export type getContacts$DirectInput = {};
 
 /**
- * Returns all user contacts
+ * Returns all contacts of the user
  *
  * @param {getContacts$Input} parameters {@link getContacts$Input}
  * @return {Users} {@link Users}
@@ -86504,6 +91418,58 @@ export type clearImportedContacts$DirectInput = {};
  * @return {Ok} {@link Ok}
  */
 export type clearImportedContacts = (parameters: clearImportedContacts$Input) => Ok;
+
+/**
+ * Changes the list of close friends of the current user
+ */
+export type setCloseFriends$Input = {
+  readonly _: "setCloseFriends";
+
+  /**
+   * User identifiers of close friends; the users must be contacts of the current user
+   * @type {vector$Input<int53>} {@link vector<int53>}
+   */
+  readonly user_ids?: vector$Input<int53>;
+};
+
+/**
+ * Changes the list of close friends of the current user
+ */
+export type setCloseFriends$DirectInput = {
+  /**
+   * User identifiers of close friends; the users must be contacts of the current user
+   * @type {vector$Input<int53>} {@link vector<int53>}
+   */
+  readonly user_ids?: vector$Input<int53>;
+};
+
+/**
+ * Changes the list of close friends of the current user
+ *
+ * @param {setCloseFriends$Input} parameters {@link setCloseFriends$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setCloseFriends = (parameters: setCloseFriends$Input) => Ok;
+
+/**
+ * Returns all close friends of the current user
+ */
+export type getCloseFriends$Input = {
+  readonly _: "getCloseFriends";
+};
+
+/**
+ * Returns all close friends of the current user
+ */
+export type getCloseFriends$DirectInput = {};
+
+/**
+ * Returns all close friends of the current user
+ *
+ * @param {getCloseFriends$Input} parameters {@link getCloseFriends$Input}
+ * @return {Users} {@link Users}
+ */
+export type getCloseFriends = (parameters: getCloseFriends$Input) => Users;
 
 /**
  * Changes a personal profile photo of a contact user
@@ -88402,12 +93368,6 @@ export type setEmojiStatus$Input = {
    * @type {emojiStatus$Input} {@link emojiStatus}
    */
   readonly emoji_status?: emojiStatus$Input | null;
-
-  /**
-   * Duration of the status, in seconds; pass 0 to keep the status active until it will be changed manually
-   * @type {int32} {@link int32}
-   */
-  readonly duration?: int32;
 };
 
 /**
@@ -88419,12 +93379,6 @@ export type setEmojiStatus$DirectInput = {
    * @type {emojiStatus$Input} {@link emojiStatus}
    */
   readonly emoji_status?: emojiStatus$Input | null;
-
-  /**
-   * Duration of the status, in seconds; pass 0 to keep the status active until it will be changed manually
-   * @type {int32} {@link int32}
-   */
-  readonly duration?: int32;
 };
 
 /**
@@ -88468,7 +93422,7 @@ export type setLocation$DirectInput = {
 export type setLocation = (parameters: setLocation$Input) => Ok;
 
 /**
- * Changes the phone number of the user and sends an authentication code to the user's new phone number. On success, returns information about the sent code
+ * Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
  */
 export type changePhoneNumber$Input = {
   readonly _: "changePhoneNumber";
@@ -88487,7 +93441,7 @@ export type changePhoneNumber$Input = {
 };
 
 /**
- * Changes the phone number of the user and sends an authentication code to the user's new phone number. On success, returns information about the sent code
+ * Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
  */
 export type changePhoneNumber$DirectInput = {
   /**
@@ -88504,7 +93458,7 @@ export type changePhoneNumber$DirectInput = {
 };
 
 /**
- * Changes the phone number of the user and sends an authentication code to the user's new phone number. On success, returns information about the sent code
+ * Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
  *
  * @param {changePhoneNumber$Input} parameters {@link changePhoneNumber$Input}
  * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
@@ -88848,7 +93802,7 @@ export type setDefaultGroupAdministratorRights$Input = {
   readonly _: "setDefaultGroupAdministratorRights";
 
   /**
-   * Default administrator rights for adding the bot to basic group and supergroup chats; may be null
+   * Default administrator rights for adding the bot to basic group and supergroup chats; pass null to remove default rights
    * @type {chatAdministratorRights$Input} {@link chatAdministratorRights}
    */
   readonly default_group_administrator_rights?: chatAdministratorRights$Input | null;
@@ -88859,7 +93813,7 @@ export type setDefaultGroupAdministratorRights$Input = {
  */
 export type setDefaultGroupAdministratorRights$DirectInput = {
   /**
-   * Default administrator rights for adding the bot to basic group and supergroup chats; may be null
+   * Default administrator rights for adding the bot to basic group and supergroup chats; pass null to remove default rights
    * @type {chatAdministratorRights$Input} {@link chatAdministratorRights}
    */
   readonly default_group_administrator_rights?: chatAdministratorRights$Input | null;
@@ -88882,7 +93836,7 @@ export type setDefaultChannelAdministratorRights$Input = {
   readonly _: "setDefaultChannelAdministratorRights";
 
   /**
-   * Default administrator rights for adding the bot to channels; may be null
+   * Default administrator rights for adding the bot to channels; pass null to remove default rights
    * @type {chatAdministratorRights$Input} {@link chatAdministratorRights}
    */
   readonly default_channel_administrator_rights?: chatAdministratorRights$Input | null;
@@ -88893,7 +93847,7 @@ export type setDefaultChannelAdministratorRights$Input = {
  */
 export type setDefaultChannelAdministratorRights$DirectInput = {
   /**
-   * Default administrator rights for adding the bot to channels; may be null
+   * Default administrator rights for adding the bot to channels; pass null to remove default rights
    * @type {chatAdministratorRights$Input} {@link chatAdministratorRights}
    */
   readonly default_channel_administrator_rights?: chatAdministratorRights$Input | null;
@@ -88922,7 +93876,7 @@ export type setBotName$Input = {
   readonly bot_user_id?: int53;
 
   /**
-   * A two-letter ISO 639-1 language code. If empty, the description will be shown to all users, for which language there are no dedicated description
+   * A two-letter ISO 639-1 language code. If empty, the name will be shown to all users for whose languages there is no dedicated name
    * @type {string} {@link string}
    */
   readonly language_code?: string;
@@ -88945,7 +93899,7 @@ export type setBotName$DirectInput = {
   readonly bot_user_id?: int53;
 
   /**
-   * A two-letter ISO 639-1 language code. If empty, the description will be shown to all users, for which language there are no dedicated description
+   * A two-letter ISO 639-1 language code. If empty, the name will be shown to all users for whose languages there is no dedicated name
    * @type {string} {@link string}
    */
   readonly language_code?: string;
@@ -89114,8 +94068,8 @@ export type toggleBotUsernameIsActive = (
 /**
  * Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
  */
-export type reorderActiveBotUsernames$Input = {
-  readonly _: "reorderActiveBotUsernames";
+export type reorderBotActiveUsernames$Input = {
+  readonly _: "reorderBotActiveUsernames";
 
   /**
    * Identifier of the target bot
@@ -89133,7 +94087,7 @@ export type reorderActiveBotUsernames$Input = {
 /**
  * Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
  */
-export type reorderActiveBotUsernames$DirectInput = {
+export type reorderBotActiveUsernames$DirectInput = {
   /**
    * Identifier of the target bot
    * @type {int53} {@link int53}
@@ -89150,11 +94104,11 @@ export type reorderActiveBotUsernames$DirectInput = {
 /**
  * Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
  *
- * @param {reorderActiveBotUsernames$Input} parameters {@link reorderActiveBotUsernames$Input}
+ * @param {reorderBotActiveUsernames$Input} parameters {@link reorderBotActiveUsernames$Input}
  * @return {Ok} {@link Ok}
  */
-export type reorderActiveBotUsernames = (
-  parameters: reorderActiveBotUsernames$Input
+export type reorderBotActiveUsernames = (
+  parameters: reorderBotActiveUsernames$Input
 ) => Ok;
 
 /**
@@ -89170,7 +94124,7 @@ export type setBotInfoDescription$Input = {
   readonly bot_user_id?: int53;
 
   /**
-   * A two-letter ISO 639-1 language code. If empty, the description will be shown to all users, for which language there are no dedicated description
+   * A two-letter ISO 639-1 language code. If empty, the description will be shown to all users for whose languages there is no dedicated description
    * @type {string} {@link string}
    */
   readonly language_code?: string;
@@ -89193,7 +94147,7 @@ export type setBotInfoDescription$DirectInput = {
   readonly bot_user_id?: int53;
 
   /**
-   * A two-letter ISO 639-1 language code. If empty, the description will be shown to all users, for which language there are no dedicated description
+   * A two-letter ISO 639-1 language code. If empty, the description will be shown to all users for whose languages there is no dedicated description
    * @type {string} {@link string}
    */
   readonly language_code?: string;
@@ -89272,7 +94226,7 @@ export type setBotInfoShortDescription$Input = {
   readonly bot_user_id?: int53;
 
   /**
-   * A two-letter ISO 639-1 language code. If empty, the short description will be shown to all users, for which language there are no dedicated description
+   * A two-letter ISO 639-1 language code. If empty, the short description will be shown to all users for whose languages there is no dedicated description
    * @type {string} {@link string}
    */
   readonly language_code?: string;
@@ -89295,7 +94249,7 @@ export type setBotInfoShortDescription$DirectInput = {
   readonly bot_user_id?: int53;
 
   /**
-   * A two-letter ISO 639-1 language code. If empty, the short description will be shown to all users, for which language there are no dedicated description
+   * A two-letter ISO 639-1 language code. If empty, the short description will be shown to all users for whose languages there is no dedicated description
    * @type {string} {@link string}
    */
   readonly language_code?: string;
@@ -91194,7 +96148,9 @@ export type getLanguagePackStrings = (
 ) => LanguagePackStrings;
 
 /**
- * Fetches the latest versions of all strings from a language pack in the current localization target from the server. This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
+ * Fetches the latest versions of all strings from a language pack in the current localization target from the server.
+ *
+ * - This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
  */
 export type synchronizeLanguagePack$Input = {
   readonly _: "synchronizeLanguagePack";
@@ -91207,7 +96163,9 @@ export type synchronizeLanguagePack$Input = {
 };
 
 /**
- * Fetches the latest versions of all strings from a language pack in the current localization target from the server. This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
+ * Fetches the latest versions of all strings from a language pack in the current localization target from the server.
+ *
+ * - This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
  */
 export type synchronizeLanguagePack$DirectInput = {
   /**
@@ -91218,7 +96176,9 @@ export type synchronizeLanguagePack$DirectInput = {
 };
 
 /**
- * Fetches the latest versions of all strings from a language pack in the current localization target from the server. This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
+ * Fetches the latest versions of all strings from a language pack in the current localization target from the server.
+ *
+ * - This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
  *
  * @param {synchronizeLanguagePack$Input} parameters {@link synchronizeLanguagePack$Input}
  * @return {Ok} {@link Ok}
@@ -91268,7 +96228,7 @@ export type setCustomLanguagePack$Input = {
   readonly _: "setCustomLanguagePack";
 
   /**
-   * Information about the language pack. Language pack ID must start with 'X', consist only of English letters, digits and hyphens, and must not exceed 64 characters. Can be called before authorization
+   * Information about the language pack. Language pack identifier must start with 'X', consist only of English letters, digits and hyphens, and must not exceed 64 characters. Can be called before authorization
    * @type {languagePackInfo$Input} {@link languagePackInfo}
    */
   readonly info?: languagePackInfo$Input;
@@ -91285,7 +96245,7 @@ export type setCustomLanguagePack$Input = {
  */
 export type setCustomLanguagePack$DirectInput = {
   /**
-   * Information about the language pack. Language pack ID must start with 'X', consist only of English letters, digits and hyphens, and must not exceed 64 characters. Can be called before authorization
+   * Information about the language pack. Language pack identifier must start with 'X', consist only of English letters, digits and hyphens, and must not exceed 64 characters. Can be called before authorization
    * @type {languagePackInfo$Input} {@link languagePackInfo}
    */
   readonly info?: languagePackInfo$Input;
@@ -91935,9 +96895,9 @@ export type reportChat$Input = {
 
   /**
    * The reason for reporting the chat
-   * @type {ChatReportReason$Input} {@link ChatReportReason}
+   * @type {ReportReason$Input} {@link ReportReason}
    */
-  readonly reason?: ChatReportReason$Input;
+  readonly reason?: ReportReason$Input;
 
   /**
    * Additional report details; 0-1024 characters
@@ -91964,9 +96924,9 @@ export type reportChat$DirectInput = {
 
   /**
    * The reason for reporting the chat
-   * @type {ChatReportReason$Input} {@link ChatReportReason}
+   * @type {ReportReason$Input} {@link ReportReason}
    */
-  readonly reason?: ChatReportReason$Input;
+  readonly reason?: ReportReason$Input;
 
   /**
    * Additional report details; 0-1024 characters
@@ -92003,9 +96963,9 @@ export type reportChatPhoto$Input = {
 
   /**
    * The reason for reporting the chat photo
-   * @type {ChatReportReason$Input} {@link ChatReportReason}
+   * @type {ReportReason$Input} {@link ReportReason}
    */
-  readonly reason?: ChatReportReason$Input;
+  readonly reason?: ReportReason$Input;
 
   /**
    * Additional report details; 0-1024 characters
@@ -92032,9 +96992,9 @@ export type reportChatPhoto$DirectInput = {
 
   /**
    * The reason for reporting the chat photo
-   * @type {ChatReportReason$Input} {@link ChatReportReason}
+   * @type {ReportReason$Input} {@link ReportReason}
    */
-  readonly reason?: ChatReportReason$Input;
+  readonly reason?: ReportReason$Input;
 
   /**
    * Additional report details; 0-1024 characters
@@ -94968,7 +99928,7 @@ export type getApplicationConfig = (
 ) => JsonValue;
 
 /**
- * Adds server-provided application changelog as messages to the chat 777000 (Telegram); for official applications only. Returns a 404 error if nothing changed
+ * Adds server-provided application changelog as messages to the chat 777000 (Telegram) or as a stories; for official applications only. Returns a 404 error if nothing changed
  */
 export type addApplicationChangelog$Input = {
   readonly _: "addApplicationChangelog";
@@ -94981,7 +99941,7 @@ export type addApplicationChangelog$Input = {
 };
 
 /**
- * Adds server-provided application changelog as messages to the chat 777000 (Telegram); for official applications only. Returns a 404 error if nothing changed
+ * Adds server-provided application changelog as messages to the chat 777000 (Telegram) or as a stories; for official applications only. Returns a 404 error if nothing changed
  */
 export type addApplicationChangelog$DirectInput = {
   /**
@@ -94992,7 +99952,7 @@ export type addApplicationChangelog$DirectInput = {
 };
 
 /**
- * Adds server-provided application changelog as messages to the chat 777000 (Telegram); for official applications only. Returns a 404 error if nothing changed
+ * Adds server-provided application changelog as messages to the chat 777000 (Telegram) or as a stories; for official applications only. Returns a 404 error if nothing changed
  *
  * @param {addApplicationChangelog$Input} parameters {@link addApplicationChangelog$Input}
  * @return {Ok} {@link Ok}

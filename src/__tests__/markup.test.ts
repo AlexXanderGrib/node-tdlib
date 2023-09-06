@@ -1,4 +1,4 @@
-import { markup } from "..";
+import * as markup from "../markup";
 
 describe("Markup", () => {
   test(markup.forceReply.name, () => {
