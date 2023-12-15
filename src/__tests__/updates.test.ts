@@ -53,4 +53,15 @@ describe("Updates", () => {
 
     expect(update._.startsWith("update")).toBeTruthy();
   });
+
+  test("Options", async () => {
+    expect(typeof (await client.tdlibOptions.get("unix_time"))).toBe("bigint");
+
+    await client.tdlibOptions.assign({
+      x_custom: 33
+    });
+
+    expect(await client.tdlibOptions.get("x_custom")).toBe(33n);
+    await client.tdlibOptions.delete("x_custom");
+  });
 });

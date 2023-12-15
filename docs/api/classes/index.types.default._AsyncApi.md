@@ -119,6 +119,7 @@ Convenience class for API calls
 - [deleteAllCallMessages](index.types.default._AsyncApi.md#deleteallcallmessages)
 - [deleteAllRevokedChatInviteLinks](index.types.default._AsyncApi.md#deleteallrevokedchatinvitelinks)
 - [deleteChat](index.types.default._AsyncApi.md#deletechat)
+- [deleteChatBackground](index.types.default._AsyncApi.md#deletechatbackground)
 - [deleteChatFolder](index.types.default._AsyncApi.md#deletechatfolder)
 - [deleteChatFolderInviteLink](index.types.default._AsyncApi.md#deletechatfolderinvitelink)
 - [deleteChatHistory](index.types.default._AsyncApi.md#deletechathistory)
@@ -227,6 +228,8 @@ Convenience class for API calls
 - [getChatPinnedMessage](index.types.default._AsyncApi.md#getchatpinnedmessage)
 - [getChatPinnedStories](index.types.default._AsyncApi.md#getchatpinnedstories)
 - [getChatScheduledMessages](index.types.default._AsyncApi.md#getchatscheduledmessages)
+- [getChatSimilarChatCount](index.types.default._AsyncApi.md#getchatsimilarchatcount)
+- [getChatSimilarChats](index.types.default._AsyncApi.md#getchatsimilarchats)
 - [getChatSparseMessagePositions](index.types.default._AsyncApi.md#getchatsparsemessagepositions)
 - [getChatSponsoredMessages](index.types.default._AsyncApi.md#getchatsponsoredmessages)
 - [getChatStatistics](index.types.default._AsyncApi.md#getchatstatistics)
@@ -354,6 +357,8 @@ Convenience class for API calls
 - [getStory](index.types.default._AsyncApi.md#getstory)
 - [getStoryAvailableReactions](index.types.default._AsyncApi.md#getstoryavailablereactions)
 - [getStoryNotificationSettingsExceptions](index.types.default._AsyncApi.md#getstorynotificationsettingsexceptions)
+- [getStoryPublicForwards](index.types.default._AsyncApi.md#getstorypublicforwards)
+- [getStoryStatistics](index.types.default._AsyncApi.md#getstorystatistics)
 - [getStoryViewers](index.types.default._AsyncApi.md#getstoryviewers)
 - [getSuggestedFileName](index.types.default._AsyncApi.md#getsuggestedfilename)
 - [getSuggestedStickerSetName](index.types.default._AsyncApi.md#getsuggestedstickersetname)
@@ -585,6 +590,7 @@ Convenience class for API calls
 - [setPinnedChats](index.types.default._AsyncApi.md#setpinnedchats)
 - [setPinnedForumTopics](index.types.default._AsyncApi.md#setpinnedforumtopics)
 - [setPollAnswer](index.types.default._AsyncApi.md#setpollanswer)
+- [setProfileAccentColor](index.types.default._AsyncApi.md#setprofileaccentcolor)
 - [setProfilePhoto](index.types.default._AsyncApi.md#setprofilephoto)
 - [setRecoveryEmailAddress](index.types.default._AsyncApi.md#setrecoveryemailaddress)
 - [setScopeNotificationSettings](index.types.default._AsyncApi.md#setscopenotificationsettings)
@@ -636,6 +642,7 @@ Convenience class for API calls
 - [toggleChatIsMarkedAsUnread](index.types.default._AsyncApi.md#togglechatismarkedasunread)
 - [toggleChatIsPinned](index.types.default._AsyncApi.md#togglechatispinned)
 - [toggleChatIsTranslatable](index.types.default._AsyncApi.md#togglechatistranslatable)
+- [toggleChatViewAsTopics](index.types.default._AsyncApi.md#togglechatviewastopics)
 - [toggleDownloadIsPaused](index.types.default._AsyncApi.md#toggledownloadispaused)
 - [toggleForumTopicIsClosed](index.types.default._AsyncApi.md#toggleforumtopicisclosed)
 - [toggleForumTopicIsPinned](index.types.default._AsyncApi.md#toggleforumtopicispinned)
@@ -691,7 +698,7 @@ Constructs [$AsyncApi](index.types.default._AsyncApi.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:56688
+dist/generated/types.d.ts:57723
 
 ## Properties
 
@@ -701,7 +708,7 @@ dist/generated/types.d.ts:56688
 
 #### Defined in
 
-dist/generated/types.d.ts:56682
+dist/generated/types.d.ts:57717
 
 ## Methods
 
@@ -725,7 +732,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59192
+dist/generated/types.d.ts:60266
 
 ___
 
@@ -749,7 +756,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61042
+dist/generated/types.d.ts:62130
 
 ___
 
@@ -775,7 +782,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58836
+dist/generated/types.d.ts:59901
 
 ___
 
@@ -799,7 +806,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61119
+dist/generated/types.d.ts:62207
 
 ___
 
@@ -823,7 +830,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58329
+dist/generated/types.d.ts:59380
 
 ___
 
@@ -847,7 +854,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58541
+dist/generated/types.d.ts:59606
 
 ___
 
@@ -871,7 +878,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58548
+dist/generated/types.d.ts:59613
 
 ___
 
@@ -895,7 +902,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58217
+dist/generated/types.d.ts:59268
 
 ___
 
@@ -919,7 +926,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59465
+dist/generated/types.d.ts:60539
 
 ___
 
@@ -943,7 +950,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60420
+dist/generated/types.d.ts:61501
 
 ___
 
@@ -969,7 +976,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59716
+dist/generated/types.d.ts:60790
 
 ___
 
@@ -995,7 +1002,7 @@ Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59015
+dist/generated/types.d.ts:60089
 
 ___
 
@@ -1019,7 +1026,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57535
+dist/generated/types.d.ts:58586
 
 ___
 
@@ -1043,7 +1050,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61245
+dist/generated/types.d.ts:62333
 
 ___
 
@@ -1067,7 +1074,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57754
+dist/generated/types.d.ts:58805
 
 ___
 
@@ -1091,7 +1098,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60650
+dist/generated/types.d.ts:61738
 
 ___
 
@@ -1115,7 +1122,7 @@ Promise<[Proxy](../modules/index.types.default.md#proxy)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61140
+dist/generated/types.d.ts:62228
 
 ___
 
@@ -1141,7 +1148,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59686
+dist/generated/types.d.ts:60760
 
 ___
 
@@ -1165,7 +1172,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57188
+dist/generated/types.d.ts:58239
 
 ___
 
@@ -1189,7 +1196,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59800
+dist/generated/types.d.ts:60874
 
 ___
 
@@ -1213,7 +1220,7 @@ Promise<[NotificationSound](../modules/index.types.default.md#notificationsound)
 
 #### Defined in
 
-dist/generated/types.d.ts:58625
+dist/generated/types.d.ts:59690
 
 ___
 
@@ -1237,7 +1244,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60867
+dist/generated/types.d.ts:61955
 
 ___
 
@@ -1261,7 +1268,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60010
+dist/generated/types.d.ts:61091
 
 ___
 
@@ -1285,7 +1292,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57996
+dist/generated/types.d.ts:59047
 
 ___
 
@@ -1309,7 +1316,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61063
+dist/generated/types.d.ts:62151
 
 ___
 
@@ -1333,7 +1340,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57931
+dist/generated/types.d.ts:58982
 
 ___
 
@@ -1357,7 +1364,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58010
+dist/generated/types.d.ts:59061
 
 ___
 
@@ -1381,7 +1388,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58003
+dist/generated/types.d.ts:59054
 
 ___
 
@@ -1405,7 +1412,7 @@ Promise<[SentWebAppMessage](../modules/index.types.default.md#sentwebappmessage)
 
 #### Defined in
 
-dist/generated/types.d.ts:57982
+dist/generated/types.d.ts:59033
 
 ___
 
@@ -1429,7 +1436,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61000
+dist/generated/types.d.ts:62088
 
 ___
 
@@ -1453,7 +1460,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61028
+dist/generated/types.d.ts:62116
 
 ___
 
@@ -1477,7 +1484,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61035
+dist/generated/types.d.ts:62123
 
 ___
 
@@ -1501,7 +1508,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58562
+dist/generated/types.d.ts:59627
 
 ___
 
@@ -1525,7 +1532,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59451
+dist/generated/types.d.ts:60525
 
 ___
 
@@ -1549,7 +1556,7 @@ Promise<[ChatBoostSlots](../modules/index.types.default.md#chatboostslots)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58857
+dist/generated/types.d.ts:59931
 
 ___
 
@@ -1573,7 +1580,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60003
+dist/generated/types.d.ts:61084
 
 ___
 
@@ -1597,7 +1604,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61021
+dist/generated/types.d.ts:62109
 
 ___
 
@@ -1621,7 +1628,7 @@ Promise<[CanSendStoryResult](../modules/index.types.default.md#cansendstoryresul
 
 #### Defined in
 
-dist/generated/types.d.ts:58702
+dist/generated/types.d.ts:59767
 
 ___
 
@@ -1645,7 +1652,7 @@ Promise<[CanTransferOwnershipResult](../modules/index.types.default.md#cantransf
 
 #### Defined in
 
-dist/generated/types.d.ts:58569
+dist/generated/types.d.ts:59634
 
 ___
 
@@ -1669,7 +1676,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58948
+dist/generated/types.d.ts:60022
 
 ___
 
@@ -1693,7 +1700,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56956
+dist/generated/types.d.ts:57991
 
 ___
 
@@ -1717,7 +1724,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58971
+dist/generated/types.d.ts:60045
 
 ___
 
@@ -1743,7 +1750,7 @@ Promise<[ImportedContacts](../modules/index.types.default.md#importedcontacts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59509
+dist/generated/types.d.ts:60583
 
 ___
 
@@ -1767,7 +1774,7 @@ Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticatio
 
 #### Defined in
 
-dist/generated/types.d.ts:59919
+dist/generated/types.d.ts:61000
 
 ___
 
@@ -1791,7 +1798,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59656
+dist/generated/types.d.ts:60730
 
 ___
 
@@ -1815,7 +1822,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56810
+dist/generated/types.d.ts:57845
 
 ___
 
@@ -1839,7 +1846,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56743
+dist/generated/types.d.ts:57778
 
 ___
 
@@ -1863,7 +1870,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56736
+dist/generated/types.d.ts:57771
 
 ___
 
@@ -1887,7 +1894,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56775
+dist/generated/types.d.ts:57810
 
 ___
 
@@ -1911,7 +1918,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56789
+dist/generated/types.d.ts:57824
 
 ___
 
@@ -1935,7 +1942,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59933
+dist/generated/types.d.ts:61014
 
 ___
 
@@ -1959,7 +1966,7 @@ Promise<[ChatFolderInviteLinkInfo](../modules/index.types.default.md#chatfolderi
 
 #### Defined in
 
-dist/generated/types.d.ts:58322
+dist/generated/types.d.ts:59373
 
 ___
 
@@ -1983,7 +1990,7 @@ Promise<[ChatInviteLinkInfo](../modules/index.types.default.md#chatinvitelinkinf
 
 #### Defined in
 
-dist/generated/types.d.ts:59150
+dist/generated/types.d.ts:60224
 
 ___
 
@@ -2007,7 +2014,7 @@ Promise<[CheckChatUsernameResult](../modules/index.types.default.md#checkchatuse
 
 #### Defined in
 
-dist/generated/types.d.ts:57216
+dist/generated/types.d.ts:58267
 
 ___
 
@@ -2031,7 +2038,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57230
+dist/generated/types.d.ts:58281
 
 ___
 
@@ -2055,7 +2062,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60783
+dist/generated/types.d.ts:61871
 
 ___
 
@@ -2079,7 +2086,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56891
+dist/generated/types.d.ts:57926
 
 ___
 
@@ -2103,7 +2110,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56935
+dist/generated/types.d.ts:57970
 
 ___
 
@@ -2127,7 +2134,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60825
+dist/generated/types.d.ts:61913
 
 ___
 
@@ -2151,7 +2158,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60762
+dist/generated/types.d.ts:61850
 
 ___
 
@@ -2175,7 +2182,7 @@ Promise<[PremiumGiftCodeInfo](../modules/index.types.default.md#premiumgiftcodei
 
 #### Defined in
 
-dist/generated/types.d.ts:60993
+dist/generated/types.d.ts:62081
 
 ___
 
@@ -2199,7 +2206,7 @@ Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56914
+dist/generated/types.d.ts:57949
 
 ___
 
@@ -2223,7 +2230,7 @@ Promise<[CheckStickerSetNameResult](../modules/index.types.default.md#checkstick
 
 #### Defined in
 
-dist/generated/types.d.ts:60853
+dist/generated/types.d.ts:61941
 
 ___
 
@@ -2247,7 +2254,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57831
+dist/generated/types.d.ts:58882
 
 ___
 
@@ -2271,7 +2278,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58604
+dist/generated/types.d.ts:59669
 
 ___
 
@@ -2295,7 +2302,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60692
+dist/generated/types.d.ts:61780
 
 ___
 
@@ -2319,7 +2326,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59516
+dist/generated/types.d.ts:60590
 
 ___
 
@@ -2343,7 +2350,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58927
+dist/generated/types.d.ts:60001
 
 ___
 
@@ -2367,7 +2374,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57747
+dist/generated/types.d.ts:58798
 
 ___
 
@@ -2391,7 +2398,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59700
+dist/generated/types.d.ts:60774
 
 ___
 
@@ -2415,7 +2422,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57202
+dist/generated/types.d.ts:58253
 
 ___
 
@@ -2439,7 +2446,7 @@ Promise<[Sticker](../modules/index.types.default.md#sticker)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58091
+dist/generated/types.d.ts:59142
 
 ___
 
@@ -2463,7 +2470,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57407
+dist/generated/types.d.ts:58458
 
 ___
 
@@ -2487,7 +2494,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60972
+dist/generated/types.d.ts:62060
 
 ___
 
@@ -2511,7 +2518,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56824
+dist/generated/types.d.ts:57859
 
 ___
 
@@ -2535,7 +2542,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58066
+dist/generated/types.d.ts:59117
 
 ___
 
@@ -2559,7 +2566,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60271
+dist/generated/types.d.ts:61352
 
 ___
 
@@ -2583,7 +2590,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58799
+dist/generated/types.d.ts:59864
 
 ___
 
@@ -2607,7 +2614,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57975
+dist/generated/types.d.ts:59026
 
 ___
 
@@ -2631,7 +2638,7 @@ Promise<[Session](../modules/index.types.default.md#session)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56840
+dist/generated/types.d.ts:57875
 
 ___
 
@@ -2655,7 +2662,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60108
+dist/generated/types.d.ts:61189
 
 ___
 
@@ -2679,7 +2686,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58161
+dist/generated/types.d.ts:59212
 
 ___
 
@@ -2703,7 +2710,7 @@ Promise<[CallId](../modules/index.types.default.md#callid)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59185
+dist/generated/types.d.ts:60259
 
 ___
 
@@ -2727,7 +2734,7 @@ Promise<[ChatFolderInfo](../modules/index.types.default.md#chatfolderinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58231
+dist/generated/types.d.ts:59282
 
 ___
 
@@ -2751,7 +2758,7 @@ Promise<[ChatFolderInviteLink](../modules/index.types.default.md#chatfolderinvit
 
 #### Defined in
 
-dist/generated/types.d.ts:58294
+dist/generated/types.d.ts:59345
 
 ___
 
@@ -2775,7 +2782,7 @@ Promise<[ChatInviteLink](../modules/index.types.default.md#chatinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59085
+dist/generated/types.d.ts:60159
 
 ___
 
@@ -2799,7 +2806,7 @@ Promise<[ForumTopicInfo](../modules/index.types.default.md#forumtopicinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57649
+dist/generated/types.d.ts:58700
 
 ___
 
@@ -2823,7 +2830,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60334
+dist/generated/types.d.ts:61415
 
 ___
 
@@ -2847,7 +2854,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58182
+dist/generated/types.d.ts:59233
 
 ___
 
@@ -2871,7 +2878,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58196
+dist/generated/types.d.ts:59247
 
 ___
 
@@ -2895,7 +2902,7 @@ Promise<[StickerSet](../modules/index.types.default.md#stickerset)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60860
+dist/generated/types.d.ts:61948
 
 ___
 
@@ -2919,7 +2926,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58189
+dist/generated/types.d.ts:59240
 
 ___
 
@@ -2943,7 +2950,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58154
+dist/generated/types.d.ts:59205
 
 ___
 
@@ -2967,7 +2974,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58175
+dist/generated/types.d.ts:59226
 
 ___
 
@@ -2991,7 +2998,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58168
+dist/generated/types.d.ts:59219
 
 ___
 
@@ -3015,7 +3022,7 @@ Promise<[TemporaryPasswordState](../modules/index.types.default.md#temporarypass
 
 #### Defined in
 
-dist/generated/types.d.ts:56963
+dist/generated/types.d.ts:57998
 
 ___
 
@@ -3039,7 +3046,7 @@ Promise<[GroupCallId](../modules/index.types.default.md#groupcallid)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59248
+dist/generated/types.d.ts:60322
 
 ___
 
@@ -3065,7 +3072,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60529
+dist/generated/types.d.ts:61610
 
 ___
 
@@ -3089,7 +3096,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57335
+dist/generated/types.d.ts:58386
 
 ___
 
@@ -3113,7 +3120,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59143
+dist/generated/types.d.ts:60217
 
 ___
 
@@ -3139,7 +3146,31 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57287
+dist/generated/types.d.ts:58338
+
+___
+
+### deleteChatBackground
+
+▸ **deleteChatBackground**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Deletes background in a specific chat
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteChatBackground$DirectInput`](../modules/index.types.default.md#deletechatbackground$directinput) | [deleteChatBackground$Input](../modules/index.types.default.md#deletechatbackground$input) |
+
+#### Returns
+
+`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:59459
 
 ___
 
@@ -3163,7 +3194,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58245
+dist/generated/types.d.ts:59296
 
 ___
 
@@ -3187,7 +3218,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58315
+dist/generated/types.d.ts:59366
 
 ___
 
@@ -3211,7 +3242,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57278
+dist/generated/types.d.ts:58329
 
 ___
 
@@ -3235,7 +3266,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57556
+dist/generated/types.d.ts:58607
 
 ___
 
@@ -3259,7 +3290,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57549
+dist/generated/types.d.ts:58600
 
 ___
 
@@ -3283,7 +3314,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58045
+dist/generated/types.d.ts:59096
 
 ___
 
@@ -3307,7 +3338,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59961
+dist/generated/types.d.ts:61042
 
 ___
 
@@ -3331,7 +3362,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59006
+dist/generated/types.d.ts:60080
 
 ___
 
@@ -3355,7 +3386,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57719
+dist/generated/types.d.ts:58770
 
 ___
 
@@ -3381,7 +3412,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60450
+dist/generated/types.d.ts:61531
 
 ___
 
@@ -3405,7 +3436,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57542
+dist/generated/types.d.ts:58593
 
 ___
 
@@ -3429,7 +3460,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60727
+dist/generated/types.d.ts:61815
 
 ___
 
@@ -3453,7 +3484,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59856
+dist/generated/types.d.ts:60930
 
 ___
 
@@ -3477,7 +3508,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59136
+dist/generated/types.d.ts:60210
 
 ___
 
@@ -3501,7 +3532,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60327
+dist/generated/types.d.ts:61408
 
 ___
 
@@ -3525,7 +3556,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60320
+dist/generated/types.d.ts:61401
 
 ___
 
@@ -3549,7 +3580,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60895
+dist/generated/types.d.ts:61983
 
 ___
 
@@ -3573,7 +3604,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58737
+dist/generated/types.d.ts:59802
 
 ___
 
@@ -3599,7 +3630,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56833
+dist/generated/types.d.ts:57868
 
 ___
 
@@ -3623,7 +3654,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60173
+dist/generated/types.d.ts:61254
 
 ___
 
@@ -3647,7 +3678,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61161
+dist/generated/types.d.ts:62249
 
 ___
 
@@ -3671,7 +3702,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59206
+dist/generated/types.d.ts:60280
 
 ___
 
@@ -3695,7 +3726,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60150
+dist/generated/types.d.ts:61231
 
 ___
 
@@ -3719,7 +3750,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60143
+dist/generated/types.d.ts:61224
 
 ___
 
@@ -3743,7 +3774,7 @@ Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58934
+dist/generated/types.d.ts:60008
 
 ___
 
@@ -3767,7 +3798,7 @@ Promise<[ChatFolderInfo](../modules/index.types.default.md#chatfolderinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58238
+dist/generated/types.d.ts:59289
 
 ___
 
@@ -3791,7 +3822,7 @@ Promise<[ChatFolderInviteLink](../modules/index.types.default.md#chatfolderinvit
 
 #### Defined in
 
-dist/generated/types.d.ts:58308
+dist/generated/types.d.ts:59359
 
 ___
 
@@ -3815,7 +3846,7 @@ Promise<[ChatInviteLink](../modules/index.types.default.md#chatinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59092
+dist/generated/types.d.ts:60166
 
 ___
 
@@ -3839,7 +3870,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60434
+dist/generated/types.d.ts:61515
 
 ___
 
@@ -3863,7 +3894,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57656
+dist/generated/types.d.ts:58707
 
 ___
 
@@ -3887,7 +3918,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57621
+dist/generated/types.d.ts:58672
 
 ___
 
@@ -3911,7 +3942,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57607
+dist/generated/types.d.ts:58658
 
 ___
 
@@ -3935,7 +3966,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57614
+dist/generated/types.d.ts:58665
 
 ___
 
@@ -3959,7 +3990,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57628
+dist/generated/types.d.ts:58679
 
 ___
 
@@ -3983,7 +4014,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57600
+dist/generated/types.d.ts:58651
 
 ___
 
@@ -4007,7 +4038,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57586
+dist/generated/types.d.ts:58637
 
 ___
 
@@ -4031,7 +4062,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57570
+dist/generated/types.d.ts:58621
 
 ___
 
@@ -4057,7 +4088,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57579
+dist/generated/types.d.ts:58630
 
 ___
 
@@ -4081,7 +4112,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57593
+dist/generated/types.d.ts:58644
 
 ___
 
@@ -4105,7 +4136,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57635
+dist/generated/types.d.ts:58686
 
 ___
 
@@ -4129,7 +4160,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57563
+dist/generated/types.d.ts:58614
 
 ___
 
@@ -4153,7 +4184,7 @@ Promise<[Proxy](../modules/index.types.default.md#proxy)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61147
+dist/generated/types.d.ts:62235
 
 ___
 
@@ -4177,7 +4208,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58716
+dist/generated/types.d.ts:59781
 
 ___
 
@@ -4201,7 +4232,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61154
+dist/generated/types.d.ts:62242
 
 ___
 
@@ -4225,7 +4256,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59423
+dist/generated/types.d.ts:60497
 
 ___
 
@@ -4249,7 +4280,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59360
+dist/generated/types.d.ts:60434
 
 ___
 
@@ -4273,7 +4304,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59311
+dist/generated/types.d.ts:60385
 
 ___
 
@@ -4297,7 +4328,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58992
+dist/generated/types.d.ts:60066
 
 ___
 
@@ -4321,7 +4352,7 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57519
+dist/generated/types.d.ts:58570
 
 ___
 
@@ -4345,7 +4376,7 @@ Promise<[AccountTtl](../modules/index.types.default.md#accountttl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60520
+dist/generated/types.d.ts:61601
 
 ___
 
@@ -4369,7 +4400,7 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57349
+dist/generated/types.d.ts:58400
 
 ___
 
@@ -4393,7 +4424,7 @@ Promise<[Sessions](../modules/index.types.default.md#sessions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60087
+dist/generated/types.d.ts:61168
 
 ___
 
@@ -4417,7 +4448,7 @@ Promise<[PassportElements](../modules/index.types.default.md#passportelements)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60713
+dist/generated/types.d.ts:61801
 
 ___
 
@@ -4441,7 +4472,7 @@ Promise<[Emojis](../modules/index.types.default.md#emojis)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59579
+dist/generated/types.d.ts:60653
 
 ___
 
@@ -4465,7 +4496,7 @@ Promise<[AnimatedEmoji](../modules/index.types.default.md#animatedemoji)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59751
+dist/generated/types.d.ts:60825
 
 ___
 
@@ -4489,7 +4520,7 @@ Promise<[JsonValue](../modules/index.types.default.md#jsonvalue)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61112
+dist/generated/types.d.ts:62200
 
 ___
 
@@ -4513,7 +4544,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61133
+dist/generated/types.d.ts:62221
 
 ___
 
@@ -4537,7 +4568,7 @@ Promise<[ArchiveChatListSettings](../modules/index.types.default.md#archivechatl
 
 #### Defined in
 
-dist/generated/types.d.ts:58350
+dist/generated/types.d.ts:59401
 
 ___
 
@@ -4561,7 +4592,7 @@ Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59607
+dist/generated/types.d.ts:60681
 
 ___
 
@@ -4585,7 +4616,7 @@ Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59621
+dist/generated/types.d.ts:60695
 
 ___
 
@@ -4609,7 +4640,7 @@ Promise<[AttachmentMenuBot](../modules/index.types.default.md#attachmentmenubot)
 
 #### Defined in
 
-dist/generated/types.d.ts:58892
+dist/generated/types.d.ts:59966
 
 ___
 
@@ -4633,7 +4664,7 @@ Promise<[AuthorizationState](../modules/index.types.default.md#authorizationstat
 
 #### Defined in
 
-dist/generated/types.d.ts:56697
+dist/generated/types.d.ts:57732
 
 ___
 
@@ -4657,7 +4688,7 @@ Promise<[AutoDownloadSettingsPresets](../modules/index.types.default.md#autodown
 
 #### Defined in
 
-dist/generated/types.d.ts:60664
+dist/generated/types.d.ts:61752
 
 ___
 
@@ -4681,7 +4712,7 @@ Promise<[AutosaveSettings](../modules/index.types.default.md#autosavesettings)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60678
+dist/generated/types.d.ts:61766
 
 ___
 
@@ -4705,7 +4736,7 @@ Promise<[ChatBoostSlots](../modules/index.types.default.md#chatboostslots)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58843
+dist/generated/types.d.ts:59917
 
 ___
 
@@ -4729,7 +4760,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60355
+dist/generated/types.d.ts:61436
 
 ___
 
@@ -4753,7 +4784,7 @@ Promise<[Backgrounds](../modules/index.types.default.md#backgrounds)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60348
+dist/generated/types.d.ts:61429
 
 ___
 
@@ -4777,7 +4808,7 @@ Promise<[BankCardInfo](../modules/index.types.default.md#bankcardinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60699
+dist/generated/types.d.ts:61787
 
 ___
 
@@ -4801,7 +4832,7 @@ Promise<[BasicGroup](../modules/index.types.default.md#basicgroup)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56998
+dist/generated/types.d.ts:58033
 
 ___
 
@@ -4825,7 +4856,7 @@ Promise<[BasicGroupFullInfo](../modules/index.types.default.md#basicgroupfullinf
 
 #### Defined in
 
-dist/generated/types.d.ts:57005
+dist/generated/types.d.ts:58040
 
 ___
 
@@ -4849,7 +4880,7 @@ Promise<[MessageSenders](../modules/index.types.default.md#messagesenders)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59458
+dist/generated/types.d.ts:60532
 
 ___
 
@@ -4873,7 +4904,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60066
+dist/generated/types.d.ts:61147
 
 ___
 
@@ -4897,7 +4928,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60080
+dist/generated/types.d.ts:61161
 
 ___
 
@@ -4921,7 +4952,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60031
+dist/generated/types.d.ts:61112
 
 ___
 
@@ -4945,7 +4976,7 @@ Promise<[CallbackQueryAnswer](../modules/index.types.default.md#callbackqueryans
 
 #### Defined in
 
-dist/generated/types.d.ts:57989
+dist/generated/types.d.ts:59040
 
 ___
 
@@ -4969,7 +5000,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57070
+dist/generated/types.d.ts:58107
 
 ___
 
@@ -4993,7 +5024,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57033
+dist/generated/types.d.ts:58068
 
 ___
 
@@ -5017,7 +5048,7 @@ Promise<[ChatActiveStories](../modules/index.types.default.md#chatactivestories)
 
 #### Defined in
 
-dist/generated/types.d.ts:58767
+dist/generated/types.d.ts:59832
 
 ___
 
@@ -5041,7 +5072,7 @@ Promise<[ChatAdministrators](../modules/index.types.default.md#chatadministrator
 
 #### Defined in
 
-dist/generated/types.d.ts:58597
+dist/generated/types.d.ts:59662
 
 ___
 
@@ -5067,7 +5098,7 @@ Promise<[Stories](../modules/index.types.default.md#stories)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58785
+dist/generated/types.d.ts:59850
 
 ___
 
@@ -5091,7 +5122,7 @@ Promise<[ChatMessageSenders](../modules/index.types.default.md#chatmessagesender
 
 #### Defined in
 
-dist/generated/types.d.ts:57477
+dist/generated/types.d.ts:58528
 
 ___
 
@@ -5115,7 +5146,7 @@ Promise<[ChatBoostLink](../modules/index.types.default.md#chatboostlink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58864
+dist/generated/types.d.ts:59938
 
 ___
 
@@ -5139,7 +5170,7 @@ Promise<[ChatBoostLinkInfo](../modules/index.types.default.md#chatboostlinkinfo)
 
 #### Defined in
 
-dist/generated/types.d.ts:58871
+dist/generated/types.d.ts:59945
 
 ___
 
@@ -5163,7 +5194,7 @@ Promise<[ChatBoostStatus](../modules/index.types.default.md#chatbooststatus)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58850
+dist/generated/types.d.ts:59924
 
 ___
 
@@ -5187,7 +5218,7 @@ Promise<[FoundChatBoosts](../modules/index.types.default.md#foundchatboosts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58878
+dist/generated/types.d.ts:59952
 
 ___
 
@@ -5211,7 +5242,7 @@ Promise<[ChatEvents](../modules/index.types.default.md#chatevents)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60278
+dist/generated/types.d.ts:61359
 
 ___
 
@@ -5235,7 +5266,7 @@ Promise<[ChatFolder](../modules/index.types.default.md#chatfolder)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58224
+dist/generated/types.d.ts:59275
 
 ___
 
@@ -5259,7 +5290,7 @@ Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58259
+dist/generated/types.d.ts:59310
 
 ___
 
@@ -5283,7 +5314,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58252
+dist/generated/types.d.ts:59303
 
 ___
 
@@ -5307,7 +5338,7 @@ Promise<[ChatFolderIcon](../modules/index.types.default.md#chatfoldericon)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58280
+dist/generated/types.d.ts:59331
 
 ___
 
@@ -5331,7 +5362,7 @@ Promise<[ChatFolderInviteLinks](../modules/index.types.default.md#chatfolderinvi
 
 #### Defined in
 
-dist/generated/types.d.ts:58301
+dist/generated/types.d.ts:59352
 
 ___
 
@@ -5355,7 +5386,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58336
+dist/generated/types.d.ts:59387
 
 ___
 
@@ -5381,7 +5412,7 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57262
+dist/generated/types.d.ts:58313
 
 ___
 
@@ -5405,7 +5436,7 @@ Promise<[ChatInviteLink](../modules/index.types.default.md#chatinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59099
+dist/generated/types.d.ts:60173
 
 ___
 
@@ -5429,7 +5460,7 @@ Promise<[ChatInviteLinkCounts](../modules/index.types.default.md#chatinvitelinkc
 
 #### Defined in
 
-dist/generated/types.d.ts:59106
+dist/generated/types.d.ts:60180
 
 ___
 
@@ -5453,7 +5484,7 @@ Promise<[ChatInviteLinkMembers](../modules/index.types.default.md#chatinvitelink
 
 #### Defined in
 
-dist/generated/types.d.ts:59120
+dist/generated/types.d.ts:60194
 
 ___
 
@@ -5477,7 +5508,7 @@ Promise<[ChatInviteLinks](../modules/index.types.default.md#chatinvitelinks)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59113
+dist/generated/types.d.ts:60187
 
 ___
 
@@ -5501,7 +5532,7 @@ Promise<[ChatJoinRequests](../modules/index.types.default.md#chatjoinrequests)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59164
+dist/generated/types.d.ts:60238
 
 ___
 
@@ -5525,7 +5556,7 @@ Promise<[ChatLists](../modules/index.types.default.md#chatlists)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58210
+dist/generated/types.d.ts:59261
 
 ___
 
@@ -5549,7 +5580,7 @@ Promise<[ChatMember](../modules/index.types.default.md#chatmember)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58583
+dist/generated/types.d.ts:59648
 
 ___
 
@@ -5573,7 +5604,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57356
+dist/generated/types.d.ts:58407
 
 ___
 
@@ -5597,7 +5628,7 @@ Promise<[MessageCalendar](../modules/index.types.default.md#messagecalendar)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57372
+dist/generated/types.d.ts:58423
 
 ___
 
@@ -5621,7 +5652,7 @@ Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57379
+dist/generated/types.d.ts:58430
 
 ___
 
@@ -5645,7 +5676,7 @@ Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57386
+dist/generated/types.d.ts:58437
 
 ___
 
@@ -5669,7 +5700,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58639
+dist/generated/types.d.ts:59704
 
 ___
 
@@ -5693,7 +5724,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57063
+dist/generated/types.d.ts:58100
 
 ___
 
@@ -5719,7 +5750,7 @@ Promise<[Stories](../modules/index.types.default.md#stories)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58776
+dist/generated/types.d.ts:59841
 
 ___
 
@@ -5743,7 +5774,55 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57393
+dist/generated/types.d.ts:58444
+
+___
+
+### getChatSimilarChatCount
+
+▸ **getChatSimilarChatCount**(`parameters`): `Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+
+Returns approximate number of chats similar to the given chat
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getChatSimilarChatCount$DirectInput`](../modules/index.types.default.md#getchatsimilarchatcount$directinput) | [getChatSimilarChatCount$Input](../modules/index.types.default.md#getchatsimilarchatcount$input) |
+
+#### Returns
+
+`Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+
+Promise<[Count](../modules/index.types.default.md#count)>
+
+#### Defined in
+
+dist/generated/types.d.ts:58211
+
+___
+
+### getChatSimilarChats
+
+▸ **getChatSimilarChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+
+Returns a list of chats similar to the given chat
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getChatSimilarChats$DirectInput`](../modules/index.types.default.md#getchatsimilarchats$directinput) | [getChatSimilarChats$Input](../modules/index.types.default.md#getchatsimilarchats$input) |
+
+#### Returns
+
+`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+
+Promise<[Chats](../modules/index.types.default.md#chats)>
+
+#### Defined in
+
+dist/generated/types.d.ts:58204
 
 ___
 
@@ -5769,7 +5848,7 @@ Promise<[MessagePositions](../modules/index.types.default.md#messagepositions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57365
+dist/generated/types.d.ts:58416
 
 ___
 
@@ -5793,7 +5872,7 @@ Promise<[SponsoredMessages](../modules/index.types.default.md#sponsoredmessages)
 
 #### Defined in
 
-dist/generated/types.d.ts:57400
+dist/generated/types.d.ts:58451
 
 ___
 
@@ -5817,7 +5896,7 @@ Promise<[ChatStatistics](../modules/index.types.default.md#chatstatistics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60578
+dist/generated/types.d.ts:61659
 
 ___
 
@@ -5841,7 +5920,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57121
+dist/generated/types.d.ts:58158
 
 ___
 
@@ -5865,7 +5944,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58287
+dist/generated/types.d.ts:59338
 
 ___
 
@@ -5889,7 +5968,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58695
+dist/generated/types.d.ts:59760
 
 ___
 
@@ -5913,7 +5992,7 @@ Promise<[Users](../modules/index.types.default.md#users)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59530
+dist/generated/types.d.ts:60604
 
 ___
 
@@ -5937,7 +6016,7 @@ Promise<[BotCommands](../modules/index.types.default.md#botcommands)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59968
+dist/generated/types.d.ts:61049
 
 ___
 
@@ -5961,7 +6040,7 @@ Promise<[ConnectedWebsites](../modules/index.types.default.md#connectedwebsites)
 
 #### Defined in
 
-dist/generated/types.d.ts:60136
+dist/generated/types.d.ts:61217
 
 ___
 
@@ -5985,7 +6064,7 @@ Promise<[Users](../modules/index.types.default.md#users)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59479
+dist/generated/types.d.ts:60553
 
 ___
 
@@ -6009,7 +6088,7 @@ Promise<[Countries](../modules/index.types.default.md#countries)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61077
+dist/generated/types.d.ts:62165
 
 ___
 
@@ -6033,7 +6112,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61084
+dist/generated/types.d.ts:62172
 
 ___
 
@@ -6057,7 +6136,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57223
+dist/generated/types.d.ts:58274
 
 ___
 
@@ -6081,7 +6160,7 @@ Promise<[Updates](../modules/index.types.default.md#updates)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56847
+dist/generated/types.d.ts:57882
 
 ___
 
@@ -6105,7 +6184,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57733
+dist/generated/types.d.ts:58784
 
 ___
 
@@ -6129,7 +6208,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59765
+dist/generated/types.d.ts:60839
 
 ___
 
@@ -6153,7 +6232,7 @@ Promise<[DatabaseStatistics](../modules/index.types.default.md#databasestatistic
 
 #### Defined in
 
-dist/generated/types.d.ts:60620
+dist/generated/types.d.ts:61708
 
 ___
 
@@ -6177,7 +6256,7 @@ Promise<[DeepLinkInfo](../modules/index.types.default.md#deeplinkinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61105
+dist/generated/types.d.ts:62193
 
 ___
 
@@ -6201,7 +6280,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59786
+dist/generated/types.d.ts:60860
 
 ___
 
@@ -6225,7 +6304,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59772
+dist/generated/types.d.ts:60846
 
 ___
 
@@ -6249,7 +6328,7 @@ Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58920
+dist/generated/types.d.ts:59994
 
 ___
 
@@ -6273,7 +6352,7 @@ Promise<[MessageAutoDeleteTime](../modules/index.types.default.md#messageautodel
 
 #### Defined in
 
-dist/generated/types.d.ts:60543
+dist/generated/types.d.ts:61624
 
 ___
 
@@ -6297,7 +6376,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59779
+dist/generated/types.d.ts:60853
 
 ___
 
@@ -6321,7 +6400,7 @@ Promise<[EmojiCategories](../modules/index.types.default.md#emojicategories)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59744
+dist/generated/types.d.ts:60818
 
 ___
 
@@ -6345,7 +6424,7 @@ Promise<[EmojiReaction](../modules/index.types.default.md#emojireaction)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57726
+dist/generated/types.d.ts:58777
 
 ___
 
@@ -6369,7 +6448,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59758
+dist/generated/types.d.ts:60832
 
 ___
 
@@ -6393,7 +6472,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58119
+dist/generated/types.d.ts:59170
 
 ___
 
@@ -6417,7 +6496,7 @@ Promise<[LoginUrlInfo](../modules/index.types.default.md#loginurlinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58112
+dist/generated/types.d.ts:59163
 
 ___
 
@@ -6441,7 +6520,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59707
+dist/generated/types.d.ts:60781
 
 ___
 
@@ -6465,7 +6544,7 @@ Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57098
+dist/generated/types.d.ts:58135
 
 ___
 
@@ -6489,7 +6568,7 @@ Promise<[FileDownloadedPrefixSize](../modules/index.types.default.md#filedownloa
 
 #### Defined in
 
-dist/generated/types.d.ts:58941
+dist/generated/types.d.ts:60015
 
 ___
 
@@ -6513,7 +6592,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57824
+dist/generated/types.d.ts:58875
 
 ___
 
@@ -6537,7 +6616,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57817
+dist/generated/types.d.ts:58868
 
 ___
 
@@ -6561,7 +6640,7 @@ Promise<[ForumTopic](../modules/index.types.default.md#forumtopic)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57663
+dist/generated/types.d.ts:58714
 
 ___
 
@@ -6585,7 +6664,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57642
+dist/generated/types.d.ts:58693
 
 ___
 
@@ -6609,7 +6688,7 @@ Promise<[MessageLink](../modules/index.types.default.md#messagelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57670
+dist/generated/types.d.ts:58721
 
 ___
 
@@ -6633,7 +6712,7 @@ Promise<[ForumTopics](../modules/index.types.default.md#forumtopics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57677
+dist/generated/types.d.ts:58728
 
 ___
 
@@ -6657,7 +6736,7 @@ Promise<[GameHighScores](../modules/index.types.default.md#gamehighscores)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58031
+dist/generated/types.d.ts:59082
 
 ___
 
@@ -6681,7 +6760,7 @@ Promise<[GroupCall](../modules/index.types.default.md#groupcall)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59269
+dist/generated/types.d.ts:60343
 
 ___
 
@@ -6705,7 +6784,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59339
+dist/generated/types.d.ts:60413
 
 ___
 
@@ -6729,7 +6808,7 @@ Promise<[FilePart](../modules/index.types.default.md#filepart)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59437
+dist/generated/types.d.ts:60511
 
 ___
 
@@ -6753,7 +6832,7 @@ Promise<[GroupCallStreams](../modules/index.types.default.md#groupcallstreams)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59430
+dist/generated/types.d.ts:60504
 
 ___
 
@@ -6777,7 +6856,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57253
+dist/generated/types.d.ts:58304
 
 ___
 
@@ -6801,7 +6880,7 @@ Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59500
+dist/generated/types.d.ts:60574
 
 ___
 
@@ -6825,7 +6904,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57246
+dist/generated/types.d.ts:58297
 
 ___
 
@@ -6849,7 +6928,7 @@ Promise<[GameHighScores](../modules/index.types.default.md#gamehighscores)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58038
+dist/generated/types.d.ts:59089
 
 ___
 
@@ -6873,7 +6952,7 @@ Promise<[InlineQueryResults](../modules/index.types.default.md#inlinequeryresult
 
 #### Defined in
 
-dist/generated/types.d.ts:57924
+dist/generated/types.d.ts:58975
 
 ___
 
@@ -6897,7 +6976,7 @@ Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59600
+dist/generated/types.d.ts:60674
 
 ___
 
@@ -6921,7 +7000,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58098
+dist/generated/types.d.ts:59149
 
 ___
 
@@ -6945,7 +7024,7 @@ Promise<[InternalLinkType](../modules/index.types.default.md#internallinktype)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58105
+dist/generated/types.d.ts:59156
 
 ___
 
@@ -6969,7 +7048,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57852
+dist/generated/types.d.ts:58903
 
 ___
 
@@ -6993,7 +7072,7 @@ Promise<[JsonValue](../modules/index.types.default.md#jsonvalue)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57845
+dist/generated/types.d.ts:58896
 
 ___
 
@@ -7017,7 +7096,7 @@ Promise<[LanguagePackInfo](../modules/index.types.default.md#languagepackinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60397
+dist/generated/types.d.ts:61478
 
 ___
 
@@ -7041,7 +7120,7 @@ Promise<[LanguagePackStringValue](../modules/index.types.default.md#languagepack
 
 #### Defined in
 
-dist/generated/types.d.ts:57838
+dist/generated/types.d.ts:58889
 
 ___
 
@@ -7065,7 +7144,7 @@ Promise<[LanguagePackStrings](../modules/index.types.default.md#languagepackstri
 
 #### Defined in
 
-dist/generated/types.d.ts:60404
+dist/generated/types.d.ts:61485
 
 ___
 
@@ -7089,7 +7168,7 @@ Promise<[LocalizationTargetInfo](../modules/index.types.default.md#localizationt
 
 #### Defined in
 
-dist/generated/types.d.ts:60390
+dist/generated/types.d.ts:61471
 
 ___
 
@@ -7113,7 +7192,7 @@ Promise<[LogStream](../modules/index.types.default.md#logstream)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61203
+dist/generated/types.d.ts:62291
 
 ___
 
@@ -7137,7 +7216,7 @@ Promise<[LogVerbosityLevel](../modules/index.types.default.md#logverbositylevel)
 
 #### Defined in
 
-dist/generated/types.d.ts:61238
+dist/generated/types.d.ts:62326
 
 ___
 
@@ -7161,7 +7240,7 @@ Promise<[LogTags](../modules/index.types.default.md#logtags)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61224
+dist/generated/types.d.ts:62312
 
 ___
 
@@ -7185,7 +7264,7 @@ Promise<[LogVerbosityLevel](../modules/index.types.default.md#logverbositylevel)
 
 #### Defined in
 
-dist/generated/types.d.ts:61217
+dist/generated/types.d.ts:62305
 
 ___
 
@@ -7211,7 +7290,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57903
+dist/generated/types.d.ts:58954
 
 ___
 
@@ -7235,7 +7314,7 @@ Promise<[LoginUrlInfo](../modules/index.types.default.md#loginurlinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57894
+dist/generated/types.d.ts:58945
 
 ___
 
@@ -7259,7 +7338,7 @@ Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60937
+dist/generated/types.d.ts:62025
 
 ___
 
@@ -7283,7 +7362,7 @@ Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57810
+dist/generated/types.d.ts:58861
 
 ___
 
@@ -7307,7 +7386,7 @@ Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56977
+dist/generated/types.d.ts:58012
 
 ___
 
@@ -7331,7 +7410,7 @@ Promise<[BotMenuButton](../modules/index.types.default.md#botmenubutton)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59982
+dist/generated/types.d.ts:61063
 
 ___
 
@@ -7355,7 +7434,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57040
+dist/generated/types.d.ts:58075
 
 ___
 
@@ -7379,7 +7458,7 @@ Promise<[AddedReactions](../modules/index.types.default.md#addedreactions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57768
+dist/generated/types.d.ts:58819
 
 ___
 
@@ -7403,7 +7482,7 @@ Promise<[AvailableReactions](../modules/index.types.default.md#availablereaction
 
 #### Defined in
 
-dist/generated/types.d.ts:57740
+dist/generated/types.d.ts:58791
 
 ___
 
@@ -7427,7 +7506,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57435
+dist/generated/types.d.ts:58486
 
 ___
 
@@ -7451,7 +7530,7 @@ Promise<[MessageFileType](../modules/index.types.default.md#messagefiletype)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59057
+dist/generated/types.d.ts:60131
 
 ___
 
@@ -7475,7 +7554,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59064
+dist/generated/types.d.ts:60138
 
 ___
 
@@ -7499,7 +7578,7 @@ Promise<[MessageLink](../modules/index.types.default.md#messagelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57428
+dist/generated/types.d.ts:58479
 
 ___
 
@@ -7523,7 +7602,7 @@ Promise<[MessageLinkInfo](../modules/index.types.default.md#messagelinkinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57442
+dist/generated/types.d.ts:58493
 
 ___
 
@@ -7547,7 +7626,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57047
+dist/generated/types.d.ts:58082
 
 ___
 
@@ -7571,7 +7650,7 @@ Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60592
+dist/generated/types.d.ts:61673
 
 ___
 
@@ -7595,7 +7674,7 @@ Promise<[MessageStatistics](../modules/index.types.default.md#messagestatistics)
 
 #### Defined in
 
-dist/generated/types.d.ts:60585
+dist/generated/types.d.ts:61666
 
 ___
 
@@ -7619,7 +7698,7 @@ Promise<[MessageThreadInfo](../modules/index.types.default.md#messagethreadinfo)
 
 #### Defined in
 
-dist/generated/types.d.ts:57084
+dist/generated/types.d.ts:58121
 
 ___
 
@@ -7645,7 +7724,7 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57271
+dist/generated/types.d.ts:58322
 
 ___
 
@@ -7669,7 +7748,7 @@ Promise<[MessageViewers](../modules/index.types.default.md#messageviewers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57091
+dist/generated/types.d.ts:58128
 
 ___
 
@@ -7693,7 +7772,7 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57077
+dist/generated/types.d.ts:58114
 
 ___
 
@@ -7717,7 +7796,7 @@ Promise<[NetworkStatistics](../modules/index.types.default.md#networkstatistics)
 
 #### Defined in
 
-dist/generated/types.d.ts:60643
+dist/generated/types.d.ts:61731
 
 ___
 
@@ -7741,7 +7820,7 @@ Promise<[OptionValue](../modules/index.types.default.md#optionvalue)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60499
+dist/generated/types.d.ts:61580
 
 ___
 
@@ -7765,7 +7844,7 @@ Promise<[PassportAuthorizationForm](../modules/index.types.default.md#passportau
 
 #### Defined in
 
-dist/generated/types.d.ts:60790
+dist/generated/types.d.ts:61878
 
 ___
 
@@ -7789,7 +7868,7 @@ Promise<[PassportElementsWithErrors](../modules/index.types.default.md#passporte
 
 #### Defined in
 
-dist/generated/types.d.ts:60797
+dist/generated/types.d.ts:61885
 
 ___
 
@@ -7813,7 +7892,7 @@ Promise<[PassportElement](../modules/index.types.default.md#passportelement)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60706
+dist/generated/types.d.ts:61794
 
 ___
 
@@ -7837,7 +7916,7 @@ Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56861
+dist/generated/types.d.ts:57896
 
 ___
 
@@ -7861,7 +7940,7 @@ Promise<[PaymentForm](../modules/index.types.default.md#paymentform)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60285
+dist/generated/types.d.ts:61366
 
 ___
 
@@ -7885,7 +7964,7 @@ Promise<[PaymentReceipt](../modules/index.types.default.md#paymentreceipt)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60306
+dist/generated/types.d.ts:61387
 
 ___
 
@@ -7909,7 +7988,7 @@ Promise<[PhoneNumberInfo](../modules/index.types.default.md#phonenumberinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61091
+dist/generated/types.d.ts:62179
 
 ___
 
@@ -7933,7 +8012,7 @@ Promise<[PhoneNumberInfo](../modules/index.types.default.md#phonenumberinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61098
+dist/generated/types.d.ts:62186
 
 ___
 
@@ -7957,7 +8036,7 @@ Promise<[MessageSenders](../modules/index.types.default.md#messagesenders)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57873
+dist/generated/types.d.ts:58924
 
 ___
 
@@ -7981,7 +8060,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60741
+dist/generated/types.d.ts:61829
 
 ___
 
@@ -8005,7 +8084,7 @@ Promise<[PremiumFeatures](../modules/index.types.default.md#premiumfeatures)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60951
+dist/generated/types.d.ts:62039
 
 ___
 
@@ -8029,7 +8108,7 @@ Promise<[PremiumGiftCodePaymentOptions](../modules/index.types.default.md#premiu
 
 #### Defined in
 
-dist/generated/types.d.ts:60986
+dist/generated/types.d.ts:62074
 
 ___
 
@@ -8053,7 +8132,7 @@ Promise<[PremiumGiveawayInfo](../modules/index.types.default.md#premiumgiveawayi
 
 #### Defined in
 
-dist/generated/types.d.ts:61014
+dist/generated/types.d.ts:62102
 
 ___
 
@@ -8077,7 +8156,7 @@ Promise<[PremiumLimit](../modules/index.types.default.md#premiumlimit)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60944
+dist/generated/types.d.ts:62032
 
 ___
 
@@ -8101,7 +8180,7 @@ Promise<[PremiumState](../modules/index.types.default.md#premiumstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60979
+dist/generated/types.d.ts:62067
 
 ___
 
@@ -8125,7 +8204,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60958
+dist/generated/types.d.ts:62046
 
 ___
 
@@ -8149,7 +8228,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59593
+dist/generated/types.d.ts:60667
 
 ___
 
@@ -8173,7 +8252,7 @@ Promise<[Proxies](../modules/index.types.default.md#proxies)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61175
+dist/generated/types.d.ts:62263
 
 ___
 
@@ -8197,7 +8276,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61182
+dist/generated/types.d.ts:62270
 
 ___
 
@@ -8221,7 +8300,7 @@ Promise<[PushReceiverId](../modules/index.types.default.md#pushreceiverid)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60471
+dist/generated/types.d.ts:61552
 
 ___
 
@@ -8245,7 +8324,7 @@ Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58913
+dist/generated/types.d.ts:59987
 
 ___
 
@@ -8269,7 +8348,7 @@ Promise<[Users](../modules/index.types.default.md#users)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59814
+dist/generated/types.d.ts:60888
 
 ___
 
@@ -8293,7 +8372,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59677
+dist/generated/types.d.ts:60751
 
 ___
 
@@ -8317,7 +8396,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57209
+dist/generated/types.d.ts:58260
 
 ___
 
@@ -8341,7 +8420,7 @@ Promise<[TMeUrls](../modules/index.types.default.md#tmeurls)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60478
+dist/generated/types.d.ts:61559
 
 ___
 
@@ -8365,7 +8444,7 @@ Promise<[RecommendedChatFolders](../modules/index.types.default.md#recommendedch
 
 #### Defined in
 
-dist/generated/types.d.ts:58273
+dist/generated/types.d.ts:59324
 
 ___
 
@@ -8389,7 +8468,7 @@ Promise<[RecoveryEmailAddress](../modules/index.types.default.md#recoveryemailad
 
 #### Defined in
 
-dist/generated/types.d.ts:56898
+dist/generated/types.d.ts:57933
 
 ___
 
@@ -8415,7 +8494,7 @@ Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57107
+dist/generated/types.d.ts:58144
 
 ___
 
@@ -8423,9 +8502,11 @@ ___
 
 ▸ **getRepliedMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
 
-Returns information about a message that is replied by a given message. Also, returns the pinned message, the game message, the invoice message, and the topic creation message for messages
+Returns information about a non-bundled message that is replied by a given message. Also, returns the pinned message, the game message, the invoice message,
 
-- of the types messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground and topic messages without replied message respectively
+- the message with a previously set same background, the giveaway message, and the topic creation message for messages of the types
+
+- messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messagePremiumGiveawayCompleted and topic messages without non-bundled replied message respectively
 
 #### Parameters
 
@@ -8441,7 +8522,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57056
+dist/generated/types.d.ts:58093
 
 ___
 
@@ -8465,7 +8546,7 @@ Promise<[Animations](../modules/index.types.default.md#animations)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59793
+dist/generated/types.d.ts:60867
 
 ___
 
@@ -8489,7 +8570,7 @@ Promise<[NotificationSounds](../modules/index.types.default.md#notificationsound
 
 #### Defined in
 
-dist/generated/types.d.ts:58611
+dist/generated/types.d.ts:59676
 
 ___
 
@@ -8513,7 +8594,7 @@ Promise<[NotificationSounds](../modules/index.types.default.md#notificationsound
 
 #### Defined in
 
-dist/generated/types.d.ts:58618
+dist/generated/types.d.ts:59683
 
 ___
 
@@ -8537,7 +8618,7 @@ Promise<[OrderInfo](../modules/index.types.default.md#orderinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60313
+dist/generated/types.d.ts:61394
 
 ___
 
@@ -8561,7 +8642,7 @@ Promise<[ScopeNotificationSettings](../modules/index.types.default.md#scopenotif
 
 #### Defined in
 
-dist/generated/types.d.ts:58646
+dist/generated/types.d.ts:59711
 
 ___
 
@@ -8585,7 +8666,7 @@ Promise<[SecretChat](../modules/index.types.default.md#secretchat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57026
+dist/generated/types.d.ts:58061
 
 ___
 
@@ -8609,7 +8690,7 @@ Promise<[StatisticalGraph](../modules/index.types.default.md#statisticalgraph)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60599
+dist/generated/types.d.ts:61687
 
 ___
 
@@ -8633,7 +8714,7 @@ Promise<[Emojis](../modules/index.types.default.md#emojis)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59730
+dist/generated/types.d.ts:60804
 
 ___
 
@@ -8657,7 +8738,7 @@ Promise<[StickerSet](../modules/index.types.default.md#stickerset)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59628
+dist/generated/types.d.ts:60702
 
 ___
 
@@ -8681,7 +8762,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59572
+dist/generated/types.d.ts:60646
 
 ___
 
@@ -8705,7 +8786,7 @@ Promise<[StorageStatistics](../modules/index.types.default.md#storagestatistics)
 
 #### Defined in
 
-dist/generated/types.d.ts:60606
+dist/generated/types.d.ts:61694
 
 ___
 
@@ -8729,7 +8810,7 @@ Promise<[StorageStatisticsFast](../modules/index.types.default.md#storagestatist
 
 #### Defined in
 
-dist/generated/types.d.ts:60613
+dist/generated/types.d.ts:61701
 
 ___
 
@@ -8753,7 +8834,7 @@ Promise<[Story](../modules/index.types.default.md#story)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58688
+dist/generated/types.d.ts:59753
 
 ___
 
@@ -8777,7 +8858,7 @@ Promise<[AvailableReactions](../modules/index.types.default.md#availablereaction
 
 #### Defined in
 
-dist/generated/types.d.ts:58806
+dist/generated/types.d.ts:59871
 
 ___
 
@@ -8801,7 +8882,57 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58744
+dist/generated/types.d.ts:59809
+
+___
+
+### getStoryPublicForwards
+
+▸ **getStoryPublicForwards**(`parameters`): `Promise`<[`storyPublicForwards`](../modules/index.types.default.md#storypublicforwards-1)\>
+
+Returns forwards of a story as a message to public chats and reposts by public channels. Can be used only if the story is posted on behalf of the current user or story.can_get_statistics == true.
+
+- For optimal performance, the number of returned messages and stories is chosen by TDLib
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getStoryPublicForwards$DirectInput`](../modules/index.types.default.md#getstorypublicforwards$directinput) | [getStoryPublicForwards$Input](../modules/index.types.default.md#getstorypublicforwards$input) |
+
+#### Returns
+
+`Promise`<[`storyPublicForwards`](../modules/index.types.default.md#storypublicforwards-1)\>
+
+Promise<[StoryPublicForwards](../modules/index.types.default.md#storypublicforwards)>
+
+#### Defined in
+
+dist/generated/types.d.ts:59910
+
+___
+
+### getStoryStatistics
+
+▸ **getStoryStatistics**(`parameters`): `Promise`<[`storyStatistics`](../modules/index.types.default.md#storystatistics-1)\>
+
+Returns detailed statistics about a story. Can be used only if story.can_get_statistics == true
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getStoryStatistics$DirectInput`](../modules/index.types.default.md#getstorystatistics$directinput) | [getStoryStatistics$Input](../modules/index.types.default.md#getstorystatistics$input) |
+
+#### Returns
+
+`Promise`<[`storyStatistics`](../modules/index.types.default.md#storystatistics-1)\>
+
+Promise<[StoryStatistics](../modules/index.types.default.md#storystatistics)>
+
+#### Defined in
+
+dist/generated/types.d.ts:61680
 
 ___
 
@@ -8825,7 +8956,7 @@ Promise<[StoryViewers](../modules/index.types.default.md#storyviewers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58820
+dist/generated/types.d.ts:59885
 
 ___
 
@@ -8849,7 +8980,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58955
+dist/generated/types.d.ts:60029
 
 ___
 
@@ -8873,7 +9004,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60846
+dist/generated/types.d.ts:61934
 
 ___
 
@@ -8899,7 +9030,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57239
+dist/generated/types.d.ts:58290
 
 ___
 
@@ -8923,7 +9054,7 @@ Promise<[Supergroup](../modules/index.types.default.md#supergroup)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57012
+dist/generated/types.d.ts:58047
 
 ___
 
@@ -8947,7 +9078,7 @@ Promise<[SupergroupFullInfo](../modules/index.types.default.md#supergroupfullinf
 
 #### Defined in
 
-dist/generated/types.d.ts:57019
+dist/generated/types.d.ts:58054
 
 ___
 
@@ -8971,7 +9102,7 @@ Promise<[ChatMembers](../modules/index.types.default.md#chatmembers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60264
+dist/generated/types.d.ts:61345
 
 ___
 
@@ -8995,7 +9126,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61266
+dist/generated/types.d.ts:62354
 
 ___
 
@@ -9019,7 +9150,7 @@ Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60341
+dist/generated/types.d.ts:61422
 
 ___
 
@@ -9043,7 +9174,7 @@ Promise<[TemporaryPasswordState](../modules/index.types.default.md#temporarypass
 
 #### Defined in
 
-dist/generated/types.d.ts:56970
+dist/generated/types.d.ts:58005
 
 ___
 
@@ -9067,7 +9198,7 @@ Promise<[TextEntities](../modules/index.types.default.md#textentities)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57789
+dist/generated/types.d.ts:58840
 
 ___
 
@@ -9091,7 +9222,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57859
+dist/generated/types.d.ts:58910
 
 ___
 
@@ -9115,7 +9246,7 @@ Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58906
+dist/generated/types.d.ts:59980
 
 ___
 
@@ -9139,7 +9270,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57167
+dist/generated/types.d.ts:58218
 
 ___
 
@@ -9163,7 +9294,7 @@ Promise<[TrendingStickerSets](../modules/index.types.default.md#trendingstickers
 
 #### Defined in
 
-dist/generated/types.d.ts:59614
+dist/generated/types.d.ts:60688
 
 ___
 
@@ -9187,7 +9318,7 @@ Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56984
+dist/generated/types.d.ts:58019
 
 ___
 
@@ -9211,7 +9342,7 @@ Promise<[FoundChatBoosts](../modules/index.types.default.md#foundchatboosts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58885
+dist/generated/types.d.ts:59959
 
 ___
 
@@ -9235,7 +9366,7 @@ Promise<[UserFullInfo](../modules/index.types.default.md#userfullinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56991
+dist/generated/types.d.ts:58026
 
 ___
 
@@ -9259,7 +9390,7 @@ Promise<[UserLink](../modules/index.types.default.md#userlink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59940
+dist/generated/types.d.ts:61021
 
 ___
 
@@ -9283,7 +9414,7 @@ Promise<[UserPrivacySettingRules](../modules/index.types.default.md#userprivacys
 
 #### Defined in
 
-dist/generated/types.d.ts:60492
+dist/generated/types.d.ts:61573
 
 ___
 
@@ -9307,7 +9438,7 @@ Promise<[ChatPhotos](../modules/index.types.default.md#chatphotos)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59565
+dist/generated/types.d.ts:60639
 
 ___
 
@@ -9331,7 +9462,7 @@ Promise<[UserSupportInfo](../modules/index.types.default.md#usersupportinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61252
+dist/generated/types.d.ts:62340
 
 ___
 
@@ -9355,7 +9486,7 @@ Promise<[MessageSenders](../modules/index.types.default.md#messagesenders)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59234
+dist/generated/types.d.ts:60308
 
 ___
 
@@ -9379,7 +9510,7 @@ Promise<[RtmpUrl](../modules/index.types.default.md#rtmpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59255
+dist/generated/types.d.ts:60329
 
 ___
 
@@ -9403,7 +9534,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57945
+dist/generated/types.d.ts:58996
 
 ___
 
@@ -9427,7 +9558,7 @@ Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57952
+dist/generated/types.d.ts:59003
 
 ___
 
@@ -9451,7 +9582,7 @@ Promise<[WebPageInstantView](../modules/index.types.default.md#webpageinstantvie
 
 #### Defined in
 
-dist/generated/types.d.ts:59842
+dist/generated/types.d.ts:60916
 
 ___
 
@@ -9475,7 +9606,7 @@ Promise<[WebPage](../modules/index.types.default.md#webpage)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59835
+dist/generated/types.d.ts:60909
 
 ___
 
@@ -9499,7 +9630,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57887
+dist/generated/types.d.ts:58938
 
 ___
 
@@ -9523,7 +9654,7 @@ Promise<[ImportedContacts](../modules/index.types.default.md#importedcontacts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59472
+dist/generated/types.d.ts:60546
 
 ___
 
@@ -9547,7 +9678,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59071
+dist/generated/types.d.ts:60145
 
 ___
 
@@ -9571,7 +9702,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59332
+dist/generated/types.d.ts:60406
 
 ___
 
@@ -9595,7 +9726,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58527
+dist/generated/types.d.ts:59592
 
 ___
 
@@ -9619,7 +9750,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59157
+dist/generated/types.d.ts:60231
 
 ___
 
@@ -9643,7 +9774,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59290
+dist/generated/types.d.ts:60364
 
 ___
 
@@ -9667,7 +9798,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61007
+dist/generated/types.d.ts:62095
 
 ___
 
@@ -9691,7 +9822,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58534
+dist/generated/types.d.ts:59599
 
 ___
 
@@ -9715,7 +9846,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59416
+dist/generated/types.d.ts:60490
 
 ___
 
@@ -9741,7 +9872,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58753
+dist/generated/types.d.ts:59818
 
 ___
 
@@ -9765,7 +9896,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57114
+dist/generated/types.d.ts:58151
 
 ___
 
@@ -9789,7 +9920,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59409
+dist/generated/types.d.ts:60483
 
 ___
 
@@ -9813,7 +9944,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56817
+dist/generated/types.d.ts:57852
 
 ___
 
@@ -9837,7 +9968,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58059
+dist/generated/types.d.ts:59110
 
 ___
 
@@ -9863,7 +9994,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58084
+dist/generated/types.d.ts:59135
 
 ___
 
@@ -9887,7 +10018,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58792
+dist/generated/types.d.ts:59857
 
 ___
 
@@ -9913,7 +10044,7 @@ Promise<[WebAppInfo](../modules/index.types.default.md#webappinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57968
+dist/generated/types.d.ts:59019
 
 ___
 
@@ -9937,7 +10068,7 @@ Promise<[StorageStatistics](../modules/index.types.default.md#storagestatistics)
 
 #### Defined in
 
-dist/generated/types.d.ts:60627
+dist/generated/types.d.ts:61715
 
 ___
 
@@ -9961,7 +10092,7 @@ Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57803
+dist/generated/types.d.ts:58854
 
 ___
 
@@ -9985,7 +10116,7 @@ Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57796
+dist/generated/types.d.ts:58847
 
 ___
 
@@ -10009,7 +10140,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58499
+dist/generated/types.d.ts:59564
 
 ___
 
@@ -10033,7 +10164,7 @@ Promise<[Seconds](../modules/index.types.default.md#seconds)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61189
+dist/generated/types.d.ts:62277
 
 ___
 
@@ -10043,7 +10174,7 @@ ___
 
 Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes. Updates updateFile will be used
 
-- to notify about upload progress and successful completion of the upload. The file will not have a persistent remote identifier until it will be sent in a message
+- to notify about upload progress and successful completion of the upload. The file will not have a persistent remote identifier until it is sent in a message
 
 #### Parameters
 
@@ -10059,7 +10190,7 @@ Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58964
+dist/generated/types.d.ts:60038
 
 ___
 
@@ -10083,7 +10214,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58343
+dist/generated/types.d.ts:59394
 
 ___
 
@@ -10107,7 +10238,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59171
+dist/generated/types.d.ts:60245
 
 ___
 
@@ -10131,7 +10262,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59178
+dist/generated/types.d.ts:60252
 
 ___
 
@@ -10155,7 +10286,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60464
+dist/generated/types.d.ts:61545
 
 ___
 
@@ -10179,7 +10310,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57470
+dist/generated/types.d.ts:58521
 
 ___
 
@@ -10203,7 +10334,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58126
+dist/generated/types.d.ts:59177
 
 ___
 
@@ -10227,7 +10358,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58140
+dist/generated/types.d.ts:59191
 
 ___
 
@@ -10251,7 +10382,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58133
+dist/generated/types.d.ts:59184
 
 ___
 
@@ -10275,7 +10406,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58147
+dist/generated/types.d.ts:59198
 
 ___
 
@@ -10299,7 +10430,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58681
+dist/generated/types.d.ts:59746
 
 ___
 
@@ -10323,7 +10454,7 @@ Promise<[FilePart](../modules/index.types.default.md#filepart)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58999
+dist/generated/types.d.ts:60073
 
 ___
 
@@ -10331,7 +10462,7 @@ ___
 
 ▸ **recognizeSpeech**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Recognizes speech in a video note or a voice note message. The message must be successfully sent and must not be scheduled. May return an error with a message "MSG_VOICE_TOO_LONG" if media duration is too big to be recognized
+Recognizes speech in a video note or a voice note message. The message must be successfully sent, must not be scheduled, and must be from a non-secret chat
 
 #### Parameters
 
@@ -10347,7 +10478,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57463
+dist/generated/types.d.ts:58514
 
 ___
 
@@ -10371,7 +10502,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56796
+dist/generated/types.d.ts:57831
 
 ___
 
@@ -10395,7 +10526,7 @@ Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56942
+dist/generated/types.d.ts:57977
 
 ___
 
@@ -10419,7 +10550,7 @@ Promise<[PushReceiverId](../modules/index.types.default.md#pushreceiverid)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60457
+dist/generated/types.d.ts:61538
 
 ___
 
@@ -10443,7 +10574,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56759
+dist/generated/types.d.ts:57794
 
 ___
 
@@ -10467,7 +10598,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59043
+dist/generated/types.d.ts:60117
 
 ___
 
@@ -10491,7 +10622,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60376
+dist/generated/types.d.ts:61457
 
 ___
 
@@ -10515,7 +10646,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60550
+dist/generated/types.d.ts:61631
 
 ___
 
@@ -10539,7 +10670,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59493
+dist/generated/types.d.ts:60567
 
 ___
 
@@ -10563,7 +10694,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59723
+dist/generated/types.d.ts:60797
 
 ___
 
@@ -10587,7 +10718,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59036
+dist/generated/types.d.ts:60110
 
 ___
 
@@ -10611,7 +10742,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57761
+dist/generated/types.d.ts:58812
 
 ___
 
@@ -10635,7 +10766,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57414
+dist/generated/types.d.ts:58465
 
 ___
 
@@ -10659,7 +10790,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57421
+dist/generated/types.d.ts:58472
 
 ___
 
@@ -10683,7 +10814,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61168
+dist/generated/types.d.ts:62256
 
 ___
 
@@ -10707,7 +10838,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59828
+dist/generated/types.d.ts:60902
 
 ___
 
@@ -10731,7 +10862,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59693
+dist/generated/types.d.ts:60767
 
 ___
 
@@ -10755,7 +10886,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57195
+dist/generated/types.d.ts:58246
 
 ___
 
@@ -10779,7 +10910,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59807
+dist/generated/types.d.ts:60881
 
 ___
 
@@ -10803,7 +10934,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58632
+dist/generated/types.d.ts:59697
 
 ___
 
@@ -10827,7 +10958,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60909
+dist/generated/types.d.ts:61997
 
 ___
 
@@ -10851,7 +10982,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57174
+dist/generated/types.d.ts:58225
 
 ___
 
@@ -10875,7 +11006,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59898
+dist/generated/types.d.ts:60979
 
 ___
 
@@ -10899,7 +11030,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60052
+dist/generated/types.d.ts:61133
 
 ___
 
@@ -10923,7 +11054,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58266
+dist/generated/types.d.ts:59317
 
 ___
 
@@ -10947,7 +11078,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59670
+dist/generated/types.d.ts:60744
 
 ___
 
@@ -10971,7 +11102,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60180
+dist/generated/types.d.ts:61261
 
 ___
 
@@ -10995,7 +11126,7 @@ Promise<[ChatInviteLink](../modules/index.types.default.md#chatinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59078
+dist/generated/types.d.ts:60152
 
 ___
 
@@ -11019,7 +11150,7 @@ Promise<[RtmpUrl](../modules/index.types.default.md#rtmpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59262
+dist/generated/types.d.ts:60336
 
 ___
 
@@ -11043,7 +11174,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60557
+dist/generated/types.d.ts:61638
 
 ___
 
@@ -11067,7 +11198,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60564
+dist/generated/types.d.ts:61645
 
 ___
 
@@ -11091,7 +11222,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60571
+dist/generated/types.d.ts:61652
 
 ___
 
@@ -11115,7 +11246,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58827
+dist/generated/types.d.ts:59892
 
 ___
 
@@ -11139,7 +11270,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60257
+dist/generated/types.d.ts:61338
 
 ___
 
@@ -11163,7 +11294,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60250
+dist/generated/types.d.ts:61331
 
 ___
 
@@ -11187,7 +11318,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56782
+dist/generated/types.d.ts:57817
 
 ___
 
@@ -11211,7 +11342,7 @@ Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#e
 
 #### Defined in
 
-dist/generated/types.d.ts:56928
+dist/generated/types.d.ts:57963
 
 ___
 
@@ -11237,7 +11368,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56752
+dist/generated/types.d.ts:57787
 
 ___
 
@@ -11263,7 +11394,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56729
+dist/generated/types.d.ts:57764
 
 ___
 
@@ -11287,7 +11418,7 @@ Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticatio
 
 #### Defined in
 
-dist/generated/types.d.ts:59926
+dist/generated/types.d.ts:61007
 
 ___
 
@@ -11311,7 +11442,7 @@ Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#e
 
 #### Defined in
 
-dist/generated/types.d.ts:60776
+dist/generated/types.d.ts:61864
 
 ___
 
@@ -11335,7 +11466,7 @@ Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#e
 
 #### Defined in
 
-dist/generated/types.d.ts:56884
+dist/generated/types.d.ts:57919
 
 ___
 
@@ -11361,7 +11492,7 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57528
+dist/generated/types.d.ts:58579
 
 ___
 
@@ -11385,7 +11516,7 @@ Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticatio
 
 #### Defined in
 
-dist/generated/types.d.ts:60818
+dist/generated/types.d.ts:61906
 
 ___
 
@@ -11409,7 +11540,7 @@ Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticatio
 
 #### Defined in
 
-dist/generated/types.d.ts:60755
+dist/generated/types.d.ts:61843
 
 ___
 
@@ -11433,7 +11564,7 @@ Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56921
+dist/generated/types.d.ts:57956
 
 ___
 
@@ -11457,7 +11588,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58660
+dist/generated/types.d.ts:59725
 
 ___
 
@@ -11483,7 +11614,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56768
+dist/generated/types.d.ts:57803
 
 ___
 
@@ -11507,7 +11638,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60383
+dist/generated/types.d.ts:61464
 
 ___
 
@@ -11531,7 +11662,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60657
+dist/generated/types.d.ts:61745
 
 ___
 
@@ -11555,7 +11686,7 @@ Promise<[ResetPasswordResult](../modules/index.types.default.md#resetpasswordres
 
 #### Defined in
 
-dist/generated/types.d.ts:56949
+dist/generated/types.d.ts:57984
 
 ___
 
@@ -11581,7 +11712,7 @@ Promise<[ChatInviteLinks](../modules/index.types.default.md#chatinvitelinks)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59129
+dist/generated/types.d.ts:60203
 
 ___
 
@@ -11605,7 +11736,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59346
+dist/generated/types.d.ts:60420
 
 ___
 
@@ -11629,7 +11760,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61126
+dist/generated/types.d.ts:62214
 
 ___
 
@@ -11653,7 +11784,7 @@ Promise<[Background](../modules/index.types.default.md#background)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60362
+dist/generated/types.d.ts:61443
 
 ___
 
@@ -11677,7 +11808,7 @@ Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57321
+dist/generated/types.d.ts:58372
 
 ___
 
@@ -11701,7 +11832,7 @@ Promise<[ChatMembers](../modules/index.types.default.md#chatmembers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58590
+dist/generated/types.d.ts:59655
 
 ___
 
@@ -11729,7 +11860,7 @@ Promise<[FoundChatMessages](../modules/index.types.default.md#foundchatmessages)
 
 #### Defined in
 
-dist/generated/types.d.ts:57298
+dist/generated/types.d.ts:58349
 
 ___
 
@@ -11753,7 +11884,7 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57342
+dist/generated/types.d.ts:58393
 
 ___
 
@@ -11777,7 +11908,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57144
+dist/generated/types.d.ts:58181
 
 ___
 
@@ -11803,7 +11934,7 @@ Promise<[ChatsNearby](../modules/index.types.default.md#chatsnearby)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57160
+dist/generated/types.d.ts:58197
 
 ___
 
@@ -11827,7 +11958,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57151
+dist/generated/types.d.ts:58188
 
 ___
 
@@ -11851,7 +11982,7 @@ Promise<[Users](../modules/index.types.default.md#users)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59486
+dist/generated/types.d.ts:60560
 
 ___
 
@@ -11875,7 +12006,7 @@ Promise<[Emojis](../modules/index.types.default.md#emojis)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59737
+dist/generated/types.d.ts:60811
 
 ___
 
@@ -11899,7 +12030,7 @@ Promise<[FoundFileDownloads](../modules/index.types.default.md#foundfiledownload
 
 #### Defined in
 
-dist/generated/types.d.ts:59050
+dist/generated/types.d.ts:60124
 
 ___
 
@@ -11923,7 +12054,7 @@ Promise<[Hashtags](../modules/index.types.default.md#hashtags)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59821
+dist/generated/types.d.ts:60895
 
 ___
 
@@ -11947,7 +12078,7 @@ Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59642
+dist/generated/types.d.ts:60716
 
 ___
 
@@ -11973,7 +12104,7 @@ Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57307
+dist/generated/types.d.ts:58358
 
 ___
 
@@ -11997,7 +12128,7 @@ Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57328
+dist/generated/types.d.ts:58379
 
 ___
 
@@ -12021,7 +12152,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57128
+dist/generated/types.d.ts:58165
 
 ___
 
@@ -12047,7 +12178,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57137
+dist/generated/types.d.ts:58174
 
 ___
 
@@ -12071,7 +12202,7 @@ Promise<[FoundPosition](../modules/index.types.default.md#foundposition)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57782
+dist/generated/types.d.ts:58833
 
 ___
 
@@ -12095,7 +12226,7 @@ Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57181
+dist/generated/types.d.ts:58232
 
 ___
 
@@ -12119,7 +12250,7 @@ Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57314
+dist/generated/types.d.ts:58365
 
 ___
 
@@ -12143,7 +12274,7 @@ Promise<[StickerSet](../modules/index.types.default.md#stickerset)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59635
+dist/generated/types.d.ts:60709
 
 ___
 
@@ -12151,7 +12282,7 @@ ___
 
 ▸ **searchStickerSets**(`parameters`): `Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
-Searches for ordinary sticker sets by looking for specified query in their title and name. Excludes installed sticker sets from the results
+Searches for sticker sets by looking for specified query in their title and name. Excludes installed sticker sets from the results
 
 #### Parameters
 
@@ -12167,7 +12298,7 @@ Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59649
+dist/generated/types.d.ts:60723
 
 ___
 
@@ -12191,7 +12322,7 @@ Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59586
+dist/generated/types.d.ts:60660
 
 ___
 
@@ -12215,7 +12346,7 @@ Promise<[FoundPositions](../modules/index.types.default.md#foundpositions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61049
+dist/generated/types.d.ts:62137
 
 ___
 
@@ -12239,7 +12370,7 @@ Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59551
+dist/generated/types.d.ts:60625
 
 ___
 
@@ -12263,7 +12394,7 @@ Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59947
+dist/generated/types.d.ts:61028
 
 ___
 
@@ -12287,7 +12418,7 @@ Promise<[FoundWebApp](../modules/index.types.default.md#foundwebapp)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57938
+dist/generated/types.d.ts:58989
 
 ___
 
@@ -12311,7 +12442,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56803
+dist/generated/types.d.ts:57838
 
 ___
 
@@ -12335,7 +12466,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57505
+dist/generated/types.d.ts:58556
 
 ___
 
@@ -12359,7 +12490,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59220
+dist/generated/types.d.ts:60294
 
 ___
 
@@ -12383,7 +12514,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59227
+dist/generated/types.d.ts:60301
 
 ___
 
@@ -12407,7 +12538,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59213
+dist/generated/types.d.ts:60287
 
 ___
 
@@ -12431,7 +12562,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59199
+dist/generated/types.d.ts:60273
 
 ___
 
@@ -12455,7 +12586,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58052
+dist/generated/types.d.ts:59103
 
 ___
 
@@ -12479,7 +12610,7 @@ Promise<[CustomRequestResult](../modules/index.types.default.md#customrequestres
 
 #### Defined in
 
-dist/generated/types.d.ts:61056
+dist/generated/types.d.ts:62144
 
 ___
 
@@ -12503,7 +12634,7 @@ Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#e
 
 #### Defined in
 
-dist/generated/types.d.ts:60769
+dist/generated/types.d.ts:61857
 
 ___
 
@@ -12527,7 +12658,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57512
+dist/generated/types.d.ts:58563
 
 ___
 
@@ -12551,7 +12682,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57491
+dist/generated/types.d.ts:58542
 
 ___
 
@@ -12575,7 +12706,7 @@ Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57498
+dist/generated/types.d.ts:58549
 
 ___
 
@@ -12599,7 +12730,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60804
+dist/generated/types.d.ts:61892
 
 ___
 
@@ -12623,7 +12754,7 @@ Promise<[PaymentResult](../modules/index.types.default.md#paymentresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60299
+dist/generated/types.d.ts:61380
 
 ___
 
@@ -12647,7 +12778,7 @@ Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticatio
 
 #### Defined in
 
-dist/generated/types.d.ts:60811
+dist/generated/types.d.ts:61899
 
 ___
 
@@ -12671,7 +12802,7 @@ Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticatio
 
 #### Defined in
 
-dist/generated/types.d.ts:60748
+dist/generated/types.d.ts:61836
 
 ___
 
@@ -12695,7 +12826,7 @@ Promise<[Story](../modules/index.types.default.md#story)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58709
+dist/generated/types.d.ts:59774
 
 ___
 
@@ -12719,7 +12850,7 @@ Promise<[CustomRequestResult](../modules/index.types.default.md#customrequestres
 
 #### Defined in
 
-dist/generated/types.d.ts:60017
+dist/generated/types.d.ts:61098
 
 ___
 
@@ -12743,7 +12874,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57959
+dist/generated/types.d.ts:59010
 
 ___
 
@@ -12767,7 +12898,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59863
+dist/generated/types.d.ts:60937
 
 ___
 
@@ -12791,7 +12922,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60513
+dist/generated/types.d.ts:61594
 
 ___
 
@@ -12815,7 +12946,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61070
+dist/generated/types.d.ts:62158
 
 ___
 
@@ -12839,7 +12970,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58357
+dist/generated/types.d.ts:59408
 
 ___
 
@@ -12863,7 +12994,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56720
+dist/generated/types.d.ts:57755
 
 ___
 
@@ -12889,7 +13020,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56713
+dist/generated/types.d.ts:57748
 
 ___
 
@@ -12913,7 +13044,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60671
+dist/generated/types.d.ts:61759
 
 ___
 
@@ -12937,7 +13068,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60685
+dist/generated/types.d.ts:61773
 
 ___
 
@@ -12961,7 +13092,7 @@ Promise<[Background](../modules/index.types.default.md#background)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60369
+dist/generated/types.d.ts:61450
 
 ___
 
@@ -12985,7 +13116,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59877
+dist/generated/types.d.ts:60958
 
 ___
 
@@ -13009,7 +13140,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60059
+dist/generated/types.d.ts:61140
 
 ___
 
@@ -13033,7 +13164,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60073
+dist/generated/types.d.ts:61154
 
 ___
 
@@ -13057,7 +13188,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60024
+dist/generated/types.d.ts:61105
 
 ___
 
@@ -13081,7 +13212,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60038
+dist/generated/types.d.ts:61119
 
 ___
 
@@ -13105,7 +13236,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60832
+dist/generated/types.d.ts:61920
 
 ___
 
@@ -13129,7 +13260,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58378
+dist/generated/types.d.ts:59429
 
 ___
 
@@ -13153,7 +13284,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58760
+dist/generated/types.d.ts:59825
 
 ___
 
@@ -13177,7 +13308,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58457
+dist/generated/types.d.ts:59522
 
 ___
 
@@ -13185,7 +13316,7 @@ ___
 
 ▸ **setChatBackground**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the background in a specific chat. Supported only in private and secret chats with non-deleted users
+Sets the background in a specific chat. Supported only in private and secret chats with non-deleted users
 
 #### Parameters
 
@@ -13201,7 +13332,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58401
+dist/generated/types.d.ts:59452
 
 ___
 
@@ -13225,7 +13356,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58464
+dist/generated/types.d.ts:59529
 
 ___
 
@@ -13249,7 +13380,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58471
+dist/generated/types.d.ts:59536
 
 ___
 
@@ -13273,7 +13404,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58478
+dist/generated/types.d.ts:59543
 
 ___
 
@@ -13297,7 +13428,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58415
+dist/generated/types.d.ts:59473
 
 ___
 
@@ -13321,7 +13452,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58485
+dist/generated/types.d.ts:59550
 
 ___
 
@@ -13345,7 +13476,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58555
+dist/generated/types.d.ts:59620
 
 ___
 
@@ -13371,7 +13502,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58387
+dist/generated/types.d.ts:59438
 
 ___
 
@@ -13395,7 +13526,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57484
+dist/generated/types.d.ts:58535
 
 ___
 
@@ -13419,7 +13550,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58422
+dist/generated/types.d.ts:59480
 
 ___
 
@@ -13443,7 +13574,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58394
+dist/generated/types.d.ts:59445
 
 ___
 
@@ -13467,7 +13598,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58371
+dist/generated/types.d.ts:59422
 
 ___
 
@@ -13491,7 +13622,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58492
+dist/generated/types.d.ts:59557
 
 ___
 
@@ -13515,7 +13646,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58408
+dist/generated/types.d.ts:59466
 
 ___
 
@@ -13539,7 +13670,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58364
+dist/generated/types.d.ts:59415
 
 ___
 
@@ -13563,7 +13694,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59523
+dist/generated/types.d.ts:60597
 
 ___
 
@@ -13587,7 +13718,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59954
+dist/generated/types.d.ts:61035
 
 ___
 
@@ -13611,7 +13742,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60881
+dist/generated/types.d.ts:61969
 
 ___
 
@@ -13635,7 +13766,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60427
+dist/generated/types.d.ts:61508
 
 ___
 
@@ -13659,7 +13790,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60441
+dist/generated/types.d.ts:61522
 
 ___
 
@@ -13683,7 +13814,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56854
+dist/generated/types.d.ts:57889
 
 ___
 
@@ -13707,7 +13838,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59996
+dist/generated/types.d.ts:61077
 
 ___
 
@@ -13731,7 +13862,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59989
+dist/generated/types.d.ts:61070
 
 ___
 
@@ -13755,7 +13886,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60536
+dist/generated/types.d.ts:61617
 
 ___
 
@@ -13779,7 +13910,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57775
+dist/generated/types.d.ts:58826
 
 ___
 
@@ -13803,7 +13934,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59905
+dist/generated/types.d.ts:60986
 
 ___
 
@@ -13827,7 +13958,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58985
+dist/generated/types.d.ts:60059
 
 ___
 
@@ -13851,7 +13982,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57684
+dist/generated/types.d.ts:58735
 
 ___
 
@@ -13875,7 +14006,7 @@ Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58017
+dist/generated/types.d.ts:59068
 
 ___
 
@@ -13899,7 +14030,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59381
+dist/generated/types.d.ts:60455
 
 ___
 
@@ -13923,7 +14054,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59395
+dist/generated/types.d.ts:60469
 
 ___
 
@@ -13947,7 +14078,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59318
+dist/generated/types.d.ts:60392
 
 ___
 
@@ -13971,7 +14102,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60129
+dist/generated/types.d.ts:61210
 
 ___
 
@@ -13995,7 +14126,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58024
+dist/generated/types.d.ts:59075
 
 ___
 
@@ -14019,7 +14150,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59912
+dist/generated/types.d.ts:60993
 
 ___
 
@@ -14043,7 +14174,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61196
+dist/generated/types.d.ts:62284
 
 ___
 
@@ -14067,7 +14198,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61231
+dist/generated/types.d.ts:62319
 
 ___
 
@@ -14091,7 +14222,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61210
+dist/generated/types.d.ts:62298
 
 ___
 
@@ -14117,7 +14248,7 @@ Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#e
 
 #### Defined in
 
-dist/generated/types.d.ts:56877
+dist/generated/types.d.ts:57912
 
 ___
 
@@ -14141,7 +14272,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59975
+dist/generated/types.d.ts:61056
 
 ___
 
@@ -14165,7 +14296,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59444
+dist/generated/types.d.ts:60518
 
 ___
 
@@ -14189,7 +14320,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59870
+dist/generated/types.d.ts:60951
 
 ___
 
@@ -14215,7 +14346,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60636
+dist/generated/types.d.ts:61724
 
 ___
 
@@ -14239,7 +14370,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60506
+dist/generated/types.d.ts:61587
 
 ___
 
@@ -14263,7 +14394,7 @@ Promise<[PassportElement](../modules/index.types.default.md#passportelement)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60720
+dist/generated/types.d.ts:61808
 
 ___
 
@@ -14287,7 +14418,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60734
+dist/generated/types.d.ts:61822
 
 ___
 
@@ -14311,7 +14442,7 @@ Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56868
+dist/generated/types.d.ts:57903
 
 ___
 
@@ -14335,7 +14466,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58674
+dist/generated/types.d.ts:59739
 
 ___
 
@@ -14359,7 +14490,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57712
+dist/generated/types.d.ts:58763
 
 ___
 
@@ -14383,7 +14514,31 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57866
+dist/generated/types.d.ts:58917
+
+___
+
+### setProfileAccentColor
+
+▸ **setProfileAccentColor**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes accent color and background custom emoji for profile of the current user; for Telegram Premium users only
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setProfileAccentColor$DirectInput`](../modules/index.types.default.md#setprofileaccentcolor$directinput) | [setProfileAccentColor$Input](../modules/index.types.default.md#setprofileaccentcolor$input) |
+
+#### Returns
+
+`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:60944
 
 ___
 
@@ -14407,7 +14562,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59849
+dist/generated/types.d.ts:60923
 
 ___
 
@@ -14433,7 +14588,7 @@ Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56907
+dist/generated/types.d.ts:57942
 
 ___
 
@@ -14457,7 +14612,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58653
+dist/generated/types.d.ts:59718
 
 ___
 
@@ -14481,7 +14636,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60916
+dist/generated/types.d.ts:62004
 
 ___
 
@@ -14505,7 +14660,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60923
+dist/generated/types.d.ts:62011
 
 ___
 
@@ -14529,7 +14684,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60930
+dist/generated/types.d.ts:62018
 
 ___
 
@@ -14553,7 +14708,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60902
+dist/generated/types.d.ts:61990
 
 ___
 
@@ -14577,7 +14732,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60874
+dist/generated/types.d.ts:61962
 
 ___
 
@@ -14601,7 +14756,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60888
+dist/generated/types.d.ts:61976
 
 ___
 
@@ -14625,7 +14780,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58723
+dist/generated/types.d.ts:59788
 
 ___
 
@@ -14649,7 +14804,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58813
+dist/generated/types.d.ts:59878
 
 ___
 
@@ -14673,7 +14828,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60187
+dist/generated/types.d.ts:61268
 
 ___
 
@@ -14697,7 +14852,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60157
+dist/generated/types.d.ts:61238
 
 ___
 
@@ -14721,7 +14876,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:56704
+dist/generated/types.d.ts:57739
 
 ___
 
@@ -14745,7 +14900,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59537
+dist/generated/types.d.ts:60611
 
 ___
 
@@ -14769,7 +14924,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60485
+dist/generated/types.d.ts:61566
 
 ___
 
@@ -14793,7 +14948,7 @@ Promise<[UserSupportInfo](../modules/index.types.default.md#usersupportinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61259
+dist/generated/types.d.ts:62347
 
 ___
 
@@ -14817,7 +14972,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59884
+dist/generated/types.d.ts:60965
 
 ___
 
@@ -14841,7 +14996,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59241
+dist/generated/types.d.ts:60315
 
 ___
 
@@ -14865,7 +15020,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57917
+dist/generated/types.d.ts:58968
 
 ___
 
@@ -14889,7 +15044,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59558
+dist/generated/types.d.ts:60632
 
 ___
 
@@ -14913,7 +15068,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57910
+dist/generated/types.d.ts:58961
 
 ___
 
@@ -14937,7 +15092,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59353
+dist/generated/types.d.ts:60427
 
 ___
 
@@ -14961,7 +15116,7 @@ Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59297
+dist/generated/types.d.ts:60371
 
 ___
 
@@ -14985,7 +15140,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59276
+dist/generated/types.d.ts:60350
 
 ___
 
@@ -15009,7 +15164,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57880
+dist/generated/types.d.ts:58931
 
 ___
 
@@ -15033,7 +15188,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59544
+dist/generated/types.d.ts:60618
 
 ___
 
@@ -15059,7 +15214,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60413
+dist/generated/types.d.ts:61494
 
 ___
 
@@ -15083,7 +15238,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60101
+dist/generated/types.d.ts:61182
 
 ___
 
@@ -15107,7 +15262,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60094
+dist/generated/types.d.ts:61175
 
 ___
 
@@ -15131,7 +15286,7 @@ Promise<[TestBytes](../modules/index.types.default.md#testbytes)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61287
+dist/generated/types.d.ts:62375
 
 ___
 
@@ -15155,7 +15310,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61273
+dist/generated/types.d.ts:62361
 
 ___
 
@@ -15179,7 +15334,7 @@ Promise<[TestString](../modules/index.types.default.md#teststring)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61280
+dist/generated/types.d.ts:62368
 
 ___
 
@@ -15203,7 +15358,7 @@ Promise<[TestVectorInt](../modules/index.types.default.md#testvectorint)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61294
+dist/generated/types.d.ts:62382
 
 ___
 
@@ -15227,7 +15382,7 @@ Promise<[TestVectorIntObject](../modules/index.types.default.md#testvectorintobj
 
 #### Defined in
 
-dist/generated/types.d.ts:61301
+dist/generated/types.d.ts:62389
 
 ___
 
@@ -15251,7 +15406,7 @@ Promise<[TestVectorString](../modules/index.types.default.md#testvectorstring)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61308
+dist/generated/types.d.ts:62396
 
 ___
 
@@ -15275,7 +15430,7 @@ Promise<[TestVectorStringObject](../modules/index.types.default.md#testvectorstr
 
 #### Defined in
 
-dist/generated/types.d.ts:61315
+dist/generated/types.d.ts:62403
 
 ___
 
@@ -15299,7 +15454,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61343
+dist/generated/types.d.ts:62431
 
 ___
 
@@ -15323,7 +15478,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61329
+dist/generated/types.d.ts:62417
 
 ___
 
@@ -15347,7 +15502,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61336
+dist/generated/types.d.ts:62424
 
 ___
 
@@ -15371,7 +15526,7 @@ Promise<[Error](../modules/index.types.default.md#error)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61357
+dist/generated/types.d.ts:62445
 
 ___
 
@@ -15395,7 +15550,7 @@ Promise<[TestInt](../modules/index.types.default.md#testint)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61322
+dist/generated/types.d.ts:62410
 
 ___
 
@@ -15419,7 +15574,7 @@ Promise<[Update](../modules/index.types.default.md#update)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61350
+dist/generated/types.d.ts:62438
 
 ___
 
@@ -15443,7 +15598,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59029
+dist/generated/types.d.ts:60103
 
 ___
 
@@ -15467,7 +15622,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58899
+dist/generated/types.d.ts:59973
 
 ___
 
@@ -15491,7 +15646,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60045
+dist/generated/types.d.ts:61126
 
 ___
 
@@ -15515,7 +15670,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58450
+dist/generated/types.d.ts:59515
 
 ___
 
@@ -15539,7 +15694,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58429
+dist/generated/types.d.ts:59487
 
 ___
 
@@ -15563,7 +15718,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58443
+dist/generated/types.d.ts:59508
 
 ___
 
@@ -15587,7 +15742,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58667
+dist/generated/types.d.ts:59732
 
 ___
 
@@ -15595,7 +15750,7 @@ ___
 
 ▸ **toggleChatIsTranslatable**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the translatable state of a chat; for Telegram Premium users only
+Changes the translatable state of a chat
 
 #### Parameters
 
@@ -15611,7 +15766,31 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58436
+dist/generated/types.d.ts:59501
+
+___
+
+### toggleChatViewAsTopics
+
+▸ **toggleChatViewAsTopics**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the view_as_topics setting of a forum chat
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`toggleChatViewAsTopics$DirectInput`](../modules/index.types.default.md#togglechatviewastopics$directinput) | [toggleChatViewAsTopics$Input](../modules/index.types.default.md#togglechatviewastopics$input) |
+
+#### Returns
+
+`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:59494
 
 ___
 
@@ -15635,7 +15814,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59022
+dist/generated/types.d.ts:60096
 
 ___
 
@@ -15659,7 +15838,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57691
+dist/generated/types.d.ts:58742
 
 ___
 
@@ -15683,7 +15862,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57705
+dist/generated/types.d.ts:58756
 
 ___
 
@@ -15707,7 +15886,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57698
+dist/generated/types.d.ts:58749
 
 ___
 
@@ -15715,7 +15894,7 @@ ___
 
 ▸ **toggleGroupCallEnabledStartNotification**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Toggles whether the current user will receive a notification when the group call will start; scheduled group calls only
+Toggles whether the current user will receive a notification when the group call starts; scheduled group calls only
 
 #### Parameters
 
@@ -15731,7 +15910,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59283
+dist/generated/types.d.ts:60357
 
 ___
 
@@ -15755,7 +15934,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59374
+dist/generated/types.d.ts:60448
 
 ___
 
@@ -15779,7 +15958,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59367
+dist/generated/types.d.ts:60441
 
 ___
 
@@ -15803,7 +15982,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59325
+dist/generated/types.d.ts:60399
 
 ___
 
@@ -15827,7 +16006,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59402
+dist/generated/types.d.ts:60476
 
 ___
 
@@ -15851,7 +16030,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59388
+dist/generated/types.d.ts:60462
 
 ___
 
@@ -15875,7 +16054,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59304
+dist/generated/types.d.ts:60378
 
 ___
 
@@ -15899,7 +16078,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60115
+dist/generated/types.d.ts:61196
 
 ___
 
@@ -15923,7 +16102,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60122
+dist/generated/types.d.ts:61203
 
 ___
 
@@ -15947,7 +16126,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58730
+dist/generated/types.d.ts:59795
 
 ___
 
@@ -15971,7 +16150,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60229
+dist/generated/types.d.ts:61310
 
 ___
 
@@ -15995,7 +16174,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60222
+dist/generated/types.d.ts:61303
 
 ___
 
@@ -16019,7 +16198,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60215
+dist/generated/types.d.ts:61296
 
 ___
 
@@ -16043,7 +16222,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60243
+dist/generated/types.d.ts:61324
 
 ___
 
@@ -16067,7 +16246,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60236
+dist/generated/types.d.ts:61317
 
 ___
 
@@ -16091,7 +16270,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60208
+dist/generated/types.d.ts:61289
 
 ___
 
@@ -16115,7 +16294,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60201
+dist/generated/types.d.ts:61282
 
 ___
 
@@ -16139,7 +16318,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60194
+dist/generated/types.d.ts:61275
 
 ___
 
@@ -16165,7 +16344,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60166
+dist/generated/types.d.ts:61247
 
 ___
 
@@ -16189,7 +16368,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59891
+dist/generated/types.d.ts:60972
 
 ___
 
@@ -16213,7 +16392,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58576
+dist/generated/types.d.ts:59641
 
 ___
 
@@ -16237,7 +16416,7 @@ Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57456
+dist/generated/types.d.ts:58507
 
 ___
 
@@ -16261,7 +16440,7 @@ Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57449
+dist/generated/types.d.ts:58500
 
 ___
 
@@ -16285,7 +16464,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58513
+dist/generated/types.d.ts:59578
 
 ___
 
@@ -16309,7 +16488,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58520
+dist/generated/types.d.ts:59585
 
 ___
 
@@ -16333,7 +16512,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58506
+dist/generated/types.d.ts:59571
 
 ___
 
@@ -16357,7 +16536,7 @@ Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58203
+dist/generated/types.d.ts:59254
 
 ___
 
@@ -16381,7 +16560,7 @@ Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60839
+dist/generated/types.d.ts:61927
 
 ___
 
@@ -16405,7 +16584,7 @@ Promise<[ValidatedOrderInfo](../modules/index.types.default.md#validatedorderinf
 
 #### Defined in
 
-dist/generated/types.d.ts:60292
+dist/generated/types.d.ts:61373
 
 ___
 
@@ -16431,7 +16610,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58075
+dist/generated/types.d.ts:59126
 
 ___
 
@@ -16455,7 +16634,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60965
+dist/generated/types.d.ts:62053
 
 ___
 
@@ -16479,7 +16658,7 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59663
+dist/generated/types.d.ts:60737
 
 ___
 
@@ -16503,4 +16682,4 @@ Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58978
+dist/generated/types.d.ts:60052

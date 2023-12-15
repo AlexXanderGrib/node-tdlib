@@ -1,4 +1,4 @@
 export const Meta = {
-  version: "1.8.21",
-  commitHash: "3870c29b158b75ca5e48e0eebd6b5c3a7994a000"
+  version: "1.8.22",
+  commitHash: "1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc"
 };

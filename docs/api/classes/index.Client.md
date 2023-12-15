@@ -25,6 +25,7 @@
 
 ### Accessors
 
+- [tdlibOptions](index.Client.md#tdliboptions)
 - [updates](index.Client.md#updates)
 
 ### Methods
@@ -56,7 +57,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:64
+dist/client.d.ts:65
 
 ## Properties
 
@@ -66,7 +67,7 @@ dist/client.d.ts:64
 
 #### Defined in
 
-dist/client.d.ts:57
+dist/client.d.ts:58
 
 ___
 
@@ -76,7 +77,7 @@ ___
 
 #### Defined in
 
-dist/client.d.ts:54
+dist/client.d.ts:55
 
 ___
 
@@ -86,7 +87,7 @@ ___
 
 #### Defined in
 
-dist/client.d.ts:55
+dist/client.d.ts:56
 
 ___
 
@@ -96,7 +97,7 @@ ___
 
 #### Defined in
 
-dist/client.d.ts:58
+dist/client.d.ts:59
 
 ___
 
@@ -110,7 +111,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:107
+dist/client.d.ts:108
 
 ___
 
@@ -120,7 +121,7 @@ ___
 
 #### Defined in
 
-dist/client.d.ts:56
+dist/client.d.ts:57
 
 ___
 
@@ -130,7 +131,7 @@ ___
 
 #### Defined in
 
-dist/client.d.ts:65
+dist/client.d.ts:66
 
 ___
 
@@ -140,9 +141,31 @@ ___
 
 #### Defined in
 
-dist/client.d.ts:66
+dist/client.d.ts:67
 
 ## Accessors
+
+### tdlibOptions
+
+• `get` **tdlibOptions**(): [`TDLibOptions`](index.TDLibOptions.md)
+
+**`See`**
+
+https://core.telegram.org/tdlib/options
+
+**`Memberof`**
+
+Client
+
+#### Returns
+
+[`TDLibOptions`](index.TDLibOptions.md)
+
+#### Defined in
+
+dist/client.d.ts:115
+
+___
 
 ### updates
 
@@ -158,7 +181,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:115
+dist/client.d.ts:123
 
 ## Methods
 
@@ -176,7 +199,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:136
+dist/client.d.ts:144
 
 ___
 
@@ -213,7 +236,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:100
+dist/client.d.ts:101
 
 ___
 
@@ -250,7 +273,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:77
+dist/client.d.ts:78
 
 ___
 
@@ -268,7 +291,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:129
+dist/client.d.ts:137
 
 ___
 
@@ -286,7 +309,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:122
+dist/client.d.ts:130
 
 ___
 
@@ -324,4 +347,4 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:89
+dist/client.d.ts:90

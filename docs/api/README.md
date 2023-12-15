@@ -67,7 +67,11 @@ async function init() {
 
   // Call any tdlib method
   await client.api.getOption({ name: "version" });
-  // => Promise { _: "optionValueString", value: "1.8.13" }
+  // => Promise { _: "optionValueString", value: "1.8.22" }
+
+  // or use a wrapper 
+  await client.tdlibOptions.get("version");
+  // => Promise "1.8.22"
 
   // Subscribe to updates
   client.updates.subscribe(console.log);

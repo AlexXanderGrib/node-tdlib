@@ -64,7 +64,7 @@ Error.constructor
 
 #### Defined in
 
-dist/client.d.ts:27
+dist/client.d.ts:28
 
 ## Properties
 
@@ -78,7 +78,7 @@ error.\_
 
 #### Defined in
 
-dist/client.d.ts:16
+dist/client.d.ts:17
 
 ___
 
@@ -92,7 +92,7 @@ error.code
 
 #### Defined in
 
-dist/client.d.ts:17
+dist/client.d.ts:18
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-dist/client.d.ts:18
+dist/client.d.ts:19
 
 ___
 
@@ -116,7 +116,7 @@ Error.name
 
 #### Defined in
 
-dist/client.d.ts:20
+dist/client.d.ts:21
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-dist/client.d.ts:19
+dist/client.d.ts:20
 
 ## Methods
 
@@ -153,4 +153,4 @@ TDError
 
 #### Defined in
 
-dist/client.d.ts:38
+dist/client.d.ts:39

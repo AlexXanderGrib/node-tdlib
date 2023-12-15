@@ -22,6 +22,7 @@
 
 - [Client](../classes/index.Client.md)
 - [TDError](../classes/index.TDError.md)
+- [TDLibOptions](../classes/index.TDLibOptions.md)
 
 ## References
 

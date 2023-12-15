@@ -4,6 +4,7 @@ import * as JSON from "./json";
 import { AsyncData } from "./shared/async";
 import { EventBus, Observable } from "./event-bus";
 import debug from "debug";
+import { TDLibOptions } from "./options";
 
 const debugJson = debug("tdlib-native:json");
 
@@ -269,6 +270,16 @@ export class Client {
         this._updates.emit(data);
       }
     }
+  }
+
+  /**
+   *
+   * @see https://core.telegram.org/tdlib/options
+   * @readonly
+   * @memberof Client
+   */
+  get tdlibOptions(): TDLibOptions {
+    return TDLibOptions.for(this.api);
   }
 
   /**
