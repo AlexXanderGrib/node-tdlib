@@ -1,6 +1,10 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.words": [
+    "kbit",
+    "libtgvoip",
+    "supergroup",
+    "tdesktop",
     "tdlib"
   ]
 }
