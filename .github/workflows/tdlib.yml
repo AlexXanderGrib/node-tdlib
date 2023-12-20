@@ -141,7 +141,13 @@ jobs:
     name: Bundle artifacts to dist
     runs-on: ubuntu-22.04
     needs: [build-linux-x64, build-macos-x64, build-windows-x64]
+
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
       - uses: actions/download-artifact@v3
       - uses: geekyeggo/delete-artifact@v2
         with:
@@ -153,18 +159,22 @@ jobs:
             schema
 
       - run: |
-          mv tdlib-macos-x64/* ./
-          mv tdlib-linux-x64/* ./
-          mv tdlib-windows-x64/* ./
-          mv meta/* ./
-          mv schema/* ./
+          mv tdlib-macos-x64/* ./td
+          mv tdlib-linux-x64/* ./td
+          mv tdlib-windows-x64/* ./td
+          mv meta/* ./td
+          mv schema/* ./td
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact
         with:
           name: td
-          path: |
-            libtdjson.dylib
-            libtdjson.so
-            tdjson.dll
-            meta.yml
-            td_api.tl
+          path: td/*
+
+      - run: node scripts/prepack-binary.js
+      - run: npm run build:types
+      - name: Commit changes
+        run: | 
+          git add .
+          git commit -m "Updated tdlib to ${{ inputs.tdlib }}"
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v5

@@ -20,6 +20,6 @@ jobs:
         env:
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
-      - run: npm publish --provenance --access=public
+      - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
