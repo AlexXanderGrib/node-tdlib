@@ -149,6 +149,9 @@ jobs:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
       - uses: actions/download-artifact@v3
+        with:
+          path: td
+      - run: npm ci
       - uses: geekyeggo/delete-artifact@v2
         with:
           name: |
@@ -159,11 +162,12 @@ jobs:
             schema
 
       - run: |
-          mv tdlib-macos-x64/* ./td
-          mv tdlib-linux-x64/* ./td
-          mv tdlib-windows-x64/* ./td
-          mv meta/* ./td
-          mv schema/* ./td
+          cd td
+          mv tdlib-macos-x64/* ./
+          mv tdlib-linux-x64/* ./
+          mv tdlib-windows-x64/* ./
+          mv meta/* ./
+          mv schema/* ./
 
       - uses: actions/upload-artifact@v3
         with:
