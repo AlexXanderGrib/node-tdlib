@@ -38,28 +38,34 @@ async function loadAddon(addonPath?: string): Promise<Addon> {
   return addon;
 }
 
+const isMusl = () =>
+  !(process.report?.getReport() as any)?.header?.glibcVersionRuntime;
+
 /**
  *
  *
- * @return {string}  {string}
+ * @return {Promise<string>}  {Promise<string>}
  */
-function getTDLibName(): string {
-  switch (process.platform) {
-    case "win32": {
-      return "tdjson.dll";
+async function getTDLibPath(): Promise<string> {
+  let packageName = `@tdlib-native/tdjson-${process.platform}-${process.arch}`;
+
+  if (process.platform === "linux") {
+    if (isMusl()) {
+      throw new Error(
+        "TDLib build for MUSL libc is not ready yet. You can ask for do it quicker: https://github.com/AlexXanderGrib/node-tdlib/issues"
+      );
     }
 
-    case "linux": {
-      return "libtdjson.so";
-    }
+    packageName += "-glibc";
+  }
 
-    case "darwin": {
-      return "libtdjson.dylib";
-    }
-
-    default: {
-      throw new Error(`There is no precompiled TDLib for "${process.platform}"`);
-    }
+  try {
+    const { tdlibPath } = await import(packageName);
+    return tdlibPath;
+  } catch {
+    throw new Error(
+      `There is no prebuilt TDLib for your platform (${process.platform} ${process.arch}). You can ask for it: https://github.com/AlexXanderGrib/node-tdlib/issues`
+    );
   }
 }
 
@@ -80,10 +86,8 @@ export class TDLibAddon implements TDLib {
    * @return {Promise<TDLib>}
    * @memberof TDLibAddon
    */
-  static async create(
-    tdlibPath = path.resolve(getAddonFolderPath(), "../../td", getTDLibName()),
-    addonPath?: string
-  ): Promise<TDLibAddon> {
+  static async create(tdlibPath?: string, addonPath?: string): Promise<TDLibAddon> {
+    tdlibPath ??= await getTDLibPath();
     const addon = await loadAddon(addonPath);
     addon.load_tdjson(tdlibPath);
 
