@@ -193,9 +193,8 @@ jobs:
 
       - run: node scripts/prepack-binary.js
       - run: npm run build:types
-      - name: Commit changes
-        run: |
-          git add .
-          git commit -m "Updated tdlib to ${{ inputs.tdlib }}"
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
+        with:
+          branch: tdlib-update
+          title: Update tdlib to ${{ inputs.tdlib }}
