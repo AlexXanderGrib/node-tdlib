@@ -75,8 +75,19 @@ jobs:
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
+      - name: Restore homebrew cache
+        uses: actions/cache/restore@v3 
+        with: 
+          path: ~/Library/Caches/Homebrew
+          key: homebrew
+
       - name: Install dependencies
         run: HOMEBREW_NO_INSTALL_CLEANUP=1 brew install gperf openssl zlib
+      - name: Save homebrew cache
+        uses: actions/cache/save@v3 
+        with: 
+          path: ~/Library/Caches/Homebrew
+          key: homebrew
       - name: CMake version
         run: cmake --version
       - name: Build TDLib
@@ -108,17 +119,20 @@ jobs:
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
-      - name: vcpkg cache
-        uses: actions/cache@v3
+      - name: vcpkg restore cache
+        uses: actions/cache/restore@v3
         with:
           path: '~\AppData\Local\vcpkg\archives'
-          key: windows-vcpkg-${{ github.run_id }}
-          restore-keys: |
-            windows-vcpkg-
+          key: vcpkg
       - name: Update
         run: vcpkg update
       - name: Install dependencies using vcpkg
         run: vcpkg install gperf:x64-windows-static openssl:x64-windows-static zlib:x64-windows-static
+      - name: vcpkg save cache
+        uses: actions/cache/save@v3
+        with:
+          path: '~\AppData\Local\vcpkg\archives'
+          key: vcpkg
       - name: CMake version
         run: cmake --version
       - name: Build TDLib
