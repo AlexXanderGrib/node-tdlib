@@ -173,7 +173,7 @@ jobs:
       - run: node scripts/prepack-binary.js
       - run: npm run build:types
       - name: Commit changes
-        run: | 
+        run: |
           git add .
           git commit -m "Updated tdlib to ${{ inputs.tdlib }}"
       - name: Create pull request
