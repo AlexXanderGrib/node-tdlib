@@ -1,0 +1,40 @@
+{
+  "name": "@tdlib-native/tdjson-win32-x64",
+  "version": "1.8.22-commit.1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc",
+  "description": "Built TDLib",
+  "keywords": [
+    "tdlib",
+    "binary"
+  ],
+  "author": "Alexander <me@alexxgrib.me> (https://alexxgrib.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexxgrib/node-tdlib/issues"
+  },
+  "homepage": "https://github.com/alexxgrib/node-tdlib#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexXanderGrib/node-tdlib.git"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "tdjson.dll"
+  ]
+}
