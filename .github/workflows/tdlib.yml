@@ -46,6 +46,7 @@ jobs:
           ldd --version
           openssl version
           ldd build/libtdjson.so
+
       - uses: actions/upload-artifact@v3
         with:
           name: tdlib-linux-x64

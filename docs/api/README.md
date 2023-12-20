@@ -48,7 +48,7 @@ TDLib / [Modules](modules.md)
 This is raw wrapper of TDLib. It does not (yet) provide any mechanisms for authentication
 
 ```typescript
-import { Client } from "tdlib-native";
+import { Client, Authenticator } from "tdlib-native";
 import { TDLibAddon } from "tdlib-native/addon";
 
 async function init() {
@@ -58,18 +58,25 @@ async function init() {
   // Make TDLib shut up. Immediately
   Client.execute(adapter, "setLogVerbosityLevel", {
     new_verbosity_level: 0
-  })
+  });
 
   const client = new Client(adapter);
+  const authenticator = Authenticator.create(client)
+    .tdlibParameters({
+      /* options */
+    })
+    .token(process.env.TELEGRAM_BOT_TOKEN);
 
   // Start polling responses from TDLib
   client.start();
+  await authenticator.authenticate();
+  // client authorized as bot
 
   // Call any tdlib method
   await client.api.getOption({ name: "version" });
   // => Promise { _: "optionValueString", value: "1.8.22" }
 
-  // or use a wrapper 
+  // or use a wrapper
   await client.tdlibOptions.get("version");
   // => Promise "1.8.22"
 
@@ -90,6 +97,6 @@ async function init() {
 **Usage with RxJS**
 
 ```typescript
-// Observable will complete after client.destroy() call 
+// Observable will complete after client.destroy() call
 const updates = new Observable(client.updates.toRxObserver());
 ```

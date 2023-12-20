@@ -1,7 +1,7 @@
 import type { TDLib, TDLibClient } from "./shared/client";
 import { error, Update, $AsyncApi, $SyncApi, $MethodsDict } from "./generated/types";
 import * as JSON from "./json";
-import { AsyncData } from "./shared/async";
+import { PromiseWithResolvers, promiseWithResolvers } from "./shared/async";
 import { EventBus, Observable } from "./event-bus";
 import debug from "debug";
 import { TDLibOptions } from "./options";
@@ -74,7 +74,7 @@ export class TDError extends Error implements error {
  */
 export class Client {
   private readonly _client: TDLibClient;
-  private readonly _requests: Map<number, AsyncData<any>> = new Map();
+  private readonly _requests: Map<number, PromiseWithResolvers<any>> = new Map();
   private readonly _updates: EventBus<Update> = new EventBus();
   private readonly _adapter: TDLib;
   private _state = ClientState.PAUSED;
@@ -108,7 +108,7 @@ export class Client {
     parameters: Parameters<$AsyncApi[T]>[0]
   ): Promise<ReturnType<$MethodsDict[T]>> {
     const extra = Math.random();
-    const data = new AsyncData();
+    const data = promiseWithResolvers<any>();
 
     assignTemporary(parameters, { _: method, "@extra": extra }, (merged) => {
       const value = JSON.serialize(merged);
@@ -119,7 +119,7 @@ export class Client {
     this._requests.set(extra, data);
 
     try {
-      return await data;
+      return await data.promise;
     } catch (error) {
       if (typeof error === "object" && error && "_" in error) {
         const value = error as error;

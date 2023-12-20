@@ -1,4 +1,3 @@
-import { InlineKeyboardButtonType$Input } from "../types";
 import {
   replyMarkupForceReply,
   replyMarkupRemoveKeyboard,
@@ -6,7 +5,8 @@ import {
   KeyboardButton$Input,
   KeyboardButtonType$Input,
   InlineKeyboardButton$Input,
-  replyMarkupInlineKeyboard$Input
+  replyMarkupInlineKeyboard$Input,
+  InlineKeyboardButtonType$Input
 } from "./types";
 
 /**

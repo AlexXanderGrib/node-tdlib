@@ -37,7 +37,7 @@
 
 #### Defined in
 
-dist/markup.d.ts:11
+dist/markup.d.ts:10
 
 ___
 
@@ -55,7 +55,7 @@ InlineKeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:213
+dist/markup.d.ts:212
 
 ___
 
@@ -79,7 +79,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:141
+dist/markup.d.ts:140
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-dist/markup.d.ts:22
+dist/markup.d.ts:21

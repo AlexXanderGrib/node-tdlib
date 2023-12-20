@@ -29,8 +29,8 @@ jobs:
 
       - name: Upload coverage to Codecov
         run: npx codecov
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        # env:
+        #   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
       # Only if needed
       # - name: Upload coverage to Codacy

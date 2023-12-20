@@ -12,12 +12,17 @@
 ### Interfaces
 
 - [Observable](../interfaces/index._internal_.Observable.md)
+- [StageAuthenticate](../interfaces/index._internal_.StageAuthenticate.md)
+- [StageSelect](../interfaces/index._internal_.StageSelect.md)
+- [StageTDLibParameters](../interfaces/index._internal_.StageTDLibParameters.md)
+- [StageUser](../interfaces/index._internal_.StageUser.md)
 - [Subscriber](../interfaces/index._internal_.Subscriber.md)
 - [TDLib](../interfaces/index._internal_.TDLib.md)
 
 ### Type Aliases
 
 - [AnyKeyof](index._internal_.md#anykeyof)
+- [AuthenticateOptions](index._internal_.md#authenticateoptions)
 - [Extendable](index._internal_.md#extendable)
 - [KeyboardOptions](index._internal_.md#keyboardoptions)
 - [Keys](index._internal_.md#keys)
@@ -29,6 +34,7 @@
 - [TDLibOptionsReadable](index._internal_.md#tdliboptionsreadable)
 - [TDLibOptionsWritable](index._internal_.md#tdliboptionswritable)
 - [Unsubscribe](index._internal_.md#unsubscribe)
+- [Waiter](index._internal_.md#waiter)
 - [WritableKeys](index._internal_.md#writablekeys)
 - [integer](index._internal_.md#integer)
 
@@ -47,6 +53,22 @@
 #### Defined in
 
 dist/options.d.ts:123
+
+___
+
+### AuthenticateOptions
+
+Ƭ **AuthenticateOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `signal?` | `AbortSignal` |
+
+#### Defined in
+
+dist/auth.d.ts:4
 
 ___
 
@@ -82,7 +104,7 @@ ___
 
 #### Defined in
 
-dist/markup.d.ts:25
+dist/markup.d.ts:24
 
 ___
 
@@ -245,6 +267,23 @@ ___
 #### Defined in
 
 dist/event-bus.d.ts:2
+
+___
+
+### Waiter
+
+Ƭ **Waiter**<`T`, `A`\>: `T` \| (...`parameters`: `A`) => `T` \| `PromiseLike`<`T`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `T` |
+| `A` | extends readonly `unknown`[] = [] |
+
+#### Defined in
+
+dist/auth.d.ts:7
 
 ___
 

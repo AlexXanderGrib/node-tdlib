@@ -1,5 +1,3 @@
-import { AsyncData, AsyncState } from "./shared/async";
-
 export type Subscription<T> = (value: T) => void;
 export type Unsubscribe = () => void;
 
@@ -101,47 +99,5 @@ export class EventBus<T> implements Observable<T> {
 
       return this.subscribe((value) => subscriber.next(value));
     };
-  }
-
-  /**
-   *
-   *
-   * @memberof EventBus
-   */
-  async *[Symbol.asyncIterator]() {
-    if (this._completed) return;
-
-    const queue: AsyncData<T>[] = [new AsyncData()];
-    this.subscribe((value) => {
-      queue.push(new AsyncData());
-      const available = queue.find((async) => async.state === AsyncState.PENDING);
-
-      if (!available) return;
-
-      available.resolve(value);
-    });
-
-    this._onComplete.add(() => {
-      const error = new Error("Completed");
-
-      for (const async of queue) {
-        async.reject(error);
-      }
-    });
-
-    while (!this._completed) {
-      const async = queue.find((async) => async.state === AsyncState.PENDING);
-      if (!async) break;
-
-      try {
-        const value = (await async) as T;
-        const index = queue.indexOf(async);
-        if (index !== -1) queue.splice(index, 1);
-
-        yield value;
-      } catch {
-        return;
-      }
-    }
   }
 }

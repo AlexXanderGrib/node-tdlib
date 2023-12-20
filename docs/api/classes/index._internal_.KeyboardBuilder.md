@@ -53,7 +53,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:54
+dist/markup.d.ts:53
 
 ## Properties
 
@@ -63,7 +63,7 @@ dist/markup.d.ts:54
 
 #### Defined in
 
-dist/markup.d.ts:40
+dist/markup.d.ts:39
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-dist/markup.d.ts:38
+dist/markup.d.ts:37
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-dist/markup.d.ts:39
+dist/markup.d.ts:38
 
 ## Accessors
 
@@ -101,7 +101,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:48
+dist/markup.d.ts:47
 
 ## Methods
 
@@ -123,7 +123,7 @@ replyMarkupShowKeyboard$Input
 
 #### Defined in
 
-dist/markup.d.ts:125
+dist/markup.d.ts:124
 
 ___
 
@@ -150,7 +150,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:71
+dist/markup.d.ts:70
 
 ___
 
@@ -176,7 +176,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:110
+dist/markup.d.ts:109
 
 ___
 
@@ -202,7 +202,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:86
+dist/markup.d.ts:85
 
 ___
 
@@ -228,7 +228,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:102
+dist/markup.d.ts:101
 
 ___
 
@@ -254,7 +254,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:118
+dist/markup.d.ts:117
 
 ___
 
@@ -280,7 +280,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:94
+dist/markup.d.ts:93
 
 ___
 
@@ -300,7 +300,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:78
+dist/markup.d.ts:77
 
 ___
 
@@ -326,7 +326,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:62
+dist/markup.d.ts:61
 
 ___
 
@@ -348,4 +348,4 @@ replyMarkupShowKeyboard$Input
 
 #### Defined in
 
-dist/markup.d.ts:132
+dist/markup.d.ts:131

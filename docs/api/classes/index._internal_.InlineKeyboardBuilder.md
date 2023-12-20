@@ -42,7 +42,7 @@
 
 #### Defined in
 
-dist/markup.d.ts:148
+dist/markup.d.ts:147
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-dist/markup.d.ts:149
+dist/markup.d.ts:148
 
 ## Accessors
 
@@ -70,7 +70,7 @@ InlineKeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:157
+dist/markup.d.ts:156
 
 ## Methods
 
@@ -92,7 +92,7 @@ replyMarkupInlineKeyboard$Input
 
 #### Defined in
 
-dist/markup.d.ts:198
+dist/markup.d.ts:197
 
 ___
 
@@ -117,7 +117,7 @@ InlineKeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:184
+dist/markup.d.ts:183
 
 ___
 
@@ -144,7 +144,7 @@ InlineKeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:166
+dist/markup.d.ts:165
 
 ___
 
@@ -164,7 +164,7 @@ KeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:191
+dist/markup.d.ts:190
 
 ___
 
@@ -186,7 +186,7 @@ replyMarkupInlineKeyboard$Input
 
 #### Defined in
 
-dist/markup.d.ts:205
+dist/markup.d.ts:204
 
 ___
 
@@ -213,4 +213,4 @@ InlineKeyboardBuilder
 
 #### Defined in
 
-dist/markup.d.ts:175
+dist/markup.d.ts:174

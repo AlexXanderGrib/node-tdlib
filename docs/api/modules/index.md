@@ -20,6 +20,7 @@
 
 ### Classes
 
+- [Authenticator](../classes/index.Authenticator.md)
 - [Client](../classes/index.Client.md)
 - [TDError](../classes/index.TDError.md)
 - [TDLibOptions](../classes/index.TDLibOptions.md)
