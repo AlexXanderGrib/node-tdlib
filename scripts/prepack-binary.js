@@ -13,7 +13,7 @@ const packagePath = resolve(__dirname, "../package.json");
 const packageJson = JSON.parse(readFileSync(packagePath, "utf-8"));
 
 const basePackageJson = {
-  version: `${meta.version}`,
+  version: `${meta.version}-commit.${meta['commit-hash']}`,
   description: "Built TDLib",
   keywords: ["tdlib", "binary"],
 

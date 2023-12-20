@@ -75,19 +75,17 @@ jobs:
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
-      - name: Restore homebrew cache
-        uses: actions/cache/restore@v3 
-        with: 
+      - name: homebrew cache
+        uses: actions/cache@v3
+        with:
           path: ~/Library/Caches/Homebrew
-          key: homebrew
+          key: homebrew-${{github.run_id}}
+          restore-keys: |
+            homebrew-
 
       - name: Install dependencies
         run: HOMEBREW_NO_INSTALL_CLEANUP=1 brew install gperf openssl zlib
-      - name: Save homebrew cache
-        uses: actions/cache/save@v3 
-        with: 
-          path: ~/Library/Caches/Homebrew
-          key: homebrew
+
       - name: CMake version
         run: cmake --version
       - name: Build TDLib
@@ -119,20 +117,19 @@ jobs:
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
-      - name: vcpkg restore cache
-        uses: actions/cache/restore@v3
+      - name: vcpkg cache
+        uses: actions/cache@v3
         with:
           path: '~\AppData\Local\vcpkg\archives'
-          key: vcpkg
+          key: vcpkg-${{ github.run_id }}
+          restore-keys: |
+            vcpkg-
+
       - name: Update
         run: vcpkg update
       - name: Install dependencies using vcpkg
         run: vcpkg install gperf:x64-windows-static openssl:x64-windows-static zlib:x64-windows-static
-      - name: vcpkg save cache
-        uses: actions/cache/save@v3
-        with:
-          path: '~\AppData\Local\vcpkg\archives'
-          key: vcpkg
+
       - name: CMake version
         run: cmake --version
       - name: Build TDLib
@@ -168,6 +165,19 @@ jobs:
 
       - name: List arifacts
         run: ls td
+
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      - uses: actions/cache@v3
+        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - run: npm ci
       # - uses: geekyeggo/delete-artifact@v2
       #   with:
