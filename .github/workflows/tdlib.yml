@@ -165,7 +165,7 @@ jobs:
           mv meta/* ./td
           mv schema/* ./td
 
-      - uses: actions/upload-artifact
+      - uses: actions/upload-artifact@v3
         with:
           name: td
           path: td/*
