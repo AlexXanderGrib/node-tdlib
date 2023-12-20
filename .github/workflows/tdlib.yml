@@ -155,14 +155,14 @@ jobs:
       - name: List arifacts
         run: ls td
       - run: npm ci
-      - uses: geekyeggo/delete-artifact@v2
-        with:
-          name: |
-            tdlib-macos-x64
-            tdlib-linux-x64
-            tdlib-windows-x64
-            meta
-            schema
+      # - uses: geekyeggo/delete-artifact@v2
+      #   with:
+      #     name: |
+      #       tdlib-macos-x64
+      #       tdlib-linux-x64
+      #       tdlib-windows-x64
+      #       meta
+      #       schema
 
       - run: |
           cd td
