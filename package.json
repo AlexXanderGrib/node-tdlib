@@ -131,8 +131,8 @@
     "node-addon-api": "^6.1.0"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-darwin-x64": "1.8.22-td.1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc",
-    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.22-td.1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc",
-    "@tdlib-native/tdjson-win32-x64": "1.8.22-td.1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc"
+    "@tdlib-native/tdjson-darwin-x64": "1.8.22-commit.1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.22-commit.1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc",
+    "@tdlib-native/tdjson-win32-x64": "1.8.22-commit.1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc"
   }
 }
