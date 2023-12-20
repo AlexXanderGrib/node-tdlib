@@ -151,6 +151,9 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           path: td
+
+      - name: List arifacts
+        run: ls td
       - run: npm ci
       - uses: geekyeggo/delete-artifact@v2
         with:
