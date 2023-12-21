@@ -43,7 +43,7 @@
 
 ## ⚙️ Usage
 
-This is raw wrapper of TDLib. It does not (yet) provide any mechanisms for authentication
+This is raw wrapper of TDLib
 
 ```typescript
 import { Client, Authenticator } from "tdlib-native";
