@@ -93,7 +93,7 @@ describe("Markup", () => {
         .keyboard()
         .textButton("test")
         .row()
-        .button("row 2", { _: "keyboardButtonTypeRequestUser", id: 0 })
+        .button("row 2", { _: "keyboardButtonTypeRequestUsers", id: 0 })
         .build()
     ).toEqual({
       _: "replyMarkupShowKeyboard",
@@ -114,7 +114,7 @@ describe("Markup", () => {
           {
             _: "keyboardButton",
             text: "row 2",
-            type: { _: "keyboardButtonTypeRequestUser", id: 0 }
+            type: { _: "keyboardButtonTypeRequestUsers", id: 0 }
           }
         ]
       ]
