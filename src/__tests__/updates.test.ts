@@ -38,7 +38,6 @@ describe("Updates", () => {
       }`,
       database_directory: ".td/db",
       database_encryption_key: apiHash,
-      enable_storage_optimizer: true,
       files_directory: ".td/files",
       system_version: "0.0.0",
       use_test_dc: false
