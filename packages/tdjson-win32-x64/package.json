@@ -1,6 +1,6 @@
 {
   "name": "@tdlib-native/tdjson-win32-x64",
-  "version": "1.8.25-commit.d93a99e3351db82573d765ce4f5e84714c277518",
+  "version": "1.8.30-commit.4257a341bd08c1fa4d5329b7ecc75cf15563aa23",
   "description": "Built TDLib",
   "keywords": [
     "tdlib",
