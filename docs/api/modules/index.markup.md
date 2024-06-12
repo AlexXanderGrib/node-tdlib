@@ -19,8 +19,6 @@
 
 ▸ **forceReply**(`«destructured»?`): [`replyMarkupForceReply`](index.types.default.md#replymarkupforcereply)
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -35,6 +33,8 @@
 
 {replyMarkupForceReply}
 
+**`Export`**
+
 #### Defined in
 
 dist/markup.d.ts:10
@@ -43,15 +43,15 @@ ___
 
 ### inlineKeyboard
 
-▸ **inlineKeyboard**(): [`InlineKeyboardBuilder`](../classes/index._internal_.InlineKeyboardBuilder.md)
-
-**`Export`**
+▸ **inlineKeyboard**(): `InlineKeyboardBuilder`
 
 #### Returns
 
-[`InlineKeyboardBuilder`](../classes/index._internal_.InlineKeyboardBuilder.md)
+`InlineKeyboardBuilder`
 
 InlineKeyboardBuilder
+
+**`Export`**
 
 #### Defined in
 
@@ -61,21 +61,21 @@ ___
 
 ### keyboard
 
-▸ **keyboard**(`options?`): [`KeyboardBuilder`](../classes/index._internal_.KeyboardBuilder.md)
-
-**`Export`**
+▸ **keyboard**(`options?`): `KeyboardBuilder`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `Partial`<[`KeyboardOptions`](index._internal_.md#keyboardoptions)\> |
+| `options?` | `Partial`\<`KeyboardOptions`\> |
 
 #### Returns
 
-[`KeyboardBuilder`](../classes/index._internal_.KeyboardBuilder.md)
+`KeyboardBuilder`
 
 KeyboardBuilder
+
+**`Export`**
 
 #### Defined in
 
@@ -86,8 +86,6 @@ ___
 ### removeKeyboard
 
 ▸ **removeKeyboard**(`«destructured»?`): [`replyMarkupRemoveKeyboard`](index.types.default.md#replymarkupremovekeyboard)
-
-**`Export`**
 
 #### Parameters
 
@@ -101,6 +99,8 @@ ___
 [`replyMarkupRemoveKeyboard`](index.types.default.md#replymarkupremovekeyboard)
 
 {replyMarkupRemoveKeyboard}
+
+**`Export`**
 
 #### Defined in
 

@@ -23,7 +23,7 @@ export interface Addon {
  *
  *
  * @param {string} [addonPath]
- * @return {Addon}  {Addon}
+ * @returns {Addon}  {Addon}
  */
 async function loadAddon(addonPath?: string): Promise<Addon> {
   const baseDirectory = getAddonFolderPath();
@@ -44,7 +44,7 @@ const isMusl = () =>
 /**
  *
  *
- * @return {Promise<string>}  {Promise<string>}
+ * @returns {Promise<string>}  {Promise<string>}
  */
 async function getTDLibPath(): Promise<string> {
   let packageName = `@tdlib-native/tdjson-${process.platform}-${process.arch}`;
@@ -83,7 +83,7 @@ export class TDLibAddon implements TDLib {
    * @static
    * @param {string} [tdlibPath] Resolves to prebuild TDLib for your platform
    * @param {string} [addonPath]
-   * @return {Promise<TDLib>}
+   * @returns {Promise<TDLib>}
    * @memberof TDLibAddon
    */
   static async create(tdlibPath?: string, addonPath?: string): Promise<TDLibAddon> {
@@ -115,7 +115,7 @@ export class TDLibAddon implements TDLib {
   /**
    *
    *
-   * @return {TDLibClient}  {TDLibClient}
+   * @returns {TDLibClient}  {TDLibClient}
    * @memberof TDLibAddon
    */
   create(): TDLibClient {
@@ -127,6 +127,7 @@ export class TDLibAddon implements TDLib {
    *
    * @param {TDLibClient} client
    * @memberof TDLibAddon
+   * @returns {void}
    */
   destroy(client: TDLibClient): void {
     this._addon.td_client_destroy(client);
@@ -137,7 +138,7 @@ export class TDLibAddon implements TDLib {
    *
    * @param {(TDLibClient | null)} client
    * @param {string} json
-   * @return {(string | null)}  {(string | null)}
+   * @returns {(string | null)}  {(string | null)}
    * @memberof TDLibAddon
    */
   execute(client: TDLibClient | null, json: string): string | null {
@@ -149,7 +150,7 @@ export class TDLibAddon implements TDLib {
    *
    * @param {TDLibClient} client
    * @param {number} timeout
-   * @return {Promise<string|null>}  {(Promise<string | null>)}
+   * @returns {Promise<string|null>}  {(Promise<string | null>)}
    * @memberof TDLibAddon
    */
   receive(client: TDLibClient, timeout: number): Promise<string | null> {
@@ -168,6 +169,7 @@ export class TDLibAddon implements TDLib {
    * @param {TDLibClient} client
    * @param {string} json
    * @memberof TDLibAddon
+   * @returns {void}
    */
   send(client: TDLibClient, json: string): void {
     this._addon.td_client_send(client, json);
@@ -178,6 +180,7 @@ export class TDLibAddon implements TDLib {
    *
    * @param {function(errorMessage: string): void=} callback
    * @memberof TDLibAddon
+   * @returns {void}
    */
   setLogFatalErrorCallback(callback: ((errorMessage: string) => void) | null): void {
     this._addon.td_set_fatal_error_callback(callback);

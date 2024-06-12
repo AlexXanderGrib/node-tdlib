@@ -19,8 +19,10 @@ Convenience class for sync API calls
 ### Methods
 
 - [addLogMessage](index.types.default._SyncApi.md#addlogmessage)
+- [checkQuickReplyShortcutName](index.types.default._SyncApi.md#checkquickreplyshortcutname)
 - [cleanFileName](index.types.default._SyncApi.md#cleanfilename)
 - [getChatFolderDefaultIconName](index.types.default._SyncApi.md#getchatfolderdefaulticonname)
+- [getCountryFlagEmoji](index.types.default._SyncApi.md#getcountryflagemoji)
 - [getFileExtension](index.types.default._SyncApi.md#getfileextension)
 - [getFileMimeType](index.types.default._SyncApi.md#getfilemimetype)
 - [getJsonString](index.types.default._SyncApi.md#getjsonstring)
@@ -49,7 +51,7 @@ Convenience class for sync API calls
 
 ### constructor
 
-• **new $SyncApi**(`client`)
+• **new $SyncApi**(`client`): [`$SyncApi`](index.types.default._SyncApi.md)
 
 Constructs [$SyncApi](index.types.default._SyncApi.md)
 
@@ -60,9 +62,13 @@ Constructs [$SyncApi](index.types.default._SyncApi.md)
 | `client` | `Object` |
 | `client.execute` | (`method`: `string`, `parameters`: `unknown`) => `unknown` |
 
+#### Returns
+
+[`$SyncApi`](index.types.default._SyncApi.md)
+
 #### Defined in
 
-dist/generated/types.d.ts:62459
+dist/generated/types.d.ts:70776
 
 ## Properties
 
@@ -72,7 +78,7 @@ dist/generated/types.d.ts:62459
 
 #### Defined in
 
-dist/generated/types.d.ts:62453
+dist/generated/types.d.ts:70770
 
 ## Methods
 
@@ -96,7 +102,31 @@ Adds a message to TDLib internal log. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:62636
+dist/generated/types.d.ts:70969
+
+___
+
+### checkQuickReplyShortcutName
+
+▸ **checkQuickReplyShortcutName**(`parameters`): [`ok`](../modules/index.types.default.md#ok-1)
+
+Checks validness of a name for a quick reply shortcut. Can be called synchronously
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`checkQuickReplyShortcutName$DirectInput`](../modules/index.types.default.md#checkquickreplyshortcutname$directinput) | [checkQuickReplyShortcutName$Input](../modules/index.types.default.md#checkquickreplyshortcutname$input) |
+
+#### Returns
+
+[`ok`](../modules/index.types.default.md#ok-1)
+
+[Ok](../modules/index.types.default.md#ok)
+
+#### Defined in
+
+dist/generated/types.d.ts:70785
 
 ___
 
@@ -120,7 +150,7 @@ Removes potentially dangerous characters from the name of a file. The encoding o
 
 #### Defined in
 
-dist/generated/types.d.ts:62517
+dist/generated/types.d.ts:70850
 
 ___
 
@@ -144,7 +174,31 @@ Returns default icon name for a folder. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:62552
+dist/generated/types.d.ts:70885
+
+___
+
+### getCountryFlagEmoji
+
+▸ **getCountryFlagEmoji**(`parameters`): [`text`](../modules/index.types.default.md#text-1)
+
+Returns an emoji for the given country. Returns an empty string on failure. Can be called synchronously
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getCountryFlagEmoji$DirectInput`](../modules/index.types.default.md#getcountryflagemoji$directinput) | [getCountryFlagEmoji$Input](../modules/index.types.default.md#getcountryflagemoji$input) |
+
+#### Returns
+
+[`text`](../modules/index.types.default.md#text-1)
+
+[Text](../modules/index.types.default.md#text)
+
+#### Defined in
+
+dist/generated/types.d.ts:70829
 
 ___
 
@@ -168,7 +222,7 @@ Returns the extension of a file, guessed by its MIME type. Returns an empty stri
 
 #### Defined in
 
-dist/generated/types.d.ts:62510
+dist/generated/types.d.ts:70843
 
 ___
 
@@ -192,7 +246,7 @@ Returns the MIME type of a file, guessed by its extension. Returns an empty stri
 
 #### Defined in
 
-dist/generated/types.d.ts:62503
+dist/generated/types.d.ts:70836
 
 ___
 
@@ -216,7 +270,7 @@ Converts a JsonValue object to corresponding JSON-serialized string. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:62538
+dist/generated/types.d.ts:70871
 
 ___
 
@@ -240,7 +294,7 @@ Converts a JSON-serialized string to corresponding JsonValue object. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:62531
+dist/generated/types.d.ts:70864
 
 ___
 
@@ -264,7 +318,7 @@ Returns a string stored in the local database from the specified localization ta
 
 #### Defined in
 
-dist/generated/types.d.ts:62524
+dist/generated/types.d.ts:70857
 
 ___
 
@@ -288,7 +342,7 @@ Returns information about currently used log stream for internal logging of TDLi
 
 #### Defined in
 
-dist/generated/types.d.ts:62594
+dist/generated/types.d.ts:70927
 
 ___
 
@@ -312,7 +366,7 @@ Returns current verbosity level for a specified TDLib internal log tag. Can be c
 
 #### Defined in
 
-dist/generated/types.d.ts:62629
+dist/generated/types.d.ts:70962
 
 ___
 
@@ -320,7 +374,7 @@ ___
 
 ▸ **getLogTags**(`parameters`): [`logTags`](../modules/index.types.default.md#logtags-1)
 
-Returns list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
+Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
 
 #### Parameters
 
@@ -336,7 +390,7 @@ Returns list of available TDLib internal log tags, for example, ["actor", "binlo
 
 #### Defined in
 
-dist/generated/types.d.ts:62615
+dist/generated/types.d.ts:70948
 
 ___
 
@@ -360,7 +414,7 @@ Returns current verbosity level of the internal logging of TDLib. Can be called 
 
 #### Defined in
 
-dist/generated/types.d.ts:62608
+dist/generated/types.d.ts:70941
 
 ___
 
@@ -384,7 +438,7 @@ Replaces text entities with Markdown formatting in a human-friendly format. Enti
 
 #### Defined in
 
-dist/generated/types.d.ts:62496
+dist/generated/types.d.ts:70822
 
 ___
 
@@ -408,7 +462,7 @@ Returns the value of an option by its name. (Check the list of available options
 
 #### Defined in
 
-dist/generated/types.d.ts:62566
+dist/generated/types.d.ts:70899
 
 ___
 
@@ -432,7 +486,7 @@ Returns information about a phone number by its prefix synchronously. getCountri
 
 #### Defined in
 
-dist/generated/types.d.ts:62580
+dist/generated/types.d.ts:70913
 
 ___
 
@@ -456,7 +510,7 @@ Returns a globally unique push notification subscription identifier for identifi
 
 #### Defined in
 
-dist/generated/types.d.ts:62559
+dist/generated/types.d.ts:70892
 
 ___
 
@@ -480,7 +534,7 @@ Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numb
 
 #### Defined in
 
-dist/generated/types.d.ts:62475
+dist/generated/types.d.ts:70799
 
 ___
 
@@ -504,7 +558,7 @@ Converts a themeParameters object to corresponding JSON-serialized string. Can b
 
 #### Defined in
 
-dist/generated/types.d.ts:62545
+dist/generated/types.d.ts:70878
 
 ___
 
@@ -528,7 +582,7 @@ Parses Markdown entities in a human-friendly format, ignoring markup errors. Can
 
 #### Defined in
 
-dist/generated/types.d.ts:62489
+dist/generated/types.d.ts:70815
 
 ___
 
@@ -536,7 +590,9 @@ ___
 
 ▸ **parseTextEntities**(`parameters`): [`formattedText`](../modules/index.types.default.md#formattedtext-1)
 
-Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities from a marked-up text. Can be called synchronously
+Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
+
+- and MentionName entities from a marked-up text. Can be called synchronously
 
 #### Parameters
 
@@ -552,7 +608,7 @@ Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote,
 
 #### Defined in
 
-dist/generated/types.d.ts:62482
+dist/generated/types.d.ts:70808
 
 ___
 
@@ -576,7 +632,7 @@ Searches for a given quote in a text. Returns found quote start position in UTF-
 
 #### Defined in
 
-dist/generated/types.d.ts:62468
+dist/generated/types.d.ts:70792
 
 ___
 
@@ -600,7 +656,7 @@ Searches specified query by word prefixes in the provided strings. Returns 0-bas
 
 #### Defined in
 
-dist/generated/types.d.ts:62573
+dist/generated/types.d.ts:70906
 
 ___
 
@@ -624,7 +680,7 @@ Sets new log stream for internal logging of TDLib. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:62587
+dist/generated/types.d.ts:70920
 
 ___
 
@@ -648,7 +704,7 @@ Sets the verbosity level for a specified TDLib internal log tag. Can be called s
 
 #### Defined in
 
-dist/generated/types.d.ts:62622
+dist/generated/types.d.ts:70955
 
 ___
 
@@ -672,7 +728,7 @@ Sets the verbosity level of the internal logging of TDLib. Can be called synchro
 
 #### Defined in
 
-dist/generated/types.d.ts:62601
+dist/generated/types.d.ts:70934
 
 ___
 
@@ -696,4 +752,4 @@ Returns the specified error and ensures that the Error object is used; for testi
 
 #### Defined in
 
-dist/generated/types.d.ts:62643
+dist/generated/types.d.ts:70976

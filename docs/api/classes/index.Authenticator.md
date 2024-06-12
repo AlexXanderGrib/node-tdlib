@@ -6,6 +6,8 @@
 
 **`Export`**
 
+Authenticator
+
 **`Implements`**
 
 **`Implements`**
@@ -16,10 +18,10 @@
 
 ## Implements
 
-- [`StageTDLibParameters`](../interfaces/index._internal_.StageTDLibParameters.md)
-- [`StageSelect`](../interfaces/index._internal_.StageSelect.md)
-- [`StageAuthenticate`](../interfaces/index._internal_.StageAuthenticate.md)
-- [`StageUser`](../interfaces/index._internal_.StageUser.md)
+- `StageTDLibParameters`
+- `StageSelect`
+- `StageAuthenticate`
+- `StageUser`
 
 ## Table of contents
 
@@ -50,9 +52,13 @@
 
 ### constructor
 
-• `Private` **new Authenticator**()
+• **new Authenticator**(): [`Authenticator`](index.Authenticator.md)
 
 Creates an instance of Authenticator.
+
+#### Returns
+
+[`Authenticator`](index.Authenticator.md)
 
 **`Memberof`**
 
@@ -104,7 +110,19 @@ dist/auth.d.ts:58
 
 ### authenticate
 
-▸ **authenticate**(`options?`): `Promise`<`void`\>
+▸ **authenticate**(`options?`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `AuthenticateOptions` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+{Promise<void>}
 
 **`Throws`**
 
@@ -122,21 +140,9 @@ whatever is reason of cancellation token
 
 Authenticator
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`AuthenticateOptions`](../modules/index._internal_.md#authenticateoptions) |
-
-#### Returns
-
-`Promise`<`void`\>
-
-{Promise<void>}
-
 #### Implementation of
 
-[StageUser](../interfaces/index._internal_.StageUser.md).[authenticate](../interfaces/index._internal_.StageUser.md#authenticate)
+StageAuthenticate.authenticate
 
 #### Defined in
 
@@ -146,27 +152,27 @@ ___
 
 ### code
 
-▸ **code**(`code`): [`StageUser`](../interfaces/index._internal_.StageUser.md)
-
-**`Memberof`**
-
-Authenticator
+▸ **code**(`code`): `StageUser`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `code` | [`Waiter`](../modules/index._internal_.md#waiter)<`string`, [info: authenticationCodeInfo]\> |
+| `code` | `Waiter`\<`string`, [info: authenticationCodeInfo]\> |
 
 #### Returns
 
-[`StageUser`](../interfaces/index._internal_.StageUser.md)
+`StageUser`
 
 {StageUser}
 
+**`Memberof`**
+
+Authenticator
+
 #### Implementation of
 
-[StageUser](../interfaces/index._internal_.StageUser.md).[code](../interfaces/index._internal_.StageUser.md#code)
+StageUser.code
 
 #### Defined in
 
@@ -176,27 +182,27 @@ ___
 
 ### email
 
-▸ **email**(`email`): [`StageUser`](../interfaces/index._internal_.StageUser.md)
-
-**`Memberof`**
-
-Authenticator
+▸ **email**(`email`): `StageUser`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `email` | [`Waiter`](../modules/index._internal_.md#waiter)<`string`, []\> |
+| `email` | `Waiter`\<`string`, []\> |
 
 #### Returns
 
-[`StageUser`](../interfaces/index._internal_.StageUser.md)
+`StageUser`
 
 {StageUser}
 
+**`Memberof`**
+
+Authenticator
+
 #### Implementation of
 
-[StageUser](../interfaces/index._internal_.StageUser.md).[email](../interfaces/index._internal_.StageUser.md#email)
+StageUser.email
 
 #### Defined in
 
@@ -206,27 +212,27 @@ ___
 
 ### emailCode
 
-▸ **emailCode**(`emailCode`): [`StageUser`](../interfaces/index._internal_.StageUser.md)
-
-**`Memberof`**
-
-Authenticator
+▸ **emailCode**(`emailCode`): `StageUser`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `emailCode` | [`Waiter`](../modules/index._internal_.md#waiter)<`string`, [info: emailAddressAuthenticationCodeInfo]\> |
+| `emailCode` | `Waiter`\<`string`, [info: emailAddressAuthenticationCodeInfo]\> |
 
 #### Returns
 
-[`StageUser`](../interfaces/index._internal_.StageUser.md)
+`StageUser`
 
 {StageUser}
 
+**`Memberof`**
+
+Authenticator
+
 #### Implementation of
 
-[StageUser](../interfaces/index._internal_.StageUser.md).[emailCode](../interfaces/index._internal_.StageUser.md#emailcode)
+StageUser.emailCode
 
 #### Defined in
 
@@ -236,27 +242,27 @@ ___
 
 ### password
 
-▸ **password**(`password`): [`StageUser`](../interfaces/index._internal_.StageUser.md)
-
-**`Memberof`**
-
-Authenticator
+▸ **password**(`password`): `StageUser`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `password` | [`Waiter`](../modules/index._internal_.md#waiter)<`string`, [hint: string]\> |
+| `password` | `Waiter`\<`string`, [hint: string]\> |
 
 #### Returns
 
-[`StageUser`](../interfaces/index._internal_.StageUser.md)
+`StageUser`
 
 {StageUser}
 
+**`Memberof`**
+
+Authenticator
+
 #### Implementation of
 
-[StageUser](../interfaces/index._internal_.StageUser.md).[password](../interfaces/index._internal_.StageUser.md#password)
+StageUser.password
 
 #### Defined in
 
@@ -266,28 +272,28 @@ ___
 
 ### phone
 
-▸ **phone**(`phone`, `settings?`): [`StageUser`](../interfaces/index._internal_.StageUser.md)
-
-**`Memberof`**
-
-Authenticator
+▸ **phone**(`phone`, `settings?`): `StageUser`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `phone` | [`Waiter`](../modules/index._internal_.md#waiter)<`string`, []\> |
-| `settings?` | [`Waiter`](../modules/index._internal_.md#waiter)<[`phoneNumberAuthenticationSettings$Input`](../modules/index.types.default.md#phonenumberauthenticationsettings$input-1), []\> |
+| `phone` | `Waiter`\<`string`, []\> |
+| `settings?` | `Waiter`\<[`phoneNumberAuthenticationSettings$Input`](../modules/index.types.default.md#phonenumberauthenticationsettings$input-1), []\> |
 
 #### Returns
 
-[`StageUser`](../interfaces/index._internal_.StageUser.md)
+`StageUser`
 
 {StageUser}
 
+**`Memberof`**
+
+Authenticator
+
 #### Implementation of
 
-[StageSelect](../interfaces/index._internal_.StageSelect.md).[phone](../interfaces/index._internal_.StageSelect.md#phone)
+StageSelect.phone
 
 #### Defined in
 
@@ -297,27 +303,27 @@ ___
 
 ### register
 
-▸ **register**(`data`): [`StageUser`](../interfaces/index._internal_.StageUser.md)
-
-**`Memberof`**
-
-Authenticator
+▸ **register**(`data`): `StageUser`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data` | [`Waiter`](../modules/index._internal_.md#waiter)<[`registerUser$DirectInput`](../modules/index.types.default.md#registeruser$directinput), [tos: termsOfService]\> |
+| `data` | `Waiter`\<[`registerUser$DirectInput`](../modules/index.types.default.md#registeruser$directinput), [tos: termsOfService]\> |
 
 #### Returns
 
-[`StageUser`](../interfaces/index._internal_.StageUser.md)
+`StageUser`
 
 {StageUser}
 
+**`Memberof`**
+
+Authenticator
+
 #### Implementation of
 
-[StageUser](../interfaces/index._internal_.StageUser.md).[register](../interfaces/index._internal_.StageUser.md#register)
+StageUser.register
 
 #### Defined in
 
@@ -327,27 +333,27 @@ ___
 
 ### tdlibParameters
 
-▸ **tdlibParameters**(`parameters`): [`StageSelect`](../interfaces/index._internal_.StageSelect.md)
-
-**`Memberof`**
-
-Authenticator
+▸ **tdlibParameters**(`parameters`): `StageSelect`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `parameters` | [`Waiter`](../modules/index._internal_.md#waiter)<[`setTdlibParameters$DirectInput`](../modules/index.types.default.md#settdlibparameters$directinput), []\> |
+| `parameters` | `Waiter`\<[`setTdlibParameters$DirectInput`](../modules/index.types.default.md#settdlibparameters$directinput), []\> |
 
 #### Returns
 
-[`StageSelect`](../interfaces/index._internal_.StageSelect.md)
+`StageSelect`
 
 {StageSelect}
 
+**`Memberof`**
+
+Authenticator
+
 #### Implementation of
 
-[StageTDLibParameters](../interfaces/index._internal_.StageTDLibParameters.md).[tdlibParameters](../interfaces/index._internal_.StageTDLibParameters.md#tdlibparameters)
+StageTDLibParameters.tdlibParameters
 
 #### Defined in
 
@@ -357,27 +363,27 @@ ___
 
 ### token
 
-▸ **token**(`token`): [`StageAuthenticate`](../interfaces/index._internal_.StageAuthenticate.md)
-
-**`Memberof`**
-
-Authenticator
+▸ **token**(`token`): `StageAuthenticate`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `token` | [`Waiter`](../modules/index._internal_.md#waiter)<`string`, []\> |
+| `token` | `Waiter`\<`string`, []\> |
 
 #### Returns
 
-[`StageAuthenticate`](../interfaces/index._internal_.StageAuthenticate.md)
+`StageAuthenticate`
 
 {StageSelect}
 
+**`Memberof`**
+
+Authenticator
+
 #### Implementation of
 
-[StageSelect](../interfaces/index._internal_.StageSelect.md).[token](../interfaces/index._internal_.StageSelect.md#token)
+StageSelect.token
 
 #### Defined in
 
@@ -387,13 +393,7 @@ ___
 
 ### create
 
-▸ `Static` **create**(`client`): [`StageTDLibParameters`](../interfaces/index._internal_.StageTDLibParameters.md)
-
-**`Static`**
-
-**`Memberof`**
-
-Authenticator
+▸ **create**(`client`): `StageTDLibParameters`
 
 #### Parameters
 
@@ -403,9 +403,15 @@ Authenticator
 
 #### Returns
 
-[`StageTDLibParameters`](../interfaces/index._internal_.StageTDLibParameters.md)
+`StageTDLibParameters`
 
 {StageTDLibParameters}
+
+**`Static`**
+
+**`Memberof`**
+
+Authenticator
 
 #### Defined in
 

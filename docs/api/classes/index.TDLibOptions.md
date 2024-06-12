@@ -10,6 +10,8 @@ https://core.telegram.org/tdlib/options
 
 **`Export`**
 
+TDLibOptions
+
 ## Table of contents
 
 ### Constructors
@@ -33,9 +35,13 @@ https://core.telegram.org/tdlib/options
 
 ### constructor
 
-• `Private` **new TDLibOptions**()
+• **new TDLibOptions**(): [`TDLibOptions`](index.TDLibOptions.md)
 
 Creates an instance of TDLibOptions.
+
+#### Returns
+
+[`TDLibOptions`](index.TDLibOptions.md)
 
 **`Memberof`**
 
@@ -69,21 +75,21 @@ dist/options.d.ts:138
 
 ### assign
 
-▸ **assign**(`values`): `Promise`<`void`\>
-
-**`Memberof`**
-
-TDLibOptions
+▸ **assign**(`values`): `Promise`\<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `values` | [`OptionsWritable`](../modules/index._internal_.md#optionswritable) |
+| `values` | `OptionsWritable` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Memberof`**
+
+TDLibOptions
 
 #### Defined in
 
@@ -93,21 +99,21 @@ ___
 
 ### delete
 
-▸ **delete**(`key`): `Promise`<`void`\>
-
-**`Memberof`**
-
-TDLibOptions
+▸ **delete**(`key`): `Promise`\<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `key` | [`Keys`](../modules/index._internal_.md#keys) |
+| `key` | `Keys` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Memberof`**
+
+TDLibOptions
 
 #### Defined in
 
@@ -117,17 +123,13 @@ ___
 
 ### get
 
-▸ **get**<`T`\>(`key`): `Promise`<[`OptionsReadable`](../modules/index._internal_.md#optionsreadable)[`T`]\>
-
-**`Memberof`**
-
-TDLibOptions
+▸ **get**\<`T`\>(`key`): `Promise`\<`OptionsReadable`[`T`]\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Keys`](../modules/index._internal_.md#keys) |
+| `T` | extends `Keys` |
 
 #### Parameters
 
@@ -137,9 +139,13 @@ TDLibOptions
 
 #### Returns
 
-`Promise`<[`OptionsReadable`](../modules/index._internal_.md#optionsreadable)[`T`]\>
+`Promise`\<`OptionsReadable`[`T`]\>
 
 {Promise<TelegramOptionsExtended[T]>}
+
+**`Memberof`**
+
+TDLibOptions
 
 #### Defined in
 
@@ -149,30 +155,30 @@ ___
 
 ### set
 
-▸ **set**<`T`\>(`key`, `value`): `Promise`<`void`\>
-
-**`Memberof`**
-
-TDLibOptions
+▸ **set**\<`T`\>(`key`, `value`): `Promise`\<`void`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`WritableKeys`](../modules/index._internal_.md#writablekeys) |
+| `T` | extends `WritableKeys` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `key` | `T` |
-| `value` | [`OptionsWritable`](../modules/index._internal_.md#optionswritable)[`T`] |
+| `value` | `OptionsWritable`[`T`] |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 {Promise<void>}
+
+**`Memberof`**
+
+TDLibOptions
 
 #### Defined in
 
@@ -182,13 +188,7 @@ ___
 
 ### for
 
-▸ `Static` **for**(`api`): [`TDLibOptions`](index.TDLibOptions.md)
-
-**`Static`**
-
-**`Memberof`**
-
-TDLibOptions
+▸ **for**(`api`): [`TDLibOptions`](index.TDLibOptions.md)
 
 #### Parameters
 
@@ -201,6 +201,12 @@ TDLibOptions
 [`TDLibOptions`](index.TDLibOptions.md)
 
 {TDLibOptions}
+
+**`Static`**
+
+**`Memberof`**
+
+TDLibOptions
 
 #### Defined in
 

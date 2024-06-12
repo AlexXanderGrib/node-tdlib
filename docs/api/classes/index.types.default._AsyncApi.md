@@ -21,7 +21,6 @@ Convenience class for API calls
 - [acceptCall](index.types.default._AsyncApi.md#acceptcall)
 - [acceptTermsOfService](index.types.default._AsyncApi.md#accepttermsofservice)
 - [activateStoryStealthMode](index.types.default._AsyncApi.md#activatestorystealthmode)
-- [addApplicationChangelog](index.types.default._AsyncApi.md#addapplicationchangelog)
 - [addChatFolderByInviteLink](index.types.default._AsyncApi.md#addchatfolderbyinvitelink)
 - [addChatMember](index.types.default._AsyncApi.md#addchatmember)
 - [addChatMembers](index.types.default._AsyncApi.md#addchatmembers)
@@ -35,6 +34,9 @@ Convenience class for API calls
 - [addMessageReaction](index.types.default._AsyncApi.md#addmessagereaction)
 - [addNetworkStatistics](index.types.default._AsyncApi.md#addnetworkstatistics)
 - [addProxy](index.types.default._AsyncApi.md#addproxy)
+- [addQuickReplyShortcutInlineQueryResultMessage](index.types.default._AsyncApi.md#addquickreplyshortcutinlinequeryresultmessage)
+- [addQuickReplyShortcutMessage](index.types.default._AsyncApi.md#addquickreplyshortcutmessage)
+- [addQuickReplyShortcutMessageAlbum](index.types.default._AsyncApi.md#addquickreplyshortcutmessagealbum)
 - [addRecentSticker](index.types.default._AsyncApi.md#addrecentsticker)
 - [addRecentlyFoundChat](index.types.default._AsyncApi.md#addrecentlyfoundchat)
 - [addSavedAnimation](index.types.default._AsyncApi.md#addsavedanimation)
@@ -54,21 +56,21 @@ Convenience class for API calls
 - [blockMessageSenderFromReplies](index.types.default._AsyncApi.md#blockmessagesenderfromreplies)
 - [boostChat](index.types.default._AsyncApi.md#boostchat)
 - [canBotSendMessages](index.types.default._AsyncApi.md#canbotsendmessages)
-- [canPurchasePremium](index.types.default._AsyncApi.md#canpurchasepremium)
+- [canPurchaseFromStore](index.types.default._AsyncApi.md#canpurchasefromstore)
+- [canSendMessageToUser](index.types.default._AsyncApi.md#cansendmessagetouser)
 - [canSendStory](index.types.default._AsyncApi.md#cansendstory)
 - [canTransferOwnership](index.types.default._AsyncApi.md#cantransferownership)
 - [cancelDownloadFile](index.types.default._AsyncApi.md#canceldownloadfile)
 - [cancelPasswordReset](index.types.default._AsyncApi.md#cancelpasswordreset)
 - [cancelPreliminaryUploadFile](index.types.default._AsyncApi.md#cancelpreliminaryuploadfile)
+- [cancelRecoveryEmailAddressVerification](index.types.default._AsyncApi.md#cancelrecoveryemailaddressverification)
 - [changeImportedContacts](index.types.default._AsyncApi.md#changeimportedcontacts)
-- [changePhoneNumber](index.types.default._AsyncApi.md#changephonenumber)
 - [changeStickerSet](index.types.default._AsyncApi.md#changestickerset)
 - [checkAuthenticationBotToken](index.types.default._AsyncApi.md#checkauthenticationbottoken)
 - [checkAuthenticationCode](index.types.default._AsyncApi.md#checkauthenticationcode)
 - [checkAuthenticationEmailCode](index.types.default._AsyncApi.md#checkauthenticationemailcode)
 - [checkAuthenticationPassword](index.types.default._AsyncApi.md#checkauthenticationpassword)
 - [checkAuthenticationPasswordRecoveryCode](index.types.default._AsyncApi.md#checkauthenticationpasswordrecoverycode)
-- [checkChangePhoneNumberCode](index.types.default._AsyncApi.md#checkchangephonenumbercode)
 - [checkChatFolderInviteLink](index.types.default._AsyncApi.md#checkchatfolderinvitelink)
 - [checkChatInviteLink](index.types.default._AsyncApi.md#checkchatinvitelink)
 - [checkChatUsername](index.types.default._AsyncApi.md#checkchatusername)
@@ -76,9 +78,9 @@ Convenience class for API calls
 - [checkEmailAddressVerificationCode](index.types.default._AsyncApi.md#checkemailaddressverificationcode)
 - [checkLoginEmailAddressCode](index.types.default._AsyncApi.md#checkloginemailaddresscode)
 - [checkPasswordRecoveryCode](index.types.default._AsyncApi.md#checkpasswordrecoverycode)
-- [checkPhoneNumberConfirmationCode](index.types.default._AsyncApi.md#checkphonenumberconfirmationcode)
-- [checkPhoneNumberVerificationCode](index.types.default._AsyncApi.md#checkphonenumberverificationcode)
+- [checkPhoneNumberCode](index.types.default._AsyncApi.md#checkphonenumbercode)
 - [checkPremiumGiftCode](index.types.default._AsyncApi.md#checkpremiumgiftcode)
+- [checkQuickReplyShortcutName](index.types.default._AsyncApi.md#checkquickreplyshortcutname)
 - [checkRecoveryEmailAddressCode](index.types.default._AsyncApi.md#checkrecoveryemailaddresscode)
 - [checkStickerSetName](index.types.default._AsyncApi.md#checkstickersetname)
 - [cleanFileName](index.types.default._AsyncApi.md#cleanfilename)
@@ -89,6 +91,7 @@ Convenience class for API calls
 - [clearRecentReactions](index.types.default._AsyncApi.md#clearrecentreactions)
 - [clearRecentStickers](index.types.default._AsyncApi.md#clearrecentstickers)
 - [clearRecentlyFoundChats](index.types.default._AsyncApi.md#clearrecentlyfoundchats)
+- [clearSearchedForHashtags](index.types.default._AsyncApi.md#clearsearchedforhashtags)
 - [clickAnimatedEmojiMessage](index.types.default._AsyncApi.md#clickanimatedemojimessage)
 - [clickChatSponsoredMessage](index.types.default._AsyncApi.md#clickchatsponsoredmessage)
 - [clickPremiumSubscriptionButton](index.types.default._AsyncApi.md#clickpremiumsubscriptionbutton)
@@ -100,6 +103,7 @@ Convenience class for API calls
 - [confirmQrCodeAuthentication](index.types.default._AsyncApi.md#confirmqrcodeauthentication)
 - [confirmSession](index.types.default._AsyncApi.md#confirmsession)
 - [createBasicGroupChat](index.types.default._AsyncApi.md#createbasicgroupchat)
+- [createBusinessChatLink](index.types.default._AsyncApi.md#createbusinesschatlink)
 - [createCall](index.types.default._AsyncApi.md#createcall)
 - [createChatFolder](index.types.default._AsyncApi.md#createchatfolder)
 - [createChatFolderInviteLink](index.types.default._AsyncApi.md#createchatfolderinvitelink)
@@ -118,6 +122,8 @@ Convenience class for API calls
 - [deleteAccount](index.types.default._AsyncApi.md#deleteaccount)
 - [deleteAllCallMessages](index.types.default._AsyncApi.md#deleteallcallmessages)
 - [deleteAllRevokedChatInviteLinks](index.types.default._AsyncApi.md#deleteallrevokedchatinvitelinks)
+- [deleteBusinessChatLink](index.types.default._AsyncApi.md#deletebusinesschatlink)
+- [deleteBusinessConnectedBot](index.types.default._AsyncApi.md#deletebusinessconnectedbot)
 - [deleteChat](index.types.default._AsyncApi.md#deletechat)
 - [deleteChatBackground](index.types.default._AsyncApi.md#deletechatbackground)
 - [deleteChatFolder](index.types.default._AsyncApi.md#deletechatfolder)
@@ -127,14 +133,19 @@ Convenience class for API calls
 - [deleteChatMessagesBySender](index.types.default._AsyncApi.md#deletechatmessagesbysender)
 - [deleteChatReplyMarkup](index.types.default._AsyncApi.md#deletechatreplymarkup)
 - [deleteCommands](index.types.default._AsyncApi.md#deletecommands)
+- [deleteDefaultBackground](index.types.default._AsyncApi.md#deletedefaultbackground)
 - [deleteFile](index.types.default._AsyncApi.md#deletefile)
 - [deleteForumTopic](index.types.default._AsyncApi.md#deleteforumtopic)
 - [deleteLanguagePack](index.types.default._AsyncApi.md#deletelanguagepack)
 - [deleteMessages](index.types.default._AsyncApi.md#deletemessages)
 - [deletePassportElement](index.types.default._AsyncApi.md#deletepassportelement)
 - [deleteProfilePhoto](index.types.default._AsyncApi.md#deleteprofilephoto)
+- [deleteQuickReplyShortcut](index.types.default._AsyncApi.md#deletequickreplyshortcut)
+- [deleteQuickReplyShortcutMessages](index.types.default._AsyncApi.md#deletequickreplyshortcutmessages)
 - [deleteRevokedChatInviteLink](index.types.default._AsyncApi.md#deleterevokedchatinvitelink)
 - [deleteSavedCredentials](index.types.default._AsyncApi.md#deletesavedcredentials)
+- [deleteSavedMessagesTopicHistory](index.types.default._AsyncApi.md#deletesavedmessagestopichistory)
+- [deleteSavedMessagesTopicMessagesByDate](index.types.default._AsyncApi.md#deletesavedmessagestopicmessagesbydate)
 - [deleteSavedOrderInfo](index.types.default._AsyncApi.md#deletesavedorderinfo)
 - [deleteStickerSet](index.types.default._AsyncApi.md#deletestickerset)
 - [deleteStory](index.types.default._AsyncApi.md#deletestory)
@@ -145,6 +156,7 @@ Convenience class for API calls
 - [disconnectAllWebsites](index.types.default._AsyncApi.md#disconnectallwebsites)
 - [disconnectWebsite](index.types.default._AsyncApi.md#disconnectwebsite)
 - [downloadFile](index.types.default._AsyncApi.md#downloadfile)
+- [editBusinessChatLink](index.types.default._AsyncApi.md#editbusinesschatlink)
 - [editChatFolder](index.types.default._AsyncApi.md#editchatfolder)
 - [editChatFolderInviteLink](index.types.default._AsyncApi.md#editchatfolderinvitelink)
 - [editChatInviteLink](index.types.default._AsyncApi.md#editchatinvitelink)
@@ -162,6 +174,7 @@ Convenience class for API calls
 - [editMessageSchedulingState](index.types.default._AsyncApi.md#editmessageschedulingstate)
 - [editMessageText](index.types.default._AsyncApi.md#editmessagetext)
 - [editProxy](index.types.default._AsyncApi.md#editproxy)
+- [editQuickReplyMessage](index.types.default._AsyncApi.md#editquickreplymessage)
 - [editStory](index.types.default._AsyncApi.md#editstory)
 - [enableProxy](index.types.default._AsyncApi.md#enableproxy)
 - [endGroupCall](index.types.default._AsyncApi.md#endgroupcall)
@@ -186,7 +199,6 @@ Convenience class for API calls
 - [getAutosaveSettings](index.types.default._AsyncApi.md#getautosavesettings)
 - [getAvailableChatBoostSlots](index.types.default._AsyncApi.md#getavailablechatboostslots)
 - [getBackgroundUrl](index.types.default._AsyncApi.md#getbackgroundurl)
-- [getBackgrounds](index.types.default._AsyncApi.md#getbackgrounds)
 - [getBankCardInfo](index.types.default._AsyncApi.md#getbankcardinfo)
 - [getBasicGroup](index.types.default._AsyncApi.md#getbasicgroup)
 - [getBasicGroupFullInfo](index.types.default._AsyncApi.md#getbasicgroupfullinfo)
@@ -194,6 +206,11 @@ Convenience class for API calls
 - [getBotInfoDescription](index.types.default._AsyncApi.md#getbotinfodescription)
 - [getBotInfoShortDescription](index.types.default._AsyncApi.md#getbotinfoshortdescription)
 - [getBotName](index.types.default._AsyncApi.md#getbotname)
+- [getBusinessChatLinkInfo](index.types.default._AsyncApi.md#getbusinesschatlinkinfo)
+- [getBusinessChatLinks](index.types.default._AsyncApi.md#getbusinesschatlinks)
+- [getBusinessConnectedBot](index.types.default._AsyncApi.md#getbusinessconnectedbot)
+- [getBusinessConnection](index.types.default._AsyncApi.md#getbusinessconnection)
+- [getBusinessFeatures](index.types.default._AsyncApi.md#getbusinessfeatures)
 - [getCallbackQueryAnswer](index.types.default._AsyncApi.md#getcallbackqueryanswer)
 - [getCallbackQueryMessage](index.types.default._AsyncApi.md#getcallbackquerymessage)
 - [getChat](index.types.default._AsyncApi.md#getchat)
@@ -201,6 +218,8 @@ Convenience class for API calls
 - [getChatAdministrators](index.types.default._AsyncApi.md#getchatadministrators)
 - [getChatArchivedStories](index.types.default._AsyncApi.md#getchatarchivedstories)
 - [getChatAvailableMessageSenders](index.types.default._AsyncApi.md#getchatavailablemessagesenders)
+- [getChatBoostFeatures](index.types.default._AsyncApi.md#getchatboostfeatures)
+- [getChatBoostLevelFeatures](index.types.default._AsyncApi.md#getchatboostlevelfeatures)
 - [getChatBoostLink](index.types.default._AsyncApi.md#getchatboostlink)
 - [getChatBoostLinkInfo](index.types.default._AsyncApi.md#getchatboostlinkinfo)
 - [getChatBoostStatus](index.types.default._AsyncApi.md#getchatbooststatus)
@@ -226,22 +245,28 @@ Convenience class for API calls
 - [getChatMessagePosition](index.types.default._AsyncApi.md#getchatmessageposition)
 - [getChatNotificationSettingsExceptions](index.types.default._AsyncApi.md#getchatnotificationsettingsexceptions)
 - [getChatPinnedMessage](index.types.default._AsyncApi.md#getchatpinnedmessage)
-- [getChatPinnedStories](index.types.default._AsyncApi.md#getchatpinnedstories)
+- [getChatPostedToChatPageStories](index.types.default._AsyncApi.md#getchatpostedtochatpagestories)
+- [getChatRevenueStatistics](index.types.default._AsyncApi.md#getchatrevenuestatistics)
+- [getChatRevenueTransactions](index.types.default._AsyncApi.md#getchatrevenuetransactions)
+- [getChatRevenueWithdrawalUrl](index.types.default._AsyncApi.md#getchatrevenuewithdrawalurl)
 - [getChatScheduledMessages](index.types.default._AsyncApi.md#getchatscheduledmessages)
 - [getChatSimilarChatCount](index.types.default._AsyncApi.md#getchatsimilarchatcount)
 - [getChatSimilarChats](index.types.default._AsyncApi.md#getchatsimilarchats)
 - [getChatSparseMessagePositions](index.types.default._AsyncApi.md#getchatsparsemessagepositions)
 - [getChatSponsoredMessages](index.types.default._AsyncApi.md#getchatsponsoredmessages)
 - [getChatStatistics](index.types.default._AsyncApi.md#getchatstatistics)
+- [getChatStoryInteractions](index.types.default._AsyncApi.md#getchatstoryinteractions)
 - [getChats](index.types.default._AsyncApi.md#getchats)
 - [getChatsForChatFolderInviteLink](index.types.default._AsyncApi.md#getchatsforchatfolderinvitelink)
 - [getChatsToSendStories](index.types.default._AsyncApi.md#getchatstosendstories)
 - [getCloseFriends](index.types.default._AsyncApi.md#getclosefriends)
+- [getCollectibleItemInfo](index.types.default._AsyncApi.md#getcollectibleiteminfo)
 - [getCommands](index.types.default._AsyncApi.md#getcommands)
 - [getConnectedWebsites](index.types.default._AsyncApi.md#getconnectedwebsites)
 - [getContacts](index.types.default._AsyncApi.md#getcontacts)
 - [getCountries](index.types.default._AsyncApi.md#getcountries)
 - [getCountryCode](index.types.default._AsyncApi.md#getcountrycode)
+- [getCountryFlagEmoji](index.types.default._AsyncApi.md#getcountryflagemoji)
 - [getCreatedPublicChats](index.types.default._AsyncApi.md#getcreatedpublicchats)
 - [getCurrentState](index.types.default._AsyncApi.md#getcurrentstate)
 - [getCustomEmojiReactionAnimations](index.types.default._AsyncApi.md#getcustomemojireactionanimations)
@@ -249,10 +274,12 @@ Convenience class for API calls
 - [getDatabaseStatistics](index.types.default._AsyncApi.md#getdatabasestatistics)
 - [getDeepLinkInfo](index.types.default._AsyncApi.md#getdeeplinkinfo)
 - [getDefaultBackgroundCustomEmojiStickers](index.types.default._AsyncApi.md#getdefaultbackgroundcustomemojistickers)
+- [getDefaultChatEmojiStatuses](index.types.default._AsyncApi.md#getdefaultchatemojistatuses)
 - [getDefaultChatPhotoCustomEmojiStickers](index.types.default._AsyncApi.md#getdefaultchatphotocustomemojistickers)
 - [getDefaultEmojiStatuses](index.types.default._AsyncApi.md#getdefaultemojistatuses)
 - [getDefaultMessageAutoDeleteTime](index.types.default._AsyncApi.md#getdefaultmessageautodeletetime)
 - [getDefaultProfilePhotoCustomEmojiStickers](index.types.default._AsyncApi.md#getdefaultprofilephotocustomemojistickers)
+- [getDisallowedChatEmojiStatuses](index.types.default._AsyncApi.md#getdisallowedchatemojistatuses)
 - [getEmojiCategories](index.types.default._AsyncApi.md#getemojicategories)
 - [getEmojiReaction](index.types.default._AsyncApi.md#getemojireaction)
 - [getEmojiSuggestionsUrl](index.types.default._AsyncApi.md#getemojisuggestionsurl)
@@ -268,6 +295,7 @@ Convenience class for API calls
 - [getForumTopicLink](index.types.default._AsyncApi.md#getforumtopiclink)
 - [getForumTopics](index.types.default._AsyncApi.md#getforumtopics)
 - [getGameHighScores](index.types.default._AsyncApi.md#getgamehighscores)
+- [getGreetingStickers](index.types.default._AsyncApi.md#getgreetingstickers)
 - [getGroupCall](index.types.default._AsyncApi.md#getgroupcall)
 - [getGroupCallInviteLink](index.types.default._AsyncApi.md#getgroupcallinvitelink)
 - [getGroupCallStreamSegment](index.types.default._AsyncApi.md#getgroupcallstreamsegment)
@@ -277,11 +305,13 @@ Convenience class for API calls
 - [getInactiveSupergroupChats](index.types.default._AsyncApi.md#getinactivesupergroupchats)
 - [getInlineGameHighScores](index.types.default._AsyncApi.md#getinlinegamehighscores)
 - [getInlineQueryResults](index.types.default._AsyncApi.md#getinlinequeryresults)
+- [getInstalledBackgrounds](index.types.default._AsyncApi.md#getinstalledbackgrounds)
 - [getInstalledStickerSets](index.types.default._AsyncApi.md#getinstalledstickersets)
 - [getInternalLink](index.types.default._AsyncApi.md#getinternallink)
 - [getInternalLinkType](index.types.default._AsyncApi.md#getinternallinktype)
 - [getJsonString](index.types.default._AsyncApi.md#getjsonstring)
 - [getJsonValue](index.types.default._AsyncApi.md#getjsonvalue)
+- [getKeywordEmojis](index.types.default._AsyncApi.md#getkeywordemojis)
 - [getLanguagePackInfo](index.types.default._AsyncApi.md#getlanguagepackinfo)
 - [getLanguagePackString](index.types.default._AsyncApi.md#getlanguagepackstring)
 - [getLanguagePackStrings](index.types.default._AsyncApi.md#getlanguagepackstrings)
@@ -299,6 +329,7 @@ Convenience class for API calls
 - [getMessage](index.types.default._AsyncApi.md#getmessage)
 - [getMessageAddedReactions](index.types.default._AsyncApi.md#getmessageaddedreactions)
 - [getMessageAvailableReactions](index.types.default._AsyncApi.md#getmessageavailablereactions)
+- [getMessageEffect](index.types.default._AsyncApi.md#getmessageeffect)
 - [getMessageEmbeddingCode](index.types.default._AsyncApi.md#getmessageembeddingcode)
 - [getMessageFileType](index.types.default._AsyncApi.md#getmessagefiletype)
 - [getMessageImportConfirmationText](index.types.default._AsyncApi.md#getmessageimportconfirmationtext)
@@ -306,13 +337,16 @@ Convenience class for API calls
 - [getMessageLinkInfo](index.types.default._AsyncApi.md#getmessagelinkinfo)
 - [getMessageLocally](index.types.default._AsyncApi.md#getmessagelocally)
 - [getMessagePublicForwards](index.types.default._AsyncApi.md#getmessagepublicforwards)
+- [getMessageReadDate](index.types.default._AsyncApi.md#getmessagereaddate)
 - [getMessageStatistics](index.types.default._AsyncApi.md#getmessagestatistics)
 - [getMessageThread](index.types.default._AsyncApi.md#getmessagethread)
 - [getMessageThreadHistory](index.types.default._AsyncApi.md#getmessagethreadhistory)
 - [getMessageViewers](index.types.default._AsyncApi.md#getmessageviewers)
 - [getMessages](index.types.default._AsyncApi.md#getmessages)
 - [getNetworkStatistics](index.types.default._AsyncApi.md#getnetworkstatistics)
+- [getNewChatPrivacySettings](index.types.default._AsyncApi.md#getnewchatprivacysettings)
 - [getOption](index.types.default._AsyncApi.md#getoption)
+- [getOwnedStickerSets](index.types.default._AsyncApi.md#getownedstickersets)
 - [getPassportAuthorizationForm](index.types.default._AsyncApi.md#getpassportauthorizationform)
 - [getPassportAuthorizationFormAvailableElements](index.types.default._AsyncApi.md#getpassportauthorizationformavailableelements)
 - [getPassportElement](index.types.default._AsyncApi.md#getpassportelement)
@@ -333,21 +367,29 @@ Convenience class for API calls
 - [getProxies](index.types.default._AsyncApi.md#getproxies)
 - [getProxyLink](index.types.default._AsyncApi.md#getproxylink)
 - [getPushReceiverId](index.types.default._AsyncApi.md#getpushreceiverid)
+- [getReadDatePrivacySettings](index.types.default._AsyncApi.md#getreaddateprivacysettings)
 - [getRecentEmojiStatuses](index.types.default._AsyncApi.md#getrecentemojistatuses)
 - [getRecentInlineBots](index.types.default._AsyncApi.md#getrecentinlinebots)
 - [getRecentStickers](index.types.default._AsyncApi.md#getrecentstickers)
 - [getRecentlyOpenedChats](index.types.default._AsyncApi.md#getrecentlyopenedchats)
 - [getRecentlyVisitedTMeUrls](index.types.default._AsyncApi.md#getrecentlyvisitedtmeurls)
 - [getRecommendedChatFolders](index.types.default._AsyncApi.md#getrecommendedchatfolders)
+- [getRecommendedChats](index.types.default._AsyncApi.md#getrecommendedchats)
 - [getRecoveryEmailAddress](index.types.default._AsyncApi.md#getrecoveryemailaddress)
 - [getRemoteFile](index.types.default._AsyncApi.md#getremotefile)
 - [getRepliedMessage](index.types.default._AsyncApi.md#getrepliedmessage)
 - [getSavedAnimations](index.types.default._AsyncApi.md#getsavedanimations)
+- [getSavedMessagesTags](index.types.default._AsyncApi.md#getsavedmessagestags)
+- [getSavedMessagesTopicHistory](index.types.default._AsyncApi.md#getsavedmessagestopichistory)
+- [getSavedMessagesTopicMessageByDate](index.types.default._AsyncApi.md#getsavedmessagestopicmessagebydate)
 - [getSavedNotificationSound](index.types.default._AsyncApi.md#getsavednotificationsound)
 - [getSavedNotificationSounds](index.types.default._AsyncApi.md#getsavednotificationsounds)
 - [getSavedOrderInfo](index.types.default._AsyncApi.md#getsavedorderinfo)
 - [getScopeNotificationSettings](index.types.default._AsyncApi.md#getscopenotificationsettings)
+- [getSearchedForHashtags](index.types.default._AsyncApi.md#getsearchedforhashtags)
 - [getSecretChat](index.types.default._AsyncApi.md#getsecretchat)
+- [getStarPaymentOptions](index.types.default._AsyncApi.md#getstarpaymentoptions)
+- [getStarTransactions](index.types.default._AsyncApi.md#getstartransactions)
 - [getStatisticalGraph](index.types.default._AsyncApi.md#getstatisticalgraph)
 - [getStickerEmojis](index.types.default._AsyncApi.md#getstickeremojis)
 - [getStickerSet](index.types.default._AsyncApi.md#getstickerset)
@@ -356,13 +398,14 @@ Convenience class for API calls
 - [getStorageStatisticsFast](index.types.default._AsyncApi.md#getstoragestatisticsfast)
 - [getStory](index.types.default._AsyncApi.md#getstory)
 - [getStoryAvailableReactions](index.types.default._AsyncApi.md#getstoryavailablereactions)
+- [getStoryInteractions](index.types.default._AsyncApi.md#getstoryinteractions)
 - [getStoryNotificationSettingsExceptions](index.types.default._AsyncApi.md#getstorynotificationsettingsexceptions)
 - [getStoryPublicForwards](index.types.default._AsyncApi.md#getstorypublicforwards)
 - [getStoryStatistics](index.types.default._AsyncApi.md#getstorystatistics)
-- [getStoryViewers](index.types.default._AsyncApi.md#getstoryviewers)
 - [getSuggestedFileName](index.types.default._AsyncApi.md#getsuggestedfilename)
 - [getSuggestedStickerSetName](index.types.default._AsyncApi.md#getsuggestedstickersetname)
 - [getSuitableDiscussionChats](index.types.default._AsyncApi.md#getsuitablediscussionchats)
+- [getSuitablePersonalChats](index.types.default._AsyncApi.md#getsuitablepersonalchats)
 - [getSupergroup](index.types.default._AsyncApi.md#getsupergroup)
 - [getSupergroupFullInfo](index.types.default._AsyncApi.md#getsupergroupfullinfo)
 - [getSupergroupMembers](index.types.default._AsyncApi.md#getsupergroupmembers)
@@ -371,7 +414,9 @@ Convenience class for API calls
 - [getTemporaryPasswordState](index.types.default._AsyncApi.md#gettemporarypasswordstate)
 - [getTextEntities](index.types.default._AsyncApi.md#gettextentities)
 - [getThemeParametersJsonString](index.types.default._AsyncApi.md#getthemeparametersjsonstring)
+- [getThemedChatEmojiStatuses](index.types.default._AsyncApi.md#getthemedchatemojistatuses)
 - [getThemedEmojiStatuses](index.types.default._AsyncApi.md#getthemedemojistatuses)
+- [getTimeZones](index.types.default._AsyncApi.md#gettimezones)
 - [getTopChats](index.types.default._AsyncApi.md#gettopchats)
 - [getTrendingStickerSets](index.types.default._AsyncApi.md#gettrendingstickersets)
 - [getUser](index.types.default._AsyncApi.md#getuser)
@@ -387,6 +432,7 @@ Convenience class for API calls
 - [getWebAppUrl](index.types.default._AsyncApi.md#getwebappurl)
 - [getWebPageInstantView](index.types.default._AsyncApi.md#getwebpageinstantview)
 - [getWebPagePreview](index.types.default._AsyncApi.md#getwebpagepreview)
+- [hideContactCloseBirthdays](index.types.default._AsyncApi.md#hidecontactclosebirthdays)
 - [hideSuggestedAction](index.types.default._AsyncApi.md#hidesuggestedaction)
 - [importContacts](index.types.default._AsyncApi.md#importcontacts)
 - [importMessages](index.types.default._AsyncApi.md#importmessages)
@@ -400,8 +446,12 @@ Convenience class for API calls
 - [loadActiveStories](index.types.default._AsyncApi.md#loadactivestories)
 - [loadChats](index.types.default._AsyncApi.md#loadchats)
 - [loadGroupCallParticipants](index.types.default._AsyncApi.md#loadgroupcallparticipants)
+- [loadQuickReplyShortcutMessages](index.types.default._AsyncApi.md#loadquickreplyshortcutmessages)
+- [loadQuickReplyShortcuts](index.types.default._AsyncApi.md#loadquickreplyshortcuts)
+- [loadSavedMessagesTopics](index.types.default._AsyncApi.md#loadsavedmessagestopics)
 - [logOut](index.types.default._AsyncApi.md#logout)
 - [openChat](index.types.default._AsyncApi.md#openchat)
+- [openChatSimilarChat](index.types.default._AsyncApi.md#openchatsimilarchat)
 - [openMessageContent](index.types.default._AsyncApi.md#openmessagecontent)
 - [openStory](index.types.default._AsyncApi.md#openstory)
 - [openWebApp](index.types.default._AsyncApi.md#openwebapp)
@@ -422,17 +472,20 @@ Convenience class for API calls
 - [readAllMessageThreadReactions](index.types.default._AsyncApi.md#readallmessagethreadreactions)
 - [readChatList](index.types.default._AsyncApi.md#readchatlist)
 - [readFilePart](index.types.default._AsyncApi.md#readfilepart)
+- [readdQuickReplyShortcutMessages](index.types.default._AsyncApi.md#readdquickreplyshortcutmessages)
 - [recognizeSpeech](index.types.default._AsyncApi.md#recognizespeech)
 - [recoverAuthenticationPassword](index.types.default._AsyncApi.md#recoverauthenticationpassword)
 - [recoverPassword](index.types.default._AsyncApi.md#recoverpassword)
+- [refundStarPayment](index.types.default._AsyncApi.md#refundstarpayment)
 - [registerDevice](index.types.default._AsyncApi.md#registerdevice)
 - [registerUser](index.types.default._AsyncApi.md#registeruser)
 - [removeAllFilesFromDownloads](index.types.default._AsyncApi.md#removeallfilesfromdownloads)
-- [removeBackground](index.types.default._AsyncApi.md#removebackground)
+- [removeBusinessConnectedBotFromChat](index.types.default._AsyncApi.md#removebusinessconnectedbotfromchat)
 - [removeChatActionBar](index.types.default._AsyncApi.md#removechatactionbar)
 - [removeContacts](index.types.default._AsyncApi.md#removecontacts)
 - [removeFavoriteSticker](index.types.default._AsyncApi.md#removefavoritesticker)
 - [removeFileFromDownloads](index.types.default._AsyncApi.md#removefilefromdownloads)
+- [removeInstalledBackground](index.types.default._AsyncApi.md#removeinstalledbackground)
 - [removeMessageReaction](index.types.default._AsyncApi.md#removemessagereaction)
 - [removeNotification](index.types.default._AsyncApi.md#removenotification)
 - [removeNotificationGroup](index.types.default._AsyncApi.md#removenotificationgroup)
@@ -442,18 +495,24 @@ Convenience class for API calls
 - [removeRecentlyFoundChat](index.types.default._AsyncApi.md#removerecentlyfoundchat)
 - [removeSavedAnimation](index.types.default._AsyncApi.md#removesavedanimation)
 - [removeSavedNotificationSound](index.types.default._AsyncApi.md#removesavednotificationsound)
+- [removeSearchedForHashtag](index.types.default._AsyncApi.md#removesearchedforhashtag)
 - [removeStickerFromSet](index.types.default._AsyncApi.md#removestickerfromset)
 - [removeTopChat](index.types.default._AsyncApi.md#removetopchat)
 - [reorderActiveUsernames](index.types.default._AsyncApi.md#reorderactiveusernames)
 - [reorderBotActiveUsernames](index.types.default._AsyncApi.md#reorderbotactiveusernames)
 - [reorderChatFolders](index.types.default._AsyncApi.md#reorderchatfolders)
 - [reorderInstalledStickerSets](index.types.default._AsyncApi.md#reorderinstalledstickersets)
+- [reorderQuickReplyShortcuts](index.types.default._AsyncApi.md#reorderquickreplyshortcuts)
 - [reorderSupergroupActiveUsernames](index.types.default._AsyncApi.md#reordersupergroupactiveusernames)
 - [replacePrimaryChatInviteLink](index.types.default._AsyncApi.md#replaceprimarychatinvitelink)
+- [replaceStickerInSet](index.types.default._AsyncApi.md#replacestickerinset)
 - [replaceVideoChatRtmpUrl](index.types.default._AsyncApi.md#replacevideochatrtmpurl)
+- [reportAuthenticationCodeMissing](index.types.default._AsyncApi.md#reportauthenticationcodemissing)
 - [reportChat](index.types.default._AsyncApi.md#reportchat)
 - [reportChatPhoto](index.types.default._AsyncApi.md#reportchatphoto)
+- [reportChatSponsoredMessage](index.types.default._AsyncApi.md#reportchatsponsoredmessage)
 - [reportMessageReactions](index.types.default._AsyncApi.md#reportmessagereactions)
+- [reportPhoneNumberCodeMissing](index.types.default._AsyncApi.md#reportphonenumbercodemissing)
 - [reportStory](index.types.default._AsyncApi.md#reportstory)
 - [reportSupergroupAntiSpamFalsePositive](index.types.default._AsyncApi.md#reportsupergroupantispamfalsepositive)
 - [reportSupergroupSpam](index.types.default._AsyncApi.md#reportsupergroupspam)
@@ -461,16 +520,14 @@ Convenience class for API calls
 - [requestPasswordRecovery](index.types.default._AsyncApi.md#requestpasswordrecovery)
 - [requestQrCodeAuthentication](index.types.default._AsyncApi.md#requestqrcodeauthentication)
 - [resendAuthenticationCode](index.types.default._AsyncApi.md#resendauthenticationcode)
-- [resendChangePhoneNumberCode](index.types.default._AsyncApi.md#resendchangephonenumbercode)
 - [resendEmailAddressVerificationCode](index.types.default._AsyncApi.md#resendemailaddressverificationcode)
 - [resendLoginEmailAddressCode](index.types.default._AsyncApi.md#resendloginemailaddresscode)
 - [resendMessages](index.types.default._AsyncApi.md#resendmessages)
-- [resendPhoneNumberConfirmationCode](index.types.default._AsyncApi.md#resendphonenumberconfirmationcode)
-- [resendPhoneNumberVerificationCode](index.types.default._AsyncApi.md#resendphonenumberverificationcode)
+- [resendPhoneNumberCode](index.types.default._AsyncApi.md#resendphonenumbercode)
 - [resendRecoveryEmailAddressCode](index.types.default._AsyncApi.md#resendrecoveryemailaddresscode)
 - [resetAllNotificationSettings](index.types.default._AsyncApi.md#resetallnotificationsettings)
 - [resetAuthenticationEmailAddress](index.types.default._AsyncApi.md#resetauthenticationemailaddress)
-- [resetBackgrounds](index.types.default._AsyncApi.md#resetbackgrounds)
+- [resetInstalledBackgrounds](index.types.default._AsyncApi.md#resetinstalledbackgrounds)
 - [resetNetworkStatistics](index.types.default._AsyncApi.md#resetnetworkstatistics)
 - [resetPassword](index.types.default._AsyncApi.md#resetpassword)
 - [revokeChatInviteLink](index.types.default._AsyncApi.md#revokechatinvitelink)
@@ -493,8 +550,10 @@ Convenience class for API calls
 - [searchOutgoingDocumentMessages](index.types.default._AsyncApi.md#searchoutgoingdocumentmessages)
 - [searchPublicChat](index.types.default._AsyncApi.md#searchpublicchat)
 - [searchPublicChats](index.types.default._AsyncApi.md#searchpublicchats)
+- [searchPublicHashtagMessages](index.types.default._AsyncApi.md#searchpublichashtagmessages)
 - [searchQuote](index.types.default._AsyncApi.md#searchquote)
 - [searchRecentlyFoundChats](index.types.default._AsyncApi.md#searchrecentlyfoundchats)
+- [searchSavedMessages](index.types.default._AsyncApi.md#searchsavedmessages)
 - [searchSecretMessages](index.types.default._AsyncApi.md#searchsecretmessages)
 - [searchStickerSet](index.types.default._AsyncApi.md#searchstickerset)
 - [searchStickerSets](index.types.default._AsyncApi.md#searchstickersets)
@@ -505,6 +564,8 @@ Convenience class for API calls
 - [searchWebApp](index.types.default._AsyncApi.md#searchwebapp)
 - [sendAuthenticationFirebaseSms](index.types.default._AsyncApi.md#sendauthenticationfirebasesms)
 - [sendBotStartMessage](index.types.default._AsyncApi.md#sendbotstartmessage)
+- [sendBusinessMessage](index.types.default._AsyncApi.md#sendbusinessmessage)
+- [sendBusinessMessageAlbum](index.types.default._AsyncApi.md#sendbusinessmessagealbum)
 - [sendCallDebugInformation](index.types.default._AsyncApi.md#sendcalldebuginformation)
 - [sendCallLog](index.types.default._AsyncApi.md#sendcalllog)
 - [sendCallRating](index.types.default._AsyncApi.md#sendcallrating)
@@ -517,26 +578,34 @@ Convenience class for API calls
 - [sendMessageAlbum](index.types.default._AsyncApi.md#sendmessagealbum)
 - [sendPassportAuthorizationForm](index.types.default._AsyncApi.md#sendpassportauthorizationform)
 - [sendPaymentForm](index.types.default._AsyncApi.md#sendpaymentform)
-- [sendPhoneNumberConfirmationCode](index.types.default._AsyncApi.md#sendphonenumberconfirmationcode)
-- [sendPhoneNumberVerificationCode](index.types.default._AsyncApi.md#sendphonenumberverificationcode)
+- [sendPhoneNumberCode](index.types.default._AsyncApi.md#sendphonenumbercode)
+- [sendPhoneNumberFirebaseSms](index.types.default._AsyncApi.md#sendphonenumberfirebasesms)
+- [sendQuickReplyShortcutMessages](index.types.default._AsyncApi.md#sendquickreplyshortcutmessages)
 - [sendStory](index.types.default._AsyncApi.md#sendstory)
 - [sendWebAppCustomRequest](index.types.default._AsyncApi.md#sendwebappcustomrequest)
 - [sendWebAppData](index.types.default._AsyncApi.md#sendwebappdata)
 - [setAccentColor](index.types.default._AsyncApi.md#setaccentcolor)
 - [setAccountTtl](index.types.default._AsyncApi.md#setaccountttl)
 - [setAlarm](index.types.default._AsyncApi.md#setalarm)
+- [setApplicationVerificationToken](index.types.default._AsyncApi.md#setapplicationverificationtoken)
 - [setArchiveChatListSettings](index.types.default._AsyncApi.md#setarchivechatlistsettings)
 - [setAuthenticationEmailAddress](index.types.default._AsyncApi.md#setauthenticationemailaddress)
 - [setAuthenticationPhoneNumber](index.types.default._AsyncApi.md#setauthenticationphonenumber)
 - [setAutoDownloadSettings](index.types.default._AsyncApi.md#setautodownloadsettings)
 - [setAutosaveSettings](index.types.default._AsyncApi.md#setautosavesettings)
-- [setBackground](index.types.default._AsyncApi.md#setbackground)
 - [setBio](index.types.default._AsyncApi.md#setbio)
+- [setBirthdate](index.types.default._AsyncApi.md#setbirthdate)
 - [setBotInfoDescription](index.types.default._AsyncApi.md#setbotinfodescription)
 - [setBotInfoShortDescription](index.types.default._AsyncApi.md#setbotinfoshortdescription)
 - [setBotName](index.types.default._AsyncApi.md#setbotname)
 - [setBotProfilePhoto](index.types.default._AsyncApi.md#setbotprofilephoto)
 - [setBotUpdatesStatus](index.types.default._AsyncApi.md#setbotupdatesstatus)
+- [setBusinessAwayMessageSettings](index.types.default._AsyncApi.md#setbusinessawaymessagesettings)
+- [setBusinessConnectedBot](index.types.default._AsyncApi.md#setbusinessconnectedbot)
+- [setBusinessGreetingMessageSettings](index.types.default._AsyncApi.md#setbusinessgreetingmessagesettings)
+- [setBusinessLocation](index.types.default._AsyncApi.md#setbusinesslocation)
+- [setBusinessOpeningHours](index.types.default._AsyncApi.md#setbusinessopeninghours)
+- [setBusinessStartPage](index.types.default._AsyncApi.md#setbusinessstartpage)
 - [setChatAccentColor](index.types.default._AsyncApi.md#setchataccentcolor)
 - [setChatActiveStoriesList](index.types.default._AsyncApi.md#setchatactivestorieslist)
 - [setChatAvailableReactions](index.types.default._AsyncApi.md#setchatavailablereactions)
@@ -545,6 +614,7 @@ Convenience class for API calls
 - [setChatDescription](index.types.default._AsyncApi.md#setchatdescription)
 - [setChatDiscussionGroup](index.types.default._AsyncApi.md#setchatdiscussiongroup)
 - [setChatDraftMessage](index.types.default._AsyncApi.md#setchatdraftmessage)
+- [setChatEmojiStatus](index.types.default._AsyncApi.md#setchatemojistatus)
 - [setChatLocation](index.types.default._AsyncApi.md#setchatlocation)
 - [setChatMemberStatus](index.types.default._AsyncApi.md#setchatmemberstatus)
 - [setChatMessageAutoDeleteTime](index.types.default._AsyncApi.md#setchatmessageautodeletetime)
@@ -552,6 +622,8 @@ Convenience class for API calls
 - [setChatNotificationSettings](index.types.default._AsyncApi.md#setchatnotificationsettings)
 - [setChatPermissions](index.types.default._AsyncApi.md#setchatpermissions)
 - [setChatPhoto](index.types.default._AsyncApi.md#setchatphoto)
+- [setChatPinnedStories](index.types.default._AsyncApi.md#setchatpinnedstories)
+- [setChatProfileAccentColor](index.types.default._AsyncApi.md#setchatprofileaccentcolor)
 - [setChatSlowModeDelay](index.types.default._AsyncApi.md#setchatslowmodedelay)
 - [setChatTheme](index.types.default._AsyncApi.md#setchattheme)
 - [setChatTitle](index.types.default._AsyncApi.md#setchattitle)
@@ -561,6 +633,7 @@ Convenience class for API calls
 - [setCustomLanguagePack](index.types.default._AsyncApi.md#setcustomlanguagepack)
 - [setCustomLanguagePackString](index.types.default._AsyncApi.md#setcustomlanguagepackstring)
 - [setDatabaseEncryptionKey](index.types.default._AsyncApi.md#setdatabaseencryptionkey)
+- [setDefaultBackground](index.types.default._AsyncApi.md#setdefaultbackground)
 - [setDefaultChannelAdministratorRights](index.types.default._AsyncApi.md#setdefaultchanneladministratorrights)
 - [setDefaultGroupAdministratorRights](index.types.default._AsyncApi.md#setdefaultgroupadministratorrights)
 - [setDefaultMessageAutoDeleteTime](index.types.default._AsyncApi.md#setdefaultmessageautodeletetime)
@@ -580,19 +653,28 @@ Convenience class for API calls
 - [setLogVerbosityLevel](index.types.default._AsyncApi.md#setlogverbositylevel)
 - [setLoginEmailAddress](index.types.default._AsyncApi.md#setloginemailaddress)
 - [setMenuButton](index.types.default._AsyncApi.md#setmenubutton)
+- [setMessageFactCheck](index.types.default._AsyncApi.md#setmessagefactcheck)
+- [setMessageReactions](index.types.default._AsyncApi.md#setmessagereactions)
 - [setMessageSenderBlockList](index.types.default._AsyncApi.md#setmessagesenderblocklist)
 - [setName](index.types.default._AsyncApi.md#setname)
 - [setNetworkType](index.types.default._AsyncApi.md#setnetworktype)
+- [setNewChatPrivacySettings](index.types.default._AsyncApi.md#setnewchatprivacysettings)
 - [setOption](index.types.default._AsyncApi.md#setoption)
 - [setPassportElement](index.types.default._AsyncApi.md#setpassportelement)
 - [setPassportElementErrors](index.types.default._AsyncApi.md#setpassportelementerrors)
 - [setPassword](index.types.default._AsyncApi.md#setpassword)
+- [setPersonalChat](index.types.default._AsyncApi.md#setpersonalchat)
 - [setPinnedChats](index.types.default._AsyncApi.md#setpinnedchats)
 - [setPinnedForumTopics](index.types.default._AsyncApi.md#setpinnedforumtopics)
+- [setPinnedSavedMessagesTopics](index.types.default._AsyncApi.md#setpinnedsavedmessagestopics)
 - [setPollAnswer](index.types.default._AsyncApi.md#setpollanswer)
 - [setProfileAccentColor](index.types.default._AsyncApi.md#setprofileaccentcolor)
 - [setProfilePhoto](index.types.default._AsyncApi.md#setprofilephoto)
+- [setQuickReplyShortcutName](index.types.default._AsyncApi.md#setquickreplyshortcutname)
+- [setReactionNotificationSettings](index.types.default._AsyncApi.md#setreactionnotificationsettings)
+- [setReadDatePrivacySettings](index.types.default._AsyncApi.md#setreaddateprivacysettings)
 - [setRecoveryEmailAddress](index.types.default._AsyncApi.md#setrecoveryemailaddress)
+- [setSavedMessagesTagLabel](index.types.default._AsyncApi.md#setsavedmessagestaglabel)
 - [setScopeNotificationSettings](index.types.default._AsyncApi.md#setscopenotificationsettings)
 - [setStickerEmojis](index.types.default._AsyncApi.md#setstickeremojis)
 - [setStickerKeywords](index.types.default._AsyncApi.md#setstickerkeywords)
@@ -602,7 +684,9 @@ Convenience class for API calls
 - [setStickerSetTitle](index.types.default._AsyncApi.md#setstickersettitle)
 - [setStoryPrivacySettings](index.types.default._AsyncApi.md#setstoryprivacysettings)
 - [setStoryReaction](index.types.default._AsyncApi.md#setstoryreaction)
+- [setSupergroupCustomEmojiStickerSet](index.types.default._AsyncApi.md#setsupergroupcustomemojistickerset)
 - [setSupergroupStickerSet](index.types.default._AsyncApi.md#setsupergroupstickerset)
+- [setSupergroupUnrestrictBoostCount](index.types.default._AsyncApi.md#setsupergroupunrestrictboostcount)
 - [setSupergroupUsername](index.types.default._AsyncApi.md#setsupergroupusername)
 - [setTdlibParameters](index.types.default._AsyncApi.md#settdlibparameters)
 - [setUserPersonalProfilePhoto](index.types.default._AsyncApi.md#setuserpersonalprofilephoto)
@@ -612,7 +696,7 @@ Convenience class for API calls
 - [setVideoChatDefaultParticipant](index.types.default._AsyncApi.md#setvideochatdefaultparticipant)
 - [shareChatWithBot](index.types.default._AsyncApi.md#sharechatwithbot)
 - [sharePhoneNumber](index.types.default._AsyncApi.md#sharephonenumber)
-- [shareUserWithBot](index.types.default._AsyncApi.md#shareuserwithbot)
+- [shareUsersWithBot](index.types.default._AsyncApi.md#shareuserswithbot)
 - [startGroupCallRecording](index.types.default._AsyncApi.md#startgroupcallrecording)
 - [startGroupCallScreenSharing](index.types.default._AsyncApi.md#startgroupcallscreensharing)
 - [startScheduledGroupCall](index.types.default._AsyncApi.md#startscheduledgroupcall)
@@ -637,7 +721,9 @@ Convenience class for API calls
 - [toggleAllDownloadsArePaused](index.types.default._AsyncApi.md#togglealldownloadsarepaused)
 - [toggleBotIsAddedToAttachmentMenu](index.types.default._AsyncApi.md#togglebotisaddedtoattachmentmenu)
 - [toggleBotUsernameIsActive](index.types.default._AsyncApi.md#togglebotusernameisactive)
+- [toggleBusinessConnectedBotChatIsPaused](index.types.default._AsyncApi.md#togglebusinessconnectedbotchatispaused)
 - [toggleChatDefaultDisableNotification](index.types.default._AsyncApi.md#togglechatdefaultdisablenotification)
+- [toggleChatFolderTags](index.types.default._AsyncApi.md#togglechatfoldertags)
 - [toggleChatHasProtectedContent](index.types.default._AsyncApi.md#togglechathasprotectedcontent)
 - [toggleChatIsMarkedAsUnread](index.types.default._AsyncApi.md#togglechatismarkedasunread)
 - [toggleChatIsPinned](index.types.default._AsyncApi.md#togglechatispinned)
@@ -654,9 +740,12 @@ Convenience class for API calls
 - [toggleGroupCallParticipantIsHandRaised](index.types.default._AsyncApi.md#togglegroupcallparticipantishandraised)
 - [toggleGroupCallParticipantIsMuted](index.types.default._AsyncApi.md#togglegroupcallparticipantismuted)
 - [toggleGroupCallScreenSharingIsPaused](index.types.default._AsyncApi.md#togglegroupcallscreensharingispaused)
+- [toggleHasSponsoredMessagesEnabled](index.types.default._AsyncApi.md#togglehassponsoredmessagesenabled)
+- [toggleSavedMessagesTopicIsPinned](index.types.default._AsyncApi.md#togglesavedmessagestopicispinned)
 - [toggleSessionCanAcceptCalls](index.types.default._AsyncApi.md#togglesessioncanacceptcalls)
 - [toggleSessionCanAcceptSecretChats](index.types.default._AsyncApi.md#togglesessioncanacceptsecretchats)
-- [toggleStoryIsPinned](index.types.default._AsyncApi.md#togglestoryispinned)
+- [toggleStoryIsPostedToChatPage](index.types.default._AsyncApi.md#togglestoryispostedtochatpage)
+- [toggleSupergroupCanHaveSponsoredMessages](index.types.default._AsyncApi.md#togglesupergroupcanhavesponsoredmessages)
 - [toggleSupergroupHasAggressiveAntiSpamEnabled](index.types.default._AsyncApi.md#togglesupergrouphasaggressiveantispamenabled)
 - [toggleSupergroupHasHiddenMembers](index.types.default._AsyncApi.md#togglesupergrouphashiddenmembers)
 - [toggleSupergroupIsAllHistoryAvailable](index.types.default._AsyncApi.md#togglesupergroupisallhistoryavailable)
@@ -685,7 +774,7 @@ Convenience class for API calls
 
 ### constructor
 
-• **new $AsyncApi**(`client`)
+• **new $AsyncApi**(`client`): [`$AsyncApi`](index.types.default._AsyncApi.md)
 
 Constructs [$AsyncApi](index.types.default._AsyncApi.md)
 
@@ -694,11 +783,15 @@ Constructs [$AsyncApi](index.types.default._AsyncApi.md)
 | Name | Type |
 | :------ | :------ |
 | `client` | `Object` |
-| `client.invoke` | (`method`: `string`, `parameters`: `unknown`) => `Promise`<`unknown`\> |
+| `client.invoke` | (`method`: `string`, `parameters`: `unknown`) => `Promise`\<`unknown`\> |
+
+#### Returns
+
+[`$AsyncApi`](index.types.default._AsyncApi.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:57723
+dist/generated/types.d.ts:65375
 
 ## Properties
 
@@ -708,13 +801,13 @@ dist/generated/types.d.ts:57723
 
 #### Defined in
 
-dist/generated/types.d.ts:57717
+dist/generated/types.d.ts:65369
 
 ## Methods
 
 ### acceptCall
 
-▸ **acceptCall**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **acceptCall**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Accepts an incoming call
 
@@ -726,19 +819,19 @@ Accepts an incoming call
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60266
+dist/generated/types.d.ts:68336
 
 ___
 
 ### acceptTermsOfService
 
-▸ **acceptTermsOfService**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **acceptTermsOfService**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Accepts Telegram terms of services
 
@@ -750,19 +843,19 @@ Accepts Telegram terms of services
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62130
+dist/generated/types.d.ts:70447
 
 ___
 
 ### activateStoryStealthMode
 
-▸ **activateStoryStealthMode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **activateStoryStealthMode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Activates stealth mode for stories, which hides all views of stories from the current user in the last "story_stealth_mode_past_period" seconds
 
@@ -776,43 +869,19 @@ Activates stealth mode for stories, which hides all views of stories from the cu
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59901
-
-___
-
-### addApplicationChangelog
-
-▸ **addApplicationChangelog**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
-
-Adds server-provided application changelog as messages to the chat 777000 (Telegram) or as a stories; for official applications only. Returns a 404 error if nothing changed
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`addApplicationChangelog$DirectInput`](../modules/index.types.default.md#addapplicationchangelog$directinput) | [addApplicationChangelog$Input](../modules/index.types.default.md#addapplicationchangelog$input) |
-
-#### Returns
-
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
-
-Promise<[Ok](../modules/index.types.default.md#ok)>
-
-#### Defined in
-
-dist/generated/types.d.ts:62207
+dist/generated/types.d.ts:67927
 
 ___
 
 ### addChatFolderByInviteLink
 
-▸ **addChatFolderByInviteLink**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addChatFolderByInviteLink**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds a chat folder by an invite link
 
@@ -824,21 +893,21 @@ Adds a chat folder by an invite link
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59380
+dist/generated/types.d.ts:67365
 
 ___
 
 ### addChatMember
 
-▸ **addChatMember**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addChatMember**(`parameters`): `Promise`\<[`failedToAddMembers`](../modules/index.types.default.md#failedtoaddmembers-1)\>
 
-Adds a new member to a chat. Members can't be added to private or secret chats
+Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
 
 #### Parameters
 
@@ -848,21 +917,23 @@ Adds a new member to a chat. Members can't be added to private or secret chats
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`failedToAddMembers`](../modules/index.types.default.md#failedtoaddmembers-1)\>
 
-Promise<[Ok](../modules/index.types.default.md#ok)>
+Promise<[FailedToAddMembers](../modules/index.types.default.md#failedtoaddmembers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59606
+dist/generated/types.d.ts:67605
 
 ___
 
 ### addChatMembers
 
-▸ **addChatMembers**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addChatMembers**(`parameters`): `Promise`\<[`failedToAddMembers`](../modules/index.types.default.md#failedtoaddmembers-1)\>
 
-Adds multiple new members to a chat. Currently, this method is only available for supergroups and channels. This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members
+Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels.
+
+- This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members. Returns information about members that weren't added
 
 #### Parameters
 
@@ -872,19 +943,19 @@ Adds multiple new members to a chat. Currently, this method is only available fo
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`failedToAddMembers`](../modules/index.types.default.md#failedtoaddmembers-1)\>
 
-Promise<[Ok](../modules/index.types.default.md#ok)>
+Promise<[FailedToAddMembers](../modules/index.types.default.md#failedtoaddmembers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59613
+dist/generated/types.d.ts:67614
 
 ___
 
 ### addChatToList
 
-▸ **addChatToList**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addChatToList**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive chat lists, so it is automatically removed from another one if needed
 
@@ -896,19 +967,19 @@ Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive c
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59268
+dist/generated/types.d.ts:67246
 
 ___
 
 ### addContact
 
-▸ **addContact**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addContact**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds a user to the contact list or edits an existing contact by their user identifier
 
@@ -920,19 +991,19 @@ Adds a user to the contact list or edits an existing contact by their user ident
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60539
+dist/generated/types.d.ts:68609
 
 ___
 
 ### addCustomServerLanguagePack
 
-▸ **addCustomServerLanguagePack**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addCustomServerLanguagePack**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds a custom server language pack to the list of installed language packs in current localization target. Can be called before authorization
 
@@ -944,23 +1015,23 @@ Adds a custom server language pack to the list of installed language packs in cu
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61501
+dist/generated/types.d.ts:69769
 
 ___
 
 ### addFavoriteSticker
 
-▸ **addFavoriteSticker**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addFavoriteSticker**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds a new sticker to the list of favorite stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
 
-- Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to favorite stickers
+- Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to favorite stickers
 
 #### Parameters
 
@@ -970,23 +1041,23 @@ Adds a new sticker to the list of favorite stickers. The new sticker is added to
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60790
+dist/generated/types.d.ts:68867
 
 ___
 
 ### addFileToDownloads
 
-▸ **addFileToDownloads**(`parameters`): `Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+▸ **addFileToDownloads**(`parameters`): `Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
 
-- If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent from download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+- If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
 
 #### Parameters
 
@@ -996,19 +1067,19 @@ Adds a file from a message to the list of file downloads. Download progress and 
 
 #### Returns
 
-`Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+`Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60089
+dist/generated/types.d.ts:68152
 
 ___
 
 ### addLocalMessage
 
-▸ **addLocalMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **addLocalMessage**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Adds a local message to a chat. The message is persistent across application restarts only if the message database is used. Returns the added message
 
@@ -1020,19 +1091,19 @@ Adds a local message to a chat. The message is persistent across application res
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58586
+dist/generated/types.d.ts:66386
 
 ___
 
 ### addLogMessage
 
-▸ **addLogMessage**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addLogMessage**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds a message to TDLib internal log. Can be called synchronously
 
@@ -1044,21 +1115,21 @@ Adds a message to TDLib internal log. Can be called synchronously
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62333
+dist/generated/types.d.ts:70650
 
 ___
 
 ### addMessageReaction
 
-▸ **addMessageReaction**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addMessageReaction**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Adds a reaction to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
+Adds a reaction or a tag to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
 
 #### Parameters
 
@@ -1068,19 +1139,19 @@ Adds a reaction to a message. Use getMessageAvailableReactions to receive the li
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58805
+dist/generated/types.d.ts:66732
 
 ___
 
 ### addNetworkStatistics
 
-▸ **addNetworkStatistics**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addNetworkStatistics**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds the specified data to data usage statistics. Can be called before authorization
 
@@ -1092,19 +1163,19 @@ Adds the specified data to data usage statistics. Can be called before authoriza
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61738
+dist/generated/types.d.ts:70062
 
 ___
 
 ### addProxy
 
-▸ **addProxy**(`parameters`): `Promise`<[`proxy`](../modules/index.types.default.md#proxy-1)\>
+▸ **addProxy**(`parameters`): `Promise`\<[`proxy`](../modules/index.types.default.md#proxy-1)\>
 
 Adds a proxy server for network requests. Can be called before authorization
 
@@ -1116,23 +1187,101 @@ Adds a proxy server for network requests. Can be called before authorization
 
 #### Returns
 
-`Promise`<[`proxy`](../modules/index.types.default.md#proxy-1)\>
+`Promise`\<[`proxy`](../modules/index.types.default.md#proxy-1)\>
 
 Promise<[Proxy](../modules/index.types.default.md#proxy)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62228
+dist/generated/types.d.ts:70545
+
+___
+
+### addQuickReplyShortcutInlineQueryResultMessage
+
+▸ **addQuickReplyShortcutInlineQueryResultMessage**(`parameters`): `Promise`\<[`quickReplyMessage`](../modules/index.types.default.md#quickreplymessage-1)\>
+
+Adds a message to a quick reply shortcut via inline bot. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+
+- The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`addQuickReplyShortcutInlineQueryResultMessage$DirectInput`](../modules/index.types.default.md#addquickreplyshortcutinlinequeryresultmessage$directinput) | [addQuickReplyShortcutInlineQueryResultMessage$Input](../modules/index.types.default.md#addquickreplyshortcutinlinequeryresultmessage$input) |
+
+#### Returns
+
+`Promise`\<[`quickReplyMessage`](../modules/index.types.default.md#quickreplymessage-1)\>
+
+Promise<[QuickReplyMessage](../modules/index.types.default.md#quickreplymessage)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66586
+
+___
+
+### addQuickReplyShortcutMessage
+
+▸ **addQuickReplyShortcutMessage**(`parameters`): `Promise`\<[`quickReplyMessage`](../modules/index.types.default.md#quickreplymessage-1)\>
+
+Adds a message to a quick reply shortcut. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+
+- The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`addQuickReplyShortcutMessage$DirectInput`](../modules/index.types.default.md#addquickreplyshortcutmessage$directinput) | [addQuickReplyShortcutMessage$Input](../modules/index.types.default.md#addquickreplyshortcutmessage$input) |
+
+#### Returns
+
+`Promise`\<[`quickReplyMessage`](../modules/index.types.default.md#quickreplymessage-1)\>
+
+Promise<[QuickReplyMessage](../modules/index.types.default.md#quickreplymessage)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66577
+
+___
+
+### addQuickReplyShortcutMessageAlbum
+
+▸ **addQuickReplyShortcutMessageAlbum**(`parameters`): `Promise`\<[`quickReplyMessages`](../modules/index.types.default.md#quickreplymessages-1)\>
+
+Adds 2-10 messages grouped together into an album to a quick reply shortcut. Currently, only audio, document, photo and video messages can be grouped into an album.
+
+- Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`addQuickReplyShortcutMessageAlbum$DirectInput`](../modules/index.types.default.md#addquickreplyshortcutmessagealbum$directinput) | [addQuickReplyShortcutMessageAlbum$Input](../modules/index.types.default.md#addquickreplyshortcutmessagealbum$input) |
+
+#### Returns
+
+`Promise`\<[`quickReplyMessages`](../modules/index.types.default.md#quickreplymessages-1)\>
+
+Promise<[QuickReplyMessages](../modules/index.types.default.md#quickreplymessages)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66595
 
 ___
 
 ### addRecentSticker
 
-▸ **addRecentSticker**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **addRecentSticker**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Manually adds a new sticker to the list of recently used stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
 
-- Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to recent stickers
+- Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to recent stickers
 
 #### Parameters
 
@@ -1142,19 +1291,19 @@ Manually adds a new sticker to the list of recently used stickers. The new stick
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60760
+dist/generated/types.d.ts:68837
 
 ___
 
 ### addRecentlyFoundChat
 
-▸ **addRecentlyFoundChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addRecentlyFoundChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds a chat to the list of recently found chats. The chat is added to the beginning of the list. If the chat is already in the list, it will be removed from the list first
 
@@ -1166,21 +1315,23 @@ Adds a chat to the list of recently found chats. The chat is added to the beginn
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58239
+dist/generated/types.d.ts:65926
 
 ___
 
 ### addSavedAnimation
 
-▸ **addSavedAnimation**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addSavedAnimation**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first. Only non-secret video animations with MIME type "video/mp4" can be added to the list
+Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first.
+
+- Only non-secret video animations with MIME type "video/mp4" can be added to the list
 
 #### Parameters
 
@@ -1190,19 +1341,19 @@ Manually adds a new animation to the list of saved animations. The new animation
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60874
+dist/generated/types.d.ts:68960
 
 ___
 
 ### addSavedNotificationSound
 
-▸ **addSavedNotificationSound**(`parameters`): `Promise`<[`notificationSound`](../modules/index.types.default.md#notificationsound-1)\>
+▸ **addSavedNotificationSound**(`parameters`): `Promise`\<[`notificationSound`](../modules/index.types.default.md#notificationsound-1)\>
 
 Adds a new notification sound to the list of saved notification sounds. The new notification sound is added to the top of the list. If it is already in the list, its position isn't changed
 
@@ -1214,21 +1365,21 @@ Adds a new notification sound to the list of saved notification sounds. The new 
 
 #### Returns
 
-`Promise`<[`notificationSound`](../modules/index.types.default.md#notificationsound-1)\>
+`Promise`\<[`notificationSound`](../modules/index.types.default.md#notificationsound-1)\>
 
 Promise<[NotificationSound](../modules/index.types.default.md#notificationsound)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59690
+dist/generated/types.d.ts:67695
 
 ___
 
 ### addStickerToSet
 
-▸ **addStickerToSet**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **addStickerToSet**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Adds a new sticker to a set; for bots only
+Adds a new sticker to a set
 
 #### Parameters
 
@@ -1238,19 +1389,19 @@ Adds a new sticker to a set; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61955
+dist/generated/types.d.ts:70237
 
 ___
 
 ### allowBotToSendMessages
 
-▸ **allowBotToSendMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **allowBotToSendMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Allows the specified bot to send messages to the user
 
@@ -1262,19 +1413,19 @@ Allows the specified bot to send messages to the user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61091
+dist/generated/types.d.ts:69317
 
 ___
 
 ### answerCallbackQuery
 
-▸ **answerCallbackQuery**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **answerCallbackQuery**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the result of a callback query; for bots only
 
@@ -1286,19 +1437,19 @@ Sets the result of a callback query; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59047
+dist/generated/types.d.ts:67025
 
 ___
 
 ### answerCustomQuery
 
-▸ **answerCustomQuery**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **answerCustomQuery**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Answers a custom query; for bots only
 
@@ -1310,19 +1461,19 @@ Answers a custom query; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62151
+dist/generated/types.d.ts:70468
 
 ___
 
 ### answerInlineQuery
 
-▸ **answerInlineQuery**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **answerInlineQuery**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the result of an inline query; for bots only
 
@@ -1334,19 +1485,19 @@ Sets the result of an inline query; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58982
+dist/generated/types.d.ts:66960
 
 ___
 
 ### answerPreCheckoutQuery
 
-▸ **answerPreCheckoutQuery**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **answerPreCheckoutQuery**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the result of a pre-checkout query; for bots only
 
@@ -1358,19 +1509,19 @@ Sets the result of a pre-checkout query; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59061
+dist/generated/types.d.ts:67039
 
 ___
 
 ### answerShippingQuery
 
-▸ **answerShippingQuery**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **answerShippingQuery**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the result of a shipping query; for bots only
 
@@ -1382,19 +1533,19 @@ Sets the result of a shipping query; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59054
+dist/generated/types.d.ts:67032
 
 ___
 
 ### answerWebAppQuery
 
-▸ **answerWebAppQuery**(`parameters`): `Promise`<[`sentWebAppMessage`](../modules/index.types.default.md#sentwebappmessage-1)\>
+▸ **answerWebAppQuery**(`parameters`): `Promise`\<[`sentWebAppMessage`](../modules/index.types.default.md#sentwebappmessage-1)\>
 
 Sets the result of interaction with a Web App and sends corresponding message on behalf of the user to the chat from which the query originated; for bots only
 
@@ -1406,19 +1557,19 @@ Sets the result of interaction with a Web App and sends corresponding message on
 
 #### Returns
 
-`Promise`<[`sentWebAppMessage`](../modules/index.types.default.md#sentwebappmessage-1)\>
+`Promise`\<[`sentWebAppMessage`](../modules/index.types.default.md#sentwebappmessage-1)\>
 
 Promise<[SentWebAppMessage](../modules/index.types.default.md#sentwebappmessage)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59033
+dist/generated/types.d.ts:67011
 
 ___
 
 ### applyPremiumGiftCode
 
-▸ **applyPremiumGiftCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **applyPremiumGiftCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Applies a Telegram Premium gift code
 
@@ -1430,19 +1581,19 @@ Applies a Telegram Premium gift code
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62088
+dist/generated/types.d.ts:70384
 
 ___
 
 ### assignAppStoreTransaction
 
-▸ **assignAppStoreTransaction**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **assignAppStoreTransaction**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs server about a purchase through App Store. For official applications only
 
@@ -1454,19 +1605,19 @@ Informs server about a purchase through App Store. For official applications onl
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62116
+dist/generated/types.d.ts:70426
 
 ___
 
 ### assignGooglePlayTransaction
 
-▸ **assignGooglePlayTransaction**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **assignGooglePlayTransaction**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs server about a purchase through Google Play. For official applications only
 
@@ -1478,21 +1629,21 @@ Informs server about a purchase through Google Play. For official applications o
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62123
+dist/generated/types.d.ts:70433
 
 ___
 
 ### banChatMember
 
-▸ **banChatMember**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **banChatMember**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Bans a member in a chat. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
+Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
 
 #### Parameters
 
@@ -1502,19 +1653,19 @@ Bans a member in a chat. Members can't be banned in private or secret chats. In 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59627
+dist/generated/types.d.ts:67632
 
 ___
 
 ### blockMessageSenderFromReplies
 
-▸ **blockMessageSenderFromReplies**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **blockMessageSenderFromReplies**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Blocks an original sender of a message in the Replies chat
 
@@ -1526,19 +1677,19 @@ Blocks an original sender of a message in the Replies chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60525
+dist/generated/types.d.ts:68595
 
 ___
 
 ### boostChat
 
-▸ **boostChat**(`parameters`): `Promise`<[`chatBoostSlots`](../modules/index.types.default.md#chatboostslots-1)\>
+▸ **boostChat**(`parameters`): `Promise`\<[`chatBoostSlots`](../modules/index.types.default.md#chatboostslots-1)\>
 
 Boosts a chat and returns the list of available chat boost slots for the current user after the boost
 
@@ -1550,19 +1701,19 @@ Boosts a chat and returns the list of available chat boost slots for the current
 
 #### Returns
 
-`Promise`<[`chatBoostSlots`](../modules/index.types.default.md#chatboostslots-1)\>
+`Promise`\<[`chatBoostSlots`](../modules/index.types.default.md#chatboostslots-1)\>
 
 Promise<[ChatBoostSlots](../modules/index.types.default.md#chatboostslots)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59931
+dist/generated/types.d.ts:67971
 
 ___
 
 ### canBotSendMessages
 
-▸ **canBotSendMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **canBotSendMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks whether the specified bot can send messages to the user. Returns a 404 error if can't and the access can be granted by call to allowBotToSendMessages
 
@@ -1574,45 +1725,69 @@ Checks whether the specified bot can send messages to the user. Returns a 404 er
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61084
+dist/generated/types.d.ts:69310
 
 ___
 
-### canPurchasePremium
+### canPurchaseFromStore
 
-▸ **canPurchasePremium**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **canPurchaseFromStore**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Checks whether Telegram Premium purchase is possible. Must be called before in-store Premium purchase
+Checks whether an in-store purchase is possible. Must be called before any in-store purchase
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`canPurchasePremium$DirectInput`](../modules/index.types.default.md#canpurchasepremium$directinput) | [canPurchasePremium$Input](../modules/index.types.default.md#canpurchasepremium$input) |
+| `parameters` | [`canPurchaseFromStore$DirectInput`](../modules/index.types.default.md#canpurchasefromstore$directinput) | [canPurchaseFromStore$Input](../modules/index.types.default.md#canpurchasefromstore$input) |
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62109
+dist/generated/types.d.ts:70419
+
+___
+
+### canSendMessageToUser
+
+▸ **canSendMessageToUser**(`parameters`): `Promise`\<[`CanSendMessageToUserResult`](../modules/index.types.default.md#cansendmessagetouserresult)\>
+
+Check whether the current user can message another user or try to create a chat with them
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`canSendMessageToUser$DirectInput`](../modules/index.types.default.md#cansendmessagetouser$directinput) | [canSendMessageToUser$Input](../modules/index.types.default.md#cansendmessagetouser$input) |
+
+#### Returns
+
+`Promise`\<[`CanSendMessageToUserResult`](../modules/index.types.default.md#cansendmessagetouserresult)\>
+
+Promise<[CanSendMessageToUserResult](../modules/index.types.default.md#cansendmessagetouserresult)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69876
 
 ___
 
 ### canSendStory
 
-▸ **canSendStory**(`parameters`): `Promise`<[`CanSendStoryResult`](../modules/index.types.default.md#cansendstoryresult)\>
+▸ **canSendStory**(`parameters`): `Promise`\<[`CanSendStoryResult`](../modules/index.types.default.md#cansendstoryresult)\>
 
-Checks whether the current user can send a story on behalf of a chat; requires can_post_stories rights for channel chats
+Checks whether the current user can send a story on behalf of a chat; requires can_post_stories right for supergroup and channel chats
 
 #### Parameters
 
@@ -1622,19 +1797,19 @@ Checks whether the current user can send a story on behalf of a chat; requires c
 
 #### Returns
 
-`Promise`<[`CanSendStoryResult`](../modules/index.types.default.md#cansendstoryresult)\>
+`Promise`\<[`CanSendStoryResult`](../modules/index.types.default.md#cansendstoryresult)\>
 
 Promise<[CanSendStoryResult](../modules/index.types.default.md#cansendstoryresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59767
+dist/generated/types.d.ts:67779
 
 ___
 
 ### canTransferOwnership
 
-▸ **canTransferOwnership**(`parameters`): `Promise`<[`CanTransferOwnershipResult`](../modules/index.types.default.md#cantransferownershipresult)\>
+▸ **canTransferOwnership**(`parameters`): `Promise`\<[`CanTransferOwnershipResult`](../modules/index.types.default.md#cantransferownershipresult)\>
 
 Checks whether the current session can be used to transfer a chat ownership to another user
 
@@ -1646,19 +1821,19 @@ Checks whether the current session can be used to transfer a chat ownership to a
 
 #### Returns
 
-`Promise`<[`CanTransferOwnershipResult`](../modules/index.types.default.md#cantransferownershipresult)\>
+`Promise`\<[`CanTransferOwnershipResult`](../modules/index.types.default.md#cantransferownershipresult)\>
 
 Promise<[CanTransferOwnershipResult](../modules/index.types.default.md#cantransferownershipresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59634
+dist/generated/types.d.ts:67639
 
 ___
 
 ### cancelDownloadFile
 
-▸ **cancelDownloadFile**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **cancelDownloadFile**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Stops the downloading of a file. If a file has already been downloaded, does nothing
 
@@ -1670,19 +1845,19 @@ Stops the downloading of a file. If a file has already been downloaded, does not
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60022
+dist/generated/types.d.ts:68083
 
 ___
 
 ### cancelPasswordReset
 
-▸ **cancelPasswordReset**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **cancelPasswordReset**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Cancels reset of 2-step verification password. The method can be called if passwordState.pending_reset_date > 0
 
@@ -1694,19 +1869,19 @@ Cancels reset of 2-step verification password. The method can be called if passw
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57991
+dist/generated/types.d.ts:65657
 
 ___
 
 ### cancelPreliminaryUploadFile
 
-▸ **cancelPreliminaryUploadFile**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **cancelPreliminaryUploadFile**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
 
@@ -1718,19 +1893,43 @@ Stops the preliminary uploading of a file. Supported only for files uploaded by 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60045
+dist/generated/types.d.ts:68108
+
+___
+
+### cancelRecoveryEmailAddressVerification
+
+▸ **cancelRecoveryEmailAddressVerification**(`parameters`): `Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+
+Cancels verification of the 2-step verification recovery email address
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`cancelRecoveryEmailAddressVerification$DirectInput`](../modules/index.types.default.md#cancelrecoveryemailaddressverification$directinput) | [cancelRecoveryEmailAddressVerification$Input](../modules/index.types.default.md#cancelrecoveryemailaddressverification$input) |
+
+#### Returns
+
+`Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+
+Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
+
+#### Defined in
+
+dist/generated/types.d.ts:65622
 
 ___
 
 ### changeImportedContacts
 
-▸ **changeImportedContacts**(`parameters`): `Promise`<[`importedContacts`](../modules/index.types.default.md#importedcontacts-1)\>
+▸ **changeImportedContacts**(`parameters`): `Promise`\<[`importedContacts`](../modules/index.types.default.md#importedcontacts-1)\>
 
 Changes imported contacts using the list of contacts saved on the device. Imports newly added contacts and, if at least the file database is enabled, deletes recently deleted contacts.
 
@@ -1744,43 +1943,19 @@ Changes imported contacts using the list of contacts saved on the device. Import
 
 #### Returns
 
-`Promise`<[`importedContacts`](../modules/index.types.default.md#importedcontacts-1)\>
+`Promise`\<[`importedContacts`](../modules/index.types.default.md#importedcontacts-1)\>
 
 Promise<[ImportedContacts](../modules/index.types.default.md#importedcontacts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60583
-
-___
-
-### changePhoneNumber
-
-▸ **changePhoneNumber**(`parameters`): `Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
-
-Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`changePhoneNumber$DirectInput`](../modules/index.types.default.md#changephonenumber$directinput) | [changePhoneNumber$Input](../modules/index.types.default.md#changephonenumber$input) |
-
-#### Returns
-
-`Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
-
-Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticationcodeinfo)>
-
-#### Defined in
-
-dist/generated/types.d.ts:61000
+dist/generated/types.d.ts:68653
 
 ___
 
 ### changeStickerSet
 
-▸ **changeStickerSet**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **changeStickerSet**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Installs/uninstalls or activates/archives a sticker set
 
@@ -1792,19 +1967,19 @@ Installs/uninstalls or activates/archives a sticker set
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60730
+dist/generated/types.d.ts:68807
 
 ___
 
 ### checkAuthenticationBotToken
 
-▸ **checkAuthenticationBotToken**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkAuthenticationBotToken**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
 
@@ -1816,19 +1991,19 @@ Checks the authentication token of a bot; to log in as a bot. Works only when th
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57845
+dist/generated/types.d.ts:65504
 
 ___
 
 ### checkAuthenticationCode
 
-▸ **checkAuthenticationCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkAuthenticationCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks the authentication code. Works only when the current authorization state is authorizationStateWaitCode
 
@@ -1840,21 +2015,21 @@ Checks the authentication code. Works only when the current authorization state 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57778
+dist/generated/types.d.ts:65430
 
 ___
 
 ### checkAuthenticationEmailCode
 
-▸ **checkAuthenticationEmailCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkAuthenticationEmailCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Checks the authentication of a email address. Works only when the current authorization state is authorizationStateWaitEmailCode
+Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
 
 #### Parameters
 
@@ -1864,19 +2039,19 @@ Checks the authentication of a email address. Works only when the current author
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57771
+dist/generated/types.d.ts:65423
 
 ___
 
 ### checkAuthenticationPassword
 
-▸ **checkAuthenticationPassword**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkAuthenticationPassword**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks the 2-step verification password for correctness. Works only when the current authorization state is authorizationStateWaitPassword
 
@@ -1888,19 +2063,19 @@ Checks the 2-step verification password for correctness. Works only when the cur
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57810
+dist/generated/types.d.ts:65462
 
 ___
 
 ### checkAuthenticationPasswordRecoveryCode
 
-▸ **checkAuthenticationPasswordRecoveryCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkAuthenticationPasswordRecoveryCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks whether a 2-step verification password recovery code sent to an email address is valid. Works only when the current authorization state is authorizationStateWaitPassword
 
@@ -1912,43 +2087,19 @@ Checks whether a 2-step verification password recovery code sent to an email add
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57824
-
-___
-
-### checkChangePhoneNumberCode
-
-▸ **checkChangePhoneNumberCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
-
-Checks the authentication code sent to confirm a new phone number of the user
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`checkChangePhoneNumberCode$DirectInput`](../modules/index.types.default.md#checkchangephonenumbercode$directinput) | [checkChangePhoneNumberCode$Input](../modules/index.types.default.md#checkchangephonenumbercode$input) |
-
-#### Returns
-
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
-
-Promise<[Ok](../modules/index.types.default.md#ok)>
-
-#### Defined in
-
-dist/generated/types.d.ts:61014
+dist/generated/types.d.ts:65476
 
 ___
 
 ### checkChatFolderInviteLink
 
-▸ **checkChatFolderInviteLink**(`parameters`): `Promise`<[`chatFolderInviteLinkInfo`](../modules/index.types.default.md#chatfolderinvitelinkinfo-1)\>
+▸ **checkChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLinkInfo`](../modules/index.types.default.md#chatfolderinvitelinkinfo-1)\>
 
 Checks the validity of an invite link for a chat folder and returns information about the corresponding chat folder
 
@@ -1960,19 +2111,19 @@ Checks the validity of an invite link for a chat folder and returns information 
 
 #### Returns
 
-`Promise`<[`chatFolderInviteLinkInfo`](../modules/index.types.default.md#chatfolderinvitelinkinfo-1)\>
+`Promise`\<[`chatFolderInviteLinkInfo`](../modules/index.types.default.md#chatfolderinvitelinkinfo-1)\>
 
 Promise<[ChatFolderInviteLinkInfo](../modules/index.types.default.md#chatfolderinvitelinkinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59373
+dist/generated/types.d.ts:67358
 
 ___
 
 ### checkChatInviteLink
 
-▸ **checkChatInviteLink**(`parameters`): `Promise`<[`chatInviteLinkInfo`](../modules/index.types.default.md#chatinvitelinkinfo-1)\>
+▸ **checkChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLinkInfo`](../modules/index.types.default.md#chatinvitelinkinfo-1)\>
 
 Checks the validity of an invite link for a chat and returns information about the corresponding chat
 
@@ -1984,19 +2135,19 @@ Checks the validity of an invite link for a chat and returns information about t
 
 #### Returns
 
-`Promise`<[`chatInviteLinkInfo`](../modules/index.types.default.md#chatinvitelinkinfo-1)\>
+`Promise`\<[`chatInviteLinkInfo`](../modules/index.types.default.md#chatinvitelinkinfo-1)\>
 
 Promise<[ChatInviteLinkInfo](../modules/index.types.default.md#chatinvitelinkinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60224
+dist/generated/types.d.ts:68294
 
 ___
 
 ### checkChatUsername
 
-▸ **checkChatUsername**(`parameters`): `Promise`<[`CheckChatUsernameResult`](../modules/index.types.default.md#checkchatusernameresult)\>
+▸ **checkChatUsername**(`parameters`): `Promise`\<[`CheckChatUsernameResult`](../modules/index.types.default.md#checkchatusernameresult)\>
 
 Checks whether a username can be set for a chat
 
@@ -2008,19 +2159,19 @@ Checks whether a username can be set for a chat
 
 #### Returns
 
-`Promise`<[`CheckChatUsernameResult`](../modules/index.types.default.md#checkchatusernameresult)\>
+`Promise`\<[`CheckChatUsernameResult`](../modules/index.types.default.md#checkchatusernameresult)\>
 
 Promise<[CheckChatUsernameResult](../modules/index.types.default.md#checkchatusernameresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58267
+dist/generated/types.d.ts:65954
 
 ___
 
 ### checkCreatedPublicChatsLimit
 
-▸ **checkCreatedPublicChatsLimit**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkCreatedPublicChatsLimit**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
 
@@ -2032,19 +2183,19 @@ Checks whether the maximum number of owned public chats has been reached. Return
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58281
+dist/generated/types.d.ts:65968
 
 ___
 
 ### checkEmailAddressVerificationCode
 
-▸ **checkEmailAddressVerificationCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkEmailAddressVerificationCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks the email address verification code for Telegram Passport
 
@@ -2056,19 +2207,19 @@ Checks the email address verification code for Telegram Passport
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61871
+dist/generated/types.d.ts:70174
 
 ___
 
 ### checkLoginEmailAddressCode
 
-▸ **checkLoginEmailAddressCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkLoginEmailAddressCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks the login email address authentication
 
@@ -2080,19 +2231,19 @@ Checks the login email address authentication
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57926
+dist/generated/types.d.ts:65585
 
 ___
 
 ### checkPasswordRecoveryCode
 
-▸ **checkPasswordRecoveryCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkPasswordRecoveryCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Checks whether a 2-step verification password recovery code sent to an email address is valid
 
@@ -2104,67 +2255,43 @@ Checks whether a 2-step verification password recovery code sent to an email add
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57970
+dist/generated/types.d.ts:65636
 
 ___
 
-### checkPhoneNumberConfirmationCode
+### checkPhoneNumberCode
 
-▸ **checkPhoneNumberConfirmationCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **checkPhoneNumberCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Checks phone number confirmation code
+Check the authentication code and completes the request for which the code was sent if appropriate
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`checkPhoneNumberConfirmationCode$DirectInput`](../modules/index.types.default.md#checkphonenumberconfirmationcode$directinput) | [checkPhoneNumberConfirmationCode$Input](../modules/index.types.default.md#checkphonenumberconfirmationcode$input) |
+| `parameters` | [`checkPhoneNumberCode$DirectInput`](../modules/index.types.default.md#checkphonenumbercode$directinput) | [checkPhoneNumberCode$Input](../modules/index.types.default.md#checkphonenumbercode$input) |
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61913
-
-___
-
-### checkPhoneNumberVerificationCode
-
-▸ **checkPhoneNumberVerificationCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
-
-Checks the phone number verification code for Telegram Passport
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`checkPhoneNumberVerificationCode$DirectInput`](../modules/index.types.default.md#checkphonenumberverificationcode$directinput) | [checkPhoneNumberVerificationCode$Input](../modules/index.types.default.md#checkphonenumberverificationcode$input) |
-
-#### Returns
-
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
-
-Promise<[Ok](../modules/index.types.default.md#ok)>
-
-#### Defined in
-
-dist/generated/types.d.ts:61850
+dist/generated/types.d.ts:69170
 
 ___
 
 ### checkPremiumGiftCode
 
-▸ **checkPremiumGiftCode**(`parameters`): `Promise`<[`premiumGiftCodeInfo`](../modules/index.types.default.md#premiumgiftcodeinfo-1)\>
+▸ **checkPremiumGiftCode**(`parameters`): `Promise`\<[`premiumGiftCodeInfo`](../modules/index.types.default.md#premiumgiftcodeinfo-1)\>
 
 Return information about a Telegram Premium gift code
 
@@ -2176,19 +2303,43 @@ Return information about a Telegram Premium gift code
 
 #### Returns
 
-`Promise`<[`premiumGiftCodeInfo`](../modules/index.types.default.md#premiumgiftcodeinfo-1)\>
+`Promise`\<[`premiumGiftCodeInfo`](../modules/index.types.default.md#premiumgiftcodeinfo-1)\>
 
 Promise<[PremiumGiftCodeInfo](../modules/index.types.default.md#premiumgiftcodeinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62081
+dist/generated/types.d.ts:70377
+
+___
+
+### checkQuickReplyShortcutName
+
+▸ **checkQuickReplyShortcutName**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Checks validness of a name for a quick reply shortcut. Can be called synchronously
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`checkQuickReplyShortcutName$DirectInput`](../modules/index.types.default.md#checkquickreplyshortcutname$directinput) | [checkQuickReplyShortcutName$Input](../modules/index.types.default.md#checkquickreplyshortcutname$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66526
 
 ___
 
 ### checkRecoveryEmailAddressCode
 
-▸ **checkRecoveryEmailAddressCode**(`parameters`): `Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+▸ **checkRecoveryEmailAddressCode**(`parameters`): `Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Checks the 2-step verification recovery email address verification code
 
@@ -2200,19 +2351,19 @@ Checks the 2-step verification recovery email address verification code
 
 #### Returns
 
-`Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+`Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57949
+dist/generated/types.d.ts:65608
 
 ___
 
 ### checkStickerSetName
 
-▸ **checkStickerSetName**(`parameters`): `Promise`<[`CheckStickerSetNameResult`](../modules/index.types.default.md#checkstickersetnameresult)\>
+▸ **checkStickerSetName**(`parameters`): `Promise`\<[`CheckStickerSetNameResult`](../modules/index.types.default.md#checkstickersetnameresult)\>
 
 Checks whether a name can be used for a new sticker set
 
@@ -2224,19 +2375,19 @@ Checks whether a name can be used for a new sticker set
 
 #### Returns
 
-`Promise`<[`CheckStickerSetNameResult`](../modules/index.types.default.md#checkstickersetnameresult)\>
+`Promise`\<[`CheckStickerSetNameResult`](../modules/index.types.default.md#checkstickersetnameresult)\>
 
 Promise<[CheckStickerSetNameResult](../modules/index.types.default.md#checkstickersetnameresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61941
+dist/generated/types.d.ts:70223
 
 ___
 
 ### cleanFileName
 
-▸ **cleanFileName**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **cleanFileName**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
 
@@ -2248,19 +2399,19 @@ Removes potentially dangerous characters from the name of a file. The encoding o
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58882
+dist/generated/types.d.ts:66846
 
 ___
 
 ### clearAllDraftMessages
 
-▸ **clearAllDraftMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clearAllDraftMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Clears message drafts in all chats
 
@@ -2272,19 +2423,19 @@ Clears message drafts in all chats
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59669
+dist/generated/types.d.ts:67674
 
 ___
 
 ### clearAutosaveSettingsExceptions
 
-▸ **clearAutosaveSettingsExceptions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clearAutosaveSettingsExceptions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Clears the list of all autosave settings exceptions. The method is guaranteed to work only after at least one call to getAutosaveSettings
 
@@ -2296,19 +2447,19 @@ Clears the list of all autosave settings exceptions. The method is guaranteed to
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61780
+dist/generated/types.d.ts:70104
 
 ___
 
 ### clearImportedContacts
 
-▸ **clearImportedContacts**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clearImportedContacts**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Clears all imported contacts, contact list remains unchanged
 
@@ -2320,21 +2471,21 @@ Clears all imported contacts, contact list remains unchanged
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60590
+dist/generated/types.d.ts:68660
 
 ___
 
 ### clearRecentEmojiStatuses
 
-▸ **clearRecentEmojiStatuses**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clearRecentEmojiStatuses**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Clears the list of recently used emoji statuses
+Clears the list of recently used emoji statuses for self status
 
 #### Parameters
 
@@ -2344,19 +2495,19 @@ Clears the list of recently used emoji statuses
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60001
+dist/generated/types.d.ts:68041
 
 ___
 
 ### clearRecentReactions
 
-▸ **clearRecentReactions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clearRecentReactions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Clears the list of recently used reactions
 
@@ -2368,19 +2519,19 @@ Clears the list of recently used reactions
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58798
+dist/generated/types.d.ts:66725
 
 ___
 
 ### clearRecentStickers
 
-▸ **clearRecentStickers**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clearRecentStickers**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Clears the list of recently used stickers
 
@@ -2392,19 +2543,19 @@ Clears the list of recently used stickers
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60774
+dist/generated/types.d.ts:68851
 
 ___
 
 ### clearRecentlyFoundChats
 
-▸ **clearRecentlyFoundChats**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clearRecentlyFoundChats**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Clears the list of recently found chats
 
@@ -2416,19 +2567,43 @@ Clears the list of recently found chats
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58253
+dist/generated/types.d.ts:65940
+
+___
+
+### clearSearchedForHashtags
+
+▸ **clearSearchedForHashtags**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Clears the list of recently searched for hashtags
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`clearSearchedForHashtags$DirectInput`](../modules/index.types.default.md#clearsearchedforhashtags$directinput) | [clearSearchedForHashtags$Input](../modules/index.types.default.md#clearsearchedforhashtags$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66161
 
 ___
 
 ### clickAnimatedEmojiMessage
 
-▸ **clickAnimatedEmojiMessage**(`parameters`): `Promise`<[`sticker`](../modules/index.types.default.md#sticker-1)\>
+▸ **clickAnimatedEmojiMessage**(`parameters`): `Promise`\<[`sticker`](../modules/index.types.default.md#sticker-1)\>
 
 Informs TDLib that a message with an animated emoji was clicked by the user. Returns a big animated sticker to be played or a 404 error if usual animation needs to be played
 
@@ -2440,19 +2615,19 @@ Informs TDLib that a message with an animated emoji was clicked by the user. Ret
 
 #### Returns
 
-`Promise`<[`sticker`](../modules/index.types.default.md#sticker-1)\>
+`Promise`\<[`sticker`](../modules/index.types.default.md#sticker-1)\>
 
 Promise<[Sticker](../modules/index.types.default.md#sticker)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59142
+dist/generated/types.d.ts:67120
 
 ___
 
 ### clickChatSponsoredMessage
 
-▸ **clickChatSponsoredMessage**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clickChatSponsoredMessage**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
 
@@ -2464,19 +2639,19 @@ Informs TDLib that the user opened the sponsored chat via the button, the name, 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58458
+dist/generated/types.d.ts:66240
 
 ___
 
 ### clickPremiumSubscriptionButton
 
-▸ **clickPremiumSubscriptionButton**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **clickPremiumSubscriptionButton**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that the user clicked Premium subscription button on the Premium features screen
 
@@ -2488,19 +2663,19 @@ Informs TDLib that the user clicked Premium subscription button on the Premium f
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62060
+dist/generated/types.d.ts:70356
 
 ___
 
 ### close
 
-▸ **close**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **close**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Closes the TDLib instance. All databases will be flushed to disk and properly closed. After the close completes, updateAuthorizationState with authorizationStateClosed will be sent. Can be called before initialization
 
@@ -2512,19 +2687,19 @@ Closes the TDLib instance. All databases will be flushed to disk and properly cl
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57859
+dist/generated/types.d.ts:65518
 
 ___
 
 ### closeChat
 
-▸ **closeChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **closeChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that the chat is closed by the user. Many useful activities depend on the chat being opened or closed
 
@@ -2536,19 +2711,19 @@ Informs TDLib that the chat is closed by the user. Many useful activities depend
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59117
+dist/generated/types.d.ts:67095
 
 ___
 
 ### closeSecretChat
 
-▸ **closeSecretChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **closeSecretChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Closes a secret chat, effectively transferring its state to secretChatStateClosed
 
@@ -2560,19 +2735,19 @@ Closes a secret chat, effectively transferring its state to secretChatStateClose
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61352
+dist/generated/types.d.ts:69599
 
 ___
 
 ### closeStory
 
-▸ **closeStory**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **closeStory**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that a story is closed by the user
 
@@ -2584,19 +2759,19 @@ Informs TDLib that a story is closed by the user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59864
+dist/generated/types.d.ts:67883
 
 ___
 
 ### closeWebApp
 
-▸ **closeWebApp**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **closeWebApp**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that a previously opened Web App was closed
 
@@ -2608,19 +2783,19 @@ Informs TDLib that a previously opened Web App was closed
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59026
+dist/generated/types.d.ts:67004
 
 ___
 
 ### confirmQrCodeAuthentication
 
-▸ **confirmQrCodeAuthentication**(`parameters`): `Promise`<[`session`](../modules/index.types.default.md#session-1)\>
+▸ **confirmQrCodeAuthentication**(`parameters`): `Promise`\<[`session`](../modules/index.types.default.md#session-1)\>
 
 Confirms QR code authentication on another device. Returns created session on success
 
@@ -2632,19 +2807,19 @@ Confirms QR code authentication on another device. Returns created session on su
 
 #### Returns
 
-`Promise`<[`session`](../modules/index.types.default.md#session-1)\>
+`Promise`\<[`session`](../modules/index.types.default.md#session-1)\>
 
 Promise<[Session](../modules/index.types.default.md#session)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57875
+dist/generated/types.d.ts:65534
 
 ___
 
 ### confirmSession
 
-▸ **confirmSession**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **confirmSession**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Confirms an unconfirmed session of the current user from another device
 
@@ -2656,19 +2831,19 @@ Confirms an unconfirmed session of the current user from another device
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61189
+dist/generated/types.d.ts:69415
 
 ___
 
 ### createBasicGroupChat
 
-▸ **createBasicGroupChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **createBasicGroupChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Returns an existing chat corresponding to a known basic group
 
@@ -2680,19 +2855,43 @@ Returns an existing chat corresponding to a known basic group
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59212
+dist/generated/types.d.ts:67190
+
+___
+
+### createBusinessChatLink
+
+▸ **createBusinessChatLink**(`parameters`): `Promise`\<[`businessChatLink`](../modules/index.types.default.md#businesschatlink-1)\>
+
+Creates a business chat link for the current account. Requires Telegram Business subscription. There can be up to getOption("business_chat_link_count_max") links created. Returns the created link
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`createBusinessChatLink$DirectInput`](../modules/index.types.default.md#createbusinesschatlink$directinput) | [createBusinessChatLink$Input](../modules/index.types.default.md#createbusinesschatlink$input) |
+
+#### Returns
+
+`Promise`\<[`businessChatLink`](../modules/index.types.default.md#businesschatlink-1)\>
+
+Promise<[BusinessChatLink](../modules/index.types.default.md#businesschatlink)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69219
 
 ___
 
 ### createCall
 
-▸ **createCall**(`parameters`): `Promise`<[`callId`](../modules/index.types.default.md#callid-1)\>
+▸ **createCall**(`parameters`): `Promise`\<[`callId`](../modules/index.types.default.md#callid-1)\>
 
 Creates a new call
 
@@ -2704,19 +2903,19 @@ Creates a new call
 
 #### Returns
 
-`Promise`<[`callId`](../modules/index.types.default.md#callid-1)\>
+`Promise`\<[`callId`](../modules/index.types.default.md#callid-1)\>
 
 Promise<[CallId](../modules/index.types.default.md#callid)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60259
+dist/generated/types.d.ts:68329
 
 ___
 
 ### createChatFolder
 
-▸ **createChatFolder**(`parameters`): `Promise`<[`chatFolderInfo`](../modules/index.types.default.md#chatfolderinfo-1)\>
+▸ **createChatFolder**(`parameters`): `Promise`\<[`chatFolderInfo`](../modules/index.types.default.md#chatfolderinfo-1)\>
 
 Creates new chat folder. Returns information about the created chat folder. There can be up to getOption("chat_folder_count_max") chat folders, but the limit can be increased with Telegram Premium
 
@@ -2728,19 +2927,19 @@ Creates new chat folder. Returns information about the created chat folder. Ther
 
 #### Returns
 
-`Promise`<[`chatFolderInfo`](../modules/index.types.default.md#chatfolderinfo-1)\>
+`Promise`\<[`chatFolderInfo`](../modules/index.types.default.md#chatfolderinfo-1)\>
 
 Promise<[ChatFolderInfo](../modules/index.types.default.md#chatfolderinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59282
+dist/generated/types.d.ts:67260
 
 ___
 
 ### createChatFolderInviteLink
 
-▸ **createChatFolderInviteLink**(`parameters`): `Promise`<[`chatFolderInviteLink`](../modules/index.types.default.md#chatfolderinvitelink-1)\>
+▸ **createChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLink`](../modules/index.types.default.md#chatfolderinvitelink-1)\>
 
 Creates a new invite link for a chat folder. A link can be created for a chat folder if it has only pinned and included chats
 
@@ -2752,19 +2951,19 @@ Creates a new invite link for a chat folder. A link can be created for a chat fo
 
 #### Returns
 
-`Promise`<[`chatFolderInviteLink`](../modules/index.types.default.md#chatfolderinvitelink-1)\>
+`Promise`\<[`chatFolderInviteLink`](../modules/index.types.default.md#chatfolderinvitelink-1)\>
 
 Promise<[ChatFolderInviteLink](../modules/index.types.default.md#chatfolderinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59345
+dist/generated/types.d.ts:67330
 
 ___
 
 ### createChatInviteLink
 
-▸ **createChatInviteLink**(`parameters`): `Promise`<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
+▸ **createChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
 
 Creates a new invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat
 
@@ -2776,21 +2975,21 @@ Creates a new invite link for a chat. Available for basic groups, supergroups, a
 
 #### Returns
 
-`Promise`<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
+`Promise`\<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
 
 Promise<[ChatInviteLink](../modules/index.types.default.md#chatinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60159
+dist/generated/types.d.ts:68229
 
 ___
 
 ### createForumTopic
 
-▸ **createForumTopic**(`parameters`): `Promise`<[`forumTopicInfo`](../modules/index.types.default.md#forumtopicinfo-1)\>
+▸ **createForumTopic**(`parameters`): `Promise`\<[`forumTopicInfo`](../modules/index.types.default.md#forumtopicinfo-1)\>
 
-Creates a topic in a forum supergroup chat; requires can_manage_topics rights in the supergroup
+Creates a topic in a forum supergroup chat; requires can_manage_topics administrator or can_create_topics member right in the supergroup
 
 #### Parameters
 
@@ -2800,19 +2999,19 @@ Creates a topic in a forum supergroup chat; requires can_manage_topics rights in
 
 #### Returns
 
-`Promise`<[`forumTopicInfo`](../modules/index.types.default.md#forumtopicinfo-1)\>
+`Promise`\<[`forumTopicInfo`](../modules/index.types.default.md#forumtopicinfo-1)\>
 
 Promise<[ForumTopicInfo](../modules/index.types.default.md#forumtopicinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58700
+dist/generated/types.d.ts:66627
 
 ___
 
 ### createInvoiceLink
 
-▸ **createInvoiceLink**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **createInvoiceLink**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Creates a link for the given invoice; for bots only
 
@@ -2824,21 +3023,21 @@ Creates a link for the given invoice; for bots only
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61415
+dist/generated/types.d.ts:69669
 
 ___
 
 ### createNewBasicGroupChat
 
-▸ **createNewBasicGroupChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **createNewBasicGroupChat**(`parameters`): `Promise`\<[`createdBasicGroupChat`](../modules/index.types.default.md#createdbasicgroupchat-1)\>
 
-Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns the newly created chat
+Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
 
 #### Parameters
 
@@ -2848,19 +3047,19 @@ Creates a new basic group and sends a corresponding messageBasicGroupChatCreate.
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`createdBasicGroupChat`](../modules/index.types.default.md#createdbasicgroupchat-1)\>
 
-Promise<[Chat](../modules/index.types.default.md#chat)>
+Promise<[CreatedBasicGroupChat](../modules/index.types.default.md#createdbasicgroupchat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59233
+dist/generated/types.d.ts:67211
 
 ___
 
 ### createNewSecretChat
 
-▸ **createNewSecretChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **createNewSecretChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Creates a new secret chat. Returns the newly created chat
 
@@ -2872,19 +3071,19 @@ Creates a new secret chat. Returns the newly created chat
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59247
+dist/generated/types.d.ts:67225
 
 ___
 
 ### createNewStickerSet
 
-▸ **createNewStickerSet**(`parameters`): `Promise`<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
+▸ **createNewStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
 
 Creates a new sticker set. Returns the newly created sticker set
 
@@ -2896,19 +3095,19 @@ Creates a new sticker set. Returns the newly created sticker set
 
 #### Returns
 
-`Promise`<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
+`Promise`\<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
 
 Promise<[StickerSet](../modules/index.types.default.md#stickerset)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61948
+dist/generated/types.d.ts:70230
 
 ___
 
 ### createNewSupergroupChat
 
-▸ **createNewSupergroupChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **createNewSupergroupChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Creates a new supergroup or channel and sends a corresponding messageSupergroupChatCreate. Returns the newly created chat
 
@@ -2920,19 +3119,19 @@ Creates a new supergroup or channel and sends a corresponding messageSupergroupC
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59240
+dist/generated/types.d.ts:67218
 
 ___
 
 ### createPrivateChat
 
-▸ **createPrivateChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **createPrivateChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Returns an existing chat corresponding to a given user
 
@@ -2944,19 +3143,19 @@ Returns an existing chat corresponding to a given user
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59205
+dist/generated/types.d.ts:67183
 
 ___
 
 ### createSecretChat
 
-▸ **createSecretChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **createSecretChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Returns an existing chat corresponding to a known secret chat
 
@@ -2968,19 +3167,19 @@ Returns an existing chat corresponding to a known secret chat
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59226
+dist/generated/types.d.ts:67204
 
 ___
 
 ### createSupergroupChat
 
-▸ **createSupergroupChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **createSupergroupChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Returns an existing chat corresponding to a known supergroup or channel
 
@@ -2992,19 +3191,19 @@ Returns an existing chat corresponding to a known supergroup or channel
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59219
+dist/generated/types.d.ts:67197
 
 ___
 
 ### createTemporaryPassword
 
-▸ **createTemporaryPassword**(`parameters`): `Promise`<[`temporaryPasswordState`](../modules/index.types.default.md#temporarypasswordstate-1)\>
+▸ **createTemporaryPassword**(`parameters`): `Promise`\<[`temporaryPasswordState`](../modules/index.types.default.md#temporarypasswordstate-1)\>
 
 Creates a new temporary password for processing payments
 
@@ -3016,21 +3215,21 @@ Creates a new temporary password for processing payments
 
 #### Returns
 
-`Promise`<[`temporaryPasswordState`](../modules/index.types.default.md#temporarypasswordstate-1)\>
+`Promise`\<[`temporaryPasswordState`](../modules/index.types.default.md#temporarypasswordstate-1)\>
 
 Promise<[TemporaryPasswordState](../modules/index.types.default.md#temporarypasswordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57998
+dist/generated/types.d.ts:65664
 
 ___
 
 ### createVideoChat
 
-▸ **createVideoChat**(`parameters`): `Promise`<[`groupCallId`](../modules/index.types.default.md#groupcallid-1)\>
+▸ **createVideoChat**(`parameters`): `Promise`\<[`groupCallId`](../modules/index.types.default.md#groupcallid-1)\>
 
-Creates a video chat (a group call bound to a chat). Available only for basic groups, supergroups and channels; requires can_manage_video_chats rights
+Creates a video chat (a group call bound to a chat). Available only for basic groups, supergroups and channels; requires can_manage_video_chats administrator right
 
 #### Parameters
 
@@ -3040,19 +3239,19 @@ Creates a video chat (a group call bound to a chat). Available only for basic gr
 
 #### Returns
 
-`Promise`<[`groupCallId`](../modules/index.types.default.md#groupcallid-1)\>
+`Promise`\<[`groupCallId`](../modules/index.types.default.md#groupcallid-1)\>
 
 Promise<[GroupCallId](../modules/index.types.default.md#groupcallid)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60322
+dist/generated/types.d.ts:68392
 
 ___
 
 ### deleteAccount
 
-▸ **deleteAccount**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteAccount**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes the account of the current user, deleting all information associated with the user from the server. The phone number of the account can be used to create a new account.
 
@@ -3066,19 +3265,19 @@ Deletes the account of the current user, deleting all information associated wit
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61610
+dist/generated/types.d.ts:69913
 
 ___
 
 ### deleteAllCallMessages
 
-▸ **deleteAllCallMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteAllCallMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes all call messages
 
@@ -3090,19 +3289,19 @@ Deletes all call messages
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58386
+dist/generated/types.d.ts:66168
 
 ___
 
 ### deleteAllRevokedChatInviteLinks
 
-▸ **deleteAllRevokedChatInviteLinks**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteAllRevokedChatInviteLinks**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes all revoked chat invite links created by a given chat administrator. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
@@ -3114,19 +3313,67 @@ Deletes all revoked chat invite links created by a given chat administrator. Req
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60217
+dist/generated/types.d.ts:68287
+
+___
+
+### deleteBusinessChatLink
+
+▸ **deleteBusinessChatLink**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Deletes a business chat link of the current account
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteBusinessChatLink$DirectInput`](../modules/index.types.default.md#deletebusinesschatlink$directinput) | [deleteBusinessChatLink$Input](../modules/index.types.default.md#deletebusinesschatlink$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69233
+
+___
+
+### deleteBusinessConnectedBot
+
+▸ **deleteBusinessConnectedBot**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Deletes the business bot that is connected to the current user account
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteBusinessConnectedBot$DirectInput`](../modules/index.types.default.md#deletebusinessconnectedbot$directinput) | [deleteBusinessConnectedBot$Input](../modules/index.types.default.md#deletebusinessconnectedbot$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69191
 
 ___
 
 ### deleteChat
 
-▸ **deleteChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes a chat along with all messages in the corresponding chat for all chat members. For group chats this will release the usernames and remove all members.
 
@@ -3140,19 +3387,19 @@ Deletes a chat along with all messages in the corresponding chat for all chat me
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58338
+dist/generated/types.d.ts:66081
 
 ___
 
 ### deleteChatBackground
 
-▸ **deleteChatBackground**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteChatBackground**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes background in a specific chat
 
@@ -3164,19 +3411,19 @@ Deletes background in a specific chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59459
+dist/generated/types.d.ts:67458
 
 ___
 
 ### deleteChatFolder
 
-▸ **deleteChatFolder**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteChatFolder**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes existing chat folder
 
@@ -3188,19 +3435,19 @@ Deletes existing chat folder
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59296
+dist/generated/types.d.ts:67274
 
 ___
 
 ### deleteChatFolderInviteLink
 
-▸ **deleteChatFolderInviteLink**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteChatFolderInviteLink**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes an invite link for a chat folder
 
@@ -3212,19 +3459,19 @@ Deletes an invite link for a chat folder
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59366
+dist/generated/types.d.ts:67351
 
 ___
 
 ### deleteChatHistory
 
-▸ **deleteChatHistory**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteChatHistory**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat.can_be_deleted_for_all_users fields to find whether and how the method can be applied to the chat
 
@@ -3236,19 +3483,19 @@ Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58329
+dist/generated/types.d.ts:66072
 
 ___
 
 ### deleteChatMessagesByDate
 
-▸ **deleteChatMessagesByDate**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteChatMessagesByDate**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes all messages between the specified dates in a chat. Supported only for private chats and basic groups. Messages sent in the last 30 seconds will not be deleted
 
@@ -3260,19 +3507,19 @@ Deletes all messages between the specified dates in a chat. Supported only for p
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58607
+dist/generated/types.d.ts:66407
 
 ___
 
 ### deleteChatMessagesBySender
 
-▸ **deleteChatMessagesBySender**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteChatMessagesBySender**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes all messages sent by the specified message sender in a chat. Supported only for supergroups; requires can_delete_messages administrator privileges
 
@@ -3284,19 +3531,19 @@ Deletes all messages sent by the specified message sender in a chat. Supported o
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58600
+dist/generated/types.d.ts:66400
 
 ___
 
 ### deleteChatReplyMarkup
 
-▸ **deleteChatReplyMarkup**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteChatReplyMarkup**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes the default reply markup from a chat. Must be called after a one-time keyboard or a replyMarkupForceReply reply markup has been used. An updateChatReplyMarkup update will be sent if the reply markup is changed
 
@@ -3308,19 +3555,19 @@ Deletes the default reply markup from a chat. Must be called after a one-time ke
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59096
+dist/generated/types.d.ts:67074
 
 ___
 
 ### deleteCommands
 
-▸ **deleteCommands**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteCommands**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes commands supported by the bot for the given user scope and language; for bots only
 
@@ -3332,19 +3579,43 @@ Deletes commands supported by the bot for the given user scope and language; for
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61042
+dist/generated/types.d.ts:69268
+
+___
+
+### deleteDefaultBackground
+
+▸ **deleteDefaultBackground**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Deletes default background for chats
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteDefaultBackground$DirectInput`](../modules/index.types.default.md#deletedefaultbackground$directinput) | [deleteDefaultBackground$Input](../modules/index.types.default.md#deletedefaultbackground$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69711
 
 ___
 
 ### deleteFile
 
-▸ **deleteFile**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteFile**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes a file from the TDLib file cache
 
@@ -3356,19 +3627,19 @@ Deletes a file from the TDLib file cache
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60080
+dist/generated/types.d.ts:68143
 
 ___
 
 ### deleteForumTopic
 
-▸ **deleteForumTopic**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteForumTopic**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes all messages in a forum topic; requires can_delete_messages administrator right in the supergroup unless the user is creator of the topic, the topic has no messages from other users and has at most 11 messages
 
@@ -3380,19 +3651,19 @@ Deletes all messages in a forum topic; requires can_delete_messages administrato
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58770
+dist/generated/types.d.ts:66697
 
 ___
 
 ### deleteLanguagePack
 
-▸ **deleteLanguagePack**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteLanguagePack**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes all information about a language pack in the current localization target. The language pack which is currently in use (including base language pack) or is being synchronized can't be deleted.
 
@@ -3406,19 +3677,19 @@ Deletes all information about a language pack in the current localization target
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61531
+dist/generated/types.d.ts:69799
 
 ___
 
 ### deleteMessages
 
-▸ **deleteMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes messages
 
@@ -3430,19 +3701,19 @@ Deletes messages
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58593
+dist/generated/types.d.ts:66393
 
 ___
 
 ### deletePassportElement
 
-▸ **deletePassportElement**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deletePassportElement**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes a Telegram Passport element
 
@@ -3454,19 +3725,19 @@ Deletes a Telegram Passport element
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61815
+dist/generated/types.d.ts:70139
 
 ___
 
 ### deleteProfilePhoto
 
-▸ **deleteProfilePhoto**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteProfilePhoto**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes a profile photo
 
@@ -3478,19 +3749,67 @@ Deletes a profile photo
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60930
+dist/generated/types.d.ts:69016
+
+___
+
+### deleteQuickReplyShortcut
+
+▸ **deleteQuickReplyShortcut**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Deletes a quick reply shortcut
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteQuickReplyShortcut$DirectInput`](../modules/index.types.default.md#deletequickreplyshortcut$directinput) | [deleteQuickReplyShortcut$Input](../modules/index.types.default.md#deletequickreplyshortcut$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66547
+
+___
+
+### deleteQuickReplyShortcutMessages
+
+▸ **deleteQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Deletes specified quick reply messages
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteQuickReplyShortcutMessages$DirectInput`](../modules/index.types.default.md#deletequickreplyshortcutmessages$directinput) | [deleteQuickReplyShortcutMessages$Input](../modules/index.types.default.md#deletequickreplyshortcutmessages$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66568
 
 ___
 
 ### deleteRevokedChatInviteLink
 
-▸ **deleteRevokedChatInviteLink**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteRevokedChatInviteLink**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
@@ -3502,19 +3821,19 @@ Deletes revoked chat invite links. Requires administrator privileges and can_inv
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60210
+dist/generated/types.d.ts:68280
 
 ___
 
 ### deleteSavedCredentials
 
-▸ **deleteSavedCredentials**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteSavedCredentials**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes saved credentials for all payment provider bots
 
@@ -3526,19 +3845,67 @@ Deletes saved credentials for all payment provider bots
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61408
+dist/generated/types.d.ts:69662
+
+___
+
+### deleteSavedMessagesTopicHistory
+
+▸ **deleteSavedMessagesTopicHistory**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Deletes all messages in a Saved Messages topic
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteSavedMessagesTopicHistory$DirectInput`](../modules/index.types.default.md#deletesavedmessagestopichistory$directinput) | [deleteSavedMessagesTopicHistory$Input](../modules/index.types.default.md#deletesavedmessagestopichistory$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66019
+
+___
+
+### deleteSavedMessagesTopicMessagesByDate
+
+▸ **deleteSavedMessagesTopicMessagesByDate**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Deletes all messages between the specified dates in a Saved Messages topic. Messages sent in the last 30 seconds will not be deleted
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`deleteSavedMessagesTopicMessagesByDate$DirectInput`](../modules/index.types.default.md#deletesavedmessagestopicmessagesbydate$directinput) | [deleteSavedMessagesTopicMessagesByDate$Input](../modules/index.types.default.md#deletesavedmessagestopicmessagesbydate$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66026
 
 ___
 
 ### deleteSavedOrderInfo
 
-▸ **deleteSavedOrderInfo**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteSavedOrderInfo**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes saved order information
 
@@ -3550,21 +3917,21 @@ Deletes saved order information
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61401
+dist/generated/types.d.ts:69655
 
 ___
 
 ### deleteStickerSet
 
-▸ **deleteStickerSet**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteStickerSet**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Deleted a sticker set; for bots only
+Completely deletes a sticker set
 
 #### Parameters
 
@@ -3574,19 +3941,19 @@ Deleted a sticker set; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61983
+dist/generated/types.d.ts:70272
 
 ___
 
 ### deleteStory
 
-▸ **deleteStory**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **deleteStory**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Deletes a previously sent story. Can be called only if story.can_be_deleted == true
 
@@ -3598,19 +3965,19 @@ Deletes a previously sent story. Can be called only if story.can_be_deleted == t
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59802
+dist/generated/types.d.ts:67814
 
 ___
 
 ### destroy
 
-▸ **destroy**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **destroy**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Closes the TDLib instance, destroying all local data without a proper logout. The current user session will remain in the list of all active sessions. All local data will be destroyed.
 
@@ -3624,19 +3991,19 @@ Closes the TDLib instance, destroying all local data without a proper logout. Th
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57868
+dist/generated/types.d.ts:65527
 
 ___
 
 ### disableAllSupergroupUsernames
 
-▸ **disableAllSupergroupUsernames**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **disableAllSupergroupUsernames**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Disables all active non-editable usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
 
@@ -3648,19 +4015,19 @@ Disables all active non-editable usernames of a supergroup or channel, requires 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61254
+dist/generated/types.d.ts:69480
 
 ___
 
 ### disableProxy
 
-▸ **disableProxy**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **disableProxy**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Disables the currently enabled proxy. Can be called before authorization
 
@@ -3672,19 +4039,19 @@ Disables the currently enabled proxy. Can be called before authorization
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62249
+dist/generated/types.d.ts:70566
 
 ___
 
 ### discardCall
 
-▸ **discardCall**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **discardCall**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Discards a call
 
@@ -3696,19 +4063,19 @@ Discards a call
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60280
+dist/generated/types.d.ts:68350
 
 ___
 
 ### disconnectAllWebsites
 
-▸ **disconnectAllWebsites**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **disconnectAllWebsites**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Disconnects all websites from the current user's Telegram account
 
@@ -3720,19 +4087,19 @@ Disconnects all websites from the current user's Telegram account
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61231
+dist/generated/types.d.ts:69457
 
 ___
 
 ### disconnectWebsite
 
-▸ **disconnectWebsite**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **disconnectWebsite**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Disconnects website from the current user's Telegram account
 
@@ -3744,19 +4111,19 @@ Disconnects website from the current user's Telegram account
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61224
+dist/generated/types.d.ts:69450
 
 ___
 
 ### downloadFile
 
-▸ **downloadFile**(`parameters`): `Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+▸ **downloadFile**(`parameters`): `Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Downloads a file from the cloud. Download progress and completion of the download will be notified through updateFile updates
 
@@ -3768,19 +4135,43 @@ Downloads a file from the cloud. Download progress and completion of the downloa
 
 #### Returns
 
-`Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+`Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60008
+dist/generated/types.d.ts:68069
+
+___
+
+### editBusinessChatLink
+
+▸ **editBusinessChatLink**(`parameters`): `Promise`\<[`businessChatLink`](../modules/index.types.default.md#businesschatlink-1)\>
+
+Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`editBusinessChatLink$DirectInput`](../modules/index.types.default.md#editbusinesschatlink$directinput) | [editBusinessChatLink$Input](../modules/index.types.default.md#editbusinesschatlink$input) |
+
+#### Returns
+
+`Promise`\<[`businessChatLink`](../modules/index.types.default.md#businesschatlink-1)\>
+
+Promise<[BusinessChatLink](../modules/index.types.default.md#businesschatlink)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69226
 
 ___
 
 ### editChatFolder
 
-▸ **editChatFolder**(`parameters`): `Promise`<[`chatFolderInfo`](../modules/index.types.default.md#chatfolderinfo-1)\>
+▸ **editChatFolder**(`parameters`): `Promise`\<[`chatFolderInfo`](../modules/index.types.default.md#chatfolderinfo-1)\>
 
 Edits existing chat folder. Returns information about the edited chat folder
 
@@ -3792,19 +4183,19 @@ Edits existing chat folder. Returns information about the edited chat folder
 
 #### Returns
 
-`Promise`<[`chatFolderInfo`](../modules/index.types.default.md#chatfolderinfo-1)\>
+`Promise`\<[`chatFolderInfo`](../modules/index.types.default.md#chatfolderinfo-1)\>
 
 Promise<[ChatFolderInfo](../modules/index.types.default.md#chatfolderinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59289
+dist/generated/types.d.ts:67267
 
 ___
 
 ### editChatFolderInviteLink
 
-▸ **editChatFolderInviteLink**(`parameters`): `Promise`<[`chatFolderInviteLink`](../modules/index.types.default.md#chatfolderinvitelink-1)\>
+▸ **editChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLink`](../modules/index.types.default.md#chatfolderinvitelink-1)\>
 
 Edits an invite link for a chat folder
 
@@ -3816,19 +4207,19 @@ Edits an invite link for a chat folder
 
 #### Returns
 
-`Promise`<[`chatFolderInviteLink`](../modules/index.types.default.md#chatfolderinvitelink-1)\>
+`Promise`\<[`chatFolderInviteLink`](../modules/index.types.default.md#chatfolderinvitelink-1)\>
 
 Promise<[ChatFolderInviteLink](../modules/index.types.default.md#chatfolderinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59359
+dist/generated/types.d.ts:67344
 
 ___
 
 ### editChatInviteLink
 
-▸ **editChatInviteLink**(`parameters`): `Promise`<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
+▸ **editChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
 
 Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
@@ -3840,19 +4231,19 @@ Edits a non-primary invite link for a chat. Available for basic groups, supergro
 
 #### Returns
 
-`Promise`<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
+`Promise`\<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
 
 Promise<[ChatInviteLink](../modules/index.types.default.md#chatinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60166
+dist/generated/types.d.ts:68236
 
 ___
 
 ### editCustomLanguagePackInfo
 
-▸ **editCustomLanguagePackInfo**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editCustomLanguagePackInfo**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Edits information about a custom local language pack in the current localization target. Can be called before authorization
 
@@ -3864,21 +4255,21 @@ Edits information about a custom local language pack in the current localization
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61515
+dist/generated/types.d.ts:69783
 
 ___
 
 ### editForumTopic
 
-▸ **editForumTopic**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editForumTopic**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Edits title and icon of a topic in a forum supergroup chat; requires can_manage_topics administrator right in the supergroup unless the user is creator of the topic
+Edits title and icon of a topic in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
 
 #### Parameters
 
@@ -3888,19 +4279,19 @@ Edits title and icon of a topic in a forum supergroup chat; requires can_manage_
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58707
+dist/generated/types.d.ts:66634
 
 ___
 
 ### editInlineMessageCaption
 
-▸ **editInlineMessageCaption**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editInlineMessageCaption**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Edits the caption of an inline message sent via a bot; for bots only
 
@@ -3912,19 +4303,19 @@ Edits the caption of an inline message sent via a bot; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58672
+dist/generated/types.d.ts:66482
 
 ___
 
 ### editInlineMessageLiveLocation
 
-▸ **editInlineMessageLiveLocation**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editInlineMessageLiveLocation**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Edits the content of a live location in an inline message sent via a bot; for bots only
 
@@ -3936,19 +4327,19 @@ Edits the content of a live location in an inline message sent via a bot; for bo
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58658
+dist/generated/types.d.ts:66468
 
 ___
 
 ### editInlineMessageMedia
 
-▸ **editInlineMessageMedia**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editInlineMessageMedia**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
 
@@ -3960,19 +4351,19 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58665
+dist/generated/types.d.ts:66475
 
 ___
 
 ### editInlineMessageReplyMarkup
 
-▸ **editInlineMessageReplyMarkup**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editInlineMessageReplyMarkup**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Edits the reply markup of an inline message sent via a bot; for bots only
 
@@ -3984,19 +4375,19 @@ Edits the reply markup of an inline message sent via a bot; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58679
+dist/generated/types.d.ts:66489
 
 ___
 
 ### editInlineMessageText
 
-▸ **editInlineMessageText**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editInlineMessageText**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Edits the text of an inline text or game message sent via a bot; for bots only
 
@@ -4008,21 +4399,23 @@ Edits the text of an inline text or game message sent via a bot; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58651
+dist/generated/types.d.ts:66461
 
 ___
 
 ### editMessageCaption
 
-▸ **editMessageCaption**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **editMessageCaption**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
-Edits the message content caption. Returns the edited message after the edit is completed on the server side
+Edits the message content caption. Returns the edited message after the edit is completed on the server side.
+
+- Can be used only if message.can_be_edited == true
 
 #### Parameters
 
@@ -4032,21 +4425,23 @@ Edits the message content caption. Returns the edited message after the edit is 
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58637
+dist/generated/types.d.ts:66445
 
 ___
 
 ### editMessageLiveLocation
 
-▸ **editMessageLiveLocation**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **editMessageLiveLocation**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
-Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location. Returns the edited message after the edit is completed on the server side
+Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
+
+- Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
 
 #### Parameters
 
@@ -4056,23 +4451,25 @@ Edits the message content of a live location. Messages can be edited for a limit
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58621
+dist/generated/types.d.ts:66425
 
 ___
 
 ### editMessageMedia
 
-▸ **editMessageMedia**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **editMessageMedia**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
 
-- The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
+- The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
+
+- Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
 
 #### Parameters
 
@@ -4082,21 +4479,23 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58630
+dist/generated/types.d.ts:66436
 
 ___
 
 ### editMessageReplyMarkup
 
-▸ **editMessageReplyMarkup**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **editMessageReplyMarkup**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
-Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side
+Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side.
+
+- Can be used only if message.can_be_edited == true
 
 #### Parameters
 
@@ -4106,19 +4505,19 @@ Edits the message reply markup; for bots only. Returns the edited message after 
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58644
+dist/generated/types.d.ts:66454
 
 ___
 
 ### editMessageSchedulingState
 
-▸ **editMessageSchedulingState**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editMessageSchedulingState**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
 
@@ -4130,21 +4529,23 @@ Edits the time when a scheduled message will be sent. Scheduling state of all me
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58686
+dist/generated/types.d.ts:66496
 
 ___
 
 ### editMessageText
 
-▸ **editMessageText**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **editMessageText**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
-Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
+Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side.
+
+- Can be used only if message.can_be_edited == true
 
 #### Parameters
 
@@ -4154,19 +4555,19 @@ Edits the text of a message (or a text of a game message). Returns the edited me
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58614
+dist/generated/types.d.ts:66416
 
 ___
 
 ### editProxy
 
-▸ **editProxy**(`parameters`): `Promise`<[`proxy`](../modules/index.types.default.md#proxy-1)\>
+▸ **editProxy**(`parameters`): `Promise`\<[`proxy`](../modules/index.types.default.md#proxy-1)\>
 
 Edits an existing proxy server for network requests. Can be called before authorization
 
@@ -4178,19 +4579,45 @@ Edits an existing proxy server for network requests. Can be called before author
 
 #### Returns
 
-`Promise`<[`proxy`](../modules/index.types.default.md#proxy-1)\>
+`Promise`\<[`proxy`](../modules/index.types.default.md#proxy-1)\>
 
 Promise<[Proxy](../modules/index.types.default.md#proxy)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62235
+dist/generated/types.d.ts:70552
+
+___
+
+### editQuickReplyMessage
+
+▸ **editQuickReplyMessage**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+
+- Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`editQuickReplyMessage$DirectInput`](../modules/index.types.default.md#editquickreplymessage$directinput) | [editQuickReplyMessage$Input](../modules/index.types.default.md#editquickreplymessage$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66613
 
 ___
 
 ### editStory
 
-▸ **editStory**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **editStory**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes content and caption of a story. Can be called only if story.can_be_edited == true
 
@@ -4202,19 +4629,19 @@ Changes content and caption of a story. Can be called only if story.can_be_edite
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59781
+dist/generated/types.d.ts:67793
 
 ___
 
 ### enableProxy
 
-▸ **enableProxy**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **enableProxy**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Enables a proxy. Only one proxy can be enabled at a time. Can be called before authorization
 
@@ -4226,19 +4653,19 @@ Enables a proxy. Only one proxy can be enabled at a time. Can be called before a
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62242
+dist/generated/types.d.ts:70559
 
 ___
 
 ### endGroupCall
 
-▸ **endGroupCall**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **endGroupCall**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Ends a group call. Requires groupCall.can_be_managed
 
@@ -4250,19 +4677,19 @@ Ends a group call. Requires groupCall.can_be_managed
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60497
+dist/generated/types.d.ts:68567
 
 ___
 
 ### endGroupCallRecording
 
-▸ **endGroupCallRecording**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **endGroupCallRecording**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Ends recording of an active group call. Requires groupCall.can_be_managed group call flag
 
@@ -4274,19 +4701,19 @@ Ends recording of an active group call. Requires groupCall.can_be_managed group 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60434
+dist/generated/types.d.ts:68504
 
 ___
 
 ### endGroupCallScreenSharing
 
-▸ **endGroupCallScreenSharing**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **endGroupCallScreenSharing**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Ends screen sharing in a joined group call
 
@@ -4298,19 +4725,19 @@ Ends screen sharing in a joined group call
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60385
+dist/generated/types.d.ts:68455
 
 ___
 
 ### finishFileGeneration
 
-▸ **finishFileGeneration**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **finishFileGeneration**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Finishes the file generation
 
@@ -4322,19 +4749,19 @@ Finishes the file generation
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60066
+dist/generated/types.d.ts:68129
 
 ___
 
 ### forwardMessages
 
-▸ **forwardMessages**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **forwardMessages**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Forwards previously sent messages. Returns the forwarded messages in the same order as the message identifiers passed in message_ids. If a message can't be forwarded, null will be returned instead of the message
 
@@ -4346,19 +4773,19 @@ Forwards previously sent messages. Returns the forwarded messages in the same or
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58570
+dist/generated/types.d.ts:66363
 
 ___
 
 ### getAccountTtl
 
-▸ **getAccountTtl**(`parameters`): `Promise`<[`accountTtl`](../modules/index.types.default.md#accountttl-1)\>
+▸ **getAccountTtl**(`parameters`): `Promise`\<[`accountTtl`](../modules/index.types.default.md#accountttl-1)\>
 
 Returns the period of inactivity after which the account of the current user will automatically be deleted
 
@@ -4370,19 +4797,19 @@ Returns the period of inactivity after which the account of the current user wil
 
 #### Returns
 
-`Promise`<[`accountTtl`](../modules/index.types.default.md#accountttl-1)\>
+`Promise`\<[`accountTtl`](../modules/index.types.default.md#accountttl-1)\>
 
 Promise<[AccountTtl](../modules/index.types.default.md#accountttl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61601
+dist/generated/types.d.ts:69904
 
 ___
 
 ### getActiveLiveLocationMessages
 
-▸ **getActiveLiveLocationMessages**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **getActiveLiveLocationMessages**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Returns all active live locations that need to be updated by the application. The list is persistent across application restarts only if the message database is used
 
@@ -4394,19 +4821,19 @@ Returns all active live locations that need to be updated by the application. Th
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58400
+dist/generated/types.d.ts:66182
 
 ___
 
 ### getActiveSessions
 
-▸ **getActiveSessions**(`parameters`): `Promise`<[`sessions`](../modules/index.types.default.md#sessions-1)\>
+▸ **getActiveSessions**(`parameters`): `Promise`\<[`sessions`](../modules/index.types.default.md#sessions-1)\>
 
 Returns all active sessions of the current user
 
@@ -4418,19 +4845,19 @@ Returns all active sessions of the current user
 
 #### Returns
 
-`Promise`<[`sessions`](../modules/index.types.default.md#sessions-1)\>
+`Promise`\<[`sessions`](../modules/index.types.default.md#sessions-1)\>
 
 Promise<[Sessions](../modules/index.types.default.md#sessions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61168
+dist/generated/types.d.ts:69394
 
 ___
 
 ### getAllPassportElements
 
-▸ **getAllPassportElements**(`parameters`): `Promise`<[`passportElements`](../modules/index.types.default.md#passportelements-1)\>
+▸ **getAllPassportElements**(`parameters`): `Promise`\<[`passportElements`](../modules/index.types.default.md#passportelements-1)\>
 
 Returns all available Telegram Passport elements
 
@@ -4442,19 +4869,19 @@ Returns all available Telegram Passport elements
 
 #### Returns
 
-`Promise`<[`passportElements`](../modules/index.types.default.md#passportelements-1)\>
+`Promise`\<[`passportElements`](../modules/index.types.default.md#passportelements-1)\>
 
 Promise<[PassportElements](../modules/index.types.default.md#passportelements)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61801
+dist/generated/types.d.ts:70125
 
 ___
 
 ### getAllStickerEmojis
 
-▸ **getAllStickerEmojis**(`parameters`): `Promise`<[`emojis`](../modules/index.types.default.md#emojis-1)\>
+▸ **getAllStickerEmojis**(`parameters`): `Promise`\<[`emojis`](../modules/index.types.default.md#emojis-1)\>
 
 Returns unique emoji that correspond to stickers to be found by the getStickers(sticker_type, query, 1000000, chat_id)
 
@@ -4466,19 +4893,19 @@ Returns unique emoji that correspond to stickers to be found by the getStickers(
 
 #### Returns
 
-`Promise`<[`emojis`](../modules/index.types.default.md#emojis-1)\>
+`Promise`\<[`emojis`](../modules/index.types.default.md#emojis-1)\>
 
 Promise<[Emojis](../modules/index.types.default.md#emojis)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60653
+dist/generated/types.d.ts:68723
 
 ___
 
 ### getAnimatedEmoji
 
-▸ **getAnimatedEmoji**(`parameters`): `Promise`<[`animatedEmoji`](../modules/index.types.default.md#animatedemoji-1)\>
+▸ **getAnimatedEmoji**(`parameters`): `Promise`\<[`animatedEmoji`](../modules/index.types.default.md#animatedemoji-1)\>
 
 Returns an animated emoji corresponding to a given emoji. Returns a 404 error if the emoji has no animated emoji
 
@@ -4490,19 +4917,19 @@ Returns an animated emoji corresponding to a given emoji. Returns a 404 error if
 
 #### Returns
 
-`Promise`<[`animatedEmoji`](../modules/index.types.default.md#animatedemoji-1)\>
+`Promise`\<[`animatedEmoji`](../modules/index.types.default.md#animatedemoji-1)\>
 
 Promise<[AnimatedEmoji](../modules/index.types.default.md#animatedemoji)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60825
+dist/generated/types.d.ts:68909
 
 ___
 
 ### getApplicationConfig
 
-▸ **getApplicationConfig**(`parameters`): `Promise`<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\>
+▸ **getApplicationConfig**(`parameters`): `Promise`\<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\>
 
 Returns application config, provided by the server. Can be called before authorization
 
@@ -4514,19 +4941,19 @@ Returns application config, provided by the server. Can be called before authori
 
 #### Returns
 
-`Promise`<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\>
+`Promise`\<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\>
 
 Promise<[JsonValue](../modules/index.types.default.md#jsonvalue)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62200
+dist/generated/types.d.ts:70524
 
 ___
 
 ### getApplicationDownloadLink
 
-▸ **getApplicationDownloadLink**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getApplicationDownloadLink**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram
 
@@ -4538,19 +4965,19 @@ Returns the link for downloading official Telegram application to be used when t
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62221
+dist/generated/types.d.ts:70538
 
 ___
 
 ### getArchiveChatListSettings
 
-▸ **getArchiveChatListSettings**(`parameters`): `Promise`<[`archiveChatListSettings`](../modules/index.types.default.md#archivechatlistsettings-1)\>
+▸ **getArchiveChatListSettings**(`parameters`): `Promise`\<[`archiveChatListSettings`](../modules/index.types.default.md#archivechatlistsettings-1)\>
 
 Returns settings for automatic moving of chats to and from the Archive chat lists
 
@@ -4562,19 +4989,19 @@ Returns settings for automatic moving of chats to and from the Archive chat list
 
 #### Returns
 
-`Promise`<[`archiveChatListSettings`](../modules/index.types.default.md#archivechatlistsettings-1)\>
+`Promise`\<[`archiveChatListSettings`](../modules/index.types.default.md#archivechatlistsettings-1)\>
 
 Promise<[ArchiveChatListSettings](../modules/index.types.default.md#archivechatlistsettings)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59401
+dist/generated/types.d.ts:67386
 
 ___
 
 ### getArchivedStickerSets
 
-▸ **getArchivedStickerSets**(`parameters`): `Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+▸ **getArchivedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Returns a list of archived sticker sets
 
@@ -4586,19 +5013,19 @@ Returns a list of archived sticker sets
 
 #### Returns
 
-`Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+`Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60681
+dist/generated/types.d.ts:68758
 
 ___
 
 ### getAttachedStickerSets
 
-▸ **getAttachedStickerSets**(`parameters`): `Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+▸ **getAttachedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Returns a list of sticker sets attached to a file, including regular, mask, and emoji sticker sets. Currently, only animations, photos, and videos can have attached sticker sets
 
@@ -4610,19 +5037,19 @@ Returns a list of sticker sets attached to a file, including regular, mask, and 
 
 #### Returns
 
-`Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+`Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60695
+dist/generated/types.d.ts:68772
 
 ___
 
 ### getAttachmentMenuBot
 
-▸ **getAttachmentMenuBot**(`parameters`): `Promise`<[`attachmentMenuBot`](../modules/index.types.default.md#attachmentmenubot-1)\>
+▸ **getAttachmentMenuBot**(`parameters`): `Promise`\<[`attachmentMenuBot`](../modules/index.types.default.md#attachmentmenubot-1)\>
 
 Returns information about a bot that can be added to attachment or side menu
 
@@ -4634,19 +5061,19 @@ Returns information about a bot that can be added to attachment or side menu
 
 #### Returns
 
-`Promise`<[`attachmentMenuBot`](../modules/index.types.default.md#attachmentmenubot-1)\>
+`Promise`\<[`attachmentMenuBot`](../modules/index.types.default.md#attachmentmenubot-1)\>
 
 Promise<[AttachmentMenuBot](../modules/index.types.default.md#attachmentmenubot)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59966
+dist/generated/types.d.ts:68006
 
 ___
 
 ### getAuthorizationState
 
-▸ **getAuthorizationState**(`parameters`): `Promise`<[`AuthorizationState`](../modules/index.types.default.md#authorizationstate)\>
+▸ **getAuthorizationState**(`parameters`): `Promise`\<[`AuthorizationState`](../modules/index.types.default.md#authorizationstate)\>
 
 Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
 
@@ -4658,19 +5085,19 @@ Returns the current authorization state; this is an offline request. For informa
 
 #### Returns
 
-`Promise`<[`AuthorizationState`](../modules/index.types.default.md#authorizationstate)\>
+`Promise`\<[`AuthorizationState`](../modules/index.types.default.md#authorizationstate)\>
 
 Promise<[AuthorizationState](../modules/index.types.default.md#authorizationstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57732
+dist/generated/types.d.ts:65384
 
 ___
 
 ### getAutoDownloadSettingsPresets
 
-▸ **getAutoDownloadSettingsPresets**(`parameters`): `Promise`<[`autoDownloadSettingsPresets`](../modules/index.types.default.md#autodownloadsettingspresets-1)\>
+▸ **getAutoDownloadSettingsPresets**(`parameters`): `Promise`\<[`autoDownloadSettingsPresets`](../modules/index.types.default.md#autodownloadsettingspresets-1)\>
 
 Returns auto-download settings presets for the current user
 
@@ -4682,19 +5109,19 @@ Returns auto-download settings presets for the current user
 
 #### Returns
 
-`Promise`<[`autoDownloadSettingsPresets`](../modules/index.types.default.md#autodownloadsettingspresets-1)\>
+`Promise`\<[`autoDownloadSettingsPresets`](../modules/index.types.default.md#autodownloadsettingspresets-1)\>
 
 Promise<[AutoDownloadSettingsPresets](../modules/index.types.default.md#autodownloadsettingspresets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61752
+dist/generated/types.d.ts:70076
 
 ___
 
 ### getAutosaveSettings
 
-▸ **getAutosaveSettings**(`parameters`): `Promise`<[`autosaveSettings`](../modules/index.types.default.md#autosavesettings-1)\>
+▸ **getAutosaveSettings**(`parameters`): `Promise`\<[`autosaveSettings`](../modules/index.types.default.md#autosavesettings-1)\>
 
 Returns autosave settings for the current user
 
@@ -4706,19 +5133,19 @@ Returns autosave settings for the current user
 
 #### Returns
 
-`Promise`<[`autosaveSettings`](../modules/index.types.default.md#autosavesettings-1)\>
+`Promise`\<[`autosaveSettings`](../modules/index.types.default.md#autosavesettings-1)\>
 
 Promise<[AutosaveSettings](../modules/index.types.default.md#autosavesettings)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61766
+dist/generated/types.d.ts:70090
 
 ___
 
 ### getAvailableChatBoostSlots
 
-▸ **getAvailableChatBoostSlots**(`parameters`): `Promise`<[`chatBoostSlots`](../modules/index.types.default.md#chatboostslots-1)\>
+▸ **getAvailableChatBoostSlots**(`parameters`): `Promise`\<[`chatBoostSlots`](../modules/index.types.default.md#chatboostslots-1)\>
 
 Returns the list of available chat boost slots for the current user
 
@@ -4730,19 +5157,19 @@ Returns the list of available chat boost slots for the current user
 
 #### Returns
 
-`Promise`<[`chatBoostSlots`](../modules/index.types.default.md#chatboostslots-1)\>
+`Promise`\<[`chatBoostSlots`](../modules/index.types.default.md#chatboostslots-1)\>
 
 Promise<[ChatBoostSlots](../modules/index.types.default.md#chatboostslots)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59917
+dist/generated/types.d.ts:67957
 
 ___
 
 ### getBackgroundUrl
 
-▸ **getBackgroundUrl**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getBackgroundUrl**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Constructs a persistent HTTP URL for a background
 
@@ -4754,43 +5181,19 @@ Constructs a persistent HTTP URL for a background
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61436
-
-___
-
-### getBackgrounds
-
-▸ **getBackgrounds**(`parameters`): `Promise`<[`backgrounds`](../modules/index.types.default.md#backgrounds-1)\>
-
-Returns backgrounds installed by the user
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`getBackgrounds$DirectInput`](../modules/index.types.default.md#getbackgrounds$directinput) | [getBackgrounds$Input](../modules/index.types.default.md#getbackgrounds$input) |
-
-#### Returns
-
-`Promise`<[`backgrounds`](../modules/index.types.default.md#backgrounds-1)\>
-
-Promise<[Backgrounds](../modules/index.types.default.md#backgrounds)>
-
-#### Defined in
-
-dist/generated/types.d.ts:61429
+dist/generated/types.d.ts:69690
 
 ___
 
 ### getBankCardInfo
 
-▸ **getBankCardInfo**(`parameters`): `Promise`<[`bankCardInfo`](../modules/index.types.default.md#bankcardinfo-1)\>
+▸ **getBankCardInfo**(`parameters`): `Promise`\<[`bankCardInfo`](../modules/index.types.default.md#bankcardinfo-1)\>
 
 Returns information about a bank card
 
@@ -4802,19 +5205,19 @@ Returns information about a bank card
 
 #### Returns
 
-`Promise`<[`bankCardInfo`](../modules/index.types.default.md#bankcardinfo-1)\>
+`Promise`\<[`bankCardInfo`](../modules/index.types.default.md#bankcardinfo-1)\>
 
 Promise<[BankCardInfo](../modules/index.types.default.md#bankcardinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61787
+dist/generated/types.d.ts:70111
 
 ___
 
 ### getBasicGroup
 
-▸ **getBasicGroup**(`parameters`): `Promise`<[`basicGroup`](../modules/index.types.default.md#basicgroup-1)\>
+▸ **getBasicGroup**(`parameters`): `Promise`\<[`basicGroup`](../modules/index.types.default.md#basicgroup-1)\>
 
 Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
 
@@ -4826,19 +5229,19 @@ Returns information about a basic group by its identifier. This is an offline re
 
 #### Returns
 
-`Promise`<[`basicGroup`](../modules/index.types.default.md#basicgroup-1)\>
+`Promise`\<[`basicGroup`](../modules/index.types.default.md#basicgroup-1)\>
 
 Promise<[BasicGroup](../modules/index.types.default.md#basicgroup)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58033
+dist/generated/types.d.ts:65699
 
 ___
 
 ### getBasicGroupFullInfo
 
-▸ **getBasicGroupFullInfo**(`parameters`): `Promise`<[`basicGroupFullInfo`](../modules/index.types.default.md#basicgroupfullinfo-1)\>
+▸ **getBasicGroupFullInfo**(`parameters`): `Promise`\<[`basicGroupFullInfo`](../modules/index.types.default.md#basicgroupfullinfo-1)\>
 
 Returns full information about a basic group by its identifier
 
@@ -4850,19 +5253,19 @@ Returns full information about a basic group by its identifier
 
 #### Returns
 
-`Promise`<[`basicGroupFullInfo`](../modules/index.types.default.md#basicgroupfullinfo-1)\>
+`Promise`\<[`basicGroupFullInfo`](../modules/index.types.default.md#basicgroupfullinfo-1)\>
 
 Promise<[BasicGroupFullInfo](../modules/index.types.default.md#basicgroupfullinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58040
+dist/generated/types.d.ts:65706
 
 ___
 
 ### getBlockedMessageSenders
 
-▸ **getBlockedMessageSenders**(`parameters`): `Promise`<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
+▸ **getBlockedMessageSenders**(`parameters`): `Promise`\<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
 
 Returns users and chats that were blocked by the current user
 
@@ -4874,19 +5277,19 @@ Returns users and chats that were blocked by the current user
 
 #### Returns
 
-`Promise`<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
+`Promise`\<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
 
 Promise<[MessageSenders](../modules/index.types.default.md#messagesenders)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60532
+dist/generated/types.d.ts:68602
 
 ___
 
 ### getBotInfoDescription
 
-▸ **getBotInfoDescription**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getBotInfoDescription**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns the text shown in the chat with a bot if the chat is empty in the given language. Can be called only if userTypeBot.can_be_edited == true
 
@@ -4898,19 +5301,19 @@ Returns the text shown in the chat with a bot if the chat is empty in the given 
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61147
+dist/generated/types.d.ts:69373
 
 ___
 
 ### getBotInfoShortDescription
 
-▸ **getBotInfoShortDescription**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getBotInfoShortDescription**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns the text shown on a bot's profile page and sent together with the link when users share the bot in the given language. Can be called only if userTypeBot.can_be_edited == true
 
@@ -4922,19 +5325,19 @@ Returns the text shown on a bot's profile page and sent together with the link w
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61161
+dist/generated/types.d.ts:69387
 
 ___
 
 ### getBotName
 
-▸ **getBotName**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getBotName**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns the name of a bot in the given language. Can be called only if userTypeBot.can_be_edited == true
 
@@ -4946,19 +5349,139 @@ Returns the name of a bot in the given language. Can be called only if userTypeB
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61112
+dist/generated/types.d.ts:69338
+
+___
+
+### getBusinessChatLinkInfo
+
+▸ **getBusinessChatLinkInfo**(`parameters`): `Promise`\<[`businessChatLinkInfo`](../modules/index.types.default.md#businesschatlinkinfo-1)\>
+
+Returns information about a business chat link
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getBusinessChatLinkInfo$DirectInput`](../modules/index.types.default.md#getbusinesschatlinkinfo$directinput) | [getBusinessChatLinkInfo$Input](../modules/index.types.default.md#getbusinesschatlinkinfo$input) |
+
+#### Returns
+
+`Promise`\<[`businessChatLinkInfo`](../modules/index.types.default.md#businesschatlinkinfo-1)\>
+
+Promise<[BusinessChatLinkInfo](../modules/index.types.default.md#businesschatlinkinfo)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69240
+
+___
+
+### getBusinessChatLinks
+
+▸ **getBusinessChatLinks**(`parameters`): `Promise`\<[`businessChatLinks`](../modules/index.types.default.md#businesschatlinks-1)\>
+
+Returns business chat links created for the current account
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getBusinessChatLinks$DirectInput`](../modules/index.types.default.md#getbusinesschatlinks$directinput) | [getBusinessChatLinks$Input](../modules/index.types.default.md#getbusinesschatlinks$input) |
+
+#### Returns
+
+`Promise`\<[`businessChatLinks`](../modules/index.types.default.md#businesschatlinks-1)\>
+
+Promise<[BusinessChatLinks](../modules/index.types.default.md#businesschatlinks)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69212
+
+___
+
+### getBusinessConnectedBot
+
+▸ **getBusinessConnectedBot**(`parameters`): `Promise`\<[`businessConnectedBot`](../modules/index.types.default.md#businessconnectedbot-1)\>
+
+Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getBusinessConnectedBot$DirectInput`](../modules/index.types.default.md#getbusinessconnectedbot$directinput) | [getBusinessConnectedBot$Input](../modules/index.types.default.md#getbusinessconnectedbot$input) |
+
+#### Returns
+
+`Promise`\<[`businessConnectedBot`](../modules/index.types.default.md#businessconnectedbot-1)\>
+
+Promise<[BusinessConnectedBot](../modules/index.types.default.md#businessconnectedbot)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69177
+
+___
+
+### getBusinessConnection
+
+▸ **getBusinessConnection**(`parameters`): `Promise`\<[`businessConnection`](../modules/index.types.default.md#businessconnection-1)\>
+
+Returns information about a business connection by its identifier; for bots only
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getBusinessConnection$DirectInput`](../modules/index.types.default.md#getbusinessconnection$directinput) | [getBusinessConnection$Input](../modules/index.types.default.md#getbusinessconnection$input) |
+
+#### Returns
+
+`Promise`\<[`businessConnection`](../modules/index.types.default.md#businessconnection-1)\>
+
+Promise<[BusinessConnection](../modules/index.types.default.md#businessconnection)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66916
+
+___
+
+### getBusinessFeatures
+
+▸ **getBusinessFeatures**(`parameters`): `Promise`\<[`businessFeatures`](../modules/index.types.default.md#businessfeatures-1)\>
+
+Returns information about features, available to Business users
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getBusinessFeatures$DirectInput`](../modules/index.types.default.md#getbusinessfeatures$directinput) | [getBusinessFeatures$Input](../modules/index.types.default.md#getbusinessfeatures$input) |
+
+#### Returns
+
+`Promise`\<[`businessFeatures`](../modules/index.types.default.md#businessfeatures-1)\>
+
+Promise<[BusinessFeatures](../modules/index.types.default.md#businessfeatures)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70440
 
 ___
 
 ### getCallbackQueryAnswer
 
-▸ **getCallbackQueryAnswer**(`parameters`): `Promise`<[`callbackQueryAnswer`](../modules/index.types.default.md#callbackqueryanswer-1)\>
+▸ **getCallbackQueryAnswer**(`parameters`): `Promise`\<[`callbackQueryAnswer`](../modules/index.types.default.md#callbackqueryanswer-1)\>
 
 Sends a callback query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
 
@@ -4970,19 +5493,19 @@ Sends a callback query to a bot and returns an answer. Returns an error with cod
 
 #### Returns
 
-`Promise`<[`callbackQueryAnswer`](../modules/index.types.default.md#callbackqueryanswer-1)\>
+`Promise`\<[`callbackQueryAnswer`](../modules/index.types.default.md#callbackqueryanswer-1)\>
 
 Promise<[CallbackQueryAnswer](../modules/index.types.default.md#callbackqueryanswer)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59040
+dist/generated/types.d.ts:67018
 
 ___
 
 ### getCallbackQueryMessage
 
-▸ **getCallbackQueryMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **getCallbackQueryMessage**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Returns information about a message with the callback button that originated a callback query; for bots only
 
@@ -4994,19 +5517,19 @@ Returns information about a message with the callback button that originated a c
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58107
+dist/generated/types.d.ts:65773
 
 ___
 
 ### getChat
 
-▸ **getChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **getChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
 
@@ -5018,19 +5541,19 @@ Returns information about a chat by its identifier; this is an offline request i
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58068
+dist/generated/types.d.ts:65734
 
 ___
 
 ### getChatActiveStories
 
-▸ **getChatActiveStories**(`parameters`): `Promise`<[`chatActiveStories`](../modules/index.types.default.md#chatactivestories-1)\>
+▸ **getChatActiveStories**(`parameters`): `Promise`\<[`chatActiveStories`](../modules/index.types.default.md#chatactivestories-1)\>
 
 Returns the list of active stories posted by the given chat
 
@@ -5042,19 +5565,19 @@ Returns the list of active stories posted by the given chat
 
 #### Returns
 
-`Promise`<[`chatActiveStories`](../modules/index.types.default.md#chatactivestories-1)\>
+`Promise`\<[`chatActiveStories`](../modules/index.types.default.md#chatactivestories-1)\>
 
 Promise<[ChatActiveStories](../modules/index.types.default.md#chatactivestories)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59832
+dist/generated/types.d.ts:67844
 
 ___
 
 ### getChatAdministrators
 
-▸ **getChatAdministrators**(`parameters`): `Promise`<[`chatAdministrators`](../modules/index.types.default.md#chatadministrators-1)\>
+▸ **getChatAdministrators**(`parameters`): `Promise`\<[`chatAdministrators`](../modules/index.types.default.md#chatadministrators-1)\>
 
 Returns a list of administrators of the chat with their custom titles
 
@@ -5066,21 +5589,21 @@ Returns a list of administrators of the chat with their custom titles
 
 #### Returns
 
-`Promise`<[`chatAdministrators`](../modules/index.types.default.md#chatadministrators-1)\>
+`Promise`\<[`chatAdministrators`](../modules/index.types.default.md#chatadministrators-1)\>
 
 Promise<[ChatAdministrators](../modules/index.types.default.md#chatadministrators)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59662
+dist/generated/types.d.ts:67667
 
 ___
 
 ### getChatArchivedStories
 
-▸ **getChatArchivedStories**(`parameters`): `Promise`<[`stories`](../modules/index.types.default.md#stories-1)\>
+▸ **getChatArchivedStories**(`parameters`): `Promise`\<[`stories`](../modules/index.types.default.md#stories-1)\>
 
-Returns the list of all stories posted by the given chat; requires can_edit_stories rights for channel chats.
+Returns the list of all stories posted by the given chat; requires can_edit_stories right in the chat.
 
 - The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
 
@@ -5092,21 +5615,21 @@ Returns the list of all stories posted by the given chat; requires can_edit_stor
 
 #### Returns
 
-`Promise`<[`stories`](../modules/index.types.default.md#stories-1)\>
+`Promise`\<[`stories`](../modules/index.types.default.md#stories-1)\>
 
 Promise<[Stories](../modules/index.types.default.md#stories)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59850
+dist/generated/types.d.ts:67862
 
 ___
 
 ### getChatAvailableMessageSenders
 
-▸ **getChatAvailableMessageSenders**(`parameters`): `Promise`<[`chatMessageSenders`](../modules/index.types.default.md#chatmessagesenders-1)\>
+▸ **getChatAvailableMessageSenders**(`parameters`): `Promise`\<[`chatMessageSenders`](../modules/index.types.default.md#chatmessagesenders-1)\>
 
-Returns list of message sender identifiers, which can be used to send messages in a chat
+Returns the list of message sender identifiers, which can be used to send messages in a chat
 
 #### Parameters
 
@@ -5116,21 +5639,69 @@ Returns list of message sender identifiers, which can be used to send messages i
 
 #### Returns
 
-`Promise`<[`chatMessageSenders`](../modules/index.types.default.md#chatmessagesenders-1)\>
+`Promise`\<[`chatMessageSenders`](../modules/index.types.default.md#chatmessagesenders-1)\>
 
 Promise<[ChatMessageSenders](../modules/index.types.default.md#chatmessagesenders)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58528
+dist/generated/types.d.ts:66317
+
+___
+
+### getChatBoostFeatures
+
+▸ **getChatBoostFeatures**(`parameters`): `Promise`\<[`chatBoostFeatures`](../modules/index.types.default.md#chatboostfeatures-1)\>
+
+Returns the list of features available for different chat boost levels; this is an offline request
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getChatBoostFeatures$DirectInput`](../modules/index.types.default.md#getchatboostfeatures$directinput) | [getChatBoostFeatures$Input](../modules/index.types.default.md#getchatboostfeatures$input) |
+
+#### Returns
+
+`Promise`\<[`chatBoostFeatures`](../modules/index.types.default.md#chatboostfeatures-1)\>
+
+Promise<[ChatBoostFeatures](../modules/index.types.default.md#chatboostfeatures)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67950
+
+___
+
+### getChatBoostLevelFeatures
+
+▸ **getChatBoostLevelFeatures**(`parameters`): `Promise`\<[`chatBoostLevelFeatures`](../modules/index.types.default.md#chatboostlevelfeatures-1)\>
+
+Returns the list of features available on the specific chat boost level; this is an offline request
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getChatBoostLevelFeatures$DirectInput`](../modules/index.types.default.md#getchatboostlevelfeatures$directinput) | [getChatBoostLevelFeatures$Input](../modules/index.types.default.md#getchatboostlevelfeatures$input) |
+
+#### Returns
+
+`Promise`\<[`chatBoostLevelFeatures`](../modules/index.types.default.md#chatboostlevelfeatures-1)\>
+
+Promise<[ChatBoostLevelFeatures](../modules/index.types.default.md#chatboostlevelfeatures)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67943
 
 ___
 
 ### getChatBoostLink
 
-▸ **getChatBoostLink**(`parameters`): `Promise`<[`chatBoostLink`](../modules/index.types.default.md#chatboostlink-1)\>
+▸ **getChatBoostLink**(`parameters`): `Promise`\<[`chatBoostLink`](../modules/index.types.default.md#chatboostlink-1)\>
 
-Returns an HTTPS link to boost the specified channel chat
+Returns an HTTPS link to boost the specified supergroup or channel chat
 
 #### Parameters
 
@@ -5140,19 +5711,19 @@ Returns an HTTPS link to boost the specified channel chat
 
 #### Returns
 
-`Promise`<[`chatBoostLink`](../modules/index.types.default.md#chatboostlink-1)\>
+`Promise`\<[`chatBoostLink`](../modules/index.types.default.md#chatboostlink-1)\>
 
 Promise<[ChatBoostLink](../modules/index.types.default.md#chatboostlink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59938
+dist/generated/types.d.ts:67978
 
 ___
 
 ### getChatBoostLinkInfo
 
-▸ **getChatBoostLinkInfo**(`parameters`): `Promise`<[`chatBoostLinkInfo`](../modules/index.types.default.md#chatboostlinkinfo-1)\>
+▸ **getChatBoostLinkInfo**(`parameters`): `Promise`\<[`chatBoostLinkInfo`](../modules/index.types.default.md#chatboostlinkinfo-1)\>
 
 Returns information about a link to boost a chat. Can be called for any internal link of the type internalLinkTypeChatBoost
 
@@ -5164,21 +5735,21 @@ Returns information about a link to boost a chat. Can be called for any internal
 
 #### Returns
 
-`Promise`<[`chatBoostLinkInfo`](../modules/index.types.default.md#chatboostlinkinfo-1)\>
+`Promise`\<[`chatBoostLinkInfo`](../modules/index.types.default.md#chatboostlinkinfo-1)\>
 
 Promise<[ChatBoostLinkInfo](../modules/index.types.default.md#chatboostlinkinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59945
+dist/generated/types.d.ts:67985
 
 ___
 
 ### getChatBoostStatus
 
-▸ **getChatBoostStatus**(`parameters`): `Promise`<[`chatBoostStatus`](../modules/index.types.default.md#chatbooststatus-1)\>
+▸ **getChatBoostStatus**(`parameters`): `Promise`\<[`chatBoostStatus`](../modules/index.types.default.md#chatbooststatus-1)\>
 
-Returns the current boost status for a channel chat
+Returns the current boost status for a supergroup or a channel chat
 
 #### Parameters
 
@@ -5188,21 +5759,21 @@ Returns the current boost status for a channel chat
 
 #### Returns
 
-`Promise`<[`chatBoostStatus`](../modules/index.types.default.md#chatbooststatus-1)\>
+`Promise`\<[`chatBoostStatus`](../modules/index.types.default.md#chatbooststatus-1)\>
 
 Promise<[ChatBoostStatus](../modules/index.types.default.md#chatbooststatus)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59924
+dist/generated/types.d.ts:67964
 
 ___
 
 ### getChatBoosts
 
-▸ **getChatBoosts**(`parameters`): `Promise`<[`foundChatBoosts`](../modules/index.types.default.md#foundchatboosts-1)\>
+▸ **getChatBoosts**(`parameters`): `Promise`\<[`foundChatBoosts`](../modules/index.types.default.md#foundchatboosts-1)\>
 
-Returns list of boosts applied to a chat; requires administrator rights in the channel chat
+Returns the list of boosts applied to a chat; requires administrator rights in the chat
 
 #### Parameters
 
@@ -5212,19 +5783,19 @@ Returns list of boosts applied to a chat; requires administrator rights in the c
 
 #### Returns
 
-`Promise`<[`foundChatBoosts`](../modules/index.types.default.md#foundchatboosts-1)\>
+`Promise`\<[`foundChatBoosts`](../modules/index.types.default.md#foundchatboosts-1)\>
 
 Promise<[FoundChatBoosts](../modules/index.types.default.md#foundchatboosts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59952
+dist/generated/types.d.ts:67992
 
 ___
 
 ### getChatEventLog
 
-▸ **getChatEventLog**(`parameters`): `Promise`<[`chatEvents`](../modules/index.types.default.md#chatevents-1)\>
+▸ **getChatEventLog**(`parameters`): `Promise`\<[`chatEvents`](../modules/index.types.default.md#chatevents-1)\>
 
 Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only for supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing event_id)
 
@@ -5236,19 +5807,19 @@ Returns a list of service actions taken by chat members and administrators in th
 
 #### Returns
 
-`Promise`<[`chatEvents`](../modules/index.types.default.md#chatevents-1)\>
+`Promise`\<[`chatEvents`](../modules/index.types.default.md#chatevents-1)\>
 
 Promise<[ChatEvents](../modules/index.types.default.md#chatevents)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61359
+dist/generated/types.d.ts:69606
 
 ___
 
 ### getChatFolder
 
-▸ **getChatFolder**(`parameters`): `Promise`<[`chatFolder`](../modules/index.types.default.md#chatfolder-1)\>
+▸ **getChatFolder**(`parameters`): `Promise`\<[`chatFolder`](../modules/index.types.default.md#chatfolder-1)\>
 
 Returns information about a chat folder by its identifier
 
@@ -5260,19 +5831,19 @@ Returns information about a chat folder by its identifier
 
 #### Returns
 
-`Promise`<[`chatFolder`](../modules/index.types.default.md#chatfolder-1)\>
+`Promise`\<[`chatFolder`](../modules/index.types.default.md#chatfolder-1)\>
 
 Promise<[ChatFolder](../modules/index.types.default.md#chatfolder)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59275
+dist/generated/types.d.ts:67253
 
 ___
 
 ### getChatFolderChatCount
 
-▸ **getChatFolderChatCount**(`parameters`): `Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+▸ **getChatFolderChatCount**(`parameters`): `Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Returns approximate number of chats in a being created chat folder. Main and archive chat lists must be fully preloaded for this function to work correctly
 
@@ -5284,19 +5855,19 @@ Returns approximate number of chats in a being created chat folder. Main and arc
 
 #### Returns
 
-`Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+`Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59310
+dist/generated/types.d.ts:67288
 
 ___
 
 ### getChatFolderChatsToLeave
 
-▸ **getChatFolderChatsToLeave**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getChatFolderChatsToLeave**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns identifiers of pinned or always included chats from a chat folder, which are suggested to be left when the chat folder is deleted
 
@@ -5308,19 +5879,19 @@ Returns identifiers of pinned or always included chats from a chat folder, which
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59303
+dist/generated/types.d.ts:67281
 
 ___
 
 ### getChatFolderDefaultIconName
 
-▸ **getChatFolderDefaultIconName**(`parameters`): `Promise`<[`chatFolderIcon`](../modules/index.types.default.md#chatfoldericon-1)\>
+▸ **getChatFolderDefaultIconName**(`parameters`): `Promise`\<[`chatFolderIcon`](../modules/index.types.default.md#chatfoldericon-1)\>
 
 Returns default icon name for a folder. Can be called synchronously
 
@@ -5332,19 +5903,19 @@ Returns default icon name for a folder. Can be called synchronously
 
 #### Returns
 
-`Promise`<[`chatFolderIcon`](../modules/index.types.default.md#chatfoldericon-1)\>
+`Promise`\<[`chatFolderIcon`](../modules/index.types.default.md#chatfoldericon-1)\>
 
 Promise<[ChatFolderIcon](../modules/index.types.default.md#chatfoldericon)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59331
+dist/generated/types.d.ts:67316
 
 ___
 
 ### getChatFolderInviteLinks
 
-▸ **getChatFolderInviteLinks**(`parameters`): `Promise`<[`chatFolderInviteLinks`](../modules/index.types.default.md#chatfolderinvitelinks-1)\>
+▸ **getChatFolderInviteLinks**(`parameters`): `Promise`\<[`chatFolderInviteLinks`](../modules/index.types.default.md#chatfolderinvitelinks-1)\>
 
 Returns invite links created by the current user for a shareable chat folder
 
@@ -5356,19 +5927,19 @@ Returns invite links created by the current user for a shareable chat folder
 
 #### Returns
 
-`Promise`<[`chatFolderInviteLinks`](../modules/index.types.default.md#chatfolderinvitelinks-1)\>
+`Promise`\<[`chatFolderInviteLinks`](../modules/index.types.default.md#chatfolderinvitelinks-1)\>
 
 Promise<[ChatFolderInviteLinks](../modules/index.types.default.md#chatfolderinvitelinks)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59352
+dist/generated/types.d.ts:67337
 
 ___
 
 ### getChatFolderNewChats
 
-▸ **getChatFolderNewChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getChatFolderNewChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns new chats added to a shareable chat folder by its owner. The method must be called at most once in getOption("chat_folder_new_chats_update_period") for the given chat folder
 
@@ -5380,19 +5951,19 @@ Returns new chats added to a shareable chat folder by its owner. The method must
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59387
+dist/generated/types.d.ts:67372
 
 ___
 
 ### getChatHistory
 
-▸ **getChatHistory**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **getChatHistory**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Returns messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id).
 
@@ -5406,19 +5977,19 @@ Returns messages in a chat. The messages are returned in a reverse chronological
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58313
+dist/generated/types.d.ts:66056
 
 ___
 
 ### getChatInviteLink
 
-▸ **getChatInviteLink**(`parameters`): `Promise`<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
+▸ **getChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
 
 Returns information about an invite link. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
 
@@ -5430,21 +6001,21 @@ Returns information about an invite link. Requires administrator privileges and 
 
 #### Returns
 
-`Promise`<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
+`Promise`\<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
 
 Promise<[ChatInviteLink](../modules/index.types.default.md#chatinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60173
+dist/generated/types.d.ts:68243
 
 ___
 
 ### getChatInviteLinkCounts
 
-▸ **getChatInviteLinkCounts**(`parameters`): `Promise`<[`chatInviteLinkCounts`](../modules/index.types.default.md#chatinvitelinkcounts-1)\>
+▸ **getChatInviteLinkCounts**(`parameters`): `Promise`\<[`chatInviteLinkCounts`](../modules/index.types.default.md#chatinvitelinkcounts-1)\>
 
-Returns list of chat administrators with number of their invite links. Requires owner privileges in the chat
+Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
 
 #### Parameters
 
@@ -5454,19 +6025,19 @@ Returns list of chat administrators with number of their invite links. Requires 
 
 #### Returns
 
-`Promise`<[`chatInviteLinkCounts`](../modules/index.types.default.md#chatinvitelinkcounts-1)\>
+`Promise`\<[`chatInviteLinkCounts`](../modules/index.types.default.md#chatinvitelinkcounts-1)\>
 
 Promise<[ChatInviteLinkCounts](../modules/index.types.default.md#chatinvitelinkcounts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60180
+dist/generated/types.d.ts:68250
 
 ___
 
 ### getChatInviteLinkMembers
 
-▸ **getChatInviteLinkMembers**(`parameters`): `Promise`<[`chatInviteLinkMembers`](../modules/index.types.default.md#chatinvitelinkmembers-1)\>
+▸ **getChatInviteLinkMembers**(`parameters`): `Promise`\<[`chatInviteLinkMembers`](../modules/index.types.default.md#chatinvitelinkmembers-1)\>
 
 Returns chat members joined a chat via an invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
@@ -5478,19 +6049,19 @@ Returns chat members joined a chat via an invite link. Requires administrator pr
 
 #### Returns
 
-`Promise`<[`chatInviteLinkMembers`](../modules/index.types.default.md#chatinvitelinkmembers-1)\>
+`Promise`\<[`chatInviteLinkMembers`](../modules/index.types.default.md#chatinvitelinkmembers-1)\>
 
 Promise<[ChatInviteLinkMembers](../modules/index.types.default.md#chatinvitelinkmembers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60194
+dist/generated/types.d.ts:68264
 
 ___
 
 ### getChatInviteLinks
 
-▸ **getChatInviteLinks**(`parameters`): `Promise`<[`chatInviteLinks`](../modules/index.types.default.md#chatinvitelinks-1)\>
+▸ **getChatInviteLinks**(`parameters`): `Promise`\<[`chatInviteLinks`](../modules/index.types.default.md#chatinvitelinks-1)\>
 
 Returns invite links for a chat created by specified administrator. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
 
@@ -5502,19 +6073,19 @@ Returns invite links for a chat created by specified administrator. Requires adm
 
 #### Returns
 
-`Promise`<[`chatInviteLinks`](../modules/index.types.default.md#chatinvitelinks-1)\>
+`Promise`\<[`chatInviteLinks`](../modules/index.types.default.md#chatinvitelinks-1)\>
 
 Promise<[ChatInviteLinks](../modules/index.types.default.md#chatinvitelinks)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60187
+dist/generated/types.d.ts:68257
 
 ___
 
 ### getChatJoinRequests
 
-▸ **getChatJoinRequests**(`parameters`): `Promise`<[`chatJoinRequests`](../modules/index.types.default.md#chatjoinrequests-1)\>
+▸ **getChatJoinRequests**(`parameters`): `Promise`\<[`chatJoinRequests`](../modules/index.types.default.md#chatjoinrequests-1)\>
 
 Returns pending join requests in a chat
 
@@ -5526,19 +6097,19 @@ Returns pending join requests in a chat
 
 #### Returns
 
-`Promise`<[`chatJoinRequests`](../modules/index.types.default.md#chatjoinrequests-1)\>
+`Promise`\<[`chatJoinRequests`](../modules/index.types.default.md#chatjoinrequests-1)\>
 
 Promise<[ChatJoinRequests](../modules/index.types.default.md#chatjoinrequests)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60238
+dist/generated/types.d.ts:68308
 
 ___
 
 ### getChatListsToAddChat
 
-▸ **getChatListsToAddChat**(`parameters`): `Promise`<[`chatLists`](../modules/index.types.default.md#chatlists-1)\>
+▸ **getChatListsToAddChat**(`parameters`): `Promise`\<[`chatLists`](../modules/index.types.default.md#chatlists-1)\>
 
 Returns chat lists to which the chat can be added. This is an offline request
 
@@ -5550,19 +6121,19 @@ Returns chat lists to which the chat can be added. This is an offline request
 
 #### Returns
 
-`Promise`<[`chatLists`](../modules/index.types.default.md#chatlists-1)\>
+`Promise`\<[`chatLists`](../modules/index.types.default.md#chatlists-1)\>
 
 Promise<[ChatLists](../modules/index.types.default.md#chatlists)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59261
+dist/generated/types.d.ts:67239
 
 ___
 
 ### getChatMember
 
-▸ **getChatMember**(`parameters`): `Promise`<[`chatMember`](../modules/index.types.default.md#chatmember-1)\>
+▸ **getChatMember**(`parameters`): `Promise`\<[`chatMember`](../modules/index.types.default.md#chatmember-1)\>
 
 Returns information about a single member of a chat
 
@@ -5574,19 +6145,19 @@ Returns information about a single member of a chat
 
 #### Returns
 
-`Promise`<[`chatMember`](../modules/index.types.default.md#chatmember-1)\>
+`Promise`\<[`chatMember`](../modules/index.types.default.md#chatmember-1)\>
 
 Promise<[ChatMember](../modules/index.types.default.md#chatmember)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59648
+dist/generated/types.d.ts:67653
 
 ___
 
 ### getChatMessageByDate
 
-▸ **getChatMessageByDate**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **getChatMessageByDate**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Returns the last message sent in a chat no later than the specified date
 
@@ -5598,19 +6169,19 @@ Returns the last message sent in a chat no later than the specified date
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58407
+dist/generated/types.d.ts:66189
 
 ___
 
 ### getChatMessageCalendar
 
-▸ **getChatMessageCalendar**(`parameters`): `Promise`<[`messageCalendar`](../modules/index.types.default.md#messagecalendar-1)\>
+▸ **getChatMessageCalendar**(`parameters`): `Promise`\<[`messageCalendar`](../modules/index.types.default.md#messagecalendar-1)\>
 
 Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
 
@@ -5622,19 +6193,19 @@ Returns information about the next messages of the specified type in the chat sp
 
 #### Returns
 
-`Promise`<[`messageCalendar`](../modules/index.types.default.md#messagecalendar-1)\>
+`Promise`\<[`messageCalendar`](../modules/index.types.default.md#messagecalendar-1)\>
 
 Promise<[MessageCalendar](../modules/index.types.default.md#messagecalendar)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58423
+dist/generated/types.d.ts:66205
 
 ___
 
 ### getChatMessageCount
 
-▸ **getChatMessageCount**(`parameters`): `Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+▸ **getChatMessageCount**(`parameters`): `Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Returns approximate number of messages of the specified type in the chat
 
@@ -5646,19 +6217,19 @@ Returns approximate number of messages of the specified type in the chat
 
 #### Returns
 
-`Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+`Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58430
+dist/generated/types.d.ts:66212
 
 ___
 
 ### getChatMessagePosition
 
-▸ **getChatMessagePosition**(`parameters`): `Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+▸ **getChatMessagePosition**(`parameters`): `Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Returns approximate 1-based position of a message among messages, which can be found by the specified filter in the chat. Cannot be used in secret chats
 
@@ -5670,21 +6241,21 @@ Returns approximate 1-based position of a message among messages, which can be f
 
 #### Returns
 
-`Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+`Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58437
+dist/generated/types.d.ts:66219
 
 ___
 
 ### getChatNotificationSettingsExceptions
 
-▸ **getChatNotificationSettingsExceptions**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getChatNotificationSettingsExceptions**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
-Returns list of chats with non-default notification settings for new messages
+Returns the list of chats with non-default notification settings for new messages
 
 #### Parameters
 
@@ -5694,19 +6265,19 @@ Returns list of chats with non-default notification settings for new messages
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59704
+dist/generated/types.d.ts:67709
 
 ___
 
 ### getChatPinnedMessage
 
-▸ **getChatPinnedMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **getChatPinnedMessage**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Returns information about a newest pinned message in the chat
 
@@ -5718,45 +6289,117 @@ Returns information about a newest pinned message in the chat
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58100
+dist/generated/types.d.ts:65766
 
 ___
 
-### getChatPinnedStories
+### getChatPostedToChatPageStories
 
-▸ **getChatPinnedStories**(`parameters`): `Promise`<[`stories`](../modules/index.types.default.md#stories-1)\>
+▸ **getChatPostedToChatPageStories**(`parameters`): `Promise`\<[`stories`](../modules/index.types.default.md#stories-1)\>
 
-Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
 
-- For optimal performance, the number of returned stories is chosen by TDLib
+- Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`getChatPinnedStories$DirectInput`](../modules/index.types.default.md#getchatpinnedstories$directinput) | [getChatPinnedStories$Input](../modules/index.types.default.md#getchatpinnedstories$input) |
+| `parameters` | [`getChatPostedToChatPageStories$DirectInput`](../modules/index.types.default.md#getchatpostedtochatpagestories$directinput) | [getChatPostedToChatPageStories$Input](../modules/index.types.default.md#getchatpostedtochatpagestories$input) |
 
 #### Returns
 
-`Promise`<[`stories`](../modules/index.types.default.md#stories-1)\>
+`Promise`\<[`stories`](../modules/index.types.default.md#stories-1)\>
 
 Promise<[Stories](../modules/index.types.default.md#stories)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59841
+dist/generated/types.d.ts:67853
+
+___
+
+### getChatRevenueStatistics
+
+▸ **getChatRevenueStatistics**(`parameters`): `Promise`\<[`chatRevenueStatistics`](../modules/index.types.default.md#chatrevenuestatistics-1)\>
+
+Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getChatRevenueStatistics$DirectInput`](../modules/index.types.default.md#getchatrevenuestatistics$directinput) | [getChatRevenueStatistics$Input](../modules/index.types.default.md#getchatrevenuestatistics$input) |
+
+#### Returns
+
+`Promise`\<[`chatRevenueStatistics`](../modules/index.types.default.md#chatrevenuestatistics-1)\>
+
+Promise<[ChatRevenueStatistics](../modules/index.types.default.md#chatrevenuestatistics)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69962
+
+___
+
+### getChatRevenueTransactions
+
+▸ **getChatRevenueTransactions**(`parameters`): `Promise`\<[`chatRevenueTransactions`](../modules/index.types.default.md#chatrevenuetransactions-1)\>
+
+Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getChatRevenueTransactions$DirectInput`](../modules/index.types.default.md#getchatrevenuetransactions$directinput) | [getChatRevenueTransactions$Input](../modules/index.types.default.md#getchatrevenuetransactions$input) |
+
+#### Returns
+
+`Promise`\<[`chatRevenueTransactions`](../modules/index.types.default.md#chatrevenuetransactions-1)\>
+
+Promise<[ChatRevenueTransactions](../modules/index.types.default.md#chatrevenuetransactions)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69976
+
+___
+
+### getChatRevenueWithdrawalUrl
+
+▸ **getChatRevenueWithdrawalUrl**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+
+Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getChatRevenueWithdrawalUrl$DirectInput`](../modules/index.types.default.md#getchatrevenuewithdrawalurl$directinput) | [getChatRevenueWithdrawalUrl$Input](../modules/index.types.default.md#getchatrevenuewithdrawalurl$input) |
+
+#### Returns
+
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+
+Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69969
 
 ___
 
 ### getChatScheduledMessages
 
-▸ **getChatScheduledMessages**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **getChatScheduledMessages**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Returns all scheduled messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
 
@@ -5768,19 +6411,19 @@ Returns all scheduled messages in a chat. The messages are returned in a reverse
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58444
+dist/generated/types.d.ts:66226
 
 ___
 
 ### getChatSimilarChatCount
 
-▸ **getChatSimilarChatCount**(`parameters`): `Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+▸ **getChatSimilarChatCount**(`parameters`): `Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Returns approximate number of chats similar to the given chat
 
@@ -5792,19 +6435,19 @@ Returns approximate number of chats similar to the given chat
 
 #### Returns
 
-`Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+`Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58211
+dist/generated/types.d.ts:65891
 
 ___
 
 ### getChatSimilarChats
 
-▸ **getChatSimilarChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getChatSimilarChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns a list of chats similar to the given chat
 
@@ -5816,19 +6459,19 @@ Returns a list of chats similar to the given chat
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58204
+dist/generated/types.d.ts:65884
 
 ___
 
 ### getChatSparseMessagePositions
 
-▸ **getChatSparseMessagePositions**(`parameters`): `Promise`<[`messagePositions`](../modules/index.types.default.md#messagepositions-1)\>
+▸ **getChatSparseMessagePositions**(`parameters`): `Promise`\<[`messagePositions`](../modules/index.types.default.md#messagepositions-1)\>
 
 Returns sparse positions of messages of the specified type in the chat to be used for shared media scroll implementation. Returns the results in reverse chronological order (i.e., in order of decreasing message_id).
 
@@ -5842,19 +6485,19 @@ Returns sparse positions of messages of the specified type in the chat to be use
 
 #### Returns
 
-`Promise`<[`messagePositions`](../modules/index.types.default.md#messagepositions-1)\>
+`Promise`\<[`messagePositions`](../modules/index.types.default.md#messagepositions-1)\>
 
 Promise<[MessagePositions](../modules/index.types.default.md#messagepositions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58416
+dist/generated/types.d.ts:66198
 
 ___
 
 ### getChatSponsoredMessages
 
-▸ **getChatSponsoredMessages**(`parameters`): `Promise`<[`sponsoredMessages`](../modules/index.types.default.md#sponsoredmessages-1)\>
+▸ **getChatSponsoredMessages**(`parameters`): `Promise`\<[`sponsoredMessages`](../modules/index.types.default.md#sponsoredmessages-1)\>
 
 Returns sponsored messages to be shown in a chat; for channel chats only
 
@@ -5866,19 +6509,19 @@ Returns sponsored messages to be shown in a chat; for channel chats only
 
 #### Returns
 
-`Promise`<[`sponsoredMessages`](../modules/index.types.default.md#sponsoredmessages-1)\>
+`Promise`\<[`sponsoredMessages`](../modules/index.types.default.md#sponsoredmessages-1)\>
 
 Promise<[SponsoredMessages](../modules/index.types.default.md#sponsoredmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58451
+dist/generated/types.d.ts:66233
 
 ___
 
 ### getChatStatistics
 
-▸ **getChatStatistics**(`parameters`): `Promise`<[`ChatStatistics`](../modules/index.types.default.md#chatstatistics)\>
+▸ **getChatStatistics**(`parameters`): `Promise`\<[`ChatStatistics`](../modules/index.types.default.md#chatstatistics)\>
 
 Returns detailed statistics about a chat. Currently, this method can be used only for supergroups and channels. Can be used only if supergroupFullInfo.can_get_statistics == true
 
@@ -5890,19 +6533,43 @@ Returns detailed statistics about a chat. Currently, this method can be used onl
 
 #### Returns
 
-`Promise`<[`ChatStatistics`](../modules/index.types.default.md#chatstatistics)\>
+`Promise`\<[`ChatStatistics`](../modules/index.types.default.md#chatstatistics)\>
 
 Promise<[ChatStatistics](../modules/index.types.default.md#chatstatistics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61659
+dist/generated/types.d.ts:69983
+
+___
+
+### getChatStoryInteractions
+
+▸ **getChatStoryInteractions**(`parameters`): `Promise`\<[`storyInteractions`](../modules/index.types.default.md#storyinteractions-1)\>
+
+Returns interactions with a story posted in a chat. Can be used only if story is posted on behalf of a chat and the user is an administrator in the chat
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getChatStoryInteractions$DirectInput`](../modules/index.types.default.md#getchatstoryinteractions$directinput) | [getChatStoryInteractions$Input](../modules/index.types.default.md#getchatstoryinteractions$input) |
+
+#### Returns
+
+`Promise`\<[`storyInteractions`](../modules/index.types.default.md#storyinteractions-1)\>
+
+Promise<[StoryInteractions](../modules/index.types.default.md#storyinteractions)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67911
 
 ___
 
 ### getChats
 
-▸ **getChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns an ordered list of chats from the beginning of a chat list. For informational purposes only. Use loadChats and updates processing instead to maintain chat lists in a consistent state
 
@@ -5914,19 +6581,19 @@ Returns an ordered list of chats from the beginning of a chat list. For informat
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58158
+dist/generated/types.d.ts:65831
 
 ___
 
 ### getChatsForChatFolderInviteLink
 
-▸ **getChatsForChatFolderInviteLink**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getChatsForChatFolderInviteLink**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns identifiers of chats from a chat folder, suitable for adding to a chat folder invite link
 
@@ -5938,21 +6605,21 @@ Returns identifiers of chats from a chat folder, suitable for adding to a chat f
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59338
+dist/generated/types.d.ts:67323
 
 ___
 
 ### getChatsToSendStories
 
-▸ **getChatsToSendStories**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getChatsToSendStories**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
-Returns channel chats in which the current user has the right to post stories. The chats must be rechecked with canSendStory before actually trying to post a story there
+Returns supergroup and channel chats in which the current user has the right to post stories. The chats must be rechecked with canSendStory before actually trying to post a story there
 
 #### Parameters
 
@@ -5962,19 +6629,19 @@ Returns channel chats in which the current user has the right to post stories. T
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59760
+dist/generated/types.d.ts:67772
 
 ___
 
 ### getCloseFriends
 
-▸ **getCloseFriends**(`parameters`): `Promise`<[`users`](../modules/index.types.default.md#users-1)\>
+▸ **getCloseFriends**(`parameters`): `Promise`\<[`users`](../modules/index.types.default.md#users-1)\>
 
 Returns all close friends of the current user
 
@@ -5986,21 +6653,45 @@ Returns all close friends of the current user
 
 #### Returns
 
-`Promise`<[`users`](../modules/index.types.default.md#users-1)\>
+`Promise`\<[`users`](../modules/index.types.default.md#users-1)\>
 
 Promise<[Users](../modules/index.types.default.md#users)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60604
+dist/generated/types.d.ts:68674
+
+___
+
+### getCollectibleItemInfo
+
+▸ **getCollectibleItemInfo**(`parameters`): `Promise`\<[`collectibleItemInfo`](../modules/index.types.default.md#collectibleiteminfo-1)\>
+
+Returns information about a given collectible item that was purchased at https://fragment.com
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getCollectibleItemInfo$DirectInput`](../modules/index.types.default.md#getcollectibleiteminfo$directinput) | [getCollectibleItemInfo$Input](../modules/index.types.default.md#getcollectibleiteminfo$input) |
+
+#### Returns
+
+`Promise`\<[`collectibleItemInfo`](../modules/index.types.default.md#collectibleiteminfo-1)\>
+
+Promise<[CollectibleItemInfo](../modules/index.types.default.md#collectibleiteminfo)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70510
 
 ___
 
 ### getCommands
 
-▸ **getCommands**(`parameters`): `Promise`<[`botCommands`](../modules/index.types.default.md#botcommands-1)\>
+▸ **getCommands**(`parameters`): `Promise`\<[`botCommands`](../modules/index.types.default.md#botcommands-1)\>
 
-Returns list of commands supported by the bot for the given user scope and language; for bots only
+Returns the list of commands supported by the bot for the given user scope and language; for bots only
 
 #### Parameters
 
@@ -6010,19 +6701,19 @@ Returns list of commands supported by the bot for the given user scope and langu
 
 #### Returns
 
-`Promise`<[`botCommands`](../modules/index.types.default.md#botcommands-1)\>
+`Promise`\<[`botCommands`](../modules/index.types.default.md#botcommands-1)\>
 
 Promise<[BotCommands](../modules/index.types.default.md#botcommands)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61049
+dist/generated/types.d.ts:69275
 
 ___
 
 ### getConnectedWebsites
 
-▸ **getConnectedWebsites**(`parameters`): `Promise`<[`connectedWebsites`](../modules/index.types.default.md#connectedwebsites-1)\>
+▸ **getConnectedWebsites**(`parameters`): `Promise`\<[`connectedWebsites`](../modules/index.types.default.md#connectedwebsites-1)\>
 
 Returns all website where the current user used Telegram to log in
 
@@ -6034,19 +6725,19 @@ Returns all website where the current user used Telegram to log in
 
 #### Returns
 
-`Promise`<[`connectedWebsites`](../modules/index.types.default.md#connectedwebsites-1)\>
+`Promise`\<[`connectedWebsites`](../modules/index.types.default.md#connectedwebsites-1)\>
 
 Promise<[ConnectedWebsites](../modules/index.types.default.md#connectedwebsites)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61217
+dist/generated/types.d.ts:69443
 
 ___
 
 ### getContacts
 
-▸ **getContacts**(`parameters`): `Promise`<[`users`](../modules/index.types.default.md#users-1)\>
+▸ **getContacts**(`parameters`): `Promise`\<[`users`](../modules/index.types.default.md#users-1)\>
 
 Returns all contacts of the user
 
@@ -6058,19 +6749,19 @@ Returns all contacts of the user
 
 #### Returns
 
-`Promise`<[`users`](../modules/index.types.default.md#users-1)\>
+`Promise`\<[`users`](../modules/index.types.default.md#users-1)\>
 
 Promise<[Users](../modules/index.types.default.md#users)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60553
+dist/generated/types.d.ts:68623
 
 ___
 
 ### getCountries
 
-▸ **getCountries**(`parameters`): `Promise`<[`countries`](../modules/index.types.default.md#countries-1)\>
+▸ **getCountries**(`parameters`): `Promise`\<[`countries`](../modules/index.types.default.md#countries-1)\>
 
 Returns information about existing countries. Can be called before authorization
 
@@ -6082,19 +6773,19 @@ Returns information about existing countries. Can be called before authorization
 
 #### Returns
 
-`Promise`<[`countries`](../modules/index.types.default.md#countries-1)\>
+`Promise`\<[`countries`](../modules/index.types.default.md#countries-1)\>
 
 Promise<[Countries](../modules/index.types.default.md#countries)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62165
+dist/generated/types.d.ts:70482
 
 ___
 
 ### getCountryCode
 
-▸ **getCountryCode**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getCountryCode**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Uses the current IP address to find the current country. Returns two-letter ISO 3166-1 alpha-2 country code. Can be called before authorization
 
@@ -6106,19 +6797,43 @@ Uses the current IP address to find the current country. Returns two-letter ISO 
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62172
+dist/generated/types.d.ts:70489
+
+___
+
+### getCountryFlagEmoji
+
+▸ **getCountryFlagEmoji**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
+
+Returns an emoji for the given country. Returns an empty string on failure. Can be called synchronously
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getCountryFlagEmoji$DirectInput`](../modules/index.types.default.md#getcountryflagemoji$directinput) | [getCountryFlagEmoji$Input](../modules/index.types.default.md#getcountryflagemoji$input) |
+
+#### Returns
+
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
+
+Promise<[Text](../modules/index.types.default.md#text)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66825
 
 ___
 
 ### getCreatedPublicChats
 
-▸ **getCreatedPublicChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getCreatedPublicChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns a list of public chats of the specified type, owned by the user
 
@@ -6130,19 +6845,19 @@ Returns a list of public chats of the specified type, owned by the user
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58274
+dist/generated/types.d.ts:65961
 
 ___
 
 ### getCurrentState
 
-▸ **getCurrentState**(`parameters`): `Promise`<[`updates`](../modules/index.types.default.md#updates-1)\>
+▸ **getCurrentState**(`parameters`): `Promise`\<[`updates`](../modules/index.types.default.md#updates-1)\>
 
 Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others. This is especially useful if TDLib is run in a separate process. Can be called before initialization
 
@@ -6154,19 +6869,19 @@ Returns all updates needed to restore current TDLib state, i.e. all actual updat
 
 #### Returns
 
-`Promise`<[`updates`](../modules/index.types.default.md#updates-1)\>
+`Promise`\<[`updates`](../modules/index.types.default.md#updates-1)\>
 
 Promise<[Updates](../modules/index.types.default.md#updates)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57882
+dist/generated/types.d.ts:65541
 
 ___
 
 ### getCustomEmojiReactionAnimations
 
-▸ **getCustomEmojiReactionAnimations**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getCustomEmojiReactionAnimations**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns TGS stickers with generic animations for custom emoji reactions
 
@@ -6178,21 +6893,21 @@ Returns TGS stickers with generic animations for custom emoji reactions
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58784
+dist/generated/types.d.ts:66711
 
 ___
 
 ### getCustomEmojiStickers
 
-▸ **getCustomEmojiStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
-Returns list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
+Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
 
 #### Parameters
 
@@ -6202,19 +6917,19 @@ Returns list of custom emoji stickers by their identifiers. Stickers are returne
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60839
+dist/generated/types.d.ts:68923
 
 ___
 
 ### getDatabaseStatistics
 
-▸ **getDatabaseStatistics**(`parameters`): `Promise`<[`databaseStatistics`](../modules/index.types.default.md#databasestatistics-1)\>
+▸ **getDatabaseStatistics**(`parameters`): `Promise`\<[`databaseStatistics`](../modules/index.types.default.md#databasestatistics-1)\>
 
 Returns database statistics
 
@@ -6226,19 +6941,19 @@ Returns database statistics
 
 #### Returns
 
-`Promise`<[`databaseStatistics`](../modules/index.types.default.md#databasestatistics-1)\>
+`Promise`\<[`databaseStatistics`](../modules/index.types.default.md#databasestatistics-1)\>
 
 Promise<[DatabaseStatistics](../modules/index.types.default.md#databasestatistics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61708
+dist/generated/types.d.ts:70032
 
 ___
 
 ### getDeepLinkInfo
 
-▸ **getDeepLinkInfo**(`parameters`): `Promise`<[`deepLinkInfo`](../modules/index.types.default.md#deeplinkinfo-1)\>
+▸ **getDeepLinkInfo**(`parameters`): `Promise`\<[`deepLinkInfo`](../modules/index.types.default.md#deeplinkinfo-1)\>
 
 Returns information about a tg:// deep link. Use "tg://need_update_for_some_feature" or "tg:some_unsupported_feature" for testing. Returns a 404 error for unknown links. Can be called before authorization
 
@@ -6250,19 +6965,19 @@ Returns information about a tg:// deep link. Use "tg://need_update_for_some_feat
 
 #### Returns
 
-`Promise`<[`deepLinkInfo`](../modules/index.types.default.md#deeplinkinfo-1)\>
+`Promise`\<[`deepLinkInfo`](../modules/index.types.default.md#deeplinkinfo-1)\>
 
 Promise<[DeepLinkInfo](../modules/index.types.default.md#deeplinkinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62193
+dist/generated/types.d.ts:70517
 
 ___
 
 ### getDefaultBackgroundCustomEmojiStickers
 
-▸ **getDefaultBackgroundCustomEmojiStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getDefaultBackgroundCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns default list of custom emoji stickers for reply background
 
@@ -6274,19 +6989,43 @@ Returns default list of custom emoji stickers for reply background
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60860
+dist/generated/types.d.ts:68944
+
+___
+
+### getDefaultChatEmojiStatuses
+
+▸ **getDefaultChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+
+Returns default emoji statuses for chats
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getDefaultChatEmojiStatuses$DirectInput`](../modules/index.types.default.md#getdefaultchatemojistatuses$directinput) | [getDefaultChatEmojiStatuses$Input](../modules/index.types.default.md#getdefaultchatemojistatuses$input) |
+
+#### Returns
+
+`Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+
+Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
+
+#### Defined in
+
+dist/generated/types.d.ts:68055
 
 ___
 
 ### getDefaultChatPhotoCustomEmojiStickers
 
-▸ **getDefaultChatPhotoCustomEmojiStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getDefaultChatPhotoCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns default list of custom emoji stickers for placing on a chat photo
 
@@ -6298,21 +7037,21 @@ Returns default list of custom emoji stickers for placing on a chat photo
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60846
+dist/generated/types.d.ts:68930
 
 ___
 
 ### getDefaultEmojiStatuses
 
-▸ **getDefaultEmojiStatuses**(`parameters`): `Promise`<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+▸ **getDefaultEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
 
-Returns default emoji statuses
+Returns default emoji statuses for self status
 
 #### Parameters
 
@@ -6322,19 +7061,19 @@ Returns default emoji statuses
 
 #### Returns
 
-`Promise`<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+`Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
 
 Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59994
+dist/generated/types.d.ts:68034
 
 ___
 
 ### getDefaultMessageAutoDeleteTime
 
-▸ **getDefaultMessageAutoDeleteTime**(`parameters`): `Promise`<[`messageAutoDeleteTime`](../modules/index.types.default.md#messageautodeletetime-1)\>
+▸ **getDefaultMessageAutoDeleteTime**(`parameters`): `Promise`\<[`messageAutoDeleteTime`](../modules/index.types.default.md#messageautodeletetime-1)\>
 
 Returns default message auto-delete time setting for new chats
 
@@ -6346,19 +7085,19 @@ Returns default message auto-delete time setting for new chats
 
 #### Returns
 
-`Promise`<[`messageAutoDeleteTime`](../modules/index.types.default.md#messageautodeletetime-1)\>
+`Promise`\<[`messageAutoDeleteTime`](../modules/index.types.default.md#messageautodeletetime-1)\>
 
 Promise<[MessageAutoDeleteTime](../modules/index.types.default.md#messageautodeletetime)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61624
+dist/generated/types.d.ts:69927
 
 ___
 
 ### getDefaultProfilePhotoCustomEmojiStickers
 
-▸ **getDefaultProfilePhotoCustomEmojiStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getDefaultProfilePhotoCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns default list of custom emoji stickers for placing on a profile photo
 
@@ -6370,19 +7109,43 @@ Returns default list of custom emoji stickers for placing on a profile photo
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60853
+dist/generated/types.d.ts:68937
+
+___
+
+### getDisallowedChatEmojiStatuses
+
+▸ **getDisallowedChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+
+Returns the list of emoji statuses, which can't be used as chat emoji status, even they are from a sticker set with is_allowed_as_chat_emoji_status == true
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getDisallowedChatEmojiStatuses$DirectInput`](../modules/index.types.default.md#getdisallowedchatemojistatuses$directinput) | [getDisallowedChatEmojiStatuses$Input](../modules/index.types.default.md#getdisallowedchatemojistatuses$input) |
+
+#### Returns
+
+`Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+
+Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
+
+#### Defined in
+
+dist/generated/types.d.ts:68062
 
 ___
 
 ### getEmojiCategories
 
-▸ **getEmojiCategories**(`parameters`): `Promise`<[`emojiCategories`](../modules/index.types.default.md#emojicategories-1)\>
+▸ **getEmojiCategories**(`parameters`): `Promise`\<[`emojiCategories`](../modules/index.types.default.md#emojicategories-1)\>
 
 Returns available emojis categories
 
@@ -6394,21 +7157,21 @@ Returns available emojis categories
 
 #### Returns
 
-`Promise`<[`emojiCategories`](../modules/index.types.default.md#emojicategories-1)\>
+`Promise`\<[`emojiCategories`](../modules/index.types.default.md#emojicategories-1)\>
 
 Promise<[EmojiCategories](../modules/index.types.default.md#emojicategories)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60818
+dist/generated/types.d.ts:68902
 
 ___
 
 ### getEmojiReaction
 
-▸ **getEmojiReaction**(`parameters`): `Promise`<[`emojiReaction`](../modules/index.types.default.md#emojireaction-1)\>
+▸ **getEmojiReaction**(`parameters`): `Promise`\<[`emojiReaction`](../modules/index.types.default.md#emojireaction-1)\>
 
-Returns information about a emoji reaction. Returns a 404 error if the reaction is not found
+Returns information about an emoji reaction. Returns a 404 error if the reaction is not found
 
 #### Parameters
 
@@ -6418,19 +7181,19 @@ Returns information about a emoji reaction. Returns a 404 error if the reaction 
 
 #### Returns
 
-`Promise`<[`emojiReaction`](../modules/index.types.default.md#emojireaction-1)\>
+`Promise`\<[`emojiReaction`](../modules/index.types.default.md#emojireaction-1)\>
 
 Promise<[EmojiReaction](../modules/index.types.default.md#emojireaction)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58777
+dist/generated/types.d.ts:66704
 
 ___
 
 ### getEmojiSuggestionsUrl
 
-▸ **getEmojiSuggestionsUrl**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getEmojiSuggestionsUrl**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns an HTTP URL which can be used to automatically log in to the translation platform and suggest new emoji replacements. The URL will be valid for 30 seconds after generation
 
@@ -6442,19 +7205,19 @@ Returns an HTTP URL which can be used to automatically log in to the translation
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60832
+dist/generated/types.d.ts:68916
 
 ___
 
 ### getExternalLink
 
-▸ **getExternalLink**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getExternalLink**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns an HTTP URL which can be used to automatically authorize the current user on a website after clicking an HTTP link. Use the method getExternalLinkInfo to find whether a prior user confirmation is needed
 
@@ -6466,19 +7229,19 @@ Returns an HTTP URL which can be used to automatically authorize the current use
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59170
+dist/generated/types.d.ts:67148
 
 ___
 
 ### getExternalLinkInfo
 
-▸ **getExternalLinkInfo**(`parameters`): `Promise`<[`LoginUrlInfo`](../modules/index.types.default.md#loginurlinfo)\>
+▸ **getExternalLinkInfo**(`parameters`): `Promise`\<[`LoginUrlInfo`](../modules/index.types.default.md#loginurlinfo)\>
 
 Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if web page preview is disabled in secret chats
 
@@ -6490,19 +7253,19 @@ Returns information about an action to be done when the current user clicks an e
 
 #### Returns
 
-`Promise`<[`LoginUrlInfo`](../modules/index.types.default.md#loginurlinfo)\>
+`Promise`\<[`LoginUrlInfo`](../modules/index.types.default.md#loginurlinfo)\>
 
 Promise<[LoginUrlInfo](../modules/index.types.default.md#loginurlinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59163
+dist/generated/types.d.ts:67141
 
 ___
 
 ### getFavoriteStickers
 
-▸ **getFavoriteStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getFavoriteStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns favorite stickers
 
@@ -6514,19 +7277,19 @@ Returns favorite stickers
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60781
+dist/generated/types.d.ts:68858
 
 ___
 
 ### getFile
 
-▸ **getFile**(`parameters`): `Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+▸ **getFile**(`parameters`): `Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Returns information about a file; this is an offline request
 
@@ -6538,19 +7301,19 @@ Returns information about a file; this is an offline request
 
 #### Returns
 
-`Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+`Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58135
+dist/generated/types.d.ts:65808
 
 ___
 
 ### getFileDownloadedPrefixSize
 
-▸ **getFileDownloadedPrefixSize**(`parameters`): `Promise`<[`fileDownloadedPrefixSize`](../modules/index.types.default.md#filedownloadedprefixsize-1)\>
+▸ **getFileDownloadedPrefixSize**(`parameters`): `Promise`\<[`fileDownloadedPrefixSize`](../modules/index.types.default.md#filedownloadedprefixsize-1)\>
 
 Returns file downloaded prefix size from a given offset, in bytes
 
@@ -6562,19 +7325,19 @@ Returns file downloaded prefix size from a given offset, in bytes
 
 #### Returns
 
-`Promise`<[`fileDownloadedPrefixSize`](../modules/index.types.default.md#filedownloadedprefixsize-1)\>
+`Promise`\<[`fileDownloadedPrefixSize`](../modules/index.types.default.md#filedownloadedprefixsize-1)\>
 
 Promise<[FileDownloadedPrefixSize](../modules/index.types.default.md#filedownloadedprefixsize)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60015
+dist/generated/types.d.ts:68076
 
 ___
 
 ### getFileExtension
 
-▸ **getFileExtension**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getFileExtension**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns the extension of a file, guessed by its MIME type. Returns an empty string on failure. Can be called synchronously
 
@@ -6586,19 +7349,19 @@ Returns the extension of a file, guessed by its MIME type. Returns an empty stri
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58875
+dist/generated/types.d.ts:66839
 
 ___
 
 ### getFileMimeType
 
-▸ **getFileMimeType**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getFileMimeType**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns the MIME type of a file, guessed by its extension. Returns an empty string on failure. Can be called synchronously
 
@@ -6610,19 +7373,19 @@ Returns the MIME type of a file, guessed by its extension. Returns an empty stri
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58868
+dist/generated/types.d.ts:66832
 
 ___
 
 ### getForumTopic
 
-▸ **getForumTopic**(`parameters`): `Promise`<[`forumTopic`](../modules/index.types.default.md#forumtopic-1)\>
+▸ **getForumTopic**(`parameters`): `Promise`\<[`forumTopic`](../modules/index.types.default.md#forumtopic-1)\>
 
 Returns information about a forum topic
 
@@ -6634,21 +7397,21 @@ Returns information about a forum topic
 
 #### Returns
 
-`Promise`<[`forumTopic`](../modules/index.types.default.md#forumtopic-1)\>
+`Promise`\<[`forumTopic`](../modules/index.types.default.md#forumtopic-1)\>
 
 Promise<[ForumTopic](../modules/index.types.default.md#forumtopic)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58714
+dist/generated/types.d.ts:66641
 
 ___
 
 ### getForumTopicDefaultIcons
 
-▸ **getForumTopicDefaultIcons**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getForumTopicDefaultIcons**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
-Returns list of custom emojis, which can be used as forum topic icon by all users
+Returns the list of custom emojis, which can be used as forum topic icon by all users
 
 #### Parameters
 
@@ -6658,19 +7421,19 @@ Returns list of custom emojis, which can be used as forum topic icon by all user
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58693
+dist/generated/types.d.ts:66620
 
 ___
 
 ### getForumTopicLink
 
-▸ **getForumTopicLink**(`parameters`): `Promise`<[`messageLink`](../modules/index.types.default.md#messagelink-1)\>
+▸ **getForumTopicLink**(`parameters`): `Promise`\<[`messageLink`](../modules/index.types.default.md#messagelink-1)\>
 
 Returns an HTTPS link to a topic in a forum chat. This is an offline request
 
@@ -6682,19 +7445,19 @@ Returns an HTTPS link to a topic in a forum chat. This is an offline request
 
 #### Returns
 
-`Promise`<[`messageLink`](../modules/index.types.default.md#messagelink-1)\>
+`Promise`\<[`messageLink`](../modules/index.types.default.md#messagelink-1)\>
 
 Promise<[MessageLink](../modules/index.types.default.md#messagelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58721
+dist/generated/types.d.ts:66648
 
 ___
 
 ### getForumTopics
 
-▸ **getForumTopics**(`parameters`): `Promise`<[`forumTopics`](../modules/index.types.default.md#forumtopics-1)\>
+▸ **getForumTopics**(`parameters`): `Promise`\<[`forumTopics`](../modules/index.types.default.md#forumtopics-1)\>
 
 Returns found forum topics in a forum chat. This is a temporary method for getting information about topic list from the server
 
@@ -6706,19 +7469,19 @@ Returns found forum topics in a forum chat. This is a temporary method for getti
 
 #### Returns
 
-`Promise`<[`forumTopics`](../modules/index.types.default.md#forumtopics-1)\>
+`Promise`\<[`forumTopics`](../modules/index.types.default.md#forumtopics-1)\>
 
 Promise<[ForumTopics](../modules/index.types.default.md#forumtopics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58728
+dist/generated/types.d.ts:66655
 
 ___
 
 ### getGameHighScores
 
-▸ **getGameHighScores**(`parameters`): `Promise`<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\>
+▸ **getGameHighScores**(`parameters`): `Promise`\<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\>
 
 Returns the high scores for a game and some part of the high score table in the range of the specified user; for bots only
 
@@ -6730,19 +7493,43 @@ Returns the high scores for a game and some part of the high score table in the 
 
 #### Returns
 
-`Promise`<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\>
+`Promise`\<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\>
 
 Promise<[GameHighScores](../modules/index.types.default.md#gamehighscores)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59082
+dist/generated/types.d.ts:67060
+
+___
+
+### getGreetingStickers
+
+▸ **getGreetingStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+
+Returns greeting stickers from regular sticker sets that can be used for the start page of other users
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getGreetingStickers$DirectInput`](../modules/index.types.default.md#getgreetingstickers$directinput) | [getGreetingStickers$Input](../modules/index.types.default.md#getgreetingstickers$input) |
+
+#### Returns
+
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+
+Promise<[Stickers](../modules/index.types.default.md#stickers)>
+
+#### Defined in
+
+dist/generated/types.d.ts:68737
 
 ___
 
 ### getGroupCall
 
-▸ **getGroupCall**(`parameters`): `Promise`<[`groupCall`](../modules/index.types.default.md#groupcall-1)\>
+▸ **getGroupCall**(`parameters`): `Promise`\<[`groupCall`](../modules/index.types.default.md#groupcall-1)\>
 
 Returns information about a group call
 
@@ -6754,19 +7541,19 @@ Returns information about a group call
 
 #### Returns
 
-`Promise`<[`groupCall`](../modules/index.types.default.md#groupcall-1)\>
+`Promise`\<[`groupCall`](../modules/index.types.default.md#groupcall-1)\>
 
 Promise<[GroupCall](../modules/index.types.default.md#groupcall)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60343
+dist/generated/types.d.ts:68413
 
 ___
 
 ### getGroupCallInviteLink
 
-▸ **getGroupCallInviteLink**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getGroupCallInviteLink**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns invite link to a video chat in a public chat
 
@@ -6778,19 +7565,19 @@ Returns invite link to a video chat in a public chat
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60413
+dist/generated/types.d.ts:68483
 
 ___
 
 ### getGroupCallStreamSegment
 
-▸ **getGroupCallStreamSegment**(`parameters`): `Promise`<[`filePart`](../modules/index.types.default.md#filepart-1)\>
+▸ **getGroupCallStreamSegment**(`parameters`): `Promise`\<[`filePart`](../modules/index.types.default.md#filepart-1)\>
 
 Returns a file with a segment of a group call stream in a modified OGG format for audio or MPEG-4 format for video
 
@@ -6802,19 +7589,19 @@ Returns a file with a segment of a group call stream in a modified OGG format fo
 
 #### Returns
 
-`Promise`<[`filePart`](../modules/index.types.default.md#filepart-1)\>
+`Promise`\<[`filePart`](../modules/index.types.default.md#filepart-1)\>
 
 Promise<[FilePart](../modules/index.types.default.md#filepart)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60511
+dist/generated/types.d.ts:68581
 
 ___
 
 ### getGroupCallStreams
 
-▸ **getGroupCallStreams**(`parameters`): `Promise`<[`groupCallStreams`](../modules/index.types.default.md#groupcallstreams-1)\>
+▸ **getGroupCallStreams**(`parameters`): `Promise`\<[`groupCallStreams`](../modules/index.types.default.md#groupcallstreams-1)\>
 
 Returns information about available group call streams
 
@@ -6826,19 +7613,19 @@ Returns information about available group call streams
 
 #### Returns
 
-`Promise`<[`groupCallStreams`](../modules/index.types.default.md#groupcallstreams-1)\>
+`Promise`\<[`groupCallStreams`](../modules/index.types.default.md#groupcallstreams-1)\>
 
 Promise<[GroupCallStreams](../modules/index.types.default.md#groupcallstreams)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60504
+dist/generated/types.d.ts:68574
 
 ___
 
 ### getGroupsInCommon
 
-▸ **getGroupsInCommon**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getGroupsInCommon**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
 
@@ -6850,19 +7637,19 @@ Returns a list of common group chats with a given user. Chats are sorted by thei
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58304
+dist/generated/types.d.ts:66047
 
 ___
 
 ### getImportedContactCount
 
-▸ **getImportedContactCount**(`parameters`): `Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+▸ **getImportedContactCount**(`parameters`): `Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Returns the total number of imported contacts
 
@@ -6874,19 +7661,19 @@ Returns the total number of imported contacts
 
 #### Returns
 
-`Promise`<[`count`](../modules/index.types.default.md#count-1)\>
+`Promise`\<[`count`](../modules/index.types.default.md#count-1)\>
 
 Promise<[Count](../modules/index.types.default.md#count)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60574
+dist/generated/types.d.ts:68644
 
 ___
 
 ### getInactiveSupergroupChats
 
-▸ **getInactiveSupergroupChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getInactiveSupergroupChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives CHANNELS_TOO_MUCH error. Also, the limit can be increased with Telegram Premium
 
@@ -6898,19 +7685,19 @@ Returns a list of recently inactive supergroups and channels. Can be used when u
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58297
+dist/generated/types.d.ts:65984
 
 ___
 
 ### getInlineGameHighScores
 
-▸ **getInlineGameHighScores**(`parameters`): `Promise`<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\>
+▸ **getInlineGameHighScores**(`parameters`): `Promise`\<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\>
 
 Returns game high scores and some part of the high score table in the range of the specified user; for bots only
 
@@ -6922,19 +7709,19 @@ Returns game high scores and some part of the high score table in the range of t
 
 #### Returns
 
-`Promise`<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\>
+`Promise`\<[`gameHighScores`](../modules/index.types.default.md#gamehighscores-1)\>
 
 Promise<[GameHighScores](../modules/index.types.default.md#gamehighscores)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59089
+dist/generated/types.d.ts:67067
 
 ___
 
 ### getInlineQueryResults
 
-▸ **getInlineQueryResults**(`parameters`): `Promise`<[`inlineQueryResults`](../modules/index.types.default.md#inlinequeryresults-1)\>
+▸ **getInlineQueryResults**(`parameters`): `Promise`\<[`inlineQueryResults`](../modules/index.types.default.md#inlinequeryresults-1)\>
 
 Sends an inline query to a bot and returns its results. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
 
@@ -6946,19 +7733,43 @@ Sends an inline query to a bot and returns its results. Returns an error with co
 
 #### Returns
 
-`Promise`<[`inlineQueryResults`](../modules/index.types.default.md#inlinequeryresults-1)\>
+`Promise`\<[`inlineQueryResults`](../modules/index.types.default.md#inlinequeryresults-1)\>
 
 Promise<[InlineQueryResults](../modules/index.types.default.md#inlinequeryresults)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58975
+dist/generated/types.d.ts:66953
+
+___
+
+### getInstalledBackgrounds
+
+▸ **getInstalledBackgrounds**(`parameters`): `Promise`\<[`backgrounds`](../modules/index.types.default.md#backgrounds-1)\>
+
+Returns backgrounds installed by the user
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getInstalledBackgrounds$DirectInput`](../modules/index.types.default.md#getinstalledbackgrounds$directinput) | [getInstalledBackgrounds$Input](../modules/index.types.default.md#getinstalledbackgrounds$input) |
+
+#### Returns
+
+`Promise`\<[`backgrounds`](../modules/index.types.default.md#backgrounds-1)\>
+
+Promise<[Backgrounds](../modules/index.types.default.md#backgrounds)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69718
 
 ___
 
 ### getInstalledStickerSets
 
-▸ **getInstalledStickerSets**(`parameters`): `Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+▸ **getInstalledStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Returns a list of installed sticker sets
 
@@ -6970,19 +7781,19 @@ Returns a list of installed sticker sets
 
 #### Returns
 
-`Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+`Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60674
+dist/generated/types.d.ts:68751
 
 ___
 
 ### getInternalLink
 
-▸ **getInternalLink**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getInternalLink**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns an HTTPS or a tg: link with the given type. Can be called before authorization
 
@@ -6994,21 +7805,21 @@ Returns an HTTPS or a tg: link with the given type. Can be called before authori
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59149
+dist/generated/types.d.ts:67127
 
 ___
 
 ### getInternalLinkType
 
-▸ **getInternalLinkType**(`parameters`): `Promise`<[`InternalLinkType`](../modules/index.types.default.md#internallinktype)\>
+▸ **getInternalLinkType**(`parameters`): `Promise`\<[`InternalLinkType`](../modules/index.types.default.md#internallinktype)\>
 
-Returns information about the type of an internal link. Returns a 404 error if the link is not internal. Can be called before authorization
+Returns information about the type of internal link. Returns a 404 error if the link is not internal. Can be called before authorization
 
 #### Parameters
 
@@ -7018,19 +7829,19 @@ Returns information about the type of an internal link. Returns a 404 error if t
 
 #### Returns
 
-`Promise`<[`InternalLinkType`](../modules/index.types.default.md#internallinktype)\>
+`Promise`\<[`InternalLinkType`](../modules/index.types.default.md#internallinktype)\>
 
 Promise<[InternalLinkType](../modules/index.types.default.md#internallinktype)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59156
+dist/generated/types.d.ts:67134
 
 ___
 
 ### getJsonString
 
-▸ **getJsonString**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getJsonString**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Converts a JsonValue object to corresponding JSON-serialized string. Can be called synchronously
 
@@ -7042,19 +7853,19 @@ Converts a JsonValue object to corresponding JSON-serialized string. Can be call
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58903
+dist/generated/types.d.ts:66867
 
 ___
 
 ### getJsonValue
 
-▸ **getJsonValue**(`parameters`): `Promise`<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\>
+▸ **getJsonValue**(`parameters`): `Promise`\<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\>
 
 Converts a JSON-serialized string to corresponding JsonValue object. Can be called synchronously
 
@@ -7066,19 +7877,43 @@ Converts a JSON-serialized string to corresponding JsonValue object. Can be call
 
 #### Returns
 
-`Promise`<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\>
+`Promise`\<[`JsonValue`](../modules/index.types.default.md#jsonvalue)\>
 
 Promise<[JsonValue](../modules/index.types.default.md#jsonvalue)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58896
+dist/generated/types.d.ts:66860
+
+___
+
+### getKeywordEmojis
+
+▸ **getKeywordEmojis**(`parameters`): `Promise`\<[`emojis`](../modules/index.types.default.md#emojis-1)\>
+
+Return emojis matching the keyword. Supported only if the file database is enabled. Order of results is unspecified
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getKeywordEmojis$DirectInput`](../modules/index.types.default.md#getkeywordemojis$directinput) | [getKeywordEmojis$Input](../modules/index.types.default.md#getkeywordemojis$input) |
+
+#### Returns
+
+`Promise`\<[`emojis`](../modules/index.types.default.md#emojis-1)\>
+
+Promise<[Emojis](../modules/index.types.default.md#emojis)>
+
+#### Defined in
+
+dist/generated/types.d.ts:68895
 
 ___
 
 ### getLanguagePackInfo
 
-▸ **getLanguagePackInfo**(`parameters`): `Promise`<[`languagePackInfo`](../modules/index.types.default.md#languagepackinfo-1)\>
+▸ **getLanguagePackInfo**(`parameters`): `Promise`\<[`languagePackInfo`](../modules/index.types.default.md#languagepackinfo-1)\>
 
 Returns information about a language pack. Returned language pack identifier may be different from a provided one. Can be called before authorization
 
@@ -7090,19 +7925,19 @@ Returns information about a language pack. Returned language pack identifier may
 
 #### Returns
 
-`Promise`<[`languagePackInfo`](../modules/index.types.default.md#languagepackinfo-1)\>
+`Promise`\<[`languagePackInfo`](../modules/index.types.default.md#languagepackinfo-1)\>
 
 Promise<[LanguagePackInfo](../modules/index.types.default.md#languagepackinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61478
+dist/generated/types.d.ts:69746
 
 ___
 
 ### getLanguagePackString
 
-▸ **getLanguagePackString**(`parameters`): `Promise`<[`LanguagePackStringValue`](../modules/index.types.default.md#languagepackstringvalue)\>
+▸ **getLanguagePackString**(`parameters`): `Promise`\<[`LanguagePackStringValue`](../modules/index.types.default.md#languagepackstringvalue)\>
 
 Returns a string stored in the local database from the specified localization target and language pack by its key. Returns a 404 error if the string is not found. Can be called synchronously
 
@@ -7114,19 +7949,19 @@ Returns a string stored in the local database from the specified localization ta
 
 #### Returns
 
-`Promise`<[`LanguagePackStringValue`](../modules/index.types.default.md#languagepackstringvalue)\>
+`Promise`\<[`LanguagePackStringValue`](../modules/index.types.default.md#languagepackstringvalue)\>
 
 Promise<[LanguagePackStringValue](../modules/index.types.default.md#languagepackstringvalue)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58889
+dist/generated/types.d.ts:66853
 
 ___
 
 ### getLanguagePackStrings
 
-▸ **getLanguagePackStrings**(`parameters`): `Promise`<[`languagePackStrings`](../modules/index.types.default.md#languagepackstrings-1)\>
+▸ **getLanguagePackStrings**(`parameters`): `Promise`\<[`languagePackStrings`](../modules/index.types.default.md#languagepackstrings-1)\>
 
 Returns strings from a language pack in the current localization target by their keys. Can be called before authorization
 
@@ -7138,19 +7973,19 @@ Returns strings from a language pack in the current localization target by their
 
 #### Returns
 
-`Promise`<[`languagePackStrings`](../modules/index.types.default.md#languagepackstrings-1)\>
+`Promise`\<[`languagePackStrings`](../modules/index.types.default.md#languagepackstrings-1)\>
 
 Promise<[LanguagePackStrings](../modules/index.types.default.md#languagepackstrings)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61485
+dist/generated/types.d.ts:69753
 
 ___
 
 ### getLocalizationTargetInfo
 
-▸ **getLocalizationTargetInfo**(`parameters`): `Promise`<[`localizationTargetInfo`](../modules/index.types.default.md#localizationtargetinfo-1)\>
+▸ **getLocalizationTargetInfo**(`parameters`): `Promise`\<[`localizationTargetInfo`](../modules/index.types.default.md#localizationtargetinfo-1)\>
 
 Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
 
@@ -7162,19 +7997,19 @@ Returns information about the current localization target. This is an offline re
 
 #### Returns
 
-`Promise`<[`localizationTargetInfo`](../modules/index.types.default.md#localizationtargetinfo-1)\>
+`Promise`\<[`localizationTargetInfo`](../modules/index.types.default.md#localizationtargetinfo-1)\>
 
 Promise<[LocalizationTargetInfo](../modules/index.types.default.md#localizationtargetinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61471
+dist/generated/types.d.ts:69739
 
 ___
 
 ### getLogStream
 
-▸ **getLogStream**(`parameters`): `Promise`<[`LogStream`](../modules/index.types.default.md#logstream)\>
+▸ **getLogStream**(`parameters`): `Promise`\<[`LogStream`](../modules/index.types.default.md#logstream)\>
 
 Returns information about currently used log stream for internal logging of TDLib. Can be called synchronously
 
@@ -7186,19 +8021,19 @@ Returns information about currently used log stream for internal logging of TDLi
 
 #### Returns
 
-`Promise`<[`LogStream`](../modules/index.types.default.md#logstream)\>
+`Promise`\<[`LogStream`](../modules/index.types.default.md#logstream)\>
 
 Promise<[LogStream](../modules/index.types.default.md#logstream)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62291
+dist/generated/types.d.ts:70608
 
 ___
 
 ### getLogTagVerbosityLevel
 
-▸ **getLogTagVerbosityLevel**(`parameters`): `Promise`<[`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1)\>
+▸ **getLogTagVerbosityLevel**(`parameters`): `Promise`\<[`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1)\>
 
 Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
 
@@ -7210,21 +8045,21 @@ Returns current verbosity level for a specified TDLib internal log tag. Can be c
 
 #### Returns
 
-`Promise`<[`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1)\>
+`Promise`\<[`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1)\>
 
 Promise<[LogVerbosityLevel](../modules/index.types.default.md#logverbositylevel)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62326
+dist/generated/types.d.ts:70643
 
 ___
 
 ### getLogTags
 
-▸ **getLogTags**(`parameters`): `Promise`<[`logTags`](../modules/index.types.default.md#logtags-1)\>
+▸ **getLogTags**(`parameters`): `Promise`\<[`logTags`](../modules/index.types.default.md#logtags-1)\>
 
-Returns list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
+Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
 
 #### Parameters
 
@@ -7234,19 +8069,19 @@ Returns list of available TDLib internal log tags, for example, ["actor", "binlo
 
 #### Returns
 
-`Promise`<[`logTags`](../modules/index.types.default.md#logtags-1)\>
+`Promise`\<[`logTags`](../modules/index.types.default.md#logtags-1)\>
 
 Promise<[LogTags](../modules/index.types.default.md#logtags)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62312
+dist/generated/types.d.ts:70629
 
 ___
 
 ### getLogVerbosityLevel
 
-▸ **getLogVerbosityLevel**(`parameters`): `Promise`<[`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1)\>
+▸ **getLogVerbosityLevel**(`parameters`): `Promise`\<[`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1)\>
 
 Returns current verbosity level of the internal logging of TDLib. Can be called synchronously
 
@@ -7258,19 +8093,19 @@ Returns current verbosity level of the internal logging of TDLib. Can be called 
 
 #### Returns
 
-`Promise`<[`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1)\>
+`Promise`\<[`logVerbosityLevel`](../modules/index.types.default.md#logverbositylevel-1)\>
 
 Promise<[LogVerbosityLevel](../modules/index.types.default.md#logverbositylevel)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62305
+dist/generated/types.d.ts:70622
 
 ___
 
 ### getLoginUrl
 
-▸ **getLoginUrl**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getLoginUrl**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns an HTTP URL which can be used to automatically authorize the user on a website after clicking an inline button of type inlineKeyboardButtonTypeLoginUrl.
 
@@ -7284,19 +8119,19 @@ Returns an HTTP URL which can be used to automatically authorize the user on a w
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58954
+dist/generated/types.d.ts:66932
 
 ___
 
 ### getLoginUrlInfo
 
-▸ **getLoginUrlInfo**(`parameters`): `Promise`<[`LoginUrlInfo`](../modules/index.types.default.md#loginurlinfo)\>
+▸ **getLoginUrlInfo**(`parameters`): `Promise`\<[`LoginUrlInfo`](../modules/index.types.default.md#loginurlinfo)\>
 
 Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
 
@@ -7308,19 +8143,19 @@ Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The
 
 #### Returns
 
-`Promise`<[`LoginUrlInfo`](../modules/index.types.default.md#loginurlinfo)\>
+`Promise`\<[`LoginUrlInfo`](../modules/index.types.default.md#loginurlinfo)\>
 
 Promise<[LoginUrlInfo](../modules/index.types.default.md#loginurlinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58945
+dist/generated/types.d.ts:66923
 
 ___
 
 ### getMapThumbnailFile
 
-▸ **getMapThumbnailFile**(`parameters`): `Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+▸ **getMapThumbnailFile**(`parameters`): `Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Returns information about a file with a map thumbnail in PNG format. Only map thumbnail files with size less than 1MB can be downloaded
 
@@ -7332,19 +8167,19 @@ Returns information about a file with a map thumbnail in PNG format. Only map th
 
 #### Returns
 
-`Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+`Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62025
+dist/generated/types.d.ts:70321
 
 ___
 
 ### getMarkdownText
 
-▸ **getMarkdownText**(`parameters`): `Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+▸ **getMarkdownText**(`parameters`): `Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Replaces text entities with Markdown formatting in a human-friendly format. Entities that can't be represented in Markdown unambiguously are kept as is. Can be called synchronously
 
@@ -7356,19 +8191,19 @@ Replaces text entities with Markdown formatting in a human-friendly format. Enti
 
 #### Returns
 
-`Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+`Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58861
+dist/generated/types.d.ts:66818
 
 ___
 
 ### getMe
 
-▸ **getMe**(`parameters`): `Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+▸ **getMe**(`parameters`): `Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Returns the current user
 
@@ -7380,19 +8215,19 @@ Returns the current user
 
 #### Returns
 
-`Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+`Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58012
+dist/generated/types.d.ts:65678
 
 ___
 
 ### getMenuButton
 
-▸ **getMenuButton**(`parameters`): `Promise`<[`botMenuButton`](../modules/index.types.default.md#botmenubutton-1)\>
+▸ **getMenuButton**(`parameters`): `Promise`\<[`botMenuButton`](../modules/index.types.default.md#botmenubutton-1)\>
 
 Returns menu button set by the bot for the given user; for bots only
 
@@ -7404,19 +8239,19 @@ Returns menu button set by the bot for the given user; for bots only
 
 #### Returns
 
-`Promise`<[`botMenuButton`](../modules/index.types.default.md#botmenubutton-1)\>
+`Promise`\<[`botMenuButton`](../modules/index.types.default.md#botmenubutton-1)\>
 
 Promise<[BotMenuButton](../modules/index.types.default.md#botmenubutton)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61063
+dist/generated/types.d.ts:69289
 
 ___
 
 ### getMessage
 
-▸ **getMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **getMessage**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Returns information about a message
 
@@ -7428,19 +8263,19 @@ Returns information about a message
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58075
+dist/generated/types.d.ts:65741
 
 ___
 
 ### getMessageAddedReactions
 
-▸ **getMessageAddedReactions**(`parameters`): `Promise`<[`addedReactions`](../modules/index.types.default.md#addedreactions-1)\>
+▸ **getMessageAddedReactions**(`parameters`): `Promise`\<[`addedReactions`](../modules/index.types.default.md#addedreactions-1)\>
 
 Returns reactions added for a message, along with their sender
 
@@ -7452,19 +8287,19 @@ Returns reactions added for a message, along with their sender
 
 #### Returns
 
-`Promise`<[`addedReactions`](../modules/index.types.default.md#addedreactions-1)\>
+`Promise`\<[`addedReactions`](../modules/index.types.default.md#addedreactions-1)\>
 
 Promise<[AddedReactions](../modules/index.types.default.md#addedreactions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58819
+dist/generated/types.d.ts:66753
 
 ___
 
 ### getMessageAvailableReactions
 
-▸ **getMessageAvailableReactions**(`parameters`): `Promise`<[`availableReactions`](../modules/index.types.default.md#availablereactions-1)\>
+▸ **getMessageAvailableReactions**(`parameters`): `Promise`\<[`availableReactions`](../modules/index.types.default.md#availablereactions-1)\>
 
 Returns reactions, which can be added to a message. The list can change after updateActiveEmojiReactions, updateChatAvailableReactions for the chat, or updateMessageInteractionInfo for the message
 
@@ -7476,19 +8311,43 @@ Returns reactions, which can be added to a message. The list can change after up
 
 #### Returns
 
-`Promise`<[`availableReactions`](../modules/index.types.default.md#availablereactions-1)\>
+`Promise`\<[`availableReactions`](../modules/index.types.default.md#availablereactions-1)\>
 
 Promise<[AvailableReactions](../modules/index.types.default.md#availablereactions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58791
+dist/generated/types.d.ts:66718
+
+___
+
+### getMessageEffect
+
+▸ **getMessageEffect**(`parameters`): `Promise`\<[`messageEffect`](../modules/index.types.default.md#messageeffect-1)\>
+
+Returns information about a message effect. Returns a 404 error if the effect is not found
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getMessageEffect$DirectInput`](../modules/index.types.default.md#getmessageeffect$directinput) | [getMessageEffect$Input](../modules/index.types.default.md#getmessageeffect$input) |
+
+#### Returns
+
+`Promise`\<[`messageEffect`](../modules/index.types.default.md#messageeffect-1)\>
+
+Promise<[MessageEffect](../modules/index.types.default.md#messageeffect)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66781
 
 ___
 
 ### getMessageEmbeddingCode
 
-▸ **getMessageEmbeddingCode**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getMessageEmbeddingCode**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns an HTML code for embedding the message. Available only for messages in supergroups and channels with a username
 
@@ -7500,19 +8359,19 @@ Returns an HTML code for embedding the message. Available only for messages in s
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58486
+dist/generated/types.d.ts:66275
 
 ___
 
 ### getMessageFileType
 
-▸ **getMessageFileType**(`parameters`): `Promise`<[`MessageFileType`](../modules/index.types.default.md#messagefiletype)\>
+▸ **getMessageFileType**(`parameters`): `Promise`\<[`MessageFileType`](../modules/index.types.default.md#messagefiletype)\>
 
 Returns information about a file with messages exported from another application
 
@@ -7524,19 +8383,19 @@ Returns information about a file with messages exported from another application
 
 #### Returns
 
-`Promise`<[`MessageFileType`](../modules/index.types.default.md#messagefiletype)\>
+`Promise`\<[`MessageFileType`](../modules/index.types.default.md#messagefiletype)\>
 
 Promise<[MessageFileType](../modules/index.types.default.md#messagefiletype)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60131
+dist/generated/types.d.ts:68201
 
 ___
 
 ### getMessageImportConfirmationText
 
-▸ **getMessageImportConfirmationText**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getMessageImportConfirmationText**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns a confirmation text to be shown to the user before starting message import
 
@@ -7548,19 +8407,19 @@ Returns a confirmation text to be shown to the user before starting message impo
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60138
+dist/generated/types.d.ts:68208
 
 ___
 
 ### getMessageLink
 
-▸ **getMessageLink**(`parameters`): `Promise`<[`messageLink`](../modules/index.types.default.md#messagelink-1)\>
+▸ **getMessageLink**(`parameters`): `Promise`\<[`messageLink`](../modules/index.types.default.md#messagelink-1)\>
 
 Returns an HTTPS link to a message in a chat. Available only for already sent messages in supergroups and channels, or if message.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
 
@@ -7572,19 +8431,19 @@ Returns an HTTPS link to a message in a chat. Available only for already sent me
 
 #### Returns
 
-`Promise`<[`messageLink`](../modules/index.types.default.md#messagelink-1)\>
+`Promise`\<[`messageLink`](../modules/index.types.default.md#messagelink-1)\>
 
 Promise<[MessageLink](../modules/index.types.default.md#messagelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58479
+dist/generated/types.d.ts:66268
 
 ___
 
 ### getMessageLinkInfo
 
-▸ **getMessageLinkInfo**(`parameters`): `Promise`<[`messageLinkInfo`](../modules/index.types.default.md#messagelinkinfo-1)\>
+▸ **getMessageLinkInfo**(`parameters`): `Promise`\<[`messageLinkInfo`](../modules/index.types.default.md#messagelinkinfo-1)\>
 
 Returns information about a public or private message link. Can be called for any internal link of the type internalLinkTypeMessage
 
@@ -7596,19 +8455,19 @@ Returns information about a public or private message link. Can be called for an
 
 #### Returns
 
-`Promise`<[`messageLinkInfo`](../modules/index.types.default.md#messagelinkinfo-1)\>
+`Promise`\<[`messageLinkInfo`](../modules/index.types.default.md#messagelinkinfo-1)\>
 
 Promise<[MessageLinkInfo](../modules/index.types.default.md#messagelinkinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58493
+dist/generated/types.d.ts:66282
 
 ___
 
 ### getMessageLocally
 
-▸ **getMessageLocally**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **getMessageLocally**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Returns information about a message, if it is available without sending network request. This is an offline request
 
@@ -7620,21 +8479,21 @@ Returns information about a message, if it is available without sending network 
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58082
+dist/generated/types.d.ts:65748
 
 ___
 
 ### getMessagePublicForwards
 
-▸ **getMessagePublicForwards**(`parameters`): `Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+▸ **getMessagePublicForwards**(`parameters`): `Promise`\<[`publicForwards`](../modules/index.types.default.md#publicforwards-1)\>
 
-Returns forwarded copies of a channel message to different public channels. Can be used only if message.can_get_statistics == true. For optimal performance, the number of returned messages is chosen by TDLib
+Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if message.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
 
 #### Parameters
 
@@ -7644,19 +8503,43 @@ Returns forwarded copies of a channel message to different public channels. Can 
 
 #### Returns
 
-`Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+`Promise`\<[`publicForwards`](../modules/index.types.default.md#publicforwards-1)\>
 
-Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
+Promise<[PublicForwards](../modules/index.types.default.md#publicforwards)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61673
+dist/generated/types.d.ts:69997
+
+___
+
+### getMessageReadDate
+
+▸ **getMessageReadDate**(`parameters`): `Promise`\<[`MessageReadDate`](../modules/index.types.default.md#messagereaddate)\>
+
+Returns read date of a recent outgoing message in a private chat. The method can be called if message.can_get_read_date == true and the message is read
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getMessageReadDate$DirectInput`](../modules/index.types.default.md#getmessagereaddate$directinput) | [getMessageReadDate$Input](../modules/index.types.default.md#getmessagereaddate$input) |
+
+#### Returns
+
+`Promise`\<[`MessageReadDate`](../modules/index.types.default.md#messagereaddate)\>
+
+Promise<[MessageReadDate](../modules/index.types.default.md#messagereaddate)>
+
+#### Defined in
+
+dist/generated/types.d.ts:65794
 
 ___
 
 ### getMessageStatistics
 
-▸ **getMessageStatistics**(`parameters`): `Promise`<[`messageStatistics`](../modules/index.types.default.md#messagestatistics-1)\>
+▸ **getMessageStatistics**(`parameters`): `Promise`\<[`messageStatistics`](../modules/index.types.default.md#messagestatistics-1)\>
 
 Returns detailed statistics about a message. Can be used only if message.can_get_statistics == true
 
@@ -7668,19 +8551,19 @@ Returns detailed statistics about a message. Can be used only if message.can_get
 
 #### Returns
 
-`Promise`<[`messageStatistics`](../modules/index.types.default.md#messagestatistics-1)\>
+`Promise`\<[`messageStatistics`](../modules/index.types.default.md#messagestatistics-1)\>
 
 Promise<[MessageStatistics](../modules/index.types.default.md#messagestatistics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61666
+dist/generated/types.d.ts:69990
 
 ___
 
 ### getMessageThread
 
-▸ **getMessageThread**(`parameters`): `Promise`<[`messageThreadInfo`](../modules/index.types.default.md#messagethreadinfo-1)\>
+▸ **getMessageThread**(`parameters`): `Promise`\<[`messageThreadInfo`](../modules/index.types.default.md#messagethreadinfo-1)\>
 
 Returns information about a message thread. Can be used only if message.can_get_message_thread == true
 
@@ -7692,19 +8575,19 @@ Returns information about a message thread. Can be used only if message.can_get_
 
 #### Returns
 
-`Promise`<[`messageThreadInfo`](../modules/index.types.default.md#messagethreadinfo-1)\>
+`Promise`\<[`messageThreadInfo`](../modules/index.types.default.md#messagethreadinfo-1)\>
 
 Promise<[MessageThreadInfo](../modules/index.types.default.md#messagethreadinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58121
+dist/generated/types.d.ts:65787
 
 ___
 
 ### getMessageThreadHistory
 
-▸ **getMessageThreadHistory**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **getMessageThreadHistory**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Returns messages in a message thread of a message. Can be used only if message.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
 
@@ -7718,19 +8601,19 @@ Returns messages in a message thread of a message. Can be used only if message.c
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58322
+dist/generated/types.d.ts:66065
 
 ___
 
 ### getMessageViewers
 
-▸ **getMessageViewers**(`parameters`): `Promise`<[`messageViewers`](../modules/index.types.default.md#messageviewers-1)\>
+▸ **getMessageViewers**(`parameters`): `Promise`\<[`messageViewers`](../modules/index.types.default.md#messageviewers-1)\>
 
 Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if message.can_get_viewers == true
 
@@ -7742,19 +8625,19 @@ Returns viewers of a recent outgoing message in a basic group or a supergroup ch
 
 #### Returns
 
-`Promise`<[`messageViewers`](../modules/index.types.default.md#messageviewers-1)\>
+`Promise`\<[`messageViewers`](../modules/index.types.default.md#messageviewers-1)\>
 
 Promise<[MessageViewers](../modules/index.types.default.md#messageviewers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58128
+dist/generated/types.d.ts:65801
 
 ___
 
 ### getMessages
 
-▸ **getMessages**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **getMessages**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Returns information about messages. If a message is not found, returns null on the corresponding position of the result
 
@@ -7766,19 +8649,19 @@ Returns information about messages. If a message is not found, returns null on t
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58114
+dist/generated/types.d.ts:65780
 
 ___
 
 ### getNetworkStatistics
 
-▸ **getNetworkStatistics**(`parameters`): `Promise`<[`networkStatistics`](../modules/index.types.default.md#networkstatistics-1)\>
+▸ **getNetworkStatistics**(`parameters`): `Promise`\<[`networkStatistics`](../modules/index.types.default.md#networkstatistics-1)\>
 
 Returns network data usage statistics. Can be called before authorization
 
@@ -7790,19 +8673,43 @@ Returns network data usage statistics. Can be called before authorization
 
 #### Returns
 
-`Promise`<[`networkStatistics`](../modules/index.types.default.md#networkstatistics-1)\>
+`Promise`\<[`networkStatistics`](../modules/index.types.default.md#networkstatistics-1)\>
 
 Promise<[NetworkStatistics](../modules/index.types.default.md#networkstatistics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61731
+dist/generated/types.d.ts:70055
+
+___
+
+### getNewChatPrivacySettings
+
+▸ **getNewChatPrivacySettings**(`parameters`): `Promise`\<[`newChatPrivacySettings`](../modules/index.types.default.md#newchatprivacysettings-1)\>
+
+Returns privacy settings for new chat creation
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getNewChatPrivacySettings$DirectInput`](../modules/index.types.default.md#getnewchatprivacysettings$directinput) | [getNewChatPrivacySettings$Input](../modules/index.types.default.md#getnewchatprivacysettings$input) |
+
+#### Returns
+
+`Promise`\<[`newChatPrivacySettings`](../modules/index.types.default.md#newchatprivacysettings-1)\>
+
+Promise<[NewChatPrivacySettings](../modules/index.types.default.md#newchatprivacysettings)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69869
 
 ___
 
 ### getOption
 
-▸ **getOption**(`parameters`): `Promise`<[`OptionValue`](../modules/index.types.default.md#optionvalue)\>
+▸ **getOption**(`parameters`): `Promise`\<[`OptionValue`](../modules/index.types.default.md#optionvalue)\>
 
 Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization. Can be called synchronously for options "version" and "commit_hash"
 
@@ -7814,19 +8721,43 @@ Returns the value of an option by its name. (Check the list of available options
 
 #### Returns
 
-`Promise`<[`OptionValue`](../modules/index.types.default.md#optionvalue)\>
+`Promise`\<[`OptionValue`](../modules/index.types.default.md#optionvalue)\>
 
 Promise<[OptionValue](../modules/index.types.default.md#optionvalue)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61580
+dist/generated/types.d.ts:69883
+
+___
+
+### getOwnedStickerSets
+
+▸ **getOwnedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+
+Returns sticker sets owned by the current user
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getOwnedStickerSets$DirectInput`](../modules/index.types.default.md#getownedstickersets$directinput) | [getOwnedStickerSets$Input](../modules/index.types.default.md#getownedstickersets$input) |
+
+#### Returns
+
+`Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+
+Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70314
 
 ___
 
 ### getPassportAuthorizationForm
 
-▸ **getPassportAuthorizationForm**(`parameters`): `Promise`<[`passportAuthorizationForm`](../modules/index.types.default.md#passportauthorizationform-1)\>
+▸ **getPassportAuthorizationForm**(`parameters`): `Promise`\<[`passportAuthorizationForm`](../modules/index.types.default.md#passportauthorizationform-1)\>
 
 Returns a Telegram Passport authorization form for sharing data with a service
 
@@ -7838,19 +8769,19 @@ Returns a Telegram Passport authorization form for sharing data with a service
 
 #### Returns
 
-`Promise`<[`passportAuthorizationForm`](../modules/index.types.default.md#passportauthorizationform-1)\>
+`Promise`\<[`passportAuthorizationForm`](../modules/index.types.default.md#passportauthorizationform-1)\>
 
 Promise<[PassportAuthorizationForm](../modules/index.types.default.md#passportauthorizationform)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61878
+dist/generated/types.d.ts:70181
 
 ___
 
 ### getPassportAuthorizationFormAvailableElements
 
-▸ **getPassportAuthorizationFormAvailableElements**(`parameters`): `Promise`<[`passportElementsWithErrors`](../modules/index.types.default.md#passportelementswitherrors-1)\>
+▸ **getPassportAuthorizationFormAvailableElements**(`parameters`): `Promise`\<[`passportElementsWithErrors`](../modules/index.types.default.md#passportelementswitherrors-1)\>
 
 Returns already available Telegram Passport elements suitable for completing a Telegram Passport authorization form. Result can be received only once for each authorization form
 
@@ -7862,19 +8793,19 @@ Returns already available Telegram Passport elements suitable for completing a T
 
 #### Returns
 
-`Promise`<[`passportElementsWithErrors`](../modules/index.types.default.md#passportelementswitherrors-1)\>
+`Promise`\<[`passportElementsWithErrors`](../modules/index.types.default.md#passportelementswitherrors-1)\>
 
 Promise<[PassportElementsWithErrors](../modules/index.types.default.md#passportelementswitherrors)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61885
+dist/generated/types.d.ts:70188
 
 ___
 
 ### getPassportElement
 
-▸ **getPassportElement**(`parameters`): `Promise`<[`PassportElement`](../modules/index.types.default.md#passportelement)\>
+▸ **getPassportElement**(`parameters`): `Promise`\<[`PassportElement`](../modules/index.types.default.md#passportelement)\>
 
 Returns one of the available Telegram Passport elements
 
@@ -7886,19 +8817,19 @@ Returns one of the available Telegram Passport elements
 
 #### Returns
 
-`Promise`<[`PassportElement`](../modules/index.types.default.md#passportelement)\>
+`Promise`\<[`PassportElement`](../modules/index.types.default.md#passportelement)\>
 
 Promise<[PassportElement](../modules/index.types.default.md#passportelement)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61794
+dist/generated/types.d.ts:70118
 
 ___
 
 ### getPasswordState
 
-▸ **getPasswordState**(`parameters`): `Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+▸ **getPasswordState**(`parameters`): `Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Returns the current state of 2-step verification
 
@@ -7910,19 +8841,19 @@ Returns the current state of 2-step verification
 
 #### Returns
 
-`Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+`Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57896
+dist/generated/types.d.ts:65555
 
 ___
 
 ### getPaymentForm
 
-▸ **getPaymentForm**(`parameters`): `Promise`<[`paymentForm`](../modules/index.types.default.md#paymentform-1)\>
+▸ **getPaymentForm**(`parameters`): `Promise`\<[`paymentForm`](../modules/index.types.default.md#paymentform-1)\>
 
 Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
 
@@ -7934,19 +8865,19 @@ Returns an invoice payment form. This method must be called when the user presse
 
 #### Returns
 
-`Promise`<[`paymentForm`](../modules/index.types.default.md#paymentform-1)\>
+`Promise`\<[`paymentForm`](../modules/index.types.default.md#paymentform-1)\>
 
 Promise<[PaymentForm](../modules/index.types.default.md#paymentform)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61366
+dist/generated/types.d.ts:69620
 
 ___
 
 ### getPaymentReceipt
 
-▸ **getPaymentReceipt**(`parameters`): `Promise`<[`paymentReceipt`](../modules/index.types.default.md#paymentreceipt-1)\>
+▸ **getPaymentReceipt**(`parameters`): `Promise`\<[`paymentReceipt`](../modules/index.types.default.md#paymentreceipt-1)\>
 
 Returns information about a successful payment
 
@@ -7958,19 +8889,19 @@ Returns information about a successful payment
 
 #### Returns
 
-`Promise`<[`paymentReceipt`](../modules/index.types.default.md#paymentreceipt-1)\>
+`Promise`\<[`paymentReceipt`](../modules/index.types.default.md#paymentreceipt-1)\>
 
 Promise<[PaymentReceipt](../modules/index.types.default.md#paymentreceipt)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61387
+dist/generated/types.d.ts:69641
 
 ___
 
 ### getPhoneNumberInfo
 
-▸ **getPhoneNumberInfo**(`parameters`): `Promise`<[`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1)\>
+▸ **getPhoneNumberInfo**(`parameters`): `Promise`\<[`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1)\>
 
 Returns information about a phone number by its prefix. Can be called before authorization
 
@@ -7982,19 +8913,19 @@ Returns information about a phone number by its prefix. Can be called before aut
 
 #### Returns
 
-`Promise`<[`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1)\>
+`Promise`\<[`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1)\>
 
 Promise<[PhoneNumberInfo](../modules/index.types.default.md#phonenumberinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62179
+dist/generated/types.d.ts:70496
 
 ___
 
 ### getPhoneNumberInfoSync
 
-▸ **getPhoneNumberInfoSync**(`parameters`): `Promise`<[`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1)\>
+▸ **getPhoneNumberInfoSync**(`parameters`): `Promise`\<[`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1)\>
 
 Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
 
@@ -8006,19 +8937,19 @@ Returns information about a phone number by its prefix synchronously. getCountri
 
 #### Returns
 
-`Promise`<[`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1)\>
+`Promise`\<[`phoneNumberInfo`](../modules/index.types.default.md#phonenumberinfo-1)\>
 
 Promise<[PhoneNumberInfo](../modules/index.types.default.md#phonenumberinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62186
+dist/generated/types.d.ts:70503
 
 ___
 
 ### getPollVoters
 
-▸ **getPollVoters**(`parameters`): `Promise`<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
+▸ **getPollVoters**(`parameters`): `Promise`\<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
 
 Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
 
@@ -8030,19 +8961,19 @@ Returns message senders voted for the specified option in a non-anonymous polls.
 
 #### Returns
 
-`Promise`<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
+`Promise`\<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
 
 Promise<[MessageSenders](../modules/index.types.default.md#messagesenders)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58924
+dist/generated/types.d.ts:66888
 
 ___
 
 ### getPreferredCountryLanguage
 
-▸ **getPreferredCountryLanguage**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getPreferredCountryLanguage**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details. Returns a 404 error if unknown
 
@@ -8054,19 +8985,19 @@ Returns an IETF language tag of the language preferred in the country, which mus
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61829
+dist/generated/types.d.ts:70153
 
 ___
 
 ### getPremiumFeatures
 
-▸ **getPremiumFeatures**(`parameters`): `Promise`<[`premiumFeatures`](../modules/index.types.default.md#premiumfeatures-1)\>
+▸ **getPremiumFeatures**(`parameters`): `Promise`\<[`premiumFeatures`](../modules/index.types.default.md#premiumfeatures-1)\>
 
 Returns information about features, available to Premium users
 
@@ -8078,19 +9009,19 @@ Returns information about features, available to Premium users
 
 #### Returns
 
-`Promise`<[`premiumFeatures`](../modules/index.types.default.md#premiumfeatures-1)\>
+`Promise`\<[`premiumFeatures`](../modules/index.types.default.md#premiumfeatures-1)\>
 
 Promise<[PremiumFeatures](../modules/index.types.default.md#premiumfeatures)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62039
+dist/generated/types.d.ts:70335
 
 ___
 
 ### getPremiumGiftCodePaymentOptions
 
-▸ **getPremiumGiftCodePaymentOptions**(`parameters`): `Promise`<[`premiumGiftCodePaymentOptions`](../modules/index.types.default.md#premiumgiftcodepaymentoptions-1)\>
+▸ **getPremiumGiftCodePaymentOptions**(`parameters`): `Promise`\<[`premiumGiftCodePaymentOptions`](../modules/index.types.default.md#premiumgiftcodepaymentoptions-1)\>
 
 Returns available options for Telegram Premium gift code or giveaway creation
 
@@ -8102,19 +9033,19 @@ Returns available options for Telegram Premium gift code or giveaway creation
 
 #### Returns
 
-`Promise`<[`premiumGiftCodePaymentOptions`](../modules/index.types.default.md#premiumgiftcodepaymentoptions-1)\>
+`Promise`\<[`premiumGiftCodePaymentOptions`](../modules/index.types.default.md#premiumgiftcodepaymentoptions-1)\>
 
 Promise<[PremiumGiftCodePaymentOptions](../modules/index.types.default.md#premiumgiftcodepaymentoptions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62074
+dist/generated/types.d.ts:70370
 
 ___
 
 ### getPremiumGiveawayInfo
 
-▸ **getPremiumGiveawayInfo**(`parameters`): `Promise`<[`PremiumGiveawayInfo`](../modules/index.types.default.md#premiumgiveawayinfo)\>
+▸ **getPremiumGiveawayInfo**(`parameters`): `Promise`\<[`PremiumGiveawayInfo`](../modules/index.types.default.md#premiumgiveawayinfo)\>
 
 Returns information about a Telegram Premium giveaway
 
@@ -8126,19 +9057,19 @@ Returns information about a Telegram Premium giveaway
 
 #### Returns
 
-`Promise`<[`PremiumGiveawayInfo`](../modules/index.types.default.md#premiumgiveawayinfo)\>
+`Promise`\<[`PremiumGiveawayInfo`](../modules/index.types.default.md#premiumgiveawayinfo)\>
 
 Promise<[PremiumGiveawayInfo](../modules/index.types.default.md#premiumgiveawayinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62102
+dist/generated/types.d.ts:70398
 
 ___
 
 ### getPremiumLimit
 
-▸ **getPremiumLimit**(`parameters`): `Promise`<[`premiumLimit`](../modules/index.types.default.md#premiumlimit-1)\>
+▸ **getPremiumLimit**(`parameters`): `Promise`\<[`premiumLimit`](../modules/index.types.default.md#premiumlimit-1)\>
 
 Returns information about a limit, increased for Premium users. Returns a 404 error if the limit is unknown
 
@@ -8150,19 +9081,19 @@ Returns information about a limit, increased for Premium users. Returns a 404 er
 
 #### Returns
 
-`Promise`<[`premiumLimit`](../modules/index.types.default.md#premiumlimit-1)\>
+`Promise`\<[`premiumLimit`](../modules/index.types.default.md#premiumlimit-1)\>
 
 Promise<[PremiumLimit](../modules/index.types.default.md#premiumlimit)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62032
+dist/generated/types.d.ts:70328
 
 ___
 
 ### getPremiumState
 
-▸ **getPremiumState**(`parameters`): `Promise`<[`premiumState`](../modules/index.types.default.md#premiumstate-1)\>
+▸ **getPremiumState**(`parameters`): `Promise`\<[`premiumState`](../modules/index.types.default.md#premiumstate-1)\>
 
 Returns state of Telegram Premium subscription and promotion videos for Premium features
 
@@ -8174,19 +9105,19 @@ Returns state of Telegram Premium subscription and promotion videos for Premium 
 
 #### Returns
 
-`Promise`<[`premiumState`](../modules/index.types.default.md#premiumstate-1)\>
+`Promise`\<[`premiumState`](../modules/index.types.default.md#premiumstate-1)\>
 
 Promise<[PremiumState](../modules/index.types.default.md#premiumstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62067
+dist/generated/types.d.ts:70363
 
 ___
 
 ### getPremiumStickerExamples
 
-▸ **getPremiumStickerExamples**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getPremiumStickerExamples**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns examples of premium stickers for demonstration purposes
 
@@ -8198,19 +9129,19 @@ Returns examples of premium stickers for demonstration purposes
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62046
+dist/generated/types.d.ts:70342
 
 ___
 
 ### getPremiumStickers
 
-▸ **getPremiumStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getPremiumStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns premium stickers from regular sticker sets
 
@@ -8222,21 +9153,21 @@ Returns premium stickers from regular sticker sets
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60667
+dist/generated/types.d.ts:68744
 
 ___
 
 ### getProxies
 
-▸ **getProxies**(`parameters`): `Promise`<[`proxies`](../modules/index.types.default.md#proxies-1)\>
+▸ **getProxies**(`parameters`): `Promise`\<[`proxies`](../modules/index.types.default.md#proxies-1)\>
 
-Returns list of proxies that are currently set up. Can be called before authorization
+Returns the list of proxies that are currently set up. Can be called before authorization
 
 #### Parameters
 
@@ -8246,19 +9177,19 @@ Returns list of proxies that are currently set up. Can be called before authoriz
 
 #### Returns
 
-`Promise`<[`proxies`](../modules/index.types.default.md#proxies-1)\>
+`Promise`\<[`proxies`](../modules/index.types.default.md#proxies-1)\>
 
 Promise<[Proxies](../modules/index.types.default.md#proxies)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62263
+dist/generated/types.d.ts:70580
 
 ___
 
 ### getProxyLink
 
-▸ **getProxyLink**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getProxyLink**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns an HTTPS link, which can be used to add a proxy. Available only for SOCKS5 and MTProto proxies. Can be called before authorization
 
@@ -8270,19 +9201,19 @@ Returns an HTTPS link, which can be used to add a proxy. Available only for SOCK
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62270
+dist/generated/types.d.ts:70587
 
 ___
 
 ### getPushReceiverId
 
-▸ **getPushReceiverId**(`parameters`): `Promise`<[`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1)\>
+▸ **getPushReceiverId**(`parameters`): `Promise`\<[`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1)\>
 
 Returns a globally unique push notification subscription identifier for identification of an account, which has received a push notification. Can be called synchronously
 
@@ -8294,21 +9225,45 @@ Returns a globally unique push notification subscription identifier for identifi
 
 #### Returns
 
-`Promise`<[`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1)\>
+`Promise`\<[`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1)\>
 
 Promise<[PushReceiverId](../modules/index.types.default.md#pushreceiverid)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61552
+dist/generated/types.d.ts:69820
+
+___
+
+### getReadDatePrivacySettings
+
+▸ **getReadDatePrivacySettings**(`parameters`): `Promise`\<[`readDatePrivacySettings`](../modules/index.types.default.md#readdateprivacysettings-1)\>
+
+Returns privacy settings for message read date
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getReadDatePrivacySettings$DirectInput`](../modules/index.types.default.md#getreaddateprivacysettings$directinput) | [getReadDatePrivacySettings$Input](../modules/index.types.default.md#getreaddateprivacysettings$input) |
+
+#### Returns
+
+`Promise`\<[`readDatePrivacySettings`](../modules/index.types.default.md#readdateprivacysettings-1)\>
+
+Promise<[ReadDatePrivacySettings](../modules/index.types.default.md#readdateprivacysettings)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69855
 
 ___
 
 ### getRecentEmojiStatuses
 
-▸ **getRecentEmojiStatuses**(`parameters`): `Promise`<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+▸ **getRecentEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
 
-Returns recent emoji statuses
+Returns recent emoji statuses for self status
 
 #### Parameters
 
@@ -8318,19 +9273,19 @@ Returns recent emoji statuses
 
 #### Returns
 
-`Promise`<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+`Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
 
 Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59987
+dist/generated/types.d.ts:68027
 
 ___
 
 ### getRecentInlineBots
 
-▸ **getRecentInlineBots**(`parameters`): `Promise`<[`users`](../modules/index.types.default.md#users-1)\>
+▸ **getRecentInlineBots**(`parameters`): `Promise`\<[`users`](../modules/index.types.default.md#users-1)\>
 
 Returns up to 20 recently used inline bots in the order of their last usage
 
@@ -8342,19 +9297,19 @@ Returns up to 20 recently used inline bots in the order of their last usage
 
 #### Returns
 
-`Promise`<[`users`](../modules/index.types.default.md#users-1)\>
+`Promise`\<[`users`](../modules/index.types.default.md#users-1)\>
 
 Promise<[Users](../modules/index.types.default.md#users)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60888
+dist/generated/types.d.ts:68974
 
 ___
 
 ### getRecentStickers
 
-▸ **getRecentStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getRecentStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns a list of recently used stickers
 
@@ -8366,19 +9321,19 @@ Returns a list of recently used stickers
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60751
+dist/generated/types.d.ts:68828
 
 ___
 
 ### getRecentlyOpenedChats
 
-▸ **getRecentlyOpenedChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getRecentlyOpenedChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
 
@@ -8390,19 +9345,19 @@ Returns recently opened chats; this is an offline request. Returns chats in the 
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58260
+dist/generated/types.d.ts:65947
 
 ___
 
 ### getRecentlyVisitedTMeUrls
 
-▸ **getRecentlyVisitedTMeUrls**(`parameters`): `Promise`<[`tMeUrls`](../modules/index.types.default.md#tmeurls-1)\>
+▸ **getRecentlyVisitedTMeUrls**(`parameters`): `Promise`\<[`tMeUrls`](../modules/index.types.default.md#tmeurls-1)\>
 
 Returns t.me URLs recently visited by a newly registered user
 
@@ -8414,19 +9369,19 @@ Returns t.me URLs recently visited by a newly registered user
 
 #### Returns
 
-`Promise`<[`tMeUrls`](../modules/index.types.default.md#tmeurls-1)\>
+`Promise`\<[`tMeUrls`](../modules/index.types.default.md#tmeurls-1)\>
 
 Promise<[TMeUrls](../modules/index.types.default.md#tmeurls)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61559
+dist/generated/types.d.ts:69827
 
 ___
 
 ### getRecommendedChatFolders
 
-▸ **getRecommendedChatFolders**(`parameters`): `Promise`<[`recommendedChatFolders`](../modules/index.types.default.md#recommendedchatfolders-1)\>
+▸ **getRecommendedChatFolders**(`parameters`): `Promise`\<[`recommendedChatFolders`](../modules/index.types.default.md#recommendedchatfolders-1)\>
 
 Returns recommended chat folders for the current user
 
@@ -8438,19 +9393,43 @@ Returns recommended chat folders for the current user
 
 #### Returns
 
-`Promise`<[`recommendedChatFolders`](../modules/index.types.default.md#recommendedchatfolders-1)\>
+`Promise`\<[`recommendedChatFolders`](../modules/index.types.default.md#recommendedchatfolders-1)\>
 
 Promise<[RecommendedChatFolders](../modules/index.types.default.md#recommendedchatfolders)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59324
+dist/generated/types.d.ts:67309
+
+___
+
+### getRecommendedChats
+
+▸ **getRecommendedChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
+
+Returns a list of channel chats recommended to the current user
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getRecommendedChats$DirectInput`](../modules/index.types.default.md#getrecommendedchats$directinput) | [getRecommendedChats$Input](../modules/index.types.default.md#getrecommendedchats$input) |
+
+#### Returns
+
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
+
+Promise<[Chats](../modules/index.types.default.md#chats)>
+
+#### Defined in
+
+dist/generated/types.d.ts:65877
 
 ___
 
 ### getRecoveryEmailAddress
 
-▸ **getRecoveryEmailAddress**(`parameters`): `Promise`<[`recoveryEmailAddress`](../modules/index.types.default.md#recoveryemailaddress-1)\>
+▸ **getRecoveryEmailAddress**(`parameters`): `Promise`\<[`recoveryEmailAddress`](../modules/index.types.default.md#recoveryemailaddress-1)\>
 
 Returns a 2-step verification recovery email address that was previously set up. This method can be used to verify a password provided by the user
 
@@ -8462,19 +9441,19 @@ Returns a 2-step verification recovery email address that was previously set up.
 
 #### Returns
 
-`Promise`<[`recoveryEmailAddress`](../modules/index.types.default.md#recoveryemailaddress-1)\>
+`Promise`\<[`recoveryEmailAddress`](../modules/index.types.default.md#recoveryemailaddress-1)\>
 
 Promise<[RecoveryEmailAddress](../modules/index.types.default.md#recoveryemailaddress)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57933
+dist/generated/types.d.ts:65592
 
 ___
 
 ### getRemoteFile
 
-▸ **getRemoteFile**(`parameters`): `Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+▸ **getRemoteFile**(`parameters`): `Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
 
@@ -8488,19 +9467,19 @@ Returns information about a file by its remote identifier; this is an offline re
 
 #### Returns
 
-`Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+`Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58144
+dist/generated/types.d.ts:65817
 
 ___
 
 ### getRepliedMessage
 
-▸ **getRepliedMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **getRepliedMessage**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Returns information about a non-bundled message that is replied by a given message. Also, returns the pinned message, the game message, the invoice message,
 
@@ -8516,19 +9495,19 @@ Returns information about a non-bundled message that is replied by a given messa
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58093
+dist/generated/types.d.ts:65759
 
 ___
 
 ### getSavedAnimations
 
-▸ **getSavedAnimations**(`parameters`): `Promise`<[`animations`](../modules/index.types.default.md#animations-1)\>
+▸ **getSavedAnimations**(`parameters`): `Promise`\<[`animations`](../modules/index.types.default.md#animations-1)\>
 
 Returns saved animations
 
@@ -8540,19 +9519,91 @@ Returns saved animations
 
 #### Returns
 
-`Promise`<[`animations`](../modules/index.types.default.md#animations-1)\>
+`Promise`\<[`animations`](../modules/index.types.default.md#animations-1)\>
 
 Promise<[Animations](../modules/index.types.default.md#animations)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60867
+dist/generated/types.d.ts:68951
+
+___
+
+### getSavedMessagesTags
+
+▸ **getSavedMessagesTags**(`parameters`): `Promise`\<[`savedMessagesTags`](../modules/index.types.default.md#savedmessagestags-1)\>
+
+Returns tags used in Saved Messages or a Saved Messages topic
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getSavedMessagesTags$DirectInput`](../modules/index.types.default.md#getsavedmessagestags$directinput) | [getSavedMessagesTags$Input](../modules/index.types.default.md#getsavedmessagestags$input) |
+
+#### Returns
+
+`Promise`\<[`savedMessagesTags`](../modules/index.types.default.md#savedmessagestags-1)\>
+
+Promise<[SavedMessagesTags](../modules/index.types.default.md#savedmessagestags)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66767
+
+___
+
+### getSavedMessagesTopicHistory
+
+▸ **getSavedMessagesTopicHistory**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
+
+Returns messages in a Saved Messages topic. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getSavedMessagesTopicHistory$DirectInput`](../modules/index.types.default.md#getsavedmessagestopichistory$directinput) | [getSavedMessagesTopicHistory$Input](../modules/index.types.default.md#getsavedmessagestopichistory$input) |
+
+#### Returns
+
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
+
+Promise<[Messages](../modules/index.types.default.md#messages)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66005
+
+___
+
+### getSavedMessagesTopicMessageByDate
+
+▸ **getSavedMessagesTopicMessageByDate**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
+
+Returns the last message sent in a Saved Messages topic no later than the specified date
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getSavedMessagesTopicMessageByDate$DirectInput`](../modules/index.types.default.md#getsavedmessagestopicmessagebydate$directinput) | [getSavedMessagesTopicMessageByDate$Input](../modules/index.types.default.md#getsavedmessagestopicmessagebydate$input) |
+
+#### Returns
+
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
+
+Promise<[Message](../modules/index.types.default.md#message)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66012
 
 ___
 
 ### getSavedNotificationSound
 
-▸ **getSavedNotificationSound**(`parameters`): `Promise`<[`notificationSounds`](../modules/index.types.default.md#notificationsounds-1)\>
+▸ **getSavedNotificationSound**(`parameters`): `Promise`\<[`notificationSounds`](../modules/index.types.default.md#notificationsounds-1)\>
 
 Returns saved notification sound by its identifier. Returns a 404 error if there is no saved notification sound with the specified identifier
 
@@ -8564,21 +9615,21 @@ Returns saved notification sound by its identifier. Returns a 404 error if there
 
 #### Returns
 
-`Promise`<[`notificationSounds`](../modules/index.types.default.md#notificationsounds-1)\>
+`Promise`\<[`notificationSounds`](../modules/index.types.default.md#notificationsounds-1)\>
 
 Promise<[NotificationSounds](../modules/index.types.default.md#notificationsounds)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59676
+dist/generated/types.d.ts:67681
 
 ___
 
 ### getSavedNotificationSounds
 
-▸ **getSavedNotificationSounds**(`parameters`): `Promise`<[`notificationSounds`](../modules/index.types.default.md#notificationsounds-1)\>
+▸ **getSavedNotificationSounds**(`parameters`): `Promise`\<[`notificationSounds`](../modules/index.types.default.md#notificationsounds-1)\>
 
-Returns list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
+Returns the list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
 
 #### Parameters
 
@@ -8588,19 +9639,19 @@ Returns list of saved notification sounds. If a sound isn't in the list, then de
 
 #### Returns
 
-`Promise`<[`notificationSounds`](../modules/index.types.default.md#notificationsounds-1)\>
+`Promise`\<[`notificationSounds`](../modules/index.types.default.md#notificationsounds-1)\>
 
 Promise<[NotificationSounds](../modules/index.types.default.md#notificationsounds)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59683
+dist/generated/types.d.ts:67688
 
 ___
 
 ### getSavedOrderInfo
 
-▸ **getSavedOrderInfo**(`parameters`): `Promise`<[`orderInfo`](../modules/index.types.default.md#orderinfo-1)\>
+▸ **getSavedOrderInfo**(`parameters`): `Promise`\<[`orderInfo`](../modules/index.types.default.md#orderinfo-1)\>
 
 Returns saved order information. Returns a 404 error if there is no saved order information
 
@@ -8612,19 +9663,19 @@ Returns saved order information. Returns a 404 error if there is no saved order 
 
 #### Returns
 
-`Promise`<[`orderInfo`](../modules/index.types.default.md#orderinfo-1)\>
+`Promise`\<[`orderInfo`](../modules/index.types.default.md#orderinfo-1)\>
 
 Promise<[OrderInfo](../modules/index.types.default.md#orderinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61394
+dist/generated/types.d.ts:69648
 
 ___
 
 ### getScopeNotificationSettings
 
-▸ **getScopeNotificationSettings**(`parameters`): `Promise`<[`scopeNotificationSettings`](../modules/index.types.default.md#scopenotificationsettings-1)\>
+▸ **getScopeNotificationSettings**(`parameters`): `Promise`\<[`scopeNotificationSettings`](../modules/index.types.default.md#scopenotificationsettings-1)\>
 
 Returns the notification settings for chats of a given type
 
@@ -8636,19 +9687,43 @@ Returns the notification settings for chats of a given type
 
 #### Returns
 
-`Promise`<[`scopeNotificationSettings`](../modules/index.types.default.md#scopenotificationsettings-1)\>
+`Promise`\<[`scopeNotificationSettings`](../modules/index.types.default.md#scopenotificationsettings-1)\>
 
 Promise<[ScopeNotificationSettings](../modules/index.types.default.md#scopenotificationsettings)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59711
+dist/generated/types.d.ts:67716
+
+___
+
+### getSearchedForHashtags
+
+▸ **getSearchedForHashtags**(`parameters`): `Promise`\<[`hashtags`](../modules/index.types.default.md#hashtags-1)\>
+
+Returns recently searched for hashtags or cashtags by their prefix
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getSearchedForHashtags$DirectInput`](../modules/index.types.default.md#getsearchedforhashtags$directinput) | [getSearchedForHashtags$Input](../modules/index.types.default.md#getsearchedforhashtags$input) |
+
+#### Returns
+
+`Promise`\<[`hashtags`](../modules/index.types.default.md#hashtags-1)\>
+
+Promise<[Hashtags](../modules/index.types.default.md#hashtags)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66147
 
 ___
 
 ### getSecretChat
 
-▸ **getSecretChat**(`parameters`): `Promise`<[`secretChat`](../modules/index.types.default.md#secretchat-1)\>
+▸ **getSecretChat**(`parameters`): `Promise`\<[`secretChat`](../modules/index.types.default.md#secretchat-1)\>
 
 Returns information about a secret chat by its identifier. This is an offline request
 
@@ -8660,19 +9735,67 @@ Returns information about a secret chat by its identifier. This is an offline re
 
 #### Returns
 
-`Promise`<[`secretChat`](../modules/index.types.default.md#secretchat-1)\>
+`Promise`\<[`secretChat`](../modules/index.types.default.md#secretchat-1)\>
 
 Promise<[SecretChat](../modules/index.types.default.md#secretchat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58061
+dist/generated/types.d.ts:65727
+
+___
+
+### getStarPaymentOptions
+
+▸ **getStarPaymentOptions**(`parameters`): `Promise`\<[`starPaymentOptions`](../modules/index.types.default.md#starpaymentoptions-1)\>
+
+Returns available options for Telegram stars purchase
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getStarPaymentOptions$DirectInput`](../modules/index.types.default.md#getstarpaymentoptions$directinput) | [getStarPaymentOptions$Input](../modules/index.types.default.md#getstarpaymentoptions$input) |
+
+#### Returns
+
+`Promise`\<[`starPaymentOptions`](../modules/index.types.default.md#starpaymentoptions-1)\>
+
+Promise<[StarPaymentOptions](../modules/index.types.default.md#starpaymentoptions)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70405
+
+___
+
+### getStarTransactions
+
+▸ **getStarTransactions**(`parameters`): `Promise`\<[`starTransactions`](../modules/index.types.default.md#startransactions-1)\>
+
+Returns the list of Telegram star transactions for the current user
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getStarTransactions$DirectInput`](../modules/index.types.default.md#getstartransactions$directinput) | [getStarTransactions$Input](../modules/index.types.default.md#getstartransactions$input) |
+
+#### Returns
+
+`Promise`\<[`starTransactions`](../modules/index.types.default.md#startransactions-1)\>
+
+Promise<[StarTransactions](../modules/index.types.default.md#startransactions)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70412
 
 ___
 
 ### getStatisticalGraph
 
-▸ **getStatisticalGraph**(`parameters`): `Promise`<[`StatisticalGraph`](../modules/index.types.default.md#statisticalgraph)\>
+▸ **getStatisticalGraph**(`parameters`): `Promise`\<[`StatisticalGraph`](../modules/index.types.default.md#statisticalgraph)\>
 
 Loads an asynchronous or a zoomed in statistical graph
 
@@ -8684,19 +9807,19 @@ Loads an asynchronous or a zoomed in statistical graph
 
 #### Returns
 
-`Promise`<[`StatisticalGraph`](../modules/index.types.default.md#statisticalgraph)\>
+`Promise`\<[`StatisticalGraph`](../modules/index.types.default.md#statisticalgraph)\>
 
 Promise<[StatisticalGraph](../modules/index.types.default.md#statisticalgraph)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61687
+dist/generated/types.d.ts:70011
 
 ___
 
 ### getStickerEmojis
 
-▸ **getStickerEmojis**(`parameters`): `Promise`<[`emojis`](../modules/index.types.default.md#emojis-1)\>
+▸ **getStickerEmojis**(`parameters`): `Promise`\<[`emojis`](../modules/index.types.default.md#emojis-1)\>
 
 Returns emoji corresponding to a sticker. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
 
@@ -8708,19 +9831,19 @@ Returns emoji corresponding to a sticker. The list is only for informational pur
 
 #### Returns
 
-`Promise`<[`emojis`](../modules/index.types.default.md#emojis-1)\>
+`Promise`\<[`emojis`](../modules/index.types.default.md#emojis-1)\>
 
 Promise<[Emojis](../modules/index.types.default.md#emojis)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60804
+dist/generated/types.d.ts:68881
 
 ___
 
 ### getStickerSet
 
-▸ **getStickerSet**(`parameters`): `Promise`<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
+▸ **getStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
 
 Returns information about a sticker set by its identifier
 
@@ -8732,19 +9855,19 @@ Returns information about a sticker set by its identifier
 
 #### Returns
 
-`Promise`<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
+`Promise`\<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
 
 Promise<[StickerSet](../modules/index.types.default.md#stickerset)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60702
+dist/generated/types.d.ts:68779
 
 ___
 
 ### getStickers
 
-▸ **getStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **getStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Returns stickers from the installed sticker sets that correspond to any of the given emoji or can be found by sticker-specific keywords. If the query is non-empty, then favorite, recently used or trending stickers may also be returned
 
@@ -8756,19 +9879,19 @@ Returns stickers from the installed sticker sets that correspond to any of the g
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60646
+dist/generated/types.d.ts:68716
 
 ___
 
 ### getStorageStatistics
 
-▸ **getStorageStatistics**(`parameters`): `Promise`<[`storageStatistics`](../modules/index.types.default.md#storagestatistics-1)\>
+▸ **getStorageStatistics**(`parameters`): `Promise`\<[`storageStatistics`](../modules/index.types.default.md#storagestatistics-1)\>
 
 Returns storage usage statistics. Can be called before authorization
 
@@ -8780,19 +9903,19 @@ Returns storage usage statistics. Can be called before authorization
 
 #### Returns
 
-`Promise`<[`storageStatistics`](../modules/index.types.default.md#storagestatistics-1)\>
+`Promise`\<[`storageStatistics`](../modules/index.types.default.md#storagestatistics-1)\>
 
 Promise<[StorageStatistics](../modules/index.types.default.md#storagestatistics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61694
+dist/generated/types.d.ts:70018
 
 ___
 
 ### getStorageStatisticsFast
 
-▸ **getStorageStatisticsFast**(`parameters`): `Promise`<[`storageStatisticsFast`](../modules/index.types.default.md#storagestatisticsfast-1)\>
+▸ **getStorageStatisticsFast**(`parameters`): `Promise`\<[`storageStatisticsFast`](../modules/index.types.default.md#storagestatisticsfast-1)\>
 
 Quickly returns approximate storage usage statistics. Can be called before authorization
 
@@ -8804,19 +9927,19 @@ Quickly returns approximate storage usage statistics. Can be called before autho
 
 #### Returns
 
-`Promise`<[`storageStatisticsFast`](../modules/index.types.default.md#storagestatisticsfast-1)\>
+`Promise`\<[`storageStatisticsFast`](../modules/index.types.default.md#storagestatisticsfast-1)\>
 
 Promise<[StorageStatisticsFast](../modules/index.types.default.md#storagestatisticsfast)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61701
+dist/generated/types.d.ts:70025
 
 ___
 
 ### getStory
 
-▸ **getStory**(`parameters`): `Promise`<[`story`](../modules/index.types.default.md#story-1)\>
+▸ **getStory**(`parameters`): `Promise`\<[`story`](../modules/index.types.default.md#story-1)\>
 
 Returns a story
 
@@ -8828,19 +9951,19 @@ Returns a story
 
 #### Returns
 
-`Promise`<[`story`](../modules/index.types.default.md#story-1)\>
+`Promise`\<[`story`](../modules/index.types.default.md#story-1)\>
 
 Promise<[Story](../modules/index.types.default.md#story)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59753
+dist/generated/types.d.ts:67765
 
 ___
 
 ### getStoryAvailableReactions
 
-▸ **getStoryAvailableReactions**(`parameters`): `Promise`<[`availableReactions`](../modules/index.types.default.md#availablereactions-1)\>
+▸ **getStoryAvailableReactions**(`parameters`): `Promise`\<[`availableReactions`](../modules/index.types.default.md#availablereactions-1)\>
 
 Returns reactions, which can be chosen for a story
 
@@ -8852,21 +9975,45 @@ Returns reactions, which can be chosen for a story
 
 #### Returns
 
-`Promise`<[`availableReactions`](../modules/index.types.default.md#availablereactions-1)\>
+`Promise`\<[`availableReactions`](../modules/index.types.default.md#availablereactions-1)\>
 
 Promise<[AvailableReactions](../modules/index.types.default.md#availablereactions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59871
+dist/generated/types.d.ts:67890
+
+___
+
+### getStoryInteractions
+
+▸ **getStoryInteractions**(`parameters`): `Promise`\<[`storyInteractions`](../modules/index.types.default.md#storyinteractions-1)\>
+
+Returns interactions with a story. The method can be called only for stories posted on behalf of the current user
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getStoryInteractions$DirectInput`](../modules/index.types.default.md#getstoryinteractions$directinput) | [getStoryInteractions$Input](../modules/index.types.default.md#getstoryinteractions$input) |
+
+#### Returns
+
+`Promise`\<[`storyInteractions`](../modules/index.types.default.md#storyinteractions-1)\>
+
+Promise<[StoryInteractions](../modules/index.types.default.md#storyinteractions)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67904
 
 ___
 
 ### getStoryNotificationSettingsExceptions
 
-▸ **getStoryNotificationSettingsExceptions**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getStoryNotificationSettingsExceptions**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
-Returns list of chats with non-default notification settings for stories
+Returns the list of chats with non-default notification settings for stories
 
 #### Parameters
 
@@ -8876,19 +10023,19 @@ Returns list of chats with non-default notification settings for stories
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59809
+dist/generated/types.d.ts:67821
 
 ___
 
 ### getStoryPublicForwards
 
-▸ **getStoryPublicForwards**(`parameters`): `Promise`<[`storyPublicForwards`](../modules/index.types.default.md#storypublicforwards-1)\>
+▸ **getStoryPublicForwards**(`parameters`): `Promise`\<[`publicForwards`](../modules/index.types.default.md#publicforwards-1)\>
 
 Returns forwards of a story as a message to public chats and reposts by public channels. Can be used only if the story is posted on behalf of the current user or story.can_get_statistics == true.
 
@@ -8902,19 +10049,19 @@ Returns forwards of a story as a message to public chats and reposts by public c
 
 #### Returns
 
-`Promise`<[`storyPublicForwards`](../modules/index.types.default.md#storypublicforwards-1)\>
+`Promise`\<[`publicForwards`](../modules/index.types.default.md#publicforwards-1)\>
 
-Promise<[StoryPublicForwards](../modules/index.types.default.md#storypublicforwards)>
+Promise<[PublicForwards](../modules/index.types.default.md#publicforwards)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59910
+dist/generated/types.d.ts:67936
 
 ___
 
 ### getStoryStatistics
 
-▸ **getStoryStatistics**(`parameters`): `Promise`<[`storyStatistics`](../modules/index.types.default.md#storystatistics-1)\>
+▸ **getStoryStatistics**(`parameters`): `Promise`\<[`storyStatistics`](../modules/index.types.default.md#storystatistics-1)\>
 
 Returns detailed statistics about a story. Can be used only if story.can_get_statistics == true
 
@@ -8926,43 +10073,19 @@ Returns detailed statistics about a story. Can be used only if story.can_get_sta
 
 #### Returns
 
-`Promise`<[`storyStatistics`](../modules/index.types.default.md#storystatistics-1)\>
+`Promise`\<[`storyStatistics`](../modules/index.types.default.md#storystatistics-1)\>
 
 Promise<[StoryStatistics](../modules/index.types.default.md#storystatistics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61680
-
-___
-
-### getStoryViewers
-
-▸ **getStoryViewers**(`parameters`): `Promise`<[`storyViewers`](../modules/index.types.default.md#storyviewers-1)\>
-
-Returns viewers of a story. The method can be called only for stories posted on behalf of the current user
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`getStoryViewers$DirectInput`](../modules/index.types.default.md#getstoryviewers$directinput) | [getStoryViewers$Input](../modules/index.types.default.md#getstoryviewers$input) |
-
-#### Returns
-
-`Promise`<[`storyViewers`](../modules/index.types.default.md#storyviewers-1)\>
-
-Promise<[StoryViewers](../modules/index.types.default.md#storyviewers)>
-
-#### Defined in
-
-dist/generated/types.d.ts:59885
+dist/generated/types.d.ts:70004
 
 ___
 
 ### getSuggestedFileName
 
-▸ **getSuggestedFileName**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getSuggestedFileName**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns suggested name for saving a file in a given directory
 
@@ -8974,19 +10097,19 @@ Returns suggested name for saving a file in a given directory
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60029
+dist/generated/types.d.ts:68090
 
 ___
 
 ### getSuggestedStickerSetName
 
-▸ **getSuggestedStickerSetName**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getSuggestedStickerSetName**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns a suggested name for a new sticker set with a given title
 
@@ -8998,19 +10121,19 @@ Returns a suggested name for a new sticker set with a given title
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61934
+dist/generated/types.d.ts:70216
 
 ___
 
 ### getSuitableDiscussionChats
 
-▸ **getSuitableDiscussionChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getSuitableDiscussionChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns a list of basic group and supergroup chats, which can be used as a discussion group for a channel. Returned basic group chats must be first upgraded to supergroups before they can be set as a discussion group.
 
@@ -9024,19 +10147,43 @@ Returns a list of basic group and supergroup chats, which can be used as a discu
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58290
+dist/generated/types.d.ts:65977
+
+___
+
+### getSuitablePersonalChats
+
+▸ **getSuitablePersonalChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
+
+Returns a list of channel chats, which can be used as a personal chat
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getSuitablePersonalChats$DirectInput`](../modules/index.types.default.md#getsuitablepersonalchats$directinput) | [getSuitablePersonalChats$Input](../modules/index.types.default.md#getsuitablepersonalchats$input) |
+
+#### Returns
+
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
+
+Promise<[Chats](../modules/index.types.default.md#chats)>
+
+#### Defined in
+
+dist/generated/types.d.ts:65991
 
 ___
 
 ### getSupergroup
 
-▸ **getSupergroup**(`parameters`): `Promise`<[`supergroup`](../modules/index.types.default.md#supergroup-1)\>
+▸ **getSupergroup**(`parameters`): `Promise`\<[`supergroup`](../modules/index.types.default.md#supergroup-1)\>
 
 Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
 
@@ -9048,19 +10195,19 @@ Returns information about a supergroup or a channel by its identifier. This is a
 
 #### Returns
 
-`Promise`<[`supergroup`](../modules/index.types.default.md#supergroup-1)\>
+`Promise`\<[`supergroup`](../modules/index.types.default.md#supergroup-1)\>
 
 Promise<[Supergroup](../modules/index.types.default.md#supergroup)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58047
+dist/generated/types.d.ts:65713
 
 ___
 
 ### getSupergroupFullInfo
 
-▸ **getSupergroupFullInfo**(`parameters`): `Promise`<[`supergroupFullInfo`](../modules/index.types.default.md#supergroupfullinfo-1)\>
+▸ **getSupergroupFullInfo**(`parameters`): `Promise`\<[`supergroupFullInfo`](../modules/index.types.default.md#supergroupfullinfo-1)\>
 
 Returns full information about a supergroup or a channel by its identifier, cached for up to 1 minute
 
@@ -9072,19 +10219,19 @@ Returns full information about a supergroup or a channel by its identifier, cach
 
 #### Returns
 
-`Promise`<[`supergroupFullInfo`](../modules/index.types.default.md#supergroupfullinfo-1)\>
+`Promise`\<[`supergroupFullInfo`](../modules/index.types.default.md#supergroupfullinfo-1)\>
 
 Promise<[SupergroupFullInfo](../modules/index.types.default.md#supergroupfullinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58054
+dist/generated/types.d.ts:65720
 
 ___
 
 ### getSupergroupMembers
 
-▸ **getSupergroupMembers**(`parameters`): `Promise`<[`chatMembers`](../modules/index.types.default.md#chatmembers-1)\>
+▸ **getSupergroupMembers**(`parameters`): `Promise`\<[`chatMembers`](../modules/index.types.default.md#chatmembers-1)\>
 
 Returns information about members or banned users in a supergroup or channel. Can be used only if supergroupFullInfo.can_get_members == true; additionally, administrator privileges may be required for some filters
 
@@ -9096,19 +10243,19 @@ Returns information about members or banned users in a supergroup or channel. Ca
 
 #### Returns
 
-`Promise`<[`chatMembers`](../modules/index.types.default.md#chatmembers-1)\>
+`Promise`\<[`chatMembers`](../modules/index.types.default.md#chatmembers-1)\>
 
 Promise<[ChatMembers](../modules/index.types.default.md#chatmembers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61345
+dist/generated/types.d.ts:69592
 
 ___
 
 ### getSupportName
 
-▸ **getSupportName**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getSupportName**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Returns localized name of the Telegram support user; for Telegram support only
 
@@ -9120,19 +10267,19 @@ Returns localized name of the Telegram support user; for Telegram support only
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62354
+dist/generated/types.d.ts:70671
 
 ___
 
 ### getSupportUser
 
-▸ **getSupportUser**(`parameters`): `Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+▸ **getSupportUser**(`parameters`): `Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Returns a user that can be contacted to get support
 
@@ -9144,19 +10291,19 @@ Returns a user that can be contacted to get support
 
 #### Returns
 
-`Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+`Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61422
+dist/generated/types.d.ts:69683
 
 ___
 
 ### getTemporaryPasswordState
 
-▸ **getTemporaryPasswordState**(`parameters`): `Promise`<[`temporaryPasswordState`](../modules/index.types.default.md#temporarypasswordstate-1)\>
+▸ **getTemporaryPasswordState**(`parameters`): `Promise`\<[`temporaryPasswordState`](../modules/index.types.default.md#temporarypasswordstate-1)\>
 
 Returns information about the current temporary password
 
@@ -9168,19 +10315,19 @@ Returns information about the current temporary password
 
 #### Returns
 
-`Promise`<[`temporaryPasswordState`](../modules/index.types.default.md#temporarypasswordstate-1)\>
+`Promise`\<[`temporaryPasswordState`](../modules/index.types.default.md#temporarypasswordstate-1)\>
 
 Promise<[TemporaryPasswordState](../modules/index.types.default.md#temporarypasswordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58005
+dist/generated/types.d.ts:65671
 
 ___
 
 ### getTextEntities
 
-▸ **getTextEntities**(`parameters`): `Promise`<[`textEntities`](../modules/index.types.default.md#textentities-1)\>
+▸ **getTextEntities**(`parameters`): `Promise`\<[`textEntities`](../modules/index.types.default.md#textentities-1)\>
 
 Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
 
@@ -9192,19 +10339,19 @@ Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numb
 
 #### Returns
 
-`Promise`<[`textEntities`](../modules/index.types.default.md#textentities-1)\>
+`Promise`\<[`textEntities`](../modules/index.types.default.md#textentities-1)\>
 
 Promise<[TextEntities](../modules/index.types.default.md#textentities)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58840
+dist/generated/types.d.ts:66795
 
 ___
 
 ### getThemeParametersJsonString
 
-▸ **getThemeParametersJsonString**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **getThemeParametersJsonString**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Converts a themeParameters object to corresponding JSON-serialized string. Can be called synchronously
 
@@ -9216,21 +10363,45 @@ Converts a themeParameters object to corresponding JSON-serialized string. Can b
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58910
+dist/generated/types.d.ts:66874
+
+___
+
+### getThemedChatEmojiStatuses
+
+▸ **getThemedChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+
+Returns up to 8 emoji statuses, which must be shown in the emoji status list for chats
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getThemedChatEmojiStatuses$DirectInput`](../modules/index.types.default.md#getthemedchatemojistatuses$directinput) | [getThemedChatEmojiStatuses$Input](../modules/index.types.default.md#getthemedchatemojistatuses$input) |
+
+#### Returns
+
+`Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+
+Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
+
+#### Defined in
+
+dist/generated/types.d.ts:68048
 
 ___
 
 ### getThemedEmojiStatuses
 
-▸ **getThemedEmojiStatuses**(`parameters`): `Promise`<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+▸ **getThemedEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
 
-Returns up to 8 emoji statuses, which must be shown right after the default Premium Badge in the emoji status list
+Returns up to 8 emoji statuses, which must be shown right after the default Premium Badge in the emoji status list for self status
 
 #### Parameters
 
@@ -9240,19 +10411,43 @@ Returns up to 8 emoji statuses, which must be shown right after the default Prem
 
 #### Returns
 
-`Promise`<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
+`Promise`\<[`emojiStatuses`](../modules/index.types.default.md#emojistatuses-1)\>
 
 Promise<[EmojiStatuses](../modules/index.types.default.md#emojistatuses)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59980
+dist/generated/types.d.ts:68020
+
+___
+
+### getTimeZones
+
+▸ **getTimeZones**(`parameters`): `Promise`\<[`timeZones`](../modules/index.types.default.md#timezones-1)\>
+
+Returns the list of supported time zones
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`getTimeZones$DirectInput`](../modules/index.types.default.md#gettimezones$directinput) | [getTimeZones$Input](../modules/index.types.default.md#gettimezones$input) |
+
+#### Returns
+
+`Promise`\<[`timeZones`](../modules/index.types.default.md#timezones-1)\>
+
+Promise<[TimeZones](../modules/index.types.default.md#timezones)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69613
 
 ___
 
 ### getTopChats
 
-▸ **getTopChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **getTopChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Returns a list of frequently used chats
 
@@ -9264,19 +10459,19 @@ Returns a list of frequently used chats
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58218
+dist/generated/types.d.ts:65905
 
 ___
 
 ### getTrendingStickerSets
 
-▸ **getTrendingStickerSets**(`parameters`): `Promise`<[`trendingStickerSets`](../modules/index.types.default.md#trendingstickersets-1)\>
+▸ **getTrendingStickerSets**(`parameters`): `Promise`\<[`trendingStickerSets`](../modules/index.types.default.md#trendingstickersets-1)\>
 
 Returns a list of trending sticker sets. For optimal performance, the number of returned sticker sets is chosen by TDLib
 
@@ -9288,19 +10483,19 @@ Returns a list of trending sticker sets. For optimal performance, the number of 
 
 #### Returns
 
-`Promise`<[`trendingStickerSets`](../modules/index.types.default.md#trendingstickersets-1)\>
+`Promise`\<[`trendingStickerSets`](../modules/index.types.default.md#trendingstickersets-1)\>
 
 Promise<[TrendingStickerSets](../modules/index.types.default.md#trendingstickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60688
+dist/generated/types.d.ts:68765
 
 ___
 
 ### getUser
 
-▸ **getUser**(`parameters`): `Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+▸ **getUser**(`parameters`): `Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Returns information about a user by their identifier. This is an offline request if the current user is not a bot
 
@@ -9312,21 +10507,21 @@ Returns information about a user by their identifier. This is an offline request
 
 #### Returns
 
-`Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+`Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58019
+dist/generated/types.d.ts:65685
 
 ___
 
 ### getUserChatBoosts
 
-▸ **getUserChatBoosts**(`parameters`): `Promise`<[`foundChatBoosts`](../modules/index.types.default.md#foundchatboosts-1)\>
+▸ **getUserChatBoosts**(`parameters`): `Promise`\<[`foundChatBoosts`](../modules/index.types.default.md#foundchatboosts-1)\>
 
-Returns list of boosts applied to a chat by a given user; requires administrator rights in the channel chat; for bots only
+Returns the list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
 
 #### Parameters
 
@@ -9336,19 +10531,19 @@ Returns list of boosts applied to a chat by a given user; requires administrator
 
 #### Returns
 
-`Promise`<[`foundChatBoosts`](../modules/index.types.default.md#foundchatboosts-1)\>
+`Promise`\<[`foundChatBoosts`](../modules/index.types.default.md#foundchatboosts-1)\>
 
 Promise<[FoundChatBoosts](../modules/index.types.default.md#foundchatboosts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59959
+dist/generated/types.d.ts:67999
 
 ___
 
 ### getUserFullInfo
 
-▸ **getUserFullInfo**(`parameters`): `Promise`<[`userFullInfo`](../modules/index.types.default.md#userfullinfo-1)\>
+▸ **getUserFullInfo**(`parameters`): `Promise`\<[`userFullInfo`](../modules/index.types.default.md#userfullinfo-1)\>
 
 Returns full information about a user by their identifier
 
@@ -9360,19 +10555,19 @@ Returns full information about a user by their identifier
 
 #### Returns
 
-`Promise`<[`userFullInfo`](../modules/index.types.default.md#userfullinfo-1)\>
+`Promise`\<[`userFullInfo`](../modules/index.types.default.md#userfullinfo-1)\>
 
 Promise<[UserFullInfo](../modules/index.types.default.md#userfullinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58026
+dist/generated/types.d.ts:65692
 
 ___
 
 ### getUserLink
 
-▸ **getUserLink**(`parameters`): `Promise`<[`userLink`](../modules/index.types.default.md#userlink-1)\>
+▸ **getUserLink**(`parameters`): `Promise`\<[`userLink`](../modules/index.types.default.md#userlink-1)\>
 
 Returns an HTTPS link, which can be used to get information about the current user
 
@@ -9384,19 +10579,19 @@ Returns an HTTPS link, which can be used to get information about the current us
 
 #### Returns
 
-`Promise`<[`userLink`](../modules/index.types.default.md#userlink-1)\>
+`Promise`\<[`userLink`](../modules/index.types.default.md#userlink-1)\>
 
 Promise<[UserLink](../modules/index.types.default.md#userlink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61021
+dist/generated/types.d.ts:69247
 
 ___
 
 ### getUserPrivacySettingRules
 
-▸ **getUserPrivacySettingRules**(`parameters`): `Promise`<[`userPrivacySettingRules`](../modules/index.types.default.md#userprivacysettingrules-1)\>
+▸ **getUserPrivacySettingRules**(`parameters`): `Promise`\<[`userPrivacySettingRules`](../modules/index.types.default.md#userprivacysettingrules-1)\>
 
 Returns the current privacy settings
 
@@ -9408,19 +10603,19 @@ Returns the current privacy settings
 
 #### Returns
 
-`Promise`<[`userPrivacySettingRules`](../modules/index.types.default.md#userprivacysettingrules-1)\>
+`Promise`\<[`userPrivacySettingRules`](../modules/index.types.default.md#userprivacysettingrules-1)\>
 
 Promise<[UserPrivacySettingRules](../modules/index.types.default.md#userprivacysettingrules)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61573
+dist/generated/types.d.ts:69841
 
 ___
 
 ### getUserProfilePhotos
 
-▸ **getUserProfilePhotos**(`parameters`): `Promise`<[`chatPhotos`](../modules/index.types.default.md#chatphotos-1)\>
+▸ **getUserProfilePhotos**(`parameters`): `Promise`\<[`chatPhotos`](../modules/index.types.default.md#chatphotos-1)\>
 
 Returns the profile photos of a user. Personal and public photo aren't returned
 
@@ -9432,19 +10627,19 @@ Returns the profile photos of a user. Personal and public photo aren't returned
 
 #### Returns
 
-`Promise`<[`chatPhotos`](../modules/index.types.default.md#chatphotos-1)\>
+`Promise`\<[`chatPhotos`](../modules/index.types.default.md#chatphotos-1)\>
 
 Promise<[ChatPhotos](../modules/index.types.default.md#chatphotos)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60639
+dist/generated/types.d.ts:68709
 
 ___
 
 ### getUserSupportInfo
 
-▸ **getUserSupportInfo**(`parameters`): `Promise`<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\>
+▸ **getUserSupportInfo**(`parameters`): `Promise`\<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\>
 
 Returns support information for the given user; for Telegram support only
 
@@ -9456,21 +10651,21 @@ Returns support information for the given user; for Telegram support only
 
 #### Returns
 
-`Promise`<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\>
+`Promise`\<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\>
 
 Promise<[UserSupportInfo](../modules/index.types.default.md#usersupportinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62340
+dist/generated/types.d.ts:70657
 
 ___
 
 ### getVideoChatAvailableParticipants
 
-▸ **getVideoChatAvailableParticipants**(`parameters`): `Promise`<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
+▸ **getVideoChatAvailableParticipants**(`parameters`): `Promise`\<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
 
-Returns list of participant identifiers, on whose behalf a video chat in the chat can be joined
+Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
 
 #### Parameters
 
@@ -9480,21 +10675,21 @@ Returns list of participant identifiers, on whose behalf a video chat in the cha
 
 #### Returns
 
-`Promise`<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
+`Promise`\<[`messageSenders`](../modules/index.types.default.md#messagesenders-1)\>
 
 Promise<[MessageSenders](../modules/index.types.default.md#messagesenders)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60308
+dist/generated/types.d.ts:68378
 
 ___
 
 ### getVideoChatRtmpUrl
 
-▸ **getVideoChatRtmpUrl**(`parameters`): `Promise`<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\>
+▸ **getVideoChatRtmpUrl**(`parameters`): `Promise`\<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\>
 
-Returns RTMP URL for streaming to the chat; requires creator privileges
+Returns RTMP URL for streaming to the chat; requires owner privileges
 
 #### Parameters
 
@@ -9504,19 +10699,19 @@ Returns RTMP URL for streaming to the chat; requires creator privileges
 
 #### Returns
 
-`Promise`<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\>
+`Promise`\<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\>
 
 Promise<[RtmpUrl](../modules/index.types.default.md#rtmpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60329
+dist/generated/types.d.ts:68399
 
 ___
 
 ### getWebAppLinkUrl
 
-▸ **getWebAppLinkUrl**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getWebAppLinkUrl**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
 
@@ -9528,19 +10723,19 @@ Returns an HTTPS URL of a Web App to open after a link of the type internalLinkT
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58996
+dist/generated/types.d.ts:66974
 
 ___
 
 ### getWebAppUrl
 
-▸ **getWebAppUrl**(`parameters`): `Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+▸ **getWebAppUrl**(`parameters`): `Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, an inlineQueryResultsButtonTypeWebApp button, or an internalLinkTypeSideMenuBot link
 
@@ -9552,19 +10747,19 @@ Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTy
 
 #### Returns
 
-`Promise`<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
+`Promise`\<[`httpUrl`](../modules/index.types.default.md#httpurl-1)\>
 
 Promise<[HttpUrl](../modules/index.types.default.md#httpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59003
+dist/generated/types.d.ts:66981
 
 ___
 
 ### getWebPageInstantView
 
-▸ **getWebPageInstantView**(`parameters`): `Promise`<[`webPageInstantView`](../modules/index.types.default.md#webpageinstantview-1)\>
+▸ **getWebPageInstantView**(`parameters`): `Promise`\<[`webPageInstantView`](../modules/index.types.default.md#webpageinstantview-1)\>
 
 Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
 
@@ -9576,19 +10771,19 @@ Returns an instant view version of a web page if available. Returns a 404 error 
 
 #### Returns
 
-`Promise`<[`webPageInstantView`](../modules/index.types.default.md#webpageinstantview-1)\>
+`Promise`\<[`webPageInstantView`](../modules/index.types.default.md#webpageinstantview-1)\>
 
 Promise<[WebPageInstantView](../modules/index.types.default.md#webpageinstantview)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60916
+dist/generated/types.d.ts:69002
 
 ___
 
 ### getWebPagePreview
 
-▸ **getWebPagePreview**(`parameters`): `Promise`<[`webPage`](../modules/index.types.default.md#webpage-1)\>
+▸ **getWebPagePreview**(`parameters`): `Promise`\<[`webPage`](../modules/index.types.default.md#webpage-1)\>
 
 Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
 
@@ -9600,19 +10795,43 @@ Returns a link preview by the text of a message. Do not call this function too o
 
 #### Returns
 
-`Promise`<[`webPage`](../modules/index.types.default.md#webpage-1)\>
+`Promise`\<[`webPage`](../modules/index.types.default.md#webpage-1)\>
 
 Promise<[WebPage](../modules/index.types.default.md#webpage)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60909
+dist/generated/types.d.ts:68995
+
+___
+
+### hideContactCloseBirthdays
+
+▸ **hideContactCloseBirthdays**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Hides the list of contacts that have close birthdays for 24 hours
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`hideContactCloseBirthdays$DirectInput`](../modules/index.types.default.md#hidecontactclosebirthdays$directinput) | [hideContactCloseBirthdays$Input](../modules/index.types.default.md#hidecontactclosebirthdays$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66909
 
 ___
 
 ### hideSuggestedAction
 
-▸ **hideSuggestedAction**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **hideSuggestedAction**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Hides a suggested action
 
@@ -9624,19 +10843,19 @@ Hides a suggested action
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58938
+dist/generated/types.d.ts:66902
 
 ___
 
 ### importContacts
 
-▸ **importContacts**(`parameters`): `Promise`<[`importedContacts`](../modules/index.types.default.md#importedcontacts-1)\>
+▸ **importContacts**(`parameters`): `Promise`\<[`importedContacts`](../modules/index.types.default.md#importedcontacts-1)\>
 
 Adds new contacts or edits existing contacts by their phone numbers; contacts' user identifiers are ignored
 
@@ -9648,19 +10867,19 @@ Adds new contacts or edits existing contacts by their phone numbers; contacts' u
 
 #### Returns
 
-`Promise`<[`importedContacts`](../modules/index.types.default.md#importedcontacts-1)\>
+`Promise`\<[`importedContacts`](../modules/index.types.default.md#importedcontacts-1)\>
 
 Promise<[ImportedContacts](../modules/index.types.default.md#importedcontacts)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60546
+dist/generated/types.d.ts:68616
 
 ___
 
 ### importMessages
 
-▸ **importMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **importMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Imports messages exported from another app
 
@@ -9672,19 +10891,19 @@ Imports messages exported from another app
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60145
+dist/generated/types.d.ts:68215
 
 ___
 
 ### inviteGroupCallParticipants
 
-▸ **inviteGroupCallParticipants**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **inviteGroupCallParticipants**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Invites users to an active group call. Sends a service message of type messageInviteVideoChatParticipants for video chats
 
@@ -9696,19 +10915,19 @@ Invites users to an active group call. Sends a service message of type messageIn
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60406
+dist/generated/types.d.ts:68476
 
 ___
 
 ### joinChat
 
-▸ **joinChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **joinChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds the current user as a new member to a chat. Private and secret chats can't be joined using this method. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
 
@@ -9720,19 +10939,19 @@ Adds the current user as a new member to a chat. Private and secret chats can't 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59592
+dist/generated/types.d.ts:67591
 
 ___
 
 ### joinChatByInviteLink
 
-▸ **joinChatByInviteLink**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **joinChatByInviteLink**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Uses an invite link to add the current user to the chat if possible. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
 
@@ -9744,19 +10963,19 @@ Uses an invite link to add the current user to the chat if possible. May return 
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60231
+dist/generated/types.d.ts:68301
 
 ___
 
 ### joinGroupCall
 
-▸ **joinGroupCall**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **joinGroupCall**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Joins an active group call. Returns join response payload for tgcalls
 
@@ -9768,21 +10987,21 @@ Joins an active group call. Returns join response payload for tgcalls
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60364
+dist/generated/types.d.ts:68434
 
 ___
 
 ### launchPrepaidPremiumGiveaway
 
-▸ **launchPrepaidPremiumGiveaway**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **launchPrepaidPremiumGiveaway**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Launches a prepaid Telegram Premium giveaway for subscribers of channel chats; requires can_post_messages rights in the channels
+Launches a prepaid Telegram Premium giveaway
 
 #### Parameters
 
@@ -9792,19 +11011,19 @@ Launches a prepaid Telegram Premium giveaway for subscribers of channel chats; r
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62095
+dist/generated/types.d.ts:70391
 
 ___
 
 ### leaveChat
 
-▸ **leaveChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **leaveChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes the current user from chat members. Private and secret chats can't be left using this method
 
@@ -9816,19 +11035,19 @@ Removes the current user from chat members. Private and secret chats can't be le
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59599
+dist/generated/types.d.ts:67598
 
 ___
 
 ### leaveGroupCall
 
-▸ **leaveGroupCall**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **leaveGroupCall**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Leaves a group call
 
@@ -9840,19 +11059,19 @@ Leaves a group call
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60490
+dist/generated/types.d.ts:68560
 
 ___
 
 ### loadActiveStories
 
-▸ **loadActiveStories**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **loadActiveStories**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
 
@@ -9866,19 +11085,19 @@ Loads more active stories from a story list. The loaded stories will be sent thr
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59818
+dist/generated/types.d.ts:67830
 
 ___
 
 ### loadChats
 
-▸ **loadChats**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **loadChats**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
 
@@ -9890,19 +11109,19 @@ Loads more chats from a chat list. The loaded chats and their positions in the c
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58151
+dist/generated/types.d.ts:65824
 
 ___
 
 ### loadGroupCallParticipants
 
-▸ **loadGroupCallParticipants**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **loadGroupCallParticipants**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Loads more participants of a group call. The loaded participants will be received through updates. Use the field groupCall.loaded_all_participants to check whether all participants have already been loaded
 
@@ -9914,19 +11133,91 @@ Loads more participants of a group call. The loaded participants will be receive
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60483
+dist/generated/types.d.ts:68553
+
+___
+
+### loadQuickReplyShortcutMessages
+
+▸ **loadQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`loadQuickReplyShortcutMessages$DirectInput`](../modules/index.types.default.md#loadquickreplyshortcutmessages$directinput) | [loadQuickReplyShortcutMessages$Input](../modules/index.types.default.md#loadquickreplyshortcutmessages$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66561
+
+___
+
+### loadQuickReplyShortcuts
+
+▸ **loadQuickReplyShortcuts**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`loadQuickReplyShortcuts$DirectInput`](../modules/index.types.default.md#loadquickreplyshortcuts$directinput) | [loadQuickReplyShortcuts$Input](../modules/index.types.default.md#loadquickreplyshortcuts$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66533
+
+___
+
+### loadSavedMessagesTopics
+
+▸ **loadSavedMessagesTopics**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Loads more Saved Messages topics. The loaded topics will be sent through updateSavedMessagesTopic. Topics are sorted by their topic.order in descending order. Returns a 404 error if all topics have been loaded
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`loadSavedMessagesTopics$DirectInput`](../modules/index.types.default.md#loadsavedmessagestopics$directinput) | [loadSavedMessagesTopics$Input](../modules/index.types.default.md#loadsavedmessagestopics$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:65998
 
 ___
 
 ### logOut
 
-▸ **logOut**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **logOut**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Closes the TDLib instance after a proper logout. Requires an available network connection. All local data will be destroyed. After the logout completes, updateAuthorizationState with authorizationStateClosed will be sent
 
@@ -9938,19 +11229,19 @@ Closes the TDLib instance after a proper logout. Requires an available network c
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57852
+dist/generated/types.d.ts:65511
 
 ___
 
 ### openChat
 
-▸ **openChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **openChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that the chat is opened by the user. Many useful activities depend on the chat being opened or closed (e.g., in supergroups and channels all updates are received only for opened chats)
 
@@ -9962,19 +11253,43 @@ Informs TDLib that the chat is opened by the user. Many useful activities depend
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59110
+dist/generated/types.d.ts:67088
+
+___
+
+### openChatSimilarChat
+
+▸ **openChatSimilarChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`openChatSimilarChat$DirectInput`](../modules/index.types.default.md#openchatsimilarchat$directinput) | [openChatSimilarChat$Input](../modules/index.types.default.md#openchatsimilarchat$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:65898
 
 ___
 
 ### openMessageContent
 
-▸ **openMessageContent**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **openMessageContent**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message).
 
@@ -9988,19 +11303,19 @@ Informs TDLib that the message content has been opened (e.g., the user has opene
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59135
+dist/generated/types.d.ts:67113
 
 ___
 
 ### openStory
 
-▸ **openStory**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **openStory**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that a story is opened and is being viewed by the user
 
@@ -10012,19 +11327,19 @@ Informs TDLib that a story is opened and is being viewed by the user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59857
+dist/generated/types.d.ts:67876
 
 ___
 
 ### openWebApp
 
-▸ **openWebApp**(`parameters`): `Promise`<[`webAppInfo`](../modules/index.types.default.md#webappinfo-1)\>
+▸ **openWebApp**(`parameters`): `Promise`\<[`webAppInfo`](../modules/index.types.default.md#webappinfo-1)\>
 
 Informs TDLib that a Web App is being opened from the attachment menu, a botMenuButton button, an internalLinkTypeAttachmentMenuBot link, or an inlineKeyboardButtonTypeWebApp button.
 
@@ -10038,19 +11353,19 @@ Informs TDLib that a Web App is being opened from the attachment menu, a botMenu
 
 #### Returns
 
-`Promise`<[`webAppInfo`](../modules/index.types.default.md#webappinfo-1)\>
+`Promise`\<[`webAppInfo`](../modules/index.types.default.md#webappinfo-1)\>
 
 Promise<[WebAppInfo](../modules/index.types.default.md#webappinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59019
+dist/generated/types.d.ts:66997
 
 ___
 
 ### optimizeStorage
 
-▸ **optimizeStorage**(`parameters`): `Promise`<[`storageStatistics`](../modules/index.types.default.md#storagestatistics-1)\>
+▸ **optimizeStorage**(`parameters`): `Promise`\<[`storageStatistics`](../modules/index.types.default.md#storagestatistics-1)\>
 
 Optimizes storage usage, i.e. deletes some files and returns new storage usage statistics. Secret thumbnails can't be deleted
 
@@ -10062,19 +11377,19 @@ Optimizes storage usage, i.e. deletes some files and returns new storage usage s
 
 #### Returns
 
-`Promise`<[`storageStatistics`](../modules/index.types.default.md#storagestatistics-1)\>
+`Promise`\<[`storageStatistics`](../modules/index.types.default.md#storagestatistics-1)\>
 
 Promise<[StorageStatistics](../modules/index.types.default.md#storagestatistics)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61715
+dist/generated/types.d.ts:70039
 
 ___
 
 ### parseMarkdown
 
-▸ **parseMarkdown**(`parameters`): `Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+▸ **parseMarkdown**(`parameters`): `Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Parses Markdown entities in a human-friendly format, ignoring markup errors. Can be called synchronously
 
@@ -10086,21 +11401,23 @@ Parses Markdown entities in a human-friendly format, ignoring markup errors. Can
 
 #### Returns
 
-`Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+`Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58854
+dist/generated/types.d.ts:66811
 
 ___
 
 ### parseTextEntities
 
-▸ **parseTextEntities**(`parameters`): `Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+▸ **parseTextEntities**(`parameters`): `Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
-Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities from a marked-up text. Can be called synchronously
+Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
+
+- and MentionName entities from a marked-up text. Can be called synchronously
 
 #### Parameters
 
@@ -10110,21 +11427,21 @@ Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote,
 
 #### Returns
 
-`Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+`Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58847
+dist/generated/types.d.ts:66804
 
 ___
 
 ### pinChatMessage
 
-▸ **pinChatMessage**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **pinChatMessage**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Pins a message in a chat; requires can_pin_messages rights or can_edit_messages rights in the channel
+Pins a message in a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
 
 #### Parameters
 
@@ -10134,19 +11451,19 @@ Pins a message in a chat; requires can_pin_messages rights or can_edit_messages 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59564
+dist/generated/types.d.ts:67563
 
 ___
 
 ### pingProxy
 
-▸ **pingProxy**(`parameters`): `Promise`<[`seconds`](../modules/index.types.default.md#seconds-1)\>
+▸ **pingProxy**(`parameters`): `Promise`\<[`seconds`](../modules/index.types.default.md#seconds-1)\>
 
 Computes time needed to receive a response from a Telegram server through a proxy. Can be called before authorization
 
@@ -10158,23 +11475,25 @@ Computes time needed to receive a response from a Telegram server through a prox
 
 #### Returns
 
-`Promise`<[`seconds`](../modules/index.types.default.md#seconds-1)\>
+`Promise`\<[`seconds`](../modules/index.types.default.md#seconds-1)\>
 
 Promise<[Seconds](../modules/index.types.default.md#seconds)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62277
+dist/generated/types.d.ts:70594
 
 ___
 
 ### preliminaryUploadFile
 
-▸ **preliminaryUploadFile**(`parameters`): `Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+▸ **preliminaryUploadFile**(`parameters`): `Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
-Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes. Updates updateFile will be used
+Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes.
 
-- to notify about upload progress and successful completion of the upload. The file will not have a persistent remote identifier until it is sent in a message
+- In all other cases there is no need to preliminary upload a file. Updates updateFile will be used to notify about upload progress.
+
+- The upload will not be completed until the file is sent in a message
 
 #### Parameters
 
@@ -10184,19 +11503,19 @@ Preliminary uploads a file to the cloud before sending it in a message, which ca
 
 #### Returns
 
-`Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+`Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60038
+dist/generated/types.d.ts:68101
 
 ___
 
 ### processChatFolderNewChats
 
-▸ **processChatFolderNewChats**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **processChatFolderNewChats**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Process new chats added to a shareable chat folder by its owner
 
@@ -10208,19 +11527,19 @@ Process new chats added to a shareable chat folder by its owner
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59394
+dist/generated/types.d.ts:67379
 
 ___
 
 ### processChatJoinRequest
 
-▸ **processChatJoinRequest**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **processChatJoinRequest**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Handles a pending join request in a chat
 
@@ -10232,19 +11551,19 @@ Handles a pending join request in a chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60245
+dist/generated/types.d.ts:68315
 
 ___
 
 ### processChatJoinRequests
 
-▸ **processChatJoinRequests**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **processChatJoinRequests**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Handles all pending join requests for a given link in a chat
 
@@ -10256,19 +11575,19 @@ Handles all pending join requests for a given link in a chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60252
+dist/generated/types.d.ts:68322
 
 ___
 
 ### processPushNotification
 
-▸ **processPushNotification**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **processPushNotification**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Handles a push notification. Returns error with code 406 if the push notification is not supported and connection to the server is required to fetch new data. Can be called before authorization
 
@@ -10280,19 +11599,19 @@ Handles a push notification. Returns error with code 406 if the push notificatio
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61545
+dist/generated/types.d.ts:69813
 
 ___
 
 ### rateSpeechRecognition
 
-▸ **rateSpeechRecognition**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **rateSpeechRecognition**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Rates recognized speech in a video note or a voice note message
 
@@ -10304,19 +11623,19 @@ Rates recognized speech in a video note or a voice note message
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58521
+dist/generated/types.d.ts:66310
 
 ___
 
 ### readAllChatMentions
 
-▸ **readAllChatMentions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **readAllChatMentions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Marks all mentions in a chat as read
 
@@ -10328,19 +11647,19 @@ Marks all mentions in a chat as read
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59177
+dist/generated/types.d.ts:67155
 
 ___
 
 ### readAllChatReactions
 
-▸ **readAllChatReactions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **readAllChatReactions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Marks all reactions in a chat or a forum topic as read
 
@@ -10352,19 +11671,19 @@ Marks all reactions in a chat or a forum topic as read
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59191
+dist/generated/types.d.ts:67169
 
 ___
 
 ### readAllMessageThreadMentions
 
-▸ **readAllMessageThreadMentions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **readAllMessageThreadMentions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Marks all mentions in a forum topic as read
 
@@ -10376,19 +11695,19 @@ Marks all mentions in a forum topic as read
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59184
+dist/generated/types.d.ts:67162
 
 ___
 
 ### readAllMessageThreadReactions
 
-▸ **readAllMessageThreadReactions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **readAllMessageThreadReactions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Marks all reactions in a forum topic as read
 
@@ -10400,19 +11719,19 @@ Marks all reactions in a forum topic as read
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59198
+dist/generated/types.d.ts:67176
 
 ___
 
 ### readChatList
 
-▸ **readChatList**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **readChatList**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Traverse all chats in a chat list and marks all messages in the chats as read
 
@@ -10424,19 +11743,19 @@ Traverse all chats in a chat list and marks all messages in the chats as read
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59746
+dist/generated/types.d.ts:67758
 
 ___
 
 ### readFilePart
 
-▸ **readFilePart**(`parameters`): `Promise`<[`filePart`](../modules/index.types.default.md#filepart-1)\>
+▸ **readFilePart**(`parameters`): `Promise`\<[`filePart`](../modules/index.types.default.md#filepart-1)\>
 
 Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
 
@@ -10448,19 +11767,45 @@ Reads a part of a file from the TDLib file cache and returns read bytes. This me
 
 #### Returns
 
-`Promise`<[`filePart`](../modules/index.types.default.md#filepart-1)\>
+`Promise`\<[`filePart`](../modules/index.types.default.md#filepart-1)\>
 
 Promise<[FilePart](../modules/index.types.default.md#filepart)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60073
+dist/generated/types.d.ts:68136
+
+___
+
+### readdQuickReplyShortcutMessages
+
+▸ **readdQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`quickReplyMessages`](../modules/index.types.default.md#quickreplymessages-1)\>
+
+Readds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+
+- If a message is readded, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be readded, null will be returned instead of the message
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`readdQuickReplyShortcutMessages$DirectInput`](../modules/index.types.default.md#readdquickreplyshortcutmessages$directinput) | [readdQuickReplyShortcutMessages$Input](../modules/index.types.default.md#readdquickreplyshortcutmessages$input) |
+
+#### Returns
+
+`Promise`\<[`quickReplyMessages`](../modules/index.types.default.md#quickreplymessages-1)\>
+
+Promise<[QuickReplyMessages](../modules/index.types.default.md#quickreplymessages)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66604
 
 ___
 
 ### recognizeSpeech
 
-▸ **recognizeSpeech**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **recognizeSpeech**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Recognizes speech in a video note or a voice note message. The message must be successfully sent, must not be scheduled, and must be from a non-secret chat
 
@@ -10472,19 +11817,19 @@ Recognizes speech in a video note or a voice note message. The message must be s
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58514
+dist/generated/types.d.ts:66303
 
 ___
 
 ### recoverAuthenticationPassword
 
-▸ **recoverAuthenticationPassword**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **recoverAuthenticationPassword**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Recovers the 2-step verification password with a password recovery code sent to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
 
@@ -10496,19 +11841,19 @@ Recovers the 2-step verification password with a password recovery code sent to 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57831
+dist/generated/types.d.ts:65483
 
 ___
 
 ### recoverPassword
 
-▸ **recoverPassword**(`parameters`): `Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+▸ **recoverPassword**(`parameters`): `Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Recovers the 2-step verification password using a recovery code sent to an email address that was previously set up
 
@@ -10520,19 +11865,43 @@ Recovers the 2-step verification password using a recovery code sent to an email
 
 #### Returns
 
-`Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+`Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57977
+dist/generated/types.d.ts:65643
+
+___
+
+### refundStarPayment
+
+▸ **refundStarPayment**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Refunds a previously done payment in Telegram Stars
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`refundStarPayment$DirectInput`](../modules/index.types.default.md#refundstarpayment$directinput) | [refundStarPayment$Input](../modules/index.types.default.md#refundstarpayment$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69676
 
 ___
 
 ### registerDevice
 
-▸ **registerDevice**(`parameters`): `Promise`<[`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1)\>
+▸ **registerDevice**(`parameters`): `Promise`\<[`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1)\>
 
 Registers the currently used device for receiving push notifications. Returns a globally unique identifier of the push notification subscription
 
@@ -10544,19 +11913,19 @@ Registers the currently used device for receiving push notifications. Returns a 
 
 #### Returns
 
-`Promise`<[`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1)\>
+`Promise`\<[`pushReceiverId`](../modules/index.types.default.md#pushreceiverid-1)\>
 
 Promise<[PushReceiverId](../modules/index.types.default.md#pushreceiverid)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61538
+dist/generated/types.d.ts:69806
 
 ___
 
 ### registerUser
 
-▸ **registerUser**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **registerUser**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Finishes user registration. Works only when the current authorization state is authorizationStateWaitRegistration
 
@@ -10568,19 +11937,19 @@ Finishes user registration. Works only when the current authorization state is a
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57794
+dist/generated/types.d.ts:65446
 
 ___
 
 ### removeAllFilesFromDownloads
 
-▸ **removeAllFilesFromDownloads**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeAllFilesFromDownloads**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes all files from the file download list
 
@@ -10592,43 +11961,43 @@ Removes all files from the file download list
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60117
+dist/generated/types.d.ts:68180
 
 ___
 
-### removeBackground
+### removeBusinessConnectedBotFromChat
 
-▸ **removeBackground**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeBusinessConnectedBotFromChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Removes background from the list of installed backgrounds
+Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`removeBackground$DirectInput`](../modules/index.types.default.md#removebackground$directinput) | [removeBackground$Input](../modules/index.types.default.md#removebackground$input) |
+| `parameters` | [`removeBusinessConnectedBotFromChat$DirectInput`](../modules/index.types.default.md#removebusinessconnectedbotfromchat$directinput) | [removeBusinessConnectedBotFromChat$Input](../modules/index.types.default.md#removebusinessconnectedbotfromchat$input) |
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61457
+dist/generated/types.d.ts:69205
 
 ___
 
 ### removeChatActionBar
 
-▸ **removeChatActionBar**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeChatActionBar**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a chat action bar without any other action
 
@@ -10640,19 +12009,19 @@ Removes a chat action bar without any other action
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61631
+dist/generated/types.d.ts:69934
 
 ___
 
 ### removeContacts
 
-▸ **removeContacts**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeContacts**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes users from the contact list
 
@@ -10664,19 +12033,19 @@ Removes users from the contact list
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60567
+dist/generated/types.d.ts:68637
 
 ___
 
 ### removeFavoriteSticker
 
-▸ **removeFavoriteSticker**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeFavoriteSticker**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a sticker from the list of favorite stickers
 
@@ -10688,19 +12057,19 @@ Removes a sticker from the list of favorite stickers
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60797
+dist/generated/types.d.ts:68874
 
 ___
 
 ### removeFileFromDownloads
 
-▸ **removeFileFromDownloads**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeFileFromDownloads**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a file from the file download list
 
@@ -10712,19 +12081,43 @@ Removes a file from the file download list
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60110
+dist/generated/types.d.ts:68173
+
+___
+
+### removeInstalledBackground
+
+▸ **removeInstalledBackground**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Removes background from the list of installed backgrounds
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`removeInstalledBackground$DirectInput`](../modules/index.types.default.md#removeinstalledbackground$directinput) | [removeInstalledBackground$Input](../modules/index.types.default.md#removeinstalledbackground$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69725
 
 ___
 
 ### removeMessageReaction
 
-▸ **removeMessageReaction**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeMessageReaction**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a reaction from a message. A chosen reaction can always be removed
 
@@ -10736,19 +12129,19 @@ Removes a reaction from a message. A chosen reaction can always be removed
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58812
+dist/generated/types.d.ts:66739
 
 ___
 
 ### removeNotification
 
-▸ **removeNotification**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeNotification**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
 
@@ -10760,19 +12153,19 @@ Removes an active notification from notification list. Needs to be called only i
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58465
+dist/generated/types.d.ts:66254
 
 ___
 
 ### removeNotificationGroup
 
-▸ **removeNotificationGroup**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeNotificationGroup**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a group of active notifications. Needs to be called only if the notification group is removed by the current user
 
@@ -10784,19 +12177,19 @@ Removes a group of active notifications. Needs to be called only if the notifica
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58472
+dist/generated/types.d.ts:66261
 
 ___
 
 ### removeProxy
 
-▸ **removeProxy**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeProxy**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a proxy server. Can be called before authorization
 
@@ -10808,19 +12201,19 @@ Removes a proxy server. Can be called before authorization
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62256
+dist/generated/types.d.ts:70573
 
 ___
 
 ### removeRecentHashtag
 
-▸ **removeRecentHashtag**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeRecentHashtag**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a hashtag from the list of recently used hashtags
 
@@ -10832,19 +12225,19 @@ Removes a hashtag from the list of recently used hashtags
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60902
+dist/generated/types.d.ts:68988
 
 ___
 
 ### removeRecentSticker
 
-▸ **removeRecentSticker**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeRecentSticker**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a sticker from the list of recently used stickers
 
@@ -10856,19 +12249,19 @@ Removes a sticker from the list of recently used stickers
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60767
+dist/generated/types.d.ts:68844
 
 ___
 
 ### removeRecentlyFoundChat
 
-▸ **removeRecentlyFoundChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeRecentlyFoundChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a chat from the list of recently found chats
 
@@ -10880,19 +12273,19 @@ Removes a chat from the list of recently found chats
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58246
+dist/generated/types.d.ts:65933
 
 ___
 
 ### removeSavedAnimation
 
-▸ **removeSavedAnimation**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeSavedAnimation**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes an animation from the list of saved animations
 
@@ -10904,19 +12297,19 @@ Removes an animation from the list of saved animations
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60881
+dist/generated/types.d.ts:68967
 
 ___
 
 ### removeSavedNotificationSound
 
-▸ **removeSavedNotificationSound**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeSavedNotificationSound**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a notification sound from the list of saved notification sounds
 
@@ -10928,21 +12321,45 @@ Removes a notification sound from the list of saved notification sounds
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59697
+dist/generated/types.d.ts:67702
+
+___
+
+### removeSearchedForHashtag
+
+▸ **removeSearchedForHashtag**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`removeSearchedForHashtag$DirectInput`](../modules/index.types.default.md#removesearchedforhashtag$directinput) | [removeSearchedForHashtag$Input](../modules/index.types.default.md#removesearchedforhashtag$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66154
 
 ___
 
 ### removeStickerFromSet
 
-▸ **removeStickerFromSet**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeStickerFromSet**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Removes a sticker from the set to which it belongs; for bots only. The sticker set must have been created by the bot
+Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
 
 #### Parameters
 
@@ -10952,19 +12369,19 @@ Removes a sticker from the set to which it belongs; for bots only. The sticker s
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61997
+dist/generated/types.d.ts:70286
 
 ___
 
 ### removeTopChat
 
-▸ **removeTopChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **removeTopChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Removes a chat from the list of frequently used chats. Supported only if the chat info database is enabled
 
@@ -10976,19 +12393,19 @@ Removes a chat from the list of frequently used chats. Supported only if the cha
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58225
+dist/generated/types.d.ts:65912
 
 ___
 
 ### reorderActiveUsernames
 
-▸ **reorderActiveUsernames**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reorderActiveUsernames**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes order of active usernames of the current user
 
@@ -11000,19 +12417,19 @@ Changes order of active usernames of the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60979
+dist/generated/types.d.ts:69065
 
 ___
 
 ### reorderBotActiveUsernames
 
-▸ **reorderBotActiveUsernames**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reorderBotActiveUsernames**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
 
@@ -11024,19 +12441,19 @@ Changes order of active usernames of a bot. Can be called only if userTypeBot.ca
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61133
+dist/generated/types.d.ts:69359
 
 ___
 
 ### reorderChatFolders
 
-▸ **reorderChatFolders**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reorderChatFolders**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the order of chat folders
 
@@ -11048,19 +12465,19 @@ Changes the order of chat folders
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59317
+dist/generated/types.d.ts:67295
 
 ___
 
 ### reorderInstalledStickerSets
 
-▸ **reorderInstalledStickerSets**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reorderInstalledStickerSets**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the order of installed sticker sets
 
@@ -11072,19 +12489,43 @@ Changes the order of installed sticker sets
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60744
+dist/generated/types.d.ts:68821
+
+___
+
+### reorderQuickReplyShortcuts
+
+▸ **reorderQuickReplyShortcuts**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the order of quick reply shortcuts
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`reorderQuickReplyShortcuts$DirectInput`](../modules/index.types.default.md#reorderquickreplyshortcuts$directinput) | [reorderQuickReplyShortcuts$Input](../modules/index.types.default.md#reorderquickreplyshortcuts$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66554
 
 ___
 
 ### reorderSupergroupActiveUsernames
 
-▸ **reorderSupergroupActiveUsernames**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reorderSupergroupActiveUsernames**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes order of active usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
 
@@ -11096,19 +12537,19 @@ Changes order of active usernames of a supergroup or channel, requires owner pri
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61261
+dist/generated/types.d.ts:69487
 
 ___
 
 ### replacePrimaryChatInviteLink
 
-▸ **replacePrimaryChatInviteLink**(`parameters`): `Promise`<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
+▸ **replacePrimaryChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
 
 Replaces current primary invite link for a chat with a new primary invite link. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right
 
@@ -11120,21 +12561,45 @@ Replaces current primary invite link for a chat with a new primary invite link. 
 
 #### Returns
 
-`Promise`<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
+`Promise`\<[`chatInviteLink`](../modules/index.types.default.md#chatinvitelink-1)\>
 
 Promise<[ChatInviteLink](../modules/index.types.default.md#chatinvitelink)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60152
+dist/generated/types.d.ts:68222
+
+___
+
+### replaceStickerInSet
+
+▸ **replaceStickerInSet**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`replaceStickerInSet$DirectInput`](../modules/index.types.default.md#replacestickerinset$directinput) | [replaceStickerInSet$Input](../modules/index.types.default.md#replacestickerinset$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70244
 
 ___
 
 ### replaceVideoChatRtmpUrl
 
-▸ **replaceVideoChatRtmpUrl**(`parameters`): `Promise`<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\>
+▸ **replaceVideoChatRtmpUrl**(`parameters`): `Promise`\<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\>
 
-Replaces the current RTMP URL for streaming to the chat; requires creator privileges
+Replaces the current RTMP URL for streaming to the chat; requires owner privileges
 
 #### Parameters
 
@@ -11144,19 +12609,43 @@ Replaces the current RTMP URL for streaming to the chat; requires creator privil
 
 #### Returns
 
-`Promise`<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\>
+`Promise`\<[`rtmpUrl`](../modules/index.types.default.md#rtmpurl-1)\>
 
 Promise<[RtmpUrl](../modules/index.types.default.md#rtmpurl)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60336
+dist/generated/types.d.ts:68406
+
+___
+
+### reportAuthenticationCodeMissing
+
+▸ **reportAuthenticationCodeMissing**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`reportAuthenticationCodeMissing$DirectInput`](../modules/index.types.default.md#reportauthenticationcodemissing$directinput) | [reportAuthenticationCodeMissing$Input](../modules/index.types.default.md#reportauthenticationcodemissing$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:65497
 
 ___
 
 ### reportChat
 
-▸ **reportChat**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reportChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
 
@@ -11168,19 +12657,19 @@ Reports a chat to the Telegram moderators. A chat can be reported only from the 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61638
+dist/generated/types.d.ts:69941
 
 ___
 
 ### reportChatPhoto
 
-▸ **reportChatPhoto**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reportChatPhoto**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Reports a chat photo to the Telegram moderators. A chat photo can be reported only if chat.can_be_reported
 
@@ -11192,19 +12681,43 @@ Reports a chat photo to the Telegram moderators. A chat photo can be reported on
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61645
+dist/generated/types.d.ts:69948
+
+___
+
+### reportChatSponsoredMessage
+
+▸ **reportChatSponsoredMessage**(`parameters`): `Promise`\<[`ReportChatSponsoredMessageResult`](../modules/index.types.default.md#reportchatsponsoredmessageresult)\>
+
+Reports a sponsored message to Telegram moderators
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`reportChatSponsoredMessage$DirectInput`](../modules/index.types.default.md#reportchatsponsoredmessage$directinput) | [reportChatSponsoredMessage$Input](../modules/index.types.default.md#reportchatsponsoredmessage$input) |
+
+#### Returns
+
+`Promise`\<[`ReportChatSponsoredMessageResult`](../modules/index.types.default.md#reportchatsponsoredmessageresult)\>
+
+Promise<[ReportChatSponsoredMessageResult](../modules/index.types.default.md#reportchatsponsoredmessageresult)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66247
 
 ___
 
 ### reportMessageReactions
 
-▸ **reportMessageReactions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reportMessageReactions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if message.can_report_reactions
 
@@ -11216,19 +12729,43 @@ Reports reactions set on a message to the Telegram moderators. Reactions on a me
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61652
+dist/generated/types.d.ts:69955
+
+___
+
+### reportPhoneNumberCodeMissing
+
+▸ **reportPhoneNumberCodeMissing**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`reportPhoneNumberCodeMissing$DirectInput`](../modules/index.types.default.md#reportphonenumbercodemissing$directinput) | [reportPhoneNumberCodeMissing$Input](../modules/index.types.default.md#reportphonenumbercodemissing$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69156
 
 ___
 
 ### reportStory
 
-▸ **reportStory**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reportStory**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Reports a story to the Telegram moderators
 
@@ -11240,19 +12777,19 @@ Reports a story to the Telegram moderators
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59892
+dist/generated/types.d.ts:67918
 
 ___
 
 ### reportSupergroupAntiSpamFalsePositive
 
-▸ **reportSupergroupAntiSpamFalsePositive**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reportSupergroupAntiSpamFalsePositive**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Reports a false deletion of a message by aggressive anti-spam checks; requires administrator rights in the supergroup. Can be called only for messages from chatEventMessageDeleted with can_report_anti_spam_false_positive == true
 
@@ -11264,19 +12801,19 @@ Reports a false deletion of a message by aggressive anti-spam checks; requires a
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61338
+dist/generated/types.d.ts:69585
 
 ___
 
 ### reportSupergroupSpam
 
-▸ **reportSupergroupSpam**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **reportSupergroupSpam**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Reports messages in a supergroup as spam; requires administrator rights in the supergroup
 
@@ -11288,19 +12825,19 @@ Reports messages in a supergroup as spam; requires administrator rights in the s
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61331
+dist/generated/types.d.ts:69578
 
 ___
 
 ### requestAuthenticationPasswordRecovery
 
-▸ **requestAuthenticationPasswordRecovery**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **requestAuthenticationPasswordRecovery**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Requests to send a 2-step verification password recovery code to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
 
@@ -11312,19 +12849,19 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57817
+dist/generated/types.d.ts:65469
 
 ___
 
 ### requestPasswordRecovery
 
-▸ **requestPasswordRecovery**(`parameters`): `Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+▸ **requestPasswordRecovery**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Requests to send a 2-step verification password recovery code to an email address that was previously set up
 
@@ -11336,19 +12873,19 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 #### Returns
 
-`Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#emailaddressauthenticationcodeinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57963
+dist/generated/types.d.ts:65629
 
 ___
 
 ### requestQrCodeAuthentication
 
-▸ **requestQrCodeAuthentication**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **requestQrCodeAuthentication**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Requests QR code authentication by scanning a QR code on another logged in device. Works only when the current authorization state is authorizationStateWaitPhoneNumber,
 
@@ -11362,23 +12899,23 @@ Requests QR code authentication by scanning a QR code on another logged in devic
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57787
+dist/generated/types.d.ts:65439
 
 ___
 
 ### resendAuthenticationCode
 
-▸ **resendAuthenticationCode**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **resendAuthenticationCode**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null and the server-specified timeout has passed,
+Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
 
-- or when the current authorization state is authorizationStateWaitEmailCode
+- and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
 
 #### Parameters
 
@@ -11388,43 +12925,19 @@ Resends an authentication code to the user. Works only when the current authoriz
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57764
-
-___
-
-### resendChangePhoneNumberCode
-
-▸ **resendChangePhoneNumberCode**(`parameters`): `Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
-
-Resends the authentication code sent to confirm a new phone number for the current user. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`resendChangePhoneNumberCode$DirectInput`](../modules/index.types.default.md#resendchangephonenumbercode$directinput) | [resendChangePhoneNumberCode$Input](../modules/index.types.default.md#resendchangephonenumbercode$input) |
-
-#### Returns
-
-`Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
-
-Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticationcodeinfo)>
-
-#### Defined in
-
-dist/generated/types.d.ts:61007
+dist/generated/types.d.ts:65416
 
 ___
 
 ### resendEmailAddressVerificationCode
 
-▸ **resendEmailAddressVerificationCode**(`parameters`): `Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+▸ **resendEmailAddressVerificationCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Resends the code to verify an email address to be added to a user's Telegram Passport
 
@@ -11436,19 +12949,19 @@ Resends the code to verify an email address to be added to a user's Telegram Pas
 
 #### Returns
 
-`Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#emailaddressauthenticationcodeinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61864
+dist/generated/types.d.ts:70167
 
 ___
 
 ### resendLoginEmailAddressCode
 
-▸ **resendLoginEmailAddressCode**(`parameters`): `Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+▸ **resendLoginEmailAddressCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Resends the login email address verification code
 
@@ -11460,19 +12973,19 @@ Resends the login email address verification code
 
 #### Returns
 
-`Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#emailaddressauthenticationcodeinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57919
+dist/generated/types.d.ts:65578
 
 ___
 
 ### resendMessages
 
-▸ **resendMessages**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **resendMessages**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
 
@@ -11486,67 +12999,43 @@ Resends messages which failed to send. Can be called only for messages for which
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58579
+dist/generated/types.d.ts:66379
 
 ___
 
-### resendPhoneNumberConfirmationCode
+### resendPhoneNumberCode
 
-▸ **resendPhoneNumberConfirmationCode**(`parameters`): `Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
+▸ **resendPhoneNumberCode**(`parameters`): `Promise`\<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
 
-Resends phone number confirmation code
+Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`resendPhoneNumberConfirmationCode$DirectInput`](../modules/index.types.default.md#resendphonenumberconfirmationcode$directinput) | [resendPhoneNumberConfirmationCode$Input](../modules/index.types.default.md#resendphonenumberconfirmationcode$input) |
+| `parameters` | [`resendPhoneNumberCode$DirectInput`](../modules/index.types.default.md#resendphonenumbercode$directinput) | [resendPhoneNumberCode$Input](../modules/index.types.default.md#resendphonenumbercode$input) |
 
 #### Returns
 
-`Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
+`Promise`\<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
 
 Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticationcodeinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61906
-
-___
-
-### resendPhoneNumberVerificationCode
-
-▸ **resendPhoneNumberVerificationCode**(`parameters`): `Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
-
-Resends the code to verify a phone number to be added to a user's Telegram Passport
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`resendPhoneNumberVerificationCode$DirectInput`](../modules/index.types.default.md#resendphonenumberverificationcode$directinput) | [resendPhoneNumberVerificationCode$Input](../modules/index.types.default.md#resendphonenumberverificationcode$input) |
-
-#### Returns
-
-`Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
-
-Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticationcodeinfo)>
-
-#### Defined in
-
-dist/generated/types.d.ts:61843
+dist/generated/types.d.ts:69163
 
 ___
 
 ### resendRecoveryEmailAddressCode
 
-▸ **resendRecoveryEmailAddressCode**(`parameters`): `Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+▸ **resendRecoveryEmailAddressCode**(`parameters`): `Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Resends the 2-step verification recovery email address verification code
 
@@ -11558,21 +13047,21 @@ Resends the 2-step verification recovery email address verification code
 
 #### Returns
 
-`Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+`Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57956
+dist/generated/types.d.ts:65615
 
 ___
 
 ### resetAllNotificationSettings
 
-▸ **resetAllNotificationSettings**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **resetAllNotificationSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Resets all notification settings to their default values. By default, all chats are unmuted and message previews are shown
+Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
 
 #### Parameters
 
@@ -11582,19 +13071,19 @@ Resets all notification settings to their default values. By default, all chats 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59725
+dist/generated/types.d.ts:67737
 
 ___
 
 ### resetAuthenticationEmailAddress
 
-▸ **resetAuthenticationEmailAddress**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **resetAuthenticationEmailAddress**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Resets the login email address. May return an error with a message "TASK_ALREADY_EXISTS" if reset is still pending.
 
@@ -11608,19 +13097,19 @@ Resets the login email address. May return an error with a message "TASK_ALREADY
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57803
+dist/generated/types.d.ts:65455
 
 ___
 
-### resetBackgrounds
+### resetInstalledBackgrounds
 
-▸ **resetBackgrounds**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **resetInstalledBackgrounds**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Resets list of installed backgrounds to its default value
 
@@ -11628,23 +13117,23 @@ Resets list of installed backgrounds to its default value
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`resetBackgrounds$DirectInput`](../modules/index.types.default.md#resetbackgrounds$directinput) | [resetBackgrounds$Input](../modules/index.types.default.md#resetbackgrounds$input) |
+| `parameters` | [`resetInstalledBackgrounds$DirectInput`](../modules/index.types.default.md#resetinstalledbackgrounds$directinput) | [resetInstalledBackgrounds$Input](../modules/index.types.default.md#resetinstalledbackgrounds$input) |
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61464
+dist/generated/types.d.ts:69732
 
 ___
 
 ### resetNetworkStatistics
 
-▸ **resetNetworkStatistics**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **resetNetworkStatistics**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Resets all network data usage statistics to zero. Can be called before authorization
 
@@ -11656,19 +13145,19 @@ Resets all network data usage statistics to zero. Can be called before authoriza
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61745
+dist/generated/types.d.ts:70069
 
 ___
 
 ### resetPassword
 
-▸ **resetPassword**(`parameters`): `Promise`<[`ResetPasswordResult`](../modules/index.types.default.md#resetpasswordresult)\>
+▸ **resetPassword**(`parameters`): `Promise`\<[`ResetPasswordResult`](../modules/index.types.default.md#resetpasswordresult)\>
 
 Removes 2-step verification password without previous password and access to recovery email address. The password can't be reset immediately and the request needs to be repeated after the specified time
 
@@ -11680,19 +13169,19 @@ Removes 2-step verification password without previous password and access to rec
 
 #### Returns
 
-`Promise`<[`ResetPasswordResult`](../modules/index.types.default.md#resetpasswordresult)\>
+`Promise`\<[`ResetPasswordResult`](../modules/index.types.default.md#resetpasswordresult)\>
 
 Promise<[ResetPasswordResult](../modules/index.types.default.md#resetpasswordresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57984
+dist/generated/types.d.ts:65650
 
 ___
 
 ### revokeChatInviteLink
 
-▸ **revokeChatInviteLink**(`parameters`): `Promise`<[`chatInviteLinks`](../modules/index.types.default.md#chatinvitelinks-1)\>
+▸ **revokeChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLinks`](../modules/index.types.default.md#chatinvitelinks-1)\>
 
 Revokes invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links.
 
@@ -11706,19 +13195,19 @@ Revokes invite link for a chat. Available for basic groups, supergroups, and cha
 
 #### Returns
 
-`Promise`<[`chatInviteLinks`](../modules/index.types.default.md#chatinvitelinks-1)\>
+`Promise`\<[`chatInviteLinks`](../modules/index.types.default.md#chatinvitelinks-1)\>
 
 Promise<[ChatInviteLinks](../modules/index.types.default.md#chatinvitelinks)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60203
+dist/generated/types.d.ts:68273
 
 ___
 
 ### revokeGroupCallInviteLink
 
-▸ **revokeGroupCallInviteLink**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **revokeGroupCallInviteLink**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Revokes invite link for a group call. Requires groupCall.can_be_managed group call flag
 
@@ -11730,19 +13219,19 @@ Revokes invite link for a group call. Requires groupCall.can_be_managed group ca
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60420
+dist/generated/types.d.ts:68490
 
 ___
 
 ### saveApplicationLogEvent
 
-▸ **saveApplicationLogEvent**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **saveApplicationLogEvent**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Saves application log event on the server. Can be called before authorization
 
@@ -11754,19 +13243,19 @@ Saves application log event on the server. Can be called before authorization
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62214
+dist/generated/types.d.ts:70531
 
 ___
 
 ### searchBackground
 
-▸ **searchBackground**(`parameters`): `Promise`<[`background`](../modules/index.types.default.md#background-1)\>
+▸ **searchBackground**(`parameters`): `Promise`\<[`background`](../modules/index.types.default.md#background-1)\>
 
 Searches for a background by its name
 
@@ -11778,19 +13267,19 @@ Searches for a background by its name
 
 #### Returns
 
-`Promise`<[`background`](../modules/index.types.default.md#background-1)\>
+`Promise`\<[`background`](../modules/index.types.default.md#background-1)\>
 
 Promise<[Background](../modules/index.types.default.md#background)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61443
+dist/generated/types.d.ts:69697
 
 ___
 
 ### searchCallMessages
 
-▸ **searchCallMessages**(`parameters`): `Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+▸ **searchCallMessages**(`parameters`): `Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
 
 Searches for call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
 
@@ -11802,21 +13291,21 @@ Searches for call messages. Returns the results in reverse chronological order (
 
 #### Returns
 
-`Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+`Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
 
 Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58372
+dist/generated/types.d.ts:66126
 
 ___
 
 ### searchChatMembers
 
-▸ **searchChatMembers**(`parameters`): `Promise`<[`chatMembers`](../modules/index.types.default.md#chatmembers-1)\>
+▸ **searchChatMembers**(`parameters`): `Promise`\<[`chatMembers`](../modules/index.types.default.md#chatmembers-1)\>
 
-Searches for a specified query in the first name, last name and usernames of the members of a specified chat. Requires administrator rights in channels
+Searches for a specified query in the first name, last name and usernames of the members of a specified chat. Requires administrator rights if the chat is a channel
 
 #### Parameters
 
@@ -11826,19 +13315,19 @@ Searches for a specified query in the first name, last name and usernames of the
 
 #### Returns
 
-`Promise`<[`chatMembers`](../modules/index.types.default.md#chatmembers-1)\>
+`Promise`\<[`chatMembers`](../modules/index.types.default.md#chatmembers-1)\>
 
 Promise<[ChatMembers](../modules/index.types.default.md#chatmembers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59655
+dist/generated/types.d.ts:67660
 
 ___
 
 ### searchChatMessages
 
-▸ **searchChatMessages**(`parameters`): `Promise`<[`foundChatMessages`](../modules/index.types.default.md#foundchatmessages-1)\>
+▸ **searchChatMessages**(`parameters`): `Promise`\<[`foundChatMessages`](../modules/index.types.default.md#foundchatmessages-1)\>
 
 Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message_id. Cannot be used in secret chats with a non-empty query
 
@@ -11854,19 +13343,19 @@ Searches for messages with given words in the chat. Returns the results in rever
 
 #### Returns
 
-`Promise`<[`foundChatMessages`](../modules/index.types.default.md#foundchatmessages-1)\>
+`Promise`\<[`foundChatMessages`](../modules/index.types.default.md#foundchatmessages-1)\>
 
 Promise<[FoundChatMessages](../modules/index.types.default.md#foundchatmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58349
+dist/generated/types.d.ts:66092
 
 ___
 
 ### searchChatRecentLocationMessages
 
-▸ **searchChatRecentLocationMessages**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **searchChatRecentLocationMessages**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Returns information about the recent locations of chat members that were sent to the chat. Returns up to 1 location message per user
 
@@ -11878,19 +13367,19 @@ Returns information about the recent locations of chat members that were sent to
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58393
+dist/generated/types.d.ts:66175
 
 ___
 
 ### searchChats
 
-▸ **searchChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **searchChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
 
@@ -11902,19 +13391,19 @@ Searches for the specified query in the title and username of already known chat
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58181
+dist/generated/types.d.ts:65854
 
 ___
 
 ### searchChatsNearby
 
-▸ **searchChatsNearby**(`parameters`): `Promise`<[`chatsNearby`](../modules/index.types.default.md#chatsnearby-1)\>
+▸ **searchChatsNearby**(`parameters`): `Promise`\<[`chatsNearby`](../modules/index.types.default.md#chatsnearby-1)\>
 
 Returns a list of users and location-based supergroups nearby. The list of users nearby will be updated for 60 seconds after the request by the updates updateUsersNearby.
 
@@ -11928,19 +13417,19 @@ Returns a list of users and location-based supergroups nearby. The list of users
 
 #### Returns
 
-`Promise`<[`chatsNearby`](../modules/index.types.default.md#chatsnearby-1)\>
+`Promise`\<[`chatsNearby`](../modules/index.types.default.md#chatsnearby-1)\>
 
 Promise<[ChatsNearby](../modules/index.types.default.md#chatsnearby)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58197
+dist/generated/types.d.ts:65870
 
 ___
 
 ### searchChatsOnServer
 
-▸ **searchChatsOnServer**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **searchChatsOnServer**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Searches for the specified query in the title and username of already known chats via request to the server. Returns chats in the order seen in the main chat list
 
@@ -11952,19 +13441,19 @@ Searches for the specified query in the title and username of already known chat
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58188
+dist/generated/types.d.ts:65861
 
 ___
 
 ### searchContacts
 
-▸ **searchContacts**(`parameters`): `Promise`<[`users`](../modules/index.types.default.md#users-1)\>
+▸ **searchContacts**(`parameters`): `Promise`\<[`users`](../modules/index.types.default.md#users-1)\>
 
 Searches for the specified query in the first names, last names and usernames of the known user contacts
 
@@ -11976,21 +13465,21 @@ Searches for the specified query in the first names, last names and usernames of
 
 #### Returns
 
-`Promise`<[`users`](../modules/index.types.default.md#users-1)\>
+`Promise`\<[`users`](../modules/index.types.default.md#users-1)\>
 
 Promise<[Users](../modules/index.types.default.md#users)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60560
+dist/generated/types.d.ts:68630
 
 ___
 
 ### searchEmojis
 
-▸ **searchEmojis**(`parameters`): `Promise`<[`emojis`](../modules/index.types.default.md#emojis-1)\>
+▸ **searchEmojis**(`parameters`): `Promise`\<[`emojiKeywords`](../modules/index.types.default.md#emojikeywords-1)\>
 
-Searches for emojis by keywords. Supported only if the file database is enabled
+Searches for emojis by keywords. Supported only if the file database is enabled. Order of results is unspecified
 
 #### Parameters
 
@@ -12000,19 +13489,19 @@ Searches for emojis by keywords. Supported only if the file database is enabled
 
 #### Returns
 
-`Promise`<[`emojis`](../modules/index.types.default.md#emojis-1)\>
+`Promise`\<[`emojiKeywords`](../modules/index.types.default.md#emojikeywords-1)\>
 
-Promise<[Emojis](../modules/index.types.default.md#emojis)>
+Promise<[EmojiKeywords](../modules/index.types.default.md#emojikeywords)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60811
+dist/generated/types.d.ts:68888
 
 ___
 
 ### searchFileDownloads
 
-▸ **searchFileDownloads**(`parameters`): `Promise`<[`foundFileDownloads`](../modules/index.types.default.md#foundfiledownloads-1)\>
+▸ **searchFileDownloads**(`parameters`): `Promise`\<[`foundFileDownloads`](../modules/index.types.default.md#foundfiledownloads-1)\>
 
 Searches for files in the file download list or recently downloaded files from the list
 
@@ -12024,19 +13513,19 @@ Searches for files in the file download list or recently downloaded files from t
 
 #### Returns
 
-`Promise`<[`foundFileDownloads`](../modules/index.types.default.md#foundfiledownloads-1)\>
+`Promise`\<[`foundFileDownloads`](../modules/index.types.default.md#foundfiledownloads-1)\>
 
 Promise<[FoundFileDownloads](../modules/index.types.default.md#foundfiledownloads)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60124
+dist/generated/types.d.ts:68187
 
 ___
 
 ### searchHashtags
 
-▸ **searchHashtags**(`parameters`): `Promise`<[`hashtags`](../modules/index.types.default.md#hashtags-1)\>
+▸ **searchHashtags**(`parameters`): `Promise`\<[`hashtags`](../modules/index.types.default.md#hashtags-1)\>
 
 Searches for recently used hashtags by their prefix
 
@@ -12048,19 +13537,19 @@ Searches for recently used hashtags by their prefix
 
 #### Returns
 
-`Promise`<[`hashtags`](../modules/index.types.default.md#hashtags-1)\>
+`Promise`\<[`hashtags`](../modules/index.types.default.md#hashtags-1)\>
 
 Promise<[Hashtags](../modules/index.types.default.md#hashtags)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60895
+dist/generated/types.d.ts:68981
 
 ___
 
 ### searchInstalledStickerSets
 
-▸ **searchInstalledStickerSets**(`parameters`): `Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+▸ **searchInstalledStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Searches for installed sticker sets by looking for specified query in their title and name
 
@@ -12072,19 +13561,19 @@ Searches for installed sticker sets by looking for specified query in their titl
 
 #### Returns
 
-`Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+`Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60716
+dist/generated/types.d.ts:68793
 
 ___
 
 ### searchMessages
 
-▸ **searchMessages**(`parameters`): `Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+▸ **searchMessages**(`parameters`): `Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
 
 Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).
 
@@ -12098,19 +13587,19 @@ Searches for messages in all chats except secret chats. Returns the results in r
 
 #### Returns
 
-`Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+`Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
 
 Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58358
+dist/generated/types.d.ts:66101
 
 ___
 
 ### searchOutgoingDocumentMessages
 
-▸ **searchOutgoingDocumentMessages**(`parameters`): `Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+▸ **searchOutgoingDocumentMessages**(`parameters`): `Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
 
 Searches for outgoing messages with content of the type messageDocument in all chats except secret chats. Returns the results in reverse chronological order
 
@@ -12122,19 +13611,19 @@ Searches for outgoing messages with content of the type messageDocument in all c
 
 #### Returns
 
-`Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+`Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
 
 Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58379
+dist/generated/types.d.ts:66133
 
 ___
 
 ### searchPublicChat
 
-▸ **searchPublicChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **searchPublicChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Searches a public chat by its username. Currently, only private chats, supergroups and channels can be public. Returns the chat if found; otherwise, an error is returned
 
@@ -12146,19 +13635,19 @@ Searches a public chat by its username. Currently, only private chats, supergrou
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58165
+dist/generated/types.d.ts:65838
 
 ___
 
 ### searchPublicChats
 
-▸ **searchPublicChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **searchPublicChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Searches public chats by looking for specified query in their username and title. Currently, only private chats, supergroups and channels can be public. Returns a meaningful number of results.
 
@@ -12172,19 +13661,43 @@ Searches public chats by looking for specified query in their username and title
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58174
+dist/generated/types.d.ts:65847
+
+___
+
+### searchPublicHashtagMessages
+
+▸ **searchPublicHashtagMessages**(`parameters`): `Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+
+Searches for public channel posts with the given hashtag or cashtag. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`searchPublicHashtagMessages$DirectInput`](../modules/index.types.default.md#searchpublichashtagmessages$directinput) | [searchPublicHashtagMessages$Input](../modules/index.types.default.md#searchpublichashtagmessages$input) |
+
+#### Returns
+
+`Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+
+Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66140
 
 ___
 
 ### searchQuote
 
-▸ **searchQuote**(`parameters`): `Promise`<[`foundPosition`](../modules/index.types.default.md#foundposition-1)\>
+▸ **searchQuote**(`parameters`): `Promise`\<[`foundPosition`](../modules/index.types.default.md#foundposition-1)\>
 
 Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
 
@@ -12196,19 +13709,19 @@ Searches for a given quote in a text. Returns found quote start position in UTF-
 
 #### Returns
 
-`Promise`<[`foundPosition`](../modules/index.types.default.md#foundposition-1)\>
+`Promise`\<[`foundPosition`](../modules/index.types.default.md#foundposition-1)\>
 
 Promise<[FoundPosition](../modules/index.types.default.md#foundposition)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58833
+dist/generated/types.d.ts:66788
 
 ___
 
 ### searchRecentlyFoundChats
 
-▸ **searchRecentlyFoundChats**(`parameters`): `Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+▸ **searchRecentlyFoundChats**(`parameters`): `Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
 
@@ -12220,19 +13733,47 @@ Searches for the specified query in the title and username of up to 50 recently 
 
 #### Returns
 
-`Promise`<[`chats`](../modules/index.types.default.md#chats-1)\>
+`Promise`\<[`chats`](../modules/index.types.default.md#chats-1)\>
 
 Promise<[Chats](../modules/index.types.default.md#chats)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58232
+dist/generated/types.d.ts:65919
+
+___
+
+### searchSavedMessages
+
+▸ **searchSavedMessages**(`parameters`): `Promise`\<[`foundChatMessages`](../modules/index.types.default.md#foundchatmessages-1)\>
+
+Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
+
+- Returns the results in reverse chronological order, i.e. in order of decreasing message_id
+
+- For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`searchSavedMessages$DirectInput`](../modules/index.types.default.md#searchsavedmessages$directinput) | [searchSavedMessages$Input](../modules/index.types.default.md#searchsavedmessages$input) |
+
+#### Returns
+
+`Promise`\<[`foundChatMessages`](../modules/index.types.default.md#foundchatmessages-1)\>
+
+Promise<[FoundChatMessages](../modules/index.types.default.md#foundchatmessages)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66119
 
 ___
 
 ### searchSecretMessages
 
-▸ **searchSecretMessages**(`parameters`): `Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+▸ **searchSecretMessages**(`parameters`): `Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
 
 Searches for messages in secret chats. Returns the results in reverse chronological order. For optimal performance, the number of returned messages is chosen by TDLib
 
@@ -12244,19 +13785,19 @@ Searches for messages in secret chats. Returns the results in reverse chronologi
 
 #### Returns
 
-`Promise`<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
+`Promise`\<[`foundMessages`](../modules/index.types.default.md#foundmessages-1)\>
 
 Promise<[FoundMessages](../modules/index.types.default.md#foundmessages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58365
+dist/generated/types.d.ts:66108
 
 ___
 
 ### searchStickerSet
 
-▸ **searchStickerSet**(`parameters`): `Promise`<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
+▸ **searchStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
 
 Searches for a sticker set by its name
 
@@ -12268,19 +13809,19 @@ Searches for a sticker set by its name
 
 #### Returns
 
-`Promise`<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
+`Promise`\<[`stickerSet`](../modules/index.types.default.md#stickerset-1)\>
 
 Promise<[StickerSet](../modules/index.types.default.md#stickerset)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60709
+dist/generated/types.d.ts:68786
 
 ___
 
 ### searchStickerSets
 
-▸ **searchStickerSets**(`parameters`): `Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+▸ **searchStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Searches for sticker sets by looking for specified query in their title and name. Excludes installed sticker sets from the results
 
@@ -12292,19 +13833,19 @@ Searches for sticker sets by looking for specified query in their title and name
 
 #### Returns
 
-`Promise`<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
+`Promise`\<[`stickerSets`](../modules/index.types.default.md#stickersets-1)\>
 
 Promise<[StickerSets](../modules/index.types.default.md#stickersets)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60723
+dist/generated/types.d.ts:68800
 
 ___
 
 ### searchStickers
 
-▸ **searchStickers**(`parameters`): `Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+▸ **searchStickers**(`parameters`): `Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Searches for stickers from public sticker sets that correspond to any of the given emoji
 
@@ -12316,19 +13857,19 @@ Searches for stickers from public sticker sets that correspond to any of the giv
 
 #### Returns
 
-`Promise`<[`stickers`](../modules/index.types.default.md#stickers-1)\>
+`Promise`\<[`stickers`](../modules/index.types.default.md#stickers-1)\>
 
 Promise<[Stickers](../modules/index.types.default.md#stickers)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60660
+dist/generated/types.d.ts:68730
 
 ___
 
 ### searchStringsByPrefix
 
-▸ **searchStringsByPrefix**(`parameters`): `Promise`<[`foundPositions`](../modules/index.types.default.md#foundpositions-1)\>
+▸ **searchStringsByPrefix**(`parameters`): `Promise`\<[`foundPositions`](../modules/index.types.default.md#foundpositions-1)\>
 
 Searches specified query by word prefixes in the provided strings. Returns 0-based positions of strings that matched. Can be called synchronously
 
@@ -12340,19 +13881,19 @@ Searches specified query by word prefixes in the provided strings. Returns 0-bas
 
 #### Returns
 
-`Promise`<[`foundPositions`](../modules/index.types.default.md#foundpositions-1)\>
+`Promise`\<[`foundPositions`](../modules/index.types.default.md#foundpositions-1)\>
 
 Promise<[FoundPositions](../modules/index.types.default.md#foundpositions)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62137
+dist/generated/types.d.ts:70454
 
 ___
 
 ### searchUserByPhoneNumber
 
-▸ **searchUserByPhoneNumber**(`parameters`): `Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+▸ **searchUserByPhoneNumber**(`parameters`): `Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Searches a user by their phone number. Returns a 404 error if the user can't be found
 
@@ -12364,19 +13905,19 @@ Searches a user by their phone number. Returns a 404 error if the user can't be 
 
 #### Returns
 
-`Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+`Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60625
+dist/generated/types.d.ts:68695
 
 ___
 
 ### searchUserByToken
 
-▸ **searchUserByToken**(`parameters`): `Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+▸ **searchUserByToken**(`parameters`): `Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Searches a user by a token from the user's link
 
@@ -12388,19 +13929,19 @@ Searches a user by a token from the user's link
 
 #### Returns
 
-`Promise`<[`user`](../modules/index.types.default.md#user-1)\>
+`Promise`\<[`user`](../modules/index.types.default.md#user-1)\>
 
 Promise<[User](../modules/index.types.default.md#user)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61028
+dist/generated/types.d.ts:69254
 
 ___
 
 ### searchWebApp
 
-▸ **searchWebApp**(`parameters`): `Promise`<[`foundWebApp`](../modules/index.types.default.md#foundwebapp-1)\>
+▸ **searchWebApp**(`parameters`): `Promise`\<[`foundWebApp`](../modules/index.types.default.md#foundwebapp-1)\>
 
 Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
 
@@ -12412,19 +13953,19 @@ Returns information about a Web App by its short name. Returns a 404 error if th
 
 #### Returns
 
-`Promise`<[`foundWebApp`](../modules/index.types.default.md#foundwebapp-1)\>
+`Promise`\<[`foundWebApp`](../modules/index.types.default.md#foundwebapp-1)\>
 
 Promise<[FoundWebApp](../modules/index.types.default.md#foundwebapp)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58989
+dist/generated/types.d.ts:66967
 
 ___
 
 ### sendAuthenticationFirebaseSms
 
-▸ **sendAuthenticationFirebaseSms**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sendAuthenticationFirebaseSms**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
 
@@ -12436,21 +13977,23 @@ Sends Firebase Authentication SMS to the phone number of the user. Works only wh
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57838
+dist/generated/types.d.ts:65490
 
 ___
 
 ### sendBotStartMessage
 
-▸ **sendBotStartMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **sendBotStartMessage**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
-Invites a bot to a chat (if it is not yet a member) and sends it the /start command. Bots can't be invited to a private chat other than the chat with the bot. Bots can't be invited to channels (although they can be added as admins) and secret chats. Returns the sent message
+Invites a bot to a chat (if it is not yet a member) and sends it the /start command; requires can_invite_users member right. Bots can't be invited to a private chat other than the chat with the bot.
+
+- Bots can't be invited to channels (although they can be added as admins) and secret chats. Returns the sent message
 
 #### Parameters
 
@@ -12460,19 +14003,69 @@ Invites a bot to a chat (if it is not yet a member) and sends it the /start comm
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58556
+dist/generated/types.d.ts:66349
+
+___
+
+### sendBusinessMessage
+
+▸ **sendBusinessMessage**(`parameters`): `Promise`\<[`businessMessage`](../modules/index.types.default.md#businessmessage-1)\>
+
+Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`sendBusinessMessage$DirectInput`](../modules/index.types.default.md#sendbusinessmessage$directinput) | [sendBusinessMessage$Input](../modules/index.types.default.md#sendbusinessmessage$input) |
+
+#### Returns
+
+`Promise`\<[`businessMessage`](../modules/index.types.default.md#businessmessage-1)\>
+
+Promise<[BusinessMessage](../modules/index.types.default.md#businessmessage)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66510
+
+___
+
+### sendBusinessMessageAlbum
+
+▸ **sendBusinessMessageAlbum**(`parameters`): `Promise`\<[`businessMessages`](../modules/index.types.default.md#businessmessages-1)\>
+
+Sends 2-10 messages grouped together into an album on behalf of a business account; for bots only. Currently, only audio, document, photo and video messages can be grouped into an album.
+
+- Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`sendBusinessMessageAlbum$DirectInput`](../modules/index.types.default.md#sendbusinessmessagealbum$directinput) | [sendBusinessMessageAlbum$Input](../modules/index.types.default.md#sendbusinessmessagealbum$input) |
+
+#### Returns
+
+`Promise`\<[`businessMessages`](../modules/index.types.default.md#businessmessages-1)\>
+
+Promise<[BusinessMessages](../modules/index.types.default.md#businessmessages)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66519
 
 ___
 
 ### sendCallDebugInformation
 
-▸ **sendCallDebugInformation**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sendCallDebugInformation**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends debug information for a call to Telegram servers
 
@@ -12484,19 +14077,19 @@ Sends debug information for a call to Telegram servers
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60294
+dist/generated/types.d.ts:68364
 
 ___
 
 ### sendCallLog
 
-▸ **sendCallLog**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sendCallLog**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends log file for a call to Telegram servers
 
@@ -12508,19 +14101,19 @@ Sends log file for a call to Telegram servers
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60301
+dist/generated/types.d.ts:68371
 
 ___
 
 ### sendCallRating
 
-▸ **sendCallRating**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sendCallRating**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends a call rating
 
@@ -12532,19 +14125,19 @@ Sends a call rating
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60287
+dist/generated/types.d.ts:68357
 
 ___
 
 ### sendCallSignalingData
 
-▸ **sendCallSignalingData**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sendCallSignalingData**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends call signaling data
 
@@ -12556,19 +14149,19 @@ Sends call signaling data
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60273
+dist/generated/types.d.ts:68343
 
 ___
 
 ### sendChatAction
 
-▸ **sendChatAction**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sendChatAction**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends a notification about user activity in a chat
 
@@ -12580,19 +14173,19 @@ Sends a notification about user activity in a chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59103
+dist/generated/types.d.ts:67081
 
 ___
 
 ### sendCustomRequest
 
-▸ **sendCustomRequest**(`parameters`): `Promise`<[`customRequestResult`](../modules/index.types.default.md#customrequestresult-1)\>
+▸ **sendCustomRequest**(`parameters`): `Promise`\<[`customRequestResult`](../modules/index.types.default.md#customrequestresult-1)\>
 
 Sends a custom request; for bots only
 
@@ -12604,19 +14197,19 @@ Sends a custom request; for bots only
 
 #### Returns
 
-`Promise`<[`customRequestResult`](../modules/index.types.default.md#customrequestresult-1)\>
+`Promise`\<[`customRequestResult`](../modules/index.types.default.md#customrequestresult-1)\>
 
 Promise<[CustomRequestResult](../modules/index.types.default.md#customrequestresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62144
+dist/generated/types.d.ts:70461
 
 ___
 
 ### sendEmailAddressVerificationCode
 
-▸ **sendEmailAddressVerificationCode**(`parameters`): `Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+▸ **sendEmailAddressVerificationCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Sends a code to verify an email address to be added to a user's Telegram Passport
 
@@ -12628,19 +14221,19 @@ Sends a code to verify an email address to be added to a user's Telegram Passpor
 
 #### Returns
 
-`Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#emailaddressauthenticationcodeinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61857
+dist/generated/types.d.ts:70160
 
 ___
 
 ### sendInlineQueryResultMessage
 
-▸ **sendInlineQueryResultMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **sendInlineQueryResultMessage**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Sends the result of an inline query as a message. Returns the sent message. Always clears a chat draft message
 
@@ -12652,19 +14245,19 @@ Sends the result of an inline query as a message. Returns the sent message. Alwa
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58563
+dist/generated/types.d.ts:66356
 
 ___
 
 ### sendMessage
 
-▸ **sendMessage**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **sendMessage**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Sends a message. Returns the sent message
 
@@ -12676,21 +14269,23 @@ Sends a message. Returns the sent message
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58542
+dist/generated/types.d.ts:66331
 
 ___
 
 ### sendMessageAlbum
 
-▸ **sendMessageAlbum**(`parameters`): `Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+▸ **sendMessageAlbum**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
-Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album. Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album.
+
+- Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
 
 #### Parameters
 
@@ -12700,19 +14295,19 @@ Sends 2-10 messages grouped together into an album. Currently, only audio, docum
 
 #### Returns
 
-`Promise`<[`messages`](../modules/index.types.default.md#messages-1)\>
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
 
 Promise<[Messages](../modules/index.types.default.md#messages)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58549
+dist/generated/types.d.ts:66340
 
 ___
 
 ### sendPassportAuthorizationForm
 
-▸ **sendPassportAuthorizationForm**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sendPassportAuthorizationForm**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends a Telegram Passport authorization form, effectively sharing data with the service. This method must be called after getPassportAuthorizationFormAvailableElements if some previously available elements are going to be reused
 
@@ -12724,19 +14319,19 @@ Sends a Telegram Passport authorization form, effectively sharing data with the 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61892
+dist/generated/types.d.ts:70195
 
 ___
 
 ### sendPaymentForm
 
-▸ **sendPaymentForm**(`parameters`): `Promise`<[`paymentResult`](../modules/index.types.default.md#paymentresult-1)\>
+▸ **sendPaymentForm**(`parameters`): `Promise`\<[`paymentResult`](../modules/index.types.default.md#paymentresult-1)\>
 
 Sends a filled-out payment form to the bot for final verification
 
@@ -12748,69 +14343,93 @@ Sends a filled-out payment form to the bot for final verification
 
 #### Returns
 
-`Promise`<[`paymentResult`](../modules/index.types.default.md#paymentresult-1)\>
+`Promise`\<[`paymentResult`](../modules/index.types.default.md#paymentresult-1)\>
 
 Promise<[PaymentResult](../modules/index.types.default.md#paymentresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61380
+dist/generated/types.d.ts:69634
 
 ___
 
-### sendPhoneNumberConfirmationCode
+### sendPhoneNumberCode
 
-▸ **sendPhoneNumberConfirmationCode**(`parameters`): `Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
+▸ **sendPhoneNumberCode**(`parameters`): `Promise`\<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
 
-Sends phone number confirmation code to handle links of the type internalLinkTypePhoneNumberConfirmation
+Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`sendPhoneNumberConfirmationCode$DirectInput`](../modules/index.types.default.md#sendphonenumberconfirmationcode$directinput) | [sendPhoneNumberConfirmationCode$Input](../modules/index.types.default.md#sendphonenumberconfirmationcode$input) |
+| `parameters` | [`sendPhoneNumberCode$DirectInput`](../modules/index.types.default.md#sendphonenumbercode$directinput) | [sendPhoneNumberCode$Input](../modules/index.types.default.md#sendphonenumbercode$input) |
 
 #### Returns
 
-`Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
+`Promise`\<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
 
 Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticationcodeinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61899
+dist/generated/types.d.ts:69142
 
 ___
 
-### sendPhoneNumberVerificationCode
+### sendPhoneNumberFirebaseSms
 
-▸ **sendPhoneNumberVerificationCode**(`parameters`): `Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
+▸ **sendPhoneNumberFirebaseSms**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Sends a code to verify a phone number to be added to a user's Telegram Passport
+Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`sendPhoneNumberVerificationCode$DirectInput`](../modules/index.types.default.md#sendphonenumberverificationcode$directinput) | [sendPhoneNumberVerificationCode$Input](../modules/index.types.default.md#sendphonenumberverificationcode$input) |
+| `parameters` | [`sendPhoneNumberFirebaseSms$DirectInput`](../modules/index.types.default.md#sendphonenumberfirebasesms$directinput) | [sendPhoneNumberFirebaseSms$Input](../modules/index.types.default.md#sendphonenumberfirebasesms$input) |
 
 #### Returns
 
-`Promise`<[`authenticationCodeInfo`](../modules/index.types.default.md#authenticationcodeinfo-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Promise<[AuthenticationCodeInfo](../modules/index.types.default.md#authenticationcodeinfo)>
+Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61836
+dist/generated/types.d.ts:69149
+
+___
+
+### sendQuickReplyShortcutMessages
+
+▸ **sendQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
+
+Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`sendQuickReplyShortcutMessages$DirectInput`](../modules/index.types.default.md#sendquickreplyshortcutmessages$directinput) | [sendQuickReplyShortcutMessages$Input](../modules/index.types.default.md#sendquickreplyshortcutmessages$input) |
+
+#### Returns
+
+`Promise`\<[`messages`](../modules/index.types.default.md#messages-1)\>
+
+Promise<[Messages](../modules/index.types.default.md#messages)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66370
 
 ___
 
 ### sendStory
 
-▸ **sendStory**(`parameters`): `Promise`<[`story`](../modules/index.types.default.md#story-1)\>
+▸ **sendStory**(`parameters`): `Promise`\<[`story`](../modules/index.types.default.md#story-1)\>
 
-Sends a new story to a chat; requires can_post_stories rights for channel chats. Returns a temporary story
+Sends a new story to a chat; requires can_post_stories right for supergroup and channel chats. Returns a temporary story
 
 #### Parameters
 
@@ -12820,19 +14439,19 @@ Sends a new story to a chat; requires can_post_stories rights for channel chats.
 
 #### Returns
 
-`Promise`<[`story`](../modules/index.types.default.md#story-1)\>
+`Promise`\<[`story`](../modules/index.types.default.md#story-1)\>
 
 Promise<[Story](../modules/index.types.default.md#story)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59774
+dist/generated/types.d.ts:67786
 
 ___
 
 ### sendWebAppCustomRequest
 
-▸ **sendWebAppCustomRequest**(`parameters`): `Promise`<[`customRequestResult`](../modules/index.types.default.md#customrequestresult-1)\>
+▸ **sendWebAppCustomRequest**(`parameters`): `Promise`\<[`customRequestResult`](../modules/index.types.default.md#customrequestresult-1)\>
 
 Sends a custom request from a Web App
 
@@ -12844,19 +14463,19 @@ Sends a custom request from a Web App
 
 #### Returns
 
-`Promise`<[`customRequestResult`](../modules/index.types.default.md#customrequestresult-1)\>
+`Promise`\<[`customRequestResult`](../modules/index.types.default.md#customrequestresult-1)\>
 
 Promise<[CustomRequestResult](../modules/index.types.default.md#customrequestresult)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61098
+dist/generated/types.d.ts:69324
 
 ___
 
 ### sendWebAppData
 
-▸ **sendWebAppData**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sendWebAppData**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends data received from a keyboardButtonTypeWebApp Web App to a bot
 
@@ -12868,19 +14487,19 @@ Sends data received from a keyboardButtonTypeWebApp Web App to a bot
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59010
+dist/generated/types.d.ts:66988
 
 ___
 
 ### setAccentColor
 
-▸ **setAccentColor**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setAccentColor**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes accent color and background custom emoji for the current user; for Telegram Premium users only
 
@@ -12892,19 +14511,19 @@ Changes accent color and background custom emoji for the current user; for Teleg
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60937
+dist/generated/types.d.ts:69023
 
 ___
 
 ### setAccountTtl
 
-▸ **setAccountTtl**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setAccountTtl**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the period of inactivity after which the account of the current user will automatically be deleted
 
@@ -12916,19 +14535,19 @@ Changes the period of inactivity after which the account of the current user wil
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61594
+dist/generated/types.d.ts:69897
 
 ___
 
 ### setAlarm
 
-▸ **setAlarm**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setAlarm**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Succeeds after a specified amount of time has passed. Can be called before initialization
 
@@ -12940,19 +14559,43 @@ Succeeds after a specified amount of time has passed. Can be called before initi
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62158
+dist/generated/types.d.ts:70475
+
+___
+
+### setApplicationVerificationToken
+
+▸ **setApplicationVerificationToken**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Application verification has been completed. Can be called before authorization
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setApplicationVerificationToken$DirectInput`](../modules/index.types.default.md#setapplicationverificationtoken$directinput) | [setApplicationVerificationToken$Input](../modules/index.types.default.md#setapplicationverificationtoken$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:68194
 
 ___
 
 ### setArchiveChatListSettings
 
-▸ **setArchiveChatListSettings**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setArchiveChatListSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes settings for automatic moving of chats to and from the Archive chat lists
 
@@ -12964,19 +14607,19 @@ Changes settings for automatic moving of chats to and from the Archive chat list
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59408
+dist/generated/types.d.ts:67393
 
 ___
 
 ### setAuthenticationEmailAddress
 
-▸ **setAuthenticationEmailAddress**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setAuthenticationEmailAddress**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the email address of the user and sends an authentication code to the email address. Works only when the current authorization state is authorizationStateWaitEmailAddress
 
@@ -12988,19 +14631,19 @@ Sets the email address of the user and sends an authentication code to the email
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57755
+dist/generated/types.d.ts:65407
 
 ___
 
 ### setAuthenticationPhoneNumber
 
-▸ **setAuthenticationPhoneNumber**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setAuthenticationPhoneNumber**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the phone number of the user and sends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitPhoneNumber,
 
@@ -13014,19 +14657,19 @@ Sets the phone number of the user and sends an authentication code to the user. 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57748
+dist/generated/types.d.ts:65400
 
 ___
 
 ### setAutoDownloadSettings
 
-▸ **setAutoDownloadSettings**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setAutoDownloadSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets auto-download settings
 
@@ -13038,19 +14681,19 @@ Sets auto-download settings
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61759
+dist/generated/types.d.ts:70083
 
 ___
 
 ### setAutosaveSettings
 
-▸ **setAutosaveSettings**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setAutosaveSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets autosave settings for the given scope. The method is guaranteed to work only after at least one call to getAutosaveSettings
 
@@ -13062,43 +14705,19 @@ Sets autosave settings for the given scope. The method is guaranteed to work onl
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61773
-
-___
-
-### setBackground
-
-▸ **setBackground**(`parameters`): `Promise`<[`background`](../modules/index.types.default.md#background-1)\>
-
-Changes the background selected by the user; adds background to the list of installed backgrounds
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parameters` | [`setBackground$DirectInput`](../modules/index.types.default.md#setbackground$directinput) | [setBackground$Input](../modules/index.types.default.md#setbackground$input) |
-
-#### Returns
-
-`Promise`<[`background`](../modules/index.types.default.md#background-1)\>
-
-Promise<[Background](../modules/index.types.default.md#background)>
-
-#### Defined in
-
-dist/generated/types.d.ts:61450
+dist/generated/types.d.ts:70097
 
 ___
 
 ### setBio
 
-▸ **setBio**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setBio**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the bio of the current user
 
@@ -13110,19 +14729,43 @@ Changes the bio of the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60958
+dist/generated/types.d.ts:69044
+
+___
+
+### setBirthdate
+
+▸ **setBirthdate**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the birthdate of the current user
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBirthdate$DirectInput`](../modules/index.types.default.md#setbirthdate$directinput) | [setBirthdate$Input](../modules/index.types.default.md#setbirthdate$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69072
 
 ___
 
 ### setBotInfoDescription
 
-▸ **setBotInfoDescription**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setBotInfoDescription**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the text shown in the chat with a bot if the chat is empty. Can be called only if userTypeBot.can_be_edited == true
 
@@ -13134,19 +14777,19 @@ Sets the text shown in the chat with a bot if the chat is empty. Can be called o
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61140
+dist/generated/types.d.ts:69366
 
 ___
 
 ### setBotInfoShortDescription
 
-▸ **setBotInfoShortDescription**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setBotInfoShortDescription**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the text shown on a bot's profile page and sent together with the link when users share the bot. Can be called only if userTypeBot.can_be_edited == true
 
@@ -13158,19 +14801,19 @@ Sets the text shown on a bot's profile page and sent together with the link when
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61154
+dist/generated/types.d.ts:69380
 
 ___
 
 ### setBotName
 
-▸ **setBotName**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setBotName**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
 
@@ -13182,19 +14825,19 @@ Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61105
+dist/generated/types.d.ts:69331
 
 ___
 
 ### setBotProfilePhoto
 
-▸ **setBotProfilePhoto**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setBotProfilePhoto**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes a profile photo for a bot
 
@@ -13206,19 +14849,19 @@ Changes a profile photo for a bot
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61119
+dist/generated/types.d.ts:69345
 
 ___
 
 ### setBotUpdatesStatus
 
-▸ **setBotUpdatesStatus**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setBotUpdatesStatus**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
 
@@ -13230,21 +14873,165 @@ Informs the server about the number of pending bot updates if they haven't been 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61920
+dist/generated/types.d.ts:70202
+
+___
+
+### setBusinessAwayMessageSettings
+
+▸ **setBusinessAwayMessageSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the business away message settings of the current user. Requires Telegram Business subscription
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBusinessAwayMessageSettings$DirectInput`](../modules/index.types.default.md#setbusinessawaymessagesettings$directinput) | [setBusinessAwayMessageSettings$Input](../modules/index.types.default.md#setbusinessawaymessagesettings$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69128
+
+___
+
+### setBusinessConnectedBot
+
+▸ **setBusinessConnectedBot**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Adds or changes business bot that is connected to the current user account
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBusinessConnectedBot$DirectInput`](../modules/index.types.default.md#setbusinessconnectedbot$directinput) | [setBusinessConnectedBot$Input](../modules/index.types.default.md#setbusinessconnectedbot$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69184
+
+___
+
+### setBusinessGreetingMessageSettings
+
+▸ **setBusinessGreetingMessageSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the business greeting message settings of the current user. Requires Telegram Business subscription
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBusinessGreetingMessageSettings$DirectInput`](../modules/index.types.default.md#setbusinessgreetingmessagesettings$directinput) | [setBusinessGreetingMessageSettings$Input](../modules/index.types.default.md#setbusinessgreetingmessagesettings$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69121
+
+___
+
+### setBusinessLocation
+
+▸ **setBusinessLocation**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the business location of the current user. Requires Telegram Business subscription
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBusinessLocation$DirectInput`](../modules/index.types.default.md#setbusinesslocation$directinput) | [setBusinessLocation$Input](../modules/index.types.default.md#setbusinesslocation$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69107
+
+___
+
+### setBusinessOpeningHours
+
+▸ **setBusinessOpeningHours**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the business opening hours of the current user. Requires Telegram Business subscription
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBusinessOpeningHours$DirectInput`](../modules/index.types.default.md#setbusinessopeninghours$directinput) | [setBusinessOpeningHours$Input](../modules/index.types.default.md#setbusinessopeninghours$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69114
+
+___
+
+### setBusinessStartPage
+
+▸ **setBusinessStartPage**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the business start page of the current user. Requires Telegram Business subscription
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setBusinessStartPage$DirectInput`](../modules/index.types.default.md#setbusinessstartpage$directinput) | [setBusinessStartPage$Input](../modules/index.types.default.md#setbusinessstartpage$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69135
 
 ___
 
 ### setChatAccentColor
 
-▸ **setChatAccentColor**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatAccentColor**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes accent color and background custom emoji of a chat. Supported only for channels with getOption("channel_custom_accent_color_boost_level_min") boost level. Requires can_change_info administrator right
+Changes accent color and background custom emoji of a channel chat. Requires can_change_info administrator right
 
 #### Parameters
 
@@ -13254,19 +15041,19 @@ Changes accent color and background custom emoji of a chat. Supported only for c
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59429
+dist/generated/types.d.ts:67414
 
 ___
 
 ### setChatActiveStoriesList
 
-▸ **setChatActiveStoriesList**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatActiveStoriesList**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes story list in which stories from the chat are shown
 
@@ -13278,21 +15065,21 @@ Changes story list in which stories from the chat are shown
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59825
+dist/generated/types.d.ts:67837
 
 ___
 
 ### setChatAvailableReactions
 
-▸ **setChatAvailableReactions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatAvailableReactions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes reactions, available in a chat. Available for basic groups, supergroups, and channels. Requires can_change_info administrator right
+Changes reactions, available in a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
 
 #### Parameters
 
@@ -13302,21 +15089,21 @@ Changes reactions, available in a chat. Available for basic groups, supergroups,
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59522
+dist/generated/types.d.ts:67521
 
 ___
 
 ### setChatBackground
 
-▸ **setChatBackground**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatBackground**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Sets the background in a specific chat. Supported only in private and secret chats with non-deleted users
+Sets the background in a specific chat. Supported only in private and secret chats with non-deleted users, and in chats with sufficient boost level and can_change_info administrator right
 
 #### Parameters
 
@@ -13326,19 +15113,19 @@ Sets the background in a specific chat. Supported only in private and secret cha
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59452
+dist/generated/types.d.ts:67451
 
 ___
 
 ### setChatClientData
 
-▸ **setChatClientData**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatClientData**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes application-specific data associated with a chat
 
@@ -13350,21 +15137,21 @@ Changes application-specific data associated with a chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59529
+dist/generated/types.d.ts:67528
 
 ___
 
 ### setChatDescription
 
-▸ **setChatDescription**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatDescription**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info administrator right
+Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
 
 #### Parameters
 
@@ -13374,19 +15161,19 @@ Changes information about a chat. Available for basic groups, supergroups, and c
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59536
+dist/generated/types.d.ts:67535
 
 ___
 
 ### setChatDiscussionGroup
 
-▸ **setChatDiscussionGroup**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatDiscussionGroup**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the discussion group of a channel chat; requires can_change_info administrator right in the channel if it is specified
 
@@ -13398,19 +15185,19 @@ Changes the discussion group of a channel chat; requires can_change_info adminis
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59543
+dist/generated/types.d.ts:67542
 
 ___
 
 ### setChatDraftMessage
 
-▸ **setChatDraftMessage**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatDraftMessage**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the draft message in a chat
 
@@ -13422,19 +15209,43 @@ Changes the draft message in a chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59473
+dist/generated/types.d.ts:67472
+
+___
+
+### setChatEmojiStatus
+
+▸ **setChatEmojiStatus**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the emoji status of a chat. Use chatBoostLevelFeatures.can_set_emoji_status to check whether an emoji status can be set. Requires can_change_info administrator right
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setChatEmojiStatus$DirectInput`](../modules/index.types.default.md#setchatemojistatus$directinput) | [setChatEmojiStatus$Input](../modules/index.types.default.md#setchatemojistatus$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67437
 
 ___
 
 ### setChatLocation
 
-▸ **setChatLocation**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatLocation**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
 
@@ -13446,21 +15257,25 @@ Changes the location of a chat. Available only for some location-based supergrou
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59550
+dist/generated/types.d.ts:67549
 
 ___
 
 ### setChatMemberStatus
 
-▸ **setChatMemberStatus**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatMemberStatus**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the status of a chat member, needs appropriate privileges. This function is currently not suitable for transferring chat ownership; use transferChatOwnership instead. Use addChatMember or banChatMember if some additional parameters needs to be passed
+Changes the status of a chat member; requires can_invite_users member right to add a chat member, can_promote_members administrator right to change administrator rights of the member,
+
+- and can_restrict_members administrator right to change restrictions of a user. This function is currently not suitable for transferring chat ownership; use transferChatOwnership instead.
+
+- Use addChatMember or banChatMember if some additional parameters needs to be passed
 
 #### Parameters
 
@@ -13470,19 +15285,19 @@ Changes the status of a chat member, needs appropriate privileges. This function
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59620
+dist/generated/types.d.ts:67625
 
 ___
 
 ### setChatMessageAutoDeleteTime
 
-▸ **setChatMessageAutoDeleteTime**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatMessageAutoDeleteTime**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels
 
@@ -13496,19 +15311,19 @@ Changes the message auto-delete or self-destruct (for secret chats) time in a ch
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59438
+dist/generated/types.d.ts:67430
 
 ___
 
 ### setChatMessageSender
 
-▸ **setChatMessageSender**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatMessageSender**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Selects a message sender to send messages in a chat
 
@@ -13520,19 +15335,19 @@ Selects a message sender to send messages in a chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58535
+dist/generated/types.d.ts:66324
 
 ___
 
 ### setChatNotificationSettings
 
-▸ **setChatNotificationSettings**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatNotificationSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the notification settings of a chat. Notification settings of a chat with the current user (Saved Messages) can't be changed
 
@@ -13544,19 +15359,19 @@ Changes the notification settings of a chat. Notification settings of a chat wit
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59480
+dist/generated/types.d.ts:67479
 
 ___
 
 ### setChatPermissions
 
-▸ **setChatPermissions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatPermissions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the chat members permissions. Supported only for basic groups and supergroups. Requires can_restrict_members administrator right
 
@@ -13568,21 +15383,21 @@ Changes the chat members permissions. Supported only for basic groups and superg
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59445
+dist/generated/types.d.ts:67444
 
 ___
 
 ### setChatPhoto
 
-▸ **setChatPhoto**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatPhoto**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the photo of a chat. Supported only for basic groups, supergroups and channels. Requires can_change_info administrator right
+Changes the photo of a chat. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
 
 #### Parameters
 
@@ -13592,21 +15407,69 @@ Changes the photo of a chat. Supported only for basic groups, supergroups and ch
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59422
+dist/generated/types.d.ts:67407
+
+___
+
+### setChatPinnedStories
+
+▸ **setChatPinnedStories**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setChatPinnedStories$DirectInput`](../modules/index.types.default.md#setchatpinnedstories$directinput) | [setChatPinnedStories$Input](../modules/index.types.default.md#setchatpinnedstories$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67869
+
+___
+
+### setChatProfileAccentColor
+
+▸ **setChatProfileAccentColor**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes accent color and background custom emoji for profile of a supergroup or channel chat. Requires can_change_info administrator right
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setChatProfileAccentColor$DirectInput`](../modules/index.types.default.md#setchatprofileaccentcolor$directinput) | [setChatProfileAccentColor$Input](../modules/index.types.default.md#setchatprofileaccentcolor$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67421
 
 ___
 
 ### setChatSlowModeDelay
 
-▸ **setChatSlowModeDelay**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatSlowModeDelay**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the slow mode delay of a chat. Available only for supergroups; requires can_restrict_members rights
+Changes the slow mode delay of a chat. Available only for supergroups; requires can_restrict_members right
 
 #### Parameters
 
@@ -13616,19 +15479,19 @@ Changes the slow mode delay of a chat. Available only for supergroups; requires 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59557
+dist/generated/types.d.ts:67556
 
 ___
 
 ### setChatTheme
 
-▸ **setChatTheme**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatTheme**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the chat theme. Supported only in private and secret chats
 
@@ -13640,21 +15503,21 @@ Changes the chat theme. Supported only in private and secret chats
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59466
+dist/generated/types.d.ts:67465
 
 ___
 
 ### setChatTitle
 
-▸ **setChatTitle**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setChatTitle**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the chat title. Supported only for basic groups, supergroups and channels. Requires can_change_info administrator right
+Changes the chat title. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
 
 #### Parameters
 
@@ -13664,19 +15527,19 @@ Changes the chat title. Supported only for basic groups, supergroups and channel
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59415
+dist/generated/types.d.ts:67400
 
 ___
 
 ### setCloseFriends
 
-▸ **setCloseFriends**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setCloseFriends**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the list of close friends of the current user
 
@@ -13688,19 +15551,19 @@ Changes the list of close friends of the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60597
+dist/generated/types.d.ts:68667
 
 ___
 
 ### setCommands
 
-▸ **setCommands**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setCommands**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the list of commands supported by the bot for the given user scope and language; for bots only
 
@@ -13712,21 +15575,21 @@ Sets the list of commands supported by the bot for the given user scope and lang
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61035
+dist/generated/types.d.ts:69261
 
 ___
 
 ### setCustomEmojiStickerSetThumbnail
 
-▸ **setCustomEmojiStickerSetThumbnail**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setCustomEmojiStickerSetThumbnail**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Sets a custom emoji sticker set thumbnail; for bots only
+Sets a custom emoji sticker set thumbnail
 
 #### Parameters
 
@@ -13736,19 +15599,19 @@ Sets a custom emoji sticker set thumbnail; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61969
+dist/generated/types.d.ts:70258
 
 ___
 
 ### setCustomLanguagePack
 
-▸ **setCustomLanguagePack**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setCustomLanguagePack**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds or changes a custom local language pack to the current localization target
 
@@ -13760,19 +15623,19 @@ Adds or changes a custom local language pack to the current localization target
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61508
+dist/generated/types.d.ts:69776
 
 ___
 
 ### setCustomLanguagePackString
 
-▸ **setCustomLanguagePackString**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setCustomLanguagePackString**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds, edits or deletes a string in a custom local language pack. Can be called before authorization
 
@@ -13784,19 +15647,19 @@ Adds, edits or deletes a string in a custom local language pack. Can be called b
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61522
+dist/generated/types.d.ts:69790
 
 ___
 
 ### setDatabaseEncryptionKey
 
-▸ **setDatabaseEncryptionKey**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setDatabaseEncryptionKey**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the database encryption key. Usually the encryption key is never changed and is stored in some OS keychain
 
@@ -13808,19 +15671,43 @@ Changes the database encryption key. Usually the encryption key is never changed
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57889
+dist/generated/types.d.ts:65548
+
+___
+
+### setDefaultBackground
+
+▸ **setDefaultBackground**(`parameters`): `Promise`\<[`background`](../modules/index.types.default.md#background-1)\>
+
+Sets default background for chats; adds the background to the list of installed backgrounds
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setDefaultBackground$DirectInput`](../modules/index.types.default.md#setdefaultbackground$directinput) | [setDefaultBackground$Input](../modules/index.types.default.md#setdefaultbackground$input) |
+
+#### Returns
+
+`Promise`\<[`background`](../modules/index.types.default.md#background-1)\>
+
+Promise<[Background](../modules/index.types.default.md#background)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69704
 
 ___
 
 ### setDefaultChannelAdministratorRights
 
-▸ **setDefaultChannelAdministratorRights**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setDefaultChannelAdministratorRights**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets default administrator rights for adding the bot to channel chats; for bots only
 
@@ -13832,19 +15719,19 @@ Sets default administrator rights for adding the bot to channel chats; for bots 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61077
+dist/generated/types.d.ts:69303
 
 ___
 
 ### setDefaultGroupAdministratorRights
 
-▸ **setDefaultGroupAdministratorRights**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setDefaultGroupAdministratorRights**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets default administrator rights for adding the bot to basic group and supergroup chats; for bots only
 
@@ -13856,19 +15743,19 @@ Sets default administrator rights for adding the bot to basic group and supergro
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61070
+dist/generated/types.d.ts:69296
 
 ___
 
 ### setDefaultMessageAutoDeleteTime
 
-▸ **setDefaultMessageAutoDeleteTime**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setDefaultMessageAutoDeleteTime**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the default message auto-delete time for new chats
 
@@ -13880,19 +15767,19 @@ Changes the default message auto-delete time for new chats
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61617
+dist/generated/types.d.ts:69920
 
 ___
 
 ### setDefaultReactionType
 
-▸ **setDefaultReactionType**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setDefaultReactionType**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes type of default reaction for the current user
 
@@ -13904,19 +15791,19 @@ Changes type of default reaction for the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58826
+dist/generated/types.d.ts:66760
 
 ___
 
 ### setEmojiStatus
 
-▸ **setEmojiStatus**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setEmojiStatus**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the emoji status of the current user; for Telegram Premium users only
 
@@ -13928,19 +15815,19 @@ Changes the emoji status of the current user; for Telegram Premium users only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60986
+dist/generated/types.d.ts:69086
 
 ___
 
 ### setFileGenerationProgress
 
-▸ **setFileGenerationProgress**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setFileGenerationProgress**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib on a file generation progress
 
@@ -13952,19 +15839,19 @@ Informs TDLib on a file generation progress
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60059
+dist/generated/types.d.ts:68122
 
 ___
 
 ### setForumTopicNotificationSettings
 
-▸ **setForumTopicNotificationSettings**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setForumTopicNotificationSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the notification settings of a forum topic
 
@@ -13976,19 +15863,19 @@ Changes the notification settings of a forum topic
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58735
+dist/generated/types.d.ts:66662
 
 ___
 
 ### setGameScore
 
-▸ **setGameScore**(`parameters`): `Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+▸ **setGameScore**(`parameters`): `Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Updates the game score of the specified user in the game; for bots only
 
@@ -14000,19 +15887,19 @@ Updates the game score of the specified user in the game; for bots only
 
 #### Returns
 
-`Promise`<[`message`](../modules/index.types.default.md#message-1)\>
+`Promise`\<[`message`](../modules/index.types.default.md#message-1)\>
 
 Promise<[Message](../modules/index.types.default.md#message)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59068
+dist/generated/types.d.ts:67046
 
 ___
 
 ### setGroupCallParticipantIsSpeaking
 
-▸ **setGroupCallParticipantIsSpeaking**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setGroupCallParticipantIsSpeaking**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that speaking state of a participant of an active group has changed
 
@@ -14024,19 +15911,19 @@ Informs TDLib that speaking state of a participant of an active group has change
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60455
+dist/generated/types.d.ts:68525
 
 ___
 
 ### setGroupCallParticipantVolumeLevel
 
-▸ **setGroupCallParticipantVolumeLevel**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setGroupCallParticipantVolumeLevel**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes volume level of a participant of an active group call. If the current user can manage the group call, then the participant's volume level will be changed for all users with the default volume level
 
@@ -14048,19 +15935,19 @@ Changes volume level of a participant of an active group call. If the current us
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60469
+dist/generated/types.d.ts:68539
 
 ___
 
 ### setGroupCallTitle
 
-▸ **setGroupCallTitle**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setGroupCallTitle**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets group call title. Requires groupCall.can_be_managed group call flag
 
@@ -14072,19 +15959,19 @@ Sets group call title. Requires groupCall.can_be_managed group call flag
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60392
+dist/generated/types.d.ts:68462
 
 ___
 
 ### setInactiveSessionTtl
 
-▸ **setInactiveSessionTtl**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setInactiveSessionTtl**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the period of inactivity after which sessions will automatically be terminated
 
@@ -14096,19 +15983,19 @@ Changes the period of inactivity after which sessions will automatically be term
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61210
+dist/generated/types.d.ts:69436
 
 ___
 
 ### setInlineGameScore
 
-▸ **setInlineGameScore**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setInlineGameScore**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Updates the game score of the specified user in a game; for bots only
 
@@ -14120,21 +16007,21 @@ Updates the game score of the specified user in a game; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59075
+dist/generated/types.d.ts:67053
 
 ___
 
 ### setLocation
 
-▸ **setLocation**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setLocation**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer
+Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
 
 #### Parameters
 
@@ -14144,19 +16031,19 @@ Changes the location of the current user. Needs to be called if getOption("is_lo
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60993
+dist/generated/types.d.ts:69093
 
 ___
 
 ### setLogStream
 
-▸ **setLogStream**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setLogStream**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets new log stream for internal logging of TDLib. Can be called synchronously
 
@@ -14168,19 +16055,19 @@ Sets new log stream for internal logging of TDLib. Can be called synchronously
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62284
+dist/generated/types.d.ts:70601
 
 ___
 
 ### setLogTagVerbosityLevel
 
-▸ **setLogTagVerbosityLevel**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setLogTagVerbosityLevel**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the verbosity level for a specified TDLib internal log tag. Can be called synchronously
 
@@ -14192,19 +16079,19 @@ Sets the verbosity level for a specified TDLib internal log tag. Can be called s
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62319
+dist/generated/types.d.ts:70636
 
 ___
 
 ### setLogVerbosityLevel
 
-▸ **setLogVerbosityLevel**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setLogVerbosityLevel**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the verbosity level of the internal logging of TDLib. Can be called synchronously
 
@@ -14216,23 +16103,23 @@ Sets the verbosity level of the internal logging of TDLib. Can be called synchro
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62298
+dist/generated/types.d.ts:70615
 
 ___
 
 ### setLoginEmailAddress
 
-▸ **setLoginEmailAddress**(`parameters`): `Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+▸ **setLoginEmailAddress**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Changes the login email address of the user. The email address can be changed only if the current user already has login email and passwordState.login_email_address_pattern is non-empty.
 
-- The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of a email address, call checkLoginEmailAddressCode directly
+- The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of an email address, call checkLoginEmailAddressCode directly
 
 #### Parameters
 
@@ -14242,19 +16129,19 @@ Changes the login email address of the user. The email address can be changed on
 
 #### Returns
 
-`Promise`<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../modules/index.types.default.md#emailaddressauthenticationcodeinfo-1)\>
 
 Promise<[EmailAddressAuthenticationCodeInfo](../modules/index.types.default.md#emailaddressauthenticationcodeinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57912
+dist/generated/types.d.ts:65571
 
 ___
 
 ### setMenuButton
 
-▸ **setMenuButton**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setMenuButton**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets menu button for the given user or for all users; for bots only
 
@@ -14266,19 +16153,67 @@ Sets menu button for the given user or for all users; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61056
+dist/generated/types.d.ts:69282
+
+___
+
+### setMessageFactCheck
+
+▸ **setMessageFactCheck**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setMessageFactCheck$DirectInput`](../modules/index.types.default.md#setmessagefactcheck$directinput) | [setMessageFactCheck$Input](../modules/index.types.default.md#setmessagefactcheck$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66503
+
+___
+
+### setMessageReactions
+
+▸ **setMessageReactions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Sets reactions on a message; for bots only
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setMessageReactions$DirectInput`](../modules/index.types.default.md#setmessagereactions$directinput) | [setMessageReactions$Input](../modules/index.types.default.md#setmessagereactions$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66746
 
 ___
 
 ### setMessageSenderBlockList
 
-▸ **setMessageSenderBlockList**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setMessageSenderBlockList**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
 
@@ -14290,19 +16225,19 @@ Changes the block list of a message sender. Currently, only users and supergroup
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60518
+dist/generated/types.d.ts:68588
 
 ___
 
 ### setName
 
-▸ **setName**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setName**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the first and last name of the current user
 
@@ -14314,19 +16249,19 @@ Changes the first and last name of the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60951
+dist/generated/types.d.ts:69037
 
 ___
 
 ### setNetworkType
 
-▸ **setNetworkType**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setNetworkType**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the current network type. Can be called before authorization. Calling this method forces all network connections to reopen, mitigating the delay in switching between different networks,
 
@@ -14340,19 +16275,43 @@ Sets the current network type. Can be called before authorization. Calling this 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61724
+dist/generated/types.d.ts:70048
+
+___
+
+### setNewChatPrivacySettings
+
+▸ **setNewChatPrivacySettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setNewChatPrivacySettings$DirectInput`](../modules/index.types.default.md#setnewchatprivacysettings$directinput) | [setNewChatPrivacySettings$Input](../modules/index.types.default.md#setnewchatprivacysettings$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69862
 
 ___
 
 ### setOption
 
-▸ **setOption**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setOption**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the value of an option. (Check the list of available options on https://core.telegram.org/tdlib/options.) Only writable options can be set. Can be called before authorization
 
@@ -14364,19 +16323,19 @@ Sets the value of an option. (Check the list of available options on https://cor
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61587
+dist/generated/types.d.ts:69890
 
 ___
 
 ### setPassportElement
 
-▸ **setPassportElement**(`parameters`): `Promise`<[`PassportElement`](../modules/index.types.default.md#passportelement)\>
+▸ **setPassportElement**(`parameters`): `Promise`\<[`PassportElement`](../modules/index.types.default.md#passportelement)\>
 
 Adds an element to the user's Telegram Passport. May return an error with a message "PHONE_VERIFICATION_NEEDED" or "EMAIL_VERIFICATION_NEEDED" if the chosen phone number or the chosen email address must be verified first
 
@@ -14388,19 +16347,19 @@ Adds an element to the user's Telegram Passport. May return an error with a mess
 
 #### Returns
 
-`Promise`<[`PassportElement`](../modules/index.types.default.md#passportelement)\>
+`Promise`\<[`PassportElement`](../modules/index.types.default.md#passportelement)\>
 
 Promise<[PassportElement](../modules/index.types.default.md#passportelement)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61808
+dist/generated/types.d.ts:70132
 
 ___
 
 ### setPassportElementErrors
 
-▸ **setPassportElementErrors**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setPassportElementErrors**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs the user that some of the elements in their Telegram Passport contain errors; for bots only. The user will not be able to resend the elements, until the errors are fixed
 
@@ -14412,19 +16371,19 @@ Informs the user that some of the elements in their Telegram Passport contain er
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61822
+dist/generated/types.d.ts:70146
 
 ___
 
 ### setPassword
 
-▸ **setPassword**(`parameters`): `Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+▸ **setPassword**(`parameters`): `Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Changes the 2-step verification password for the current user. If a new recovery email address is specified, then the change will not be applied until the new recovery email address is confirmed
 
@@ -14436,19 +16395,43 @@ Changes the 2-step verification password for the current user. If a new recovery
 
 #### Returns
 
-`Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+`Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57903
+dist/generated/types.d.ts:65562
+
+___
+
+### setPersonalChat
+
+▸ **setPersonalChat**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the personal chat of the current user
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setPersonalChat$DirectInput`](../modules/index.types.default.md#setpersonalchat$directinput) | [setPersonalChat$Input](../modules/index.types.default.md#setpersonalchat$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69079
 
 ___
 
 ### setPinnedChats
 
-▸ **setPinnedChats**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setPinnedChats**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the order of pinned chats
 
@@ -14460,21 +16443,21 @@ Changes the order of pinned chats
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59739
+dist/generated/types.d.ts:67751
 
 ___
 
 ### setPinnedForumTopics
 
-▸ **setPinnedForumTopics**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setPinnedForumTopics**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the order of pinned forum topics
+Changes the order of pinned forum topics; requires can_manage_topics right in the supergroup
 
 #### Parameters
 
@@ -14484,19 +16467,43 @@ Changes the order of pinned forum topics
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58763
+dist/generated/types.d.ts:66690
+
+___
+
+### setPinnedSavedMessagesTopics
+
+▸ **setPinnedSavedMessagesTopics**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the order of pinned Saved Messages topics
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setPinnedSavedMessagesTopics$DirectInput`](../modules/index.types.default.md#setpinnedsavedmessagestopics$directinput) | [setPinnedSavedMessagesTopics$Input](../modules/index.types.default.md#setpinnedsavedmessagestopics$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66040
 
 ___
 
 ### setPollAnswer
 
-▸ **setPollAnswer**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setPollAnswer**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the user answer to a poll. A poll in quiz mode can be answered only once
 
@@ -14508,19 +16515,19 @@ Changes the user answer to a poll. A poll in quiz mode can be answered only once
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58917
+dist/generated/types.d.ts:66881
 
 ___
 
 ### setProfileAccentColor
 
-▸ **setProfileAccentColor**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setProfileAccentColor**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes accent color and background custom emoji for profile of the current user; for Telegram Premium users only
 
@@ -14532,19 +16539,19 @@ Changes accent color and background custom emoji for profile of the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60944
+dist/generated/types.d.ts:69030
 
 ___
 
 ### setProfilePhoto
 
-▸ **setProfilePhoto**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setProfilePhoto**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes a profile photo for the current user
 
@@ -14556,19 +16563,91 @@ Changes a profile photo for the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60923
+dist/generated/types.d.ts:69009
+
+___
+
+### setQuickReplyShortcutName
+
+▸ **setQuickReplyShortcutName**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes name of a quick reply shortcut
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setQuickReplyShortcutName$DirectInput`](../modules/index.types.default.md#setquickreplyshortcutname$directinput) | [setQuickReplyShortcutName$Input](../modules/index.types.default.md#setquickreplyshortcutname$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66540
+
+___
+
+### setReactionNotificationSettings
+
+▸ **setReactionNotificationSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes notification settings for reactions
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setReactionNotificationSettings$DirectInput`](../modules/index.types.default.md#setreactionnotificationsettings$directinput) | [setReactionNotificationSettings$Input](../modules/index.types.default.md#setreactionnotificationsettings$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67730
+
+___
+
+### setReadDatePrivacySettings
+
+▸ **setReadDatePrivacySettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes privacy settings for message read date
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setReadDatePrivacySettings$DirectInput`](../modules/index.types.default.md#setreaddateprivacysettings$directinput) | [setReadDatePrivacySettings$Input](../modules/index.types.default.md#setreaddateprivacysettings$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69848
 
 ___
 
 ### setRecoveryEmailAddress
 
-▸ **setRecoveryEmailAddress**(`parameters`): `Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+▸ **setRecoveryEmailAddress**(`parameters`): `Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Changes the 2-step verification recovery email address of the user. If a new recovery email address is specified, then the change will not be applied until the new recovery email address is confirmed.
 
@@ -14582,19 +16661,43 @@ Changes the 2-step verification recovery email address of the user. If a new rec
 
 #### Returns
 
-`Promise`<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
+`Promise`\<[`passwordState`](../modules/index.types.default.md#passwordstate-1)\>
 
 Promise<[PasswordState](../modules/index.types.default.md#passwordstate)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57942
+dist/generated/types.d.ts:65601
+
+___
+
+### setSavedMessagesTagLabel
+
+▸ **setSavedMessagesTagLabel**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes label of a Saved Messages tag; for Telegram Premium users only
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setSavedMessagesTagLabel$DirectInput`](../modules/index.types.default.md#setsavedmessagestaglabel$directinput) | [setSavedMessagesTagLabel$Input](../modules/index.types.default.md#setsavedmessagestaglabel$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66774
 
 ___
 
 ### setScopeNotificationSettings
 
-▸ **setScopeNotificationSettings**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setScopeNotificationSettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes notification settings for chats of a given type
 
@@ -14606,21 +16709,21 @@ Changes notification settings for chats of a given type
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59718
+dist/generated/types.d.ts:67723
 
 ___
 
 ### setStickerEmojis
 
-▸ **setStickerEmojis**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setStickerEmojis**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+Changes the list of emoji corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
 
 #### Parameters
 
@@ -14630,21 +16733,21 @@ Changes the list of emoji corresponding to a sticker; for bots only. The sticker
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62004
+dist/generated/types.d.ts:70293
 
 ___
 
 ### setStickerKeywords
 
-▸ **setStickerKeywords**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setStickerKeywords**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
 
 #### Parameters
 
@@ -14654,21 +16757,21 @@ Changes the list of keywords of a sticker; for bots only. The sticker must belon
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62011
+dist/generated/types.d.ts:70300
 
 ___
 
 ### setStickerMaskPosition
 
-▸ **setStickerMaskPosition**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setStickerMaskPosition**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot
+Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
 
 #### Parameters
 
@@ -14678,21 +16781,21 @@ Changes the mask position of a mask sticker; for bots only. The sticker must bel
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62018
+dist/generated/types.d.ts:70307
 
 ___
 
 ### setStickerPositionInSet
 
-▸ **setStickerPositionInSet**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setStickerPositionInSet**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the position of a sticker in the set to which it belongs; for bots only. The sticker set must have been created by the bot
+Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
 
 #### Parameters
 
@@ -14702,21 +16805,21 @@ Changes the position of a sticker in the set to which it belongs; for bots only.
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61990
+dist/generated/types.d.ts:70279
 
 ___
 
 ### setStickerSetThumbnail
 
-▸ **setStickerSetThumbnail**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setStickerSetThumbnail**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Sets a sticker set thumbnail; for bots only
+Sets a sticker set thumbnail
 
 #### Parameters
 
@@ -14726,21 +16829,21 @@ Sets a sticker set thumbnail; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61962
+dist/generated/types.d.ts:70251
 
 ___
 
 ### setStickerSetTitle
 
-▸ **setStickerSetTitle**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setStickerSetTitle**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Sets a sticker set title; for bots only
+Sets a sticker set title
 
 #### Parameters
 
@@ -14750,21 +16853,21 @@ Sets a sticker set title; for bots only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61976
+dist/generated/types.d.ts:70265
 
 ___
 
 ### setStoryPrivacySettings
 
-▸ **setStoryPrivacySettings**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setStoryPrivacySettings**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes privacy settings of a story. Can be called only if story.can_be_edited == true
+Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_be_edited == true
 
 #### Parameters
 
@@ -14774,21 +16877,21 @@ Changes privacy settings of a story. Can be called only if story.can_be_edited =
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59788
+dist/generated/types.d.ts:67800
 
 ___
 
 ### setStoryReaction
 
-▸ **setStoryReaction**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setStoryReaction**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes chosen reaction on a story
+Changes chosen reaction on a story that has already been sent
 
 #### Parameters
 
@@ -14798,19 +16901,43 @@ Changes chosen reaction on a story
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59878
+dist/generated/types.d.ts:67897
+
+___
+
+### setSupergroupCustomEmojiStickerSet
+
+▸ **setSupergroupCustomEmojiStickerSet**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setSupergroupCustomEmojiStickerSet$DirectInput`](../modules/index.types.default.md#setsupergroupcustomemojistickerset$directinput) | [setSupergroupCustomEmojiStickerSet$Input](../modules/index.types.default.md#setsupergroupcustomemojistickerset$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69501
 
 ___
 
 ### setSupergroupStickerSet
 
-▸ **setSupergroupStickerSet**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setSupergroupStickerSet**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the sticker set of a supergroup; requires can_change_info administrator right
 
@@ -14822,19 +16949,43 @@ Changes the sticker set of a supergroup; requires can_change_info administrator 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61268
+dist/generated/types.d.ts:69494
+
+___
+
+### setSupergroupUnrestrictBoostCount
+
+▸ **setSupergroupUnrestrictBoostCount**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the number of times the supergroup must be boosted by a user to ignore slow mode and chat permission restrictions; requires can_restrict_members administrator right
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`setSupergroupUnrestrictBoostCount$DirectInput`](../modules/index.types.default.md#setsupergroupunrestrictboostcount$directinput) | [setSupergroupUnrestrictBoostCount$Input](../modules/index.types.default.md#setsupergroupunrestrictboostcount$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69508
 
 ___
 
 ### setSupergroupUsername
 
-▸ **setSupergroupUsername**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setSupergroupUsername**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the editable username of a supergroup or channel, requires owner privileges in the supergroup or channel
 
@@ -14846,19 +16997,19 @@ Changes the editable username of a supergroup or channel, requires owner privile
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61238
+dist/generated/types.d.ts:69464
 
 ___
 
 ### setTdlibParameters
 
-▸ **setTdlibParameters**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setTdlibParameters**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sets the parameters for TDLib initialization. Works only when the current authorization state is authorizationStateWaitTdlibParameters
 
@@ -14870,19 +17021,19 @@ Sets the parameters for TDLib initialization. Works only when the current author
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:57739
+dist/generated/types.d.ts:65391
 
 ___
 
 ### setUserPersonalProfilePhoto
 
-▸ **setUserPersonalProfilePhoto**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setUserPersonalProfilePhoto**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes a personal profile photo of a contact user
 
@@ -14894,19 +17045,19 @@ Changes a personal profile photo of a contact user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60611
+dist/generated/types.d.ts:68681
 
 ___
 
 ### setUserPrivacySettingRules
 
-▸ **setUserPrivacySettingRules**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setUserPrivacySettingRules**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes user privacy settings
 
@@ -14918,19 +17069,19 @@ Changes user privacy settings
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61566
+dist/generated/types.d.ts:69834
 
 ___
 
 ### setUserSupportInfo
 
-▸ **setUserSupportInfo**(`parameters`): `Promise`<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\>
+▸ **setUserSupportInfo**(`parameters`): `Promise`\<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\>
 
 Sets support information for the given user; for Telegram support only
 
@@ -14942,19 +17093,19 @@ Sets support information for the given user; for Telegram support only
 
 #### Returns
 
-`Promise`<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\>
+`Promise`\<[`userSupportInfo`](../modules/index.types.default.md#usersupportinfo-1)\>
 
 Promise<[UserSupportInfo](../modules/index.types.default.md#usersupportinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62347
+dist/generated/types.d.ts:70664
 
 ___
 
 ### setUsername
 
-▸ **setUsername**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setUsername**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the editable username of the current user
 
@@ -14966,19 +17117,19 @@ Changes the editable username of the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60965
+dist/generated/types.d.ts:69051
 
 ___
 
 ### setVideoChatDefaultParticipant
 
-▸ **setVideoChatDefaultParticipant**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **setVideoChatDefaultParticipant**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes default participant identifier, on whose behalf a video chat in the chat will be joined
 
@@ -14990,19 +17141,19 @@ Changes default participant identifier, on whose behalf a video chat in the chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60315
+dist/generated/types.d.ts:68385
 
 ___
 
 ### shareChatWithBot
 
-▸ **shareChatWithBot**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **shareChatWithBot**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Shares a chat after pressing a keyboardButtonTypeRequestChat button with the bot
 
@@ -15014,19 +17165,19 @@ Shares a chat after pressing a keyboardButtonTypeRequestChat button with the bot
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58968
+dist/generated/types.d.ts:66946
 
 ___
 
 ### sharePhoneNumber
 
-▸ **sharePhoneNumber**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **sharePhoneNumber**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Shares the phone number of the current user with a mutual contact. Supposed to be called when the user clicks on chatActionBarSharePhoneNumber
 
@@ -15038,43 +17189,43 @@ Shares the phone number of the current user with a mutual contact. Supposed to b
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60632
+dist/generated/types.d.ts:68702
 
 ___
 
-### shareUserWithBot
+### shareUsersWithBot
 
-▸ **shareUserWithBot**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **shareUsersWithBot**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Shares a user after pressing a keyboardButtonTypeRequestUser button with the bot
+Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`shareUserWithBot$DirectInput`](../modules/index.types.default.md#shareuserwithbot$directinput) | [shareUserWithBot$Input](../modules/index.types.default.md#shareuserwithbot$input) |
+| `parameters` | [`shareUsersWithBot$DirectInput`](../modules/index.types.default.md#shareuserswithbot$directinput) | [shareUsersWithBot$Input](../modules/index.types.default.md#shareuserswithbot$input) |
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58961
+dist/generated/types.d.ts:66939
 
 ___
 
 ### startGroupCallRecording
 
-▸ **startGroupCallRecording**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **startGroupCallRecording**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Starts recording of an active group call. Requires groupCall.can_be_managed group call flag
 
@@ -15086,19 +17237,19 @@ Starts recording of an active group call. Requires groupCall.can_be_managed grou
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60427
+dist/generated/types.d.ts:68497
 
 ___
 
 ### startGroupCallScreenSharing
 
-▸ **startGroupCallScreenSharing**(`parameters`): `Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+▸ **startGroupCallScreenSharing**(`parameters`): `Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Starts screen sharing in a joined group call. Returns join response payload for tgcalls
 
@@ -15110,19 +17261,19 @@ Starts screen sharing in a joined group call. Returns join response payload for 
 
 #### Returns
 
-`Promise`<[`text`](../modules/index.types.default.md#text-1)\>
+`Promise`\<[`text`](../modules/index.types.default.md#text-1)\>
 
 Promise<[Text](../modules/index.types.default.md#text)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60371
+dist/generated/types.d.ts:68441
 
 ___
 
 ### startScheduledGroupCall
 
-▸ **startScheduledGroupCall**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **startScheduledGroupCall**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Starts a scheduled group call
 
@@ -15134,19 +17285,19 @@ Starts a scheduled group call
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60350
+dist/generated/types.d.ts:68420
 
 ___
 
 ### stopPoll
 
-▸ **stopPoll**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **stopPoll**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Stops a poll. A poll in a message can be stopped when the message has can_be_edited flag is set
 
@@ -15158,19 +17309,19 @@ Stops a poll. A poll in a message can be stopped when the message has can_be_edi
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58931
+dist/generated/types.d.ts:66895
 
 ___
 
 ### suggestUserProfilePhoto
 
-▸ **suggestUserProfilePhoto**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **suggestUserProfilePhoto**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Suggests a profile photo to another regular user with common messages
 
@@ -15182,19 +17333,19 @@ Suggests a profile photo to another regular user with common messages
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60618
+dist/generated/types.d.ts:68688
 
 ___
 
 ### synchronizeLanguagePack
 
-▸ **synchronizeLanguagePack**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **synchronizeLanguagePack**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Fetches the latest versions of all strings from a language pack in the current localization target from the server.
 
@@ -15208,19 +17359,19 @@ Fetches the latest versions of all strings from a language pack in the current l
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61494
+dist/generated/types.d.ts:69762
 
 ___
 
 ### terminateAllOtherSessions
 
-▸ **terminateAllOtherSessions**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **terminateAllOtherSessions**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Terminates all other sessions of the current user
 
@@ -15232,19 +17383,19 @@ Terminates all other sessions of the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61182
+dist/generated/types.d.ts:69408
 
 ___
 
 ### terminateSession
 
-▸ **terminateSession**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **terminateSession**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Terminates a session of the current user
 
@@ -15256,19 +17407,19 @@ Terminates a session of the current user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61175
+dist/generated/types.d.ts:69401
 
 ___
 
 ### testCallBytes
 
-▸ **testCallBytes**(`parameters`): `Promise`<[`testBytes`](../modules/index.types.default.md#testbytes-1)\>
+▸ **testCallBytes**(`parameters`): `Promise`\<[`testBytes`](../modules/index.types.default.md#testbytes-1)\>
 
 Returns the received bytes; for testing only. This is an offline method. Can be called before authorization
 
@@ -15280,19 +17431,19 @@ Returns the received bytes; for testing only. This is an offline method. Can be 
 
 #### Returns
 
-`Promise`<[`testBytes`](../modules/index.types.default.md#testbytes-1)\>
+`Promise`\<[`testBytes`](../modules/index.types.default.md#testbytes-1)\>
 
 Promise<[TestBytes](../modules/index.types.default.md#testbytes)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62375
+dist/generated/types.d.ts:70692
 
 ___
 
 ### testCallEmpty
 
-▸ **testCallEmpty**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **testCallEmpty**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Does nothing; for testing only. This is an offline method. Can be called before authorization
 
@@ -15304,19 +17455,19 @@ Does nothing; for testing only. This is an offline method. Can be called before 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62361
+dist/generated/types.d.ts:70678
 
 ___
 
 ### testCallString
 
-▸ **testCallString**(`parameters`): `Promise`<[`testString`](../modules/index.types.default.md#teststring-1)\>
+▸ **testCallString**(`parameters`): `Promise`\<[`testString`](../modules/index.types.default.md#teststring-1)\>
 
 Returns the received string; for testing only. This is an offline method. Can be called before authorization
 
@@ -15328,19 +17479,19 @@ Returns the received string; for testing only. This is an offline method. Can be
 
 #### Returns
 
-`Promise`<[`testString`](../modules/index.types.default.md#teststring-1)\>
+`Promise`\<[`testString`](../modules/index.types.default.md#teststring-1)\>
 
 Promise<[TestString](../modules/index.types.default.md#teststring)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62368
+dist/generated/types.d.ts:70685
 
 ___
 
 ### testCallVectorInt
 
-▸ **testCallVectorInt**(`parameters`): `Promise`<[`testVectorInt`](../modules/index.types.default.md#testvectorint-1)\>
+▸ **testCallVectorInt**(`parameters`): `Promise`\<[`testVectorInt`](../modules/index.types.default.md#testvectorint-1)\>
 
 Returns the received vector of numbers; for testing only. This is an offline method. Can be called before authorization
 
@@ -15352,19 +17503,19 @@ Returns the received vector of numbers; for testing only. This is an offline met
 
 #### Returns
 
-`Promise`<[`testVectorInt`](../modules/index.types.default.md#testvectorint-1)\>
+`Promise`\<[`testVectorInt`](../modules/index.types.default.md#testvectorint-1)\>
 
 Promise<[TestVectorInt](../modules/index.types.default.md#testvectorint)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62382
+dist/generated/types.d.ts:70699
 
 ___
 
 ### testCallVectorIntObject
 
-▸ **testCallVectorIntObject**(`parameters`): `Promise`<[`testVectorIntObject`](../modules/index.types.default.md#testvectorintobject-1)\>
+▸ **testCallVectorIntObject**(`parameters`): `Promise`\<[`testVectorIntObject`](../modules/index.types.default.md#testvectorintobject-1)\>
 
 Returns the received vector of objects containing a number; for testing only. This is an offline method. Can be called before authorization
 
@@ -15376,19 +17527,19 @@ Returns the received vector of objects containing a number; for testing only. Th
 
 #### Returns
 
-`Promise`<[`testVectorIntObject`](../modules/index.types.default.md#testvectorintobject-1)\>
+`Promise`\<[`testVectorIntObject`](../modules/index.types.default.md#testvectorintobject-1)\>
 
 Promise<[TestVectorIntObject](../modules/index.types.default.md#testvectorintobject)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62389
+dist/generated/types.d.ts:70706
 
 ___
 
 ### testCallVectorString
 
-▸ **testCallVectorString**(`parameters`): `Promise`<[`testVectorString`](../modules/index.types.default.md#testvectorstring-1)\>
+▸ **testCallVectorString**(`parameters`): `Promise`\<[`testVectorString`](../modules/index.types.default.md#testvectorstring-1)\>
 
 Returns the received vector of strings; for testing only. This is an offline method. Can be called before authorization
 
@@ -15400,19 +17551,19 @@ Returns the received vector of strings; for testing only. This is an offline met
 
 #### Returns
 
-`Promise`<[`testVectorString`](../modules/index.types.default.md#testvectorstring-1)\>
+`Promise`\<[`testVectorString`](../modules/index.types.default.md#testvectorstring-1)\>
 
 Promise<[TestVectorString](../modules/index.types.default.md#testvectorstring)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62396
+dist/generated/types.d.ts:70713
 
 ___
 
 ### testCallVectorStringObject
 
-▸ **testCallVectorStringObject**(`parameters`): `Promise`<[`testVectorStringObject`](../modules/index.types.default.md#testvectorstringobject-1)\>
+▸ **testCallVectorStringObject**(`parameters`): `Promise`\<[`testVectorStringObject`](../modules/index.types.default.md#testvectorstringobject-1)\>
 
 Returns the received vector of objects containing a string; for testing only. This is an offline method. Can be called before authorization
 
@@ -15424,19 +17575,19 @@ Returns the received vector of objects containing a string; for testing only. Th
 
 #### Returns
 
-`Promise`<[`testVectorStringObject`](../modules/index.types.default.md#testvectorstringobject-1)\>
+`Promise`\<[`testVectorStringObject`](../modules/index.types.default.md#testvectorstringobject-1)\>
 
 Promise<[TestVectorStringObject](../modules/index.types.default.md#testvectorstringobject)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62403
+dist/generated/types.d.ts:70720
 
 ___
 
 ### testGetDifference
 
-▸ **testGetDifference**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **testGetDifference**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Forces an updates.getDifference call to the Telegram servers; for testing only
 
@@ -15448,19 +17599,19 @@ Forces an updates.getDifference call to the Telegram servers; for testing only
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62431
+dist/generated/types.d.ts:70748
 
 ___
 
 ### testNetwork
 
-▸ **testNetwork**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **testNetwork**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends a simple network request to the Telegram servers; for testing only. Can be called before authorization
 
@@ -15472,19 +17623,19 @@ Sends a simple network request to the Telegram servers; for testing only. Can be
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62417
+dist/generated/types.d.ts:70734
 
 ___
 
 ### testProxy
 
-▸ **testProxy**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **testProxy**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Sends a simple network request to the Telegram servers via proxy; for testing only. Can be called before authorization
 
@@ -15496,19 +17647,19 @@ Sends a simple network request to the Telegram servers via proxy; for testing on
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62424
+dist/generated/types.d.ts:70741
 
 ___
 
 ### testReturnError
 
-▸ **testReturnError**(`parameters`): `Promise`<[`error`](../modules/index.types.default.md#error-1)\>
+▸ **testReturnError**(`parameters`): `Promise`\<[`error`](../modules/index.types.default.md#error-1)\>
 
 Returns the specified error and ensures that the Error object is used; for testing only. Can be called synchronously
 
@@ -15520,19 +17671,19 @@ Returns the specified error and ensures that the Error object is used; for testi
 
 #### Returns
 
-`Promise`<[`error`](../modules/index.types.default.md#error-1)\>
+`Promise`\<[`error`](../modules/index.types.default.md#error-1)\>
 
 Promise<[Error](../modules/index.types.default.md#error)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62445
+dist/generated/types.d.ts:70762
 
 ___
 
 ### testSquareInt
 
-▸ **testSquareInt**(`parameters`): `Promise`<[`testInt`](../modules/index.types.default.md#testint-1)\>
+▸ **testSquareInt**(`parameters`): `Promise`\<[`testInt`](../modules/index.types.default.md#testint-1)\>
 
 Returns the squared received number; for testing only. This is an offline method. Can be called before authorization
 
@@ -15544,19 +17695,19 @@ Returns the squared received number; for testing only. This is an offline method
 
 #### Returns
 
-`Promise`<[`testInt`](../modules/index.types.default.md#testint-1)\>
+`Promise`\<[`testInt`](../modules/index.types.default.md#testint-1)\>
 
 Promise<[TestInt](../modules/index.types.default.md#testint)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62410
+dist/generated/types.d.ts:70727
 
 ___
 
 ### testUseUpdate
 
-▸ **testUseUpdate**(`parameters`): `Promise`<[`Update`](../modules/index.types.default.md#update)\>
+▸ **testUseUpdate**(`parameters`): `Promise`\<[`Update`](../modules/index.types.default.md#update)\>
 
 Does nothing and ensures that the Update object is used; for testing only. This is an offline method. Can be called before authorization
 
@@ -15568,19 +17719,19 @@ Does nothing and ensures that the Update object is used; for testing only. This 
 
 #### Returns
 
-`Promise`<[`Update`](../modules/index.types.default.md#update)\>
+`Promise`\<[`Update`](../modules/index.types.default.md#update)\>
 
 Promise<[Update](../modules/index.types.default.md#update)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62438
+dist/generated/types.d.ts:70755
 
 ___
 
 ### toggleAllDownloadsArePaused
 
-▸ **toggleAllDownloadsArePaused**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleAllDownloadsArePaused**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes pause state of all files in the file download list
 
@@ -15592,19 +17743,19 @@ Changes pause state of all files in the file download list
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60103
+dist/generated/types.d.ts:68166
 
 ___
 
 ### toggleBotIsAddedToAttachmentMenu
 
-▸ **toggleBotIsAddedToAttachmentMenu**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleBotIsAddedToAttachmentMenu**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Adds or removes a bot to attachment and side menu. Bot can be added to the menu, only if userTypeBot.can_be_added_to_attachment_menu == true
 
@@ -15616,19 +17767,19 @@ Adds or removes a bot to attachment and side menu. Bot can be added to the menu,
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59973
+dist/generated/types.d.ts:68013
 
 ___
 
 ### toggleBotUsernameIsActive
 
-▸ **toggleBotUsernameIsActive**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleBotUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes active state for a username of a bot. The editable username can't be disabled. May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached. Can be called only if userTypeBot.can_be_edited == true
 
@@ -15640,19 +17791,43 @@ Changes active state for a username of a bot. The editable username can't be dis
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61126
+dist/generated/types.d.ts:69352
+
+___
+
+### toggleBusinessConnectedBotChatIsPaused
+
+▸ **toggleBusinessConnectedBotChatIsPaused**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Pauses or resumes the connected business bot in a specific chat
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`toggleBusinessConnectedBotChatIsPaused$DirectInput`](../modules/index.types.default.md#togglebusinessconnectedbotchatispaused$directinput) | [toggleBusinessConnectedBotChatIsPaused$Input](../modules/index.types.default.md#togglebusinessconnectedbotchatispaused$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69198
 
 ___
 
 ### toggleChatDefaultDisableNotification
 
-▸ **toggleChatDefaultDisableNotification**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleChatDefaultDisableNotification**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the value of the default disable_notification parameter, used when a message is sent to a chat
 
@@ -15664,19 +17839,43 @@ Changes the value of the default disable_notification parameter, used when a mes
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59515
+dist/generated/types.d.ts:67514
+
+___
+
+### toggleChatFolderTags
+
+▸ **toggleChatFolderTags**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Toggles whether chat folder tags are enabled
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`toggleChatFolderTags$DirectInput`](../modules/index.types.default.md#togglechatfoldertags$directinput) | [toggleChatFolderTags$Input](../modules/index.types.default.md#togglechatfoldertags$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:67302
 
 ___
 
 ### toggleChatHasProtectedContent
 
-▸ **toggleChatHasProtectedContent**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleChatHasProtectedContent**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the ability of users to save, forward, or copy chat content. Supported only for basic groups, supergroups and channels. Requires owner privileges
 
@@ -15688,19 +17887,19 @@ Changes the ability of users to save, forward, or copy chat content. Supported o
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59487
+dist/generated/types.d.ts:67486
 
 ___
 
 ### toggleChatIsMarkedAsUnread
 
-▸ **toggleChatIsMarkedAsUnread**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleChatIsMarkedAsUnread**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the marked as unread state of a chat
 
@@ -15712,19 +17911,19 @@ Changes the marked as unread state of a chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59508
+dist/generated/types.d.ts:67507
 
 ___
 
 ### toggleChatIsPinned
 
-▸ **toggleChatIsPinned**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleChatIsPinned**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
 
@@ -15736,19 +17935,19 @@ Changes the pinned state of a chat. There can be up to getOption("pinned_chat_co
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59732
+dist/generated/types.d.ts:67744
 
 ___
 
 ### toggleChatIsTranslatable
 
-▸ **toggleChatIsTranslatable**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleChatIsTranslatable**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes the translatable state of a chat
 
@@ -15760,21 +17959,21 @@ Changes the translatable state of a chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59501
+dist/generated/types.d.ts:67500
 
 ___
 
 ### toggleChatViewAsTopics
 
-▸ **toggleChatViewAsTopics**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleChatViewAsTopics**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the view_as_topics setting of a forum chat
+Changes the view_as_topics setting of a forum chat or Saved Messages
 
 #### Parameters
 
@@ -15784,19 +17983,19 @@ Changes the view_as_topics setting of a forum chat
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59494
+dist/generated/types.d.ts:67493
 
 ___
 
 ### toggleDownloadIsPaused
 
-▸ **toggleDownloadIsPaused**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleDownloadIsPaused**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes pause state of a file in the file download list
 
@@ -15808,21 +18007,21 @@ Changes pause state of a file in the file download list
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60096
+dist/generated/types.d.ts:68159
 
 ___
 
 ### toggleForumTopicIsClosed
 
-▸ **toggleForumTopicIsClosed**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleForumTopicIsClosed**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Toggles whether a topic is closed in a forum supergroup chat; requires can_manage_topics administrator right in the supergroup unless the user is creator of the topic
+Toggles whether a topic is closed in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
 
 #### Parameters
 
@@ -15832,21 +18031,21 @@ Toggles whether a topic is closed in a forum supergroup chat; requires can_manag
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58742
+dist/generated/types.d.ts:66669
 
 ___
 
 ### toggleForumTopicIsPinned
 
-▸ **toggleForumTopicIsPinned**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleForumTopicIsPinned**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the pinned state of a forum topic; requires can_manage_topics administrator right in the supergroup. There can be up to getOption("pinned_forum_topic_count_max") pinned forum topics
+Changes the pinned state of a forum topic; requires can_manage_topics right in the supergroup. There can be up to getOption("pinned_forum_topic_count_max") pinned forum topics
 
 #### Parameters
 
@@ -15856,21 +18055,21 @@ Changes the pinned state of a forum topic; requires can_manage_topics administra
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58756
+dist/generated/types.d.ts:66683
 
 ___
 
 ### toggleGeneralForumTopicIsHidden
 
-▸ **toggleGeneralForumTopicIsHidden**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleGeneralForumTopicIsHidden**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Toggles whether a General topic is hidden in a forum supergroup chat; requires can_manage_topics administrator right in the supergroup
+Toggles whether a General topic is hidden in a forum supergroup chat; requires can_manage_topics right in the supergroup
 
 #### Parameters
 
@@ -15880,19 +18079,19 @@ Toggles whether a General topic is hidden in a forum supergroup chat; requires c
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58749
+dist/generated/types.d.ts:66676
 
 ___
 
 ### toggleGroupCallEnabledStartNotification
 
-▸ **toggleGroupCallEnabledStartNotification**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleGroupCallEnabledStartNotification**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether the current user will receive a notification when the group call starts; scheduled group calls only
 
@@ -15904,19 +18103,19 @@ Toggles whether the current user will receive a notification when the group call
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60357
+dist/generated/types.d.ts:68427
 
 ___
 
 ### toggleGroupCallIsMyVideoEnabled
 
-▸ **toggleGroupCallIsMyVideoEnabled**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleGroupCallIsMyVideoEnabled**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether current user's video is enabled
 
@@ -15928,19 +18127,19 @@ Toggles whether current user's video is enabled
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60448
+dist/generated/types.d.ts:68518
 
 ___
 
 ### toggleGroupCallIsMyVideoPaused
 
-▸ **toggleGroupCallIsMyVideoPaused**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleGroupCallIsMyVideoPaused**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether current user's video is paused
 
@@ -15952,19 +18151,19 @@ Toggles whether current user's video is paused
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60441
+dist/generated/types.d.ts:68511
 
 ___
 
 ### toggleGroupCallMuteNewParticipants
 
-▸ **toggleGroupCallMuteNewParticipants**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleGroupCallMuteNewParticipants**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether new participants of a group call can be unmuted only by administrators of the group call. Requires groupCall.can_toggle_mute_new_participants group call flag
 
@@ -15976,19 +18175,19 @@ Toggles whether new participants of a group call can be unmuted only by administ
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60399
+dist/generated/types.d.ts:68469
 
 ___
 
 ### toggleGroupCallParticipantIsHandRaised
 
-▸ **toggleGroupCallParticipantIsHandRaised**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleGroupCallParticipantIsHandRaised**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether a group call participant hand is rased
 
@@ -16000,19 +18199,19 @@ Toggles whether a group call participant hand is rased
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60476
+dist/generated/types.d.ts:68546
 
 ___
 
 ### toggleGroupCallParticipantIsMuted
 
-▸ **toggleGroupCallParticipantIsMuted**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleGroupCallParticipantIsMuted**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether a participant of an active group call is muted, unmuted, or allowed to unmute themselves
 
@@ -16024,19 +18223,19 @@ Toggles whether a participant of an active group call is muted, unmuted, or allo
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60462
+dist/generated/types.d.ts:68532
 
 ___
 
 ### toggleGroupCallScreenSharingIsPaused
 
-▸ **toggleGroupCallScreenSharingIsPaused**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleGroupCallScreenSharingIsPaused**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Pauses or unpauses screen sharing in a joined group call
 
@@ -16048,19 +18247,67 @@ Pauses or unpauses screen sharing in a joined group call
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60378
+dist/generated/types.d.ts:68448
+
+___
+
+### toggleHasSponsoredMessagesEnabled
+
+▸ **toggleHasSponsoredMessagesEnabled**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`toggleHasSponsoredMessagesEnabled$DirectInput`](../modules/index.types.default.md#togglehassponsoredmessagesenabled$directinput) | [toggleHasSponsoredMessagesEnabled$Input](../modules/index.types.default.md#togglehassponsoredmessagesenabled$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69100
+
+___
+
+### toggleSavedMessagesTopicIsPinned
+
+▸ **toggleSavedMessagesTopicIsPinned**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Changes the pinned state of a Saved Messages topic. There can be up to getOption("pinned_saved_messages_topic_count_max") pinned topics. The limit can be increased with Telegram Premium
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`toggleSavedMessagesTopicIsPinned$DirectInput`](../modules/index.types.default.md#togglesavedmessagestopicispinned$directinput) | [toggleSavedMessagesTopicIsPinned$Input](../modules/index.types.default.md#togglesavedmessagestopicispinned$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:66033
 
 ___
 
 ### toggleSessionCanAcceptCalls
 
-▸ **toggleSessionCanAcceptCalls**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSessionCanAcceptCalls**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether a session can accept incoming calls
 
@@ -16072,19 +18319,19 @@ Toggles whether a session can accept incoming calls
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61196
+dist/generated/types.d.ts:69422
 
 ___
 
 ### toggleSessionCanAcceptSecretChats
 
-▸ **toggleSessionCanAcceptSecretChats**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSessionCanAcceptSecretChats**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether a session can accept incoming secret chats
 
@@ -16096,43 +18343,67 @@ Toggles whether a session can accept incoming secret chats
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61203
+dist/generated/types.d.ts:69429
 
 ___
 
-### toggleStoryIsPinned
+### toggleStoryIsPostedToChatPage
 
-▸ **toggleStoryIsPinned**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleStoryIsPostedToChatPage**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_pinned == true
+Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`toggleStoryIsPinned$DirectInput`](../modules/index.types.default.md#togglestoryispinned$directinput) | [toggleStoryIsPinned$Input](../modules/index.types.default.md#togglestoryispinned$input) |
+| `parameters` | [`toggleStoryIsPostedToChatPage$DirectInput`](../modules/index.types.default.md#togglestoryispostedtochatpage$directinput) | [toggleStoryIsPostedToChatPage$Input](../modules/index.types.default.md#togglestoryispostedtochatpage$input) |
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59795
+dist/generated/types.d.ts:67807
+
+___
+
+### toggleSupergroupCanHaveSponsoredMessages
+
+▸ **toggleSupergroupCanHaveSponsoredMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameters` | [`toggleSupergroupCanHaveSponsoredMessages$DirectInput`](../modules/index.types.default.md#togglesupergroupcanhavesponsoredmessages$directinput) | [toggleSupergroupCanHaveSponsoredMessages$Input](../modules/index.types.default.md#togglesupergroupcanhavesponsoredmessages$input) |
+
+#### Returns
+
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
+
+Promise<[Ok](../modules/index.types.default.md#ok)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69543
 
 ___
 
 ### toggleSupergroupHasAggressiveAntiSpamEnabled
 
-▸ **toggleSupergroupHasAggressiveAntiSpamEnabled**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupHasAggressiveAntiSpamEnabled**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether aggressive anti-spam checks are enabled in the supergroup. Can be called only if supergroupFullInfo.can_toggle_aggressive_anti_spam == true
 
@@ -16144,19 +18415,19 @@ Toggles whether aggressive anti-spam checks are enabled in the supergroup. Can b
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61310
+dist/generated/types.d.ts:69557
 
 ___
 
 ### toggleSupergroupHasHiddenMembers
 
-▸ **toggleSupergroupHasHiddenMembers**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupHasHiddenMembers**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether non-administrators can receive only administrators and bots using getSupergroupMembers or searchChatMembers. Can be called only if supergroupFullInfo.can_hide_members == true
 
@@ -16168,21 +18439,21 @@ Toggles whether non-administrators can receive only administrators and bots usin
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61303
+dist/generated/types.d.ts:69550
 
 ___
 
 ### toggleSupergroupIsAllHistoryAvailable
 
-▸ **toggleSupergroupIsAllHistoryAvailable**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupIsAllHistoryAvailable**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Toggles whether the message history of a supergroup is available to new members; requires can_change_info administrator right
+Toggles whether the message history of a supergroup is available to new members; requires can_change_info member right
 
 #### Parameters
 
@@ -16192,19 +18463,19 @@ Toggles whether the message history of a supergroup is available to new members;
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61296
+dist/generated/types.d.ts:69536
 
 ___
 
 ### toggleSupergroupIsBroadcastGroup
 
-▸ **toggleSupergroupIsBroadcastGroup**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupIsBroadcastGroup**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Upgrades supergroup to a broadcast group; requires owner privileges in the supergroup
 
@@ -16216,19 +18487,19 @@ Upgrades supergroup to a broadcast group; requires owner privileges in the super
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61324
+dist/generated/types.d.ts:69571
 
 ___
 
 ### toggleSupergroupIsForum
 
-▸ **toggleSupergroupIsForum**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupIsForum**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether the supergroup is a forum; requires owner privileges in the supergroup. Discussion supergroups can't be converted to forums
 
@@ -16240,19 +18511,19 @@ Toggles whether the supergroup is a forum; requires owner privileges in the supe
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61317
+dist/generated/types.d.ts:69564
 
 ___
 
 ### toggleSupergroupJoinByRequest
 
-▸ **toggleSupergroupJoinByRequest**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupJoinByRequest**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether all users directly joining the supergroup need to be approved by supergroup administrators; requires can_restrict_members administrator right
 
@@ -16264,19 +18535,19 @@ Toggles whether all users directly joining the supergroup need to be approved by
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61289
+dist/generated/types.d.ts:69529
 
 ___
 
 ### toggleSupergroupJoinToSendMessages
 
-▸ **toggleSupergroupJoinToSendMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupJoinToSendMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Toggles whether joining is mandatory to send messages to a discussion supergroup; requires can_restrict_members administrator right
 
@@ -16288,21 +18559,21 @@ Toggles whether joining is mandatory to send messages to a discussion supergroup
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61282
+dist/generated/types.d.ts:69522
 
 ___
 
 ### toggleSupergroupSignMessages
 
-▸ **toggleSupergroupSignMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupSignMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Toggles whether sender signature is added to sent messages in a channel; requires can_change_info administrator right
+Toggles whether sender signature is added to sent messages in a channel; requires can_change_info member right
 
 #### Parameters
 
@@ -16312,19 +18583,19 @@ Toggles whether sender signature is added to sent messages in a channel; require
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61275
+dist/generated/types.d.ts:69515
 
 ___
 
 ### toggleSupergroupUsernameIsActive
 
-▸ **toggleSupergroupUsernameIsActive**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleSupergroupUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes active state for a username of a supergroup or channel, requires owner privileges in the supergroup or channel. The editable username can't be disabled.
 
@@ -16338,19 +18609,19 @@ Changes active state for a username of a supergroup or channel, requires owner p
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61247
+dist/generated/types.d.ts:69473
 
 ___
 
 ### toggleUsernameIsActive
 
-▸ **toggleUsernameIsActive**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **toggleUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Changes active state for a username of the current user. The editable username can't be disabled. May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached
 
@@ -16362,21 +18633,21 @@ Changes active state for a username of the current user. The editable username c
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60972
+dist/generated/types.d.ts:69058
 
 ___
 
 ### transferChatOwnership
 
-▸ **transferChatOwnership**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **transferChatOwnership**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Changes the owner of a chat. The current user must be a current owner of the chat. Use the method canTransferOwnership to check whether the ownership can be transferred from the current session. Available only for supergroups and channel chats
+Changes the owner of a chat; requires owner privileges in the chat. Use the method canTransferOwnership to check whether the ownership can be transferred from the current session. Available only for supergroups and channel chats
 
 #### Parameters
 
@@ -16386,19 +18657,19 @@ Changes the owner of a chat. The current user must be a current owner of the cha
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59641
+dist/generated/types.d.ts:67646
 
 ___
 
 ### translateMessageText
 
-▸ **translateMessageText**(`parameters`): `Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+▸ **translateMessageText**(`parameters`): `Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Extracts text or caption of the given message and translates it to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
 
@@ -16410,19 +18681,19 @@ Extracts text or caption of the given message and translates it to the given lan
 
 #### Returns
 
-`Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+`Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58507
+dist/generated/types.d.ts:66296
 
 ___
 
 ### translateText
 
-▸ **translateText**(`parameters`): `Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+▸ **translateText**(`parameters`): `Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Translates a text to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
 
@@ -16434,21 +18705,21 @@ Translates a text to the given language. If the current user is a Telegram Premi
 
 #### Returns
 
-`Promise`<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
+`Promise`\<[`formattedText`](../modules/index.types.default.md#formattedtext-1)\>
 
 Promise<[FormattedText](../modules/index.types.default.md#formattedtext)>
 
 #### Defined in
 
-dist/generated/types.d.ts:58500
+dist/generated/types.d.ts:66289
 
 ___
 
 ### unpinAllChatMessages
 
-▸ **unpinAllChatMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **unpinAllChatMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Removes all pinned messages from a chat; requires can_pin_messages rights in the group or can_edit_messages rights in the channel
+Removes all pinned messages from a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
 
 #### Parameters
 
@@ -16458,21 +18729,21 @@ Removes all pinned messages from a chat; requires can_pin_messages rights in the
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59578
+dist/generated/types.d.ts:67577
 
 ___
 
 ### unpinAllMessageThreadMessages
 
-▸ **unpinAllMessageThreadMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **unpinAllMessageThreadMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Removes all pinned messages from a forum topic; requires can_pin_messages rights in the supergroup
+Removes all pinned messages from a forum topic; requires can_pin_messages member right in the supergroup
 
 #### Parameters
 
@@ -16482,21 +18753,21 @@ Removes all pinned messages from a forum topic; requires can_pin_messages rights
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59585
+dist/generated/types.d.ts:67584
 
 ___
 
 ### unpinChatMessage
 
-▸ **unpinChatMessage**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **unpinChatMessage**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
-Removes a pinned message from a chat; requires can_pin_messages rights in the group or can_edit_messages rights in the channel
+Removes a pinned message from a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
 
 #### Parameters
 
@@ -16506,21 +18777,21 @@ Removes a pinned message from a chat; requires can_pin_messages rights in the gr
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59571
+dist/generated/types.d.ts:67570
 
 ___
 
 ### upgradeBasicGroupChatToSupergroupChat
 
-▸ **upgradeBasicGroupChatToSupergroupChat**(`parameters`): `Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+▸ **upgradeBasicGroupChatToSupergroupChat**(`parameters`): `Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
-Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires creator privileges. Deactivates the original basic group
+Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
 
 #### Parameters
 
@@ -16530,19 +18801,19 @@ Creates a new supergroup from an existing basic group and sends a corresponding 
 
 #### Returns
 
-`Promise`<[`chat`](../modules/index.types.default.md#chat-1)\>
+`Promise`\<[`chat`](../modules/index.types.default.md#chat-1)\>
 
 Promise<[Chat](../modules/index.types.default.md#chat)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59254
+dist/generated/types.d.ts:67232
 
 ___
 
 ### uploadStickerFile
 
-▸ **uploadStickerFile**(`parameters`): `Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+▸ **uploadStickerFile**(`parameters`): `Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Uploads a file with a sticker; returns the uploaded file
 
@@ -16554,19 +18825,19 @@ Uploads a file with a sticker; returns the uploaded file
 
 #### Returns
 
-`Promise`<[`file`](../modules/index.types.default.md#file-1)\>
+`Promise`\<[`file`](../modules/index.types.default.md#file-1)\>
 
 Promise<[File](../modules/index.types.default.md#file)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61927
+dist/generated/types.d.ts:70209
 
 ___
 
 ### validateOrderInfo
 
-▸ **validateOrderInfo**(`parameters`): `Promise`<[`validatedOrderInfo`](../modules/index.types.default.md#validatedorderinfo-1)\>
+▸ **validateOrderInfo**(`parameters`): `Promise`\<[`validatedOrderInfo`](../modules/index.types.default.md#validatedorderinfo-1)\>
 
 Validates the order information provided by a user and returns the available shipping options for a flexible invoice
 
@@ -16578,19 +18849,19 @@ Validates the order information provided by a user and returns the available shi
 
 #### Returns
 
-`Promise`<[`validatedOrderInfo`](../modules/index.types.default.md#validatedorderinfo-1)\>
+`Promise`\<[`validatedOrderInfo`](../modules/index.types.default.md#validatedorderinfo-1)\>
 
 Promise<[ValidatedOrderInfo](../modules/index.types.default.md#validatedorderinfo)>
 
 #### Defined in
 
-dist/generated/types.d.ts:61373
+dist/generated/types.d.ts:69627
 
 ___
 
 ### viewMessages
 
-▸ **viewMessages**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **viewMessages**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that messages are being viewed by the user. Sponsored messages must be marked as viewed only when the entire text of the message is shown on the screen (excluding the button).
 
@@ -16604,19 +18875,19 @@ Informs TDLib that messages are being viewed by the user. Sponsored messages mus
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:59126
+dist/generated/types.d.ts:67104
 
 ___
 
 ### viewPremiumFeature
 
-▸ **viewPremiumFeature**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **viewPremiumFeature**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs TDLib that the user viewed detailed information about a Premium feature on the Premium features screen
 
@@ -16628,19 +18899,19 @@ Informs TDLib that the user viewed detailed information about a Premium feature 
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:62053
+dist/generated/types.d.ts:70349
 
 ___
 
 ### viewTrendingStickerSets
 
-▸ **viewTrendingStickerSets**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **viewTrendingStickerSets**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Informs the server that some trending sticker sets have been viewed by the user
 
@@ -16652,19 +18923,19 @@ Informs the server that some trending sticker sets have been viewed by the user
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60737
+dist/generated/types.d.ts:68814
 
 ___
 
 ### writeGeneratedFilePart
 
-▸ **writeGeneratedFilePart**(`parameters`): `Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+▸ **writeGeneratedFilePart**(`parameters`): `Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Writes a part of a generated file. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct write to the destination file
 
@@ -16676,10 +18947,10 @@ Writes a part of a generated file. This method is intended to be used only if th
 
 #### Returns
 
-`Promise`<[`ok`](../modules/index.types.default.md#ok-1)\>
+`Promise`\<[`ok`](../modules/index.types.default.md#ok-1)\>
 
 Promise<[Ok](../modules/index.types.default.md#ok)>
 
 #### Defined in
 
-dist/generated/types.d.ts:60052
+dist/generated/types.d.ts:68115

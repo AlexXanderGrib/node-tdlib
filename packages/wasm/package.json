@@ -1,5 +1,5 @@
 {
-  "name": "@tdlib-native/tdjson-win32-x64",
+  "name": "@tdlib-native/wasm",
   "version": "1.8.22-commit.1a50ec474ce2c2c09017aa3ab9cc9e0c68f483fc",
   "description": "Built TDLib",
   "keywords": [
@@ -22,12 +22,6 @@
   "engines": {
     "node": ">=14"
   },
-  "os": [
-    "win32"
-  ],
-  "cpu": [
-    "x64"
-  ],
   "main": "./index.js",
   "module": "./index.mjs",
   "types": "./index.d.ts",

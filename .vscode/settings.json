@@ -6,5 +6,8 @@
     "supergroup",
     "tdesktop",
     "tdlib"
-  ]
+  ],
+  "files.associations": {
+    "*.json": "jsonc"
+  }
 }

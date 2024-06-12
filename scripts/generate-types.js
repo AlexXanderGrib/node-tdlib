@@ -142,7 +142,7 @@ class Namespace {
  *
  *
  * @param {string} comment
- * @return {string}
+ * @returns {string}
  */
 function splitComments(comment) {
   return comment.replace(/\n/g, "\n * \n * ").replace(/\* -/g, "* - ");
@@ -152,7 +152,7 @@ function splitComments(comment) {
  *
  *
  * @param {string} typename
- * @return {string}
+ * @returns {string}
  */
 function getInputAlias(typename) {
   const genericIndex = typename.indexOf("<");
@@ -226,7 +226,7 @@ export type ${getInputAlias(declaration.name).replace("$Input", "$DirectInput")}
  * @param {${getInputAlias(declaration.name)}} parameters {@link ${getInputAlias(
     declaration.name
   )}}
- * @return {${declaration.result}} {@link ${declaration.result}}
+ * @returns {${declaration.result}} {@link ${declaration.result}}
  */
 export type ${declaration.name} = (parameters: ${getInputAlias(
     declaration.name
@@ -317,7 +317,7 @@ function createEnum(name, values) {
  *
  *
  * @param {string} text
- * @return {Declaration[]}
+ * @returns {Declaration[]}
  */
 function parse(text) {
   const lines = text.split("\n");
@@ -370,7 +370,7 @@ types.forEach((declaration) => {
  *
  *
  * @param {string[]} strings
- * @return {string}
+ * @returns {string}
  */
 function getCommonStart(strings) {
   let commonStart = "";
@@ -523,7 +523,7 @@ Object.values(namespaces).forEach((ref) => {
            * ${splitComments(comment)}
            * 
            * @param {${alias}} parameters {@link ${input}}
-           * @return {Promise<${result}>} Promise<{@link ${result}}>
+           * @returns {Promise<${result}>} Promise<{@link ${result}}>
            */
           async ${name}(parameters: ${alias}): Promise<${result}> {
             const result = await this.client.invoke("${name}", parameters);
@@ -569,7 +569,7 @@ Object.values(namespaces).forEach((ref) => {
            * ${splitComments(comment)}
            * 
            * @param {${alias}} parameters - {@link ${input}}
-           * @return {${result}} {@link ${result}}
+           * @returns {${result}} {@link ${result}}
            */
           ${name}(parameters: ${alias}): ${result} {
             return this.client.execute("${name}", parameters) as ${result};

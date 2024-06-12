@@ -148,7 +148,7 @@ export class TDLibOptions {
    *
    * @static
    * @param {$AsyncApi} api
-   * @return {*}  {TDLibOptions}
+   * @returns {*}  {TDLibOptions}
    * @memberof TDLibOptions
    */
   static for(api: $AsyncApi): TDLibOptions {
@@ -179,7 +179,7 @@ export class TDLibOptions {
    *
    * @template {Keys} T
    * @param {T} key
-   * @return {Promise<*>}  {Promise<TelegramOptionsExtended[T]>}
+   * @returns {Promise<*>}  {Promise<TelegramOptionsExtended[T]>}
    * @memberof TDLibOptions
    */
   async get<T extends Keys>(key: T): Promise<OptionsReadable[T]> {
@@ -208,7 +208,7 @@ export class TDLibOptions {
    * @template {Keys} T
    * @param {T} key
    * @param {*} value
-   * @return {Promise<void>}  {Promise<void>}
+   * @returns {Promise<void>}  {Promise<void>}
    * @memberof TDLibOptions
    */
   async set<T extends WritableKeys>(
@@ -246,6 +246,7 @@ export class TDLibOptions {
    *
    * @param {Keys} key
    * @memberof TDLibOptions
+   * @returns {Promise<void>}
    */
   async delete(key: Keys): Promise<void> {
     await this.set(key, undefined);
@@ -256,6 +257,7 @@ export class TDLibOptions {
    *
    * @param {OptionsWritable} values
    * @memberof TDLibOptions
+   * @returns {Promise<void>}
    */
   async assign(values: OptionsWritable): Promise<void> {
     const promises = Object.entries(values).map(([key, value]) =>

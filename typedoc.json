@@ -8,5 +8,6 @@
   "hideGenerator": true,
   "readme": "README.md",
   "theme": "default",
-  "tsconfig": "./tsconfig.json"
+  "tsconfig": "./tsconfig.json",
+  "plugin": ["typedoc-plugin-markdown"]
 }

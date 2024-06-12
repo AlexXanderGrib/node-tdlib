@@ -6,6 +6,8 @@
 
 **`Export`**
 
+TDError
+
 **`Implements`**
 
 ## Hierarchy
@@ -40,13 +42,9 @@
 
 ### constructor
 
-• **new TDError**(`message`, `options?`)
+• **new TDError**(`message`, `options?`): [`TDError`](index.TDError.md)
 
 Creates an instance of TDError.
-
-**`Memberof`**
-
-TDError
 
 #### Parameters
 
@@ -57,6 +55,14 @@ TDError
 | `options.code?` | `number` |
 | `options.method?` | `string` |
 | `options.parameters?` | `unknown` |
+
+#### Returns
+
+[`TDError`](index.TDError.md)
+
+**`Memberof`**
+
+TDError
 
 #### Overrides
 
@@ -134,10 +140,6 @@ dist/client.d.ts:20
 
 ▸ **toJSON**(): `Object`
 
-**`Memberof`**
-
-TDError
-
 #### Returns
 
 `Object`
@@ -150,6 +152,10 @@ TDError
 | `method` | `string` |
 | `name` | `string` |
 | `parameters` | `unknown` |
+
+**`Memberof`**
+
+TDError
 
 #### Defined in
 

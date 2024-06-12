@@ -8,7 +8,7 @@ const tdKey = /"@type":/g;
  *
  * @param {*} _key
  * @param {*} value
- * @return {*}  {*}
+ * @returns {*}  {*}
  */
 function replacer(_key: keyof any, value: unknown): any {
   if (typeof value === "bigint") {
@@ -38,7 +38,7 @@ function replacer(_key: keyof any, value: unknown): any {
  *
  * @export
  * @param {*} data
- * @return {string}  {string}
+ * @returns {string}  {string}
  */
 export function serialize(data: unknown): string {
   const json = JSON.stringify(data, replacer);
@@ -51,7 +51,7 @@ export function serialize(data: unknown): string {
  * @export
  * @template T
  * @param {string} json
- * @return {T}  {T}
+ * @returns {T}  {T}
  */
 export function deserialize<T = unknown>(json: string): T {
   return JSON.parse(json.replace(tdKey, '"_":'));

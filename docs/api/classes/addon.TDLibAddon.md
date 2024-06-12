@@ -6,11 +6,13 @@
 
 **`Export`**
 
+TDLibAddon
+
 **`Implements`**
 
 ## Implements
 
-- [`TDLib`](../interfaces/index._internal_.TDLib.md)
+- `TDLib`
 
 ## Table of contents
 
@@ -41,9 +43,13 @@
 
 ### constructor
 
-• `Private` **new TDLibAddon**()
+• **new TDLibAddon**(): [`TDLibAddon`](addon.TDLibAddon.md)
 
 Creates an instance of TDLibAddon.
+
+#### Returns
+
+[`TDLibAddon`](addon.TDLibAddon.md)
 
 **`Memberof`**
 
@@ -71,7 +77,7 @@ ___
 
 #### Implementation of
 
-[TDLib](../interfaces/index._internal_.TDLib.md).[_isTDLib](../interfaces/index._internal_.TDLib.md#_istdlib)
+TDLib.\_isTDLib
 
 #### Defined in
 
@@ -83,17 +89,17 @@ dist/addon/addon.d.ts:36
 
 • `get` **name**(): `string`
 
-**`Memberof`**
-
-TDLibAddon
-
 #### Returns
 
 `string`
 
+**`Memberof`**
+
+TDLibAddon
+
 #### Implementation of
 
-[TDLib](../interfaces/index._internal_.TDLib.md).[name](../interfaces/index._internal_.TDLib.md#name)
+TDLib.name
 
 #### Defined in
 
@@ -103,21 +109,21 @@ dist/addon/addon.d.ts:43
 
 ### create
 
-▸ **create**(): [`TDLibClient`](../modules/index._internal_.md#tdlibclient)
+▸ **create**(): `TDLibClient`
+
+#### Returns
+
+`TDLibClient`
+
+{TDLibClient}
 
 **`Memberof`**
 
 TDLibAddon
 
-#### Returns
-
-[`TDLibClient`](../modules/index._internal_.md#tdlibclient)
-
-{TDLibClient}
-
 #### Implementation of
 
-[TDLib](../interfaces/index._internal_.TDLib.md).[create](../interfaces/index._internal_.TDLib.md#create)
+TDLib.create
 
 #### Defined in
 
@@ -129,23 +135,23 @@ ___
 
 ▸ **destroy**(`client`): `void`
 
-**`Memberof`**
-
-TDLibAddon
-
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | `TDLibClient` |
 
 #### Returns
 
 `void`
 
+**`Memberof`**
+
+TDLibAddon
+
 #### Implementation of
 
-[TDLib](../interfaces/index._internal_.TDLib.md).[destroy](../interfaces/index._internal_.TDLib.md#destroy)
+TDLib.destroy
 
 #### Defined in
 
@@ -157,15 +163,11 @@ ___
 
 ▸ **execute**(`client`, `json`): ``null`` \| `string`
 
-**`Memberof`**
-
-TDLibAddon
-
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `client` | ``null`` \| [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | ``null`` \| `TDLibClient` |
 | `json` | `string` |
 
 #### Returns
@@ -174,9 +176,13 @@ TDLibAddon
 
 {(string | null)}
 
+**`Memberof`**
+
+TDLibAddon
+
 #### Implementation of
 
-[TDLib](../interfaces/index._internal_.TDLib.md).[execute](../interfaces/index._internal_.TDLib.md#execute)
+TDLib.execute
 
 #### Defined in
 
@@ -186,28 +192,28 @@ ___
 
 ### receive
 
-▸ **receive**(`client`, `timeout`): `Promise`<``null`` \| `string`\>
-
-**`Memberof`**
-
-TDLibAddon
+▸ **receive**(`client`, `timeout`): `Promise`\<``null`` \| `string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | `TDLibClient` |
 | `timeout` | `number` |
 
 #### Returns
 
-`Promise`<``null`` \| `string`\>
+`Promise`\<``null`` \| `string`\>
 
 {(Promise<string | null>)}
 
+**`Memberof`**
+
+TDLibAddon
+
 #### Implementation of
 
-[TDLib](../interfaces/index._internal_.TDLib.md).[receive](../interfaces/index._internal_.TDLib.md#receive)
+TDLib.receive
 
 #### Defined in
 
@@ -219,24 +225,24 @@ ___
 
 ▸ **send**(`client`, `json`): `void`
 
-**`Memberof`**
-
-TDLibAddon
-
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `client` | [`TDLibClient`](../modules/index._internal_.md#tdlibclient) |
+| `client` | `TDLibClient` |
 | `json` | `string` |
 
 #### Returns
 
 `void`
 
+**`Memberof`**
+
+TDLibAddon
+
 #### Implementation of
 
-[TDLib](../interfaces/index._internal_.TDLib.md).[send](../interfaces/index._internal_.TDLib.md#send)
+TDLib.send
 
 #### Defined in
 
@@ -248,10 +254,6 @@ ___
 
 ▸ **setLogFatalErrorCallback**(`callback`): `void`
 
-**`Memberof`**
-
-TDLibAddon
-
 #### Parameters
 
 | Name | Type |
@@ -262,9 +264,13 @@ TDLibAddon
 
 `void`
 
+**`Memberof`**
+
+TDLibAddon
+
 #### Implementation of
 
-[TDLib](../interfaces/index._internal_.TDLib.md).[setLogFatalErrorCallback](../interfaces/index._internal_.TDLib.md#setlogfatalerrorcallback)
+TDLib.setLogFatalErrorCallback
 
 #### Defined in
 
@@ -274,13 +280,7 @@ ___
 
 ### create
 
-▸ `Static` **create**(`tdlibPath?`, `addonPath?`): `Promise`<[`TDLibAddon`](addon.TDLibAddon.md)\>
-
-**`Static`**
-
-**`Memberof`**
-
-TDLibAddon
+▸ **create**(`tdlibPath?`, `addonPath?`): `Promise`\<[`TDLibAddon`](addon.TDLibAddon.md)\>
 
 #### Parameters
 
@@ -291,7 +291,13 @@ TDLibAddon
 
 #### Returns
 
-`Promise`<[`TDLibAddon`](addon.TDLibAddon.md)\>
+`Promise`\<[`TDLibAddon`](addon.TDLibAddon.md)\>
+
+**`Static`**
+
+**`Memberof`**
+
+TDLibAddon
 
 #### Defined in
 

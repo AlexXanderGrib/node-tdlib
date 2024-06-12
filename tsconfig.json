@@ -38,7 +38,7 @@
     "stripInternal": true
   },
   "exclude": [
-    "dist",
-    "examples"
+    "./dist",
+    "./examples"
   ]
 }

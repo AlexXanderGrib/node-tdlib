@@ -78747,7 +78747,7 @@ export class $AsyncApi {
    * Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
    *
    * @param {getAuthorizationState$DirectInput} parameters {@link getAuthorizationState$Input}
-   * @return {Promise<AuthorizationState>} Promise<{@link AuthorizationState}>
+   * @returns {Promise<AuthorizationState>} Promise<{@link AuthorizationState}>
    */
   async getAuthorizationState(
     parameters: getAuthorizationState$DirectInput
@@ -78760,7 +78760,7 @@ export class $AsyncApi {
    * Sets the parameters for TDLib initialization. Works only when the current authorization state is authorizationStateWaitTdlibParameters
    *
    * @param {setTdlibParameters$DirectInput} parameters {@link setTdlibParameters$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setTdlibParameters(parameters: setTdlibParameters$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setTdlibParameters", parameters);
@@ -78773,7 +78773,7 @@ export class $AsyncApi {
    * - or if there is no pending authentication query and the current authorization state is authorizationStateWaitEmailAddress, authorizationStateWaitEmailCode, authorizationStateWaitCode, authorizationStateWaitRegistration, or authorizationStateWaitPassword
    *
    * @param {setAuthenticationPhoneNumber$DirectInput} parameters {@link setAuthenticationPhoneNumber$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setAuthenticationPhoneNumber(
     parameters: setAuthenticationPhoneNumber$DirectInput
@@ -78789,7 +78789,7 @@ export class $AsyncApi {
    * Sets the email address of the user and sends an authentication code to the email address. Works only when the current authorization state is authorizationStateWaitEmailAddress
    *
    * @param {setAuthenticationEmailAddress$DirectInput} parameters {@link setAuthenticationEmailAddress$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setAuthenticationEmailAddress(
     parameters: setAuthenticationEmailAddress$DirectInput
@@ -78807,7 +78807,7 @@ export class $AsyncApi {
    * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
    *
    * @param {resendAuthenticationCode$DirectInput} parameters {@link resendAuthenticationCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async resendAuthenticationCode(
     parameters: resendAuthenticationCode$DirectInput
@@ -78820,7 +78820,7 @@ export class $AsyncApi {
    * Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
    *
    * @param {checkAuthenticationEmailCode$DirectInput} parameters {@link checkAuthenticationEmailCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkAuthenticationEmailCode(
     parameters: checkAuthenticationEmailCode$DirectInput
@@ -78836,7 +78836,7 @@ export class $AsyncApi {
    * Checks the authentication code. Works only when the current authorization state is authorizationStateWaitCode
    *
    * @param {checkAuthenticationCode$DirectInput} parameters {@link checkAuthenticationCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkAuthenticationCode(
     parameters: checkAuthenticationCode$DirectInput
@@ -78851,7 +78851,7 @@ export class $AsyncApi {
    * - or if there is no pending authentication query and the current authorization state is authorizationStateWaitEmailAddress, authorizationStateWaitEmailCode, authorizationStateWaitCode, authorizationStateWaitRegistration, or authorizationStateWaitPassword
    *
    * @param {requestQrCodeAuthentication$DirectInput} parameters {@link requestQrCodeAuthentication$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async requestQrCodeAuthentication(
     parameters: requestQrCodeAuthentication$DirectInput
@@ -78867,7 +78867,7 @@ export class $AsyncApi {
    * Finishes user registration. Works only when the current authorization state is authorizationStateWaitRegistration
    *
    * @param {registerUser$DirectInput} parameters {@link registerUser$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async registerUser(parameters: registerUser$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("registerUser", parameters);
@@ -78880,7 +78880,7 @@ export class $AsyncApi {
    * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.can_reset_email_address == true
    *
    * @param {resetAuthenticationEmailAddress$DirectInput} parameters {@link resetAuthenticationEmailAddress$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async resetAuthenticationEmailAddress(
     parameters: resetAuthenticationEmailAddress$DirectInput
@@ -78896,7 +78896,7 @@ export class $AsyncApi {
    * Checks the 2-step verification password for correctness. Works only when the current authorization state is authorizationStateWaitPassword
    *
    * @param {checkAuthenticationPassword$DirectInput} parameters {@link checkAuthenticationPassword$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkAuthenticationPassword(
     parameters: checkAuthenticationPassword$DirectInput
@@ -78912,7 +78912,7 @@ export class $AsyncApi {
    * Requests to send a 2-step verification password recovery code to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
    *
    * @param {requestAuthenticationPasswordRecovery$DirectInput} parameters {@link requestAuthenticationPasswordRecovery$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async requestAuthenticationPasswordRecovery(
     parameters: requestAuthenticationPasswordRecovery$DirectInput
@@ -78928,7 +78928,7 @@ export class $AsyncApi {
    * Checks whether a 2-step verification password recovery code sent to an email address is valid. Works only when the current authorization state is authorizationStateWaitPassword
    *
    * @param {checkAuthenticationPasswordRecoveryCode$DirectInput} parameters {@link checkAuthenticationPasswordRecoveryCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkAuthenticationPasswordRecoveryCode(
     parameters: checkAuthenticationPasswordRecoveryCode$DirectInput
@@ -78944,7 +78944,7 @@ export class $AsyncApi {
    * Recovers the 2-step verification password with a password recovery code sent to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
    *
    * @param {recoverAuthenticationPassword$DirectInput} parameters {@link recoverAuthenticationPassword$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async recoverAuthenticationPassword(
     parameters: recoverAuthenticationPassword$DirectInput
@@ -78960,7 +78960,7 @@ export class $AsyncApi {
    * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
    *
    * @param {sendAuthenticationFirebaseSms$DirectInput} parameters {@link sendAuthenticationFirebaseSms$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendAuthenticationFirebaseSms(
     parameters: sendAuthenticationFirebaseSms$DirectInput
@@ -78976,7 +78976,7 @@ export class $AsyncApi {
    * Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
    *
    * @param {reportAuthenticationCodeMissing$DirectInput} parameters {@link reportAuthenticationCodeMissing$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reportAuthenticationCodeMissing(
     parameters: reportAuthenticationCodeMissing$DirectInput
@@ -78992,7 +78992,7 @@ export class $AsyncApi {
    * Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
    *
    * @param {checkAuthenticationBotToken$DirectInput} parameters {@link checkAuthenticationBotToken$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkAuthenticationBotToken(
     parameters: checkAuthenticationBotToken$DirectInput
@@ -79008,7 +79008,7 @@ export class $AsyncApi {
    * Closes the TDLib instance after a proper logout. Requires an available network connection. All local data will be destroyed. After the logout completes, updateAuthorizationState with authorizationStateClosed will be sent
    *
    * @param {logOut$DirectInput} parameters {@link logOut$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async logOut(parameters: logOut$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("logOut", parameters);
@@ -79019,7 +79019,7 @@ export class $AsyncApi {
    * Closes the TDLib instance. All databases will be flushed to disk and properly closed. After the close completes, updateAuthorizationState with authorizationStateClosed will be sent. Can be called before initialization
    *
    * @param {close$DirectInput} parameters {@link close$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async close(parameters: close$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("close", parameters);
@@ -79032,7 +79032,7 @@ export class $AsyncApi {
    * - After the destruction completes updateAuthorizationState with authorizationStateClosed will be sent. Can be called before authorization
    *
    * @param {destroy$DirectInput} parameters {@link destroy$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async destroy(parameters: destroy$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("destroy", parameters);
@@ -79043,7 +79043,7 @@ export class $AsyncApi {
    * Confirms QR code authentication on another device. Returns created session on success
    *
    * @param {confirmQrCodeAuthentication$DirectInput} parameters {@link confirmQrCodeAuthentication$Input}
-   * @return {Promise<Session>} Promise<{@link Session}>
+   * @returns {Promise<Session>} Promise<{@link Session}>
    */
   async confirmQrCodeAuthentication(
     parameters: confirmQrCodeAuthentication$DirectInput
@@ -79059,7 +79059,7 @@ export class $AsyncApi {
    * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others. This is especially useful if TDLib is run in a separate process. Can be called before initialization
    *
    * @param {getCurrentState$DirectInput} parameters {@link getCurrentState$Input}
-   * @return {Promise<Updates>} Promise<{@link Updates}>
+   * @returns {Promise<Updates>} Promise<{@link Updates}>
    */
   async getCurrentState(parameters: getCurrentState$DirectInput): Promise<Updates> {
     const result = await this.client.invoke("getCurrentState", parameters);
@@ -79070,7 +79070,7 @@ export class $AsyncApi {
    * Changes the database encryption key. Usually the encryption key is never changed and is stored in some OS keychain
    *
    * @param {setDatabaseEncryptionKey$DirectInput} parameters {@link setDatabaseEncryptionKey$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setDatabaseEncryptionKey(
     parameters: setDatabaseEncryptionKey$DirectInput
@@ -79083,7 +79083,7 @@ export class $AsyncApi {
    * Returns the current state of 2-step verification
    *
    * @param {getPasswordState$DirectInput} parameters {@link getPasswordState$Input}
-   * @return {Promise<PasswordState>} Promise<{@link PasswordState}>
+   * @returns {Promise<PasswordState>} Promise<{@link PasswordState}>
    */
   async getPasswordState(
     parameters: getPasswordState$DirectInput
@@ -79096,7 +79096,7 @@ export class $AsyncApi {
    * Changes the 2-step verification password for the current user. If a new recovery email address is specified, then the change will not be applied until the new recovery email address is confirmed
    *
    * @param {setPassword$DirectInput} parameters {@link setPassword$Input}
-   * @return {Promise<PasswordState>} Promise<{@link PasswordState}>
+   * @returns {Promise<PasswordState>} Promise<{@link PasswordState}>
    */
   async setPassword(parameters: setPassword$DirectInput): Promise<PasswordState> {
     const result = await this.client.invoke("setPassword", parameters);
@@ -79109,7 +79109,7 @@ export class $AsyncApi {
    * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of an email address, call checkLoginEmailAddressCode directly
    *
    * @param {setLoginEmailAddress$DirectInput} parameters {@link setLoginEmailAddress$Input}
-   * @return {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
+   * @returns {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
    */
   async setLoginEmailAddress(
     parameters: setLoginEmailAddress$DirectInput
@@ -79122,7 +79122,7 @@ export class $AsyncApi {
    * Resends the login email address verification code
    *
    * @param {resendLoginEmailAddressCode$DirectInput} parameters {@link resendLoginEmailAddressCode$Input}
-   * @return {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
+   * @returns {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
    */
   async resendLoginEmailAddressCode(
     parameters: resendLoginEmailAddressCode$DirectInput
@@ -79138,7 +79138,7 @@ export class $AsyncApi {
    * Checks the login email address authentication
    *
    * @param {checkLoginEmailAddressCode$DirectInput} parameters {@link checkLoginEmailAddressCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkLoginEmailAddressCode(
     parameters: checkLoginEmailAddressCode$DirectInput
@@ -79154,7 +79154,7 @@ export class $AsyncApi {
    * Returns a 2-step verification recovery email address that was previously set up. This method can be used to verify a password provided by the user
    *
    * @param {getRecoveryEmailAddress$DirectInput} parameters {@link getRecoveryEmailAddress$Input}
-   * @return {Promise<RecoveryEmailAddress>} Promise<{@link RecoveryEmailAddress}>
+   * @returns {Promise<RecoveryEmailAddress>} Promise<{@link RecoveryEmailAddress}>
    */
   async getRecoveryEmailAddress(
     parameters: getRecoveryEmailAddress$DirectInput
@@ -79169,7 +79169,7 @@ export class $AsyncApi {
    * - If new_recovery_email_address is the same as the email address that is currently set up, this call succeeds immediately and aborts all other requests waiting for an email confirmation
    *
    * @param {setRecoveryEmailAddress$DirectInput} parameters {@link setRecoveryEmailAddress$Input}
-   * @return {Promise<PasswordState>} Promise<{@link PasswordState}>
+   * @returns {Promise<PasswordState>} Promise<{@link PasswordState}>
    */
   async setRecoveryEmailAddress(
     parameters: setRecoveryEmailAddress$DirectInput
@@ -79182,7 +79182,7 @@ export class $AsyncApi {
    * Checks the 2-step verification recovery email address verification code
    *
    * @param {checkRecoveryEmailAddressCode$DirectInput} parameters {@link checkRecoveryEmailAddressCode$Input}
-   * @return {Promise<PasswordState>} Promise<{@link PasswordState}>
+   * @returns {Promise<PasswordState>} Promise<{@link PasswordState}>
    */
   async checkRecoveryEmailAddressCode(
     parameters: checkRecoveryEmailAddressCode$DirectInput
@@ -79198,7 +79198,7 @@ export class $AsyncApi {
    * Resends the 2-step verification recovery email address verification code
    *
    * @param {resendRecoveryEmailAddressCode$DirectInput} parameters {@link resendRecoveryEmailAddressCode$Input}
-   * @return {Promise<PasswordState>} Promise<{@link PasswordState}>
+   * @returns {Promise<PasswordState>} Promise<{@link PasswordState}>
    */
   async resendRecoveryEmailAddressCode(
     parameters: resendRecoveryEmailAddressCode$DirectInput
@@ -79214,7 +79214,7 @@ export class $AsyncApi {
    * Cancels verification of the 2-step verification recovery email address
    *
    * @param {cancelRecoveryEmailAddressVerification$DirectInput} parameters {@link cancelRecoveryEmailAddressVerification$Input}
-   * @return {Promise<PasswordState>} Promise<{@link PasswordState}>
+   * @returns {Promise<PasswordState>} Promise<{@link PasswordState}>
    */
   async cancelRecoveryEmailAddressVerification(
     parameters: cancelRecoveryEmailAddressVerification$DirectInput
@@ -79230,7 +79230,7 @@ export class $AsyncApi {
    * Requests to send a 2-step verification password recovery code to an email address that was previously set up
    *
    * @param {requestPasswordRecovery$DirectInput} parameters {@link requestPasswordRecovery$Input}
-   * @return {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
+   * @returns {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
    */
   async requestPasswordRecovery(
     parameters: requestPasswordRecovery$DirectInput
@@ -79243,7 +79243,7 @@ export class $AsyncApi {
    * Checks whether a 2-step verification password recovery code sent to an email address is valid
    *
    * @param {checkPasswordRecoveryCode$DirectInput} parameters {@link checkPasswordRecoveryCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkPasswordRecoveryCode(
     parameters: checkPasswordRecoveryCode$DirectInput
@@ -79256,7 +79256,7 @@ export class $AsyncApi {
    * Recovers the 2-step verification password using a recovery code sent to an email address that was previously set up
    *
    * @param {recoverPassword$DirectInput} parameters {@link recoverPassword$Input}
-   * @return {Promise<PasswordState>} Promise<{@link PasswordState}>
+   * @returns {Promise<PasswordState>} Promise<{@link PasswordState}>
    */
   async recoverPassword(
     parameters: recoverPassword$DirectInput
@@ -79269,7 +79269,7 @@ export class $AsyncApi {
    * Removes 2-step verification password without previous password and access to recovery email address. The password can't be reset immediately and the request needs to be repeated after the specified time
    *
    * @param {resetPassword$DirectInput} parameters {@link resetPassword$Input}
-   * @return {Promise<ResetPasswordResult>} Promise<{@link ResetPasswordResult}>
+   * @returns {Promise<ResetPasswordResult>} Promise<{@link ResetPasswordResult}>
    */
   async resetPassword(
     parameters: resetPassword$DirectInput
@@ -79282,7 +79282,7 @@ export class $AsyncApi {
    * Cancels reset of 2-step verification password. The method can be called if passwordState.pending_reset_date > 0
    *
    * @param {cancelPasswordReset$DirectInput} parameters {@link cancelPasswordReset$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async cancelPasswordReset(
     parameters: cancelPasswordReset$DirectInput
@@ -79295,7 +79295,7 @@ export class $AsyncApi {
    * Creates a new temporary password for processing payments
    *
    * @param {createTemporaryPassword$DirectInput} parameters {@link createTemporaryPassword$Input}
-   * @return {Promise<TemporaryPasswordState>} Promise<{@link TemporaryPasswordState}>
+   * @returns {Promise<TemporaryPasswordState>} Promise<{@link TemporaryPasswordState}>
    */
   async createTemporaryPassword(
     parameters: createTemporaryPassword$DirectInput
@@ -79308,7 +79308,7 @@ export class $AsyncApi {
    * Returns information about the current temporary password
    *
    * @param {getTemporaryPasswordState$DirectInput} parameters {@link getTemporaryPasswordState$Input}
-   * @return {Promise<TemporaryPasswordState>} Promise<{@link TemporaryPasswordState}>
+   * @returns {Promise<TemporaryPasswordState>} Promise<{@link TemporaryPasswordState}>
    */
   async getTemporaryPasswordState(
     parameters: getTemporaryPasswordState$DirectInput
@@ -79321,7 +79321,7 @@ export class $AsyncApi {
    * Returns the current user
    *
    * @param {getMe$DirectInput} parameters {@link getMe$Input}
-   * @return {Promise<User>} Promise<{@link User}>
+   * @returns {Promise<User>} Promise<{@link User}>
    */
   async getMe(parameters: getMe$DirectInput): Promise<User> {
     const result = await this.client.invoke("getMe", parameters);
@@ -79332,7 +79332,7 @@ export class $AsyncApi {
    * Returns information about a user by their identifier. This is an offline request if the current user is not a bot
    *
    * @param {getUser$DirectInput} parameters {@link getUser$Input}
-   * @return {Promise<User>} Promise<{@link User}>
+   * @returns {Promise<User>} Promise<{@link User}>
    */
   async getUser(parameters: getUser$DirectInput): Promise<User> {
     const result = await this.client.invoke("getUser", parameters);
@@ -79343,7 +79343,7 @@ export class $AsyncApi {
    * Returns full information about a user by their identifier
    *
    * @param {getUserFullInfo$DirectInput} parameters {@link getUserFullInfo$Input}
-   * @return {Promise<UserFullInfo>} Promise<{@link UserFullInfo}>
+   * @returns {Promise<UserFullInfo>} Promise<{@link UserFullInfo}>
    */
   async getUserFullInfo(
     parameters: getUserFullInfo$DirectInput
@@ -79356,7 +79356,7 @@ export class $AsyncApi {
    * Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
    *
    * @param {getBasicGroup$DirectInput} parameters {@link getBasicGroup$Input}
-   * @return {Promise<BasicGroup>} Promise<{@link BasicGroup}>
+   * @returns {Promise<BasicGroup>} Promise<{@link BasicGroup}>
    */
   async getBasicGroup(parameters: getBasicGroup$DirectInput): Promise<BasicGroup> {
     const result = await this.client.invoke("getBasicGroup", parameters);
@@ -79367,7 +79367,7 @@ export class $AsyncApi {
    * Returns full information about a basic group by its identifier
    *
    * @param {getBasicGroupFullInfo$DirectInput} parameters {@link getBasicGroupFullInfo$Input}
-   * @return {Promise<BasicGroupFullInfo>} Promise<{@link BasicGroupFullInfo}>
+   * @returns {Promise<BasicGroupFullInfo>} Promise<{@link BasicGroupFullInfo}>
    */
   async getBasicGroupFullInfo(
     parameters: getBasicGroupFullInfo$DirectInput
@@ -79380,7 +79380,7 @@ export class $AsyncApi {
    * Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
    *
    * @param {getSupergroup$DirectInput} parameters {@link getSupergroup$Input}
-   * @return {Promise<Supergroup>} Promise<{@link Supergroup}>
+   * @returns {Promise<Supergroup>} Promise<{@link Supergroup}>
    */
   async getSupergroup(parameters: getSupergroup$DirectInput): Promise<Supergroup> {
     const result = await this.client.invoke("getSupergroup", parameters);
@@ -79391,7 +79391,7 @@ export class $AsyncApi {
    * Returns full information about a supergroup or a channel by its identifier, cached for up to 1 minute
    *
    * @param {getSupergroupFullInfo$DirectInput} parameters {@link getSupergroupFullInfo$Input}
-   * @return {Promise<SupergroupFullInfo>} Promise<{@link SupergroupFullInfo}>
+   * @returns {Promise<SupergroupFullInfo>} Promise<{@link SupergroupFullInfo}>
    */
   async getSupergroupFullInfo(
     parameters: getSupergroupFullInfo$DirectInput
@@ -79404,7 +79404,7 @@ export class $AsyncApi {
    * Returns information about a secret chat by its identifier. This is an offline request
    *
    * @param {getSecretChat$DirectInput} parameters {@link getSecretChat$Input}
-   * @return {Promise<SecretChat>} Promise<{@link SecretChat}>
+   * @returns {Promise<SecretChat>} Promise<{@link SecretChat}>
    */
   async getSecretChat(parameters: getSecretChat$DirectInput): Promise<SecretChat> {
     const result = await this.client.invoke("getSecretChat", parameters);
@@ -79415,7 +79415,7 @@ export class $AsyncApi {
    * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
    *
    * @param {getChat$DirectInput} parameters {@link getChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async getChat(parameters: getChat$DirectInput): Promise<Chat> {
     const result = await this.client.invoke("getChat", parameters);
@@ -79426,7 +79426,7 @@ export class $AsyncApi {
    * Returns information about a message
    *
    * @param {getMessage$DirectInput} parameters {@link getMessage$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async getMessage(parameters: getMessage$DirectInput): Promise<Message> {
     const result = await this.client.invoke("getMessage", parameters);
@@ -79437,7 +79437,7 @@ export class $AsyncApi {
    * Returns information about a message, if it is available without sending network request. This is an offline request
    *
    * @param {getMessageLocally$DirectInput} parameters {@link getMessageLocally$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async getMessageLocally(
     parameters: getMessageLocally$DirectInput
@@ -79454,7 +79454,7 @@ export class $AsyncApi {
    * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messagePremiumGiveawayCompleted and topic messages without non-bundled replied message respectively
    *
    * @param {getRepliedMessage$DirectInput} parameters {@link getRepliedMessage$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async getRepliedMessage(
     parameters: getRepliedMessage$DirectInput
@@ -79467,7 +79467,7 @@ export class $AsyncApi {
    * Returns information about a newest pinned message in the chat
    *
    * @param {getChatPinnedMessage$DirectInput} parameters {@link getChatPinnedMessage$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async getChatPinnedMessage(
     parameters: getChatPinnedMessage$DirectInput
@@ -79480,7 +79480,7 @@ export class $AsyncApi {
    * Returns information about a message with the callback button that originated a callback query; for bots only
    *
    * @param {getCallbackQueryMessage$DirectInput} parameters {@link getCallbackQueryMessage$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async getCallbackQueryMessage(
     parameters: getCallbackQueryMessage$DirectInput
@@ -79493,7 +79493,7 @@ export class $AsyncApi {
    * Returns information about messages. If a message is not found, returns null on the corresponding position of the result
    *
    * @param {getMessages$DirectInput} parameters {@link getMessages$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async getMessages(parameters: getMessages$DirectInput): Promise<Messages> {
     const result = await this.client.invoke("getMessages", parameters);
@@ -79504,7 +79504,7 @@ export class $AsyncApi {
    * Returns information about a message thread. Can be used only if message.can_get_message_thread == true
    *
    * @param {getMessageThread$DirectInput} parameters {@link getMessageThread$Input}
-   * @return {Promise<MessageThreadInfo>} Promise<{@link MessageThreadInfo}>
+   * @returns {Promise<MessageThreadInfo>} Promise<{@link MessageThreadInfo}>
    */
   async getMessageThread(
     parameters: getMessageThread$DirectInput
@@ -79517,7 +79517,7 @@ export class $AsyncApi {
    * Returns read date of a recent outgoing message in a private chat. The method can be called if message.can_get_read_date == true and the message is read
    *
    * @param {getMessageReadDate$DirectInput} parameters {@link getMessageReadDate$Input}
-   * @return {Promise<MessageReadDate>} Promise<{@link MessageReadDate}>
+   * @returns {Promise<MessageReadDate>} Promise<{@link MessageReadDate}>
    */
   async getMessageReadDate(
     parameters: getMessageReadDate$DirectInput
@@ -79530,7 +79530,7 @@ export class $AsyncApi {
    * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if message.can_get_viewers == true
    *
    * @param {getMessageViewers$DirectInput} parameters {@link getMessageViewers$Input}
-   * @return {Promise<MessageViewers>} Promise<{@link MessageViewers}>
+   * @returns {Promise<MessageViewers>} Promise<{@link MessageViewers}>
    */
   async getMessageViewers(
     parameters: getMessageViewers$DirectInput
@@ -79543,7 +79543,7 @@ export class $AsyncApi {
    * Returns information about a file; this is an offline request
    *
    * @param {getFile$DirectInput} parameters {@link getFile$Input}
-   * @return {Promise<File>} Promise<{@link File}>
+   * @returns {Promise<File>} Promise<{@link File}>
    */
   async getFile(parameters: getFile$DirectInput): Promise<File> {
     const result = await this.client.invoke("getFile", parameters);
@@ -79556,7 +79556,7 @@ export class $AsyncApi {
    * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
    *
    * @param {getRemoteFile$DirectInput} parameters {@link getRemoteFile$Input}
-   * @return {Promise<File>} Promise<{@link File}>
+   * @returns {Promise<File>} Promise<{@link File}>
    */
   async getRemoteFile(parameters: getRemoteFile$DirectInput): Promise<File> {
     const result = await this.client.invoke("getRemoteFile", parameters);
@@ -79567,7 +79567,7 @@ export class $AsyncApi {
    * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
    *
    * @param {loadChats$DirectInput} parameters {@link loadChats$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async loadChats(parameters: loadChats$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("loadChats", parameters);
@@ -79578,7 +79578,7 @@ export class $AsyncApi {
    * Returns an ordered list of chats from the beginning of a chat list. For informational purposes only. Use loadChats and updates processing instead to maintain chat lists in a consistent state
    *
    * @param {getChats$DirectInput} parameters {@link getChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getChats(parameters: getChats$DirectInput): Promise<Chats> {
     const result = await this.client.invoke("getChats", parameters);
@@ -79589,7 +79589,7 @@ export class $AsyncApi {
    * Searches a public chat by its username. Currently, only private chats, supergroups and channels can be public. Returns the chat if found; otherwise, an error is returned
    *
    * @param {searchPublicChat$DirectInput} parameters {@link searchPublicChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async searchPublicChat(parameters: searchPublicChat$DirectInput): Promise<Chat> {
     const result = await this.client.invoke("searchPublicChat", parameters);
@@ -79602,7 +79602,7 @@ export class $AsyncApi {
    * - Excludes private chats with contacts and chats from the chat list from the results
    *
    * @param {searchPublicChats$DirectInput} parameters {@link searchPublicChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async searchPublicChats(
     parameters: searchPublicChats$DirectInput
@@ -79615,7 +79615,7 @@ export class $AsyncApi {
    * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
    *
    * @param {searchChats$DirectInput} parameters {@link searchChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async searchChats(parameters: searchChats$DirectInput): Promise<Chats> {
     const result = await this.client.invoke("searchChats", parameters);
@@ -79626,7 +79626,7 @@ export class $AsyncApi {
    * Searches for the specified query in the title and username of already known chats via request to the server. Returns chats in the order seen in the main chat list
    *
    * @param {searchChatsOnServer$DirectInput} parameters {@link searchChatsOnServer$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async searchChatsOnServer(
     parameters: searchChatsOnServer$DirectInput
@@ -79641,7 +79641,7 @@ export class $AsyncApi {
    * - The request must be sent again every 25 seconds with adjusted location to not miss new chats
    *
    * @param {searchChatsNearby$DirectInput} parameters {@link searchChatsNearby$Input}
-   * @return {Promise<ChatsNearby>} Promise<{@link ChatsNearby}>
+   * @returns {Promise<ChatsNearby>} Promise<{@link ChatsNearby}>
    */
   async searchChatsNearby(
     parameters: searchChatsNearby$DirectInput
@@ -79654,7 +79654,7 @@ export class $AsyncApi {
    * Returns a list of channel chats recommended to the current user
    *
    * @param {getRecommendedChats$DirectInput} parameters {@link getRecommendedChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getRecommendedChats(
     parameters: getRecommendedChats$DirectInput
@@ -79667,7 +79667,7 @@ export class $AsyncApi {
    * Returns a list of chats similar to the given chat
    *
    * @param {getChatSimilarChats$DirectInput} parameters {@link getChatSimilarChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getChatSimilarChats(
     parameters: getChatSimilarChats$DirectInput
@@ -79680,7 +79680,7 @@ export class $AsyncApi {
    * Returns approximate number of chats similar to the given chat
    *
    * @param {getChatSimilarChatCount$DirectInput} parameters {@link getChatSimilarChatCount$Input}
-   * @return {Promise<Count>} Promise<{@link Count}>
+   * @returns {Promise<Count>} Promise<{@link Count}>
    */
   async getChatSimilarChatCount(
     parameters: getChatSimilarChatCount$DirectInput
@@ -79693,7 +79693,7 @@ export class $AsyncApi {
    * Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
    *
    * @param {openChatSimilarChat$DirectInput} parameters {@link openChatSimilarChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async openChatSimilarChat(
     parameters: openChatSimilarChat$DirectInput
@@ -79706,7 +79706,7 @@ export class $AsyncApi {
    * Returns a list of frequently used chats
    *
    * @param {getTopChats$DirectInput} parameters {@link getTopChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getTopChats(parameters: getTopChats$DirectInput): Promise<Chats> {
     const result = await this.client.invoke("getTopChats", parameters);
@@ -79717,7 +79717,7 @@ export class $AsyncApi {
    * Removes a chat from the list of frequently used chats. Supported only if the chat info database is enabled
    *
    * @param {removeTopChat$DirectInput} parameters {@link removeTopChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeTopChat(parameters: removeTopChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("removeTopChat", parameters);
@@ -79728,7 +79728,7 @@ export class $AsyncApi {
    * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
    *
    * @param {searchRecentlyFoundChats$DirectInput} parameters {@link searchRecentlyFoundChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async searchRecentlyFoundChats(
     parameters: searchRecentlyFoundChats$DirectInput
@@ -79741,7 +79741,7 @@ export class $AsyncApi {
    * Adds a chat to the list of recently found chats. The chat is added to the beginning of the list. If the chat is already in the list, it will be removed from the list first
    *
    * @param {addRecentlyFoundChat$DirectInput} parameters {@link addRecentlyFoundChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addRecentlyFoundChat(
     parameters: addRecentlyFoundChat$DirectInput
@@ -79754,7 +79754,7 @@ export class $AsyncApi {
    * Removes a chat from the list of recently found chats
    *
    * @param {removeRecentlyFoundChat$DirectInput} parameters {@link removeRecentlyFoundChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeRecentlyFoundChat(
     parameters: removeRecentlyFoundChat$DirectInput
@@ -79767,7 +79767,7 @@ export class $AsyncApi {
    * Clears the list of recently found chats
    *
    * @param {clearRecentlyFoundChats$DirectInput} parameters {@link clearRecentlyFoundChats$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clearRecentlyFoundChats(
     parameters: clearRecentlyFoundChats$DirectInput
@@ -79780,7 +79780,7 @@ export class $AsyncApi {
    * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
    *
    * @param {getRecentlyOpenedChats$DirectInput} parameters {@link getRecentlyOpenedChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getRecentlyOpenedChats(
     parameters: getRecentlyOpenedChats$DirectInput
@@ -79793,7 +79793,7 @@ export class $AsyncApi {
    * Checks whether a username can be set for a chat
    *
    * @param {checkChatUsername$DirectInput} parameters {@link checkChatUsername$Input}
-   * @return {Promise<CheckChatUsernameResult>} Promise<{@link CheckChatUsernameResult}>
+   * @returns {Promise<CheckChatUsernameResult>} Promise<{@link CheckChatUsernameResult}>
    */
   async checkChatUsername(
     parameters: checkChatUsername$DirectInput
@@ -79806,7 +79806,7 @@ export class $AsyncApi {
    * Returns a list of public chats of the specified type, owned by the user
    *
    * @param {getCreatedPublicChats$DirectInput} parameters {@link getCreatedPublicChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getCreatedPublicChats(
     parameters: getCreatedPublicChats$DirectInput
@@ -79819,7 +79819,7 @@ export class $AsyncApi {
    * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
    *
    * @param {checkCreatedPublicChatsLimit$DirectInput} parameters {@link checkCreatedPublicChatsLimit$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkCreatedPublicChatsLimit(
     parameters: checkCreatedPublicChatsLimit$DirectInput
@@ -79837,7 +79837,7 @@ export class $AsyncApi {
    * - To set a returned supergroup as a discussion group, access to its old messages must be enabled using toggleSupergroupIsAllHistoryAvailable first
    *
    * @param {getSuitableDiscussionChats$DirectInput} parameters {@link getSuitableDiscussionChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getSuitableDiscussionChats(
     parameters: getSuitableDiscussionChats$DirectInput
@@ -79853,7 +79853,7 @@ export class $AsyncApi {
    * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives CHANNELS_TOO_MUCH error. Also, the limit can be increased with Telegram Premium
    *
    * @param {getInactiveSupergroupChats$DirectInput} parameters {@link getInactiveSupergroupChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getInactiveSupergroupChats(
     parameters: getInactiveSupergroupChats$DirectInput
@@ -79869,7 +79869,7 @@ export class $AsyncApi {
    * Returns a list of channel chats, which can be used as a personal chat
    *
    * @param {getSuitablePersonalChats$DirectInput} parameters {@link getSuitablePersonalChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getSuitablePersonalChats(
     parameters: getSuitablePersonalChats$DirectInput
@@ -79882,7 +79882,7 @@ export class $AsyncApi {
    * Loads more Saved Messages topics. The loaded topics will be sent through updateSavedMessagesTopic. Topics are sorted by their topic.order in descending order. Returns a 404 error if all topics have been loaded
    *
    * @param {loadSavedMessagesTopics$DirectInput} parameters {@link loadSavedMessagesTopics$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async loadSavedMessagesTopics(
     parameters: loadSavedMessagesTopics$DirectInput
@@ -79895,7 +79895,7 @@ export class $AsyncApi {
    * Returns messages in a Saved Messages topic. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
    *
    * @param {getSavedMessagesTopicHistory$DirectInput} parameters {@link getSavedMessagesTopicHistory$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async getSavedMessagesTopicHistory(
     parameters: getSavedMessagesTopicHistory$DirectInput
@@ -79911,7 +79911,7 @@ export class $AsyncApi {
    * Returns the last message sent in a Saved Messages topic no later than the specified date
    *
    * @param {getSavedMessagesTopicMessageByDate$DirectInput} parameters {@link getSavedMessagesTopicMessageByDate$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async getSavedMessagesTopicMessageByDate(
     parameters: getSavedMessagesTopicMessageByDate$DirectInput
@@ -79927,7 +79927,7 @@ export class $AsyncApi {
    * Deletes all messages in a Saved Messages topic
    *
    * @param {deleteSavedMessagesTopicHistory$DirectInput} parameters {@link deleteSavedMessagesTopicHistory$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteSavedMessagesTopicHistory(
     parameters: deleteSavedMessagesTopicHistory$DirectInput
@@ -79943,7 +79943,7 @@ export class $AsyncApi {
    * Deletes all messages between the specified dates in a Saved Messages topic. Messages sent in the last 30 seconds will not be deleted
    *
    * @param {deleteSavedMessagesTopicMessagesByDate$DirectInput} parameters {@link deleteSavedMessagesTopicMessagesByDate$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteSavedMessagesTopicMessagesByDate(
     parameters: deleteSavedMessagesTopicMessagesByDate$DirectInput
@@ -79959,7 +79959,7 @@ export class $AsyncApi {
    * Changes the pinned state of a Saved Messages topic. There can be up to getOption("pinned_saved_messages_topic_count_max") pinned topics. The limit can be increased with Telegram Premium
    *
    * @param {toggleSavedMessagesTopicIsPinned$DirectInput} parameters {@link toggleSavedMessagesTopicIsPinned$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSavedMessagesTopicIsPinned(
     parameters: toggleSavedMessagesTopicIsPinned$DirectInput
@@ -79975,7 +79975,7 @@ export class $AsyncApi {
    * Changes the order of pinned Saved Messages topics
    *
    * @param {setPinnedSavedMessagesTopics$DirectInput} parameters {@link setPinnedSavedMessagesTopics$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setPinnedSavedMessagesTopics(
     parameters: setPinnedSavedMessagesTopics$DirectInput
@@ -79991,7 +79991,7 @@ export class $AsyncApi {
    * Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
    *
    * @param {getGroupsInCommon$DirectInput} parameters {@link getGroupsInCommon$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getGroupsInCommon(
     parameters: getGroupsInCommon$DirectInput
@@ -80006,7 +80006,7 @@ export class $AsyncApi {
    * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
    *
    * @param {getChatHistory$DirectInput} parameters {@link getChatHistory$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async getChatHistory(parameters: getChatHistory$DirectInput): Promise<Messages> {
     const result = await this.client.invoke("getChatHistory", parameters);
@@ -80019,7 +80019,7 @@ export class $AsyncApi {
    * - The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
    *
    * @param {getMessageThreadHistory$DirectInput} parameters {@link getMessageThreadHistory$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async getMessageThreadHistory(
     parameters: getMessageThreadHistory$DirectInput
@@ -80032,7 +80032,7 @@ export class $AsyncApi {
    * Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat.can_be_deleted_for_all_users fields to find whether and how the method can be applied to the chat
    *
    * @param {deleteChatHistory$DirectInput} parameters {@link deleteChatHistory$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteChatHistory(parameters: deleteChatHistory$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteChatHistory", parameters);
@@ -80045,7 +80045,7 @@ export class $AsyncApi {
    * - Use the field chat.can_be_deleted_for_all_users to find whether the method can be applied to the chat
    *
    * @param {deleteChat$DirectInput} parameters {@link deleteChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteChat(parameters: deleteChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteChat", parameters);
@@ -80060,7 +80060,7 @@ export class $AsyncApi {
    * - A combination of query, sender_id, filter and message_thread_id search criteria is expected to be supported, only if it is required for Telegram official application implementation
    *
    * @param {searchChatMessages$DirectInput} parameters {@link searchChatMessages$Input}
-   * @return {Promise<FoundChatMessages>} Promise<{@link FoundChatMessages}>
+   * @returns {Promise<FoundChatMessages>} Promise<{@link FoundChatMessages}>
    */
   async searchChatMessages(
     parameters: searchChatMessages$DirectInput
@@ -80075,7 +80075,7 @@ export class $AsyncApi {
    * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
    *
    * @param {searchMessages$DirectInput} parameters {@link searchMessages$Input}
-   * @return {Promise<FoundMessages>} Promise<{@link FoundMessages}>
+   * @returns {Promise<FoundMessages>} Promise<{@link FoundMessages}>
    */
   async searchMessages(
     parameters: searchMessages$DirectInput
@@ -80088,7 +80088,7 @@ export class $AsyncApi {
    * Searches for messages in secret chats. Returns the results in reverse chronological order. For optimal performance, the number of returned messages is chosen by TDLib
    *
    * @param {searchSecretMessages$DirectInput} parameters {@link searchSecretMessages$Input}
-   * @return {Promise<FoundMessages>} Promise<{@link FoundMessages}>
+   * @returns {Promise<FoundMessages>} Promise<{@link FoundMessages}>
    */
   async searchSecretMessages(
     parameters: searchSecretMessages$DirectInput
@@ -80105,7 +80105,7 @@ export class $AsyncApi {
    * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
    *
    * @param {searchSavedMessages$DirectInput} parameters {@link searchSavedMessages$Input}
-   * @return {Promise<FoundChatMessages>} Promise<{@link FoundChatMessages}>
+   * @returns {Promise<FoundChatMessages>} Promise<{@link FoundChatMessages}>
    */
   async searchSavedMessages(
     parameters: searchSavedMessages$DirectInput
@@ -80118,7 +80118,7 @@ export class $AsyncApi {
    * Searches for call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
    *
    * @param {searchCallMessages$DirectInput} parameters {@link searchCallMessages$Input}
-   * @return {Promise<FoundMessages>} Promise<{@link FoundMessages}>
+   * @returns {Promise<FoundMessages>} Promise<{@link FoundMessages}>
    */
   async searchCallMessages(
     parameters: searchCallMessages$DirectInput
@@ -80131,7 +80131,7 @@ export class $AsyncApi {
    * Searches for outgoing messages with content of the type messageDocument in all chats except secret chats. Returns the results in reverse chronological order
    *
    * @param {searchOutgoingDocumentMessages$DirectInput} parameters {@link searchOutgoingDocumentMessages$Input}
-   * @return {Promise<FoundMessages>} Promise<{@link FoundMessages}>
+   * @returns {Promise<FoundMessages>} Promise<{@link FoundMessages}>
    */
   async searchOutgoingDocumentMessages(
     parameters: searchOutgoingDocumentMessages$DirectInput
@@ -80147,7 +80147,7 @@ export class $AsyncApi {
    * Searches for public channel posts with the given hashtag or cashtag. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
    *
    * @param {searchPublicHashtagMessages$DirectInput} parameters {@link searchPublicHashtagMessages$Input}
-   * @return {Promise<FoundMessages>} Promise<{@link FoundMessages}>
+   * @returns {Promise<FoundMessages>} Promise<{@link FoundMessages}>
    */
   async searchPublicHashtagMessages(
     parameters: searchPublicHashtagMessages$DirectInput
@@ -80163,7 +80163,7 @@ export class $AsyncApi {
    * Returns recently searched for hashtags or cashtags by their prefix
    *
    * @param {getSearchedForHashtags$DirectInput} parameters {@link getSearchedForHashtags$Input}
-   * @return {Promise<Hashtags>} Promise<{@link Hashtags}>
+   * @returns {Promise<Hashtags>} Promise<{@link Hashtags}>
    */
   async getSearchedForHashtags(
     parameters: getSearchedForHashtags$DirectInput
@@ -80176,7 +80176,7 @@ export class $AsyncApi {
    * Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
    *
    * @param {removeSearchedForHashtag$DirectInput} parameters {@link removeSearchedForHashtag$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeSearchedForHashtag(
     parameters: removeSearchedForHashtag$DirectInput
@@ -80189,7 +80189,7 @@ export class $AsyncApi {
    * Clears the list of recently searched for hashtags
    *
    * @param {clearSearchedForHashtags$DirectInput} parameters {@link clearSearchedForHashtags$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clearSearchedForHashtags(
     parameters: clearSearchedForHashtags$DirectInput
@@ -80202,7 +80202,7 @@ export class $AsyncApi {
    * Deletes all call messages
    *
    * @param {deleteAllCallMessages$DirectInput} parameters {@link deleteAllCallMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteAllCallMessages(
     parameters: deleteAllCallMessages$DirectInput
@@ -80215,7 +80215,7 @@ export class $AsyncApi {
    * Returns information about the recent locations of chat members that were sent to the chat. Returns up to 1 location message per user
    *
    * @param {searchChatRecentLocationMessages$DirectInput} parameters {@link searchChatRecentLocationMessages$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async searchChatRecentLocationMessages(
     parameters: searchChatRecentLocationMessages$DirectInput
@@ -80231,7 +80231,7 @@ export class $AsyncApi {
    * Returns all active live locations that need to be updated by the application. The list is persistent across application restarts only if the message database is used
    *
    * @param {getActiveLiveLocationMessages$DirectInput} parameters {@link getActiveLiveLocationMessages$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async getActiveLiveLocationMessages(
     parameters: getActiveLiveLocationMessages$DirectInput
@@ -80247,7 +80247,7 @@ export class $AsyncApi {
    * Returns the last message sent in a chat no later than the specified date
    *
    * @param {getChatMessageByDate$DirectInput} parameters {@link getChatMessageByDate$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async getChatMessageByDate(
     parameters: getChatMessageByDate$DirectInput
@@ -80262,7 +80262,7 @@ export class $AsyncApi {
    * - Cannot be used in secret chats or with searchMessagesFilterFailedToSend filter without an enabled message database
    *
    * @param {getChatSparseMessagePositions$DirectInput} parameters {@link getChatSparseMessagePositions$Input}
-   * @return {Promise<MessagePositions>} Promise<{@link MessagePositions}>
+   * @returns {Promise<MessagePositions>} Promise<{@link MessagePositions}>
    */
   async getChatSparseMessagePositions(
     parameters: getChatSparseMessagePositions$DirectInput
@@ -80278,7 +80278,7 @@ export class $AsyncApi {
    * Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
    *
    * @param {getChatMessageCalendar$DirectInput} parameters {@link getChatMessageCalendar$Input}
-   * @return {Promise<MessageCalendar>} Promise<{@link MessageCalendar}>
+   * @returns {Promise<MessageCalendar>} Promise<{@link MessageCalendar}>
    */
   async getChatMessageCalendar(
     parameters: getChatMessageCalendar$DirectInput
@@ -80291,7 +80291,7 @@ export class $AsyncApi {
    * Returns approximate number of messages of the specified type in the chat
    *
    * @param {getChatMessageCount$DirectInput} parameters {@link getChatMessageCount$Input}
-   * @return {Promise<Count>} Promise<{@link Count}>
+   * @returns {Promise<Count>} Promise<{@link Count}>
    */
   async getChatMessageCount(
     parameters: getChatMessageCount$DirectInput
@@ -80304,7 +80304,7 @@ export class $AsyncApi {
    * Returns approximate 1-based position of a message among messages, which can be found by the specified filter in the chat. Cannot be used in secret chats
    *
    * @param {getChatMessagePosition$DirectInput} parameters {@link getChatMessagePosition$Input}
-   * @return {Promise<Count>} Promise<{@link Count}>
+   * @returns {Promise<Count>} Promise<{@link Count}>
    */
   async getChatMessagePosition(
     parameters: getChatMessagePosition$DirectInput
@@ -80317,7 +80317,7 @@ export class $AsyncApi {
    * Returns all scheduled messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
    *
    * @param {getChatScheduledMessages$DirectInput} parameters {@link getChatScheduledMessages$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async getChatScheduledMessages(
     parameters: getChatScheduledMessages$DirectInput
@@ -80330,7 +80330,7 @@ export class $AsyncApi {
    * Returns sponsored messages to be shown in a chat; for channel chats only
    *
    * @param {getChatSponsoredMessages$DirectInput} parameters {@link getChatSponsoredMessages$Input}
-   * @return {Promise<SponsoredMessages>} Promise<{@link SponsoredMessages}>
+   * @returns {Promise<SponsoredMessages>} Promise<{@link SponsoredMessages}>
    */
   async getChatSponsoredMessages(
     parameters: getChatSponsoredMessages$DirectInput
@@ -80343,7 +80343,7 @@ export class $AsyncApi {
    * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
    *
    * @param {clickChatSponsoredMessage$DirectInput} parameters {@link clickChatSponsoredMessage$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clickChatSponsoredMessage(
     parameters: clickChatSponsoredMessage$DirectInput
@@ -80356,7 +80356,7 @@ export class $AsyncApi {
    * Reports a sponsored message to Telegram moderators
    *
    * @param {reportChatSponsoredMessage$DirectInput} parameters {@link reportChatSponsoredMessage$Input}
-   * @return {Promise<ReportChatSponsoredMessageResult>} Promise<{@link ReportChatSponsoredMessageResult}>
+   * @returns {Promise<ReportChatSponsoredMessageResult>} Promise<{@link ReportChatSponsoredMessageResult}>
    */
   async reportChatSponsoredMessage(
     parameters: reportChatSponsoredMessage$DirectInput
@@ -80372,7 +80372,7 @@ export class $AsyncApi {
    * Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
    *
    * @param {removeNotification$DirectInput} parameters {@link removeNotification$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeNotification(parameters: removeNotification$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("removeNotification", parameters);
@@ -80383,7 +80383,7 @@ export class $AsyncApi {
    * Removes a group of active notifications. Needs to be called only if the notification group is removed by the current user
    *
    * @param {removeNotificationGroup$DirectInput} parameters {@link removeNotificationGroup$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeNotificationGroup(
     parameters: removeNotificationGroup$DirectInput
@@ -80396,7 +80396,7 @@ export class $AsyncApi {
    * Returns an HTTPS link to a message in a chat. Available only for already sent messages in supergroups and channels, or if message.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
    *
    * @param {getMessageLink$DirectInput} parameters {@link getMessageLink$Input}
-   * @return {Promise<MessageLink>} Promise<{@link MessageLink}>
+   * @returns {Promise<MessageLink>} Promise<{@link MessageLink}>
    */
   async getMessageLink(
     parameters: getMessageLink$DirectInput
@@ -80409,7 +80409,7 @@ export class $AsyncApi {
    * Returns an HTML code for embedding the message. Available only for messages in supergroups and channels with a username
    *
    * @param {getMessageEmbeddingCode$DirectInput} parameters {@link getMessageEmbeddingCode$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getMessageEmbeddingCode(
     parameters: getMessageEmbeddingCode$DirectInput
@@ -80422,7 +80422,7 @@ export class $AsyncApi {
    * Returns information about a public or private message link. Can be called for any internal link of the type internalLinkTypeMessage
    *
    * @param {getMessageLinkInfo$DirectInput} parameters {@link getMessageLinkInfo$Input}
-   * @return {Promise<MessageLinkInfo>} Promise<{@link MessageLinkInfo}>
+   * @returns {Promise<MessageLinkInfo>} Promise<{@link MessageLinkInfo}>
    */
   async getMessageLinkInfo(
     parameters: getMessageLinkInfo$DirectInput
@@ -80435,7 +80435,7 @@ export class $AsyncApi {
    * Translates a text to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
    *
    * @param {translateText$DirectInput} parameters {@link translateText$Input}
-   * @return {Promise<FormattedText>} Promise<{@link FormattedText}>
+   * @returns {Promise<FormattedText>} Promise<{@link FormattedText}>
    */
   async translateText(
     parameters: translateText$DirectInput
@@ -80448,7 +80448,7 @@ export class $AsyncApi {
    * Extracts text or caption of the given message and translates it to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
    *
    * @param {translateMessageText$DirectInput} parameters {@link translateMessageText$Input}
-   * @return {Promise<FormattedText>} Promise<{@link FormattedText}>
+   * @returns {Promise<FormattedText>} Promise<{@link FormattedText}>
    */
   async translateMessageText(
     parameters: translateMessageText$DirectInput
@@ -80461,7 +80461,7 @@ export class $AsyncApi {
    * Recognizes speech in a video note or a voice note message. The message must be successfully sent, must not be scheduled, and must be from a non-secret chat
    *
    * @param {recognizeSpeech$DirectInput} parameters {@link recognizeSpeech$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async recognizeSpeech(parameters: recognizeSpeech$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("recognizeSpeech", parameters);
@@ -80472,7 +80472,7 @@ export class $AsyncApi {
    * Rates recognized speech in a video note or a voice note message
    *
    * @param {rateSpeechRecognition$DirectInput} parameters {@link rateSpeechRecognition$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async rateSpeechRecognition(
     parameters: rateSpeechRecognition$DirectInput
@@ -80485,7 +80485,7 @@ export class $AsyncApi {
    * Returns the list of message sender identifiers, which can be used to send messages in a chat
    *
    * @param {getChatAvailableMessageSenders$DirectInput} parameters {@link getChatAvailableMessageSenders$Input}
-   * @return {Promise<ChatMessageSenders>} Promise<{@link ChatMessageSenders}>
+   * @returns {Promise<ChatMessageSenders>} Promise<{@link ChatMessageSenders}>
    */
   async getChatAvailableMessageSenders(
     parameters: getChatAvailableMessageSenders$DirectInput
@@ -80501,7 +80501,7 @@ export class $AsyncApi {
    * Selects a message sender to send messages in a chat
    *
    * @param {setChatMessageSender$DirectInput} parameters {@link setChatMessageSender$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatMessageSender(
     parameters: setChatMessageSender$DirectInput
@@ -80514,7 +80514,7 @@ export class $AsyncApi {
    * Sends a message. Returns the sent message
    *
    * @param {sendMessage$DirectInput} parameters {@link sendMessage$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async sendMessage(parameters: sendMessage$DirectInput): Promise<Message> {
     const result = await this.client.invoke("sendMessage", parameters);
@@ -80527,7 +80527,7 @@ export class $AsyncApi {
    * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
    *
    * @param {sendMessageAlbum$DirectInput} parameters {@link sendMessageAlbum$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async sendMessageAlbum(
     parameters: sendMessageAlbum$DirectInput
@@ -80542,7 +80542,7 @@ export class $AsyncApi {
    * - Bots can't be invited to channels (although they can be added as admins) and secret chats. Returns the sent message
    *
    * @param {sendBotStartMessage$DirectInput} parameters {@link sendBotStartMessage$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async sendBotStartMessage(
     parameters: sendBotStartMessage$DirectInput
@@ -80555,7 +80555,7 @@ export class $AsyncApi {
    * Sends the result of an inline query as a message. Returns the sent message. Always clears a chat draft message
    *
    * @param {sendInlineQueryResultMessage$DirectInput} parameters {@link sendInlineQueryResultMessage$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async sendInlineQueryResultMessage(
     parameters: sendInlineQueryResultMessage$DirectInput
@@ -80571,7 +80571,7 @@ export class $AsyncApi {
    * Forwards previously sent messages. Returns the forwarded messages in the same order as the message identifiers passed in message_ids. If a message can't be forwarded, null will be returned instead of the message
    *
    * @param {forwardMessages$DirectInput} parameters {@link forwardMessages$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async forwardMessages(parameters: forwardMessages$DirectInput): Promise<Messages> {
     const result = await this.client.invoke("forwardMessages", parameters);
@@ -80582,7 +80582,7 @@ export class $AsyncApi {
    * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
    *
    * @param {sendQuickReplyShortcutMessages$DirectInput} parameters {@link sendQuickReplyShortcutMessages$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async sendQuickReplyShortcutMessages(
     parameters: sendQuickReplyShortcutMessages$DirectInput
@@ -80600,7 +80600,7 @@ export class $AsyncApi {
    * - If a message is re-sent, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
    *
    * @param {resendMessages$DirectInput} parameters {@link resendMessages$Input}
-   * @return {Promise<Messages>} Promise<{@link Messages}>
+   * @returns {Promise<Messages>} Promise<{@link Messages}>
    */
   async resendMessages(parameters: resendMessages$DirectInput): Promise<Messages> {
     const result = await this.client.invoke("resendMessages", parameters);
@@ -80611,7 +80611,7 @@ export class $AsyncApi {
    * Adds a local message to a chat. The message is persistent across application restarts only if the message database is used. Returns the added message
    *
    * @param {addLocalMessage$DirectInput} parameters {@link addLocalMessage$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async addLocalMessage(parameters: addLocalMessage$DirectInput): Promise<Message> {
     const result = await this.client.invoke("addLocalMessage", parameters);
@@ -80622,7 +80622,7 @@ export class $AsyncApi {
    * Deletes messages
    *
    * @param {deleteMessages$DirectInput} parameters {@link deleteMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteMessages(parameters: deleteMessages$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteMessages", parameters);
@@ -80633,7 +80633,7 @@ export class $AsyncApi {
    * Deletes all messages sent by the specified message sender in a chat. Supported only for supergroups; requires can_delete_messages administrator privileges
    *
    * @param {deleteChatMessagesBySender$DirectInput} parameters {@link deleteChatMessagesBySender$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteChatMessagesBySender(
     parameters: deleteChatMessagesBySender$DirectInput
@@ -80649,7 +80649,7 @@ export class $AsyncApi {
    * Deletes all messages between the specified dates in a chat. Supported only for private chats and basic groups. Messages sent in the last 30 seconds will not be deleted
    *
    * @param {deleteChatMessagesByDate$DirectInput} parameters {@link deleteChatMessagesByDate$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteChatMessagesByDate(
     parameters: deleteChatMessagesByDate$DirectInput
@@ -80664,7 +80664,7 @@ export class $AsyncApi {
    * - Can be used only if message.can_be_edited == true
    *
    * @param {editMessageText$DirectInput} parameters {@link editMessageText$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async editMessageText(parameters: editMessageText$DirectInput): Promise<Message> {
     const result = await this.client.invoke("editMessageText", parameters);
@@ -80677,7 +80677,7 @@ export class $AsyncApi {
    * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
    *
    * @param {editMessageLiveLocation$DirectInput} parameters {@link editMessageLiveLocation$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async editMessageLiveLocation(
     parameters: editMessageLiveLocation$DirectInput
@@ -80694,7 +80694,7 @@ export class $AsyncApi {
    * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
    *
    * @param {editMessageMedia$DirectInput} parameters {@link editMessageMedia$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async editMessageMedia(
     parameters: editMessageMedia$DirectInput
@@ -80709,7 +80709,7 @@ export class $AsyncApi {
    * - Can be used only if message.can_be_edited == true
    *
    * @param {editMessageCaption$DirectInput} parameters {@link editMessageCaption$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async editMessageCaption(
     parameters: editMessageCaption$DirectInput
@@ -80724,7 +80724,7 @@ export class $AsyncApi {
    * - Can be used only if message.can_be_edited == true
    *
    * @param {editMessageReplyMarkup$DirectInput} parameters {@link editMessageReplyMarkup$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async editMessageReplyMarkup(
     parameters: editMessageReplyMarkup$DirectInput
@@ -80737,7 +80737,7 @@ export class $AsyncApi {
    * Edits the text of an inline text or game message sent via a bot; for bots only
    *
    * @param {editInlineMessageText$DirectInput} parameters {@link editInlineMessageText$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editInlineMessageText(
     parameters: editInlineMessageText$DirectInput
@@ -80750,7 +80750,7 @@ export class $AsyncApi {
    * Edits the content of a live location in an inline message sent via a bot; for bots only
    *
    * @param {editInlineMessageLiveLocation$DirectInput} parameters {@link editInlineMessageLiveLocation$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editInlineMessageLiveLocation(
     parameters: editInlineMessageLiveLocation$DirectInput
@@ -80766,7 +80766,7 @@ export class $AsyncApi {
    * Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
    *
    * @param {editInlineMessageMedia$DirectInput} parameters {@link editInlineMessageMedia$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editInlineMessageMedia(
     parameters: editInlineMessageMedia$DirectInput
@@ -80779,7 +80779,7 @@ export class $AsyncApi {
    * Edits the caption of an inline message sent via a bot; for bots only
    *
    * @param {editInlineMessageCaption$DirectInput} parameters {@link editInlineMessageCaption$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editInlineMessageCaption(
     parameters: editInlineMessageCaption$DirectInput
@@ -80792,7 +80792,7 @@ export class $AsyncApi {
    * Edits the reply markup of an inline message sent via a bot; for bots only
    *
    * @param {editInlineMessageReplyMarkup$DirectInput} parameters {@link editInlineMessageReplyMarkup$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editInlineMessageReplyMarkup(
     parameters: editInlineMessageReplyMarkup$DirectInput
@@ -80808,7 +80808,7 @@ export class $AsyncApi {
    * Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
    *
    * @param {editMessageSchedulingState$DirectInput} parameters {@link editMessageSchedulingState$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editMessageSchedulingState(
     parameters: editMessageSchedulingState$DirectInput
@@ -80824,7 +80824,7 @@ export class $AsyncApi {
    * Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
    *
    * @param {setMessageFactCheck$DirectInput} parameters {@link setMessageFactCheck$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setMessageFactCheck(
     parameters: setMessageFactCheck$DirectInput
@@ -80837,7 +80837,7 @@ export class $AsyncApi {
    * Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
    *
    * @param {sendBusinessMessage$DirectInput} parameters {@link sendBusinessMessage$Input}
-   * @return {Promise<BusinessMessage>} Promise<{@link BusinessMessage}>
+   * @returns {Promise<BusinessMessage>} Promise<{@link BusinessMessage}>
    */
   async sendBusinessMessage(
     parameters: sendBusinessMessage$DirectInput
@@ -80852,7 +80852,7 @@ export class $AsyncApi {
    * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
    *
    * @param {sendBusinessMessageAlbum$DirectInput} parameters {@link sendBusinessMessageAlbum$Input}
-   * @return {Promise<BusinessMessages>} Promise<{@link BusinessMessages}>
+   * @returns {Promise<BusinessMessages>} Promise<{@link BusinessMessages}>
    */
   async sendBusinessMessageAlbum(
     parameters: sendBusinessMessageAlbum$DirectInput
@@ -80865,7 +80865,7 @@ export class $AsyncApi {
    * Checks validness of a name for a quick reply shortcut. Can be called synchronously
    *
    * @param {checkQuickReplyShortcutName$DirectInput} parameters {@link checkQuickReplyShortcutName$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkQuickReplyShortcutName(
     parameters: checkQuickReplyShortcutName$DirectInput
@@ -80881,7 +80881,7 @@ export class $AsyncApi {
    * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
    *
    * @param {loadQuickReplyShortcuts$DirectInput} parameters {@link loadQuickReplyShortcuts$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async loadQuickReplyShortcuts(
     parameters: loadQuickReplyShortcuts$DirectInput
@@ -80894,7 +80894,7 @@ export class $AsyncApi {
    * Changes name of a quick reply shortcut
    *
    * @param {setQuickReplyShortcutName$DirectInput} parameters {@link setQuickReplyShortcutName$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setQuickReplyShortcutName(
     parameters: setQuickReplyShortcutName$DirectInput
@@ -80907,7 +80907,7 @@ export class $AsyncApi {
    * Deletes a quick reply shortcut
    *
    * @param {deleteQuickReplyShortcut$DirectInput} parameters {@link deleteQuickReplyShortcut$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteQuickReplyShortcut(
     parameters: deleteQuickReplyShortcut$DirectInput
@@ -80920,7 +80920,7 @@ export class $AsyncApi {
    * Changes the order of quick reply shortcuts
    *
    * @param {reorderQuickReplyShortcuts$DirectInput} parameters {@link reorderQuickReplyShortcuts$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reorderQuickReplyShortcuts(
     parameters: reorderQuickReplyShortcuts$DirectInput
@@ -80936,7 +80936,7 @@ export class $AsyncApi {
    * Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
    *
    * @param {loadQuickReplyShortcutMessages$DirectInput} parameters {@link loadQuickReplyShortcutMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async loadQuickReplyShortcutMessages(
     parameters: loadQuickReplyShortcutMessages$DirectInput
@@ -80952,7 +80952,7 @@ export class $AsyncApi {
    * Deletes specified quick reply messages
    *
    * @param {deleteQuickReplyShortcutMessages$DirectInput} parameters {@link deleteQuickReplyShortcutMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteQuickReplyShortcutMessages(
     parameters: deleteQuickReplyShortcutMessages$DirectInput
@@ -80970,7 +80970,7 @@ export class $AsyncApi {
    * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
    *
    * @param {addQuickReplyShortcutMessage$DirectInput} parameters {@link addQuickReplyShortcutMessage$Input}
-   * @return {Promise<QuickReplyMessage>} Promise<{@link QuickReplyMessage}>
+   * @returns {Promise<QuickReplyMessage>} Promise<{@link QuickReplyMessage}>
    */
   async addQuickReplyShortcutMessage(
     parameters: addQuickReplyShortcutMessage$DirectInput
@@ -80988,7 +80988,7 @@ export class $AsyncApi {
    * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
    *
    * @param {addQuickReplyShortcutInlineQueryResultMessage$DirectInput} parameters {@link addQuickReplyShortcutInlineQueryResultMessage$Input}
-   * @return {Promise<QuickReplyMessage>} Promise<{@link QuickReplyMessage}>
+   * @returns {Promise<QuickReplyMessage>} Promise<{@link QuickReplyMessage}>
    */
   async addQuickReplyShortcutInlineQueryResultMessage(
     parameters: addQuickReplyShortcutInlineQueryResultMessage$DirectInput
@@ -81006,7 +81006,7 @@ export class $AsyncApi {
    * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
    *
    * @param {addQuickReplyShortcutMessageAlbum$DirectInput} parameters {@link addQuickReplyShortcutMessageAlbum$Input}
-   * @return {Promise<QuickReplyMessages>} Promise<{@link QuickReplyMessages}>
+   * @returns {Promise<QuickReplyMessages>} Promise<{@link QuickReplyMessages}>
    */
   async addQuickReplyShortcutMessageAlbum(
     parameters: addQuickReplyShortcutMessageAlbum$DirectInput
@@ -81024,7 +81024,7 @@ export class $AsyncApi {
    * - If a message is readded, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be readded, null will be returned instead of the message
    *
    * @param {readdQuickReplyShortcutMessages$DirectInput} parameters {@link readdQuickReplyShortcutMessages$Input}
-   * @return {Promise<QuickReplyMessages>} Promise<{@link QuickReplyMessages}>
+   * @returns {Promise<QuickReplyMessages>} Promise<{@link QuickReplyMessages}>
    */
   async readdQuickReplyShortcutMessages(
     parameters: readdQuickReplyShortcutMessages$DirectInput
@@ -81042,7 +81042,7 @@ export class $AsyncApi {
    * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
    *
    * @param {editQuickReplyMessage$DirectInput} parameters {@link editQuickReplyMessage$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editQuickReplyMessage(
     parameters: editQuickReplyMessage$DirectInput
@@ -81055,7 +81055,7 @@ export class $AsyncApi {
    * Returns the list of custom emojis, which can be used as forum topic icon by all users
    *
    * @param {getForumTopicDefaultIcons$DirectInput} parameters {@link getForumTopicDefaultIcons$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getForumTopicDefaultIcons(
     parameters: getForumTopicDefaultIcons$DirectInput
@@ -81068,7 +81068,7 @@ export class $AsyncApi {
    * Creates a topic in a forum supergroup chat; requires can_manage_topics administrator or can_create_topics member right in the supergroup
    *
    * @param {createForumTopic$DirectInput} parameters {@link createForumTopic$Input}
-   * @return {Promise<ForumTopicInfo>} Promise<{@link ForumTopicInfo}>
+   * @returns {Promise<ForumTopicInfo>} Promise<{@link ForumTopicInfo}>
    */
   async createForumTopic(
     parameters: createForumTopic$DirectInput
@@ -81081,7 +81081,7 @@ export class $AsyncApi {
    * Edits title and icon of a topic in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
    *
    * @param {editForumTopic$DirectInput} parameters {@link editForumTopic$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editForumTopic(parameters: editForumTopic$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("editForumTopic", parameters);
@@ -81092,7 +81092,7 @@ export class $AsyncApi {
    * Returns information about a forum topic
    *
    * @param {getForumTopic$DirectInput} parameters {@link getForumTopic$Input}
-   * @return {Promise<ForumTopic>} Promise<{@link ForumTopic}>
+   * @returns {Promise<ForumTopic>} Promise<{@link ForumTopic}>
    */
   async getForumTopic(parameters: getForumTopic$DirectInput): Promise<ForumTopic> {
     const result = await this.client.invoke("getForumTopic", parameters);
@@ -81103,7 +81103,7 @@ export class $AsyncApi {
    * Returns an HTTPS link to a topic in a forum chat. This is an offline request
    *
    * @param {getForumTopicLink$DirectInput} parameters {@link getForumTopicLink$Input}
-   * @return {Promise<MessageLink>} Promise<{@link MessageLink}>
+   * @returns {Promise<MessageLink>} Promise<{@link MessageLink}>
    */
   async getForumTopicLink(
     parameters: getForumTopicLink$DirectInput
@@ -81116,7 +81116,7 @@ export class $AsyncApi {
    * Returns found forum topics in a forum chat. This is a temporary method for getting information about topic list from the server
    *
    * @param {getForumTopics$DirectInput} parameters {@link getForumTopics$Input}
-   * @return {Promise<ForumTopics>} Promise<{@link ForumTopics}>
+   * @returns {Promise<ForumTopics>} Promise<{@link ForumTopics}>
    */
   async getForumTopics(
     parameters: getForumTopics$DirectInput
@@ -81129,7 +81129,7 @@ export class $AsyncApi {
    * Changes the notification settings of a forum topic
    *
    * @param {setForumTopicNotificationSettings$DirectInput} parameters {@link setForumTopicNotificationSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setForumTopicNotificationSettings(
     parameters: setForumTopicNotificationSettings$DirectInput
@@ -81145,7 +81145,7 @@ export class $AsyncApi {
    * Toggles whether a topic is closed in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
    *
    * @param {toggleForumTopicIsClosed$DirectInput} parameters {@link toggleForumTopicIsClosed$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleForumTopicIsClosed(
     parameters: toggleForumTopicIsClosed$DirectInput
@@ -81158,7 +81158,7 @@ export class $AsyncApi {
    * Toggles whether a General topic is hidden in a forum supergroup chat; requires can_manage_topics right in the supergroup
    *
    * @param {toggleGeneralForumTopicIsHidden$DirectInput} parameters {@link toggleGeneralForumTopicIsHidden$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGeneralForumTopicIsHidden(
     parameters: toggleGeneralForumTopicIsHidden$DirectInput
@@ -81174,7 +81174,7 @@ export class $AsyncApi {
    * Changes the pinned state of a forum topic; requires can_manage_topics right in the supergroup. There can be up to getOption("pinned_forum_topic_count_max") pinned forum topics
    *
    * @param {toggleForumTopicIsPinned$DirectInput} parameters {@link toggleForumTopicIsPinned$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleForumTopicIsPinned(
     parameters: toggleForumTopicIsPinned$DirectInput
@@ -81187,7 +81187,7 @@ export class $AsyncApi {
    * Changes the order of pinned forum topics; requires can_manage_topics right in the supergroup
    *
    * @param {setPinnedForumTopics$DirectInput} parameters {@link setPinnedForumTopics$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setPinnedForumTopics(
     parameters: setPinnedForumTopics$DirectInput
@@ -81200,7 +81200,7 @@ export class $AsyncApi {
    * Deletes all messages in a forum topic; requires can_delete_messages administrator right in the supergroup unless the user is creator of the topic, the topic has no messages from other users and has at most 11 messages
    *
    * @param {deleteForumTopic$DirectInput} parameters {@link deleteForumTopic$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteForumTopic(parameters: deleteForumTopic$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteForumTopic", parameters);
@@ -81211,7 +81211,7 @@ export class $AsyncApi {
    * Returns information about an emoji reaction. Returns a 404 error if the reaction is not found
    *
    * @param {getEmojiReaction$DirectInput} parameters {@link getEmojiReaction$Input}
-   * @return {Promise<EmojiReaction>} Promise<{@link EmojiReaction}>
+   * @returns {Promise<EmojiReaction>} Promise<{@link EmojiReaction}>
    */
   async getEmojiReaction(
     parameters: getEmojiReaction$DirectInput
@@ -81224,7 +81224,7 @@ export class $AsyncApi {
    * Returns TGS stickers with generic animations for custom emoji reactions
    *
    * @param {getCustomEmojiReactionAnimations$DirectInput} parameters {@link getCustomEmojiReactionAnimations$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getCustomEmojiReactionAnimations(
     parameters: getCustomEmojiReactionAnimations$DirectInput
@@ -81240,7 +81240,7 @@ export class $AsyncApi {
    * Returns reactions, which can be added to a message. The list can change after updateActiveEmojiReactions, updateChatAvailableReactions for the chat, or updateMessageInteractionInfo for the message
    *
    * @param {getMessageAvailableReactions$DirectInput} parameters {@link getMessageAvailableReactions$Input}
-   * @return {Promise<AvailableReactions>} Promise<{@link AvailableReactions}>
+   * @returns {Promise<AvailableReactions>} Promise<{@link AvailableReactions}>
    */
   async getMessageAvailableReactions(
     parameters: getMessageAvailableReactions$DirectInput
@@ -81256,7 +81256,7 @@ export class $AsyncApi {
    * Clears the list of recently used reactions
    *
    * @param {clearRecentReactions$DirectInput} parameters {@link clearRecentReactions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clearRecentReactions(
     parameters: clearRecentReactions$DirectInput
@@ -81269,7 +81269,7 @@ export class $AsyncApi {
    * Adds a reaction or a tag to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
    *
    * @param {addMessageReaction$DirectInput} parameters {@link addMessageReaction$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addMessageReaction(parameters: addMessageReaction$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("addMessageReaction", parameters);
@@ -81280,7 +81280,7 @@ export class $AsyncApi {
    * Removes a reaction from a message. A chosen reaction can always be removed
    *
    * @param {removeMessageReaction$DirectInput} parameters {@link removeMessageReaction$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeMessageReaction(
     parameters: removeMessageReaction$DirectInput
@@ -81293,7 +81293,7 @@ export class $AsyncApi {
    * Sets reactions on a message; for bots only
    *
    * @param {setMessageReactions$DirectInput} parameters {@link setMessageReactions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setMessageReactions(
     parameters: setMessageReactions$DirectInput
@@ -81306,7 +81306,7 @@ export class $AsyncApi {
    * Returns reactions added for a message, along with their sender
    *
    * @param {getMessageAddedReactions$DirectInput} parameters {@link getMessageAddedReactions$Input}
-   * @return {Promise<AddedReactions>} Promise<{@link AddedReactions}>
+   * @returns {Promise<AddedReactions>} Promise<{@link AddedReactions}>
    */
   async getMessageAddedReactions(
     parameters: getMessageAddedReactions$DirectInput
@@ -81319,7 +81319,7 @@ export class $AsyncApi {
    * Changes type of default reaction for the current user
    *
    * @param {setDefaultReactionType$DirectInput} parameters {@link setDefaultReactionType$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setDefaultReactionType(
     parameters: setDefaultReactionType$DirectInput
@@ -81332,7 +81332,7 @@ export class $AsyncApi {
    * Returns tags used in Saved Messages or a Saved Messages topic
    *
    * @param {getSavedMessagesTags$DirectInput} parameters {@link getSavedMessagesTags$Input}
-   * @return {Promise<SavedMessagesTags>} Promise<{@link SavedMessagesTags}>
+   * @returns {Promise<SavedMessagesTags>} Promise<{@link SavedMessagesTags}>
    */
   async getSavedMessagesTags(
     parameters: getSavedMessagesTags$DirectInput
@@ -81345,7 +81345,7 @@ export class $AsyncApi {
    * Changes label of a Saved Messages tag; for Telegram Premium users only
    *
    * @param {setSavedMessagesTagLabel$DirectInput} parameters {@link setSavedMessagesTagLabel$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setSavedMessagesTagLabel(
     parameters: setSavedMessagesTagLabel$DirectInput
@@ -81358,7 +81358,7 @@ export class $AsyncApi {
    * Returns information about a message effect. Returns a 404 error if the effect is not found
    *
    * @param {getMessageEffect$DirectInput} parameters {@link getMessageEffect$Input}
-   * @return {Promise<MessageEffect>} Promise<{@link MessageEffect}>
+   * @returns {Promise<MessageEffect>} Promise<{@link MessageEffect}>
    */
   async getMessageEffect(
     parameters: getMessageEffect$DirectInput
@@ -81371,7 +81371,7 @@ export class $AsyncApi {
    * Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
    *
    * @param {searchQuote$DirectInput} parameters {@link searchQuote$Input}
-   * @return {Promise<FoundPosition>} Promise<{@link FoundPosition}>
+   * @returns {Promise<FoundPosition>} Promise<{@link FoundPosition}>
    */
   async searchQuote(parameters: searchQuote$DirectInput): Promise<FoundPosition> {
     const result = await this.client.invoke("searchQuote", parameters);
@@ -81382,7 +81382,7 @@ export class $AsyncApi {
    * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
    *
    * @param {getTextEntities$DirectInput} parameters {@link getTextEntities$Input}
-   * @return {Promise<TextEntities>} Promise<{@link TextEntities}>
+   * @returns {Promise<TextEntities>} Promise<{@link TextEntities}>
    */
   async getTextEntities(
     parameters: getTextEntities$DirectInput
@@ -81397,7 +81397,7 @@ export class $AsyncApi {
    * - and MentionName entities from a marked-up text. Can be called synchronously
    *
    * @param {parseTextEntities$DirectInput} parameters {@link parseTextEntities$Input}
-   * @return {Promise<FormattedText>} Promise<{@link FormattedText}>
+   * @returns {Promise<FormattedText>} Promise<{@link FormattedText}>
    */
   async parseTextEntities(
     parameters: parseTextEntities$DirectInput
@@ -81410,7 +81410,7 @@ export class $AsyncApi {
    * Parses Markdown entities in a human-friendly format, ignoring markup errors. Can be called synchronously
    *
    * @param {parseMarkdown$DirectInput} parameters {@link parseMarkdown$Input}
-   * @return {Promise<FormattedText>} Promise<{@link FormattedText}>
+   * @returns {Promise<FormattedText>} Promise<{@link FormattedText}>
    */
   async parseMarkdown(
     parameters: parseMarkdown$DirectInput
@@ -81423,7 +81423,7 @@ export class $AsyncApi {
    * Replaces text entities with Markdown formatting in a human-friendly format. Entities that can't be represented in Markdown unambiguously are kept as is. Can be called synchronously
    *
    * @param {getMarkdownText$DirectInput} parameters {@link getMarkdownText$Input}
-   * @return {Promise<FormattedText>} Promise<{@link FormattedText}>
+   * @returns {Promise<FormattedText>} Promise<{@link FormattedText}>
    */
   async getMarkdownText(
     parameters: getMarkdownText$DirectInput
@@ -81436,7 +81436,7 @@ export class $AsyncApi {
    * Returns an emoji for the given country. Returns an empty string on failure. Can be called synchronously
    *
    * @param {getCountryFlagEmoji$DirectInput} parameters {@link getCountryFlagEmoji$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getCountryFlagEmoji(
     parameters: getCountryFlagEmoji$DirectInput
@@ -81449,7 +81449,7 @@ export class $AsyncApi {
    * Returns the MIME type of a file, guessed by its extension. Returns an empty string on failure. Can be called synchronously
    *
    * @param {getFileMimeType$DirectInput} parameters {@link getFileMimeType$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getFileMimeType(parameters: getFileMimeType$DirectInput): Promise<Text> {
     const result = await this.client.invoke("getFileMimeType", parameters);
@@ -81460,7 +81460,7 @@ export class $AsyncApi {
    * Returns the extension of a file, guessed by its MIME type. Returns an empty string on failure. Can be called synchronously
    *
    * @param {getFileExtension$DirectInput} parameters {@link getFileExtension$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getFileExtension(parameters: getFileExtension$DirectInput): Promise<Text> {
     const result = await this.client.invoke("getFileExtension", parameters);
@@ -81471,7 +81471,7 @@ export class $AsyncApi {
    * Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
    *
    * @param {cleanFileName$DirectInput} parameters {@link cleanFileName$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async cleanFileName(parameters: cleanFileName$DirectInput): Promise<Text> {
     const result = await this.client.invoke("cleanFileName", parameters);
@@ -81482,7 +81482,7 @@ export class $AsyncApi {
    * Returns a string stored in the local database from the specified localization target and language pack by its key. Returns a 404 error if the string is not found. Can be called synchronously
    *
    * @param {getLanguagePackString$DirectInput} parameters {@link getLanguagePackString$Input}
-   * @return {Promise<LanguagePackStringValue>} Promise<{@link LanguagePackStringValue}>
+   * @returns {Promise<LanguagePackStringValue>} Promise<{@link LanguagePackStringValue}>
    */
   async getLanguagePackString(
     parameters: getLanguagePackString$DirectInput
@@ -81495,7 +81495,7 @@ export class $AsyncApi {
    * Converts a JSON-serialized string to corresponding JsonValue object. Can be called synchronously
    *
    * @param {getJsonValue$DirectInput} parameters {@link getJsonValue$Input}
-   * @return {Promise<JsonValue>} Promise<{@link JsonValue}>
+   * @returns {Promise<JsonValue>} Promise<{@link JsonValue}>
    */
   async getJsonValue(parameters: getJsonValue$DirectInput): Promise<JsonValue> {
     const result = await this.client.invoke("getJsonValue", parameters);
@@ -81506,7 +81506,7 @@ export class $AsyncApi {
    * Converts a JsonValue object to corresponding JSON-serialized string. Can be called synchronously
    *
    * @param {getJsonString$DirectInput} parameters {@link getJsonString$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getJsonString(parameters: getJsonString$DirectInput): Promise<Text> {
     const result = await this.client.invoke("getJsonString", parameters);
@@ -81517,7 +81517,7 @@ export class $AsyncApi {
    * Converts a themeParameters object to corresponding JSON-serialized string. Can be called synchronously
    *
    * @param {getThemeParametersJsonString$DirectInput} parameters {@link getThemeParametersJsonString$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getThemeParametersJsonString(
     parameters: getThemeParametersJsonString$DirectInput
@@ -81533,7 +81533,7 @@ export class $AsyncApi {
    * Changes the user answer to a poll. A poll in quiz mode can be answered only once
    *
    * @param {setPollAnswer$DirectInput} parameters {@link setPollAnswer$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setPollAnswer(parameters: setPollAnswer$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setPollAnswer", parameters);
@@ -81544,7 +81544,7 @@ export class $AsyncApi {
    * Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
    *
    * @param {getPollVoters$DirectInput} parameters {@link getPollVoters$Input}
-   * @return {Promise<MessageSenders>} Promise<{@link MessageSenders}>
+   * @returns {Promise<MessageSenders>} Promise<{@link MessageSenders}>
    */
   async getPollVoters(
     parameters: getPollVoters$DirectInput
@@ -81557,7 +81557,7 @@ export class $AsyncApi {
    * Stops a poll. A poll in a message can be stopped when the message has can_be_edited flag is set
    *
    * @param {stopPoll$DirectInput} parameters {@link stopPoll$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async stopPoll(parameters: stopPoll$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("stopPoll", parameters);
@@ -81568,7 +81568,7 @@ export class $AsyncApi {
    * Hides a suggested action
    *
    * @param {hideSuggestedAction$DirectInput} parameters {@link hideSuggestedAction$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async hideSuggestedAction(
     parameters: hideSuggestedAction$DirectInput
@@ -81581,7 +81581,7 @@ export class $AsyncApi {
    * Hides the list of contacts that have close birthdays for 24 hours
    *
    * @param {hideContactCloseBirthdays$DirectInput} parameters {@link hideContactCloseBirthdays$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async hideContactCloseBirthdays(
     parameters: hideContactCloseBirthdays$DirectInput
@@ -81594,7 +81594,7 @@ export class $AsyncApi {
    * Returns information about a business connection by its identifier; for bots only
    *
    * @param {getBusinessConnection$DirectInput} parameters {@link getBusinessConnection$Input}
-   * @return {Promise<BusinessConnection>} Promise<{@link BusinessConnection}>
+   * @returns {Promise<BusinessConnection>} Promise<{@link BusinessConnection}>
    */
   async getBusinessConnection(
     parameters: getBusinessConnection$DirectInput
@@ -81607,7 +81607,7 @@ export class $AsyncApi {
    * Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
    *
    * @param {getLoginUrlInfo$DirectInput} parameters {@link getLoginUrlInfo$Input}
-   * @return {Promise<LoginUrlInfo>} Promise<{@link LoginUrlInfo}>
+   * @returns {Promise<LoginUrlInfo>} Promise<{@link LoginUrlInfo}>
    */
   async getLoginUrlInfo(
     parameters: getLoginUrlInfo$DirectInput
@@ -81622,7 +81622,7 @@ export class $AsyncApi {
    * - Use the method getLoginUrlInfo to find whether a prior user confirmation is needed. If an error is returned, then the button must be handled as an ordinary URL button
    *
    * @param {getLoginUrl$DirectInput} parameters {@link getLoginUrl$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getLoginUrl(parameters: getLoginUrl$DirectInput): Promise<HttpUrl> {
     const result = await this.client.invoke("getLoginUrl", parameters);
@@ -81633,7 +81633,7 @@ export class $AsyncApi {
    * Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
    *
    * @param {shareUsersWithBot$DirectInput} parameters {@link shareUsersWithBot$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async shareUsersWithBot(parameters: shareUsersWithBot$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("shareUsersWithBot", parameters);
@@ -81644,7 +81644,7 @@ export class $AsyncApi {
    * Shares a chat after pressing a keyboardButtonTypeRequestChat button with the bot
    *
    * @param {shareChatWithBot$DirectInput} parameters {@link shareChatWithBot$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async shareChatWithBot(parameters: shareChatWithBot$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("shareChatWithBot", parameters);
@@ -81655,7 +81655,7 @@ export class $AsyncApi {
    * Sends an inline query to a bot and returns its results. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
    *
    * @param {getInlineQueryResults$DirectInput} parameters {@link getInlineQueryResults$Input}
-   * @return {Promise<InlineQueryResults>} Promise<{@link InlineQueryResults}>
+   * @returns {Promise<InlineQueryResults>} Promise<{@link InlineQueryResults}>
    */
   async getInlineQueryResults(
     parameters: getInlineQueryResults$DirectInput
@@ -81668,7 +81668,7 @@ export class $AsyncApi {
    * Sets the result of an inline query; for bots only
    *
    * @param {answerInlineQuery$DirectInput} parameters {@link answerInlineQuery$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async answerInlineQuery(parameters: answerInlineQuery$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("answerInlineQuery", parameters);
@@ -81679,7 +81679,7 @@ export class $AsyncApi {
    * Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
    *
    * @param {searchWebApp$DirectInput} parameters {@link searchWebApp$Input}
-   * @return {Promise<FoundWebApp>} Promise<{@link FoundWebApp}>
+   * @returns {Promise<FoundWebApp>} Promise<{@link FoundWebApp}>
    */
   async searchWebApp(parameters: searchWebApp$DirectInput): Promise<FoundWebApp> {
     const result = await this.client.invoke("searchWebApp", parameters);
@@ -81690,7 +81690,7 @@ export class $AsyncApi {
    * Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
    *
    * @param {getWebAppLinkUrl$DirectInput} parameters {@link getWebAppLinkUrl$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getWebAppLinkUrl(
     parameters: getWebAppLinkUrl$DirectInput
@@ -81703,7 +81703,7 @@ export class $AsyncApi {
    * Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, an inlineQueryResultsButtonTypeWebApp button, or an internalLinkTypeSideMenuBot link
    *
    * @param {getWebAppUrl$DirectInput} parameters {@link getWebAppUrl$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getWebAppUrl(parameters: getWebAppUrl$DirectInput): Promise<HttpUrl> {
     const result = await this.client.invoke("getWebAppUrl", parameters);
@@ -81714,7 +81714,7 @@ export class $AsyncApi {
    * Sends data received from a keyboardButtonTypeWebApp Web App to a bot
    *
    * @param {sendWebAppData$DirectInput} parameters {@link sendWebAppData$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendWebAppData(parameters: sendWebAppData$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("sendWebAppData", parameters);
@@ -81727,7 +81727,7 @@ export class $AsyncApi {
    * - For each bot, a confirmation alert about data sent to the bot must be shown once
    *
    * @param {openWebApp$DirectInput} parameters {@link openWebApp$Input}
-   * @return {Promise<WebAppInfo>} Promise<{@link WebAppInfo}>
+   * @returns {Promise<WebAppInfo>} Promise<{@link WebAppInfo}>
    */
   async openWebApp(parameters: openWebApp$DirectInput): Promise<WebAppInfo> {
     const result = await this.client.invoke("openWebApp", parameters);
@@ -81738,7 +81738,7 @@ export class $AsyncApi {
    * Informs TDLib that a previously opened Web App was closed
    *
    * @param {closeWebApp$DirectInput} parameters {@link closeWebApp$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async closeWebApp(parameters: closeWebApp$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("closeWebApp", parameters);
@@ -81749,7 +81749,7 @@ export class $AsyncApi {
    * Sets the result of interaction with a Web App and sends corresponding message on behalf of the user to the chat from which the query originated; for bots only
    *
    * @param {answerWebAppQuery$DirectInput} parameters {@link answerWebAppQuery$Input}
-   * @return {Promise<SentWebAppMessage>} Promise<{@link SentWebAppMessage}>
+   * @returns {Promise<SentWebAppMessage>} Promise<{@link SentWebAppMessage}>
    */
   async answerWebAppQuery(
     parameters: answerWebAppQuery$DirectInput
@@ -81762,7 +81762,7 @@ export class $AsyncApi {
    * Sends a callback query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
    *
    * @param {getCallbackQueryAnswer$DirectInput} parameters {@link getCallbackQueryAnswer$Input}
-   * @return {Promise<CallbackQueryAnswer>} Promise<{@link CallbackQueryAnswer}>
+   * @returns {Promise<CallbackQueryAnswer>} Promise<{@link CallbackQueryAnswer}>
    */
   async getCallbackQueryAnswer(
     parameters: getCallbackQueryAnswer$DirectInput
@@ -81775,7 +81775,7 @@ export class $AsyncApi {
    * Sets the result of a callback query; for bots only
    *
    * @param {answerCallbackQuery$DirectInput} parameters {@link answerCallbackQuery$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async answerCallbackQuery(
     parameters: answerCallbackQuery$DirectInput
@@ -81788,7 +81788,7 @@ export class $AsyncApi {
    * Sets the result of a shipping query; for bots only
    *
    * @param {answerShippingQuery$DirectInput} parameters {@link answerShippingQuery$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async answerShippingQuery(
     parameters: answerShippingQuery$DirectInput
@@ -81801,7 +81801,7 @@ export class $AsyncApi {
    * Sets the result of a pre-checkout query; for bots only
    *
    * @param {answerPreCheckoutQuery$DirectInput} parameters {@link answerPreCheckoutQuery$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async answerPreCheckoutQuery(
     parameters: answerPreCheckoutQuery$DirectInput
@@ -81814,7 +81814,7 @@ export class $AsyncApi {
    * Updates the game score of the specified user in the game; for bots only
    *
    * @param {setGameScore$DirectInput} parameters {@link setGameScore$Input}
-   * @return {Promise<Message>} Promise<{@link Message}>
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
   async setGameScore(parameters: setGameScore$DirectInput): Promise<Message> {
     const result = await this.client.invoke("setGameScore", parameters);
@@ -81825,7 +81825,7 @@ export class $AsyncApi {
    * Updates the game score of the specified user in a game; for bots only
    *
    * @param {setInlineGameScore$DirectInput} parameters {@link setInlineGameScore$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setInlineGameScore(parameters: setInlineGameScore$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setInlineGameScore", parameters);
@@ -81836,7 +81836,7 @@ export class $AsyncApi {
    * Returns the high scores for a game and some part of the high score table in the range of the specified user; for bots only
    *
    * @param {getGameHighScores$DirectInput} parameters {@link getGameHighScores$Input}
-   * @return {Promise<GameHighScores>} Promise<{@link GameHighScores}>
+   * @returns {Promise<GameHighScores>} Promise<{@link GameHighScores}>
    */
   async getGameHighScores(
     parameters: getGameHighScores$DirectInput
@@ -81849,7 +81849,7 @@ export class $AsyncApi {
    * Returns game high scores and some part of the high score table in the range of the specified user; for bots only
    *
    * @param {getInlineGameHighScores$DirectInput} parameters {@link getInlineGameHighScores$Input}
-   * @return {Promise<GameHighScores>} Promise<{@link GameHighScores}>
+   * @returns {Promise<GameHighScores>} Promise<{@link GameHighScores}>
    */
   async getInlineGameHighScores(
     parameters: getInlineGameHighScores$DirectInput
@@ -81862,7 +81862,7 @@ export class $AsyncApi {
    * Deletes the default reply markup from a chat. Must be called after a one-time keyboard or a replyMarkupForceReply reply markup has been used. An updateChatReplyMarkup update will be sent if the reply markup is changed
    *
    * @param {deleteChatReplyMarkup$DirectInput} parameters {@link deleteChatReplyMarkup$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteChatReplyMarkup(
     parameters: deleteChatReplyMarkup$DirectInput
@@ -81875,7 +81875,7 @@ export class $AsyncApi {
    * Sends a notification about user activity in a chat
    *
    * @param {sendChatAction$DirectInput} parameters {@link sendChatAction$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendChatAction(parameters: sendChatAction$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("sendChatAction", parameters);
@@ -81886,7 +81886,7 @@ export class $AsyncApi {
    * Informs TDLib that the chat is opened by the user. Many useful activities depend on the chat being opened or closed (e.g., in supergroups and channels all updates are received only for opened chats)
    *
    * @param {openChat$DirectInput} parameters {@link openChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async openChat(parameters: openChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("openChat", parameters);
@@ -81897,7 +81897,7 @@ export class $AsyncApi {
    * Informs TDLib that the chat is closed by the user. Many useful activities depend on the chat being opened or closed
    *
    * @param {closeChat$DirectInput} parameters {@link closeChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async closeChat(parameters: closeChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("closeChat", parameters);
@@ -81910,7 +81910,7 @@ export class $AsyncApi {
    * - Many useful activities depend on whether the messages are currently being viewed or not (e.g., marking messages as read, incrementing a view counter, updating a view counter, removing deleted messages in supergroups and channels)
    *
    * @param {viewMessages$DirectInput} parameters {@link viewMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async viewMessages(parameters: viewMessages$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("viewMessages", parameters);
@@ -81923,7 +81923,7 @@ export class $AsyncApi {
    * - An updateMessageContentOpened update will be generated if something has changed
    *
    * @param {openMessageContent$DirectInput} parameters {@link openMessageContent$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async openMessageContent(parameters: openMessageContent$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("openMessageContent", parameters);
@@ -81934,7 +81934,7 @@ export class $AsyncApi {
    * Informs TDLib that a message with an animated emoji was clicked by the user. Returns a big animated sticker to be played or a 404 error if usual animation needs to be played
    *
    * @param {clickAnimatedEmojiMessage$DirectInput} parameters {@link clickAnimatedEmojiMessage$Input}
-   * @return {Promise<Sticker>} Promise<{@link Sticker}>
+   * @returns {Promise<Sticker>} Promise<{@link Sticker}>
    */
   async clickAnimatedEmojiMessage(
     parameters: clickAnimatedEmojiMessage$DirectInput
@@ -81947,7 +81947,7 @@ export class $AsyncApi {
    * Returns an HTTPS or a tg: link with the given type. Can be called before authorization
    *
    * @param {getInternalLink$DirectInput} parameters {@link getInternalLink$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getInternalLink(parameters: getInternalLink$DirectInput): Promise<HttpUrl> {
     const result = await this.client.invoke("getInternalLink", parameters);
@@ -81958,7 +81958,7 @@ export class $AsyncApi {
    * Returns information about the type of internal link. Returns a 404 error if the link is not internal. Can be called before authorization
    *
    * @param {getInternalLinkType$DirectInput} parameters {@link getInternalLinkType$Input}
-   * @return {Promise<InternalLinkType>} Promise<{@link InternalLinkType}>
+   * @returns {Promise<InternalLinkType>} Promise<{@link InternalLinkType}>
    */
   async getInternalLinkType(
     parameters: getInternalLinkType$DirectInput
@@ -81971,7 +81971,7 @@ export class $AsyncApi {
    * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if web page preview is disabled in secret chats
    *
    * @param {getExternalLinkInfo$DirectInput} parameters {@link getExternalLinkInfo$Input}
-   * @return {Promise<LoginUrlInfo>} Promise<{@link LoginUrlInfo}>
+   * @returns {Promise<LoginUrlInfo>} Promise<{@link LoginUrlInfo}>
    */
   async getExternalLinkInfo(
     parameters: getExternalLinkInfo$DirectInput
@@ -81984,7 +81984,7 @@ export class $AsyncApi {
    * Returns an HTTP URL which can be used to automatically authorize the current user on a website after clicking an HTTP link. Use the method getExternalLinkInfo to find whether a prior user confirmation is needed
    *
    * @param {getExternalLink$DirectInput} parameters {@link getExternalLink$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getExternalLink(parameters: getExternalLink$DirectInput): Promise<HttpUrl> {
     const result = await this.client.invoke("getExternalLink", parameters);
@@ -81995,7 +81995,7 @@ export class $AsyncApi {
    * Marks all mentions in a chat as read
    *
    * @param {readAllChatMentions$DirectInput} parameters {@link readAllChatMentions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async readAllChatMentions(
     parameters: readAllChatMentions$DirectInput
@@ -82008,7 +82008,7 @@ export class $AsyncApi {
    * Marks all mentions in a forum topic as read
    *
    * @param {readAllMessageThreadMentions$DirectInput} parameters {@link readAllMessageThreadMentions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async readAllMessageThreadMentions(
     parameters: readAllMessageThreadMentions$DirectInput
@@ -82024,7 +82024,7 @@ export class $AsyncApi {
    * Marks all reactions in a chat or a forum topic as read
    *
    * @param {readAllChatReactions$DirectInput} parameters {@link readAllChatReactions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async readAllChatReactions(
     parameters: readAllChatReactions$DirectInput
@@ -82037,7 +82037,7 @@ export class $AsyncApi {
    * Marks all reactions in a forum topic as read
    *
    * @param {readAllMessageThreadReactions$DirectInput} parameters {@link readAllMessageThreadReactions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async readAllMessageThreadReactions(
     parameters: readAllMessageThreadReactions$DirectInput
@@ -82053,7 +82053,7 @@ export class $AsyncApi {
    * Returns an existing chat corresponding to a given user
    *
    * @param {createPrivateChat$DirectInput} parameters {@link createPrivateChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async createPrivateChat(parameters: createPrivateChat$DirectInput): Promise<Chat> {
     const result = await this.client.invoke("createPrivateChat", parameters);
@@ -82064,7 +82064,7 @@ export class $AsyncApi {
    * Returns an existing chat corresponding to a known basic group
    *
    * @param {createBasicGroupChat$DirectInput} parameters {@link createBasicGroupChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async createBasicGroupChat(
     parameters: createBasicGroupChat$DirectInput
@@ -82077,7 +82077,7 @@ export class $AsyncApi {
    * Returns an existing chat corresponding to a known supergroup or channel
    *
    * @param {createSupergroupChat$DirectInput} parameters {@link createSupergroupChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async createSupergroupChat(
     parameters: createSupergroupChat$DirectInput
@@ -82090,7 +82090,7 @@ export class $AsyncApi {
    * Returns an existing chat corresponding to a known secret chat
    *
    * @param {createSecretChat$DirectInput} parameters {@link createSecretChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async createSecretChat(parameters: createSecretChat$DirectInput): Promise<Chat> {
     const result = await this.client.invoke("createSecretChat", parameters);
@@ -82101,7 +82101,7 @@ export class $AsyncApi {
    * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
    *
    * @param {createNewBasicGroupChat$DirectInput} parameters {@link createNewBasicGroupChat$Input}
-   * @return {Promise<CreatedBasicGroupChat>} Promise<{@link CreatedBasicGroupChat}>
+   * @returns {Promise<CreatedBasicGroupChat>} Promise<{@link CreatedBasicGroupChat}>
    */
   async createNewBasicGroupChat(
     parameters: createNewBasicGroupChat$DirectInput
@@ -82114,7 +82114,7 @@ export class $AsyncApi {
    * Creates a new supergroup or channel and sends a corresponding messageSupergroupChatCreate. Returns the newly created chat
    *
    * @param {createNewSupergroupChat$DirectInput} parameters {@link createNewSupergroupChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async createNewSupergroupChat(
     parameters: createNewSupergroupChat$DirectInput
@@ -82127,7 +82127,7 @@ export class $AsyncApi {
    * Creates a new secret chat. Returns the newly created chat
    *
    * @param {createNewSecretChat$DirectInput} parameters {@link createNewSecretChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async createNewSecretChat(
     parameters: createNewSecretChat$DirectInput
@@ -82140,7 +82140,7 @@ export class $AsyncApi {
    * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
    *
    * @param {upgradeBasicGroupChatToSupergroupChat$DirectInput} parameters {@link upgradeBasicGroupChatToSupergroupChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async upgradeBasicGroupChatToSupergroupChat(
     parameters: upgradeBasicGroupChatToSupergroupChat$DirectInput
@@ -82156,7 +82156,7 @@ export class $AsyncApi {
    * Returns chat lists to which the chat can be added. This is an offline request
    *
    * @param {getChatListsToAddChat$DirectInput} parameters {@link getChatListsToAddChat$Input}
-   * @return {Promise<ChatLists>} Promise<{@link ChatLists}>
+   * @returns {Promise<ChatLists>} Promise<{@link ChatLists}>
    */
   async getChatListsToAddChat(
     parameters: getChatListsToAddChat$DirectInput
@@ -82169,7 +82169,7 @@ export class $AsyncApi {
    * Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive chat lists, so it is automatically removed from another one if needed
    *
    * @param {addChatToList$DirectInput} parameters {@link addChatToList$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addChatToList(parameters: addChatToList$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("addChatToList", parameters);
@@ -82180,7 +82180,7 @@ export class $AsyncApi {
    * Returns information about a chat folder by its identifier
    *
    * @param {getChatFolder$DirectInput} parameters {@link getChatFolder$Input}
-   * @return {Promise<ChatFolder>} Promise<{@link ChatFolder}>
+   * @returns {Promise<ChatFolder>} Promise<{@link ChatFolder}>
    */
   async getChatFolder(parameters: getChatFolder$DirectInput): Promise<ChatFolder> {
     const result = await this.client.invoke("getChatFolder", parameters);
@@ -82191,7 +82191,7 @@ export class $AsyncApi {
    * Creates new chat folder. Returns information about the created chat folder. There can be up to getOption("chat_folder_count_max") chat folders, but the limit can be increased with Telegram Premium
    *
    * @param {createChatFolder$DirectInput} parameters {@link createChatFolder$Input}
-   * @return {Promise<ChatFolderInfo>} Promise<{@link ChatFolderInfo}>
+   * @returns {Promise<ChatFolderInfo>} Promise<{@link ChatFolderInfo}>
    */
   async createChatFolder(
     parameters: createChatFolder$DirectInput
@@ -82204,7 +82204,7 @@ export class $AsyncApi {
    * Edits existing chat folder. Returns information about the edited chat folder
    *
    * @param {editChatFolder$DirectInput} parameters {@link editChatFolder$Input}
-   * @return {Promise<ChatFolderInfo>} Promise<{@link ChatFolderInfo}>
+   * @returns {Promise<ChatFolderInfo>} Promise<{@link ChatFolderInfo}>
    */
   async editChatFolder(
     parameters: editChatFolder$DirectInput
@@ -82217,7 +82217,7 @@ export class $AsyncApi {
    * Deletes existing chat folder
    *
    * @param {deleteChatFolder$DirectInput} parameters {@link deleteChatFolder$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteChatFolder(parameters: deleteChatFolder$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteChatFolder", parameters);
@@ -82228,7 +82228,7 @@ export class $AsyncApi {
    * Returns identifiers of pinned or always included chats from a chat folder, which are suggested to be left when the chat folder is deleted
    *
    * @param {getChatFolderChatsToLeave$DirectInput} parameters {@link getChatFolderChatsToLeave$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getChatFolderChatsToLeave(
     parameters: getChatFolderChatsToLeave$DirectInput
@@ -82241,7 +82241,7 @@ export class $AsyncApi {
    * Returns approximate number of chats in a being created chat folder. Main and archive chat lists must be fully preloaded for this function to work correctly
    *
    * @param {getChatFolderChatCount$DirectInput} parameters {@link getChatFolderChatCount$Input}
-   * @return {Promise<Count>} Promise<{@link Count}>
+   * @returns {Promise<Count>} Promise<{@link Count}>
    */
   async getChatFolderChatCount(
     parameters: getChatFolderChatCount$DirectInput
@@ -82254,7 +82254,7 @@ export class $AsyncApi {
    * Changes the order of chat folders
    *
    * @param {reorderChatFolders$DirectInput} parameters {@link reorderChatFolders$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reorderChatFolders(parameters: reorderChatFolders$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("reorderChatFolders", parameters);
@@ -82265,7 +82265,7 @@ export class $AsyncApi {
    * Toggles whether chat folder tags are enabled
    *
    * @param {toggleChatFolderTags$DirectInput} parameters {@link toggleChatFolderTags$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleChatFolderTags(
     parameters: toggleChatFolderTags$DirectInput
@@ -82278,7 +82278,7 @@ export class $AsyncApi {
    * Returns recommended chat folders for the current user
    *
    * @param {getRecommendedChatFolders$DirectInput} parameters {@link getRecommendedChatFolders$Input}
-   * @return {Promise<RecommendedChatFolders>} Promise<{@link RecommendedChatFolders}>
+   * @returns {Promise<RecommendedChatFolders>} Promise<{@link RecommendedChatFolders}>
    */
   async getRecommendedChatFolders(
     parameters: getRecommendedChatFolders$DirectInput
@@ -82291,7 +82291,7 @@ export class $AsyncApi {
    * Returns default icon name for a folder. Can be called synchronously
    *
    * @param {getChatFolderDefaultIconName$DirectInput} parameters {@link getChatFolderDefaultIconName$Input}
-   * @return {Promise<ChatFolderIcon>} Promise<{@link ChatFolderIcon}>
+   * @returns {Promise<ChatFolderIcon>} Promise<{@link ChatFolderIcon}>
    */
   async getChatFolderDefaultIconName(
     parameters: getChatFolderDefaultIconName$DirectInput
@@ -82307,7 +82307,7 @@ export class $AsyncApi {
    * Returns identifiers of chats from a chat folder, suitable for adding to a chat folder invite link
    *
    * @param {getChatsForChatFolderInviteLink$DirectInput} parameters {@link getChatsForChatFolderInviteLink$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getChatsForChatFolderInviteLink(
     parameters: getChatsForChatFolderInviteLink$DirectInput
@@ -82323,7 +82323,7 @@ export class $AsyncApi {
    * Creates a new invite link for a chat folder. A link can be created for a chat folder if it has only pinned and included chats
    *
    * @param {createChatFolderInviteLink$DirectInput} parameters {@link createChatFolderInviteLink$Input}
-   * @return {Promise<ChatFolderInviteLink>} Promise<{@link ChatFolderInviteLink}>
+   * @returns {Promise<ChatFolderInviteLink>} Promise<{@link ChatFolderInviteLink}>
    */
   async createChatFolderInviteLink(
     parameters: createChatFolderInviteLink$DirectInput
@@ -82339,7 +82339,7 @@ export class $AsyncApi {
    * Returns invite links created by the current user for a shareable chat folder
    *
    * @param {getChatFolderInviteLinks$DirectInput} parameters {@link getChatFolderInviteLinks$Input}
-   * @return {Promise<ChatFolderInviteLinks>} Promise<{@link ChatFolderInviteLinks}>
+   * @returns {Promise<ChatFolderInviteLinks>} Promise<{@link ChatFolderInviteLinks}>
    */
   async getChatFolderInviteLinks(
     parameters: getChatFolderInviteLinks$DirectInput
@@ -82352,7 +82352,7 @@ export class $AsyncApi {
    * Edits an invite link for a chat folder
    *
    * @param {editChatFolderInviteLink$DirectInput} parameters {@link editChatFolderInviteLink$Input}
-   * @return {Promise<ChatFolderInviteLink>} Promise<{@link ChatFolderInviteLink}>
+   * @returns {Promise<ChatFolderInviteLink>} Promise<{@link ChatFolderInviteLink}>
    */
   async editChatFolderInviteLink(
     parameters: editChatFolderInviteLink$DirectInput
@@ -82365,7 +82365,7 @@ export class $AsyncApi {
    * Deletes an invite link for a chat folder
    *
    * @param {deleteChatFolderInviteLink$DirectInput} parameters {@link deleteChatFolderInviteLink$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteChatFolderInviteLink(
     parameters: deleteChatFolderInviteLink$DirectInput
@@ -82381,7 +82381,7 @@ export class $AsyncApi {
    * Checks the validity of an invite link for a chat folder and returns information about the corresponding chat folder
    *
    * @param {checkChatFolderInviteLink$DirectInput} parameters {@link checkChatFolderInviteLink$Input}
-   * @return {Promise<ChatFolderInviteLinkInfo>} Promise<{@link ChatFolderInviteLinkInfo}>
+   * @returns {Promise<ChatFolderInviteLinkInfo>} Promise<{@link ChatFolderInviteLinkInfo}>
    */
   async checkChatFolderInviteLink(
     parameters: checkChatFolderInviteLink$DirectInput
@@ -82394,7 +82394,7 @@ export class $AsyncApi {
    * Adds a chat folder by an invite link
    *
    * @param {addChatFolderByInviteLink$DirectInput} parameters {@link addChatFolderByInviteLink$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addChatFolderByInviteLink(
     parameters: addChatFolderByInviteLink$DirectInput
@@ -82407,7 +82407,7 @@ export class $AsyncApi {
    * Returns new chats added to a shareable chat folder by its owner. The method must be called at most once in getOption("chat_folder_new_chats_update_period") for the given chat folder
    *
    * @param {getChatFolderNewChats$DirectInput} parameters {@link getChatFolderNewChats$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getChatFolderNewChats(
     parameters: getChatFolderNewChats$DirectInput
@@ -82420,7 +82420,7 @@ export class $AsyncApi {
    * Process new chats added to a shareable chat folder by its owner
    *
    * @param {processChatFolderNewChats$DirectInput} parameters {@link processChatFolderNewChats$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async processChatFolderNewChats(
     parameters: processChatFolderNewChats$DirectInput
@@ -82433,7 +82433,7 @@ export class $AsyncApi {
    * Returns settings for automatic moving of chats to and from the Archive chat lists
    *
    * @param {getArchiveChatListSettings$DirectInput} parameters {@link getArchiveChatListSettings$Input}
-   * @return {Promise<ArchiveChatListSettings>} Promise<{@link ArchiveChatListSettings}>
+   * @returns {Promise<ArchiveChatListSettings>} Promise<{@link ArchiveChatListSettings}>
    */
   async getArchiveChatListSettings(
     parameters: getArchiveChatListSettings$DirectInput
@@ -82449,7 +82449,7 @@ export class $AsyncApi {
    * Changes settings for automatic moving of chats to and from the Archive chat lists
    *
    * @param {setArchiveChatListSettings$DirectInput} parameters {@link setArchiveChatListSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setArchiveChatListSettings(
     parameters: setArchiveChatListSettings$DirectInput
@@ -82465,7 +82465,7 @@ export class $AsyncApi {
    * Changes the chat title. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
    *
    * @param {setChatTitle$DirectInput} parameters {@link setChatTitle$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatTitle(parameters: setChatTitle$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatTitle", parameters);
@@ -82476,7 +82476,7 @@ export class $AsyncApi {
    * Changes the photo of a chat. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
    *
    * @param {setChatPhoto$DirectInput} parameters {@link setChatPhoto$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatPhoto(parameters: setChatPhoto$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatPhoto", parameters);
@@ -82487,7 +82487,7 @@ export class $AsyncApi {
    * Changes accent color and background custom emoji of a channel chat. Requires can_change_info administrator right
    *
    * @param {setChatAccentColor$DirectInput} parameters {@link setChatAccentColor$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatAccentColor(parameters: setChatAccentColor$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatAccentColor", parameters);
@@ -82498,7 +82498,7 @@ export class $AsyncApi {
    * Changes accent color and background custom emoji for profile of a supergroup or channel chat. Requires can_change_info administrator right
    *
    * @param {setChatProfileAccentColor$DirectInput} parameters {@link setChatProfileAccentColor$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatProfileAccentColor(
     parameters: setChatProfileAccentColor$DirectInput
@@ -82513,7 +82513,7 @@ export class $AsyncApi {
    * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
    *
    * @param {setChatMessageAutoDeleteTime$DirectInput} parameters {@link setChatMessageAutoDeleteTime$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatMessageAutoDeleteTime(
     parameters: setChatMessageAutoDeleteTime$DirectInput
@@ -82529,7 +82529,7 @@ export class $AsyncApi {
    * Changes the emoji status of a chat. Use chatBoostLevelFeatures.can_set_emoji_status to check whether an emoji status can be set. Requires can_change_info administrator right
    *
    * @param {setChatEmojiStatus$DirectInput} parameters {@link setChatEmojiStatus$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatEmojiStatus(parameters: setChatEmojiStatus$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatEmojiStatus", parameters);
@@ -82540,7 +82540,7 @@ export class $AsyncApi {
    * Changes the chat members permissions. Supported only for basic groups and supergroups. Requires can_restrict_members administrator right
    *
    * @param {setChatPermissions$DirectInput} parameters {@link setChatPermissions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatPermissions(parameters: setChatPermissions$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatPermissions", parameters);
@@ -82551,7 +82551,7 @@ export class $AsyncApi {
    * Sets the background in a specific chat. Supported only in private and secret chats with non-deleted users, and in chats with sufficient boost level and can_change_info administrator right
    *
    * @param {setChatBackground$DirectInput} parameters {@link setChatBackground$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatBackground(parameters: setChatBackground$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatBackground", parameters);
@@ -82562,7 +82562,7 @@ export class $AsyncApi {
    * Deletes background in a specific chat
    *
    * @param {deleteChatBackground$DirectInput} parameters {@link deleteChatBackground$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteChatBackground(
     parameters: deleteChatBackground$DirectInput
@@ -82575,7 +82575,7 @@ export class $AsyncApi {
    * Changes the chat theme. Supported only in private and secret chats
    *
    * @param {setChatTheme$DirectInput} parameters {@link setChatTheme$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatTheme(parameters: setChatTheme$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatTheme", parameters);
@@ -82586,7 +82586,7 @@ export class $AsyncApi {
    * Changes the draft message in a chat
    *
    * @param {setChatDraftMessage$DirectInput} parameters {@link setChatDraftMessage$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatDraftMessage(
     parameters: setChatDraftMessage$DirectInput
@@ -82599,7 +82599,7 @@ export class $AsyncApi {
    * Changes the notification settings of a chat. Notification settings of a chat with the current user (Saved Messages) can't be changed
    *
    * @param {setChatNotificationSettings$DirectInput} parameters {@link setChatNotificationSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatNotificationSettings(
     parameters: setChatNotificationSettings$DirectInput
@@ -82615,7 +82615,7 @@ export class $AsyncApi {
    * Changes the ability of users to save, forward, or copy chat content. Supported only for basic groups, supergroups and channels. Requires owner privileges
    *
    * @param {toggleChatHasProtectedContent$DirectInput} parameters {@link toggleChatHasProtectedContent$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleChatHasProtectedContent(
     parameters: toggleChatHasProtectedContent$DirectInput
@@ -82631,7 +82631,7 @@ export class $AsyncApi {
    * Changes the view_as_topics setting of a forum chat or Saved Messages
    *
    * @param {toggleChatViewAsTopics$DirectInput} parameters {@link toggleChatViewAsTopics$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleChatViewAsTopics(
     parameters: toggleChatViewAsTopics$DirectInput
@@ -82644,7 +82644,7 @@ export class $AsyncApi {
    * Changes the translatable state of a chat
    *
    * @param {toggleChatIsTranslatable$DirectInput} parameters {@link toggleChatIsTranslatable$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleChatIsTranslatable(
     parameters: toggleChatIsTranslatable$DirectInput
@@ -82657,7 +82657,7 @@ export class $AsyncApi {
    * Changes the marked as unread state of a chat
    *
    * @param {toggleChatIsMarkedAsUnread$DirectInput} parameters {@link toggleChatIsMarkedAsUnread$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleChatIsMarkedAsUnread(
     parameters: toggleChatIsMarkedAsUnread$DirectInput
@@ -82673,7 +82673,7 @@ export class $AsyncApi {
    * Changes the value of the default disable_notification parameter, used when a message is sent to a chat
    *
    * @param {toggleChatDefaultDisableNotification$DirectInput} parameters {@link toggleChatDefaultDisableNotification$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleChatDefaultDisableNotification(
     parameters: toggleChatDefaultDisableNotification$DirectInput
@@ -82689,7 +82689,7 @@ export class $AsyncApi {
    * Changes reactions, available in a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
    *
    * @param {setChatAvailableReactions$DirectInput} parameters {@link setChatAvailableReactions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatAvailableReactions(
     parameters: setChatAvailableReactions$DirectInput
@@ -82702,7 +82702,7 @@ export class $AsyncApi {
    * Changes application-specific data associated with a chat
    *
    * @param {setChatClientData$DirectInput} parameters {@link setChatClientData$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatClientData(parameters: setChatClientData$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatClientData", parameters);
@@ -82713,7 +82713,7 @@ export class $AsyncApi {
    * Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
    *
    * @param {setChatDescription$DirectInput} parameters {@link setChatDescription$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatDescription(parameters: setChatDescription$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatDescription", parameters);
@@ -82724,7 +82724,7 @@ export class $AsyncApi {
    * Changes the discussion group of a channel chat; requires can_change_info administrator right in the channel if it is specified
    *
    * @param {setChatDiscussionGroup$DirectInput} parameters {@link setChatDiscussionGroup$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatDiscussionGroup(
     parameters: setChatDiscussionGroup$DirectInput
@@ -82737,7 +82737,7 @@ export class $AsyncApi {
    * Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
    *
    * @param {setChatLocation$DirectInput} parameters {@link setChatLocation$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatLocation(parameters: setChatLocation$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setChatLocation", parameters);
@@ -82748,7 +82748,7 @@ export class $AsyncApi {
    * Changes the slow mode delay of a chat. Available only for supergroups; requires can_restrict_members right
    *
    * @param {setChatSlowModeDelay$DirectInput} parameters {@link setChatSlowModeDelay$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatSlowModeDelay(
     parameters: setChatSlowModeDelay$DirectInput
@@ -82761,7 +82761,7 @@ export class $AsyncApi {
    * Pins a message in a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
    *
    * @param {pinChatMessage$DirectInput} parameters {@link pinChatMessage$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async pinChatMessage(parameters: pinChatMessage$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("pinChatMessage", parameters);
@@ -82772,7 +82772,7 @@ export class $AsyncApi {
    * Removes a pinned message from a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
    *
    * @param {unpinChatMessage$DirectInput} parameters {@link unpinChatMessage$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async unpinChatMessage(parameters: unpinChatMessage$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("unpinChatMessage", parameters);
@@ -82783,7 +82783,7 @@ export class $AsyncApi {
    * Removes all pinned messages from a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
    *
    * @param {unpinAllChatMessages$DirectInput} parameters {@link unpinAllChatMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async unpinAllChatMessages(
     parameters: unpinAllChatMessages$DirectInput
@@ -82796,7 +82796,7 @@ export class $AsyncApi {
    * Removes all pinned messages from a forum topic; requires can_pin_messages member right in the supergroup
    *
    * @param {unpinAllMessageThreadMessages$DirectInput} parameters {@link unpinAllMessageThreadMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async unpinAllMessageThreadMessages(
     parameters: unpinAllMessageThreadMessages$DirectInput
@@ -82812,7 +82812,7 @@ export class $AsyncApi {
    * Adds the current user as a new member to a chat. Private and secret chats can't be joined using this method. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
    *
    * @param {joinChat$DirectInput} parameters {@link joinChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async joinChat(parameters: joinChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("joinChat", parameters);
@@ -82823,7 +82823,7 @@ export class $AsyncApi {
    * Removes the current user from chat members. Private and secret chats can't be left using this method
    *
    * @param {leaveChat$DirectInput} parameters {@link leaveChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async leaveChat(parameters: leaveChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("leaveChat", parameters);
@@ -82834,7 +82834,7 @@ export class $AsyncApi {
    * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
    *
    * @param {addChatMember$DirectInput} parameters {@link addChatMember$Input}
-   * @return {Promise<FailedToAddMembers>} Promise<{@link FailedToAddMembers}>
+   * @returns {Promise<FailedToAddMembers>} Promise<{@link FailedToAddMembers}>
    */
   async addChatMember(
     parameters: addChatMember$DirectInput
@@ -82849,7 +82849,7 @@ export class $AsyncApi {
    * - This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members. Returns information about members that weren't added
    *
    * @param {addChatMembers$DirectInput} parameters {@link addChatMembers$Input}
-   * @return {Promise<FailedToAddMembers>} Promise<{@link FailedToAddMembers}>
+   * @returns {Promise<FailedToAddMembers>} Promise<{@link FailedToAddMembers}>
    */
   async addChatMembers(
     parameters: addChatMembers$DirectInput
@@ -82866,7 +82866,7 @@ export class $AsyncApi {
    * - Use addChatMember or banChatMember if some additional parameters needs to be passed
    *
    * @param {setChatMemberStatus$DirectInput} parameters {@link setChatMemberStatus$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatMemberStatus(
     parameters: setChatMemberStatus$DirectInput
@@ -82879,7 +82879,7 @@ export class $AsyncApi {
    * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
    *
    * @param {banChatMember$DirectInput} parameters {@link banChatMember$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async banChatMember(parameters: banChatMember$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("banChatMember", parameters);
@@ -82890,7 +82890,7 @@ export class $AsyncApi {
    * Checks whether the current session can be used to transfer a chat ownership to another user
    *
    * @param {canTransferOwnership$DirectInput} parameters {@link canTransferOwnership$Input}
-   * @return {Promise<CanTransferOwnershipResult>} Promise<{@link CanTransferOwnershipResult}>
+   * @returns {Promise<CanTransferOwnershipResult>} Promise<{@link CanTransferOwnershipResult}>
    */
   async canTransferOwnership(
     parameters: canTransferOwnership$DirectInput
@@ -82903,7 +82903,7 @@ export class $AsyncApi {
    * Changes the owner of a chat; requires owner privileges in the chat. Use the method canTransferOwnership to check whether the ownership can be transferred from the current session. Available only for supergroups and channel chats
    *
    * @param {transferChatOwnership$DirectInput} parameters {@link transferChatOwnership$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async transferChatOwnership(
     parameters: transferChatOwnership$DirectInput
@@ -82916,7 +82916,7 @@ export class $AsyncApi {
    * Returns information about a single member of a chat
    *
    * @param {getChatMember$DirectInput} parameters {@link getChatMember$Input}
-   * @return {Promise<ChatMember>} Promise<{@link ChatMember}>
+   * @returns {Promise<ChatMember>} Promise<{@link ChatMember}>
    */
   async getChatMember(parameters: getChatMember$DirectInput): Promise<ChatMember> {
     const result = await this.client.invoke("getChatMember", parameters);
@@ -82927,7 +82927,7 @@ export class $AsyncApi {
    * Searches for a specified query in the first name, last name and usernames of the members of a specified chat. Requires administrator rights if the chat is a channel
    *
    * @param {searchChatMembers$DirectInput} parameters {@link searchChatMembers$Input}
-   * @return {Promise<ChatMembers>} Promise<{@link ChatMembers}>
+   * @returns {Promise<ChatMembers>} Promise<{@link ChatMembers}>
    */
   async searchChatMembers(
     parameters: searchChatMembers$DirectInput
@@ -82940,7 +82940,7 @@ export class $AsyncApi {
    * Returns a list of administrators of the chat with their custom titles
    *
    * @param {getChatAdministrators$DirectInput} parameters {@link getChatAdministrators$Input}
-   * @return {Promise<ChatAdministrators>} Promise<{@link ChatAdministrators}>
+   * @returns {Promise<ChatAdministrators>} Promise<{@link ChatAdministrators}>
    */
   async getChatAdministrators(
     parameters: getChatAdministrators$DirectInput
@@ -82953,7 +82953,7 @@ export class $AsyncApi {
    * Clears message drafts in all chats
    *
    * @param {clearAllDraftMessages$DirectInput} parameters {@link clearAllDraftMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clearAllDraftMessages(
     parameters: clearAllDraftMessages$DirectInput
@@ -82966,7 +82966,7 @@ export class $AsyncApi {
    * Returns saved notification sound by its identifier. Returns a 404 error if there is no saved notification sound with the specified identifier
    *
    * @param {getSavedNotificationSound$DirectInput} parameters {@link getSavedNotificationSound$Input}
-   * @return {Promise<NotificationSounds>} Promise<{@link NotificationSounds}>
+   * @returns {Promise<NotificationSounds>} Promise<{@link NotificationSounds}>
    */
   async getSavedNotificationSound(
     parameters: getSavedNotificationSound$DirectInput
@@ -82979,7 +82979,7 @@ export class $AsyncApi {
    * Returns the list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
    *
    * @param {getSavedNotificationSounds$DirectInput} parameters {@link getSavedNotificationSounds$Input}
-   * @return {Promise<NotificationSounds>} Promise<{@link NotificationSounds}>
+   * @returns {Promise<NotificationSounds>} Promise<{@link NotificationSounds}>
    */
   async getSavedNotificationSounds(
     parameters: getSavedNotificationSounds$DirectInput
@@ -82995,7 +82995,7 @@ export class $AsyncApi {
    * Adds a new notification sound to the list of saved notification sounds. The new notification sound is added to the top of the list. If it is already in the list, its position isn't changed
    *
    * @param {addSavedNotificationSound$DirectInput} parameters {@link addSavedNotificationSound$Input}
-   * @return {Promise<NotificationSound>} Promise<{@link NotificationSound}>
+   * @returns {Promise<NotificationSound>} Promise<{@link NotificationSound}>
    */
   async addSavedNotificationSound(
     parameters: addSavedNotificationSound$DirectInput
@@ -83008,7 +83008,7 @@ export class $AsyncApi {
    * Removes a notification sound from the list of saved notification sounds
    *
    * @param {removeSavedNotificationSound$DirectInput} parameters {@link removeSavedNotificationSound$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeSavedNotificationSound(
     parameters: removeSavedNotificationSound$DirectInput
@@ -83024,7 +83024,7 @@ export class $AsyncApi {
    * Returns the list of chats with non-default notification settings for new messages
    *
    * @param {getChatNotificationSettingsExceptions$DirectInput} parameters {@link getChatNotificationSettingsExceptions$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getChatNotificationSettingsExceptions(
     parameters: getChatNotificationSettingsExceptions$DirectInput
@@ -83040,7 +83040,7 @@ export class $AsyncApi {
    * Returns the notification settings for chats of a given type
    *
    * @param {getScopeNotificationSettings$DirectInput} parameters {@link getScopeNotificationSettings$Input}
-   * @return {Promise<ScopeNotificationSettings>} Promise<{@link ScopeNotificationSettings}>
+   * @returns {Promise<ScopeNotificationSettings>} Promise<{@link ScopeNotificationSettings}>
    */
   async getScopeNotificationSettings(
     parameters: getScopeNotificationSettings$DirectInput
@@ -83056,7 +83056,7 @@ export class $AsyncApi {
    * Changes notification settings for chats of a given type
    *
    * @param {setScopeNotificationSettings$DirectInput} parameters {@link setScopeNotificationSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setScopeNotificationSettings(
     parameters: setScopeNotificationSettings$DirectInput
@@ -83072,7 +83072,7 @@ export class $AsyncApi {
    * Changes notification settings for reactions
    *
    * @param {setReactionNotificationSettings$DirectInput} parameters {@link setReactionNotificationSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setReactionNotificationSettings(
     parameters: setReactionNotificationSettings$DirectInput
@@ -83088,7 +83088,7 @@ export class $AsyncApi {
    * Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
    *
    * @param {resetAllNotificationSettings$DirectInput} parameters {@link resetAllNotificationSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async resetAllNotificationSettings(
     parameters: resetAllNotificationSettings$DirectInput
@@ -83104,7 +83104,7 @@ export class $AsyncApi {
    * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
    *
    * @param {toggleChatIsPinned$DirectInput} parameters {@link toggleChatIsPinned$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleChatIsPinned(parameters: toggleChatIsPinned$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("toggleChatIsPinned", parameters);
@@ -83115,7 +83115,7 @@ export class $AsyncApi {
    * Changes the order of pinned chats
    *
    * @param {setPinnedChats$DirectInput} parameters {@link setPinnedChats$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setPinnedChats(parameters: setPinnedChats$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setPinnedChats", parameters);
@@ -83126,7 +83126,7 @@ export class $AsyncApi {
    * Traverse all chats in a chat list and marks all messages in the chats as read
    *
    * @param {readChatList$DirectInput} parameters {@link readChatList$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async readChatList(parameters: readChatList$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("readChatList", parameters);
@@ -83137,7 +83137,7 @@ export class $AsyncApi {
    * Returns a story
    *
    * @param {getStory$DirectInput} parameters {@link getStory$Input}
-   * @return {Promise<Story>} Promise<{@link Story}>
+   * @returns {Promise<Story>} Promise<{@link Story}>
    */
   async getStory(parameters: getStory$DirectInput): Promise<Story> {
     const result = await this.client.invoke("getStory", parameters);
@@ -83148,7 +83148,7 @@ export class $AsyncApi {
    * Returns supergroup and channel chats in which the current user has the right to post stories. The chats must be rechecked with canSendStory before actually trying to post a story there
    *
    * @param {getChatsToSendStories$DirectInput} parameters {@link getChatsToSendStories$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getChatsToSendStories(
     parameters: getChatsToSendStories$DirectInput
@@ -83161,7 +83161,7 @@ export class $AsyncApi {
    * Checks whether the current user can send a story on behalf of a chat; requires can_post_stories right for supergroup and channel chats
    *
    * @param {canSendStory$DirectInput} parameters {@link canSendStory$Input}
-   * @return {Promise<CanSendStoryResult>} Promise<{@link CanSendStoryResult}>
+   * @returns {Promise<CanSendStoryResult>} Promise<{@link CanSendStoryResult}>
    */
   async canSendStory(
     parameters: canSendStory$DirectInput
@@ -83174,7 +83174,7 @@ export class $AsyncApi {
    * Sends a new story to a chat; requires can_post_stories right for supergroup and channel chats. Returns a temporary story
    *
    * @param {sendStory$DirectInput} parameters {@link sendStory$Input}
-   * @return {Promise<Story>} Promise<{@link Story}>
+   * @returns {Promise<Story>} Promise<{@link Story}>
    */
   async sendStory(parameters: sendStory$DirectInput): Promise<Story> {
     const result = await this.client.invoke("sendStory", parameters);
@@ -83185,7 +83185,7 @@ export class $AsyncApi {
    * Changes content and caption of a story. Can be called only if story.can_be_edited == true
    *
    * @param {editStory$DirectInput} parameters {@link editStory$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editStory(parameters: editStory$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("editStory", parameters);
@@ -83196,7 +83196,7 @@ export class $AsyncApi {
    * Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_be_edited == true
    *
    * @param {setStoryPrivacySettings$DirectInput} parameters {@link setStoryPrivacySettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setStoryPrivacySettings(
     parameters: setStoryPrivacySettings$DirectInput
@@ -83209,7 +83209,7 @@ export class $AsyncApi {
    * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
    *
    * @param {toggleStoryIsPostedToChatPage$DirectInput} parameters {@link toggleStoryIsPostedToChatPage$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleStoryIsPostedToChatPage(
     parameters: toggleStoryIsPostedToChatPage$DirectInput
@@ -83225,7 +83225,7 @@ export class $AsyncApi {
    * Deletes a previously sent story. Can be called only if story.can_be_deleted == true
    *
    * @param {deleteStory$DirectInput} parameters {@link deleteStory$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteStory(parameters: deleteStory$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteStory", parameters);
@@ -83236,7 +83236,7 @@ export class $AsyncApi {
    * Returns the list of chats with non-default notification settings for stories
    *
    * @param {getStoryNotificationSettingsExceptions$DirectInput} parameters {@link getStoryNotificationSettingsExceptions$Input}
-   * @return {Promise<Chats>} Promise<{@link Chats}>
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
    */
   async getStoryNotificationSettingsExceptions(
     parameters: getStoryNotificationSettingsExceptions$DirectInput
@@ -83254,7 +83254,7 @@ export class $AsyncApi {
    * - the pair (active_stories.order, active_stories.story_sender_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
    *
    * @param {loadActiveStories$DirectInput} parameters {@link loadActiveStories$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async loadActiveStories(parameters: loadActiveStories$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("loadActiveStories", parameters);
@@ -83265,7 +83265,7 @@ export class $AsyncApi {
    * Changes story list in which stories from the chat are shown
    *
    * @param {setChatActiveStoriesList$DirectInput} parameters {@link setChatActiveStoriesList$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatActiveStoriesList(
     parameters: setChatActiveStoriesList$DirectInput
@@ -83278,7 +83278,7 @@ export class $AsyncApi {
    * Returns the list of active stories posted by the given chat
    *
    * @param {getChatActiveStories$DirectInput} parameters {@link getChatActiveStories$Input}
-   * @return {Promise<ChatActiveStories>} Promise<{@link ChatActiveStories}>
+   * @returns {Promise<ChatActiveStories>} Promise<{@link ChatActiveStories}>
    */
   async getChatActiveStories(
     parameters: getChatActiveStories$DirectInput
@@ -83293,7 +83293,7 @@ export class $AsyncApi {
    * - Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
    *
    * @param {getChatPostedToChatPageStories$DirectInput} parameters {@link getChatPostedToChatPageStories$Input}
-   * @return {Promise<Stories>} Promise<{@link Stories}>
+   * @returns {Promise<Stories>} Promise<{@link Stories}>
    */
   async getChatPostedToChatPageStories(
     parameters: getChatPostedToChatPageStories$DirectInput
@@ -83311,7 +83311,7 @@ export class $AsyncApi {
    * - The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
    *
    * @param {getChatArchivedStories$DirectInput} parameters {@link getChatArchivedStories$Input}
-   * @return {Promise<Stories>} Promise<{@link Stories}>
+   * @returns {Promise<Stories>} Promise<{@link Stories}>
    */
   async getChatArchivedStories(
     parameters: getChatArchivedStories$DirectInput
@@ -83324,7 +83324,7 @@ export class $AsyncApi {
    * Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
    *
    * @param {setChatPinnedStories$DirectInput} parameters {@link setChatPinnedStories$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setChatPinnedStories(
     parameters: setChatPinnedStories$DirectInput
@@ -83337,7 +83337,7 @@ export class $AsyncApi {
    * Informs TDLib that a story is opened and is being viewed by the user
    *
    * @param {openStory$DirectInput} parameters {@link openStory$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async openStory(parameters: openStory$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("openStory", parameters);
@@ -83348,7 +83348,7 @@ export class $AsyncApi {
    * Informs TDLib that a story is closed by the user
    *
    * @param {closeStory$DirectInput} parameters {@link closeStory$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async closeStory(parameters: closeStory$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("closeStory", parameters);
@@ -83359,7 +83359,7 @@ export class $AsyncApi {
    * Returns reactions, which can be chosen for a story
    *
    * @param {getStoryAvailableReactions$DirectInput} parameters {@link getStoryAvailableReactions$Input}
-   * @return {Promise<AvailableReactions>} Promise<{@link AvailableReactions}>
+   * @returns {Promise<AvailableReactions>} Promise<{@link AvailableReactions}>
    */
   async getStoryAvailableReactions(
     parameters: getStoryAvailableReactions$DirectInput
@@ -83375,7 +83375,7 @@ export class $AsyncApi {
    * Changes chosen reaction on a story that has already been sent
    *
    * @param {setStoryReaction$DirectInput} parameters {@link setStoryReaction$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setStoryReaction(parameters: setStoryReaction$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setStoryReaction", parameters);
@@ -83386,7 +83386,7 @@ export class $AsyncApi {
    * Returns interactions with a story. The method can be called only for stories posted on behalf of the current user
    *
    * @param {getStoryInteractions$DirectInput} parameters {@link getStoryInteractions$Input}
-   * @return {Promise<StoryInteractions>} Promise<{@link StoryInteractions}>
+   * @returns {Promise<StoryInteractions>} Promise<{@link StoryInteractions}>
    */
   async getStoryInteractions(
     parameters: getStoryInteractions$DirectInput
@@ -83399,7 +83399,7 @@ export class $AsyncApi {
    * Returns interactions with a story posted in a chat. Can be used only if story is posted on behalf of a chat and the user is an administrator in the chat
    *
    * @param {getChatStoryInteractions$DirectInput} parameters {@link getChatStoryInteractions$Input}
-   * @return {Promise<StoryInteractions>} Promise<{@link StoryInteractions}>
+   * @returns {Promise<StoryInteractions>} Promise<{@link StoryInteractions}>
    */
   async getChatStoryInteractions(
     parameters: getChatStoryInteractions$DirectInput
@@ -83412,7 +83412,7 @@ export class $AsyncApi {
    * Reports a story to the Telegram moderators
    *
    * @param {reportStory$DirectInput} parameters {@link reportStory$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reportStory(parameters: reportStory$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("reportStory", parameters);
@@ -83425,7 +83425,7 @@ export class $AsyncApi {
    * - and for the next "story_stealth_mode_future_period" seconds; for Telegram Premium users only
    *
    * @param {activateStoryStealthMode$DirectInput} parameters {@link activateStoryStealthMode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async activateStoryStealthMode(
     parameters: activateStoryStealthMode$DirectInput
@@ -83440,7 +83440,7 @@ export class $AsyncApi {
    * - For optimal performance, the number of returned messages and stories is chosen by TDLib
    *
    * @param {getStoryPublicForwards$DirectInput} parameters {@link getStoryPublicForwards$Input}
-   * @return {Promise<PublicForwards>} Promise<{@link PublicForwards}>
+   * @returns {Promise<PublicForwards>} Promise<{@link PublicForwards}>
    */
   async getStoryPublicForwards(
     parameters: getStoryPublicForwards$DirectInput
@@ -83453,7 +83453,7 @@ export class $AsyncApi {
    * Returns the list of features available on the specific chat boost level; this is an offline request
    *
    * @param {getChatBoostLevelFeatures$DirectInput} parameters {@link getChatBoostLevelFeatures$Input}
-   * @return {Promise<ChatBoostLevelFeatures>} Promise<{@link ChatBoostLevelFeatures}>
+   * @returns {Promise<ChatBoostLevelFeatures>} Promise<{@link ChatBoostLevelFeatures}>
    */
   async getChatBoostLevelFeatures(
     parameters: getChatBoostLevelFeatures$DirectInput
@@ -83466,7 +83466,7 @@ export class $AsyncApi {
    * Returns the list of features available for different chat boost levels; this is an offline request
    *
    * @param {getChatBoostFeatures$DirectInput} parameters {@link getChatBoostFeatures$Input}
-   * @return {Promise<ChatBoostFeatures>} Promise<{@link ChatBoostFeatures}>
+   * @returns {Promise<ChatBoostFeatures>} Promise<{@link ChatBoostFeatures}>
    */
   async getChatBoostFeatures(
     parameters: getChatBoostFeatures$DirectInput
@@ -83479,7 +83479,7 @@ export class $AsyncApi {
    * Returns the list of available chat boost slots for the current user
    *
    * @param {getAvailableChatBoostSlots$DirectInput} parameters {@link getAvailableChatBoostSlots$Input}
-   * @return {Promise<ChatBoostSlots>} Promise<{@link ChatBoostSlots}>
+   * @returns {Promise<ChatBoostSlots>} Promise<{@link ChatBoostSlots}>
    */
   async getAvailableChatBoostSlots(
     parameters: getAvailableChatBoostSlots$DirectInput
@@ -83495,7 +83495,7 @@ export class $AsyncApi {
    * Returns the current boost status for a supergroup or a channel chat
    *
    * @param {getChatBoostStatus$DirectInput} parameters {@link getChatBoostStatus$Input}
-   * @return {Promise<ChatBoostStatus>} Promise<{@link ChatBoostStatus}>
+   * @returns {Promise<ChatBoostStatus>} Promise<{@link ChatBoostStatus}>
    */
   async getChatBoostStatus(
     parameters: getChatBoostStatus$DirectInput
@@ -83508,7 +83508,7 @@ export class $AsyncApi {
    * Boosts a chat and returns the list of available chat boost slots for the current user after the boost
    *
    * @param {boostChat$DirectInput} parameters {@link boostChat$Input}
-   * @return {Promise<ChatBoostSlots>} Promise<{@link ChatBoostSlots}>
+   * @returns {Promise<ChatBoostSlots>} Promise<{@link ChatBoostSlots}>
    */
   async boostChat(parameters: boostChat$DirectInput): Promise<ChatBoostSlots> {
     const result = await this.client.invoke("boostChat", parameters);
@@ -83519,7 +83519,7 @@ export class $AsyncApi {
    * Returns an HTTPS link to boost the specified supergroup or channel chat
    *
    * @param {getChatBoostLink$DirectInput} parameters {@link getChatBoostLink$Input}
-   * @return {Promise<ChatBoostLink>} Promise<{@link ChatBoostLink}>
+   * @returns {Promise<ChatBoostLink>} Promise<{@link ChatBoostLink}>
    */
   async getChatBoostLink(
     parameters: getChatBoostLink$DirectInput
@@ -83532,7 +83532,7 @@ export class $AsyncApi {
    * Returns information about a link to boost a chat. Can be called for any internal link of the type internalLinkTypeChatBoost
    *
    * @param {getChatBoostLinkInfo$DirectInput} parameters {@link getChatBoostLinkInfo$Input}
-   * @return {Promise<ChatBoostLinkInfo>} Promise<{@link ChatBoostLinkInfo}>
+   * @returns {Promise<ChatBoostLinkInfo>} Promise<{@link ChatBoostLinkInfo}>
    */
   async getChatBoostLinkInfo(
     parameters: getChatBoostLinkInfo$DirectInput
@@ -83545,7 +83545,7 @@ export class $AsyncApi {
    * Returns the list of boosts applied to a chat; requires administrator rights in the chat
    *
    * @param {getChatBoosts$DirectInput} parameters {@link getChatBoosts$Input}
-   * @return {Promise<FoundChatBoosts>} Promise<{@link FoundChatBoosts}>
+   * @returns {Promise<FoundChatBoosts>} Promise<{@link FoundChatBoosts}>
    */
   async getChatBoosts(
     parameters: getChatBoosts$DirectInput
@@ -83558,7 +83558,7 @@ export class $AsyncApi {
    * Returns the list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
    *
    * @param {getUserChatBoosts$DirectInput} parameters {@link getUserChatBoosts$Input}
-   * @return {Promise<FoundChatBoosts>} Promise<{@link FoundChatBoosts}>
+   * @returns {Promise<FoundChatBoosts>} Promise<{@link FoundChatBoosts}>
    */
   async getUserChatBoosts(
     parameters: getUserChatBoosts$DirectInput
@@ -83571,7 +83571,7 @@ export class $AsyncApi {
    * Returns information about a bot that can be added to attachment or side menu
    *
    * @param {getAttachmentMenuBot$DirectInput} parameters {@link getAttachmentMenuBot$Input}
-   * @return {Promise<AttachmentMenuBot>} Promise<{@link AttachmentMenuBot}>
+   * @returns {Promise<AttachmentMenuBot>} Promise<{@link AttachmentMenuBot}>
    */
   async getAttachmentMenuBot(
     parameters: getAttachmentMenuBot$DirectInput
@@ -83584,7 +83584,7 @@ export class $AsyncApi {
    * Adds or removes a bot to attachment and side menu. Bot can be added to the menu, only if userTypeBot.can_be_added_to_attachment_menu == true
    *
    * @param {toggleBotIsAddedToAttachmentMenu$DirectInput} parameters {@link toggleBotIsAddedToAttachmentMenu$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleBotIsAddedToAttachmentMenu(
     parameters: toggleBotIsAddedToAttachmentMenu$DirectInput
@@ -83600,7 +83600,7 @@ export class $AsyncApi {
    * Returns up to 8 emoji statuses, which must be shown right after the default Premium Badge in the emoji status list for self status
    *
    * @param {getThemedEmojiStatuses$DirectInput} parameters {@link getThemedEmojiStatuses$Input}
-   * @return {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
+   * @returns {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
    */
   async getThemedEmojiStatuses(
     parameters: getThemedEmojiStatuses$DirectInput
@@ -83613,7 +83613,7 @@ export class $AsyncApi {
    * Returns recent emoji statuses for self status
    *
    * @param {getRecentEmojiStatuses$DirectInput} parameters {@link getRecentEmojiStatuses$Input}
-   * @return {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
+   * @returns {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
    */
   async getRecentEmojiStatuses(
     parameters: getRecentEmojiStatuses$DirectInput
@@ -83626,7 +83626,7 @@ export class $AsyncApi {
    * Returns default emoji statuses for self status
    *
    * @param {getDefaultEmojiStatuses$DirectInput} parameters {@link getDefaultEmojiStatuses$Input}
-   * @return {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
+   * @returns {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
    */
   async getDefaultEmojiStatuses(
     parameters: getDefaultEmojiStatuses$DirectInput
@@ -83639,7 +83639,7 @@ export class $AsyncApi {
    * Clears the list of recently used emoji statuses for self status
    *
    * @param {clearRecentEmojiStatuses$DirectInput} parameters {@link clearRecentEmojiStatuses$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clearRecentEmojiStatuses(
     parameters: clearRecentEmojiStatuses$DirectInput
@@ -83652,7 +83652,7 @@ export class $AsyncApi {
    * Returns up to 8 emoji statuses, which must be shown in the emoji status list for chats
    *
    * @param {getThemedChatEmojiStatuses$DirectInput} parameters {@link getThemedChatEmojiStatuses$Input}
-   * @return {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
+   * @returns {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
    */
   async getThemedChatEmojiStatuses(
     parameters: getThemedChatEmojiStatuses$DirectInput
@@ -83668,7 +83668,7 @@ export class $AsyncApi {
    * Returns default emoji statuses for chats
    *
    * @param {getDefaultChatEmojiStatuses$DirectInput} parameters {@link getDefaultChatEmojiStatuses$Input}
-   * @return {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
+   * @returns {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
    */
   async getDefaultChatEmojiStatuses(
     parameters: getDefaultChatEmojiStatuses$DirectInput
@@ -83684,7 +83684,7 @@ export class $AsyncApi {
    * Returns the list of emoji statuses, which can't be used as chat emoji status, even they are from a sticker set with is_allowed_as_chat_emoji_status == true
    *
    * @param {getDisallowedChatEmojiStatuses$DirectInput} parameters {@link getDisallowedChatEmojiStatuses$Input}
-   * @return {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
+   * @returns {Promise<EmojiStatuses>} Promise<{@link EmojiStatuses}>
    */
   async getDisallowedChatEmojiStatuses(
     parameters: getDisallowedChatEmojiStatuses$DirectInput
@@ -83700,7 +83700,7 @@ export class $AsyncApi {
    * Downloads a file from the cloud. Download progress and completion of the download will be notified through updateFile updates
    *
    * @param {downloadFile$DirectInput} parameters {@link downloadFile$Input}
-   * @return {Promise<File>} Promise<{@link File}>
+   * @returns {Promise<File>} Promise<{@link File}>
    */
   async downloadFile(parameters: downloadFile$DirectInput): Promise<File> {
     const result = await this.client.invoke("downloadFile", parameters);
@@ -83711,7 +83711,7 @@ export class $AsyncApi {
    * Returns file downloaded prefix size from a given offset, in bytes
    *
    * @param {getFileDownloadedPrefixSize$DirectInput} parameters {@link getFileDownloadedPrefixSize$Input}
-   * @return {Promise<FileDownloadedPrefixSize>} Promise<{@link FileDownloadedPrefixSize}>
+   * @returns {Promise<FileDownloadedPrefixSize>} Promise<{@link FileDownloadedPrefixSize}>
    */
   async getFileDownloadedPrefixSize(
     parameters: getFileDownloadedPrefixSize$DirectInput
@@ -83727,7 +83727,7 @@ export class $AsyncApi {
    * Stops the downloading of a file. If a file has already been downloaded, does nothing
    *
    * @param {cancelDownloadFile$DirectInput} parameters {@link cancelDownloadFile$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async cancelDownloadFile(parameters: cancelDownloadFile$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("cancelDownloadFile", parameters);
@@ -83738,7 +83738,7 @@ export class $AsyncApi {
    * Returns suggested name for saving a file in a given directory
    *
    * @param {getSuggestedFileName$DirectInput} parameters {@link getSuggestedFileName$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getSuggestedFileName(
     parameters: getSuggestedFileName$DirectInput
@@ -83755,7 +83755,7 @@ export class $AsyncApi {
    * - The upload will not be completed until the file is sent in a message
    *
    * @param {preliminaryUploadFile$DirectInput} parameters {@link preliminaryUploadFile$Input}
-   * @return {Promise<File>} Promise<{@link File}>
+   * @returns {Promise<File>} Promise<{@link File}>
    */
   async preliminaryUploadFile(
     parameters: preliminaryUploadFile$DirectInput
@@ -83768,7 +83768,7 @@ export class $AsyncApi {
    * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
    *
    * @param {cancelPreliminaryUploadFile$DirectInput} parameters {@link cancelPreliminaryUploadFile$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async cancelPreliminaryUploadFile(
     parameters: cancelPreliminaryUploadFile$DirectInput
@@ -83784,7 +83784,7 @@ export class $AsyncApi {
    * Writes a part of a generated file. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct write to the destination file
    *
    * @param {writeGeneratedFilePart$DirectInput} parameters {@link writeGeneratedFilePart$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async writeGeneratedFilePart(
     parameters: writeGeneratedFilePart$DirectInput
@@ -83797,7 +83797,7 @@ export class $AsyncApi {
    * Informs TDLib on a file generation progress
    *
    * @param {setFileGenerationProgress$DirectInput} parameters {@link setFileGenerationProgress$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setFileGenerationProgress(
     parameters: setFileGenerationProgress$DirectInput
@@ -83810,7 +83810,7 @@ export class $AsyncApi {
    * Finishes the file generation
    *
    * @param {finishFileGeneration$DirectInput} parameters {@link finishFileGeneration$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async finishFileGeneration(
     parameters: finishFileGeneration$DirectInput
@@ -83823,7 +83823,7 @@ export class $AsyncApi {
    * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
    *
    * @param {readFilePart$DirectInput} parameters {@link readFilePart$Input}
-   * @return {Promise<FilePart>} Promise<{@link FilePart}>
+   * @returns {Promise<FilePart>} Promise<{@link FilePart}>
    */
   async readFilePart(parameters: readFilePart$DirectInput): Promise<FilePart> {
     const result = await this.client.invoke("readFilePart", parameters);
@@ -83834,7 +83834,7 @@ export class $AsyncApi {
    * Deletes a file from the TDLib file cache
    *
    * @param {deleteFile$DirectInput} parameters {@link deleteFile$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteFile(parameters: deleteFile$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteFile", parameters);
@@ -83847,7 +83847,7 @@ export class $AsyncApi {
    * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
    *
    * @param {addFileToDownloads$DirectInput} parameters {@link addFileToDownloads$Input}
-   * @return {Promise<File>} Promise<{@link File}>
+   * @returns {Promise<File>} Promise<{@link File}>
    */
   async addFileToDownloads(
     parameters: addFileToDownloads$DirectInput
@@ -83860,7 +83860,7 @@ export class $AsyncApi {
    * Changes pause state of a file in the file download list
    *
    * @param {toggleDownloadIsPaused$DirectInput} parameters {@link toggleDownloadIsPaused$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleDownloadIsPaused(
     parameters: toggleDownloadIsPaused$DirectInput
@@ -83873,7 +83873,7 @@ export class $AsyncApi {
    * Changes pause state of all files in the file download list
    *
    * @param {toggleAllDownloadsArePaused$DirectInput} parameters {@link toggleAllDownloadsArePaused$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleAllDownloadsArePaused(
     parameters: toggleAllDownloadsArePaused$DirectInput
@@ -83889,7 +83889,7 @@ export class $AsyncApi {
    * Removes a file from the file download list
    *
    * @param {removeFileFromDownloads$DirectInput} parameters {@link removeFileFromDownloads$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeFileFromDownloads(
     parameters: removeFileFromDownloads$DirectInput
@@ -83902,7 +83902,7 @@ export class $AsyncApi {
    * Removes all files from the file download list
    *
    * @param {removeAllFilesFromDownloads$DirectInput} parameters {@link removeAllFilesFromDownloads$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeAllFilesFromDownloads(
     parameters: removeAllFilesFromDownloads$DirectInput
@@ -83918,7 +83918,7 @@ export class $AsyncApi {
    * Searches for files in the file download list or recently downloaded files from the list
    *
    * @param {searchFileDownloads$DirectInput} parameters {@link searchFileDownloads$Input}
-   * @return {Promise<FoundFileDownloads>} Promise<{@link FoundFileDownloads}>
+   * @returns {Promise<FoundFileDownloads>} Promise<{@link FoundFileDownloads}>
    */
   async searchFileDownloads(
     parameters: searchFileDownloads$DirectInput
@@ -83931,7 +83931,7 @@ export class $AsyncApi {
    * Application verification has been completed. Can be called before authorization
    *
    * @param {setApplicationVerificationToken$DirectInput} parameters {@link setApplicationVerificationToken$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setApplicationVerificationToken(
     parameters: setApplicationVerificationToken$DirectInput
@@ -83947,7 +83947,7 @@ export class $AsyncApi {
    * Returns information about a file with messages exported from another application
    *
    * @param {getMessageFileType$DirectInput} parameters {@link getMessageFileType$Input}
-   * @return {Promise<MessageFileType>} Promise<{@link MessageFileType}>
+   * @returns {Promise<MessageFileType>} Promise<{@link MessageFileType}>
    */
   async getMessageFileType(
     parameters: getMessageFileType$DirectInput
@@ -83960,7 +83960,7 @@ export class $AsyncApi {
    * Returns a confirmation text to be shown to the user before starting message import
    *
    * @param {getMessageImportConfirmationText$DirectInput} parameters {@link getMessageImportConfirmationText$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getMessageImportConfirmationText(
     parameters: getMessageImportConfirmationText$DirectInput
@@ -83976,7 +83976,7 @@ export class $AsyncApi {
    * Imports messages exported from another app
    *
    * @param {importMessages$DirectInput} parameters {@link importMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async importMessages(parameters: importMessages$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("importMessages", parameters);
@@ -83987,7 +83987,7 @@ export class $AsyncApi {
    * Replaces current primary invite link for a chat with a new primary invite link. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right
    *
    * @param {replacePrimaryChatInviteLink$DirectInput} parameters {@link replacePrimaryChatInviteLink$Input}
-   * @return {Promise<ChatInviteLink>} Promise<{@link ChatInviteLink}>
+   * @returns {Promise<ChatInviteLink>} Promise<{@link ChatInviteLink}>
    */
   async replacePrimaryChatInviteLink(
     parameters: replacePrimaryChatInviteLink$DirectInput
@@ -84003,7 +84003,7 @@ export class $AsyncApi {
    * Creates a new invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat
    *
    * @param {createChatInviteLink$DirectInput} parameters {@link createChatInviteLink$Input}
-   * @return {Promise<ChatInviteLink>} Promise<{@link ChatInviteLink}>
+   * @returns {Promise<ChatInviteLink>} Promise<{@link ChatInviteLink}>
    */
   async createChatInviteLink(
     parameters: createChatInviteLink$DirectInput
@@ -84016,7 +84016,7 @@ export class $AsyncApi {
    * Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
    *
    * @param {editChatInviteLink$DirectInput} parameters {@link editChatInviteLink$Input}
-   * @return {Promise<ChatInviteLink>} Promise<{@link ChatInviteLink}>
+   * @returns {Promise<ChatInviteLink>} Promise<{@link ChatInviteLink}>
    */
   async editChatInviteLink(
     parameters: editChatInviteLink$DirectInput
@@ -84029,7 +84029,7 @@ export class $AsyncApi {
    * Returns information about an invite link. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
    *
    * @param {getChatInviteLink$DirectInput} parameters {@link getChatInviteLink$Input}
-   * @return {Promise<ChatInviteLink>} Promise<{@link ChatInviteLink}>
+   * @returns {Promise<ChatInviteLink>} Promise<{@link ChatInviteLink}>
    */
   async getChatInviteLink(
     parameters: getChatInviteLink$DirectInput
@@ -84042,7 +84042,7 @@ export class $AsyncApi {
    * Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
    *
    * @param {getChatInviteLinkCounts$DirectInput} parameters {@link getChatInviteLinkCounts$Input}
-   * @return {Promise<ChatInviteLinkCounts>} Promise<{@link ChatInviteLinkCounts}>
+   * @returns {Promise<ChatInviteLinkCounts>} Promise<{@link ChatInviteLinkCounts}>
    */
   async getChatInviteLinkCounts(
     parameters: getChatInviteLinkCounts$DirectInput
@@ -84055,7 +84055,7 @@ export class $AsyncApi {
    * Returns invite links for a chat created by specified administrator. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
    *
    * @param {getChatInviteLinks$DirectInput} parameters {@link getChatInviteLinks$Input}
-   * @return {Promise<ChatInviteLinks>} Promise<{@link ChatInviteLinks}>
+   * @returns {Promise<ChatInviteLinks>} Promise<{@link ChatInviteLinks}>
    */
   async getChatInviteLinks(
     parameters: getChatInviteLinks$DirectInput
@@ -84068,7 +84068,7 @@ export class $AsyncApi {
    * Returns chat members joined a chat via an invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
    *
    * @param {getChatInviteLinkMembers$DirectInput} parameters {@link getChatInviteLinkMembers$Input}
-   * @return {Promise<ChatInviteLinkMembers>} Promise<{@link ChatInviteLinkMembers}>
+   * @returns {Promise<ChatInviteLinkMembers>} Promise<{@link ChatInviteLinkMembers}>
    */
   async getChatInviteLinkMembers(
     parameters: getChatInviteLinkMembers$DirectInput
@@ -84083,7 +84083,7 @@ export class $AsyncApi {
    * - If a primary link is revoked, then additionally to the revoked link returns new primary link
    *
    * @param {revokeChatInviteLink$DirectInput} parameters {@link revokeChatInviteLink$Input}
-   * @return {Promise<ChatInviteLinks>} Promise<{@link ChatInviteLinks}>
+   * @returns {Promise<ChatInviteLinks>} Promise<{@link ChatInviteLinks}>
    */
   async revokeChatInviteLink(
     parameters: revokeChatInviteLink$DirectInput
@@ -84096,7 +84096,7 @@ export class $AsyncApi {
    * Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
    *
    * @param {deleteRevokedChatInviteLink$DirectInput} parameters {@link deleteRevokedChatInviteLink$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteRevokedChatInviteLink(
     parameters: deleteRevokedChatInviteLink$DirectInput
@@ -84112,7 +84112,7 @@ export class $AsyncApi {
    * Deletes all revoked chat invite links created by a given chat administrator. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
    *
    * @param {deleteAllRevokedChatInviteLinks$DirectInput} parameters {@link deleteAllRevokedChatInviteLinks$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteAllRevokedChatInviteLinks(
     parameters: deleteAllRevokedChatInviteLinks$DirectInput
@@ -84128,7 +84128,7 @@ export class $AsyncApi {
    * Checks the validity of an invite link for a chat and returns information about the corresponding chat
    *
    * @param {checkChatInviteLink$DirectInput} parameters {@link checkChatInviteLink$Input}
-   * @return {Promise<ChatInviteLinkInfo>} Promise<{@link ChatInviteLinkInfo}>
+   * @returns {Promise<ChatInviteLinkInfo>} Promise<{@link ChatInviteLinkInfo}>
    */
   async checkChatInviteLink(
     parameters: checkChatInviteLink$DirectInput
@@ -84141,7 +84141,7 @@ export class $AsyncApi {
    * Uses an invite link to add the current user to the chat if possible. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
    *
    * @param {joinChatByInviteLink$DirectInput} parameters {@link joinChatByInviteLink$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
    */
   async joinChatByInviteLink(
     parameters: joinChatByInviteLink$DirectInput
@@ -84154,7 +84154,7 @@ export class $AsyncApi {
    * Returns pending join requests in a chat
    *
    * @param {getChatJoinRequests$DirectInput} parameters {@link getChatJoinRequests$Input}
-   * @return {Promise<ChatJoinRequests>} Promise<{@link ChatJoinRequests}>
+   * @returns {Promise<ChatJoinRequests>} Promise<{@link ChatJoinRequests}>
    */
   async getChatJoinRequests(
     parameters: getChatJoinRequests$DirectInput
@@ -84167,7 +84167,7 @@ export class $AsyncApi {
    * Handles a pending join request in a chat
    *
    * @param {processChatJoinRequest$DirectInput} parameters {@link processChatJoinRequest$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async processChatJoinRequest(
     parameters: processChatJoinRequest$DirectInput
@@ -84180,7 +84180,7 @@ export class $AsyncApi {
    * Handles all pending join requests for a given link in a chat
    *
    * @param {processChatJoinRequests$DirectInput} parameters {@link processChatJoinRequests$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async processChatJoinRequests(
     parameters: processChatJoinRequests$DirectInput
@@ -84193,7 +84193,7 @@ export class $AsyncApi {
    * Creates a new call
    *
    * @param {createCall$DirectInput} parameters {@link createCall$Input}
-   * @return {Promise<CallId>} Promise<{@link CallId}>
+   * @returns {Promise<CallId>} Promise<{@link CallId}>
    */
   async createCall(parameters: createCall$DirectInput): Promise<CallId> {
     const result = await this.client.invoke("createCall", parameters);
@@ -84204,7 +84204,7 @@ export class $AsyncApi {
    * Accepts an incoming call
    *
    * @param {acceptCall$DirectInput} parameters {@link acceptCall$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async acceptCall(parameters: acceptCall$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("acceptCall", parameters);
@@ -84215,7 +84215,7 @@ export class $AsyncApi {
    * Sends call signaling data
    *
    * @param {sendCallSignalingData$DirectInput} parameters {@link sendCallSignalingData$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendCallSignalingData(
     parameters: sendCallSignalingData$DirectInput
@@ -84228,7 +84228,7 @@ export class $AsyncApi {
    * Discards a call
    *
    * @param {discardCall$DirectInput} parameters {@link discardCall$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async discardCall(parameters: discardCall$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("discardCall", parameters);
@@ -84239,7 +84239,7 @@ export class $AsyncApi {
    * Sends a call rating
    *
    * @param {sendCallRating$DirectInput} parameters {@link sendCallRating$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendCallRating(parameters: sendCallRating$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("sendCallRating", parameters);
@@ -84250,7 +84250,7 @@ export class $AsyncApi {
    * Sends debug information for a call to Telegram servers
    *
    * @param {sendCallDebugInformation$DirectInput} parameters {@link sendCallDebugInformation$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendCallDebugInformation(
     parameters: sendCallDebugInformation$DirectInput
@@ -84263,7 +84263,7 @@ export class $AsyncApi {
    * Sends log file for a call to Telegram servers
    *
    * @param {sendCallLog$DirectInput} parameters {@link sendCallLog$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendCallLog(parameters: sendCallLog$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("sendCallLog", parameters);
@@ -84274,7 +84274,7 @@ export class $AsyncApi {
    * Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
    *
    * @param {getVideoChatAvailableParticipants$DirectInput} parameters {@link getVideoChatAvailableParticipants$Input}
-   * @return {Promise<MessageSenders>} Promise<{@link MessageSenders}>
+   * @returns {Promise<MessageSenders>} Promise<{@link MessageSenders}>
    */
   async getVideoChatAvailableParticipants(
     parameters: getVideoChatAvailableParticipants$DirectInput
@@ -84290,7 +84290,7 @@ export class $AsyncApi {
    * Changes default participant identifier, on whose behalf a video chat in the chat will be joined
    *
    * @param {setVideoChatDefaultParticipant$DirectInput} parameters {@link setVideoChatDefaultParticipant$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setVideoChatDefaultParticipant(
     parameters: setVideoChatDefaultParticipant$DirectInput
@@ -84306,7 +84306,7 @@ export class $AsyncApi {
    * Creates a video chat (a group call bound to a chat). Available only for basic groups, supergroups and channels; requires can_manage_video_chats administrator right
    *
    * @param {createVideoChat$DirectInput} parameters {@link createVideoChat$Input}
-   * @return {Promise<GroupCallId>} Promise<{@link GroupCallId}>
+   * @returns {Promise<GroupCallId>} Promise<{@link GroupCallId}>
    */
   async createVideoChat(
     parameters: createVideoChat$DirectInput
@@ -84319,7 +84319,7 @@ export class $AsyncApi {
    * Returns RTMP URL for streaming to the chat; requires owner privileges
    *
    * @param {getVideoChatRtmpUrl$DirectInput} parameters {@link getVideoChatRtmpUrl$Input}
-   * @return {Promise<RtmpUrl>} Promise<{@link RtmpUrl}>
+   * @returns {Promise<RtmpUrl>} Promise<{@link RtmpUrl}>
    */
   async getVideoChatRtmpUrl(
     parameters: getVideoChatRtmpUrl$DirectInput
@@ -84332,7 +84332,7 @@ export class $AsyncApi {
    * Replaces the current RTMP URL for streaming to the chat; requires owner privileges
    *
    * @param {replaceVideoChatRtmpUrl$DirectInput} parameters {@link replaceVideoChatRtmpUrl$Input}
-   * @return {Promise<RtmpUrl>} Promise<{@link RtmpUrl}>
+   * @returns {Promise<RtmpUrl>} Promise<{@link RtmpUrl}>
    */
   async replaceVideoChatRtmpUrl(
     parameters: replaceVideoChatRtmpUrl$DirectInput
@@ -84345,7 +84345,7 @@ export class $AsyncApi {
    * Returns information about a group call
    *
    * @param {getGroupCall$DirectInput} parameters {@link getGroupCall$Input}
-   * @return {Promise<GroupCall>} Promise<{@link GroupCall}>
+   * @returns {Promise<GroupCall>} Promise<{@link GroupCall}>
    */
   async getGroupCall(parameters: getGroupCall$DirectInput): Promise<GroupCall> {
     const result = await this.client.invoke("getGroupCall", parameters);
@@ -84356,7 +84356,7 @@ export class $AsyncApi {
    * Starts a scheduled group call
    *
    * @param {startScheduledGroupCall$DirectInput} parameters {@link startScheduledGroupCall$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async startScheduledGroupCall(
     parameters: startScheduledGroupCall$DirectInput
@@ -84369,7 +84369,7 @@ export class $AsyncApi {
    * Toggles whether the current user will receive a notification when the group call starts; scheduled group calls only
    *
    * @param {toggleGroupCallEnabledStartNotification$DirectInput} parameters {@link toggleGroupCallEnabledStartNotification$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGroupCallEnabledStartNotification(
     parameters: toggleGroupCallEnabledStartNotification$DirectInput
@@ -84385,7 +84385,7 @@ export class $AsyncApi {
    * Joins an active group call. Returns join response payload for tgcalls
    *
    * @param {joinGroupCall$DirectInput} parameters {@link joinGroupCall$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async joinGroupCall(parameters: joinGroupCall$DirectInput): Promise<Text> {
     const result = await this.client.invoke("joinGroupCall", parameters);
@@ -84396,7 +84396,7 @@ export class $AsyncApi {
    * Starts screen sharing in a joined group call. Returns join response payload for tgcalls
    *
    * @param {startGroupCallScreenSharing$DirectInput} parameters {@link startGroupCallScreenSharing$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async startGroupCallScreenSharing(
     parameters: startGroupCallScreenSharing$DirectInput
@@ -84412,7 +84412,7 @@ export class $AsyncApi {
    * Pauses or unpauses screen sharing in a joined group call
    *
    * @param {toggleGroupCallScreenSharingIsPaused$DirectInput} parameters {@link toggleGroupCallScreenSharingIsPaused$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGroupCallScreenSharingIsPaused(
     parameters: toggleGroupCallScreenSharingIsPaused$DirectInput
@@ -84428,7 +84428,7 @@ export class $AsyncApi {
    * Ends screen sharing in a joined group call
    *
    * @param {endGroupCallScreenSharing$DirectInput} parameters {@link endGroupCallScreenSharing$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async endGroupCallScreenSharing(
     parameters: endGroupCallScreenSharing$DirectInput
@@ -84441,7 +84441,7 @@ export class $AsyncApi {
    * Sets group call title. Requires groupCall.can_be_managed group call flag
    *
    * @param {setGroupCallTitle$DirectInput} parameters {@link setGroupCallTitle$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setGroupCallTitle(parameters: setGroupCallTitle$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setGroupCallTitle", parameters);
@@ -84452,7 +84452,7 @@ export class $AsyncApi {
    * Toggles whether new participants of a group call can be unmuted only by administrators of the group call. Requires groupCall.can_toggle_mute_new_participants group call flag
    *
    * @param {toggleGroupCallMuteNewParticipants$DirectInput} parameters {@link toggleGroupCallMuteNewParticipants$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGroupCallMuteNewParticipants(
     parameters: toggleGroupCallMuteNewParticipants$DirectInput
@@ -84468,7 +84468,7 @@ export class $AsyncApi {
    * Invites users to an active group call. Sends a service message of type messageInviteVideoChatParticipants for video chats
    *
    * @param {inviteGroupCallParticipants$DirectInput} parameters {@link inviteGroupCallParticipants$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async inviteGroupCallParticipants(
     parameters: inviteGroupCallParticipants$DirectInput
@@ -84484,7 +84484,7 @@ export class $AsyncApi {
    * Returns invite link to a video chat in a public chat
    *
    * @param {getGroupCallInviteLink$DirectInput} parameters {@link getGroupCallInviteLink$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getGroupCallInviteLink(
     parameters: getGroupCallInviteLink$DirectInput
@@ -84497,7 +84497,7 @@ export class $AsyncApi {
    * Revokes invite link for a group call. Requires groupCall.can_be_managed group call flag
    *
    * @param {revokeGroupCallInviteLink$DirectInput} parameters {@link revokeGroupCallInviteLink$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async revokeGroupCallInviteLink(
     parameters: revokeGroupCallInviteLink$DirectInput
@@ -84510,7 +84510,7 @@ export class $AsyncApi {
    * Starts recording of an active group call. Requires groupCall.can_be_managed group call flag
    *
    * @param {startGroupCallRecording$DirectInput} parameters {@link startGroupCallRecording$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async startGroupCallRecording(
     parameters: startGroupCallRecording$DirectInput
@@ -84523,7 +84523,7 @@ export class $AsyncApi {
    * Ends recording of an active group call. Requires groupCall.can_be_managed group call flag
    *
    * @param {endGroupCallRecording$DirectInput} parameters {@link endGroupCallRecording$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async endGroupCallRecording(
     parameters: endGroupCallRecording$DirectInput
@@ -84536,7 +84536,7 @@ export class $AsyncApi {
    * Toggles whether current user's video is paused
    *
    * @param {toggleGroupCallIsMyVideoPaused$DirectInput} parameters {@link toggleGroupCallIsMyVideoPaused$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGroupCallIsMyVideoPaused(
     parameters: toggleGroupCallIsMyVideoPaused$DirectInput
@@ -84552,7 +84552,7 @@ export class $AsyncApi {
    * Toggles whether current user's video is enabled
    *
    * @param {toggleGroupCallIsMyVideoEnabled$DirectInput} parameters {@link toggleGroupCallIsMyVideoEnabled$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGroupCallIsMyVideoEnabled(
     parameters: toggleGroupCallIsMyVideoEnabled$DirectInput
@@ -84568,7 +84568,7 @@ export class $AsyncApi {
    * Informs TDLib that speaking state of a participant of an active group has changed
    *
    * @param {setGroupCallParticipantIsSpeaking$DirectInput} parameters {@link setGroupCallParticipantIsSpeaking$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setGroupCallParticipantIsSpeaking(
     parameters: setGroupCallParticipantIsSpeaking$DirectInput
@@ -84584,7 +84584,7 @@ export class $AsyncApi {
    * Toggles whether a participant of an active group call is muted, unmuted, or allowed to unmute themselves
    *
    * @param {toggleGroupCallParticipantIsMuted$DirectInput} parameters {@link toggleGroupCallParticipantIsMuted$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGroupCallParticipantIsMuted(
     parameters: toggleGroupCallParticipantIsMuted$DirectInput
@@ -84600,7 +84600,7 @@ export class $AsyncApi {
    * Changes volume level of a participant of an active group call. If the current user can manage the group call, then the participant's volume level will be changed for all users with the default volume level
    *
    * @param {setGroupCallParticipantVolumeLevel$DirectInput} parameters {@link setGroupCallParticipantVolumeLevel$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setGroupCallParticipantVolumeLevel(
     parameters: setGroupCallParticipantVolumeLevel$DirectInput
@@ -84616,7 +84616,7 @@ export class $AsyncApi {
    * Toggles whether a group call participant hand is rased
    *
    * @param {toggleGroupCallParticipantIsHandRaised$DirectInput} parameters {@link toggleGroupCallParticipantIsHandRaised$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGroupCallParticipantIsHandRaised(
     parameters: toggleGroupCallParticipantIsHandRaised$DirectInput
@@ -84632,7 +84632,7 @@ export class $AsyncApi {
    * Loads more participants of a group call. The loaded participants will be received through updates. Use the field groupCall.loaded_all_participants to check whether all participants have already been loaded
    *
    * @param {loadGroupCallParticipants$DirectInput} parameters {@link loadGroupCallParticipants$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async loadGroupCallParticipants(
     parameters: loadGroupCallParticipants$DirectInput
@@ -84645,7 +84645,7 @@ export class $AsyncApi {
    * Leaves a group call
    *
    * @param {leaveGroupCall$DirectInput} parameters {@link leaveGroupCall$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async leaveGroupCall(parameters: leaveGroupCall$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("leaveGroupCall", parameters);
@@ -84656,7 +84656,7 @@ export class $AsyncApi {
    * Ends a group call. Requires groupCall.can_be_managed
    *
    * @param {endGroupCall$DirectInput} parameters {@link endGroupCall$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async endGroupCall(parameters: endGroupCall$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("endGroupCall", parameters);
@@ -84667,7 +84667,7 @@ export class $AsyncApi {
    * Returns information about available group call streams
    *
    * @param {getGroupCallStreams$DirectInput} parameters {@link getGroupCallStreams$Input}
-   * @return {Promise<GroupCallStreams>} Promise<{@link GroupCallStreams}>
+   * @returns {Promise<GroupCallStreams>} Promise<{@link GroupCallStreams}>
    */
   async getGroupCallStreams(
     parameters: getGroupCallStreams$DirectInput
@@ -84680,7 +84680,7 @@ export class $AsyncApi {
    * Returns a file with a segment of a group call stream in a modified OGG format for audio or MPEG-4 format for video
    *
    * @param {getGroupCallStreamSegment$DirectInput} parameters {@link getGroupCallStreamSegment$Input}
-   * @return {Promise<FilePart>} Promise<{@link FilePart}>
+   * @returns {Promise<FilePart>} Promise<{@link FilePart}>
    */
   async getGroupCallStreamSegment(
     parameters: getGroupCallStreamSegment$DirectInput
@@ -84693,7 +84693,7 @@ export class $AsyncApi {
    * Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
    *
    * @param {setMessageSenderBlockList$DirectInput} parameters {@link setMessageSenderBlockList$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setMessageSenderBlockList(
     parameters: setMessageSenderBlockList$DirectInput
@@ -84706,7 +84706,7 @@ export class $AsyncApi {
    * Blocks an original sender of a message in the Replies chat
    *
    * @param {blockMessageSenderFromReplies$DirectInput} parameters {@link blockMessageSenderFromReplies$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async blockMessageSenderFromReplies(
     parameters: blockMessageSenderFromReplies$DirectInput
@@ -84722,7 +84722,7 @@ export class $AsyncApi {
    * Returns users and chats that were blocked by the current user
    *
    * @param {getBlockedMessageSenders$DirectInput} parameters {@link getBlockedMessageSenders$Input}
-   * @return {Promise<MessageSenders>} Promise<{@link MessageSenders}>
+   * @returns {Promise<MessageSenders>} Promise<{@link MessageSenders}>
    */
   async getBlockedMessageSenders(
     parameters: getBlockedMessageSenders$DirectInput
@@ -84735,7 +84735,7 @@ export class $AsyncApi {
    * Adds a user to the contact list or edits an existing contact by their user identifier
    *
    * @param {addContact$DirectInput} parameters {@link addContact$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addContact(parameters: addContact$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("addContact", parameters);
@@ -84746,7 +84746,7 @@ export class $AsyncApi {
    * Adds new contacts or edits existing contacts by their phone numbers; contacts' user identifiers are ignored
    *
    * @param {importContacts$DirectInput} parameters {@link importContacts$Input}
-   * @return {Promise<ImportedContacts>} Promise<{@link ImportedContacts}>
+   * @returns {Promise<ImportedContacts>} Promise<{@link ImportedContacts}>
    */
   async importContacts(
     parameters: importContacts$DirectInput
@@ -84759,7 +84759,7 @@ export class $AsyncApi {
    * Returns all contacts of the user
    *
    * @param {getContacts$DirectInput} parameters {@link getContacts$Input}
-   * @return {Promise<Users>} Promise<{@link Users}>
+   * @returns {Promise<Users>} Promise<{@link Users}>
    */
   async getContacts(parameters: getContacts$DirectInput): Promise<Users> {
     const result = await this.client.invoke("getContacts", parameters);
@@ -84770,7 +84770,7 @@ export class $AsyncApi {
    * Searches for the specified query in the first names, last names and usernames of the known user contacts
    *
    * @param {searchContacts$DirectInput} parameters {@link searchContacts$Input}
-   * @return {Promise<Users>} Promise<{@link Users}>
+   * @returns {Promise<Users>} Promise<{@link Users}>
    */
   async searchContacts(parameters: searchContacts$DirectInput): Promise<Users> {
     const result = await this.client.invoke("searchContacts", parameters);
@@ -84781,7 +84781,7 @@ export class $AsyncApi {
    * Removes users from the contact list
    *
    * @param {removeContacts$DirectInput} parameters {@link removeContacts$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeContacts(parameters: removeContacts$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("removeContacts", parameters);
@@ -84792,7 +84792,7 @@ export class $AsyncApi {
    * Returns the total number of imported contacts
    *
    * @param {getImportedContactCount$DirectInput} parameters {@link getImportedContactCount$Input}
-   * @return {Promise<Count>} Promise<{@link Count}>
+   * @returns {Promise<Count>} Promise<{@link Count}>
    */
   async getImportedContactCount(
     parameters: getImportedContactCount$DirectInput
@@ -84807,7 +84807,7 @@ export class $AsyncApi {
    * - Query result depends on the result of the previous query, so only one query is possible at the same time
    *
    * @param {changeImportedContacts$DirectInput} parameters {@link changeImportedContacts$Input}
-   * @return {Promise<ImportedContacts>} Promise<{@link ImportedContacts}>
+   * @returns {Promise<ImportedContacts>} Promise<{@link ImportedContacts}>
    */
   async changeImportedContacts(
     parameters: changeImportedContacts$DirectInput
@@ -84820,7 +84820,7 @@ export class $AsyncApi {
    * Clears all imported contacts, contact list remains unchanged
    *
    * @param {clearImportedContacts$DirectInput} parameters {@link clearImportedContacts$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clearImportedContacts(
     parameters: clearImportedContacts$DirectInput
@@ -84833,7 +84833,7 @@ export class $AsyncApi {
    * Changes the list of close friends of the current user
    *
    * @param {setCloseFriends$DirectInput} parameters {@link setCloseFriends$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setCloseFriends(parameters: setCloseFriends$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setCloseFriends", parameters);
@@ -84844,7 +84844,7 @@ export class $AsyncApi {
    * Returns all close friends of the current user
    *
    * @param {getCloseFriends$DirectInput} parameters {@link getCloseFriends$Input}
-   * @return {Promise<Users>} Promise<{@link Users}>
+   * @returns {Promise<Users>} Promise<{@link Users}>
    */
   async getCloseFriends(parameters: getCloseFriends$DirectInput): Promise<Users> {
     const result = await this.client.invoke("getCloseFriends", parameters);
@@ -84855,7 +84855,7 @@ export class $AsyncApi {
    * Changes a personal profile photo of a contact user
    *
    * @param {setUserPersonalProfilePhoto$DirectInput} parameters {@link setUserPersonalProfilePhoto$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setUserPersonalProfilePhoto(
     parameters: setUserPersonalProfilePhoto$DirectInput
@@ -84871,7 +84871,7 @@ export class $AsyncApi {
    * Suggests a profile photo to another regular user with common messages
    *
    * @param {suggestUserProfilePhoto$DirectInput} parameters {@link suggestUserProfilePhoto$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async suggestUserProfilePhoto(
     parameters: suggestUserProfilePhoto$DirectInput
@@ -84884,7 +84884,7 @@ export class $AsyncApi {
    * Searches a user by their phone number. Returns a 404 error if the user can't be found
    *
    * @param {searchUserByPhoneNumber$DirectInput} parameters {@link searchUserByPhoneNumber$Input}
-   * @return {Promise<User>} Promise<{@link User}>
+   * @returns {Promise<User>} Promise<{@link User}>
    */
   async searchUserByPhoneNumber(
     parameters: searchUserByPhoneNumber$DirectInput
@@ -84897,7 +84897,7 @@ export class $AsyncApi {
    * Shares the phone number of the current user with a mutual contact. Supposed to be called when the user clicks on chatActionBarSharePhoneNumber
    *
    * @param {sharePhoneNumber$DirectInput} parameters {@link sharePhoneNumber$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sharePhoneNumber(parameters: sharePhoneNumber$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("sharePhoneNumber", parameters);
@@ -84908,7 +84908,7 @@ export class $AsyncApi {
    * Returns the profile photos of a user. Personal and public photo aren't returned
    *
    * @param {getUserProfilePhotos$DirectInput} parameters {@link getUserProfilePhotos$Input}
-   * @return {Promise<ChatPhotos>} Promise<{@link ChatPhotos}>
+   * @returns {Promise<ChatPhotos>} Promise<{@link ChatPhotos}>
    */
   async getUserProfilePhotos(
     parameters: getUserProfilePhotos$DirectInput
@@ -84921,7 +84921,7 @@ export class $AsyncApi {
    * Returns stickers from the installed sticker sets that correspond to any of the given emoji or can be found by sticker-specific keywords. If the query is non-empty, then favorite, recently used or trending stickers may also be returned
    *
    * @param {getStickers$DirectInput} parameters {@link getStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getStickers(parameters: getStickers$DirectInput): Promise<Stickers> {
     const result = await this.client.invoke("getStickers", parameters);
@@ -84932,7 +84932,7 @@ export class $AsyncApi {
    * Returns unique emoji that correspond to stickers to be found by the getStickers(sticker_type, query, 1000000, chat_id)
    *
    * @param {getAllStickerEmojis$DirectInput} parameters {@link getAllStickerEmojis$Input}
-   * @return {Promise<Emojis>} Promise<{@link Emojis}>
+   * @returns {Promise<Emojis>} Promise<{@link Emojis}>
    */
   async getAllStickerEmojis(
     parameters: getAllStickerEmojis$DirectInput
@@ -84945,7 +84945,7 @@ export class $AsyncApi {
    * Searches for stickers from public sticker sets that correspond to any of the given emoji
    *
    * @param {searchStickers$DirectInput} parameters {@link searchStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async searchStickers(parameters: searchStickers$DirectInput): Promise<Stickers> {
     const result = await this.client.invoke("searchStickers", parameters);
@@ -84956,7 +84956,7 @@ export class $AsyncApi {
    * Returns greeting stickers from regular sticker sets that can be used for the start page of other users
    *
    * @param {getGreetingStickers$DirectInput} parameters {@link getGreetingStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getGreetingStickers(
     parameters: getGreetingStickers$DirectInput
@@ -84969,7 +84969,7 @@ export class $AsyncApi {
    * Returns premium stickers from regular sticker sets
    *
    * @param {getPremiumStickers$DirectInput} parameters {@link getPremiumStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getPremiumStickers(
     parameters: getPremiumStickers$DirectInput
@@ -84982,7 +84982,7 @@ export class $AsyncApi {
    * Returns a list of installed sticker sets
    *
    * @param {getInstalledStickerSets$DirectInput} parameters {@link getInstalledStickerSets$Input}
-   * @return {Promise<StickerSets>} Promise<{@link StickerSets}>
+   * @returns {Promise<StickerSets>} Promise<{@link StickerSets}>
    */
   async getInstalledStickerSets(
     parameters: getInstalledStickerSets$DirectInput
@@ -84995,7 +84995,7 @@ export class $AsyncApi {
    * Returns a list of archived sticker sets
    *
    * @param {getArchivedStickerSets$DirectInput} parameters {@link getArchivedStickerSets$Input}
-   * @return {Promise<StickerSets>} Promise<{@link StickerSets}>
+   * @returns {Promise<StickerSets>} Promise<{@link StickerSets}>
    */
   async getArchivedStickerSets(
     parameters: getArchivedStickerSets$DirectInput
@@ -85008,7 +85008,7 @@ export class $AsyncApi {
    * Returns a list of trending sticker sets. For optimal performance, the number of returned sticker sets is chosen by TDLib
    *
    * @param {getTrendingStickerSets$DirectInput} parameters {@link getTrendingStickerSets$Input}
-   * @return {Promise<TrendingStickerSets>} Promise<{@link TrendingStickerSets}>
+   * @returns {Promise<TrendingStickerSets>} Promise<{@link TrendingStickerSets}>
    */
   async getTrendingStickerSets(
     parameters: getTrendingStickerSets$DirectInput
@@ -85021,7 +85021,7 @@ export class $AsyncApi {
    * Returns a list of sticker sets attached to a file, including regular, mask, and emoji sticker sets. Currently, only animations, photos, and videos can have attached sticker sets
    *
    * @param {getAttachedStickerSets$DirectInput} parameters {@link getAttachedStickerSets$Input}
-   * @return {Promise<StickerSets>} Promise<{@link StickerSets}>
+   * @returns {Promise<StickerSets>} Promise<{@link StickerSets}>
    */
   async getAttachedStickerSets(
     parameters: getAttachedStickerSets$DirectInput
@@ -85034,7 +85034,7 @@ export class $AsyncApi {
    * Returns information about a sticker set by its identifier
    *
    * @param {getStickerSet$DirectInput} parameters {@link getStickerSet$Input}
-   * @return {Promise<StickerSet>} Promise<{@link StickerSet}>
+   * @returns {Promise<StickerSet>} Promise<{@link StickerSet}>
    */
   async getStickerSet(parameters: getStickerSet$DirectInput): Promise<StickerSet> {
     const result = await this.client.invoke("getStickerSet", parameters);
@@ -85045,7 +85045,7 @@ export class $AsyncApi {
    * Searches for a sticker set by its name
    *
    * @param {searchStickerSet$DirectInput} parameters {@link searchStickerSet$Input}
-   * @return {Promise<StickerSet>} Promise<{@link StickerSet}>
+   * @returns {Promise<StickerSet>} Promise<{@link StickerSet}>
    */
   async searchStickerSet(
     parameters: searchStickerSet$DirectInput
@@ -85058,7 +85058,7 @@ export class $AsyncApi {
    * Searches for installed sticker sets by looking for specified query in their title and name
    *
    * @param {searchInstalledStickerSets$DirectInput} parameters {@link searchInstalledStickerSets$Input}
-   * @return {Promise<StickerSets>} Promise<{@link StickerSets}>
+   * @returns {Promise<StickerSets>} Promise<{@link StickerSets}>
    */
   async searchInstalledStickerSets(
     parameters: searchInstalledStickerSets$DirectInput
@@ -85074,7 +85074,7 @@ export class $AsyncApi {
    * Searches for sticker sets by looking for specified query in their title and name. Excludes installed sticker sets from the results
    *
    * @param {searchStickerSets$DirectInput} parameters {@link searchStickerSets$Input}
-   * @return {Promise<StickerSets>} Promise<{@link StickerSets}>
+   * @returns {Promise<StickerSets>} Promise<{@link StickerSets}>
    */
   async searchStickerSets(
     parameters: searchStickerSets$DirectInput
@@ -85087,7 +85087,7 @@ export class $AsyncApi {
    * Installs/uninstalls or activates/archives a sticker set
    *
    * @param {changeStickerSet$DirectInput} parameters {@link changeStickerSet$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async changeStickerSet(parameters: changeStickerSet$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("changeStickerSet", parameters);
@@ -85098,7 +85098,7 @@ export class $AsyncApi {
    * Informs the server that some trending sticker sets have been viewed by the user
    *
    * @param {viewTrendingStickerSets$DirectInput} parameters {@link viewTrendingStickerSets$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async viewTrendingStickerSets(
     parameters: viewTrendingStickerSets$DirectInput
@@ -85111,7 +85111,7 @@ export class $AsyncApi {
    * Changes the order of installed sticker sets
    *
    * @param {reorderInstalledStickerSets$DirectInput} parameters {@link reorderInstalledStickerSets$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reorderInstalledStickerSets(
     parameters: reorderInstalledStickerSets$DirectInput
@@ -85127,7 +85127,7 @@ export class $AsyncApi {
    * Returns a list of recently used stickers
    *
    * @param {getRecentStickers$DirectInput} parameters {@link getRecentStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getRecentStickers(
     parameters: getRecentStickers$DirectInput
@@ -85142,7 +85142,7 @@ export class $AsyncApi {
    * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to recent stickers
    *
    * @param {addRecentSticker$DirectInput} parameters {@link addRecentSticker$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async addRecentSticker(
     parameters: addRecentSticker$DirectInput
@@ -85155,7 +85155,7 @@ export class $AsyncApi {
    * Removes a sticker from the list of recently used stickers
    *
    * @param {removeRecentSticker$DirectInput} parameters {@link removeRecentSticker$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeRecentSticker(
     parameters: removeRecentSticker$DirectInput
@@ -85168,7 +85168,7 @@ export class $AsyncApi {
    * Clears the list of recently used stickers
    *
    * @param {clearRecentStickers$DirectInput} parameters {@link clearRecentStickers$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clearRecentStickers(
     parameters: clearRecentStickers$DirectInput
@@ -85181,7 +85181,7 @@ export class $AsyncApi {
    * Returns favorite stickers
    *
    * @param {getFavoriteStickers$DirectInput} parameters {@link getFavoriteStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getFavoriteStickers(
     parameters: getFavoriteStickers$DirectInput
@@ -85196,7 +85196,7 @@ export class $AsyncApi {
    * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to favorite stickers
    *
    * @param {addFavoriteSticker$DirectInput} parameters {@link addFavoriteSticker$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addFavoriteSticker(parameters: addFavoriteSticker$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("addFavoriteSticker", parameters);
@@ -85207,7 +85207,7 @@ export class $AsyncApi {
    * Removes a sticker from the list of favorite stickers
    *
    * @param {removeFavoriteSticker$DirectInput} parameters {@link removeFavoriteSticker$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeFavoriteSticker(
     parameters: removeFavoriteSticker$DirectInput
@@ -85220,7 +85220,7 @@ export class $AsyncApi {
    * Returns emoji corresponding to a sticker. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
    *
    * @param {getStickerEmojis$DirectInput} parameters {@link getStickerEmojis$Input}
-   * @return {Promise<Emojis>} Promise<{@link Emojis}>
+   * @returns {Promise<Emojis>} Promise<{@link Emojis}>
    */
   async getStickerEmojis(parameters: getStickerEmojis$DirectInput): Promise<Emojis> {
     const result = await this.client.invoke("getStickerEmojis", parameters);
@@ -85231,7 +85231,7 @@ export class $AsyncApi {
    * Searches for emojis by keywords. Supported only if the file database is enabled. Order of results is unspecified
    *
    * @param {searchEmojis$DirectInput} parameters {@link searchEmojis$Input}
-   * @return {Promise<EmojiKeywords>} Promise<{@link EmojiKeywords}>
+   * @returns {Promise<EmojiKeywords>} Promise<{@link EmojiKeywords}>
    */
   async searchEmojis(parameters: searchEmojis$DirectInput): Promise<EmojiKeywords> {
     const result = await this.client.invoke("searchEmojis", parameters);
@@ -85242,7 +85242,7 @@ export class $AsyncApi {
    * Return emojis matching the keyword. Supported only if the file database is enabled. Order of results is unspecified
    *
    * @param {getKeywordEmojis$DirectInput} parameters {@link getKeywordEmojis$Input}
-   * @return {Promise<Emojis>} Promise<{@link Emojis}>
+   * @returns {Promise<Emojis>} Promise<{@link Emojis}>
    */
   async getKeywordEmojis(parameters: getKeywordEmojis$DirectInput): Promise<Emojis> {
     const result = await this.client.invoke("getKeywordEmojis", parameters);
@@ -85253,7 +85253,7 @@ export class $AsyncApi {
    * Returns available emojis categories
    *
    * @param {getEmojiCategories$DirectInput} parameters {@link getEmojiCategories$Input}
-   * @return {Promise<EmojiCategories>} Promise<{@link EmojiCategories}>
+   * @returns {Promise<EmojiCategories>} Promise<{@link EmojiCategories}>
    */
   async getEmojiCategories(
     parameters: getEmojiCategories$DirectInput
@@ -85266,7 +85266,7 @@ export class $AsyncApi {
    * Returns an animated emoji corresponding to a given emoji. Returns a 404 error if the emoji has no animated emoji
    *
    * @param {getAnimatedEmoji$DirectInput} parameters {@link getAnimatedEmoji$Input}
-   * @return {Promise<AnimatedEmoji>} Promise<{@link AnimatedEmoji}>
+   * @returns {Promise<AnimatedEmoji>} Promise<{@link AnimatedEmoji}>
    */
   async getAnimatedEmoji(
     parameters: getAnimatedEmoji$DirectInput
@@ -85279,7 +85279,7 @@ export class $AsyncApi {
    * Returns an HTTP URL which can be used to automatically log in to the translation platform and suggest new emoji replacements. The URL will be valid for 30 seconds after generation
    *
    * @param {getEmojiSuggestionsUrl$DirectInput} parameters {@link getEmojiSuggestionsUrl$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getEmojiSuggestionsUrl(
     parameters: getEmojiSuggestionsUrl$DirectInput
@@ -85292,7 +85292,7 @@ export class $AsyncApi {
    * Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
    *
    * @param {getCustomEmojiStickers$DirectInput} parameters {@link getCustomEmojiStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getCustomEmojiStickers(
     parameters: getCustomEmojiStickers$DirectInput
@@ -85305,7 +85305,7 @@ export class $AsyncApi {
    * Returns default list of custom emoji stickers for placing on a chat photo
    *
    * @param {getDefaultChatPhotoCustomEmojiStickers$DirectInput} parameters {@link getDefaultChatPhotoCustomEmojiStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getDefaultChatPhotoCustomEmojiStickers(
     parameters: getDefaultChatPhotoCustomEmojiStickers$DirectInput
@@ -85321,7 +85321,7 @@ export class $AsyncApi {
    * Returns default list of custom emoji stickers for placing on a profile photo
    *
    * @param {getDefaultProfilePhotoCustomEmojiStickers$DirectInput} parameters {@link getDefaultProfilePhotoCustomEmojiStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getDefaultProfilePhotoCustomEmojiStickers(
     parameters: getDefaultProfilePhotoCustomEmojiStickers$DirectInput
@@ -85337,7 +85337,7 @@ export class $AsyncApi {
    * Returns default list of custom emoji stickers for reply background
    *
    * @param {getDefaultBackgroundCustomEmojiStickers$DirectInput} parameters {@link getDefaultBackgroundCustomEmojiStickers$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getDefaultBackgroundCustomEmojiStickers(
     parameters: getDefaultBackgroundCustomEmojiStickers$DirectInput
@@ -85353,7 +85353,7 @@ export class $AsyncApi {
    * Returns saved animations
    *
    * @param {getSavedAnimations$DirectInput} parameters {@link getSavedAnimations$Input}
-   * @return {Promise<Animations>} Promise<{@link Animations}>
+   * @returns {Promise<Animations>} Promise<{@link Animations}>
    */
   async getSavedAnimations(
     parameters: getSavedAnimations$DirectInput
@@ -85368,7 +85368,7 @@ export class $AsyncApi {
    * - Only non-secret video animations with MIME type "video/mp4" can be added to the list
    *
    * @param {addSavedAnimation$DirectInput} parameters {@link addSavedAnimation$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addSavedAnimation(parameters: addSavedAnimation$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("addSavedAnimation", parameters);
@@ -85379,7 +85379,7 @@ export class $AsyncApi {
    * Removes an animation from the list of saved animations
    *
    * @param {removeSavedAnimation$DirectInput} parameters {@link removeSavedAnimation$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeSavedAnimation(
     parameters: removeSavedAnimation$DirectInput
@@ -85392,7 +85392,7 @@ export class $AsyncApi {
    * Returns up to 20 recently used inline bots in the order of their last usage
    *
    * @param {getRecentInlineBots$DirectInput} parameters {@link getRecentInlineBots$Input}
-   * @return {Promise<Users>} Promise<{@link Users}>
+   * @returns {Promise<Users>} Promise<{@link Users}>
    */
   async getRecentInlineBots(
     parameters: getRecentInlineBots$DirectInput
@@ -85405,7 +85405,7 @@ export class $AsyncApi {
    * Searches for recently used hashtags by their prefix
    *
    * @param {searchHashtags$DirectInput} parameters {@link searchHashtags$Input}
-   * @return {Promise<Hashtags>} Promise<{@link Hashtags}>
+   * @returns {Promise<Hashtags>} Promise<{@link Hashtags}>
    */
   async searchHashtags(parameters: searchHashtags$DirectInput): Promise<Hashtags> {
     const result = await this.client.invoke("searchHashtags", parameters);
@@ -85416,7 +85416,7 @@ export class $AsyncApi {
    * Removes a hashtag from the list of recently used hashtags
    *
    * @param {removeRecentHashtag$DirectInput} parameters {@link removeRecentHashtag$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeRecentHashtag(
     parameters: removeRecentHashtag$DirectInput
@@ -85429,7 +85429,7 @@ export class $AsyncApi {
    * Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
    *
    * @param {getWebPagePreview$DirectInput} parameters {@link getWebPagePreview$Input}
-   * @return {Promise<WebPage>} Promise<{@link WebPage}>
+   * @returns {Promise<WebPage>} Promise<{@link WebPage}>
    */
   async getWebPagePreview(
     parameters: getWebPagePreview$DirectInput
@@ -85442,7 +85442,7 @@ export class $AsyncApi {
    * Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
    *
    * @param {getWebPageInstantView$DirectInput} parameters {@link getWebPageInstantView$Input}
-   * @return {Promise<WebPageInstantView>} Promise<{@link WebPageInstantView}>
+   * @returns {Promise<WebPageInstantView>} Promise<{@link WebPageInstantView}>
    */
   async getWebPageInstantView(
     parameters: getWebPageInstantView$DirectInput
@@ -85455,7 +85455,7 @@ export class $AsyncApi {
    * Changes a profile photo for the current user
    *
    * @param {setProfilePhoto$DirectInput} parameters {@link setProfilePhoto$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setProfilePhoto(parameters: setProfilePhoto$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setProfilePhoto", parameters);
@@ -85466,7 +85466,7 @@ export class $AsyncApi {
    * Deletes a profile photo
    *
    * @param {deleteProfilePhoto$DirectInput} parameters {@link deleteProfilePhoto$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteProfilePhoto(parameters: deleteProfilePhoto$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteProfilePhoto", parameters);
@@ -85477,7 +85477,7 @@ export class $AsyncApi {
    * Changes accent color and background custom emoji for the current user; for Telegram Premium users only
    *
    * @param {setAccentColor$DirectInput} parameters {@link setAccentColor$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setAccentColor(parameters: setAccentColor$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setAccentColor", parameters);
@@ -85488,7 +85488,7 @@ export class $AsyncApi {
    * Changes accent color and background custom emoji for profile of the current user; for Telegram Premium users only
    *
    * @param {setProfileAccentColor$DirectInput} parameters {@link setProfileAccentColor$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setProfileAccentColor(
     parameters: setProfileAccentColor$DirectInput
@@ -85501,7 +85501,7 @@ export class $AsyncApi {
    * Changes the first and last name of the current user
    *
    * @param {setName$DirectInput} parameters {@link setName$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setName(parameters: setName$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setName", parameters);
@@ -85512,7 +85512,7 @@ export class $AsyncApi {
    * Changes the bio of the current user
    *
    * @param {setBio$DirectInput} parameters {@link setBio$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBio(parameters: setBio$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setBio", parameters);
@@ -85523,7 +85523,7 @@ export class $AsyncApi {
    * Changes the editable username of the current user
    *
    * @param {setUsername$DirectInput} parameters {@link setUsername$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setUsername(parameters: setUsername$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setUsername", parameters);
@@ -85534,7 +85534,7 @@ export class $AsyncApi {
    * Changes active state for a username of the current user. The editable username can't be disabled. May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached
    *
    * @param {toggleUsernameIsActive$DirectInput} parameters {@link toggleUsernameIsActive$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleUsernameIsActive(
     parameters: toggleUsernameIsActive$DirectInput
@@ -85547,7 +85547,7 @@ export class $AsyncApi {
    * Changes order of active usernames of the current user
    *
    * @param {reorderActiveUsernames$DirectInput} parameters {@link reorderActiveUsernames$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reorderActiveUsernames(
     parameters: reorderActiveUsernames$DirectInput
@@ -85560,7 +85560,7 @@ export class $AsyncApi {
    * Changes the birthdate of the current user
    *
    * @param {setBirthdate$DirectInput} parameters {@link setBirthdate$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBirthdate(parameters: setBirthdate$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setBirthdate", parameters);
@@ -85571,7 +85571,7 @@ export class $AsyncApi {
    * Changes the personal chat of the current user
    *
    * @param {setPersonalChat$DirectInput} parameters {@link setPersonalChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setPersonalChat(parameters: setPersonalChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setPersonalChat", parameters);
@@ -85582,7 +85582,7 @@ export class $AsyncApi {
    * Changes the emoji status of the current user; for Telegram Premium users only
    *
    * @param {setEmojiStatus$DirectInput} parameters {@link setEmojiStatus$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setEmojiStatus(parameters: setEmojiStatus$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setEmojiStatus", parameters);
@@ -85593,7 +85593,7 @@ export class $AsyncApi {
    * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
    *
    * @param {setLocation$DirectInput} parameters {@link setLocation$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setLocation(parameters: setLocation$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setLocation", parameters);
@@ -85604,7 +85604,7 @@ export class $AsyncApi {
    * Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
    *
    * @param {toggleHasSponsoredMessagesEnabled$DirectInput} parameters {@link toggleHasSponsoredMessagesEnabled$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleHasSponsoredMessagesEnabled(
     parameters: toggleHasSponsoredMessagesEnabled$DirectInput
@@ -85620,7 +85620,7 @@ export class $AsyncApi {
    * Changes the business location of the current user. Requires Telegram Business subscription
    *
    * @param {setBusinessLocation$DirectInput} parameters {@link setBusinessLocation$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBusinessLocation(
     parameters: setBusinessLocation$DirectInput
@@ -85633,7 +85633,7 @@ export class $AsyncApi {
    * Changes the business opening hours of the current user. Requires Telegram Business subscription
    *
    * @param {setBusinessOpeningHours$DirectInput} parameters {@link setBusinessOpeningHours$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBusinessOpeningHours(
     parameters: setBusinessOpeningHours$DirectInput
@@ -85646,7 +85646,7 @@ export class $AsyncApi {
    * Changes the business greeting message settings of the current user. Requires Telegram Business subscription
    *
    * @param {setBusinessGreetingMessageSettings$DirectInput} parameters {@link setBusinessGreetingMessageSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBusinessGreetingMessageSettings(
     parameters: setBusinessGreetingMessageSettings$DirectInput
@@ -85662,7 +85662,7 @@ export class $AsyncApi {
    * Changes the business away message settings of the current user. Requires Telegram Business subscription
    *
    * @param {setBusinessAwayMessageSettings$DirectInput} parameters {@link setBusinessAwayMessageSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBusinessAwayMessageSettings(
     parameters: setBusinessAwayMessageSettings$DirectInput
@@ -85678,7 +85678,7 @@ export class $AsyncApi {
    * Changes the business start page of the current user. Requires Telegram Business subscription
    *
    * @param {setBusinessStartPage$DirectInput} parameters {@link setBusinessStartPage$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBusinessStartPage(
     parameters: setBusinessStartPage$DirectInput
@@ -85691,7 +85691,7 @@ export class $AsyncApi {
    * Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
    *
    * @param {sendPhoneNumberCode$DirectInput} parameters {@link sendPhoneNumberCode$Input}
-   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
+   * @returns {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
    */
   async sendPhoneNumberCode(
     parameters: sendPhoneNumberCode$DirectInput
@@ -85704,7 +85704,7 @@ export class $AsyncApi {
    * Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
    *
    * @param {sendPhoneNumberFirebaseSms$DirectInput} parameters {@link sendPhoneNumberFirebaseSms$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendPhoneNumberFirebaseSms(
     parameters: sendPhoneNumberFirebaseSms$DirectInput
@@ -85720,7 +85720,7 @@ export class $AsyncApi {
    * Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
    *
    * @param {reportPhoneNumberCodeMissing$DirectInput} parameters {@link reportPhoneNumberCodeMissing$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reportPhoneNumberCodeMissing(
     parameters: reportPhoneNumberCodeMissing$DirectInput
@@ -85736,7 +85736,7 @@ export class $AsyncApi {
    * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
    *
    * @param {resendPhoneNumberCode$DirectInput} parameters {@link resendPhoneNumberCode$Input}
-   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
+   * @returns {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
    */
   async resendPhoneNumberCode(
     parameters: resendPhoneNumberCode$DirectInput
@@ -85749,7 +85749,7 @@ export class $AsyncApi {
    * Check the authentication code and completes the request for which the code was sent if appropriate
    *
    * @param {checkPhoneNumberCode$DirectInput} parameters {@link checkPhoneNumberCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkPhoneNumberCode(
     parameters: checkPhoneNumberCode$DirectInput
@@ -85762,7 +85762,7 @@ export class $AsyncApi {
    * Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
    *
    * @param {getBusinessConnectedBot$DirectInput} parameters {@link getBusinessConnectedBot$Input}
-   * @return {Promise<BusinessConnectedBot>} Promise<{@link BusinessConnectedBot}>
+   * @returns {Promise<BusinessConnectedBot>} Promise<{@link BusinessConnectedBot}>
    */
   async getBusinessConnectedBot(
     parameters: getBusinessConnectedBot$DirectInput
@@ -85775,7 +85775,7 @@ export class $AsyncApi {
    * Adds or changes business bot that is connected to the current user account
    *
    * @param {setBusinessConnectedBot$DirectInput} parameters {@link setBusinessConnectedBot$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBusinessConnectedBot(
     parameters: setBusinessConnectedBot$DirectInput
@@ -85788,7 +85788,7 @@ export class $AsyncApi {
    * Deletes the business bot that is connected to the current user account
    *
    * @param {deleteBusinessConnectedBot$DirectInput} parameters {@link deleteBusinessConnectedBot$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteBusinessConnectedBot(
     parameters: deleteBusinessConnectedBot$DirectInput
@@ -85804,7 +85804,7 @@ export class $AsyncApi {
    * Pauses or resumes the connected business bot in a specific chat
    *
    * @param {toggleBusinessConnectedBotChatIsPaused$DirectInput} parameters {@link toggleBusinessConnectedBotChatIsPaused$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleBusinessConnectedBotChatIsPaused(
     parameters: toggleBusinessConnectedBotChatIsPaused$DirectInput
@@ -85820,7 +85820,7 @@ export class $AsyncApi {
    * Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
    *
    * @param {removeBusinessConnectedBotFromChat$DirectInput} parameters {@link removeBusinessConnectedBotFromChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeBusinessConnectedBotFromChat(
     parameters: removeBusinessConnectedBotFromChat$DirectInput
@@ -85836,7 +85836,7 @@ export class $AsyncApi {
    * Returns business chat links created for the current account
    *
    * @param {getBusinessChatLinks$DirectInput} parameters {@link getBusinessChatLinks$Input}
-   * @return {Promise<BusinessChatLinks>} Promise<{@link BusinessChatLinks}>
+   * @returns {Promise<BusinessChatLinks>} Promise<{@link BusinessChatLinks}>
    */
   async getBusinessChatLinks(
     parameters: getBusinessChatLinks$DirectInput
@@ -85849,7 +85849,7 @@ export class $AsyncApi {
    * Creates a business chat link for the current account. Requires Telegram Business subscription. There can be up to getOption("business_chat_link_count_max") links created. Returns the created link
    *
    * @param {createBusinessChatLink$DirectInput} parameters {@link createBusinessChatLink$Input}
-   * @return {Promise<BusinessChatLink>} Promise<{@link BusinessChatLink}>
+   * @returns {Promise<BusinessChatLink>} Promise<{@link BusinessChatLink}>
    */
   async createBusinessChatLink(
     parameters: createBusinessChatLink$DirectInput
@@ -85862,7 +85862,7 @@ export class $AsyncApi {
    * Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
    *
    * @param {editBusinessChatLink$DirectInput} parameters {@link editBusinessChatLink$Input}
-   * @return {Promise<BusinessChatLink>} Promise<{@link BusinessChatLink}>
+   * @returns {Promise<BusinessChatLink>} Promise<{@link BusinessChatLink}>
    */
   async editBusinessChatLink(
     parameters: editBusinessChatLink$DirectInput
@@ -85875,7 +85875,7 @@ export class $AsyncApi {
    * Deletes a business chat link of the current account
    *
    * @param {deleteBusinessChatLink$DirectInput} parameters {@link deleteBusinessChatLink$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteBusinessChatLink(
     parameters: deleteBusinessChatLink$DirectInput
@@ -85888,7 +85888,7 @@ export class $AsyncApi {
    * Returns information about a business chat link
    *
    * @param {getBusinessChatLinkInfo$DirectInput} parameters {@link getBusinessChatLinkInfo$Input}
-   * @return {Promise<BusinessChatLinkInfo>} Promise<{@link BusinessChatLinkInfo}>
+   * @returns {Promise<BusinessChatLinkInfo>} Promise<{@link BusinessChatLinkInfo}>
    */
   async getBusinessChatLinkInfo(
     parameters: getBusinessChatLinkInfo$DirectInput
@@ -85901,7 +85901,7 @@ export class $AsyncApi {
    * Returns an HTTPS link, which can be used to get information about the current user
    *
    * @param {getUserLink$DirectInput} parameters {@link getUserLink$Input}
-   * @return {Promise<UserLink>} Promise<{@link UserLink}>
+   * @returns {Promise<UserLink>} Promise<{@link UserLink}>
    */
   async getUserLink(parameters: getUserLink$DirectInput): Promise<UserLink> {
     const result = await this.client.invoke("getUserLink", parameters);
@@ -85912,7 +85912,7 @@ export class $AsyncApi {
    * Searches a user by a token from the user's link
    *
    * @param {searchUserByToken$DirectInput} parameters {@link searchUserByToken$Input}
-   * @return {Promise<User>} Promise<{@link User}>
+   * @returns {Promise<User>} Promise<{@link User}>
    */
   async searchUserByToken(parameters: searchUserByToken$DirectInput): Promise<User> {
     const result = await this.client.invoke("searchUserByToken", parameters);
@@ -85923,7 +85923,7 @@ export class $AsyncApi {
    * Sets the list of commands supported by the bot for the given user scope and language; for bots only
    *
    * @param {setCommands$DirectInput} parameters {@link setCommands$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setCommands(parameters: setCommands$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setCommands", parameters);
@@ -85934,7 +85934,7 @@ export class $AsyncApi {
    * Deletes commands supported by the bot for the given user scope and language; for bots only
    *
    * @param {deleteCommands$DirectInput} parameters {@link deleteCommands$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteCommands(parameters: deleteCommands$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteCommands", parameters);
@@ -85945,7 +85945,7 @@ export class $AsyncApi {
    * Returns the list of commands supported by the bot for the given user scope and language; for bots only
    *
    * @param {getCommands$DirectInput} parameters {@link getCommands$Input}
-   * @return {Promise<BotCommands>} Promise<{@link BotCommands}>
+   * @returns {Promise<BotCommands>} Promise<{@link BotCommands}>
    */
   async getCommands(parameters: getCommands$DirectInput): Promise<BotCommands> {
     const result = await this.client.invoke("getCommands", parameters);
@@ -85956,7 +85956,7 @@ export class $AsyncApi {
    * Sets menu button for the given user or for all users; for bots only
    *
    * @param {setMenuButton$DirectInput} parameters {@link setMenuButton$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setMenuButton(parameters: setMenuButton$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setMenuButton", parameters);
@@ -85967,7 +85967,7 @@ export class $AsyncApi {
    * Returns menu button set by the bot for the given user; for bots only
    *
    * @param {getMenuButton$DirectInput} parameters {@link getMenuButton$Input}
-   * @return {Promise<BotMenuButton>} Promise<{@link BotMenuButton}>
+   * @returns {Promise<BotMenuButton>} Promise<{@link BotMenuButton}>
    */
   async getMenuButton(
     parameters: getMenuButton$DirectInput
@@ -85980,7 +85980,7 @@ export class $AsyncApi {
    * Sets default administrator rights for adding the bot to basic group and supergroup chats; for bots only
    *
    * @param {setDefaultGroupAdministratorRights$DirectInput} parameters {@link setDefaultGroupAdministratorRights$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setDefaultGroupAdministratorRights(
     parameters: setDefaultGroupAdministratorRights$DirectInput
@@ -85996,7 +85996,7 @@ export class $AsyncApi {
    * Sets default administrator rights for adding the bot to channel chats; for bots only
    *
    * @param {setDefaultChannelAdministratorRights$DirectInput} parameters {@link setDefaultChannelAdministratorRights$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setDefaultChannelAdministratorRights(
     parameters: setDefaultChannelAdministratorRights$DirectInput
@@ -86012,7 +86012,7 @@ export class $AsyncApi {
    * Checks whether the specified bot can send messages to the user. Returns a 404 error if can't and the access can be granted by call to allowBotToSendMessages
    *
    * @param {canBotSendMessages$DirectInput} parameters {@link canBotSendMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async canBotSendMessages(parameters: canBotSendMessages$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("canBotSendMessages", parameters);
@@ -86023,7 +86023,7 @@ export class $AsyncApi {
    * Allows the specified bot to send messages to the user
    *
    * @param {allowBotToSendMessages$DirectInput} parameters {@link allowBotToSendMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async allowBotToSendMessages(
     parameters: allowBotToSendMessages$DirectInput
@@ -86036,7 +86036,7 @@ export class $AsyncApi {
    * Sends a custom request from a Web App
    *
    * @param {sendWebAppCustomRequest$DirectInput} parameters {@link sendWebAppCustomRequest$Input}
-   * @return {Promise<CustomRequestResult>} Promise<{@link CustomRequestResult}>
+   * @returns {Promise<CustomRequestResult>} Promise<{@link CustomRequestResult}>
    */
   async sendWebAppCustomRequest(
     parameters: sendWebAppCustomRequest$DirectInput
@@ -86049,7 +86049,7 @@ export class $AsyncApi {
    * Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
    *
    * @param {setBotName$DirectInput} parameters {@link setBotName$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBotName(parameters: setBotName$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setBotName", parameters);
@@ -86060,7 +86060,7 @@ export class $AsyncApi {
    * Returns the name of a bot in the given language. Can be called only if userTypeBot.can_be_edited == true
    *
    * @param {getBotName$DirectInput} parameters {@link getBotName$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getBotName(parameters: getBotName$DirectInput): Promise<Text> {
     const result = await this.client.invoke("getBotName", parameters);
@@ -86071,7 +86071,7 @@ export class $AsyncApi {
    * Changes a profile photo for a bot
    *
    * @param {setBotProfilePhoto$DirectInput} parameters {@link setBotProfilePhoto$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBotProfilePhoto(parameters: setBotProfilePhoto$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setBotProfilePhoto", parameters);
@@ -86082,7 +86082,7 @@ export class $AsyncApi {
    * Changes active state for a username of a bot. The editable username can't be disabled. May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached. Can be called only if userTypeBot.can_be_edited == true
    *
    * @param {toggleBotUsernameIsActive$DirectInput} parameters {@link toggleBotUsernameIsActive$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleBotUsernameIsActive(
     parameters: toggleBotUsernameIsActive$DirectInput
@@ -86095,7 +86095,7 @@ export class $AsyncApi {
    * Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
    *
    * @param {reorderBotActiveUsernames$DirectInput} parameters {@link reorderBotActiveUsernames$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reorderBotActiveUsernames(
     parameters: reorderBotActiveUsernames$DirectInput
@@ -86108,7 +86108,7 @@ export class $AsyncApi {
    * Sets the text shown in the chat with a bot if the chat is empty. Can be called only if userTypeBot.can_be_edited == true
    *
    * @param {setBotInfoDescription$DirectInput} parameters {@link setBotInfoDescription$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBotInfoDescription(
     parameters: setBotInfoDescription$DirectInput
@@ -86121,7 +86121,7 @@ export class $AsyncApi {
    * Returns the text shown in the chat with a bot if the chat is empty in the given language. Can be called only if userTypeBot.can_be_edited == true
    *
    * @param {getBotInfoDescription$DirectInput} parameters {@link getBotInfoDescription$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getBotInfoDescription(
     parameters: getBotInfoDescription$DirectInput
@@ -86134,7 +86134,7 @@ export class $AsyncApi {
    * Sets the text shown on a bot's profile page and sent together with the link when users share the bot. Can be called only if userTypeBot.can_be_edited == true
    *
    * @param {setBotInfoShortDescription$DirectInput} parameters {@link setBotInfoShortDescription$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBotInfoShortDescription(
     parameters: setBotInfoShortDescription$DirectInput
@@ -86150,7 +86150,7 @@ export class $AsyncApi {
    * Returns the text shown on a bot's profile page and sent together with the link when users share the bot in the given language. Can be called only if userTypeBot.can_be_edited == true
    *
    * @param {getBotInfoShortDescription$DirectInput} parameters {@link getBotInfoShortDescription$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getBotInfoShortDescription(
     parameters: getBotInfoShortDescription$DirectInput
@@ -86166,7 +86166,7 @@ export class $AsyncApi {
    * Returns all active sessions of the current user
    *
    * @param {getActiveSessions$DirectInput} parameters {@link getActiveSessions$Input}
-   * @return {Promise<Sessions>} Promise<{@link Sessions}>
+   * @returns {Promise<Sessions>} Promise<{@link Sessions}>
    */
   async getActiveSessions(
     parameters: getActiveSessions$DirectInput
@@ -86179,7 +86179,7 @@ export class $AsyncApi {
    * Terminates a session of the current user
    *
    * @param {terminateSession$DirectInput} parameters {@link terminateSession$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async terminateSession(parameters: terminateSession$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("terminateSession", parameters);
@@ -86190,7 +86190,7 @@ export class $AsyncApi {
    * Terminates all other sessions of the current user
    *
    * @param {terminateAllOtherSessions$DirectInput} parameters {@link terminateAllOtherSessions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async terminateAllOtherSessions(
     parameters: terminateAllOtherSessions$DirectInput
@@ -86203,7 +86203,7 @@ export class $AsyncApi {
    * Confirms an unconfirmed session of the current user from another device
    *
    * @param {confirmSession$DirectInput} parameters {@link confirmSession$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async confirmSession(parameters: confirmSession$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("confirmSession", parameters);
@@ -86214,7 +86214,7 @@ export class $AsyncApi {
    * Toggles whether a session can accept incoming calls
    *
    * @param {toggleSessionCanAcceptCalls$DirectInput} parameters {@link toggleSessionCanAcceptCalls$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSessionCanAcceptCalls(
     parameters: toggleSessionCanAcceptCalls$DirectInput
@@ -86230,7 +86230,7 @@ export class $AsyncApi {
    * Toggles whether a session can accept incoming secret chats
    *
    * @param {toggleSessionCanAcceptSecretChats$DirectInput} parameters {@link toggleSessionCanAcceptSecretChats$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSessionCanAcceptSecretChats(
     parameters: toggleSessionCanAcceptSecretChats$DirectInput
@@ -86246,7 +86246,7 @@ export class $AsyncApi {
    * Changes the period of inactivity after which sessions will automatically be terminated
    *
    * @param {setInactiveSessionTtl$DirectInput} parameters {@link setInactiveSessionTtl$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setInactiveSessionTtl(
     parameters: setInactiveSessionTtl$DirectInput
@@ -86259,7 +86259,7 @@ export class $AsyncApi {
    * Returns all website where the current user used Telegram to log in
    *
    * @param {getConnectedWebsites$DirectInput} parameters {@link getConnectedWebsites$Input}
-   * @return {Promise<ConnectedWebsites>} Promise<{@link ConnectedWebsites}>
+   * @returns {Promise<ConnectedWebsites>} Promise<{@link ConnectedWebsites}>
    */
   async getConnectedWebsites(
     parameters: getConnectedWebsites$DirectInput
@@ -86272,7 +86272,7 @@ export class $AsyncApi {
    * Disconnects website from the current user's Telegram account
    *
    * @param {disconnectWebsite$DirectInput} parameters {@link disconnectWebsite$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async disconnectWebsite(parameters: disconnectWebsite$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("disconnectWebsite", parameters);
@@ -86283,7 +86283,7 @@ export class $AsyncApi {
    * Disconnects all websites from the current user's Telegram account
    *
    * @param {disconnectAllWebsites$DirectInput} parameters {@link disconnectAllWebsites$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async disconnectAllWebsites(
     parameters: disconnectAllWebsites$DirectInput
@@ -86296,7 +86296,7 @@ export class $AsyncApi {
    * Changes the editable username of a supergroup or channel, requires owner privileges in the supergroup or channel
    *
    * @param {setSupergroupUsername$DirectInput} parameters {@link setSupergroupUsername$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setSupergroupUsername(
     parameters: setSupergroupUsername$DirectInput
@@ -86311,7 +86311,7 @@ export class $AsyncApi {
    * - May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached
    *
    * @param {toggleSupergroupUsernameIsActive$DirectInput} parameters {@link toggleSupergroupUsernameIsActive$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupUsernameIsActive(
     parameters: toggleSupergroupUsernameIsActive$DirectInput
@@ -86327,7 +86327,7 @@ export class $AsyncApi {
    * Disables all active non-editable usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
    *
    * @param {disableAllSupergroupUsernames$DirectInput} parameters {@link disableAllSupergroupUsernames$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async disableAllSupergroupUsernames(
     parameters: disableAllSupergroupUsernames$DirectInput
@@ -86343,7 +86343,7 @@ export class $AsyncApi {
    * Changes order of active usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
    *
    * @param {reorderSupergroupActiveUsernames$DirectInput} parameters {@link reorderSupergroupActiveUsernames$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reorderSupergroupActiveUsernames(
     parameters: reorderSupergroupActiveUsernames$DirectInput
@@ -86359,7 +86359,7 @@ export class $AsyncApi {
    * Changes the sticker set of a supergroup; requires can_change_info administrator right
    *
    * @param {setSupergroupStickerSet$DirectInput} parameters {@link setSupergroupStickerSet$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setSupergroupStickerSet(
     parameters: setSupergroupStickerSet$DirectInput
@@ -86372,7 +86372,7 @@ export class $AsyncApi {
    * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
    *
    * @param {setSupergroupCustomEmojiStickerSet$DirectInput} parameters {@link setSupergroupCustomEmojiStickerSet$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setSupergroupCustomEmojiStickerSet(
     parameters: setSupergroupCustomEmojiStickerSet$DirectInput
@@ -86388,7 +86388,7 @@ export class $AsyncApi {
    * Changes the number of times the supergroup must be boosted by a user to ignore slow mode and chat permission restrictions; requires can_restrict_members administrator right
    *
    * @param {setSupergroupUnrestrictBoostCount$DirectInput} parameters {@link setSupergroupUnrestrictBoostCount$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setSupergroupUnrestrictBoostCount(
     parameters: setSupergroupUnrestrictBoostCount$DirectInput
@@ -86404,7 +86404,7 @@ export class $AsyncApi {
    * Toggles whether sender signature is added to sent messages in a channel; requires can_change_info member right
    *
    * @param {toggleSupergroupSignMessages$DirectInput} parameters {@link toggleSupergroupSignMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupSignMessages(
     parameters: toggleSupergroupSignMessages$DirectInput
@@ -86420,7 +86420,7 @@ export class $AsyncApi {
    * Toggles whether joining is mandatory to send messages to a discussion supergroup; requires can_restrict_members administrator right
    *
    * @param {toggleSupergroupJoinToSendMessages$DirectInput} parameters {@link toggleSupergroupJoinToSendMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupJoinToSendMessages(
     parameters: toggleSupergroupJoinToSendMessages$DirectInput
@@ -86436,7 +86436,7 @@ export class $AsyncApi {
    * Toggles whether all users directly joining the supergroup need to be approved by supergroup administrators; requires can_restrict_members administrator right
    *
    * @param {toggleSupergroupJoinByRequest$DirectInput} parameters {@link toggleSupergroupJoinByRequest$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupJoinByRequest(
     parameters: toggleSupergroupJoinByRequest$DirectInput
@@ -86452,7 +86452,7 @@ export class $AsyncApi {
    * Toggles whether the message history of a supergroup is available to new members; requires can_change_info member right
    *
    * @param {toggleSupergroupIsAllHistoryAvailable$DirectInput} parameters {@link toggleSupergroupIsAllHistoryAvailable$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupIsAllHistoryAvailable(
     parameters: toggleSupergroupIsAllHistoryAvailable$DirectInput
@@ -86468,7 +86468,7 @@ export class $AsyncApi {
    * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
    *
    * @param {toggleSupergroupCanHaveSponsoredMessages$DirectInput} parameters {@link toggleSupergroupCanHaveSponsoredMessages$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupCanHaveSponsoredMessages(
     parameters: toggleSupergroupCanHaveSponsoredMessages$DirectInput
@@ -86484,7 +86484,7 @@ export class $AsyncApi {
    * Toggles whether non-administrators can receive only administrators and bots using getSupergroupMembers or searchChatMembers. Can be called only if supergroupFullInfo.can_hide_members == true
    *
    * @param {toggleSupergroupHasHiddenMembers$DirectInput} parameters {@link toggleSupergroupHasHiddenMembers$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupHasHiddenMembers(
     parameters: toggleSupergroupHasHiddenMembers$DirectInput
@@ -86500,7 +86500,7 @@ export class $AsyncApi {
    * Toggles whether aggressive anti-spam checks are enabled in the supergroup. Can be called only if supergroupFullInfo.can_toggle_aggressive_anti_spam == true
    *
    * @param {toggleSupergroupHasAggressiveAntiSpamEnabled$DirectInput} parameters {@link toggleSupergroupHasAggressiveAntiSpamEnabled$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupHasAggressiveAntiSpamEnabled(
     parameters: toggleSupergroupHasAggressiveAntiSpamEnabled$DirectInput
@@ -86516,7 +86516,7 @@ export class $AsyncApi {
    * Toggles whether the supergroup is a forum; requires owner privileges in the supergroup. Discussion supergroups can't be converted to forums
    *
    * @param {toggleSupergroupIsForum$DirectInput} parameters {@link toggleSupergroupIsForum$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupIsForum(
     parameters: toggleSupergroupIsForum$DirectInput
@@ -86529,7 +86529,7 @@ export class $AsyncApi {
    * Upgrades supergroup to a broadcast group; requires owner privileges in the supergroup
    *
    * @param {toggleSupergroupIsBroadcastGroup$DirectInput} parameters {@link toggleSupergroupIsBroadcastGroup$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleSupergroupIsBroadcastGroup(
     parameters: toggleSupergroupIsBroadcastGroup$DirectInput
@@ -86545,7 +86545,7 @@ export class $AsyncApi {
    * Reports messages in a supergroup as spam; requires administrator rights in the supergroup
    *
    * @param {reportSupergroupSpam$DirectInput} parameters {@link reportSupergroupSpam$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reportSupergroupSpam(
     parameters: reportSupergroupSpam$DirectInput
@@ -86558,7 +86558,7 @@ export class $AsyncApi {
    * Reports a false deletion of a message by aggressive anti-spam checks; requires administrator rights in the supergroup. Can be called only for messages from chatEventMessageDeleted with can_report_anti_spam_false_positive == true
    *
    * @param {reportSupergroupAntiSpamFalsePositive$DirectInput} parameters {@link reportSupergroupAntiSpamFalsePositive$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reportSupergroupAntiSpamFalsePositive(
     parameters: reportSupergroupAntiSpamFalsePositive$DirectInput
@@ -86574,7 +86574,7 @@ export class $AsyncApi {
    * Returns information about members or banned users in a supergroup or channel. Can be used only if supergroupFullInfo.can_get_members == true; additionally, administrator privileges may be required for some filters
    *
    * @param {getSupergroupMembers$DirectInput} parameters {@link getSupergroupMembers$Input}
-   * @return {Promise<ChatMembers>} Promise<{@link ChatMembers}>
+   * @returns {Promise<ChatMembers>} Promise<{@link ChatMembers}>
    */
   async getSupergroupMembers(
     parameters: getSupergroupMembers$DirectInput
@@ -86587,7 +86587,7 @@ export class $AsyncApi {
    * Closes a secret chat, effectively transferring its state to secretChatStateClosed
    *
    * @param {closeSecretChat$DirectInput} parameters {@link closeSecretChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async closeSecretChat(parameters: closeSecretChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("closeSecretChat", parameters);
@@ -86598,7 +86598,7 @@ export class $AsyncApi {
    * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only for supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing event_id)
    *
    * @param {getChatEventLog$DirectInput} parameters {@link getChatEventLog$Input}
-   * @return {Promise<ChatEvents>} Promise<{@link ChatEvents}>
+   * @returns {Promise<ChatEvents>} Promise<{@link ChatEvents}>
    */
   async getChatEventLog(
     parameters: getChatEventLog$DirectInput
@@ -86611,7 +86611,7 @@ export class $AsyncApi {
    * Returns the list of supported time zones
    *
    * @param {getTimeZones$DirectInput} parameters {@link getTimeZones$Input}
-   * @return {Promise<TimeZones>} Promise<{@link TimeZones}>
+   * @returns {Promise<TimeZones>} Promise<{@link TimeZones}>
    */
   async getTimeZones(parameters: getTimeZones$DirectInput): Promise<TimeZones> {
     const result = await this.client.invoke("getTimeZones", parameters);
@@ -86622,7 +86622,7 @@ export class $AsyncApi {
    * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
    *
    * @param {getPaymentForm$DirectInput} parameters {@link getPaymentForm$Input}
-   * @return {Promise<PaymentForm>} Promise<{@link PaymentForm}>
+   * @returns {Promise<PaymentForm>} Promise<{@link PaymentForm}>
    */
   async getPaymentForm(
     parameters: getPaymentForm$DirectInput
@@ -86635,7 +86635,7 @@ export class $AsyncApi {
    * Validates the order information provided by a user and returns the available shipping options for a flexible invoice
    *
    * @param {validateOrderInfo$DirectInput} parameters {@link validateOrderInfo$Input}
-   * @return {Promise<ValidatedOrderInfo>} Promise<{@link ValidatedOrderInfo}>
+   * @returns {Promise<ValidatedOrderInfo>} Promise<{@link ValidatedOrderInfo}>
    */
   async validateOrderInfo(
     parameters: validateOrderInfo$DirectInput
@@ -86648,7 +86648,7 @@ export class $AsyncApi {
    * Sends a filled-out payment form to the bot for final verification
    *
    * @param {sendPaymentForm$DirectInput} parameters {@link sendPaymentForm$Input}
-   * @return {Promise<PaymentResult>} Promise<{@link PaymentResult}>
+   * @returns {Promise<PaymentResult>} Promise<{@link PaymentResult}>
    */
   async sendPaymentForm(
     parameters: sendPaymentForm$DirectInput
@@ -86661,7 +86661,7 @@ export class $AsyncApi {
    * Returns information about a successful payment
    *
    * @param {getPaymentReceipt$DirectInput} parameters {@link getPaymentReceipt$Input}
-   * @return {Promise<PaymentReceipt>} Promise<{@link PaymentReceipt}>
+   * @returns {Promise<PaymentReceipt>} Promise<{@link PaymentReceipt}>
    */
   async getPaymentReceipt(
     parameters: getPaymentReceipt$DirectInput
@@ -86674,7 +86674,7 @@ export class $AsyncApi {
    * Returns saved order information. Returns a 404 error if there is no saved order information
    *
    * @param {getSavedOrderInfo$DirectInput} parameters {@link getSavedOrderInfo$Input}
-   * @return {Promise<OrderInfo>} Promise<{@link OrderInfo}>
+   * @returns {Promise<OrderInfo>} Promise<{@link OrderInfo}>
    */
   async getSavedOrderInfo(
     parameters: getSavedOrderInfo$DirectInput
@@ -86687,7 +86687,7 @@ export class $AsyncApi {
    * Deletes saved order information
    *
    * @param {deleteSavedOrderInfo$DirectInput} parameters {@link deleteSavedOrderInfo$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteSavedOrderInfo(
     parameters: deleteSavedOrderInfo$DirectInput
@@ -86700,7 +86700,7 @@ export class $AsyncApi {
    * Deletes saved credentials for all payment provider bots
    *
    * @param {deleteSavedCredentials$DirectInput} parameters {@link deleteSavedCredentials$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteSavedCredentials(
     parameters: deleteSavedCredentials$DirectInput
@@ -86713,7 +86713,7 @@ export class $AsyncApi {
    * Creates a link for the given invoice; for bots only
    *
    * @param {createInvoiceLink$DirectInput} parameters {@link createInvoiceLink$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async createInvoiceLink(
     parameters: createInvoiceLink$DirectInput
@@ -86726,7 +86726,7 @@ export class $AsyncApi {
    * Refunds a previously done payment in Telegram Stars
    *
    * @param {refundStarPayment$DirectInput} parameters {@link refundStarPayment$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async refundStarPayment(parameters: refundStarPayment$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("refundStarPayment", parameters);
@@ -86737,7 +86737,7 @@ export class $AsyncApi {
    * Returns a user that can be contacted to get support
    *
    * @param {getSupportUser$DirectInput} parameters {@link getSupportUser$Input}
-   * @return {Promise<User>} Promise<{@link User}>
+   * @returns {Promise<User>} Promise<{@link User}>
    */
   async getSupportUser(parameters: getSupportUser$DirectInput): Promise<User> {
     const result = await this.client.invoke("getSupportUser", parameters);
@@ -86748,7 +86748,7 @@ export class $AsyncApi {
    * Constructs a persistent HTTP URL for a background
    *
    * @param {getBackgroundUrl$DirectInput} parameters {@link getBackgroundUrl$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getBackgroundUrl(
     parameters: getBackgroundUrl$DirectInput
@@ -86761,7 +86761,7 @@ export class $AsyncApi {
    * Searches for a background by its name
    *
    * @param {searchBackground$DirectInput} parameters {@link searchBackground$Input}
-   * @return {Promise<Background>} Promise<{@link Background}>
+   * @returns {Promise<Background>} Promise<{@link Background}>
    */
   async searchBackground(
     parameters: searchBackground$DirectInput
@@ -86774,7 +86774,7 @@ export class $AsyncApi {
    * Sets default background for chats; adds the background to the list of installed backgrounds
    *
    * @param {setDefaultBackground$DirectInput} parameters {@link setDefaultBackground$Input}
-   * @return {Promise<Background>} Promise<{@link Background}>
+   * @returns {Promise<Background>} Promise<{@link Background}>
    */
   async setDefaultBackground(
     parameters: setDefaultBackground$DirectInput
@@ -86787,7 +86787,7 @@ export class $AsyncApi {
    * Deletes default background for chats
    *
    * @param {deleteDefaultBackground$DirectInput} parameters {@link deleteDefaultBackground$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteDefaultBackground(
     parameters: deleteDefaultBackground$DirectInput
@@ -86800,7 +86800,7 @@ export class $AsyncApi {
    * Returns backgrounds installed by the user
    *
    * @param {getInstalledBackgrounds$DirectInput} parameters {@link getInstalledBackgrounds$Input}
-   * @return {Promise<Backgrounds>} Promise<{@link Backgrounds}>
+   * @returns {Promise<Backgrounds>} Promise<{@link Backgrounds}>
    */
   async getInstalledBackgrounds(
     parameters: getInstalledBackgrounds$DirectInput
@@ -86813,7 +86813,7 @@ export class $AsyncApi {
    * Removes background from the list of installed backgrounds
    *
    * @param {removeInstalledBackground$DirectInput} parameters {@link removeInstalledBackground$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeInstalledBackground(
     parameters: removeInstalledBackground$DirectInput
@@ -86826,7 +86826,7 @@ export class $AsyncApi {
    * Resets list of installed backgrounds to its default value
    *
    * @param {resetInstalledBackgrounds$DirectInput} parameters {@link resetInstalledBackgrounds$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async resetInstalledBackgrounds(
     parameters: resetInstalledBackgrounds$DirectInput
@@ -86839,7 +86839,7 @@ export class $AsyncApi {
    * Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
    *
    * @param {getLocalizationTargetInfo$DirectInput} parameters {@link getLocalizationTargetInfo$Input}
-   * @return {Promise<LocalizationTargetInfo>} Promise<{@link LocalizationTargetInfo}>
+   * @returns {Promise<LocalizationTargetInfo>} Promise<{@link LocalizationTargetInfo}>
    */
   async getLocalizationTargetInfo(
     parameters: getLocalizationTargetInfo$DirectInput
@@ -86852,7 +86852,7 @@ export class $AsyncApi {
    * Returns information about a language pack. Returned language pack identifier may be different from a provided one. Can be called before authorization
    *
    * @param {getLanguagePackInfo$DirectInput} parameters {@link getLanguagePackInfo$Input}
-   * @return {Promise<LanguagePackInfo>} Promise<{@link LanguagePackInfo}>
+   * @returns {Promise<LanguagePackInfo>} Promise<{@link LanguagePackInfo}>
    */
   async getLanguagePackInfo(
     parameters: getLanguagePackInfo$DirectInput
@@ -86865,7 +86865,7 @@ export class $AsyncApi {
    * Returns strings from a language pack in the current localization target by their keys. Can be called before authorization
    *
    * @param {getLanguagePackStrings$DirectInput} parameters {@link getLanguagePackStrings$Input}
-   * @return {Promise<LanguagePackStrings>} Promise<{@link LanguagePackStrings}>
+   * @returns {Promise<LanguagePackStrings>} Promise<{@link LanguagePackStrings}>
    */
   async getLanguagePackStrings(
     parameters: getLanguagePackStrings$DirectInput
@@ -86880,7 +86880,7 @@ export class $AsyncApi {
    * - This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
    *
    * @param {synchronizeLanguagePack$DirectInput} parameters {@link synchronizeLanguagePack$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async synchronizeLanguagePack(
     parameters: synchronizeLanguagePack$DirectInput
@@ -86893,7 +86893,7 @@ export class $AsyncApi {
    * Adds a custom server language pack to the list of installed language packs in current localization target. Can be called before authorization
    *
    * @param {addCustomServerLanguagePack$DirectInput} parameters {@link addCustomServerLanguagePack$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addCustomServerLanguagePack(
     parameters: addCustomServerLanguagePack$DirectInput
@@ -86909,7 +86909,7 @@ export class $AsyncApi {
    * Adds or changes a custom local language pack to the current localization target
    *
    * @param {setCustomLanguagePack$DirectInput} parameters {@link setCustomLanguagePack$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setCustomLanguagePack(
     parameters: setCustomLanguagePack$DirectInput
@@ -86922,7 +86922,7 @@ export class $AsyncApi {
    * Edits information about a custom local language pack in the current localization target. Can be called before authorization
    *
    * @param {editCustomLanguagePackInfo$DirectInput} parameters {@link editCustomLanguagePackInfo$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async editCustomLanguagePackInfo(
     parameters: editCustomLanguagePackInfo$DirectInput
@@ -86938,7 +86938,7 @@ export class $AsyncApi {
    * Adds, edits or deletes a string in a custom local language pack. Can be called before authorization
    *
    * @param {setCustomLanguagePackString$DirectInput} parameters {@link setCustomLanguagePackString$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setCustomLanguagePackString(
     parameters: setCustomLanguagePackString$DirectInput
@@ -86956,7 +86956,7 @@ export class $AsyncApi {
    * - Can be called before authorization
    *
    * @param {deleteLanguagePack$DirectInput} parameters {@link deleteLanguagePack$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteLanguagePack(parameters: deleteLanguagePack$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteLanguagePack", parameters);
@@ -86967,7 +86967,7 @@ export class $AsyncApi {
    * Registers the currently used device for receiving push notifications. Returns a globally unique identifier of the push notification subscription
    *
    * @param {registerDevice$DirectInput} parameters {@link registerDevice$Input}
-   * @return {Promise<PushReceiverId>} Promise<{@link PushReceiverId}>
+   * @returns {Promise<PushReceiverId>} Promise<{@link PushReceiverId}>
    */
   async registerDevice(
     parameters: registerDevice$DirectInput
@@ -86980,7 +86980,7 @@ export class $AsyncApi {
    * Handles a push notification. Returns error with code 406 if the push notification is not supported and connection to the server is required to fetch new data. Can be called before authorization
    *
    * @param {processPushNotification$DirectInput} parameters {@link processPushNotification$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async processPushNotification(
     parameters: processPushNotification$DirectInput
@@ -86993,7 +86993,7 @@ export class $AsyncApi {
    * Returns a globally unique push notification subscription identifier for identification of an account, which has received a push notification. Can be called synchronously
    *
    * @param {getPushReceiverId$DirectInput} parameters {@link getPushReceiverId$Input}
-   * @return {Promise<PushReceiverId>} Promise<{@link PushReceiverId}>
+   * @returns {Promise<PushReceiverId>} Promise<{@link PushReceiverId}>
    */
   async getPushReceiverId(
     parameters: getPushReceiverId$DirectInput
@@ -87006,7 +87006,7 @@ export class $AsyncApi {
    * Returns t.me URLs recently visited by a newly registered user
    *
    * @param {getRecentlyVisitedTMeUrls$DirectInput} parameters {@link getRecentlyVisitedTMeUrls$Input}
-   * @return {Promise<TMeUrls>} Promise<{@link TMeUrls}>
+   * @returns {Promise<TMeUrls>} Promise<{@link TMeUrls}>
    */
   async getRecentlyVisitedTMeUrls(
     parameters: getRecentlyVisitedTMeUrls$DirectInput
@@ -87019,7 +87019,7 @@ export class $AsyncApi {
    * Changes user privacy settings
    *
    * @param {setUserPrivacySettingRules$DirectInput} parameters {@link setUserPrivacySettingRules$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setUserPrivacySettingRules(
     parameters: setUserPrivacySettingRules$DirectInput
@@ -87035,7 +87035,7 @@ export class $AsyncApi {
    * Returns the current privacy settings
    *
    * @param {getUserPrivacySettingRules$DirectInput} parameters {@link getUserPrivacySettingRules$Input}
-   * @return {Promise<UserPrivacySettingRules>} Promise<{@link UserPrivacySettingRules}>
+   * @returns {Promise<UserPrivacySettingRules>} Promise<{@link UserPrivacySettingRules}>
    */
   async getUserPrivacySettingRules(
     parameters: getUserPrivacySettingRules$DirectInput
@@ -87051,7 +87051,7 @@ export class $AsyncApi {
    * Changes privacy settings for message read date
    *
    * @param {setReadDatePrivacySettings$DirectInput} parameters {@link setReadDatePrivacySettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setReadDatePrivacySettings(
     parameters: setReadDatePrivacySettings$DirectInput
@@ -87067,7 +87067,7 @@ export class $AsyncApi {
    * Returns privacy settings for message read date
    *
    * @param {getReadDatePrivacySettings$DirectInput} parameters {@link getReadDatePrivacySettings$Input}
-   * @return {Promise<ReadDatePrivacySettings>} Promise<{@link ReadDatePrivacySettings}>
+   * @returns {Promise<ReadDatePrivacySettings>} Promise<{@link ReadDatePrivacySettings}>
    */
   async getReadDatePrivacySettings(
     parameters: getReadDatePrivacySettings$DirectInput
@@ -87083,7 +87083,7 @@ export class $AsyncApi {
    * Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
    *
    * @param {setNewChatPrivacySettings$DirectInput} parameters {@link setNewChatPrivacySettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setNewChatPrivacySettings(
     parameters: setNewChatPrivacySettings$DirectInput
@@ -87096,7 +87096,7 @@ export class $AsyncApi {
    * Returns privacy settings for new chat creation
    *
    * @param {getNewChatPrivacySettings$DirectInput} parameters {@link getNewChatPrivacySettings$Input}
-   * @return {Promise<NewChatPrivacySettings>} Promise<{@link NewChatPrivacySettings}>
+   * @returns {Promise<NewChatPrivacySettings>} Promise<{@link NewChatPrivacySettings}>
    */
   async getNewChatPrivacySettings(
     parameters: getNewChatPrivacySettings$DirectInput
@@ -87109,7 +87109,7 @@ export class $AsyncApi {
    * Check whether the current user can message another user or try to create a chat with them
    *
    * @param {canSendMessageToUser$DirectInput} parameters {@link canSendMessageToUser$Input}
-   * @return {Promise<CanSendMessageToUserResult>} Promise<{@link CanSendMessageToUserResult}>
+   * @returns {Promise<CanSendMessageToUserResult>} Promise<{@link CanSendMessageToUserResult}>
    */
   async canSendMessageToUser(
     parameters: canSendMessageToUser$DirectInput
@@ -87122,7 +87122,7 @@ export class $AsyncApi {
    * Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization. Can be called synchronously for options "version" and "commit_hash"
    *
    * @param {getOption$DirectInput} parameters {@link getOption$Input}
-   * @return {Promise<OptionValue>} Promise<{@link OptionValue}>
+   * @returns {Promise<OptionValue>} Promise<{@link OptionValue}>
    */
   async getOption(parameters: getOption$DirectInput): Promise<OptionValue> {
     const result = await this.client.invoke("getOption", parameters);
@@ -87133,7 +87133,7 @@ export class $AsyncApi {
    * Sets the value of an option. (Check the list of available options on https://core.telegram.org/tdlib/options.) Only writable options can be set. Can be called before authorization
    *
    * @param {setOption$DirectInput} parameters {@link setOption$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setOption(parameters: setOption$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setOption", parameters);
@@ -87144,7 +87144,7 @@ export class $AsyncApi {
    * Changes the period of inactivity after which the account of the current user will automatically be deleted
    *
    * @param {setAccountTtl$DirectInput} parameters {@link setAccountTtl$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setAccountTtl(parameters: setAccountTtl$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setAccountTtl", parameters);
@@ -87155,7 +87155,7 @@ export class $AsyncApi {
    * Returns the period of inactivity after which the account of the current user will automatically be deleted
    *
    * @param {getAccountTtl$DirectInput} parameters {@link getAccountTtl$Input}
-   * @return {Promise<AccountTtl>} Promise<{@link AccountTtl}>
+   * @returns {Promise<AccountTtl>} Promise<{@link AccountTtl}>
    */
   async getAccountTtl(parameters: getAccountTtl$DirectInput): Promise<AccountTtl> {
     const result = await this.client.invoke("getAccountTtl", parameters);
@@ -87168,7 +87168,7 @@ export class $AsyncApi {
    * - Can be called before authorization when the current authorization state is authorizationStateWaitPassword
    *
    * @param {deleteAccount$DirectInput} parameters {@link deleteAccount$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteAccount(parameters: deleteAccount$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteAccount", parameters);
@@ -87179,7 +87179,7 @@ export class $AsyncApi {
    * Changes the default message auto-delete time for new chats
    *
    * @param {setDefaultMessageAutoDeleteTime$DirectInput} parameters {@link setDefaultMessageAutoDeleteTime$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setDefaultMessageAutoDeleteTime(
     parameters: setDefaultMessageAutoDeleteTime$DirectInput
@@ -87195,7 +87195,7 @@ export class $AsyncApi {
    * Returns default message auto-delete time setting for new chats
    *
    * @param {getDefaultMessageAutoDeleteTime$DirectInput} parameters {@link getDefaultMessageAutoDeleteTime$Input}
-   * @return {Promise<MessageAutoDeleteTime>} Promise<{@link MessageAutoDeleteTime}>
+   * @returns {Promise<MessageAutoDeleteTime>} Promise<{@link MessageAutoDeleteTime}>
    */
   async getDefaultMessageAutoDeleteTime(
     parameters: getDefaultMessageAutoDeleteTime$DirectInput
@@ -87211,7 +87211,7 @@ export class $AsyncApi {
    * Removes a chat action bar without any other action
    *
    * @param {removeChatActionBar$DirectInput} parameters {@link removeChatActionBar$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeChatActionBar(
     parameters: removeChatActionBar$DirectInput
@@ -87224,7 +87224,7 @@ export class $AsyncApi {
    * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
    *
    * @param {reportChat$DirectInput} parameters {@link reportChat$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reportChat(parameters: reportChat$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("reportChat", parameters);
@@ -87235,7 +87235,7 @@ export class $AsyncApi {
    * Reports a chat photo to the Telegram moderators. A chat photo can be reported only if chat.can_be_reported
    *
    * @param {reportChatPhoto$DirectInput} parameters {@link reportChatPhoto$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reportChatPhoto(parameters: reportChatPhoto$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("reportChatPhoto", parameters);
@@ -87246,7 +87246,7 @@ export class $AsyncApi {
    * Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if message.can_report_reactions
    *
    * @param {reportMessageReactions$DirectInput} parameters {@link reportMessageReactions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async reportMessageReactions(
     parameters: reportMessageReactions$DirectInput
@@ -87259,7 +87259,7 @@ export class $AsyncApi {
    * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
    *
    * @param {getChatRevenueStatistics$DirectInput} parameters {@link getChatRevenueStatistics$Input}
-   * @return {Promise<ChatRevenueStatistics>} Promise<{@link ChatRevenueStatistics}>
+   * @returns {Promise<ChatRevenueStatistics>} Promise<{@link ChatRevenueStatistics}>
    */
   async getChatRevenueStatistics(
     parameters: getChatRevenueStatistics$DirectInput
@@ -87272,7 +87272,7 @@ export class $AsyncApi {
    * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
    *
    * @param {getChatRevenueWithdrawalUrl$DirectInput} parameters {@link getChatRevenueWithdrawalUrl$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getChatRevenueWithdrawalUrl(
     parameters: getChatRevenueWithdrawalUrl$DirectInput
@@ -87288,7 +87288,7 @@ export class $AsyncApi {
    * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
    *
    * @param {getChatRevenueTransactions$DirectInput} parameters {@link getChatRevenueTransactions$Input}
-   * @return {Promise<ChatRevenueTransactions>} Promise<{@link ChatRevenueTransactions}>
+   * @returns {Promise<ChatRevenueTransactions>} Promise<{@link ChatRevenueTransactions}>
    */
   async getChatRevenueTransactions(
     parameters: getChatRevenueTransactions$DirectInput
@@ -87304,7 +87304,7 @@ export class $AsyncApi {
    * Returns detailed statistics about a chat. Currently, this method can be used only for supergroups and channels. Can be used only if supergroupFullInfo.can_get_statistics == true
    *
    * @param {getChatStatistics$DirectInput} parameters {@link getChatStatistics$Input}
-   * @return {Promise<ChatStatistics>} Promise<{@link ChatStatistics}>
+   * @returns {Promise<ChatStatistics>} Promise<{@link ChatStatistics}>
    */
   async getChatStatistics(
     parameters: getChatStatistics$DirectInput
@@ -87317,7 +87317,7 @@ export class $AsyncApi {
    * Returns detailed statistics about a message. Can be used only if message.can_get_statistics == true
    *
    * @param {getMessageStatistics$DirectInput} parameters {@link getMessageStatistics$Input}
-   * @return {Promise<MessageStatistics>} Promise<{@link MessageStatistics}>
+   * @returns {Promise<MessageStatistics>} Promise<{@link MessageStatistics}>
    */
   async getMessageStatistics(
     parameters: getMessageStatistics$DirectInput
@@ -87330,7 +87330,7 @@ export class $AsyncApi {
    * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if message.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
    *
    * @param {getMessagePublicForwards$DirectInput} parameters {@link getMessagePublicForwards$Input}
-   * @return {Promise<PublicForwards>} Promise<{@link PublicForwards}>
+   * @returns {Promise<PublicForwards>} Promise<{@link PublicForwards}>
    */
   async getMessagePublicForwards(
     parameters: getMessagePublicForwards$DirectInput
@@ -87343,7 +87343,7 @@ export class $AsyncApi {
    * Returns detailed statistics about a story. Can be used only if story.can_get_statistics == true
    *
    * @param {getStoryStatistics$DirectInput} parameters {@link getStoryStatistics$Input}
-   * @return {Promise<StoryStatistics>} Promise<{@link StoryStatistics}>
+   * @returns {Promise<StoryStatistics>} Promise<{@link StoryStatistics}>
    */
   async getStoryStatistics(
     parameters: getStoryStatistics$DirectInput
@@ -87356,7 +87356,7 @@ export class $AsyncApi {
    * Loads an asynchronous or a zoomed in statistical graph
    *
    * @param {getStatisticalGraph$DirectInput} parameters {@link getStatisticalGraph$Input}
-   * @return {Promise<StatisticalGraph>} Promise<{@link StatisticalGraph}>
+   * @returns {Promise<StatisticalGraph>} Promise<{@link StatisticalGraph}>
    */
   async getStatisticalGraph(
     parameters: getStatisticalGraph$DirectInput
@@ -87369,7 +87369,7 @@ export class $AsyncApi {
    * Returns storage usage statistics. Can be called before authorization
    *
    * @param {getStorageStatistics$DirectInput} parameters {@link getStorageStatistics$Input}
-   * @return {Promise<StorageStatistics>} Promise<{@link StorageStatistics}>
+   * @returns {Promise<StorageStatistics>} Promise<{@link StorageStatistics}>
    */
   async getStorageStatistics(
     parameters: getStorageStatistics$DirectInput
@@ -87382,7 +87382,7 @@ export class $AsyncApi {
    * Quickly returns approximate storage usage statistics. Can be called before authorization
    *
    * @param {getStorageStatisticsFast$DirectInput} parameters {@link getStorageStatisticsFast$Input}
-   * @return {Promise<StorageStatisticsFast>} Promise<{@link StorageStatisticsFast}>
+   * @returns {Promise<StorageStatisticsFast>} Promise<{@link StorageStatisticsFast}>
    */
   async getStorageStatisticsFast(
     parameters: getStorageStatisticsFast$DirectInput
@@ -87395,7 +87395,7 @@ export class $AsyncApi {
    * Returns database statistics
    *
    * @param {getDatabaseStatistics$DirectInput} parameters {@link getDatabaseStatistics$Input}
-   * @return {Promise<DatabaseStatistics>} Promise<{@link DatabaseStatistics}>
+   * @returns {Promise<DatabaseStatistics>} Promise<{@link DatabaseStatistics}>
    */
   async getDatabaseStatistics(
     parameters: getDatabaseStatistics$DirectInput
@@ -87408,7 +87408,7 @@ export class $AsyncApi {
    * Optimizes storage usage, i.e. deletes some files and returns new storage usage statistics. Secret thumbnails can't be deleted
    *
    * @param {optimizeStorage$DirectInput} parameters {@link optimizeStorage$Input}
-   * @return {Promise<StorageStatistics>} Promise<{@link StorageStatistics}>
+   * @returns {Promise<StorageStatistics>} Promise<{@link StorageStatistics}>
    */
   async optimizeStorage(
     parameters: optimizeStorage$DirectInput
@@ -87423,7 +87423,7 @@ export class $AsyncApi {
    * - so it must be called whenever the network is changed, even if the network type remains the same. Network type is used to check whether the library can use the network at all and also for collecting detailed network data usage statistics
    *
    * @param {setNetworkType$DirectInput} parameters {@link setNetworkType$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setNetworkType(parameters: setNetworkType$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setNetworkType", parameters);
@@ -87434,7 +87434,7 @@ export class $AsyncApi {
    * Returns network data usage statistics. Can be called before authorization
    *
    * @param {getNetworkStatistics$DirectInput} parameters {@link getNetworkStatistics$Input}
-   * @return {Promise<NetworkStatistics>} Promise<{@link NetworkStatistics}>
+   * @returns {Promise<NetworkStatistics>} Promise<{@link NetworkStatistics}>
    */
   async getNetworkStatistics(
     parameters: getNetworkStatistics$DirectInput
@@ -87447,7 +87447,7 @@ export class $AsyncApi {
    * Adds the specified data to data usage statistics. Can be called before authorization
    *
    * @param {addNetworkStatistics$DirectInput} parameters {@link addNetworkStatistics$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addNetworkStatistics(
     parameters: addNetworkStatistics$DirectInput
@@ -87460,7 +87460,7 @@ export class $AsyncApi {
    * Resets all network data usage statistics to zero. Can be called before authorization
    *
    * @param {resetNetworkStatistics$DirectInput} parameters {@link resetNetworkStatistics$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async resetNetworkStatistics(
     parameters: resetNetworkStatistics$DirectInput
@@ -87473,7 +87473,7 @@ export class $AsyncApi {
    * Returns auto-download settings presets for the current user
    *
    * @param {getAutoDownloadSettingsPresets$DirectInput} parameters {@link getAutoDownloadSettingsPresets$Input}
-   * @return {Promise<AutoDownloadSettingsPresets>} Promise<{@link AutoDownloadSettingsPresets}>
+   * @returns {Promise<AutoDownloadSettingsPresets>} Promise<{@link AutoDownloadSettingsPresets}>
    */
   async getAutoDownloadSettingsPresets(
     parameters: getAutoDownloadSettingsPresets$DirectInput
@@ -87489,7 +87489,7 @@ export class $AsyncApi {
    * Sets auto-download settings
    *
    * @param {setAutoDownloadSettings$DirectInput} parameters {@link setAutoDownloadSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setAutoDownloadSettings(
     parameters: setAutoDownloadSettings$DirectInput
@@ -87502,7 +87502,7 @@ export class $AsyncApi {
    * Returns autosave settings for the current user
    *
    * @param {getAutosaveSettings$DirectInput} parameters {@link getAutosaveSettings$Input}
-   * @return {Promise<AutosaveSettings>} Promise<{@link AutosaveSettings}>
+   * @returns {Promise<AutosaveSettings>} Promise<{@link AutosaveSettings}>
    */
   async getAutosaveSettings(
     parameters: getAutosaveSettings$DirectInput
@@ -87515,7 +87515,7 @@ export class $AsyncApi {
    * Sets autosave settings for the given scope. The method is guaranteed to work only after at least one call to getAutosaveSettings
    *
    * @param {setAutosaveSettings$DirectInput} parameters {@link setAutosaveSettings$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setAutosaveSettings(
     parameters: setAutosaveSettings$DirectInput
@@ -87528,7 +87528,7 @@ export class $AsyncApi {
    * Clears the list of all autosave settings exceptions. The method is guaranteed to work only after at least one call to getAutosaveSettings
    *
    * @param {clearAutosaveSettingsExceptions$DirectInput} parameters {@link clearAutosaveSettingsExceptions$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clearAutosaveSettingsExceptions(
     parameters: clearAutosaveSettingsExceptions$DirectInput
@@ -87544,7 +87544,7 @@ export class $AsyncApi {
    * Returns information about a bank card
    *
    * @param {getBankCardInfo$DirectInput} parameters {@link getBankCardInfo$Input}
-   * @return {Promise<BankCardInfo>} Promise<{@link BankCardInfo}>
+   * @returns {Promise<BankCardInfo>} Promise<{@link BankCardInfo}>
    */
   async getBankCardInfo(
     parameters: getBankCardInfo$DirectInput
@@ -87557,7 +87557,7 @@ export class $AsyncApi {
    * Returns one of the available Telegram Passport elements
    *
    * @param {getPassportElement$DirectInput} parameters {@link getPassportElement$Input}
-   * @return {Promise<PassportElement>} Promise<{@link PassportElement}>
+   * @returns {Promise<PassportElement>} Promise<{@link PassportElement}>
    */
   async getPassportElement(
     parameters: getPassportElement$DirectInput
@@ -87570,7 +87570,7 @@ export class $AsyncApi {
    * Returns all available Telegram Passport elements
    *
    * @param {getAllPassportElements$DirectInput} parameters {@link getAllPassportElements$Input}
-   * @return {Promise<PassportElements>} Promise<{@link PassportElements}>
+   * @returns {Promise<PassportElements>} Promise<{@link PassportElements}>
    */
   async getAllPassportElements(
     parameters: getAllPassportElements$DirectInput
@@ -87583,7 +87583,7 @@ export class $AsyncApi {
    * Adds an element to the user's Telegram Passport. May return an error with a message "PHONE_VERIFICATION_NEEDED" or "EMAIL_VERIFICATION_NEEDED" if the chosen phone number or the chosen email address must be verified first
    *
    * @param {setPassportElement$DirectInput} parameters {@link setPassportElement$Input}
-   * @return {Promise<PassportElement>} Promise<{@link PassportElement}>
+   * @returns {Promise<PassportElement>} Promise<{@link PassportElement}>
    */
   async setPassportElement(
     parameters: setPassportElement$DirectInput
@@ -87596,7 +87596,7 @@ export class $AsyncApi {
    * Deletes a Telegram Passport element
    *
    * @param {deletePassportElement$DirectInput} parameters {@link deletePassportElement$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deletePassportElement(
     parameters: deletePassportElement$DirectInput
@@ -87609,7 +87609,7 @@ export class $AsyncApi {
    * Informs the user that some of the elements in their Telegram Passport contain errors; for bots only. The user will not be able to resend the elements, until the errors are fixed
    *
    * @param {setPassportElementErrors$DirectInput} parameters {@link setPassportElementErrors$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setPassportElementErrors(
     parameters: setPassportElementErrors$DirectInput
@@ -87622,7 +87622,7 @@ export class $AsyncApi {
    * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details. Returns a 404 error if unknown
    *
    * @param {getPreferredCountryLanguage$DirectInput} parameters {@link getPreferredCountryLanguage$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getPreferredCountryLanguage(
     parameters: getPreferredCountryLanguage$DirectInput
@@ -87638,7 +87638,7 @@ export class $AsyncApi {
    * Sends a code to verify an email address to be added to a user's Telegram Passport
    *
    * @param {sendEmailAddressVerificationCode$DirectInput} parameters {@link sendEmailAddressVerificationCode$Input}
-   * @return {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
+   * @returns {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
    */
   async sendEmailAddressVerificationCode(
     parameters: sendEmailAddressVerificationCode$DirectInput
@@ -87654,7 +87654,7 @@ export class $AsyncApi {
    * Resends the code to verify an email address to be added to a user's Telegram Passport
    *
    * @param {resendEmailAddressVerificationCode$DirectInput} parameters {@link resendEmailAddressVerificationCode$Input}
-   * @return {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
+   * @returns {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
    */
   async resendEmailAddressVerificationCode(
     parameters: resendEmailAddressVerificationCode$DirectInput
@@ -87670,7 +87670,7 @@ export class $AsyncApi {
    * Checks the email address verification code for Telegram Passport
    *
    * @param {checkEmailAddressVerificationCode$DirectInput} parameters {@link checkEmailAddressVerificationCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async checkEmailAddressVerificationCode(
     parameters: checkEmailAddressVerificationCode$DirectInput
@@ -87686,7 +87686,7 @@ export class $AsyncApi {
    * Returns a Telegram Passport authorization form for sharing data with a service
    *
    * @param {getPassportAuthorizationForm$DirectInput} parameters {@link getPassportAuthorizationForm$Input}
-   * @return {Promise<PassportAuthorizationForm>} Promise<{@link PassportAuthorizationForm}>
+   * @returns {Promise<PassportAuthorizationForm>} Promise<{@link PassportAuthorizationForm}>
    */
   async getPassportAuthorizationForm(
     parameters: getPassportAuthorizationForm$DirectInput
@@ -87702,7 +87702,7 @@ export class $AsyncApi {
    * Returns already available Telegram Passport elements suitable for completing a Telegram Passport authorization form. Result can be received only once for each authorization form
    *
    * @param {getPassportAuthorizationFormAvailableElements$DirectInput} parameters {@link getPassportAuthorizationFormAvailableElements$Input}
-   * @return {Promise<PassportElementsWithErrors>} Promise<{@link PassportElementsWithErrors}>
+   * @returns {Promise<PassportElementsWithErrors>} Promise<{@link PassportElementsWithErrors}>
    */
   async getPassportAuthorizationFormAvailableElements(
     parameters: getPassportAuthorizationFormAvailableElements$DirectInput
@@ -87718,7 +87718,7 @@ export class $AsyncApi {
    * Sends a Telegram Passport authorization form, effectively sharing data with the service. This method must be called after getPassportAuthorizationFormAvailableElements if some previously available elements are going to be reused
    *
    * @param {sendPassportAuthorizationForm$DirectInput} parameters {@link sendPassportAuthorizationForm$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async sendPassportAuthorizationForm(
     parameters: sendPassportAuthorizationForm$DirectInput
@@ -87734,7 +87734,7 @@ export class $AsyncApi {
    * Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
    *
    * @param {setBotUpdatesStatus$DirectInput} parameters {@link setBotUpdatesStatus$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setBotUpdatesStatus(
     parameters: setBotUpdatesStatus$DirectInput
@@ -87747,7 +87747,7 @@ export class $AsyncApi {
    * Uploads a file with a sticker; returns the uploaded file
    *
    * @param {uploadStickerFile$DirectInput} parameters {@link uploadStickerFile$Input}
-   * @return {Promise<File>} Promise<{@link File}>
+   * @returns {Promise<File>} Promise<{@link File}>
    */
   async uploadStickerFile(parameters: uploadStickerFile$DirectInput): Promise<File> {
     const result = await this.client.invoke("uploadStickerFile", parameters);
@@ -87758,7 +87758,7 @@ export class $AsyncApi {
    * Returns a suggested name for a new sticker set with a given title
    *
    * @param {getSuggestedStickerSetName$DirectInput} parameters {@link getSuggestedStickerSetName$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getSuggestedStickerSetName(
     parameters: getSuggestedStickerSetName$DirectInput
@@ -87774,7 +87774,7 @@ export class $AsyncApi {
    * Checks whether a name can be used for a new sticker set
    *
    * @param {checkStickerSetName$DirectInput} parameters {@link checkStickerSetName$Input}
-   * @return {Promise<CheckStickerSetNameResult>} Promise<{@link CheckStickerSetNameResult}>
+   * @returns {Promise<CheckStickerSetNameResult>} Promise<{@link CheckStickerSetNameResult}>
    */
   async checkStickerSetName(
     parameters: checkStickerSetName$DirectInput
@@ -87787,7 +87787,7 @@ export class $AsyncApi {
    * Creates a new sticker set. Returns the newly created sticker set
    *
    * @param {createNewStickerSet$DirectInput} parameters {@link createNewStickerSet$Input}
-   * @return {Promise<StickerSet>} Promise<{@link StickerSet}>
+   * @returns {Promise<StickerSet>} Promise<{@link StickerSet}>
    */
   async createNewStickerSet(
     parameters: createNewStickerSet$DirectInput
@@ -87800,7 +87800,7 @@ export class $AsyncApi {
    * Adds a new sticker to a set
    *
    * @param {addStickerToSet$DirectInput} parameters {@link addStickerToSet$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addStickerToSet(parameters: addStickerToSet$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("addStickerToSet", parameters);
@@ -87811,7 +87811,7 @@ export class $AsyncApi {
    * Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
    *
    * @param {replaceStickerInSet$DirectInput} parameters {@link replaceStickerInSet$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async replaceStickerInSet(
     parameters: replaceStickerInSet$DirectInput
@@ -87824,7 +87824,7 @@ export class $AsyncApi {
    * Sets a sticker set thumbnail
    *
    * @param {setStickerSetThumbnail$DirectInput} parameters {@link setStickerSetThumbnail$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setStickerSetThumbnail(
     parameters: setStickerSetThumbnail$DirectInput
@@ -87837,7 +87837,7 @@ export class $AsyncApi {
    * Sets a custom emoji sticker set thumbnail
    *
    * @param {setCustomEmojiStickerSetThumbnail$DirectInput} parameters {@link setCustomEmojiStickerSetThumbnail$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setCustomEmojiStickerSetThumbnail(
     parameters: setCustomEmojiStickerSetThumbnail$DirectInput
@@ -87853,7 +87853,7 @@ export class $AsyncApi {
    * Sets a sticker set title
    *
    * @param {setStickerSetTitle$DirectInput} parameters {@link setStickerSetTitle$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setStickerSetTitle(parameters: setStickerSetTitle$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setStickerSetTitle", parameters);
@@ -87864,7 +87864,7 @@ export class $AsyncApi {
    * Completely deletes a sticker set
    *
    * @param {deleteStickerSet$DirectInput} parameters {@link deleteStickerSet$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async deleteStickerSet(parameters: deleteStickerSet$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("deleteStickerSet", parameters);
@@ -87875,7 +87875,7 @@ export class $AsyncApi {
    * Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
    *
    * @param {setStickerPositionInSet$DirectInput} parameters {@link setStickerPositionInSet$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setStickerPositionInSet(
     parameters: setStickerPositionInSet$DirectInput
@@ -87888,7 +87888,7 @@ export class $AsyncApi {
    * Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
    *
    * @param {removeStickerFromSet$DirectInput} parameters {@link removeStickerFromSet$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeStickerFromSet(
     parameters: removeStickerFromSet$DirectInput
@@ -87901,7 +87901,7 @@ export class $AsyncApi {
    * Changes the list of emoji corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
    *
    * @param {setStickerEmojis$DirectInput} parameters {@link setStickerEmojis$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setStickerEmojis(parameters: setStickerEmojis$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setStickerEmojis", parameters);
@@ -87912,7 +87912,7 @@ export class $AsyncApi {
    * Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
    *
    * @param {setStickerKeywords$DirectInput} parameters {@link setStickerKeywords$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setStickerKeywords(parameters: setStickerKeywords$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setStickerKeywords", parameters);
@@ -87923,7 +87923,7 @@ export class $AsyncApi {
    * Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
    *
    * @param {setStickerMaskPosition$DirectInput} parameters {@link setStickerMaskPosition$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setStickerMaskPosition(
     parameters: setStickerMaskPosition$DirectInput
@@ -87936,7 +87936,7 @@ export class $AsyncApi {
    * Returns sticker sets owned by the current user
    *
    * @param {getOwnedStickerSets$DirectInput} parameters {@link getOwnedStickerSets$Input}
-   * @return {Promise<StickerSets>} Promise<{@link StickerSets}>
+   * @returns {Promise<StickerSets>} Promise<{@link StickerSets}>
    */
   async getOwnedStickerSets(
     parameters: getOwnedStickerSets$DirectInput
@@ -87949,7 +87949,7 @@ export class $AsyncApi {
    * Returns information about a file with a map thumbnail in PNG format. Only map thumbnail files with size less than 1MB can be downloaded
    *
    * @param {getMapThumbnailFile$DirectInput} parameters {@link getMapThumbnailFile$Input}
-   * @return {Promise<File>} Promise<{@link File}>
+   * @returns {Promise<File>} Promise<{@link File}>
    */
   async getMapThumbnailFile(
     parameters: getMapThumbnailFile$DirectInput
@@ -87962,7 +87962,7 @@ export class $AsyncApi {
    * Returns information about a limit, increased for Premium users. Returns a 404 error if the limit is unknown
    *
    * @param {getPremiumLimit$DirectInput} parameters {@link getPremiumLimit$Input}
-   * @return {Promise<PremiumLimit>} Promise<{@link PremiumLimit}>
+   * @returns {Promise<PremiumLimit>} Promise<{@link PremiumLimit}>
    */
   async getPremiumLimit(
     parameters: getPremiumLimit$DirectInput
@@ -87975,7 +87975,7 @@ export class $AsyncApi {
    * Returns information about features, available to Premium users
    *
    * @param {getPremiumFeatures$DirectInput} parameters {@link getPremiumFeatures$Input}
-   * @return {Promise<PremiumFeatures>} Promise<{@link PremiumFeatures}>
+   * @returns {Promise<PremiumFeatures>} Promise<{@link PremiumFeatures}>
    */
   async getPremiumFeatures(
     parameters: getPremiumFeatures$DirectInput
@@ -87988,7 +87988,7 @@ export class $AsyncApi {
    * Returns examples of premium stickers for demonstration purposes
    *
    * @param {getPremiumStickerExamples$DirectInput} parameters {@link getPremiumStickerExamples$Input}
-   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   * @returns {Promise<Stickers>} Promise<{@link Stickers}>
    */
   async getPremiumStickerExamples(
     parameters: getPremiumStickerExamples$DirectInput
@@ -88001,7 +88001,7 @@ export class $AsyncApi {
    * Informs TDLib that the user viewed detailed information about a Premium feature on the Premium features screen
    *
    * @param {viewPremiumFeature$DirectInput} parameters {@link viewPremiumFeature$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async viewPremiumFeature(parameters: viewPremiumFeature$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("viewPremiumFeature", parameters);
@@ -88012,7 +88012,7 @@ export class $AsyncApi {
    * Informs TDLib that the user clicked Premium subscription button on the Premium features screen
    *
    * @param {clickPremiumSubscriptionButton$DirectInput} parameters {@link clickPremiumSubscriptionButton$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async clickPremiumSubscriptionButton(
     parameters: clickPremiumSubscriptionButton$DirectInput
@@ -88028,7 +88028,7 @@ export class $AsyncApi {
    * Returns state of Telegram Premium subscription and promotion videos for Premium features
    *
    * @param {getPremiumState$DirectInput} parameters {@link getPremiumState$Input}
-   * @return {Promise<PremiumState>} Promise<{@link PremiumState}>
+   * @returns {Promise<PremiumState>} Promise<{@link PremiumState}>
    */
   async getPremiumState(
     parameters: getPremiumState$DirectInput
@@ -88041,7 +88041,7 @@ export class $AsyncApi {
    * Returns available options for Telegram Premium gift code or giveaway creation
    *
    * @param {getPremiumGiftCodePaymentOptions$DirectInput} parameters {@link getPremiumGiftCodePaymentOptions$Input}
-   * @return {Promise<PremiumGiftCodePaymentOptions>} Promise<{@link PremiumGiftCodePaymentOptions}>
+   * @returns {Promise<PremiumGiftCodePaymentOptions>} Promise<{@link PremiumGiftCodePaymentOptions}>
    */
   async getPremiumGiftCodePaymentOptions(
     parameters: getPremiumGiftCodePaymentOptions$DirectInput
@@ -88057,7 +88057,7 @@ export class $AsyncApi {
    * Return information about a Telegram Premium gift code
    *
    * @param {checkPremiumGiftCode$DirectInput} parameters {@link checkPremiumGiftCode$Input}
-   * @return {Promise<PremiumGiftCodeInfo>} Promise<{@link PremiumGiftCodeInfo}>
+   * @returns {Promise<PremiumGiftCodeInfo>} Promise<{@link PremiumGiftCodeInfo}>
    */
   async checkPremiumGiftCode(
     parameters: checkPremiumGiftCode$DirectInput
@@ -88070,7 +88070,7 @@ export class $AsyncApi {
    * Applies a Telegram Premium gift code
    *
    * @param {applyPremiumGiftCode$DirectInput} parameters {@link applyPremiumGiftCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async applyPremiumGiftCode(
     parameters: applyPremiumGiftCode$DirectInput
@@ -88083,7 +88083,7 @@ export class $AsyncApi {
    * Launches a prepaid Telegram Premium giveaway
    *
    * @param {launchPrepaidPremiumGiveaway$DirectInput} parameters {@link launchPrepaidPremiumGiveaway$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async launchPrepaidPremiumGiveaway(
     parameters: launchPrepaidPremiumGiveaway$DirectInput
@@ -88099,7 +88099,7 @@ export class $AsyncApi {
    * Returns information about a Telegram Premium giveaway
    *
    * @param {getPremiumGiveawayInfo$DirectInput} parameters {@link getPremiumGiveawayInfo$Input}
-   * @return {Promise<PremiumGiveawayInfo>} Promise<{@link PremiumGiveawayInfo}>
+   * @returns {Promise<PremiumGiveawayInfo>} Promise<{@link PremiumGiveawayInfo}>
    */
   async getPremiumGiveawayInfo(
     parameters: getPremiumGiveawayInfo$DirectInput
@@ -88112,7 +88112,7 @@ export class $AsyncApi {
    * Returns available options for Telegram stars purchase
    *
    * @param {getStarPaymentOptions$DirectInput} parameters {@link getStarPaymentOptions$Input}
-   * @return {Promise<StarPaymentOptions>} Promise<{@link StarPaymentOptions}>
+   * @returns {Promise<StarPaymentOptions>} Promise<{@link StarPaymentOptions}>
    */
   async getStarPaymentOptions(
     parameters: getStarPaymentOptions$DirectInput
@@ -88125,7 +88125,7 @@ export class $AsyncApi {
    * Returns the list of Telegram star transactions for the current user
    *
    * @param {getStarTransactions$DirectInput} parameters {@link getStarTransactions$Input}
-   * @return {Promise<StarTransactions>} Promise<{@link StarTransactions}>
+   * @returns {Promise<StarTransactions>} Promise<{@link StarTransactions}>
    */
   async getStarTransactions(
     parameters: getStarTransactions$DirectInput
@@ -88138,7 +88138,7 @@ export class $AsyncApi {
    * Checks whether an in-store purchase is possible. Must be called before any in-store purchase
    *
    * @param {canPurchaseFromStore$DirectInput} parameters {@link canPurchaseFromStore$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async canPurchaseFromStore(
     parameters: canPurchaseFromStore$DirectInput
@@ -88151,7 +88151,7 @@ export class $AsyncApi {
    * Informs server about a purchase through App Store. For official applications only
    *
    * @param {assignAppStoreTransaction$DirectInput} parameters {@link assignAppStoreTransaction$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async assignAppStoreTransaction(
     parameters: assignAppStoreTransaction$DirectInput
@@ -88164,7 +88164,7 @@ export class $AsyncApi {
    * Informs server about a purchase through Google Play. For official applications only
    *
    * @param {assignGooglePlayTransaction$DirectInput} parameters {@link assignGooglePlayTransaction$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async assignGooglePlayTransaction(
     parameters: assignGooglePlayTransaction$DirectInput
@@ -88180,7 +88180,7 @@ export class $AsyncApi {
    * Returns information about features, available to Business users
    *
    * @param {getBusinessFeatures$DirectInput} parameters {@link getBusinessFeatures$Input}
-   * @return {Promise<BusinessFeatures>} Promise<{@link BusinessFeatures}>
+   * @returns {Promise<BusinessFeatures>} Promise<{@link BusinessFeatures}>
    */
   async getBusinessFeatures(
     parameters: getBusinessFeatures$DirectInput
@@ -88193,7 +88193,7 @@ export class $AsyncApi {
    * Accepts Telegram terms of services
    *
    * @param {acceptTermsOfService$DirectInput} parameters {@link acceptTermsOfService$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async acceptTermsOfService(
     parameters: acceptTermsOfService$DirectInput
@@ -88206,7 +88206,7 @@ export class $AsyncApi {
    * Searches specified query by word prefixes in the provided strings. Returns 0-based positions of strings that matched. Can be called synchronously
    *
    * @param {searchStringsByPrefix$DirectInput} parameters {@link searchStringsByPrefix$Input}
-   * @return {Promise<FoundPositions>} Promise<{@link FoundPositions}>
+   * @returns {Promise<FoundPositions>} Promise<{@link FoundPositions}>
    */
   async searchStringsByPrefix(
     parameters: searchStringsByPrefix$DirectInput
@@ -88219,7 +88219,7 @@ export class $AsyncApi {
    * Sends a custom request; for bots only
    *
    * @param {sendCustomRequest$DirectInput} parameters {@link sendCustomRequest$Input}
-   * @return {Promise<CustomRequestResult>} Promise<{@link CustomRequestResult}>
+   * @returns {Promise<CustomRequestResult>} Promise<{@link CustomRequestResult}>
    */
   async sendCustomRequest(
     parameters: sendCustomRequest$DirectInput
@@ -88232,7 +88232,7 @@ export class $AsyncApi {
    * Answers a custom query; for bots only
    *
    * @param {answerCustomQuery$DirectInput} parameters {@link answerCustomQuery$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async answerCustomQuery(parameters: answerCustomQuery$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("answerCustomQuery", parameters);
@@ -88243,7 +88243,7 @@ export class $AsyncApi {
    * Succeeds after a specified amount of time has passed. Can be called before initialization
    *
    * @param {setAlarm$DirectInput} parameters {@link setAlarm$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setAlarm(parameters: setAlarm$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setAlarm", parameters);
@@ -88254,7 +88254,7 @@ export class $AsyncApi {
    * Returns information about existing countries. Can be called before authorization
    *
    * @param {getCountries$DirectInput} parameters {@link getCountries$Input}
-   * @return {Promise<Countries>} Promise<{@link Countries}>
+   * @returns {Promise<Countries>} Promise<{@link Countries}>
    */
   async getCountries(parameters: getCountries$DirectInput): Promise<Countries> {
     const result = await this.client.invoke("getCountries", parameters);
@@ -88265,7 +88265,7 @@ export class $AsyncApi {
    * Uses the current IP address to find the current country. Returns two-letter ISO 3166-1 alpha-2 country code. Can be called before authorization
    *
    * @param {getCountryCode$DirectInput} parameters {@link getCountryCode$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getCountryCode(parameters: getCountryCode$DirectInput): Promise<Text> {
     const result = await this.client.invoke("getCountryCode", parameters);
@@ -88276,7 +88276,7 @@ export class $AsyncApi {
    * Returns information about a phone number by its prefix. Can be called before authorization
    *
    * @param {getPhoneNumberInfo$DirectInput} parameters {@link getPhoneNumberInfo$Input}
-   * @return {Promise<PhoneNumberInfo>} Promise<{@link PhoneNumberInfo}>
+   * @returns {Promise<PhoneNumberInfo>} Promise<{@link PhoneNumberInfo}>
    */
   async getPhoneNumberInfo(
     parameters: getPhoneNumberInfo$DirectInput
@@ -88289,7 +88289,7 @@ export class $AsyncApi {
    * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
    *
    * @param {getPhoneNumberInfoSync$DirectInput} parameters {@link getPhoneNumberInfoSync$Input}
-   * @return {Promise<PhoneNumberInfo>} Promise<{@link PhoneNumberInfo}>
+   * @returns {Promise<PhoneNumberInfo>} Promise<{@link PhoneNumberInfo}>
    */
   async getPhoneNumberInfoSync(
     parameters: getPhoneNumberInfoSync$DirectInput
@@ -88302,7 +88302,7 @@ export class $AsyncApi {
    * Returns information about a given collectible item that was purchased at https://fragment.com
    *
    * @param {getCollectibleItemInfo$DirectInput} parameters {@link getCollectibleItemInfo$Input}
-   * @return {Promise<CollectibleItemInfo>} Promise<{@link CollectibleItemInfo}>
+   * @returns {Promise<CollectibleItemInfo>} Promise<{@link CollectibleItemInfo}>
    */
   async getCollectibleItemInfo(
     parameters: getCollectibleItemInfo$DirectInput
@@ -88315,7 +88315,7 @@ export class $AsyncApi {
    * Returns information about a tg:// deep link. Use "tg://need_update_for_some_feature" or "tg:some_unsupported_feature" for testing. Returns a 404 error for unknown links. Can be called before authorization
    *
    * @param {getDeepLinkInfo$DirectInput} parameters {@link getDeepLinkInfo$Input}
-   * @return {Promise<DeepLinkInfo>} Promise<{@link DeepLinkInfo}>
+   * @returns {Promise<DeepLinkInfo>} Promise<{@link DeepLinkInfo}>
    */
   async getDeepLinkInfo(
     parameters: getDeepLinkInfo$DirectInput
@@ -88328,7 +88328,7 @@ export class $AsyncApi {
    * Returns application config, provided by the server. Can be called before authorization
    *
    * @param {getApplicationConfig$DirectInput} parameters {@link getApplicationConfig$Input}
-   * @return {Promise<JsonValue>} Promise<{@link JsonValue}>
+   * @returns {Promise<JsonValue>} Promise<{@link JsonValue}>
    */
   async getApplicationConfig(
     parameters: getApplicationConfig$DirectInput
@@ -88341,7 +88341,7 @@ export class $AsyncApi {
    * Saves application log event on the server. Can be called before authorization
    *
    * @param {saveApplicationLogEvent$DirectInput} parameters {@link saveApplicationLogEvent$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async saveApplicationLogEvent(
     parameters: saveApplicationLogEvent$DirectInput
@@ -88354,7 +88354,7 @@ export class $AsyncApi {
    * Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram
    *
    * @param {getApplicationDownloadLink$DirectInput} parameters {@link getApplicationDownloadLink$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getApplicationDownloadLink(
     parameters: getApplicationDownloadLink$DirectInput
@@ -88370,7 +88370,7 @@ export class $AsyncApi {
    * Adds a proxy server for network requests. Can be called before authorization
    *
    * @param {addProxy$DirectInput} parameters {@link addProxy$Input}
-   * @return {Promise<Proxy>} Promise<{@link Proxy}>
+   * @returns {Promise<Proxy>} Promise<{@link Proxy}>
    */
   async addProxy(parameters: addProxy$DirectInput): Promise<Proxy> {
     const result = await this.client.invoke("addProxy", parameters);
@@ -88381,7 +88381,7 @@ export class $AsyncApi {
    * Edits an existing proxy server for network requests. Can be called before authorization
    *
    * @param {editProxy$DirectInput} parameters {@link editProxy$Input}
-   * @return {Promise<Proxy>} Promise<{@link Proxy}>
+   * @returns {Promise<Proxy>} Promise<{@link Proxy}>
    */
   async editProxy(parameters: editProxy$DirectInput): Promise<Proxy> {
     const result = await this.client.invoke("editProxy", parameters);
@@ -88392,7 +88392,7 @@ export class $AsyncApi {
    * Enables a proxy. Only one proxy can be enabled at a time. Can be called before authorization
    *
    * @param {enableProxy$DirectInput} parameters {@link enableProxy$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async enableProxy(parameters: enableProxy$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("enableProxy", parameters);
@@ -88403,7 +88403,7 @@ export class $AsyncApi {
    * Disables the currently enabled proxy. Can be called before authorization
    *
    * @param {disableProxy$DirectInput} parameters {@link disableProxy$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async disableProxy(parameters: disableProxy$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("disableProxy", parameters);
@@ -88414,7 +88414,7 @@ export class $AsyncApi {
    * Removes a proxy server. Can be called before authorization
    *
    * @param {removeProxy$DirectInput} parameters {@link removeProxy$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async removeProxy(parameters: removeProxy$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("removeProxy", parameters);
@@ -88425,7 +88425,7 @@ export class $AsyncApi {
    * Returns the list of proxies that are currently set up. Can be called before authorization
    *
    * @param {getProxies$DirectInput} parameters {@link getProxies$Input}
-   * @return {Promise<Proxies>} Promise<{@link Proxies}>
+   * @returns {Promise<Proxies>} Promise<{@link Proxies}>
    */
   async getProxies(parameters: getProxies$DirectInput): Promise<Proxies> {
     const result = await this.client.invoke("getProxies", parameters);
@@ -88436,7 +88436,7 @@ export class $AsyncApi {
    * Returns an HTTPS link, which can be used to add a proxy. Available only for SOCKS5 and MTProto proxies. Can be called before authorization
    *
    * @param {getProxyLink$DirectInput} parameters {@link getProxyLink$Input}
-   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
    */
   async getProxyLink(parameters: getProxyLink$DirectInput): Promise<HttpUrl> {
     const result = await this.client.invoke("getProxyLink", parameters);
@@ -88447,7 +88447,7 @@ export class $AsyncApi {
    * Computes time needed to receive a response from a Telegram server through a proxy. Can be called before authorization
    *
    * @param {pingProxy$DirectInput} parameters {@link pingProxy$Input}
-   * @return {Promise<Seconds>} Promise<{@link Seconds}>
+   * @returns {Promise<Seconds>} Promise<{@link Seconds}>
    */
   async pingProxy(parameters: pingProxy$DirectInput): Promise<Seconds> {
     const result = await this.client.invoke("pingProxy", parameters);
@@ -88458,7 +88458,7 @@ export class $AsyncApi {
    * Sets new log stream for internal logging of TDLib. Can be called synchronously
    *
    * @param {setLogStream$DirectInput} parameters {@link setLogStream$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setLogStream(parameters: setLogStream$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setLogStream", parameters);
@@ -88469,7 +88469,7 @@ export class $AsyncApi {
    * Returns information about currently used log stream for internal logging of TDLib. Can be called synchronously
    *
    * @param {getLogStream$DirectInput} parameters {@link getLogStream$Input}
-   * @return {Promise<LogStream>} Promise<{@link LogStream}>
+   * @returns {Promise<LogStream>} Promise<{@link LogStream}>
    */
   async getLogStream(parameters: getLogStream$DirectInput): Promise<LogStream> {
     const result = await this.client.invoke("getLogStream", parameters);
@@ -88480,7 +88480,7 @@ export class $AsyncApi {
    * Sets the verbosity level of the internal logging of TDLib. Can be called synchronously
    *
    * @param {setLogVerbosityLevel$DirectInput} parameters {@link setLogVerbosityLevel$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setLogVerbosityLevel(
     parameters: setLogVerbosityLevel$DirectInput
@@ -88493,7 +88493,7 @@ export class $AsyncApi {
    * Returns current verbosity level of the internal logging of TDLib. Can be called synchronously
    *
    * @param {getLogVerbosityLevel$DirectInput} parameters {@link getLogVerbosityLevel$Input}
-   * @return {Promise<LogVerbosityLevel>} Promise<{@link LogVerbosityLevel}>
+   * @returns {Promise<LogVerbosityLevel>} Promise<{@link LogVerbosityLevel}>
    */
   async getLogVerbosityLevel(
     parameters: getLogVerbosityLevel$DirectInput
@@ -88506,7 +88506,7 @@ export class $AsyncApi {
    * Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
    *
    * @param {getLogTags$DirectInput} parameters {@link getLogTags$Input}
-   * @return {Promise<LogTags>} Promise<{@link LogTags}>
+   * @returns {Promise<LogTags>} Promise<{@link LogTags}>
    */
   async getLogTags(parameters: getLogTags$DirectInput): Promise<LogTags> {
     const result = await this.client.invoke("getLogTags", parameters);
@@ -88517,7 +88517,7 @@ export class $AsyncApi {
    * Sets the verbosity level for a specified TDLib internal log tag. Can be called synchronously
    *
    * @param {setLogTagVerbosityLevel$DirectInput} parameters {@link setLogTagVerbosityLevel$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async setLogTagVerbosityLevel(
     parameters: setLogTagVerbosityLevel$DirectInput
@@ -88530,7 +88530,7 @@ export class $AsyncApi {
    * Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
    *
    * @param {getLogTagVerbosityLevel$DirectInput} parameters {@link getLogTagVerbosityLevel$Input}
-   * @return {Promise<LogVerbosityLevel>} Promise<{@link LogVerbosityLevel}>
+   * @returns {Promise<LogVerbosityLevel>} Promise<{@link LogVerbosityLevel}>
    */
   async getLogTagVerbosityLevel(
     parameters: getLogTagVerbosityLevel$DirectInput
@@ -88543,7 +88543,7 @@ export class $AsyncApi {
    * Adds a message to TDLib internal log. Can be called synchronously
    *
    * @param {addLogMessage$DirectInput} parameters {@link addLogMessage$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async addLogMessage(parameters: addLogMessage$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("addLogMessage", parameters);
@@ -88554,7 +88554,7 @@ export class $AsyncApi {
    * Returns support information for the given user; for Telegram support only
    *
    * @param {getUserSupportInfo$DirectInput} parameters {@link getUserSupportInfo$Input}
-   * @return {Promise<UserSupportInfo>} Promise<{@link UserSupportInfo}>
+   * @returns {Promise<UserSupportInfo>} Promise<{@link UserSupportInfo}>
    */
   async getUserSupportInfo(
     parameters: getUserSupportInfo$DirectInput
@@ -88567,7 +88567,7 @@ export class $AsyncApi {
    * Sets support information for the given user; for Telegram support only
    *
    * @param {setUserSupportInfo$DirectInput} parameters {@link setUserSupportInfo$Input}
-   * @return {Promise<UserSupportInfo>} Promise<{@link UserSupportInfo}>
+   * @returns {Promise<UserSupportInfo>} Promise<{@link UserSupportInfo}>
    */
   async setUserSupportInfo(
     parameters: setUserSupportInfo$DirectInput
@@ -88580,7 +88580,7 @@ export class $AsyncApi {
    * Returns localized name of the Telegram support user; for Telegram support only
    *
    * @param {getSupportName$DirectInput} parameters {@link getSupportName$Input}
-   * @return {Promise<Text>} Promise<{@link Text}>
+   * @returns {Promise<Text>} Promise<{@link Text}>
    */
   async getSupportName(parameters: getSupportName$DirectInput): Promise<Text> {
     const result = await this.client.invoke("getSupportName", parameters);
@@ -88591,7 +88591,7 @@ export class $AsyncApi {
    * Does nothing; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testCallEmpty$DirectInput} parameters {@link testCallEmpty$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async testCallEmpty(parameters: testCallEmpty$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("testCallEmpty", parameters);
@@ -88602,7 +88602,7 @@ export class $AsyncApi {
    * Returns the received string; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testCallString$DirectInput} parameters {@link testCallString$Input}
-   * @return {Promise<TestString>} Promise<{@link TestString}>
+   * @returns {Promise<TestString>} Promise<{@link TestString}>
    */
   async testCallString(parameters: testCallString$DirectInput): Promise<TestString> {
     const result = await this.client.invoke("testCallString", parameters);
@@ -88613,7 +88613,7 @@ export class $AsyncApi {
    * Returns the received bytes; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testCallBytes$DirectInput} parameters {@link testCallBytes$Input}
-   * @return {Promise<TestBytes>} Promise<{@link TestBytes}>
+   * @returns {Promise<TestBytes>} Promise<{@link TestBytes}>
    */
   async testCallBytes(parameters: testCallBytes$DirectInput): Promise<TestBytes> {
     const result = await this.client.invoke("testCallBytes", parameters);
@@ -88624,7 +88624,7 @@ export class $AsyncApi {
    * Returns the received vector of numbers; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testCallVectorInt$DirectInput} parameters {@link testCallVectorInt$Input}
-   * @return {Promise<TestVectorInt>} Promise<{@link TestVectorInt}>
+   * @returns {Promise<TestVectorInt>} Promise<{@link TestVectorInt}>
    */
   async testCallVectorInt(
     parameters: testCallVectorInt$DirectInput
@@ -88637,7 +88637,7 @@ export class $AsyncApi {
    * Returns the received vector of objects containing a number; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testCallVectorIntObject$DirectInput} parameters {@link testCallVectorIntObject$Input}
-   * @return {Promise<TestVectorIntObject>} Promise<{@link TestVectorIntObject}>
+   * @returns {Promise<TestVectorIntObject>} Promise<{@link TestVectorIntObject}>
    */
   async testCallVectorIntObject(
     parameters: testCallVectorIntObject$DirectInput
@@ -88650,7 +88650,7 @@ export class $AsyncApi {
    * Returns the received vector of strings; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testCallVectorString$DirectInput} parameters {@link testCallVectorString$Input}
-   * @return {Promise<TestVectorString>} Promise<{@link TestVectorString}>
+   * @returns {Promise<TestVectorString>} Promise<{@link TestVectorString}>
    */
   async testCallVectorString(
     parameters: testCallVectorString$DirectInput
@@ -88663,7 +88663,7 @@ export class $AsyncApi {
    * Returns the received vector of objects containing a string; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testCallVectorStringObject$DirectInput} parameters {@link testCallVectorStringObject$Input}
-   * @return {Promise<TestVectorStringObject>} Promise<{@link TestVectorStringObject}>
+   * @returns {Promise<TestVectorStringObject>} Promise<{@link TestVectorStringObject}>
    */
   async testCallVectorStringObject(
     parameters: testCallVectorStringObject$DirectInput
@@ -88679,7 +88679,7 @@ export class $AsyncApi {
    * Returns the squared received number; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testSquareInt$DirectInput} parameters {@link testSquareInt$Input}
-   * @return {Promise<TestInt>} Promise<{@link TestInt}>
+   * @returns {Promise<TestInt>} Promise<{@link TestInt}>
    */
   async testSquareInt(parameters: testSquareInt$DirectInput): Promise<TestInt> {
     const result = await this.client.invoke("testSquareInt", parameters);
@@ -88690,7 +88690,7 @@ export class $AsyncApi {
    * Sends a simple network request to the Telegram servers; for testing only. Can be called before authorization
    *
    * @param {testNetwork$DirectInput} parameters {@link testNetwork$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async testNetwork(parameters: testNetwork$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("testNetwork", parameters);
@@ -88701,7 +88701,7 @@ export class $AsyncApi {
    * Sends a simple network request to the Telegram servers via proxy; for testing only. Can be called before authorization
    *
    * @param {testProxy$DirectInput} parameters {@link testProxy$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async testProxy(parameters: testProxy$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("testProxy", parameters);
@@ -88712,7 +88712,7 @@ export class $AsyncApi {
    * Forces an updates.getDifference call to the Telegram servers; for testing only
    *
    * @param {testGetDifference$DirectInput} parameters {@link testGetDifference$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async testGetDifference(parameters: testGetDifference$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("testGetDifference", parameters);
@@ -88723,7 +88723,7 @@ export class $AsyncApi {
    * Does nothing and ensures that the Update object is used; for testing only. This is an offline method. Can be called before authorization
    *
    * @param {testUseUpdate$DirectInput} parameters {@link testUseUpdate$Input}
-   * @return {Promise<Update>} Promise<{@link Update}>
+   * @returns {Promise<Update>} Promise<{@link Update}>
    */
   async testUseUpdate(parameters: testUseUpdate$DirectInput): Promise<Update> {
     const result = await this.client.invoke("testUseUpdate", parameters);
@@ -88734,7 +88734,7 @@ export class $AsyncApi {
    * Returns the specified error and ensures that the Error object is used; for testing only. Can be called synchronously
    *
    * @param {testReturnError$DirectInput} parameters {@link testReturnError$Input}
-   * @return {Promise<Error>} Promise<{@link Error}>
+   * @returns {Promise<Error>} Promise<{@link Error}>
    */
   async testReturnError(parameters: testReturnError$DirectInput): Promise<Error> {
     const result = await this.client.invoke("testReturnError", parameters);
@@ -88768,7 +88768,7 @@ export class $SyncApi {
    * Checks validness of a name for a quick reply shortcut. Can be called synchronously
    *
    * @param {checkQuickReplyShortcutName$DirectInput} parameters - {@link checkQuickReplyShortcutName$Input}
-   * @return {Ok} {@link Ok}
+   * @returns {Ok} {@link Ok}
    */
   checkQuickReplyShortcutName(
     parameters: checkQuickReplyShortcutName$DirectInput
@@ -88780,7 +88780,7 @@ export class $SyncApi {
    * Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
    *
    * @param {searchQuote$DirectInput} parameters - {@link searchQuote$Input}
-   * @return {FoundPosition} {@link FoundPosition}
+   * @returns {FoundPosition} {@link FoundPosition}
    */
   searchQuote(parameters: searchQuote$DirectInput): FoundPosition {
     return this.client.execute("searchQuote", parameters) as FoundPosition;
@@ -88790,7 +88790,7 @@ export class $SyncApi {
    * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
    *
    * @param {getTextEntities$DirectInput} parameters - {@link getTextEntities$Input}
-   * @return {TextEntities} {@link TextEntities}
+   * @returns {TextEntities} {@link TextEntities}
    */
   getTextEntities(parameters: getTextEntities$DirectInput): TextEntities {
     return this.client.execute("getTextEntities", parameters) as TextEntities;
@@ -88802,7 +88802,7 @@ export class $SyncApi {
    * - and MentionName entities from a marked-up text. Can be called synchronously
    *
    * @param {parseTextEntities$DirectInput} parameters - {@link parseTextEntities$Input}
-   * @return {FormattedText} {@link FormattedText}
+   * @returns {FormattedText} {@link FormattedText}
    */
   parseTextEntities(parameters: parseTextEntities$DirectInput): FormattedText {
     return this.client.execute("parseTextEntities", parameters) as FormattedText;
@@ -88812,7 +88812,7 @@ export class $SyncApi {
    * Parses Markdown entities in a human-friendly format, ignoring markup errors. Can be called synchronously
    *
    * @param {parseMarkdown$DirectInput} parameters - {@link parseMarkdown$Input}
-   * @return {FormattedText} {@link FormattedText}
+   * @returns {FormattedText} {@link FormattedText}
    */
   parseMarkdown(parameters: parseMarkdown$DirectInput): FormattedText {
     return this.client.execute("parseMarkdown", parameters) as FormattedText;
@@ -88822,7 +88822,7 @@ export class $SyncApi {
    * Replaces text entities with Markdown formatting in a human-friendly format. Entities that can't be represented in Markdown unambiguously are kept as is. Can be called synchronously
    *
    * @param {getMarkdownText$DirectInput} parameters - {@link getMarkdownText$Input}
-   * @return {FormattedText} {@link FormattedText}
+   * @returns {FormattedText} {@link FormattedText}
    */
   getMarkdownText(parameters: getMarkdownText$DirectInput): FormattedText {
     return this.client.execute("getMarkdownText", parameters) as FormattedText;
@@ -88832,7 +88832,7 @@ export class $SyncApi {
    * Returns an emoji for the given country. Returns an empty string on failure. Can be called synchronously
    *
    * @param {getCountryFlagEmoji$DirectInput} parameters - {@link getCountryFlagEmoji$Input}
-   * @return {Text} {@link Text}
+   * @returns {Text} {@link Text}
    */
   getCountryFlagEmoji(parameters: getCountryFlagEmoji$DirectInput): Text {
     return this.client.execute("getCountryFlagEmoji", parameters) as Text;
@@ -88842,7 +88842,7 @@ export class $SyncApi {
    * Returns the MIME type of a file, guessed by its extension. Returns an empty string on failure. Can be called synchronously
    *
    * @param {getFileMimeType$DirectInput} parameters - {@link getFileMimeType$Input}
-   * @return {Text} {@link Text}
+   * @returns {Text} {@link Text}
    */
   getFileMimeType(parameters: getFileMimeType$DirectInput): Text {
     return this.client.execute("getFileMimeType", parameters) as Text;
@@ -88852,7 +88852,7 @@ export class $SyncApi {
    * Returns the extension of a file, guessed by its MIME type. Returns an empty string on failure. Can be called synchronously
    *
    * @param {getFileExtension$DirectInput} parameters - {@link getFileExtension$Input}
-   * @return {Text} {@link Text}
+   * @returns {Text} {@link Text}
    */
   getFileExtension(parameters: getFileExtension$DirectInput): Text {
     return this.client.execute("getFileExtension", parameters) as Text;
@@ -88862,7 +88862,7 @@ export class $SyncApi {
    * Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
    *
    * @param {cleanFileName$DirectInput} parameters - {@link cleanFileName$Input}
-   * @return {Text} {@link Text}
+   * @returns {Text} {@link Text}
    */
   cleanFileName(parameters: cleanFileName$DirectInput): Text {
     return this.client.execute("cleanFileName", parameters) as Text;
@@ -88872,7 +88872,7 @@ export class $SyncApi {
    * Returns a string stored in the local database from the specified localization target and language pack by its key. Returns a 404 error if the string is not found. Can be called synchronously
    *
    * @param {getLanguagePackString$DirectInput} parameters - {@link getLanguagePackString$Input}
-   * @return {LanguagePackStringValue} {@link LanguagePackStringValue}
+   * @returns {LanguagePackStringValue} {@link LanguagePackStringValue}
    */
   getLanguagePackString(
     parameters: getLanguagePackString$DirectInput
@@ -88887,7 +88887,7 @@ export class $SyncApi {
    * Converts a JSON-serialized string to corresponding JsonValue object. Can be called synchronously
    *
    * @param {getJsonValue$DirectInput} parameters - {@link getJsonValue$Input}
-   * @return {JsonValue} {@link JsonValue}
+   * @returns {JsonValue} {@link JsonValue}
    */
   getJsonValue(parameters: getJsonValue$DirectInput): JsonValue {
     return this.client.execute("getJsonValue", parameters) as JsonValue;
@@ -88897,7 +88897,7 @@ export class $SyncApi {
    * Converts a JsonValue object to corresponding JSON-serialized string. Can be called synchronously
    *
    * @param {getJsonString$DirectInput} parameters - {@link getJsonString$Input}
-   * @return {Text} {@link Text}
+   * @returns {Text} {@link Text}
    */
   getJsonString(parameters: getJsonString$DirectInput): Text {
     return this.client.execute("getJsonString", parameters) as Text;
@@ -88907,7 +88907,7 @@ export class $SyncApi {
    * Converts a themeParameters object to corresponding JSON-serialized string. Can be called synchronously
    *
    * @param {getThemeParametersJsonString$DirectInput} parameters - {@link getThemeParametersJsonString$Input}
-   * @return {Text} {@link Text}
+   * @returns {Text} {@link Text}
    */
   getThemeParametersJsonString(
     parameters: getThemeParametersJsonString$DirectInput
@@ -88919,7 +88919,7 @@ export class $SyncApi {
    * Returns default icon name for a folder. Can be called synchronously
    *
    * @param {getChatFolderDefaultIconName$DirectInput} parameters - {@link getChatFolderDefaultIconName$Input}
-   * @return {ChatFolderIcon} {@link ChatFolderIcon}
+   * @returns {ChatFolderIcon} {@link ChatFolderIcon}
    */
   getChatFolderDefaultIconName(
     parameters: getChatFolderDefaultIconName$DirectInput
@@ -88934,7 +88934,7 @@ export class $SyncApi {
    * Returns a globally unique push notification subscription identifier for identification of an account, which has received a push notification. Can be called synchronously
    *
    * @param {getPushReceiverId$DirectInput} parameters - {@link getPushReceiverId$Input}
-   * @return {PushReceiverId} {@link PushReceiverId}
+   * @returns {PushReceiverId} {@link PushReceiverId}
    */
   getPushReceiverId(parameters: getPushReceiverId$DirectInput): PushReceiverId {
     return this.client.execute("getPushReceiverId", parameters) as PushReceiverId;
@@ -88944,7 +88944,7 @@ export class $SyncApi {
    * Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization. Can be called synchronously for options "version" and "commit_hash"
    *
    * @param {getOption$DirectInput} parameters - {@link getOption$Input}
-   * @return {OptionValue} {@link OptionValue}
+   * @returns {OptionValue} {@link OptionValue}
    */
   getOption(parameters: getOption$DirectInput): OptionValue {
     return this.client.execute("getOption", parameters) as OptionValue;
@@ -88954,7 +88954,7 @@ export class $SyncApi {
    * Searches specified query by word prefixes in the provided strings. Returns 0-based positions of strings that matched. Can be called synchronously
    *
    * @param {searchStringsByPrefix$DirectInput} parameters - {@link searchStringsByPrefix$Input}
-   * @return {FoundPositions} {@link FoundPositions}
+   * @returns {FoundPositions} {@link FoundPositions}
    */
   searchStringsByPrefix(
     parameters: searchStringsByPrefix$DirectInput
@@ -88969,7 +88969,7 @@ export class $SyncApi {
    * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
    *
    * @param {getPhoneNumberInfoSync$DirectInput} parameters - {@link getPhoneNumberInfoSync$Input}
-   * @return {PhoneNumberInfo} {@link PhoneNumberInfo}
+   * @returns {PhoneNumberInfo} {@link PhoneNumberInfo}
    */
   getPhoneNumberInfoSync(
     parameters: getPhoneNumberInfoSync$DirectInput
@@ -88984,7 +88984,7 @@ export class $SyncApi {
    * Sets new log stream for internal logging of TDLib. Can be called synchronously
    *
    * @param {setLogStream$DirectInput} parameters - {@link setLogStream$Input}
-   * @return {Ok} {@link Ok}
+   * @returns {Ok} {@link Ok}
    */
   setLogStream(parameters: setLogStream$DirectInput): Ok {
     return this.client.execute("setLogStream", parameters) as Ok;
@@ -88994,7 +88994,7 @@ export class $SyncApi {
    * Returns information about currently used log stream for internal logging of TDLib. Can be called synchronously
    *
    * @param {getLogStream$DirectInput} parameters - {@link getLogStream$Input}
-   * @return {LogStream} {@link LogStream}
+   * @returns {LogStream} {@link LogStream}
    */
   getLogStream(parameters: getLogStream$DirectInput): LogStream {
     return this.client.execute("getLogStream", parameters) as LogStream;
@@ -89004,7 +89004,7 @@ export class $SyncApi {
    * Sets the verbosity level of the internal logging of TDLib. Can be called synchronously
    *
    * @param {setLogVerbosityLevel$DirectInput} parameters - {@link setLogVerbosityLevel$Input}
-   * @return {Ok} {@link Ok}
+   * @returns {Ok} {@link Ok}
    */
   setLogVerbosityLevel(parameters: setLogVerbosityLevel$DirectInput): Ok {
     return this.client.execute("setLogVerbosityLevel", parameters) as Ok;
@@ -89014,7 +89014,7 @@ export class $SyncApi {
    * Returns current verbosity level of the internal logging of TDLib. Can be called synchronously
    *
    * @param {getLogVerbosityLevel$DirectInput} parameters - {@link getLogVerbosityLevel$Input}
-   * @return {LogVerbosityLevel} {@link LogVerbosityLevel}
+   * @returns {LogVerbosityLevel} {@link LogVerbosityLevel}
    */
   getLogVerbosityLevel(
     parameters: getLogVerbosityLevel$DirectInput
@@ -89029,7 +89029,7 @@ export class $SyncApi {
    * Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
    *
    * @param {getLogTags$DirectInput} parameters - {@link getLogTags$Input}
-   * @return {LogTags} {@link LogTags}
+   * @returns {LogTags} {@link LogTags}
    */
   getLogTags(parameters: getLogTags$DirectInput): LogTags {
     return this.client.execute("getLogTags", parameters) as LogTags;
@@ -89039,7 +89039,7 @@ export class $SyncApi {
    * Sets the verbosity level for a specified TDLib internal log tag. Can be called synchronously
    *
    * @param {setLogTagVerbosityLevel$DirectInput} parameters - {@link setLogTagVerbosityLevel$Input}
-   * @return {Ok} {@link Ok}
+   * @returns {Ok} {@link Ok}
    */
   setLogTagVerbosityLevel(parameters: setLogTagVerbosityLevel$DirectInput): Ok {
     return this.client.execute("setLogTagVerbosityLevel", parameters) as Ok;
@@ -89049,7 +89049,7 @@ export class $SyncApi {
    * Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
    *
    * @param {getLogTagVerbosityLevel$DirectInput} parameters - {@link getLogTagVerbosityLevel$Input}
-   * @return {LogVerbosityLevel} {@link LogVerbosityLevel}
+   * @returns {LogVerbosityLevel} {@link LogVerbosityLevel}
    */
   getLogTagVerbosityLevel(
     parameters: getLogTagVerbosityLevel$DirectInput
@@ -89064,7 +89064,7 @@ export class $SyncApi {
    * Adds a message to TDLib internal log. Can be called synchronously
    *
    * @param {addLogMessage$DirectInput} parameters - {@link addLogMessage$Input}
-   * @return {Ok} {@link Ok}
+   * @returns {Ok} {@link Ok}
    */
   addLogMessage(parameters: addLogMessage$DirectInput): Ok {
     return this.client.execute("addLogMessage", parameters) as Ok;
@@ -89074,7 +89074,7 @@ export class $SyncApi {
    * Returns the specified error and ensures that the Error object is used; for testing only. Can be called synchronously
    *
    * @param {testReturnError$DirectInput} parameters - {@link testReturnError$Input}
-   * @return {Error} {@link Error}
+   * @returns {Error} {@link Error}
    */
   testReturnError(parameters: testReturnError$DirectInput): Error {
     return this.client.execute("testReturnError", parameters) as Error;
@@ -89100,7 +89100,7 @@ export type getAuthorizationState$DirectInput = {};
  * Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
  *
  * @param {getAuthorizationState$Input} parameters {@link getAuthorizationState$Input}
- * @return {AuthorizationState} {@link AuthorizationState}
+ * @returns {AuthorizationState} {@link AuthorizationState}
  */
 export type getAuthorizationState = (
   parameters: getAuthorizationState$Input
@@ -89290,7 +89290,7 @@ export type setTdlibParameters$DirectInput = {
  * Sets the parameters for TDLib initialization. Works only when the current authorization state is authorizationStateWaitTdlibParameters
  *
  * @param {setTdlibParameters$Input} parameters {@link setTdlibParameters$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setTdlibParameters = (parameters: setTdlibParameters$Input) => Ok;
 
@@ -89340,7 +89340,7 @@ export type setAuthenticationPhoneNumber$DirectInput = {
  * - or if there is no pending authentication query and the current authorization state is authorizationStateWaitEmailAddress, authorizationStateWaitEmailCode, authorizationStateWaitCode, authorizationStateWaitRegistration, or authorizationStateWaitPassword
  *
  * @param {setAuthenticationPhoneNumber$Input} parameters {@link setAuthenticationPhoneNumber$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setAuthenticationPhoneNumber = (
   parameters: setAuthenticationPhoneNumber$Input
@@ -89374,7 +89374,7 @@ export type setAuthenticationEmailAddress$DirectInput = {
  * Sets the email address of the user and sends an authentication code to the email address. Works only when the current authorization state is authorizationStateWaitEmailAddress
  *
  * @param {setAuthenticationEmailAddress$Input} parameters {@link setAuthenticationEmailAddress$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setAuthenticationEmailAddress = (
   parameters: setAuthenticationEmailAddress$Input
@@ -89414,7 +89414,7 @@ export type resendAuthenticationCode$DirectInput = {
  * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
  *
  * @param {resendAuthenticationCode$Input} parameters {@link resendAuthenticationCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type resendAuthenticationCode = (
   parameters: resendAuthenticationCode$Input
@@ -89448,7 +89448,7 @@ export type checkAuthenticationEmailCode$DirectInput = {
  * Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
  *
  * @param {checkAuthenticationEmailCode$Input} parameters {@link checkAuthenticationEmailCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkAuthenticationEmailCode = (
   parameters: checkAuthenticationEmailCode$Input
@@ -89482,7 +89482,7 @@ export type checkAuthenticationCode$DirectInput = {
  * Checks the authentication code. Works only when the current authorization state is authorizationStateWaitCode
  *
  * @param {checkAuthenticationCode$Input} parameters {@link checkAuthenticationCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkAuthenticationCode = (
   parameters: checkAuthenticationCode$Input
@@ -89522,7 +89522,7 @@ export type requestQrCodeAuthentication$DirectInput = {
  * - or if there is no pending authentication query and the current authorization state is authorizationStateWaitEmailAddress, authorizationStateWaitEmailCode, authorizationStateWaitCode, authorizationStateWaitRegistration, or authorizationStateWaitPassword
  *
  * @param {requestQrCodeAuthentication$Input} parameters {@link requestQrCodeAuthentication$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type requestQrCodeAuthentication = (
   parameters: requestQrCodeAuthentication$Input
@@ -89580,7 +89580,7 @@ export type registerUser$DirectInput = {
  * Finishes user registration. Works only when the current authorization state is authorizationStateWaitRegistration
  *
  * @param {registerUser$Input} parameters {@link registerUser$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type registerUser = (parameters: registerUser$Input) => Ok;
 
@@ -89606,7 +89606,7 @@ export type resetAuthenticationEmailAddress$DirectInput = {};
  * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.can_reset_email_address == true
  *
  * @param {resetAuthenticationEmailAddress$Input} parameters {@link resetAuthenticationEmailAddress$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type resetAuthenticationEmailAddress = (
   parameters: resetAuthenticationEmailAddress$Input
@@ -89640,7 +89640,7 @@ export type checkAuthenticationPassword$DirectInput = {
  * Checks the 2-step verification password for correctness. Works only when the current authorization state is authorizationStateWaitPassword
  *
  * @param {checkAuthenticationPassword$Input} parameters {@link checkAuthenticationPassword$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkAuthenticationPassword = (
   parameters: checkAuthenticationPassword$Input
@@ -89662,7 +89662,7 @@ export type requestAuthenticationPasswordRecovery$DirectInput = {};
  * Requests to send a 2-step verification password recovery code to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
  *
  * @param {requestAuthenticationPasswordRecovery$Input} parameters {@link requestAuthenticationPasswordRecovery$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type requestAuthenticationPasswordRecovery = (
   parameters: requestAuthenticationPasswordRecovery$Input
@@ -89696,7 +89696,7 @@ export type checkAuthenticationPasswordRecoveryCode$DirectInput = {
  * Checks whether a 2-step verification password recovery code sent to an email address is valid. Works only when the current authorization state is authorizationStateWaitPassword
  *
  * @param {checkAuthenticationPasswordRecoveryCode$Input} parameters {@link checkAuthenticationPasswordRecoveryCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkAuthenticationPasswordRecoveryCode = (
   parameters: checkAuthenticationPasswordRecoveryCode$Input
@@ -89754,7 +89754,7 @@ export type recoverAuthenticationPassword$DirectInput = {
  * Recovers the 2-step verification password with a password recovery code sent to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
  *
  * @param {recoverAuthenticationPassword$Input} parameters {@link recoverAuthenticationPassword$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type recoverAuthenticationPassword = (
   parameters: recoverAuthenticationPassword$Input
@@ -89788,7 +89788,7 @@ export type sendAuthenticationFirebaseSms$DirectInput = {
  * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
  *
  * @param {sendAuthenticationFirebaseSms$Input} parameters {@link sendAuthenticationFirebaseSms$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendAuthenticationFirebaseSms = (
   parameters: sendAuthenticationFirebaseSms$Input
@@ -89822,7 +89822,7 @@ export type reportAuthenticationCodeMissing$DirectInput = {
  * Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
  *
  * @param {reportAuthenticationCodeMissing$Input} parameters {@link reportAuthenticationCodeMissing$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reportAuthenticationCodeMissing = (
   parameters: reportAuthenticationCodeMissing$Input
@@ -89856,7 +89856,7 @@ export type checkAuthenticationBotToken$DirectInput = {
  * Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
  *
  * @param {checkAuthenticationBotToken$Input} parameters {@link checkAuthenticationBotToken$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkAuthenticationBotToken = (
   parameters: checkAuthenticationBotToken$Input
@@ -89878,7 +89878,7 @@ export type logOut$DirectInput = {};
  * Closes the TDLib instance after a proper logout. Requires an available network connection. All local data will be destroyed. After the logout completes, updateAuthorizationState with authorizationStateClosed will be sent
  *
  * @param {logOut$Input} parameters {@link logOut$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type logOut = (parameters: logOut$Input) => Ok;
 
@@ -89898,7 +89898,7 @@ export type close$DirectInput = {};
  * Closes the TDLib instance. All databases will be flushed to disk and properly closed. After the close completes, updateAuthorizationState with authorizationStateClosed will be sent. Can be called before initialization
  *
  * @param {close$Input} parameters {@link close$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type close = (parameters: close$Input) => Ok;
 
@@ -89924,7 +89924,7 @@ export type destroy$DirectInput = {};
  * - After the destruction completes updateAuthorizationState with authorizationStateClosed will be sent. Can be called before authorization
  *
  * @param {destroy$Input} parameters {@link destroy$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type destroy = (parameters: destroy$Input) => Ok;
 
@@ -89956,7 +89956,7 @@ export type confirmQrCodeAuthentication$DirectInput = {
  * Confirms QR code authentication on another device. Returns created session on success
  *
  * @param {confirmQrCodeAuthentication$Input} parameters {@link confirmQrCodeAuthentication$Input}
- * @return {Session} {@link Session}
+ * @returns {Session} {@link Session}
  */
 export type confirmQrCodeAuthentication = (
   parameters: confirmQrCodeAuthentication$Input
@@ -89978,7 +89978,7 @@ export type getCurrentState$DirectInput = {};
  * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others. This is especially useful if TDLib is run in a separate process. Can be called before initialization
  *
  * @param {getCurrentState$Input} parameters {@link getCurrentState$Input}
- * @return {Updates} {@link Updates}
+ * @returns {Updates} {@link Updates}
  */
 export type getCurrentState = (parameters: getCurrentState$Input) => Updates;
 
@@ -90010,7 +90010,7 @@ export type setDatabaseEncryptionKey$DirectInput = {
  * Changes the database encryption key. Usually the encryption key is never changed and is stored in some OS keychain
  *
  * @param {setDatabaseEncryptionKey$Input} parameters {@link setDatabaseEncryptionKey$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setDatabaseEncryptionKey = (
   parameters: setDatabaseEncryptionKey$Input
@@ -90032,7 +90032,7 @@ export type getPasswordState$DirectInput = {};
  * Returns the current state of 2-step verification
  *
  * @param {getPasswordState$Input} parameters {@link getPasswordState$Input}
- * @return {PasswordState} {@link PasswordState}
+ * @returns {PasswordState} {@link PasswordState}
  */
 export type getPasswordState = (parameters: getPasswordState$Input) => PasswordState;
 
@@ -90112,7 +90112,7 @@ export type setPassword$DirectInput = {
  * Changes the 2-step verification password for the current user. If a new recovery email address is specified, then the change will not be applied until the new recovery email address is confirmed
  *
  * @param {setPassword$Input} parameters {@link setPassword$Input}
- * @return {PasswordState} {@link PasswordState}
+ * @returns {PasswordState} {@link PasswordState}
  */
 export type setPassword = (parameters: setPassword$Input) => PasswordState;
 
@@ -90150,7 +90150,7 @@ export type setLoginEmailAddress$DirectInput = {
  * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of an email address, call checkLoginEmailAddressCode directly
  *
  * @param {setLoginEmailAddress$Input} parameters {@link setLoginEmailAddress$Input}
- * @return {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
+ * @returns {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
  */
 export type setLoginEmailAddress = (
   parameters: setLoginEmailAddress$Input
@@ -90172,7 +90172,7 @@ export type resendLoginEmailAddressCode$DirectInput = {};
  * Resends the login email address verification code
  *
  * @param {resendLoginEmailAddressCode$Input} parameters {@link resendLoginEmailAddressCode$Input}
- * @return {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
+ * @returns {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
  */
 export type resendLoginEmailAddressCode = (
   parameters: resendLoginEmailAddressCode$Input
@@ -90206,7 +90206,7 @@ export type checkLoginEmailAddressCode$DirectInput = {
  * Checks the login email address authentication
  *
  * @param {checkLoginEmailAddressCode$Input} parameters {@link checkLoginEmailAddressCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkLoginEmailAddressCode = (
   parameters: checkLoginEmailAddressCode$Input
@@ -90240,7 +90240,7 @@ export type getRecoveryEmailAddress$DirectInput = {
  * Returns a 2-step verification recovery email address that was previously set up. This method can be used to verify a password provided by the user
  *
  * @param {getRecoveryEmailAddress$Input} parameters {@link getRecoveryEmailAddress$Input}
- * @return {RecoveryEmailAddress} {@link RecoveryEmailAddress}
+ * @returns {RecoveryEmailAddress} {@link RecoveryEmailAddress}
  */
 export type getRecoveryEmailAddress = (
   parameters: getRecoveryEmailAddress$Input
@@ -90292,7 +90292,7 @@ export type setRecoveryEmailAddress$DirectInput = {
  * - If new_recovery_email_address is the same as the email address that is currently set up, this call succeeds immediately and aborts all other requests waiting for an email confirmation
  *
  * @param {setRecoveryEmailAddress$Input} parameters {@link setRecoveryEmailAddress$Input}
- * @return {PasswordState} {@link PasswordState}
+ * @returns {PasswordState} {@link PasswordState}
  */
 export type setRecoveryEmailAddress = (
   parameters: setRecoveryEmailAddress$Input
@@ -90326,7 +90326,7 @@ export type checkRecoveryEmailAddressCode$DirectInput = {
  * Checks the 2-step verification recovery email address verification code
  *
  * @param {checkRecoveryEmailAddressCode$Input} parameters {@link checkRecoveryEmailAddressCode$Input}
- * @return {PasswordState} {@link PasswordState}
+ * @returns {PasswordState} {@link PasswordState}
  */
 export type checkRecoveryEmailAddressCode = (
   parameters: checkRecoveryEmailAddressCode$Input
@@ -90348,7 +90348,7 @@ export type resendRecoveryEmailAddressCode$DirectInput = {};
  * Resends the 2-step verification recovery email address verification code
  *
  * @param {resendRecoveryEmailAddressCode$Input} parameters {@link resendRecoveryEmailAddressCode$Input}
- * @return {PasswordState} {@link PasswordState}
+ * @returns {PasswordState} {@link PasswordState}
  */
 export type resendRecoveryEmailAddressCode = (
   parameters: resendRecoveryEmailAddressCode$Input
@@ -90370,7 +90370,7 @@ export type cancelRecoveryEmailAddressVerification$DirectInput = {};
  * Cancels verification of the 2-step verification recovery email address
  *
  * @param {cancelRecoveryEmailAddressVerification$Input} parameters {@link cancelRecoveryEmailAddressVerification$Input}
- * @return {PasswordState} {@link PasswordState}
+ * @returns {PasswordState} {@link PasswordState}
  */
 export type cancelRecoveryEmailAddressVerification = (
   parameters: cancelRecoveryEmailAddressVerification$Input
@@ -90392,7 +90392,7 @@ export type requestPasswordRecovery$DirectInput = {};
  * Requests to send a 2-step verification password recovery code to an email address that was previously set up
  *
  * @param {requestPasswordRecovery$Input} parameters {@link requestPasswordRecovery$Input}
- * @return {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
+ * @returns {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
  */
 export type requestPasswordRecovery = (
   parameters: requestPasswordRecovery$Input
@@ -90426,7 +90426,7 @@ export type checkPasswordRecoveryCode$DirectInput = {
  * Checks whether a 2-step verification password recovery code sent to an email address is valid
  *
  * @param {checkPasswordRecoveryCode$Input} parameters {@link checkPasswordRecoveryCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkPasswordRecoveryCode = (
   parameters: checkPasswordRecoveryCode$Input
@@ -90484,7 +90484,7 @@ export type recoverPassword$DirectInput = {
  * Recovers the 2-step verification password using a recovery code sent to an email address that was previously set up
  *
  * @param {recoverPassword$Input} parameters {@link recoverPassword$Input}
- * @return {PasswordState} {@link PasswordState}
+ * @returns {PasswordState} {@link PasswordState}
  */
 export type recoverPassword = (parameters: recoverPassword$Input) => PasswordState;
 
@@ -90504,7 +90504,7 @@ export type resetPassword$DirectInput = {};
  * Removes 2-step verification password without previous password and access to recovery email address. The password can't be reset immediately and the request needs to be repeated after the specified time
  *
  * @param {resetPassword$Input} parameters {@link resetPassword$Input}
- * @return {ResetPasswordResult} {@link ResetPasswordResult}
+ * @returns {ResetPasswordResult} {@link ResetPasswordResult}
  */
 export type resetPassword = (parameters: resetPassword$Input) => ResetPasswordResult;
 
@@ -90524,7 +90524,7 @@ export type cancelPasswordReset$DirectInput = {};
  * Cancels reset of 2-step verification password. The method can be called if passwordState.pending_reset_date > 0
  *
  * @param {cancelPasswordReset$Input} parameters {@link cancelPasswordReset$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type cancelPasswordReset = (parameters: cancelPasswordReset$Input) => Ok;
 
@@ -90568,7 +90568,7 @@ export type createTemporaryPassword$DirectInput = {
  * Creates a new temporary password for processing payments
  *
  * @param {createTemporaryPassword$Input} parameters {@link createTemporaryPassword$Input}
- * @return {TemporaryPasswordState} {@link TemporaryPasswordState}
+ * @returns {TemporaryPasswordState} {@link TemporaryPasswordState}
  */
 export type createTemporaryPassword = (
   parameters: createTemporaryPassword$Input
@@ -90590,7 +90590,7 @@ export type getTemporaryPasswordState$DirectInput = {};
  * Returns information about the current temporary password
  *
  * @param {getTemporaryPasswordState$Input} parameters {@link getTemporaryPasswordState$Input}
- * @return {TemporaryPasswordState} {@link TemporaryPasswordState}
+ * @returns {TemporaryPasswordState} {@link TemporaryPasswordState}
  */
 export type getTemporaryPasswordState = (
   parameters: getTemporaryPasswordState$Input
@@ -90612,7 +90612,7 @@ export type getMe$DirectInput = {};
  * Returns the current user
  *
  * @param {getMe$Input} parameters {@link getMe$Input}
- * @return {User} {@link User}
+ * @returns {User} {@link User}
  */
 export type getMe = (parameters: getMe$Input) => User;
 
@@ -90644,7 +90644,7 @@ export type getUser$DirectInput = {
  * Returns information about a user by their identifier. This is an offline request if the current user is not a bot
  *
  * @param {getUser$Input} parameters {@link getUser$Input}
- * @return {User} {@link User}
+ * @returns {User} {@link User}
  */
 export type getUser = (parameters: getUser$Input) => User;
 
@@ -90676,7 +90676,7 @@ export type getUserFullInfo$DirectInput = {
  * Returns full information about a user by their identifier
  *
  * @param {getUserFullInfo$Input} parameters {@link getUserFullInfo$Input}
- * @return {UserFullInfo} {@link UserFullInfo}
+ * @returns {UserFullInfo} {@link UserFullInfo}
  */
 export type getUserFullInfo = (parameters: getUserFullInfo$Input) => UserFullInfo;
 
@@ -90708,7 +90708,7 @@ export type getBasicGroup$DirectInput = {
  * Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
  *
  * @param {getBasicGroup$Input} parameters {@link getBasicGroup$Input}
- * @return {BasicGroup} {@link BasicGroup}
+ * @returns {BasicGroup} {@link BasicGroup}
  */
 export type getBasicGroup = (parameters: getBasicGroup$Input) => BasicGroup;
 
@@ -90740,7 +90740,7 @@ export type getBasicGroupFullInfo$DirectInput = {
  * Returns full information about a basic group by its identifier
  *
  * @param {getBasicGroupFullInfo$Input} parameters {@link getBasicGroupFullInfo$Input}
- * @return {BasicGroupFullInfo} {@link BasicGroupFullInfo}
+ * @returns {BasicGroupFullInfo} {@link BasicGroupFullInfo}
  */
 export type getBasicGroupFullInfo = (
   parameters: getBasicGroupFullInfo$Input
@@ -90774,7 +90774,7 @@ export type getSupergroup$DirectInput = {
  * Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
  *
  * @param {getSupergroup$Input} parameters {@link getSupergroup$Input}
- * @return {Supergroup} {@link Supergroup}
+ * @returns {Supergroup} {@link Supergroup}
  */
 export type getSupergroup = (parameters: getSupergroup$Input) => Supergroup;
 
@@ -90806,7 +90806,7 @@ export type getSupergroupFullInfo$DirectInput = {
  * Returns full information about a supergroup or a channel by its identifier, cached for up to 1 minute
  *
  * @param {getSupergroupFullInfo$Input} parameters {@link getSupergroupFullInfo$Input}
- * @return {SupergroupFullInfo} {@link SupergroupFullInfo}
+ * @returns {SupergroupFullInfo} {@link SupergroupFullInfo}
  */
 export type getSupergroupFullInfo = (
   parameters: getSupergroupFullInfo$Input
@@ -90840,7 +90840,7 @@ export type getSecretChat$DirectInput = {
  * Returns information about a secret chat by its identifier. This is an offline request
  *
  * @param {getSecretChat$Input} parameters {@link getSecretChat$Input}
- * @return {SecretChat} {@link SecretChat}
+ * @returns {SecretChat} {@link SecretChat}
  */
 export type getSecretChat = (parameters: getSecretChat$Input) => SecretChat;
 
@@ -90872,7 +90872,7 @@ export type getChat$DirectInput = {
  * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
  *
  * @param {getChat$Input} parameters {@link getChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type getChat = (parameters: getChat$Input) => Chat;
 
@@ -90916,7 +90916,7 @@ export type getMessage$DirectInput = {
  * Returns information about a message
  *
  * @param {getMessage$Input} parameters {@link getMessage$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type getMessage = (parameters: getMessage$Input) => Message;
 
@@ -90960,7 +90960,7 @@ export type getMessageLocally$DirectInput = {
  * Returns information about a message, if it is available without sending network request. This is an offline request
  *
  * @param {getMessageLocally$Input} parameters {@link getMessageLocally$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type getMessageLocally = (parameters: getMessageLocally$Input) => Message;
 
@@ -91016,7 +91016,7 @@ export type getRepliedMessage$DirectInput = {
  * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messagePremiumGiveawayCompleted and topic messages without non-bundled replied message respectively
  *
  * @param {getRepliedMessage$Input} parameters {@link getRepliedMessage$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type getRepliedMessage = (parameters: getRepliedMessage$Input) => Message;
 
@@ -91048,7 +91048,7 @@ export type getChatPinnedMessage$DirectInput = {
  * Returns information about a newest pinned message in the chat
  *
  * @param {getChatPinnedMessage$Input} parameters {@link getChatPinnedMessage$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type getChatPinnedMessage = (
   parameters: getChatPinnedMessage$Input
@@ -91106,7 +91106,7 @@ export type getCallbackQueryMessage$DirectInput = {
  * Returns information about a message with the callback button that originated a callback query; for bots only
  *
  * @param {getCallbackQueryMessage$Input} parameters {@link getCallbackQueryMessage$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type getCallbackQueryMessage = (
   parameters: getCallbackQueryMessage$Input
@@ -91152,7 +91152,7 @@ export type getMessages$DirectInput = {
  * Returns information about messages. If a message is not found, returns null on the corresponding position of the result
  *
  * @param {getMessages$Input} parameters {@link getMessages$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type getMessages = (parameters: getMessages$Input) => Messages;
 
@@ -91196,7 +91196,7 @@ export type getMessageThread$DirectInput = {
  * Returns information about a message thread. Can be used only if message.can_get_message_thread == true
  *
  * @param {getMessageThread$Input} parameters {@link getMessageThread$Input}
- * @return {MessageThreadInfo} {@link MessageThreadInfo}
+ * @returns {MessageThreadInfo} {@link MessageThreadInfo}
  */
 export type getMessageThread = (
   parameters: getMessageThread$Input
@@ -91242,7 +91242,7 @@ export type getMessageReadDate$DirectInput = {
  * Returns read date of a recent outgoing message in a private chat. The method can be called if message.can_get_read_date == true and the message is read
  *
  * @param {getMessageReadDate$Input} parameters {@link getMessageReadDate$Input}
- * @return {MessageReadDate} {@link MessageReadDate}
+ * @returns {MessageReadDate} {@link MessageReadDate}
  */
 export type getMessageReadDate = (
   parameters: getMessageReadDate$Input
@@ -91288,7 +91288,7 @@ export type getMessageViewers$DirectInput = {
  * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if message.can_get_viewers == true
  *
  * @param {getMessageViewers$Input} parameters {@link getMessageViewers$Input}
- * @return {MessageViewers} {@link MessageViewers}
+ * @returns {MessageViewers} {@link MessageViewers}
  */
 export type getMessageViewers = (
   parameters: getMessageViewers$Input
@@ -91322,7 +91322,7 @@ export type getFile$DirectInput = {
  * Returns information about a file; this is an offline request
  *
  * @param {getFile$Input} parameters {@link getFile$Input}
- * @return {File} {@link File}
+ * @returns {File} {@link File}
  */
 export type getFile = (parameters: getFile$Input) => File;
 
@@ -91372,7 +91372,7 @@ export type getRemoteFile$DirectInput = {
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  *
  * @param {getRemoteFile$Input} parameters {@link getRemoteFile$Input}
- * @return {File} {@link File}
+ * @returns {File} {@link File}
  */
 export type getRemoteFile = (parameters: getRemoteFile$Input) => File;
 
@@ -91416,7 +91416,7 @@ export type loadChats$DirectInput = {
  * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
  *
  * @param {loadChats$Input} parameters {@link loadChats$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type loadChats = (parameters: loadChats$Input) => Ok;
 
@@ -91460,7 +91460,7 @@ export type getChats$DirectInput = {
  * Returns an ordered list of chats from the beginning of a chat list. For informational purposes only. Use loadChats and updates processing instead to maintain chat lists in a consistent state
  *
  * @param {getChats$Input} parameters {@link getChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getChats = (parameters: getChats$Input) => Chats;
 
@@ -91492,7 +91492,7 @@ export type searchPublicChat$DirectInput = {
  * Searches a public chat by its username. Currently, only private chats, supergroups and channels can be public. Returns the chat if found; otherwise, an error is returned
  *
  * @param {searchPublicChat$Input} parameters {@link searchPublicChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type searchPublicChat = (parameters: searchPublicChat$Input) => Chat;
 
@@ -91530,7 +91530,7 @@ export type searchPublicChats$DirectInput = {
  * - Excludes private chats with contacts and chats from the chat list from the results
  *
  * @param {searchPublicChats$Input} parameters {@link searchPublicChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type searchPublicChats = (parameters: searchPublicChats$Input) => Chats;
 
@@ -91574,7 +91574,7 @@ export type searchChats$DirectInput = {
  * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
  *
  * @param {searchChats$Input} parameters {@link searchChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type searchChats = (parameters: searchChats$Input) => Chats;
 
@@ -91618,7 +91618,7 @@ export type searchChatsOnServer$DirectInput = {
  * Searches for the specified query in the title and username of already known chats via request to the server. Returns chats in the order seen in the main chat list
  *
  * @param {searchChatsOnServer$Input} parameters {@link searchChatsOnServer$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type searchChatsOnServer = (parameters: searchChatsOnServer$Input) => Chats;
 
@@ -91656,7 +91656,7 @@ export type searchChatsNearby$DirectInput = {
  * - The request must be sent again every 25 seconds with adjusted location to not miss new chats
  *
  * @param {searchChatsNearby$Input} parameters {@link searchChatsNearby$Input}
- * @return {ChatsNearby} {@link ChatsNearby}
+ * @returns {ChatsNearby} {@link ChatsNearby}
  */
 export type searchChatsNearby = (parameters: searchChatsNearby$Input) => ChatsNearby;
 
@@ -91676,7 +91676,7 @@ export type getRecommendedChats$DirectInput = {};
  * Returns a list of channel chats recommended to the current user
  *
  * @param {getRecommendedChats$Input} parameters {@link getRecommendedChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getRecommendedChats = (parameters: getRecommendedChats$Input) => Chats;
 
@@ -91708,7 +91708,7 @@ export type getChatSimilarChats$DirectInput = {
  * Returns a list of chats similar to the given chat
  *
  * @param {getChatSimilarChats$Input} parameters {@link getChatSimilarChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getChatSimilarChats = (parameters: getChatSimilarChats$Input) => Chats;
 
@@ -91752,7 +91752,7 @@ export type getChatSimilarChatCount$DirectInput = {
  * Returns approximate number of chats similar to the given chat
  *
  * @param {getChatSimilarChatCount$Input} parameters {@link getChatSimilarChatCount$Input}
- * @return {Count} {@link Count}
+ * @returns {Count} {@link Count}
  */
 export type getChatSimilarChatCount = (
   parameters: getChatSimilarChatCount$Input
@@ -91798,7 +91798,7 @@ export type openChatSimilarChat$DirectInput = {
  * Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
  *
  * @param {openChatSimilarChat$Input} parameters {@link openChatSimilarChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type openChatSimilarChat = (parameters: openChatSimilarChat$Input) => Ok;
 
@@ -91842,7 +91842,7 @@ export type getTopChats$DirectInput = {
  * Returns a list of frequently used chats
  *
  * @param {getTopChats$Input} parameters {@link getTopChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getTopChats = (parameters: getTopChats$Input) => Chats;
 
@@ -91886,7 +91886,7 @@ export type removeTopChat$DirectInput = {
  * Removes a chat from the list of frequently used chats. Supported only if the chat info database is enabled
  *
  * @param {removeTopChat$Input} parameters {@link removeTopChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeTopChat = (parameters: removeTopChat$Input) => Ok;
 
@@ -91930,7 +91930,7 @@ export type searchRecentlyFoundChats$DirectInput = {
  * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
  *
  * @param {searchRecentlyFoundChats$Input} parameters {@link searchRecentlyFoundChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type searchRecentlyFoundChats = (
   parameters: searchRecentlyFoundChats$Input
@@ -91964,7 +91964,7 @@ export type addRecentlyFoundChat$DirectInput = {
  * Adds a chat to the list of recently found chats. The chat is added to the beginning of the list. If the chat is already in the list, it will be removed from the list first
  *
  * @param {addRecentlyFoundChat$Input} parameters {@link addRecentlyFoundChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addRecentlyFoundChat = (parameters: addRecentlyFoundChat$Input) => Ok;
 
@@ -91996,7 +91996,7 @@ export type removeRecentlyFoundChat$DirectInput = {
  * Removes a chat from the list of recently found chats
  *
  * @param {removeRecentlyFoundChat$Input} parameters {@link removeRecentlyFoundChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeRecentlyFoundChat = (
   parameters: removeRecentlyFoundChat$Input
@@ -92018,7 +92018,7 @@ export type clearRecentlyFoundChats$DirectInput = {};
  * Clears the list of recently found chats
  *
  * @param {clearRecentlyFoundChats$Input} parameters {@link clearRecentlyFoundChats$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clearRecentlyFoundChats = (
   parameters: clearRecentlyFoundChats$Input
@@ -92052,7 +92052,7 @@ export type getRecentlyOpenedChats$DirectInput = {
  * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
  *
  * @param {getRecentlyOpenedChats$Input} parameters {@link getRecentlyOpenedChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getRecentlyOpenedChats = (
   parameters: getRecentlyOpenedChats$Input
@@ -92098,7 +92098,7 @@ export type checkChatUsername$DirectInput = {
  * Checks whether a username can be set for a chat
  *
  * @param {checkChatUsername$Input} parameters {@link checkChatUsername$Input}
- * @return {CheckChatUsernameResult} {@link CheckChatUsernameResult}
+ * @returns {CheckChatUsernameResult} {@link CheckChatUsernameResult}
  */
 export type checkChatUsername = (
   parameters: checkChatUsername$Input
@@ -92132,7 +92132,7 @@ export type getCreatedPublicChats$DirectInput = {
  * Returns a list of public chats of the specified type, owned by the user
  *
  * @param {getCreatedPublicChats$Input} parameters {@link getCreatedPublicChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getCreatedPublicChats = (
   parameters: getCreatedPublicChats$Input
@@ -92166,7 +92166,7 @@ export type checkCreatedPublicChatsLimit$DirectInput = {
  * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
  *
  * @param {checkCreatedPublicChatsLimit$Input} parameters {@link checkCreatedPublicChatsLimit$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkCreatedPublicChatsLimit = (
   parameters: checkCreatedPublicChatsLimit$Input
@@ -92194,7 +92194,7 @@ export type getSuitableDiscussionChats$DirectInput = {};
  * - To set a returned supergroup as a discussion group, access to its old messages must be enabled using toggleSupergroupIsAllHistoryAvailable first
  *
  * @param {getSuitableDiscussionChats$Input} parameters {@link getSuitableDiscussionChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getSuitableDiscussionChats = (
   parameters: getSuitableDiscussionChats$Input
@@ -92216,7 +92216,7 @@ export type getInactiveSupergroupChats$DirectInput = {};
  * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives CHANNELS_TOO_MUCH error. Also, the limit can be increased with Telegram Premium
  *
  * @param {getInactiveSupergroupChats$Input} parameters {@link getInactiveSupergroupChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getInactiveSupergroupChats = (
   parameters: getInactiveSupergroupChats$Input
@@ -92238,7 +92238,7 @@ export type getSuitablePersonalChats$DirectInput = {};
  * Returns a list of channel chats, which can be used as a personal chat
  *
  * @param {getSuitablePersonalChats$Input} parameters {@link getSuitablePersonalChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getSuitablePersonalChats = (
   parameters: getSuitablePersonalChats$Input
@@ -92272,7 +92272,7 @@ export type loadSavedMessagesTopics$DirectInput = {
  * Loads more Saved Messages topics. The loaded topics will be sent through updateSavedMessagesTopic. Topics are sorted by their topic.order in descending order. Returns a 404 error if all topics have been loaded
  *
  * @param {loadSavedMessagesTopics$Input} parameters {@link loadSavedMessagesTopics$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type loadSavedMessagesTopics = (
   parameters: loadSavedMessagesTopics$Input
@@ -92346,7 +92346,7 @@ export type getSavedMessagesTopicHistory$DirectInput = {
  * Returns messages in a Saved Messages topic. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
  *
  * @param {getSavedMessagesTopicHistory$Input} parameters {@link getSavedMessagesTopicHistory$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type getSavedMessagesTopicHistory = (
   parameters: getSavedMessagesTopicHistory$Input
@@ -92392,7 +92392,7 @@ export type getSavedMessagesTopicMessageByDate$DirectInput = {
  * Returns the last message sent in a Saved Messages topic no later than the specified date
  *
  * @param {getSavedMessagesTopicMessageByDate$Input} parameters {@link getSavedMessagesTopicMessageByDate$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type getSavedMessagesTopicMessageByDate = (
   parameters: getSavedMessagesTopicMessageByDate$Input
@@ -92426,7 +92426,7 @@ export type deleteSavedMessagesTopicHistory$DirectInput = {
  * Deletes all messages in a Saved Messages topic
  *
  * @param {deleteSavedMessagesTopicHistory$Input} parameters {@link deleteSavedMessagesTopicHistory$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteSavedMessagesTopicHistory = (
   parameters: deleteSavedMessagesTopicHistory$Input
@@ -92484,7 +92484,7 @@ export type deleteSavedMessagesTopicMessagesByDate$DirectInput = {
  * Deletes all messages between the specified dates in a Saved Messages topic. Messages sent in the last 30 seconds will not be deleted
  *
  * @param {deleteSavedMessagesTopicMessagesByDate$Input} parameters {@link deleteSavedMessagesTopicMessagesByDate$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteSavedMessagesTopicMessagesByDate = (
   parameters: deleteSavedMessagesTopicMessagesByDate$Input
@@ -92530,7 +92530,7 @@ export type toggleSavedMessagesTopicIsPinned$DirectInput = {
  * Changes the pinned state of a Saved Messages topic. There can be up to getOption("pinned_saved_messages_topic_count_max") pinned topics. The limit can be increased with Telegram Premium
  *
  * @param {toggleSavedMessagesTopicIsPinned$Input} parameters {@link toggleSavedMessagesTopicIsPinned$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSavedMessagesTopicIsPinned = (
   parameters: toggleSavedMessagesTopicIsPinned$Input
@@ -92564,7 +92564,7 @@ export type setPinnedSavedMessagesTopics$DirectInput = {
  * Changes the order of pinned Saved Messages topics
  *
  * @param {setPinnedSavedMessagesTopics$Input} parameters {@link setPinnedSavedMessagesTopics$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setPinnedSavedMessagesTopics = (
   parameters: setPinnedSavedMessagesTopics$Input
@@ -92622,7 +92622,7 @@ export type getGroupsInCommon$DirectInput = {
  * Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
  *
  * @param {getGroupsInCommon$Input} parameters {@link getGroupsInCommon$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getGroupsInCommon = (parameters: getGroupsInCommon$Input) => Chats;
 
@@ -92712,7 +92712,7 @@ export type getChatHistory$DirectInput = {
  * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
  *
  * @param {getChatHistory$Input} parameters {@link getChatHistory$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type getChatHistory = (parameters: getChatHistory$Input) => Messages;
 
@@ -92802,7 +92802,7 @@ export type getMessageThreadHistory$DirectInput = {
  * - The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
  *
  * @param {getMessageThreadHistory$Input} parameters {@link getMessageThreadHistory$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type getMessageThreadHistory = (
   parameters: getMessageThreadHistory$Input
@@ -92860,7 +92860,7 @@ export type deleteChatHistory$DirectInput = {
  * Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat.can_be_deleted_for_all_users fields to find whether and how the method can be applied to the chat
  *
  * @param {deleteChatHistory$Input} parameters {@link deleteChatHistory$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteChatHistory = (parameters: deleteChatHistory$Input) => Ok;
 
@@ -92898,7 +92898,7 @@ export type deleteChat$DirectInput = {
  * - Use the field chat.can_be_deleted_for_all_users to find whether the method can be applied to the chat
  *
  * @param {deleteChat$Input} parameters {@link deleteChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteChat = (parameters: deleteChat$Input) => Ok;
 
@@ -93042,7 +93042,7 @@ export type searchChatMessages$DirectInput = {
  * - A combination of query, sender_id, filter and message_thread_id search criteria is expected to be supported, only if it is required for Telegram official application implementation
  *
  * @param {searchChatMessages$Input} parameters {@link searchChatMessages$Input}
- * @return {FoundChatMessages} {@link FoundChatMessages}
+ * @returns {FoundChatMessages} {@link FoundChatMessages}
  */
 export type searchChatMessages = (
   parameters: searchChatMessages$Input
@@ -93166,7 +93166,7 @@ export type searchMessages$DirectInput = {
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  *
  * @param {searchMessages$Input} parameters {@link searchMessages$Input}
- * @return {FoundMessages} {@link FoundMessages}
+ * @returns {FoundMessages} {@link FoundMessages}
  */
 export type searchMessages = (parameters: searchMessages$Input) => FoundMessages;
 
@@ -93246,7 +93246,7 @@ export type searchSecretMessages$DirectInput = {
  * Searches for messages in secret chats. Returns the results in reverse chronological order. For optimal performance, the number of returned messages is chosen by TDLib
  *
  * @param {searchSecretMessages$Input} parameters {@link searchSecretMessages$Input}
- * @return {FoundMessages} {@link FoundMessages}
+ * @returns {FoundMessages} {@link FoundMessages}
  */
 export type searchSecretMessages = (
   parameters: searchSecretMessages$Input
@@ -93356,7 +93356,7 @@ export type searchSavedMessages$DirectInput = {
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  *
  * @param {searchSavedMessages$Input} parameters {@link searchSavedMessages$Input}
- * @return {FoundChatMessages} {@link FoundChatMessages}
+ * @returns {FoundChatMessages} {@link FoundChatMessages}
  */
 export type searchSavedMessages = (
   parameters: searchSavedMessages$Input
@@ -93414,7 +93414,7 @@ export type searchCallMessages$DirectInput = {
  * Searches for call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
  *
  * @param {searchCallMessages$Input} parameters {@link searchCallMessages$Input}
- * @return {FoundMessages} {@link FoundMessages}
+ * @returns {FoundMessages} {@link FoundMessages}
  */
 export type searchCallMessages = (
   parameters: searchCallMessages$Input
@@ -93460,7 +93460,7 @@ export type searchOutgoingDocumentMessages$DirectInput = {
  * Searches for outgoing messages with content of the type messageDocument in all chats except secret chats. Returns the results in reverse chronological order
  *
  * @param {searchOutgoingDocumentMessages$Input} parameters {@link searchOutgoingDocumentMessages$Input}
- * @return {FoundMessages} {@link FoundMessages}
+ * @returns {FoundMessages} {@link FoundMessages}
  */
 export type searchOutgoingDocumentMessages = (
   parameters: searchOutgoingDocumentMessages$Input
@@ -93518,7 +93518,7 @@ export type searchPublicHashtagMessages$DirectInput = {
  * Searches for public channel posts with the given hashtag or cashtag. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  *
  * @param {searchPublicHashtagMessages$Input} parameters {@link searchPublicHashtagMessages$Input}
- * @return {FoundMessages} {@link FoundMessages}
+ * @returns {FoundMessages} {@link FoundMessages}
  */
 export type searchPublicHashtagMessages = (
   parameters: searchPublicHashtagMessages$Input
@@ -93564,7 +93564,7 @@ export type getSearchedForHashtags$DirectInput = {
  * Returns recently searched for hashtags or cashtags by their prefix
  *
  * @param {getSearchedForHashtags$Input} parameters {@link getSearchedForHashtags$Input}
- * @return {Hashtags} {@link Hashtags}
+ * @returns {Hashtags} {@link Hashtags}
  */
 export type getSearchedForHashtags = (
   parameters: getSearchedForHashtags$Input
@@ -93598,7 +93598,7 @@ export type removeSearchedForHashtag$DirectInput = {
  * Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
  *
  * @param {removeSearchedForHashtag$Input} parameters {@link removeSearchedForHashtag$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeSearchedForHashtag = (
   parameters: removeSearchedForHashtag$Input
@@ -93620,7 +93620,7 @@ export type clearSearchedForHashtags$DirectInput = {};
  * Clears the list of recently searched for hashtags
  *
  * @param {clearSearchedForHashtags$Input} parameters {@link clearSearchedForHashtags$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clearSearchedForHashtags = (
   parameters: clearSearchedForHashtags$Input
@@ -93654,7 +93654,7 @@ export type deleteAllCallMessages$DirectInput = {
  * Deletes all call messages
  *
  * @param {deleteAllCallMessages$Input} parameters {@link deleteAllCallMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteAllCallMessages = (parameters: deleteAllCallMessages$Input) => Ok;
 
@@ -93698,7 +93698,7 @@ export type searchChatRecentLocationMessages$DirectInput = {
  * Returns information about the recent locations of chat members that were sent to the chat. Returns up to 1 location message per user
  *
  * @param {searchChatRecentLocationMessages$Input} parameters {@link searchChatRecentLocationMessages$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type searchChatRecentLocationMessages = (
   parameters: searchChatRecentLocationMessages$Input
@@ -93720,7 +93720,7 @@ export type getActiveLiveLocationMessages$DirectInput = {};
  * Returns all active live locations that need to be updated by the application. The list is persistent across application restarts only if the message database is used
  *
  * @param {getActiveLiveLocationMessages$Input} parameters {@link getActiveLiveLocationMessages$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type getActiveLiveLocationMessages = (
   parameters: getActiveLiveLocationMessages$Input
@@ -93766,7 +93766,7 @@ export type getChatMessageByDate$DirectInput = {
  * Returns the last message sent in a chat no later than the specified date
  *
  * @param {getChatMessageByDate$Input} parameters {@link getChatMessageByDate$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type getChatMessageByDate = (
   parameters: getChatMessageByDate$Input
@@ -93854,7 +93854,7 @@ export type getChatSparseMessagePositions$DirectInput = {
  * - Cannot be used in secret chats or with searchMessagesFilterFailedToSend filter without an enabled message database
  *
  * @param {getChatSparseMessagePositions$Input} parameters {@link getChatSparseMessagePositions$Input}
- * @return {MessagePositions} {@link MessagePositions}
+ * @returns {MessagePositions} {@link MessagePositions}
  */
 export type getChatSparseMessagePositions = (
   parameters: getChatSparseMessagePositions$Input
@@ -93924,7 +93924,7 @@ export type getChatMessageCalendar$DirectInput = {
  * Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
  *
  * @param {getChatMessageCalendar$Input} parameters {@link getChatMessageCalendar$Input}
- * @return {MessageCalendar} {@link MessageCalendar}
+ * @returns {MessageCalendar} {@link MessageCalendar}
  */
 export type getChatMessageCalendar = (
   parameters: getChatMessageCalendar$Input
@@ -93994,7 +93994,7 @@ export type getChatMessageCount$DirectInput = {
  * Returns approximate number of messages of the specified type in the chat
  *
  * @param {getChatMessageCount$Input} parameters {@link getChatMessageCount$Input}
- * @return {Count} {@link Count}
+ * @returns {Count} {@link Count}
  */
 export type getChatMessageCount = (parameters: getChatMessageCount$Input) => Count;
 
@@ -94074,7 +94074,7 @@ export type getChatMessagePosition$DirectInput = {
  * Returns approximate 1-based position of a message among messages, which can be found by the specified filter in the chat. Cannot be used in secret chats
  *
  * @param {getChatMessagePosition$Input} parameters {@link getChatMessagePosition$Input}
- * @return {Count} {@link Count}
+ * @returns {Count} {@link Count}
  */
 export type getChatMessagePosition = (
   parameters: getChatMessagePosition$Input
@@ -94108,7 +94108,7 @@ export type getChatScheduledMessages$DirectInput = {
  * Returns all scheduled messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
  *
  * @param {getChatScheduledMessages$Input} parameters {@link getChatScheduledMessages$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type getChatScheduledMessages = (
   parameters: getChatScheduledMessages$Input
@@ -94142,7 +94142,7 @@ export type getChatSponsoredMessages$DirectInput = {
  * Returns sponsored messages to be shown in a chat; for channel chats only
  *
  * @param {getChatSponsoredMessages$Input} parameters {@link getChatSponsoredMessages$Input}
- * @return {SponsoredMessages} {@link SponsoredMessages}
+ * @returns {SponsoredMessages} {@link SponsoredMessages}
  */
 export type getChatSponsoredMessages = (
   parameters: getChatSponsoredMessages$Input
@@ -94188,7 +94188,7 @@ export type clickChatSponsoredMessage$DirectInput = {
  * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
  *
  * @param {clickChatSponsoredMessage$Input} parameters {@link clickChatSponsoredMessage$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clickChatSponsoredMessage = (
   parameters: clickChatSponsoredMessage$Input
@@ -94246,7 +94246,7 @@ export type reportChatSponsoredMessage$DirectInput = {
  * Reports a sponsored message to Telegram moderators
  *
  * @param {reportChatSponsoredMessage$Input} parameters {@link reportChatSponsoredMessage$Input}
- * @return {ReportChatSponsoredMessageResult} {@link ReportChatSponsoredMessageResult}
+ * @returns {ReportChatSponsoredMessageResult} {@link ReportChatSponsoredMessageResult}
  */
 export type reportChatSponsoredMessage = (
   parameters: reportChatSponsoredMessage$Input
@@ -94292,7 +94292,7 @@ export type removeNotification$DirectInput = {
  * Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
  *
  * @param {removeNotification$Input} parameters {@link removeNotification$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeNotification = (parameters: removeNotification$Input) => Ok;
 
@@ -94336,7 +94336,7 @@ export type removeNotificationGroup$DirectInput = {
  * Removes a group of active notifications. Needs to be called only if the notification group is removed by the current user
  *
  * @param {removeNotificationGroup$Input} parameters {@link removeNotificationGroup$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeNotificationGroup = (
   parameters: removeNotificationGroup$Input
@@ -94418,7 +94418,7 @@ export type getMessageLink$DirectInput = {
  * Returns an HTTPS link to a message in a chat. Available only for already sent messages in supergroups and channels, or if message.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
  *
  * @param {getMessageLink$Input} parameters {@link getMessageLink$Input}
- * @return {MessageLink} {@link MessageLink}
+ * @returns {MessageLink} {@link MessageLink}
  */
 export type getMessageLink = (parameters: getMessageLink$Input) => MessageLink;
 
@@ -94474,7 +94474,7 @@ export type getMessageEmbeddingCode$DirectInput = {
  * Returns an HTML code for embedding the message. Available only for messages in supergroups and channels with a username
  *
  * @param {getMessageEmbeddingCode$Input} parameters {@link getMessageEmbeddingCode$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getMessageEmbeddingCode = (
   parameters: getMessageEmbeddingCode$Input
@@ -94508,7 +94508,7 @@ export type getMessageLinkInfo$DirectInput = {
  * Returns information about a public or private message link. Can be called for any internal link of the type internalLinkTypeMessage
  *
  * @param {getMessageLinkInfo$Input} parameters {@link getMessageLinkInfo$Input}
- * @return {MessageLinkInfo} {@link MessageLinkInfo}
+ * @returns {MessageLinkInfo} {@link MessageLinkInfo}
  */
 export type getMessageLinkInfo = (
   parameters: getMessageLinkInfo$Input
@@ -94570,7 +94570,7 @@ export type translateText$DirectInput = {
  * Translates a text to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
  *
  * @param {translateText$Input} parameters {@link translateText$Input}
- * @return {FormattedText} {@link FormattedText}
+ * @returns {FormattedText} {@link FormattedText}
  */
 export type translateText = (parameters: translateText$Input) => FormattedText;
 
@@ -94642,7 +94642,7 @@ export type translateMessageText$DirectInput = {
  * Extracts text or caption of the given message and translates it to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
  *
  * @param {translateMessageText$Input} parameters {@link translateMessageText$Input}
- * @return {FormattedText} {@link FormattedText}
+ * @returns {FormattedText} {@link FormattedText}
  */
 export type translateMessageText = (
   parameters: translateMessageText$Input
@@ -94688,7 +94688,7 @@ export type recognizeSpeech$DirectInput = {
  * Recognizes speech in a video note or a voice note message. The message must be successfully sent, must not be scheduled, and must be from a non-secret chat
  *
  * @param {recognizeSpeech$Input} parameters {@link recognizeSpeech$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type recognizeSpeech = (parameters: recognizeSpeech$Input) => Ok;
 
@@ -94744,7 +94744,7 @@ export type rateSpeechRecognition$DirectInput = {
  * Rates recognized speech in a video note or a voice note message
  *
  * @param {rateSpeechRecognition$Input} parameters {@link rateSpeechRecognition$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type rateSpeechRecognition = (parameters: rateSpeechRecognition$Input) => Ok;
 
@@ -94776,7 +94776,7 @@ export type getChatAvailableMessageSenders$DirectInput = {
  * Returns the list of message sender identifiers, which can be used to send messages in a chat
  *
  * @param {getChatAvailableMessageSenders$Input} parameters {@link getChatAvailableMessageSenders$Input}
- * @return {ChatMessageSenders} {@link ChatMessageSenders}
+ * @returns {ChatMessageSenders} {@link ChatMessageSenders}
  */
 export type getChatAvailableMessageSenders = (
   parameters: getChatAvailableMessageSenders$Input
@@ -94822,7 +94822,7 @@ export type setChatMessageSender$DirectInput = {
  * Selects a message sender to send messages in a chat
  *
  * @param {setChatMessageSender$Input} parameters {@link setChatMessageSender$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatMessageSender = (parameters: setChatMessageSender$Input) => Ok;
 
@@ -94914,7 +94914,7 @@ export type sendMessage$DirectInput = {
  * Sends a message. Returns the sent message
  *
  * @param {sendMessage$Input} parameters {@link sendMessage$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type sendMessage = (parameters: sendMessage$Input) => Message;
 
@@ -95000,7 +95000,7 @@ export type sendMessageAlbum$DirectInput = {
  * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
  *
  * @param {sendMessageAlbum$Input} parameters {@link sendMessageAlbum$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type sendMessageAlbum = (parameters: sendMessageAlbum$Input) => Messages;
 
@@ -95062,7 +95062,7 @@ export type sendBotStartMessage$DirectInput = {
  * - Bots can't be invited to channels (although they can be added as admins) and secret chats. Returns the sent message
  *
  * @param {sendBotStartMessage$Input} parameters {@link sendBotStartMessage$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type sendBotStartMessage = (parameters: sendBotStartMessage$Input) => Message;
 
@@ -95166,7 +95166,7 @@ export type sendInlineQueryResultMessage$DirectInput = {
  * Sends the result of an inline query as a message. Returns the sent message. Always clears a chat draft message
  *
  * @param {sendInlineQueryResultMessage$Input} parameters {@link sendInlineQueryResultMessage$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type sendInlineQueryResultMessage = (
   parameters: sendInlineQueryResultMessage$Input
@@ -95272,7 +95272,7 @@ export type forwardMessages$DirectInput = {
  * Forwards previously sent messages. Returns the forwarded messages in the same order as the message identifiers passed in message_ids. If a message can't be forwarded, null will be returned instead of the message
  *
  * @param {forwardMessages$Input} parameters {@link forwardMessages$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type forwardMessages = (parameters: forwardMessages$Input) => Messages;
 
@@ -95328,7 +95328,7 @@ export type sendQuickReplyShortcutMessages$DirectInput = {
  * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
  *
  * @param {sendQuickReplyShortcutMessages$Input} parameters {@link sendQuickReplyShortcutMessages$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type sendQuickReplyShortcutMessages = (
   parameters: sendQuickReplyShortcutMessages$Input
@@ -95392,7 +95392,7 @@ export type resendMessages$DirectInput = {
  * - If a message is re-sent, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
  *
  * @param {resendMessages$Input} parameters {@link resendMessages$Input}
- * @return {Messages} {@link Messages}
+ * @returns {Messages} {@link Messages}
  */
 export type resendMessages = (parameters: resendMessages$Input) => Messages;
 
@@ -95472,7 +95472,7 @@ export type addLocalMessage$DirectInput = {
  * Adds a local message to a chat. The message is persistent across application restarts only if the message database is used. Returns the added message
  *
  * @param {addLocalMessage$Input} parameters {@link addLocalMessage$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type addLocalMessage = (parameters: addLocalMessage$Input) => Message;
 
@@ -95528,7 +95528,7 @@ export type deleteMessages$DirectInput = {
  * Deletes messages
  *
  * @param {deleteMessages$Input} parameters {@link deleteMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteMessages = (parameters: deleteMessages$Input) => Ok;
 
@@ -95572,7 +95572,7 @@ export type deleteChatMessagesBySender$DirectInput = {
  * Deletes all messages sent by the specified message sender in a chat. Supported only for supergroups; requires can_delete_messages administrator privileges
  *
  * @param {deleteChatMessagesBySender$Input} parameters {@link deleteChatMessagesBySender$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteChatMessagesBySender = (
   parameters: deleteChatMessagesBySender$Input
@@ -95642,7 +95642,7 @@ export type deleteChatMessagesByDate$DirectInput = {
  * Deletes all messages between the specified dates in a chat. Supported only for private chats and basic groups. Messages sent in the last 30 seconds will not be deleted
  *
  * @param {deleteChatMessagesByDate$Input} parameters {@link deleteChatMessagesByDate$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteChatMessagesByDate = (
   parameters: deleteChatMessagesByDate$Input
@@ -95718,7 +95718,7 @@ export type editMessageText$DirectInput = {
  * - Can be used only if message.can_be_edited == true
  *
  * @param {editMessageText$Input} parameters {@link editMessageText$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type editMessageText = (parameters: editMessageText$Input) => Message;
 
@@ -95832,7 +95832,7 @@ export type editMessageLiveLocation$DirectInput = {
  * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
  *
  * @param {editMessageLiveLocation$Input} parameters {@link editMessageLiveLocation$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type editMessageLiveLocation = (
   parameters: editMessageLiveLocation$Input
@@ -95914,7 +95914,7 @@ export type editMessageMedia$DirectInput = {
  * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
  *
  * @param {editMessageMedia$Input} parameters {@link editMessageMedia$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type editMessageMedia = (parameters: editMessageMedia$Input) => Message;
 
@@ -96000,7 +96000,7 @@ export type editMessageCaption$DirectInput = {
  * - Can be used only if message.can_be_edited == true
  *
  * @param {editMessageCaption$Input} parameters {@link editMessageCaption$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type editMessageCaption = (parameters: editMessageCaption$Input) => Message;
 
@@ -96062,7 +96062,7 @@ export type editMessageReplyMarkup$DirectInput = {
  * - Can be used only if message.can_be_edited == true
  *
  * @param {editMessageReplyMarkup$Input} parameters {@link editMessageReplyMarkup$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type editMessageReplyMarkup = (
   parameters: editMessageReplyMarkup$Input
@@ -96120,7 +96120,7 @@ export type editInlineMessageText$DirectInput = {
  * Edits the text of an inline text or game message sent via a bot; for bots only
  *
  * @param {editInlineMessageText$Input} parameters {@link editInlineMessageText$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editInlineMessageText = (parameters: editInlineMessageText$Input) => Ok;
 
@@ -96216,7 +96216,7 @@ export type editInlineMessageLiveLocation$DirectInput = {
  * Edits the content of a live location in an inline message sent via a bot; for bots only
  *
  * @param {editInlineMessageLiveLocation$Input} parameters {@link editInlineMessageLiveLocation$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editInlineMessageLiveLocation = (
   parameters: editInlineMessageLiveLocation$Input
@@ -96274,7 +96274,7 @@ export type editInlineMessageMedia$DirectInput = {
  * Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
  *
  * @param {editInlineMessageMedia$Input} parameters {@link editInlineMessageMedia$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editInlineMessageMedia = (
   parameters: editInlineMessageMedia$Input
@@ -96344,7 +96344,7 @@ export type editInlineMessageCaption$DirectInput = {
  * Edits the caption of an inline message sent via a bot; for bots only
  *
  * @param {editInlineMessageCaption$Input} parameters {@link editInlineMessageCaption$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editInlineMessageCaption = (
   parameters: editInlineMessageCaption$Input
@@ -96390,7 +96390,7 @@ export type editInlineMessageReplyMarkup$DirectInput = {
  * Edits the reply markup of an inline message sent via a bot; for bots only
  *
  * @param {editInlineMessageReplyMarkup$Input} parameters {@link editInlineMessageReplyMarkup$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editInlineMessageReplyMarkup = (
   parameters: editInlineMessageReplyMarkup$Input
@@ -96448,7 +96448,7 @@ export type editMessageSchedulingState$DirectInput = {
  * Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
  *
  * @param {editMessageSchedulingState$Input} parameters {@link editMessageSchedulingState$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editMessageSchedulingState = (
   parameters: editMessageSchedulingState$Input
@@ -96506,7 +96506,7 @@ export type setMessageFactCheck$DirectInput = {
  * Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
  *
  * @param {setMessageFactCheck$Input} parameters {@link setMessageFactCheck$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setMessageFactCheck = (parameters: setMessageFactCheck$Input) => Ok;
 
@@ -96622,7 +96622,7 @@ export type sendBusinessMessage$DirectInput = {
  * Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
  *
  * @param {sendBusinessMessage$Input} parameters {@link sendBusinessMessage$Input}
- * @return {BusinessMessage} {@link BusinessMessage}
+ * @returns {BusinessMessage} {@link BusinessMessage}
  */
 export type sendBusinessMessage = (
   parameters: sendBusinessMessage$Input
@@ -96734,7 +96734,7 @@ export type sendBusinessMessageAlbum$DirectInput = {
  * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
  *
  * @param {sendBusinessMessageAlbum$Input} parameters {@link sendBusinessMessageAlbum$Input}
- * @return {BusinessMessages} {@link BusinessMessages}
+ * @returns {BusinessMessages} {@link BusinessMessages}
  */
 export type sendBusinessMessageAlbum = (
   parameters: sendBusinessMessageAlbum$Input
@@ -96768,7 +96768,7 @@ export type checkQuickReplyShortcutName$DirectInput = {
  * Checks validness of a name for a quick reply shortcut. Can be called synchronously
  *
  * @param {checkQuickReplyShortcutName$Input} parameters {@link checkQuickReplyShortcutName$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkQuickReplyShortcutName = (
   parameters: checkQuickReplyShortcutName$Input
@@ -96790,7 +96790,7 @@ export type loadQuickReplyShortcuts$DirectInput = {};
  * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
  *
  * @param {loadQuickReplyShortcuts$Input} parameters {@link loadQuickReplyShortcuts$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type loadQuickReplyShortcuts = (
   parameters: loadQuickReplyShortcuts$Input
@@ -96836,7 +96836,7 @@ export type setQuickReplyShortcutName$DirectInput = {
  * Changes name of a quick reply shortcut
  *
  * @param {setQuickReplyShortcutName$Input} parameters {@link setQuickReplyShortcutName$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setQuickReplyShortcutName = (
   parameters: setQuickReplyShortcutName$Input
@@ -96870,7 +96870,7 @@ export type deleteQuickReplyShortcut$DirectInput = {
  * Deletes a quick reply shortcut
  *
  * @param {deleteQuickReplyShortcut$Input} parameters {@link deleteQuickReplyShortcut$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteQuickReplyShortcut = (
   parameters: deleteQuickReplyShortcut$Input
@@ -96904,7 +96904,7 @@ export type reorderQuickReplyShortcuts$DirectInput = {
  * Changes the order of quick reply shortcuts
  *
  * @param {reorderQuickReplyShortcuts$Input} parameters {@link reorderQuickReplyShortcuts$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reorderQuickReplyShortcuts = (
   parameters: reorderQuickReplyShortcuts$Input
@@ -96938,7 +96938,7 @@ export type loadQuickReplyShortcutMessages$DirectInput = {
  * Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
  *
  * @param {loadQuickReplyShortcutMessages$Input} parameters {@link loadQuickReplyShortcutMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type loadQuickReplyShortcutMessages = (
   parameters: loadQuickReplyShortcutMessages$Input
@@ -96984,7 +96984,7 @@ export type deleteQuickReplyShortcutMessages$DirectInput = {
  * Deletes specified quick reply messages
  *
  * @param {deleteQuickReplyShortcutMessages$Input} parameters {@link deleteQuickReplyShortcutMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteQuickReplyShortcutMessages = (
   parameters: deleteQuickReplyShortcutMessages$Input
@@ -97048,7 +97048,7 @@ export type addQuickReplyShortcutMessage$DirectInput = {
  * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
  *
  * @param {addQuickReplyShortcutMessage$Input} parameters {@link addQuickReplyShortcutMessage$Input}
- * @return {QuickReplyMessage} {@link QuickReplyMessage}
+ * @returns {QuickReplyMessage} {@link QuickReplyMessage}
  */
 export type addQuickReplyShortcutMessage = (
   parameters: addQuickReplyShortcutMessage$Input
@@ -97136,7 +97136,7 @@ export type addQuickReplyShortcutInlineQueryResultMessage$DirectInput = {
  * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
  *
  * @param {addQuickReplyShortcutInlineQueryResultMessage$Input} parameters {@link addQuickReplyShortcutInlineQueryResultMessage$Input}
- * @return {QuickReplyMessage} {@link QuickReplyMessage}
+ * @returns {QuickReplyMessage} {@link QuickReplyMessage}
  */
 export type addQuickReplyShortcutInlineQueryResultMessage = (
   parameters: addQuickReplyShortcutInlineQueryResultMessage$Input
@@ -97200,7 +97200,7 @@ export type addQuickReplyShortcutMessageAlbum$DirectInput = {
  * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
  *
  * @param {addQuickReplyShortcutMessageAlbum$Input} parameters {@link addQuickReplyShortcutMessageAlbum$Input}
- * @return {QuickReplyMessages} {@link QuickReplyMessages}
+ * @returns {QuickReplyMessages} {@link QuickReplyMessages}
  */
 export type addQuickReplyShortcutMessageAlbum = (
   parameters: addQuickReplyShortcutMessageAlbum$Input
@@ -97252,7 +97252,7 @@ export type readdQuickReplyShortcutMessages$DirectInput = {
  * - If a message is readded, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be readded, null will be returned instead of the message
  *
  * @param {readdQuickReplyShortcutMessages$Input} parameters {@link readdQuickReplyShortcutMessages$Input}
- * @return {QuickReplyMessages} {@link QuickReplyMessages}
+ * @returns {QuickReplyMessages} {@link QuickReplyMessages}
  */
 export type readdQuickReplyShortcutMessages = (
   parameters: readdQuickReplyShortcutMessages$Input
@@ -97316,7 +97316,7 @@ export type editQuickReplyMessage$DirectInput = {
  * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
  *
  * @param {editQuickReplyMessage$Input} parameters {@link editQuickReplyMessage$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editQuickReplyMessage = (parameters: editQuickReplyMessage$Input) => Ok;
 
@@ -97336,7 +97336,7 @@ export type getForumTopicDefaultIcons$DirectInput = {};
  * Returns the list of custom emojis, which can be used as forum topic icon by all users
  *
  * @param {getForumTopicDefaultIcons$Input} parameters {@link getForumTopicDefaultIcons$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getForumTopicDefaultIcons = (
   parameters: getForumTopicDefaultIcons$Input
@@ -97394,7 +97394,7 @@ export type createForumTopic$DirectInput = {
  * Creates a topic in a forum supergroup chat; requires can_manage_topics administrator or can_create_topics member right in the supergroup
  *
  * @param {createForumTopic$Input} parameters {@link createForumTopic$Input}
- * @return {ForumTopicInfo} {@link ForumTopicInfo}
+ * @returns {ForumTopicInfo} {@link ForumTopicInfo}
  */
 export type createForumTopic = (
   parameters: createForumTopic$Input
@@ -97476,7 +97476,7 @@ export type editForumTopic$DirectInput = {
  * Edits title and icon of a topic in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
  *
  * @param {editForumTopic$Input} parameters {@link editForumTopic$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editForumTopic = (parameters: editForumTopic$Input) => Ok;
 
@@ -97520,7 +97520,7 @@ export type getForumTopic$DirectInput = {
  * Returns information about a forum topic
  *
  * @param {getForumTopic$Input} parameters {@link getForumTopic$Input}
- * @return {ForumTopic} {@link ForumTopic}
+ * @returns {ForumTopic} {@link ForumTopic}
  */
 export type getForumTopic = (parameters: getForumTopic$Input) => ForumTopic;
 
@@ -97564,7 +97564,7 @@ export type getForumTopicLink$DirectInput = {
  * Returns an HTTPS link to a topic in a forum chat. This is an offline request
  *
  * @param {getForumTopicLink$Input} parameters {@link getForumTopicLink$Input}
- * @return {MessageLink} {@link MessageLink}
+ * @returns {MessageLink} {@link MessageLink}
  */
 export type getForumTopicLink = (parameters: getForumTopicLink$Input) => MessageLink;
 
@@ -97656,7 +97656,7 @@ export type getForumTopics$DirectInput = {
  * Returns found forum topics in a forum chat. This is a temporary method for getting information about topic list from the server
  *
  * @param {getForumTopics$Input} parameters {@link getForumTopics$Input}
- * @return {ForumTopics} {@link ForumTopics}
+ * @returns {ForumTopics} {@link ForumTopics}
  */
 export type getForumTopics = (parameters: getForumTopics$Input) => ForumTopics;
 
@@ -97712,7 +97712,7 @@ export type setForumTopicNotificationSettings$DirectInput = {
  * Changes the notification settings of a forum topic
  *
  * @param {setForumTopicNotificationSettings$Input} parameters {@link setForumTopicNotificationSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setForumTopicNotificationSettings = (
   parameters: setForumTopicNotificationSettings$Input
@@ -97770,7 +97770,7 @@ export type toggleForumTopicIsClosed$DirectInput = {
  * Toggles whether a topic is closed in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
  *
  * @param {toggleForumTopicIsClosed$Input} parameters {@link toggleForumTopicIsClosed$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleForumTopicIsClosed = (
   parameters: toggleForumTopicIsClosed$Input
@@ -97816,7 +97816,7 @@ export type toggleGeneralForumTopicIsHidden$DirectInput = {
  * Toggles whether a General topic is hidden in a forum supergroup chat; requires can_manage_topics right in the supergroup
  *
  * @param {toggleGeneralForumTopicIsHidden$Input} parameters {@link toggleGeneralForumTopicIsHidden$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleGeneralForumTopicIsHidden = (
   parameters: toggleGeneralForumTopicIsHidden$Input
@@ -97874,7 +97874,7 @@ export type toggleForumTopicIsPinned$DirectInput = {
  * Changes the pinned state of a forum topic; requires can_manage_topics right in the supergroup. There can be up to getOption("pinned_forum_topic_count_max") pinned forum topics
  *
  * @param {toggleForumTopicIsPinned$Input} parameters {@link toggleForumTopicIsPinned$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleForumTopicIsPinned = (
   parameters: toggleForumTopicIsPinned$Input
@@ -97920,7 +97920,7 @@ export type setPinnedForumTopics$DirectInput = {
  * Changes the order of pinned forum topics; requires can_manage_topics right in the supergroup
  *
  * @param {setPinnedForumTopics$Input} parameters {@link setPinnedForumTopics$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setPinnedForumTopics = (parameters: setPinnedForumTopics$Input) => Ok;
 
@@ -97964,7 +97964,7 @@ export type deleteForumTopic$DirectInput = {
  * Deletes all messages in a forum topic; requires can_delete_messages administrator right in the supergroup unless the user is creator of the topic, the topic has no messages from other users and has at most 11 messages
  *
  * @param {deleteForumTopic$Input} parameters {@link deleteForumTopic$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteForumTopic = (parameters: deleteForumTopic$Input) => Ok;
 
@@ -97996,7 +97996,7 @@ export type getEmojiReaction$DirectInput = {
  * Returns information about an emoji reaction. Returns a 404 error if the reaction is not found
  *
  * @param {getEmojiReaction$Input} parameters {@link getEmojiReaction$Input}
- * @return {EmojiReaction} {@link EmojiReaction}
+ * @returns {EmojiReaction} {@link EmojiReaction}
  */
 export type getEmojiReaction = (parameters: getEmojiReaction$Input) => EmojiReaction;
 
@@ -98016,7 +98016,7 @@ export type getCustomEmojiReactionAnimations$DirectInput = {};
  * Returns TGS stickers with generic animations for custom emoji reactions
  *
  * @param {getCustomEmojiReactionAnimations$Input} parameters {@link getCustomEmojiReactionAnimations$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getCustomEmojiReactionAnimations = (
   parameters: getCustomEmojiReactionAnimations$Input
@@ -98074,7 +98074,7 @@ export type getMessageAvailableReactions$DirectInput = {
  * Returns reactions, which can be added to a message. The list can change after updateActiveEmojiReactions, updateChatAvailableReactions for the chat, or updateMessageInteractionInfo for the message
  *
  * @param {getMessageAvailableReactions$Input} parameters {@link getMessageAvailableReactions$Input}
- * @return {AvailableReactions} {@link AvailableReactions}
+ * @returns {AvailableReactions} {@link AvailableReactions}
  */
 export type getMessageAvailableReactions = (
   parameters: getMessageAvailableReactions$Input
@@ -98096,7 +98096,7 @@ export type clearRecentReactions$DirectInput = {};
  * Clears the list of recently used reactions
  *
  * @param {clearRecentReactions$Input} parameters {@link clearRecentReactions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clearRecentReactions = (parameters: clearRecentReactions$Input) => Ok;
 
@@ -98176,7 +98176,7 @@ export type addMessageReaction$DirectInput = {
  * Adds a reaction or a tag to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
  *
  * @param {addMessageReaction$Input} parameters {@link addMessageReaction$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addMessageReaction = (parameters: addMessageReaction$Input) => Ok;
 
@@ -98232,7 +98232,7 @@ export type removeMessageReaction$DirectInput = {
  * Removes a reaction from a message. A chosen reaction can always be removed
  *
  * @param {removeMessageReaction$Input} parameters {@link removeMessageReaction$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeMessageReaction = (parameters: removeMessageReaction$Input) => Ok;
 
@@ -98300,7 +98300,7 @@ export type setMessageReactions$DirectInput = {
  * Sets reactions on a message; for bots only
  *
  * @param {setMessageReactions$Input} parameters {@link setMessageReactions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setMessageReactions = (parameters: setMessageReactions$Input) => Ok;
 
@@ -98380,7 +98380,7 @@ export type getMessageAddedReactions$DirectInput = {
  * Returns reactions added for a message, along with their sender
  *
  * @param {getMessageAddedReactions$Input} parameters {@link getMessageAddedReactions$Input}
- * @return {AddedReactions} {@link AddedReactions}
+ * @returns {AddedReactions} {@link AddedReactions}
  */
 export type getMessageAddedReactions = (
   parameters: getMessageAddedReactions$Input
@@ -98414,7 +98414,7 @@ export type setDefaultReactionType$DirectInput = {
  * Changes type of default reaction for the current user
  *
  * @param {setDefaultReactionType$Input} parameters {@link setDefaultReactionType$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setDefaultReactionType = (
   parameters: setDefaultReactionType$Input
@@ -98448,7 +98448,7 @@ export type getSavedMessagesTags$DirectInput = {
  * Returns tags used in Saved Messages or a Saved Messages topic
  *
  * @param {getSavedMessagesTags$Input} parameters {@link getSavedMessagesTags$Input}
- * @return {SavedMessagesTags} {@link SavedMessagesTags}
+ * @returns {SavedMessagesTags} {@link SavedMessagesTags}
  */
 export type getSavedMessagesTags = (
   parameters: getSavedMessagesTags$Input
@@ -98494,7 +98494,7 @@ export type setSavedMessagesTagLabel$DirectInput = {
  * Changes label of a Saved Messages tag; for Telegram Premium users only
  *
  * @param {setSavedMessagesTagLabel$Input} parameters {@link setSavedMessagesTagLabel$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setSavedMessagesTagLabel = (
   parameters: setSavedMessagesTagLabel$Input
@@ -98528,7 +98528,7 @@ export type getMessageEffect$DirectInput = {
  * Returns information about a message effect. Returns a 404 error if the effect is not found
  *
  * @param {getMessageEffect$Input} parameters {@link getMessageEffect$Input}
- * @return {MessageEffect} {@link MessageEffect}
+ * @returns {MessageEffect} {@link MessageEffect}
  */
 export type getMessageEffect = (parameters: getMessageEffect$Input) => MessageEffect;
 
@@ -98584,7 +98584,7 @@ export type searchQuote$DirectInput = {
  * Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
  *
  * @param {searchQuote$Input} parameters {@link searchQuote$Input}
- * @return {FoundPosition} {@link FoundPosition}
+ * @returns {FoundPosition} {@link FoundPosition}
  */
 export type searchQuote = (parameters: searchQuote$Input) => FoundPosition;
 
@@ -98616,7 +98616,7 @@ export type getTextEntities$DirectInput = {
  * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
  *
  * @param {getTextEntities$Input} parameters {@link getTextEntities$Input}
- * @return {TextEntities} {@link TextEntities}
+ * @returns {TextEntities} {@link TextEntities}
  */
 export type getTextEntities = (parameters: getTextEntities$Input) => TextEntities;
 
@@ -98666,7 +98666,7 @@ export type parseTextEntities$DirectInput = {
  * - and MentionName entities from a marked-up text. Can be called synchronously
  *
  * @param {parseTextEntities$Input} parameters {@link parseTextEntities$Input}
- * @return {FormattedText} {@link FormattedText}
+ * @returns {FormattedText} {@link FormattedText}
  */
 export type parseTextEntities = (
   parameters: parseTextEntities$Input
@@ -98700,7 +98700,7 @@ export type parseMarkdown$DirectInput = {
  * Parses Markdown entities in a human-friendly format, ignoring markup errors. Can be called synchronously
  *
  * @param {parseMarkdown$Input} parameters {@link parseMarkdown$Input}
- * @return {FormattedText} {@link FormattedText}
+ * @returns {FormattedText} {@link FormattedText}
  */
 export type parseMarkdown = (parameters: parseMarkdown$Input) => FormattedText;
 
@@ -98732,7 +98732,7 @@ export type getMarkdownText$DirectInput = {
  * Replaces text entities with Markdown formatting in a human-friendly format. Entities that can't be represented in Markdown unambiguously are kept as is. Can be called synchronously
  *
  * @param {getMarkdownText$Input} parameters {@link getMarkdownText$Input}
- * @return {FormattedText} {@link FormattedText}
+ * @returns {FormattedText} {@link FormattedText}
  */
 export type getMarkdownText = (parameters: getMarkdownText$Input) => FormattedText;
 
@@ -98764,7 +98764,7 @@ export type getCountryFlagEmoji$DirectInput = {
  * Returns an emoji for the given country. Returns an empty string on failure. Can be called synchronously
  *
  * @param {getCountryFlagEmoji$Input} parameters {@link getCountryFlagEmoji$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getCountryFlagEmoji = (parameters: getCountryFlagEmoji$Input) => Text;
 
@@ -98796,7 +98796,7 @@ export type getFileMimeType$DirectInput = {
  * Returns the MIME type of a file, guessed by its extension. Returns an empty string on failure. Can be called synchronously
  *
  * @param {getFileMimeType$Input} parameters {@link getFileMimeType$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getFileMimeType = (parameters: getFileMimeType$Input) => Text;
 
@@ -98828,7 +98828,7 @@ export type getFileExtension$DirectInput = {
  * Returns the extension of a file, guessed by its MIME type. Returns an empty string on failure. Can be called synchronously
  *
  * @param {getFileExtension$Input} parameters {@link getFileExtension$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getFileExtension = (parameters: getFileExtension$Input) => Text;
 
@@ -98860,7 +98860,7 @@ export type cleanFileName$DirectInput = {
  * Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
  *
  * @param {cleanFileName$Input} parameters {@link cleanFileName$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type cleanFileName = (parameters: cleanFileName$Input) => Text;
 
@@ -98928,7 +98928,7 @@ export type getLanguagePackString$DirectInput = {
  * Returns a string stored in the local database from the specified localization target and language pack by its key. Returns a 404 error if the string is not found. Can be called synchronously
  *
  * @param {getLanguagePackString$Input} parameters {@link getLanguagePackString$Input}
- * @return {LanguagePackStringValue} {@link LanguagePackStringValue}
+ * @returns {LanguagePackStringValue} {@link LanguagePackStringValue}
  */
 export type getLanguagePackString = (
   parameters: getLanguagePackString$Input
@@ -98962,7 +98962,7 @@ export type getJsonValue$DirectInput = {
  * Converts a JSON-serialized string to corresponding JsonValue object. Can be called synchronously
  *
  * @param {getJsonValue$Input} parameters {@link getJsonValue$Input}
- * @return {JsonValue} {@link JsonValue}
+ * @returns {JsonValue} {@link JsonValue}
  */
 export type getJsonValue = (parameters: getJsonValue$Input) => JsonValue;
 
@@ -98994,7 +98994,7 @@ export type getJsonString$DirectInput = {
  * Converts a JsonValue object to corresponding JSON-serialized string. Can be called synchronously
  *
  * @param {getJsonString$Input} parameters {@link getJsonString$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getJsonString = (parameters: getJsonString$Input) => Text;
 
@@ -99026,7 +99026,7 @@ export type getThemeParametersJsonString$DirectInput = {
  * Converts a themeParameters object to corresponding JSON-serialized string. Can be called synchronously
  *
  * @param {getThemeParametersJsonString$Input} parameters {@link getThemeParametersJsonString$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getThemeParametersJsonString = (
   parameters: getThemeParametersJsonString$Input
@@ -99084,7 +99084,7 @@ export type setPollAnswer$DirectInput = {
  * Changes the user answer to a poll. A poll in quiz mode can be answered only once
  *
  * @param {setPollAnswer$Input} parameters {@link setPollAnswer$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setPollAnswer = (parameters: setPollAnswer$Input) => Ok;
 
@@ -99164,7 +99164,7 @@ export type getPollVoters$DirectInput = {
  * Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
  *
  * @param {getPollVoters$Input} parameters {@link getPollVoters$Input}
- * @return {MessageSenders} {@link MessageSenders}
+ * @returns {MessageSenders} {@link MessageSenders}
  */
 export type getPollVoters = (parameters: getPollVoters$Input) => MessageSenders;
 
@@ -99220,7 +99220,7 @@ export type stopPoll$DirectInput = {
  * Stops a poll. A poll in a message can be stopped when the message has can_be_edited flag is set
  *
  * @param {stopPoll$Input} parameters {@link stopPoll$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type stopPoll = (parameters: stopPoll$Input) => Ok;
 
@@ -99252,7 +99252,7 @@ export type hideSuggestedAction$DirectInput = {
  * Hides a suggested action
  *
  * @param {hideSuggestedAction$Input} parameters {@link hideSuggestedAction$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type hideSuggestedAction = (parameters: hideSuggestedAction$Input) => Ok;
 
@@ -99272,7 +99272,7 @@ export type hideContactCloseBirthdays$DirectInput = {};
  * Hides the list of contacts that have close birthdays for 24 hours
  *
  * @param {hideContactCloseBirthdays$Input} parameters {@link hideContactCloseBirthdays$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type hideContactCloseBirthdays = (
   parameters: hideContactCloseBirthdays$Input
@@ -99306,7 +99306,7 @@ export type getBusinessConnection$DirectInput = {
  * Returns information about a business connection by its identifier; for bots only
  *
  * @param {getBusinessConnection$Input} parameters {@link getBusinessConnection$Input}
- * @return {BusinessConnection} {@link BusinessConnection}
+ * @returns {BusinessConnection} {@link BusinessConnection}
  */
 export type getBusinessConnection = (
   parameters: getBusinessConnection$Input
@@ -99364,7 +99364,7 @@ export type getLoginUrlInfo$DirectInput = {
  * Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
  *
  * @param {getLoginUrlInfo$Input} parameters {@link getLoginUrlInfo$Input}
- * @return {LoginUrlInfo} {@link LoginUrlInfo}
+ * @returns {LoginUrlInfo} {@link LoginUrlInfo}
  */
 export type getLoginUrlInfo = (parameters: getLoginUrlInfo$Input) => LoginUrlInfo;
 
@@ -99438,7 +99438,7 @@ export type getLoginUrl$DirectInput = {
  * - Use the method getLoginUrlInfo to find whether a prior user confirmation is needed. If an error is returned, then the button must be handled as an ordinary URL button
  *
  * @param {getLoginUrl$Input} parameters {@link getLoginUrl$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getLoginUrl = (parameters: getLoginUrl$Input) => HttpUrl;
 
@@ -99518,7 +99518,7 @@ export type shareUsersWithBot$DirectInput = {
  * Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
  *
  * @param {shareUsersWithBot$Input} parameters {@link shareUsersWithBot$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type shareUsersWithBot = (parameters: shareUsersWithBot$Input) => Ok;
 
@@ -99606,7 +99606,7 @@ export type shareChatWithBot$DirectInput = {
  * Shares a chat after pressing a keyboardButtonTypeRequestChat button with the bot
  *
  * @param {shareChatWithBot$Input} parameters {@link shareChatWithBot$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type shareChatWithBot = (parameters: shareChatWithBot$Input) => Ok;
 
@@ -99686,7 +99686,7 @@ export type getInlineQueryResults$DirectInput = {
  * Sends an inline query to a bot and returns its results. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
  *
  * @param {getInlineQueryResults$Input} parameters {@link getInlineQueryResults$Input}
- * @return {InlineQueryResults} {@link InlineQueryResults}
+ * @returns {InlineQueryResults} {@link InlineQueryResults}
  */
 export type getInlineQueryResults = (
   parameters: getInlineQueryResults$Input
@@ -99780,7 +99780,7 @@ export type answerInlineQuery$DirectInput = {
  * Sets the result of an inline query; for bots only
  *
  * @param {answerInlineQuery$Input} parameters {@link answerInlineQuery$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type answerInlineQuery = (parameters: answerInlineQuery$Input) => Ok;
 
@@ -99824,7 +99824,7 @@ export type searchWebApp$DirectInput = {
  * Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
  *
  * @param {searchWebApp$Input} parameters {@link searchWebApp$Input}
- * @return {FoundWebApp} {@link FoundWebApp}
+ * @returns {FoundWebApp} {@link FoundWebApp}
  */
 export type searchWebApp = (parameters: searchWebApp$Input) => FoundWebApp;
 
@@ -99928,7 +99928,7 @@ export type getWebAppLinkUrl$DirectInput = {
  * Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
  *
  * @param {getWebAppLinkUrl$Input} parameters {@link getWebAppLinkUrl$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getWebAppLinkUrl = (parameters: getWebAppLinkUrl$Input) => HttpUrl;
 
@@ -99996,7 +99996,7 @@ export type getWebAppUrl$DirectInput = {
  * Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, an inlineQueryResultsButtonTypeWebApp button, or an internalLinkTypeSideMenuBot link
  *
  * @param {getWebAppUrl$Input} parameters {@link getWebAppUrl$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getWebAppUrl = (parameters: getWebAppUrl$Input) => HttpUrl;
 
@@ -100052,7 +100052,7 @@ export type sendWebAppData$DirectInput = {
  * Sends data received from a keyboardButtonTypeWebApp Web App to a bot
  *
  * @param {sendWebAppData$Input} parameters {@link sendWebAppData$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendWebAppData = (parameters: sendWebAppData$Input) => Ok;
 
@@ -100162,7 +100162,7 @@ export type openWebApp$DirectInput = {
  * - For each bot, a confirmation alert about data sent to the bot must be shown once
  *
  * @param {openWebApp$Input} parameters {@link openWebApp$Input}
- * @return {WebAppInfo} {@link WebAppInfo}
+ * @returns {WebAppInfo} {@link WebAppInfo}
  */
 export type openWebApp = (parameters: openWebApp$Input) => WebAppInfo;
 
@@ -100194,7 +100194,7 @@ export type closeWebApp$DirectInput = {
  * Informs TDLib that a previously opened Web App was closed
  *
  * @param {closeWebApp$Input} parameters {@link closeWebApp$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type closeWebApp = (parameters: closeWebApp$Input) => Ok;
 
@@ -100238,7 +100238,7 @@ export type answerWebAppQuery$DirectInput = {
  * Sets the result of interaction with a Web App and sends corresponding message on behalf of the user to the chat from which the query originated; for bots only
  *
  * @param {answerWebAppQuery$Input} parameters {@link answerWebAppQuery$Input}
- * @return {SentWebAppMessage} {@link SentWebAppMessage}
+ * @returns {SentWebAppMessage} {@link SentWebAppMessage}
  */
 export type answerWebAppQuery = (
   parameters: answerWebAppQuery$Input
@@ -100296,7 +100296,7 @@ export type getCallbackQueryAnswer$DirectInput = {
  * Sends a callback query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
  *
  * @param {getCallbackQueryAnswer$Input} parameters {@link getCallbackQueryAnswer$Input}
- * @return {CallbackQueryAnswer} {@link CallbackQueryAnswer}
+ * @returns {CallbackQueryAnswer} {@link CallbackQueryAnswer}
  */
 export type getCallbackQueryAnswer = (
   parameters: getCallbackQueryAnswer$Input
@@ -100378,7 +100378,7 @@ export type answerCallbackQuery$DirectInput = {
  * Sets the result of a callback query; for bots only
  *
  * @param {answerCallbackQuery$Input} parameters {@link answerCallbackQuery$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type answerCallbackQuery = (parameters: answerCallbackQuery$Input) => Ok;
 
@@ -100434,7 +100434,7 @@ export type answerShippingQuery$DirectInput = {
  * Sets the result of a shipping query; for bots only
  *
  * @param {answerShippingQuery$Input} parameters {@link answerShippingQuery$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type answerShippingQuery = (parameters: answerShippingQuery$Input) => Ok;
 
@@ -100478,7 +100478,7 @@ export type answerPreCheckoutQuery$DirectInput = {
  * Sets the result of a pre-checkout query; for bots only
  *
  * @param {answerPreCheckoutQuery$Input} parameters {@link answerPreCheckoutQuery$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type answerPreCheckoutQuery = (
   parameters: answerPreCheckoutQuery$Input
@@ -100572,7 +100572,7 @@ export type setGameScore$DirectInput = {
  * Updates the game score of the specified user in the game; for bots only
  *
  * @param {setGameScore$Input} parameters {@link setGameScore$Input}
- * @return {Message} {@link Message}
+ * @returns {Message} {@link Message}
  */
 export type setGameScore = (parameters: setGameScore$Input) => Message;
 
@@ -100652,7 +100652,7 @@ export type setInlineGameScore$DirectInput = {
  * Updates the game score of the specified user in a game; for bots only
  *
  * @param {setInlineGameScore$Input} parameters {@link setInlineGameScore$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setInlineGameScore = (parameters: setInlineGameScore$Input) => Ok;
 
@@ -100708,7 +100708,7 @@ export type getGameHighScores$DirectInput = {
  * Returns the high scores for a game and some part of the high score table in the range of the specified user; for bots only
  *
  * @param {getGameHighScores$Input} parameters {@link getGameHighScores$Input}
- * @return {GameHighScores} {@link GameHighScores}
+ * @returns {GameHighScores} {@link GameHighScores}
  */
 export type getGameHighScores = (
   parameters: getGameHighScores$Input
@@ -100754,7 +100754,7 @@ export type getInlineGameHighScores$DirectInput = {
  * Returns game high scores and some part of the high score table in the range of the specified user; for bots only
  *
  * @param {getInlineGameHighScores$Input} parameters {@link getInlineGameHighScores$Input}
- * @return {GameHighScores} {@link GameHighScores}
+ * @returns {GameHighScores} {@link GameHighScores}
  */
 export type getInlineGameHighScores = (
   parameters: getInlineGameHighScores$Input
@@ -100800,7 +100800,7 @@ export type deleteChatReplyMarkup$DirectInput = {
  * Deletes the default reply markup from a chat. Must be called after a one-time keyboard or a replyMarkupForceReply reply markup has been used. An updateChatReplyMarkup update will be sent if the reply markup is changed
  *
  * @param {deleteChatReplyMarkup$Input} parameters {@link deleteChatReplyMarkup$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteChatReplyMarkup = (parameters: deleteChatReplyMarkup$Input) => Ok;
 
@@ -100868,7 +100868,7 @@ export type sendChatAction$DirectInput = {
  * Sends a notification about user activity in a chat
  *
  * @param {sendChatAction$Input} parameters {@link sendChatAction$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendChatAction = (parameters: sendChatAction$Input) => Ok;
 
@@ -100900,7 +100900,7 @@ export type openChat$DirectInput = {
  * Informs TDLib that the chat is opened by the user. Many useful activities depend on the chat being opened or closed (e.g., in supergroups and channels all updates are received only for opened chats)
  *
  * @param {openChat$Input} parameters {@link openChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type openChat = (parameters: openChat$Input) => Ok;
 
@@ -100932,7 +100932,7 @@ export type closeChat$DirectInput = {
  * Informs TDLib that the chat is closed by the user. Many useful activities depend on the chat being opened or closed
  *
  * @param {closeChat$Input} parameters {@link closeChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type closeChat = (parameters: closeChat$Input) => Ok;
 
@@ -101006,7 +101006,7 @@ export type viewMessages$DirectInput = {
  * - Many useful activities depend on whether the messages are currently being viewed or not (e.g., marking messages as read, incrementing a view counter, updating a view counter, removing deleted messages in supergroups and channels)
  *
  * @param {viewMessages$Input} parameters {@link viewMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type viewMessages = (parameters: viewMessages$Input) => Ok;
 
@@ -101056,7 +101056,7 @@ export type openMessageContent$DirectInput = {
  * - An updateMessageContentOpened update will be generated if something has changed
  *
  * @param {openMessageContent$Input} parameters {@link openMessageContent$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type openMessageContent = (parameters: openMessageContent$Input) => Ok;
 
@@ -101100,7 +101100,7 @@ export type clickAnimatedEmojiMessage$DirectInput = {
  * Informs TDLib that a message with an animated emoji was clicked by the user. Returns a big animated sticker to be played or a 404 error if usual animation needs to be played
  *
  * @param {clickAnimatedEmojiMessage$Input} parameters {@link clickAnimatedEmojiMessage$Input}
- * @return {Sticker} {@link Sticker}
+ * @returns {Sticker} {@link Sticker}
  */
 export type clickAnimatedEmojiMessage = (
   parameters: clickAnimatedEmojiMessage$Input
@@ -101146,7 +101146,7 @@ export type getInternalLink$DirectInput = {
  * Returns an HTTPS or a tg: link with the given type. Can be called before authorization
  *
  * @param {getInternalLink$Input} parameters {@link getInternalLink$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getInternalLink = (parameters: getInternalLink$Input) => HttpUrl;
 
@@ -101178,7 +101178,7 @@ export type getInternalLinkType$DirectInput = {
  * Returns information about the type of internal link. Returns a 404 error if the link is not internal. Can be called before authorization
  *
  * @param {getInternalLinkType$Input} parameters {@link getInternalLinkType$Input}
- * @return {InternalLinkType} {@link InternalLinkType}
+ * @returns {InternalLinkType} {@link InternalLinkType}
  */
 export type getInternalLinkType = (
   parameters: getInternalLinkType$Input
@@ -101212,7 +101212,7 @@ export type getExternalLinkInfo$DirectInput = {
  * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if web page preview is disabled in secret chats
  *
  * @param {getExternalLinkInfo$Input} parameters {@link getExternalLinkInfo$Input}
- * @return {LoginUrlInfo} {@link LoginUrlInfo}
+ * @returns {LoginUrlInfo} {@link LoginUrlInfo}
  */
 export type getExternalLinkInfo = (
   parameters: getExternalLinkInfo$Input
@@ -101258,7 +101258,7 @@ export type getExternalLink$DirectInput = {
  * Returns an HTTP URL which can be used to automatically authorize the current user on a website after clicking an HTTP link. Use the method getExternalLinkInfo to find whether a prior user confirmation is needed
  *
  * @param {getExternalLink$Input} parameters {@link getExternalLink$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getExternalLink = (parameters: getExternalLink$Input) => HttpUrl;
 
@@ -101290,7 +101290,7 @@ export type readAllChatMentions$DirectInput = {
  * Marks all mentions in a chat as read
  *
  * @param {readAllChatMentions$Input} parameters {@link readAllChatMentions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type readAllChatMentions = (parameters: readAllChatMentions$Input) => Ok;
 
@@ -101334,7 +101334,7 @@ export type readAllMessageThreadMentions$DirectInput = {
  * Marks all mentions in a forum topic as read
  *
  * @param {readAllMessageThreadMentions$Input} parameters {@link readAllMessageThreadMentions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type readAllMessageThreadMentions = (
   parameters: readAllMessageThreadMentions$Input
@@ -101368,7 +101368,7 @@ export type readAllChatReactions$DirectInput = {
  * Marks all reactions in a chat or a forum topic as read
  *
  * @param {readAllChatReactions$Input} parameters {@link readAllChatReactions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type readAllChatReactions = (parameters: readAllChatReactions$Input) => Ok;
 
@@ -101412,7 +101412,7 @@ export type readAllMessageThreadReactions$DirectInput = {
  * Marks all reactions in a forum topic as read
  *
  * @param {readAllMessageThreadReactions$Input} parameters {@link readAllMessageThreadReactions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type readAllMessageThreadReactions = (
   parameters: readAllMessageThreadReactions$Input
@@ -101458,7 +101458,7 @@ export type createPrivateChat$DirectInput = {
  * Returns an existing chat corresponding to a given user
  *
  * @param {createPrivateChat$Input} parameters {@link createPrivateChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type createPrivateChat = (parameters: createPrivateChat$Input) => Chat;
 
@@ -101502,7 +101502,7 @@ export type createBasicGroupChat$DirectInput = {
  * Returns an existing chat corresponding to a known basic group
  *
  * @param {createBasicGroupChat$Input} parameters {@link createBasicGroupChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type createBasicGroupChat = (parameters: createBasicGroupChat$Input) => Chat;
 
@@ -101546,7 +101546,7 @@ export type createSupergroupChat$DirectInput = {
  * Returns an existing chat corresponding to a known supergroup or channel
  *
  * @param {createSupergroupChat$Input} parameters {@link createSupergroupChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type createSupergroupChat = (parameters: createSupergroupChat$Input) => Chat;
 
@@ -101578,7 +101578,7 @@ export type createSecretChat$DirectInput = {
  * Returns an existing chat corresponding to a known secret chat
  *
  * @param {createSecretChat$Input} parameters {@link createSecretChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type createSecretChat = (parameters: createSecretChat$Input) => Chat;
 
@@ -101634,7 +101634,7 @@ export type createNewBasicGroupChat$DirectInput = {
  * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
  *
  * @param {createNewBasicGroupChat$Input} parameters {@link createNewBasicGroupChat$Input}
- * @return {CreatedBasicGroupChat} {@link CreatedBasicGroupChat}
+ * @returns {CreatedBasicGroupChat} {@link CreatedBasicGroupChat}
  */
 export type createNewBasicGroupChat = (
   parameters: createNewBasicGroupChat$Input
@@ -101740,7 +101740,7 @@ export type createNewSupergroupChat$DirectInput = {
  * Creates a new supergroup or channel and sends a corresponding messageSupergroupChatCreate. Returns the newly created chat
  *
  * @param {createNewSupergroupChat$Input} parameters {@link createNewSupergroupChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type createNewSupergroupChat = (
   parameters: createNewSupergroupChat$Input
@@ -101774,7 +101774,7 @@ export type createNewSecretChat$DirectInput = {
  * Creates a new secret chat. Returns the newly created chat
  *
  * @param {createNewSecretChat$Input} parameters {@link createNewSecretChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type createNewSecretChat = (parameters: createNewSecretChat$Input) => Chat;
 
@@ -101806,7 +101806,7 @@ export type upgradeBasicGroupChatToSupergroupChat$DirectInput = {
  * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
  *
  * @param {upgradeBasicGroupChatToSupergroupChat$Input} parameters {@link upgradeBasicGroupChatToSupergroupChat$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type upgradeBasicGroupChatToSupergroupChat = (
   parameters: upgradeBasicGroupChatToSupergroupChat$Input
@@ -101840,7 +101840,7 @@ export type getChatListsToAddChat$DirectInput = {
  * Returns chat lists to which the chat can be added. This is an offline request
  *
  * @param {getChatListsToAddChat$Input} parameters {@link getChatListsToAddChat$Input}
- * @return {ChatLists} {@link ChatLists}
+ * @returns {ChatLists} {@link ChatLists}
  */
 export type getChatListsToAddChat = (
   parameters: getChatListsToAddChat$Input
@@ -101886,7 +101886,7 @@ export type addChatToList$DirectInput = {
  * Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive chat lists, so it is automatically removed from another one if needed
  *
  * @param {addChatToList$Input} parameters {@link addChatToList$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addChatToList = (parameters: addChatToList$Input) => Ok;
 
@@ -101918,7 +101918,7 @@ export type getChatFolder$DirectInput = {
  * Returns information about a chat folder by its identifier
  *
  * @param {getChatFolder$Input} parameters {@link getChatFolder$Input}
- * @return {ChatFolder} {@link ChatFolder}
+ * @returns {ChatFolder} {@link ChatFolder}
  */
 export type getChatFolder = (parameters: getChatFolder$Input) => ChatFolder;
 
@@ -101950,7 +101950,7 @@ export type createChatFolder$DirectInput = {
  * Creates new chat folder. Returns information about the created chat folder. There can be up to getOption("chat_folder_count_max") chat folders, but the limit can be increased with Telegram Premium
  *
  * @param {createChatFolder$Input} parameters {@link createChatFolder$Input}
- * @return {ChatFolderInfo} {@link ChatFolderInfo}
+ * @returns {ChatFolderInfo} {@link ChatFolderInfo}
  */
 export type createChatFolder = (
   parameters: createChatFolder$Input
@@ -101996,7 +101996,7 @@ export type editChatFolder$DirectInput = {
  * Edits existing chat folder. Returns information about the edited chat folder
  *
  * @param {editChatFolder$Input} parameters {@link editChatFolder$Input}
- * @return {ChatFolderInfo} {@link ChatFolderInfo}
+ * @returns {ChatFolderInfo} {@link ChatFolderInfo}
  */
 export type editChatFolder = (parameters: editChatFolder$Input) => ChatFolderInfo;
 
@@ -102040,7 +102040,7 @@ export type deleteChatFolder$DirectInput = {
  * Deletes existing chat folder
  *
  * @param {deleteChatFolder$Input} parameters {@link deleteChatFolder$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteChatFolder = (parameters: deleteChatFolder$Input) => Ok;
 
@@ -102072,7 +102072,7 @@ export type getChatFolderChatsToLeave$DirectInput = {
  * Returns identifiers of pinned or always included chats from a chat folder, which are suggested to be left when the chat folder is deleted
  *
  * @param {getChatFolderChatsToLeave$Input} parameters {@link getChatFolderChatsToLeave$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getChatFolderChatsToLeave = (
   parameters: getChatFolderChatsToLeave$Input
@@ -102106,7 +102106,7 @@ export type getChatFolderChatCount$DirectInput = {
  * Returns approximate number of chats in a being created chat folder. Main and archive chat lists must be fully preloaded for this function to work correctly
  *
  * @param {getChatFolderChatCount$Input} parameters {@link getChatFolderChatCount$Input}
- * @return {Count} {@link Count}
+ * @returns {Count} {@link Count}
  */
 export type getChatFolderChatCount = (
   parameters: getChatFolderChatCount$Input
@@ -102152,7 +102152,7 @@ export type reorderChatFolders$DirectInput = {
  * Changes the order of chat folders
  *
  * @param {reorderChatFolders$Input} parameters {@link reorderChatFolders$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reorderChatFolders = (parameters: reorderChatFolders$Input) => Ok;
 
@@ -102184,7 +102184,7 @@ export type toggleChatFolderTags$DirectInput = {
  * Toggles whether chat folder tags are enabled
  *
  * @param {toggleChatFolderTags$Input} parameters {@link toggleChatFolderTags$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleChatFolderTags = (parameters: toggleChatFolderTags$Input) => Ok;
 
@@ -102204,7 +102204,7 @@ export type getRecommendedChatFolders$DirectInput = {};
  * Returns recommended chat folders for the current user
  *
  * @param {getRecommendedChatFolders$Input} parameters {@link getRecommendedChatFolders$Input}
- * @return {RecommendedChatFolders} {@link RecommendedChatFolders}
+ * @returns {RecommendedChatFolders} {@link RecommendedChatFolders}
  */
 export type getRecommendedChatFolders = (
   parameters: getRecommendedChatFolders$Input
@@ -102238,7 +102238,7 @@ export type getChatFolderDefaultIconName$DirectInput = {
  * Returns default icon name for a folder. Can be called synchronously
  *
  * @param {getChatFolderDefaultIconName$Input} parameters {@link getChatFolderDefaultIconName$Input}
- * @return {ChatFolderIcon} {@link ChatFolderIcon}
+ * @returns {ChatFolderIcon} {@link ChatFolderIcon}
  */
 export type getChatFolderDefaultIconName = (
   parameters: getChatFolderDefaultIconName$Input
@@ -102272,7 +102272,7 @@ export type getChatsForChatFolderInviteLink$DirectInput = {
  * Returns identifiers of chats from a chat folder, suitable for adding to a chat folder invite link
  *
  * @param {getChatsForChatFolderInviteLink$Input} parameters {@link getChatsForChatFolderInviteLink$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getChatsForChatFolderInviteLink = (
   parameters: getChatsForChatFolderInviteLink$Input
@@ -102330,7 +102330,7 @@ export type createChatFolderInviteLink$DirectInput = {
  * Creates a new invite link for a chat folder. A link can be created for a chat folder if it has only pinned and included chats
  *
  * @param {createChatFolderInviteLink$Input} parameters {@link createChatFolderInviteLink$Input}
- * @return {ChatFolderInviteLink} {@link ChatFolderInviteLink}
+ * @returns {ChatFolderInviteLink} {@link ChatFolderInviteLink}
  */
 export type createChatFolderInviteLink = (
   parameters: createChatFolderInviteLink$Input
@@ -102364,7 +102364,7 @@ export type getChatFolderInviteLinks$DirectInput = {
  * Returns invite links created by the current user for a shareable chat folder
  *
  * @param {getChatFolderInviteLinks$Input} parameters {@link getChatFolderInviteLinks$Input}
- * @return {ChatFolderInviteLinks} {@link ChatFolderInviteLinks}
+ * @returns {ChatFolderInviteLinks} {@link ChatFolderInviteLinks}
  */
 export type getChatFolderInviteLinks = (
   parameters: getChatFolderInviteLinks$Input
@@ -102434,7 +102434,7 @@ export type editChatFolderInviteLink$DirectInput = {
  * Edits an invite link for a chat folder
  *
  * @param {editChatFolderInviteLink$Input} parameters {@link editChatFolderInviteLink$Input}
- * @return {ChatFolderInviteLink} {@link ChatFolderInviteLink}
+ * @returns {ChatFolderInviteLink} {@link ChatFolderInviteLink}
  */
 export type editChatFolderInviteLink = (
   parameters: editChatFolderInviteLink$Input
@@ -102480,7 +102480,7 @@ export type deleteChatFolderInviteLink$DirectInput = {
  * Deletes an invite link for a chat folder
  *
  * @param {deleteChatFolderInviteLink$Input} parameters {@link deleteChatFolderInviteLink$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteChatFolderInviteLink = (
   parameters: deleteChatFolderInviteLink$Input
@@ -102514,7 +102514,7 @@ export type checkChatFolderInviteLink$DirectInput = {
  * Checks the validity of an invite link for a chat folder and returns information about the corresponding chat folder
  *
  * @param {checkChatFolderInviteLink$Input} parameters {@link checkChatFolderInviteLink$Input}
- * @return {ChatFolderInviteLinkInfo} {@link ChatFolderInviteLinkInfo}
+ * @returns {ChatFolderInviteLinkInfo} {@link ChatFolderInviteLinkInfo}
  */
 export type checkChatFolderInviteLink = (
   parameters: checkChatFolderInviteLink$Input
@@ -102560,7 +102560,7 @@ export type addChatFolderByInviteLink$DirectInput = {
  * Adds a chat folder by an invite link
  *
  * @param {addChatFolderByInviteLink$Input} parameters {@link addChatFolderByInviteLink$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addChatFolderByInviteLink = (
   parameters: addChatFolderByInviteLink$Input
@@ -102594,7 +102594,7 @@ export type getChatFolderNewChats$DirectInput = {
  * Returns new chats added to a shareable chat folder by its owner. The method must be called at most once in getOption("chat_folder_new_chats_update_period") for the given chat folder
  *
  * @param {getChatFolderNewChats$Input} parameters {@link getChatFolderNewChats$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getChatFolderNewChats = (
   parameters: getChatFolderNewChats$Input
@@ -102640,7 +102640,7 @@ export type processChatFolderNewChats$DirectInput = {
  * Process new chats added to a shareable chat folder by its owner
  *
  * @param {processChatFolderNewChats$Input} parameters {@link processChatFolderNewChats$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type processChatFolderNewChats = (
   parameters: processChatFolderNewChats$Input
@@ -102662,7 +102662,7 @@ export type getArchiveChatListSettings$DirectInput = {};
  * Returns settings for automatic moving of chats to and from the Archive chat lists
  *
  * @param {getArchiveChatListSettings$Input} parameters {@link getArchiveChatListSettings$Input}
- * @return {ArchiveChatListSettings} {@link ArchiveChatListSettings}
+ * @returns {ArchiveChatListSettings} {@link ArchiveChatListSettings}
  */
 export type getArchiveChatListSettings = (
   parameters: getArchiveChatListSettings$Input
@@ -102696,7 +102696,7 @@ export type setArchiveChatListSettings$DirectInput = {
  * Changes settings for automatic moving of chats to and from the Archive chat lists
  *
  * @param {setArchiveChatListSettings$Input} parameters {@link setArchiveChatListSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setArchiveChatListSettings = (
   parameters: setArchiveChatListSettings$Input
@@ -102742,7 +102742,7 @@ export type setChatTitle$DirectInput = {
  * Changes the chat title. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
  *
  * @param {setChatTitle$Input} parameters {@link setChatTitle$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatTitle = (parameters: setChatTitle$Input) => Ok;
 
@@ -102786,7 +102786,7 @@ export type setChatPhoto$DirectInput = {
  * Changes the photo of a chat. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
  *
  * @param {setChatPhoto$Input} parameters {@link setChatPhoto$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatPhoto = (parameters: setChatPhoto$Input) => Ok;
 
@@ -102842,7 +102842,7 @@ export type setChatAccentColor$DirectInput = {
  * Changes accent color and background custom emoji of a channel chat. Requires can_change_info administrator right
  *
  * @param {setChatAccentColor$Input} parameters {@link setChatAccentColor$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatAccentColor = (parameters: setChatAccentColor$Input) => Ok;
 
@@ -102902,7 +102902,7 @@ export type setChatProfileAccentColor$DirectInput = {
  * Changes accent color and background custom emoji for profile of a supergroup or channel chat. Requires can_change_info administrator right
  *
  * @param {setChatProfileAccentColor$Input} parameters {@link setChatProfileAccentColor$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatProfileAccentColor = (
   parameters: setChatProfileAccentColor$Input
@@ -102954,7 +102954,7 @@ export type setChatMessageAutoDeleteTime$DirectInput = {
  * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
  *
  * @param {setChatMessageAutoDeleteTime$Input} parameters {@link setChatMessageAutoDeleteTime$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatMessageAutoDeleteTime = (
   parameters: setChatMessageAutoDeleteTime$Input
@@ -103000,7 +103000,7 @@ export type setChatEmojiStatus$DirectInput = {
  * Changes the emoji status of a chat. Use chatBoostLevelFeatures.can_set_emoji_status to check whether an emoji status can be set. Requires can_change_info administrator right
  *
  * @param {setChatEmojiStatus$Input} parameters {@link setChatEmojiStatus$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatEmojiStatus = (parameters: setChatEmojiStatus$Input) => Ok;
 
@@ -103044,7 +103044,7 @@ export type setChatPermissions$DirectInput = {
  * Changes the chat members permissions. Supported only for basic groups and supergroups. Requires can_restrict_members administrator right
  *
  * @param {setChatPermissions$Input} parameters {@link setChatPermissions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatPermissions = (parameters: setChatPermissions$Input) => Ok;
 
@@ -103128,7 +103128,7 @@ export type setChatBackground$DirectInput = {
  * Sets the background in a specific chat. Supported only in private and secret chats with non-deleted users, and in chats with sufficient boost level and can_change_info administrator right
  *
  * @param {setChatBackground$Input} parameters {@link setChatBackground$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatBackground = (parameters: setChatBackground$Input) => Ok;
 
@@ -103176,7 +103176,7 @@ export type deleteChatBackground$DirectInput = {
  * Deletes background in a specific chat
  *
  * @param {deleteChatBackground$Input} parameters {@link deleteChatBackground$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteChatBackground = (parameters: deleteChatBackground$Input) => Ok;
 
@@ -103220,7 +103220,7 @@ export type setChatTheme$DirectInput = {
  * Changes the chat theme. Supported only in private and secret chats
  *
  * @param {setChatTheme$Input} parameters {@link setChatTheme$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatTheme = (parameters: setChatTheme$Input) => Ok;
 
@@ -103276,7 +103276,7 @@ export type setChatDraftMessage$DirectInput = {
  * Changes the draft message in a chat
  *
  * @param {setChatDraftMessage$Input} parameters {@link setChatDraftMessage$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatDraftMessage = (parameters: setChatDraftMessage$Input) => Ok;
 
@@ -103320,7 +103320,7 @@ export type setChatNotificationSettings$DirectInput = {
  * Changes the notification settings of a chat. Notification settings of a chat with the current user (Saved Messages) can't be changed
  *
  * @param {setChatNotificationSettings$Input} parameters {@link setChatNotificationSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatNotificationSettings = (
   parameters: setChatNotificationSettings$Input
@@ -103366,7 +103366,7 @@ export type toggleChatHasProtectedContent$DirectInput = {
  * Changes the ability of users to save, forward, or copy chat content. Supported only for basic groups, supergroups and channels. Requires owner privileges
  *
  * @param {toggleChatHasProtectedContent$Input} parameters {@link toggleChatHasProtectedContent$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleChatHasProtectedContent = (
   parameters: toggleChatHasProtectedContent$Input
@@ -103412,7 +103412,7 @@ export type toggleChatViewAsTopics$DirectInput = {
  * Changes the view_as_topics setting of a forum chat or Saved Messages
  *
  * @param {toggleChatViewAsTopics$Input} parameters {@link toggleChatViewAsTopics$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleChatViewAsTopics = (
   parameters: toggleChatViewAsTopics$Input
@@ -103458,7 +103458,7 @@ export type toggleChatIsTranslatable$DirectInput = {
  * Changes the translatable state of a chat
  *
  * @param {toggleChatIsTranslatable$Input} parameters {@link toggleChatIsTranslatable$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleChatIsTranslatable = (
   parameters: toggleChatIsTranslatable$Input
@@ -103504,7 +103504,7 @@ export type toggleChatIsMarkedAsUnread$DirectInput = {
  * Changes the marked as unread state of a chat
  *
  * @param {toggleChatIsMarkedAsUnread$Input} parameters {@link toggleChatIsMarkedAsUnread$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleChatIsMarkedAsUnread = (
   parameters: toggleChatIsMarkedAsUnread$Input
@@ -103550,7 +103550,7 @@ export type toggleChatDefaultDisableNotification$DirectInput = {
  * Changes the value of the default disable_notification parameter, used when a message is sent to a chat
  *
  * @param {toggleChatDefaultDisableNotification$Input} parameters {@link toggleChatDefaultDisableNotification$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleChatDefaultDisableNotification = (
   parameters: toggleChatDefaultDisableNotification$Input
@@ -103596,7 +103596,7 @@ export type setChatAvailableReactions$DirectInput = {
  * Changes reactions, available in a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
  *
  * @param {setChatAvailableReactions$Input} parameters {@link setChatAvailableReactions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatAvailableReactions = (
   parameters: setChatAvailableReactions$Input
@@ -103642,7 +103642,7 @@ export type setChatClientData$DirectInput = {
  * Changes application-specific data associated with a chat
  *
  * @param {setChatClientData$Input} parameters {@link setChatClientData$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatClientData = (parameters: setChatClientData$Input) => Ok;
 
@@ -103686,7 +103686,7 @@ export type setChatDescription$DirectInput = {
  * Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
  *
  * @param {setChatDescription$Input} parameters {@link setChatDescription$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatDescription = (parameters: setChatDescription$Input) => Ok;
 
@@ -103734,7 +103734,7 @@ export type setChatDiscussionGroup$DirectInput = {
  * Changes the discussion group of a channel chat; requires can_change_info administrator right in the channel if it is specified
  *
  * @param {setChatDiscussionGroup$Input} parameters {@link setChatDiscussionGroup$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatDiscussionGroup = (
   parameters: setChatDiscussionGroup$Input
@@ -103780,7 +103780,7 @@ export type setChatLocation$DirectInput = {
  * Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
  *
  * @param {setChatLocation$Input} parameters {@link setChatLocation$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatLocation = (parameters: setChatLocation$Input) => Ok;
 
@@ -103824,7 +103824,7 @@ export type setChatSlowModeDelay$DirectInput = {
  * Changes the slow mode delay of a chat. Available only for supergroups; requires can_restrict_members right
  *
  * @param {setChatSlowModeDelay$Input} parameters {@link setChatSlowModeDelay$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatSlowModeDelay = (parameters: setChatSlowModeDelay$Input) => Ok;
 
@@ -103892,7 +103892,7 @@ export type pinChatMessage$DirectInput = {
  * Pins a message in a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
  *
  * @param {pinChatMessage$Input} parameters {@link pinChatMessage$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type pinChatMessage = (parameters: pinChatMessage$Input) => Ok;
 
@@ -103936,7 +103936,7 @@ export type unpinChatMessage$DirectInput = {
  * Removes a pinned message from a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
  *
  * @param {unpinChatMessage$Input} parameters {@link unpinChatMessage$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type unpinChatMessage = (parameters: unpinChatMessage$Input) => Ok;
 
@@ -103968,7 +103968,7 @@ export type unpinAllChatMessages$DirectInput = {
  * Removes all pinned messages from a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
  *
  * @param {unpinAllChatMessages$Input} parameters {@link unpinAllChatMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type unpinAllChatMessages = (parameters: unpinAllChatMessages$Input) => Ok;
 
@@ -104012,7 +104012,7 @@ export type unpinAllMessageThreadMessages$DirectInput = {
  * Removes all pinned messages from a forum topic; requires can_pin_messages member right in the supergroup
  *
  * @param {unpinAllMessageThreadMessages$Input} parameters {@link unpinAllMessageThreadMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type unpinAllMessageThreadMessages = (
   parameters: unpinAllMessageThreadMessages$Input
@@ -104046,7 +104046,7 @@ export type joinChat$DirectInput = {
  * Adds the current user as a new member to a chat. Private and secret chats can't be joined using this method. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
  *
  * @param {joinChat$Input} parameters {@link joinChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type joinChat = (parameters: joinChat$Input) => Ok;
 
@@ -104078,7 +104078,7 @@ export type leaveChat$DirectInput = {
  * Removes the current user from chat members. Private and secret chats can't be left using this method
  *
  * @param {leaveChat$Input} parameters {@link leaveChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type leaveChat = (parameters: leaveChat$Input) => Ok;
 
@@ -104134,7 +104134,7 @@ export type addChatMember$DirectInput = {
  * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
  *
  * @param {addChatMember$Input} parameters {@link addChatMember$Input}
- * @return {FailedToAddMembers} {@link FailedToAddMembers}
+ * @returns {FailedToAddMembers} {@link FailedToAddMembers}
  */
 export type addChatMember = (parameters: addChatMember$Input) => FailedToAddMembers;
 
@@ -104184,7 +104184,7 @@ export type addChatMembers$DirectInput = {
  * - This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members. Returns information about members that weren't added
  *
  * @param {addChatMembers$Input} parameters {@link addChatMembers$Input}
- * @return {FailedToAddMembers} {@link FailedToAddMembers}
+ * @returns {FailedToAddMembers} {@link FailedToAddMembers}
  */
 export type addChatMembers = (
   parameters: addChatMembers$Input
@@ -104254,7 +104254,7 @@ export type setChatMemberStatus$DirectInput = {
  * - Use addChatMember or banChatMember if some additional parameters needs to be passed
  *
  * @param {setChatMemberStatus$Input} parameters {@link setChatMemberStatus$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatMemberStatus = (parameters: setChatMemberStatus$Input) => Ok;
 
@@ -104322,7 +104322,7 @@ export type banChatMember$DirectInput = {
  * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
  *
  * @param {banChatMember$Input} parameters {@link banChatMember$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type banChatMember = (parameters: banChatMember$Input) => Ok;
 
@@ -104342,7 +104342,7 @@ export type canTransferOwnership$DirectInput = {};
  * Checks whether the current session can be used to transfer a chat ownership to another user
  *
  * @param {canTransferOwnership$Input} parameters {@link canTransferOwnership$Input}
- * @return {CanTransferOwnershipResult} {@link CanTransferOwnershipResult}
+ * @returns {CanTransferOwnershipResult} {@link CanTransferOwnershipResult}
  */
 export type canTransferOwnership = (
   parameters: canTransferOwnership$Input
@@ -104400,7 +104400,7 @@ export type transferChatOwnership$DirectInput = {
  * Changes the owner of a chat; requires owner privileges in the chat. Use the method canTransferOwnership to check whether the ownership can be transferred from the current session. Available only for supergroups and channel chats
  *
  * @param {transferChatOwnership$Input} parameters {@link transferChatOwnership$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type transferChatOwnership = (parameters: transferChatOwnership$Input) => Ok;
 
@@ -104444,7 +104444,7 @@ export type getChatMember$DirectInput = {
  * Returns information about a single member of a chat
  *
  * @param {getChatMember$Input} parameters {@link getChatMember$Input}
- * @return {ChatMember} {@link ChatMember}
+ * @returns {ChatMember} {@link ChatMember}
  */
 export type getChatMember = (parameters: getChatMember$Input) => ChatMember;
 
@@ -104512,7 +104512,7 @@ export type searchChatMembers$DirectInput = {
  * Searches for a specified query in the first name, last name and usernames of the members of a specified chat. Requires administrator rights if the chat is a channel
  *
  * @param {searchChatMembers$Input} parameters {@link searchChatMembers$Input}
- * @return {ChatMembers} {@link ChatMembers}
+ * @returns {ChatMembers} {@link ChatMembers}
  */
 export type searchChatMembers = (parameters: searchChatMembers$Input) => ChatMembers;
 
@@ -104544,7 +104544,7 @@ export type getChatAdministrators$DirectInput = {
  * Returns a list of administrators of the chat with their custom titles
  *
  * @param {getChatAdministrators$Input} parameters {@link getChatAdministrators$Input}
- * @return {ChatAdministrators} {@link ChatAdministrators}
+ * @returns {ChatAdministrators} {@link ChatAdministrators}
  */
 export type getChatAdministrators = (
   parameters: getChatAdministrators$Input
@@ -104578,7 +104578,7 @@ export type clearAllDraftMessages$DirectInput = {
  * Clears message drafts in all chats
  *
  * @param {clearAllDraftMessages$Input} parameters {@link clearAllDraftMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clearAllDraftMessages = (parameters: clearAllDraftMessages$Input) => Ok;
 
@@ -104610,7 +104610,7 @@ export type getSavedNotificationSound$DirectInput = {
  * Returns saved notification sound by its identifier. Returns a 404 error if there is no saved notification sound with the specified identifier
  *
  * @param {getSavedNotificationSound$Input} parameters {@link getSavedNotificationSound$Input}
- * @return {NotificationSounds} {@link NotificationSounds}
+ * @returns {NotificationSounds} {@link NotificationSounds}
  */
 export type getSavedNotificationSound = (
   parameters: getSavedNotificationSound$Input
@@ -104632,7 +104632,7 @@ export type getSavedNotificationSounds$DirectInput = {};
  * Returns the list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
  *
  * @param {getSavedNotificationSounds$Input} parameters {@link getSavedNotificationSounds$Input}
- * @return {NotificationSounds} {@link NotificationSounds}
+ * @returns {NotificationSounds} {@link NotificationSounds}
  */
 export type getSavedNotificationSounds = (
   parameters: getSavedNotificationSounds$Input
@@ -104666,7 +104666,7 @@ export type addSavedNotificationSound$DirectInput = {
  * Adds a new notification sound to the list of saved notification sounds. The new notification sound is added to the top of the list. If it is already in the list, its position isn't changed
  *
  * @param {addSavedNotificationSound$Input} parameters {@link addSavedNotificationSound$Input}
- * @return {NotificationSound} {@link NotificationSound}
+ * @returns {NotificationSound} {@link NotificationSound}
  */
 export type addSavedNotificationSound = (
   parameters: addSavedNotificationSound$Input
@@ -104700,7 +104700,7 @@ export type removeSavedNotificationSound$DirectInput = {
  * Removes a notification sound from the list of saved notification sounds
  *
  * @param {removeSavedNotificationSound$Input} parameters {@link removeSavedNotificationSound$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeSavedNotificationSound = (
   parameters: removeSavedNotificationSound$Input
@@ -104746,7 +104746,7 @@ export type getChatNotificationSettingsExceptions$DirectInput = {
  * Returns the list of chats with non-default notification settings for new messages
  *
  * @param {getChatNotificationSettingsExceptions$Input} parameters {@link getChatNotificationSettingsExceptions$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getChatNotificationSettingsExceptions = (
   parameters: getChatNotificationSettingsExceptions$Input
@@ -104780,7 +104780,7 @@ export type getScopeNotificationSettings$DirectInput = {
  * Returns the notification settings for chats of a given type
  *
  * @param {getScopeNotificationSettings$Input} parameters {@link getScopeNotificationSettings$Input}
- * @return {ScopeNotificationSettings} {@link ScopeNotificationSettings}
+ * @returns {ScopeNotificationSettings} {@link ScopeNotificationSettings}
  */
 export type getScopeNotificationSettings = (
   parameters: getScopeNotificationSettings$Input
@@ -104826,7 +104826,7 @@ export type setScopeNotificationSettings$DirectInput = {
  * Changes notification settings for chats of a given type
  *
  * @param {setScopeNotificationSettings$Input} parameters {@link setScopeNotificationSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setScopeNotificationSettings = (
   parameters: setScopeNotificationSettings$Input
@@ -104860,7 +104860,7 @@ export type setReactionNotificationSettings$DirectInput = {
  * Changes notification settings for reactions
  *
  * @param {setReactionNotificationSettings$Input} parameters {@link setReactionNotificationSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setReactionNotificationSettings = (
   parameters: setReactionNotificationSettings$Input
@@ -104882,7 +104882,7 @@ export type resetAllNotificationSettings$DirectInput = {};
  * Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
  *
  * @param {resetAllNotificationSettings$Input} parameters {@link resetAllNotificationSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type resetAllNotificationSettings = (
   parameters: resetAllNotificationSettings$Input
@@ -104940,7 +104940,7 @@ export type toggleChatIsPinned$DirectInput = {
  * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
  *
  * @param {toggleChatIsPinned$Input} parameters {@link toggleChatIsPinned$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleChatIsPinned = (parameters: toggleChatIsPinned$Input) => Ok;
 
@@ -104984,7 +104984,7 @@ export type setPinnedChats$DirectInput = {
  * Changes the order of pinned chats
  *
  * @param {setPinnedChats$Input} parameters {@link setPinnedChats$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setPinnedChats = (parameters: setPinnedChats$Input) => Ok;
 
@@ -105016,7 +105016,7 @@ export type readChatList$DirectInput = {
  * Traverse all chats in a chat list and marks all messages in the chats as read
  *
  * @param {readChatList$Input} parameters {@link readChatList$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type readChatList = (parameters: readChatList$Input) => Ok;
 
@@ -105072,7 +105072,7 @@ export type getStory$DirectInput = {
  * Returns a story
  *
  * @param {getStory$Input} parameters {@link getStory$Input}
- * @return {Story} {@link Story}
+ * @returns {Story} {@link Story}
  */
 export type getStory = (parameters: getStory$Input) => Story;
 
@@ -105092,7 +105092,7 @@ export type getChatsToSendStories$DirectInput = {};
  * Returns supergroup and channel chats in which the current user has the right to post stories. The chats must be rechecked with canSendStory before actually trying to post a story there
  *
  * @param {getChatsToSendStories$Input} parameters {@link getChatsToSendStories$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getChatsToSendStories = (
   parameters: getChatsToSendStories$Input
@@ -105126,7 +105126,7 @@ export type canSendStory$DirectInput = {
  * Checks whether the current user can send a story on behalf of a chat; requires can_post_stories right for supergroup and channel chats
  *
  * @param {canSendStory$Input} parameters {@link canSendStory$Input}
- * @return {CanSendStoryResult} {@link CanSendStoryResult}
+ * @returns {CanSendStoryResult} {@link CanSendStoryResult}
  */
 export type canSendStory = (parameters: canSendStory$Input) => CanSendStoryResult;
 
@@ -105254,7 +105254,7 @@ export type sendStory$DirectInput = {
  * Sends a new story to a chat; requires can_post_stories right for supergroup and channel chats. Returns a temporary story
  *
  * @param {sendStory$Input} parameters {@link sendStory$Input}
- * @return {Story} {@link Story}
+ * @returns {Story} {@link Story}
  */
 export type sendStory = (parameters: sendStory$Input) => Story;
 
@@ -105334,7 +105334,7 @@ export type editStory$DirectInput = {
  * Changes content and caption of a story. Can be called only if story.can_be_edited == true
  *
  * @param {editStory$Input} parameters {@link editStory$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editStory = (parameters: editStory$Input) => Ok;
 
@@ -105378,7 +105378,7 @@ export type setStoryPrivacySettings$DirectInput = {
  * Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_be_edited == true
  *
  * @param {setStoryPrivacySettings$Input} parameters {@link setStoryPrivacySettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setStoryPrivacySettings = (
   parameters: setStoryPrivacySettings$Input
@@ -105436,7 +105436,7 @@ export type toggleStoryIsPostedToChatPage$DirectInput = {
  * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
  *
  * @param {toggleStoryIsPostedToChatPage$Input} parameters {@link toggleStoryIsPostedToChatPage$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleStoryIsPostedToChatPage = (
   parameters: toggleStoryIsPostedToChatPage$Input
@@ -105482,7 +105482,7 @@ export type deleteStory$DirectInput = {
  * Deletes a previously sent story. Can be called only if story.can_be_deleted == true
  *
  * @param {deleteStory$Input} parameters {@link deleteStory$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteStory = (parameters: deleteStory$Input) => Ok;
 
@@ -105502,7 +105502,7 @@ export type getStoryNotificationSettingsExceptions$DirectInput = {};
  * Returns the list of chats with non-default notification settings for stories
  *
  * @param {getStoryNotificationSettingsExceptions$Input} parameters {@link getStoryNotificationSettingsExceptions$Input}
- * @return {Chats} {@link Chats}
+ * @returns {Chats} {@link Chats}
  */
 export type getStoryNotificationSettingsExceptions = (
   parameters: getStoryNotificationSettingsExceptions$Input
@@ -105542,7 +105542,7 @@ export type loadActiveStories$DirectInput = {
  * - the pair (active_stories.order, active_stories.story_sender_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
  *
  * @param {loadActiveStories$Input} parameters {@link loadActiveStories$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type loadActiveStories = (parameters: loadActiveStories$Input) => Ok;
 
@@ -105586,7 +105586,7 @@ export type setChatActiveStoriesList$DirectInput = {
  * Changes story list in which stories from the chat are shown
  *
  * @param {setChatActiveStoriesList$Input} parameters {@link setChatActiveStoriesList$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatActiveStoriesList = (
   parameters: setChatActiveStoriesList$Input
@@ -105620,7 +105620,7 @@ export type getChatActiveStories$DirectInput = {
  * Returns the list of active stories posted by the given chat
  *
  * @param {getChatActiveStories$Input} parameters {@link getChatActiveStories$Input}
- * @return {ChatActiveStories} {@link ChatActiveStories}
+ * @returns {ChatActiveStories} {@link ChatActiveStories}
  */
 export type getChatActiveStories = (
   parameters: getChatActiveStories$Input
@@ -105688,7 +105688,7 @@ export type getChatPostedToChatPageStories$DirectInput = {
  * - Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
  *
  * @param {getChatPostedToChatPageStories$Input} parameters {@link getChatPostedToChatPageStories$Input}
- * @return {Stories} {@link Stories}
+ * @returns {Stories} {@link Stories}
  */
 export type getChatPostedToChatPageStories = (
   parameters: getChatPostedToChatPageStories$Input
@@ -105756,7 +105756,7 @@ export type getChatArchivedStories$DirectInput = {
  * - The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
  *
  * @param {getChatArchivedStories$Input} parameters {@link getChatArchivedStories$Input}
- * @return {Stories} {@link Stories}
+ * @returns {Stories} {@link Stories}
  */
 export type getChatArchivedStories = (
   parameters: getChatArchivedStories$Input
@@ -105802,7 +105802,7 @@ export type setChatPinnedStories$DirectInput = {
  * Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
  *
  * @param {setChatPinnedStories$Input} parameters {@link setChatPinnedStories$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setChatPinnedStories = (parameters: setChatPinnedStories$Input) => Ok;
 
@@ -105846,7 +105846,7 @@ export type openStory$DirectInput = {
  * Informs TDLib that a story is opened and is being viewed by the user
  *
  * @param {openStory$Input} parameters {@link openStory$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type openStory = (parameters: openStory$Input) => Ok;
 
@@ -105890,7 +105890,7 @@ export type closeStory$DirectInput = {
  * Informs TDLib that a story is closed by the user
  *
  * @param {closeStory$Input} parameters {@link closeStory$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type closeStory = (parameters: closeStory$Input) => Ok;
 
@@ -105922,7 +105922,7 @@ export type getStoryAvailableReactions$DirectInput = {
  * Returns reactions, which can be chosen for a story
  *
  * @param {getStoryAvailableReactions$Input} parameters {@link getStoryAvailableReactions$Input}
- * @return {AvailableReactions} {@link AvailableReactions}
+ * @returns {AvailableReactions} {@link AvailableReactions}
  */
 export type getStoryAvailableReactions = (
   parameters: getStoryAvailableReactions$Input
@@ -105992,7 +105992,7 @@ export type setStoryReaction$DirectInput = {
  * Changes chosen reaction on a story that has already been sent
  *
  * @param {setStoryReaction$Input} parameters {@link setStoryReaction$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setStoryReaction = (parameters: setStoryReaction$Input) => Ok;
 
@@ -106096,7 +106096,7 @@ export type getStoryInteractions$DirectInput = {
  * Returns interactions with a story. The method can be called only for stories posted on behalf of the current user
  *
  * @param {getStoryInteractions$Input} parameters {@link getStoryInteractions$Input}
- * @return {StoryInteractions} {@link StoryInteractions}
+ * @returns {StoryInteractions} {@link StoryInteractions}
  */
 export type getStoryInteractions = (
   parameters: getStoryInteractions$Input
@@ -106190,7 +106190,7 @@ export type getChatStoryInteractions$DirectInput = {
  * Returns interactions with a story posted in a chat. Can be used only if story is posted on behalf of a chat and the user is an administrator in the chat
  *
  * @param {getChatStoryInteractions$Input} parameters {@link getChatStoryInteractions$Input}
- * @return {StoryInteractions} {@link StoryInteractions}
+ * @returns {StoryInteractions} {@link StoryInteractions}
  */
 export type getChatStoryInteractions = (
   parameters: getChatStoryInteractions$Input
@@ -106260,7 +106260,7 @@ export type reportStory$DirectInput = {
  * Reports a story to the Telegram moderators
  *
  * @param {reportStory$Input} parameters {@link reportStory$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reportStory = (parameters: reportStory$Input) => Ok;
 
@@ -106286,7 +106286,7 @@ export type activateStoryStealthMode$DirectInput = {};
  * - and for the next "story_stealth_mode_future_period" seconds; for Telegram Premium users only
  *
  * @param {activateStoryStealthMode$Input} parameters {@link activateStoryStealthMode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type activateStoryStealthMode = (
   parameters: activateStoryStealthMode$Input
@@ -106362,7 +106362,7 @@ export type getStoryPublicForwards$DirectInput = {
  * - For optimal performance, the number of returned messages and stories is chosen by TDLib
  *
  * @param {getStoryPublicForwards$Input} parameters {@link getStoryPublicForwards$Input}
- * @return {PublicForwards} {@link PublicForwards}
+ * @returns {PublicForwards} {@link PublicForwards}
  */
 export type getStoryPublicForwards = (
   parameters: getStoryPublicForwards$Input
@@ -106408,7 +106408,7 @@ export type getChatBoostLevelFeatures$DirectInput = {
  * Returns the list of features available on the specific chat boost level; this is an offline request
  *
  * @param {getChatBoostLevelFeatures$Input} parameters {@link getChatBoostLevelFeatures$Input}
- * @return {ChatBoostLevelFeatures} {@link ChatBoostLevelFeatures}
+ * @returns {ChatBoostLevelFeatures} {@link ChatBoostLevelFeatures}
  */
 export type getChatBoostLevelFeatures = (
   parameters: getChatBoostLevelFeatures$Input
@@ -106442,7 +106442,7 @@ export type getChatBoostFeatures$DirectInput = {
  * Returns the list of features available for different chat boost levels; this is an offline request
  *
  * @param {getChatBoostFeatures$Input} parameters {@link getChatBoostFeatures$Input}
- * @return {ChatBoostFeatures} {@link ChatBoostFeatures}
+ * @returns {ChatBoostFeatures} {@link ChatBoostFeatures}
  */
 export type getChatBoostFeatures = (
   parameters: getChatBoostFeatures$Input
@@ -106464,7 +106464,7 @@ export type getAvailableChatBoostSlots$DirectInput = {};
  * Returns the list of available chat boost slots for the current user
  *
  * @param {getAvailableChatBoostSlots$Input} parameters {@link getAvailableChatBoostSlots$Input}
- * @return {ChatBoostSlots} {@link ChatBoostSlots}
+ * @returns {ChatBoostSlots} {@link ChatBoostSlots}
  */
 export type getAvailableChatBoostSlots = (
   parameters: getAvailableChatBoostSlots$Input
@@ -106498,7 +106498,7 @@ export type getChatBoostStatus$DirectInput = {
  * Returns the current boost status for a supergroup or a channel chat
  *
  * @param {getChatBoostStatus$Input} parameters {@link getChatBoostStatus$Input}
- * @return {ChatBoostStatus} {@link ChatBoostStatus}
+ * @returns {ChatBoostStatus} {@link ChatBoostStatus}
  */
 export type getChatBoostStatus = (
   parameters: getChatBoostStatus$Input
@@ -106544,7 +106544,7 @@ export type boostChat$DirectInput = {
  * Boosts a chat and returns the list of available chat boost slots for the current user after the boost
  *
  * @param {boostChat$Input} parameters {@link boostChat$Input}
- * @return {ChatBoostSlots} {@link ChatBoostSlots}
+ * @returns {ChatBoostSlots} {@link ChatBoostSlots}
  */
 export type boostChat = (parameters: boostChat$Input) => ChatBoostSlots;
 
@@ -106576,7 +106576,7 @@ export type getChatBoostLink$DirectInput = {
  * Returns an HTTPS link to boost the specified supergroup or channel chat
  *
  * @param {getChatBoostLink$Input} parameters {@link getChatBoostLink$Input}
- * @return {ChatBoostLink} {@link ChatBoostLink}
+ * @returns {ChatBoostLink} {@link ChatBoostLink}
  */
 export type getChatBoostLink = (parameters: getChatBoostLink$Input) => ChatBoostLink;
 
@@ -106608,7 +106608,7 @@ export type getChatBoostLinkInfo$DirectInput = {
  * Returns information about a link to boost a chat. Can be called for any internal link of the type internalLinkTypeChatBoost
  *
  * @param {getChatBoostLinkInfo$Input} parameters {@link getChatBoostLinkInfo$Input}
- * @return {ChatBoostLinkInfo} {@link ChatBoostLinkInfo}
+ * @returns {ChatBoostLinkInfo} {@link ChatBoostLinkInfo}
  */
 export type getChatBoostLinkInfo = (
   parameters: getChatBoostLinkInfo$Input
@@ -106678,7 +106678,7 @@ export type getChatBoosts$DirectInput = {
  * Returns the list of boosts applied to a chat; requires administrator rights in the chat
  *
  * @param {getChatBoosts$Input} parameters {@link getChatBoosts$Input}
- * @return {FoundChatBoosts} {@link FoundChatBoosts}
+ * @returns {FoundChatBoosts} {@link FoundChatBoosts}
  */
 export type getChatBoosts = (parameters: getChatBoosts$Input) => FoundChatBoosts;
 
@@ -106722,7 +106722,7 @@ export type getUserChatBoosts$DirectInput = {
  * Returns the list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
  *
  * @param {getUserChatBoosts$Input} parameters {@link getUserChatBoosts$Input}
- * @return {FoundChatBoosts} {@link FoundChatBoosts}
+ * @returns {FoundChatBoosts} {@link FoundChatBoosts}
  */
 export type getUserChatBoosts = (
   parameters: getUserChatBoosts$Input
@@ -106756,7 +106756,7 @@ export type getAttachmentMenuBot$DirectInput = {
  * Returns information about a bot that can be added to attachment or side menu
  *
  * @param {getAttachmentMenuBot$Input} parameters {@link getAttachmentMenuBot$Input}
- * @return {AttachmentMenuBot} {@link AttachmentMenuBot}
+ * @returns {AttachmentMenuBot} {@link AttachmentMenuBot}
  */
 export type getAttachmentMenuBot = (
   parameters: getAttachmentMenuBot$Input
@@ -106814,7 +106814,7 @@ export type toggleBotIsAddedToAttachmentMenu$DirectInput = {
  * Adds or removes a bot to attachment and side menu. Bot can be added to the menu, only if userTypeBot.can_be_added_to_attachment_menu == true
  *
  * @param {toggleBotIsAddedToAttachmentMenu$Input} parameters {@link toggleBotIsAddedToAttachmentMenu$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleBotIsAddedToAttachmentMenu = (
   parameters: toggleBotIsAddedToAttachmentMenu$Input
@@ -106836,7 +106836,7 @@ export type getThemedEmojiStatuses$DirectInput = {};
  * Returns up to 8 emoji statuses, which must be shown right after the default Premium Badge in the emoji status list for self status
  *
  * @param {getThemedEmojiStatuses$Input} parameters {@link getThemedEmojiStatuses$Input}
- * @return {EmojiStatuses} {@link EmojiStatuses}
+ * @returns {EmojiStatuses} {@link EmojiStatuses}
  */
 export type getThemedEmojiStatuses = (
   parameters: getThemedEmojiStatuses$Input
@@ -106858,7 +106858,7 @@ export type getRecentEmojiStatuses$DirectInput = {};
  * Returns recent emoji statuses for self status
  *
  * @param {getRecentEmojiStatuses$Input} parameters {@link getRecentEmojiStatuses$Input}
- * @return {EmojiStatuses} {@link EmojiStatuses}
+ * @returns {EmojiStatuses} {@link EmojiStatuses}
  */
 export type getRecentEmojiStatuses = (
   parameters: getRecentEmojiStatuses$Input
@@ -106880,7 +106880,7 @@ export type getDefaultEmojiStatuses$DirectInput = {};
  * Returns default emoji statuses for self status
  *
  * @param {getDefaultEmojiStatuses$Input} parameters {@link getDefaultEmojiStatuses$Input}
- * @return {EmojiStatuses} {@link EmojiStatuses}
+ * @returns {EmojiStatuses} {@link EmojiStatuses}
  */
 export type getDefaultEmojiStatuses = (
   parameters: getDefaultEmojiStatuses$Input
@@ -106902,7 +106902,7 @@ export type clearRecentEmojiStatuses$DirectInput = {};
  * Clears the list of recently used emoji statuses for self status
  *
  * @param {clearRecentEmojiStatuses$Input} parameters {@link clearRecentEmojiStatuses$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clearRecentEmojiStatuses = (
   parameters: clearRecentEmojiStatuses$Input
@@ -106924,7 +106924,7 @@ export type getThemedChatEmojiStatuses$DirectInput = {};
  * Returns up to 8 emoji statuses, which must be shown in the emoji status list for chats
  *
  * @param {getThemedChatEmojiStatuses$Input} parameters {@link getThemedChatEmojiStatuses$Input}
- * @return {EmojiStatuses} {@link EmojiStatuses}
+ * @returns {EmojiStatuses} {@link EmojiStatuses}
  */
 export type getThemedChatEmojiStatuses = (
   parameters: getThemedChatEmojiStatuses$Input
@@ -106946,7 +106946,7 @@ export type getDefaultChatEmojiStatuses$DirectInput = {};
  * Returns default emoji statuses for chats
  *
  * @param {getDefaultChatEmojiStatuses$Input} parameters {@link getDefaultChatEmojiStatuses$Input}
- * @return {EmojiStatuses} {@link EmojiStatuses}
+ * @returns {EmojiStatuses} {@link EmojiStatuses}
  */
 export type getDefaultChatEmojiStatuses = (
   parameters: getDefaultChatEmojiStatuses$Input
@@ -106968,7 +106968,7 @@ export type getDisallowedChatEmojiStatuses$DirectInput = {};
  * Returns the list of emoji statuses, which can't be used as chat emoji status, even they are from a sticker set with is_allowed_as_chat_emoji_status == true
  *
  * @param {getDisallowedChatEmojiStatuses$Input} parameters {@link getDisallowedChatEmojiStatuses$Input}
- * @return {EmojiStatuses} {@link EmojiStatuses}
+ * @returns {EmojiStatuses} {@link EmojiStatuses}
  */
 export type getDisallowedChatEmojiStatuses = (
   parameters: getDisallowedChatEmojiStatuses$Input
@@ -107050,7 +107050,7 @@ export type downloadFile$DirectInput = {
  * Downloads a file from the cloud. Download progress and completion of the download will be notified through updateFile updates
  *
  * @param {downloadFile$Input} parameters {@link downloadFile$Input}
- * @return {File} {@link File}
+ * @returns {File} {@link File}
  */
 export type downloadFile = (parameters: downloadFile$Input) => File;
 
@@ -107094,7 +107094,7 @@ export type getFileDownloadedPrefixSize$DirectInput = {
  * Returns file downloaded prefix size from a given offset, in bytes
  *
  * @param {getFileDownloadedPrefixSize$Input} parameters {@link getFileDownloadedPrefixSize$Input}
- * @return {FileDownloadedPrefixSize} {@link FileDownloadedPrefixSize}
+ * @returns {FileDownloadedPrefixSize} {@link FileDownloadedPrefixSize}
  */
 export type getFileDownloadedPrefixSize = (
   parameters: getFileDownloadedPrefixSize$Input
@@ -107140,7 +107140,7 @@ export type cancelDownloadFile$DirectInput = {
  * Stops the downloading of a file. If a file has already been downloaded, does nothing
  *
  * @param {cancelDownloadFile$Input} parameters {@link cancelDownloadFile$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type cancelDownloadFile = (parameters: cancelDownloadFile$Input) => Ok;
 
@@ -107184,7 +107184,7 @@ export type getSuggestedFileName$DirectInput = {
  * Returns suggested name for saving a file in a given directory
  *
  * @param {getSuggestedFileName$Input} parameters {@link getSuggestedFileName$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getSuggestedFileName = (parameters: getSuggestedFileName$Input) => Text;
 
@@ -107252,7 +107252,7 @@ export type preliminaryUploadFile$DirectInput = {
  * - The upload will not be completed until the file is sent in a message
  *
  * @param {preliminaryUploadFile$Input} parameters {@link preliminaryUploadFile$Input}
- * @return {File} {@link File}
+ * @returns {File} {@link File}
  */
 export type preliminaryUploadFile = (
   parameters: preliminaryUploadFile$Input
@@ -107286,7 +107286,7 @@ export type cancelPreliminaryUploadFile$DirectInput = {
  * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
  *
  * @param {cancelPreliminaryUploadFile$Input} parameters {@link cancelPreliminaryUploadFile$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type cancelPreliminaryUploadFile = (
   parameters: cancelPreliminaryUploadFile$Input
@@ -107344,7 +107344,7 @@ export type writeGeneratedFilePart$DirectInput = {
  * Writes a part of a generated file. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct write to the destination file
  *
  * @param {writeGeneratedFilePart$Input} parameters {@link writeGeneratedFilePart$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type writeGeneratedFilePart = (
   parameters: writeGeneratedFilePart$Input
@@ -107402,7 +107402,7 @@ export type setFileGenerationProgress$DirectInput = {
  * Informs TDLib on a file generation progress
  *
  * @param {setFileGenerationProgress$Input} parameters {@link setFileGenerationProgress$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setFileGenerationProgress = (
   parameters: setFileGenerationProgress$Input
@@ -107448,7 +107448,7 @@ export type finishFileGeneration$DirectInput = {
  * Finishes the file generation
  *
  * @param {finishFileGeneration$Input} parameters {@link finishFileGeneration$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type finishFileGeneration = (parameters: finishFileGeneration$Input) => Ok;
 
@@ -107504,7 +107504,7 @@ export type readFilePart$DirectInput = {
  * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
  *
  * @param {readFilePart$Input} parameters {@link readFilePart$Input}
- * @return {FilePart} {@link FilePart}
+ * @returns {FilePart} {@link FilePart}
  */
 export type readFilePart = (parameters: readFilePart$Input) => FilePart;
 
@@ -107536,7 +107536,7 @@ export type deleteFile$DirectInput = {
  * Deletes a file from the TDLib file cache
  *
  * @param {deleteFile$Input} parameters {@link deleteFile$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteFile = (parameters: deleteFile$Input) => Ok;
 
@@ -107610,7 +107610,7 @@ export type addFileToDownloads$DirectInput = {
  * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
  *
  * @param {addFileToDownloads$Input} parameters {@link addFileToDownloads$Input}
- * @return {File} {@link File}
+ * @returns {File} {@link File}
  */
 export type addFileToDownloads = (parameters: addFileToDownloads$Input) => File;
 
@@ -107654,7 +107654,7 @@ export type toggleDownloadIsPaused$DirectInput = {
  * Changes pause state of a file in the file download list
  *
  * @param {toggleDownloadIsPaused$Input} parameters {@link toggleDownloadIsPaused$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleDownloadIsPaused = (
   parameters: toggleDownloadIsPaused$Input
@@ -107688,7 +107688,7 @@ export type toggleAllDownloadsArePaused$DirectInput = {
  * Changes pause state of all files in the file download list
  *
  * @param {toggleAllDownloadsArePaused$Input} parameters {@link toggleAllDownloadsArePaused$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleAllDownloadsArePaused = (
   parameters: toggleAllDownloadsArePaused$Input
@@ -107734,7 +107734,7 @@ export type removeFileFromDownloads$DirectInput = {
  * Removes a file from the file download list
  *
  * @param {removeFileFromDownloads$Input} parameters {@link removeFileFromDownloads$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeFileFromDownloads = (
   parameters: removeFileFromDownloads$Input
@@ -107792,7 +107792,7 @@ export type removeAllFilesFromDownloads$DirectInput = {
  * Removes all files from the file download list
  *
  * @param {removeAllFilesFromDownloads$Input} parameters {@link removeAllFilesFromDownloads$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeAllFilesFromDownloads = (
   parameters: removeAllFilesFromDownloads$Input
@@ -107874,7 +107874,7 @@ export type searchFileDownloads$DirectInput = {
  * Searches for files in the file download list or recently downloaded files from the list
  *
  * @param {searchFileDownloads$Input} parameters {@link searchFileDownloads$Input}
- * @return {FoundFileDownloads} {@link FoundFileDownloads}
+ * @returns {FoundFileDownloads} {@link FoundFileDownloads}
  */
 export type searchFileDownloads = (
   parameters: searchFileDownloads$Input
@@ -107924,7 +107924,7 @@ export type setApplicationVerificationToken$DirectInput = {
  * Application verification has been completed. Can be called before authorization
  *
  * @param {setApplicationVerificationToken$Input} parameters {@link setApplicationVerificationToken$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setApplicationVerificationToken = (
   parameters: setApplicationVerificationToken$Input
@@ -107958,7 +107958,7 @@ export type getMessageFileType$DirectInput = {
  * Returns information about a file with messages exported from another application
  *
  * @param {getMessageFileType$Input} parameters {@link getMessageFileType$Input}
- * @return {MessageFileType} {@link MessageFileType}
+ * @returns {MessageFileType} {@link MessageFileType}
  */
 export type getMessageFileType = (
   parameters: getMessageFileType$Input
@@ -107992,7 +107992,7 @@ export type getMessageImportConfirmationText$DirectInput = {
  * Returns a confirmation text to be shown to the user before starting message import
  *
  * @param {getMessageImportConfirmationText$Input} parameters {@link getMessageImportConfirmationText$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getMessageImportConfirmationText = (
   parameters: getMessageImportConfirmationText$Input
@@ -108050,7 +108050,7 @@ export type importMessages$DirectInput = {
  * Imports messages exported from another app
  *
  * @param {importMessages$Input} parameters {@link importMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type importMessages = (parameters: importMessages$Input) => Ok;
 
@@ -108082,7 +108082,7 @@ export type replacePrimaryChatInviteLink$DirectInput = {
  * Replaces current primary invite link for a chat with a new primary invite link. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right
  *
  * @param {replacePrimaryChatInviteLink$Input} parameters {@link replacePrimaryChatInviteLink$Input}
- * @return {ChatInviteLink} {@link ChatInviteLink}
+ * @returns {ChatInviteLink} {@link ChatInviteLink}
  */
 export type replacePrimaryChatInviteLink = (
   parameters: replacePrimaryChatInviteLink$Input
@@ -108164,7 +108164,7 @@ export type createChatInviteLink$DirectInput = {
  * Creates a new invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat
  *
  * @param {createChatInviteLink$Input} parameters {@link createChatInviteLink$Input}
- * @return {ChatInviteLink} {@link ChatInviteLink}
+ * @returns {ChatInviteLink} {@link ChatInviteLink}
  */
 export type createChatInviteLink = (
   parameters: createChatInviteLink$Input
@@ -108258,7 +108258,7 @@ export type editChatInviteLink$DirectInput = {
  * Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  *
  * @param {editChatInviteLink$Input} parameters {@link editChatInviteLink$Input}
- * @return {ChatInviteLink} {@link ChatInviteLink}
+ * @returns {ChatInviteLink} {@link ChatInviteLink}
  */
 export type editChatInviteLink = (
   parameters: editChatInviteLink$Input
@@ -108304,7 +108304,7 @@ export type getChatInviteLink$DirectInput = {
  * Returns information about an invite link. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
  *
  * @param {getChatInviteLink$Input} parameters {@link getChatInviteLink$Input}
- * @return {ChatInviteLink} {@link ChatInviteLink}
+ * @returns {ChatInviteLink} {@link ChatInviteLink}
  */
 export type getChatInviteLink = (
   parameters: getChatInviteLink$Input
@@ -108338,7 +108338,7 @@ export type getChatInviteLinkCounts$DirectInput = {
  * Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
  *
  * @param {getChatInviteLinkCounts$Input} parameters {@link getChatInviteLinkCounts$Input}
- * @return {ChatInviteLinkCounts} {@link ChatInviteLinkCounts}
+ * @returns {ChatInviteLinkCounts} {@link ChatInviteLinkCounts}
  */
 export type getChatInviteLinkCounts = (
   parameters: getChatInviteLinkCounts$Input
@@ -108432,7 +108432,7 @@ export type getChatInviteLinks$DirectInput = {
  * Returns invite links for a chat created by specified administrator. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
  *
  * @param {getChatInviteLinks$Input} parameters {@link getChatInviteLinks$Input}
- * @return {ChatInviteLinks} {@link ChatInviteLinks}
+ * @returns {ChatInviteLinks} {@link ChatInviteLinks}
  */
 export type getChatInviteLinks = (
   parameters: getChatInviteLinks$Input
@@ -108502,7 +108502,7 @@ export type getChatInviteLinkMembers$DirectInput = {
  * Returns chat members joined a chat via an invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  *
  * @param {getChatInviteLinkMembers$Input} parameters {@link getChatInviteLinkMembers$Input}
- * @return {ChatInviteLinkMembers} {@link ChatInviteLinkMembers}
+ * @returns {ChatInviteLinkMembers} {@link ChatInviteLinkMembers}
  */
 export type getChatInviteLinkMembers = (
   parameters: getChatInviteLinkMembers$Input
@@ -108554,7 +108554,7 @@ export type revokeChatInviteLink$DirectInput = {
  * - If a primary link is revoked, then additionally to the revoked link returns new primary link
  *
  * @param {revokeChatInviteLink$Input} parameters {@link revokeChatInviteLink$Input}
- * @return {ChatInviteLinks} {@link ChatInviteLinks}
+ * @returns {ChatInviteLinks} {@link ChatInviteLinks}
  */
 export type revokeChatInviteLink = (
   parameters: revokeChatInviteLink$Input
@@ -108600,7 +108600,7 @@ export type deleteRevokedChatInviteLink$DirectInput = {
  * Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  *
  * @param {deleteRevokedChatInviteLink$Input} parameters {@link deleteRevokedChatInviteLink$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteRevokedChatInviteLink = (
   parameters: deleteRevokedChatInviteLink$Input
@@ -108646,7 +108646,7 @@ export type deleteAllRevokedChatInviteLinks$DirectInput = {
  * Deletes all revoked chat invite links created by a given chat administrator. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  *
  * @param {deleteAllRevokedChatInviteLinks$Input} parameters {@link deleteAllRevokedChatInviteLinks$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteAllRevokedChatInviteLinks = (
   parameters: deleteAllRevokedChatInviteLinks$Input
@@ -108680,7 +108680,7 @@ export type checkChatInviteLink$DirectInput = {
  * Checks the validity of an invite link for a chat and returns information about the corresponding chat
  *
  * @param {checkChatInviteLink$Input} parameters {@link checkChatInviteLink$Input}
- * @return {ChatInviteLinkInfo} {@link ChatInviteLinkInfo}
+ * @returns {ChatInviteLinkInfo} {@link ChatInviteLinkInfo}
  */
 export type checkChatInviteLink = (
   parameters: checkChatInviteLink$Input
@@ -108714,7 +108714,7 @@ export type joinChatByInviteLink$DirectInput = {
  * Uses an invite link to add the current user to the chat if possible. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
  *
  * @param {joinChatByInviteLink$Input} parameters {@link joinChatByInviteLink$Input}
- * @return {Chat} {@link Chat}
+ * @returns {Chat} {@link Chat}
  */
 export type joinChatByInviteLink = (parameters: joinChatByInviteLink$Input) => Chat;
 
@@ -108794,7 +108794,7 @@ export type getChatJoinRequests$DirectInput = {
  * Returns pending join requests in a chat
  *
  * @param {getChatJoinRequests$Input} parameters {@link getChatJoinRequests$Input}
- * @return {ChatJoinRequests} {@link ChatJoinRequests}
+ * @returns {ChatJoinRequests} {@link ChatJoinRequests}
  */
 export type getChatJoinRequests = (
   parameters: getChatJoinRequests$Input
@@ -108852,7 +108852,7 @@ export type processChatJoinRequest$DirectInput = {
  * Handles a pending join request in a chat
  *
  * @param {processChatJoinRequest$Input} parameters {@link processChatJoinRequest$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type processChatJoinRequest = (
   parameters: processChatJoinRequest$Input
@@ -108910,7 +108910,7 @@ export type processChatJoinRequests$DirectInput = {
  * Handles all pending join requests for a given link in a chat
  *
  * @param {processChatJoinRequests$Input} parameters {@link processChatJoinRequests$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type processChatJoinRequests = (
   parameters: processChatJoinRequests$Input
@@ -108968,7 +108968,7 @@ export type createCall$DirectInput = {
  * Creates a new call
  *
  * @param {createCall$Input} parameters {@link createCall$Input}
- * @return {CallId} {@link CallId}
+ * @returns {CallId} {@link CallId}
  */
 export type createCall = (parameters: createCall$Input) => CallId;
 
@@ -109012,7 +109012,7 @@ export type acceptCall$DirectInput = {
  * Accepts an incoming call
  *
  * @param {acceptCall$Input} parameters {@link acceptCall$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type acceptCall = (parameters: acceptCall$Input) => Ok;
 
@@ -109056,7 +109056,7 @@ export type sendCallSignalingData$DirectInput = {
  * Sends call signaling data
  *
  * @param {sendCallSignalingData$Input} parameters {@link sendCallSignalingData$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendCallSignalingData = (parameters: sendCallSignalingData$Input) => Ok;
 
@@ -109136,7 +109136,7 @@ export type discardCall$DirectInput = {
  * Discards a call
  *
  * @param {discardCall$Input} parameters {@link discardCall$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type discardCall = (parameters: discardCall$Input) => Ok;
 
@@ -109204,7 +109204,7 @@ export type sendCallRating$DirectInput = {
  * Sends a call rating
  *
  * @param {sendCallRating$Input} parameters {@link sendCallRating$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendCallRating = (parameters: sendCallRating$Input) => Ok;
 
@@ -109248,7 +109248,7 @@ export type sendCallDebugInformation$DirectInput = {
  * Sends debug information for a call to Telegram servers
  *
  * @param {sendCallDebugInformation$Input} parameters {@link sendCallDebugInformation$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendCallDebugInformation = (
   parameters: sendCallDebugInformation$Input
@@ -109294,7 +109294,7 @@ export type sendCallLog$DirectInput = {
  * Sends log file for a call to Telegram servers
  *
  * @param {sendCallLog$Input} parameters {@link sendCallLog$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendCallLog = (parameters: sendCallLog$Input) => Ok;
 
@@ -109326,7 +109326,7 @@ export type getVideoChatAvailableParticipants$DirectInput = {
  * Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
  *
  * @param {getVideoChatAvailableParticipants$Input} parameters {@link getVideoChatAvailableParticipants$Input}
- * @return {MessageSenders} {@link MessageSenders}
+ * @returns {MessageSenders} {@link MessageSenders}
  */
 export type getVideoChatAvailableParticipants = (
   parameters: getVideoChatAvailableParticipants$Input
@@ -109372,7 +109372,7 @@ export type setVideoChatDefaultParticipant$DirectInput = {
  * Changes default participant identifier, on whose behalf a video chat in the chat will be joined
  *
  * @param {setVideoChatDefaultParticipant$Input} parameters {@link setVideoChatDefaultParticipant$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setVideoChatDefaultParticipant = (
   parameters: setVideoChatDefaultParticipant$Input
@@ -109442,7 +109442,7 @@ export type createVideoChat$DirectInput = {
  * Creates a video chat (a group call bound to a chat). Available only for basic groups, supergroups and channels; requires can_manage_video_chats administrator right
  *
  * @param {createVideoChat$Input} parameters {@link createVideoChat$Input}
- * @return {GroupCallId} {@link GroupCallId}
+ * @returns {GroupCallId} {@link GroupCallId}
  */
 export type createVideoChat = (parameters: createVideoChat$Input) => GroupCallId;
 
@@ -109474,7 +109474,7 @@ export type getVideoChatRtmpUrl$DirectInput = {
  * Returns RTMP URL for streaming to the chat; requires owner privileges
  *
  * @param {getVideoChatRtmpUrl$Input} parameters {@link getVideoChatRtmpUrl$Input}
- * @return {RtmpUrl} {@link RtmpUrl}
+ * @returns {RtmpUrl} {@link RtmpUrl}
  */
 export type getVideoChatRtmpUrl = (parameters: getVideoChatRtmpUrl$Input) => RtmpUrl;
 
@@ -109506,7 +109506,7 @@ export type replaceVideoChatRtmpUrl$DirectInput = {
  * Replaces the current RTMP URL for streaming to the chat; requires owner privileges
  *
  * @param {replaceVideoChatRtmpUrl$Input} parameters {@link replaceVideoChatRtmpUrl$Input}
- * @return {RtmpUrl} {@link RtmpUrl}
+ * @returns {RtmpUrl} {@link RtmpUrl}
  */
 export type replaceVideoChatRtmpUrl = (
   parameters: replaceVideoChatRtmpUrl$Input
@@ -109540,7 +109540,7 @@ export type getGroupCall$DirectInput = {
  * Returns information about a group call
  *
  * @param {getGroupCall$Input} parameters {@link getGroupCall$Input}
- * @return {GroupCall} {@link GroupCall}
+ * @returns {GroupCall} {@link GroupCall}
  */
 export type getGroupCall = (parameters: getGroupCall$Input) => GroupCall;
 
@@ -109572,7 +109572,7 @@ export type startScheduledGroupCall$DirectInput = {
  * Starts a scheduled group call
  *
  * @param {startScheduledGroupCall$Input} parameters {@link startScheduledGroupCall$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type startScheduledGroupCall = (
   parameters: startScheduledGroupCall$Input
@@ -109618,7 +109618,7 @@ export type toggleGroupCallEnabledStartNotification$DirectInput = {
  * Toggles whether the current user will receive a notification when the group call starts; scheduled group calls only
  *
  * @param {toggleGroupCallEnabledStartNotification$Input} parameters {@link toggleGroupCallEnabledStartNotification$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleGroupCallEnabledStartNotification = (
   parameters: toggleGroupCallEnabledStartNotification$Input
@@ -109724,7 +109724,7 @@ export type joinGroupCall$DirectInput = {
  * Joins an active group call. Returns join response payload for tgcalls
  *
  * @param {joinGroupCall$Input} parameters {@link joinGroupCall$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type joinGroupCall = (parameters: joinGroupCall$Input) => Text;
 
@@ -109780,7 +109780,7 @@ export type startGroupCallScreenSharing$DirectInput = {
  * Starts screen sharing in a joined group call. Returns join response payload for tgcalls
  *
  * @param {startGroupCallScreenSharing$Input} parameters {@link startGroupCallScreenSharing$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type startGroupCallScreenSharing = (
   parameters: startGroupCallScreenSharing$Input
@@ -109826,7 +109826,7 @@ export type toggleGroupCallScreenSharingIsPaused$DirectInput = {
  * Pauses or unpauses screen sharing in a joined group call
  *
  * @param {toggleGroupCallScreenSharingIsPaused$Input} parameters {@link toggleGroupCallScreenSharingIsPaused$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleGroupCallScreenSharingIsPaused = (
   parameters: toggleGroupCallScreenSharingIsPaused$Input
@@ -109860,7 +109860,7 @@ export type endGroupCallScreenSharing$DirectInput = {
  * Ends screen sharing in a joined group call
  *
  * @param {endGroupCallScreenSharing$Input} parameters {@link endGroupCallScreenSharing$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type endGroupCallScreenSharing = (
   parameters: endGroupCallScreenSharing$Input
@@ -109906,7 +109906,7 @@ export type setGroupCallTitle$DirectInput = {
  * Sets group call title. Requires groupCall.can_be_managed group call flag
  *
  * @param {setGroupCallTitle$Input} parameters {@link setGroupCallTitle$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setGroupCallTitle = (parameters: setGroupCallTitle$Input) => Ok;
 
@@ -109950,7 +109950,7 @@ export type toggleGroupCallMuteNewParticipants$DirectInput = {
  * Toggles whether new participants of a group call can be unmuted only by administrators of the group call. Requires groupCall.can_toggle_mute_new_participants group call flag
  *
  * @param {toggleGroupCallMuteNewParticipants$Input} parameters {@link toggleGroupCallMuteNewParticipants$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleGroupCallMuteNewParticipants = (
   parameters: toggleGroupCallMuteNewParticipants$Input
@@ -109996,7 +109996,7 @@ export type inviteGroupCallParticipants$DirectInput = {
  * Invites users to an active group call. Sends a service message of type messageInviteVideoChatParticipants for video chats
  *
  * @param {inviteGroupCallParticipants$Input} parameters {@link inviteGroupCallParticipants$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type inviteGroupCallParticipants = (
   parameters: inviteGroupCallParticipants$Input
@@ -110042,7 +110042,7 @@ export type getGroupCallInviteLink$DirectInput = {
  * Returns invite link to a video chat in a public chat
  *
  * @param {getGroupCallInviteLink$Input} parameters {@link getGroupCallInviteLink$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getGroupCallInviteLink = (
   parameters: getGroupCallInviteLink$Input
@@ -110076,7 +110076,7 @@ export type revokeGroupCallInviteLink$DirectInput = {
  * Revokes invite link for a group call. Requires groupCall.can_be_managed group call flag
  *
  * @param {revokeGroupCallInviteLink$Input} parameters {@link revokeGroupCallInviteLink$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type revokeGroupCallInviteLink = (
   parameters: revokeGroupCallInviteLink$Input
@@ -110146,7 +110146,7 @@ export type startGroupCallRecording$DirectInput = {
  * Starts recording of an active group call. Requires groupCall.can_be_managed group call flag
  *
  * @param {startGroupCallRecording$Input} parameters {@link startGroupCallRecording$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type startGroupCallRecording = (
   parameters: startGroupCallRecording$Input
@@ -110180,7 +110180,7 @@ export type endGroupCallRecording$DirectInput = {
  * Ends recording of an active group call. Requires groupCall.can_be_managed group call flag
  *
  * @param {endGroupCallRecording$Input} parameters {@link endGroupCallRecording$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type endGroupCallRecording = (parameters: endGroupCallRecording$Input) => Ok;
 
@@ -110224,7 +110224,7 @@ export type toggleGroupCallIsMyVideoPaused$DirectInput = {
  * Toggles whether current user's video is paused
  *
  * @param {toggleGroupCallIsMyVideoPaused$Input} parameters {@link toggleGroupCallIsMyVideoPaused$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleGroupCallIsMyVideoPaused = (
   parameters: toggleGroupCallIsMyVideoPaused$Input
@@ -110270,7 +110270,7 @@ export type toggleGroupCallIsMyVideoEnabled$DirectInput = {
  * Toggles whether current user's video is enabled
  *
  * @param {toggleGroupCallIsMyVideoEnabled$Input} parameters {@link toggleGroupCallIsMyVideoEnabled$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleGroupCallIsMyVideoEnabled = (
   parameters: toggleGroupCallIsMyVideoEnabled$Input
@@ -110328,7 +110328,7 @@ export type setGroupCallParticipantIsSpeaking$DirectInput = {
  * Informs TDLib that speaking state of a participant of an active group has changed
  *
  * @param {setGroupCallParticipantIsSpeaking$Input} parameters {@link setGroupCallParticipantIsSpeaking$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setGroupCallParticipantIsSpeaking = (
   parameters: setGroupCallParticipantIsSpeaking$Input
@@ -110386,7 +110386,7 @@ export type toggleGroupCallParticipantIsMuted$DirectInput = {
  * Toggles whether a participant of an active group call is muted, unmuted, or allowed to unmute themselves
  *
  * @param {toggleGroupCallParticipantIsMuted$Input} parameters {@link toggleGroupCallParticipantIsMuted$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleGroupCallParticipantIsMuted = (
   parameters: toggleGroupCallParticipantIsMuted$Input
@@ -110444,7 +110444,7 @@ export type setGroupCallParticipantVolumeLevel$DirectInput = {
  * Changes volume level of a participant of an active group call. If the current user can manage the group call, then the participant's volume level will be changed for all users with the default volume level
  *
  * @param {setGroupCallParticipantVolumeLevel$Input} parameters {@link setGroupCallParticipantVolumeLevel$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setGroupCallParticipantVolumeLevel = (
   parameters: setGroupCallParticipantVolumeLevel$Input
@@ -110502,7 +110502,7 @@ export type toggleGroupCallParticipantIsHandRaised$DirectInput = {
  * Toggles whether a group call participant hand is rased
  *
  * @param {toggleGroupCallParticipantIsHandRaised$Input} parameters {@link toggleGroupCallParticipantIsHandRaised$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleGroupCallParticipantIsHandRaised = (
   parameters: toggleGroupCallParticipantIsHandRaised$Input
@@ -110548,7 +110548,7 @@ export type loadGroupCallParticipants$DirectInput = {
  * Loads more participants of a group call. The loaded participants will be received through updates. Use the field groupCall.loaded_all_participants to check whether all participants have already been loaded
  *
  * @param {loadGroupCallParticipants$Input} parameters {@link loadGroupCallParticipants$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type loadGroupCallParticipants = (
   parameters: loadGroupCallParticipants$Input
@@ -110582,7 +110582,7 @@ export type leaveGroupCall$DirectInput = {
  * Leaves a group call
  *
  * @param {leaveGroupCall$Input} parameters {@link leaveGroupCall$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type leaveGroupCall = (parameters: leaveGroupCall$Input) => Ok;
 
@@ -110614,7 +110614,7 @@ export type endGroupCall$DirectInput = {
  * Ends a group call. Requires groupCall.can_be_managed
  *
  * @param {endGroupCall$Input} parameters {@link endGroupCall$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type endGroupCall = (parameters: endGroupCall$Input) => Ok;
 
@@ -110646,7 +110646,7 @@ export type getGroupCallStreams$DirectInput = {
  * Returns information about available group call streams
  *
  * @param {getGroupCallStreams$Input} parameters {@link getGroupCallStreams$Input}
- * @return {GroupCallStreams} {@link GroupCallStreams}
+ * @returns {GroupCallStreams} {@link GroupCallStreams}
  */
 export type getGroupCallStreams = (
   parameters: getGroupCallStreams$Input
@@ -110728,7 +110728,7 @@ export type getGroupCallStreamSegment$DirectInput = {
  * Returns a file with a segment of a group call stream in a modified OGG format for audio or MPEG-4 format for video
  *
  * @param {getGroupCallStreamSegment$Input} parameters {@link getGroupCallStreamSegment$Input}
- * @return {FilePart} {@link FilePart}
+ * @returns {FilePart} {@link FilePart}
  */
 export type getGroupCallStreamSegment = (
   parameters: getGroupCallStreamSegment$Input
@@ -110774,7 +110774,7 @@ export type setMessageSenderBlockList$DirectInput = {
  * Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
  *
  * @param {setMessageSenderBlockList$Input} parameters {@link setMessageSenderBlockList$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setMessageSenderBlockList = (
   parameters: setMessageSenderBlockList$Input
@@ -110844,7 +110844,7 @@ export type blockMessageSenderFromReplies$DirectInput = {
  * Blocks an original sender of a message in the Replies chat
  *
  * @param {blockMessageSenderFromReplies$Input} parameters {@link blockMessageSenderFromReplies$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type blockMessageSenderFromReplies = (
   parameters: blockMessageSenderFromReplies$Input
@@ -110902,7 +110902,7 @@ export type getBlockedMessageSenders$DirectInput = {
  * Returns users and chats that were blocked by the current user
  *
  * @param {getBlockedMessageSenders$Input} parameters {@link getBlockedMessageSenders$Input}
- * @return {MessageSenders} {@link MessageSenders}
+ * @returns {MessageSenders} {@link MessageSenders}
  */
 export type getBlockedMessageSenders = (
   parameters: getBlockedMessageSenders$Input
@@ -110952,7 +110952,7 @@ export type addContact$DirectInput = {
  * Adds a user to the contact list or edits an existing contact by their user identifier
  *
  * @param {addContact$Input} parameters {@link addContact$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addContact = (parameters: addContact$Input) => Ok;
 
@@ -110984,7 +110984,7 @@ export type importContacts$DirectInput = {
  * Adds new contacts or edits existing contacts by their phone numbers; contacts' user identifiers are ignored
  *
  * @param {importContacts$Input} parameters {@link importContacts$Input}
- * @return {ImportedContacts} {@link ImportedContacts}
+ * @returns {ImportedContacts} {@link ImportedContacts}
  */
 export type importContacts = (parameters: importContacts$Input) => ImportedContacts;
 
@@ -111004,7 +111004,7 @@ export type getContacts$DirectInput = {};
  * Returns all contacts of the user
  *
  * @param {getContacts$Input} parameters {@link getContacts$Input}
- * @return {Users} {@link Users}
+ * @returns {Users} {@link Users}
  */
 export type getContacts = (parameters: getContacts$Input) => Users;
 
@@ -111048,7 +111048,7 @@ export type searchContacts$DirectInput = {
  * Searches for the specified query in the first names, last names and usernames of the known user contacts
  *
  * @param {searchContacts$Input} parameters {@link searchContacts$Input}
- * @return {Users} {@link Users}
+ * @returns {Users} {@link Users}
  */
 export type searchContacts = (parameters: searchContacts$Input) => Users;
 
@@ -111080,7 +111080,7 @@ export type removeContacts$DirectInput = {
  * Removes users from the contact list
  *
  * @param {removeContacts$Input} parameters {@link removeContacts$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeContacts = (parameters: removeContacts$Input) => Ok;
 
@@ -111100,7 +111100,7 @@ export type getImportedContactCount$DirectInput = {};
  * Returns the total number of imported contacts
  *
  * @param {getImportedContactCount$Input} parameters {@link getImportedContactCount$Input}
- * @return {Count} {@link Count}
+ * @returns {Count} {@link Count}
  */
 export type getImportedContactCount = (
   parameters: getImportedContactCount$Input
@@ -111140,7 +111140,7 @@ export type changeImportedContacts$DirectInput = {
  * - Query result depends on the result of the previous query, so only one query is possible at the same time
  *
  * @param {changeImportedContacts$Input} parameters {@link changeImportedContacts$Input}
- * @return {ImportedContacts} {@link ImportedContacts}
+ * @returns {ImportedContacts} {@link ImportedContacts}
  */
 export type changeImportedContacts = (
   parameters: changeImportedContacts$Input
@@ -111162,7 +111162,7 @@ export type clearImportedContacts$DirectInput = {};
  * Clears all imported contacts, contact list remains unchanged
  *
  * @param {clearImportedContacts$Input} parameters {@link clearImportedContacts$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clearImportedContacts = (parameters: clearImportedContacts$Input) => Ok;
 
@@ -111194,7 +111194,7 @@ export type setCloseFriends$DirectInput = {
  * Changes the list of close friends of the current user
  *
  * @param {setCloseFriends$Input} parameters {@link setCloseFriends$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setCloseFriends = (parameters: setCloseFriends$Input) => Ok;
 
@@ -111214,7 +111214,7 @@ export type getCloseFriends$DirectInput = {};
  * Returns all close friends of the current user
  *
  * @param {getCloseFriends$Input} parameters {@link getCloseFriends$Input}
- * @return {Users} {@link Users}
+ * @returns {Users} {@link Users}
  */
 export type getCloseFriends = (parameters: getCloseFriends$Input) => Users;
 
@@ -111258,7 +111258,7 @@ export type setUserPersonalProfilePhoto$DirectInput = {
  * Changes a personal profile photo of a contact user
  *
  * @param {setUserPersonalProfilePhoto$Input} parameters {@link setUserPersonalProfilePhoto$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setUserPersonalProfilePhoto = (
   parameters: setUserPersonalProfilePhoto$Input
@@ -111304,7 +111304,7 @@ export type suggestUserProfilePhoto$DirectInput = {
  * Suggests a profile photo to another regular user with common messages
  *
  * @param {suggestUserProfilePhoto$Input} parameters {@link suggestUserProfilePhoto$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type suggestUserProfilePhoto = (
   parameters: suggestUserProfilePhoto$Input
@@ -111350,7 +111350,7 @@ export type searchUserByPhoneNumber$DirectInput = {
  * Searches a user by their phone number. Returns a 404 error if the user can't be found
  *
  * @param {searchUserByPhoneNumber$Input} parameters {@link searchUserByPhoneNumber$Input}
- * @return {User} {@link User}
+ * @returns {User} {@link User}
  */
 export type searchUserByPhoneNumber = (
   parameters: searchUserByPhoneNumber$Input
@@ -111384,7 +111384,7 @@ export type sharePhoneNumber$DirectInput = {
  * Shares the phone number of the current user with a mutual contact. Supposed to be called when the user clicks on chatActionBarSharePhoneNumber
  *
  * @param {sharePhoneNumber$Input} parameters {@link sharePhoneNumber$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sharePhoneNumber = (parameters: sharePhoneNumber$Input) => Ok;
 
@@ -111440,7 +111440,7 @@ export type getUserProfilePhotos$DirectInput = {
  * Returns the profile photos of a user. Personal and public photo aren't returned
  *
  * @param {getUserProfilePhotos$Input} parameters {@link getUserProfilePhotos$Input}
- * @return {ChatPhotos} {@link ChatPhotos}
+ * @returns {ChatPhotos} {@link ChatPhotos}
  */
 export type getUserProfilePhotos = (
   parameters: getUserProfilePhotos$Input
@@ -111510,7 +111510,7 @@ export type getStickers$DirectInput = {
  * Returns stickers from the installed sticker sets that correspond to any of the given emoji or can be found by sticker-specific keywords. If the query is non-empty, then favorite, recently used or trending stickers may also be returned
  *
  * @param {getStickers$Input} parameters {@link getStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getStickers = (parameters: getStickers$Input) => Stickers;
 
@@ -111578,7 +111578,7 @@ export type getAllStickerEmojis$DirectInput = {
  * Returns unique emoji that correspond to stickers to be found by the getStickers(sticker_type, query, 1000000, chat_id)
  *
  * @param {getAllStickerEmojis$Input} parameters {@link getAllStickerEmojis$Input}
- * @return {Emojis} {@link Emojis}
+ * @returns {Emojis} {@link Emojis}
  */
 export type getAllStickerEmojis = (parameters: getAllStickerEmojis$Input) => Emojis;
 
@@ -111634,7 +111634,7 @@ export type searchStickers$DirectInput = {
  * Searches for stickers from public sticker sets that correspond to any of the given emoji
  *
  * @param {searchStickers$Input} parameters {@link searchStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type searchStickers = (parameters: searchStickers$Input) => Stickers;
 
@@ -111654,7 +111654,7 @@ export type getGreetingStickers$DirectInput = {};
  * Returns greeting stickers from regular sticker sets that can be used for the start page of other users
  *
  * @param {getGreetingStickers$Input} parameters {@link getGreetingStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getGreetingStickers = (
   parameters: getGreetingStickers$Input
@@ -111688,7 +111688,7 @@ export type getPremiumStickers$DirectInput = {
  * Returns premium stickers from regular sticker sets
  *
  * @param {getPremiumStickers$Input} parameters {@link getPremiumStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getPremiumStickers = (parameters: getPremiumStickers$Input) => Stickers;
 
@@ -111720,7 +111720,7 @@ export type getInstalledStickerSets$DirectInput = {
  * Returns a list of installed sticker sets
  *
  * @param {getInstalledStickerSets$Input} parameters {@link getInstalledStickerSets$Input}
- * @return {StickerSets} {@link StickerSets}
+ * @returns {StickerSets} {@link StickerSets}
  */
 export type getInstalledStickerSets = (
   parameters: getInstalledStickerSets$Input
@@ -111778,7 +111778,7 @@ export type getArchivedStickerSets$DirectInput = {
  * Returns a list of archived sticker sets
  *
  * @param {getArchivedStickerSets$Input} parameters {@link getArchivedStickerSets$Input}
- * @return {StickerSets} {@link StickerSets}
+ * @returns {StickerSets} {@link StickerSets}
  */
 export type getArchivedStickerSets = (
   parameters: getArchivedStickerSets$Input
@@ -111836,7 +111836,7 @@ export type getTrendingStickerSets$DirectInput = {
  * Returns a list of trending sticker sets. For optimal performance, the number of returned sticker sets is chosen by TDLib
  *
  * @param {getTrendingStickerSets$Input} parameters {@link getTrendingStickerSets$Input}
- * @return {TrendingStickerSets} {@link TrendingStickerSets}
+ * @returns {TrendingStickerSets} {@link TrendingStickerSets}
  */
 export type getTrendingStickerSets = (
   parameters: getTrendingStickerSets$Input
@@ -111870,7 +111870,7 @@ export type getAttachedStickerSets$DirectInput = {
  * Returns a list of sticker sets attached to a file, including regular, mask, and emoji sticker sets. Currently, only animations, photos, and videos can have attached sticker sets
  *
  * @param {getAttachedStickerSets$Input} parameters {@link getAttachedStickerSets$Input}
- * @return {StickerSets} {@link StickerSets}
+ * @returns {StickerSets} {@link StickerSets}
  */
 export type getAttachedStickerSets = (
   parameters: getAttachedStickerSets$Input
@@ -111904,7 +111904,7 @@ export type getStickerSet$DirectInput = {
  * Returns information about a sticker set by its identifier
  *
  * @param {getStickerSet$Input} parameters {@link getStickerSet$Input}
- * @return {StickerSet} {@link StickerSet}
+ * @returns {StickerSet} {@link StickerSet}
  */
 export type getStickerSet = (parameters: getStickerSet$Input) => StickerSet;
 
@@ -111936,7 +111936,7 @@ export type searchStickerSet$DirectInput = {
  * Searches for a sticker set by its name
  *
  * @param {searchStickerSet$Input} parameters {@link searchStickerSet$Input}
- * @return {StickerSet} {@link StickerSet}
+ * @returns {StickerSet} {@link StickerSet}
  */
 export type searchStickerSet = (parameters: searchStickerSet$Input) => StickerSet;
 
@@ -111992,7 +111992,7 @@ export type searchInstalledStickerSets$DirectInput = {
  * Searches for installed sticker sets by looking for specified query in their title and name
  *
  * @param {searchInstalledStickerSets$Input} parameters {@link searchInstalledStickerSets$Input}
- * @return {StickerSets} {@link StickerSets}
+ * @returns {StickerSets} {@link StickerSets}
  */
 export type searchInstalledStickerSets = (
   parameters: searchInstalledStickerSets$Input
@@ -112038,7 +112038,7 @@ export type searchStickerSets$DirectInput = {
  * Searches for sticker sets by looking for specified query in their title and name. Excludes installed sticker sets from the results
  *
  * @param {searchStickerSets$Input} parameters {@link searchStickerSets$Input}
- * @return {StickerSets} {@link StickerSets}
+ * @returns {StickerSets} {@link StickerSets}
  */
 export type searchStickerSets = (parameters: searchStickerSets$Input) => StickerSets;
 
@@ -112094,7 +112094,7 @@ export type changeStickerSet$DirectInput = {
  * Installs/uninstalls or activates/archives a sticker set
  *
  * @param {changeStickerSet$Input} parameters {@link changeStickerSet$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type changeStickerSet = (parameters: changeStickerSet$Input) => Ok;
 
@@ -112126,7 +112126,7 @@ export type viewTrendingStickerSets$DirectInput = {
  * Informs the server that some trending sticker sets have been viewed by the user
  *
  * @param {viewTrendingStickerSets$Input} parameters {@link viewTrendingStickerSets$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type viewTrendingStickerSets = (
   parameters: viewTrendingStickerSets$Input
@@ -112172,7 +112172,7 @@ export type reorderInstalledStickerSets$DirectInput = {
  * Changes the order of installed sticker sets
  *
  * @param {reorderInstalledStickerSets$Input} parameters {@link reorderInstalledStickerSets$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reorderInstalledStickerSets = (
   parameters: reorderInstalledStickerSets$Input
@@ -112206,7 +112206,7 @@ export type getRecentStickers$DirectInput = {
  * Returns a list of recently used stickers
  *
  * @param {getRecentStickers$Input} parameters {@link getRecentStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getRecentStickers = (parameters: getRecentStickers$Input) => Stickers;
 
@@ -112256,7 +112256,7 @@ export type addRecentSticker$DirectInput = {
  * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to recent stickers
  *
  * @param {addRecentSticker$Input} parameters {@link addRecentSticker$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type addRecentSticker = (parameters: addRecentSticker$Input) => Stickers;
 
@@ -112300,7 +112300,7 @@ export type removeRecentSticker$DirectInput = {
  * Removes a sticker from the list of recently used stickers
  *
  * @param {removeRecentSticker$Input} parameters {@link removeRecentSticker$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeRecentSticker = (parameters: removeRecentSticker$Input) => Ok;
 
@@ -112332,7 +112332,7 @@ export type clearRecentStickers$DirectInput = {
  * Clears the list of recently used stickers
  *
  * @param {clearRecentStickers$Input} parameters {@link clearRecentStickers$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clearRecentStickers = (parameters: clearRecentStickers$Input) => Ok;
 
@@ -112352,7 +112352,7 @@ export type getFavoriteStickers$DirectInput = {};
  * Returns favorite stickers
  *
  * @param {getFavoriteStickers$Input} parameters {@link getFavoriteStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getFavoriteStickers = (
   parameters: getFavoriteStickers$Input
@@ -112392,7 +112392,7 @@ export type addFavoriteSticker$DirectInput = {
  * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to favorite stickers
  *
  * @param {addFavoriteSticker$Input} parameters {@link addFavoriteSticker$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addFavoriteSticker = (parameters: addFavoriteSticker$Input) => Ok;
 
@@ -112424,7 +112424,7 @@ export type removeFavoriteSticker$DirectInput = {
  * Removes a sticker from the list of favorite stickers
  *
  * @param {removeFavoriteSticker$Input} parameters {@link removeFavoriteSticker$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeFavoriteSticker = (parameters: removeFavoriteSticker$Input) => Ok;
 
@@ -112456,7 +112456,7 @@ export type getStickerEmojis$DirectInput = {
  * Returns emoji corresponding to a sticker. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
  *
  * @param {getStickerEmojis$Input} parameters {@link getStickerEmojis$Input}
- * @return {Emojis} {@link Emojis}
+ * @returns {Emojis} {@link Emojis}
  */
 export type getStickerEmojis = (parameters: getStickerEmojis$Input) => Emojis;
 
@@ -112500,7 +112500,7 @@ export type searchEmojis$DirectInput = {
  * Searches for emojis by keywords. Supported only if the file database is enabled. Order of results is unspecified
  *
  * @param {searchEmojis$Input} parameters {@link searchEmojis$Input}
- * @return {EmojiKeywords} {@link EmojiKeywords}
+ * @returns {EmojiKeywords} {@link EmojiKeywords}
  */
 export type searchEmojis = (parameters: searchEmojis$Input) => EmojiKeywords;
 
@@ -112544,7 +112544,7 @@ export type getKeywordEmojis$DirectInput = {
  * Return emojis matching the keyword. Supported only if the file database is enabled. Order of results is unspecified
  *
  * @param {getKeywordEmojis$Input} parameters {@link getKeywordEmojis$Input}
- * @return {Emojis} {@link Emojis}
+ * @returns {Emojis} {@link Emojis}
  */
 export type getKeywordEmojis = (parameters: getKeywordEmojis$Input) => Emojis;
 
@@ -112576,7 +112576,7 @@ export type getEmojiCategories$DirectInput = {
  * Returns available emojis categories
  *
  * @param {getEmojiCategories$Input} parameters {@link getEmojiCategories$Input}
- * @return {EmojiCategories} {@link EmojiCategories}
+ * @returns {EmojiCategories} {@link EmojiCategories}
  */
 export type getEmojiCategories = (
   parameters: getEmojiCategories$Input
@@ -112610,7 +112610,7 @@ export type getAnimatedEmoji$DirectInput = {
  * Returns an animated emoji corresponding to a given emoji. Returns a 404 error if the emoji has no animated emoji
  *
  * @param {getAnimatedEmoji$Input} parameters {@link getAnimatedEmoji$Input}
- * @return {AnimatedEmoji} {@link AnimatedEmoji}
+ * @returns {AnimatedEmoji} {@link AnimatedEmoji}
  */
 export type getAnimatedEmoji = (parameters: getAnimatedEmoji$Input) => AnimatedEmoji;
 
@@ -112642,7 +112642,7 @@ export type getEmojiSuggestionsUrl$DirectInput = {
  * Returns an HTTP URL which can be used to automatically log in to the translation platform and suggest new emoji replacements. The URL will be valid for 30 seconds after generation
  *
  * @param {getEmojiSuggestionsUrl$Input} parameters {@link getEmojiSuggestionsUrl$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getEmojiSuggestionsUrl = (
   parameters: getEmojiSuggestionsUrl$Input
@@ -112676,7 +112676,7 @@ export type getCustomEmojiStickers$DirectInput = {
  * Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
  *
  * @param {getCustomEmojiStickers$Input} parameters {@link getCustomEmojiStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getCustomEmojiStickers = (
   parameters: getCustomEmojiStickers$Input
@@ -112698,7 +112698,7 @@ export type getDefaultChatPhotoCustomEmojiStickers$DirectInput = {};
  * Returns default list of custom emoji stickers for placing on a chat photo
  *
  * @param {getDefaultChatPhotoCustomEmojiStickers$Input} parameters {@link getDefaultChatPhotoCustomEmojiStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getDefaultChatPhotoCustomEmojiStickers = (
   parameters: getDefaultChatPhotoCustomEmojiStickers$Input
@@ -112720,7 +112720,7 @@ export type getDefaultProfilePhotoCustomEmojiStickers$DirectInput = {};
  * Returns default list of custom emoji stickers for placing on a profile photo
  *
  * @param {getDefaultProfilePhotoCustomEmojiStickers$Input} parameters {@link getDefaultProfilePhotoCustomEmojiStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getDefaultProfilePhotoCustomEmojiStickers = (
   parameters: getDefaultProfilePhotoCustomEmojiStickers$Input
@@ -112742,7 +112742,7 @@ export type getDefaultBackgroundCustomEmojiStickers$DirectInput = {};
  * Returns default list of custom emoji stickers for reply background
  *
  * @param {getDefaultBackgroundCustomEmojiStickers$Input} parameters {@link getDefaultBackgroundCustomEmojiStickers$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getDefaultBackgroundCustomEmojiStickers = (
   parameters: getDefaultBackgroundCustomEmojiStickers$Input
@@ -112764,7 +112764,7 @@ export type getSavedAnimations$DirectInput = {};
  * Returns saved animations
  *
  * @param {getSavedAnimations$Input} parameters {@link getSavedAnimations$Input}
- * @return {Animations} {@link Animations}
+ * @returns {Animations} {@link Animations}
  */
 export type getSavedAnimations = (
   parameters: getSavedAnimations$Input
@@ -112804,7 +112804,7 @@ export type addSavedAnimation$DirectInput = {
  * - Only non-secret video animations with MIME type "video/mp4" can be added to the list
  *
  * @param {addSavedAnimation$Input} parameters {@link addSavedAnimation$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addSavedAnimation = (parameters: addSavedAnimation$Input) => Ok;
 
@@ -112836,7 +112836,7 @@ export type removeSavedAnimation$DirectInput = {
  * Removes an animation from the list of saved animations
  *
  * @param {removeSavedAnimation$Input} parameters {@link removeSavedAnimation$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeSavedAnimation = (parameters: removeSavedAnimation$Input) => Ok;
 
@@ -112856,7 +112856,7 @@ export type getRecentInlineBots$DirectInput = {};
  * Returns up to 20 recently used inline bots in the order of their last usage
  *
  * @param {getRecentInlineBots$Input} parameters {@link getRecentInlineBots$Input}
- * @return {Users} {@link Users}
+ * @returns {Users} {@link Users}
  */
 export type getRecentInlineBots = (parameters: getRecentInlineBots$Input) => Users;
 
@@ -112900,7 +112900,7 @@ export type searchHashtags$DirectInput = {
  * Searches for recently used hashtags by their prefix
  *
  * @param {searchHashtags$Input} parameters {@link searchHashtags$Input}
- * @return {Hashtags} {@link Hashtags}
+ * @returns {Hashtags} {@link Hashtags}
  */
 export type searchHashtags = (parameters: searchHashtags$Input) => Hashtags;
 
@@ -112932,7 +112932,7 @@ export type removeRecentHashtag$DirectInput = {
  * Removes a hashtag from the list of recently used hashtags
  *
  * @param {removeRecentHashtag$Input} parameters {@link removeRecentHashtag$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeRecentHashtag = (parameters: removeRecentHashtag$Input) => Ok;
 
@@ -112976,7 +112976,7 @@ export type getWebPagePreview$DirectInput = {
  * Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
  *
  * @param {getWebPagePreview$Input} parameters {@link getWebPagePreview$Input}
- * @return {WebPage} {@link WebPage}
+ * @returns {WebPage} {@link WebPage}
  */
 export type getWebPagePreview = (parameters: getWebPagePreview$Input) => WebPage;
 
@@ -113020,7 +113020,7 @@ export type getWebPageInstantView$DirectInput = {
  * Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
  *
  * @param {getWebPageInstantView$Input} parameters {@link getWebPageInstantView$Input}
- * @return {WebPageInstantView} {@link WebPageInstantView}
+ * @returns {WebPageInstantView} {@link WebPageInstantView}
  */
 export type getWebPageInstantView = (
   parameters: getWebPageInstantView$Input
@@ -113066,7 +113066,7 @@ export type setProfilePhoto$DirectInput = {
  * Changes a profile photo for the current user
  *
  * @param {setProfilePhoto$Input} parameters {@link setProfilePhoto$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setProfilePhoto = (parameters: setProfilePhoto$Input) => Ok;
 
@@ -113098,7 +113098,7 @@ export type deleteProfilePhoto$DirectInput = {
  * Deletes a profile photo
  *
  * @param {deleteProfilePhoto$Input} parameters {@link deleteProfilePhoto$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteProfilePhoto = (parameters: deleteProfilePhoto$Input) => Ok;
 
@@ -113142,7 +113142,7 @@ export type setAccentColor$DirectInput = {
  * Changes accent color and background custom emoji for the current user; for Telegram Premium users only
  *
  * @param {setAccentColor$Input} parameters {@link setAccentColor$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setAccentColor = (parameters: setAccentColor$Input) => Ok;
 
@@ -113186,7 +113186,7 @@ export type setProfileAccentColor$DirectInput = {
  * Changes accent color and background custom emoji for profile of the current user; for Telegram Premium users only
  *
  * @param {setProfileAccentColor$Input} parameters {@link setProfileAccentColor$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setProfileAccentColor = (parameters: setProfileAccentColor$Input) => Ok;
 
@@ -113230,7 +113230,7 @@ export type setName$DirectInput = {
  * Changes the first and last name of the current user
  *
  * @param {setName$Input} parameters {@link setName$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setName = (parameters: setName$Input) => Ok;
 
@@ -113262,7 +113262,7 @@ export type setBio$DirectInput = {
  * Changes the bio of the current user
  *
  * @param {setBio$Input} parameters {@link setBio$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBio = (parameters: setBio$Input) => Ok;
 
@@ -113294,7 +113294,7 @@ export type setUsername$DirectInput = {
  * Changes the editable username of the current user
  *
  * @param {setUsername$Input} parameters {@link setUsername$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setUsername = (parameters: setUsername$Input) => Ok;
 
@@ -113338,7 +113338,7 @@ export type toggleUsernameIsActive$DirectInput = {
  * Changes active state for a username of the current user. The editable username can't be disabled. May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached
  *
  * @param {toggleUsernameIsActive$Input} parameters {@link toggleUsernameIsActive$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleUsernameIsActive = (
   parameters: toggleUsernameIsActive$Input
@@ -113372,7 +113372,7 @@ export type reorderActiveUsernames$DirectInput = {
  * Changes order of active usernames of the current user
  *
  * @param {reorderActiveUsernames$Input} parameters {@link reorderActiveUsernames$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reorderActiveUsernames = (
   parameters: reorderActiveUsernames$Input
@@ -113406,7 +113406,7 @@ export type setBirthdate$DirectInput = {
  * Changes the birthdate of the current user
  *
  * @param {setBirthdate$Input} parameters {@link setBirthdate$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBirthdate = (parameters: setBirthdate$Input) => Ok;
 
@@ -113438,7 +113438,7 @@ export type setPersonalChat$DirectInput = {
  * Changes the personal chat of the current user
  *
  * @param {setPersonalChat$Input} parameters {@link setPersonalChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setPersonalChat = (parameters: setPersonalChat$Input) => Ok;
 
@@ -113470,7 +113470,7 @@ export type setEmojiStatus$DirectInput = {
  * Changes the emoji status of the current user; for Telegram Premium users only
  *
  * @param {setEmojiStatus$Input} parameters {@link setEmojiStatus$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setEmojiStatus = (parameters: setEmojiStatus$Input) => Ok;
 
@@ -113502,7 +113502,7 @@ export type setLocation$DirectInput = {
  * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
  *
  * @param {setLocation$Input} parameters {@link setLocation$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setLocation = (parameters: setLocation$Input) => Ok;
 
@@ -113534,7 +113534,7 @@ export type toggleHasSponsoredMessagesEnabled$DirectInput = {
  * Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
  *
  * @param {toggleHasSponsoredMessagesEnabled$Input} parameters {@link toggleHasSponsoredMessagesEnabled$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleHasSponsoredMessagesEnabled = (
   parameters: toggleHasSponsoredMessagesEnabled$Input
@@ -113568,7 +113568,7 @@ export type setBusinessLocation$DirectInput = {
  * Changes the business location of the current user. Requires Telegram Business subscription
  *
  * @param {setBusinessLocation$Input} parameters {@link setBusinessLocation$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBusinessLocation = (parameters: setBusinessLocation$Input) => Ok;
 
@@ -113600,7 +113600,7 @@ export type setBusinessOpeningHours$DirectInput = {
  * Changes the business opening hours of the current user. Requires Telegram Business subscription
  *
  * @param {setBusinessOpeningHours$Input} parameters {@link setBusinessOpeningHours$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBusinessOpeningHours = (
   parameters: setBusinessOpeningHours$Input
@@ -113634,7 +113634,7 @@ export type setBusinessGreetingMessageSettings$DirectInput = {
  * Changes the business greeting message settings of the current user. Requires Telegram Business subscription
  *
  * @param {setBusinessGreetingMessageSettings$Input} parameters {@link setBusinessGreetingMessageSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBusinessGreetingMessageSettings = (
   parameters: setBusinessGreetingMessageSettings$Input
@@ -113668,7 +113668,7 @@ export type setBusinessAwayMessageSettings$DirectInput = {
  * Changes the business away message settings of the current user. Requires Telegram Business subscription
  *
  * @param {setBusinessAwayMessageSettings$Input} parameters {@link setBusinessAwayMessageSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBusinessAwayMessageSettings = (
   parameters: setBusinessAwayMessageSettings$Input
@@ -113702,7 +113702,7 @@ export type setBusinessStartPage$DirectInput = {
  * Changes the business start page of the current user. Requires Telegram Business subscription
  *
  * @param {setBusinessStartPage$Input} parameters {@link setBusinessStartPage$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBusinessStartPage = (parameters: setBusinessStartPage$Input) => Ok;
 
@@ -113758,7 +113758,7 @@ export type sendPhoneNumberCode$DirectInput = {
  * Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
  *
  * @param {sendPhoneNumberCode$Input} parameters {@link sendPhoneNumberCode$Input}
- * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
+ * @returns {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
  */
 export type sendPhoneNumberCode = (
   parameters: sendPhoneNumberCode$Input
@@ -113792,7 +113792,7 @@ export type sendPhoneNumberFirebaseSms$DirectInput = {
  * Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
  *
  * @param {sendPhoneNumberFirebaseSms$Input} parameters {@link sendPhoneNumberFirebaseSms$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendPhoneNumberFirebaseSms = (
   parameters: sendPhoneNumberFirebaseSms$Input
@@ -113826,7 +113826,7 @@ export type reportPhoneNumberCodeMissing$DirectInput = {
  * Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
  *
  * @param {reportPhoneNumberCodeMissing$Input} parameters {@link reportPhoneNumberCodeMissing$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reportPhoneNumberCodeMissing = (
   parameters: reportPhoneNumberCodeMissing$Input
@@ -113860,7 +113860,7 @@ export type resendPhoneNumberCode$DirectInput = {
  * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
  *
  * @param {resendPhoneNumberCode$Input} parameters {@link resendPhoneNumberCode$Input}
- * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
+ * @returns {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
  */
 export type resendPhoneNumberCode = (
   parameters: resendPhoneNumberCode$Input
@@ -113894,7 +113894,7 @@ export type checkPhoneNumberCode$DirectInput = {
  * Check the authentication code and completes the request for which the code was sent if appropriate
  *
  * @param {checkPhoneNumberCode$Input} parameters {@link checkPhoneNumberCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkPhoneNumberCode = (parameters: checkPhoneNumberCode$Input) => Ok;
 
@@ -113914,7 +113914,7 @@ export type getBusinessConnectedBot$DirectInput = {};
  * Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
  *
  * @param {getBusinessConnectedBot$Input} parameters {@link getBusinessConnectedBot$Input}
- * @return {BusinessConnectedBot} {@link BusinessConnectedBot}
+ * @returns {BusinessConnectedBot} {@link BusinessConnectedBot}
  */
 export type getBusinessConnectedBot = (
   parameters: getBusinessConnectedBot$Input
@@ -113948,7 +113948,7 @@ export type setBusinessConnectedBot$DirectInput = {
  * Adds or changes business bot that is connected to the current user account
  *
  * @param {setBusinessConnectedBot$Input} parameters {@link setBusinessConnectedBot$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBusinessConnectedBot = (
   parameters: setBusinessConnectedBot$Input
@@ -113982,7 +113982,7 @@ export type deleteBusinessConnectedBot$DirectInput = {
  * Deletes the business bot that is connected to the current user account
  *
  * @param {deleteBusinessConnectedBot$Input} parameters {@link deleteBusinessConnectedBot$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteBusinessConnectedBot = (
   parameters: deleteBusinessConnectedBot$Input
@@ -114028,7 +114028,7 @@ export type toggleBusinessConnectedBotChatIsPaused$DirectInput = {
  * Pauses or resumes the connected business bot in a specific chat
  *
  * @param {toggleBusinessConnectedBotChatIsPaused$Input} parameters {@link toggleBusinessConnectedBotChatIsPaused$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleBusinessConnectedBotChatIsPaused = (
   parameters: toggleBusinessConnectedBotChatIsPaused$Input
@@ -114062,7 +114062,7 @@ export type removeBusinessConnectedBotFromChat$DirectInput = {
  * Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
  *
  * @param {removeBusinessConnectedBotFromChat$Input} parameters {@link removeBusinessConnectedBotFromChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeBusinessConnectedBotFromChat = (
   parameters: removeBusinessConnectedBotFromChat$Input
@@ -114084,7 +114084,7 @@ export type getBusinessChatLinks$DirectInput = {};
  * Returns business chat links created for the current account
  *
  * @param {getBusinessChatLinks$Input} parameters {@link getBusinessChatLinks$Input}
- * @return {BusinessChatLinks} {@link BusinessChatLinks}
+ * @returns {BusinessChatLinks} {@link BusinessChatLinks}
  */
 export type getBusinessChatLinks = (
   parameters: getBusinessChatLinks$Input
@@ -114118,7 +114118,7 @@ export type createBusinessChatLink$DirectInput = {
  * Creates a business chat link for the current account. Requires Telegram Business subscription. There can be up to getOption("business_chat_link_count_max") links created. Returns the created link
  *
  * @param {createBusinessChatLink$Input} parameters {@link createBusinessChatLink$Input}
- * @return {BusinessChatLink} {@link BusinessChatLink}
+ * @returns {BusinessChatLink} {@link BusinessChatLink}
  */
 export type createBusinessChatLink = (
   parameters: createBusinessChatLink$Input
@@ -114164,7 +114164,7 @@ export type editBusinessChatLink$DirectInput = {
  * Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
  *
  * @param {editBusinessChatLink$Input} parameters {@link editBusinessChatLink$Input}
- * @return {BusinessChatLink} {@link BusinessChatLink}
+ * @returns {BusinessChatLink} {@link BusinessChatLink}
  */
 export type editBusinessChatLink = (
   parameters: editBusinessChatLink$Input
@@ -114198,7 +114198,7 @@ export type deleteBusinessChatLink$DirectInput = {
  * Deletes a business chat link of the current account
  *
  * @param {deleteBusinessChatLink$Input} parameters {@link deleteBusinessChatLink$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteBusinessChatLink = (
   parameters: deleteBusinessChatLink$Input
@@ -114232,7 +114232,7 @@ export type getBusinessChatLinkInfo$DirectInput = {
  * Returns information about a business chat link
  *
  * @param {getBusinessChatLinkInfo$Input} parameters {@link getBusinessChatLinkInfo$Input}
- * @return {BusinessChatLinkInfo} {@link BusinessChatLinkInfo}
+ * @returns {BusinessChatLinkInfo} {@link BusinessChatLinkInfo}
  */
 export type getBusinessChatLinkInfo = (
   parameters: getBusinessChatLinkInfo$Input
@@ -114254,7 +114254,7 @@ export type getUserLink$DirectInput = {};
  * Returns an HTTPS link, which can be used to get information about the current user
  *
  * @param {getUserLink$Input} parameters {@link getUserLink$Input}
- * @return {UserLink} {@link UserLink}
+ * @returns {UserLink} {@link UserLink}
  */
 export type getUserLink = (parameters: getUserLink$Input) => UserLink;
 
@@ -114286,7 +114286,7 @@ export type searchUserByToken$DirectInput = {
  * Searches a user by a token from the user's link
  *
  * @param {searchUserByToken$Input} parameters {@link searchUserByToken$Input}
- * @return {User} {@link User}
+ * @returns {User} {@link User}
  */
 export type searchUserByToken = (parameters: searchUserByToken$Input) => User;
 
@@ -114342,7 +114342,7 @@ export type setCommands$DirectInput = {
  * Sets the list of commands supported by the bot for the given user scope and language; for bots only
  *
  * @param {setCommands$Input} parameters {@link setCommands$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setCommands = (parameters: setCommands$Input) => Ok;
 
@@ -114386,7 +114386,7 @@ export type deleteCommands$DirectInput = {
  * Deletes commands supported by the bot for the given user scope and language; for bots only
  *
  * @param {deleteCommands$Input} parameters {@link deleteCommands$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteCommands = (parameters: deleteCommands$Input) => Ok;
 
@@ -114430,7 +114430,7 @@ export type getCommands$DirectInput = {
  * Returns the list of commands supported by the bot for the given user scope and language; for bots only
  *
  * @param {getCommands$Input} parameters {@link getCommands$Input}
- * @return {BotCommands} {@link BotCommands}
+ * @returns {BotCommands} {@link BotCommands}
  */
 export type getCommands = (parameters: getCommands$Input) => BotCommands;
 
@@ -114474,7 +114474,7 @@ export type setMenuButton$DirectInput = {
  * Sets menu button for the given user or for all users; for bots only
  *
  * @param {setMenuButton$Input} parameters {@link setMenuButton$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setMenuButton = (parameters: setMenuButton$Input) => Ok;
 
@@ -114506,7 +114506,7 @@ export type getMenuButton$DirectInput = {
  * Returns menu button set by the bot for the given user; for bots only
  *
  * @param {getMenuButton$Input} parameters {@link getMenuButton$Input}
- * @return {BotMenuButton} {@link BotMenuButton}
+ * @returns {BotMenuButton} {@link BotMenuButton}
  */
 export type getMenuButton = (parameters: getMenuButton$Input) => BotMenuButton;
 
@@ -114538,7 +114538,7 @@ export type setDefaultGroupAdministratorRights$DirectInput = {
  * Sets default administrator rights for adding the bot to basic group and supergroup chats; for bots only
  *
  * @param {setDefaultGroupAdministratorRights$Input} parameters {@link setDefaultGroupAdministratorRights$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setDefaultGroupAdministratorRights = (
   parameters: setDefaultGroupAdministratorRights$Input
@@ -114572,7 +114572,7 @@ export type setDefaultChannelAdministratorRights$DirectInput = {
  * Sets default administrator rights for adding the bot to channel chats; for bots only
  *
  * @param {setDefaultChannelAdministratorRights$Input} parameters {@link setDefaultChannelAdministratorRights$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setDefaultChannelAdministratorRights = (
   parameters: setDefaultChannelAdministratorRights$Input
@@ -114606,7 +114606,7 @@ export type canBotSendMessages$DirectInput = {
  * Checks whether the specified bot can send messages to the user. Returns a 404 error if can't and the access can be granted by call to allowBotToSendMessages
  *
  * @param {canBotSendMessages$Input} parameters {@link canBotSendMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type canBotSendMessages = (parameters: canBotSendMessages$Input) => Ok;
 
@@ -114638,7 +114638,7 @@ export type allowBotToSendMessages$DirectInput = {
  * Allows the specified bot to send messages to the user
  *
  * @param {allowBotToSendMessages$Input} parameters {@link allowBotToSendMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type allowBotToSendMessages = (
   parameters: allowBotToSendMessages$Input
@@ -114696,7 +114696,7 @@ export type sendWebAppCustomRequest$DirectInput = {
  * Sends a custom request from a Web App
  *
  * @param {sendWebAppCustomRequest$Input} parameters {@link sendWebAppCustomRequest$Input}
- * @return {CustomRequestResult} {@link CustomRequestResult}
+ * @returns {CustomRequestResult} {@link CustomRequestResult}
  */
 export type sendWebAppCustomRequest = (
   parameters: sendWebAppCustomRequest$Input
@@ -114754,7 +114754,7 @@ export type setBotName$DirectInput = {
  * Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
  *
  * @param {setBotName$Input} parameters {@link setBotName$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBotName = (parameters: setBotName$Input) => Ok;
 
@@ -114798,7 +114798,7 @@ export type getBotName$DirectInput = {
  * Returns the name of a bot in the given language. Can be called only if userTypeBot.can_be_edited == true
  *
  * @param {getBotName$Input} parameters {@link getBotName$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getBotName = (parameters: getBotName$Input) => Text;
 
@@ -114842,7 +114842,7 @@ export type setBotProfilePhoto$DirectInput = {
  * Changes a profile photo for a bot
  *
  * @param {setBotProfilePhoto$Input} parameters {@link setBotProfilePhoto$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBotProfilePhoto = (parameters: setBotProfilePhoto$Input) => Ok;
 
@@ -114898,7 +114898,7 @@ export type toggleBotUsernameIsActive$DirectInput = {
  * Changes active state for a username of a bot. The editable username can't be disabled. May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached. Can be called only if userTypeBot.can_be_edited == true
  *
  * @param {toggleBotUsernameIsActive$Input} parameters {@link toggleBotUsernameIsActive$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleBotUsernameIsActive = (
   parameters: toggleBotUsernameIsActive$Input
@@ -114944,7 +114944,7 @@ export type reorderBotActiveUsernames$DirectInput = {
  * Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
  *
  * @param {reorderBotActiveUsernames$Input} parameters {@link reorderBotActiveUsernames$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reorderBotActiveUsernames = (
   parameters: reorderBotActiveUsernames$Input
@@ -115002,7 +115002,7 @@ export type setBotInfoDescription$DirectInput = {
  * Sets the text shown in the chat with a bot if the chat is empty. Can be called only if userTypeBot.can_be_edited == true
  *
  * @param {setBotInfoDescription$Input} parameters {@link setBotInfoDescription$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBotInfoDescription = (parameters: setBotInfoDescription$Input) => Ok;
 
@@ -115046,7 +115046,7 @@ export type getBotInfoDescription$DirectInput = {
  * Returns the text shown in the chat with a bot if the chat is empty in the given language. Can be called only if userTypeBot.can_be_edited == true
  *
  * @param {getBotInfoDescription$Input} parameters {@link getBotInfoDescription$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getBotInfoDescription = (
   parameters: getBotInfoDescription$Input
@@ -115104,7 +115104,7 @@ export type setBotInfoShortDescription$DirectInput = {
  * Sets the text shown on a bot's profile page and sent together with the link when users share the bot. Can be called only if userTypeBot.can_be_edited == true
  *
  * @param {setBotInfoShortDescription$Input} parameters {@link setBotInfoShortDescription$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBotInfoShortDescription = (
   parameters: setBotInfoShortDescription$Input
@@ -115150,7 +115150,7 @@ export type getBotInfoShortDescription$DirectInput = {
  * Returns the text shown on a bot's profile page and sent together with the link when users share the bot in the given language. Can be called only if userTypeBot.can_be_edited == true
  *
  * @param {getBotInfoShortDescription$Input} parameters {@link getBotInfoShortDescription$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getBotInfoShortDescription = (
   parameters: getBotInfoShortDescription$Input
@@ -115172,7 +115172,7 @@ export type getActiveSessions$DirectInput = {};
  * Returns all active sessions of the current user
  *
  * @param {getActiveSessions$Input} parameters {@link getActiveSessions$Input}
- * @return {Sessions} {@link Sessions}
+ * @returns {Sessions} {@link Sessions}
  */
 export type getActiveSessions = (parameters: getActiveSessions$Input) => Sessions;
 
@@ -115204,7 +115204,7 @@ export type terminateSession$DirectInput = {
  * Terminates a session of the current user
  *
  * @param {terminateSession$Input} parameters {@link terminateSession$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type terminateSession = (parameters: terminateSession$Input) => Ok;
 
@@ -115224,7 +115224,7 @@ export type terminateAllOtherSessions$DirectInput = {};
  * Terminates all other sessions of the current user
  *
  * @param {terminateAllOtherSessions$Input} parameters {@link terminateAllOtherSessions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type terminateAllOtherSessions = (
   parameters: terminateAllOtherSessions$Input
@@ -115258,7 +115258,7 @@ export type confirmSession$DirectInput = {
  * Confirms an unconfirmed session of the current user from another device
  *
  * @param {confirmSession$Input} parameters {@link confirmSession$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type confirmSession = (parameters: confirmSession$Input) => Ok;
 
@@ -115302,7 +115302,7 @@ export type toggleSessionCanAcceptCalls$DirectInput = {
  * Toggles whether a session can accept incoming calls
  *
  * @param {toggleSessionCanAcceptCalls$Input} parameters {@link toggleSessionCanAcceptCalls$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSessionCanAcceptCalls = (
   parameters: toggleSessionCanAcceptCalls$Input
@@ -115348,7 +115348,7 @@ export type toggleSessionCanAcceptSecretChats$DirectInput = {
  * Toggles whether a session can accept incoming secret chats
  *
  * @param {toggleSessionCanAcceptSecretChats$Input} parameters {@link toggleSessionCanAcceptSecretChats$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSessionCanAcceptSecretChats = (
   parameters: toggleSessionCanAcceptSecretChats$Input
@@ -115382,7 +115382,7 @@ export type setInactiveSessionTtl$DirectInput = {
  * Changes the period of inactivity after which sessions will automatically be terminated
  *
  * @param {setInactiveSessionTtl$Input} parameters {@link setInactiveSessionTtl$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setInactiveSessionTtl = (parameters: setInactiveSessionTtl$Input) => Ok;
 
@@ -115402,7 +115402,7 @@ export type getConnectedWebsites$DirectInput = {};
  * Returns all website where the current user used Telegram to log in
  *
  * @param {getConnectedWebsites$Input} parameters {@link getConnectedWebsites$Input}
- * @return {ConnectedWebsites} {@link ConnectedWebsites}
+ * @returns {ConnectedWebsites} {@link ConnectedWebsites}
  */
 export type getConnectedWebsites = (
   parameters: getConnectedWebsites$Input
@@ -115436,7 +115436,7 @@ export type disconnectWebsite$DirectInput = {
  * Disconnects website from the current user's Telegram account
  *
  * @param {disconnectWebsite$Input} parameters {@link disconnectWebsite$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type disconnectWebsite = (parameters: disconnectWebsite$Input) => Ok;
 
@@ -115456,7 +115456,7 @@ export type disconnectAllWebsites$DirectInput = {};
  * Disconnects all websites from the current user's Telegram account
  *
  * @param {disconnectAllWebsites$Input} parameters {@link disconnectAllWebsites$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type disconnectAllWebsites = (parameters: disconnectAllWebsites$Input) => Ok;
 
@@ -115500,7 +115500,7 @@ export type setSupergroupUsername$DirectInput = {
  * Changes the editable username of a supergroup or channel, requires owner privileges in the supergroup or channel
  *
  * @param {setSupergroupUsername$Input} parameters {@link setSupergroupUsername$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setSupergroupUsername = (parameters: setSupergroupUsername$Input) => Ok;
 
@@ -115562,7 +115562,7 @@ export type toggleSupergroupUsernameIsActive$DirectInput = {
  * - May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached
  *
  * @param {toggleSupergroupUsernameIsActive$Input} parameters {@link toggleSupergroupUsernameIsActive$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupUsernameIsActive = (
   parameters: toggleSupergroupUsernameIsActive$Input
@@ -115596,7 +115596,7 @@ export type disableAllSupergroupUsernames$DirectInput = {
  * Disables all active non-editable usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
  *
  * @param {disableAllSupergroupUsernames$Input} parameters {@link disableAllSupergroupUsernames$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type disableAllSupergroupUsernames = (
   parameters: disableAllSupergroupUsernames$Input
@@ -115642,7 +115642,7 @@ export type reorderSupergroupActiveUsernames$DirectInput = {
  * Changes order of active usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
  *
  * @param {reorderSupergroupActiveUsernames$Input} parameters {@link reorderSupergroupActiveUsernames$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reorderSupergroupActiveUsernames = (
   parameters: reorderSupergroupActiveUsernames$Input
@@ -115688,7 +115688,7 @@ export type setSupergroupStickerSet$DirectInput = {
  * Changes the sticker set of a supergroup; requires can_change_info administrator right
  *
  * @param {setSupergroupStickerSet$Input} parameters {@link setSupergroupStickerSet$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setSupergroupStickerSet = (
   parameters: setSupergroupStickerSet$Input
@@ -115734,7 +115734,7 @@ export type setSupergroupCustomEmojiStickerSet$DirectInput = {
  * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
  *
  * @param {setSupergroupCustomEmojiStickerSet$Input} parameters {@link setSupergroupCustomEmojiStickerSet$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setSupergroupCustomEmojiStickerSet = (
   parameters: setSupergroupCustomEmojiStickerSet$Input
@@ -115780,7 +115780,7 @@ export type setSupergroupUnrestrictBoostCount$DirectInput = {
  * Changes the number of times the supergroup must be boosted by a user to ignore slow mode and chat permission restrictions; requires can_restrict_members administrator right
  *
  * @param {setSupergroupUnrestrictBoostCount$Input} parameters {@link setSupergroupUnrestrictBoostCount$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setSupergroupUnrestrictBoostCount = (
   parameters: setSupergroupUnrestrictBoostCount$Input
@@ -115826,7 +115826,7 @@ export type toggleSupergroupSignMessages$DirectInput = {
  * Toggles whether sender signature is added to sent messages in a channel; requires can_change_info member right
  *
  * @param {toggleSupergroupSignMessages$Input} parameters {@link toggleSupergroupSignMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupSignMessages = (
   parameters: toggleSupergroupSignMessages$Input
@@ -115872,7 +115872,7 @@ export type toggleSupergroupJoinToSendMessages$DirectInput = {
  * Toggles whether joining is mandatory to send messages to a discussion supergroup; requires can_restrict_members administrator right
  *
  * @param {toggleSupergroupJoinToSendMessages$Input} parameters {@link toggleSupergroupJoinToSendMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupJoinToSendMessages = (
   parameters: toggleSupergroupJoinToSendMessages$Input
@@ -115918,7 +115918,7 @@ export type toggleSupergroupJoinByRequest$DirectInput = {
  * Toggles whether all users directly joining the supergroup need to be approved by supergroup administrators; requires can_restrict_members administrator right
  *
  * @param {toggleSupergroupJoinByRequest$Input} parameters {@link toggleSupergroupJoinByRequest$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupJoinByRequest = (
   parameters: toggleSupergroupJoinByRequest$Input
@@ -115964,7 +115964,7 @@ export type toggleSupergroupIsAllHistoryAvailable$DirectInput = {
  * Toggles whether the message history of a supergroup is available to new members; requires can_change_info member right
  *
  * @param {toggleSupergroupIsAllHistoryAvailable$Input} parameters {@link toggleSupergroupIsAllHistoryAvailable$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupIsAllHistoryAvailable = (
   parameters: toggleSupergroupIsAllHistoryAvailable$Input
@@ -116010,7 +116010,7 @@ export type toggleSupergroupCanHaveSponsoredMessages$DirectInput = {
  * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
  *
  * @param {toggleSupergroupCanHaveSponsoredMessages$Input} parameters {@link toggleSupergroupCanHaveSponsoredMessages$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupCanHaveSponsoredMessages = (
   parameters: toggleSupergroupCanHaveSponsoredMessages$Input
@@ -116056,7 +116056,7 @@ export type toggleSupergroupHasHiddenMembers$DirectInput = {
  * Toggles whether non-administrators can receive only administrators and bots using getSupergroupMembers or searchChatMembers. Can be called only if supergroupFullInfo.can_hide_members == true
  *
  * @param {toggleSupergroupHasHiddenMembers$Input} parameters {@link toggleSupergroupHasHiddenMembers$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupHasHiddenMembers = (
   parameters: toggleSupergroupHasHiddenMembers$Input
@@ -116102,7 +116102,7 @@ export type toggleSupergroupHasAggressiveAntiSpamEnabled$DirectInput = {
  * Toggles whether aggressive anti-spam checks are enabled in the supergroup. Can be called only if supergroupFullInfo.can_toggle_aggressive_anti_spam == true
  *
  * @param {toggleSupergroupHasAggressiveAntiSpamEnabled$Input} parameters {@link toggleSupergroupHasAggressiveAntiSpamEnabled$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupHasAggressiveAntiSpamEnabled = (
   parameters: toggleSupergroupHasAggressiveAntiSpamEnabled$Input
@@ -116148,7 +116148,7 @@ export type toggleSupergroupIsForum$DirectInput = {
  * Toggles whether the supergroup is a forum; requires owner privileges in the supergroup. Discussion supergroups can't be converted to forums
  *
  * @param {toggleSupergroupIsForum$Input} parameters {@link toggleSupergroupIsForum$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupIsForum = (
   parameters: toggleSupergroupIsForum$Input
@@ -116182,7 +116182,7 @@ export type toggleSupergroupIsBroadcastGroup$DirectInput = {
  * Upgrades supergroup to a broadcast group; requires owner privileges in the supergroup
  *
  * @param {toggleSupergroupIsBroadcastGroup$Input} parameters {@link toggleSupergroupIsBroadcastGroup$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type toggleSupergroupIsBroadcastGroup = (
   parameters: toggleSupergroupIsBroadcastGroup$Input
@@ -116228,7 +116228,7 @@ export type reportSupergroupSpam$DirectInput = {
  * Reports messages in a supergroup as spam; requires administrator rights in the supergroup
  *
  * @param {reportSupergroupSpam$Input} parameters {@link reportSupergroupSpam$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reportSupergroupSpam = (parameters: reportSupergroupSpam$Input) => Ok;
 
@@ -116272,7 +116272,7 @@ export type reportSupergroupAntiSpamFalsePositive$DirectInput = {
  * Reports a false deletion of a message by aggressive anti-spam checks; requires administrator rights in the supergroup. Can be called only for messages from chatEventMessageDeleted with can_report_anti_spam_false_positive == true
  *
  * @param {reportSupergroupAntiSpamFalsePositive$Input} parameters {@link reportSupergroupAntiSpamFalsePositive$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reportSupergroupAntiSpamFalsePositive = (
   parameters: reportSupergroupAntiSpamFalsePositive$Input
@@ -116342,7 +116342,7 @@ export type getSupergroupMembers$DirectInput = {
  * Returns information about members or banned users in a supergroup or channel. Can be used only if supergroupFullInfo.can_get_members == true; additionally, administrator privileges may be required for some filters
  *
  * @param {getSupergroupMembers$Input} parameters {@link getSupergroupMembers$Input}
- * @return {ChatMembers} {@link ChatMembers}
+ * @returns {ChatMembers} {@link ChatMembers}
  */
 export type getSupergroupMembers = (
   parameters: getSupergroupMembers$Input
@@ -116376,7 +116376,7 @@ export type closeSecretChat$DirectInput = {
  * Closes a secret chat, effectively transferring its state to secretChatStateClosed
  *
  * @param {closeSecretChat$Input} parameters {@link closeSecretChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type closeSecretChat = (parameters: closeSecretChat$Input) => Ok;
 
@@ -116468,7 +116468,7 @@ export type getChatEventLog$DirectInput = {
  * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only for supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing event_id)
  *
  * @param {getChatEventLog$Input} parameters {@link getChatEventLog$Input}
- * @return {ChatEvents} {@link ChatEvents}
+ * @returns {ChatEvents} {@link ChatEvents}
  */
 export type getChatEventLog = (parameters: getChatEventLog$Input) => ChatEvents;
 
@@ -116488,7 +116488,7 @@ export type getTimeZones$DirectInput = {};
  * Returns the list of supported time zones
  *
  * @param {getTimeZones$Input} parameters {@link getTimeZones$Input}
- * @return {TimeZones} {@link TimeZones}
+ * @returns {TimeZones} {@link TimeZones}
  */
 export type getTimeZones = (parameters: getTimeZones$Input) => TimeZones;
 
@@ -116532,7 +116532,7 @@ export type getPaymentForm$DirectInput = {
  * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
  *
  * @param {getPaymentForm$Input} parameters {@link getPaymentForm$Input}
- * @return {PaymentForm} {@link PaymentForm}
+ * @returns {PaymentForm} {@link PaymentForm}
  */
 export type getPaymentForm = (parameters: getPaymentForm$Input) => PaymentForm;
 
@@ -116588,7 +116588,7 @@ export type validateOrderInfo$DirectInput = {
  * Validates the order information provided by a user and returns the available shipping options for a flexible invoice
  *
  * @param {validateOrderInfo$Input} parameters {@link validateOrderInfo$Input}
- * @return {ValidatedOrderInfo} {@link ValidatedOrderInfo}
+ * @returns {ValidatedOrderInfo} {@link ValidatedOrderInfo}
  */
 export type validateOrderInfo = (
   parameters: validateOrderInfo$Input
@@ -116682,7 +116682,7 @@ export type sendPaymentForm$DirectInput = {
  * Sends a filled-out payment form to the bot for final verification
  *
  * @param {sendPaymentForm$Input} parameters {@link sendPaymentForm$Input}
- * @return {PaymentResult} {@link PaymentResult}
+ * @returns {PaymentResult} {@link PaymentResult}
  */
 export type sendPaymentForm = (parameters: sendPaymentForm$Input) => PaymentResult;
 
@@ -116726,7 +116726,7 @@ export type getPaymentReceipt$DirectInput = {
  * Returns information about a successful payment
  *
  * @param {getPaymentReceipt$Input} parameters {@link getPaymentReceipt$Input}
- * @return {PaymentReceipt} {@link PaymentReceipt}
+ * @returns {PaymentReceipt} {@link PaymentReceipt}
  */
 export type getPaymentReceipt = (
   parameters: getPaymentReceipt$Input
@@ -116748,7 +116748,7 @@ export type getSavedOrderInfo$DirectInput = {};
  * Returns saved order information. Returns a 404 error if there is no saved order information
  *
  * @param {getSavedOrderInfo$Input} parameters {@link getSavedOrderInfo$Input}
- * @return {OrderInfo} {@link OrderInfo}
+ * @returns {OrderInfo} {@link OrderInfo}
  */
 export type getSavedOrderInfo = (parameters: getSavedOrderInfo$Input) => OrderInfo;
 
@@ -116768,7 +116768,7 @@ export type deleteSavedOrderInfo$DirectInput = {};
  * Deletes saved order information
  *
  * @param {deleteSavedOrderInfo$Input} parameters {@link deleteSavedOrderInfo$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteSavedOrderInfo = (parameters: deleteSavedOrderInfo$Input) => Ok;
 
@@ -116788,7 +116788,7 @@ export type deleteSavedCredentials$DirectInput = {};
  * Deletes saved credentials for all payment provider bots
  *
  * @param {deleteSavedCredentials$Input} parameters {@link deleteSavedCredentials$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteSavedCredentials = (
   parameters: deleteSavedCredentials$Input
@@ -116822,7 +116822,7 @@ export type createInvoiceLink$DirectInput = {
  * Creates a link for the given invoice; for bots only
  *
  * @param {createInvoiceLink$Input} parameters {@link createInvoiceLink$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type createInvoiceLink = (parameters: createInvoiceLink$Input) => HttpUrl;
 
@@ -116866,7 +116866,7 @@ export type refundStarPayment$DirectInput = {
  * Refunds a previously done payment in Telegram Stars
  *
  * @param {refundStarPayment$Input} parameters {@link refundStarPayment$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type refundStarPayment = (parameters: refundStarPayment$Input) => Ok;
 
@@ -116886,7 +116886,7 @@ export type getSupportUser$DirectInput = {};
  * Returns a user that can be contacted to get support
  *
  * @param {getSupportUser$Input} parameters {@link getSupportUser$Input}
- * @return {User} {@link User}
+ * @returns {User} {@link User}
  */
 export type getSupportUser = (parameters: getSupportUser$Input) => User;
 
@@ -116930,7 +116930,7 @@ export type getBackgroundUrl$DirectInput = {
  * Constructs a persistent HTTP URL for a background
  *
  * @param {getBackgroundUrl$Input} parameters {@link getBackgroundUrl$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getBackgroundUrl = (parameters: getBackgroundUrl$Input) => HttpUrl;
 
@@ -116962,7 +116962,7 @@ export type searchBackground$DirectInput = {
  * Searches for a background by its name
  *
  * @param {searchBackground$Input} parameters {@link searchBackground$Input}
- * @return {Background} {@link Background}
+ * @returns {Background} {@link Background}
  */
 export type searchBackground = (parameters: searchBackground$Input) => Background;
 
@@ -117018,7 +117018,7 @@ export type setDefaultBackground$DirectInput = {
  * Sets default background for chats; adds the background to the list of installed backgrounds
  *
  * @param {setDefaultBackground$Input} parameters {@link setDefaultBackground$Input}
- * @return {Background} {@link Background}
+ * @returns {Background} {@link Background}
  */
 export type setDefaultBackground = (
   parameters: setDefaultBackground$Input
@@ -117052,7 +117052,7 @@ export type deleteDefaultBackground$DirectInput = {
  * Deletes default background for chats
  *
  * @param {deleteDefaultBackground$Input} parameters {@link deleteDefaultBackground$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteDefaultBackground = (
   parameters: deleteDefaultBackground$Input
@@ -117086,7 +117086,7 @@ export type getInstalledBackgrounds$DirectInput = {
  * Returns backgrounds installed by the user
  *
  * @param {getInstalledBackgrounds$Input} parameters {@link getInstalledBackgrounds$Input}
- * @return {Backgrounds} {@link Backgrounds}
+ * @returns {Backgrounds} {@link Backgrounds}
  */
 export type getInstalledBackgrounds = (
   parameters: getInstalledBackgrounds$Input
@@ -117120,7 +117120,7 @@ export type removeInstalledBackground$DirectInput = {
  * Removes background from the list of installed backgrounds
  *
  * @param {removeInstalledBackground$Input} parameters {@link removeInstalledBackground$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeInstalledBackground = (
   parameters: removeInstalledBackground$Input
@@ -117142,7 +117142,7 @@ export type resetInstalledBackgrounds$DirectInput = {};
  * Resets list of installed backgrounds to its default value
  *
  * @param {resetInstalledBackgrounds$Input} parameters {@link resetInstalledBackgrounds$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type resetInstalledBackgrounds = (
   parameters: resetInstalledBackgrounds$Input
@@ -117176,7 +117176,7 @@ export type getLocalizationTargetInfo$DirectInput = {
  * Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
  *
  * @param {getLocalizationTargetInfo$Input} parameters {@link getLocalizationTargetInfo$Input}
- * @return {LocalizationTargetInfo} {@link LocalizationTargetInfo}
+ * @returns {LocalizationTargetInfo} {@link LocalizationTargetInfo}
  */
 export type getLocalizationTargetInfo = (
   parameters: getLocalizationTargetInfo$Input
@@ -117210,7 +117210,7 @@ export type getLanguagePackInfo$DirectInput = {
  * Returns information about a language pack. Returned language pack identifier may be different from a provided one. Can be called before authorization
  *
  * @param {getLanguagePackInfo$Input} parameters {@link getLanguagePackInfo$Input}
- * @return {LanguagePackInfo} {@link LanguagePackInfo}
+ * @returns {LanguagePackInfo} {@link LanguagePackInfo}
  */
 export type getLanguagePackInfo = (
   parameters: getLanguagePackInfo$Input
@@ -117256,7 +117256,7 @@ export type getLanguagePackStrings$DirectInput = {
  * Returns strings from a language pack in the current localization target by their keys. Can be called before authorization
  *
  * @param {getLanguagePackStrings$Input} parameters {@link getLanguagePackStrings$Input}
- * @return {LanguagePackStrings} {@link LanguagePackStrings}
+ * @returns {LanguagePackStrings} {@link LanguagePackStrings}
  */
 export type getLanguagePackStrings = (
   parameters: getLanguagePackStrings$Input
@@ -117296,7 +117296,7 @@ export type synchronizeLanguagePack$DirectInput = {
  * - This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
  *
  * @param {synchronizeLanguagePack$Input} parameters {@link synchronizeLanguagePack$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type synchronizeLanguagePack = (
   parameters: synchronizeLanguagePack$Input
@@ -117330,7 +117330,7 @@ export type addCustomServerLanguagePack$DirectInput = {
  * Adds a custom server language pack to the list of installed language packs in current localization target. Can be called before authorization
  *
  * @param {addCustomServerLanguagePack$Input} parameters {@link addCustomServerLanguagePack$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addCustomServerLanguagePack = (
   parameters: addCustomServerLanguagePack$Input
@@ -117376,7 +117376,7 @@ export type setCustomLanguagePack$DirectInput = {
  * Adds or changes a custom local language pack to the current localization target
  *
  * @param {setCustomLanguagePack$Input} parameters {@link setCustomLanguagePack$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setCustomLanguagePack = (parameters: setCustomLanguagePack$Input) => Ok;
 
@@ -117408,7 +117408,7 @@ export type editCustomLanguagePackInfo$DirectInput = {
  * Edits information about a custom local language pack in the current localization target. Can be called before authorization
  *
  * @param {editCustomLanguagePackInfo$Input} parameters {@link editCustomLanguagePackInfo$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type editCustomLanguagePackInfo = (
   parameters: editCustomLanguagePackInfo$Input
@@ -117454,7 +117454,7 @@ export type setCustomLanguagePackString$DirectInput = {
  * Adds, edits or deletes a string in a custom local language pack. Can be called before authorization
  *
  * @param {setCustomLanguagePackString$Input} parameters {@link setCustomLanguagePackString$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setCustomLanguagePackString = (
   parameters: setCustomLanguagePackString$Input
@@ -117494,7 +117494,7 @@ export type deleteLanguagePack$DirectInput = {
  * - Can be called before authorization
  *
  * @param {deleteLanguagePack$Input} parameters {@link deleteLanguagePack$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteLanguagePack = (parameters: deleteLanguagePack$Input) => Ok;
 
@@ -117538,7 +117538,7 @@ export type registerDevice$DirectInput = {
  * Registers the currently used device for receiving push notifications. Returns a globally unique identifier of the push notification subscription
  *
  * @param {registerDevice$Input} parameters {@link registerDevice$Input}
- * @return {PushReceiverId} {@link PushReceiverId}
+ * @returns {PushReceiverId} {@link PushReceiverId}
  */
 export type registerDevice = (parameters: registerDevice$Input) => PushReceiverId;
 
@@ -117570,7 +117570,7 @@ export type processPushNotification$DirectInput = {
  * Handles a push notification. Returns error with code 406 if the push notification is not supported and connection to the server is required to fetch new data. Can be called before authorization
  *
  * @param {processPushNotification$Input} parameters {@link processPushNotification$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type processPushNotification = (
   parameters: processPushNotification$Input
@@ -117604,7 +117604,7 @@ export type getPushReceiverId$DirectInput = {
  * Returns a globally unique push notification subscription identifier for identification of an account, which has received a push notification. Can be called synchronously
  *
  * @param {getPushReceiverId$Input} parameters {@link getPushReceiverId$Input}
- * @return {PushReceiverId} {@link PushReceiverId}
+ * @returns {PushReceiverId} {@link PushReceiverId}
  */
 export type getPushReceiverId = (
   parameters: getPushReceiverId$Input
@@ -117638,7 +117638,7 @@ export type getRecentlyVisitedTMeUrls$DirectInput = {
  * Returns t.me URLs recently visited by a newly registered user
  *
  * @param {getRecentlyVisitedTMeUrls$Input} parameters {@link getRecentlyVisitedTMeUrls$Input}
- * @return {TMeUrls} {@link TMeUrls}
+ * @returns {TMeUrls} {@link TMeUrls}
  */
 export type getRecentlyVisitedTMeUrls = (
   parameters: getRecentlyVisitedTMeUrls$Input
@@ -117684,7 +117684,7 @@ export type setUserPrivacySettingRules$DirectInput = {
  * Changes user privacy settings
  *
  * @param {setUserPrivacySettingRules$Input} parameters {@link setUserPrivacySettingRules$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setUserPrivacySettingRules = (
   parameters: setUserPrivacySettingRules$Input
@@ -117718,7 +117718,7 @@ export type getUserPrivacySettingRules$DirectInput = {
  * Returns the current privacy settings
  *
  * @param {getUserPrivacySettingRules$Input} parameters {@link getUserPrivacySettingRules$Input}
- * @return {UserPrivacySettingRules} {@link UserPrivacySettingRules}
+ * @returns {UserPrivacySettingRules} {@link UserPrivacySettingRules}
  */
 export type getUserPrivacySettingRules = (
   parameters: getUserPrivacySettingRules$Input
@@ -117752,7 +117752,7 @@ export type setReadDatePrivacySettings$DirectInput = {
  * Changes privacy settings for message read date
  *
  * @param {setReadDatePrivacySettings$Input} parameters {@link setReadDatePrivacySettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setReadDatePrivacySettings = (
   parameters: setReadDatePrivacySettings$Input
@@ -117774,7 +117774,7 @@ export type getReadDatePrivacySettings$DirectInput = {};
  * Returns privacy settings for message read date
  *
  * @param {getReadDatePrivacySettings$Input} parameters {@link getReadDatePrivacySettings$Input}
- * @return {ReadDatePrivacySettings} {@link ReadDatePrivacySettings}
+ * @returns {ReadDatePrivacySettings} {@link ReadDatePrivacySettings}
  */
 export type getReadDatePrivacySettings = (
   parameters: getReadDatePrivacySettings$Input
@@ -117808,7 +117808,7 @@ export type setNewChatPrivacySettings$DirectInput = {
  * Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
  *
  * @param {setNewChatPrivacySettings$Input} parameters {@link setNewChatPrivacySettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setNewChatPrivacySettings = (
   parameters: setNewChatPrivacySettings$Input
@@ -117830,7 +117830,7 @@ export type getNewChatPrivacySettings$DirectInput = {};
  * Returns privacy settings for new chat creation
  *
  * @param {getNewChatPrivacySettings$Input} parameters {@link getNewChatPrivacySettings$Input}
- * @return {NewChatPrivacySettings} {@link NewChatPrivacySettings}
+ * @returns {NewChatPrivacySettings} {@link NewChatPrivacySettings}
  */
 export type getNewChatPrivacySettings = (
   parameters: getNewChatPrivacySettings$Input
@@ -117876,7 +117876,7 @@ export type canSendMessageToUser$DirectInput = {
  * Check whether the current user can message another user or try to create a chat with them
  *
  * @param {canSendMessageToUser$Input} parameters {@link canSendMessageToUser$Input}
- * @return {CanSendMessageToUserResult} {@link CanSendMessageToUserResult}
+ * @returns {CanSendMessageToUserResult} {@link CanSendMessageToUserResult}
  */
 export type canSendMessageToUser = (
   parameters: canSendMessageToUser$Input
@@ -117910,7 +117910,7 @@ export type getOption$DirectInput = {
  * Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization. Can be called synchronously for options "version" and "commit_hash"
  *
  * @param {getOption$Input} parameters {@link getOption$Input}
- * @return {OptionValue} {@link OptionValue}
+ * @returns {OptionValue} {@link OptionValue}
  */
 export type getOption = (parameters: getOption$Input) => OptionValue;
 
@@ -117954,7 +117954,7 @@ export type setOption$DirectInput = {
  * Sets the value of an option. (Check the list of available options on https://core.telegram.org/tdlib/options.) Only writable options can be set. Can be called before authorization
  *
  * @param {setOption$Input} parameters {@link setOption$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setOption = (parameters: setOption$Input) => Ok;
 
@@ -117986,7 +117986,7 @@ export type setAccountTtl$DirectInput = {
  * Changes the period of inactivity after which the account of the current user will automatically be deleted
  *
  * @param {setAccountTtl$Input} parameters {@link setAccountTtl$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setAccountTtl = (parameters: setAccountTtl$Input) => Ok;
 
@@ -118006,7 +118006,7 @@ export type getAccountTtl$DirectInput = {};
  * Returns the period of inactivity after which the account of the current user will automatically be deleted
  *
  * @param {getAccountTtl$Input} parameters {@link getAccountTtl$Input}
- * @return {AccountTtl} {@link AccountTtl}
+ * @returns {AccountTtl} {@link AccountTtl}
  */
 export type getAccountTtl = (parameters: getAccountTtl$Input) => AccountTtl;
 
@@ -118056,7 +118056,7 @@ export type deleteAccount$DirectInput = {
  * - Can be called before authorization when the current authorization state is authorizationStateWaitPassword
  *
  * @param {deleteAccount$Input} parameters {@link deleteAccount$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteAccount = (parameters: deleteAccount$Input) => Ok;
 
@@ -118088,7 +118088,7 @@ export type setDefaultMessageAutoDeleteTime$DirectInput = {
  * Changes the default message auto-delete time for new chats
  *
  * @param {setDefaultMessageAutoDeleteTime$Input} parameters {@link setDefaultMessageAutoDeleteTime$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setDefaultMessageAutoDeleteTime = (
   parameters: setDefaultMessageAutoDeleteTime$Input
@@ -118110,7 +118110,7 @@ export type getDefaultMessageAutoDeleteTime$DirectInput = {};
  * Returns default message auto-delete time setting for new chats
  *
  * @param {getDefaultMessageAutoDeleteTime$Input} parameters {@link getDefaultMessageAutoDeleteTime$Input}
- * @return {MessageAutoDeleteTime} {@link MessageAutoDeleteTime}
+ * @returns {MessageAutoDeleteTime} {@link MessageAutoDeleteTime}
  */
 export type getDefaultMessageAutoDeleteTime = (
   parameters: getDefaultMessageAutoDeleteTime$Input
@@ -118144,7 +118144,7 @@ export type removeChatActionBar$DirectInput = {
  * Removes a chat action bar without any other action
  *
  * @param {removeChatActionBar$Input} parameters {@link removeChatActionBar$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeChatActionBar = (parameters: removeChatActionBar$Input) => Ok;
 
@@ -118212,7 +118212,7 @@ export type reportChat$DirectInput = {
  * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
  *
  * @param {reportChat$Input} parameters {@link reportChat$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reportChat = (parameters: reportChat$Input) => Ok;
 
@@ -118280,7 +118280,7 @@ export type reportChatPhoto$DirectInput = {
  * Reports a chat photo to the Telegram moderators. A chat photo can be reported only if chat.can_be_reported
  *
  * @param {reportChatPhoto$Input} parameters {@link reportChatPhoto$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reportChatPhoto = (parameters: reportChatPhoto$Input) => Ok;
 
@@ -118336,7 +118336,7 @@ export type reportMessageReactions$DirectInput = {
  * Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if message.can_report_reactions
  *
  * @param {reportMessageReactions$Input} parameters {@link reportMessageReactions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type reportMessageReactions = (
   parameters: reportMessageReactions$Input
@@ -118382,7 +118382,7 @@ export type getChatRevenueStatistics$DirectInput = {
  * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
  *
  * @param {getChatRevenueStatistics$Input} parameters {@link getChatRevenueStatistics$Input}
- * @return {ChatRevenueStatistics} {@link ChatRevenueStatistics}
+ * @returns {ChatRevenueStatistics} {@link ChatRevenueStatistics}
  */
 export type getChatRevenueStatistics = (
   parameters: getChatRevenueStatistics$Input
@@ -118428,7 +118428,7 @@ export type getChatRevenueWithdrawalUrl$DirectInput = {
  * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
  *
  * @param {getChatRevenueWithdrawalUrl$Input} parameters {@link getChatRevenueWithdrawalUrl$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getChatRevenueWithdrawalUrl = (
   parameters: getChatRevenueWithdrawalUrl$Input
@@ -118486,7 +118486,7 @@ export type getChatRevenueTransactions$DirectInput = {
  * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
  *
  * @param {getChatRevenueTransactions$Input} parameters {@link getChatRevenueTransactions$Input}
- * @return {ChatRevenueTransactions} {@link ChatRevenueTransactions}
+ * @returns {ChatRevenueTransactions} {@link ChatRevenueTransactions}
  */
 export type getChatRevenueTransactions = (
   parameters: getChatRevenueTransactions$Input
@@ -118532,7 +118532,7 @@ export type getChatStatistics$DirectInput = {
  * Returns detailed statistics about a chat. Currently, this method can be used only for supergroups and channels. Can be used only if supergroupFullInfo.can_get_statistics == true
  *
  * @param {getChatStatistics$Input} parameters {@link getChatStatistics$Input}
- * @return {ChatStatistics} {@link ChatStatistics}
+ * @returns {ChatStatistics} {@link ChatStatistics}
  */
 export type getChatStatistics = (
   parameters: getChatStatistics$Input
@@ -118590,7 +118590,7 @@ export type getMessageStatistics$DirectInput = {
  * Returns detailed statistics about a message. Can be used only if message.can_get_statistics == true
  *
  * @param {getMessageStatistics$Input} parameters {@link getMessageStatistics$Input}
- * @return {MessageStatistics} {@link MessageStatistics}
+ * @returns {MessageStatistics} {@link MessageStatistics}
  */
 export type getMessageStatistics = (
   parameters: getMessageStatistics$Input
@@ -118660,7 +118660,7 @@ export type getMessagePublicForwards$DirectInput = {
  * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if message.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
  *
  * @param {getMessagePublicForwards$Input} parameters {@link getMessagePublicForwards$Input}
- * @return {PublicForwards} {@link PublicForwards}
+ * @returns {PublicForwards} {@link PublicForwards}
  */
 export type getMessagePublicForwards = (
   parameters: getMessagePublicForwards$Input
@@ -118718,7 +118718,7 @@ export type getStoryStatistics$DirectInput = {
  * Returns detailed statistics about a story. Can be used only if story.can_get_statistics == true
  *
  * @param {getStoryStatistics$Input} parameters {@link getStoryStatistics$Input}
- * @return {StoryStatistics} {@link StoryStatistics}
+ * @returns {StoryStatistics} {@link StoryStatistics}
  */
 export type getStoryStatistics = (
   parameters: getStoryStatistics$Input
@@ -118776,7 +118776,7 @@ export type getStatisticalGraph$DirectInput = {
  * Loads an asynchronous or a zoomed in statistical graph
  *
  * @param {getStatisticalGraph$Input} parameters {@link getStatisticalGraph$Input}
- * @return {StatisticalGraph} {@link StatisticalGraph}
+ * @returns {StatisticalGraph} {@link StatisticalGraph}
  */
 export type getStatisticalGraph = (
   parameters: getStatisticalGraph$Input
@@ -118810,7 +118810,7 @@ export type getStorageStatistics$DirectInput = {
  * Returns storage usage statistics. Can be called before authorization
  *
  * @param {getStorageStatistics$Input} parameters {@link getStorageStatistics$Input}
- * @return {StorageStatistics} {@link StorageStatistics}
+ * @returns {StorageStatistics} {@link StorageStatistics}
  */
 export type getStorageStatistics = (
   parameters: getStorageStatistics$Input
@@ -118832,7 +118832,7 @@ export type getStorageStatisticsFast$DirectInput = {};
  * Quickly returns approximate storage usage statistics. Can be called before authorization
  *
  * @param {getStorageStatisticsFast$Input} parameters {@link getStorageStatisticsFast$Input}
- * @return {StorageStatisticsFast} {@link StorageStatisticsFast}
+ * @returns {StorageStatisticsFast} {@link StorageStatisticsFast}
  */
 export type getStorageStatisticsFast = (
   parameters: getStorageStatisticsFast$Input
@@ -118854,7 +118854,7 @@ export type getDatabaseStatistics$DirectInput = {};
  * Returns database statistics
  *
  * @param {getDatabaseStatistics$Input} parameters {@link getDatabaseStatistics$Input}
- * @return {DatabaseStatistics} {@link DatabaseStatistics}
+ * @returns {DatabaseStatistics} {@link DatabaseStatistics}
  */
 export type getDatabaseStatistics = (
   parameters: getDatabaseStatistics$Input
@@ -118984,7 +118984,7 @@ export type optimizeStorage$DirectInput = {
  * Optimizes storage usage, i.e. deletes some files and returns new storage usage statistics. Secret thumbnails can't be deleted
  *
  * @param {optimizeStorage$Input} parameters {@link optimizeStorage$Input}
- * @return {StorageStatistics} {@link StorageStatistics}
+ * @returns {StorageStatistics} {@link StorageStatistics}
  */
 export type optimizeStorage = (
   parameters: optimizeStorage$Input
@@ -119024,7 +119024,7 @@ export type setNetworkType$DirectInput = {
  * - so it must be called whenever the network is changed, even if the network type remains the same. Network type is used to check whether the library can use the network at all and also for collecting detailed network data usage statistics
  *
  * @param {setNetworkType$Input} parameters {@link setNetworkType$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setNetworkType = (parameters: setNetworkType$Input) => Ok;
 
@@ -119056,7 +119056,7 @@ export type getNetworkStatistics$DirectInput = {
  * Returns network data usage statistics. Can be called before authorization
  *
  * @param {getNetworkStatistics$Input} parameters {@link getNetworkStatistics$Input}
- * @return {NetworkStatistics} {@link NetworkStatistics}
+ * @returns {NetworkStatistics} {@link NetworkStatistics}
  */
 export type getNetworkStatistics = (
   parameters: getNetworkStatistics$Input
@@ -119090,7 +119090,7 @@ export type addNetworkStatistics$DirectInput = {
  * Adds the specified data to data usage statistics. Can be called before authorization
  *
  * @param {addNetworkStatistics$Input} parameters {@link addNetworkStatistics$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addNetworkStatistics = (parameters: addNetworkStatistics$Input) => Ok;
 
@@ -119110,7 +119110,7 @@ export type resetNetworkStatistics$DirectInput = {};
  * Resets all network data usage statistics to zero. Can be called before authorization
  *
  * @param {resetNetworkStatistics$Input} parameters {@link resetNetworkStatistics$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type resetNetworkStatistics = (
   parameters: resetNetworkStatistics$Input
@@ -119132,7 +119132,7 @@ export type getAutoDownloadSettingsPresets$DirectInput = {};
  * Returns auto-download settings presets for the current user
  *
  * @param {getAutoDownloadSettingsPresets$Input} parameters {@link getAutoDownloadSettingsPresets$Input}
- * @return {AutoDownloadSettingsPresets} {@link AutoDownloadSettingsPresets}
+ * @returns {AutoDownloadSettingsPresets} {@link AutoDownloadSettingsPresets}
  */
 export type getAutoDownloadSettingsPresets = (
   parameters: getAutoDownloadSettingsPresets$Input
@@ -119178,7 +119178,7 @@ export type setAutoDownloadSettings$DirectInput = {
  * Sets auto-download settings
  *
  * @param {setAutoDownloadSettings$Input} parameters {@link setAutoDownloadSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setAutoDownloadSettings = (
   parameters: setAutoDownloadSettings$Input
@@ -119200,7 +119200,7 @@ export type getAutosaveSettings$DirectInput = {};
  * Returns autosave settings for the current user
  *
  * @param {getAutosaveSettings$Input} parameters {@link getAutosaveSettings$Input}
- * @return {AutosaveSettings} {@link AutosaveSettings}
+ * @returns {AutosaveSettings} {@link AutosaveSettings}
  */
 export type getAutosaveSettings = (
   parameters: getAutosaveSettings$Input
@@ -119246,7 +119246,7 @@ export type setAutosaveSettings$DirectInput = {
  * Sets autosave settings for the given scope. The method is guaranteed to work only after at least one call to getAutosaveSettings
  *
  * @param {setAutosaveSettings$Input} parameters {@link setAutosaveSettings$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setAutosaveSettings = (parameters: setAutosaveSettings$Input) => Ok;
 
@@ -119266,7 +119266,7 @@ export type clearAutosaveSettingsExceptions$DirectInput = {};
  * Clears the list of all autosave settings exceptions. The method is guaranteed to work only after at least one call to getAutosaveSettings
  *
  * @param {clearAutosaveSettingsExceptions$Input} parameters {@link clearAutosaveSettingsExceptions$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clearAutosaveSettingsExceptions = (
   parameters: clearAutosaveSettingsExceptions$Input
@@ -119300,7 +119300,7 @@ export type getBankCardInfo$DirectInput = {
  * Returns information about a bank card
  *
  * @param {getBankCardInfo$Input} parameters {@link getBankCardInfo$Input}
- * @return {BankCardInfo} {@link BankCardInfo}
+ * @returns {BankCardInfo} {@link BankCardInfo}
  */
 export type getBankCardInfo = (parameters: getBankCardInfo$Input) => BankCardInfo;
 
@@ -119344,7 +119344,7 @@ export type getPassportElement$DirectInput = {
  * Returns one of the available Telegram Passport elements
  *
  * @param {getPassportElement$Input} parameters {@link getPassportElement$Input}
- * @return {PassportElement} {@link PassportElement}
+ * @returns {PassportElement} {@link PassportElement}
  */
 export type getPassportElement = (
   parameters: getPassportElement$Input
@@ -119378,7 +119378,7 @@ export type getAllPassportElements$DirectInput = {
  * Returns all available Telegram Passport elements
  *
  * @param {getAllPassportElements$Input} parameters {@link getAllPassportElements$Input}
- * @return {PassportElements} {@link PassportElements}
+ * @returns {PassportElements} {@link PassportElements}
  */
 export type getAllPassportElements = (
   parameters: getAllPassportElements$Input
@@ -119424,7 +119424,7 @@ export type setPassportElement$DirectInput = {
  * Adds an element to the user's Telegram Passport. May return an error with a message "PHONE_VERIFICATION_NEEDED" or "EMAIL_VERIFICATION_NEEDED" if the chosen phone number or the chosen email address must be verified first
  *
  * @param {setPassportElement$Input} parameters {@link setPassportElement$Input}
- * @return {PassportElement} {@link PassportElement}
+ * @returns {PassportElement} {@link PassportElement}
  */
 export type setPassportElement = (
   parameters: setPassportElement$Input
@@ -119458,7 +119458,7 @@ export type deletePassportElement$DirectInput = {
  * Deletes a Telegram Passport element
  *
  * @param {deletePassportElement$Input} parameters {@link deletePassportElement$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deletePassportElement = (parameters: deletePassportElement$Input) => Ok;
 
@@ -119502,7 +119502,7 @@ export type setPassportElementErrors$DirectInput = {
  * Informs the user that some of the elements in their Telegram Passport contain errors; for bots only. The user will not be able to resend the elements, until the errors are fixed
  *
  * @param {setPassportElementErrors$Input} parameters {@link setPassportElementErrors$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setPassportElementErrors = (
   parameters: setPassportElementErrors$Input
@@ -119536,7 +119536,7 @@ export type getPreferredCountryLanguage$DirectInput = {
  * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details. Returns a 404 error if unknown
  *
  * @param {getPreferredCountryLanguage$Input} parameters {@link getPreferredCountryLanguage$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getPreferredCountryLanguage = (
   parameters: getPreferredCountryLanguage$Input
@@ -119570,7 +119570,7 @@ export type sendEmailAddressVerificationCode$DirectInput = {
  * Sends a code to verify an email address to be added to a user's Telegram Passport
  *
  * @param {sendEmailAddressVerificationCode$Input} parameters {@link sendEmailAddressVerificationCode$Input}
- * @return {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
+ * @returns {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
  */
 export type sendEmailAddressVerificationCode = (
   parameters: sendEmailAddressVerificationCode$Input
@@ -119592,7 +119592,7 @@ export type resendEmailAddressVerificationCode$DirectInput = {};
  * Resends the code to verify an email address to be added to a user's Telegram Passport
  *
  * @param {resendEmailAddressVerificationCode$Input} parameters {@link resendEmailAddressVerificationCode$Input}
- * @return {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
+ * @returns {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
  */
 export type resendEmailAddressVerificationCode = (
   parameters: resendEmailAddressVerificationCode$Input
@@ -119626,7 +119626,7 @@ export type checkEmailAddressVerificationCode$DirectInput = {
  * Checks the email address verification code for Telegram Passport
  *
  * @param {checkEmailAddressVerificationCode$Input} parameters {@link checkEmailAddressVerificationCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type checkEmailAddressVerificationCode = (
   parameters: checkEmailAddressVerificationCode$Input
@@ -119696,7 +119696,7 @@ export type getPassportAuthorizationForm$DirectInput = {
  * Returns a Telegram Passport authorization form for sharing data with a service
  *
  * @param {getPassportAuthorizationForm$Input} parameters {@link getPassportAuthorizationForm$Input}
- * @return {PassportAuthorizationForm} {@link PassportAuthorizationForm}
+ * @returns {PassportAuthorizationForm} {@link PassportAuthorizationForm}
  */
 export type getPassportAuthorizationForm = (
   parameters: getPassportAuthorizationForm$Input
@@ -119742,7 +119742,7 @@ export type getPassportAuthorizationFormAvailableElements$DirectInput = {
  * Returns already available Telegram Passport elements suitable for completing a Telegram Passport authorization form. Result can be received only once for each authorization form
  *
  * @param {getPassportAuthorizationFormAvailableElements$Input} parameters {@link getPassportAuthorizationFormAvailableElements$Input}
- * @return {PassportElementsWithErrors} {@link PassportElementsWithErrors}
+ * @returns {PassportElementsWithErrors} {@link PassportElementsWithErrors}
  */
 export type getPassportAuthorizationFormAvailableElements = (
   parameters: getPassportAuthorizationFormAvailableElements$Input
@@ -119788,7 +119788,7 @@ export type sendPassportAuthorizationForm$DirectInput = {
  * Sends a Telegram Passport authorization form, effectively sharing data with the service. This method must be called after getPassportAuthorizationFormAvailableElements if some previously available elements are going to be reused
  *
  * @param {sendPassportAuthorizationForm$Input} parameters {@link sendPassportAuthorizationForm$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type sendPassportAuthorizationForm = (
   parameters: sendPassportAuthorizationForm$Input
@@ -119834,7 +119834,7 @@ export type setBotUpdatesStatus$DirectInput = {
  * Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
  *
  * @param {setBotUpdatesStatus$Input} parameters {@link setBotUpdatesStatus$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setBotUpdatesStatus = (parameters: setBotUpdatesStatus$Input) => Ok;
 
@@ -119894,7 +119894,7 @@ export type uploadStickerFile$DirectInput = {
  * Uploads a file with a sticker; returns the uploaded file
  *
  * @param {uploadStickerFile$Input} parameters {@link uploadStickerFile$Input}
- * @return {File} {@link File}
+ * @returns {File} {@link File}
  */
 export type uploadStickerFile = (parameters: uploadStickerFile$Input) => File;
 
@@ -119926,7 +119926,7 @@ export type getSuggestedStickerSetName$DirectInput = {
  * Returns a suggested name for a new sticker set with a given title
  *
  * @param {getSuggestedStickerSetName$Input} parameters {@link getSuggestedStickerSetName$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getSuggestedStickerSetName = (
   parameters: getSuggestedStickerSetName$Input
@@ -119960,7 +119960,7 @@ export type checkStickerSetName$DirectInput = {
  * Checks whether a name can be used for a new sticker set
  *
  * @param {checkStickerSetName$Input} parameters {@link checkStickerSetName$Input}
- * @return {CheckStickerSetNameResult} {@link CheckStickerSetNameResult}
+ * @returns {CheckStickerSetNameResult} {@link CheckStickerSetNameResult}
  */
 export type checkStickerSetName = (
   parameters: checkStickerSetName$Input
@@ -120070,7 +120070,7 @@ export type createNewStickerSet$DirectInput = {
  * Creates a new sticker set. Returns the newly created sticker set
  *
  * @param {createNewStickerSet$Input} parameters {@link createNewStickerSet$Input}
- * @return {StickerSet} {@link StickerSet}
+ * @returns {StickerSet} {@link StickerSet}
  */
 export type createNewStickerSet = (
   parameters: createNewStickerSet$Input
@@ -120128,7 +120128,7 @@ export type addStickerToSet$DirectInput = {
  * Adds a new sticker to a set
  *
  * @param {addStickerToSet$Input} parameters {@link addStickerToSet$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addStickerToSet = (parameters: addStickerToSet$Input) => Ok;
 
@@ -120196,7 +120196,7 @@ export type replaceStickerInSet$DirectInput = {
  * Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
  *
  * @param {replaceStickerInSet$Input} parameters {@link replaceStickerInSet$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type replaceStickerInSet = (parameters: replaceStickerInSet$Input) => Ok;
 
@@ -120264,7 +120264,7 @@ export type setStickerSetThumbnail$DirectInput = {
  * Sets a sticker set thumbnail
  *
  * @param {setStickerSetThumbnail$Input} parameters {@link setStickerSetThumbnail$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setStickerSetThumbnail = (
   parameters: setStickerSetThumbnail$Input
@@ -120310,7 +120310,7 @@ export type setCustomEmojiStickerSetThumbnail$DirectInput = {
  * Sets a custom emoji sticker set thumbnail
  *
  * @param {setCustomEmojiStickerSetThumbnail$Input} parameters {@link setCustomEmojiStickerSetThumbnail$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setCustomEmojiStickerSetThumbnail = (
   parameters: setCustomEmojiStickerSetThumbnail$Input
@@ -120356,7 +120356,7 @@ export type setStickerSetTitle$DirectInput = {
  * Sets a sticker set title
  *
  * @param {setStickerSetTitle$Input} parameters {@link setStickerSetTitle$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setStickerSetTitle = (parameters: setStickerSetTitle$Input) => Ok;
 
@@ -120388,7 +120388,7 @@ export type deleteStickerSet$DirectInput = {
  * Completely deletes a sticker set
  *
  * @param {deleteStickerSet$Input} parameters {@link deleteStickerSet$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type deleteStickerSet = (parameters: deleteStickerSet$Input) => Ok;
 
@@ -120432,7 +120432,7 @@ export type setStickerPositionInSet$DirectInput = {
  * Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
  *
  * @param {setStickerPositionInSet$Input} parameters {@link setStickerPositionInSet$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setStickerPositionInSet = (
   parameters: setStickerPositionInSet$Input
@@ -120466,7 +120466,7 @@ export type removeStickerFromSet$DirectInput = {
  * Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
  *
  * @param {removeStickerFromSet$Input} parameters {@link removeStickerFromSet$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeStickerFromSet = (parameters: removeStickerFromSet$Input) => Ok;
 
@@ -120510,7 +120510,7 @@ export type setStickerEmojis$DirectInput = {
  * Changes the list of emoji corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
  *
  * @param {setStickerEmojis$Input} parameters {@link setStickerEmojis$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setStickerEmojis = (parameters: setStickerEmojis$Input) => Ok;
 
@@ -120554,7 +120554,7 @@ export type setStickerKeywords$DirectInput = {
  * Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
  *
  * @param {setStickerKeywords$Input} parameters {@link setStickerKeywords$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setStickerKeywords = (parameters: setStickerKeywords$Input) => Ok;
 
@@ -120598,7 +120598,7 @@ export type setStickerMaskPosition$DirectInput = {
  * Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
  *
  * @param {setStickerMaskPosition$Input} parameters {@link setStickerMaskPosition$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setStickerMaskPosition = (
   parameters: setStickerMaskPosition$Input
@@ -120644,7 +120644,7 @@ export type getOwnedStickerSets$DirectInput = {
  * Returns sticker sets owned by the current user
  *
  * @param {getOwnedStickerSets$Input} parameters {@link getOwnedStickerSets$Input}
- * @return {StickerSets} {@link StickerSets}
+ * @returns {StickerSets} {@link StickerSets}
  */
 export type getOwnedStickerSets = (
   parameters: getOwnedStickerSets$Input
@@ -120738,7 +120738,7 @@ export type getMapThumbnailFile$DirectInput = {
  * Returns information about a file with a map thumbnail in PNG format. Only map thumbnail files with size less than 1MB can be downloaded
  *
  * @param {getMapThumbnailFile$Input} parameters {@link getMapThumbnailFile$Input}
- * @return {File} {@link File}
+ * @returns {File} {@link File}
  */
 export type getMapThumbnailFile = (parameters: getMapThumbnailFile$Input) => File;
 
@@ -120770,7 +120770,7 @@ export type getPremiumLimit$DirectInput = {
  * Returns information about a limit, increased for Premium users. Returns a 404 error if the limit is unknown
  *
  * @param {getPremiumLimit$Input} parameters {@link getPremiumLimit$Input}
- * @return {PremiumLimit} {@link PremiumLimit}
+ * @returns {PremiumLimit} {@link PremiumLimit}
  */
 export type getPremiumLimit = (parameters: getPremiumLimit$Input) => PremiumLimit;
 
@@ -120802,7 +120802,7 @@ export type getPremiumFeatures$DirectInput = {
  * Returns information about features, available to Premium users
  *
  * @param {getPremiumFeatures$Input} parameters {@link getPremiumFeatures$Input}
- * @return {PremiumFeatures} {@link PremiumFeatures}
+ * @returns {PremiumFeatures} {@link PremiumFeatures}
  */
 export type getPremiumFeatures = (
   parameters: getPremiumFeatures$Input
@@ -120824,7 +120824,7 @@ export type getPremiumStickerExamples$DirectInput = {};
  * Returns examples of premium stickers for demonstration purposes
  *
  * @param {getPremiumStickerExamples$Input} parameters {@link getPremiumStickerExamples$Input}
- * @return {Stickers} {@link Stickers}
+ * @returns {Stickers} {@link Stickers}
  */
 export type getPremiumStickerExamples = (
   parameters: getPremiumStickerExamples$Input
@@ -120858,7 +120858,7 @@ export type viewPremiumFeature$DirectInput = {
  * Informs TDLib that the user viewed detailed information about a Premium feature on the Premium features screen
  *
  * @param {viewPremiumFeature$Input} parameters {@link viewPremiumFeature$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type viewPremiumFeature = (parameters: viewPremiumFeature$Input) => Ok;
 
@@ -120878,7 +120878,7 @@ export type clickPremiumSubscriptionButton$DirectInput = {};
  * Informs TDLib that the user clicked Premium subscription button on the Premium features screen
  *
  * @param {clickPremiumSubscriptionButton$Input} parameters {@link clickPremiumSubscriptionButton$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type clickPremiumSubscriptionButton = (
   parameters: clickPremiumSubscriptionButton$Input
@@ -120900,7 +120900,7 @@ export type getPremiumState$DirectInput = {};
  * Returns state of Telegram Premium subscription and promotion videos for Premium features
  *
  * @param {getPremiumState$Input} parameters {@link getPremiumState$Input}
- * @return {PremiumState} {@link PremiumState}
+ * @returns {PremiumState} {@link PremiumState}
  */
 export type getPremiumState = (parameters: getPremiumState$Input) => PremiumState;
 
@@ -120932,7 +120932,7 @@ export type getPremiumGiftCodePaymentOptions$DirectInput = {
  * Returns available options for Telegram Premium gift code or giveaway creation
  *
  * @param {getPremiumGiftCodePaymentOptions$Input} parameters {@link getPremiumGiftCodePaymentOptions$Input}
- * @return {PremiumGiftCodePaymentOptions} {@link PremiumGiftCodePaymentOptions}
+ * @returns {PremiumGiftCodePaymentOptions} {@link PremiumGiftCodePaymentOptions}
  */
 export type getPremiumGiftCodePaymentOptions = (
   parameters: getPremiumGiftCodePaymentOptions$Input
@@ -120966,7 +120966,7 @@ export type checkPremiumGiftCode$DirectInput = {
  * Return information about a Telegram Premium gift code
  *
  * @param {checkPremiumGiftCode$Input} parameters {@link checkPremiumGiftCode$Input}
- * @return {PremiumGiftCodeInfo} {@link PremiumGiftCodeInfo}
+ * @returns {PremiumGiftCodeInfo} {@link PremiumGiftCodeInfo}
  */
 export type checkPremiumGiftCode = (
   parameters: checkPremiumGiftCode$Input
@@ -121000,7 +121000,7 @@ export type applyPremiumGiftCode$DirectInput = {
  * Applies a Telegram Premium gift code
  *
  * @param {applyPremiumGiftCode$Input} parameters {@link applyPremiumGiftCode$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type applyPremiumGiftCode = (parameters: applyPremiumGiftCode$Input) => Ok;
 
@@ -121044,7 +121044,7 @@ export type launchPrepaidPremiumGiveaway$DirectInput = {
  * Launches a prepaid Telegram Premium giveaway
  *
  * @param {launchPrepaidPremiumGiveaway$Input} parameters {@link launchPrepaidPremiumGiveaway$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type launchPrepaidPremiumGiveaway = (
   parameters: launchPrepaidPremiumGiveaway$Input
@@ -121090,7 +121090,7 @@ export type getPremiumGiveawayInfo$DirectInput = {
  * Returns information about a Telegram Premium giveaway
  *
  * @param {getPremiumGiveawayInfo$Input} parameters {@link getPremiumGiveawayInfo$Input}
- * @return {PremiumGiveawayInfo} {@link PremiumGiveawayInfo}
+ * @returns {PremiumGiveawayInfo} {@link PremiumGiveawayInfo}
  */
 export type getPremiumGiveawayInfo = (
   parameters: getPremiumGiveawayInfo$Input
@@ -121112,7 +121112,7 @@ export type getStarPaymentOptions$DirectInput = {};
  * Returns available options for Telegram stars purchase
  *
  * @param {getStarPaymentOptions$Input} parameters {@link getStarPaymentOptions$Input}
- * @return {StarPaymentOptions} {@link StarPaymentOptions}
+ * @returns {StarPaymentOptions} {@link StarPaymentOptions}
  */
 export type getStarPaymentOptions = (
   parameters: getStarPaymentOptions$Input
@@ -121158,7 +121158,7 @@ export type getStarTransactions$DirectInput = {
  * Returns the list of Telegram star transactions for the current user
  *
  * @param {getStarTransactions$Input} parameters {@link getStarTransactions$Input}
- * @return {StarTransactions} {@link StarTransactions}
+ * @returns {StarTransactions} {@link StarTransactions}
  */
 export type getStarTransactions = (
   parameters: getStarTransactions$Input
@@ -121192,7 +121192,7 @@ export type canPurchaseFromStore$DirectInput = {
  * Checks whether an in-store purchase is possible. Must be called before any in-store purchase
  *
  * @param {canPurchaseFromStore$Input} parameters {@link canPurchaseFromStore$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type canPurchaseFromStore = (parameters: canPurchaseFromStore$Input) => Ok;
 
@@ -121236,7 +121236,7 @@ export type assignAppStoreTransaction$DirectInput = {
  * Informs server about a purchase through App Store. For official applications only
  *
  * @param {assignAppStoreTransaction$Input} parameters {@link assignAppStoreTransaction$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type assignAppStoreTransaction = (
   parameters: assignAppStoreTransaction$Input
@@ -121306,7 +121306,7 @@ export type assignGooglePlayTransaction$DirectInput = {
  * Informs server about a purchase through Google Play. For official applications only
  *
  * @param {assignGooglePlayTransaction$Input} parameters {@link assignGooglePlayTransaction$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type assignGooglePlayTransaction = (
   parameters: assignGooglePlayTransaction$Input
@@ -121340,7 +121340,7 @@ export type getBusinessFeatures$DirectInput = {
  * Returns information about features, available to Business users
  *
  * @param {getBusinessFeatures$Input} parameters {@link getBusinessFeatures$Input}
- * @return {BusinessFeatures} {@link BusinessFeatures}
+ * @returns {BusinessFeatures} {@link BusinessFeatures}
  */
 export type getBusinessFeatures = (
   parameters: getBusinessFeatures$Input
@@ -121374,7 +121374,7 @@ export type acceptTermsOfService$DirectInput = {
  * Accepts Telegram terms of services
  *
  * @param {acceptTermsOfService$Input} parameters {@link acceptTermsOfService$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type acceptTermsOfService = (parameters: acceptTermsOfService$Input) => Ok;
 
@@ -121442,7 +121442,7 @@ export type searchStringsByPrefix$DirectInput = {
  * Searches specified query by word prefixes in the provided strings. Returns 0-based positions of strings that matched. Can be called synchronously
  *
  * @param {searchStringsByPrefix$Input} parameters {@link searchStringsByPrefix$Input}
- * @return {FoundPositions} {@link FoundPositions}
+ * @returns {FoundPositions} {@link FoundPositions}
  */
 export type searchStringsByPrefix = (
   parameters: searchStringsByPrefix$Input
@@ -121488,7 +121488,7 @@ export type sendCustomRequest$DirectInput = {
  * Sends a custom request; for bots only
  *
  * @param {sendCustomRequest$Input} parameters {@link sendCustomRequest$Input}
- * @return {CustomRequestResult} {@link CustomRequestResult}
+ * @returns {CustomRequestResult} {@link CustomRequestResult}
  */
 export type sendCustomRequest = (
   parameters: sendCustomRequest$Input
@@ -121534,7 +121534,7 @@ export type answerCustomQuery$DirectInput = {
  * Answers a custom query; for bots only
  *
  * @param {answerCustomQuery$Input} parameters {@link answerCustomQuery$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type answerCustomQuery = (parameters: answerCustomQuery$Input) => Ok;
 
@@ -121566,7 +121566,7 @@ export type setAlarm$DirectInput = {
  * Succeeds after a specified amount of time has passed. Can be called before initialization
  *
  * @param {setAlarm$Input} parameters {@link setAlarm$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setAlarm = (parameters: setAlarm$Input) => Ok;
 
@@ -121586,7 +121586,7 @@ export type getCountries$DirectInput = {};
  * Returns information about existing countries. Can be called before authorization
  *
  * @param {getCountries$Input} parameters {@link getCountries$Input}
- * @return {Countries} {@link Countries}
+ * @returns {Countries} {@link Countries}
  */
 export type getCountries = (parameters: getCountries$Input) => Countries;
 
@@ -121606,7 +121606,7 @@ export type getCountryCode$DirectInput = {};
  * Uses the current IP address to find the current country. Returns two-letter ISO 3166-1 alpha-2 country code. Can be called before authorization
  *
  * @param {getCountryCode$Input} parameters {@link getCountryCode$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getCountryCode = (parameters: getCountryCode$Input) => Text;
 
@@ -121638,7 +121638,7 @@ export type getPhoneNumberInfo$DirectInput = {
  * Returns information about a phone number by its prefix. Can be called before authorization
  *
  * @param {getPhoneNumberInfo$Input} parameters {@link getPhoneNumberInfo$Input}
- * @return {PhoneNumberInfo} {@link PhoneNumberInfo}
+ * @returns {PhoneNumberInfo} {@link PhoneNumberInfo}
  */
 export type getPhoneNumberInfo = (
   parameters: getPhoneNumberInfo$Input
@@ -121684,7 +121684,7 @@ export type getPhoneNumberInfoSync$DirectInput = {
  * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
  *
  * @param {getPhoneNumberInfoSync$Input} parameters {@link getPhoneNumberInfoSync$Input}
- * @return {PhoneNumberInfo} {@link PhoneNumberInfo}
+ * @returns {PhoneNumberInfo} {@link PhoneNumberInfo}
  */
 export type getPhoneNumberInfoSync = (
   parameters: getPhoneNumberInfoSync$Input
@@ -121718,7 +121718,7 @@ export type getCollectibleItemInfo$DirectInput = {
  * Returns information about a given collectible item that was purchased at https://fragment.com
  *
  * @param {getCollectibleItemInfo$Input} parameters {@link getCollectibleItemInfo$Input}
- * @return {CollectibleItemInfo} {@link CollectibleItemInfo}
+ * @returns {CollectibleItemInfo} {@link CollectibleItemInfo}
  */
 export type getCollectibleItemInfo = (
   parameters: getCollectibleItemInfo$Input
@@ -121752,7 +121752,7 @@ export type getDeepLinkInfo$DirectInput = {
  * Returns information about a tg:// deep link. Use "tg://need_update_for_some_feature" or "tg:some_unsupported_feature" for testing. Returns a 404 error for unknown links. Can be called before authorization
  *
  * @param {getDeepLinkInfo$Input} parameters {@link getDeepLinkInfo$Input}
- * @return {DeepLinkInfo} {@link DeepLinkInfo}
+ * @returns {DeepLinkInfo} {@link DeepLinkInfo}
  */
 export type getDeepLinkInfo = (parameters: getDeepLinkInfo$Input) => DeepLinkInfo;
 
@@ -121772,7 +121772,7 @@ export type getApplicationConfig$DirectInput = {};
  * Returns application config, provided by the server. Can be called before authorization
  *
  * @param {getApplicationConfig$Input} parameters {@link getApplicationConfig$Input}
- * @return {JsonValue} {@link JsonValue}
+ * @returns {JsonValue} {@link JsonValue}
  */
 export type getApplicationConfig = (
   parameters: getApplicationConfig$Input
@@ -121830,7 +121830,7 @@ export type saveApplicationLogEvent$DirectInput = {
  * Saves application log event on the server. Can be called before authorization
  *
  * @param {saveApplicationLogEvent$Input} parameters {@link saveApplicationLogEvent$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type saveApplicationLogEvent = (
   parameters: saveApplicationLogEvent$Input
@@ -121852,7 +121852,7 @@ export type getApplicationDownloadLink$DirectInput = {};
  * Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram
  *
  * @param {getApplicationDownloadLink$Input} parameters {@link getApplicationDownloadLink$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getApplicationDownloadLink = (
   parameters: getApplicationDownloadLink$Input
@@ -121922,7 +121922,7 @@ export type addProxy$DirectInput = {
  * Adds a proxy server for network requests. Can be called before authorization
  *
  * @param {addProxy$Input} parameters {@link addProxy$Input}
- * @return {Proxy} {@link Proxy}
+ * @returns {Proxy} {@link Proxy}
  */
 export type addProxy = (parameters: addProxy$Input) => Proxy;
 
@@ -122002,7 +122002,7 @@ export type editProxy$DirectInput = {
  * Edits an existing proxy server for network requests. Can be called before authorization
  *
  * @param {editProxy$Input} parameters {@link editProxy$Input}
- * @return {Proxy} {@link Proxy}
+ * @returns {Proxy} {@link Proxy}
  */
 export type editProxy = (parameters: editProxy$Input) => Proxy;
 
@@ -122034,7 +122034,7 @@ export type enableProxy$DirectInput = {
  * Enables a proxy. Only one proxy can be enabled at a time. Can be called before authorization
  *
  * @param {enableProxy$Input} parameters {@link enableProxy$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type enableProxy = (parameters: enableProxy$Input) => Ok;
 
@@ -122054,7 +122054,7 @@ export type disableProxy$DirectInput = {};
  * Disables the currently enabled proxy. Can be called before authorization
  *
  * @param {disableProxy$Input} parameters {@link disableProxy$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type disableProxy = (parameters: disableProxy$Input) => Ok;
 
@@ -122086,7 +122086,7 @@ export type removeProxy$DirectInput = {
  * Removes a proxy server. Can be called before authorization
  *
  * @param {removeProxy$Input} parameters {@link removeProxy$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type removeProxy = (parameters: removeProxy$Input) => Ok;
 
@@ -122106,7 +122106,7 @@ export type getProxies$DirectInput = {};
  * Returns the list of proxies that are currently set up. Can be called before authorization
  *
  * @param {getProxies$Input} parameters {@link getProxies$Input}
- * @return {Proxies} {@link Proxies}
+ * @returns {Proxies} {@link Proxies}
  */
 export type getProxies = (parameters: getProxies$Input) => Proxies;
 
@@ -122138,7 +122138,7 @@ export type getProxyLink$DirectInput = {
  * Returns an HTTPS link, which can be used to add a proxy. Available only for SOCKS5 and MTProto proxies. Can be called before authorization
  *
  * @param {getProxyLink$Input} parameters {@link getProxyLink$Input}
- * @return {HttpUrl} {@link HttpUrl}
+ * @returns {HttpUrl} {@link HttpUrl}
  */
 export type getProxyLink = (parameters: getProxyLink$Input) => HttpUrl;
 
@@ -122170,7 +122170,7 @@ export type pingProxy$DirectInput = {
  * Computes time needed to receive a response from a Telegram server through a proxy. Can be called before authorization
  *
  * @param {pingProxy$Input} parameters {@link pingProxy$Input}
- * @return {Seconds} {@link Seconds}
+ * @returns {Seconds} {@link Seconds}
  */
 export type pingProxy = (parameters: pingProxy$Input) => Seconds;
 
@@ -122202,7 +122202,7 @@ export type setLogStream$DirectInput = {
  * Sets new log stream for internal logging of TDLib. Can be called synchronously
  *
  * @param {setLogStream$Input} parameters {@link setLogStream$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setLogStream = (parameters: setLogStream$Input) => Ok;
 
@@ -122222,7 +122222,7 @@ export type getLogStream$DirectInput = {};
  * Returns information about currently used log stream for internal logging of TDLib. Can be called synchronously
  *
  * @param {getLogStream$Input} parameters {@link getLogStream$Input}
- * @return {LogStream} {@link LogStream}
+ * @returns {LogStream} {@link LogStream}
  */
 export type getLogStream = (parameters: getLogStream$Input) => LogStream;
 
@@ -122258,7 +122258,7 @@ export type setLogVerbosityLevel$DirectInput = {
  * Sets the verbosity level of the internal logging of TDLib. Can be called synchronously
  *
  * @param {setLogVerbosityLevel$Input} parameters {@link setLogVerbosityLevel$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setLogVerbosityLevel = (parameters: setLogVerbosityLevel$Input) => Ok;
 
@@ -122278,7 +122278,7 @@ export type getLogVerbosityLevel$DirectInput = {};
  * Returns current verbosity level of the internal logging of TDLib. Can be called synchronously
  *
  * @param {getLogVerbosityLevel$Input} parameters {@link getLogVerbosityLevel$Input}
- * @return {LogVerbosityLevel} {@link LogVerbosityLevel}
+ * @returns {LogVerbosityLevel} {@link LogVerbosityLevel}
  */
 export type getLogVerbosityLevel = (
   parameters: getLogVerbosityLevel$Input
@@ -122300,7 +122300,7 @@ export type getLogTags$DirectInput = {};
  * Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
  *
  * @param {getLogTags$Input} parameters {@link getLogTags$Input}
- * @return {LogTags} {@link LogTags}
+ * @returns {LogTags} {@link LogTags}
  */
 export type getLogTags = (parameters: getLogTags$Input) => LogTags;
 
@@ -122344,7 +122344,7 @@ export type setLogTagVerbosityLevel$DirectInput = {
  * Sets the verbosity level for a specified TDLib internal log tag. Can be called synchronously
  *
  * @param {setLogTagVerbosityLevel$Input} parameters {@link setLogTagVerbosityLevel$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type setLogTagVerbosityLevel = (
   parameters: setLogTagVerbosityLevel$Input
@@ -122378,7 +122378,7 @@ export type getLogTagVerbosityLevel$DirectInput = {
  * Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
  *
  * @param {getLogTagVerbosityLevel$Input} parameters {@link getLogTagVerbosityLevel$Input}
- * @return {LogVerbosityLevel} {@link LogVerbosityLevel}
+ * @returns {LogVerbosityLevel} {@link LogVerbosityLevel}
  */
 export type getLogTagVerbosityLevel = (
   parameters: getLogTagVerbosityLevel$Input
@@ -122424,7 +122424,7 @@ export type addLogMessage$DirectInput = {
  * Adds a message to TDLib internal log. Can be called synchronously
  *
  * @param {addLogMessage$Input} parameters {@link addLogMessage$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type addLogMessage = (parameters: addLogMessage$Input) => Ok;
 
@@ -122456,7 +122456,7 @@ export type getUserSupportInfo$DirectInput = {
  * Returns support information for the given user; for Telegram support only
  *
  * @param {getUserSupportInfo$Input} parameters {@link getUserSupportInfo$Input}
- * @return {UserSupportInfo} {@link UserSupportInfo}
+ * @returns {UserSupportInfo} {@link UserSupportInfo}
  */
 export type getUserSupportInfo = (
   parameters: getUserSupportInfo$Input
@@ -122502,7 +122502,7 @@ export type setUserSupportInfo$DirectInput = {
  * Sets support information for the given user; for Telegram support only
  *
  * @param {setUserSupportInfo$Input} parameters {@link setUserSupportInfo$Input}
- * @return {UserSupportInfo} {@link UserSupportInfo}
+ * @returns {UserSupportInfo} {@link UserSupportInfo}
  */
 export type setUserSupportInfo = (
   parameters: setUserSupportInfo$Input
@@ -122524,7 +122524,7 @@ export type getSupportName$DirectInput = {};
  * Returns localized name of the Telegram support user; for Telegram support only
  *
  * @param {getSupportName$Input} parameters {@link getSupportName$Input}
- * @return {Text} {@link Text}
+ * @returns {Text} {@link Text}
  */
 export type getSupportName = (parameters: getSupportName$Input) => Text;
 
@@ -122544,7 +122544,7 @@ export type testCallEmpty$DirectInput = {};
  * Does nothing; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testCallEmpty$Input} parameters {@link testCallEmpty$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type testCallEmpty = (parameters: testCallEmpty$Input) => Ok;
 
@@ -122576,7 +122576,7 @@ export type testCallString$DirectInput = {
  * Returns the received string; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testCallString$Input} parameters {@link testCallString$Input}
- * @return {TestString} {@link TestString}
+ * @returns {TestString} {@link TestString}
  */
 export type testCallString = (parameters: testCallString$Input) => TestString;
 
@@ -122608,7 +122608,7 @@ export type testCallBytes$DirectInput = {
  * Returns the received bytes; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testCallBytes$Input} parameters {@link testCallBytes$Input}
- * @return {TestBytes} {@link TestBytes}
+ * @returns {TestBytes} {@link TestBytes}
  */
 export type testCallBytes = (parameters: testCallBytes$Input) => TestBytes;
 
@@ -122640,7 +122640,7 @@ export type testCallVectorInt$DirectInput = {
  * Returns the received vector of numbers; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testCallVectorInt$Input} parameters {@link testCallVectorInt$Input}
- * @return {TestVectorInt} {@link TestVectorInt}
+ * @returns {TestVectorInt} {@link TestVectorInt}
  */
 export type testCallVectorInt = (
   parameters: testCallVectorInt$Input
@@ -122674,7 +122674,7 @@ export type testCallVectorIntObject$DirectInput = {
  * Returns the received vector of objects containing a number; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testCallVectorIntObject$Input} parameters {@link testCallVectorIntObject$Input}
- * @return {TestVectorIntObject} {@link TestVectorIntObject}
+ * @returns {TestVectorIntObject} {@link TestVectorIntObject}
  */
 export type testCallVectorIntObject = (
   parameters: testCallVectorIntObject$Input
@@ -122708,7 +122708,7 @@ export type testCallVectorString$DirectInput = {
  * Returns the received vector of strings; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testCallVectorString$Input} parameters {@link testCallVectorString$Input}
- * @return {TestVectorString} {@link TestVectorString}
+ * @returns {TestVectorString} {@link TestVectorString}
  */
 export type testCallVectorString = (
   parameters: testCallVectorString$Input
@@ -122742,7 +122742,7 @@ export type testCallVectorStringObject$DirectInput = {
  * Returns the received vector of objects containing a string; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testCallVectorStringObject$Input} parameters {@link testCallVectorStringObject$Input}
- * @return {TestVectorStringObject} {@link TestVectorStringObject}
+ * @returns {TestVectorStringObject} {@link TestVectorStringObject}
  */
 export type testCallVectorStringObject = (
   parameters: testCallVectorStringObject$Input
@@ -122776,7 +122776,7 @@ export type testSquareInt$DirectInput = {
  * Returns the squared received number; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testSquareInt$Input} parameters {@link testSquareInt$Input}
- * @return {TestInt} {@link TestInt}
+ * @returns {TestInt} {@link TestInt}
  */
 export type testSquareInt = (parameters: testSquareInt$Input) => TestInt;
 
@@ -122796,7 +122796,7 @@ export type testNetwork$DirectInput = {};
  * Sends a simple network request to the Telegram servers; for testing only. Can be called before authorization
  *
  * @param {testNetwork$Input} parameters {@link testNetwork$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type testNetwork = (parameters: testNetwork$Input) => Ok;
 
@@ -122876,7 +122876,7 @@ export type testProxy$DirectInput = {
  * Sends a simple network request to the Telegram servers via proxy; for testing only. Can be called before authorization
  *
  * @param {testProxy$Input} parameters {@link testProxy$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type testProxy = (parameters: testProxy$Input) => Ok;
 
@@ -122896,7 +122896,7 @@ export type testGetDifference$DirectInput = {};
  * Forces an updates.getDifference call to the Telegram servers; for testing only
  *
  * @param {testGetDifference$Input} parameters {@link testGetDifference$Input}
- * @return {Ok} {@link Ok}
+ * @returns {Ok} {@link Ok}
  */
 export type testGetDifference = (parameters: testGetDifference$Input) => Ok;
 
@@ -122916,7 +122916,7 @@ export type testUseUpdate$DirectInput = {};
  * Does nothing and ensures that the Update object is used; for testing only. This is an offline method. Can be called before authorization
  *
  * @param {testUseUpdate$Input} parameters {@link testUseUpdate$Input}
- * @return {Update} {@link Update}
+ * @returns {Update} {@link Update}
  */
 export type testUseUpdate = (parameters: testUseUpdate$Input) => Update;
 
@@ -122948,6 +122948,6 @@ export type testReturnError$DirectInput = {
  * Returns the specified error and ensures that the Error object is used; for testing only. Can be called synchronously
  *
  * @param {testReturnError$Input} parameters {@link testReturnError$Input}
- * @return {Error} {@link Error}
+ * @returns {Error} {@link Error}
  */
 export type testReturnError = (parameters: testReturnError$Input) => Error;

@@ -22,10 +22,12 @@ type Waiter<T, A extends readonly unknown[] = []> =
 /**
  *
  *
- * @template T
- * @template A
- * @template unknown
- * @param {*} waiter
+ * @template {string|object|number|boolean} T
+ * @template {unknown[]} A
+ *
+ * @param {Waiter<T, A>} waiter
+ * @param {...A} parameters
+ * @returns {Promise<T>}
  */
 async function wait<
   T extends string | object | number | boolean,
@@ -94,7 +96,7 @@ export class Authenticator
    *
    * @static
    * @param {Client} client
-   * @return {StageTDLibParameters}  {StageTDLibParameters}
+   * @returns {StageTDLibParameters}  {StageTDLibParameters}
    * @memberof Authenticator
    */
   static create(client: Client): StageTDLibParameters {
@@ -119,7 +121,7 @@ export class Authenticator
    * @private
    * @param {AuthorizationState} state
    * @param {function(): void} resolve
-   * @return {Promise<void>}  {Promise<void>}
+   * @returns {Promise<void>}  {Promise<void>}
    * @memberof Authenticator
    */
   private async _handleUpdate(
@@ -242,7 +244,7 @@ export class Authenticator
    *
    *
    * @param {AuthenticateOptions} [options]
-   * @return {Promise<void>}  {Promise<void>}
+   * @returns {Promise<void>}  {Promise<void>}
    * @throws {TDError} if underlying method call throws
    * @throws {Error} if authentication state changes to closed before authentication completes
    * @throws {Error} whatever is reason of cancellation token
@@ -274,7 +276,7 @@ export class Authenticator
    *
    *
    * @param {*} parameters
-   * @return {StageSelect}  {StageSelect}
+   * @returns {StageSelect}  {StageSelect}
    * @memberof Authenticator
    */
   tdlibParameters(parameters: AuthenticatorState["parameters"]): StageSelect {
@@ -286,7 +288,7 @@ export class Authenticator
    *
    *
    * @param {Waiter<string>} token
-   * @return {StageSelect}  {StageSelect}
+   * @returns {StageSelect}  {StageSelect}
    * @memberof Authenticator
    */
   token(token: AuthenticatorState["token"]): StageAuthenticate {
@@ -299,7 +301,7 @@ export class Authenticator
    *
    * @param {Waiter<string>} phone
    * @param {*} settings
-   * @return {StageUser}  {StageUser}
+   * @returns {StageUser}  {StageUser}
    * @memberof Authenticator
    */
   phone(
@@ -315,7 +317,7 @@ export class Authenticator
    *
    *
    * @param {Waiter<string>} email
-   * @return {StageUser}  {StageUser}
+   * @returns {StageUser}  {StageUser}
    * @memberof Authenticator
    */
   email(email: AuthenticatorState["email"]): StageUser {
@@ -327,7 +329,7 @@ export class Authenticator
    *
    *
    * @param {Waiter<string>} code
-   * @return {StageUser}  {StageUser}
+   * @returns {StageUser}  {StageUser}
    * @memberof Authenticator
    */
   code(code: AuthenticatorState["code"]): StageUser {
@@ -339,7 +341,7 @@ export class Authenticator
    *
    *
    * @param {Waiter<string>} emailCode
-   * @return {StageUser}  {StageUser}
+   * @returns {StageUser}  {StageUser}
    * @memberof Authenticator
    */
   emailCode(emailCode: AuthenticatorState["emailCode"]): StageUser {
@@ -351,7 +353,7 @@ export class Authenticator
    *
    *
    * @param {Waiter<string>} password
-   * @return {StageUser}  {StageUser}
+   * @returns {StageUser}  {StageUser}
    * @memberof Authenticator
    */
   password(password: AuthenticatorState["password"]): StageUser {
@@ -363,7 +365,7 @@ export class Authenticator
    *
    *
    * @param {*} data
-   * @return {StageUser}  {StageUser}
+   * @returns {StageUser}  {StageUser}
    * @memberof Authenticator
    */
   register(data: AuthenticatorState["register"]): StageUser {

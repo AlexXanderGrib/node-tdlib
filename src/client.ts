@@ -51,7 +51,7 @@ export class TDError extends Error implements error {
   /**
    *
    *
-   * @return {object}
+   * @returns {object}
    * @memberof TDError
    */
   toJSON() {
@@ -99,7 +99,7 @@ export class Client {
    * @template {keyof $AsyncApi} T
    * @param {T} method
    * @param {object} parameters
-   * @return {object}  {Promise<ReturnType<$AsyncApi[T]>>}
+   * @returns {object}  {Promise<ReturnType<$AsyncApi[T]>>}
    * @throws {TDError} - {@link TDError}
    * @memberof Client
    */
@@ -137,7 +137,7 @@ export class Client {
    * @param {TDLib|Client} executor
    * @param {T} method
    * @param {object} parameters
-   * @return {object}  {Promise<ReturnType<$SyncMethodsDict[T]>>}
+   * @returns {object}  {Promise<ReturnType<$SyncMethodsDict[T]>>}
    * @throws {TDError} - {@link TDError}
    * @memberof Client
    */
@@ -212,7 +212,7 @@ export class Client {
    * @template {keyof $SyncApi} T
    * @param {T} method
    * @param {object} parameters
-   * @return {object}  {Promise<ReturnType<$SyncApi[T]>>}
+   * @returns {object}  {Promise<ReturnType<$SyncApi[T]>>}
    * @throws {TDError} - {@link TDError}
    * @memberof Client
    */
@@ -227,9 +227,10 @@ export class Client {
    *
    *
    * @private
+   * @returns {Promise<void>}
    * @memberof Client
    */
-  private async _thread() {
+  private async _thread(): Promise<void> {
     while (this._state === ClientState.RUNNING) {
       const value = await this._adapter.receive(this._client, 3000);
       debugJson("Received %s", value);
@@ -296,7 +297,7 @@ export class Client {
   /**
    *
    *
-   * @return {this}
+   * @returns {this}
    * @memberof Client
    */
   start(): this {
@@ -312,7 +313,7 @@ export class Client {
   /**
    *
    *
-   * @return {this}
+   * @returns {this}
    * @memberof Client
    */
   pause(): this {
@@ -327,7 +328,7 @@ export class Client {
   /**
    *
    *
-   * @return {void}
+   * @returns {void}
    * @memberof Client
    */
   destroy(): void {
@@ -354,7 +355,7 @@ export class Client {
  * @param {T} object
  * @param {X} data
  * @param {function(merged: X): R} callback
- * @return {R}
+ * @returns {R}
  */
 function assignTemporary<T extends {}, X extends Record<string, unknown>, R = void>(
   object: T,

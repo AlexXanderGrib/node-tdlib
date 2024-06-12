@@ -34,6 +34,16 @@
     "unicorn/prefer-node-protocol": "off",
     "unicorn/prefer-spread": "off",
     "security/detect-non-literal-fs-filename": "off",
+    "valid-jsdoc": [
+      "error",
+      {
+        "prefer": {
+          "return": "returns"
+        },
+        "requireParamDescription": false,
+        "requireReturnDescription": false
+      }
+    ],
     "unicorn/prevent-abbreviations": [
       "error",
       {

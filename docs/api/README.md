@@ -26,7 +26,7 @@ TDLib / [Modules](modules.md)
   <!-- TODO: get accurate statistic -->
 
 - **Better DX.** Unlike [`tdl`](https://npmjs.com/package/tdl) this package declarations use dictionary for methods instead of intersection type, making editor hints load almost immediate.
-- **Secure.** The library has only 1 dependency - `node-addon-api` for building TDLib addon
+- **Secure.** The library has only 1 dependency - `node-addon-api` for building TDLib addon (and platform-dependent prebuilt tdlib)
 
 ## 📦 Installation
 
@@ -45,7 +45,7 @@ TDLib / [Modules](modules.md)
 
 ## ⚙️ Usage
 
-This is raw wrapper of TDLib. It does not (yet) provide any mechanisms for authentication
+This is raw wrapper of TDLib
 
 ```typescript
 import { Client, Authenticator } from "tdlib-native";

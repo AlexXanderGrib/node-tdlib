@@ -9,10 +9,6 @@
 - [Markup](index.md#markup)
 - [default](index.md#default)
 
-### Modules
-
-- [&lt;internal\&gt;](index._internal_.md)
-
 ### Namespaces
 
 - [markup](index.markup.md)

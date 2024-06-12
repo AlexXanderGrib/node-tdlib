@@ -6,6 +6,8 @@
 
 **`Export`**
 
+Client
+
 ## Table of contents
 
 ### Constructors
@@ -41,19 +43,23 @@
 
 ### constructor
 
-• **new Client**(`adapter`)
+• **new Client**(`adapter`): [`Client`](index.Client.md)
 
 Creates an instance of Client.
-
-**`Memberof`**
-
-Client
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `adapter` | [`TDLib`](../interfaces/index._internal_.TDLib.md) |
+| `adapter` | `TDLib` |
+
+#### Returns
+
+[`Client`](index.Client.md)
+
+**`Memberof`**
+
+Client
 
 #### Defined in
 
@@ -149,6 +155,10 @@ dist/client.d.ts:67
 
 • `get` **tdlibOptions**(): [`TDLibOptions`](index.TDLibOptions.md)
 
+#### Returns
+
+[`TDLibOptions`](index.TDLibOptions.md)
+
 **`See`**
 
 https://core.telegram.org/tdlib/options
@@ -156,10 +166,6 @@ https://core.telegram.org/tdlib/options
 **`Memberof`**
 
 Client
-
-#### Returns
-
-[`TDLibOptions`](index.TDLibOptions.md)
 
 #### Defined in
 
@@ -169,15 +175,15 @@ ___
 
 ### updates
 
-• `get` **updates**(): [`Observable`](../interfaces/index._internal_.Observable.md)<[`Update`](../modules/index.types.default.md#update)\>
+• `get` **updates**(): `Observable`\<[`Update`](../modules/index.types.default.md#update)\>
+
+#### Returns
+
+`Observable`\<[`Update`](../modules/index.types.default.md#update)\>
 
 **`Memberof`**
 
 Client
-
-#### Returns
-
-[`Observable`](../interfaces/index._internal_.Observable.md)<[`Update`](../modules/index.types.default.md#update)\>
 
 #### Defined in
 
@@ -189,13 +195,13 @@ dist/client.d.ts:123
 
 ▸ **destroy**(): `void`
 
-**`Memberof`**
-
-Client
-
 #### Returns
 
 `void`
+
+**`Memberof`**
+
+Client
 
 #### Defined in
 
@@ -205,15 +211,7 @@ ___
 
 ### execute
 
-▸ **execute**<`T`\>(`method`, `parameters`): `ReturnType`<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>
-
-**`Throws`**
-
-- [TDError](index.TDError.md)
-
-**`Memberof`**
-
-Client
+▸ **execute**\<`T`\>(`method`, `parameters`): `ReturnType`\<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>
 
 #### Type parameters
 
@@ -226,13 +224,21 @@ Client
 | Name | Type |
 | :------ | :------ |
 | `method` | `T` |
-| `parameters` | [`OmitType`](../modules/index._internal_.md#omittype)<`Parameters`<[`$MethodsDict`](../modules/index.types.default.md#$methodsdict)[`T`]\>[``0``]\> |
+| `parameters` | `OmitType`\<`Parameters`\<[`$MethodsDict`](../modules/index.types.default.md#$methodsdict)[`T`]\>[``0``]\> |
 
 #### Returns
 
-`ReturnType`<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>
+`ReturnType`\<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>
 
 {Promise<ReturnType<$SyncApi[T]>>}
+
+**`Throws`**
+
+- [TDError](index.TDError.md)
+
+**`Memberof`**
+
+Client
 
 #### Defined in
 
@@ -242,15 +248,7 @@ ___
 
 ### invoke
 
-▸ **invoke**<`T`\>(`method`, `parameters`): `Promise`<`ReturnType`<[`$MethodsDict`](../modules/index.types.default.md#$methodsdict)[`T`]\>\>
-
-**`Throws`**
-
-- [TDError](index.TDError.md)
-
-**`Memberof`**
-
-Client
+▸ **invoke**\<`T`\>(`method`, `parameters`): `Promise`\<`ReturnType`\<[`$MethodsDict`](../modules/index.types.default.md#$methodsdict)[`T`]\>\>
 
 #### Type parameters
 
@@ -263,13 +261,21 @@ Client
 | Name | Type |
 | :------ | :------ |
 | `method` | `T` |
-| `parameters` | `Parameters`<[`$AsyncApi`](index.types.default._AsyncApi.md)[`T`]\>[``0``] |
+| `parameters` | `Parameters`\<[`$AsyncApi`](index.types.default._AsyncApi.md)[`T`]\>[``0``] |
 
 #### Returns
 
-`Promise`<`ReturnType`<[`$MethodsDict`](../modules/index.types.default.md#$methodsdict)[`T`]\>\>
+`Promise`\<`ReturnType`\<[`$MethodsDict`](../modules/index.types.default.md#$methodsdict)[`T`]\>\>
 
 {Promise<ReturnType<$AsyncApi[T]>>}
+
+**`Throws`**
+
+- [TDError](index.TDError.md)
+
+**`Memberof`**
+
+Client
 
 #### Defined in
 
@@ -279,15 +285,15 @@ ___
 
 ### pause
 
-▸ **pause**(): [`Client`](index.Client.md)
+▸ **pause**(): `this`
+
+#### Returns
+
+`this`
 
 **`Memberof`**
 
 Client
-
-#### Returns
-
-[`Client`](index.Client.md)
 
 #### Defined in
 
@@ -297,15 +303,15 @@ ___
 
 ### start
 
-▸ **start**(): [`Client`](index.Client.md)
+▸ **start**(): `this`
+
+#### Returns
+
+`this`
 
 **`Memberof`**
 
 Client
-
-#### Returns
-
-[`Client`](index.Client.md)
 
 #### Defined in
 
@@ -315,15 +321,7 @@ ___
 
 ### execute
 
-▸ `Static` **execute**<`T`\>(`executor`, `method`, `parameters`): `ReturnType`<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>
-
-**`Throws`**
-
-- [TDError](index.TDError.md)
-
-**`Memberof`**
-
-Client
+▸ **execute**\<`T`\>(`executor`, `method`, `parameters`): `ReturnType`\<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>
 
 #### Type parameters
 
@@ -335,15 +333,23 @@ Client
 
 | Name | Type |
 | :------ | :------ |
-| `executor` | [`Client`](index.Client.md) \| [`TDLib`](../interfaces/index._internal_.TDLib.md) |
+| `executor` | [`Client`](index.Client.md) \| `TDLib` |
 | `method` | `T` |
-| `parameters` | `Parameters`<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>[``0``] |
+| `parameters` | `Parameters`\<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>[``0``] |
 
 #### Returns
 
-`ReturnType`<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>
+`ReturnType`\<[`$SyncApi`](index.types.default._SyncApi.md)[`T`]\>
 
 {Promise<ReturnType<$SyncMethodsDict[T]>>}
+
+**`Throws`**
+
+- [TDError](index.TDError.md)
+
+**`Memberof`**
+
+Client
 
 #### Defined in
 

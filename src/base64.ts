@@ -5,7 +5,7 @@ const base64abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
  *
  * @export
  * @param {Uint8Array} bytes
- * @return {string}  {string}
+ * @returns {string}  {string}
  */
 export function encode(bytes: ArrayLike<number>): string {
   let result = "";

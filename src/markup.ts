@@ -14,7 +14,7 @@ import {
  *
  * @export
  * @param {object} []
- * @return {replyMarkupForceReply}  {replyMarkupForceReply}
+ * @returns {replyMarkupForceReply}  {replyMarkupForceReply}
  */
 export function forceReply({
   placeholder = "",
@@ -32,7 +32,7 @@ export function forceReply({
  *
  * @export
  * @param {object} []
- * @return {replyMarkupRemoveKeyboard}  {replyMarkupRemoveKeyboard}
+ * @returns {replyMarkupRemoveKeyboard}  {replyMarkupRemoveKeyboard}
  */
 export function removeKeyboard({
   personal = false
@@ -84,7 +84,7 @@ class KeyboardBuilder {
    * Adds text button
    *
    * @param {string} text
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   textButton(text: string): this {
@@ -96,7 +96,7 @@ class KeyboardBuilder {
    *
    * @param {string} text
    * @param {KeyboardButtonType} [type]
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   button(text: string, type: KeyboardButtonType$Input): this {
@@ -107,7 +107,7 @@ class KeyboardBuilder {
   /**
    * Creates new row
    *
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   row(): this {
@@ -122,7 +122,7 @@ class KeyboardBuilder {
    * Sets {@link replyMarkupShowKeyboard$Input.is_persistent}
    *
    * @param {boolean} [isPersistent=true]
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   persistent(isPersistent = true): this {
@@ -134,7 +134,7 @@ class KeyboardBuilder {
    * Sets {@link replyMarkupShowKeyboard$Input.resize_keyboard}
    *
    * @param {boolean} [doResize=true]
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   resize(doResize = true): this {
@@ -146,7 +146,7 @@ class KeyboardBuilder {
    * Sets {@link replyMarkupShowKeyboard$Input.is_personal}
    *
    * @param {boolean} [isPersonal=true]
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   personal(isPersonal = true): this {
@@ -158,7 +158,7 @@ class KeyboardBuilder {
    * Sets {@link replyMarkupShowKeyboard$Input.one_time}
    *
    * @param {boolean} [isOneTime=true]
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   oneTime(isOneTime = true): this {
@@ -170,7 +170,7 @@ class KeyboardBuilder {
    * Sets {@link replyMarkupShowKeyboard$Input.input_field_placeholder}
    *
    * @param {string} value
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   placeholder(value: string): this {
@@ -181,7 +181,7 @@ class KeyboardBuilder {
   /**
    * Generates keyboard
    *
-   * @return {replyMarkupShowKeyboard$Input}  {@link replyMarkupShowKeyboard$Input}
+   * @returns {replyMarkupShowKeyboard$Input}  {@link replyMarkupShowKeyboard$Input}
    * @memberof KeyboardBuilder
    */
   build(): replyMarkupShowKeyboard$Input {
@@ -199,7 +199,7 @@ class KeyboardBuilder {
   /**
    * Generates keyboard
    *
-   * @return {replyMarkupShowKeyboard}  {@link replyMarkupShowKeyboard$Input}
+   * @returns {replyMarkupShowKeyboard}  {@link replyMarkupShowKeyboard$Input}
    * @memberof KeyboardBuilder
    */
   toJSON(): replyMarkupShowKeyboard$Input {
@@ -212,7 +212,7 @@ class KeyboardBuilder {
  *
  * @export
  * @param {KeyboardOptions} [options={}]
- * @return {KeyboardBuilder} {@link KeyboardBuilder}
+ * @returns {KeyboardBuilder} {@link KeyboardBuilder}
  */
 export function keyboard(options: Partial<KeyboardOptions> = {}) {
   return new KeyboardBuilder(options);
@@ -244,7 +244,7 @@ class InlineKeyboardBuilder {
    *
    * @param {string} text
    * @param {string} data
-   * @return {this}
+   * @returns {this}
    * @memberof InlineKeyboardBuilder
    */
   callbackButton(text: string, data: string | Uint8Array): this {
@@ -259,7 +259,7 @@ class InlineKeyboardBuilder {
    *
    * @param {string} text
    * @param {string|URL} url
-   * @return {this}
+   * @returns {this}
    * @memberof InlineKeyboardBuilder
    */
   urlButton(text: string, url: string | URL): this {
@@ -274,7 +274,7 @@ class InlineKeyboardBuilder {
    *
    * @param {string} text
    * @param {InlineKeyboardButtonType$Input} type
-   * @return {this}
+   * @returns {this}
    * @memberof InlineKeyboardBuilder
    */
   button(text: string, type: InlineKeyboardButtonType$Input): this {
@@ -285,7 +285,7 @@ class InlineKeyboardBuilder {
   /**
    * Creates new row
    *
-   * @return {this}
+   * @returns {this}
    * @memberof KeyboardBuilder
    */
   row(): this {
@@ -299,7 +299,7 @@ class InlineKeyboardBuilder {
   /**
    * Generates keyboard
    *
-   * @return {replyMarkupInlineKeyboard$Input}  {@link replyMarkupInlineKeyboard$Input}
+   * @returns {replyMarkupInlineKeyboard$Input}  {@link replyMarkupInlineKeyboard$Input}
    * @memberof InlineKeyboardBuilder
    */
   build(): replyMarkupInlineKeyboard$Input {
@@ -312,7 +312,7 @@ class InlineKeyboardBuilder {
   /**
    * Generates keyboard
    *
-   * @return {replyMarkupInlineKeyboard$Input}  {@link replyMarkupInlineKeyboard$Input}
+   * @returns {replyMarkupInlineKeyboard$Input}  {@link replyMarkupInlineKeyboard$Input}
    * @memberof InlineKeyboardBuilder
    */
   toJSON(): replyMarkupInlineKeyboard$Input {
@@ -324,7 +324,7 @@ class InlineKeyboardBuilder {
  *
  *
  * @export
- * @return {InlineKeyboardBuilder}  {@link InlineKeyboardBuilder}
+ * @returns {InlineKeyboardBuilder}  {@link InlineKeyboardBuilder}
  */
 export function inlineKeyboard(): InlineKeyboardBuilder {
   return new InlineKeyboardBuilder();

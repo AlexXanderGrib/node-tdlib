@@ -4,7 +4,7 @@ import path from "path";
 /**
  *
  *
- * @return {string}  {string}
+ * @returns {string}  {string}
  */
 export function getAddonFolderPath(): string {
   return path.dirname(

@@ -16,7 +16,7 @@ export type PromiseWithResolvers<T> = {
  *
  * @export
  * @template T
- * @return {PromiseWithResolvers<T>}  {PromiseWithResolvers<T>}
+ * @returns {PromiseWithResolvers<T>}  {PromiseWithResolvers<T>}
  */
 export function promiseWithResolvers<T>(): PromiseWithResolvers<T> {
   let _resolve: Resolve<T> = noop;

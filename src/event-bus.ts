@@ -1,6 +1,6 @@
 export type Subscription<T> = (value: T) => void;
 export type Unsubscribe = () => void;
-
+type Observer<T> = (subscriber: Subscriber<T>) => Unsubscribe;
 export interface Observable<T> {
   subscribe(handler: Subscription<T>): Unsubscribe;
   toRxObserver(): (subscriber: Subscriber<T>) => Unsubscribe;
@@ -28,7 +28,7 @@ export class EventBus<T> implements Observable<T> {
    *
    *
    * @param {T} value
-   * @return {this}
+   * @returns {this}
    * @memberof EventBus
    */
   emit(value: T): this {
@@ -43,7 +43,7 @@ export class EventBus<T> implements Observable<T> {
    *
    *
    * @param {Subscription<T>} handler
-   * @return {Unsubscribe}  {Unsubscribe}
+   * @returns {Unsubscribe}  {Unsubscribe}
    * @memberof EventBus
    */
   subscribe(handler: Subscription<T>): Unsubscribe {
@@ -66,8 +66,9 @@ export class EventBus<T> implements Observable<T> {
    *
    *
    * @memberof EventBus
+   * @returns {void}
    */
-  complete() {
+  complete(): void {
     if (this._completed) return;
 
     this._completed = true;
@@ -85,7 +86,7 @@ export class EventBus<T> implements Observable<T> {
   /**
    *
    *
-   * @return {function(subscriber: Subscriber<T>): Unsubscribe}
+   * @returns {Observer<T>}
    * @example
    * import { Observable } from "rxjs";
    *
@@ -93,8 +94,8 @@ export class EventBus<T> implements Observable<T> {
    * const observable = new Observable(bus.toRxObserver());
    * // Observable<number>
    */
-  toRxObserver(): (subscriber: Subscriber<T>) => Unsubscribe {
-    return (subscriber: Subscriber<T>): Unsubscribe => {
+  toRxObserver(): Observer<T> {
+    return (subscriber) => {
       this._onComplete.add(() => subscriber.complete?.());
 
       return this.subscribe((value) => subscriber.next(value));
