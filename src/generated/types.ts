@@ -45,6 +45,7 @@ export const $Methods = Object.freeze({
   checkAuthenticationPasswordRecoveryCode: "checkAuthenticationPasswordRecoveryCode",
   recoverAuthenticationPassword: "recoverAuthenticationPassword",
   sendAuthenticationFirebaseSms: "sendAuthenticationFirebaseSms",
+  reportAuthenticationCodeMissing: "reportAuthenticationCodeMissing",
   checkAuthenticationBotToken: "checkAuthenticationBotToken",
   logOut: "logOut",
   close: "close",
@@ -96,6 +97,7 @@ export const $Methods = Object.freeze({
   searchChats: "searchChats",
   searchChatsOnServer: "searchChatsOnServer",
   searchChatsNearby: "searchChatsNearby",
+  getRecommendedChats: "getRecommendedChats",
   getChatSimilarChats: "getChatSimilarChats",
   getChatSimilarChatCount: "getChatSimilarChatCount",
   openChatSimilarChat: "openChatSimilarChat",
@@ -111,6 +113,7 @@ export const $Methods = Object.freeze({
   checkCreatedPublicChatsLimit: "checkCreatedPublicChatsLimit",
   getSuitableDiscussionChats: "getSuitableDiscussionChats",
   getInactiveSupergroupChats: "getInactiveSupergroupChats",
+  getSuitablePersonalChats: "getSuitablePersonalChats",
   loadSavedMessagesTopics: "loadSavedMessagesTopics",
   getSavedMessagesTopicHistory: "getSavedMessagesTopicHistory",
   getSavedMessagesTopicMessageByDate: "getSavedMessagesTopicMessageByDate",
@@ -129,6 +132,10 @@ export const $Methods = Object.freeze({
   searchSavedMessages: "searchSavedMessages",
   searchCallMessages: "searchCallMessages",
   searchOutgoingDocumentMessages: "searchOutgoingDocumentMessages",
+  searchPublicHashtagMessages: "searchPublicHashtagMessages",
+  getSearchedForHashtags: "getSearchedForHashtags",
+  removeSearchedForHashtag: "removeSearchedForHashtag",
+  clearSearchedForHashtags: "clearSearchedForHashtags",
   deleteAllCallMessages: "deleteAllCallMessages",
   searchChatRecentLocationMessages: "searchChatRecentLocationMessages",
   getActiveLiveLocationMessages: "getActiveLiveLocationMessages",
@@ -140,6 +147,7 @@ export const $Methods = Object.freeze({
   getChatScheduledMessages: "getChatScheduledMessages",
   getChatSponsoredMessages: "getChatSponsoredMessages",
   clickChatSponsoredMessage: "clickChatSponsoredMessage",
+  reportChatSponsoredMessage: "reportChatSponsoredMessage",
   removeNotification: "removeNotification",
   removeNotificationGroup: "removeNotificationGroup",
   getMessageLink: "getMessageLink",
@@ -156,6 +164,7 @@ export const $Methods = Object.freeze({
   sendBotStartMessage: "sendBotStartMessage",
   sendInlineQueryResultMessage: "sendInlineQueryResultMessage",
   forwardMessages: "forwardMessages",
+  sendQuickReplyShortcutMessages: "sendQuickReplyShortcutMessages",
   resendMessages: "resendMessages",
   addLocalMessage: "addLocalMessage",
   deleteMessages: "deleteMessages",
@@ -172,6 +181,22 @@ export const $Methods = Object.freeze({
   editInlineMessageCaption: "editInlineMessageCaption",
   editInlineMessageReplyMarkup: "editInlineMessageReplyMarkup",
   editMessageSchedulingState: "editMessageSchedulingState",
+  setMessageFactCheck: "setMessageFactCheck",
+  sendBusinessMessage: "sendBusinessMessage",
+  sendBusinessMessageAlbum: "sendBusinessMessageAlbum",
+  checkQuickReplyShortcutName: "checkQuickReplyShortcutName",
+  loadQuickReplyShortcuts: "loadQuickReplyShortcuts",
+  setQuickReplyShortcutName: "setQuickReplyShortcutName",
+  deleteQuickReplyShortcut: "deleteQuickReplyShortcut",
+  reorderQuickReplyShortcuts: "reorderQuickReplyShortcuts",
+  loadQuickReplyShortcutMessages: "loadQuickReplyShortcutMessages",
+  deleteQuickReplyShortcutMessages: "deleteQuickReplyShortcutMessages",
+  addQuickReplyShortcutMessage: "addQuickReplyShortcutMessage",
+  addQuickReplyShortcutInlineQueryResultMessage:
+    "addQuickReplyShortcutInlineQueryResultMessage",
+  addQuickReplyShortcutMessageAlbum: "addQuickReplyShortcutMessageAlbum",
+  readdQuickReplyShortcutMessages: "readdQuickReplyShortcutMessages",
+  editQuickReplyMessage: "editQuickReplyMessage",
   getForumTopicDefaultIcons: "getForumTopicDefaultIcons",
   createForumTopic: "createForumTopic",
   editForumTopic: "editForumTopic",
@@ -195,6 +220,7 @@ export const $Methods = Object.freeze({
   setDefaultReactionType: "setDefaultReactionType",
   getSavedMessagesTags: "getSavedMessagesTags",
   setSavedMessagesTagLabel: "setSavedMessagesTagLabel",
+  getMessageEffect: "getMessageEffect",
   searchQuote: "searchQuote",
   getTextEntities: "getTextEntities",
   parseTextEntities: "parseTextEntities",
@@ -212,6 +238,8 @@ export const $Methods = Object.freeze({
   getPollVoters: "getPollVoters",
   stopPoll: "stopPoll",
   hideSuggestedAction: "hideSuggestedAction",
+  hideContactCloseBirthdays: "hideContactCloseBirthdays",
+  getBusinessConnection: "getBusinessConnection",
   getLoginUrlInfo: "getLoginUrlInfo",
   getLoginUrl: "getLoginUrl",
   shareUsersWithBot: "shareUsersWithBot",
@@ -265,6 +293,7 @@ export const $Methods = Object.freeze({
   getChatFolderChatsToLeave: "getChatFolderChatsToLeave",
   getChatFolderChatCount: "getChatFolderChatCount",
   reorderChatFolders: "reorderChatFolders",
+  toggleChatFolderTags: "toggleChatFolderTags",
   getRecommendedChatFolders: "getRecommendedChatFolders",
   getChatFolderDefaultIconName: "getChatFolderDefaultIconName",
   getChatsForChatFolderInviteLink: "getChatsForChatFolderInviteLink",
@@ -324,6 +353,7 @@ export const $Methods = Object.freeze({
   getChatNotificationSettingsExceptions: "getChatNotificationSettingsExceptions",
   getScopeNotificationSettings: "getScopeNotificationSettings",
   setScopeNotificationSettings: "setScopeNotificationSettings",
+  setReactionNotificationSettings: "setReactionNotificationSettings",
   resetAllNotificationSettings: "resetAllNotificationSettings",
   toggleChatIsPinned: "toggleChatIsPinned",
   setPinnedChats: "setPinnedChats",
@@ -334,14 +364,15 @@ export const $Methods = Object.freeze({
   sendStory: "sendStory",
   editStory: "editStory",
   setStoryPrivacySettings: "setStoryPrivacySettings",
-  toggleStoryIsPinned: "toggleStoryIsPinned",
+  toggleStoryIsPostedToChatPage: "toggleStoryIsPostedToChatPage",
   deleteStory: "deleteStory",
   getStoryNotificationSettingsExceptions: "getStoryNotificationSettingsExceptions",
   loadActiveStories: "loadActiveStories",
   setChatActiveStoriesList: "setChatActiveStoriesList",
   getChatActiveStories: "getChatActiveStories",
-  getChatPinnedStories: "getChatPinnedStories",
+  getChatPostedToChatPageStories: "getChatPostedToChatPageStories",
   getChatArchivedStories: "getChatArchivedStories",
+  setChatPinnedStories: "setChatPinnedStories",
   openStory: "openStory",
   closeStory: "closeStory",
   getStoryAvailableReactions: "getStoryAvailableReactions",
@@ -386,6 +417,7 @@ export const $Methods = Object.freeze({
   removeFileFromDownloads: "removeFileFromDownloads",
   removeAllFilesFromDownloads: "removeAllFilesFromDownloads",
   searchFileDownloads: "searchFileDownloads",
+  setApplicationVerificationToken: "setApplicationVerificationToken",
   getMessageFileType: "getMessageFileType",
   getMessageImportConfirmationText: "getMessageImportConfirmationText",
   importMessages: "importMessages",
@@ -462,6 +494,7 @@ export const $Methods = Object.freeze({
   getStickers: "getStickers",
   getAllStickerEmojis: "getAllStickerEmojis",
   searchStickers: "searchStickers",
+  getGreetingStickers: "getGreetingStickers",
   getPremiumStickers: "getPremiumStickers",
   getInstalledStickerSets: "getInstalledStickerSets",
   getArchivedStickerSets: "getArchivedStickerSets",
@@ -509,11 +542,31 @@ export const $Methods = Object.freeze({
   setUsername: "setUsername",
   toggleUsernameIsActive: "toggleUsernameIsActive",
   reorderActiveUsernames: "reorderActiveUsernames",
+  setBirthdate: "setBirthdate",
+  setPersonalChat: "setPersonalChat",
   setEmojiStatus: "setEmojiStatus",
   setLocation: "setLocation",
-  changePhoneNumber: "changePhoneNumber",
-  resendChangePhoneNumberCode: "resendChangePhoneNumberCode",
-  checkChangePhoneNumberCode: "checkChangePhoneNumberCode",
+  toggleHasSponsoredMessagesEnabled: "toggleHasSponsoredMessagesEnabled",
+  setBusinessLocation: "setBusinessLocation",
+  setBusinessOpeningHours: "setBusinessOpeningHours",
+  setBusinessGreetingMessageSettings: "setBusinessGreetingMessageSettings",
+  setBusinessAwayMessageSettings: "setBusinessAwayMessageSettings",
+  setBusinessStartPage: "setBusinessStartPage",
+  sendPhoneNumberCode: "sendPhoneNumberCode",
+  sendPhoneNumberFirebaseSms: "sendPhoneNumberFirebaseSms",
+  reportPhoneNumberCodeMissing: "reportPhoneNumberCodeMissing",
+  resendPhoneNumberCode: "resendPhoneNumberCode",
+  checkPhoneNumberCode: "checkPhoneNumberCode",
+  getBusinessConnectedBot: "getBusinessConnectedBot",
+  setBusinessConnectedBot: "setBusinessConnectedBot",
+  deleteBusinessConnectedBot: "deleteBusinessConnectedBot",
+  toggleBusinessConnectedBotChatIsPaused: "toggleBusinessConnectedBotChatIsPaused",
+  removeBusinessConnectedBotFromChat: "removeBusinessConnectedBotFromChat",
+  getBusinessChatLinks: "getBusinessChatLinks",
+  createBusinessChatLink: "createBusinessChatLink",
+  editBusinessChatLink: "editBusinessChatLink",
+  deleteBusinessChatLink: "deleteBusinessChatLink",
+  getBusinessChatLinkInfo: "getBusinessChatLinkInfo",
   getUserLink: "getUserLink",
   searchUserByToken: "searchUserByToken",
   setCommands: "setCommands",
@@ -556,6 +609,8 @@ export const $Methods = Object.freeze({
   toggleSupergroupJoinToSendMessages: "toggleSupergroupJoinToSendMessages",
   toggleSupergroupJoinByRequest: "toggleSupergroupJoinByRequest",
   toggleSupergroupIsAllHistoryAvailable: "toggleSupergroupIsAllHistoryAvailable",
+  toggleSupergroupCanHaveSponsoredMessages:
+    "toggleSupergroupCanHaveSponsoredMessages",
   toggleSupergroupHasHiddenMembers: "toggleSupergroupHasHiddenMembers",
   toggleSupergroupHasAggressiveAntiSpamEnabled:
     "toggleSupergroupHasAggressiveAntiSpamEnabled",
@@ -566,6 +621,7 @@ export const $Methods = Object.freeze({
   getSupergroupMembers: "getSupergroupMembers",
   closeSecretChat: "closeSecretChat",
   getChatEventLog: "getChatEventLog",
+  getTimeZones: "getTimeZones",
   getPaymentForm: "getPaymentForm",
   validateOrderInfo: "validateOrderInfo",
   sendPaymentForm: "sendPaymentForm",
@@ -574,6 +630,7 @@ export const $Methods = Object.freeze({
   deleteSavedOrderInfo: "deleteSavedOrderInfo",
   deleteSavedCredentials: "deleteSavedCredentials",
   createInvoiceLink: "createInvoiceLink",
+  refundStarPayment: "refundStarPayment",
   getSupportUser: "getSupportUser",
   getBackgroundUrl: "getBackgroundUrl",
   searchBackground: "searchBackground",
@@ -613,6 +670,9 @@ export const $Methods = Object.freeze({
   reportChat: "reportChat",
   reportChatPhoto: "reportChatPhoto",
   reportMessageReactions: "reportMessageReactions",
+  getChatRevenueStatistics: "getChatRevenueStatistics",
+  getChatRevenueWithdrawalUrl: "getChatRevenueWithdrawalUrl",
+  getChatRevenueTransactions: "getChatRevenueTransactions",
   getChatStatistics: "getChatStatistics",
   getMessageStatistics: "getMessageStatistics",
   getMessagePublicForwards: "getMessagePublicForwards",
@@ -638,9 +698,6 @@ export const $Methods = Object.freeze({
   deletePassportElement: "deletePassportElement",
   setPassportElementErrors: "setPassportElementErrors",
   getPreferredCountryLanguage: "getPreferredCountryLanguage",
-  sendPhoneNumberVerificationCode: "sendPhoneNumberVerificationCode",
-  resendPhoneNumberVerificationCode: "resendPhoneNumberVerificationCode",
-  checkPhoneNumberVerificationCode: "checkPhoneNumberVerificationCode",
   sendEmailAddressVerificationCode: "sendEmailAddressVerificationCode",
   resendEmailAddressVerificationCode: "resendEmailAddressVerificationCode",
   checkEmailAddressVerificationCode: "checkEmailAddressVerificationCode",
@@ -648,15 +705,13 @@ export const $Methods = Object.freeze({
   getPassportAuthorizationFormAvailableElements:
     "getPassportAuthorizationFormAvailableElements",
   sendPassportAuthorizationForm: "sendPassportAuthorizationForm",
-  sendPhoneNumberConfirmationCode: "sendPhoneNumberConfirmationCode",
-  resendPhoneNumberConfirmationCode: "resendPhoneNumberConfirmationCode",
-  checkPhoneNumberConfirmationCode: "checkPhoneNumberConfirmationCode",
   setBotUpdatesStatus: "setBotUpdatesStatus",
   uploadStickerFile: "uploadStickerFile",
   getSuggestedStickerSetName: "getSuggestedStickerSetName",
   checkStickerSetName: "checkStickerSetName",
   createNewStickerSet: "createNewStickerSet",
   addStickerToSet: "addStickerToSet",
+  replaceStickerInSet: "replaceStickerInSet",
   setStickerSetThumbnail: "setStickerSetThumbnail",
   setCustomEmojiStickerSetThumbnail: "setCustomEmojiStickerSetThumbnail",
   setStickerSetTitle: "setStickerSetTitle",
@@ -666,6 +721,7 @@ export const $Methods = Object.freeze({
   setStickerEmojis: "setStickerEmojis",
   setStickerKeywords: "setStickerKeywords",
   setStickerMaskPosition: "setStickerMaskPosition",
+  getOwnedStickerSets: "getOwnedStickerSets",
   getMapThumbnailFile: "getMapThumbnailFile",
   getPremiumLimit: "getPremiumLimit",
   getPremiumFeatures: "getPremiumFeatures",
@@ -678,9 +734,12 @@ export const $Methods = Object.freeze({
   applyPremiumGiftCode: "applyPremiumGiftCode",
   launchPrepaidPremiumGiveaway: "launchPrepaidPremiumGiveaway",
   getPremiumGiveawayInfo: "getPremiumGiveawayInfo",
-  canPurchasePremium: "canPurchasePremium",
+  getStarPaymentOptions: "getStarPaymentOptions",
+  getStarTransactions: "getStarTransactions",
+  canPurchaseFromStore: "canPurchaseFromStore",
   assignAppStoreTransaction: "assignAppStoreTransaction",
   assignGooglePlayTransaction: "assignGooglePlayTransaction",
+  getBusinessFeatures: "getBusinessFeatures",
   acceptTermsOfService: "acceptTermsOfService",
   searchStringsByPrefix: "searchStringsByPrefix",
   sendCustomRequest: "sendCustomRequest",
@@ -690,6 +749,7 @@ export const $Methods = Object.freeze({
   getCountryCode: "getCountryCode",
   getPhoneNumberInfo: "getPhoneNumberInfo",
   getPhoneNumberInfoSync: "getPhoneNumberInfoSync",
+  getCollectibleItemInfo: "getCollectibleItemInfo",
   getDeepLinkInfo: "getDeepLinkInfo",
   getApplicationConfig: "getApplicationConfig",
   saveApplicationLogEvent: "saveApplicationLogEvent",
@@ -751,6 +811,7 @@ export const Update$Type = Object.freeze({
   MessageContentOpened: "updateMessageContentOpened",
   MessageMentionRead: "updateMessageMentionRead",
   MessageUnreadReactions: "updateMessageUnreadReactions",
+  MessageFactCheck: "updateMessageFactCheck",
   MessageLiveLocationViewed: "updateMessageLiveLocationViewed",
   NewChat: "updateNewChat",
   ChatTitle: "updateChatTitle",
@@ -759,9 +820,12 @@ export const Update$Type = Object.freeze({
   ChatPermissions: "updateChatPermissions",
   ChatLastMessage: "updateChatLastMessage",
   ChatPosition: "updateChatPosition",
+  ChatAddedToList: "updateChatAddedToList",
+  ChatRemovedFromList: "updateChatRemovedFromList",
   ChatReadInbox: "updateChatReadInbox",
   ChatReadOutbox: "updateChatReadOutbox",
   ChatActionBar: "updateChatActionBar",
+  ChatBusinessBotManageBar: "updateChatBusinessBotManageBar",
   ChatAvailableReactions: "updateChatAvailableReactions",
   ChatDraftMessage: "updateChatDraftMessage",
   ChatEmojiStatus: "updateChatEmojiStatus",
@@ -786,8 +850,13 @@ export const Update$Type = Object.freeze({
   ChatOnlineMemberCount: "updateChatOnlineMemberCount",
   SavedMessagesTopic: "updateSavedMessagesTopic",
   SavedMessagesTopicCount: "updateSavedMessagesTopicCount",
+  QuickReplyShortcut: "updateQuickReplyShortcut",
+  QuickReplyShortcutDeleted: "updateQuickReplyShortcutDeleted",
+  QuickReplyShortcuts: "updateQuickReplyShortcuts",
+  QuickReplyShortcutMessages: "updateQuickReplyShortcutMessages",
   ForumTopicInfo: "updateForumTopicInfo",
   ScopeNotificationSettings: "updateScopeNotificationSettings",
+  ReactionNotificationSettings: "updateReactionNotificationSettings",
   Notification: "updateNotification",
   NotificationGroup: "updateNotificationGroup",
   ActiveNotifications: "updateActiveNotifications",
@@ -810,6 +879,7 @@ export const Update$Type = Object.freeze({
   FileAddedToDownloads: "updateFileAddedToDownloads",
   FileDownload: "updateFileDownload",
   FileRemovedFromDownloads: "updateFileRemovedFromDownloads",
+  ApplicationVerificationRequired: "updateApplicationVerificationRequired",
   Call: "updateCall",
   GroupCall: "updateGroupCall",
   GroupCallParticipant: "updateGroupCallParticipant",
@@ -844,15 +914,23 @@ export const Update$Type = Object.freeze({
   AttachmentMenuBots: "updateAttachmentMenuBots",
   WebAppMessageSent: "updateWebAppMessageSent",
   ActiveEmojiReactions: "updateActiveEmojiReactions",
+  AvailableMessageEffects: "updateAvailableMessageEffects",
   DefaultReactionType: "updateDefaultReactionType",
   SavedMessagesTags: "updateSavedMessagesTags",
+  OwnedStarCount: "updateOwnedStarCount",
+  ChatRevenueAmount: "updateChatRevenueAmount",
   SpeechRecognitionTrial: "updateSpeechRecognitionTrial",
   DiceEmojis: "updateDiceEmojis",
   AnimatedEmojiMessageClicked: "updateAnimatedEmojiMessageClicked",
   AnimationSearchParameters: "updateAnimationSearchParameters",
   SuggestedActions: "updateSuggestedActions",
-  AddChatMembersPrivacyForbidden: "updateAddChatMembersPrivacyForbidden",
+  SpeedLimitNotification: "updateSpeedLimitNotification",
+  ContactCloseBirthdays: "updateContactCloseBirthdays",
   AutosaveSettings: "updateAutosaveSettings",
+  BusinessConnection: "updateBusinessConnection",
+  NewBusinessMessage: "updateNewBusinessMessage",
+  BusinessMessageEdited: "updateBusinessMessageEdited",
+  BusinessMessagesDeleted: "updateBusinessMessagesDeleted",
   NewInlineQuery: "updateNewInlineQuery",
   NewChosenInlineResult: "updateNewChosenInlineResult",
   NewCallbackQuery: "updateNewCallbackQuery",
@@ -871,6 +949,15 @@ export const Update$Type = Object.freeze({
 } as const);
 
 export type Update$Type = (typeof Update$Type)[keyof typeof Update$Type];
+
+export const PhoneNumberCodeType$Type = Object.freeze({
+  Change: "phoneNumberCodeTypeChange",
+  Verify: "phoneNumberCodeTypeVerify",
+  ConfirmOwnership: "phoneNumberCodeTypeConfirmOwnership"
+} as const);
+
+export type PhoneNumberCodeType$Type =
+  (typeof PhoneNumberCodeType$Type)[keyof typeof PhoneNumberCodeType$Type];
 
 export const BotCommandScope$Type = Object.freeze({
   Default: "botCommandScopeDefault",
@@ -892,6 +979,24 @@ export const VectorPathCommand$Type = Object.freeze({
 
 export type VectorPathCommand$Type =
   (typeof VectorPathCommand$Type)[keyof typeof VectorPathCommand$Type];
+
+export const ChatRevenueTransactionType$Type = Object.freeze({
+  Earnings: "chatRevenueTransactionTypeEarnings",
+  Withdrawal: "chatRevenueTransactionTypeWithdrawal",
+  Refund: "chatRevenueTransactionTypeRefund"
+} as const);
+
+export type ChatRevenueTransactionType$Type =
+  (typeof ChatRevenueTransactionType$Type)[keyof typeof ChatRevenueTransactionType$Type];
+
+export const ChatRevenueWithdrawalState$Type = Object.freeze({
+  Pending: "chatRevenueWithdrawalStatePending",
+  Completed: "chatRevenueWithdrawalStateCompleted",
+  Failed: "chatRevenueWithdrawalStateFailed"
+} as const);
+
+export type ChatRevenueWithdrawalState$Type =
+  (typeof ChatRevenueWithdrawalState$Type)[keyof typeof ChatRevenueWithdrawalState$Type];
 
 export const ChatStatistics$Type = Object.freeze({
   Supergroup: "chatStatisticsSupergroup",
@@ -944,7 +1049,9 @@ export const SuggestedAction$Type = Object.freeze({
   UpgradePremium: "suggestedActionUpgradePremium",
   RestorePremium: "suggestedActionRestorePremium",
   SubscribeToAnnualPremium: "suggestedActionSubscribeToAnnualPremium",
-  GiftPremiumForChristmas: "suggestedActionGiftPremiumForChristmas"
+  GiftPremiumForChristmas: "suggestedActionGiftPremiumForChristmas",
+  SetBirthdate: "suggestedActionSetBirthdate",
+  ExtendPremium: "suggestedActionExtendPremium"
 } as const);
 
 export type SuggestedAction$Type =
@@ -1051,6 +1158,7 @@ export const InternalLinkType$Type = Object.freeze({
   BotAddToChannel: "internalLinkTypeBotAddToChannel",
   BotStart: "internalLinkTypeBotStart",
   BotStartInGroup: "internalLinkTypeBotStartInGroup",
+  BusinessChat: "internalLinkTypeBusinessChat",
   ChangePhoneNumber: "internalLinkTypeChangePhoneNumber",
   ChatBoost: "internalLinkTypeChatBoost",
   ChatFolderInvite: "internalLinkTypeChatFolderInvite",
@@ -1155,6 +1263,7 @@ export const UserPrivacySetting$Type = Object.freeze({
   ShowLinkInForwardedMessages: "userPrivacySettingShowLinkInForwardedMessages",
   ShowPhoneNumber: "userPrivacySettingShowPhoneNumber",
   ShowBio: "userPrivacySettingShowBio",
+  ShowBirthdate: "userPrivacySettingShowBirthdate",
   AllowChatInvites: "userPrivacySettingAllowChatInvites",
   AllowCalls: "userPrivacySettingAllowCalls",
   AllowPeerToPeerCalls: "userPrivacySettingAllowPeerToPeerCalls",
@@ -1169,6 +1278,7 @@ export type UserPrivacySetting$Type =
 export const UserPrivacySettingRule$Type = Object.freeze({
   AllowAll: "userPrivacySettingRuleAllowAll",
   AllowContacts: "userPrivacySettingRuleAllowContacts",
+  AllowPremiumUsers: "userPrivacySettingRuleAllowPremiumUsers",
   AllowUsers: "userPrivacySettingRuleAllowUsers",
   AllowChatMembers: "userPrivacySettingRuleAllowChatMembers",
   RestrictAll: "userPrivacySettingRuleRestrictAll",
@@ -1379,8 +1489,9 @@ export type DeviceToken$Type =
   (typeof DeviceToken$Type)[keyof typeof DeviceToken$Type];
 
 export const TelegramPaymentPurpose$Type = Object.freeze({
-  ftCodes: "telegramPaymentPurposePremiumGiftCodes",
-  veaway: "telegramPaymentPurposePremiumGiveaway"
+  PremiumGiftCodes: "telegramPaymentPurposePremiumGiftCodes",
+  PremiumGiveaway: "telegramPaymentPurposePremiumGiveaway",
+  Stars: "telegramPaymentPurposeStars"
 } as const);
 
 export type TelegramPaymentPurpose$Type =
@@ -1390,7 +1501,8 @@ export const StorePaymentPurpose$Type = Object.freeze({
   PremiumSubscription: "storePaymentPurposePremiumSubscription",
   GiftedPremium: "storePaymentPurposeGiftedPremium",
   PremiumGiftCodes: "storePaymentPurposePremiumGiftCodes",
-  PremiumGiveaway: "storePaymentPurposePremiumGiveaway"
+  PremiumGiveaway: "storePaymentPurposePremiumGiveaway",
+  Stars: "storePaymentPurposeStars"
 } as const);
 
 export type StorePaymentPurpose$Type =
@@ -1399,6 +1511,7 @@ export type StorePaymentPurpose$Type =
 export const PremiumSource$Type = Object.freeze({
   LimitExceeded: "premiumSourceLimitExceeded",
   Feature: "premiumSourceFeature",
+  BusinessFeature: "premiumSourceBusinessFeature",
   StoryFeature: "premiumSourceStoryFeature",
   Link: "premiumSourceLink",
   Settings: "premiumSourceSettings"
@@ -1419,6 +1532,23 @@ export const PremiumStoryFeature$Type = Object.freeze({
 
 export type PremiumStoryFeature$Type =
   (typeof PremiumStoryFeature$Type)[keyof typeof PremiumStoryFeature$Type];
+
+export const BusinessFeature$Type = Object.freeze({
+  Location: "businessFeatureLocation",
+  OpeningHours: "businessFeatureOpeningHours",
+  QuickReplies: "businessFeatureQuickReplies",
+  GreetingMessage: "businessFeatureGreetingMessage",
+  AwayMessage: "businessFeatureAwayMessage",
+  AccountLinks: "businessFeatureAccountLinks",
+  StartPage: "businessFeatureStartPage",
+  Bots: "businessFeatureBots",
+  EmojiStatus: "businessFeatureEmojiStatus",
+  ChatFolderTags: "businessFeatureChatFolderTags",
+  UpgradedStories: "businessFeatureUpgradedStories"
+} as const);
+
+export type BusinessFeature$Type =
+  (typeof BusinessFeature$Type)[keyof typeof BusinessFeature$Type];
 
 export const PremiumFeature$Type = Object.freeze({
   IncreasedLimits: "premiumFeatureIncreasedLimits",
@@ -1442,7 +1572,8 @@ export const PremiumFeature$Type = Object.freeze({
   BackgroundForBoth: "premiumFeatureBackgroundForBoth",
   SavedMessagesTags: "premiumFeatureSavedMessagesTags",
   MessagePrivacy: "premiumFeatureMessagePrivacy",
-  LastSeenTimes: "premiumFeatureLastSeenTimes"
+  LastSeenTimes: "premiumFeatureLastSeenTimes",
+  Business: "premiumFeatureBusiness"
 } as const);
 
 export type PremiumFeature$Type =
@@ -1690,6 +1821,14 @@ export const CallDiscardReason$Type = Object.freeze({
 export type CallDiscardReason$Type =
   (typeof CallDiscardReason$Type)[keyof typeof CallDiscardReason$Type];
 
+export const ResendCodeReason$Type = Object.freeze({
+  UserRequest: "resendCodeReasonUserRequest",
+  VerificationFailed: "resendCodeReasonVerificationFailed"
+} as const);
+
+export type ResendCodeReason$Type =
+  (typeof ResendCodeReason$Type)[keyof typeof ResendCodeReason$Type];
+
 export const ChatBoostSource$Type = Object.freeze({
   GiftCode: "chatBoostSourceGiftCode",
   Giveaway: "chatBoostSourceGiveaway",
@@ -1771,12 +1910,21 @@ export type StoryAreaType$Type =
 
 export const EmojiCategoryType$Type = Object.freeze({
   Default: "emojiCategoryTypeDefault",
+  RegularStickers: "emojiCategoryTypeRegularStickers",
   EmojiStatus: "emojiCategoryTypeEmojiStatus",
   ChatPhoto: "emojiCategoryTypeChatPhoto"
 } as const);
 
 export type EmojiCategoryType$Type =
   (typeof EmojiCategoryType$Type)[keyof typeof EmojiCategoryType$Type];
+
+export const EmojiCategorySource$Type = Object.freeze({
+  Search: "emojiCategorySourceSearch",
+  Premium: "emojiCategorySourcePremium"
+} as const);
+
+export type EmojiCategorySource$Type =
+  (typeof EmojiCategorySource$Type)[keyof typeof EmojiCategorySource$Type];
 
 export const UserStatus$Type = Object.freeze({
   Empty: "userStatusEmpty",
@@ -1890,6 +2038,7 @@ export const TextEntityType$Type = Object.freeze({
   Pre: "textEntityTypePre",
   PreCode: "textEntityTypePreCode",
   BlockQuote: "textEntityTypeBlockQuote",
+  ExpandableBlockQuote: "textEntityTypeExpandableBlockQuote",
   TextUrl: "textEntityTypeTextUrl",
   MentionName: "textEntityTypeMentionName",
   CustomEmoji: "textEntityTypeCustomEmoji",
@@ -2080,6 +2229,22 @@ export const InputInvoice$Type = Object.freeze({
 export type InputInvoice$Type =
   (typeof InputInvoice$Type)[keyof typeof InputInvoice$Type];
 
+export const PaymentReceiptType$Type = Object.freeze({
+  Regular: "paymentReceiptTypeRegular",
+  Stars: "paymentReceiptTypeStars"
+} as const);
+
+export type PaymentReceiptType$Type =
+  (typeof PaymentReceiptType$Type)[keyof typeof PaymentReceiptType$Type];
+
+export const PaymentFormType$Type = Object.freeze({
+  Regular: "paymentFormTypeRegular",
+  Stars: "paymentFormTypeStars"
+} as const);
+
+export type PaymentFormType$Type =
+  (typeof PaymentFormType$Type)[keyof typeof PaymentFormType$Type];
+
 export const PaymentProvider$Type = Object.freeze({
   SmartGlocal: "paymentProviderSmartGlocal",
   Stripe: "paymentProviderStripe",
@@ -2098,6 +2263,14 @@ export const InputCredentials$Type = Object.freeze({
 
 export type InputCredentials$Type =
   (typeof InputCredentials$Type)[keyof typeof InputCredentials$Type];
+
+export const CollectibleItemType$Type = Object.freeze({
+  Username: "collectibleItemTypeUsername",
+  PhoneNumber: "collectibleItemTypePhoneNumber"
+} as const);
+
+export type CollectibleItemType$Type =
+  (typeof CollectibleItemType$Type)[keyof typeof CollectibleItemType$Type];
 
 export const PageBlock$Type = Object.freeze({
   Title: "pageBlockTitle",
@@ -2281,6 +2454,15 @@ export const ChatType$Type = Object.freeze({
 
 export type ChatType$Type = (typeof ChatType$Type)[keyof typeof ChatType$Type];
 
+export const ReactionNotificationSource$Type = Object.freeze({
+  None: "reactionNotificationSourceNone",
+  Contacts: "reactionNotificationSourceContacts",
+  All: "reactionNotificationSourceAll"
+} as const);
+
+export type ReactionNotificationSource$Type =
+  (typeof ReactionNotificationSource$Type)[keyof typeof ReactionNotificationSource$Type];
+
 export const NotificationSettingsScope$Type = Object.freeze({
   PrivateChats: "notificationSettingsScopePrivateChats",
   GroupChats: "notificationSettingsScopeGroupChats",
@@ -2290,16 +2472,16 @@ export const NotificationSettingsScope$Type = Object.freeze({
 export type NotificationSettingsScope$Type =
   (typeof NotificationSettingsScope$Type)[keyof typeof NotificationSettingsScope$Type];
 
-export const MessageSponsorType$Type = Object.freeze({
-  Bot: "messageSponsorTypeBot",
-  WebApp: "messageSponsorTypeWebApp",
-  PublicChannel: "messageSponsorTypePublicChannel",
-  PrivateChannel: "messageSponsorTypePrivateChannel",
-  Website: "messageSponsorTypeWebsite"
+export const ReportChatSponsoredMessageResult$Type = Object.freeze({
+  Ok: "reportChatSponsoredMessageResultOk",
+  Failed: "reportChatSponsoredMessageResultFailed",
+  OptionRequired: "reportChatSponsoredMessageResultOptionRequired",
+  AdsHidden: "reportChatSponsoredMessageResultAdsHidden",
+  PremiumRequired: "reportChatSponsoredMessageResultPremiumRequired"
 } as const);
 
-export type MessageSponsorType$Type =
-  (typeof MessageSponsorType$Type)[keyof typeof MessageSponsorType$Type];
+export type ReportChatSponsoredMessageResult$Type =
+  (typeof ReportChatSponsoredMessageResult$Type)[keyof typeof ReportChatSponsoredMessageResult$Type];
 
 export const MessageSource$Type = Object.freeze({
   ChatHistory: "messageSourceChatHistory",
@@ -2340,6 +2522,14 @@ export const MessageSendingState$Type = Object.freeze({
 
 export type MessageSendingState$Type =
   (typeof MessageSendingState$Type)[keyof typeof MessageSendingState$Type];
+
+export const MessageEffectType$Type = Object.freeze({
+  EmojiReaction: "messageEffectTypeEmojiReaction",
+  PremiumSticker: "messageEffectTypePremiumSticker"
+} as const);
+
+export type MessageEffectType$Type =
+  (typeof MessageEffectType$Type)[keyof typeof MessageEffectType$Type];
 
 export const ReactionType$Type = Object.freeze({
   Emoji: "reactionTypeEmoji",
@@ -2454,6 +2644,26 @@ export const PremiumGiveawayParticipantStatus$Type = Object.freeze({
 export type PremiumGiveawayParticipantStatus$Type =
   (typeof PremiumGiveawayParticipantStatus$Type)[keyof typeof PremiumGiveawayParticipantStatus$Type];
 
+export const StarTransactionSource$Type = Object.freeze({
+  Telegram: "starTransactionSourceTelegram",
+  AppStore: "starTransactionSourceAppStore",
+  GooglePlay: "starTransactionSourceGooglePlay",
+  Fragment: "starTransactionSourceFragment",
+  User: "starTransactionSourceUser",
+  Unsupported: "starTransactionSourceUnsupported"
+} as const);
+
+export type StarTransactionSource$Type =
+  (typeof StarTransactionSource$Type)[keyof typeof StarTransactionSource$Type];
+
+export const StarTransactionDirection$Type = Object.freeze({
+  Incoming: "starTransactionDirectionIncoming",
+  Outgoing: "starTransactionDirectionOutgoing"
+} as const);
+
+export type StarTransactionDirection$Type =
+  (typeof StarTransactionDirection$Type)[keyof typeof StarTransactionDirection$Type];
+
 export const InputChatPhoto$Type = Object.freeze({
   Previous: "inputChatPhotoPrevious",
   Static: "inputChatPhotoStatic",
@@ -2471,6 +2681,15 @@ export const ChatPhotoStickerType$Type = Object.freeze({
 
 export type ChatPhotoStickerType$Type =
   (typeof ChatPhotoStickerType$Type)[keyof typeof ChatPhotoStickerType$Type];
+
+export const BusinessAwayMessageSchedule$Type = Object.freeze({
+  Always: "businessAwayMessageScheduleAlways",
+  OutsideOfOpeningHours: "businessAwayMessageScheduleOutsideOfOpeningHours",
+  Custom: "businessAwayMessageScheduleCustom"
+} as const);
+
+export type BusinessAwayMessageSchedule$Type =
+  (typeof BusinessAwayMessageSchedule$Type)[keyof typeof BusinessAwayMessageSchedule$Type];
 
 export const UserType$Type = Object.freeze({
   Regular: "userTypeRegular",
@@ -2584,6 +2803,8 @@ export type EmailAddressAuthentication$Type =
 export const AuthenticationCodeType$Type = Object.freeze({
   TelegramMessage: "authenticationCodeTypeTelegramMessage",
   Sms: "authenticationCodeTypeSms",
+  SmsWord: "authenticationCodeTypeSmsWord",
+  SmsPhrase: "authenticationCodeTypeSmsPhrase",
   Call: "authenticationCodeTypeCall",
   FlashCall: "authenticationCodeTypeFlashCall",
   MissedCall: "authenticationCodeTypeMissedCall",
@@ -2659,7 +2880,7 @@ export type ok$Input = {
 };
 
 /**
- * An authentication code is delivered via a private Telegram message, which can be viewed from another active session
+ * A digit-only authentication code is delivered via a private Telegram message, which can be viewed from another active session
  */
 export type authenticationCodeTypeTelegramMessage = {
   _: "authenticationCodeTypeTelegramMessage";
@@ -2674,7 +2895,7 @@ export type authenticationCodeTypeTelegramMessage = {
 /**
  * Version of {@link authenticationCodeTypeTelegramMessage} for method parameters.
  *
- * An authentication code is delivered via a private Telegram message, which can be viewed from another active session
+ * A digit-only authentication code is delivered via a private Telegram message, which can be viewed from another active session
  */
 export type authenticationCodeTypeTelegramMessage$Input = {
   readonly _: "authenticationCodeTypeTelegramMessage";
@@ -2687,7 +2908,7 @@ export type authenticationCodeTypeTelegramMessage$Input = {
 };
 
 /**
- * An authentication code is delivered via an SMS message to the specified phone number; applications may not receive this type of code
+ * A digit-only authentication code is delivered via an SMS message to the specified phone number; non-official applications may not receive this type of code
  */
 export type authenticationCodeTypeSms = {
   _: "authenticationCodeTypeSms";
@@ -2702,7 +2923,7 @@ export type authenticationCodeTypeSms = {
 /**
  * Version of {@link authenticationCodeTypeSms} for method parameters.
  *
- * An authentication code is delivered via an SMS message to the specified phone number; applications may not receive this type of code
+ * A digit-only authentication code is delivered via an SMS message to the specified phone number; non-official applications may not receive this type of code
  */
 export type authenticationCodeTypeSms$Input = {
   readonly _: "authenticationCodeTypeSms";
@@ -2715,7 +2936,63 @@ export type authenticationCodeTypeSms$Input = {
 };
 
 /**
- * An authentication code is delivered via a phone call to the specified phone number
+ * An authentication code is a word delivered via an SMS message to the specified phone number; non-official applications may not receive this type of code
+ */
+export type authenticationCodeTypeSmsWord = {
+  _: "authenticationCodeTypeSmsWord";
+
+  /**
+   * The first letters of the word if known
+   * @type {string} {@link string}
+   */
+  first_letter: string;
+};
+
+/**
+ * Version of {@link authenticationCodeTypeSmsWord} for method parameters.
+ *
+ * An authentication code is a word delivered via an SMS message to the specified phone number; non-official applications may not receive this type of code
+ */
+export type authenticationCodeTypeSmsWord$Input = {
+  readonly _: "authenticationCodeTypeSmsWord";
+
+  /**
+   * The first letters of the word if known
+   * @type {string} {@link string}
+   */
+  readonly first_letter?: string;
+};
+
+/**
+ * An authentication code is a phrase from multiple words delivered via an SMS message to the specified phone number; non-official applications may not receive this type of code
+ */
+export type authenticationCodeTypeSmsPhrase = {
+  _: "authenticationCodeTypeSmsPhrase";
+
+  /**
+   * The first word of the phrase if known
+   * @type {string} {@link string}
+   */
+  first_word: string;
+};
+
+/**
+ * Version of {@link authenticationCodeTypeSmsPhrase} for method parameters.
+ *
+ * An authentication code is a phrase from multiple words delivered via an SMS message to the specified phone number; non-official applications may not receive this type of code
+ */
+export type authenticationCodeTypeSmsPhrase$Input = {
+  readonly _: "authenticationCodeTypeSmsPhrase";
+
+  /**
+   * The first word of the phrase if known
+   * @type {string} {@link string}
+   */
+  readonly first_word?: string;
+};
+
+/**
+ * A digit-only authentication code is delivered via a phone call to the specified phone number
  */
 export type authenticationCodeTypeCall = {
   _: "authenticationCodeTypeCall";
@@ -2730,7 +3007,7 @@ export type authenticationCodeTypeCall = {
 /**
  * Version of {@link authenticationCodeTypeCall} for method parameters.
  *
- * An authentication code is delivered via a phone call to the specified phone number
+ * A digit-only authentication code is delivered via a phone call to the specified phone number
  */
 export type authenticationCodeTypeCall$Input = {
   readonly _: "authenticationCodeTypeCall";
@@ -2811,7 +3088,7 @@ export type authenticationCodeTypeMissedCall$Input = {
 };
 
 /**
- * An authentication code is delivered to https://fragment.com. The user must be logged in there via a wallet owning the phone number's NFT
+ * A digit-only authentication code is delivered to https://fragment.com. The user must be logged in there via a wallet owning the phone number's NFT
  */
 export type authenticationCodeTypeFragment = {
   _: "authenticationCodeTypeFragment";
@@ -2832,7 +3109,7 @@ export type authenticationCodeTypeFragment = {
 /**
  * Version of {@link authenticationCodeTypeFragment} for method parameters.
  *
- * An authentication code is delivered to https://fragment.com. The user must be logged in there via a wallet owning the phone number's NFT
+ * A digit-only authentication code is delivered to https://fragment.com. The user must be logged in there via a wallet owning the phone number's NFT
  */
 export type authenticationCodeTypeFragment$Input = {
   readonly _: "authenticationCodeTypeFragment";
@@ -2851,13 +3128,19 @@ export type authenticationCodeTypeFragment$Input = {
 };
 
 /**
- * An authentication code is delivered via Firebase Authentication to the official Android application
+ * A digit-only authentication code is delivered via Firebase Authentication to the official Android application
  */
 export type authenticationCodeTypeFirebaseAndroid = {
   _: "authenticationCodeTypeFirebaseAndroid";
 
   /**
-   * Nonce to pass to the SafetyNet Attestation API
+   * True, if Play Integrity API must be used for device verification. Otherwise, SafetyNet Attestation API must be used
+   * @type {Bool} {@link Bool}
+   */
+  use_play_integrity: Bool;
+
+  /**
+   * Nonce to pass to the Play Integrity API or the SafetyNet Attestation API
    * @type {bytes} {@link bytes}
    */
   nonce: bytes;
@@ -2872,13 +3155,19 @@ export type authenticationCodeTypeFirebaseAndroid = {
 /**
  * Version of {@link authenticationCodeTypeFirebaseAndroid} for method parameters.
  *
- * An authentication code is delivered via Firebase Authentication to the official Android application
+ * A digit-only authentication code is delivered via Firebase Authentication to the official Android application
  */
 export type authenticationCodeTypeFirebaseAndroid$Input = {
   readonly _: "authenticationCodeTypeFirebaseAndroid";
 
   /**
-   * Nonce to pass to the SafetyNet Attestation API
+   * True, if Play Integrity API must be used for device verification. Otherwise, SafetyNet Attestation API must be used
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_play_integrity?: Bool$Input;
+
+  /**
+   * Nonce to pass to the Play Integrity API or the SafetyNet Attestation API
    * @type {bytes} {@link bytes}
    */
   readonly nonce?: bytes$Input;
@@ -2891,7 +3180,7 @@ export type authenticationCodeTypeFirebaseAndroid$Input = {
 };
 
 /**
- * An authentication code is delivered via Firebase Authentication to the official iOS application
+ * A digit-only authentication code is delivered via Firebase Authentication to the official iOS application
  */
 export type authenticationCodeTypeFirebaseIos = {
   _: "authenticationCodeTypeFirebaseIos";
@@ -2918,7 +3207,7 @@ export type authenticationCodeTypeFirebaseIos = {
 /**
  * Version of {@link authenticationCodeTypeFirebaseIos} for method parameters.
  *
- * An authentication code is delivered via Firebase Authentication to the official iOS application
+ * A digit-only authentication code is delivered via Firebase Authentication to the official iOS application
  */
 export type authenticationCodeTypeFirebaseIos$Input = {
   readonly _: "authenticationCodeTypeFirebaseIos";
@@ -4495,7 +4784,7 @@ export type thumbnailFormatPng$Input = {
 };
 
 /**
- * The thumbnail is in TGS format. It will be used only for TGS sticker sets
+ * The thumbnail is in TGS format. It will be used only for sticker sets
  */
 export type thumbnailFormatTgs = {
   _: "thumbnailFormatTgs";
@@ -4504,14 +4793,14 @@ export type thumbnailFormatTgs = {
 /**
  * Version of {@link thumbnailFormatTgs} for method parameters.
  *
- * The thumbnail is in TGS format. It will be used only for TGS sticker sets
+ * The thumbnail is in TGS format. It will be used only for sticker sets
  */
 export type thumbnailFormatTgs$Input = {
   readonly _: "thumbnailFormatTgs";
 };
 
 /**
- * The thumbnail is in WEBM format. It will be used only for WEBM sticker sets
+ * The thumbnail is in WEBM format. It will be used only for sticker sets
  */
 export type thumbnailFormatWebm = {
   _: "thumbnailFormatWebm";
@@ -4520,14 +4809,14 @@ export type thumbnailFormatWebm = {
 /**
  * Version of {@link thumbnailFormatWebm} for method parameters.
  *
- * The thumbnail is in WEBM format. It will be used only for WEBM sticker sets
+ * The thumbnail is in WEBM format. It will be used only for sticker sets
  */
 export type thumbnailFormatWebm$Input = {
   readonly _: "thumbnailFormatWebm";
 };
 
 /**
- * The thumbnail is in WEBP format. It will be used only for some stickers
+ * The thumbnail is in WEBP format. It will be used only for some stickers and sticker sets
  */
 export type thumbnailFormatWebp = {
   _: "thumbnailFormatWebp";
@@ -4536,7 +4825,7 @@ export type thumbnailFormatWebp = {
 /**
  * Version of {@link thumbnailFormatWebp} for method parameters.
  *
- * The thumbnail is in WEBP format. It will be used only for some stickers
+ * The thumbnail is in WEBP format. It will be used only for some stickers and sticker sets
  */
 export type thumbnailFormatWebp$Input = {
   readonly _: "thumbnailFormatWebp";
@@ -4961,10 +5250,10 @@ export type pollOption = {
   _: "pollOption";
 
   /**
-   * Option text; 1-100 characters
-   * @type {string} {@link string}
+   * Option text; 1-100 characters. Only custom emoji entities are allowed
+   * @type {formattedText} {@link formattedText}
    */
-  text: string;
+  text: formattedText;
 
   /**
    * Number of voters for this option, available only for closed or voted polls
@@ -5000,10 +5289,10 @@ export type pollOption$Input = {
   readonly _: "pollOption";
 
   /**
-   * Option text; 1-100 characters
-   * @type {string} {@link string}
+   * Option text; 1-100 characters. Only custom emoji entities are allowed
+   * @type {formattedText} {@link formattedText}
    */
-  readonly text?: string;
+  readonly text?: formattedText$Input;
 
   /**
    * Number of voters for this option, available only for closed or voted polls
@@ -5847,7 +6136,7 @@ export type videoNote$Input = {
 };
 
 /**
- * Describes a voice note. The voice note must be encoded with the Opus codec, and stored inside an OGG container. Voice notes can have only a single audio channel
+ * Describes a voice note
  */
 export type voiceNote = {
   _: "voiceNote";
@@ -5865,7 +6154,7 @@ export type voiceNote = {
   waveform: bytes;
 
   /**
-   * MIME type of the file; as defined by the sender
+   * MIME type of the file; as defined by the sender. Usually, one of "audio/ogg" for Opus in an OGG container, "audio/mpeg" for an MP3 audio, or "audio/mp4" for an M4A audio
    * @type {string} {@link string}
    */
   mime_type: string;
@@ -5886,7 +6175,7 @@ export type voiceNote = {
 /**
  * Version of {@link voiceNote} for method parameters.
  *
- * Describes a voice note. The voice note must be encoded with the Opus codec, and stored inside an OGG container. Voice notes can have only a single audio channel
+ * Describes a voice note
  */
 export type voiceNote$Input = {
   readonly _: "voiceNote";
@@ -5904,7 +6193,7 @@ export type voiceNote$Input = {
   readonly waveform?: bytes$Input;
 
   /**
-   * MIME type of the file; as defined by the sender
+   * MIME type of the file; as defined by the sender. Usually, one of "audio/ogg" for Opus in an OGG container, "audio/mpeg" for an MP3 audio, or "audio/mp4" for an M4A audio
    * @type {string} {@link string}
    */
   readonly mime_type?: string;
@@ -5929,7 +6218,7 @@ export type animatedEmoji = {
   _: "animatedEmoji";
 
   /**
-   * Sticker for the emoji; may be null if yet unknown for a custom emoji. If the sticker is a custom emoji, it can have arbitrary format different from stickerFormatTgs
+   * Sticker for the emoji; may be null if yet unknown for a custom emoji. If the sticker is a custom emoji, then it can have arbitrary format
    * @type {sticker} {@link sticker}
    */
   sticker: sticker | null;
@@ -5968,7 +6257,7 @@ export type animatedEmoji$Input = {
   readonly _: "animatedEmoji";
 
   /**
-   * Sticker for the emoji; may be null if yet unknown for a custom emoji. If the sticker is a custom emoji, it can have arbitrary format different from stickerFormatTgs
+   * Sticker for the emoji; may be null if yet unknown for a custom emoji. If the sticker is a custom emoji, then it can have arbitrary format
    * @type {sticker} {@link sticker}
    */
   readonly sticker?: sticker$Input | null;
@@ -6403,10 +6692,10 @@ export type poll = {
   id: int64;
 
   /**
-   * Poll question; 1-300 characters
-   * @type {string} {@link string}
+   * Poll question; 1-300 characters. Only custom emoji entities are allowed
+   * @type {formattedText} {@link formattedText}
    */
-  question: string;
+  question: formattedText;
 
   /**
    * List of poll answer options
@@ -6472,10 +6761,10 @@ export type poll$Input = {
   readonly id?: int64$Input;
 
   /**
-   * Poll question; 1-300 characters
-   * @type {string} {@link string}
+   * Poll question; 1-300 characters. Only custom emoji entities are allowed
+   * @type {formattedText} {@link formattedText}
    */
-  readonly question?: string;
+  readonly question?: formattedText$Input;
 
   /**
    * List of poll answer options
@@ -6921,6 +7210,12 @@ export type userTypeBot = {
   need_location: Bool;
 
   /**
+   * True, if the bot supports connection to Telegram Business accounts
+   * @type {Bool} {@link Bool}
+   */
+  can_connect_to_business: Bool;
+
+  /**
    * True, if the bot can be added to attachment or side menu
    * @type {Bool} {@link Bool}
    */
@@ -6970,6 +7265,12 @@ export type userTypeBot$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly need_location?: Bool$Input;
+
+  /**
+   * True, if the bot supports connection to Telegram Business accounts
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_connect_to_business?: Bool$Input;
 
   /**
    * True, if the bot can be added to attachment or side menu
@@ -7152,6 +7453,950 @@ export type chatLocation$Input = {
    * @type {string} {@link string}
    */
   readonly address?: string;
+};
+
+/**
+ * Represents a birthdate of a user
+ */
+export type birthdate = {
+  _: "birthdate";
+
+  /**
+   * Day of the month; 1-31
+   * @type {int32} {@link int32}
+   */
+  day: int32;
+
+  /**
+   * Month of the year; 1-12
+   * @type {int32} {@link int32}
+   */
+  month: int32;
+
+  /**
+   * Birth year; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  year: int32;
+};
+
+/**
+ * Version of {@link birthdate} for method parameters.
+ *
+ * Represents a birthdate of a user
+ */
+export type birthdate$Input = {
+  readonly _: "birthdate";
+
+  /**
+   * Day of the month; 1-31
+   * @type {int32} {@link int32}
+   */
+  readonly day?: int32;
+
+  /**
+   * Month of the year; 1-12
+   * @type {int32} {@link int32}
+   */
+  readonly month?: int32;
+
+  /**
+   * Birth year; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly year?: int32;
+};
+
+/**
+ * Describes a user that had or will have a birthday soon
+ */
+export type closeBirthdayUser = {
+  _: "closeBirthdayUser";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Birthdate of the user
+   * @type {birthdate} {@link birthdate}
+   */
+  birthdate: birthdate;
+};
+
+/**
+ * Version of {@link closeBirthdayUser} for method parameters.
+ *
+ * Describes a user that had or will have a birthday soon
+ */
+export type closeBirthdayUser$Input = {
+  readonly _: "closeBirthdayUser";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Birthdate of the user
+   * @type {birthdate} {@link birthdate}
+   */
+  readonly birthdate?: birthdate$Input;
+};
+
+/**
+ * Send away messages always
+ */
+export type businessAwayMessageScheduleAlways = {
+  _: "businessAwayMessageScheduleAlways";
+};
+
+/**
+ * Version of {@link businessAwayMessageScheduleAlways} for method parameters.
+ *
+ * Send away messages always
+ */
+export type businessAwayMessageScheduleAlways$Input = {
+  readonly _: "businessAwayMessageScheduleAlways";
+};
+
+/**
+ * Send away messages outside of the business opening hours
+ */
+export type businessAwayMessageScheduleOutsideOfOpeningHours = {
+  _: "businessAwayMessageScheduleOutsideOfOpeningHours";
+};
+
+/**
+ * Version of {@link businessAwayMessageScheduleOutsideOfOpeningHours} for method parameters.
+ *
+ * Send away messages outside of the business opening hours
+ */
+export type businessAwayMessageScheduleOutsideOfOpeningHours$Input = {
+  readonly _: "businessAwayMessageScheduleOutsideOfOpeningHours";
+};
+
+/**
+ * Send away messages only in the specified time span
+ */
+export type businessAwayMessageScheduleCustom = {
+  _: "businessAwayMessageScheduleCustom";
+
+  /**
+   * Point in time (Unix timestamp) when the away messages will start to be sent
+   * @type {int32} {@link int32}
+   */
+  start_date: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the away messages will stop to be sent
+   * @type {int32} {@link int32}
+   */
+  end_date: int32;
+};
+
+/**
+ * Version of {@link businessAwayMessageScheduleCustom} for method parameters.
+ *
+ * Send away messages only in the specified time span
+ */
+export type businessAwayMessageScheduleCustom$Input = {
+  readonly _: "businessAwayMessageScheduleCustom";
+
+  /**
+   * Point in time (Unix timestamp) when the away messages will start to be sent
+   * @type {int32} {@link int32}
+   */
+  readonly start_date?: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the away messages will stop to be sent
+   * @type {int32} {@link int32}
+   */
+  readonly end_date?: int32;
+};
+
+/**
+ * Represents a location of a business
+ */
+export type businessLocation = {
+  _: "businessLocation";
+
+  /**
+   * The location; may be null if not specified
+   * @type {location} {@link location}
+   */
+  location: location | null;
+
+  /**
+   * Location address; 1-96 characters
+   * @type {string} {@link string}
+   */
+  address: string;
+};
+
+/**
+ * Version of {@link businessLocation} for method parameters.
+ *
+ * Represents a location of a business
+ */
+export type businessLocation$Input = {
+  readonly _: "businessLocation";
+
+  /**
+   * The location; may be null if not specified
+   * @type {location} {@link location}
+   */
+  readonly location?: location$Input | null;
+
+  /**
+   * Location address; 1-96 characters
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+};
+
+/**
+ * Describes private chats chosen for automatic interaction with a business
+ */
+export type businessRecipients = {
+  _: "businessRecipients";
+
+  /**
+   * Identifiers of selected private chats
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  chat_ids: vector<int53>;
+
+  /**
+   * Identifiers of private chats that are always excluded; for businessConnectedBot only
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  excluded_chat_ids: vector<int53>;
+
+  /**
+   * True, if all existing private chats are selected
+   * @type {Bool} {@link Bool}
+   */
+  select_existing_chats: Bool;
+
+  /**
+   * True, if all new private chats are selected
+   * @type {Bool} {@link Bool}
+   */
+  select_new_chats: Bool;
+
+  /**
+   * True, if all private chats with contacts are selected
+   * @type {Bool} {@link Bool}
+   */
+  select_contacts: Bool;
+
+  /**
+   * True, if all private chats with non-contacts are selected
+   * @type {Bool} {@link Bool}
+   */
+  select_non_contacts: Bool;
+
+  /**
+   * If true, then all private chats except the selected are chosen. Otherwise, only the selected chats are chosen
+   * @type {Bool} {@link Bool}
+   */
+  exclude_selected: Bool;
+};
+
+/**
+ * Version of {@link businessRecipients} for method parameters.
+ *
+ * Describes private chats chosen for automatic interaction with a business
+ */
+export type businessRecipients$Input = {
+  readonly _: "businessRecipients";
+
+  /**
+   * Identifiers of selected private chats
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly chat_ids?: vector$Input<int53>;
+
+  /**
+   * Identifiers of private chats that are always excluded; for businessConnectedBot only
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly excluded_chat_ids?: vector$Input<int53>;
+
+  /**
+   * True, if all existing private chats are selected
+   * @type {Bool} {@link Bool}
+   */
+  readonly select_existing_chats?: Bool$Input;
+
+  /**
+   * True, if all new private chats are selected
+   * @type {Bool} {@link Bool}
+   */
+  readonly select_new_chats?: Bool$Input;
+
+  /**
+   * True, if all private chats with contacts are selected
+   * @type {Bool} {@link Bool}
+   */
+  readonly select_contacts?: Bool$Input;
+
+  /**
+   * True, if all private chats with non-contacts are selected
+   * @type {Bool} {@link Bool}
+   */
+  readonly select_non_contacts?: Bool$Input;
+
+  /**
+   * If true, then all private chats except the selected are chosen. Otherwise, only the selected chats are chosen
+   * @type {Bool} {@link Bool}
+   */
+  readonly exclude_selected?: Bool$Input;
+};
+
+/**
+ * Describes settings for messages that are automatically sent by a Telegram Business account when it is away
+ */
+export type businessAwayMessageSettings = {
+  _: "businessAwayMessageSettings";
+
+  /**
+   * Unique quick reply shortcut identifier for the away messages
+   * @type {int32} {@link int32}
+   */
+  shortcut_id: int32;
+
+  /**
+   * Chosen recipients of the away messages
+   * @type {businessRecipients} {@link businessRecipients}
+   */
+  recipients: businessRecipients;
+
+  /**
+   * Settings used to check whether the current user is away
+   * @type {BusinessAwayMessageSchedule} {@link BusinessAwayMessageSchedule}
+   */
+  schedule: BusinessAwayMessageSchedule;
+
+  /**
+   * True, if the messages must not be sent if the account was online in the last 10 minutes
+   * @type {Bool} {@link Bool}
+   */
+  offline_only: Bool;
+};
+
+/**
+ * Version of {@link businessAwayMessageSettings} for method parameters.
+ *
+ * Describes settings for messages that are automatically sent by a Telegram Business account when it is away
+ */
+export type businessAwayMessageSettings$Input = {
+  readonly _: "businessAwayMessageSettings";
+
+  /**
+   * Unique quick reply shortcut identifier for the away messages
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * Chosen recipients of the away messages
+   * @type {businessRecipients} {@link businessRecipients}
+   */
+  readonly recipients?: businessRecipients$Input;
+
+  /**
+   * Settings used to check whether the current user is away
+   * @type {BusinessAwayMessageSchedule} {@link BusinessAwayMessageSchedule}
+   */
+  readonly schedule?: BusinessAwayMessageSchedule$Input;
+
+  /**
+   * True, if the messages must not be sent if the account was online in the last 10 minutes
+   * @type {Bool} {@link Bool}
+   */
+  readonly offline_only?: Bool$Input;
+};
+
+/**
+ * Describes settings for greeting messages that are automatically sent by a Telegram Business account as response to incoming messages in an inactive private chat
+ */
+export type businessGreetingMessageSettings = {
+  _: "businessGreetingMessageSettings";
+
+  /**
+   * Unique quick reply shortcut identifier for the greeting messages
+   * @type {int32} {@link int32}
+   */
+  shortcut_id: int32;
+
+  /**
+   * Chosen recipients of the greeting messages
+   * @type {businessRecipients} {@link businessRecipients}
+   */
+  recipients: businessRecipients;
+
+  /**
+   * The number of days after which a chat will be considered as inactive; currently, must be on of 7, 14, 21, or 28
+   * @type {int32} {@link int32}
+   */
+  inactivity_days: int32;
+};
+
+/**
+ * Version of {@link businessGreetingMessageSettings} for method parameters.
+ *
+ * Describes settings for greeting messages that are automatically sent by a Telegram Business account as response to incoming messages in an inactive private chat
+ */
+export type businessGreetingMessageSettings$Input = {
+  readonly _: "businessGreetingMessageSettings";
+
+  /**
+   * Unique quick reply shortcut identifier for the greeting messages
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * Chosen recipients of the greeting messages
+   * @type {businessRecipients} {@link businessRecipients}
+   */
+  readonly recipients?: businessRecipients$Input;
+
+  /**
+   * The number of days after which a chat will be considered as inactive; currently, must be on of 7, 14, 21, or 28
+   * @type {int32} {@link int32}
+   */
+  readonly inactivity_days?: int32;
+};
+
+/**
+ * Describes a bot connected to a business account
+ */
+export type businessConnectedBot = {
+  _: "businessConnectedBot";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  bot_user_id: int53;
+
+  /**
+   * Private chats that will be accessible to the bot
+   * @type {businessRecipients} {@link businessRecipients}
+   */
+  recipients: businessRecipients;
+
+  /**
+   * True, if the bot can send messages to the private chats; false otherwise
+   * @type {Bool} {@link Bool}
+   */
+  can_reply: Bool;
+};
+
+/**
+ * Version of {@link businessConnectedBot} for method parameters.
+ *
+ * Describes a bot connected to a business account
+ */
+export type businessConnectedBot$Input = {
+  readonly _: "businessConnectedBot";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Private chats that will be accessible to the bot
+   * @type {businessRecipients} {@link businessRecipients}
+   */
+  readonly recipients?: businessRecipients$Input;
+
+  /**
+   * True, if the bot can send messages to the private chats; false otherwise
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_reply?: Bool$Input;
+};
+
+/**
+ * Describes settings for a business account start page
+ */
+export type businessStartPage = {
+  _: "businessStartPage";
+
+  /**
+   * Title text of the start page
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Message text of the start page
+   * @type {string} {@link string}
+   */
+  message: string;
+
+  /**
+   * Greeting sticker of the start page; may be null if none
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker | null;
+};
+
+/**
+ * Version of {@link businessStartPage} for method parameters.
+ *
+ * Describes settings for a business account start page
+ */
+export type businessStartPage$Input = {
+  readonly _: "businessStartPage";
+
+  /**
+   * Title text of the start page
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Message text of the start page
+   * @type {string} {@link string}
+   */
+  readonly message?: string;
+
+  /**
+   * Greeting sticker of the start page; may be null if none
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input | null;
+};
+
+/**
+ * Describes settings for a business account start page to set
+ */
+export type inputBusinessStartPage = {
+  _: "inputBusinessStartPage";
+
+  /**
+   * Title text of the start page; 0-getOption("business_start_page_title_length_max") characters
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Message text of the start page; 0-getOption("business_start_page_message_length_max") characters
+   * @type {string} {@link string}
+   */
+  message: string;
+
+  /**
+   * Greeting sticker of the start page; pass null if none. The sticker must belong to a sticker set and must not be a custom emoji
+   * @type {InputFile} {@link InputFile}
+   */
+  sticker: InputFile | null;
+};
+
+/**
+ * Version of {@link inputBusinessStartPage} for method parameters.
+ *
+ * Describes settings for a business account start page to set
+ */
+export type inputBusinessStartPage$Input = {
+  readonly _: "inputBusinessStartPage";
+
+  /**
+   * Title text of the start page; 0-getOption("business_start_page_title_length_max") characters
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Message text of the start page; 0-getOption("business_start_page_message_length_max") characters
+   * @type {string} {@link string}
+   */
+  readonly message?: string;
+
+  /**
+   * Greeting sticker of the start page; pass null if none. The sticker must belong to a sticker set and must not be a custom emoji
+   * @type {InputFile} {@link InputFile}
+   */
+  readonly sticker?: InputFile$Input | null;
+};
+
+/**
+ * Describes an interval of time when the business is open
+ */
+export type businessOpeningHoursInterval = {
+  _: "businessOpeningHoursInterval";
+
+  /**
+   * The minute's sequence number in a week, starting on Monday, marking the start of the time interval during which the business is open; 0-7*24*60
+   * @type {int32} {@link int32}
+   */
+  start_minute: int32;
+
+  /**
+   * The minute's sequence number in a week, starting on Monday, marking the end of the time interval during which the business is open; 1-8*24*60
+   * @type {int32} {@link int32}
+   */
+  end_minute: int32;
+};
+
+/**
+ * Version of {@link businessOpeningHoursInterval} for method parameters.
+ *
+ * Describes an interval of time when the business is open
+ */
+export type businessOpeningHoursInterval$Input = {
+  readonly _: "businessOpeningHoursInterval";
+
+  /**
+   * The minute's sequence number in a week, starting on Monday, marking the start of the time interval during which the business is open; 0-7*24*60
+   * @type {int32} {@link int32}
+   */
+  readonly start_minute?: int32;
+
+  /**
+   * The minute's sequence number in a week, starting on Monday, marking the end of the time interval during which the business is open; 1-8*24*60
+   * @type {int32} {@link int32}
+   */
+  readonly end_minute?: int32;
+};
+
+/**
+ * Describes opening hours of a business
+ */
+export type businessOpeningHours = {
+  _: "businessOpeningHours";
+
+  /**
+   * Unique time zone identifier
+   * @type {string} {@link string}
+   */
+  time_zone_id: string;
+
+  /**
+   * Intervals of the time when the business is open
+   * @type {vector<businessOpeningHoursInterval>} {@link vector<businessOpeningHoursInterval>}
+   */
+  opening_hours: vector<businessOpeningHoursInterval>;
+};
+
+/**
+ * Version of {@link businessOpeningHours} for method parameters.
+ *
+ * Describes opening hours of a business
+ */
+export type businessOpeningHours$Input = {
+  readonly _: "businessOpeningHours";
+
+  /**
+   * Unique time zone identifier
+   * @type {string} {@link string}
+   */
+  readonly time_zone_id?: string;
+
+  /**
+   * Intervals of the time when the business is open
+   * @type {vector<businessOpeningHoursInterval>} {@link vector<businessOpeningHoursInterval>}
+   */
+  readonly opening_hours?: vector$Input<businessOpeningHoursInterval$Input>;
+};
+
+/**
+ * Contains information about a Telegram Business account
+ */
+export type businessInfo = {
+  _: "businessInfo";
+
+  /**
+   * Location of the business; may be null if none
+   * @type {businessLocation} {@link businessLocation}
+   */
+  location: businessLocation | null;
+
+  /**
+   * Opening hours of the business; may be null if none. The hours are guaranteed to be valid and has already been split by week days
+   * @type {businessOpeningHours} {@link businessOpeningHours}
+   */
+  opening_hours: businessOpeningHours | null;
+
+  /**
+   * Opening hours of the business in the local time; may be null if none. The hours are guaranteed to be valid and has already been split by week days.
+   *
+   * - Local time zone identifier will be empty. An updateUserFullInfo update is not triggered when value of this field changes
+   * @type {businessOpeningHours} {@link businessOpeningHours}
+   */
+  local_opening_hours: businessOpeningHours | null;
+
+  /**
+   * Time left before the business will open the next time, in seconds; 0 if unknown. An updateUserFullInfo update is not triggered when value of this field changes
+   * @type {int32} {@link int32}
+   */
+  next_open_in: int32;
+
+  /**
+   * Time left before the business will close the next time, in seconds; 0 if unknown. An updateUserFullInfo update is not triggered when value of this field changes
+   * @type {int32} {@link int32}
+   */
+  next_close_in: int32;
+
+  /**
+   * The greeting message; may be null if none or the Business account is not of the current user
+   * @type {businessGreetingMessageSettings} {@link businessGreetingMessageSettings}
+   */
+  greeting_message_settings: businessGreetingMessageSettings | null;
+
+  /**
+   * The away message; may be null if none or the Business account is not of the current user
+   * @type {businessAwayMessageSettings} {@link businessAwayMessageSettings}
+   */
+  away_message_settings: businessAwayMessageSettings | null;
+
+  /**
+   * Information about start page of the account; may be null if none
+   * @type {businessStartPage} {@link businessStartPage}
+   */
+  start_page: businessStartPage | null;
+};
+
+/**
+ * Version of {@link businessInfo} for method parameters.
+ *
+ * Contains information about a Telegram Business account
+ */
+export type businessInfo$Input = {
+  readonly _: "businessInfo";
+
+  /**
+   * Location of the business; may be null if none
+   * @type {businessLocation} {@link businessLocation}
+   */
+  readonly location?: businessLocation$Input | null;
+
+  /**
+   * Opening hours of the business; may be null if none. The hours are guaranteed to be valid and has already been split by week days
+   * @type {businessOpeningHours} {@link businessOpeningHours}
+   */
+  readonly opening_hours?: businessOpeningHours$Input | null;
+
+  /**
+   * Opening hours of the business in the local time; may be null if none. The hours are guaranteed to be valid and has already been split by week days.
+   *
+   * - Local time zone identifier will be empty. An updateUserFullInfo update is not triggered when value of this field changes
+   * @type {businessOpeningHours} {@link businessOpeningHours}
+   */
+  readonly local_opening_hours?: businessOpeningHours$Input | null;
+
+  /**
+   * Time left before the business will open the next time, in seconds; 0 if unknown. An updateUserFullInfo update is not triggered when value of this field changes
+   * @type {int32} {@link int32}
+   */
+  readonly next_open_in?: int32;
+
+  /**
+   * Time left before the business will close the next time, in seconds; 0 if unknown. An updateUserFullInfo update is not triggered when value of this field changes
+   * @type {int32} {@link int32}
+   */
+  readonly next_close_in?: int32;
+
+  /**
+   * The greeting message; may be null if none or the Business account is not of the current user
+   * @type {businessGreetingMessageSettings} {@link businessGreetingMessageSettings}
+   */
+  readonly greeting_message_settings?: businessGreetingMessageSettings$Input | null;
+
+  /**
+   * The away message; may be null if none or the Business account is not of the current user
+   * @type {businessAwayMessageSettings} {@link businessAwayMessageSettings}
+   */
+  readonly away_message_settings?: businessAwayMessageSettings$Input | null;
+
+  /**
+   * Information about start page of the account; may be null if none
+   * @type {businessStartPage} {@link businessStartPage}
+   */
+  readonly start_page?: businessStartPage$Input | null;
+};
+
+/**
+ * Contains information about a business chat link
+ */
+export type businessChatLink = {
+  _: "businessChatLink";
+
+  /**
+   * The HTTPS link
+   * @type {string} {@link string}
+   */
+  link: string;
+
+  /**
+   * Message draft text that will be added to the input field
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+
+  /**
+   * Link title
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Number of times the link was used
+   * @type {int32} {@link int32}
+   */
+  view_count: int32;
+};
+
+/**
+ * Version of {@link businessChatLink} for method parameters.
+ *
+ * Contains information about a business chat link
+ */
+export type businessChatLink$Input = {
+  readonly _: "businessChatLink";
+
+  /**
+   * The HTTPS link
+   * @type {string} {@link string}
+   */
+  readonly link?: string;
+
+  /**
+   * Message draft text that will be added to the input field
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * Link title
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Number of times the link was used
+   * @type {int32} {@link int32}
+   */
+  readonly view_count?: int32;
+};
+
+/**
+ * Contains a list of business chat links created by the user
+ */
+export type businessChatLinks = {
+  _: "businessChatLinks";
+
+  /**
+   * List of links
+   * @type {vector<businessChatLink>} {@link vector<businessChatLink>}
+   */
+  links: vector<businessChatLink>;
+};
+
+/**
+ * Version of {@link businessChatLinks} for method parameters.
+ *
+ * Contains a list of business chat links created by the user
+ */
+export type businessChatLinks$Input = {
+  readonly _: "businessChatLinks";
+
+  /**
+   * List of links
+   * @type {vector<businessChatLink>} {@link vector<businessChatLink>}
+   */
+  readonly links?: vector$Input<businessChatLink$Input>;
+};
+
+/**
+ * Describes a business chat link to create or edit
+ */
+export type inputBusinessChatLink = {
+  _: "inputBusinessChatLink";
+
+  /**
+   * Message draft text that will be added to the input field
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+
+  /**
+   * Link title
+   * @type {string} {@link string}
+   */
+  title: string;
+};
+
+/**
+ * Version of {@link inputBusinessChatLink} for method parameters.
+ *
+ * Describes a business chat link to create or edit
+ */
+export type inputBusinessChatLink$Input = {
+  readonly _: "inputBusinessChatLink";
+
+  /**
+   * Message draft text that will be added to the input field
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * Link title
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+};
+
+/**
+ * Contains information about a business chat link
+ */
+export type businessChatLinkInfo = {
+  _: "businessChatLinkInfo";
+
+  /**
+   * Identifier of the private chat that created the link
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Message draft text that must be added to the input field
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+};
+
+/**
+ * Version of {@link businessChatLinkInfo} for method parameters.
+ *
+ * Contains information about a business chat link
+ */
+export type businessChatLinkInfo$Input = {
+  readonly _: "businessChatLinkInfo";
+
+  /**
+   * Identifier of the private chat that created the link
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Message draft text that must be added to the input field
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
 };
 
 /**
@@ -7841,7 +9086,7 @@ export type chatAdministratorRights = {
   can_post_stories: Bool;
 
   /**
-   * True, if the administrator can edit stories posted by other users, pin stories and access story archive; applicable to supergroups and channels only
+   * True, if the administrator can edit stories posted by other users, post stories to the chat page, pin chat stories, and access story archive; applicable to supergroups and channels only
    * @type {Bool} {@link Bool}
    */
   can_edit_stories: Bool;
@@ -7940,7 +9185,7 @@ export type chatAdministratorRights$Input = {
   readonly can_post_stories?: Bool$Input;
 
   /**
-   * True, if the administrator can edit stories posted by other users, pin stories and access story archive; applicable to supergroups and channels only
+   * True, if the administrator can edit stories posted by other users, post stories to the chat page, pin chat stories, and access story archive; applicable to supergroups and channels only
    * @type {Bool} {@link Bool}
    */
   readonly can_edit_stories?: Bool$Input;
@@ -7956,6 +9201,58 @@ export type chatAdministratorRights$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_anonymous?: Bool$Input;
+};
+
+/**
+ * Contains information about a product that can be paid with invoice
+ */
+export type productInfo = {
+  _: "productInfo";
+
+  /**
+   * Product title
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Contains information about a product that can be paid with invoice
+   * @type {formattedText} {@link formattedText}
+   */
+  description: formattedText;
+
+  /**
+   * Product photo; may be null
+   * @type {photo} {@link photo}
+   */
+  photo: photo | null;
+};
+
+/**
+ * Version of {@link productInfo} for method parameters.
+ *
+ * Contains information about a product that can be paid with invoice
+ */
+export type productInfo$Input = {
+  readonly _: "productInfo";
+
+  /**
+   * Product title
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Contains information about a product that can be paid with invoice
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly description?: formattedText$Input;
+
+  /**
+   * Product photo; may be null
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input | null;
 };
 
 /**
@@ -8324,6 +9621,390 @@ export type premiumGiftCodeInfo$Input = {
    * @type {int32} {@link int32}
    */
   readonly use_date?: int32;
+};
+
+/**
+ * Describes an option for buying Telegram stars
+ */
+export type starPaymentOption = {
+  _: "starPaymentOption";
+
+  /**
+   * ISO 4217 currency code for the payment
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * The amount to pay, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * Number of stars that will be purchased
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * Identifier of the store product associated with the option; may be empty if none
+   * @type {string} {@link string}
+   */
+  store_product_id: string;
+
+  /**
+   * True, if the option must be shown only in the full list of payment options
+   * @type {Bool} {@link Bool}
+   */
+  is_additional: Bool;
+};
+
+/**
+ * Version of {@link starPaymentOption} for method parameters.
+ *
+ * Describes an option for buying Telegram stars
+ */
+export type starPaymentOption$Input = {
+  readonly _: "starPaymentOption";
+
+  /**
+   * ISO 4217 currency code for the payment
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * The amount to pay, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * Number of stars that will be purchased
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * Identifier of the store product associated with the option; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly store_product_id?: string;
+
+  /**
+   * True, if the option must be shown only in the full list of payment options
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_additional?: Bool$Input;
+};
+
+/**
+ * Contains a list of options for buying Telegram stars
+ */
+export type starPaymentOptions = {
+  _: "starPaymentOptions";
+
+  /**
+   * The list of options
+   * @type {vector<starPaymentOption>} {@link vector<starPaymentOption>}
+   */
+  options: vector<starPaymentOption>;
+};
+
+/**
+ * Version of {@link starPaymentOptions} for method parameters.
+ *
+ * Contains a list of options for buying Telegram stars
+ */
+export type starPaymentOptions$Input = {
+  readonly _: "starPaymentOptions";
+
+  /**
+   * The list of options
+   * @type {vector<starPaymentOption>} {@link vector<starPaymentOption>}
+   */
+  readonly options?: vector$Input<starPaymentOption$Input>;
+};
+
+/**
+ * The transaction is incoming and increases the number of owned Telegram stars
+ */
+export type starTransactionDirectionIncoming = {
+  _: "starTransactionDirectionIncoming";
+};
+
+/**
+ * Version of {@link starTransactionDirectionIncoming} for method parameters.
+ *
+ * The transaction is incoming and increases the number of owned Telegram stars
+ */
+export type starTransactionDirectionIncoming$Input = {
+  readonly _: "starTransactionDirectionIncoming";
+};
+
+/**
+ * The transaction is outgoing and decreases the number of owned Telegram stars
+ */
+export type starTransactionDirectionOutgoing = {
+  _: "starTransactionDirectionOutgoing";
+};
+
+/**
+ * Version of {@link starTransactionDirectionOutgoing} for method parameters.
+ *
+ * The transaction is outgoing and decreases the number of owned Telegram stars
+ */
+export type starTransactionDirectionOutgoing$Input = {
+  readonly _: "starTransactionDirectionOutgoing";
+};
+
+/**
+ * The transaction is a transaction with Telegram through a bot
+ */
+export type starTransactionSourceTelegram = {
+  _: "starTransactionSourceTelegram";
+};
+
+/**
+ * Version of {@link starTransactionSourceTelegram} for method parameters.
+ *
+ * The transaction is a transaction with Telegram through a bot
+ */
+export type starTransactionSourceTelegram$Input = {
+  readonly _: "starTransactionSourceTelegram";
+};
+
+/**
+ * The transaction is a transaction with App Store
+ */
+export type starTransactionSourceAppStore = {
+  _: "starTransactionSourceAppStore";
+};
+
+/**
+ * Version of {@link starTransactionSourceAppStore} for method parameters.
+ *
+ * The transaction is a transaction with App Store
+ */
+export type starTransactionSourceAppStore$Input = {
+  readonly _: "starTransactionSourceAppStore";
+};
+
+/**
+ * The transaction is a transaction with Google Play
+ */
+export type starTransactionSourceGooglePlay = {
+  _: "starTransactionSourceGooglePlay";
+};
+
+/**
+ * Version of {@link starTransactionSourceGooglePlay} for method parameters.
+ *
+ * The transaction is a transaction with Google Play
+ */
+export type starTransactionSourceGooglePlay$Input = {
+  readonly _: "starTransactionSourceGooglePlay";
+};
+
+/**
+ * The transaction is a transaction with Fragment
+ */
+export type starTransactionSourceFragment = {
+  _: "starTransactionSourceFragment";
+};
+
+/**
+ * Version of {@link starTransactionSourceFragment} for method parameters.
+ *
+ * The transaction is a transaction with Fragment
+ */
+export type starTransactionSourceFragment$Input = {
+  readonly _: "starTransactionSourceFragment";
+};
+
+/**
+ * The transaction is a transaction with another user
+ */
+export type starTransactionSourceUser = {
+  _: "starTransactionSourceUser";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Information about the bought product; may be null if none
+   * @type {productInfo} {@link productInfo}
+   */
+  product_info: productInfo | null;
+};
+
+/**
+ * Version of {@link starTransactionSourceUser} for method parameters.
+ *
+ * The transaction is a transaction with another user
+ */
+export type starTransactionSourceUser$Input = {
+  readonly _: "starTransactionSourceUser";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Information about the bought product; may be null if none
+   * @type {productInfo} {@link productInfo}
+   */
+  readonly product_info?: productInfo$Input | null;
+};
+
+/**
+ * The transaction is a transaction with unknown source
+ */
+export type starTransactionSourceUnsupported = {
+  _: "starTransactionSourceUnsupported";
+};
+
+/**
+ * Version of {@link starTransactionSourceUnsupported} for method parameters.
+ *
+ * The transaction is a transaction with unknown source
+ */
+export type starTransactionSourceUnsupported$Input = {
+  readonly _: "starTransactionSourceUnsupported";
+};
+
+/**
+ * Represents a transaction changing the amount of owned Telegram stars
+ */
+export type starTransaction = {
+  _: "starTransaction";
+
+  /**
+   * Unique identifier of the transaction
+   * @type {string} {@link string}
+   */
+  id: string;
+
+  /**
+   * The amount of added owned Telegram stars; negative for outgoing transactions
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * True, if the transaction is a refund of a previous transaction
+   * @type {Bool} {@link Bool}
+   */
+  is_refund: Bool;
+
+  /**
+   * Point in time (Unix timestamp) when the transaction was completed
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+
+  /**
+   * Source of the transaction, or its recipient for outgoing transactions
+   * @type {StarTransactionSource} {@link StarTransactionSource}
+   */
+  source: StarTransactionSource;
+};
+
+/**
+ * Version of {@link starTransaction} for method parameters.
+ *
+ * Represents a transaction changing the amount of owned Telegram stars
+ */
+export type starTransaction$Input = {
+  readonly _: "starTransaction";
+
+  /**
+   * Unique identifier of the transaction
+   * @type {string} {@link string}
+   */
+  readonly id?: string;
+
+  /**
+   * The amount of added owned Telegram stars; negative for outgoing transactions
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * True, if the transaction is a refund of a previous transaction
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_refund?: Bool$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the transaction was completed
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+
+  /**
+   * Source of the transaction, or its recipient for outgoing transactions
+   * @type {StarTransactionSource} {@link StarTransactionSource}
+   */
+  readonly source?: StarTransactionSource$Input;
+};
+
+/**
+ * Represents a list of Telegram star transactions
+ */
+export type starTransactions = {
+  _: "starTransactions";
+
+  /**
+   * The amount of owned Telegram stars
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * List of transactions with Telegram stars
+   * @type {vector<starTransaction>} {@link vector<starTransaction>}
+   */
+  transactions: vector<starTransaction>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  next_offset: string;
+};
+
+/**
+ * Version of {@link starTransactions} for method parameters.
+ *
+ * Represents a list of Telegram star transactions
+ */
+export type starTransactions$Input = {
+  readonly _: "starTransactions";
+
+  /**
+   * The amount of owned Telegram stars
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * List of transactions with Telegram stars
+   * @type {vector<starTransaction>} {@link vector<starTransaction>}
+   */
+  readonly transactions?: vector$Input<starTransaction$Input>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  readonly next_offset?: string;
 };
 
 /**
@@ -8873,7 +10554,7 @@ export type usernames = {
   disabled_usernames: vector<string>;
 
   /**
-   * The active username, which can be changed with setUsername or setSupergroupUsername
+   * The active username, which can be changed with setUsername or setSupergroupUsername. Information about other active usernames can be received using getCollectibleItemInfo
    * @type {string} {@link string}
    */
   editable_username: string;
@@ -8900,7 +10581,7 @@ export type usernames$Input = {
   readonly disabled_usernames?: vector$Input<string>;
 
   /**
-   * The active username, which can be changed with setUsername or setSupergroupUsername
+   * The active username, which can be changed with setUsername or setSupergroupUsername. Information about other active usernames can be received using getCollectibleItemInfo
    * @type {string} {@link string}
    */
   readonly editable_username?: string;
@@ -9485,10 +11166,16 @@ export type userFullInfo = {
   has_restricted_voice_and_video_note_messages: Bool;
 
   /**
-   * True, if the user has pinned stories
+   * True, if the user has posted to profile stories
    * @type {Bool} {@link Bool}
    */
-  has_pinned_stories: Bool;
+  has_posted_to_profile_stories: Bool;
+
+  /**
+   * True, if the user always enabled sponsored messages; known only for the current user
+   * @type {Bool} {@link Bool}
+   */
+  has_sponsored_messages_enabled: Bool;
 
   /**
    * True, if the current user needs to explicitly allow to share their phone number with the user when the method addContact is used
@@ -9509,6 +11196,18 @@ export type userFullInfo = {
   bio: formattedText | null;
 
   /**
+   * Birthdate of the user; may be null if unknown
+   * @type {birthdate} {@link birthdate}
+   */
+  birthdate: birthdate | null;
+
+  /**
+   * Identifier of the personal chat of the user; 0 if none
+   * @type {int53} {@link int53}
+   */
+  personal_chat_id: int53;
+
+  /**
    * The list of available options for gifting Telegram Premium to the user
    * @type {vector<premiumPaymentOption>} {@link vector<premiumPaymentOption>}
    */
@@ -9519,6 +11218,12 @@ export type userFullInfo = {
    * @type {int32} {@link int32}
    */
   group_in_common_count: int32;
+
+  /**
+   * Information about business settings for Telegram Business accounts; may be null if none
+   * @type {businessInfo} {@link businessInfo}
+   */
+  business_info: businessInfo | null;
 
   /**
    * For bots, information about the bot; may be null if the user isn't a bot
@@ -9596,10 +11301,16 @@ export type userFullInfo$Input = {
   readonly has_restricted_voice_and_video_note_messages?: Bool$Input;
 
   /**
-   * True, if the user has pinned stories
+   * True, if the user has posted to profile stories
    * @type {Bool} {@link Bool}
    */
-  readonly has_pinned_stories?: Bool$Input;
+  readonly has_posted_to_profile_stories?: Bool$Input;
+
+  /**
+   * True, if the user always enabled sponsored messages; known only for the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_sponsored_messages_enabled?: Bool$Input;
 
   /**
    * True, if the current user needs to explicitly allow to share their phone number with the user when the method addContact is used
@@ -9620,6 +11331,18 @@ export type userFullInfo$Input = {
   readonly bio?: formattedText$Input | null;
 
   /**
+   * Birthdate of the user; may be null if unknown
+   * @type {birthdate} {@link birthdate}
+   */
+  readonly birthdate?: birthdate$Input | null;
+
+  /**
+   * Identifier of the personal chat of the user; 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly personal_chat_id?: int53;
+
+  /**
    * The list of available options for gifting Telegram Premium to the user
    * @type {vector<premiumPaymentOption>} {@link vector<premiumPaymentOption>}
    */
@@ -9630,6 +11353,12 @@ export type userFullInfo$Input = {
    * @type {int32} {@link int32}
    */
   readonly group_in_common_count?: int32;
+
+  /**
+   * Information about business settings for Telegram Business accounts; may be null if none
+   * @type {businessInfo} {@link businessInfo}
+   */
+  readonly business_info?: businessInfo$Input | null;
 
   /**
    * For bots, information about the bot; may be null if the user isn't a bot
@@ -11379,11 +13108,11 @@ export type supergroup = {
   /**
    * Number of members in the supergroup or channel; 0 if unknown. Currently, it is guaranteed to be known only if the supergroup or channel was received through
    *
-   * - getChatSimilarChats, getChatsToSendStories, getCreatedPublicChats, getGroupsInCommon, getInactiveSupergroupChats, getSuitableDiscussionChats, getUserPrivacySettingRules, getVideoChatAvailableParticipants,
+   * - getChatSimilarChats, getChatsToSendStories, getCreatedPublicChats, getGroupsInCommon, getInactiveSupergroupChats, getRecommendedChats, getSuitableDiscussionChats,
    *
-   * - searchChatsNearby, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or for public chats in which where sent messages and posted stories from publicForwards,
+   * - getUserPrivacySettingRules, getVideoChatAvailableParticipants, searchChatsNearby, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or in userFullInfo.personal_chat_id,
    *
-   * - or for public chats in which where sent messages from getMessagePublicForwards response
+   * - or for chats with messages or stories from publicForwards
    * @type {int32} {@link int32}
    */
   member_count: int32;
@@ -11524,11 +13253,11 @@ export type supergroup$Input = {
   /**
    * Number of members in the supergroup or channel; 0 if unknown. Currently, it is guaranteed to be known only if the supergroup or channel was received through
    *
-   * - getChatSimilarChats, getChatsToSendStories, getCreatedPublicChats, getGroupsInCommon, getInactiveSupergroupChats, getSuitableDiscussionChats, getUserPrivacySettingRules, getVideoChatAvailableParticipants,
+   * - getChatSimilarChats, getChatsToSendStories, getCreatedPublicChats, getGroupsInCommon, getInactiveSupergroupChats, getRecommendedChats, getSuitableDiscussionChats,
    *
-   * - searchChatsNearby, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or for public chats in which where sent messages and posted stories from publicForwards,
+   * - getUserPrivacySettingRules, getVideoChatAvailableParticipants, searchChatsNearby, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or in userFullInfo.personal_chat_id,
    *
-   * - or for public chats in which where sent messages from getMessagePublicForwards response
+   * - or for chats with messages or stories from publicForwards
    * @type {int32} {@link int32}
    */
   readonly member_count?: int32;
@@ -11727,6 +13456,12 @@ export type supergroupFullInfo = {
   can_get_statistics: Bool;
 
   /**
+   * True, if the supergroup or channel revenue statistics are available
+   * @type {Bool} {@link Bool}
+   */
+  can_get_revenue_statistics: Bool;
+
+  /**
    * True, if aggressive anti-spam checks can be enabled or disabled in the supergroup
    * @type {Bool} {@link Bool}
    */
@@ -11739,6 +13474,12 @@ export type supergroupFullInfo = {
    * @type {Bool} {@link Bool}
    */
   is_all_history_available: Bool;
+
+  /**
+   * True, if the chat can have sponsored messages. The value of this field is only available to the owner of the chat
+   * @type {Bool} {@link Bool}
+   */
+  can_have_sponsored_messages: Bool;
 
   /**
    * True, if aggressive anti-spam checks are enabled in the supergroup. The value of this field is only available to chat administrators
@@ -11906,6 +13647,12 @@ export type supergroupFullInfo$Input = {
   readonly can_get_statistics?: Bool$Input;
 
   /**
+   * True, if the supergroup or channel revenue statistics are available
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_get_revenue_statistics?: Bool$Input;
+
+  /**
    * True, if aggressive anti-spam checks can be enabled or disabled in the supergroup
    * @type {Bool} {@link Bool}
    */
@@ -11918,6 +13665,12 @@ export type supergroupFullInfo$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_all_history_available?: Bool$Input;
+
+  /**
+   * True, if the chat can have sponsored messages. The value of this field is only available to the owner of the chat
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_have_sponsored_messages?: Bool$Input;
 
   /**
    * True, if aggressive anti-spam checks are enabled in the supergroup. The value of this field is only available to chat administrators
@@ -12771,7 +14524,7 @@ export type messageForwardInfo = {
   source: forwardSource | null;
 
   /**
-   * The type of a public service announcement for the forwarded message
+   * The type of public service announcement for the forwarded message
    * @type {string} {@link string}
    */
   public_service_announcement_type: string;
@@ -12804,7 +14557,7 @@ export type messageForwardInfo$Input = {
   readonly source?: forwardSource$Input | null;
 
   /**
-   * The type of a public service announcement for the forwarded message
+   * The type of public service announcement for the forwarded message
    * @type {string} {@link string}
    */
   readonly public_service_announcement_type?: string;
@@ -13156,6 +14909,150 @@ export type unreadReaction$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_big?: Bool$Input;
+};
+
+/**
+ * An effect from an emoji reaction
+ */
+export type messageEffectTypeEmojiReaction = {
+  _: "messageEffectTypeEmojiReaction";
+
+  /**
+   * Select animation for the effect in TGS format
+   * @type {sticker} {@link sticker}
+   */
+  select_animation: sticker;
+
+  /**
+   * Effect animation for the effect in TGS format
+   * @type {sticker} {@link sticker}
+   */
+  effect_animation: sticker;
+};
+
+/**
+ * Version of {@link messageEffectTypeEmojiReaction} for method parameters.
+ *
+ * An effect from an emoji reaction
+ */
+export type messageEffectTypeEmojiReaction$Input = {
+  readonly _: "messageEffectTypeEmojiReaction";
+
+  /**
+   * Select animation for the effect in TGS format
+   * @type {sticker} {@link sticker}
+   */
+  readonly select_animation?: sticker$Input;
+
+  /**
+   * Effect animation for the effect in TGS format
+   * @type {sticker} {@link sticker}
+   */
+  readonly effect_animation?: sticker$Input;
+};
+
+/**
+ * An effect from a premium sticker
+ */
+export type messageEffectTypePremiumSticker = {
+  _: "messageEffectTypePremiumSticker";
+
+  /**
+   * The premium sticker. The effect can be found at sticker.full_type.premium_animation
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker;
+};
+
+/**
+ * Version of {@link messageEffectTypePremiumSticker} for method parameters.
+ *
+ * An effect from a premium sticker
+ */
+export type messageEffectTypePremiumSticker$Input = {
+  readonly _: "messageEffectTypePremiumSticker";
+
+  /**
+   * The premium sticker. The effect can be found at sticker.full_type.premium_animation
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input;
+};
+
+/**
+ * Contains information about an effect added to a message
+ */
+export type messageEffect = {
+  _: "messageEffect";
+
+  /**
+   * Unique identifier of the effect
+   * @type {int64} {@link int64}
+   */
+  id: int64;
+
+  /**
+   * Static icon for the effect in WEBP format; may be null if none
+   * @type {sticker} {@link sticker}
+   */
+  static_icon: sticker | null;
+
+  /**
+   * Emoji corresponding to the effect that can be used if static icon isn't available
+   * @type {string} {@link string}
+   */
+  emoji: string;
+
+  /**
+   * True, if Telegram Premium subscription is required to use the effect
+   * @type {Bool} {@link Bool}
+   */
+  is_premium: Bool;
+
+  /**
+   * Type of the effect
+   * @type {MessageEffectType} {@link MessageEffectType}
+   */
+  type: MessageEffectType;
+};
+
+/**
+ * Version of {@link messageEffect} for method parameters.
+ *
+ * Contains information about an effect added to a message
+ */
+export type messageEffect$Input = {
+  readonly _: "messageEffect";
+
+  /**
+   * Unique identifier of the effect
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
+
+  /**
+   * Static icon for the effect in WEBP format; may be null if none
+   * @type {sticker} {@link sticker}
+   */
+  readonly static_icon?: sticker$Input | null;
+
+  /**
+   * Emoji corresponding to the effect that can be used if static icon isn't available
+   * @type {string} {@link string}
+   */
+  readonly emoji?: string;
+
+  /**
+   * True, if Telegram Premium subscription is required to use the effect
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_premium?: Bool$Input;
+
+  /**
+   * Type of the effect
+   * @type {MessageEffectType} {@link MessageEffectType}
+   */
+  readonly type?: MessageEffectType$Input;
 };
 
 /**
@@ -13599,6 +15496,46 @@ export type inputMessageReplyToStory$Input = {
 };
 
 /**
+ * Describes a fact-check added to the message by an independent checker
+ */
+export type factCheck = {
+  _: "factCheck";
+
+  /**
+   * Text of the fact-check
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+
+  /**
+   * A two-letter ISO 3166-1 alpha-2 country code of the country for which the fact-check is shown
+   * @type {string} {@link string}
+   */
+  country_code: string;
+};
+
+/**
+ * Version of {@link factCheck} for method parameters.
+ *
+ * Describes a fact-check added to the message by an independent checker
+ */
+export type factCheck$Input = {
+  readonly _: "factCheck";
+
+  /**
+   * Text of the fact-check
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * A two-letter ISO 3166-1 alpha-2 country code of the country for which the fact-check is shown
+   * @type {string} {@link string}
+   */
+  readonly country_code?: string;
+};
+
+/**
  * Describes a message
  */
 export type message = {
@@ -13645,6 +15582,12 @@ export type message = {
    * @type {Bool} {@link Bool}
    */
   is_pinned: Bool;
+
+  /**
+   * True, if the message was sent because of a scheduled action by the message sender, for example, as away, or greeting service message
+   * @type {Bool} {@link Bool}
+   */
+  is_from_offline: Bool;
 
   /**
    * True, if the message can be edited. For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message by the application
@@ -13785,6 +15728,12 @@ export type message = {
   unread_reactions: vector<unreadReaction>;
 
   /**
+   * Information about fact-check added to the message; may be null if none
+   * @type {factCheck} {@link factCheck}
+   */
+  fact_check: factCheck | null;
+
+  /**
    * Information about the message or the story this message is replying to; may be null if none
    * @type {MessageReplyTo} {@link MessageReplyTo}
    */
@@ -13821,10 +15770,16 @@ export type message = {
   auto_delete_in: double;
 
   /**
-   * If non-zero, the user identifier of the bot through which this message was sent
+   * If non-zero, the user identifier of the inline bot through which this message was sent
    * @type {int53} {@link int53}
    */
   via_bot_user_id: int53;
+
+  /**
+   * If non-zero, the user identifier of the business bot that sent this message
+   * @type {int53} {@link int53}
+   */
+  sender_business_bot_user_id: int53;
 
   /**
    * Number of times the sender of the message boosted the supergroup at the time the message was sent; 0 if none or unknown. For messages sent by the current user, supergroupFullInfo.my_boost_count must be used instead
@@ -13839,10 +15794,16 @@ export type message = {
   author_signature: string;
 
   /**
-   * Unique identifier of an album this message belongs to. Only audios, documents, photos and videos can be grouped together in albums
+   * Unique identifier of an album this message belongs to; 0 if none. Only audios, documents, photos and videos can be grouped together in albums
    * @type {int64} {@link int64}
    */
   media_album_id: int64;
+
+  /**
+   * Unique identifier of the effect added to the message; 0 if none
+   * @type {int64} {@link int64}
+   */
+  effect_id: int64;
 
   /**
    * If non-empty, contains a human-readable description of the reason why access to this message must be restricted
@@ -13912,6 +15873,12 @@ export type message$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_pinned?: Bool$Input;
+
+  /**
+   * True, if the message was sent because of a scheduled action by the message sender, for example, as away, or greeting service message
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_from_offline?: Bool$Input;
 
   /**
    * True, if the message can be edited. For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message by the application
@@ -14052,6 +16019,12 @@ export type message$Input = {
   readonly unread_reactions?: vector$Input<unreadReaction$Input>;
 
   /**
+   * Information about fact-check added to the message; may be null if none
+   * @type {factCheck} {@link factCheck}
+   */
+  readonly fact_check?: factCheck$Input | null;
+
+  /**
    * Information about the message or the story this message is replying to; may be null if none
    * @type {MessageReplyTo} {@link MessageReplyTo}
    */
@@ -14088,10 +16061,16 @@ export type message$Input = {
   readonly auto_delete_in?: double;
 
   /**
-   * If non-zero, the user identifier of the bot through which this message was sent
+   * If non-zero, the user identifier of the inline bot through which this message was sent
    * @type {int53} {@link int53}
    */
   readonly via_bot_user_id?: int53;
+
+  /**
+   * If non-zero, the user identifier of the business bot that sent this message
+   * @type {int53} {@link int53}
+   */
+  readonly sender_business_bot_user_id?: int53;
 
   /**
    * Number of times the sender of the message boosted the supergroup at the time the message was sent; 0 if none or unknown. For messages sent by the current user, supergroupFullInfo.my_boost_count must be used instead
@@ -14106,10 +16085,16 @@ export type message$Input = {
   readonly author_signature?: string;
 
   /**
-   * Unique identifier of an album this message belongs to. Only audios, documents, photos and videos can be grouped together in albums
+   * Unique identifier of an album this message belongs to; 0 if none. Only audios, documents, photos and videos can be grouped together in albums
    * @type {int64} {@link int64}
    */
   readonly media_album_id?: int64$Input;
+
+  /**
+   * Unique identifier of the effect added to the message; 0 if none
+   * @type {int64} {@link int64}
+   */
+  readonly effect_id?: int64$Input;
 
   /**
    * If non-empty, contains a human-readable description of the reason why access to this message must be restricted
@@ -14447,6 +16432,74 @@ export type messageCalendar$Input = {
 };
 
 /**
+ * Describes a message from a business account as received by a bot
+ */
+export type businessMessage = {
+  _: "businessMessage";
+
+  /**
+   * The message
+   * @type {message} {@link message}
+   */
+  message: message;
+
+  /**
+   * Message that is replied by the message in the same chat; may be null if none
+   * @type {message} {@link message}
+   */
+  reply_to_message: message | null;
+};
+
+/**
+ * Version of {@link businessMessage} for method parameters.
+ *
+ * Describes a message from a business account as received by a bot
+ */
+export type businessMessage$Input = {
+  readonly _: "businessMessage";
+
+  /**
+   * The message
+   * @type {message} {@link message}
+   */
+  readonly message?: message$Input;
+
+  /**
+   * Message that is replied by the message in the same chat; may be null if none
+   * @type {message} {@link message}
+   */
+  readonly reply_to_message?: message$Input | null;
+};
+
+/**
+ * Contains a list of messages from a business account as received by a bot
+ */
+export type businessMessages = {
+  _: "businessMessages";
+
+  /**
+   * List of business messages
+   * @type {vector<businessMessage>} {@link vector<businessMessage>}
+   */
+  messages: vector<businessMessage>;
+};
+
+/**
+ * Version of {@link businessMessages} for method parameters.
+ *
+ * Contains a list of messages from a business account as received by a bot
+ */
+export type businessMessages$Input = {
+  readonly _: "businessMessages";
+
+  /**
+   * List of business messages
+   * @type {vector<businessMessage>} {@link vector<businessMessage>}
+   */
+  readonly messages?: vector$Input<businessMessage$Input>;
+};
+
+/**
  * The message is from a chat history
  */
 export type messageSourceChatHistory = {
@@ -14607,222 +16660,22 @@ export type messageSourceOther$Input = {
 };
 
 /**
- * The sponsor is a bot
- */
-export type messageSponsorTypeBot = {
-  _: "messageSponsorTypeBot";
-
-  /**
-   * User identifier of the bot
-   * @type {int53} {@link int53}
-   */
-  bot_user_id: int53;
-
-  /**
-   * An internal link to be opened when the sponsored message is clicked
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  link: InternalLinkType;
-};
-
-/**
- * Version of {@link messageSponsorTypeBot} for method parameters.
- *
- * The sponsor is a bot
- */
-export type messageSponsorTypeBot$Input = {
-  readonly _: "messageSponsorTypeBot";
-
-  /**
-   * User identifier of the bot
-   * @type {int53} {@link int53}
-   */
-  readonly bot_user_id?: int53;
-
-  /**
-   * An internal link to be opened when the sponsored message is clicked
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  readonly link?: InternalLinkType$Input;
-};
-
-/**
- * The sponsor is a web app
- */
-export type messageSponsorTypeWebApp = {
-  _: "messageSponsorTypeWebApp";
-
-  /**
-   * Web App title
-   * @type {string} {@link string}
-   */
-  web_app_title: string;
-
-  /**
-   * An internal link to be opened when the sponsored message is clicked
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  link: InternalLinkType;
-};
-
-/**
- * Version of {@link messageSponsorTypeWebApp} for method parameters.
- *
- * The sponsor is a web app
- */
-export type messageSponsorTypeWebApp$Input = {
-  readonly _: "messageSponsorTypeWebApp";
-
-  /**
-   * Web App title
-   * @type {string} {@link string}
-   */
-  readonly web_app_title?: string;
-
-  /**
-   * An internal link to be opened when the sponsored message is clicked
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  readonly link?: InternalLinkType$Input;
-};
-
-/**
- * The sponsor is a public channel chat
- */
-export type messageSponsorTypePublicChannel = {
-  _: "messageSponsorTypePublicChannel";
-
-  /**
-   * Sponsor chat identifier
-   * @type {int53} {@link int53}
-   */
-  chat_id: int53;
-
-  /**
-   * An internal link to be opened when the sponsored message is clicked; may be null if the sponsor chat needs to be opened instead
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  link: InternalLinkType | null;
-};
-
-/**
- * Version of {@link messageSponsorTypePublicChannel} for method parameters.
- *
- * The sponsor is a public channel chat
- */
-export type messageSponsorTypePublicChannel$Input = {
-  readonly _: "messageSponsorTypePublicChannel";
-
-  /**
-   * Sponsor chat identifier
-   * @type {int53} {@link int53}
-   */
-  readonly chat_id?: int53;
-
-  /**
-   * An internal link to be opened when the sponsored message is clicked; may be null if the sponsor chat needs to be opened instead
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  readonly link?: InternalLinkType$Input | null;
-};
-
-/**
- * The sponsor is a private channel chat
- */
-export type messageSponsorTypePrivateChannel = {
-  _: "messageSponsorTypePrivateChannel";
-
-  /**
-   * Title of the chat
-   * @type {string} {@link string}
-   */
-  title: string;
-
-  /**
-   * Invite link for the channel
-   * @type {string} {@link string}
-   */
-  invite_link: string;
-};
-
-/**
- * Version of {@link messageSponsorTypePrivateChannel} for method parameters.
- *
- * The sponsor is a private channel chat
- */
-export type messageSponsorTypePrivateChannel$Input = {
-  readonly _: "messageSponsorTypePrivateChannel";
-
-  /**
-   * Title of the chat
-   * @type {string} {@link string}
-   */
-  readonly title?: string;
-
-  /**
-   * Invite link for the channel
-   * @type {string} {@link string}
-   */
-  readonly invite_link?: string;
-};
-
-/**
- * The sponsor is a website
- */
-export type messageSponsorTypeWebsite = {
-  _: "messageSponsorTypeWebsite";
-
-  /**
-   * URL of the website
-   * @type {string} {@link string}
-   */
-  url: string;
-
-  /**
-   * Name of the website
-   * @type {string} {@link string}
-   */
-  name: string;
-};
-
-/**
- * Version of {@link messageSponsorTypeWebsite} for method parameters.
- *
- * The sponsor is a website
- */
-export type messageSponsorTypeWebsite$Input = {
-  readonly _: "messageSponsorTypeWebsite";
-
-  /**
-   * URL of the website
-   * @type {string} {@link string}
-   */
-  readonly url?: string;
-
-  /**
-   * Name of the website
-   * @type {string} {@link string}
-   */
-  readonly name?: string;
-};
-
-/**
  * Information about the sponsor of a message
  */
 export type messageSponsor = {
   _: "messageSponsor";
 
   /**
-   * Type of the sponsor
-   * @type {MessageSponsorType} {@link MessageSponsorType}
+   * URL of the sponsor to be opened when the message is clicked
+   * @type {string} {@link string}
    */
-  type: MessageSponsorType;
+  url: string;
 
   /**
    * Photo of the sponsor; may be null if must not be shown
-   * @type {chatPhotoInfo} {@link chatPhotoInfo}
+   * @type {photo} {@link photo}
    */
-  photo: chatPhotoInfo | null;
+  photo: photo | null;
 
   /**
    * Additional optional information about the sponsor to be shown along with the message
@@ -14840,16 +16693,16 @@ export type messageSponsor$Input = {
   readonly _: "messageSponsor";
 
   /**
-   * Type of the sponsor
-   * @type {MessageSponsorType} {@link MessageSponsorType}
+   * URL of the sponsor to be opened when the message is clicked
+   * @type {string} {@link string}
    */
-  readonly type?: MessageSponsorType$Input;
+  readonly url?: string;
 
   /**
    * Photo of the sponsor; may be null if must not be shown
-   * @type {chatPhotoInfo} {@link chatPhotoInfo}
+   * @type {photo} {@link photo}
    */
-  readonly photo?: chatPhotoInfo$Input | null;
+  readonly photo?: photo$Input | null;
 
   /**
    * Additional optional information about the sponsor to be shown along with the message
@@ -14877,6 +16730,12 @@ export type sponsoredMessage = {
   is_recommended: Bool;
 
   /**
+   * True, if the message can be reported to Telegram moderators through reportChatSponsoredMessage
+   * @type {Bool} {@link Bool}
+   */
+  can_be_reported: Bool;
+
+  /**
    * Content of the message. Currently, can be only of the type messageText
    * @type {MessageContent} {@link MessageContent}
    */
@@ -14889,10 +16748,28 @@ export type sponsoredMessage = {
   sponsor: messageSponsor;
 
   /**
-   * If non-empty, text for the message action button
+   * Title of the sponsored message
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Text for the message action button
    * @type {string} {@link string}
    */
   button_text: string;
+
+  /**
+   * Identifier of the accent color for title, button text and message background
+   * @type {int32} {@link int32}
+   */
+  accent_color_id: int32;
+
+  /**
+   * Identifier of a custom emoji to be shown on the message background; 0 if none
+   * @type {int64} {@link int64}
+   */
+  background_custom_emoji_id: int64;
 
   /**
    * If non-empty, additional information about the sponsored message to be shown along with the message
@@ -14922,6 +16799,12 @@ export type sponsoredMessage$Input = {
   readonly is_recommended?: Bool$Input;
 
   /**
+   * True, if the message can be reported to Telegram moderators through reportChatSponsoredMessage
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_reported?: Bool$Input;
+
+  /**
    * Content of the message. Currently, can be only of the type messageText
    * @type {MessageContent} {@link MessageContent}
    */
@@ -14934,10 +16817,28 @@ export type sponsoredMessage$Input = {
   readonly sponsor?: messageSponsor$Input;
 
   /**
-   * If non-empty, text for the message action button
+   * Title of the sponsored message
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Text for the message action button
    * @type {string} {@link string}
    */
   readonly button_text?: string;
+
+  /**
+   * Identifier of the accent color for title, button text and message background
+   * @type {int32} {@link int32}
+   */
+  readonly accent_color_id?: int32;
+
+  /**
+   * Identifier of a custom emoji to be shown on the message background; 0 if none
+   * @type {int64} {@link int64}
+   */
+  readonly background_custom_emoji_id?: int64$Input;
 
   /**
    * If non-empty, additional information about the sponsored message to be shown along with the message
@@ -14984,6 +16885,150 @@ export type sponsoredMessages$Input = {
    * @type {int32} {@link int32}
    */
   readonly messages_between?: int32;
+};
+
+/**
+ * Describes an option to report a sponsored message
+ */
+export type reportChatSponsoredMessageOption = {
+  _: "reportChatSponsoredMessageOption";
+
+  /**
+   * Unique identifier of the option
+   * @type {bytes} {@link bytes}
+   */
+  id: bytes;
+
+  /**
+   * Text of the option
+   * @type {string} {@link string}
+   */
+  text: string;
+};
+
+/**
+ * Version of {@link reportChatSponsoredMessageOption} for method parameters.
+ *
+ * Describes an option to report a sponsored message
+ */
+export type reportChatSponsoredMessageOption$Input = {
+  readonly _: "reportChatSponsoredMessageOption";
+
+  /**
+   * Unique identifier of the option
+   * @type {bytes} {@link bytes}
+   */
+  readonly id?: bytes$Input;
+
+  /**
+   * Text of the option
+   * @type {string} {@link string}
+   */
+  readonly text?: string;
+};
+
+/**
+ * The message was reported successfully
+ */
+export type reportChatSponsoredMessageResultOk = {
+  _: "reportChatSponsoredMessageResultOk";
+};
+
+/**
+ * Version of {@link reportChatSponsoredMessageResultOk} for method parameters.
+ *
+ * The message was reported successfully
+ */
+export type reportChatSponsoredMessageResultOk$Input = {
+  readonly _: "reportChatSponsoredMessageResultOk";
+};
+
+/**
+ * The sponsored message is too old or not found
+ */
+export type reportChatSponsoredMessageResultFailed = {
+  _: "reportChatSponsoredMessageResultFailed";
+};
+
+/**
+ * Version of {@link reportChatSponsoredMessageResultFailed} for method parameters.
+ *
+ * The sponsored message is too old or not found
+ */
+export type reportChatSponsoredMessageResultFailed$Input = {
+  readonly _: "reportChatSponsoredMessageResultFailed";
+};
+
+/**
+ * The user must choose an option to report the message and repeat request with the chosen option
+ */
+export type reportChatSponsoredMessageResultOptionRequired = {
+  _: "reportChatSponsoredMessageResultOptionRequired";
+
+  /**
+   * Title for the option choice
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * List of available options
+   * @type {vector<reportChatSponsoredMessageOption>} {@link vector<reportChatSponsoredMessageOption>}
+   */
+  options: vector<reportChatSponsoredMessageOption>;
+};
+
+/**
+ * Version of {@link reportChatSponsoredMessageResultOptionRequired} for method parameters.
+ *
+ * The user must choose an option to report the message and repeat request with the chosen option
+ */
+export type reportChatSponsoredMessageResultOptionRequired$Input = {
+  readonly _: "reportChatSponsoredMessageResultOptionRequired";
+
+  /**
+   * Title for the option choice
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * List of available options
+   * @type {vector<reportChatSponsoredMessageOption>} {@link vector<reportChatSponsoredMessageOption>}
+   */
+  readonly options?: vector$Input<reportChatSponsoredMessageOption$Input>;
+};
+
+/**
+ * Sponsored messages were hidden for the user in all chats
+ */
+export type reportChatSponsoredMessageResultAdsHidden = {
+  _: "reportChatSponsoredMessageResultAdsHidden";
+};
+
+/**
+ * Version of {@link reportChatSponsoredMessageResultAdsHidden} for method parameters.
+ *
+ * Sponsored messages were hidden for the user in all chats
+ */
+export type reportChatSponsoredMessageResultAdsHidden$Input = {
+  readonly _: "reportChatSponsoredMessageResultAdsHidden";
+};
+
+/**
+ * The user asked to hide sponsored messages, but Telegram Premium is required for this
+ */
+export type reportChatSponsoredMessageResultPremiumRequired = {
+  _: "reportChatSponsoredMessageResultPremiumRequired";
+};
+
+/**
+ * Version of {@link reportChatSponsoredMessageResultPremiumRequired} for method parameters.
+ *
+ * The user asked to hide sponsored messages, but Telegram Premium is required for this
+ */
+export type reportChatSponsoredMessageResultPremiumRequired$Input = {
+  readonly _: "reportChatSponsoredMessageResultPremiumRequired";
 };
 
 /**
@@ -15547,6 +17592,118 @@ export type scopeNotificationSettings$Input = {
 };
 
 /**
+ * Notifications for reactions are disabled
+ */
+export type reactionNotificationSourceNone = {
+  _: "reactionNotificationSourceNone";
+};
+
+/**
+ * Version of {@link reactionNotificationSourceNone} for method parameters.
+ *
+ * Notifications for reactions are disabled
+ */
+export type reactionNotificationSourceNone$Input = {
+  readonly _: "reactionNotificationSourceNone";
+};
+
+/**
+ * Notifications for reactions are shown only for reactions from contacts
+ */
+export type reactionNotificationSourceContacts = {
+  _: "reactionNotificationSourceContacts";
+};
+
+/**
+ * Version of {@link reactionNotificationSourceContacts} for method parameters.
+ *
+ * Notifications for reactions are shown only for reactions from contacts
+ */
+export type reactionNotificationSourceContacts$Input = {
+  readonly _: "reactionNotificationSourceContacts";
+};
+
+/**
+ * Notifications for reactions are shown for all reactions
+ */
+export type reactionNotificationSourceAll = {
+  _: "reactionNotificationSourceAll";
+};
+
+/**
+ * Version of {@link reactionNotificationSourceAll} for method parameters.
+ *
+ * Notifications for reactions are shown for all reactions
+ */
+export type reactionNotificationSourceAll$Input = {
+  readonly _: "reactionNotificationSourceAll";
+};
+
+/**
+ * Contains information about notification settings for reactions
+ */
+export type reactionNotificationSettings = {
+  _: "reactionNotificationSettings";
+
+  /**
+   * Source of message reactions for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  message_reaction_source: ReactionNotificationSource;
+
+  /**
+   * Source of story reactions for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  story_reaction_source: ReactionNotificationSource;
+
+  /**
+   * Identifier of the notification sound to be played; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  sound_id: int64;
+
+  /**
+   * True, if reaction sender and emoji must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  show_preview: Bool;
+};
+
+/**
+ * Version of {@link reactionNotificationSettings} for method parameters.
+ *
+ * Contains information about notification settings for reactions
+ */
+export type reactionNotificationSettings$Input = {
+  readonly _: "reactionNotificationSettings";
+
+  /**
+   * Source of message reactions for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  readonly message_reaction_source?: ReactionNotificationSource$Input;
+
+  /**
+   * Source of story reactions for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  readonly story_reaction_source?: ReactionNotificationSource$Input;
+
+  /**
+   * Identifier of the notification sound to be played; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  readonly sound_id?: int64$Input;
+
+  /**
+   * True, if reaction sender and emoji must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_preview?: Bool$Input;
+};
+
+/**
  * Contains information about a message draft
  */
 export type draftMessage = {
@@ -15785,6 +17942,12 @@ export type chatFolder = {
   icon: chatFolderIcon | null;
 
   /**
+   * The identifier of the chosen color for the chat folder icon; from -1 to 6. If -1, then color is disabled. Can't be changed if folder tags are disabled or the current user doesn't have Telegram Premium subscription
+   * @type {int32} {@link int32}
+   */
+  color_id: int32;
+
+  /**
    * True, if at least one link has been created for the folder
    * @type {Bool} {@link Bool}
    */
@@ -15876,6 +18039,12 @@ export type chatFolder$Input = {
    * @type {chatFolderIcon} {@link chatFolderIcon}
    */
   readonly icon?: chatFolderIcon$Input | null;
+
+  /**
+   * The identifier of the chosen color for the chat folder icon; from -1 to 6. If -1, then color is disabled. Can't be changed if folder tags are disabled or the current user doesn't have Telegram Premium subscription
+   * @type {int32} {@link int32}
+   */
+  readonly color_id?: int32;
 
   /**
    * True, if at least one link has been created for the folder
@@ -15975,6 +18144,12 @@ export type chatFolderInfo = {
   icon: chatFolderIcon;
 
   /**
+   * The identifier of the chosen color for the chat folder icon; from -1 to 6. If -1, then color is disabled
+   * @type {int32} {@link int32}
+   */
+  color_id: int32;
+
+  /**
    * True, if at least one link has been created for the folder
    * @type {Bool} {@link Bool}
    */
@@ -16012,6 +18187,12 @@ export type chatFolderInfo$Input = {
    * @type {chatFolderIcon} {@link chatFolderIcon}
    */
   readonly icon?: chatFolderIcon$Input;
+
+  /**
+   * The identifier of the chosen color for the chat folder icon; from -1 to 6. If -1, then color is disabled
+   * @type {int32} {@link int32}
+   */
+  readonly color_id?: int32;
 
   /**
    * True, if at least one link has been created for the folder
@@ -16491,6 +18672,12 @@ export type chatPosition$Input = {
  */
 export type chatAvailableReactionsAll = {
   _: "chatAvailableReactionsAll";
+
+  /**
+   * The maximum allowed number of reactions per message; 1-11
+   * @type {int32} {@link int32}
+   */
+  max_reaction_count: int32;
 };
 
 /**
@@ -16500,6 +18687,12 @@ export type chatAvailableReactionsAll = {
  */
 export type chatAvailableReactionsAll$Input = {
   readonly _: "chatAvailableReactionsAll";
+
+  /**
+   * The maximum allowed number of reactions per message; 1-11
+   * @type {int32} {@link int32}
+   */
+  readonly max_reaction_count?: int32;
 };
 
 /**
@@ -16513,6 +18706,12 @@ export type chatAvailableReactionsSome = {
    * @type {vector<ReactionType>} {@link vector<ReactionType>}
    */
   reactions: vector<ReactionType>;
+
+  /**
+   * The maximum allowed number of reactions per message; 1-11
+   * @type {int32} {@link int32}
+   */
+  max_reaction_count: int32;
 };
 
 /**
@@ -16528,6 +18727,12 @@ export type chatAvailableReactionsSome$Input = {
    * @type {vector<ReactionType>} {@link vector<ReactionType>}
    */
   readonly reactions?: vector$Input<ReactionType$Input>;
+
+  /**
+   * The maximum allowed number of reactions per message; 1-11
+   * @type {int32} {@link int32}
+   */
+  readonly max_reaction_count?: int32;
 };
 
 /**
@@ -16608,6 +18813,70 @@ export type savedMessagesTags$Input = {
    * @type {vector<savedMessagesTag>} {@link vector<savedMessagesTag>}
    */
   readonly tags?: vector$Input<savedMessagesTag$Input>;
+};
+
+/**
+ * Contains information about a business bot that manages the chat
+ */
+export type businessBotManageBar = {
+  _: "businessBotManageBar";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  bot_user_id: int53;
+
+  /**
+   * URL to be opened to manage the bot
+   * @type {string} {@link string}
+   */
+  manage_url: string;
+
+  /**
+   * True, if the bot is paused. Use toggleBusinessConnectedBotChatIsPaused to change the value of the field
+   * @type {Bool} {@link Bool}
+   */
+  is_bot_paused: Bool;
+
+  /**
+   * True, if the bot can reply
+   * @type {Bool} {@link Bool}
+   */
+  can_bot_reply: Bool;
+};
+
+/**
+ * Version of {@link businessBotManageBar} for method parameters.
+ *
+ * Contains information about a business bot that manages the chat
+ */
+export type businessBotManageBar$Input = {
+  readonly _: "businessBotManageBar";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * URL to be opened to manage the bot
+   * @type {string} {@link string}
+   */
+  readonly manage_url?: string;
+
+  /**
+   * True, if the bot is paused. Use toggleBusinessConnectedBotChatIsPaused to change the value of the field
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_bot_paused?: Bool$Input;
+
+  /**
+   * True, if the bot can reply
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_bot_reply?: Bool$Input;
 };
 
 /**
@@ -16733,6 +19002,12 @@ export type chat = {
    * @type {vector<chatPosition>} {@link vector<chatPosition>}
    */
   positions: vector<chatPosition>;
+
+  /**
+   * Chat lists to which the chat belongs. A chat can have a non-zero position in a chat list even it doesn't belong to the chat list and have no position in a chat list even it belongs to the chat list
+   * @type {vector<ChatList>} {@link vector<ChatList>}
+   */
+  chat_lists: vector<ChatList>;
 
   /**
    * Identifier of a user or chat that is selected to send messages in the chat; may be null if the user can't change message sender
@@ -16873,6 +19148,12 @@ export type chat = {
   action_bar: ChatActionBar | null;
 
   /**
+   * Information about bar for managing a business bot in the chat; may be null if none
+   * @type {businessBotManageBar} {@link businessBotManageBar}
+   */
+  business_bot_manage_bar: businessBotManageBar | null;
+
+  /**
    * Information about video chat of the chat
    * @type {videoChat} {@link videoChat}
    */
@@ -16976,6 +19257,12 @@ export type chat$Input = {
    * @type {vector<chatPosition>} {@link vector<chatPosition>}
    */
   readonly positions?: vector$Input<chatPosition$Input>;
+
+  /**
+   * Chat lists to which the chat belongs. A chat can have a non-zero position in a chat list even it doesn't belong to the chat list and have no position in a chat list even it belongs to the chat list
+   * @type {vector<ChatList>} {@link vector<ChatList>}
+   */
+  readonly chat_lists?: vector$Input<ChatList$Input>;
 
   /**
    * Identifier of a user or chat that is selected to send messages in the chat; may be null if the user can't change message sender
@@ -17116,6 +19403,12 @@ export type chat$Input = {
   readonly action_bar?: ChatActionBar$Input | null;
 
   /**
+   * Information about bar for managing a business bot in the chat; may be null if none
+   * @type {businessBotManageBar} {@link businessBotManageBar}
+   */
+  readonly business_bot_manage_bar?: businessBotManageBar$Input | null;
+
+  /**
    * Information about video chat of the chat
    * @type {videoChat} {@link videoChat}
    */
@@ -17184,6 +19477,126 @@ export type chats$Input = {
    * @type {vector<int53>} {@link vector<int53>}
    */
   readonly chat_ids?: vector$Input<int53>;
+};
+
+/**
+ * Contains information about a user that has failed to be added to a chat
+ */
+export type failedToAddMember = {
+  _: "failedToAddMember";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * True, if subscription to Telegram Premium would have allowed to add the user to the chat
+   * @type {Bool} {@link Bool}
+   */
+  premium_would_allow_invite: Bool;
+
+  /**
+   * True, if subscription to Telegram Premium is required to send the user chat invite link
+   * @type {Bool} {@link Bool}
+   */
+  premium_required_to_send_messages: Bool;
+};
+
+/**
+ * Version of {@link failedToAddMember} for method parameters.
+ *
+ * Contains information about a user that has failed to be added to a chat
+ */
+export type failedToAddMember$Input = {
+  readonly _: "failedToAddMember";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * True, if subscription to Telegram Premium would have allowed to add the user to the chat
+   * @type {Bool} {@link Bool}
+   */
+  readonly premium_would_allow_invite?: Bool$Input;
+
+  /**
+   * True, if subscription to Telegram Premium is required to send the user chat invite link
+   * @type {Bool} {@link Bool}
+   */
+  readonly premium_required_to_send_messages?: Bool$Input;
+};
+
+/**
+ * Represents a list of users that has failed to be added to a chat
+ */
+export type failedToAddMembers = {
+  _: "failedToAddMembers";
+
+  /**
+   * Information about users that weren't added to the chat
+   * @type {vector<failedToAddMember>} {@link vector<failedToAddMember>}
+   */
+  failed_to_add_members: vector<failedToAddMember>;
+};
+
+/**
+ * Version of {@link failedToAddMembers} for method parameters.
+ *
+ * Represents a list of users that has failed to be added to a chat
+ */
+export type failedToAddMembers$Input = {
+  readonly _: "failedToAddMembers";
+
+  /**
+   * Information about users that weren't added to the chat
+   * @type {vector<failedToAddMember>} {@link vector<failedToAddMember>}
+   */
+  readonly failed_to_add_members?: vector$Input<failedToAddMember$Input>;
+};
+
+/**
+ * Contains information about a newly created basic group chat
+ */
+export type createdBasicGroupChat = {
+  _: "createdBasicGroupChat";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Information about failed to add members
+   * @type {failedToAddMembers} {@link failedToAddMembers}
+   */
+  failed_to_add_members: failedToAddMembers;
+};
+
+/**
+ * Version of {@link createdBasicGroupChat} for method parameters.
+ *
+ * Contains information about a newly created basic group chat
+ */
+export type createdBasicGroupChat$Input = {
+  readonly _: "createdBasicGroupChat";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Information about failed to add members
+   * @type {failedToAddMembers} {@link failedToAddMembers}
+   */
+  readonly failed_to_add_members?: failedToAddMembers$Input;
 };
 
 /**
@@ -17615,6 +20028,24 @@ export type keyboardButtonTypeRequestUsers = {
    * @type {int32} {@link int32}
    */
   max_quantity: int32;
+
+  /**
+   * Pass true to request name of the users; bots only
+   * @type {Bool} {@link Bool}
+   */
+  request_name: Bool;
+
+  /**
+   * Pass true to request username of the users; bots only
+   * @type {Bool} {@link Bool}
+   */
+  request_username: Bool;
+
+  /**
+   * Pass true to request photo of the users; bots only
+   * @type {Bool} {@link Bool}
+   */
+  request_photo: Bool;
 };
 
 /**
@@ -17660,6 +20091,24 @@ export type keyboardButtonTypeRequestUsers$Input = {
    * @type {int32} {@link int32}
    */
   readonly max_quantity?: int32;
+
+  /**
+   * Pass true to request name of the users; bots only
+   * @type {Bool} {@link Bool}
+   */
+  readonly request_name?: Bool$Input;
+
+  /**
+   * Pass true to request username of the users; bots only
+   * @type {Bool} {@link Bool}
+   */
+  readonly request_username?: Bool$Input;
+
+  /**
+   * Pass true to request photo of the users; bots only
+   * @type {Bool} {@link Bool}
+   */
+  readonly request_photo?: Bool$Input;
 };
 
 /**
@@ -17727,6 +20176,24 @@ export type keyboardButtonTypeRequestChat = {
    * @type {Bool} {@link Bool}
    */
   bot_is_member: Bool;
+
+  /**
+   * Pass true to request title of the chat; bots only
+   * @type {Bool} {@link Bool}
+   */
+  request_title: Bool;
+
+  /**
+   * Pass true to request username of the chat; bots only
+   * @type {Bool} {@link Bool}
+   */
+  request_username: Bool;
+
+  /**
+   * Pass true to request photo of the chat; bots only
+   * @type {Bool} {@link Bool}
+   */
+  request_photo: Bool;
 };
 
 /**
@@ -17796,6 +20263,24 @@ export type keyboardButtonTypeRequestChat$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly bot_is_member?: Bool$Input;
+
+  /**
+   * Pass true to request title of the chat; bots only
+   * @type {Bool} {@link Bool}
+   */
+  readonly request_title?: Bool$Input;
+
+  /**
+   * Pass true to request username of the chat; bots only
+   * @type {Bool} {@link Bool}
+   */
+  readonly request_username?: Bool$Input;
+
+  /**
+   * Pass true to request photo of the chat; bots only
+   * @type {Bool} {@link Bool}
+   */
+  readonly request_photo?: Bool$Input;
 };
 
 /**
@@ -19236,6 +21721,146 @@ export type linkPreviewOptions$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly show_above_text?: Bool$Input;
+};
+
+/**
+ * Contains information about a user shared with a bot
+ */
+export type sharedUser = {
+  _: "sharedUser";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * First name of the user; for bots only
+   * @type {string} {@link string}
+   */
+  first_name: string;
+
+  /**
+   * Last name of the user; for bots only
+   * @type {string} {@link string}
+   */
+  last_name: string;
+
+  /**
+   * Username of the user; for bots only
+   * @type {string} {@link string}
+   */
+  username: string;
+
+  /**
+   * Profile photo of the user; for bots only; may be null
+   * @type {photo} {@link photo}
+   */
+  photo: photo | null;
+};
+
+/**
+ * Version of {@link sharedUser} for method parameters.
+ *
+ * Contains information about a user shared with a bot
+ */
+export type sharedUser$Input = {
+  readonly _: "sharedUser";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * First name of the user; for bots only
+   * @type {string} {@link string}
+   */
+  readonly first_name?: string;
+
+  /**
+   * Last name of the user; for bots only
+   * @type {string} {@link string}
+   */
+  readonly last_name?: string;
+
+  /**
+   * Username of the user; for bots only
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+
+  /**
+   * Profile photo of the user; for bots only; may be null
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input | null;
+};
+
+/**
+ * Contains information about a chat shared with a bot
+ */
+export type sharedChat = {
+  _: "sharedChat";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Title of the chat; for bots only
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Username of the chat; for bots only
+   * @type {string} {@link string}
+   */
+  username: string;
+
+  /**
+   * Photo of the chat; for bots only; may be null
+   * @type {photo} {@link photo}
+   */
+  photo: photo | null;
+};
+
+/**
+ * Version of {@link sharedChat} for method parameters.
+ *
+ * Contains information about a chat shared with a bot
+ */
+export type sharedChat$Input = {
+  readonly _: "sharedChat";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Title of the chat; for bots only
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Username of the chat; for bots only
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+
+  /**
+   * Photo of the chat; for bots only; may be null
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input | null;
 };
 
 /**
@@ -21717,6 +24342,12 @@ export type webPage = {
   story_id: int32;
 
   /**
+   * Up to 4 stickers from the sticker set available via the link
+   * @type {vector<sticker>} {@link vector<sticker>}
+   */
+  stickers: vector<sticker>;
+
+  /**
    * Version of web page instant view (currently, can be 1 or 2); 0 if none
    * @type {int32} {@link int32}
    */
@@ -21888,6 +24519,12 @@ export type webPage$Input = {
   readonly story_id?: int32;
 
   /**
+   * Up to 4 stickers from the sticker set available via the link
+   * @type {vector<sticker>} {@link vector<sticker>}
+   */
+  readonly stickers?: vector$Input<sticker$Input>;
+
+  /**
    * Version of web page instant view (currently, can be 1 or 2); 0 if none
    * @type {int32} {@link int32}
    */
@@ -22023,7 +24660,7 @@ export type phoneNumberInfo = {
   formatted_phone_number: string;
 
   /**
-   * True, if the phone number was bought on Fragment and isn't tied to a SIM card
+   * True, if the phone number was bought at https://fragment.com and isn't tied to a SIM card. Information about the phone number can be received using getCollectibleItemInfo
    * @type {Bool} {@link Bool}
    */
   is_anonymous: Bool;
@@ -22056,10 +24693,154 @@ export type phoneNumberInfo$Input = {
   readonly formatted_phone_number?: string;
 
   /**
-   * True, if the phone number was bought on Fragment and isn't tied to a SIM card
+   * True, if the phone number was bought at https://fragment.com and isn't tied to a SIM card. Information about the phone number can be received using getCollectibleItemInfo
    * @type {Bool} {@link Bool}
    */
   readonly is_anonymous?: Bool$Input;
+};
+
+/**
+ * A username
+ */
+export type collectibleItemTypeUsername = {
+  _: "collectibleItemTypeUsername";
+
+  /**
+   * The username
+   * @type {string} {@link string}
+   */
+  username: string;
+};
+
+/**
+ * Version of {@link collectibleItemTypeUsername} for method parameters.
+ *
+ * A username
+ */
+export type collectibleItemTypeUsername$Input = {
+  readonly _: "collectibleItemTypeUsername";
+
+  /**
+   * The username
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+};
+
+/**
+ * A phone number
+ */
+export type collectibleItemTypePhoneNumber = {
+  _: "collectibleItemTypePhoneNumber";
+
+  /**
+   * The phone number
+   * @type {string} {@link string}
+   */
+  phone_number: string;
+};
+
+/**
+ * Version of {@link collectibleItemTypePhoneNumber} for method parameters.
+ *
+ * A phone number
+ */
+export type collectibleItemTypePhoneNumber$Input = {
+  readonly _: "collectibleItemTypePhoneNumber";
+
+  /**
+   * The phone number
+   * @type {string} {@link string}
+   */
+  readonly phone_number?: string;
+};
+
+/**
+ * Contains information about a collectible item and its last purchase
+ */
+export type collectibleItemInfo = {
+  _: "collectibleItemInfo";
+
+  /**
+   * Point in time (Unix timestamp) when the item was purchased
+   * @type {int32} {@link int32}
+   */
+  purchase_date: int32;
+
+  /**
+   * Currency for the paid amount
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * The paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * Cryptocurrency used to pay for the item
+   * @type {string} {@link string}
+   */
+  cryptocurrency: string;
+
+  /**
+   * The paid amount, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  cryptocurrency_amount: int64;
+
+  /**
+   * Individual URL for the item on https://fragment.com
+   * @type {string} {@link string}
+   */
+  url: string;
+};
+
+/**
+ * Version of {@link collectibleItemInfo} for method parameters.
+ *
+ * Contains information about a collectible item and its last purchase
+ */
+export type collectibleItemInfo$Input = {
+  readonly _: "collectibleItemInfo";
+
+  /**
+   * Point in time (Unix timestamp) when the item was purchased
+   * @type {int32} {@link int32}
+   */
+  readonly purchase_date?: int32;
+
+  /**
+   * Currency for the paid amount
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * The paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * Cryptocurrency used to pay for the item
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * The paid amount, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly cryptocurrency_amount?: int64$Input;
+
+  /**
+   * Individual URL for the item on https://fragment.com
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
 };
 
 /**
@@ -23079,28 +25860,16 @@ export type paymentOption$Input = {
 };
 
 /**
- * Contains information about an invoice payment form
+ * The payment form is for a regular payment
  */
-export type paymentForm = {
-  _: "paymentForm";
-
-  /**
-   * The payment form identifier
-   * @type {int64} {@link int64}
-   */
-  id: int64;
+export type paymentFormTypeRegular = {
+  _: "paymentFormTypeRegular";
 
   /**
    * Full information about the invoice
    * @type {invoice} {@link invoice}
    */
   invoice: invoice;
-
-  /**
-   * User identifier of the seller bot
-   * @type {int53} {@link int53}
-   */
-  seller_bot_user_id: int53;
 
   /**
    * User identifier of the payment provider bot
@@ -23143,51 +25912,21 @@ export type paymentForm = {
    * @type {Bool} {@link Bool}
    */
   need_password: Bool;
-
-  /**
-   * Product title
-   * @type {string} {@link string}
-   */
-  product_title: string;
-
-  /**
-   * Product description
-   * @type {formattedText} {@link formattedText}
-   */
-  product_description: formattedText;
-
-  /**
-   * Product photo; may be null
-   * @type {photo} {@link photo}
-   */
-  product_photo: photo | null;
 };
 
 /**
- * Version of {@link paymentForm} for method parameters.
+ * Version of {@link paymentFormTypeRegular} for method parameters.
  *
- * Contains information about an invoice payment form
+ * The payment form is for a regular payment
  */
-export type paymentForm$Input = {
-  readonly _: "paymentForm";
-
-  /**
-   * The payment form identifier
-   * @type {int64} {@link int64}
-   */
-  readonly id?: int64$Input;
+export type paymentFormTypeRegular$Input = {
+  readonly _: "paymentFormTypeRegular";
 
   /**
    * Full information about the invoice
    * @type {invoice} {@link invoice}
    */
   readonly invoice?: invoice$Input;
-
-  /**
-   * User identifier of the seller bot
-   * @type {int53} {@link int53}
-   */
-  readonly seller_bot_user_id?: int53;
 
   /**
    * User identifier of the payment provider bot
@@ -23230,24 +25969,98 @@ export type paymentForm$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly need_password?: Bool$Input;
+};
+
+/**
+ * The payment form is for a payment in Telegram stars
+ */
+export type paymentFormTypeStars = {
+  _: "paymentFormTypeStars";
 
   /**
-   * Product title
-   * @type {string} {@link string}
+   * Number of stars that will be paid
+   * @type {int53} {@link int53}
    */
-  readonly product_title?: string;
+  star_count: int53;
+};
+
+/**
+ * Version of {@link paymentFormTypeStars} for method parameters.
+ *
+ * The payment form is for a payment in Telegram stars
+ */
+export type paymentFormTypeStars$Input = {
+  readonly _: "paymentFormTypeStars";
 
   /**
-   * Product description
-   * @type {formattedText} {@link formattedText}
+   * Number of stars that will be paid
+   * @type {int53} {@link int53}
    */
-  readonly product_description?: formattedText$Input;
+  readonly star_count?: int53;
+};
+
+/**
+ * Contains information about an invoice payment form
+ */
+export type paymentForm = {
+  _: "paymentForm";
 
   /**
-   * Product photo; may be null
-   * @type {photo} {@link photo}
+   * The payment form identifier
+   * @type {int64} {@link int64}
    */
-  readonly product_photo?: photo$Input | null;
+  id: int64;
+
+  /**
+   * Type of the payment form
+   * @type {PaymentFormType} {@link PaymentFormType}
+   */
+  type: PaymentFormType;
+
+  /**
+   * User identifier of the seller bot
+   * @type {int53} {@link int53}
+   */
+  seller_bot_user_id: int53;
+
+  /**
+   * Information about the product
+   * @type {productInfo} {@link productInfo}
+   */
+  product_info: productInfo;
+};
+
+/**
+ * Version of {@link paymentForm} for method parameters.
+ *
+ * Contains information about an invoice payment form
+ */
+export type paymentForm$Input = {
+  readonly _: "paymentForm";
+
+  /**
+   * The payment form identifier
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
+
+  /**
+   * Type of the payment form
+   * @type {PaymentFormType} {@link PaymentFormType}
+   */
+  readonly type?: PaymentFormType$Input;
+
+  /**
+   * User identifier of the seller bot
+   * @type {int53} {@link int53}
+   */
+  readonly seller_bot_user_id?: int53;
+
+  /**
+   * Information about the product
+   * @type {productInfo} {@link productInfo}
+   */
+  readonly product_info?: productInfo$Input;
 };
 
 /**
@@ -23331,40 +26144,10 @@ export type paymentResult$Input = {
 };
 
 /**
- * Contains information about a successful payment
+ * The payment was done using a third-party payment provider
  */
-export type paymentReceipt = {
-  _: "paymentReceipt";
-
-  /**
-   * Product title
-   * @type {string} {@link string}
-   */
-  title: string;
-
-  /**
-   * Contains information about a successful payment
-   * @type {formattedText} {@link formattedText}
-   */
-  description: formattedText;
-
-  /**
-   * Product photo; may be null
-   * @type {photo} {@link photo}
-   */
-  photo: photo | null;
-
-  /**
-   * Point in time (Unix timestamp) when the payment was made
-   * @type {int32} {@link int32}
-   */
-  date: int32;
-
-  /**
-   * User identifier of the seller bot
-   * @type {int53} {@link int53}
-   */
-  seller_bot_user_id: int53;
+export type paymentReceiptTypeRegular = {
+  _: "paymentReceiptTypeRegular";
 
   /**
    * User identifier of the payment provider bot
@@ -23404,42 +26187,12 @@ export type paymentReceipt = {
 };
 
 /**
- * Version of {@link paymentReceipt} for method parameters.
+ * Version of {@link paymentReceiptTypeRegular} for method parameters.
  *
- * Contains information about a successful payment
+ * The payment was done using a third-party payment provider
  */
-export type paymentReceipt$Input = {
-  readonly _: "paymentReceipt";
-
-  /**
-   * Product title
-   * @type {string} {@link string}
-   */
-  readonly title?: string;
-
-  /**
-   * Contains information about a successful payment
-   * @type {formattedText} {@link formattedText}
-   */
-  readonly description?: formattedText$Input;
-
-  /**
-   * Product photo; may be null
-   * @type {photo} {@link photo}
-   */
-  readonly photo?: photo$Input | null;
-
-  /**
-   * Point in time (Unix timestamp) when the payment was made
-   * @type {int32} {@link int32}
-   */
-  readonly date?: int32;
-
-  /**
-   * User identifier of the seller bot
-   * @type {int53} {@link int53}
-   */
-  readonly seller_bot_user_id?: int53;
+export type paymentReceiptTypeRegular$Input = {
+  readonly _: "paymentReceiptTypeRegular";
 
   /**
    * User identifier of the payment provider bot
@@ -23476,6 +26229,110 @@ export type paymentReceipt$Input = {
    * @type {int53} {@link int53}
    */
   readonly tip_amount?: int53;
+};
+
+/**
+ * The payment was done using Telegram stars
+ */
+export type paymentReceiptTypeStars = {
+  _: "paymentReceiptTypeStars";
+
+  /**
+   * Number of stars that were paid
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * Unique identifier of the transaction that can be used to dispute it
+   * @type {string} {@link string}
+   */
+  transaction_id: string;
+};
+
+/**
+ * Version of {@link paymentReceiptTypeStars} for method parameters.
+ *
+ * The payment was done using Telegram stars
+ */
+export type paymentReceiptTypeStars$Input = {
+  readonly _: "paymentReceiptTypeStars";
+
+  /**
+   * Number of stars that were paid
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * Unique identifier of the transaction that can be used to dispute it
+   * @type {string} {@link string}
+   */
+  readonly transaction_id?: string;
+};
+
+/**
+ * Contains information about a successful payment
+ */
+export type paymentReceipt = {
+  _: "paymentReceipt";
+
+  /**
+   * Information about the product
+   * @type {productInfo} {@link productInfo}
+   */
+  product_info: productInfo;
+
+  /**
+   * Point in time (Unix timestamp) when the payment was made
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+
+  /**
+   * User identifier of the seller bot
+   * @type {int53} {@link int53}
+   */
+  seller_bot_user_id: int53;
+
+  /**
+   * Type of the payment receipt
+   * @type {PaymentReceiptType} {@link PaymentReceiptType}
+   */
+  type: PaymentReceiptType;
+};
+
+/**
+ * Version of {@link paymentReceipt} for method parameters.
+ *
+ * Contains information about a successful payment
+ */
+export type paymentReceipt$Input = {
+  readonly _: "paymentReceipt";
+
+  /**
+   * Information about the product
+   * @type {productInfo} {@link productInfo}
+   */
+  readonly product_info?: productInfo$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the payment was made
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+
+  /**
+   * User identifier of the seller bot
+   * @type {int53} {@link int53}
+   */
+  readonly seller_bot_user_id?: int53;
+
+  /**
+   * Type of the payment receipt
+   * @type {PaymentReceiptType} {@link PaymentReceiptType}
+   */
+  readonly type?: PaymentReceiptType$Input;
 };
 
 /**
@@ -23593,7 +26450,7 @@ export type messageExtendedMediaPreview = {
   height: int32;
 
   /**
-   * Media duration; 0 if unknown
+   * Media duration, in seconds; 0 if unknown
    * @type {int32} {@link int32}
    */
   duration: int32;
@@ -23632,7 +26489,7 @@ export type messageExtendedMediaPreview$Input = {
   readonly height?: int32;
 
   /**
-   * Media duration; 0 if unknown
+   * Media duration, in seconds; 0 if unknown
    * @type {int32} {@link int32}
    */
   readonly duration?: int32;
@@ -23799,7 +26656,7 @@ export type premiumGiveawayParameters = {
   /**
    * The list of two-letter ISO 3166-1 alpha-2 codes of countries, users from which will be eligible for the giveaway. If empty, then all users can participate in the giveaway.
    *
-   * - There can be up to getOption("giveaway_country_count_max") chosen countries. Users with phone number that was bought on Fragment can participate in any giveaway and the country code "FT" must not be specified in the list
+   * - There can be up to getOption("giveaway_country_count_max") chosen countries. Users with phone number that was bought at https://fragment.com can participate in any giveaway and the country code "FT" must not be specified in the list
    * @type {vector<string>} {@link vector<string>}
    */
   country_codes: vector<string>;
@@ -23854,7 +26711,7 @@ export type premiumGiveawayParameters$Input = {
   /**
    * The list of two-letter ISO 3166-1 alpha-2 codes of countries, users from which will be eligible for the giveaway. If empty, then all users can participate in the giveaway.
    *
-   * - There can be up to getOption("giveaway_country_count_max") chosen countries. Users with phone number that was bought on Fragment can participate in any giveaway and the country code "FT" must not be specified in the list
+   * - There can be up to getOption("giveaway_country_count_max") chosen countries. Users with phone number that was bought at https://fragment.com can participate in any giveaway and the country code "FT" must not be specified in the list
    * @type {vector<string>} {@link vector<string>}
    */
   readonly country_codes?: vector$Input<string>;
@@ -26293,6 +29150,12 @@ export type messageAnimation = {
   caption: formattedText;
 
   /**
+   * True, if caption must be shown above the animation; otherwise, caption must be shown below the animation
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+
+  /**
    * True, if the animation preview must be covered by a spoiler animation
    * @type {Bool} {@link Bool}
    */
@@ -26324,6 +29187,12 @@ export type messageAnimation$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly caption?: formattedText$Input;
+
+  /**
+   * True, if caption must be shown above the animation; otherwise, caption must be shown below the animation
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 
   /**
    * True, if the animation preview must be covered by a spoiler animation
@@ -26437,6 +29306,12 @@ export type messagePhoto = {
   caption: formattedText;
 
   /**
+   * True, if caption must be shown above the photo; otherwise, caption must be shown below the photo
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+
+  /**
    * True, if the photo preview must be covered by a spoiler animation
    * @type {Bool} {@link Bool}
    */
@@ -26468,6 +29343,12 @@ export type messagePhoto$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly caption?: formattedText$Input;
+
+  /**
+   * True, if caption must be shown above the photo; otherwise, caption must be shown below the photo
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 
   /**
    * True, if the photo preview must be covered by a spoiler animation
@@ -26541,6 +29422,12 @@ export type messageVideo = {
   caption: formattedText;
 
   /**
+   * True, if caption must be shown above the video; otherwise, caption must be shown below the video
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+
+  /**
    * True, if the video preview must be covered by a spoiler animation
    * @type {Bool} {@link Bool}
    */
@@ -26572,6 +29459,12 @@ export type messageVideo$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly caption?: formattedText$Input;
+
+  /**
+   * True, if caption must be shown above the video; otherwise, caption must be shown below the video
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 
   /**
    * True, if the video preview must be covered by a spoiler animation
@@ -26767,13 +29660,13 @@ export type messageLocation = {
   location: location;
 
   /**
-   * Time relative to the message send date, for which the location can be updated, in seconds
+   * Time relative to the message send date, for which the location can be updated, in seconds; if 0x7FFFFFFF, then location can be updated forever
    * @type {int32} {@link int32}
    */
   live_period: int32;
 
   /**
-   * Left time for which the location can be updated, in seconds. updateMessageContent is not sent when this field changes
+   * Left time for which the location can be updated, in seconds. If 0, then the location can't be updated anymore. The update updateMessageContent is not sent when this field changes
    * @type {int32} {@link int32}
    */
   expires_in: int32;
@@ -26806,13 +29699,13 @@ export type messageLocation$Input = {
   readonly location?: location$Input;
 
   /**
-   * Time relative to the message send date, for which the location can be updated, in seconds
+   * Time relative to the message send date, for which the location can be updated, in seconds; if 0x7FFFFFFF, then location can be updated forever
    * @type {int32} {@link int32}
    */
   readonly live_period?: int32;
 
   /**
-   * Left time for which the location can be updated, in seconds. updateMessageContent is not sent when this field changes
+   * Left time for which the location can be updated, in seconds. If 0, then the location can't be updated anymore. The update updateMessageContent is not sent when this field changes
    * @type {int32} {@link int32}
    */
   readonly expires_in?: int32;
@@ -26933,13 +29826,13 @@ export type messageDice = {
   _: "messageDice";
 
   /**
-   * The animated stickers with the initial dice animation; may be null if unknown. updateMessageContent will be sent when the sticker became known
+   * The animated stickers with the initial dice animation; may be null if unknown. The update updateMessageContent will be sent when the sticker became known
    * @type {DiceStickers} {@link DiceStickers}
    */
   initial_state: DiceStickers | null;
 
   /**
-   * The animated stickers with the final dice animation; may be null if unknown. updateMessageContent will be sent when the sticker became known
+   * The animated stickers with the final dice animation; may be null if unknown. The update updateMessageContent will be sent when the sticker became known
    * @type {DiceStickers} {@link DiceStickers}
    */
   final_state: DiceStickers | null;
@@ -26972,13 +29865,13 @@ export type messageDice$Input = {
   readonly _: "messageDice";
 
   /**
-   * The animated stickers with the initial dice animation; may be null if unknown. updateMessageContent will be sent when the sticker became known
+   * The animated stickers with the initial dice animation; may be null if unknown. The update updateMessageContent will be sent when the sticker became known
    * @type {DiceStickers} {@link DiceStickers}
    */
   readonly initial_state?: DiceStickers$Input | null;
 
   /**
-   * The animated stickers with the final dice animation; may be null if unknown. updateMessageContent will be sent when the sticker became known
+   * The animated stickers with the final dice animation; may be null if unknown. The update updateMessageContent will be sent when the sticker became known
    * @type {DiceStickers} {@link DiceStickers}
    */
   readonly final_state?: DiceStickers$Input | null;
@@ -27117,22 +30010,10 @@ export type messageInvoice = {
   _: "messageInvoice";
 
   /**
-   * Product title
-   * @type {string} {@link string}
+   * Information about the product
+   * @type {productInfo} {@link productInfo}
    */
-  title: string;
-
-  /**
-   * A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice
-   * @type {formattedText} {@link formattedText}
-   */
-  description: formattedText;
-
-  /**
-   * Product photo; may be null
-   * @type {photo} {@link photo}
-   */
-  photo: photo | null;
+  product_info: productInfo;
 
   /**
    * Currency for the product price
@@ -27186,22 +30067,10 @@ export type messageInvoice$Input = {
   readonly _: "messageInvoice";
 
   /**
-   * Product title
-   * @type {string} {@link string}
+   * Information about the product
+   * @type {productInfo} {@link productInfo}
    */
-  readonly title?: string;
-
-  /**
-   * A message with an invoice from a bot. Use getInternalLink with internalLinkTypeBotStart to share the invoice
-   * @type {formattedText} {@link formattedText}
-   */
-  readonly description?: formattedText$Input;
-
-  /**
-   * Product photo; may be null
-   * @type {photo} {@link photo}
-   */
-  readonly photo?: photo$Input | null;
+  readonly product_info?: productInfo$Input;
 
   /**
    * Currency for the product price
@@ -27395,7 +30264,7 @@ export type messageVideoChatEnded$Input = {
 };
 
 /**
- * A message with information about an invite to a video chat
+ * A message with information about an invitation to a video chat
  */
 export type messageInviteVideoChatParticipants = {
   _: "messageInviteVideoChatParticipants";
@@ -27416,7 +30285,7 @@ export type messageInviteVideoChatParticipants = {
 /**
  * Version of {@link messageInviteVideoChatParticipants} for method parameters.
  *
- * A message with information about an invite to a video chat
+ * A message with information about an invitation to a video chat
  */
 export type messageInviteVideoChatParticipants$Input = {
   readonly _: "messageInviteVideoChatParticipants";
@@ -28941,10 +31810,10 @@ export type messageUsersShared = {
   _: "messageUsersShared";
 
   /**
-   * Identifier of the shared users
-   * @type {vector<int53>} {@link vector<int53>}
+   * The shared users
+   * @type {vector<sharedUser>} {@link vector<sharedUser>}
    */
-  user_ids: vector<int53>;
+  users: vector<sharedUser>;
 
   /**
    * Identifier of the keyboard button with the request
@@ -28962,10 +31831,10 @@ export type messageUsersShared$Input = {
   readonly _: "messageUsersShared";
 
   /**
-   * Identifier of the shared users
-   * @type {vector<int53>} {@link vector<int53>}
+   * The shared users
+   * @type {vector<sharedUser>} {@link vector<sharedUser>}
    */
-  readonly user_ids?: vector$Input<int53>;
+  readonly users?: vector$Input<sharedUser$Input>;
 
   /**
    * Identifier of the keyboard button with the request
@@ -28981,10 +31850,10 @@ export type messageChatShared = {
   _: "messageChatShared";
 
   /**
-   * Identifier of the shared chat
-   * @type {int53} {@link int53}
+   * The shared chat
+   * @type {sharedChat} {@link sharedChat}
    */
-  chat_id: int53;
+  chat: sharedChat;
 
   /**
    * Identifier of the keyboard button with the request
@@ -29002,10 +31871,10 @@ export type messageChatShared$Input = {
   readonly _: "messageChatShared";
 
   /**
-   * Identifier of the shared chat
-   * @type {int53} {@link int53}
+   * The shared chat
+   * @type {sharedChat} {@link sharedChat}
    */
-  readonly chat_id?: int53;
+  readonly chat?: sharedChat$Input;
 
   /**
    * Identifier of the keyboard button with the request
@@ -29515,7 +32384,7 @@ export type textEntityTypePreCode$Input = {
 };
 
 /**
- * Text that must be formatted as if inside a blockquote HTML tag
+ * Text that must be formatted as if inside a blockquote HTML tag; not supported in secret chats
  */
 export type textEntityTypeBlockQuote = {
   _: "textEntityTypeBlockQuote";
@@ -29524,10 +32393,26 @@ export type textEntityTypeBlockQuote = {
 /**
  * Version of {@link textEntityTypeBlockQuote} for method parameters.
  *
- * Text that must be formatted as if inside a blockquote HTML tag
+ * Text that must be formatted as if inside a blockquote HTML tag; not supported in secret chats
  */
 export type textEntityTypeBlockQuote$Input = {
   readonly _: "textEntityTypeBlockQuote";
+};
+
+/**
+ * Text that must be formatted as if inside a blockquote HTML tag and collapsed by default to 3 lines with the ability to show full text; not supported in secret chats
+ */
+export type textEntityTypeExpandableBlockQuote = {
+  _: "textEntityTypeExpandableBlockQuote";
+};
+
+/**
+ * Version of {@link textEntityTypeExpandableBlockQuote} for method parameters.
+ *
+ * Text that must be formatted as if inside a blockquote HTML tag and collapsed by default to 3 lines with the ability to show full text; not supported in secret chats
+ */
+export type textEntityTypeExpandableBlockQuote$Input = {
+  readonly _: "textEntityTypeExpandableBlockQuote";
 };
 
 /**
@@ -29819,6 +32704,12 @@ export type messageSendOptions = {
   scheduling_state: MessageSchedulingState | null;
 
   /**
+   * Identifier of the effect to apply to the message; applicable only to sendMessage and sendMessageAlbum in private chats
+   * @type {int64} {@link int64}
+   */
+  effect_id: int64;
+
+  /**
    * Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates
    * @type {int32} {@link int32}
    */
@@ -29870,6 +32761,12 @@ export type messageSendOptions$Input = {
   readonly scheduling_state?: MessageSchedulingState$Input | null;
 
   /**
+   * Identifier of the effect to apply to the message; applicable only to sendMessage and sendMessageAlbum in private chats
+   * @type {int64} {@link int64}
+   */
+  readonly effect_id?: int64$Input;
+
+  /**
    * Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates
    * @type {int32} {@link int32}
    */
@@ -29905,6 +32802,12 @@ export type messageCopyOptions = {
    * @type {formattedText} {@link formattedText}
    */
   new_caption: formattedText | null;
+
+  /**
+   * True, if new caption must be shown above the animation; otherwise, new caption must be shown below the animation; not supported in secret chats. Ignored if replace_caption is false
+   * @type {Bool} {@link Bool}
+   */
+  new_show_caption_above_media: Bool;
 };
 
 /**
@@ -29932,6 +32835,12 @@ export type messageCopyOptions$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly new_caption?: formattedText$Input | null;
+
+  /**
+   * True, if new caption must be shown above the animation; otherwise, new caption must be shown below the animation; not supported in secret chats. Ignored if replace_caption is false
+   * @type {Bool} {@link Bool}
+   */
+  readonly new_show_caption_above_media?: Bool$Input;
 };
 
 /**
@@ -29941,7 +32850,9 @@ export type inputMessageText = {
   _: "inputMessageText";
 
   /**
-   * Formatted text to be sent; 0-getOption("message_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities are allowed to be specified manually
+   * Formatted text to be sent; 0-getOption("message_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote,
+   *
+   * - Code, Pre, PreCode, TextUrl and MentionName entities are allowed to be specified manually
    * @type {formattedText} {@link formattedText}
    */
   text: formattedText;
@@ -29968,7 +32879,9 @@ export type inputMessageText$Input = {
   readonly _: "inputMessageText";
 
   /**
-   * Formatted text to be sent; 0-getOption("message_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities are allowed to be specified manually
+   * Formatted text to be sent; 0-getOption("message_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote,
+   *
+   * - Code, Pre, PreCode, TextUrl and MentionName entities are allowed to be specified manually
    * @type {formattedText} {@link formattedText}
    */
   readonly text?: formattedText$Input;
@@ -30035,6 +32948,12 @@ export type inputMessageAnimation = {
   caption: formattedText | null;
 
   /**
+   * True, if caption must be shown above the animation; otherwise, caption must be shown below the animation; not supported in secret chats
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+
+  /**
    * True, if the animation preview must be covered by a spoiler animation; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
@@ -30090,6 +33009,12 @@ export type inputMessageAnimation$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
+
+  /**
+   * True, if caption must be shown above the animation; otherwise, caption must be shown below the animation; not supported in secret chats
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 
   /**
    * True, if the animation preview must be covered by a spoiler animation; not supported in secret chats
@@ -30293,6 +33218,12 @@ export type inputMessagePhoto = {
   caption: formattedText | null;
 
   /**
+   * True, if caption must be shown above the photo; otherwise, caption must be shown below the photo; not supported in secret chats
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+
+  /**
    * Photo self-destruct type; pass null if none; private chats only
    * @type {MessageSelfDestructType} {@link MessageSelfDestructType}
    */
@@ -30348,6 +33279,12 @@ export type inputMessagePhoto$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
+
+  /**
+   * True, if caption must be shown above the photo; otherwise, caption must be shown below the photo; not supported in secret chats
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 
   /**
    * Photo self-destruct type; pass null if none; private chats only
@@ -30493,6 +33430,12 @@ export type inputMessageVideo = {
   caption: formattedText | null;
 
   /**
+   * True, if caption must be shown above the video; otherwise, caption must be shown below the video; not supported in secret chats
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+
+  /**
    * Video self-destruct type; pass null if none; private chats only
    * @type {MessageSelfDestructType} {@link MessageSelfDestructType}
    */
@@ -30562,6 +33505,12 @@ export type inputMessageVideo$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
+   * True, if caption must be shown above the video; otherwise, caption must be shown below the video; not supported in secret chats
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
+
+  /**
    * Video self-destruct type; pass null if none; private chats only
    * @type {MessageSelfDestructType} {@link MessageSelfDestructType}
    */
@@ -30593,7 +33542,7 @@ export type inputMessageVideoNote = {
   thumbnail: inputThumbnail | null;
 
   /**
-   * Duration of the video, in seconds
+   * Duration of the video, in seconds; 0-60
    * @type {int32} {@link int32}
    */
   duration: int32;
@@ -30632,7 +33581,7 @@ export type inputMessageVideoNote$Input = {
   readonly thumbnail?: inputThumbnail$Input | null;
 
   /**
-   * Duration of the video, in seconds
+   * Duration of the video, in seconds; 0-60
    * @type {int32} {@link int32}
    */
   readonly duration?: int32;
@@ -30657,7 +33606,7 @@ export type inputMessageVoiceNote = {
   _: "inputMessageVoiceNote";
 
   /**
-   * Voice note to be sent
+   * Voice note to be sent. The voice note must be encoded with the Opus codec and stored inside an OGG container with a single audio channel, or be in MP3 or M4A format as regular audio
    * @type {InputFile} {@link InputFile}
    */
   voice_note: InputFile;
@@ -30696,7 +33645,7 @@ export type inputMessageVoiceNote$Input = {
   readonly _: "inputMessageVoiceNote";
 
   /**
-   * Voice note to be sent
+   * Voice note to be sent. The voice note must be encoded with the Opus codec and stored inside an OGG container with a single audio channel, or be in MP3 or M4A format as regular audio
    * @type {InputFile} {@link InputFile}
    */
   readonly voice_note?: InputFile$Input;
@@ -30739,7 +33688,7 @@ export type inputMessageLocation = {
   location: location;
 
   /**
-   * Period for which the location can be updated, in seconds; must be between 60 and 86400 for a live location and 0 otherwise
+   * Period for which the location can be updated, in seconds; must be between 60 and 86400 for a temporary live location, 0x7FFFFFFF for permanent live location, and 0 otherwise
    * @type {int32} {@link int32}
    */
   live_period: int32;
@@ -30772,7 +33721,7 @@ export type inputMessageLocation$Input = {
   readonly location?: location$Input;
 
   /**
-   * Period for which the location can be updated, in seconds; must be between 60 and 86400 for a live location and 0 otherwise
+   * Period for which the location can be updated, in seconds; must be between 60 and 86400 for a temporary live location, 0x7FFFFFFF for permanent live location, and 0 otherwise
    * @type {int32} {@link int32}
    */
   readonly live_period?: int32;
@@ -30981,7 +33930,7 @@ export type inputMessageInvoice = {
   payload: bytes;
 
   /**
-   * Payment provider token
+   * Payment provider token; may be empty for payments in Telegram Stars
    * @type {string} {@link string}
    */
   provider_token: string;
@@ -31062,7 +34011,7 @@ export type inputMessageInvoice$Input = {
   readonly payload?: bytes$Input;
 
   /**
-   * Payment provider token
+   * Payment provider token; may be empty for payments in Telegram Stars
    * @type {string} {@link string}
    */
   readonly provider_token?: string;
@@ -31093,16 +34042,16 @@ export type inputMessagePoll = {
   _: "inputMessagePoll";
 
   /**
-   * Poll question; 1-255 characters (up to 300 characters for bots)
-   * @type {string} {@link string}
+   * Poll question; 1-255 characters (up to 300 characters for bots). Only custom emoji entities are allowed to be added and only by Premium users
+   * @type {formattedText} {@link formattedText}
    */
-  question: string;
+  question: formattedText;
 
   /**
-   * List of poll answer options, 2-10 strings 1-100 characters each
-   * @type {vector<string>} {@link vector<string>}
+   * List of poll answer options, 2-10 strings 1-100 characters each. Only custom emoji entities are allowed to be added and only by Premium users
+   * @type {vector<formattedText>} {@link vector<formattedText>}
    */
-  options: vector<string>;
+  options: vector<formattedText>;
 
   /**
    * True, if the poll voters are anonymous. Non-anonymous polls can't be sent or forwarded to channels
@@ -31144,16 +34093,16 @@ export type inputMessagePoll$Input = {
   readonly _: "inputMessagePoll";
 
   /**
-   * Poll question; 1-255 characters (up to 300 characters for bots)
-   * @type {string} {@link string}
+   * Poll question; 1-255 characters (up to 300 characters for bots). Only custom emoji entities are allowed to be added and only by Premium users
+   * @type {formattedText} {@link formattedText}
    */
-  readonly question?: string;
+  readonly question?: formattedText$Input;
 
   /**
-   * List of poll answer options, 2-10 strings 1-100 characters each
-   * @type {vector<string>} {@link vector<string>}
+   * List of poll answer options, 2-10 strings 1-100 characters each. Only custom emoji entities are allowed to be added and only by Premium users
+   * @type {vector<formattedText>} {@link vector<formattedText>}
    */
-  readonly options?: vector$Input<string>;
+  readonly options?: vector$Input<formattedText$Input>;
 
   /**
    * True, if the poll voters are anonymous. Non-anonymous polls can't be sent or forwarded to channels
@@ -32191,6 +35140,12 @@ export type stickerSet = {
   thumbnail_outline: vector<closedVectorPath>;
 
   /**
+   * True, if the sticker set is owned by the current user
+   * @type {Bool} {@link Bool}
+   */
+  is_owned: Bool;
+
+  /**
    * True, if the sticker set has been installed by the current user
    * @type {Bool} {@link Bool}
    */
@@ -32207,12 +35162,6 @@ export type stickerSet = {
    * @type {Bool} {@link Bool}
    */
   is_official: Bool;
-
-  /**
-   * Format of the stickers in the set
-   * @type {StickerFormat} {@link StickerFormat}
-   */
-  sticker_format: StickerFormat;
 
   /**
    * Type of the stickers in the set
@@ -32290,6 +35239,12 @@ export type stickerSet$Input = {
   readonly thumbnail_outline?: vector$Input<closedVectorPath$Input>;
 
   /**
+   * True, if the sticker set is owned by the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_owned?: Bool$Input;
+
+  /**
    * True, if the sticker set has been installed by the current user
    * @type {Bool} {@link Bool}
    */
@@ -32306,12 +35261,6 @@ export type stickerSet$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_official?: Bool$Input;
-
-  /**
-   * Format of the stickers in the set
-   * @type {StickerFormat} {@link StickerFormat}
-   */
-  readonly sticker_format?: StickerFormat$Input;
 
   /**
    * Type of the stickers in the set
@@ -32387,6 +35336,12 @@ export type stickerSetInfo = {
   thumbnail_outline: vector<closedVectorPath>;
 
   /**
+   * True, if the sticker set is owned by the current user
+   * @type {Bool} {@link Bool}
+   */
+  is_owned: Bool;
+
+  /**
    * True, if the sticker set has been installed by the current user
    * @type {Bool} {@link Bool}
    */
@@ -32403,12 +35358,6 @@ export type stickerSetInfo = {
    * @type {Bool} {@link Bool}
    */
   is_official: Bool;
-
-  /**
-   * Format of the stickers in the set
-   * @type {StickerFormat} {@link StickerFormat}
-   */
-  sticker_format: StickerFormat;
 
   /**
    * Type of the stickers in the set
@@ -32486,6 +35435,12 @@ export type stickerSetInfo$Input = {
   readonly thumbnail_outline?: vector$Input<closedVectorPath$Input>;
 
   /**
+   * True, if the sticker set is owned by the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_owned?: Bool$Input;
+
+  /**
    * True, if the sticker set has been installed by the current user
    * @type {Bool} {@link Bool}
    */
@@ -32502,12 +35457,6 @@ export type stickerSetInfo$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_official?: Bool$Input;
-
-  /**
-   * Format of the stickers in the set
-   * @type {StickerFormat} {@link StickerFormat}
-   */
-  readonly sticker_format?: StickerFormat$Input;
 
   /**
    * Type of the stickers in the set
@@ -32639,7 +35588,55 @@ export type trendingStickerSets$Input = {
 };
 
 /**
- * Contains a list of similar emoji to search for in getStickers and searchStickers
+ * The category contains a list of similar emoji to search for in getStickers and searchStickers for stickers,
+ *
+ * - or getInlineQueryResults with the bot getOption("animation_search_bot_username") for animations
+ */
+export type emojiCategorySourceSearch = {
+  _: "emojiCategorySourceSearch";
+
+  /**
+   * List of emojis for search for
+   * @type {vector<string>} {@link vector<string>}
+   */
+  emojis: vector<string>;
+};
+
+/**
+ * Version of {@link emojiCategorySourceSearch} for method parameters.
+ *
+ * The category contains a list of similar emoji to search for in getStickers and searchStickers for stickers,
+ *
+ * - or getInlineQueryResults with the bot getOption("animation_search_bot_username") for animations
+ */
+export type emojiCategorySourceSearch$Input = {
+  readonly _: "emojiCategorySourceSearch";
+
+  /**
+   * List of emojis for search for
+   * @type {vector<string>} {@link vector<string>}
+   */
+  readonly emojis?: vector$Input<string>;
+};
+
+/**
+ * The category contains premium stickers that must be found by getPremiumStickers
+ */
+export type emojiCategorySourcePremium = {
+  _: "emojiCategorySourcePremium";
+};
+
+/**
+ * Version of {@link emojiCategorySourcePremium} for method parameters.
+ *
+ * The category contains premium stickers that must be found by getPremiumStickers
+ */
+export type emojiCategorySourcePremium$Input = {
+  readonly _: "emojiCategorySourcePremium";
+};
+
+/**
+ * Describes an emoji category
  */
 export type emojiCategory = {
   _: "emojiCategory";
@@ -32657,16 +35654,22 @@ export type emojiCategory = {
   icon: sticker;
 
   /**
-   * List of emojis in the category
-   * @type {vector<string>} {@link vector<string>}
+   * Source of stickers for the emoji category
+   * @type {EmojiCategorySource} {@link EmojiCategorySource}
    */
-  emojis: vector<string>;
+  source: EmojiCategorySource;
+
+  /**
+   * True, if the category must be shown first when choosing a sticker for the start page
+   * @type {Bool} {@link Bool}
+   */
+  is_greeting: Bool;
 };
 
 /**
  * Version of {@link emojiCategory} for method parameters.
  *
- * Contains a list of similar emoji to search for in getStickers and searchStickers
+ * Describes an emoji category
  */
 export type emojiCategory$Input = {
   readonly _: "emojiCategory";
@@ -32684,10 +35687,16 @@ export type emojiCategory$Input = {
   readonly icon?: sticker$Input;
 
   /**
-   * List of emojis in the category
-   * @type {vector<string>} {@link vector<string>}
+   * Source of stickers for the emoji category
+   * @type {EmojiCategorySource} {@link EmojiCategorySource}
    */
-  readonly emojis?: vector$Input<string>;
+  readonly source?: EmojiCategorySource$Input;
+
+  /**
+   * True, if the category must be shown first when choosing a sticker for the start page
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_greeting?: Bool$Input;
 };
 
 /**
@@ -32719,7 +35728,7 @@ export type emojiCategories$Input = {
 };
 
 /**
- * The category must be used by default
+ * The category must be used by default (e.g., for custom emoji or animation search)
  */
 export type emojiCategoryTypeDefault = {
   _: "emojiCategoryTypeDefault";
@@ -32728,10 +35737,26 @@ export type emojiCategoryTypeDefault = {
 /**
  * Version of {@link emojiCategoryTypeDefault} for method parameters.
  *
- * The category must be used by default
+ * The category must be used by default (e.g., for custom emoji or animation search)
  */
 export type emojiCategoryTypeDefault$Input = {
   readonly _: "emojiCategoryTypeDefault";
+};
+
+/**
+ * The category must be used by default for regular sticker selection. It may contain greeting emoji category and premium stickers
+ */
+export type emojiCategoryTypeRegularStickers = {
+  _: "emojiCategoryTypeRegularStickers";
+};
+
+/**
+ * Version of {@link emojiCategoryTypeRegularStickers} for method parameters.
+ *
+ * The category must be used by default for regular sticker selection. It may contain greeting emoji category and premium stickers
+ */
+export type emojiCategoryTypeRegularStickers$Input = {
+  readonly _: "emojiCategoryTypeRegularStickers";
 };
 
 /**
@@ -33886,7 +36911,7 @@ export type story = {
    * True, if the story is saved in the sender's profile and will be available there after expiration
    * @type {Bool} {@link Bool}
    */
-  is_pinned: Bool;
+  is_posted_to_chat_page: Bool;
 
   /**
    * True, if the story is visible only for the current user
@@ -33919,10 +36944,10 @@ export type story = {
   can_be_replied: Bool;
 
   /**
-   * True, if the story's is_pinned value can be changed
+   * True, if the story's is_posted_to_chat_page value can be changed
    * @type {Bool} {@link Bool}
    */
-  can_toggle_is_pinned: Bool;
+  can_toggle_is_posted_to_chat_page: Bool;
 
   /**
    * True, if the story statistics are available through getStoryStatistics
@@ -34039,7 +37064,7 @@ export type story$Input = {
    * True, if the story is saved in the sender's profile and will be available there after expiration
    * @type {Bool} {@link Bool}
    */
-  readonly is_pinned?: Bool$Input;
+  readonly is_posted_to_chat_page?: Bool$Input;
 
   /**
    * True, if the story is visible only for the current user
@@ -34072,10 +37097,10 @@ export type story$Input = {
   readonly can_be_replied?: Bool$Input;
 
   /**
-   * True, if the story's is_pinned value can be changed
+   * True, if the story's is_posted_to_chat_page value can be changed
    * @type {Bool} {@link Bool}
    */
-  readonly can_toggle_is_pinned?: Bool$Input;
+  readonly can_toggle_is_posted_to_chat_page?: Bool$Input;
 
   /**
    * True, if the story statistics are available through getStoryStatistics
@@ -34155,6 +37180,12 @@ export type stories = {
    * @type {vector<story>} {@link vector<story>}
    */
   stories: vector<story>;
+
+  /**
+   * Identifiers of the pinned stories; returned only in getChatPostedToChatPageStories with from_story_id == 0
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  pinned_story_ids: vector<int32>;
 };
 
 /**
@@ -34176,6 +37207,12 @@ export type stories$Input = {
    * @type {vector<story>} {@link vector<story>}
    */
   readonly stories?: vector$Input<story$Input>;
+
+  /**
+   * Identifiers of the pinned stories; returned only in getChatPostedToChatPageStories with from_story_id == 0
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  readonly pinned_story_ids?: vector$Input<int32>;
 };
 
 /**
@@ -34571,6 +37608,210 @@ export type storyInteractions$Input = {
 };
 
 /**
+ * Describes a message that can be used for quick reply
+ */
+export type quickReplyMessage = {
+  _: "quickReplyMessage";
+
+  /**
+   * Unique message identifier among all quick replies
+   * @type {int53} {@link int53}
+   */
+  id: int53;
+
+  /**
+   * The sending state of the message; may be null if the message isn't being sent and didn't fail to be sent
+   * @type {MessageSendingState} {@link MessageSendingState}
+   */
+  sending_state: MessageSendingState | null;
+
+  /**
+   * True, if the message can be edited
+   * @type {Bool} {@link Bool}
+   */
+  can_be_edited: Bool;
+
+  /**
+   * The identifier of the quick reply message to which the message replies; 0 if none
+   * @type {int53} {@link int53}
+   */
+  reply_to_message_id: int53;
+
+  /**
+   * If non-zero, the user identifier of the bot through which this message was sent
+   * @type {int53} {@link int53}
+   */
+  via_bot_user_id: int53;
+
+  /**
+   * Unique identifier of an album this message belongs to; 0 if none. Only audios, documents, photos and videos can be grouped together in albums
+   * @type {int64} {@link int64}
+   */
+  media_album_id: int64;
+
+  /**
+   * Content of the message
+   * @type {MessageContent} {@link MessageContent}
+   */
+  content: MessageContent;
+
+  /**
+   * Inline keyboard reply markup for the message; may be null if none
+   * @type {ReplyMarkup} {@link ReplyMarkup}
+   */
+  reply_markup: ReplyMarkup | null;
+};
+
+/**
+ * Version of {@link quickReplyMessage} for method parameters.
+ *
+ * Describes a message that can be used for quick reply
+ */
+export type quickReplyMessage$Input = {
+  readonly _: "quickReplyMessage";
+
+  /**
+   * Unique message identifier among all quick replies
+   * @type {int53} {@link int53}
+   */
+  readonly id?: int53;
+
+  /**
+   * The sending state of the message; may be null if the message isn't being sent and didn't fail to be sent
+   * @type {MessageSendingState} {@link MessageSendingState}
+   */
+  readonly sending_state?: MessageSendingState$Input | null;
+
+  /**
+   * True, if the message can be edited
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_edited?: Bool$Input;
+
+  /**
+   * The identifier of the quick reply message to which the message replies; 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly reply_to_message_id?: int53;
+
+  /**
+   * If non-zero, the user identifier of the bot through which this message was sent
+   * @type {int53} {@link int53}
+   */
+  readonly via_bot_user_id?: int53;
+
+  /**
+   * Unique identifier of an album this message belongs to; 0 if none. Only audios, documents, photos and videos can be grouped together in albums
+   * @type {int64} {@link int64}
+   */
+  readonly media_album_id?: int64$Input;
+
+  /**
+   * Content of the message
+   * @type {MessageContent} {@link MessageContent}
+   */
+  readonly content?: MessageContent$Input;
+
+  /**
+   * Inline keyboard reply markup for the message; may be null if none
+   * @type {ReplyMarkup} {@link ReplyMarkup}
+   */
+  readonly reply_markup?: ReplyMarkup$Input | null;
+};
+
+/**
+ * Contains a list of quick reply messages
+ */
+export type quickReplyMessages = {
+  _: "quickReplyMessages";
+
+  /**
+   * List of quick reply messages; messages may be null
+   * @type {vector<quickReplyMessage>} {@link vector<quickReplyMessage>}
+   */
+  messages: vector<quickReplyMessage> | null;
+};
+
+/**
+ * Version of {@link quickReplyMessages} for method parameters.
+ *
+ * Contains a list of quick reply messages
+ */
+export type quickReplyMessages$Input = {
+  readonly _: "quickReplyMessages";
+
+  /**
+   * List of quick reply messages; messages may be null
+   * @type {vector<quickReplyMessage>} {@link vector<quickReplyMessage>}
+   */
+  readonly messages?: vector$Input<quickReplyMessage$Input> | null;
+};
+
+/**
+ * Describes a shortcut that can be used for a quick reply
+ */
+export type quickReplyShortcut = {
+  _: "quickReplyShortcut";
+
+  /**
+   * Unique shortcut identifier
+   * @type {int32} {@link int32}
+   */
+  id: int32;
+
+  /**
+   * The name of the shortcut that can be used to use the shortcut
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * The first shortcut message
+   * @type {quickReplyMessage} {@link quickReplyMessage}
+   */
+  first_message: quickReplyMessage;
+
+  /**
+   * The total number of messages in the shortcut
+   * @type {int32} {@link int32}
+   */
+  message_count: int32;
+};
+
+/**
+ * Version of {@link quickReplyShortcut} for method parameters.
+ *
+ * Describes a shortcut that can be used for a quick reply
+ */
+export type quickReplyShortcut$Input = {
+  readonly _: "quickReplyShortcut";
+
+  /**
+   * Unique shortcut identifier
+   * @type {int32} {@link int32}
+   */
+  readonly id?: int32;
+
+  /**
+   * The name of the shortcut that can be used to use the shortcut
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * The first shortcut message
+   * @type {quickReplyMessage} {@link quickReplyMessage}
+   */
+  readonly first_message?: quickReplyMessage$Input;
+
+  /**
+   * The total number of messages in the shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly message_count?: int32;
+};
+
+/**
  * Contains a public forward as a message
  */
 export type publicForwardMessage = {
@@ -34761,6 +38002,12 @@ export type chatBoostLevelFeatures = {
    * @type {Bool} {@link Bool}
    */
   can_recognize_speech: Bool;
+
+  /**
+   * True, if sponsored messages can be disabled in the chat
+   * @type {Bool} {@link Bool}
+   */
+  can_disable_sponsored_messages: Bool;
 };
 
 /**
@@ -34848,6 +38095,12 @@ export type chatBoostLevelFeatures$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly can_recognize_speech?: Bool$Input;
+
+  /**
+   * True, if sponsored messages can be disabled in the chat
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_disable_sponsored_messages?: Bool$Input;
 };
 
 /**
@@ -34903,6 +38156,12 @@ export type chatBoostFeatures = {
    * @type {int32} {@link int32}
    */
   min_speech_recognition_boost_level: int32;
+
+  /**
+   * The minimum boost level allowing to disable sponsored messages in the chat; for channel chats only
+   * @type {int32} {@link int32}
+   */
+  min_sponsored_message_disable_boost_level: int32;
 };
 
 /**
@@ -34960,6 +38219,12 @@ export type chatBoostFeatures$Input = {
    * @type {int32} {@link int32}
    */
   readonly min_speech_recognition_boost_level?: int32;
+
+  /**
+   * The minimum boost level allowing to disable sponsored messages in the chat; for channel chats only
+   * @type {int32} {@link int32}
+   */
+  readonly min_sponsored_message_disable_boost_level?: int32;
 };
 
 /**
@@ -35527,6 +38792,50 @@ export type chatBoostSlots$Input = {
 };
 
 /**
+ * The user requested to resend the code
+ */
+export type resendCodeReasonUserRequest = {
+  _: "resendCodeReasonUserRequest";
+};
+
+/**
+ * Version of {@link resendCodeReasonUserRequest} for method parameters.
+ *
+ * The user requested to resend the code
+ */
+export type resendCodeReasonUserRequest$Input = {
+  readonly _: "resendCodeReasonUserRequest";
+};
+
+/**
+ * The code is re-sent, because device verification has failed
+ */
+export type resendCodeReasonVerificationFailed = {
+  _: "resendCodeReasonVerificationFailed";
+
+  /**
+   * Cause of the verification failure, for example, PLAY_SERVICES_NOT_AVAILABLE, APNS_RECEIVE_TIMEOUT, APNS_INIT_FAILED, etc.
+   * @type {string} {@link string}
+   */
+  error_message: string;
+};
+
+/**
+ * Version of {@link resendCodeReasonVerificationFailed} for method parameters.
+ *
+ * The code is re-sent, because device verification has failed
+ */
+export type resendCodeReasonVerificationFailed$Input = {
+  readonly _: "resendCodeReasonVerificationFailed";
+
+  /**
+   * Cause of the verification failure, for example, PLAY_SERVICES_NOT_AVAILABLE, APNS_RECEIVE_TIMEOUT, APNS_INIT_FAILED, etc.
+   * @type {string} {@link string}
+   */
+  readonly error_message?: string;
+};
+
+/**
  * The call wasn't discarded, or the reason is unknown
  */
 export type callDiscardReasonEmpty = {
@@ -36015,6 +39324,12 @@ export type callStateReady = {
    * @type {Bool} {@link Bool}
    */
   allow_p2p: Bool;
+
+  /**
+   * Custom JSON-encoded call parameters to be passed to tgcalls
+   * @type {string} {@link string}
+   */
+  custom_parameters: string;
 };
 
 /**
@@ -36060,6 +39375,12 @@ export type callStateReady$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly allow_p2p?: Bool$Input;
+
+  /**
+   * Custom JSON-encoded call parameters to be passed to tgcalls
+   * @type {string} {@link string}
+   */
+  readonly custom_parameters?: string;
 };
 
 /**
@@ -37271,6 +40592,12 @@ export type phoneNumberAuthenticationSettings = {
   is_current_phone_number: Bool;
 
   /**
+   * Pass true if there is a SIM card in the current device, but it is not possible to check whether phone number matches
+   * @type {Bool} {@link Bool}
+   */
+  has_unknown_phone_number: Bool;
+
+  /**
    * For official applications only. True, if the application can use Android SMS Retriever API (requires Google Play Services >= 10.2) to automatically receive the authentication code from the SMS. See https://developers.google.com/identity/sms-retriever/ for more details
    * @type {Bool} {@link Bool}
    */
@@ -37314,6 +40641,12 @@ export type phoneNumberAuthenticationSettings$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_current_phone_number?: Bool$Input;
+
+  /**
+   * Pass true if there is a SIM card in the current device, but it is not possible to check whether phone number matches
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_unknown_phone_number?: Bool$Input;
 
   /**
    * For official applications only. True, if the application can use Android SMS Retriever API (requires Google Play Services >= 10.2) to automatically receive the authentication code from the SMS. See https://developers.google.com/identity/sms-retriever/ for more details
@@ -38000,6 +41333,94 @@ export type speechRecognitionResultError$Input = {
    * @type {error} {@link error}
    */
   readonly error?: error$Input;
+};
+
+/**
+ * Describes a connection of the bot with a business account
+ */
+export type businessConnection = {
+  _: "businessConnection";
+
+  /**
+   * Unique identifier of the connection
+   * @type {string} {@link string}
+   */
+  id: string;
+
+  /**
+   * Identifier of the business user that created the connection
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Chat identifier of the private chat with the user
+   * @type {int53} {@link int53}
+   */
+  user_chat_id: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the connection was established
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+
+  /**
+   * True, if the bot can send messages to the connected user; false otherwise
+   * @type {Bool} {@link Bool}
+   */
+  can_reply: Bool;
+
+  /**
+   * True, if the connection is enabled; false otherwise
+   * @type {Bool} {@link Bool}
+   */
+  is_enabled: Bool;
+};
+
+/**
+ * Version of {@link businessConnection} for method parameters.
+ *
+ * Describes a connection of the bot with a business account
+ */
+export type businessConnection$Input = {
+  readonly _: "businessConnection";
+
+  /**
+   * Unique identifier of the connection
+   * @type {string} {@link string}
+   */
+  readonly id?: string;
+
+  /**
+   * Identifier of the business user that created the connection
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Chat identifier of the private chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_chat_id?: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the connection was established
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+
+  /**
+   * True, if the bot can send messages to the connected user; false otherwise
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_reply?: Bool$Input;
+
+  /**
+   * True, if the connection is enabled; false otherwise
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_enabled?: Bool$Input;
 };
 
 /**
@@ -43859,7 +47280,7 @@ export type premiumFeatureProfileBadge$Input = {
 };
 
 /**
- * An emoji status shown along with the user's name
+ * The ability to show an emoji status along with the user's name
  */
 export type premiumFeatureEmojiStatus = {
   _: "premiumFeatureEmojiStatus";
@@ -43868,7 +47289,7 @@ export type premiumFeatureEmojiStatus = {
 /**
  * Version of {@link premiumFeatureEmojiStatus} for method parameters.
  *
- * An emoji status shown along with the user's name
+ * The ability to show an emoji status along with the user's name
  */
 export type premiumFeatureEmojiStatus$Input = {
   readonly _: "premiumFeatureEmojiStatus";
@@ -44052,6 +47473,198 @@ export type premiumFeatureLastSeenTimes = {
  */
 export type premiumFeatureLastSeenTimes$Input = {
   readonly _: "premiumFeatureLastSeenTimes";
+};
+
+/**
+ * The ability to use Business features
+ */
+export type premiumFeatureBusiness = {
+  _: "premiumFeatureBusiness";
+};
+
+/**
+ * Version of {@link premiumFeatureBusiness} for method parameters.
+ *
+ * The ability to use Business features
+ */
+export type premiumFeatureBusiness$Input = {
+  readonly _: "premiumFeatureBusiness";
+};
+
+/**
+ * The ability to set location
+ */
+export type businessFeatureLocation = {
+  _: "businessFeatureLocation";
+};
+
+/**
+ * Version of {@link businessFeatureLocation} for method parameters.
+ *
+ * The ability to set location
+ */
+export type businessFeatureLocation$Input = {
+  readonly _: "businessFeatureLocation";
+};
+
+/**
+ * The ability to set opening hours
+ */
+export type businessFeatureOpeningHours = {
+  _: "businessFeatureOpeningHours";
+};
+
+/**
+ * Version of {@link businessFeatureOpeningHours} for method parameters.
+ *
+ * The ability to set opening hours
+ */
+export type businessFeatureOpeningHours$Input = {
+  readonly _: "businessFeatureOpeningHours";
+};
+
+/**
+ * The ability to use quick replies
+ */
+export type businessFeatureQuickReplies = {
+  _: "businessFeatureQuickReplies";
+};
+
+/**
+ * Version of {@link businessFeatureQuickReplies} for method parameters.
+ *
+ * The ability to use quick replies
+ */
+export type businessFeatureQuickReplies$Input = {
+  readonly _: "businessFeatureQuickReplies";
+};
+
+/**
+ * The ability to set up a greeting message
+ */
+export type businessFeatureGreetingMessage = {
+  _: "businessFeatureGreetingMessage";
+};
+
+/**
+ * Version of {@link businessFeatureGreetingMessage} for method parameters.
+ *
+ * The ability to set up a greeting message
+ */
+export type businessFeatureGreetingMessage$Input = {
+  readonly _: "businessFeatureGreetingMessage";
+};
+
+/**
+ * The ability to set up an away message
+ */
+export type businessFeatureAwayMessage = {
+  _: "businessFeatureAwayMessage";
+};
+
+/**
+ * Version of {@link businessFeatureAwayMessage} for method parameters.
+ *
+ * The ability to set up an away message
+ */
+export type businessFeatureAwayMessage$Input = {
+  readonly _: "businessFeatureAwayMessage";
+};
+
+/**
+ * The ability to create links to the business account with predefined message text
+ */
+export type businessFeatureAccountLinks = {
+  _: "businessFeatureAccountLinks";
+};
+
+/**
+ * Version of {@link businessFeatureAccountLinks} for method parameters.
+ *
+ * The ability to create links to the business account with predefined message text
+ */
+export type businessFeatureAccountLinks$Input = {
+  readonly _: "businessFeatureAccountLinks";
+};
+
+/**
+ * The ability to customize start page
+ */
+export type businessFeatureStartPage = {
+  _: "businessFeatureStartPage";
+};
+
+/**
+ * Version of {@link businessFeatureStartPage} for method parameters.
+ *
+ * The ability to customize start page
+ */
+export type businessFeatureStartPage$Input = {
+  readonly _: "businessFeatureStartPage";
+};
+
+/**
+ * The ability to connect a bot to the account
+ */
+export type businessFeatureBots = {
+  _: "businessFeatureBots";
+};
+
+/**
+ * Version of {@link businessFeatureBots} for method parameters.
+ *
+ * The ability to connect a bot to the account
+ */
+export type businessFeatureBots$Input = {
+  readonly _: "businessFeatureBots";
+};
+
+/**
+ * The ability to show an emoji status along with the business name
+ */
+export type businessFeatureEmojiStatus = {
+  _: "businessFeatureEmojiStatus";
+};
+
+/**
+ * Version of {@link businessFeatureEmojiStatus} for method parameters.
+ *
+ * The ability to show an emoji status along with the business name
+ */
+export type businessFeatureEmojiStatus$Input = {
+  readonly _: "businessFeatureEmojiStatus";
+};
+
+/**
+ * The ability to display folder names for each chat in the chat list
+ */
+export type businessFeatureChatFolderTags = {
+  _: "businessFeatureChatFolderTags";
+};
+
+/**
+ * Version of {@link businessFeatureChatFolderTags} for method parameters.
+ *
+ * The ability to display folder names for each chat in the chat list
+ */
+export type businessFeatureChatFolderTags$Input = {
+  readonly _: "businessFeatureChatFolderTags";
+};
+
+/**
+ * Allowed to use many additional features for stories
+ */
+export type businessFeatureUpgradedStories = {
+  _: "businessFeatureUpgradedStories";
+};
+
+/**
+ * Version of {@link businessFeatureUpgradedStories} for method parameters.
+ *
+ * Allowed to use many additional features for stories
+ */
+export type businessFeatureUpgradedStories$Input = {
+  readonly _: "businessFeatureUpgradedStories";
 };
 
 /**
@@ -44271,6 +47884,34 @@ export type premiumFeatures$Input = {
 };
 
 /**
+ * Contains information about features, available to Business user accounts
+ */
+export type businessFeatures = {
+  _: "businessFeatures";
+
+  /**
+   * The list of available business features
+   * @type {vector<BusinessFeature>} {@link vector<BusinessFeature>}
+   */
+  features: vector<BusinessFeature>;
+};
+
+/**
+ * Version of {@link businessFeatures} for method parameters.
+ *
+ * Contains information about features, available to Business user accounts
+ */
+export type businessFeatures$Input = {
+  readonly _: "businessFeatures";
+
+  /**
+   * The list of available business features
+   * @type {vector<BusinessFeature>} {@link vector<BusinessFeature>}
+   */
+  readonly features?: vector$Input<BusinessFeature$Input>;
+};
+
+/**
  * A limit was exceeded
  */
 export type premiumSourceLimitExceeded = {
@@ -44324,6 +47965,34 @@ export type premiumSourceFeature$Input = {
    * @type {PremiumFeature} {@link PremiumFeature}
    */
   readonly feature?: PremiumFeature$Input;
+};
+
+/**
+ * A user tried to use a Business feature
+ */
+export type premiumSourceBusinessFeature = {
+  _: "premiumSourceBusinessFeature";
+
+  /**
+   * The used feature; pass null if none specific feature was used
+   * @type {BusinessFeature} {@link BusinessFeature}
+   */
+  feature: BusinessFeature | null;
+};
+
+/**
+ * Version of {@link premiumSourceBusinessFeature} for method parameters.
+ *
+ * A user tried to use a Business feature
+ */
+export type premiumSourceBusinessFeature$Input = {
+  readonly _: "premiumSourceBusinessFeature";
+
+  /**
+   * The used feature; pass null if none specific feature was used
+   * @type {BusinessFeature} {@link BusinessFeature}
+   */
+  readonly feature?: BusinessFeature$Input | null;
 };
 
 /**
@@ -44439,6 +48108,46 @@ export type premiumFeaturePromotionAnimation$Input = {
 };
 
 /**
+ * Describes a promotion animation for a Business feature
+ */
+export type businessFeaturePromotionAnimation = {
+  _: "businessFeaturePromotionAnimation";
+
+  /**
+   * Business feature
+   * @type {BusinessFeature} {@link BusinessFeature}
+   */
+  feature: BusinessFeature;
+
+  /**
+   * Promotion animation for the feature
+   * @type {animation} {@link animation}
+   */
+  animation: animation;
+};
+
+/**
+ * Version of {@link businessFeaturePromotionAnimation} for method parameters.
+ *
+ * Describes a promotion animation for a Business feature
+ */
+export type businessFeaturePromotionAnimation$Input = {
+  readonly _: "businessFeaturePromotionAnimation";
+
+  /**
+   * Business feature
+   * @type {BusinessFeature} {@link BusinessFeature}
+   */
+  readonly feature?: BusinessFeature$Input;
+
+  /**
+   * Promotion animation for the feature
+   * @type {animation} {@link animation}
+   */
+  readonly animation?: animation$Input;
+};
+
+/**
  * Contains state of Telegram Premium subscription and promotion videos for Premium features
  */
 export type premiumState = {
@@ -44461,6 +48170,12 @@ export type premiumState = {
    * @type {vector<premiumFeaturePromotionAnimation>} {@link vector<premiumFeaturePromotionAnimation>}
    */
   animations: vector<premiumFeaturePromotionAnimation>;
+
+  /**
+   * The list of available promotion animations for Business features
+   * @type {vector<businessFeaturePromotionAnimation>} {@link vector<businessFeaturePromotionAnimation>}
+   */
+  business_animations: vector<businessFeaturePromotionAnimation>;
 };
 
 /**
@@ -44488,6 +48203,12 @@ export type premiumState$Input = {
    * @type {vector<premiumFeaturePromotionAnimation>} {@link vector<premiumFeaturePromotionAnimation>}
    */
   readonly animations?: vector$Input<premiumFeaturePromotionAnimation$Input>;
+
+  /**
+   * The list of available promotion animations for Business features
+   * @type {vector<businessFeaturePromotionAnimation>} {@link vector<businessFeaturePromotionAnimation>}
+   */
+  readonly business_animations?: vector$Input<businessFeaturePromotionAnimation$Input>;
 };
 
 /**
@@ -44699,6 +48420,58 @@ export type storePaymentPurposePremiumGiveaway$Input = {
 };
 
 /**
+ * The user buying Telegram stars
+ */
+export type storePaymentPurposeStars = {
+  _: "storePaymentPurposeStars";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * Number of bought stars
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+};
+
+/**
+ * Version of {@link storePaymentPurposeStars} for method parameters.
+ *
+ * The user buying Telegram stars
+ */
+export type storePaymentPurposeStars$Input = {
+  readonly _: "storePaymentPurposeStars";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * Number of bought stars
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+};
+
+/**
  * The user creating Telegram Premium gift codes for other users
  */
 export type telegramPaymentPurposePremiumGiftCodes = {
@@ -44848,6 +48621,58 @@ export type telegramPaymentPurposePremiumGiveaway$Input = {
    * @type {int32} {@link int32}
    */
   readonly month_count?: int32;
+};
+
+/**
+ * The user buying Telegram stars
+ */
+export type telegramPaymentPurposeStars = {
+  _: "telegramPaymentPurposeStars";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * Number of bought stars
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+};
+
+/**
+ * Version of {@link telegramPaymentPurposeStars} for method parameters.
+ *
+ * The user buying Telegram stars
+ */
+export type telegramPaymentPurposeStars$Input = {
+  readonly _: "telegramPaymentPurposeStars";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * Number of bought stars
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 };
 
 /**
@@ -45385,7 +49210,7 @@ export type backgroundFillFreeformGradient = {
   _: "backgroundFillFreeformGradient";
 
   /**
-   * A list of 3 or 4 colors of the freeform gradients in the RGB24 format
+   * A list of 3 or 4 colors of the freeform gradient in the RGB24 format
    * @type {vector<int32>} {@link vector<int32>}
    */
   colors: vector<int32>;
@@ -45400,7 +49225,7 @@ export type backgroundFillFreeformGradient$Input = {
   readonly _: "backgroundFillFreeformGradient";
 
   /**
-   * A list of 3 or 4 colors of the freeform gradients in the RGB24 format
+   * A list of 3 or 4 colors of the freeform gradient in the RGB24 format
    * @type {vector<int32>} {@link vector<int32>}
    */
   readonly colors?: vector$Input<int32>;
@@ -45779,6 +49604,86 @@ export type chatTheme$Input = {
 };
 
 /**
+ * Describes a time zone
+ */
+export type timeZone = {
+  _: "timeZone";
+
+  /**
+   * Unique time zone identifier
+   * @type {string} {@link string}
+   */
+  id: string;
+
+  /**
+   * Time zone name
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * Current UTC time offset for the time zone
+   * @type {int32} {@link int32}
+   */
+  utc_time_offset: int32;
+};
+
+/**
+ * Version of {@link timeZone} for method parameters.
+ *
+ * Describes a time zone
+ */
+export type timeZone$Input = {
+  readonly _: "timeZone";
+
+  /**
+   * Unique time zone identifier
+   * @type {string} {@link string}
+   */
+  readonly id?: string;
+
+  /**
+   * Time zone name
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * Current UTC time offset for the time zone
+   * @type {int32} {@link int32}
+   */
+  readonly utc_time_offset?: int32;
+};
+
+/**
+ * Contains a list of time zones
+ */
+export type timeZones = {
+  _: "timeZones";
+
+  /**
+   * A list of time zones
+   * @type {vector<timeZone>} {@link vector<timeZone>}
+   */
+  time_zones: vector<timeZone>;
+};
+
+/**
+ * Version of {@link timeZones} for method parameters.
+ *
+ * Contains a list of time zones
+ */
+export type timeZones$Input = {
+  readonly _: "timeZones";
+
+  /**
+   * A list of time zones
+   * @type {vector<timeZone>} {@link vector<timeZone>}
+   */
+  readonly time_zones?: vector$Input<timeZone$Input>;
+};
+
+/**
  * Contains a list of hashtags
  */
 export type hashtags = {
@@ -46063,7 +49968,7 @@ export type checkChatUsernameResultUsernameOccupied$Input = {
 };
 
 /**
- * The username can be purchased at fragment.com
+ * The username can be purchased at https://fragment.com. Information about the username can be received using getCollectibleItemInfo
  */
 export type checkChatUsernameResultUsernamePurchasable = {
   _: "checkChatUsernameResultUsernamePurchasable";
@@ -46072,7 +49977,7 @@ export type checkChatUsernameResultUsernamePurchasable = {
 /**
  * Version of {@link checkChatUsernameResultUsernamePurchasable} for method parameters.
  *
- * The username can be purchased at fragment.com
+ * The username can be purchased at https://fragment.com. Information about the username can be received using getCollectibleItemInfo
  */
 export type checkChatUsernameResultUsernamePurchasable$Input = {
   readonly _: "checkChatUsernameResultUsernamePurchasable";
@@ -48475,6 +52380,22 @@ export type userPrivacySettingRuleAllowContacts$Input = {
 };
 
 /**
+ * A rule to allow all Premium Users to do something; currently, allowed only for userPrivacySettingAllowChatInvites
+ */
+export type userPrivacySettingRuleAllowPremiumUsers = {
+  _: "userPrivacySettingRuleAllowPremiumUsers";
+};
+
+/**
+ * Version of {@link userPrivacySettingRuleAllowPremiumUsers} for method parameters.
+ *
+ * A rule to allow all Premium Users to do something; currently, allowed only for userPrivacySettingAllowChatInvites
+ */
+export type userPrivacySettingRuleAllowPremiumUsers$Input = {
+  readonly _: "userPrivacySettingRuleAllowPremiumUsers";
+};
+
+/**
  * A rule to allow certain specified users to do something
  */
 export type userPrivacySettingRuleAllowUsers = {
@@ -48724,6 +52645,22 @@ export type userPrivacySettingShowBio = {
  */
 export type userPrivacySettingShowBio$Input = {
   readonly _: "userPrivacySettingShowBio";
+};
+
+/**
+ * A privacy setting for managing whether the user's birthdate is visible
+ */
+export type userPrivacySettingShowBirthdate = {
+  _: "userPrivacySettingShowBirthdate";
+};
+
+/**
+ * Version of {@link userPrivacySettingShowBirthdate} for method parameters.
+ *
+ * A privacy setting for managing whether the user's birthdate is visible
+ */
+export type userPrivacySettingShowBirthdate$Input = {
+  readonly _: "userPrivacySettingShowBirthdate";
 };
 
 /**
@@ -50315,6 +54252,38 @@ export type internalLinkTypeBotStartInGroup$Input = {
 };
 
 /**
+ * The link is a link to a business chat. Use getBusinessChatLinkInfo with the provided link name to get information about the link,
+ *
+ * - then open received private chat and replace chat draft with the provided text
+ */
+export type internalLinkTypeBusinessChat = {
+  _: "internalLinkTypeBusinessChat";
+
+  /**
+   * Name of the link
+   * @type {string} {@link string}
+   */
+  link_name: string;
+};
+
+/**
+ * Version of {@link internalLinkTypeBusinessChat} for method parameters.
+ *
+ * The link is a link to a business chat. Use getBusinessChatLinkInfo with the provided link name to get information about the link,
+ *
+ * - then open received private chat and replace chat draft with the provided text
+ */
+export type internalLinkTypeBusinessChat$Input = {
+  readonly _: "internalLinkTypeBusinessChat";
+
+  /**
+   * Name of the link
+   * @type {string} {@link string}
+   */
+  readonly link_name?: string;
+};
+
+/**
  * The link is a link to the change phone number section of the app
  */
 export type internalLinkTypeChangePhoneNumber = {
@@ -50721,7 +54690,7 @@ export type internalLinkTypePassportDataRequest = {
   _: "internalLinkTypePassportDataRequest";
 
   /**
-   * User identifier of the service's bot
+   * User identifier of the service's bot; the corresponding user may be unknown yet
    * @type {int53} {@link int53}
    */
   bot_user_id: int53;
@@ -50762,7 +54731,7 @@ export type internalLinkTypePassportDataRequest$Input = {
   readonly _: "internalLinkTypePassportDataRequest";
 
   /**
-   * User identifier of the service's bot
+   * User identifier of the service's bot; the corresponding user may be unknown yet
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -50795,9 +54764,9 @@ export type internalLinkTypePassportDataRequest$Input = {
 };
 
 /**
- * The link can be used to confirm ownership of a phone number to prevent account deletion. Call sendPhoneNumberConfirmationCode with the given hash and phone number to process the link.
+ * The link can be used to confirm ownership of a phone number to prevent account deletion. Call sendPhoneNumberCode with the given phone number and with phoneNumberCodeTypeConfirmOwnership with the given hash to process the link.
  *
- * - If succeeded, call checkPhoneNumberConfirmationCode to check entered by the user code, or resendPhoneNumberConfirmationCode to resend it
+ * - If succeeded, call checkPhoneNumberCode to check entered by the user code, or resendPhoneNumberCode to resend it
  */
 export type internalLinkTypePhoneNumberConfirmation = {
   _: "internalLinkTypePhoneNumberConfirmation";
@@ -50818,9 +54787,9 @@ export type internalLinkTypePhoneNumberConfirmation = {
 /**
  * Version of {@link internalLinkTypePhoneNumberConfirmation} for method parameters.
  *
- * The link can be used to confirm ownership of a phone number to prevent account deletion. Call sendPhoneNumberConfirmationCode with the given hash and phone number to process the link.
+ * The link can be used to confirm ownership of a phone number to prevent account deletion. Call sendPhoneNumberCode with the given phone number and with phoneNumberCodeTypeConfirmOwnership with the given hash to process the link.
  *
- * - If succeeded, call checkPhoneNumberConfirmationCode to check entered by the user code, or resendPhoneNumberConfirmationCode to resend it
+ * - If succeeded, call checkPhoneNumberCode to check entered by the user code, or resendPhoneNumberCode to resend it
  */
 export type internalLinkTypePhoneNumberConfirmation$Input = {
   readonly _: "internalLinkTypePhoneNumberConfirmation";
@@ -50997,7 +54966,9 @@ export type internalLinkTypeProxy$Input = {
 /**
  * The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link
  *
- * - If the chat is found, open its profile information screen or the chat itself
+ * - If the chat is found, open its profile information screen or the chat itself.
+ *
+ * - If draft text isn't empty and the chat is a private chat with a regular user, then put the draft text in the input field
  */
 export type internalLinkTypePublicChat = {
   _: "internalLinkTypePublicChat";
@@ -51007,6 +54978,12 @@ export type internalLinkTypePublicChat = {
    * @type {string} {@link string}
    */
   chat_username: string;
+
+  /**
+   * Draft text for message to send in the chat
+   * @type {string} {@link string}
+   */
+  draft_text: string;
 };
 
 /**
@@ -51014,7 +54991,9 @@ export type internalLinkTypePublicChat = {
  *
  * The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link
  *
- * - If the chat is found, open its profile information screen or the chat itself
+ * - If the chat is found, open its profile information screen or the chat itself.
+ *
+ * - If draft text isn't empty and the chat is a private chat with a regular user, then put the draft text in the input field
  */
 export type internalLinkTypePublicChat$Input = {
   readonly _: "internalLinkTypePublicChat";
@@ -51024,6 +55003,12 @@ export type internalLinkTypePublicChat$Input = {
    * @type {string} {@link string}
    */
   readonly chat_username?: string;
+
+  /**
+   * Draft text for message to send in the chat
+   * @type {string} {@link string}
+   */
+  readonly draft_text?: string;
 };
 
 /**
@@ -51305,7 +55290,7 @@ export type internalLinkTypeUnsupportedProxy$Input = {
 /**
  * The link is a link to a user by its phone number. Call searchUserByPhoneNumber with the given phone number to process the link.
  *
- * - If the user is found, then call createPrivateChat and open the chat
+ * - If the user is found, then call createPrivateChat and open the chat. If draft text isn't empty, then put the draft text in the input field
  */
 export type internalLinkTypeUserPhoneNumber = {
   _: "internalLinkTypeUserPhoneNumber";
@@ -51315,6 +55300,12 @@ export type internalLinkTypeUserPhoneNumber = {
    * @type {string} {@link string}
    */
   phone_number: string;
+
+  /**
+   * Draft text for message to send in the chat
+   * @type {string} {@link string}
+   */
+  draft_text: string;
 };
 
 /**
@@ -51322,7 +55313,7 @@ export type internalLinkTypeUserPhoneNumber = {
  *
  * The link is a link to a user by its phone number. Call searchUserByPhoneNumber with the given phone number to process the link.
  *
- * - If the user is found, then call createPrivateChat and open the chat
+ * - If the user is found, then call createPrivateChat and open the chat. If draft text isn't empty, then put the draft text in the input field
  */
 export type internalLinkTypeUserPhoneNumber$Input = {
   readonly _: "internalLinkTypeUserPhoneNumber";
@@ -51332,6 +55323,12 @@ export type internalLinkTypeUserPhoneNumber$Input = {
    * @type {string} {@link string}
    */
   readonly phone_number?: string;
+
+  /**
+   * Draft text for message to send in the chat
+   * @type {string} {@link string}
+   */
+  readonly draft_text?: string;
 };
 
 /**
@@ -53607,6 +57604,50 @@ export type suggestedActionGiftPremiumForChristmas$Input = {
 };
 
 /**
+ * Suggests the user to set birthdate
+ */
+export type suggestedActionSetBirthdate = {
+  _: "suggestedActionSetBirthdate";
+};
+
+/**
+ * Version of {@link suggestedActionSetBirthdate} for method parameters.
+ *
+ * Suggests the user to set birthdate
+ */
+export type suggestedActionSetBirthdate$Input = {
+  readonly _: "suggestedActionSetBirthdate";
+};
+
+/**
+ * Suggests the user to extend their expiring Telegram Premium subscription
+ */
+export type suggestedActionExtendPremium = {
+  _: "suggestedActionExtendPremium";
+
+  /**
+   * A URL for managing Telegram Premium subscription
+   * @type {string} {@link string}
+   */
+  manage_premium_subscription_url: string;
+};
+
+/**
+ * Version of {@link suggestedActionExtendPremium} for method parameters.
+ *
+ * Suggests the user to extend their expiring Telegram Premium subscription
+ */
+export type suggestedActionExtendPremium$Input = {
+  readonly _: "suggestedActionExtendPremium";
+
+  /**
+   * A URL for managing Telegram Premium subscription
+   * @type {string} {@link string}
+   */
+  readonly manage_premium_subscription_url?: string;
+};
+
+/**
  * Contains a counter
  */
 export type count = {
@@ -54053,6 +58094,12 @@ export type inputSticker = {
   sticker: InputFile;
 
   /**
+   * Format of the sticker
+   * @type {StickerFormat} {@link StickerFormat}
+   */
+  format: StickerFormat;
+
+  /**
    * String with 1-20 emoji corresponding to the sticker
    * @type {string} {@link string}
    */
@@ -54086,6 +58133,12 @@ export type inputSticker$Input = {
    * @type {InputFile} {@link InputFile}
    */
   readonly sticker?: InputFile$Input;
+
+  /**
+   * Format of the sticker
+   * @type {StickerFormat} {@link StickerFormat}
+   */
+  readonly format?: StickerFormat$Input;
 
   /**
    * String with 1-20 emoji corresponding to the sticker
@@ -55059,6 +59112,134 @@ export type chatStatisticsChannel$Input = {
 };
 
 /**
+ * Contains information about revenue earned from sponsored messages in a chat
+ */
+export type chatRevenueAmount = {
+  _: "chatRevenueAmount";
+
+  /**
+   * Cryptocurrency in which revenue is calculated
+   * @type {string} {@link string}
+   */
+  cryptocurrency: string;
+
+  /**
+   * Total amount of the cryptocurrency earned, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  total_amount: int64;
+
+  /**
+   * Amount of the cryptocurrency that isn't withdrawn yet, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  balance_amount: int64;
+
+  /**
+   * Amount of the cryptocurrency available for withdrawal, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  available_amount: int64;
+};
+
+/**
+ * Version of {@link chatRevenueAmount} for method parameters.
+ *
+ * Contains information about revenue earned from sponsored messages in a chat
+ */
+export type chatRevenueAmount$Input = {
+  readonly _: "chatRevenueAmount";
+
+  /**
+   * Cryptocurrency in which revenue is calculated
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * Total amount of the cryptocurrency earned, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly total_amount?: int64$Input;
+
+  /**
+   * Amount of the cryptocurrency that isn't withdrawn yet, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly balance_amount?: int64$Input;
+
+  /**
+   * Amount of the cryptocurrency available for withdrawal, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly available_amount?: int64$Input;
+};
+
+/**
+ * A detailed statistics about revenue earned from sponsored messages in a chat
+ */
+export type chatRevenueStatistics = {
+  _: "chatRevenueStatistics";
+
+  /**
+   * A graph containing amount of revenue in a given hour
+   * @type {StatisticalGraph} {@link StatisticalGraph}
+   */
+  revenue_by_hour_graph: StatisticalGraph;
+
+  /**
+   * A graph containing amount of revenue
+   * @type {StatisticalGraph} {@link StatisticalGraph}
+   */
+  revenue_graph: StatisticalGraph;
+
+  /**
+   * Amount of earned revenue
+   * @type {chatRevenueAmount} {@link chatRevenueAmount}
+   */
+  revenue_amount: chatRevenueAmount;
+
+  /**
+   * Current conversion rate of the cryptocurrency in which revenue is calculated to USD
+   * @type {double} {@link double}
+   */
+  usd_rate: double;
+};
+
+/**
+ * Version of {@link chatRevenueStatistics} for method parameters.
+ *
+ * A detailed statistics about revenue earned from sponsored messages in a chat
+ */
+export type chatRevenueStatistics$Input = {
+  readonly _: "chatRevenueStatistics";
+
+  /**
+   * A graph containing amount of revenue in a given hour
+   * @type {StatisticalGraph} {@link StatisticalGraph}
+   */
+  readonly revenue_by_hour_graph?: StatisticalGraph$Input;
+
+  /**
+   * A graph containing amount of revenue
+   * @type {StatisticalGraph} {@link StatisticalGraph}
+   */
+  readonly revenue_graph?: StatisticalGraph$Input;
+
+  /**
+   * Amount of earned revenue
+   * @type {chatRevenueAmount} {@link chatRevenueAmount}
+   */
+  readonly revenue_amount?: chatRevenueAmount$Input;
+
+  /**
+   * Current conversion rate of the cryptocurrency in which revenue is calculated to USD
+   * @type {double} {@link double}
+   */
+  readonly usd_rate?: double;
+};
+
+/**
  * A detailed statistics about a message
  */
 export type messageStatistics = {
@@ -55136,6 +59317,302 @@ export type storyStatistics$Input = {
    * @type {StatisticalGraph} {@link StatisticalGraph}
    */
   readonly story_reaction_graph?: StatisticalGraph$Input;
+};
+
+/**
+ * Withdrawal is pending
+ */
+export type chatRevenueWithdrawalStatePending = {
+  _: "chatRevenueWithdrawalStatePending";
+};
+
+/**
+ * Version of {@link chatRevenueWithdrawalStatePending} for method parameters.
+ *
+ * Withdrawal is pending
+ */
+export type chatRevenueWithdrawalStatePending$Input = {
+  readonly _: "chatRevenueWithdrawalStatePending";
+};
+
+/**
+ * Withdrawal was completed
+ */
+export type chatRevenueWithdrawalStateCompleted = {
+  _: "chatRevenueWithdrawalStateCompleted";
+
+  /**
+   * Point in time (Unix timestamp) when the withdrawal was completed
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+
+  /**
+   * The URL where the withdrawal transaction can be viewed
+   * @type {string} {@link string}
+   */
+  url: string;
+};
+
+/**
+ * Version of {@link chatRevenueWithdrawalStateCompleted} for method parameters.
+ *
+ * Withdrawal was completed
+ */
+export type chatRevenueWithdrawalStateCompleted$Input = {
+  readonly _: "chatRevenueWithdrawalStateCompleted";
+
+  /**
+   * Point in time (Unix timestamp) when the withdrawal was completed
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+
+  /**
+   * The URL where the withdrawal transaction can be viewed
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+};
+
+/**
+ * Withdrawal has_failed
+ */
+export type chatRevenueWithdrawalStateFailed = {
+  _: "chatRevenueWithdrawalStateFailed";
+};
+
+/**
+ * Version of {@link chatRevenueWithdrawalStateFailed} for method parameters.
+ *
+ * Withdrawal has_failed
+ */
+export type chatRevenueWithdrawalStateFailed$Input = {
+  readonly _: "chatRevenueWithdrawalStateFailed";
+};
+
+/**
+ * Describes earnings from sponsored messages in a chat in some time frame
+ */
+export type chatRevenueTransactionTypeEarnings = {
+  _: "chatRevenueTransactionTypeEarnings";
+
+  /**
+   * Point in time (Unix timestamp) when the earnings started
+   * @type {int32} {@link int32}
+   */
+  start_date: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the earnings ended
+   * @type {int32} {@link int32}
+   */
+  end_date: int32;
+};
+
+/**
+ * Version of {@link chatRevenueTransactionTypeEarnings} for method parameters.
+ *
+ * Describes earnings from sponsored messages in a chat in some time frame
+ */
+export type chatRevenueTransactionTypeEarnings$Input = {
+  readonly _: "chatRevenueTransactionTypeEarnings";
+
+  /**
+   * Point in time (Unix timestamp) when the earnings started
+   * @type {int32} {@link int32}
+   */
+  readonly start_date?: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the earnings ended
+   * @type {int32} {@link int32}
+   */
+  readonly end_date?: int32;
+};
+
+/**
+ * Describes a withdrawal of earnings
+ */
+export type chatRevenueTransactionTypeWithdrawal = {
+  _: "chatRevenueTransactionTypeWithdrawal";
+
+  /**
+   * Point in time (Unix timestamp) when the earnings withdrawal started
+   * @type {int32} {@link int32}
+   */
+  withdrawal_date: int32;
+
+  /**
+   * Name of the payment provider
+   * @type {string} {@link string}
+   */
+  provider: string;
+
+  /**
+   * State of the withdrawal
+   * @type {ChatRevenueWithdrawalState} {@link ChatRevenueWithdrawalState}
+   */
+  state: ChatRevenueWithdrawalState;
+};
+
+/**
+ * Version of {@link chatRevenueTransactionTypeWithdrawal} for method parameters.
+ *
+ * Describes a withdrawal of earnings
+ */
+export type chatRevenueTransactionTypeWithdrawal$Input = {
+  readonly _: "chatRevenueTransactionTypeWithdrawal";
+
+  /**
+   * Point in time (Unix timestamp) when the earnings withdrawal started
+   * @type {int32} {@link int32}
+   */
+  readonly withdrawal_date?: int32;
+
+  /**
+   * Name of the payment provider
+   * @type {string} {@link string}
+   */
+  readonly provider?: string;
+
+  /**
+   * State of the withdrawal
+   * @type {ChatRevenueWithdrawalState} {@link ChatRevenueWithdrawalState}
+   */
+  readonly state?: ChatRevenueWithdrawalState$Input;
+};
+
+/**
+ * Describes a refund for failed withdrawal of earnings
+ */
+export type chatRevenueTransactionTypeRefund = {
+  _: "chatRevenueTransactionTypeRefund";
+
+  /**
+   * Point in time (Unix timestamp) when the transaction was refunded
+   * @type {int32} {@link int32}
+   */
+  refund_date: int32;
+
+  /**
+   * Name of the payment provider
+   * @type {string} {@link string}
+   */
+  provider: string;
+};
+
+/**
+ * Version of {@link chatRevenueTransactionTypeRefund} for method parameters.
+ *
+ * Describes a refund for failed withdrawal of earnings
+ */
+export type chatRevenueTransactionTypeRefund$Input = {
+  readonly _: "chatRevenueTransactionTypeRefund";
+
+  /**
+   * Point in time (Unix timestamp) when the transaction was refunded
+   * @type {int32} {@link int32}
+   */
+  readonly refund_date?: int32;
+
+  /**
+   * Name of the payment provider
+   * @type {string} {@link string}
+   */
+  readonly provider?: string;
+};
+
+/**
+ * Contains a chat revenue transactions
+ */
+export type chatRevenueTransaction = {
+  _: "chatRevenueTransaction";
+
+  /**
+   * Cryptocurrency in which revenue is calculated
+   * @type {string} {@link string}
+   */
+  cryptocurrency: string;
+
+  /**
+   * The withdrawn amount, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  cryptocurrency_amount: int64;
+
+  /**
+   * Type of the transaction
+   * @type {ChatRevenueTransactionType} {@link ChatRevenueTransactionType}
+   */
+  type: ChatRevenueTransactionType;
+};
+
+/**
+ * Version of {@link chatRevenueTransaction} for method parameters.
+ *
+ * Contains a chat revenue transactions
+ */
+export type chatRevenueTransaction$Input = {
+  readonly _: "chatRevenueTransaction";
+
+  /**
+   * Cryptocurrency in which revenue is calculated
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * The withdrawn amount, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly cryptocurrency_amount?: int64$Input;
+
+  /**
+   * Type of the transaction
+   * @type {ChatRevenueTransactionType} {@link ChatRevenueTransactionType}
+   */
+  readonly type?: ChatRevenueTransactionType$Input;
+};
+
+/**
+ * Contains a list of chat revenue transactions
+ */
+export type chatRevenueTransactions = {
+  _: "chatRevenueTransactions";
+
+  /**
+   * Total number of transactions
+   * @type {int32} {@link int32}
+   */
+  total_count: int32;
+
+  /**
+   * List of transactions
+   * @type {vector<chatRevenueTransaction>} {@link vector<chatRevenueTransaction>}
+   */
+  transactions: vector<chatRevenueTransaction>;
+};
+
+/**
+ * Version of {@link chatRevenueTransactions} for method parameters.
+ *
+ * Contains a list of chat revenue transactions
+ */
+export type chatRevenueTransactions$Input = {
+  readonly _: "chatRevenueTransactions";
+
+  /**
+   * Total number of transactions
+   * @type {int32} {@link int32}
+   */
+  readonly total_count?: int32;
+
+  /**
+   * List of transactions
+   * @type {vector<chatRevenueTransaction>} {@link vector<chatRevenueTransaction>}
+   */
+  readonly transactions?: vector$Input<chatRevenueTransaction$Input>;
 };
 
 /**
@@ -55416,6 +59893,66 @@ export type botCommandScopeChatMember$Input = {
    * @type {int53} {@link int53}
    */
   readonly user_id?: int53;
+};
+
+/**
+ * Checks ownership of a new phone number to change the user's authentication phone number; for official Android and iOS applications only
+ */
+export type phoneNumberCodeTypeChange = {
+  _: "phoneNumberCodeTypeChange";
+};
+
+/**
+ * Version of {@link phoneNumberCodeTypeChange} for method parameters.
+ *
+ * Checks ownership of a new phone number to change the user's authentication phone number; for official Android and iOS applications only
+ */
+export type phoneNumberCodeTypeChange$Input = {
+  readonly _: "phoneNumberCodeTypeChange";
+};
+
+/**
+ * Verifies ownership of a phone number to be added to the user's Telegram Passport
+ */
+export type phoneNumberCodeTypeVerify = {
+  _: "phoneNumberCodeTypeVerify";
+};
+
+/**
+ * Version of {@link phoneNumberCodeTypeVerify} for method parameters.
+ *
+ * Verifies ownership of a phone number to be added to the user's Telegram Passport
+ */
+export type phoneNumberCodeTypeVerify$Input = {
+  readonly _: "phoneNumberCodeTypeVerify";
+};
+
+/**
+ * Confirms ownership of a phone number to prevent account deletion while handling links of the type internalLinkTypePhoneNumberConfirmation
+ */
+export type phoneNumberCodeTypeConfirmOwnership = {
+  _: "phoneNumberCodeTypeConfirmOwnership";
+
+  /**
+   * Hash value from the link
+   * @type {string} {@link string}
+   */
+  hash: string;
+};
+
+/**
+ * Version of {@link phoneNumberCodeTypeConfirmOwnership} for method parameters.
+ *
+ * Confirms ownership of a phone number to prevent account deletion while handling links of the type internalLinkTypePhoneNumberConfirmation
+ */
+export type phoneNumberCodeTypeConfirmOwnership$Input = {
+  readonly _: "phoneNumberCodeTypeConfirmOwnership";
+
+  /**
+   * Hash value from the link
+   * @type {string} {@link string}
+   */
+  readonly hash?: string;
 };
 
 /**
@@ -55987,6 +60524,58 @@ export type updateMessageUnreadReactions$Input = {
 };
 
 /**
+ * A fact-check added to a message was changed
+ */
+export type updateMessageFactCheck = {
+  _: "updateMessageFactCheck";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Message identifier
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+
+  /**
+   * The new fact-check
+   * @type {factCheck} {@link factCheck}
+   */
+  fact_check: factCheck;
+};
+
+/**
+ * Version of {@link updateMessageFactCheck} for method parameters.
+ *
+ * A fact-check added to a message was changed
+ */
+export type updateMessageFactCheck$Input = {
+  readonly _: "updateMessageFactCheck";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Message identifier
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * The new fact-check
+   * @type {factCheck} {@link factCheck}
+   */
+  readonly fact_check?: factCheck$Input;
+};
+
+/**
  * A message with a live location was viewed. When the update is received, the application is supposed to update the live location
  */
 export type updateMessageLiveLocationViewed = {
@@ -56343,6 +60932,86 @@ export type updateChatPosition$Input = {
 };
 
 /**
+ * A chat was added to a chat list
+ */
+export type updateChatAddedToList = {
+  _: "updateChatAddedToList";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * The chat list to which the chat was added
+   * @type {ChatList} {@link ChatList}
+   */
+  chat_list: ChatList;
+};
+
+/**
+ * Version of {@link updateChatAddedToList} for method parameters.
+ *
+ * A chat was added to a chat list
+ */
+export type updateChatAddedToList$Input = {
+  readonly _: "updateChatAddedToList";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The chat list to which the chat was added
+   * @type {ChatList} {@link ChatList}
+   */
+  readonly chat_list?: ChatList$Input;
+};
+
+/**
+ * A chat was removed from a chat list
+ */
+export type updateChatRemovedFromList = {
+  _: "updateChatRemovedFromList";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * The chat list from which the chat was removed
+   * @type {ChatList} {@link ChatList}
+   */
+  chat_list: ChatList;
+};
+
+/**
+ * Version of {@link updateChatRemovedFromList} for method parameters.
+ *
+ * A chat was removed from a chat list
+ */
+export type updateChatRemovedFromList$Input = {
+  readonly _: "updateChatRemovedFromList";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The chat list from which the chat was removed
+   * @type {ChatList} {@link ChatList}
+   */
+  readonly chat_list?: ChatList$Input;
+};
+
+/**
  * Incoming messages were read or the number of unread messages has been changed
  */
 export type updateChatReadInbox = {
@@ -56472,6 +61141,46 @@ export type updateChatActionBar$Input = {
    * @type {ChatActionBar} {@link ChatActionBar}
    */
   readonly action_bar?: ChatActionBar$Input | null;
+};
+
+/**
+ * The bar for managing business bot was changed in a chat
+ */
+export type updateChatBusinessBotManageBar = {
+  _: "updateChatBusinessBotManageBar";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * The new value of the business bot manage bar; may be null
+   * @type {businessBotManageBar} {@link businessBotManageBar}
+   */
+  business_bot_manage_bar: businessBotManageBar | null;
+};
+
+/**
+ * Version of {@link updateChatBusinessBotManageBar} for method parameters.
+ *
+ * The bar for managing business bot was changed in a chat
+ */
+export type updateChatBusinessBotManageBar$Input = {
+  readonly _: "updateChatBusinessBotManageBar";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The new value of the business bot manage bar; may be null
+   * @type {businessBotManageBar} {@link businessBotManageBar}
+   */
+  readonly business_bot_manage_bar?: businessBotManageBar$Input | null;
 };
 
 /**
@@ -57303,6 +62012,12 @@ export type updateChatFolders = {
    * @type {int32} {@link int32}
    */
   main_chat_list_position: int32;
+
+  /**
+   * True, if folder tags are enabled
+   * @type {Bool} {@link Bool}
+   */
+  are_tags_enabled: Bool;
 };
 
 /**
@@ -57324,6 +62039,12 @@ export type updateChatFolders$Input = {
    * @type {int32} {@link int32}
    */
   readonly main_chat_list_position?: int32;
+
+  /**
+   * True, if folder tags are enabled
+   * @type {Bool} {@link Bool}
+   */
+  readonly are_tags_enabled?: Bool$Input;
 };
 
 /**
@@ -57427,6 +62148,130 @@ export type updateSavedMessagesTopicCount$Input = {
 };
 
 /**
+ * Basic information about a quick reply shortcut has changed. This update is guaranteed to come before the quick shortcut name is returned to the application
+ */
+export type updateQuickReplyShortcut = {
+  _: "updateQuickReplyShortcut";
+
+  /**
+   * New data about the shortcut
+   * @type {quickReplyShortcut} {@link quickReplyShortcut}
+   */
+  shortcut: quickReplyShortcut;
+};
+
+/**
+ * Version of {@link updateQuickReplyShortcut} for method parameters.
+ *
+ * Basic information about a quick reply shortcut has changed. This update is guaranteed to come before the quick shortcut name is returned to the application
+ */
+export type updateQuickReplyShortcut$Input = {
+  readonly _: "updateQuickReplyShortcut";
+
+  /**
+   * New data about the shortcut
+   * @type {quickReplyShortcut} {@link quickReplyShortcut}
+   */
+  readonly shortcut?: quickReplyShortcut$Input;
+};
+
+/**
+ * A quick reply shortcut and all its messages were deleted
+ */
+export type updateQuickReplyShortcutDeleted = {
+  _: "updateQuickReplyShortcutDeleted";
+
+  /**
+   * The identifier of the deleted shortcut
+   * @type {int32} {@link int32}
+   */
+  shortcut_id: int32;
+};
+
+/**
+ * Version of {@link updateQuickReplyShortcutDeleted} for method parameters.
+ *
+ * A quick reply shortcut and all its messages were deleted
+ */
+export type updateQuickReplyShortcutDeleted$Input = {
+  readonly _: "updateQuickReplyShortcutDeleted";
+
+  /**
+   * The identifier of the deleted shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+};
+
+/**
+ * The list of quick reply shortcuts has changed
+ */
+export type updateQuickReplyShortcuts = {
+  _: "updateQuickReplyShortcuts";
+
+  /**
+   * The new list of identifiers of quick reply shortcuts
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  shortcut_ids: vector<int32>;
+};
+
+/**
+ * Version of {@link updateQuickReplyShortcuts} for method parameters.
+ *
+ * The list of quick reply shortcuts has changed
+ */
+export type updateQuickReplyShortcuts$Input = {
+  readonly _: "updateQuickReplyShortcuts";
+
+  /**
+   * The new list of identifiers of quick reply shortcuts
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  readonly shortcut_ids?: vector$Input<int32>;
+};
+
+/**
+ * The list of quick reply shortcut messages has changed
+ */
+export type updateQuickReplyShortcutMessages = {
+  _: "updateQuickReplyShortcutMessages";
+
+  /**
+   * The identifier of the shortcut
+   * @type {int32} {@link int32}
+   */
+  shortcut_id: int32;
+
+  /**
+   * The new list of quick reply messages for the shortcut in order from the first to the last sent
+   * @type {vector<quickReplyMessage>} {@link vector<quickReplyMessage>}
+   */
+  messages: vector<quickReplyMessage>;
+};
+
+/**
+ * Version of {@link updateQuickReplyShortcutMessages} for method parameters.
+ *
+ * The list of quick reply shortcut messages has changed
+ */
+export type updateQuickReplyShortcutMessages$Input = {
+  readonly _: "updateQuickReplyShortcutMessages";
+
+  /**
+   * The identifier of the shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * The new list of quick reply messages for the shortcut in order from the first to the last sent
+   * @type {vector<quickReplyMessage>} {@link vector<quickReplyMessage>}
+   */
+  readonly messages?: vector$Input<quickReplyMessage$Input>;
+};
+
+/**
  * Basic information about a topic in a forum chat was changed
  */
 export type updateForumTopicInfo = {
@@ -57504,6 +62349,34 @@ export type updateScopeNotificationSettings$Input = {
    * @type {scopeNotificationSettings} {@link scopeNotificationSettings}
    */
   readonly notification_settings?: scopeNotificationSettings$Input;
+};
+
+/**
+ * Notification settings for reactions were updated
+ */
+export type updateReactionNotificationSettings = {
+  _: "updateReactionNotificationSettings";
+
+  /**
+   * The new notification settings
+   * @type {reactionNotificationSettings} {@link reactionNotificationSettings}
+   */
+  notification_settings: reactionNotificationSettings;
+};
+
+/**
+ * Version of {@link updateReactionNotificationSettings} for method parameters.
+ *
+ * Notification settings for reactions were updated
+ */
+export type updateReactionNotificationSettings$Input = {
+  readonly _: "updateReactionNotificationSettings";
+
+  /**
+   * The new notification settings
+   * @type {reactionNotificationSettings} {@link reactionNotificationSettings}
+   */
+  readonly notification_settings?: reactionNotificationSettings$Input;
 };
 
 /**
@@ -58480,6 +63353,54 @@ export type updateFileRemovedFromDownloads$Input = {
    * @type {downloadedFileCounts} {@link downloadedFileCounts}
    */
   readonly counts?: downloadedFileCounts$Input;
+};
+
+/**
+ * A request can't be completed unless application verification is performed; for official mobile applications only.
+ *
+ * - The method setApplicationVerificationToken must be called once the verification is completed or failed
+ */
+export type updateApplicationVerificationRequired = {
+  _: "updateApplicationVerificationRequired";
+
+  /**
+   * Unique identifier for the verification process
+   * @type {int53} {@link int53}
+   */
+  verification_id: int53;
+
+  /**
+   * Unique nonce for the classic Play Integrity verification (https://developer.android.com/google/play/integrity/classic) for Android,
+   *
+   * - or a unique string to compare with verify_nonce field from a push notification for iOS
+   * @type {string} {@link string}
+   */
+  nonce: string;
+};
+
+/**
+ * Version of {@link updateApplicationVerificationRequired} for method parameters.
+ *
+ * A request can't be completed unless application verification is performed; for official mobile applications only.
+ *
+ * - The method setApplicationVerificationToken must be called once the verification is completed or failed
+ */
+export type updateApplicationVerificationRequired$Input = {
+  readonly _: "updateApplicationVerificationRequired";
+
+  /**
+   * Unique identifier for the verification process
+   * @type {int53} {@link int53}
+   */
+  readonly verification_id?: int53;
+
+  /**
+   * Unique nonce for the classic Play Integrity verification (https://developer.android.com/google/play/integrity/classic) for Android,
+   *
+   * - or a unique string to compare with verify_nonce field from a push notification for iOS
+   * @type {string} {@link string}
+   */
+  readonly nonce?: string;
 };
 
 /**
@@ -59751,6 +64672,46 @@ export type updateActiveEmojiReactions$Input = {
 };
 
 /**
+ * The list of available message effects has changed
+ */
+export type updateAvailableMessageEffects = {
+  _: "updateAvailableMessageEffects";
+
+  /**
+   * The new list of available message effects from emoji reactions
+   * @type {vector<int64>} {@link vector<int64>}
+   */
+  reaction_effect_ids: vector<int64>;
+
+  /**
+   * The new list of available message effects from Premium stickers
+   * @type {vector<int64>} {@link vector<int64>}
+   */
+  sticker_effect_ids: vector<int64>;
+};
+
+/**
+ * Version of {@link updateAvailableMessageEffects} for method parameters.
+ *
+ * The list of available message effects has changed
+ */
+export type updateAvailableMessageEffects$Input = {
+  readonly _: "updateAvailableMessageEffects";
+
+  /**
+   * The new list of available message effects from emoji reactions
+   * @type {vector<int64>} {@link vector<int64>}
+   */
+  readonly reaction_effect_ids?: vector$Input<int64$Input>;
+
+  /**
+   * The new list of available message effects from Premium stickers
+   * @type {vector<int64>} {@link vector<int64>}
+   */
+  readonly sticker_effect_ids?: vector$Input<int64$Input>;
+};
+
+/**
  * The type of default reaction has changed
  */
 export type updateDefaultReactionType = {
@@ -59819,13 +64780,81 @@ export type updateSavedMessagesTags$Input = {
 };
 
 /**
+ * The number of Telegram stars owned by the current user has changed
+ */
+export type updateOwnedStarCount = {
+  _: "updateOwnedStarCount";
+
+  /**
+   * The new number of Telegram stars owned
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+};
+
+/**
+ * Version of {@link updateOwnedStarCount} for method parameters.
+ *
+ * The number of Telegram stars owned by the current user has changed
+ */
+export type updateOwnedStarCount$Input = {
+  readonly _: "updateOwnedStarCount";
+
+  /**
+   * The new number of Telegram stars owned
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+};
+
+/**
+ * The revenue earned from sponsored messages in a chat has changed. If chat revenue screen is opened, then getChatRevenueTransactions may be called to fetch new transactions
+ */
+export type updateChatRevenueAmount = {
+  _: "updateChatRevenueAmount";
+
+  /**
+   * Identifier of the chat
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * New amount of earned revenue
+   * @type {chatRevenueAmount} {@link chatRevenueAmount}
+   */
+  revenue_amount: chatRevenueAmount;
+};
+
+/**
+ * Version of {@link updateChatRevenueAmount} for method parameters.
+ *
+ * The revenue earned from sponsored messages in a chat has changed. If chat revenue screen is opened, then getChatRevenueTransactions may be called to fetch new transactions
+ */
+export type updateChatRevenueAmount$Input = {
+  readonly _: "updateChatRevenueAmount";
+
+  /**
+   * Identifier of the chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * New amount of earned revenue
+   * @type {chatRevenueAmount} {@link chatRevenueAmount}
+   */
+  readonly revenue_amount?: chatRevenueAmount$Input;
+};
+
+/**
  * The parameters of speech recognition without Telegram Premium subscription has changed
  */
 export type updateSpeechRecognitionTrial = {
   _: "updateSpeechRecognitionTrial";
 
   /**
-   * The maximum allowed duration of media for speech recognition without Telegram Premium subscription
+   * The maximum allowed duration of media for speech recognition without Telegram Premium subscription, in seconds
    * @type {int32} {@link int32}
    */
   max_media_duration: int32;
@@ -59858,7 +64887,7 @@ export type updateSpeechRecognitionTrial$Input = {
   readonly _: "updateSpeechRecognitionTrial";
 
   /**
-   * The maximum allowed duration of media for speech recognition without Telegram Premium subscription
+   * The maximum allowed duration of media for speech recognition without Telegram Premium subscription, in seconds
    * @type {int32} {@link int32}
    */
   readonly max_media_duration?: int32;
@@ -60043,43 +65072,63 @@ export type updateSuggestedActions$Input = {
 };
 
 /**
- * Adding users to a chat has failed because of their privacy settings. An invite link can be shared with the users if appropriate
+ * Download or upload file speed for the user was limited, but it can be restored by subscription to Telegram Premium. The notification can be postponed until a being downloaded or uploaded file is visible to the user
+ *
+ * - Use getOption("premium_download_speedup") or getOption("premium_upload_speedup") to get expected speedup after subscription to Telegram Premium
  */
-export type updateAddChatMembersPrivacyForbidden = {
-  _: "updateAddChatMembersPrivacyForbidden";
+export type updateSpeedLimitNotification = {
+  _: "updateSpeedLimitNotification";
 
   /**
-   * Chat identifier
-   * @type {int53} {@link int53}
+   * True, if upload speed was limited; false, if download speed was limited
+   * @type {Bool} {@link Bool}
    */
-  chat_id: int53;
-
-  /**
-   * Identifiers of users, which weren't added because of their privacy settings
-   * @type {vector<int53>} {@link vector<int53>}
-   */
-  user_ids: vector<int53>;
+  is_upload: Bool;
 };
 
 /**
- * Version of {@link updateAddChatMembersPrivacyForbidden} for method parameters.
+ * Version of {@link updateSpeedLimitNotification} for method parameters.
  *
- * Adding users to a chat has failed because of their privacy settings. An invite link can be shared with the users if appropriate
+ * Download or upload file speed for the user was limited, but it can be restored by subscription to Telegram Premium. The notification can be postponed until a being downloaded or uploaded file is visible to the user
+ *
+ * - Use getOption("premium_download_speedup") or getOption("premium_upload_speedup") to get expected speedup after subscription to Telegram Premium
  */
-export type updateAddChatMembersPrivacyForbidden$Input = {
-  readonly _: "updateAddChatMembersPrivacyForbidden";
+export type updateSpeedLimitNotification$Input = {
+  readonly _: "updateSpeedLimitNotification";
 
   /**
-   * Chat identifier
-   * @type {int53} {@link int53}
+   * True, if upload speed was limited; false, if download speed was limited
+   * @type {Bool} {@link Bool}
    */
-  readonly chat_id?: int53;
+  readonly is_upload?: Bool$Input;
+};
+
+/**
+ * The list of contacts that had birthdays recently or will have birthday soon has changed
+ */
+export type updateContactCloseBirthdays = {
+  _: "updateContactCloseBirthdays";
 
   /**
-   * Identifiers of users, which weren't added because of their privacy settings
-   * @type {vector<int53>} {@link vector<int53>}
+   * List of contact users with close birthday
+   * @type {vector<closeBirthdayUser>} {@link vector<closeBirthdayUser>}
    */
-  readonly user_ids?: vector$Input<int53>;
+  close_birthday_users: vector<closeBirthdayUser>;
+};
+
+/**
+ * Version of {@link updateContactCloseBirthdays} for method parameters.
+ *
+ * The list of contacts that had birthdays recently or will have birthday soon has changed
+ */
+export type updateContactCloseBirthdays$Input = {
+  readonly _: "updateContactCloseBirthdays";
+
+  /**
+   * List of contact users with close birthday
+   * @type {vector<closeBirthdayUser>} {@link vector<closeBirthdayUser>}
+   */
+  readonly close_birthday_users?: vector$Input<closeBirthdayUser$Input>;
 };
 
 /**
@@ -60120,6 +65169,166 @@ export type updateAutosaveSettings$Input = {
    * @type {scopeAutosaveSettings} {@link scopeAutosaveSettings}
    */
   readonly settings?: scopeAutosaveSettings$Input | null;
+};
+
+/**
+ * A business connection has changed; for bots only
+ */
+export type updateBusinessConnection = {
+  _: "updateBusinessConnection";
+
+  /**
+   * New data about the connection
+   * @type {businessConnection} {@link businessConnection}
+   */
+  connection: businessConnection;
+};
+
+/**
+ * Version of {@link updateBusinessConnection} for method parameters.
+ *
+ * A business connection has changed; for bots only
+ */
+export type updateBusinessConnection$Input = {
+  readonly _: "updateBusinessConnection";
+
+  /**
+   * New data about the connection
+   * @type {businessConnection} {@link businessConnection}
+   */
+  readonly connection?: businessConnection$Input;
+};
+
+/**
+ * A new message was added to a business account; for bots only
+ */
+export type updateNewBusinessMessage = {
+  _: "updateNewBusinessMessage";
+
+  /**
+   * Unique identifier of the business connection
+   * @type {string} {@link string}
+   */
+  connection_id: string;
+
+  /**
+   * The new message
+   * @type {businessMessage} {@link businessMessage}
+   */
+  message: businessMessage;
+};
+
+/**
+ * Version of {@link updateNewBusinessMessage} for method parameters.
+ *
+ * A new message was added to a business account; for bots only
+ */
+export type updateNewBusinessMessage$Input = {
+  readonly _: "updateNewBusinessMessage";
+
+  /**
+   * Unique identifier of the business connection
+   * @type {string} {@link string}
+   */
+  readonly connection_id?: string;
+
+  /**
+   * The new message
+   * @type {businessMessage} {@link businessMessage}
+   */
+  readonly message?: businessMessage$Input;
+};
+
+/**
+ * A message in a business account was edited; for bots only
+ */
+export type updateBusinessMessageEdited = {
+  _: "updateBusinessMessageEdited";
+
+  /**
+   * Unique identifier of the business connection
+   * @type {string} {@link string}
+   */
+  connection_id: string;
+
+  /**
+   * The edited message
+   * @type {businessMessage} {@link businessMessage}
+   */
+  message: businessMessage;
+};
+
+/**
+ * Version of {@link updateBusinessMessageEdited} for method parameters.
+ *
+ * A message in a business account was edited; for bots only
+ */
+export type updateBusinessMessageEdited$Input = {
+  readonly _: "updateBusinessMessageEdited";
+
+  /**
+   * Unique identifier of the business connection
+   * @type {string} {@link string}
+   */
+  readonly connection_id?: string;
+
+  /**
+   * The edited message
+   * @type {businessMessage} {@link businessMessage}
+   */
+  readonly message?: businessMessage$Input;
+};
+
+/**
+ * Messages in a business account were deleted; for bots only
+ */
+export type updateBusinessMessagesDeleted = {
+  _: "updateBusinessMessagesDeleted";
+
+  /**
+   * Unique identifier of the business connection
+   * @type {string} {@link string}
+   */
+  connection_id: string;
+
+  /**
+   * Identifier of a chat in the business account in which messages were deleted
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Unique message identifiers of the deleted messages
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  message_ids: vector<int53>;
+};
+
+/**
+ * Version of {@link updateBusinessMessagesDeleted} for method parameters.
+ *
+ * Messages in a business account were deleted; for bots only
+ */
+export type updateBusinessMessagesDeleted$Input = {
+  readonly _: "updateBusinessMessagesDeleted";
+
+  /**
+   * Unique identifier of the business connection
+   * @type {string} {@link string}
+   */
+  readonly connection_id?: string;
+
+  /**
+   * Identifier of a chat in the business account in which messages were deleted
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Unique message identifiers of the deleted messages
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly message_ids?: vector$Input<int53>;
 };
 
 /**
@@ -60805,6 +66014,12 @@ export type updateChatMember = {
   invite_link: chatInviteLink | null;
 
   /**
+   * True, if the user has joined the chat after sending a join request and being approved by an administrator
+   * @type {Bool} {@link Bool}
+   */
+  via_join_request: Bool;
+
+  /**
    * True, if the user has joined the chat using an invite link for a chat folder
    * @type {Bool} {@link Bool}
    */
@@ -60854,6 +66069,12 @@ export type updateChatMember$Input = {
    * @type {chatInviteLink} {@link chatInviteLink}
    */
   readonly invite_link?: chatInviteLink$Input | null;
+
+  /**
+   * True, if the user has joined the chat after sending a join request and being approved by an administrator
+   * @type {Bool} {@link Bool}
+   */
+  readonly via_join_request?: Bool$Input;
 
   /**
    * True, if the user has joined the chat using an invite link for a chat folder
@@ -61669,6 +66890,8 @@ export type Ok$Input = ok$Input;
  * Any of:
  * - {@link authenticationCodeTypeTelegramMessage}
  * - {@link authenticationCodeTypeSms}
+ * - {@link authenticationCodeTypeSmsWord}
+ * - {@link authenticationCodeTypeSmsPhrase}
  * - {@link authenticationCodeTypeCall}
  * - {@link authenticationCodeTypeFlashCall}
  * - {@link authenticationCodeTypeMissedCall}
@@ -61679,6 +66902,8 @@ export type Ok$Input = ok$Input;
 export type AuthenticationCodeType =
   | authenticationCodeTypeTelegramMessage
   | authenticationCodeTypeSms
+  | authenticationCodeTypeSmsWord
+  | authenticationCodeTypeSmsPhrase
   | authenticationCodeTypeCall
   | authenticationCodeTypeFlashCall
   | authenticationCodeTypeMissedCall
@@ -61691,6 +66916,8 @@ export type AuthenticationCodeType =
  * Any of:
  * - {@link authenticationCodeTypeTelegramMessage$Input}
  * - {@link authenticationCodeTypeSms$Input}
+ * - {@link authenticationCodeTypeSmsWord$Input}
+ * - {@link authenticationCodeTypeSmsPhrase$Input}
  * - {@link authenticationCodeTypeCall$Input}
  * - {@link authenticationCodeTypeFlashCall$Input}
  * - {@link authenticationCodeTypeMissedCall$Input}
@@ -61701,6 +66928,8 @@ export type AuthenticationCodeType =
 export type AuthenticationCodeType$Input =
   | authenticationCodeTypeTelegramMessage$Input
   | authenticationCodeTypeSms$Input
+  | authenticationCodeTypeSmsWord$Input
+  | authenticationCodeTypeSmsPhrase$Input
   | authenticationCodeTypeCall$Input
   | authenticationCodeTypeFlashCall$Input
   | authenticationCodeTypeMissedCall$Input
@@ -62559,6 +67788,238 @@ export type ChatLocation$Input = chatLocation$Input;
 
 /**
  * Any of:
+ * - {@link birthdate}
+ */
+export type Birthdate = birthdate;
+
+/**
+ * Version of {@link Birthdate} for method parameters.
+ * Any of:
+ * - {@link birthdate$Input}
+ */
+export type Birthdate$Input = birthdate$Input;
+
+/**
+ * Any of:
+ * - {@link closeBirthdayUser}
+ */
+export type CloseBirthdayUser = closeBirthdayUser;
+
+/**
+ * Version of {@link CloseBirthdayUser} for method parameters.
+ * Any of:
+ * - {@link closeBirthdayUser$Input}
+ */
+export type CloseBirthdayUser$Input = closeBirthdayUser$Input;
+
+/**
+ * Any of:
+ * - {@link businessAwayMessageScheduleAlways}
+ * - {@link businessAwayMessageScheduleOutsideOfOpeningHours}
+ * - {@link businessAwayMessageScheduleCustom}
+ */
+export type BusinessAwayMessageSchedule =
+  | businessAwayMessageScheduleAlways
+  | businessAwayMessageScheduleOutsideOfOpeningHours
+  | businessAwayMessageScheduleCustom;
+
+/**
+ * Version of {@link BusinessAwayMessageSchedule} for method parameters.
+ * Any of:
+ * - {@link businessAwayMessageScheduleAlways$Input}
+ * - {@link businessAwayMessageScheduleOutsideOfOpeningHours$Input}
+ * - {@link businessAwayMessageScheduleCustom$Input}
+ */
+export type BusinessAwayMessageSchedule$Input =
+  | businessAwayMessageScheduleAlways$Input
+  | businessAwayMessageScheduleOutsideOfOpeningHours$Input
+  | businessAwayMessageScheduleCustom$Input;
+
+/**
+ * Any of:
+ * - {@link businessLocation}
+ */
+export type BusinessLocation = businessLocation;
+
+/**
+ * Version of {@link BusinessLocation} for method parameters.
+ * Any of:
+ * - {@link businessLocation$Input}
+ */
+export type BusinessLocation$Input = businessLocation$Input;
+
+/**
+ * Any of:
+ * - {@link businessRecipients}
+ */
+export type BusinessRecipients = businessRecipients;
+
+/**
+ * Version of {@link BusinessRecipients} for method parameters.
+ * Any of:
+ * - {@link businessRecipients$Input}
+ */
+export type BusinessRecipients$Input = businessRecipients$Input;
+
+/**
+ * Any of:
+ * - {@link businessAwayMessageSettings}
+ */
+export type BusinessAwayMessageSettings = businessAwayMessageSettings;
+
+/**
+ * Version of {@link BusinessAwayMessageSettings} for method parameters.
+ * Any of:
+ * - {@link businessAwayMessageSettings$Input}
+ */
+export type BusinessAwayMessageSettings$Input = businessAwayMessageSettings$Input;
+
+/**
+ * Any of:
+ * - {@link businessGreetingMessageSettings}
+ */
+export type BusinessGreetingMessageSettings = businessGreetingMessageSettings;
+
+/**
+ * Version of {@link BusinessGreetingMessageSettings} for method parameters.
+ * Any of:
+ * - {@link businessGreetingMessageSettings$Input}
+ */
+export type BusinessGreetingMessageSettings$Input =
+  businessGreetingMessageSettings$Input;
+
+/**
+ * Any of:
+ * - {@link businessConnectedBot}
+ */
+export type BusinessConnectedBot = businessConnectedBot;
+
+/**
+ * Version of {@link BusinessConnectedBot} for method parameters.
+ * Any of:
+ * - {@link businessConnectedBot$Input}
+ */
+export type BusinessConnectedBot$Input = businessConnectedBot$Input;
+
+/**
+ * Any of:
+ * - {@link businessStartPage}
+ */
+export type BusinessStartPage = businessStartPage;
+
+/**
+ * Version of {@link BusinessStartPage} for method parameters.
+ * Any of:
+ * - {@link businessStartPage$Input}
+ */
+export type BusinessStartPage$Input = businessStartPage$Input;
+
+/**
+ * Any of:
+ * - {@link inputBusinessStartPage}
+ */
+export type InputBusinessStartPage = inputBusinessStartPage;
+
+/**
+ * Version of {@link InputBusinessStartPage} for method parameters.
+ * Any of:
+ * - {@link inputBusinessStartPage$Input}
+ */
+export type InputBusinessStartPage$Input = inputBusinessStartPage$Input;
+
+/**
+ * Any of:
+ * - {@link businessOpeningHoursInterval}
+ */
+export type BusinessOpeningHoursInterval = businessOpeningHoursInterval;
+
+/**
+ * Version of {@link BusinessOpeningHoursInterval} for method parameters.
+ * Any of:
+ * - {@link businessOpeningHoursInterval$Input}
+ */
+export type BusinessOpeningHoursInterval$Input = businessOpeningHoursInterval$Input;
+
+/**
+ * Any of:
+ * - {@link businessOpeningHours}
+ */
+export type BusinessOpeningHours = businessOpeningHours;
+
+/**
+ * Version of {@link BusinessOpeningHours} for method parameters.
+ * Any of:
+ * - {@link businessOpeningHours$Input}
+ */
+export type BusinessOpeningHours$Input = businessOpeningHours$Input;
+
+/**
+ * Any of:
+ * - {@link businessInfo}
+ */
+export type BusinessInfo = businessInfo;
+
+/**
+ * Version of {@link BusinessInfo} for method parameters.
+ * Any of:
+ * - {@link businessInfo$Input}
+ */
+export type BusinessInfo$Input = businessInfo$Input;
+
+/**
+ * Any of:
+ * - {@link businessChatLink}
+ */
+export type BusinessChatLink = businessChatLink;
+
+/**
+ * Version of {@link BusinessChatLink} for method parameters.
+ * Any of:
+ * - {@link businessChatLink$Input}
+ */
+export type BusinessChatLink$Input = businessChatLink$Input;
+
+/**
+ * Any of:
+ * - {@link businessChatLinks}
+ */
+export type BusinessChatLinks = businessChatLinks;
+
+/**
+ * Version of {@link BusinessChatLinks} for method parameters.
+ * Any of:
+ * - {@link businessChatLinks$Input}
+ */
+export type BusinessChatLinks$Input = businessChatLinks$Input;
+
+/**
+ * Any of:
+ * - {@link inputBusinessChatLink}
+ */
+export type InputBusinessChatLink = inputBusinessChatLink;
+
+/**
+ * Version of {@link InputBusinessChatLink} for method parameters.
+ * Any of:
+ * - {@link inputBusinessChatLink$Input}
+ */
+export type InputBusinessChatLink$Input = inputBusinessChatLink$Input;
+
+/**
+ * Any of:
+ * - {@link businessChatLinkInfo}
+ */
+export type BusinessChatLinkInfo = businessChatLinkInfo;
+
+/**
+ * Version of {@link BusinessChatLinkInfo} for method parameters.
+ * Any of:
+ * - {@link businessChatLinkInfo$Input}
+ */
+export type BusinessChatLinkInfo$Input = businessChatLinkInfo$Input;
+
+/**
+ * Any of:
  * - {@link chatPhotoStickerTypeRegularOrMask}
  * - {@link chatPhotoStickerTypeCustomEmoji}
  */
@@ -62683,6 +68144,19 @@ export type ChatAdministratorRights$Input = chatAdministratorRights$Input;
 
 /**
  * Any of:
+ * - {@link productInfo}
+ */
+export type ProductInfo = productInfo;
+
+/**
+ * Version of {@link ProductInfo} for method parameters.
+ * Any of:
+ * - {@link productInfo$Input}
+ */
+export type ProductInfo$Input = productInfo$Input;
+
+/**
+ * Any of:
  * - {@link premiumPaymentOption}
  */
 export type PremiumPaymentOption = premiumPaymentOption;
@@ -62746,6 +68220,112 @@ export type PremiumGiftCodeInfo = premiumGiftCodeInfo;
  * - {@link premiumGiftCodeInfo$Input}
  */
 export type PremiumGiftCodeInfo$Input = premiumGiftCodeInfo$Input;
+
+/**
+ * Any of:
+ * - {@link starPaymentOption}
+ */
+export type StarPaymentOption = starPaymentOption;
+
+/**
+ * Version of {@link StarPaymentOption} for method parameters.
+ * Any of:
+ * - {@link starPaymentOption$Input}
+ */
+export type StarPaymentOption$Input = starPaymentOption$Input;
+
+/**
+ * Any of:
+ * - {@link starPaymentOptions}
+ */
+export type StarPaymentOptions = starPaymentOptions;
+
+/**
+ * Version of {@link StarPaymentOptions} for method parameters.
+ * Any of:
+ * - {@link starPaymentOptions$Input}
+ */
+export type StarPaymentOptions$Input = starPaymentOptions$Input;
+
+/**
+ * Any of:
+ * - {@link starTransactionDirectionIncoming}
+ * - {@link starTransactionDirectionOutgoing}
+ */
+export type StarTransactionDirection =
+  | starTransactionDirectionIncoming
+  | starTransactionDirectionOutgoing;
+
+/**
+ * Version of {@link StarTransactionDirection} for method parameters.
+ * Any of:
+ * - {@link starTransactionDirectionIncoming$Input}
+ * - {@link starTransactionDirectionOutgoing$Input}
+ */
+export type StarTransactionDirection$Input =
+  | starTransactionDirectionIncoming$Input
+  | starTransactionDirectionOutgoing$Input;
+
+/**
+ * Any of:
+ * - {@link starTransactionSourceTelegram}
+ * - {@link starTransactionSourceAppStore}
+ * - {@link starTransactionSourceGooglePlay}
+ * - {@link starTransactionSourceFragment}
+ * - {@link starTransactionSourceUser}
+ * - {@link starTransactionSourceUnsupported}
+ */
+export type StarTransactionSource =
+  | starTransactionSourceTelegram
+  | starTransactionSourceAppStore
+  | starTransactionSourceGooglePlay
+  | starTransactionSourceFragment
+  | starTransactionSourceUser
+  | starTransactionSourceUnsupported;
+
+/**
+ * Version of {@link StarTransactionSource} for method parameters.
+ * Any of:
+ * - {@link starTransactionSourceTelegram$Input}
+ * - {@link starTransactionSourceAppStore$Input}
+ * - {@link starTransactionSourceGooglePlay$Input}
+ * - {@link starTransactionSourceFragment$Input}
+ * - {@link starTransactionSourceUser$Input}
+ * - {@link starTransactionSourceUnsupported$Input}
+ */
+export type StarTransactionSource$Input =
+  | starTransactionSourceTelegram$Input
+  | starTransactionSourceAppStore$Input
+  | starTransactionSourceGooglePlay$Input
+  | starTransactionSourceFragment$Input
+  | starTransactionSourceUser$Input
+  | starTransactionSourceUnsupported$Input;
+
+/**
+ * Any of:
+ * - {@link starTransaction}
+ */
+export type StarTransaction = starTransaction;
+
+/**
+ * Version of {@link StarTransaction} for method parameters.
+ * Any of:
+ * - {@link starTransaction$Input}
+ */
+export type StarTransaction$Input = starTransaction$Input;
+
+/**
+ * Any of:
+ * - {@link starTransactions}
+ */
+export type StarTransactions = starTransactions;
+
+/**
+ * Version of {@link StarTransactions} for method parameters.
+ * Any of:
+ * - {@link starTransactions$Input}
+ */
+export type StarTransactions$Input = starTransactions$Input;
 
 /**
  * Any of:
@@ -63598,6 +69178,38 @@ export type UnreadReaction$Input = unreadReaction$Input;
 
 /**
  * Any of:
+ * - {@link messageEffectTypeEmojiReaction}
+ * - {@link messageEffectTypePremiumSticker}
+ */
+export type MessageEffectType =
+  | messageEffectTypeEmojiReaction
+  | messageEffectTypePremiumSticker;
+
+/**
+ * Version of {@link MessageEffectType} for method parameters.
+ * Any of:
+ * - {@link messageEffectTypeEmojiReaction$Input}
+ * - {@link messageEffectTypePremiumSticker$Input}
+ */
+export type MessageEffectType$Input =
+  | messageEffectTypeEmojiReaction$Input
+  | messageEffectTypePremiumSticker$Input;
+
+/**
+ * Any of:
+ * - {@link messageEffect}
+ */
+export type MessageEffect = messageEffect;
+
+/**
+ * Version of {@link MessageEffect} for method parameters.
+ * Any of:
+ * - {@link messageEffect$Input}
+ */
+export type MessageEffect$Input = messageEffect$Input;
+
+/**
+ * Any of:
  * - {@link messageSendingStatePending}
  * - {@link messageSendingStateFailed}
  */
@@ -63676,6 +69288,19 @@ export type InputMessageReplyTo =
 export type InputMessageReplyTo$Input =
   | inputMessageReplyToMessage$Input
   | inputMessageReplyToStory$Input;
+
+/**
+ * Any of:
+ * - {@link factCheck}
+ */
+export type FactCheck = factCheck;
+
+/**
+ * Version of {@link FactCheck} for method parameters.
+ * Any of:
+ * - {@link factCheck$Input}
+ */
+export type FactCheck$Input = factCheck$Input;
 
 /**
  * Any of:
@@ -63783,6 +69408,32 @@ export type MessageCalendar$Input = messageCalendar$Input;
 
 /**
  * Any of:
+ * - {@link businessMessage}
+ */
+export type BusinessMessage = businessMessage;
+
+/**
+ * Version of {@link BusinessMessage} for method parameters.
+ * Any of:
+ * - {@link businessMessage$Input}
+ */
+export type BusinessMessage$Input = businessMessage$Input;
+
+/**
+ * Any of:
+ * - {@link businessMessages}
+ */
+export type BusinessMessages = businessMessages;
+
+/**
+ * Version of {@link BusinessMessages} for method parameters.
+ * Any of:
+ * - {@link businessMessages$Input}
+ */
+export type BusinessMessages$Input = businessMessages$Input;
+
+/**
+ * Any of:
  * - {@link messageSourceChatHistory}
  * - {@link messageSourceMessageThreadHistory}
  * - {@link messageSourceForumTopicHistory}
@@ -63834,37 +69485,6 @@ export type MessageSource$Input =
 
 /**
  * Any of:
- * - {@link messageSponsorTypeBot}
- * - {@link messageSponsorTypeWebApp}
- * - {@link messageSponsorTypePublicChannel}
- * - {@link messageSponsorTypePrivateChannel}
- * - {@link messageSponsorTypeWebsite}
- */
-export type MessageSponsorType =
-  | messageSponsorTypeBot
-  | messageSponsorTypeWebApp
-  | messageSponsorTypePublicChannel
-  | messageSponsorTypePrivateChannel
-  | messageSponsorTypeWebsite;
-
-/**
- * Version of {@link MessageSponsorType} for method parameters.
- * Any of:
- * - {@link messageSponsorTypeBot$Input}
- * - {@link messageSponsorTypeWebApp$Input}
- * - {@link messageSponsorTypePublicChannel$Input}
- * - {@link messageSponsorTypePrivateChannel$Input}
- * - {@link messageSponsorTypeWebsite$Input}
- */
-export type MessageSponsorType$Input =
-  | messageSponsorTypeBot$Input
-  | messageSponsorTypeWebApp$Input
-  | messageSponsorTypePublicChannel$Input
-  | messageSponsorTypePrivateChannel$Input
-  | messageSponsorTypeWebsite$Input;
-
-/**
- * Any of:
  * - {@link messageSponsor}
  */
 export type MessageSponsor = messageSponsor;
@@ -63901,6 +69521,51 @@ export type SponsoredMessages = sponsoredMessages;
  * - {@link sponsoredMessages$Input}
  */
 export type SponsoredMessages$Input = sponsoredMessages$Input;
+
+/**
+ * Any of:
+ * - {@link reportChatSponsoredMessageOption}
+ */
+export type ReportChatSponsoredMessageOption = reportChatSponsoredMessageOption;
+
+/**
+ * Version of {@link ReportChatSponsoredMessageOption} for method parameters.
+ * Any of:
+ * - {@link reportChatSponsoredMessageOption$Input}
+ */
+export type ReportChatSponsoredMessageOption$Input =
+  reportChatSponsoredMessageOption$Input;
+
+/**
+ * Any of:
+ * - {@link reportChatSponsoredMessageResultOk}
+ * - {@link reportChatSponsoredMessageResultFailed}
+ * - {@link reportChatSponsoredMessageResultOptionRequired}
+ * - {@link reportChatSponsoredMessageResultAdsHidden}
+ * - {@link reportChatSponsoredMessageResultPremiumRequired}
+ */
+export type ReportChatSponsoredMessageResult =
+  | reportChatSponsoredMessageResultOk
+  | reportChatSponsoredMessageResultFailed
+  | reportChatSponsoredMessageResultOptionRequired
+  | reportChatSponsoredMessageResultAdsHidden
+  | reportChatSponsoredMessageResultPremiumRequired;
+
+/**
+ * Version of {@link ReportChatSponsoredMessageResult} for method parameters.
+ * Any of:
+ * - {@link reportChatSponsoredMessageResultOk$Input}
+ * - {@link reportChatSponsoredMessageResultFailed$Input}
+ * - {@link reportChatSponsoredMessageResultOptionRequired$Input}
+ * - {@link reportChatSponsoredMessageResultAdsHidden$Input}
+ * - {@link reportChatSponsoredMessageResultPremiumRequired$Input}
+ */
+export type ReportChatSponsoredMessageResult$Input =
+  | reportChatSponsoredMessageResultOk$Input
+  | reportChatSponsoredMessageResultFailed$Input
+  | reportChatSponsoredMessageResultOptionRequired$Input
+  | reportChatSponsoredMessageResultAdsHidden$Input
+  | reportChatSponsoredMessageResultPremiumRequired$Input;
 
 /**
  * Any of:
@@ -63989,6 +69654,42 @@ export type ScopeNotificationSettings = scopeNotificationSettings;
  * - {@link scopeNotificationSettings$Input}
  */
 export type ScopeNotificationSettings$Input = scopeNotificationSettings$Input;
+
+/**
+ * Any of:
+ * - {@link reactionNotificationSourceNone}
+ * - {@link reactionNotificationSourceContacts}
+ * - {@link reactionNotificationSourceAll}
+ */
+export type ReactionNotificationSource =
+  | reactionNotificationSourceNone
+  | reactionNotificationSourceContacts
+  | reactionNotificationSourceAll;
+
+/**
+ * Version of {@link ReactionNotificationSource} for method parameters.
+ * Any of:
+ * - {@link reactionNotificationSourceNone$Input}
+ * - {@link reactionNotificationSourceContacts$Input}
+ * - {@link reactionNotificationSourceAll$Input}
+ */
+export type ReactionNotificationSource$Input =
+  | reactionNotificationSourceNone$Input
+  | reactionNotificationSourceContacts$Input
+  | reactionNotificationSourceAll$Input;
+
+/**
+ * Any of:
+ * - {@link reactionNotificationSettings}
+ */
+export type ReactionNotificationSettings = reactionNotificationSettings;
+
+/**
+ * Version of {@link ReactionNotificationSettings} for method parameters.
+ * Any of:
+ * - {@link reactionNotificationSettings$Input}
+ */
+export type ReactionNotificationSettings$Input = reactionNotificationSettings$Input;
 
 /**
  * Any of:
@@ -64259,6 +69960,19 @@ export type SavedMessagesTags$Input = savedMessagesTags$Input;
 
 /**
  * Any of:
+ * - {@link businessBotManageBar}
+ */
+export type BusinessBotManageBar = businessBotManageBar;
+
+/**
+ * Version of {@link BusinessBotManageBar} for method parameters.
+ * Any of:
+ * - {@link businessBotManageBar$Input}
+ */
+export type BusinessBotManageBar$Input = businessBotManageBar$Input;
+
+/**
+ * Any of:
  * - {@link videoChat}
  */
 export type VideoChat = videoChat;
@@ -64295,6 +70009,45 @@ export type Chats = chats;
  * - {@link chats$Input}
  */
 export type Chats$Input = chats$Input;
+
+/**
+ * Any of:
+ * - {@link failedToAddMember}
+ */
+export type FailedToAddMember = failedToAddMember;
+
+/**
+ * Version of {@link FailedToAddMember} for method parameters.
+ * Any of:
+ * - {@link failedToAddMember$Input}
+ */
+export type FailedToAddMember$Input = failedToAddMember$Input;
+
+/**
+ * Any of:
+ * - {@link failedToAddMembers}
+ */
+export type FailedToAddMembers = failedToAddMembers;
+
+/**
+ * Version of {@link FailedToAddMembers} for method parameters.
+ * Any of:
+ * - {@link failedToAddMembers$Input}
+ */
+export type FailedToAddMembers$Input = failedToAddMembers$Input;
+
+/**
+ * Any of:
+ * - {@link createdBasicGroupChat}
+ */
+export type CreatedBasicGroupChat = createdBasicGroupChat;
+
+/**
+ * Version of {@link CreatedBasicGroupChat} for method parameters.
+ * Any of:
+ * - {@link createdBasicGroupChat$Input}
+ */
+export type CreatedBasicGroupChat$Input = createdBasicGroupChat$Input;
 
 /**
  * Any of:
@@ -64678,6 +70431,32 @@ export type LinkPreviewOptions$Input = linkPreviewOptions$Input;
 
 /**
  * Any of:
+ * - {@link sharedUser}
+ */
+export type SharedUser = sharedUser;
+
+/**
+ * Version of {@link SharedUser} for method parameters.
+ * Any of:
+ * - {@link sharedUser$Input}
+ */
+export type SharedUser$Input = sharedUser$Input;
+
+/**
+ * Any of:
+ * - {@link sharedChat}
+ */
+export type SharedChat = sharedChat;
+
+/**
+ * Version of {@link SharedChat} for method parameters.
+ * Any of:
+ * - {@link sharedChat$Input}
+ */
+export type SharedChat$Input = sharedChat$Input;
+
+/**
+ * Any of:
  * - {@link richTextPlain}
  * - {@link richTextBold}
  * - {@link richTextItalic}
@@ -65047,6 +70826,38 @@ export type PhoneNumberInfo$Input = phoneNumberInfo$Input;
 
 /**
  * Any of:
+ * - {@link collectibleItemTypeUsername}
+ * - {@link collectibleItemTypePhoneNumber}
+ */
+export type CollectibleItemType =
+  | collectibleItemTypeUsername
+  | collectibleItemTypePhoneNumber;
+
+/**
+ * Version of {@link CollectibleItemType} for method parameters.
+ * Any of:
+ * - {@link collectibleItemTypeUsername$Input}
+ * - {@link collectibleItemTypePhoneNumber$Input}
+ */
+export type CollectibleItemType$Input =
+  | collectibleItemTypeUsername$Input
+  | collectibleItemTypePhoneNumber$Input;
+
+/**
+ * Any of:
+ * - {@link collectibleItemInfo}
+ */
+export type CollectibleItemInfo = collectibleItemInfo;
+
+/**
+ * Version of {@link CollectibleItemInfo} for method parameters.
+ * Any of:
+ * - {@link collectibleItemInfo$Input}
+ */
+export type CollectibleItemInfo$Input = collectibleItemInfo$Input;
+
+/**
+ * Any of:
  * - {@link bankCardActionOpenUrl}
  */
 export type BankCardActionOpenUrl = bankCardActionOpenUrl;
@@ -65227,6 +71038,23 @@ export type PaymentOption$Input = paymentOption$Input;
 
 /**
  * Any of:
+ * - {@link paymentFormTypeRegular}
+ * - {@link paymentFormTypeStars}
+ */
+export type PaymentFormType = paymentFormTypeRegular | paymentFormTypeStars;
+
+/**
+ * Version of {@link PaymentFormType} for method parameters.
+ * Any of:
+ * - {@link paymentFormTypeRegular$Input}
+ * - {@link paymentFormTypeStars$Input}
+ */
+export type PaymentFormType$Input =
+  | paymentFormTypeRegular$Input
+  | paymentFormTypeStars$Input;
+
+/**
+ * Any of:
  * - {@link paymentForm}
  */
 export type PaymentForm = paymentForm;
@@ -65263,6 +71091,23 @@ export type PaymentResult = paymentResult;
  * - {@link paymentResult$Input}
  */
 export type PaymentResult$Input = paymentResult$Input;
+
+/**
+ * Any of:
+ * - {@link paymentReceiptTypeRegular}
+ * - {@link paymentReceiptTypeStars}
+ */
+export type PaymentReceiptType = paymentReceiptTypeRegular | paymentReceiptTypeStars;
+
+/**
+ * Version of {@link PaymentReceiptType} for method parameters.
+ * Any of:
+ * - {@link paymentReceiptTypeRegular$Input}
+ * - {@link paymentReceiptTypeStars$Input}
+ */
+export type PaymentReceiptType$Input =
+  | paymentReceiptTypeRegular$Input
+  | paymentReceiptTypeStars$Input;
 
 /**
  * Any of:
@@ -66137,6 +71982,7 @@ export type MessageContent$Input =
  * - {@link textEntityTypePre}
  * - {@link textEntityTypePreCode}
  * - {@link textEntityTypeBlockQuote}
+ * - {@link textEntityTypeExpandableBlockQuote}
  * - {@link textEntityTypeTextUrl}
  * - {@link textEntityTypeMentionName}
  * - {@link textEntityTypeCustomEmoji}
@@ -66160,6 +72006,7 @@ export type TextEntityType =
   | textEntityTypePre
   | textEntityTypePreCode
   | textEntityTypeBlockQuote
+  | textEntityTypeExpandableBlockQuote
   | textEntityTypeTextUrl
   | textEntityTypeMentionName
   | textEntityTypeCustomEmoji
@@ -66185,6 +72032,7 @@ export type TextEntityType =
  * - {@link textEntityTypePre$Input}
  * - {@link textEntityTypePreCode$Input}
  * - {@link textEntityTypeBlockQuote$Input}
+ * - {@link textEntityTypeExpandableBlockQuote$Input}
  * - {@link textEntityTypeTextUrl$Input}
  * - {@link textEntityTypeMentionName$Input}
  * - {@link textEntityTypeCustomEmoji$Input}
@@ -66208,6 +72056,7 @@ export type TextEntityType$Input =
   | textEntityTypePre$Input
   | textEntityTypePreCode$Input
   | textEntityTypeBlockQuote$Input
+  | textEntityTypeExpandableBlockQuote$Input
   | textEntityTypeTextUrl$Input
   | textEntityTypeMentionName$Input
   | textEntityTypeCustomEmoji$Input
@@ -66664,6 +72513,25 @@ export type TrendingStickerSets$Input = trendingStickerSets$Input;
 
 /**
  * Any of:
+ * - {@link emojiCategorySourceSearch}
+ * - {@link emojiCategorySourcePremium}
+ */
+export type EmojiCategorySource =
+  | emojiCategorySourceSearch
+  | emojiCategorySourcePremium;
+
+/**
+ * Version of {@link EmojiCategorySource} for method parameters.
+ * Any of:
+ * - {@link emojiCategorySourceSearch$Input}
+ * - {@link emojiCategorySourcePremium$Input}
+ */
+export type EmojiCategorySource$Input =
+  | emojiCategorySourceSearch$Input
+  | emojiCategorySourcePremium$Input;
+
+/**
+ * Any of:
  * - {@link emojiCategory}
  */
 export type EmojiCategory = emojiCategory;
@@ -66691,11 +72559,13 @@ export type EmojiCategories$Input = emojiCategories$Input;
 /**
  * Any of:
  * - {@link emojiCategoryTypeDefault}
+ * - {@link emojiCategoryTypeRegularStickers}
  * - {@link emojiCategoryTypeEmojiStatus}
  * - {@link emojiCategoryTypeChatPhoto}
  */
 export type EmojiCategoryType =
   | emojiCategoryTypeDefault
+  | emojiCategoryTypeRegularStickers
   | emojiCategoryTypeEmojiStatus
   | emojiCategoryTypeChatPhoto;
 
@@ -66703,11 +72573,13 @@ export type EmojiCategoryType =
  * Version of {@link EmojiCategoryType} for method parameters.
  * Any of:
  * - {@link emojiCategoryTypeDefault$Input}
+ * - {@link emojiCategoryTypeRegularStickers$Input}
  * - {@link emojiCategoryTypeEmojiStatus$Input}
  * - {@link emojiCategoryTypeChatPhoto$Input}
  */
 export type EmojiCategoryType$Input =
   | emojiCategoryTypeDefault$Input
+  | emojiCategoryTypeRegularStickers$Input
   | emojiCategoryTypeEmojiStatus$Input
   | emojiCategoryTypeChatPhoto$Input;
 
@@ -67048,6 +72920,45 @@ export type StoryInteractions$Input = storyInteractions$Input;
 
 /**
  * Any of:
+ * - {@link quickReplyMessage}
+ */
+export type QuickReplyMessage = quickReplyMessage;
+
+/**
+ * Version of {@link QuickReplyMessage} for method parameters.
+ * Any of:
+ * - {@link quickReplyMessage$Input}
+ */
+export type QuickReplyMessage$Input = quickReplyMessage$Input;
+
+/**
+ * Any of:
+ * - {@link quickReplyMessages}
+ */
+export type QuickReplyMessages = quickReplyMessages;
+
+/**
+ * Version of {@link QuickReplyMessages} for method parameters.
+ * Any of:
+ * - {@link quickReplyMessages$Input}
+ */
+export type QuickReplyMessages$Input = quickReplyMessages$Input;
+
+/**
+ * Any of:
+ * - {@link quickReplyShortcut}
+ */
+export type QuickReplyShortcut = quickReplyShortcut;
+
+/**
+ * Version of {@link QuickReplyShortcut} for method parameters.
+ * Any of:
+ * - {@link quickReplyShortcut$Input}
+ */
+export type QuickReplyShortcut$Input = quickReplyShortcut$Input;
+
+/**
+ * Any of:
  * - {@link publicForwardMessage}
  * - {@link publicForwardStory}
  */
@@ -67202,6 +73113,25 @@ export type ChatBoostSlots = chatBoostSlots;
  * - {@link chatBoostSlots$Input}
  */
 export type ChatBoostSlots$Input = chatBoostSlots$Input;
+
+/**
+ * Any of:
+ * - {@link resendCodeReasonUserRequest}
+ * - {@link resendCodeReasonVerificationFailed}
+ */
+export type ResendCodeReason =
+  | resendCodeReasonUserRequest
+  | resendCodeReasonVerificationFailed;
+
+/**
+ * Version of {@link ResendCodeReason} for method parameters.
+ * Any of:
+ * - {@link resendCodeReasonUserRequest$Input}
+ * - {@link resendCodeReasonVerificationFailed$Input}
+ */
+export type ResendCodeReason$Input =
+  | resendCodeReasonUserRequest$Input
+  | resendCodeReasonVerificationFailed$Input;
 
 /**
  * Any of:
@@ -67708,6 +73638,19 @@ export type SpeechRecognitionResult$Input =
   | speechRecognitionResultPending$Input
   | speechRecognitionResultText$Input
   | speechRecognitionResultError$Input;
+
+/**
+ * Any of:
+ * - {@link businessConnection}
+ */
+export type BusinessConnection = businessConnection;
+
+/**
+ * Version of {@link BusinessConnection} for method parameters.
+ * Any of:
+ * - {@link businessConnection$Input}
+ */
+export type BusinessConnection$Input = businessConnection$Input;
 
 /**
  * Any of:
@@ -68471,6 +74414,7 @@ export type PremiumLimitType$Input =
  * - {@link premiumFeatureSavedMessagesTags}
  * - {@link premiumFeatureMessagePrivacy}
  * - {@link premiumFeatureLastSeenTimes}
+ * - {@link premiumFeatureBusiness}
  */
 export type PremiumFeature =
   | premiumFeatureIncreasedLimits
@@ -68494,7 +74438,8 @@ export type PremiumFeature =
   | premiumFeatureBackgroundForBoth
   | premiumFeatureSavedMessagesTags
   | premiumFeatureMessagePrivacy
-  | premiumFeatureLastSeenTimes;
+  | premiumFeatureLastSeenTimes
+  | premiumFeatureBusiness;
 
 /**
  * Version of {@link PremiumFeature} for method parameters.
@@ -68521,6 +74466,7 @@ export type PremiumFeature =
  * - {@link premiumFeatureSavedMessagesTags$Input}
  * - {@link premiumFeatureMessagePrivacy$Input}
  * - {@link premiumFeatureLastSeenTimes$Input}
+ * - {@link premiumFeatureBusiness$Input}
  */
 export type PremiumFeature$Input =
   | premiumFeatureIncreasedLimits$Input
@@ -68544,7 +74490,63 @@ export type PremiumFeature$Input =
   | premiumFeatureBackgroundForBoth$Input
   | premiumFeatureSavedMessagesTags$Input
   | premiumFeatureMessagePrivacy$Input
-  | premiumFeatureLastSeenTimes$Input;
+  | premiumFeatureLastSeenTimes$Input
+  | premiumFeatureBusiness$Input;
+
+/**
+ * Any of:
+ * - {@link businessFeatureLocation}
+ * - {@link businessFeatureOpeningHours}
+ * - {@link businessFeatureQuickReplies}
+ * - {@link businessFeatureGreetingMessage}
+ * - {@link businessFeatureAwayMessage}
+ * - {@link businessFeatureAccountLinks}
+ * - {@link businessFeatureStartPage}
+ * - {@link businessFeatureBots}
+ * - {@link businessFeatureEmojiStatus}
+ * - {@link businessFeatureChatFolderTags}
+ * - {@link businessFeatureUpgradedStories}
+ */
+export type BusinessFeature =
+  | businessFeatureLocation
+  | businessFeatureOpeningHours
+  | businessFeatureQuickReplies
+  | businessFeatureGreetingMessage
+  | businessFeatureAwayMessage
+  | businessFeatureAccountLinks
+  | businessFeatureStartPage
+  | businessFeatureBots
+  | businessFeatureEmojiStatus
+  | businessFeatureChatFolderTags
+  | businessFeatureUpgradedStories;
+
+/**
+ * Version of {@link BusinessFeature} for method parameters.
+ * Any of:
+ * - {@link businessFeatureLocation$Input}
+ * - {@link businessFeatureOpeningHours$Input}
+ * - {@link businessFeatureQuickReplies$Input}
+ * - {@link businessFeatureGreetingMessage$Input}
+ * - {@link businessFeatureAwayMessage$Input}
+ * - {@link businessFeatureAccountLinks$Input}
+ * - {@link businessFeatureStartPage$Input}
+ * - {@link businessFeatureBots$Input}
+ * - {@link businessFeatureEmojiStatus$Input}
+ * - {@link businessFeatureChatFolderTags$Input}
+ * - {@link businessFeatureUpgradedStories$Input}
+ */
+export type BusinessFeature$Input =
+  | businessFeatureLocation$Input
+  | businessFeatureOpeningHours$Input
+  | businessFeatureQuickReplies$Input
+  | businessFeatureGreetingMessage$Input
+  | businessFeatureAwayMessage$Input
+  | businessFeatureAccountLinks$Input
+  | businessFeatureStartPage$Input
+  | businessFeatureBots$Input
+  | businessFeatureEmojiStatus$Input
+  | businessFeatureChatFolderTags$Input
+  | businessFeatureUpgradedStories$Input;
 
 /**
  * Any of:
@@ -68613,8 +74615,22 @@ export type PremiumFeatures$Input = premiumFeatures$Input;
 
 /**
  * Any of:
+ * - {@link businessFeatures}
+ */
+export type BusinessFeatures = businessFeatures;
+
+/**
+ * Version of {@link BusinessFeatures} for method parameters.
+ * Any of:
+ * - {@link businessFeatures$Input}
+ */
+export type BusinessFeatures$Input = businessFeatures$Input;
+
+/**
+ * Any of:
  * - {@link premiumSourceLimitExceeded}
  * - {@link premiumSourceFeature}
+ * - {@link premiumSourceBusinessFeature}
  * - {@link premiumSourceStoryFeature}
  * - {@link premiumSourceLink}
  * - {@link premiumSourceSettings}
@@ -68622,6 +74638,7 @@ export type PremiumFeatures$Input = premiumFeatures$Input;
 export type PremiumSource =
   | premiumSourceLimitExceeded
   | premiumSourceFeature
+  | premiumSourceBusinessFeature
   | premiumSourceStoryFeature
   | premiumSourceLink
   | premiumSourceSettings;
@@ -68631,6 +74648,7 @@ export type PremiumSource =
  * Any of:
  * - {@link premiumSourceLimitExceeded$Input}
  * - {@link premiumSourceFeature$Input}
+ * - {@link premiumSourceBusinessFeature$Input}
  * - {@link premiumSourceStoryFeature$Input}
  * - {@link premiumSourceLink$Input}
  * - {@link premiumSourceSettings$Input}
@@ -68638,6 +74656,7 @@ export type PremiumSource =
 export type PremiumSource$Input =
   | premiumSourceLimitExceeded$Input
   | premiumSourceFeature$Input
+  | premiumSourceBusinessFeature$Input
   | premiumSourceStoryFeature$Input
   | premiumSourceLink$Input
   | premiumSourceSettings$Input;
@@ -68658,6 +74677,20 @@ export type PremiumFeaturePromotionAnimation$Input =
 
 /**
  * Any of:
+ * - {@link businessFeaturePromotionAnimation}
+ */
+export type BusinessFeaturePromotionAnimation = businessFeaturePromotionAnimation;
+
+/**
+ * Version of {@link BusinessFeaturePromotionAnimation} for method parameters.
+ * Any of:
+ * - {@link businessFeaturePromotionAnimation$Input}
+ */
+export type BusinessFeaturePromotionAnimation$Input =
+  businessFeaturePromotionAnimation$Input;
+
+/**
+ * Any of:
  * - {@link premiumState}
  */
 export type PremiumState = premiumState;
@@ -68675,12 +74708,14 @@ export type PremiumState$Input = premiumState$Input;
  * - {@link storePaymentPurposeGiftedPremium}
  * - {@link storePaymentPurposePremiumGiftCodes}
  * - {@link storePaymentPurposePremiumGiveaway}
+ * - {@link storePaymentPurposeStars}
  */
 export type StorePaymentPurpose =
   | storePaymentPurposePremiumSubscription
   | storePaymentPurposeGiftedPremium
   | storePaymentPurposePremiumGiftCodes
-  | storePaymentPurposePremiumGiveaway;
+  | storePaymentPurposePremiumGiveaway
+  | storePaymentPurposeStars;
 
 /**
  * Version of {@link StorePaymentPurpose} for method parameters.
@@ -68689,31 +74724,37 @@ export type StorePaymentPurpose =
  * - {@link storePaymentPurposeGiftedPremium$Input}
  * - {@link storePaymentPurposePremiumGiftCodes$Input}
  * - {@link storePaymentPurposePremiumGiveaway$Input}
+ * - {@link storePaymentPurposeStars$Input}
  */
 export type StorePaymentPurpose$Input =
   | storePaymentPurposePremiumSubscription$Input
   | storePaymentPurposeGiftedPremium$Input
   | storePaymentPurposePremiumGiftCodes$Input
-  | storePaymentPurposePremiumGiveaway$Input;
+  | storePaymentPurposePremiumGiveaway$Input
+  | storePaymentPurposeStars$Input;
 
 /**
  * Any of:
  * - {@link telegramPaymentPurposePremiumGiftCodes}
  * - {@link telegramPaymentPurposePremiumGiveaway}
+ * - {@link telegramPaymentPurposeStars}
  */
 export type TelegramPaymentPurpose =
   | telegramPaymentPurposePremiumGiftCodes
-  | telegramPaymentPurposePremiumGiveaway;
+  | telegramPaymentPurposePremiumGiveaway
+  | telegramPaymentPurposeStars;
 
 /**
  * Version of {@link TelegramPaymentPurpose} for method parameters.
  * Any of:
  * - {@link telegramPaymentPurposePremiumGiftCodes$Input}
  * - {@link telegramPaymentPurposePremiumGiveaway$Input}
+ * - {@link telegramPaymentPurposeStars$Input}
  */
 export type TelegramPaymentPurpose$Input =
   | telegramPaymentPurposePremiumGiftCodes$Input
-  | telegramPaymentPurposePremiumGiveaway$Input;
+  | telegramPaymentPurposePremiumGiveaway$Input
+  | telegramPaymentPurposeStars$Input;
 
 /**
  * Any of:
@@ -68885,6 +74926,32 @@ export type ChatTheme = chatTheme;
  * - {@link chatTheme$Input}
  */
 export type ChatTheme$Input = chatTheme$Input;
+
+/**
+ * Any of:
+ * - {@link timeZone}
+ */
+export type TimeZone = timeZone;
+
+/**
+ * Version of {@link TimeZone} for method parameters.
+ * Any of:
+ * - {@link timeZone$Input}
+ */
+export type TimeZone$Input = timeZone$Input;
+
+/**
+ * Any of:
+ * - {@link timeZones}
+ */
+export type TimeZones = timeZones;
+
+/**
+ * Version of {@link TimeZones} for method parameters.
+ * Any of:
+ * - {@link timeZones$Input}
+ */
+export type TimeZones$Input = timeZones$Input;
 
 /**
  * Any of:
@@ -69424,6 +75491,7 @@ export type StoryPrivacySettings$Input =
  * Any of:
  * - {@link userPrivacySettingRuleAllowAll}
  * - {@link userPrivacySettingRuleAllowContacts}
+ * - {@link userPrivacySettingRuleAllowPremiumUsers}
  * - {@link userPrivacySettingRuleAllowUsers}
  * - {@link userPrivacySettingRuleAllowChatMembers}
  * - {@link userPrivacySettingRuleRestrictAll}
@@ -69434,6 +75502,7 @@ export type StoryPrivacySettings$Input =
 export type UserPrivacySettingRule =
   | userPrivacySettingRuleAllowAll
   | userPrivacySettingRuleAllowContacts
+  | userPrivacySettingRuleAllowPremiumUsers
   | userPrivacySettingRuleAllowUsers
   | userPrivacySettingRuleAllowChatMembers
   | userPrivacySettingRuleRestrictAll
@@ -69446,6 +75515,7 @@ export type UserPrivacySettingRule =
  * Any of:
  * - {@link userPrivacySettingRuleAllowAll$Input}
  * - {@link userPrivacySettingRuleAllowContacts$Input}
+ * - {@link userPrivacySettingRuleAllowPremiumUsers$Input}
  * - {@link userPrivacySettingRuleAllowUsers$Input}
  * - {@link userPrivacySettingRuleAllowChatMembers$Input}
  * - {@link userPrivacySettingRuleRestrictAll$Input}
@@ -69456,6 +75526,7 @@ export type UserPrivacySettingRule =
 export type UserPrivacySettingRule$Input =
   | userPrivacySettingRuleAllowAll$Input
   | userPrivacySettingRuleAllowContacts$Input
+  | userPrivacySettingRuleAllowPremiumUsers$Input
   | userPrivacySettingRuleAllowUsers$Input
   | userPrivacySettingRuleAllowChatMembers$Input
   | userPrivacySettingRuleRestrictAll$Input
@@ -69483,6 +75554,7 @@ export type UserPrivacySettingRules$Input = userPrivacySettingRules$Input;
  * - {@link userPrivacySettingShowLinkInForwardedMessages}
  * - {@link userPrivacySettingShowPhoneNumber}
  * - {@link userPrivacySettingShowBio}
+ * - {@link userPrivacySettingShowBirthdate}
  * - {@link userPrivacySettingAllowChatInvites}
  * - {@link userPrivacySettingAllowCalls}
  * - {@link userPrivacySettingAllowPeerToPeerCalls}
@@ -69495,6 +75567,7 @@ export type UserPrivacySetting =
   | userPrivacySettingShowLinkInForwardedMessages
   | userPrivacySettingShowPhoneNumber
   | userPrivacySettingShowBio
+  | userPrivacySettingShowBirthdate
   | userPrivacySettingAllowChatInvites
   | userPrivacySettingAllowCalls
   | userPrivacySettingAllowPeerToPeerCalls
@@ -69509,6 +75582,7 @@ export type UserPrivacySetting =
  * - {@link userPrivacySettingShowLinkInForwardedMessages$Input}
  * - {@link userPrivacySettingShowPhoneNumber$Input}
  * - {@link userPrivacySettingShowBio$Input}
+ * - {@link userPrivacySettingShowBirthdate$Input}
  * - {@link userPrivacySettingAllowChatInvites$Input}
  * - {@link userPrivacySettingAllowCalls$Input}
  * - {@link userPrivacySettingAllowPeerToPeerCalls$Input}
@@ -69521,6 +75595,7 @@ export type UserPrivacySetting$Input =
   | userPrivacySettingShowLinkInForwardedMessages$Input
   | userPrivacySettingShowPhoneNumber$Input
   | userPrivacySettingShowBio$Input
+  | userPrivacySettingShowBirthdate$Input
   | userPrivacySettingAllowChatInvites$Input
   | userPrivacySettingAllowCalls$Input
   | userPrivacySettingAllowPeerToPeerCalls$Input
@@ -69829,6 +75904,7 @@ export type TargetChat$Input =
  * - {@link internalLinkTypeBotAddToChannel}
  * - {@link internalLinkTypeBotStart}
  * - {@link internalLinkTypeBotStartInGroup}
+ * - {@link internalLinkTypeBusinessChat}
  * - {@link internalLinkTypeChangePhoneNumber}
  * - {@link internalLinkTypeChatBoost}
  * - {@link internalLinkTypeChatFolderInvite}
@@ -69874,6 +75950,7 @@ export type InternalLinkType =
   | internalLinkTypeBotAddToChannel
   | internalLinkTypeBotStart
   | internalLinkTypeBotStartInGroup
+  | internalLinkTypeBusinessChat
   | internalLinkTypeChangePhoneNumber
   | internalLinkTypeChatBoost
   | internalLinkTypeChatFolderInvite
@@ -69921,6 +75998,7 @@ export type InternalLinkType =
  * - {@link internalLinkTypeBotAddToChannel$Input}
  * - {@link internalLinkTypeBotStart$Input}
  * - {@link internalLinkTypeBotStartInGroup$Input}
+ * - {@link internalLinkTypeBusinessChat$Input}
  * - {@link internalLinkTypeChangePhoneNumber$Input}
  * - {@link internalLinkTypeChatBoost$Input}
  * - {@link internalLinkTypeChatFolderInvite$Input}
@@ -69966,6 +76044,7 @@ export type InternalLinkType$Input =
   | internalLinkTypeBotAddToChannel$Input
   | internalLinkTypeBotStart$Input
   | internalLinkTypeBotStartInGroup$Input
+  | internalLinkTypeBusinessChat$Input
   | internalLinkTypeChangePhoneNumber$Input
   | internalLinkTypeChatBoost$Input
   | internalLinkTypeChatFolderInvite$Input
@@ -70551,6 +76630,8 @@ export type TMeUrls$Input = tMeUrls$Input;
  * - {@link suggestedActionRestorePremium}
  * - {@link suggestedActionSubscribeToAnnualPremium}
  * - {@link suggestedActionGiftPremiumForChristmas}
+ * - {@link suggestedActionSetBirthdate}
+ * - {@link suggestedActionExtendPremium}
  */
 export type SuggestedAction =
   | suggestedActionEnableArchiveAndMuteNewChats
@@ -70562,7 +76643,9 @@ export type SuggestedAction =
   | suggestedActionUpgradePremium
   | suggestedActionRestorePremium
   | suggestedActionSubscribeToAnnualPremium
-  | suggestedActionGiftPremiumForChristmas;
+  | suggestedActionGiftPremiumForChristmas
+  | suggestedActionSetBirthdate
+  | suggestedActionExtendPremium;
 
 /**
  * Version of {@link SuggestedAction} for method parameters.
@@ -70577,6 +76660,8 @@ export type SuggestedAction =
  * - {@link suggestedActionRestorePremium$Input}
  * - {@link suggestedActionSubscribeToAnnualPremium$Input}
  * - {@link suggestedActionGiftPremiumForChristmas$Input}
+ * - {@link suggestedActionSetBirthdate$Input}
+ * - {@link suggestedActionExtendPremium$Input}
  */
 export type SuggestedAction$Input =
   | suggestedActionEnableArchiveAndMuteNewChats$Input
@@ -70588,7 +76673,9 @@ export type SuggestedAction$Input =
   | suggestedActionUpgradePremium$Input
   | suggestedActionRestorePremium$Input
   | suggestedActionSubscribeToAnnualPremium$Input
-  | suggestedActionGiftPremiumForChristmas$Input;
+  | suggestedActionGiftPremiumForChristmas$Input
+  | suggestedActionSetBirthdate$Input
+  | suggestedActionExtendPremium$Input;
 
 /**
  * Any of:
@@ -70874,6 +76961,32 @@ export type ChatStatistics$Input =
 
 /**
  * Any of:
+ * - {@link chatRevenueAmount}
+ */
+export type ChatRevenueAmount = chatRevenueAmount;
+
+/**
+ * Version of {@link ChatRevenueAmount} for method parameters.
+ * Any of:
+ * - {@link chatRevenueAmount$Input}
+ */
+export type ChatRevenueAmount$Input = chatRevenueAmount$Input;
+
+/**
+ * Any of:
+ * - {@link chatRevenueStatistics}
+ */
+export type ChatRevenueStatistics = chatRevenueStatistics;
+
+/**
+ * Version of {@link ChatRevenueStatistics} for method parameters.
+ * Any of:
+ * - {@link chatRevenueStatistics$Input}
+ */
+export type ChatRevenueStatistics$Input = chatRevenueStatistics$Input;
+
+/**
+ * Any of:
  * - {@link messageStatistics}
  */
 export type MessageStatistics = messageStatistics;
@@ -70897,6 +77010,78 @@ export type StoryStatistics = storyStatistics;
  * - {@link storyStatistics$Input}
  */
 export type StoryStatistics$Input = storyStatistics$Input;
+
+/**
+ * Any of:
+ * - {@link chatRevenueWithdrawalStatePending}
+ * - {@link chatRevenueWithdrawalStateCompleted}
+ * - {@link chatRevenueWithdrawalStateFailed}
+ */
+export type ChatRevenueWithdrawalState =
+  | chatRevenueWithdrawalStatePending
+  | chatRevenueWithdrawalStateCompleted
+  | chatRevenueWithdrawalStateFailed;
+
+/**
+ * Version of {@link ChatRevenueWithdrawalState} for method parameters.
+ * Any of:
+ * - {@link chatRevenueWithdrawalStatePending$Input}
+ * - {@link chatRevenueWithdrawalStateCompleted$Input}
+ * - {@link chatRevenueWithdrawalStateFailed$Input}
+ */
+export type ChatRevenueWithdrawalState$Input =
+  | chatRevenueWithdrawalStatePending$Input
+  | chatRevenueWithdrawalStateCompleted$Input
+  | chatRevenueWithdrawalStateFailed$Input;
+
+/**
+ * Any of:
+ * - {@link chatRevenueTransactionTypeEarnings}
+ * - {@link chatRevenueTransactionTypeWithdrawal}
+ * - {@link chatRevenueTransactionTypeRefund}
+ */
+export type ChatRevenueTransactionType =
+  | chatRevenueTransactionTypeEarnings
+  | chatRevenueTransactionTypeWithdrawal
+  | chatRevenueTransactionTypeRefund;
+
+/**
+ * Version of {@link ChatRevenueTransactionType} for method parameters.
+ * Any of:
+ * - {@link chatRevenueTransactionTypeEarnings$Input}
+ * - {@link chatRevenueTransactionTypeWithdrawal$Input}
+ * - {@link chatRevenueTransactionTypeRefund$Input}
+ */
+export type ChatRevenueTransactionType$Input =
+  | chatRevenueTransactionTypeEarnings$Input
+  | chatRevenueTransactionTypeWithdrawal$Input
+  | chatRevenueTransactionTypeRefund$Input;
+
+/**
+ * Any of:
+ * - {@link chatRevenueTransaction}
+ */
+export type ChatRevenueTransaction = chatRevenueTransaction;
+
+/**
+ * Version of {@link ChatRevenueTransaction} for method parameters.
+ * Any of:
+ * - {@link chatRevenueTransaction$Input}
+ */
+export type ChatRevenueTransaction$Input = chatRevenueTransaction$Input;
+
+/**
+ * Any of:
+ * - {@link chatRevenueTransactions}
+ */
+export type ChatRevenueTransactions = chatRevenueTransactions;
+
+/**
+ * Version of {@link ChatRevenueTransactions} for method parameters.
+ * Any of:
+ * - {@link chatRevenueTransactions$Input}
+ */
+export type ChatRevenueTransactions$Input = chatRevenueTransactions$Input;
 
 /**
  * Any of:
@@ -70971,6 +77156,29 @@ export type BotCommandScope$Input =
 
 /**
  * Any of:
+ * - {@link phoneNumberCodeTypeChange}
+ * - {@link phoneNumberCodeTypeVerify}
+ * - {@link phoneNumberCodeTypeConfirmOwnership}
+ */
+export type PhoneNumberCodeType =
+  | phoneNumberCodeTypeChange
+  | phoneNumberCodeTypeVerify
+  | phoneNumberCodeTypeConfirmOwnership;
+
+/**
+ * Version of {@link PhoneNumberCodeType} for method parameters.
+ * Any of:
+ * - {@link phoneNumberCodeTypeChange$Input}
+ * - {@link phoneNumberCodeTypeVerify$Input}
+ * - {@link phoneNumberCodeTypeConfirmOwnership$Input}
+ */
+export type PhoneNumberCodeType$Input =
+  | phoneNumberCodeTypeChange$Input
+  | phoneNumberCodeTypeVerify$Input
+  | phoneNumberCodeTypeConfirmOwnership$Input;
+
+/**
+ * Any of:
  * - {@link updateAuthorizationState}
  * - {@link updateNewMessage}
  * - {@link updateMessageSendAcknowledged}
@@ -70983,6 +77191,7 @@ export type BotCommandScope$Input =
  * - {@link updateMessageContentOpened}
  * - {@link updateMessageMentionRead}
  * - {@link updateMessageUnreadReactions}
+ * - {@link updateMessageFactCheck}
  * - {@link updateMessageLiveLocationViewed}
  * - {@link updateNewChat}
  * - {@link updateChatTitle}
@@ -70991,9 +77200,12 @@ export type BotCommandScope$Input =
  * - {@link updateChatPermissions}
  * - {@link updateChatLastMessage}
  * - {@link updateChatPosition}
+ * - {@link updateChatAddedToList}
+ * - {@link updateChatRemovedFromList}
  * - {@link updateChatReadInbox}
  * - {@link updateChatReadOutbox}
  * - {@link updateChatActionBar}
+ * - {@link updateChatBusinessBotManageBar}
  * - {@link updateChatAvailableReactions}
  * - {@link updateChatDraftMessage}
  * - {@link updateChatEmojiStatus}
@@ -71018,8 +77230,13 @@ export type BotCommandScope$Input =
  * - {@link updateChatOnlineMemberCount}
  * - {@link updateSavedMessagesTopic}
  * - {@link updateSavedMessagesTopicCount}
+ * - {@link updateQuickReplyShortcut}
+ * - {@link updateQuickReplyShortcutDeleted}
+ * - {@link updateQuickReplyShortcuts}
+ * - {@link updateQuickReplyShortcutMessages}
  * - {@link updateForumTopicInfo}
  * - {@link updateScopeNotificationSettings}
+ * - {@link updateReactionNotificationSettings}
  * - {@link updateNotification}
  * - {@link updateNotificationGroup}
  * - {@link updateActiveNotifications}
@@ -71042,6 +77259,7 @@ export type BotCommandScope$Input =
  * - {@link updateFileAddedToDownloads}
  * - {@link updateFileDownload}
  * - {@link updateFileRemovedFromDownloads}
+ * - {@link updateApplicationVerificationRequired}
  * - {@link updateCall}
  * - {@link updateGroupCall}
  * - {@link updateGroupCallParticipant}
@@ -71076,15 +77294,23 @@ export type BotCommandScope$Input =
  * - {@link updateAttachmentMenuBots}
  * - {@link updateWebAppMessageSent}
  * - {@link updateActiveEmojiReactions}
+ * - {@link updateAvailableMessageEffects}
  * - {@link updateDefaultReactionType}
  * - {@link updateSavedMessagesTags}
+ * - {@link updateOwnedStarCount}
+ * - {@link updateChatRevenueAmount}
  * - {@link updateSpeechRecognitionTrial}
  * - {@link updateDiceEmojis}
  * - {@link updateAnimatedEmojiMessageClicked}
  * - {@link updateAnimationSearchParameters}
  * - {@link updateSuggestedActions}
- * - {@link updateAddChatMembersPrivacyForbidden}
+ * - {@link updateSpeedLimitNotification}
+ * - {@link updateContactCloseBirthdays}
  * - {@link updateAutosaveSettings}
+ * - {@link updateBusinessConnection}
+ * - {@link updateNewBusinessMessage}
+ * - {@link updateBusinessMessageEdited}
+ * - {@link updateBusinessMessagesDeleted}
  * - {@link updateNewInlineQuery}
  * - {@link updateNewChosenInlineResult}
  * - {@link updateNewCallbackQuery}
@@ -71114,6 +77340,7 @@ export type Update =
   | updateMessageContentOpened
   | updateMessageMentionRead
   | updateMessageUnreadReactions
+  | updateMessageFactCheck
   | updateMessageLiveLocationViewed
   | updateNewChat
   | updateChatTitle
@@ -71122,9 +77349,12 @@ export type Update =
   | updateChatPermissions
   | updateChatLastMessage
   | updateChatPosition
+  | updateChatAddedToList
+  | updateChatRemovedFromList
   | updateChatReadInbox
   | updateChatReadOutbox
   | updateChatActionBar
+  | updateChatBusinessBotManageBar
   | updateChatAvailableReactions
   | updateChatDraftMessage
   | updateChatEmojiStatus
@@ -71149,8 +77379,13 @@ export type Update =
   | updateChatOnlineMemberCount
   | updateSavedMessagesTopic
   | updateSavedMessagesTopicCount
+  | updateQuickReplyShortcut
+  | updateQuickReplyShortcutDeleted
+  | updateQuickReplyShortcuts
+  | updateQuickReplyShortcutMessages
   | updateForumTopicInfo
   | updateScopeNotificationSettings
+  | updateReactionNotificationSettings
   | updateNotification
   | updateNotificationGroup
   | updateActiveNotifications
@@ -71173,6 +77408,7 @@ export type Update =
   | updateFileAddedToDownloads
   | updateFileDownload
   | updateFileRemovedFromDownloads
+  | updateApplicationVerificationRequired
   | updateCall
   | updateGroupCall
   | updateGroupCallParticipant
@@ -71207,15 +77443,23 @@ export type Update =
   | updateAttachmentMenuBots
   | updateWebAppMessageSent
   | updateActiveEmojiReactions
+  | updateAvailableMessageEffects
   | updateDefaultReactionType
   | updateSavedMessagesTags
+  | updateOwnedStarCount
+  | updateChatRevenueAmount
   | updateSpeechRecognitionTrial
   | updateDiceEmojis
   | updateAnimatedEmojiMessageClicked
   | updateAnimationSearchParameters
   | updateSuggestedActions
-  | updateAddChatMembersPrivacyForbidden
+  | updateSpeedLimitNotification
+  | updateContactCloseBirthdays
   | updateAutosaveSettings
+  | updateBusinessConnection
+  | updateNewBusinessMessage
+  | updateBusinessMessageEdited
+  | updateBusinessMessagesDeleted
   | updateNewInlineQuery
   | updateNewChosenInlineResult
   | updateNewCallbackQuery
@@ -71247,6 +77491,7 @@ export type Update =
  * - {@link updateMessageContentOpened$Input}
  * - {@link updateMessageMentionRead$Input}
  * - {@link updateMessageUnreadReactions$Input}
+ * - {@link updateMessageFactCheck$Input}
  * - {@link updateMessageLiveLocationViewed$Input}
  * - {@link updateNewChat$Input}
  * - {@link updateChatTitle$Input}
@@ -71255,9 +77500,12 @@ export type Update =
  * - {@link updateChatPermissions$Input}
  * - {@link updateChatLastMessage$Input}
  * - {@link updateChatPosition$Input}
+ * - {@link updateChatAddedToList$Input}
+ * - {@link updateChatRemovedFromList$Input}
  * - {@link updateChatReadInbox$Input}
  * - {@link updateChatReadOutbox$Input}
  * - {@link updateChatActionBar$Input}
+ * - {@link updateChatBusinessBotManageBar$Input}
  * - {@link updateChatAvailableReactions$Input}
  * - {@link updateChatDraftMessage$Input}
  * - {@link updateChatEmojiStatus$Input}
@@ -71282,8 +77530,13 @@ export type Update =
  * - {@link updateChatOnlineMemberCount$Input}
  * - {@link updateSavedMessagesTopic$Input}
  * - {@link updateSavedMessagesTopicCount$Input}
+ * - {@link updateQuickReplyShortcut$Input}
+ * - {@link updateQuickReplyShortcutDeleted$Input}
+ * - {@link updateQuickReplyShortcuts$Input}
+ * - {@link updateQuickReplyShortcutMessages$Input}
  * - {@link updateForumTopicInfo$Input}
  * - {@link updateScopeNotificationSettings$Input}
+ * - {@link updateReactionNotificationSettings$Input}
  * - {@link updateNotification$Input}
  * - {@link updateNotificationGroup$Input}
  * - {@link updateActiveNotifications$Input}
@@ -71306,6 +77559,7 @@ export type Update =
  * - {@link updateFileAddedToDownloads$Input}
  * - {@link updateFileDownload$Input}
  * - {@link updateFileRemovedFromDownloads$Input}
+ * - {@link updateApplicationVerificationRequired$Input}
  * - {@link updateCall$Input}
  * - {@link updateGroupCall$Input}
  * - {@link updateGroupCallParticipant$Input}
@@ -71340,15 +77594,23 @@ export type Update =
  * - {@link updateAttachmentMenuBots$Input}
  * - {@link updateWebAppMessageSent$Input}
  * - {@link updateActiveEmojiReactions$Input}
+ * - {@link updateAvailableMessageEffects$Input}
  * - {@link updateDefaultReactionType$Input}
  * - {@link updateSavedMessagesTags$Input}
+ * - {@link updateOwnedStarCount$Input}
+ * - {@link updateChatRevenueAmount$Input}
  * - {@link updateSpeechRecognitionTrial$Input}
  * - {@link updateDiceEmojis$Input}
  * - {@link updateAnimatedEmojiMessageClicked$Input}
  * - {@link updateAnimationSearchParameters$Input}
  * - {@link updateSuggestedActions$Input}
- * - {@link updateAddChatMembersPrivacyForbidden$Input}
+ * - {@link updateSpeedLimitNotification$Input}
+ * - {@link updateContactCloseBirthdays$Input}
  * - {@link updateAutosaveSettings$Input}
+ * - {@link updateBusinessConnection$Input}
+ * - {@link updateNewBusinessMessage$Input}
+ * - {@link updateBusinessMessageEdited$Input}
+ * - {@link updateBusinessMessagesDeleted$Input}
  * - {@link updateNewInlineQuery$Input}
  * - {@link updateNewChosenInlineResult$Input}
  * - {@link updateNewCallbackQuery$Input}
@@ -71378,6 +77640,7 @@ export type Update$Input =
   | updateMessageContentOpened$Input
   | updateMessageMentionRead$Input
   | updateMessageUnreadReactions$Input
+  | updateMessageFactCheck$Input
   | updateMessageLiveLocationViewed$Input
   | updateNewChat$Input
   | updateChatTitle$Input
@@ -71386,9 +77649,12 @@ export type Update$Input =
   | updateChatPermissions$Input
   | updateChatLastMessage$Input
   | updateChatPosition$Input
+  | updateChatAddedToList$Input
+  | updateChatRemovedFromList$Input
   | updateChatReadInbox$Input
   | updateChatReadOutbox$Input
   | updateChatActionBar$Input
+  | updateChatBusinessBotManageBar$Input
   | updateChatAvailableReactions$Input
   | updateChatDraftMessage$Input
   | updateChatEmojiStatus$Input
@@ -71413,8 +77679,13 @@ export type Update$Input =
   | updateChatOnlineMemberCount$Input
   | updateSavedMessagesTopic$Input
   | updateSavedMessagesTopicCount$Input
+  | updateQuickReplyShortcut$Input
+  | updateQuickReplyShortcutDeleted$Input
+  | updateQuickReplyShortcuts$Input
+  | updateQuickReplyShortcutMessages$Input
   | updateForumTopicInfo$Input
   | updateScopeNotificationSettings$Input
+  | updateReactionNotificationSettings$Input
   | updateNotification$Input
   | updateNotificationGroup$Input
   | updateActiveNotifications$Input
@@ -71437,6 +77708,7 @@ export type Update$Input =
   | updateFileAddedToDownloads$Input
   | updateFileDownload$Input
   | updateFileRemovedFromDownloads$Input
+  | updateApplicationVerificationRequired$Input
   | updateCall$Input
   | updateGroupCall$Input
   | updateGroupCallParticipant$Input
@@ -71471,15 +77743,23 @@ export type Update$Input =
   | updateAttachmentMenuBots$Input
   | updateWebAppMessageSent$Input
   | updateActiveEmojiReactions$Input
+  | updateAvailableMessageEffects$Input
   | updateDefaultReactionType$Input
   | updateSavedMessagesTags$Input
+  | updateOwnedStarCount$Input
+  | updateChatRevenueAmount$Input
   | updateSpeechRecognitionTrial$Input
   | updateDiceEmojis$Input
   | updateAnimatedEmojiMessageClicked$Input
   | updateAnimationSearchParameters$Input
   | updateSuggestedActions$Input
-  | updateAddChatMembersPrivacyForbidden$Input
+  | updateSpeedLimitNotification$Input
+  | updateContactCloseBirthdays$Input
   | updateAutosaveSettings$Input
+  | updateBusinessConnection$Input
+  | updateNewBusinessMessage$Input
+  | updateBusinessMessageEdited$Input
+  | updateBusinessMessagesDeleted$Input
   | updateNewInlineQuery$Input
   | updateNewChosenInlineResult$Input
   | updateNewCallbackQuery$Input
@@ -71675,6 +77955,7 @@ export type $MethodsDict = {
   readonly checkAuthenticationPasswordRecoveryCode: checkAuthenticationPasswordRecoveryCode;
   readonly recoverAuthenticationPassword: recoverAuthenticationPassword;
   readonly sendAuthenticationFirebaseSms: sendAuthenticationFirebaseSms;
+  readonly reportAuthenticationCodeMissing: reportAuthenticationCodeMissing;
   readonly checkAuthenticationBotToken: checkAuthenticationBotToken;
   readonly logOut: logOut;
   readonly close: close;
@@ -71726,6 +78007,7 @@ export type $MethodsDict = {
   readonly searchChats: searchChats;
   readonly searchChatsOnServer: searchChatsOnServer;
   readonly searchChatsNearby: searchChatsNearby;
+  readonly getRecommendedChats: getRecommendedChats;
   readonly getChatSimilarChats: getChatSimilarChats;
   readonly getChatSimilarChatCount: getChatSimilarChatCount;
   readonly openChatSimilarChat: openChatSimilarChat;
@@ -71741,6 +78023,7 @@ export type $MethodsDict = {
   readonly checkCreatedPublicChatsLimit: checkCreatedPublicChatsLimit;
   readonly getSuitableDiscussionChats: getSuitableDiscussionChats;
   readonly getInactiveSupergroupChats: getInactiveSupergroupChats;
+  readonly getSuitablePersonalChats: getSuitablePersonalChats;
   readonly loadSavedMessagesTopics: loadSavedMessagesTopics;
   readonly getSavedMessagesTopicHistory: getSavedMessagesTopicHistory;
   readonly getSavedMessagesTopicMessageByDate: getSavedMessagesTopicMessageByDate;
@@ -71759,6 +78042,10 @@ export type $MethodsDict = {
   readonly searchSavedMessages: searchSavedMessages;
   readonly searchCallMessages: searchCallMessages;
   readonly searchOutgoingDocumentMessages: searchOutgoingDocumentMessages;
+  readonly searchPublicHashtagMessages: searchPublicHashtagMessages;
+  readonly getSearchedForHashtags: getSearchedForHashtags;
+  readonly removeSearchedForHashtag: removeSearchedForHashtag;
+  readonly clearSearchedForHashtags: clearSearchedForHashtags;
   readonly deleteAllCallMessages: deleteAllCallMessages;
   readonly searchChatRecentLocationMessages: searchChatRecentLocationMessages;
   readonly getActiveLiveLocationMessages: getActiveLiveLocationMessages;
@@ -71770,6 +78057,7 @@ export type $MethodsDict = {
   readonly getChatScheduledMessages: getChatScheduledMessages;
   readonly getChatSponsoredMessages: getChatSponsoredMessages;
   readonly clickChatSponsoredMessage: clickChatSponsoredMessage;
+  readonly reportChatSponsoredMessage: reportChatSponsoredMessage;
   readonly removeNotification: removeNotification;
   readonly removeNotificationGroup: removeNotificationGroup;
   readonly getMessageLink: getMessageLink;
@@ -71786,6 +78074,7 @@ export type $MethodsDict = {
   readonly sendBotStartMessage: sendBotStartMessage;
   readonly sendInlineQueryResultMessage: sendInlineQueryResultMessage;
   readonly forwardMessages: forwardMessages;
+  readonly sendQuickReplyShortcutMessages: sendQuickReplyShortcutMessages;
   readonly resendMessages: resendMessages;
   readonly addLocalMessage: addLocalMessage;
   readonly deleteMessages: deleteMessages;
@@ -71802,6 +78091,21 @@ export type $MethodsDict = {
   readonly editInlineMessageCaption: editInlineMessageCaption;
   readonly editInlineMessageReplyMarkup: editInlineMessageReplyMarkup;
   readonly editMessageSchedulingState: editMessageSchedulingState;
+  readonly setMessageFactCheck: setMessageFactCheck;
+  readonly sendBusinessMessage: sendBusinessMessage;
+  readonly sendBusinessMessageAlbum: sendBusinessMessageAlbum;
+  readonly checkQuickReplyShortcutName: checkQuickReplyShortcutName;
+  readonly loadQuickReplyShortcuts: loadQuickReplyShortcuts;
+  readonly setQuickReplyShortcutName: setQuickReplyShortcutName;
+  readonly deleteQuickReplyShortcut: deleteQuickReplyShortcut;
+  readonly reorderQuickReplyShortcuts: reorderQuickReplyShortcuts;
+  readonly loadQuickReplyShortcutMessages: loadQuickReplyShortcutMessages;
+  readonly deleteQuickReplyShortcutMessages: deleteQuickReplyShortcutMessages;
+  readonly addQuickReplyShortcutMessage: addQuickReplyShortcutMessage;
+  readonly addQuickReplyShortcutInlineQueryResultMessage: addQuickReplyShortcutInlineQueryResultMessage;
+  readonly addQuickReplyShortcutMessageAlbum: addQuickReplyShortcutMessageAlbum;
+  readonly readdQuickReplyShortcutMessages: readdQuickReplyShortcutMessages;
+  readonly editQuickReplyMessage: editQuickReplyMessage;
   readonly getForumTopicDefaultIcons: getForumTopicDefaultIcons;
   readonly createForumTopic: createForumTopic;
   readonly editForumTopic: editForumTopic;
@@ -71825,6 +78129,7 @@ export type $MethodsDict = {
   readonly setDefaultReactionType: setDefaultReactionType;
   readonly getSavedMessagesTags: getSavedMessagesTags;
   readonly setSavedMessagesTagLabel: setSavedMessagesTagLabel;
+  readonly getMessageEffect: getMessageEffect;
   readonly searchQuote: searchQuote;
   readonly getTextEntities: getTextEntities;
   readonly parseTextEntities: parseTextEntities;
@@ -71842,6 +78147,8 @@ export type $MethodsDict = {
   readonly getPollVoters: getPollVoters;
   readonly stopPoll: stopPoll;
   readonly hideSuggestedAction: hideSuggestedAction;
+  readonly hideContactCloseBirthdays: hideContactCloseBirthdays;
+  readonly getBusinessConnection: getBusinessConnection;
   readonly getLoginUrlInfo: getLoginUrlInfo;
   readonly getLoginUrl: getLoginUrl;
   readonly shareUsersWithBot: shareUsersWithBot;
@@ -71895,6 +78202,7 @@ export type $MethodsDict = {
   readonly getChatFolderChatsToLeave: getChatFolderChatsToLeave;
   readonly getChatFolderChatCount: getChatFolderChatCount;
   readonly reorderChatFolders: reorderChatFolders;
+  readonly toggleChatFolderTags: toggleChatFolderTags;
   readonly getRecommendedChatFolders: getRecommendedChatFolders;
   readonly getChatFolderDefaultIconName: getChatFolderDefaultIconName;
   readonly getChatsForChatFolderInviteLink: getChatsForChatFolderInviteLink;
@@ -71954,6 +78262,7 @@ export type $MethodsDict = {
   readonly getChatNotificationSettingsExceptions: getChatNotificationSettingsExceptions;
   readonly getScopeNotificationSettings: getScopeNotificationSettings;
   readonly setScopeNotificationSettings: setScopeNotificationSettings;
+  readonly setReactionNotificationSettings: setReactionNotificationSettings;
   readonly resetAllNotificationSettings: resetAllNotificationSettings;
   readonly toggleChatIsPinned: toggleChatIsPinned;
   readonly setPinnedChats: setPinnedChats;
@@ -71964,14 +78273,15 @@ export type $MethodsDict = {
   readonly sendStory: sendStory;
   readonly editStory: editStory;
   readonly setStoryPrivacySettings: setStoryPrivacySettings;
-  readonly toggleStoryIsPinned: toggleStoryIsPinned;
+  readonly toggleStoryIsPostedToChatPage: toggleStoryIsPostedToChatPage;
   readonly deleteStory: deleteStory;
   readonly getStoryNotificationSettingsExceptions: getStoryNotificationSettingsExceptions;
   readonly loadActiveStories: loadActiveStories;
   readonly setChatActiveStoriesList: setChatActiveStoriesList;
   readonly getChatActiveStories: getChatActiveStories;
-  readonly getChatPinnedStories: getChatPinnedStories;
+  readonly getChatPostedToChatPageStories: getChatPostedToChatPageStories;
   readonly getChatArchivedStories: getChatArchivedStories;
+  readonly setChatPinnedStories: setChatPinnedStories;
   readonly openStory: openStory;
   readonly closeStory: closeStory;
   readonly getStoryAvailableReactions: getStoryAvailableReactions;
@@ -72016,6 +78326,7 @@ export type $MethodsDict = {
   readonly removeFileFromDownloads: removeFileFromDownloads;
   readonly removeAllFilesFromDownloads: removeAllFilesFromDownloads;
   readonly searchFileDownloads: searchFileDownloads;
+  readonly setApplicationVerificationToken: setApplicationVerificationToken;
   readonly getMessageFileType: getMessageFileType;
   readonly getMessageImportConfirmationText: getMessageImportConfirmationText;
   readonly importMessages: importMessages;
@@ -72092,6 +78403,7 @@ export type $MethodsDict = {
   readonly getStickers: getStickers;
   readonly getAllStickerEmojis: getAllStickerEmojis;
   readonly searchStickers: searchStickers;
+  readonly getGreetingStickers: getGreetingStickers;
   readonly getPremiumStickers: getPremiumStickers;
   readonly getInstalledStickerSets: getInstalledStickerSets;
   readonly getArchivedStickerSets: getArchivedStickerSets;
@@ -72138,11 +78450,31 @@ export type $MethodsDict = {
   readonly setUsername: setUsername;
   readonly toggleUsernameIsActive: toggleUsernameIsActive;
   readonly reorderActiveUsernames: reorderActiveUsernames;
+  readonly setBirthdate: setBirthdate;
+  readonly setPersonalChat: setPersonalChat;
   readonly setEmojiStatus: setEmojiStatus;
   readonly setLocation: setLocation;
-  readonly changePhoneNumber: changePhoneNumber;
-  readonly resendChangePhoneNumberCode: resendChangePhoneNumberCode;
-  readonly checkChangePhoneNumberCode: checkChangePhoneNumberCode;
+  readonly toggleHasSponsoredMessagesEnabled: toggleHasSponsoredMessagesEnabled;
+  readonly setBusinessLocation: setBusinessLocation;
+  readonly setBusinessOpeningHours: setBusinessOpeningHours;
+  readonly setBusinessGreetingMessageSettings: setBusinessGreetingMessageSettings;
+  readonly setBusinessAwayMessageSettings: setBusinessAwayMessageSettings;
+  readonly setBusinessStartPage: setBusinessStartPage;
+  readonly sendPhoneNumberCode: sendPhoneNumberCode;
+  readonly sendPhoneNumberFirebaseSms: sendPhoneNumberFirebaseSms;
+  readonly reportPhoneNumberCodeMissing: reportPhoneNumberCodeMissing;
+  readonly resendPhoneNumberCode: resendPhoneNumberCode;
+  readonly checkPhoneNumberCode: checkPhoneNumberCode;
+  readonly getBusinessConnectedBot: getBusinessConnectedBot;
+  readonly setBusinessConnectedBot: setBusinessConnectedBot;
+  readonly deleteBusinessConnectedBot: deleteBusinessConnectedBot;
+  readonly toggleBusinessConnectedBotChatIsPaused: toggleBusinessConnectedBotChatIsPaused;
+  readonly removeBusinessConnectedBotFromChat: removeBusinessConnectedBotFromChat;
+  readonly getBusinessChatLinks: getBusinessChatLinks;
+  readonly createBusinessChatLink: createBusinessChatLink;
+  readonly editBusinessChatLink: editBusinessChatLink;
+  readonly deleteBusinessChatLink: deleteBusinessChatLink;
+  readonly getBusinessChatLinkInfo: getBusinessChatLinkInfo;
   readonly getUserLink: getUserLink;
   readonly searchUserByToken: searchUserByToken;
   readonly setCommands: setCommands;
@@ -72185,6 +78517,7 @@ export type $MethodsDict = {
   readonly toggleSupergroupJoinToSendMessages: toggleSupergroupJoinToSendMessages;
   readonly toggleSupergroupJoinByRequest: toggleSupergroupJoinByRequest;
   readonly toggleSupergroupIsAllHistoryAvailable: toggleSupergroupIsAllHistoryAvailable;
+  readonly toggleSupergroupCanHaveSponsoredMessages: toggleSupergroupCanHaveSponsoredMessages;
   readonly toggleSupergroupHasHiddenMembers: toggleSupergroupHasHiddenMembers;
   readonly toggleSupergroupHasAggressiveAntiSpamEnabled: toggleSupergroupHasAggressiveAntiSpamEnabled;
   readonly toggleSupergroupIsForum: toggleSupergroupIsForum;
@@ -72194,6 +78527,7 @@ export type $MethodsDict = {
   readonly getSupergroupMembers: getSupergroupMembers;
   readonly closeSecretChat: closeSecretChat;
   readonly getChatEventLog: getChatEventLog;
+  readonly getTimeZones: getTimeZones;
   readonly getPaymentForm: getPaymentForm;
   readonly validateOrderInfo: validateOrderInfo;
   readonly sendPaymentForm: sendPaymentForm;
@@ -72202,6 +78536,7 @@ export type $MethodsDict = {
   readonly deleteSavedOrderInfo: deleteSavedOrderInfo;
   readonly deleteSavedCredentials: deleteSavedCredentials;
   readonly createInvoiceLink: createInvoiceLink;
+  readonly refundStarPayment: refundStarPayment;
   readonly getSupportUser: getSupportUser;
   readonly getBackgroundUrl: getBackgroundUrl;
   readonly searchBackground: searchBackground;
@@ -72241,6 +78576,9 @@ export type $MethodsDict = {
   readonly reportChat: reportChat;
   readonly reportChatPhoto: reportChatPhoto;
   readonly reportMessageReactions: reportMessageReactions;
+  readonly getChatRevenueStatistics: getChatRevenueStatistics;
+  readonly getChatRevenueWithdrawalUrl: getChatRevenueWithdrawalUrl;
+  readonly getChatRevenueTransactions: getChatRevenueTransactions;
   readonly getChatStatistics: getChatStatistics;
   readonly getMessageStatistics: getMessageStatistics;
   readonly getMessagePublicForwards: getMessagePublicForwards;
@@ -72266,24 +78604,19 @@ export type $MethodsDict = {
   readonly deletePassportElement: deletePassportElement;
   readonly setPassportElementErrors: setPassportElementErrors;
   readonly getPreferredCountryLanguage: getPreferredCountryLanguage;
-  readonly sendPhoneNumberVerificationCode: sendPhoneNumberVerificationCode;
-  readonly resendPhoneNumberVerificationCode: resendPhoneNumberVerificationCode;
-  readonly checkPhoneNumberVerificationCode: checkPhoneNumberVerificationCode;
   readonly sendEmailAddressVerificationCode: sendEmailAddressVerificationCode;
   readonly resendEmailAddressVerificationCode: resendEmailAddressVerificationCode;
   readonly checkEmailAddressVerificationCode: checkEmailAddressVerificationCode;
   readonly getPassportAuthorizationForm: getPassportAuthorizationForm;
   readonly getPassportAuthorizationFormAvailableElements: getPassportAuthorizationFormAvailableElements;
   readonly sendPassportAuthorizationForm: sendPassportAuthorizationForm;
-  readonly sendPhoneNumberConfirmationCode: sendPhoneNumberConfirmationCode;
-  readonly resendPhoneNumberConfirmationCode: resendPhoneNumberConfirmationCode;
-  readonly checkPhoneNumberConfirmationCode: checkPhoneNumberConfirmationCode;
   readonly setBotUpdatesStatus: setBotUpdatesStatus;
   readonly uploadStickerFile: uploadStickerFile;
   readonly getSuggestedStickerSetName: getSuggestedStickerSetName;
   readonly checkStickerSetName: checkStickerSetName;
   readonly createNewStickerSet: createNewStickerSet;
   readonly addStickerToSet: addStickerToSet;
+  readonly replaceStickerInSet: replaceStickerInSet;
   readonly setStickerSetThumbnail: setStickerSetThumbnail;
   readonly setCustomEmojiStickerSetThumbnail: setCustomEmojiStickerSetThumbnail;
   readonly setStickerSetTitle: setStickerSetTitle;
@@ -72293,6 +78626,7 @@ export type $MethodsDict = {
   readonly setStickerEmojis: setStickerEmojis;
   readonly setStickerKeywords: setStickerKeywords;
   readonly setStickerMaskPosition: setStickerMaskPosition;
+  readonly getOwnedStickerSets: getOwnedStickerSets;
   readonly getMapThumbnailFile: getMapThumbnailFile;
   readonly getPremiumLimit: getPremiumLimit;
   readonly getPremiumFeatures: getPremiumFeatures;
@@ -72305,9 +78639,12 @@ export type $MethodsDict = {
   readonly applyPremiumGiftCode: applyPremiumGiftCode;
   readonly launchPrepaidPremiumGiveaway: launchPrepaidPremiumGiveaway;
   readonly getPremiumGiveawayInfo: getPremiumGiveawayInfo;
-  readonly canPurchasePremium: canPurchasePremium;
+  readonly getStarPaymentOptions: getStarPaymentOptions;
+  readonly getStarTransactions: getStarTransactions;
+  readonly canPurchaseFromStore: canPurchaseFromStore;
   readonly assignAppStoreTransaction: assignAppStoreTransaction;
   readonly assignGooglePlayTransaction: assignGooglePlayTransaction;
+  readonly getBusinessFeatures: getBusinessFeatures;
   readonly acceptTermsOfService: acceptTermsOfService;
   readonly searchStringsByPrefix: searchStringsByPrefix;
   readonly sendCustomRequest: sendCustomRequest;
@@ -72317,6 +78654,7 @@ export type $MethodsDict = {
   readonly getCountryCode: getCountryCode;
   readonly getPhoneNumberInfo: getPhoneNumberInfo;
   readonly getPhoneNumberInfoSync: getPhoneNumberInfoSync;
+  readonly getCollectibleItemInfo: getCollectibleItemInfo;
   readonly getDeepLinkInfo: getDeepLinkInfo;
   readonly getApplicationConfig: getApplicationConfig;
   readonly saveApplicationLogEvent: saveApplicationLogEvent;
@@ -72356,6 +78694,7 @@ export type $MethodsDict = {
 };
 
 export type $SyncMethodsDict = {
+  readonly checkQuickReplyShortcutName: checkQuickReplyShortcutName;
   readonly searchQuote: searchQuote;
   readonly getTextEntities: getTextEntities;
   readonly parseTextEntities: parseTextEntities;
@@ -72463,9 +78802,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null and the server-specified timeout has passed,
+   * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
    *
-   * - or when the current authorization state is authorizationStateWaitEmailCode
+   * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
    *
    * @param {resendAuthenticationCode$DirectInput} parameters {@link resendAuthenticationCode$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -72478,7 +78817,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Checks the authentication of a email address. Works only when the current authorization state is authorizationStateWaitEmailCode
+   * Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
    *
    * @param {checkAuthenticationEmailCode$DirectInput} parameters {@link checkAuthenticationEmailCode$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -72634,6 +78973,22 @@ export class $AsyncApi {
   }
 
   /**
+   * Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
+   *
+   * @param {reportAuthenticationCodeMissing$DirectInput} parameters {@link reportAuthenticationCodeMissing$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async reportAuthenticationCodeMissing(
+    parameters: reportAuthenticationCodeMissing$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "reportAuthenticationCodeMissing",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
    * Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
    *
    * @param {checkAuthenticationBotToken$DirectInput} parameters {@link checkAuthenticationBotToken$Input}
@@ -72751,7 +79106,7 @@ export class $AsyncApi {
   /**
    * Changes the login email address of the user. The email address can be changed only if the current user already has login email and passwordState.login_email_address_pattern is non-empty.
    *
-   * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of a email address, call checkLoginEmailAddressCode directly
+   * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of an email address, call checkLoginEmailAddressCode directly
    *
    * @param {setLoginEmailAddress$DirectInput} parameters {@link setLoginEmailAddress$Input}
    * @return {Promise<EmailAddressAuthenticationCodeInfo>} Promise<{@link EmailAddressAuthenticationCodeInfo}>
@@ -73296,6 +79651,19 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns a list of channel chats recommended to the current user
+   *
+   * @param {getRecommendedChats$DirectInput} parameters {@link getRecommendedChats$Input}
+   * @return {Promise<Chats>} Promise<{@link Chats}>
+   */
+  async getRecommendedChats(
+    parameters: getRecommendedChats$DirectInput
+  ): Promise<Chats> {
+    const result = await this.client.invoke("getRecommendedChats", parameters);
+    return result as Chats;
+  }
+
+  /**
    * Returns a list of chats similar to the given chat
    *
    * @param {getChatSimilarChats$DirectInput} parameters {@link getChatSimilarChats$Input}
@@ -73322,7 +79690,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Informs TDLib that a chat was opened from the list of similar chats. The method is independent from openChat and closeChat methods
+   * Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
    *
    * @param {openChatSimilarChat$DirectInput} parameters {@link openChatSimilarChat$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -73494,6 +79862,19 @@ export class $AsyncApi {
       "getInactiveSupergroupChats",
       parameters
     );
+    return result as Chats;
+  }
+
+  /**
+   * Returns a list of channel chats, which can be used as a personal chat
+   *
+   * @param {getSuitablePersonalChats$DirectInput} parameters {@link getSuitablePersonalChats$Input}
+   * @return {Promise<Chats>} Promise<{@link Chats}>
+   */
+  async getSuitablePersonalChats(
+    parameters: getSuitablePersonalChats$DirectInput
+  ): Promise<Chats> {
+    const result = await this.client.invoke("getSuitablePersonalChats", parameters);
     return result as Chats;
   }
 
@@ -73763,6 +80144,61 @@ export class $AsyncApi {
   }
 
   /**
+   * Searches for public channel posts with the given hashtag or cashtag. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
+   *
+   * @param {searchPublicHashtagMessages$DirectInput} parameters {@link searchPublicHashtagMessages$Input}
+   * @return {Promise<FoundMessages>} Promise<{@link FoundMessages}>
+   */
+  async searchPublicHashtagMessages(
+    parameters: searchPublicHashtagMessages$DirectInput
+  ): Promise<FoundMessages> {
+    const result = await this.client.invoke(
+      "searchPublicHashtagMessages",
+      parameters
+    );
+    return result as FoundMessages;
+  }
+
+  /**
+   * Returns recently searched for hashtags or cashtags by their prefix
+   *
+   * @param {getSearchedForHashtags$DirectInput} parameters {@link getSearchedForHashtags$Input}
+   * @return {Promise<Hashtags>} Promise<{@link Hashtags}>
+   */
+  async getSearchedForHashtags(
+    parameters: getSearchedForHashtags$DirectInput
+  ): Promise<Hashtags> {
+    const result = await this.client.invoke("getSearchedForHashtags", parameters);
+    return result as Hashtags;
+  }
+
+  /**
+   * Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
+   *
+   * @param {removeSearchedForHashtag$DirectInput} parameters {@link removeSearchedForHashtag$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async removeSearchedForHashtag(
+    parameters: removeSearchedForHashtag$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("removeSearchedForHashtag", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Clears the list of recently searched for hashtags
+   *
+   * @param {clearSearchedForHashtags$DirectInput} parameters {@link clearSearchedForHashtags$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async clearSearchedForHashtags(
+    parameters: clearSearchedForHashtags$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("clearSearchedForHashtags", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Deletes all call messages
    *
    * @param {deleteAllCallMessages$DirectInput} parameters {@link deleteAllCallMessages$Input}
@@ -73917,6 +80353,22 @@ export class $AsyncApi {
   }
 
   /**
+   * Reports a sponsored message to Telegram moderators
+   *
+   * @param {reportChatSponsoredMessage$DirectInput} parameters {@link reportChatSponsoredMessage$Input}
+   * @return {Promise<ReportChatSponsoredMessageResult>} Promise<{@link ReportChatSponsoredMessageResult}>
+   */
+  async reportChatSponsoredMessage(
+    parameters: reportChatSponsoredMessage$DirectInput
+  ): Promise<ReportChatSponsoredMessageResult> {
+    const result = await this.client.invoke(
+      "reportChatSponsoredMessage",
+      parameters
+    );
+    return result as ReportChatSponsoredMessageResult;
+  }
+
+  /**
    * Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
    *
    * @param {removeNotification$DirectInput} parameters {@link removeNotification$Input}
@@ -74030,7 +80482,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of message sender identifiers, which can be used to send messages in a chat
+   * Returns the list of message sender identifiers, which can be used to send messages in a chat
    *
    * @param {getChatAvailableMessageSenders$DirectInput} parameters {@link getChatAvailableMessageSenders$Input}
    * @return {Promise<ChatMessageSenders>} Promise<{@link ChatMessageSenders}>
@@ -74070,7 +80522,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album. Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+   * Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album.
+   *
+   * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
    *
    * @param {sendMessageAlbum$DirectInput} parameters {@link sendMessageAlbum$Input}
    * @return {Promise<Messages>} Promise<{@link Messages}>
@@ -74121,6 +80575,22 @@ export class $AsyncApi {
    */
   async forwardMessages(parameters: forwardMessages$DirectInput): Promise<Messages> {
     const result = await this.client.invoke("forwardMessages", parameters);
+    return result as Messages;
+  }
+
+  /**
+   * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+   *
+   * @param {sendQuickReplyShortcutMessages$DirectInput} parameters {@link sendQuickReplyShortcutMessages$Input}
+   * @return {Promise<Messages>} Promise<{@link Messages}>
+   */
+  async sendQuickReplyShortcutMessages(
+    parameters: sendQuickReplyShortcutMessages$DirectInput
+  ): Promise<Messages> {
+    const result = await this.client.invoke(
+      "sendQuickReplyShortcutMessages",
+      parameters
+    );
     return result as Messages;
   }
 
@@ -74189,7 +80659,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
+   * Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side.
+   *
+   * - Can be used only if message.can_be_edited == true
    *
    * @param {editMessageText$DirectInput} parameters {@link editMessageText$Input}
    * @return {Promise<Message>} Promise<{@link Message}>
@@ -74200,7 +80672,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location. Returns the edited message after the edit is completed on the server side
+   * Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
+   *
+   * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
    *
    * @param {editMessageLiveLocation$DirectInput} parameters {@link editMessageLiveLocation$Input}
    * @return {Promise<Message>} Promise<{@link Message}>
@@ -74215,7 +80689,9 @@ export class $AsyncApi {
   /**
    * Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
    *
-   * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
+   * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
+   *
+   * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
    *
    * @param {editMessageMedia$DirectInput} parameters {@link editMessageMedia$Input}
    * @return {Promise<Message>} Promise<{@link Message}>
@@ -74228,7 +80704,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Edits the message content caption. Returns the edited message after the edit is completed on the server side
+   * Edits the message content caption. Returns the edited message after the edit is completed on the server side.
+   *
+   * - Can be used only if message.can_be_edited == true
    *
    * @param {editMessageCaption$DirectInput} parameters {@link editMessageCaption$Input}
    * @return {Promise<Message>} Promise<{@link Message}>
@@ -74241,7 +80719,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side
+   * Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side.
+   *
+   * - Can be used only if message.can_be_edited == true
    *
    * @param {editMessageReplyMarkup$DirectInput} parameters {@link editMessageReplyMarkup$Input}
    * @return {Promise<Message>} Promise<{@link Message}>
@@ -74341,7 +80821,238 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of custom emojis, which can be used as forum topic icon by all users
+   * Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
+   *
+   * @param {setMessageFactCheck$DirectInput} parameters {@link setMessageFactCheck$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setMessageFactCheck(
+    parameters: setMessageFactCheck$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setMessageFactCheck", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
+   *
+   * @param {sendBusinessMessage$DirectInput} parameters {@link sendBusinessMessage$Input}
+   * @return {Promise<BusinessMessage>} Promise<{@link BusinessMessage}>
+   */
+  async sendBusinessMessage(
+    parameters: sendBusinessMessage$DirectInput
+  ): Promise<BusinessMessage> {
+    const result = await this.client.invoke("sendBusinessMessage", parameters);
+    return result as BusinessMessage;
+  }
+
+  /**
+   * Sends 2-10 messages grouped together into an album on behalf of a business account; for bots only. Currently, only audio, document, photo and video messages can be grouped into an album.
+   *
+   * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+   *
+   * @param {sendBusinessMessageAlbum$DirectInput} parameters {@link sendBusinessMessageAlbum$Input}
+   * @return {Promise<BusinessMessages>} Promise<{@link BusinessMessages}>
+   */
+  async sendBusinessMessageAlbum(
+    parameters: sendBusinessMessageAlbum$DirectInput
+  ): Promise<BusinessMessages> {
+    const result = await this.client.invoke("sendBusinessMessageAlbum", parameters);
+    return result as BusinessMessages;
+  }
+
+  /**
+   * Checks validness of a name for a quick reply shortcut. Can be called synchronously
+   *
+   * @param {checkQuickReplyShortcutName$DirectInput} parameters {@link checkQuickReplyShortcutName$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async checkQuickReplyShortcutName(
+    parameters: checkQuickReplyShortcutName$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "checkQuickReplyShortcutName",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+   *
+   * @param {loadQuickReplyShortcuts$DirectInput} parameters {@link loadQuickReplyShortcuts$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async loadQuickReplyShortcuts(
+    parameters: loadQuickReplyShortcuts$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("loadQuickReplyShortcuts", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes name of a quick reply shortcut
+   *
+   * @param {setQuickReplyShortcutName$DirectInput} parameters {@link setQuickReplyShortcutName$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setQuickReplyShortcutName(
+    parameters: setQuickReplyShortcutName$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setQuickReplyShortcutName", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Deletes a quick reply shortcut
+   *
+   * @param {deleteQuickReplyShortcut$DirectInput} parameters {@link deleteQuickReplyShortcut$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteQuickReplyShortcut(
+    parameters: deleteQuickReplyShortcut$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("deleteQuickReplyShortcut", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes the order of quick reply shortcuts
+   *
+   * @param {reorderQuickReplyShortcuts$DirectInput} parameters {@link reorderQuickReplyShortcuts$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async reorderQuickReplyShortcuts(
+    parameters: reorderQuickReplyShortcuts$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "reorderQuickReplyShortcuts",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
+   *
+   * @param {loadQuickReplyShortcutMessages$DirectInput} parameters {@link loadQuickReplyShortcutMessages$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async loadQuickReplyShortcutMessages(
+    parameters: loadQuickReplyShortcutMessages$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "loadQuickReplyShortcutMessages",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Deletes specified quick reply messages
+   *
+   * @param {deleteQuickReplyShortcutMessages$DirectInput} parameters {@link deleteQuickReplyShortcutMessages$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteQuickReplyShortcutMessages(
+    parameters: deleteQuickReplyShortcutMessages$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "deleteQuickReplyShortcutMessages",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Adds a message to a quick reply shortcut. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+   *
+   * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+   *
+   * @param {addQuickReplyShortcutMessage$DirectInput} parameters {@link addQuickReplyShortcutMessage$Input}
+   * @return {Promise<QuickReplyMessage>} Promise<{@link QuickReplyMessage}>
+   */
+  async addQuickReplyShortcutMessage(
+    parameters: addQuickReplyShortcutMessage$DirectInput
+  ): Promise<QuickReplyMessage> {
+    const result = await this.client.invoke(
+      "addQuickReplyShortcutMessage",
+      parameters
+    );
+    return result as QuickReplyMessage;
+  }
+
+  /**
+   * Adds a message to a quick reply shortcut via inline bot. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+   *
+   * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+   *
+   * @param {addQuickReplyShortcutInlineQueryResultMessage$DirectInput} parameters {@link addQuickReplyShortcutInlineQueryResultMessage$Input}
+   * @return {Promise<QuickReplyMessage>} Promise<{@link QuickReplyMessage}>
+   */
+  async addQuickReplyShortcutInlineQueryResultMessage(
+    parameters: addQuickReplyShortcutInlineQueryResultMessage$DirectInput
+  ): Promise<QuickReplyMessage> {
+    const result = await this.client.invoke(
+      "addQuickReplyShortcutInlineQueryResultMessage",
+      parameters
+    );
+    return result as QuickReplyMessage;
+  }
+
+  /**
+   * Adds 2-10 messages grouped together into an album to a quick reply shortcut. Currently, only audio, document, photo and video messages can be grouped into an album.
+   *
+   * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+   *
+   * @param {addQuickReplyShortcutMessageAlbum$DirectInput} parameters {@link addQuickReplyShortcutMessageAlbum$Input}
+   * @return {Promise<QuickReplyMessages>} Promise<{@link QuickReplyMessages}>
+   */
+  async addQuickReplyShortcutMessageAlbum(
+    parameters: addQuickReplyShortcutMessageAlbum$DirectInput
+  ): Promise<QuickReplyMessages> {
+    const result = await this.client.invoke(
+      "addQuickReplyShortcutMessageAlbum",
+      parameters
+    );
+    return result as QuickReplyMessages;
+  }
+
+  /**
+   * Readds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+   *
+   * - If a message is readded, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be readded, null will be returned instead of the message
+   *
+   * @param {readdQuickReplyShortcutMessages$DirectInput} parameters {@link readdQuickReplyShortcutMessages$Input}
+   * @return {Promise<QuickReplyMessages>} Promise<{@link QuickReplyMessages}>
+   */
+  async readdQuickReplyShortcutMessages(
+    parameters: readdQuickReplyShortcutMessages$DirectInput
+  ): Promise<QuickReplyMessages> {
+    const result = await this.client.invoke(
+      "readdQuickReplyShortcutMessages",
+      parameters
+    );
+    return result as QuickReplyMessages;
+  }
+
+  /**
+   * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+   *
+   * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+   *
+   * @param {editQuickReplyMessage$DirectInput} parameters {@link editQuickReplyMessage$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async editQuickReplyMessage(
+    parameters: editQuickReplyMessage$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("editQuickReplyMessage", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns the list of custom emojis, which can be used as forum topic icon by all users
    *
    * @param {getForumTopicDefaultIcons$DirectInput} parameters {@link getForumTopicDefaultIcons$Input}
    * @return {Promise<Stickers>} Promise<{@link Stickers}>
@@ -74644,6 +81355,19 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns information about a message effect. Returns a 404 error if the effect is not found
+   *
+   * @param {getMessageEffect$DirectInput} parameters {@link getMessageEffect$Input}
+   * @return {Promise<MessageEffect>} Promise<{@link MessageEffect}>
+   */
+  async getMessageEffect(
+    parameters: getMessageEffect$DirectInput
+  ): Promise<MessageEffect> {
+    const result = await this.client.invoke("getMessageEffect", parameters);
+    return result as MessageEffect;
+  }
+
+  /**
    * Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
    *
    * @param {searchQuote$DirectInput} parameters {@link searchQuote$Input}
@@ -74668,7 +81392,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities from a marked-up text. Can be called synchronously
+   * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
+   *
+   * - and MentionName entities from a marked-up text. Can be called synchronously
    *
    * @param {parseTextEntities$DirectInput} parameters {@link parseTextEntities$Input}
    * @return {Promise<FormattedText>} Promise<{@link FormattedText}>
@@ -74849,6 +81575,32 @@ export class $AsyncApi {
   ): Promise<Ok> {
     const result = await this.client.invoke("hideSuggestedAction", parameters);
     return result as Ok;
+  }
+
+  /**
+   * Hides the list of contacts that have close birthdays for 24 hours
+   *
+   * @param {hideContactCloseBirthdays$DirectInput} parameters {@link hideContactCloseBirthdays$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async hideContactCloseBirthdays(
+    parameters: hideContactCloseBirthdays$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("hideContactCloseBirthdays", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns information about a business connection by its identifier; for bots only
+   *
+   * @param {getBusinessConnection$DirectInput} parameters {@link getBusinessConnection$Input}
+   * @return {Promise<BusinessConnection>} Promise<{@link BusinessConnection}>
+   */
+  async getBusinessConnection(
+    parameters: getBusinessConnection$DirectInput
+  ): Promise<BusinessConnection> {
+    const result = await this.client.invoke("getBusinessConnection", parameters);
+    return result as BusinessConnection;
   }
 
   /**
@@ -75203,7 +81955,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about the type of an internal link. Returns a 404 error if the link is not internal. Can be called before authorization
+   * Returns information about the type of internal link. Returns a 404 error if the link is not internal. Can be called before authorization
    *
    * @param {getInternalLinkType$DirectInput} parameters {@link getInternalLinkType$Input}
    * @return {Promise<InternalLinkType>} Promise<{@link InternalLinkType}>
@@ -75346,16 +82098,16 @@ export class $AsyncApi {
   }
 
   /**
-   * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns the newly created chat
+   * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
    *
    * @param {createNewBasicGroupChat$DirectInput} parameters {@link createNewBasicGroupChat$Input}
-   * @return {Promise<Chat>} Promise<{@link Chat}>
+   * @return {Promise<CreatedBasicGroupChat>} Promise<{@link CreatedBasicGroupChat}>
    */
   async createNewBasicGroupChat(
     parameters: createNewBasicGroupChat$DirectInput
-  ): Promise<Chat> {
+  ): Promise<CreatedBasicGroupChat> {
     const result = await this.client.invoke("createNewBasicGroupChat", parameters);
-    return result as Chat;
+    return result as CreatedBasicGroupChat;
   }
 
   /**
@@ -75506,6 +82258,19 @@ export class $AsyncApi {
    */
   async reorderChatFolders(parameters: reorderChatFolders$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("reorderChatFolders", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Toggles whether chat folder tags are enabled
+   *
+   * @param {toggleChatFolderTags$DirectInput} parameters {@link toggleChatFolderTags$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async toggleChatFolderTags(
+    parameters: toggleChatFolderTags$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("toggleChatFolderTags", parameters);
     return result as Ok;
   }
 
@@ -76066,25 +82831,31 @@ export class $AsyncApi {
   }
 
   /**
-   * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats
+   * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
    *
    * @param {addChatMember$DirectInput} parameters {@link addChatMember$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @return {Promise<FailedToAddMembers>} Promise<{@link FailedToAddMembers}>
    */
-  async addChatMember(parameters: addChatMember$DirectInput): Promise<Ok> {
+  async addChatMember(
+    parameters: addChatMember$DirectInput
+  ): Promise<FailedToAddMembers> {
     const result = await this.client.invoke("addChatMember", parameters);
-    return result as Ok;
+    return result as FailedToAddMembers;
   }
 
   /**
-   * Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels. This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members
+   * Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels.
+   *
+   * - This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members. Returns information about members that weren't added
    *
    * @param {addChatMembers$DirectInput} parameters {@link addChatMembers$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
+   * @return {Promise<FailedToAddMembers>} Promise<{@link FailedToAddMembers}>
    */
-  async addChatMembers(parameters: addChatMembers$DirectInput): Promise<Ok> {
+  async addChatMembers(
+    parameters: addChatMembers$DirectInput
+  ): Promise<FailedToAddMembers> {
     const result = await this.client.invoke("addChatMembers", parameters);
-    return result as Ok;
+    return result as FailedToAddMembers;
   }
 
   /**
@@ -76205,7 +82976,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
+   * Returns the list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
    *
    * @param {getSavedNotificationSounds$DirectInput} parameters {@link getSavedNotificationSounds$Input}
    * @return {Promise<NotificationSounds>} Promise<{@link NotificationSounds}>
@@ -76250,7 +83021,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of chats with non-default notification settings for new messages
+   * Returns the list of chats with non-default notification settings for new messages
    *
    * @param {getChatNotificationSettingsExceptions$DirectInput} parameters {@link getChatNotificationSettingsExceptions$Input}
    * @return {Promise<Chats>} Promise<{@link Chats}>
@@ -76298,7 +83069,23 @@ export class $AsyncApi {
   }
 
   /**
-   * Resets all notification settings to their default values. By default, all chats are unmuted and message previews are shown
+   * Changes notification settings for reactions
+   *
+   * @param {setReactionNotificationSettings$DirectInput} parameters {@link setReactionNotificationSettings$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setReactionNotificationSettings(
+    parameters: setReactionNotificationSettings$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "setReactionNotificationSettings",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
    *
    * @param {resetAllNotificationSettings$DirectInput} parameters {@link resetAllNotificationSettings$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -76419,15 +83206,18 @@ export class $AsyncApi {
   }
 
   /**
-   * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_pinned == true
+   * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
    *
-   * @param {toggleStoryIsPinned$DirectInput} parameters {@link toggleStoryIsPinned$Input}
+   * @param {toggleStoryIsPostedToChatPage$DirectInput} parameters {@link toggleStoryIsPostedToChatPage$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
    */
-  async toggleStoryIsPinned(
-    parameters: toggleStoryIsPinned$DirectInput
+  async toggleStoryIsPostedToChatPage(
+    parameters: toggleStoryIsPostedToChatPage$DirectInput
   ): Promise<Ok> {
-    const result = await this.client.invoke("toggleStoryIsPinned", parameters);
+    const result = await this.client.invoke(
+      "toggleStoryIsPostedToChatPage",
+      parameters
+    );
     return result as Ok;
   }
 
@@ -76443,7 +83233,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of chats with non-default notification settings for stories
+   * Returns the list of chats with non-default notification settings for stories
    *
    * @param {getStoryNotificationSettingsExceptions$DirectInput} parameters {@link getStoryNotificationSettingsExceptions$Input}
    * @return {Promise<Chats>} Promise<{@link Chats}>
@@ -76498,17 +83288,20 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+   * Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
    *
-   * - For optimal performance, the number of returned stories is chosen by TDLib
+   * - Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
    *
-   * @param {getChatPinnedStories$DirectInput} parameters {@link getChatPinnedStories$Input}
+   * @param {getChatPostedToChatPageStories$DirectInput} parameters {@link getChatPostedToChatPageStories$Input}
    * @return {Promise<Stories>} Promise<{@link Stories}>
    */
-  async getChatPinnedStories(
-    parameters: getChatPinnedStories$DirectInput
+  async getChatPostedToChatPageStories(
+    parameters: getChatPostedToChatPageStories$DirectInput
   ): Promise<Stories> {
-    const result = await this.client.invoke("getChatPinnedStories", parameters);
+    const result = await this.client.invoke(
+      "getChatPostedToChatPageStories",
+      parameters
+    );
     return result as Stories;
   }
 
@@ -76525,6 +83318,19 @@ export class $AsyncApi {
   ): Promise<Stories> {
     const result = await this.client.invoke("getChatArchivedStories", parameters);
     return result as Stories;
+  }
+
+  /**
+   * Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
+   *
+   * @param {setChatPinnedStories$DirectInput} parameters {@link setChatPinnedStories$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setChatPinnedStories(
+    parameters: setChatPinnedStories$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setChatPinnedStories", parameters);
+    return result as Ok;
   }
 
   /**
@@ -76644,7 +83450,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of features available on the specific chat boost level; this is an offline request
+   * Returns the list of features available on the specific chat boost level; this is an offline request
    *
    * @param {getChatBoostLevelFeatures$DirectInput} parameters {@link getChatBoostLevelFeatures$Input}
    * @return {Promise<ChatBoostLevelFeatures>} Promise<{@link ChatBoostLevelFeatures}>
@@ -76657,7 +83463,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of features available on the first 10 chat boost levels; this is an offline request
+   * Returns the list of features available for different chat boost levels; this is an offline request
    *
    * @param {getChatBoostFeatures$DirectInput} parameters {@link getChatBoostFeatures$Input}
    * @return {Promise<ChatBoostFeatures>} Promise<{@link ChatBoostFeatures}>
@@ -76736,7 +83542,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of boosts applied to a chat; requires administrator rights in the chat
+   * Returns the list of boosts applied to a chat; requires administrator rights in the chat
    *
    * @param {getChatBoosts$DirectInput} parameters {@link getChatBoosts$Input}
    * @return {Promise<FoundChatBoosts>} Promise<{@link FoundChatBoosts}>
@@ -76749,7 +83555,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
+   * Returns the list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
    *
    * @param {getUserChatBoosts$DirectInput} parameters {@link getUserChatBoosts$Input}
    * @return {Promise<FoundChatBoosts>} Promise<{@link FoundChatBoosts}>
@@ -76942,9 +83748,11 @@ export class $AsyncApi {
   }
 
   /**
-   * Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes. Updates updateFile will be used
+   * Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes.
    *
-   * - to notify about upload progress and successful completion of the upload. The file will not have a persistent remote identifier until it is sent in a message
+   * - In all other cases there is no need to preliminary upload a file. Updates updateFile will be used to notify about upload progress.
+   *
+   * - The upload will not be completed until the file is sent in a message
    *
    * @param {preliminaryUploadFile$DirectInput} parameters {@link preliminaryUploadFile$Input}
    * @return {Promise<File>} Promise<{@link File}>
@@ -77036,7 +83844,7 @@ export class $AsyncApi {
   /**
    * Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
    *
-   * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent from download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+   * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
    *
    * @param {addFileToDownloads$DirectInput} parameters {@link addFileToDownloads$Input}
    * @return {Promise<File>} Promise<{@link File}>
@@ -77117,6 +83925,22 @@ export class $AsyncApi {
   ): Promise<FoundFileDownloads> {
     const result = await this.client.invoke("searchFileDownloads", parameters);
     return result as FoundFileDownloads;
+  }
+
+  /**
+   * Application verification has been completed. Can be called before authorization
+   *
+   * @param {setApplicationVerificationToken$DirectInput} parameters {@link setApplicationVerificationToken$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setApplicationVerificationToken(
+    parameters: setApplicationVerificationToken$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "setApplicationVerificationToken",
+      parameters
+    );
+    return result as Ok;
   }
 
   /**
@@ -77215,7 +84039,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of chat administrators with number of their invite links. Requires owner privileges in the chat
+   * Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
    *
    * @param {getChatInviteLinkCounts$DirectInput} parameters {@link getChatInviteLinkCounts$Input}
    * @return {Promise<ChatInviteLinkCounts>} Promise<{@link ChatInviteLinkCounts}>
@@ -77447,7 +84271,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of participant identifiers, on whose behalf a video chat in the chat can be joined
+   * Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
    *
    * @param {getVideoChatAvailableParticipants$DirectInput} parameters {@link getVideoChatAvailableParticipants$Input}
    * @return {Promise<MessageSenders>} Promise<{@link MessageSenders}>
@@ -78129,6 +84953,19 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns greeting stickers from regular sticker sets that can be used for the start page of other users
+   *
+   * @param {getGreetingStickers$DirectInput} parameters {@link getGreetingStickers$Input}
+   * @return {Promise<Stickers>} Promise<{@link Stickers}>
+   */
+  async getGreetingStickers(
+    parameters: getGreetingStickers$DirectInput
+  ): Promise<Stickers> {
+    const result = await this.client.invoke("getGreetingStickers", parameters);
+    return result as Stickers;
+  }
+
+  /**
    * Returns premium stickers from regular sticker sets
    *
    * @param {getPremiumStickers$DirectInput} parameters {@link getPremiumStickers$Input}
@@ -78302,7 +85139,7 @@ export class $AsyncApi {
   /**
    * Manually adds a new sticker to the list of recently used stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
    *
-   * - Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to recent stickers
+   * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to recent stickers
    *
    * @param {addRecentSticker$DirectInput} parameters {@link addRecentSticker$Input}
    * @return {Promise<Stickers>} Promise<{@link Stickers}>
@@ -78356,7 +85193,7 @@ export class $AsyncApi {
   /**
    * Adds a new sticker to the list of favorite stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
    *
-   * - Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to favorite stickers
+   * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to favorite stickers
    *
    * @param {addFavoriteSticker$DirectInput} parameters {@link addFavoriteSticker$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -78452,7 +85289,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
+   * Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
    *
    * @param {getCustomEmojiStickers$DirectInput} parameters {@link getCustomEmojiStickers$Input}
    * @return {Promise<Stickers>} Promise<{@link Stickers}>
@@ -78526,7 +85363,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first. Only non-secret video animations with MIME type "video/mp4" can be added to the list
+   * Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first.
+   *
+   * - Only non-secret video animations with MIME type "video/mp4" can be added to the list
    *
    * @param {addSavedAnimation$DirectInput} parameters {@link addSavedAnimation$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -78718,6 +85557,28 @@ export class $AsyncApi {
   }
 
   /**
+   * Changes the birthdate of the current user
+   *
+   * @param {setBirthdate$DirectInput} parameters {@link setBirthdate$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setBirthdate(parameters: setBirthdate$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("setBirthdate", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes the personal chat of the current user
+   *
+   * @param {setPersonalChat$DirectInput} parameters {@link setPersonalChat$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setPersonalChat(parameters: setPersonalChat$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("setPersonalChat", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Changes the emoji status of the current user; for Telegram Premium users only
    *
    * @param {setEmojiStatus$DirectInput} parameters {@link setEmojiStatus$Input}
@@ -78729,7 +85590,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer
+   * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
    *
    * @param {setLocation$DirectInput} parameters {@link setLocation$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -78740,48 +85601,300 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
+   * Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
    *
-   * @param {changePhoneNumber$DirectInput} parameters {@link changePhoneNumber$Input}
-   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
-   */
-  async changePhoneNumber(
-    parameters: changePhoneNumber$DirectInput
-  ): Promise<AuthenticationCodeInfo> {
-    const result = await this.client.invoke("changePhoneNumber", parameters);
-    return result as AuthenticationCodeInfo;
-  }
-
-  /**
-   * Resends the authentication code sent to confirm a new phone number for the current user. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
-   *
-   * @param {resendChangePhoneNumberCode$DirectInput} parameters {@link resendChangePhoneNumberCode$Input}
-   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
-   */
-  async resendChangePhoneNumberCode(
-    parameters: resendChangePhoneNumberCode$DirectInput
-  ): Promise<AuthenticationCodeInfo> {
-    const result = await this.client.invoke(
-      "resendChangePhoneNumberCode",
-      parameters
-    );
-    return result as AuthenticationCodeInfo;
-  }
-
-  /**
-   * Checks the authentication code sent to confirm a new phone number of the user
-   *
-   * @param {checkChangePhoneNumberCode$DirectInput} parameters {@link checkChangePhoneNumberCode$Input}
+   * @param {toggleHasSponsoredMessagesEnabled$DirectInput} parameters {@link toggleHasSponsoredMessagesEnabled$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
    */
-  async checkChangePhoneNumberCode(
-    parameters: checkChangePhoneNumberCode$DirectInput
+  async toggleHasSponsoredMessagesEnabled(
+    parameters: toggleHasSponsoredMessagesEnabled$DirectInput
   ): Promise<Ok> {
     const result = await this.client.invoke(
-      "checkChangePhoneNumberCode",
+      "toggleHasSponsoredMessagesEnabled",
       parameters
     );
     return result as Ok;
+  }
+
+  /**
+   * Changes the business location of the current user. Requires Telegram Business subscription
+   *
+   * @param {setBusinessLocation$DirectInput} parameters {@link setBusinessLocation$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setBusinessLocation(
+    parameters: setBusinessLocation$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setBusinessLocation", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes the business opening hours of the current user. Requires Telegram Business subscription
+   *
+   * @param {setBusinessOpeningHours$DirectInput} parameters {@link setBusinessOpeningHours$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setBusinessOpeningHours(
+    parameters: setBusinessOpeningHours$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setBusinessOpeningHours", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes the business greeting message settings of the current user. Requires Telegram Business subscription
+   *
+   * @param {setBusinessGreetingMessageSettings$DirectInput} parameters {@link setBusinessGreetingMessageSettings$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setBusinessGreetingMessageSettings(
+    parameters: setBusinessGreetingMessageSettings$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "setBusinessGreetingMessageSettings",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Changes the business away message settings of the current user. Requires Telegram Business subscription
+   *
+   * @param {setBusinessAwayMessageSettings$DirectInput} parameters {@link setBusinessAwayMessageSettings$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setBusinessAwayMessageSettings(
+    parameters: setBusinessAwayMessageSettings$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "setBusinessAwayMessageSettings",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Changes the business start page of the current user. Requires Telegram Business subscription
+   *
+   * @param {setBusinessStartPage$DirectInput} parameters {@link setBusinessStartPage$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setBusinessStartPage(
+    parameters: setBusinessStartPage$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setBusinessStartPage", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
+   *
+   * @param {sendPhoneNumberCode$DirectInput} parameters {@link sendPhoneNumberCode$Input}
+   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
+   */
+  async sendPhoneNumberCode(
+    parameters: sendPhoneNumberCode$DirectInput
+  ): Promise<AuthenticationCodeInfo> {
+    const result = await this.client.invoke("sendPhoneNumberCode", parameters);
+    return result as AuthenticationCodeInfo;
+  }
+
+  /**
+   * Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
+   *
+   * @param {sendPhoneNumberFirebaseSms$DirectInput} parameters {@link sendPhoneNumberFirebaseSms$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async sendPhoneNumberFirebaseSms(
+    parameters: sendPhoneNumberFirebaseSms$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "sendPhoneNumberFirebaseSms",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
+   *
+   * @param {reportPhoneNumberCodeMissing$DirectInput} parameters {@link reportPhoneNumberCodeMissing$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async reportPhoneNumberCodeMissing(
+    parameters: reportPhoneNumberCodeMissing$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "reportPhoneNumberCodeMissing",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
+   *
+   * @param {resendPhoneNumberCode$DirectInput} parameters {@link resendPhoneNumberCode$Input}
+   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
+   */
+  async resendPhoneNumberCode(
+    parameters: resendPhoneNumberCode$DirectInput
+  ): Promise<AuthenticationCodeInfo> {
+    const result = await this.client.invoke("resendPhoneNumberCode", parameters);
+    return result as AuthenticationCodeInfo;
+  }
+
+  /**
+   * Check the authentication code and completes the request for which the code was sent if appropriate
+   *
+   * @param {checkPhoneNumberCode$DirectInput} parameters {@link checkPhoneNumberCode$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async checkPhoneNumberCode(
+    parameters: checkPhoneNumberCode$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("checkPhoneNumberCode", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
+   *
+   * @param {getBusinessConnectedBot$DirectInput} parameters {@link getBusinessConnectedBot$Input}
+   * @return {Promise<BusinessConnectedBot>} Promise<{@link BusinessConnectedBot}>
+   */
+  async getBusinessConnectedBot(
+    parameters: getBusinessConnectedBot$DirectInput
+  ): Promise<BusinessConnectedBot> {
+    const result = await this.client.invoke("getBusinessConnectedBot", parameters);
+    return result as BusinessConnectedBot;
+  }
+
+  /**
+   * Adds or changes business bot that is connected to the current user account
+   *
+   * @param {setBusinessConnectedBot$DirectInput} parameters {@link setBusinessConnectedBot$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setBusinessConnectedBot(
+    parameters: setBusinessConnectedBot$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setBusinessConnectedBot", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Deletes the business bot that is connected to the current user account
+   *
+   * @param {deleteBusinessConnectedBot$DirectInput} parameters {@link deleteBusinessConnectedBot$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteBusinessConnectedBot(
+    parameters: deleteBusinessConnectedBot$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "deleteBusinessConnectedBot",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Pauses or resumes the connected business bot in a specific chat
+   *
+   * @param {toggleBusinessConnectedBotChatIsPaused$DirectInput} parameters {@link toggleBusinessConnectedBotChatIsPaused$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async toggleBusinessConnectedBotChatIsPaused(
+    parameters: toggleBusinessConnectedBotChatIsPaused$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "toggleBusinessConnectedBotChatIsPaused",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
+   *
+   * @param {removeBusinessConnectedBotFromChat$DirectInput} parameters {@link removeBusinessConnectedBotFromChat$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async removeBusinessConnectedBotFromChat(
+    parameters: removeBusinessConnectedBotFromChat$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "removeBusinessConnectedBotFromChat",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Returns business chat links created for the current account
+   *
+   * @param {getBusinessChatLinks$DirectInput} parameters {@link getBusinessChatLinks$Input}
+   * @return {Promise<BusinessChatLinks>} Promise<{@link BusinessChatLinks}>
+   */
+  async getBusinessChatLinks(
+    parameters: getBusinessChatLinks$DirectInput
+  ): Promise<BusinessChatLinks> {
+    const result = await this.client.invoke("getBusinessChatLinks", parameters);
+    return result as BusinessChatLinks;
+  }
+
+  /**
+   * Creates a business chat link for the current account. Requires Telegram Business subscription. There can be up to getOption("business_chat_link_count_max") links created. Returns the created link
+   *
+   * @param {createBusinessChatLink$DirectInput} parameters {@link createBusinessChatLink$Input}
+   * @return {Promise<BusinessChatLink>} Promise<{@link BusinessChatLink}>
+   */
+  async createBusinessChatLink(
+    parameters: createBusinessChatLink$DirectInput
+  ): Promise<BusinessChatLink> {
+    const result = await this.client.invoke("createBusinessChatLink", parameters);
+    return result as BusinessChatLink;
+  }
+
+  /**
+   * Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
+   *
+   * @param {editBusinessChatLink$DirectInput} parameters {@link editBusinessChatLink$Input}
+   * @return {Promise<BusinessChatLink>} Promise<{@link BusinessChatLink}>
+   */
+  async editBusinessChatLink(
+    parameters: editBusinessChatLink$DirectInput
+  ): Promise<BusinessChatLink> {
+    const result = await this.client.invoke("editBusinessChatLink", parameters);
+    return result as BusinessChatLink;
+  }
+
+  /**
+   * Deletes a business chat link of the current account
+   *
+   * @param {deleteBusinessChatLink$DirectInput} parameters {@link deleteBusinessChatLink$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteBusinessChatLink(
+    parameters: deleteBusinessChatLink$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("deleteBusinessChatLink", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns information about a business chat link
+   *
+   * @param {getBusinessChatLinkInfo$DirectInput} parameters {@link getBusinessChatLinkInfo$Input}
+   * @return {Promise<BusinessChatLinkInfo>} Promise<{@link BusinessChatLinkInfo}>
+   */
+  async getBusinessChatLinkInfo(
+    parameters: getBusinessChatLinkInfo$DirectInput
+  ): Promise<BusinessChatLinkInfo> {
+    const result = await this.client.invoke("getBusinessChatLinkInfo", parameters);
+    return result as BusinessChatLinkInfo;
   }
 
   /**
@@ -78829,7 +85942,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of commands supported by the bot for the given user scope and language; for bots only
+   * Returns the list of commands supported by the bot for the given user scope and language; for bots only
    *
    * @param {getCommands$DirectInput} parameters {@link getCommands$Input}
    * @return {Promise<BotCommands>} Promise<{@link BotCommands}>
@@ -79352,6 +86465,22 @@ export class $AsyncApi {
   }
 
   /**
+   * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+   *
+   * @param {toggleSupergroupCanHaveSponsoredMessages$DirectInput} parameters {@link toggleSupergroupCanHaveSponsoredMessages$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async toggleSupergroupCanHaveSponsoredMessages(
+    parameters: toggleSupergroupCanHaveSponsoredMessages$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "toggleSupergroupCanHaveSponsoredMessages",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
    * Toggles whether non-administrators can receive only administrators and bots using getSupergroupMembers or searchChatMembers. Can be called only if supergroupFullInfo.can_hide_members == true
    *
    * @param {toggleSupergroupHasHiddenMembers$DirectInput} parameters {@link toggleSupergroupHasHiddenMembers$Input}
@@ -79479,6 +86608,17 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns the list of supported time zones
+   *
+   * @param {getTimeZones$DirectInput} parameters {@link getTimeZones$Input}
+   * @return {Promise<TimeZones>} Promise<{@link TimeZones}>
+   */
+  async getTimeZones(parameters: getTimeZones$DirectInput): Promise<TimeZones> {
+    const result = await this.client.invoke("getTimeZones", parameters);
+    return result as TimeZones;
+  }
+
+  /**
    * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
    *
    * @param {getPaymentForm$DirectInput} parameters {@link getPaymentForm$Input}
@@ -79580,6 +86720,17 @@ export class $AsyncApi {
   ): Promise<HttpUrl> {
     const result = await this.client.invoke("createInvoiceLink", parameters);
     return result as HttpUrl;
+  }
+
+  /**
+   * Refunds a previously done payment in Telegram Stars
+   *
+   * @param {refundStarPayment$DirectInput} parameters {@link refundStarPayment$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async refundStarPayment(parameters: refundStarPayment$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("refundStarPayment", parameters);
+    return result as Ok;
   }
 
   /**
@@ -79929,7 +87080,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes privacy settings for new chat creation; for Telegram Premium users only
+   * Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
    *
    * @param {setNewChatPrivacySettings$DirectInput} parameters {@link setNewChatPrivacySettings$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80102,6 +87253,51 @@ export class $AsyncApi {
   ): Promise<Ok> {
     const result = await this.client.invoke("reportMessageReactions", parameters);
     return result as Ok;
+  }
+
+  /**
+   * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+   *
+   * @param {getChatRevenueStatistics$DirectInput} parameters {@link getChatRevenueStatistics$Input}
+   * @return {Promise<ChatRevenueStatistics>} Promise<{@link ChatRevenueStatistics}>
+   */
+  async getChatRevenueStatistics(
+    parameters: getChatRevenueStatistics$DirectInput
+  ): Promise<ChatRevenueStatistics> {
+    const result = await this.client.invoke("getChatRevenueStatistics", parameters);
+    return result as ChatRevenueStatistics;
+  }
+
+  /**
+   * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+   *
+   * @param {getChatRevenueWithdrawalUrl$DirectInput} parameters {@link getChatRevenueWithdrawalUrl$Input}
+   * @return {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   */
+  async getChatRevenueWithdrawalUrl(
+    parameters: getChatRevenueWithdrawalUrl$DirectInput
+  ): Promise<HttpUrl> {
+    const result = await this.client.invoke(
+      "getChatRevenueWithdrawalUrl",
+      parameters
+    );
+    return result as HttpUrl;
+  }
+
+  /**
+   * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+   *
+   * @param {getChatRevenueTransactions$DirectInput} parameters {@link getChatRevenueTransactions$Input}
+   * @return {Promise<ChatRevenueTransactions>} Promise<{@link ChatRevenueTransactions}>
+   */
+  async getChatRevenueTransactions(
+    parameters: getChatRevenueTransactions$DirectInput
+  ): Promise<ChatRevenueTransactions> {
+    const result = await this.client.invoke(
+      "getChatRevenueTransactions",
+      parameters
+    );
+    return result as ChatRevenueTransactions;
   }
 
   /**
@@ -80439,54 +87635,6 @@ export class $AsyncApi {
   }
 
   /**
-   * Sends a code to verify a phone number to be added to a user's Telegram Passport
-   *
-   * @param {sendPhoneNumberVerificationCode$DirectInput} parameters {@link sendPhoneNumberVerificationCode$Input}
-   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
-   */
-  async sendPhoneNumberVerificationCode(
-    parameters: sendPhoneNumberVerificationCode$DirectInput
-  ): Promise<AuthenticationCodeInfo> {
-    const result = await this.client.invoke(
-      "sendPhoneNumberVerificationCode",
-      parameters
-    );
-    return result as AuthenticationCodeInfo;
-  }
-
-  /**
-   * Resends the code to verify a phone number to be added to a user's Telegram Passport
-   *
-   * @param {resendPhoneNumberVerificationCode$DirectInput} parameters {@link resendPhoneNumberVerificationCode$Input}
-   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
-   */
-  async resendPhoneNumberVerificationCode(
-    parameters: resendPhoneNumberVerificationCode$DirectInput
-  ): Promise<AuthenticationCodeInfo> {
-    const result = await this.client.invoke(
-      "resendPhoneNumberVerificationCode",
-      parameters
-    );
-    return result as AuthenticationCodeInfo;
-  }
-
-  /**
-   * Checks the phone number verification code for Telegram Passport
-   *
-   * @param {checkPhoneNumberVerificationCode$DirectInput} parameters {@link checkPhoneNumberVerificationCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
-   */
-  async checkPhoneNumberVerificationCode(
-    parameters: checkPhoneNumberVerificationCode$DirectInput
-  ): Promise<Ok> {
-    const result = await this.client.invoke(
-      "checkPhoneNumberVerificationCode",
-      parameters
-    );
-    return result as Ok;
-  }
-
-  /**
    * Sends a code to verify an email address to be added to a user's Telegram Passport
    *
    * @param {sendEmailAddressVerificationCode$DirectInput} parameters {@link sendEmailAddressVerificationCode$Input}
@@ -80583,54 +87731,6 @@ export class $AsyncApi {
   }
 
   /**
-   * Sends phone number confirmation code to handle links of the type internalLinkTypePhoneNumberConfirmation
-   *
-   * @param {sendPhoneNumberConfirmationCode$DirectInput} parameters {@link sendPhoneNumberConfirmationCode$Input}
-   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
-   */
-  async sendPhoneNumberConfirmationCode(
-    parameters: sendPhoneNumberConfirmationCode$DirectInput
-  ): Promise<AuthenticationCodeInfo> {
-    const result = await this.client.invoke(
-      "sendPhoneNumberConfirmationCode",
-      parameters
-    );
-    return result as AuthenticationCodeInfo;
-  }
-
-  /**
-   * Resends phone number confirmation code
-   *
-   * @param {resendPhoneNumberConfirmationCode$DirectInput} parameters {@link resendPhoneNumberConfirmationCode$Input}
-   * @return {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
-   */
-  async resendPhoneNumberConfirmationCode(
-    parameters: resendPhoneNumberConfirmationCode$DirectInput
-  ): Promise<AuthenticationCodeInfo> {
-    const result = await this.client.invoke(
-      "resendPhoneNumberConfirmationCode",
-      parameters
-    );
-    return result as AuthenticationCodeInfo;
-  }
-
-  /**
-   * Checks phone number confirmation code
-   *
-   * @param {checkPhoneNumberConfirmationCode$DirectInput} parameters {@link checkPhoneNumberConfirmationCode$Input}
-   * @return {Promise<Ok>} Promise<{@link Ok}>
-   */
-  async checkPhoneNumberConfirmationCode(
-    parameters: checkPhoneNumberConfirmationCode$DirectInput
-  ): Promise<Ok> {
-    const result = await this.client.invoke(
-      "checkPhoneNumberConfirmationCode",
-      parameters
-    );
-    return result as Ok;
-  }
-
-  /**
    * Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
    *
    * @param {setBotUpdatesStatus$DirectInput} parameters {@link setBotUpdatesStatus$Input}
@@ -80697,7 +87797,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Adds a new sticker to a set; for bots only
+   * Adds a new sticker to a set
    *
    * @param {addStickerToSet$DirectInput} parameters {@link addStickerToSet$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80708,7 +87808,20 @@ export class $AsyncApi {
   }
 
   /**
-   * Sets a sticker set thumbnail; for bots only
+   * Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
+   *
+   * @param {replaceStickerInSet$DirectInput} parameters {@link replaceStickerInSet$Input}
+   * @return {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async replaceStickerInSet(
+    parameters: replaceStickerInSet$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("replaceStickerInSet", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Sets a sticker set thumbnail
    *
    * @param {setStickerSetThumbnail$DirectInput} parameters {@link setStickerSetThumbnail$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80721,7 +87834,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Sets a custom emoji sticker set thumbnail; for bots only
+   * Sets a custom emoji sticker set thumbnail
    *
    * @param {setCustomEmojiStickerSetThumbnail$DirectInput} parameters {@link setCustomEmojiStickerSetThumbnail$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80737,7 +87850,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Sets a sticker set title; for bots only
+   * Sets a sticker set title
    *
    * @param {setStickerSetTitle$DirectInput} parameters {@link setStickerSetTitle$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80748,7 +87861,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Deleted a sticker set; for bots only
+   * Completely deletes a sticker set
    *
    * @param {deleteStickerSet$DirectInput} parameters {@link deleteStickerSet$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80759,7 +87872,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the position of a sticker in the set to which it belongs; for bots only. The sticker set must have been created by the bot
+   * Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
    *
    * @param {setStickerPositionInSet$DirectInput} parameters {@link setStickerPositionInSet$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80772,7 +87885,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Removes a sticker from the set to which it belongs; for bots only. The sticker set must have been created by the bot
+   * Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
    *
    * @param {removeStickerFromSet$DirectInput} parameters {@link removeStickerFromSet$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80785,7 +87898,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+   * Changes the list of emoji corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
    *
    * @param {setStickerEmojis$DirectInput} parameters {@link setStickerEmojis$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80796,7 +87909,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+   * Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
    *
    * @param {setStickerKeywords$DirectInput} parameters {@link setStickerKeywords$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80807,7 +87920,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot
+   * Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
    *
    * @param {setStickerMaskPosition$DirectInput} parameters {@link setStickerMaskPosition$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
@@ -80817,6 +87930,19 @@ export class $AsyncApi {
   ): Promise<Ok> {
     const result = await this.client.invoke("setStickerMaskPosition", parameters);
     return result as Ok;
+  }
+
+  /**
+   * Returns sticker sets owned by the current user
+   *
+   * @param {getOwnedStickerSets$DirectInput} parameters {@link getOwnedStickerSets$Input}
+   * @return {Promise<StickerSets>} Promise<{@link StickerSets}>
+   */
+  async getOwnedStickerSets(
+    parameters: getOwnedStickerSets$DirectInput
+  ): Promise<StickerSets> {
+    const result = await this.client.invoke("getOwnedStickerSets", parameters);
+    return result as StickerSets;
   }
 
   /**
@@ -80983,13 +88109,41 @@ export class $AsyncApi {
   }
 
   /**
-   * Checks whether Telegram Premium purchase is possible. Must be called before in-store Premium purchase
+   * Returns available options for Telegram stars purchase
    *
-   * @param {canPurchasePremium$DirectInput} parameters {@link canPurchasePremium$Input}
+   * @param {getStarPaymentOptions$DirectInput} parameters {@link getStarPaymentOptions$Input}
+   * @return {Promise<StarPaymentOptions>} Promise<{@link StarPaymentOptions}>
+   */
+  async getStarPaymentOptions(
+    parameters: getStarPaymentOptions$DirectInput
+  ): Promise<StarPaymentOptions> {
+    const result = await this.client.invoke("getStarPaymentOptions", parameters);
+    return result as StarPaymentOptions;
+  }
+
+  /**
+   * Returns the list of Telegram star transactions for the current user
+   *
+   * @param {getStarTransactions$DirectInput} parameters {@link getStarTransactions$Input}
+   * @return {Promise<StarTransactions>} Promise<{@link StarTransactions}>
+   */
+  async getStarTransactions(
+    parameters: getStarTransactions$DirectInput
+  ): Promise<StarTransactions> {
+    const result = await this.client.invoke("getStarTransactions", parameters);
+    return result as StarTransactions;
+  }
+
+  /**
+   * Checks whether an in-store purchase is possible. Must be called before any in-store purchase
+   *
+   * @param {canPurchaseFromStore$DirectInput} parameters {@link canPurchaseFromStore$Input}
    * @return {Promise<Ok>} Promise<{@link Ok}>
    */
-  async canPurchasePremium(parameters: canPurchasePremium$DirectInput): Promise<Ok> {
-    const result = await this.client.invoke("canPurchasePremium", parameters);
+  async canPurchaseFromStore(
+    parameters: canPurchaseFromStore$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("canPurchaseFromStore", parameters);
     return result as Ok;
   }
 
@@ -81020,6 +88174,19 @@ export class $AsyncApi {
       parameters
     );
     return result as Ok;
+  }
+
+  /**
+   * Returns information about features, available to Business users
+   *
+   * @param {getBusinessFeatures$DirectInput} parameters {@link getBusinessFeatures$Input}
+   * @return {Promise<BusinessFeatures>} Promise<{@link BusinessFeatures}>
+   */
+  async getBusinessFeatures(
+    parameters: getBusinessFeatures$DirectInput
+  ): Promise<BusinessFeatures> {
+    const result = await this.client.invoke("getBusinessFeatures", parameters);
+    return result as BusinessFeatures;
   }
 
   /**
@@ -81129,6 +88296,19 @@ export class $AsyncApi {
   ): Promise<PhoneNumberInfo> {
     const result = await this.client.invoke("getPhoneNumberInfoSync", parameters);
     return result as PhoneNumberInfo;
+  }
+
+  /**
+   * Returns information about a given collectible item that was purchased at https://fragment.com
+   *
+   * @param {getCollectibleItemInfo$DirectInput} parameters {@link getCollectibleItemInfo$Input}
+   * @return {Promise<CollectibleItemInfo>} Promise<{@link CollectibleItemInfo}>
+   */
+  async getCollectibleItemInfo(
+    parameters: getCollectibleItemInfo$DirectInput
+  ): Promise<CollectibleItemInfo> {
+    const result = await this.client.invoke("getCollectibleItemInfo", parameters);
+    return result as CollectibleItemInfo;
   }
 
   /**
@@ -81242,7 +88422,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of proxies that are currently set up. Can be called before authorization
+   * Returns the list of proxies that are currently set up. Can be called before authorization
    *
    * @param {getProxies$DirectInput} parameters {@link getProxies$Input}
    * @return {Promise<Proxies>} Promise<{@link Proxies}>
@@ -81323,7 +88503,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
+   * Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
    *
    * @param {getLogTags$DirectInput} parameters {@link getLogTags$Input}
    * @return {Promise<LogTags>} Promise<{@link LogTags}>
@@ -81585,6 +88765,18 @@ export class $SyncApi {
   }
 
   /**
+   * Checks validness of a name for a quick reply shortcut. Can be called synchronously
+   *
+   * @param {checkQuickReplyShortcutName$DirectInput} parameters - {@link checkQuickReplyShortcutName$Input}
+   * @return {Ok} {@link Ok}
+   */
+  checkQuickReplyShortcutName(
+    parameters: checkQuickReplyShortcutName$DirectInput
+  ): Ok {
+    return this.client.execute("checkQuickReplyShortcutName", parameters) as Ok;
+  }
+
+  /**
    * Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
    *
    * @param {searchQuote$DirectInput} parameters - {@link searchQuote$Input}
@@ -81605,7 +88797,9 @@ export class $SyncApi {
   }
 
   /**
-   * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities from a marked-up text. Can be called synchronously
+   * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
+   *
+   * - and MentionName entities from a marked-up text. Can be called synchronously
    *
    * @param {parseTextEntities$DirectInput} parameters - {@link parseTextEntities$Input}
    * @return {FormattedText} {@link FormattedText}
@@ -81832,7 +89026,7 @@ export class $SyncApi {
   }
 
   /**
-   * Returns list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
+   * Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
    *
    * @param {getLogTags$DirectInput} parameters - {@link getLogTags$Input}
    * @return {LogTags} {@link LogTags}
@@ -82187,25 +89381,37 @@ export type setAuthenticationEmailAddress = (
 ) => Ok;
 
 /**
- * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null and the server-specified timeout has passed,
+ * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
  *
- * - or when the current authorization state is authorizationStateWaitEmailCode
+ * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
  */
 export type resendAuthenticationCode$Input = {
   readonly _: "resendAuthenticationCode";
+
+  /**
+   * Reason of code resending; pass null if unknown
+   * @type {ResendCodeReason$Input} {@link ResendCodeReason}
+   */
+  readonly reason?: ResendCodeReason$Input | null;
 };
 
 /**
- * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null and the server-specified timeout has passed,
+ * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
  *
- * - or when the current authorization state is authorizationStateWaitEmailCode
+ * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
  */
-export type resendAuthenticationCode$DirectInput = {};
+export type resendAuthenticationCode$DirectInput = {
+  /**
+   * Reason of code resending; pass null if unknown
+   * @type {ResendCodeReason$Input} {@link ResendCodeReason}
+   */
+  readonly reason?: ResendCodeReason$Input | null;
+};
 
 /**
- * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null and the server-specified timeout has passed,
+ * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
  *
- * - or when the current authorization state is authorizationStateWaitEmailCode
+ * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
  *
  * @param {resendAuthenticationCode$Input} parameters {@link resendAuthenticationCode$Input}
  * @return {Ok} {@link Ok}
@@ -82215,7 +89421,7 @@ export type resendAuthenticationCode = (
 ) => Ok;
 
 /**
- * Checks the authentication of a email address. Works only when the current authorization state is authorizationStateWaitEmailCode
+ * Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
  */
 export type checkAuthenticationEmailCode$Input = {
   readonly _: "checkAuthenticationEmailCode";
@@ -82228,7 +89434,7 @@ export type checkAuthenticationEmailCode$Input = {
 };
 
 /**
- * Checks the authentication of a email address. Works only when the current authorization state is authorizationStateWaitEmailCode
+ * Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
  */
 export type checkAuthenticationEmailCode$DirectInput = {
   /**
@@ -82239,7 +89445,7 @@ export type checkAuthenticationEmailCode$DirectInput = {
 };
 
 /**
- * Checks the authentication of a email address. Works only when the current authorization state is authorizationStateWaitEmailCode
+ * Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
  *
  * @param {checkAuthenticationEmailCode$Input} parameters {@link checkAuthenticationEmailCode$Input}
  * @return {Ok} {@link Ok}
@@ -82561,7 +89767,7 @@ export type sendAuthenticationFirebaseSms$Input = {
   readonly _: "sendAuthenticationFirebaseSms";
 
   /**
-   * SafetyNet Attestation API token for the Android application, or secret from push notification for the iOS application
+   * Play Integrity API or SafetyNet Attestation API token for the Android application, or secret from push notification for the iOS application
    * @type {string} {@link string}
    */
   readonly token?: string;
@@ -82572,7 +89778,7 @@ export type sendAuthenticationFirebaseSms$Input = {
  */
 export type sendAuthenticationFirebaseSms$DirectInput = {
   /**
-   * SafetyNet Attestation API token for the Android application, or secret from push notification for the iOS application
+   * Play Integrity API or SafetyNet Attestation API token for the Android application, or secret from push notification for the iOS application
    * @type {string} {@link string}
    */
   readonly token?: string;
@@ -82586,6 +89792,40 @@ export type sendAuthenticationFirebaseSms$DirectInput = {
  */
 export type sendAuthenticationFirebaseSms = (
   parameters: sendAuthenticationFirebaseSms$Input
+) => Ok;
+
+/**
+ * Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
+ */
+export type reportAuthenticationCodeMissing$Input = {
+  readonly _: "reportAuthenticationCodeMissing";
+
+  /**
+   * Current mobile network code
+   * @type {string} {@link string}
+   */
+  readonly mobile_network_code?: string;
+};
+
+/**
+ * Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
+ */
+export type reportAuthenticationCodeMissing$DirectInput = {
+  /**
+   * Current mobile network code
+   * @type {string} {@link string}
+   */
+  readonly mobile_network_code?: string;
+};
+
+/**
+ * Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
+ *
+ * @param {reportAuthenticationCodeMissing$Input} parameters {@link reportAuthenticationCodeMissing$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type reportAuthenticationCodeMissing = (
+  parameters: reportAuthenticationCodeMissing$Input
 ) => Ok;
 
 /**
@@ -82879,7 +90119,7 @@ export type setPassword = (parameters: setPassword$Input) => PasswordState;
 /**
  * Changes the login email address of the user. The email address can be changed only if the current user already has login email and passwordState.login_email_address_pattern is non-empty.
  *
- * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of a email address, call checkLoginEmailAddressCode directly
+ * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of an email address, call checkLoginEmailAddressCode directly
  */
 export type setLoginEmailAddress$Input = {
   readonly _: "setLoginEmailAddress";
@@ -82894,7 +90134,7 @@ export type setLoginEmailAddress$Input = {
 /**
  * Changes the login email address of the user. The email address can be changed only if the current user already has login email and passwordState.login_email_address_pattern is non-empty.
  *
- * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of a email address, call checkLoginEmailAddressCode directly
+ * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of an email address, call checkLoginEmailAddressCode directly
  */
 export type setLoginEmailAddress$DirectInput = {
   /**
@@ -82907,7 +90147,7 @@ export type setLoginEmailAddress$DirectInput = {
 /**
  * Changes the login email address of the user. The email address can be changed only if the current user already has login email and passwordState.login_email_address_pattern is non-empty.
  *
- * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of a email address, call checkLoginEmailAddressCode directly
+ * - The change will not be applied until the new login email address is confirmed with checkLoginEmailAddressCode. To use Apple ID/Google ID instead of an email address, call checkLoginEmailAddressCode directly
  *
  * @param {setLoginEmailAddress$Input} parameters {@link setLoginEmailAddress$Input}
  * @return {EmailAddressAuthenticationCodeInfo} {@link EmailAddressAuthenticationCodeInfo}
@@ -84421,6 +91661,26 @@ export type searchChatsNearby$DirectInput = {
 export type searchChatsNearby = (parameters: searchChatsNearby$Input) => ChatsNearby;
 
 /**
+ * Returns a list of channel chats recommended to the current user
+ */
+export type getRecommendedChats$Input = {
+  readonly _: "getRecommendedChats";
+};
+
+/**
+ * Returns a list of channel chats recommended to the current user
+ */
+export type getRecommendedChats$DirectInput = {};
+
+/**
+ * Returns a list of channel chats recommended to the current user
+ *
+ * @param {getRecommendedChats$Input} parameters {@link getRecommendedChats$Input}
+ * @return {Chats} {@link Chats}
+ */
+export type getRecommendedChats = (parameters: getRecommendedChats$Input) => Chats;
+
+/**
  * Returns a list of chats similar to the given chat
  */
 export type getChatSimilarChats$Input = {
@@ -84499,7 +91759,7 @@ export type getChatSimilarChatCount = (
 ) => Count;
 
 /**
- * Informs TDLib that a chat was opened from the list of similar chats. The method is independent from openChat and closeChat methods
+ * Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
  */
 export type openChatSimilarChat$Input = {
   readonly _: "openChatSimilarChat";
@@ -84518,7 +91778,7 @@ export type openChatSimilarChat$Input = {
 };
 
 /**
- * Informs TDLib that a chat was opened from the list of similar chats. The method is independent from openChat and closeChat methods
+ * Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
  */
 export type openChatSimilarChat$DirectInput = {
   /**
@@ -84535,7 +91795,7 @@ export type openChatSimilarChat$DirectInput = {
 };
 
 /**
- * Informs TDLib that a chat was opened from the list of similar chats. The method is independent from openChat and closeChat methods
+ * Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
  *
  * @param {openChatSimilarChat$Input} parameters {@link openChatSimilarChat$Input}
  * @return {Ok} {@link Ok}
@@ -84960,6 +92220,28 @@ export type getInactiveSupergroupChats$DirectInput = {};
  */
 export type getInactiveSupergroupChats = (
   parameters: getInactiveSupergroupChats$Input
+) => Chats;
+
+/**
+ * Returns a list of channel chats, which can be used as a personal chat
+ */
+export type getSuitablePersonalChats$Input = {
+  readonly _: "getSuitablePersonalChats";
+};
+
+/**
+ * Returns a list of channel chats, which can be used as a personal chat
+ */
+export type getSuitablePersonalChats$DirectInput = {};
+
+/**
+ * Returns a list of channel chats, which can be used as a personal chat
+ *
+ * @param {getSuitablePersonalChats$Input} parameters {@link getSuitablePersonalChats$Input}
+ * @return {Chats} {@link Chats}
+ */
+export type getSuitablePersonalChats = (
+  parameters: getSuitablePersonalChats$Input
 ) => Chats;
 
 /**
@@ -85781,6 +93063,12 @@ export type searchMessages$Input = {
   readonly chat_list?: ChatList$Input | null;
 
   /**
+   * Pass true to search only for messages in channels
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly only_in_channels?: Bool$Input;
+
+  /**
    * Query to search for
    * @type {string} {@link string}
    */
@@ -85828,6 +93116,12 @@ export type searchMessages$DirectInput = {
    * @type {ChatList$Input} {@link ChatList}
    */
   readonly chat_list?: ChatList$Input | null;
+
+  /**
+   * Pass true to search only for messages in channels
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly only_in_channels?: Bool$Input;
 
   /**
    * Query to search for
@@ -86171,6 +93465,166 @@ export type searchOutgoingDocumentMessages$DirectInput = {
 export type searchOutgoingDocumentMessages = (
   parameters: searchOutgoingDocumentMessages$Input
 ) => FoundMessages;
+
+/**
+ * Searches for public channel posts with the given hashtag or cashtag. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
+ */
+export type searchPublicHashtagMessages$Input = {
+  readonly _: "searchPublicHashtagMessages";
+
+  /**
+   * Hashtag or cashtag to search for
+   * @type {string} {@link string}
+   */
+  readonly hashtag?: string;
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of messages to be returned; up to 100. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Searches for public channel posts with the given hashtag or cashtag. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
+ */
+export type searchPublicHashtagMessages$DirectInput = {
+  /**
+   * Hashtag or cashtag to search for
+   * @type {string} {@link string}
+   */
+  readonly hashtag?: string;
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of messages to be returned; up to 100. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Searches for public channel posts with the given hashtag or cashtag. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
+ *
+ * @param {searchPublicHashtagMessages$Input} parameters {@link searchPublicHashtagMessages$Input}
+ * @return {FoundMessages} {@link FoundMessages}
+ */
+export type searchPublicHashtagMessages = (
+  parameters: searchPublicHashtagMessages$Input
+) => FoundMessages;
+
+/**
+ * Returns recently searched for hashtags or cashtags by their prefix
+ */
+export type getSearchedForHashtags$Input = {
+  readonly _: "getSearchedForHashtags";
+
+  /**
+   * Prefix of hashtags or cashtags to return
+   * @type {string} {@link string}
+   */
+  readonly prefix?: string;
+
+  /**
+   * The maximum number of items to be returned
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns recently searched for hashtags or cashtags by their prefix
+ */
+export type getSearchedForHashtags$DirectInput = {
+  /**
+   * Prefix of hashtags or cashtags to return
+   * @type {string} {@link string}
+   */
+  readonly prefix?: string;
+
+  /**
+   * The maximum number of items to be returned
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns recently searched for hashtags or cashtags by their prefix
+ *
+ * @param {getSearchedForHashtags$Input} parameters {@link getSearchedForHashtags$Input}
+ * @return {Hashtags} {@link Hashtags}
+ */
+export type getSearchedForHashtags = (
+  parameters: getSearchedForHashtags$Input
+) => Hashtags;
+
+/**
+ * Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
+ */
+export type removeSearchedForHashtag$Input = {
+  readonly _: "removeSearchedForHashtag";
+
+  /**
+   * Hashtag or cashtag to delete
+   * @type {string} {@link string}
+   */
+  readonly hashtag?: string;
+};
+
+/**
+ * Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
+ */
+export type removeSearchedForHashtag$DirectInput = {
+  /**
+   * Hashtag or cashtag to delete
+   * @type {string} {@link string}
+   */
+  readonly hashtag?: string;
+};
+
+/**
+ * Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
+ *
+ * @param {removeSearchedForHashtag$Input} parameters {@link removeSearchedForHashtag$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type removeSearchedForHashtag = (
+  parameters: removeSearchedForHashtag$Input
+) => Ok;
+
+/**
+ * Clears the list of recently searched for hashtags
+ */
+export type clearSearchedForHashtags$Input = {
+  readonly _: "clearSearchedForHashtags";
+};
+
+/**
+ * Clears the list of recently searched for hashtags
+ */
+export type clearSearchedForHashtags$DirectInput = {};
+
+/**
+ * Clears the list of recently searched for hashtags
+ *
+ * @param {clearSearchedForHashtags$Input} parameters {@link clearSearchedForHashtags$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type clearSearchedForHashtags = (
+  parameters: clearSearchedForHashtags$Input
+) => Ok;
 
 /**
  * Deletes all call messages
@@ -86741,6 +94195,64 @@ export type clickChatSponsoredMessage = (
 ) => Ok;
 
 /**
+ * Reports a sponsored message to Telegram moderators
+ */
+export type reportChatSponsoredMessage$Input = {
+  readonly _: "reportChatSponsoredMessage";
+
+  /**
+   * Chat identifier of the sponsored message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the sponsored message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Option identifier chosen by the user; leave empty for the initial request
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly option_id?: bytes$Input;
+};
+
+/**
+ * Reports a sponsored message to Telegram moderators
+ */
+export type reportChatSponsoredMessage$DirectInput = {
+  /**
+   * Chat identifier of the sponsored message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the sponsored message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Option identifier chosen by the user; leave empty for the initial request
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly option_id?: bytes$Input;
+};
+
+/**
+ * Reports a sponsored message to Telegram moderators
+ *
+ * @param {reportChatSponsoredMessage$Input} parameters {@link reportChatSponsoredMessage$Input}
+ * @return {ReportChatSponsoredMessageResult} {@link ReportChatSponsoredMessageResult}
+ */
+export type reportChatSponsoredMessage = (
+  parameters: reportChatSponsoredMessage$Input
+) => ReportChatSponsoredMessageResult;
+
+/**
  * Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
  */
 export type removeNotification$Input = {
@@ -87237,7 +94749,7 @@ export type rateSpeechRecognition$DirectInput = {
 export type rateSpeechRecognition = (parameters: rateSpeechRecognition$Input) => Ok;
 
 /**
- * Returns list of message sender identifiers, which can be used to send messages in a chat
+ * Returns the list of message sender identifiers, which can be used to send messages in a chat
  */
 export type getChatAvailableMessageSenders$Input = {
   readonly _: "getChatAvailableMessageSenders";
@@ -87250,7 +94762,7 @@ export type getChatAvailableMessageSenders$Input = {
 };
 
 /**
- * Returns list of message sender identifiers, which can be used to send messages in a chat
+ * Returns the list of message sender identifiers, which can be used to send messages in a chat
  */
 export type getChatAvailableMessageSenders$DirectInput = {
   /**
@@ -87261,7 +94773,7 @@ export type getChatAvailableMessageSenders$DirectInput = {
 };
 
 /**
- * Returns list of message sender identifiers, which can be used to send messages in a chat
+ * Returns the list of message sender identifiers, which can be used to send messages in a chat
  *
  * @param {getChatAvailableMessageSenders$Input} parameters {@link getChatAvailableMessageSenders$Input}
  * @return {ChatMessageSenders} {@link ChatMessageSenders}
@@ -87407,7 +94919,9 @@ export type sendMessage$DirectInput = {
 export type sendMessage = (parameters: sendMessage$Input) => Message;
 
 /**
- * Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album. Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ * Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
  */
 export type sendMessageAlbum$Input = {
   readonly _: "sendMessageAlbum";
@@ -87437,14 +94951,16 @@ export type sendMessageAlbum$Input = {
   readonly options?: messageSendOptions$Input | null;
 
   /**
-   * Contents of messages to be sent. At most 10 messages can be added to an album
+   * Contents of messages to be sent. At most 10 messages can be added to an album. All messages must have the same value of show_caption_above_media
    * @type {vector$Input<InputMessageContent$Input>} {@link vector<InputMessageContent>}
    */
   readonly input_message_contents?: vector$Input<InputMessageContent$Input>;
 };
 
 /**
- * Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album. Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ * Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
  */
 export type sendMessageAlbum$DirectInput = {
   /**
@@ -87472,14 +94988,16 @@ export type sendMessageAlbum$DirectInput = {
   readonly options?: messageSendOptions$Input | null;
 
   /**
-   * Contents of messages to be sent. At most 10 messages can be added to an album
+   * Contents of messages to be sent. At most 10 messages can be added to an album. All messages must have the same value of show_caption_above_media
    * @type {vector$Input<InputMessageContent$Input>} {@link vector<InputMessageContent>}
    */
   readonly input_message_contents?: vector$Input<InputMessageContent$Input>;
 };
 
 /**
- * Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album. Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ * Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
  *
  * @param {sendMessageAlbum$Input} parameters {@link sendMessageAlbum$Input}
  * @return {Messages} {@link Messages}
@@ -87757,6 +95275,64 @@ export type forwardMessages$DirectInput = {
  * @return {Messages} {@link Messages}
  */
 export type forwardMessages = (parameters: forwardMessages$Input) => Messages;
+
+/**
+ * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+ */
+export type sendQuickReplyShortcutMessages$Input = {
+  readonly _: "sendQuickReplyShortcutMessages";
+
+  /**
+   * Identifier of the chat to which to send messages. The chat must be a private chat with a regular user
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Unique identifier of the quick reply shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates
+   * @type {int32} {@link int32}
+   */
+  readonly sending_id?: int32;
+};
+
+/**
+ * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+ */
+export type sendQuickReplyShortcutMessages$DirectInput = {
+  /**
+   * Identifier of the chat to which to send messages. The chat must be a private chat with a regular user
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Unique identifier of the quick reply shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates
+   * @type {int32} {@link int32}
+   */
+  readonly sending_id?: int32;
+};
+
+/**
+ * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+ *
+ * @param {sendQuickReplyShortcutMessages$Input} parameters {@link sendQuickReplyShortcutMessages$Input}
+ * @return {Messages} {@link Messages}
+ */
+export type sendQuickReplyShortcutMessages = (
+  parameters: sendQuickReplyShortcutMessages$Input
+) => Messages;
 
 /**
  * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
@@ -88073,7 +95649,9 @@ export type deleteChatMessagesByDate = (
 ) => Ok;
 
 /**
- * Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
+ * Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  */
 export type editMessageText$Input = {
   readonly _: "editMessageText";
@@ -88104,7 +95682,9 @@ export type editMessageText$Input = {
 };
 
 /**
- * Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
+ * Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  */
 export type editMessageText$DirectInput = {
   /**
@@ -88133,7 +95713,9 @@ export type editMessageText$DirectInput = {
 };
 
 /**
- * Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
+ * Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  *
  * @param {editMessageText$Input} parameters {@link editMessageText$Input}
  * @return {Message} {@link Message}
@@ -88141,7 +95723,9 @@ export type editMessageText$DirectInput = {
 export type editMessageText = (parameters: editMessageText$Input) => Message;
 
 /**
- * Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location. Returns the edited message after the edit is completed on the server side
+ * Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
+ *
+ * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
  */
 export type editMessageLiveLocation$Input = {
   readonly _: "editMessageLiveLocation";
@@ -88171,6 +95755,14 @@ export type editMessageLiveLocation$Input = {
   readonly location?: location$Input | null;
 
   /**
+   * New time relative to the message send date, for which the location can be updated, in seconds. If 0x7FFFFFFF specified, then the location can be updated forever.
+   *
+   * - Otherwise, must not exceed the current live_period by more than a day, and the live location expiration date must remain in the next 90 days. Pass 0 to keep the current live_period
+   * @type {int32} {@link int32}
+   */
+  readonly live_period?: int32;
+
+  /**
    * The new direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
    * @type {int32} {@link int32}
    */
@@ -88184,7 +95776,9 @@ export type editMessageLiveLocation$Input = {
 };
 
 /**
- * Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location. Returns the edited message after the edit is completed on the server side
+ * Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
+ *
+ * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
  */
 export type editMessageLiveLocation$DirectInput = {
   /**
@@ -88212,6 +95806,14 @@ export type editMessageLiveLocation$DirectInput = {
   readonly location?: location$Input | null;
 
   /**
+   * New time relative to the message send date, for which the location can be updated, in seconds. If 0x7FFFFFFF specified, then the location can be updated forever.
+   *
+   * - Otherwise, must not exceed the current live_period by more than a day, and the live location expiration date must remain in the next 90 days. Pass 0 to keep the current live_period
+   * @type {int32} {@link int32}
+   */
+  readonly live_period?: int32;
+
+  /**
    * The new direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
    * @type {int32} {@link int32}
    */
@@ -88225,7 +95827,9 @@ export type editMessageLiveLocation$DirectInput = {
 };
 
 /**
- * Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location. Returns the edited message after the edit is completed on the server side
+ * Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
+ *
+ * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
  *
  * @param {editMessageLiveLocation$Input} parameters {@link editMessageLiveLocation$Input}
  * @return {Message} {@link Message}
@@ -88237,7 +95841,9 @@ export type editMessageLiveLocation = (
 /**
  * Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
  *
- * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
+ * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
+ *
+ * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
  */
 export type editMessageMedia$Input = {
   readonly _: "editMessageMedia";
@@ -88270,7 +95876,9 @@ export type editMessageMedia$Input = {
 /**
  * Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
  *
- * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
+ * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
+ *
+ * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
  */
 export type editMessageMedia$DirectInput = {
   /**
@@ -88301,7 +95909,9 @@ export type editMessageMedia$DirectInput = {
 /**
  * Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
  *
- * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
+ * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
+ *
+ * - Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
  *
  * @param {editMessageMedia$Input} parameters {@link editMessageMedia$Input}
  * @return {Message} {@link Message}
@@ -88309,7 +95919,9 @@ export type editMessageMedia$DirectInput = {
 export type editMessageMedia = (parameters: editMessageMedia$Input) => Message;
 
 /**
- * Edits the message content caption. Returns the edited message after the edit is completed on the server side
+ * Edits the message content caption. Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  */
 export type editMessageCaption$Input = {
   readonly _: "editMessageCaption";
@@ -88337,10 +95949,18 @@ export type editMessageCaption$Input = {
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
+
+  /**
+   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 };
 
 /**
- * Edits the message content caption. Returns the edited message after the edit is completed on the server side
+ * Edits the message content caption. Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  */
 export type editMessageCaption$DirectInput = {
   /**
@@ -88366,10 +95986,18 @@ export type editMessageCaption$DirectInput = {
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
+
+  /**
+   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 };
 
 /**
- * Edits the message content caption. Returns the edited message after the edit is completed on the server side
+ * Edits the message content caption. Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  *
  * @param {editMessageCaption$Input} parameters {@link editMessageCaption$Input}
  * @return {Message} {@link Message}
@@ -88377,7 +96005,9 @@ export type editMessageCaption$DirectInput = {
 export type editMessageCaption = (parameters: editMessageCaption$Input) => Message;
 
 /**
- * Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side
+ * Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  */
 export type editMessageReplyMarkup$Input = {
   readonly _: "editMessageReplyMarkup";
@@ -88402,7 +96032,9 @@ export type editMessageReplyMarkup$Input = {
 };
 
 /**
- * Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side
+ * Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  */
 export type editMessageReplyMarkup$DirectInput = {
   /**
@@ -88425,7 +96057,9 @@ export type editMessageReplyMarkup$DirectInput = {
 };
 
 /**
- * Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side
+ * Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side.
+ *
+ * - Can be used only if message.can_be_edited == true
  *
  * @param {editMessageReplyMarkup$Input} parameters {@link editMessageReplyMarkup$Input}
  * @return {Message} {@link Message}
@@ -88515,6 +96149,14 @@ export type editInlineMessageLiveLocation$Input = {
   readonly location?: location$Input | null;
 
   /**
+   * New time relative to the message send date, for which the location can be updated, in seconds. If 0x7FFFFFFF specified, then the location can be updated forever.
+   *
+   * - Otherwise, must not exceed the current live_period by more than a day, and the live location expiration date must remain in the next 90 days. Pass 0 to keep the current live_period
+   * @type {int32} {@link int32}
+   */
+  readonly live_period?: int32;
+
+  /**
    * The new direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
    * @type {int32} {@link int32}
    */
@@ -88548,6 +96190,14 @@ export type editInlineMessageLiveLocation$DirectInput = {
    * @type {location$Input} {@link location}
    */
   readonly location?: location$Input | null;
+
+  /**
+   * New time relative to the message send date, for which the location can be updated, in seconds. If 0x7FFFFFFF specified, then the location can be updated forever.
+   *
+   * - Otherwise, must not exceed the current live_period by more than a day, and the live location expiration date must remain in the next 90 days. Pass 0 to keep the current live_period
+   * @type {int32} {@link int32}
+   */
+  readonly live_period?: int32;
 
   /**
    * The new direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
@@ -88653,6 +96303,12 @@ export type editInlineMessageCaption$Input = {
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
+
+  /**
+   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 };
 
 /**
@@ -88676,6 +96332,12 @@ export type editInlineMessageCaption$DirectInput = {
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
+
+  /**
+   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
 };
 
 /**
@@ -88793,19 +96455,885 @@ export type editMessageSchedulingState = (
 ) => Ok;
 
 /**
- * Returns list of custom emojis, which can be used as forum topic icon by all users
+ * Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
+ */
+export type setMessageFactCheck$Input = {
+  readonly _: "setMessageFactCheck";
+
+  /**
+   * The channel chat the message belongs to
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the message. The message must be one of the following types: messageAnimation, messageAudio, messageDocument, messagePhoto, messageText, messageVideo
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * New text of the fact-check; 0-getOption("fact_check_length_max") characters; pass null to remove it. Only Bold, Italic, and TextUrl entities with https://t.me/ links are supported
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly text?: formattedText$Input | null;
+};
+
+/**
+ * Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
+ */
+export type setMessageFactCheck$DirectInput = {
+  /**
+   * The channel chat the message belongs to
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the message. The message must be one of the following types: messageAnimation, messageAudio, messageDocument, messagePhoto, messageText, messageVideo
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * New text of the fact-check; 0-getOption("fact_check_length_max") characters; pass null to remove it. Only Bold, Italic, and TextUrl entities with https://t.me/ links are supported
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly text?: formattedText$Input | null;
+};
+
+/**
+ * Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
+ *
+ * @param {setMessageFactCheck$Input} parameters {@link setMessageFactCheck$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setMessageFactCheck = (parameters: setMessageFactCheck$Input) => Ok;
+
+/**
+ * Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
+ */
+export type sendBusinessMessage$Input = {
+  readonly _: "sendBusinessMessage";
+
+  /**
+   * Unique identifier of business connection on behalf of which to send the request
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
+  /**
+   * Target chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Information about the message to be replied; pass null if none
+   * @type {InputMessageReplyTo$Input} {@link InputMessageReplyTo}
+   */
+  readonly reply_to?: InputMessageReplyTo$Input | null;
+
+  /**
+   * Pass true to disable notification for the message
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly disable_notification?: Bool$Input;
+
+  /**
+   * Pass true if the content of the message must be protected from forwarding and saving
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly protect_content?: Bool$Input;
+
+  /**
+   * Identifier of the effect to apply to the message
+   * @type {int64$Input} {@link int64}
+   */
+  readonly effect_id?: int64$Input;
+
+  /**
+   * Markup for replying to the message; pass null if none
+   * @type {ReplyMarkup$Input} {@link ReplyMarkup}
+   */
+  readonly reply_markup?: ReplyMarkup$Input | null;
+
+  /**
+   * The content of the message to be sent
+   * @type {InputMessageContent$Input} {@link InputMessageContent}
+   */
+  readonly input_message_content?: InputMessageContent$Input;
+};
+
+/**
+ * Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
+ */
+export type sendBusinessMessage$DirectInput = {
+  /**
+   * Unique identifier of business connection on behalf of which to send the request
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
+  /**
+   * Target chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Information about the message to be replied; pass null if none
+   * @type {InputMessageReplyTo$Input} {@link InputMessageReplyTo}
+   */
+  readonly reply_to?: InputMessageReplyTo$Input | null;
+
+  /**
+   * Pass true to disable notification for the message
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly disable_notification?: Bool$Input;
+
+  /**
+   * Pass true if the content of the message must be protected from forwarding and saving
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly protect_content?: Bool$Input;
+
+  /**
+   * Identifier of the effect to apply to the message
+   * @type {int64$Input} {@link int64}
+   */
+  readonly effect_id?: int64$Input;
+
+  /**
+   * Markup for replying to the message; pass null if none
+   * @type {ReplyMarkup$Input} {@link ReplyMarkup}
+   */
+  readonly reply_markup?: ReplyMarkup$Input | null;
+
+  /**
+   * The content of the message to be sent
+   * @type {InputMessageContent$Input} {@link InputMessageContent}
+   */
+  readonly input_message_content?: InputMessageContent$Input;
+};
+
+/**
+ * Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
+ *
+ * @param {sendBusinessMessage$Input} parameters {@link sendBusinessMessage$Input}
+ * @return {BusinessMessage} {@link BusinessMessage}
+ */
+export type sendBusinessMessage = (
+  parameters: sendBusinessMessage$Input
+) => BusinessMessage;
+
+/**
+ * Sends 2-10 messages grouped together into an album on behalf of a business account; for bots only. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ */
+export type sendBusinessMessageAlbum$Input = {
+  readonly _: "sendBusinessMessageAlbum";
+
+  /**
+   * Unique identifier of business connection on behalf of which to send the request
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
+  /**
+   * Target chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Information about the message to be replied; pass null if none
+   * @type {InputMessageReplyTo$Input} {@link InputMessageReplyTo}
+   */
+  readonly reply_to?: InputMessageReplyTo$Input | null;
+
+  /**
+   * Pass true to disable notification for the message
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly disable_notification?: Bool$Input;
+
+  /**
+   * Pass true if the content of the message must be protected from forwarding and saving
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly protect_content?: Bool$Input;
+
+  /**
+   * Identifier of the effect to apply to the message
+   * @type {int64$Input} {@link int64}
+   */
+  readonly effect_id?: int64$Input;
+
+  /**
+   * Contents of messages to be sent. At most 10 messages can be added to an album. All messages must have the same value of show_caption_above_media
+   * @type {vector$Input<InputMessageContent$Input>} {@link vector<InputMessageContent>}
+   */
+  readonly input_message_contents?: vector$Input<InputMessageContent$Input>;
+};
+
+/**
+ * Sends 2-10 messages grouped together into an album on behalf of a business account; for bots only. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ */
+export type sendBusinessMessageAlbum$DirectInput = {
+  /**
+   * Unique identifier of business connection on behalf of which to send the request
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
+  /**
+   * Target chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Information about the message to be replied; pass null if none
+   * @type {InputMessageReplyTo$Input} {@link InputMessageReplyTo}
+   */
+  readonly reply_to?: InputMessageReplyTo$Input | null;
+
+  /**
+   * Pass true to disable notification for the message
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly disable_notification?: Bool$Input;
+
+  /**
+   * Pass true if the content of the message must be protected from forwarding and saving
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly protect_content?: Bool$Input;
+
+  /**
+   * Identifier of the effect to apply to the message
+   * @type {int64$Input} {@link int64}
+   */
+  readonly effect_id?: int64$Input;
+
+  /**
+   * Contents of messages to be sent. At most 10 messages can be added to an album. All messages must have the same value of show_caption_above_media
+   * @type {vector$Input<InputMessageContent$Input>} {@link vector<InputMessageContent>}
+   */
+  readonly input_message_contents?: vector$Input<InputMessageContent$Input>;
+};
+
+/**
+ * Sends 2-10 messages grouped together into an album on behalf of a business account; for bots only. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ *
+ * @param {sendBusinessMessageAlbum$Input} parameters {@link sendBusinessMessageAlbum$Input}
+ * @return {BusinessMessages} {@link BusinessMessages}
+ */
+export type sendBusinessMessageAlbum = (
+  parameters: sendBusinessMessageAlbum$Input
+) => BusinessMessages;
+
+/**
+ * Checks validness of a name for a quick reply shortcut. Can be called synchronously
+ */
+export type checkQuickReplyShortcutName$Input = {
+  readonly _: "checkQuickReplyShortcutName";
+
+  /**
+   * The name of the shortcut; 1-32 characters
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+};
+
+/**
+ * Checks validness of a name for a quick reply shortcut. Can be called synchronously
+ */
+export type checkQuickReplyShortcutName$DirectInput = {
+  /**
+   * The name of the shortcut; 1-32 characters
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+};
+
+/**
+ * Checks validness of a name for a quick reply shortcut. Can be called synchronously
+ *
+ * @param {checkQuickReplyShortcutName$Input} parameters {@link checkQuickReplyShortcutName$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type checkQuickReplyShortcutName = (
+  parameters: checkQuickReplyShortcutName$Input
+) => Ok;
+
+/**
+ * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+ */
+export type loadQuickReplyShortcuts$Input = {
+  readonly _: "loadQuickReplyShortcuts";
+};
+
+/**
+ * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+ */
+export type loadQuickReplyShortcuts$DirectInput = {};
+
+/**
+ * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+ *
+ * @param {loadQuickReplyShortcuts$Input} parameters {@link loadQuickReplyShortcuts$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type loadQuickReplyShortcuts = (
+  parameters: loadQuickReplyShortcuts$Input
+) => Ok;
+
+/**
+ * Changes name of a quick reply shortcut
+ */
+export type setQuickReplyShortcutName$Input = {
+  readonly _: "setQuickReplyShortcutName";
+
+  /**
+   * Unique identifier of the quick reply shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * New name for the shortcut. Use checkQuickReplyShortcutName to check its validness
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+};
+
+/**
+ * Changes name of a quick reply shortcut
+ */
+export type setQuickReplyShortcutName$DirectInput = {
+  /**
+   * Unique identifier of the quick reply shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * New name for the shortcut. Use checkQuickReplyShortcutName to check its validness
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+};
+
+/**
+ * Changes name of a quick reply shortcut
+ *
+ * @param {setQuickReplyShortcutName$Input} parameters {@link setQuickReplyShortcutName$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setQuickReplyShortcutName = (
+  parameters: setQuickReplyShortcutName$Input
+) => Ok;
+
+/**
+ * Deletes a quick reply shortcut
+ */
+export type deleteQuickReplyShortcut$Input = {
+  readonly _: "deleteQuickReplyShortcut";
+
+  /**
+   * Unique identifier of the quick reply shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+};
+
+/**
+ * Deletes a quick reply shortcut
+ */
+export type deleteQuickReplyShortcut$DirectInput = {
+  /**
+   * Unique identifier of the quick reply shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+};
+
+/**
+ * Deletes a quick reply shortcut
+ *
+ * @param {deleteQuickReplyShortcut$Input} parameters {@link deleteQuickReplyShortcut$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type deleteQuickReplyShortcut = (
+  parameters: deleteQuickReplyShortcut$Input
+) => Ok;
+
+/**
+ * Changes the order of quick reply shortcuts
+ */
+export type reorderQuickReplyShortcuts$Input = {
+  readonly _: "reorderQuickReplyShortcuts";
+
+  /**
+   * The new order of quick reply shortcuts
+   * @type {vector$Input<int32>} {@link vector<int32>}
+   */
+  readonly shortcut_ids?: vector$Input<int32>;
+};
+
+/**
+ * Changes the order of quick reply shortcuts
+ */
+export type reorderQuickReplyShortcuts$DirectInput = {
+  /**
+   * The new order of quick reply shortcuts
+   * @type {vector$Input<int32>} {@link vector<int32>}
+   */
+  readonly shortcut_ids?: vector$Input<int32>;
+};
+
+/**
+ * Changes the order of quick reply shortcuts
+ *
+ * @param {reorderQuickReplyShortcuts$Input} parameters {@link reorderQuickReplyShortcuts$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type reorderQuickReplyShortcuts = (
+  parameters: reorderQuickReplyShortcuts$Input
+) => Ok;
+
+/**
+ * Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
+ */
+export type loadQuickReplyShortcutMessages$Input = {
+  readonly _: "loadQuickReplyShortcutMessages";
+
+  /**
+   * Unique identifier of the quick reply shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+};
+
+/**
+ * Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
+ */
+export type loadQuickReplyShortcutMessages$DirectInput = {
+  /**
+   * Unique identifier of the quick reply shortcut
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+};
+
+/**
+ * Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
+ *
+ * @param {loadQuickReplyShortcutMessages$Input} parameters {@link loadQuickReplyShortcutMessages$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type loadQuickReplyShortcutMessages = (
+  parameters: loadQuickReplyShortcutMessages$Input
+) => Ok;
+
+/**
+ * Deletes specified quick reply messages
+ */
+export type deleteQuickReplyShortcutMessages$Input = {
+  readonly _: "deleteQuickReplyShortcutMessages";
+
+  /**
+   * Unique identifier of the quick reply shortcut to which the messages belong
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * Unique identifiers of the messages
+   * @type {vector$Input<int53>} {@link vector<int53>}
+   */
+  readonly message_ids?: vector$Input<int53>;
+};
+
+/**
+ * Deletes specified quick reply messages
+ */
+export type deleteQuickReplyShortcutMessages$DirectInput = {
+  /**
+   * Unique identifier of the quick reply shortcut to which the messages belong
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * Unique identifiers of the messages
+   * @type {vector$Input<int53>} {@link vector<int53>}
+   */
+  readonly message_ids?: vector$Input<int53>;
+};
+
+/**
+ * Deletes specified quick reply messages
+ *
+ * @param {deleteQuickReplyShortcutMessages$Input} parameters {@link deleteQuickReplyShortcutMessages$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type deleteQuickReplyShortcutMessages = (
+  parameters: deleteQuickReplyShortcutMessages$Input
+) => Ok;
+
+/**
+ * Adds a message to a quick reply shortcut. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+ *
+ * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+ */
+export type addQuickReplyShortcutMessage$Input = {
+  readonly _: "addQuickReplyShortcutMessage";
+
+  /**
+   * Name of the target shortcut
+   * @type {string} {@link string}
+   */
+  readonly shortcut_name?: string;
+
+  /**
+   * Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly reply_to_message_id?: int53;
+
+  /**
+   * The content of the message to be added; inputMessagePoll, inputMessageForwarded and inputMessageLocation with live_period aren't supported
+   * @type {InputMessageContent$Input} {@link InputMessageContent}
+   */
+  readonly input_message_content?: InputMessageContent$Input;
+};
+
+/**
+ * Adds a message to a quick reply shortcut. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+ *
+ * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+ */
+export type addQuickReplyShortcutMessage$DirectInput = {
+  /**
+   * Name of the target shortcut
+   * @type {string} {@link string}
+   */
+  readonly shortcut_name?: string;
+
+  /**
+   * Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly reply_to_message_id?: int53;
+
+  /**
+   * The content of the message to be added; inputMessagePoll, inputMessageForwarded and inputMessageLocation with live_period aren't supported
+   * @type {InputMessageContent$Input} {@link InputMessageContent}
+   */
+  readonly input_message_content?: InputMessageContent$Input;
+};
+
+/**
+ * Adds a message to a quick reply shortcut. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+ *
+ * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+ *
+ * @param {addQuickReplyShortcutMessage$Input} parameters {@link addQuickReplyShortcutMessage$Input}
+ * @return {QuickReplyMessage} {@link QuickReplyMessage}
+ */
+export type addQuickReplyShortcutMessage = (
+  parameters: addQuickReplyShortcutMessage$Input
+) => QuickReplyMessage;
+
+/**
+ * Adds a message to a quick reply shortcut via inline bot. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+ *
+ * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+ */
+export type addQuickReplyShortcutInlineQueryResultMessage$Input = {
+  readonly _: "addQuickReplyShortcutInlineQueryResultMessage";
+
+  /**
+   * Name of the target shortcut
+   * @type {string} {@link string}
+   */
+  readonly shortcut_name?: string;
+
+  /**
+   * Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly reply_to_message_id?: int53;
+
+  /**
+   * Identifier of the inline query
+   * @type {int64$Input} {@link int64}
+   */
+  readonly query_id?: int64$Input;
+
+  /**
+   * Identifier of the inline query result
+   * @type {string} {@link string}
+   */
+  readonly result_id?: string;
+
+  /**
+   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username"), getOption("photo_search_bot_username"), and getOption("venue_search_bot_username")
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly hide_via_bot?: Bool$Input;
+};
+
+/**
+ * Adds a message to a quick reply shortcut via inline bot. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+ *
+ * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+ */
+export type addQuickReplyShortcutInlineQueryResultMessage$DirectInput = {
+  /**
+   * Name of the target shortcut
+   * @type {string} {@link string}
+   */
+  readonly shortcut_name?: string;
+
+  /**
+   * Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly reply_to_message_id?: int53;
+
+  /**
+   * Identifier of the inline query
+   * @type {int64$Input} {@link int64}
+   */
+  readonly query_id?: int64$Input;
+
+  /**
+   * Identifier of the inline query result
+   * @type {string} {@link string}
+   */
+  readonly result_id?: string;
+
+  /**
+   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username"), getOption("photo_search_bot_username"), and getOption("venue_search_bot_username")
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly hide_via_bot?: Bool$Input;
+};
+
+/**
+ * Adds a message to a quick reply shortcut via inline bot. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+ *
+ * - The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
+ *
+ * @param {addQuickReplyShortcutInlineQueryResultMessage$Input} parameters {@link addQuickReplyShortcutInlineQueryResultMessage$Input}
+ * @return {QuickReplyMessage} {@link QuickReplyMessage}
+ */
+export type addQuickReplyShortcutInlineQueryResultMessage = (
+  parameters: addQuickReplyShortcutInlineQueryResultMessage$Input
+) => QuickReplyMessage;
+
+/**
+ * Adds 2-10 messages grouped together into an album to a quick reply shortcut. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ */
+export type addQuickReplyShortcutMessageAlbum$Input = {
+  readonly _: "addQuickReplyShortcutMessageAlbum";
+
+  /**
+   * Name of the target shortcut
+   * @type {string} {@link string}
+   */
+  readonly shortcut_name?: string;
+
+  /**
+   * Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly reply_to_message_id?: int53;
+
+  /**
+   * Contents of messages to be sent. At most 10 messages can be added to an album. All messages must have the same value of show_caption_above_media
+   * @type {vector$Input<InputMessageContent$Input>} {@link vector<InputMessageContent>}
+   */
+  readonly input_message_contents?: vector$Input<InputMessageContent$Input>;
+};
+
+/**
+ * Adds 2-10 messages grouped together into an album to a quick reply shortcut. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ */
+export type addQuickReplyShortcutMessageAlbum$DirectInput = {
+  /**
+   * Name of the target shortcut
+   * @type {string} {@link string}
+   */
+  readonly shortcut_name?: string;
+
+  /**
+   * Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly reply_to_message_id?: int53;
+
+  /**
+   * Contents of messages to be sent. At most 10 messages can be added to an album. All messages must have the same value of show_caption_above_media
+   * @type {vector$Input<InputMessageContent$Input>} {@link vector<InputMessageContent>}
+   */
+  readonly input_message_contents?: vector$Input<InputMessageContent$Input>;
+};
+
+/**
+ * Adds 2-10 messages grouped together into an album to a quick reply shortcut. Currently, only audio, document, photo and video messages can be grouped into an album.
+ *
+ * - Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
+ *
+ * @param {addQuickReplyShortcutMessageAlbum$Input} parameters {@link addQuickReplyShortcutMessageAlbum$Input}
+ * @return {QuickReplyMessages} {@link QuickReplyMessages}
+ */
+export type addQuickReplyShortcutMessageAlbum = (
+  parameters: addQuickReplyShortcutMessageAlbum$Input
+) => QuickReplyMessages;
+
+/**
+ * Readds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ *
+ * - If a message is readded, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be readded, null will be returned instead of the message
+ */
+export type readdQuickReplyShortcutMessages$Input = {
+  readonly _: "readdQuickReplyShortcutMessages";
+
+  /**
+   * Name of the target shortcut
+   * @type {string} {@link string}
+   */
+  readonly shortcut_name?: string;
+
+  /**
+   * Identifiers of the quick reply messages to readd. Message identifiers must be in a strictly increasing order
+   * @type {vector$Input<int53>} {@link vector<int53>}
+   */
+  readonly message_ids?: vector$Input<int53>;
+};
+
+/**
+ * Readds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ *
+ * - If a message is readded, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be readded, null will be returned instead of the message
+ */
+export type readdQuickReplyShortcutMessages$DirectInput = {
+  /**
+   * Name of the target shortcut
+   * @type {string} {@link string}
+   */
+  readonly shortcut_name?: string;
+
+  /**
+   * Identifiers of the quick reply messages to readd. Message identifiers must be in a strictly increasing order
+   * @type {vector$Input<int53>} {@link vector<int53>}
+   */
+  readonly message_ids?: vector$Input<int53>;
+};
+
+/**
+ * Readds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ *
+ * - If a message is readded, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be readded, null will be returned instead of the message
+ *
+ * @param {readdQuickReplyShortcutMessages$Input} parameters {@link readdQuickReplyShortcutMessages$Input}
+ * @return {QuickReplyMessages} {@link QuickReplyMessages}
+ */
+export type readdQuickReplyShortcutMessages = (
+  parameters: readdQuickReplyShortcutMessages$Input
+) => QuickReplyMessages;
+
+/**
+ * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+ *
+ * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+ */
+export type editQuickReplyMessage$Input = {
+  readonly _: "editQuickReplyMessage";
+
+  /**
+   * Unique identifier of the quick reply shortcut with the message
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * Identifier of the message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * New content of the message. Must be one of the following types: inputMessageText, inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
+   * @type {InputMessageContent$Input} {@link InputMessageContent}
+   */
+  readonly input_message_content?: InputMessageContent$Input;
+};
+
+/**
+ * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+ *
+ * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+ */
+export type editQuickReplyMessage$DirectInput = {
+  /**
+   * Unique identifier of the quick reply shortcut with the message
+   * @type {int32} {@link int32}
+   */
+  readonly shortcut_id?: int32;
+
+  /**
+   * Identifier of the message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * New content of the message. Must be one of the following types: inputMessageText, inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
+   * @type {InputMessageContent$Input} {@link InputMessageContent}
+   */
+  readonly input_message_content?: InputMessageContent$Input;
+};
+
+/**
+ * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+ *
+ * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+ *
+ * @param {editQuickReplyMessage$Input} parameters {@link editQuickReplyMessage$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type editQuickReplyMessage = (parameters: editQuickReplyMessage$Input) => Ok;
+
+/**
+ * Returns the list of custom emojis, which can be used as forum topic icon by all users
  */
 export type getForumTopicDefaultIcons$Input = {
   readonly _: "getForumTopicDefaultIcons";
 };
 
 /**
- * Returns list of custom emojis, which can be used as forum topic icon by all users
+ * Returns the list of custom emojis, which can be used as forum topic icon by all users
  */
 export type getForumTopicDefaultIcons$DirectInput = {};
 
 /**
- * Returns list of custom emojis, which can be used as forum topic icon by all users
+ * Returns the list of custom emojis, which can be used as forum topic icon by all users
  *
  * @param {getForumTopicDefaultIcons$Input} parameters {@link getForumTopicDefaultIcons$Input}
  * @return {Stickers} {@link Stickers}
@@ -89973,6 +98501,38 @@ export type setSavedMessagesTagLabel = (
 ) => Ok;
 
 /**
+ * Returns information about a message effect. Returns a 404 error if the effect is not found
+ */
+export type getMessageEffect$Input = {
+  readonly _: "getMessageEffect";
+
+  /**
+   * Unique identifier of the effect
+   * @type {int64$Input} {@link int64}
+   */
+  readonly effect_id?: int64$Input;
+};
+
+/**
+ * Returns information about a message effect. Returns a 404 error if the effect is not found
+ */
+export type getMessageEffect$DirectInput = {
+  /**
+   * Unique identifier of the effect
+   * @type {int64$Input} {@link int64}
+   */
+  readonly effect_id?: int64$Input;
+};
+
+/**
+ * Returns information about a message effect. Returns a 404 error if the effect is not found
+ *
+ * @param {getMessageEffect$Input} parameters {@link getMessageEffect$Input}
+ * @return {MessageEffect} {@link MessageEffect}
+ */
+export type getMessageEffect = (parameters: getMessageEffect$Input) => MessageEffect;
+
+/**
  * Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
  */
 export type searchQuote$Input = {
@@ -90061,7 +98621,9 @@ export type getTextEntities$DirectInput = {
 export type getTextEntities = (parameters: getTextEntities$Input) => TextEntities;
 
 /**
- * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities from a marked-up text. Can be called synchronously
+ * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
+ *
+ * - and MentionName entities from a marked-up text. Can be called synchronously
  */
 export type parseTextEntities$Input = {
   readonly _: "parseTextEntities";
@@ -90080,7 +98642,9 @@ export type parseTextEntities$Input = {
 };
 
 /**
- * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities from a marked-up text. Can be called synchronously
+ * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
+ *
+ * - and MentionName entities from a marked-up text. Can be called synchronously
  */
 export type parseTextEntities$DirectInput = {
   /**
@@ -90097,7 +98661,9 @@ export type parseTextEntities$DirectInput = {
 };
 
 /**
- * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, Code, Pre, PreCode, TextUrl and MentionName entities from a marked-up text. Can be called synchronously
+ * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
+ *
+ * - and MentionName entities from a marked-up text. Can be called synchronously
  *
  * @param {parseTextEntities$Input} parameters {@link parseTextEntities$Input}
  * @return {FormattedText} {@link FormattedText}
@@ -90689,6 +99255,62 @@ export type hideSuggestedAction$DirectInput = {
  * @return {Ok} {@link Ok}
  */
 export type hideSuggestedAction = (parameters: hideSuggestedAction$Input) => Ok;
+
+/**
+ * Hides the list of contacts that have close birthdays for 24 hours
+ */
+export type hideContactCloseBirthdays$Input = {
+  readonly _: "hideContactCloseBirthdays";
+};
+
+/**
+ * Hides the list of contacts that have close birthdays for 24 hours
+ */
+export type hideContactCloseBirthdays$DirectInput = {};
+
+/**
+ * Hides the list of contacts that have close birthdays for 24 hours
+ *
+ * @param {hideContactCloseBirthdays$Input} parameters {@link hideContactCloseBirthdays$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type hideContactCloseBirthdays = (
+  parameters: hideContactCloseBirthdays$Input
+) => Ok;
+
+/**
+ * Returns information about a business connection by its identifier; for bots only
+ */
+export type getBusinessConnection$Input = {
+  readonly _: "getBusinessConnection";
+
+  /**
+   * Identifier of the business connection to return
+   * @type {string} {@link string}
+   */
+  readonly connection_id?: string;
+};
+
+/**
+ * Returns information about a business connection by its identifier; for bots only
+ */
+export type getBusinessConnection$DirectInput = {
+  /**
+   * Identifier of the business connection to return
+   * @type {string} {@link string}
+   */
+  readonly connection_id?: string;
+};
+
+/**
+ * Returns information about a business connection by its identifier; for bots only
+ *
+ * @param {getBusinessConnection$Input} parameters {@link getBusinessConnection$Input}
+ * @return {BusinessConnection} {@link BusinessConnection}
+ */
+export type getBusinessConnection = (
+  parameters: getBusinessConnection$Input
+) => BusinessConnection;
 
 /**
  * Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
@@ -92201,6 +100823,12 @@ export type sendChatAction$Input = {
   readonly message_thread_id?: int53;
 
   /**
+   * Unique identifier of business connection on behalf of which to send the request; for bots only
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
+  /**
    * The action description; pass null to cancel the currently active action
    * @type {ChatAction$Input} {@link ChatAction}
    */
@@ -92222,6 +100850,12 @@ export type sendChatAction$DirectInput = {
    * @type {int53} {@link int53}
    */
   readonly message_thread_id?: int53;
+
+  /**
+   * Unique identifier of business connection on behalf of which to send the request; for bots only
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
 
   /**
    * The action description; pass null to cancel the currently active action
@@ -92517,7 +101151,7 @@ export type getInternalLink$DirectInput = {
 export type getInternalLink = (parameters: getInternalLink$Input) => HttpUrl;
 
 /**
- * Returns information about the type of an internal link. Returns a 404 error if the link is not internal. Can be called before authorization
+ * Returns information about the type of internal link. Returns a 404 error if the link is not internal. Can be called before authorization
  */
 export type getInternalLinkType$Input = {
   readonly _: "getInternalLinkType";
@@ -92530,7 +101164,7 @@ export type getInternalLinkType$Input = {
 };
 
 /**
- * Returns information about the type of an internal link. Returns a 404 error if the link is not internal. Can be called before authorization
+ * Returns information about the type of internal link. Returns a 404 error if the link is not internal. Can be called before authorization
  */
 export type getInternalLinkType$DirectInput = {
   /**
@@ -92541,7 +101175,7 @@ export type getInternalLinkType$DirectInput = {
 };
 
 /**
- * Returns information about the type of an internal link. Returns a 404 error if the link is not internal. Can be called before authorization
+ * Returns information about the type of internal link. Returns a 404 error if the link is not internal. Can be called before authorization
  *
  * @param {getInternalLinkType$Input} parameters {@link getInternalLinkType$Input}
  * @return {InternalLinkType} {@link InternalLinkType}
@@ -92949,7 +101583,7 @@ export type createSecretChat$DirectInput = {
 export type createSecretChat = (parameters: createSecretChat$Input) => Chat;
 
 /**
- * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns the newly created chat
+ * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
  */
 export type createNewBasicGroupChat$Input = {
   readonly _: "createNewBasicGroupChat";
@@ -92974,7 +101608,7 @@ export type createNewBasicGroupChat$Input = {
 };
 
 /**
- * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns the newly created chat
+ * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
  */
 export type createNewBasicGroupChat$DirectInput = {
   /**
@@ -92997,14 +101631,14 @@ export type createNewBasicGroupChat$DirectInput = {
 };
 
 /**
- * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns the newly created chat
+ * Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
  *
  * @param {createNewBasicGroupChat$Input} parameters {@link createNewBasicGroupChat$Input}
- * @return {Chat} {@link Chat}
+ * @return {CreatedBasicGroupChat} {@link CreatedBasicGroupChat}
  */
 export type createNewBasicGroupChat = (
   parameters: createNewBasicGroupChat$Input
-) => Chat;
+) => CreatedBasicGroupChat;
 
 /**
  * Creates a new supergroup or channel and sends a corresponding messageSupergroupChatCreate. Returns the newly created chat
@@ -93521,6 +102155,38 @@ export type reorderChatFolders$DirectInput = {
  * @return {Ok} {@link Ok}
  */
 export type reorderChatFolders = (parameters: reorderChatFolders$Input) => Ok;
+
+/**
+ * Toggles whether chat folder tags are enabled
+ */
+export type toggleChatFolderTags$Input = {
+  readonly _: "toggleChatFolderTags";
+
+  /**
+   * Pass true to enable folder tags; pass false to disable them
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly are_tags_enabled?: Bool$Input;
+};
+
+/**
+ * Toggles whether chat folder tags are enabled
+ */
+export type toggleChatFolderTags$DirectInput = {
+  /**
+   * Pass true to enable folder tags; pass false to disable them
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly are_tags_enabled?: Bool$Input;
+};
+
+/**
+ * Toggles whether chat folder tags are enabled
+ *
+ * @param {toggleChatFolderTags$Input} parameters {@link toggleChatFolderTags$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type toggleChatFolderTags = (parameters: toggleChatFolderTags$Input) => Ok;
 
 /**
  * Returns recommended chat folders for the current user
@@ -95417,7 +104083,7 @@ export type leaveChat$DirectInput = {
 export type leaveChat = (parameters: leaveChat$Input) => Ok;
 
 /**
- * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats
+ * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
  */
 export type addChatMember$Input = {
   readonly _: "addChatMember";
@@ -95442,7 +104108,7 @@ export type addChatMember$Input = {
 };
 
 /**
- * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats
+ * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
  */
 export type addChatMember$DirectInput = {
   /**
@@ -95465,15 +104131,17 @@ export type addChatMember$DirectInput = {
 };
 
 /**
- * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats
+ * Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
  *
  * @param {addChatMember$Input} parameters {@link addChatMember$Input}
- * @return {Ok} {@link Ok}
+ * @return {FailedToAddMembers} {@link FailedToAddMembers}
  */
-export type addChatMember = (parameters: addChatMember$Input) => Ok;
+export type addChatMember = (parameters: addChatMember$Input) => FailedToAddMembers;
 
 /**
- * Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels. This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members
+ * Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels.
+ *
+ * - This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members. Returns information about members that weren't added
  */
 export type addChatMembers$Input = {
   readonly _: "addChatMembers";
@@ -95492,7 +104160,9 @@ export type addChatMembers$Input = {
 };
 
 /**
- * Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels. This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members
+ * Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels.
+ *
+ * - This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members. Returns information about members that weren't added
  */
 export type addChatMembers$DirectInput = {
   /**
@@ -95509,12 +104179,16 @@ export type addChatMembers$DirectInput = {
 };
 
 /**
- * Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels. This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members
+ * Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels.
+ *
+ * - This method can't be used to join a chat. Members can't be added to a channel if it has more than 200 members. Returns information about members that weren't added
  *
  * @param {addChatMembers$Input} parameters {@link addChatMembers$Input}
- * @return {Ok} {@link Ok}
+ * @return {FailedToAddMembers} {@link FailedToAddMembers}
  */
-export type addChatMembers = (parameters: addChatMembers$Input) => Ok;
+export type addChatMembers = (
+  parameters: addChatMembers$Input
+) => FailedToAddMembers;
 
 /**
  * Changes the status of a chat member; requires can_invite_users member right to add a chat member, can_promote_members administrator right to change administrator rights of the member,
@@ -95943,19 +104617,19 @@ export type getSavedNotificationSound = (
 ) => NotificationSounds;
 
 /**
- * Returns list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
+ * Returns the list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
  */
 export type getSavedNotificationSounds$Input = {
   readonly _: "getSavedNotificationSounds";
 };
 
 /**
- * Returns list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
+ * Returns the list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
  */
 export type getSavedNotificationSounds$DirectInput = {};
 
 /**
- * Returns list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
+ * Returns the list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
  *
  * @param {getSavedNotificationSounds$Input} parameters {@link getSavedNotificationSounds$Input}
  * @return {NotificationSounds} {@link NotificationSounds}
@@ -96033,7 +104707,7 @@ export type removeSavedNotificationSound = (
 ) => Ok;
 
 /**
- * Returns list of chats with non-default notification settings for new messages
+ * Returns the list of chats with non-default notification settings for new messages
  */
 export type getChatNotificationSettingsExceptions$Input = {
   readonly _: "getChatNotificationSettingsExceptions";
@@ -96052,7 +104726,7 @@ export type getChatNotificationSettingsExceptions$Input = {
 };
 
 /**
- * Returns list of chats with non-default notification settings for new messages
+ * Returns the list of chats with non-default notification settings for new messages
  */
 export type getChatNotificationSettingsExceptions$DirectInput = {
   /**
@@ -96069,7 +104743,7 @@ export type getChatNotificationSettingsExceptions$DirectInput = {
 };
 
 /**
- * Returns list of chats with non-default notification settings for new messages
+ * Returns the list of chats with non-default notification settings for new messages
  *
  * @param {getChatNotificationSettingsExceptions$Input} parameters {@link getChatNotificationSettingsExceptions$Input}
  * @return {Chats} {@link Chats}
@@ -96159,19 +104833,53 @@ export type setScopeNotificationSettings = (
 ) => Ok;
 
 /**
- * Resets all notification settings to their default values. By default, all chats are unmuted and message previews are shown
+ * Changes notification settings for reactions
+ */
+export type setReactionNotificationSettings$Input = {
+  readonly _: "setReactionNotificationSettings";
+
+  /**
+   * The new notification settings for reactions
+   * @type {reactionNotificationSettings$Input} {@link reactionNotificationSettings}
+   */
+  readonly notification_settings?: reactionNotificationSettings$Input;
+};
+
+/**
+ * Changes notification settings for reactions
+ */
+export type setReactionNotificationSettings$DirectInput = {
+  /**
+   * The new notification settings for reactions
+   * @type {reactionNotificationSettings$Input} {@link reactionNotificationSettings}
+   */
+  readonly notification_settings?: reactionNotificationSettings$Input;
+};
+
+/**
+ * Changes notification settings for reactions
+ *
+ * @param {setReactionNotificationSettings$Input} parameters {@link setReactionNotificationSettings$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setReactionNotificationSettings = (
+  parameters: setReactionNotificationSettings$Input
+) => Ok;
+
+/**
+ * Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
  */
 export type resetAllNotificationSettings$Input = {
   readonly _: "resetAllNotificationSettings";
 };
 
 /**
- * Resets all notification settings to their default values. By default, all chats are unmuted and message previews are shown
+ * Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
  */
 export type resetAllNotificationSettings$DirectInput = {};
 
 /**
- * Resets all notification settings to their default values. By default, all chats are unmuted and message previews are shown
+ * Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
  *
  * @param {resetAllNotificationSettings$Input} parameters {@link resetAllNotificationSettings$Input}
  * @return {Ok} {@link Ok}
@@ -96447,7 +105155,7 @@ export type sendStory$Input = {
   readonly areas?: inputStoryAreas$Input | null;
 
   /**
-   * Story caption; pass null to use an empty caption; 0-getOption("story_caption_length_max") characters
+   * Story caption; pass null to use an empty caption; 0-getOption("story_caption_length_max") characters; can have entities only if getOption("can_use_text_entities_in_story_caption")
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
@@ -96474,7 +105182,7 @@ export type sendStory$Input = {
    * Pass true to keep the story accessible after expiration
    * @type {Bool$Input} {@link Bool}
    */
-  readonly is_pinned?: Bool$Input;
+  readonly is_posted_to_chat_page?: Bool$Input;
 
   /**
    * Pass true if the content of the story must be protected from forwarding and screenshotting
@@ -96506,7 +105214,7 @@ export type sendStory$DirectInput = {
   readonly areas?: inputStoryAreas$Input | null;
 
   /**
-   * Story caption; pass null to use an empty caption; 0-getOption("story_caption_length_max") characters
+   * Story caption; pass null to use an empty caption; 0-getOption("story_caption_length_max") characters; can have entities only if getOption("can_use_text_entities_in_story_caption")
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
@@ -96533,7 +105241,7 @@ export type sendStory$DirectInput = {
    * Pass true to keep the story accessible after expiration
    * @type {Bool$Input} {@link Bool}
    */
-  readonly is_pinned?: Bool$Input;
+  readonly is_posted_to_chat_page?: Bool$Input;
 
   /**
    * Pass true if the content of the story must be protected from forwarding and screenshotting
@@ -96677,10 +105385,10 @@ export type setStoryPrivacySettings = (
 ) => Ok;
 
 /**
- * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_pinned == true
+ * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
  */
-export type toggleStoryIsPinned$Input = {
-  readonly _: "toggleStoryIsPinned";
+export type toggleStoryIsPostedToChatPage$Input = {
+  readonly _: "toggleStoryIsPostedToChatPage";
 
   /**
    * Identifier of the chat that posted the story
@@ -96698,13 +105406,13 @@ export type toggleStoryIsPinned$Input = {
    * Pass true to make the story accessible after expiration; pass false to make it private
    * @type {Bool$Input} {@link Bool}
    */
-  readonly is_pinned?: Bool$Input;
+  readonly is_posted_to_chat_page?: Bool$Input;
 };
 
 /**
- * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_pinned == true
+ * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
  */
-export type toggleStoryIsPinned$DirectInput = {
+export type toggleStoryIsPostedToChatPage$DirectInput = {
   /**
    * Identifier of the chat that posted the story
    * @type {int53} {@link int53}
@@ -96721,16 +105429,18 @@ export type toggleStoryIsPinned$DirectInput = {
    * Pass true to make the story accessible after expiration; pass false to make it private
    * @type {Bool$Input} {@link Bool}
    */
-  readonly is_pinned?: Bool$Input;
+  readonly is_posted_to_chat_page?: Bool$Input;
 };
 
 /**
- * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_pinned == true
+ * Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
  *
- * @param {toggleStoryIsPinned$Input} parameters {@link toggleStoryIsPinned$Input}
+ * @param {toggleStoryIsPostedToChatPage$Input} parameters {@link toggleStoryIsPostedToChatPage$Input}
  * @return {Ok} {@link Ok}
  */
-export type toggleStoryIsPinned = (parameters: toggleStoryIsPinned$Input) => Ok;
+export type toggleStoryIsPostedToChatPage = (
+  parameters: toggleStoryIsPostedToChatPage$Input
+) => Ok;
 
 /**
  * Deletes a previously sent story. Can be called only if story.can_be_deleted == true
@@ -96777,19 +105487,19 @@ export type deleteStory$DirectInput = {
 export type deleteStory = (parameters: deleteStory$Input) => Ok;
 
 /**
- * Returns list of chats with non-default notification settings for stories
+ * Returns the list of chats with non-default notification settings for stories
  */
 export type getStoryNotificationSettingsExceptions$Input = {
   readonly _: "getStoryNotificationSettingsExceptions";
 };
 
 /**
- * Returns list of chats with non-default notification settings for stories
+ * Returns the list of chats with non-default notification settings for stories
  */
 export type getStoryNotificationSettingsExceptions$DirectInput = {};
 
 /**
- * Returns list of chats with non-default notification settings for stories
+ * Returns the list of chats with non-default notification settings for stories
  *
  * @param {getStoryNotificationSettingsExceptions$Input} parameters {@link getStoryNotificationSettingsExceptions$Input}
  * @return {Chats} {@link Chats}
@@ -96917,12 +105627,12 @@ export type getChatActiveStories = (
 ) => ChatActiveStories;
 
 /**
- * Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ * Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
  *
- * - For optimal performance, the number of returned stories is chosen by TDLib
+ * - Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
  */
-export type getChatPinnedStories$Input = {
-  readonly _: "getChatPinnedStories";
+export type getChatPostedToChatPageStories$Input = {
+  readonly _: "getChatPostedToChatPageStories";
 
   /**
    * Chat identifier
@@ -96931,7 +105641,7 @@ export type getChatPinnedStories$Input = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the story starting from which stories must be returned; use 0 to get results from the last story
+   * Identifier of the story starting from which stories must be returned; use 0 to get results from pinned and the newest story
    * @type {int32} {@link int32}
    */
   readonly from_story_id?: int32;
@@ -96946,11 +105656,11 @@ export type getChatPinnedStories$Input = {
 };
 
 /**
- * Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ * Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
  *
- * - For optimal performance, the number of returned stories is chosen by TDLib
+ * - Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
  */
-export type getChatPinnedStories$DirectInput = {
+export type getChatPostedToChatPageStories$DirectInput = {
   /**
    * Chat identifier
    * @type {int53} {@link int53}
@@ -96958,7 +105668,7 @@ export type getChatPinnedStories$DirectInput = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the story starting from which stories must be returned; use 0 to get results from the last story
+   * Identifier of the story starting from which stories must be returned; use 0 to get results from pinned and the newest story
    * @type {int32} {@link int32}
    */
   readonly from_story_id?: int32;
@@ -96973,15 +105683,15 @@ export type getChatPinnedStories$DirectInput = {
 };
 
 /**
- * Returns the list of pinned stories posted by the given chat. The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id).
+ * Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
  *
- * - For optimal performance, the number of returned stories is chosen by TDLib
+ * - Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
  *
- * @param {getChatPinnedStories$Input} parameters {@link getChatPinnedStories$Input}
+ * @param {getChatPostedToChatPageStories$Input} parameters {@link getChatPostedToChatPageStories$Input}
  * @return {Stories} {@link Stories}
  */
-export type getChatPinnedStories = (
-  parameters: getChatPinnedStories$Input
+export type getChatPostedToChatPageStories = (
+  parameters: getChatPostedToChatPageStories$Input
 ) => Stories;
 
 /**
@@ -97051,6 +105761,50 @@ export type getChatArchivedStories$DirectInput = {
 export type getChatArchivedStories = (
   parameters: getChatArchivedStories$Input
 ) => Stories;
+
+/**
+ * Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
+ */
+export type setChatPinnedStories$Input = {
+  readonly _: "setChatPinnedStories";
+
+  /**
+   * Identifier of the chat that posted the stories
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * New list of pinned stories. All stories must be posted to the chat page first. There can be up to getOption("pinned_story_count_max") pinned stories on a chat page
+   * @type {vector$Input<int32>} {@link vector<int32>}
+   */
+  readonly story_ids?: vector$Input<int32>;
+};
+
+/**
+ * Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
+ */
+export type setChatPinnedStories$DirectInput = {
+  /**
+   * Identifier of the chat that posted the stories
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * New list of pinned stories. All stories must be posted to the chat page first. There can be up to getOption("pinned_story_count_max") pinned stories on a chat page
+   * @type {vector$Input<int32>} {@link vector<int32>}
+   */
+  readonly story_ids?: vector$Input<int32>;
+};
+
+/**
+ * Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
+ *
+ * @param {setChatPinnedStories$Input} parameters {@link setChatPinnedStories$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setChatPinnedStories = (parameters: setChatPinnedStories$Input) => Ok;
 
 /**
  * Informs TDLib that a story is opened and is being viewed by the user
@@ -97615,7 +106369,7 @@ export type getStoryPublicForwards = (
 ) => PublicForwards;
 
 /**
- * Returns list of features available on the specific chat boost level; this is an offline request
+ * Returns the list of features available on the specific chat boost level; this is an offline request
  */
 export type getChatBoostLevelFeatures$Input = {
   readonly _: "getChatBoostLevelFeatures";
@@ -97634,7 +106388,7 @@ export type getChatBoostLevelFeatures$Input = {
 };
 
 /**
- * Returns list of features available on the specific chat boost level; this is an offline request
+ * Returns the list of features available on the specific chat boost level; this is an offline request
  */
 export type getChatBoostLevelFeatures$DirectInput = {
   /**
@@ -97651,7 +106405,7 @@ export type getChatBoostLevelFeatures$DirectInput = {
 };
 
 /**
- * Returns list of features available on the specific chat boost level; this is an offline request
+ * Returns the list of features available on the specific chat boost level; this is an offline request
  *
  * @param {getChatBoostLevelFeatures$Input} parameters {@link getChatBoostLevelFeatures$Input}
  * @return {ChatBoostLevelFeatures} {@link ChatBoostLevelFeatures}
@@ -97661,7 +106415,7 @@ export type getChatBoostLevelFeatures = (
 ) => ChatBoostLevelFeatures;
 
 /**
- * Returns list of features available on the first 10 chat boost levels; this is an offline request
+ * Returns the list of features available for different chat boost levels; this is an offline request
  */
 export type getChatBoostFeatures$Input = {
   readonly _: "getChatBoostFeatures";
@@ -97674,7 +106428,7 @@ export type getChatBoostFeatures$Input = {
 };
 
 /**
- * Returns list of features available on the first 10 chat boost levels; this is an offline request
+ * Returns the list of features available for different chat boost levels; this is an offline request
  */
 export type getChatBoostFeatures$DirectInput = {
   /**
@@ -97685,7 +106439,7 @@ export type getChatBoostFeatures$DirectInput = {
 };
 
 /**
- * Returns list of features available on the first 10 chat boost levels; this is an offline request
+ * Returns the list of features available for different chat boost levels; this is an offline request
  *
  * @param {getChatBoostFeatures$Input} parameters {@link getChatBoostFeatures$Input}
  * @return {ChatBoostFeatures} {@link ChatBoostFeatures}
@@ -97861,7 +106615,7 @@ export type getChatBoostLinkInfo = (
 ) => ChatBoostLinkInfo;
 
 /**
- * Returns list of boosts applied to a chat; requires administrator rights in the chat
+ * Returns the list of boosts applied to a chat; requires administrator rights in the chat
  */
 export type getChatBoosts$Input = {
   readonly _: "getChatBoosts";
@@ -97892,7 +106646,7 @@ export type getChatBoosts$Input = {
 };
 
 /**
- * Returns list of boosts applied to a chat; requires administrator rights in the chat
+ * Returns the list of boosts applied to a chat; requires administrator rights in the chat
  */
 export type getChatBoosts$DirectInput = {
   /**
@@ -97921,7 +106675,7 @@ export type getChatBoosts$DirectInput = {
 };
 
 /**
- * Returns list of boosts applied to a chat; requires administrator rights in the chat
+ * Returns the list of boosts applied to a chat; requires administrator rights in the chat
  *
  * @param {getChatBoosts$Input} parameters {@link getChatBoosts$Input}
  * @return {FoundChatBoosts} {@link FoundChatBoosts}
@@ -97929,7 +106683,7 @@ export type getChatBoosts$DirectInput = {
 export type getChatBoosts = (parameters: getChatBoosts$Input) => FoundChatBoosts;
 
 /**
- * Returns list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
+ * Returns the list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
  */
 export type getUserChatBoosts$Input = {
   readonly _: "getUserChatBoosts";
@@ -97948,7 +106702,7 @@ export type getUserChatBoosts$Input = {
 };
 
 /**
- * Returns list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
+ * Returns the list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
  */
 export type getUserChatBoosts$DirectInput = {
   /**
@@ -97965,7 +106719,7 @@ export type getUserChatBoosts$DirectInput = {
 };
 
 /**
- * Returns list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
+ * Returns the list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
  *
  * @param {getUserChatBoosts$Input} parameters {@link getUserChatBoosts$Input}
  * @return {FoundChatBoosts} {@link FoundChatBoosts}
@@ -98435,9 +107189,11 @@ export type getSuggestedFileName$DirectInput = {
 export type getSuggestedFileName = (parameters: getSuggestedFileName$Input) => Text;
 
 /**
- * Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes. Updates updateFile will be used
+ * Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes.
  *
- * - to notify about upload progress and successful completion of the upload. The file will not have a persistent remote identifier until it is sent in a message
+ * - In all other cases there is no need to preliminary upload a file. Updates updateFile will be used to notify about upload progress.
+ *
+ * - The upload will not be completed until the file is sent in a message
  */
 export type preliminaryUploadFile$Input = {
   readonly _: "preliminaryUploadFile";
@@ -98462,9 +107218,11 @@ export type preliminaryUploadFile$Input = {
 };
 
 /**
- * Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes. Updates updateFile will be used
+ * Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes.
  *
- * - to notify about upload progress and successful completion of the upload. The file will not have a persistent remote identifier until it is sent in a message
+ * - In all other cases there is no need to preliminary upload a file. Updates updateFile will be used to notify about upload progress.
+ *
+ * - The upload will not be completed until the file is sent in a message
  */
 export type preliminaryUploadFile$DirectInput = {
   /**
@@ -98487,9 +107245,11 @@ export type preliminaryUploadFile$DirectInput = {
 };
 
 /**
- * Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes. Updates updateFile will be used
+ * Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes.
  *
- * - to notify about upload progress and successful completion of the upload. The file will not have a persistent remote identifier until it is sent in a message
+ * - In all other cases there is no need to preliminary upload a file. Updates updateFile will be used to notify about upload progress.
+ *
+ * - The upload will not be completed until the file is sent in a message
  *
  * @param {preliminaryUploadFile$Input} parameters {@link preliminaryUploadFile$Input}
  * @return {File} {@link File}
@@ -98783,7 +107543,7 @@ export type deleteFile = (parameters: deleteFile$Input) => Ok;
 /**
  * Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
  *
- * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent from download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+ * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
  */
 export type addFileToDownloads$Input = {
   readonly _: "addFileToDownloads";
@@ -98816,7 +107576,7 @@ export type addFileToDownloads$Input = {
 /**
  * Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
  *
- * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent from download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+ * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
  */
 export type addFileToDownloads$DirectInput = {
   /**
@@ -98847,7 +107607,7 @@ export type addFileToDownloads$DirectInput = {
 /**
  * Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
  *
- * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent from download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+ * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
  *
  * @param {addFileToDownloads$Input} parameters {@link addFileToDownloads$Input}
  * @return {File} {@link File}
@@ -99119,6 +107879,56 @@ export type searchFileDownloads$DirectInput = {
 export type searchFileDownloads = (
   parameters: searchFileDownloads$Input
 ) => FoundFileDownloads;
+
+/**
+ * Application verification has been completed. Can be called before authorization
+ */
+export type setApplicationVerificationToken$Input = {
+  readonly _: "setApplicationVerificationToken";
+
+  /**
+   * Unique identifier for the verification process as received from updateApplicationVerificationRequired
+   * @type {int53} {@link int53}
+   */
+  readonly verification_id?: int53;
+
+  /**
+   * Play Integrity API token for the Android application, or secret from push notification for the iOS application;
+   *
+   * - pass an empty string to abort verification and receive error VERIFICATION_FAILED for the request
+   * @type {string} {@link string}
+   */
+  readonly token?: string;
+};
+
+/**
+ * Application verification has been completed. Can be called before authorization
+ */
+export type setApplicationVerificationToken$DirectInput = {
+  /**
+   * Unique identifier for the verification process as received from updateApplicationVerificationRequired
+   * @type {int53} {@link int53}
+   */
+  readonly verification_id?: int53;
+
+  /**
+   * Play Integrity API token for the Android application, or secret from push notification for the iOS application;
+   *
+   * - pass an empty string to abort verification and receive error VERIFICATION_FAILED for the request
+   * @type {string} {@link string}
+   */
+  readonly token?: string;
+};
+
+/**
+ * Application verification has been completed. Can be called before authorization
+ *
+ * @param {setApplicationVerificationToken$Input} parameters {@link setApplicationVerificationToken$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setApplicationVerificationToken = (
+  parameters: setApplicationVerificationToken$Input
+) => Ok;
 
 /**
  * Returns information about a file with messages exported from another application
@@ -99501,7 +108311,7 @@ export type getChatInviteLink = (
 ) => ChatInviteLink;
 
 /**
- * Returns list of chat administrators with number of their invite links. Requires owner privileges in the chat
+ * Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
  */
 export type getChatInviteLinkCounts$Input = {
   readonly _: "getChatInviteLinkCounts";
@@ -99514,7 +108324,7 @@ export type getChatInviteLinkCounts$Input = {
 };
 
 /**
- * Returns list of chat administrators with number of their invite links. Requires owner privileges in the chat
+ * Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
  */
 export type getChatInviteLinkCounts$DirectInput = {
   /**
@@ -99525,7 +108335,7 @@ export type getChatInviteLinkCounts$DirectInput = {
 };
 
 /**
- * Returns list of chat administrators with number of their invite links. Requires owner privileges in the chat
+ * Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
  *
  * @param {getChatInviteLinkCounts$Input} parameters {@link getChatInviteLinkCounts$Input}
  * @return {ChatInviteLinkCounts} {@link ChatInviteLinkCounts}
@@ -100489,7 +109299,7 @@ export type sendCallLog$DirectInput = {
 export type sendCallLog = (parameters: sendCallLog$Input) => Ok;
 
 /**
- * Returns list of participant identifiers, on whose behalf a video chat in the chat can be joined
+ * Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
  */
 export type getVideoChatAvailableParticipants$Input = {
   readonly _: "getVideoChatAvailableParticipants";
@@ -100502,7 +109312,7 @@ export type getVideoChatAvailableParticipants$Input = {
 };
 
 /**
- * Returns list of participant identifiers, on whose behalf a video chat in the chat can be joined
+ * Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
  */
 export type getVideoChatAvailableParticipants$DirectInput = {
   /**
@@ -100513,7 +109323,7 @@ export type getVideoChatAvailableParticipants$DirectInput = {
 };
 
 /**
- * Returns list of participant identifiers, on whose behalf a video chat in the chat can be joined
+ * Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
  *
  * @param {getVideoChatAvailableParticipants$Input} parameters {@link getVideoChatAvailableParticipants$Input}
  * @return {MessageSenders} {@link MessageSenders}
@@ -102511,6 +111321,12 @@ export type searchUserByPhoneNumber$Input = {
    * @type {string} {@link string}
    */
   readonly phone_number?: string;
+
+  /**
+   * Pass true to get only locally available information without sending network requests
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly only_local?: Bool$Input;
 };
 
 /**
@@ -102522,6 +111338,12 @@ export type searchUserByPhoneNumber$DirectInput = {
    * @type {string} {@link string}
    */
   readonly phone_number?: string;
+
+  /**
+   * Pass true to get only locally available information without sending network requests
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly only_local?: Bool$Input;
 };
 
 /**
@@ -102817,6 +111639,28 @@ export type searchStickers$DirectInput = {
 export type searchStickers = (parameters: searchStickers$Input) => Stickers;
 
 /**
+ * Returns greeting stickers from regular sticker sets that can be used for the start page of other users
+ */
+export type getGreetingStickers$Input = {
+  readonly _: "getGreetingStickers";
+};
+
+/**
+ * Returns greeting stickers from regular sticker sets that can be used for the start page of other users
+ */
+export type getGreetingStickers$DirectInput = {};
+
+/**
+ * Returns greeting stickers from regular sticker sets that can be used for the start page of other users
+ *
+ * @param {getGreetingStickers$Input} parameters {@link getGreetingStickers$Input}
+ * @return {Stickers} {@link Stickers}
+ */
+export type getGreetingStickers = (
+  parameters: getGreetingStickers$Input
+) => Stickers;
+
+/**
  * Returns premium stickers from regular sticker sets
  */
 export type getPremiumStickers$Input = {
@@ -102895,7 +111739,7 @@ export type getArchivedStickerSets$Input = {
   readonly sticker_type?: StickerType$Input;
 
   /**
-   * Identifier of the sticker set from which to return the result
+   * Identifier of the sticker set from which to return the result; use 0 to get results from the beginning
    * @type {int64$Input} {@link int64}
    */
   readonly offset_sticker_set_id?: int64$Input;
@@ -102918,7 +111762,7 @@ export type getArchivedStickerSets$DirectInput = {
   readonly sticker_type?: StickerType$Input;
 
   /**
-   * Identifier of the sticker set from which to return the result
+   * Identifier of the sticker set from which to return the result; use 0 to get results from the beginning
    * @type {int64$Input} {@link int64}
    */
   readonly offset_sticker_set_id?: int64$Input;
@@ -103369,7 +112213,7 @@ export type getRecentStickers = (parameters: getRecentStickers$Input) => Sticker
 /**
  * Manually adds a new sticker to the list of recently used stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
  *
- * - Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to recent stickers
+ * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to recent stickers
  */
 export type addRecentSticker$Input = {
   readonly _: "addRecentSticker";
@@ -103390,7 +112234,7 @@ export type addRecentSticker$Input = {
 /**
  * Manually adds a new sticker to the list of recently used stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
  *
- * - Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to recent stickers
+ * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to recent stickers
  */
 export type addRecentSticker$DirectInput = {
   /**
@@ -103409,7 +112253,7 @@ export type addRecentSticker$DirectInput = {
 /**
  * Manually adds a new sticker to the list of recently used stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
  *
- * - Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to recent stickers
+ * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to recent stickers
  *
  * @param {addRecentSticker$Input} parameters {@link addRecentSticker$Input}
  * @return {Stickers} {@link Stickers}
@@ -103517,7 +112361,7 @@ export type getFavoriteStickers = (
 /**
  * Adds a new sticker to the list of favorite stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
  *
- * - Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to favorite stickers
+ * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to favorite stickers
  */
 export type addFavoriteSticker$Input = {
   readonly _: "addFavoriteSticker";
@@ -103532,7 +112376,7 @@ export type addFavoriteSticker$Input = {
 /**
  * Adds a new sticker to the list of favorite stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
  *
- * - Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to favorite stickers
+ * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to favorite stickers
  */
 export type addFavoriteSticker$DirectInput = {
   /**
@@ -103545,7 +112389,7 @@ export type addFavoriteSticker$DirectInput = {
 /**
  * Adds a new sticker to the list of favorite stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
  *
- * - Only stickers belonging to a sticker set can be added to this list. Emoji stickers can't be added to favorite stickers
+ * - Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to favorite stickers
  *
  * @param {addFavoriteSticker$Input} parameters {@link addFavoriteSticker$Input}
  * @return {Ok} {@link Ok}
@@ -103805,7 +112649,7 @@ export type getEmojiSuggestionsUrl = (
 ) => HttpUrl;
 
 /**
- * Returns list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
+ * Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
  */
 export type getCustomEmojiStickers$Input = {
   readonly _: "getCustomEmojiStickers";
@@ -103818,7 +112662,7 @@ export type getCustomEmojiStickers$Input = {
 };
 
 /**
- * Returns list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
+ * Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
  */
 export type getCustomEmojiStickers$DirectInput = {
   /**
@@ -103829,7 +112673,7 @@ export type getCustomEmojiStickers$DirectInput = {
 };
 
 /**
- * Returns list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
+ * Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
  *
  * @param {getCustomEmojiStickers$Input} parameters {@link getCustomEmojiStickers$Input}
  * @return {Stickers} {@link Stickers}
@@ -103927,7 +112771,9 @@ export type getSavedAnimations = (
 ) => Animations;
 
 /**
- * Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first. Only non-secret video animations with MIME type "video/mp4" can be added to the list
+ * Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first.
+ *
+ * - Only non-secret video animations with MIME type "video/mp4" can be added to the list
  */
 export type addSavedAnimation$Input = {
   readonly _: "addSavedAnimation";
@@ -103940,7 +112786,9 @@ export type addSavedAnimation$Input = {
 };
 
 /**
- * Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first. Only non-secret video animations with MIME type "video/mp4" can be added to the list
+ * Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first.
+ *
+ * - Only non-secret video animations with MIME type "video/mp4" can be added to the list
  */
 export type addSavedAnimation$DirectInput = {
   /**
@@ -103951,7 +112799,9 @@ export type addSavedAnimation$DirectInput = {
 };
 
 /**
- * Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first. Only non-secret video animations with MIME type "video/mp4" can be added to the list
+ * Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first.
+ *
+ * - Only non-secret video animations with MIME type "video/mp4" can be added to the list
  *
  * @param {addSavedAnimation$Input} parameters {@link addSavedAnimation$Input}
  * @return {Ok} {@link Ok}
@@ -104529,6 +113379,70 @@ export type reorderActiveUsernames = (
 ) => Ok;
 
 /**
+ * Changes the birthdate of the current user
+ */
+export type setBirthdate$Input = {
+  readonly _: "setBirthdate";
+
+  /**
+   * The new value of the current user's birthdate; pass null to remove the birthdate
+   * @type {birthdate$Input} {@link birthdate}
+   */
+  readonly birthdate?: birthdate$Input | null;
+};
+
+/**
+ * Changes the birthdate of the current user
+ */
+export type setBirthdate$DirectInput = {
+  /**
+   * The new value of the current user's birthdate; pass null to remove the birthdate
+   * @type {birthdate$Input} {@link birthdate}
+   */
+  readonly birthdate?: birthdate$Input | null;
+};
+
+/**
+ * Changes the birthdate of the current user
+ *
+ * @param {setBirthdate$Input} parameters {@link setBirthdate$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBirthdate = (parameters: setBirthdate$Input) => Ok;
+
+/**
+ * Changes the personal chat of the current user
+ */
+export type setPersonalChat$Input = {
+  readonly _: "setPersonalChat";
+
+  /**
+   * Identifier of the new personal chat; pass 0 to remove the chat. Use getSuitablePersonalChats to get suitable chats
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Changes the personal chat of the current user
+ */
+export type setPersonalChat$DirectInput = {
+  /**
+   * Identifier of the new personal chat; pass 0 to remove the chat. Use getSuitablePersonalChats to get suitable chats
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Changes the personal chat of the current user
+ *
+ * @param {setPersonalChat$Input} parameters {@link setPersonalChat$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setPersonalChat = (parameters: setPersonalChat$Input) => Ok;
+
+/**
  * Changes the emoji status of the current user; for Telegram Premium users only
  */
 export type setEmojiStatus$Input = {
@@ -104561,7 +113475,7 @@ export type setEmojiStatus$DirectInput = {
 export type setEmojiStatus = (parameters: setEmojiStatus$Input) => Ok;
 
 /**
- * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer
+ * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
  */
 export type setLocation$Input = {
   readonly _: "setLocation";
@@ -104574,7 +113488,7 @@ export type setLocation$Input = {
 };
 
 /**
- * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer
+ * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
  */
 export type setLocation$DirectInput = {
   /**
@@ -104585,7 +113499,7 @@ export type setLocation$DirectInput = {
 };
 
 /**
- * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer
+ * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
  *
  * @param {setLocation$Input} parameters {@link setLocation$Input}
  * @return {Ok} {@link Ok}
@@ -104593,106 +113507,736 @@ export type setLocation$DirectInput = {
 export type setLocation = (parameters: setLocation$Input) => Ok;
 
 /**
- * Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
+ * Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
  */
-export type changePhoneNumber$Input = {
-  readonly _: "changePhoneNumber";
+export type toggleHasSponsoredMessagesEnabled$Input = {
+  readonly _: "toggleHasSponsoredMessagesEnabled";
 
   /**
-   * The new phone number of the user in international format
-   * @type {string} {@link string}
+   * Pass true to enable sponsored messages for the current user; false to disable them
+   * @type {Bool$Input} {@link Bool}
    */
-  readonly phone_number?: string;
-
-  /**
-   * Settings for the authentication of the user's phone number; pass null to use default settings
-   * @type {phoneNumberAuthenticationSettings$Input} {@link phoneNumberAuthenticationSettings}
-   */
-  readonly settings?: phoneNumberAuthenticationSettings$Input | null;
+  readonly has_sponsored_messages_enabled?: Bool$Input;
 };
 
 /**
- * Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
+ * Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
  */
-export type changePhoneNumber$DirectInput = {
+export type toggleHasSponsoredMessagesEnabled$DirectInput = {
   /**
-   * The new phone number of the user in international format
-   * @type {string} {@link string}
+   * Pass true to enable sponsored messages for the current user; false to disable them
+   * @type {Bool$Input} {@link Bool}
    */
-  readonly phone_number?: string;
-
-  /**
-   * Settings for the authentication of the user's phone number; pass null to use default settings
-   * @type {phoneNumberAuthenticationSettings$Input} {@link phoneNumberAuthenticationSettings}
-   */
-  readonly settings?: phoneNumberAuthenticationSettings$Input | null;
+  readonly has_sponsored_messages_enabled?: Bool$Input;
 };
 
 /**
- * Changes the phone number of the user and sends an authentication code to the user's new phone number; for official Android and iOS applications only. On success, returns information about the sent code
+ * Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
  *
- * @param {changePhoneNumber$Input} parameters {@link changePhoneNumber$Input}
- * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
- */
-export type changePhoneNumber = (
-  parameters: changePhoneNumber$Input
-) => AuthenticationCodeInfo;
-
-/**
- * Resends the authentication code sent to confirm a new phone number for the current user. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
- */
-export type resendChangePhoneNumberCode$Input = {
-  readonly _: "resendChangePhoneNumberCode";
-};
-
-/**
- * Resends the authentication code sent to confirm a new phone number for the current user. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
- */
-export type resendChangePhoneNumberCode$DirectInput = {};
-
-/**
- * Resends the authentication code sent to confirm a new phone number for the current user. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
- *
- * @param {resendChangePhoneNumberCode$Input} parameters {@link resendChangePhoneNumberCode$Input}
- * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
- */
-export type resendChangePhoneNumberCode = (
-  parameters: resendChangePhoneNumberCode$Input
-) => AuthenticationCodeInfo;
-
-/**
- * Checks the authentication code sent to confirm a new phone number of the user
- */
-export type checkChangePhoneNumberCode$Input = {
-  readonly _: "checkChangePhoneNumberCode";
-
-  /**
-   * Authentication code to check
-   * @type {string} {@link string}
-   */
-  readonly code?: string;
-};
-
-/**
- * Checks the authentication code sent to confirm a new phone number of the user
- */
-export type checkChangePhoneNumberCode$DirectInput = {
-  /**
-   * Authentication code to check
-   * @type {string} {@link string}
-   */
-  readonly code?: string;
-};
-
-/**
- * Checks the authentication code sent to confirm a new phone number of the user
- *
- * @param {checkChangePhoneNumberCode$Input} parameters {@link checkChangePhoneNumberCode$Input}
+ * @param {toggleHasSponsoredMessagesEnabled$Input} parameters {@link toggleHasSponsoredMessagesEnabled$Input}
  * @return {Ok} {@link Ok}
  */
-export type checkChangePhoneNumberCode = (
-  parameters: checkChangePhoneNumberCode$Input
+export type toggleHasSponsoredMessagesEnabled = (
+  parameters: toggleHasSponsoredMessagesEnabled$Input
 ) => Ok;
+
+/**
+ * Changes the business location of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessLocation$Input = {
+  readonly _: "setBusinessLocation";
+
+  /**
+   * The new location of the business; pass null to remove the location
+   * @type {businessLocation$Input} {@link businessLocation}
+   */
+  readonly location?: businessLocation$Input | null;
+};
+
+/**
+ * Changes the business location of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessLocation$DirectInput = {
+  /**
+   * The new location of the business; pass null to remove the location
+   * @type {businessLocation$Input} {@link businessLocation}
+   */
+  readonly location?: businessLocation$Input | null;
+};
+
+/**
+ * Changes the business location of the current user. Requires Telegram Business subscription
+ *
+ * @param {setBusinessLocation$Input} parameters {@link setBusinessLocation$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBusinessLocation = (parameters: setBusinessLocation$Input) => Ok;
+
+/**
+ * Changes the business opening hours of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessOpeningHours$Input = {
+  readonly _: "setBusinessOpeningHours";
+
+  /**
+   * The new opening hours of the business; pass null to remove the opening hours; up to 28 time intervals can be specified
+   * @type {businessOpeningHours$Input} {@link businessOpeningHours}
+   */
+  readonly opening_hours?: businessOpeningHours$Input | null;
+};
+
+/**
+ * Changes the business opening hours of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessOpeningHours$DirectInput = {
+  /**
+   * The new opening hours of the business; pass null to remove the opening hours; up to 28 time intervals can be specified
+   * @type {businessOpeningHours$Input} {@link businessOpeningHours}
+   */
+  readonly opening_hours?: businessOpeningHours$Input | null;
+};
+
+/**
+ * Changes the business opening hours of the current user. Requires Telegram Business subscription
+ *
+ * @param {setBusinessOpeningHours$Input} parameters {@link setBusinessOpeningHours$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBusinessOpeningHours = (
+  parameters: setBusinessOpeningHours$Input
+) => Ok;
+
+/**
+ * Changes the business greeting message settings of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessGreetingMessageSettings$Input = {
+  readonly _: "setBusinessGreetingMessageSettings";
+
+  /**
+   * The new settings for the greeting message of the business; pass null to disable the greeting message
+   * @type {businessGreetingMessageSettings$Input} {@link businessGreetingMessageSettings}
+   */
+  readonly greeting_message_settings?: businessGreetingMessageSettings$Input | null;
+};
+
+/**
+ * Changes the business greeting message settings of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessGreetingMessageSettings$DirectInput = {
+  /**
+   * The new settings for the greeting message of the business; pass null to disable the greeting message
+   * @type {businessGreetingMessageSettings$Input} {@link businessGreetingMessageSettings}
+   */
+  readonly greeting_message_settings?: businessGreetingMessageSettings$Input | null;
+};
+
+/**
+ * Changes the business greeting message settings of the current user. Requires Telegram Business subscription
+ *
+ * @param {setBusinessGreetingMessageSettings$Input} parameters {@link setBusinessGreetingMessageSettings$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBusinessGreetingMessageSettings = (
+  parameters: setBusinessGreetingMessageSettings$Input
+) => Ok;
+
+/**
+ * Changes the business away message settings of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessAwayMessageSettings$Input = {
+  readonly _: "setBusinessAwayMessageSettings";
+
+  /**
+   * The new settings for the away message of the business; pass null to disable the away message
+   * @type {businessAwayMessageSettings$Input} {@link businessAwayMessageSettings}
+   */
+  readonly away_message_settings?: businessAwayMessageSettings$Input | null;
+};
+
+/**
+ * Changes the business away message settings of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessAwayMessageSettings$DirectInput = {
+  /**
+   * The new settings for the away message of the business; pass null to disable the away message
+   * @type {businessAwayMessageSettings$Input} {@link businessAwayMessageSettings}
+   */
+  readonly away_message_settings?: businessAwayMessageSettings$Input | null;
+};
+
+/**
+ * Changes the business away message settings of the current user. Requires Telegram Business subscription
+ *
+ * @param {setBusinessAwayMessageSettings$Input} parameters {@link setBusinessAwayMessageSettings$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBusinessAwayMessageSettings = (
+  parameters: setBusinessAwayMessageSettings$Input
+) => Ok;
+
+/**
+ * Changes the business start page of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessStartPage$Input = {
+  readonly _: "setBusinessStartPage";
+
+  /**
+   * The new start page of the business; pass null to remove custom start page
+   * @type {inputBusinessStartPage$Input} {@link inputBusinessStartPage}
+   */
+  readonly start_page?: inputBusinessStartPage$Input | null;
+};
+
+/**
+ * Changes the business start page of the current user. Requires Telegram Business subscription
+ */
+export type setBusinessStartPage$DirectInput = {
+  /**
+   * The new start page of the business; pass null to remove custom start page
+   * @type {inputBusinessStartPage$Input} {@link inputBusinessStartPage}
+   */
+  readonly start_page?: inputBusinessStartPage$Input | null;
+};
+
+/**
+ * Changes the business start page of the current user. Requires Telegram Business subscription
+ *
+ * @param {setBusinessStartPage$Input} parameters {@link setBusinessStartPage$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBusinessStartPage = (parameters: setBusinessStartPage$Input) => Ok;
+
+/**
+ * Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
+ */
+export type sendPhoneNumberCode$Input = {
+  readonly _: "sendPhoneNumberCode";
+
+  /**
+   * The phone number, in international format
+   * @type {string} {@link string}
+   */
+  readonly phone_number?: string;
+
+  /**
+   * Settings for the authentication of the user's phone number; pass null to use default settings
+   * @type {phoneNumberAuthenticationSettings$Input} {@link phoneNumberAuthenticationSettings}
+   */
+  readonly settings?: phoneNumberAuthenticationSettings$Input | null;
+
+  /**
+   * Type of the request for which the code is sent
+   * @type {PhoneNumberCodeType$Input} {@link PhoneNumberCodeType}
+   */
+  readonly type?: PhoneNumberCodeType$Input;
+};
+
+/**
+ * Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
+ */
+export type sendPhoneNumberCode$DirectInput = {
+  /**
+   * The phone number, in international format
+   * @type {string} {@link string}
+   */
+  readonly phone_number?: string;
+
+  /**
+   * Settings for the authentication of the user's phone number; pass null to use default settings
+   * @type {phoneNumberAuthenticationSettings$Input} {@link phoneNumberAuthenticationSettings}
+   */
+  readonly settings?: phoneNumberAuthenticationSettings$Input | null;
+
+  /**
+   * Type of the request for which the code is sent
+   * @type {PhoneNumberCodeType$Input} {@link PhoneNumberCodeType}
+   */
+  readonly type?: PhoneNumberCodeType$Input;
+};
+
+/**
+ * Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
+ *
+ * @param {sendPhoneNumberCode$Input} parameters {@link sendPhoneNumberCode$Input}
+ * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
+ */
+export type sendPhoneNumberCode = (
+  parameters: sendPhoneNumberCode$Input
+) => AuthenticationCodeInfo;
+
+/**
+ * Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
+ */
+export type sendPhoneNumberFirebaseSms$Input = {
+  readonly _: "sendPhoneNumberFirebaseSms";
+
+  /**
+   * Play Integrity API or SafetyNet Attestation API token for the Android application, or secret from push notification for the iOS application
+   * @type {string} {@link string}
+   */
+  readonly token?: string;
+};
+
+/**
+ * Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
+ */
+export type sendPhoneNumberFirebaseSms$DirectInput = {
+  /**
+   * Play Integrity API or SafetyNet Attestation API token for the Android application, or secret from push notification for the iOS application
+   * @type {string} {@link string}
+   */
+  readonly token?: string;
+};
+
+/**
+ * Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
+ *
+ * @param {sendPhoneNumberFirebaseSms$Input} parameters {@link sendPhoneNumberFirebaseSms$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type sendPhoneNumberFirebaseSms = (
+  parameters: sendPhoneNumberFirebaseSms$Input
+) => Ok;
+
+/**
+ * Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
+ */
+export type reportPhoneNumberCodeMissing$Input = {
+  readonly _: "reportPhoneNumberCodeMissing";
+
+  /**
+   * Current mobile network code
+   * @type {string} {@link string}
+   */
+  readonly mobile_network_code?: string;
+};
+
+/**
+ * Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
+ */
+export type reportPhoneNumberCodeMissing$DirectInput = {
+  /**
+   * Current mobile network code
+   * @type {string} {@link string}
+   */
+  readonly mobile_network_code?: string;
+};
+
+/**
+ * Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
+ *
+ * @param {reportPhoneNumberCodeMissing$Input} parameters {@link reportPhoneNumberCodeMissing$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type reportPhoneNumberCodeMissing = (
+  parameters: reportPhoneNumberCodeMissing$Input
+) => Ok;
+
+/**
+ * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
+ */
+export type resendPhoneNumberCode$Input = {
+  readonly _: "resendPhoneNumberCode";
+
+  /**
+   * Reason of code resending; pass null if unknown
+   * @type {ResendCodeReason$Input} {@link ResendCodeReason}
+   */
+  readonly reason?: ResendCodeReason$Input | null;
+};
+
+/**
+ * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
+ */
+export type resendPhoneNumberCode$DirectInput = {
+  /**
+   * Reason of code resending; pass null if unknown
+   * @type {ResendCodeReason$Input} {@link ResendCodeReason}
+   */
+  readonly reason?: ResendCodeReason$Input | null;
+};
+
+/**
+ * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
+ *
+ * @param {resendPhoneNumberCode$Input} parameters {@link resendPhoneNumberCode$Input}
+ * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
+ */
+export type resendPhoneNumberCode = (
+  parameters: resendPhoneNumberCode$Input
+) => AuthenticationCodeInfo;
+
+/**
+ * Check the authentication code and completes the request for which the code was sent if appropriate
+ */
+export type checkPhoneNumberCode$Input = {
+  readonly _: "checkPhoneNumberCode";
+
+  /**
+   * Authentication code to check
+   * @type {string} {@link string}
+   */
+  readonly code?: string;
+};
+
+/**
+ * Check the authentication code and completes the request for which the code was sent if appropriate
+ */
+export type checkPhoneNumberCode$DirectInput = {
+  /**
+   * Authentication code to check
+   * @type {string} {@link string}
+   */
+  readonly code?: string;
+};
+
+/**
+ * Check the authentication code and completes the request for which the code was sent if appropriate
+ *
+ * @param {checkPhoneNumberCode$Input} parameters {@link checkPhoneNumberCode$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type checkPhoneNumberCode = (parameters: checkPhoneNumberCode$Input) => Ok;
+
+/**
+ * Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
+ */
+export type getBusinessConnectedBot$Input = {
+  readonly _: "getBusinessConnectedBot";
+};
+
+/**
+ * Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
+ */
+export type getBusinessConnectedBot$DirectInput = {};
+
+/**
+ * Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
+ *
+ * @param {getBusinessConnectedBot$Input} parameters {@link getBusinessConnectedBot$Input}
+ * @return {BusinessConnectedBot} {@link BusinessConnectedBot}
+ */
+export type getBusinessConnectedBot = (
+  parameters: getBusinessConnectedBot$Input
+) => BusinessConnectedBot;
+
+/**
+ * Adds or changes business bot that is connected to the current user account
+ */
+export type setBusinessConnectedBot$Input = {
+  readonly _: "setBusinessConnectedBot";
+
+  /**
+   * Connection settings for the bot
+   * @type {businessConnectedBot$Input} {@link businessConnectedBot}
+   */
+  readonly bot?: businessConnectedBot$Input;
+};
+
+/**
+ * Adds or changes business bot that is connected to the current user account
+ */
+export type setBusinessConnectedBot$DirectInput = {
+  /**
+   * Connection settings for the bot
+   * @type {businessConnectedBot$Input} {@link businessConnectedBot}
+   */
+  readonly bot?: businessConnectedBot$Input;
+};
+
+/**
+ * Adds or changes business bot that is connected to the current user account
+ *
+ * @param {setBusinessConnectedBot$Input} parameters {@link setBusinessConnectedBot$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type setBusinessConnectedBot = (
+  parameters: setBusinessConnectedBot$Input
+) => Ok;
+
+/**
+ * Deletes the business bot that is connected to the current user account
+ */
+export type deleteBusinessConnectedBot$Input = {
+  readonly _: "deleteBusinessConnectedBot";
+
+  /**
+   * Unique user identifier for the bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Deletes the business bot that is connected to the current user account
+ */
+export type deleteBusinessConnectedBot$DirectInput = {
+  /**
+   * Unique user identifier for the bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Deletes the business bot that is connected to the current user account
+ *
+ * @param {deleteBusinessConnectedBot$Input} parameters {@link deleteBusinessConnectedBot$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type deleteBusinessConnectedBot = (
+  parameters: deleteBusinessConnectedBot$Input
+) => Ok;
+
+/**
+ * Pauses or resumes the connected business bot in a specific chat
+ */
+export type toggleBusinessConnectedBotChatIsPaused$Input = {
+  readonly _: "toggleBusinessConnectedBotChatIsPaused";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Pass true to pause the connected bot in the chat; pass false to resume the bot
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_paused?: Bool$Input;
+};
+
+/**
+ * Pauses or resumes the connected business bot in a specific chat
+ */
+export type toggleBusinessConnectedBotChatIsPaused$DirectInput = {
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Pass true to pause the connected bot in the chat; pass false to resume the bot
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_paused?: Bool$Input;
+};
+
+/**
+ * Pauses or resumes the connected business bot in a specific chat
+ *
+ * @param {toggleBusinessConnectedBotChatIsPaused$Input} parameters {@link toggleBusinessConnectedBotChatIsPaused$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type toggleBusinessConnectedBotChatIsPaused = (
+  parameters: toggleBusinessConnectedBotChatIsPaused$Input
+) => Ok;
+
+/**
+ * Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
+ */
+export type removeBusinessConnectedBotFromChat$Input = {
+  readonly _: "removeBusinessConnectedBotFromChat";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
+ */
+export type removeBusinessConnectedBotFromChat$DirectInput = {
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
+ *
+ * @param {removeBusinessConnectedBotFromChat$Input} parameters {@link removeBusinessConnectedBotFromChat$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type removeBusinessConnectedBotFromChat = (
+  parameters: removeBusinessConnectedBotFromChat$Input
+) => Ok;
+
+/**
+ * Returns business chat links created for the current account
+ */
+export type getBusinessChatLinks$Input = {
+  readonly _: "getBusinessChatLinks";
+};
+
+/**
+ * Returns business chat links created for the current account
+ */
+export type getBusinessChatLinks$DirectInput = {};
+
+/**
+ * Returns business chat links created for the current account
+ *
+ * @param {getBusinessChatLinks$Input} parameters {@link getBusinessChatLinks$Input}
+ * @return {BusinessChatLinks} {@link BusinessChatLinks}
+ */
+export type getBusinessChatLinks = (
+  parameters: getBusinessChatLinks$Input
+) => BusinessChatLinks;
+
+/**
+ * Creates a business chat link for the current account. Requires Telegram Business subscription. There can be up to getOption("business_chat_link_count_max") links created. Returns the created link
+ */
+export type createBusinessChatLink$Input = {
+  readonly _: "createBusinessChatLink";
+
+  /**
+   * Information about the link to create
+   * @type {inputBusinessChatLink$Input} {@link inputBusinessChatLink}
+   */
+  readonly link_info?: inputBusinessChatLink$Input;
+};
+
+/**
+ * Creates a business chat link for the current account. Requires Telegram Business subscription. There can be up to getOption("business_chat_link_count_max") links created. Returns the created link
+ */
+export type createBusinessChatLink$DirectInput = {
+  /**
+   * Information about the link to create
+   * @type {inputBusinessChatLink$Input} {@link inputBusinessChatLink}
+   */
+  readonly link_info?: inputBusinessChatLink$Input;
+};
+
+/**
+ * Creates a business chat link for the current account. Requires Telegram Business subscription. There can be up to getOption("business_chat_link_count_max") links created. Returns the created link
+ *
+ * @param {createBusinessChatLink$Input} parameters {@link createBusinessChatLink$Input}
+ * @return {BusinessChatLink} {@link BusinessChatLink}
+ */
+export type createBusinessChatLink = (
+  parameters: createBusinessChatLink$Input
+) => BusinessChatLink;
+
+/**
+ * Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
+ */
+export type editBusinessChatLink$Input = {
+  readonly _: "editBusinessChatLink";
+
+  /**
+   * The link to edit
+   * @type {string} {@link string}
+   */
+  readonly link?: string;
+
+  /**
+   * New description of the link
+   * @type {inputBusinessChatLink$Input} {@link inputBusinessChatLink}
+   */
+  readonly link_info?: inputBusinessChatLink$Input;
+};
+
+/**
+ * Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
+ */
+export type editBusinessChatLink$DirectInput = {
+  /**
+   * The link to edit
+   * @type {string} {@link string}
+   */
+  readonly link?: string;
+
+  /**
+   * New description of the link
+   * @type {inputBusinessChatLink$Input} {@link inputBusinessChatLink}
+   */
+  readonly link_info?: inputBusinessChatLink$Input;
+};
+
+/**
+ * Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
+ *
+ * @param {editBusinessChatLink$Input} parameters {@link editBusinessChatLink$Input}
+ * @return {BusinessChatLink} {@link BusinessChatLink}
+ */
+export type editBusinessChatLink = (
+  parameters: editBusinessChatLink$Input
+) => BusinessChatLink;
+
+/**
+ * Deletes a business chat link of the current account
+ */
+export type deleteBusinessChatLink$Input = {
+  readonly _: "deleteBusinessChatLink";
+
+  /**
+   * The link to delete
+   * @type {string} {@link string}
+   */
+  readonly link?: string;
+};
+
+/**
+ * Deletes a business chat link of the current account
+ */
+export type deleteBusinessChatLink$DirectInput = {
+  /**
+   * The link to delete
+   * @type {string} {@link string}
+   */
+  readonly link?: string;
+};
+
+/**
+ * Deletes a business chat link of the current account
+ *
+ * @param {deleteBusinessChatLink$Input} parameters {@link deleteBusinessChatLink$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type deleteBusinessChatLink = (
+  parameters: deleteBusinessChatLink$Input
+) => Ok;
+
+/**
+ * Returns information about a business chat link
+ */
+export type getBusinessChatLinkInfo$Input = {
+  readonly _: "getBusinessChatLinkInfo";
+
+  /**
+   * Name of the link
+   * @type {string} {@link string}
+   */
+  readonly link_name?: string;
+};
+
+/**
+ * Returns information about a business chat link
+ */
+export type getBusinessChatLinkInfo$DirectInput = {
+  /**
+   * Name of the link
+   * @type {string} {@link string}
+   */
+  readonly link_name?: string;
+};
+
+/**
+ * Returns information about a business chat link
+ *
+ * @param {getBusinessChatLinkInfo$Input} parameters {@link getBusinessChatLinkInfo$Input}
+ * @return {BusinessChatLinkInfo} {@link BusinessChatLinkInfo}
+ */
+export type getBusinessChatLinkInfo = (
+  parameters: getBusinessChatLinkInfo$Input
+) => BusinessChatLinkInfo;
 
 /**
  * Returns an HTTPS link, which can be used to get information about the current user
@@ -104847,7 +114391,7 @@ export type deleteCommands$DirectInput = {
 export type deleteCommands = (parameters: deleteCommands$Input) => Ok;
 
 /**
- * Returns list of commands supported by the bot for the given user scope and language; for bots only
+ * Returns the list of commands supported by the bot for the given user scope and language; for bots only
  */
 export type getCommands$Input = {
   readonly _: "getCommands";
@@ -104866,7 +114410,7 @@ export type getCommands$Input = {
 };
 
 /**
- * Returns list of commands supported by the bot for the given user scope and language; for bots only
+ * Returns the list of commands supported by the bot for the given user scope and language; for bots only
  */
 export type getCommands$DirectInput = {
   /**
@@ -104883,7 +114427,7 @@ export type getCommands$DirectInput = {
 };
 
 /**
- * Returns list of commands supported by the bot for the given user scope and language; for bots only
+ * Returns the list of commands supported by the bot for the given user scope and language; for bots only
  *
  * @param {getCommands$Input} parameters {@link getCommands$Input}
  * @return {BotCommands} {@link BotCommands}
@@ -106295,7 +115839,7 @@ export type toggleSupergroupJoinToSendMessages$Input = {
   readonly _: "toggleSupergroupJoinToSendMessages";
 
   /**
-   * Identifier of the supergroup
+   * Identifier of the supergroup that isn't a broadcast group
    * @type {int53} {@link int53}
    */
   readonly supergroup_id?: int53;
@@ -106312,7 +115856,7 @@ export type toggleSupergroupJoinToSendMessages$Input = {
  */
 export type toggleSupergroupJoinToSendMessages$DirectInput = {
   /**
-   * Identifier of the supergroup
+   * Identifier of the supergroup that isn't a broadcast group
    * @type {int53} {@link int53}
    */
   readonly supergroup_id?: int53;
@@ -106341,7 +115885,7 @@ export type toggleSupergroupJoinByRequest$Input = {
   readonly _: "toggleSupergroupJoinByRequest";
 
   /**
-   * Identifier of the channel
+   * Identifier of the supergroup that isn't a broadcast group
    * @type {int53} {@link int53}
    */
   readonly supergroup_id?: int53;
@@ -106358,7 +115902,7 @@ export type toggleSupergroupJoinByRequest$Input = {
  */
 export type toggleSupergroupJoinByRequest$DirectInput = {
   /**
-   * Identifier of the channel
+   * Identifier of the supergroup that isn't a broadcast group
    * @type {int53} {@link int53}
    */
   readonly supergroup_id?: int53;
@@ -106424,6 +115968,52 @@ export type toggleSupergroupIsAllHistoryAvailable$DirectInput = {
  */
 export type toggleSupergroupIsAllHistoryAvailable = (
   parameters: toggleSupergroupIsAllHistoryAvailable$Input
+) => Ok;
+
+/**
+ * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+ */
+export type toggleSupergroupCanHaveSponsoredMessages$Input = {
+  readonly _: "toggleSupergroupCanHaveSponsoredMessages";
+
+  /**
+   * The identifier of the channel
+   * @type {int53} {@link int53}
+   */
+  readonly supergroup_id?: int53;
+
+  /**
+   * The new value of can_have_sponsored_messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly can_have_sponsored_messages?: Bool$Input;
+};
+
+/**
+ * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+ */
+export type toggleSupergroupCanHaveSponsoredMessages$DirectInput = {
+  /**
+   * The identifier of the channel
+   * @type {int53} {@link int53}
+   */
+  readonly supergroup_id?: int53;
+
+  /**
+   * The new value of can_have_sponsored_messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly can_have_sponsored_messages?: Bool$Input;
+};
+
+/**
+ * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+ *
+ * @param {toggleSupergroupCanHaveSponsoredMessages$Input} parameters {@link toggleSupergroupCanHaveSponsoredMessages$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type toggleSupergroupCanHaveSponsoredMessages = (
+  parameters: toggleSupergroupCanHaveSponsoredMessages$Input
 ) => Ok;
 
 /**
@@ -106713,7 +116303,7 @@ export type getSupergroupMembers$Input = {
   readonly offset?: int32;
 
   /**
-   * The maximum number of users be returned; up to 200
+   * The maximum number of users to be returned; up to 200
    * @type {int32} {@link int32}
    */
   readonly limit?: int32;
@@ -106742,7 +116332,7 @@ export type getSupergroupMembers$DirectInput = {
   readonly offset?: int32;
 
   /**
-   * The maximum number of users be returned; up to 200
+   * The maximum number of users to be returned; up to 200
    * @type {int32} {@link int32}
    */
   readonly limit?: int32;
@@ -106883,6 +116473,26 @@ export type getChatEventLog$DirectInput = {
 export type getChatEventLog = (parameters: getChatEventLog$Input) => ChatEvents;
 
 /**
+ * Returns the list of supported time zones
+ */
+export type getTimeZones$Input = {
+  readonly _: "getTimeZones";
+};
+
+/**
+ * Returns the list of supported time zones
+ */
+export type getTimeZones$DirectInput = {};
+
+/**
+ * Returns the list of supported time zones
+ *
+ * @param {getTimeZones$Input} parameters {@link getTimeZones$Input}
+ * @return {TimeZones} {@link TimeZones}
+ */
+export type getTimeZones = (parameters: getTimeZones$Input) => TimeZones;
+
+/**
  * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
  */
 export type getPaymentForm$Input = {
@@ -107015,10 +116625,10 @@ export type sendPaymentForm$Input = {
   readonly shipping_option_id?: string;
 
   /**
-   * The credentials chosen by user for payment
+   * The credentials chosen by user for payment; pass null for a payment in Telegram stars
    * @type {InputCredentials$Input} {@link InputCredentials}
    */
-  readonly credentials?: InputCredentials$Input;
+  readonly credentials?: InputCredentials$Input | null;
 
   /**
    * Chosen by the user amount of tip in the smallest units of the currency
@@ -107056,10 +116666,10 @@ export type sendPaymentForm$DirectInput = {
   readonly shipping_option_id?: string;
 
   /**
-   * The credentials chosen by user for payment
+   * The credentials chosen by user for payment; pass null for a payment in Telegram stars
    * @type {InputCredentials$Input} {@link InputCredentials}
    */
-  readonly credentials?: InputCredentials$Input;
+  readonly credentials?: InputCredentials$Input | null;
 
   /**
    * Chosen by the user amount of tip in the smallest units of the currency
@@ -107215,6 +116825,50 @@ export type createInvoiceLink$DirectInput = {
  * @return {HttpUrl} {@link HttpUrl}
  */
 export type createInvoiceLink = (parameters: createInvoiceLink$Input) => HttpUrl;
+
+/**
+ * Refunds a previously done payment in Telegram Stars
+ */
+export type refundStarPayment$Input = {
+  readonly _: "refundStarPayment";
+
+  /**
+   * Identifier of the user that did the payment
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Telegram payment identifier
+   * @type {string} {@link string}
+   */
+  readonly telegram_payment_charge_id?: string;
+};
+
+/**
+ * Refunds a previously done payment in Telegram Stars
+ */
+export type refundStarPayment$DirectInput = {
+  /**
+   * Identifier of the user that did the payment
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Telegram payment identifier
+   * @type {string} {@link string}
+   */
+  readonly telegram_payment_charge_id?: string;
+};
+
+/**
+ * Refunds a previously done payment in Telegram Stars
+ *
+ * @param {refundStarPayment$Input} parameters {@link refundStarPayment$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type refundStarPayment = (parameters: refundStarPayment$Input) => Ok;
 
 /**
  * Returns a user that can be contacted to get support
@@ -108127,7 +117781,7 @@ export type getReadDatePrivacySettings = (
 ) => ReadDatePrivacySettings;
 
 /**
- * Changes privacy settings for new chat creation; for Telegram Premium users only
+ * Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
  */
 export type setNewChatPrivacySettings$Input = {
   readonly _: "setNewChatPrivacySettings";
@@ -108140,7 +117794,7 @@ export type setNewChatPrivacySettings$Input = {
 };
 
 /**
- * Changes privacy settings for new chat creation; for Telegram Premium users only
+ * Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
  */
 export type setNewChatPrivacySettings$DirectInput = {
   /**
@@ -108151,7 +117805,7 @@ export type setNewChatPrivacySettings$DirectInput = {
 };
 
 /**
- * Changes privacy settings for new chat creation; for Telegram Premium users only
+ * Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
  *
  * @param {setNewChatPrivacySettings$Input} parameters {@link setNewChatPrivacySettings$Input}
  * @return {Ok} {@link Ok}
@@ -108371,7 +118025,7 @@ export type deleteAccount$Input = {
   readonly reason?: string;
 
   /**
-   * The 2-step verification password of the current user. If not specified, account deletion can be canceled within one week
+   * The 2-step verification password of the current user. If the current user isn't authorized, then an empty string can be passed and account deletion can be canceled within one week
    * @type {string} {@link string}
    */
   readonly password?: string;
@@ -108390,7 +118044,7 @@ export type deleteAccount$DirectInput = {
   readonly reason?: string;
 
   /**
-   * The 2-step verification password of the current user. If not specified, account deletion can be canceled within one week
+   * The 2-step verification password of the current user. If the current user isn't authorized, then an empty string can be passed and account deletion can be canceled within one week
    * @type {string} {@link string}
    */
   readonly password?: string;
@@ -108687,6 +118341,156 @@ export type reportMessageReactions$DirectInput = {
 export type reportMessageReactions = (
   parameters: reportMessageReactions$Input
 ) => Ok;
+
+/**
+ * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ */
+export type getChatRevenueStatistics$Input = {
+  readonly _: "getChatRevenueStatistics";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Pass true if a dark theme is used by the application
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_dark?: Bool$Input;
+};
+
+/**
+ * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ */
+export type getChatRevenueStatistics$DirectInput = {
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Pass true if a dark theme is used by the application
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_dark?: Bool$Input;
+};
+
+/**
+ * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ *
+ * @param {getChatRevenueStatistics$Input} parameters {@link getChatRevenueStatistics$Input}
+ * @return {ChatRevenueStatistics} {@link ChatRevenueStatistics}
+ */
+export type getChatRevenueStatistics = (
+  parameters: getChatRevenueStatistics$Input
+) => ChatRevenueStatistics;
+
+/**
+ * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ */
+export type getChatRevenueWithdrawalUrl$Input = {
+  readonly _: "getChatRevenueWithdrawalUrl";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The 2-step verification password of the current user
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+};
+
+/**
+ * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ */
+export type getChatRevenueWithdrawalUrl$DirectInput = {
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The 2-step verification password of the current user
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+};
+
+/**
+ * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ *
+ * @param {getChatRevenueWithdrawalUrl$Input} parameters {@link getChatRevenueWithdrawalUrl$Input}
+ * @return {HttpUrl} {@link HttpUrl}
+ */
+export type getChatRevenueWithdrawalUrl = (
+  parameters: getChatRevenueWithdrawalUrl$Input
+) => HttpUrl;
+
+/**
+ * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ */
+export type getChatRevenueTransactions$Input = {
+  readonly _: "getChatRevenueTransactions";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Number of transactions to skip
+   * @type {int32} {@link int32}
+   */
+  readonly offset?: int32;
+
+  /**
+   * The maximum number of transactions to be returned; up to 200
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ */
+export type getChatRevenueTransactions$DirectInput = {
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Number of transactions to skip
+   * @type {int32} {@link int32}
+   */
+  readonly offset?: int32;
+
+  /**
+   * The maximum number of transactions to be returned; up to 200
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ *
+ * @param {getChatRevenueTransactions$Input} parameters {@link getChatRevenueTransactions$Input}
+ * @return {ChatRevenueTransactions} {@link ChatRevenueTransactions}
+ */
+export type getChatRevenueTransactions = (
+  parameters: getChatRevenueTransactions$Input
+) => ChatRevenueTransactions;
 
 /**
  * Returns detailed statistics about a chat. Currently, this method can be used only for supergroups and channels. Can be used only if supergroupFullInfo.can_get_statistics == true
@@ -109739,108 +119543,6 @@ export type getPreferredCountryLanguage = (
 ) => Text;
 
 /**
- * Sends a code to verify a phone number to be added to a user's Telegram Passport
- */
-export type sendPhoneNumberVerificationCode$Input = {
-  readonly _: "sendPhoneNumberVerificationCode";
-
-  /**
-   * The phone number of the user, in international format
-   * @type {string} {@link string}
-   */
-  readonly phone_number?: string;
-
-  /**
-   * Settings for the authentication of the user's phone number; pass null to use default settings
-   * @type {phoneNumberAuthenticationSettings$Input} {@link phoneNumberAuthenticationSettings}
-   */
-  readonly settings?: phoneNumberAuthenticationSettings$Input | null;
-};
-
-/**
- * Sends a code to verify a phone number to be added to a user's Telegram Passport
- */
-export type sendPhoneNumberVerificationCode$DirectInput = {
-  /**
-   * The phone number of the user, in international format
-   * @type {string} {@link string}
-   */
-  readonly phone_number?: string;
-
-  /**
-   * Settings for the authentication of the user's phone number; pass null to use default settings
-   * @type {phoneNumberAuthenticationSettings$Input} {@link phoneNumberAuthenticationSettings}
-   */
-  readonly settings?: phoneNumberAuthenticationSettings$Input | null;
-};
-
-/**
- * Sends a code to verify a phone number to be added to a user's Telegram Passport
- *
- * @param {sendPhoneNumberVerificationCode$Input} parameters {@link sendPhoneNumberVerificationCode$Input}
- * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
- */
-export type sendPhoneNumberVerificationCode = (
-  parameters: sendPhoneNumberVerificationCode$Input
-) => AuthenticationCodeInfo;
-
-/**
- * Resends the code to verify a phone number to be added to a user's Telegram Passport
- */
-export type resendPhoneNumberVerificationCode$Input = {
-  readonly _: "resendPhoneNumberVerificationCode";
-};
-
-/**
- * Resends the code to verify a phone number to be added to a user's Telegram Passport
- */
-export type resendPhoneNumberVerificationCode$DirectInput = {};
-
-/**
- * Resends the code to verify a phone number to be added to a user's Telegram Passport
- *
- * @param {resendPhoneNumberVerificationCode$Input} parameters {@link resendPhoneNumberVerificationCode$Input}
- * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
- */
-export type resendPhoneNumberVerificationCode = (
-  parameters: resendPhoneNumberVerificationCode$Input
-) => AuthenticationCodeInfo;
-
-/**
- * Checks the phone number verification code for Telegram Passport
- */
-export type checkPhoneNumberVerificationCode$Input = {
-  readonly _: "checkPhoneNumberVerificationCode";
-
-  /**
-   * Verification code to check
-   * @type {string} {@link string}
-   */
-  readonly code?: string;
-};
-
-/**
- * Checks the phone number verification code for Telegram Passport
- */
-export type checkPhoneNumberVerificationCode$DirectInput = {
-  /**
-   * Verification code to check
-   * @type {string} {@link string}
-   */
-  readonly code?: string;
-};
-
-/**
- * Checks the phone number verification code for Telegram Passport
- *
- * @param {checkPhoneNumberVerificationCode$Input} parameters {@link checkPhoneNumberVerificationCode$Input}
- * @return {Ok} {@link Ok}
- */
-export type checkPhoneNumberVerificationCode = (
-  parameters: checkPhoneNumberVerificationCode$Input
-) => Ok;
-
-/**
  * Sends a code to verify an email address to be added to a user's Telegram Passport
  */
 export type sendEmailAddressVerificationCode$Input = {
@@ -110093,120 +119795,6 @@ export type sendPassportAuthorizationForm = (
 ) => Ok;
 
 /**
- * Sends phone number confirmation code to handle links of the type internalLinkTypePhoneNumberConfirmation
- */
-export type sendPhoneNumberConfirmationCode$Input = {
-  readonly _: "sendPhoneNumberConfirmationCode";
-
-  /**
-   * Hash value from the link
-   * @type {string} {@link string}
-   */
-  readonly hash?: string;
-
-  /**
-   * Phone number value from the link
-   * @type {string} {@link string}
-   */
-  readonly phone_number?: string;
-
-  /**
-   * Settings for the authentication of the user's phone number; pass null to use default settings
-   * @type {phoneNumberAuthenticationSettings$Input} {@link phoneNumberAuthenticationSettings}
-   */
-  readonly settings?: phoneNumberAuthenticationSettings$Input | null;
-};
-
-/**
- * Sends phone number confirmation code to handle links of the type internalLinkTypePhoneNumberConfirmation
- */
-export type sendPhoneNumberConfirmationCode$DirectInput = {
-  /**
-   * Hash value from the link
-   * @type {string} {@link string}
-   */
-  readonly hash?: string;
-
-  /**
-   * Phone number value from the link
-   * @type {string} {@link string}
-   */
-  readonly phone_number?: string;
-
-  /**
-   * Settings for the authentication of the user's phone number; pass null to use default settings
-   * @type {phoneNumberAuthenticationSettings$Input} {@link phoneNumberAuthenticationSettings}
-   */
-  readonly settings?: phoneNumberAuthenticationSettings$Input | null;
-};
-
-/**
- * Sends phone number confirmation code to handle links of the type internalLinkTypePhoneNumberConfirmation
- *
- * @param {sendPhoneNumberConfirmationCode$Input} parameters {@link sendPhoneNumberConfirmationCode$Input}
- * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
- */
-export type sendPhoneNumberConfirmationCode = (
-  parameters: sendPhoneNumberConfirmationCode$Input
-) => AuthenticationCodeInfo;
-
-/**
- * Resends phone number confirmation code
- */
-export type resendPhoneNumberConfirmationCode$Input = {
-  readonly _: "resendPhoneNumberConfirmationCode";
-};
-
-/**
- * Resends phone number confirmation code
- */
-export type resendPhoneNumberConfirmationCode$DirectInput = {};
-
-/**
- * Resends phone number confirmation code
- *
- * @param {resendPhoneNumberConfirmationCode$Input} parameters {@link resendPhoneNumberConfirmationCode$Input}
- * @return {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
- */
-export type resendPhoneNumberConfirmationCode = (
-  parameters: resendPhoneNumberConfirmationCode$Input
-) => AuthenticationCodeInfo;
-
-/**
- * Checks phone number confirmation code
- */
-export type checkPhoneNumberConfirmationCode$Input = {
-  readonly _: "checkPhoneNumberConfirmationCode";
-
-  /**
-   * Confirmation code to check
-   * @type {string} {@link string}
-   */
-  readonly code?: string;
-};
-
-/**
- * Checks phone number confirmation code
- */
-export type checkPhoneNumberConfirmationCode$DirectInput = {
-  /**
-   * Confirmation code to check
-   * @type {string} {@link string}
-   */
-  readonly code?: string;
-};
-
-/**
- * Checks phone number confirmation code
- *
- * @param {checkPhoneNumberConfirmationCode$Input} parameters {@link checkPhoneNumberConfirmationCode$Input}
- * @return {Ok} {@link Ok}
- */
-export type checkPhoneNumberConfirmationCode = (
-  parameters: checkPhoneNumberConfirmationCode$Input
-) => Ok;
-
-/**
  * Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
  */
 export type setBotUpdatesStatus$Input = {
@@ -110397,16 +119985,12 @@ export type createNewStickerSet$Input = {
   readonly title?: string;
 
   /**
-   * Sticker set name. Can contain only English letters, digits and underscores. Must end with *"_by_<bot username>"* (*<bot_username>* is case insensitive) for bots; 1-64 characters
+   * Sticker set name. Can contain only English letters, digits and underscores. Must end with *"_by_<bot username>"* (*<bot_username>* is case insensitive) for bots; 0-64 characters.
+   *
+   * - If empty, then the name returned by getSuggestedStickerSetName will be used automatically
    * @type {string} {@link string}
    */
   readonly name?: string;
-
-  /**
-   * Format of the stickers in the set
-   * @type {StickerFormat$Input} {@link StickerFormat}
-   */
-  readonly sticker_format?: StickerFormat$Input;
 
   /**
    * Type of the stickers in the set
@@ -110421,7 +120005,7 @@ export type createNewStickerSet$Input = {
   readonly needs_repainting?: Bool$Input;
 
   /**
-   * List of stickers to be added to the set; must be non-empty. All stickers must have the same format. For TGS stickers, uploadStickerFile must be used before the sticker is shown
+   * List of stickers to be added to the set; 1-200 stickers for custom emoji sticker sets, and 1-120 stickers otherwise. For TGS stickers, uploadStickerFile must be used before the sticker is shown
    * @type {vector$Input<inputSticker$Input>} {@link vector<inputSticker>}
    */
   readonly stickers?: vector$Input<inputSticker$Input>;
@@ -110450,16 +120034,12 @@ export type createNewStickerSet$DirectInput = {
   readonly title?: string;
 
   /**
-   * Sticker set name. Can contain only English letters, digits and underscores. Must end with *"_by_<bot username>"* (*<bot_username>* is case insensitive) for bots; 1-64 characters
+   * Sticker set name. Can contain only English letters, digits and underscores. Must end with *"_by_<bot username>"* (*<bot_username>* is case insensitive) for bots; 0-64 characters.
+   *
+   * - If empty, then the name returned by getSuggestedStickerSetName will be used automatically
    * @type {string} {@link string}
    */
   readonly name?: string;
-
-  /**
-   * Format of the stickers in the set
-   * @type {StickerFormat$Input} {@link StickerFormat}
-   */
-  readonly sticker_format?: StickerFormat$Input;
 
   /**
    * Type of the stickers in the set
@@ -110474,7 +120054,7 @@ export type createNewStickerSet$DirectInput = {
   readonly needs_repainting?: Bool$Input;
 
   /**
-   * List of stickers to be added to the set; must be non-empty. All stickers must have the same format. For TGS stickers, uploadStickerFile must be used before the sticker is shown
+   * List of stickers to be added to the set; 1-200 stickers for custom emoji sticker sets, and 1-120 stickers otherwise. For TGS stickers, uploadStickerFile must be used before the sticker is shown
    * @type {vector$Input<inputSticker$Input>} {@link vector<inputSticker>}
    */
   readonly stickers?: vector$Input<inputSticker$Input>;
@@ -110497,19 +120077,19 @@ export type createNewStickerSet = (
 ) => StickerSet;
 
 /**
- * Adds a new sticker to a set; for bots only
+ * Adds a new sticker to a set
  */
 export type addStickerToSet$Input = {
   readonly _: "addStickerToSet";
 
   /**
-   * Sticker set owner
+   * Sticker set owner; ignored for regular users
    * @type {int53} {@link int53}
    */
   readonly user_id?: int53;
 
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user, and contain less than 200 stickers for custom emoji sticker sets and less than 120 otherwise
    * @type {string} {@link string}
    */
   readonly name?: string;
@@ -110522,17 +120102,17 @@ export type addStickerToSet$Input = {
 };
 
 /**
- * Adds a new sticker to a set; for bots only
+ * Adds a new sticker to a set
  */
 export type addStickerToSet$DirectInput = {
   /**
-   * Sticker set owner
+   * Sticker set owner; ignored for regular users
    * @type {int53} {@link int53}
    */
   readonly user_id?: int53;
 
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user, and contain less than 200 stickers for custom emoji sticker sets and less than 120 otherwise
    * @type {string} {@link string}
    */
   readonly name?: string;
@@ -110545,7 +120125,7 @@ export type addStickerToSet$DirectInput = {
 };
 
 /**
- * Adds a new sticker to a set; for bots only
+ * Adds a new sticker to a set
  *
  * @param {addStickerToSet$Input} parameters {@link addStickerToSet$Input}
  * @return {Ok} {@link Ok}
@@ -110553,55 +120133,135 @@ export type addStickerToSet$DirectInput = {
 export type addStickerToSet = (parameters: addStickerToSet$Input) => Ok;
 
 /**
- * Sets a sticker set thumbnail; for bots only
+ * Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
+ */
+export type replaceStickerInSet$Input = {
+  readonly _: "replaceStickerInSet";
+
+  /**
+   * Sticker set owner; ignored for regular users
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Sticker set name. The sticker set must be owned by the current user
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * Sticker to remove from the set
+   * @type {InputFile$Input} {@link InputFile}
+   */
+  readonly old_sticker?: InputFile$Input;
+
+  /**
+   * Sticker to add to the set
+   * @type {inputSticker$Input} {@link inputSticker}
+   */
+  readonly new_sticker?: inputSticker$Input;
+};
+
+/**
+ * Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
+ */
+export type replaceStickerInSet$DirectInput = {
+  /**
+   * Sticker set owner; ignored for regular users
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Sticker set name. The sticker set must be owned by the current user
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * Sticker to remove from the set
+   * @type {InputFile$Input} {@link InputFile}
+   */
+  readonly old_sticker?: InputFile$Input;
+
+  /**
+   * Sticker to add to the set
+   * @type {inputSticker$Input} {@link inputSticker}
+   */
+  readonly new_sticker?: inputSticker$Input;
+};
+
+/**
+ * Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
+ *
+ * @param {replaceStickerInSet$Input} parameters {@link replaceStickerInSet$Input}
+ * @return {Ok} {@link Ok}
+ */
+export type replaceStickerInSet = (parameters: replaceStickerInSet$Input) => Ok;
+
+/**
+ * Sets a sticker set thumbnail
  */
 export type setStickerSetThumbnail$Input = {
   readonly _: "setStickerSetThumbnail";
 
   /**
-   * Sticker set owner
+   * Sticker set owner; ignored for regular users
    * @type {int53} {@link int53}
    */
   readonly user_id?: int53;
 
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user
    * @type {string} {@link string}
    */
   readonly name?: string;
 
   /**
-   * Thumbnail to set in PNG, TGS, or WEBM format; pass null to remove the sticker set thumbnail. Thumbnail format must match the format of stickers in the set
+   * Thumbnail to set; pass null to remove the sticker set thumbnail
    * @type {InputFile$Input} {@link InputFile}
    */
   readonly thumbnail?: InputFile$Input | null;
+
+  /**
+   * Format of the thumbnail; pass null if thumbnail is removed
+   * @type {StickerFormat$Input} {@link StickerFormat}
+   */
+  readonly format?: StickerFormat$Input | null;
 };
 
 /**
- * Sets a sticker set thumbnail; for bots only
+ * Sets a sticker set thumbnail
  */
 export type setStickerSetThumbnail$DirectInput = {
   /**
-   * Sticker set owner
+   * Sticker set owner; ignored for regular users
    * @type {int53} {@link int53}
    */
   readonly user_id?: int53;
 
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user
    * @type {string} {@link string}
    */
   readonly name?: string;
 
   /**
-   * Thumbnail to set in PNG, TGS, or WEBM format; pass null to remove the sticker set thumbnail. Thumbnail format must match the format of stickers in the set
+   * Thumbnail to set; pass null to remove the sticker set thumbnail
    * @type {InputFile$Input} {@link InputFile}
    */
   readonly thumbnail?: InputFile$Input | null;
+
+  /**
+   * Format of the thumbnail; pass null if thumbnail is removed
+   * @type {StickerFormat$Input} {@link StickerFormat}
+   */
+  readonly format?: StickerFormat$Input | null;
 };
 
 /**
- * Sets a sticker set thumbnail; for bots only
+ * Sets a sticker set thumbnail
  *
  * @param {setStickerSetThumbnail$Input} parameters {@link setStickerSetThumbnail$Input}
  * @return {Ok} {@link Ok}
@@ -110611,13 +120271,13 @@ export type setStickerSetThumbnail = (
 ) => Ok;
 
 /**
- * Sets a custom emoji sticker set thumbnail; for bots only
+ * Sets a custom emoji sticker set thumbnail
  */
 export type setCustomEmojiStickerSetThumbnail$Input = {
   readonly _: "setCustomEmojiStickerSetThumbnail";
 
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user
    * @type {string} {@link string}
    */
   readonly name?: string;
@@ -110630,11 +120290,11 @@ export type setCustomEmojiStickerSetThumbnail$Input = {
 };
 
 /**
- * Sets a custom emoji sticker set thumbnail; for bots only
+ * Sets a custom emoji sticker set thumbnail
  */
 export type setCustomEmojiStickerSetThumbnail$DirectInput = {
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user
    * @type {string} {@link string}
    */
   readonly name?: string;
@@ -110647,7 +120307,7 @@ export type setCustomEmojiStickerSetThumbnail$DirectInput = {
 };
 
 /**
- * Sets a custom emoji sticker set thumbnail; for bots only
+ * Sets a custom emoji sticker set thumbnail
  *
  * @param {setCustomEmojiStickerSetThumbnail$Input} parameters {@link setCustomEmojiStickerSetThumbnail$Input}
  * @return {Ok} {@link Ok}
@@ -110657,13 +120317,13 @@ export type setCustomEmojiStickerSetThumbnail = (
 ) => Ok;
 
 /**
- * Sets a sticker set title; for bots only
+ * Sets a sticker set title
  */
 export type setStickerSetTitle$Input = {
   readonly _: "setStickerSetTitle";
 
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user
    * @type {string} {@link string}
    */
   readonly name?: string;
@@ -110676,11 +120336,11 @@ export type setStickerSetTitle$Input = {
 };
 
 /**
- * Sets a sticker set title; for bots only
+ * Sets a sticker set title
  */
 export type setStickerSetTitle$DirectInput = {
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user
    * @type {string} {@link string}
    */
   readonly name?: string;
@@ -110693,7 +120353,7 @@ export type setStickerSetTitle$DirectInput = {
 };
 
 /**
- * Sets a sticker set title; for bots only
+ * Sets a sticker set title
  *
  * @param {setStickerSetTitle$Input} parameters {@link setStickerSetTitle$Input}
  * @return {Ok} {@link Ok}
@@ -110701,31 +120361,31 @@ export type setStickerSetTitle$DirectInput = {
 export type setStickerSetTitle = (parameters: setStickerSetTitle$Input) => Ok;
 
 /**
- * Deleted a sticker set; for bots only
+ * Completely deletes a sticker set
  */
 export type deleteStickerSet$Input = {
   readonly _: "deleteStickerSet";
 
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user
    * @type {string} {@link string}
    */
   readonly name?: string;
 };
 
 /**
- * Deleted a sticker set; for bots only
+ * Completely deletes a sticker set
  */
 export type deleteStickerSet$DirectInput = {
   /**
-   * Sticker set name
+   * Sticker set name. The sticker set must be owned by the current user
    * @type {string} {@link string}
    */
   readonly name?: string;
 };
 
 /**
- * Deleted a sticker set; for bots only
+ * Completely deletes a sticker set
  *
  * @param {deleteStickerSet$Input} parameters {@link deleteStickerSet$Input}
  * @return {Ok} {@link Ok}
@@ -110733,7 +120393,7 @@ export type deleteStickerSet$DirectInput = {
 export type deleteStickerSet = (parameters: deleteStickerSet$Input) => Ok;
 
 /**
- * Changes the position of a sticker in the set to which it belongs; for bots only. The sticker set must have been created by the bot
+ * Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
  */
 export type setStickerPositionInSet$Input = {
   readonly _: "setStickerPositionInSet";
@@ -110752,7 +120412,7 @@ export type setStickerPositionInSet$Input = {
 };
 
 /**
- * Changes the position of a sticker in the set to which it belongs; for bots only. The sticker set must have been created by the bot
+ * Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
  */
 export type setStickerPositionInSet$DirectInput = {
   /**
@@ -110769,7 +120429,7 @@ export type setStickerPositionInSet$DirectInput = {
 };
 
 /**
- * Changes the position of a sticker in the set to which it belongs; for bots only. The sticker set must have been created by the bot
+ * Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
  *
  * @param {setStickerPositionInSet$Input} parameters {@link setStickerPositionInSet$Input}
  * @return {Ok} {@link Ok}
@@ -110779,31 +120439,31 @@ export type setStickerPositionInSet = (
 ) => Ok;
 
 /**
- * Removes a sticker from the set to which it belongs; for bots only. The sticker set must have been created by the bot
+ * Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
  */
 export type removeStickerFromSet$Input = {
   readonly _: "removeStickerFromSet";
 
   /**
-   * Sticker
+   * Sticker to remove from the set
    * @type {InputFile$Input} {@link InputFile}
    */
   readonly sticker?: InputFile$Input;
 };
 
 /**
- * Removes a sticker from the set to which it belongs; for bots only. The sticker set must have been created by the bot
+ * Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
  */
 export type removeStickerFromSet$DirectInput = {
   /**
-   * Sticker
+   * Sticker to remove from the set
    * @type {InputFile$Input} {@link InputFile}
    */
   readonly sticker?: InputFile$Input;
 };
 
 /**
- * Removes a sticker from the set to which it belongs; for bots only. The sticker set must have been created by the bot
+ * Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
  *
  * @param {removeStickerFromSet$Input} parameters {@link removeStickerFromSet$Input}
  * @return {Ok} {@link Ok}
@@ -110811,7 +120471,7 @@ export type removeStickerFromSet$DirectInput = {
 export type removeStickerFromSet = (parameters: removeStickerFromSet$Input) => Ok;
 
 /**
- * Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+ * Changes the list of emoji corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
  */
 export type setStickerEmojis$Input = {
   readonly _: "setStickerEmojis";
@@ -110830,7 +120490,7 @@ export type setStickerEmojis$Input = {
 };
 
 /**
- * Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+ * Changes the list of emoji corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
  */
 export type setStickerEmojis$DirectInput = {
   /**
@@ -110847,7 +120507,7 @@ export type setStickerEmojis$DirectInput = {
 };
 
 /**
- * Changes the list of emoji corresponding to a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+ * Changes the list of emoji corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
  *
  * @param {setStickerEmojis$Input} parameters {@link setStickerEmojis$Input}
  * @return {Ok} {@link Ok}
@@ -110855,7 +120515,7 @@ export type setStickerEmojis$DirectInput = {
 export type setStickerEmojis = (parameters: setStickerEmojis$Input) => Ok;
 
 /**
- * Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+ * Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
  */
 export type setStickerKeywords$Input = {
   readonly _: "setStickerKeywords";
@@ -110874,7 +120534,7 @@ export type setStickerKeywords$Input = {
 };
 
 /**
- * Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+ * Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
  */
 export type setStickerKeywords$DirectInput = {
   /**
@@ -110891,7 +120551,7 @@ export type setStickerKeywords$DirectInput = {
 };
 
 /**
- * Changes the list of keywords of a sticker; for bots only. The sticker must belong to a regular or custom emoji sticker set created by the bot
+ * Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
  *
  * @param {setStickerKeywords$Input} parameters {@link setStickerKeywords$Input}
  * @return {Ok} {@link Ok}
@@ -110899,7 +120559,7 @@ export type setStickerKeywords$DirectInput = {
 export type setStickerKeywords = (parameters: setStickerKeywords$Input) => Ok;
 
 /**
- * Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot
+ * Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
  */
 export type setStickerMaskPosition$Input = {
   readonly _: "setStickerMaskPosition";
@@ -110918,7 +120578,7 @@ export type setStickerMaskPosition$Input = {
 };
 
 /**
- * Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot
+ * Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
  */
 export type setStickerMaskPosition$DirectInput = {
   /**
@@ -110935,7 +120595,7 @@ export type setStickerMaskPosition$DirectInput = {
 };
 
 /**
- * Changes the mask position of a mask sticker; for bots only. The sticker must belong to a mask sticker set created by the bot
+ * Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
  *
  * @param {setStickerMaskPosition$Input} parameters {@link setStickerMaskPosition$Input}
  * @return {Ok} {@link Ok}
@@ -110943,6 +120603,52 @@ export type setStickerMaskPosition$DirectInput = {
 export type setStickerMaskPosition = (
   parameters: setStickerMaskPosition$Input
 ) => Ok;
+
+/**
+ * Returns sticker sets owned by the current user
+ */
+export type getOwnedStickerSets$Input = {
+  readonly _: "getOwnedStickerSets";
+
+  /**
+   * Identifier of the sticker set from which to return owned sticker sets; use 0 to get results from the beginning
+   * @type {int64$Input} {@link int64}
+   */
+  readonly offset_sticker_set_id?: int64$Input;
+
+  /**
+   * The maximum number of sticker sets to be returned; must be positive and can't be greater than 100. For optimal performance, the number of returned objects is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns sticker sets owned by the current user
+ */
+export type getOwnedStickerSets$DirectInput = {
+  /**
+   * Identifier of the sticker set from which to return owned sticker sets; use 0 to get results from the beginning
+   * @type {int64$Input} {@link int64}
+   */
+  readonly offset_sticker_set_id?: int64$Input;
+
+  /**
+   * The maximum number of sticker sets to be returned; must be positive and can't be greater than 100. For optimal performance, the number of returned objects is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns sticker sets owned by the current user
+ *
+ * @param {getOwnedStickerSets$Input} parameters {@link getOwnedStickerSets$Input}
+ * @return {StickerSets} {@link StickerSets}
+ */
+export type getOwnedStickerSets = (
+  parameters: getOwnedStickerSets$Input
+) => StickerSets;
 
 /**
  * Returns information about a file with a map thumbnail in PNG format. Only map thumbnail files with size less than 1MB can be downloaded
@@ -111391,36 +121097,104 @@ export type getPremiumGiveawayInfo = (
 ) => PremiumGiveawayInfo;
 
 /**
- * Checks whether Telegram Premium purchase is possible. Must be called before in-store Premium purchase
+ * Returns available options for Telegram stars purchase
  */
-export type canPurchasePremium$Input = {
-  readonly _: "canPurchasePremium";
-
-  /**
-   * Transaction purpose
-   * @type {StorePaymentPurpose$Input} {@link StorePaymentPurpose}
-   */
-  readonly purpose?: StorePaymentPurpose$Input;
+export type getStarPaymentOptions$Input = {
+  readonly _: "getStarPaymentOptions";
 };
 
 /**
- * Checks whether Telegram Premium purchase is possible. Must be called before in-store Premium purchase
+ * Returns available options for Telegram stars purchase
  */
-export type canPurchasePremium$DirectInput = {
-  /**
-   * Transaction purpose
-   * @type {StorePaymentPurpose$Input} {@link StorePaymentPurpose}
-   */
-  readonly purpose?: StorePaymentPurpose$Input;
-};
+export type getStarPaymentOptions$DirectInput = {};
 
 /**
- * Checks whether Telegram Premium purchase is possible. Must be called before in-store Premium purchase
+ * Returns available options for Telegram stars purchase
  *
- * @param {canPurchasePremium$Input} parameters {@link canPurchasePremium$Input}
+ * @param {getStarPaymentOptions$Input} parameters {@link getStarPaymentOptions$Input}
+ * @return {StarPaymentOptions} {@link StarPaymentOptions}
+ */
+export type getStarPaymentOptions = (
+  parameters: getStarPaymentOptions$Input
+) => StarPaymentOptions;
+
+/**
+ * Returns the list of Telegram star transactions for the current user
+ */
+export type getStarTransactions$Input = {
+  readonly _: "getStarTransactions";
+
+  /**
+   * Offset of the first transaction to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * Direction of the transactions to receive; pass null to get all transactions
+   * @type {StarTransactionDirection$Input} {@link StarTransactionDirection}
+   */
+  readonly direction?: StarTransactionDirection$Input | null;
+};
+
+/**
+ * Returns the list of Telegram star transactions for the current user
+ */
+export type getStarTransactions$DirectInput = {
+  /**
+   * Offset of the first transaction to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * Direction of the transactions to receive; pass null to get all transactions
+   * @type {StarTransactionDirection$Input} {@link StarTransactionDirection}
+   */
+  readonly direction?: StarTransactionDirection$Input | null;
+};
+
+/**
+ * Returns the list of Telegram star transactions for the current user
+ *
+ * @param {getStarTransactions$Input} parameters {@link getStarTransactions$Input}
+ * @return {StarTransactions} {@link StarTransactions}
+ */
+export type getStarTransactions = (
+  parameters: getStarTransactions$Input
+) => StarTransactions;
+
+/**
+ * Checks whether an in-store purchase is possible. Must be called before any in-store purchase
+ */
+export type canPurchaseFromStore$Input = {
+  readonly _: "canPurchaseFromStore";
+
+  /**
+   * Transaction purpose
+   * @type {StorePaymentPurpose$Input} {@link StorePaymentPurpose}
+   */
+  readonly purpose?: StorePaymentPurpose$Input;
+};
+
+/**
+ * Checks whether an in-store purchase is possible. Must be called before any in-store purchase
+ */
+export type canPurchaseFromStore$DirectInput = {
+  /**
+   * Transaction purpose
+   * @type {StorePaymentPurpose$Input} {@link StorePaymentPurpose}
+   */
+  readonly purpose?: StorePaymentPurpose$Input;
+};
+
+/**
+ * Checks whether an in-store purchase is possible. Must be called before any in-store purchase
+ *
+ * @param {canPurchaseFromStore$Input} parameters {@link canPurchaseFromStore$Input}
  * @return {Ok} {@link Ok}
  */
-export type canPurchasePremium = (parameters: canPurchasePremium$Input) => Ok;
+export type canPurchaseFromStore = (parameters: canPurchaseFromStore$Input) => Ok;
 
 /**
  * Informs server about a purchase through App Store. For official applications only
@@ -111537,6 +121311,40 @@ export type assignGooglePlayTransaction$DirectInput = {
 export type assignGooglePlayTransaction = (
   parameters: assignGooglePlayTransaction$Input
 ) => Ok;
+
+/**
+ * Returns information about features, available to Business users
+ */
+export type getBusinessFeatures$Input = {
+  readonly _: "getBusinessFeatures";
+
+  /**
+   * Source of the request; pass null if the method is called from settings or some non-standard source
+   * @type {BusinessFeature$Input} {@link BusinessFeature}
+   */
+  readonly source?: BusinessFeature$Input | null;
+};
+
+/**
+ * Returns information about features, available to Business users
+ */
+export type getBusinessFeatures$DirectInput = {
+  /**
+   * Source of the request; pass null if the method is called from settings or some non-standard source
+   * @type {BusinessFeature$Input} {@link BusinessFeature}
+   */
+  readonly source?: BusinessFeature$Input | null;
+};
+
+/**
+ * Returns information about features, available to Business users
+ *
+ * @param {getBusinessFeatures$Input} parameters {@link getBusinessFeatures$Input}
+ * @return {BusinessFeatures} {@link BusinessFeatures}
+ */
+export type getBusinessFeatures = (
+  parameters: getBusinessFeatures$Input
+) => BusinessFeatures;
 
 /**
  * Accepts Telegram terms of services
@@ -111881,6 +121689,40 @@ export type getPhoneNumberInfoSync$DirectInput = {
 export type getPhoneNumberInfoSync = (
   parameters: getPhoneNumberInfoSync$Input
 ) => PhoneNumberInfo;
+
+/**
+ * Returns information about a given collectible item that was purchased at https://fragment.com
+ */
+export type getCollectibleItemInfo$Input = {
+  readonly _: "getCollectibleItemInfo";
+
+  /**
+   * Type of the collectible item. The item must be used by a user and must be visible to the current user
+   * @type {CollectibleItemType$Input} {@link CollectibleItemType}
+   */
+  readonly type?: CollectibleItemType$Input;
+};
+
+/**
+ * Returns information about a given collectible item that was purchased at https://fragment.com
+ */
+export type getCollectibleItemInfo$DirectInput = {
+  /**
+   * Type of the collectible item. The item must be used by a user and must be visible to the current user
+   * @type {CollectibleItemType$Input} {@link CollectibleItemType}
+   */
+  readonly type?: CollectibleItemType$Input;
+};
+
+/**
+ * Returns information about a given collectible item that was purchased at https://fragment.com
+ *
+ * @param {getCollectibleItemInfo$Input} parameters {@link getCollectibleItemInfo$Input}
+ * @return {CollectibleItemInfo} {@link CollectibleItemInfo}
+ */
+export type getCollectibleItemInfo = (
+  parameters: getCollectibleItemInfo$Input
+) => CollectibleItemInfo;
 
 /**
  * Returns information about a tg:// deep link. Use "tg://need_update_for_some_feature" or "tg:some_unsupported_feature" for testing. Returns a 404 error for unknown links. Can be called before authorization
@@ -112249,19 +122091,19 @@ export type removeProxy$DirectInput = {
 export type removeProxy = (parameters: removeProxy$Input) => Ok;
 
 /**
- * Returns list of proxies that are currently set up. Can be called before authorization
+ * Returns the list of proxies that are currently set up. Can be called before authorization
  */
 export type getProxies$Input = {
   readonly _: "getProxies";
 };
 
 /**
- * Returns list of proxies that are currently set up. Can be called before authorization
+ * Returns the list of proxies that are currently set up. Can be called before authorization
  */
 export type getProxies$DirectInput = {};
 
 /**
- * Returns list of proxies that are currently set up. Can be called before authorization
+ * Returns the list of proxies that are currently set up. Can be called before authorization
  *
  * @param {getProxies$Input} parameters {@link getProxies$Input}
  * @return {Proxies} {@link Proxies}
@@ -112443,19 +122285,19 @@ export type getLogVerbosityLevel = (
 ) => LogVerbosityLevel;
 
 /**
- * Returns list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
+ * Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
  */
 export type getLogTags$Input = {
   readonly _: "getLogTags";
 };
 
 /**
- * Returns list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
+ * Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
  */
 export type getLogTags$DirectInput = {};
 
 /**
- * Returns list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
+ * Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
  *
  * @param {getLogTags$Input} parameters {@link getLogTags$Input}
  * @return {LogTags} {@link LogTags}
