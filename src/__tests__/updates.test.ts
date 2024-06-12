@@ -21,7 +21,7 @@ describe("Updates", () => {
 
   afterAll(async () => {
     await client.api.close({});
-    client.destroy();
+    // client.destroy();
   });
 
   test("Updates", async () => {

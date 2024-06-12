@@ -19,7 +19,7 @@ describe("Client Serialization (async)", () => {
 
   afterAll(async () => {
     await client.api.close({});
-    client.destroy();
+    // client.destroy();
   });
 
   const string = 'Test {"_": "Passed"}';
