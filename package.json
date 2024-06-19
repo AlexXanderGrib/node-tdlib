@@ -1,6 +1,6 @@
 {
   "name": "tdlib-native",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "🚀 Telegram TDLib native nodejs wrapper",
   "packageManager": "npm@9.8.0",
   "scripts": {

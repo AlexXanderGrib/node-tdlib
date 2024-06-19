@@ -310,9 +310,6 @@
 - [ChatRevenueTransactionType$Type](types.md#chatrevenuetransactiontype$type)
 - [ChatRevenueTransactions](types.md#chatrevenuetransactions)
 - [ChatRevenueTransactions$Input](types.md#chatrevenuetransactions$input)
-- [ChatRevenueWithdrawalState](types.md#chatrevenuewithdrawalstate)
-- [ChatRevenueWithdrawalState$Input](types.md#chatrevenuewithdrawalstate$input)
-- [ChatRevenueWithdrawalState$Type](types.md#chatrevenuewithdrawalstate$type)
 - [ChatSource](types.md#chatsource)
 - [ChatSource$Input](types.md#chatsource$input)
 - [ChatSource$Type](types.md#chatsource$type)
@@ -477,6 +474,8 @@
 - [FoundPosition$Input](types.md#foundposition$input)
 - [FoundPositions](types.md#foundpositions)
 - [FoundPositions$Input](types.md#foundpositions$input)
+- [FoundStories](types.md#foundstories)
+- [FoundStories$Input](types.md#foundstories$input)
 - [FoundWebApp](types.md#foundwebapp)
 - [FoundWebApp$Input](types.md#foundwebapp$input)
 - [Game](types.md#game)
@@ -626,6 +625,8 @@
 - [LocalizationTargetInfo$Input](types.md#localizationtargetinfo$input)
 - [Location](types.md#location)
 - [Location$Input](types.md#location$input)
+- [LocationAddress](types.md#locationaddress)
+- [LocationAddress$Input](types.md#locationaddress$input)
 - [LogStream](types.md#logstream)
 - [LogStream$Input](types.md#logstream$input)
 - [LogStream$Type](types.md#logstream$type)
@@ -954,6 +955,9 @@
 - [ResetPasswordResult](types.md#resetpasswordresult)
 - [ResetPasswordResult$Input](types.md#resetpasswordresult$input)
 - [ResetPasswordResult$Type](types.md#resetpasswordresult$type)
+- [RevenueWithdrawalState](types.md#revenuewithdrawalstate)
+- [RevenueWithdrawalState$Input](types.md#revenuewithdrawalstate$input)
+- [RevenueWithdrawalState$Type](types.md#revenuewithdrawalstate$type)
 - [RichText](types.md#richtext)
 - [RichText$Input](types.md#richtext$input)
 - [RichText$Type](types.md#richtext$type)
@@ -1010,14 +1014,18 @@
 - [StarPaymentOption$Input](types.md#starpaymentoption$input)
 - [StarPaymentOptions](types.md#starpaymentoptions)
 - [StarPaymentOptions$Input](types.md#starpaymentoptions$input)
+- [StarRevenueStatistics](types.md#starrevenuestatistics)
+- [StarRevenueStatistics$Input](types.md#starrevenuestatistics$input)
+- [StarRevenueStatus](types.md#starrevenuestatus)
+- [StarRevenueStatus$Input](types.md#starrevenuestatus$input)
 - [StarTransaction](types.md#startransaction)
 - [StarTransaction$Input](types.md#startransaction$input)
 - [StarTransactionDirection](types.md#startransactiondirection)
 - [StarTransactionDirection$Input](types.md#startransactiondirection$input)
 - [StarTransactionDirection$Type](types.md#startransactiondirection$type)
-- [StarTransactionSource](types.md#startransactionsource)
-- [StarTransactionSource$Input](types.md#startransactionsource$input)
-- [StarTransactionSource$Type](types.md#startransactionsource$type)
+- [StarTransactionPartner](types.md#startransactionpartner)
+- [StarTransactionPartner$Input](types.md#startransactionpartner$input)
+- [StarTransactionPartner$Type](types.md#startransactionpartner$type)
 - [StarTransactions](types.md#startransactions)
 - [StarTransactions$Input](types.md#startransactions$input)
 - [StatisticalGraph](types.md#statisticalgraph)
@@ -1978,12 +1986,6 @@
 - [chatRevenueTransactionTypeWithdrawal$Input](types.md#chatrevenuetransactiontypewithdrawal$input)
 - [chatRevenueTransactions](types.md#chatrevenuetransactions-1)
 - [chatRevenueTransactions$Input](types.md#chatrevenuetransactions$input-1)
-- [chatRevenueWithdrawalStateCompleted](types.md#chatrevenuewithdrawalstatecompleted)
-- [chatRevenueWithdrawalStateCompleted$Input](types.md#chatrevenuewithdrawalstatecompleted$input)
-- [chatRevenueWithdrawalStateFailed](types.md#chatrevenuewithdrawalstatefailed)
-- [chatRevenueWithdrawalStateFailed$Input](types.md#chatrevenuewithdrawalstatefailed$input)
-- [chatRevenueWithdrawalStatePending](types.md#chatrevenuewithdrawalstatepending)
-- [chatRevenueWithdrawalStatePending$Input](types.md#chatrevenuewithdrawalstatepending$input)
 - [chatSourceMtprotoProxy](types.md#chatsourcemtprotoproxy)
 - [chatSourceMtprotoProxy$Input](types.md#chatsourcemtprotoproxy$input)
 - [chatSourcePublicServiceAnnouncement](types.md#chatsourcepublicserviceannouncement)
@@ -2111,9 +2113,9 @@
 - [clearRecentlyFoundChats](types.md#clearrecentlyfoundchats)
 - [clearRecentlyFoundChats$DirectInput](types.md#clearrecentlyfoundchats$directinput)
 - [clearRecentlyFoundChats$Input](types.md#clearrecentlyfoundchats$input)
-- [clearSearchedForHashtags](types.md#clearsearchedforhashtags)
-- [clearSearchedForHashtags$DirectInput](types.md#clearsearchedforhashtags$directinput)
-- [clearSearchedForHashtags$Input](types.md#clearsearchedforhashtags$input)
+- [clearSearchedForTags](types.md#clearsearchedfortags)
+- [clearSearchedForTags$DirectInput](types.md#clearsearchedfortags$directinput)
+- [clearSearchedForTags$Input](types.md#clearsearchedfortags$input)
 - [clickAnimatedEmojiMessage](types.md#clickanimatedemojimessage)
 - [clickAnimatedEmojiMessage$DirectInput](types.md#clickanimatedemojimessage$directinput)
 - [clickAnimatedEmojiMessage$Input](types.md#clickanimatedemojimessage$input)
@@ -2390,6 +2392,21 @@
 - [editBusinessChatLink](types.md#editbusinesschatlink)
 - [editBusinessChatLink$DirectInput](types.md#editbusinesschatlink$directinput)
 - [editBusinessChatLink$Input](types.md#editbusinesschatlink$input)
+- [editBusinessMessageCaption](types.md#editbusinessmessagecaption)
+- [editBusinessMessageCaption$DirectInput](types.md#editbusinessmessagecaption$directinput)
+- [editBusinessMessageCaption$Input](types.md#editbusinessmessagecaption$input)
+- [editBusinessMessageLiveLocation](types.md#editbusinessmessagelivelocation)
+- [editBusinessMessageLiveLocation$DirectInput](types.md#editbusinessmessagelivelocation$directinput)
+- [editBusinessMessageLiveLocation$Input](types.md#editbusinessmessagelivelocation$input)
+- [editBusinessMessageMedia](types.md#editbusinessmessagemedia)
+- [editBusinessMessageMedia$DirectInput](types.md#editbusinessmessagemedia$directinput)
+- [editBusinessMessageMedia$Input](types.md#editbusinessmessagemedia$input)
+- [editBusinessMessageReplyMarkup](types.md#editbusinessmessagereplymarkup)
+- [editBusinessMessageReplyMarkup$DirectInput](types.md#editbusinessmessagereplymarkup$directinput)
+- [editBusinessMessageReplyMarkup$Input](types.md#editbusinessmessagereplymarkup$input)
+- [editBusinessMessageText](types.md#editbusinessmessagetext)
+- [editBusinessMessageText$DirectInput](types.md#editbusinessmessagetext$directinput)
+- [editBusinessMessageText$Input](types.md#editbusinessmessagetext$input)
 - [editChatFolder](types.md#editchatfolder)
 - [editChatFolder$DirectInput](types.md#editchatfolder$directinput)
 - [editChatFolder$Input](types.md#editchatfolder$input)
@@ -2591,6 +2608,8 @@
 - [foundPosition$Input](types.md#foundposition$input-1)
 - [foundPositions](types.md#foundpositions-1)
 - [foundPositions$Input](types.md#foundpositions$input-1)
+- [foundStories](types.md#foundstories-1)
+- [foundStories$Input](types.md#foundstories$input-1)
 - [foundWebApp](types.md#foundwebapp-1)
 - [foundWebApp$Input](types.md#foundwebapp$input-1)
 - [game](types.md#game-1)
@@ -3211,18 +3230,24 @@
 - [getScopeNotificationSettings](types.md#getscopenotificationsettings)
 - [getScopeNotificationSettings$DirectInput](types.md#getscopenotificationsettings$directinput)
 - [getScopeNotificationSettings$Input](types.md#getscopenotificationsettings$input)
-- [getSearchedForHashtags](types.md#getsearchedforhashtags)
-- [getSearchedForHashtags$DirectInput](types.md#getsearchedforhashtags$directinput)
-- [getSearchedForHashtags$Input](types.md#getsearchedforhashtags$input)
+- [getSearchedForTags](types.md#getsearchedfortags)
+- [getSearchedForTags$DirectInput](types.md#getsearchedfortags$directinput)
+- [getSearchedForTags$Input](types.md#getsearchedfortags$input)
 - [getSecretChat](types.md#getsecretchat)
 - [getSecretChat$DirectInput](types.md#getsecretchat$directinput)
 - [getSecretChat$Input](types.md#getsecretchat$input)
 - [getStarPaymentOptions](types.md#getstarpaymentoptions)
 - [getStarPaymentOptions$DirectInput](types.md#getstarpaymentoptions$directinput)
 - [getStarPaymentOptions$Input](types.md#getstarpaymentoptions$input)
+- [getStarRevenueStatistics](types.md#getstarrevenuestatistics)
+- [getStarRevenueStatistics$DirectInput](types.md#getstarrevenuestatistics$directinput)
+- [getStarRevenueStatistics$Input](types.md#getstarrevenuestatistics$input)
 - [getStarTransactions](types.md#getstartransactions)
 - [getStarTransactions$DirectInput](types.md#getstartransactions$directinput)
 - [getStarTransactions$Input](types.md#getstartransactions$input)
+- [getStarWithdrawalUrl](types.md#getstarwithdrawalurl)
+- [getStarWithdrawalUrl$DirectInput](types.md#getstarwithdrawalurl$directinput)
+- [getStarWithdrawalUrl$Input](types.md#getstarwithdrawalurl$input)
 - [getStatisticalGraph](types.md#getstatisticalgraph)
 - [getStatisticalGraph$DirectInput](types.md#getstatisticalgraph$directinput)
 - [getStatisticalGraph$Input](types.md#getstatisticalgraph$input)
@@ -3531,6 +3556,8 @@
 - [inputMessagePhoto$Input](types.md#inputmessagephoto$input)
 - [inputMessagePoll](types.md#inputmessagepoll)
 - [inputMessagePoll$Input](types.md#inputmessagepoll$input)
+- [inputMessageReplyToExternalMessage](types.md#inputmessagereplytoexternalmessage)
+- [inputMessageReplyToExternalMessage$Input](types.md#inputmessagereplytoexternalmessage$input)
 - [inputMessageReplyToMessage](types.md#inputmessagereplytomessage)
 - [inputMessageReplyToMessage$Input](types.md#inputmessagereplytomessage$input)
 - [inputMessageReplyToStory](types.md#inputmessagereplytostory)
@@ -3603,6 +3630,8 @@
 - [inputStoryArea$Input](types.md#inputstoryarea$input-1)
 - [inputStoryAreaTypeFoundVenue](types.md#inputstoryareatypefoundvenue)
 - [inputStoryAreaTypeFoundVenue$Input](types.md#inputstoryareatypefoundvenue$input)
+- [inputStoryAreaTypeLink](types.md#inputstoryareatypelink)
+- [inputStoryAreaTypeLink$Input](types.md#inputstoryareatypelink$input)
 - [inputStoryAreaTypeLocation](types.md#inputstoryareatypelocation)
 - [inputStoryAreaTypeLocation$Input](types.md#inputstoryareatypelocation$input)
 - [inputStoryAreaTypeMessage](types.md#inputstoryareatypemessage)
@@ -3812,6 +3841,8 @@
 - [localizationTargetInfo$Input](types.md#localizationtargetinfo$input-1)
 - [location](types.md#location-1)
 - [location$Input](types.md#location$input-1)
+- [locationAddress](types.md#locationaddress-1)
+- [locationAddress$Input](types.md#locationaddress$input-1)
 - [logOut](types.md#logout)
 - [logOut$DirectInput](types.md#logout$directinput)
 - [logOut$Input](types.md#logout$input)
@@ -4786,9 +4817,9 @@
 - [removeSavedNotificationSound](types.md#removesavednotificationsound)
 - [removeSavedNotificationSound$DirectInput](types.md#removesavednotificationsound$directinput)
 - [removeSavedNotificationSound$Input](types.md#removesavednotificationsound$input)
-- [removeSearchedForHashtag](types.md#removesearchedforhashtag)
-- [removeSearchedForHashtag$DirectInput](types.md#removesearchedforhashtag$directinput)
-- [removeSearchedForHashtag$Input](types.md#removesearchedforhashtag$input)
+- [removeSearchedForTag](types.md#removesearchedfortag)
+- [removeSearchedForTag$DirectInput](types.md#removesearchedfortag$directinput)
+- [removeSearchedForTag$Input](types.md#removesearchedfortag$input)
 - [removeStickerFromSet](types.md#removestickerfromset)
 - [removeStickerFromSet$DirectInput](types.md#removestickerfromset$directinput)
 - [removeStickerFromSet$Input](types.md#removestickerfromset$input)
@@ -4941,6 +4972,12 @@
 - [resetPasswordResultOk$Input](types.md#resetpasswordresultok$input)
 - [resetPasswordResultPending](types.md#resetpasswordresultpending)
 - [resetPasswordResultPending$Input](types.md#resetpasswordresultpending$input)
+- [revenueWithdrawalStateFailed](types.md#revenuewithdrawalstatefailed)
+- [revenueWithdrawalStateFailed$Input](types.md#revenuewithdrawalstatefailed$input)
+- [revenueWithdrawalStatePending](types.md#revenuewithdrawalstatepending)
+- [revenueWithdrawalStatePending$Input](types.md#revenuewithdrawalstatepending$input)
+- [revenueWithdrawalStateSucceeded](types.md#revenuewithdrawalstatesucceeded)
+- [revenueWithdrawalStateSucceeded$Input](types.md#revenuewithdrawalstatesucceeded$input)
 - [revokeChatInviteLink](types.md#revokechatinvitelink)
 - [revokeChatInviteLink$DirectInput](types.md#revokechatinvitelink$directinput)
 - [revokeChatInviteLink$Input](types.md#revokechatinvitelink$input)
@@ -5089,9 +5126,18 @@
 - [searchPublicChats](types.md#searchpublicchats)
 - [searchPublicChats$DirectInput](types.md#searchpublicchats$directinput)
 - [searchPublicChats$Input](types.md#searchpublicchats$input)
-- [searchPublicHashtagMessages](types.md#searchpublichashtagmessages)
-- [searchPublicHashtagMessages$DirectInput](types.md#searchpublichashtagmessages$directinput)
-- [searchPublicHashtagMessages$Input](types.md#searchpublichashtagmessages$input)
+- [searchPublicMessagesByTag](types.md#searchpublicmessagesbytag)
+- [searchPublicMessagesByTag$DirectInput](types.md#searchpublicmessagesbytag$directinput)
+- [searchPublicMessagesByTag$Input](types.md#searchpublicmessagesbytag$input)
+- [searchPublicStoriesByLocation](types.md#searchpublicstoriesbylocation)
+- [searchPublicStoriesByLocation$DirectInput](types.md#searchpublicstoriesbylocation$directinput)
+- [searchPublicStoriesByLocation$Input](types.md#searchpublicstoriesbylocation$input)
+- [searchPublicStoriesByTag](types.md#searchpublicstoriesbytag)
+- [searchPublicStoriesByTag$DirectInput](types.md#searchpublicstoriesbytag$directinput)
+- [searchPublicStoriesByTag$Input](types.md#searchpublicstoriesbytag$input)
+- [searchPublicStoriesByVenue](types.md#searchpublicstoriesbyvenue)
+- [searchPublicStoriesByVenue$DirectInput](types.md#searchpublicstoriesbyvenue$directinput)
+- [searchPublicStoriesByVenue$Input](types.md#searchpublicstoriesbyvenue$input)
 - [searchQuote](types.md#searchquote)
 - [searchQuote$DirectInput](types.md#searchquote$directinput)
 - [searchQuote$Input](types.md#searchquote$input)
@@ -5600,24 +5646,30 @@
 - [starPaymentOption$Input](types.md#starpaymentoption$input-1)
 - [starPaymentOptions](types.md#starpaymentoptions-1)
 - [starPaymentOptions$Input](types.md#starpaymentoptions$input-1)
+- [starRevenueStatistics](types.md#starrevenuestatistics-1)
+- [starRevenueStatistics$Input](types.md#starrevenuestatistics$input-1)
+- [starRevenueStatus](types.md#starrevenuestatus-1)
+- [starRevenueStatus$Input](types.md#starrevenuestatus$input-1)
 - [starTransaction](types.md#startransaction-1)
 - [starTransaction$Input](types.md#startransaction$input-1)
 - [starTransactionDirectionIncoming](types.md#startransactiondirectionincoming)
 - [starTransactionDirectionIncoming$Input](types.md#startransactiondirectionincoming$input)
 - [starTransactionDirectionOutgoing](types.md#startransactiondirectionoutgoing)
 - [starTransactionDirectionOutgoing$Input](types.md#startransactiondirectionoutgoing$input)
-- [starTransactionSourceAppStore](types.md#startransactionsourceappstore)
-- [starTransactionSourceAppStore$Input](types.md#startransactionsourceappstore$input)
-- [starTransactionSourceFragment](types.md#startransactionsourcefragment)
-- [starTransactionSourceFragment$Input](types.md#startransactionsourcefragment$input)
-- [starTransactionSourceGooglePlay](types.md#startransactionsourcegoogleplay)
-- [starTransactionSourceGooglePlay$Input](types.md#startransactionsourcegoogleplay$input)
-- [starTransactionSourceTelegram](types.md#startransactionsourcetelegram)
-- [starTransactionSourceTelegram$Input](types.md#startransactionsourcetelegram$input)
-- [starTransactionSourceUnsupported](types.md#startransactionsourceunsupported)
-- [starTransactionSourceUnsupported$Input](types.md#startransactionsourceunsupported$input)
-- [starTransactionSourceUser](types.md#startransactionsourceuser)
-- [starTransactionSourceUser$Input](types.md#startransactionsourceuser$input)
+- [starTransactionPartnerAppStore](types.md#startransactionpartnerappstore)
+- [starTransactionPartnerAppStore$Input](types.md#startransactionpartnerappstore$input)
+- [starTransactionPartnerChannel](types.md#startransactionpartnerchannel)
+- [starTransactionPartnerChannel$Input](types.md#startransactionpartnerchannel$input)
+- [starTransactionPartnerFragment](types.md#startransactionpartnerfragment)
+- [starTransactionPartnerFragment$Input](types.md#startransactionpartnerfragment$input)
+- [starTransactionPartnerGooglePlay](types.md#startransactionpartnergoogleplay)
+- [starTransactionPartnerGooglePlay$Input](types.md#startransactionpartnergoogleplay$input)
+- [starTransactionPartnerTelegram](types.md#startransactionpartnertelegram)
+- [starTransactionPartnerTelegram$Input](types.md#startransactionpartnertelegram$input)
+- [starTransactionPartnerUnsupported](types.md#startransactionpartnerunsupported)
+- [starTransactionPartnerUnsupported$Input](types.md#startransactionpartnerunsupported$input)
+- [starTransactionPartnerUser](types.md#startransactionpartneruser)
+- [starTransactionPartnerUser$Input](types.md#startransactionpartneruser$input)
 - [starTransactions](types.md#startransactions-1)
 - [starTransactions$Input](types.md#startransactions$input-1)
 - [startGroupCallRecording](types.md#startgroupcallrecording)
@@ -5665,6 +5717,9 @@
 - [stickerTypeRegular$Input](types.md#stickertyperegular$input)
 - [stickers](types.md#stickers-1)
 - [stickers$Input](types.md#stickers$input-1)
+- [stopBusinessPoll](types.md#stopbusinesspoll)
+- [stopBusinessPoll$DirectInput](types.md#stopbusinesspoll$directinput)
+- [stopBusinessPoll$Input](types.md#stopbusinesspoll$input)
 - [stopPoll](types.md#stoppoll)
 - [stopPoll$DirectInput](types.md#stoppoll$directinput)
 - [stopPoll$Input](types.md#stoppoll$input)
@@ -5694,6 +5749,8 @@
 - [storyArea$Input](types.md#storyarea$input-1)
 - [storyAreaPosition](types.md#storyareaposition-1)
 - [storyAreaPosition$Input](types.md#storyareaposition$input-1)
+- [storyAreaTypeLink](types.md#storyareatypelink)
+- [storyAreaTypeLink$Input](types.md#storyareatypelink$input)
 - [storyAreaTypeLocation](types.md#storyareatypelocation)
 - [storyAreaTypeLocation$Input](types.md#storyareatypelocation$input)
 - [storyAreaTypeMessage](types.md#storyareatypemessage)
@@ -6295,6 +6352,8 @@
 - [updateMessageSendSucceeded$Input](types.md#updatemessagesendsucceeded$input)
 - [updateMessageUnreadReactions](types.md#updatemessageunreadreactions)
 - [updateMessageUnreadReactions$Input](types.md#updatemessageunreadreactions$input)
+- [updateNewBusinessCallbackQuery](types.md#updatenewbusinesscallbackquery)
+- [updateNewBusinessCallbackQuery$Input](types.md#updatenewbusinesscallbackquery$input)
 - [updateNewBusinessMessage](types.md#updatenewbusinessmessage)
 - [updateNewBusinessMessage$Input](types.md#updatenewbusinessmessage$input)
 - [updateNewCallSignalingData](types.md#updatenewcallsignalingdata)
@@ -6367,6 +6426,8 @@
 - [updateSpeechRecognitionTrial$Input](types.md#updatespeechrecognitiontrial$input)
 - [updateSpeedLimitNotification](types.md#updatespeedlimitnotification)
 - [updateSpeedLimitNotification$Input](types.md#updatespeedlimitnotification$input)
+- [updateStarRevenueStatus](types.md#updatestarrevenuestatus)
+- [updateStarRevenueStatus$Input](types.md#updatestarrevenuestatus$input)
 - [updateStickerSet](types.md#updatestickerset)
 - [updateStickerSet$Input](types.md#updatestickerset$input)
 - [updateStory](types.md#updatestory)
@@ -8359,24 +8420,6 @@ Re-exports [ChatRevenueTransactions$Input](index.types.default.md#chatrevenuetra
 
 ___
 
-### ChatRevenueWithdrawalState
-
-Re-exports [ChatRevenueWithdrawalState](index.types.default.md#chatrevenuewithdrawalstate)
-
-___
-
-### ChatRevenueWithdrawalState$Input
-
-Re-exports [ChatRevenueWithdrawalState$Input](index.types.default.md#chatrevenuewithdrawalstate$input)
-
-___
-
-### ChatRevenueWithdrawalState$Type
-
-Re-exports [ChatRevenueWithdrawalState$Type](index.types.default.md#chatrevenuewithdrawalstate$type-1)
-
-___
-
 ### ChatSource
 
 Re-exports [ChatSource](index.types.default.md#chatsource)
@@ -9361,6 +9404,18 @@ Re-exports [FoundPositions$Input](index.types.default.md#foundpositions$input)
 
 ___
 
+### FoundStories
+
+Re-exports [FoundStories](index.types.default.md#foundstories)
+
+___
+
+### FoundStories$Input
+
+Re-exports [FoundStories$Input](index.types.default.md#foundstories$input)
+
+___
+
 ### FoundWebApp
 
 Re-exports [FoundWebApp](index.types.default.md#foundwebapp)
@@ -10252,6 +10307,18 @@ ___
 ### Location$Input
 
 Re-exports [Location$Input](index.types.default.md#location$input)
+
+___
+
+### LocationAddress
+
+Re-exports [LocationAddress](index.types.default.md#locationaddress)
+
+___
+
+### LocationAddress$Input
+
+Re-exports [LocationAddress$Input](index.types.default.md#locationaddress$input)
 
 ___
 
@@ -12223,6 +12290,24 @@ Re-exports [ResetPasswordResult$Type](index.types.default.md#resetpasswordresult
 
 ___
 
+### RevenueWithdrawalState
+
+Re-exports [RevenueWithdrawalState](index.types.default.md#revenuewithdrawalstate)
+
+___
+
+### RevenueWithdrawalState$Input
+
+Re-exports [RevenueWithdrawalState$Input](index.types.default.md#revenuewithdrawalstate$input)
+
+___
+
+### RevenueWithdrawalState$Type
+
+Re-exports [RevenueWithdrawalState$Type](index.types.default.md#revenuewithdrawalstate$type-1)
+
+___
+
 ### RichText
 
 Re-exports [RichText](index.types.default.md#richtext)
@@ -12559,6 +12644,30 @@ Re-exports [StarPaymentOptions$Input](index.types.default.md#starpaymentoptions$
 
 ___
 
+### StarRevenueStatistics
+
+Re-exports [StarRevenueStatistics](index.types.default.md#starrevenuestatistics)
+
+___
+
+### StarRevenueStatistics$Input
+
+Re-exports [StarRevenueStatistics$Input](index.types.default.md#starrevenuestatistics$input)
+
+___
+
+### StarRevenueStatus
+
+Re-exports [StarRevenueStatus](index.types.default.md#starrevenuestatus)
+
+___
+
+### StarRevenueStatus$Input
+
+Re-exports [StarRevenueStatus$Input](index.types.default.md#starrevenuestatus$input)
+
+___
+
 ### StarTransaction
 
 Re-exports [StarTransaction](index.types.default.md#startransaction)
@@ -12589,21 +12698,21 @@ Re-exports [StarTransactionDirection$Type](index.types.default.md#startransactio
 
 ___
 
-### StarTransactionSource
+### StarTransactionPartner
 
-Re-exports [StarTransactionSource](index.types.default.md#startransactionsource)
-
-___
-
-### StarTransactionSource$Input
-
-Re-exports [StarTransactionSource$Input](index.types.default.md#startransactionsource$input)
+Re-exports [StarTransactionPartner](index.types.default.md#startransactionpartner)
 
 ___
 
-### StarTransactionSource$Type
+### StarTransactionPartner$Input
 
-Re-exports [StarTransactionSource$Type](index.types.default.md#startransactionsource$type-1)
+Re-exports [StarTransactionPartner$Input](index.types.default.md#startransactionpartner$input)
+
+___
+
+### StarTransactionPartner$Type
+
+Re-exports [StarTransactionPartner$Type](index.types.default.md#startransactionpartner$type-1)
 
 ___
 
@@ -18367,42 +18476,6 @@ Re-exports [chatRevenueTransactions$Input](index.types.default.md#chatrevenuetra
 
 ___
 
-### chatRevenueWithdrawalStateCompleted
-
-Re-exports [chatRevenueWithdrawalStateCompleted](index.types.default.md#chatrevenuewithdrawalstatecompleted)
-
-___
-
-### chatRevenueWithdrawalStateCompleted$Input
-
-Re-exports [chatRevenueWithdrawalStateCompleted$Input](index.types.default.md#chatrevenuewithdrawalstatecompleted$input)
-
-___
-
-### chatRevenueWithdrawalStateFailed
-
-Re-exports [chatRevenueWithdrawalStateFailed](index.types.default.md#chatrevenuewithdrawalstatefailed)
-
-___
-
-### chatRevenueWithdrawalStateFailed$Input
-
-Re-exports [chatRevenueWithdrawalStateFailed$Input](index.types.default.md#chatrevenuewithdrawalstatefailed$input)
-
-___
-
-### chatRevenueWithdrawalStatePending
-
-Re-exports [chatRevenueWithdrawalStatePending](index.types.default.md#chatrevenuewithdrawalstatepending)
-
-___
-
-### chatRevenueWithdrawalStatePending$Input
-
-Re-exports [chatRevenueWithdrawalStatePending$Input](index.types.default.md#chatrevenuewithdrawalstatepending$input)
-
-___
-
 ### chatSourceMtprotoProxy
 
 Re-exports [chatSourceMtprotoProxy](index.types.default.md#chatsourcemtprotoproxy)
@@ -19165,21 +19238,21 @@ Re-exports [clearRecentlyFoundChats$Input](index.types.default.md#clearrecentlyf
 
 ___
 
-### clearSearchedForHashtags
+### clearSearchedForTags
 
-Re-exports [clearSearchedForHashtags](index.types.default.md#clearsearchedforhashtags)
-
-___
-
-### clearSearchedForHashtags$DirectInput
-
-Re-exports [clearSearchedForHashtags$DirectInput](index.types.default.md#clearsearchedforhashtags$directinput)
+Re-exports [clearSearchedForTags](index.types.default.md#clearsearchedfortags)
 
 ___
 
-### clearSearchedForHashtags$Input
+### clearSearchedForTags$DirectInput
 
-Re-exports [clearSearchedForHashtags$Input](index.types.default.md#clearsearchedforhashtags$input)
+Re-exports [clearSearchedForTags$DirectInput](index.types.default.md#clearsearchedfortags$directinput)
+
+___
+
+### clearSearchedForTags$Input
+
+Re-exports [clearSearchedForTags$Input](index.types.default.md#clearsearchedfortags$input)
 
 ___
 
@@ -20839,6 +20912,96 @@ Re-exports [editBusinessChatLink$Input](index.types.default.md#editbusinesschatl
 
 ___
 
+### editBusinessMessageCaption
+
+Re-exports [editBusinessMessageCaption](index.types.default.md#editbusinessmessagecaption)
+
+___
+
+### editBusinessMessageCaption$DirectInput
+
+Re-exports [editBusinessMessageCaption$DirectInput](index.types.default.md#editbusinessmessagecaption$directinput)
+
+___
+
+### editBusinessMessageCaption$Input
+
+Re-exports [editBusinessMessageCaption$Input](index.types.default.md#editbusinessmessagecaption$input)
+
+___
+
+### editBusinessMessageLiveLocation
+
+Re-exports [editBusinessMessageLiveLocation](index.types.default.md#editbusinessmessagelivelocation)
+
+___
+
+### editBusinessMessageLiveLocation$DirectInput
+
+Re-exports [editBusinessMessageLiveLocation$DirectInput](index.types.default.md#editbusinessmessagelivelocation$directinput)
+
+___
+
+### editBusinessMessageLiveLocation$Input
+
+Re-exports [editBusinessMessageLiveLocation$Input](index.types.default.md#editbusinessmessagelivelocation$input)
+
+___
+
+### editBusinessMessageMedia
+
+Re-exports [editBusinessMessageMedia](index.types.default.md#editbusinessmessagemedia)
+
+___
+
+### editBusinessMessageMedia$DirectInput
+
+Re-exports [editBusinessMessageMedia$DirectInput](index.types.default.md#editbusinessmessagemedia$directinput)
+
+___
+
+### editBusinessMessageMedia$Input
+
+Re-exports [editBusinessMessageMedia$Input](index.types.default.md#editbusinessmessagemedia$input)
+
+___
+
+### editBusinessMessageReplyMarkup
+
+Re-exports [editBusinessMessageReplyMarkup](index.types.default.md#editbusinessmessagereplymarkup)
+
+___
+
+### editBusinessMessageReplyMarkup$DirectInput
+
+Re-exports [editBusinessMessageReplyMarkup$DirectInput](index.types.default.md#editbusinessmessagereplymarkup$directinput)
+
+___
+
+### editBusinessMessageReplyMarkup$Input
+
+Re-exports [editBusinessMessageReplyMarkup$Input](index.types.default.md#editbusinessmessagereplymarkup$input)
+
+___
+
+### editBusinessMessageText
+
+Re-exports [editBusinessMessageText](index.types.default.md#editbusinessmessagetext)
+
+___
+
+### editBusinessMessageText$DirectInput
+
+Re-exports [editBusinessMessageText$DirectInput](index.types.default.md#editbusinessmessagetext$directinput)
+
+___
+
+### editBusinessMessageText$Input
+
+Re-exports [editBusinessMessageText$Input](index.types.default.md#editbusinessmessagetext$input)
+
+___
+
 ### editChatFolder
 
 Re-exports [editChatFolder](index.types.default.md#editchatfolder)
@@ -22042,6 +22205,18 @@ ___
 ### foundPositions$Input
 
 Re-exports [foundPositions$Input](index.types.default.md#foundpositions$input-1)
+
+___
+
+### foundStories
+
+Re-exports [foundStories](index.types.default.md#foundstories-1)
+
+___
+
+### foundStories$Input
+
+Re-exports [foundStories$Input](index.types.default.md#foundstories$input-1)
 
 ___
 
@@ -25765,21 +25940,21 @@ Re-exports [getScopeNotificationSettings$Input](index.types.default.md#getscopen
 
 ___
 
-### getSearchedForHashtags
+### getSearchedForTags
 
-Re-exports [getSearchedForHashtags](index.types.default.md#getsearchedforhashtags)
-
-___
-
-### getSearchedForHashtags$DirectInput
-
-Re-exports [getSearchedForHashtags$DirectInput](index.types.default.md#getsearchedforhashtags$directinput)
+Re-exports [getSearchedForTags](index.types.default.md#getsearchedfortags)
 
 ___
 
-### getSearchedForHashtags$Input
+### getSearchedForTags$DirectInput
 
-Re-exports [getSearchedForHashtags$Input](index.types.default.md#getsearchedforhashtags$input)
+Re-exports [getSearchedForTags$DirectInput](index.types.default.md#getsearchedfortags$directinput)
+
+___
+
+### getSearchedForTags$Input
+
+Re-exports [getSearchedForTags$Input](index.types.default.md#getsearchedfortags$input)
 
 ___
 
@@ -25819,6 +25994,24 @@ Re-exports [getStarPaymentOptions$Input](index.types.default.md#getstarpaymentop
 
 ___
 
+### getStarRevenueStatistics
+
+Re-exports [getStarRevenueStatistics](index.types.default.md#getstarrevenuestatistics)
+
+___
+
+### getStarRevenueStatistics$DirectInput
+
+Re-exports [getStarRevenueStatistics$DirectInput](index.types.default.md#getstarrevenuestatistics$directinput)
+
+___
+
+### getStarRevenueStatistics$Input
+
+Re-exports [getStarRevenueStatistics$Input](index.types.default.md#getstarrevenuestatistics$input)
+
+___
+
 ### getStarTransactions
 
 Re-exports [getStarTransactions](index.types.default.md#getstartransactions)
@@ -25834,6 +26027,24 @@ ___
 ### getStarTransactions$Input
 
 Re-exports [getStarTransactions$Input](index.types.default.md#getstartransactions$input)
+
+___
+
+### getStarWithdrawalUrl
+
+Re-exports [getStarWithdrawalUrl](index.types.default.md#getstarwithdrawalurl)
+
+___
+
+### getStarWithdrawalUrl$DirectInput
+
+Re-exports [getStarWithdrawalUrl$DirectInput](index.types.default.md#getstarwithdrawalurl$directinput)
+
+___
+
+### getStarWithdrawalUrl$Input
+
+Re-exports [getStarWithdrawalUrl$Input](index.types.default.md#getstarwithdrawalurl$input)
 
 ___
 
@@ -27685,6 +27896,18 @@ Re-exports [inputMessagePoll$Input](index.types.default.md#inputmessagepoll$inpu
 
 ___
 
+### inputMessageReplyToExternalMessage
+
+Re-exports [inputMessageReplyToExternalMessage](index.types.default.md#inputmessagereplytoexternalmessage)
+
+___
+
+### inputMessageReplyToExternalMessage$Input
+
+Re-exports [inputMessageReplyToExternalMessage$Input](index.types.default.md#inputmessagereplytoexternalmessage$input)
+
+___
+
 ### inputMessageReplyToMessage
 
 Re-exports [inputMessageReplyToMessage](index.types.default.md#inputmessagereplytomessage)
@@ -28114,6 +28337,18 @@ ___
 ### inputStoryAreaTypeFoundVenue$Input
 
 Re-exports [inputStoryAreaTypeFoundVenue$Input](index.types.default.md#inputstoryareatypefoundvenue$input)
+
+___
+
+### inputStoryAreaTypeLink
+
+Re-exports [inputStoryAreaTypeLink](index.types.default.md#inputstoryareatypelink)
+
+___
+
+### inputStoryAreaTypeLink$Input
+
+Re-exports [inputStoryAreaTypeLink$Input](index.types.default.md#inputstoryareatypelink$input)
 
 ___
 
@@ -29368,6 +29603,18 @@ ___
 ### location$Input
 
 Re-exports [location$Input](index.types.default.md#location$input-1)
+
+___
+
+### locationAddress
+
+Re-exports [locationAddress](index.types.default.md#locationaddress-1)
+
+___
+
+### locationAddress$Input
+
+Re-exports [locationAddress$Input](index.types.default.md#locationaddress$input-1)
 
 ___
 
@@ -35215,21 +35462,21 @@ Re-exports [removeSavedNotificationSound$Input](index.types.default.md#removesav
 
 ___
 
-### removeSearchedForHashtag
+### removeSearchedForTag
 
-Re-exports [removeSearchedForHashtag](index.types.default.md#removesearchedforhashtag)
-
-___
-
-### removeSearchedForHashtag$DirectInput
-
-Re-exports [removeSearchedForHashtag$DirectInput](index.types.default.md#removesearchedforhashtag$directinput)
+Re-exports [removeSearchedForTag](index.types.default.md#removesearchedfortag)
 
 ___
 
-### removeSearchedForHashtag$Input
+### removeSearchedForTag$DirectInput
 
-Re-exports [removeSearchedForHashtag$Input](index.types.default.md#removesearchedforhashtag$input)
+Re-exports [removeSearchedForTag$DirectInput](index.types.default.md#removesearchedfortag$directinput)
+
+___
+
+### removeSearchedForTag$Input
+
+Re-exports [removeSearchedForTag$Input](index.types.default.md#removesearchedfortag$input)
 
 ___
 
@@ -36145,6 +36392,42 @@ Re-exports [resetPasswordResultPending$Input](index.types.default.md#resetpasswo
 
 ___
 
+### revenueWithdrawalStateFailed
+
+Re-exports [revenueWithdrawalStateFailed](index.types.default.md#revenuewithdrawalstatefailed)
+
+___
+
+### revenueWithdrawalStateFailed$Input
+
+Re-exports [revenueWithdrawalStateFailed$Input](index.types.default.md#revenuewithdrawalstatefailed$input)
+
+___
+
+### revenueWithdrawalStatePending
+
+Re-exports [revenueWithdrawalStatePending](index.types.default.md#revenuewithdrawalstatepending)
+
+___
+
+### revenueWithdrawalStatePending$Input
+
+Re-exports [revenueWithdrawalStatePending$Input](index.types.default.md#revenuewithdrawalstatepending$input)
+
+___
+
+### revenueWithdrawalStateSucceeded
+
+Re-exports [revenueWithdrawalStateSucceeded](index.types.default.md#revenuewithdrawalstatesucceeded)
+
+___
+
+### revenueWithdrawalStateSucceeded$Input
+
+Re-exports [revenueWithdrawalStateSucceeded$Input](index.types.default.md#revenuewithdrawalstatesucceeded$input)
+
+___
+
 ### revokeChatInviteLink
 
 Re-exports [revokeChatInviteLink](index.types.default.md#revokechatinvitelink)
@@ -37033,21 +37316,75 @@ Re-exports [searchPublicChats$Input](index.types.default.md#searchpublicchats$in
 
 ___
 
-### searchPublicHashtagMessages
+### searchPublicMessagesByTag
 
-Re-exports [searchPublicHashtagMessages](index.types.default.md#searchpublichashtagmessages)
-
-___
-
-### searchPublicHashtagMessages$DirectInput
-
-Re-exports [searchPublicHashtagMessages$DirectInput](index.types.default.md#searchpublichashtagmessages$directinput)
+Re-exports [searchPublicMessagesByTag](index.types.default.md#searchpublicmessagesbytag)
 
 ___
 
-### searchPublicHashtagMessages$Input
+### searchPublicMessagesByTag$DirectInput
 
-Re-exports [searchPublicHashtagMessages$Input](index.types.default.md#searchpublichashtagmessages$input)
+Re-exports [searchPublicMessagesByTag$DirectInput](index.types.default.md#searchpublicmessagesbytag$directinput)
+
+___
+
+### searchPublicMessagesByTag$Input
+
+Re-exports [searchPublicMessagesByTag$Input](index.types.default.md#searchpublicmessagesbytag$input)
+
+___
+
+### searchPublicStoriesByLocation
+
+Re-exports [searchPublicStoriesByLocation](index.types.default.md#searchpublicstoriesbylocation)
+
+___
+
+### searchPublicStoriesByLocation$DirectInput
+
+Re-exports [searchPublicStoriesByLocation$DirectInput](index.types.default.md#searchpublicstoriesbylocation$directinput)
+
+___
+
+### searchPublicStoriesByLocation$Input
+
+Re-exports [searchPublicStoriesByLocation$Input](index.types.default.md#searchpublicstoriesbylocation$input)
+
+___
+
+### searchPublicStoriesByTag
+
+Re-exports [searchPublicStoriesByTag](index.types.default.md#searchpublicstoriesbytag)
+
+___
+
+### searchPublicStoriesByTag$DirectInput
+
+Re-exports [searchPublicStoriesByTag$DirectInput](index.types.default.md#searchpublicstoriesbytag$directinput)
+
+___
+
+### searchPublicStoriesByTag$Input
+
+Re-exports [searchPublicStoriesByTag$Input](index.types.default.md#searchpublicstoriesbytag$input)
+
+___
+
+### searchPublicStoriesByVenue
+
+Re-exports [searchPublicStoriesByVenue](index.types.default.md#searchpublicstoriesbyvenue)
+
+___
+
+### searchPublicStoriesByVenue$DirectInput
+
+Re-exports [searchPublicStoriesByVenue$DirectInput](index.types.default.md#searchpublicstoriesbyvenue$directinput)
+
+___
+
+### searchPublicStoriesByVenue$Input
+
+Re-exports [searchPublicStoriesByVenue$Input](index.types.default.md#searchpublicstoriesbyvenue$input)
 
 ___
 
@@ -40099,6 +40436,30 @@ Re-exports [starPaymentOptions$Input](index.types.default.md#starpaymentoptions$
 
 ___
 
+### starRevenueStatistics
+
+Re-exports [starRevenueStatistics](index.types.default.md#starrevenuestatistics-1)
+
+___
+
+### starRevenueStatistics$Input
+
+Re-exports [starRevenueStatistics$Input](index.types.default.md#starrevenuestatistics$input-1)
+
+___
+
+### starRevenueStatus
+
+Re-exports [starRevenueStatus](index.types.default.md#starrevenuestatus-1)
+
+___
+
+### starRevenueStatus$Input
+
+Re-exports [starRevenueStatus$Input](index.types.default.md#starrevenuestatus$input-1)
+
+___
+
 ### starTransaction
 
 Re-exports [starTransaction](index.types.default.md#startransaction-1)
@@ -40135,75 +40496,87 @@ Re-exports [starTransactionDirectionOutgoing$Input](index.types.default.md#start
 
 ___
 
-### starTransactionSourceAppStore
+### starTransactionPartnerAppStore
 
-Re-exports [starTransactionSourceAppStore](index.types.default.md#startransactionsourceappstore)
-
-___
-
-### starTransactionSourceAppStore$Input
-
-Re-exports [starTransactionSourceAppStore$Input](index.types.default.md#startransactionsourceappstore$input)
+Re-exports [starTransactionPartnerAppStore](index.types.default.md#startransactionpartnerappstore)
 
 ___
 
-### starTransactionSourceFragment
+### starTransactionPartnerAppStore$Input
 
-Re-exports [starTransactionSourceFragment](index.types.default.md#startransactionsourcefragment)
-
-___
-
-### starTransactionSourceFragment$Input
-
-Re-exports [starTransactionSourceFragment$Input](index.types.default.md#startransactionsourcefragment$input)
+Re-exports [starTransactionPartnerAppStore$Input](index.types.default.md#startransactionpartnerappstore$input)
 
 ___
 
-### starTransactionSourceGooglePlay
+### starTransactionPartnerChannel
 
-Re-exports [starTransactionSourceGooglePlay](index.types.default.md#startransactionsourcegoogleplay)
-
-___
-
-### starTransactionSourceGooglePlay$Input
-
-Re-exports [starTransactionSourceGooglePlay$Input](index.types.default.md#startransactionsourcegoogleplay$input)
+Re-exports [starTransactionPartnerChannel](index.types.default.md#startransactionpartnerchannel)
 
 ___
 
-### starTransactionSourceTelegram
+### starTransactionPartnerChannel$Input
 
-Re-exports [starTransactionSourceTelegram](index.types.default.md#startransactionsourcetelegram)
-
-___
-
-### starTransactionSourceTelegram$Input
-
-Re-exports [starTransactionSourceTelegram$Input](index.types.default.md#startransactionsourcetelegram$input)
+Re-exports [starTransactionPartnerChannel$Input](index.types.default.md#startransactionpartnerchannel$input)
 
 ___
 
-### starTransactionSourceUnsupported
+### starTransactionPartnerFragment
 
-Re-exports [starTransactionSourceUnsupported](index.types.default.md#startransactionsourceunsupported)
-
-___
-
-### starTransactionSourceUnsupported$Input
-
-Re-exports [starTransactionSourceUnsupported$Input](index.types.default.md#startransactionsourceunsupported$input)
+Re-exports [starTransactionPartnerFragment](index.types.default.md#startransactionpartnerfragment)
 
 ___
 
-### starTransactionSourceUser
+### starTransactionPartnerFragment$Input
 
-Re-exports [starTransactionSourceUser](index.types.default.md#startransactionsourceuser)
+Re-exports [starTransactionPartnerFragment$Input](index.types.default.md#startransactionpartnerfragment$input)
 
 ___
 
-### starTransactionSourceUser$Input
+### starTransactionPartnerGooglePlay
 
-Re-exports [starTransactionSourceUser$Input](index.types.default.md#startransactionsourceuser$input)
+Re-exports [starTransactionPartnerGooglePlay](index.types.default.md#startransactionpartnergoogleplay)
+
+___
+
+### starTransactionPartnerGooglePlay$Input
+
+Re-exports [starTransactionPartnerGooglePlay$Input](index.types.default.md#startransactionpartnergoogleplay$input)
+
+___
+
+### starTransactionPartnerTelegram
+
+Re-exports [starTransactionPartnerTelegram](index.types.default.md#startransactionpartnertelegram)
+
+___
+
+### starTransactionPartnerTelegram$Input
+
+Re-exports [starTransactionPartnerTelegram$Input](index.types.default.md#startransactionpartnertelegram$input)
+
+___
+
+### starTransactionPartnerUnsupported
+
+Re-exports [starTransactionPartnerUnsupported](index.types.default.md#startransactionpartnerunsupported)
+
+___
+
+### starTransactionPartnerUnsupported$Input
+
+Re-exports [starTransactionPartnerUnsupported$Input](index.types.default.md#startransactionpartnerunsupported$input)
+
+___
+
+### starTransactionPartnerUser
+
+Re-exports [starTransactionPartnerUser](index.types.default.md#startransactionpartneruser)
+
+___
+
+### starTransactionPartnerUser$Input
+
+Re-exports [starTransactionPartnerUser$Input](index.types.default.md#startransactionpartneruser$input)
 
 ___
 
@@ -40489,6 +40862,24 @@ Re-exports [stickers$Input](index.types.default.md#stickers$input-1)
 
 ___
 
+### stopBusinessPoll
+
+Re-exports [stopBusinessPoll](index.types.default.md#stopbusinesspoll)
+
+___
+
+### stopBusinessPoll$DirectInput
+
+Re-exports [stopBusinessPoll$DirectInput](index.types.default.md#stopbusinesspoll$directinput)
+
+___
+
+### stopBusinessPoll$Input
+
+Re-exports [stopBusinessPoll$Input](index.types.default.md#stopbusinesspoll$input)
+
+___
+
 ### stopPoll
 
 Re-exports [stopPoll](index.types.default.md#stoppoll)
@@ -40660,6 +41051,18 @@ ___
 ### storyAreaPosition$Input
 
 Re-exports [storyAreaPosition$Input](index.types.default.md#storyareaposition$input-1)
+
+___
+
+### storyAreaTypeLink
+
+Re-exports [storyAreaTypeLink](index.types.default.md#storyareatypelink)
+
+___
+
+### storyAreaTypeLink$Input
+
+Re-exports [storyAreaTypeLink$Input](index.types.default.md#storyareatypelink$input)
 
 ___
 
@@ -44269,6 +44672,18 @@ Re-exports [updateMessageUnreadReactions$Input](index.types.default.md#updatemes
 
 ___
 
+### updateNewBusinessCallbackQuery
+
+Re-exports [updateNewBusinessCallbackQuery](index.types.default.md#updatenewbusinesscallbackquery)
+
+___
+
+### updateNewBusinessCallbackQuery$Input
+
+Re-exports [updateNewBusinessCallbackQuery$Input](index.types.default.md#updatenewbusinesscallbackquery$input)
+
+___
+
 ### updateNewBusinessMessage
 
 Re-exports [updateNewBusinessMessage](index.types.default.md#updatenewbusinessmessage)
@@ -44698,6 +45113,18 @@ ___
 ### updateSpeedLimitNotification$Input
 
 Re-exports [updateSpeedLimitNotification$Input](index.types.default.md#updatespeedlimitnotification$input)
+
+___
+
+### updateStarRevenueStatus
+
+Re-exports [updateStarRevenueStatus](index.types.default.md#updatestarrevenuestatus)
+
+___
+
+### updateStarRevenueStatus$Input
+
+Re-exports [updateStarRevenueStatus$Input](index.types.default.md#updatestarrevenuestatus$input)
 
 ___
 

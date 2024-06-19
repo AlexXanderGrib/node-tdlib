@@ -68,7 +68,7 @@ Constructs [$SyncApi](index.types.default._SyncApi.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:70776
+dist/generated/types.d.ts:71415
 
 ## Properties
 
@@ -78,7 +78,7 @@ dist/generated/types.d.ts:70776
 
 #### Defined in
 
-dist/generated/types.d.ts:70770
+dist/generated/types.d.ts:71409
 
 ## Methods
 
@@ -102,7 +102,7 @@ Adds a message to TDLib internal log. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:70969
+dist/generated/types.d.ts:71608
 
 ___
 
@@ -126,7 +126,7 @@ Checks validness of a name for a quick reply shortcut. Can be called synchronous
 
 #### Defined in
 
-dist/generated/types.d.ts:70785
+dist/generated/types.d.ts:71424
 
 ___
 
@@ -150,7 +150,7 @@ Removes potentially dangerous characters from the name of a file. The encoding o
 
 #### Defined in
 
-dist/generated/types.d.ts:70850
+dist/generated/types.d.ts:71489
 
 ___
 
@@ -174,7 +174,7 @@ Returns default icon name for a folder. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:70885
+dist/generated/types.d.ts:71524
 
 ___
 
@@ -198,7 +198,7 @@ Returns an emoji for the given country. Returns an empty string on failure. Can 
 
 #### Defined in
 
-dist/generated/types.d.ts:70829
+dist/generated/types.d.ts:71468
 
 ___
 
@@ -222,7 +222,7 @@ Returns the extension of a file, guessed by its MIME type. Returns an empty stri
 
 #### Defined in
 
-dist/generated/types.d.ts:70843
+dist/generated/types.d.ts:71482
 
 ___
 
@@ -246,7 +246,7 @@ Returns the MIME type of a file, guessed by its extension. Returns an empty stri
 
 #### Defined in
 
-dist/generated/types.d.ts:70836
+dist/generated/types.d.ts:71475
 
 ___
 
@@ -270,7 +270,7 @@ Converts a JsonValue object to corresponding JSON-serialized string. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:70871
+dist/generated/types.d.ts:71510
 
 ___
 
@@ -294,7 +294,7 @@ Converts a JSON-serialized string to corresponding JsonValue object. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:70864
+dist/generated/types.d.ts:71503
 
 ___
 
@@ -318,7 +318,7 @@ Returns a string stored in the local database from the specified localization ta
 
 #### Defined in
 
-dist/generated/types.d.ts:70857
+dist/generated/types.d.ts:71496
 
 ___
 
@@ -342,7 +342,7 @@ Returns information about currently used log stream for internal logging of TDLi
 
 #### Defined in
 
-dist/generated/types.d.ts:70927
+dist/generated/types.d.ts:71566
 
 ___
 
@@ -366,7 +366,7 @@ Returns current verbosity level for a specified TDLib internal log tag. Can be c
 
 #### Defined in
 
-dist/generated/types.d.ts:70962
+dist/generated/types.d.ts:71601
 
 ___
 
@@ -390,7 +390,7 @@ Returns the list of available TDLib internal log tags, for example, ["actor", "b
 
 #### Defined in
 
-dist/generated/types.d.ts:70948
+dist/generated/types.d.ts:71587
 
 ___
 
@@ -414,7 +414,7 @@ Returns current verbosity level of the internal logging of TDLib. Can be called 
 
 #### Defined in
 
-dist/generated/types.d.ts:70941
+dist/generated/types.d.ts:71580
 
 ___
 
@@ -438,7 +438,7 @@ Replaces text entities with Markdown formatting in a human-friendly format. Enti
 
 #### Defined in
 
-dist/generated/types.d.ts:70822
+dist/generated/types.d.ts:71461
 
 ___
 
@@ -462,7 +462,7 @@ Returns the value of an option by its name. (Check the list of available options
 
 #### Defined in
 
-dist/generated/types.d.ts:70899
+dist/generated/types.d.ts:71538
 
 ___
 
@@ -486,7 +486,7 @@ Returns information about a phone number by its prefix synchronously. getCountri
 
 #### Defined in
 
-dist/generated/types.d.ts:70913
+dist/generated/types.d.ts:71552
 
 ___
 
@@ -510,7 +510,7 @@ Returns a globally unique push notification subscription identifier for identifi
 
 #### Defined in
 
-dist/generated/types.d.ts:70892
+dist/generated/types.d.ts:71531
 
 ___
 
@@ -534,7 +534,7 @@ Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numb
 
 #### Defined in
 
-dist/generated/types.d.ts:70799
+dist/generated/types.d.ts:71438
 
 ___
 
@@ -558,7 +558,7 @@ Converts a themeParameters object to corresponding JSON-serialized string. Can b
 
 #### Defined in
 
-dist/generated/types.d.ts:70878
+dist/generated/types.d.ts:71517
 
 ___
 
@@ -582,7 +582,7 @@ Parses Markdown entities in a human-friendly format, ignoring markup errors. Can
 
 #### Defined in
 
-dist/generated/types.d.ts:70815
+dist/generated/types.d.ts:71454
 
 ___
 
@@ -608,7 +608,7 @@ Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote,
 
 #### Defined in
 
-dist/generated/types.d.ts:70808
+dist/generated/types.d.ts:71447
 
 ___
 
@@ -632,7 +632,7 @@ Searches for a given quote in a text. Returns found quote start position in UTF-
 
 #### Defined in
 
-dist/generated/types.d.ts:70792
+dist/generated/types.d.ts:71431
 
 ___
 
@@ -656,7 +656,7 @@ Searches specified query by word prefixes in the provided strings. Returns 0-bas
 
 #### Defined in
 
-dist/generated/types.d.ts:70906
+dist/generated/types.d.ts:71545
 
 ___
 
@@ -680,7 +680,7 @@ Sets new log stream for internal logging of TDLib. Can be called synchronously
 
 #### Defined in
 
-dist/generated/types.d.ts:70920
+dist/generated/types.d.ts:71559
 
 ___
 
@@ -704,7 +704,7 @@ Sets the verbosity level for a specified TDLib internal log tag. Can be called s
 
 #### Defined in
 
-dist/generated/types.d.ts:70955
+dist/generated/types.d.ts:71594
 
 ___
 
@@ -728,7 +728,7 @@ Sets the verbosity level of the internal logging of TDLib. Can be called synchro
 
 #### Defined in
 
-dist/generated/types.d.ts:70934
+dist/generated/types.d.ts:71573
 
 ___
 
@@ -752,4 +752,4 @@ Returns the specified error and ensures that the Error object is used; for testi
 
 #### Defined in
 
-dist/generated/types.d.ts:70976
+dist/generated/types.d.ts:71615

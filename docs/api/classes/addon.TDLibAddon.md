@@ -155,7 +155,7 @@ TDLib.destroy
 
 #### Defined in
 
-dist/addon/addon.d.ts:57
+dist/addon/addon.d.ts:58
 
 ___
 
@@ -186,7 +186,7 @@ TDLib.execute
 
 #### Defined in
 
-dist/addon/addon.d.ts:66
+dist/addon/addon.d.ts:67
 
 ___
 
@@ -217,7 +217,7 @@ TDLib.receive
 
 #### Defined in
 
-dist/addon/addon.d.ts:75
+dist/addon/addon.d.ts:76
 
 ___
 
@@ -246,7 +246,7 @@ TDLib.send
 
 #### Defined in
 
-dist/addon/addon.d.ts:83
+dist/addon/addon.d.ts:85
 
 ___
 
@@ -274,7 +274,7 @@ TDLib.setLogFatalErrorCallback
 
 #### Defined in
 
-dist/addon/addon.d.ts:90
+dist/addon/addon.d.ts:93
 
 ___
 

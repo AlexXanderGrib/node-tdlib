@@ -117,7 +117,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:108
+dist/client.d.ts:109
 
 ___
 
@@ -169,7 +169,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:115
+dist/client.d.ts:116
 
 ___
 
@@ -187,7 +187,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:123
+dist/client.d.ts:124
 
 ## Methods
 
@@ -205,7 +205,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:144
+dist/client.d.ts:145
 
 ___
 
@@ -297,7 +297,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:137
+dist/client.d.ts:138
 
 ___
 
@@ -315,7 +315,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:130
+dist/client.d.ts:131
 
 ___
 

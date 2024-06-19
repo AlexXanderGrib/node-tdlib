@@ -93,7 +93,7 @@ TDLibOptions
 
 #### Defined in
 
-dist/options.d.ts:187
+dist/options.d.ts:189
 
 ___
 
@@ -117,7 +117,7 @@ TDLibOptions
 
 #### Defined in
 
-dist/options.d.ts:180
+dist/options.d.ts:181
 
 ___
 
