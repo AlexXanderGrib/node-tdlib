@@ -109,6 +109,49 @@ jobs:
           name: tdlib-macos-x64
           path: build/libtdjson.dylib
 
+  build-macos-arm64:
+    name: Build TDLib on macOS x86_64
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: "tdlib/td"
+          ref: ${{ inputs.tdlib }}
+      - name: homebrew cache
+        uses: actions/cache@v3
+        with:
+          path: ~/Library/Caches/Homebrew
+          key: homebrew-${{github.run_id}}
+          restore-keys: |
+            homebrew-
+
+      - name: Install dependencies
+        run: HOMEBREW_NO_INSTALL_CLEANUP=1 brew install gperf openssl zlib
+
+      - name: CMake version
+        run: cmake --version
+      - name: Build TDLib
+        run: |
+          mkdir -p build && cd build
+          cmake -DCMAKE_BUILD_TYPE=Release \
+            -DTD_ENABLE_LTO=ON \
+            -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl \
+            -DZLIB_INCLUDE_DIR=/usr/local/opt/zlib/include \
+            -DZLIB_LIBRARY=/usr/local/opt/zlib/lib/libz.a \
+            -DOPENSSL_USE_STATIC_LIBS=TRUE -DZLIB_USE_STATIC_LIBS=TRUE ..
+          cmake --build . --target tdjson -- -j 3
+          cd ..
+      - name: Info
+        run: |
+          uname -a
+          /usr/local/opt/openssl/bin/openssl version
+          otool -L build/libtdjson.dylib
+      - uses: actions/upload-artifact@v3
+        with:
+          name: tdlib-macos-arm64
+          path: build/libtdjson.dylib
+
+
   build-windows-x64:
     name: Build TDLib on Windows 64
     runs-on: windows-2022
