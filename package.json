@@ -130,8 +130,9 @@
     "typedoc": "^0.25.13"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-darwin-x64": "1.8.31-commit.8f19c751dc296cedb9a921badb7a02a8c0cb1aeb",
-    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.31-commit.8f19c751dc296cedb9a921badb7a02a8c0cb1aeb",
-    "@tdlib-native/tdjson-win32-x64": "1.8.31-commit.8f19c751dc296cedb9a921badb7a02a8c0cb1aeb"
+    "@tdlib-native/tdjson-darwin-x64": "1.8.33-commit.cb164927417f22811c74cd8678ed4a5ab7cb80ba",
+    "@tdlib-native/tdjson-darwin-arm64": "1.8.33-commit.cb164927417f22811c74cd8678ed4a5ab7cb80ba",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.33-commit.cb164927417f22811c74cd8678ed4a5ab7cb80ba",
+    "@tdlib-native/tdjson-win32-x64": "1.8.33-commit.cb164927417f22811c74cd8678ed4a5ab7cb80ba"
   }
 }

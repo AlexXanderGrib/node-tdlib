@@ -540,7 +540,7 @@ export const $Methods = Object.freeze({
   getRecentInlineBots: "getRecentInlineBots",
   searchHashtags: "searchHashtags",
   removeRecentHashtag: "removeRecentHashtag",
-  getWebPagePreview: "getWebPagePreview",
+  getLinkPreview: "getLinkPreview",
   getWebPageInstantView: "getWebPageInstantView",
   setProfilePhoto: "setProfilePhoto",
   deleteProfilePhoto: "deleteProfilePhoto",
@@ -684,6 +684,7 @@ export const $Methods = Object.freeze({
   getChatRevenueTransactions: "getChatRevenueTransactions",
   getStarRevenueStatistics: "getStarRevenueStatistics",
   getStarWithdrawalUrl: "getStarWithdrawalUrl",
+  getStarAdAccountUrl: "getStarAdAccountUrl",
   getChatStatistics: "getChatStatistics",
   getMessageStatistics: "getMessageStatistics",
   getMessagePublicForwards: "getMessagePublicForwards",
@@ -1365,6 +1366,7 @@ export const PushMessageContent$Type = Object.freeze({
   GameScore: "pushMessageContentGameScore",
   Invoice: "pushMessageContentInvoice",
   Location: "pushMessageContentLocation",
+  PaidMedia: "pushMessageContentPaidMedia",
   Photo: "pushMessageContentPhoto",
   Poll: "pushMessageContentPoll",
   PremiumGiftCode: "pushMessageContentPremiumGiftCode",
@@ -1586,7 +1588,8 @@ export const PremiumFeature$Type = Object.freeze({
   SavedMessagesTags: "premiumFeatureSavedMessagesTags",
   MessagePrivacy: "premiumFeatureMessagePrivacy",
   LastSeenTimes: "premiumFeatureLastSeenTimes",
-  Business: "premiumFeatureBusiness"
+  Business: "premiumFeatureBusiness",
+  MessageEffects: "premiumFeatureMessageEffects"
 } as const);
 
 export type PremiumFeature$Type =
@@ -2000,6 +2003,7 @@ export const InputMessageContent$Type = Object.freeze({
   Animation: "inputMessageAnimation",
   Audio: "inputMessageAudio",
   Document: "inputMessageDocument",
+  PaidMedia: "inputMessagePaidMedia",
   Photo: "inputMessagePhoto",
   Sticker: "inputMessageSticker",
   Video: "inputMessageVideo",
@@ -2035,6 +2039,14 @@ export const MessageSchedulingState$Type = Object.freeze({
 export type MessageSchedulingState$Type =
   (typeof MessageSchedulingState$Type)[keyof typeof MessageSchedulingState$Type];
 
+export const InputPaidMediaType$Type = Object.freeze({
+  Photo: "inputPaidMediaTypePhoto",
+  Video: "inputPaidMediaTypeVideo"
+} as const);
+
+export type InputPaidMediaType$Type =
+  (typeof InputPaidMediaType$Type)[keyof typeof InputPaidMediaType$Type];
+
 export const TextEntityType$Type = Object.freeze({
   Mention: "textEntityTypeMention",
   Hashtag: "textEntityTypeHashtag",
@@ -2068,6 +2080,7 @@ export const MessageContent$Type = Object.freeze({
   Animation: "messageAnimation",
   Audio: "messageAudio",
   Document: "messageDocument",
+  PaidMedia: "messagePaidMedia",
   Photo: "messagePhoto",
   Sticker: "messageSticker",
   Video: "messageVideo",
@@ -2117,6 +2130,7 @@ export const MessageContent$Type = Object.freeze({
   GameScore: "messageGameScore",
   PaymentSuccessful: "messagePaymentSuccessful",
   PaymentSuccessfulBot: "messagePaymentSuccessfulBot",
+  PaymentRefunded: "messagePaymentRefunded",
   GiftedPremium: "messageGiftedPremium",
   PremiumGiftCode: "messagePremiumGiftCode",
   PremiumGiveawayCreated: "messagePremiumGiveawayCreated",
@@ -2225,15 +2239,14 @@ export const PassportElementType$Type = Object.freeze({
 export type PassportElementType$Type =
   (typeof PassportElementType$Type)[keyof typeof PassportElementType$Type];
 
-export const MessageExtendedMedia$Type = Object.freeze({
-  Preview: "messageExtendedMediaPreview",
-  Photo: "messageExtendedMediaPhoto",
-  Video: "messageExtendedMediaVideo",
-  Unsupported: "messageExtendedMediaUnsupported"
+export const PaidMedia$Type = Object.freeze({
+  Preview: "paidMediaPreview",
+  Photo: "paidMediaPhoto",
+  Video: "paidMediaVideo",
+  Unsupported: "paidMediaUnsupported"
 } as const);
 
-export type MessageExtendedMedia$Type =
-  (typeof MessageExtendedMedia$Type)[keyof typeof MessageExtendedMedia$Type];
+export type PaidMedia$Type = (typeof PaidMedia$Type)[keyof typeof PaidMedia$Type];
 
 export const InputInvoice$Type = Object.freeze({
   Message: "inputInvoiceMessage",
@@ -2286,6 +2299,48 @@ export const CollectibleItemType$Type = Object.freeze({
 
 export type CollectibleItemType$Type =
   (typeof CollectibleItemType$Type)[keyof typeof CollectibleItemType$Type];
+
+export const LinkPreviewType$Type = Object.freeze({
+  Album: "linkPreviewTypeAlbum",
+  Animation: "linkPreviewTypeAnimation",
+  App: "linkPreviewTypeApp",
+  Article: "linkPreviewTypeArticle",
+  Audio: "linkPreviewTypeAudio",
+  Background: "linkPreviewTypeBackground",
+  ChannelBoost: "linkPreviewTypeChannelBoost",
+  Chat: "linkPreviewTypeChat",
+  Document: "linkPreviewTypeDocument",
+  EmbeddedAudioPlayer: "linkPreviewTypeEmbeddedAudioPlayer",
+  EmbeddedVideoPlayer: "linkPreviewTypeEmbeddedVideoPlayer",
+  Invoice: "linkPreviewTypeInvoice",
+  Message: "linkPreviewTypeMessage",
+  Photo: "linkPreviewTypePhoto",
+  PremiumGiftCode: "linkPreviewTypePremiumGiftCode",
+  ShareableChatFolder: "linkPreviewTypeShareableChatFolder",
+  Sticker: "linkPreviewTypeSticker",
+  StickerSet: "linkPreviewTypeStickerSet",
+  Story: "linkPreviewTypeStory",
+  SupergroupBoost: "linkPreviewTypeSupergroupBoost",
+  Theme: "linkPreviewTypeTheme",
+  Unsupported: "linkPreviewTypeUnsupported",
+  User: "linkPreviewTypeUser",
+  Video: "linkPreviewTypeVideo",
+  VideoChat: "linkPreviewTypeVideoChat",
+  VideoNote: "linkPreviewTypeVideoNote",
+  VoiceNote: "linkPreviewTypeVoiceNote",
+  WebApp: "linkPreviewTypeWebApp"
+} as const);
+
+export type LinkPreviewType$Type =
+  (typeof LinkPreviewType$Type)[keyof typeof LinkPreviewType$Type];
+
+export const LinkPreviewAlbumMedia$Type = Object.freeze({
+  Photo: "linkPreviewAlbumMediaPhoto",
+  Video: "linkPreviewAlbumMediaVideo"
+} as const);
+
+export type LinkPreviewAlbumMedia$Type =
+  (typeof LinkPreviewAlbumMedia$Type)[keyof typeof LinkPreviewAlbumMedia$Type];
 
 export const PageBlock$Type = Object.freeze({
   Title: "pageBlockTitle",
@@ -2665,7 +2720,8 @@ export const StarTransactionPartner$Type = Object.freeze({
   AppStore: "starTransactionPartnerAppStore",
   GooglePlay: "starTransactionPartnerGooglePlay",
   Fragment: "starTransactionPartnerFragment",
-  User: "starTransactionPartnerUser",
+  TelegramAds: "starTransactionPartnerTelegramAds",
+  Bot: "starTransactionPartnerBot",
   Channel: "starTransactionPartnerChannel",
   Unsupported: "starTransactionPartnerUnsupported"
 } as const);
@@ -2781,6 +2837,14 @@ export const InputFile$Type = Object.freeze({
 } as const);
 
 export type InputFile$Type = (typeof InputFile$Type)[keyof typeof InputFile$Type];
+
+export const FirebaseDeviceVerificationParameters$Type = Object.freeze({
+  SafetyNet: "firebaseDeviceVerificationParametersSafetyNet",
+  PlayIntegrity: "firebaseDeviceVerificationParametersPlayIntegrity"
+} as const);
+
+export type FirebaseDeviceVerificationParameters$Type =
+  (typeof FirebaseDeviceVerificationParameters$Type)[keyof typeof FirebaseDeviceVerificationParameters$Type];
 
 export const AuthorizationState$Type = Object.freeze({
   WaitTdlibParameters: "authorizationStateWaitTdlibParameters",
@@ -3151,16 +3215,10 @@ export type authenticationCodeTypeFirebaseAndroid = {
   _: "authenticationCodeTypeFirebaseAndroid";
 
   /**
-   * True, if Play Integrity API must be used for device verification. Otherwise, SafetyNet Attestation API must be used
-   * @type {Bool} {@link Bool}
+   * Parameters to be used for device verification
+   * @type {FirebaseDeviceVerificationParameters} {@link FirebaseDeviceVerificationParameters}
    */
-  use_play_integrity: Bool;
-
-  /**
-   * Nonce to pass to the Play Integrity API or the SafetyNet Attestation API
-   * @type {bytes} {@link bytes}
-   */
-  nonce: bytes;
+  device_verification_parameters: FirebaseDeviceVerificationParameters;
 
   /**
    * Length of the code
@@ -3178,16 +3236,10 @@ export type authenticationCodeTypeFirebaseAndroid$Input = {
   readonly _: "authenticationCodeTypeFirebaseAndroid";
 
   /**
-   * True, if Play Integrity API must be used for device verification. Otherwise, SafetyNet Attestation API must be used
-   * @type {Bool} {@link Bool}
+   * Parameters to be used for device verification
+   * @type {FirebaseDeviceVerificationParameters} {@link FirebaseDeviceVerificationParameters}
    */
-  readonly use_play_integrity?: Bool$Input;
-
-  /**
-   * Nonce to pass to the Play Integrity API or the SafetyNet Attestation API
-   * @type {bytes} {@link bytes}
-   */
-  readonly nonce?: bytes$Input;
+  readonly device_verification_parameters?: FirebaseDeviceVerificationParameters$Input;
 
   /**
    * Length of the code
@@ -4022,6 +4074,74 @@ export type authorizationStateClosed = {
  */
 export type authorizationStateClosed$Input = {
   readonly _: "authorizationStateClosed";
+};
+
+/**
+ * Device verification must be performed with the SafetyNet Attestation API
+ */
+export type firebaseDeviceVerificationParametersSafetyNet = {
+  _: "firebaseDeviceVerificationParametersSafetyNet";
+
+  /**
+   * Nonce to pass to the SafetyNet Attestation API
+   * @type {bytes} {@link bytes}
+   */
+  nonce: bytes;
+};
+
+/**
+ * Version of {@link firebaseDeviceVerificationParametersSafetyNet} for method parameters.
+ *
+ * Device verification must be performed with the SafetyNet Attestation API
+ */
+export type firebaseDeviceVerificationParametersSafetyNet$Input = {
+  readonly _: "firebaseDeviceVerificationParametersSafetyNet";
+
+  /**
+   * Nonce to pass to the SafetyNet Attestation API
+   * @type {bytes} {@link bytes}
+   */
+  readonly nonce?: bytes$Input;
+};
+
+/**
+ * Device verification must be performed with the classic Play Integrity verification (https://developer.android.com/google/play/integrity/classic)
+ */
+export type firebaseDeviceVerificationParametersPlayIntegrity = {
+  _: "firebaseDeviceVerificationParametersPlayIntegrity";
+
+  /**
+   * Base64url-encoded nonce to pass to the Play Integrity API
+   * @type {string} {@link string}
+   */
+  nonce: string;
+
+  /**
+   * Cloud project number to pass to the Play Integrity API
+   * @type {int64} {@link int64}
+   */
+  cloud_project_number: int64;
+};
+
+/**
+ * Version of {@link firebaseDeviceVerificationParametersPlayIntegrity} for method parameters.
+ *
+ * Device verification must be performed with the classic Play Integrity verification (https://developer.android.com/google/play/integrity/classic)
+ */
+export type firebaseDeviceVerificationParametersPlayIntegrity$Input = {
+  readonly _: "firebaseDeviceVerificationParametersPlayIntegrity";
+
+  /**
+   * Base64url-encoded nonce to pass to the Play Integrity API
+   * @type {string} {@link string}
+   */
+  readonly nonce?: string;
+
+  /**
+   * Cloud project number to pass to the Play Integrity API
+   * @type {int64} {@link int64}
+   */
+  readonly cloud_project_number?: int64$Input;
 };
 
 /**
@@ -7405,7 +7525,7 @@ export type botMenuButton = {
   text: string;
 
   /**
-   * URL to be passed to openWebApp
+   * URL of a Web App to open when the button is pressed. If the link is of the type internalLinkTypeWebApp, then it must be processed accordingly. Otherwise, the link must be passed to openWebApp
    * @type {string} {@link string}
    */
   url: string;
@@ -7426,7 +7546,7 @@ export type botMenuButton$Input = {
   readonly text?: string;
 
   /**
-   * URL to be passed to openWebApp
+   * URL of a Web App to open when the button is pressed. If the link is of the type internalLinkTypeWebApp, then it must be processed accordingly. Otherwise, the link must be passed to openWebApp
    * @type {string} {@link string}
    */
   readonly url?: string;
@@ -8901,10 +9021,10 @@ export type chatPermissions = {
   can_send_other_messages: Bool;
 
   /**
-   * True, if the user may add a web page preview to their messages
+   * True, if the user may add a link preview to their messages
    * @type {Bool} {@link Bool}
    */
-  can_add_web_page_previews: Bool;
+  can_add_link_previews: Bool;
 
   /**
    * True, if the user can change the chat title, photo, and other settings
@@ -8994,10 +9114,10 @@ export type chatPermissions$Input = {
   readonly can_send_other_messages?: Bool$Input;
 
   /**
-   * True, if the user may add a web page preview to their messages
+   * True, if the user may add a link preview to their messages
    * @type {Bool} {@link Bool}
    */
-  readonly can_add_web_page_previews?: Bool$Input;
+  readonly can_add_link_previews?: Bool$Input;
 
   /**
    * True, if the user can change the chat title, photo, and other settings
@@ -9425,7 +9545,7 @@ export type premiumStatePaymentOption$Input = {
 };
 
 /**
- * Describes an option for creating Telegram Premium gift codes
+ * Describes an option for creating Telegram Premium gift codes. Use telegramPaymentPurposePremiumGiftCodes for out-of-store payments
  */
 export type premiumGiftCodePaymentOption = {
   _: "premiumGiftCodePaymentOption";
@@ -9470,7 +9590,7 @@ export type premiumGiftCodePaymentOption = {
 /**
  * Version of {@link premiumGiftCodePaymentOption} for method parameters.
  *
- * Describes an option for creating Telegram Premium gift codes
+ * Describes an option for creating Telegram Premium gift codes. Use telegramPaymentPurposePremiumGiftCodes for out-of-store payments
  */
 export type premiumGiftCodePaymentOption$Input = {
   readonly _: "premiumGiftCodePaymentOption";
@@ -9641,7 +9761,7 @@ export type premiumGiftCodeInfo$Input = {
 };
 
 /**
- * Describes an option for buying Telegram stars
+ * Describes an option for buying Telegram stars. Use telegramPaymentPurposeStars for out-of-store payments
  */
 export type starPaymentOption = {
   _: "starPaymentOption";
@@ -9680,7 +9800,7 @@ export type starPaymentOption = {
 /**
  * Version of {@link starPaymentOption} for method parameters.
  *
- * Describes an option for buying Telegram stars
+ * Describes an option for buying Telegram stars. Use telegramPaymentPurposeStars for out-of-store payments
  */
 export type starPaymentOption$Input = {
   readonly _: "starPaymentOption";
@@ -9853,43 +9973,71 @@ export type starTransactionPartnerFragment$Input = {
 };
 
 /**
- * The transaction is a transaction with another user
+ * The transaction is a transaction with Telegram Ad platform
  */
-export type starTransactionPartnerUser = {
-  _: "starTransactionPartnerUser";
-
-  /**
-   * Identifier of the user
-   * @type {int53} {@link int53}
-   */
-  user_id: int53;
-
-  /**
-   * Information about the bought product; may be null if none
-   * @type {productInfo} {@link productInfo}
-   */
-  product_info: productInfo | null;
+export type starTransactionPartnerTelegramAds = {
+  _: "starTransactionPartnerTelegramAds";
 };
 
 /**
- * Version of {@link starTransactionPartnerUser} for method parameters.
+ * Version of {@link starTransactionPartnerTelegramAds} for method parameters.
  *
- * The transaction is a transaction with another user
+ * The transaction is a transaction with Telegram Ad platform
  */
-export type starTransactionPartnerUser$Input = {
-  readonly _: "starTransactionPartnerUser";
+export type starTransactionPartnerTelegramAds$Input = {
+  readonly _: "starTransactionPartnerTelegramAds";
+};
+
+/**
+ * The transaction is a transaction with a bot
+ */
+export type starTransactionPartnerBot = {
+  _: "starTransactionPartnerBot";
 
   /**
-   * Identifier of the user
+   * Identifier of the bot
    * @type {int53} {@link int53}
    */
-  readonly user_id?: int53;
+  bot_user_id: int53;
 
   /**
-   * Information about the bought product; may be null if none
+   * Information about the bought product; may be null if not applicable
+   * @type {productInfo} {@link productInfo}
+   */
+  product_info: productInfo | null;
+
+  /**
+   * Invoice payload; for bots only
+   * @type {bytes} {@link bytes}
+   */
+  invoice_payload: bytes;
+};
+
+/**
+ * Version of {@link starTransactionPartnerBot} for method parameters.
+ *
+ * The transaction is a transaction with a bot
+ */
+export type starTransactionPartnerBot$Input = {
+  readonly _: "starTransactionPartnerBot";
+
+  /**
+   * Identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Information about the bought product; may be null if not applicable
    * @type {productInfo} {@link productInfo}
    */
   readonly product_info?: productInfo$Input | null;
+
+  /**
+   * Invoice payload; for bots only
+   * @type {bytes} {@link bytes}
+   */
+  readonly invoice_payload?: bytes$Input;
 };
 
 /**
@@ -9903,6 +10051,18 @@ export type starTransactionPartnerChannel = {
    * @type {int53} {@link int53}
    */
   chat_id: int53;
+
+  /**
+   * Identifier of the corresponding message with paid media; can be an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  paid_media_message_id: int53;
+
+  /**
+   * Information about the bought media
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
+   */
+  media: vector<PaidMedia>;
 };
 
 /**
@@ -9918,6 +10078,18 @@ export type starTransactionPartnerChannel$Input = {
    * @type {int53} {@link int53}
    */
   readonly chat_id?: int53;
+
+  /**
+   * Identifier of the corresponding message with paid media; can be an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  readonly paid_media_message_id?: int53;
+
+  /**
+   * Information about the bought media
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
+   */
+  readonly media?: vector$Input<PaidMedia$Input>;
 };
 
 /**
@@ -13519,6 +13691,12 @@ export type supergroupFullInfo = {
   can_get_revenue_statistics: Bool;
 
   /**
+   * True, if the supergroup or channel Telegram Star revenue statistics are available
+   * @type {Bool} {@link Bool}
+   */
+  can_get_star_revenue_statistics: Bool;
+
+  /**
    * True, if aggressive anti-spam checks can be enabled or disabled in the supergroup
    * @type {Bool} {@link Bool}
    */
@@ -13543,6 +13721,12 @@ export type supergroupFullInfo = {
    * @type {Bool} {@link Bool}
    */
   has_aggressive_anti_spam_enabled: Bool;
+
+  /**
+   * True, if paid media can be sent and forwarded to the channel chat; for channels only
+   * @type {Bool} {@link Bool}
+   */
+  has_paid_media_allowed: Bool;
 
   /**
    * True, if the supergroup or channel has pinned stories
@@ -13710,6 +13894,12 @@ export type supergroupFullInfo$Input = {
   readonly can_get_revenue_statistics?: Bool$Input;
 
   /**
+   * True, if the supergroup or channel Telegram Star revenue statistics are available
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_get_star_revenue_statistics?: Bool$Input;
+
+  /**
    * True, if aggressive anti-spam checks can be enabled or disabled in the supergroup
    * @type {Bool} {@link Bool}
    */
@@ -13734,6 +13924,12 @@ export type supergroupFullInfo$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly has_aggressive_anti_spam_enabled?: Bool$Input;
+
+  /**
+   * True, if paid media can be sent and forwarded to the channel chat; for channels only
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_paid_media_allowed?: Bool$Input;
 
   /**
    * True, if the supergroup or channel has pinned stories
@@ -15361,9 +15557,9 @@ export type messageReplyToMessage = {
    *
    * - Can be only one of the following types: messageAnimation, messageAudio, messageContact, messageDice, messageDocument, messageGame, messageInvoice, messageLocation,
    *
-   * - messagePhoto, messagePoll, messagePremiumGiveaway, messagePremiumGiveawayWinners, messageSticker, messageStory, messageText (for link preview), messageVenue,
+   * - messagePaidMedia, messagePhoto, messagePoll, messagePremiumGiveaway, messagePremiumGiveawayWinners, messageSticker, messageStory, messageText (for link preview),
    *
-   * - messageVideo, messageVideoNote, or messageVoiceNote
+   * - messageVenue, messageVideo, messageVideoNote, or messageVoiceNote
    * @type {MessageContent} {@link MessageContent}
    */
   content: MessageContent | null;
@@ -15412,9 +15608,9 @@ export type messageReplyToMessage$Input = {
    *
    * - Can be only one of the following types: messageAnimation, messageAudio, messageContact, messageDice, messageDocument, messageGame, messageInvoice, messageLocation,
    *
-   * - messagePhoto, messagePoll, messagePremiumGiveaway, messagePremiumGiveawayWinners, messageSticker, messageStory, messageText (for link preview), messageVenue,
+   * - messagePaidMedia, messagePhoto, messagePoll, messagePremiumGiveaway, messagePremiumGiveawayWinners, messageSticker, messageStory, messageText (for link preview),
    *
-   * - messageVideo, messageVideoNote, or messageVoiceNote
+   * - messageVenue, messageVideo, messageVideoNote, or messageVoiceNote
    * @type {MessageContent} {@link MessageContent}
    */
   readonly content?: MessageContent$Input | null;
@@ -15753,7 +15949,7 @@ export type message = {
   can_get_viewers: Bool;
 
   /**
-   * True, if media timestamp links can be generated for media timestamp entities in the message text, caption or web page description through getMessageLink
+   * True, if media timestamp links can be generated for media timestamp entities in the message text, caption or link preview description through getMessageLink
    * @type {Bool} {@link Bool}
    */
   can_get_media_timestamp_links: Bool;
@@ -16044,7 +16240,7 @@ export type message$Input = {
   readonly can_get_viewers?: Bool$Input;
 
   /**
-   * True, if media timestamp links can be generated for media timestamp entities in the message text, caption or web page description through getMessageLink
+   * True, if media timestamp links can be generated for media timestamp entities in the message text, caption or link preview description through getMessageLink
    * @type {Bool} {@link Bool}
    */
   readonly can_get_media_timestamp_links?: Bool$Input;
@@ -20467,7 +20663,7 @@ export type inlineKeyboardButtonTypeUrl = {
   _: "inlineKeyboardButtonTypeUrl";
 
   /**
-   * HTTP or tg:// URL to open
+   * HTTP or tg:// URL to open. If the link is of the type internalLinkTypeWebApp, then the button must be marked as a Web App button
    * @type {string} {@link string}
    */
   url: string;
@@ -20482,7 +20678,7 @@ export type inlineKeyboardButtonTypeUrl$Input = {
   readonly _: "inlineKeyboardButtonTypeUrl";
 
   /**
-   * HTTP or tg:// URL to open
+   * HTTP or tg:// URL to open. If the link is of the type internalLinkTypeWebApp, then the button must be marked as a Web App button
    * @type {string} {@link string}
    */
   readonly url?: string;
@@ -21973,6 +22169,82 @@ export type sharedChat$Input = {
 };
 
 /**
+ * Describes theme settings
+ */
+export type themeSettings = {
+  _: "themeSettings";
+
+  /**
+   * Theme accent color in ARGB format
+   * @type {int32} {@link int32}
+   */
+  accent_color: int32;
+
+  /**
+   * The background to be used in chats; may be null
+   * @type {background} {@link background}
+   */
+  background: background | null;
+
+  /**
+   * The fill to be used as a background for outgoing messages
+   * @type {BackgroundFill} {@link BackgroundFill}
+   */
+  outgoing_message_fill: BackgroundFill;
+
+  /**
+   * If true, the freeform gradient fill needs to be animated on every sent message
+   * @type {Bool} {@link Bool}
+   */
+  animate_outgoing_message_fill: Bool;
+
+  /**
+   * Accent color of outgoing messages in ARGB format
+   * @type {int32} {@link int32}
+   */
+  outgoing_message_accent_color: int32;
+};
+
+/**
+ * Version of {@link themeSettings} for method parameters.
+ *
+ * Describes theme settings
+ */
+export type themeSettings$Input = {
+  readonly _: "themeSettings";
+
+  /**
+   * Theme accent color in ARGB format
+   * @type {int32} {@link int32}
+   */
+  readonly accent_color?: int32;
+
+  /**
+   * The background to be used in chats; may be null
+   * @type {background} {@link background}
+   */
+  readonly background?: background$Input | null;
+
+  /**
+   * The fill to be used as a background for outgoing messages
+   * @type {BackgroundFill} {@link BackgroundFill}
+   */
+  readonly outgoing_message_fill?: BackgroundFill$Input;
+
+  /**
+   * If true, the freeform gradient fill needs to be animated on every sent message
+   * @type {Bool} {@link Bool}
+   */
+  readonly animate_outgoing_message_fill?: Bool$Input;
+
+  /**
+   * Accent color of outgoing messages in ARGB format
+   * @type {int32} {@link int32}
+   */
+  readonly outgoing_message_accent_color?: int32;
+};
+
+/**
  * A plain text
  */
 export type richTextPlain = {
@@ -22409,7 +22681,7 @@ export type richTextIcon$Input = {
 };
 
 /**
- * A reference to a richTexts object on the same web page
+ * A reference to a richTexts object on the same page
  */
 export type richTextReference = {
   _: "richTextReference";
@@ -22436,7 +22708,7 @@ export type richTextReference = {
 /**
  * Version of {@link richTextReference} for method parameters.
  *
- * A reference to a richTexts object on the same web page
+ * A reference to a richTexts object on the same page
  */
 export type richTextReference$Input = {
   readonly _: "richTextReference";
@@ -22489,7 +22761,7 @@ export type richTextAnchor$Input = {
 };
 
 /**
- * A link to an anchor on the same web page
+ * A link to an anchor on the same page
  */
 export type richTextAnchorLink = {
   _: "richTextAnchorLink";
@@ -22516,7 +22788,7 @@ export type richTextAnchorLink = {
 /**
  * Version of {@link richTextAnchorLink} for method parameters.
  *
- * A link to an anchor on the same web page
+ * A link to an anchor on the same page
  */
 export type richTextAnchorLink$Input = {
   readonly _: "richTextAnchorLink";
@@ -22569,7 +22841,7 @@ export type richTexts$Input = {
 };
 
 /**
- * Contains a caption of an instant view web page block, consisting of a text and a trailing credit
+ * Contains a caption of another block
  */
 export type pageBlockCaption = {
   _: "pageBlockCaption";
@@ -22590,7 +22862,7 @@ export type pageBlockCaption = {
 /**
  * Version of {@link pageBlockCaption} for method parameters.
  *
- * Contains a caption of an instant view web page block, consisting of a text and a trailing credit
+ * Contains a caption of another block
  */
 export type pageBlockCaption$Input = {
   readonly _: "pageBlockCaption";
@@ -23631,7 +23903,7 @@ export type pageBlockEmbedded = {
   _: "pageBlockEmbedded";
 
   /**
-   * Web page URL, if available
+   * URL of the embedded page, if available
    * @type {string} {@link string}
    */
   url: string;
@@ -23688,7 +23960,7 @@ export type pageBlockEmbedded$Input = {
   readonly _: "pageBlockEmbedded";
 
   /**
-   * Web page URL, if available
+   * URL of the embedded page, if available
    * @type {string} {@link string}
    */
   readonly url?: string;
@@ -23743,7 +24015,7 @@ export type pageBlockEmbeddedPost = {
   _: "pageBlockEmbeddedPost";
 
   /**
-   * Web page URL
+   * URL of the embedded post
    * @type {string} {@link string}
    */
   url: string;
@@ -23788,7 +24060,7 @@ export type pageBlockEmbeddedPost$Input = {
   readonly _: "pageBlockEmbeddedPost";
 
   /**
-   * Web page URL
+   * URL of the embedded post
    * @type {string} {@link string}
    */
   readonly url?: string;
@@ -24207,7 +24479,7 @@ export type webPageInstantView = {
   _: "webPageInstantView";
 
   /**
-   * Content of the web page
+   * Content of the instant view page
    * @type {vector<PageBlock>} {@link vector<PageBlock>}
    */
   page_blocks: vector<PageBlock>;
@@ -24231,7 +24503,7 @@ export type webPageInstantView = {
   is_rtl: Bool;
 
   /**
-   * True, if the instant view contains the full page. A network request might be needed to get the full web page instant view
+   * True, if the instant view contains the full page. A network request might be needed to get the full instant view
    * @type {Bool} {@link Bool}
    */
   is_full: Bool;
@@ -24252,7 +24524,7 @@ export type webPageInstantView$Input = {
   readonly _: "webPageInstantView";
 
   /**
-   * Content of the web page
+   * Content of the instant view page
    * @type {vector<PageBlock>} {@link vector<PageBlock>}
    */
   readonly page_blocks?: vector$Input<PageBlock$Input>;
@@ -24276,7 +24548,7 @@ export type webPageInstantView$Input = {
   readonly is_rtl?: Bool$Input;
 
   /**
-   * True, if the instant view contains the full page. A network request might be needed to get the full web page instant view
+   * True, if the instant view contains the full page. A network request might be needed to get the full instant view
    * @type {Bool} {@link Bool}
    */
   readonly is_full?: Bool$Input;
@@ -24289,10 +24561,1126 @@ export type webPageInstantView$Input = {
 };
 
 /**
+ * The media is a photo
+ */
+export type linkPreviewAlbumMediaPhoto = {
+  _: "linkPreviewAlbumMediaPhoto";
+
+  /**
+   * Photo description
+   * @type {photo} {@link photo}
+   */
+  photo: photo;
+};
+
+/**
+ * Version of {@link linkPreviewAlbumMediaPhoto} for method parameters.
+ *
+ * The media is a photo
+ */
+export type linkPreviewAlbumMediaPhoto$Input = {
+  readonly _: "linkPreviewAlbumMediaPhoto";
+
+  /**
+   * Photo description
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input;
+};
+
+/**
+ * The media is a video
+ */
+export type linkPreviewAlbumMediaVideo = {
+  _: "linkPreviewAlbumMediaVideo";
+
+  /**
+   * Video description
+   * @type {video} {@link video}
+   */
+  video: video;
+};
+
+/**
+ * Version of {@link linkPreviewAlbumMediaVideo} for method parameters.
+ *
+ * The media is a video
+ */
+export type linkPreviewAlbumMediaVideo$Input = {
+  readonly _: "linkPreviewAlbumMediaVideo";
+
+  /**
+   * Video description
+   * @type {video} {@link video}
+   */
+  readonly video?: video$Input;
+};
+
+/**
+ * The link is a link to a media album consisting of photos and videos
+ */
+export type linkPreviewTypeAlbum = {
+  _: "linkPreviewTypeAlbum";
+
+  /**
+   * The list of album media
+   * @type {vector<LinkPreviewAlbumMedia>} {@link vector<LinkPreviewAlbumMedia>}
+   */
+  media: vector<LinkPreviewAlbumMedia>;
+
+  /**
+   * Album caption
+   * @type {string} {@link string}
+   */
+  caption: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypeAlbum} for method parameters.
+ *
+ * The link is a link to a media album consisting of photos and videos
+ */
+export type linkPreviewTypeAlbum$Input = {
+  readonly _: "linkPreviewTypeAlbum";
+
+  /**
+   * The list of album media
+   * @type {vector<LinkPreviewAlbumMedia>} {@link vector<LinkPreviewAlbumMedia>}
+   */
+  readonly media?: vector$Input<LinkPreviewAlbumMedia$Input>;
+
+  /**
+   * Album caption
+   * @type {string} {@link string}
+   */
+  readonly caption?: string;
+};
+
+/**
+ * The link is a link to an animation
+ */
+export type linkPreviewTypeAnimation = {
+  _: "linkPreviewTypeAnimation";
+
+  /**
+   * The animation
+   * @type {animation} {@link animation}
+   */
+  animation: animation;
+
+  /**
+   * Author of the animation
+   * @type {string} {@link string}
+   */
+  author: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypeAnimation} for method parameters.
+ *
+ * The link is a link to an animation
+ */
+export type linkPreviewTypeAnimation$Input = {
+  readonly _: "linkPreviewTypeAnimation";
+
+  /**
+   * The animation
+   * @type {animation} {@link animation}
+   */
+  readonly animation?: animation$Input;
+
+  /**
+   * Author of the animation
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+};
+
+/**
+ * The link is a link to an app at App Store or Google Play
+ */
+export type linkPreviewTypeApp = {
+  _: "linkPreviewTypeApp";
+
+  /**
+   * Photo for the app
+   * @type {photo} {@link photo}
+   */
+  photo: photo;
+
+  /**
+   * Author of the app
+   * @type {string} {@link string}
+   */
+  author: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypeApp} for method parameters.
+ *
+ * The link is a link to an app at App Store or Google Play
+ */
+export type linkPreviewTypeApp$Input = {
+  readonly _: "linkPreviewTypeApp";
+
+  /**
+   * Photo for the app
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input;
+
+  /**
+   * Author of the app
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+};
+
+/**
+ * The link is a link to a web site
+ */
+export type linkPreviewTypeArticle = {
+  _: "linkPreviewTypeArticle";
+
+  /**
+   * Article's main photo; may be null
+   * @type {photo} {@link photo}
+   */
+  photo: photo | null;
+
+  /**
+   * Author of the article
+   * @type {string} {@link string}
+   */
+  author: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypeArticle} for method parameters.
+ *
+ * The link is a link to a web site
+ */
+export type linkPreviewTypeArticle$Input = {
+  readonly _: "linkPreviewTypeArticle";
+
+  /**
+   * Article's main photo; may be null
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input | null;
+
+  /**
+   * Author of the article
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+};
+
+/**
+ * The link is a link to an audio
+ */
+export type linkPreviewTypeAudio = {
+  _: "linkPreviewTypeAudio";
+
+  /**
+   * URL of the audio; may be empty if none
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * MIME type of the audio file
+   * @type {string} {@link string}
+   */
+  mime_type: string;
+
+  /**
+   * The audio description; may be null if unknown
+   * @type {audio} {@link audio}
+   */
+  audio: audio | null;
+
+  /**
+   * Duration of the audio, in seconds; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  duration: int32;
+
+  /**
+   * Author of the audio
+   * @type {string} {@link string}
+   */
+  author: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypeAudio} for method parameters.
+ *
+ * The link is a link to an audio
+ */
+export type linkPreviewTypeAudio$Input = {
+  readonly _: "linkPreviewTypeAudio";
+
+  /**
+   * URL of the audio; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * MIME type of the audio file
+   * @type {string} {@link string}
+   */
+  readonly mime_type?: string;
+
+  /**
+   * The audio description; may be null if unknown
+   * @type {audio} {@link audio}
+   */
+  readonly audio?: audio$Input | null;
+
+  /**
+   * Duration of the audio, in seconds; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly duration?: int32;
+
+  /**
+   * Author of the audio
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+};
+
+/**
+ * The link is a link to a background. Link preview title and description are available only for filled backgrounds
+ */
+export type linkPreviewTypeBackground = {
+  _: "linkPreviewTypeBackground";
+
+  /**
+   * Document with the background; may be null for filled backgrounds
+   * @type {document} {@link document}
+   */
+  document: document | null;
+};
+
+/**
+ * Version of {@link linkPreviewTypeBackground} for method parameters.
+ *
+ * The link is a link to a background. Link preview title and description are available only for filled backgrounds
+ */
+export type linkPreviewTypeBackground$Input = {
+  readonly _: "linkPreviewTypeBackground";
+
+  /**
+   * Document with the background; may be null for filled backgrounds
+   * @type {document} {@link document}
+   */
+  readonly document?: document$Input | null;
+};
+
+/**
+ * The link is a link to boost a channel chat
+ */
+export type linkPreviewTypeChannelBoost = {
+  _: "linkPreviewTypeChannelBoost";
+
+  /**
+   * Photo of the chat; may be null
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  photo: chatPhoto | null;
+};
+
+/**
+ * Version of {@link linkPreviewTypeChannelBoost} for method parameters.
+ *
+ * The link is a link to boost a channel chat
+ */
+export type linkPreviewTypeChannelBoost$Input = {
+  readonly _: "linkPreviewTypeChannelBoost";
+
+  /**
+   * Photo of the chat; may be null
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  readonly photo?: chatPhoto$Input | null;
+};
+
+/**
+ * The link is a link to a chat
+ */
+export type linkPreviewTypeChat = {
+  _: "linkPreviewTypeChat";
+
+  /**
+   * Type of the chat
+   * @type {InviteLinkChatType} {@link InviteLinkChatType}
+   */
+  type: InviteLinkChatType;
+
+  /**
+   * Photo of the chat; may be null
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  photo: chatPhoto | null;
+
+  /**
+   * True, if the link only creates join request
+   * @type {Bool} {@link Bool}
+   */
+  creates_join_request: Bool;
+};
+
+/**
+ * Version of {@link linkPreviewTypeChat} for method parameters.
+ *
+ * The link is a link to a chat
+ */
+export type linkPreviewTypeChat$Input = {
+  readonly _: "linkPreviewTypeChat";
+
+  /**
+   * Type of the chat
+   * @type {InviteLinkChatType} {@link InviteLinkChatType}
+   */
+  readonly type?: InviteLinkChatType$Input;
+
+  /**
+   * Photo of the chat; may be null
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  readonly photo?: chatPhoto$Input | null;
+
+  /**
+   * True, if the link only creates join request
+   * @type {Bool} {@link Bool}
+   */
+  readonly creates_join_request?: Bool$Input;
+};
+
+/**
+ * The link is a link to a general file
+ */
+export type linkPreviewTypeDocument = {
+  _: "linkPreviewTypeDocument";
+
+  /**
+   * The document description
+   * @type {document} {@link document}
+   */
+  document: document;
+
+  /**
+   * Author of the document
+   * @type {string} {@link string}
+   */
+  author: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypeDocument} for method parameters.
+ *
+ * The link is a link to a general file
+ */
+export type linkPreviewTypeDocument$Input = {
+  readonly _: "linkPreviewTypeDocument";
+
+  /**
+   * The document description
+   * @type {document} {@link document}
+   */
+  readonly document?: document$Input;
+
+  /**
+   * Author of the document
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+};
+
+/**
+ * The link is a link to an audio player
+ */
+export type linkPreviewTypeEmbeddedAudioPlayer = {
+  _: "linkPreviewTypeEmbeddedAudioPlayer";
+
+  /**
+   * URL of the external audio player
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * Duration of the audio, in seconds
+   * @type {int32} {@link int32}
+   */
+  duration: int32;
+
+  /**
+   * Author of the audio
+   * @type {string} {@link string}
+   */
+  author: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypeEmbeddedAudioPlayer} for method parameters.
+ *
+ * The link is a link to an audio player
+ */
+export type linkPreviewTypeEmbeddedAudioPlayer$Input = {
+  readonly _: "linkPreviewTypeEmbeddedAudioPlayer";
+
+  /**
+   * URL of the external audio player
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * Duration of the audio, in seconds
+   * @type {int32} {@link int32}
+   */
+  readonly duration?: int32;
+
+  /**
+   * Author of the audio
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+};
+
+/**
+ * The link is a link to a video player
+ */
+export type linkPreviewTypeEmbeddedVideoPlayer = {
+  _: "linkPreviewTypeEmbeddedVideoPlayer";
+
+  /**
+   * URL of the external video player
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * Duration of the video, in seconds
+   * @type {int32} {@link int32}
+   */
+  duration: int32;
+
+  /**
+   * Author of the video
+   * @type {string} {@link string}
+   */
+  author: string;
+
+  /**
+   * Expected width of the preview
+   * @type {int32} {@link int32}
+   */
+  width: int32;
+
+  /**
+   * Expected height of the preview
+   * @type {int32} {@link int32}
+   */
+  height: int32;
+};
+
+/**
+ * Version of {@link linkPreviewTypeEmbeddedVideoPlayer} for method parameters.
+ *
+ * The link is a link to a video player
+ */
+export type linkPreviewTypeEmbeddedVideoPlayer$Input = {
+  readonly _: "linkPreviewTypeEmbeddedVideoPlayer";
+
+  /**
+   * URL of the external video player
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * Duration of the video, in seconds
+   * @type {int32} {@link int32}
+   */
+  readonly duration?: int32;
+
+  /**
+   * Author of the video
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+
+  /**
+   * Expected width of the preview
+   * @type {int32} {@link int32}
+   */
+  readonly width?: int32;
+
+  /**
+   * Expected height of the preview
+   * @type {int32} {@link int32}
+   */
+  readonly height?: int32;
+};
+
+/**
+ * The link is a link to an invoice
+ */
+export type linkPreviewTypeInvoice = {
+  _: "linkPreviewTypeInvoice";
+};
+
+/**
+ * Version of {@link linkPreviewTypeInvoice} for method parameters.
+ *
+ * The link is a link to an invoice
+ */
+export type linkPreviewTypeInvoice$Input = {
+  readonly _: "linkPreviewTypeInvoice";
+};
+
+/**
+ * The link is a link to a text or a poll Telegram message
+ */
+export type linkPreviewTypeMessage = {
+  _: "linkPreviewTypeMessage";
+};
+
+/**
+ * Version of {@link linkPreviewTypeMessage} for method parameters.
+ *
+ * The link is a link to a text or a poll Telegram message
+ */
+export type linkPreviewTypeMessage$Input = {
+  readonly _: "linkPreviewTypeMessage";
+};
+
+/**
+ * The link is a link to a photo
+ */
+export type linkPreviewTypePhoto = {
+  _: "linkPreviewTypePhoto";
+
+  /**
+   * The photo
+   * @type {photo} {@link photo}
+   */
+  photo: photo;
+
+  /**
+   * Author of the photo
+   * @type {string} {@link string}
+   */
+  author: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypePhoto} for method parameters.
+ *
+ * The link is a link to a photo
+ */
+export type linkPreviewTypePhoto$Input = {
+  readonly _: "linkPreviewTypePhoto";
+
+  /**
+   * The photo
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input;
+
+  /**
+   * Author of the photo
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+};
+
+/**
+ * The link is a link to a Telegram Premium gift code
+ */
+export type linkPreviewTypePremiumGiftCode = {
+  _: "linkPreviewTypePremiumGiftCode";
+};
+
+/**
+ * Version of {@link linkPreviewTypePremiumGiftCode} for method parameters.
+ *
+ * The link is a link to a Telegram Premium gift code
+ */
+export type linkPreviewTypePremiumGiftCode$Input = {
+  readonly _: "linkPreviewTypePremiumGiftCode";
+};
+
+/**
+ * The link is a link to a shareable chat folder
+ */
+export type linkPreviewTypeShareableChatFolder = {
+  _: "linkPreviewTypeShareableChatFolder";
+};
+
+/**
+ * Version of {@link linkPreviewTypeShareableChatFolder} for method parameters.
+ *
+ * The link is a link to a shareable chat folder
+ */
+export type linkPreviewTypeShareableChatFolder$Input = {
+  readonly _: "linkPreviewTypeShareableChatFolder";
+};
+
+/**
+ * The link is a link to a sticker message
+ */
+export type linkPreviewTypeSticker = {
+  _: "linkPreviewTypeSticker";
+
+  /**
+   * The sticker
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker;
+};
+
+/**
+ * Version of {@link linkPreviewTypeSticker} for method parameters.
+ *
+ * The link is a link to a sticker message
+ */
+export type linkPreviewTypeSticker$Input = {
+  readonly _: "linkPreviewTypeSticker";
+
+  /**
+   * The sticker
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input;
+};
+
+/**
+ * The link is a link to a sticker set
+ */
+export type linkPreviewTypeStickerSet = {
+  _: "linkPreviewTypeStickerSet";
+
+  /**
+   * Up to 4 stickers from the sticker set
+   * @type {vector<sticker>} {@link vector<sticker>}
+   */
+  stickers: vector<sticker>;
+};
+
+/**
+ * Version of {@link linkPreviewTypeStickerSet} for method parameters.
+ *
+ * The link is a link to a sticker set
+ */
+export type linkPreviewTypeStickerSet$Input = {
+  readonly _: "linkPreviewTypeStickerSet";
+
+  /**
+   * Up to 4 stickers from the sticker set
+   * @type {vector<sticker>} {@link vector<sticker>}
+   */
+  readonly stickers?: vector$Input<sticker$Input>;
+};
+
+/**
+ * The link is a link to a story. Link preview description is unavailable
+ */
+export type linkPreviewTypeStory = {
+  _: "linkPreviewTypeStory";
+
+  /**
+   * The identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  story_sender_chat_id: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  story_id: int32;
+};
+
+/**
+ * Version of {@link linkPreviewTypeStory} for method parameters.
+ *
+ * The link is a link to a story. Link preview description is unavailable
+ */
+export type linkPreviewTypeStory$Input = {
+  readonly _: "linkPreviewTypeStory";
+
+  /**
+   * The identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
+   * Story identifier
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+};
+
+/**
+ * The link is a link to boost a supergroup chat
+ */
+export type linkPreviewTypeSupergroupBoost = {
+  _: "linkPreviewTypeSupergroupBoost";
+
+  /**
+   * Photo of the chat; may be null
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  photo: chatPhoto | null;
+};
+
+/**
+ * Version of {@link linkPreviewTypeSupergroupBoost} for method parameters.
+ *
+ * The link is a link to boost a supergroup chat
+ */
+export type linkPreviewTypeSupergroupBoost$Input = {
+  readonly _: "linkPreviewTypeSupergroupBoost";
+
+  /**
+   * Photo of the chat; may be null
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  readonly photo?: chatPhoto$Input | null;
+};
+
+/**
+ * The link is a link to a cloud theme. TDLib has no theme support yet
+ */
+export type linkPreviewTypeTheme = {
+  _: "linkPreviewTypeTheme";
+
+  /**
+   * The list of files with theme description
+   * @type {vector<document>} {@link vector<document>}
+   */
+  documents: vector<document>;
+
+  /**
+   * Settings for the cloud theme
+   * @type {themeSettings} {@link themeSettings}
+   */
+  settings: themeSettings;
+};
+
+/**
+ * Version of {@link linkPreviewTypeTheme} for method parameters.
+ *
+ * The link is a link to a cloud theme. TDLib has no theme support yet
+ */
+export type linkPreviewTypeTheme$Input = {
+  readonly _: "linkPreviewTypeTheme";
+
+  /**
+   * The list of files with theme description
+   * @type {vector<document>} {@link vector<document>}
+   */
+  readonly documents?: vector$Input<document$Input>;
+
+  /**
+   * Settings for the cloud theme
+   * @type {themeSettings} {@link themeSettings}
+   */
+  readonly settings?: themeSettings$Input;
+};
+
+/**
+ * The link preview type is unsupported yet
+ */
+export type linkPreviewTypeUnsupported = {
+  _: "linkPreviewTypeUnsupported";
+};
+
+/**
+ * Version of {@link linkPreviewTypeUnsupported} for method parameters.
+ *
+ * The link preview type is unsupported yet
+ */
+export type linkPreviewTypeUnsupported$Input = {
+  readonly _: "linkPreviewTypeUnsupported";
+};
+
+/**
+ * The link is a link to a user
+ */
+export type linkPreviewTypeUser = {
+  _: "linkPreviewTypeUser";
+
+  /**
+   * Photo of the user; may be null if none
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  photo: chatPhoto | null;
+
+  /**
+   * True, if the user is a bot
+   * @type {Bool} {@link Bool}
+   */
+  is_bot: Bool;
+};
+
+/**
+ * Version of {@link linkPreviewTypeUser} for method parameters.
+ *
+ * The link is a link to a user
+ */
+export type linkPreviewTypeUser$Input = {
+  readonly _: "linkPreviewTypeUser";
+
+  /**
+   * Photo of the user; may be null if none
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  readonly photo?: chatPhoto$Input | null;
+
+  /**
+   * True, if the user is a bot
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_bot?: Bool$Input;
+};
+
+/**
+ * The link is a link to a video
+ */
+export type linkPreviewTypeVideo = {
+  _: "linkPreviewTypeVideo";
+
+  /**
+   * URL of the video; may be empty if none
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * MIME type of the video file
+   * @type {string} {@link string}
+   */
+  mime_type: string;
+
+  /**
+   * The video description; may be null if unknown
+   * @type {video} {@link video}
+   */
+  video: video | null;
+
+  /**
+   * Expected width of the preview
+   * @type {int32} {@link int32}
+   */
+  width: int32;
+
+  /**
+   * Expected height of the preview
+   * @type {int32} {@link int32}
+   */
+  height: int32;
+
+  /**
+   * Duration of the video, in seconds; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  duration: int32;
+
+  /**
+   * Author of the video
+   * @type {string} {@link string}
+   */
+  author: string;
+};
+
+/**
+ * Version of {@link linkPreviewTypeVideo} for method parameters.
+ *
+ * The link is a link to a video
+ */
+export type linkPreviewTypeVideo$Input = {
+  readonly _: "linkPreviewTypeVideo";
+
+  /**
+   * URL of the video; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * MIME type of the video file
+   * @type {string} {@link string}
+   */
+  readonly mime_type?: string;
+
+  /**
+   * The video description; may be null if unknown
+   * @type {video} {@link video}
+   */
+  readonly video?: video$Input | null;
+
+  /**
+   * Expected width of the preview
+   * @type {int32} {@link int32}
+   */
+  readonly width?: int32;
+
+  /**
+   * Expected height of the preview
+   * @type {int32} {@link int32}
+   */
+  readonly height?: int32;
+
+  /**
+   * Duration of the video, in seconds; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly duration?: int32;
+
+  /**
+   * Author of the video
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
+};
+
+/**
+ * The link is a link to a video chat
+ */
+export type linkPreviewTypeVideoChat = {
+  _: "linkPreviewTypeVideoChat";
+
+  /**
+   * Photo of the chat with the video chat; may be null if none
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  photo: chatPhoto | null;
+
+  /**
+   * True, if the video chat is expected to be a live stream in a channel or a broadcast group
+   * @type {Bool} {@link Bool}
+   */
+  is_live_stream: Bool;
+};
+
+/**
+ * Version of {@link linkPreviewTypeVideoChat} for method parameters.
+ *
+ * The link is a link to a video chat
+ */
+export type linkPreviewTypeVideoChat$Input = {
+  readonly _: "linkPreviewTypeVideoChat";
+
+  /**
+   * Photo of the chat with the video chat; may be null if none
+   * @type {chatPhoto} {@link chatPhoto}
+   */
+  readonly photo?: chatPhoto$Input | null;
+
+  /**
+   * True, if the video chat is expected to be a live stream in a channel or a broadcast group
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_live_stream?: Bool$Input;
+};
+
+/**
+ * The link is a link to a video note message
+ */
+export type linkPreviewTypeVideoNote = {
+  _: "linkPreviewTypeVideoNote";
+
+  /**
+   * The video note
+   * @type {videoNote} {@link videoNote}
+   */
+  video_note: videoNote;
+};
+
+/**
+ * Version of {@link linkPreviewTypeVideoNote} for method parameters.
+ *
+ * The link is a link to a video note message
+ */
+export type linkPreviewTypeVideoNote$Input = {
+  readonly _: "linkPreviewTypeVideoNote";
+
+  /**
+   * The video note
+   * @type {videoNote} {@link videoNote}
+   */
+  readonly video_note?: videoNote$Input;
+};
+
+/**
+ * The link is a link to a voice note message
+ */
+export type linkPreviewTypeVoiceNote = {
+  _: "linkPreviewTypeVoiceNote";
+
+  /**
+   * The voice note
+   * @type {voiceNote} {@link voiceNote}
+   */
+  voice_note: voiceNote;
+};
+
+/**
+ * Version of {@link linkPreviewTypeVoiceNote} for method parameters.
+ *
+ * The link is a link to a voice note message
+ */
+export type linkPreviewTypeVoiceNote$Input = {
+  readonly _: "linkPreviewTypeVoiceNote";
+
+  /**
+   * The voice note
+   * @type {voiceNote} {@link voiceNote}
+   */
+  readonly voice_note?: voiceNote$Input;
+};
+
+/**
+ * The link is a link to a Web App
+ */
+export type linkPreviewTypeWebApp = {
+  _: "linkPreviewTypeWebApp";
+
+  /**
+   * Web App photo
+   * @type {photo} {@link photo}
+   */
+  photo: photo;
+};
+
+/**
+ * Version of {@link linkPreviewTypeWebApp} for method parameters.
+ *
+ * The link is a link to a Web App
+ */
+export type linkPreviewTypeWebApp$Input = {
+  readonly _: "linkPreviewTypeWebApp";
+
+  /**
+   * Web App photo
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input;
+};
+
+/**
  * Describes a link preview
  */
-export type webPage = {
-  _: "webPage";
+export type linkPreview = {
+  _: "linkPreview";
 
   /**
    * Original URL of the link
@@ -24305,12 +25693,6 @@ export type webPage = {
    * @type {string} {@link string}
    */
   display_url: string;
-
-  /**
-   * Type of the web page. Can be: article, photo, audio, video, document, profile, app, or something else
-   * @type {string} {@link string}
-   */
-  type: string;
 
   /**
    * Short name of the site (e.g., Google Docs, App Store)
@@ -24331,46 +25713,10 @@ export type webPage = {
   description: formattedText;
 
   /**
-   * Image representing the content; may be null
-   * @type {photo} {@link photo}
+   * Type of the link preview
+   * @type {LinkPreviewType} {@link LinkPreviewType}
    */
-  photo: photo | null;
-
-  /**
-   * URL to show in the embedded preview
-   * @type {string} {@link string}
-   */
-  embed_url: string;
-
-  /**
-   * MIME type of the embedded preview, (e.g., text/html or video/mp4)
-   * @type {string} {@link string}
-   */
-  embed_type: string;
-
-  /**
-   * Width of the embedded preview
-   * @type {int32} {@link int32}
-   */
-  embed_width: int32;
-
-  /**
-   * Height of the embedded preview
-   * @type {int32} {@link int32}
-   */
-  embed_height: int32;
-
-  /**
-   * Duration of the content, in seconds
-   * @type {int32} {@link int32}
-   */
-  duration: int32;
-
-  /**
-   * Author of the content
-   * @type {string} {@link string}
-   */
-  author: string;
+  type: LinkPreviewType;
 
   /**
    * True, if size of media in the preview can be changed
@@ -24397,79 +25743,19 @@ export type webPage = {
   show_above_text: Bool;
 
   /**
-   * Preview of the content as an animation, if available; may be null
-   * @type {animation} {@link animation}
-   */
-  animation: animation | null;
-
-  /**
-   * Preview of the content as an audio file, if available; may be null
-   * @type {audio} {@link audio}
-   */
-  audio: audio | null;
-
-  /**
-   * Preview of the content as a document, if available; may be null
-   * @type {document} {@link document}
-   */
-  document: document | null;
-
-  /**
-   * Preview of the content as a sticker for small WEBP files, if available; may be null
-   * @type {sticker} {@link sticker}
-   */
-  sticker: sticker | null;
-
-  /**
-   * Preview of the content as a video, if available; may be null
-   * @type {video} {@link video}
-   */
-  video: video | null;
-
-  /**
-   * Preview of the content as a video note, if available; may be null
-   * @type {videoNote} {@link videoNote}
-   */
-  video_note: videoNote | null;
-
-  /**
-   * Preview of the content as a voice note, if available; may be null
-   * @type {voiceNote} {@link voiceNote}
-   */
-  voice_note: voiceNote | null;
-
-  /**
-   * The identifier of the sender of the previewed story; 0 if none
-   * @type {int53} {@link int53}
-   */
-  story_sender_chat_id: int53;
-
-  /**
-   * The identifier of the previewed story; 0 if none
-   * @type {int32} {@link int32}
-   */
-  story_id: int32;
-
-  /**
-   * Up to 4 stickers from the sticker set available via the link
-   * @type {vector<sticker>} {@link vector<sticker>}
-   */
-  stickers: vector<sticker>;
-
-  /**
-   * Version of web page instant view (currently, can be 1 or 2); 0 if none
+   * Version of instant view (currently, can be 1 or 2) for the web page; 0 if none
    * @type {int32} {@link int32}
    */
   instant_view_version: int32;
 };
 
 /**
- * Version of {@link webPage} for method parameters.
+ * Version of {@link linkPreview} for method parameters.
  *
  * Describes a link preview
  */
-export type webPage$Input = {
-  readonly _: "webPage";
+export type linkPreview$Input = {
+  readonly _: "linkPreview";
 
   /**
    * Original URL of the link
@@ -24482,12 +25768,6 @@ export type webPage$Input = {
    * @type {string} {@link string}
    */
   readonly display_url?: string;
-
-  /**
-   * Type of the web page. Can be: article, photo, audio, video, document, profile, app, or something else
-   * @type {string} {@link string}
-   */
-  readonly type?: string;
 
   /**
    * Short name of the site (e.g., Google Docs, App Store)
@@ -24508,46 +25788,10 @@ export type webPage$Input = {
   readonly description?: formattedText$Input;
 
   /**
-   * Image representing the content; may be null
-   * @type {photo} {@link photo}
+   * Type of the link preview
+   * @type {LinkPreviewType} {@link LinkPreviewType}
    */
-  readonly photo?: photo$Input | null;
-
-  /**
-   * URL to show in the embedded preview
-   * @type {string} {@link string}
-   */
-  readonly embed_url?: string;
-
-  /**
-   * MIME type of the embedded preview, (e.g., text/html or video/mp4)
-   * @type {string} {@link string}
-   */
-  readonly embed_type?: string;
-
-  /**
-   * Width of the embedded preview
-   * @type {int32} {@link int32}
-   */
-  readonly embed_width?: int32;
-
-  /**
-   * Height of the embedded preview
-   * @type {int32} {@link int32}
-   */
-  readonly embed_height?: int32;
-
-  /**
-   * Duration of the content, in seconds
-   * @type {int32} {@link int32}
-   */
-  readonly duration?: int32;
-
-  /**
-   * Author of the content
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
+  readonly type?: LinkPreviewType$Input;
 
   /**
    * True, if size of media in the preview can be changed
@@ -24574,67 +25818,7 @@ export type webPage$Input = {
   readonly show_above_text?: Bool$Input;
 
   /**
-   * Preview of the content as an animation, if available; may be null
-   * @type {animation} {@link animation}
-   */
-  readonly animation?: animation$Input | null;
-
-  /**
-   * Preview of the content as an audio file, if available; may be null
-   * @type {audio} {@link audio}
-   */
-  readonly audio?: audio$Input | null;
-
-  /**
-   * Preview of the content as a document, if available; may be null
-   * @type {document} {@link document}
-   */
-  readonly document?: document$Input | null;
-
-  /**
-   * Preview of the content as a sticker for small WEBP files, if available; may be null
-   * @type {sticker} {@link sticker}
-   */
-  readonly sticker?: sticker$Input | null;
-
-  /**
-   * Preview of the content as a video, if available; may be null
-   * @type {video} {@link video}
-   */
-  readonly video?: video$Input | null;
-
-  /**
-   * Preview of the content as a video note, if available; may be null
-   * @type {videoNote} {@link videoNote}
-   */
-  readonly video_note?: videoNote$Input | null;
-
-  /**
-   * Preview of the content as a voice note, if available; may be null
-   * @type {voiceNote} {@link voiceNote}
-   */
-  readonly voice_note?: voiceNote$Input | null;
-
-  /**
-   * The identifier of the sender of the previewed story; 0 if none
-   * @type {int53} {@link int53}
-   */
-  readonly story_sender_chat_id?: int53;
-
-  /**
-   * The identifier of the previewed story; 0 if none
-   * @type {int32} {@link int32}
-   */
-  readonly story_id?: int32;
-
-  /**
-   * Up to 4 stickers from the sticker set available via the link
-   * @type {vector<sticker>} {@link vector<sticker>}
-   */
-  readonly stickers?: vector$Input<sticker$Input>;
-
-  /**
-   * Version of web page instant view (currently, can be 1 or 2); 0 if none
+   * Version of instant view (currently, can be 1 or 2) for the web page; 0 if none
    * @type {int32} {@link int32}
    */
   readonly instant_view_version?: int32;
@@ -25215,6 +26399,12 @@ export type themeParameters = {
   section_background_color: int32;
 
   /**
+   * A color of the section separator in the RGB24 format
+   * @type {int32} {@link int32}
+   */
+  section_separator_color: int32;
+
+  /**
    * A color of text in the RGB24 format
    * @type {int32} {@link int32}
    */
@@ -25300,6 +26490,12 @@ export type themeParameters$Input = {
    * @type {int32} {@link int32}
    */
   readonly section_background_color?: int32;
+
+  /**
+   * A color of the section separator in the RGB24 format
+   * @type {int32} {@link int32}
+   */
+  readonly section_separator_color?: int32;
 
   /**
    * A color of text in the RGB24 format
@@ -26509,7 +27705,7 @@ export type paymentReceipt$Input = {
 };
 
 /**
- * An invoice from a message of the type messageInvoice
+ * An invoice from a message of the type messageInvoice or paid media purchase from messagePaidMedia
  */
 export type inputInvoiceMessage = {
   _: "inputInvoiceMessage";
@@ -26530,7 +27726,7 @@ export type inputInvoiceMessage = {
 /**
  * Version of {@link inputInvoiceMessage} for method parameters.
  *
- * An invoice from a message of the type messageInvoice
+ * An invoice from a message of the type messageInvoice or paid media purchase from messagePaidMedia
  */
 export type inputInvoiceMessage$Input = {
   readonly _: "inputInvoiceMessage";
@@ -26607,8 +27803,8 @@ export type inputInvoiceTelegram$Input = {
 /**
  * The media is hidden until the invoice is paid
  */
-export type messageExtendedMediaPreview = {
-  _: "messageExtendedMediaPreview";
+export type paidMediaPreview = {
+  _: "paidMediaPreview";
 
   /**
    * Media width; 0 if unknown
@@ -26633,21 +27829,15 @@ export type messageExtendedMediaPreview = {
    * @type {minithumbnail} {@link minithumbnail}
    */
   minithumbnail: minithumbnail | null;
-
-  /**
-   * Media caption
-   * @type {formattedText} {@link formattedText}
-   */
-  caption: formattedText;
 };
 
 /**
- * Version of {@link messageExtendedMediaPreview} for method parameters.
+ * Version of {@link paidMediaPreview} for method parameters.
  *
  * The media is hidden until the invoice is paid
  */
-export type messageExtendedMediaPreview$Input = {
-  readonly _: "messageExtendedMediaPreview";
+export type paidMediaPreview$Input = {
+  readonly _: "paidMediaPreview";
 
   /**
    * Media width; 0 if unknown
@@ -26672,120 +27862,78 @@ export type messageExtendedMediaPreview$Input = {
    * @type {minithumbnail} {@link minithumbnail}
    */
   readonly minithumbnail?: minithumbnail$Input | null;
-
-  /**
-   * Media caption
-   * @type {formattedText} {@link formattedText}
-   */
-  readonly caption?: formattedText$Input;
 };
 
 /**
  * The media is a photo
  */
-export type messageExtendedMediaPhoto = {
-  _: "messageExtendedMediaPhoto";
+export type paidMediaPhoto = {
+  _: "paidMediaPhoto";
 
   /**
    * The photo
    * @type {photo} {@link photo}
    */
   photo: photo;
-
-  /**
-   * Photo caption
-   * @type {formattedText} {@link formattedText}
-   */
-  caption: formattedText;
 };
 
 /**
- * Version of {@link messageExtendedMediaPhoto} for method parameters.
+ * Version of {@link paidMediaPhoto} for method parameters.
  *
  * The media is a photo
  */
-export type messageExtendedMediaPhoto$Input = {
-  readonly _: "messageExtendedMediaPhoto";
+export type paidMediaPhoto$Input = {
+  readonly _: "paidMediaPhoto";
 
   /**
    * The photo
    * @type {photo} {@link photo}
    */
   readonly photo?: photo$Input;
-
-  /**
-   * Photo caption
-   * @type {formattedText} {@link formattedText}
-   */
-  readonly caption?: formattedText$Input;
 };
 
 /**
  * The media is a video
  */
-export type messageExtendedMediaVideo = {
-  _: "messageExtendedMediaVideo";
+export type paidMediaVideo = {
+  _: "paidMediaVideo";
 
   /**
    * The video
    * @type {video} {@link video}
    */
   video: video;
-
-  /**
-   * Photo caption
-   * @type {formattedText} {@link formattedText}
-   */
-  caption: formattedText;
 };
 
 /**
- * Version of {@link messageExtendedMediaVideo} for method parameters.
+ * Version of {@link paidMediaVideo} for method parameters.
  *
  * The media is a video
  */
-export type messageExtendedMediaVideo$Input = {
-  readonly _: "messageExtendedMediaVideo";
+export type paidMediaVideo$Input = {
+  readonly _: "paidMediaVideo";
 
   /**
    * The video
    * @type {video} {@link video}
    */
   readonly video?: video$Input;
-
-  /**
-   * Photo caption
-   * @type {formattedText} {@link formattedText}
-   */
-  readonly caption?: formattedText$Input;
 };
 
 /**
  * The media is unsupported
  */
-export type messageExtendedMediaUnsupported = {
-  _: "messageExtendedMediaUnsupported";
-
-  /**
-   * Media caption
-   * @type {formattedText} {@link formattedText}
-   */
-  caption: formattedText;
+export type paidMediaUnsupported = {
+  _: "paidMediaUnsupported";
 };
 
 /**
- * Version of {@link messageExtendedMediaUnsupported} for method parameters.
+ * Version of {@link paidMediaUnsupported} for method parameters.
  *
  * The media is unsupported
  */
-export type messageExtendedMediaUnsupported$Input = {
-  readonly _: "messageExtendedMediaUnsupported";
-
-  /**
-   * Media caption
-   * @type {formattedText} {@link formattedText}
-   */
-  readonly caption?: formattedText$Input;
+export type paidMediaUnsupported$Input = {
+  readonly _: "paidMediaUnsupported";
 };
 
 /**
@@ -29266,9 +30414,9 @@ export type messageText = {
 
   /**
    * A link preview attached to the message; may be null
-   * @type {webPage} {@link webPage}
+   * @type {linkPreview} {@link linkPreview}
    */
-  web_page: webPage | null;
+  link_preview: linkPreview | null;
 
   /**
    * Options which were used for generation of the link preview; may be null if default options were used
@@ -29293,9 +30441,9 @@ export type messageText$Input = {
 
   /**
    * A link preview attached to the message; may be null
-   * @type {webPage} {@link webPage}
+   * @type {linkPreview} {@link linkPreview}
    */
-  readonly web_page?: webPage$Input | null;
+  readonly link_preview?: linkPreview$Input | null;
 
   /**
    * Options which were used for generation of the link preview; may be null if default options were used
@@ -29323,7 +30471,7 @@ export type messageAnimation = {
   caption: formattedText;
 
   /**
-   * True, if caption must be shown above the animation; otherwise, caption must be shown below the animation
+   * True, if the caption must be shown above the animation; otherwise, the caption must be shown below the animation
    * @type {Bool} {@link Bool}
    */
   show_caption_above_media: Bool;
@@ -29362,7 +30510,7 @@ export type messageAnimation$Input = {
   readonly caption?: formattedText$Input;
 
   /**
-   * True, if caption must be shown above the animation; otherwise, caption must be shown below the animation
+   * True, if the caption must be shown above the animation; otherwise, the caption must be shown below the animation
    * @type {Bool} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -29461,6 +30609,70 @@ export type messageDocument$Input = {
 };
 
 /**
+ * A message with paid media
+ */
+export type messagePaidMedia = {
+  _: "messagePaidMedia";
+
+  /**
+   * Number of stars needed to buy access to the media in the message
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * Information about the media
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
+   */
+  media: vector<PaidMedia>;
+
+  /**
+   * Media caption
+   * @type {formattedText} {@link formattedText}
+   */
+  caption: formattedText;
+
+  /**
+   * True, if the caption must be shown above the media; otherwise, the caption must be shown below the media
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+};
+
+/**
+ * Version of {@link messagePaidMedia} for method parameters.
+ *
+ * A message with paid media
+ */
+export type messagePaidMedia$Input = {
+  readonly _: "messagePaidMedia";
+
+  /**
+   * Number of stars needed to buy access to the media in the message
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * Information about the media
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
+   */
+  readonly media?: vector$Input<PaidMedia$Input>;
+
+  /**
+   * Media caption
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input;
+
+  /**
+   * True, if the caption must be shown above the media; otherwise, the caption must be shown below the media
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
+};
+
+/**
  * A photo message
  */
 export type messagePhoto = {
@@ -29479,7 +30691,7 @@ export type messagePhoto = {
   caption: formattedText;
 
   /**
-   * True, if caption must be shown above the photo; otherwise, caption must be shown below the photo
+   * True, if the caption must be shown above the photo; otherwise, the caption must be shown below the photo
    * @type {Bool} {@link Bool}
    */
   show_caption_above_media: Bool;
@@ -29518,7 +30730,7 @@ export type messagePhoto$Input = {
   readonly caption?: formattedText$Input;
 
   /**
-   * True, if caption must be shown above the photo; otherwise, caption must be shown below the photo
+   * True, if the caption must be shown above the photo; otherwise, the caption must be shown below the photo
    * @type {Bool} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -29595,7 +30807,7 @@ export type messageVideo = {
   caption: formattedText;
 
   /**
-   * True, if caption must be shown above the video; otherwise, caption must be shown below the video
+   * True, if the caption must be shown above the video; otherwise, the caption must be shown below the video
    * @type {Bool} {@link Bool}
    */
   show_caption_above_media: Bool;
@@ -29634,7 +30846,7 @@ export type messageVideo$Input = {
   readonly caption?: formattedText$Input;
 
   /**
-   * True, if caption must be shown above the video; otherwise, caption must be shown below the video
+   * True, if the caption must be shown above the video; otherwise, the caption must be shown below the video
    * @type {Bool} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -30225,10 +31437,16 @@ export type messageInvoice = {
   receipt_message_id: int53;
 
   /**
-   * Extended media attached to the invoice; may be null
-   * @type {MessageExtendedMedia} {@link MessageExtendedMedia}
+   * Extended media attached to the invoice; may be null if none
+   * @type {PaidMedia} {@link PaidMedia}
    */
-  extended_media: MessageExtendedMedia | null;
+  paid_media: PaidMedia | null;
+
+  /**
+   * Extended media caption; may be null if none
+   * @type {formattedText} {@link formattedText}
+   */
+  paid_media_caption: formattedText | null;
 };
 
 /**
@@ -30282,10 +31500,16 @@ export type messageInvoice$Input = {
   readonly receipt_message_id?: int53;
 
   /**
-   * Extended media attached to the invoice; may be null
-   * @type {MessageExtendedMedia} {@link MessageExtendedMedia}
+   * Extended media attached to the invoice; may be null if none
+   * @type {PaidMedia} {@link PaidMedia}
    */
-  readonly extended_media?: MessageExtendedMedia$Input | null;
+  readonly paid_media?: PaidMedia$Input | null;
+
+  /**
+   * Extended media caption; may be null if none
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly paid_media_caption?: formattedText$Input | null;
 };
 
 /**
@@ -31445,6 +32669,94 @@ export type messagePaymentSuccessfulBot$Input = {
 };
 
 /**
+ * A payment has been refunded
+ */
+export type messagePaymentRefunded = {
+  _: "messagePaymentRefunded";
+
+  /**
+   * Identifier of the previous owner of the Telegram stars that refunds them
+   * @type {MessageSender} {@link MessageSender}
+   */
+  owner_id: MessageSender;
+
+  /**
+   * Currency for the price of the product
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * Total price for the product, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  total_amount: int53;
+
+  /**
+   * Invoice payload; only for bots
+   * @type {bytes} {@link bytes}
+   */
+  invoice_payload: bytes;
+
+  /**
+   * Telegram payment identifier
+   * @type {string} {@link string}
+   */
+  telegram_payment_charge_id: string;
+
+  /**
+   * Provider payment identifier
+   * @type {string} {@link string}
+   */
+  provider_payment_charge_id: string;
+};
+
+/**
+ * Version of {@link messagePaymentRefunded} for method parameters.
+ *
+ * A payment has been refunded
+ */
+export type messagePaymentRefunded$Input = {
+  readonly _: "messagePaymentRefunded";
+
+  /**
+   * Identifier of the previous owner of the Telegram stars that refunds them
+   * @type {MessageSender} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input;
+
+  /**
+   * Currency for the price of the product
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * Total price for the product, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly total_amount?: int53;
+
+  /**
+   * Invoice payload; only for bots
+   * @type {bytes} {@link bytes}
+   */
+  readonly invoice_payload?: bytes$Input;
+
+  /**
+   * Telegram payment identifier
+   * @type {string} {@link string}
+   */
+  readonly telegram_payment_charge_id?: string;
+
+  /**
+   * Provider payment identifier
+   * @type {string} {@link string}
+   */
+  readonly provider_payment_charge_id?: string;
+};
+
+/**
  * Telegram Premium was gifted to the user
  */
 export type messageGiftedPremium = {
@@ -31681,7 +32993,7 @@ export type messagePremiumGiftCode$Input = {
 };
 
 /**
- * A Telegram Premium giveaway was created for the chat
+ * A Telegram Premium giveaway was created for the chat. Use telegramPaymentPurposePremiumGiveaway or storePaymentPurposePremiumGiveaway to create a giveaway
  */
 export type messagePremiumGiveawayCreated = {
   _: "messagePremiumGiveawayCreated";
@@ -31690,7 +33002,7 @@ export type messagePremiumGiveawayCreated = {
 /**
  * Version of {@link messagePremiumGiveawayCreated} for method parameters.
  *
- * A Telegram Premium giveaway was created for the chat
+ * A Telegram Premium giveaway was created for the chat. Use telegramPaymentPurposePremiumGiveaway or storePaymentPurposePremiumGiveaway to create a giveaway
  */
 export type messagePremiumGiveawayCreated$Input = {
   readonly _: "messagePremiumGiveawayCreated";
@@ -32679,7 +33991,7 @@ export type textEntityTypeMediaTimestamp = {
   _: "textEntityTypeMediaTimestamp";
 
   /**
-   * Timestamp from which a video/audio/video note/voice note/story playing must start, in seconds. The media can be in the content or the web page preview of the current message, or in the same places in the replied message
+   * Timestamp from which a video/audio/video note/voice note/story playing must start, in seconds. The media can be in the content or the link preview of the current message, or in the same places in the replied message
    * @type {int32} {@link int32}
    */
   media_timestamp: int32;
@@ -32694,7 +34006,7 @@ export type textEntityTypeMediaTimestamp$Input = {
   readonly _: "textEntityTypeMediaTimestamp";
 
   /**
-   * Timestamp from which a video/audio/video note/voice note/story playing must start, in seconds. The media can be in the content or the web page preview of the current message, or in the same places in the replied message
+   * Timestamp from which a video/audio/video note/voice note/story playing must start, in seconds. The media can be in the content or the link preview of the current message, or in the same places in the replied message
    * @type {int32} {@link int32}
    */
   readonly media_timestamp?: int32;
@@ -32747,6 +34059,150 @@ export type inputThumbnail$Input = {
 
   /**
    * Thumbnail height, usually shouldn't exceed 320. Use 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly height?: int32;
+};
+
+/**
+ * The media is a photo. The photo must be at most 10 MB in size. The photo's width and height must not exceed 10000 in total. Width and height ratio must be at most 20
+ */
+export type inputPaidMediaTypePhoto = {
+  _: "inputPaidMediaTypePhoto";
+};
+
+/**
+ * Version of {@link inputPaidMediaTypePhoto} for method parameters.
+ *
+ * The media is a photo. The photo must be at most 10 MB in size. The photo's width and height must not exceed 10000 in total. Width and height ratio must be at most 20
+ */
+export type inputPaidMediaTypePhoto$Input = {
+  readonly _: "inputPaidMediaTypePhoto";
+};
+
+/**
+ * The media is a video
+ */
+export type inputPaidMediaTypeVideo = {
+  _: "inputPaidMediaTypeVideo";
+
+  /**
+   * Duration of the video, in seconds
+   * @type {int32} {@link int32}
+   */
+  duration: int32;
+
+  /**
+   * True, if the video is supposed to be streamed
+   * @type {Bool} {@link Bool}
+   */
+  supports_streaming: Bool;
+};
+
+/**
+ * Version of {@link inputPaidMediaTypeVideo} for method parameters.
+ *
+ * The media is a video
+ */
+export type inputPaidMediaTypeVideo$Input = {
+  readonly _: "inputPaidMediaTypeVideo";
+
+  /**
+   * Duration of the video, in seconds
+   * @type {int32} {@link int32}
+   */
+  readonly duration?: int32;
+
+  /**
+   * True, if the video is supposed to be streamed
+   * @type {Bool} {@link Bool}
+   */
+  readonly supports_streaming?: Bool$Input;
+};
+
+/**
+ * Describes a paid media to be sent
+ */
+export type inputPaidMedia = {
+  _: "inputPaidMedia";
+
+  /**
+   * Type of the media
+   * @type {InputPaidMediaType} {@link InputPaidMediaType}
+   */
+  type: InputPaidMediaType;
+
+  /**
+   * Photo or video to be sent
+   * @type {InputFile} {@link InputFile}
+   */
+  media: InputFile;
+
+  /**
+   * Media thumbnail; pass null to skip thumbnail uploading
+   * @type {inputThumbnail} {@link inputThumbnail}
+   */
+  thumbnail: inputThumbnail | null;
+
+  /**
+   * File identifiers of the stickers added to the media, if applicable
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  added_sticker_file_ids: vector<int32>;
+
+  /**
+   * Media width
+   * @type {int32} {@link int32}
+   */
+  width: int32;
+
+  /**
+   * Media height
+   * @type {int32} {@link int32}
+   */
+  height: int32;
+};
+
+/**
+ * Version of {@link inputPaidMedia} for method parameters.
+ *
+ * Describes a paid media to be sent
+ */
+export type inputPaidMedia$Input = {
+  readonly _: "inputPaidMedia";
+
+  /**
+   * Type of the media
+   * @type {InputPaidMediaType} {@link InputPaidMediaType}
+   */
+  readonly type?: InputPaidMediaType$Input;
+
+  /**
+   * Photo or video to be sent
+   * @type {InputFile} {@link InputFile}
+   */
+  readonly media?: InputFile$Input;
+
+  /**
+   * Media thumbnail; pass null to skip thumbnail uploading
+   * @type {inputThumbnail} {@link inputThumbnail}
+   */
+  readonly thumbnail?: inputThumbnail$Input | null;
+
+  /**
+   * File identifiers of the stickers added to the media, if applicable
+   * @type {vector<int32>} {@link vector<int32>}
+   */
+  readonly added_sticker_file_ids?: vector$Input<int32>;
+
+  /**
+   * Media width
+   * @type {int32} {@link int32}
+   */
+  readonly width?: int32;
+
+  /**
+   * Media height
    * @type {int32} {@link int32}
    */
   readonly height?: int32;
@@ -32953,7 +34409,7 @@ export type messageSendOptions$Input = {
 };
 
 /**
- * Options to be used when a message content is copied without reference to the original sender. Service messages, messages with messageInvoice, messagePremiumGiveaway, or messagePremiumGiveawayWinners content can't be copied
+ * Options to be used when a message content is copied without reference to the original sender. Service messages, messages with messageInvoice, messagePaidMedia, messagePremiumGiveaway, or messagePremiumGiveawayWinners content can't be copied
  */
 export type messageCopyOptions = {
   _: "messageCopyOptions";
@@ -32986,7 +34442,7 @@ export type messageCopyOptions = {
 /**
  * Version of {@link messageCopyOptions} for method parameters.
  *
- * Options to be used when a message content is copied without reference to the original sender. Service messages, messages with messageInvoice, messagePremiumGiveaway, or messagePremiumGiveawayWinners content can't be copied
+ * Options to be used when a message content is copied without reference to the original sender. Service messages, messages with messageInvoice, messagePaidMedia, messagePremiumGiveaway, or messagePremiumGiveawayWinners content can't be copied
  */
 export type messageCopyOptions$Input = {
   readonly _: "messageCopyOptions";
@@ -33121,7 +34577,7 @@ export type inputMessageAnimation = {
   caption: formattedText | null;
 
   /**
-   * True, if caption must be shown above the animation; otherwise, caption must be shown below the animation; not supported in secret chats
+   * True, if the caption must be shown above the animation; otherwise, the caption must be shown below the animation; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
   show_caption_above_media: Bool;
@@ -33184,7 +34640,7 @@ export type inputMessageAnimation$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * True, if caption must be shown above the animation; otherwise, caption must be shown below the animation; not supported in secret chats
+   * True, if the caption must be shown above the animation; otherwise, the caption must be shown below the animation; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -33349,6 +34805,70 @@ export type inputMessageDocument$Input = {
 };
 
 /**
+ * A message with paid media; can be used only in channel chats with supergroupFullInfo.has_paid_media_allowed
+ */
+export type inputMessagePaidMedia = {
+  _: "inputMessagePaidMedia";
+
+  /**
+   * The number of stars that must be paid to see the media; 1-getOption("paid_media_message_star_count_max")
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * The content of the paid media
+   * @type {vector<inputPaidMedia>} {@link vector<inputPaidMedia>}
+   */
+  paid_media: vector<inputPaidMedia>;
+
+  /**
+   * Message caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
+   * @type {formattedText} {@link formattedText}
+   */
+  caption: formattedText | null;
+
+  /**
+   * True, if the caption must be shown above the video; otherwise, the caption must be shown below the video; not supported in secret chats
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+};
+
+/**
+ * Version of {@link inputMessagePaidMedia} for method parameters.
+ *
+ * A message with paid media; can be used only in channel chats with supergroupFullInfo.has_paid_media_allowed
+ */
+export type inputMessagePaidMedia$Input = {
+  readonly _: "inputMessagePaidMedia";
+
+  /**
+   * The number of stars that must be paid to see the media; 1-getOption("paid_media_message_star_count_max")
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * The content of the paid media
+   * @type {vector<inputPaidMedia>} {@link vector<inputPaidMedia>}
+   */
+  readonly paid_media?: vector$Input<inputPaidMedia$Input>;
+
+  /**
+   * Message caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input | null;
+
+  /**
+   * True, if the caption must be shown above the video; otherwise, the caption must be shown below the video; not supported in secret chats
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
+};
+
+/**
  * A photo message
  */
 export type inputMessagePhoto = {
@@ -33391,7 +34911,7 @@ export type inputMessagePhoto = {
   caption: formattedText | null;
 
   /**
-   * True, if caption must be shown above the photo; otherwise, caption must be shown below the photo; not supported in secret chats
+   * True, if the caption must be shown above the photo; otherwise, the caption must be shown below the photo; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
   show_caption_above_media: Bool;
@@ -33454,7 +34974,7 @@ export type inputMessagePhoto$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * True, if caption must be shown above the photo; otherwise, caption must be shown below the photo; not supported in secret chats
+   * True, if the caption must be shown above the photo; otherwise, the caption must be shown below the photo; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -33603,7 +35123,7 @@ export type inputMessageVideo = {
   caption: formattedText | null;
 
   /**
-   * True, if caption must be shown above the video; otherwise, caption must be shown below the video; not supported in secret chats
+   * True, if the caption must be shown above the video; otherwise, the caption must be shown below the video; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
   show_caption_above_media: Bool;
@@ -33678,7 +35198,7 @@ export type inputMessageVideo$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * True, if caption must be shown above the video; otherwise, caption must be shown below the video; not supported in secret chats
+   * True, if the caption must be shown above the video; otherwise, the caption must be shown below the video; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -34121,10 +35641,16 @@ export type inputMessageInvoice = {
   start_parameter: string;
 
   /**
-   * The content of extended media attached to the invoice. The content of the message to be sent. Must be one of the following types: inputMessagePhoto, inputMessageVideo
-   * @type {InputMessageContent} {@link InputMessageContent}
+   * The content of paid media attached to the invoice; pass null if none
+   * @type {inputPaidMedia} {@link inputPaidMedia}
    */
-  extended_media_content: InputMessageContent;
+  paid_media: inputPaidMedia | null;
+
+  /**
+   * Paid media caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
+   * @type {formattedText} {@link formattedText}
+   */
+  paid_media_caption: formattedText | null;
 };
 
 /**
@@ -34202,10 +35728,16 @@ export type inputMessageInvoice$Input = {
   readonly start_parameter?: string;
 
   /**
-   * The content of extended media attached to the invoice. The content of the message to be sent. Must be one of the following types: inputMessagePhoto, inputMessageVideo
-   * @type {InputMessageContent} {@link InputMessageContent}
+   * The content of paid media attached to the invoice; pass null if none
+   * @type {inputPaidMedia} {@link inputPaidMedia}
    */
-  readonly extended_media_content?: InputMessageContent$Input;
+  readonly paid_media?: inputPaidMedia$Input | null;
+
+  /**
+   * Paid media caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly paid_media_caption?: formattedText$Input | null;
 };
 
 /**
@@ -39139,7 +40671,7 @@ export type resendCodeReasonVerificationFailed = {
   _: "resendCodeReasonVerificationFailed";
 
   /**
-   * Cause of the verification failure, for example, PLAY_SERVICES_NOT_AVAILABLE, APNS_RECEIVE_TIMEOUT, APNS_INIT_FAILED, etc.
+   * Cause of the verification failure, for example, PLAY_SERVICES_NOT_AVAILABLE, APNS_RECEIVE_TIMEOUT, or APNS_INIT_FAILED
    * @type {string} {@link string}
    */
   error_message: string;
@@ -39154,7 +40686,7 @@ export type resendCodeReasonVerificationFailed$Input = {
   readonly _: "resendCodeReasonVerificationFailed";
 
   /**
-   * Cause of the verification failure, for example, PLAY_SERVICES_NOT_AVAILABLE, APNS_RECEIVE_TIMEOUT, APNS_INIT_FAILED, etc.
+   * Cause of the verification failure, for example, PLAY_SERVICES_NOT_AVAILABLE, APNS_RECEIVE_TIMEOUT, or APNS_INIT_FAILED
    * @type {string} {@link string}
    */
   readonly error_message?: string;
@@ -47817,6 +49349,22 @@ export type premiumFeatureBusiness$Input = {
 };
 
 /**
+ * The ability to use all available message effects
+ */
+export type premiumFeatureMessageEffects = {
+  _: "premiumFeatureMessageEffects";
+};
+
+/**
+ * Version of {@link premiumFeatureMessageEffects} for method parameters.
+ *
+ * The ability to use all available message effects
+ */
+export type premiumFeatureMessageEffects$Input = {
+  readonly _: "premiumFeatureMessageEffects";
+};
+
+/**
  * The ability to set location
  */
 export type businessFeatureLocation = {
@@ -49609,7 +51157,7 @@ export type backgroundTypePattern = {
   fill: BackgroundFill;
 
   /**
-   * Intensity of the pattern when it is shown above the filled background; 0-100.
+   * Intensity of the pattern when it is shown above the filled background; 0-100
    * @type {int32} {@link int32}
    */
   intensity: int32;
@@ -49642,7 +51190,7 @@ export type backgroundTypePattern$Input = {
   readonly fill?: BackgroundFill$Input;
 
   /**
-   * Intensity of the pattern when it is shown above the filled background; 0-100.
+   * Intensity of the pattern when it is shown above the filled background; 0-100
    * @type {int32} {@link int32}
    */
   readonly intensity?: int32;
@@ -49798,82 +51346,6 @@ export type inputBackgroundPrevious$Input = {
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
-};
-
-/**
- * Describes theme settings
- */
-export type themeSettings = {
-  _: "themeSettings";
-
-  /**
-   * Theme accent color in ARGB format
-   * @type {int32} {@link int32}
-   */
-  accent_color: int32;
-
-  /**
-   * The background to be used in chats; may be null
-   * @type {background} {@link background}
-   */
-  background: background | null;
-
-  /**
-   * The fill to be used as a background for outgoing messages
-   * @type {BackgroundFill} {@link BackgroundFill}
-   */
-  outgoing_message_fill: BackgroundFill;
-
-  /**
-   * If true, the freeform gradient fill needs to be animated on every sent message
-   * @type {Bool} {@link Bool}
-   */
-  animate_outgoing_message_fill: Bool;
-
-  /**
-   * Accent color of outgoing messages in ARGB format
-   * @type {int32} {@link int32}
-   */
-  outgoing_message_accent_color: int32;
-};
-
-/**
- * Version of {@link themeSettings} for method parameters.
- *
- * Describes theme settings
- */
-export type themeSettings$Input = {
-  readonly _: "themeSettings";
-
-  /**
-   * Theme accent color in ARGB format
-   * @type {int32} {@link int32}
-   */
-  readonly accent_color?: int32;
-
-  /**
-   * The background to be used in chats; may be null
-   * @type {background} {@link background}
-   */
-  readonly background?: background$Input | null;
-
-  /**
-   * The fill to be used as a background for outgoing messages
-   * @type {BackgroundFill} {@link BackgroundFill}
-   */
-  readonly outgoing_message_fill?: BackgroundFill$Input;
-
-  /**
-   * If true, the freeform gradient fill needs to be animated on every sent message
-   * @type {Bool} {@link Bool}
-   */
-  readonly animate_outgoing_message_fill?: Bool$Input;
-
-  /**
-   * Accent color of outgoing messages in ARGB format
-   * @type {int32} {@link int32}
-   */
-  readonly outgoing_message_accent_color?: int32;
 };
 
 /**
@@ -50912,6 +52384,46 @@ export type pushMessageContentLocation$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_live?: Bool$Input;
+
+  /**
+   * True, if the message is a pinned message with the specified content
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_pinned?: Bool$Input;
+};
+
+/**
+ * A message with paid media
+ */
+export type pushMessageContentPaidMedia = {
+  _: "pushMessageContentPaidMedia";
+
+  /**
+   * Number of stars needed to buy access to the media in the message; 0 for pinned message
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * True, if the message is a pinned message with the specified content
+   * @type {Bool} {@link Bool}
+   */
+  is_pinned: Bool;
+};
+
+/**
+ * Version of {@link pushMessageContentPaidMedia} for method parameters.
+ *
+ * A message with paid media
+ */
+export type pushMessageContentPaidMedia$Input = {
+  readonly _: "pushMessageContentPaidMedia";
+
+  /**
+   * Number of stars needed to buy access to the media in the message; 0 for pinned message
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 
   /**
    * True, if the message is a pinned message with the specified content
@@ -53075,7 +54587,7 @@ export type readDatePrivacySettings = {
   _: "readDatePrivacySettings";
 
   /**
-   * True, if message read date is shown to other users in private chats. If false and the current user isn't a Telegram Premium user, then they will not be able to see other's message read date.
+   * True, if message read date is shown to other users in private chats. If false and the current user isn't a Telegram Premium user, then they will not be able to see other's message read date
    * @type {Bool} {@link Bool}
    */
   show_read_date: Bool;
@@ -53090,7 +54602,7 @@ export type readDatePrivacySettings$Input = {
   readonly _: "readDatePrivacySettings";
 
   /**
-   * True, if message read date is shown to other users in private chats. If false and the current user isn't a Telegram Premium user, then they will not be able to see other's message read date.
+   * True, if message read date is shown to other users in private chats. If false and the current user isn't a Telegram Premium user, then they will not be able to see other's message read date
    * @type {Bool} {@link Bool}
    */
   readonly show_read_date?: Bool$Input;
@@ -54515,7 +56027,7 @@ export type internalLinkTypeBotStart$Input = {
  *
  * - and call setChatMemberStatus with the chosen chat and confirmed administrator rights. Before call to setChatMemberStatus it may be required to upgrade the chosen basic group chat to a supergroup chat.
  *
- * - Then, if start_parameter isn't empty, call sendBotStartMessage with the given start parameter and the chosen chat; otherwise, just send /start message with bot's username added to the chat.
+ * - Then, if start_parameter isn't empty, call sendBotStartMessage with the given start parameter and the chosen chat; otherwise, just send /start message with bot's username added to the chat
  */
 export type internalLinkTypeBotStartInGroup = {
   _: "internalLinkTypeBotStartInGroup";
@@ -54552,7 +56064,7 @@ export type internalLinkTypeBotStartInGroup = {
  *
  * - and call setChatMemberStatus with the chosen chat and confirmed administrator rights. Before call to setChatMemberStatus it may be required to upgrade the chosen basic group chat to a supergroup chat.
  *
- * - Then, if start_parameter isn't empty, call sendBotStartMessage with the given start parameter and the chosen chat; otherwise, just send /start message with bot's username added to the chat.
+ * - Then, if start_parameter isn't empty, call sendBotStartMessage with the given start parameter and the chosen chat; otherwise, just send /start message with bot's username added to the chat
  */
 export type internalLinkTypeBotStartInGroup$Input = {
   readonly _: "internalLinkTypeBotStartInGroup";
@@ -55411,6 +56923,12 @@ export type internalLinkTypeSideMenuBot = {
    * @type {string} {@link string}
    */
   url: string;
+
+  /**
+   * True, if the Web App must be opened in a compact mode instead of a full-size mode
+   * @type {Bool} {@link Bool}
+   */
+  is_compact: Bool;
 };
 
 /**
@@ -55438,6 +56956,12 @@ export type internalLinkTypeSideMenuBot$Input = {
    * @type {string} {@link string}
    */
   readonly url?: string;
+
+  /**
+   * True, if the Web App must be opened in a compact mode instead of a full-size mode
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_compact?: Bool$Input;
 };
 
 /**
@@ -55525,7 +57049,7 @@ export type internalLinkTypeStory$Input = {
 };
 
 /**
- * The link is a link to a theme. TDLib has no theme support yet
+ * The link is a link to a cloud theme. TDLib has no theme support yet
  */
 export type internalLinkTypeTheme = {
   _: "internalLinkTypeTheme";
@@ -55540,7 +57064,7 @@ export type internalLinkTypeTheme = {
 /**
  * Version of {@link internalLinkTypeTheme} for method parameters.
  *
- * The link is a link to a theme. TDLib has no theme support yet
+ * The link is a link to a cloud theme. TDLib has no theme support yet
  */
 export type internalLinkTypeTheme$Input = {
   readonly _: "internalLinkTypeTheme";
@@ -55769,6 +57293,12 @@ export type internalLinkTypeWebApp = {
    * @type {string} {@link string}
    */
   start_parameter: string;
+
+  /**
+   * True, if the Web App must be opened in a compact mode instead of a full-size mode
+   * @type {Bool} {@link Bool}
+   */
+  is_compact: Bool;
 };
 
 /**
@@ -55802,6 +57332,12 @@ export type internalLinkTypeWebApp$Input = {
    * @type {string} {@link string}
    */
   readonly start_parameter?: string;
+
+  /**
+   * True, if the Web App must be opened in a compact mode instead of a full-size mode
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_compact?: Bool$Input;
 };
 
 /**
@@ -55875,7 +57411,7 @@ export type messageLinkInfo = {
   message: message | null;
 
   /**
-   * Timestamp from which the video/audio/video note/voice note/story playing must start, in seconds; 0 if not specified. The media can be in the message content or in its web page preview
+   * Timestamp from which the video/audio/video note/voice note/story playing must start, in seconds; 0 if not specified. The media can be in the message content or in its link preview
    * @type {int32} {@link int32}
    */
   media_timestamp: int32;
@@ -55920,7 +57456,7 @@ export type messageLinkInfo$Input = {
   readonly message?: message$Input | null;
 
   /**
-   * Timestamp from which the video/audio/video note/voice note/story playing must start, in seconds; 0 if not specified. The media can be in the message content or in its web page preview
+   * Timestamp from which the video/audio/video note/voice note/story playing must start, in seconds; 0 if not specified. The media can be in the message content or in its link preview
    * @type {int32} {@link int32}
    */
   readonly media_timestamp?: int32;
@@ -63823,12 +65359,18 @@ export type updateApplicationVerificationRequired = {
   verification_id: int53;
 
   /**
-   * Unique nonce for the classic Play Integrity verification (https://developer.android.com/google/play/integrity/classic) for Android,
+   * Unique base64url-encoded nonce for the classic Play Integrity verification (https://developer.android.com/google/play/integrity/classic) for Android,
    *
    * - or a unique string to compare with verify_nonce field from a push notification for iOS
    * @type {string} {@link string}
    */
   nonce: string;
+
+  /**
+   * Cloud project number to pass to the Play Integrity API on Android
+   * @type {int64} {@link int64}
+   */
+  cloud_project_number: int64;
 };
 
 /**
@@ -63848,12 +65390,18 @@ export type updateApplicationVerificationRequired$Input = {
   readonly verification_id?: int53;
 
   /**
-   * Unique nonce for the classic Play Integrity verification (https://developer.android.com/google/play/integrity/classic) for Android,
+   * Unique base64url-encoded nonce for the classic Play Integrity verification (https://developer.android.com/google/play/integrity/classic) for Android,
    *
    * - or a unique string to compare with verify_nonce field from a push notification for iOS
    * @type {string} {@link string}
    */
   readonly nonce?: string;
+
+  /**
+   * Cloud project number to pass to the Play Integrity API on Android
+   * @type {int64} {@link int64}
+   */
+  readonly cloud_project_number?: int64$Input;
 };
 
 /**
@@ -67700,6 +69248,25 @@ export type AuthorizationState$Input =
 
 /**
  * Any of:
+ * - {@link firebaseDeviceVerificationParametersSafetyNet}
+ * - {@link firebaseDeviceVerificationParametersPlayIntegrity}
+ */
+export type FirebaseDeviceVerificationParameters =
+  | firebaseDeviceVerificationParametersSafetyNet
+  | firebaseDeviceVerificationParametersPlayIntegrity;
+
+/**
+ * Version of {@link FirebaseDeviceVerificationParameters} for method parameters.
+ * Any of:
+ * - {@link firebaseDeviceVerificationParametersSafetyNet$Input}
+ * - {@link firebaseDeviceVerificationParametersPlayIntegrity$Input}
+ */
+export type FirebaseDeviceVerificationParameters$Input =
+  | firebaseDeviceVerificationParametersSafetyNet$Input
+  | firebaseDeviceVerificationParametersPlayIntegrity$Input;
+
+/**
+ * Any of:
  * - {@link passwordState}
  */
 export type PasswordState = passwordState;
@@ -68853,7 +70420,8 @@ export type StarTransactionDirection$Input =
  * - {@link starTransactionPartnerAppStore}
  * - {@link starTransactionPartnerGooglePlay}
  * - {@link starTransactionPartnerFragment}
- * - {@link starTransactionPartnerUser}
+ * - {@link starTransactionPartnerTelegramAds}
+ * - {@link starTransactionPartnerBot}
  * - {@link starTransactionPartnerChannel}
  * - {@link starTransactionPartnerUnsupported}
  */
@@ -68862,7 +70430,8 @@ export type StarTransactionPartner =
   | starTransactionPartnerAppStore
   | starTransactionPartnerGooglePlay
   | starTransactionPartnerFragment
-  | starTransactionPartnerUser
+  | starTransactionPartnerTelegramAds
+  | starTransactionPartnerBot
   | starTransactionPartnerChannel
   | starTransactionPartnerUnsupported;
 
@@ -68873,7 +70442,8 @@ export type StarTransactionPartner =
  * - {@link starTransactionPartnerAppStore$Input}
  * - {@link starTransactionPartnerGooglePlay$Input}
  * - {@link starTransactionPartnerFragment$Input}
- * - {@link starTransactionPartnerUser$Input}
+ * - {@link starTransactionPartnerTelegramAds$Input}
+ * - {@link starTransactionPartnerBot$Input}
  * - {@link starTransactionPartnerChannel$Input}
  * - {@link starTransactionPartnerUnsupported$Input}
  */
@@ -68882,7 +70452,8 @@ export type StarTransactionPartner$Input =
   | starTransactionPartnerAppStore$Input
   | starTransactionPartnerGooglePlay$Input
   | starTransactionPartnerFragment$Input
-  | starTransactionPartnerUser$Input
+  | starTransactionPartnerTelegramAds$Input
+  | starTransactionPartnerBot$Input
   | starTransactionPartnerChannel$Input
   | starTransactionPartnerUnsupported$Input;
 
@@ -71046,6 +72617,19 @@ export type SharedChat$Input = sharedChat$Input;
 
 /**
  * Any of:
+ * - {@link themeSettings}
+ */
+export type ThemeSettings = themeSettings;
+
+/**
+ * Version of {@link ThemeSettings} for method parameters.
+ * Any of:
+ * - {@link themeSettings$Input}
+ */
+export type ThemeSettings$Input = themeSettings$Input;
+
+/**
+ * Any of:
  * - {@link richTextPlain}
  * - {@link richTextBold}
  * - {@link richTextItalic}
@@ -71363,16 +72947,158 @@ export type WebPageInstantView$Input = webPageInstantView$Input;
 
 /**
  * Any of:
- * - {@link webPage}
+ * - {@link linkPreviewAlbumMediaPhoto}
+ * - {@link linkPreviewAlbumMediaVideo}
  */
-export type WebPage = webPage;
+export type LinkPreviewAlbumMedia =
+  | linkPreviewAlbumMediaPhoto
+  | linkPreviewAlbumMediaVideo;
 
 /**
- * Version of {@link WebPage} for method parameters.
+ * Version of {@link LinkPreviewAlbumMedia} for method parameters.
  * Any of:
- * - {@link webPage$Input}
+ * - {@link linkPreviewAlbumMediaPhoto$Input}
+ * - {@link linkPreviewAlbumMediaVideo$Input}
  */
-export type WebPage$Input = webPage$Input;
+export type LinkPreviewAlbumMedia$Input =
+  | linkPreviewAlbumMediaPhoto$Input
+  | linkPreviewAlbumMediaVideo$Input;
+
+/**
+ * Any of:
+ * - {@link linkPreviewTypeAlbum}
+ * - {@link linkPreviewTypeAnimation}
+ * - {@link linkPreviewTypeApp}
+ * - {@link linkPreviewTypeArticle}
+ * - {@link linkPreviewTypeAudio}
+ * - {@link linkPreviewTypeBackground}
+ * - {@link linkPreviewTypeChannelBoost}
+ * - {@link linkPreviewTypeChat}
+ * - {@link linkPreviewTypeDocument}
+ * - {@link linkPreviewTypeEmbeddedAudioPlayer}
+ * - {@link linkPreviewTypeEmbeddedVideoPlayer}
+ * - {@link linkPreviewTypeInvoice}
+ * - {@link linkPreviewTypeMessage}
+ * - {@link linkPreviewTypePhoto}
+ * - {@link linkPreviewTypePremiumGiftCode}
+ * - {@link linkPreviewTypeShareableChatFolder}
+ * - {@link linkPreviewTypeSticker}
+ * - {@link linkPreviewTypeStickerSet}
+ * - {@link linkPreviewTypeStory}
+ * - {@link linkPreviewTypeSupergroupBoost}
+ * - {@link linkPreviewTypeTheme}
+ * - {@link linkPreviewTypeUnsupported}
+ * - {@link linkPreviewTypeUser}
+ * - {@link linkPreviewTypeVideo}
+ * - {@link linkPreviewTypeVideoChat}
+ * - {@link linkPreviewTypeVideoNote}
+ * - {@link linkPreviewTypeVoiceNote}
+ * - {@link linkPreviewTypeWebApp}
+ */
+export type LinkPreviewType =
+  | linkPreviewTypeAlbum
+  | linkPreviewTypeAnimation
+  | linkPreviewTypeApp
+  | linkPreviewTypeArticle
+  | linkPreviewTypeAudio
+  | linkPreviewTypeBackground
+  | linkPreviewTypeChannelBoost
+  | linkPreviewTypeChat
+  | linkPreviewTypeDocument
+  | linkPreviewTypeEmbeddedAudioPlayer
+  | linkPreviewTypeEmbeddedVideoPlayer
+  | linkPreviewTypeInvoice
+  | linkPreviewTypeMessage
+  | linkPreviewTypePhoto
+  | linkPreviewTypePremiumGiftCode
+  | linkPreviewTypeShareableChatFolder
+  | linkPreviewTypeSticker
+  | linkPreviewTypeStickerSet
+  | linkPreviewTypeStory
+  | linkPreviewTypeSupergroupBoost
+  | linkPreviewTypeTheme
+  | linkPreviewTypeUnsupported
+  | linkPreviewTypeUser
+  | linkPreviewTypeVideo
+  | linkPreviewTypeVideoChat
+  | linkPreviewTypeVideoNote
+  | linkPreviewTypeVoiceNote
+  | linkPreviewTypeWebApp;
+
+/**
+ * Version of {@link LinkPreviewType} for method parameters.
+ * Any of:
+ * - {@link linkPreviewTypeAlbum$Input}
+ * - {@link linkPreviewTypeAnimation$Input}
+ * - {@link linkPreviewTypeApp$Input}
+ * - {@link linkPreviewTypeArticle$Input}
+ * - {@link linkPreviewTypeAudio$Input}
+ * - {@link linkPreviewTypeBackground$Input}
+ * - {@link linkPreviewTypeChannelBoost$Input}
+ * - {@link linkPreviewTypeChat$Input}
+ * - {@link linkPreviewTypeDocument$Input}
+ * - {@link linkPreviewTypeEmbeddedAudioPlayer$Input}
+ * - {@link linkPreviewTypeEmbeddedVideoPlayer$Input}
+ * - {@link linkPreviewTypeInvoice$Input}
+ * - {@link linkPreviewTypeMessage$Input}
+ * - {@link linkPreviewTypePhoto$Input}
+ * - {@link linkPreviewTypePremiumGiftCode$Input}
+ * - {@link linkPreviewTypeShareableChatFolder$Input}
+ * - {@link linkPreviewTypeSticker$Input}
+ * - {@link linkPreviewTypeStickerSet$Input}
+ * - {@link linkPreviewTypeStory$Input}
+ * - {@link linkPreviewTypeSupergroupBoost$Input}
+ * - {@link linkPreviewTypeTheme$Input}
+ * - {@link linkPreviewTypeUnsupported$Input}
+ * - {@link linkPreviewTypeUser$Input}
+ * - {@link linkPreviewTypeVideo$Input}
+ * - {@link linkPreviewTypeVideoChat$Input}
+ * - {@link linkPreviewTypeVideoNote$Input}
+ * - {@link linkPreviewTypeVoiceNote$Input}
+ * - {@link linkPreviewTypeWebApp$Input}
+ */
+export type LinkPreviewType$Input =
+  | linkPreviewTypeAlbum$Input
+  | linkPreviewTypeAnimation$Input
+  | linkPreviewTypeApp$Input
+  | linkPreviewTypeArticle$Input
+  | linkPreviewTypeAudio$Input
+  | linkPreviewTypeBackground$Input
+  | linkPreviewTypeChannelBoost$Input
+  | linkPreviewTypeChat$Input
+  | linkPreviewTypeDocument$Input
+  | linkPreviewTypeEmbeddedAudioPlayer$Input
+  | linkPreviewTypeEmbeddedVideoPlayer$Input
+  | linkPreviewTypeInvoice$Input
+  | linkPreviewTypeMessage$Input
+  | linkPreviewTypePhoto$Input
+  | linkPreviewTypePremiumGiftCode$Input
+  | linkPreviewTypeShareableChatFolder$Input
+  | linkPreviewTypeSticker$Input
+  | linkPreviewTypeStickerSet$Input
+  | linkPreviewTypeStory$Input
+  | linkPreviewTypeSupergroupBoost$Input
+  | linkPreviewTypeTheme$Input
+  | linkPreviewTypeUnsupported$Input
+  | linkPreviewTypeUser$Input
+  | linkPreviewTypeVideo$Input
+  | linkPreviewTypeVideoChat$Input
+  | linkPreviewTypeVideoNote$Input
+  | linkPreviewTypeVoiceNote$Input
+  | linkPreviewTypeWebApp$Input;
+
+/**
+ * Any of:
+ * - {@link linkPreview}
+ */
+export type LinkPreview = linkPreview;
+
+/**
+ * Version of {@link LinkPreview} for method parameters.
+ * Any of:
+ * - {@link linkPreview$Input}
+ */
+export type LinkPreview$Input = linkPreview$Input;
 
 /**
  * Any of:
@@ -71749,30 +73475,30 @@ export type InputInvoice$Input =
 
 /**
  * Any of:
- * - {@link messageExtendedMediaPreview}
- * - {@link messageExtendedMediaPhoto}
- * - {@link messageExtendedMediaVideo}
- * - {@link messageExtendedMediaUnsupported}
+ * - {@link paidMediaPreview}
+ * - {@link paidMediaPhoto}
+ * - {@link paidMediaVideo}
+ * - {@link paidMediaUnsupported}
  */
-export type MessageExtendedMedia =
-  | messageExtendedMediaPreview
-  | messageExtendedMediaPhoto
-  | messageExtendedMediaVideo
-  | messageExtendedMediaUnsupported;
+export type PaidMedia =
+  | paidMediaPreview
+  | paidMediaPhoto
+  | paidMediaVideo
+  | paidMediaUnsupported;
 
 /**
- * Version of {@link MessageExtendedMedia} for method parameters.
+ * Version of {@link PaidMedia} for method parameters.
  * Any of:
- * - {@link messageExtendedMediaPreview$Input}
- * - {@link messageExtendedMediaPhoto$Input}
- * - {@link messageExtendedMediaVideo$Input}
- * - {@link messageExtendedMediaUnsupported$Input}
+ * - {@link paidMediaPreview$Input}
+ * - {@link paidMediaPhoto$Input}
+ * - {@link paidMediaVideo$Input}
+ * - {@link paidMediaUnsupported$Input}
  */
-export type MessageExtendedMedia$Input =
-  | messageExtendedMediaPreview$Input
-  | messageExtendedMediaPhoto$Input
-  | messageExtendedMediaVideo$Input
-  | messageExtendedMediaUnsupported$Input;
+export type PaidMedia$Input =
+  | paidMediaPreview$Input
+  | paidMediaPhoto$Input
+  | paidMediaVideo$Input
+  | paidMediaUnsupported$Input;
 
 /**
  * Any of:
@@ -72284,6 +74010,7 @@ export type InputPassportElementError$Input = inputPassportElementError$Input;
  * - {@link messageAnimation}
  * - {@link messageAudio}
  * - {@link messageDocument}
+ * - {@link messagePaidMedia}
  * - {@link messagePhoto}
  * - {@link messageSticker}
  * - {@link messageVideo}
@@ -72333,6 +74060,7 @@ export type InputPassportElementError$Input = inputPassportElementError$Input;
  * - {@link messageGameScore}
  * - {@link messagePaymentSuccessful}
  * - {@link messagePaymentSuccessfulBot}
+ * - {@link messagePaymentRefunded}
  * - {@link messageGiftedPremium}
  * - {@link messagePremiumGiftCode}
  * - {@link messagePremiumGiveawayCreated}
@@ -72355,6 +74083,7 @@ export type MessageContent =
   | messageAnimation
   | messageAudio
   | messageDocument
+  | messagePaidMedia
   | messagePhoto
   | messageSticker
   | messageVideo
@@ -72404,6 +74133,7 @@ export type MessageContent =
   | messageGameScore
   | messagePaymentSuccessful
   | messagePaymentSuccessfulBot
+  | messagePaymentRefunded
   | messageGiftedPremium
   | messagePremiumGiftCode
   | messagePremiumGiveawayCreated
@@ -72428,6 +74158,7 @@ export type MessageContent =
  * - {@link messageAnimation$Input}
  * - {@link messageAudio$Input}
  * - {@link messageDocument$Input}
+ * - {@link messagePaidMedia$Input}
  * - {@link messagePhoto$Input}
  * - {@link messageSticker$Input}
  * - {@link messageVideo$Input}
@@ -72477,6 +74208,7 @@ export type MessageContent =
  * - {@link messageGameScore$Input}
  * - {@link messagePaymentSuccessful$Input}
  * - {@link messagePaymentSuccessfulBot$Input}
+ * - {@link messagePaymentRefunded$Input}
  * - {@link messageGiftedPremium$Input}
  * - {@link messagePremiumGiftCode$Input}
  * - {@link messagePremiumGiveawayCreated$Input}
@@ -72499,6 +74231,7 @@ export type MessageContent$Input =
   | messageAnimation$Input
   | messageAudio$Input
   | messageDocument$Input
+  | messagePaidMedia$Input
   | messagePhoto$Input
   | messageSticker$Input
   | messageVideo$Input
@@ -72548,6 +74281,7 @@ export type MessageContent$Input =
   | messageGameScore$Input
   | messagePaymentSuccessful$Input
   | messagePaymentSuccessfulBot$Input
+  | messagePaymentRefunded$Input
   | messageGiftedPremium$Input
   | messagePremiumGiftCode$Input
   | messagePremiumGiveawayCreated$Input
@@ -72679,6 +74413,36 @@ export type InputThumbnail$Input = inputThumbnail$Input;
 
 /**
  * Any of:
+ * - {@link inputPaidMediaTypePhoto}
+ * - {@link inputPaidMediaTypeVideo}
+ */
+export type InputPaidMediaType = inputPaidMediaTypePhoto | inputPaidMediaTypeVideo;
+
+/**
+ * Version of {@link InputPaidMediaType} for method parameters.
+ * Any of:
+ * - {@link inputPaidMediaTypePhoto$Input}
+ * - {@link inputPaidMediaTypeVideo$Input}
+ */
+export type InputPaidMediaType$Input =
+  | inputPaidMediaTypePhoto$Input
+  | inputPaidMediaTypeVideo$Input;
+
+/**
+ * Any of:
+ * - {@link inputPaidMedia}
+ */
+export type InputPaidMedia = inputPaidMedia;
+
+/**
+ * Version of {@link InputPaidMedia} for method parameters.
+ * Any of:
+ * - {@link inputPaidMedia$Input}
+ */
+export type InputPaidMedia$Input = inputPaidMedia$Input;
+
+/**
+ * Any of:
  * - {@link messageSchedulingStateSendAtDate}
  * - {@link messageSchedulingStateSendWhenOnline}
  */
@@ -72747,6 +74511,7 @@ export type MessageCopyOptions$Input = messageCopyOptions$Input;
  * - {@link inputMessageAnimation}
  * - {@link inputMessageAudio}
  * - {@link inputMessageDocument}
+ * - {@link inputMessagePaidMedia}
  * - {@link inputMessagePhoto}
  * - {@link inputMessageSticker}
  * - {@link inputMessageVideo}
@@ -72767,6 +74532,7 @@ export type InputMessageContent =
   | inputMessageAnimation
   | inputMessageAudio
   | inputMessageDocument
+  | inputMessagePaidMedia
   | inputMessagePhoto
   | inputMessageSticker
   | inputMessageVideo
@@ -72789,6 +74555,7 @@ export type InputMessageContent =
  * - {@link inputMessageAnimation$Input}
  * - {@link inputMessageAudio$Input}
  * - {@link inputMessageDocument$Input}
+ * - {@link inputMessagePaidMedia$Input}
  * - {@link inputMessagePhoto$Input}
  * - {@link inputMessageSticker$Input}
  * - {@link inputMessageVideo$Input}
@@ -72809,6 +74576,7 @@ export type InputMessageContent$Input =
   | inputMessageAnimation$Input
   | inputMessageAudio$Input
   | inputMessageDocument$Input
+  | inputMessagePaidMedia$Input
   | inputMessagePhoto$Input
   | inputMessageSticker$Input
   | inputMessageVideo$Input
@@ -75038,6 +76806,7 @@ export type PremiumLimitType$Input =
  * - {@link premiumFeatureMessagePrivacy}
  * - {@link premiumFeatureLastSeenTimes}
  * - {@link premiumFeatureBusiness}
+ * - {@link premiumFeatureMessageEffects}
  */
 export type PremiumFeature =
   | premiumFeatureIncreasedLimits
@@ -75062,7 +76831,8 @@ export type PremiumFeature =
   | premiumFeatureSavedMessagesTags
   | premiumFeatureMessagePrivacy
   | premiumFeatureLastSeenTimes
-  | premiumFeatureBusiness;
+  | premiumFeatureBusiness
+  | premiumFeatureMessageEffects;
 
 /**
  * Version of {@link PremiumFeature} for method parameters.
@@ -75090,6 +76860,7 @@ export type PremiumFeature =
  * - {@link premiumFeatureMessagePrivacy$Input}
  * - {@link premiumFeatureLastSeenTimes$Input}
  * - {@link premiumFeatureBusiness$Input}
+ * - {@link premiumFeatureMessageEffects$Input}
  */
 export type PremiumFeature$Input =
   | premiumFeatureIncreasedLimits$Input
@@ -75114,7 +76885,8 @@ export type PremiumFeature$Input =
   | premiumFeatureSavedMessagesTags$Input
   | premiumFeatureMessagePrivacy$Input
   | premiumFeatureLastSeenTimes$Input
-  | premiumFeatureBusiness$Input;
+  | premiumFeatureBusiness$Input
+  | premiumFeatureMessageEffects$Input;
 
 /**
  * Any of:
@@ -75526,19 +77298,6 @@ export type InputBackground$Input =
 
 /**
  * Any of:
- * - {@link themeSettings}
- */
-export type ThemeSettings = themeSettings;
-
-/**
- * Version of {@link ThemeSettings} for method parameters.
- * Any of:
- * - {@link themeSettings$Input}
- */
-export type ThemeSettings$Input = themeSettings$Input;
-
-/**
- * Any of:
  * - {@link chatTheme}
  */
 export type ChatTheme = chatTheme;
@@ -75767,6 +77526,7 @@ export type MessageFileType$Input =
  * - {@link pushMessageContentGameScore}
  * - {@link pushMessageContentInvoice}
  * - {@link pushMessageContentLocation}
+ * - {@link pushMessageContentPaidMedia}
  * - {@link pushMessageContentPhoto}
  * - {@link pushMessageContentPoll}
  * - {@link pushMessageContentPremiumGiftCode}
@@ -75803,6 +77563,7 @@ export type PushMessageContent =
   | pushMessageContentGameScore
   | pushMessageContentInvoice
   | pushMessageContentLocation
+  | pushMessageContentPaidMedia
   | pushMessageContentPhoto
   | pushMessageContentPoll
   | pushMessageContentPremiumGiftCode
@@ -75841,6 +77602,7 @@ export type PushMessageContent =
  * - {@link pushMessageContentGameScore$Input}
  * - {@link pushMessageContentInvoice$Input}
  * - {@link pushMessageContentLocation$Input}
+ * - {@link pushMessageContentPaidMedia$Input}
  * - {@link pushMessageContentPhoto$Input}
  * - {@link pushMessageContentPoll$Input}
  * - {@link pushMessageContentPremiumGiftCode$Input}
@@ -75877,6 +77639,7 @@ export type PushMessageContent$Input =
   | pushMessageContentGameScore$Input
   | pushMessageContentInvoice$Input
   | pushMessageContentLocation$Input
+  | pushMessageContentPaidMedia$Input
   | pushMessageContentPhoto$Input
   | pushMessageContentPoll$Input
   | pushMessageContentPremiumGiftCode$Input
@@ -79105,7 +80868,7 @@ export type $MethodsDict = {
   readonly getRecentInlineBots: getRecentInlineBots;
   readonly searchHashtags: searchHashtags;
   readonly removeRecentHashtag: removeRecentHashtag;
-  readonly getWebPagePreview: getWebPagePreview;
+  readonly getLinkPreview: getLinkPreview;
   readonly getWebPageInstantView: getWebPageInstantView;
   readonly setProfilePhoto: setProfilePhoto;
   readonly deleteProfilePhoto: deleteProfilePhoto;
@@ -79247,6 +81010,7 @@ export type $MethodsDict = {
   readonly getChatRevenueTransactions: getChatRevenueTransactions;
   readonly getStarRevenueStatistics: getStarRevenueStatistics;
   readonly getStarWithdrawalUrl: getStarWithdrawalUrl;
+  readonly getStarAdAccountUrl: getStarAdAccountUrl;
   readonly getChatStatistics: getChatStatistics;
   readonly getMessageStatistics: getMessageStatistics;
   readonly getMessagePublicForwards: getMessagePublicForwards;
@@ -82765,7 +84529,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if web page preview is disabled in secret chats
+   * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if link preview is disabled in secret chats
    *
    * @param {getExternalLinkInfo$DirectInput} parameters {@link getExternalLinkInfo$Input}
    * @returns {Promise<LoginUrlInfo>} Promise<{@link LoginUrlInfo}>
@@ -86225,14 +87989,14 @@ export class $AsyncApi {
   /**
    * Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
    *
-   * @param {getWebPagePreview$DirectInput} parameters {@link getWebPagePreview$Input}
-   * @returns {Promise<WebPage>} Promise<{@link WebPage}>
+   * @param {getLinkPreview$DirectInput} parameters {@link getLinkPreview$Input}
+   * @returns {Promise<LinkPreview>} Promise<{@link LinkPreview}>
    */
-  async getWebPagePreview(
-    parameters: getWebPagePreview$DirectInput
-  ): Promise<WebPage> {
-    const result = await this.client.invoke("getWebPagePreview", parameters);
-    return result as WebPage;
+  async getLinkPreview(
+    parameters: getLinkPreview$DirectInput
+  ): Promise<LinkPreview> {
+    const result = await this.client.invoke("getLinkPreview", parameters);
+    return result as LinkPreview;
   }
 
   /**
@@ -87416,7 +89180,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
+   * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy, or wants to buy access to media in a messagePaidMedia message
    *
    * @param {getPaymentForm$DirectInput} parameters {@link getPaymentForm$Input}
    * @returns {Promise<PaymentForm>} Promise<{@link PaymentForm}>
@@ -88066,7 +89830,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+   * Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
    *
    * @param {getChatRevenueWithdrawalUrl$DirectInput} parameters {@link getChatRevenueWithdrawalUrl$Input}
    * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
@@ -88111,7 +89875,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns URL for Telegram star withdrawal
+   * Returns a URL for Telegram star withdrawal
    *
    * @param {getStarWithdrawalUrl$DirectInput} parameters {@link getStarWithdrawalUrl$Input}
    * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
@@ -88120,6 +89884,19 @@ export class $AsyncApi {
     parameters: getStarWithdrawalUrl$DirectInput
   ): Promise<HttpUrl> {
     const result = await this.client.invoke("getStarWithdrawalUrl", parameters);
+    return result as HttpUrl;
+  }
+
+  /**
+   * Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram stars
+   *
+   * @param {getStarAdAccountUrl$DirectInput} parameters {@link getStarAdAccountUrl$Input}
+   * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
+   */
+  async getStarAdAccountUrl(
+    parameters: getStarAdAccountUrl$DirectInput
+  ): Promise<HttpUrl> {
+    const result = await this.client.invoke("getStarAdAccountUrl", parameters);
     return result as HttpUrl;
   }
 
@@ -95376,7 +97153,7 @@ export type getMessageLink$Input = {
   readonly message_id?: int53;
 
   /**
-   * If not 0, timestamp from which the video/audio/video note/voice note/story playing must start, in seconds. The media can be in the message content or in its web page preview
+   * If not 0, timestamp from which the video/audio/video note/voice note/story playing must start, in seconds. The media can be in the message content or in its link preview
    * @type {int32} {@link int32}
    */
   readonly media_timestamp?: int32;
@@ -95411,7 +97188,7 @@ export type getMessageLink$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * If not 0, timestamp from which the video/audio/video note/voice note/story playing must start, in seconds. The media can be in the message content or in its web page preview
+   * If not 0, timestamp from which the video/audio/video note/voice note/story playing must start, in seconds. The media can be in the message content or in its link preview
    * @type {int32} {@link int32}
    */
   readonly media_timestamp?: int32;
@@ -96966,7 +98743,7 @@ export type editMessageCaption$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -97003,7 +98780,7 @@ export type editMessageCaption$DirectInput = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -97320,7 +99097,7 @@ export type editInlineMessageCaption$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -97349,7 +99126,7 @@ export type editInlineMessageCaption$DirectInput = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -98078,7 +99855,7 @@ export type editBusinessMessageCaption$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -98119,7 +99896,7 @@ export type editBusinessMessageCaption$DirectInput = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -102720,7 +104497,7 @@ export type getInternalLinkType = (
 ) => InternalLinkType;
 
 /**
- * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if web page preview is disabled in secret chats
+ * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if link preview is disabled in secret chats
  */
 export type getExternalLinkInfo$Input = {
   readonly _: "getExternalLinkInfo";
@@ -102733,7 +104510,7 @@ export type getExternalLinkInfo$Input = {
 };
 
 /**
- * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if web page preview is disabled in secret chats
+ * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if link preview is disabled in secret chats
  */
 export type getExternalLinkInfo$DirectInput = {
   /**
@@ -102744,7 +104521,7 @@ export type getExternalLinkInfo$DirectInput = {
 };
 
 /**
- * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if web page preview is disabled in secret chats
+ * Returns information about an action to be done when the current user clicks an external link. Don't use this method for links from secret chats if link preview is disabled in secret chats
  *
  * @param {getExternalLinkInfo$Input} parameters {@link getExternalLinkInfo$Input}
  * @returns {LoginUrlInfo} {@link LoginUrlInfo}
@@ -114474,8 +116251,8 @@ export type removeRecentHashtag = (parameters: removeRecentHashtag$Input) => Ok;
 /**
  * Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
  */
-export type getWebPagePreview$Input = {
-  readonly _: "getWebPagePreview";
+export type getLinkPreview$Input = {
+  readonly _: "getLinkPreview";
 
   /**
    * Message text with formatting
@@ -114493,7 +116270,7 @@ export type getWebPagePreview$Input = {
 /**
  * Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
  */
-export type getWebPagePreview$DirectInput = {
+export type getLinkPreview$DirectInput = {
   /**
    * Message text with formatting
    * @type {formattedText$Input} {@link formattedText}
@@ -114510,10 +116287,10 @@ export type getWebPagePreview$DirectInput = {
 /**
  * Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
  *
- * @param {getWebPagePreview$Input} parameters {@link getWebPagePreview$Input}
- * @returns {WebPage} {@link WebPage}
+ * @param {getLinkPreview$Input} parameters {@link getLinkPreview$Input}
+ * @returns {LinkPreview} {@link LinkPreview}
  */
-export type getWebPagePreview = (parameters: getWebPagePreview$Input) => WebPage;
+export type getLinkPreview = (parameters: getLinkPreview$Input) => LinkPreview;
 
 /**
  * Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
@@ -118028,7 +119805,7 @@ export type getTimeZones$DirectInput = {};
 export type getTimeZones = (parameters: getTimeZones$Input) => TimeZones;
 
 /**
- * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
+ * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy, or wants to buy access to media in a messagePaidMedia message
  */
 export type getPaymentForm$Input = {
   readonly _: "getPaymentForm";
@@ -118047,7 +119824,7 @@ export type getPaymentForm$Input = {
 };
 
 /**
- * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
+ * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy, or wants to buy access to media in a messagePaidMedia message
  */
 export type getPaymentForm$DirectInput = {
   /**
@@ -118064,7 +119841,7 @@ export type getPaymentForm$DirectInput = {
 };
 
 /**
- * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy
+ * Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy, or wants to buy access to media in a messagePaidMedia message
  *
  * @param {getPaymentForm$Input} parameters {@link getPaymentForm$Input}
  * @returns {PaymentForm} {@link PaymentForm}
@@ -119924,7 +121701,7 @@ export type getChatRevenueStatistics = (
 ) => ChatRevenueStatistics;
 
 /**
- * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ * Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
  */
 export type getChatRevenueWithdrawalUrl$Input = {
   readonly _: "getChatRevenueWithdrawalUrl";
@@ -119943,7 +121720,7 @@ export type getChatRevenueWithdrawalUrl$Input = {
 };
 
 /**
- * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ * Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
  */
 export type getChatRevenueWithdrawalUrl$DirectInput = {
   /**
@@ -119960,7 +121737,7 @@ export type getChatRevenueWithdrawalUrl$DirectInput = {
 };
 
 /**
- * Returns URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ * Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
  *
  * @param {getChatRevenueWithdrawalUrl$Input} parameters {@link getChatRevenueWithdrawalUrl$Input}
  * @returns {HttpUrl} {@link HttpUrl}
@@ -120034,7 +121811,7 @@ export type getStarRevenueStatistics$Input = {
   readonly _: "getStarRevenueStatistics";
 
   /**
-   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_revenue_statistics == true
+   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -120051,7 +121828,7 @@ export type getStarRevenueStatistics$Input = {
  */
 export type getStarRevenueStatistics$DirectInput = {
   /**
-   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_revenue_statistics == true
+   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -120074,13 +121851,13 @@ export type getStarRevenueStatistics = (
 ) => StarRevenueStatistics;
 
 /**
- * Returns URL for Telegram star withdrawal
+ * Returns a URL for Telegram star withdrawal
  */
 export type getStarWithdrawalUrl$Input = {
   readonly _: "getStarWithdrawalUrl";
 
   /**
-   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_revenue_statistics == true
+   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of an owned channel chat
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -120099,11 +121876,11 @@ export type getStarWithdrawalUrl$Input = {
 };
 
 /**
- * Returns URL for Telegram star withdrawal
+ * Returns a URL for Telegram star withdrawal
  */
 export type getStarWithdrawalUrl$DirectInput = {
   /**
-   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_revenue_statistics == true
+   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of an owned channel chat
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -120122,7 +121899,7 @@ export type getStarWithdrawalUrl$DirectInput = {
 };
 
 /**
- * Returns URL for Telegram star withdrawal
+ * Returns a URL for Telegram star withdrawal
  *
  * @param {getStarWithdrawalUrl$Input} parameters {@link getStarWithdrawalUrl$Input}
  * @returns {HttpUrl} {@link HttpUrl}
@@ -120130,6 +121907,38 @@ export type getStarWithdrawalUrl$DirectInput = {
 export type getStarWithdrawalUrl = (
   parameters: getStarWithdrawalUrl$Input
 ) => HttpUrl;
+
+/**
+ * Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram stars
+ */
+export type getStarAdAccountUrl$Input = {
+  readonly _: "getStarAdAccountUrl";
+
+  /**
+   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of an owned channel chat
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input;
+};
+
+/**
+ * Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram stars
+ */
+export type getStarAdAccountUrl$DirectInput = {
+  /**
+   * Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of an owned channel chat
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input;
+};
+
+/**
+ * Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram stars
+ *
+ * @param {getStarAdAccountUrl$Input} parameters {@link getStarAdAccountUrl$Input}
+ * @returns {HttpUrl} {@link HttpUrl}
+ */
+export type getStarAdAccountUrl = (parameters: getStarAdAccountUrl$Input) => HttpUrl;
 
 /**
  * Returns detailed statistics about a chat. Currently, this method can be used only for supergroups and channels. Can be used only if supergroupFullInfo.can_get_statistics == true
@@ -122766,7 +124575,7 @@ export type getStarTransactions$Input = {
   /**
    * Identifier of the owner of the Telegram stars; can be the identifier of the current user, identifier of an owned bot,
    *
-   * - or identifier of a channel chat with supergroupFullInfo.can_get_revenue_statistics == true
+   * - or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -122797,7 +124606,7 @@ export type getStarTransactions$DirectInput = {
   /**
    * Identifier of the owner of the Telegram stars; can be the identifier of the current user, identifier of an owned bot,
    *
-   * - or identifier of a channel chat with supergroupFullInfo.can_get_revenue_statistics == true
+   * - or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;

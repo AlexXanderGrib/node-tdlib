@@ -1,1 +1,1 @@
-module.exports.tdlibPath = require('path').resolve(__dirname, "tdjson.dll");
+module.exports.tdlibPath = require('path').resolve(__dirname, "tdjson-x64.dll");

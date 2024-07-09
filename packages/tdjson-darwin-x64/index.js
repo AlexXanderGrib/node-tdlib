@@ -1,1 +1,1 @@
-module.exports.tdlibPath = require('path').resolve(__dirname, "libtdjson.dylib");
+module.exports.tdlibPath = require('path').resolve(__dirname, "libtdjson-x64.dylib");
