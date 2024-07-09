@@ -27,9 +27,10 @@ const basePackageJson = {
 };
 
 const builds = [
-  { os: "darwin", cpu: "x64", file: "libtdjson.dylib" },
-  { os: "linux", cpu: "x64", file: "libtdjson.so", libc: "glibc" },
-  { os: "win32", cpu: "x64", file: "tdjson.dll" }
+  { os: "darwin", cpu: "x64", file: "libtdjson-x64.dylib" },
+  { os: "darwin", cpu: "arm64", file: "libtdjson-arm64.dylib" },
+  { os: "linux", cpu: "x64", file: "libtdjson-x64-glibc.so", libc: "glibc" },
+  { os: "win32", cpu: "x64", file: "tdjson-x64.dll" }
 ];
 
 const exportName = "tdlibPath";
