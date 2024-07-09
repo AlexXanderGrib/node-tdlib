@@ -13,7 +13,7 @@ jobs:
     name: Build TDLib on Linux x86_64 (glibc)
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
@@ -47,7 +47,7 @@ jobs:
           openssl version
           ldd build/libtdjson.so
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: tdlib-linux-x64
           path: build/libtdjson.so
@@ -59,11 +59,11 @@ jobs:
 
           echo "version: $TDLIB_VERSION" >> meta.yml
           echo "commit-hash: $TDLIB_COMMIT_HASH" >> meta.yml
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: meta
           path: meta.yml
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: schema
           path: td/generate/scheme/td_api.tl
@@ -71,12 +71,12 @@ jobs:
     name: Build TDLib on macOS x86_64
     runs-on: macos-12
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
       - name: homebrew cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/Library/Caches/Homebrew
           key: homebrew-${{github.run_id}}
@@ -104,7 +104,7 @@ jobs:
           uname -a
           /usr/local/opt/openssl/bin/openssl version
           otool -L build/libtdjson.dylib
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: tdlib-macos-x64
           path: build/libtdjson.dylib
@@ -113,12 +113,12 @@ jobs:
     name: Build TDLib on macOS arm64
     runs-on: macos-14
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
       - name: homebrew cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/Library/Caches/Homebrew
           key: homebrew-${{github.run_id}}
@@ -146,7 +146,7 @@ jobs:
           uname -a
           /opt/homebrew/opt/openssl/bin/openssl version
           otool -L build/libtdjson.dylib
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: tdlib-macos-arm64
           path: build/libtdjson.dylib
@@ -156,12 +156,12 @@ jobs:
     name: Build TDLib on Windows 64
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: "tdlib/td"
           ref: ${{ inputs.tdlib }}
       - name: vcpkg cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: '~\AppData\Local\vcpkg\archives'
           key: vcpkg-${{ github.run_id }}
@@ -187,7 +187,7 @@ jobs:
           cmake --build . --target tdjson --config Release --parallel 2
           cd ..
         # It should be possible to print the dependencies using dumpbin.exe
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: tdlib-windows-x64
           path: build\Release\tdjson.dll
@@ -206,7 +206,7 @@ jobs:
   #         ./cmake-*.sh --prefix=./cmake --skip-license
   #         sudo cp -RTv ./cmake /usr/
   #         cmake --version
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #       with:
   #         repository: "tdlib/td"
   #         ref: ${{ inputs.tdlib }}
@@ -225,7 +225,7 @@ jobs:
   #         ./build-openssl.sh
   #         ./build-tdlib.sh
   #         ./copy-tdlib.sh
-  #     - uses: actions/upload-artifact@v3
+  #     - uses: actions/upload-artifact@v4
   #       with:
   #         name: tdlib-wasm
   #         path: example/web/tdweb/src/prebuilt/release/*
@@ -237,12 +237,12 @@ jobs:
     needs: [build-linux-x64, build-macos-x64, build-windows-x64, build-macos-arm64]
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           path: td
 
@@ -254,7 +254,7 @@ jobs:
         shell: bash
         run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
         with:
           path: ${{ steps.npm-cache-dir.outputs.dir }}
@@ -280,7 +280,7 @@ jobs:
           mv meta/meta.yml ./
           mv schema/td_api.tl ./
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: td
           path: td/*
