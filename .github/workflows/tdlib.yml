@@ -274,7 +274,7 @@ jobs:
       - run: |
           cd td
           mv tdlib-macos-x64/libtdjson.dylib ./libtdjson-x64.dylib
-          mv tdlib-macos-arm/libtdjson.dylib ./libtdjson-arm64.dylib
+          mv tdlib-macos-arm64/libtdjson.dylib ./libtdjson-arm64.dylib
           mv tdlib-linux-x64/libtdjson.so ./libtdjson-x64-glibc.so
           mv tdlib-windows-x64/tdjson.dll ./tdjson-x64.dll
           mv meta/meta.yml ./
