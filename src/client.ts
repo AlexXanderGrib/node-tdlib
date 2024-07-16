@@ -12,6 +12,7 @@ import { PromiseWithResolvers, promiseWithResolvers } from "./shared/async";
 import { EventBus, Observable } from "./event-bus";
 import debug from "debug";
 import { TDLibOptions } from "./options";
+import { assert } from "./assert";
 
 const debugJson = debug("tdlib-native:json");
 
@@ -101,6 +102,7 @@ export class Client {
 
   readonly api = new $AsyncApi(this);
   readonly syncApi = new $SyncApi(this);
+  readonly _tdlibOptions = new TDLibOptions(this.api);
 
   /**
    *
@@ -130,13 +132,25 @@ export class Client {
     try {
       return await data.promise;
     } catch (error) {
-      if (typeof error === "object" && error && "_" in error) {
+      if (typeof error === "object" && error && typename in error) {
         const value = error as error;
         throw new TDError(value.message, { code: value.code, method, parameters });
       }
 
       throw error;
     }
+  }
+
+  /**
+   * Disables logging of TDLib instance
+   *
+   * @static
+   * @param {TDLib} lib
+   * @memberof Client
+   * @returns {void}
+   */
+  static disableLogs(lib: TDLib): void {
+    Client.execute(lib, "setLogVerbosityLevel", { new_verbosity_level: 0 });
   }
 
   /**
@@ -177,7 +191,7 @@ export class Client {
       parameters,
       { [typename]: method, [tag]: extra },
       (merged) => {
-        const value = JSON.serialize(merged);
+        const value = serialize(merged);
         debugJson("Sent sync %s", value);
 
         // eslint-disable-next-line unicorn/no-null
@@ -187,18 +201,12 @@ export class Client {
 
     debugJson("Received sync %s", value);
 
-    if (!value) {
-      throw new TDError("Method returned null", { method, parameters });
-    }
+    assert(value, new TDError("Method returned null", { method, parameters }));
 
     let data: unknown;
 
     try {
-      data = JSON.deserialize(value);
-
-      if (typeof data !== "object" || !data || !("_" in data)) {
-        throw new TDError("Returned not an object", { method, parameters });
-      }
+      data = deserialize(value);
     } catch {
       throw new TDError("Method returned invalid json", { method, parameters });
     }
@@ -255,7 +263,7 @@ export class Client {
 
       let data: any;
       try {
-        data = JSON.deserialize(value);
+        data = deserialize(value);
       } catch {
         continue;
       }
@@ -294,7 +302,7 @@ export class Client {
    * @memberof Client
    */
   get tdlibOptions(): TDLibOptions {
-    return TDLibOptions.for(this.api);
+    return this._tdlibOptions;
   }
 
   /**
@@ -315,13 +323,14 @@ export class Client {
    * @memberof Client
    */
   start(): this {
-    if (this._state === ClientState.PAUSED) {
-      this._state = ClientState.RUNNING;
-      this._thread();
-      return this;
-    }
+    assert(
+      this._state === ClientState.PAUSED,
+      "Cannot start: This client is running or destroyed"
+    );
 
-    throw new Error("Cannot start: This client is running or destroyed");
+    this._state = ClientState.RUNNING;
+    this._thread();
+    return this;
   }
 
   /**
@@ -331,12 +340,13 @@ export class Client {
    * @memberof Client
    */
   pause(): this {
-    if (this._state === ClientState.RUNNING) {
-      this._state = ClientState.PAUSED;
-      return this;
-    }
+    assert(
+      this._state === ClientState.RUNNING,
+      "Cannot pause: This client is paused or destroyed"
+    );
 
-    throw new Error("Cannot pause: This client is paused or destroyed");
+    this._state = ClientState.PAUSED;
+    return this;
   }
 
   /**

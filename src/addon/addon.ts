@@ -2,6 +2,7 @@ import path from "path";
 import type { TDLib, TDLibClient } from "../shared/client";
 import { getAddonFolderPath } from "./path";
 import { createRequire } from "module";
+import { assert } from "../assert";
 
 export interface Addon {
   td_client_create(): TDLibClient;
@@ -38,8 +39,8 @@ async function loadAddon(addonPath?: string): Promise<Addon> {
   return addon;
 }
 
-const isMusl = () =>
-  !(process.report?.getReport() as any)?.header?.glibcVersionRuntime;
+const isGlibc = () =>
+  !!(process.report?.getReport() as any)?.header?.glibcVersionRuntime;
 
 /**
  *
@@ -50,11 +51,10 @@ async function getTDLibPath(): Promise<string> {
   let packageName = `@tdlib-native/tdjson-${process.platform}-${process.arch}`;
 
   if (process.platform === "linux") {
-    if (isMusl()) {
-      throw new Error(
-        "TDLib build for MUSL libc is not ready yet. You can ask for do it quicker: https://github.com/AlexXanderGrib/node-tdlib/issues"
-      );
-    }
+    assert(
+      isGlibc(),
+      "TDLib build for MUSL libc is not ready yet. You can ask for do it quicker: https://github.com/AlexXanderGrib/node-tdlib/issues"
+    );
 
     packageName += "-glibc";
   }

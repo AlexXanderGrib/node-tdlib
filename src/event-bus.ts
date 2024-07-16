@@ -1,3 +1,5 @@
+import { assert } from "./assert";
+
 export type Subscription<T> = (value: T) => void;
 export type Unsubscribe = () => void;
 type Observer<T> = (subscriber: Subscriber<T>) => Unsubscribe;
@@ -47,9 +49,7 @@ export class EventBus<T> implements Observable<T> {
    * @memberof EventBus
    */
   subscribe(handler: Subscription<T>): Unsubscribe {
-    if (this._completed) {
-      throw new Error("Completed");
-    }
+    assert(!this._completed, "Completed");
 
     const cached = this._subscriptions.get(handler);
     if (cached) return cached;
