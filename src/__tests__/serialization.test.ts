@@ -2,7 +2,7 @@ import { TDLibAddon } from "../addon";
 import { Client, TDError } from "../client";
 import { randomBytes } from "crypto";
 import { Meta } from "../generated/meta";
-import type { error } from "../types";
+import type { error } from "../generated/types";
 
 let adapter: TDLibAddon;
 

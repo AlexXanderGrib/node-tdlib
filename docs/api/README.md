@@ -56,9 +56,7 @@ async function init() {
   const adapter = await TDLibAddon.create();
 
   // Make TDLib shut up. Immediately
-  Client.execute(adapter, "setLogVerbosityLevel", {
-    new_verbosity_level: 0
-  });
+  Client.disableLogs(adapter);
 
   const client = new Client(adapter);
   const authenticator = Authenticator.create(client)

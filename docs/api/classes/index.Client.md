@@ -37,6 +37,7 @@ Client
 - [invoke](index.Client.md#invoke)
 - [pause](index.Client.md#pause)
 - [start](index.Client.md#start)
+- [disableLogs](index.Client.md#disablelogs)
 - [execute](index.Client.md#execute-1)
 
 ## Constructors
@@ -117,7 +118,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:109
+dist/client.d.ts:118
 
 ___
 
@@ -169,7 +170,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:116
+dist/client.d.ts:125
 
 ___
 
@@ -187,7 +188,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:124
+dist/client.d.ts:133
 
 ## Methods
 
@@ -205,7 +206,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:145
+dist/client.d.ts:154
 
 ___
 
@@ -242,7 +243,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:101
+dist/client.d.ts:110
 
 ___
 
@@ -297,7 +298,7 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:138
+dist/client.d.ts:147
 
 ___
 
@@ -315,7 +316,35 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:131
+dist/client.d.ts:140
+
+___
+
+### disableLogs
+
+▸ **disableLogs**(`lib`): `void`
+
+Disables logging of TDLib instance
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `lib` | `TDLib` |
+
+#### Returns
+
+`void`
+
+**`Static`**
+
+**`Memberof`**
+
+Client
+
+#### Defined in
+
+dist/client.d.ts:87
 
 ___
 
@@ -353,4 +382,4 @@ Client
 
 #### Defined in
 
-dist/client.d.ts:90
+dist/client.d.ts:99

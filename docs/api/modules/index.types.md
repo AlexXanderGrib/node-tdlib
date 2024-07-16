@@ -452,6 +452,9 @@
 - [FirebaseAuthenticationSettings](index.types.md#firebaseauthenticationsettings)
 - [FirebaseAuthenticationSettings$Input](index.types.md#firebaseauthenticationsettings$input)
 - [FirebaseAuthenticationSettings$Type](index.types.md#firebaseauthenticationsettings$type)
+- [FirebaseDeviceVerificationParameters](index.types.md#firebasedeviceverificationparameters)
+- [FirebaseDeviceVerificationParameters$Input](index.types.md#firebasedeviceverificationparameters$input)
+- [FirebaseDeviceVerificationParameters$Type](index.types.md#firebasedeviceverificationparameters$type)
 - [FormattedText](index.types.md#formattedtext)
 - [FormattedText$Input](index.types.md#formattedtext$input)
 - [ForumTopic](index.types.md#forumtopic)
@@ -558,6 +561,11 @@
 - [InputMessageReplyTo](index.types.md#inputmessagereplyto)
 - [InputMessageReplyTo$Input](index.types.md#inputmessagereplyto$input)
 - [InputMessageReplyTo$Type](index.types.md#inputmessagereplyto$type)
+- [InputPaidMedia](index.types.md#inputpaidmedia)
+- [InputPaidMedia$Input](index.types.md#inputpaidmedia$input)
+- [InputPaidMediaType](index.types.md#inputpaidmediatype)
+- [InputPaidMediaType$Input](index.types.md#inputpaidmediatype$input)
+- [InputPaidMediaType$Type](index.types.md#inputpaidmediatype$type)
 - [InputPassportElement](index.types.md#inputpassportelement)
 - [InputPassportElement$Input](index.types.md#inputpassportelement$input)
 - [InputPassportElement$Type](index.types.md#inputpassportelement$type)
@@ -619,8 +627,16 @@
 - [LanguagePackStringValue$Type](index.types.md#languagepackstringvalue$type)
 - [LanguagePackStrings](index.types.md#languagepackstrings)
 - [LanguagePackStrings$Input](index.types.md#languagepackstrings$input)
+- [LinkPreview](index.types.md#linkpreview)
+- [LinkPreview$Input](index.types.md#linkpreview$input)
+- [LinkPreviewAlbumMedia](index.types.md#linkpreviewalbummedia)
+- [LinkPreviewAlbumMedia$Input](index.types.md#linkpreviewalbummedia$input)
+- [LinkPreviewAlbumMedia$Type](index.types.md#linkpreviewalbummedia$type)
 - [LinkPreviewOptions](index.types.md#linkpreviewoptions)
 - [LinkPreviewOptions$Input](index.types.md#linkpreviewoptions$input)
+- [LinkPreviewType](index.types.md#linkpreviewtype)
+- [LinkPreviewType$Input](index.types.md#linkpreviewtype$input)
+- [LinkPreviewType$Type](index.types.md#linkpreviewtype$type)
 - [LocalFile](index.types.md#localfile)
 - [LocalFile$Input](index.types.md#localfile$input)
 - [LocalizationTargetInfo](index.types.md#localizationtargetinfo)
@@ -662,9 +678,6 @@
 - [MessageEffectType](index.types.md#messageeffecttype)
 - [MessageEffectType$Input](index.types.md#messageeffecttype$input)
 - [MessageEffectType$Type](index.types.md#messageeffecttype$type)
-- [MessageExtendedMedia](index.types.md#messageextendedmedia)
-- [MessageExtendedMedia$Input](index.types.md#messageextendedmedia$input)
-- [MessageExtendedMedia$Type](index.types.md#messageextendedmedia$type)
 - [MessageFileType](index.types.md#messagefiletype)
 - [MessageFileType$Input](index.types.md#messagefiletype$input)
 - [MessageFileType$Type](index.types.md#messagefiletype$type)
@@ -781,6 +794,9 @@
 - [PageBlockVerticalAlignment](index.types.md#pageblockverticalalignment)
 - [PageBlockVerticalAlignment$Input](index.types.md#pageblockverticalalignment$input)
 - [PageBlockVerticalAlignment$Type](index.types.md#pageblockverticalalignment$type)
+- [PaidMedia](index.types.md#paidmedia)
+- [PaidMedia$Input](index.types.md#paidmedia$input)
+- [PaidMedia$Type](index.types.md#paidmedia$type)
 - [PassportAuthorizationForm](index.types.md#passportauthorizationform)
 - [PassportAuthorizationForm$Input](index.types.md#passportauthorizationform$input)
 - [PassportElement](index.types.md#passportelement)
@@ -1236,8 +1252,6 @@
 - [WebApp$Input](index.types.md#webapp$input)
 - [WebAppInfo](index.types.md#webappinfo)
 - [WebAppInfo$Input](index.types.md#webappinfo$input)
-- [WebPage](index.types.md#webpage)
-- [WebPage$Input](index.types.md#webpage$input)
 - [WebPageInstantView](index.types.md#webpageinstantview)
 - [WebPageInstantView$Input](index.types.md#webpageinstantview$input)
 - [accentColor](index.types.md#accentcolor-1)
@@ -2583,6 +2597,10 @@
 - [firebaseAuthenticationSettingsAndroid$Input](index.types.md#firebaseauthenticationsettingsandroid$input)
 - [firebaseAuthenticationSettingsIos](index.types.md#firebaseauthenticationsettingsios)
 - [firebaseAuthenticationSettingsIos$Input](index.types.md#firebaseauthenticationsettingsios$input)
+- [firebaseDeviceVerificationParametersPlayIntegrity](index.types.md#firebasedeviceverificationparametersplayintegrity)
+- [firebaseDeviceVerificationParametersPlayIntegrity$Input](index.types.md#firebasedeviceverificationparametersplayintegrity$input)
+- [firebaseDeviceVerificationParametersSafetyNet](index.types.md#firebasedeviceverificationparameterssafetynet)
+- [firebaseDeviceVerificationParametersSafetyNet$Input](index.types.md#firebasedeviceverificationparameterssafetynet$input)
 - [formattedText](index.types.md#formattedtext-1)
 - [formattedText$Input](index.types.md#formattedtext$input-1)
 - [forumTopic](index.types.md#forumtopic-1)
@@ -3019,6 +3037,9 @@
 - [getLanguagePackStrings](index.types.md#getlanguagepackstrings)
 - [getLanguagePackStrings$DirectInput](index.types.md#getlanguagepackstrings$directinput)
 - [getLanguagePackStrings$Input](index.types.md#getlanguagepackstrings$input)
+- [getLinkPreview](index.types.md#getlinkpreview)
+- [getLinkPreview$DirectInput](index.types.md#getlinkpreview$directinput)
+- [getLinkPreview$Input](index.types.md#getlinkpreview$input)
 - [getLocalizationTargetInfo](index.types.md#getlocalizationtargetinfo)
 - [getLocalizationTargetInfo$DirectInput](index.types.md#getlocalizationtargetinfo$directinput)
 - [getLocalizationTargetInfo$Input](index.types.md#getlocalizationtargetinfo$input)
@@ -3238,6 +3259,9 @@
 - [getSecretChat](index.types.md#getsecretchat)
 - [getSecretChat$DirectInput](index.types.md#getsecretchat$directinput)
 - [getSecretChat$Input](index.types.md#getsecretchat$input)
+- [getStarAdAccountUrl](index.types.md#getstaradaccounturl)
+- [getStarAdAccountUrl$DirectInput](index.types.md#getstaradaccounturl$directinput)
+- [getStarAdAccountUrl$Input](index.types.md#getstaradaccounturl$input)
 - [getStarPaymentOptions](index.types.md#getstarpaymentoptions)
 - [getStarPaymentOptions$DirectInput](index.types.md#getstarpaymentoptions$directinput)
 - [getStarPaymentOptions$Input](index.types.md#getstarpaymentoptions$input)
@@ -3373,9 +3397,6 @@
 - [getWebPageInstantView](index.types.md#getwebpageinstantview)
 - [getWebPageInstantView$DirectInput](index.types.md#getwebpageinstantview$directinput)
 - [getWebPageInstantView$Input](index.types.md#getwebpageinstantview$input)
-- [getWebPagePreview](index.types.md#getwebpagepreview)
-- [getWebPagePreview$DirectInput](index.types.md#getwebpagepreview$directinput)
-- [getWebPagePreview$Input](index.types.md#getwebpagepreview$input)
 - [groupCall](index.types.md#groupcall-1)
 - [groupCall$Input](index.types.md#groupcall$input-1)
 - [groupCallId](index.types.md#groupcallid-1)
@@ -3554,6 +3575,8 @@
 - [inputMessageInvoice$Input](index.types.md#inputmessageinvoice$input)
 - [inputMessageLocation](index.types.md#inputmessagelocation)
 - [inputMessageLocation$Input](index.types.md#inputmessagelocation$input)
+- [inputMessagePaidMedia](index.types.md#inputmessagepaidmedia)
+- [inputMessagePaidMedia$Input](index.types.md#inputmessagepaidmedia$input)
 - [inputMessagePhoto](index.types.md#inputmessagephoto)
 - [inputMessagePhoto$Input](index.types.md#inputmessagephoto$input)
 - [inputMessagePoll](index.types.md#inputmessagepoll)
@@ -3578,6 +3601,12 @@
 - [inputMessageVideoNote$Input](index.types.md#inputmessagevideonote$input)
 - [inputMessageVoiceNote](index.types.md#inputmessagevoicenote)
 - [inputMessageVoiceNote$Input](index.types.md#inputmessagevoicenote$input)
+- [inputPaidMedia](index.types.md#inputpaidmedia-1)
+- [inputPaidMedia$Input](index.types.md#inputpaidmedia$input-1)
+- [inputPaidMediaTypePhoto](index.types.md#inputpaidmediatypephoto)
+- [inputPaidMediaTypePhoto$Input](index.types.md#inputpaidmediatypephoto$input)
+- [inputPaidMediaTypeVideo](index.types.md#inputpaidmediatypevideo)
+- [inputPaidMediaTypeVideo$Input](index.types.md#inputpaidmediatypevideo$input)
 - [inputPassportElementAddress](index.types.md#inputpassportelementaddress)
 - [inputPassportElementAddress$Input](index.types.md#inputpassportelementaddress$input)
 - [inputPassportElementBankStatement](index.types.md#inputpassportelementbankstatement)
@@ -3817,8 +3846,70 @@
 - [leaveGroupCall](index.types.md#leavegroupcall)
 - [leaveGroupCall$DirectInput](index.types.md#leavegroupcall$directinput)
 - [leaveGroupCall$Input](index.types.md#leavegroupcall$input)
+- [linkPreview](index.types.md#linkpreview-1)
+- [linkPreview$Input](index.types.md#linkpreview$input-1)
+- [linkPreviewAlbumMediaPhoto](index.types.md#linkpreviewalbummediaphoto)
+- [linkPreviewAlbumMediaPhoto$Input](index.types.md#linkpreviewalbummediaphoto$input)
+- [linkPreviewAlbumMediaVideo](index.types.md#linkpreviewalbummediavideo)
+- [linkPreviewAlbumMediaVideo$Input](index.types.md#linkpreviewalbummediavideo$input)
 - [linkPreviewOptions](index.types.md#linkpreviewoptions-1)
 - [linkPreviewOptions$Input](index.types.md#linkpreviewoptions$input-1)
+- [linkPreviewTypeAlbum](index.types.md#linkpreviewtypealbum)
+- [linkPreviewTypeAlbum$Input](index.types.md#linkpreviewtypealbum$input)
+- [linkPreviewTypeAnimation](index.types.md#linkpreviewtypeanimation)
+- [linkPreviewTypeAnimation$Input](index.types.md#linkpreviewtypeanimation$input)
+- [linkPreviewTypeApp](index.types.md#linkpreviewtypeapp)
+- [linkPreviewTypeApp$Input](index.types.md#linkpreviewtypeapp$input)
+- [linkPreviewTypeArticle](index.types.md#linkpreviewtypearticle)
+- [linkPreviewTypeArticle$Input](index.types.md#linkpreviewtypearticle$input)
+- [linkPreviewTypeAudio](index.types.md#linkpreviewtypeaudio)
+- [linkPreviewTypeAudio$Input](index.types.md#linkpreviewtypeaudio$input)
+- [linkPreviewTypeBackground](index.types.md#linkpreviewtypebackground)
+- [linkPreviewTypeBackground$Input](index.types.md#linkpreviewtypebackground$input)
+- [linkPreviewTypeChannelBoost](index.types.md#linkpreviewtypechannelboost)
+- [linkPreviewTypeChannelBoost$Input](index.types.md#linkpreviewtypechannelboost$input)
+- [linkPreviewTypeChat](index.types.md#linkpreviewtypechat)
+- [linkPreviewTypeChat$Input](index.types.md#linkpreviewtypechat$input)
+- [linkPreviewTypeDocument](index.types.md#linkpreviewtypedocument)
+- [linkPreviewTypeDocument$Input](index.types.md#linkpreviewtypedocument$input)
+- [linkPreviewTypeEmbeddedAudioPlayer](index.types.md#linkpreviewtypeembeddedaudioplayer)
+- [linkPreviewTypeEmbeddedAudioPlayer$Input](index.types.md#linkpreviewtypeembeddedaudioplayer$input)
+- [linkPreviewTypeEmbeddedVideoPlayer](index.types.md#linkpreviewtypeembeddedvideoplayer)
+- [linkPreviewTypeEmbeddedVideoPlayer$Input](index.types.md#linkpreviewtypeembeddedvideoplayer$input)
+- [linkPreviewTypeInvoice](index.types.md#linkpreviewtypeinvoice)
+- [linkPreviewTypeInvoice$Input](index.types.md#linkpreviewtypeinvoice$input)
+- [linkPreviewTypeMessage](index.types.md#linkpreviewtypemessage)
+- [linkPreviewTypeMessage$Input](index.types.md#linkpreviewtypemessage$input)
+- [linkPreviewTypePhoto](index.types.md#linkpreviewtypephoto)
+- [linkPreviewTypePhoto$Input](index.types.md#linkpreviewtypephoto$input)
+- [linkPreviewTypePremiumGiftCode](index.types.md#linkpreviewtypepremiumgiftcode)
+- [linkPreviewTypePremiumGiftCode$Input](index.types.md#linkpreviewtypepremiumgiftcode$input)
+- [linkPreviewTypeShareableChatFolder](index.types.md#linkpreviewtypeshareablechatfolder)
+- [linkPreviewTypeShareableChatFolder$Input](index.types.md#linkpreviewtypeshareablechatfolder$input)
+- [linkPreviewTypeSticker](index.types.md#linkpreviewtypesticker)
+- [linkPreviewTypeSticker$Input](index.types.md#linkpreviewtypesticker$input)
+- [linkPreviewTypeStickerSet](index.types.md#linkpreviewtypestickerset)
+- [linkPreviewTypeStickerSet$Input](index.types.md#linkpreviewtypestickerset$input)
+- [linkPreviewTypeStory](index.types.md#linkpreviewtypestory)
+- [linkPreviewTypeStory$Input](index.types.md#linkpreviewtypestory$input)
+- [linkPreviewTypeSupergroupBoost](index.types.md#linkpreviewtypesupergroupboost)
+- [linkPreviewTypeSupergroupBoost$Input](index.types.md#linkpreviewtypesupergroupboost$input)
+- [linkPreviewTypeTheme](index.types.md#linkpreviewtypetheme)
+- [linkPreviewTypeTheme$Input](index.types.md#linkpreviewtypetheme$input)
+- [linkPreviewTypeUnsupported](index.types.md#linkpreviewtypeunsupported)
+- [linkPreviewTypeUnsupported$Input](index.types.md#linkpreviewtypeunsupported$input)
+- [linkPreviewTypeUser](index.types.md#linkpreviewtypeuser)
+- [linkPreviewTypeUser$Input](index.types.md#linkpreviewtypeuser$input)
+- [linkPreviewTypeVideo](index.types.md#linkpreviewtypevideo)
+- [linkPreviewTypeVideo$Input](index.types.md#linkpreviewtypevideo$input)
+- [linkPreviewTypeVideoChat](index.types.md#linkpreviewtypevideochat)
+- [linkPreviewTypeVideoChat$Input](index.types.md#linkpreviewtypevideochat$input)
+- [linkPreviewTypeVideoNote](index.types.md#linkpreviewtypevideonote)
+- [linkPreviewTypeVideoNote$Input](index.types.md#linkpreviewtypevideonote$input)
+- [linkPreviewTypeVoiceNote](index.types.md#linkpreviewtypevoicenote)
+- [linkPreviewTypeVoiceNote$Input](index.types.md#linkpreviewtypevoicenote$input)
+- [linkPreviewTypeWebApp](index.types.md#linkpreviewtypewebapp)
+- [linkPreviewTypeWebApp$Input](index.types.md#linkpreviewtypewebapp$input)
 - [loadActiveStories](index.types.md#loadactivestories)
 - [loadActiveStories$DirectInput](index.types.md#loadactivestories$directinput)
 - [loadActiveStories$Input](index.types.md#loadactivestories$input)
@@ -3946,14 +4037,6 @@
 - [messageExpiredVideoNote$Input](index.types.md#messageexpiredvideonote$input)
 - [messageExpiredVoiceNote](index.types.md#messageexpiredvoicenote)
 - [messageExpiredVoiceNote$Input](index.types.md#messageexpiredvoicenote$input)
-- [messageExtendedMediaPhoto](index.types.md#messageextendedmediaphoto)
-- [messageExtendedMediaPhoto$Input](index.types.md#messageextendedmediaphoto$input)
-- [messageExtendedMediaPreview](index.types.md#messageextendedmediapreview)
-- [messageExtendedMediaPreview$Input](index.types.md#messageextendedmediapreview$input)
-- [messageExtendedMediaUnsupported](index.types.md#messageextendedmediaunsupported)
-- [messageExtendedMediaUnsupported$Input](index.types.md#messageextendedmediaunsupported$input)
-- [messageExtendedMediaVideo](index.types.md#messageextendedmediavideo)
-- [messageExtendedMediaVideo$Input](index.types.md#messageextendedmediavideo$input)
 - [messageFileTypeGroup](index.types.md#messagefiletypegroup)
 - [messageFileTypeGroup$Input](index.types.md#messagefiletypegroup$input)
 - [messageFileTypePrivate](index.types.md#messagefiletypeprivate)
@@ -3998,10 +4081,14 @@
 - [messageOriginHiddenUser$Input](index.types.md#messageoriginhiddenuser$input)
 - [messageOriginUser](index.types.md#messageoriginuser)
 - [messageOriginUser$Input](index.types.md#messageoriginuser$input)
+- [messagePaidMedia](index.types.md#messagepaidmedia)
+- [messagePaidMedia$Input](index.types.md#messagepaidmedia$input)
 - [messagePassportDataReceived](index.types.md#messagepassportdatareceived)
 - [messagePassportDataReceived$Input](index.types.md#messagepassportdatareceived$input)
 - [messagePassportDataSent](index.types.md#messagepassportdatasent)
 - [messagePassportDataSent$Input](index.types.md#messagepassportdatasent$input)
+- [messagePaymentRefunded](index.types.md#messagepaymentrefunded)
+- [messagePaymentRefunded$Input](index.types.md#messagepaymentrefunded$input)
 - [messagePaymentSuccessful](index.types.md#messagepaymentsuccessful)
 - [messagePaymentSuccessful$Input](index.types.md#messagepaymentsuccessful$input)
 - [messagePaymentSuccessfulBot](index.types.md#messagepaymentsuccessfulbot)
@@ -4292,6 +4379,14 @@
 - [pageBlockVideo$Input](index.types.md#pageblockvideo$input)
 - [pageBlockVoiceNote](index.types.md#pageblockvoicenote)
 - [pageBlockVoiceNote$Input](index.types.md#pageblockvoicenote$input)
+- [paidMediaPhoto](index.types.md#paidmediaphoto)
+- [paidMediaPhoto$Input](index.types.md#paidmediaphoto$input)
+- [paidMediaPreview](index.types.md#paidmediapreview)
+- [paidMediaPreview$Input](index.types.md#paidmediapreview$input)
+- [paidMediaUnsupported](index.types.md#paidmediaunsupported)
+- [paidMediaUnsupported$Input](index.types.md#paidmediaunsupported$input)
+- [paidMediaVideo](index.types.md#paidmediavideo)
+- [paidMediaVideo$Input](index.types.md#paidmediavideo$input)
 - [parseMarkdown](index.types.md#parsemarkdown)
 - [parseMarkdown$DirectInput](index.types.md#parsemarkdown$directinput)
 - [parseMarkdown$Input](index.types.md#parsemarkdown$input)
@@ -4471,6 +4566,8 @@
 - [premiumFeatureIncreasedUploadFileSize$Input](index.types.md#premiumfeatureincreaseduploadfilesize$input)
 - [premiumFeatureLastSeenTimes](index.types.md#premiumfeaturelastseentimes)
 - [premiumFeatureLastSeenTimes$Input](index.types.md#premiumfeaturelastseentimes$input)
+- [premiumFeatureMessageEffects](index.types.md#premiumfeaturemessageeffects)
+- [premiumFeatureMessageEffects$Input](index.types.md#premiumfeaturemessageeffects$input)
 - [premiumFeatureMessagePrivacy](index.types.md#premiumfeaturemessageprivacy)
 - [premiumFeatureMessagePrivacy$Input](index.types.md#premiumfeaturemessageprivacy$input)
 - [premiumFeatureProfileBadge](index.types.md#premiumfeatureprofilebadge)
@@ -4669,6 +4766,8 @@
 - [pushMessageContentMediaAlbum$Input](index.types.md#pushmessagecontentmediaalbum$input)
 - [pushMessageContentMessageForwards](index.types.md#pushmessagecontentmessageforwards)
 - [pushMessageContentMessageForwards$Input](index.types.md#pushmessagecontentmessageforwards$input)
+- [pushMessageContentPaidMedia](index.types.md#pushmessagecontentpaidmedia)
+- [pushMessageContentPaidMedia$Input](index.types.md#pushmessagecontentpaidmedia$input)
 - [pushMessageContentPhoto](index.types.md#pushmessagecontentphoto)
 - [pushMessageContentPhoto$Input](index.types.md#pushmessagecontentphoto$input)
 - [pushMessageContentPoll](index.types.md#pushmessagecontentpoll)
@@ -5660,6 +5759,8 @@
 - [starTransactionDirectionOutgoing$Input](index.types.md#startransactiondirectionoutgoing$input)
 - [starTransactionPartnerAppStore](index.types.md#startransactionpartnerappstore)
 - [starTransactionPartnerAppStore$Input](index.types.md#startransactionpartnerappstore$input)
+- [starTransactionPartnerBot](index.types.md#startransactionpartnerbot)
+- [starTransactionPartnerBot$Input](index.types.md#startransactionpartnerbot$input)
 - [starTransactionPartnerChannel](index.types.md#startransactionpartnerchannel)
 - [starTransactionPartnerChannel$Input](index.types.md#startransactionpartnerchannel$input)
 - [starTransactionPartnerFragment](index.types.md#startransactionpartnerfragment)
@@ -5668,10 +5769,10 @@
 - [starTransactionPartnerGooglePlay$Input](index.types.md#startransactionpartnergoogleplay$input)
 - [starTransactionPartnerTelegram](index.types.md#startransactionpartnertelegram)
 - [starTransactionPartnerTelegram$Input](index.types.md#startransactionpartnertelegram$input)
+- [starTransactionPartnerTelegramAds](index.types.md#startransactionpartnertelegramads)
+- [starTransactionPartnerTelegramAds$Input](index.types.md#startransactionpartnertelegramads$input)
 - [starTransactionPartnerUnsupported](index.types.md#startransactionpartnerunsupported)
 - [starTransactionPartnerUnsupported$Input](index.types.md#startransactionpartnerunsupported$input)
-- [starTransactionPartnerUser](index.types.md#startransactionpartneruser)
-- [starTransactionPartnerUser$Input](index.types.md#startransactionpartneruser$input)
 - [starTransactions](index.types.md#startransactions-1)
 - [starTransactions$Input](index.types.md#startransactions$input-1)
 - [startGroupCallRecording](index.types.md#startgroupcallrecording)
@@ -6588,8 +6689,6 @@
 - [webApp$Input](index.types.md#webapp$input-1)
 - [webAppInfo](index.types.md#webappinfo-1)
 - [webAppInfo$Input](index.types.md#webappinfo$input-1)
-- [webPage](index.types.md#webpage-1)
-- [webPage$Input](index.types.md#webpage$input-1)
 - [webPageInstantView](index.types.md#webpageinstantview-1)
 - [webPageInstantView$Input](index.types.md#webpageinstantview$input-1)
 - [writeGeneratedFilePart](index.types.md#writegeneratedfilepart)
@@ -9266,6 +9365,24 @@ Re-exports [FirebaseAuthenticationSettings$Type](index.types.default.md#firebase
 
 ___
 
+### FirebaseDeviceVerificationParameters
+
+Re-exports [FirebaseDeviceVerificationParameters](index.types.default.md#firebasedeviceverificationparameters)
+
+___
+
+### FirebaseDeviceVerificationParameters$Input
+
+Re-exports [FirebaseDeviceVerificationParameters$Input](index.types.default.md#firebasedeviceverificationparameters$input)
+
+___
+
+### FirebaseDeviceVerificationParameters$Type
+
+Re-exports [FirebaseDeviceVerificationParameters$Type](index.types.default.md#firebasedeviceverificationparameters$type-1)
+
+___
+
 ### FormattedText
 
 Re-exports [FormattedText](index.types.default.md#formattedtext)
@@ -9902,6 +10019,36 @@ Re-exports [InputMessageReplyTo$Type](index.types.default.md#inputmessagereplyto
 
 ___
 
+### InputPaidMedia
+
+Re-exports [InputPaidMedia](index.types.default.md#inputpaidmedia)
+
+___
+
+### InputPaidMedia$Input
+
+Re-exports [InputPaidMedia$Input](index.types.default.md#inputpaidmedia$input)
+
+___
+
+### InputPaidMediaType
+
+Re-exports [InputPaidMediaType](index.types.default.md#inputpaidmediatype)
+
+___
+
+### InputPaidMediaType$Input
+
+Re-exports [InputPaidMediaType$Input](index.types.default.md#inputpaidmediatype$input)
+
+___
+
+### InputPaidMediaType$Type
+
+Re-exports [InputPaidMediaType$Type](index.types.default.md#inputpaidmediatype$type-1)
+
+___
+
 ### InputPassportElement
 
 Re-exports [InputPassportElement](index.types.default.md#inputpassportelement)
@@ -10268,6 +10415,36 @@ Re-exports [LanguagePackStrings$Input](index.types.default.md#languagepackstring
 
 ___
 
+### LinkPreview
+
+Re-exports [LinkPreview](index.types.default.md#linkpreview)
+
+___
+
+### LinkPreview$Input
+
+Re-exports [LinkPreview$Input](index.types.default.md#linkpreview$input)
+
+___
+
+### LinkPreviewAlbumMedia
+
+Re-exports [LinkPreviewAlbumMedia](index.types.default.md#linkpreviewalbummedia)
+
+___
+
+### LinkPreviewAlbumMedia$Input
+
+Re-exports [LinkPreviewAlbumMedia$Input](index.types.default.md#linkpreviewalbummedia$input)
+
+___
+
+### LinkPreviewAlbumMedia$Type
+
+Re-exports [LinkPreviewAlbumMedia$Type](index.types.default.md#linkpreviewalbummedia$type-1)
+
+___
+
 ### LinkPreviewOptions
 
 Re-exports [LinkPreviewOptions](index.types.default.md#linkpreviewoptions)
@@ -10277,6 +10454,24 @@ ___
 ### LinkPreviewOptions$Input
 
 Re-exports [LinkPreviewOptions$Input](index.types.default.md#linkpreviewoptions$input)
+
+___
+
+### LinkPreviewType
+
+Re-exports [LinkPreviewType](index.types.default.md#linkpreviewtype)
+
+___
+
+### LinkPreviewType$Input
+
+Re-exports [LinkPreviewType$Input](index.types.default.md#linkpreviewtype$input)
+
+___
+
+### LinkPreviewType$Type
+
+Re-exports [LinkPreviewType$Type](index.types.default.md#linkpreviewtype$type-1)
 
 ___
 
@@ -10523,24 +10718,6 @@ ___
 ### MessageEffectType$Type
 
 Re-exports [MessageEffectType$Type](index.types.default.md#messageeffecttype$type-1)
-
-___
-
-### MessageExtendedMedia
-
-Re-exports [MessageExtendedMedia](index.types.default.md#messageextendedmedia)
-
-___
-
-### MessageExtendedMedia$Input
-
-Re-exports [MessageExtendedMedia$Input](index.types.default.md#messageextendedmedia$input)
-
-___
-
-### MessageExtendedMedia$Type
-
-Re-exports [MessageExtendedMedia$Type](index.types.default.md#messageextendedmedia$type-1)
 
 ___
 
@@ -11237,6 +11414,24 @@ ___
 ### PageBlockVerticalAlignment$Type
 
 Re-exports [PageBlockVerticalAlignment$Type](index.types.default.md#pageblockverticalalignment$type-1)
+
+___
+
+### PaidMedia
+
+Re-exports [PaidMedia](index.types.default.md#paidmedia)
+
+___
+
+### PaidMedia$Input
+
+Re-exports [PaidMedia$Input](index.types.default.md#paidmedia$input)
+
+___
+
+### PaidMedia$Type
+
+Re-exports [PaidMedia$Type](index.types.default.md#paidmedia$type-1)
 
 ___
 
@@ -13967,18 +14162,6 @@ ___
 ### WebAppInfo$Input
 
 Re-exports [WebAppInfo$Input](index.types.default.md#webappinfo$input)
-
-___
-
-### WebPage
-
-Re-exports [WebPage](index.types.default.md#webpage)
-
-___
-
-### WebPage$Input
-
-Re-exports [WebPage$Input](index.types.default.md#webpage$input)
 
 ___
 
@@ -22052,6 +22235,30 @@ Re-exports [firebaseAuthenticationSettingsIos$Input](index.types.default.md#fire
 
 ___
 
+### firebaseDeviceVerificationParametersPlayIntegrity
+
+Re-exports [firebaseDeviceVerificationParametersPlayIntegrity](index.types.default.md#firebasedeviceverificationparametersplayintegrity)
+
+___
+
+### firebaseDeviceVerificationParametersPlayIntegrity$Input
+
+Re-exports [firebaseDeviceVerificationParametersPlayIntegrity$Input](index.types.default.md#firebasedeviceverificationparametersplayintegrity$input)
+
+___
+
+### firebaseDeviceVerificationParametersSafetyNet
+
+Re-exports [firebaseDeviceVerificationParametersSafetyNet](index.types.default.md#firebasedeviceverificationparameterssafetynet)
+
+___
+
+### firebaseDeviceVerificationParametersSafetyNet$Input
+
+Re-exports [firebaseDeviceVerificationParametersSafetyNet$Input](index.types.default.md#firebasedeviceverificationparameterssafetynet$input)
+
+___
+
 ### formattedText
 
 Re-exports [formattedText](index.types.default.md#formattedtext-1)
@@ -24668,6 +24875,24 @@ Re-exports [getLanguagePackStrings$Input](index.types.default.md#getlanguagepack
 
 ___
 
+### getLinkPreview
+
+Re-exports [getLinkPreview](index.types.default.md#getlinkpreview)
+
+___
+
+### getLinkPreview$DirectInput
+
+Re-exports [getLinkPreview$DirectInput](index.types.default.md#getlinkpreview$directinput)
+
+___
+
+### getLinkPreview$Input
+
+Re-exports [getLinkPreview$Input](index.types.default.md#getlinkpreview$input)
+
+___
+
 ### getLocalizationTargetInfo
 
 Re-exports [getLocalizationTargetInfo](index.types.default.md#getlocalizationtargetinfo)
@@ -25982,6 +26207,24 @@ Re-exports [getSecretChat$Input](index.types.default.md#getsecretchat$input)
 
 ___
 
+### getStarAdAccountUrl
+
+Re-exports [getStarAdAccountUrl](index.types.default.md#getstaradaccounturl)
+
+___
+
+### getStarAdAccountUrl$DirectInput
+
+Re-exports [getStarAdAccountUrl$DirectInput](index.types.default.md#getstaradaccounturl$directinput)
+
+___
+
+### getStarAdAccountUrl$Input
+
+Re-exports [getStarAdAccountUrl$Input](index.types.default.md#getstaradaccounturl$input)
+
+___
+
 ### getStarPaymentOptions
 
 Re-exports [getStarPaymentOptions](index.types.default.md#getstarpaymentoptions)
@@ -26789,24 +27032,6 @@ ___
 ### getWebPageInstantView$Input
 
 Re-exports [getWebPageInstantView$Input](index.types.default.md#getwebpageinstantview$input)
-
-___
-
-### getWebPagePreview
-
-Re-exports [getWebPagePreview](index.types.default.md#getwebpagepreview)
-
-___
-
-### getWebPagePreview$DirectInput
-
-Re-exports [getWebPagePreview$DirectInput](index.types.default.md#getwebpagepreview$directinput)
-
-___
-
-### getWebPagePreview$Input
-
-Re-exports [getWebPagePreview$Input](index.types.default.md#getwebpagepreview$input)
 
 ___
 
@@ -27878,6 +28103,18 @@ Re-exports [inputMessageLocation$Input](index.types.default.md#inputmessagelocat
 
 ___
 
+### inputMessagePaidMedia
+
+Re-exports [inputMessagePaidMedia](index.types.default.md#inputmessagepaidmedia)
+
+___
+
+### inputMessagePaidMedia$Input
+
+Re-exports [inputMessagePaidMedia$Input](index.types.default.md#inputmessagepaidmedia$input)
+
+___
+
 ### inputMessagePhoto
 
 Re-exports [inputMessagePhoto](index.types.default.md#inputmessagephoto)
@@ -28019,6 +28256,42 @@ ___
 ### inputMessageVoiceNote$Input
 
 Re-exports [inputMessageVoiceNote$Input](index.types.default.md#inputmessagevoicenote$input)
+
+___
+
+### inputPaidMedia
+
+Re-exports [inputPaidMedia](index.types.default.md#inputpaidmedia-1)
+
+___
+
+### inputPaidMedia$Input
+
+Re-exports [inputPaidMedia$Input](index.types.default.md#inputpaidmedia$input-1)
+
+___
+
+### inputPaidMediaTypePhoto
+
+Re-exports [inputPaidMediaTypePhoto](index.types.default.md#inputpaidmediatypephoto)
+
+___
+
+### inputPaidMediaTypePhoto$Input
+
+Re-exports [inputPaidMediaTypePhoto$Input](index.types.default.md#inputpaidmediatypephoto$input)
+
+___
+
+### inputPaidMediaTypeVideo
+
+Re-exports [inputPaidMediaTypeVideo](index.types.default.md#inputpaidmediatypevideo)
+
+___
+
+### inputPaidMediaTypeVideo$Input
+
+Re-exports [inputPaidMediaTypeVideo$Input](index.types.default.md#inputpaidmediatypevideo$input)
 
 ___
 
@@ -29456,6 +29729,42 @@ Re-exports [leaveGroupCall$Input](index.types.default.md#leavegroupcall$input)
 
 ___
 
+### linkPreview
+
+Re-exports [linkPreview](index.types.default.md#linkpreview-1)
+
+___
+
+### linkPreview$Input
+
+Re-exports [linkPreview$Input](index.types.default.md#linkpreview$input-1)
+
+___
+
+### linkPreviewAlbumMediaPhoto
+
+Re-exports [linkPreviewAlbumMediaPhoto](index.types.default.md#linkpreviewalbummediaphoto)
+
+___
+
+### linkPreviewAlbumMediaPhoto$Input
+
+Re-exports [linkPreviewAlbumMediaPhoto$Input](index.types.default.md#linkpreviewalbummediaphoto$input)
+
+___
+
+### linkPreviewAlbumMediaVideo
+
+Re-exports [linkPreviewAlbumMediaVideo](index.types.default.md#linkpreviewalbummediavideo)
+
+___
+
+### linkPreviewAlbumMediaVideo$Input
+
+Re-exports [linkPreviewAlbumMediaVideo$Input](index.types.default.md#linkpreviewalbummediavideo$input)
+
+___
+
 ### linkPreviewOptions
 
 Re-exports [linkPreviewOptions](index.types.default.md#linkpreviewoptions-1)
@@ -29465,6 +29774,342 @@ ___
 ### linkPreviewOptions$Input
 
 Re-exports [linkPreviewOptions$Input](index.types.default.md#linkpreviewoptions$input-1)
+
+___
+
+### linkPreviewTypeAlbum
+
+Re-exports [linkPreviewTypeAlbum](index.types.default.md#linkpreviewtypealbum)
+
+___
+
+### linkPreviewTypeAlbum$Input
+
+Re-exports [linkPreviewTypeAlbum$Input](index.types.default.md#linkpreviewtypealbum$input)
+
+___
+
+### linkPreviewTypeAnimation
+
+Re-exports [linkPreviewTypeAnimation](index.types.default.md#linkpreviewtypeanimation)
+
+___
+
+### linkPreviewTypeAnimation$Input
+
+Re-exports [linkPreviewTypeAnimation$Input](index.types.default.md#linkpreviewtypeanimation$input)
+
+___
+
+### linkPreviewTypeApp
+
+Re-exports [linkPreviewTypeApp](index.types.default.md#linkpreviewtypeapp)
+
+___
+
+### linkPreviewTypeApp$Input
+
+Re-exports [linkPreviewTypeApp$Input](index.types.default.md#linkpreviewtypeapp$input)
+
+___
+
+### linkPreviewTypeArticle
+
+Re-exports [linkPreviewTypeArticle](index.types.default.md#linkpreviewtypearticle)
+
+___
+
+### linkPreviewTypeArticle$Input
+
+Re-exports [linkPreviewTypeArticle$Input](index.types.default.md#linkpreviewtypearticle$input)
+
+___
+
+### linkPreviewTypeAudio
+
+Re-exports [linkPreviewTypeAudio](index.types.default.md#linkpreviewtypeaudio)
+
+___
+
+### linkPreviewTypeAudio$Input
+
+Re-exports [linkPreviewTypeAudio$Input](index.types.default.md#linkpreviewtypeaudio$input)
+
+___
+
+### linkPreviewTypeBackground
+
+Re-exports [linkPreviewTypeBackground](index.types.default.md#linkpreviewtypebackground)
+
+___
+
+### linkPreviewTypeBackground$Input
+
+Re-exports [linkPreviewTypeBackground$Input](index.types.default.md#linkpreviewtypebackground$input)
+
+___
+
+### linkPreviewTypeChannelBoost
+
+Re-exports [linkPreviewTypeChannelBoost](index.types.default.md#linkpreviewtypechannelboost)
+
+___
+
+### linkPreviewTypeChannelBoost$Input
+
+Re-exports [linkPreviewTypeChannelBoost$Input](index.types.default.md#linkpreviewtypechannelboost$input)
+
+___
+
+### linkPreviewTypeChat
+
+Re-exports [linkPreviewTypeChat](index.types.default.md#linkpreviewtypechat)
+
+___
+
+### linkPreviewTypeChat$Input
+
+Re-exports [linkPreviewTypeChat$Input](index.types.default.md#linkpreviewtypechat$input)
+
+___
+
+### linkPreviewTypeDocument
+
+Re-exports [linkPreviewTypeDocument](index.types.default.md#linkpreviewtypedocument)
+
+___
+
+### linkPreviewTypeDocument$Input
+
+Re-exports [linkPreviewTypeDocument$Input](index.types.default.md#linkpreviewtypedocument$input)
+
+___
+
+### linkPreviewTypeEmbeddedAudioPlayer
+
+Re-exports [linkPreviewTypeEmbeddedAudioPlayer](index.types.default.md#linkpreviewtypeembeddedaudioplayer)
+
+___
+
+### linkPreviewTypeEmbeddedAudioPlayer$Input
+
+Re-exports [linkPreviewTypeEmbeddedAudioPlayer$Input](index.types.default.md#linkpreviewtypeembeddedaudioplayer$input)
+
+___
+
+### linkPreviewTypeEmbeddedVideoPlayer
+
+Re-exports [linkPreviewTypeEmbeddedVideoPlayer](index.types.default.md#linkpreviewtypeembeddedvideoplayer)
+
+___
+
+### linkPreviewTypeEmbeddedVideoPlayer$Input
+
+Re-exports [linkPreviewTypeEmbeddedVideoPlayer$Input](index.types.default.md#linkpreviewtypeembeddedvideoplayer$input)
+
+___
+
+### linkPreviewTypeInvoice
+
+Re-exports [linkPreviewTypeInvoice](index.types.default.md#linkpreviewtypeinvoice)
+
+___
+
+### linkPreviewTypeInvoice$Input
+
+Re-exports [linkPreviewTypeInvoice$Input](index.types.default.md#linkpreviewtypeinvoice$input)
+
+___
+
+### linkPreviewTypeMessage
+
+Re-exports [linkPreviewTypeMessage](index.types.default.md#linkpreviewtypemessage)
+
+___
+
+### linkPreviewTypeMessage$Input
+
+Re-exports [linkPreviewTypeMessage$Input](index.types.default.md#linkpreviewtypemessage$input)
+
+___
+
+### linkPreviewTypePhoto
+
+Re-exports [linkPreviewTypePhoto](index.types.default.md#linkpreviewtypephoto)
+
+___
+
+### linkPreviewTypePhoto$Input
+
+Re-exports [linkPreviewTypePhoto$Input](index.types.default.md#linkpreviewtypephoto$input)
+
+___
+
+### linkPreviewTypePremiumGiftCode
+
+Re-exports [linkPreviewTypePremiumGiftCode](index.types.default.md#linkpreviewtypepremiumgiftcode)
+
+___
+
+### linkPreviewTypePremiumGiftCode$Input
+
+Re-exports [linkPreviewTypePremiumGiftCode$Input](index.types.default.md#linkpreviewtypepremiumgiftcode$input)
+
+___
+
+### linkPreviewTypeShareableChatFolder
+
+Re-exports [linkPreviewTypeShareableChatFolder](index.types.default.md#linkpreviewtypeshareablechatfolder)
+
+___
+
+### linkPreviewTypeShareableChatFolder$Input
+
+Re-exports [linkPreviewTypeShareableChatFolder$Input](index.types.default.md#linkpreviewtypeshareablechatfolder$input)
+
+___
+
+### linkPreviewTypeSticker
+
+Re-exports [linkPreviewTypeSticker](index.types.default.md#linkpreviewtypesticker)
+
+___
+
+### linkPreviewTypeSticker$Input
+
+Re-exports [linkPreviewTypeSticker$Input](index.types.default.md#linkpreviewtypesticker$input)
+
+___
+
+### linkPreviewTypeStickerSet
+
+Re-exports [linkPreviewTypeStickerSet](index.types.default.md#linkpreviewtypestickerset)
+
+___
+
+### linkPreviewTypeStickerSet$Input
+
+Re-exports [linkPreviewTypeStickerSet$Input](index.types.default.md#linkpreviewtypestickerset$input)
+
+___
+
+### linkPreviewTypeStory
+
+Re-exports [linkPreviewTypeStory](index.types.default.md#linkpreviewtypestory)
+
+___
+
+### linkPreviewTypeStory$Input
+
+Re-exports [linkPreviewTypeStory$Input](index.types.default.md#linkpreviewtypestory$input)
+
+___
+
+### linkPreviewTypeSupergroupBoost
+
+Re-exports [linkPreviewTypeSupergroupBoost](index.types.default.md#linkpreviewtypesupergroupboost)
+
+___
+
+### linkPreviewTypeSupergroupBoost$Input
+
+Re-exports [linkPreviewTypeSupergroupBoost$Input](index.types.default.md#linkpreviewtypesupergroupboost$input)
+
+___
+
+### linkPreviewTypeTheme
+
+Re-exports [linkPreviewTypeTheme](index.types.default.md#linkpreviewtypetheme)
+
+___
+
+### linkPreviewTypeTheme$Input
+
+Re-exports [linkPreviewTypeTheme$Input](index.types.default.md#linkpreviewtypetheme$input)
+
+___
+
+### linkPreviewTypeUnsupported
+
+Re-exports [linkPreviewTypeUnsupported](index.types.default.md#linkpreviewtypeunsupported)
+
+___
+
+### linkPreviewTypeUnsupported$Input
+
+Re-exports [linkPreviewTypeUnsupported$Input](index.types.default.md#linkpreviewtypeunsupported$input)
+
+___
+
+### linkPreviewTypeUser
+
+Re-exports [linkPreviewTypeUser](index.types.default.md#linkpreviewtypeuser)
+
+___
+
+### linkPreviewTypeUser$Input
+
+Re-exports [linkPreviewTypeUser$Input](index.types.default.md#linkpreviewtypeuser$input)
+
+___
+
+### linkPreviewTypeVideo
+
+Re-exports [linkPreviewTypeVideo](index.types.default.md#linkpreviewtypevideo)
+
+___
+
+### linkPreviewTypeVideo$Input
+
+Re-exports [linkPreviewTypeVideo$Input](index.types.default.md#linkpreviewtypevideo$input)
+
+___
+
+### linkPreviewTypeVideoChat
+
+Re-exports [linkPreviewTypeVideoChat](index.types.default.md#linkpreviewtypevideochat)
+
+___
+
+### linkPreviewTypeVideoChat$Input
+
+Re-exports [linkPreviewTypeVideoChat$Input](index.types.default.md#linkpreviewtypevideochat$input)
+
+___
+
+### linkPreviewTypeVideoNote
+
+Re-exports [linkPreviewTypeVideoNote](index.types.default.md#linkpreviewtypevideonote)
+
+___
+
+### linkPreviewTypeVideoNote$Input
+
+Re-exports [linkPreviewTypeVideoNote$Input](index.types.default.md#linkpreviewtypevideonote$input)
+
+___
+
+### linkPreviewTypeVoiceNote
+
+Re-exports [linkPreviewTypeVoiceNote](index.types.default.md#linkpreviewtypevoicenote)
+
+___
+
+### linkPreviewTypeVoiceNote$Input
+
+Re-exports [linkPreviewTypeVoiceNote$Input](index.types.default.md#linkpreviewtypevoicenote$input)
+
+___
+
+### linkPreviewTypeWebApp
+
+Re-exports [linkPreviewTypeWebApp](index.types.default.md#linkpreviewtypewebapp)
+
+___
+
+### linkPreviewTypeWebApp$Input
+
+Re-exports [linkPreviewTypeWebApp$Input](index.types.default.md#linkpreviewtypewebapp$input)
 
 ___
 
@@ -30230,54 +30875,6 @@ Re-exports [messageExpiredVoiceNote$Input](index.types.default.md#messageexpired
 
 ___
 
-### messageExtendedMediaPhoto
-
-Re-exports [messageExtendedMediaPhoto](index.types.default.md#messageextendedmediaphoto)
-
-___
-
-### messageExtendedMediaPhoto$Input
-
-Re-exports [messageExtendedMediaPhoto$Input](index.types.default.md#messageextendedmediaphoto$input)
-
-___
-
-### messageExtendedMediaPreview
-
-Re-exports [messageExtendedMediaPreview](index.types.default.md#messageextendedmediapreview)
-
-___
-
-### messageExtendedMediaPreview$Input
-
-Re-exports [messageExtendedMediaPreview$Input](index.types.default.md#messageextendedmediapreview$input)
-
-___
-
-### messageExtendedMediaUnsupported
-
-Re-exports [messageExtendedMediaUnsupported](index.types.default.md#messageextendedmediaunsupported)
-
-___
-
-### messageExtendedMediaUnsupported$Input
-
-Re-exports [messageExtendedMediaUnsupported$Input](index.types.default.md#messageextendedmediaunsupported$input)
-
-___
-
-### messageExtendedMediaVideo
-
-Re-exports [messageExtendedMediaVideo](index.types.default.md#messageextendedmediavideo)
-
-___
-
-### messageExtendedMediaVideo$Input
-
-Re-exports [messageExtendedMediaVideo$Input](index.types.default.md#messageextendedmediavideo$input)
-
-___
-
 ### messageFileTypeGroup
 
 Re-exports [messageFileTypeGroup](index.types.default.md#messagefiletypegroup)
@@ -30542,6 +31139,18 @@ Re-exports [messageOriginUser$Input](index.types.default.md#messageoriginuser$in
 
 ___
 
+### messagePaidMedia
+
+Re-exports [messagePaidMedia](index.types.default.md#messagepaidmedia)
+
+___
+
+### messagePaidMedia$Input
+
+Re-exports [messagePaidMedia$Input](index.types.default.md#messagepaidmedia$input)
+
+___
+
 ### messagePassportDataReceived
 
 Re-exports [messagePassportDataReceived](index.types.default.md#messagepassportdatareceived)
@@ -30563,6 +31172,18 @@ ___
 ### messagePassportDataSent$Input
 
 Re-exports [messagePassportDataSent$Input](index.types.default.md#messagepassportdatasent$input)
+
+___
+
+### messagePaymentRefunded
+
+Re-exports [messagePaymentRefunded](index.types.default.md#messagepaymentrefunded)
+
+___
+
+### messagePaymentRefunded$Input
+
+Re-exports [messagePaymentRefunded$Input](index.types.default.md#messagepaymentrefunded$input)
 
 ___
 
@@ -32306,6 +32927,54 @@ Re-exports [pageBlockVoiceNote$Input](index.types.default.md#pageblockvoicenote$
 
 ___
 
+### paidMediaPhoto
+
+Re-exports [paidMediaPhoto](index.types.default.md#paidmediaphoto)
+
+___
+
+### paidMediaPhoto$Input
+
+Re-exports [paidMediaPhoto$Input](index.types.default.md#paidmediaphoto$input)
+
+___
+
+### paidMediaPreview
+
+Re-exports [paidMediaPreview](index.types.default.md#paidmediapreview)
+
+___
+
+### paidMediaPreview$Input
+
+Re-exports [paidMediaPreview$Input](index.types.default.md#paidmediapreview$input)
+
+___
+
+### paidMediaUnsupported
+
+Re-exports [paidMediaUnsupported](index.types.default.md#paidmediaunsupported)
+
+___
+
+### paidMediaUnsupported$Input
+
+Re-exports [paidMediaUnsupported$Input](index.types.default.md#paidmediaunsupported$input)
+
+___
+
+### paidMediaVideo
+
+Re-exports [paidMediaVideo](index.types.default.md#paidmediavideo)
+
+___
+
+### paidMediaVideo$Input
+
+Re-exports [paidMediaVideo$Input](index.types.default.md#paidmediavideo$input)
+
+___
+
 ### parseMarkdown
 
 Re-exports [parseMarkdown](index.types.default.md#parsemarkdown)
@@ -33377,6 +34046,18 @@ ___
 ### premiumFeatureLastSeenTimes$Input
 
 Re-exports [premiumFeatureLastSeenTimes$Input](index.types.default.md#premiumfeaturelastseentimes$input)
+
+___
+
+### premiumFeatureMessageEffects
+
+Re-exports [premiumFeatureMessageEffects](index.types.default.md#premiumfeaturemessageeffects)
+
+___
+
+### premiumFeatureMessageEffects$Input
+
+Re-exports [premiumFeatureMessageEffects$Input](index.types.default.md#premiumfeaturemessageeffects$input)
 
 ___
 
@@ -34565,6 +35246,18 @@ ___
 ### pushMessageContentMessageForwards$Input
 
 Re-exports [pushMessageContentMessageForwards$Input](index.types.default.md#pushmessagecontentmessageforwards$input)
+
+___
+
+### pushMessageContentPaidMedia
+
+Re-exports [pushMessageContentPaidMedia](index.types.default.md#pushmessagecontentpaidmedia)
+
+___
+
+### pushMessageContentPaidMedia$Input
+
+Re-exports [pushMessageContentPaidMedia$Input](index.types.default.md#pushmessagecontentpaidmedia$input)
 
 ___
 
@@ -40514,6 +41207,18 @@ Re-exports [starTransactionPartnerAppStore$Input](index.types.default.md#startra
 
 ___
 
+### starTransactionPartnerBot
+
+Re-exports [starTransactionPartnerBot](index.types.default.md#startransactionpartnerbot)
+
+___
+
+### starTransactionPartnerBot$Input
+
+Re-exports [starTransactionPartnerBot$Input](index.types.default.md#startransactionpartnerbot$input)
+
+___
+
 ### starTransactionPartnerChannel
 
 Re-exports [starTransactionPartnerChannel](index.types.default.md#startransactionpartnerchannel)
@@ -40562,6 +41267,18 @@ Re-exports [starTransactionPartnerTelegram$Input](index.types.default.md#startra
 
 ___
 
+### starTransactionPartnerTelegramAds
+
+Re-exports [starTransactionPartnerTelegramAds](index.types.default.md#startransactionpartnertelegramads)
+
+___
+
+### starTransactionPartnerTelegramAds$Input
+
+Re-exports [starTransactionPartnerTelegramAds$Input](index.types.default.md#startransactionpartnertelegramads$input)
+
+___
+
 ### starTransactionPartnerUnsupported
 
 Re-exports [starTransactionPartnerUnsupported](index.types.default.md#startransactionpartnerunsupported)
@@ -40571,18 +41288,6 @@ ___
 ### starTransactionPartnerUnsupported$Input
 
 Re-exports [starTransactionPartnerUnsupported$Input](index.types.default.md#startransactionpartnerunsupported$input)
-
-___
-
-### starTransactionPartnerUser
-
-Re-exports [starTransactionPartnerUser](index.types.default.md#startransactionpartneruser)
-
-___
-
-### starTransactionPartnerUser$Input
-
-Re-exports [starTransactionPartnerUser$Input](index.types.default.md#startransactionpartneruser$input)
 
 ___
 
@@ -46079,18 +46784,6 @@ ___
 ### webAppInfo$Input
 
 Re-exports [webAppInfo$Input](index.types.default.md#webappinfo$input-1)
-
-___
-
-### webPage
-
-Re-exports [webPage](index.types.default.md#webpage-1)
-
-___
-
-### webPage$Input
-
-Re-exports [webPage$Input](index.types.default.md#webpage$input-1)
 
 ___
 
