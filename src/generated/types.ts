@@ -1,5 +1,8 @@
 /* istanbul ignore file */
 
+export const typename = "_";
+export type typename = typeof typename;
+
 /** (string) of bytes in Base64 */
 export type bytes = string;
 

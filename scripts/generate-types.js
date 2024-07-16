@@ -1,12 +1,8 @@
 // @ts-check
-const { readFileSync, writeFileSync } = require("fs");
+const { writeFile, readFile } = require("fs/promises");
 const { resolve } = require("path");
 const prettier = require("prettier");
 const prettierConfig = require("../.prettierrc.json");
-const text = readFileSync(resolve(__dirname, "../td/td_api.tl"), "utf-8");
-
-const label = "Typings";
-console.time(label);
 
 const primitiveComments = {
   bytes: "(string) of bytes in Base64",
@@ -194,8 +190,8 @@ export type ${getInputAlias(declaration.name)} = {
      * @type {${getInputAlias(value)}} {@link ${value}}
      */
     readonly ${key}?: ${getInputAlias(value)}${
-        allowsNull(declaration.comments?.[key]) ? "| null" : ""
-      };
+      allowsNull(declaration.comments?.[key]) ? "| null" : ""
+    };
   `
     )
     .join("\n")}
@@ -213,8 +209,8 @@ export type ${getInputAlias(declaration.name).replace("$Input", "$DirectInput")}
      * @type {${getInputAlias(value)}} {@link ${value}}
      */
     readonly ${key}?: ${getInputAlias(value)}${
-        allowsNull(declaration.comments?.[key]) ? "| null" : ""
-      };
+      allowsNull(declaration.comments?.[key]) ? "| null" : ""
+    };
   `
     )
     .join("\n")}
@@ -224,8 +220,8 @@ export type ${getInputAlias(declaration.name).replace("$Input", "$DirectInput")}
  * ${splitComments(declaration.comments?.description ?? "")}
  * 
  * @param {${getInputAlias(declaration.name)}} parameters {@link ${getInputAlias(
-    declaration.name
-  )}}
+   declaration.name
+ )}}
  * @returns {${declaration.result}} {@link ${declaration.result}}
  */
 export type ${declaration.name} = (parameters: ${getInputAlias(
@@ -290,8 +286,8 @@ export type ${getInputAlias(declaration.name)} = {
      * @type {${value}} {@link ${value}}
      */
     readonly ${key}?: ${getInputAlias(value)} ${
-        allowsNull(declaration.comments?.[key]) ? "| null" : ""
-      }
+      allowsNull(declaration.comments?.[key]) ? "| null" : ""
+    }
   `
     )
     .join("\n")}
@@ -344,28 +340,6 @@ function parse(text) {
   return results;
 }
 
-const [typesText, functionsText] = text.split("---functions---");
-const globalNamespace = "__global";
-
-/** @type {Record<string, Namespace>} */
-const namespaces = {};
-
-const types = parse(typesText);
-types.forEach((declaration) => {
-  const namespace = declaration.namespace ?? globalNamespace;
-  const ref = (namespaces[namespace] ??= new Namespace());
-  ref.declarations.push(declaration);
-
-  if (!declaration.result.includes(" ")) {
-    const set = (ref.joins[declaration.result] ??= new Set());
-    set.add(declaration.name);
-  }
-
-  if (!(declaration.name in primitives)) {
-    ref.types.push(generateType(declaration));
-  }
-});
-
 /**
  *
  *
@@ -394,243 +368,288 @@ function getCommonStart(strings) {
   return commonStart;
 }
 
-Object.values(namespaces).forEach((ref) => {
-  Object.entries(ref.joins).forEach(([key, set]) => {
-    const types = [...set];
-    const inputs = types.map((type) => getInputAlias(type));
-    const generateEnum = types.length > 1;
-
-    if (generateEnum) {
-      const enumName = key + "$Type";
-      const commonStart = getCommonStart(types);
-
-      const entries = types.map((type) => {
-        let keyName = type.slice(commonStart.length);
-        if (keyName.length < 2) keyName = type[0].toUpperCase() + type.slice(1);
-
-        /** @type {[string, string]} */
-        const result = [keyName, type];
-
-        return result;
-      });
-
-      ref.types.unshift(createEnum(enumName, entries));
-    }
-
-    ref.types.push(`  
-/**
- * Any of:
-${types.map((type) => ` * - {@link ${type}}`).join("\n")}
- */
-export type ${key} = ${types.join(" | ")}
-
-/**
- * Version of {@link ${key}} for method parameters.
- * Any of:
-${inputs.map((type) => ` * - {@link ${type}}`).join("\n")}
- */
-export type ${getInputAlias(key)} = ${inputs.join(" | ")}
-  `);
-  });
-});
-
-const functions = parse(functionsText);
-
-functions.forEach((declaration) => {
-  const namespace = declaration.namespace ?? globalNamespace;
-
-  const ref = (namespaces[namespace] ??= new Namespace());
-  ref.declarations.push(declaration);
-
-  const code = generateFunction(declaration);
-  ref.functions[declaration.name] = code;
-
-  if (code.includes("Can be called synchronously")) {
-    ref.syncFunctions.add(declaration.name);
-  }
-});
-
-/**
- * @param {string} name
- * @param {Namespace} ref
- */
-function getMethodType(name, ref) {
-  const declaration = ref.declarations.find(
-    (declaration) => declaration.name === name
-  );
-
-  return {
-    input: getInputAlias(name),
-    result: declaration?.result,
-    comment: declaration?.comments.description
-  };
-}
-
-Object.values(namespaces).forEach((ref) => {
-  ref.types.unshift(
-    createEnum(
-      "$Methods",
-      Object.keys(ref.functions).map((name) => {
-        /**
-         * @type {[string, string]}
-         */
-        const result = [name, name];
-        return result;
-      })
-    )
-  );
-
-  ref.types.push(`export type $MethodsDict = {
-    ${Object.keys(ref.functions)
-      .map((name) => `readonly ${name}: ${name};`)
-      .join("\n")}
-  }`);
-
-  ref.types.push(`export type $SyncMethodsDict = {
-    ${Object.keys(ref.functions)
-      .filter((name) => ref.syncFunctions.has(name))
-      .map((name) => `readonly ${name}: ${name};`)
-      .join("\n")}
-  }`);
-
-  ref.types.push(`
-  
-  /** 
-   * Convenience class for API calls
-   * 
-   * @class 
-   */
-  export class $AsyncApi {
-    
-    /** 
-     * Constructs {@link $AsyncApi}
-     * 
-     * @param {object} client
-     */
-    constructor(private readonly client: { 
-      invoke(method: string, parameters: unknown): Promise<unknown> 
-    }) {
-      Object.freeze(this)
-    }
-
-    ${Object.keys(ref.functions)
-      .map((name) => {
-        const { comment = "", input, result } = getMethodType(name, ref);
-        const alias = input.replace("$Input", "$DirectInput");
-
-        return `
-          /**
-           * ${splitComments(comment)}
-           * 
-           * @param {${alias}} parameters {@link ${input}}
-           * @returns {Promise<${result}>} Promise<{@link ${result}}>
-           */
-          async ${name}(parameters: ${alias}): Promise<${result}> {
-            const result = await this.client.invoke("${name}", parameters);
-            return result as ${result};
-          }
-
-        `;
-      })
-      .join("\n")}
-  }
-  
-  Object.freeze($AsyncApi);
-  Object.freeze($AsyncApi.prototype);`);
-
-  ref.types.push(`
-  
-  /** 
-   * Convenience class for sync API calls 
-   * 
-   * @class 
-   */
-  export class $SyncApi {
-    
-    /** 
-     * Constructs {@link $SyncApi}
-     * 
-     * @param {object} client
-     */
-    constructor(private readonly client: { 
-      execute(method: string, parameters: unknown): unknown 
-    }) {
-      Object.freeze(this)
-    }
-
-    ${Object.keys(ref.functions)
-      .filter((name) => ref.syncFunctions.has(name))
-      .map((name) => {
-        const { comment = "", input, result } = getMethodType(name, ref);
-        const alias = input.replace("$Input", "$DirectInput");
-
-        return `
-          /**
-           * ${splitComments(comment)}
-           * 
-           * @param {${alias}} parameters - {@link ${input}}
-           * @returns {${result}} {@link ${result}}
-           */
-          ${name}(parameters: ${alias}): ${result} {
-            return this.client.execute("${name}", parameters) as ${result};
-          }
-
-        `;
-      })
-      .join("\n")}
-  }
-  
-  Object.freeze($SyncApi);
-  Object.freeze($SyncApi.prototype);`);
-});
-
-/** @type {string[]} */
-const results = [];
-
 /**
  *
- * @param {Namespace} ref
- * @returns
+ * @param {string} text
  */
-function joinNamespace(ref) {
-  return `${ref.types.join("\n\n")}
+async function convert(text) {
+  const [typesText, functionsText] = text.split("---functions---");
+  const globalNamespace = "__global";
+
+  /** @type {Record<string, Namespace>} */
+  const namespaces = {};
+
+  const types = parse(typesText);
+  types.forEach((declaration) => {
+    const namespace = declaration.namespace ?? globalNamespace;
+    const ref = (namespaces[namespace] ??= new Namespace());
+    ref.declarations.push(declaration);
+
+    if (!declaration.result.includes(" ")) {
+      const set = (ref.joins[declaration.result] ??= new Set());
+      set.add(declaration.name);
+    }
+
+    if (!(declaration.name in primitives)) {
+      ref.types.push(generateType(declaration));
+    }
+  });
+
+  Object.values(namespaces).forEach((ref) => {
+    Object.entries(ref.joins).forEach(([key, set]) => {
+      const types = [...set];
+      const inputs = types.map((type) => getInputAlias(type));
+      const generateEnum = types.length > 1;
+
+      if (generateEnum) {
+        const enumName = key + "$Type";
+        const commonStart = getCommonStart(types);
+
+        const entries = types.map((type) => {
+          let keyName = type.slice(commonStart.length);
+          if (keyName.length < 2) keyName = type[0].toUpperCase() + type.slice(1);
+
+          /** @type {[string, string]} */
+          const result = [keyName, type];
+
+          return result;
+        });
+
+        ref.types.unshift(createEnum(enumName, entries));
+      }
+
+      ref.types.push(`  
+  /**
+   * Any of:
+  ${types.map((type) => ` * - {@link ${type}}`).join("\n")}
+   */
+  export type ${key} = ${types.join(" | ")}
   
-${Object.values(ref.functions).join("\n\n")}`;
-}
+  /**
+   * Version of {@link ${key}} for method parameters.
+   * Any of:
+  ${inputs.map((type) => ` * - {@link ${type}}`).join("\n")}
+   */
+  export type ${getInputAlias(key)} = ${inputs.join(" | ")}
+    `);
+    });
+  });
 
-Object.entries(namespaces).forEach(([namespace, ref]) => {
-  const text = joinNamespace(ref);
+  const functions = parse(functionsText);
 
-  if (namespace === globalNamespace) {
-    results.push(text);
-  } else {
-    results.push(`namespace ${namespace} { ${text} }`);
+  functions.forEach((declaration) => {
+    const namespace = declaration.namespace ?? globalNamespace;
+
+    const ref = (namespaces[namespace] ??= new Namespace());
+    ref.declarations.push(declaration);
+
+    const code = generateFunction(declaration);
+    ref.functions[declaration.name] = code;
+
+    if (code.includes("Can be called synchronously")) {
+      ref.syncFunctions.add(declaration.name);
+    }
+  });
+
+  /**
+   * @param {string} name
+   * @param {Namespace} ref
+   */
+  function getMethodType(name, ref) {
+    const declaration = ref.declarations.find(
+      (declaration) => declaration.name === name
+    );
+
+    return {
+      input: getInputAlias(name),
+      result: declaration?.result,
+      comment: declaration?.comments.description
+    };
   }
-});
 
-Object.entries(primitives).forEach(([name, value]) => {
-  if (typeof value !== "string") return;
+  Object.values(namespaces).forEach((ref) => {
+    ref.types.unshift(
+      createEnum(
+        "$Methods",
+        Object.keys(ref.functions).map((name) => {
+          /**
+           * @type {[string, string]}
+           */
+          const result = [name, name];
+          return result;
+        })
+      )
+    );
+
+    ref.types.push(`export type $MethodsDict = {
+      ${Object.keys(ref.functions)
+        .map((name) => `readonly ${name}: ${name};`)
+        .join("\n")}
+    }`);
+
+    ref.types.push(`export type $SyncMethodsDict = {
+      ${Object.keys(ref.functions)
+        .filter((name) => ref.syncFunctions.has(name))
+        .map((name) => `readonly ${name}: ${name};`)
+        .join("\n")}
+    }`);
+
+    ref.types.push(`
+    
+    /** 
+     * Convenience class for API calls
+     * 
+     * @class 
+     */
+    export class $AsyncApi {
+      
+      /** 
+       * Constructs {@link $AsyncApi}
+       * 
+       * @param {object} client
+       */
+      constructor(private readonly client: { 
+        invoke(method: string, parameters: unknown): Promise<unknown> 
+      }) {
+        Object.freeze(this)
+      }
+  
+      ${Object.keys(ref.functions)
+        .map((name) => {
+          const { comment = "", input, result } = getMethodType(name, ref);
+          const alias = input.replace("$Input", "$DirectInput");
+
+          return `
+            /**
+             * ${splitComments(comment)}
+             * 
+             * @param {${alias}} parameters {@link ${input}}
+             * @returns {Promise<${result}>} Promise<{@link ${result}}>
+             */
+            async ${name}(parameters: ${alias}): Promise<${result}> {
+              const result = await this.client.invoke("${name}", parameters);
+              return result as ${result};
+            }
+  
+          `;
+        })
+        .join("\n")}
+    }
+    
+    Object.freeze($AsyncApi);
+    Object.freeze($AsyncApi.prototype);`);
+
+    ref.types.push(`
+    
+    /** 
+     * Convenience class for sync API calls 
+     * 
+     * @class 
+     */
+    export class $SyncApi {
+      
+      /** 
+       * Constructs {@link $SyncApi}
+       * 
+       * @param {object} client
+       */
+      constructor(private readonly client: { 
+        execute(method: string, parameters: unknown): unknown 
+      }) {
+        Object.freeze(this)
+      }
+  
+      ${Object.keys(ref.functions)
+        .filter((name) => ref.syncFunctions.has(name))
+        .map((name) => {
+          const { comment = "", input, result } = getMethodType(name, ref);
+          const alias = input.replace("$Input", "$DirectInput");
+
+          return `
+            /**
+             * ${splitComments(comment)}
+             * 
+             * @param {${alias}} parameters - {@link ${input}}
+             * @returns {${result}} {@link ${result}}
+             */
+            ${name}(parameters: ${alias}): ${result} {
+              return this.client.execute("${name}", parameters) as ${result};
+            }
+  
+          `;
+        })
+        .join("\n")}
+    }
+    
+    Object.freeze($SyncApi);
+    Object.freeze($SyncApi.prototype);`);
+  });
+
+  /** @type {string[]} */
+  const results = [];
+
+  /**
+   *
+   * @param {Namespace} ref
+   * @returns
+   */
+  function joinNamespace(ref) {
+    return `${ref.types.join("\n\n")}
+    
+  ${Object.values(ref.functions).join("\n\n")}`;
+  }
+
+  Object.entries(namespaces).forEach(([namespace, ref]) => {
+    const text = joinNamespace(ref);
+
+    if (namespace === globalNamespace) {
+      results.push(text);
+    } else {
+      results.push(`namespace ${namespace} { ${text} }`);
+    }
+  });
+
+  Object.entries(primitives).forEach(([name, value]) => {
+    if (typeof value !== "string") return;
+
+    results.unshift(`
+      ${name in primitiveComments ? `/** ${primitiveComments[name]} */` : ""}
+      export type ${name} = ${value}
+    `);
+  });
 
   results.unshift(`
-    ${name in primitiveComments ? `/** ${primitiveComments[name]} */` : ""}
-    export type ${name} = ${value}
+    export const typename = "${typeType}";
+    export type typename = typeof typename;
+
   `);
-});
+  results.unshift("/* istanbul ignore file */");
 
-results.unshift("/* istanbul ignore file */");
+  const result = results.join("\n\n");
+  return result;
+}
 
-console.timeLog(label, "Generated");
+async function run() {
+  const label = "Typings";
+  console.time(label);
 
-const result = results.join("\n\n");
+  const text = await readFile(resolve(__dirname, "../td/td_api.tl"), "utf-8");
+  console.timeLog(label, "Read td_api.tl");
+  const result = await convert(text);
+  console.timeLog(label, "Generated");
 
-// @ts-ignore
-const formatted = prettier.format(result, {
-  ...prettierConfig,
-  parser: "typescript"
-});
+  // @ts-ignore
+  const formatted = await prettier.format(result, {
+    ...prettierConfig,
+    parser: "typescript"
+  });
+  console.timeLog(label, "Formatted");
 
-console.timeLog(label, "Formatted");
-writeFileSync(resolve(__dirname, "../src/generated/types.ts"), formatted, "utf-8");
+  const outputPath = resolve(__dirname, "../src/generated/types.ts");
 
-console.timeLog(label, "Written");
-console.timeEnd(label);
+  await writeFile(outputPath, formatted, "utf-8");
+  console.timeLog(label, "Written");
+  console.timeEnd(label);
+}
+
+run();

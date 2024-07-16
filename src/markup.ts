@@ -6,8 +6,9 @@ import {
   KeyboardButtonType$Input,
   InlineKeyboardButton$Input,
   replyMarkupInlineKeyboard$Input,
-  InlineKeyboardButtonType$Input
-} from "./types";
+  InlineKeyboardButtonType$Input,
+  typename
+} from "./generated/types";
 
 /**
  *
@@ -21,7 +22,7 @@ export function forceReply({
   personal = false
 } = {}): replyMarkupForceReply {
   return {
-    _: "replyMarkupForceReply",
+    [typename]: "replyMarkupForceReply",
     input_field_placeholder: placeholder,
     is_personal: personal
   };
@@ -38,7 +39,7 @@ export function removeKeyboard({
   personal = false
 } = {}): replyMarkupRemoveKeyboard {
   return {
-    _: "replyMarkupRemoveKeyboard",
+    [typename]: "replyMarkupRemoveKeyboard",
     is_personal: personal
   };
 }
@@ -88,7 +89,7 @@ class KeyboardBuilder {
    * @memberof KeyboardBuilder
    */
   textButton(text: string): this {
-    return this.button(text, { _: "keyboardButtonTypeText" });
+    return this.button(text, { [typename]: "keyboardButtonTypeText" });
   }
 
   /**
@@ -100,7 +101,7 @@ class KeyboardBuilder {
    * @memberof KeyboardBuilder
    */
   button(text: string, type: KeyboardButtonType$Input): this {
-    this._currentRow.push({ _: "keyboardButton", text, type });
+    this._currentRow.push({ [typename]: "keyboardButton", text, type });
     return this;
   }
 
@@ -186,7 +187,7 @@ class KeyboardBuilder {
    */
   build(): replyMarkupShowKeyboard$Input {
     return {
-      _: "replyMarkupShowKeyboard",
+      [typename]: "replyMarkupShowKeyboard",
       is_persistent: this._options.persistent || false,
       resize_keyboard: this._options.resize || false,
       is_personal: this._options.personal || false,
@@ -249,7 +250,7 @@ class InlineKeyboardBuilder {
    */
   callbackButton(text: string, data: string | Uint8Array): this {
     return this.button(text, {
-      _: "inlineKeyboardButtonTypeCallback",
+      [typename]: "inlineKeyboardButtonTypeCallback",
       data: typeof data === "string" ? encoder.encode(data) : new Uint8Array(data)
     });
   }
@@ -264,7 +265,7 @@ class InlineKeyboardBuilder {
    */
   urlButton(text: string, url: string | URL): this {
     return this.button(text, {
-      _: "inlineKeyboardButtonTypeUrl",
+      [typename]: "inlineKeyboardButtonTypeUrl",
       url: url.toString()
     });
   }
@@ -278,7 +279,7 @@ class InlineKeyboardBuilder {
    * @memberof InlineKeyboardBuilder
    */
   button(text: string, type: InlineKeyboardButtonType$Input): this {
-    this._currentRow.push({ _: "inlineKeyboardButton", text, type });
+    this._currentRow.push({ [typename]: "inlineKeyboardButton", text, type });
     return this;
   }
 
@@ -304,7 +305,7 @@ class InlineKeyboardBuilder {
    */
   build(): replyMarkupInlineKeyboard$Input {
     return {
-      _: "replyMarkupInlineKeyboard",
+      [typename]: "replyMarkupInlineKeyboard",
       rows: this._buttons
     };
   }

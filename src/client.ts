@@ -1,6 +1,13 @@
 import type { TDLib, TDLibClient } from "./shared/client";
-import { error, Update, $AsyncApi, $SyncApi, $MethodsDict } from "./generated/types";
-import * as JSON from "./json";
+import {
+  error,
+  Update,
+  $AsyncApi,
+  $SyncApi,
+  $MethodsDict,
+  typename
+} from "./generated/types";
+import { deserialize, serialize } from "./json";
 import { PromiseWithResolvers, promiseWithResolvers } from "./shared/async";
 import { EventBus, Observable } from "./event-bus";
 import debug from "debug";
@@ -8,7 +15,9 @@ import { TDLibOptions } from "./options";
 
 const debugJson = debug("tdlib-native:json");
 
-type OmitType<T extends { _: string }> = Omit<T, "_">;
+const tag = "@extra";
+
+type OmitType<T extends { [typename]: string }> = Omit<T, typename>;
 
 const enum ClientState {
   RUNNING = "RUNNING",
@@ -25,7 +34,7 @@ const enum ClientState {
  * @implements {error}
  */
 export class TDError extends Error implements error {
-  readonly _ = "error";
+  readonly [typename] = "error";
   readonly code: number;
   readonly method: string;
   readonly parameters: unknown;
@@ -56,7 +65,7 @@ export class TDError extends Error implements error {
    */
   toJSON() {
     return {
-      _: this._,
+      [typename]: this[typename],
       name: this.name,
       message: this.message,
       code: this.code,
@@ -110,8 +119,8 @@ export class Client {
     const extra = Math.random();
     const data = promiseWithResolvers<any>();
 
-    assignTemporary(parameters, { _: method, "@extra": extra }, (merged) => {
-      const value = JSON.serialize(merged);
+    assignTemporary(parameters, { [typename]: method, [tag]: extra }, (merged) => {
+      const value = serialize(merged);
       debugJson("Sent %s", value);
       this._adapter.send(this._client, value);
     });
@@ -166,7 +175,7 @@ export class Client {
 
     const value = assignTemporary(
       parameters,
-      { _: method, "@extra": extra },
+      { [typename]: method, [tag]: extra },
       (merged) => {
         const value = JSON.serialize(merged);
         debugJson("Sent sync %s", value);
@@ -194,13 +203,18 @@ export class Client {
       throw new TDError("Method returned invalid json", { method, parameters });
     }
 
-    if (data._ === "error") {
+    assert(
+      typeof data === "object" && data && typename in data,
+      new TDError("Returned not an object", { method, parameters })
+    );
+
+    if (data[typename] === "error") {
       const error = data as error;
       throw new TDError(error.message, { code: error.code, method, parameters });
     }
 
-    if ("@extra" in data && data["@extra"]) {
-      delete data["@extra"];
+    if (tag in data && data[tag]) {
+      delete data[tag];
     }
 
     return data as ReturnType<$SyncApi[T]>;
@@ -250,13 +264,13 @@ export class Client {
         continue;
       }
 
-      const extra = data?.["@extra"];
+      const extra = data?.[tag];
 
       if (extra) {
         const async = this._requests.get(extra);
-        delete data["@extra"];
+        delete data[tag];
 
-        if (data._ === "error") {
+        if (data[typename] === "error") {
           async?.reject(data);
         } else {
           async?.resolve(data);
@@ -267,7 +281,7 @@ export class Client {
         continue;
       }
 
-      if (data._.startsWith("update")) {
+      if (data[typename].startsWith("update")) {
         this._updates.emit(data);
       }
     }

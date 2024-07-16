@@ -1,4 +1,9 @@
-import { $AsyncApi, OptionValue, OptionValue$Type } from "./types";
+import {
+  $AsyncApi,
+  OptionValue,
+  OptionValue$Type,
+  typename
+} from "./generated/types";
 
 type integer = bigint;
 type TDLibOptionsWritable = {
@@ -141,8 +146,6 @@ type OptionsWritable = Extendable<TDLibOptionsWritable>;
  * @class TDLibOptions
  */
 export class TDLibOptions {
-  private static readonly _instanceCache = new WeakMap<$AsyncApi, TDLibOptions>();
-
   /**
    *
    *
@@ -150,17 +153,10 @@ export class TDLibOptions {
    * @param {$AsyncApi} api
    * @returns {*}  {TDLibOptions}
    * @memberof TDLibOptions
+   * @deprecated Removed instance caching, use `new TDLibOptions()` instead
    */
   static for(api: $AsyncApi): TDLibOptions {
-    const existing = TDLibOptions._instanceCache.get(api);
-
-    if (existing) {
-      return existing;
-    }
-
-    const options = new TDLibOptions(api);
-    TDLibOptions._instanceCache.set(api, options);
-    return options;
+    return new TDLibOptions(api);
   }
 
   private readonly _api: $AsyncApi;
@@ -170,7 +166,7 @@ export class TDLibOptions {
    * @param {$AsyncApi} api
    * @memberof TDLibOptions
    */
-  private constructor(api: $AsyncApi) {
+  constructor(api: $AsyncApi) {
     this._api = api;
   }
 
@@ -185,7 +181,7 @@ export class TDLibOptions {
   async get<T extends Keys>(key: T): Promise<OptionsReadable[T]> {
     const value = await this._api
       .getOption({ name: key })
-      .catch((): OptionValue => ({ _: OptionValue$Type.Empty }));
+      .catch((): OptionValue => ({ [typename]: OptionValue$Type.Empty }));
 
     switch (value._) {
       case OptionValue$Type.Integer: {
@@ -215,25 +211,25 @@ export class TDLibOptions {
     key: T,
     value: OptionsWritable[T]
   ): Promise<void> {
-    let option: OptionValue = { _: OptionValue$Type.Empty };
+    let option: OptionValue = { [typename]: OptionValue$Type.Empty };
 
     switch (typeof value) {
       case "number":
       case "bigint": {
         option = {
-          _: OptionValue$Type.Integer,
+          [typename]: OptionValue$Type.Integer,
           value: BigInt(value).toString()
         };
         break;
       }
 
       case "boolean": {
-        option = { _: OptionValue$Type.Boolean, value };
+        option = { [typename]: OptionValue$Type.Boolean, value };
         break;
       }
 
       case "string": {
-        option = { _: OptionValue$Type.String, value };
+        option = { [typename]: OptionValue$Type.String, value };
         break;
       }
     }

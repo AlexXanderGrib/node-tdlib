@@ -1,7 +1,10 @@
 import { encode } from "./base64";
+import { typename } from "./generated/types";
 
-const mainKey = /"_":/g;
-const tdKey = /"@type":/g;
+const tdTypename = "@type";
+
+const mainKey = new RegExp(`"${typename}":`, "g");
+const tdKey = new RegExp(`"${tdTypename}":`, "g");
 
 /**
  *
@@ -42,7 +45,7 @@ function replacer(_key: keyof any, value: unknown): any {
  */
 export function serialize(data: unknown): string {
   const json = JSON.stringify(data, replacer);
-  return json.replace(mainKey, '"@type":');
+  return json.replace(mainKey, `"${tdTypename}":`);
 }
 
 /**
@@ -54,5 +57,5 @@ export function serialize(data: unknown): string {
  * @returns {T}  {T}
  */
 export function deserialize<T = unknown>(json: string): T {
-  return JSON.parse(json.replace(tdKey, '"_":'));
+  return JSON.parse(json.replace(tdKey, `"${typename}":`));
 }

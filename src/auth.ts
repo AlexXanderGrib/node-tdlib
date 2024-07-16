@@ -8,8 +8,9 @@ import {
   TermsOfService,
   AuthorizationState,
   AuthorizationState$Type,
-  Update$Type
-} from "./types";
+  Update$Type,
+  typename
+} from "./generated/types";
 
 type AuthenticateOptions = {
   readonly signal?: AbortSignal;
@@ -168,7 +169,7 @@ export class Authenticator
 
         await this._client.api.checkAuthenticationEmailCode({
           code: {
-            _: "emailAddressAuthenticationCode",
+            [typename]: "emailAddressAuthenticationCode",
             code: await wait(this._state.emailCode, state.code_info)
           }
         });
