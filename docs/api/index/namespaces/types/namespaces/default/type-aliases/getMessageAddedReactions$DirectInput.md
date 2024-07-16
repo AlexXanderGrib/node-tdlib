@@ -1,0 +1,47 @@
+[**TDLib**](../../../../../../README.md) • **Docs**
+
+***
+
+[TDLib](../../../../../../modules.md) / [index](../../../../../README.md) / [types](../../../README.md) / [default](../README.md) / getMessageAddedReactions$DirectInput
+
+# Type Alias: getMessageAddedReactions$DirectInput
+
+> **getMessageAddedReactions$DirectInput**: `object`
+
+Returns reactions added for a message, along with their sender
+
+## Type declaration
+
+### chat\_id?
+
+> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+
+Identifier of the chat to which the message belongs
+
+### limit?
+
+> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+
+The maximum number of reactions to be returned; must be positive and can't be greater than 100
+
+### message\_id?
+
+> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+
+Identifier of the message
+
+### offset?
+
+> `readonly` `optional` **offset**: `string`
+
+Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+
+### reaction\_type?
+
+> `readonly` `optional` **reaction\_type**: [`ReactionType$Input`](ReactionType$Input.md) \| `null`
+
+Type of the reactions to return; pass null to return all added reactions
+
+## Defined in
+
+dist/generated/types.d.ts:81467

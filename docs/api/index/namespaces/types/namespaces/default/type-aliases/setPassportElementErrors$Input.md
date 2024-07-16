@@ -1,0 +1,33 @@
+[**TDLib**](../../../../../../README.md) • **Docs**
+
+***
+
+[TDLib](../../../../../../modules.md) / [index](../../../../../README.md) / [types](../../../README.md) / [default](../README.md) / setPassportElementErrors$Input
+
+# Type Alias: setPassportElementErrors$Input
+
+> **setPassportElementErrors$Input**: `object`
+
+Informs the user that some of the elements in their Telegram Passport contain errors; for bots only. The user will not be able to resend the elements, until the errors are fixed
+
+## Type declaration
+
+### \_
+
+> `readonly` **\_**: `"setPassportElementErrors"`
+
+### errors?
+
+> `readonly` `optional` **errors**: [`vector$Input`](vector$Input.md)\<[`inputPassportElementError$Input`](inputPassportElementError$Input-1.md)\>
+
+The errors
+
+### user\_id?
+
+> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+
+User identifier
+
+## Defined in
+
+dist/generated/types.d.ts:99357

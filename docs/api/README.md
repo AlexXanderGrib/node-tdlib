@@ -1,4 +1,6 @@
-TDLib / [Modules](modules.md)
+**TDLib** • [**Docs**](modules.md)
+
+***
 
 # TDLib Native
 

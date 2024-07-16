@@ -1,0 +1,33 @@
+[**TDLib**](../../../../../../README.md) • **Docs**
+
+***
+
+[TDLib](../../../../../../modules.md) / [index](../../../../../README.md) / [types](../../../README.md) / [default](../README.md) / setAutosaveSettings$Input
+
+# Type Alias: setAutosaveSettings$Input
+
+> **setAutosaveSettings$Input**: `object`
+
+Sets autosave settings for the given scope. The method is guaranteed to work only after at least one call to getAutosaveSettings
+
+## Type declaration
+
+### \_
+
+> `readonly` **\_**: `"setAutosaveSettings"`
+
+### scope?
+
+> `readonly` `optional` **scope**: [`AutosaveSettingsScope$Input`](AutosaveSettingsScope$Input.md)
+
+Autosave settings scope
+
+### settings?
+
+> `readonly` `optional` **settings**: [`scopeAutosaveSettings$Input`](scopeAutosaveSettings$Input-1.md) \| `null`
+
+New autosave settings for the scope; pass null to set autosave settings to default
+
+## Defined in
+
+dist/generated/types.d.ts:99142

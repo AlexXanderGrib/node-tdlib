@@ -1,0 +1,33 @@
+[**TDLib**](../../../../../../README.md) • **Docs**
+
+***
+
+[TDLib](../../../../../../modules.md) / [index](../../../../../README.md) / [types](../../../README.md) / [default](../README.md) / getSavedMessagesTopicMessageByDate$Input
+
+# Type Alias: getSavedMessagesTopicMessageByDate$Input
+
+> **getSavedMessagesTopicMessageByDate$Input**: `object`
+
+Returns the last message sent in a Saved Messages topic no later than the specified date
+
+## Type declaration
+
+### \_
+
+> `readonly` **\_**: `"getSavedMessagesTopicMessageByDate"`
+
+### date?
+
+> `readonly` `optional` **date**: [`int32`](int32-1.md)
+
+Point in time (Unix timestamp) relative to which to search for messages
+
+### saved\_messages\_topic\_id?
+
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+
+Identifier of Saved Messages topic which message will be returned
+
+## Defined in
+
+dist/generated/types.d.ts:75823

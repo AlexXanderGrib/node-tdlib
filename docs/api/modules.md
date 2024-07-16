@@ -1,12 +1,12 @@
-[TDLib](README.md) / Modules
+[**TDLib**](README.md) • **Docs**
+
+***
 
 # TDLib
 
-## Table of contents
+## Modules
 
-### Modules
-
-- [addon](modules/addon.md)
-- [index](modules/index.md)
-- [markup](modules/markup.md)
-- [types](modules/types.md)
+- [addon](addon/README.md)
+- [index](index/README.md)
+- [markup](markup/README.md)
+- [types](types/README.md)

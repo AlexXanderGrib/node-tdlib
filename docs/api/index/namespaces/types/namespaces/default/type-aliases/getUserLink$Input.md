@@ -1,0 +1,21 @@
+[**TDLib**](../../../../../../README.md) • **Docs**
+
+***
+
+[TDLib](../../../../../../modules.md) / [index](../../../../../README.md) / [types](../../../README.md) / [default](../README.md) / getUserLink$Input
+
+# Type Alias: getUserLink$Input
+
+> **getUserLink$Input**: `object`
+
+Returns an HTTPS link, which can be used to get information about the current user
+
+## Type declaration
+
+### \_
+
+> `readonly` **\_**: `"getUserLink"`
+
+## Defined in
+
+dist/generated/types.d.ts:94868

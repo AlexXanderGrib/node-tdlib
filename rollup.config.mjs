@@ -1,6 +1,6 @@
 import typescript from "rollup-plugin-typescript2";
 import { builtinModules } from "module";
-import glob from "glob";
+import { glob } from "glob";
 import cleanup from "rollup-plugin-cleanup";
 import prettier from "rollup-plugin-prettier";
 
