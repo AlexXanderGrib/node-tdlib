@@ -1,6 +1,6 @@
 {
   "name": "@tdlib-native/tdjson-linux-x64-glibc",
-  "version": "1.8.33-commit.cb164927417f22811c74cd8678ed4a5ab7cb80ba",
+  "version": "1.8.35-commit.8d08b34e22a08e58db8341839c4e18ee06c516c5",
   "description": "Built TDLib",
   "keywords": [
     "tdlib",
