@@ -571,12 +571,14 @@ userTypeDeleted = UserType;
 //@can_be_edited True, if the bot is owned by the current user and can be edited using the methods toggleBotUsernameIsActive, reorderBotActiveUsernames, setBotProfilePhoto, setBotName, setBotInfoDescription, and setBotInfoShortDescription
 //@can_join_groups True, if the bot can be invited to basic group and supergroup chats
 //@can_read_all_group_messages True, if the bot can read all messages in basic group or supergroup chats and not just those addressed to the bot. In private and channel chats a bot can always read all messages
+//@has_main_web_app True, if the bot has the main Web App
 //@is_inline True, if the bot supports inline queries
 //@inline_query_placeholder Placeholder for inline queries (displayed on the application input field)
 //@need_location True, if the location of the user is expected to be sent with every inline query to this bot
 //@can_connect_to_business True, if the bot supports connection to Telegram Business accounts
 //@can_be_added_to_attachment_menu True, if the bot can be added to attachment or side menu
-userTypeBot can_be_edited:Bool can_join_groups:Bool can_read_all_group_messages:Bool is_inline:Bool inline_query_placeholder:string need_location:Bool can_connect_to_business:Bool can_be_added_to_attachment_menu:Bool = UserType;
+//@active_user_count The number of recently active users of the bot
+userTypeBot can_be_edited:Bool can_join_groups:Bool can_read_all_group_messages:Bool has_main_web_app:Bool is_inline:Bool inline_query_placeholder:string need_location:Bool can_connect_to_business:Bool can_be_added_to_attachment_menu:Bool active_user_count:int32 = UserType;
 
 //@description No information on the user besides the user identifier is available, yet this user has not been deleted. This object is extremely rare and must be handled like a deleted user. It is not possible to perform any actions on users of this type
 userTypeUnknown = UserType;
@@ -796,6 +798,30 @@ chatPermissions can_send_basic_messages:Bool can_send_audios:Bool can_send_docum
 chatAdministratorRights can_manage_chat:Bool can_change_info:Bool can_post_messages:Bool can_edit_messages:Bool can_delete_messages:Bool can_invite_users:Bool can_restrict_members:Bool can_pin_messages:Bool can_manage_topics:Bool can_promote_members:Bool can_manage_video_chats:Bool can_post_stories:Bool can_edit_stories:Bool can_delete_stories:Bool is_anonymous:Bool = ChatAdministratorRights;
 
 
+//@description Describes subscription plan paid in Telegram Stars
+//@period The number of seconds between consecutive Telegram Star debiting
+//@star_count The amount of Telegram Stars that must be paid for each period
+starSubscriptionPricing period:int32 star_count:int53 = StarSubscriptionPricing;
+
+//@description Contains information about subscription to a channel chat paid in Telegram Stars
+//@id Unique identifier of the subscription
+//@chat_id Identifier of the channel chat that is subscribed
+//@expiration_date Point in time (Unix timestamp) when the subscription will expire or expired
+//@can_reuse True, if the subscription is active and the user can use the method reuseStarSubscription to join the subscribed chat again
+//@is_canceled True, if the subscription was canceled
+//@is_expiring True, if the subscription expires soon and there are no enough Telegram Stars on the user's balance to extend it
+//@invite_link The invite link that can be used to renew the subscription if it has been expired; may be empty, if the link isn't available anymore
+//@pricing The subscription plan
+starSubscription id:string chat_id:int53 expiration_date:int32 can_reuse:Bool is_canceled:Bool is_expiring:Bool invite_link:string pricing:starSubscriptionPricing = StarSubscription;
+
+//@description Represents a list of Telegram Star subscriptions
+//@star_count The amount of owned Telegram Stars
+//@subscriptions List of subbscriptions for Telegram Stars
+//@required_star_count The number of Telegram Stars required to buy to extend subscriptions expiring soon
+//@next_offset The offset for the next request. If empty, then there are no more results
+starSubscriptions star_count:int53 subscriptions:vector<starSubscription> required_star_count:int53 next_offset:string = StarSubscriptions;
+
+
 //@description Contains information about a product that can be paid with invoice
 //@title Product title
 //@param_description Product description
@@ -841,28 +867,55 @@ premiumGiftCodePaymentOptions options:vector<premiumGiftCodePaymentOption> = Pre
 //@use_date Point in time (Unix timestamp) when the code was activated; 0 if none
 premiumGiftCodeInfo creator_id:MessageSender creation_date:int32 is_from_giveaway:Bool giveaway_message_id:int53 month_count:int32 user_id:int53 use_date:int32 = PremiumGiftCodeInfo;
 
-//@description Describes an option for buying Telegram stars. Use telegramPaymentPurposeStars for out-of-store payments
+//@description Describes an option for buying Telegram Stars. Use telegramPaymentPurposeStars for out-of-store payments
 //@currency ISO 4217 currency code for the payment
 //@amount The amount to pay, in the smallest units of the currency
-//@star_count Number of Telegram stars that will be purchased
+//@star_count Number of Telegram Stars that will be purchased
 //@store_product_id Identifier of the store product associated with the option; may be empty if none
 //@is_additional True, if the option must be shown only in the full list of payment options
 starPaymentOption currency:string amount:int53 star_count:int53 store_product_id:string is_additional:Bool = StarPaymentOption;
 
-//@description Contains a list of options for buying Telegram stars @options The list of options
+//@description Contains a list of options for buying Telegram Stars @options The list of options
 starPaymentOptions options:vector<starPaymentOption> = StarPaymentOptions;
 
 
-//@class StarTransactionDirection @description Describes direction of a transaction with Telegram stars
+//@class StarTransactionDirection @description Describes direction of a transaction with Telegram Stars
 
-//@description The transaction is incoming and increases the number of owned Telegram stars
+//@description The transaction is incoming and increases the number of owned Telegram Stars
 starTransactionDirectionIncoming = StarTransactionDirection;
 
-//@description The transaction is outgoing and decreases the number of owned Telegram stars
+//@description The transaction is outgoing and decreases the number of owned Telegram Stars
 starTransactionDirectionOutgoing = StarTransactionDirection;
 
 
-//@class StarTransactionPartner @description Describes source or recipient of a transaction with Telegram stars
+//@class BotTransactionPurpose @description Describes purpose of a transaction with a bot
+
+//@description Paid media were bought @media The bought media if the trancastion wasn't refunded
+botTransactionPurposePaidMedia media:vector<PaidMedia> = BotTransactionPurpose;
+
+//@description User bought a product from the bot
+//@product_info Information about the bought product; may be null if not applicable
+//@invoice_payload Invoice payload; for bots only
+botTransactionPurposeInvoicePayment product_info:productInfo invoice_payload:bytes = BotTransactionPurpose;
+
+
+//@class ChannelTransactionPurpose @description Describes purpose of a transaction with a channel
+
+//@description Paid media were bought
+//@message_id Identifier of the corresponding message with paid media; can be an identifier of a deleted message
+//@media The bought media if the trancastion wasn't refunded
+channelTransactionPurposePaidMedia message_id:int53 media:vector<PaidMedia> = ChannelTransactionPurpose;
+
+//@description User joined the channel and subscribed to regular payments in Telegram Stars
+//@period The number of seconds between consecutive Telegram Star debiting
+channelTransactionPurposeJoin period:int32 = ChannelTransactionPurpose;
+
+//@description User paid for a reaction
+//@message_id Identifier of the reacted message; can be an identifier of a deleted message
+channelTransactionPurposeReaction message_id:int53 = ChannelTransactionPurpose;
+
+
+//@class StarTransactionPartner @description Describes source or recipient of a transaction with Telegram Stars
 
 //@description The transaction is a transaction with Telegram through a bot
 starTransactionPartnerTelegram = StarTransactionPartner;
@@ -879,33 +932,35 @@ starTransactionPartnerFragment withdrawal_state:RevenueWithdrawalState = StarTra
 //@description The transaction is a transaction with Telegram Ad platform
 starTransactionPartnerTelegramAds = StarTransactionPartner;
 
-//@description The transaction is a transaction with a bot
-//@bot_user_id Identifier of the bot
-//@product_info Information about the bought product; may be null if not applicable
-//@invoice_payload Invoice payload; for bots only
-starTransactionPartnerBot bot_user_id:int53 product_info:productInfo invoice_payload:bytes = StarTransactionPartner;
+//@description The transaction is a transaction with a bot @user_id Identifier of the bot @purpose Purpose of the transaction
+starTransactionPartnerBot user_id:int53 purpose:BotTransactionPurpose = StarTransactionPartner;
 
-//@description The transaction is a transaction with a channel chat
-//@chat_id Identifier of the chat
-//@paid_media_message_id Identifier of the corresponding message with paid media; can be an identifier of a deleted message
-//@media Information about the bought media
-starTransactionPartnerChannel chat_id:int53 paid_media_message_id:int53 media:vector<PaidMedia> = StarTransactionPartner;
+//@description The transaction is a transaction with a business account @user_id Identifier of the business account user @media The bought media if the trancastion wasn't refunded
+starTransactionPartnerBusiness user_id:int53 media:vector<PaidMedia> = StarTransactionPartner;
+
+//@description The transaction is a transaction with a channel chat @chat_id Identifier of the chat @purpose Purpose of the transaction
+starTransactionPartnerChannel chat_id:int53 purpose:ChannelTransactionPurpose = StarTransactionPartner;
+
+//@description The transaction is a gift of Telegram Stars from another user
+//@user_id Identifier of the user; 0 if the gift was anonymous
+//@sticker A sticker to be shown in the transaction information; may be null if unknown
+starTransactionPartnerUser user_id:int53 sticker:sticker = StarTransactionPartner;
 
 //@description The transaction is a transaction with unknown partner
 starTransactionPartnerUnsupported = StarTransactionPartner;
 
 
-//@description Represents a transaction changing the amount of owned Telegram stars
+//@description Represents a transaction changing the amount of owned Telegram Stars
 //@id Unique identifier of the transaction
-//@star_count The amount of added owned Telegram stars; negative for outgoing transactions
+//@star_count The amount of added owned Telegram Stars; negative for outgoing transactions
 //@is_refund True, if the transaction is a refund of a previous transaction
 //@date Point in time (Unix timestamp) when the transaction was completed
 //@partner Source of the incoming transaction, or its recipient for outgoing transactions
 starTransaction id:string star_count:int53 is_refund:Bool date:int32 partner:StarTransactionPartner = StarTransaction;
 
-//@description Represents a list of Telegram star transactions
-//@star_count The amount of owned Telegram stars
-//@transactions List of transactions with Telegram stars
+//@description Represents a list of Telegram Star transactions
+//@star_count The amount of owned Telegram Stars
+//@transactions List of transactions with Telegram Stars
 //@next_offset The offset for the next request. If empty, then there are no more results
 starTransactions star_count:int53 transactions:vector<starTransaction> next_offset:string = StarTransactions;
 
@@ -1024,13 +1079,15 @@ user id:int53 first_name:string last_name:string usernames:usernames phone_numbe
 //@animation Animation shown in the chat with the bot if the chat is empty; may be null
 //@menu_button Information about a button to show instead of the bot commands menu button; may be null if ordinary bot commands menu must be shown
 //@commands List of the bot commands
+//@privacy_policy_url The HTTP link to the privacy policy of the bot. If empty, then /privacy command must be used if supported by the bot. If the command isn't supported, then https://telegram.org/privacy-tpa must be opened
 //@default_group_administrator_rights Default administrator rights for adding the bot to basic group and supergroup chats; may be null
 //@default_channel_administrator_rights Default administrator rights for adding the bot to channels; may be null
+//@has_media_previews True, if the bot has media previews
 //@edit_commands_link The internal link, which can be used to edit bot commands; may be null
 //@edit_description_link The internal link, which can be used to edit bot description; may be null
 //@edit_description_media_link The internal link, which can be used to edit the photo or animation shown in the chat with the bot if the chat is empty; may be null
 //@edit_settings_link The internal link, which can be used to edit bot settings; may be null
-botInfo short_description:string description:string photo:photo animation:animation menu_button:botMenuButton commands:vector<botCommand> default_group_administrator_rights:chatAdministratorRights default_channel_administrator_rights:chatAdministratorRights edit_commands_link:InternalLinkType edit_description_link:InternalLinkType edit_description_media_link:InternalLinkType edit_settings_link:InternalLinkType = BotInfo;
+botInfo short_description:string description:string photo:photo animation:animation menu_button:botMenuButton commands:vector<botCommand> privacy_policy_url:string default_group_administrator_rights:chatAdministratorRights default_channel_administrator_rights:chatAdministratorRights has_media_previews:Bool edit_commands_link:InternalLinkType edit_description_link:InternalLinkType edit_description_media_link:InternalLinkType edit_settings_link:InternalLinkType = BotInfo;
 
 //@description Contains full information about a user
 //@personal_photo User profile photo set by the current user for the contact; may be null. If null and user.profile_photo is null, then the photo is empty; otherwise, it is unknown.
@@ -1061,6 +1118,9 @@ userFullInfo personal_photo:chatPhoto photo:chatPhoto public_photo:chatPhoto blo
 //@description Represents a list of users @total_count Approximate total number of users found @user_ids A list of user identifiers
 users total_count:int32 user_ids:vector<int53> = Users;
 
+//@description Represents a list of found users @user_ids Identifiers of the found users @next_offset The offset for the next request. If empty, then there are no more results
+foundUsers user_ids:vector<int53> next_offset:string = FoundUsers;
+
 
 //@description Contains information about a chat administrator @user_id User identifier of the administrator @custom_title Custom title of the administrator @is_owner True, if the user is the owner of the chat
 chatAdministrator user_id:int53 custom_title:string is_owner:Bool = ChatAdministrator;
@@ -1085,7 +1145,8 @@ chatMemberStatusCreator custom_title:string is_anonymous:Bool is_member:Bool = C
 chatMemberStatusAdministrator custom_title:string can_be_edited:Bool rights:chatAdministratorRights = ChatMemberStatus;
 
 //@description The user is a member of the chat, without any additional privileges or restrictions
-chatMemberStatusMember = ChatMemberStatus;
+//@member_until_date Point in time (Unix timestamp) when the user will be removed from the chat because of the expired subscription; 0 if never. Ignored in setChatMemberStatus
+chatMemberStatusMember member_until_date:int32 = ChatMemberStatus;
 
 //@description The user is under certain restrictions in the chat. Not supported in basic groups and channels
 //@is_member True, if the user is a member of the chat
@@ -1170,13 +1231,15 @@ supergroupMembersFilterBots = SupergroupMembersFilter;
 //@date Point in time (Unix timestamp) when the link was created
 //@edit_date Point in time (Unix timestamp) when the link was last edited; 0 if never or unknown
 //@expiration_date Point in time (Unix timestamp) when the link will expire; 0 if never
+//@subscription_pricing Information about subscription plan that is applied to the users joining the chat by the link; may be null if the link doesn't require subscription
 //@member_limit The maximum number of members, which can join the chat using the link simultaneously; 0 if not limited. Always 0 if the link requires approval
 //@member_count Number of chat members, which joined the chat using the link
+//@expired_member_count Number of chat members, which joined the chat using the link, but have already left because of expired subscription; for subscription links only
 //@pending_join_request_count Number of pending join requests created using this link
 //@creates_join_request True, if the link only creates join request. If true, total number of joining members will be unlimited
 //@is_primary True, if the link is primary. Primary invite link can't have name, expiration date, or usage limit. There is exactly one primary invite link for each administrator with can_invite_users right at a given time
 //@is_revoked True, if the link was revoked
-chatInviteLink invite_link:string name:string creator_user_id:int53 date:int32 edit_date:int32 expiration_date:int32 member_limit:int32 member_count:int32 pending_join_request_count:int32 creates_join_request:Bool is_primary:Bool is_revoked:Bool = ChatInviteLink;
+chatInviteLink invite_link:string name:string creator_user_id:int53 date:int32 edit_date:int32 expiration_date:int32 subscription_pricing:starSubscriptionPricing member_limit:int32 member_count:int32 expired_member_count:int32 pending_join_request_count:int32 creates_join_request:Bool is_primary:Bool is_revoked:Bool = ChatInviteLink;
 
 //@description Contains a list of chat invite links @total_count Approximate total number of chat invite links found @invite_links List of invite links
 chatInviteLinks total_count:int32 invite_links:vector<chatInviteLink> = ChatInviteLinks;
@@ -1213,6 +1276,12 @@ inviteLinkChatTypeSupergroup = InviteLinkChatType;
 inviteLinkChatTypeChannel = InviteLinkChatType;
 
 
+//@description Contains information about subscription plan that must be paid by the user to use a chat invite link
+//@pricing Information about subscription plan that must be paid by the user to use the link
+//@can_reuse True, if the user has already paid for the subscription and can use joinChatByInviteLink to join the subscribed chat again
+//@form_id Identifier of the payment form to use for subscription payment; 0 if the subscription can't be paid
+chatInviteLinkSubscriptionInfo pricing:starSubscriptionPricing can_reuse:Bool form_id:int64 = ChatInviteLinkSubscriptionInfo;
+
 //@description Contains information about a chat invite link
 //@chat_id Chat identifier of the invite link; 0 if the user has no access to the chat before joining
 //@accessible_for If non-zero, the amount of time for which read access to the chat will remain available, in seconds
@@ -1223,12 +1292,13 @@ inviteLinkChatTypeChannel = InviteLinkChatType;
 //@param_description Chat description
 //@member_count Number of members in the chat
 //@member_user_ids User identifiers of some chat members that may be known to the current user
+//@subscription_info Information about subscription plan that must be paid by the user to use the link; may be null if the link doesn't require subscription
 //@creates_join_request True, if the link only creates join request
 //@is_public True, if the chat is a public supergroup or channel, i.e. it has a username or it is a location-based supergroup
 //@is_verified True, if the chat is verified
 //@is_scam True, if many users reported this chat as a scam
 //@is_fake True, if many users reported this chat as a fake account
-chatInviteLinkInfo chat_id:int53 accessible_for:int32 type:InviteLinkChatType title:string photo:chatPhotoInfo accent_color_id:int32 description:string member_count:int32 member_user_ids:vector<int53> creates_join_request:Bool is_public:Bool is_verified:Bool is_scam:Bool is_fake:Bool = ChatInviteLinkInfo;
+chatInviteLinkInfo chat_id:int53 accessible_for:int32 type:InviteLinkChatType title:string photo:chatPhotoInfo accent_color_id:int32 description:string member_count:int32 member_user_ids:vector<int53> subscription_info:chatInviteLinkSubscriptionInfo creates_join_request:Bool is_public:Bool is_verified:Bool is_scam:Bool is_fake:Bool = ChatInviteLinkInfo;
 
 
 //@description Describes a user that sent a join request and waits for administrator approval @user_id User identifier @date Point in time (Unix timestamp) when the user sent the join request @bio A short bio of the user
@@ -1271,11 +1341,12 @@ basicGroupFullInfo photo:chatPhoto description:string creator_user_id:int53 memb
 //@member_count Number of members in the supergroup or channel; 0 if unknown. Currently, it is guaranteed to be known only if the supergroup or channel was received through
 //-getChatSimilarChats, getChatsToSendStories, getCreatedPublicChats, getGroupsInCommon, getInactiveSupergroupChats, getRecommendedChats, getSuitableDiscussionChats,
 //-getUserPrivacySettingRules, getVideoChatAvailableParticipants, searchChatsNearby, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or in userFullInfo.personal_chat_id,
-//-or for chats with messages or stories from publicForwards
+//-or for chats with messages or stories from publicForwards and foundStories
 //@boost_level Approximate boost level for the chat
 //@has_linked_chat True, if the channel has a discussion group, or the supergroup is the designated discussion group for a channel
 //@has_location True, if the supergroup is connected to a location, i.e. the supergroup is a location-based supergroup
-//@sign_messages True, if messages sent to the channel need to contain information about the sender. This field is only applicable to channels
+//@sign_messages True, if messages sent to the channel contains name of the sender. This field is only applicable to channels
+//@show_message_sender True, if messages sent to the channel have information about the sender user. This field is only applicable to channels
 //@join_to_send_messages True, if users need to join the supergroup before they can send messages. Always true for channels and non-discussion supergroups
 //@join_by_request True, if all users directly joining the supergroup need to be approved by supergroup administrators. Always false for channels and supergroups without username, location, or a linked chat
 //@is_slow_mode_enabled True, if the slow mode is enabled in the supergroup
@@ -1283,12 +1354,13 @@ basicGroupFullInfo photo:chatPhoto description:string creator_user_id:int53 memb
 //@is_broadcast_group True, if the supergroup is a broadcast group, i.e. only administrators can send messages and there is no limit on the number of members
 //@is_forum True, if the supergroup is a forum with topics
 //@is_verified True, if the supergroup or channel is verified
+//@has_sensitive_content True, if content of media messages in the supergroup or channel chat must be hidden with 18+ spoiler
 //@restriction_reason If non-empty, contains a human-readable description of the reason why access to this supergroup or channel must be restricted
 //@is_scam True, if many users reported this supergroup or channel as a scam
 //@is_fake True, if many users reported this supergroup or channel as a fake account
 //@has_active_stories True, if the supergroup or channel has non-expired stories available to the current user
 //@has_unread_active_stories True, if the supergroup or channel has unread non-expired stories available to the current user
-supergroup id:int53 usernames:usernames date:int32 status:ChatMemberStatus member_count:int32 boost_level:int32 has_linked_chat:Bool has_location:Bool sign_messages:Bool join_to_send_messages:Bool join_by_request:Bool is_slow_mode_enabled:Bool is_channel:Bool is_broadcast_group:Bool is_forum:Bool is_verified:Bool restriction_reason:string is_scam:Bool is_fake:Bool has_active_stories:Bool has_unread_active_stories:Bool = Supergroup;
+supergroup id:int53 usernames:usernames date:int32 status:ChatMemberStatus member_count:int32 boost_level:int32 has_linked_chat:Bool has_location:Bool sign_messages:Bool show_message_sender:Bool join_to_send_messages:Bool join_by_request:Bool is_slow_mode_enabled:Bool is_channel:Bool is_broadcast_group:Bool is_forum:Bool is_verified:Bool has_sensitive_content:Bool restriction_reason:string is_scam:Bool is_fake:Bool has_active_stories:Bool has_unread_active_stories:Bool = Supergroup;
 
 //@description Contains full information about a supergroup or channel
 //@photo Chat photo; may be null if empty or unknown. If non-null, then it is the same photo as in chat.photo
@@ -1300,6 +1372,7 @@ supergroup id:int53 usernames:usernames date:int32 status:ChatMemberStatus membe
 //@linked_chat_id Chat identifier of a discussion group for the channel, or a channel, for which the supergroup is the designated discussion group; 0 if none or unknown
 //@slow_mode_delay Delay between consecutive sent messages for non-administrator supergroup members, in seconds
 //@slow_mode_delay_expires_in Time left before next message can be sent in the supergroup, in seconds. An updateSupergroupFullInfo update is not triggered when value of this field changes, but both new and old values are non-zero
+//@can_enable_paid_reaction True, if paid reaction can be enabled in the channel chat; for channels only
 //@can_get_members True, if members of the chat can be retrieved via getSupergroupMembers or searchChatMembers
 //@has_hidden_members True, if non-administrators can receive only administrators and bots using getSupergroupMembers or searchChatMembers
 //@can_hide_members True, if non-administrators and non-bots can be hidden in responses to getSupergroupMembers and searchChatMembers for non-administrators
@@ -1324,7 +1397,7 @@ supergroup id:int53 usernames:usernames date:int32 status:ChatMemberStatus membe
 //@bot_commands List of commands of bots in the group
 //@upgraded_from_basic_group_id Identifier of the basic group from which supergroup was upgraded; 0 if none
 //@upgraded_from_max_message_id Identifier of the last message in the basic group from which supergroup was upgraded; 0 if none
-supergroupFullInfo photo:chatPhoto description:string member_count:int32 administrator_count:int32 restricted_count:int32 banned_count:int32 linked_chat_id:int53 slow_mode_delay:int32 slow_mode_delay_expires_in:double can_get_members:Bool has_hidden_members:Bool can_hide_members:Bool can_set_sticker_set:Bool can_set_location:Bool can_get_statistics:Bool can_get_revenue_statistics:Bool can_get_star_revenue_statistics:Bool can_toggle_aggressive_anti_spam:Bool is_all_history_available:Bool can_have_sponsored_messages:Bool has_aggressive_anti_spam_enabled:Bool has_paid_media_allowed:Bool has_pinned_stories:Bool my_boost_count:int32 unrestrict_boost_count:int32 sticker_set_id:int64 custom_emoji_sticker_set_id:int64 location:chatLocation invite_link:chatInviteLink bot_commands:vector<botCommands> upgraded_from_basic_group_id:int53 upgraded_from_max_message_id:int53 = SupergroupFullInfo;
+supergroupFullInfo photo:chatPhoto description:string member_count:int32 administrator_count:int32 restricted_count:int32 banned_count:int32 linked_chat_id:int53 slow_mode_delay:int32 slow_mode_delay_expires_in:double can_enable_paid_reaction:Bool can_get_members:Bool has_hidden_members:Bool can_hide_members:Bool can_set_sticker_set:Bool can_set_location:Bool can_get_statistics:Bool can_get_revenue_statistics:Bool can_get_star_revenue_statistics:Bool can_toggle_aggressive_anti_spam:Bool is_all_history_available:Bool can_have_sponsored_messages:Bool has_aggressive_anti_spam_enabled:Bool has_paid_media_allowed:Bool has_pinned_stories:Bool my_boost_count:int32 unrestrict_boost_count:int32 sticker_set_id:int64 custom_emoji_sticker_set_id:int64 location:chatLocation invite_link:chatInviteLink bot_commands:vector<botCommands> upgraded_from_basic_group_id:int53 upgraded_from_max_message_id:int53 = SupergroupFullInfo;
 
 
 //@class SecretChatState @description Describes the current secret chat state
@@ -1434,6 +1507,17 @@ reactionTypeEmoji emoji:string = ReactionType;
 //@description A reaction with a custom emoji @custom_emoji_id Unique identifier of the custom emoji
 reactionTypeCustomEmoji custom_emoji_id:int64 = ReactionType;
 
+//@description The paid reaction in a channel chat
+reactionTypePaid = ReactionType;
+
+
+//@description Contains information about a user that added paid reactions
+//@sender_id Identifier of the user or chat that added the reactions; may be null for anonymous reactors that aren't the current user
+//@star_count Number of Telegram Stars added
+//@is_top True, if the reactor is one of the most active reactors; can be false if the reactor is the current user
+//@is_me True, if the paid reaction was added by the current user
+//@is_anonymous True, if the reactor is anonymous
+paidReactor sender_id:MessageSender star_count:int32 is_top:Bool is_me:Bool is_anonymous:Bool = PaidReactor;
 
 //@description Contains information about a forwarded message
 //@origin Origin of the forwarded message
@@ -1463,9 +1547,12 @@ messageReplyInfo reply_count:int32 recent_replier_ids:vector<MessageSender> last
 //@recent_sender_ids Identifiers of at most 3 recent message senders, added the reaction; available in private, basic group and supergroup chats
 messageReaction type:ReactionType total_count:int32 is_chosen:Bool used_sender_id:MessageSender recent_sender_ids:vector<MessageSender> = MessageReaction;
 
-//@description Contains a list of reactions added to a message @reactions List of added reactions @are_tags True, if the reactions are tags and Telegram Premium users can filter messages by them
-messageReactions reactions:vector<messageReaction> are_tags:Bool = MessageReactions;
-
+//@description Contains a list of reactions added to a message
+//@reactions List of added reactions
+//@are_tags True, if the reactions are tags and Telegram Premium users can filter messages by them
+//@paid_reactors Information about top users that added the paid reaction
+//@can_get_added_reactions True, if the list of added reactions is available using getMessageAddedReactions
+messageReactions reactions:vector<messageReaction> are_tags:Bool paid_reactors:vector<paidReactor> can_get_added_reactions:Bool = MessageReactions;
 
 //@description Contains information about interactions with a message
 //@view_count Number of times the message was viewed
@@ -1506,7 +1593,7 @@ messageSendingStatePending sending_id:int32 = MessageSendingState;
 
 //@description The message failed to be sent
 //@error The cause of the message sending failure
-//@can_retry True, if the message can be re-sent
+//@can_retry True, if the message can be re-sent using resendMessages or readdQuickReplyShortcutMessages
 //@need_another_sender True, if the message can be re-sent only on behalf of a different sender
 //@need_another_reply_quote True, if the message can be re-sent only if another quote is chosen in the message that is replied by the given message
 //@need_drop_reply True, if the message can be re-sent only if the message to be replied is removed. This will be done automatically by resendMessages
@@ -1547,13 +1634,13 @@ messageReplyToStory story_sender_chat_id:int53 story_id:int32 = MessageReplyTo;
 //@class InputMessageReplyTo @description Contains information about the message or the story to be replied
 
 //@description Describes a message to be replied in the same chat and forum topic
-//@message_id The identifier of the message to be replied in the same chat and forum topic
+//@message_id The identifier of the message to be replied in the same chat and forum topic. A message can be replied in the same chat and forum topic only if messageProperties.can_be_replied
 //@quote Quote from the message to be replied; pass null if none. Must always be null for replies in secret chats
 inputMessageReplyToMessage message_id:int53 quote:inputTextQuote = InputMessageReplyTo;
 
 //@description Describes a message to be replied that is from a different chat or a forum topic; not supported in secret chats
 //@chat_id The identifier of the chat to which the message to be replied belongs
-//@message_id The identifier of the message to be replied in the specified chat. A message can be replied in another chat or topic only if message.can_be_replied_in_another_chat
+//@message_id The identifier of the message to be replied in the specified chat. A message can be replied in another chat or forum topic only if messageProperties.can_be_replied_in_another_chat
 //@quote Quote from the message to be replied; pass null if none
 inputMessageReplyToExternalMessage chat_id:int53 message_id:int53 quote:inputTextQuote = InputMessageReplyTo;
 
@@ -1578,19 +1665,7 @@ factCheck text:formattedText country_code:string = FactCheck;
 //@is_outgoing True, if the message is outgoing
 //@is_pinned True, if the message is pinned
 //@is_from_offline True, if the message was sent because of a scheduled action by the message sender, for example, as away, or greeting service message
-//@can_be_edited True, if the message can be edited. For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message by the application
-//@can_be_forwarded True, if the message can be forwarded
-//@can_be_replied_in_another_chat True, if the message can be replied in another chat or topic
 //@can_be_saved True, if content of the message can be saved locally or copied
-//@can_be_deleted_only_for_self True, if the message can be deleted only for the current user while other users will continue to see it
-//@can_be_deleted_for_all_users True, if the message can be deleted for all users
-//@can_get_added_reactions True, if the list of added reactions is available through getMessageAddedReactions
-//@can_get_statistics True, if the message statistics are available through getMessageStatistics
-//@can_get_message_thread True, if information about the message thread is available through getMessageThread and getMessageThreadHistory
-//@can_get_read_date True, if read date of the message can be received through getMessageReadDate
-//@can_get_viewers True, if chat members already viewed the message can be received through getMessageViewers
-//@can_get_media_timestamp_links True, if media timestamp links can be generated for media timestamp entities in the message text, caption or link preview description through getMessageLink
-//@can_report_reactions True, if reactions on the message can be reported through reportMessageReactions
 //@has_timestamped_media True, if media timestamp entities refers to a media in this message as opposed to a media in the replied message
 //@is_channel_post True, if the message is a channel post. All messages to channels are channel posts, all other messages are not channel posts
 //@is_topic_message True, if the message is a forum topic message
@@ -1614,10 +1689,12 @@ factCheck text:formattedText country_code:string = FactCheck;
 //@author_signature For channel posts and anonymous group messages, optional author signature
 //@media_album_id Unique identifier of an album this message belongs to; 0 if none. Only audios, documents, photos and videos can be grouped together in albums
 //@effect_id Unique identifier of the effect added to the message; 0 if none
+//@has_sensitive_content True, if media content of the message must be hidden with 18+ spoiler
 //@restriction_reason If non-empty, contains a human-readable description of the reason why access to this message must be restricted
 //@content Content of the message
 //@reply_markup Reply markup for the message; may be null if none
-message id:int53 sender_id:MessageSender chat_id:int53 sending_state:MessageSendingState scheduling_state:MessageSchedulingState is_outgoing:Bool is_pinned:Bool is_from_offline:Bool can_be_edited:Bool can_be_forwarded:Bool can_be_replied_in_another_chat:Bool can_be_saved:Bool can_be_deleted_only_for_self:Bool can_be_deleted_for_all_users:Bool can_get_added_reactions:Bool can_get_statistics:Bool can_get_message_thread:Bool can_get_read_date:Bool can_get_viewers:Bool can_get_media_timestamp_links:Bool can_report_reactions:Bool has_timestamped_media:Bool is_channel_post:Bool is_topic_message:Bool contains_unread_mention:Bool date:int32 edit_date:int32 forward_info:messageForwardInfo import_info:messageImportInfo interaction_info:messageInteractionInfo unread_reactions:vector<unreadReaction> fact_check:factCheck reply_to:MessageReplyTo message_thread_id:int53 saved_messages_topic_id:int53 self_destruct_type:MessageSelfDestructType self_destruct_in:double auto_delete_in:double via_bot_user_id:int53 sender_business_bot_user_id:int53 sender_boost_count:int32 author_signature:string media_album_id:int64 effect_id:int64 restriction_reason:string content:MessageContent reply_markup:ReplyMarkup = Message;
+message id:int53 sender_id:MessageSender chat_id:int53 sending_state:MessageSendingState scheduling_state:MessageSchedulingState is_outgoing:Bool is_pinned:Bool is_from_offline:Bool can_be_saved:Bool has_timestamped_media:Bool is_channel_post:Bool is_topic_message:Bool contains_unread_mention:Bool date:int32 edit_date:int32 forward_info:messageForwardInfo import_info:messageImportInfo interaction_info:messageInteractionInfo unread_reactions:vector<unreadReaction> fact_check:factCheck reply_to:MessageReplyTo message_thread_id:int53 saved_messages_topic_id:int53 self_destruct_type:MessageSelfDestructType self_destruct_in:double auto_delete_in:double via_bot_user_id:int53 sender_business_bot_user_id:int53 sender_boost_count:int32 author_signature:string media_album_id:int64 effect_id:int64 has_sensitive_content:Bool restriction_reason:string content:MessageContent reply_markup:ReplyMarkup = Message;
+
 
 //@description Contains a list of messages @total_count Approximate total number of messages found @messages List of messages; messages may be null
 messages total_count:int32 messages:vector<message> = Messages;
@@ -1691,7 +1768,7 @@ messageSponsor url:string photo:photo info:string = MessageSponsor;
 //@message_id Message identifier; unique for the chat to which the sponsored message belongs among both ordinary and sponsored messages
 //@is_recommended True, if the message needs to be labeled as "recommended" instead of "sponsored"
 //@can_be_reported True, if the message can be reported to Telegram moderators through reportChatSponsoredMessage
-//@content Content of the message. Currently, can be only of the type messageText
+//@content Content of the message. Currently, can be only of the types messageText, messageAnimation, messagePhoto, or messageVideo
 //@sponsor Information about the sponsor of the message
 //@title Title of the sponsored message
 //@button_text Text for the message action button
@@ -1926,7 +2003,8 @@ chatPosition list:ChatList order:int64 is_pinned:Bool source:ChatSource = ChatPo
 
 //@class ChatAvailableReactions @description Describes reactions available in the chat
 
-//@description All reactions are available in the chat @max_reaction_count The maximum allowed number of reactions per message; 1-11
+//@description All reactions are available in the chat, excluding the paid reaction and custom reactions in channel chats
+//@max_reaction_count The maximum allowed number of reactions per message; 1-11
 chatAvailableReactionsAll max_reaction_count:int32 = ChatAvailableReactions;
 
 //@description Only specific reactions are available in the chat @reactions The list of reactions @max_reaction_count The maximum allowed number of reactions per message; 1-11
@@ -2198,13 +2276,16 @@ foundWebApp web_app:webApp request_write_access:Bool skip_confirmation:Bool = Fo
 //@description Contains information about a Web App @launch_id Unique identifier for the Web App launch @url A Web App URL to open in a web view
 webAppInfo launch_id:int64 url:string = WebAppInfo;
 
+//@description Contains information about the main Web App of a bot @url URL of the Web App to open @is_compact True, if the Web App must always be opened in the compact mode instead of the full-size mode
+mainWebApp url:string is_compact:Bool = MainWebApp;
+
 
 //@description Contains information about a message thread
 //@chat_id Identifier of the chat to which the message thread belongs
 //@message_thread_id Message thread identifier, unique within the chat
 //@reply_info Information about the message thread; may be null for forum topic threads
 //@unread_message_count Approximate number of unread messages in the message thread
-//@messages The messages from which the thread starts. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
+//@messages The messages from which the thread starts. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
 //@draft_message A draft of a message in the message thread; may be null if none
 messageThreadInfo chat_id:int53 message_thread_id:int53 reply_info:messageReplyInfo unread_message_count:int32 messages:vector<message> draft_message:draftMessage = MessageThreadInfo;
 
@@ -2592,8 +2673,10 @@ linkPreviewTypeArticle photo:photo author:string = LinkPreviewType;
 //@author Author of the audio
 linkPreviewTypeAudio url:string mime_type:string audio:audio duration:int32 author:string = LinkPreviewType;
 
-//@description The link is a link to a background. Link preview title and description are available only for filled backgrounds @document Document with the background; may be null for filled backgrounds
-linkPreviewTypeBackground document:document = LinkPreviewType;
+//@description The link is a link to a background. Link preview title and description are available only for filled backgrounds
+//@document Document with the background; may be null for filled backgrounds
+//@background_type Type of the background; may be null if unknown
+linkPreviewTypeBackground document:document background_type:BackgroundType = LinkPreviewType;
 
 //@description The link is a link to boost a channel chat @photo Photo of the chat; may be null
 linkPreviewTypeChannelBoost photo:chatPhoto = LinkPreviewType;
@@ -2607,19 +2690,32 @@ linkPreviewTypeChat type:InviteLinkChatType photo:chatPhoto creates_join_request
 //@description The link is a link to a general file @document The document description @author Author of the document
 linkPreviewTypeDocument document:document author:string = LinkPreviewType;
 
+//@description The link is a link to an animation player
+//@url URL of the external animation player
+//@thumbnail Thumbnail of the animation; may be null if unknown
+//@duration Duration of the animation, in seconds
+//@author Author of the animation
+//@width Expected width of the embedded player
+//@height Expected height of the embedded player
+linkPreviewTypeEmbeddedAnimationPlayer url:string thumbnail:photo duration:int32 author:string width:int32 height:int32 = LinkPreviewType;
+
 //@description The link is a link to an audio player
 //@url URL of the external audio player
+//@thumbnail Thumbnail of the audio; may be null if unknown
 //@duration Duration of the audio, in seconds
 //@author Author of the audio
-linkPreviewTypeEmbeddedAudioPlayer url:string duration:int32 author:string = LinkPreviewType;
+//@width Expected width of the embedded player
+//@height Expected height of the embedded player
+linkPreviewTypeEmbeddedAudioPlayer url:string thumbnail:photo duration:int32 author:string width:int32 height:int32 = LinkPreviewType;
 
 //@description The link is a link to a video player
 //@url URL of the external video player
+//@thumbnail Thumbnail of the video; may be null if unknown
 //@duration Duration of the video, in seconds
 //@author Author of the video
-//@width Expected width of the preview
-//@height Expected height of the preview
-linkPreviewTypeEmbeddedVideoPlayer url:string duration:int32 author:string width:int32 height:int32 = LinkPreviewType;
+//@width Expected width of the embedded player
+//@height Expected height of the embedded player
+linkPreviewTypeEmbeddedVideoPlayer url:string thumbnail:photo duration:int32 author:string width:int32 height:int32 = LinkPreviewType;
 
 //@description The link is a link to an invoice
 linkPreviewTypeInvoice = LinkPreviewType;
@@ -2636,7 +2732,7 @@ linkPreviewTypePremiumGiftCode = LinkPreviewType;
 //@description The link is a link to a shareable chat folder
 linkPreviewTypeShareableChatFolder = LinkPreviewType;
 
-//@description The link is a link to a sticker message @sticker The sticker
+//@description The link is a link to a sticker @sticker The sticker. It can be an arbitrary WEBP image and can have dimensions bigger than 512
 linkPreviewTypeSticker sticker:sticker = LinkPreviewType;
 
 //@description The link is a link to a sticker set @stickers Up to 4 stickers from the sticker set
@@ -2691,10 +2787,11 @@ linkPreviewTypeWebApp photo:photo = LinkPreviewType;
 //@type Type of the link preview
 //@has_large_media True, if size of media in the preview can be changed
 //@show_large_media True, if large media preview must be shown; otherwise, the media preview must be shown small and only the first frame must be shown for videos
+//@show_media_above_description True, if media must be shown above link preview description; otherwise, the media must be shown below the description
 //@skip_confirmation True, if there is no need to show an ordinary open URL confirmation, when opening the URL from the preview, because the URL is shown in the message text in clear
 //@show_above_text True, if the link preview must be shown above message text; otherwise, the link preview must be shown below the message text
 //@instant_view_version Version of instant view (currently, can be 1 or 2) for the web page; 0 if none
-linkPreview url:string display_url:string site_name:string title:string description:formattedText type:LinkPreviewType has_large_media:Bool show_large_media:Bool skip_confirmation:Bool show_above_text:Bool instant_view_version:int32 = LinkPreview;
+linkPreview url:string display_url:string site_name:string title:string description:formattedText type:LinkPreviewType has_large_media:Bool show_large_media:Bool show_media_above_description:Bool skip_confirmation:Bool show_above_text:Bool instant_view_version:int32 = LinkPreview;
 
 
 //@description Contains information about a country
@@ -2862,7 +2959,7 @@ paymentOption title:string url:string = PaymentOption;
 //@need_password True, if the user will be able to save credentials, if sets up a 2-step verification password
 paymentFormTypeRegular invoice:invoice payment_provider_user_id:int53 payment_provider:PaymentProvider additional_payment_options:vector<paymentOption> saved_order_info:orderInfo saved_credentials:vector<savedCredentials> can_save_credentials:Bool need_password:Bool = PaymentFormType;
 
-//@description The payment form is for a payment in Telegram stars @star_count Number of Telegram stars that will be paid
+//@description The payment form is for a payment in Telegram Stars @star_count Number of Telegram Stars that will be paid
 paymentFormTypeStars star_count:int53 = PaymentFormType;
 
 
@@ -2891,8 +2988,8 @@ paymentResult success:Bool verification_url:string = PaymentResult;
 //@tip_amount The amount of tip chosen by the buyer in the smallest units of the currency
 paymentReceiptTypeRegular payment_provider_user_id:int53 invoice:invoice order_info:orderInfo shipping_option:shippingOption credentials_title:string tip_amount:int53 = PaymentReceiptType;
 
-//@description The payment was done using Telegram stars
-//@star_count Number of Telegram stars that were paid
+//@description The payment was done using Telegram Stars
+//@star_count Number of Telegram Stars that were paid
 //@transaction_id Unique identifier of the transaction that can be used to dispute it
 paymentReceiptTypeStars star_count:int53 transaction_id:string = PaymentReceiptType;
 
@@ -2907,7 +3004,9 @@ paymentReceipt product_info:productInfo date:int32 seller_bot_user_id:int53 type
 
 //@class InputInvoice @description Describes an invoice to process
 
-//@description An invoice from a message of the type messageInvoice or paid media purchase from messagePaidMedia @chat_id Chat identifier of the message @message_id Message identifier
+//@description An invoice from a message of the type messageInvoice or paid media purchase from messagePaidMedia
+//@chat_id Chat identifier of the message
+//@message_id Message identifier
 inputInvoiceMessage chat_id:int53 message_id:int53 = InputInvoice;
 
 //@description An invoice from a link of the type internalLinkTypeInvoice @name Name of the invoice
@@ -3252,7 +3351,7 @@ messageAudio audio:audio caption:formattedText = MessageContent;
 messageDocument document:document caption:formattedText = MessageContent;
 
 //@description A message with paid media
-//@star_count Number of stars needed to buy access to the media in the message
+//@star_count Number of Telegram Stars needed to buy access to the media in the message
 //@media Information about the media
 //@caption Media caption
 //@show_caption_above_media True, if the caption must be shown above the media; otherwise, the caption must be shown below the media
@@ -3460,7 +3559,7 @@ messagePaymentSuccessful invoice_chat_id:int53 invoice_message_id:int53 currency
 messagePaymentSuccessfulBot currency:string total_amount:int53 is_recurring:Bool is_first_recurring:Bool invoice_payload:bytes shipping_option_id:string order_info:orderInfo telegram_payment_charge_id:string provider_payment_charge_id:string = MessageContent;
 
 //@description A payment has been refunded
-//@owner_id Identifier of the previous owner of the Telegram stars that refunds them
+//@owner_id Identifier of the previous owner of the Telegram Stars that refunds them
 //@currency Currency for the price of the product
 //@total_amount Total price for the product, in the smallest units of the currency
 //@invoice_payload Invoice payload; only for bots
@@ -3468,15 +3567,16 @@ messagePaymentSuccessfulBot currency:string total_amount:int53 is_recurring:Bool
 //@provider_payment_charge_id Provider payment identifier
 messagePaymentRefunded owner_id:MessageSender currency:string total_amount:int53 invoice_payload:bytes telegram_payment_charge_id:string provider_payment_charge_id:string = MessageContent;
 
-//@description Telegram Premium was gifted to the user
-//@gifter_user_id The identifier of a user that gifted Telegram Premium; 0 if the gift was anonymous
+//@description Telegram Premium was gifted to a user
+//@gifter_user_id The identifier of a user that gifted Telegram Premium; 0 if the gift was anonymous or is outgoing
+//@receiver_user_id The identifier of a user that received Telegram Premium; 0 if the gift is incoming
 //@currency Currency for the paid amount
 //@amount The paid amount, in the smallest units of the currency
 //@cryptocurrency Cryptocurrency used to pay for the gift; may be empty if none
 //@cryptocurrency_amount The paid amount, in the smallest units of the cryptocurrency; 0 if none
 //@month_count Number of months the Telegram Premium subscription will be active
 //@sticker A sticker to be shown in the message; may be null if unknown
-messageGiftedPremium gifter_user_id:int53 currency:string amount:int53 cryptocurrency:string cryptocurrency_amount:int64 month_count:int32 sticker:sticker = MessageContent;
+messageGiftedPremium gifter_user_id:int53 receiver_user_id:int53 currency:string amount:int53 cryptocurrency:string cryptocurrency_amount:int64 month_count:int32 sticker:sticker = MessageContent;
 
 //@description A Telegram Premium gift code was created for the user
 //@creator_id Identifier of a chat or a user that created the gift code; may be null if unknown
@@ -3520,6 +3620,18 @@ messagePremiumGiveawayCompleted giveaway_message_id:int53 winner_count:int32 unc
 //@winner_user_ids Up to 100 user identifiers of the winners of the giveaway
 //@unclaimed_prize_count Number of undistributed prizes
 messagePremiumGiveawayWinners boosted_chat_id:int53 giveaway_message_id:int53 additional_chat_count:int32 actual_winners_selection_date:int32 only_new_members:Bool was_refunded:Bool month_count:int32 prize_description:string winner_count:int32 winner_user_ids:vector<int53> unclaimed_prize_count:int32 = MessageContent;
+
+//@description Telegram Stars were gifted to a user
+//@gifter_user_id The identifier of a user that gifted Telegram Stars; 0 if the gift was anonymous or is outgoing
+//@receiver_user_id The identifier of a user that received Telegram Stars; 0 if the gift is incoming
+//@currency Currency for the paid amount
+//@amount The paid amount, in the smallest units of the currency
+//@cryptocurrency Cryptocurrency used to pay for the gift; may be empty if none
+//@cryptocurrency_amount The paid amount, in the smallest units of the cryptocurrency; 0 if none
+//@star_count Number of Telegram Stars that were gifted
+//@transaction_id Identifier of the transaction for Telegram Stars purchase; for receiver only
+//@sticker A sticker to be shown in the message; may be null if unknown
+messageGiftedStars gifter_user_id:int53 receiver_user_id:int53 currency:string amount:int53 cryptocurrency:string cryptocurrency_amount:int64 star_count:int53 transaction_id:string sticker:sticker = MessageContent;
 
 //@description A contact has registered with Telegram
 messageContactRegistered = MessageContent;
@@ -3724,7 +3836,7 @@ inputMessageAudio audio:InputFile album_cover_thumbnail:inputThumbnail duration:
 inputMessageDocument document:InputFile thumbnail:inputThumbnail disable_content_type_detection:Bool caption:formattedText = InputMessageContent;
 
 //@description A message with paid media; can be used only in channel chats with supergroupFullInfo.has_paid_media_allowed
-//@star_count The number of stars that must be paid to see the media; 1-getOption("paid_media_message_star_count_max")
+//@star_count The number of Telegram Stars that must be paid to see the media; 1-getOption("paid_media_message_star_count_max")
 //@paid_media The content of the paid media
 //@caption Message caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 //@show_caption_above_media True, if the caption must be shown above the video; otherwise, the caption must be shown below the video; not supported in secret chats
@@ -3832,10 +3944,39 @@ inputMessageStory story_sender_chat_id:int53 story_id:int32 = InputMessageConten
 
 //@description A forwarded message
 //@from_chat_id Identifier for the chat this forwarded message came from
-//@message_id Identifier of the message to forward. A message can be forwarded only if message.can_be_forwarded
+//@message_id Identifier of the message to forward. A message can be forwarded only if messageProperties.can_be_forwarded
 //@in_game_share True, if a game message is being shared from a launched game; applies only to game messages
 //@copy_options Options to be used to copy content of the message without reference to the original sender; pass null to forward the message as usual
 inputMessageForwarded from_chat_id:int53 message_id:int53 in_game_share:Bool copy_options:messageCopyOptions = InputMessageContent;
+
+
+//@description Contains properties of a message and describes actions that can be done with the message right now
+//@can_be_deleted_only_for_self True, if the message can be deleted only for the current user while other users will continue to see it using the method deleteMessages with revoke == false
+//@can_be_deleted_for_all_users True, if the message can be deleted for all users using the method deleteMessages with revoke == true
+//@can_be_edited True, if the message can be edited using the methods editMessageText, editMessageMedia, editMessageCaption, or editMessageReplyMarkup.
+//-For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message
+//@can_be_forwarded True, if the message can be forwarded using inputMessageForwarded or forwardMessages
+//@can_be_paid True, if the message can be paid using inputInvoiceMessage
+//@can_be_pinned True, if the message can be pinned or unpinned in the chat using pinChatMessage or unpinChatMessage
+//@can_be_replied True, if the message can be replied in the same chat and forum topic using inputMessageReplyToMessage
+//@can_be_replied_in_another_chat True, if the message can be replied in another chat or forum topic using inputMessageReplyToExternalMessage
+//@can_be_saved True, if content of the message can be saved locally or copied using inputMessageForwarded or forwardMessages with copy options
+//@can_be_shared_in_story True, if the message can be shared in a story using inputStoryAreaTypeMessage
+//@can_edit_scheduling_state True, if scheduling state of the message can be edited
+//@can_get_embedding_code True, if code for message embedding can be received using getMessageEmbeddingCode
+//@can_get_link True, if a link can be generated for the message using getMessageLink
+//@can_get_media_timestamp_links True, if media timestamp links can be generated for media timestamp entities in the message text, caption or link preview description using getMessageLink
+//@can_get_message_thread True, if information about the message thread is available through getMessageThread and getMessageThreadHistory
+//@can_get_read_date True, if read date of the message can be received through getMessageReadDate
+//@can_get_statistics True, if message statistics are available through getMessageStatistics and message forwards can be received using getMessagePublicForwards
+//@can_get_viewers True, if chat members already viewed the message can be received through getMessageViewers
+//@can_recognize_speech True, if speech can be recognized for the message through recognizeSpeech
+//@can_report_chat True, if the message can be reported using reportChat
+//@can_report_reactions True, if reactions on the message can be reported through reportMessageReactions
+//@can_report_supergroup_spam True, if the message can be reported using reportSupergroupSpam
+//@can_set_fact_check True, if fact check for the message can be changed through setMessageFactCheck
+//@need_show_statistics True, if message statistics must be available from context menu of the message
+messageProperties can_be_deleted_only_for_self:Bool can_be_deleted_for_all_users:Bool can_be_edited:Bool can_be_forwarded:Bool can_be_paid:Bool can_be_pinned:Bool can_be_replied:Bool can_be_replied_in_another_chat:Bool can_be_saved:Bool can_be_shared_in_story:Bool can_edit_scheduling_state:Bool can_get_embedding_code:Bool can_get_link:Bool can_get_media_timestamp_links:Bool can_get_message_thread:Bool can_get_read_date:Bool can_get_statistics:Bool can_get_viewers:Bool can_recognize_speech:Bool can_report_chat:Bool can_report_reactions:Bool can_report_supergroup_spam:Bool can_set_fact_check:Bool need_show_statistics:Bool = MessageProperties;
 
 
 //@class SearchMessagesFilter @description Represents a filter for message search results
@@ -4053,6 +4194,12 @@ emojiCategoryTypeEmojiStatus = EmojiCategoryType;
 emojiCategoryTypeChatPhoto = EmojiCategoryType;
 
 
+//@description Describes the current weather
+//@temperature Temperature, in degree Celsius
+//@emoji Emoji representing the weather
+currentWeather temperature:double emoji:string = CurrentWeather;
+
+
 //@description Describes position of a clickable rectangle area on a story media
 //@x_percentage The abscissa of the rectangle's center, as a percentage of the media width
 //@y_percentage The ordinate of the rectangle's center, as a percentage of the media height
@@ -4063,7 +4210,7 @@ emojiCategoryTypeChatPhoto = EmojiCategoryType;
 storyAreaPosition x_percentage:double y_percentage:double width_percentage:double height_percentage:double rotation_angle:double corner_radius_percentage:double = StoryAreaPosition;
 
 
-//@class StoryAreaType @description Describes type of clickable rectangle area on a story media
+//@class StoryAreaType @description Describes type of clickable area on a story media
 
 //@description An area pointing to a location @location The location @address Address of the location; may be null if unknown
 storyAreaTypeLocation location:location address:locationAddress = StoryAreaType;
@@ -4084,12 +4231,18 @@ storyAreaTypeMessage chat_id:int53 message_id:int53 = StoryAreaType;
 //@description An area pointing to a HTTP or tg:// link @url HTTP or tg:// URL to be opened when the area is clicked
 storyAreaTypeLink url:string = StoryAreaType;
 
+//@description An area with information about weather
+//@temperature Temperature, in degree Celsius
+//@emoji Emoji representing the weather
+//@background_color A color of the area background in the ARGB format
+storyAreaTypeWeather temperature:double emoji:string background_color:int32 = StoryAreaType;
+
 
 //@description Describes a clickable rectangle area on a story media @position Position of the area @type Type of the area
 storyArea position:storyAreaPosition type:StoryAreaType = StoryArea;
 
 
-//@class InputStoryAreaType @description Describes type of clickable rectangle area on a story media to be added
+//@class InputStoryAreaType @description Describes type of clickable area on a story media to be added
 
 //@description An area pointing to a location @location The location @address Address of the location; pass null if unknown
 inputStoryAreaTypeLocation location:location address:locationAddress = InputStoryAreaType;
@@ -4112,12 +4265,18 @@ inputStoryAreaTypeSuggestedReaction reaction_type:ReactionType is_dark:Bool is_f
 
 //@description An area pointing to a message
 //@chat_id Identifier of the chat with the message. Currently, the chat must be a supergroup or a channel chat
-//@message_id Identifier of the message. Only successfully sent non-scheduled messages can be specified
+//@message_id Identifier of the message. Use messageProperties.can_be_shared_in_story to check whether the message is suitable
 inputStoryAreaTypeMessage chat_id:int53 message_id:int53 = InputStoryAreaType;
 
 //@description An area pointing to a HTTP or tg:// link
 //@url HTTP or tg:// URL to be opened when the area is clicked
 inputStoryAreaTypeLink url:string = InputStoryAreaType;
+
+//@description An area with information about weather
+//@temperature Temperature, in degree Celsius
+//@emoji Emoji representing the weather
+//@background_color A color of the area background in the ARGB format
+inputStoryAreaTypeWeather temperature:double emoji:string background_color:int32 = InputStoryAreaType;
 
 
 //@description Describes a clickable rectangle area on a story media to be added @position Position of the area @type Type of the area
@@ -4126,8 +4285,9 @@ inputStoryArea position:storyAreaPosition type:InputStoryAreaType = InputStoryAr
 //@description Contains a list of story areas to be added @areas List of input story areas. Currently, a story can have
 //-up to 10 inputStoryAreaTypeLocation, inputStoryAreaTypeFoundVenue, and inputStoryAreaTypePreviousVenue areas,
 //-up to getOption("story_suggested_reaction_area_count_max") inputStoryAreaTypeSuggestedReaction areas,
-//-up to 1 inputStoryAreaTypeMessage area, and
-//-up to getOption("story_link_area_count_max") inputStoryAreaTypeLink areas if the current user is a Telegram Premium user
+//-up to 1 inputStoryAreaTypeMessage area,
+//-up to getOption("story_link_area_count_max") inputStoryAreaTypeLink areas if the current user is a Telegram Premium user, and
+//-up to 3 inputStoryAreaTypeWeather areas
 inputStoryAreas areas:vector<inputStoryArea> = InputStoryAreas;
 
 
@@ -4140,8 +4300,9 @@ inputStoryAreas areas:vector<inputStoryArea> = InputStoryAreas;
 //@minithumbnail Video minithumbnail; may be null
 //@thumbnail Video thumbnail in JPEG or MPEG4 format; may be null
 //@preload_prefix_size Size of file prefix, which is supposed to be preloaded, in bytes
+//@cover_frame_timestamp Timestamp of the frame used as video thumbnail
 //@video File containing the video
-storyVideo duration:double width:int32 height:int32 has_stickers:Bool is_animation:Bool minithumbnail:minithumbnail thumbnail:thumbnail preload_prefix_size:int32 video:file = StoryVideo;
+storyVideo duration:double width:int32 height:int32 has_stickers:Bool is_animation:Bool minithumbnail:minithumbnail thumbnail:thumbnail preload_prefix_size:int32 cover_frame_timestamp:double video:file = StoryVideo;
 
 
 //@class StoryContent @description Contains the content of a story
@@ -4167,8 +4328,9 @@ inputStoryContentPhoto photo:InputFile added_sticker_file_ids:vector<int32> = In
 //@video Video to be sent. The video size must be 720x1280. The video must be streamable and stored in MPEG4 format, after encoding with x265 codec and key frames added each second
 //@added_sticker_file_ids File identifiers of the stickers added to the video, if applicable
 //@duration Precise duration of the video, in seconds; 0-60
+//@cover_frame_timestamp Timestamp of the frame, which will be used as video thumbnail
 //@is_animation True, if the video has no sound
-inputStoryContentVideo video:InputFile added_sticker_file_ids:vector<int32> duration:double is_animation:Bool = InputStoryContent;
+inputStoryContentVideo video:InputFile added_sticker_file_ids:vector<int32> duration:double cover_frame_timestamp:double is_animation:Bool = InputStoryContent;
 
 
 //@class StoryList @description Describes a list of stories
@@ -4253,7 +4415,7 @@ storyInfo story_id:int32 date:int32 is_for_close_friends:Bool = StoryInfo;
 //@list Identifier of the story list in which the stories are shown; may be null if the stories aren't shown in a story list
 //@order A parameter used to determine order of the stories in the story list; 0 if the stories doesn't need to be shown in the story list. Stories must be sorted by the pair (order, story_sender_chat_id) in descending order
 //@max_read_story_id Identifier of the last read active story
-//@stories Basic information about the stories; use getStory to get full information about the stories. The stories are in a chronological order (i.e., in order of increasing story identifiers)
+//@stories Basic information about the stories; use getStory to get full information about the stories. The stories are in chronological order (i.e., in order of increasing story identifiers)
 chatActiveStories chat_id:int53 list:StoryList order:int53 max_read_story_id:int32 stories:vector<storyInfo> = ChatActiveStories;
 
 
@@ -4321,6 +4483,20 @@ publicForwardStory story:story = PublicForward;
 //@forwards List of found public forwards and reposts
 //@next_offset The offset for the next request. If empty, then there are no more results
 publicForwards total_count:int32 forwards:vector<PublicForward> next_offset:string = PublicForwards;
+
+
+//@description Describes media previews of a bot
+//@date Point in time (Unix timestamp) when the preview was added or changed last time
+//@content Content of the preview
+botMediaPreview date:int32 content:StoryContent = BotMediaPreview;
+
+//@description Contains a list of media previews of a bot @previews List of media previews
+botMediaPreviews previews:vector<botMediaPreview> = BotMediaPreviews;
+
+//@description Contains a list of media previews of a bot for the given language and the list of languages for which the bot has dedicated previews
+//@previews List of media previews
+//@language_codes List of language codes for which the bot has dedicated previews
+botMediaPreviewInfo previews:vector<botMediaPreview> language_codes:vector<string> = BotMediaPreviewInfo;
 
 
 //@description Contains a list of features available on a specific chat boost level
@@ -5180,6 +5356,9 @@ chatEventHasAggressiveAntiSpamEnabledToggled has_aggressive_anti_spam_enabled:Bo
 //@description The sign_messages setting of a channel was toggled @sign_messages New value of sign_messages
 chatEventSignMessagesToggled sign_messages:Bool = ChatEventAction;
 
+//@description The show_message_sender setting of a channel was toggled @show_message_sender New value of show_message_sender
+chatEventShowMessageSenderToggled show_message_sender:Bool = ChatEventAction;
+
 //@description A chat invite link was edited @old_invite_link Previous information about the invite link @new_invite_link New information about the invite link
 chatEventInviteLinkEdited old_invite_link:chatInviteLink new_invite_link:chatInviteLink = ChatEventAction;
 
@@ -5545,7 +5724,10 @@ premiumState state:formattedText payment_options:vector<premiumStatePaymentOptio
 //@description The user subscribing to Telegram Premium @is_restore Pass true if this is a restore of a Telegram Premium purchase; only for App Store @is_upgrade Pass true if this is an upgrade from a monthly subscription to early subscription; only for App Store
 storePaymentPurposePremiumSubscription is_restore:Bool is_upgrade:Bool = StorePaymentPurpose;
 
-//@description The user gifting Telegram Premium to another user @user_id Identifier of the user to which Premium was gifted @currency ISO 4217 currency code of the payment currency @amount Paid amount, in the smallest units of the currency
+//@description The user gifting Telegram Premium to another user
+//@user_id Identifier of the user to which Telegram Premium is gifted
+//@currency ISO 4217 currency code of the payment currency
+//@amount Paid amount, in the smallest units of the currency
 storePaymentPurposeGiftedPremium user_id:int53 currency:string amount:int53 = StorePaymentPurpose;
 
 //@description The user creating Telegram Premium gift codes for other users
@@ -5561,11 +5743,18 @@ storePaymentPurposePremiumGiftCodes boosted_chat_id:int53 currency:string amount
 //@amount Paid amount, in the smallest units of the currency
 storePaymentPurposePremiumGiveaway parameters:premiumGiveawayParameters currency:string amount:int53 = StorePaymentPurpose;
 
-//@description The user buying Telegram stars
+//@description The user buying Telegram Stars
 //@currency ISO 4217 currency code of the payment currency
 //@amount Paid amount, in the smallest units of the currency
-//@star_count Number of bought stars
+//@star_count Number of bought Telegram Stars
 storePaymentPurposeStars currency:string amount:int53 star_count:int53 = StorePaymentPurpose;
+
+//@description The user buying Telegram Stars for other users
+//@user_id Identifier of the user to which Telegram Stars are gifted
+//@currency ISO 4217 currency code of the payment currency
+//@amount Paid amount, in the smallest units of the currency
+//@star_count Number of bought Telegram Stars
+storePaymentPurposeGiftedStars user_id:int53 currency:string amount:int53 star_count:int53 = StorePaymentPurpose;
 
 
 //@class TelegramPaymentPurpose @description Describes a purpose of a payment toward Telegram
@@ -5586,11 +5775,21 @@ telegramPaymentPurposePremiumGiftCodes boosted_chat_id:int53 currency:string amo
 //@month_count Number of months the Telegram Premium subscription will be active for the users
 telegramPaymentPurposePremiumGiveaway parameters:premiumGiveawayParameters currency:string amount:int53 winner_count:int32 month_count:int32 = TelegramPaymentPurpose;
 
-//@description The user buying Telegram stars
+//@description The user buying Telegram Stars
 //@currency ISO 4217 currency code of the payment currency
 //@amount Paid amount, in the smallest units of the currency
-//@star_count Number of bought stars
+//@star_count Number of bought Telegram Stars
 telegramPaymentPurposeStars currency:string amount:int53 star_count:int53 = TelegramPaymentPurpose;
+
+//@description The user buying Telegram Stars for other users
+//@user_id Identifier of the user to which Telegram Stars are gifted
+//@currency ISO 4217 currency code of the payment currency
+//@amount Paid amount, in the smallest units of the currency
+//@star_count Number of bought Telegram Stars
+telegramPaymentPurposeGiftedStars user_id:int53 currency:string amount:int53 star_count:int53 = TelegramPaymentPurpose;
+
+//@description The user joins a chat and subscribes to regular payments in Telegram Stars @invite_link Invite link to use
+telegramPaymentPurposeJoinChat invite_link:string = TelegramPaymentPurpose;
 
 
 //@class DeviceToken @description Represents a data needed to subscribe for push notifications through registerDevice method.
@@ -5836,7 +6035,7 @@ pushMessageContentInvoice price:string is_pinned:Bool = PushMessageContent;
 pushMessageContentLocation is_live:Bool is_pinned:Bool = PushMessageContent;
 
 //@description A message with paid media
-//@star_count Number of stars needed to buy access to the media in the message; 0 for pinned message
+//@star_count Number of Telegram Stars needed to buy access to the media in the message; 0 for pinned message
 //@is_pinned True, if the message is a pinned message with the specified content
 pushMessageContentPaidMedia star_count:int53 is_pinned:Bool = PushMessageContent;
 
@@ -6315,7 +6514,7 @@ internalLinkTypeActiveSessions = InternalLinkType;
 
 //@description The link is a link to an attachment menu bot to be opened in the specified or a chosen chat. Process given target_chat to open the chat.
 //-Then, call searchPublicChat with the given bot username, check that the user is a bot and can be added to attachment menu. Then, use getAttachmentMenuBot to receive information about the bot.
-//-If the bot isn't added to attachment menu, then show a disclaimer about Mini Apps being a third-party apps, ask the user to accept their Terms of service and confirm adding the bot to side and attachment menu.
+//-If the bot isn't added to attachment menu, then show a disclaimer about Mini Apps being third-party applications, ask the user to accept their Terms of service and confirm adding the bot to side and attachment menu.
 //-If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
 //-If the attachment menu bot can't be used in the opened chat, show an error to the user. If the bot is added to attachment menu and can be used in the chat, then use openWebApp with the given URL
 //@target_chat Target chat to be opened
@@ -6361,7 +6560,12 @@ internalLinkTypeBotStartInGroup bot_username:string start_parameter:string admin
 //@link_name Name of the link
 internalLinkTypeBusinessChat link_name:string = InternalLinkType;
 
-//@description The link is a link to the change phone number section of the app
+//@description The link is a link to the Telegram Star purchase section of the application
+//@star_count The number of Telegram Stars that must be owned by the user
+//@purpose Purpose of Telegram Star purchase. Arbitrary string specified by the server, for example, "subs" if the Telegram Stars are required to extend channel subscriptions
+internalLinkTypeBuyStars star_count:int53 purpose:string = InternalLinkType;
+
+//@description The link is a link to the change phone number section of the application
 internalLinkTypeChangePhoneNumber = InternalLinkType;
 
 //@description The link is a link to boost a Telegram chat. Call getChatBoostLinkInfo with the given URL to process the link.
@@ -6375,7 +6579,7 @@ internalLinkTypeChatBoost url:string = InternalLinkType;
 //@invite_link Internal representation of the invite link
 internalLinkTypeChatFolderInvite invite_link:string = InternalLinkType;
 
-//@description The link is a link to the folder section of the app settings
+//@description The link is a link to the folder section of the application settings
 internalLinkTypeChatFolderSettings = InternalLinkType;
 
 //@description The link is a chat invite link. Call checkChatInviteLink with the given invite link to process the link.
@@ -6383,10 +6587,10 @@ internalLinkTypeChatFolderSettings = InternalLinkType;
 //@invite_link Internal representation of the invite link
 internalLinkTypeChatInvite invite_link:string = InternalLinkType;
 
-//@description The link is a link to the default message auto-delete timer settings section of the app settings
+//@description The link is a link to the default message auto-delete timer settings section of the application settings
 internalLinkTypeDefaultMessageAutoDeleteTimerSettings = InternalLinkType;
 
-//@description The link is a link to the edit profile section of the app settings
+//@description The link is a link to the edit profile section of the application settings
 internalLinkTypeEditProfileSettings = InternalLinkType;
 
 //@description The link is a link to a game. Call searchPublicChat with the given bot username, check that the user is a bot,
@@ -6409,8 +6613,18 @@ internalLinkTypeInvoice invoice_name:string = InternalLinkType;
 //@language_pack_id Language pack identifier
 internalLinkTypeLanguagePack language_pack_id:string = InternalLinkType;
 
-//@description The link is a link to the language section of the app settings
+//@description The link is a link to the language section of the application settings
 internalLinkTypeLanguageSettings = InternalLinkType;
+
+//@description The link is a link to the main Web App of a bot. Call searchPublicChat with the given bot username, check that the user is a bot and has the main Web App.
+//-If the bot can be added to attachment menu, then use getAttachmentMenuBot to receive information about the bot, then if the bot isn't added to side menu,
+//-show a disclaimer about Mini Apps being third-party applications, ask the user to accept their Terms of service and confirm adding the bot to side and attachment menu,
+//-then if the user accepts the terms and confirms adding, use toggleBotIsAddedToAttachmentMenu to add the bot.
+//-Then, use getMainWebApp with the given start parameter and open the returned URL as a Web App
+//@bot_username Username of the bot
+//@start_parameter Start parameter to be passed to getMainWebApp
+//@is_compact True, if the Web App must be opened in the compact mode instead of the full-size mode
+internalLinkTypeMainWebApp bot_username:string start_parameter:string is_compact:Bool = InternalLinkType;
 
 //@description The link is a link to a Telegram message or a forum topic. Call getMessageLinkInfo with the given URL to process the link,
 //-and then open received forum topic or chat and show the message there
@@ -6449,7 +6663,7 @@ internalLinkTypePremiumGift referrer:string = InternalLinkType;
 //@code The Telegram Premium gift code
 internalLinkTypePremiumGiftCode code:string = InternalLinkType;
 
-//@description The link is a link to the privacy and security section of the app settings
+//@description The link is a link to the privacy and security section of the application settings
 internalLinkTypePrivacyAndSecuritySettings = InternalLinkType;
 
 //@description The link is a link to a proxy. Call addProxy with the given parameters to process the link and add the proxy
@@ -6463,7 +6677,8 @@ internalLinkTypeProxy server:string port:int32 type:ProxyType = InternalLinkType
 //-If draft text isn't empty and the chat is a private chat with a regular user, then put the draft text in the input field
 //@chat_username Username of the chat
 //@draft_text Draft text for message to send in the chat
-internalLinkTypePublicChat chat_username:string draft_text:string = InternalLinkType;
+//@open_profile True, if chat profile information screen must be opened; otherwise, the chat itself must be opened
+internalLinkTypePublicChat chat_username:string draft_text:string open_profile:Bool = InternalLinkType;
 
 //@description The link can be used to login the current user on another device, but it must be scanned from QR-code using in-app camera. An alert similar to
 //-"This code can be used to allow someone to log in to your Telegram account. To confirm Telegram login, please go to Settings > Devices > Scan QR and scan the code" needs to be shown
@@ -6474,15 +6689,6 @@ internalLinkTypeRestorePurchases = InternalLinkType;
 
 //@description The link is a link to application settings
 internalLinkTypeSettings = InternalLinkType;
-
-//@description The link is a link to a bot, which can be installed to the side menu. Call searchPublicChat with the given bot username, check that the user is a bot and can be added to attachment menu.
-//-Then, use getAttachmentMenuBot to receive information about the bot. If the bot isn't added to side menu, then show a disclaimer about Mini Apps being a third-party apps,
-//-ask the user to accept their Terms of service and confirm adding the bot to side and attachment menu. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
-//-If the bot is added to side menu, then use getWebAppUrl with the given URL and open the returned URL as a Web App
-//@bot_username Username of the bot
-//@url URL to be passed to getWebAppUrl
-//@is_compact True, if the Web App must be opened in a compact mode instead of a full-size mode
-internalLinkTypeSideMenuBot bot_username:string url:string is_compact:Bool = InternalLinkType;
 
 //@description The link is a link to a sticker set. Call searchStickerSet with the given sticker set name to process the link and show the sticker set.
 //-If the sticker set is found and the user wants to add it, then call changeStickerSet
@@ -6498,7 +6704,7 @@ internalLinkTypeStory story_sender_username:string story_id:int32 = InternalLink
 //@description The link is a link to a cloud theme. TDLib has no theme support yet @theme_name Name of the theme
 internalLinkTypeTheme theme_name:string = InternalLinkType;
 
-//@description The link is a link to the theme section of the app settings
+//@description The link is a link to the theme section of the application settings
 internalLinkTypeThemeSettings = InternalLinkType;
 
 //@description The link is an unknown tg: link. Call getDeepLinkInfo to process the link @link Link to be passed to getDeepLinkInfo
@@ -6508,10 +6714,11 @@ internalLinkTypeUnknownDeepLink link:string = InternalLinkType;
 internalLinkTypeUnsupportedProxy = InternalLinkType;
 
 //@description The link is a link to a user by its phone number. Call searchUserByPhoneNumber with the given phone number to process the link.
-//-If the user is found, then call createPrivateChat and open the chat. If draft text isn't empty, then put the draft text in the input field
+//-If the user is found, then call createPrivateChat and open user's profile information screen or the chat itself. If draft text isn't empty, then put the draft text in the input field
 //@phone_number Phone number of the user
 //@draft_text Draft text for message to send in the chat
-internalLinkTypeUserPhoneNumber phone_number:string draft_text:string = InternalLinkType;
+//@open_profile True, if user's profile information screen must be opened; otherwise, the chat itself must be opened
+internalLinkTypeUserPhoneNumber phone_number:string draft_text:string open_profile:Bool = InternalLinkType;
 
 //@description The link is a link to a user by a temporary token. Call searchUserByToken with the given token to process the link.
 //-If the user is found, then call createPrivateChat and open the chat
@@ -6525,13 +6732,13 @@ internalLinkTypeUserToken token:string = InternalLinkType;
 internalLinkTypeVideoChat chat_username:string invite_hash:string is_live_stream:Bool = InternalLinkType;
 
 //@description The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot, then call searchWebApp with the received bot and the given web_app_short_name.
-//-Process received foundWebApp by showing a confirmation dialog if needed. If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being a third-party apps
+//-Process received foundWebApp by showing a confirmation dialog if needed. If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being third-party applications
 //-instead of the dialog and ask the user to accept their Terms of service. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
 //-Then, call getWebAppLinkUrl and open the returned URL as a Web App
 //@bot_username Username of the bot that owns the Web App
 //@web_app_short_name Short name of the Web App
 //@start_parameter Start parameter to be passed to getWebAppLinkUrl
-//@is_compact True, if the Web App must be opened in a compact mode instead of a full-size mode
+//@is_compact True, if the Web App must be opened in the compact mode instead of the full-size mode
 internalLinkTypeWebApp bot_username:string web_app_short_name:string start_parameter:string is_compact:Bool = InternalLinkType;
 
 
@@ -6788,6 +6995,9 @@ topChatCategoryChannels = TopChatCategory;
 //@description A category containing frequently used chats with inline bots sorted by their usage in inline mode
 topChatCategoryInlineBots = TopChatCategory;
 
+//@description A category containing frequently used chats with bots, which Web Apps were opened
+topChatCategoryWebAppBots = TopChatCategory;
+
 //@description A category containing frequently used chats used for calls
 topChatCategoryCalls = TopChatCategory;
 
@@ -6861,6 +7071,10 @@ suggestedActionSetBirthdate = SuggestedAction;
 
 //@description Suggests the user to extend their expiring Telegram Premium subscription @manage_premium_subscription_url A URL for managing Telegram Premium subscription
 suggestedActionExtendPremium manage_premium_subscription_url:string = SuggestedAction;
+
+//@description Suggests the user to extend their expiring Telegram Star subscriptions. Call getStarSubscriptions with only_expiring == true
+//-to get the number of expiring subscriptions and the number of required to buy Telegram Stars
+suggestedActionExtendStarSubscriptions = SuggestedAction;
 
 
 //@description Contains a counter @count Count
@@ -7094,18 +7308,18 @@ chatRevenueTransaction cryptocurrency:string cryptocurrency_amount:int64 type:Ch
 chatRevenueTransactions total_count:int32 transactions:vector<chatRevenueTransaction> = ChatRevenueTransactions;
 
 
-//@description Contains information about Telegram stars earned by a bot or a chat
-//@total_count Total number of the stars earned
-//@current_count The number of Telegram stars that aren't withdrawn yet
-//@available_count The number of Telegram stars that are available for withdrawal
-//@withdrawal_enabled True, if Telegram stars can be withdrawn now or later
+//@description Contains information about Telegram Stars earned by a bot or a chat
+//@total_count Total number of Telegram Stars earned
+//@current_count The number of Telegram Stars that aren't withdrawn yet
+//@available_count The number of Telegram Stars that are available for withdrawal
+//@withdrawal_enabled True, if Telegram Stars can be withdrawn now or later
 //@next_withdrawal_in Time left before the next withdrawal can be started, in seconds; 0 if withdrawal can be started now
 starRevenueStatus total_count:int53 current_count:int53 available_count:int53 withdrawal_enabled:Bool next_withdrawal_in:int32 = StarRevenueStatus;
 
-//@description A detailed statistics about Telegram stars earned by a bot or a chat
+//@description A detailed statistics about Telegram Stars earned by a bot or a chat
 //@revenue_by_day_graph A graph containing amount of revenue in a given day
-//@status Telegram star revenue status
-//@usd_rate Current conversion rate of a Telegram star to USD
+//@status Telegram Star revenue status
+//@usd_rate Current conversion rate of a Telegram Star to USD
 starRevenueStatistics revenue_by_day_graph:StatisticalGraph status:starRevenueStatus usd_rate:double = StarRevenueStatistics;
 
 
@@ -7623,7 +7837,11 @@ updateDefaultReactionType reaction_type:ReactionType = Update;
 //@tags The new tags
 updateSavedMessagesTags saved_messages_topic_id:int53 tags:savedMessagesTags = Update;
 
-//@description The number of Telegram stars owned by the current user has changed @star_count The new number of Telegram stars owned
+//@description The list of messages with active live location that need to be updated by the application has changed. The list is persistent across application restarts only if the message database is used
+//@messages The list of messages with active live locations
+updateActiveLiveLocationMessages messages:vector<message> = Update;
+
+//@description The number of Telegram Stars owned by the current user has changed @star_count The new number of Telegram Stars owned
 updateOwnedStarCount star_count:int53 = Update;
 
 //@description The revenue earned from sponsored messages in a chat has changed. If chat revenue screen is opened, then getChatRevenueTransactions may be called to fetch new transactions
@@ -7631,9 +7849,9 @@ updateOwnedStarCount star_count:int53 = Update;
 //@revenue_amount New amount of earned revenue
 updateChatRevenueAmount chat_id:int53 revenue_amount:chatRevenueAmount = Update;
 
-//@description The Telegram star revenue earned by a bot or a chat has changed. If star transactions screen of the chat is opened, then getStarTransactions may be called to fetch new transactions
-//@owner_id Identifier of the owner of the Telegram stars
-//@status New Telegram star revenue status
+//@description The Telegram Star revenue earned by a bot or a chat has changed. If Telegram Star transaction screen of the chat is opened, then getStarTransactions may be called to fetch new transactions
+//@owner_id Identifier of the owner of the Telegram Stars
+//@status New Telegram Star revenue status
 updateStarRevenueStatus owner_id:MessageSender status:starRevenueStatus = Update;
 
 //@description The parameters of speech recognition without Telegram Premium subscription has changed
@@ -8064,15 +8282,18 @@ getCallbackQueryMessage chat_id:int53 message_id:int53 callback_query_id:int64 =
 //@description Returns information about messages. If a message is not found, returns null on the corresponding position of the result @chat_id Identifier of the chat the messages belong to @message_ids Identifiers of the messages to get
 getMessages chat_id:int53 message_ids:vector<int53> = Messages;
 
-//@description Returns information about a message thread. Can be used only if message.can_get_message_thread == true @chat_id Chat identifier @message_id Identifier of the message
+//@description Returns properties of a message; this is an offline request @chat_id Chat identifier @message_id Identifier of the message
+getMessageProperties chat_id:int53 message_id:int53 = MessageProperties;
+
+//@description Returns information about a message thread. Can be used only if messageProperties.can_get_message_thread == true @chat_id Chat identifier @message_id Identifier of the message
 getMessageThread chat_id:int53 message_id:int53 = MessageThreadInfo;
 
-//@description Returns read date of a recent outgoing message in a private chat. The method can be called if message.can_get_read_date == true and the message is read
+//@description Returns read date of a recent outgoing message in a private chat. The method can be called if messageProperties.can_get_read_date == true
 //@chat_id Chat identifier
 //@message_id Identifier of the message
 getMessageReadDate chat_id:int53 message_id:int53 = MessageReadDate;
 
-//@description Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if message.can_get_viewers == true
+//@description Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
 //@chat_id Chat identifier
 //@message_id Identifier of the message
 getMessageViewers chat_id:int53 message_id:int53 = MessageViewers;
@@ -8180,7 +8401,7 @@ getSuitablePersonalChats = Chats;
 //@limit The maximum number of topics to be loaded. For optimal performance, the number of loaded topics is chosen by TDLib and can be smaller than the specified limit, even if the end of the list is not reached
 loadSavedMessagesTopics limit:int32 = Ok;
 
-//@description Returns messages in a Saved Messages topic. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
+//@description Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
 //@saved_messages_topic_id Identifier of Saved Messages topic which messages will be fetched
 //@from_message_id Identifier of the message starting from which messages must be fetched; use 0 to get results from the last message
 //@offset Specify 0 to get results from exactly the message from_message_id or a negative offset up to 99 to get additionally some newer messages
@@ -8218,7 +8439,7 @@ setPinnedSavedMessagesTopics saved_messages_topic_ids:vector<int53> = Ok;
 getGroupsInCommon user_id:int53 offset_chat_id:int53 limit:int32 = Chats;
 
 
-//@description Returns messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id).
+//@description Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
 //-For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
 //@chat_id Chat identifier
 //@from_message_id Identifier of the message starting from which history must be fetched; use 0 to get results from the last message
@@ -8228,8 +8449,8 @@ getGroupsInCommon user_id:int53 offset_chat_id:int53 limit:int32 = Chats;
 //@only_local Pass true to get only messages that are available without sending network requests
 getChatHistory chat_id:int53 from_message_id:int53 offset:int32 limit:int32 only_local:Bool = Messages;
 
-//@description Returns messages in a message thread of a message. Can be used only if message.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
-//-The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+//@description Returns messages in a message thread of a message. Can be used only if messageProperties.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
+//-The messages are returned in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
 //@chat_id Chat identifier
 //@message_id Message identifier, which thread history needs to be returned
 //@from_message_id Identifier of the message starting from which history must be fetched; use 0 to get results from the last message
@@ -8347,9 +8568,6 @@ deleteAllCallMessages revoke:Bool = Ok;
 //@description Returns information about the recent locations of chat members that were sent to the chat. Returns up to 1 location message per user @chat_id Chat identifier @limit The maximum number of messages to be returned
 searchChatRecentLocationMessages chat_id:int53 limit:int32 = Messages;
 
-//@description Returns all active live locations that need to be updated by the application. The list is persistent across application restarts only if the message database is used
-getActiveLiveLocationMessages = Messages;
-
 //@description Returns the last message sent in a chat no later than the specified date @chat_id Chat identifier @date Point in time (Unix timestamp) relative to which to search for messages
 getChatMessageByDate chat_id:int53 date:int32 = Message;
 
@@ -8384,7 +8602,7 @@ getChatMessageCount chat_id:int53 filter:SearchMessagesFilter saved_messages_top
 //@saved_messages_topic_id If not 0, only messages in the specified Saved Messages topic will be considered; pass 0 to consider all relevant messages, or for chats other than Saved Messages
 getChatMessagePosition chat_id:int53 message_id:int53 filter:SearchMessagesFilter message_thread_id:int53 saved_messages_topic_id:int53 = Count;
 
-//@description Returns all scheduled messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id) @chat_id Chat identifier
+//@description Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id) @chat_id Chat identifier
 getChatScheduledMessages chat_id:int53 = Messages;
 
 //@description Returns sponsored messages to be shown in a chat; for channel chats only @chat_id Identifier of the chat
@@ -8409,7 +8627,7 @@ removeNotification notification_group_id:int32 notification_id:int32 = Ok;
 removeNotificationGroup notification_group_id:int32 max_notification_id:int32 = Ok;
 
 
-//@description Returns an HTTPS link to a message in a chat. Available only for already sent messages in supergroups and channels, or if message.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
+//@description Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
 //@chat_id Identifier of the chat to which the message belongs
 //@message_id Identifier of the message
 //@media_timestamp If not 0, timestamp from which the video/audio/video note/voice note/story playing must start, in seconds. The media can be in the message content or in its link preview
@@ -8417,7 +8635,7 @@ removeNotificationGroup notification_group_id:int32 max_notification_id:int32 = 
 //@in_message_thread Pass true to create a link to the message as a channel post comment, in a message thread, or a forum topic
 getMessageLink chat_id:int53 message_id:int53 media_timestamp:int32 for_album:Bool in_message_thread:Bool = MessageLink;
 
-//@description Returns an HTML code for embedding the message. Available only for messages in supergroups and channels with a username
+//@description Returns an HTML code for embedding the message. Available only if messageProperties.can_get_embedding_code
 //@chat_id Identifier of the chat to which the message belongs
 //@message_id Identifier of the message
 //@for_album Pass true to return an HTML code for embedding of the whole media album
@@ -8446,9 +8664,9 @@ translateText text:formattedText to_language_code:string = FormattedText;
 //-"st", "sn", "sd", "si", "sk", "sl", "so", "es", "su", "sw", "sv", "tl", "tg", "ta", "tt", "te", "th", "tr", "tk", "uk", "ur", "ug", "uz", "vi", "cy", "xh", "yi", "ji", "yo", "zu"
 translateMessageText chat_id:int53 message_id:int53 to_language_code:string = FormattedText;
 
-//@description Recognizes speech in a video note or a voice note message. The message must be successfully sent, must not be scheduled, and must be from a non-secret chat
+//@description Recognizes speech in a video note or a voice note message
 //@chat_id Identifier of the chat to which the message belongs
-//@message_id Identifier of the message
+//@message_id Identifier of the message. Use messageProperties.can_recognize_speech to check whether the message is suitable
 recognizeSpeech chat_id:int53 message_id:int53 = Ok;
 
 //@description Rates recognized speech in a video note or a voice note message @chat_id Identifier of the chat to which the message belongs @message_id Identifier of the message @is_good Pass true if the speech recognition is good
@@ -8500,7 +8718,7 @@ sendInlineQueryResultMessage chat_id:int53 message_thread_id:int53 reply_to:Inpu
 //@chat_id Identifier of the chat to which to forward messages
 //@message_thread_id If not 0, the message thread identifier in which the message will be sent; for forum threads only
 //@from_chat_id Identifier of the chat from which to forward messages
-//@message_ids Identifiers of the messages to forward. Message identifiers must be in a strictly increasing order. At most 100 messages can be forwarded simultaneously. A message can be forwarded only if message.can_be_forwarded
+//@message_ids Identifiers of the messages to forward. Message identifiers must be in a strictly increasing order. At most 100 messages can be forwarded simultaneously. A message can be forwarded only if messageProperties.can_be_forwarded
 //@options Options to be used to send the messages; pass null to use default options
 //@send_copy Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local
 //@remove_caption Pass true to remove media captions of message copies. Ignored if send_copy is false
@@ -8527,7 +8745,10 @@ resendMessages chat_id:int53 message_ids:vector<int53> quote:inputTextQuote = Me
 //@input_message_content The content of the message to be added
 addLocalMessage chat_id:int53 sender_id:MessageSender reply_to:InputMessageReplyTo disable_notification:Bool input_message_content:InputMessageContent = Message;
 
-//@description Deletes messages @chat_id Chat identifier @message_ids Identifiers of the messages to be deleted @revoke Pass true to delete messages for all chat members. Always true for supergroups, channels and secret chats
+//@description Deletes messages
+//@chat_id Chat identifier
+//@message_ids Identifiers of the messages to be deleted. Use messageProperties.can_be_deleted_only_for_self and messageProperties.can_be_deleted_for_all_users to get suitable messages
+//@revoke Pass true to delete messages for all chat members. Always true for supergroups, channels and secret chats
 deleteMessages chat_id:int53 message_ids:vector<int53> revoke:Bool = Ok;
 
 //@description Deletes all messages sent by the specified message sender in a chat. Supported only for supergroups; requires can_delete_messages administrator privileges @chat_id Chat identifier @sender_id Identifier of the sender of messages to delete
@@ -8541,18 +8762,17 @@ deleteChatMessagesBySender chat_id:int53 sender_id:MessageSender = Ok;
 deleteChatMessagesByDate chat_id:int53 min_date:int32 max_date:int32 revoke:Bool = Ok;
 
 
-//@description Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side.
-//-Can be used only if message.can_be_edited == true
+//@description Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
 //@chat_id The chat the message belongs to
-//@message_id Identifier of the message
+//@message_id Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 //@reply_markup The new message reply markup; pass null if none; for bots only
 //@input_message_content New text content of the message. Must be of type inputMessageText
 editMessageText chat_id:int53 message_id:int53 reply_markup:ReplyMarkup input_message_content:InputMessageContent = Message;
 
 //@description Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
-//-Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
+//-Returns the edited message after the edit is completed on the server side
 //@chat_id The chat the message belongs to
-//@message_id Identifier of the message
+//@message_id Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 //@reply_markup The new message reply markup; pass null if none; for bots only
 //@location New location content of the message; pass null to stop sharing the live location
 //@live_period New time relative to the message send date, for which the location can be updated, in seconds. If 0x7FFFFFFF specified, then the location can be updated forever.
@@ -8563,26 +8783,24 @@ editMessageLiveLocation chat_id:int53 message_id:int53 reply_markup:ReplyMarkup 
 
 //@description Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
 //-The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
-//-Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
+//-Returns the edited message after the edit is completed on the server side
 //@chat_id The chat the message belongs to
-//@message_id Identifier of the message
+//@message_id Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 //@reply_markup The new message reply markup; pass null if none; for bots only
 //@input_message_content New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
 editMessageMedia chat_id:int53 message_id:int53 reply_markup:ReplyMarkup input_message_content:InputMessageContent = Message;
 
-//@description Edits the message content caption. Returns the edited message after the edit is completed on the server side.
-//-Can be used only if message.can_be_edited == true
+//@description Edits the message content caption. Returns the edited message after the edit is completed on the server side
 //@chat_id The chat the message belongs to
-//@message_id Identifier of the message
+//@message_id Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 //@reply_markup The new message reply markup; pass null if none; for bots only
 //@caption New message content caption; 0-getOption("message_caption_length_max") characters; pass null to remove caption
 //@show_caption_above_media Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
 editMessageCaption chat_id:int53 message_id:int53 reply_markup:ReplyMarkup caption:formattedText show_caption_above_media:Bool = Message;
 
-//@description Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side.
-//-Can be used only if message.can_be_edited == true
+//@description Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side
 //@chat_id The chat the message belongs to
-//@message_id Identifier of the message
+//@message_id Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 //@reply_markup The new message reply markup; pass null if none
 editMessageReplyMarkup chat_id:int53 message_id:int53 reply_markup:ReplyMarkup = Message;
 
@@ -8622,13 +8840,13 @@ editInlineMessageReplyMarkup inline_message_id:string reply_markup:ReplyMarkup =
 
 //@description Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
 //@chat_id The chat the message belongs to
-//@message_id Identifier of the message
+//@message_id Identifier of the message. Use messageProperties.can_edit_scheduling_state to check whether the message is suitable
 //@scheduling_state The new message scheduling state; pass null to send the message immediately
 editMessageSchedulingState chat_id:int53 message_id:int53 scheduling_state:MessageSchedulingState = Ok;
 
-//@description Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
+//@description Changes the fact-check of a message. Can be only used if messageProperties.can_set_fact_check == true
 //@chat_id The channel chat the message belongs to
-//@message_id Identifier of the message. The message must be one of the following types: messageAnimation, messageAudio, messageDocument, messagePhoto, messageText, messageVideo
+//@message_id Identifier of the message
 //@text New text of the fact-check; 0-getOption("fact_check_length_max") characters; pass null to remove it. Only Bold, Italic, and TextUrl entities with https://t.me/ links are supported
 setMessageFactCheck chat_id:int53 message_id:int53 text:formattedText = Ok;
 
@@ -8705,6 +8923,13 @@ editBusinessMessageReplyMarkup business_connection_id:string chat_id:int53 messa
 //@message_id Identifier of the message containing the poll
 //@reply_markup The new message reply markup; pass null if none
 stopBusinessPoll business_connection_id:string chat_id:int53 message_id:int53 reply_markup:ReplyMarkup = BusinessMessage;
+
+//@description Pins or unpins a message sent on behalf of a business account; for bots only
+//@business_connection_id Unique identifier of business connection on behalf of which the message was sent
+//@chat_id The chat the message belongs to
+//@message_id Identifier of the message
+//@is_pinned Pass true to pin the message, pass false to unpin it
+setBusinessMessageIsPinned business_connection_id:string chat_id:int53 message_id:int53 is_pinned:Bool = Ok;
 
 
 //@description Checks validness of a name for a quick reply shortcut. Can be called synchronously @name The name of the shortcut; 1-32 characters
@@ -8850,7 +9075,7 @@ clearRecentReactions = Ok;
 //@description Adds a reaction or a tag to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
 //@chat_id Identifier of the chat to which the message belongs
 //@message_id Identifier of the message
-//@reaction_type Type of the reaction to add
+//@reaction_type Type of the reaction to add. Use addPaidMessageReaction instead to add the paid reaction
 //@is_big Pass true if the reaction is added with a big animation
 //@update_recent_reactions Pass true if the reaction needs to be added to recent reactions; tags are never added to the list of recent reactions
 addMessageReaction chat_id:int53 message_id:int53 reaction_type:ReactionType is_big:Bool update_recent_reactions:Bool = Ok;
@@ -8858,8 +9083,26 @@ addMessageReaction chat_id:int53 message_id:int53 reaction_type:ReactionType is_
 //@description Removes a reaction from a message. A chosen reaction can always be removed
 //@chat_id Identifier of the chat to which the message belongs
 //@message_id Identifier of the message
-//@reaction_type Type of the reaction to remove
+//@reaction_type Type of the reaction to remove. The paid reaction can't be removed
 removeMessageReaction chat_id:int53 message_id:int53 reaction_type:ReactionType = Ok;
+
+//@description Adds the paid message reaction to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
+//@chat_id Identifier of the chat to which the message belongs
+//@message_id Identifier of the message
+//@star_count Number of Telegram Stars to be used for the reaction; 1-getOption("paid_reaction_star_count_max")
+//@is_anonymous Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors
+addPaidMessageReaction chat_id:int53 message_id:int53 star_count:int53 is_anonymous:Bool = Ok;
+
+//@description Removes all pending paid reactions on a message. Can be called within 5 seconds after the last addPaidMessageReaction call
+//@chat_id Identifier of the chat to which the message belongs
+//@message_id Identifier of the message
+removePendingPaidMessageReactions chat_id:int53 message_id:int53 = Ok;
+
+//@description Changes whether the paid message reaction of the user to a message is anonymous. The message must have paid reaction added by the user
+//@chat_id Identifier of the chat to which the message belongs
+//@message_id Identifier of the message
+//@is_anonymous Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors
+togglePaidMessageReactionIsAnonymous chat_id:int53 message_id:int53 is_anonymous:Bool = Ok;
 
 //@description Sets reactions on a message; for bots only
 //@chat_id Identifier of the chat to which the message belongs
@@ -8870,13 +9113,13 @@ setMessageReactions chat_id:int53 message_id:int53 reaction_types:vector<Reactio
 
 //@description Returns reactions added for a message, along with their sender
 //@chat_id Identifier of the chat to which the message belongs
-//@message_id Identifier of the message
-//@reaction_type Type of the reactions to return; pass null to return all added reactions
+//@message_id Identifier of the message. Use message.interaction_info.reactions.can_get_added_reactions to check whether added reactions can be received for the message
+//@reaction_type Type of the reactions to return; pass null to return all added reactions; reactionTypePaid isn't supported
 //@offset Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
 //@limit The maximum number of reactions to be returned; must be positive and can't be greater than 100
 getMessageAddedReactions chat_id:int53 message_id:int53 reaction_type:ReactionType offset:string limit:int32 = AddedReactions;
 
-//@description Changes type of default reaction for the current user @reaction_type New type of the default reaction
+//@description Changes type of default reaction for the current user @reaction_type New type of the default reaction. The paid reaction can't be set as default
 setDefaultReactionType reaction_type:ReactionType = Ok;
 
 //@description Returns tags used in Saved Messages or a Saved Messages topic
@@ -8955,9 +9198,9 @@ setPollAnswer chat_id:int53 message_id:int53 option_ids:vector<int32> = Ok;
 //@limit The maximum number of voters to be returned; must be positive and can't be greater than 50. For optimal performance, the number of returned voters is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
 getPollVoters chat_id:int53 message_id:int53 option_id:int32 offset:int32 limit:int32 = MessageSenders;
 
-//@description Stops a poll. A poll in a message can be stopped when the message has can_be_edited flag is set
+//@description Stops a poll
 //@chat_id Identifier of the chat to which the poll belongs
-//@message_id Identifier of the message containing the poll
+//@message_id Identifier of the message containing the poll. Use messageProperties.can_be_edited to check whether the poll can be stopped
 //@reply_markup The new message reply markup; pass null if none; for bots only
 stopPoll chat_id:int53 message_id:int53 reply_markup:ReplyMarkup = Ok;
 
@@ -8975,7 +9218,7 @@ getBusinessConnection connection_id:string = BusinessConnection;
 
 //@description Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
 //@chat_id Chat identifier of the message with the button
-//@message_id Message identifier of the message with the button
+//@message_id Message identifier of the message with the button. The message must not be scheduled
 //@button_id Button identifier
 getLoginUrlInfo chat_id:int53 message_id:int53 button_id:int53 = LoginUrlInfo;
 
@@ -9025,6 +9268,11 @@ getInlineQueryResults bot_user_id:int53 chat_id:int53 user_location:location que
 answerInlineQuery inline_query_id:int64 is_personal:Bool button:inlineQueryResultsButton results:vector<InputInlineQueryResult> cache_time:int32 next_offset:string = Ok;
 
 
+//@description Returns popular Web App bots
+//@offset Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+//@limit The maximum number of bots to be returned; up to 100
+getPopularWebAppBots offset:string limit:int32 = FoundUsers;
+
 //@description Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
 //@bot_user_id Identifier of the target bot
 //@web_app_short_name Short name of the Web App
@@ -9036,15 +9284,23 @@ searchWebApp bot_user_id:int53 web_app_short_name:string = FoundWebApp;
 //@web_app_short_name Short name of the Web App
 //@start_parameter Start parameter from internalLinkTypeWebApp
 //@theme Preferred Web App theme; pass null to use the default theme
-//@application_name Short name of the application; 0-64 English letters, digits, and underscores
+//@application_name Short name of the current application; 0-64 English letters, digits, and underscores
 //@allow_write_access Pass true if the current user allowed the bot to send them messages
 getWebAppLinkUrl chat_id:int53 bot_user_id:int53 web_app_short_name:string start_parameter:string theme:themeParameters application_name:string allow_write_access:Bool = HttpUrl;
 
-//@description Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, an inlineQueryResultsButtonTypeWebApp button, or an internalLinkTypeSideMenuBot link
+//@description Returns information needed to open the main Web App of a bot
+//@chat_id Identifier of the chat in which the Web App is opened; pass 0 if none
 //@bot_user_id Identifier of the target bot
-//@url The URL from a keyboardButtonTypeWebApp button, inlineQueryResultsButtonTypeWebApp button, an internalLinkTypeSideMenuBot link, or an empty when the bot is opened from the side menu
+//@start_parameter Start parameter from internalLinkTypeMainWebApp
 //@theme Preferred Web App theme; pass null to use the default theme
-//@application_name Short name of the application; 0-64 English letters, digits, and underscores
+//@application_name Short name of the current application; 0-64 English letters, digits, and underscores
+getMainWebApp chat_id:int53 bot_user_id:int53 start_parameter:string theme:themeParameters application_name:string = MainWebApp;
+
+//@description Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, or an inlineQueryResultsButtonTypeWebApp button
+//@bot_user_id Identifier of the target bot
+//@url The URL from a keyboardButtonTypeWebApp button, inlineQueryResultsButtonTypeWebApp button, or an empty string when the bot is opened from the side menu
+//@theme Preferred Web App theme; pass null to use the default theme
+//@application_name Short name of the current application; 0-64 English letters, digits, and underscores
 getWebAppUrl bot_user_id:int53 url:string theme:themeParameters application_name:string = HttpUrl;
 
 //@description Sends data received from a keyboardButtonTypeWebApp Web App to a bot
@@ -9059,7 +9315,7 @@ sendWebAppData bot_user_id:int53 button_text:string data:string = Ok;
 //@bot_user_id Identifier of the bot, providing the Web App
 //@url The URL from an inlineKeyboardButtonTypeWebApp button, a botMenuButton button, an internalLinkTypeAttachmentMenuBot link, or an empty string otherwise
 //@theme Preferred Web App theme; pass null to use the default theme
-//@application_name Short name of the application; 0-64 English letters, digits, and underscores
+//@application_name Short name of the current application; 0-64 English letters, digits, and underscores
 //@message_thread_id If not 0, the message thread identifier in which the message will be sent
 //@reply_to Information about the message or story to be replied in the message sent by the Web App; pass null if none
 openWebApp chat_id:int53 bot_user_id:int53 url:string theme:themeParameters application_name:string message_thread_id:int53 reply_to:InputMessageReplyTo = WebAppInfo;
@@ -9075,7 +9331,7 @@ answerWebAppQuery web_app_query_id:string result:InputInlineQueryResult = SentWe
 
 //@description Sends a callback query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
 //@chat_id Identifier of the chat with the message
-//@message_id Identifier of the message from which the query originated
+//@message_id Identifier of the message from which the query originated. The message must not be scheduled
 //@payload Query payload
 getCallbackQueryAnswer chat_id:int53 message_id:int53 payload:CallbackQueryPayload = CallbackQueryAnswer;
 
@@ -9408,7 +9664,7 @@ setChatLocation chat_id:int53 location:chatLocation = Ok;
 //@description Changes the slow mode delay of a chat. Available only for supergroups; requires can_restrict_members right @chat_id Chat identifier @slow_mode_delay New slow mode delay for the chat, in seconds; must be one of 0, 10, 30, 60, 300, 900, 3600
 setChatSlowModeDelay chat_id:int53 slow_mode_delay:int32 = Ok;
 
-//@description Pins a message in a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
+//@description Pins a message in a chat. A message can be pinned only if messageProperties.can_be_pinned
 //@chat_id Identifier of the chat
 //@message_id Identifier of the new pinned message
 //@disable_notification Pass true to disable notification about the pinned message. Notifications are always disabled in channels and private chats
@@ -9531,6 +9787,10 @@ setPinnedChats chat_list:ChatList chat_ids:vector<int53> = Ok;
 readChatList chat_list:ChatList = Ok;
 
 
+//@description Returns the current weather in the given location @location The location
+getCurrentWeather location:location = CurrentWeather;
+
+
 //@description Returns a story
 //@story_sender_chat_id Identifier of the chat that posted the story
 //@story_id Story identifier
@@ -9540,17 +9800,18 @@ getStory story_sender_chat_id:int53 story_id:int32 only_local:Bool = Story;
 //@description Returns supergroup and channel chats in which the current user has the right to post stories. The chats must be rechecked with canSendStory before actually trying to post a story there
 getChatsToSendStories = Chats;
 
-//@description Checks whether the current user can send a story on behalf of a chat; requires can_post_stories right for supergroup and channel chats @chat_id Chat identifier
+//@description Checks whether the current user can send a story on behalf of a chat; requires can_post_stories right for supergroup and channel chats
+//@chat_id Chat identifier. Pass Saved Messages chat identifier when posting a story on behalf of the current user
 canSendStory chat_id:int53 = CanSendStoryResult;
 
 //@description Sends a new story to a chat; requires can_post_stories right for supergroup and channel chats. Returns a temporary story
-//@chat_id Identifier of the chat that will post the story
+//@chat_id Identifier of the chat that will post the story. Pass Saved Messages chat identifier when posting a story on behalf of the current user
 //@content Content of the story
 //@areas Clickable rectangle areas to be shown on the story media; pass null if none
 //@caption Story caption; pass null to use an empty caption; 0-getOption("story_caption_length_max") characters; can have entities only if getOption("can_use_text_entities_in_story_caption")
 //@privacy_settings The privacy settings for the story; ignored for stories sent to supergroup and channel chats
 //@active_period Period after which the story is moved to archive, in seconds; must be one of 6 * 3600, 12 * 3600, 86400, or 2 * 86400 for Telegram Premium users, and 86400 otherwise
-//@from_story_full_id Full identifier of the original story, which content was used to create the story
+//@from_story_full_id Full identifier of the original story, which content was used to create the story; pass null if the story isn't repost of another story
 //@is_posted_to_chat_page Pass true to keep the story accessible after expiration
 //@protect_content Pass true if the content of the story must be protected from forwarding and screenshotting
 sendStory chat_id:int53 content:InputStoryContent areas:inputStoryAreas caption:formattedText privacy_settings:StoryPrivacySettings active_period:int32 from_story_full_id:storyFullId is_posted_to_chat_page:Bool protect_content:Bool = Story;
@@ -9562,6 +9823,12 @@ sendStory chat_id:int53 content:InputStoryContent areas:inputStoryAreas caption:
 //@areas New clickable rectangle areas to be shown on the story media; pass null to keep the current areas. Areas can't be edited if story content isn't changed
 //@caption New story caption; pass null to keep the current caption
 editStory story_sender_chat_id:int53 story_id:int32 content:InputStoryContent areas:inputStoryAreas caption:formattedText = Ok;
+
+//@description Changes cover of a video story. Can be called only if story.can_be_edited == true and the story isn't being edited now
+//@story_sender_chat_id Identifier of the chat that posted the story
+//@story_id Identifier of the story to edit
+//@cover_frame_timestamp New timestamp of the frame, which will be used as video thumbnail
+editStoryCover story_sender_chat_id:int53 story_id:int32 cover_frame_timestamp:double = Ok;
 
 //@description Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_be_edited == true
 //@story_id Identifier of the story
@@ -9594,7 +9861,7 @@ setChatActiveStoriesList chat_id:int53 story_list:StoryList = Ok;
 getChatActiveStories chat_id:int53 = ChatActiveStories;
 
 //@description Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
-//-Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+//-Then, stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
 //@chat_id Chat identifier
 //@from_story_id Identifier of the story starting from which stories must be returned; use 0 to get results from pinned and the newest story
 //@limit The maximum number of stories to be returned
@@ -9602,7 +9869,7 @@ getChatActiveStories chat_id:int53 = ChatActiveStories;
 getChatPostedToChatPageStories chat_id:int53 from_story_id:int32 limit:int32 = Stories;
 
 //@description Returns the list of all stories posted by the given chat; requires can_edit_stories right in the chat.
-//-The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+//-The stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
 //@chat_id Chat identifier
 //@from_story_id Identifier of the story starting from which stories must be returned; use 0 to get results from the last story
 //@limit The maximum number of stories to be returned
@@ -9630,7 +9897,7 @@ getStoryAvailableReactions row_size:int32 = AvailableReactions;
 //@description Changes chosen reaction on a story that has already been sent
 //@story_sender_chat_id The identifier of the sender of the story
 //@story_id The identifier of the story
-//@reaction_type Type of the reaction to set; pass null to remove the reaction. `reactionTypeCustomEmoji` reactions can be used only by Telegram Premium users
+//@reaction_type Type of the reaction to set; pass null to remove the reaction. Custom emoji reactions can be used only by Telegram Premium users. Paid reactions can't be set
 //@update_recent_reactions Pass true if the reaction needs to be added to recent reactions
 setStoryReaction story_sender_chat_id:int53 story_id:int32 reaction_type:ReactionType update_recent_reactions:Bool = Ok;
 
@@ -9647,7 +9914,7 @@ getStoryInteractions story_id:int32 query:string only_contacts:Bool prefer_forwa
 //@description Returns interactions with a story posted in a chat. Can be used only if story is posted on behalf of a chat and the user is an administrator in the chat
 //@story_sender_chat_id The identifier of the sender of the story
 //@story_id Story identifier
-//@reaction_type Pass the default heart reaction or a suggested reaction type to receive only interactions with the specified reaction type; pass null to receive all interactions
+//@reaction_type Pass the default heart reaction or a suggested reaction type to receive only interactions with the specified reaction type; pass null to receive all interactions; reactionTypePaid isn't supported
 //@prefer_forwards Pass true to get forwards and reposts first, then reactions, then other views; pass false to get interactions sorted just by interaction date
 //@offset Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
 //@limit The maximum number of story interactions to return
@@ -9865,7 +10132,16 @@ replacePrimaryChatInviteLink chat_id:int53 = ChatInviteLink;
 //@creates_join_request Pass true if users joining the chat via the link need to be approved by chat administrators. In this case, member_limit must be 0
 createChatInviteLink chat_id:int53 name:string expiration_date:int32 member_limit:int32 creates_join_request:Bool = ChatInviteLink;
 
-//@description Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
+//@description Creates a new subscription invite link for a channel chat. Requires can_invite_users right in the chat
+//@chat_id Chat identifier
+//@name Invite link name; 0-32 characters
+//@subscription_pricing Information about subscription plan that will be applied to the users joining the chat via the link.
+//-Subscription period must be 2592000 in production environment, and 60 or 300 if Telegram test environment is used
+createChatSubscriptionInviteLink chat_id:int53 name:string subscription_pricing:starSubscriptionPricing = ChatInviteLink;
+
+//@description Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels.
+//-If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used
+//-Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 //@chat_id Chat identifier
 //@invite_link Invite link to be edited
 //@name Invite link name; 0-32 characters
@@ -9873,6 +10149,12 @@ createChatInviteLink chat_id:int53 name:string expiration_date:int32 member_limi
 //@member_limit The maximum number of chat members that can join the chat via the link simultaneously; 0-99999; pass 0 if not limited
 //@creates_join_request Pass true if users joining the chat via the link need to be approved by chat administrators. In this case, member_limit must be 0
 editChatInviteLink chat_id:int53 invite_link:string name:string expiration_date:int32 member_limit:int32 creates_join_request:Bool = ChatInviteLink;
+
+//@description Edits a subscription invite link for a channel chat. Requires can_invite_users right in the chat for own links and owner privileges for other links
+//@chat_id Chat identifier
+//@invite_link Invite link to be edited
+//@name Invite link name; 0-32 characters
+editChatSubscriptionInviteLink chat_id:int53 invite_link:string name:string = ChatInviteLink;
 
 //@description Returns information about an invite link. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
 //@chat_id Chat identifier
@@ -9894,9 +10176,10 @@ getChatInviteLinks chat_id:int53 creator_user_id:int53 is_revoked:Bool offset_da
 //@description Returns chat members joined a chat via an invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 //@chat_id Chat identifier
 //@invite_link Invite link for which to return chat members
+//@only_with_expired_subscription Pass true if the link is a subscription link and only members with expired subscription must be returned
 //@offset_member A chat member from which to return next chat members; pass null to get results from the beginning
 //@limit The maximum number of chat members to return; up to 100
-getChatInviteLinkMembers chat_id:int53 invite_link:string offset_member:chatInviteLinkMember limit:int32 = ChatInviteLinkMembers;
+getChatInviteLinkMembers chat_id:int53 invite_link:string only_with_expired_subscription:Bool offset_member:chatInviteLinkMember limit:int32 = ChatInviteLinkMembers;
 
 //@description Revokes invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links.
 //-If a primary link is revoked, then additionally to the revoked link returns new primary link
@@ -10517,6 +10800,41 @@ allowBotToSendMessages bot_user_id:int53 = Ok;
 sendWebAppCustomRequest bot_user_id:int53 method:string parameters:string = CustomRequestResult;
 
 
+//@description Returns the list of media previews of a bot @bot_user_id Identifier of the target bot. The bot must have the main Web App
+getBotMediaPreviews bot_user_id:int53 = BotMediaPreviews;
+
+//@description Returns the list of media previews for the given language and the list of languages for which the bot has dedicated previews
+//@bot_user_id Identifier of the target bot. The bot must be owned and must have the main Web App
+//@language_code A two-letter ISO 639-1 language code for which to get previews. If empty, then default previews are returned
+getBotMediaPreviewInfo bot_user_id:int53 language_code:string = BotMediaPreviewInfo;
+
+//@description Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
+//@bot_user_id Identifier of the target bot. The bot must be owned and must have the main Web App
+//@language_code A two-letter ISO 639-1 language code for which preview is added. If empty, then the preview will be shown to all users for whose languages there are no dedicated previews.
+//-If non-empty, then there must be an official language pack of the same name, which is returned by getLocalizationTargetInfo
+//@content Content of the added preview
+addBotMediaPreview bot_user_id:int53 language_code:string content:InputStoryContent = BotMediaPreview;
+
+//@description Replaces media preview in the list of media previews of a bot. Returns the new preview after edit is completed server-side
+//@bot_user_id Identifier of the target bot. The bot must be owned and must have the main Web App
+//@language_code Language code of the media preview to edit
+//@file_id File identifier of the media to replace
+//@content Content of the new preview
+editBotMediaPreview bot_user_id:int53 language_code:string file_id:int32 content:InputStoryContent = BotMediaPreview;
+
+//@description Changes order of media previews in the list of media previews of a bot
+//@bot_user_id Identifier of the target bot. The bot must be owned and must have the main Web App
+//@language_code Language code of the media previews to reorder
+//@file_ids File identifiers of the media in the new order
+reorderBotMediaPreviews bot_user_id:int53 language_code:string file_ids:vector<int32> = Ok;
+
+//@description Delete media previews from the list of media previews of a bot
+//@bot_user_id Identifier of the target bot. The bot must be owned and must have the main Web App
+//@language_code Language code of the media previews to delete
+//@file_ids File identifiers of the media to delete
+deleteBotMediaPreviews bot_user_id:int53 language_code:string file_ids:vector<int32> = Ok;
+
+
 //@description Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
 //@bot_user_id Identifier of the target bot
 //@language_code A two-letter ISO 639-1 language code. If empty, the name will be shown to all users for whose languages there is no dedicated name
@@ -10628,8 +10946,11 @@ setSupergroupCustomEmojiStickerSet supergroup_id:int53 custom_emoji_sticker_set_
 //@unrestrict_boost_count New value of the unrestrict_boost_count supergroup setting; 0-8. Use 0 to remove the setting
 setSupergroupUnrestrictBoostCount supergroup_id:int53 unrestrict_boost_count:int32 = Ok;
 
-//@description Toggles whether sender signature is added to sent messages in a channel; requires can_change_info member right @supergroup_id Identifier of the channel @sign_messages New value of sign_messages
-toggleSupergroupSignMessages supergroup_id:int53 sign_messages:Bool = Ok;
+//@description Toggles whether sender signature or link to the account is added to sent messages in a channel; requires can_change_info member right
+//@supergroup_id Identifier of the channel
+//@sign_messages New value of sign_messages
+//@show_message_sender New value of show_message_sender
+toggleSupergroupSignMessages supergroup_id:int53 sign_messages:Bool show_message_sender:Bool = Ok;
 
 //@description Toggles whether joining is mandatory to send messages to a discussion supergroup; requires can_restrict_members administrator right
 //@supergroup_id Identifier of the supergroup that isn't a broadcast group
@@ -10665,12 +10986,14 @@ toggleSupergroupIsForum supergroup_id:int53 is_forum:Bool = Ok;
 //@description Upgrades supergroup to a broadcast group; requires owner privileges in the supergroup @supergroup_id Identifier of the supergroup
 toggleSupergroupIsBroadcastGroup supergroup_id:int53 = Ok;
 
-//@description Reports messages in a supergroup as spam; requires administrator rights in the supergroup @supergroup_id Supergroup identifier @message_ids Identifiers of messages to report
+//@description Reports messages in a supergroup as spam; requires administrator rights in the supergroup
+//@supergroup_id Supergroup identifier
+//@message_ids Identifiers of messages to report. Use messageProperties.can_be_reported to check whether the message can be reported
 reportSupergroupSpam supergroup_id:int53 message_ids:vector<int53> = Ok;
 
 //@description Reports a false deletion of a message by aggressive anti-spam checks; requires administrator rights in the supergroup. Can be called only for messages from chatEventMessageDeleted with can_report_anti_spam_false_positive == true
 //@supergroup_id Supergroup identifier
-//@message_id Identifier of the erroneously deleted message
+//@message_id Identifier of the erroneously deleted message from chatEventMessageDeleted
 reportSupergroupAntiSpamFalsePositive supergroup_id:int53 message_id:int53 = Ok;
 
 //@description Returns information about members or banned users in a supergroup or channel. Can be used only if supergroupFullInfo.can_get_members == true; additionally, administrator privileges may be required for some filters
@@ -10715,7 +11038,7 @@ validateOrderInfo input_invoice:InputInvoice order_info:orderInfo allow_save:Boo
 //@payment_form_id Payment form identifier returned by getPaymentForm
 //@order_info_id Identifier returned by validateOrderInfo, or an empty string
 //@shipping_option_id Identifier of a chosen shipping option, if applicable
-//@credentials The credentials chosen by user for payment; pass null for a payment in Telegram stars
+//@credentials The credentials chosen by user for payment; pass null for a payment in Telegram Stars
 //@tip_amount Chosen by the user amount of tip in the smallest units of the currency
 sendPaymentForm input_invoice:InputInvoice payment_form_id:int64 order_info_id:string shipping_option_id:string credentials:InputCredentials tip_amount:int53 = PaymentResult;
 
@@ -10881,7 +11204,7 @@ removeChatActionBar chat_id:int53 = Ok;
 
 //@description Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
 //@chat_id Chat identifier
-//@message_ids Identifiers of reported messages; may be empty to report the whole chat
+//@message_ids Identifiers of reported messages; may be empty to report the whole chat. Use messageProperties.can_be_reported to check whether the message can be reported
 //@reason The reason for reporting the chat
 //@text Additional report details; 0-1024 characters
 reportChat chat_id:int53 message_ids:vector<int53> reason:ReportReason text:string = Ok;
@@ -10893,7 +11216,7 @@ reportChat chat_id:int53 message_ids:vector<int53> reason:ReportReason text:stri
 //@text Additional report details; 0-1024 characters
 reportChatPhoto chat_id:int53 file_id:int32 reason:ReportReason text:string = Ok;
 
-//@description Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if message.can_report_reactions
+//@description Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if messageProperties.can_report_reactions
 //@chat_id Chat identifier
 //@message_id Message identifier
 //@sender_id Identifier of the sender, which added the reaction
@@ -10915,29 +11238,29 @@ getChatRevenueWithdrawalUrl chat_id:int53 password:string = HttpUrl;
 getChatRevenueTransactions chat_id:int53 offset:int32 limit:int32 = ChatRevenueTransactions;
 
 
-//@description Returns detailed Telegram star revenue statistics
-//@owner_id Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
+//@description Returns detailed Telegram Star revenue statistics
+//@owner_id Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
 //@is_dark Pass true if a dark theme is used by the application
 getStarRevenueStatistics owner_id:MessageSender is_dark:Bool = StarRevenueStatistics;
 
-//@description Returns a URL for Telegram star withdrawal
-//@owner_id Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of an owned channel chat
-//@star_count The number of Telegram stars to withdraw. Must be at least getOption("star_withdrawal_count_min")
+//@description Returns a URL for Telegram Star withdrawal
+//@owner_id Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of an owned channel chat
+//@star_count The number of Telegram Stars to withdraw. Must be at least getOption("star_withdrawal_count_min")
 //@password The 2-step verification password of the current user
 getStarWithdrawalUrl owner_id:MessageSender star_count:int53 password:string = HttpUrl;
 
-//@description Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram stars
-//@owner_id Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of an owned channel chat
+//@description Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram Stars
+//@owner_id Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of an owned channel chat
 getStarAdAccountUrl owner_id:MessageSender = HttpUrl;
 
 
 //@description Returns detailed statistics about a chat. Currently, this method can be used only for supergroups and channels. Can be used only if supergroupFullInfo.can_get_statistics == true @chat_id Chat identifier @is_dark Pass true if a dark theme is used by the application
 getChatStatistics chat_id:int53 is_dark:Bool = ChatStatistics;
 
-//@description Returns detailed statistics about a message. Can be used only if message.can_get_statistics == true @chat_id Chat identifier @message_id Message identifier @is_dark Pass true if a dark theme is used by the application
+//@description Returns detailed statistics about a message. Can be used only if messageProperties.can_get_statistics == true @chat_id Chat identifier @message_id Message identifier @is_dark Pass true if a dark theme is used by the application
 getMessageStatistics chat_id:int53 message_id:int53 is_dark:Bool = MessageStatistics;
 
-//@description Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if message.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
+//@description Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
 //@chat_id Chat identifier of the message
 //@message_id Message identifier
 //@offset Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
@@ -11194,16 +11517,25 @@ launchPrepaidPremiumGiveaway giveaway_id:int64 parameters:premiumGiveawayParamet
 //@message_id Identifier of the giveaway or a giveaway winners message in the chat
 getPremiumGiveawayInfo chat_id:int53 message_id:int53 = PremiumGiveawayInfo;
 
-//@description Returns available options for Telegram stars purchase
+//@description Returns available options for Telegram Stars purchase
 getStarPaymentOptions = StarPaymentOptions;
 
-//@description Returns the list of Telegram star transactions for the specified owner
-//@owner_id Identifier of the owner of the Telegram stars; can be the identifier of the current user, identifier of an owned bot,
+//@description Returns available options for Telegram Stars gifting @user_id Identifier of the user that will receive Telegram Stars; pass 0 to get options for an unspecified user
+getStarGiftPaymentOptions user_id:int53 = StarPaymentOptions;
+
+//@description Returns the list of Telegram Star transactions for the specified owner
+//@owner_id Identifier of the owner of the Telegram Stars; can be the identifier of the current user, identifier of an owned bot,
 //-or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
+//@subscription_id If non-empty, only transactions related to the Star Subscription will be returned
 //@direction Direction of the transactions to receive; pass null to get all transactions
 //@offset Offset of the first transaction to return as received from the previous request; use empty string to get the first chunk of results
 //@limit The maximum number of transactions to return
-getStarTransactions owner_id:MessageSender direction:StarTransactionDirection offset:string limit:int32 = StarTransactions;
+getStarTransactions owner_id:MessageSender subscription_id:string direction:StarTransactionDirection offset:string limit:int32 = StarTransactions;
+
+//@description Returns the list of Telegram Star subscriptions for the current user
+//@only_expiring Pass true to receive only expiring subscriptions for which there are no enough Telegram Stars to extend
+//@offset Offset of the first subscription to return as received from the previous request; use empty string to get the first chunk of results
+getStarSubscriptions only_expiring:Bool offset:string = StarSubscriptions;
 
 //@description Checks whether an in-store purchase is possible. Must be called before any in-store purchase @purpose Transaction purpose
 canPurchaseFromStore purpose:StorePaymentPurpose = Ok;
@@ -11217,6 +11549,14 @@ assignAppStoreTransaction receipt:bytes purpose:StorePaymentPurpose = Ok;
 //@purchase_token Google Play purchase token
 //@purpose Transaction purpose
 assignGooglePlayTransaction package_name:string store_product_id:string purchase_token:string purpose:StorePaymentPurpose = Ok;
+
+//@description Cancels or reenables Telegram Star subscription to a channel
+//@subscription_id Identifier of the subscription to change
+//@is_canceled New value of is_canceled
+editStarSubscription subscription_id:string is_canceled:Bool = Ok;
+
+//@description Reuses an active subscription and joins the subscribed chat again @subscription_id Identifier of the subscription
+reuseStarSubscription subscription_id:string = Ok;
 
 
 //@description Returns information about features, available to Business users @source Source of the request; pass null if the method is called from settings or some non-standard source
