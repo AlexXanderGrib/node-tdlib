@@ -126,7 +126,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "debug": "^4.3.5",
+    "debug": "^4.3.6",
     "node-addon-api": "^8.1.0"
   },
   "optionalDependencies": {
