@@ -97,6 +97,8 @@ export class TDLibAddon implements TDLib {
     return new TDLibAddon(addon);
   }
 
+  private _destroyed = false;
+
   /**
    * Creates an instance of TDLibAddon.
    * @param {Addon} _addon
@@ -133,6 +135,7 @@ export class TDLibAddon implements TDLib {
    * @returns {void}
    */
   destroy(client: TDLibClient): void {
+    this._destroyed = true;
     this._addon.td_client_destroy(client);
   }
 
@@ -157,6 +160,10 @@ export class TDLibAddon implements TDLib {
    * @memberof TDLibAddon
    */
   receive(client: TDLibClient, timeout: number): Promise<string | null> {
+    if(this._destroyed) {
+      return Promise.reject(new Error("TDLib client is destroyed"));
+    }
+
     return new Promise((resolve, reject) => {
       this._addon.td_client_receive(client, timeout, (error, result) => {
         if (error) return reject(error);

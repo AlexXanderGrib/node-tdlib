@@ -37,7 +37,7 @@ jobs:
         run: npm ci
 
       - name: Test
-        run: npm test
+        run: npm test -- --run
         env:
           TDLIB_PATH: ${{ steps.test-bin.outputs.path }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
@@ -54,13 +54,12 @@ jobs:
         id: test-bin
         run: echo "path=$(node scripts/test-binary-module.js)" >> ${GITHUB_OUTPUT}
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Test in docker
         run: | 
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-          docker run --rm -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}}  bash -c "cd /usr/src/app && ./scripts/docker-test.sh"
+          docker run --rm -e TDLIB_PATH=$(readlink -f ./packages/tdjson-linux-arm64-glibc/libtdjson-arm64-glibc.so) \
+            -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}} \
+            bash -c "cd /usr/src/app && ./scripts/install-and-test.sh"
 
   # publish:
   #   runs-on: ubuntu-22.04
