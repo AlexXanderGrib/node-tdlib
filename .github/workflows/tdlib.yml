@@ -67,6 +67,25 @@ jobs:
         with:
           name: schema
           path: td/generate/scheme/td_api.tl
+
+  build-linux-arm64:
+    name: Build TDLib on Linux arm64
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v27
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+      - name: Build TDLib
+        run: |
+          cd scripts
+          ./build-linux.sh ${{ inputs.tdlib }} aarch64-linux-gnu.2.22
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tdlib-linux-arm64-glibc
+          path: ${{ env.TO_UPLOAD }}
+
+  
   build-macos-x64:
     name: Build TDLib on macOS x86_64
     runs-on: macos-12
@@ -269,10 +288,31 @@ jobs:
   #         name: tdlib-wasm
   #         path: example/web/tdweb/src/prebuilt/release/*
 
+  build-macos:
+    name: Create universal macOS shared library
+    needs: [build-macos-x64, build-macos-arm64]
+    runs-on: macos-13
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: tdlib-macos-*
+      - name: Combine shared libraries
+        run: |
+          mkdir -p to-upload
+          lipo tdlib-macos-x64/libtdjson.dylib temp-macos-arm64/libtdjson.dylib \
+            -output to-upload/libtdjson.dylib -create
+          cd to-upload
+          file libtdjson.dylib
+          otool -L libtdjson.dylib
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tdlib-macos
+          path: to-upload
+
   dist:
     name: Bundle artifacts to dist
     runs-on: ubuntu-22.04
-    needs: [build-linux-x64, build-macos-x64, build-windows-x64, build-windows-x86, build-macos-arm64]
+    needs: [build-linux-x64, build-linux-arm64, build-macos-x64, build-windows-x64, build-windows-x86, build-macos-arm64, build-macos]
 
     steps:
       - uses: actions/checkout@v4
@@ -300,20 +340,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm ci
-      # - uses: geekyeggo/delete-artifact@v2
-      #   with:
-      #     name: |
-      #       tdlib-macos-x64
-      #       tdlib-linux-x64
-      #       tdlib-windows-x64
-      #       meta
-      #       schema
+    
 
       - run: |
           cd td
           mv tdlib-macos-x64/libtdjson.dylib ./libtdjson-x64.dylib
           mv tdlib-macos-arm64/libtdjson.dylib ./libtdjson-arm64.dylib
+          mv tdlib-macos/libtdjson.dylib ./libtdjson-universal.dylib
           mv tdlib-linux-x64/libtdjson.so ./libtdjson-x64-glibc.so
+          mv tdlib-linux-arm64/libtdjson.so ./libtdjson-arm64-glibc.so
           mv tdlib-windows-x64/tdjson.dll ./tdjson-x64.dll
           mv tdlib-windows-x86/tdjson.dll ./tdjson-x32.dll
           mv meta/meta.yml ./

@@ -1,3 +1,4 @@
+import { describe, test, expect, beforeAll, afterAll, assert } from "vitest";
 import { TDLibAddon } from "../addon";
 import { Client, TDError } from "../client";
 import { randomBytes } from "crypto";
@@ -10,7 +11,7 @@ describe("Client Serialization (async)", () => {
   let client: Client;
 
   beforeAll(async () => {
-    adapter ??= await TDLibAddon.create();
+    adapter ??= await TDLibAddon.create(process.env.TDLIB_PATH);
     Client.execute(adapter, "setLogVerbosityLevel", { new_verbosity_level: 0 });
 
     client = new Client(adapter);
@@ -123,7 +124,8 @@ describe("Client Serialization (async)", () => {
 
     try {
       await client.api.testReturnError({ error: input });
-      fail("Should throw error");
+      
+      assert.fail("Should throw error");
     } catch (error) {
       expect(error).toBeInstanceOf(TDError);
       expect(error).toMatchObject(input);
@@ -164,7 +166,7 @@ describe("Client Serialization (sync)", () => {
 
     try {
       client.syncApi.testReturnError({ error: input });
-      fail("Should throw error");
+      assert.fail("Should throw error");
     } catch (error) {
       expect(error).toBeInstanceOf(TDError);
       expect(error).toMatchObject(input);

@@ -20,7 +20,11 @@
     "url": "git+https://github.com/AlexXanderGrib/node-tdlib.git"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
+  },
+  "tdlib": {
+    "version": "1.8.37",
+    "commit": "21e5ce0e977fe012e0cee4e6fcfe704b47b00774"
   },
   "os": [
     "darwin"

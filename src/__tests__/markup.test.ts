@@ -1,3 +1,4 @@
+import { describe, test, expect } from "vitest";
 import * as markup from "../markup";
 
 describe("Markup", () => {

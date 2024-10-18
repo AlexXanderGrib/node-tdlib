@@ -13,7 +13,7 @@ const packagePath = resolve(__dirname, "../package.json");
 const packageJson = JSON.parse(readFileSync(packagePath, "utf-8"));
 
 const basePackageJson = {
-  version: `${meta.version}-commit.${meta['commit-hash']}`,
+  version: `${meta.version}-commit.${meta["commit-hash"]}`,
   description: "Built TDLib",
   keywords: ["tdlib", "binary"],
 
@@ -23,7 +23,12 @@ const basePackageJson = {
   homepage: packageJson.homepage,
   publishConfig: packageJson.publishConfig,
   repository: packageJson.repository,
-  engines: packageJson.engines
+  engines: packageJson.engines,
+
+  tdlib: {
+    version: meta.version,
+    commit: meta["commit-hash"]
+  }
 };
 
 const builds = [
@@ -35,9 +40,42 @@ const builds = [
   { os: "win32", cpu: "x32", file: "tdjson-x32.dll" }
 ];
 
-const exportName = "tdlibPath";
-
 const optionalDependencies = {};
+
+/**
+ *
+ * @param {Record<string, string | { esm: string; cjs: string; type: string }>} exports
+ */
+function generateExports(exports) {
+  let cjs = "";
+  let esm = "";
+  let types = "";
+
+  for (const [name, value] of Object.entries(exports)) {
+    if (typeof value === "string") {
+      const stringified = JSON.stringify(value);
+      const type = typeof stringified;
+      const jsdoc = `/**
+ * @type {${type}}
+ * @default ${stringified}
+ */\n`;
+
+      cjs += `${jsdoc}module.exports.${name} = ${stringified};\n`;
+      esm += `${jsdoc}export const ${name} = ${stringified};\n`;
+      types += `${jsdoc}export const ${name}: ${type};\n`;
+    } else {
+      const jsdoc = `/**
+ * @type {${value.type}}
+ */\n`;
+
+      cjs += `${jsdoc}module.exports.${name} = ${value.cjs};\n`;
+      esm += `${jsdoc}export const ${name} = ${value.esm};\n`;
+      types += `${jsdoc}export const ${name}: ${value.type};\n`;
+    }
+  }
+
+  return { cjs, esm, types };
+}
 
 for (const { os, cpu, file, libc } of builds) {
   const name = `tdjson-${os}-${cpu}${libc ? `-${libc}` : ""}`;
@@ -55,29 +93,34 @@ for (const { os, cpu, file, libc } of builds) {
   };
 
   const directory = resolve(__dirname, "../packages", name);
+  const source = resolve(__dirname, "../td", file);
 
   mkdirSync(directory, { recursive: true });
+
+  try {
+    copyFileSync(source, `${directory}/${file}`);
+  } catch {
+    console.warn("Unable to copy built tdlib:", source, "Skipping platform");
+    continue;
+  }
+
   writeFileSync(`${directory}/package.json`, JSON.stringify(packageJson, null, 2), {
-    encoding: "utf-8"
+    encoding: "utf8"
   });
 
-  writeFileSync(
-    `${directory}/index.js`,
-    `module.exports.${exportName} = require('path').resolve(__dirname, "${file}");\n`
-  );
+  const { cjs, esm, types } = generateExports({
+    tdlibPath: {
+      esm: `new URL("${file}", import.meta.url).pathname`,
+      cjs: `require('path').resolve(__dirname, "${file}")`,
+      type: "string"
+    },
+    version: meta.version,
+    commit: meta["commit-hash"]
+  });
 
-  writeFileSync(
-    `${directory}/index.mjs`,
-    `export const ${exportName} = new URL("${file}", import.meta.url).pathname;\n`
-  );
-
-  writeFileSync(
-    `${directory}/index.d.ts`,
-    `export declare const tdlibPath: string;\n`
-  );
-
-  const source = resolve(__dirname, "../td", file);
-  copyFileSync(source, `${directory}/${file}`);
+  writeFileSync(`${directory}/index.js`, cjs);
+  writeFileSync(`${directory}/index.mjs`, esm);
+  writeFileSync(`${directory}/index.d.ts`, types);
 
   optionalDependencies[packageJson.name] = packageJson.version;
 }

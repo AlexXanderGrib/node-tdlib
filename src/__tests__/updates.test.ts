@@ -1,3 +1,4 @@
+import { describe, test, expect, beforeAll, afterAll } from "vitest";
 import { TDLibAddon } from "../addon";
 import { Client } from "../client";
 import type { Update } from "../generated/types";
@@ -9,7 +10,7 @@ describe("Updates", () => {
   let client: Client;
 
   beforeAll(async () => {
-    adapter ??= await TDLibAddon.create();
+    adapter ??= await TDLibAddon.create(process.env.TDLIB_PATH);
     Client.execute(adapter, "setLogVerbosityLevel", { new_verbosity_level: 0 });
 
     expect(adapter.name).toBe("addon");

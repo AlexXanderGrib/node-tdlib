@@ -64,7 +64,8 @@ async function getTDLibPath(): Promise<string> {
   try {
     const { tdlibPath } = await import(packageName);
     return tdlibPath;
-  } catch {
+  } catch(error) {
+    console.log(error)
     throw new Error(
       `There is no prebuilt TDLib for your platform (${process.platform} ${process.arch}). You can ask for it: https://github.com/AlexXanderGrib/node-tdlib/issues`
     );
