@@ -18,7 +18,7 @@ jobs:
 
       - name: Test for presence of binary
         id: test-bin
-        run: echo "path=$(node scripts/test-binary-module.js)" >> ${GIHUB_OUTPUT}
+        run: echo "path=$(node scripts/test-binary-module.js)" >> ${GITHUB_OUTPUT}
 
       - name: Get npm cache directory
         id: npm-cache-dir
@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test for presence of binary
         id: test-bin
-        run: echo "path=$(node scripts/test-binary-module.js)" >> ${GIHUB_OUTPUT}
+        run: echo "path=$(node scripts/test-binary-module.js)" >> ${GITHUB_OUTPUT}
 
       - name: Install dependencies
         run: npm ci
