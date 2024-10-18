@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-22.04, macos-12, windows-2022, macos-14]
-        version: [16, 18, 20, 22]
+        version: [18, 20, 22]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        version: [16, 18, 20, 22]
+        version: [18, 20, 22]
     steps:
       - uses: actions/checkout@v4
       - name: Test for presence of binary
