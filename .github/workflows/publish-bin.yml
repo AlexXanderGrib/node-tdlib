@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        version: [16, 18, 20, 22]
+        version: [18, 20, 22]
     steps:
       - uses: actions/checkout@v4
       - name: Test for presence of binary
@@ -65,20 +65,20 @@ jobs:
             -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}} \
             bash -c "cd /usr/src/app && ./scripts/test-linux-arm64.sh"
 
-  # publish:
-  #   runs-on: ubuntu-22.04
-  #   needs: [test-base, test-linux-arm64]
+  publish:
+    runs-on: ubuntu-22.04
+    needs: [test-base, test-linux-arm64]
 
-  #   steps:
-  #     - name: Publish
-  #       run: |
-  #         for dir in ./packages/tdjson-*; do
-  #         if [ -d "$dir" ]; then
-  #           echo "Publishing $dir"
-  #           cd "$dir" || exit 1
-  #           npm publish --access public --provenance
-  #           cd - > /dev/null || exit 1
-  #         else
-  #           echo "$dir is not a directory"
-  #         fi
-  #         done
+    steps:
+      - name: Publish
+        run: |
+          for dir in ./packages/tdjson-*; do
+          if [ -d "$dir" ]; then
+            echo "Publishing $dir"
+            cd "$dir" || exit 1
+            npm publish --access public --provenance
+            cd - > /dev/null || exit 1
+          else
+            echo "$dir is not a directory"
+          fi
+          done

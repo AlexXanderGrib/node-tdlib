@@ -56,7 +56,7 @@ const isGlibc = () =>
 function getPlatform() {
   return {
     platform: process.platform === "android" ? "linux" : process.platform,
-    arch: process.arch === "ia32" ? ("x32" as const) : process.arch
+    arch: process.arch
   };
 }
 

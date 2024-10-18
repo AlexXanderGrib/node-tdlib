@@ -1,5 +1,7 @@
 # TDLib Native
 
+> Cross platform TDLib wrapper
+
 [![Test Status](https://github.com/AlexXanderGrib/node-tdlib/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-tdlib)
 [![Downloads](https://img.shields.io/npm/dt/tdlib-native.svg)](https://npmjs.com/package/tdlib-native)
 [![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-tdlib.svg)](https://github.com/AlexXanderGrib/node-tdlib)
@@ -7,7 +9,6 @@
 [![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-tdlib.svg)](https://github.com/AlexXanderGrib/node-tdlib)
 [![tdlib-native](https://snyk.io/advisor/npm-package/tdlib-native/badge.svg)](https://snyk.io/advisor/npm-package/tdlib-native)
 [![Known Vulnerabilities](https://snyk.io/test/npm/tdlib-native/badge.svg)](https://snyk.io/test/npm/tdlib-native)
-[![Quality](https://img.shields.io/npms-io/quality-score/tdlib-native.svg?label=quality%20%28npms.io%29&)](https://npms.io/search?q=tdlib-native)
 [![npm](https://img.shields.io/npm/v/tdlib-native.svg)](https://npmjs.com/package/tdlib-native)
 [![license MIT](https://img.shields.io/npm/l/tdlib-native.svg)](https://github.com/AlexXanderGrib/node-tdlib/blob/main/LICENSE.txt)
 [![Size](https://img.shields.io/bundlephobia/minzip/tdlib-native)](https://bundlephobia.com/package/tdlib-native)
@@ -23,8 +24,15 @@
 
   <!-- TODO: get accurate statistic -->
 
-- **Better DX.** Unlike [`tdl`](https://npmjs.com/package/tdl) this package declarations use dictionary for methods instead of intersection type, making editor hints load almost immediate.
-- **Secure.** The library has only 1 dependency - `node-addon-api` for building TDLib addon (and platform-dependent prebuilt tdlib)
+- **Better DX.** This package based on works [`tdl`](https://npmjs.com/package/tdl) but aims to provide better DX since it does not have tld's legacy:
+  - All calls to tdlib are object oriented: `api.getOption()` instead of `api.invoke({ _: "getOption" })`
+  - TDLib is prebuilt, you download build only for your platform
+- **Secure.** The library has only 2 dependencies - `node-addon-api` for building TDLib addon (and platform-dependent prebuilt tdlib) and `debug`
+  - Built with npm provenance
+- **Multi-Platform.** Supported platforms:
+  - Linux: x64, arm64 (glibc, musl build for apline coming in 3.0.0)
+  - MacOS: x64, Apple Silicon (arm64)
+  - Windows: x64, x32 
 
 ## 📦 Installation
 
@@ -70,7 +78,7 @@ async function init() {
 
   // Call any tdlib method
   await client.api.getOption({ name: "version" });
-  // => Promise { _: "optionValueString", value: "1.8.22" }
+  // => Promise { _: "optionValueString", value: "1.8.37" }
 
   // or use a wrapper
   await client.tdlibOptions.get("version");
@@ -80,9 +88,9 @@ async function init() {
   client.updates.subscribe(console.log);
 
   // Pause receiving updates. Will freeze method all running API calls
-  // client.pause();
+  // await client.pause();
   // Resume pause
-  // client.start();
+  // await client.start();
 
   // Destroy
   await client.api.close({});
@@ -97,3 +105,10 @@ async function init() {
 const updates = new Observable(client.updates.toRxObserver());
 ```
 
+## Credits
+
+This package is based on [eilvelia/tdl](https://github.com/eilvelia/tdl)
+
+Licenses: 
+- C++ addon - [MIT](./docs/licenses/addon.license.txt)
+- Ci pipeline - [Blue Oak Model License 1.0.0](./docs/licenses/ci.license.md)

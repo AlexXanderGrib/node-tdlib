@@ -1,3 +1,5 @@
+// @ts-check
+/* eslint-disable unicorn/prefer-module, unicorn/import-style */
 const { readFileSync, writeFileSync, mkdirSync, renameSync } = require("fs");
 const { resolve } = require("path");
 
@@ -31,13 +33,16 @@ const basePackageJson = {
   }
 };
 
+/**
+ * @type {{ os: NodeJS.Platform; cpu: NodeJS.Architecture; file: string; libc?: "glibc" | "musl" }[]}
+ */
 const builds = [
   { os: "darwin", cpu: "x64", file: "libtdjson-x64.dylib" },
   { os: "darwin", cpu: "arm64", file: "libtdjson-arm64.dylib" },
   { os: "linux", cpu: "x64", file: "libtdjson-x64-glibc.so", libc: "glibc" },
   { os: "linux", cpu: "arm64", file: "libtdjson-arm64-glibc.so", libc: "glibc" },
   { os: "win32", cpu: "x64", file: "tdjson-x64.dll" },
-  { os: "win32", cpu: "x32", file: "tdjson-x32.dll" }
+  { os: "win32", cpu: "ia32", file: "tdjson-x32.dll" }
 ];
 
 const optionalDependencies = {};
@@ -104,9 +109,13 @@ for (const { os, cpu, file, libc } of builds) {
     continue;
   }
 
-  writeFileSync(`${directory}/package.json`, JSON.stringify(packageJson, null, 2), {
-    encoding: "utf8"
-  });
+  writeFileSync(
+    `${directory}/package.json`,
+    JSON.stringify(packageJson, undefined, 2),
+    {
+      encoding: "utf8"
+    }
+  );
 
   const { cjs, esm, types } = generateExports({
     tdlibPath: {
@@ -127,4 +136,4 @@ for (const { os, cpu, file, libc } of builds) {
 
 Object.assign(packageJson, { optionalDependencies });
 
-writeFileSync(packagePath, JSON.stringify(packageJson, null, 2), "utf-8");
+writeFileSync(packagePath, JSON.stringify(packageJson, undefined, 2), "utf8");
