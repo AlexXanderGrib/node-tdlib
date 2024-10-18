@@ -299,7 +299,7 @@ jobs:
       - name: Combine shared libraries
         run: |
           mkdir -p to-upload
-          lipo tdlib-macos-x64/libtdjson.dylib temp-macos-arm64/libtdjson.dylib \
+          lipo tdlib-macos-x64/libtdjson.dylib tdlib-macos-arm64/libtdjson.dylib \
             -output to-upload/libtdjson.dylib -create
           cd to-upload
           file libtdjson.dylib

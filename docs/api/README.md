@@ -1,4 +1,4 @@
-**TDLib** • [**Docs**](modules.md)
+**TDLib Native** • [**Docs**](modules.md)
 
 ***
 
