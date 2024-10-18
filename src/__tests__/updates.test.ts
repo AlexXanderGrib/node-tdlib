@@ -3,6 +3,7 @@ import { Client } from "../client";
 import type { Update } from "../generated/types";
 import "dotenv/config";
 import { getTestClient } from "./client";
+import path from "path";
 
 describe("Updates", () => {
   let client: Client;
@@ -29,9 +30,9 @@ describe("Updates", () => {
       application_version: `Build for TDLib-${
         version._ === "optionValueString" ? version.value : ""
       }`,
-      database_directory: ".td/db",
+      database_directory: path.resolve(".td/db"),
       database_encryption_key: apiHash,
-      files_directory: ".td/files",
+      files_directory: path.resolve(".td/files"),
       system_version: "0.0.0",
       use_test_dc: false
     });
