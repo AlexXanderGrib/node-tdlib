@@ -228,7 +228,8 @@ export const $Methods = Object.freeze({
   clearRecentReactions: "clearRecentReactions",
   addMessageReaction: "addMessageReaction",
   removeMessageReaction: "removeMessageReaction",
-  addPaidMessageReaction: "addPaidMessageReaction",
+  addPendingPaidMessageReaction: "addPendingPaidMessageReaction",
+  commitPendingPaidMessageReactions: "commitPendingPaidMessageReactions",
   removePendingPaidMessageReactions: "removePendingPaidMessageReactions",
   togglePaidMessageReactionIsAnonymous: "togglePaidMessageReactionIsAnonymous",
   setMessageReactions: "setMessageReactions",
@@ -262,7 +263,7 @@ export const $Methods = Object.freeze({
   shareChatWithBot: "shareChatWithBot",
   getInlineQueryResults: "getInlineQueryResults",
   answerInlineQuery: "answerInlineQuery",
-  getPopularWebAppBots: "getPopularWebAppBots",
+  getGrossingWebAppBots: "getGrossingWebAppBots",
   searchWebApp: "searchWebApp",
   getWebAppLinkUrl: "getWebAppLinkUrl",
   getMainWebApp: "getMainWebApp",
@@ -523,6 +524,7 @@ export const $Methods = Object.freeze({
   getTrendingStickerSets: "getTrendingStickerSets",
   getAttachedStickerSets: "getAttachedStickerSets",
   getStickerSet: "getStickerSet",
+  getStickerSetName: "getStickerSetName",
   searchStickerSet: "searchStickerSet",
   searchInstalledStickerSets: "searchInstalledStickerSets",
   searchStickerSets: "searchStickerSets",
@@ -657,6 +659,11 @@ export const $Methods = Object.freeze({
   getSavedOrderInfo: "getSavedOrderInfo",
   deleteSavedOrderInfo: "deleteSavedOrderInfo",
   deleteSavedCredentials: "deleteSavedCredentials",
+  getAvailableGifts: "getAvailableGifts",
+  sendGift: "sendGift",
+  sellGift: "sellGift",
+  toggleGiftIsSaved: "toggleGiftIsSaved",
+  getUserGifts: "getUserGifts",
   createInvoiceLink: "createInvoiceLink",
   refundStarPayment: "refundStarPayment",
   getSupportUser: "getSupportUser",
@@ -757,16 +764,18 @@ export const $Methods = Object.freeze({
   getPremiumLimit: "getPremiumLimit",
   getPremiumFeatures: "getPremiumFeatures",
   getPremiumStickerExamples: "getPremiumStickerExamples",
+  getPremiumInfoSticker: "getPremiumInfoSticker",
   viewPremiumFeature: "viewPremiumFeature",
   clickPremiumSubscriptionButton: "clickPremiumSubscriptionButton",
   getPremiumState: "getPremiumState",
   getPremiumGiftCodePaymentOptions: "getPremiumGiftCodePaymentOptions",
   checkPremiumGiftCode: "checkPremiumGiftCode",
   applyPremiumGiftCode: "applyPremiumGiftCode",
-  launchPrepaidPremiumGiveaway: "launchPrepaidPremiumGiveaway",
-  getPremiumGiveawayInfo: "getPremiumGiveawayInfo",
+  launchPrepaidGiveaway: "launchPrepaidGiveaway",
+  getGiveawayInfo: "getGiveawayInfo",
   getStarPaymentOptions: "getStarPaymentOptions",
   getStarGiftPaymentOptions: "getStarGiftPaymentOptions",
+  getStarGiveawayPaymentOptions: "getStarGiveawayPaymentOptions",
   getStarTransactions: "getStarTransactions",
   getStarSubscriptions: "getStarSubscriptions",
   canPurchaseFromStore: "canPurchaseFromStore",
@@ -983,7 +992,8 @@ export const Update$Type = Object.freeze({
   NewChatJoinRequest: "updateNewChatJoinRequest",
   ChatBoost: "updateChatBoost",
   MessageReaction: "updateMessageReaction",
-  MessageReactions: "updateMessageReactions"
+  MessageReactions: "updateMessageReactions",
+  PaidMediaPurchased: "updatePaidMediaPurchased"
 } as const);
 
 export type Update$Type = (typeof Update$Type)[keyof typeof Update$Type];
@@ -1250,6 +1260,25 @@ export const TargetChat$Type = Object.freeze({
 
 export type TargetChat$Type = (typeof TargetChat$Type)[keyof typeof TargetChat$Type];
 
+export const ReportStoryResult$Type = Object.freeze({
+  Ok: "reportStoryResultOk",
+  OptionRequired: "reportStoryResultOptionRequired",
+  TextRequired: "reportStoryResultTextRequired"
+} as const);
+
+export type ReportStoryResult$Type =
+  (typeof ReportStoryResult$Type)[keyof typeof ReportStoryResult$Type];
+
+export const ReportChatResult$Type = Object.freeze({
+  Ok: "reportChatResultOk",
+  OptionRequired: "reportChatResultOptionRequired",
+  TextRequired: "reportChatResultTextRequired",
+  MessagesRequired: "reportChatResultMessagesRequired"
+} as const);
+
+export type ReportChatResult$Type =
+  (typeof ReportChatResult$Type)[keyof typeof ReportChatResult$Type];
+
 export const ReportReason$Type = Object.freeze({
   Spam: "reportReasonSpam",
   Violence: "reportReasonViolence",
@@ -1397,7 +1426,8 @@ export const PushMessageContent$Type = Object.freeze({
   Photo: "pushMessageContentPhoto",
   Poll: "pushMessageContentPoll",
   PremiumGiftCode: "pushMessageContentPremiumGiftCode",
-  PremiumGiveaway: "pushMessageContentPremiumGiveaway",
+  Giveaway: "pushMessageContentGiveaway",
+  Gift: "pushMessageContentGift",
   ScreenshotTaken: "pushMessageContentScreenshotTaken",
   Sticker: "pushMessageContentSticker",
   Story: "pushMessageContentStory",
@@ -1535,6 +1565,7 @@ export const TelegramPaymentPurpose$Type = Object.freeze({
   PremiumGiveaway: "telegramPaymentPurposePremiumGiveaway",
   Stars: "telegramPaymentPurposeStars",
   GiftedStars: "telegramPaymentPurposeGiftedStars",
+  StarGiveaway: "telegramPaymentPurposeStarGiveaway",
   JoinChat: "telegramPaymentPurposeJoinChat"
 } as const);
 
@@ -1546,6 +1577,7 @@ export const StorePaymentPurpose$Type = Object.freeze({
   GiftedPremium: "storePaymentPurposeGiftedPremium",
   PremiumGiftCodes: "storePaymentPurposePremiumGiftCodes",
   PremiumGiveaway: "storePaymentPurposePremiumGiveaway",
+  StarGiveaway: "storePaymentPurposeStarGiveaway",
   Stars: "storePaymentPurposeStars",
   GiftedStars: "storePaymentPurposeGiftedStars"
 } as const);
@@ -1672,6 +1704,7 @@ export const ChatEventAction$Type = Object.freeze({
   MemberLeft: "chatEventMemberLeft",
   MemberPromoted: "chatEventMemberPromoted",
   MemberRestricted: "chatEventMemberRestricted",
+  MemberSubscriptionExtended: "chatEventMemberSubscriptionExtended",
   AvailableReactionsChanged: "chatEventAvailableReactionsChanged",
   BackgroundChanged: "chatEventBackgroundChanged",
   DescriptionChanged: "chatEventDescriptionChanged",
@@ -2166,11 +2199,13 @@ export const MessageContent$Type = Object.freeze({
   PaymentRefunded: "messagePaymentRefunded",
   GiftedPremium: "messageGiftedPremium",
   PremiumGiftCode: "messagePremiumGiftCode",
-  PremiumGiveawayCreated: "messagePremiumGiveawayCreated",
-  PremiumGiveaway: "messagePremiumGiveaway",
-  PremiumGiveawayCompleted: "messagePremiumGiveawayCompleted",
-  PremiumGiveawayWinners: "messagePremiumGiveawayWinners",
+  GiveawayCreated: "messageGiveawayCreated",
+  Giveaway: "messageGiveaway",
+  GiveawayCompleted: "messageGiveawayCompleted",
+  GiveawayWinners: "messageGiveawayWinners",
   GiftedStars: "messageGiftedStars",
+  GiveawayPrizeStars: "messageGiveawayPrizeStars",
+  Gift: "messageGift",
   ContactRegistered: "messageContactRegistered",
   UsersShared: "messageUsersShared",
   ChatShared: "messageChatShared",
@@ -2347,6 +2382,8 @@ export const LinkPreviewType$Type = Object.freeze({
   EmbeddedAnimationPlayer: "linkPreviewTypeEmbeddedAnimationPlayer",
   EmbeddedAudioPlayer: "linkPreviewTypeEmbeddedAudioPlayer",
   EmbeddedVideoPlayer: "linkPreviewTypeEmbeddedVideoPlayer",
+  ExternalAudio: "linkPreviewTypeExternalAudio",
+  ExternalVideo: "linkPreviewTypeExternalVideo",
   Invoice: "linkPreviewTypeInvoice",
   Message: "linkPreviewTypeMessage",
   Photo: "linkPreviewTypePhoto",
@@ -2487,7 +2524,8 @@ export const InlineKeyboardButtonType$Type = Object.freeze({
   CallbackGame: "inlineKeyboardButtonTypeCallbackGame",
   SwitchInline: "inlineKeyboardButtonTypeSwitchInline",
   Buy: "inlineKeyboardButtonTypeBuy",
-  User: "inlineKeyboardButtonTypeUser"
+  User: "inlineKeyboardButtonTypeUser",
+  CopyText: "inlineKeyboardButtonTypeCopyText"
 } as const);
 
 export type InlineKeyboardButtonType$Type =
@@ -2732,24 +2770,32 @@ export const ChatMemberStatus$Type = Object.freeze({
 export type ChatMemberStatus$Type =
   (typeof ChatMemberStatus$Type)[keyof typeof ChatMemberStatus$Type];
 
-export const PremiumGiveawayInfo$Type = Object.freeze({
-  Ongoing: "premiumGiveawayInfoOngoing",
-  Completed: "premiumGiveawayInfoCompleted"
+export const GiveawayPrize$Type = Object.freeze({
+  Premium: "giveawayPrizePremium",
+  Stars: "giveawayPrizeStars"
 } as const);
 
-export type PremiumGiveawayInfo$Type =
-  (typeof PremiumGiveawayInfo$Type)[keyof typeof PremiumGiveawayInfo$Type];
+export type GiveawayPrize$Type =
+  (typeof GiveawayPrize$Type)[keyof typeof GiveawayPrize$Type];
 
-export const PremiumGiveawayParticipantStatus$Type = Object.freeze({
-  Eligible: "premiumGiveawayParticipantStatusEligible",
-  Participating: "premiumGiveawayParticipantStatusParticipating",
-  AlreadyWasMember: "premiumGiveawayParticipantStatusAlreadyWasMember",
-  Administrator: "premiumGiveawayParticipantStatusAdministrator",
-  DisallowedCountry: "premiumGiveawayParticipantStatusDisallowedCountry"
+export const GiveawayInfo$Type = Object.freeze({
+  Ongoing: "giveawayInfoOngoing",
+  Completed: "giveawayInfoCompleted"
 } as const);
 
-export type PremiumGiveawayParticipantStatus$Type =
-  (typeof PremiumGiveawayParticipantStatus$Type)[keyof typeof PremiumGiveawayParticipantStatus$Type];
+export type GiveawayInfo$Type =
+  (typeof GiveawayInfo$Type)[keyof typeof GiveawayInfo$Type];
+
+export const GiveawayParticipantStatus$Type = Object.freeze({
+  Eligible: "giveawayParticipantStatusEligible",
+  Participating: "giveawayParticipantStatusParticipating",
+  AlreadyWasMember: "giveawayParticipantStatusAlreadyWasMember",
+  Administrator: "giveawayParticipantStatusAdministrator",
+  DisallowedCountry: "giveawayParticipantStatusDisallowedCountry"
+} as const);
+
+export type GiveawayParticipantStatus$Type =
+  (typeof GiveawayParticipantStatus$Type)[keyof typeof GiveawayParticipantStatus$Type];
 
 export const StarTransactionPartner$Type = Object.freeze({
   Telegram: "starTransactionPartnerTelegram",
@@ -2759,7 +2805,7 @@ export const StarTransactionPartner$Type = Object.freeze({
   TelegramAds: "starTransactionPartnerTelegramAds",
   Bot: "starTransactionPartnerBot",
   Business: "starTransactionPartnerBusiness",
-  Channel: "starTransactionPartnerChannel",
+  Chat: "starTransactionPartnerChat",
   User: "starTransactionPartnerUser",
   Unsupported: "starTransactionPartnerUnsupported"
 } as const);
@@ -2767,14 +2813,24 @@ export const StarTransactionPartner$Type = Object.freeze({
 export type StarTransactionPartner$Type =
   (typeof StarTransactionPartner$Type)[keyof typeof StarTransactionPartner$Type];
 
-export const ChannelTransactionPurpose$Type = Object.freeze({
-  PaidMedia: "channelTransactionPurposePaidMedia",
-  Join: "channelTransactionPurposeJoin",
-  Reaction: "channelTransactionPurposeReaction"
+export const UserTransactionPurpose$Type = Object.freeze({
+  edStars: "userTransactionPurposeGiftedStars",
+  Sell: "userTransactionPurposeGiftSell",
+  Send: "userTransactionPurposeGiftSend"
 } as const);
 
-export type ChannelTransactionPurpose$Type =
-  (typeof ChannelTransactionPurpose$Type)[keyof typeof ChannelTransactionPurpose$Type];
+export type UserTransactionPurpose$Type =
+  (typeof UserTransactionPurpose$Type)[keyof typeof UserTransactionPurpose$Type];
+
+export const ChatTransactionPurpose$Type = Object.freeze({
+  PaidMedia: "chatTransactionPurposePaidMedia",
+  Join: "chatTransactionPurposeJoin",
+  Reaction: "chatTransactionPurposeReaction",
+  Giveaway: "chatTransactionPurposeGiveaway"
+} as const);
+
+export type ChatTransactionPurpose$Type =
+  (typeof ChatTransactionPurpose$Type)[keyof typeof ChatTransactionPurpose$Type];
 
 export const BotTransactionPurpose$Type = Object.freeze({
   PaidMedia: "botTransactionPurposePaidMedia",
@@ -3316,7 +3372,7 @@ export type authenticationCodeTypeFirebaseIos = {
   receipt: string;
 
   /**
-   * Time after the next authentication method is supposed to be used if verification push notification isn't received, in seconds
+   * Time after the next authentication method is expected to be used if verification push notification isn't received, in seconds
    * @type {int32} {@link int32}
    */
   push_timeout: int32;
@@ -3343,7 +3399,7 @@ export type authenticationCodeTypeFirebaseIos$Input = {
   readonly receipt?: string;
 
   /**
-   * Time after the next authentication method is supposed to be used if verification push notification isn't received, in seconds
+   * Time after the next authentication method is expected to be used if verification push notification isn't received, in seconds
    * @type {int32} {@link int32}
    */
   readonly push_timeout?: int32;
@@ -4732,13 +4788,13 @@ export type inputFileLocal$Input = {
 };
 
 /**
- * A file generated by the application
+ * A file generated by the application. The application must handle updates updateFileGenerationStart and updateFileGenerationStop to generate the file when asked by TDLib
  */
 export type inputFileGenerated = {
   _: "inputFileGenerated";
 
   /**
-   * Local path to a file from which the file is generated; may be empty if there is no such file
+   * Local path to a file from which the file is generated. The path doesn't have to be a valid path and is used by TDLib only to detect name and MIME type of the generated file
    * @type {string} {@link string}
    */
   original_path: string;
@@ -4750,7 +4806,7 @@ export type inputFileGenerated = {
   conversion: string;
 
   /**
-   * Expected size of the generated file, in bytes; 0 if unknown
+   * Expected size of the generated file, in bytes; pass 0 if unknown
    * @type {int53} {@link int53}
    */
   expected_size: int53;
@@ -4759,13 +4815,13 @@ export type inputFileGenerated = {
 /**
  * Version of {@link inputFileGenerated} for method parameters.
  *
- * A file generated by the application
+ * A file generated by the application. The application must handle updates updateFileGenerationStart and updateFileGenerationStop to generate the file when asked by TDLib
  */
 export type inputFileGenerated$Input = {
   readonly _: "inputFileGenerated";
 
   /**
-   * Local path to a file from which the file is generated; may be empty if there is no such file
+   * Local path to a file from which the file is generated. The path doesn't have to be a valid path and is used by TDLib only to detect name and MIME type of the generated file
    * @type {string} {@link string}
    */
   readonly original_path?: string;
@@ -4777,7 +4833,7 @@ export type inputFileGenerated$Input = {
   readonly conversion?: string;
 
   /**
-   * Expected size of the generated file, in bytes; 0 if unknown
+   * Expected size of the generated file, in bytes; pass 0 if unknown
    * @type {int53} {@link int53}
    */
   readonly expected_size?: int53;
@@ -5746,7 +5802,7 @@ export type audio = {
   album_cover_minithumbnail: minithumbnail | null;
 
   /**
-   * The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail is supposed to be extracted from the downloaded audio file; may be null
+   * The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail is expected to be extracted from the downloaded audio file; may be null
    * @type {thumbnail} {@link thumbnail}
    */
   album_cover_thumbnail: thumbnail | null;
@@ -5809,7 +5865,7 @@ export type audio$Input = {
   readonly album_cover_minithumbnail?: minithumbnail$Input | null;
 
   /**
-   * The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail is supposed to be extracted from the downloaded audio file; may be null
+   * The thumbnail of the album cover in JPEG format; as defined by the sender. The full size thumbnail is expected to be extracted from the downloaded audio file; may be null
    * @type {thumbnail} {@link thumbnail}
    */
   readonly album_cover_thumbnail?: thumbnail$Input | null;
@@ -6134,7 +6190,7 @@ export type video = {
   has_stickers: Bool;
 
   /**
-   * True, if the video is supposed to be streamed
+   * True, if the video is expected to be streamed
    * @type {Bool} {@link Bool}
    */
   supports_streaming: Bool;
@@ -6203,7 +6259,7 @@ export type video$Input = {
   readonly has_stickers?: Bool$Input;
 
   /**
-   * True, if the video is supposed to be streamed
+   * True, if the video is expected to be streamed
    * @type {Bool} {@link Bool}
    */
   readonly supports_streaming?: Bool$Input;
@@ -7005,6 +7061,82 @@ export type poll$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_closed?: Bool$Input;
+};
+
+/**
+ * Describes an alternative reencoded quality of a video file
+ */
+export type alternativeVideo = {
+  _: "alternativeVideo";
+
+  /**
+   * Video width
+   * @type {int32} {@link int32}
+   */
+  width: int32;
+
+  /**
+   * Video height
+   * @type {int32} {@link int32}
+   */
+  height: int32;
+
+  /**
+   * Codec used for video file encoding, for example, "h264", "h265", or "av1"
+   * @type {string} {@link string}
+   */
+  codec: string;
+
+  /**
+   * HLS file describing the video
+   * @type {file} {@link file}
+   */
+  hls_file: file;
+
+  /**
+   * File containing the video
+   * @type {file} {@link file}
+   */
+  video: file;
+};
+
+/**
+ * Version of {@link alternativeVideo} for method parameters.
+ *
+ * Describes an alternative reencoded quality of a video file
+ */
+export type alternativeVideo$Input = {
+  readonly _: "alternativeVideo";
+
+  /**
+   * Video width
+   * @type {int32} {@link int32}
+   */
+  readonly width?: int32;
+
+  /**
+   * Video height
+   * @type {int32} {@link int32}
+   */
+  readonly height?: int32;
+
+  /**
+   * Codec used for video file encoding, for example, "h264", "h265", or "av1"
+   * @type {string} {@link string}
+   */
+  readonly codec?: string;
+
+  /**
+   * HLS file describing the video
+   * @type {file} {@link file}
+   */
+  readonly hls_file?: file$Input;
+
+  /**
+   * File containing the video
+   * @type {file} {@link file}
+   */
+  readonly video?: file$Input;
 };
 
 /**
@@ -9712,7 +9844,7 @@ export type premiumPaymentOption = {
   discount_percentage: int32;
 
   /**
-   * Number of months the Telegram Premium subscription will be active
+   * Number of months the Telegram Premium subscription will be active. Use getPremiumInfoSticker to get the sticker to be used as representation of the Telegram Premium subscription
    * @type {int32} {@link int32}
    */
   month_count: int32;
@@ -9757,7 +9889,7 @@ export type premiumPaymentOption$Input = {
   readonly discount_percentage?: int32;
 
   /**
-   * Number of months the Telegram Premium subscription will be active
+   * Number of months the Telegram Premium subscription will be active. Use getPremiumInfoSticker to get the sticker to be used as representation of the Telegram Premium subscription
    * @type {int32} {@link int32}
    */
   readonly month_count?: int32;
@@ -9840,7 +9972,7 @@ export type premiumStatePaymentOption$Input = {
 };
 
 /**
- * Describes an option for creating Telegram Premium gift codes. Use telegramPaymentPurposePremiumGiftCodes for out-of-store payments
+ * Describes an option for creating Telegram Premium gift codes or Telegram Premium giveaway. Use telegramPaymentPurposePremiumGiftCodes or telegramPaymentPurposePremiumGiveaway for out-of-store payments
  */
 export type premiumGiftCodePaymentOption = {
   _: "premiumGiftCodePaymentOption";
@@ -9861,7 +9993,7 @@ export type premiumGiftCodePaymentOption = {
    * Number of users which will be able to activate the gift codes
    * @type {int32} {@link int32}
    */
-  user_count: int32;
+  winner_count: int32;
 
   /**
    * Number of months the Telegram Premium subscription will be active
@@ -9885,7 +10017,7 @@ export type premiumGiftCodePaymentOption = {
 /**
  * Version of {@link premiumGiftCodePaymentOption} for method parameters.
  *
- * Describes an option for creating Telegram Premium gift codes. Use telegramPaymentPurposePremiumGiftCodes for out-of-store payments
+ * Describes an option for creating Telegram Premium gift codes or Telegram Premium giveaway. Use telegramPaymentPurposePremiumGiftCodes or telegramPaymentPurposePremiumGiveaway for out-of-store payments
  */
 export type premiumGiftCodePaymentOption$Input = {
   readonly _: "premiumGiftCodePaymentOption";
@@ -9906,7 +10038,7 @@ export type premiumGiftCodePaymentOption$Input = {
    * Number of users which will be able to activate the gift codes
    * @type {int32} {@link int32}
    */
-  readonly user_count?: int32;
+  readonly winner_count?: int32;
 
   /**
    * Number of months the Telegram Premium subscription will be active
@@ -9928,7 +10060,7 @@ export type premiumGiftCodePaymentOption$Input = {
 };
 
 /**
- * Contains a list of options for creating Telegram Premium gift codes
+ * Contains a list of options for creating Telegram Premium gift codes or Telegram Premium giveaway
  */
 export type premiumGiftCodePaymentOptions = {
   _: "premiumGiftCodePaymentOptions";
@@ -9943,7 +10075,7 @@ export type premiumGiftCodePaymentOptions = {
 /**
  * Version of {@link premiumGiftCodePaymentOptions} for method parameters.
  *
- * Contains a list of options for creating Telegram Premium gift codes
+ * Contains a list of options for creating Telegram Premium gift codes or Telegram Premium giveaway
  */
 export type premiumGiftCodePaymentOptions$Input = {
   readonly _: "premiumGiftCodePaymentOptions";
@@ -10160,6 +10292,478 @@ export type starPaymentOptions$Input = {
 };
 
 /**
+ * Describes an option for the number of winners of a Telegram Star giveaway
+ */
+export type starGiveawayWinnerOption = {
+  _: "starGiveawayWinnerOption";
+
+  /**
+   * The number of users that will be chosen as winners
+   * @type {int32} {@link int32}
+   */
+  winner_count: int32;
+
+  /**
+   * The number of Telegram Stars that will be won by the winners of the giveaway
+   * @type {int53} {@link int53}
+   */
+  won_star_count: int53;
+
+  /**
+   * True, if the option must be chosen by default
+   * @type {Bool} {@link Bool}
+   */
+  is_default: Bool;
+};
+
+/**
+ * Version of {@link starGiveawayWinnerOption} for method parameters.
+ *
+ * Describes an option for the number of winners of a Telegram Star giveaway
+ */
+export type starGiveawayWinnerOption$Input = {
+  readonly _: "starGiveawayWinnerOption";
+
+  /**
+   * The number of users that will be chosen as winners
+   * @type {int32} {@link int32}
+   */
+  readonly winner_count?: int32;
+
+  /**
+   * The number of Telegram Stars that will be won by the winners of the giveaway
+   * @type {int53} {@link int53}
+   */
+  readonly won_star_count?: int53;
+
+  /**
+   * True, if the option must be chosen by default
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_default?: Bool$Input;
+};
+
+/**
+ * Describes an option for creating Telegram Star giveaway. Use telegramPaymentPurposeStarGiveaway for out-of-store payments
+ */
+export type starGiveawayPaymentOption = {
+  _: "starGiveawayPaymentOption";
+
+  /**
+   * ISO 4217 currency code for the payment
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * The amount to pay, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * Number of Telegram Stars that will be distributed among winners
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * Identifier of the store product associated with the option; may be empty if none
+   * @type {string} {@link string}
+   */
+  store_product_id: string;
+
+  /**
+   * Number of times the chat will be boosted for one year if the option is chosen
+   * @type {int32} {@link int32}
+   */
+  yearly_boost_count: int32;
+
+  /**
+   * Allowed options for the number of giveaway winners
+   * @type {vector<starGiveawayWinnerOption>} {@link vector<starGiveawayWinnerOption>}
+   */
+  winner_options: vector<starGiveawayWinnerOption>;
+
+  /**
+   * True, if the option must be chosen by default
+   * @type {Bool} {@link Bool}
+   */
+  is_default: Bool;
+
+  /**
+   * True, if the option must be shown only in the full list of payment options
+   * @type {Bool} {@link Bool}
+   */
+  is_additional: Bool;
+};
+
+/**
+ * Version of {@link starGiveawayPaymentOption} for method parameters.
+ *
+ * Describes an option for creating Telegram Star giveaway. Use telegramPaymentPurposeStarGiveaway for out-of-store payments
+ */
+export type starGiveawayPaymentOption$Input = {
+  readonly _: "starGiveawayPaymentOption";
+
+  /**
+   * ISO 4217 currency code for the payment
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * The amount to pay, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * Number of Telegram Stars that will be distributed among winners
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * Identifier of the store product associated with the option; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly store_product_id?: string;
+
+  /**
+   * Number of times the chat will be boosted for one year if the option is chosen
+   * @type {int32} {@link int32}
+   */
+  readonly yearly_boost_count?: int32;
+
+  /**
+   * Allowed options for the number of giveaway winners
+   * @type {vector<starGiveawayWinnerOption>} {@link vector<starGiveawayWinnerOption>}
+   */
+  readonly winner_options?: vector$Input<starGiveawayWinnerOption$Input>;
+
+  /**
+   * True, if the option must be chosen by default
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_default?: Bool$Input;
+
+  /**
+   * True, if the option must be shown only in the full list of payment options
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_additional?: Bool$Input;
+};
+
+/**
+ * Contains a list of options for creating Telegram Star giveaway
+ */
+export type starGiveawayPaymentOptions = {
+  _: "starGiveawayPaymentOptions";
+
+  /**
+   * The list of options
+   * @type {vector<starGiveawayPaymentOption>} {@link vector<starGiveawayPaymentOption>}
+   */
+  options: vector<starGiveawayPaymentOption>;
+};
+
+/**
+ * Version of {@link starGiveawayPaymentOptions} for method parameters.
+ *
+ * Contains a list of options for creating Telegram Star giveaway
+ */
+export type starGiveawayPaymentOptions$Input = {
+  readonly _: "starGiveawayPaymentOptions";
+
+  /**
+   * The list of options
+   * @type {vector<starGiveawayPaymentOption>} {@link vector<starGiveawayPaymentOption>}
+   */
+  readonly options?: vector$Input<starGiveawayPaymentOption$Input>;
+};
+
+/**
+ * Describes a gift that can be sent to another user
+ */
+export type gift = {
+  _: "gift";
+
+  /**
+   * Unique identifier of the gift
+   * @type {int64} {@link int64}
+   */
+  id: int64;
+
+  /**
+   * The sticker representing the gift
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker;
+
+  /**
+   * Number of Telegram Stars that must be paid for the gift
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift by default. If the gift was paid with just bought Telegram Stars, then full value can be claimed
+   * @type {int53} {@link int53}
+   */
+  default_sell_star_count: int53;
+
+  /**
+   * Number of remaining times the gift can be purchased by all users; 0 if not limited
+   * @type {int32} {@link int32}
+   */
+  remaining_count: int32;
+
+  /**
+   * Number of total times the gift can be purchased by all users; 0 if not limited
+   * @type {int32} {@link int32}
+   */
+  total_count: int32;
+};
+
+/**
+ * Version of {@link gift} for method parameters.
+ *
+ * Describes a gift that can be sent to another user
+ */
+export type gift$Input = {
+  readonly _: "gift";
+
+  /**
+   * Unique identifier of the gift
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
+
+  /**
+   * The sticker representing the gift
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input;
+
+  /**
+   * Number of Telegram Stars that must be paid for the gift
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift by default. If the gift was paid with just bought Telegram Stars, then full value can be claimed
+   * @type {int53} {@link int53}
+   */
+  readonly default_sell_star_count?: int53;
+
+  /**
+   * Number of remaining times the gift can be purchased by all users; 0 if not limited
+   * @type {int32} {@link int32}
+   */
+  readonly remaining_count?: int32;
+
+  /**
+   * Number of total times the gift can be purchased by all users; 0 if not limited
+   * @type {int32} {@link int32}
+   */
+  readonly total_count?: int32;
+};
+
+/**
+ * Contains a list of gifts that can be sent to another user
+ */
+export type gifts = {
+  _: "gifts";
+
+  /**
+   * The list of gifts
+   * @type {vector<gift>} {@link vector<gift>}
+   */
+  gifts: vector<gift>;
+};
+
+/**
+ * Version of {@link gifts} for method parameters.
+ *
+ * Contains a list of gifts that can be sent to another user
+ */
+export type gifts$Input = {
+  readonly _: "gifts";
+
+  /**
+   * The list of gifts
+   * @type {vector<gift>} {@link vector<gift>}
+   */
+  readonly gifts?: vector$Input<gift$Input>;
+};
+
+/**
+ * Represents a gift received by a user
+ */
+export type userGift = {
+  _: "userGift";
+
+  /**
+   * Identifier of the user that sent the gift; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  sender_user_id: int53;
+
+  /**
+   * Message added to the gift
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+
+  /**
+   * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone are able to see them
+   * @type {Bool} {@link Bool}
+   */
+  is_private: Bool;
+
+  /**
+   * True, if the gift is displayed on the user's profile page; may be false only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  is_saved: Bool;
+
+  /**
+   * Point in time (Unix timestamp) when the gift was sent
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  gift: gift;
+
+  /**
+   * Identifier of the message with the gift in the chat with the sender of the gift; can be 0 or an identifier of a deleted message; only for the gift receiver
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+
+  /**
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; only for the gift receiver
+   * @type {int53} {@link int53}
+   */
+  sell_star_count: int53;
+};
+
+/**
+ * Version of {@link userGift} for method parameters.
+ *
+ * Represents a gift received by a user
+ */
+export type userGift$Input = {
+  readonly _: "userGift";
+
+  /**
+   * Identifier of the user that sent the gift; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Message added to the gift
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone are able to see them
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_private?: Bool$Input;
+
+  /**
+   * True, if the gift is displayed on the user's profile page; may be false only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_saved?: Bool$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the gift was sent
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  readonly gift?: gift$Input;
+
+  /**
+   * Identifier of the message with the gift in the chat with the sender of the gift; can be 0 or an identifier of a deleted message; only for the gift receiver
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; only for the gift receiver
+   * @type {int53} {@link int53}
+   */
+  readonly sell_star_count?: int53;
+};
+
+/**
+ * Represents a list of gifts received by a user
+ */
+export type userGifts = {
+  _: "userGifts";
+
+  /**
+   * The total number of received gifts
+   * @type {int32} {@link int32}
+   */
+  total_count: int32;
+
+  /**
+   * The list of gifts
+   * @type {vector<userGift>} {@link vector<userGift>}
+   */
+  gifts: vector<userGift>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  next_offset: string;
+};
+
+/**
+ * Version of {@link userGifts} for method parameters.
+ *
+ * Represents a list of gifts received by a user
+ */
+export type userGifts$Input = {
+  readonly _: "userGifts";
+
+  /**
+   * The total number of received gifts
+   * @type {int32} {@link int32}
+   */
+  readonly total_count?: int32;
+
+  /**
+   * The list of gifts
+   * @type {vector<userGift>} {@link vector<userGift>}
+   */
+  readonly gifts?: vector$Input<userGift$Input>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  readonly next_offset?: string;
+};
+
+/**
  * The transaction is incoming and increases the number of owned Telegram Stars
  */
 export type starTransactionDirectionIncoming = {
@@ -10202,6 +10806,12 @@ export type botTransactionPurposePaidMedia = {
    * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
   media: vector<PaidMedia>;
+
+  /**
+   * Bot-provided payload; for bots only
+   * @type {string} {@link string}
+   */
+  payload: string;
 };
 
 /**
@@ -10217,6 +10827,12 @@ export type botTransactionPurposePaidMedia$Input = {
    * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
   readonly media?: vector$Input<PaidMedia$Input>;
+
+  /**
+   * Bot-provided payload; for bots only
+   * @type {string} {@link string}
+   */
+  readonly payload?: string;
 };
 
 /**
@@ -10262,11 +10878,11 @@ export type botTransactionPurposeInvoicePayment$Input = {
 /**
  * Paid media were bought
  */
-export type channelTransactionPurposePaidMedia = {
-  _: "channelTransactionPurposePaidMedia";
+export type chatTransactionPurposePaidMedia = {
+  _: "chatTransactionPurposePaidMedia";
 
   /**
-   * Identifier of the corresponding message with paid media; can be an identifier of a deleted message
+   * Identifier of the corresponding message with paid media; can be 0 or an identifier of a deleted message
    * @type {int53} {@link int53}
    */
   message_id: int53;
@@ -10279,15 +10895,15 @@ export type channelTransactionPurposePaidMedia = {
 };
 
 /**
- * Version of {@link channelTransactionPurposePaidMedia} for method parameters.
+ * Version of {@link chatTransactionPurposePaidMedia} for method parameters.
  *
  * Paid media were bought
  */
-export type channelTransactionPurposePaidMedia$Input = {
-  readonly _: "channelTransactionPurposePaidMedia";
+export type chatTransactionPurposePaidMedia$Input = {
+  readonly _: "chatTransactionPurposePaidMedia";
 
   /**
-   * Identifier of the corresponding message with paid media; can be an identifier of a deleted message
+   * Identifier of the corresponding message with paid media; can be 0 or an identifier of a deleted message
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
@@ -10302,8 +10918,8 @@ export type channelTransactionPurposePaidMedia$Input = {
 /**
  * User joined the channel and subscribed to regular payments in Telegram Stars
  */
-export type channelTransactionPurposeJoin = {
-  _: "channelTransactionPurposeJoin";
+export type chatTransactionPurposeJoin = {
+  _: "chatTransactionPurposeJoin";
 
   /**
    * The number of seconds between consecutive Telegram Star debiting
@@ -10313,12 +10929,12 @@ export type channelTransactionPurposeJoin = {
 };
 
 /**
- * Version of {@link channelTransactionPurposeJoin} for method parameters.
+ * Version of {@link chatTransactionPurposeJoin} for method parameters.
  *
  * User joined the channel and subscribed to regular payments in Telegram Stars
  */
-export type channelTransactionPurposeJoin$Input = {
-  readonly _: "channelTransactionPurposeJoin";
+export type chatTransactionPurposeJoin$Input = {
+  readonly _: "chatTransactionPurposeJoin";
 
   /**
    * The number of seconds between consecutive Telegram Star debiting
@@ -10330,29 +10946,141 @@ export type channelTransactionPurposeJoin$Input = {
 /**
  * User paid for a reaction
  */
-export type channelTransactionPurposeReaction = {
-  _: "channelTransactionPurposeReaction";
+export type chatTransactionPurposeReaction = {
+  _: "chatTransactionPurposeReaction";
 
   /**
-   * Identifier of the reacted message; can be an identifier of a deleted message
+   * Identifier of the reacted message; can be 0 or an identifier of a deleted message
    * @type {int53} {@link int53}
    */
   message_id: int53;
 };
 
 /**
- * Version of {@link channelTransactionPurposeReaction} for method parameters.
+ * Version of {@link chatTransactionPurposeReaction} for method parameters.
  *
  * User paid for a reaction
  */
-export type channelTransactionPurposeReaction$Input = {
-  readonly _: "channelTransactionPurposeReaction";
+export type chatTransactionPurposeReaction$Input = {
+  readonly _: "chatTransactionPurposeReaction";
 
   /**
-   * Identifier of the reacted message; can be an identifier of a deleted message
+   * Identifier of the reacted message; can be 0 or an identifier of a deleted message
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
+};
+
+/**
+ * User received Telegram Stars from a giveaway
+ */
+export type chatTransactionPurposeGiveaway = {
+  _: "chatTransactionPurposeGiveaway";
+
+  /**
+   * Identifier of the message with giveaway; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  giveaway_message_id: int53;
+};
+
+/**
+ * Version of {@link chatTransactionPurposeGiveaway} for method parameters.
+ *
+ * User received Telegram Stars from a giveaway
+ */
+export type chatTransactionPurposeGiveaway$Input = {
+  readonly _: "chatTransactionPurposeGiveaway";
+
+  /**
+   * Identifier of the message with giveaway; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  readonly giveaway_message_id?: int53;
+};
+
+/**
+ * A user gifted Telegram Stars
+ */
+export type userTransactionPurposeGiftedStars = {
+  _: "userTransactionPurposeGiftedStars";
+
+  /**
+   * A sticker to be shown in the transaction information; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker | null;
+};
+
+/**
+ * Version of {@link userTransactionPurposeGiftedStars} for method parameters.
+ *
+ * A user gifted Telegram Stars
+ */
+export type userTransactionPurposeGiftedStars$Input = {
+  readonly _: "userTransactionPurposeGiftedStars";
+
+  /**
+   * A sticker to be shown in the transaction information; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input | null;
+};
+
+/**
+ * The current user sold a gift received from another user
+ */
+export type userTransactionPurposeGiftSell = {
+  _: "userTransactionPurposeGiftSell";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  gift: gift;
+};
+
+/**
+ * Version of {@link userTransactionPurposeGiftSell} for method parameters.
+ *
+ * The current user sold a gift received from another user
+ */
+export type userTransactionPurposeGiftSell$Input = {
+  readonly _: "userTransactionPurposeGiftSell";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  readonly gift?: gift$Input;
+};
+
+/**
+ * The current user sent a gift to another user
+ */
+export type userTransactionPurposeGiftSend = {
+  _: "userTransactionPurposeGiftSend";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  gift: gift;
+};
+
+/**
+ * Version of {@link userTransactionPurposeGiftSend} for method parameters.
+ *
+ * The current user sent a gift to another user
+ */
+export type userTransactionPurposeGiftSend$Input = {
+  readonly _: "userTransactionPurposeGiftSend";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  readonly gift?: gift$Input;
 };
 
 /**
@@ -10528,10 +11256,10 @@ export type starTransactionPartnerBusiness$Input = {
 };
 
 /**
- * The transaction is a transaction with a channel chat
+ * The transaction is a transaction with a supergroup or a channel chat
  */
-export type starTransactionPartnerChannel = {
-  _: "starTransactionPartnerChannel";
+export type starTransactionPartnerChat = {
+  _: "starTransactionPartnerChat";
 
   /**
    * Identifier of the chat
@@ -10541,18 +11269,18 @@ export type starTransactionPartnerChannel = {
 
   /**
    * Purpose of the transaction
-   * @type {ChannelTransactionPurpose} {@link ChannelTransactionPurpose}
+   * @type {ChatTransactionPurpose} {@link ChatTransactionPurpose}
    */
-  purpose: ChannelTransactionPurpose;
+  purpose: ChatTransactionPurpose;
 };
 
 /**
- * Version of {@link starTransactionPartnerChannel} for method parameters.
+ * Version of {@link starTransactionPartnerChat} for method parameters.
  *
- * The transaction is a transaction with a channel chat
+ * The transaction is a transaction with a supergroup or a channel chat
  */
-export type starTransactionPartnerChannel$Input = {
-  readonly _: "starTransactionPartnerChannel";
+export type starTransactionPartnerChat$Input = {
+  readonly _: "starTransactionPartnerChat";
 
   /**
    * Identifier of the chat
@@ -10562,49 +11290,49 @@ export type starTransactionPartnerChannel$Input = {
 
   /**
    * Purpose of the transaction
-   * @type {ChannelTransactionPurpose} {@link ChannelTransactionPurpose}
+   * @type {ChatTransactionPurpose} {@link ChatTransactionPurpose}
    */
-  readonly purpose?: ChannelTransactionPurpose$Input;
+  readonly purpose?: ChatTransactionPurpose$Input;
 };
 
 /**
- * The transaction is a gift of Telegram Stars from another user
+ * The transaction is a transcation with another user
  */
 export type starTransactionPartnerUser = {
   _: "starTransactionPartnerUser";
 
   /**
-   * Identifier of the user; 0 if the gift was anonymous
+   * Identifier of the user; 0 if the user was anonymous
    * @type {int53} {@link int53}
    */
   user_id: int53;
 
   /**
-   * A sticker to be shown in the transaction information; may be null if unknown
-   * @type {sticker} {@link sticker}
+   * Purpose of the transaction
+   * @type {UserTransactionPurpose} {@link UserTransactionPurpose}
    */
-  sticker: sticker | null;
+  purpose: UserTransactionPurpose;
 };
 
 /**
  * Version of {@link starTransactionPartnerUser} for method parameters.
  *
- * The transaction is a gift of Telegram Stars from another user
+ * The transaction is a transcation with another user
  */
 export type starTransactionPartnerUser$Input = {
   readonly _: "starTransactionPartnerUser";
 
   /**
-   * Identifier of the user; 0 if the gift was anonymous
+   * Identifier of the user; 0 if the user was anonymous
    * @type {int53} {@link int53}
    */
   readonly user_id?: int53;
 
   /**
-   * A sticker to be shown in the transaction information; may be null if unknown
-   * @type {sticker} {@link sticker}
+   * Purpose of the transaction
+   * @type {UserTransactionPurpose} {@link UserTransactionPurpose}
    */
-  readonly sticker?: sticker$Input | null;
+  readonly purpose?: UserTransactionPurpose$Input;
 };
 
 /**
@@ -10754,40 +11482,40 @@ export type starTransactions$Input = {
 /**
  * The user is eligible for the giveaway
  */
-export type premiumGiveawayParticipantStatusEligible = {
-  _: "premiumGiveawayParticipantStatusEligible";
+export type giveawayParticipantStatusEligible = {
+  _: "giveawayParticipantStatusEligible";
 };
 
 /**
- * Version of {@link premiumGiveawayParticipantStatusEligible} for method parameters.
+ * Version of {@link giveawayParticipantStatusEligible} for method parameters.
  *
  * The user is eligible for the giveaway
  */
-export type premiumGiveawayParticipantStatusEligible$Input = {
-  readonly _: "premiumGiveawayParticipantStatusEligible";
+export type giveawayParticipantStatusEligible$Input = {
+  readonly _: "giveawayParticipantStatusEligible";
 };
 
 /**
  * The user participates in the giveaway
  */
-export type premiumGiveawayParticipantStatusParticipating = {
-  _: "premiumGiveawayParticipantStatusParticipating";
+export type giveawayParticipantStatusParticipating = {
+  _: "giveawayParticipantStatusParticipating";
 };
 
 /**
- * Version of {@link premiumGiveawayParticipantStatusParticipating} for method parameters.
+ * Version of {@link giveawayParticipantStatusParticipating} for method parameters.
  *
  * The user participates in the giveaway
  */
-export type premiumGiveawayParticipantStatusParticipating$Input = {
-  readonly _: "premiumGiveawayParticipantStatusParticipating";
+export type giveawayParticipantStatusParticipating$Input = {
+  readonly _: "giveawayParticipantStatusParticipating";
 };
 
 /**
  * The user can't participate in the giveaway, because they have already been member of the chat
  */
-export type premiumGiveawayParticipantStatusAlreadyWasMember = {
-  _: "premiumGiveawayParticipantStatusAlreadyWasMember";
+export type giveawayParticipantStatusAlreadyWasMember = {
+  _: "giveawayParticipantStatusAlreadyWasMember";
 
   /**
    * Point in time (Unix timestamp) when the user joined the chat
@@ -10797,12 +11525,12 @@ export type premiumGiveawayParticipantStatusAlreadyWasMember = {
 };
 
 /**
- * Version of {@link premiumGiveawayParticipantStatusAlreadyWasMember} for method parameters.
+ * Version of {@link giveawayParticipantStatusAlreadyWasMember} for method parameters.
  *
  * The user can't participate in the giveaway, because they have already been member of the chat
  */
-export type premiumGiveawayParticipantStatusAlreadyWasMember$Input = {
-  readonly _: "premiumGiveawayParticipantStatusAlreadyWasMember";
+export type giveawayParticipantStatusAlreadyWasMember$Input = {
+  readonly _: "giveawayParticipantStatusAlreadyWasMember";
 
   /**
    * Point in time (Unix timestamp) when the user joined the chat
@@ -10814,8 +11542,8 @@ export type premiumGiveawayParticipantStatusAlreadyWasMember$Input = {
 /**
  * The user can't participate in the giveaway, because they are an administrator in one of the chats that created the giveaway
  */
-export type premiumGiveawayParticipantStatusAdministrator = {
-  _: "premiumGiveawayParticipantStatusAdministrator";
+export type giveawayParticipantStatusAdministrator = {
+  _: "giveawayParticipantStatusAdministrator";
 
   /**
    * Identifier of the chat administered by the user
@@ -10825,12 +11553,12 @@ export type premiumGiveawayParticipantStatusAdministrator = {
 };
 
 /**
- * Version of {@link premiumGiveawayParticipantStatusAdministrator} for method parameters.
+ * Version of {@link giveawayParticipantStatusAdministrator} for method parameters.
  *
  * The user can't participate in the giveaway, because they are an administrator in one of the chats that created the giveaway
  */
-export type premiumGiveawayParticipantStatusAdministrator$Input = {
-  readonly _: "premiumGiveawayParticipantStatusAdministrator";
+export type giveawayParticipantStatusAdministrator$Input = {
+  readonly _: "giveawayParticipantStatusAdministrator";
 
   /**
    * Identifier of the chat administered by the user
@@ -10842,8 +11570,8 @@ export type premiumGiveawayParticipantStatusAdministrator$Input = {
 /**
  * The user can't participate in the giveaway, because they phone number is from a disallowed country
  */
-export type premiumGiveawayParticipantStatusDisallowedCountry = {
-  _: "premiumGiveawayParticipantStatusDisallowedCountry";
+export type giveawayParticipantStatusDisallowedCountry = {
+  _: "giveawayParticipantStatusDisallowedCountry";
 
   /**
    * A two-letter ISO 3166-1 alpha-2 country code of the user's country
@@ -10853,12 +11581,12 @@ export type premiumGiveawayParticipantStatusDisallowedCountry = {
 };
 
 /**
- * Version of {@link premiumGiveawayParticipantStatusDisallowedCountry} for method parameters.
+ * Version of {@link giveawayParticipantStatusDisallowedCountry} for method parameters.
  *
  * The user can't participate in the giveaway, because they phone number is from a disallowed country
  */
-export type premiumGiveawayParticipantStatusDisallowedCountry$Input = {
-  readonly _: "premiumGiveawayParticipantStatusDisallowedCountry";
+export type giveawayParticipantStatusDisallowedCountry$Input = {
+  readonly _: "giveawayParticipantStatusDisallowedCountry";
 
   /**
    * A two-letter ISO 3166-1 alpha-2 country code of the user's country
@@ -10870,8 +11598,8 @@ export type premiumGiveawayParticipantStatusDisallowedCountry$Input = {
 /**
  * Describes an ongoing giveaway
  */
-export type premiumGiveawayInfoOngoing = {
-  _: "premiumGiveawayInfoOngoing";
+export type giveawayInfoOngoing = {
+  _: "giveawayInfoOngoing";
 
   /**
    * Point in time (Unix timestamp) when the giveaway was created
@@ -10881,9 +11609,9 @@ export type premiumGiveawayInfoOngoing = {
 
   /**
    * Status of the current user in the giveaway
-   * @type {PremiumGiveawayParticipantStatus} {@link PremiumGiveawayParticipantStatus}
+   * @type {GiveawayParticipantStatus} {@link GiveawayParticipantStatus}
    */
-  status: PremiumGiveawayParticipantStatus;
+  status: GiveawayParticipantStatus;
 
   /**
    * True, if the giveaway has ended and results are being prepared
@@ -10893,12 +11621,12 @@ export type premiumGiveawayInfoOngoing = {
 };
 
 /**
- * Version of {@link premiumGiveawayInfoOngoing} for method parameters.
+ * Version of {@link giveawayInfoOngoing} for method parameters.
  *
  * Describes an ongoing giveaway
  */
-export type premiumGiveawayInfoOngoing$Input = {
-  readonly _: "premiumGiveawayInfoOngoing";
+export type giveawayInfoOngoing$Input = {
+  readonly _: "giveawayInfoOngoing";
 
   /**
    * Point in time (Unix timestamp) when the giveaway was created
@@ -10908,9 +11636,9 @@ export type premiumGiveawayInfoOngoing$Input = {
 
   /**
    * Status of the current user in the giveaway
-   * @type {PremiumGiveawayParticipantStatus} {@link PremiumGiveawayParticipantStatus}
+   * @type {GiveawayParticipantStatus} {@link GiveawayParticipantStatus}
    */
-  readonly status?: PremiumGiveawayParticipantStatus$Input;
+  readonly status?: GiveawayParticipantStatus$Input;
 
   /**
    * True, if the giveaway has ended and results are being prepared
@@ -10922,8 +11650,8 @@ export type premiumGiveawayInfoOngoing$Input = {
 /**
  * Describes a completed giveaway
  */
-export type premiumGiveawayInfoCompleted = {
-  _: "premiumGiveawayInfoCompleted";
+export type giveawayInfoCompleted = {
+  _: "giveawayInfoCompleted";
 
   /**
    * Point in time (Unix timestamp) when the giveaway was created
@@ -10944,31 +11672,43 @@ export type premiumGiveawayInfoCompleted = {
   was_refunded: Bool;
 
   /**
+   * True, if the current user is a winner of the giveaway
+   * @type {Bool} {@link Bool}
+   */
+  is_winner: Bool;
+
+  /**
    * Number of winners in the giveaway
    * @type {int32} {@link int32}
    */
   winner_count: int32;
 
   /**
-   * Number of winners, which activated their gift codes
+   * Number of winners, which activated their gift codes; for Telegram Premium giveaways only
    * @type {int32} {@link int32}
    */
   activation_count: int32;
 
   /**
-   * Telegram Premium gift code that was received by the current user; empty if the user isn't a winner in the giveaway
+   * Telegram Premium gift code that was received by the current user; empty if the user isn't a winner in the giveaway or the giveaway isn't a Telegram Premium giveaway
    * @type {string} {@link string}
    */
   gift_code: string;
+
+  /**
+   * The amount of Telegram Stars won by the current user; 0 if the user isn't a winner in the giveaway or the giveaway isn't a Telegram Star giveaway
+   * @type {int53} {@link int53}
+   */
+  won_star_count: int53;
 };
 
 /**
- * Version of {@link premiumGiveawayInfoCompleted} for method parameters.
+ * Version of {@link giveawayInfoCompleted} for method parameters.
  *
  * Describes a completed giveaway
  */
-export type premiumGiveawayInfoCompleted$Input = {
-  readonly _: "premiumGiveawayInfoCompleted";
+export type giveawayInfoCompleted$Input = {
+  readonly _: "giveawayInfoCompleted";
 
   /**
    * Point in time (Unix timestamp) when the giveaway was created
@@ -10989,22 +11729,90 @@ export type premiumGiveawayInfoCompleted$Input = {
   readonly was_refunded?: Bool$Input;
 
   /**
+   * True, if the current user is a winner of the giveaway
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_winner?: Bool$Input;
+
+  /**
    * Number of winners in the giveaway
    * @type {int32} {@link int32}
    */
   readonly winner_count?: int32;
 
   /**
-   * Number of winners, which activated their gift codes
+   * Number of winners, which activated their gift codes; for Telegram Premium giveaways only
    * @type {int32} {@link int32}
    */
   readonly activation_count?: int32;
 
   /**
-   * Telegram Premium gift code that was received by the current user; empty if the user isn't a winner in the giveaway
+   * Telegram Premium gift code that was received by the current user; empty if the user isn't a winner in the giveaway or the giveaway isn't a Telegram Premium giveaway
    * @type {string} {@link string}
    */
   readonly gift_code?: string;
+
+  /**
+   * The amount of Telegram Stars won by the current user; 0 if the user isn't a winner in the giveaway or the giveaway isn't a Telegram Star giveaway
+   * @type {int53} {@link int53}
+   */
+  readonly won_star_count?: int53;
+};
+
+/**
+ * The giveaway sends Telegram Premium subscriptions to the winners
+ */
+export type giveawayPrizePremium = {
+  _: "giveawayPrizePremium";
+
+  /**
+   * Number of months the Telegram Premium subscription will be active after code activation
+   * @type {int32} {@link int32}
+   */
+  month_count: int32;
+};
+
+/**
+ * Version of {@link giveawayPrizePremium} for method parameters.
+ *
+ * The giveaway sends Telegram Premium subscriptions to the winners
+ */
+export type giveawayPrizePremium$Input = {
+  readonly _: "giveawayPrizePremium";
+
+  /**
+   * Number of months the Telegram Premium subscription will be active after code activation
+   * @type {int32} {@link int32}
+   */
+  readonly month_count?: int32;
+};
+
+/**
+ * The giveaway sends Telegram Stars to the winners
+ */
+export type giveawayPrizeStars = {
+  _: "giveawayPrizeStars";
+
+  /**
+   * Number of Telegram Stars that will be shared by all winners
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+};
+
+/**
+ * Version of {@link giveawayPrizeStars} for method parameters.
+ *
+ * The giveaway sends Telegram Stars to the winners
+ */
+export type giveawayPrizeStars$Input = {
+  readonly _: "giveawayPrizeStars";
+
+  /**
+   * Number of Telegram Stars that will be shared by all winners
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 };
 
 /**
@@ -11982,6 +12790,12 @@ export type userFullInfo = {
   premium_gift_options: vector<premiumPaymentOption>;
 
   /**
+   * Number of gifts saved to profile by the user
+   * @type {int32} {@link int32}
+   */
+  gift_count: int32;
+
+  /**
    * Number of group chats where both the other user and the current user are a member; 0 for the current user
    * @type {int32} {@link int32}
    */
@@ -12115,6 +12929,12 @@ export type userFullInfo$Input = {
    * @type {vector<premiumPaymentOption>} {@link vector<premiumPaymentOption>}
    */
   readonly premium_gift_options?: vector$Input<premiumPaymentOption$Input>;
+
+  /**
+   * Number of gifts saved to profile by the user
+   * @type {int32} {@link int32}
+   */
+  readonly gift_count?: int32;
 
   /**
    * Number of group chats where both the other user and the current user are a member; 0 for the current user
@@ -15502,7 +16322,7 @@ export type paidReactor = {
   star_count: int32;
 
   /**
-   * True, if the reactor is one of the most active reactors; can be false if the reactor is the current user
+   * True, if the reactor is one of the most active reactors; may be false if the reactor is the current user
    * @type {Bool} {@link Bool}
    */
   is_top: Bool;
@@ -15541,7 +16361,7 @@ export type paidReactor$Input = {
   readonly star_count?: int32;
 
   /**
-   * True, if the reactor is one of the most active reactors; can be false if the reactor is the current user
+   * True, if the reactor is one of the most active reactors; may be false if the reactor is the current user
    * @type {Bool} {@link Bool}
    */
   readonly is_top?: Bool$Input;
@@ -16386,11 +17206,11 @@ export type messageReplyToMessage = {
   /**
    * Media content of the message if the message was from another chat or topic; may be null for messages from the same chat and messages without media.
    *
-   * - Can be only one of the following types: messageAnimation, messageAudio, messageContact, messageDice, messageDocument, messageGame, messageInvoice, messageLocation,
+   * - Can be only one of the following types: messageAnimation, messageAudio, messageContact, messageDice, messageDocument, messageGame, messageGiveaway, messageGiveawayWinners,
    *
-   * - messagePaidMedia, messagePhoto, messagePoll, messagePremiumGiveaway, messagePremiumGiveawayWinners, messageSticker, messageStory, messageText (for link preview),
+   * - messageInvoice, messageLocation, messagePaidMedia, messagePhoto, messagePoll, messageSticker, messageStory, messageText (for link preview), messageVenue, messageVideo,
    *
-   * - messageVenue, messageVideo, messageVideoNote, or messageVoiceNote
+   * - messageVideoNote, or messageVoiceNote
    * @type {MessageContent} {@link MessageContent}
    */
   content: MessageContent | null;
@@ -16437,11 +17257,11 @@ export type messageReplyToMessage$Input = {
   /**
    * Media content of the message if the message was from another chat or topic; may be null for messages from the same chat and messages without media.
    *
-   * - Can be only one of the following types: messageAnimation, messageAudio, messageContact, messageDice, messageDocument, messageGame, messageInvoice, messageLocation,
+   * - Can be only one of the following types: messageAnimation, messageAudio, messageContact, messageDice, messageDocument, messageGame, messageGiveaway, messageGiveawayWinners,
    *
-   * - messagePaidMedia, messagePhoto, messagePoll, messagePremiumGiveaway, messagePremiumGiveawayWinners, messageSticker, messageStory, messageText (for link preview),
+   * - messageInvoice, messageLocation, messagePaidMedia, messagePhoto, messagePoll, messageSticker, messageStory, messageText (for link preview), messageVenue, messageVideo,
    *
-   * - messageVenue, messageVideo, messageVideoNote, or messageVoiceNote
+   * - messageVideoNote, or messageVoiceNote
    * @type {MessageContent} {@link MessageContent}
    */
   readonly content?: MessageContent$Input | null;
@@ -16714,7 +17534,7 @@ export type message = {
   is_from_offline: Bool;
 
   /**
-   * True, if content of the message can be saved locally or copied
+   * True, if content of the message can be saved locally or copied using inputMessageForwarded or forwardMessages with copy options
    * @type {Bool} {@link Bool}
    */
   can_be_saved: Bool;
@@ -16939,7 +17759,7 @@ export type message$Input = {
   readonly is_from_offline?: Bool$Input;
 
   /**
-   * True, if content of the message can be saved locally or copied
+   * True, if content of the message can be saved locally or copied using inputMessageForwarded or forwardMessages with copy options
    * @type {Bool} {@link Bool}
    */
   readonly can_be_saved?: Bool$Input;
@@ -17728,7 +18548,7 @@ export type sponsoredMessage = {
   can_be_reported: Bool;
 
   /**
-   * Content of the message. Currently, can be only of the types messageText, messageAnimation, messagePhoto, or messageVideo
+   * Content of the message. Currently, can be only of the types messageText, messageAnimation, messagePhoto, or messageVideo. Video messages can be viewed fullscreen
    * @type {MessageContent} {@link MessageContent}
    */
   content: MessageContent;
@@ -17797,7 +18617,7 @@ export type sponsoredMessage$Input = {
   readonly can_be_reported?: Bool$Input;
 
   /**
-   * Content of the message. Currently, can be only of the types messageText, messageAnimation, messagePhoto, or messageVideo
+   * Content of the message. Currently, can be only of the types messageText, messageAnimation, messagePhoto, or messageVideo. Video messages can be viewed fullscreen
    * @type {MessageContent} {@link MessageContent}
    */
   readonly content?: MessageContent$Input;
@@ -17880,10 +18700,10 @@ export type sponsoredMessages$Input = {
 };
 
 /**
- * Describes an option to report a sponsored message
+ * Describes an option to report an entity to Telegram
  */
-export type reportChatSponsoredMessageOption = {
-  _: "reportChatSponsoredMessageOption";
+export type reportOption = {
+  _: "reportOption";
 
   /**
    * Unique identifier of the option
@@ -17899,12 +18719,12 @@ export type reportChatSponsoredMessageOption = {
 };
 
 /**
- * Version of {@link reportChatSponsoredMessageOption} for method parameters.
+ * Version of {@link reportOption} for method parameters.
  *
- * Describes an option to report a sponsored message
+ * Describes an option to report an entity to Telegram
  */
-export type reportChatSponsoredMessageOption$Input = {
-  readonly _: "reportChatSponsoredMessageOption";
+export type reportOption$Input = {
+  readonly _: "reportOption";
 
   /**
    * Unique identifier of the option
@@ -17965,9 +18785,9 @@ export type reportChatSponsoredMessageResultOptionRequired = {
 
   /**
    * List of available options
-   * @type {vector<reportChatSponsoredMessageOption>} {@link vector<reportChatSponsoredMessageOption>}
+   * @type {vector<reportOption>} {@link vector<reportOption>}
    */
-  options: vector<reportChatSponsoredMessageOption>;
+  options: vector<reportOption>;
 };
 
 /**
@@ -17986,9 +18806,9 @@ export type reportChatSponsoredMessageResultOptionRequired$Input = {
 
   /**
    * List of available options
-   * @type {vector<reportChatSponsoredMessageOption>} {@link vector<reportChatSponsoredMessageOption>}
+   * @type {vector<reportOption>} {@link vector<reportOption>}
    */
-  readonly options?: vector$Input<reportChatSponsoredMessageOption$Input>;
+  readonly options?: vector$Input<reportOption$Input>;
 };
 
 /**
@@ -21620,6 +22440,34 @@ export type inlineKeyboardButtonTypeUser$Input = {
 };
 
 /**
+ * A button that copies specified text to clipboard
+ */
+export type inlineKeyboardButtonTypeCopyText = {
+  _: "inlineKeyboardButtonTypeCopyText";
+
+  /**
+   * The text to copy to clipboard
+   * @type {string} {@link string}
+   */
+  text: string;
+};
+
+/**
+ * Version of {@link inlineKeyboardButtonTypeCopyText} for method parameters.
+ *
+ * A button that copies specified text to clipboard
+ */
+export type inlineKeyboardButtonTypeCopyText$Input = {
+  readonly _: "inlineKeyboardButtonTypeCopyText";
+
+  /**
+   * The text to copy to clipboard
+   * @type {string} {@link string}
+   */
+  readonly text?: string;
+};
+
+/**
  * Represents a single button in an inline keyboard
  */
 export type inlineKeyboardButton = {
@@ -21740,7 +22588,7 @@ export type replyMarkupShowKeyboard = {
   rows: vector<vector<keyboardButton>>;
 
   /**
-   * True, if the keyboard is supposed to always be shown when the ordinary keyboard is hidden
+   * True, if the keyboard is expected to always be shown when the ordinary keyboard is hidden
    * @type {Bool} {@link Bool}
    */
   is_persistent: Bool;
@@ -21785,7 +22633,7 @@ export type replyMarkupShowKeyboard$Input = {
   readonly rows?: vector$Input<vector$Input<keyboardButton$Input>>;
 
   /**
-   * True, if the keyboard is supposed to always be shown when the ordinary keyboard is hidden
+   * True, if the keyboard is expected to always be shown when the ordinary keyboard is hidden
    * @type {Bool} {@link Bool}
    */
   readonly is_persistent?: Bool$Input;
@@ -25406,12 +26254,6 @@ export type linkPreviewTypeAnimation = {
    * @type {animation} {@link animation}
    */
   animation: animation;
-
-  /**
-   * Author of the animation
-   * @type {string} {@link string}
-   */
-  author: string;
 };
 
 /**
@@ -25427,12 +26269,6 @@ export type linkPreviewTypeAnimation$Input = {
    * @type {animation} {@link animation}
    */
   readonly animation?: animation$Input;
-
-  /**
-   * Author of the animation
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
 };
 
 /**
@@ -25446,12 +26282,6 @@ export type linkPreviewTypeApp = {
    * @type {photo} {@link photo}
    */
   photo: photo;
-
-  /**
-   * Author of the app
-   * @type {string} {@link string}
-   */
-  author: string;
 };
 
 /**
@@ -25467,12 +26297,6 @@ export type linkPreviewTypeApp$Input = {
    * @type {photo} {@link photo}
    */
   readonly photo?: photo$Input;
-
-  /**
-   * Author of the app
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
 };
 
 /**
@@ -25486,12 +26310,6 @@ export type linkPreviewTypeArticle = {
    * @type {photo} {@link photo}
    */
   photo: photo | null;
-
-  /**
-   * Author of the article
-   * @type {string} {@link string}
-   */
-  author: string;
 };
 
 /**
@@ -25507,12 +26325,6 @@ export type linkPreviewTypeArticle$Input = {
    * @type {photo} {@link photo}
    */
   readonly photo?: photo$Input | null;
-
-  /**
-   * Author of the article
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
 };
 
 /**
@@ -25522,34 +26334,10 @@ export type linkPreviewTypeAudio = {
   _: "linkPreviewTypeAudio";
 
   /**
-   * URL of the audio; may be empty if none
-   * @type {string} {@link string}
-   */
-  url: string;
-
-  /**
-   * MIME type of the audio file
-   * @type {string} {@link string}
-   */
-  mime_type: string;
-
-  /**
-   * The audio description; may be null if unknown
+   * The audio description
    * @type {audio} {@link audio}
    */
-  audio: audio | null;
-
-  /**
-   * Duration of the audio, in seconds; 0 if unknown
-   * @type {int32} {@link int32}
-   */
-  duration: int32;
-
-  /**
-   * Author of the audio
-   * @type {string} {@link string}
-   */
-  author: string;
+  audio: audio;
 };
 
 /**
@@ -25561,34 +26349,10 @@ export type linkPreviewTypeAudio$Input = {
   readonly _: "linkPreviewTypeAudio";
 
   /**
-   * URL of the audio; may be empty if none
-   * @type {string} {@link string}
-   */
-  readonly url?: string;
-
-  /**
-   * MIME type of the audio file
-   * @type {string} {@link string}
-   */
-  readonly mime_type?: string;
-
-  /**
-   * The audio description; may be null if unknown
+   * The audio description
    * @type {audio} {@link audio}
    */
-  readonly audio?: audio$Input | null;
-
-  /**
-   * Duration of the audio, in seconds; 0 if unknown
-   * @type {int32} {@link int32}
-   */
-  readonly duration?: int32;
-
-  /**
-   * Author of the audio
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
+  readonly audio?: audio$Input;
 };
 
 /**
@@ -25722,12 +26486,6 @@ export type linkPreviewTypeDocument = {
    * @type {document} {@link document}
    */
   document: document;
-
-  /**
-   * Author of the document
-   * @type {string} {@link string}
-   */
-  author: string;
 };
 
 /**
@@ -25743,12 +26501,6 @@ export type linkPreviewTypeDocument$Input = {
    * @type {document} {@link document}
    */
   readonly document?: document$Input;
-
-  /**
-   * Author of the document
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
 };
 
 /**
@@ -25774,12 +26526,6 @@ export type linkPreviewTypeEmbeddedAnimationPlayer = {
    * @type {int32} {@link int32}
    */
   duration: int32;
-
-  /**
-   * Author of the animation
-   * @type {string} {@link string}
-   */
-  author: string;
 
   /**
    * Expected width of the embedded player
@@ -25821,12 +26567,6 @@ export type linkPreviewTypeEmbeddedAnimationPlayer$Input = {
   readonly duration?: int32;
 
   /**
-   * Author of the animation
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
-
-  /**
    * Expected width of the embedded player
    * @type {int32} {@link int32}
    */
@@ -25862,12 +26602,6 @@ export type linkPreviewTypeEmbeddedAudioPlayer = {
    * @type {int32} {@link int32}
    */
   duration: int32;
-
-  /**
-   * Author of the audio
-   * @type {string} {@link string}
-   */
-  author: string;
 
   /**
    * Expected width of the embedded player
@@ -25909,12 +26643,6 @@ export type linkPreviewTypeEmbeddedAudioPlayer$Input = {
   readonly duration?: int32;
 
   /**
-   * Author of the audio
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
-
-  /**
    * Expected width of the embedded player
    * @type {int32} {@link int32}
    */
@@ -25950,12 +26678,6 @@ export type linkPreviewTypeEmbeddedVideoPlayer = {
    * @type {int32} {@link int32}
    */
   duration: int32;
-
-  /**
-   * Author of the video
-   * @type {string} {@link string}
-   */
-  author: string;
 
   /**
    * Expected width of the embedded player
@@ -25997,12 +26719,6 @@ export type linkPreviewTypeEmbeddedVideoPlayer$Input = {
   readonly duration?: int32;
 
   /**
-   * Author of the video
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
-
-  /**
    * Expected width of the embedded player
    * @type {int32} {@link int32}
    */
@@ -26013,6 +26729,134 @@ export type linkPreviewTypeEmbeddedVideoPlayer$Input = {
    * @type {int32} {@link int32}
    */
   readonly height?: int32;
+};
+
+/**
+ * The link is a link to an audio file
+ */
+export type linkPreviewTypeExternalAudio = {
+  _: "linkPreviewTypeExternalAudio";
+
+  /**
+   * URL of the audio file
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * MIME type of the audio file
+   * @type {string} {@link string}
+   */
+  mime_type: string;
+
+  /**
+   * Duration of the audio, in seconds; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  duration: int32;
+};
+
+/**
+ * Version of {@link linkPreviewTypeExternalAudio} for method parameters.
+ *
+ * The link is a link to an audio file
+ */
+export type linkPreviewTypeExternalAudio$Input = {
+  readonly _: "linkPreviewTypeExternalAudio";
+
+  /**
+   * URL of the audio file
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * MIME type of the audio file
+   * @type {string} {@link string}
+   */
+  readonly mime_type?: string;
+
+  /**
+   * Duration of the audio, in seconds; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly duration?: int32;
+};
+
+/**
+ * The link is a link to a video file
+ */
+export type linkPreviewTypeExternalVideo = {
+  _: "linkPreviewTypeExternalVideo";
+
+  /**
+   * URL of the video file
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * MIME type of the video file
+   * @type {string} {@link string}
+   */
+  mime_type: string;
+
+  /**
+   * Expected width of the video preview; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  width: int32;
+
+  /**
+   * Expected height of the video preview; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  height: int32;
+
+  /**
+   * Duration of the video, in seconds; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  duration: int32;
+};
+
+/**
+ * Version of {@link linkPreviewTypeExternalVideo} for method parameters.
+ *
+ * The link is a link to a video file
+ */
+export type linkPreviewTypeExternalVideo$Input = {
+  readonly _: "linkPreviewTypeExternalVideo";
+
+  /**
+   * URL of the video file
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * MIME type of the video file
+   * @type {string} {@link string}
+   */
+  readonly mime_type?: string;
+
+  /**
+   * Expected width of the video preview; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly width?: int32;
+
+  /**
+   * Expected height of the video preview; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly height?: int32;
+
+  /**
+   * Duration of the video, in seconds; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly duration?: int32;
 };
 
 /**
@@ -26058,12 +26902,6 @@ export type linkPreviewTypePhoto = {
    * @type {photo} {@link photo}
    */
   photo: photo;
-
-  /**
-   * Author of the photo
-   * @type {string} {@link string}
-   */
-  author: string;
 };
 
 /**
@@ -26079,12 +26917,6 @@ export type linkPreviewTypePhoto$Input = {
    * @type {photo} {@link photo}
    */
   readonly photo?: photo$Input;
-
-  /**
-   * Author of the photo
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
 };
 
 /**
@@ -26346,46 +27178,10 @@ export type linkPreviewTypeVideo = {
   _: "linkPreviewTypeVideo";
 
   /**
-   * URL of the video; may be empty if none
-   * @type {string} {@link string}
-   */
-  url: string;
-
-  /**
-   * MIME type of the video file
-   * @type {string} {@link string}
-   */
-  mime_type: string;
-
-  /**
-   * The video description; may be null if unknown
+   * The video description
    * @type {video} {@link video}
    */
-  video: video | null;
-
-  /**
-   * Expected width of the preview
-   * @type {int32} {@link int32}
-   */
-  width: int32;
-
-  /**
-   * Expected height of the preview
-   * @type {int32} {@link int32}
-   */
-  height: int32;
-
-  /**
-   * Duration of the video, in seconds; 0 if unknown
-   * @type {int32} {@link int32}
-   */
-  duration: int32;
-
-  /**
-   * Author of the video
-   * @type {string} {@link string}
-   */
-  author: string;
+  video: video;
 };
 
 /**
@@ -26397,46 +27193,10 @@ export type linkPreviewTypeVideo$Input = {
   readonly _: "linkPreviewTypeVideo";
 
   /**
-   * URL of the video; may be empty if none
-   * @type {string} {@link string}
-   */
-  readonly url?: string;
-
-  /**
-   * MIME type of the video file
-   * @type {string} {@link string}
-   */
-  readonly mime_type?: string;
-
-  /**
-   * The video description; may be null if unknown
+   * The video description
    * @type {video} {@link video}
    */
-  readonly video?: video$Input | null;
-
-  /**
-   * Expected width of the preview
-   * @type {int32} {@link int32}
-   */
-  readonly width?: int32;
-
-  /**
-   * Expected height of the preview
-   * @type {int32} {@link int32}
-   */
-  readonly height?: int32;
-
-  /**
-   * Duration of the video, in seconds; 0 if unknown
-   * @type {int32} {@link int32}
-   */
-  readonly duration?: int32;
-
-  /**
-   * Author of the video
-   * @type {string} {@link string}
-   */
-  readonly author?: string;
+  readonly video?: video$Input;
 };
 
 /**
@@ -26600,6 +27360,12 @@ export type linkPreview = {
   description: formattedText;
 
   /**
+   * Author of the content
+   * @type {string} {@link string}
+   */
+  author: string;
+
+  /**
    * Type of the link preview
    * @type {LinkPreviewType} {@link LinkPreviewType}
    */
@@ -26679,6 +27445,12 @@ export type linkPreview$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly description?: formattedText$Input;
+
+  /**
+   * Author of the content
+   * @type {string} {@link string}
+   */
+  readonly author?: string;
 
   /**
    * Type of the link preview
@@ -27292,6 +28064,12 @@ export type themeParameters = {
   header_background_color: int32;
 
   /**
+   * A color of the bottom bar background in the RGB24 format
+   * @type {int32} {@link int32}
+   */
+  bottom_bar_background_color: int32;
+
+  /**
    * A color of the section background in the RGB24 format
    * @type {int32} {@link int32}
    */
@@ -27383,6 +28161,12 @@ export type themeParameters$Input = {
    * @type {int32} {@link int32}
    */
   readonly header_background_color?: int32;
+
+  /**
+   * A color of the bottom bar background in the RGB24 format
+   * @type {int32} {@link int32}
+   */
+  readonly bottom_bar_background_color?: int32;
 
   /**
    * A color of the section background in the RGB24 format
@@ -28836,15 +29620,15 @@ export type paidMediaUnsupported$Input = {
 };
 
 /**
- * Describes parameters of a Telegram Premium giveaway
+ * Describes parameters of a giveaway
  */
-export type premiumGiveawayParameters = {
-  _: "premiumGiveawayParameters";
+export type giveawayParameters = {
+  _: "giveawayParameters";
 
   /**
-   * Identifier of the supergroup or channel chat, which will be automatically boosted by the winners of the giveaway for duration of the Premium subscription.
+   * Identifier of the supergroup or channel chat, which will be automatically boosted by the winners of the giveaway for duration of the Telegram Premium subscription,
    *
-   * - If the chat is a channel, then can_post_messages right is required in the channel, otherwise, the user must be an administrator in the supergroup
+   * - or for the specified time. If the chat is a channel, then can_post_messages right is required in the channel, otherwise, the user must be an administrator in the supergroup
    * @type {int53} {@link int53}
    */
   boosted_chat_id: int53;
@@ -28889,17 +29673,17 @@ export type premiumGiveawayParameters = {
 };
 
 /**
- * Version of {@link premiumGiveawayParameters} for method parameters.
+ * Version of {@link giveawayParameters} for method parameters.
  *
- * Describes parameters of a Telegram Premium giveaway
+ * Describes parameters of a giveaway
  */
-export type premiumGiveawayParameters$Input = {
-  readonly _: "premiumGiveawayParameters";
+export type giveawayParameters$Input = {
+  readonly _: "giveawayParameters";
 
   /**
-   * Identifier of the supergroup or channel chat, which will be automatically boosted by the winners of the giveaway for duration of the Premium subscription.
+   * Identifier of the supergroup or channel chat, which will be automatically boosted by the winners of the giveaway for duration of the Telegram Premium subscription,
    *
-   * - If the chat is a channel, then can_post_messages right is required in the channel, otherwise, the user must be an administrator in the supergroup
+   * - or for the specified time. If the chat is a channel, then can_post_messages right is required in the channel, otherwise, the user must be an administrator in the supergroup
    * @type {int53} {@link int53}
    */
   readonly boosted_chat_id?: int53;
@@ -31700,6 +32484,12 @@ export type messageVideo = {
   video: video;
 
   /**
+   * Alternative qualities of the video
+   * @type {vector<alternativeVideo>} {@link vector<alternativeVideo>}
+   */
+  alternative_videos: vector<alternativeVideo>;
+
+  /**
    * Video caption
    * @type {formattedText} {@link formattedText}
    */
@@ -31737,6 +32527,12 @@ export type messageVideo$Input = {
    * @type {video} {@link video}
    */
   readonly video?: video$Input;
+
+  /**
+   * Alternative qualities of the video
+   * @type {vector<alternativeVideo>} {@link vector<alternativeVideo>}
+   */
+  readonly alternative_videos?: vector$Input<alternativeVideo$Input>;
 
   /**
    * Video caption
@@ -32476,7 +33272,7 @@ export type messageVideoChatScheduled = {
   group_call_id: int32;
 
   /**
-   * Point in time (Unix timestamp) when the group call is supposed to be started by an administrator
+   * Point in time (Unix timestamp) when the group call is expected to be started by an administrator
    * @type {int32} {@link int32}
    */
   start_date: int32;
@@ -32497,7 +33293,7 @@ export type messageVideoChatScheduled$Input = {
   readonly group_call_id?: int32;
 
   /**
-   * Point in time (Unix timestamp) when the group call is supposed to be started by an administrator
+   * Point in time (Unix timestamp) when the group call is expected to be started by an administrator
    * @type {int32} {@link int32}
    */
   readonly start_date?: int32;
@@ -33904,32 +34700,44 @@ export type messagePremiumGiftCode$Input = {
 };
 
 /**
- * A Telegram Premium giveaway was created for the chat. Use telegramPaymentPurposePremiumGiveaway or storePaymentPurposePremiumGiveaway to create a giveaway
+ * A giveaway was created for the chat. Use telegramPaymentPurposePremiumGiveaway, storePaymentPurposePremiumGiveaway, telegramPaymentPurposeStarGiveaway, or storePaymentPurposeStarGiveaway to create a giveaway
  */
-export type messagePremiumGiveawayCreated = {
-  _: "messagePremiumGiveawayCreated";
+export type messageGiveawayCreated = {
+  _: "messageGiveawayCreated";
+
+  /**
+   * Number of Telegram Stars that will be shared by winners of the giveaway; 0 for Telegram Premium giveaways
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
 };
 
 /**
- * Version of {@link messagePremiumGiveawayCreated} for method parameters.
+ * Version of {@link messageGiveawayCreated} for method parameters.
  *
- * A Telegram Premium giveaway was created for the chat. Use telegramPaymentPurposePremiumGiveaway or storePaymentPurposePremiumGiveaway to create a giveaway
+ * A giveaway was created for the chat. Use telegramPaymentPurposePremiumGiveaway, storePaymentPurposePremiumGiveaway, telegramPaymentPurposeStarGiveaway, or storePaymentPurposeStarGiveaway to create a giveaway
  */
-export type messagePremiumGiveawayCreated$Input = {
-  readonly _: "messagePremiumGiveawayCreated";
+export type messageGiveawayCreated$Input = {
+  readonly _: "messageGiveawayCreated";
+
+  /**
+   * Number of Telegram Stars that will be shared by winners of the giveaway; 0 for Telegram Premium giveaways
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 };
 
 /**
- * A Telegram Premium giveaway
+ * A giveaway
  */
-export type messagePremiumGiveaway = {
-  _: "messagePremiumGiveaway";
+export type messageGiveaway = {
+  _: "messageGiveaway";
 
   /**
    * Giveaway parameters
-   * @type {premiumGiveawayParameters} {@link premiumGiveawayParameters}
+   * @type {giveawayParameters} {@link giveawayParameters}
    */
-  parameters: premiumGiveawayParameters;
+  parameters: giveawayParameters;
 
   /**
    * Number of users which will receive Telegram Premium subscription gift codes
@@ -33938,10 +34746,10 @@ export type messagePremiumGiveaway = {
   winner_count: int32;
 
   /**
-   * Number of months the Telegram Premium subscription will be active after code activation
-   * @type {int32} {@link int32}
+   * Prize of the giveaway
+   * @type {GiveawayPrize} {@link GiveawayPrize}
    */
-  month_count: int32;
+  prize: GiveawayPrize;
 
   /**
    * A sticker to be shown in the message; may be null if unknown
@@ -33951,18 +34759,18 @@ export type messagePremiumGiveaway = {
 };
 
 /**
- * Version of {@link messagePremiumGiveaway} for method parameters.
+ * Version of {@link messageGiveaway} for method parameters.
  *
- * A Telegram Premium giveaway
+ * A giveaway
  */
-export type messagePremiumGiveaway$Input = {
-  readonly _: "messagePremiumGiveaway";
+export type messageGiveaway$Input = {
+  readonly _: "messageGiveaway";
 
   /**
    * Giveaway parameters
-   * @type {premiumGiveawayParameters} {@link premiumGiveawayParameters}
+   * @type {giveawayParameters} {@link giveawayParameters}
    */
-  readonly parameters?: premiumGiveawayParameters$Input;
+  readonly parameters?: giveawayParameters$Input;
 
   /**
    * Number of users which will receive Telegram Premium subscription gift codes
@@ -33971,10 +34779,10 @@ export type messagePremiumGiveaway$Input = {
   readonly winner_count?: int32;
 
   /**
-   * Number of months the Telegram Premium subscription will be active after code activation
-   * @type {int32} {@link int32}
+   * Prize of the giveaway
+   * @type {GiveawayPrize} {@link GiveawayPrize}
    */
-  readonly month_count?: int32;
+  readonly prize?: GiveawayPrize$Input;
 
   /**
    * A sticker to be shown in the message; may be null if unknown
@@ -33984,10 +34792,10 @@ export type messagePremiumGiveaway$Input = {
 };
 
 /**
- * A Telegram Premium giveaway without public winners has been completed for the chat
+ * A giveaway without public winners has been completed for the chat
  */
-export type messagePremiumGiveawayCompleted = {
-  _: "messagePremiumGiveawayCompleted";
+export type messageGiveawayCompleted = {
+  _: "messageGiveawayCompleted";
 
   /**
    * Identifier of the message with the giveaway; can be 0 if the message was deleted
@@ -34002,19 +34810,25 @@ export type messagePremiumGiveawayCompleted = {
   winner_count: int32;
 
   /**
-   * Number of undistributed prizes
+   * True, if the giveaway is a Telegram Star giveaway
+   * @type {Bool} {@link Bool}
+   */
+  is_star_giveaway: Bool;
+
+  /**
+   * Number of undistributed prizes; for Telegram Premium giveaways only
    * @type {int32} {@link int32}
    */
   unclaimed_prize_count: int32;
 };
 
 /**
- * Version of {@link messagePremiumGiveawayCompleted} for method parameters.
+ * Version of {@link messageGiveawayCompleted} for method parameters.
  *
- * A Telegram Premium giveaway without public winners has been completed for the chat
+ * A giveaway without public winners has been completed for the chat
  */
-export type messagePremiumGiveawayCompleted$Input = {
-  readonly _: "messagePremiumGiveawayCompleted";
+export type messageGiveawayCompleted$Input = {
+  readonly _: "messageGiveawayCompleted";
 
   /**
    * Identifier of the message with the giveaway; can be 0 if the message was deleted
@@ -34029,20 +34843,26 @@ export type messagePremiumGiveawayCompleted$Input = {
   readonly winner_count?: int32;
 
   /**
-   * Number of undistributed prizes
+   * True, if the giveaway is a Telegram Star giveaway
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_star_giveaway?: Bool$Input;
+
+  /**
+   * Number of undistributed prizes; for Telegram Premium giveaways only
    * @type {int32} {@link int32}
    */
   readonly unclaimed_prize_count?: int32;
 };
 
 /**
- * A Telegram Premium giveaway with public winners has been completed for the chat
+ * A giveaway with public winners has been completed for the chat
  */
-export type messagePremiumGiveawayWinners = {
-  _: "messagePremiumGiveawayWinners";
+export type messageGiveawayWinners = {
+  _: "messageGiveawayWinners";
 
   /**
-   * Identifier of the channel chat, which was automatically boosted by the winners of the giveaway for duration of the Premium subscription
+   * Identifier of the supergroup or channel chat, which was automatically boosted by the winners of the giveaway
    * @type {int53} {@link int53}
    */
   boosted_chat_id: int53;
@@ -34078,10 +34898,10 @@ export type messagePremiumGiveawayWinners = {
   was_refunded: Bool;
 
   /**
-   * Number of months the Telegram Premium subscription will be active after code activation
-   * @type {int32} {@link int32}
+   * Prize of the giveaway
+   * @type {GiveawayPrize} {@link GiveawayPrize}
    */
-  month_count: int32;
+  prize: GiveawayPrize;
 
   /**
    * Additional description of the giveaway prize
@@ -34102,22 +34922,22 @@ export type messagePremiumGiveawayWinners = {
   winner_user_ids: vector<int53>;
 
   /**
-   * Number of undistributed prizes
+   * Number of undistributed prizes; for Telegram Premium giveaways only
    * @type {int32} {@link int32}
    */
   unclaimed_prize_count: int32;
 };
 
 /**
- * Version of {@link messagePremiumGiveawayWinners} for method parameters.
+ * Version of {@link messageGiveawayWinners} for method parameters.
  *
- * A Telegram Premium giveaway with public winners has been completed for the chat
+ * A giveaway with public winners has been completed for the chat
  */
-export type messagePremiumGiveawayWinners$Input = {
-  readonly _: "messagePremiumGiveawayWinners";
+export type messageGiveawayWinners$Input = {
+  readonly _: "messageGiveawayWinners";
 
   /**
-   * Identifier of the channel chat, which was automatically boosted by the winners of the giveaway for duration of the Premium subscription
+   * Identifier of the supergroup or channel chat, which was automatically boosted by the winners of the giveaway
    * @type {int53} {@link int53}
    */
   readonly boosted_chat_id?: int53;
@@ -34153,10 +34973,10 @@ export type messagePremiumGiveawayWinners$Input = {
   readonly was_refunded?: Bool$Input;
 
   /**
-   * Number of months the Telegram Premium subscription will be active after code activation
-   * @type {int32} {@link int32}
+   * Prize of the giveaway
+   * @type {GiveawayPrize} {@link GiveawayPrize}
    */
-  readonly month_count?: int32;
+  readonly prize?: GiveawayPrize$Input;
 
   /**
    * Additional description of the giveaway prize
@@ -34177,7 +34997,7 @@ export type messagePremiumGiveawayWinners$Input = {
   readonly winner_user_ids?: vector$Input<int53>;
 
   /**
-   * Number of undistributed prizes
+   * Number of undistributed prizes; for Telegram Premium giveaways only
    * @type {int32} {@link int32}
    */
   readonly unclaimed_prize_count?: int32;
@@ -34305,6 +35125,182 @@ export type messageGiftedStars$Input = {
    * @type {sticker} {@link sticker}
    */
   readonly sticker?: sticker$Input | null;
+};
+
+/**
+ * A Telegram Stars were received by the current user from a giveaway
+ */
+export type messageGiveawayPrizeStars = {
+  _: "messageGiveawayPrizeStars";
+
+  /**
+   * Number of Telegram Stars that were received
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * Identifier of the transaction for Telegram Stars credit
+   * @type {string} {@link string}
+   */
+  transaction_id: string;
+
+  /**
+   * Identifier of the supergroup or channel chat, which was automatically boosted by the winners of the giveaway
+   * @type {int53} {@link int53}
+   */
+  boosted_chat_id: int53;
+
+  /**
+   * Identifier of the message with the giveaway in the boosted chat; can be 0 if the message was deleted
+   * @type {int53} {@link int53}
+   */
+  giveaway_message_id: int53;
+
+  /**
+   * True, if the corresponding winner wasn't chosen and the Telegram Stars were received by the owner of the boosted chat
+   * @type {Bool} {@link Bool}
+   */
+  is_unclaimed: Bool;
+
+  /**
+   * A sticker to be shown in the message; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker | null;
+};
+
+/**
+ * Version of {@link messageGiveawayPrizeStars} for method parameters.
+ *
+ * A Telegram Stars were received by the current user from a giveaway
+ */
+export type messageGiveawayPrizeStars$Input = {
+  readonly _: "messageGiveawayPrizeStars";
+
+  /**
+   * Number of Telegram Stars that were received
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * Identifier of the transaction for Telegram Stars credit
+   * @type {string} {@link string}
+   */
+  readonly transaction_id?: string;
+
+  /**
+   * Identifier of the supergroup or channel chat, which was automatically boosted by the winners of the giveaway
+   * @type {int53} {@link int53}
+   */
+  readonly boosted_chat_id?: int53;
+
+  /**
+   * Identifier of the message with the giveaway in the boosted chat; can be 0 if the message was deleted
+   * @type {int53} {@link int53}
+   */
+  readonly giveaway_message_id?: int53;
+
+  /**
+   * True, if the corresponding winner wasn't chosen and the Telegram Stars were received by the owner of the boosted chat
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_unclaimed?: Bool$Input;
+
+  /**
+   * A sticker to be shown in the message; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input | null;
+};
+
+/**
+ * A gift was received or sent by the current user
+ */
+export type messageGift = {
+  _: "messageGift";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  gift: gift;
+
+  /**
+   * Message added to the gift
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+
+  /**
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift
+   * @type {int53} {@link int53}
+   */
+  sell_star_count: int53;
+
+  /**
+   * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
+   * @type {Bool} {@link Bool}
+   */
+  is_private: Bool;
+
+  /**
+   * True, if the gift is displayed on the user's profile page; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  is_saved: Bool;
+
+  /**
+   * True, if the gift was converted to Telegram Stars; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  was_converted: Bool;
+};
+
+/**
+ * Version of {@link messageGift} for method parameters.
+ *
+ * A gift was received or sent by the current user
+ */
+export type messageGift$Input = {
+  readonly _: "messageGift";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  readonly gift?: gift$Input;
+
+  /**
+   * Message added to the gift
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sell_star_count?: int53;
+
+  /**
+   * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_private?: Bool$Input;
+
+  /**
+   * True, if the gift is displayed on the user's profile page; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_saved?: Bool$Input;
+
+  /**
+   * True, if the gift was converted to Telegram Stars; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly was_converted?: Bool$Input;
 };
 
 /**
@@ -35128,7 +36124,7 @@ export type inputPaidMediaTypeVideo = {
   duration: int32;
 
   /**
-   * True, if the video is supposed to be streamed
+   * True, if the video is expected to be streamed
    * @type {Bool} {@link Bool}
    */
   supports_streaming: Bool;
@@ -35149,7 +36145,7 @@ export type inputPaidMediaTypeVideo$Input = {
   readonly duration?: int32;
 
   /**
-   * True, if the video is supposed to be streamed
+   * True, if the video is expected to be streamed
    * @type {Bool} {@link Bool}
    */
   readonly supports_streaming?: Bool$Input;
@@ -35444,7 +36440,7 @@ export type messageSendOptions$Input = {
 };
 
 /**
- * Options to be used when a message content is copied without reference to the original sender. Service messages, messages with messageInvoice, messagePaidMedia, messagePremiumGiveaway, or messagePremiumGiveawayWinners content can't be copied
+ * Options to be used when a message content is copied without reference to the original sender. Service messages, messages with messageInvoice, messagePaidMedia, messageGiveaway, or messageGiveawayWinners content can't be copied
  */
 export type messageCopyOptions = {
   _: "messageCopyOptions";
@@ -35468,7 +36464,7 @@ export type messageCopyOptions = {
   new_caption: formattedText | null;
 
   /**
-   * True, if new caption must be shown above the animation; otherwise, new caption must be shown below the animation; not supported in secret chats. Ignored if replace_caption is false
+   * True, if new caption must be shown above the media; otherwise, new caption must be shown below the media; not supported in secret chats. Ignored if replace_caption is false
    * @type {Bool} {@link Bool}
    */
   new_show_caption_above_media: Bool;
@@ -35477,7 +36473,7 @@ export type messageCopyOptions = {
 /**
  * Version of {@link messageCopyOptions} for method parameters.
  *
- * Options to be used when a message content is copied without reference to the original sender. Service messages, messages with messageInvoice, messagePaidMedia, messagePremiumGiveaway, or messagePremiumGiveawayWinners content can't be copied
+ * Options to be used when a message content is copied without reference to the original sender. Service messages, messages with messageInvoice, messagePaidMedia, messageGiveaway, or messageGiveawayWinners content can't be copied
  */
 export type messageCopyOptions$Input = {
   readonly _: "messageCopyOptions";
@@ -35501,7 +36497,7 @@ export type messageCopyOptions$Input = {
   readonly new_caption?: formattedText$Input | null;
 
   /**
-   * True, if new caption must be shown above the animation; otherwise, new caption must be shown below the animation; not supported in secret chats. Ignored if replace_caption is false
+   * True, if new caption must be shown above the media; otherwise, new caption must be shown below the media; not supported in secret chats. Ignored if replace_caption is false
    * @type {Bool} {@link Bool}
    */
   readonly new_show_caption_above_media?: Bool$Input;
@@ -35864,10 +36860,16 @@ export type inputMessagePaidMedia = {
   caption: formattedText | null;
 
   /**
-   * True, if the caption must be shown above the video; otherwise, the caption must be shown below the video; not supported in secret chats
+   * True, if the caption must be shown above the media; otherwise, the caption must be shown below the media; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
   show_caption_above_media: Bool;
+
+  /**
+   * Bot-provided data for the paid media; bots only
+   * @type {string} {@link string}
+   */
+  payload: string;
 };
 
 /**
@@ -35897,10 +36899,16 @@ export type inputMessagePaidMedia$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * True, if the caption must be shown above the video; otherwise, the caption must be shown below the video; not supported in secret chats
+   * True, if the caption must be shown above the media; otherwise, the caption must be shown below the media; not supported in secret chats
    * @type {Bool} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
+
+  /**
+   * Bot-provided data for the paid media; bots only
+   * @type {string} {@link string}
+   */
+  readonly payload?: string;
 };
 
 /**
@@ -36110,7 +37118,7 @@ export type inputMessageVideo = {
   _: "inputMessageVideo";
 
   /**
-   * Video to be sent
+   * Video to be sent. The video is expected to be reencoded to MPEG4 format with H.264 codec by the sender
    * @type {InputFile} {@link InputFile}
    */
   video: InputFile;
@@ -36146,7 +37154,7 @@ export type inputMessageVideo = {
   height: int32;
 
   /**
-   * True, if the video is supposed to be streamed
+   * True, if the video is expected to be streamed
    * @type {Bool} {@link Bool}
    */
   supports_streaming: Bool;
@@ -36185,7 +37193,7 @@ export type inputMessageVideo$Input = {
   readonly _: "inputMessageVideo";
 
   /**
-   * Video to be sent
+   * Video to be sent. The video is expected to be reencoded to MPEG4 format with H.264 codec by the sender
    * @type {InputFile} {@link InputFile}
    */
   readonly video?: InputFile$Input;
@@ -36221,7 +37229,7 @@ export type inputMessageVideo$Input = {
   readonly height?: int32;
 
   /**
-   * True, if the video is supposed to be streamed
+   * True, if the video is expected to be streamed
    * @type {Bool} {@link Bool}
    */
   readonly supports_streaming?: Bool$Input;
@@ -36986,6 +37994,12 @@ export type messageProperties = {
   _: "messageProperties";
 
   /**
+   * True, if content of the message can be copied to a secret chat using inputMessageForwarded or forwardMessages with copy options
+   * @type {Bool} {@link Bool}
+   */
+  can_be_copied_to_secret_chat: Bool;
+
+  /**
    * True, if the message can be deleted only for the current user while other users will continue to see it using the method deleteMessages with revoke == false
    * @type {Bool} {@link Bool}
    */
@@ -37139,6 +38153,12 @@ export type messageProperties = {
  */
 export type messageProperties$Input = {
   readonly _: "messageProperties";
+
+  /**
+   * True, if content of the message can be copied to a secret chat using inputMessageForwarded or forwardMessages with copy options
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_copied_to_secret_chat?: Bool$Input;
 
   /**
    * True, if the message can be deleted only for the current user while other users will continue to see it using the method deleteMessages with revoke == false
@@ -39688,7 +40708,7 @@ export type storyVideo = {
   thumbnail: thumbnail | null;
 
   /**
-   * Size of file prefix, which is supposed to be preloaded, in bytes
+   * Size of file prefix, which is expected to be preloaded, in bytes
    * @type {int32} {@link int32}
    */
   preload_prefix_size: int32;
@@ -39757,7 +40777,7 @@ export type storyVideo$Input = {
   readonly thumbnail?: thumbnail$Input | null;
 
   /**
-   * Size of file prefix, which is supposed to be preloaded, in bytes
+   * Size of file prefix, which is expected to be preloaded, in bytes
    * @type {int32} {@link int32}
    */
   readonly preload_prefix_size?: int32;
@@ -39816,7 +40836,7 @@ export type storyContentVideo = {
   video: storyVideo;
 
   /**
-   * Alternative version of the video in MPEG4 format, encoded by x264 codec; may be null
+   * Alternative version of the video in MPEG4 format, encoded with H.264 codec; may be null
    * @type {storyVideo} {@link storyVideo}
    */
   alternative_video: storyVideo | null;
@@ -39837,7 +40857,7 @@ export type storyContentVideo$Input = {
   readonly video?: storyVideo$Input;
 
   /**
-   * Alternative version of the video in MPEG4 format, encoded by x264 codec; may be null
+   * Alternative version of the video in MPEG4 format, encoded with H.264 codec; may be null
    * @type {storyVideo} {@link storyVideo}
    */
   readonly alternative_video?: storyVideo$Input | null;
@@ -39906,7 +40926,7 @@ export type inputStoryContentVideo = {
   _: "inputStoryContentVideo";
 
   /**
-   * Video to be sent. The video size must be 720x1280. The video must be streamable and stored in MPEG4 format, after encoding with x265 codec and key frames added each second
+   * Video to be sent. The video size must be 720x1280. The video must be streamable and stored in MPEG4 format, after encoding with H.265 codec and key frames added each second
    * @type {InputFile} {@link InputFile}
    */
   video: InputFile;
@@ -39945,7 +40965,7 @@ export type inputStoryContentVideo$Input = {
   readonly _: "inputStoryContentVideo";
 
   /**
-   * Video to be sent. The video size must be 720x1280. The video must be streamable and stored in MPEG4 format, after encoding with x265 codec and key frames added each second
+   * Video to be sent. The video size must be 720x1280. The video must be streamable and stored in MPEG4 format, after encoding with H.265 codec and key frames added each second
    * @type {InputFile} {@link InputFile}
    */
   readonly video?: InputFile$Input;
@@ -41748,7 +42768,7 @@ export type chatBoostSourceGiftCode$Input = {
 };
 
 /**
- * The chat created a Telegram Premium giveaway
+ * The chat created a giveaway
  */
 export type chatBoostSourceGiveaway = {
   _: "chatBoostSourceGiveaway";
@@ -41760,10 +42780,16 @@ export type chatBoostSourceGiveaway = {
   user_id: int53;
 
   /**
-   * The created Telegram Premium gift code if it was used by the user or can be claimed by the current user; an empty string otherwise
+   * The created Telegram Premium gift code if it was used by the user or can be claimed by the current user; an empty string otherwise; for Telegram Premium giveways only
    * @type {string} {@link string}
    */
   gift_code: string;
+
+  /**
+   * Number of Telegram Stars distributed among winners of the giveaway
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
 
   /**
    * Identifier of the corresponding giveaway message; can be an identifier of a deleted message
@@ -41772,7 +42798,7 @@ export type chatBoostSourceGiveaway = {
   giveaway_message_id: int53;
 
   /**
-   * True, if the winner for the corresponding Telegram Premium subscription wasn't chosen, because there were not enough participants
+   * True, if the winner for the corresponding giveaway prize wasn't chosen, because there were not enough participants
    * @type {Bool} {@link Bool}
    */
   is_unclaimed: Bool;
@@ -41781,7 +42807,7 @@ export type chatBoostSourceGiveaway = {
 /**
  * Version of {@link chatBoostSourceGiveaway} for method parameters.
  *
- * The chat created a Telegram Premium giveaway
+ * The chat created a giveaway
  */
 export type chatBoostSourceGiveaway$Input = {
   readonly _: "chatBoostSourceGiveaway";
@@ -41793,10 +42819,16 @@ export type chatBoostSourceGiveaway$Input = {
   readonly user_id?: int53;
 
   /**
-   * The created Telegram Premium gift code if it was used by the user or can be claimed by the current user; an empty string otherwise
+   * The created Telegram Premium gift code if it was used by the user or can be claimed by the current user; an empty string otherwise; for Telegram Premium giveways only
    * @type {string} {@link string}
    */
   readonly gift_code?: string;
+
+  /**
+   * Number of Telegram Stars distributed among winners of the giveaway
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 
   /**
    * Identifier of the corresponding giveaway message; can be an identifier of a deleted message
@@ -41805,7 +42837,7 @@ export type chatBoostSourceGiveaway$Input = {
   readonly giveaway_message_id?: int53;
 
   /**
-   * True, if the winner for the corresponding Telegram Premium subscription wasn't chosen, because there were not enough participants
+   * True, if the winner for the corresponding giveaway prize wasn't chosen, because there were not enough participants
    * @type {Bool} {@link Bool}
    */
   readonly is_unclaimed?: Bool$Input;
@@ -41840,10 +42872,10 @@ export type chatBoostSourcePremium$Input = {
 };
 
 /**
- * Describes a prepaid Telegram Premium giveaway
+ * Describes a prepaid giveaway
  */
-export type prepaidPremiumGiveaway = {
-  _: "prepaidPremiumGiveaway";
+export type prepaidGiveaway = {
+  _: "prepaidGiveaway";
 
   /**
    * Unique identifier of the prepaid giveaway
@@ -41852,16 +42884,22 @@ export type prepaidPremiumGiveaway = {
   id: int64;
 
   /**
-   * Number of users which will receive Telegram Premium subscription gift codes
+   * Number of users which will receive giveaway prize
    * @type {int32} {@link int32}
    */
   winner_count: int32;
 
   /**
-   * Number of months the Telegram Premium subscription will be active after code activation
+   * Prize of the giveaway
+   * @type {GiveawayPrize} {@link GiveawayPrize}
+   */
+  prize: GiveawayPrize;
+
+  /**
+   * The number of boosts received by the chat from the giveaway; for Telegram Star giveaways only
    * @type {int32} {@link int32}
    */
-  month_count: int32;
+  boost_count: int32;
 
   /**
    * Point in time (Unix timestamp) when the giveaway was paid
@@ -41871,12 +42909,12 @@ export type prepaidPremiumGiveaway = {
 };
 
 /**
- * Version of {@link prepaidPremiumGiveaway} for method parameters.
+ * Version of {@link prepaidGiveaway} for method parameters.
  *
- * Describes a prepaid Telegram Premium giveaway
+ * Describes a prepaid giveaway
  */
-export type prepaidPremiumGiveaway$Input = {
-  readonly _: "prepaidPremiumGiveaway";
+export type prepaidGiveaway$Input = {
+  readonly _: "prepaidGiveaway";
 
   /**
    * Unique identifier of the prepaid giveaway
@@ -41885,16 +42923,22 @@ export type prepaidPremiumGiveaway$Input = {
   readonly id?: int64$Input;
 
   /**
-   * Number of users which will receive Telegram Premium subscription gift codes
+   * Number of users which will receive giveaway prize
    * @type {int32} {@link int32}
    */
   readonly winner_count?: int32;
 
   /**
-   * Number of months the Telegram Premium subscription will be active after code activation
+   * Prize of the giveaway
+   * @type {GiveawayPrize} {@link GiveawayPrize}
+   */
+  readonly prize?: GiveawayPrize$Input;
+
+  /**
+   * The number of boosts received by the chat from the giveaway; for Telegram Star giveaways only
    * @type {int32} {@link int32}
    */
-  readonly month_count?: int32;
+  readonly boost_count?: int32;
 
   /**
    * Point in time (Unix timestamp) when the giveaway was paid
@@ -41965,9 +43009,9 @@ export type chatBoostStatus = {
 
   /**
    * The list of prepaid giveaways available for the chat; only for chat administrators
-   * @type {vector<prepaidPremiumGiveaway>} {@link vector<prepaidPremiumGiveaway>}
+   * @type {vector<prepaidGiveaway>} {@link vector<prepaidGiveaway>}
    */
-  prepaid_giveaways: vector<prepaidPremiumGiveaway>;
+  prepaid_giveaways: vector<prepaidGiveaway>;
 };
 
 /**
@@ -42034,9 +43078,9 @@ export type chatBoostStatus$Input = {
 
   /**
    * The list of prepaid giveaways available for the chat; only for chat administrators
-   * @type {vector<prepaidPremiumGiveaway>} {@link vector<prepaidPremiumGiveaway>}
+   * @type {vector<prepaidGiveaway>} {@link vector<prepaidGiveaway>}
    */
-  readonly prepaid_giveaways?: vector$Input<prepaidPremiumGiveaway$Input>;
+  readonly prepaid_giveaways?: vector$Input<prepaidGiveaway$Input>;
 };
 
 /**
@@ -43198,7 +44242,7 @@ export type groupCall = {
   title: string;
 
   /**
-   * Point in time (Unix timestamp) when the group call is supposed to be started by an administrator; 0 if it is already active or was ended
+   * Point in time (Unix timestamp) when the group call is expected to be started by an administrator; 0 if it is already active or was ended
    * @type {int32} {@link int32}
    */
   scheduled_start_date: int32;
@@ -43333,7 +44377,7 @@ export type groupCall$Input = {
   readonly title?: string;
 
   /**
-   * Point in time (Unix timestamp) when the group call is supposed to be started by an administrator; 0 if it is already active or was ended
+   * Point in time (Unix timestamp) when the group call is expected to be started by an administrator; 0 if it is already active or was ended
    * @type {int32} {@link int32}
    */
   readonly scheduled_start_date?: int32;
@@ -48284,6 +49328,58 @@ export type chatEventMemberRestricted$Input = {
 };
 
 /**
+ * A chat member extended their subscription to the chat
+ */
+export type chatEventMemberSubscriptionExtended = {
+  _: "chatEventMemberSubscriptionExtended";
+
+  /**
+   * Affected chat member user identifier
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Previous status of the chat member
+   * @type {ChatMemberStatus} {@link ChatMemberStatus}
+   */
+  old_status: ChatMemberStatus;
+
+  /**
+   * New status of the chat member
+   * @type {ChatMemberStatus} {@link ChatMemberStatus}
+   */
+  new_status: ChatMemberStatus;
+};
+
+/**
+ * Version of {@link chatEventMemberSubscriptionExtended} for method parameters.
+ *
+ * A chat member extended their subscription to the chat
+ */
+export type chatEventMemberSubscriptionExtended$Input = {
+  readonly _: "chatEventMemberSubscriptionExtended";
+
+  /**
+   * Affected chat member user identifier
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Previous status of the chat member
+   * @type {ChatMemberStatus} {@link ChatMemberStatus}
+   */
+  readonly old_status?: ChatMemberStatus$Input;
+
+  /**
+   * New status of the chat member
+   * @type {ChatMemberStatus} {@link ChatMemberStatus}
+   */
+  readonly new_status?: ChatMemberStatus$Input;
+};
+
+/**
  * The chat available reactions were changed
  */
 export type chatEventAvailableReactionsChanged = {
@@ -49834,6 +50930,12 @@ export type chatEventLogFilters = {
    * @type {Bool} {@link Bool}
    */
   forum_changes: Bool;
+
+  /**
+   * True, if subscription extensions need to be returned
+   * @type {Bool} {@link Bool}
+   */
+  subscription_extensions: Bool;
 };
 
 /**
@@ -49921,6 +51023,12 @@ export type chatEventLogFilters$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly forum_changes?: Bool$Input;
+
+  /**
+   * True, if subscription extensions need to be returned
+   * @type {Bool} {@link Bool}
+   */
+  readonly subscription_extensions?: Bool$Input;
 };
 
 /**
@@ -51899,9 +53007,9 @@ export type storePaymentPurposePremiumGiveaway = {
 
   /**
    * Giveaway parameters
-   * @type {premiumGiveawayParameters} {@link premiumGiveawayParameters}
+   * @type {giveawayParameters} {@link giveawayParameters}
    */
-  parameters: premiumGiveawayParameters;
+  parameters: giveawayParameters;
 
   /**
    * ISO 4217 currency code of the payment currency
@@ -51926,9 +53034,9 @@ export type storePaymentPurposePremiumGiveaway$Input = {
 
   /**
    * Giveaway parameters
-   * @type {premiumGiveawayParameters} {@link premiumGiveawayParameters}
+   * @type {giveawayParameters} {@link giveawayParameters}
    */
-  readonly parameters?: premiumGiveawayParameters$Input;
+  readonly parameters?: giveawayParameters$Input;
 
   /**
    * ISO 4217 currency code of the payment currency
@@ -51941,6 +53049,82 @@ export type storePaymentPurposePremiumGiveaway$Input = {
    * @type {int53} {@link int53}
    */
   readonly amount?: int53;
+};
+
+/**
+ * The user creating a Telegram Star giveaway
+ */
+export type storePaymentPurposeStarGiveaway = {
+  _: "storePaymentPurposeStarGiveaway";
+
+  /**
+   * Giveaway parameters
+   * @type {giveawayParameters} {@link giveawayParameters}
+   */
+  parameters: giveawayParameters;
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * The number of users to receive Telegram Stars
+   * @type {int32} {@link int32}
+   */
+  winner_count: int32;
+
+  /**
+   * The number of Telegram Stars to be distributed through the giveaway
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+};
+
+/**
+ * Version of {@link storePaymentPurposeStarGiveaway} for method parameters.
+ *
+ * The user creating a Telegram Star giveaway
+ */
+export type storePaymentPurposeStarGiveaway$Input = {
+  readonly _: "storePaymentPurposeStarGiveaway";
+
+  /**
+   * Giveaway parameters
+   * @type {giveawayParameters} {@link giveawayParameters}
+   */
+  readonly parameters?: giveawayParameters$Input;
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * The number of users to receive Telegram Stars
+   * @type {int32} {@link int32}
+   */
+  readonly winner_count?: int32;
+
+  /**
+   * The number of Telegram Stars to be distributed through the giveaway
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 };
 
 /**
@@ -52143,9 +53327,9 @@ export type telegramPaymentPurposePremiumGiveaway = {
 
   /**
    * Giveaway parameters
-   * @type {premiumGiveawayParameters} {@link premiumGiveawayParameters}
+   * @type {giveawayParameters} {@link giveawayParameters}
    */
-  parameters: premiumGiveawayParameters;
+  parameters: giveawayParameters;
 
   /**
    * ISO 4217 currency code of the payment currency
@@ -52182,9 +53366,9 @@ export type telegramPaymentPurposePremiumGiveaway$Input = {
 
   /**
    * Giveaway parameters
-   * @type {premiumGiveawayParameters} {@link premiumGiveawayParameters}
+   * @type {giveawayParameters} {@link giveawayParameters}
    */
-  readonly parameters?: premiumGiveawayParameters$Input;
+  readonly parameters?: giveawayParameters$Input;
 
   /**
    * ISO 4217 currency code of the payment currency
@@ -52322,6 +53506,82 @@ export type telegramPaymentPurposeGiftedStars$Input = {
 
   /**
    * Number of bought Telegram Stars
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+};
+
+/**
+ * The user creating a Telegram Star giveaway
+ */
+export type telegramPaymentPurposeStarGiveaway = {
+  _: "telegramPaymentPurposeStarGiveaway";
+
+  /**
+   * Giveaway parameters
+   * @type {giveawayParameters} {@link giveawayParameters}
+   */
+  parameters: giveawayParameters;
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * The number of users to receive Telegram Stars
+   * @type {int32} {@link int32}
+   */
+  winner_count: int32;
+
+  /**
+   * The number of Telegram Stars to be distributed through the giveaway
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+};
+
+/**
+ * Version of {@link telegramPaymentPurposeStarGiveaway} for method parameters.
+ *
+ * The user creating a Telegram Star giveaway
+ */
+export type telegramPaymentPurposeStarGiveaway$Input = {
+  readonly _: "telegramPaymentPurposeStarGiveaway";
+
+  /**
+   * Giveaway parameters
+   * @type {giveawayParameters} {@link giveawayParameters}
+   */
+  readonly parameters?: giveawayParameters$Input;
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * The number of users to receive Telegram Stars
+   * @type {int32} {@link int32}
+   */
+  readonly winner_count?: int32;
+
+  /**
+   * The number of Telegram Stars to be distributed through the giveaway
    * @type {int53} {@link int53}
    */
   readonly star_count?: int53;
@@ -54384,22 +55644,22 @@ export type pushMessageContentPremiumGiftCode$Input = {
 };
 
 /**
- * A message with a Telegram Premium giveaway
+ * A message with a giveaway
  */
-export type pushMessageContentPremiumGiveaway = {
-  _: "pushMessageContentPremiumGiveaway";
+export type pushMessageContentGiveaway = {
+  _: "pushMessageContentGiveaway";
 
   /**
-   * Number of users which will receive Telegram Premium subscription gift codes; 0 for pinned message
+   * Number of users which will receive giveaway prizes; 0 for pinned message
    * @type {int32} {@link int32}
    */
   winner_count: int32;
 
   /**
-   * Number of months the Telegram Premium subscription will be active after code activation; 0 for pinned message
-   * @type {int32} {@link int32}
+   * Prize of the giveaway; may be null for pinned message
+   * @type {GiveawayPrize} {@link GiveawayPrize}
    */
-  month_count: int32;
+  prize: GiveawayPrize | null;
 
   /**
    * True, if the message is a pinned message with the specified content
@@ -54409,30 +55669,58 @@ export type pushMessageContentPremiumGiveaway = {
 };
 
 /**
- * Version of {@link pushMessageContentPremiumGiveaway} for method parameters.
+ * Version of {@link pushMessageContentGiveaway} for method parameters.
  *
- * A message with a Telegram Premium giveaway
+ * A message with a giveaway
  */
-export type pushMessageContentPremiumGiveaway$Input = {
-  readonly _: "pushMessageContentPremiumGiveaway";
+export type pushMessageContentGiveaway$Input = {
+  readonly _: "pushMessageContentGiveaway";
 
   /**
-   * Number of users which will receive Telegram Premium subscription gift codes; 0 for pinned message
+   * Number of users which will receive giveaway prizes; 0 for pinned message
    * @type {int32} {@link int32}
    */
   readonly winner_count?: int32;
 
   /**
-   * Number of months the Telegram Premium subscription will be active after code activation; 0 for pinned message
-   * @type {int32} {@link int32}
+   * Prize of the giveaway; may be null for pinned message
+   * @type {GiveawayPrize} {@link GiveawayPrize}
    */
-  readonly month_count?: int32;
+  readonly prize?: GiveawayPrize$Input | null;
 
   /**
    * True, if the message is a pinned message with the specified content
    * @type {Bool} {@link Bool}
    */
   readonly is_pinned?: Bool$Input;
+};
+
+/**
+ * A message with a gift
+ */
+export type pushMessageContentGift = {
+  _: "pushMessageContentGift";
+
+  /**
+   * Number of Telegram Stars that sender paid for the gift
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+};
+
+/**
+ * Version of {@link pushMessageContentGift} for method parameters.
+ *
+ * A message with a gift
+ */
+export type pushMessageContentGift$Input = {
+  readonly _: "pushMessageContentGift";
+
+  /**
+   * Number of Telegram Stars that sender paid for the gift
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 };
 
 /**
@@ -56498,7 +57786,7 @@ export type accountTtl = {
   _: "accountTtl";
 
   /**
-   * Number of days of inactivity before the account will be flagged for deletion; 30-366 days
+   * Number of days of inactivity before the account will be flagged for deletion; 30-730 days
    * @type {int32} {@link int32}
    */
   days: int32;
@@ -56513,7 +57801,7 @@ export type accountTtl$Input = {
   readonly _: "accountTtl";
 
   /**
-   * Number of days of inactivity before the account will be flagged for deletion; 30-366 days
+   * Number of days of inactivity before the account will be flagged for deletion; 30-730 days
    * @type {int32} {@link int32}
    */
   readonly days?: int32;
@@ -57468,6 +58756,214 @@ export type reportReasonCustom$Input = {
 };
 
 /**
+ * The chat was reported successfully
+ */
+export type reportChatResultOk = {
+  _: "reportChatResultOk";
+};
+
+/**
+ * Version of {@link reportChatResultOk} for method parameters.
+ *
+ * The chat was reported successfully
+ */
+export type reportChatResultOk$Input = {
+  readonly _: "reportChatResultOk";
+};
+
+/**
+ * The user must choose an option to report the chat and repeat request with the chosen option
+ */
+export type reportChatResultOptionRequired = {
+  _: "reportChatResultOptionRequired";
+
+  /**
+   * Title for the option choice
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * List of available options
+   * @type {vector<reportOption>} {@link vector<reportOption>}
+   */
+  options: vector<reportOption>;
+};
+
+/**
+ * Version of {@link reportChatResultOptionRequired} for method parameters.
+ *
+ * The user must choose an option to report the chat and repeat request with the chosen option
+ */
+export type reportChatResultOptionRequired$Input = {
+  readonly _: "reportChatResultOptionRequired";
+
+  /**
+   * Title for the option choice
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * List of available options
+   * @type {vector<reportOption>} {@link vector<reportOption>}
+   */
+  readonly options?: vector$Input<reportOption$Input>;
+};
+
+/**
+ * The user must add additional text details to the report
+ */
+export type reportChatResultTextRequired = {
+  _: "reportChatResultTextRequired";
+
+  /**
+   * Option identifier for the next reportChat request
+   * @type {bytes} {@link bytes}
+   */
+  option_id: bytes;
+
+  /**
+   * True, if the user can skip text adding
+   * @type {Bool} {@link Bool}
+   */
+  is_optional: Bool;
+};
+
+/**
+ * Version of {@link reportChatResultTextRequired} for method parameters.
+ *
+ * The user must add additional text details to the report
+ */
+export type reportChatResultTextRequired$Input = {
+  readonly _: "reportChatResultTextRequired";
+
+  /**
+   * Option identifier for the next reportChat request
+   * @type {bytes} {@link bytes}
+   */
+  readonly option_id?: bytes$Input;
+
+  /**
+   * True, if the user can skip text adding
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_optional?: Bool$Input;
+};
+
+/**
+ * The user must choose messages to report and repeat the reportChat request with the chosen messages
+ */
+export type reportChatResultMessagesRequired = {
+  _: "reportChatResultMessagesRequired";
+};
+
+/**
+ * Version of {@link reportChatResultMessagesRequired} for method parameters.
+ *
+ * The user must choose messages to report and repeat the reportChat request with the chosen messages
+ */
+export type reportChatResultMessagesRequired$Input = {
+  readonly _: "reportChatResultMessagesRequired";
+};
+
+/**
+ * The story was reported successfully
+ */
+export type reportStoryResultOk = {
+  _: "reportStoryResultOk";
+};
+
+/**
+ * Version of {@link reportStoryResultOk} for method parameters.
+ *
+ * The story was reported successfully
+ */
+export type reportStoryResultOk$Input = {
+  readonly _: "reportStoryResultOk";
+};
+
+/**
+ * The user must choose an option to report the story and repeat request with the chosen option
+ */
+export type reportStoryResultOptionRequired = {
+  _: "reportStoryResultOptionRequired";
+
+  /**
+   * Title for the option choice
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * List of available options
+   * @type {vector<reportOption>} {@link vector<reportOption>}
+   */
+  options: vector<reportOption>;
+};
+
+/**
+ * Version of {@link reportStoryResultOptionRequired} for method parameters.
+ *
+ * The user must choose an option to report the story and repeat request with the chosen option
+ */
+export type reportStoryResultOptionRequired$Input = {
+  readonly _: "reportStoryResultOptionRequired";
+
+  /**
+   * Title for the option choice
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * List of available options
+   * @type {vector<reportOption>} {@link vector<reportOption>}
+   */
+  readonly options?: vector$Input<reportOption$Input>;
+};
+
+/**
+ * The user must add additional text details to the report
+ */
+export type reportStoryResultTextRequired = {
+  _: "reportStoryResultTextRequired";
+
+  /**
+   * Option identifier for the next reportStory request
+   * @type {bytes} {@link bytes}
+   */
+  option_id: bytes;
+
+  /**
+   * True, if the user can skip text adding
+   * @type {Bool} {@link Bool}
+   */
+  is_optional: Bool;
+};
+
+/**
+ * Version of {@link reportStoryResultTextRequired} for method parameters.
+ *
+ * The user must add additional text details to the report
+ */
+export type reportStoryResultTextRequired$Input = {
+  readonly _: "reportStoryResultTextRequired";
+
+  /**
+   * Option identifier for the next reportStory request
+   * @type {bytes} {@link bytes}
+   */
+  readonly option_id?: bytes$Input;
+
+  /**
+   * True, if the user can skip text adding
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_optional?: Bool$Input;
+};
+
+/**
  * The currently opened chat needs to be kept
  */
 export type targetChatCurrent = {
@@ -57688,7 +59184,7 @@ export type internalLinkTypeAuthenticationCode$Input = {
 };
 
 /**
- * The link is a link to a background. Call searchBackground with the given background name to process the link
+ * The link is a link to a background. Call searchBackground with the given background name to process the link.
  *
  * - If background is found and the user wants to apply it, then call setDefaultBackground
  */
@@ -57705,7 +59201,7 @@ export type internalLinkTypeBackground = {
 /**
  * Version of {@link internalLinkTypeBackground} for method parameters.
  *
- * The link is a link to a background. Call searchBackground with the given background name to process the link
+ * The link is a link to a background. Call searchBackground with the given background name to process the link.
  *
  * - If background is found and the user wants to apply it, then call setDefaultBackground
  */
@@ -57720,7 +59216,7 @@ export type internalLinkTypeBackground$Input = {
 };
 
 /**
- * The link is a link to a Telegram bot, which is supposed to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
+ * The link is a link to a Telegram bot, which is expected to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
  *
  * - ask the current user to select a channel chat to add the bot to as an administrator. Then, call getChatMember to receive the current bot rights in the chat and if the bot already is an administrator,
  *
@@ -57745,7 +59241,7 @@ export type internalLinkTypeBotAddToChannel = {
 /**
  * Version of {@link internalLinkTypeBotAddToChannel} for method parameters.
  *
- * The link is a link to a Telegram bot, which is supposed to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
+ * The link is a link to a Telegram bot, which is expected to be added to a channel chat as an administrator. Call searchPublicChat with the given bot username and check that the user is a bot,
  *
  * - ask the current user to select a channel chat to add the bot to as an administrator. Then, call getChatMember to receive the current bot rights in the chat and if the bot already is an administrator,
  *
@@ -57824,7 +59320,7 @@ export type internalLinkTypeBotStart$Input = {
 };
 
 /**
- * The link is a link to a Telegram bot, which is supposed to be added to a group chat. Call searchPublicChat with the given bot username, check that the user is a bot and can be added to groups,
+ * The link is a link to a Telegram bot, which is expected to be added to a group chat. Call searchPublicChat with the given bot username, check that the user is a bot and can be added to groups,
  *
  * - ask the current user to select a basic group or a supergroup chat to add the bot to, taking into account that bots can be added to a public supergroup only by administrators of the supergroup.
  *
@@ -57861,7 +59357,7 @@ export type internalLinkTypeBotStartInGroup = {
 /**
  * Version of {@link internalLinkTypeBotStartInGroup} for method parameters.
  *
- * The link is a link to a Telegram bot, which is supposed to be added to a group chat. Call searchPublicChat with the given bot username, check that the user is a bot and can be added to groups,
+ * The link is a link to a Telegram bot, which is expected to be added to a group chat. Call searchPublicChat with the given bot username, check that the user is a bot and can be added to groups,
  *
  * - ask the current user to select a basic group or a supergroup chat to add the bot to, taking into account that bots can be added to a public supergroup only by administrators of the supergroup.
  *
@@ -58716,7 +60212,7 @@ export type internalLinkTypeProxy$Input = {
 };
 
 /**
- * The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link
+ * The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link.
  *
  * - If the chat is found, open its profile information screen or the chat itself.
  *
@@ -58747,7 +60243,7 @@ export type internalLinkTypePublicChat = {
 /**
  * Version of {@link internalLinkTypePublicChat} for method parameters.
  *
- * The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link
+ * The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link.
  *
  * - If the chat is found, open its profile information screen or the chat itself.
  *
@@ -60438,19 +61934,19 @@ export type autoDownloadSettingsPresets = {
   _: "autoDownloadSettingsPresets";
 
   /**
-   * Preset with lowest settings; supposed to be used by default when roaming
+   * Preset with lowest settings; expected to be used by default when roaming
    * @type {autoDownloadSettings} {@link autoDownloadSettings}
    */
   low: autoDownloadSettings;
 
   /**
-   * Preset with medium settings; supposed to be used by default when using mobile data
+   * Preset with medium settings; expected to be used by default when using mobile data
    * @type {autoDownloadSettings} {@link autoDownloadSettings}
    */
   medium: autoDownloadSettings;
 
   /**
-   * Preset with highest settings; supposed to be used by default when connected on Wi-Fi
+   * Preset with highest settings; expected to be used by default when connected on Wi-Fi
    * @type {autoDownloadSettings} {@link autoDownloadSettings}
    */
   high: autoDownloadSettings;
@@ -60465,19 +61961,19 @@ export type autoDownloadSettingsPresets$Input = {
   readonly _: "autoDownloadSettingsPresets";
 
   /**
-   * Preset with lowest settings; supposed to be used by default when roaming
+   * Preset with lowest settings; expected to be used by default when roaming
    * @type {autoDownloadSettings} {@link autoDownloadSettings}
    */
   readonly low?: autoDownloadSettings$Input;
 
   /**
-   * Preset with medium settings; supposed to be used by default when using mobile data
+   * Preset with medium settings; expected to be used by default when using mobile data
    * @type {autoDownloadSettings} {@link autoDownloadSettings}
    */
   readonly medium?: autoDownloadSettings$Input;
 
   /**
-   * Preset with highest settings; supposed to be used by default when connected on Wi-Fi
+   * Preset with highest settings; expected to be used by default when connected on Wi-Fi
    * @type {autoDownloadSettings} {@link autoDownloadSettings}
    */
   readonly high?: autoDownloadSettings$Input;
@@ -60764,7 +62260,7 @@ export type connectionStateConnecting$Input = {
 };
 
 /**
- * Downloading data supposed to be received while the application was offline
+ * Downloading data expected to be received while the application was offline
  */
 export type connectionStateUpdating = {
   _: "connectionStateUpdating";
@@ -60773,7 +62269,7 @@ export type connectionStateUpdating = {
 /**
  * Version of {@link connectionStateUpdating} for method parameters.
  *
- * Downloading data supposed to be received while the application was offline
+ * Downloading data expected to be received while the application was offline
  */
 export type connectionStateUpdating$Input = {
   readonly _: "connectionStateUpdating";
@@ -62912,6 +64408,12 @@ export type chatRevenueAmount = {
    * @type {int64} {@link int64}
    */
   available_amount: int64;
+
+  /**
+   * True, if Telegram Stars can be withdrawn now or later
+   * @type {Bool} {@link Bool}
+   */
+  withdrawal_enabled: Bool;
 };
 
 /**
@@ -62945,6 +64447,12 @@ export type chatRevenueAmount$Input = {
    * @type {int64} {@link int64}
    */
   readonly available_amount?: int64$Input;
+
+  /**
+   * True, if Telegram Stars can be withdrawn now or later
+   * @type {Bool} {@link Bool}
+   */
+  readonly withdrawal_enabled?: Bool$Input;
 };
 
 /**
@@ -64476,7 +65984,7 @@ export type updateMessageFactCheck$Input = {
 };
 
 /**
- * A message with a live location was viewed. When the update is received, the application is supposed to update the live location
+ * A message with a live location was viewed. When the update is received, the application is expected to update the live location
  */
 export type updateMessageLiveLocationViewed = {
   _: "updateMessageLiveLocationViewed";
@@ -64497,7 +66005,7 @@ export type updateMessageLiveLocationViewed = {
 /**
  * Version of {@link updateMessageLiveLocationViewed} for method parameters.
  *
- * A message with a live location was viewed. When the update is received, the application is supposed to update the live location
+ * A message with a live location was viewed. When the update is received, the application is expected to update the live location
  */
 export type updateMessageLiveLocationViewed$Input = {
   readonly _: "updateMessageLiveLocationViewed";
@@ -66968,7 +68476,7 @@ export type updateFile$Input = {
 };
 
 /**
- * The file generation process needs to be started by the application
+ * The file generation process needs to be started by the application. Use setFileGenerationProgress and finishFileGeneration to generate the file
  */
 export type updateFileGenerationStart = {
   _: "updateFileGenerationStart";
@@ -66980,19 +68488,23 @@ export type updateFileGenerationStart = {
   generation_id: int64;
 
   /**
-   * The path to a file from which a new file is generated; may be empty
+   * The original path specified by the application in inputFileGenerated
    * @type {string} {@link string}
    */
   original_path: string;
 
   /**
-   * The path to a file that must be created and where the new file is generated
+   * The path to a file that must be created and where the new file must be generated by the application.
+   *
+   * - If the application has no access to the path, it can use writeGeneratedFilePart to generate the file
    * @type {string} {@link string}
    */
   destination_path: string;
 
   /**
-   * String specifying the conversion applied to the original file. If conversion is "#url#" than original_path contains an HTTP/HTTPS URL of a file, which must be downloaded by the application
+   * If the conversion is "#url#" than original_path contains an HTTP/HTTPS URL of a file that must be downloaded by the application.
+   *
+   * - Otherwise, this is the conversion specified by the application in inputFileGenerated
    * @type {string} {@link string}
    */
   conversion: string;
@@ -67001,7 +68513,7 @@ export type updateFileGenerationStart = {
 /**
  * Version of {@link updateFileGenerationStart} for method parameters.
  *
- * The file generation process needs to be started by the application
+ * The file generation process needs to be started by the application. Use setFileGenerationProgress and finishFileGeneration to generate the file
  */
 export type updateFileGenerationStart$Input = {
   readonly _: "updateFileGenerationStart";
@@ -67013,19 +68525,23 @@ export type updateFileGenerationStart$Input = {
   readonly generation_id?: int64$Input;
 
   /**
-   * The path to a file from which a new file is generated; may be empty
+   * The original path specified by the application in inputFileGenerated
    * @type {string} {@link string}
    */
   readonly original_path?: string;
 
   /**
-   * The path to a file that must be created and where the new file is generated
+   * The path to a file that must be created and where the new file must be generated by the application.
+   *
+   * - If the application has no access to the path, it can use writeGeneratedFilePart to generate the file
    * @type {string} {@link string}
    */
   readonly destination_path?: string;
 
   /**
-   * String specifying the conversion applied to the original file. If conversion is "#url#" than original_path contains an HTTP/HTTPS URL of a file, which must be downloaded by the application
+   * If the conversion is "#url#" than original_path contains an HTTP/HTTPS URL of a file that must be downloaded by the application.
+   *
+   * - Otherwise, this is the conversion specified by the application in inputFileGenerated
    * @type {string} {@link string}
    */
   readonly conversion?: string;
@@ -69052,7 +70568,7 @@ export type updateSuggestedActions$Input = {
 };
 
 /**
- * Download or upload file speed for the user was limited, but it can be restored by subscription to Telegram Premium. The notification can be postponed until a being downloaded or uploaded file is visible to the user
+ * Download or upload file speed for the user was limited, but it can be restored by subscription to Telegram Premium. The notification can be postponed until a being downloaded or uploaded file is visible to the user.
  *
  * - Use getOption("premium_download_speedup") or getOption("premium_upload_speedup") to get expected speedup after subscription to Telegram Premium
  */
@@ -69069,7 +70585,7 @@ export type updateSpeedLimitNotification = {
 /**
  * Version of {@link updateSpeedLimitNotification} for method parameters.
  *
- * Download or upload file speed for the user was limited, but it can be restored by subscription to Telegram Premium. The notification can be postponed until a being downloaded or uploaded file is visible to the user
+ * Download or upload file speed for the user was limited, but it can be restored by subscription to Telegram Premium. The notification can be postponed until a being downloaded or uploaded file is visible to the user.
  *
  * - Use getOption("premium_download_speedup") or getOption("premium_upload_speedup") to get expected speedup after subscription to Telegram Premium
  */
@@ -70420,6 +71936,46 @@ export type updateMessageReactions$Input = {
 };
 
 /**
+ * Paid media were purchased by a user; for bots only
+ */
+export type updatePaidMediaPurchased = {
+  _: "updatePaidMediaPurchased";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Bot-specified payload for the paid media
+   * @type {string} {@link string}
+   */
+  payload: string;
+};
+
+/**
+ * Version of {@link updatePaidMediaPurchased} for method parameters.
+ *
+ * Paid media were purchased by a user; for bots only
+ */
+export type updatePaidMediaPurchased$Input = {
+  readonly _: "updatePaidMediaPurchased";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Bot-specified payload for the paid media
+   * @type {string} {@link string}
+   */
+  readonly payload?: string;
+};
+
+/**
  * Contains a list of updates
  */
 export type updates = {
@@ -71731,6 +73287,19 @@ export type Poll$Input = poll$Input;
 
 /**
  * Any of:
+ * - {@link alternativeVideo}
+ */
+export type AlternativeVideo = alternativeVideo;
+
+/**
+ * Version of {@link AlternativeVideo} for method parameters.
+ * Any of:
+ * - {@link alternativeVideo$Input}
+ */
+export type AlternativeVideo$Input = alternativeVideo$Input;
+
+/**
+ * Any of:
  * - {@link background}
  */
 export type Background = background;
@@ -72375,6 +73944,97 @@ export type StarPaymentOptions$Input = starPaymentOptions$Input;
 
 /**
  * Any of:
+ * - {@link starGiveawayWinnerOption}
+ */
+export type StarGiveawayWinnerOption = starGiveawayWinnerOption;
+
+/**
+ * Version of {@link StarGiveawayWinnerOption} for method parameters.
+ * Any of:
+ * - {@link starGiveawayWinnerOption$Input}
+ */
+export type StarGiveawayWinnerOption$Input = starGiveawayWinnerOption$Input;
+
+/**
+ * Any of:
+ * - {@link starGiveawayPaymentOption}
+ */
+export type StarGiveawayPaymentOption = starGiveawayPaymentOption;
+
+/**
+ * Version of {@link StarGiveawayPaymentOption} for method parameters.
+ * Any of:
+ * - {@link starGiveawayPaymentOption$Input}
+ */
+export type StarGiveawayPaymentOption$Input = starGiveawayPaymentOption$Input;
+
+/**
+ * Any of:
+ * - {@link starGiveawayPaymentOptions}
+ */
+export type StarGiveawayPaymentOptions = starGiveawayPaymentOptions;
+
+/**
+ * Version of {@link StarGiveawayPaymentOptions} for method parameters.
+ * Any of:
+ * - {@link starGiveawayPaymentOptions$Input}
+ */
+export type StarGiveawayPaymentOptions$Input = starGiveawayPaymentOptions$Input;
+
+/**
+ * Any of:
+ * - {@link gift}
+ */
+export type Gift = gift;
+
+/**
+ * Version of {@link Gift} for method parameters.
+ * Any of:
+ * - {@link gift$Input}
+ */
+export type Gift$Input = gift$Input;
+
+/**
+ * Any of:
+ * - {@link gifts}
+ */
+export type Gifts = gifts;
+
+/**
+ * Version of {@link Gifts} for method parameters.
+ * Any of:
+ * - {@link gifts$Input}
+ */
+export type Gifts$Input = gifts$Input;
+
+/**
+ * Any of:
+ * - {@link userGift}
+ */
+export type UserGift = userGift;
+
+/**
+ * Version of {@link UserGift} for method parameters.
+ * Any of:
+ * - {@link userGift$Input}
+ */
+export type UserGift$Input = userGift$Input;
+
+/**
+ * Any of:
+ * - {@link userGifts}
+ */
+export type UserGifts = userGifts;
+
+/**
+ * Version of {@link UserGifts} for method parameters.
+ * Any of:
+ * - {@link userGifts$Input}
+ */
+export type UserGifts$Input = userGifts$Input;
+
+/**
+ * Any of:
  * - {@link starTransactionDirectionIncoming}
  * - {@link starTransactionDirectionOutgoing}
  */
@@ -72413,26 +74073,53 @@ export type BotTransactionPurpose$Input =
 
 /**
  * Any of:
- * - {@link channelTransactionPurposePaidMedia}
- * - {@link channelTransactionPurposeJoin}
- * - {@link channelTransactionPurposeReaction}
+ * - {@link chatTransactionPurposePaidMedia}
+ * - {@link chatTransactionPurposeJoin}
+ * - {@link chatTransactionPurposeReaction}
+ * - {@link chatTransactionPurposeGiveaway}
  */
-export type ChannelTransactionPurpose =
-  | channelTransactionPurposePaidMedia
-  | channelTransactionPurposeJoin
-  | channelTransactionPurposeReaction;
+export type ChatTransactionPurpose =
+  | chatTransactionPurposePaidMedia
+  | chatTransactionPurposeJoin
+  | chatTransactionPurposeReaction
+  | chatTransactionPurposeGiveaway;
 
 /**
- * Version of {@link ChannelTransactionPurpose} for method parameters.
+ * Version of {@link ChatTransactionPurpose} for method parameters.
  * Any of:
- * - {@link channelTransactionPurposePaidMedia$Input}
- * - {@link channelTransactionPurposeJoin$Input}
- * - {@link channelTransactionPurposeReaction$Input}
+ * - {@link chatTransactionPurposePaidMedia$Input}
+ * - {@link chatTransactionPurposeJoin$Input}
+ * - {@link chatTransactionPurposeReaction$Input}
+ * - {@link chatTransactionPurposeGiveaway$Input}
  */
-export type ChannelTransactionPurpose$Input =
-  | channelTransactionPurposePaidMedia$Input
-  | channelTransactionPurposeJoin$Input
-  | channelTransactionPurposeReaction$Input;
+export type ChatTransactionPurpose$Input =
+  | chatTransactionPurposePaidMedia$Input
+  | chatTransactionPurposeJoin$Input
+  | chatTransactionPurposeReaction$Input
+  | chatTransactionPurposeGiveaway$Input;
+
+/**
+ * Any of:
+ * - {@link userTransactionPurposeGiftedStars}
+ * - {@link userTransactionPurposeGiftSell}
+ * - {@link userTransactionPurposeGiftSend}
+ */
+export type UserTransactionPurpose =
+  | userTransactionPurposeGiftedStars
+  | userTransactionPurposeGiftSell
+  | userTransactionPurposeGiftSend;
+
+/**
+ * Version of {@link UserTransactionPurpose} for method parameters.
+ * Any of:
+ * - {@link userTransactionPurposeGiftedStars$Input}
+ * - {@link userTransactionPurposeGiftSell$Input}
+ * - {@link userTransactionPurposeGiftSend$Input}
+ */
+export type UserTransactionPurpose$Input =
+  | userTransactionPurposeGiftedStars$Input
+  | userTransactionPurposeGiftSell$Input
+  | userTransactionPurposeGiftSend$Input;
 
 /**
  * Any of:
@@ -72443,7 +74130,7 @@ export type ChannelTransactionPurpose$Input =
  * - {@link starTransactionPartnerTelegramAds}
  * - {@link starTransactionPartnerBot}
  * - {@link starTransactionPartnerBusiness}
- * - {@link starTransactionPartnerChannel}
+ * - {@link starTransactionPartnerChat}
  * - {@link starTransactionPartnerUser}
  * - {@link starTransactionPartnerUnsupported}
  */
@@ -72455,7 +74142,7 @@ export type StarTransactionPartner =
   | starTransactionPartnerTelegramAds
   | starTransactionPartnerBot
   | starTransactionPartnerBusiness
-  | starTransactionPartnerChannel
+  | starTransactionPartnerChat
   | starTransactionPartnerUser
   | starTransactionPartnerUnsupported;
 
@@ -72469,7 +74156,7 @@ export type StarTransactionPartner =
  * - {@link starTransactionPartnerTelegramAds$Input}
  * - {@link starTransactionPartnerBot$Input}
  * - {@link starTransactionPartnerBusiness$Input}
- * - {@link starTransactionPartnerChannel$Input}
+ * - {@link starTransactionPartnerChat$Input}
  * - {@link starTransactionPartnerUser$Input}
  * - {@link starTransactionPartnerUnsupported$Input}
  */
@@ -72481,7 +74168,7 @@ export type StarTransactionPartner$Input =
   | starTransactionPartnerTelegramAds$Input
   | starTransactionPartnerBot$Input
   | starTransactionPartnerBusiness$Input
-  | starTransactionPartnerChannel$Input
+  | starTransactionPartnerChat$Input
   | starTransactionPartnerUser$Input
   | starTransactionPartnerUnsupported$Input;
 
@@ -72513,53 +74200,68 @@ export type StarTransactions$Input = starTransactions$Input;
 
 /**
  * Any of:
- * - {@link premiumGiveawayParticipantStatusEligible}
- * - {@link premiumGiveawayParticipantStatusParticipating}
- * - {@link premiumGiveawayParticipantStatusAlreadyWasMember}
- * - {@link premiumGiveawayParticipantStatusAdministrator}
- * - {@link premiumGiveawayParticipantStatusDisallowedCountry}
+ * - {@link giveawayParticipantStatusEligible}
+ * - {@link giveawayParticipantStatusParticipating}
+ * - {@link giveawayParticipantStatusAlreadyWasMember}
+ * - {@link giveawayParticipantStatusAdministrator}
+ * - {@link giveawayParticipantStatusDisallowedCountry}
  */
-export type PremiumGiveawayParticipantStatus =
-  | premiumGiveawayParticipantStatusEligible
-  | premiumGiveawayParticipantStatusParticipating
-  | premiumGiveawayParticipantStatusAlreadyWasMember
-  | premiumGiveawayParticipantStatusAdministrator
-  | premiumGiveawayParticipantStatusDisallowedCountry;
+export type GiveawayParticipantStatus =
+  | giveawayParticipantStatusEligible
+  | giveawayParticipantStatusParticipating
+  | giveawayParticipantStatusAlreadyWasMember
+  | giveawayParticipantStatusAdministrator
+  | giveawayParticipantStatusDisallowedCountry;
 
 /**
- * Version of {@link PremiumGiveawayParticipantStatus} for method parameters.
+ * Version of {@link GiveawayParticipantStatus} for method parameters.
  * Any of:
- * - {@link premiumGiveawayParticipantStatusEligible$Input}
- * - {@link premiumGiveawayParticipantStatusParticipating$Input}
- * - {@link premiumGiveawayParticipantStatusAlreadyWasMember$Input}
- * - {@link premiumGiveawayParticipantStatusAdministrator$Input}
- * - {@link premiumGiveawayParticipantStatusDisallowedCountry$Input}
+ * - {@link giveawayParticipantStatusEligible$Input}
+ * - {@link giveawayParticipantStatusParticipating$Input}
+ * - {@link giveawayParticipantStatusAlreadyWasMember$Input}
+ * - {@link giveawayParticipantStatusAdministrator$Input}
+ * - {@link giveawayParticipantStatusDisallowedCountry$Input}
  */
-export type PremiumGiveawayParticipantStatus$Input =
-  | premiumGiveawayParticipantStatusEligible$Input
-  | premiumGiveawayParticipantStatusParticipating$Input
-  | premiumGiveawayParticipantStatusAlreadyWasMember$Input
-  | premiumGiveawayParticipantStatusAdministrator$Input
-  | premiumGiveawayParticipantStatusDisallowedCountry$Input;
+export type GiveawayParticipantStatus$Input =
+  | giveawayParticipantStatusEligible$Input
+  | giveawayParticipantStatusParticipating$Input
+  | giveawayParticipantStatusAlreadyWasMember$Input
+  | giveawayParticipantStatusAdministrator$Input
+  | giveawayParticipantStatusDisallowedCountry$Input;
 
 /**
  * Any of:
- * - {@link premiumGiveawayInfoOngoing}
- * - {@link premiumGiveawayInfoCompleted}
+ * - {@link giveawayInfoOngoing}
+ * - {@link giveawayInfoCompleted}
  */
-export type PremiumGiveawayInfo =
-  | premiumGiveawayInfoOngoing
-  | premiumGiveawayInfoCompleted;
+export type GiveawayInfo = giveawayInfoOngoing | giveawayInfoCompleted;
 
 /**
- * Version of {@link PremiumGiveawayInfo} for method parameters.
+ * Version of {@link GiveawayInfo} for method parameters.
  * Any of:
- * - {@link premiumGiveawayInfoOngoing$Input}
- * - {@link premiumGiveawayInfoCompleted$Input}
+ * - {@link giveawayInfoOngoing$Input}
+ * - {@link giveawayInfoCompleted$Input}
  */
-export type PremiumGiveawayInfo$Input =
-  | premiumGiveawayInfoOngoing$Input
-  | premiumGiveawayInfoCompleted$Input;
+export type GiveawayInfo$Input =
+  | giveawayInfoOngoing$Input
+  | giveawayInfoCompleted$Input;
+
+/**
+ * Any of:
+ * - {@link giveawayPrizePremium}
+ * - {@link giveawayPrizeStars}
+ */
+export type GiveawayPrize = giveawayPrizePremium | giveawayPrizeStars;
+
+/**
+ * Version of {@link GiveawayPrize} for method parameters.
+ * Any of:
+ * - {@link giveawayPrizePremium$Input}
+ * - {@link giveawayPrizeStars$Input}
+ */
+export type GiveawayPrize$Input =
+  | giveawayPrizePremium$Input
+  | giveawayPrizeStars$Input;
 
 /**
  * Any of:
@@ -73758,17 +75460,16 @@ export type SponsoredMessages$Input = sponsoredMessages$Input;
 
 /**
  * Any of:
- * - {@link reportChatSponsoredMessageOption}
+ * - {@link reportOption}
  */
-export type ReportChatSponsoredMessageOption = reportChatSponsoredMessageOption;
+export type ReportOption = reportOption;
 
 /**
- * Version of {@link ReportChatSponsoredMessageOption} for method parameters.
+ * Version of {@link ReportOption} for method parameters.
  * Any of:
- * - {@link reportChatSponsoredMessageOption$Input}
+ * - {@link reportOption$Input}
  */
-export type ReportChatSponsoredMessageOption$Input =
-  reportChatSponsoredMessageOption$Input;
+export type ReportOption$Input = reportOption$Input;
 
 /**
  * Any of:
@@ -74430,6 +76131,7 @@ export type KeyboardButton$Input = keyboardButton$Input;
  * - {@link inlineKeyboardButtonTypeSwitchInline}
  * - {@link inlineKeyboardButtonTypeBuy}
  * - {@link inlineKeyboardButtonTypeUser}
+ * - {@link inlineKeyboardButtonTypeCopyText}
  */
 export type InlineKeyboardButtonType =
   | inlineKeyboardButtonTypeUrl
@@ -74440,7 +76142,8 @@ export type InlineKeyboardButtonType =
   | inlineKeyboardButtonTypeCallbackGame
   | inlineKeyboardButtonTypeSwitchInline
   | inlineKeyboardButtonTypeBuy
-  | inlineKeyboardButtonTypeUser;
+  | inlineKeyboardButtonTypeUser
+  | inlineKeyboardButtonTypeCopyText;
 
 /**
  * Version of {@link InlineKeyboardButtonType} for method parameters.
@@ -74454,6 +76157,7 @@ export type InlineKeyboardButtonType =
  * - {@link inlineKeyboardButtonTypeSwitchInline$Input}
  * - {@link inlineKeyboardButtonTypeBuy$Input}
  * - {@link inlineKeyboardButtonTypeUser$Input}
+ * - {@link inlineKeyboardButtonTypeCopyText$Input}
  */
 export type InlineKeyboardButtonType$Input =
   | inlineKeyboardButtonTypeUrl$Input
@@ -74464,7 +76168,8 @@ export type InlineKeyboardButtonType$Input =
   | inlineKeyboardButtonTypeCallbackGame$Input
   | inlineKeyboardButtonTypeSwitchInline$Input
   | inlineKeyboardButtonTypeBuy$Input
-  | inlineKeyboardButtonTypeUser$Input;
+  | inlineKeyboardButtonTypeUser$Input
+  | inlineKeyboardButtonTypeCopyText$Input;
 
 /**
  * Any of:
@@ -75065,6 +76770,8 @@ export type LinkPreviewAlbumMedia$Input =
  * - {@link linkPreviewTypeEmbeddedAnimationPlayer}
  * - {@link linkPreviewTypeEmbeddedAudioPlayer}
  * - {@link linkPreviewTypeEmbeddedVideoPlayer}
+ * - {@link linkPreviewTypeExternalAudio}
+ * - {@link linkPreviewTypeExternalVideo}
  * - {@link linkPreviewTypeInvoice}
  * - {@link linkPreviewTypeMessage}
  * - {@link linkPreviewTypePhoto}
@@ -75096,6 +76803,8 @@ export type LinkPreviewType =
   | linkPreviewTypeEmbeddedAnimationPlayer
   | linkPreviewTypeEmbeddedAudioPlayer
   | linkPreviewTypeEmbeddedVideoPlayer
+  | linkPreviewTypeExternalAudio
+  | linkPreviewTypeExternalVideo
   | linkPreviewTypeInvoice
   | linkPreviewTypeMessage
   | linkPreviewTypePhoto
@@ -75129,6 +76838,8 @@ export type LinkPreviewType =
  * - {@link linkPreviewTypeEmbeddedAnimationPlayer$Input}
  * - {@link linkPreviewTypeEmbeddedAudioPlayer$Input}
  * - {@link linkPreviewTypeEmbeddedVideoPlayer$Input}
+ * - {@link linkPreviewTypeExternalAudio$Input}
+ * - {@link linkPreviewTypeExternalVideo$Input}
  * - {@link linkPreviewTypeInvoice$Input}
  * - {@link linkPreviewTypeMessage$Input}
  * - {@link linkPreviewTypePhoto$Input}
@@ -75160,6 +76871,8 @@ export type LinkPreviewType$Input =
   | linkPreviewTypeEmbeddedAnimationPlayer$Input
   | linkPreviewTypeEmbeddedAudioPlayer$Input
   | linkPreviewTypeEmbeddedVideoPlayer$Input
+  | linkPreviewTypeExternalAudio$Input
+  | linkPreviewTypeExternalVideo$Input
   | linkPreviewTypeInvoice$Input
   | linkPreviewTypeMessage$Input
   | linkPreviewTypePhoto$Input
@@ -75593,16 +77306,16 @@ export type PaidMedia$Input =
 
 /**
  * Any of:
- * - {@link premiumGiveawayParameters}
+ * - {@link giveawayParameters}
  */
-export type PremiumGiveawayParameters = premiumGiveawayParameters;
+export type GiveawayParameters = giveawayParameters;
 
 /**
- * Version of {@link PremiumGiveawayParameters} for method parameters.
+ * Version of {@link GiveawayParameters} for method parameters.
  * Any of:
- * - {@link premiumGiveawayParameters$Input}
+ * - {@link giveawayParameters$Input}
  */
-export type PremiumGiveawayParameters$Input = premiumGiveawayParameters$Input;
+export type GiveawayParameters$Input = giveawayParameters$Input;
 
 /**
  * Any of:
@@ -76154,11 +77867,13 @@ export type InputPassportElementError$Input = inputPassportElementError$Input;
  * - {@link messagePaymentRefunded}
  * - {@link messageGiftedPremium}
  * - {@link messagePremiumGiftCode}
- * - {@link messagePremiumGiveawayCreated}
- * - {@link messagePremiumGiveaway}
- * - {@link messagePremiumGiveawayCompleted}
- * - {@link messagePremiumGiveawayWinners}
+ * - {@link messageGiveawayCreated}
+ * - {@link messageGiveaway}
+ * - {@link messageGiveawayCompleted}
+ * - {@link messageGiveawayWinners}
  * - {@link messageGiftedStars}
+ * - {@link messageGiveawayPrizeStars}
+ * - {@link messageGift}
  * - {@link messageContactRegistered}
  * - {@link messageUsersShared}
  * - {@link messageChatShared}
@@ -76228,11 +77943,13 @@ export type MessageContent =
   | messagePaymentRefunded
   | messageGiftedPremium
   | messagePremiumGiftCode
-  | messagePremiumGiveawayCreated
-  | messagePremiumGiveaway
-  | messagePremiumGiveawayCompleted
-  | messagePremiumGiveawayWinners
+  | messageGiveawayCreated
+  | messageGiveaway
+  | messageGiveawayCompleted
+  | messageGiveawayWinners
   | messageGiftedStars
+  | messageGiveawayPrizeStars
+  | messageGift
   | messageContactRegistered
   | messageUsersShared
   | messageChatShared
@@ -76304,11 +78021,13 @@ export type MessageContent =
  * - {@link messagePaymentRefunded$Input}
  * - {@link messageGiftedPremium$Input}
  * - {@link messagePremiumGiftCode$Input}
- * - {@link messagePremiumGiveawayCreated$Input}
- * - {@link messagePremiumGiveaway$Input}
- * - {@link messagePremiumGiveawayCompleted$Input}
- * - {@link messagePremiumGiveawayWinners$Input}
+ * - {@link messageGiveawayCreated$Input}
+ * - {@link messageGiveaway$Input}
+ * - {@link messageGiveawayCompleted$Input}
+ * - {@link messageGiveawayWinners$Input}
  * - {@link messageGiftedStars$Input}
+ * - {@link messageGiveawayPrizeStars$Input}
+ * - {@link messageGift$Input}
  * - {@link messageContactRegistered$Input}
  * - {@link messageUsersShared$Input}
  * - {@link messageChatShared$Input}
@@ -76378,11 +78097,13 @@ export type MessageContent$Input =
   | messagePaymentRefunded$Input
   | messageGiftedPremium$Input
   | messagePremiumGiftCode$Input
-  | messagePremiumGiveawayCreated$Input
-  | messagePremiumGiveaway$Input
-  | messagePremiumGiveawayCompleted$Input
-  | messagePremiumGiveawayWinners$Input
+  | messageGiveawayCreated$Input
+  | messageGiveaway$Input
+  | messageGiveawayCompleted$Input
+  | messageGiveawayWinners$Input
   | messageGiftedStars$Input
+  | messageGiveawayPrizeStars$Input
+  | messageGift$Input
   | messageContactRegistered$Input
   | messageUsersShared$Input
   | messageChatShared$Input
@@ -77597,16 +79318,16 @@ export type ChatBoostSource$Input =
 
 /**
  * Any of:
- * - {@link prepaidPremiumGiveaway}
+ * - {@link prepaidGiveaway}
  */
-export type PrepaidPremiumGiveaway = prepaidPremiumGiveaway;
+export type PrepaidGiveaway = prepaidGiveaway;
 
 /**
- * Version of {@link PrepaidPremiumGiveaway} for method parameters.
+ * Version of {@link PrepaidGiveaway} for method parameters.
  * Any of:
- * - {@link prepaidPremiumGiveaway$Input}
+ * - {@link prepaidGiveaway$Input}
  */
-export type PrepaidPremiumGiveaway$Input = prepaidPremiumGiveaway$Input;
+export type PrepaidGiveaway$Input = prepaidGiveaway$Input;
 
 /**
  * Any of:
@@ -78555,6 +80276,7 @@ export type GameHighScores$Input = gameHighScores$Input;
  * - {@link chatEventMemberLeft}
  * - {@link chatEventMemberPromoted}
  * - {@link chatEventMemberRestricted}
+ * - {@link chatEventMemberSubscriptionExtended}
  * - {@link chatEventAvailableReactionsChanged}
  * - {@link chatEventBackgroundChanged}
  * - {@link chatEventDescriptionChanged}
@@ -78607,6 +80329,7 @@ export type ChatEventAction =
   | chatEventMemberLeft
   | chatEventMemberPromoted
   | chatEventMemberRestricted
+  | chatEventMemberSubscriptionExtended
   | chatEventAvailableReactionsChanged
   | chatEventBackgroundChanged
   | chatEventDescriptionChanged
@@ -78661,6 +80384,7 @@ export type ChatEventAction =
  * - {@link chatEventMemberLeft$Input}
  * - {@link chatEventMemberPromoted$Input}
  * - {@link chatEventMemberRestricted$Input}
+ * - {@link chatEventMemberSubscriptionExtended$Input}
  * - {@link chatEventAvailableReactionsChanged$Input}
  * - {@link chatEventBackgroundChanged$Input}
  * - {@link chatEventDescriptionChanged$Input}
@@ -78713,6 +80437,7 @@ export type ChatEventAction$Input =
   | chatEventMemberLeft$Input
   | chatEventMemberPromoted$Input
   | chatEventMemberRestricted$Input
+  | chatEventMemberSubscriptionExtended$Input
   | chatEventAvailableReactionsChanged$Input
   | chatEventBackgroundChanged$Input
   | chatEventDescriptionChanged$Input
@@ -79275,6 +81000,7 @@ export type PremiumState$Input = premiumState$Input;
  * - {@link storePaymentPurposeGiftedPremium}
  * - {@link storePaymentPurposePremiumGiftCodes}
  * - {@link storePaymentPurposePremiumGiveaway}
+ * - {@link storePaymentPurposeStarGiveaway}
  * - {@link storePaymentPurposeStars}
  * - {@link storePaymentPurposeGiftedStars}
  */
@@ -79283,6 +81009,7 @@ export type StorePaymentPurpose =
   | storePaymentPurposeGiftedPremium
   | storePaymentPurposePremiumGiftCodes
   | storePaymentPurposePremiumGiveaway
+  | storePaymentPurposeStarGiveaway
   | storePaymentPurposeStars
   | storePaymentPurposeGiftedStars;
 
@@ -79293,6 +81020,7 @@ export type StorePaymentPurpose =
  * - {@link storePaymentPurposeGiftedPremium$Input}
  * - {@link storePaymentPurposePremiumGiftCodes$Input}
  * - {@link storePaymentPurposePremiumGiveaway$Input}
+ * - {@link storePaymentPurposeStarGiveaway$Input}
  * - {@link storePaymentPurposeStars$Input}
  * - {@link storePaymentPurposeGiftedStars$Input}
  */
@@ -79301,6 +81029,7 @@ export type StorePaymentPurpose$Input =
   | storePaymentPurposeGiftedPremium$Input
   | storePaymentPurposePremiumGiftCodes$Input
   | storePaymentPurposePremiumGiveaway$Input
+  | storePaymentPurposeStarGiveaway$Input
   | storePaymentPurposeStars$Input
   | storePaymentPurposeGiftedStars$Input;
 
@@ -79310,6 +81039,7 @@ export type StorePaymentPurpose$Input =
  * - {@link telegramPaymentPurposePremiumGiveaway}
  * - {@link telegramPaymentPurposeStars}
  * - {@link telegramPaymentPurposeGiftedStars}
+ * - {@link telegramPaymentPurposeStarGiveaway}
  * - {@link telegramPaymentPurposeJoinChat}
  */
 export type TelegramPaymentPurpose =
@@ -79317,6 +81047,7 @@ export type TelegramPaymentPurpose =
   | telegramPaymentPurposePremiumGiveaway
   | telegramPaymentPurposeStars
   | telegramPaymentPurposeGiftedStars
+  | telegramPaymentPurposeStarGiveaway
   | telegramPaymentPurposeJoinChat;
 
 /**
@@ -79326,6 +81057,7 @@ export type TelegramPaymentPurpose =
  * - {@link telegramPaymentPurposePremiumGiveaway$Input}
  * - {@link telegramPaymentPurposeStars$Input}
  * - {@link telegramPaymentPurposeGiftedStars$Input}
+ * - {@link telegramPaymentPurposeStarGiveaway$Input}
  * - {@link telegramPaymentPurposeJoinChat$Input}
  */
 export type TelegramPaymentPurpose$Input =
@@ -79333,6 +81065,7 @@ export type TelegramPaymentPurpose$Input =
   | telegramPaymentPurposePremiumGiveaway$Input
   | telegramPaymentPurposeStars$Input
   | telegramPaymentPurposeGiftedStars$Input
+  | telegramPaymentPurposeStarGiveaway$Input
   | telegramPaymentPurposeJoinChat$Input;
 
 /**
@@ -79714,7 +81447,8 @@ export type MessageFileType$Input =
  * - {@link pushMessageContentPhoto}
  * - {@link pushMessageContentPoll}
  * - {@link pushMessageContentPremiumGiftCode}
- * - {@link pushMessageContentPremiumGiveaway}
+ * - {@link pushMessageContentGiveaway}
+ * - {@link pushMessageContentGift}
  * - {@link pushMessageContentScreenshotTaken}
  * - {@link pushMessageContentSticker}
  * - {@link pushMessageContentStory}
@@ -79751,7 +81485,8 @@ export type PushMessageContent =
   | pushMessageContentPhoto
   | pushMessageContentPoll
   | pushMessageContentPremiumGiftCode
-  | pushMessageContentPremiumGiveaway
+  | pushMessageContentGiveaway
+  | pushMessageContentGift
   | pushMessageContentScreenshotTaken
   | pushMessageContentSticker
   | pushMessageContentStory
@@ -79790,7 +81525,8 @@ export type PushMessageContent =
  * - {@link pushMessageContentPhoto$Input}
  * - {@link pushMessageContentPoll$Input}
  * - {@link pushMessageContentPremiumGiftCode$Input}
- * - {@link pushMessageContentPremiumGiveaway$Input}
+ * - {@link pushMessageContentGiveaway$Input}
+ * - {@link pushMessageContentGift$Input}
  * - {@link pushMessageContentScreenshotTaken$Input}
  * - {@link pushMessageContentSticker$Input}
  * - {@link pushMessageContentStory$Input}
@@ -79827,7 +81563,8 @@ export type PushMessageContent$Input =
   | pushMessageContentPhoto$Input
   | pushMessageContentPoll$Input
   | pushMessageContentPremiumGiftCode$Input
-  | pushMessageContentPremiumGiveaway$Input
+  | pushMessageContentGiveaway$Input
+  | pushMessageContentGift$Input
   | pushMessageContentScreenshotTaken$Input
   | pushMessageContentSticker$Input
   | pushMessageContentStory$Input
@@ -80441,6 +82178,56 @@ export type ReportReason$Input =
   | reportReasonIllegalDrugs$Input
   | reportReasonPersonalDetails$Input
   | reportReasonCustom$Input;
+
+/**
+ * Any of:
+ * - {@link reportChatResultOk}
+ * - {@link reportChatResultOptionRequired}
+ * - {@link reportChatResultTextRequired}
+ * - {@link reportChatResultMessagesRequired}
+ */
+export type ReportChatResult =
+  | reportChatResultOk
+  | reportChatResultOptionRequired
+  | reportChatResultTextRequired
+  | reportChatResultMessagesRequired;
+
+/**
+ * Version of {@link ReportChatResult} for method parameters.
+ * Any of:
+ * - {@link reportChatResultOk$Input}
+ * - {@link reportChatResultOptionRequired$Input}
+ * - {@link reportChatResultTextRequired$Input}
+ * - {@link reportChatResultMessagesRequired$Input}
+ */
+export type ReportChatResult$Input =
+  | reportChatResultOk$Input
+  | reportChatResultOptionRequired$Input
+  | reportChatResultTextRequired$Input
+  | reportChatResultMessagesRequired$Input;
+
+/**
+ * Any of:
+ * - {@link reportStoryResultOk}
+ * - {@link reportStoryResultOptionRequired}
+ * - {@link reportStoryResultTextRequired}
+ */
+export type ReportStoryResult =
+  | reportStoryResultOk
+  | reportStoryResultOptionRequired
+  | reportStoryResultTextRequired;
+
+/**
+ * Version of {@link ReportStoryResult} for method parameters.
+ * Any of:
+ * - {@link reportStoryResultOk$Input}
+ * - {@link reportStoryResultOptionRequired$Input}
+ * - {@link reportStoryResultTextRequired$Input}
+ */
+export type ReportStoryResult$Input =
+  | reportStoryResultOk$Input
+  | reportStoryResultOptionRequired$Input
+  | reportStoryResultTextRequired$Input;
 
 /**
  * Any of:
@@ -81937,6 +83724,7 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateChatBoost}
  * - {@link updateMessageReaction}
  * - {@link updateMessageReactions}
+ * - {@link updatePaidMediaPurchased}
  */
 export type Update =
   | updateAuthorizationState
@@ -82088,7 +83876,8 @@ export type Update =
   | updateNewChatJoinRequest
   | updateChatBoost
   | updateMessageReaction
-  | updateMessageReactions;
+  | updateMessageReactions
+  | updatePaidMediaPurchased;
 
 /**
  * Version of {@link Update} for method parameters.
@@ -82243,6 +84032,7 @@ export type Update =
  * - {@link updateChatBoost$Input}
  * - {@link updateMessageReaction$Input}
  * - {@link updateMessageReactions$Input}
+ * - {@link updatePaidMediaPurchased$Input}
  */
 export type Update$Input =
   | updateAuthorizationState$Input
@@ -82394,7 +84184,8 @@ export type Update$Input =
   | updateNewChatJoinRequest$Input
   | updateChatBoost$Input
   | updateMessageReaction$Input
-  | updateMessageReactions$Input;
+  | updateMessageReactions$Input
+  | updatePaidMediaPurchased$Input;
 
 /**
  * Any of:
@@ -82754,7 +84545,8 @@ export type $MethodsDict = {
   readonly clearRecentReactions: clearRecentReactions;
   readonly addMessageReaction: addMessageReaction;
   readonly removeMessageReaction: removeMessageReaction;
-  readonly addPaidMessageReaction: addPaidMessageReaction;
+  readonly addPendingPaidMessageReaction: addPendingPaidMessageReaction;
+  readonly commitPendingPaidMessageReactions: commitPendingPaidMessageReactions;
   readonly removePendingPaidMessageReactions: removePendingPaidMessageReactions;
   readonly togglePaidMessageReactionIsAnonymous: togglePaidMessageReactionIsAnonymous;
   readonly setMessageReactions: setMessageReactions;
@@ -82788,7 +84580,7 @@ export type $MethodsDict = {
   readonly shareChatWithBot: shareChatWithBot;
   readonly getInlineQueryResults: getInlineQueryResults;
   readonly answerInlineQuery: answerInlineQuery;
-  readonly getPopularWebAppBots: getPopularWebAppBots;
+  readonly getGrossingWebAppBots: getGrossingWebAppBots;
   readonly searchWebApp: searchWebApp;
   readonly getWebAppLinkUrl: getWebAppLinkUrl;
   readonly getMainWebApp: getMainWebApp;
@@ -83049,6 +84841,7 @@ export type $MethodsDict = {
   readonly getTrendingStickerSets: getTrendingStickerSets;
   readonly getAttachedStickerSets: getAttachedStickerSets;
   readonly getStickerSet: getStickerSet;
+  readonly getStickerSetName: getStickerSetName;
   readonly searchStickerSet: searchStickerSet;
   readonly searchInstalledStickerSets: searchInstalledStickerSets;
   readonly searchStickerSets: searchStickerSets;
@@ -83180,6 +84973,11 @@ export type $MethodsDict = {
   readonly getSavedOrderInfo: getSavedOrderInfo;
   readonly deleteSavedOrderInfo: deleteSavedOrderInfo;
   readonly deleteSavedCredentials: deleteSavedCredentials;
+  readonly getAvailableGifts: getAvailableGifts;
+  readonly sendGift: sendGift;
+  readonly sellGift: sellGift;
+  readonly toggleGiftIsSaved: toggleGiftIsSaved;
+  readonly getUserGifts: getUserGifts;
   readonly createInvoiceLink: createInvoiceLink;
   readonly refundStarPayment: refundStarPayment;
   readonly getSupportUser: getSupportUser;
@@ -83279,16 +85077,18 @@ export type $MethodsDict = {
   readonly getPremiumLimit: getPremiumLimit;
   readonly getPremiumFeatures: getPremiumFeatures;
   readonly getPremiumStickerExamples: getPremiumStickerExamples;
+  readonly getPremiumInfoSticker: getPremiumInfoSticker;
   readonly viewPremiumFeature: viewPremiumFeature;
   readonly clickPremiumSubscriptionButton: clickPremiumSubscriptionButton;
   readonly getPremiumState: getPremiumState;
   readonly getPremiumGiftCodePaymentOptions: getPremiumGiftCodePaymentOptions;
   readonly checkPremiumGiftCode: checkPremiumGiftCode;
   readonly applyPremiumGiftCode: applyPremiumGiftCode;
-  readonly launchPrepaidPremiumGiveaway: launchPrepaidPremiumGiveaway;
-  readonly getPremiumGiveawayInfo: getPremiumGiveawayInfo;
+  readonly launchPrepaidGiveaway: launchPrepaidGiveaway;
+  readonly getGiveawayInfo: getGiveawayInfo;
   readonly getStarPaymentOptions: getStarPaymentOptions;
   readonly getStarGiftPaymentOptions: getStarGiftPaymentOptions;
+  readonly getStarGiveawayPaymentOptions: getStarGiveawayPaymentOptions;
   readonly getStarTransactions: getStarTransactions;
   readonly getStarSubscriptions: getStarSubscriptions;
   readonly canPurchaseFromStore: canPurchaseFromStore;
@@ -84075,7 +85875,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a message
+   * Returns information about a message. Returns a 404 error if the message doesn't exist
    *
    * @param {getMessage$DirectInput} parameters {@link getMessage$Input}
    * @returns {Promise<Message>} Promise<{@link Message}>
@@ -84086,7 +85886,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a message, if it is available without sending network request. This is an offline request
+   * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
    *
    * @param {getMessageLocally$DirectInput} parameters {@link getMessageLocally$Input}
    * @returns {Promise<Message>} Promise<{@link Message}>
@@ -84103,7 +85903,9 @@ export class $AsyncApi {
    *
    * - the message with a previously set same background, the giveaway message, and the topic creation message for messages of the types
    *
-   * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messagePremiumGiveawayCompleted and topic messages without non-bundled replied message respectively
+   * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messageGiveawayCompleted and topic messages without non-bundled replied message respectively.
+   *
+   * - Returns a 404 error if the message doesn't exist
    *
    * @param {getRepliedMessage$DirectInput} parameters {@link getRepliedMessage$Input}
    * @returns {Promise<Message>} Promise<{@link Message}>
@@ -84116,7 +85918,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a newest pinned message in the chat
+   * Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
    *
    * @param {getChatPinnedMessage$DirectInput} parameters {@link getChatPinnedMessage$Input}
    * @returns {Promise<Message>} Promise<{@link Message}>
@@ -84301,9 +86103,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns a list of users and location-based supergroups nearby. The list of users nearby will be updated for 60 seconds after the request by the updates updateUsersNearby.
-   *
-   * - The request must be sent again every 25 seconds with adjusted location to not miss new chats
+   * Returns a list of users and location-based supergroups nearby. The method was disabled and returns an empty list of chats now
    *
    * @param {searchChatsNearby$DirectInput} parameters {@link searchChatsNearby$Input}
    * @returns {Promise<ChatsNearby>} Promise<{@link ChatsNearby}>
@@ -84765,7 +86565,7 @@ export class $AsyncApi {
   /**
    * Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
    *
-   * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id
+   * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id.
    *
    * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
    *
@@ -84935,7 +86735,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the last message sent in a chat no later than the specified date
+   * Returns the last message sent in a chat no later than the specified date. Returns a 404 error if such message doesn't exist
    *
    * @param {getChatMessageByDate$DirectInput} parameters {@link getChatMessageByDate$Input}
    * @returns {Promise<Message>} Promise<{@link Message}>
@@ -85031,7 +86831,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+   * Informs TDLib that the user opened the sponsored chat via the button, the name, the chat photo, a mention in the sponsored message text, or the media in the sponsored message
    *
    * @param {clickChatSponsoredMessage$DirectInput} parameters {@link clickChatSponsoredMessage$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -85666,7 +87466,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+   * Loads quick reply shortcuts created by the current user. The loaded data will be sent through updateQuickReplyShortcut and updateQuickReplyShortcuts
    *
    * @param {loadQuickReplyShortcuts$DirectInput} parameters {@link loadQuickReplyShortcuts$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -86078,20 +87878,39 @@ export class $AsyncApi {
   }
 
   /**
-   * Adds the paid message reaction to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
+   * Adds the paid message reaction to a message. Use getMessageAvailableReactions to check whether the reaction is available for the message
    *
-   * @param {addPaidMessageReaction$DirectInput} parameters {@link addPaidMessageReaction$Input}
+   * @param {addPendingPaidMessageReaction$DirectInput} parameters {@link addPendingPaidMessageReaction$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
-  async addPaidMessageReaction(
-    parameters: addPaidMessageReaction$DirectInput
+  async addPendingPaidMessageReaction(
+    parameters: addPendingPaidMessageReaction$DirectInput
   ): Promise<Ok> {
-    const result = await this.client.invoke("addPaidMessageReaction", parameters);
+    const result = await this.client.invoke(
+      "addPendingPaidMessageReaction",
+      parameters
+    );
     return result as Ok;
   }
 
   /**
-   * Removes all pending paid reactions on a message. Can be called within 5 seconds after the last addPaidMessageReaction call
+   * Applies all pending paid reactions on a message
+   *
+   * @param {commitPendingPaidMessageReactions$DirectInput} parameters {@link commitPendingPaidMessageReactions$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async commitPendingPaidMessageReactions(
+    parameters: commitPendingPaidMessageReactions$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "commitPendingPaidMessageReactions",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Removes all pending paid reactions on a message
    *
    * @param {removePendingPaidMessageReactions$DirectInput} parameters {@link removePendingPaidMessageReactions$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -86301,7 +88120,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
+   * Removes potentially dangerous characters from the name of a file. Returns an empty string on failure. Can be called synchronously
    *
    * @param {cleanFileName$DirectInput} parameters {@link cleanFileName$Input}
    * @returns {Promise<Text>} Promise<{@link Text}>
@@ -86509,15 +88328,15 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns popular Web App bots
+   * Returns the most grossing Web App bots
    *
-   * @param {getPopularWebAppBots$DirectInput} parameters {@link getPopularWebAppBots$Input}
+   * @param {getGrossingWebAppBots$DirectInput} parameters {@link getGrossingWebAppBots$Input}
    * @returns {Promise<FoundUsers>} Promise<{@link FoundUsers}>
    */
-  async getPopularWebAppBots(
-    parameters: getPopularWebAppBots$DirectInput
+  async getGrossingWebAppBots(
+    parameters: getGrossingWebAppBots$DirectInput
   ): Promise<FoundUsers> {
-    const result = await this.client.invoke("getPopularWebAppBots", parameters);
+    const result = await this.client.invoke("getGrossingWebAppBots", parameters);
     return result as FoundUsers;
   }
 
@@ -87365,7 +89184,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels
+   * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
    *
    * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
    *
@@ -88293,11 +90112,13 @@ export class $AsyncApi {
    * Reports a story to the Telegram moderators
    *
    * @param {reportStory$DirectInput} parameters {@link reportStory$Input}
-   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<ReportStoryResult>} Promise<{@link ReportStoryResult}>
    */
-  async reportStory(parameters: reportStory$DirectInput): Promise<Ok> {
+  async reportStory(
+    parameters: reportStory$DirectInput
+  ): Promise<ReportStoryResult> {
     const result = await this.client.invoke("reportStory", parameters);
-    return result as Ok;
+    return result as ReportStoryResult;
   }
 
   /**
@@ -88646,7 +90467,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
+   * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile
    *
    * @param {cancelPreliminaryUploadFile$DirectInput} parameters {@link cancelPreliminaryUploadFile$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -88912,7 +90733,7 @@ export class $AsyncApi {
   /**
    * Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels.
    *
-   * - If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used
+   * - If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used.
    *
    * - Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
    *
@@ -89956,6 +91777,17 @@ export class $AsyncApi {
   async getStickerSet(parameters: getStickerSet$DirectInput): Promise<StickerSet> {
     const result = await this.client.invoke("getStickerSet", parameters);
     return result as StickerSet;
+  }
+
+  /**
+   * Returns name of a sticker set by its identifier
+   *
+   * @param {getStickerSetName$DirectInput} parameters {@link getStickerSetName$Input}
+   * @returns {Promise<Text>} Promise<{@link Text}>
+   */
+  async getStickerSetName(parameters: getStickerSetName$DirectInput): Promise<Text> {
+    const result = await this.client.invoke("getStickerSetName", parameters);
+    return result as Text;
   }
 
   /**
@@ -91705,6 +93537,63 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns gifts that can be sent to other users
+   *
+   * @param {getAvailableGifts$DirectInput} parameters {@link getAvailableGifts$Input}
+   * @returns {Promise<Gifts>} Promise<{@link Gifts}>
+   */
+  async getAvailableGifts(
+    parameters: getAvailableGifts$DirectInput
+  ): Promise<Gifts> {
+    const result = await this.client.invoke("getAvailableGifts", parameters);
+    return result as Gifts;
+  }
+
+  /**
+   * Send a gift to another user
+   *
+   * @param {sendGift$DirectInput} parameters {@link sendGift$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async sendGift(parameters: sendGift$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("sendGift", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Sells a gift received by the current user for Telegram Stars
+   *
+   * @param {sellGift$DirectInput} parameters {@link sellGift$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async sellGift(parameters: sellGift$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("sellGift", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Toggles whether a gift is shown on the current user's profile page
+   *
+   * @param {toggleGiftIsSaved$DirectInput} parameters {@link toggleGiftIsSaved$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async toggleGiftIsSaved(parameters: toggleGiftIsSaved$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("toggleGiftIsSaved", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns gifts saved to profile by the given user
+   *
+   * @param {getUserGifts$DirectInput} parameters {@link getUserGifts$Input}
+   * @returns {Promise<UserGifts>} Promise<{@link UserGifts}>
+   */
+  async getUserGifts(parameters: getUserGifts$DirectInput): Promise<UserGifts> {
+    const result = await this.client.invoke("getUserGifts", parameters);
+    return result as UserGifts;
+  }
+
+  /**
    * Creates a link for the given invoice; for bots only
    *
    * @param {createInvoiceLink$DirectInput} parameters {@link createInvoiceLink$Input}
@@ -91718,7 +93607,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Refunds a previously done payment in Telegram Stars
+   * Refunds a previously done payment in Telegram Stars; for bots only
    *
    * @param {refundStarPayment$DirectInput} parameters {@link refundStarPayment$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -92219,11 +94108,11 @@ export class $AsyncApi {
    * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
    *
    * @param {reportChat$DirectInput} parameters {@link reportChat$Input}
-   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   * @returns {Promise<ReportChatResult>} Promise<{@link ReportChatResult}>
    */
-  async reportChat(parameters: reportChat$DirectInput): Promise<Ok> {
+  async reportChat(parameters: reportChat$DirectInput): Promise<ReportChatResult> {
     const result = await this.client.invoke("reportChat", parameters);
-    return result as Ok;
+    return result as ReportChatResult;
   }
 
   /**
@@ -93032,6 +94921,19 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns the sticker to be used as representation of the Telegram Premium subscription
+   *
+   * @param {getPremiumInfoSticker$DirectInput} parameters {@link getPremiumInfoSticker$Input}
+   * @returns {Promise<Sticker>} Promise<{@link Sticker}>
+   */
+  async getPremiumInfoSticker(
+    parameters: getPremiumInfoSticker$DirectInput
+  ): Promise<Sticker> {
+    const result = await this.client.invoke("getPremiumInfoSticker", parameters);
+    return result as Sticker;
+  }
+
+  /**
    * Informs TDLib that the user viewed detailed information about a Premium feature on the Premium features screen
    *
    * @param {viewPremiumFeature$DirectInput} parameters {@link viewPremiumFeature$Input}
@@ -93072,7 +94974,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns available options for Telegram Premium gift code or giveaway creation
+   * Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
    *
    * @param {getPremiumGiftCodePaymentOptions$DirectInput} parameters {@link getPremiumGiftCodePaymentOptions$Input}
    * @returns {Promise<PremiumGiftCodePaymentOptions>} Promise<{@link PremiumGiftCodePaymentOptions}>
@@ -93114,32 +95016,29 @@ export class $AsyncApi {
   }
 
   /**
-   * Launches a prepaid Telegram Premium giveaway
+   * Launches a prepaid giveaway
    *
-   * @param {launchPrepaidPremiumGiveaway$DirectInput} parameters {@link launchPrepaidPremiumGiveaway$Input}
+   * @param {launchPrepaidGiveaway$DirectInput} parameters {@link launchPrepaidGiveaway$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
-  async launchPrepaidPremiumGiveaway(
-    parameters: launchPrepaidPremiumGiveaway$DirectInput
+  async launchPrepaidGiveaway(
+    parameters: launchPrepaidGiveaway$DirectInput
   ): Promise<Ok> {
-    const result = await this.client.invoke(
-      "launchPrepaidPremiumGiveaway",
-      parameters
-    );
+    const result = await this.client.invoke("launchPrepaidGiveaway", parameters);
     return result as Ok;
   }
 
   /**
-   * Returns information about a Telegram Premium giveaway
+   * Returns information about a giveaway
    *
-   * @param {getPremiumGiveawayInfo$DirectInput} parameters {@link getPremiumGiveawayInfo$Input}
-   * @returns {Promise<PremiumGiveawayInfo>} Promise<{@link PremiumGiveawayInfo}>
+   * @param {getGiveawayInfo$DirectInput} parameters {@link getGiveawayInfo$Input}
+   * @returns {Promise<GiveawayInfo>} Promise<{@link GiveawayInfo}>
    */
-  async getPremiumGiveawayInfo(
-    parameters: getPremiumGiveawayInfo$DirectInput
-  ): Promise<PremiumGiveawayInfo> {
-    const result = await this.client.invoke("getPremiumGiveawayInfo", parameters);
-    return result as PremiumGiveawayInfo;
+  async getGiveawayInfo(
+    parameters: getGiveawayInfo$DirectInput
+  ): Promise<GiveawayInfo> {
+    const result = await this.client.invoke("getGiveawayInfo", parameters);
+    return result as GiveawayInfo;
   }
 
   /**
@@ -93166,6 +95065,22 @@ export class $AsyncApi {
   ): Promise<StarPaymentOptions> {
     const result = await this.client.invoke("getStarGiftPaymentOptions", parameters);
     return result as StarPaymentOptions;
+  }
+
+  /**
+   * Returns available options for Telegram Star giveaway creation
+   *
+   * @param {getStarGiveawayPaymentOptions$DirectInput} parameters {@link getStarGiveawayPaymentOptions$Input}
+   * @returns {Promise<StarGiveawayPaymentOptions>} Promise<{@link StarGiveawayPaymentOptions}>
+   */
+  async getStarGiveawayPaymentOptions(
+    parameters: getStarGiveawayPaymentOptions$DirectInput
+  ): Promise<StarGiveawayPaymentOptions> {
+    const result = await this.client.invoke(
+      "getStarGiveawayPaymentOptions",
+      parameters
+    );
+    return result as StarGiveawayPaymentOptions;
   }
 
   /**
@@ -93945,7 +95860,7 @@ export class $SyncApi {
   }
 
   /**
-   * Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
+   * Removes potentially dangerous characters from the name of a file. Returns an empty string on failure. Can be called synchronously
    *
    * @param {cleanFileName$DirectInput} parameters - {@link cleanFileName$Input}
    * @returns {Text} {@link Text}
@@ -95963,7 +97878,7 @@ export type getChat$DirectInput = {
 export type getChat = (parameters: getChat$Input) => Chat;
 
 /**
- * Returns information about a message
+ * Returns information about a message. Returns a 404 error if the message doesn't exist
  */
 export type getMessage$Input = {
   readonly _: "getMessage";
@@ -95982,7 +97897,7 @@ export type getMessage$Input = {
 };
 
 /**
- * Returns information about a message
+ * Returns information about a message. Returns a 404 error if the message doesn't exist
  */
 export type getMessage$DirectInput = {
   /**
@@ -95999,7 +97914,7 @@ export type getMessage$DirectInput = {
 };
 
 /**
- * Returns information about a message
+ * Returns information about a message. Returns a 404 error if the message doesn't exist
  *
  * @param {getMessage$Input} parameters {@link getMessage$Input}
  * @returns {Message} {@link Message}
@@ -96007,7 +97922,7 @@ export type getMessage$DirectInput = {
 export type getMessage = (parameters: getMessage$Input) => Message;
 
 /**
- * Returns information about a message, if it is available without sending network request. This is an offline request
+ * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
  */
 export type getMessageLocally$Input = {
   readonly _: "getMessageLocally";
@@ -96026,7 +97941,7 @@ export type getMessageLocally$Input = {
 };
 
 /**
- * Returns information about a message, if it is available without sending network request. This is an offline request
+ * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
  */
 export type getMessageLocally$DirectInput = {
   /**
@@ -96043,7 +97958,7 @@ export type getMessageLocally$DirectInput = {
 };
 
 /**
- * Returns information about a message, if it is available without sending network request. This is an offline request
+ * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
  *
  * @param {getMessageLocally$Input} parameters {@link getMessageLocally$Input}
  * @returns {Message} {@link Message}
@@ -96055,7 +97970,9 @@ export type getMessageLocally = (parameters: getMessageLocally$Input) => Message
  *
  * - the message with a previously set same background, the giveaway message, and the topic creation message for messages of the types
  *
- * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messagePremiumGiveawayCompleted and topic messages without non-bundled replied message respectively
+ * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messageGiveawayCompleted and topic messages without non-bundled replied message respectively.
+ *
+ * - Returns a 404 error if the message doesn't exist
  */
 export type getRepliedMessage$Input = {
   readonly _: "getRepliedMessage";
@@ -96078,7 +97995,9 @@ export type getRepliedMessage$Input = {
  *
  * - the message with a previously set same background, the giveaway message, and the topic creation message for messages of the types
  *
- * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messagePremiumGiveawayCompleted and topic messages without non-bundled replied message respectively
+ * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messageGiveawayCompleted and topic messages without non-bundled replied message respectively.
+ *
+ * - Returns a 404 error if the message doesn't exist
  */
 export type getRepliedMessage$DirectInput = {
   /**
@@ -96099,7 +98018,9 @@ export type getRepliedMessage$DirectInput = {
  *
  * - the message with a previously set same background, the giveaway message, and the topic creation message for messages of the types
  *
- * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messagePremiumGiveawayCompleted and topic messages without non-bundled replied message respectively
+ * - messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messageGiveawayCompleted and topic messages without non-bundled replied message respectively.
+ *
+ * - Returns a 404 error if the message doesn't exist
  *
  * @param {getRepliedMessage$Input} parameters {@link getRepliedMessage$Input}
  * @returns {Message} {@link Message}
@@ -96107,7 +98028,7 @@ export type getRepliedMessage$DirectInput = {
 export type getRepliedMessage = (parameters: getRepliedMessage$Input) => Message;
 
 /**
- * Returns information about a newest pinned message in the chat
+ * Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
  */
 export type getChatPinnedMessage$Input = {
   readonly _: "getChatPinnedMessage";
@@ -96120,7 +98041,7 @@ export type getChatPinnedMessage$Input = {
 };
 
 /**
- * Returns information about a newest pinned message in the chat
+ * Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
  */
 export type getChatPinnedMessage$DirectInput = {
   /**
@@ -96131,7 +98052,7 @@ export type getChatPinnedMessage$DirectInput = {
 };
 
 /**
- * Returns information about a newest pinned message in the chat
+ * Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
  *
  * @param {getChatPinnedMessage$Input} parameters {@link getChatPinnedMessage$Input}
  * @returns {Message} {@link Message}
@@ -96755,9 +98676,7 @@ export type searchChatsOnServer$DirectInput = {
 export type searchChatsOnServer = (parameters: searchChatsOnServer$Input) => Chats;
 
 /**
- * Returns a list of users and location-based supergroups nearby. The list of users nearby will be updated for 60 seconds after the request by the updates updateUsersNearby.
- *
- * - The request must be sent again every 25 seconds with adjusted location to not miss new chats
+ * Returns a list of users and location-based supergroups nearby. The method was disabled and returns an empty list of chats now
  */
 export type searchChatsNearby$Input = {
   readonly _: "searchChatsNearby";
@@ -96770,9 +98689,7 @@ export type searchChatsNearby$Input = {
 };
 
 /**
- * Returns a list of users and location-based supergroups nearby. The list of users nearby will be updated for 60 seconds after the request by the updates updateUsersNearby.
- *
- * - The request must be sent again every 25 seconds with adjusted location to not miss new chats
+ * Returns a list of users and location-based supergroups nearby. The method was disabled and returns an empty list of chats now
  */
 export type searchChatsNearby$DirectInput = {
   /**
@@ -96783,9 +98700,7 @@ export type searchChatsNearby$DirectInput = {
 };
 
 /**
- * Returns a list of users and location-based supergroups nearby. The list of users nearby will be updated for 60 seconds after the request by the updates updateUsersNearby.
- *
- * - The request must be sent again every 25 seconds with adjusted location to not miss new chats
+ * Returns a list of users and location-based supergroups nearby. The method was disabled and returns an empty list of chats now
  *
  * @param {searchChatsNearby$Input} parameters {@link searchChatsNearby$Input}
  * @returns {ChatsNearby} {@link ChatsNearby}
@@ -98387,7 +100302,7 @@ export type searchSecretMessages = (
 /**
  * Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
  *
- * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id
+ * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id.
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  */
@@ -98436,7 +100351,7 @@ export type searchSavedMessages$Input = {
 /**
  * Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
  *
- * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id
+ * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id.
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  */
@@ -98483,7 +100398,7 @@ export type searchSavedMessages$DirectInput = {
 /**
  * Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
  *
- * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id
+ * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id.
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  *
@@ -99029,7 +100944,7 @@ export type searchChatRecentLocationMessages = (
 ) => Messages;
 
 /**
- * Returns the last message sent in a chat no later than the specified date
+ * Returns the last message sent in a chat no later than the specified date. Returns a 404 error if such message doesn't exist
  */
 export type getChatMessageByDate$Input = {
   readonly _: "getChatMessageByDate";
@@ -99048,7 +100963,7 @@ export type getChatMessageByDate$Input = {
 };
 
 /**
- * Returns the last message sent in a chat no later than the specified date
+ * Returns the last message sent in a chat no later than the specified date. Returns a 404 error if such message doesn't exist
  */
 export type getChatMessageByDate$DirectInput = {
   /**
@@ -99065,7 +100980,7 @@ export type getChatMessageByDate$DirectInput = {
 };
 
 /**
- * Returns the last message sent in a chat no later than the specified date
+ * Returns the last message sent in a chat no later than the specified date. Returns a 404 error if such message doesn't exist
  *
  * @param {getChatMessageByDate$Input} parameters {@link getChatMessageByDate$Input}
  * @returns {Message} {@link Message}
@@ -99451,7 +101366,7 @@ export type getChatSponsoredMessages = (
 ) => SponsoredMessages;
 
 /**
- * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+ * Informs TDLib that the user opened the sponsored chat via the button, the name, the chat photo, a mention in the sponsored message text, or the media in the sponsored message
  */
 export type clickChatSponsoredMessage$Input = {
   readonly _: "clickChatSponsoredMessage";
@@ -99467,10 +101382,22 @@ export type clickChatSponsoredMessage$Input = {
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
+
+  /**
+   * Pass true if the media was clicked in the sponsored message
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_media_click?: Bool$Input;
+
+  /**
+   * Pass true if the user expanded the video from the sponsored message fullscreen before the click
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly from_fullscreen?: Bool$Input;
 };
 
 /**
- * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+ * Informs TDLib that the user opened the sponsored chat via the button, the name, the chat photo, a mention in the sponsored message text, or the media in the sponsored message
  */
 export type clickChatSponsoredMessage$DirectInput = {
   /**
@@ -99484,10 +101411,22 @@ export type clickChatSponsoredMessage$DirectInput = {
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
+
+  /**
+   * Pass true if the media was clicked in the sponsored message
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_media_click?: Bool$Input;
+
+  /**
+   * Pass true if the user expanded the video from the sponsored message fullscreen before the click
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly from_fullscreen?: Bool$Input;
 };
 
 /**
- * Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
+ * Informs TDLib that the user opened the sponsored chat via the button, the name, the chat photo, a mention in the sponsored message text, or the media in the sponsored message
  *
  * @param {clickChatSponsoredMessage$Input} parameters {@link clickChatSponsoredMessage$Input}
  * @returns {Ok} {@link Ok}
@@ -101245,7 +103184,7 @@ export type editMessageCaption$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -101280,7 +103219,7 @@ export type editMessageCaption$DirectInput = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -101589,7 +103528,7 @@ export type editInlineMessageCaption$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -101618,7 +103557,7 @@ export type editInlineMessageCaption$DirectInput = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -102347,7 +104286,7 @@ export type editBusinessMessageCaption$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -102388,7 +104327,7 @@ export type editBusinessMessageCaption$DirectInput = {
   readonly caption?: formattedText$Input | null;
 
   /**
-   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. Can be true only for animation, photo, and video messages
+   * Pass true to show the caption above the media; otherwise, the caption will be shown below the media. May be true only for animation, photo, and video messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly show_caption_above_media?: Bool$Input;
@@ -102649,19 +104588,19 @@ export type checkQuickReplyShortcutName = (
 ) => Ok;
 
 /**
- * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+ * Loads quick reply shortcuts created by the current user. The loaded data will be sent through updateQuickReplyShortcut and updateQuickReplyShortcuts
  */
 export type loadQuickReplyShortcuts$Input = {
   readonly _: "loadQuickReplyShortcuts";
 };
 
 /**
- * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+ * Loads quick reply shortcuts created by the current user. The loaded data will be sent through updateQuickReplyShortcut and updateQuickReplyShortcuts
  */
 export type loadQuickReplyShortcuts$DirectInput = {};
 
 /**
- * Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
+ * Loads quick reply shortcuts created by the current user. The loaded data will be sent through updateQuickReplyShortcut and updateQuickReplyShortcuts
  *
  * @param {loadQuickReplyShortcuts$Input} parameters {@link loadQuickReplyShortcuts$Input}
  * @returns {Ok} {@link Ok}
@@ -103993,7 +105932,7 @@ export type addMessageReaction$Input = {
   readonly message_id?: int53;
 
   /**
-   * Type of the reaction to add. Use addPaidMessageReaction instead to add the paid reaction
+   * Type of the reaction to add. Use addPendingPaidMessageReaction instead to add the paid reaction
    * @type {ReactionType$Input} {@link ReactionType}
    */
   readonly reaction_type?: ReactionType$Input;
@@ -104028,7 +105967,7 @@ export type addMessageReaction$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * Type of the reaction to add. Use addPaidMessageReaction instead to add the paid reaction
+   * Type of the reaction to add. Use addPendingPaidMessageReaction instead to add the paid reaction
    * @type {ReactionType$Input} {@link ReactionType}
    */
   readonly reaction_type?: ReactionType$Input;
@@ -104111,10 +106050,10 @@ export type removeMessageReaction$DirectInput = {
 export type removeMessageReaction = (parameters: removeMessageReaction$Input) => Ok;
 
 /**
- * Adds the paid message reaction to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
+ * Adds the paid message reaction to a message. Use getMessageAvailableReactions to check whether the reaction is available for the message
  */
-export type addPaidMessageReaction$Input = {
-  readonly _: "addPaidMessageReaction";
+export type addPendingPaidMessageReaction$Input = {
+  readonly _: "addPendingPaidMessageReaction";
 
   /**
    * Identifier of the chat to which the message belongs
@@ -104129,22 +106068,28 @@ export type addPaidMessageReaction$Input = {
   readonly message_id?: int53;
 
   /**
-   * Number of Telegram Stars to be used for the reaction; 1-getOption("paid_reaction_star_count_max")
+   * Number of Telegram Stars to be used for the reaction. The total number of pending paid reactions must not exceed getOption("paid_reaction_star_count_max")
    * @type {int53} {@link int53}
    */
   readonly star_count?: int53;
 
   /**
-   * Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors
+   * Pass true if the user didn't choose anonymity explicitly, for example, the reaction is set from the message bubble
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly use_default_is_anonymous?: Bool$Input;
+
+  /**
+   * Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors. Ignored if use_default_is_anonymous == true
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_anonymous?: Bool$Input;
 };
 
 /**
- * Adds the paid message reaction to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
+ * Adds the paid message reaction to a message. Use getMessageAvailableReactions to check whether the reaction is available for the message
  */
-export type addPaidMessageReaction$DirectInput = {
+export type addPendingPaidMessageReaction$DirectInput = {
   /**
    * Identifier of the chat to which the message belongs
    * @type {int53} {@link int53}
@@ -104158,30 +106103,82 @@ export type addPaidMessageReaction$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * Number of Telegram Stars to be used for the reaction; 1-getOption("paid_reaction_star_count_max")
+   * Number of Telegram Stars to be used for the reaction. The total number of pending paid reactions must not exceed getOption("paid_reaction_star_count_max")
    * @type {int53} {@link int53}
    */
   readonly star_count?: int53;
 
   /**
-   * Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors
+   * Pass true if the user didn't choose anonymity explicitly, for example, the reaction is set from the message bubble
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly use_default_is_anonymous?: Bool$Input;
+
+  /**
+   * Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors. Ignored if use_default_is_anonymous == true
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_anonymous?: Bool$Input;
 };
 
 /**
- * Adds the paid message reaction to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
+ * Adds the paid message reaction to a message. Use getMessageAvailableReactions to check whether the reaction is available for the message
  *
- * @param {addPaidMessageReaction$Input} parameters {@link addPaidMessageReaction$Input}
+ * @param {addPendingPaidMessageReaction$Input} parameters {@link addPendingPaidMessageReaction$Input}
  * @returns {Ok} {@link Ok}
  */
-export type addPaidMessageReaction = (
-  parameters: addPaidMessageReaction$Input
+export type addPendingPaidMessageReaction = (
+  parameters: addPendingPaidMessageReaction$Input
 ) => Ok;
 
 /**
- * Removes all pending paid reactions on a message. Can be called within 5 seconds after the last addPaidMessageReaction call
+ * Applies all pending paid reactions on a message
+ */
+export type commitPendingPaidMessageReactions$Input = {
+  readonly _: "commitPendingPaidMessageReactions";
+
+  /**
+   * Identifier of the chat to which the message belongs
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Applies all pending paid reactions on a message
+ */
+export type commitPendingPaidMessageReactions$DirectInput = {
+  /**
+   * Identifier of the chat to which the message belongs
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Applies all pending paid reactions on a message
+ *
+ * @param {commitPendingPaidMessageReactions$Input} parameters {@link commitPendingPaidMessageReactions$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type commitPendingPaidMessageReactions = (
+  parameters: commitPendingPaidMessageReactions$Input
+) => Ok;
+
+/**
+ * Removes all pending paid reactions on a message
  */
 export type removePendingPaidMessageReactions$Input = {
   readonly _: "removePendingPaidMessageReactions";
@@ -104200,7 +106197,7 @@ export type removePendingPaidMessageReactions$Input = {
 };
 
 /**
- * Removes all pending paid reactions on a message. Can be called within 5 seconds after the last addPaidMessageReaction call
+ * Removes all pending paid reactions on a message
  */
 export type removePendingPaidMessageReactions$DirectInput = {
   /**
@@ -104217,7 +106214,7 @@ export type removePendingPaidMessageReactions$DirectInput = {
 };
 
 /**
- * Removes all pending paid reactions on a message. Can be called within 5 seconds after the last addPaidMessageReaction call
+ * Removes all pending paid reactions on a message
  *
  * @param {removePendingPaidMessageReactions$Input} parameters {@link removePendingPaidMessageReactions$Input}
  * @returns {Ok} {@link Ok}
@@ -104881,7 +106878,7 @@ export type getFileExtension$DirectInput = {
 export type getFileExtension = (parameters: getFileExtension$Input) => Text;
 
 /**
- * Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
+ * Removes potentially dangerous characters from the name of a file. Returns an empty string on failure. Can be called synchronously
  */
 export type cleanFileName$Input = {
   readonly _: "cleanFileName";
@@ -104894,7 +106891,7 @@ export type cleanFileName$Input = {
 };
 
 /**
- * Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
+ * Removes potentially dangerous characters from the name of a file. Returns an empty string on failure. Can be called synchronously
  */
 export type cleanFileName$DirectInput = {
   /**
@@ -104905,7 +106902,7 @@ export type cleanFileName$DirectInput = {
 };
 
 /**
- * Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
+ * Removes potentially dangerous characters from the name of a file. Returns an empty string on failure. Can be called synchronously
  *
  * @param {cleanFileName$Input} parameters {@link cleanFileName$Input}
  * @returns {Text} {@link Text}
@@ -105833,10 +107830,10 @@ export type answerInlineQuery$DirectInput = {
 export type answerInlineQuery = (parameters: answerInlineQuery$Input) => Ok;
 
 /**
- * Returns popular Web App bots
+ * Returns the most grossing Web App bots
  */
-export type getPopularWebAppBots$Input = {
-  readonly _: "getPopularWebAppBots";
+export type getGrossingWebAppBots$Input = {
+  readonly _: "getGrossingWebAppBots";
 
   /**
    * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
@@ -105852,9 +107849,9 @@ export type getPopularWebAppBots$Input = {
 };
 
 /**
- * Returns popular Web App bots
+ * Returns the most grossing Web App bots
  */
-export type getPopularWebAppBots$DirectInput = {
+export type getGrossingWebAppBots$DirectInput = {
   /**
    * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
    * @type {string} {@link string}
@@ -105869,13 +107866,13 @@ export type getPopularWebAppBots$DirectInput = {
 };
 
 /**
- * Returns popular Web App bots
+ * Returns the most grossing Web App bots
  *
- * @param {getPopularWebAppBots$Input} parameters {@link getPopularWebAppBots$Input}
+ * @param {getGrossingWebAppBots$Input} parameters {@link getGrossingWebAppBots$Input}
  * @returns {FoundUsers} {@link FoundUsers}
  */
-export type getPopularWebAppBots = (
-  parameters: getPopularWebAppBots$Input
+export type getGrossingWebAppBots = (
+  parameters: getGrossingWebAppBots$Input
 ) => FoundUsers;
 
 /**
@@ -109083,7 +111080,7 @@ export type setChatProfileAccentColor = (
 ) => Ok;
 
 /**
- * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels
+ * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
  *
  * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
  */
@@ -109104,7 +111101,7 @@ export type setChatMessageAutoDeleteTime$Input = {
 };
 
 /**
- * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels
+ * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
  *
  * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
  */
@@ -109123,7 +111120,7 @@ export type setChatMessageAutoDeleteTime$DirectInput = {
 };
 
 /**
- * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels
+ * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
  *
  * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
  *
@@ -111911,7 +113908,7 @@ export type getChatPostedToChatPageStories$Input = {
   readonly from_story_id?: int32;
 
   /**
-   * The maximum number of stories to be returned
+   * The maximum number of stories to be returned.
    *
    * - For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
    * @type {int32} {@link int32}
@@ -111938,7 +113935,7 @@ export type getChatPostedToChatPageStories$DirectInput = {
   readonly from_story_id?: int32;
 
   /**
-   * The maximum number of stories to be returned
+   * The maximum number of stories to be returned.
    *
    * - For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
    * @type {int32} {@link int32}
@@ -111979,7 +113976,7 @@ export type getChatArchivedStories$Input = {
   readonly from_story_id?: int32;
 
   /**
-   * The maximum number of stories to be returned
+   * The maximum number of stories to be returned.
    *
    * - For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
    * @type {int32} {@link int32}
@@ -112006,7 +114003,7 @@ export type getChatArchivedStories$DirectInput = {
   readonly from_story_id?: int32;
 
   /**
-   * The maximum number of stories to be returned
+   * The maximum number of stories to be returned.
    *
    * - For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
    * @type {int32} {@link int32}
@@ -112479,13 +114476,13 @@ export type reportStory$Input = {
   readonly story_id?: int32;
 
   /**
-   * The reason for reporting the story
-   * @type {ReportReason$Input} {@link ReportReason}
+   * Option identifier chosen by the user; leave empty for the initial request
+   * @type {bytes$Input} {@link bytes}
    */
-  readonly reason?: ReportReason$Input;
+  readonly option_id?: bytes$Input;
 
   /**
-   * Additional report details; 0-1024 characters
+   * Additional report details; 0-1024 characters; leave empty for the initial request
    * @type {string} {@link string}
    */
   readonly text?: string;
@@ -112508,13 +114505,13 @@ export type reportStory$DirectInput = {
   readonly story_id?: int32;
 
   /**
-   * The reason for reporting the story
-   * @type {ReportReason$Input} {@link ReportReason}
+   * Option identifier chosen by the user; leave empty for the initial request
+   * @type {bytes$Input} {@link bytes}
    */
-  readonly reason?: ReportReason$Input;
+  readonly option_id?: bytes$Input;
 
   /**
-   * Additional report details; 0-1024 characters
+   * Additional report details; 0-1024 characters; leave empty for the initial request
    * @type {string} {@link string}
    */
   readonly text?: string;
@@ -112524,9 +114521,9 @@ export type reportStory$DirectInput = {
  * Reports a story to the Telegram moderators
  *
  * @param {reportStory$Input} parameters {@link reportStory$Input}
- * @returns {Ok} {@link Ok}
+ * @returns {ReportStoryResult} {@link ReportStoryResult}
  */
-export type reportStory = (parameters: reportStory$Input) => Ok;
+export type reportStory = (parameters: reportStory$Input) => ReportStoryResult;
 
 /**
  * Activates stealth mode for stories, which hides all views of stories from the current user in the last "story_stealth_mode_past_period" seconds
@@ -113421,7 +115418,7 @@ export type getSuggestedFileName$Input = {
   readonly file_id?: int32;
 
   /**
-   * Directory in which the file is supposed to be saved
+   * Directory in which the file is expected to be saved
    * @type {string} {@link string}
    */
   readonly directory?: string;
@@ -113438,7 +115435,7 @@ export type getSuggestedFileName$DirectInput = {
   readonly file_id?: int32;
 
   /**
-   * Directory in which the file is supposed to be saved
+   * Directory in which the file is expected to be saved
    * @type {string} {@link string}
    */
   readonly directory?: string;
@@ -113523,7 +115520,7 @@ export type preliminaryUploadFile = (
 ) => File;
 
 /**
- * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
+ * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile
  */
 export type cancelPreliminaryUploadFile$Input = {
   readonly _: "cancelPreliminaryUploadFile";
@@ -113536,7 +115533,7 @@ export type cancelPreliminaryUploadFile$Input = {
 };
 
 /**
- * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
+ * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile
  */
 export type cancelPreliminaryUploadFile$DirectInput = {
   /**
@@ -113547,7 +115544,7 @@ export type cancelPreliminaryUploadFile$DirectInput = {
 };
 
 /**
- * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
+ * Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile
  *
  * @param {cancelPreliminaryUploadFile$Input} parameters {@link cancelPreliminaryUploadFile$Input}
  * @returns {Ok} {@link Ok}
@@ -114499,7 +116496,7 @@ export type createChatSubscriptionInviteLink = (
 /**
  * Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels.
  *
- * - If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used
+ * - If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used.
  *
  * - Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  */
@@ -114546,7 +116543,7 @@ export type editChatInviteLink$Input = {
 /**
  * Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels.
  *
- * - If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used
+ * - If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used.
  *
  * - Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  */
@@ -114591,7 +116588,7 @@ export type editChatInviteLink$DirectInput = {
 /**
  * Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels.
  *
- * - If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used
+ * - If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used.
  *
  * - Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  *
@@ -115805,7 +117802,7 @@ export type createVideoChat$Input = {
   readonly title?: string;
 
   /**
-   * Point in time (Unix timestamp) when the group call is supposed to be started by an administrator; 0 to start the video chat immediately. The date must be at least 10 seconds and at most 8 days in the future
+   * Point in time (Unix timestamp) when the group call is expected to be started by an administrator; 0 to start the video chat immediately. The date must be at least 10 seconds and at most 8 days in the future
    * @type {int32} {@link int32}
    */
   readonly start_date?: int32;
@@ -115834,7 +117831,7 @@ export type createVideoChat$DirectInput = {
   readonly title?: string;
 
   /**
-   * Point in time (Unix timestamp) when the group call is supposed to be started by an administrator; 0 to start the video chat immediately. The date must be at least 10 seconds and at most 8 days in the future
+   * Point in time (Unix timestamp) when the group call is expected to be started by an administrator; 0 to start the video chat immediately. The date must be at least 10 seconds and at most 8 days in the future
    * @type {int32} {@link int32}
    */
   readonly start_date?: int32;
@@ -118315,6 +120312,38 @@ export type getStickerSet$DirectInput = {
  * @returns {StickerSet} {@link StickerSet}
  */
 export type getStickerSet = (parameters: getStickerSet$Input) => StickerSet;
+
+/**
+ * Returns name of a sticker set by its identifier
+ */
+export type getStickerSetName$Input = {
+  readonly _: "getStickerSetName";
+
+  /**
+   * Identifier of the sticker set
+   * @type {int64$Input} {@link int64}
+   */
+  readonly set_id?: int64$Input;
+};
+
+/**
+ * Returns name of a sticker set by its identifier
+ */
+export type getStickerSetName$DirectInput = {
+  /**
+   * Identifier of the sticker set
+   * @type {int64$Input} {@link int64}
+   */
+  readonly set_id?: int64$Input;
+};
+
+/**
+ * Returns name of a sticker set by its identifier
+ *
+ * @param {getStickerSetName$Input} parameters {@link getStickerSetName$Input}
+ * @returns {Text} {@link Text}
+ */
+export type getStickerSetName = (parameters: getStickerSetName$Input) => Text;
 
 /**
  * Searches for a sticker set by its name
@@ -122949,7 +124978,7 @@ export type reportSupergroupSpam$Input = {
   readonly supergroup_id?: int53;
 
   /**
-   * Identifiers of messages to report. Use messageProperties.can_be_reported to check whether the message can be reported
+   * Identifiers of messages to report. Use messageProperties.can_report_supergroup_spam to check whether the message can be reported
    * @type {vector$Input<int53>} {@link vector<int53>}
    */
   readonly message_ids?: vector$Input<int53>;
@@ -122966,7 +124995,7 @@ export type reportSupergroupSpam$DirectInput = {
   readonly supergroup_id?: int53;
 
   /**
-   * Identifiers of messages to report. Use messageProperties.can_be_reported to check whether the message can be reported
+   * Identifiers of messages to report. Use messageProperties.can_report_supergroup_spam to check whether the message can be reported
    * @type {vector$Input<int53>} {@link vector<int53>}
    */
   readonly message_ids?: vector$Input<int53>;
@@ -123543,6 +125572,250 @@ export type deleteSavedCredentials = (
 ) => Ok;
 
 /**
+ * Returns gifts that can be sent to other users
+ */
+export type getAvailableGifts$Input = {
+  readonly _: "getAvailableGifts";
+};
+
+/**
+ * Returns gifts that can be sent to other users
+ */
+export type getAvailableGifts$DirectInput = {};
+
+/**
+ * Returns gifts that can be sent to other users
+ *
+ * @param {getAvailableGifts$Input} parameters {@link getAvailableGifts$Input}
+ * @returns {Gifts} {@link Gifts}
+ */
+export type getAvailableGifts = (parameters: getAvailableGifts$Input) => Gifts;
+
+/**
+ * Send a gift to another user
+ */
+export type sendGift$Input = {
+  readonly _: "sendGift";
+
+  /**
+   * Identifier of the gift to send
+   * @type {int64$Input} {@link int64}
+   */
+  readonly gift_id?: int64$Input;
+
+  /**
+   * Identifier of the user that will receive the gift
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Text to show along with the gift; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * Pass true to show the current user as sender and gift text only to the gift receiver; otherwise, everyone will be able to see them
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_private?: Bool$Input;
+};
+
+/**
+ * Send a gift to another user
+ */
+export type sendGift$DirectInput = {
+  /**
+   * Identifier of the gift to send
+   * @type {int64$Input} {@link int64}
+   */
+  readonly gift_id?: int64$Input;
+
+  /**
+   * Identifier of the user that will receive the gift
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Text to show along with the gift; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * Pass true to show the current user as sender and gift text only to the gift receiver; otherwise, everyone will be able to see them
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_private?: Bool$Input;
+};
+
+/**
+ * Send a gift to another user
+ *
+ * @param {sendGift$Input} parameters {@link sendGift$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type sendGift = (parameters: sendGift$Input) => Ok;
+
+/**
+ * Sells a gift received by the current user for Telegram Stars
+ */
+export type sellGift$Input = {
+  readonly _: "sellGift";
+
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the message with the gift in the chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Sells a gift received by the current user for Telegram Stars
+ */
+export type sellGift$DirectInput = {
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the message with the gift in the chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Sells a gift received by the current user for Telegram Stars
+ *
+ * @param {sellGift$Input} parameters {@link sellGift$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type sellGift = (parameters: sellGift$Input) => Ok;
+
+/**
+ * Toggles whether a gift is shown on the current user's profile page
+ */
+export type toggleGiftIsSaved$Input = {
+  readonly _: "toggleGiftIsSaved";
+
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the message with the gift in the chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Pass true to display the gift on the user's profile page; pass false to remove it from the profile page
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_saved?: Bool$Input;
+};
+
+/**
+ * Toggles whether a gift is shown on the current user's profile page
+ */
+export type toggleGiftIsSaved$DirectInput = {
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the message with the gift in the chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Pass true to display the gift on the user's profile page; pass false to remove it from the profile page
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_saved?: Bool$Input;
+};
+
+/**
+ * Toggles whether a gift is shown on the current user's profile page
+ *
+ * @param {toggleGiftIsSaved$Input} parameters {@link toggleGiftIsSaved$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type toggleGiftIsSaved = (parameters: toggleGiftIsSaved$Input) => Ok;
+
+/**
+ * Returns gifts saved to profile by the given user
+ */
+export type getUserGifts$Input = {
+  readonly _: "getUserGifts";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of gifts to be returned; must be positive and can't be greater than 100. For optimal performance, the number of returned objects is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns gifts saved to profile by the given user
+ */
+export type getUserGifts$DirectInput = {
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of gifts to be returned; must be positive and can't be greater than 100. For optimal performance, the number of returned objects is chosen by TDLib and can be smaller than the specified limit
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns gifts saved to profile by the given user
+ *
+ * @param {getUserGifts$Input} parameters {@link getUserGifts$Input}
+ * @returns {UserGifts} {@link UserGifts}
+ */
+export type getUserGifts = (parameters: getUserGifts$Input) => UserGifts;
+
+/**
  * Creates a link for the given invoice; for bots only
  */
 export type createInvoiceLink$Input = {
@@ -123575,7 +125848,7 @@ export type createInvoiceLink$DirectInput = {
 export type createInvoiceLink = (parameters: createInvoiceLink$Input) => HttpUrl;
 
 /**
- * Refunds a previously done payment in Telegram Stars
+ * Refunds a previously done payment in Telegram Stars; for bots only
  */
 export type refundStarPayment$Input = {
   readonly _: "refundStarPayment";
@@ -123594,7 +125867,7 @@ export type refundStarPayment$Input = {
 };
 
 /**
- * Refunds a previously done payment in Telegram Stars
+ * Refunds a previously done payment in Telegram Stars; for bots only
  */
 export type refundStarPayment$DirectInput = {
   /**
@@ -123611,7 +125884,7 @@ export type refundStarPayment$DirectInput = {
 };
 
 /**
- * Refunds a previously done payment in Telegram Stars
+ * Refunds a previously done payment in Telegram Stars; for bots only
  *
  * @param {refundStarPayment$Input} parameters {@link refundStarPayment$Input}
  * @returns {Ok} {@link Ok}
@@ -124909,19 +127182,19 @@ export type reportChat$Input = {
   readonly chat_id?: int53;
 
   /**
-   * Identifiers of reported messages; may be empty to report the whole chat. Use messageProperties.can_be_reported to check whether the message can be reported
+   * Option identifier chosen by the user; leave empty for the initial request
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly option_id?: bytes$Input;
+
+  /**
+   * Identifiers of reported messages. Use messageProperties.can_report_chat to check whether the message can be reported
    * @type {vector$Input<int53>} {@link vector<int53>}
    */
   readonly message_ids?: vector$Input<int53>;
 
   /**
-   * The reason for reporting the chat
-   * @type {ReportReason$Input} {@link ReportReason}
-   */
-  readonly reason?: ReportReason$Input;
-
-  /**
-   * Additional report details; 0-1024 characters
+   * Additional report details if asked by the server; 0-1024 characters; leave empty for the initial request
    * @type {string} {@link string}
    */
   readonly text?: string;
@@ -124938,19 +127211,19 @@ export type reportChat$DirectInput = {
   readonly chat_id?: int53;
 
   /**
-   * Identifiers of reported messages; may be empty to report the whole chat. Use messageProperties.can_be_reported to check whether the message can be reported
+   * Option identifier chosen by the user; leave empty for the initial request
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly option_id?: bytes$Input;
+
+  /**
+   * Identifiers of reported messages. Use messageProperties.can_report_chat to check whether the message can be reported
    * @type {vector$Input<int53>} {@link vector<int53>}
    */
   readonly message_ids?: vector$Input<int53>;
 
   /**
-   * The reason for reporting the chat
-   * @type {ReportReason$Input} {@link ReportReason}
-   */
-  readonly reason?: ReportReason$Input;
-
-  /**
-   * Additional report details; 0-1024 characters
+   * Additional report details if asked by the server; 0-1024 characters; leave empty for the initial request
    * @type {string} {@link string}
    */
   readonly text?: string;
@@ -124960,9 +127233,9 @@ export type reportChat$DirectInput = {
  * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
  *
  * @param {reportChat$Input} parameters {@link reportChat$Input}
- * @returns {Ok} {@link Ok}
+ * @returns {ReportChatResult} {@link ReportChatResult}
  */
-export type reportChat = (parameters: reportChat$Input) => Ok;
+export type reportChat = (parameters: reportChat$Input) => ReportChatResult;
 
 /**
  * Reports a chat photo to the Telegram moderators. A chat photo can be reported only if chat.can_be_reported
@@ -127715,6 +129988,40 @@ export type getPremiumStickerExamples = (
 ) => Stickers;
 
 /**
+ * Returns the sticker to be used as representation of the Telegram Premium subscription
+ */
+export type getPremiumInfoSticker$Input = {
+  readonly _: "getPremiumInfoSticker";
+
+  /**
+   * Number of months the Telegram Premium subscription will be active
+   * @type {int32} {@link int32}
+   */
+  readonly month_count?: int32;
+};
+
+/**
+ * Returns the sticker to be used as representation of the Telegram Premium subscription
+ */
+export type getPremiumInfoSticker$DirectInput = {
+  /**
+   * Number of months the Telegram Premium subscription will be active
+   * @type {int32} {@link int32}
+   */
+  readonly month_count?: int32;
+};
+
+/**
+ * Returns the sticker to be used as representation of the Telegram Premium subscription
+ *
+ * @param {getPremiumInfoSticker$Input} parameters {@link getPremiumInfoSticker$Input}
+ * @returns {Sticker} {@link Sticker}
+ */
+export type getPremiumInfoSticker = (
+  parameters: getPremiumInfoSticker$Input
+) => Sticker;
+
+/**
  * Informs TDLib that the user viewed detailed information about a Premium feature on the Premium features screen
  */
 export type viewPremiumFeature$Input = {
@@ -127789,7 +130096,7 @@ export type getPremiumState$DirectInput = {};
 export type getPremiumState = (parameters: getPremiumState$Input) => PremiumState;
 
 /**
- * Returns available options for Telegram Premium gift code or giveaway creation
+ * Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
  */
 export type getPremiumGiftCodePaymentOptions$Input = {
   readonly _: "getPremiumGiftCodePaymentOptions";
@@ -127802,7 +130109,7 @@ export type getPremiumGiftCodePaymentOptions$Input = {
 };
 
 /**
- * Returns available options for Telegram Premium gift code or giveaway creation
+ * Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
  */
 export type getPremiumGiftCodePaymentOptions$DirectInput = {
   /**
@@ -127813,7 +130120,7 @@ export type getPremiumGiftCodePaymentOptions$DirectInput = {
 };
 
 /**
- * Returns available options for Telegram Premium gift code or giveaway creation
+ * Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
  *
  * @param {getPremiumGiftCodePaymentOptions$Input} parameters {@link getPremiumGiftCodePaymentOptions$Input}
  * @returns {PremiumGiftCodePaymentOptions} {@link PremiumGiftCodePaymentOptions}
@@ -127889,10 +130196,10 @@ export type applyPremiumGiftCode$DirectInput = {
 export type applyPremiumGiftCode = (parameters: applyPremiumGiftCode$Input) => Ok;
 
 /**
- * Launches a prepaid Telegram Premium giveaway
+ * Launches a prepaid giveaway
  */
-export type launchPrepaidPremiumGiveaway$Input = {
-  readonly _: "launchPrepaidPremiumGiveaway";
+export type launchPrepaidGiveaway$Input = {
+  readonly _: "launchPrepaidGiveaway";
 
   /**
    * Unique identifier of the prepaid giveaway
@@ -127902,15 +130209,27 @@ export type launchPrepaidPremiumGiveaway$Input = {
 
   /**
    * Giveaway parameters
-   * @type {premiumGiveawayParameters$Input} {@link premiumGiveawayParameters}
+   * @type {giveawayParameters$Input} {@link giveawayParameters}
    */
-  readonly parameters?: premiumGiveawayParameters$Input;
+  readonly parameters?: giveawayParameters$Input;
+
+  /**
+   * The number of users to receive giveaway prize
+   * @type {int32} {@link int32}
+   */
+  readonly winner_count?: int32;
+
+  /**
+   * The number of Telegram Stars to be distributed through the giveaway; pass 0 for Telegram Premium giveaways
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 };
 
 /**
- * Launches a prepaid Telegram Premium giveaway
+ * Launches a prepaid giveaway
  */
-export type launchPrepaidPremiumGiveaway$DirectInput = {
+export type launchPrepaidGiveaway$DirectInput = {
   /**
    * Unique identifier of the prepaid giveaway
    * @type {int64$Input} {@link int64}
@@ -127919,26 +130238,36 @@ export type launchPrepaidPremiumGiveaway$DirectInput = {
 
   /**
    * Giveaway parameters
-   * @type {premiumGiveawayParameters$Input} {@link premiumGiveawayParameters}
+   * @type {giveawayParameters$Input} {@link giveawayParameters}
    */
-  readonly parameters?: premiumGiveawayParameters$Input;
+  readonly parameters?: giveawayParameters$Input;
+
+  /**
+   * The number of users to receive giveaway prize
+   * @type {int32} {@link int32}
+   */
+  readonly winner_count?: int32;
+
+  /**
+   * The number of Telegram Stars to be distributed through the giveaway; pass 0 for Telegram Premium giveaways
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 };
 
 /**
- * Launches a prepaid Telegram Premium giveaway
+ * Launches a prepaid giveaway
  *
- * @param {launchPrepaidPremiumGiveaway$Input} parameters {@link launchPrepaidPremiumGiveaway$Input}
+ * @param {launchPrepaidGiveaway$Input} parameters {@link launchPrepaidGiveaway$Input}
  * @returns {Ok} {@link Ok}
  */
-export type launchPrepaidPremiumGiveaway = (
-  parameters: launchPrepaidPremiumGiveaway$Input
-) => Ok;
+export type launchPrepaidGiveaway = (parameters: launchPrepaidGiveaway$Input) => Ok;
 
 /**
- * Returns information about a Telegram Premium giveaway
+ * Returns information about a giveaway
  */
-export type getPremiumGiveawayInfo$Input = {
-  readonly _: "getPremiumGiveawayInfo";
+export type getGiveawayInfo$Input = {
+  readonly _: "getGiveawayInfo";
 
   /**
    * Identifier of the channel chat which started the giveaway
@@ -127954,9 +130283,9 @@ export type getPremiumGiveawayInfo$Input = {
 };
 
 /**
- * Returns information about a Telegram Premium giveaway
+ * Returns information about a giveaway
  */
-export type getPremiumGiveawayInfo$DirectInput = {
+export type getGiveawayInfo$DirectInput = {
   /**
    * Identifier of the channel chat which started the giveaway
    * @type {int53} {@link int53}
@@ -127971,14 +130300,12 @@ export type getPremiumGiveawayInfo$DirectInput = {
 };
 
 /**
- * Returns information about a Telegram Premium giveaway
+ * Returns information about a giveaway
  *
- * @param {getPremiumGiveawayInfo$Input} parameters {@link getPremiumGiveawayInfo$Input}
- * @returns {PremiumGiveawayInfo} {@link PremiumGiveawayInfo}
+ * @param {getGiveawayInfo$Input} parameters {@link getGiveawayInfo$Input}
+ * @returns {GiveawayInfo} {@link GiveawayInfo}
  */
-export type getPremiumGiveawayInfo = (
-  parameters: getPremiumGiveawayInfo$Input
-) => PremiumGiveawayInfo;
+export type getGiveawayInfo = (parameters: getGiveawayInfo$Input) => GiveawayInfo;
 
 /**
  * Returns available options for Telegram Stars purchase
@@ -128035,6 +130362,28 @@ export type getStarGiftPaymentOptions$DirectInput = {
 export type getStarGiftPaymentOptions = (
   parameters: getStarGiftPaymentOptions$Input
 ) => StarPaymentOptions;
+
+/**
+ * Returns available options for Telegram Star giveaway creation
+ */
+export type getStarGiveawayPaymentOptions$Input = {
+  readonly _: "getStarGiveawayPaymentOptions";
+};
+
+/**
+ * Returns available options for Telegram Star giveaway creation
+ */
+export type getStarGiveawayPaymentOptions$DirectInput = {};
+
+/**
+ * Returns available options for Telegram Star giveaway creation
+ *
+ * @param {getStarGiveawayPaymentOptions$Input} parameters {@link getStarGiveawayPaymentOptions$Input}
+ * @returns {StarGiveawayPaymentOptions} {@link StarGiveawayPaymentOptions}
+ */
+export type getStarGiveawayPaymentOptions = (
+  parameters: getStarGiveawayPaymentOptions$Input
+) => StarGiveawayPaymentOptions;
 
 /**
  * Returns the list of Telegram Star transactions for the specified owner
