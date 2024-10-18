@@ -4,11 +4,11 @@
   "description": "🚀 Telegram TDLib native nodejs wrapper",
   "packageManager": "npm@10.9.0",
   "scripts": {
-    "test": "jest",
+    "test": "vitest",
     "clean:dist": "rm -rf dist",
     "clean:gyp": "node-gyp clean",
     "build:types": "node scripts/generate-types.js && node scripts/generate-meta.js",
-    "build:dist": "rollup -c",
+    "build:dist": "vite build",
     "build:docs": "typedoc",
     "build:gyp": "node-gyp rebuild",
     "build": "npm run build:dist && npm run build:docs",
@@ -26,24 +26,24 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "require": "./index.js",
-      "import": "./index.mjs",
-      "types": "./index.d.ts"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./addon": {
-      "require": "./addon.js",
-      "import": "./addon.mjs",
-      "types": "./addon.d.ts"
+      "require": "./dist/addon.js",
+      "import": "./dist/addon.mjs",
+      "types": "./dist/addon.d.ts"
     },
     "./types": {
-      "require": "./types.js",
-      "import": "./types.mjs",
-      "types": "./types.d.ts"
+      "require": "./dist/types.js",
+      "import": "./dist/types.mjs",
+      "types": "./dist/types.d.ts"
     },
     "./markup": {
-      "require": "./markup.js",
-      "import": "./markup.mjs",
-      "types": "./markup.d.ts"
+      "require": "./dist/markup.js",
+      "import": "./dist/markup.mjs",
+      "types": "./dist/markup.d.ts"
     }
   },
   "publishConfig": {
@@ -88,9 +88,9 @@
   "author": "Alexander <me@alexxgrib.me> (https://alexxgrib.me/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexxgrib/node-tdlib/issues"
+    "url": "https://github.com/AlexXanderGrib/node-tdlib/issues"
   },
-  "homepage": "https://github.com/alexxgrib/node-tdlib#readme",
+  "homepage": "https://github.com/AlexXanderGrib/node-tdlib#readme",
   "devDependencies": {
     "@eslint/js": "^9.12.0",
     "@types/debug": "^4.1.12",
@@ -124,8 +124,8 @@
     "node-addon-api": "^8.2.1"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-darwin-x64": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
     "@tdlib-native/tdjson-darwin-arm64": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
+    "@tdlib-native/tdjson-darwin-x64": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
     "@tdlib-native/tdjson-linux-x64-glibc": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
     "@tdlib-native/tdjson-win32-x64": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774"
   }

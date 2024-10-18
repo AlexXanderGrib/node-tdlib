@@ -26,7 +26,6 @@
     "moduleResolution": "node",
     "types": [
       "node",
-      "jest"
     ],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

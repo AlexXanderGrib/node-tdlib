@@ -1,4 +1,13 @@
+/* eslint-disable unicorn/prefer-module */
 import path from "path";
+
+function getCurrentFile() {
+  if (typeof __filename !== "undefined") {
+    return __filename;
+  }
+
+  return new URL("", import.meta.url).pathname;
+}
 
 /**
  *
@@ -6,8 +15,5 @@ import path from "path";
  * @returns {string}  {string}
  */
 export function getAddonFolderPath(): string {
-  return path.dirname(
-    // eslint-disable-next-line unicorn/prefer-module
-    typeof __filename === "string" ? __filename : (process.env.__filename as string)
-  );
+  return path.dirname(getCurrentFile());
 }

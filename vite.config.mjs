@@ -12,6 +12,7 @@ const external = [
 
 export default defineConfig({
   appType: "custom",
+
   build: {
     target: ["node16"],
     minify: false,
