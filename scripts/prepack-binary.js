@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync, mkdirSync, copyFileSync } = require("fs");
+const { readFileSync, writeFileSync, mkdirSync, renameSync } = require("fs");
 const { resolve } = require("path");
 
 const text = readFileSync(resolve(__dirname, "../td/meta.yml"), "utf-8");
@@ -98,7 +98,7 @@ for (const { os, cpu, file, libc } of builds) {
   mkdirSync(directory, { recursive: true });
 
   try {
-    copyFileSync(source, `${directory}/${file}`);
+    renameSync(source, `${directory}/${file}`);
   } catch {
     console.warn("Unable to copy built tdlib:", source, "Skipping platform");
     continue;

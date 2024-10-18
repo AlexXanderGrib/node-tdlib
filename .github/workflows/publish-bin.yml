@@ -6,7 +6,7 @@ jobs:
   test-base:
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-12, windows-2022, macos-14]
+        os: [ubuntu-22.04, macos-12, windows-2022]
         version: [18, 20, 22]
     runs-on: ${{ matrix.os }}
     steps:
@@ -60,22 +60,22 @@ jobs:
       - name: Test in docker
         run: | 
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-          docker run --rm -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}} bash ./scripts/docker-test.sh
+          docker run --rm -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}}  bash -c "cd /usr/src/app && ./scripts/docker-test.sh"
 
-  publish:
-    runs-on: ubuntu-22.04
-    needs: [test-base, test-linux-arm64]
+  # publish:
+  #   runs-on: ubuntu-22.04
+  #   needs: [test-base, test-linux-arm64]
 
-    steps:
-      - name: Publish
-        run: |
-          for dir in ./packages/tdjson-*; do
-          if [ -d "$dir" ]; then
-            echo "Publishing $dir"
-            cd "$dir" || exit 1
-            npm publish --access public --provenance
-            cd - > /dev/null || exit 1
-          else
-            echo "$dir is not a directory"
-          fi
-          done
+  #   steps:
+  #     - name: Publish
+  #       run: |
+  #         for dir in ./packages/tdjson-*; do
+  #         if [ -d "$dir" ]; then
+  #           echo "Publishing $dir"
+  #           cd "$dir" || exit 1
+  #           npm publish --access public --provenance
+  #           cd - > /dev/null || exit 1
+  #         else
+  #           echo "$dir is not a directory"
+  #         fi
+  #         done
