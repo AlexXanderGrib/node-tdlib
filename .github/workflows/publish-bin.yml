@@ -18,58 +18,13 @@ jobs:
 
       - name: Test for presence of binary
         id: test-bin
+        shell: bash
         run: echo "path=$(node scripts/test-binary-module.js)" >> ${GITHUB_OUTPUT}
 
       - name: Get npm cache directory
         id: npm-cache-dir
         shell: bash
         run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-
-      - uses: actions/cache@v4
-        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
-        with:
-          path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Show tdlib path
-        run: echo "${{ steps.test-bin.outputs.path }}"
-
-      - name: Test
-        run: npm test -- --run
-        env:
-          TDLIB_PATH: ${{ steps.test-bin.outputs.path }}
-          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
-
-  test-windows:
-    strategy:
-      matrix:
-        version: [16, 18, 20, 22]
-    runs-on: windows-2019
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.version }}
-          registry-url: "https://registry.npmjs.org"
-
-      - name: Test for presence of binary
-        id: test-bin
-        run: |
-          $path = node scripts/test-binary-module.js
-          echo "path=$path" | Out-File -FilePath $Env:GITHUB_OUTPUT -Encoding utf8 -Append
-
-      - name: Get npm cache directory
-        id: npm-cache-dir
-        shell: bash
-        run: |
-          $dir = npm config get cache
-          echo "dir=$dir" | Out-File -FilePath $Env:GITHUB_OUTPUT -Encoding utf8 -Append
 
       - uses: actions/cache@v4
         id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'

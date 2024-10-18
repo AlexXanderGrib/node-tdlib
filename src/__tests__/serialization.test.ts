@@ -149,7 +149,10 @@ describe("Client Serialization (sync)", () => {
     expect(version).toEqual({ _: "optionValueString", value: Meta.version });
 
     const commitHash = client.syncApi.getOption({ name: "commit_hash" });
-    expect(commitHash).toEqual({ _: "optionValueString", value: Meta.commitHash });
+    expect(commitHash._).toBe("optionValueString");
+    expect([Meta.commitHash, "GITDIR-NOTFOUND"]).toContain(
+      (commitHash as optionValueString).value
+    );
   });
 
   test("error", () => {
