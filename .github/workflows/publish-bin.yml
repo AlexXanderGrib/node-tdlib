@@ -1,0 +1,81 @@
+name: Publish prebuilt TDLib
+on:
+  workflow_dispatch:
+
+jobs:
+  test-base:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, macos-12, windows-2022, macos-14]
+        version: [16, 18, 20, 22]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.version }}
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Test for presence of binary
+        id: test-bin
+        run: echo "path=$(node scripts/test-binary-module.js)" >> ${GIHUB_OUTPUT}
+
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      - uses: actions/cache@v4
+        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test
+        run: npm test
+        env:
+          TDLIB_PATH: ${{ steps.test-bin.outputs.path }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+
+  test-linux-arm64:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        version: [16, 18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test for presence of binary
+        id: test-bin
+        run: echo "path=$(node scripts/test-binary-module.js)" >> ${GIHUB_OUTPUT}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test in docker
+        run: | 
+          docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+          docker run --rm -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}} bash ./scripts/docker-test.sh
+
+  publish:
+    runs-on: ubuntu-22.04
+    needs: [test-base, test-linux-arm64]
+
+    steps:
+      - name: Publish
+        run: |
+          for dir in ./packages/tdjson-*; do
+          if [ -d "$dir" ]; then
+            echo "Publishing $dir"
+            cd "$dir" || exit 1
+            npm publish --access public --provenance
+            cd - > /dev/null || exit 1
+          else
+            echo "$dir is not a directory"
+          fi
+          done
