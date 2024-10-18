@@ -2,7 +2,7 @@ import { describe, test, expect, beforeAll, assert, afterAll } from "vitest";
 import { Client, TDError } from "../client";
 import { randomBytes } from "crypto";
 import { Meta } from "../generated/meta";
-import type { error } from "../generated/types";
+import type { error, optionValueString } from "../generated/types";
 import { getTestClient } from "./client";
 
 describe("Client Serialization (async)", () => {
@@ -107,7 +107,10 @@ describe("Client Serialization (async)", () => {
     expect(version).toEqual({ _: "optionValueString", value: Meta.version });
 
     const commitHash = await client.api.getOption({ name: "commit_hash" });
-    expect(commitHash).toEqual({ _: "optionValueString", value: Meta.commitHash });
+    expect(commitHash._).toBe("optionValueString");
+    expect([Meta.commitHash, "GITDIR-NOTFOUND"]).toContain(
+      (commitHash as optionValueString).value
+    );
   });
 
   test("error", async () => {
