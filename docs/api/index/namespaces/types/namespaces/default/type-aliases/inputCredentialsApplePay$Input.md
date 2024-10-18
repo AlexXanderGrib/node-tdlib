@@ -26,4 +26,4 @@ JSON-encoded data with the credential identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:22878
+dist/generated/types.d.ts:23638

@@ -20,13 +20,13 @@ The message content has changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
@@ -38,4 +38,4 @@ New message content
 
 ## Defined in
 
-dist/generated/types.d.ts:52818
+dist/generated/types.d.ts:54434

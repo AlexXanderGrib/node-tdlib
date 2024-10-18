@@ -8,7 +8,7 @@
 
 > **internalLinkTypeLanguageSettings**: `object`
 
-The link is a link to the language section of the app settings
+The link is a link to the language section of the application settings
 
 ## Type declaration
 
@@ -18,4 +18,4 @@ The link is a link to the language section of the app settings
 
 ## Defined in
 
-dist/generated/types.d.ts:47921
+dist/generated/types.d.ts:49481

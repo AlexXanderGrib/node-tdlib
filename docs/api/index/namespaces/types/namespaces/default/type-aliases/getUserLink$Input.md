@@ -18,4 +18,4 @@ Returns an HTTPS link, which can be used to get information about the current us
 
 ## Defined in
 
-dist/generated/types.d.ts:94868
+dist/generated/types.d.ts:97365

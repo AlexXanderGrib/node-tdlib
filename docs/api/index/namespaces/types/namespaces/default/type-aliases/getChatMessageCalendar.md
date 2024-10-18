@@ -6,7 +6,9 @@
 
 # Type Alias: getChatMessageCalendar()
 
-> **getChatMessageCalendar**: (`parameters`) => [`MessageCalendar`](MessageCalendar.md)
+> **getChatMessageCalendar**: (`parameters`) => [`MessageCalendar`](MessageCalendar-1.md)
+
+Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageCalendar`](MessageCalendar.md)
+[`MessageCalendar`](MessageCalendar-1.md)
 
-[MessageCalendar](MessageCalendar.md)
+[MessageCalendar](MessageCalendar-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77310
+dist/generated/types.d.ts:79319

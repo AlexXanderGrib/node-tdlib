@@ -20,10 +20,10 @@ The message is being sent now, but has not yet been delivered to the server
 
 ### sending\_id?
 
-> `readonly` `optional` **sending\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **sending\_id**: [`int32`](int32.md)
 
 Non-persistent message sending identifier, specified by the application
 
 ## Defined in
 
-dist/generated/types.d.ts:12972
+dist/generated/types.d.ts:13674

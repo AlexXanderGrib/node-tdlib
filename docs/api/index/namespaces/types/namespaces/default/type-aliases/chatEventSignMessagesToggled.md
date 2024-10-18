@@ -24,4 +24,4 @@ New value of sign_messages
 
 ## Defined in
 
-dist/generated/types.d.ts:40261
+dist/generated/types.d.ts:41631

@@ -6,7 +6,9 @@
 
 # Type Alias: getSuggestedFileName()
 
-> **getSuggestedFileName**: (`parameters`) => [`Text`](Text.md)
+> **getSuggestedFileName**: (`parameters`) => [`Text`](Text-1.md)
+
+Returns suggested name for saving a file in a given directory
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88935
+dist/generated/types.d.ts:91310

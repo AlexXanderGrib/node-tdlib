@@ -18,7 +18,7 @@ Represents a user contact
 
 ### contact
 
-> **contact**: [`contact`](contact-1.md)
+> **contact**: [`contact`](contact.md)
 
 A user contact
 
@@ -30,10 +30,10 @@ Unique identifier of the query result
 
 ### thumbnail
 
-> **thumbnail**: [`thumbnail`](thumbnail-1.md) \| `null`
+> **thumbnail**: [`thumbnail`](thumbnail.md) \| `null`
 
 Result thumbnail in JPEG format; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:38341
+dist/generated/types.d.ts:39711

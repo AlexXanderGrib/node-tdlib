@@ -6,7 +6,9 @@
 
 # Type Alias: getLogTagVerbosityLevel()
 
-> **getLogTagVerbosityLevel**: (`parameters`) => [`LogVerbosityLevel`](LogVerbosityLevel.md)
+> **getLogTagVerbosityLevel**: (`parameters`) => [`LogVerbosityLevel`](LogVerbosityLevel-1.md)
+
+Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`LogVerbosityLevel`](LogVerbosityLevel.md)
+[`LogVerbosityLevel`](LogVerbosityLevel-1.md)
 
-[LogVerbosityLevel](LogVerbosityLevel.md)
+[LogVerbosityLevel](LogVerbosityLevel-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101831
+dist/generated/types.d.ts:104752

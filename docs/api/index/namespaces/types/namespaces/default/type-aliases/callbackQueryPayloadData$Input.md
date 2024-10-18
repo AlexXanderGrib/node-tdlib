@@ -20,10 +20,10 @@ The payload for a general callback button
 
 ### data?
 
-> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input.md)
 
 Data that was attached to the callback button
 
 ## Defined in
 
-dist/generated/types.d.ts:38984
+dist/generated/types.d.ts:40354

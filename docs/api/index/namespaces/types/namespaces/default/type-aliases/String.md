@@ -13,4 +13,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:58549
+dist/generated/types.d.ts:60189

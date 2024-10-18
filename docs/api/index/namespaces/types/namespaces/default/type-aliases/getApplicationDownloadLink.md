@@ -6,7 +6,9 @@
 
 # Type Alias: getApplicationDownloadLink()
 
-> **getApplicationDownloadLink**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getApplicationDownloadLink**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101382
+dist/generated/types.d.ts:104303

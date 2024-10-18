@@ -18,28 +18,28 @@ The media is hidden until the invoice is paid
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Media duration, in seconds; 0 if unknown
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
 Media height; 0 if unknown
 
 ### minithumbnail
 
-> **minithumbnail**: [`minithumbnail`](minithumbnail-1.md) \| `null`
+> **minithumbnail**: [`minithumbnail`](minithumbnail.md) \| `null`
 
 Media minithumbnail; may be null
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
 Media width; 0 if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:23543
+dist/generated/types.d.ts:24303

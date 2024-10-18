@@ -20,4 +20,4 @@ A Telegram Passport element containing the user's temporary registration
 
 ## Defined in
 
-dist/generated/types.d.ts:23933
+dist/generated/types.d.ts:24693

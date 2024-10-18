@@ -20,19 +20,19 @@ A message was edited. Changes in the message content will come in a separate upd
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### edit\_date?
 
-> `readonly` `optional` **edit\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **edit\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the message was edited
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
@@ -44,4 +44,4 @@ New message reply markup; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:52867
+dist/generated/types.d.ts:54483

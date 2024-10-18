@@ -6,7 +6,9 @@
 
 # Type Alias: getPushReceiverId()
 
-> **getPushReceiverId**: (`parameters`) => [`PushReceiverId`](PushReceiverId.md)
+> **getPushReceiverId**: (`parameters`) => [`PushReceiverId`](PushReceiverId-1.md)
+
+Returns a globally unique push notification subscription identifier for identification of an account, which has received a push notification. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PushReceiverId`](PushReceiverId.md)
+[`PushReceiverId`](PushReceiverId-1.md)
 
-[PushReceiverId](PushReceiverId.md)
+[PushReceiverId](PushReceiverId-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97697
+dist/generated/types.d.ts:100476

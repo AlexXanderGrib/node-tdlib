@@ -18,4 +18,4 @@ A bank card number. The getBankCardInfo method can be used to get information ab
 
 ## Defined in
 
-dist/generated/types.d.ts:28575
+dist/generated/types.d.ts:29449

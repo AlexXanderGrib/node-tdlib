@@ -18,7 +18,7 @@ Changes the chat title. Supported only for basic groups, supergroups and channel
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ New title of the chat; 1-128 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:85159
+dist/generated/types.d.ts:87458

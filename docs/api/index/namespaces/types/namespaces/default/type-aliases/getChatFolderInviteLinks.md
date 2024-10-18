@@ -6,7 +6,9 @@
 
 # Type Alias: getChatFolderInviteLinks()
 
-> **getChatFolderInviteLinks**: (`parameters`) => [`ChatFolderInviteLinks`](ChatFolderInviteLinks.md)
+> **getChatFolderInviteLinks**: (`parameters`) => [`ChatFolderInviteLinks`](ChatFolderInviteLinks-1.md)
+
+Returns invite links created by the current user for a shareable chat folder
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatFolderInviteLinks`](ChatFolderInviteLinks.md)
+[`ChatFolderInviteLinks`](ChatFolderInviteLinks-1.md)
 
-[ChatFolderInviteLinks](ChatFolderInviteLinks.md)
+[ChatFolderInviteLinks](ChatFolderInviteLinks-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84882
+dist/generated/types.d.ts:87181

@@ -16,12 +16,18 @@ The link is a link to a background. Link preview title and description are avail
 
 > **\_**: `"linkPreviewTypeBackground"`
 
+### background\_type
+
+> **background\_type**: [`BackgroundType`](BackgroundType.md) \| `null`
+
+Type of the background; may be null if unknown
+
 ### document
 
-> **document**: [`document`](document-1.md) \| `null`
+> **document**: [`document`](document.md) \| `null`
 
 Document with the background; may be null for filled backgrounds
 
 ## Defined in
 
-dist/generated/types.d.ts:21047
+dist/generated/types.d.ts:21673

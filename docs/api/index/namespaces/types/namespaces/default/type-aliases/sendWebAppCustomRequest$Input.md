@@ -18,7 +18,7 @@ Sends a custom request from a Web App
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the bot
 
@@ -36,4 +36,4 @@ JSON-serialized method parameters
 
 ## Defined in
 
-dist/generated/types.d.ts:95215
+dist/generated/types.d.ts:97712

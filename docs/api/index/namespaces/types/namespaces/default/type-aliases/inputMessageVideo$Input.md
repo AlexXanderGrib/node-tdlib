@@ -20,19 +20,19 @@ A video message
 
 ### added\_sticker\_file\_ids?
 
-> `readonly` `optional` **added\_sticker\_file\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **added\_sticker\_file\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 File identifiers of the stickers added to the video, if applicable
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 Video caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds
 
@@ -44,7 +44,7 @@ True, if the video preview must be covered by a spoiler animation; not supported
 
 ### height?
 
-> `readonly` `optional` **height**: [`int32`](int32-1.md)
+> `readonly` `optional` **height**: [`int32`](int32.md)
 
 Video height
 
@@ -68,7 +68,7 @@ True, if the video is supposed to be streamed
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input.md) \| `null`
 
 Video thumbnail; pass null to skip thumbnail uploading
 
@@ -80,10 +80,10 @@ Video to be sent
 
 ### width?
 
-> `readonly` `optional` **width**: [`int32`](int32-1.md)
+> `readonly` `optional` **width**: [`int32`](int32.md)
 
 Video width
 
 ## Defined in
 
-dist/generated/types.d.ts:29790
+dist/generated/types.d.ts:30664

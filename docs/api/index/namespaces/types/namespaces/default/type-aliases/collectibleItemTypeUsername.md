@@ -24,4 +24,4 @@ The username
 
 ## Defined in
 
-dist/generated/types.d.ts:22015
+dist/generated/types.d.ts:22775

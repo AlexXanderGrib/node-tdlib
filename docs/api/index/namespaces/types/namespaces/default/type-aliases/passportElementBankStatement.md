@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's bank statement
 
 ### bank\_statement
 
-> **bank\_statement**: [`personalDocument`](personalDocument-1.md)
+> **bank\_statement**: [`personalDocument`](personalDocument.md)
 
 Bank statement
 
 ## Defined in
 
-dist/generated/types.d.ts:24509
+dist/generated/types.d.ts:25269

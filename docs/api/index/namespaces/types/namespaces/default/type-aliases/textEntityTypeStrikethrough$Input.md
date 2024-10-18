@@ -20,4 +20,4 @@ A strikethrough text
 
 ## Defined in
 
-dist/generated/types.d.ts:28639
+dist/generated/types.d.ts:29513

@@ -6,7 +6,9 @@
 
 # Type Alias: toggleAllDownloadsArePaused()
 
-> **toggleAllDownloadsArePaused**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleAllDownloadsArePaused**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes pause state of all files in the file download list
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89363
+dist/generated/types.d.ts:91738

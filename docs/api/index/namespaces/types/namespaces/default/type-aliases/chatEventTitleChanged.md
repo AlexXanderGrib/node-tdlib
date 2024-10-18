@@ -30,4 +30,4 @@ Previous chat title
 
 ## Defined in
 
-dist/generated/types.d.ts:39955
+dist/generated/types.d.ts:41325

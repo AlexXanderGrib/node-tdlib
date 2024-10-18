@@ -26,10 +26,10 @@ Name of the payment provider
 
 ### refund\_date?
 
-> `readonly` `optional` **refund\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **refund\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the transaction was refunded
 
 ## Defined in
 
-dist/generated/types.d.ts:52137
+dist/generated/types.d.ts:53753

@@ -24,4 +24,4 @@ The link to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:94812
+dist/generated/types.d.ts:97309

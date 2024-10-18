@@ -18,10 +18,10 @@ A new chat has been loaded/created. This update is guaranteed to come before the
 
 ### chat
 
-> **chat**: [`chat`](chat-1.md)
+> **chat**: [`chat`](chat.md)
 
 The chat
 
 ## Defined in
 
-dist/generated/types.d.ts:53191
+dist/generated/types.d.ts:54807

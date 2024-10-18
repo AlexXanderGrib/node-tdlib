@@ -20,7 +20,7 @@ The payload for a callback button requiring password
 
 ### data?
 
-> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input.md)
 
 Data that was attached to the callback button
 
@@ -32,4 +32,4 @@ The 2-step verification password for the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:39013
+dist/generated/types.d.ts:40383

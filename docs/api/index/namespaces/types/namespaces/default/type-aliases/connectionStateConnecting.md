@@ -18,4 +18,4 @@ Establishing a connection to the Telegram servers
 
 ## Defined in
 
-dist/generated/types.d.ts:50015
+dist/generated/types.d.ts:51599

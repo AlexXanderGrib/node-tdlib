@@ -18,7 +18,7 @@ Represents an audio file
 
 ### audio
 
-> **audio**: [`audio`](audio-1.md)
+> **audio**: [`audio`](audio.md)
 
 Audio file
 
@@ -30,4 +30,4 @@ Unique identifier of the query result
 
 ## Defined in
 
-dist/generated/types.d.ts:38561
+dist/generated/types.d.ts:39931

@@ -20,4 +20,4 @@ Checks ownership of a new phone number to change the user's authentication phone
 
 ## Defined in
 
-dist/generated/types.d.ts:52587
+dist/generated/types.d.ts:54203

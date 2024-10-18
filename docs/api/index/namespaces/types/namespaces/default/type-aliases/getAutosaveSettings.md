@@ -6,7 +6,9 @@
 
 # Type Alias: getAutosaveSettings()
 
-> **getAutosaveSettings**: (`parameters`) => [`AutosaveSettings`](AutosaveSettings.md)
+> **getAutosaveSettings**: (`parameters`) => [`AutosaveSettings`](AutosaveSettings-1.md)
+
+Returns autosave settings for the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AutosaveSettings`](AutosaveSettings.md)
+[`AutosaveSettings`](AutosaveSettings-1.md)
 
-[AutosaveSettings](AutosaveSettings.md)
+[AutosaveSettings](AutosaveSettings-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99138
+dist/generated/types.d.ts:101917

@@ -6,7 +6,9 @@
 
 # Type Alias: toggleGroupCallScreenSharingIsPaused()
 
-> **toggleGroupCallScreenSharingIsPaused**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleGroupCallScreenSharingIsPaused**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Pauses or unpauses screen sharing in a joined group call
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91153
+dist/generated/types.d.ts:93650

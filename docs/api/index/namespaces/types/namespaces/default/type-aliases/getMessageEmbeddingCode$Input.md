@@ -8,7 +8,7 @@
 
 > **getMessageEmbeddingCode$Input**: `object`
 
-Returns an HTML code for embedding the message. Available only for messages in supergroups and channels with a username
+Returns an HTML code for embedding the message. Available only if messageProperties.can_get_embedding_code
 
 ## Type declaration
 
@@ -18,7 +18,7 @@ Returns an HTML code for embedding the message. Available only for messages in s
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the message belongs
 
@@ -30,10 +30,10 @@ Pass true to return an HTML code for embedding of the whole media album
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
 ## Defined in
 
-dist/generated/types.d.ts:77726
+dist/generated/types.d.ts:79735

@@ -30,4 +30,4 @@ Notification type. If type begins with "AUTH_KEY_DROP_", then two buttons "Cance
 
 ## Defined in
 
-dist/generated/types.d.ts:55217
+dist/generated/types.d.ts:56833

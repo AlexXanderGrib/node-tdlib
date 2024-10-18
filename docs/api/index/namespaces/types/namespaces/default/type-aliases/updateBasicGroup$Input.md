@@ -20,10 +20,10 @@ Some data of a basic group has changed. This update is guaranteed to come before
 
 ### basic\_group?
 
-> `readonly` `optional` **basic\_group**: [`basicGroup$Input`](basicGroup$Input-1.md)
+> `readonly` `optional` **basic\_group**: [`basicGroup$Input`](basicGroup$Input.md)
 
 New data about the group
 
 ## Defined in
 
-dist/generated/types.d.ts:55056
+dist/generated/types.d.ts:56672

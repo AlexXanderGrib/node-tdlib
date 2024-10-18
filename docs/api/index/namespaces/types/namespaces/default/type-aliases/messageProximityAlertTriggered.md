@@ -18,7 +18,7 @@ A user in the chat came within proximity alert range
 
 ### distance
 
-> **distance**: [`int32`](int32-1.md)
+> **distance**: [`int32`](int32.md)
 
 The distance between the users
 
@@ -36,4 +36,4 @@ The identifier of a user or chat that subscribed for the proximity alert
 
 ## Defined in
 
-dist/generated/types.d.ts:28419
+dist/generated/types.d.ts:29293

@@ -20,4 +20,4 @@ The ability to display folder names for each chat in the chat list
 
 ## Defined in
 
-dist/generated/types.d.ts:41995
+dist/generated/types.d.ts:43389

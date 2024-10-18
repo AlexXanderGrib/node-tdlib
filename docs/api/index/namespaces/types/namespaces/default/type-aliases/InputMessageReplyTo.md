@@ -15,4 +15,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:60500
+dist/generated/types.d.ts:62240

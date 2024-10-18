@@ -18,10 +18,10 @@ The monthly limit for the number of posted stories exceeded. The user needs to b
 
 ### retry\_after
 
-> **retry\_after**: [`int32`](int32-1.md)
+> **retry\_after**: [`int32`](int32.md)
 
 Time left before the user can send the next story
 
 ## Defined in
 
-dist/generated/types.d.ts:43771
+dist/generated/types.d.ts:45297

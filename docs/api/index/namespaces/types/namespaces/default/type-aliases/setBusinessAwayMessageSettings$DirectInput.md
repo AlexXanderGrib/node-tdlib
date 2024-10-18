@@ -14,10 +14,10 @@ Changes the business away message settings of the current user. Requires Telegra
 
 ### away\_message\_settings?
 
-> `readonly` `optional` **away\_message\_settings**: [`businessAwayMessageSettings$Input`](businessAwayMessageSettings$Input-1.md) \| `null`
+> `readonly` `optional` **away\_message\_settings**: [`businessAwayMessageSettings$Input`](businessAwayMessageSettings$Input.md) \| `null`
 
 The new settings for the away message of the business; pass null to disable the away message
 
 ## Defined in
 
-dist/generated/types.d.ts:94385
+dist/generated/types.d.ts:96882

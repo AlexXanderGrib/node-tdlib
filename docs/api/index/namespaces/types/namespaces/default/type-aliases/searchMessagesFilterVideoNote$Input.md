@@ -20,4 +20,4 @@ Returns only video note messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30613
+dist/generated/types.d.ts:31745

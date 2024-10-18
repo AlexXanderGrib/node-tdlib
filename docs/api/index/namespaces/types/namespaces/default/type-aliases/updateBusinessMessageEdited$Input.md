@@ -26,10 +26,10 @@ Unique identifier of the business connection
 
 ### message?
 
-> `readonly` `optional` **message**: [`businessMessage$Input`](businessMessage$Input-1.md)
+> `readonly` `optional` **message**: [`businessMessage$Input`](businessMessage$Input.md)
 
 The edited message
 
 ## Defined in
 
-dist/generated/types.d.ts:57187
+dist/generated/types.d.ts:58827

@@ -56,13 +56,13 @@ Title of the query result
 
 ### video\_duration?
 
-> `readonly` `optional` **video\_duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **video\_duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds
 
 ### video\_height?
 
-> `readonly` `optional` **video\_height**: [`int32`](int32-1.md)
+> `readonly` `optional` **video\_height**: [`int32`](int32.md)
 
 Height of the video
 
@@ -80,10 +80,10 @@ The URL of the video file (file size must not exceed 1MB)
 
 ### video\_width?
 
-> `readonly` `optional` **video\_width**: [`int32`](int32-1.md)
+> `readonly` `optional` **video\_width**: [`int32`](int32.md)
 
 Width of the video
 
 ## Defined in
 
-dist/generated/types.d.ts:37192
+dist/generated/types.d.ts:38562

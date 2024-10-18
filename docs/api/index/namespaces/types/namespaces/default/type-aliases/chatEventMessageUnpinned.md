@@ -18,10 +18,10 @@ A message was unpinned
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 Unpinned message
 
 ## Defined in
 
-dist/generated/types.d.ts:39281
+dist/generated/types.d.ts:40651

@@ -18,7 +18,7 @@ The link is a link to an animation
 
 ### animation
 
-> **animation**: [`animation`](animation-1.md)
+> **animation**: [`animation`](animation.md)
 
 The animation
 
@@ -30,4 +30,4 @@ Author of the animation
 
 ## Defined in
 
-dist/generated/types.d.ts:20881
+dist/generated/types.d.ts:21507

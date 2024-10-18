@@ -20,4 +20,4 @@ The ability to set opening hours
 
 ## Defined in
 
-dist/generated/types.d.ts:41883
+dist/generated/types.d.ts:43277

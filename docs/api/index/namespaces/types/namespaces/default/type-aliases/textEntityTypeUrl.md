@@ -18,4 +18,4 @@ An HTTP URL
 
 ## Defined in
 
-dist/generated/types.d.ts:28533
+dist/generated/types.d.ts:29407

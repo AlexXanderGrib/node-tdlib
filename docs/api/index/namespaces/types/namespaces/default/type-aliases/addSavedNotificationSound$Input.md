@@ -24,4 +24,4 @@ Notification sound file to add
 
 ## Defined in
 
-dist/generated/types.d.ts:86805
+dist/generated/types.d.ts:89104

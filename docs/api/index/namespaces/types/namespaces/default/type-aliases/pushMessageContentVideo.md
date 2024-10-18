@@ -36,10 +36,10 @@ True, if the video is secret
 
 ### video
 
-> **video**: [`video`](video-1.md) \| `null`
+> **video**: [`video`](video.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44767
+dist/generated/types.d.ts:46293

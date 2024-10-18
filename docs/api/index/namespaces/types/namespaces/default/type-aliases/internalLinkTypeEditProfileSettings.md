@@ -8,7 +8,7 @@
 
 > **internalLinkTypeEditProfileSettings**: `object`
 
-The link is a link to the edit profile section of the app settings
+The link is a link to the edit profile section of the application settings
 
 ## Type declaration
 
@@ -18,4 +18,4 @@ The link is a link to the edit profile section of the app settings
 
 ## Defined in
 
-dist/generated/types.d.ts:47779
+dist/generated/types.d.ts:49339

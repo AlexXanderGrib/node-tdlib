@@ -20,7 +20,7 @@ A new member joined the chat via an invite link
 
 ### invite\_link?
 
-> `readonly` `optional` **invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input-1.md)
+> `readonly` `optional` **invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input.md)
 
 Invite link used to join the chat
 
@@ -32,4 +32,4 @@ True, if the user has joined the chat using an invite link for a chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:39361
+dist/generated/types.d.ts:40731

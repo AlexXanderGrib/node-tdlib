@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's driver license
 
 ### driver\_license
 
-> **driver\_license**: [`identityDocument`](identityDocument-1.md)
+> **driver\_license**: [`identityDocument`](identityDocument.md)
 
 Driver license
 
 ## Defined in
 
-dist/generated/types.d.ts:24389
+dist/generated/types.d.ts:25149

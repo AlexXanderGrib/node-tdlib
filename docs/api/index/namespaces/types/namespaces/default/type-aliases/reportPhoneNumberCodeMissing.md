@@ -6,7 +6,9 @@
 
 # Type Alias: reportPhoneNumberCodeMissing()
 
-> **reportPhoneNumberCodeMissing**: (`parameters`) => [`Ok`](Ok.md)
+> **reportPhoneNumberCodeMissing**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94530
+dist/generated/types.d.ts:97027

@@ -20,4 +20,4 @@ A different network type (e.g., Ethernet network)
 
 ## Defined in
 
-dist/generated/types.d.ts:49493
+dist/generated/types.d.ts:51077

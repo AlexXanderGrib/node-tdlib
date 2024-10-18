@@ -18,10 +18,10 @@ A new forum topic was created
 
 ### topic\_info
 
-> **topic\_info**: [`forumTopicInfo`](forumTopicInfo-1.md)
+> **topic\_info**: [`forumTopicInfo`](forumTopicInfo.md)
 
 Information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40531
+dist/generated/types.d.ts:41925

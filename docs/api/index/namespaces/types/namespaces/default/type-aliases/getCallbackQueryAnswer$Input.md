@@ -18,15 +18,15 @@ Sends a callback query to a bot and returns an answer. Returns an error with cod
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat with the message
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message from which the query originated
+Identifier of the message from which the query originated. The message must not be scheduled
 
 ### payload?
 
@@ -36,4 +36,4 @@ Query payload
 
 ## Defined in
 
-dist/generated/types.d.ts:83087
+dist/generated/types.d.ts:85386

@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's address
 
 ### address
 
-> **address**: [`address`](address-1.md)
+> **address**: [`address`](address.md)
 
 Address
 
 ## Defined in
 
-dist/generated/types.d.ts:24461
+dist/generated/types.d.ts:25221

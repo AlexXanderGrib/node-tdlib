@@ -30,4 +30,4 @@ Emoji on which the dice throw animation is based
 
 ## Defined in
 
-dist/generated/types.d.ts:30081
+dist/generated/types.d.ts:30955

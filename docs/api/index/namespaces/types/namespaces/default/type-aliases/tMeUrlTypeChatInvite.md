@@ -18,10 +18,10 @@ A chat invite link
 
 ### info
 
-> **info**: [`chatInviteLinkInfo`](chatInviteLinkInfo-1.md)
+> **info**: [`chatInviteLinkInfo`](chatInviteLinkInfo.md)
 
 Information about the chat invite link
 
 ## Defined in
 
-dist/generated/types.d.ts:50261
+dist/generated/types.d.ts:51859

@@ -18,22 +18,22 @@ A chat draft has changed. Be aware that the update may come in the currently ope
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### draft\_message
 
-> **draft\_message**: [`draftMessage`](draftMessage-1.md) \| `null`
+> **draft\_message**: [`draftMessage`](draftMessage.md) \| `null`
 
 The new draft message; may be null if none
 
 ### positions
 
-> **positions**: [`vector`](vector.md)\<[`chatPosition`](chatPosition-1.md)\>
+> **positions**: [`vector`](vector.md)\<[`chatPosition`](chatPosition.md)\>
 
 The new chat positions in the chat lists
 
 ## Defined in
 
-dist/generated/types.d.ts:53707
+dist/generated/types.d.ts:55323

@@ -26,4 +26,4 @@ Hash value from the link
 
 ## Defined in
 
-dist/generated/types.d.ts:52620
+dist/generated/types.d.ts:54236

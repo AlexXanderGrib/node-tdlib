@@ -6,7 +6,9 @@
 
 # Type Alias: setStickerMaskPosition()
 
-> **setStickerMaskPosition**: (`parameters`) => [`Ok`](Ok.md)
+> **setStickerMaskPosition**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100312
+dist/generated/types.d.ts:103091

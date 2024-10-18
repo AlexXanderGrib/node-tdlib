@@ -20,4 +20,4 @@ The speech was distorted
 
 ## Defined in
 
-dist/generated/types.d.ts:35781
+dist/generated/types.d.ts:37151

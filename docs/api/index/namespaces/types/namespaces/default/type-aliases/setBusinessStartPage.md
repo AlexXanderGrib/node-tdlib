@@ -6,7 +6,9 @@
 
 # Type Alias: setBusinessStartPage()
 
-> **setBusinessStartPage**: (`parameters`) => [`Ok`](Ok.md)
+> **setBusinessStartPage**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the business start page of the current user. Requires Telegram Business subscription
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94426
+dist/generated/types.d.ts:96923

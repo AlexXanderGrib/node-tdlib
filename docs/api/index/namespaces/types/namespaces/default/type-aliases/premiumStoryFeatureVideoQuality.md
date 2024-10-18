@@ -18,4 +18,4 @@ The ability to choose better quality for viewed stories
 
 ## Defined in
 
-dist/generated/types.d.ts:42099
+dist/generated/types.d.ts:43493

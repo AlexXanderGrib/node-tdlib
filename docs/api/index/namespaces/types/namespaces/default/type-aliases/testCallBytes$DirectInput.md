@@ -14,10 +14,10 @@ Returns the received bytes; for testing only. This is an offline method. Can be 
 
 ### x?
 
-> `readonly` `optional` **x**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **x**: [`bytes$Input`](bytes$Input.md)
 
 Bytes to return
 
 ## Defined in
 
-dist/generated/types.d.ts:102012
+dist/generated/types.d.ts:104933

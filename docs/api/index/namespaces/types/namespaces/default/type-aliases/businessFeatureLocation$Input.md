@@ -20,4 +20,4 @@ The ability to set location
 
 ## Defined in
 
-dist/generated/types.d.ts:41869
+dist/generated/types.d.ts:43263

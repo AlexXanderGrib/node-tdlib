@@ -20,4 +20,4 @@ The code to apply
 
 ## Defined in
 
-dist/generated/types.d.ts:100634
+dist/generated/types.d.ts:103413

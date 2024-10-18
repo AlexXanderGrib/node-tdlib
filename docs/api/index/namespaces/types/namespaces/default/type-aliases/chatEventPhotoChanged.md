@@ -18,16 +18,16 @@ The chat photo was changed
 
 ### new\_photo
 
-> **new\_photo**: [`chatPhoto`](chatPhoto-1.md) \| `null`
+> **new\_photo**: [`chatPhoto`](chatPhoto.md) \| `null`
 
 New chat photo value; may be null
 
 ### old\_photo
 
-> **old\_photo**: [`chatPhoto`](chatPhoto-1.md) \| `null`
+> **old\_photo**: [`chatPhoto`](chatPhoto.md) \| `null`
 
 Previous chat photo value; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:39819
+dist/generated/types.d.ts:41189

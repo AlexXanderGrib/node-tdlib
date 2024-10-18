@@ -14,7 +14,7 @@ Changes the position of a sticker in the set to which it belongs. The sticker se
 
 ### position?
 
-> `readonly` `optional` **position**: [`int32`](int32-1.md)
+> `readonly` `optional` **position**: [`int32`](int32.md)
 
 New position of the sticker in the set, 0-based
 
@@ -26,4 +26,4 @@ Sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:100152
+dist/generated/types.d.ts:102931

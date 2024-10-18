@@ -8,6 +8,8 @@
 
 > **getAuthorizationState**: (`parameters`) => [`AuthorizationState`](AuthorizationState.md)
 
+Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
+
 ## Parameters
 
 • **parameters**: [`getAuthorizationState$Input`](getAuthorizationState$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:73087
+dist/generated/types.d.ts:75075

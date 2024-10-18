@@ -20,4 +20,4 @@ A newly created basic group
 
 ## Defined in
 
-dist/generated/types.d.ts:44897
+dist/generated/types.d.ts:46423

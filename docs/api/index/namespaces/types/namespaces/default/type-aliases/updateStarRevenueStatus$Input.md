@@ -10,7 +10,7 @@
 
 Version of [updateStarRevenueStatus](updateStarRevenueStatus.md) for method parameters.
 
-The Telegram star revenue earned by a bot or a chat has changed. If star transactions screen of the chat is opened, then getStarTransactions may be called to fetch new transactions
+The Telegram Star revenue earned by a bot or a chat has changed. If Telegram Star transaction screen of the chat is opened, then getStarTransactions may be called to fetch new transactions
 
 ## Type declaration
 
@@ -22,14 +22,14 @@ The Telegram star revenue earned by a bot or a chat has changed. If star transac
 
 > `readonly` `optional` **owner\_id**: [`MessageSender$Input`](MessageSender$Input.md)
 
-Identifier of the owner of the Telegram stars
+Identifier of the owner of the Telegram Stars
 
 ### status?
 
-> `readonly` `optional` **status**: [`starRevenueStatus$Input`](starRevenueStatus$Input-1.md)
+> `readonly` `optional` **status**: [`starRevenueStatus$Input`](starRevenueStatus$Input.md)
 
-New Telegram star revenue status
+New Telegram Star revenue status
 
 ## Defined in
 
-dist/generated/types.d.ts:56819
+dist/generated/types.d.ts:58459

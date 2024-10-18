@@ -6,7 +6,9 @@
 
 # Type Alias: removeSavedNotificationSound()
 
-> **removeSavedNotificationSound**: (`parameters`) => [`Ok`](Ok.md)
+> **removeSavedNotificationSound**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a notification sound from the list of saved notification sounds
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86857
+dist/generated/types.d.ts:89156

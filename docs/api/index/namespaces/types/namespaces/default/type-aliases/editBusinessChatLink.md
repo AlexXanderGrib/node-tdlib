@@ -6,7 +6,9 @@
 
 # Type Alias: editBusinessChatLink()
 
-> **editBusinessChatLink**: (`parameters`) => [`BusinessChatLink`](BusinessChatLink.md)
+> **editBusinessChatLink**: (`parameters`) => [`BusinessChatLink`](BusinessChatLink-1.md)
+
+Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessChatLink`](BusinessChatLink.md)
+[`BusinessChatLink`](BusinessChatLink-1.md)
 
-[BusinessChatLink](BusinessChatLink.md)
+[BusinessChatLink](BusinessChatLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94808
+dist/generated/types.d.ts:97305

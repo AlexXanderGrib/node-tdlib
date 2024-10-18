@@ -26,7 +26,7 @@ Represents a document
 
 ### document?
 
-> `readonly` `optional` **document**: [`document$Input`](document$Input-1.md)
+> `readonly` `optional` **document**: [`document$Input`](document$Input.md)
 
 Document
 
@@ -44,4 +44,4 @@ Document title
 
 ## Defined in
 
-dist/generated/types.d.ts:38623
+dist/generated/types.d.ts:39993

@@ -26,10 +26,10 @@ Animation to be set as profile photo. Only inputFileLocal and inputFileGenerated
 
 ### main\_frame\_timestamp?
 
-> `readonly` `optional` **main\_frame\_timestamp**: [`double`](double-1.md)
+> `readonly` `optional` **main\_frame\_timestamp**: [`double`](double.md)
 
 Timestamp of the frame, which will be used as static chat photo
 
 ## Defined in
 
-dist/generated/types.d.ts:7545
+dist/generated/types.d.ts:7611

@@ -14,10 +14,10 @@ Returns information about a user by their identifier. This is an offline request
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:74359
+dist/generated/types.d.ts:76347

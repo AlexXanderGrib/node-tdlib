@@ -42,4 +42,4 @@ Stripe API publishable key
 
 ## Defined in
 
-dist/generated/types.d.ts:22947
+dist/generated/types.d.ts:23707

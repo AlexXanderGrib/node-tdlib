@@ -20,16 +20,16 @@ A chat video chat state has changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### video\_chat?
 
-> `readonly` `optional` **video\_chat**: [`videoChat$Input`](videoChat$Input-1.md)
+> `readonly` `optional` **video\_chat**: [`videoChat$Input`](videoChat$Input.md)
 
 New value of video_chat
 
 ## Defined in
 
-dist/generated/types.d.ts:54109
+dist/generated/types.d.ts:55725

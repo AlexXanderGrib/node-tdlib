@@ -6,7 +6,9 @@
 
 # Type Alias: getRecommendedChats()
 
-> **getRecommendedChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getRecommendedChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns a list of channel chats recommended to the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75259
+dist/generated/types.d.ts:77285

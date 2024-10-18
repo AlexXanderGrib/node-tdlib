@@ -6,7 +6,9 @@
 
 # Type Alias: getForumTopic()
 
-> **getForumTopic**: (`parameters`) => [`ForumTopic`](ForumTopic.md)
+> **getForumTopic**: (`parameters`) => [`ForumTopic`](ForumTopic-1.md)
+
+Returns information about a forum topic
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ForumTopic`](ForumTopic.md)
+[`ForumTopic`](ForumTopic-1.md)
 
-[ForumTopic](ForumTopic.md)
+[ForumTopic](ForumTopic-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80774
+dist/generated/types.d.ts:82823

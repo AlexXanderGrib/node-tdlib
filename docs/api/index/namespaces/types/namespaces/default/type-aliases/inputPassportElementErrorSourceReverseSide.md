@@ -18,10 +18,10 @@ The reverse side of the document contains an error. The error is considered reso
 
 ### file\_hash
 
-> **file\_hash**: [`bytes`](bytes-1.md)
+> **file\_hash**: [`bytes`](bytes.md)
 
 Current hash of the file containing the reverse side
 
 ## Defined in
 
-dist/generated/types.d.ts:25575
+dist/generated/types.d.ts:26335

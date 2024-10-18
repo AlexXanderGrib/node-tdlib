@@ -20,16 +20,16 @@ A document message (general file)
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md)
 
 Document caption
 
 ### document?
 
-> `readonly` `optional` **document**: [`document$Input`](document$Input-1.md)
+> `readonly` `optional` **document**: [`document$Input`](document$Input.md)
 
 The document description
 
 ## Defined in
 
-dist/generated/types.d.ts:25923
+dist/generated/types.d.ts:26683

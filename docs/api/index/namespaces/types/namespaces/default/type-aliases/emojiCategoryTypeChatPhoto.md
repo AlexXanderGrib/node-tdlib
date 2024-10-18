@@ -18,4 +18,4 @@ The category must be used for chat photo emoji selection
 
 ## Defined in
 
-dist/generated/types.d.ts:31781
+dist/generated/types.d.ts:32913

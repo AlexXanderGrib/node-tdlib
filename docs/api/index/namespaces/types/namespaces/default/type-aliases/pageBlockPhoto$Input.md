@@ -20,13 +20,13 @@ A photo
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input-1.md)
+> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input.md)
 
 Photo caption
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md) \| `null`
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md) \| `null`
 
 Photo file; may be null
 
@@ -38,4 +38,4 @@ URL that needs to be opened when the photo is clicked
 
 ## Defined in
 
-dist/generated/types.d.ts:20106
+dist/generated/types.d.ts:20732

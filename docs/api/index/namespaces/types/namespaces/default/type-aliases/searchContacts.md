@@ -6,7 +6,9 @@
 
 # Type Alias: searchContacts()
 
-> **searchContacts**: (`parameters`) => [`Users`](Users.md)
+> **searchContacts**: (`parameters`) => [`Users`](Users-1.md)
+
+Searches for the specified query in the first names, last names and usernames of the known user contacts
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Users`](Users.md)
+[`Users`](Users-1.md)
 
-[Users](Users.md)
+[Users](Users-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92174
+dist/generated/types.d.ts:94671

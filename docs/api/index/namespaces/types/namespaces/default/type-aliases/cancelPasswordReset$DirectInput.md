@@ -12,4 +12,4 @@ Cancels reset of 2-step verification password. The method can be called if passw
 
 ## Defined in
 
-dist/generated/types.d.ts:74265
+dist/generated/types.d.ts:76253

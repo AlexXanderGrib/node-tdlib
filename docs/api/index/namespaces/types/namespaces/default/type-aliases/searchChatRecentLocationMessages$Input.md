@@ -18,16 +18,16 @@ Returns information about the recent locations of chat members that were sent to
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned
 
 ## Defined in
 
-dist/generated/types.d.ts:77089
+dist/generated/types.d.ts:79115

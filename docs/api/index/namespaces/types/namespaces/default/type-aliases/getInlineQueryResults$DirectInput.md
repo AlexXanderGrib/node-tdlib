@@ -14,13 +14,13 @@ Sends an inline query to a bot and returns its results. Returns an error with co
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat where the query was sent
 
@@ -38,10 +38,10 @@ Text of the query
 
 ### user\_location?
 
-> `readonly` `optional` **user\_location**: [`location$Input`](location$Input-1.md) \| `null`
+> `readonly` `optional` **user\_location**: [`location$Input`](location$Input.md) \| `null`
 
 Location of the user; pass null if unknown or the bot doesn't need user's location
 
 ## Defined in
 
-dist/generated/types.d.ts:82580
+dist/generated/types.d.ts:84773

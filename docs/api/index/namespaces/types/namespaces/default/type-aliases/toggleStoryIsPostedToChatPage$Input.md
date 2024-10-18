@@ -24,16 +24,16 @@ Pass true to make the story accessible after expiration; pass false to make it p
 
 ### story\_id?
 
-> `readonly` `optional` **story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **story\_id**: [`int32`](int32.md)
 
 Identifier of the story
 
 ### story\_sender\_chat\_id?
 
-> `readonly` `optional` **story\_sender\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **story\_sender\_chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat that posted the story
 
 ## Defined in
 
-dist/generated/types.d.ts:87431
+dist/generated/types.d.ts:89806

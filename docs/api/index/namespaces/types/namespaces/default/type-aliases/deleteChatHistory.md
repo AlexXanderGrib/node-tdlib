@@ -6,7 +6,9 @@
 
 # Type Alias: deleteChatHistory()
 
-> **deleteChatHistory**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteChatHistory**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat.can_be_deleted_for_all_users fields to find whether and how the method can be applied to the chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76251
+dist/generated/types.d.ts:78277

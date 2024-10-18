@@ -6,7 +6,9 @@
 
 # Type Alias: checkAuthenticationBotToken()
 
-> **checkAuthenticationBotToken**: (`parameters`) => [`Ok`](Ok.md)
+> **checkAuthenticationBotToken**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73717
+dist/generated/types.d.ts:75705

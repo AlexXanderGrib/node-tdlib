@@ -8,6 +8,8 @@
 
 > **getApplicationConfig**: (`parameters`) => [`JsonValue`](JsonValue.md)
 
+Returns application config, provided by the server. Can be called before authorization
+
 ## Parameters
 
 • **parameters**: [`getApplicationConfig$Input`](getApplicationConfig$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:101317
+dist/generated/types.d.ts:104238

@@ -18,10 +18,10 @@ Removes users from the contact list
 
 ### user\_ids?
 
-> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of users to be deleted
 
 ## Defined in
 
-dist/generated/types.d.ts:92178
+dist/generated/types.d.ts:94675

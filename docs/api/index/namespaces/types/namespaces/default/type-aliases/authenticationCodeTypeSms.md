@@ -18,10 +18,10 @@ A digit-only authentication code is delivered via an SMS message to the specifie
 
 ### length
 
-> **length**: [`int32`](int32-1.md)
+> **length**: [`int32`](int32.md)
 
 Length of the code
 
 ## Defined in
 
-dist/generated/types.d.ts:2517
+dist/generated/types.d.ts:2563

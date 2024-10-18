@@ -18,10 +18,10 @@ Disables all active non-editable usernames of a supergroup or channel, requires 
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup or channel
 
 ## Defined in
 
-dist/generated/types.d.ts:95993
+dist/generated/types.d.ts:98762

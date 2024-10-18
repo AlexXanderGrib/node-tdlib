@@ -6,7 +6,9 @@
 
 # Type Alias: addContact()
 
-> **addContact**: (`parameters`) => [`Ok`](Ok.md)
+> **addContact**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a user to the contact list or edits an existing contact by their user identifier
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92091
+dist/generated/types.d.ts:94588

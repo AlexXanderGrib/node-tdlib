@@ -18,10 +18,10 @@ Revokes invite link for a group call. Requires groupCall.can_be_managed group ca
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:91337
+dist/generated/types.d.ts:93834

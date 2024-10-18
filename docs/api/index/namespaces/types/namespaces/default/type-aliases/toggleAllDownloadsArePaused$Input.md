@@ -24,4 +24,4 @@ Pass true to pause all downloads; pass false to unpause them
 
 ## Defined in
 
-dist/generated/types.d.ts:89339
+dist/generated/types.d.ts:91714

@@ -6,7 +6,9 @@
 
 # Type Alias: setStickerSetTitle()
 
-> **setStickerSetTitle**: (`parameters`) => [`Ok`](Ok.md)
+> **setStickerSetTitle**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets a sticker set title
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100104
+dist/generated/types.d.ts:102883

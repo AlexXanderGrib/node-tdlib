@@ -18,7 +18,7 @@ An animation message (GIF-style).
 
 ### animation
 
-> **animation**: [`animation`](animation-1.md) \| `null`
+> **animation**: [`animation`](animation.md) \| `null`
 
 Message content; may be null
 
@@ -36,4 +36,4 @@ True, if the message is a pinned message with the specified content
 
 ## Defined in
 
-dist/generated/types.d.ts:44145
+dist/generated/types.d.ts:45671

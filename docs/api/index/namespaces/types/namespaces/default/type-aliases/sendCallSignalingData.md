@@ -6,7 +6,9 @@
 
 # Type Alias: sendCallSignalingData()
 
-> **sendCallSignalingData**: (`parameters`) => [`Ok`](Ok.md)
+> **sendCallSignalingData**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sends call signaling data
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90503
+dist/generated/types.d.ts:93000

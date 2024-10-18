@@ -20,10 +20,10 @@ The list of available chat themes has changed
 
 ### chat\_themes?
 
-> `readonly` `optional` **chat\_themes**: [`vector$Input`](vector$Input.md)\<[`chatTheme$Input`](chatTheme$Input-1.md)\>
+> `readonly` `optional` **chat\_themes**: [`vector$Input`](vector$Input.md)\<[`chatTheme$Input`](chatTheme$Input.md)\>
 
 The new list of chat themes
 
 ## Defined in
 
-dist/generated/types.d.ts:56346
+dist/generated/types.d.ts:57962

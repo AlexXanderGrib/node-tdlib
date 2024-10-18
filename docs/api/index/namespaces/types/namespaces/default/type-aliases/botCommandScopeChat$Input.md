@@ -20,10 +20,10 @@ A scope covering all members of a chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52510
+dist/generated/types.d.ts:54126

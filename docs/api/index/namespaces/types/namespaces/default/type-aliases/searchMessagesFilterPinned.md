@@ -18,4 +18,4 @@ Returns only pinned messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30689
+dist/generated/types.d.ts:31821

@@ -20,4 +20,4 @@ A member left the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:39453
+dist/generated/types.d.ts:40823

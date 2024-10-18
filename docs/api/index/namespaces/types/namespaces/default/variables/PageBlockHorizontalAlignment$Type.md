@@ -24,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:2067
+dist/generated/types.d.ts:2099

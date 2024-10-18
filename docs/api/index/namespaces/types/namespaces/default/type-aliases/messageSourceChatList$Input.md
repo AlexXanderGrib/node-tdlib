@@ -20,4 +20,4 @@ The message is from a chat list or a forum topic list
 
 ## Defined in
 
-dist/generated/types.d.ts:14275
+dist/generated/types.d.ts:14867

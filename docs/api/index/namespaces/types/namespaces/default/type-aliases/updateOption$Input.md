@@ -32,4 +32,4 @@ The new option value
 
 ## Defined in
 
-dist/generated/types.d.ts:56085
+dist/generated/types.d.ts:57701

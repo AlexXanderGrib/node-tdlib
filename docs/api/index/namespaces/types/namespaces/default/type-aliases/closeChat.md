@@ -6,7 +6,9 @@
 
 # Type Alias: closeChat()
 
-> **closeChat**: (`parameters`) => [`Ok`](Ok.md)
+> **closeChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs TDLib that the chat is closed by the user. Many useful activities depend on the chat being opened or closed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83669
+dist/generated/types.d.ts:85968

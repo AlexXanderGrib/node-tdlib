@@ -6,7 +6,9 @@
 
 # Type Alias: createNewBasicGroupChat()
 
-> **createNewBasicGroupChat**: (`parameters`) => [`CreatedBasicGroupChat`](CreatedBasicGroupChat.md)
+> **createNewBasicGroupChat**: (`parameters`) => [`CreatedBasicGroupChat`](CreatedBasicGroupChat-1.md)
+
+Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`CreatedBasicGroupChat`](CreatedBasicGroupChat.md)
+[`CreatedBasicGroupChat`](CreatedBasicGroupChat-1.md)
 
-[CreatedBasicGroupChat](CreatedBasicGroupChat.md)
+[CreatedBasicGroupChat](CreatedBasicGroupChat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84269
+dist/generated/types.d.ts:86568

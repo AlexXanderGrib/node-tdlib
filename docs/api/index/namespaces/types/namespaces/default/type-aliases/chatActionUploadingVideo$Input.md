@@ -20,10 +20,10 @@ The user is uploading a video
 
 ### progress?
 
-> `readonly` `optional` **progress**: [`int32`](int32-1.md)
+> `readonly` `optional` **progress**: [`int32`](int32.md)
 
 Upload progress, as a percentage
 
 ## Defined in
 
-dist/generated/types.d.ts:30744
+dist/generated/types.d.ts:31876

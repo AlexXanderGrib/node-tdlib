@@ -18,7 +18,7 @@ The user must choose an option to report the message and repeat request with the
 
 ### options
 
-> **options**: [`vector`](vector.md)\<[`reportChatSponsoredMessageOption`](reportChatSponsoredMessageOption-1.md)\>
+> **options**: [`vector`](vector.md)\<[`reportChatSponsoredMessageOption`](reportChatSponsoredMessageOption.md)\>
 
 List of available options
 
@@ -30,4 +30,4 @@ Title for the option choice
 
 ## Defined in
 
-dist/generated/types.d.ts:14605
+dist/generated/types.d.ts:15197

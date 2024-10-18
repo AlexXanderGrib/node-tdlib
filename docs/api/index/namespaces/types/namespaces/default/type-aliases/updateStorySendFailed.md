@@ -18,7 +18,7 @@ A story failed to send. If the story sending is canceled, then updateStoryDelete
 
 ### error
 
-> **error**: [`error`](error-1.md)
+> **error**: [`error`](error.md)
 
 The cause of the story sending failure
 
@@ -30,10 +30,10 @@ Type of the error; may be null if unknown
 
 ### story
 
-> **story**: [`story`](story-1.md)
+> **story**: [`story`](story.md)
 
 The failed to send story
 
 ## Defined in
 
-dist/generated/types.d.ts:55931
+dist/generated/types.d.ts:57547

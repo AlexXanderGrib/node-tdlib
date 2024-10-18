@@ -6,7 +6,9 @@
 
 # Type Alias: logOut()
 
-> **logOut**: (`parameters`) => [`Ok`](Ok.md)
+> **logOut**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Closes the TDLib instance after a proper logout. Requires an available network connection. All local data will be destroyed. After the logout completes, updateAuthorizationState with authorizationStateClosed will be sent
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73734
+dist/generated/types.d.ts:75722

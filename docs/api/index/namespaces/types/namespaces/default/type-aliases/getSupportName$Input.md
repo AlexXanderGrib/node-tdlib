@@ -18,4 +18,4 @@ Returns localized name of the Telegram support user; for Telegram support only
 
 ## Defined in
 
-dist/generated/types.d.ts:101939
+dist/generated/types.d.ts:104860

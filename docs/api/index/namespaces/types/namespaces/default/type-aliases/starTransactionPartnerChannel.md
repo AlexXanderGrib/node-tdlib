@@ -18,22 +18,16 @@ The transaction is a transaction with a channel chat
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
-### media
+### purpose
 
-> **media**: [`vector`](vector.md)\<[`PaidMedia`](PaidMedia.md)\>
+> **purpose**: [`ChannelTransactionPurpose`](ChannelTransactionPurpose.md)
 
-Information about the bought media
-
-### paid\_media\_message\_id
-
-> **paid\_media\_message\_id**: [`int53`](int53-1.md)
-
-Identifier of the corresponding message with paid media; can be an identifier of a deleted message
+Purpose of the transaction
 
 ## Defined in
 
-dist/generated/types.d.ts:8497
+dist/generated/types.d.ts:8909

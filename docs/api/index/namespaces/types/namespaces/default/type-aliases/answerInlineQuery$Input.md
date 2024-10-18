@@ -18,19 +18,19 @@ Sets the result of an inline query; for bots only
 
 ### button?
 
-> `readonly` `optional` **button**: [`inlineQueryResultsButton$Input`](inlineQueryResultsButton$Input-1.md) \| `null`
+> `readonly` `optional` **button**: [`inlineQueryResultsButton$Input`](inlineQueryResultsButton$Input.md) \| `null`
 
 Button to be shown above inline query results; pass null if none
 
 ### cache\_time?
 
-> `readonly` `optional` **cache\_time**: [`int32`](int32-1.md)
+> `readonly` `optional` **cache\_time**: [`int32`](int32.md)
 
 Allowed time to cache the results of the query, in seconds
 
 ### inline\_query\_id?
 
-> `readonly` `optional` **inline\_query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **inline\_query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the inline query
 
@@ -54,4 +54,4 @@ The results of the query
 
 ## Defined in
 
-dist/generated/types.d.ts:82617
+dist/generated/types.d.ts:84810

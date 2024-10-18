@@ -6,7 +6,9 @@
 
 # Type Alias: getPassportAuthorizationForm()
 
-> **getPassportAuthorizationForm**: (`parameters`) => [`PassportAuthorizationForm`](PassportAuthorizationForm.md)
+> **getPassportAuthorizationForm**: (`parameters`) => [`PassportAuthorizationForm`](PassportAuthorizationForm-1.md)
+
+Returns a Telegram Passport authorization form for sharing data with a service
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PassportAuthorizationForm`](PassportAuthorizationForm.md)
+[`PassportAuthorizationForm`](PassportAuthorizationForm-1.md)
 
-[PassportAuthorizationForm](PassportAuthorizationForm.md)
+[PassportAuthorizationForm](PassportAuthorizationForm-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99550
+dist/generated/types.d.ts:102329

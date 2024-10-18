@@ -8,6 +8,8 @@
 
 > **getChatStatistics**: (`parameters`) => [`ChatStatistics`](ChatStatistics.md)
 
+Returns detailed statistics about a chat. Currently, this method can be used only for supergroups and channels. Can be used only if supergroupFullInfo.can_get_statistics == true
+
 ## Parameters
 
 • **parameters**: [`getChatStatistics$Input`](getChatStatistics$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:98587
+dist/generated/types.d.ts:101366

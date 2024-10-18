@@ -26,7 +26,7 @@ Table caption
 
 ### cells?
 
-> `readonly` `optional` **cells**: [`vector$Input`](vector$Input.md)\<[`vector$Input`](vector$Input.md)\<[`pageBlockTableCell$Input`](pageBlockTableCell$Input-1.md)\>\>
+> `readonly` `optional` **cells**: [`vector$Input`](vector$Input.md)\<[`vector$Input`](vector$Input.md)\<[`pageBlockTableCell$Input`](pageBlockTableCell$Input.md)\>\>
 
 Table cells
 
@@ -44,4 +44,4 @@ True, if the table is striped
 
 ## Defined in
 
-dist/generated/types.d.ts:20557
+dist/generated/types.d.ts:21183

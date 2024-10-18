@@ -18,7 +18,7 @@ Notification settings for some type of chats were updated
 
 ### notification\_settings
 
-> **notification\_settings**: [`scopeNotificationSettings`](scopeNotificationSettings-1.md)
+> **notification\_settings**: [`scopeNotificationSettings`](scopeNotificationSettings.md)
 
 The new notification settings
 
@@ -30,4 +30,4 @@ Types of chats for which notification settings were updated
 
 ## Defined in
 
-dist/generated/types.d.ts:54633
+dist/generated/types.d.ts:56249

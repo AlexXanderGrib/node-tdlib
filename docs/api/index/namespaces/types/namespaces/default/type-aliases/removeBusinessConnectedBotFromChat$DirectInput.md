@@ -14,10 +14,10 @@ Removes the connected business bot from a specific chat by adding the chat to bu
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:94712
+dist/generated/types.d.ts:97209

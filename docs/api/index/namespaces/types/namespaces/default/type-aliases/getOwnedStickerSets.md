@@ -6,7 +6,9 @@
 
 # Type Alias: getOwnedStickerSets()
 
-> **getOwnedStickerSets**: (`parameters`) => [`StickerSets`](StickerSets.md)
+> **getOwnedStickerSets**: (`parameters`) => [`StickerSets`](StickerSets-1.md)
+
+Returns sticker sets owned by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StickerSets`](StickerSets.md)
+[`StickerSets`](StickerSets-1.md)
 
-[StickerSets](StickerSets.md)
+[StickerSets](StickerSets-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100350
+dist/generated/types.d.ts:103129

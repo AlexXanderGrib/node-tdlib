@@ -20,10 +20,10 @@ Represents a JSON object
 
 ### members?
 
-> `readonly` `optional` **members**: [`vector$Input`](vector$Input.md)\<[`jsonObjectMember$Input`](jsonObjectMember$Input-1.md)\>
+> `readonly` `optional` **members**: [`vector$Input`](vector$Input.md)\<[`jsonObjectMember$Input`](jsonObjectMember$Input.md)\>
 
 The list of object members
 
 ## Defined in
 
-dist/generated/types.d.ts:45882
+dist/generated/types.d.ts:47408

@@ -18,7 +18,7 @@ A slideshow
 
 ### caption
 
-> **caption**: [`pageBlockCaption`](pageBlockCaption-1.md)
+> **caption**: [`pageBlockCaption`](pageBlockCaption.md)
 
 Block caption
 
@@ -30,4 +30,4 @@ Slideshow item contents
 
 ## Defined in
 
-dist/generated/types.d.ts:20441
+dist/generated/types.d.ts:21067

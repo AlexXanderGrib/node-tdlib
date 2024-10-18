@@ -18,4 +18,4 @@ The sticker is a regular sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:4413
+dist/generated/types.d.ts:4459

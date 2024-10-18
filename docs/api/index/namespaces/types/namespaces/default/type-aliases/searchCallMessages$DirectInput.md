@@ -14,7 +14,7 @@ Searches for call messages. Returns the results in reverse chronological order (
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned; up to 100. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
 
@@ -32,4 +32,4 @@ Pass true to search only for messages with missed/declined calls
 
 ## Defined in
 
-dist/generated/types.d.ts:76700
+dist/generated/types.d.ts:78726

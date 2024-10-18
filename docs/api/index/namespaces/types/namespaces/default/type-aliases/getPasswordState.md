@@ -6,7 +6,9 @@
 
 # Type Alias: getPasswordState()
 
-> **getPasswordState**: (`parameters`) => [`PasswordState`](PasswordState.md)
+> **getPasswordState**: (`parameters`) => [`PasswordState`](PasswordState-1.md)
+
+Returns the current state of 2-step verification
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PasswordState`](PasswordState.md)
+[`PasswordState`](PasswordState-1.md)
 
-[PasswordState](PasswordState.md)
+[PasswordState](PasswordState-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73864
+dist/generated/types.d.ts:75852

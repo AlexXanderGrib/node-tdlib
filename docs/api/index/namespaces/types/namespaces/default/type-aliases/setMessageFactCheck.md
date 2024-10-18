@@ -6,7 +6,9 @@
 
 # Type Alias: setMessageFactCheck()
 
-> **setMessageFactCheck**: (`parameters`) => [`Ok`](Ok.md)
+> **setMessageFactCheck**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the fact-check of a message. Can be only used if messageProperties.can_set_fact_check == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79494
+dist/generated/types.d.ts:81485

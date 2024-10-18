@@ -20,4 +20,4 @@ The chat is a private or secret chat with a mutual contact and the user's phone 
 
 ## Defined in
 
-dist/generated/types.d.ts:17055
+dist/generated/types.d.ts:17647

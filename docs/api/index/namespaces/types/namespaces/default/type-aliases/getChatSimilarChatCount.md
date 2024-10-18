@@ -6,7 +6,9 @@
 
 # Type Alias: getChatSimilarChatCount()
 
-> **getChatSimilarChatCount**: (`parameters`) => [`Count`](Count.md)
+> **getChatSimilarChatCount**: (`parameters`) => [`Count`](Count-1.md)
+
+Returns approximate number of chats similar to the given chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Count`](Count.md)
+[`Count`](Count-1.md)
 
-[Count](Count.md)
+[Count](Count-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75325
+dist/generated/types.d.ts:77351

@@ -14,7 +14,7 @@ Adds a chat folder by an invite link
 
 ### chat\_ids?
 
-> `readonly` `optional` **chat\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **chat\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the chats added to the chat folder. The chats are automatically joined if they aren't joined yet
 
@@ -26,4 +26,4 @@ Invite link for the chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:85026
+dist/generated/types.d.ts:87325

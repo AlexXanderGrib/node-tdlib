@@ -18,4 +18,4 @@ The link is an invite link for a channel
 
 ## Defined in
 
-dist/generated/types.d.ts:10819
+dist/generated/types.d.ts:11339

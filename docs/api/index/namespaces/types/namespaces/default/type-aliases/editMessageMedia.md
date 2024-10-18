@@ -6,7 +6,13 @@
 
 # Type Alias: editMessageMedia()
 
-> **editMessageMedia**: (`parameters`) => [`Message`](Message.md)
+> **editMessageMedia**: (`parameters`) => [`Message`](Message-1.md)
+
+Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
+
+- The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
+
+- Returns the edited message after the edit is completed on the server side
 
 ## Parameters
 
@@ -16,10 +22,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78996
+dist/generated/types.d.ts:80999

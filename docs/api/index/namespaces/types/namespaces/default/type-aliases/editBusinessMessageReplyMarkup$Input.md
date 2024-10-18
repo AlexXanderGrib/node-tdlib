@@ -24,13 +24,13 @@ Unique identifier of business connection on behalf of which the message was sent
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
@@ -42,4 +42,4 @@ The new message reply markup; pass null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:80006
+dist/generated/types.d.ts:81997

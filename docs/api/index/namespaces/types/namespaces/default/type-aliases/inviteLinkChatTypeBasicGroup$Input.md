@@ -20,4 +20,4 @@ The link is an invite link for a basic group
 
 ## Defined in
 
-dist/generated/types.d.ts:10799
+dist/generated/types.d.ts:11319

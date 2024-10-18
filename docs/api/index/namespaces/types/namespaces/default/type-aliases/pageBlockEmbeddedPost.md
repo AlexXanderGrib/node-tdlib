@@ -24,19 +24,19 @@ Post author
 
 ### author\_photo
 
-> **author\_photo**: [`photo`](photo-1.md) \| `null`
+> **author\_photo**: [`photo`](photo.md) \| `null`
 
 Post author photo; may be null
 
 ### caption
 
-> **caption**: [`pageBlockCaption`](pageBlockCaption-1.md)
+> **caption**: [`pageBlockCaption`](pageBlockCaption.md)
 
 Post caption
 
 ### date
 
-> **date**: [`int32`](int32-1.md)
+> **date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the post was created; 0 if unknown
 
@@ -54,4 +54,4 @@ URL of the embedded post
 
 ## Defined in
 
-dist/generated/types.d.ts:20333
+dist/generated/types.d.ts:20959

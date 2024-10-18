@@ -6,7 +6,9 @@
 
 # Type Alias: checkPhoneNumberCode()
 
-> **checkPhoneNumberCode**: (`parameters`) => [`Ok`](Ok.md)
+> **checkPhoneNumberCode**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Check the authentication code and completes the request for which the code was sent if appropriate
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94586
+dist/generated/types.d.ts:97083

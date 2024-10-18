@@ -12,4 +12,4 @@ Returns the list of emoji statuses, which can't be used as chat emoji status, ev
 
 ## Defined in
 
-dist/generated/types.d.ts:88746
+dist/generated/types.d.ts:91121

@@ -24,4 +24,4 @@ Recognized text
 
 ## Defined in
 
-dist/generated/types.d.ts:36571
+dist/generated/types.d.ts:37941

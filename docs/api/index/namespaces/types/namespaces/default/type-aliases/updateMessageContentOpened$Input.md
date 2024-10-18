@@ -20,16 +20,16 @@ The message content was opened. Updates voice note messages to "listened", video
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52999
+dist/generated/types.d.ts:54615

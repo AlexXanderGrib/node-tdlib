@@ -30,4 +30,4 @@ Message text
 
 ## Defined in
 
-dist/generated/types.d.ts:44733
+dist/generated/types.d.ts:46259

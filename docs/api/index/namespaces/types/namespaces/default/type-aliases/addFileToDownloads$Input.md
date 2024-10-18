@@ -20,28 +20,28 @@ Adds a file from a message to the list of file downloads. Download progress and 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the message with the file
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 Identifier of the file to download
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ### priority?
 
-> `readonly` `optional` **priority**: [`int32`](int32-1.md)
+> `readonly` `optional` **priority**: [`int32`](int32.md)
 
 Priority of the download (1-32). The higher the priority, the earlier the file will be downloaded. If the priorities of two files are equal, then the last one for which downloadFile/addFileToDownloads was called will be downloaded first
 
 ## Defined in
 
-dist/generated/types.d.ts:89239
+dist/generated/types.d.ts:91614

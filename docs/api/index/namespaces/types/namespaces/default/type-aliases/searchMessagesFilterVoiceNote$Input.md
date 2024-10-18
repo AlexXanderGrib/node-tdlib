@@ -20,4 +20,4 @@ Returns only voice note messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30557
+dist/generated/types.d.ts:31689

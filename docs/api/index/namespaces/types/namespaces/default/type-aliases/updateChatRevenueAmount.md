@@ -18,16 +18,16 @@ The revenue earned from sponsored messages in a chat has changed. If chat revenu
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
 ### revenue\_amount
 
-> **revenue\_amount**: [`chatRevenueAmount`](chatRevenueAmount-1.md)
+> **revenue\_amount**: [`chatRevenueAmount`](chatRevenueAmount.md)
 
 New amount of earned revenue
 
 ## Defined in
 
-dist/generated/types.d.ts:56767
+dist/generated/types.d.ts:58407

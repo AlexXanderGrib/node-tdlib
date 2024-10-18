@@ -20,4 +20,4 @@ The maximum number of stories sent per week
 
 ## Defined in
 
-dist/generated/types.d.ts:41459
+dist/generated/types.d.ts:42853

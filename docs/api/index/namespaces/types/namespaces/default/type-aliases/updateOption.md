@@ -30,4 +30,4 @@ The new option value
 
 ## Defined in
 
-dist/generated/types.d.ts:56067
+dist/generated/types.d.ts:57683

@@ -6,7 +6,11 @@
 
 # Type Alias: addQuickReplyShortcutInlineQueryResultMessage()
 
-> **addQuickReplyShortcutInlineQueryResultMessage**: (`parameters`) => [`QuickReplyMessage`](QuickReplyMessage.md)
+> **addQuickReplyShortcutInlineQueryResultMessage**: (`parameters`) => [`QuickReplyMessage`](QuickReplyMessage-1.md)
+
+Adds a message to a quick reply shortcut via inline bot. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
+
+- The shortcut must not contain more than getOption("quick_reply_shortcut_message_count_max") messages after adding the new message. Returns the added message
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`QuickReplyMessage`](QuickReplyMessage.md)
+[`QuickReplyMessage`](QuickReplyMessage-1.md)
 
-[QuickReplyMessage](QuickReplyMessage.md)
+[QuickReplyMessage](QuickReplyMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80451
+dist/generated/types.d.ts:82500

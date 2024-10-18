@@ -18,4 +18,4 @@ Autosave settings applied to all channel chats without chat-specific settings
 
 ## Defined in
 
-dist/generated/types.d.ts:49817
+dist/generated/types.d.ts:51401

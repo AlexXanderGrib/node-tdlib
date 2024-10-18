@@ -10,7 +10,7 @@
 
 Version of [updateOwnedStarCount](updateOwnedStarCount.md) for method parameters.
 
-The number of Telegram stars owned by the current user has changed
+The number of Telegram Stars owned by the current user has changed
 
 ## Type declaration
 
@@ -20,10 +20,10 @@ The number of Telegram stars owned by the current user has changed
 
 ### star\_count?
 
-> `readonly` `optional` **star\_count**: [`int53`](int53-1.md)
+> `readonly` `optional` **star\_count**: [`int53`](int53.md)
 
-The new number of Telegram stars owned
+The new number of Telegram Stars owned
 
 ## Defined in
 
-dist/generated/types.d.ts:56756
+dist/generated/types.d.ts:58396

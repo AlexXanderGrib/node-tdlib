@@ -20,10 +20,10 @@ A sticker set has changed
 
 ### sticker\_set?
 
-> `readonly` `optional` **sticker\_set**: [`stickerSet$Input`](stickerSet$Input-1.md)
+> `readonly` `optional` **sticker\_set**: [`stickerSet$Input`](stickerSet$Input.md)
 
 The sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:56114
+dist/generated/types.d.ts:57730

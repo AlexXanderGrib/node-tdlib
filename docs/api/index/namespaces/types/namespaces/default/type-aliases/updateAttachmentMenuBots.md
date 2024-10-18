@@ -18,10 +18,10 @@ The list of bots added to attachment or side menu has changed
 
 ### bots
 
-> **bots**: [`vector`](vector.md)\<[`attachmentMenuBot`](attachmentMenuBot-1.md)\>
+> **bots**: [`vector`](vector.md)\<[`attachmentMenuBot`](attachmentMenuBot.md)\>
 
 The new list of bots. The bots must not be shown on scheduled messages screen
 
 ## Defined in
 
-dist/generated/types.d.ts:56579
+dist/generated/types.d.ts:58195

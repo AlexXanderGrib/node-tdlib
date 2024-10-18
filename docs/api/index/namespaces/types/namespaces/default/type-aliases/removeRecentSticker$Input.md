@@ -30,4 +30,4 @@ Sticker file to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:93198
+dist/generated/types.d.ts:95695

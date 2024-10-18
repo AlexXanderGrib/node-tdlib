@@ -20,16 +20,16 @@ An area pointing to a message
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat with the message
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
 ## Defined in
 
-dist/generated/types.d.ts:31999
+dist/generated/types.d.ts:33165

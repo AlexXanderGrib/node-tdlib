@@ -6,7 +6,9 @@
 
 # Type Alias: editMessageText()
 
-> **editMessageText**: (`parameters`) => [`Message`](Message.md)
+> **editMessageText**: (`parameters`) => [`Message`](Message-1.md)
+
+Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78828
+dist/generated/types.d.ts:80831

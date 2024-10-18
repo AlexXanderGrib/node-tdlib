@@ -26,4 +26,4 @@ Text to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:93425
+dist/generated/types.d.ts:95922

@@ -38,10 +38,10 @@ Type of the reaction
 
 ### total\_count?
 
-> `readonly` `optional` **total\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **total\_count**: [`int32`](int32.md)
 
 Number of times the reaction was added
 
 ## Defined in
 
-dist/generated/types.d.ts:31955
+dist/generated/types.d.ts:33121

@@ -18,4 +18,4 @@ The session is running on an Xbox console
 
 ## Defined in
 
-dist/generated/types.d.ts:46685
+dist/generated/types.d.ts:48211

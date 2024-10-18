@@ -20,4 +20,4 @@ Sticker to remove from the set
 
 ## Defined in
 
-dist/generated/types.d.ts:100185
+dist/generated/types.d.ts:102964

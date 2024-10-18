@@ -20,10 +20,10 @@ Information about a group call was updated
 
 ### group\_call?
 
-> `readonly` `optional` **group\_call**: [`groupCall$Input`](groupCall$Input-1.md)
+> `readonly` `optional` **group\_call**: [`groupCall$Input`](groupCall$Input.md)
 
 New data about a group call
 
 ## Defined in
 
-dist/generated/types.d.ts:55608
+dist/generated/types.d.ts:57224

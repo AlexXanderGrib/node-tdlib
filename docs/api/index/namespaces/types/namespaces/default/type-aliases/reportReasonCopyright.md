@@ -18,4 +18,4 @@ The chat contains copyrighted content
 
 ## Defined in
 
-dist/generated/types.d.ts:47165
+dist/generated/types.d.ts:48691

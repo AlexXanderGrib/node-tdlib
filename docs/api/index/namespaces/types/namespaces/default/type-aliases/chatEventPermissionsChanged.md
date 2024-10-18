@@ -18,16 +18,16 @@ The chat permissions were changed
 
 ### new\_permissions
 
-> **new\_permissions**: [`chatPermissions`](chatPermissions-1.md)
+> **new\_permissions**: [`chatPermissions`](chatPermissions.md)
 
 New chat permissions
 
 ### old\_permissions
 
-> **old\_permissions**: [`chatPermissions`](chatPermissions-1.md)
+> **old\_permissions**: [`chatPermissions`](chatPermissions.md)
 
 Previous chat permissions
 
 ## Defined in
 
-dist/generated/types.d.ts:39785
+dist/generated/types.d.ts:41155

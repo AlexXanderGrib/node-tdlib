@@ -18,4 +18,4 @@ The file type is not yet known
 
 ## Defined in
 
-dist/generated/types.d.ts:49115
+dist/generated/types.d.ts:50699

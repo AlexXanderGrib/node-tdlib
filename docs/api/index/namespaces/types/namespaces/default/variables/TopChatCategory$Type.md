@@ -38,6 +38,10 @@
 
 > `readonly` **Users**: `"topChatCategoryUsers"`
 
+### WebAppBots
+
+> `readonly` **WebAppBots**: `"topChatCategoryWebAppBots"`
+
 ## Defined in
 
-dist/generated/types.d.ts:1027
+dist/generated/types.d.ts:1049

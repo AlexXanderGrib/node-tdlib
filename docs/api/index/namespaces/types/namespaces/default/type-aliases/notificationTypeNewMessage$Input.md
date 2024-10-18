@@ -20,7 +20,7 @@ New message was received
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 The message
 
@@ -32,4 +32,4 @@ True, if message content must be displayed in notifications
 
 ## Defined in
 
-dist/generated/types.d.ts:45249
+dist/generated/types.d.ts:46775

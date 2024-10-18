@@ -18,7 +18,7 @@ A digit-only authentication code is delivered to https://fragment.com. The user 
 
 ### length
 
-> **length**: [`int32`](int32-1.md)
+> **length**: [`int32`](int32.md)
 
 Length of the code
 
@@ -30,4 +30,4 @@ URL to open to receive the code
 
 ## Defined in
 
-dist/generated/types.d.ts:2671
+dist/generated/types.d.ts:2717

@@ -6,7 +6,9 @@
 
 # Type Alias: setProfilePhoto()
 
-> **setProfilePhoto**: (`parameters`) => [`Ok`](Ok.md)
+> **setProfilePhoto**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes a profile photo for the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93882
+dist/generated/types.d.ts:96379

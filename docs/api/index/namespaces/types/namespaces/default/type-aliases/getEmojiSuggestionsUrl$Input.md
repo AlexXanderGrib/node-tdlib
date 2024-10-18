@@ -24,4 +24,4 @@ Language code for which the emoji replacements will be suggested
 
 ## Defined in
 
-dist/generated/types.d.ts:93503
+dist/generated/types.d.ts:96000

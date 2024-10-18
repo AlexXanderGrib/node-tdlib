@@ -14,7 +14,7 @@ Returns detailed statistics about a story. Can be used only if story.can_get_sta
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -26,10 +26,10 @@ Pass true if a dark theme is used by the application
 
 ### story\_id?
 
-> `readonly` `optional` **story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **story\_id**: [`int32`](int32.md)
 
 Story identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:98718
+dist/generated/types.d.ts:101497

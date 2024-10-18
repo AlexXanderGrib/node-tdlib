@@ -6,7 +6,9 @@
 
 # Type Alias: translateText()
 
-> **translateText**: (`parameters`) => [`FormattedText`](FormattedText.md)
+> **translateText**: (`parameters`) => [`FormattedText`](FormattedText-1.md)
+
+Translates a text to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FormattedText`](FormattedText.md)
+[`FormattedText`](FormattedText-1.md)
 
-[FormattedText](FormattedText.md)
+[FormattedText](FormattedText-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77852
+dist/generated/types.d.ts:79861

@@ -38,7 +38,7 @@ Unique identifier of the query result
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`thumbnail$Input`](thumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`thumbnail$Input`](thumbnail$Input.md) \| `null`
 
 Result thumbnail in JPEG format; may be null
 
@@ -56,4 +56,4 @@ URL of the result, if it exists
 
 ## Defined in
 
-dist/generated/types.d.ts:38305
+dist/generated/types.d.ts:39675

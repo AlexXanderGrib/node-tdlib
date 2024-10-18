@@ -18,10 +18,10 @@ Basic information about a Saved Messages topic has changed. This update is guara
 
 ### topic
 
-> **topic**: [`savedMessagesTopic`](savedMessagesTopic-1.md)
+> **topic**: [`savedMessagesTopic`](savedMessagesTopic.md)
 
 New data about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:54445
+dist/generated/types.d.ts:56061

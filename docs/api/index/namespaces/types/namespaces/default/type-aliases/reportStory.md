@@ -6,7 +6,9 @@
 
 # Type Alias: reportStory()
 
-> **reportStory**: (`parameters`) => [`Ok`](Ok.md)
+> **reportStory**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Reports a story to the Telegram moderators
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88170
+dist/generated/types.d.ts:90545

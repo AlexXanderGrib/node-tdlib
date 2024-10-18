@@ -18,7 +18,7 @@ Only specific reactions are available in the chat
 
 ### max\_reaction\_count
 
-> **max\_reaction\_count**: [`int32`](int32-1.md)
+> **max\_reaction\_count**: [`int32`](int32.md)
 
 The maximum allowed number of reactions per message; 1-11
 
@@ -30,4 +30,4 @@ The list of reactions
 
 ## Defined in
 
-dist/generated/types.d.ts:16087
+dist/generated/types.d.ts:16679

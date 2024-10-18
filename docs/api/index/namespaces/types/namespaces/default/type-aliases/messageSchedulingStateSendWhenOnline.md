@@ -18,4 +18,4 @@ The message will be sent when the other user is online. Applicable to private ch
 
 ## Defined in
 
-dist/generated/types.d.ts:29025
+dist/generated/types.d.ts:29899

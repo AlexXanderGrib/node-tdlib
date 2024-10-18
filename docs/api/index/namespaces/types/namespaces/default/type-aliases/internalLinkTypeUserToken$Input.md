@@ -28,4 +28,4 @@ The token
 
 ## Defined in
 
-dist/generated/types.d.ts:48584
+dist/generated/types.d.ts:50168

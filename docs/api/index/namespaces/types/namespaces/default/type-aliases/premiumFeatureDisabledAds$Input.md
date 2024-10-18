@@ -20,4 +20,4 @@ Disabled ads
 
 ## Defined in
 
-dist/generated/types.d.ts:41585
+dist/generated/types.d.ts:42979

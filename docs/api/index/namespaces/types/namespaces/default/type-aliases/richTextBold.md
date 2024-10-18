@@ -24,4 +24,4 @@ Text
 
 ## Defined in
 
-dist/generated/types.d.ts:18855
+dist/generated/types.d.ts:19481

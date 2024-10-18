@@ -26,4 +26,4 @@ True, if the topic was hidden; otherwise, the topic was unhidden
 
 ## Defined in
 
-dist/generated/types.d.ts:27398
+dist/generated/types.d.ts:28158

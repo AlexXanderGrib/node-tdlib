@@ -6,7 +6,9 @@
 
 # Type Alias: getDefaultProfilePhotoCustomEmojiStickers()
 
-> **getDefaultProfilePhotoCustomEmojiStickers**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getDefaultProfilePhotoCustomEmojiStickers**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns default list of custom emoji stickers for placing on a profile photo
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93589
+dist/generated/types.d.ts:96086

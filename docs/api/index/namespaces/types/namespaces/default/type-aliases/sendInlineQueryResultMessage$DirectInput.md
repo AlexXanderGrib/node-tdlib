@@ -14,7 +14,7 @@ Sends the result of an inline query as a message. Returns the sent message. Alwa
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Target chat
 
@@ -26,19 +26,19 @@ Pass true to hide the bot, via which the message is sent. Can be used only for b
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 If not 0, the message thread identifier in which the message will be sent
 
 ### options?
 
-> `readonly` `optional` **options**: [`messageSendOptions$Input`](messageSendOptions$Input-1.md) \| `null`
+> `readonly` `optional` **options**: [`messageSendOptions$Input`](messageSendOptions$Input.md) \| `null`
 
 Options to be used to send the message; pass null to use default options
 
 ### query\_id?
 
-> `readonly` `optional` **query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the inline query
 
@@ -56,4 +56,4 @@ Identifier of the inline query result
 
 ## Defined in
 
-dist/generated/types.d.ts:78319
+dist/generated/types.d.ts:80328

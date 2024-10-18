@@ -18,4 +18,4 @@ The maximum number of chat folders
 
 ## Defined in
 
-dist/generated/types.d.ts:41325
+dist/generated/types.d.ts:42719

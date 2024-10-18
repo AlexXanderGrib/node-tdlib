@@ -6,7 +6,9 @@
 
 # Type Alias: getAllPassportElements()
 
-> **getAllPassportElements**: (`parameters`) => [`PassportElements`](PassportElements.md)
+> **getAllPassportElements**: (`parameters`) => [`PassportElements`](PassportElements-1.md)
+
+Returns all available Telegram Passport elements
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PassportElements`](PassportElements.md)
+[`PassportElements`](PassportElements-1.md)
 
-[PassportElements](PassportElements.md)
+[PassportElements](PassportElements-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99287
+dist/generated/types.d.ts:102066

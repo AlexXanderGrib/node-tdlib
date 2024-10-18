@@ -12,4 +12,4 @@ Returns business chat links created for the current account
 
 ## Defined in
 
-dist/generated/types.d.ts:94735
+dist/generated/types.d.ts:97232

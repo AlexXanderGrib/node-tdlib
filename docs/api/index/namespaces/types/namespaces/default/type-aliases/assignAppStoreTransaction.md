@@ -6,7 +6,9 @@
 
 # Type Alias: assignAppStoreTransaction()
 
-> **assignAppStoreTransaction**: (`parameters`) => [`Ok`](Ok.md)
+> **assignAppStoreTransaction**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs server about a purchase through App Store. For official applications only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100868
+dist/generated/types.d.ts:103723

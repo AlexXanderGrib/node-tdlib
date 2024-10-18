@@ -20,4 +20,4 @@ A mention of a user, a supergroup, or a channel by their username
 
 ## Defined in
 
-dist/generated/types.d.ts:28485
+dist/generated/types.d.ts:29359

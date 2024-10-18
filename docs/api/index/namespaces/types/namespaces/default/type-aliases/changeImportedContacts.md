@@ -6,7 +6,11 @@
 
 # Type Alias: changeImportedContacts()
 
-> **changeImportedContacts**: (`parameters`) => [`ImportedContacts`](ImportedContacts.md)
+> **changeImportedContacts**: (`parameters`) => [`ImportedContacts`](ImportedContacts-1.md)
+
+Changes imported contacts using the list of contacts saved on the device. Imports newly added contacts and, if at least the file database is enabled, deletes recently deleted contacts.
+
+- Query result depends on the result of the previous query, so only one query is possible at the same time
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`ImportedContacts`](ImportedContacts.md)
+[`ImportedContacts`](ImportedContacts-1.md)
 
-[ImportedContacts](ImportedContacts.md)
+[ImportedContacts](ImportedContacts-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92253
+dist/generated/types.d.ts:94750

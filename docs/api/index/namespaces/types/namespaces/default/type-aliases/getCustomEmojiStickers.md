@@ -6,7 +6,9 @@
 
 # Type Alias: getCustomEmojiStickers()
 
-> **getCustomEmojiStickers**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getCustomEmojiStickers**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93555
+dist/generated/types.d.ts:96052

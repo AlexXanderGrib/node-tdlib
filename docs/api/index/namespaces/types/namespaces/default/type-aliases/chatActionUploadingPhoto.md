@@ -18,10 +18,10 @@ The user is uploading a photo
 
 ### progress
 
-> **progress**: [`int32`](int32-1.md)
+> **progress**: [`int32`](int32.md)
 
 Upload progress, as a percentage
 
 ## Defined in
 
-dist/generated/types.d.ts:30793
+dist/generated/types.d.ts:31925

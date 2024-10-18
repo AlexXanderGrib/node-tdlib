@@ -8,9 +8,7 @@
 
 > **editMessageCaption$Input**: `object`
 
-Edits the message content caption. Returns the edited message after the edit is completed on the server side.
-
-- Can be used only if message.can_be_edited == true
+Edits the message content caption. Returns the edited message after the edit is completed on the server side
 
 ## Type declaration
 
@@ -20,21 +18,21 @@ Edits the message content caption. Returns the edited message after the edit is 
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 New message content caption; 0-getOption("message_caption_length_max") characters; pass null to remove caption
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message
+Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 
 ### reply\_markup?
 
@@ -50,4 +48,4 @@ Pass true to show the caption above the media; otherwise, the caption will be sh
 
 ## Defined in
 
-dist/generated/types.d.ts:79002
+dist/generated/types.d.ts:81003

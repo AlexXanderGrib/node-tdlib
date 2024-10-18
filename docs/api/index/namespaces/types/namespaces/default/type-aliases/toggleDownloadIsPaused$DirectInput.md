@@ -14,7 +14,7 @@ Changes pause state of a file in the file download list
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 Identifier of the downloaded file
 
@@ -26,4 +26,4 @@ Pass true if the download is paused
 
 ## Defined in
 
-dist/generated/types.d.ts:89317
+dist/generated/types.d.ts:91692

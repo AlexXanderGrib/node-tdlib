@@ -20,4 +20,4 @@ The ability to hide the fact that the user viewed other's stories
 
 ## Defined in
 
-dist/generated/types.d.ts:42037
+dist/generated/types.d.ts:43431

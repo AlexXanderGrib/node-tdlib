@@ -10,7 +10,7 @@
 
 Version of [internalLinkTypeChangePhoneNumber](internalLinkTypeChangePhoneNumber.md) for method parameters.
 
-The link is a link to the change phone number section of the app
+The link is a link to the change phone number section of the application
 
 ## Type declaration
 
@@ -20,4 +20,4 @@ The link is a link to the change phone number section of the app
 
 ## Defined in
 
-dist/generated/types.d.ts:47657
+dist/generated/types.d.ts:49217

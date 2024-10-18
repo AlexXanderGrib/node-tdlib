@@ -24,4 +24,4 @@ New value of is_all_history_available
 
 ## Defined in
 
-dist/generated/types.d.ts:40213
+dist/generated/types.d.ts:41583

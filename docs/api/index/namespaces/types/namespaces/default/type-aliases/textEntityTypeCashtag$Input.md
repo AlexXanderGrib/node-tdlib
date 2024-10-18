@@ -20,4 +20,4 @@ A cashtag text, beginning with "$" and consisting of capital English letters (e.
 
 ## Defined in
 
-dist/generated/types.d.ts:28513
+dist/generated/types.d.ts:29387

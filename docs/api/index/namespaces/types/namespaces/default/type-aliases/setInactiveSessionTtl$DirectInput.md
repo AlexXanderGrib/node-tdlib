@@ -14,10 +14,10 @@ Changes the period of inactivity after which sessions will automatically be term
 
 ### inactive\_session\_ttl\_days?
 
-> `readonly` `optional` **inactive\_session\_ttl\_days**: [`int32`](int32-1.md)
+> `readonly` `optional` **inactive\_session\_ttl\_days**: [`int32`](int32.md)
 
 New number of days of inactivity before sessions will be automatically terminated; 1-366 days
 
 ## Defined in
 
-dist/generated/types.d.ts:95822
+dist/generated/types.d.ts:98591

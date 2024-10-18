@@ -6,7 +6,9 @@
 
 # Type Alias: setChatNotificationSettings()
 
-> **setChatNotificationSettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatNotificationSettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the notification settings of a chat. Notification settings of a chat with the current user (Saved Messages) can't be changed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85689
+dist/generated/types.d.ts:87988

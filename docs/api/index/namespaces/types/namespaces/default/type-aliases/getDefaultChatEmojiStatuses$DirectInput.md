@@ -12,4 +12,4 @@ Returns default emoji statuses for chats
 
 ## Defined in
 
-dist/generated/types.d.ts:88729
+dist/generated/types.d.ts:91104

@@ -20,4 +20,4 @@ The 2-step verification password to check
 
 ## Defined in
 
-dist/generated/types.d.ts:73527
+dist/generated/types.d.ts:75515

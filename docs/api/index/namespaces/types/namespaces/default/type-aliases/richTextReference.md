@@ -36,4 +36,4 @@ An HTTP URL, opening the reference
 
 ## Defined in
 
-dist/generated/types.d.ts:19203
+dist/generated/types.d.ts:19829

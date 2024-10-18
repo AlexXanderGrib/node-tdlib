@@ -18,4 +18,4 @@ A hashtag text, beginning with "#"
 
 ## Defined in
 
-dist/generated/types.d.ts:28491
+dist/generated/types.d.ts:29365

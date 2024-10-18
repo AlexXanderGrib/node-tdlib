@@ -18,10 +18,10 @@ Suggests the user to convert specified supergroup to a broadcast group
 
 ### supergroup\_id
 
-> **supergroup\_id**: [`int53`](int53-1.md)
+> **supergroup\_id**: [`int53`](int53.md)
 
 Supergroup identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:50423
+dist/generated/types.d.ts:52021

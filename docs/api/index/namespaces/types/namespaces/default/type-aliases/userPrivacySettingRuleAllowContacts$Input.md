@@ -20,4 +20,4 @@ A rule to allow all contacts of the user to do something
 
 ## Defined in
 
-dist/generated/types.d.ts:46001
+dist/generated/types.d.ts:47527

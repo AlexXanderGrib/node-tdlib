@@ -6,7 +6,9 @@
 
 # Type Alias: editBusinessMessageReplyMarkup()
 
-> **editBusinessMessageReplyMarkup**: (`parameters`) => [`BusinessMessage`](BusinessMessage.md)
+> **editBusinessMessageReplyMarkup**: (`parameters`) => [`BusinessMessage`](BusinessMessage-1.md)
+
+Edits the reply markup of a message sent on behalf of a business account; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessMessage`](BusinessMessage.md)
+[`BusinessMessage`](BusinessMessage-1.md)
 
-[BusinessMessage](BusinessMessage.md)
+[BusinessMessage](BusinessMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80060
+dist/generated/types.d.ts:82051

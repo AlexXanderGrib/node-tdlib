@@ -18,22 +18,22 @@ A new high score was achieved in a game
 
 ### game\_id
 
-> **game\_id**: [`int64`](int64-1.md)
+> **game\_id**: [`int64`](int64.md)
 
 Identifier of the game; may be different from the games presented in the message with the game
 
 ### game\_message\_id
 
-> **game\_message\_id**: [`int53`](int53-1.md)
+> **game\_message\_id**: [`int53`](int53.md)
 
 Identifier of the message with the game, can be an identifier of a deleted message
 
 ### score
 
-> **score**: [`int32`](int32-1.md)
+> **score**: [`int32`](int32.md)
 
 New score
 
 ## Defined in
 
-dist/generated/types.d.ts:27457
+dist/generated/types.d.ts:28217

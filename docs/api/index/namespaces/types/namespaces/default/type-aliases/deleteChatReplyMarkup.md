@@ -6,7 +6,9 @@
 
 # Type Alias: deleteChatReplyMarkup()
 
-> **deleteChatReplyMarkup**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteChatReplyMarkup**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes the default reply markup from a chat. Must be called after a one-time keyboard or a replyMarkupForceReply reply markup has been used. An updateChatReplyMarkup update will be sent if the reply markup is changed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83555
+dist/generated/types.d.ts:85854

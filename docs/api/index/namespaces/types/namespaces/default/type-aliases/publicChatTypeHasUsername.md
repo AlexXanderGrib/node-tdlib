@@ -18,4 +18,4 @@ The chat is public, because it has an active username
 
 ## Defined in
 
-dist/generated/types.d.ts:16915
+dist/generated/types.d.ts:17507

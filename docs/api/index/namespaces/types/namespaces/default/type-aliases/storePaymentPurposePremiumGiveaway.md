@@ -18,7 +18,7 @@ The user creating a Telegram Premium giveaway
 
 ### amount
 
-> **amount**: [`int53`](int53-1.md)
+> **amount**: [`int53`](int53.md)
 
 Paid amount, in the smallest units of the currency
 
@@ -30,10 +30,10 @@ ISO 4217 currency code of the payment currency
 
 ### parameters
 
-> **parameters**: [`premiumGiveawayParameters`](premiumGiveawayParameters-1.md)
+> **parameters**: [`premiumGiveawayParameters`](premiumGiveawayParameters.md)
 
 Giveaway parameters
 
 ## Defined in
 
-dist/generated/types.d.ts:42613
+dist/generated/types.d.ts:44007

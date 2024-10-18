@@ -18,7 +18,7 @@ New terms of service must be accepted by the user. If the terms of service are d
 
 ### terms\_of\_service
 
-> **terms\_of\_service**: [`termsOfService`](termsOfService-1.md)
+> **terms\_of\_service**: [`termsOfService`](termsOfService.md)
 
 The new terms of service
 
@@ -30,4 +30,4 @@ Identifier of the terms of service
 
 ## Defined in
 
-dist/generated/types.d.ts:56497
+dist/generated/types.d.ts:58113

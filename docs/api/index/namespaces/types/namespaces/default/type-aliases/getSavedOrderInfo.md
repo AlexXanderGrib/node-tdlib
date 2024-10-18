@@ -6,7 +6,9 @@
 
 # Type Alias: getSavedOrderInfo()
 
-> **getSavedOrderInfo**: (`parameters`) => [`OrderInfo`](OrderInfo.md)
+> **getSavedOrderInfo**: (`parameters`) => [`OrderInfo`](OrderInfo-1.md)
+
+Returns saved order information. Returns a 404 error if there is no saved order information
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`OrderInfo`](OrderInfo.md)
+[`OrderInfo`](OrderInfo-1.md)
 
-[OrderInfo](OrderInfo.md)
+[OrderInfo](OrderInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96977
+dist/generated/types.d.ts:99756

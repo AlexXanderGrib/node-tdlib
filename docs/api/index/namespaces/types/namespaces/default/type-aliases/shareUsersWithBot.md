@@ -6,7 +6,9 @@
 
 # Type Alias: shareUsersWithBot()
 
-> **shareUsersWithBot**: (`parameters`) => [`Ok`](Ok.md)
+> **shareUsersWithBot**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82469
+dist/generated/types.d.ts:84662

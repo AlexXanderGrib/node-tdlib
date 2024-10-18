@@ -18,4 +18,4 @@ The message is from a chat history
 
 ## Defined in
 
-dist/generated/types.d.ts:14211
+dist/generated/types.d.ts:14803

@@ -8,9 +8,9 @@
 
 > **getMessageThreadHistory$Input**: `object`
 
-Returns messages in a message thread of a message. Can be used only if message.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
+Returns messages in a message thread of a message. Can be used only if messageProperties.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
 
-- The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+- The messages are returned in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
 
 ## Type declaration
 
@@ -20,19 +20,19 @@ Returns messages in a message thread of a message. Can be used only if message.c
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### from\_message\_id?
 
-> `readonly` `optional` **from\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **from\_message\_id**: [`int53`](int53.md)
 
 Identifier of the message starting from which history must be fetched; use 0 to get results from the last message
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than or equal to -offset.
 
@@ -40,16 +40,16 @@ The maximum number of messages to be returned; must be positive and can't be gre
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier, which thread history needs to be returned
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int32`](int32-1.md)
+> `readonly` `optional` **offset**: [`int32`](int32.md)
 
 Specify 0 to get results from exactly the message from_message_id or a negative offset up to 99 to get additionally some newer messages
 
 ## Defined in
 
-dist/generated/types.d.ts:76131
+dist/generated/types.d.ts:78157

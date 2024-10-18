@@ -18,7 +18,7 @@ The list of installed sticker sets was updated
 
 ### sticker\_set\_ids
 
-> **sticker\_set\_ids**: [`vector`](vector.md)\<[`int64`](int64-1.md)\>
+> **sticker\_set\_ids**: [`vector`](vector.md)\<[`int64`](int64.md)\>
 
 The new list of installed ordinary sticker sets
 
@@ -30,4 +30,4 @@ Type of the affected stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:56125
+dist/generated/types.d.ts:57741

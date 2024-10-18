@@ -18,10 +18,10 @@ The story can be viewed by certain specified users
 
 ### user\_ids
 
-> **user\_ids**: [`vector`](vector.md)\<[`int53`](int53-1.md)\>
+> **user\_ids**: [`vector`](vector.md)\<[`int53`](int53.md)\>
 
 Identifiers of the users; always unknown and empty for non-owned stories
 
 ## Defined in
 
-dist/generated/types.d.ts:45955
+dist/generated/types.d.ts:47481

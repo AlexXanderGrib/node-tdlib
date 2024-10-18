@@ -14,10 +14,10 @@ Returns full information about a supergroup or a channel by its identifier, cach
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Supergroup or channel identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:74499
+dist/generated/types.d.ts:76487

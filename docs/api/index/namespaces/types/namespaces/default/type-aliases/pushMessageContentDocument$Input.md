@@ -20,7 +20,7 @@ A document message (a general file)
 
 ### document?
 
-> `readonly` `optional` **document**: [`document$Input`](document$Input-1.md) \| `null`
+> `readonly` `optional` **document**: [`document$Input`](document$Input.md) \| `null`
 
 Message content; may be null
 
@@ -32,4 +32,4 @@ True, if the message is a pinned message with the specified content
 
 ## Defined in
 
-dist/generated/types.d.ts:44289
+dist/generated/types.d.ts:45815

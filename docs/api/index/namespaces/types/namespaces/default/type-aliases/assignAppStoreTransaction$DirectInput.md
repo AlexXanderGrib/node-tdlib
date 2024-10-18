@@ -20,10 +20,10 @@ Transaction purpose
 
 ### receipt?
 
-> `readonly` `optional` **receipt**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **receipt**: [`bytes$Input`](bytes$Input.md)
 
 App Store receipt
 
 ## Defined in
 
-dist/generated/types.d.ts:100850
+dist/generated/types.d.ts:103705

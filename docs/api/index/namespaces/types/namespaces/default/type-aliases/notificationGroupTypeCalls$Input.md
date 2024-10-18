@@ -20,4 +20,4 @@ A group containing notifications of type notificationTypeNewCall
 
 ## Defined in
 
-dist/generated/types.d.ts:45417
+dist/generated/types.d.ts:46943

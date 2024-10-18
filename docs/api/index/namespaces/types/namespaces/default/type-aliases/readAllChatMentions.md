@@ -6,7 +6,9 @@
 
 # Type Alias: readAllChatMentions()
 
-> **readAllChatMentions**: (`parameters`) => [`Ok`](Ok.md)
+> **readAllChatMentions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Marks all mentions in a chat as read
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83975
+dist/generated/types.d.ts:86274

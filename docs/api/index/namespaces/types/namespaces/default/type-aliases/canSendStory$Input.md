@@ -18,10 +18,10 @@ Checks whether the current user can send a story on behalf of a chat; requires c
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
-Chat identifier
+Chat identifier. Pass Saved Messages chat identifier when posting a story on behalf of the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:87189
+dist/generated/types.d.ts:89516

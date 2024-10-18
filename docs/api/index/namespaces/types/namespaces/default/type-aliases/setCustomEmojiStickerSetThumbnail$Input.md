@@ -18,7 +18,7 @@ Sets a custom emoji sticker set thumbnail
 
 ### custom\_emoji\_id?
 
-> `readonly` `optional` **custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the custom emoji from the sticker set, which will be set as sticker set thumbnail; pass 0 to remove the sticker set thumbnail
 
@@ -30,4 +30,4 @@ Sticker set name. The sticker set must be owned by the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:100032
+dist/generated/types.d.ts:102811

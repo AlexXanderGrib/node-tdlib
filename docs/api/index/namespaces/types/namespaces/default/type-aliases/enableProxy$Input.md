@@ -18,10 +18,10 @@ Enables a proxy. Only one proxy can be enabled at a time. Can be called before a
 
 ### proxy\_id?
 
-> `readonly` `optional` **proxy\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **proxy\_id**: [`int32`](int32.md)
 
 Proxy identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:101512
+dist/generated/types.d.ts:104433

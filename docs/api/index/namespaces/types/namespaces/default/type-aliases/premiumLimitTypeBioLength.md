@@ -18,4 +18,4 @@ The maximum length of the user's bio
 
 ## Defined in
 
-dist/generated/types.d.ts:41395
+dist/generated/types.d.ts:42789

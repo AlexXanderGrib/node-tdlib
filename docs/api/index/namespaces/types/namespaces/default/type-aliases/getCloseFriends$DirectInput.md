@@ -12,4 +12,4 @@ Returns all close friends of the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:92308
+dist/generated/types.d.ts:94805

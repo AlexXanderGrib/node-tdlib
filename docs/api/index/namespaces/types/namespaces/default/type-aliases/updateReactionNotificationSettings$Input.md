@@ -20,10 +20,10 @@ Notification settings for reactions were updated
 
 ### notification\_settings?
 
-> `readonly` `optional` **notification\_settings**: [`reactionNotificationSettings$Input`](reactionNotificationSettings$Input-1.md)
+> `readonly` `optional` **notification\_settings**: [`reactionNotificationSettings$Input`](reactionNotificationSettings$Input.md)
 
 The new notification settings
 
 ## Defined in
 
-dist/generated/types.d.ts:54680
+dist/generated/types.d.ts:56296

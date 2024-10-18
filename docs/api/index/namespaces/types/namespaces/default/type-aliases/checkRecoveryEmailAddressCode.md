@@ -6,7 +6,9 @@
 
 # Type Alias: checkRecoveryEmailAddressCode()
 
-> **checkRecoveryEmailAddressCode**: (`parameters`) => [`PasswordState`](PasswordState.md)
+> **checkRecoveryEmailAddressCode**: (`parameters`) => [`PasswordState`](PasswordState-1.md)
+
+Checks the 2-step verification recovery email address verification code
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PasswordState`](PasswordState.md)
+[`PasswordState`](PasswordState-1.md)
 
-[PasswordState](PasswordState.md)
+[PasswordState](PasswordState-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74111
+dist/generated/types.d.ts:76099

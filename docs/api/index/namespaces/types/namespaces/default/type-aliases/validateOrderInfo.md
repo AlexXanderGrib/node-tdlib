@@ -6,7 +6,9 @@
 
 # Type Alias: validateOrderInfo()
 
-> **validateOrderInfo**: (`parameters`) => [`ValidatedOrderInfo`](ValidatedOrderInfo.md)
+> **validateOrderInfo**: (`parameters`) => [`ValidatedOrderInfo`](ValidatedOrderInfo-1.md)
+
+Validates the order information provided by a user and returns the available shipping options for a flexible invoice
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ValidatedOrderInfo`](ValidatedOrderInfo.md)
+[`ValidatedOrderInfo`](ValidatedOrderInfo-1.md)
 
-[ValidatedOrderInfo](ValidatedOrderInfo.md)
+[ValidatedOrderInfo](ValidatedOrderInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96844
+dist/generated/types.d.ts:99623

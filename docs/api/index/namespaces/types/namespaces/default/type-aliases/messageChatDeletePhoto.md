@@ -18,4 +18,4 @@ A deleted chat photo
 
 ## Defined in
 
-dist/generated/types.d.ts:26971
+dist/generated/types.d.ts:27731

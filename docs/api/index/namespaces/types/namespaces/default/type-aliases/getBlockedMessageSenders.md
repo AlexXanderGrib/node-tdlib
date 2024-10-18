@@ -6,7 +6,9 @@
 
 # Type Alias: getBlockedMessageSenders()
 
-> **getBlockedMessageSenders**: (`parameters`) => [`MessageSenders`](MessageSenders.md)
+> **getBlockedMessageSenders**: (`parameters`) => [`MessageSenders`](MessageSenders-1.md)
+
+Returns users and chats that were blocked by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageSenders`](MessageSenders.md)
+[`MessageSenders`](MessageSenders-1.md)
 
-[MessageSenders](MessageSenders.md)
+[MessageSenders](MessageSenders-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92049
+dist/generated/types.d.ts:94546

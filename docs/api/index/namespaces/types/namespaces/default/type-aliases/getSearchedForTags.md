@@ -6,7 +6,9 @@
 
 # Type Alias: getSearchedForTags()
 
-> **getSearchedForTags**: (`parameters`) => [`Hashtags`](Hashtags.md)
+> **getSearchedForTags**: (`parameters`) => [`Hashtags`](Hashtags-1.md)
+
+Returns recently searched for hashtags or cashtags by their prefix
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Hashtags`](Hashtags.md)
+[`Hashtags`](Hashtags-1.md)
 
-[Hashtags](Hashtags.md)
+[Hashtags](Hashtags-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77001
+dist/generated/types.d.ts:79027

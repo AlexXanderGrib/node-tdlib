@@ -6,7 +6,9 @@
 
 # Type Alias: getCountryFlagEmoji()
 
-> **getCountryFlagEmoji**: (`parameters`) => [`Text`](Text.md)
+> **getCountryFlagEmoji**: (`parameters`) => [`Text`](Text-1.md)
+
+Returns an emoji for the given country. Returns an empty string on failure. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81826
+dist/generated/types.d.ts:84019

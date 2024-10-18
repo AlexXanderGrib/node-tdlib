@@ -18,10 +18,10 @@ A background previously set in the chat; for chat backgrounds only
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 Identifier of the message with the background
 
 ## Defined in
 
-dist/generated/types.d.ts:43531
+dist/generated/types.d.ts:45057

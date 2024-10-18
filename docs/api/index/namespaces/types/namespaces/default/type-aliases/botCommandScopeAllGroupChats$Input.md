@@ -20,4 +20,4 @@ A scope covering all group and supergroup chats
 
 ## Defined in
 
-dist/generated/types.d.ts:52477
+dist/generated/types.d.ts:54093

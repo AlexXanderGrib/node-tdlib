@@ -26,7 +26,7 @@ String specifying the conversion applied to the original file; must be persisten
 
 ### expected\_size?
 
-> `readonly` `optional` **expected\_size**: [`int53`](int53-1.md)
+> `readonly` `optional` **expected\_size**: [`int53`](int53.md)
 
 Expected size of the generated file, in bytes; 0 if unknown
 
@@ -38,4 +38,4 @@ Local path to a file from which the file is generated; may be empty if there is 
 
 ## Defined in
 
-dist/generated/types.d.ts:3980
+dist/generated/types.d.ts:4026

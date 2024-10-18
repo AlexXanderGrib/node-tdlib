@@ -18,10 +18,10 @@ The story can be viewed by everyone
 
 ### except\_user\_ids
 
-> **except\_user\_ids**: [`vector`](vector.md)\<[`int53`](int53-1.md)\>
+> **except\_user\_ids**: [`vector`](vector.md)\<[`int53`](int53.md)\>
 
 Identifiers of the users that can't see the story; always unknown and empty for non-owned stories
 
 ## Defined in
 
-dist/generated/types.d.ts:45893
+dist/generated/types.d.ts:47419

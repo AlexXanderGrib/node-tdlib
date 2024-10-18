@@ -24,4 +24,4 @@ Vector of strings to return
 
 ## Defined in
 
-dist/generated/types.d.ts:102085
+dist/generated/types.d.ts:105006

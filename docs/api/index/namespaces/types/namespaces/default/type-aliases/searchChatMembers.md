@@ -6,7 +6,9 @@
 
 # Type Alias: searchChatMembers()
 
-> **searchChatMembers**: (`parameters`) => [`ChatMembers`](ChatMembers.md)
+> **searchChatMembers**: (`parameters`) => [`ChatMembers`](ChatMembers-1.md)
+
+Searches for a specified query in the first name, last name and usernames of the members of a specified chat. Requires administrator rights if the chat is a channel
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatMembers`](ChatMembers.md)
+[`ChatMembers`](ChatMembers-1.md)
 
-[ChatMembers](ChatMembers.md)
+[ChatMembers](ChatMembers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86700
+dist/generated/types.d.ts:88999

@@ -6,7 +6,9 @@
 
 # Type Alias: setStickerSetThumbnail()
 
-> **setStickerSetThumbnail**: (`parameters`) => [`Ok`](Ok.md)
+> **setStickerSetThumbnail**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets a sticker set thumbnail
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100028
+dist/generated/types.d.ts:102807

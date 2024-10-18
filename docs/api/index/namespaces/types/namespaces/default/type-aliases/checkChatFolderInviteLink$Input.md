@@ -24,4 +24,4 @@ Invite link to be checked
 
 ## Defined in
 
-dist/generated/types.d.ts:84982
+dist/generated/types.d.ts:87281

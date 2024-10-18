@@ -12,4 +12,4 @@ Hides the list of contacts that have close birthdays for 24 hours
 
 ## Defined in
 
-dist/generated/types.d.ts:82254
+dist/generated/types.d.ts:84447

@@ -20,4 +20,4 @@ Pass true to keep local message drafts in secret chats
 
 ## Defined in
 
-dist/generated/types.d.ts:86743
+dist/generated/types.d.ts:89042

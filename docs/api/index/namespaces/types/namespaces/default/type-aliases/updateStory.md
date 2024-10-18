@@ -18,10 +18,10 @@ A story was changed
 
 ### story
 
-> **story**: [`story`](story-1.md)
+> **story**: [`story`](story.md)
 
 The new information about the story
 
 ## Defined in
 
-dist/generated/types.d.ts:55839
+dist/generated/types.d.ts:57455

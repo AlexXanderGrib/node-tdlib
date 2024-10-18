@@ -18,4 +18,4 @@ The text uses HTML-style formatting. The same as Telegram Bot API "HTML" parse m
 
 ## Defined in
 
-dist/generated/types.d.ts:50719
+dist/generated/types.d.ts:52335

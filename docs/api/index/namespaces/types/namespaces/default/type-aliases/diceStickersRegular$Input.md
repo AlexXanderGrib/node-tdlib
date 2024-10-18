@@ -20,10 +20,10 @@ A regular animated sticker
 
 ### sticker?
 
-> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input-1.md)
+> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input.md)
 
 The animated sticker with the dice animation
 
 ## Defined in
 
-dist/generated/types.d.ts:36438
+dist/generated/types.d.ts:37808

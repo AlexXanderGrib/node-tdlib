@@ -24,4 +24,4 @@ The message link
 
 ## Defined in
 
-dist/generated/types.d.ts:77774
+dist/generated/types.d.ts:79783

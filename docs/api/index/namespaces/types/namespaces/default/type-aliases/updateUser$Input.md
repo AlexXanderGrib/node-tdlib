@@ -20,10 +20,10 @@ Some data of a user has changed. This update is guaranteed to come before the us
 
 ### user?
 
-> `readonly` `optional` **user**: [`user$Input`](user$Input-1.md)
+> `readonly` `optional` **user**: [`user$Input`](user$Input.md)
 
 New data about the user
 
 ## Defined in
 
-dist/generated/types.d.ts:55032
+dist/generated/types.d.ts:56648

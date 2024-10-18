@@ -26,4 +26,4 @@ The code
 
 ## Defined in
 
-dist/generated/types.d.ts:2884
+dist/generated/types.d.ts:2930

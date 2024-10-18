@@ -18,4 +18,4 @@ Returns information about the current temporary password
 
 ## Defined in
 
-dist/generated/types.d.ts:74314
+dist/generated/types.d.ts:76302

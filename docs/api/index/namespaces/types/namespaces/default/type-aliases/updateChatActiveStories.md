@@ -18,10 +18,10 @@ The list of active stories posted by a specific chat has changed
 
 ### active\_stories
 
-> **active\_stories**: [`chatActiveStories`](chatActiveStories-1.md)
+> **active\_stories**: [`chatActiveStories`](chatActiveStories.md)
 
 The new list of active stories
 
 ## Defined in
 
-dist/generated/types.d.ts:55975
+dist/generated/types.d.ts:57591

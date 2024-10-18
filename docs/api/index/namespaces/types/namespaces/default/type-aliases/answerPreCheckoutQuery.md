@@ -6,7 +6,9 @@
 
 # Type Alias: answerPreCheckoutQuery()
 
-> **answerPreCheckoutQuery**: (`parameters`) => [`Ok`](Ok.md)
+> **answerPreCheckoutQuery**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the result of a pre-checkout query; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83285
+dist/generated/types.d.ts:85584

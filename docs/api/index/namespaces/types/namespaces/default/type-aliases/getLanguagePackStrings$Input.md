@@ -30,4 +30,4 @@ Language pack identifier of the strings to be returned
 
 ## Defined in
 
-dist/generated/types.d.ts:97369
+dist/generated/types.d.ts:100148

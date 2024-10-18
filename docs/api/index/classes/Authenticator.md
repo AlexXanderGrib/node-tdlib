@@ -65,6 +65,10 @@ dist/auth.d.ts:56
 
 #### Param
 
+#### Returns
+
+{Promise<void>}
+
 #### Memberof
 
 Authenticator
@@ -131,7 +135,7 @@ dist/auth.d.ts:84
 
 #### Parameters
 
-• **code**: `Waiter`\<`string`, [[`authenticationCodeInfo`](../namespaces/types/namespaces/default/type-aliases/authenticationCodeInfo-1.md)]\>
+• **code**: `Waiter`\<`string`, [[`authenticationCodeInfo`](../namespaces/types/namespaces/default/type-aliases/authenticationCodeInfo.md)]\>
 
 #### Returns
 
@@ -187,7 +191,7 @@ dist/auth.d.ts:117
 
 #### Parameters
 
-• **emailCode**: `Waiter`\<`string`, [[`emailAddressAuthenticationCodeInfo`](../namespaces/types/namespaces/default/type-aliases/emailAddressAuthenticationCodeInfo-1.md)]\>
+• **emailCode**: `Waiter`\<`string`, [[`emailAddressAuthenticationCodeInfo`](../namespaces/types/namespaces/default/type-aliases/emailAddressAuthenticationCodeInfo.md)]\>
 
 #### Returns
 
@@ -245,7 +249,7 @@ dist/auth.d.ts:141
 
 • **phone**: `Waiter`\<`string`, []\>
 
-• **settings?**: `Waiter`\<[`phoneNumberAuthenticationSettings$Input`](../namespaces/types/namespaces/default/type-aliases/phoneNumberAuthenticationSettings$Input-1.md), []\>
+• **settings?**: `Waiter`\<[`phoneNumberAuthenticationSettings$Input`](../namespaces/types/namespaces/default/type-aliases/phoneNumberAuthenticationSettings$Input.md), []\>
 
 #### Returns
 
@@ -273,7 +277,7 @@ dist/auth.d.ts:109
 
 #### Parameters
 
-• **data**: `Waiter`\<[`registerUser$DirectInput`](../namespaces/types/namespaces/default/type-aliases/registerUser$DirectInput.md), [[`termsOfService`](../namespaces/types/namespaces/default/type-aliases/termsOfService-1.md)]\>
+• **data**: `Waiter`\<[`registerUser$DirectInput`](../namespaces/types/namespaces/default/type-aliases/registerUser$DirectInput.md), [[`termsOfService`](../namespaces/types/namespaces/default/type-aliases/termsOfService.md)]\>
 
 #### Returns
 

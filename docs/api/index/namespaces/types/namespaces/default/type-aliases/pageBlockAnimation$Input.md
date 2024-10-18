@@ -20,13 +20,13 @@ An animation
 
 ### animation?
 
-> `readonly` `optional` **animation**: [`animation$Input`](animation$Input-1.md) \| `null`
+> `readonly` `optional` **animation**: [`animation$Input`](animation$Input.md) \| `null`
 
 Animation file; may be null
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input-1.md)
+> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input.md)
 
 Animation caption
 
@@ -38,4 +38,4 @@ True, if the animation must be played automatically
 
 ## Defined in
 
-dist/generated/types.d.ts:20028
+dist/generated/types.d.ts:20654

@@ -18,4 +18,4 @@ The user or the chat is not a chat member
 
 ## Defined in
 
-dist/generated/types.d.ts:10061
+dist/generated/types.d.ts:10561

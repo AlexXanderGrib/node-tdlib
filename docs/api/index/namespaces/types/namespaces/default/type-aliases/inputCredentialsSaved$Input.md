@@ -26,4 +26,4 @@ Identifier of the saved credentials
 
 ## Defined in
 
-dist/generated/types.d.ts:22820
+dist/generated/types.d.ts:23580

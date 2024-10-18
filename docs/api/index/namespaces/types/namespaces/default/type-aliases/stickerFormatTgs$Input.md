@@ -20,4 +20,4 @@ The sticker is an animation in TGS format
 
 ## Defined in
 
-dist/generated/types.d.ts:4393
+dist/generated/types.d.ts:4439

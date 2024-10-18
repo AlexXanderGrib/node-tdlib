@@ -18,19 +18,19 @@ A message was edited. Changes in the message content will come in a separate upd
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### edit\_date
 
-> **edit\_date**: [`int32`](int32-1.md)
+> **edit\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the message was edited
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
@@ -42,4 +42,4 @@ New message reply markup; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:52839
+dist/generated/types.d.ts:54455

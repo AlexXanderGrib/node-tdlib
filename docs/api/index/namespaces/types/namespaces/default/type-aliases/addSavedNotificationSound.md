@@ -6,7 +6,9 @@
 
 # Type Alias: addSavedNotificationSound()
 
-> **addSavedNotificationSound**: (`parameters`) => [`NotificationSound`](NotificationSound.md)
+> **addSavedNotificationSound**: (`parameters`) => [`NotificationSound`](NotificationSound-1.md)
+
+Adds a new notification sound to the list of saved notification sounds. The new notification sound is added to the top of the list. If it is already in the list, its position isn't changed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`NotificationSound`](NotificationSound.md)
+[`NotificationSound`](NotificationSound-1.md)
 
-[NotificationSound](NotificationSound.md)
+[NotificationSound](NotificationSound-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86829
+dist/generated/types.d.ts:89128

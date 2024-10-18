@@ -6,7 +6,9 @@
 
 # Type Alias: checkAuthenticationPassword()
 
-> **checkAuthenticationPassword**: (`parameters`) => [`Ok`](Ok.md)
+> **checkAuthenticationPassword**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks the 2-step verification password for correctness. Works only when the current authorization state is authorizationStateWaitPassword
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73540
+dist/generated/types.d.ts:75528

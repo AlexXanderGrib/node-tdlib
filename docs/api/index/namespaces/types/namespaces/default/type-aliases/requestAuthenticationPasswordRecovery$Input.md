@@ -18,4 +18,4 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 ## Defined in
 
-dist/generated/types.d.ts:73544
+dist/generated/types.d.ts:75532

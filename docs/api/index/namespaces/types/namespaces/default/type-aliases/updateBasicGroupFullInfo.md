@@ -18,16 +18,16 @@ Some data in basicGroupFullInfo has been changed
 
 ### basic\_group\_full\_info
 
-> **basic\_group\_full\_info**: [`basicGroupFullInfo`](basicGroupFullInfo-1.md)
+> **basic\_group\_full\_info**: [`basicGroupFullInfo`](basicGroupFullInfo.md)
 
 New full information about the group
 
 ### basic\_group\_id
 
-> **basic\_group\_id**: [`int53`](int53-1.md)
+> **basic\_group\_id**: [`int53`](int53.md)
 
 Identifier of a basic group
 
 ## Defined in
 
-dist/generated/types.d.ts:55149
+dist/generated/types.d.ts:56765

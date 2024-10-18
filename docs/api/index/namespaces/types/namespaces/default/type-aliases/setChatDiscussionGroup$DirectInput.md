@@ -14,13 +14,13 @@ Changes the discussion group of a channel chat; requires can_change_info adminis
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the channel chat. Pass 0 to remove a link from the supergroup passed in the second argument to a linked channel chat (requires can_pin_messages member right in the supergroup)
 
 ### discussion\_chat\_id?
 
-> `readonly` `optional` **discussion\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **discussion\_chat\_id**: [`int53`](int53.md)
 
 Identifier of a new channel's discussion group. Use 0 to remove the discussion group. Use the method getSuitableDiscussionChats to find all suitable groups.
 
@@ -28,4 +28,4 @@ Identifier of a new channel's discussion group. Use 0 to remove the discussion g
 
 ## Defined in
 
-dist/generated/types.d.ts:86015
+dist/generated/types.d.ts:88314

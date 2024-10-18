@@ -20,4 +20,4 @@ The link is a link to a shareable chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:21365
+dist/generated/types.d.ts:22115

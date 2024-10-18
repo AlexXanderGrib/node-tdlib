@@ -18,16 +18,16 @@ Changes the slow mode delay of a chat. Available only for supergroups; requires 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### slow\_mode\_delay?
 
-> `readonly` `optional` **slow\_mode\_delay**: [`int32`](int32-1.md)
+> `readonly` `optional` **slow\_mode\_delay**: [`int32`](int32.md)
 
 New slow mode delay for the chat, in seconds; must be one of 0, 10, 30, 60, 300, 900, 3600
 
 ## Defined in
 
-dist/generated/types.d.ts:86077
+dist/generated/types.d.ts:88376

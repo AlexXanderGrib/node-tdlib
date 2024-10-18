@@ -18,22 +18,22 @@ Returns information about a message with the callback button that originated a c
 
 ### callback\_query\_id?
 
-> `readonly` `optional` **callback\_query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **callback\_query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the callback query
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:74726
+dist/generated/types.d.ts:76714

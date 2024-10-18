@@ -18,16 +18,16 @@ A story has been successfully sent
 
 ### old\_story\_id
 
-> **old\_story\_id**: [`int32`](int32-1.md)
+> **old\_story\_id**: [`int32`](int32.md)
 
 The previous temporary story identifier
 
 ### story
 
-> **story**: [`story`](story-1.md)
+> **story**: [`story`](story.md)
 
 The sent story
 
 ## Defined in
 
-dist/generated/types.d.ts:55897
+dist/generated/types.d.ts:57513

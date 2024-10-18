@@ -20,4 +20,4 @@ The story can be viewed by all close friends
 
 ## Defined in
 
-dist/generated/types.d.ts:45949
+dist/generated/types.d.ts:47475

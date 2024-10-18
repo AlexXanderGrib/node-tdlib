@@ -18,4 +18,4 @@ Text that must be formatted as if inside a blockquote HTML tag and collapsed by 
 
 ## Defined in
 
-dist/generated/types.d.ts:28725
+dist/generated/types.d.ts:29599

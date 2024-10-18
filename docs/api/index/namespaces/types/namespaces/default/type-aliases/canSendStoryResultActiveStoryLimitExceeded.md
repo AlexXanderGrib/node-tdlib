@@ -18,4 +18,4 @@ The limit for the number of active stories exceeded. The user can buy Telegram P
 
 ## Defined in
 
-dist/generated/types.d.ts:43733
+dist/generated/types.d.ts:45259

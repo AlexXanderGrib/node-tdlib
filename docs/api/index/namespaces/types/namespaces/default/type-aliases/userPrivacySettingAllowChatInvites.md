@@ -18,4 +18,4 @@ A privacy setting for managing whether the user can be invited to chats
 
 ## Defined in
 
-dist/generated/types.d.ts:46253
+dist/generated/types.d.ts:47779

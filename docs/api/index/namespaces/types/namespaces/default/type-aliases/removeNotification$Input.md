@@ -18,16 +18,16 @@ Removes an active notification from notification list. Needs to be called only i
 
 ### notification\_group\_id?
 
-> `readonly` `optional` **notification\_group\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **notification\_group\_id**: [`int32`](int32.md)
 
 Identifier of notification group to which the notification belongs
 
 ### notification\_id?
 
-> `readonly` `optional` **notification\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **notification\_id**: [`int32`](int32.md)
 
 Identifier of removed notification
 
 ## Defined in
 
-dist/generated/types.d.ts:77582
+dist/generated/types.d.ts:79591

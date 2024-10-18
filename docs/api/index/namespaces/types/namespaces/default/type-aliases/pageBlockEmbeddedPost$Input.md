@@ -26,19 +26,19 @@ Post author
 
 ### author\_photo?
 
-> `readonly` `optional` **author\_photo**: [`photo$Input`](photo$Input-1.md) \| `null`
+> `readonly` `optional` **author\_photo**: [`photo$Input`](photo$Input.md) \| `null`
 
 Post author photo; may be null
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input-1.md)
+> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input.md)
 
 Post caption
 
 ### date?
 
-> `readonly` `optional` **date**: [`int32`](int32-1.md)
+> `readonly` `optional` **date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the post was created; 0 if unknown
 
@@ -56,4 +56,4 @@ URL of the embedded post
 
 ## Defined in
 
-dist/generated/types.d.ts:20371
+dist/generated/types.d.ts:20997

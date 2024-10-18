@@ -20,4 +20,4 @@ The session is running on an Android device
 
 ## Defined in
 
-dist/generated/types.d.ts:46469
+dist/generated/types.d.ts:47995

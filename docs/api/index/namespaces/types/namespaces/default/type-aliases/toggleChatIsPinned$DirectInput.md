@@ -14,7 +14,7 @@ Changes the pinned state of a chat. There can be up to getOption("pinned_chat_co
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -32,4 +32,4 @@ Pass true to pin the chat; pass false to unpin it
 
 ## Defined in
 
-dist/generated/types.d.ts:87031
+dist/generated/types.d.ts:89330

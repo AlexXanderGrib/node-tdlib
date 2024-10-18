@@ -18,4 +18,4 @@ Suggests the user to upgrade the Premium subscription from monthly payments to a
 
 ## Defined in
 
-dist/generated/types.d.ts:50471
+dist/generated/types.d.ts:52069

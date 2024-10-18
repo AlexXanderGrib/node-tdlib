@@ -22,4 +22,4 @@ The animation file to be added. Only animations known to the server (i.e., succe
 
 ## Defined in
 
-dist/generated/types.d.ts:93642
+dist/generated/types.d.ts:96139

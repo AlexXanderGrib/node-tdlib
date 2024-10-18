@@ -20,10 +20,10 @@ A Telegram Passport element to be saved containing the user's passport registrat
 
 ### passport\_registration?
 
-> `readonly` `optional` **passport\_registration**: [`inputPersonalDocument$Input`](inputPersonalDocument$Input-1.md)
+> `readonly` `optional` **passport\_registration**: [`inputPersonalDocument$Input`](inputPersonalDocument$Input.md)
 
 The passport registration page to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24882
+dist/generated/types.d.ts:25642

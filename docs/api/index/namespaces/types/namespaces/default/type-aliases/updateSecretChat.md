@@ -18,10 +18,10 @@ Some data of a secret chat has changed. This update is guaranteed to come before
 
 ### secret\_chat
 
-> **secret\_chat**: [`secretChat`](secretChat-1.md)
+> **secret\_chat**: [`secretChat`](secretChat.md)
 
 New data about the secret chat
 
 ## Defined in
 
-dist/generated/types.d.ts:55091
+dist/generated/types.d.ts:56707

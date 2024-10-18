@@ -20,16 +20,16 @@ The chat pending join requests were changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### pending\_join\_requests?
 
-> `readonly` `optional` **pending\_join\_requests**: [`chatJoinRequestsInfo$Input`](chatJoinRequestsInfo$Input-1.md) \| `null`
+> `readonly` `optional` **pending\_join\_requests**: [`chatJoinRequestsInfo$Input`](chatJoinRequestsInfo$Input.md) \| `null`
 
 The new data about pending join requests; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:53905
+dist/generated/types.d.ts:55521

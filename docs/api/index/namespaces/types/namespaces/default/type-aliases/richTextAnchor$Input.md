@@ -26,4 +26,4 @@ Anchor name
 
 ## Defined in
 
-dist/generated/types.d.ts:19260
+dist/generated/types.d.ts:19886

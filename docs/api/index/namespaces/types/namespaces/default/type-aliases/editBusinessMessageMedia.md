@@ -6,7 +6,9 @@
 
 # Type Alias: editBusinessMessageMedia()
 
-> **editBusinessMessageMedia**: (`parameters`) => [`BusinessMessage`](BusinessMessage.md)
+> **editBusinessMessageMedia**: (`parameters`) => [`BusinessMessage`](BusinessMessage-1.md)
+
+Edits the content of a message with an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessMessage`](BusinessMessage.md)
+[`BusinessMessage`](BusinessMessage-1.md)
 
-[BusinessMessage](BusinessMessage.md)
+[BusinessMessage](BusinessMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79924
+dist/generated/types.d.ts:81915

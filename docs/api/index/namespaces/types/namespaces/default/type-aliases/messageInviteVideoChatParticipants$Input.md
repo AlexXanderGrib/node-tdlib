@@ -20,16 +20,16 @@ A message with information about an invitation to a video chat
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Identifier of the video chat. The video chat can be received through the method getGroupCall
 
 ### user\_ids?
 
-> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Invited user identifiers
 
 ## Defined in
 
-dist/generated/types.d.ts:26849
+dist/generated/types.d.ts:27609

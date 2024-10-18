@@ -6,7 +6,9 @@
 
 # Type Alias: toggleBusinessConnectedBotChatIsPaused()
 
-> **toggleBusinessConnectedBotChatIsPaused**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleBusinessConnectedBotChatIsPaused**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Pauses or resumes the connected business bot in a specific chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94697
+dist/generated/types.d.ts:97194

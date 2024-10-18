@@ -18,28 +18,28 @@ Reactions added to a message with anonymous reactions have changed; for bots onl
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### date
 
-> **date**: [`int32`](int32-1.md)
+> **date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the reactions were changed
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ### reactions
 
-> **reactions**: [`vector`](vector.md)\<[`messageReaction`](messageReaction-1.md)\>
+> **reactions**: [`vector`](vector.md)\<[`messageReaction`](messageReaction.md)\>
 
 The list of reactions added to the message
 
 ## Defined in
 
-dist/generated/types.d.ts:58127
+dist/generated/types.d.ts:59767

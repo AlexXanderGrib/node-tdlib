@@ -26,4 +26,4 @@ Domain name of the connected website
 
 ## Defined in
 
-dist/generated/types.d.ts:37008
+dist/generated/types.d.ts:38378

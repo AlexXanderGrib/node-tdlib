@@ -30,4 +30,4 @@ Identifier of the Web App query
 
 ## Defined in
 
-dist/generated/types.d.ts:83049
+dist/generated/types.d.ts:85348

@@ -6,7 +6,9 @@
 
 # Type Alias: addNetworkStatistics()
 
-> **addNetworkStatistics**: (`parameters`) => [`Ok`](Ok.md)
+> **addNetworkStatistics**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds the specified data to data usage statistics. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99049
+dist/generated/types.d.ts:101828

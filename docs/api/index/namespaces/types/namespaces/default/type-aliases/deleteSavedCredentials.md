@@ -6,7 +6,9 @@
 
 # Type Alias: deleteSavedCredentials()
 
-> **deleteSavedCredentials**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteSavedCredentials**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes saved credentials for all payment provider bots
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97011
+dist/generated/types.d.ts:99790

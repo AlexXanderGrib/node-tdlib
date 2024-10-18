@@ -6,7 +6,9 @@
 
 # Type Alias: getWebAppUrl()
 
-> **getWebAppUrl**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getWebAppUrl**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, or an inlineQueryResultsButtonTypeWebApp button
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82875
+dist/generated/types.d.ts:85174

@@ -6,7 +6,9 @@
 
 # Type Alias: getChatListsToAddChat()
 
-> **getChatListsToAddChat**: (`parameters`) => [`ChatLists`](ChatLists.md)
+> **getChatListsToAddChat**: (`parameters`) => [`ChatLists`](ChatLists-1.md)
+
+Returns chat lists to which the chat can be added. This is an offline request
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatLists`](ChatLists.md)
+[`ChatLists`](ChatLists-1.md)
 
-[ChatLists](ChatLists.md)
+[ChatLists](ChatLists-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84441
+dist/generated/types.d.ts:86740

@@ -6,7 +6,9 @@
 
 # Type Alias: addRecentlyFoundChat()
 
-> **addRecentlyFoundChat**: (`parameters`) => [`Ok`](Ok.md)
+> **addRecentlyFoundChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a chat to the list of recently found chats. The chat is added to the beginning of the list. If the chat is already in the list, it will be removed from the list first
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75505
+dist/generated/types.d.ts:77531

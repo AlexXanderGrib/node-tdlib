@@ -6,7 +6,11 @@
 
 # Type Alias: requestQrCodeAuthentication()
 
-> **requestQrCodeAuthentication**: (`parameters`) => [`Ok`](Ok.md)
+> **requestQrCodeAuthentication**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Requests QR code authentication by scanning a QR code on another logged in device. Works only when the current authorization state is authorizationStateWaitPhoneNumber,
+
+- or if there is no pending authentication query and the current authorization state is authorizationStateWaitEmailAddress, authorizationStateWaitEmailCode, authorizationStateWaitCode, authorizationStateWaitRegistration, or authorizationStateWaitPassword
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73441
+dist/generated/types.d.ts:75429

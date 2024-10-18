@@ -6,7 +6,9 @@
 
 # Type Alias: sendPaymentForm()
 
-> **sendPaymentForm**: (`parameters`) => [`PaymentResult`](PaymentResult.md)
+> **sendPaymentForm**: (`parameters`) => [`PaymentResult`](PaymentResult-1.md)
+
+Sends a filled-out payment form to the bot for final verification
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PaymentResult`](PaymentResult.md)
+[`PaymentResult`](PaymentResult-1.md)
 
-[PaymentResult](PaymentResult.md)
+[PaymentResult](PaymentResult-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96922
+dist/generated/types.d.ts:99701

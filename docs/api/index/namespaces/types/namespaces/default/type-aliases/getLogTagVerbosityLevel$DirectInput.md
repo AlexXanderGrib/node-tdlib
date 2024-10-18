@@ -20,4 +20,4 @@ Logging tag to change verbosity level
 
 ## Defined in
 
-dist/generated/types.d.ts:101818
+dist/generated/types.d.ts:104739

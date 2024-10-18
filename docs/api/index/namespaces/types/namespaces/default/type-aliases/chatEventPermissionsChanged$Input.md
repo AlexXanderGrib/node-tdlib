@@ -20,16 +20,16 @@ The chat permissions were changed
 
 ### new\_permissions?
 
-> `readonly` `optional` **new\_permissions**: [`chatPermissions$Input`](chatPermissions$Input-1.md)
+> `readonly` `optional` **new\_permissions**: [`chatPermissions$Input`](chatPermissions$Input.md)
 
 New chat permissions
 
 ### old\_permissions?
 
-> `readonly` `optional` **old\_permissions**: [`chatPermissions$Input`](chatPermissions$Input-1.md)
+> `readonly` `optional` **old\_permissions**: [`chatPermissions$Input`](chatPermissions$Input.md)
 
 Previous chat permissions
 
 ## Defined in
 
-dist/generated/types.d.ts:39803
+dist/generated/types.d.ts:41173

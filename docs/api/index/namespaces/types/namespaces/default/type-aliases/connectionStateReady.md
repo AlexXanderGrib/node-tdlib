@@ -18,4 +18,4 @@ There is a working connection to the Telegram servers
 
 ## Defined in
 
-dist/generated/types.d.ts:50043
+dist/generated/types.d.ts:51627

@@ -26,4 +26,4 @@ New authorization state
 
 ## Defined in
 
-dist/generated/types.d.ts:52644
+dist/generated/types.d.ts:54260

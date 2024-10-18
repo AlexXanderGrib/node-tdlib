@@ -18,10 +18,10 @@ A rule to allow all members of certain specified basic groups and supergroups to
 
 ### chat\_ids
 
-> **chat\_ids**: [`vector`](vector.md)\<[`int53`](int53-1.md)\>
+> **chat\_ids**: [`vector`](vector.md)\<[`int53`](int53.md)\>
 
 The chat identifiers, total number of chats in all rules must not exceed 20
 
 ## Defined in
 
-dist/generated/types.d.ts:46045
+dist/generated/types.d.ts:47571

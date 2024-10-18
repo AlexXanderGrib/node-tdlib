@@ -6,7 +6,9 @@
 
 # Type Alias: getStory()
 
-> **getStory**: (`parameters`) => [`Story`](Story.md)
+> **getStory**: (`parameters`) => [`Story`](Story-1.md)
+
+Returns a story
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Story`](Story.md)
+[`Story`](Story-1.md)
 
-[Story](Story.md)
+[Story](Story-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87168
+dist/generated/types.d.ts:89495

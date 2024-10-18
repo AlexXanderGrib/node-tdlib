@@ -20,4 +20,4 @@ The category must be used by default (e.g., for custom emoji or animation search
 
 ## Defined in
 
-dist/generated/types.d.ts:31747
+dist/generated/types.d.ts:32879

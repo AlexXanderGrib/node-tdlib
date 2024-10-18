@@ -18,10 +18,10 @@ The message will be self-destructed in the specified time after its content was 
 
 ### self\_destruct\_time
 
-> **self\_destruct\_time**: [`int32`](int32-1.md)
+> **self\_destruct\_time**: [`int32`](int32.md)
 
 The message's self-destruct time, in seconds; must be between 0 and 60 in private chats
 
 ## Defined in
 
-dist/generated/types.d.ts:29039
+dist/generated/types.d.ts:29913

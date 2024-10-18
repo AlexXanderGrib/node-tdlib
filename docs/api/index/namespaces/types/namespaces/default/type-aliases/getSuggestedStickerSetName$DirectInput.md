@@ -20,4 +20,4 @@ Sticker set title; 1-64 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:99731
+dist/generated/types.d.ts:102510

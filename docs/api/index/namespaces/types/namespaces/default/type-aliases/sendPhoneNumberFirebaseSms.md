@@ -6,7 +6,9 @@
 
 # Type Alias: sendPhoneNumberFirebaseSms()
 
-> **sendPhoneNumberFirebaseSms**: (`parameters`) => [`Ok`](Ok.md)
+> **sendPhoneNumberFirebaseSms**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94502
+dist/generated/types.d.ts:96999

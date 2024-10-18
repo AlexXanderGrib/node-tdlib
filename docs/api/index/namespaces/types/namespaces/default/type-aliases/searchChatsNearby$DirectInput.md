@@ -16,10 +16,10 @@ Returns a list of users and location-based supergroups nearby. The list of users
 
 ### location?
 
-> `readonly` `optional` **location**: [`location$Input`](location$Input-1.md)
+> `readonly` `optional` **location**: [`location$Input`](location$Input.md)
 
 Current user location
 
 ## Defined in
 
-dist/generated/types.d.ts:75227
+dist/generated/types.d.ts:77253

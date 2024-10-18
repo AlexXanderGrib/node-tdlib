@@ -24,37 +24,37 @@ A message with an invoice; can be used only by bots
 
 ### invoice
 
-> **invoice**: [`invoice`](invoice-1.md)
+> **invoice**: [`invoice`](invoice.md)
 
 Invoice
 
 ### paid\_media
 
-> **paid\_media**: [`inputPaidMedia`](inputPaidMedia-1.md) \| `null`
+> **paid\_media**: [`inputPaidMedia`](inputPaidMedia.md) \| `null`
 
 The content of paid media attached to the invoice; pass null if none
 
 ### paid\_media\_caption
 
-> **paid\_media\_caption**: [`formattedText`](formattedText-1.md) \| `null`
+> **paid\_media\_caption**: [`formattedText`](formattedText.md) \| `null`
 
 Paid media caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### payload
 
-> **payload**: [`bytes`](bytes-1.md)
+> **payload**: [`bytes`](bytes.md)
 
 The invoice payload
 
 ### photo\_height
 
-> **photo\_height**: [`int32`](int32-1.md)
+> **photo\_height**: [`int32`](int32.md)
 
 Product photo height
 
 ### photo\_size
 
-> **photo\_size**: [`int32`](int32-1.md)
+> **photo\_size**: [`int32`](int32.md)
 
 Product photo size
 
@@ -66,7 +66,7 @@ Product photo URL; optional
 
 ### photo\_width
 
-> **photo\_width**: [`int32`](int32-1.md)
+> **photo\_width**: [`int32`](int32.md)
 
 Product photo width
 
@@ -96,4 +96,4 @@ Product title; 1-32 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:30149
+dist/generated/types.d.ts:31023

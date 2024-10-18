@@ -20,16 +20,16 @@ The link is a link to a story. Link preview description is unavailable
 
 ### story\_id?
 
-> `readonly` `optional` **story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **story\_id**: [`int32`](int32.md)
 
 Story identifier
 
 ### story\_sender\_chat\_id?
 
-> `readonly` `optional` **story\_sender\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **story\_sender\_chat\_id**: [`int53`](int53.md)
 
 The identifier of the chat that posted the story
 
 ## Defined in
 
-dist/generated/types.d.ts:21437
+dist/generated/types.d.ts:22187

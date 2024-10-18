@@ -26,7 +26,7 @@ The created Telegram Premium gift code if it was used by the user or can be clai
 
 ### giveaway\_message\_id?
 
-> `readonly` `optional` **giveaway\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **giveaway\_message\_id**: [`int53`](int53.md)
 
 Identifier of the corresponding giveaway message; can be an identifier of a deleted message
 
@@ -38,10 +38,10 @@ True, if the winner for the corresponding Telegram Premium subscription wasn't c
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of a user that won in the giveaway; 0 if none
 
 ## Defined in
 
-dist/generated/types.d.ts:34047
+dist/generated/types.d.ts:35417

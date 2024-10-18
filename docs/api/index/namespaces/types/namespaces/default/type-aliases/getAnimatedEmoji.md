@@ -6,7 +6,9 @@
 
 # Type Alias: getAnimatedEmoji()
 
-> **getAnimatedEmoji**: (`parameters`) => [`AnimatedEmoji`](AnimatedEmoji.md)
+> **getAnimatedEmoji**: (`parameters`) => [`AnimatedEmoji`](AnimatedEmoji-1.md)
+
+Returns an animated emoji corresponding to a given emoji. Returns a 404 error if the emoji has no animated emoji
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AnimatedEmoji`](AnimatedEmoji.md)
+[`AnimatedEmoji`](AnimatedEmoji-1.md)
 
-[AnimatedEmoji](AnimatedEmoji.md)
+[AnimatedEmoji](AnimatedEmoji-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93499
+dist/generated/types.d.ts:95996

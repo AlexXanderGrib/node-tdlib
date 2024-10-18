@@ -18,7 +18,7 @@ Toggles whether a participant of an active group call is muted, unmuted, or allo
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -36,4 +36,4 @@ Participant identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:91575
+dist/generated/types.d.ts:94072

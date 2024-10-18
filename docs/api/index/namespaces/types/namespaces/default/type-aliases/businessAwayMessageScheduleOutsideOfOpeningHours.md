@@ -18,4 +18,4 @@ Send away messages outside of the business opening hours
 
 ## Defined in
 
-dist/generated/types.d.ts:6517
+dist/generated/types.d.ts:6583

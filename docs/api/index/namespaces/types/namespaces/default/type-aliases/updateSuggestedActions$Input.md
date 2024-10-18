@@ -32,4 +32,4 @@ Removed suggested actions
 
 ## Defined in
 
-dist/generated/types.d.ts:57009
+dist/generated/types.d.ts:58649

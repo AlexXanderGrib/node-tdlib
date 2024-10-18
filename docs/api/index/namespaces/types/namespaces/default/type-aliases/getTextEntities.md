@@ -6,7 +6,9 @@
 
 # Type Alias: getTextEntities()
 
-> **getTextEntities**: (`parameters`) => [`TextEntities`](TextEntities.md)
+> **getTextEntities**: (`parameters`) => [`TextEntities`](TextEntities-1.md)
+
+Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TextEntities`](TextEntities.md)
+[`TextEntities`](TextEntities-1.md)
 
-[TextEntities](TextEntities.md)
+[TextEntities](TextEntities-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81698
+dist/generated/types.d.ts:83891

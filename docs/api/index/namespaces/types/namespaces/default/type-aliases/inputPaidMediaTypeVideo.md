@@ -18,7 +18,7 @@ The media is a video
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds
 
@@ -30,4 +30,4 @@ True, if the video is supposed to be streamed
 
 ## Defined in
 
-dist/generated/types.d.ts:28893
+dist/generated/types.d.ts:29767

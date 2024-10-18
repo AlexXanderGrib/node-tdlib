@@ -6,7 +6,9 @@
 
 # Type Alias: toggleSupergroupIsForum()
 
-> **toggleSupergroupIsForum**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleSupergroupIsForum**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether the supergroup is a forum; requires owner privileges in the supergroup. Discussion supergroups can't be converted to forums
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96473
+dist/generated/types.d.ts:99252

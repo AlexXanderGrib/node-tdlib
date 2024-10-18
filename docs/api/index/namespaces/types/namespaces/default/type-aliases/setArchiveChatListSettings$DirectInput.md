@@ -14,10 +14,10 @@ Changes settings for automatic moving of chats to and from the Archive chat list
 
 ### settings?
 
-> `readonly` `optional` **settings**: [`archiveChatListSettings$Input`](archiveChatListSettings$Input-1.md)
+> `readonly` `optional` **settings**: [`archiveChatListSettings$Input`](archiveChatListSettings$Input.md)
 
 New settings
 
 ## Defined in
 
-dist/generated/types.d.ts:85142
+dist/generated/types.d.ts:87441

@@ -18,4 +18,4 @@ Stories of the current user are displayed before stories of non-Premium contacts
 
 ## Defined in
 
-dist/generated/types.d.ts:42015
+dist/generated/types.d.ts:43409

@@ -14,7 +14,7 @@ Edits the content of a live location in an inline message sent via a bot; for bo
 
 ### heading?
 
-> `readonly` `optional` **heading**: [`int32`](int32-1.md)
+> `readonly` `optional` **heading**: [`int32`](int32.md)
 
 The new direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
 
@@ -26,7 +26,7 @@ Inline message identifier
 
 ### live\_period?
 
-> `readonly` `optional` **live\_period**: [`int32`](int32-1.md)
+> `readonly` `optional` **live\_period**: [`int32`](int32.md)
 
 New time relative to the message send date, for which the location can be updated, in seconds. If 0x7FFFFFFF specified, then the location can be updated forever.
 
@@ -34,13 +34,13 @@ New time relative to the message send date, for which the location can be update
 
 ### location?
 
-> `readonly` `optional` **location**: [`location$Input`](location$Input-1.md) \| `null`
+> `readonly` `optional` **location**: [`location$Input`](location$Input.md) \| `null`
 
 New location content of the message; pass null to stop sharing the live location
 
 ### proximity\_alert\_radius?
 
-> `readonly` `optional` **proximity\_alert\_radius**: [`int32`](int32-1.md)
+> `readonly` `optional` **proximity\_alert\_radius**: [`int32`](int32.md)
 
 The new maximum distance for proximity alerts, in meters (0-100000). Pass 0 if the notification is disabled
 
@@ -52,4 +52,4 @@ The new message reply markup; pass null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:79214
+dist/generated/types.d.ts:81205

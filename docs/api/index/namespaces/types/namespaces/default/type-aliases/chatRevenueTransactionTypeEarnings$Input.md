@@ -20,16 +20,16 @@ Describes earnings from sponsored messages in a chat in some time frame
 
 ### end\_date?
 
-> `readonly` `optional` **end\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **end\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the earnings ended
 
 ### start\_date?
 
-> `readonly` `optional` **start\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **start\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the earnings started
 
 ## Defined in
 
-dist/generated/types.d.ts:52059
+dist/generated/types.d.ts:53675

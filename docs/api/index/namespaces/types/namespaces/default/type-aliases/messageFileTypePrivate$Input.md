@@ -26,4 +26,4 @@ Name of the other party; may be empty if unrecognized
 
 ## Defined in
 
-dist/generated/types.d.ts:44072
+dist/generated/types.d.ts:45598

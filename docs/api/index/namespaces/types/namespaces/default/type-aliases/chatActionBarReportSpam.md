@@ -24,4 +24,4 @@ If true, the chat was automatically archived and can be moved back to the main c
 
 ## Defined in
 
-dist/generated/types.d.ts:16943
+dist/generated/types.d.ts:17535

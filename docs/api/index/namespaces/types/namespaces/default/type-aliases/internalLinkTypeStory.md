@@ -18,7 +18,7 @@ The link is a link to a story. Call searchPublicChat with the given sender usern
 
 ### story\_id
 
-> **story\_id**: [`int32`](int32-1.md)
+> **story\_id**: [`int32`](int32.md)
 
 Story identifier
 
@@ -30,4 +30,4 @@ Username of the sender of the story
 
 ## Defined in
 
-dist/generated/types.d.ts:48419
+dist/generated/types.d.ts:49993

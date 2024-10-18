@@ -6,7 +6,9 @@
 
 # Type Alias: getMenuButton()
 
-> **getMenuButton**: (`parameters`) => [`BotMenuButton`](BotMenuButton.md)
+> **getMenuButton**: (`parameters`) => [`BotMenuButton`](BotMenuButton-1.md)
+
+Returns menu button set by the bot for the given user; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BotMenuButton`](BotMenuButton.md)
+[`BotMenuButton`](BotMenuButton-1.md)
 
-[BotMenuButton](BotMenuButton.md)
+[BotMenuButton](BotMenuButton-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95099
+dist/generated/types.d.ts:97596

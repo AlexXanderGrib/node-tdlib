@@ -18,4 +18,4 @@ Returns only voice and video note messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30619
+dist/generated/types.d.ts:31751

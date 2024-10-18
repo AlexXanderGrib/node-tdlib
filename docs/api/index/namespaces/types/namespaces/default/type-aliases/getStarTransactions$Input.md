@@ -8,7 +8,7 @@
 
 > **getStarTransactions$Input**: `object`
 
-Returns the list of Telegram star transactions for the specified owner
+Returns the list of Telegram Star transactions for the specified owner
 
 ## Type declaration
 
@@ -24,7 +24,7 @@ Direction of the transactions to receive; pass null to get all transactions
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of transactions to return
 
@@ -38,10 +38,16 @@ Offset of the first transaction to return as received from the previous request;
 
 > `readonly` `optional` **owner\_id**: [`MessageSender$Input`](MessageSender$Input.md)
 
-Identifier of the owner of the Telegram stars; can be the identifier of the current user, identifier of an owned bot,
+Identifier of the owner of the Telegram Stars; can be the identifier of the current user, identifier of an owned bot,
 
 - or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
 
+### subscription\_id?
+
+> `readonly` `optional` **subscription\_id**: `string`
+
+If non-empty, only transactions related to the Star Subscription will be returned
+
 ## Defined in
 
-dist/generated/types.d.ts:100744
+dist/generated/types.d.ts:103551

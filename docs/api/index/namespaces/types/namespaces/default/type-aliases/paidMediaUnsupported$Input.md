@@ -20,4 +20,4 @@ The media is unsupported
 
 ## Defined in
 
-dist/generated/types.d.ts:23653
+dist/generated/types.d.ts:24413

@@ -6,7 +6,9 @@
 
 # Type Alias: getDatabaseStatistics()
 
-> **getDatabaseStatistics**: (`parameters`) => [`DatabaseStatistics`](DatabaseStatistics.md)
+> **getDatabaseStatistics**: (`parameters`) => [`DatabaseStatistics`](DatabaseStatistics-1.md)
+
+Returns database statistics
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`DatabaseStatistics`](DatabaseStatistics.md)
+[`DatabaseStatistics`](DatabaseStatistics-1.md)
 
-[DatabaseStatistics](DatabaseStatistics.md)
+[DatabaseStatistics](DatabaseStatistics-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98851
+dist/generated/types.d.ts:101630

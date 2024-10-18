@@ -20,7 +20,7 @@ Represents information about a game
 
 ### game?
 
-> `readonly` `optional` **game**: [`game$Input`](game$Input-1.md)
+> `readonly` `optional` **game**: [`game$Input`](game$Input.md)
 
 Game result
 
@@ -32,4 +32,4 @@ Unique identifier of the query result
 
 ## Defined in
 
-dist/generated/types.d.ts:38501
+dist/generated/types.d.ts:39871

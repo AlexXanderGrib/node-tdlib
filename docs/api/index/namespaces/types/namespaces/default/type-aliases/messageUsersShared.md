@@ -18,16 +18,16 @@ The current user shared users, which were requested by the bot
 
 ### button\_id
 
-> **button\_id**: [`int32`](int32-1.md)
+> **button\_id**: [`int32`](int32.md)
 
 Identifier of the keyboard button with the request
 
 ### users
 
-> **users**: [`vector`](vector.md)\<[`sharedUser`](sharedUser-1.md)\>
+> **users**: [`vector`](vector.md)\<[`sharedUser`](sharedUser.md)\>
 
 The shared users
 
 ## Defined in
 
-dist/generated/types.d.ts:28211
+dist/generated/types.d.ts:29085

@@ -18,22 +18,22 @@ Returns the list of revenue transactions for a chat. Currently, this method can 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of transactions to be returned; up to 200
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int32`](int32-1.md)
+> `readonly` `optional` **offset**: [`int32`](int32.md)
 
 Number of transactions to skip
 
 ## Defined in
 
-dist/generated/types.d.ts:98391
+dist/generated/types.d.ts:101170

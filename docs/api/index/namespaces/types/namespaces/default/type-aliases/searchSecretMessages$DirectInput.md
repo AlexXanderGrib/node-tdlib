@@ -14,7 +14,7 @@ Searches for messages in secret chats. Returns the results in reverse chronologi
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat in which to search. Specify 0 to search in all secret chats
 
@@ -26,7 +26,7 @@ Additional filter for messages to search; pass null to search for all messages
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned; up to 100. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
 
@@ -44,4 +44,4 @@ Query to search for. If empty, searchChatMessages must be used instead
 
 ## Defined in
 
-dist/generated/types.d.ts:76548
+dist/generated/types.d.ts:78574

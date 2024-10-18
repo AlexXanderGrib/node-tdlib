@@ -24,4 +24,4 @@ The bot token
 
 ## Defined in
 
-dist/generated/types.d.ts:73693
+dist/generated/types.d.ts:75681

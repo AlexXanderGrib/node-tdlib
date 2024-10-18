@@ -6,7 +6,9 @@
 
 # Type Alias: getChatFolder()
 
-> **getChatFolder**: (`parameters`) => [`ChatFolder`](ChatFolder.md)
+> **getChatFolder**: (`parameters`) => [`ChatFolder`](ChatFolder-1.md)
+
+Returns information about a chat folder by its identifier
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatFolder`](ChatFolder.md)
+[`ChatFolder`](ChatFolder-1.md)
 
-[ChatFolder](ChatFolder.md)
+[ChatFolder](ChatFolder-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84507
+dist/generated/types.d.ts:86806

@@ -12,4 +12,4 @@ Returns the link for downloading official Telegram application to be used when t
 
 ## Defined in
 
-dist/generated/types.d.ts:101375
+dist/generated/types.d.ts:104296

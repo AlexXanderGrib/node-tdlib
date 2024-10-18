@@ -18,7 +18,7 @@ A voice note message
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md)
+> **caption**: [`formattedText`](formattedText.md)
 
 Voice note caption
 
@@ -30,10 +30,10 @@ True, if at least one of the recipients has listened to the voice note
 
 ### voice\_note
 
-> **voice\_note**: [`voiceNote`](voiceNote-1.md)
+> **voice\_note**: [`voiceNote`](voiceNote.md)
 
 The voice note description
 
 ## Defined in
 
-dist/generated/types.d.ts:26199
+dist/generated/types.d.ts:26959

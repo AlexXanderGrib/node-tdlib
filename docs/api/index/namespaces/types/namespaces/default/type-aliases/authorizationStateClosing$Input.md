@@ -20,4 +20,4 @@ TDLib is closing, all subsequent queries will be answered with the error 500. No
 
 ## Defined in
 
-dist/generated/types.d.ts:3423
+dist/generated/types.d.ts:3469

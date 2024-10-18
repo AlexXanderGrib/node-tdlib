@@ -18,7 +18,7 @@ A new member joined the chat via an invite link
 
 ### invite\_link
 
-> **invite\_link**: [`chatInviteLink`](chatInviteLink-1.md)
+> **invite\_link**: [`chatInviteLink`](chatInviteLink.md)
 
 Invite link used to join the chat
 
@@ -30,4 +30,4 @@ True, if the user has joined the chat using an invite link for a chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:39343
+dist/generated/types.d.ts:40713

@@ -20,7 +20,7 @@ A story failed to send. If the story sending is canceled, then updateStoryDelete
 
 ### error?
 
-> `readonly` `optional` **error**: [`error$Input`](error$Input-1.md)
+> `readonly` `optional` **error**: [`error$Input`](error$Input.md)
 
 The cause of the story sending failure
 
@@ -32,10 +32,10 @@ Type of the error; may be null if unknown
 
 ### story?
 
-> `readonly` `optional` **story**: [`story$Input`](story$Input-1.md)
+> `readonly` `optional` **story**: [`story$Input`](story$Input.md)
 
 The failed to send story
 
 ## Defined in
 
-dist/generated/types.d.ts:55954
+dist/generated/types.d.ts:57570

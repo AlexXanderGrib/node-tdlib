@@ -6,7 +6,9 @@
 
 # Type Alias: getBusinessConnectedBot()
 
-> **getBusinessConnectedBot**: (`parameters`) => [`BusinessConnectedBot`](BusinessConnectedBot.md)
+> **getBusinessConnectedBot**: (`parameters`) => [`BusinessConnectedBot`](BusinessConnectedBot-1.md)
+
+Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessConnectedBot`](BusinessConnectedBot.md)
+[`BusinessConnectedBot`](BusinessConnectedBot-1.md)
 
-[BusinessConnectedBot](BusinessConnectedBot.md)
+[BusinessConnectedBot](BusinessConnectedBot-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94603
+dist/generated/types.d.ts:97100

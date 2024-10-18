@@ -6,7 +6,9 @@
 
 # Type Alias: getBankCardInfo()
 
-> **getBankCardInfo**: (`parameters`) => [`BankCardInfo`](BankCardInfo.md)
+> **getBankCardInfo**: (`parameters`) => [`BankCardInfo`](BankCardInfo-1.md)
+
+Returns information about a bank card
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BankCardInfo`](BankCardInfo.md)
+[`BankCardInfo`](BankCardInfo-1.md)
 
-[BankCardInfo](BankCardInfo.md)
+[BankCardInfo](BankCardInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99221
+dist/generated/types.d.ts:102000

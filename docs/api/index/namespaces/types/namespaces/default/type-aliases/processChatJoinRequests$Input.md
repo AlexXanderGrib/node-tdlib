@@ -24,7 +24,7 @@ Pass true to approve all requests; pass false to decline them
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -36,4 +36,4 @@ Invite link for which to process join requests. If empty, all join requests will
 
 ## Defined in
 
-dist/generated/types.d.ts:90335
+dist/generated/types.d.ts:92832

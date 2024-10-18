@@ -26,4 +26,4 @@ Sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:100256
+dist/generated/types.d.ts:103035

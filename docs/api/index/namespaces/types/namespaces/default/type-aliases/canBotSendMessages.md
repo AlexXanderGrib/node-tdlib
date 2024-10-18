@@ -6,7 +6,9 @@
 
 # Type Alias: canBotSendMessages()
 
-> **canBotSendMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **canBotSendMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks whether the specified bot can send messages to the user. Returns a 404 error if can't and the access can be granted by call to allowBotToSendMessages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95183
+dist/generated/types.d.ts:97680

@@ -20,10 +20,10 @@ The selfie contains an error. The error is considered resolved when the file wit
 
 ### file\_hash?
 
-> `readonly` `optional` **file\_hash**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **file\_hash**: [`bytes$Input`](bytes$Input.md)
 
 Current hash of the file containing the selfie
 
 ## Defined in
 
-dist/generated/types.d.ts:25612
+dist/generated/types.d.ts:26372

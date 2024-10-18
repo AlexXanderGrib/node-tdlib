@@ -18,7 +18,7 @@ Sends a message. Returns the sent message
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Target chat
 
@@ -30,13 +30,13 @@ The content of the message to be sent
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 If not 0, the message thread identifier in which the message will be sent
 
 ### options?
 
-> `readonly` `optional` **options**: [`messageSendOptions$Input`](messageSendOptions$Input-1.md) \| `null`
+> `readonly` `optional` **options**: [`messageSendOptions$Input`](messageSendOptions$Input.md) \| `null`
 
 Options to be used to send the message; pass null to use default options
 
@@ -54,4 +54,4 @@ Information about the message or story to be replied; pass null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:78072
+dist/generated/types.d.ts:80081

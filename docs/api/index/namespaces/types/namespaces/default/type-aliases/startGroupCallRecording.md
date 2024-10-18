@@ -6,7 +6,9 @@
 
 # Type Alias: startGroupCallRecording()
 
-> **startGroupCallRecording**: (`parameters`) => [`Ok`](Ok.md)
+> **startGroupCallRecording**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Starts recording of an active group call. Requires groupCall.can_be_managed group call flag
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91419
+dist/generated/types.d.ts:93916

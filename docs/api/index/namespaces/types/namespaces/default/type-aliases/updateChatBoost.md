@@ -18,16 +18,16 @@ A chat boost has changed; for bots only
 
 ### boost
 
-> **boost**: [`chatBoost`](chatBoost-1.md)
+> **boost**: [`chatBoost`](chatBoost.md)
 
 New information about the boost
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:58019
+dist/generated/types.d.ts:59659

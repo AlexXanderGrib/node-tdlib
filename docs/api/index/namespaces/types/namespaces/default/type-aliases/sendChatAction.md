@@ -6,7 +6,9 @@
 
 # Type Alias: sendChatAction()
 
-> **sendChatAction**: (`parameters`) => [`Ok`](Ok.md)
+> **sendChatAction**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sends a notification about user activity in a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83613
+dist/generated/types.d.ts:85912

@@ -18,10 +18,10 @@ TDLib needs the user's authentication code to authorize. Call checkAuthenticatio
 
 ### code\_info
 
-> **code\_info**: [`authenticationCodeInfo`](authenticationCodeInfo-1.md)
+> **code\_info**: [`authenticationCodeInfo`](authenticationCodeInfo.md)
 
 Information about the authorization code that was sent
 
 ## Defined in
 
-dist/generated/types.d.ts:3257
+dist/generated/types.d.ts:3303

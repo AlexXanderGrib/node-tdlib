@@ -6,7 +6,9 @@
 
 # Type Alias: uploadStickerFile()
 
-> **uploadStickerFile**: (`parameters`) => [`File`](File.md)
+> **uploadStickerFile**: (`parameters`) => [`File`](File-1.md)
+
+Uploads a file with a sticker; returns the uploaded file
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`File`](File.md)
+[`File`](File-1.md)
 
-[File](File.md)
+[File](File-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99716
+dist/generated/types.d.ts:102495

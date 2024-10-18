@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageThread()
 
-> **getMessageThread**: (`parameters`) => [`MessageThreadInfo`](MessageThreadInfo.md)
+> **getMessageThread**: (`parameters`) => [`MessageThreadInfo`](MessageThreadInfo-1.md)
+
+Returns information about a message thread. Can be used only if messageProperties.can_get_message_thread == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageThreadInfo`](MessageThreadInfo.md)
+[`MessageThreadInfo`](MessageThreadInfo-1.md)
 
-[MessageThreadInfo](MessageThreadInfo.md)
+[MessageThreadInfo](MessageThreadInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74846
+dist/generated/types.d.ts:76872

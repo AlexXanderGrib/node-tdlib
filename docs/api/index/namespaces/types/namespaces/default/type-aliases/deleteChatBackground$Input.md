@@ -18,7 +18,7 @@ Deletes background in a specific chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -32,4 +32,4 @@ Pass true to restore previously set background. Can be used only in private and 
 
 ## Defined in
 
-dist/generated/types.d.ts:85527
+dist/generated/types.d.ts:87826

@@ -20,10 +20,10 @@ A Telegram Passport element to be saved containing the user's driver license
 
 ### driver\_license?
 
-> `readonly` `optional` **driver\_license**: [`inputIdentityDocument$Input`](inputIdentityDocument$Input-1.md)
+> `readonly` `optional` **driver\_license**: [`inputIdentityDocument$Input`](inputIdentityDocument$Input.md)
 
 The driver license to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24714
+dist/generated/types.d.ts:25474

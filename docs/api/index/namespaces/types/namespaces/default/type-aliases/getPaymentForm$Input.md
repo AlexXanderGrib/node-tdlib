@@ -24,10 +24,10 @@ The invoice
 
 ### theme?
 
-> `readonly` `optional` **theme**: [`themeParameters$Input`](themeParameters$Input-1.md) \| `null`
+> `readonly` `optional` **theme**: [`themeParameters$Input`](themeParameters$Input.md) \| `null`
 
 Preferred payment form theme; pass null to use the default theme
 
 ## Defined in
 
-dist/generated/types.d.ts:96762
+dist/generated/types.d.ts:99541

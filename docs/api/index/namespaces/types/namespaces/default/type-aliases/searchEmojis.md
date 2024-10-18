@@ -6,7 +6,9 @@
 
 # Type Alias: searchEmojis()
 
-> **searchEmojis**: (`parameters`) => [`EmojiKeywords`](EmojiKeywords.md)
+> **searchEmojis**: (`parameters`) => [`EmojiKeywords`](EmojiKeywords-1.md)
+
+Searches for emojis by keywords. Supported only if the file database is enabled. Order of results is unspecified
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`EmojiKeywords`](EmojiKeywords.md)
+[`EmojiKeywords`](EmojiKeywords-1.md)
 
-[EmojiKeywords](EmojiKeywords.md)
+[EmojiKeywords](EmojiKeywords-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93405
+dist/generated/types.d.ts:95902

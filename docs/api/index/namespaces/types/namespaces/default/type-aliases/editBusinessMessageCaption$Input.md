@@ -24,19 +24,19 @@ Unique identifier of business connection on behalf of which the message was sent
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 New message content caption; pass null to remove caption; 0-getOption("message_caption_length_max") characters
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
@@ -54,4 +54,4 @@ Pass true to show the caption above the media; otherwise, the caption will be sh
 
 ## Defined in
 
-dist/generated/types.d.ts:79928
+dist/generated/types.d.ts:81919

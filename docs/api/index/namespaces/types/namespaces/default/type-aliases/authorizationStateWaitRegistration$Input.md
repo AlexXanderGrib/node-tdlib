@@ -20,10 +20,10 @@ The user is unregistered and need to accept terms of service and enter their fir
 
 ### terms\_of\_service?
 
-> `readonly` `optional` **terms\_of\_service**: [`termsOfService$Input`](termsOfService$Input-1.md)
+> `readonly` `optional` **terms\_of\_service**: [`termsOfService$Input`](termsOfService$Input.md)
 
 Telegram terms of service
 
 ## Defined in
 
-dist/generated/types.d.ts:3318
+dist/generated/types.d.ts:3364

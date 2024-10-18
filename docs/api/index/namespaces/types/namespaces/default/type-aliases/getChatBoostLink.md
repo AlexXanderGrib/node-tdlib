@@ -6,7 +6,9 @@
 
 # Type Alias: getChatBoostLink()
 
-> **getChatBoostLink**: (`parameters`) => [`ChatBoostLink`](ChatBoostLink.md)
+> **getChatBoostLink**: (`parameters`) => [`ChatBoostLink`](ChatBoostLink-1.md)
+
+Returns an HTTPS link to boost the specified supergroup or channel chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatBoostLink`](ChatBoostLink.md)
+[`ChatBoostLink`](ChatBoostLink-1.md)
 
-[ChatBoostLink](ChatBoostLink.md)
+[ChatBoostLink](ChatBoostLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88434
+dist/generated/types.d.ts:90809

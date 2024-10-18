@@ -6,7 +6,9 @@
 
 # Type Alias: toggleForumTopicIsClosed()
 
-> **toggleForumTopicIsClosed**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleForumTopicIsClosed**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether a topic is closed in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80986
+dist/generated/types.d.ts:83035

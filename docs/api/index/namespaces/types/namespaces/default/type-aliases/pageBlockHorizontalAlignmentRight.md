@@ -18,4 +18,4 @@ The content must be right-aligned
 
 ## Defined in
 
-dist/generated/types.d.ts:19435
+dist/generated/types.d.ts:20061

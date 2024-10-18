@@ -18,16 +18,16 @@ A scope covering a member of a chat
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52545
+dist/generated/types.d.ts:54161

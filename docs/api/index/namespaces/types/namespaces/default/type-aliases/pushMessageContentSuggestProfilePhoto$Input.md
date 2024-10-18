@@ -20,4 +20,4 @@ A profile photo was suggested to the user
 
 ## Defined in
 
-dist/generated/types.d.ts:45137
+dist/generated/types.d.ts:46663

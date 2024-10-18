@@ -20,16 +20,16 @@ The chat background was changed
 
 ### new\_background?
 
-> `readonly` `optional` **new\_background**: [`chatBackground$Input`](chatBackground$Input-1.md) \| `null`
+> `readonly` `optional` **new\_background**: [`chatBackground$Input`](chatBackground$Input.md) \| `null`
 
 New background; may be null if none
 
 ### old\_background?
 
-> `readonly` `optional` **old\_background**: [`chatBackground$Input`](chatBackground$Input-1.md) \| `null`
+> `readonly` `optional` **old\_background**: [`chatBackground$Input`](chatBackground$Input.md) \| `null`
 
 Previous background; may be null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:39599
+dist/generated/types.d.ts:40969

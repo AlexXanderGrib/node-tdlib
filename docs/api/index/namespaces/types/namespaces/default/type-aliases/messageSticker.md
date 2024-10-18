@@ -24,10 +24,10 @@ True, if premium animation of the sticker must be played
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md)
+> **sticker**: [`sticker`](sticker.md)
 
 The sticker description
 
 ## Defined in
 
-dist/generated/types.d.ts:26057
+dist/generated/types.d.ts:26817

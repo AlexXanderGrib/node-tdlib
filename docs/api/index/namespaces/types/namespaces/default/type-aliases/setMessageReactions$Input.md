@@ -18,7 +18,7 @@ Sets reactions on a message; for bots only
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the message belongs
 
@@ -30,7 +30,7 @@ Pass true if the reactions are added with a big animation
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
@@ -42,4 +42,4 @@ Types of the reaction to set
 
 ## Defined in
 
-dist/generated/types.d.ts:81378
+dist/generated/types.d.ts:83571

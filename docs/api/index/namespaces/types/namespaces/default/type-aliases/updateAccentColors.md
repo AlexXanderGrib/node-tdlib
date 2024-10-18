@@ -18,13 +18,13 @@ The list of supported accent colors has changed
 
 ### available\_accent\_color\_ids
 
-> **available\_accent\_color\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **available\_accent\_color\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 The list of accent color identifiers, which can be set through setAccentColor and setChatAccentColor. The colors must be shown in the specififed order
 
 ### colors
 
-> **colors**: [`vector`](vector.md)\<[`accentColor`](accentColor-1.md)\>
+> **colors**: [`vector`](vector.md)\<[`accentColor`](accentColor.md)\>
 
 Information about supported colors; colors with identifiers 0 (red), 1 (orange), 2 (purple/violet), 3 (green), 4 (cyan), 5 (blue), 6 (pink) must always be supported
 
@@ -32,4 +32,4 @@ Information about supported colors; colors with identifiers 0 (red), 1 (orange),
 
 ## Defined in
 
-dist/generated/types.d.ts:56357
+dist/generated/types.d.ts:57973

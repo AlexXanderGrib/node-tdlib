@@ -16,7 +16,7 @@ Informs TDLib that messages are being viewed by the user. Sponsored messages mus
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -28,7 +28,7 @@ Pass true to mark as read the specified messages even the chat is closed
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 The identifiers of the messages being viewed
 
@@ -40,4 +40,4 @@ Source of the message view; pass null to guess the source based on chat open sta
 
 ## Defined in
 
-dist/generated/types.d.ts:83703
+dist/generated/types.d.ts:86002

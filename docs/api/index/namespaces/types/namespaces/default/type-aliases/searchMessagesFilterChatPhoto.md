@@ -18,4 +18,4 @@ Returns only messages containing chat photos
 
 ## Defined in
 
-dist/generated/types.d.ts:30591
+dist/generated/types.d.ts:31723

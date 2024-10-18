@@ -6,7 +6,9 @@
 
 # Type Alias: resendLoginEmailAddressCode()
 
-> **resendLoginEmailAddressCode**: (`parameters`) => [`EmailAddressAuthenticationCodeInfo`](EmailAddressAuthenticationCodeInfo.md)
+> **resendLoginEmailAddressCode**: (`parameters`) => [`EmailAddressAuthenticationCodeInfo`](EmailAddressAuthenticationCodeInfo-1.md)
+
+Resends the login email address verification code
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`EmailAddressAuthenticationCodeInfo`](EmailAddressAuthenticationCodeInfo.md)
+[`EmailAddressAuthenticationCodeInfo`](EmailAddressAuthenticationCodeInfo-1.md)
 
-[EmailAddressAuthenticationCodeInfo](EmailAddressAuthenticationCodeInfo.md)
+[EmailAddressAuthenticationCodeInfo](EmailAddressAuthenticationCodeInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73983
+dist/generated/types.d.ts:75971

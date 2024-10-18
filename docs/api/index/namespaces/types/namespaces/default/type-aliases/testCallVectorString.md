@@ -6,7 +6,9 @@
 
 # Type Alias: testCallVectorString()
 
-> **testCallVectorString**: (`parameters`) => [`TestVectorString`](TestVectorString.md)
+> **testCallVectorString**: (`parameters`) => [`TestVectorString`](TestVectorString-1.md)
+
+Returns the received vector of strings; for testing only. This is an offline method. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TestVectorString`](TestVectorString.md)
+[`TestVectorString`](TestVectorString-1.md)
 
-[TestVectorString](TestVectorString.md)
+[TestVectorString](TestVectorString-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:102109
+dist/generated/types.d.ts:105030

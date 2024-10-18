@@ -6,7 +6,9 @@
 
 # Type Alias: deleteQuickReplyShortcut()
 
-> **deleteQuickReplyShortcut**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteQuickReplyShortcut**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes a quick reply shortcut
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80229
+dist/generated/types.d.ts:82278

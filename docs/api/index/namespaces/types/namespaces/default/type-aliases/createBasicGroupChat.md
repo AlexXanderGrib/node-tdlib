@@ -6,7 +6,9 @@
 
 # Type Alias: createBasicGroupChat()
 
-> **createBasicGroupChat**: (`parameters`) => [`Chat`](Chat.md)
+> **createBasicGroupChat**: (`parameters`) => [`Chat`](Chat-1.md)
+
+Returns an existing chat corresponding to a known basic group
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chat`](Chat.md)
+[`Chat`](Chat-1.md)
 
-[Chat](Chat.md)
+[Chat](Chat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84155
+dist/generated/types.d.ts:86454

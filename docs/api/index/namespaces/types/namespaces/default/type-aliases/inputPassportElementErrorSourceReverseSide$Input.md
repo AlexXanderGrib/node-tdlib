@@ -20,10 +20,10 @@ The reverse side of the document contains an error. The error is considered reso
 
 ### file\_hash?
 
-> `readonly` `optional` **file\_hash**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **file\_hash**: [`bytes$Input`](bytes$Input.md)
 
 Current hash of the file containing the reverse side
 
 ## Defined in
 
-dist/generated/types.d.ts:25588
+dist/generated/types.d.ts:26348

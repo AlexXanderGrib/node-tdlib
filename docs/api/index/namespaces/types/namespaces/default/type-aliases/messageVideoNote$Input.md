@@ -32,10 +32,10 @@ True, if at least one of the recipients has viewed the video note
 
 ### video\_note?
 
-> `readonly` `optional` **video\_note**: [`videoNote$Input`](videoNote$Input-1.md)
+> `readonly` `optional` **video\_note**: [`videoNote$Input`](videoNote$Input.md)
 
 The video note description
 
 ## Defined in
 
-dist/generated/types.d.ts:26178
+dist/generated/types.d.ts:26938

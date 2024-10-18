@@ -14,7 +14,7 @@ Returns approximate 1-based position of a message among messages, which can be f
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat in which to find message position
 
@@ -26,22 +26,22 @@ Filter for message content; searchMessagesFilterEmpty, searchMessagesFilterUnrea
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 If not 0, only messages in the specified thread will be considered; supergroups only
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 If not 0, only messages in the specified Saved Messages topic will be considered; pass 0 to consider all relevant messages, or for chats other than Saved Messages
 
 ## Defined in
 
-dist/generated/types.d.ts:77403
+dist/generated/types.d.ts:79412

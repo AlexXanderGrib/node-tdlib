@@ -6,7 +6,9 @@
 
 # Type Alias: getExternalLink()
 
-> **getExternalLink**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getExternalLink**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns an HTTP URL which can be used to automatically authorize the current user on a website after clicking an HTTP link. Use the method getExternalLinkInfo to find whether a prior user confirmation is needed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83947
+dist/generated/types.d.ts:86246

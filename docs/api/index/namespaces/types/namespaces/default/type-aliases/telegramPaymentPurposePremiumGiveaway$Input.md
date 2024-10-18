@@ -20,7 +20,7 @@ The user creating a Telegram Premium giveaway
 
 ### amount?
 
-> `readonly` `optional` **amount**: [`int53`](int53-1.md)
+> `readonly` `optional` **amount**: [`int53`](int53.md)
 
 Paid amount, in the smallest units of the currency
 
@@ -32,22 +32,22 @@ ISO 4217 currency code of the payment currency
 
 ### month\_count?
 
-> `readonly` `optional` **month\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **month\_count**: [`int32`](int32.md)
 
 Number of months the Telegram Premium subscription will be active for the users
 
 ### parameters?
 
-> `readonly` `optional` **parameters**: [`premiumGiveawayParameters$Input`](premiumGiveawayParameters$Input-1.md)
+> `readonly` `optional` **parameters**: [`premiumGiveawayParameters$Input`](premiumGiveawayParameters$Input.md)
 
 Giveaway parameters
 
 ### winner\_count?
 
-> `readonly` `optional` **winner\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **winner\_count**: [`int32`](int32.md)
 
 Number of users which will be able to activate the gift codes
 
 ## Defined in
 
-dist/generated/types.d.ts:42798
+dist/generated/types.d.ts:44246

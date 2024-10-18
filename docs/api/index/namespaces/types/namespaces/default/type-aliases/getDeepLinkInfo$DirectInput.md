@@ -20,4 +20,4 @@ The link
 
 ## Defined in
 
-dist/generated/types.d.ts:101287
+dist/generated/types.d.ts:104208

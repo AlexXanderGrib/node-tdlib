@@ -6,7 +6,9 @@
 
 # Type Alias: getArchiveChatListSettings()
 
-> **getArchiveChatListSettings**: (`parameters`) => [`ArchiveChatListSettings`](ArchiveChatListSettings.md)
+> **getArchiveChatListSettings**: (`parameters`) => [`ArchiveChatListSettings`](ArchiveChatListSettings-1.md)
+
+Returns settings for automatic moving of chats to and from the Archive chat lists
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ArchiveChatListSettings`](ArchiveChatListSettings.md)
+[`ArchiveChatListSettings`](ArchiveChatListSettings-1.md)
 
-[ArchiveChatListSettings](ArchiveChatListSettings.md)
+[ArchiveChatListSettings](ArchiveChatListSettings-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85127
+dist/generated/types.d.ts:87426

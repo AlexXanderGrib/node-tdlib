@@ -6,7 +6,9 @@
 
 # Type Alias: reorderInstalledStickerSets()
 
-> **reorderInstalledStickerSets**: (`parameters`) => [`Ok`](Ok.md)
+> **reorderInstalledStickerSets**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the order of installed sticker sets
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93122
+dist/generated/types.d.ts:95619

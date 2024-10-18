@@ -20,16 +20,16 @@ The current user shared users, which were requested by the bot
 
 ### button\_id?
 
-> `readonly` `optional` **button\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **button\_id**: [`int32`](int32.md)
 
 Identifier of the keyboard button with the request
 
 ### users?
 
-> `readonly` `optional` **users**: [`vector$Input`](vector$Input.md)\<[`sharedUser$Input`](sharedUser$Input-1.md)\>
+> `readonly` `optional` **users**: [`vector$Input`](vector$Input.md)\<[`sharedUser$Input`](sharedUser$Input.md)\>
 
 The shared users
 
 ## Defined in
 
-dist/generated/types.d.ts:28229
+dist/generated/types.d.ts:29103

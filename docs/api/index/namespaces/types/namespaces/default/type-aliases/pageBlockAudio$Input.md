@@ -20,16 +20,16 @@ An audio file
 
 ### audio?
 
-> `readonly` `optional` **audio**: [`audio$Input`](audio$Input-1.md) \| `null`
+> `readonly` `optional` **audio**: [`audio$Input`](audio$Input.md) \| `null`
 
 Audio file; may be null
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input-1.md)
+> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input.md)
 
 Audio file caption
 
 ## Defined in
 
-dist/generated/types.d.ts:20067
+dist/generated/types.d.ts:20693

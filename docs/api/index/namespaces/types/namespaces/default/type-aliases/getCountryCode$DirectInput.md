@@ -12,4 +12,4 @@ Uses the current IP address to find the current country. Returns two-letter ISO 
 
 ## Defined in
 
-dist/generated/types.d.ts:101171
+dist/generated/types.d.ts:104092

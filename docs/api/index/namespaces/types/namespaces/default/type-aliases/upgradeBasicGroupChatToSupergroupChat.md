@@ -6,7 +6,9 @@
 
 # Type Alias: upgradeBasicGroupChatToSupergroupChat()
 
-> **upgradeBasicGroupChatToSupergroupChat**: (`parameters`) => [`Chat`](Chat.md)
+> **upgradeBasicGroupChatToSupergroupChat**: (`parameters`) => [`Chat`](Chat-1.md)
+
+Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chat`](Chat.md)
+[`Chat`](Chat-1.md)
 
-[Chat](Chat.md)
+[Chat](Chat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84413
+dist/generated/types.d.ts:86712

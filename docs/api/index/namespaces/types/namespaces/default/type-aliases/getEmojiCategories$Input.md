@@ -24,4 +24,4 @@ Type of emoji categories to return; pass null to get default emoji categories
 
 ## Defined in
 
-dist/generated/types.d.ts:93447
+dist/generated/types.d.ts:95944

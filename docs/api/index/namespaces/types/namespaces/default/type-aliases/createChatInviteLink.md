@@ -6,7 +6,9 @@
 
 # Type Alias: createChatInviteLink()
 
-> **createChatInviteLink**: (`parameters`) => [`ChatInviteLink`](ChatInviteLink.md)
+> **createChatInviteLink**: (`parameters`) => [`ChatInviteLink`](ChatInviteLink-1.md)
+
+Creates a new invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatInviteLink`](ChatInviteLink.md)
+[`ChatInviteLink`](ChatInviteLink-1.md)
 
-[ChatInviteLink](ChatInviteLink.md)
+[ChatInviteLink](ChatInviteLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89759
+dist/generated/types.d.ts:92134

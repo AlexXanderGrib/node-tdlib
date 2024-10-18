@@ -24,10 +24,10 @@ True, if the server uses TCP instead of UDP
 
 ### peer\_tag
 
-> **peer\_tag**: [`bytes`](bytes-1.md)
+> **peer\_tag**: [`bytes`](bytes.md)
 
 A peer tag to be used with the reflector
 
 ## Defined in
 
-dist/generated/types.d.ts:34633
+dist/generated/types.d.ts:36003

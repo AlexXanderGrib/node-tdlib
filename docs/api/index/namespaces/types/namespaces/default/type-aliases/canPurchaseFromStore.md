@@ -6,7 +6,9 @@
 
 # Type Alias: canPurchaseFromStore()
 
-> **canPurchaseFromStore**: (`parameters`) => [`Ok`](Ok.md)
+> **canPurchaseFromStore**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks whether an in-store purchase is possible. Must be called before any in-store purchase
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100830
+dist/generated/types.d.ts:103685

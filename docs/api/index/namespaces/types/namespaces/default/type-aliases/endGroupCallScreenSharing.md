@@ -6,7 +6,9 @@
 
 # Type Alias: endGroupCallScreenSharing()
 
-> **endGroupCallScreenSharing**: (`parameters`) => [`Ok`](Ok.md)
+> **endGroupCallScreenSharing**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Ends screen sharing in a joined group call
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91181
+dist/generated/types.d.ts:93678

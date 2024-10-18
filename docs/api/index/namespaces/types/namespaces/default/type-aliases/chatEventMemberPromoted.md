@@ -30,10 +30,10 @@ Previous status of the chat member
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 Affected chat member user identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:39459
+dist/generated/types.d.ts:40829

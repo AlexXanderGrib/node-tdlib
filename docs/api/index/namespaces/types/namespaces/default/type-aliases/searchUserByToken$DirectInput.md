@@ -20,4 +20,4 @@ Token to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:94896
+dist/generated/types.d.ts:97393

@@ -6,7 +6,9 @@
 
 # Type Alias: terminateAllOtherSessions()
 
-> **terminateAllOtherSessions**: (`parameters`) => [`Ok`](Ok.md)
+> **terminateAllOtherSessions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Terminates all other sessions of the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95703
+dist/generated/types.d.ts:98472

@@ -6,7 +6,9 @@
 
 # Type Alias: unpinAllMessageThreadMessages()
 
-> **unpinAllMessageThreadMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **unpinAllMessageThreadMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes all pinned messages from a forum topic; requires can_pin_messages member right in the supergroup
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86273
+dist/generated/types.d.ts:88572

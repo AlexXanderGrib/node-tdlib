@@ -18,10 +18,10 @@ The General forum topic was hidden or unhidden
 
 ### topic\_info
 
-> **topic\_info**: [`forumTopicInfo`](forumTopicInfo-1.md)
+> **topic\_info**: [`forumTopicInfo`](forumTopicInfo.md)
 
 New information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40613
+dist/generated/types.d.ts:42007

@@ -14,7 +14,7 @@ Sets the text shown on a bot's profile page and sent together with the link when
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
@@ -32,4 +32,4 @@ New bot's short description on the specified language
 
 ## Defined in
 
-dist/generated/types.d.ts:95580
+dist/generated/types.d.ts:98349

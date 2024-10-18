@@ -6,7 +6,9 @@
 
 # Type Alias: replacePrimaryChatInviteLink()
 
-> **replacePrimaryChatInviteLink**: (`parameters`) => [`ChatInviteLink`](ChatInviteLink.md)
+> **replacePrimaryChatInviteLink**: (`parameters`) => [`ChatInviteLink`](ChatInviteLink-1.md)
+
+Replaces current primary invite link for a chat with a new primary invite link. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatInviteLink`](ChatInviteLink.md)
+[`ChatInviteLink`](ChatInviteLink-1.md)
 
-[ChatInviteLink](ChatInviteLink.md)
+[ChatInviteLink](ChatInviteLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89691
+dist/generated/types.d.ts:92066

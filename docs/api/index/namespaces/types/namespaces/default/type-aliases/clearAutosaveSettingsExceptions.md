@@ -6,7 +6,9 @@
 
 # Type Alias: clearAutosaveSettingsExceptions()
 
-> **clearAutosaveSettingsExceptions**: (`parameters`) => [`Ok`](Ok.md)
+> **clearAutosaveSettingsExceptions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Clears the list of all autosave settings exceptions. The method is guaranteed to work only after at least one call to getAutosaveSettings
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99193
+dist/generated/types.d.ts:101972

@@ -6,7 +6,9 @@
 
 # Type Alias: answerCustomQuery()
 
-> **answerCustomQuery**: (`parameters`) => [`Ok`](Ok.md)
+> **answerCustomQuery**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Answers a custom query; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101116
+dist/generated/types.d.ts:104037

@@ -18,4 +18,4 @@ A new member joined the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:39329
+dist/generated/types.d.ts:40699

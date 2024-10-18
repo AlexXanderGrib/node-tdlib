@@ -20,10 +20,10 @@ The link is a link to a video note message
 
 ### video\_note?
 
-> `readonly` `optional` **video\_note**: [`videoNote$Input`](videoNote$Input-1.md)
+> `readonly` `optional` **video\_note**: [`videoNote$Input`](videoNote$Input.md)
 
 The video note
 
 ## Defined in
 
-dist/generated/types.d.ts:21690
+dist/generated/types.d.ts:22440

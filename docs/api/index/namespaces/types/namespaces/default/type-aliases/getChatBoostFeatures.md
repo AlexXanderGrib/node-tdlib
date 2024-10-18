@@ -6,7 +6,9 @@
 
 # Type Alias: getChatBoostFeatures()
 
-> **getChatBoostFeatures**: (`parameters`) => [`ChatBoostFeatures`](ChatBoostFeatures.md)
+> **getChatBoostFeatures**: (`parameters`) => [`ChatBoostFeatures`](ChatBoostFeatures-1.md)
+
+Returns the list of features available for different chat boost levels; this is an offline request
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatBoostFeatures`](ChatBoostFeatures.md)
+[`ChatBoostFeatures`](ChatBoostFeatures-1.md)
 
-[ChatBoostFeatures](ChatBoostFeatures.md)
+[ChatBoostFeatures](ChatBoostFeatures-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88323
+dist/generated/types.d.ts:90698

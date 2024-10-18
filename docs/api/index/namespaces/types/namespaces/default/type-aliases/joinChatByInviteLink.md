@@ -6,7 +6,9 @@
 
 # Type Alias: joinChatByInviteLink()
 
-> **joinChatByInviteLink**: (`parameters`) => [`Chat`](Chat.md)
+> **joinChatByInviteLink**: (`parameters`) => [`Chat`](Chat-1.md)
+
+Uses an invite link to add the current user to the chat if possible. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chat`](Chat.md)
+[`Chat`](Chat-1.md)
 
-[Chat](Chat.md)
+[Chat](Chat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90215
+dist/generated/types.d.ts:92712

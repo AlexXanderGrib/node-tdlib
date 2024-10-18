@@ -36,4 +36,4 @@ The new message reply markup; pass null if none; for bots only
 
 ## Defined in
 
-dist/generated/types.d.ts:79258
+dist/generated/types.d.ts:81249

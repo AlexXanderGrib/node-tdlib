@@ -18,16 +18,16 @@ A document message (general file)
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md)
+> **caption**: [`formattedText`](formattedText.md)
 
 Document caption
 
 ### document
 
-> **document**: [`document`](document-1.md)
+> **document**: [`document`](document.md)
 
 The document description
 
 ## Defined in
 
-dist/generated/types.d.ts:25905
+dist/generated/types.d.ts:26665

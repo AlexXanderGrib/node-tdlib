@@ -20,7 +20,7 @@ Revokes invite link for a chat. Available for basic groups, supergroups, and cha
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -32,4 +32,4 @@ Invite link to be revoked
 
 ## Defined in
 
-dist/generated/types.d.ts:90045
+dist/generated/types.d.ts:92542

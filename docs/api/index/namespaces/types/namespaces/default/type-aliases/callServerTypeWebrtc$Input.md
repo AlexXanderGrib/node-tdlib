@@ -44,4 +44,4 @@ Username to be used for authentication
 
 ## Defined in
 
-dist/generated/types.d.ts:34695
+dist/generated/types.d.ts:36065

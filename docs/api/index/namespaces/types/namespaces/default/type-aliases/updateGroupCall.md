@@ -18,10 +18,10 @@ Information about a group call was updated
 
 ### group\_call
 
-> **group\_call**: [`groupCall`](groupCall-1.md)
+> **group\_call**: [`groupCall`](groupCall.md)
 
 New data about a group call
 
 ## Defined in
 
-dist/generated/types.d.ts:55595
+dist/generated/types.d.ts:57211

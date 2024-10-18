@@ -6,7 +6,9 @@
 
 # Type Alias: getSavedMessagesTopicMessageByDate()
 
-> **getSavedMessagesTopicMessageByDate**: (`parameters`) => [`Message`](Message.md)
+> **getSavedMessagesTopicMessageByDate**: (`parameters`) => [`Message`](Message-1.md)
+
+Returns the last message sent in a Saved Messages topic no later than the specified date
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75857
+dist/generated/types.d.ts:77883

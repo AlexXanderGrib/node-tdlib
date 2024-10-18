@@ -6,7 +6,9 @@
 
 # Type Alias: testGetDifference()
 
-> **testGetDifference**: (`parameters`) => [`Ok`](Ok.md)
+> **testGetDifference**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Forces an updates.getDifference call to the Telegram servers; for testing only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:102267
+dist/generated/types.d.ts:105188

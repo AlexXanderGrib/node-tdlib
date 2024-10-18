@@ -18,4 +18,4 @@ The maximum number of favorite stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:41311
+dist/generated/types.d.ts:42705

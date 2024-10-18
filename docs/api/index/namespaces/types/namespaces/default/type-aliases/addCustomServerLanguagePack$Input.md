@@ -24,4 +24,4 @@ Identifier of a language pack to be added
 
 ## Defined in
 
-dist/generated/types.d.ts:97441
+dist/generated/types.d.ts:100220

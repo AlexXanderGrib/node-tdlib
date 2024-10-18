@@ -18,4 +18,4 @@ Autosave settings applied to all private chats without chat-specific settings
 
 ## Defined in
 
-dist/generated/types.d.ts:49789
+dist/generated/types.d.ts:51373

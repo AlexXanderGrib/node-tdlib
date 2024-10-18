@@ -20,7 +20,7 @@ A supergroup has been created from a basic group
 
 ### basic\_group\_id?
 
-> `readonly` `optional` **basic\_group\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **basic\_group\_id**: [`int53`](int53.md)
 
 The identifier of the original basic group
 
@@ -32,4 +32,4 @@ Title of the newly created supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:27103
+dist/generated/types.d.ts:27863

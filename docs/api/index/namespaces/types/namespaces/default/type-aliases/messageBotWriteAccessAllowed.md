@@ -24,4 +24,4 @@ The reason why the bot was allowed to write messages
 
 ## Defined in
 
-dist/generated/types.d.ts:28279
+dist/generated/types.d.ts:29153

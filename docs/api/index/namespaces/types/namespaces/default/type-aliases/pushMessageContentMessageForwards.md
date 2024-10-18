@@ -18,10 +18,10 @@ A forwarded messages
 
 ### total\_count
 
-> **total\_count**: [`int32`](int32-1.md)
+> **total\_count**: [`int32`](int32.md)
 
 Number of forwarded messages
 
 ## Defined in
 
-dist/generated/types.d.ts:45143
+dist/generated/types.d.ts:46669

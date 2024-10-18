@@ -20,10 +20,10 @@ A message with information about an ended video chat
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Call duration, in seconds
 
 ## Defined in
 
-dist/generated/types.d.ts:26820
+dist/generated/types.d.ts:27580

@@ -6,7 +6,9 @@
 
 # Type Alias: getStorageStatisticsFast()
 
-> **getStorageStatisticsFast**: (`parameters`) => [`StorageStatisticsFast`](StorageStatisticsFast.md)
+> **getStorageStatisticsFast**: (`parameters`) => [`StorageStatisticsFast`](StorageStatisticsFast-1.md)
+
+Quickly returns approximate storage usage statistics. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StorageStatisticsFast`](StorageStatisticsFast.md)
+[`StorageStatisticsFast`](StorageStatisticsFast-1.md)
 
-[StorageStatisticsFast](StorageStatisticsFast.md)
+[StorageStatisticsFast](StorageStatisticsFast-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98834
+dist/generated/types.d.ts:101613

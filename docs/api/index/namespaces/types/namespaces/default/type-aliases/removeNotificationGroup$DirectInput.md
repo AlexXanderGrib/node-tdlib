@@ -14,16 +14,16 @@ Removes a group of active notifications. Needs to be called only if the notifica
 
 ### max\_notification\_id?
 
-> `readonly` `optional` **max\_notification\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **max\_notification\_id**: [`int32`](int32.md)
 
 The maximum identifier of removed notifications
 
 ### notification\_group\_id?
 
-> `readonly` `optional` **notification\_group\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **notification\_group\_id**: [`int32`](int32.md)
 
 Notification group identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:77636
+dist/generated/types.d.ts:79645

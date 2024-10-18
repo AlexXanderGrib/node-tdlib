@@ -20,4 +20,4 @@ The file is a file from Secure storage used for storing Telegram Passport files
 
 ## Defined in
 
-dist/generated/types.d.ts:49081
+dist/generated/types.d.ts:50665

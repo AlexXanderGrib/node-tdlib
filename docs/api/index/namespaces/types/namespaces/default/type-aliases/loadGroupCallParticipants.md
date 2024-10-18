@@ -6,7 +6,9 @@
 
 # Type Alias: loadGroupCallParticipants()
 
-> **loadGroupCallParticipants**: (`parameters`) => [`Ok`](Ok.md)
+> **loadGroupCallParticipants**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Loads more participants of a group call. The loaded participants will be received through updates. Use the field groupCall.loaded_all_participants to check whether all participants have already been loaded
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91753
+dist/generated/types.d.ts:94250

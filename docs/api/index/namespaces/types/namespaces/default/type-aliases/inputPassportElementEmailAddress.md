@@ -24,4 +24,4 @@ The email address to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24941
+dist/generated/types.d.ts:25701

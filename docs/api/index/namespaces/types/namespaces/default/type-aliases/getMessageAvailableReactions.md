@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageAvailableReactions()
 
-> **getMessageAvailableReactions**: (`parameters`) => [`AvailableReactions`](AvailableReactions.md)
+> **getMessageAvailableReactions**: (`parameters`) => [`AvailableReactions`](AvailableReactions-1.md)
+
+Returns reactions, which can be added to a message. The list can change after updateActiveEmojiReactions, updateChatAvailableReactions for the chat, or updateMessageInteractionInfo for the message
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AvailableReactions`](AvailableReactions.md)
+[`AvailableReactions`](AvailableReactions-1.md)
 
-[AvailableReactions](AvailableReactions.md)
+[AvailableReactions](AvailableReactions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81241
+dist/generated/types.d.ts:83290

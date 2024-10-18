@@ -20,4 +20,4 @@ A Telegram Passport element containing the user's identity card
 
 ## Defined in
 
-dist/generated/types.d.ts:23835
+dist/generated/types.d.ts:24595

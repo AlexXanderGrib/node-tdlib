@@ -20,7 +20,7 @@ Represents an animation file
 
 ### animation?
 
-> `readonly` `optional` **animation**: [`animation$Input`](animation$Input-1.md)
+> `readonly` `optional` **animation**: [`animation$Input`](animation$Input.md)
 
 Animation file
 
@@ -38,4 +38,4 @@ Animation title
 
 ## Defined in
 
-dist/generated/types.d.ts:38540
+dist/generated/types.d.ts:39910

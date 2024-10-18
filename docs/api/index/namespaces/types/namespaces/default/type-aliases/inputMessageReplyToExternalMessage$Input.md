@@ -20,22 +20,22 @@ Describes a message to be replied that is from a different chat or a forum topic
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The identifier of the chat to which the message to be replied belongs
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-The identifier of the message to be replied in the specified chat. A message can be replied in another chat or topic only if message.can_be_replied_in_another_chat
+The identifier of the message to be replied in the specified chat. A message can be replied in another chat or forum topic only if messageProperties.can_be_replied_in_another_chat
 
 ### quote?
 
-> `readonly` `optional` **quote**: [`inputTextQuote$Input`](inputTextQuote$Input-1.md) \| `null`
+> `readonly` `optional` **quote**: [`inputTextQuote$Input`](inputTextQuote$Input.md) \| `null`
 
 Quote from the message to be replied; pass null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:13312
+dist/generated/types.d.ts:14014

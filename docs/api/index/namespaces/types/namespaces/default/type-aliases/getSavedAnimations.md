@@ -6,7 +6,9 @@
 
 # Type Alias: getSavedAnimations()
 
-> **getSavedAnimations**: (`parameters`) => [`Animations`](Animations.md)
+> **getSavedAnimations**: (`parameters`) => [`Animations`](Animations-1.md)
+
+Returns saved animations
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Animations`](Animations.md)
+[`Animations`](Animations-1.md)
 
-[Animations](Animations.md)
+[Animations](Animations-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93623
+dist/generated/types.d.ts:96120

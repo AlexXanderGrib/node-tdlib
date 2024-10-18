@@ -6,7 +6,9 @@
 
 # Type Alias: getStoryNotificationSettingsExceptions()
 
-> **getStoryNotificationSettingsExceptions**: (`parameters`) => [`Chats`](Chats.md)
+> **getStoryNotificationSettingsExceptions**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns the list of chats with non-default notification settings for stories
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87530
+dist/generated/types.d.ts:89905

@@ -6,7 +6,9 @@
 
 # Type Alias: addLocalMessage()
 
-> **addLocalMessage**: (`parameters`) => [`Message`](Message.md)
+> **addLocalMessage**: (`parameters`) => [`Message`](Message-1.md)
+
+Adds a local message to a chat. The message is persistent across application restarts only if the message database is used. Returns the added message
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78620
+dist/generated/types.d.ts:80629

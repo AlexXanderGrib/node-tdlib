@@ -18,7 +18,7 @@ Creates a video chat (a group call bound to a chat). Available only for basic gr
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of a chat in which the video chat will be created
 
@@ -30,7 +30,7 @@ Pass true to create an RTMP stream instead of an ordinary video chat; requires o
 
 ### start\_date?
 
-> `readonly` `optional` **start\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **start\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the group call is supposed to be started by an administrator; 0 to start the video chat immediately. The date must be at least 10 seconds and at most 8 days in the future
 
@@ -42,4 +42,4 @@ Group call title; if empty, chat title will be used
 
 ## Defined in
 
-dist/generated/types.d.ts:90775
+dist/generated/types.d.ts:93272

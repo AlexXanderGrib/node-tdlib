@@ -18,16 +18,16 @@ Changes the order of chat folders
 
 ### chat\_folder\_ids?
 
-> `readonly` `optional` **chat\_folder\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **chat\_folder\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 Identifiers of chat folders in the new correct order
 
 ### main\_chat\_list\_position?
 
-> `readonly` `optional` **main\_chat\_list\_position**: [`int32`](int32-1.md)
+> `readonly` `optional` **main\_chat\_list\_position**: [`int32`](int32.md)
 
 Position of the main chat list among chat folders, 0-based. Can be non-zero only for Premium users
 
 ## Defined in
 
-dist/generated/types.d.ts:84671
+dist/generated/types.d.ts:86970

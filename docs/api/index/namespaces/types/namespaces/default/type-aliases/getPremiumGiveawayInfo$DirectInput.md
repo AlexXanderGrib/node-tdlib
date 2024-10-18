@@ -14,16 +14,16 @@ Returns information about a Telegram Premium giveaway
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the channel chat which started the giveaway
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the giveaway or a giveaway winners message in the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:100705
+dist/generated/types.d.ts:103484

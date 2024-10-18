@@ -6,7 +6,9 @@
 
 # Type Alias: removeStickerFromSet()
 
-> **removeStickerFromSet**: (`parameters`) => [`Ok`](Ok.md)
+> **removeStickerFromSet**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100198
+dist/generated/types.d.ts:102977

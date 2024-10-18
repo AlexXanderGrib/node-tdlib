@@ -18,16 +18,16 @@ A chat invite link was edited
 
 ### new\_invite\_link
 
-> **new\_invite\_link**: [`chatInviteLink`](chatInviteLink-1.md)
+> **new\_invite\_link**: [`chatInviteLink`](chatInviteLink.md)
 
 New information about the invite link
 
 ### old\_invite\_link
 
-> **old\_invite\_link**: [`chatInviteLink`](chatInviteLink-1.md)
+> **old\_invite\_link**: [`chatInviteLink`](chatInviteLink.md)
 
 Previous information about the invite link
 
 ## Defined in
 
-dist/generated/types.d.ts:40285
+dist/generated/types.d.ts:41679

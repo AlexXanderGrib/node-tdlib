@@ -24,7 +24,7 @@ Currency for the price of the product
 
 ### invoice\_payload
 
-> **invoice\_payload**: [`bytes`](bytes-1.md)
+> **invoice\_payload**: [`bytes`](bytes.md)
 
 Invoice payload; only for bots
 
@@ -32,7 +32,7 @@ Invoice payload; only for bots
 
 > **owner\_id**: [`MessageSender`](MessageSender.md)
 
-Identifier of the previous owner of the Telegram stars that refunds them
+Identifier of the previous owner of the Telegram Stars that refunds them
 
 ### provider\_payment\_charge\_id
 
@@ -48,10 +48,10 @@ Telegram payment identifier
 
 ### total\_amount
 
-> **total\_amount**: [`int53`](int53-1.md)
+> **total\_amount**: [`int53`](int53.md)
 
 Total price for the product, in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:27689
+dist/generated/types.d.ts:28449

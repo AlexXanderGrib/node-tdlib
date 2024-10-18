@@ -20,10 +20,10 @@ A photo story
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md)
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md)
 
 The photo
 
 ## Defined in
 
-dist/generated/types.d.ts:32468
+dist/generated/types.d.ts:33736

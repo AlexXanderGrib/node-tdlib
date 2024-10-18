@@ -20,7 +20,7 @@ The user must choose an option to report the message and repeat request with the
 
 ### options?
 
-> `readonly` `optional` **options**: [`vector$Input`](vector$Input.md)\<[`reportChatSponsoredMessageOption$Input`](reportChatSponsoredMessageOption$Input-1.md)\>
+> `readonly` `optional` **options**: [`vector$Input`](vector$Input.md)\<[`reportChatSponsoredMessageOption$Input`](reportChatSponsoredMessageOption$Input.md)\>
 
 List of available options
 
@@ -32,4 +32,4 @@ Title for the option choice
 
 ## Defined in
 
-dist/generated/types.d.ts:14623
+dist/generated/types.d.ts:15215

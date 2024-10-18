@@ -6,7 +6,9 @@
 
 # Type Alias: getPremiumFeatures()
 
-> **getPremiumFeatures**: (`parameters`) => [`PremiumFeatures`](PremiumFeatures.md)
+> **getPremiumFeatures**: (`parameters`) => [`PremiumFeatures`](PremiumFeatures-1.md)
+
+Returns information about features, available to Premium users
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PremiumFeatures`](PremiumFeatures.md)
+[`PremiumFeatures`](PremiumFeatures-1.md)
 
-[PremiumFeatures](PremiumFeatures.md)
+[PremiumFeatures](PremiumFeatures-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100484
+dist/generated/types.d.ts:103263

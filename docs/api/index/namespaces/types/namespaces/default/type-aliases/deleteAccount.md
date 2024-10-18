@@ -6,7 +6,11 @@
 
 # Type Alias: deleteAccount()
 
-> **deleteAccount**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteAccount**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes the account of the current user, deleting all information associated with the user from the server. The phone number of the account can be used to create a new account.
+
+- Can be called before authorization when the current authorization state is authorizationStateWaitPassword
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98074
+dist/generated/types.d.ts:100853

@@ -24,10 +24,10 @@ Author of the document
 
 ### document
 
-> **document**: [`document`](document-1.md)
+> **document**: [`document`](document.md)
 
 The document description
 
 ## Defined in
 
-dist/generated/types.d.ts:21139
+dist/generated/types.d.ts:21775

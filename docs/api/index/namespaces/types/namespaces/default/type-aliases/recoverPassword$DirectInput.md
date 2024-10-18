@@ -32,4 +32,4 @@ Recovery code to check
 
 ## Defined in
 
-dist/generated/types.d.ts:74215
+dist/generated/types.d.ts:76203

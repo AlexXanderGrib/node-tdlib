@@ -6,7 +6,9 @@
 
 # Type Alias: setBotProfilePhoto()
 
-> **setBotProfilePhoto**: (`parameters`) => [`Ok`](Ok.md)
+> **setBotProfilePhoto**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes a profile photo for a bot
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95383
+dist/generated/types.d.ts:98152

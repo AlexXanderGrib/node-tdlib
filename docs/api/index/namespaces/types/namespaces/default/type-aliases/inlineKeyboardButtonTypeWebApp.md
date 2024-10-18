@@ -24,4 +24,4 @@ An HTTP URL to pass to openWebApp
 
 ## Defined in
 
-dist/generated/types.d.ts:17555
+dist/generated/types.d.ts:18147

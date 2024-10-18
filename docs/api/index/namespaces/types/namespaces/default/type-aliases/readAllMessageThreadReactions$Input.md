@@ -18,16 +18,16 @@ Marks all reactions in a forum topic as read
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 Message thread identifier in which reactions are marked as read
 
 ## Defined in
 
-dist/generated/types.d.ts:84045
+dist/generated/types.d.ts:86344

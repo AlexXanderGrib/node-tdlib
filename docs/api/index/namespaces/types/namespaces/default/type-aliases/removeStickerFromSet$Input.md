@@ -24,4 +24,4 @@ Sticker to remove from the set
 
 ## Defined in
 
-dist/generated/types.d.ts:100174
+dist/generated/types.d.ts:102953

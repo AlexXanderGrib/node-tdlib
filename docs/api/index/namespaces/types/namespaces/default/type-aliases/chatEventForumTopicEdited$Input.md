@@ -20,16 +20,16 @@ A forum topic was edited
 
 ### new\_topic\_info?
 
-> `readonly` `optional` **new\_topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input-1.md)
+> `readonly` `optional` **new\_topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input.md)
 
 New information about the topic
 
 ### old\_topic\_info?
 
-> `readonly` `optional` **old\_topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input-1.md)
+> `readonly` `optional` **old\_topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input.md)
 
 Old information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40573
+dist/generated/types.d.ts:41967

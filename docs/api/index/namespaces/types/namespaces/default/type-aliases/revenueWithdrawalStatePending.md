@@ -18,4 +18,4 @@ Withdrawal is pending
 
 ## Defined in
 
-dist/generated/types.d.ts:51979
+dist/generated/types.d.ts:53595

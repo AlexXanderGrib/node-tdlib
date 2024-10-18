@@ -20,28 +20,28 @@ A user sent a join request to a chat; for bots only
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### invite\_link?
 
-> `readonly` `optional` **invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input-1.md) \| `null`
+> `readonly` `optional` **invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input.md) \| `null`
 
 The invite link, which was used to send join request; may be null
 
 ### request?
 
-> `readonly` `optional` **request**: [`chatJoinRequest$Input`](chatJoinRequest$Input-1.md)
+> `readonly` `optional` **request**: [`chatJoinRequest$Input`](chatJoinRequest$Input.md)
 
 Join request
 
 ### user\_chat\_id?
 
-> `readonly` `optional` **user\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the private chat with the user
 
 ## Defined in
 
-dist/generated/types.d.ts:57993
+dist/generated/types.d.ts:59633

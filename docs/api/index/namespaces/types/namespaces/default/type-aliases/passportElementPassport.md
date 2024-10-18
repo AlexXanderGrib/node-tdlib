@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's passport
 
 ### passport
 
-> **passport**: [`identityDocument`](identityDocument-1.md)
+> **passport**: [`identityDocument`](identityDocument.md)
 
 Passport
 
 ## Defined in
 
-dist/generated/types.d.ts:24365
+dist/generated/types.d.ts:25125

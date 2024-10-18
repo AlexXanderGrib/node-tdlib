@@ -26,4 +26,4 @@ The new value of the optional last name for the current user; 0-64 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:94006
+dist/generated/types.d.ts:96503

@@ -20,16 +20,16 @@ An invoice from a message of the type messageInvoice or paid media purchase from
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the message
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:23479
+dist/generated/types.d.ts:24239

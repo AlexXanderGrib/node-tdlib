@@ -18,13 +18,13 @@ Searches for public stories by the given address location. For optimal performan
 
 ### address?
 
-> `readonly` `optional` **address**: [`locationAddress$Input`](locationAddress$Input-1.md)
+> `readonly` `optional` **address**: [`locationAddress$Input`](locationAddress$Input.md)
 
 Address of the location
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of stories to be returned; up to 100. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
 
@@ -36,4 +36,4 @@ Offset of the first entry to return as received from the previous request; use e
 
 ## Defined in
 
-dist/generated/types.d.ts:76861
+dist/generated/types.d.ts:78887

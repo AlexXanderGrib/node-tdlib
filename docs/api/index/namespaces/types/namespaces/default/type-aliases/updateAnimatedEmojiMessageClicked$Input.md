@@ -20,22 +20,22 @@ Some animated emoji message was clicked and a big animated sticker must be playe
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ### sticker?
 
-> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input-1.md)
+> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input.md)
 
 The animated sticker to be played
 
 ## Defined in
 
-dist/generated/types.d.ts:56936
+dist/generated/types.d.ts:58576

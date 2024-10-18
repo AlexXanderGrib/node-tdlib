@@ -44,4 +44,4 @@ True, if private chats with ordinary users are allowed
 
 ## Defined in
 
-dist/generated/types.d.ts:47291
+dist/generated/types.d.ts:48817

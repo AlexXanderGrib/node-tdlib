@@ -18,10 +18,10 @@ The link is a link to a voice note message
 
 ### voice\_note
 
-> **voice\_note**: [`voiceNote`](voiceNote-1.md)
+> **voice\_note**: [`voiceNote`](voiceNote.md)
 
 The voice note
 
 ## Defined in
 
-dist/generated/types.d.ts:21701
+dist/generated/types.d.ts:22451

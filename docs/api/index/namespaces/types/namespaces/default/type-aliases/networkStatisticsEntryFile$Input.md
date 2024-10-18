@@ -32,16 +32,16 @@ Type of the network the data was sent through. Call setNetworkType to maintain t
 
 ### received\_bytes?
 
-> `readonly` `optional` **received\_bytes**: [`int53`](int53-1.md)
+> `readonly` `optional` **received\_bytes**: [`int53`](int53.md)
 
 Total number of bytes received
 
 ### sent\_bytes?
 
-> `readonly` `optional` **sent\_bytes**: [`int53`](int53-1.md)
+> `readonly` `optional` **sent\_bytes**: [`int53`](int53.md)
 
 Total number of bytes sent
 
 ## Defined in
 
-dist/generated/types.d.ts:49527
+dist/generated/types.d.ts:51111

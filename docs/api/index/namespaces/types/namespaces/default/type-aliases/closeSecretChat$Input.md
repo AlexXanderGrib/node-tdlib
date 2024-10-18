@@ -18,10 +18,10 @@ Closes a secret chat, effectively transferring its state to secretChatStateClose
 
 ### secret\_chat\_id?
 
-> `readonly` `optional` **secret\_chat\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **secret\_chat\_id**: [`int32`](int32.md)
 
 Secret chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:96639
+dist/generated/types.d.ts:99418

@@ -38,10 +38,10 @@ Title of the video
 
 ### video?
 
-> `readonly` `optional` **video**: [`video$Input`](video$Input-1.md)
+> `readonly` `optional` **video**: [`video$Input`](video$Input.md)
 
 Video
 
 ## Defined in
 
-dist/generated/types.d.ts:38765
+dist/generated/types.d.ts:40135

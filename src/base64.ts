@@ -11,6 +11,7 @@ export function encode(bytes: ArrayLike<number>): string {
   let result = "";
   let index;
 
+  /* eslint-disable security/detect-object-injection */
   for (index = 2; index < bytes.length; index += 3) {
     result += alphabet[bytes[index - 2] >> 2];
     result += alphabet[((bytes[index - 2] & 0x03) << 4) | (bytes[index - 1] >> 4)];

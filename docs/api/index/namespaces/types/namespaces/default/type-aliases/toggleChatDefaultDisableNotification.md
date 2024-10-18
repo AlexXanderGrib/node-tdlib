@@ -6,7 +6,9 @@
 
 # Type Alias: toggleChatDefaultDisableNotification()
 
-> **toggleChatDefaultDisableNotification**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleChatDefaultDisableNotification**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the value of the default disable_notification parameter, used when a message is sent to a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85879
+dist/generated/types.d.ts:88178

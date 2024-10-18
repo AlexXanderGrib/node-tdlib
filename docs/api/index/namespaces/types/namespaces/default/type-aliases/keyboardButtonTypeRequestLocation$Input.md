@@ -20,4 +20,4 @@ A button that sends the user's location when pressed; available only in private 
 
 ## Defined in
 
-dist/generated/types.d.ts:17141
+dist/generated/types.d.ts:17733

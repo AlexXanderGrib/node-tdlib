@@ -18,7 +18,7 @@ A newly created basic group
 
 ### member\_user\_ids
 
-> **member\_user\_ids**: [`vector`](vector.md)\<[`int53`](int53-1.md)\>
+> **member\_user\_ids**: [`vector`](vector.md)\<[`int53`](int53.md)\>
 
 User identifiers of members in the basic group
 
@@ -30,4 +30,4 @@ Title of the basic group
 
 ## Defined in
 
-dist/generated/types.d.ts:26865
+dist/generated/types.d.ts:27625

@@ -20,16 +20,16 @@ A chat invite link was edited
 
 ### new\_invite\_link?
 
-> `readonly` `optional` **new\_invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input-1.md)
+> `readonly` `optional` **new\_invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input.md)
 
 New information about the invite link
 
 ### old\_invite\_link?
 
-> `readonly` `optional` **old\_invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input-1.md)
+> `readonly` `optional` **old\_invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input.md)
 
 Previous information about the invite link
 
 ## Defined in
 
-dist/generated/types.d.ts:40303
+dist/generated/types.d.ts:41697

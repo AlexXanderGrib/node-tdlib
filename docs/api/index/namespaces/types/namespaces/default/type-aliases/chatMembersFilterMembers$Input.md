@@ -20,4 +20,4 @@ Returns all chat members, including restricted chat members
 
 ## Defined in
 
-dist/generated/types.d.ts:10223
+dist/generated/types.d.ts:10723

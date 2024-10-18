@@ -18,7 +18,7 @@ Returns information about an invite link. Requires administrator privileges and 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ Invite link to get
 
 ## Defined in
 
-dist/generated/types.d.ts:89841
+dist/generated/types.d.ts:92328

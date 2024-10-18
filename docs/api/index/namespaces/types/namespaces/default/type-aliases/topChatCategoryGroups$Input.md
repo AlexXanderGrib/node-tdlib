@@ -20,4 +20,4 @@ A category containing frequently used basic groups and supergroups
 
 ## Defined in
 
-dist/generated/types.d.ts:50093
+dist/generated/types.d.ts:51677

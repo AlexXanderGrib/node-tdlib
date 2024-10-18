@@ -6,7 +6,9 @@
 
 # Type Alias: createNewStickerSet()
 
-> **createNewStickerSet**: (`parameters`) => [`StickerSet`](StickerSet.md)
+> **createNewStickerSet**: (`parameters`) => [`StickerSet`](StickerSet-1.md)
+
+Creates a new sticker set. Returns the newly created sticker set
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StickerSet`](StickerSet.md)
+[`StickerSet`](StickerSet-1.md)
 
-[StickerSet](StickerSet.md)
+[StickerSet](StickerSet-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99864
+dist/generated/types.d.ts:102643

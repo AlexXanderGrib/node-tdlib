@@ -20,16 +20,16 @@ A file was removed from the file download list. This update is sent only after f
 
 ### counts?
 
-> `readonly` `optional` **counts**: [`downloadedFileCounts$Input`](downloadedFileCounts$Input-1.md)
+> `readonly` `optional` **counts**: [`downloadedFileCounts$Input`](downloadedFileCounts$Input.md)
 
 New number of being downloaded and recently downloaded files found
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 File identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:55503
+dist/generated/types.d.ts:57119

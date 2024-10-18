@@ -18,7 +18,7 @@ An animation message (GIF-style).
 
 ### added\_sticker\_file\_ids
 
-> **added\_sticker\_file\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **added\_sticker\_file\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 File identifiers of the stickers added to the animation, if applicable
 
@@ -30,13 +30,13 @@ Animation file to be sent
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md) \| `null`
+> **caption**: [`formattedText`](formattedText.md) \| `null`
 
 Animation caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Duration of the animation, in seconds
 
@@ -48,7 +48,7 @@ True, if the animation preview must be covered by a spoiler animation; not suppo
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
 Height of the animation; may be replaced by the server
 
@@ -60,16 +60,16 @@ True, if the caption must be shown above the animation; otherwise, the caption m
 
 ### thumbnail
 
-> **thumbnail**: [`inputThumbnail`](inputThumbnail-1.md) \| `null`
+> **thumbnail**: [`inputThumbnail`](inputThumbnail.md) \| `null`
 
 Animation thumbnail; pass null to skip thumbnail uploading
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
 Width of the animation; may be replaced by the server
 
 ## Defined in
 
-dist/generated/types.d.ts:29273
+dist/generated/types.d.ts:30147

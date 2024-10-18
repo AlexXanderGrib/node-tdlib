@@ -32,4 +32,4 @@ Name of the animation search provider
 
 ## Defined in
 
-dist/generated/types.d.ts:56975
+dist/generated/types.d.ts:58615

@@ -66,6 +66,7 @@ export class TDError extends Error implements error {
    */
   toJSON() {
     return {
+      // eslint-disable-next-line security/detect-object-injection
       [typename]: this[typename],
       name: this.name,
       message: this.message,
@@ -84,8 +85,8 @@ export class TDError extends Error implements error {
  */
 export class Client {
   private readonly _client: TDLibClient;
-  private readonly _requests: Map<number, PromiseWithResolvers<any>> = new Map();
-  private readonly _updates: EventBus<Update> = new EventBus();
+  private readonly _requests = new Map<number, PromiseWithResolvers<any>>();
+  private readonly _updates = new EventBus<Update>();
   private readonly _adapter: TDLib;
   private _state = ClientState.PAUSED;
 
@@ -216,14 +217,17 @@ export class Client {
       new TDError("Returned not an object", { method, parameters })
     );
 
+    /* eslint-disable security/detect-object-injection */
     if (data[typename] === "error") {
       const error = data as error;
       throw new TDError(error.message, { code: error.code, method, parameters });
     }
 
     if (tag in data && data[tag]) {
+      // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
       delete data[tag];
     }
+    /* eslint-enable security/detect-object-injection */
 
     return data as ReturnType<$SyncApi[T]>;
   }
@@ -272,10 +276,13 @@ export class Client {
         continue;
       }
 
+      /* eslint-disable security/detect-object-injection */
+
       const extra = data?.[tag];
 
       if (extra) {
         const async = this._requests.get(extra);
+        // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
         delete data[tag];
 
         if (data[typename] === "error") {
@@ -293,6 +300,8 @@ export class Client {
         this._updates.emit(data);
       }
     }
+
+    /* eslint-enable security/detect-object-injection */
   }
 
   /**
@@ -390,7 +399,7 @@ function assignTemporary<T extends {}, X extends Record<string, unknown>, R = vo
   const result = callback(merged);
 
   for (const key of Object.keys(data)) {
-    // eslint-disable-next-line security/detect-object-injection
+    // eslint-disable-next-line security/detect-object-injection, @typescript-eslint/no-dynamic-delete
     delete (object as any)[key];
   }
 

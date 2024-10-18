@@ -18,4 +18,4 @@ Topic containing messages forwarded from a user with hidden privacy
 
 ## Defined in
 
-dist/generated/types.d.ts:18157
+dist/generated/types.d.ts:18783

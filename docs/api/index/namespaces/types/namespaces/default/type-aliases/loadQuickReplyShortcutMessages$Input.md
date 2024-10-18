@@ -18,10 +18,10 @@ Loads quick reply messages that can be sent by a given quick reply shortcut. The
 
 ### shortcut\_id?
 
-> `readonly` `optional` **shortcut\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **shortcut\_id**: [`int32`](int32.md)
 
 Unique identifier of the quick reply shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:80261
+dist/generated/types.d.ts:82310

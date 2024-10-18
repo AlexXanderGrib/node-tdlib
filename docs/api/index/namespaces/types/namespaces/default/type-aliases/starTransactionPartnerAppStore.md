@@ -18,4 +18,4 @@ The transaction is a transaction with App Store
 
 ## Defined in
 
-dist/generated/types.d.ts:8387
+dist/generated/types.d.ts:8775

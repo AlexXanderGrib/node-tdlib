@@ -24,4 +24,4 @@ The parameter for the bot start message
 
 ## Defined in
 
-dist/generated/types.d.ts:38835
+dist/generated/types.d.ts:40205

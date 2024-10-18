@@ -8,7 +8,7 @@
 
 > **internalLinkTypeDefaultMessageAutoDeleteTimerSettings**: `object`
 
-The link is a link to the default message auto-delete timer settings section of the app settings
+The link is a link to the default message auto-delete timer settings section of the application settings
 
 ## Type declaration
 
@@ -18,4 +18,4 @@ The link is a link to the default message auto-delete timer settings section of 
 
 ## Defined in
 
-dist/generated/types.d.ts:47765
+dist/generated/types.d.ts:49325

@@ -18,4 +18,4 @@ A rule to restrict all users from doing something
 
 ## Defined in
 
-dist/generated/types.d.ts:46069
+dist/generated/types.d.ts:47595

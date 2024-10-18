@@ -18,16 +18,16 @@ The chat background was changed
 
 ### background
 
-> **background**: [`chatBackground`](chatBackground-1.md) \| `null`
+> **background**: [`chatBackground`](chatBackground.md) \| `null`
 
 The new chat background; may be null if background was reset to default
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:53955
+dist/generated/types.d.ts:55571

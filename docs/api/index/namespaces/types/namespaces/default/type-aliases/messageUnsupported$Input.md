@@ -20,4 +20,4 @@ A message content that is not supported in the current TDLib version
 
 ## Defined in
 
-dist/generated/types.d.ts:28471
+dist/generated/types.d.ts:29345

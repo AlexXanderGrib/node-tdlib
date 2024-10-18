@@ -18,16 +18,16 @@ Returns a link preview by the text of a message. Do not call this function too o
 
 ### link\_preview\_options?
 
-> `readonly` `optional` **link\_preview\_options**: [`linkPreviewOptions$Input`](linkPreviewOptions$Input-1.md) \| `null`
+> `readonly` `optional` **link\_preview\_options**: [`linkPreviewOptions$Input`](linkPreviewOptions$Input.md) \| `null`
 
 Options to be used for generation of the link preview; pass null to use default link preview options
 
 ### text?
 
-> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input.md)
 
 Message text with formatting
 
 ## Defined in
 
-dist/generated/types.d.ts:93772
+dist/generated/types.d.ts:96269

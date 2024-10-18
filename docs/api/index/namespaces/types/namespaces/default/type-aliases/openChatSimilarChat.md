@@ -6,7 +6,9 @@
 
 # Type Alias: openChatSimilarChat()
 
-> **openChatSimilarChat**: (`parameters`) => [`Ok`](Ok.md)
+> **openChatSimilarChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75363
+dist/generated/types.d.ts:77389

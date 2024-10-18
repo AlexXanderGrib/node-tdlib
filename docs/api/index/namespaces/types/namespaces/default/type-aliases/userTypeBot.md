@@ -16,6 +16,12 @@ A bot (see https://core.telegram.org/bots)
 
 > **\_**: `"userTypeBot"`
 
+### active\_user\_count
+
+> **active\_user\_count**: [`int32`](int32.md)
+
+The number of recently active users of the bot
+
 ### can\_be\_added\_to\_attachment\_menu
 
 > **can\_be\_added\_to\_attachment\_menu**: [`Bool`](Bool.md)
@@ -46,6 +52,12 @@ True, if the bot can be invited to basic group and supergroup chats
 
 True, if the bot can read all messages in basic group or supergroup chats and not just those addressed to the bot. In private and channel chats a bot can always read all messages
 
+### has\_main\_web\_app
+
+> **has\_main\_web\_app**: [`Bool`](Bool.md)
+
+True, if the bot has the main Web App
+
 ### inline\_query\_placeholder
 
 > **inline\_query\_placeholder**: `string`
@@ -66,4 +78,4 @@ True, if the location of the user is expected to be sent with every inline query
 
 ## Defined in
 
-dist/generated/types.d.ts:6181
+dist/generated/types.d.ts:6227

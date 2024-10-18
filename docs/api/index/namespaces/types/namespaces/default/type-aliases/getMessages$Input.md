@@ -18,16 +18,16 @@ Returns information about messages. If a message is not found, returns null on t
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat the messages belong to
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the messages to get
 
 ## Defined in
 
-dist/generated/types.d.ts:74774
+dist/generated/types.d.ts:76762

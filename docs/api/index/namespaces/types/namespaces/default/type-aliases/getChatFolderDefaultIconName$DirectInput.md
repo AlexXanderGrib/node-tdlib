@@ -14,10 +14,10 @@ Returns default icon name for a folder. Can be called synchronously
 
 ### folder?
 
-> `readonly` `optional` **folder**: [`chatFolder$Input`](chatFolder$Input-1.md)
+> `readonly` `optional` **folder**: [`chatFolder$Input`](chatFolder$Input.md)
 
 Chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:84765
+dist/generated/types.d.ts:87064

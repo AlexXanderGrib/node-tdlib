@@ -32,10 +32,10 @@ Localization target to which the language pack belongs
 
 ### strings?
 
-> `readonly` `optional` **strings**: [`vector$Input`](vector$Input.md)\<[`languagePackString$Input`](languagePackString$Input-1.md)\>
+> `readonly` `optional` **strings**: [`vector$Input`](vector$Input.md)\<[`languagePackString$Input`](languagePackString$Input.md)\>
 
 List of changed language pack strings; empty if all strings have changed
 
 ## Defined in
 
-dist/generated/types.d.ts:56452
+dist/generated/types.d.ts:58068

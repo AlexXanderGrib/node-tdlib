@@ -30,4 +30,4 @@ Telegram Passport element type
 
 ## Defined in
 
-dist/generated/types.d.ts:99225
+dist/generated/types.d.ts:102004

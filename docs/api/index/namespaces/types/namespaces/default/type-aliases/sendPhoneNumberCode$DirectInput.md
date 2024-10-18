@@ -20,7 +20,7 @@ The phone number, in international format
 
 ### settings?
 
-> `readonly` `optional` **settings**: [`phoneNumberAuthenticationSettings$Input`](phoneNumberAuthenticationSettings$Input-1.md) \| `null`
+> `readonly` `optional` **settings**: [`phoneNumberAuthenticationSettings$Input`](phoneNumberAuthenticationSettings$Input.md) \| `null`
 
 Settings for the authentication of the user's phone number; pass null to use default settings
 
@@ -32,4 +32,4 @@ Type of the request for which the code is sent
 
 ## Defined in
 
-dist/generated/types.d.ts:94451
+dist/generated/types.d.ts:96948

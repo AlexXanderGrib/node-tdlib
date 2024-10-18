@@ -24,10 +24,10 @@ Pass true to allow accepting secret chats by the session; pass false otherwise
 
 ### session\_id?
 
-> `readonly` `optional` **session\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **session\_id**: [`int64$Input`](int64$Input.md)
 
 Session identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:95773
+dist/generated/types.d.ts:98542

@@ -18,4 +18,4 @@ A new member joined the chat via an invite link
 
 ## Defined in
 
-dist/generated/types.d.ts:27009
+dist/generated/types.d.ts:27769

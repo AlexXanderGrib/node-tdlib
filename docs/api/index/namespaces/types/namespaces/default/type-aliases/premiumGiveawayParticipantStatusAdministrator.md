@@ -18,10 +18,10 @@ The user can't participate in the giveaway, because they are an administrator in
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat administered by the user
 
 ## Defined in
 
-dist/generated/types.d.ts:8715
+dist/generated/types.d.ts:9151

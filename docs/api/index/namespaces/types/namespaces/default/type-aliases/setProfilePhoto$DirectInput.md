@@ -26,4 +26,4 @@ Profile photo to set
 
 ## Defined in
 
-dist/generated/types.d.ts:93864
+dist/generated/types.d.ts:96361

@@ -26,4 +26,4 @@ Identifier of a message sender to block/unblock
 
 ## Defined in
 
-dist/generated/types.d.ts:91925
+dist/generated/types.d.ts:94422

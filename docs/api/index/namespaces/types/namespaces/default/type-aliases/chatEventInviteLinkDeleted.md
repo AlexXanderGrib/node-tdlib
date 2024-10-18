@@ -18,10 +18,10 @@ A revoked chat invite link was deleted
 
 ### invite\_link
 
-> **invite\_link**: [`chatInviteLink`](chatInviteLink-1.md)
+> **invite\_link**: [`chatInviteLink`](chatInviteLink.md)
 
 The invite link
 
 ## Defined in
 
-dist/generated/types.d.ts:40343
+dist/generated/types.d.ts:41737

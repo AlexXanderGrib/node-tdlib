@@ -26,10 +26,10 @@ For messages originally sent by an anonymous chat administrator, original messag
 
 ### sender\_chat\_id?
 
-> `readonly` `optional` **sender\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **sender\_chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat that originally sent the message
 
 ## Defined in
 
-dist/generated/types.d.ts:12307
+dist/generated/types.d.ts:12911

@@ -20,4 +20,4 @@ The privacy setting
 
 ## Defined in
 
-dist/generated/types.d.ts:97778
+dist/generated/types.d.ts:100557

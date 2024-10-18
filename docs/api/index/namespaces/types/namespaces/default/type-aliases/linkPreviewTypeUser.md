@@ -24,10 +24,10 @@ True, if the user is a bot
 
 ### photo
 
-> **photo**: [`chatPhoto`](chatPhoto-1.md) \| `null`
+> **photo**: [`chatPhoto`](chatPhoto.md) \| `null`
 
 Photo of the user; may be null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:21525
+dist/generated/types.d.ts:22275

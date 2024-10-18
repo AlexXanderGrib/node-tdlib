@@ -20,10 +20,10 @@ A message has been pinned
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the pinned message, can be an identifier of a deleted message or 0
 
 ## Defined in
 
-dist/generated/types.d.ts:27132
+dist/generated/types.d.ts:27892

@@ -26,7 +26,7 @@ True, if the message is a pinned message with the specified content
 
 ### score?
 
-> `readonly` `optional` **score**: [`int32`](int32-1.md)
+> `readonly` `optional` **score**: [`int32`](int32.md)
 
 New score, 0 for pinned message
 
@@ -38,4 +38,4 @@ Game title, empty for pinned message
 
 ## Defined in
 
-dist/generated/types.d.ts:44362
+dist/generated/types.d.ts:45888

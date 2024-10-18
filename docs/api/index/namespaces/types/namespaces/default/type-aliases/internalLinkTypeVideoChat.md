@@ -36,4 +36,4 @@ True, if the video chat is expected to be a live stream in a channel or a broadc
 
 ## Defined in
 
-dist/generated/types.d.ts:48595
+dist/generated/types.d.ts:50179

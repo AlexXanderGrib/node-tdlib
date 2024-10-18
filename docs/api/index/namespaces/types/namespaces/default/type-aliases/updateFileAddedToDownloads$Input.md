@@ -20,16 +20,16 @@ A file was added to the file download list. This update is sent only after file 
 
 ### counts?
 
-> `readonly` `optional` **counts**: [`downloadedFileCounts$Input`](downloadedFileCounts$Input-1.md)
+> `readonly` `optional` **counts**: [`downloadedFileCounts$Input`](downloadedFileCounts$Input.md)
 
 New number of being downloaded and recently downloaded files found
 
 ### file\_download?
 
-> `readonly` `optional` **file\_download**: [`fileDownload$Input`](fileDownload$Input-1.md)
+> `readonly` `optional` **file\_download**: [`fileDownload$Input`](fileDownload$Input.md)
 
 The added file download
 
 ## Defined in
 
-dist/generated/types.d.ts:55415
+dist/generated/types.d.ts:57031

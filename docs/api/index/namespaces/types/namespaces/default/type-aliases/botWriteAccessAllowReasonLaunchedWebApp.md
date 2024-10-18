@@ -18,10 +18,10 @@ The user launched a Web App using getWebAppLinkUrl
 
 ### web\_app
 
-> **web\_app**: [`webApp`](webApp-1.md)
+> **web\_app**: [`webApp`](webApp.md)
 
 Information about the Web App
 
 ## Defined in
 
-dist/generated/types.d.ts:37033
+dist/generated/types.d.ts:38403

@@ -20,7 +20,7 @@ The list of installed sticker sets was updated
 
 ### sticker\_set\_ids?
 
-> `readonly` `optional` **sticker\_set\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input-1.md)\>
+> `readonly` `optional` **sticker\_set\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input.md)\>
 
 The new list of installed ordinary sticker sets
 
@@ -32,4 +32,4 @@ Type of the affected stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:56143
+dist/generated/types.d.ts:57759

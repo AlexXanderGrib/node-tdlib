@@ -20,7 +20,7 @@ The user creating a Telegram Premium giveaway
 
 ### amount?
 
-> `readonly` `optional` **amount**: [`int53`](int53-1.md)
+> `readonly` `optional` **amount**: [`int53`](int53.md)
 
 Paid amount, in the smallest units of the currency
 
@@ -32,10 +32,10 @@ ISO 4217 currency code of the payment currency
 
 ### parameters?
 
-> `readonly` `optional` **parameters**: [`premiumGiveawayParameters$Input`](premiumGiveawayParameters$Input-1.md)
+> `readonly` `optional` **parameters**: [`premiumGiveawayParameters$Input`](premiumGiveawayParameters$Input.md)
 
 Giveaway parameters
 
 ## Defined in
 
-dist/generated/types.d.ts:42636
+dist/generated/types.d.ts:44030

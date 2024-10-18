@@ -18,4 +18,4 @@ Returns only animation messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30479
+dist/generated/types.d.ts:31611

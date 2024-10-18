@@ -20,16 +20,16 @@ The chat emoji status was changed
 
 ### new\_emoji\_status?
 
-> `readonly` `optional` **new\_emoji\_status**: [`emojiStatus$Input`](emojiStatus$Input-1.md) \| `null`
+> `readonly` `optional` **new\_emoji\_status**: [`emojiStatus$Input`](emojiStatus$Input.md) \| `null`
 
 New emoji status; may be null if none
 
 ### old\_emoji\_status?
 
-> `readonly` `optional` **old\_emoji\_status**: [`emojiStatus$Input`](emojiStatus$Input-1.md) \| `null`
+> `readonly` `optional` **old\_emoji\_status**: [`emojiStatus$Input`](emojiStatus$Input.md) \| `null`
 
 Previous emoji status; may be null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:39667
+dist/generated/types.d.ts:41037

@@ -18,4 +18,4 @@ Returns default emoji statuses for self status
 
 ## Defined in
 
-dist/generated/types.d.ts:88672
+dist/generated/types.d.ts:91047

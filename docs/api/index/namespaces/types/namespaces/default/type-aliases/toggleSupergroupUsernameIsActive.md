@@ -6,7 +6,11 @@
 
 # Type Alias: toggleSupergroupUsernameIsActive()
 
-> **toggleSupergroupUsernameIsActive**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleSupergroupUsernameIsActive**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes active state for a username of a supergroup or channel, requires owner privileges in the supergroup or channel. The editable username can't be disabled.
+
+- May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95989
+dist/generated/types.d.ts:98758

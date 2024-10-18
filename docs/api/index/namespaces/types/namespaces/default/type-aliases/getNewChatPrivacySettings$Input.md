@@ -18,4 +18,4 @@ Returns privacy settings for new chat creation
 
 ## Defined in
 
-dist/generated/types.d.ts:97868
+dist/generated/types.d.ts:100647

@@ -6,7 +6,9 @@
 
 # Type Alias: deleteForumTopic()
 
-> **deleteForumTopic**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteForumTopic**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes all messages in a forum topic; requires can_delete_messages administrator right in the supergroup unless the user is creator of the topic, the topic has no messages from other users and has at most 11 messages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81148
+dist/generated/types.d.ts:83197

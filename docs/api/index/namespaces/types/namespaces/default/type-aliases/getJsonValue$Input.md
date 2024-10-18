@@ -24,4 +24,4 @@ The JSON-serialized string
 
 ## Defined in
 
-dist/generated/types.d.ts:81972
+dist/generated/types.d.ts:84165

@@ -18,22 +18,22 @@ A text message
 
 ### link\_preview
 
-> **link\_preview**: [`linkPreview`](linkPreview-1.md) \| `null`
+> **link\_preview**: [`linkPreview`](linkPreview.md) \| `null`
 
 A link preview attached to the message; may be null
 
 ### link\_preview\_options
 
-> **link\_preview\_options**: [`linkPreviewOptions`](linkPreviewOptions-1.md) \| `null`
+> **link\_preview\_options**: [`linkPreviewOptions`](linkPreviewOptions.md) \| `null`
 
 Options which were used for generation of the link preview; may be null if default options were used
 
 ### text
 
-> **text**: [`formattedText`](formattedText-1.md)
+> **text**: [`formattedText`](formattedText.md)
 
 Text of the message
 
 ## Defined in
 
-dist/generated/types.d.ts:25763
+dist/generated/types.d.ts:26523

@@ -18,16 +18,16 @@ A chat photo was changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### photo
 
-> **photo**: [`chatPhotoInfo`](chatPhotoInfo-1.md) \| `null`
+> **photo**: [`chatPhotoInfo`](chatPhotoInfo.md) \| `null`
 
 The new chat photo; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:53249
+dist/generated/types.d.ts:54865

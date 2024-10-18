@@ -30,4 +30,4 @@ Identifier of the affected group call participant
 
 ## Defined in
 
-dist/generated/types.d.ts:40439
+dist/generated/types.d.ts:41833

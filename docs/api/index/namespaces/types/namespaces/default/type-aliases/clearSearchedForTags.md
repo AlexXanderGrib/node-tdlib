@@ -6,7 +6,9 @@
 
 # Type Alias: clearSearchedForTags()
 
-> **clearSearchedForTags**: (`parameters`) => [`Ok`](Ok.md)
+> **clearSearchedForTags**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Clears the list of recently searched for hashtags or cashtags
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77057
+dist/generated/types.d.ts:79083

@@ -18,4 +18,4 @@ A self-destructed voice note message
 
 ## Defined in
 
-dist/generated/types.d.ts:26285
+dist/generated/types.d.ts:27045

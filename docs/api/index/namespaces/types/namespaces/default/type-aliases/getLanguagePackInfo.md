@@ -6,7 +6,9 @@
 
 # Type Alias: getLanguagePackInfo()
 
-> **getLanguagePackInfo**: (`parameters`) => [`LanguagePackInfo`](LanguagePackInfo.md)
+> **getLanguagePackInfo**: (`parameters`) => [`LanguagePackInfo`](LanguagePackInfo-1.md)
+
+Returns information about a language pack. Returned language pack identifier may be different from a provided one. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`LanguagePackInfo`](LanguagePackInfo.md)
+[`LanguagePackInfo`](LanguagePackInfo-1.md)
 
-[LanguagePackInfo](LanguagePackInfo.md)
+[LanguagePackInfo](LanguagePackInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97365
+dist/generated/types.d.ts:100144

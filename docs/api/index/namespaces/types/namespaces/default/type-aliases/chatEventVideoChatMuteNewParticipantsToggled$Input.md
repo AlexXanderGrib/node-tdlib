@@ -26,4 +26,4 @@ New value of the mute_new_participants setting
 
 ## Defined in
 
-dist/generated/types.d.ts:40428
+dist/generated/types.d.ts:41822

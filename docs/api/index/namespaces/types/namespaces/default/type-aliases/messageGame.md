@@ -18,10 +18,10 @@ A message with a game
 
 ### game
 
-> **game**: [`game`](game-1.md)
+> **game**: [`game`](game.md)
 
 The game description
 
 ## Defined in
 
-dist/generated/types.d.ts:26509
+dist/generated/types.d.ts:27269

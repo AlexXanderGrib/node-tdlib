@@ -6,7 +6,9 @@
 
 # Type Alias: getDefaultChatPhotoCustomEmojiStickers()
 
-> **getDefaultChatPhotoCustomEmojiStickers**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getDefaultChatPhotoCustomEmojiStickers**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns default list of custom emoji stickers for placing on a chat photo
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93572
+dist/generated/types.d.ts:96069

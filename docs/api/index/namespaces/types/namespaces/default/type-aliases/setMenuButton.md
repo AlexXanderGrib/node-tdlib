@@ -6,7 +6,9 @@
 
 # Type Alias: setMenuButton()
 
-> **setMenuButton**: (`parameters`) => [`Ok`](Ok.md)
+> **setMenuButton**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets menu button for the given user or for all users; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95071
+dist/generated/types.d.ts:97568

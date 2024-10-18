@@ -18,4 +18,4 @@ Returns the period of inactivity after which the account of the current user wil
 
 ## Defined in
 
-dist/generated/types.d.ts:98017
+dist/generated/types.d.ts:100796

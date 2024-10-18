@@ -18,10 +18,10 @@ The list of favorite stickers was updated
 
 ### sticker\_ids
 
-> **sticker\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **sticker\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 The new list of file identifiers of favorite stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:56227
+dist/generated/types.d.ts:57843

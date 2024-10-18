@@ -26,4 +26,4 @@ Internal representation of the invite link
 
 ## Defined in
 
-dist/generated/types.d.ts:47739
+dist/generated/types.d.ts:49299

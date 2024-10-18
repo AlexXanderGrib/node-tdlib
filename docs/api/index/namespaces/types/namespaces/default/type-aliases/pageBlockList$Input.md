@@ -20,10 +20,10 @@ A list of data blocks
 
 ### items?
 
-> `readonly` `optional` **items**: [`vector$Input`](vector$Input.md)\<[`pageBlockListItem$Input`](pageBlockListItem$Input-1.md)\>
+> `readonly` `optional` **items**: [`vector$Input`](vector$Input.md)\<[`pageBlockListItem$Input`](pageBlockListItem$Input.md)\>
 
 The items of the list
 
 ## Defined in
 
-dist/generated/types.d.ts:19926
+dist/generated/types.d.ts:20552

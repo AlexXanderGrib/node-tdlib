@@ -32,4 +32,4 @@ True, if there can be some yet unreceived notifications, which are being fetched
 
 ## Defined in
 
-dist/generated/types.d.ts:54861
+dist/generated/types.d.ts:56477

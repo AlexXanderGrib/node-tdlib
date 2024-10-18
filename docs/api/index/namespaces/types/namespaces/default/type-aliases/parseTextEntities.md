@@ -6,7 +6,11 @@
 
 # Type Alias: parseTextEntities()
 
-> **parseTextEntities**: (`parameters`) => [`FormattedText`](FormattedText.md)
+> **parseTextEntities**: (`parameters`) => [`FormattedText`](FormattedText-1.md)
+
+Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
+
+- and MentionName entities from a marked-up text. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`FormattedText`](FormattedText.md)
+[`FormattedText`](FormattedText-1.md)
 
-[FormattedText](FormattedText.md)
+[FormattedText](FormattedText-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81742
+dist/generated/types.d.ts:83935

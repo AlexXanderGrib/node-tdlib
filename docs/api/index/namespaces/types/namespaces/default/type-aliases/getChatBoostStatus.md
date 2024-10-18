@@ -6,7 +6,9 @@
 
 # Type Alias: getChatBoostStatus()
 
-> **getChatBoostStatus**: (`parameters`) => [`ChatBoostStatus`](ChatBoostStatus.md)
+> **getChatBoostStatus**: (`parameters`) => [`ChatBoostStatus`](ChatBoostStatus-1.md)
+
+Returns the current boost status for a supergroup or a channel chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatBoostStatus`](ChatBoostStatus.md)
+[`ChatBoostStatus`](ChatBoostStatus-1.md)
 
-[ChatBoostStatus](ChatBoostStatus.md)
+[ChatBoostStatus](ChatBoostStatus-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88368
+dist/generated/types.d.ts:90743

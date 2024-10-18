@@ -20,16 +20,16 @@ A request to send a message has reached the Telegram server. This doesn't mean t
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 The chat identifier of the sent message
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 A temporary message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52681
+dist/generated/types.d.ts:54297

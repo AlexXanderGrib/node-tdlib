@@ -6,7 +6,9 @@
 
 # Type Alias: editProxy()
 
-> **editProxy**: (`parameters`) => [`Proxy`](Proxy.md)
+> **editProxy**: (`parameters`) => [`Proxy`](Proxy-1.md)
+
+Edits an existing proxy server for network requests. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Proxy`](Proxy.md)
+[`Proxy`](Proxy-1.md)
 
-[Proxy](Proxy.md)
+[Proxy](Proxy-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101508
+dist/generated/types.d.ts:104429

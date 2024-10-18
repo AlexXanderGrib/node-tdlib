@@ -14,7 +14,7 @@ Changes the order of pinned chats
 
 ### chat\_ids?
 
-> `readonly` `optional` **chat\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **chat\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 The new list of pinned chats
 
@@ -26,4 +26,4 @@ Chat list in which to change the order of pinned chats
 
 ## Defined in
 
-dist/generated/types.d.ts:87074
+dist/generated/types.d.ts:89373

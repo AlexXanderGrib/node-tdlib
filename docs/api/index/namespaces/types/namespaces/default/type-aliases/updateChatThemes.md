@@ -18,10 +18,10 @@ The list of available chat themes has changed
 
 ### chat\_themes
 
-> **chat\_themes**: [`vector`](vector.md)\<[`chatTheme`](chatTheme-1.md)\>
+> **chat\_themes**: [`vector`](vector.md)\<[`chatTheme`](chatTheme.md)\>
 
 The new list of chat themes
 
 ## Defined in
 
-dist/generated/types.d.ts:56333
+dist/generated/types.d.ts:57949

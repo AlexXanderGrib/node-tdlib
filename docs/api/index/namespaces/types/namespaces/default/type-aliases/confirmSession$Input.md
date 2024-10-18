@@ -18,10 +18,10 @@ Confirms an unconfirmed session of the current user from another device
 
 ### session\_id?
 
-> `readonly` `optional` **session\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **session\_id**: [`int64$Input`](int64$Input.md)
 
 Session identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:95707
+dist/generated/types.d.ts:98476

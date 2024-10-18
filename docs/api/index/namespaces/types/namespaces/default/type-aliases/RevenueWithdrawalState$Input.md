@@ -16,4 +16,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:66012
+dist/generated/types.d.ts:67840

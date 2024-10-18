@@ -6,7 +6,9 @@
 
 # Type Alias: getLogTags()
 
-> **getLogTags**: (`parameters`) => [`LogTags`](LogTags.md)
+> **getLogTags**: (`parameters`) => [`LogTags`](LogTags-1.md)
+
+Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`LogTags`](LogTags.md)
+[`LogTags`](LogTags-1.md)
 
-[LogTags](LogTags.md)
+[LogTags](LogTags-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101765
+dist/generated/types.d.ts:104686

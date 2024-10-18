@@ -34,4 +34,4 @@ URL to be passed to getWebPageInstantView
 
 ## Defined in
 
-dist/generated/types.d.ts:47853
+dist/generated/types.d.ts:49413

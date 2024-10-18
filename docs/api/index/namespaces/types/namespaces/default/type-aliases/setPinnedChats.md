@@ -6,7 +6,9 @@
 
 # Type Alias: setPinnedChats()
 
-> **setPinnedChats**: (`parameters`) => [`Ok`](Ok.md)
+> **setPinnedChats**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the order of pinned chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87092
+dist/generated/types.d.ts:89391

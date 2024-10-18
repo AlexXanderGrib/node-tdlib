@@ -22,16 +22,16 @@ A request to send a message has reached the Telegram server. This doesn't mean t
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat identifier of the sent message
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 A temporary message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52701
+dist/generated/types.d.ts:54317

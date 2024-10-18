@@ -6,7 +6,9 @@
 
 # Type Alias: removeFileFromDownloads()
 
-> **removeFileFromDownloads**: (`parameters`) => [`Ok`](Ok.md)
+> **removeFileFromDownloads**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a file from the file download list
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89401
+dist/generated/types.d.ts:91776

@@ -47,4 +47,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:64758
+dist/generated/types.d.ts:66580

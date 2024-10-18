@@ -20,10 +20,10 @@ A message was pinned
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 Pinned message
 
 ## Defined in
 
-dist/generated/types.d.ts:39270
+dist/generated/types.d.ts:40640

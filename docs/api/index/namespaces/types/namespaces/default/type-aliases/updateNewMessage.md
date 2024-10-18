@@ -18,10 +18,10 @@ A new message was received; can also be an outgoing message
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 The new message
 
 ## Defined in
 
-dist/generated/types.d.ts:52655
+dist/generated/types.d.ts:54271

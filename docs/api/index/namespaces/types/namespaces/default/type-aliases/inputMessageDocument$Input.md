@@ -20,7 +20,7 @@ A document message (general file)
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 Document caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
@@ -38,10 +38,10 @@ Document to be sent
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input.md) \| `null`
 
 Document thumbnail; pass null to skip thumbnail uploading
 
 ## Defined in
 
-dist/generated/types.d.ts:29479
+dist/generated/types.d.ts:30353

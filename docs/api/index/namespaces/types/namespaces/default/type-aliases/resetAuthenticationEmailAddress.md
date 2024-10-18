@@ -6,7 +6,11 @@
 
 # Type Alias: resetAuthenticationEmailAddress()
 
-> **resetAuthenticationEmailAddress**: (`parameters`) => [`Ok`](Ok.md)
+> **resetAuthenticationEmailAddress**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Resets the login email address. May return an error with a message "TASK_ALREADY_EXISTS" if reset is still pending.
+
+- Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.can_reset_email_address == true
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73512
+dist/generated/types.d.ts:75500

@@ -6,7 +6,9 @@
 
 # Type Alias: blockMessageSenderFromReplies()
 
-> **blockMessageSenderFromReplies**: (`parameters`) => [`Ok`](Ok.md)
+> **blockMessageSenderFromReplies**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Blocks an original sender of a message in the Replies chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92001
+dist/generated/types.d.ts:94498

@@ -6,7 +6,9 @@
 
 # Type Alias: setScopeNotificationSettings()
 
-> **setScopeNotificationSettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setScopeNotificationSettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes notification settings for chats of a given type
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86961
+dist/generated/types.d.ts:89260

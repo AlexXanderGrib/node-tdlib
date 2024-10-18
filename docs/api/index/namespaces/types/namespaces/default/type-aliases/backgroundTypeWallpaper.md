@@ -30,4 +30,4 @@ True, if the background needs to be slightly moved when device is tilted
 
 ## Defined in
 
-dist/generated/types.d.ts:43347
+dist/generated/types.d.ts:44873

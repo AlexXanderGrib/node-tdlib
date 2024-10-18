@@ -6,7 +6,9 @@
 
 # Type Alias: getChat()
 
-> **getChat**: (`parameters`) => [`Chat`](Chat.md)
+> **getChat**: (`parameters`) => [`Chat`](Chat-1.md)
+
+Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chat`](Chat.md)
+[`Chat`](Chat-1.md)
 
-[Chat](Chat.md)
+[Chat](Chat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74568
+dist/generated/types.d.ts:76556

@@ -18,10 +18,10 @@ A Telegram Passport element to be saved containing the user's identity card
 
 ### identity\_card
 
-> **identity\_card**: [`inputIdentityDocument`](inputIdentityDocument-1.md)
+> **identity\_card**: [`inputIdentityDocument`](inputIdentityDocument.md)
 
 The identity card to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24725
+dist/generated/types.d.ts:25485

@@ -14,16 +14,16 @@ Changes the chat members permissions. Supported only for basic groups and superg
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### permissions?
 
-> `readonly` `optional` **permissions**: [`chatPermissions$Input`](chatPermissions$Input-1.md)
+> `readonly` `optional` **permissions**: [`chatPermissions$Input`](chatPermissions$Input.md)
 
 New non-administrator members permissions in the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:85433
+dist/generated/types.d.ts:87732

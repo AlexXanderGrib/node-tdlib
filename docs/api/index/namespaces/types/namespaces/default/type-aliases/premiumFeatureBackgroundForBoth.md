@@ -18,4 +18,4 @@ The ability to set private chat background for both users
 
 ## Defined in
 
-dist/generated/types.d.ts:41773
+dist/generated/types.d.ts:43167

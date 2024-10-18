@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's personal details
 
 ### personal\_details?
 
-> `readonly` `optional` **personal\_details**: [`personalDetails$Input`](personalDetails$Input-1.md)
+> `readonly` `optional` **personal\_details**: [`personalDetails$Input`](personalDetails$Input.md)
 
 Personal details of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:24354
+dist/generated/types.d.ts:25114

@@ -20,22 +20,22 @@ A new high score was achieved in a game
 
 ### game\_id?
 
-> `readonly` `optional` **game\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **game\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the game; may be different from the games presented in the message with the game
 
 ### game\_message\_id?
 
-> `readonly` `optional` **game\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **game\_message\_id**: [`int53`](int53.md)
 
 Identifier of the message with the game, can be an identifier of a deleted message
 
 ### score?
 
-> `readonly` `optional` **score**: [`int32`](int32-1.md)
+> `readonly` `optional` **score**: [`int32`](int32.md)
 
 New score
 
 ## Defined in
 
-dist/generated/types.d.ts:27480
+dist/generated/types.d.ts:28240

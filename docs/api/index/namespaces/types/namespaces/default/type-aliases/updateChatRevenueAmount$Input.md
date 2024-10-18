@@ -20,16 +20,16 @@ The revenue earned from sponsored messages in a chat has changed. If chat revenu
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
 ### revenue\_amount?
 
-> `readonly` `optional` **revenue\_amount**: [`chatRevenueAmount$Input`](chatRevenueAmount$Input-1.md)
+> `readonly` `optional` **revenue\_amount**: [`chatRevenueAmount$Input`](chatRevenueAmount$Input.md)
 
 New amount of earned revenue
 
 ## Defined in
 
-dist/generated/types.d.ts:56785
+dist/generated/types.d.ts:58425

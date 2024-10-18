@@ -20,7 +20,7 @@ Returns forwards of a story as a message to public chats and reposts by public c
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages and stories to be returned; must be positive and can't be greater than 100. For optimal performance, the number of returned objects is chosen by TDLib and can be smaller than the specified limit
 
@@ -32,16 +32,16 @@ Offset of the first entry to return as received from the previous request; use e
 
 ### story\_id?
 
-> `readonly` `optional` **story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **story\_id**: [`int32`](int32.md)
 
 The identifier of the story
 
 ### story\_sender\_chat\_id?
 
-> `readonly` `optional` **story\_sender\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **story\_sender\_chat\_id**: [`int53`](int53.md)
 
 The identifier of the sender of the story
 
 ## Defined in
 
-dist/generated/types.d.ts:88199
+dist/generated/types.d.ts:90574

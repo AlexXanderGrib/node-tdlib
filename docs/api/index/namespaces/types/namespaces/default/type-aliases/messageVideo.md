@@ -18,7 +18,7 @@ A video message
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md)
+> **caption**: [`formattedText`](formattedText.md)
 
 Video caption
 
@@ -42,10 +42,10 @@ True, if the caption must be shown above the video; otherwise, the caption must 
 
 ### video
 
-> **video**: [`video`](video-1.md)
+> **video**: [`video`](video.md)
 
 The video description
 
 ## Defined in
 
-dist/generated/types.d.ts:26091
+dist/generated/types.d.ts:26851

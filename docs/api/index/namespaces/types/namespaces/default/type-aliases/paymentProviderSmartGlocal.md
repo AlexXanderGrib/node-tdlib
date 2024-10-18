@@ -30,4 +30,4 @@ URL for sending card tokenization requests
 
 ## Defined in
 
-dist/generated/types.d.ts:22913
+dist/generated/types.d.ts:23673

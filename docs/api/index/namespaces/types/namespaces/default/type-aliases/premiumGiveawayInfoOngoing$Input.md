@@ -20,7 +20,7 @@ Describes an ongoing giveaway
 
 ### creation\_date?
 
-> `readonly` `optional` **creation\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **creation\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the giveaway was created
 
@@ -38,4 +38,4 @@ Status of the current user in the giveaway
 
 ## Defined in
 
-dist/generated/types.d.ts:8786
+dist/generated/types.d.ts:9222

@@ -20,7 +20,7 @@ Withdrawal succeeded
 
 ### date?
 
-> `readonly` `optional` **date**: [`int32`](int32-1.md)
+> `readonly` `optional` **date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the withdrawal was completed
 
@@ -32,4 +32,4 @@ The URL where the withdrawal transaction can be viewed
 
 ## Defined in
 
-dist/generated/types.d.ts:52011
+dist/generated/types.d.ts:53627

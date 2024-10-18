@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageEmbeddingCode()
 
-> **getMessageEmbeddingCode**: (`parameters`) => [`Text`](Text.md)
+> **getMessageEmbeddingCode**: (`parameters`) => [`Text`](Text-1.md)
+
+Returns an HTML code for embedding the message. Available only if messageProperties.can_get_embedding_code
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77770
+dist/generated/types.d.ts:79779

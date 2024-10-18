@@ -18,10 +18,10 @@ The link is a link to a Web App
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md)
+> **photo**: [`photo`](photo.md)
 
 Web App photo
 
 ## Defined in
 
-dist/generated/types.d.ts:21725
+dist/generated/types.d.ts:22475

@@ -20,7 +20,7 @@ Some messages were deleted
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -38,10 +38,10 @@ True, if the messages are permanently deleted by a user (as opposed to just beco
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the deleted messages
 
 ## Defined in
 
-dist/generated/types.d.ts:54905
+dist/generated/types.d.ts:56521

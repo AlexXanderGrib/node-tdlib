@@ -18,7 +18,7 @@ A chat default appearance has changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ New value of view_as_topics
 
 ## Defined in
 
-dist/generated/types.d.ts:54261
+dist/generated/types.d.ts:55877

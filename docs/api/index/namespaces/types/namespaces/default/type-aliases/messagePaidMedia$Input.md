@@ -20,7 +20,7 @@ A message with paid media
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md)
 
 Media caption
 
@@ -38,10 +38,10 @@ True, if the caption must be shown above the media; otherwise, the caption must 
 
 ### star\_count?
 
-> `readonly` `optional` **star\_count**: [`int53`](int53-1.md)
+> `readonly` `optional` **star\_count**: [`int53`](int53.md)
 
-Number of stars needed to buy access to the media in the message
+Number of Telegram Stars needed to buy access to the media in the message
 
 ## Defined in
 
-dist/generated/types.d.ts:25967
+dist/generated/types.d.ts:26727

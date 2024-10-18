@@ -20,10 +20,10 @@ The media is a photo
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md)
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md)
 
 The photo
 
 ## Defined in
 
-dist/generated/types.d.ts:23610
+dist/generated/types.d.ts:24370

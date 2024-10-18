@@ -24,4 +24,4 @@ The proxy's secret in hexadecimal encoding
 
 ## Defined in
 
-dist/generated/types.d.ts:50811
+dist/generated/types.d.ts:52427

@@ -28,4 +28,4 @@ The text to parse
 
 ## Defined in
 
-dist/generated/types.d.ts:81722
+dist/generated/types.d.ts:83915

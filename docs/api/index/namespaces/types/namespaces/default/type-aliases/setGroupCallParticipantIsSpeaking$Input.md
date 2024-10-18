@@ -18,13 +18,13 @@ Informs TDLib that speaking state of a participant of an active group has change
 
 ### audio\_source?
 
-> `readonly` `optional` **audio\_source**: [`int32`](int32-1.md)
+> `readonly` `optional` **audio\_source**: [`int32`](int32.md)
 
 Group call participant's synchronization audio source identifier, or 0 for the current user
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -36,4 +36,4 @@ Pass true if the user is speaking
 
 ## Defined in
 
-dist/generated/types.d.ts:91527
+dist/generated/types.d.ts:94024

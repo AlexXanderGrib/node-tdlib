@@ -6,7 +6,9 @@
 
 # Type Alias: removeTopChat()
 
-> **removeTopChat**: (`parameters`) => [`Ok`](Ok.md)
+> **removeTopChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a chat from the list of frequently used chats. Supported only if the chat info database is enabled
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75439
+dist/generated/types.d.ts:77465

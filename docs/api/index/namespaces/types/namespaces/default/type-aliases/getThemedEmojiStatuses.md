@@ -6,7 +6,9 @@
 
 # Type Alias: getThemedEmojiStatuses()
 
-> **getThemedEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses.md)
+> **getThemedEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses-1.md)
+
+Returns up to 8 emoji statuses, which must be shown right after the default Premium Badge in the emoji status list for self status
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`EmojiStatuses`](EmojiStatuses.md)
+[`EmojiStatuses`](EmojiStatuses-1.md)
 
-[EmojiStatuses](EmojiStatuses.md)
+[EmojiStatuses](EmojiStatuses-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88651
+dist/generated/types.d.ts:91026

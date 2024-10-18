@@ -6,7 +6,9 @@
 
 # Type Alias: refundStarPayment()
 
-> **refundStarPayment**: (`parameters`) => [`Ok`](Ok.md)
+> **refundStarPayment**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Refunds a previously done payment in Telegram Stars
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97077
+dist/generated/types.d.ts:99856

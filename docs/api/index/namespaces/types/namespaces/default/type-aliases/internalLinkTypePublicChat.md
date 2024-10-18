@@ -32,6 +32,12 @@ Username of the chat
 
 Draft text for message to send in the chat
 
+### open\_profile
+
+> **open\_profile**: [`Bool`](Bool.md)
+
+True, if chat profile information screen must be opened; otherwise, the chat itself must be opened
+
 ## Defined in
 
-dist/generated/types.d.ts:48241
+dist/generated/types.d.ts:49861

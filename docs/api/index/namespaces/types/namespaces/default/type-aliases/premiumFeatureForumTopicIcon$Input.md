@@ -20,4 +20,4 @@ The ability to set a custom emoji as a forum topic icon
 
 ## Defined in
 
-dist/generated/types.d.ts:41697
+dist/generated/types.d.ts:43091

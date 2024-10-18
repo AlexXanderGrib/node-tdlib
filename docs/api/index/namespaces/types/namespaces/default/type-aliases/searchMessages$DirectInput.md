@@ -28,19 +28,19 @@ Additional filter for messages to search; pass null to search for all messages. 
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned; up to 100. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
 
 ### max\_date?
 
-> `readonly` `optional` **max\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **max\_date**: [`int32`](int32.md)
 
 If not 0, the maximum date of the messages to return
 
 ### min\_date?
 
-> `readonly` `optional` **min\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **min\_date**: [`int32`](int32.md)
 
 If not 0, the minimum date of the messages to return
 
@@ -64,4 +64,4 @@ Query to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:76463
+dist/generated/types.d.ts:78489

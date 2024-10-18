@@ -6,7 +6,9 @@
 
 # Type Alias: testCallBytes()
 
-> **testCallBytes**: (`parameters`) => [`TestBytes`](TestBytes.md)
+> **testCallBytes**: (`parameters`) => [`TestBytes`](TestBytes-1.md)
+
+Returns the received bytes; for testing only. This is an offline method. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TestBytes`](TestBytes.md)
+[`TestBytes`](TestBytes-1.md)
 
-[TestBytes](TestBytes.md)
+[TestBytes](TestBytes-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:102025
+dist/generated/types.d.ts:104946

@@ -22,7 +22,7 @@ Contents of messages to be sent. At most 10 messages can be added to an album. A
 
 ### reply\_to\_message\_id?
 
-> `readonly` `optional` **reply\_to\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **reply\_to\_message\_id**: [`int53`](int53.md)
 
 Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
 
@@ -34,4 +34,4 @@ Name of the target shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:80480
+dist/generated/types.d.ts:82529

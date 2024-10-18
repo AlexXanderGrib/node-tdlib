@@ -24,4 +24,4 @@ A URL for managing Telegram Premium subscription
 
 ## Defined in
 
-dist/generated/types.d.ts:50541
+dist/generated/types.d.ts:52139

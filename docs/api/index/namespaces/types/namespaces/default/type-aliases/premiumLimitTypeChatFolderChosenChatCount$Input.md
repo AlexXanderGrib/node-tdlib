@@ -20,4 +20,4 @@ The maximum number of pinned and always included, or always excluded chats in a 
 
 ## Defined in
 
-dist/generated/types.d.ts:41347
+dist/generated/types.d.ts:42741

@@ -18,7 +18,7 @@ Sets auto-download settings
 
 ### settings?
 
-> `readonly` `optional` **settings**: [`autoDownloadSettings$Input`](autoDownloadSettings$Input-1.md)
+> `readonly` `optional` **settings**: [`autoDownloadSettings$Input`](autoDownloadSettings$Input.md)
 
 New user auto-download settings
 
@@ -30,4 +30,4 @@ Type of the network for which the new settings are relevant
 
 ## Defined in
 
-dist/generated/types.d.ts:99087
+dist/generated/types.d.ts:101866

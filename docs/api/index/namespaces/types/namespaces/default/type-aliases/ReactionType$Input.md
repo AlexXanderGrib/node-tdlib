@@ -6,13 +6,14 @@
 
 # Type Alias: ReactionType$Input
 
-> **ReactionType$Input**: [`reactionTypeEmoji$Input`](reactionTypeEmoji$Input.md) \| [`reactionTypeCustomEmoji$Input`](reactionTypeCustomEmoji$Input.md)
+> **ReactionType$Input**: [`reactionTypeEmoji$Input`](reactionTypeEmoji$Input.md) \| [`reactionTypeCustomEmoji$Input`](reactionTypeCustomEmoji$Input.md) \| [`reactionTypePaid$Input`](reactionTypePaid$Input.md)
 
 Version of [ReactionType](ReactionType.md) for method parameters.
 Any of:
 - [reactionTypeEmoji$Input](reactionTypeEmoji$Input.md)
 - [reactionTypeCustomEmoji$Input](reactionTypeCustomEmoji$Input.md)
+- [reactionTypePaid$Input](reactionTypePaid$Input.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:60344
+dist/generated/types.d.ts:62073

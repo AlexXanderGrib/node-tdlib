@@ -18,4 +18,4 @@ Returns only photo and video messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30563
+dist/generated/types.d.ts:31695

@@ -18,4 +18,4 @@ Returns all active sessions of the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:95645
+dist/generated/types.d.ts:98414

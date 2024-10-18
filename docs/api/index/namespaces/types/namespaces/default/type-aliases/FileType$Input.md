@@ -32,4 +32,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:65424
+dist/generated/types.d.ts:67248

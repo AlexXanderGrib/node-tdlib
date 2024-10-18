@@ -26,7 +26,7 @@ Currency for the price of the product
 
 ### invoice\_payload?
 
-> `readonly` `optional` **invoice\_payload**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **invoice\_payload**: [`bytes$Input`](bytes$Input.md)
 
 Invoice payload; only for bots
 
@@ -34,7 +34,7 @@ Invoice payload; only for bots
 
 > `readonly` `optional` **owner\_id**: [`MessageSender$Input`](MessageSender$Input.md)
 
-Identifier of the previous owner of the Telegram stars that refunds them
+Identifier of the previous owner of the Telegram Stars that refunds them
 
 ### provider\_payment\_charge\_id?
 
@@ -50,10 +50,10 @@ Telegram payment identifier
 
 ### total\_amount?
 
-> `readonly` `optional` **total\_amount**: [`int53`](int53-1.md)
+> `readonly` `optional` **total\_amount**: [`int53`](int53.md)
 
 Total price for the product, in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:27727
+dist/generated/types.d.ts:28487

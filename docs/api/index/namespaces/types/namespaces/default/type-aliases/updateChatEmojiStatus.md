@@ -18,16 +18,16 @@ Chat emoji status has changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### emoji\_status
 
-> **emoji\_status**: [`emojiStatus`](emojiStatus-1.md) \| `null`
+> **emoji\_status**: [`emojiStatus`](emojiStatus.md) \| `null`
 
 The new chat emoji status; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:53751
+dist/generated/types.d.ts:55367

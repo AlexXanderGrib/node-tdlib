@@ -18,10 +18,10 @@ Represents a JSON object
 
 ### members
 
-> **members**: [`vector`](vector.md)\<[`jsonObjectMember`](jsonObjectMember-1.md)\>
+> **members**: [`vector`](vector.md)\<[`jsonObjectMember`](jsonObjectMember.md)\>
 
 The list of object members
 
 ## Defined in
 
-dist/generated/types.d.ts:45869
+dist/generated/types.d.ts:47395

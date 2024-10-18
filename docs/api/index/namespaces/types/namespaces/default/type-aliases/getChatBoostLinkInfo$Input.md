@@ -24,4 +24,4 @@ The link to boost a chat
 
 ## Defined in
 
-dist/generated/types.d.ts:88438
+dist/generated/types.d.ts:90813

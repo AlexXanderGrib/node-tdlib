@@ -12,4 +12,4 @@ Returns a list of channel chats, which can be used as a personal chat
 
 ## Defined in
 
-dist/generated/types.d.ts:75722
+dist/generated/types.d.ts:77748

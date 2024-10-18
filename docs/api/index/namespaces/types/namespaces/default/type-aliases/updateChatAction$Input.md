@@ -26,13 +26,13 @@ The action
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 If not 0, the message thread identifier in which the action was performed
 
@@ -44,4 +44,4 @@ Identifier of a message sender performing the action
 
 ## Defined in
 
-dist/generated/types.d.ts:54959
+dist/generated/types.d.ts:56575

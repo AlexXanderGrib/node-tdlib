@@ -6,7 +6,9 @@
 
 # Type Alias: setChatPinnedStories()
 
-> **setChatPinnedStories**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatPinnedStories**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87784
+dist/generated/types.d.ts:90159

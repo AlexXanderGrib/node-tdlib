@@ -16,16 +16,16 @@ Adds multiple new members to a chat; requires can_invite_users member right. Cur
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### user\_ids?
 
-> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the users to be added to the chat. The maximum number of added users is 20 for supergroups and 100 for channels
 
 ## Defined in
 
-dist/generated/types.d.ts:86401
+dist/generated/types.d.ts:88700

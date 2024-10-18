@@ -6,7 +6,9 @@
 
 # Type Alias: editBusinessMessageCaption()
 
-> **editBusinessMessageCaption**: (`parameters`) => [`BusinessMessage`](BusinessMessage.md)
+> **editBusinessMessageCaption**: (`parameters`) => [`BusinessMessage`](BusinessMessage-1.md)
+
+Edits the caption of a message sent on behalf of a business account; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessMessage`](BusinessMessage.md)
+[`BusinessMessage`](BusinessMessage-1.md)
 
-[BusinessMessage](BusinessMessage.md)
+[BusinessMessage](BusinessMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80002
+dist/generated/types.d.ts:81993

@@ -26,4 +26,4 @@ If non-empty, name of a new theme, set for the chat. Otherwise, the chat theme w
 
 ## Defined in
 
-dist/generated/types.d.ts:45022
+dist/generated/types.d.ts:46548

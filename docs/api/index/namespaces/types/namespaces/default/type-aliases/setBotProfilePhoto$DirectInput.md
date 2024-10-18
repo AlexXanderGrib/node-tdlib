@@ -14,7 +14,7 @@ Changes a profile photo for a bot
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
@@ -26,4 +26,4 @@ Profile photo to set; pass null to delete the chat photo
 
 ## Defined in
 
-dist/generated/types.d.ts:95365
+dist/generated/types.d.ts:98134

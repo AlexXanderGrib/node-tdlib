@@ -6,7 +6,9 @@
 
 # Type Alias: getLinkPreview()
 
-> **getLinkPreview**: (`parameters`) => [`LinkPreview`](LinkPreview.md)
+> **getLinkPreview**: (`parameters`) => [`LinkPreview`](LinkPreview-1.md)
+
+Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`LinkPreview`](LinkPreview.md)
+[`LinkPreview`](LinkPreview-1.md)
 
-[LinkPreview](LinkPreview.md)
+[LinkPreview](LinkPreview-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93806
+dist/generated/types.d.ts:96303

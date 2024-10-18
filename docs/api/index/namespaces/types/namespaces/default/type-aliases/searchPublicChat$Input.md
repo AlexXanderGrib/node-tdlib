@@ -24,4 +24,4 @@ Username to be resolved
 
 ## Defined in
 
-dist/generated/types.d.ts:75074
+dist/generated/types.d.ts:77100

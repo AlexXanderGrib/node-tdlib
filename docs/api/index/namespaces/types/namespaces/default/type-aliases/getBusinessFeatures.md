@@ -6,7 +6,9 @@
 
 # Type Alias: getBusinessFeatures()
 
-> **getBusinessFeatures**: (`parameters`) => [`BusinessFeatures`](BusinessFeatures.md)
+> **getBusinessFeatures**: (`parameters`) => [`BusinessFeatures`](BusinessFeatures-1.md)
+
+Returns information about features, available to Business users
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessFeatures`](BusinessFeatures.md)
+[`BusinessFeatures`](BusinessFeatures-1.md)
 
-[BusinessFeatures](BusinessFeatures.md)
+[BusinessFeatures](BusinessFeatures-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100954
+dist/generated/types.d.ts:103875

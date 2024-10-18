@@ -31,4 +31,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:64224
+dist/generated/types.d.ts:66040

@@ -18,4 +18,4 @@ A custom reason provided by the user
 
 ## Defined in
 
-dist/generated/types.d.ts:47235
+dist/generated/types.d.ts:48761

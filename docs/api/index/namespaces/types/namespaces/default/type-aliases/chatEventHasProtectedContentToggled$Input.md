@@ -26,4 +26,4 @@ New value of has_protected_content
 
 ## Defined in
 
-dist/generated/types.d.ts:40178
+dist/generated/types.d.ts:41548

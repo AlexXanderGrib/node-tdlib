@@ -20,4 +20,4 @@ The chat promotes violence
 
 ## Defined in
 
-dist/generated/types.d.ts:47131
+dist/generated/types.d.ts:48657

@@ -20,16 +20,16 @@ The position of a chat in a chat list has changed. An updateChatLastMessage or u
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### position?
 
-> `readonly` `optional` **position**: [`chatPosition$Input`](chatPosition$Input-1.md)
+> `readonly` `optional` **position**: [`chatPosition$Input`](chatPosition$Input.md)
 
 New chat position. If new order is 0, then the chat needs to be removed from the list
 
 ## Defined in
 
-dist/generated/types.d.ts:53443
+dist/generated/types.d.ts:55059

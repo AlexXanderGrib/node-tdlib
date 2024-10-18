@@ -20,4 +20,4 @@ The session can be used
 
 ## Defined in
 
-dist/generated/types.d.ts:43803
+dist/generated/types.d.ts:45329

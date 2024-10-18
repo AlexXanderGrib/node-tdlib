@@ -24,4 +24,4 @@ Types of chats for which to return the notification settings information
 
 ## Defined in
 
-dist/generated/types.d.ts:86899
+dist/generated/types.d.ts:89198

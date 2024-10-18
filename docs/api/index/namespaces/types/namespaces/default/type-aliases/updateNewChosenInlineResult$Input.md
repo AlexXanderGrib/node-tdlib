@@ -38,16 +38,16 @@ Identifier of the chosen result
 
 ### sender\_user\_id?
 
-> `readonly` `optional` **sender\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **sender\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user who sent the query
 
 ### user\_location?
 
-> `readonly` `optional` **user\_location**: [`location$Input`](location$Input-1.md) \| `null`
+> `readonly` `optional` **user\_location**: [`location$Input`](location$Input.md) \| `null`
 
 User location; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:57354
+dist/generated/types.d.ts:58994

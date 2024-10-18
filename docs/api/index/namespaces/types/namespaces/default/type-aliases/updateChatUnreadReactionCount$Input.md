@@ -20,16 +20,16 @@ The chat unread_reaction_count has changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### unread\_reaction\_count?
 
-> `readonly` `optional` **unread\_reaction\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **unread\_reaction\_count**: [`int32`](int32.md)
 
 The number of messages with unread reactions left in the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:54075
+dist/generated/types.d.ts:55691

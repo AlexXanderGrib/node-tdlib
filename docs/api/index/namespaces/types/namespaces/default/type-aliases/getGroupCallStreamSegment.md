@@ -6,7 +6,9 @@
 
 # Type Alias: getGroupCallStreamSegment()
 
-> **getGroupCallStreamSegment**: (`parameters`) => [`FilePart`](FilePart.md)
+> **getGroupCallStreamSegment**: (`parameters`) => [`FilePart`](FilePart-1.md)
+
+Returns a file with a segment of a group call stream in a modified OGG format for audio or MPEG-4 format for video
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FilePart`](FilePart.md)
+[`FilePart`](FilePart-1.md)
 
-[FilePart](FilePart.md)
+[FilePart](FilePart-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91905
+dist/generated/types.d.ts:94402

@@ -18,7 +18,7 @@ New message was received
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 The message
 
@@ -30,4 +30,4 @@ True, if message content must be displayed in notifications
 
 ## Defined in
 
-dist/generated/types.d.ts:45231
+dist/generated/types.d.ts:46757

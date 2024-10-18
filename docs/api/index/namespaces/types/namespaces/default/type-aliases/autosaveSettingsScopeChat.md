@@ -18,10 +18,10 @@ Autosave settings applied to a chat
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:49831
+dist/generated/types.d.ts:51415

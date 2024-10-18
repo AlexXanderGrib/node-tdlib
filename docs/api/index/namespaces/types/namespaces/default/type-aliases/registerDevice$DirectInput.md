@@ -20,10 +20,10 @@ Device token
 
 ### other\_user\_ids?
 
-> `readonly` `optional` **other\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **other\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 List of user identifiers of other users currently using the application
 
 ## Defined in
 
-dist/generated/types.d.ts:97623
+dist/generated/types.d.ts:100402

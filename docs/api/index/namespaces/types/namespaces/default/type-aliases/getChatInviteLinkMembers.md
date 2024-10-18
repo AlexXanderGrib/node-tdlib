@@ -6,7 +6,9 @@
 
 # Type Alias: getChatInviteLinkMembers()
 
-> **getChatInviteLinkMembers**: (`parameters`) => [`ChatInviteLinkMembers`](ChatInviteLinkMembers.md)
+> **getChatInviteLinkMembers**: (`parameters`) => [`ChatInviteLinkMembers`](ChatInviteLinkMembers-1.md)
+
+Returns chat members joined a chat via an invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatInviteLinkMembers`](ChatInviteLinkMembers.md)
+[`ChatInviteLinkMembers`](ChatInviteLinkMembers-1.md)
 
-[ChatInviteLinkMembers](ChatInviteLinkMembers.md)
+[ChatInviteLinkMembers](ChatInviteLinkMembers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90039
+dist/generated/types.d.ts:92536

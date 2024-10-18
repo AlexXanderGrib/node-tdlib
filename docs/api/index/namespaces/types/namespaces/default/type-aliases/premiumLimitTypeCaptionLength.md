@@ -18,4 +18,4 @@ The maximum length of sent media caption
 
 ## Defined in
 
-dist/generated/types.d.ts:41381
+dist/generated/types.d.ts:42775

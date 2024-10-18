@@ -54,4 +54,4 @@ Value for zero objects
 
 ## Defined in
 
-dist/generated/types.d.ts:40941
+dist/generated/types.d.ts:42335

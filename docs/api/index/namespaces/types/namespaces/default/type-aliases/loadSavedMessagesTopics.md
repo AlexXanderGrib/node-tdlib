@@ -6,7 +6,9 @@
 
 # Type Alias: loadSavedMessagesTopics()
 
-> **loadSavedMessagesTopics**: (`parameters`) => [`Ok`](Ok.md)
+> **loadSavedMessagesTopics**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Loads more Saved Messages topics. The loaded topics will be sent through updateSavedMessagesTopic. Topics are sorted by their topic.order in descending order. Returns a 404 error if all topics have been loaded
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75757
+dist/generated/types.d.ts:77783

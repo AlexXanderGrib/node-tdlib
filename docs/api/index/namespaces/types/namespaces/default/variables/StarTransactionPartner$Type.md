@@ -18,6 +18,10 @@
 
 > `readonly` **Bot**: `"starTransactionPartnerBot"`
 
+### Business
+
+> `readonly` **Business**: `"starTransactionPartnerBusiness"`
+
 ### Channel
 
 > `readonly` **Channel**: `"starTransactionPartnerChannel"`
@@ -42,6 +46,10 @@
 
 > `readonly` **Unsupported**: `"starTransactionPartnerUnsupported"`
 
+### User
+
+> `readonly` **User**: `"starTransactionPartnerUser"`
+
 ## Defined in
 
-dist/generated/types.d.ts:2305
+dist/generated/types.d.ts:2338

@@ -18,4 +18,4 @@ The link is an invite link for a supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:10805
+dist/generated/types.d.ts:11325

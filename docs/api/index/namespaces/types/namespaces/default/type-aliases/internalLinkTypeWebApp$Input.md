@@ -12,7 +12,7 @@ Version of [internalLinkTypeWebApp](internalLinkTypeWebApp.md) for method parame
 
 The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot, then call searchWebApp with the received bot and the given web_app_short_name.
 
-- Process received foundWebApp by showing a confirmation dialog if needed. If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being a third-party apps
+- Process received foundWebApp by showing a confirmation dialog if needed. If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being third-party applications
 
 - instead of the dialog and ask the user to accept their Terms of service. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
 
@@ -34,7 +34,7 @@ Username of the bot that owns the Web App
 
 > `readonly` `optional` **is\_compact**: [`Bool$Input`](Bool$Input.md)
 
-True, if the Web App must be opened in a compact mode instead of a full-size mode
+True, if the Web App must be opened in the compact mode instead of the full-size mode
 
 ### start\_parameter?
 
@@ -50,4 +50,4 @@ Short name of the Web App
 
 ## Defined in
 
-dist/generated/types.d.ts:48679
+dist/generated/types.d.ts:50263

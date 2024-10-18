@@ -24,4 +24,4 @@ Push service registration identifier; may be empty to deregister a device
 
 ## Defined in
 
-dist/generated/types.d.ts:43173
+dist/generated/types.d.ts:44699

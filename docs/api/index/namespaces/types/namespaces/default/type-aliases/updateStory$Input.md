@@ -20,10 +20,10 @@ A story was changed
 
 ### story?
 
-> `readonly` `optional` **story**: [`story$Input`](story$Input-1.md)
+> `readonly` `optional` **story**: [`story$Input`](story$Input.md)
 
 The new information about the story
 
 ## Defined in
 
-dist/generated/types.d.ts:55852
+dist/generated/types.d.ts:57468

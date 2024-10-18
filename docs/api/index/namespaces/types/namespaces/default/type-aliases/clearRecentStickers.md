@@ -6,7 +6,9 @@
 
 # Type Alias: clearRecentStickers()
 
-> **clearRecentStickers**: (`parameters`) => [`Ok`](Ok.md)
+> **clearRecentStickers**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Clears the list of recently used stickers
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93260
+dist/generated/types.d.ts:95757

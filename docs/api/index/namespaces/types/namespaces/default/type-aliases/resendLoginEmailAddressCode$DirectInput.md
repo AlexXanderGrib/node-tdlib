@@ -12,4 +12,4 @@ Resends the login email address verification code
 
 ## Defined in
 
-dist/generated/types.d.ts:73976
+dist/generated/types.d.ts:75964

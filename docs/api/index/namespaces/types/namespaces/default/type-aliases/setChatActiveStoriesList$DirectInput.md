@@ -14,7 +14,7 @@ Changes story list in which stories from the chat are shown
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat that posted stories
 
@@ -26,4 +26,4 @@ New list for active stories posted by the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:87584
+dist/generated/types.d.ts:89959

@@ -6,7 +6,9 @@
 
 # Type Alias: addChatFolderByInviteLink()
 
-> **addChatFolderByInviteLink**: (`parameters`) => [`Ok`](Ok.md)
+> **addChatFolderByInviteLink**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a chat folder by an invite link
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85044
+dist/generated/types.d.ts:87343

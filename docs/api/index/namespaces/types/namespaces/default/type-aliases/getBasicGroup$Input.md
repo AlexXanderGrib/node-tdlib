@@ -18,10 +18,10 @@ Returns information about a basic group by its identifier. This is an offline re
 
 ### basic\_group\_id?
 
-> `readonly` `optional` **basic\_group\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **basic\_group\_id**: [`int53`](int53.md)
 
 Basic group identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:74404
+dist/generated/types.d.ts:76392

@@ -18,13 +18,19 @@ A video story
 
 ### added\_sticker\_file\_ids
 
-> **added\_sticker\_file\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **added\_sticker\_file\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 File identifiers of the stickers added to the video, if applicable
 
+### cover\_frame\_timestamp
+
+> **cover\_frame\_timestamp**: [`double`](double.md)
+
+Timestamp of the frame, which will be used as video thumbnail
+
 ### duration
 
-> **duration**: [`double`](double-1.md)
+> **duration**: [`double`](double.md)
 
 Precise duration of the video, in seconds; 0-60
 
@@ -42,4 +48,4 @@ Video to be sent. The video size must be 720x1280. The video must be streamable 
 
 ## Defined in
 
-dist/generated/types.d.ts:32561
+dist/generated/types.d.ts:33829

@@ -8,9 +8,7 @@
 
 > **editMessageText$Input**: `object`
 
-Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side.
-
-- Can be used only if message.can_be_edited == true
+Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
 
 ## Type declaration
 
@@ -20,7 +18,7 @@ Edits the text of a message (or a text of a game message). Returns the edited me
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat the message belongs to
 
@@ -32,9 +30,9 @@ New text content of the message. Must be of type inputMessageText
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message
+Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 
 ### reply\_markup?
 
@@ -44,4 +42,4 @@ The new message reply markup; pass null if none; for bots only
 
 ## Defined in
 
-dist/generated/types.d.ts:78770
+dist/generated/types.d.ts:80777

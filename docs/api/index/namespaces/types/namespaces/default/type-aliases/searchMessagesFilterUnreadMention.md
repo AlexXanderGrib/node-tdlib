@@ -18,4 +18,4 @@ Returns only messages with unread mentions of the current user, or messages that
 
 ## Defined in
 
-dist/generated/types.d.ts:30647
+dist/generated/types.d.ts:31779

@@ -20,4 +20,4 @@ The ability to show an emoji status along with the user's name
 
 ## Defined in
 
-dist/generated/types.d.ts:41669
+dist/generated/types.d.ts:43063

@@ -18,7 +18,7 @@ Creates a new basic group and sends a corresponding messageBasicGroupChatCreate.
 
 ### message\_auto\_delete\_time?
 
-> `readonly` `optional` **message\_auto\_delete\_time**: [`int32`](int32-1.md)
+> `readonly` `optional` **message\_auto\_delete\_time**: [`int32`](int32.md)
 
 Message auto-delete time value, in seconds; must be from 0 up to 365 * 86400 and be divisible by 86400. If 0, then messages aren't deleted automatically
 
@@ -30,10 +30,10 @@ Title of the new basic group; 1-128 characters
 
 ### user\_ids?
 
-> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of users to be added to the basic group; may be empty to create a basic group without other members
 
 ## Defined in
 
-dist/generated/types.d.ts:84225
+dist/generated/types.d.ts:86524

@@ -8,7 +8,7 @@
 
 > **getStarRevenueStatistics$DirectInput**: `object`
 
-Returns detailed Telegram star revenue statistics
+Returns detailed Telegram Star revenue statistics
 
 ## Type declaration
 
@@ -22,8 +22,8 @@ Pass true if a dark theme is used by the application
 
 > `readonly` `optional` **owner\_id**: [`MessageSender$Input`](MessageSender$Input.md)
 
-Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
+Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
 
 ## Defined in
 
-dist/generated/types.d.ts:98455
+dist/generated/types.d.ts:101234

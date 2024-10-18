@@ -14,7 +14,7 @@ Returns pending join requests in a chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -26,13 +26,13 @@ Invite link for which to return join requests. If empty, all join requests will 
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of requests to join the chat to return
 
 ### offset\_request?
 
-> `readonly` `optional` **offset\_request**: [`chatJoinRequest$Input`](chatJoinRequest$Input-1.md) \| `null`
+> `readonly` `optional` **offset\_request**: [`chatJoinRequest$Input`](chatJoinRequest$Input.md) \| `null`
 
 A chat join request from which to return next requests; pass null to get results from the beginning
 
@@ -44,4 +44,4 @@ A query to search for in the first names, last names and usernames of the users 
 
 ## Defined in
 
-dist/generated/types.d.ts:90250
+dist/generated/types.d.ts:92747

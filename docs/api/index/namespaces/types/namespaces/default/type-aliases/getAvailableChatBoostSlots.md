@@ -6,7 +6,9 @@
 
 # Type Alias: getAvailableChatBoostSlots()
 
-> **getAvailableChatBoostSlots**: (`parameters`) => [`ChatBoostSlots`](ChatBoostSlots.md)
+> **getAvailableChatBoostSlots**: (`parameters`) => [`ChatBoostSlots`](ChatBoostSlots-1.md)
+
+Returns the list of available chat boost slots for the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatBoostSlots`](ChatBoostSlots.md)
+[`ChatBoostSlots`](ChatBoostSlots-1.md)
 
-[ChatBoostSlots](ChatBoostSlots.md)
+[ChatBoostSlots](ChatBoostSlots-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88340
+dist/generated/types.d.ts:90715

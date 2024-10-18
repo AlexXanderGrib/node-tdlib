@@ -18,7 +18,7 @@ A chat was marked as unread or was read
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ New value of is_marked_as_unread
 
 ## Defined in
 
-dist/generated/types.d.ts:54227
+dist/generated/types.d.ts:55843

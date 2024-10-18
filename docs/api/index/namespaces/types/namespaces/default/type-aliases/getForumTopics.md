@@ -6,7 +6,9 @@
 
 # Type Alias: getForumTopics()
 
-> **getForumTopics**: (`parameters`) => [`ForumTopics`](ForumTopics.md)
+> **getForumTopics**: (`parameters`) => [`ForumTopics`](ForumTopics-1.md)
+
+Returns found forum topics in a forum chat. This is a temporary method for getting information about topic list from the server
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ForumTopics`](ForumTopics.md)
+[`ForumTopics`](ForumTopics-1.md)
 
-[ForumTopics](ForumTopics.md)
+[ForumTopics](ForumTopics-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80890
+dist/generated/types.d.ts:82939

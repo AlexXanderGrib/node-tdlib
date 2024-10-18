@@ -6,7 +6,9 @@
 
 # Type Alias: getPollVoters()
 
-> **getPollVoters**: (`parameters`) => [`MessageSenders`](MessageSenders.md)
+> **getPollVoters**: (`parameters`) => [`MessageSenders`](MessageSenders-1.md)
+
+Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageSenders`](MessageSenders.md)
+[`MessageSenders`](MessageSenders-1.md)
 
-[MessageSenders](MessageSenders.md)
+[MessageSenders](MessageSenders-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82168
+dist/generated/types.d.ts:84361

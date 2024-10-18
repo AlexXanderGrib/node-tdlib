@@ -26,16 +26,16 @@ Unique identifier of the query result
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`thumbnail$Input`](thumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`thumbnail$Input`](thumbnail$Input.md) \| `null`
 
 Result thumbnail in JPEG format; may be null
 
 ### venue?
 
-> `readonly` `optional` **venue**: [`venue$Input`](venue$Input-1.md)
+> `readonly` `optional` **venue**: [`venue$Input`](venue$Input.md)
 
 Venue result
 
 ## Defined in
 
-dist/generated/types.d.ts:38462
+dist/generated/types.d.ts:39832

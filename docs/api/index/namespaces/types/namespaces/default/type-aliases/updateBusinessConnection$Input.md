@@ -20,10 +20,10 @@ A business connection has changed; for bots only
 
 ### connection?
 
-> `readonly` `optional` **connection**: [`businessConnection$Input`](businessConnection$Input-1.md)
+> `readonly` `optional` **connection**: [`businessConnection$Input`](businessConnection$Input.md)
 
 New data about the connection
 
 ## Defined in
 
-dist/generated/types.d.ts:57124
+dist/generated/types.d.ts:58764

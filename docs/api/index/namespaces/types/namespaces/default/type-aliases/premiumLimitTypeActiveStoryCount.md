@@ -18,4 +18,4 @@ The maximum number of active stories
 
 ## Defined in
 
-dist/generated/types.d.ts:41437
+dist/generated/types.d.ts:42831

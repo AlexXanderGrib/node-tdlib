@@ -6,7 +6,9 @@
 
 # Type Alias: getBasicGroupFullInfo()
 
-> **getBasicGroupFullInfo**: (`parameters`) => [`BasicGroupFullInfo`](BasicGroupFullInfo.md)
+> **getBasicGroupFullInfo**: (`parameters`) => [`BasicGroupFullInfo`](BasicGroupFullInfo-1.md)
+
+Returns full information about a basic group by its identifier
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BasicGroupFullInfo`](BasicGroupFullInfo.md)
+[`BasicGroupFullInfo`](BasicGroupFullInfo-1.md)
 
-[BasicGroupFullInfo](BasicGroupFullInfo.md)
+[BasicGroupFullInfo](BasicGroupFullInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74456
+dist/generated/types.d.ts:76444

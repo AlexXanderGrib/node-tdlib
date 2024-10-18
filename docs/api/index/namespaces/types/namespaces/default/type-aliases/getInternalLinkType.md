@@ -8,6 +8,8 @@
 
 > **getInternalLinkType**: (`parameters`) => [`InternalLinkType`](InternalLinkType.md)
 
+Returns information about the type of internal link. Returns a 404 error if the link is not internal. Can be called before authorization
+
 ## Parameters
 
 • **parameters**: [`getInternalLinkType$Input`](getInternalLinkType$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:83881
+dist/generated/types.d.ts:86180

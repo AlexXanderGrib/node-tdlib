@@ -6,13 +6,13 @@
 
 # Function: inlineKeyboard()
 
-> **inlineKeyboard**(): `InlineKeyboardBuilder`
+> **inlineKeyboard**(): [`InlineKeyboardBuilder`](../classes/InlineKeyboardBuilder.md)
 
 ## Returns
 
-`InlineKeyboardBuilder`
+[`InlineKeyboardBuilder`](../classes/InlineKeyboardBuilder.md)
 
-InlineKeyboardBuilder
+[InlineKeyboardBuilder](../classes/InlineKeyboardBuilder.md)
 
 ## Export
 

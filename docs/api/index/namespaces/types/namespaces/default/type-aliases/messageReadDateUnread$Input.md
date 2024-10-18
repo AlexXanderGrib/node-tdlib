@@ -20,4 +20,4 @@ The message is unread yet
 
 ## Defined in
 
-dist/generated/types.d.ts:12135
+dist/generated/types.d.ts:12739

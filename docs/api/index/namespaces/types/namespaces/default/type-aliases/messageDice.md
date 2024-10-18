@@ -36,16 +36,16 @@ The animated stickers with the initial dice animation; may be null if unknown. T
 
 ### success\_animation\_frame\_number
 
-> **success\_animation\_frame\_number**: [`int32`](int32-1.md)
+> **success\_animation\_frame\_number**: [`int32`](int32.md)
 
 Number of frame after which a success animation like a shower of confetti needs to be shown on updateMessageSendSucceeded
 
 ### value
 
-> **value**: [`int32`](int32-1.md)
+> **value**: [`int32`](int32.md)
 
 The dice value. If the value is 0, the dice don't have final state yet
 
 ## Defined in
 
-dist/generated/types.d.ts:26445
+dist/generated/types.d.ts:27205

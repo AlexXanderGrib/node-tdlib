@@ -14,10 +14,10 @@ Sets default administrator rights for adding the bot to basic group and supergro
 
 ### default\_group\_administrator\_rights?
 
-> `readonly` `optional` **default\_group\_administrator\_rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input-1.md) \| `null`
+> `readonly` `optional` **default\_group\_administrator\_rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input.md) \| `null`
 
 Default administrator rights for adding the bot to basic group and supergroup chats; pass null to remove default rights
 
 ## Defined in
 
-dist/generated/types.d.ts:95114
+dist/generated/types.d.ts:97611

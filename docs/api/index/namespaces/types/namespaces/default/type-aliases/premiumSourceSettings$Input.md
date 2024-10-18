@@ -20,4 +20,4 @@ A user opened the Premium features screen from settings
 
 ## Defined in
 
-dist/generated/types.d.ts:42353
+dist/generated/types.d.ts:43747

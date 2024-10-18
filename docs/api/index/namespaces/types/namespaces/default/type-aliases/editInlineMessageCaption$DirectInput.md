@@ -14,7 +14,7 @@ Edits the caption of an inline message sent via a bot; for bots only
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 New message content caption; pass null to remove caption; 0-getOption("message_caption_length_max") characters
 
@@ -38,4 +38,4 @@ Pass true to show the caption above the media; otherwise, the caption will be sh
 
 ## Defined in
 
-dist/generated/types.d.ts:79332
+dist/generated/types.d.ts:81323

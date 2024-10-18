@@ -96,3 +96,4 @@ async function init() {
 // Observable will complete after client.destroy() call
 const updates = new Observable(client.updates.toRxObserver());
 ```
+

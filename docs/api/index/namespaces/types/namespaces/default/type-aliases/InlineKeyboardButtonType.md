@@ -21,4 +21,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:61211
+dist/generated/types.d.ts:62951

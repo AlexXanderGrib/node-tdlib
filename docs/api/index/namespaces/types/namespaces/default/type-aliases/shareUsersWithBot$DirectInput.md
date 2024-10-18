@@ -14,19 +14,19 @@ Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
 
 ### button\_id?
 
-> `readonly` `optional` **button\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **button\_id**: [`int32`](int32.md)
 
 Identifier of the button
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat with the bot
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message with the button
 
@@ -38,10 +38,10 @@ Pass true to check that the users can be shared by the button instead of actuall
 
 ### shared\_user\_ids?
 
-> `readonly` `optional` **shared\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **shared\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the shared users
 
 ## Defined in
 
-dist/generated/types.d.ts:82436
+dist/generated/types.d.ts:84629

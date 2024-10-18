@@ -24,10 +24,10 @@ True, if the message is a pinned message with the specified content
 
 ### video\_note
 
-> **video\_note**: [`videoNote`](videoNote-1.md) \| `null`
+> **video\_note**: [`videoNote`](videoNote.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44821
+dist/generated/types.d.ts:46347

@@ -20,4 +20,4 @@ New log stream
 
 ## Defined in
 
-dist/generated/types.d.ts:101669
+dist/generated/types.d.ts:104590

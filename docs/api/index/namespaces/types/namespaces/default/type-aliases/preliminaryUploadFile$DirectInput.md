@@ -30,10 +30,10 @@ File type; pass null if unknown
 
 ### priority?
 
-> `readonly` `optional` **priority**: [`int32`](int32-1.md)
+> `readonly` `optional` **priority**: [`int32`](int32.md)
 
 Priority of the upload (1-32). The higher the priority, the earlier the file will be uploaded. If the priorities of two files are equal, then the first one for which preliminaryUploadFile was called will be uploaded first
 
 ## Defined in
 
-dist/generated/types.d.ts:88968
+dist/generated/types.d.ts:91343

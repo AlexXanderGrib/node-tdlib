@@ -18,7 +18,7 @@ A detailed statistics about a channel chat
 
 ### enabled\_notifications\_percentage
 
-> **enabled\_notifications\_percentage**: [`double`](double-1.md)
+> **enabled\_notifications\_percentage**: [`double`](double.md)
 
 A percentage of users with enabled notifications for the chat; 0-100
 
@@ -48,43 +48,43 @@ A graph containing number of users viewed chat messages per language
 
 ### mean\_message\_reaction\_count
 
-> **mean\_message\_reaction\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **mean\_message\_reaction\_count**: [`statisticalValue`](statisticalValue.md)
 
 Mean number of times reactions were added to the recently sent messages
 
 ### mean\_message\_share\_count
 
-> **mean\_message\_share\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **mean\_message\_share\_count**: [`statisticalValue`](statisticalValue.md)
 
 Mean number of times the recently sent messages were shared
 
 ### mean\_message\_view\_count
 
-> **mean\_message\_view\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **mean\_message\_view\_count**: [`statisticalValue`](statisticalValue.md)
 
 Mean number of times the recently sent messages were viewed
 
 ### mean\_story\_reaction\_count
 
-> **mean\_story\_reaction\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **mean\_story\_reaction\_count**: [`statisticalValue`](statisticalValue.md)
 
 Mean number of times reactions were added to the recently sent stories
 
 ### mean\_story\_share\_count
 
-> **mean\_story\_share\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **mean\_story\_share\_count**: [`statisticalValue`](statisticalValue.md)
 
 Mean number of times the recently sent stories were shared
 
 ### mean\_story\_view\_count
 
-> **mean\_story\_view\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **mean\_story\_view\_count**: [`statisticalValue`](statisticalValue.md)
 
 Mean number of times the recently sent stories were viewed
 
 ### member\_count
 
-> **member\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **member\_count**: [`statisticalValue`](statisticalValue.md)
 
 Number of members in the chat
 
@@ -114,13 +114,13 @@ A graph containing number of members muted and unmuted the chat
 
 ### period
 
-> **period**: [`dateRange`](dateRange-1.md)
+> **period**: [`dateRange`](dateRange.md)
 
 A period to which the statistics applies
 
 ### recent\_interactions
 
-> **recent\_interactions**: [`vector`](vector.md)\<[`chatStatisticsInteractionInfo`](chatStatisticsInteractionInfo-1.md)\>
+> **recent\_interactions**: [`vector`](vector.md)\<[`chatStatisticsInteractionInfo`](chatStatisticsInteractionInfo.md)\>
 
 Detailed statistics about number of views and shares of recently sent messages and stories
 
@@ -150,4 +150,4 @@ A graph containing number of message views per source
 
 ## Defined in
 
-dist/generated/types.d.ts:51569
+dist/generated/types.d.ts:53185

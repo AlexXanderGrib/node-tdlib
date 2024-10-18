@@ -18,4 +18,4 @@ The media is a photo. The photo must be at most 10 MB in size. The photo's width
 
 ## Defined in
 
-dist/generated/types.d.ts:28879
+dist/generated/types.d.ts:29753

@@ -6,7 +6,9 @@
 
 # Type Alias: getInternalLink()
 
-> **getInternalLink**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getInternalLink**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns an HTTPS or a tg: link with the given type. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83853
+dist/generated/types.d.ts:86152

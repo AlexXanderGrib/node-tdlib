@@ -26,4 +26,4 @@ If specified, only chats from the scope will be returned; pass null to return ch
 
 ## Defined in
 
-dist/generated/types.d.ts:86877
+dist/generated/types.d.ts:89176

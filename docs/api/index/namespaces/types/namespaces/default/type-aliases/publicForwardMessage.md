@@ -18,10 +18,10 @@ Contains a public forward as a message
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 Information about the message
 
 ## Defined in
 
-dist/generated/types.d.ts:33635
+dist/generated/types.d.ts:34913

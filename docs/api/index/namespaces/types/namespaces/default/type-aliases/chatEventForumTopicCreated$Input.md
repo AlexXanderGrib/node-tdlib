@@ -20,10 +20,10 @@ A new forum topic was created
 
 ### topic\_info?
 
-> `readonly` `optional` **topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input-1.md)
+> `readonly` `optional` **topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input.md)
 
 Information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40544
+dist/generated/types.d.ts:41938

@@ -6,7 +6,13 @@
 
 # Type Alias: searchSavedMessages()
 
-> **searchSavedMessages**: (`parameters`) => [`FoundChatMessages`](FoundChatMessages.md)
+> **searchSavedMessages**: (`parameters`) => [`FoundChatMessages`](FoundChatMessages-1.md)
+
+Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
+
+- Returns the results in reverse chronological order, i.e. in order of decreasing message_id
+
+- For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
 
 ## Parameters
 
@@ -16,10 +22,10 @@
 
 ## Returns
 
-[`FoundChatMessages`](FoundChatMessages.md)
+[`FoundChatMessages`](FoundChatMessages-1.md)
 
-[FoundChatMessages](FoundChatMessages.md)
+[FoundChatMessages](FoundChatMessages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76675
+dist/generated/types.d.ts:78701

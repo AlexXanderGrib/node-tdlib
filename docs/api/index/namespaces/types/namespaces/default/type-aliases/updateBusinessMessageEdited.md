@@ -24,10 +24,10 @@ Unique identifier of the business connection
 
 ### message
 
-> **message**: [`businessMessage`](businessMessage-1.md)
+> **message**: [`businessMessage`](businessMessage.md)
 
 The edited message
 
 ## Defined in
 
-dist/generated/types.d.ts:57169
+dist/generated/types.d.ts:58809

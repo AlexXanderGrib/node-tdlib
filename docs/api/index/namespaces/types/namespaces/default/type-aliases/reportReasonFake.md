@@ -18,4 +18,4 @@ The chat represents a fake account
 
 ## Defined in
 
-dist/generated/types.d.ts:47193
+dist/generated/types.d.ts:48719

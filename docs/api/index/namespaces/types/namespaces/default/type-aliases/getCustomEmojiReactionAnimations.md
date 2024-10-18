@@ -6,7 +6,9 @@
 
 # Type Alias: getCustomEmojiReactionAnimations()
 
-> **getCustomEmojiReactionAnimations**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getCustomEmojiReactionAnimations**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns TGS stickers with generic animations for custom emoji reactions
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81193
+dist/generated/types.d.ts:83242

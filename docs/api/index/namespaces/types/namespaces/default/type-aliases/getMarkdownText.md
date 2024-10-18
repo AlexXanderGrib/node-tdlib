@@ -6,7 +6,9 @@
 
 # Type Alias: getMarkdownText()
 
-> **getMarkdownText**: (`parameters`) => [`FormattedText`](FormattedText.md)
+> **getMarkdownText**: (`parameters`) => [`FormattedText`](FormattedText-1.md)
+
+Replaces text entities with Markdown formatting in a human-friendly format. Entities that can't be represented in Markdown unambiguously are kept as is. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FormattedText`](FormattedText.md)
+[`FormattedText`](FormattedText-1.md)
 
-[FormattedText](FormattedText.md)
+[FormattedText](FormattedText-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81798
+dist/generated/types.d.ts:83991

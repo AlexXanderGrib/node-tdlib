@@ -18,4 +18,4 @@ The file is an animation
 
 ## Defined in
 
-dist/generated/types.d.ts:48947
+dist/generated/types.d.ts:50531

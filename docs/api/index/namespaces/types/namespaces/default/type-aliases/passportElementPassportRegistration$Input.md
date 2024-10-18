@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's passport registration pages
 
 ### passport\_registration?
 
-> `readonly` `optional` **passport\_registration**: [`personalDocument$Input`](personalDocument$Input-1.md)
+> `readonly` `optional` **passport\_registration**: [`personalDocument$Input`](personalDocument$Input.md)
 
 Passport registration pages
 
 ## Defined in
 
-dist/generated/types.d.ts:24570
+dist/generated/types.d.ts:25330

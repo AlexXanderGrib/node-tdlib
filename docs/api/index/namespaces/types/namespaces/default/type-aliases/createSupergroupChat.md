@@ -6,7 +6,9 @@
 
 # Type Alias: createSupergroupChat()
 
-> **createSupergroupChat**: (`parameters`) => [`Chat`](Chat.md)
+> **createSupergroupChat**: (`parameters`) => [`Chat`](Chat-1.md)
+
+Returns an existing chat corresponding to a known supergroup or channel
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chat`](Chat.md)
+[`Chat`](Chat-1.md)
 
-[Chat](Chat.md)
+[Chat](Chat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84193
+dist/generated/types.d.ts:86492

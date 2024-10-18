@@ -30,10 +30,10 @@ The invoice
 
 ### order\_info?
 
-> `readonly` `optional` **order\_info**: [`orderInfo$Input`](orderInfo$Input-1.md) \| `null`
+> `readonly` `optional` **order\_info**: [`orderInfo$Input`](orderInfo$Input.md) \| `null`
 
 The order information, provided by the user; pass null if empty
 
 ## Defined in
 
-dist/generated/types.d.ts:96800
+dist/generated/types.d.ts:99579

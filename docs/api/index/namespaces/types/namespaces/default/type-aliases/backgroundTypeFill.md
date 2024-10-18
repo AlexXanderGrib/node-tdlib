@@ -24,4 +24,4 @@ The background fill
 
 ## Defined in
 
-dist/generated/types.d.ts:43435
+dist/generated/types.d.ts:44961

@@ -8,6 +8,8 @@
 
 > **getLoginUrlInfo**: (`parameters`) => [`LoginUrlInfo`](LoginUrlInfo.md)
 
+Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The method needs to be called when the user presses the button
+
 ## Parameters
 
 • **parameters**: [`getLoginUrlInfo$Input`](getLoginUrlInfo$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:82337
+dist/generated/types.d.ts:84530

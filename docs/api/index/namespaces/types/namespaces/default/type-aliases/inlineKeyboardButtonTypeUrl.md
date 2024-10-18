@@ -24,4 +24,4 @@ HTTP or tg:// URL to open. If the link is of the type internalLinkTypeWebApp, th
 
 ## Defined in
 
-dist/generated/types.d.ts:17487
+dist/generated/types.d.ts:18079

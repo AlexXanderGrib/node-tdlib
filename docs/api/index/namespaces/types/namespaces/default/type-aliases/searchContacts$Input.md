@@ -18,7 +18,7 @@ Searches for the specified query in the first names, last names and usernames of
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of users to be returned
 
@@ -30,4 +30,4 @@ Query to search for; may be empty to return all contacts
 
 ## Defined in
 
-dist/generated/types.d.ts:92140
+dist/generated/types.d.ts:94637

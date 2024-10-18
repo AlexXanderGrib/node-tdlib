@@ -6,7 +6,9 @@
 
 # Type Alias: createChatFolderInviteLink()
 
-> **createChatFolderInviteLink**: (`parameters`) => [`ChatFolderInviteLink`](ChatFolderInviteLink.md)
+> **createChatFolderInviteLink**: (`parameters`) => [`ChatFolderInviteLink`](ChatFolderInviteLink-1.md)
+
+Creates a new invite link for a chat folder. A link can be created for a chat folder if it has only pinned and included chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatFolderInviteLink`](ChatFolderInviteLink.md)
+[`ChatFolderInviteLink`](ChatFolderInviteLink-1.md)
 
-[ChatFolderInviteLink](ChatFolderInviteLink.md)
+[ChatFolderInviteLink](ChatFolderInviteLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84854
+dist/generated/types.d.ts:87153

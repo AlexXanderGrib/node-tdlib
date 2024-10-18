@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageLinkInfo()
 
-> **getMessageLinkInfo**: (`parameters`) => [`MessageLinkInfo`](MessageLinkInfo.md)
+> **getMessageLinkInfo**: (`parameters`) => [`MessageLinkInfo`](MessageLinkInfo-1.md)
+
+Returns information about a public or private message link. Can be called for any internal link of the type internalLinkTypeMessage
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageLinkInfo`](MessageLinkInfo.md)
+[`MessageLinkInfo`](MessageLinkInfo-1.md)
 
-[MessageLinkInfo](MessageLinkInfo.md)
+[MessageLinkInfo](MessageLinkInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77798
+dist/generated/types.d.ts:79807

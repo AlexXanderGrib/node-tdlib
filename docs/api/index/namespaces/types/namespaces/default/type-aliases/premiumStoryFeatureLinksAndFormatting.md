@@ -18,4 +18,4 @@ The ability to use links and formatting in story caption, and use inputStoryArea
 
 ## Defined in
 
-dist/generated/types.d.ts:42085
+dist/generated/types.d.ts:43479

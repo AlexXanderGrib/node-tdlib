@@ -18,4 +18,4 @@ Suggests the user to check whether they still remember their 2-step verification
 
 ## Defined in
 
-dist/generated/types.d.ts:50381
+dist/generated/types.d.ts:51979

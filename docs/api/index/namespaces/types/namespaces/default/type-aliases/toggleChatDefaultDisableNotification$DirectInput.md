@@ -14,7 +14,7 @@ Changes the value of the default disable_notification parameter, used when a mes
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -26,4 +26,4 @@ New value of default_disable_notification
 
 ## Defined in
 
-dist/generated/types.d.ts:85861
+dist/generated/types.d.ts:88160

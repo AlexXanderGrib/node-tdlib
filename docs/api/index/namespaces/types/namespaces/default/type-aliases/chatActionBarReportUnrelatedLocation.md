@@ -18,4 +18,4 @@ The chat is a location-based supergroup, which can be reported as having unrelat
 
 ## Defined in
 
-dist/generated/types.d.ts:16967
+dist/generated/types.d.ts:17559

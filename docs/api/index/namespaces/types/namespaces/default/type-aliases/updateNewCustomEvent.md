@@ -24,4 +24,4 @@ A JSON-serialized event
 
 ## Defined in
 
-dist/generated/types.d.ts:57735
+dist/generated/types.d.ts:59375

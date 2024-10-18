@@ -20,16 +20,16 @@ Information about a group call participant was changed. The updates are sent onl
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Identifier of group call
 
 ### participant?
 
-> `readonly` `optional` **participant**: [`groupCallParticipant$Input`](groupCallParticipant$Input-1.md)
+> `readonly` `optional` **participant**: [`groupCallParticipant$Input`](groupCallParticipant$Input.md)
 
 New data about a participant
 
 ## Defined in
 
-dist/generated/types.d.ts:55637
+dist/generated/types.d.ts:57253

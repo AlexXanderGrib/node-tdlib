@@ -6,7 +6,9 @@
 
 # Type Alias: setStickerPositionInSet()
 
-> **setStickerPositionInSet**: (`parameters`) => [`Ok`](Ok.md)
+> **setStickerPositionInSet**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100170
+dist/generated/types.d.ts:102949

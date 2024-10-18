@@ -24,10 +24,10 @@ The link to edit
 
 ### link\_info?
 
-> `readonly` `optional` **link\_info**: [`inputBusinessChatLink$Input`](inputBusinessChatLink$Input-1.md)
+> `readonly` `optional` **link\_info**: [`inputBusinessChatLink$Input`](inputBusinessChatLink$Input.md)
 
 New description of the link
 
 ## Defined in
 
-dist/generated/types.d.ts:94774
+dist/generated/types.d.ts:97271

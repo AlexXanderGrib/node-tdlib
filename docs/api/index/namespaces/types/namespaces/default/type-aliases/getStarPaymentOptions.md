@@ -6,7 +6,9 @@
 
 # Type Alias: getStarPaymentOptions()
 
-> **getStarPaymentOptions**: (`parameters`) => [`StarPaymentOptions`](StarPaymentOptions.md)
+> **getStarPaymentOptions**: (`parameters`) => [`StarPaymentOptions`](StarPaymentOptions-1.md)
+
+Returns available options for Telegram Stars purchase
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StarPaymentOptions`](StarPaymentOptions.md)
+[`StarPaymentOptions`](StarPaymentOptions-1.md)
 
-[StarPaymentOptions](StarPaymentOptions.md)
+[StarPaymentOptions](StarPaymentOptions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100740
+dist/generated/types.d.ts:103519

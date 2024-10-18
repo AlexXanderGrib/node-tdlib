@@ -26,4 +26,4 @@ List of emojis to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:31621
+dist/generated/types.d.ts:32753

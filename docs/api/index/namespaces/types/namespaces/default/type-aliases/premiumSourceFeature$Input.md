@@ -26,4 +26,4 @@ The used feature
 
 ## Defined in
 
-dist/generated/types.d.ts:42262
+dist/generated/types.d.ts:43656

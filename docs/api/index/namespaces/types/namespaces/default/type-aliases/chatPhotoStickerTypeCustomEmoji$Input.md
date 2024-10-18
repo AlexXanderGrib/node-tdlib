@@ -20,10 +20,10 @@ Information about the custom emoji, which was used to create the chat photo
 
 ### custom\_emoji\_id?
 
-> `readonly` `optional` **custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the custom emoji
 
 ## Defined in
 
-dist/generated/types.d.ts:7272
+dist/generated/types.d.ts:7338

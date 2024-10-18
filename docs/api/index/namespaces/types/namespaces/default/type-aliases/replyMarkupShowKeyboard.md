@@ -48,10 +48,10 @@ True, if the application needs to resize the keyboard vertically
 
 ### rows
 
-> **rows**: [`vector`](vector.md)\<[`vector`](vector.md)\<[`keyboardButton`](keyboardButton-1.md)\>\>
+> **rows**: [`vector`](vector.md)\<[`vector`](vector.md)\<[`keyboardButton`](keyboardButton.md)\>\>
 
 A list of rows of bot keyboard buttons
 
 ## Defined in
 
-dist/generated/types.d.ts:17805
+dist/generated/types.d.ts:18397

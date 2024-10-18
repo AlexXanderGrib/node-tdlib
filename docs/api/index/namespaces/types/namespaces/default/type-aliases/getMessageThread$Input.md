@@ -8,7 +8,7 @@
 
 > **getMessageThread$Input**: `object`
 
-Returns information about a message thread. Can be used only if message.can_get_message_thread == true
+Returns information about a message thread. Can be used only if messageProperties.can_get_message_thread == true
 
 ## Type declaration
 
@@ -18,16 +18,16 @@ Returns information about a message thread. Can be used only if message.can_get_
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
 ## Defined in
 
-dist/generated/types.d.ts:74812
+dist/generated/types.d.ts:76838

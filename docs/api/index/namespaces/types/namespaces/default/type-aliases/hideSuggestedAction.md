@@ -6,7 +6,9 @@
 
 # Type Alias: hideSuggestedAction()
 
-> **hideSuggestedAction**: (`parameters`) => [`Ok`](Ok.md)
+> **hideSuggestedAction**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Hides a suggested action
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82244
+dist/generated/types.d.ts:84437

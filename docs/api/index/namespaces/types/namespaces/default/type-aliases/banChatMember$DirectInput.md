@@ -14,13 +14,13 @@ Bans a member in a chat; requires can_restrict_members administrator right. Memb
 
 ### banned\_until\_date?
 
-> `readonly` `optional` **banned\_until\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **banned\_until\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days or for less than 30 seconds from the current time, the user is considered to be banned forever. Ignored in basic groups and if a chat is banned
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -38,4 +38,4 @@ Pass true to delete all messages in the chat for the user that is being removed.
 
 ## Defined in
 
-dist/generated/types.d.ts:86511
+dist/generated/types.d.ts:88810

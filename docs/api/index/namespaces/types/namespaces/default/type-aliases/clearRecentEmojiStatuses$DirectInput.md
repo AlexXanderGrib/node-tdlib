@@ -12,4 +12,4 @@ Clears the list of recently used emoji statuses for self status
 
 ## Defined in
 
-dist/generated/types.d.ts:88695
+dist/generated/types.d.ts:91070

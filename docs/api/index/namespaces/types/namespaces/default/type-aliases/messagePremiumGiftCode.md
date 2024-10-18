@@ -18,7 +18,7 @@ A Telegram Premium gift code was created for the user
 
 ### amount
 
-> **amount**: [`int53`](int53-1.md)
+> **amount**: [`int53`](int53.md)
 
 The paid amount, in the smallest units of the currency; 0 if unknown
 
@@ -42,7 +42,7 @@ Cryptocurrency used to pay for the gift; may be empty if none or unknown
 
 ### cryptocurrency\_amount
 
-> **cryptocurrency\_amount**: [`int64`](int64-1.md)
+> **cryptocurrency\_amount**: [`int64`](int64.md)
 
 The paid amount, in the smallest units of the cryptocurrency; 0 if unknown
 
@@ -66,16 +66,16 @@ True, if the winner for the corresponding Telegram Premium subscription wasn't c
 
 ### month\_count
 
-> **month\_count**: [`int32`](int32-1.md)
+> **month\_count**: [`int32`](int32.md)
 
 Number of months the Telegram Premium subscription will be active after code activation
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md) \| `null`
+> **sticker**: [`sticker`](sticker.md) \| `null`
 
 A sticker to be shown in the message; may be null if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:27847
+dist/generated/types.d.ts:28617

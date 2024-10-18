@@ -20,16 +20,16 @@ Describes a message to be replied in the same chat and forum topic
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-The identifier of the message to be replied in the same chat and forum topic
+The identifier of the message to be replied in the same chat and forum topic. A message can be replied in the same chat and forum topic only if messageProperties.can_be_replied
 
 ### quote?
 
-> `readonly` `optional` **quote**: [`inputTextQuote$Input`](inputTextQuote$Input-1.md) \| `null`
+> `readonly` `optional` **quote**: [`inputTextQuote$Input`](inputTextQuote$Input.md) \| `null`
 
 Quote from the message to be replied; pass null if none. Must always be null for replies in secret chats
 
 ## Defined in
 
-dist/generated/types.d.ts:13273
+dist/generated/types.d.ts:13975

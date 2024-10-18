@@ -18,16 +18,16 @@ Changes the notification settings of a chat. Notification settings of a chat wit
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### notification\_settings?
 
-> `readonly` `optional` **notification\_settings**: [`chatNotificationSettings$Input`](chatNotificationSettings$Input-1.md)
+> `readonly` `optional` **notification\_settings**: [`chatNotificationSettings$Input`](chatNotificationSettings$Input.md)
 
 New notification settings for the chat. If the chat is muted for more than 366 days, it is considered to be muted forever
 
 ## Defined in
 
-dist/generated/types.d.ts:85655
+dist/generated/types.d.ts:87954

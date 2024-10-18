@@ -28,4 +28,4 @@ List of emojis to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:31636
+dist/generated/types.d.ts:32768

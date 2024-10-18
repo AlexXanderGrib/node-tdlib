@@ -20,10 +20,10 @@ A forward of the story as a message
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 The message with story forward
 
 ## Defined in
 
-dist/generated/types.d.ts:33310
+dist/generated/types.d.ts:34588

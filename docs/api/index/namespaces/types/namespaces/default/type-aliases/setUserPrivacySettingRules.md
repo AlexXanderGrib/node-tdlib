@@ -6,7 +6,9 @@
 
 # Type Alias: setUserPrivacySettingRules()
 
-> **setUserPrivacySettingRules**: (`parameters`) => [`Ok`](Ok.md)
+> **setUserPrivacySettingRules**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes user privacy settings
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97763
+dist/generated/types.d.ts:100542

@@ -18,10 +18,10 @@ A sticker set has changed
 
 ### sticker\_set
 
-> **sticker\_set**: [`stickerSet`](stickerSet-1.md)
+> **sticker\_set**: [`stickerSet`](stickerSet.md)
 
 The sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:56101
+dist/generated/types.d.ts:57717

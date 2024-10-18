@@ -6,7 +6,9 @@
 
 # Type Alias: setChatDraftMessage()
 
-> **setChatDraftMessage**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatDraftMessage**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the draft message in a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85651
+dist/generated/types.d.ts:87950

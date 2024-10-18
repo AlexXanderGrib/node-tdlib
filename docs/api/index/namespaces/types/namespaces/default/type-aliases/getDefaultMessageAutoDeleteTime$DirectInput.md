@@ -12,4 +12,4 @@ Returns default message auto-delete time setting for new chats
 
 ## Defined in
 
-dist/generated/types.d.ts:98112
+dist/generated/types.d.ts:100891

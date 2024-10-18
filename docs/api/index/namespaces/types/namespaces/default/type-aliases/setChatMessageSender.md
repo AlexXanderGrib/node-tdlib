@@ -6,7 +6,9 @@
 
 # Type Alias: setChatMessageSender()
 
-> **setChatMessageSender**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatMessageSender**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Selects a message sender to send messages in a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78068
+dist/generated/types.d.ts:80077

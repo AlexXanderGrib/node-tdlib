@@ -18,4 +18,4 @@ A rule to allow all users to do something
 
 ## Defined in
 
-dist/generated/types.d.ts:45979
+dist/generated/types.d.ts:47505

@@ -6,7 +6,9 @@
 
 # Type Alias: getTemporaryPasswordState()
 
-> **getTemporaryPasswordState**: (`parameters`) => [`TemporaryPasswordState`](TemporaryPasswordState.md)
+> **getTemporaryPasswordState**: (`parameters`) => [`TemporaryPasswordState`](TemporaryPasswordState-1.md)
+
+Returns information about the current temporary password
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TemporaryPasswordState`](TemporaryPasswordState.md)
+[`TemporaryPasswordState`](TemporaryPasswordState-1.md)
 
-[TemporaryPasswordState](TemporaryPasswordState.md)
+[TemporaryPasswordState](TemporaryPasswordState-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74327
+dist/generated/types.d.ts:76315

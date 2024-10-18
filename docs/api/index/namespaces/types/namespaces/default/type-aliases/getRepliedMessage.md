@@ -6,7 +6,13 @@
 
 # Type Alias: getRepliedMessage()
 
-> **getRepliedMessage**: (`parameters`) => [`Message`](Message.md)
+> **getRepliedMessage**: (`parameters`) => [`Message`](Message-1.md)
+
+Returns information about a non-bundled message that is replied by a given message. Also, returns the pinned message, the game message, the invoice message,
+
+- the message with a previously set same background, the giveaway message, and the topic creation message for messages of the types
+
+- messagePinMessage, messageGameScore, messagePaymentSuccessful, messageChatSetBackground, messagePremiumGiveawayCompleted and topic messages without non-bundled replied message respectively
 
 ## Parameters
 
@@ -16,10 +22,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74694
+dist/generated/types.d.ts:76682

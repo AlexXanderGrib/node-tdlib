@@ -8,6 +8,8 @@
 
 > **getLanguagePackString**: (`parameters`) => [`LanguagePackStringValue`](LanguagePackStringValue.md)
 
+Returns a string stored in the local database from the specified localization target and language pack by its key. Returns a 404 error if the string is not found. Can be called synchronously
+
 ## Parameters
 
 • **parameters**: [`getLanguagePackString$Input`](getLanguagePackString$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:81968
+dist/generated/types.d.ts:84161

@@ -18,4 +18,4 @@ Autosave settings applied to all basic group and supergroup chats without chat-s
 
 ## Defined in
 
-dist/generated/types.d.ts:49803
+dist/generated/types.d.ts:51387

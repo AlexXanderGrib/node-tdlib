@@ -18,10 +18,10 @@ The message is being sent now, but has not yet been delivered to the server
 
 ### sending\_id
 
-> **sending\_id**: [`int32`](int32-1.md)
+> **sending\_id**: [`int32`](int32.md)
 
 Non-persistent message sending identifier, specified by the application
 
 ## Defined in
 
-dist/generated/types.d.ts:12959
+dist/generated/types.d.ts:13661

@@ -22,4 +22,4 @@ New login email address
 
 ## Defined in
 
-dist/generated/types.d.ts:73951
+dist/generated/types.d.ts:75939

@@ -24,4 +24,4 @@ The new list of active emoji reactions
 
 ## Defined in
 
-dist/generated/types.d.ts:56627
+dist/generated/types.d.ts:58243

@@ -6,7 +6,9 @@
 
 # Type Alias: downloadFile()
 
-> **downloadFile**: (`parameters`) => [`File`](File.md)
+> **downloadFile**: (`parameters`) => [`File`](File-1.md)
+
+Downloads a file from the cloud. Download progress and completion of the download will be notified through updateFile updates
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`File`](File.md)
+[`File`](File-1.md)
 
-[File](File.md)
+[File](File-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88821
+dist/generated/types.d.ts:91196

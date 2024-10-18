@@ -24,13 +24,13 @@ Pass true to immediately enable the proxy
 
 ### port?
 
-> `readonly` `optional` **port**: [`int32`](int32-1.md)
+> `readonly` `optional` **port**: [`int32`](int32.md)
 
 Proxy server port
 
 ### proxy\_id?
 
-> `readonly` `optional` **proxy\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **proxy\_id**: [`int32`](int32.md)
 
 Proxy identifier
 
@@ -48,4 +48,4 @@ Proxy type
 
 ## Defined in
 
-dist/generated/types.d.ts:101444
+dist/generated/types.d.ts:104365

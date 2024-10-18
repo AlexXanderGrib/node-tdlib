@@ -18,4 +18,4 @@ A group containing a notification of type notificationTypeNewSecretChat
 
 ## Defined in
 
-dist/generated/types.d.ts:45395
+dist/generated/types.d.ts:46921

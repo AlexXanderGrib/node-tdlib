@@ -6,7 +6,9 @@
 
 # Type Alias: importMessages()
 
-> **importMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **importMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Imports messages exported from another app
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89663
+dist/generated/types.d.ts:92038

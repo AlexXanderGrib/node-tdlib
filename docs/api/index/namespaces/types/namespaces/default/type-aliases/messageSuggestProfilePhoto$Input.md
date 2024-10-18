@@ -20,10 +20,10 @@ A profile photo was suggested to a user in a private chat
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`chatPhoto$Input`](chatPhoto$Input-1.md)
+> `readonly` `optional` **photo**: [`chatPhoto$Input`](chatPhoto$Input.md)
 
 The suggested chat photo. Use the method setProfilePhoto with inputChatPhotoPrevious to apply the photo
 
 ## Defined in
 
-dist/generated/types.d.ts:27422
+dist/generated/types.d.ts:28182

@@ -20,7 +20,7 @@ The link is a link to a proxy. Call addProxy with the given parameters to proces
 
 ### port?
 
-> `readonly` `optional` **port**: [`int32`](int32-1.md)
+> `readonly` `optional` **port**: [`int32`](int32.md)
 
 Proxy server port
 
@@ -38,4 +38,4 @@ Type of the proxy
 
 ## Defined in
 
-dist/generated/types.d.ts:48216
+dist/generated/types.d.ts:49836

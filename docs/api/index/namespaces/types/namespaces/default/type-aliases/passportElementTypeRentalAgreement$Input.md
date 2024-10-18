@@ -20,4 +20,4 @@ A Telegram Passport element containing the user's rental agreement
 
 ## Defined in
 
-dist/generated/types.d.ts:23905
+dist/generated/types.d.ts:24665

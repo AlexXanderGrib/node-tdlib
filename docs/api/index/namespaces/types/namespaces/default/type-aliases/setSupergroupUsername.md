@@ -6,7 +6,9 @@
 
 # Type Alias: setSupergroupUsername()
 
-> **setSupergroupUsername**: (`parameters`) => [`Ok`](Ok.md)
+> **setSupergroupUsername**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the editable username of a supergroup or channel, requires owner privileges in the supergroup or channel
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95935
+dist/generated/types.d.ts:98704

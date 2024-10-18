@@ -20,16 +20,16 @@ A notification was changed
 
 ### notification?
 
-> `readonly` `optional` **notification**: [`notification$Input`](notification$Input-1.md)
+> `readonly` `optional` **notification**: [`notification$Input`](notification$Input.md)
 
 Changed notification
 
 ### notification\_group\_id?
 
-> `readonly` `optional` **notification\_group\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **notification\_group\_id**: [`int32`](int32.md)
 
 Unique notification group identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:54709
+dist/generated/types.d.ts:56325

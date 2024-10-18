@@ -20,16 +20,16 @@ A chat photo was changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`chatPhotoInfo$Input`](chatPhotoInfo$Input-1.md) \| `null`
+> `readonly` `optional` **photo**: [`chatPhotoInfo$Input`](chatPhotoInfo$Input.md) \| `null`
 
 The new chat photo; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:53267
+dist/generated/types.d.ts:54883

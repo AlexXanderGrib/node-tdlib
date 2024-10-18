@@ -20,4 +20,4 @@ Notifications for reactions are shown for all reactions
 
 ## Defined in
 
-dist/generated/types.d.ts:15175
+dist/generated/types.d.ts:15767

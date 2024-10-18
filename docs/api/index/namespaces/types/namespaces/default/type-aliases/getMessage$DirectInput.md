@@ -14,16 +14,16 @@ Returns information about a message
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message to get
 
 ## Defined in
 
-dist/generated/types.d.ts:74588
+dist/generated/types.d.ts:76576

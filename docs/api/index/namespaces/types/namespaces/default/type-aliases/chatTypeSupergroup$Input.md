@@ -26,10 +26,10 @@ True, if the supergroup is a channel
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Supergroup or channel identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:15355
+dist/generated/types.d.ts:15947

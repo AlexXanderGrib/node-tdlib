@@ -18,10 +18,10 @@ A quick reply shortcut and all its messages were deleted
 
 ### shortcut\_id
 
-> **shortcut\_id**: [`int32`](int32-1.md)
+> **shortcut\_id**: [`int32`](int32.md)
 
 The identifier of the deleted shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:54517
+dist/generated/types.d.ts:56133

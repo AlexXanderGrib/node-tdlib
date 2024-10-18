@@ -26,7 +26,7 @@ True, if icon's custom_emoji_id is changed
 
 ### icon\_custom\_emoji\_id?
 
-> `readonly` `optional` **icon\_custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **icon\_custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 New unique identifier of the custom emoji shown on the topic icon; 0 if none. Must be ignored if edit_icon_custom_emoji_id is false
 
@@ -38,4 +38,4 @@ If non-empty, the new name of the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:27340
+dist/generated/types.d.ts:28100

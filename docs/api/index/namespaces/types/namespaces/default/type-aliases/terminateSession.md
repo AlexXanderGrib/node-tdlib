@@ -6,7 +6,9 @@
 
 # Type Alias: terminateSession()
 
-> **terminateSession**: (`parameters`) => [`Ok`](Ok.md)
+> **terminateSession**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Terminates a session of the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95686
+dist/generated/types.d.ts:98455

@@ -18,4 +18,4 @@ The user isn't a member of the supergroup and can't send messages and reactions 
 
 ## Defined in
 
-dist/generated/types.d.ts:36387
+dist/generated/types.d.ts:37757

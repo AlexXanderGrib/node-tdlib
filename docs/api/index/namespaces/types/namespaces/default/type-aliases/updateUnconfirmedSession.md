@@ -18,10 +18,10 @@ The first unconfirmed session has changed
 
 ### session
 
-> **session**: [`unconfirmedSession`](unconfirmedSession-1.md) \| `null`
+> **session**: [`unconfirmedSession`](unconfirmedSession.md) \| `null`
 
 The unconfirmed session; may be null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:56555
+dist/generated/types.d.ts:58171

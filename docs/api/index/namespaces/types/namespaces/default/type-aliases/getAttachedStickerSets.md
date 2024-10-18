@@ -6,7 +6,9 @@
 
 # Type Alias: getAttachedStickerSets()
 
-> **getAttachedStickerSets**: (`parameters`) => [`StickerSets`](StickerSets.md)
+> **getAttachedStickerSets**: (`parameters`) => [`StickerSets`](StickerSets-1.md)
+
+Returns a list of sticker sets attached to a file, including regular, mask, and emoji sticker sets. Currently, only animations, photos, and videos can have attached sticker sets
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StickerSets`](StickerSets.md)
+[`StickerSets`](StickerSets-1.md)
 
-[StickerSets](StickerSets.md)
+[StickerSets](StickerSets-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92866
+dist/generated/types.d.ts:95363

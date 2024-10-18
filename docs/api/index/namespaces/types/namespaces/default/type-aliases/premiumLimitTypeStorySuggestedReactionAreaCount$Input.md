@@ -20,4 +20,4 @@ The maximum number of suggested reaction areas on a story
 
 ## Defined in
 
-dist/generated/types.d.ts:41501
+dist/generated/types.d.ts:42895

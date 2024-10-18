@@ -18,4 +18,4 @@ The mask is placed relatively to the chin
 
 ## Defined in
 
-dist/generated/types.d.ts:4303
+dist/generated/types.d.ts:4349

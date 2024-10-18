@@ -30,4 +30,4 @@ Target chat from which to send the inline query
 
 ## Defined in
 
-dist/generated/types.d.ts:17641
+dist/generated/types.d.ts:18233

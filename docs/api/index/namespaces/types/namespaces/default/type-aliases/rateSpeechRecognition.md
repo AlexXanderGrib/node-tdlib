@@ -6,7 +6,9 @@
 
 # Type Alias: rateSpeechRecognition()
 
-> **rateSpeechRecognition**: (`parameters`) => [`Ok`](Ok.md)
+> **rateSpeechRecognition**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Rates recognized speech in a video note or a voice note message
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78002
+dist/generated/types.d.ts:80011

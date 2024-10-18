@@ -6,7 +6,9 @@
 
 # Type Alias: setApplicationVerificationToken()
 
-> **setApplicationVerificationToken**: (`parameters`) => [`Ok`](Ok.md)
+> **setApplicationVerificationToken**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Application verification has been completed. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89559
+dist/generated/types.d.ts:91934

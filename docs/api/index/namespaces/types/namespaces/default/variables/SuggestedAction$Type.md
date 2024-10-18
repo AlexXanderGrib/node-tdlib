@@ -30,6 +30,10 @@
 
 > `readonly` **ExtendPremium**: `"suggestedActionExtendPremium"`
 
+### ExtendStarSubscriptions
+
+> `readonly` **ExtendStarSubscriptions**: `"suggestedActionExtendStarSubscriptions"`
+
 ### GiftPremiumForChristmas
 
 > `readonly` **GiftPremiumForChristmas**: `"suggestedActionGiftPremiumForChristmas"`
@@ -60,4 +64,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1005
+dist/generated/types.d.ts:1026

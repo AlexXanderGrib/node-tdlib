@@ -14,22 +14,22 @@ Returns the profile photos of a user. Personal and public photo aren't returned
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of photos to be returned; up to 100
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int32`](int32-1.md)
+> `readonly` `optional` **offset**: [`int32`](int32.md)
 
 The number of photos to skip; must be non-negative
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:92482
+dist/generated/types.d.ts:94979

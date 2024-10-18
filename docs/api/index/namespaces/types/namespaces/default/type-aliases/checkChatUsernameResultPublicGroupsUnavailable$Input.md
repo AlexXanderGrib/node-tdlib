@@ -20,4 +20,4 @@ The user can't be a member of a public supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:43949
+dist/generated/types.d.ts:45475

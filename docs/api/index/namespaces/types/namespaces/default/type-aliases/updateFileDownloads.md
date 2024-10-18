@@ -18,22 +18,22 @@ The state of the file download list has changed
 
 ### downloaded\_size
 
-> **downloaded\_size**: [`int53`](int53-1.md)
+> **downloaded\_size**: [`int53`](int53.md)
 
 Total downloaded size of files in the file download list, in bytes
 
 ### total\_count
 
-> **total\_count**: [`int32`](int32-1.md)
+> **total\_count**: [`int32`](int32.md)
 
 Total number of files in the file download list
 
 ### total\_size
 
-> **total\_size**: [`int53`](int53-1.md)
+> **total\_size**: [`int53`](int53.md)
 
 Total size of files in the file download list, in bytes
 
 ## Defined in
 
-dist/generated/types.d.ts:55353
+dist/generated/types.d.ts:56969

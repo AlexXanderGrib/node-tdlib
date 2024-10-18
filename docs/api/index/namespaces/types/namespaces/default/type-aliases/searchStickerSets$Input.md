@@ -30,4 +30,4 @@ Type of the sticker sets to return
 
 ## Defined in
 
-dist/generated/types.d.ts:92974
+dist/generated/types.d.ts:95471

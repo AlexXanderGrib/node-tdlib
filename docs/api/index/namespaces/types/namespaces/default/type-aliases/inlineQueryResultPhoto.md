@@ -30,7 +30,7 @@ Unique identifier of the query result
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md)
+> **photo**: [`photo`](photo.md)
 
 Photo
 
@@ -42,4 +42,4 @@ Title of the result, if known
 
 ## Defined in
 
-dist/generated/types.d.ts:38649
+dist/generated/types.d.ts:40019

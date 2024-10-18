@@ -14,10 +14,10 @@ Returns tags used in Saved Messages or a Saved Messages topic
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 Identifier of Saved Messages topic which tags will be returned; pass 0 to get all Saved Messages tags
 
 ## Defined in
 
-dist/generated/types.d.ts:81543
+dist/generated/types.d.ts:83736

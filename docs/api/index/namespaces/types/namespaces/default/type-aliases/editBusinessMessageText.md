@@ -6,7 +6,9 @@
 
 # Type Alias: editBusinessMessageText()
 
-> **editBusinessMessageText**: (`parameters`) => [`BusinessMessage`](BusinessMessage.md)
+> **editBusinessMessageText**: (`parameters`) => [`BusinessMessage`](BusinessMessage-1.md)
+
+Edits the text of a text or game message sent on behalf of a business account; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessMessage`](BusinessMessage.md)
+[`BusinessMessage`](BusinessMessage-1.md)
 
-[BusinessMessage](BusinessMessage.md)
+[BusinessMessage](BusinessMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79754
+dist/generated/types.d.ts:81745

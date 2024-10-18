@@ -18,4 +18,4 @@ Resets all network data usage statistics to zero. Can be called before authoriza
 
 ## Defined in
 
-dist/generated/types.d.ts:99053
+dist/generated/types.d.ts:101832

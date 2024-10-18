@@ -20,7 +20,7 @@ Represents a link to an MP3 audio file
 
 ### audio\_duration?
 
-> `readonly` `optional` **audio\_duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **audio\_duration**: [`int32`](int32.md)
 
 Audio file duration, in seconds
 
@@ -62,4 +62,4 @@ Title of the audio file
 
 ## Defined in
 
-dist/generated/types.d.ts:37410
+dist/generated/types.d.ts:38780

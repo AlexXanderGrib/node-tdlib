@@ -6,7 +6,9 @@
 
 # Type Alias: getRecommendedChatFolders()
 
-> **getRecommendedChatFolders**: (`parameters`) => [`RecommendedChatFolders`](RecommendedChatFolders.md)
+> **getRecommendedChatFolders**: (`parameters`) => [`RecommendedChatFolders`](RecommendedChatFolders-1.md)
+
+Returns recommended chat folders for the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`RecommendedChatFolders`](RecommendedChatFolders.md)
+[`RecommendedChatFolders`](RecommendedChatFolders-1.md)
 
-[RecommendedChatFolders](RecommendedChatFolders.md)
+[RecommendedChatFolders](RecommendedChatFolders-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84750
+dist/generated/types.d.ts:87049

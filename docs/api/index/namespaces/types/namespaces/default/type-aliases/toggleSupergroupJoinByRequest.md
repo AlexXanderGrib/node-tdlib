@@ -6,7 +6,9 @@
 
 # Type Alias: toggleSupergroupJoinByRequest()
 
-> **toggleSupergroupJoinByRequest**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleSupergroupJoinByRequest**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether all users directly joining the supergroup need to be approved by supergroup administrators; requires can_restrict_members administrator right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96283
+dist/generated/types.d.ts:99062

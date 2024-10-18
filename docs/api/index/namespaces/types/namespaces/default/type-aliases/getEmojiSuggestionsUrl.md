@@ -6,7 +6,9 @@
 
 # Type Alias: getEmojiSuggestionsUrl()
 
-> **getEmojiSuggestionsUrl**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getEmojiSuggestionsUrl**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns an HTTP URL which can be used to automatically log in to the translation platform and suggest new emoji replacements. The URL will be valid for 30 seconds after generation
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93527
+dist/generated/types.d.ts:96024

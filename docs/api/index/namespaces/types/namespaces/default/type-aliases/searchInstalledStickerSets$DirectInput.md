@@ -14,7 +14,7 @@ Searches for installed sticker sets by looking for specified query in their titl
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of sticker sets to return
 
@@ -32,4 +32,4 @@ Type of the sticker sets to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:92947
+dist/generated/types.d.ts:95444

@@ -24,7 +24,7 @@ True, if the join request was sent to a channel chat
 
 ### request\_date
 
-> **request\_date**: [`int32`](int32-1.md)
+> **request\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the join request was sent
 
@@ -36,4 +36,4 @@ Title of the chat to which the join request was sent
 
 ## Defined in
 
-dist/generated/types.d.ts:17061
+dist/generated/types.d.ts:17653

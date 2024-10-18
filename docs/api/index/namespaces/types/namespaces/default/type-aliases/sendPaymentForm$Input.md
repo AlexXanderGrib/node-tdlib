@@ -20,7 +20,7 @@ Sends a filled-out payment form to the bot for final verification
 
 > `readonly` `optional` **credentials**: [`InputCredentials$Input`](InputCredentials$Input.md) \| `null`
 
-The credentials chosen by user for payment; pass null for a payment in Telegram stars
+The credentials chosen by user for payment; pass null for a payment in Telegram Stars
 
 ### input\_invoice?
 
@@ -36,7 +36,7 @@ Identifier returned by validateOrderInfo, or an empty string
 
 ### payment\_form\_id?
 
-> `readonly` `optional` **payment\_form\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **payment\_form\_id**: [`int64$Input`](int64$Input.md)
 
 Payment form identifier returned by getPaymentForm
 
@@ -48,10 +48,10 @@ Identifier of a chosen shipping option, if applicable
 
 ### tip\_amount?
 
-> `readonly` `optional` **tip\_amount**: [`int53`](int53-1.md)
+> `readonly` `optional` **tip\_amount**: [`int53`](int53.md)
 
 Chosen by the user amount of tip in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:96848
+dist/generated/types.d.ts:99627

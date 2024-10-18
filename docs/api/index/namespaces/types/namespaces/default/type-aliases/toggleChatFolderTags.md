@@ -6,7 +6,9 @@
 
 # Type Alias: toggleChatFolderTags()
 
-> **toggleChatFolderTags**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleChatFolderTags**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether chat folder tags are enabled
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84733
+dist/generated/types.d.ts:87032

@@ -20,4 +20,4 @@ The block list that disallows viewing of stories of the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:48903
+dist/generated/types.d.ts:50487

@@ -20,7 +20,7 @@ The log is written to a file
 
 ### max\_file\_size?
 
-> `readonly` `optional` **max\_file\_size**: [`int53`](int53-1.md)
+> `readonly` `optional` **max\_file\_size**: [`int53`](int53.md)
 
 The maximum size of the file to where the internal TDLib log is written before the file will automatically be rotated, in bytes
 
@@ -38,4 +38,4 @@ Pass true to additionally redirect stderr to the log file. Ignored on Windows
 
 ## Defined in
 
-dist/generated/types.d.ts:58242
+dist/generated/types.d.ts:59882

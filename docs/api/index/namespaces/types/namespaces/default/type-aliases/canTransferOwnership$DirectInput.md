@@ -12,4 +12,4 @@ Checks whether the current session can be used to transfer a chat ownership to a
 
 ## Defined in
 
-dist/generated/types.d.ts:86549
+dist/generated/types.d.ts:88848

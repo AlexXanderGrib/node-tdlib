@@ -12,4 +12,4 @@ Returns privacy settings for message read date
 
 ## Defined in
 
-dist/generated/types.d.ts:97829
+dist/generated/types.d.ts:100608

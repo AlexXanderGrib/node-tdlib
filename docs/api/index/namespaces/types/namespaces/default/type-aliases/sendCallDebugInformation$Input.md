@@ -18,7 +18,7 @@ Sends debug information for a call to Telegram servers
 
 ### call\_id?
 
-> `readonly` `optional` **call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **call\_id**: [`int32`](int32.md)
 
 Call identifier
 
@@ -30,4 +30,4 @@ Debug information in application-specific format
 
 ## Defined in
 
-dist/generated/types.d.ts:90633
+dist/generated/types.d.ts:93130

@@ -38,10 +38,10 @@ True, if the photo is secret
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md) \| `null`
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44513
+dist/generated/types.d.ts:46039

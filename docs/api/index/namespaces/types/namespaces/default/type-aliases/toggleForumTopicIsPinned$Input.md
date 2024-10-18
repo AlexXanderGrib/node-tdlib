@@ -18,7 +18,7 @@ Changes the pinned state of a forum topic; requires can_manage_topics right in t
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,10 +30,10 @@ Pass true to pin the topic; pass false to unpin it
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 Message thread identifier of the forum topic
 
 ## Defined in
 
-dist/generated/types.d.ts:81028
+dist/generated/types.d.ts:83077

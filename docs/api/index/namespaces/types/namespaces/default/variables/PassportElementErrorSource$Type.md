@@ -48,4 +48,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1892
+dist/generated/types.d.ts:1923

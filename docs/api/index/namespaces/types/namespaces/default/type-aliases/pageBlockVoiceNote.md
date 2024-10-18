@@ -18,16 +18,16 @@ A voice note
 
 ### caption
 
-> **caption**: [`pageBlockCaption`](pageBlockCaption-1.md)
+> **caption**: [`pageBlockCaption`](pageBlockCaption.md)
 
 Voice note caption
 
 ### voice\_note
 
-> **voice\_note**: [`voiceNote`](voiceNote-1.md) \| `null`
+> **voice\_note**: [`voiceNote`](voiceNote.md) \| `null`
 
 Voice note; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:20181
+dist/generated/types.d.ts:20807

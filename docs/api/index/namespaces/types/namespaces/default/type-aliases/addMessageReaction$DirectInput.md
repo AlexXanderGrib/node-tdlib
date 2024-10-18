@@ -14,7 +14,7 @@ Adds a reaction or a tag to a message. Use getMessageAvailableReactions to recei
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the message belongs
 
@@ -26,7 +26,7 @@ Pass true if the reaction is added with a big animation
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
@@ -34,7 +34,7 @@ Identifier of the message
 
 > `readonly` `optional` **reaction\_type**: [`ReactionType$Input`](ReactionType$Input.md)
 
-Type of the reaction to add
+Type of the reaction to add. Use addPaidMessageReaction instead to add the paid reaction
 
 ### update\_recent\_reactions?
 
@@ -44,4 +44,4 @@ Pass true if the reaction needs to be added to recent reactions; tags are never 
 
 ## Defined in
 
-dist/generated/types.d.ts:81293
+dist/generated/types.d.ts:83342

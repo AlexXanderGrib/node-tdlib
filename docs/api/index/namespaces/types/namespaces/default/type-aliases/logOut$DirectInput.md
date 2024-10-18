@@ -12,4 +12,4 @@ Closes the TDLib instance after a proper logout. Requires an available network c
 
 ## Defined in
 
-dist/generated/types.d.ts:73727
+dist/generated/types.d.ts:75715

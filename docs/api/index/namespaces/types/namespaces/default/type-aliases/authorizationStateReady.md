@@ -18,4 +18,4 @@ The user has been successfully authorized. TDLib is now ready to answer general 
 
 ## Defined in
 
-dist/generated/types.d.ts:3387
+dist/generated/types.d.ts:3433

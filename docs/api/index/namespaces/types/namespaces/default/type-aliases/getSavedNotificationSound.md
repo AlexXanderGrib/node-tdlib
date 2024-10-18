@@ -6,7 +6,9 @@
 
 # Type Alias: getSavedNotificationSound()
 
-> **getSavedNotificationSound**: (`parameters`) => [`NotificationSounds`](NotificationSounds.md)
+> **getSavedNotificationSound**: (`parameters`) => [`NotificationSounds`](NotificationSounds-1.md)
+
+Returns saved notification sound by its identifier. Returns a 404 error if there is no saved notification sound with the specified identifier
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`NotificationSounds`](NotificationSounds.md)
+[`NotificationSounds`](NotificationSounds-1.md)
 
-[NotificationSounds](NotificationSounds.md)
+[NotificationSounds](NotificationSounds-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86784
+dist/generated/types.d.ts:89083

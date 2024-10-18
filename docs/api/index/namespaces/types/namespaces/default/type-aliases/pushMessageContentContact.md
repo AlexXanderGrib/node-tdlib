@@ -30,4 +30,4 @@ Contact's name
 
 ## Defined in
 
-dist/generated/types.d.ts:44223
+dist/generated/types.d.ts:45749

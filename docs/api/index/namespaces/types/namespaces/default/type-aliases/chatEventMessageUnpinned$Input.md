@@ -20,10 +20,10 @@ A message was unpinned
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 Unpinned message
 
 ## Defined in
 
-dist/generated/types.d.ts:39294
+dist/generated/types.d.ts:40664

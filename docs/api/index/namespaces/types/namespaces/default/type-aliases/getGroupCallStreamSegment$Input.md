@@ -18,25 +18,25 @@ Returns a file with a segment of a group call stream in a modified OGG format fo
 
 ### channel\_id?
 
-> `readonly` `optional` **channel\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **channel\_id**: [`int32`](int32.md)
 
 Identifier of an audio/video channel to get as received from tgcalls
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
 ### scale?
 
-> `readonly` `optional` **scale**: [`int32`](int32-1.md)
+> `readonly` `optional` **scale**: [`int32`](int32.md)
 
 Segment duration scale; 0-1. Segment's duration is 1000/(2**scale) milliseconds
 
 ### time\_offset?
 
-> `readonly` `optional` **time\_offset**: [`int53`](int53-1.md)
+> `readonly` `optional` **time\_offset**: [`int53`](int53.md)
 
 Point in time when the stream segment begins; Unix timestamp in milliseconds
 
@@ -48,4 +48,4 @@ Video quality as received from tgcalls; pass null to get the worst available qua
 
 ## Defined in
 
-dist/generated/types.d.ts:91841
+dist/generated/types.d.ts:94338

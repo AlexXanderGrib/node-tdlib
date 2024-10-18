@@ -32,4 +32,4 @@ The last name of the user; 0-64 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:73466
+dist/generated/types.d.ts:75454

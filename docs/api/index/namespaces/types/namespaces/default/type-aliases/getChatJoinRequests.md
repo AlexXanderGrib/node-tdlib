@@ -6,7 +6,9 @@
 
 # Type Alias: getChatJoinRequests()
 
-> **getChatJoinRequests**: (`parameters`) => [`ChatJoinRequests`](ChatJoinRequests.md)
+> **getChatJoinRequests**: (`parameters`) => [`ChatJoinRequests`](ChatJoinRequests-1.md)
+
+Returns pending join requests in a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatJoinRequests`](ChatJoinRequests.md)
+[`ChatJoinRequests`](ChatJoinRequests-1.md)
 
-[ChatJoinRequests](ChatJoinRequests.md)
+[ChatJoinRequests](ChatJoinRequests-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90283
+dist/generated/types.d.ts:92780

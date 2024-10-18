@@ -6,7 +6,9 @@
 
 # Type Alias: suggestUserProfilePhoto()
 
-> **suggestUserProfilePhoto**: (`parameters`) => [`Ok`](Ok.md)
+> **suggestUserProfilePhoto**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Suggests a profile photo to another regular user with common messages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92391
+dist/generated/types.d.ts:94888

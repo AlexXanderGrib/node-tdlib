@@ -18,7 +18,7 @@ Sends log file for a call to Telegram servers
 
 ### call\_id?
 
-> `readonly` `optional` **call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **call\_id**: [`int32`](int32.md)
 
 Call identifier
 
@@ -30,4 +30,4 @@ Call log file. Only inputFileLocal and inputFileGenerated are supported
 
 ## Defined in
 
-dist/generated/types.d.ts:90671
+dist/generated/types.d.ts:93168

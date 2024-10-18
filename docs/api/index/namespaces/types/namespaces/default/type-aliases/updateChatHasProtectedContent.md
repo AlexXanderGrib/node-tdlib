@@ -18,7 +18,7 @@ A chat content was allowed or restricted for saving
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ New value of has_protected_content
 
 ## Defined in
 
-dist/generated/types.d.ts:54159
+dist/generated/types.d.ts:55775

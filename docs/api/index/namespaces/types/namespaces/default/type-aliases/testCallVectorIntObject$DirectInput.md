@@ -14,10 +14,10 @@ Returns the received vector of objects containing a number; for testing only. Th
 
 ### x?
 
-> `readonly` `optional` **x**: [`vector$Input`](vector$Input.md)\<[`testInt$Input`](testInt$Input-1.md)\>
+> `readonly` `optional` **x**: [`vector$Input`](vector$Input.md)\<[`testInt$Input`](testInt$Input.md)\>
 
 Vector of objects to return
 
 ## Defined in
 
-dist/generated/types.d.ts:102068
+dist/generated/types.d.ts:104989

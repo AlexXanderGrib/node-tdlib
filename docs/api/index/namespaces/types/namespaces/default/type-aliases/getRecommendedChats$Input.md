@@ -18,4 +18,4 @@ Returns a list of channel chats recommended to the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:75246
+dist/generated/types.d.ts:77272

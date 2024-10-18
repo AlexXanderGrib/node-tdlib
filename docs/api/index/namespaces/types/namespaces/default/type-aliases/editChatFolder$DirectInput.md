@@ -14,16 +14,16 @@ Edits existing chat folder. Returns information about the edited chat folder
 
 ### chat\_folder\_id?
 
-> `readonly` `optional` **chat\_folder\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **chat\_folder\_id**: [`int32`](int32.md)
 
 Chat folder identifier
 
 ### folder?
 
-> `readonly` `optional` **folder**: [`chatFolder$Input`](chatFolder$Input-1.md)
+> `readonly` `optional` **folder**: [`chatFolder$Input`](chatFolder$Input.md)
 
 The edited chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:84555
+dist/generated/types.d.ts:86854

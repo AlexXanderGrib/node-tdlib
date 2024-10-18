@@ -14,10 +14,10 @@ Creates a business chat link for the current account. Requires Telegram Business
 
 ### link\_info?
 
-> `readonly` `optional` **link\_info**: [`inputBusinessChatLink$Input`](inputBusinessChatLink$Input-1.md)
+> `readonly` `optional` **link\_info**: [`inputBusinessChatLink$Input`](inputBusinessChatLink$Input.md)
 
 Information about the link to create
 
 ## Defined in
 
-dist/generated/types.d.ts:94757
+dist/generated/types.d.ts:97254

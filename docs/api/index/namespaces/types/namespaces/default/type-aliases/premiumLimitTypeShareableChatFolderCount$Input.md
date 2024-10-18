@@ -20,4 +20,4 @@ The maximum number of added shareable chat folders
 
 ## Defined in
 
-dist/generated/types.d.ts:41431
+dist/generated/types.d.ts:42825

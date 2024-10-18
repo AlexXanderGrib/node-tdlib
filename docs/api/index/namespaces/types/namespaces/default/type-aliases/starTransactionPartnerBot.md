@@ -16,24 +16,18 @@ The transaction is a transaction with a bot
 
 > **\_**: `"starTransactionPartnerBot"`
 
-### bot\_user\_id
+### purpose
 
-> **bot\_user\_id**: [`int53`](int53-1.md)
+> **purpose**: [`BotTransactionPurpose`](BotTransactionPurpose.md)
+
+Purpose of the transaction
+
+### user\_id
+
+> **user\_id**: [`int53`](int53.md)
 
 Identifier of the bot
 
-### invoice\_payload
-
-> **invoice\_payload**: [`bytes`](bytes-1.md)
-
-Invoice payload; for bots only
-
-### product\_info
-
-> **product\_info**: [`productInfo`](productInfo-1.md) \| `null`
-
-Information about the bought product; may be null if not applicable
-
 ## Defined in
 
-dist/generated/types.d.ts:8453
+dist/generated/types.d.ts:8841

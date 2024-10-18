@@ -20,4 +20,4 @@ A button with a game that sends a callback query to a bot. This button must be i
 
 ## Defined in
 
-dist/generated/types.d.ts:17635
+dist/generated/types.d.ts:18227

@@ -14,7 +14,7 @@ Sends a call rating
 
 ### call\_id?
 
-> `readonly` `optional` **call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **call\_id**: [`int32`](int32.md)
 
 Call identifier
 
@@ -32,10 +32,10 @@ List of the exact types of problems with the call, specified by the user
 
 ### rating?
 
-> `readonly` `optional` **rating**: [`int32`](int32-1.md)
+> `readonly` `optional` **rating**: [`int32`](int32.md)
 
 Call rating; 1-5
 
 ## Defined in
 
-dist/generated/types.d.ts:90601
+dist/generated/types.d.ts:93098

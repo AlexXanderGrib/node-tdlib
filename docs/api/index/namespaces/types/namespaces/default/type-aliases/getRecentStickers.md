@@ -6,7 +6,9 @@
 
 # Type Alias: getRecentStickers()
 
-> **getRecentStickers**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getRecentStickers**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns a list of recently used stickers
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93150
+dist/generated/types.d.ts:95647

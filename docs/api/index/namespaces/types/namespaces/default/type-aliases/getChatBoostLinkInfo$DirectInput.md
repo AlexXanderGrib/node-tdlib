@@ -20,4 +20,4 @@ The link to boost a chat
 
 ## Defined in
 
-dist/generated/types.d.ts:88449
+dist/generated/types.d.ts:90824

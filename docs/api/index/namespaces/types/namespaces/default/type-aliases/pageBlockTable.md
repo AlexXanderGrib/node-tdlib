@@ -24,7 +24,7 @@ Table caption
 
 ### cells
 
-> **cells**: [`vector`](vector.md)\<[`vector`](vector.md)\<[`pageBlockTableCell`](pageBlockTableCell-1.md)\>\>
+> **cells**: [`vector`](vector.md)\<[`vector`](vector.md)\<[`pageBlockTableCell`](pageBlockTableCell.md)\>\>
 
 Table cells
 
@@ -42,4 +42,4 @@ True, if the table is striped
 
 ## Defined in
 
-dist/generated/types.d.ts:20529
+dist/generated/types.d.ts:21155

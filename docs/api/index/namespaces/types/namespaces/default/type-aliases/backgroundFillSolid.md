@@ -18,10 +18,10 @@ Describes a solid fill of a background
 
 ### color
 
-> **color**: [`int32`](int32-1.md)
+> **color**: [`int32`](int32.md)
 
 A color of the background in the RGB24 format
 
 ## Defined in
 
-dist/generated/types.d.ts:43255
+dist/generated/types.d.ts:44781

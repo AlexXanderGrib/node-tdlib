@@ -14,15 +14,15 @@ Reports a chat to the Telegram moderators. A chat can be reported only from the 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
-Identifiers of reported messages; may be empty to report the whole chat
+Identifiers of reported messages; may be empty to report the whole chat. Use messageProperties.can_be_reported to check whether the message can be reported
 
 ### reason?
 
@@ -38,4 +38,4 @@ Additional report details; 0-1024 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:98177
+dist/generated/types.d.ts:100956

@@ -6,7 +6,9 @@
 
 # Type Alias: getGroupsInCommon()
 
-> **getGroupsInCommon**: (`parameters`) => [`Chats`](Chats.md)
+> **getGroupsInCommon**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76047
+dist/generated/types.d.ts:78073

@@ -20,16 +20,16 @@ An effect from an emoji reaction
 
 ### effect\_animation?
 
-> `readonly` `optional` **effect\_animation**: [`sticker$Input`](sticker$Input-1.md)
+> `readonly` `optional` **effect\_animation**: [`sticker$Input`](sticker$Input.md)
 
 Effect animation for the effect in TGS format
 
 ### select\_animation?
 
-> `readonly` `optional` **select\_animation**: [`sticker$Input`](sticker$Input-1.md)
+> `readonly` `optional` **select\_animation**: [`sticker$Input`](sticker$Input.md)
 
 Select animation for the effect in TGS format
 
 ## Defined in
 
-dist/generated/types.d.ts:12855
+dist/generated/types.d.ts:13557

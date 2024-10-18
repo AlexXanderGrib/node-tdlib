@@ -6,7 +6,9 @@
 
 # Type Alias: getStarRevenueStatistics()
 
-> **getStarRevenueStatistics**: (`parameters`) => [`StarRevenueStatistics`](StarRevenueStatistics.md)
+> **getStarRevenueStatistics**: (`parameters`) => [`StarRevenueStatistics`](StarRevenueStatistics-1.md)
+
+Returns detailed Telegram Star revenue statistics
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StarRevenueStatistics`](StarRevenueStatistics.md)
+[`StarRevenueStatistics`](StarRevenueStatistics-1.md)
 
-[StarRevenueStatistics](StarRevenueStatistics.md)
+[StarRevenueStatistics](StarRevenueStatistics-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98473
+dist/generated/types.d.ts:101252

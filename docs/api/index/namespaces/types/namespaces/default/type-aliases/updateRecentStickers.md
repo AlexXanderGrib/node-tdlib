@@ -24,10 +24,10 @@ True, if the list of stickers attached to photo or video files was updated; othe
 
 ### sticker\_ids
 
-> **sticker\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **sticker\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 The new list of file identifiers of recently used stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:56193
+dist/generated/types.d.ts:57809

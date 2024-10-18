@@ -20,4 +20,4 @@ The user is picking a contact to send
 
 ## Defined in
 
-dist/generated/types.d.ts:30877
+dist/generated/types.d.ts:32009

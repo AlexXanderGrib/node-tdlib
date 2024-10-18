@@ -20,7 +20,7 @@ A newly created basic group
 
 ### member\_user\_ids?
 
-> `readonly` `optional` **member\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **member\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 User identifiers of members in the basic group
 
@@ -32,4 +32,4 @@ Title of the basic group
 
 ## Defined in
 
-dist/generated/types.d.ts:26883
+dist/generated/types.d.ts:27643

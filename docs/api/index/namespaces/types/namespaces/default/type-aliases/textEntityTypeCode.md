@@ -18,4 +18,4 @@ Text that must be formatted as if inside a code HTML tag
 
 ## Defined in
 
-dist/generated/types.d.ts:28659
+dist/generated/types.d.ts:29533

@@ -20,7 +20,7 @@ A photo story
 
 ### added\_sticker\_file\_ids?
 
-> `readonly` `optional` **added\_sticker\_file\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **added\_sticker\_file\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 File identifiers of the stickers added to the photo, if applicable
 
@@ -32,4 +32,4 @@ Photo to send. The photo must be at most 10 MB in size. The photo size must be 1
 
 ## Defined in
 
-dist/generated/types.d.ts:32545
+dist/generated/types.d.ts:33813

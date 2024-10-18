@@ -20,22 +20,16 @@ The transaction is a transaction with a channel chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
-### media?
+### purpose?
 
-> `readonly` `optional` **media**: [`vector$Input`](vector$Input.md)\<[`PaidMedia$Input`](PaidMedia$Input.md)\>
+> `readonly` `optional` **purpose**: [`ChannelTransactionPurpose$Input`](ChannelTransactionPurpose$Input.md)
 
-Information about the bought media
-
-### paid\_media\_message\_id?
-
-> `readonly` `optional` **paid\_media\_message\_id**: [`int53`](int53-1.md)
-
-Identifier of the corresponding message with paid media; can be an identifier of a deleted message
+Purpose of the transaction
 
 ## Defined in
 
-dist/generated/types.d.ts:8520
+dist/generated/types.d.ts:8927

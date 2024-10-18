@@ -20,10 +20,10 @@ A background from the server
 
 ### background\_id?
 
-> `readonly` `optional` **background\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **background\_id**: [`int64$Input`](int64$Input.md)
 
 The background identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:43520
+dist/generated/types.d.ts:45046

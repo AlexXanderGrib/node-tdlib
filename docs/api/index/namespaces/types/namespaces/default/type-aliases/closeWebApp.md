@@ -6,7 +6,9 @@
 
 # Type Alias: closeWebApp()
 
-> **closeWebApp**: (`parameters`) => [`Ok`](Ok.md)
+> **closeWebApp**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs TDLib that a previously opened Web App was closed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83045
+dist/generated/types.d.ts:85344

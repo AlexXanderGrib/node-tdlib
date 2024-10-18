@@ -6,7 +6,9 @@
 
 # Type Alias: createInvoiceLink()
 
-> **createInvoiceLink**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **createInvoiceLink**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Creates a link for the given invoice; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97039
+dist/generated/types.d.ts:99818

@@ -1,0 +1,165 @@
+[**TDLib**](../../../../../../README.md) • **Docs**
+
+***
+
+[TDLib](../../../../../../modules.md) / [index](../../../../../README.md) / [types](../../../README.md) / [default](../README.md) / story
+
+# Type Alias: story
+
+> **story**: `object`
+
+Represents a story
+
+## Type declaration
+
+### \_
+
+> **\_**: `"story"`
+
+### areas
+
+> **areas**: [`vector`](vector.md)\<[`storyArea`](storyArea.md)\>
+
+Clickable areas to be shown on the story content
+
+### can\_be\_deleted
+
+> **can\_be\_deleted**: [`Bool`](Bool.md)
+
+True, if the story can be deleted
+
+### can\_be\_edited
+
+> **can\_be\_edited**: [`Bool`](Bool.md)
+
+True, if the story can be edited
+
+### can\_be\_forwarded
+
+> **can\_be\_forwarded**: [`Bool`](Bool.md)
+
+True, if the story can be forwarded as a message. Otherwise, screenshots and saving of the story content must be also forbidden
+
+### can\_be\_replied
+
+> **can\_be\_replied**: [`Bool`](Bool.md)
+
+True, if the story can be replied in the chat with the story sender
+
+### can\_get\_interactions
+
+> **can\_get\_interactions**: [`Bool`](Bool.md)
+
+True, if interactions with the story can be received through getStoryInteractions
+
+### can\_get\_statistics
+
+> **can\_get\_statistics**: [`Bool`](Bool.md)
+
+True, if the story statistics are available through getStoryStatistics
+
+### can\_toggle\_is\_posted\_to\_chat\_page
+
+> **can\_toggle\_is\_posted\_to\_chat\_page**: [`Bool`](Bool.md)
+
+True, if the story's is_posted_to_chat_page value can be changed
+
+### caption
+
+> **caption**: [`formattedText`](formattedText.md)
+
+Caption of the story
+
+### chosen\_reaction\_type
+
+> **chosen\_reaction\_type**: [`ReactionType`](ReactionType.md) \| `null`
+
+Type of the chosen reaction; may be null if none
+
+### content
+
+> **content**: [`StoryContent`](StoryContent.md)
+
+Content of the story
+
+### date
+
+> **date**: [`int32`](int32.md)
+
+Point in time (Unix timestamp) when the story was published
+
+### has\_expired\_viewers
+
+> **has\_expired\_viewers**: [`Bool`](Bool.md)
+
+True, if users viewed the story can't be received, because the story has expired more than getOption("story_viewers_expiration_delay") seconds ago
+
+### id
+
+> **id**: [`int32`](int32.md)
+
+Unique story identifier among stories of the given sender
+
+### interaction\_info
+
+> **interaction\_info**: [`storyInteractionInfo`](storyInteractionInfo.md) \| `null`
+
+Information about interactions with the story; may be null if the story isn't owned or there were no interactions
+
+### is\_being\_edited
+
+> **is\_being\_edited**: [`Bool`](Bool.md)
+
+True, if the story is being edited by the current user
+
+### is\_being\_sent
+
+> **is\_being\_sent**: [`Bool`](Bool.md)
+
+True, if the story is being sent by the current user
+
+### is\_edited
+
+> **is\_edited**: [`Bool`](Bool.md)
+
+True, if the story was edited
+
+### is\_posted\_to\_chat\_page
+
+> **is\_posted\_to\_chat\_page**: [`Bool`](Bool.md)
+
+True, if the story is saved in the sender's profile and will be available there after expiration
+
+### is\_visible\_only\_for\_self
+
+> **is\_visible\_only\_for\_self**: [`Bool`](Bool.md)
+
+True, if the story is visible only for the current user
+
+### privacy\_settings
+
+> **privacy\_settings**: [`StoryPrivacySettings`](StoryPrivacySettings.md)
+
+Privacy rules affecting story visibility; may be approximate for non-owned stories
+
+### repost\_info
+
+> **repost\_info**: [`storyRepostInfo`](storyRepostInfo.md) \| `null`
+
+Information about the original story; may be null if the story wasn't reposted
+
+### sender\_chat\_id
+
+> **sender\_chat\_id**: [`int53`](int53.md)
+
+Identifier of the chat that posted the story
+
+### sender\_id
+
+> **sender\_id**: [`MessageSender`](MessageSender.md) \| `null`
+
+Identifier of the sender of the story; may be null if the story is posted on behalf of the sender_chat_id
+
+## Defined in
+
+dist/generated/types.d.ts:34067

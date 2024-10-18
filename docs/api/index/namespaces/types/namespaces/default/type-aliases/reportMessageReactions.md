@@ -6,7 +6,9 @@
 
 # Type Alias: reportMessageReactions()
 
-> **reportMessageReactions**: (`parameters`) => [`Ok`](Ok.md)
+> **reportMessageReactions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if messageProperties.can_report_reactions
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98311
+dist/generated/types.d.ts:101090

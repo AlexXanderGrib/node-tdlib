@@ -6,7 +6,9 @@
 
 # Type Alias: reportChat()
 
-> **reportChat**: (`parameters`) => [`Ok`](Ok.md)
+> **reportChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98205
+dist/generated/types.d.ts:100984

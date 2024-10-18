@@ -24,10 +24,10 @@ Category of chats to be returned
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of chats to be returned; up to 30
 
 ## Defined in
 
-dist/generated/types.d.ts:75367
+dist/generated/types.d.ts:77393

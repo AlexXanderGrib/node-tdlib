@@ -18,7 +18,7 @@ TDError
 
 ## Implements
 
-- [`error`](../namespaces/types/namespaces/default/type-aliases/error-1.md)
+- [`error`](../namespaces/types/namespaces/default/type-aliases/error.md)
 
 ## Constructors
 

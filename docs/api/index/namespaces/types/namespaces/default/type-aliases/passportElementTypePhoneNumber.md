@@ -18,4 +18,4 @@ A Telegram Passport element containing the user's phone number
 
 ## Defined in
 
-dist/generated/types.d.ts:23939
+dist/generated/types.d.ts:24699

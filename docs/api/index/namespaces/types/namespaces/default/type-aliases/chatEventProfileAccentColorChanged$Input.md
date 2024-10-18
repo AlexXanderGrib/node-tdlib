@@ -20,28 +20,28 @@ The chat's profile accent color or profile background custom emoji were changed
 
 ### new\_profile\_accent\_color\_id?
 
-> `readonly` `optional` **new\_profile\_accent\_color\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **new\_profile\_accent\_color\_id**: [`int32`](int32.md)
 
 New identifier of chat's profile accent color; -1 if none
 
 ### new\_profile\_background\_custom\_emoji\_id?
 
-> `readonly` `optional` **new\_profile\_background\_custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **new\_profile\_background\_custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 New identifier of the custom emoji; 0 if none
 
 ### old\_profile\_accent\_color\_id?
 
-> `readonly` `optional` **old\_profile\_accent\_color\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **old\_profile\_accent\_color\_id**: [`int32`](int32.md)
 
 Previous identifier of chat's profile accent color; -1 if none
 
 ### old\_profile\_background\_custom\_emoji\_id?
 
-> `readonly` `optional` **old\_profile\_background\_custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **old\_profile\_background\_custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 Previous identifier of the custom emoji; 0 if none
 
 ## Defined in
 
-dist/generated/types.d.ts:40139
+dist/generated/types.d.ts:41509

@@ -20,4 +20,4 @@ Allowed to use many additional features for stories
 
 ## Defined in
 
-dist/generated/types.d.ts:42009
+dist/generated/types.d.ts:43403

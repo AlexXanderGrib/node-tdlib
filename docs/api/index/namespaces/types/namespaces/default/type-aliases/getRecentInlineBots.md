@@ -6,7 +6,9 @@
 
 # Type Alias: getRecentInlineBots()
 
-> **getRecentInlineBots**: (`parameters`) => [`Users`](Users.md)
+> **getRecentInlineBots**: (`parameters`) => [`Users`](Users-1.md)
+
+Returns up to 20 recently used inline bots in the order of their last usage
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Users`](Users.md)
+[`Users`](Users-1.md)
 
-[Users](Users.md)
+[Users](Users-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93702
+dist/generated/types.d.ts:96199

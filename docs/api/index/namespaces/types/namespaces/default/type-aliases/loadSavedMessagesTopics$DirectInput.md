@@ -14,10 +14,10 @@ Loads more Saved Messages topics. The loaded topics will be sent through updateS
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of topics to be loaded. For optimal performance, the number of loaded topics is chosen by TDLib and can be smaller than the specified limit, even if the end of the list is not reached
 
 ## Defined in
 
-dist/generated/types.d.ts:75744
+dist/generated/types.d.ts:77770

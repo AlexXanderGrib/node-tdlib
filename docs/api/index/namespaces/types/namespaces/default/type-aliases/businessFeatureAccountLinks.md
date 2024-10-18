@@ -18,4 +18,4 @@ The ability to create links to the business account with predefined message text
 
 ## Defined in
 
-dist/generated/types.d.ts:41931
+dist/generated/types.d.ts:43325

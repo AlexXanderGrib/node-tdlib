@@ -20,4 +20,4 @@ New secret chat was created
 
 ## Defined in
 
-dist/generated/types.d.ts:45273
+dist/generated/types.d.ts:46799

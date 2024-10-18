@@ -24,7 +24,7 @@ True, if the message is a pinned message with the specified content
 
 ### score
 
-> **score**: [`int32`](int32-1.md)
+> **score**: [`int32`](int32.md)
 
 New score, 0 for pinned message
 
@@ -36,4 +36,4 @@ Game title, empty for pinned message
 
 ## Defined in
 
-dist/generated/types.d.ts:44339
+dist/generated/types.d.ts:45865

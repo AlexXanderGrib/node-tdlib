@@ -18,10 +18,10 @@ Adds or changes business bot that is connected to the current user account
 
 ### bot?
 
-> `readonly` `optional` **bot**: [`businessConnectedBot$Input`](businessConnectedBot$Input-1.md)
+> `readonly` `optional` **bot**: [`businessConnectedBot$Input`](businessConnectedBot$Input.md)
 
 Connection settings for the bot
 
 ## Defined in
 
-dist/generated/types.d.ts:94607
+dist/generated/types.d.ts:97104

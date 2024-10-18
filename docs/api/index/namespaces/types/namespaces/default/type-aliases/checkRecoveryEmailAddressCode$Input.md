@@ -24,4 +24,4 @@ Verification code to check
 
 ## Defined in
 
-dist/generated/types.d.ts:74087
+dist/generated/types.d.ts:76075

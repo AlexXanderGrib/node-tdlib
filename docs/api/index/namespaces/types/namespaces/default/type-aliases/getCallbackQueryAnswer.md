@@ -6,7 +6,9 @@
 
 # Type Alias: getCallbackQueryAnswer()
 
-> **getCallbackQueryAnswer**: (`parameters`) => [`CallbackQueryAnswer`](CallbackQueryAnswer.md)
+> **getCallbackQueryAnswer**: (`parameters`) => [`CallbackQueryAnswer`](CallbackQueryAnswer-1.md)
+
+Sends a callback query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`CallbackQueryAnswer`](CallbackQueryAnswer.md)
+[`CallbackQueryAnswer`](CallbackQueryAnswer-1.md)
 
-[CallbackQueryAnswer](CallbackQueryAnswer.md)
+[CallbackQueryAnswer](CallbackQueryAnswer-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83131
+dist/generated/types.d.ts:85430

@@ -20,10 +20,10 @@ A message containing a user contact
 
 ### contact?
 
-> `readonly` `optional` **contact**: [`contact$Input`](contact$Input-1.md)
+> `readonly` `optional` **contact**: [`contact$Input`](contact$Input.md)
 
 Contact to send
 
 ## Defined in
 
-dist/generated/types.d.ts:30070
+dist/generated/types.d.ts:30944

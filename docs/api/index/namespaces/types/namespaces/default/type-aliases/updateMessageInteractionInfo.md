@@ -18,22 +18,22 @@ The information about interactions with a message has changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### interaction\_info
 
-> **interaction\_info**: [`messageInteractionInfo`](messageInteractionInfo-1.md) \| `null`
+> **interaction\_info**: [`messageInteractionInfo`](messageInteractionInfo.md) \| `null`
 
 New information about interactions with the message; may be null
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52937
+dist/generated/types.d.ts:54553

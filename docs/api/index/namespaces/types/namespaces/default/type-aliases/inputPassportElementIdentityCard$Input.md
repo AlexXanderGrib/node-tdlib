@@ -20,10 +20,10 @@ A Telegram Passport element to be saved containing the user's identity card
 
 ### identity\_card?
 
-> `readonly` `optional` **identity\_card**: [`inputIdentityDocument$Input`](inputIdentityDocument$Input-1.md)
+> `readonly` `optional` **identity\_card**: [`inputIdentityDocument$Input`](inputIdentityDocument$Input.md)
 
 The identity card to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24738
+dist/generated/types.d.ts:25498

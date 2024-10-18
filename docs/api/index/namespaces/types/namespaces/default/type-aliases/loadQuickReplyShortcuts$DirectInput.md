@@ -12,4 +12,4 @@ Loads quick reply shortcuts created by the current user. The loaded topics will 
 
 ## Defined in
 
-dist/generated/types.d.ts:80156
+dist/generated/types.d.ts:82205

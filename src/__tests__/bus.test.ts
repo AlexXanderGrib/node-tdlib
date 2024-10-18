@@ -11,7 +11,7 @@ describe(EventBus.name, () => {
     bus.complete();
     bus.emit(4);
 
-    expect(() => bus.subscribe(console.log)).toThrowError();
+    expect(() => bus.subscribe(console.log)).toThrow("Completed");
     expect(array).toEqual([1, 2, 3]);
     expect(bus["_completed"]).toBe(true);
     expect(bus["_subscriptions"].size).toBe(0);

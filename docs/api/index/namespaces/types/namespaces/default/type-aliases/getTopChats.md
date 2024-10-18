@@ -6,7 +6,9 @@
 
 # Type Alias: getTopChats()
 
-> **getTopChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getTopChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns a list of frequently used chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75401
+dist/generated/types.d.ts:77427

@@ -26,13 +26,13 @@ Currency for the price of the product
 
 ### invoice\_chat\_id?
 
-> `readonly` `optional` **invoice\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **invoice\_chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat, containing the corresponding invoice message
 
 ### invoice\_message\_id?
 
-> `readonly` `optional` **invoice\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **invoice\_message\_id**: [`int53`](int53.md)
 
 Identifier of the message with the corresponding invoice; can be 0 or an identifier of a deleted message
 
@@ -56,10 +56,10 @@ True, if this is a recurring payment
 
 ### total\_amount?
 
-> `readonly` `optional` **total\_amount**: [`int53`](int53-1.md)
+> `readonly` `optional` **total\_amount**: [`int53`](int53.md)
 
 Total price for the product, in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:27544
+dist/generated/types.d.ts:28304

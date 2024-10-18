@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's utility bill
 
 ### utility\_bill?
 
-> `readonly` `optional` **utility\_bill**: [`personalDocument$Input`](personalDocument$Input-1.md)
+> `readonly` `optional` **utility\_bill**: [`personalDocument$Input`](personalDocument$Input.md)
 
 Utility bill
 
 ## Defined in
 
-dist/generated/types.d.ts:24498
+dist/generated/types.d.ts:25258

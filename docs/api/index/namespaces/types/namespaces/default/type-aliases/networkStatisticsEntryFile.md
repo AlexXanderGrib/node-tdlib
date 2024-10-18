@@ -30,16 +30,16 @@ Type of the network the data was sent through. Call setNetworkType to maintain t
 
 ### received\_bytes
 
-> **received\_bytes**: [`int53`](int53-1.md)
+> **received\_bytes**: [`int53`](int53.md)
 
 Total number of bytes received
 
 ### sent\_bytes
 
-> **sent\_bytes**: [`int53`](int53-1.md)
+> **sent\_bytes**: [`int53`](int53.md)
 
 Total number of bytes sent
 
 ## Defined in
 
-dist/generated/types.d.ts:49499
+dist/generated/types.d.ts:51083

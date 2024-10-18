@@ -24,10 +24,10 @@ Type of chats for which autosave settings were updated
 
 ### settings
 
-> **settings**: [`scopeAutosaveSettings`](scopeAutosaveSettings-1.md) \| `null`
+> **settings**: [`scopeAutosaveSettings`](scopeAutosaveSettings.md) \| `null`
 
 The new autosave settings; may be null if the settings are reset to default
 
 ## Defined in
 
-dist/generated/types.d.ts:57077
+dist/generated/types.d.ts:58717

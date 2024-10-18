@@ -20,16 +20,16 @@ The list of supported accent colors for user profiles has changed
 
 ### available\_accent\_color\_ids?
 
-> `readonly` `optional` **available\_accent\_color\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **available\_accent\_color\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 The list of accent color identifiers, which can be set through setProfileAccentColor and setChatProfileAccentColor. The colors must be shown in the specififed order
 
 ### colors?
 
-> `readonly` `optional` **colors**: [`vector$Input`](vector$Input.md)\<[`profileAccentColor$Input`](profileAccentColor$Input-1.md)\>
+> `readonly` `optional` **colors**: [`vector$Input`](vector$Input.md)\<[`profileAccentColor$Input`](profileAccentColor$Input.md)\>
 
 Information about supported colors
 
 ## Defined in
 
-dist/generated/types.d.ts:56413
+dist/generated/types.d.ts:58029

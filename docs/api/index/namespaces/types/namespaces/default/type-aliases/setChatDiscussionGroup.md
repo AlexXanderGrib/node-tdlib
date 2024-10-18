@@ -6,7 +6,9 @@
 
 # Type Alias: setChatDiscussionGroup()
 
-> **setChatDiscussionGroup**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatDiscussionGroup**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the discussion group of a channel chat; requires can_change_info administrator right in the channel if it is specified
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86035
+dist/generated/types.d.ts:88334

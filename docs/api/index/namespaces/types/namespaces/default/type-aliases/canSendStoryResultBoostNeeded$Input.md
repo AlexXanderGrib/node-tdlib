@@ -20,4 +20,4 @@ The chat must be boosted first by Telegram Premium subscribers to post more stor
 
 ## Defined in
 
-dist/generated/types.d.ts:43727
+dist/generated/types.d.ts:45253

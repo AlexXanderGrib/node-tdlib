@@ -24,16 +24,16 @@ Unique identifier of the query result
 
 ### thumbnail
 
-> **thumbnail**: [`thumbnail`](thumbnail-1.md) \| `null`
+> **thumbnail**: [`thumbnail`](thumbnail.md) \| `null`
 
 Result thumbnail in JPEG format; may be null
 
 ### venue
 
-> **venue**: [`venue`](venue-1.md)
+> **venue**: [`venue`](venue.md)
 
 Venue result
 
 ## Defined in
 
-dist/generated/types.d.ts:38439
+dist/generated/types.d.ts:39809

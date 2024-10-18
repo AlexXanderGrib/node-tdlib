@@ -6,7 +6,9 @@
 
 # Type Alias: setStoryReaction()
 
-> **setStoryReaction**: (`parameters`) => [`Ok`](Ok.md)
+> **setStoryReaction**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes chosen reaction on a story that has already been sent
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87946
+dist/generated/types.d.ts:90321

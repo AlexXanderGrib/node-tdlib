@@ -6,7 +6,9 @@
 
 # Type Alias: confirmSession()
 
-> **confirmSession**: (`parameters`) => [`Ok`](Ok.md)
+> **confirmSession**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Confirms an unconfirmed session of the current user from another device
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95731
+dist/generated/types.d.ts:98500

@@ -18,19 +18,19 @@ A video message
 
 ### added\_sticker\_file\_ids
 
-> **added\_sticker\_file\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **added\_sticker\_file\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 File identifiers of the stickers added to the video, if applicable
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md) \| `null`
+> **caption**: [`formattedText`](formattedText.md) \| `null`
 
 Video caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds
 
@@ -42,7 +42,7 @@ True, if the video preview must be covered by a spoiler animation; not supported
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
 Video height
 
@@ -66,7 +66,7 @@ True, if the video is supposed to be streamed
 
 ### thumbnail
 
-> **thumbnail**: [`inputThumbnail`](inputThumbnail-1.md) \| `null`
+> **thumbnail**: [`inputThumbnail`](inputThumbnail.md) \| `null`
 
 Video thumbnail; pass null to skip thumbnail uploading
 
@@ -78,10 +78,10 @@ Video to be sent
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
 Video width
 
 ## Defined in
 
-dist/generated/types.d.ts:29727
+dist/generated/types.d.ts:30601

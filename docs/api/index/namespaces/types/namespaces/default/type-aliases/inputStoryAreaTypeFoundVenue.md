@@ -18,7 +18,7 @@ An area pointing to a venue found by the bot getOption("venue_search_bot_usernam
 
 ### query\_id
 
-> **query\_id**: [`int64`](int64-1.md)
+> **query\_id**: [`int64`](int64.md)
 
 Identifier of the inline query, used to found the venue
 
@@ -30,4 +30,4 @@ Identifier of the inline query result
 
 ## Defined in
 
-dist/generated/types.d.ts:32107
+dist/generated/types.d.ts:33317

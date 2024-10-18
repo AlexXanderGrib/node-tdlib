@@ -20,22 +20,22 @@ A message failed to send. Be aware that some messages being sent can be irrecove
 
 ### error?
 
-> `readonly` `optional` **error**: [`error$Input`](error$Input-1.md)
+> `readonly` `optional` **error**: [`error$Input`](error$Input.md)
 
 The cause of the message sending failure
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 The failed to send message
 
 ### old\_message\_id?
 
-> `readonly` `optional` **old\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **old\_message\_id**: [`int53`](int53.md)
 
 The previous temporary message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52774
+dist/generated/types.d.ts:54390

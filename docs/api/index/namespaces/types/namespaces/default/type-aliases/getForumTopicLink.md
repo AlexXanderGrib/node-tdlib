@@ -6,7 +6,9 @@
 
 # Type Alias: getForumTopicLink()
 
-> **getForumTopicLink**: (`parameters`) => [`MessageLink`](MessageLink.md)
+> **getForumTopicLink**: (`parameters`) => [`MessageLink`](MessageLink-1.md)
+
+Returns an HTTPS link to a topic in a forum chat. This is an offline request
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageLink`](MessageLink.md)
+[`MessageLink`](MessageLink-1.md)
 
-[MessageLink](MessageLink.md)
+[MessageLink](MessageLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80812
+dist/generated/types.d.ts:82861

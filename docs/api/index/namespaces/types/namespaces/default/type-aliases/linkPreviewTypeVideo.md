@@ -24,13 +24,13 @@ Author of the video
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds; 0 if unknown
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
 Expected height of the preview
 
@@ -48,16 +48,16 @@ URL of the video; may be empty if none
 
 ### video
 
-> **video**: [`video`](video-1.md) \| `null`
+> **video**: [`video`](video.md) \| `null`
 
 The video description; may be null if unknown
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
 Expected width of the preview
 
 ## Defined in
 
-dist/generated/types.d.ts:21559
+dist/generated/types.d.ts:22309

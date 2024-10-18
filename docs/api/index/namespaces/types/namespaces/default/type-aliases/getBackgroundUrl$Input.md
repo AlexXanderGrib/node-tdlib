@@ -30,4 +30,4 @@ Background type; backgroundTypeChatTheme isn't supported
 
 ## Defined in
 
-dist/generated/types.d.ts:97098
+dist/generated/types.d.ts:99877

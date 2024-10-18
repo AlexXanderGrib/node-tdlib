@@ -6,7 +6,9 @@
 
 # Type Alias: setChatDescription()
 
-> **setChatDescription**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatDescription**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85993
+dist/generated/types.d.ts:88292

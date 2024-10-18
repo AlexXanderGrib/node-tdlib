@@ -26,4 +26,4 @@ New sticker set title
 
 ## Defined in
 
-dist/generated/types.d.ts:100086
+dist/generated/types.d.ts:102865

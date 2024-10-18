@@ -18,4 +18,4 @@ Settings for Firebase Authentication in the official Android application
 
 ## Defined in
 
-dist/generated/types.d.ts:35921
+dist/generated/types.d.ts:37291

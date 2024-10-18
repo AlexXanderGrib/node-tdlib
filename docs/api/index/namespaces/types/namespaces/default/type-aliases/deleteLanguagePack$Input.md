@@ -26,4 +26,4 @@ Identifier of the language pack to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:97575
+dist/generated/types.d.ts:100354

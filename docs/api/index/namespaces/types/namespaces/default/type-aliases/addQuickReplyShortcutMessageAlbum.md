@@ -6,7 +6,11 @@
 
 # Type Alias: addQuickReplyShortcutMessageAlbum()
 
-> **addQuickReplyShortcutMessageAlbum**: (`parameters`) => [`QuickReplyMessages`](QuickReplyMessages.md)
+> **addQuickReplyShortcutMessageAlbum**: (`parameters`) => [`QuickReplyMessages`](QuickReplyMessages-1.md)
+
+Adds 2-10 messages grouped together into an album to a quick reply shortcut. Currently, only audio, document, photo and video messages can be grouped into an album.
+
+- Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`QuickReplyMessages`](QuickReplyMessages.md)
+[`QuickReplyMessages`](QuickReplyMessages-1.md)
 
-[QuickReplyMessages](QuickReplyMessages.md)
+[QuickReplyMessages](QuickReplyMessages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80505
+dist/generated/types.d.ts:82554

@@ -18,10 +18,10 @@ A text shows instead of a raw mention of the user (e.g., when the user has no us
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 Identifier of the mentioned user
 
 ## Defined in
 
-dist/generated/types.d.ts:28763
+dist/generated/types.d.ts:29637

@@ -20,4 +20,4 @@ The maximum length of captions of sent stories
 
 ## Defined in
 
-dist/generated/types.d.ts:41487
+dist/generated/types.d.ts:42881

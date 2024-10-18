@@ -18,4 +18,4 @@ A story content that is not supported in the current TDLib version
 
 ## Defined in
 
-dist/generated/types.d.ts:32513
+dist/generated/types.d.ts:33781

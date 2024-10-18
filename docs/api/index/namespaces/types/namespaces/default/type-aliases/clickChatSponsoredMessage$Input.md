@@ -18,16 +18,16 @@ Informs TDLib that the user opened the sponsored chat via the button, the name, 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the sponsored message
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the sponsored message
 
 ## Defined in
 
-dist/generated/types.d.ts:77496
+dist/generated/types.d.ts:79505

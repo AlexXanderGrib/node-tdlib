@@ -18,10 +18,10 @@ New call was received
 
 ### call\_id
 
-> **call\_id**: [`int32`](int32-1.md)
+> **call\_id**: [`int32`](int32.md)
 
 Call identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:45279
+dist/generated/types.d.ts:46805

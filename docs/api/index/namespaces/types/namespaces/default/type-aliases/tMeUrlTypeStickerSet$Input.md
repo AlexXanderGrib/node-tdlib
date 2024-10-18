@@ -20,10 +20,10 @@ A URL linking to a sticker set
 
 ### sticker\_set\_id?
 
-> `readonly` `optional` **sticker\_set\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **sticker\_set\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:50298
+dist/generated/types.d.ts:51896

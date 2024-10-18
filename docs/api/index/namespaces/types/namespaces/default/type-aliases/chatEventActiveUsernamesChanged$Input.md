@@ -32,4 +32,4 @@ Previous list of active usernames
 
 ## Defined in
 
-dist/generated/types.d.ts:40041
+dist/generated/types.d.ts:41411

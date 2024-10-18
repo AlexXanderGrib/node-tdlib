@@ -6,7 +6,9 @@
 
 # Type Alias: parseMarkdown()
 
-> **parseMarkdown**: (`parameters`) => [`FormattedText`](FormattedText.md)
+> **parseMarkdown**: (`parameters`) => [`FormattedText`](FormattedText-1.md)
+
+Parses Markdown entities in a human-friendly format, ignoring markup errors. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FormattedText`](FormattedText.md)
+[`FormattedText`](FormattedText-1.md)
 
-[FormattedText](FormattedText.md)
+[FormattedText](FormattedText-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81770
+dist/generated/types.d.ts:83963

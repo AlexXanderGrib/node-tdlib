@@ -18,4 +18,4 @@ The session is running on a Linux device
 
 ## Defined in
 
-dist/generated/types.d.ts:46573
+dist/generated/types.d.ts:48099

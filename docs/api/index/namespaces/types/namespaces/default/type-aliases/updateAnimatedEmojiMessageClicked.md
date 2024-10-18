@@ -18,22 +18,22 @@ Some animated emoji message was clicked and a big animated sticker must be playe
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md)
+> **sticker**: [`sticker`](sticker.md)
 
 The animated sticker to be played
 
 ## Defined in
 
-dist/generated/types.d.ts:56913
+dist/generated/types.d.ts:58553

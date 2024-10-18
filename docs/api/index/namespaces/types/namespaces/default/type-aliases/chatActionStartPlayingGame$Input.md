@@ -20,4 +20,4 @@ The user has started to play a game
 
 ## Defined in
 
-dist/generated/types.d.ts:30891
+dist/generated/types.d.ts:32023

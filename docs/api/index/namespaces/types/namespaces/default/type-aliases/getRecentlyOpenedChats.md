@@ -6,7 +6,9 @@
 
 # Type Alias: getRecentlyOpenedChats()
 
-> **getRecentlyOpenedChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getRecentlyOpenedChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75578
+dist/generated/types.d.ts:77604

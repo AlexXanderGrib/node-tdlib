@@ -14,10 +14,10 @@ Stops the preliminary uploading of a file. Supported only for files uploaded by 
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 Identifier of the file to stop uploading
 
 ## Defined in
 
-dist/generated/types.d.ts:89010
+dist/generated/types.d.ts:91385

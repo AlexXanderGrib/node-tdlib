@@ -18,7 +18,7 @@ A new incoming shipping query; for bots only. Only for invoices with flexible pr
 
 ### id
 
-> **id**: [`int64`](int64-1.md)
+> **id**: [`int64`](int64.md)
 
 Unique query identifier
 
@@ -30,16 +30,16 @@ Invoice payload
 
 ### sender\_user\_id
 
-> **sender\_user\_id**: [`int53`](int53-1.md)
+> **sender\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user who sent the query
 
 ### shipping\_address
 
-> **shipping\_address**: [`address`](address-1.md)
+> **shipping\_address**: [`address`](address.md)
 
 User shipping address
 
 ## Defined in
 
-dist/generated/types.d.ts:57597
+dist/generated/types.d.ts:59237

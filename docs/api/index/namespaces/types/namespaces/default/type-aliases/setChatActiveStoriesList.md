@@ -6,7 +6,9 @@
 
 # Type Alias: setChatActiveStoriesList()
 
-> **setChatActiveStoriesList**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatActiveStoriesList**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes story list in which stories from the chat are shown
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87602
+dist/generated/types.d.ts:89977

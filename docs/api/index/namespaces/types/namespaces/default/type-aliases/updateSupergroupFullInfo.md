@@ -18,16 +18,16 @@ Some data in supergroupFullInfo has been changed
 
 ### supergroup\_full\_info
 
-> **supergroup\_full\_info**: [`supergroupFullInfo`](supergroupFullInfo-1.md)
+> **supergroup\_full\_info**: [`supergroupFullInfo`](supergroupFullInfo.md)
 
 New full information about the supergroup
 
 ### supergroup\_id
 
-> **supergroup\_id**: [`int53`](int53-1.md)
+> **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup or channel
 
 ## Defined in
 
-dist/generated/types.d.ts:55183
+dist/generated/types.d.ts:56799

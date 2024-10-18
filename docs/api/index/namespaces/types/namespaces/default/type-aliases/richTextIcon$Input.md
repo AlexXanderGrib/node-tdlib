@@ -20,22 +20,22 @@ A small image inside the text
 
 ### document?
 
-> `readonly` `optional` **document**: [`document$Input`](document$Input-1.md)
+> `readonly` `optional` **document**: [`document$Input`](document$Input.md)
 
 The image represented as a document. The image can be in GIF, JPEG or PNG format
 
 ### height?
 
-> `readonly` `optional` **height**: [`int32`](int32-1.md)
+> `readonly` `optional` **height**: [`int32`](int32.md)
 
 Height of a bounding box in which the image must be shown; 0 if unknown
 
 ### width?
 
-> `readonly` `optional` **width**: [`int32`](int32-1.md)
+> `readonly` `optional` **width**: [`int32`](int32.md)
 
 Width of a bounding box in which the image must be shown; 0 if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:19182
+dist/generated/types.d.ts:19808

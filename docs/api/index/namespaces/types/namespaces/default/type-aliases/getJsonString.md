@@ -6,7 +6,9 @@
 
 # Type Alias: getJsonString()
 
-> **getJsonString**: (`parameters`) => [`Text`](Text.md)
+> **getJsonString**: (`parameters`) => [`Text`](Text-1.md)
+
+Converts a JsonValue object to corresponding JSON-serialized string. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82024
+dist/generated/types.d.ts:84217

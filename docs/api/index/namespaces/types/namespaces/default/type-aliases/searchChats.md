@@ -6,7 +6,9 @@
 
 # Type Alias: searchChats()
 
-> **searchChats**: (`parameters`) => [`Chats`](Chats.md)
+> **searchChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75170
+dist/generated/types.d.ts:77196

@@ -14,16 +14,16 @@ Sets support information for the given user; for Telegram support only
 
 ### message?
 
-> `readonly` `optional` **message**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **message**: [`formattedText$Input`](formattedText$Input.md)
 
 New information message
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:101917
+dist/generated/types.d.ts:104838

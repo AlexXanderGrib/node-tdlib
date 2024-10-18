@@ -8,7 +8,7 @@
 
 > **getStarAdAccountUrl$DirectInput**: `object`
 
-Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram stars
+Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram Stars
 
 ## Type declaration
 
@@ -16,8 +16,8 @@ Returns a URL for a Telegram Ad platform account that can be used to set up adve
 
 > `readonly` `optional` **owner\_id**: [`MessageSender$Input`](MessageSender$Input.md)
 
-Identifier of the owner of the Telegram stars; can be identifier of an owned bot, or identifier of an owned channel chat
+Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of an owned channel chat
 
 ## Defined in
 
-dist/generated/types.d.ts:98536
+dist/generated/types.d.ts:101315

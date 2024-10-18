@@ -20,4 +20,4 @@ The file is a thumbnail of a file from a secret chat
 
 ## Defined in
 
-dist/generated/types.d.ts:49067
+dist/generated/types.d.ts:50651

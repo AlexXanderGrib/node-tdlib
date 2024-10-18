@@ -12,4 +12,4 @@ Returns all updates needed to restore current TDLib state, i.e. all actual updat
 
 ## Defined in
 
-dist/generated/types.d.ts:73812
+dist/generated/types.d.ts:75800

@@ -20,7 +20,7 @@ Files used in the imported messages. Only inputFileLocal and inputFileGenerated 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of a chat to which the messages will be imported. It must be an identifier of a private chat with a mutual contact or an identifier of a supergroup chat with can_change_info member right
 
@@ -32,4 +32,4 @@ File with messages to import. Only inputFileLocal and inputFileGenerated are sup
 
 ## Defined in
 
-dist/generated/types.d.ts:89640
+dist/generated/types.d.ts:92015

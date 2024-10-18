@@ -18,15 +18,15 @@ Edits the time when a scheduled message will be sent. Scheduling state of all me
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message
+Identifier of the message. Use messageProperties.can_edit_scheduling_state to check whether the message is suitable
 
 ### scheduling\_state?
 
@@ -36,4 +36,4 @@ The new message scheduling state; pass null to send the message immediately
 
 ## Defined in
 
-dist/generated/types.d.ts:79402
+dist/generated/types.d.ts:81393

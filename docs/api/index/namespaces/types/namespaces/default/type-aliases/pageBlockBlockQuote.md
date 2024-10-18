@@ -30,4 +30,4 @@ Quote text
 
 ## Defined in
 
-dist/generated/types.d.ts:19937
+dist/generated/types.d.ts:20563

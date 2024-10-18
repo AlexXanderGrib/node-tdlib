@@ -18,4 +18,4 @@ The network is not available
 
 ## Defined in
 
-dist/generated/types.d.ts:49429
+dist/generated/types.d.ts:51013

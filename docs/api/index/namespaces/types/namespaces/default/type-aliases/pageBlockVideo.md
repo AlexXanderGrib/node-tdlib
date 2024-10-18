@@ -18,7 +18,7 @@ A video
 
 ### caption
 
-> **caption**: [`pageBlockCaption`](pageBlockCaption-1.md)
+> **caption**: [`pageBlockCaption`](pageBlockCaption.md)
 
 Video caption
 
@@ -36,10 +36,10 @@ True, if the video must be played automatically
 
 ### video
 
-> **video**: [`video`](video-1.md) \| `null`
+> **video**: [`video`](video.md) \| `null`
 
 Video file; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:20127
+dist/generated/types.d.ts:20753

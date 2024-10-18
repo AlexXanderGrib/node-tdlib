@@ -20,22 +20,22 @@ A cubic Bézier curve to a given point
 
 ### end\_control\_point?
 
-> `readonly` `optional` **end\_control\_point**: [`point$Input`](point$Input-1.md)
+> `readonly` `optional` **end\_control\_point**: [`point$Input`](point$Input.md)
 
 The end control point of the curve
 
 ### end\_point?
 
-> `readonly` `optional` **end\_point**: [`point$Input`](point$Input-1.md)
+> `readonly` `optional` **end\_point**: [`point$Input`](point$Input.md)
 
 The end point of the curve
 
 ### start\_control\_point?
 
-> `readonly` `optional` **start\_control\_point**: [`point$Input`](point$Input-1.md)
+> `readonly` `optional` **start\_control\_point**: [`point$Input`](point$Input.md)
 
 The start control point of the curve
 
 ## Defined in
 
-dist/generated/types.d.ts:52420
+dist/generated/types.d.ts:54036

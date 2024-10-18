@@ -6,7 +6,9 @@
 
 # Type Alias: getForumTopicDefaultIcons()
 
-> **getForumTopicDefaultIcons**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getForumTopicDefaultIcons**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns the list of custom emoji, which can be used as forum topic icon by all users
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80620
+dist/generated/types.d.ts:82669

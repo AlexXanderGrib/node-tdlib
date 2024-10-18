@@ -24,4 +24,4 @@ JSON-encoded push notification payload with all fields sent by the server, and "
 
 ## Defined in
 
-dist/generated/types.d.ts:97645
+dist/generated/types.d.ts:100424

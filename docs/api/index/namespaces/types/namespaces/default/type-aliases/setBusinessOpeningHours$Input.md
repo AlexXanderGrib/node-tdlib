@@ -18,10 +18,10 @@ Changes the business opening hours of the current user. Requires Telegram Busine
 
 ### opening\_hours?
 
-> `readonly` `optional` **opening\_hours**: [`businessOpeningHours$Input`](businessOpeningHours$Input-1.md) \| `null`
+> `readonly` `optional` **opening\_hours**: [`businessOpeningHours$Input`](businessOpeningHours$Input.md) \| `null`
 
 The new opening hours of the business; pass null to remove the opening hours; up to 28 time intervals can be specified
 
 ## Defined in
 
-dist/generated/types.d.ts:94318
+dist/generated/types.d.ts:96815

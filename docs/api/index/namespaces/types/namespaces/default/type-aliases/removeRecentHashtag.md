@@ -6,7 +6,9 @@
 
 # Type Alias: removeRecentHashtag()
 
-> **removeRecentHashtag**: (`parameters`) => [`Ok`](Ok.md)
+> **removeRecentHashtag**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a hashtag from the list of recently used hashtags
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93768
+dist/generated/types.d.ts:96265

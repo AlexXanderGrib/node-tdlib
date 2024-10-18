@@ -18,4 +18,4 @@ A button that sends the user's phone number when pressed; available only in priv
 
 ## Defined in
 
-dist/generated/types.d.ts:17119
+dist/generated/types.d.ts:17711

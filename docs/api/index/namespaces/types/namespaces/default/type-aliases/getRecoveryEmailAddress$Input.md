@@ -24,4 +24,4 @@ The 2-step verification password for the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:74015
+dist/generated/types.d.ts:76003

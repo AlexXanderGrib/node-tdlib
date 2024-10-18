@@ -18,10 +18,10 @@ The element contains an error in an unspecified place. The error will be conside
 
 ### element\_hash
 
-> **element\_hash**: [`bytes`](bytes-1.md)
+> **element\_hash**: [`bytes`](bytes.md)
 
 Current hash of the entire element
 
 ## Defined in
 
-dist/generated/types.d.ts:25493
+dist/generated/types.d.ts:26253

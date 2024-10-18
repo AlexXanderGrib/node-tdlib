@@ -6,7 +6,9 @@
 
 # Type Alias: setReadDatePrivacySettings()
 
-> **setReadDatePrivacySettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setReadDatePrivacySettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes privacy settings for message read date
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97819
+dist/generated/types.d.ts:100598

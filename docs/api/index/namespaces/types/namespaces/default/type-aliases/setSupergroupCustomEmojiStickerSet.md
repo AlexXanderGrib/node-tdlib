@@ -6,7 +6,9 @@
 
 # Type Alias: setSupergroupCustomEmojiStickerSet()
 
-> **setSupergroupCustomEmojiStickerSet**: (`parameters`) => [`Ok`](Ok.md)
+> **setSupergroupCustomEmojiStickerSet**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96131
+dist/generated/types.d.ts:98900

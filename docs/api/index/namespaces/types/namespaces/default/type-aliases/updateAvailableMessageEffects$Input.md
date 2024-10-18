@@ -20,16 +20,16 @@ The list of available message effects has changed
 
 ### reaction\_effect\_ids?
 
-> `readonly` `optional` **reaction\_effect\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input-1.md)\>
+> `readonly` `optional` **reaction\_effect\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input.md)\>
 
 The new list of available message effects from emoji reactions
 
 ### sticker\_effect\_ids?
 
-> `readonly` `optional` **sticker\_effect\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input-1.md)\>
+> `readonly` `optional` **sticker\_effect\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input.md)\>
 
 The new list of available message effects from Premium stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:56669
+dist/generated/types.d.ts:58285

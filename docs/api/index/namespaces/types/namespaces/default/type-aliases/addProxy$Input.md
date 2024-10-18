@@ -24,7 +24,7 @@ Pass true to immediately enable the proxy
 
 ### port?
 
-> `readonly` `optional` **port**: [`int32`](int32-1.md)
+> `readonly` `optional` **port**: [`int32`](int32.md)
 
 Proxy server port
 
@@ -42,4 +42,4 @@ Proxy type
 
 ## Defined in
 
-dist/generated/types.d.ts:101386
+dist/generated/types.d.ts:104307

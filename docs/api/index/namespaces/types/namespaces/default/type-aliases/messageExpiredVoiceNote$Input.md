@@ -20,4 +20,4 @@ A self-destructed voice note message
 
 ## Defined in
 
-dist/generated/types.d.ts:26293
+dist/generated/types.d.ts:27053

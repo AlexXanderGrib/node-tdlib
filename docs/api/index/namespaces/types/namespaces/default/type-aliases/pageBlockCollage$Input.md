@@ -20,7 +20,7 @@ A collage
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input-1.md)
+> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input.md)
 
 Block caption
 
@@ -32,4 +32,4 @@ Collage item contents
 
 ## Defined in
 
-dist/generated/types.d.ts:20425
+dist/generated/types.d.ts:21051

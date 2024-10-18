@@ -26,10 +26,10 @@ Author
 
 ### publish\_date?
 
-> `readonly` `optional` **publish\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **publish\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the article was published; 0 if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:19705
+dist/generated/types.d.ts:20331

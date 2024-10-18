@@ -6,7 +6,9 @@
 
 # Type Alias: hideContactCloseBirthdays()
 
-> **hideContactCloseBirthdays**: (`parameters`) => [`Ok`](Ok.md)
+> **hideContactCloseBirthdays**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Hides the list of contacts that have close birthdays for 24 hours
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82261
+dist/generated/types.d.ts:84454

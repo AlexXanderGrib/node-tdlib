@@ -26,7 +26,7 @@ Emoji used to choose the sticker
 
 ### height?
 
-> `readonly` `optional` **height**: [`int32`](int32-1.md)
+> `readonly` `optional` **height**: [`int32`](int32.md)
 
 Sticker height
 
@@ -38,16 +38,16 @@ Sticker to be sent
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input.md) \| `null`
 
 Sticker thumbnail; pass null to skip thumbnail uploading
 
 ### width?
 
-> `readonly` `optional` **width**: [`int32`](int32-1.md)
+> `readonly` `optional` **width**: [`int32`](int32.md)
 
 Sticker width
 
 ## Defined in
 
-dist/generated/types.d.ts:29696
+dist/generated/types.d.ts:30570

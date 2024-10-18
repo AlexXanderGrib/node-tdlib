@@ -24,4 +24,4 @@ Current mobile network code
 
 ## Defined in
 
-dist/generated/types.d.ts:73665
+dist/generated/types.d.ts:75653

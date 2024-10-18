@@ -18,13 +18,13 @@ Returns a list of trending sticker sets. For optimal performance, the number of 
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of sticker sets to be returned; up to 100. For optimal performance, the number of returned sticker sets is chosen by TDLib and can be smaller than the specified limit, even if the end of the list has not been reached
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int32`](int32-1.md)
+> `readonly` `optional` **offset**: [`int32`](int32.md)
 
 The offset from which to return the sticker sets; must be non-negative
 
@@ -36,4 +36,4 @@ Type of the sticker sets to return
 
 ## Defined in
 
-dist/generated/types.d.ts:92794
+dist/generated/types.d.ts:95291

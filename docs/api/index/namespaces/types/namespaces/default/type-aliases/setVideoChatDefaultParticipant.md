@@ -6,7 +6,9 @@
 
 # Type Alias: setVideoChatDefaultParticipant()
 
-> **setVideoChatDefaultParticipant**: (`parameters`) => [`Ok`](Ok.md)
+> **setVideoChatDefaultParticipant**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes default participant identifier, on whose behalf a video chat in the chat will be joined
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90771
+dist/generated/types.d.ts:93268

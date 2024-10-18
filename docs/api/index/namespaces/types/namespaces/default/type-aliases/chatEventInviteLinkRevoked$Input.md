@@ -20,10 +20,10 @@ A chat invite link was revoked
 
 ### invite\_link?
 
-> `readonly` `optional` **invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input-1.md)
+> `readonly` `optional` **invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input.md)
 
 The invite link
 
 ## Defined in
 
-dist/generated/types.d.ts:40332
+dist/generated/types.d.ts:41726

@@ -12,4 +12,4 @@ Quickly returns approximate storage usage statistics. Can be called before autho
 
 ## Defined in
 
-dist/generated/types.d.ts:98827
+dist/generated/types.d.ts:101606

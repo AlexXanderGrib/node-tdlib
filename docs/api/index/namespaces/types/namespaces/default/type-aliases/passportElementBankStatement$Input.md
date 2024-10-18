@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's bank statement
 
 ### bank\_statement?
 
-> `readonly` `optional` **bank\_statement**: [`personalDocument$Input`](personalDocument$Input-1.md)
+> `readonly` `optional` **bank\_statement**: [`personalDocument$Input`](personalDocument$Input.md)
 
 Bank statement
 
 ## Defined in
 
-dist/generated/types.d.ts:24522
+dist/generated/types.d.ts:25282

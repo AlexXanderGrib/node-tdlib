@@ -14,7 +14,7 @@ Sets group call title. Requires groupCall.can_be_managed group call flag
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -26,4 +26,4 @@ New group call title; 1-64 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:91201
+dist/generated/types.d.ts:93698

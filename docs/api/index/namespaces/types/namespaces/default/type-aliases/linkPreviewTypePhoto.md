@@ -24,10 +24,10 @@ Author of the photo
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md)
+> **photo**: [`photo`](photo.md)
 
 The photo
 
 ## Defined in
 
-dist/generated/types.d.ts:21309
+dist/generated/types.d.ts:22059

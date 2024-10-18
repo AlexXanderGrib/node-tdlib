@@ -6,7 +6,9 @@
 
 # Type Alias: getChatBoosts()
 
-> **getChatBoosts**: (`parameters`) => [`FoundChatBoosts`](FoundChatBoosts.md)
+> **getChatBoosts**: (`parameters`) => [`FoundChatBoosts`](FoundChatBoosts-1.md)
+
+Returns the list of boosts applied to a chat; requires administrator rights in the chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FoundChatBoosts`](FoundChatBoosts.md)
+[`FoundChatBoosts`](FoundChatBoosts-1.md)
 
-[FoundChatBoosts](FoundChatBoosts.md)
+[FoundChatBoosts](FoundChatBoosts-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88520
+dist/generated/types.d.ts:90895

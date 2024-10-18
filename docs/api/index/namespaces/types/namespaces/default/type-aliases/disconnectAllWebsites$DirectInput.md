@@ -12,4 +12,4 @@ Disconnects all websites from the current user's Telegram account
 
 ## Defined in
 
-dist/generated/types.d.ts:95890
+dist/generated/types.d.ts:98659

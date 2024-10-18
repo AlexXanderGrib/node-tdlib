@@ -6,7 +6,9 @@
 
 # Type Alias: getInstalledStickerSets()
 
-> **getInstalledStickerSets**: (`parameters`) => [`StickerSets`](StickerSets.md)
+> **getInstalledStickerSets**: (`parameters`) => [`StickerSets`](StickerSets-1.md)
+
+Returns a list of installed sticker sets
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StickerSets`](StickerSets.md)
+[`StickerSets`](StickerSets-1.md)
 
-[StickerSets](StickerSets.md)
+[StickerSets](StickerSets-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92742
+dist/generated/types.d.ts:95239

@@ -20,10 +20,10 @@ An updated chat photo
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`chatPhoto$Input`](chatPhoto$Input-1.md)
+> `readonly` `optional` **photo**: [`chatPhoto$Input`](chatPhoto$Input.md)
 
 New chat photo
 
 ## Defined in
 
-dist/generated/types.d.ts:26960
+dist/generated/types.d.ts:27720

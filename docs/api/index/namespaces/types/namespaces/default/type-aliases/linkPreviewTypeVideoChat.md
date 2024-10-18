@@ -24,10 +24,10 @@ True, if the video chat is expected to be a live stream in a channel or a broadc
 
 ### photo
 
-> **photo**: [`chatPhoto`](chatPhoto-1.md) \| `null`
+> **photo**: [`chatPhoto`](chatPhoto.md) \| `null`
 
 Photo of the chat with the video chat; may be null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:21643
+dist/generated/types.d.ts:22393

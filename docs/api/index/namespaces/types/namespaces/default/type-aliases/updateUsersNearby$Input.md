@@ -20,10 +20,10 @@ The list of users nearby has changed. The update is guaranteed to be sent only 6
 
 ### users\_nearby?
 
-> `readonly` `optional` **users\_nearby**: [`vector$Input`](vector$Input.md)\<[`chatNearby$Input`](chatNearby$Input-1.md)\>
+> `readonly` `optional` **users\_nearby**: [`vector$Input`](vector$Input.md)\<[`chatNearby$Input`](chatNearby$Input.md)\>
 
 The new list of users nearby
 
 ## Defined in
 
-dist/generated/types.d.ts:56544
+dist/generated/types.d.ts:58160

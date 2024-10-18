@@ -18,4 +18,4 @@ Suggests the user to set birthdate
 
 ## Defined in
 
-dist/generated/types.d.ts:50527
+dist/generated/types.d.ts:52125

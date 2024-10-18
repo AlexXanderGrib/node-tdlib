@@ -18,4 +18,4 @@ A scope covering all private chats
 
 ## Defined in
 
-dist/generated/types.d.ts:52455
+dist/generated/types.d.ts:54071

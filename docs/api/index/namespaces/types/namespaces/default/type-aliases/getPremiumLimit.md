@@ -6,7 +6,9 @@
 
 # Type Alias: getPremiumLimit()
 
-> **getPremiumLimit**: (`parameters`) => [`PremiumLimit`](PremiumLimit.md)
+> **getPremiumLimit**: (`parameters`) => [`PremiumLimit`](PremiumLimit-1.md)
+
+Returns information about a limit, increased for Premium users. Returns a 404 error if the limit is unknown
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PremiumLimit`](PremiumLimit.md)
+[`PremiumLimit`](PremiumLimit-1.md)
 
-[PremiumLimit](PremiumLimit.md)
+[PremiumLimit](PremiumLimit-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100456
+dist/generated/types.d.ts:103235

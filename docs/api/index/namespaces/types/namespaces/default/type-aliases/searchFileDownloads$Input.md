@@ -18,7 +18,7 @@ Searches for files in the file download list or recently downloaded files from t
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of files to be returned
 
@@ -48,4 +48,4 @@ Query to search for; may be empty to return all downloaded files
 
 ## Defined in
 
-dist/generated/types.d.ts:89453
+dist/generated/types.d.ts:91828

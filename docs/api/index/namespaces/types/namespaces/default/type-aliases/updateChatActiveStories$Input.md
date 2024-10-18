@@ -20,10 +20,10 @@ The list of active stories posted by a specific chat has changed
 
 ### active\_stories?
 
-> `readonly` `optional` **active\_stories**: [`chatActiveStories$Input`](chatActiveStories$Input-1.md)
+> `readonly` `optional` **active\_stories**: [`chatActiveStories$Input`](chatActiveStories$Input.md)
 
 The new list of active stories
 
 ## Defined in
 
-dist/generated/types.d.ts:55988
+dist/generated/types.d.ts:57604

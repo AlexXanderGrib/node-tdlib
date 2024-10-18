@@ -20,16 +20,16 @@ New call signaling data arrived
 
 ### call\_id?
 
-> `readonly` `optional` **call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **call\_id**: [`int32`](int32.md)
 
 The call identifier
 
 ### data?
 
-> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input.md)
 
 The data
 
 ## Defined in
 
-dist/generated/types.d.ts:55671
+dist/generated/types.d.ts:57287

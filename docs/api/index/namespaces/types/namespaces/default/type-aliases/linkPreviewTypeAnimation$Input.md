@@ -20,7 +20,7 @@ The link is a link to an animation
 
 ### animation?
 
-> `readonly` `optional` **animation**: [`animation$Input`](animation$Input-1.md)
+> `readonly` `optional` **animation**: [`animation$Input`](animation$Input.md)
 
 The animation
 
@@ -32,4 +32,4 @@ Author of the animation
 
 ## Defined in
 
-dist/generated/types.d.ts:20899
+dist/generated/types.d.ts:21525

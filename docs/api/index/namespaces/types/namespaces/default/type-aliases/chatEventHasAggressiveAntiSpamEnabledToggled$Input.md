@@ -26,4 +26,4 @@ New value of has_aggressive_anti_spam_enabled
 
 ## Defined in
 
-dist/generated/types.d.ts:40250
+dist/generated/types.d.ts:41620

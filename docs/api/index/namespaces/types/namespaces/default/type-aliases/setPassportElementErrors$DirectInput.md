@@ -14,16 +14,16 @@ Informs the user that some of the elements in their Telegram Passport contain er
 
 ### errors?
 
-> `readonly` `optional` **errors**: [`vector$Input`](vector$Input.md)\<[`inputPassportElementError$Input`](inputPassportElementError$Input-1.md)\>
+> `readonly` `optional` **errors**: [`vector$Input`](vector$Input.md)\<[`inputPassportElementError$Input`](inputPassportElementError$Input.md)\>
 
 The errors
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:99373
+dist/generated/types.d.ts:102152

@@ -8,7 +8,7 @@
 
 > **chatAvailableReactionsAll**: `object`
 
-All reactions are available in the chat
+All reactions are available in the chat, excluding the paid reaction and custom reactions in channel chats
 
 ## Type declaration
 
@@ -18,10 +18,10 @@ All reactions are available in the chat
 
 ### max\_reaction\_count
 
-> **max\_reaction\_count**: [`int32`](int32-1.md)
+> **max\_reaction\_count**: [`int32`](int32.md)
 
 The maximum allowed number of reactions per message; 1-11
 
 ## Defined in
 
-dist/generated/types.d.ts:16063
+dist/generated/types.d.ts:16655

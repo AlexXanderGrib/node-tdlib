@@ -6,7 +6,9 @@
 
 # Type Alias: sharePhoneNumber()
 
-> **sharePhoneNumber**: (`parameters`) => [`Ok`](Ok.md)
+> **sharePhoneNumber**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Shares the phone number of the current user with a mutual contact. Supposed to be called when the user clicks on chatActionBarSharePhoneNumber
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92457
+dist/generated/types.d.ts:94954

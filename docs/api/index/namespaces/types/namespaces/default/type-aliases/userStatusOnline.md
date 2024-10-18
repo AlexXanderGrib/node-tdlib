@@ -18,10 +18,10 @@ The user is online
 
 ### expires
 
-> **expires**: [`int32`](int32-1.md)
+> **expires**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the user's online status will expire
 
 ## Defined in
 
-dist/generated/types.d.ts:30987
+dist/generated/types.d.ts:32119

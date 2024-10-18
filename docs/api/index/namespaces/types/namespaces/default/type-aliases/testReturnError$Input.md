@@ -18,10 +18,10 @@ Returns the specified error and ensures that the Error object is used; for testi
 
 ### error?
 
-> `readonly` `optional` **error**: [`error$Input`](error$Input-1.md)
+> `readonly` `optional` **error**: [`error$Input`](error$Input.md)
 
 The error to be returned
 
 ## Defined in
 
-dist/generated/types.d.ts:102288
+dist/generated/types.d.ts:105209

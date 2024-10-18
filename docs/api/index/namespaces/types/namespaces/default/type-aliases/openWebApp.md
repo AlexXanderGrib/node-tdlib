@@ -6,7 +6,11 @@
 
 # Type Alias: openWebApp()
 
-> **openWebApp**: (`parameters`) => [`WebAppInfo`](WebAppInfo.md)
+> **openWebApp**: (`parameters`) => [`WebAppInfo`](WebAppInfo-1.md)
+
+Informs TDLib that a Web App is being opened from the attachment menu, a botMenuButton button, an internalLinkTypeAttachmentMenuBot link, or an inlineKeyboardButtonTypeWebApp button.
+
+- For each bot, a confirmation alert about data sent to the bot must be shown once
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`WebAppInfo`](WebAppInfo.md)
+[`WebAppInfo`](WebAppInfo-1.md)
 
-[WebAppInfo](WebAppInfo.md)
+[WebAppInfo](WebAppInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83017
+dist/generated/types.d.ts:85316

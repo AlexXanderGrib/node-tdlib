@@ -14,16 +14,16 @@ Returns file downloaded prefix size from a given offset, in bytes
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 Identifier of the file
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int53`](int53-1.md)
+> `readonly` `optional` **offset**: [`int53`](int53.md)
 
 Offset from which downloaded prefix size needs to be calculated
 
 ## Defined in
 
-dist/generated/types.d.ts:88841
+dist/generated/types.d.ts:91216

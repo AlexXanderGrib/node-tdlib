@@ -18,13 +18,13 @@ Sets the result of a callback query; for bots only
 
 ### cache\_time?
 
-> `readonly` `optional` **cache\_time**: [`int32`](int32-1.md)
+> `readonly` `optional` **cache\_time**: [`int32`](int32.md)
 
 Time during which the result of the query can be cached, in seconds
 
 ### callback\_query\_id?
 
-> `readonly` `optional` **callback\_query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **callback\_query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the callback query
 
@@ -48,4 +48,4 @@ URL to be opened
 
 ## Defined in
 
-dist/generated/types.d.ts:83135
+dist/generated/types.d.ts:85434

@@ -24,4 +24,4 @@ The first word of the phrase if known
 
 ## Defined in
 
-dist/generated/types.d.ts:2565
+dist/generated/types.d.ts:2611

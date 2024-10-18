@@ -18,7 +18,7 @@ Changes the order of installed sticker sets
 
 ### sticker\_set\_ids?
 
-> `readonly` `optional` **sticker\_set\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input-1.md)\>
+> `readonly` `optional` **sticker\_set\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input.md)\>
 
 Identifiers of installed sticker sets in the new correct order
 
@@ -30,4 +30,4 @@ Type of the sticker sets to reorder
 
 ## Defined in
 
-dist/generated/types.d.ts:93088
+dist/generated/types.d.ts:95585

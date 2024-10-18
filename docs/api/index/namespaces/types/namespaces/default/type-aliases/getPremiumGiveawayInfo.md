@@ -8,6 +8,8 @@
 
 > **getPremiumGiveawayInfo**: (`parameters`) => [`PremiumGiveawayInfo`](PremiumGiveawayInfo.md)
 
+Returns information about a Telegram Premium giveaway
+
 ## Parameters
 
 • **parameters**: [`getPremiumGiveawayInfo$Input`](getPremiumGiveawayInfo$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:100723
+dist/generated/types.d.ts:103502

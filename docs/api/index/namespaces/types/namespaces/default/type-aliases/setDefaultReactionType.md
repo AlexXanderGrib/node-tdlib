@@ -6,7 +6,9 @@
 
 # Type Alias: setDefaultReactionType()
 
-> **setDefaultReactionType**: (`parameters`) => [`Ok`](Ok.md)
+> **setDefaultReactionType**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes type of default reaction for the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81528
+dist/generated/types.d.ts:83721

@@ -6,7 +6,9 @@
 
 # Type Alias: getChatInviteLink()
 
-> **getChatInviteLink**: (`parameters`) => [`ChatInviteLink`](ChatInviteLink.md)
+> **getChatInviteLink**: (`parameters`) => [`ChatInviteLink`](ChatInviteLink-1.md)
+
+Returns information about an invite link. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatInviteLink`](ChatInviteLink.md)
+[`ChatInviteLink`](ChatInviteLink-1.md)
 
-[ChatInviteLink](ChatInviteLink.md)
+[ChatInviteLink](ChatInviteLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89875
+dist/generated/types.d.ts:92362

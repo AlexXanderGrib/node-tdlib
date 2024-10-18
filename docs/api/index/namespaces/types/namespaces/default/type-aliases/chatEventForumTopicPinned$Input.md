@@ -20,16 +20,16 @@ A pinned forum topic was changed
 
 ### new\_topic\_info?
 
-> `readonly` `optional` **new\_topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input-1.md) \| `null`
+> `readonly` `optional` **new\_topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input.md) \| `null`
 
 Information about the new pinned topic; may be null
 
 ### old\_topic\_info?
 
-> `readonly` `optional` **old\_topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input-1.md) \| `null`
+> `readonly` `optional` **old\_topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input.md) \| `null`
 
 Information about the old pinned topic; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:40679
+dist/generated/types.d.ts:42073

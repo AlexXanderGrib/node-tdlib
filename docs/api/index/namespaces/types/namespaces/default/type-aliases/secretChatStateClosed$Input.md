@@ -20,4 +20,4 @@ The secret chat is closed
 
 ## Defined in
 
-dist/generated/types.d.ts:11875
+dist/generated/types.d.ts:12479

@@ -20,10 +20,10 @@ Describes a solid fill of a background
 
 ### color?
 
-> `readonly` `optional` **color**: [`int32`](int32-1.md)
+> `readonly` `optional` **color**: [`int32`](int32.md)
 
 A color of the background in the RGB24 format
 
 ## Defined in
 
-dist/generated/types.d.ts:43268
+dist/generated/types.d.ts:44794

@@ -18,4 +18,4 @@ Returns settings for automatic moving of chats to and from the Archive chat list
 
 ## Defined in
 
-dist/generated/types.d.ts:85114
+dist/generated/types.d.ts:87413

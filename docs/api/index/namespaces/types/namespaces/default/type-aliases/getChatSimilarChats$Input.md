@@ -18,10 +18,10 @@ Returns a list of chats similar to the given chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the target chat; must be an identifier of a channel chat
 
 ## Defined in
 
-dist/generated/types.d.ts:75263
+dist/generated/types.d.ts:77289

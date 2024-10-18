@@ -18,4 +18,4 @@ The file is a video
 
 ## Defined in
 
-dist/generated/types.d.ts:49129
+dist/generated/types.d.ts:50713

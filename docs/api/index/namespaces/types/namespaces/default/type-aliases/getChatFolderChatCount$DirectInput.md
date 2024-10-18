@@ -14,10 +14,10 @@ Returns approximate number of chats in a being created chat folder. Main and arc
 
 ### folder?
 
-> `readonly` `optional` **folder**: [`chatFolder$Input`](chatFolder$Input-1.md)
+> `readonly` `optional` **folder**: [`chatFolder$Input`](chatFolder$Input.md)
 
 The new chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:84654
+dist/generated/types.d.ts:86953

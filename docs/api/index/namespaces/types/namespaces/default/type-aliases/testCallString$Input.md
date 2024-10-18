@@ -24,4 +24,4 @@ String to return
 
 ## Defined in
 
-dist/generated/types.d.ts:101973
+dist/generated/types.d.ts:104894

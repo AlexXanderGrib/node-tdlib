@@ -20,4 +20,4 @@ Suggests the user to enable archive_and_mute_new_chats_from_unknown_users settin
 
 ## Defined in
 
-dist/generated/types.d.ts:50375
+dist/generated/types.d.ts:51973

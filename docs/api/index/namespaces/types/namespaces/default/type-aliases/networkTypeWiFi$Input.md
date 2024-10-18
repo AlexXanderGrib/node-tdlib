@@ -20,4 +20,4 @@ A Wi-Fi network
 
 ## Defined in
 
-dist/generated/types.d.ts:49479
+dist/generated/types.d.ts:51063

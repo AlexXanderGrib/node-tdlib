@@ -18,4 +18,4 @@ Returns information about existing countries. Can be called before authorization
 
 ## Defined in
 
-dist/generated/types.d.ts:101148
+dist/generated/types.d.ts:104069

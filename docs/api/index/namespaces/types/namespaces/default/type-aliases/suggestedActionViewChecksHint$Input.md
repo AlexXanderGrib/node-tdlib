@@ -20,4 +20,4 @@ Suggests the user to view a hint about the meaning of one and two check marks on
 
 ## Defined in
 
-dist/generated/types.d.ts:50417
+dist/generated/types.d.ts:52015

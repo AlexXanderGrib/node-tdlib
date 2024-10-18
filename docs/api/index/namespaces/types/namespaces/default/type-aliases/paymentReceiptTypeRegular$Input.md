@@ -26,34 +26,34 @@ Title of the saved credentials chosen by the buyer
 
 ### invoice?
 
-> `readonly` `optional` **invoice**: [`invoice$Input`](invoice$Input-1.md)
+> `readonly` `optional` **invoice**: [`invoice$Input`](invoice$Input.md)
 
 Information about the invoice
 
 ### order\_info?
 
-> `readonly` `optional` **order\_info**: [`orderInfo$Input`](orderInfo$Input-1.md) \| `null`
+> `readonly` `optional` **order\_info**: [`orderInfo$Input`](orderInfo$Input.md) \| `null`
 
 Order information; may be null
 
 ### payment\_provider\_user\_id?
 
-> `readonly` `optional` **payment\_provider\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **payment\_provider\_user\_id**: [`int53`](int53.md)
 
 User identifier of the payment provider bot
 
 ### shipping\_option?
 
-> `readonly` `optional` **shipping\_option**: [`shippingOption$Input`](shippingOption$Input-1.md) \| `null`
+> `readonly` `optional` **shipping\_option**: [`shippingOption$Input`](shippingOption$Input.md) \| `null`
 
 Chosen shipping option; may be null
 
 ### tip\_amount?
 
-> `readonly` `optional` **tip\_amount**: [`int53`](int53-1.md)
+> `readonly` `optional` **tip\_amount**: [`int53`](int53.md)
 
 The amount of tip chosen by the buyer in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:23337
+dist/generated/types.d.ts:24097

@@ -6,7 +6,9 @@
 
 # Type Alias: searchFileDownloads()
 
-> **searchFileDownloads**: (`parameters`) => [`FoundFileDownloads`](FoundFileDownloads.md)
+> **searchFileDownloads**: (`parameters`) => [`FoundFileDownloads`](FoundFileDownloads-1.md)
+
+Searches for files in the file download list or recently downloaded files from the list
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FoundFileDownloads`](FoundFileDownloads.md)
+[`FoundFileDownloads`](FoundFileDownloads-1.md)
 
-[FoundFileDownloads](FoundFileDownloads.md)
+[FoundFileDownloads](FoundFileDownloads-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89517
+dist/generated/types.d.ts:91892

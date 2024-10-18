@@ -18,4 +18,4 @@ The file is a profile photo
 
 ## Defined in
 
-dist/generated/types.d.ts:49031
+dist/generated/types.d.ts:50615

@@ -18,7 +18,7 @@ The user gifting Telegram Premium to another user
 
 ### amount
 
-> **amount**: [`int53`](int53-1.md)
+> **amount**: [`int53`](int53.md)
 
 Paid amount, in the smallest units of the currency
 
@@ -30,10 +30,10 @@ ISO 4217 currency code of the payment currency
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
-Identifier of the user to which Premium was gifted
+Identifier of the user to which Telegram Premium is gifted
 
 ## Defined in
 
-dist/generated/types.d.ts:42515
+dist/generated/types.d.ts:43909

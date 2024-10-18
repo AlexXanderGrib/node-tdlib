@@ -20,13 +20,13 @@ An animation message (GIF-style).
 
 ### animation?
 
-> `readonly` `optional` **animation**: [`animation$Input`](animation$Input-1.md)
+> `readonly` `optional` **animation**: [`animation$Input`](animation$Input.md)
 
 The animation description
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md)
 
 Animation caption
 
@@ -50,4 +50,4 @@ True, if the caption must be shown above the animation; otherwise, the caption m
 
 ## Defined in
 
-dist/generated/types.d.ts:25840
+dist/generated/types.d.ts:26600

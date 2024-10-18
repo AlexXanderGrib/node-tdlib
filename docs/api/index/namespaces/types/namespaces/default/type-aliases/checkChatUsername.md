@@ -8,6 +8,8 @@
 
 > **checkChatUsername**: (`parameters`) => [`CheckChatUsernameResult`](CheckChatUsernameResult.md)
 
+Checks whether a username can be set for a chat
+
 ## Parameters
 
 • **parameters**: [`checkChatUsername$Input`](checkChatUsername$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:75616
+dist/generated/types.d.ts:77642

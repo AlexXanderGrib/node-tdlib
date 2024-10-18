@@ -32,4 +32,4 @@ Previous chat username
 
 ## Defined in
 
-dist/generated/types.d.ts:40007
+dist/generated/types.d.ts:41377

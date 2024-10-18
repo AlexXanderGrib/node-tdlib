@@ -14,7 +14,7 @@ Returns already available Telegram Passport elements suitable for completing a T
 
 ### authorization\_form\_id?
 
-> `readonly` `optional` **authorization\_form\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **authorization\_form\_id**: [`int32`](int32.md)
 
 Authorization form identifier
 
@@ -26,4 +26,4 @@ The 2-step verification password of the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:99570
+dist/generated/types.d.ts:102349

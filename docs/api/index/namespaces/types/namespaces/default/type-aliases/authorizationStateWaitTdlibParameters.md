@@ -18,4 +18,4 @@ Initialization parameters are needed. Call setTdlibParameters to provide them
 
 ## Defined in
 
-dist/generated/types.d.ts:3141
+dist/generated/types.d.ts:3187

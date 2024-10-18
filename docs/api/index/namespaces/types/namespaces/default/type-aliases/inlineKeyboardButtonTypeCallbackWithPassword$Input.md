@@ -20,10 +20,10 @@ A button that asks for the 2-step verification password of the current user and 
 
 ### data?
 
-> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input.md)
 
 Data to be sent to the bot via a callback query
 
 ## Defined in
 
-dist/generated/types.d.ts:17616
+dist/generated/types.d.ts:18208

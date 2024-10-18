@@ -20,4 +20,4 @@ The ability to customize start page
 
 ## Defined in
 
-dist/generated/types.d.ts:41953
+dist/generated/types.d.ts:43347

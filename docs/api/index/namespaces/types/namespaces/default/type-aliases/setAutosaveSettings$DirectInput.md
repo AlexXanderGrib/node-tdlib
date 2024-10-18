@@ -20,10 +20,10 @@ Autosave settings scope
 
 ### settings?
 
-> `readonly` `optional` **settings**: [`scopeAutosaveSettings$Input`](scopeAutosaveSettings$Input-1.md) \| `null`
+> `readonly` `optional` **settings**: [`scopeAutosaveSettings$Input`](scopeAutosaveSettings$Input.md) \| `null`
 
 New autosave settings for the scope; pass null to set autosave settings to default
 
 ## Defined in
 
-dist/generated/types.d.ts:99158
+dist/generated/types.d.ts:101937

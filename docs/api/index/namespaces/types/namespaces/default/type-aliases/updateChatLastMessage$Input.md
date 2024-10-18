@@ -20,22 +20,22 @@ The last message of a chat was changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### last\_message?
 
-> `readonly` `optional` **last\_message**: [`message$Input`](message$Input-1.md) \| `null`
+> `readonly` `optional` **last\_message**: [`message$Input`](message$Input.md) \| `null`
 
 The new last message in the chat; may be null if the last message became unknown. While the last message is unknown, new messages can be added to the chat without corresponding updateNewMessage update
 
 ### positions?
 
-> `readonly` `optional` **positions**: [`vector$Input`](vector$Input.md)\<[`chatPosition$Input`](chatPosition$Input-1.md)\>
+> `readonly` `optional` **positions**: [`vector$Input`](vector$Input.md)\<[`chatPosition$Input`](chatPosition$Input.md)\>
 
 The new chat positions in the chat lists
 
 ## Defined in
 
-dist/generated/types.d.ts:53404
+dist/generated/types.d.ts:55020

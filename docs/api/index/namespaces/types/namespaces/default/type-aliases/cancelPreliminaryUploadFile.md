@@ -6,7 +6,9 @@
 
 # Type Alias: cancelPreliminaryUploadFile()
 
-> **cancelPreliminaryUploadFile**: (`parameters`) => [`Ok`](Ok.md)
+> **cancelPreliminaryUploadFile**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89023
+dist/generated/types.d.ts:91398

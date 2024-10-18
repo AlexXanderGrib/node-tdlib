@@ -6,7 +6,9 @@
 
 # Type Alias: resendEmailAddressVerificationCode()
 
-> **resendEmailAddressVerificationCode**: (`parameters`) => [`EmailAddressAuthenticationCodeInfo`](EmailAddressAuthenticationCodeInfo.md)
+> **resendEmailAddressVerificationCode**: (`parameters`) => [`EmailAddressAuthenticationCodeInfo`](EmailAddressAuthenticationCodeInfo-1.md)
+
+Resends the code to verify an email address to be added to a user's Telegram Passport
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`EmailAddressAuthenticationCodeInfo`](EmailAddressAuthenticationCodeInfo.md)
+[`EmailAddressAuthenticationCodeInfo`](EmailAddressAuthenticationCodeInfo-1.md)
 
-[EmailAddressAuthenticationCodeInfo](EmailAddressAuthenticationCodeInfo.md)
+[EmailAddressAuthenticationCodeInfo](EmailAddressAuthenticationCodeInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99464
+dist/generated/types.d.ts:102243

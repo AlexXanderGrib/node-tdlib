@@ -6,7 +6,9 @@
 
 # Type Alias: getSupergroup()
 
-> **getSupergroup**: (`parameters`) => [`Supergroup`](Supergroup.md)
+> **getSupergroup**: (`parameters`) => [`Supergroup`](Supergroup-1.md)
+
+Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Supergroup`](Supergroup.md)
+[`Supergroup`](Supergroup-1.md)
 
-[Supergroup](Supergroup.md)
+[Supergroup](Supergroup-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74484
+dist/generated/types.d.ts:76472

@@ -20,16 +20,16 @@ Story stealth mode settings have changed
 
 ### active\_until\_date?
 
-> `readonly` `optional` **active\_until\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **active\_until\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) until stealth mode is active; 0 if it is disabled
 
 ### cooldown\_until\_date?
 
-> `readonly` `optional` **cooldown\_until\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **cooldown\_until\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when stealth mode can be enabled again; 0 if there is no active cooldown
 
 ## Defined in
 
-dist/generated/types.d.ts:56051
+dist/generated/types.d.ts:57667

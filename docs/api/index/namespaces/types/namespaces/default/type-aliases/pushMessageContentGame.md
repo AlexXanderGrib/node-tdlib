@@ -30,4 +30,4 @@ Game title, empty for pinned game message
 
 ## Defined in
 
-dist/generated/types.d.ts:44305
+dist/generated/types.d.ts:45831

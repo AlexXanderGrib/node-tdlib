@@ -26,10 +26,10 @@ True, if the first line of the text contains a link. If true, the input field ne
 
 ### text?
 
-> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input.md)
 
 Message draft text
 
 ## Defined in
 
-dist/generated/types.d.ts:47981
+dist/generated/types.d.ts:49601

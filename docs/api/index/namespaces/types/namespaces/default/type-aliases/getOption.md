@@ -8,6 +8,8 @@
 
 > **getOption**: (`parameters`) => [`OptionValue`](OptionValue.md)
 
+Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization. Can be called synchronously for options "version" and "commit_hash"
+
 ## Parameters
 
 • **parameters**: [`getOption$Input`](getOption$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:97947
+dist/generated/types.d.ts:100726

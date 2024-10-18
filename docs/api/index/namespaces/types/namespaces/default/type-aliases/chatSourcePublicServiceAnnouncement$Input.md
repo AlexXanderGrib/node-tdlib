@@ -32,4 +32,4 @@ The type of the announcement
 
 ## Defined in
 
-dist/generated/types.d.ts:15993
+dist/generated/types.d.ts:16585

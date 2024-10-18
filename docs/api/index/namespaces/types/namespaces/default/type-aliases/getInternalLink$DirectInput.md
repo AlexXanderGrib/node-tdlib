@@ -26,4 +26,4 @@ Expected type of the link
 
 ## Defined in
 
-dist/generated/types.d.ts:83835
+dist/generated/types.d.ts:86134

@@ -18,7 +18,7 @@ A chat was added to a chat list
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ The chat list to which the chat was added
 
 ## Defined in
 
-dist/generated/types.d.ts:53459
+dist/generated/types.d.ts:55075

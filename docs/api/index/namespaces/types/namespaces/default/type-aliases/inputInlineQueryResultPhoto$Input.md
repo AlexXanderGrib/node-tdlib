@@ -38,7 +38,7 @@ The content of the message to be sent. Must be one of the following types: input
 
 ### photo\_height?
 
-> `readonly` `optional` **photo\_height**: [`int32`](int32-1.md)
+> `readonly` `optional` **photo\_height**: [`int32`](int32.md)
 
 Height of the photo
 
@@ -50,7 +50,7 @@ The URL of the JPEG photo (photo size must not exceed 5MB)
 
 ### photo\_width?
 
-> `readonly` `optional` **photo\_width**: [`int32`](int32-1.md)
+> `readonly` `optional` **photo\_width**: [`int32`](int32.md)
 
 Width of the photo
 
@@ -74,4 +74,4 @@ Title of the result, if known
 
 ## Defined in
 
-dist/generated/types.d.ts:37850
+dist/generated/types.d.ts:39220

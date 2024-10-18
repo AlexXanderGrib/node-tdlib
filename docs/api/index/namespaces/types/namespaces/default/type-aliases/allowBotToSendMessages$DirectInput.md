@@ -14,10 +14,10 @@ Allows the specified bot to send messages to the user
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
 ## Defined in
 
-dist/generated/types.d.ts:95198
+dist/generated/types.d.ts:97695

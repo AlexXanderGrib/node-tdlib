@@ -20,7 +20,7 @@ A message with a game; not supported for channels or secret chats
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 User identifier of the bot that owns the game
 
@@ -32,4 +32,4 @@ Short name of the game
 
 ## Defined in
 
-dist/generated/types.d.ts:30133
+dist/generated/types.d.ts:31007

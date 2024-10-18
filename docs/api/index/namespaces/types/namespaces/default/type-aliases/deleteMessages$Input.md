@@ -18,15 +18,15 @@ Deletes messages
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
-Identifiers of the messages to be deleted
+Identifiers of the messages to be deleted. Use messageProperties.can_be_deleted_only_for_self and messageProperties.can_be_deleted_for_all_users to get suitable messages
 
 ### revoke?
 
@@ -36,4 +36,4 @@ Pass true to delete messages for all chat members. Always true for supergroups, 
 
 ## Defined in
 
-dist/generated/types.d.ts:78624
+dist/generated/types.d.ts:80633

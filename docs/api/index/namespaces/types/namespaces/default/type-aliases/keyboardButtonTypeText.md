@@ -18,4 +18,4 @@ A simple button, with text that must be sent when the button is pressed
 
 ## Defined in
 
-dist/generated/types.d.ts:17105
+dist/generated/types.d.ts:17697

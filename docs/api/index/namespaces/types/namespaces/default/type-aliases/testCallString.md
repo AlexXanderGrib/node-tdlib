@@ -6,7 +6,9 @@
 
 # Type Alias: testCallString()
 
-> **testCallString**: (`parameters`) => [`TestString`](TestString.md)
+> **testCallString**: (`parameters`) => [`TestString`](TestString-1.md)
+
+Returns the received string; for testing only. This is an offline method. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TestString`](TestString.md)
+[`TestString`](TestString-1.md)
 
-[TestString](TestString.md)
+[TestString](TestString-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101997
+dist/generated/types.d.ts:104918

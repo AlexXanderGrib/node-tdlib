@@ -24,4 +24,4 @@ Information about the invoice of the type inputMessageInvoice
 
 ## Defined in
 
-dist/generated/types.d.ts:97015
+dist/generated/types.d.ts:99794

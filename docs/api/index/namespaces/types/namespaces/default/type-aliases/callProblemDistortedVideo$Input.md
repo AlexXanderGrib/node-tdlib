@@ -20,4 +20,4 @@ The video was distorted
 
 ## Defined in
 
-dist/generated/types.d.ts:35837
+dist/generated/types.d.ts:37207

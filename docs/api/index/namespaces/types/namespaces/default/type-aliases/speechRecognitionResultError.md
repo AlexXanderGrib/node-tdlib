@@ -18,10 +18,10 @@ The speech recognition failed
 
 ### error
 
-> **error**: [`error`](error-1.md)
+> **error**: [`error`](error.md)
 
 Recognition error. An error with a message "MSG_VOICE_TOO_LONG" is returned when media duration is too big to be recognized
 
 ## Defined in
 
-dist/generated/types.d.ts:36595
+dist/generated/types.d.ts:37965

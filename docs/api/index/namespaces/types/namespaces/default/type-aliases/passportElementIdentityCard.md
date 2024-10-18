@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's identity card
 
 ### identity\_card
 
-> **identity\_card**: [`identityDocument`](identityDocument-1.md)
+> **identity\_card**: [`identityDocument`](identityDocument.md)
 
 Identity card
 
 ## Defined in
 
-dist/generated/types.d.ts:24413
+dist/generated/types.d.ts:25173

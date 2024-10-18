@@ -18,10 +18,10 @@ The media is a photo
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md)
+> **photo**: [`photo`](photo.md)
 
 Photo description
 
 ## Defined in
 
-dist/generated/types.d.ts:20799
+dist/generated/types.d.ts:21425

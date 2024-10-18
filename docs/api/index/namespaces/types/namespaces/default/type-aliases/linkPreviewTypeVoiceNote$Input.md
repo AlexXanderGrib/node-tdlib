@@ -20,10 +20,10 @@ The link is a link to a voice note message
 
 ### voice\_note?
 
-> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input-1.md)
+> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input.md)
 
 The voice note
 
 ## Defined in
 
-dist/generated/types.d.ts:21714
+dist/generated/types.d.ts:22464

@@ -6,7 +6,9 @@
 
 # Type Alias: answerInlineQuery()
 
-> **answerInlineQuery**: (`parameters`) => [`Ok`](Ok.md)
+> **answerInlineQuery**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the result of an inline query; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82691
+dist/generated/types.d.ts:84884

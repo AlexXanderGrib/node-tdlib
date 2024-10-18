@@ -30,4 +30,4 @@ Identifier of a message sender to block/unblock
 
 ## Defined in
 
-dist/generated/types.d.ts:91909
+dist/generated/types.d.ts:94406

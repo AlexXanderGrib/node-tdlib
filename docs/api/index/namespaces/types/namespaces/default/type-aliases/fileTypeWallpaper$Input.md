@@ -20,4 +20,4 @@ The file is a wallpaper or a background pattern
 
 ## Defined in
 
-dist/generated/types.d.ts:49193
+dist/generated/types.d.ts:50777

@@ -18,4 +18,4 @@ The mask is placed relatively to the eyes
 
 ## Defined in
 
-dist/generated/types.d.ts:4275
+dist/generated/types.d.ts:4321

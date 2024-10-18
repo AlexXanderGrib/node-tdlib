@@ -30,16 +30,16 @@ Unique identifier of business connection on behalf of which to send the request;
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 If not 0, the message thread identifier in which the action was performed
 
 ## Defined in
 
-dist/generated/types.d.ts:83559
+dist/generated/types.d.ts:85858

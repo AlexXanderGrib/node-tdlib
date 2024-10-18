@@ -26,16 +26,16 @@ JSON-serialized query data
 
 ### id?
 
-> `readonly` `optional` **id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **id**: [`int64$Input`](int64$Input.md)
 
 The query identifier
 
 ### timeout?
 
-> `readonly` `optional` **timeout**: [`int32`](int32-1.md)
+> `readonly` `optional` **timeout**: [`int32`](int32.md)
 
 Query timeout
 
 ## Defined in
 
-dist/generated/types.d.ts:57782
+dist/generated/types.d.ts:59422

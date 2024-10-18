@@ -6,7 +6,9 @@
 
 # Type Alias: answerWebAppQuery()
 
-> **answerWebAppQuery**: (`parameters`) => [`SentWebAppMessage`](SentWebAppMessage.md)
+> **answerWebAppQuery**: (`parameters`) => [`SentWebAppMessage`](SentWebAppMessage-1.md)
+
+Sets the result of interaction with a Web App and sends corresponding message on behalf of the user to the chat from which the query originated; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`SentWebAppMessage`](SentWebAppMessage.md)
+[`SentWebAppMessage`](SentWebAppMessage-1.md)
 
-[SentWebAppMessage](SentWebAppMessage.md)
+[SentWebAppMessage](SentWebAppMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83083
+dist/generated/types.d.ts:85382

@@ -18,4 +18,4 @@ A screenshot of a message in the chat has been taken
 
 ## Defined in
 
-dist/generated/types.d.ts:44651
+dist/generated/types.d.ts:46177

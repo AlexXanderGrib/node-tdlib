@@ -24,4 +24,4 @@ The code to check
 
 ## Defined in
 
-dist/generated/types.d.ts:100595
+dist/generated/types.d.ts:103374

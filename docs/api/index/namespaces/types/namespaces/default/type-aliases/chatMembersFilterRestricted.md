@@ -18,4 +18,4 @@ Returns users under certain restrictions in the chat; can be used only by admini
 
 ## Defined in
 
-dist/generated/types.d.ts:10253
+dist/generated/types.d.ts:10753

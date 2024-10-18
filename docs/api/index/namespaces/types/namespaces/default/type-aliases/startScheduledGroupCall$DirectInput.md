@@ -14,10 +14,10 @@ Starts a scheduled group call
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:90928
+dist/generated/types.d.ts:93425

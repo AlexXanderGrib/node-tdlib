@@ -38,4 +38,4 @@ Name of the deleted member
 
 ## Defined in
 
-dist/generated/types.d.ts:45056
+dist/generated/types.d.ts:46582

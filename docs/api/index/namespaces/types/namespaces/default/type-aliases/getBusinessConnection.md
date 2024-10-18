@@ -6,7 +6,9 @@
 
 # Type Alias: getBusinessConnection()
 
-> **getBusinessConnection**: (`parameters`) => [`BusinessConnection`](BusinessConnection.md)
+> **getBusinessConnection**: (`parameters`) => [`BusinessConnection`](BusinessConnection-1.md)
+
+Returns information about a business connection by its identifier; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessConnection`](BusinessConnection.md)
+[`BusinessConnection`](BusinessConnection-1.md)
 
-[BusinessConnection](BusinessConnection.md)
+[BusinessConnection](BusinessConnection-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82289
+dist/generated/types.d.ts:84482

@@ -18,10 +18,10 @@ Creates a new secret chat. Returns the newly created chat
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the target user
 
 ## Defined in
 
-dist/generated/types.d.ts:84361
+dist/generated/types.d.ts:86660

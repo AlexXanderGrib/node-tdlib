@@ -20,10 +20,10 @@ Basic information about a Saved Messages topic has changed. This update is guara
 
 ### topic?
 
-> `readonly` `optional` **topic**: [`savedMessagesTopic$Input`](savedMessagesTopic$Input-1.md)
+> `readonly` `optional` **topic**: [`savedMessagesTopic$Input`](savedMessagesTopic$Input.md)
 
 New data about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:54458
+dist/generated/types.d.ts:56074

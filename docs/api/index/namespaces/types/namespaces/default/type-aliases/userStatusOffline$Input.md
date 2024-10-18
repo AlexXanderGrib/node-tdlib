@@ -20,10 +20,10 @@ The user is offline
 
 ### was\_online?
 
-> `readonly` `optional` **was\_online**: [`int32`](int32-1.md)
+> `readonly` `optional` **was\_online**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the user was last online
 
 ## Defined in
 
-dist/generated/types.d.ts:31024
+dist/generated/types.d.ts:32156

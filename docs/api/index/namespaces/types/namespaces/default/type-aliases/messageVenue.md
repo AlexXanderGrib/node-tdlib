@@ -18,10 +18,10 @@ A message with information about a venue
 
 ### venue
 
-> **venue**: [`venue`](venue-1.md)
+> **venue**: [`venue`](venue.md)
 
 The venue description
 
 ## Defined in
 
-dist/generated/types.d.ts:26363
+dist/generated/types.d.ts:27123

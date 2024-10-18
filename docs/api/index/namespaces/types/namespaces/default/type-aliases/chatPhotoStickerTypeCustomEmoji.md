@@ -18,10 +18,10 @@ Information about the custom emoji, which was used to create the chat photo
 
 ### custom\_emoji\_id
 
-> **custom\_emoji\_id**: [`int64`](int64-1.md)
+> **custom\_emoji\_id**: [`int64`](int64.md)
 
 Identifier of the custom emoji
 
 ## Defined in
 
-dist/generated/types.d.ts:7259
+dist/generated/types.d.ts:7325

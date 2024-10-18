@@ -20,7 +20,7 @@ A photo message
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md)
 
 Photo caption
 
@@ -38,7 +38,7 @@ True, if the photo must be blurred and must be shown only while tapped
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md)
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md)
 
 The photo
 
@@ -50,4 +50,4 @@ True, if the caption must be shown above the photo; otherwise, the caption must 
 
 ## Defined in
 
-dist/generated/types.d.ts:26026
+dist/generated/types.d.ts:26786

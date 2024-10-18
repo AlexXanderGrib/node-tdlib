@@ -20,10 +20,10 @@ A repost of the story as a story
 
 ### story?
 
-> `readonly` `optional` **story**: [`story$Input`](story$Input-1.md)
+> `readonly` `optional` **story**: [`story$Input`](story$Input.md)
 
 The reposted story
 
 ## Defined in
 
-dist/generated/types.d.ts:33334
+dist/generated/types.d.ts:34612

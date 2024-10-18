@@ -6,7 +6,9 @@
 
 # Type Alias: searchUserByPhoneNumber()
 
-> **searchUserByPhoneNumber**: (`parameters`) => [`User`](User.md)
+> **searchUserByPhoneNumber**: (`parameters`) => [`User`](User-1.md)
+
+Searches a user by their phone number. Returns a 404 error if the user can't be found
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`User`](User.md)
+[`User`](User-1.md)
 
-[User](User.md)
+[User](User-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92429
+dist/generated/types.d.ts:94926

@@ -6,7 +6,9 @@
 
 # Type Alias: toggleGroupCallIsMyVideoPaused()
 
-> **toggleGroupCallIsMyVideoPaused**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleGroupCallIsMyVideoPaused**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether current user's video is paused
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91485
+dist/generated/types.d.ts:93982

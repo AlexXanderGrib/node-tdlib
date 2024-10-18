@@ -38,4 +38,4 @@ An HTTP URL, opening the reference
 
 ## Defined in
 
-dist/generated/types.d.ts:19226
+dist/generated/types.d.ts:19852

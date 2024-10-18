@@ -20,4 +20,4 @@ An HTTP URL
 
 ## Defined in
 
-dist/generated/types.d.ts:28541
+dist/generated/types.d.ts:29415

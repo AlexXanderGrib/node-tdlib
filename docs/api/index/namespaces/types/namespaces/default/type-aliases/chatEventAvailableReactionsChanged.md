@@ -30,4 +30,4 @@ Previous chat available reactions
 
 ## Defined in
 
-dist/generated/types.d.ts:39547
+dist/generated/types.d.ts:40917

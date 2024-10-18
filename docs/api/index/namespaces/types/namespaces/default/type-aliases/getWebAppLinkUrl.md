@@ -6,7 +6,9 @@
 
 # Type Alias: getWebAppLinkUrl()
 
-> **getWebAppLinkUrl**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getWebAppLinkUrl**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82817
+dist/generated/types.d.ts:85048

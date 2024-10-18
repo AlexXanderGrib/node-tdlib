@@ -18,10 +18,10 @@ One of the files containing the translation of the document contains an error. T
 
 ### file\_hash
 
-> **file\_hash**: [`bytes`](bytes-1.md)
+> **file\_hash**: [`bytes`](bytes.md)
 
 Current hash of the file containing the translation
 
 ## Defined in
 
-dist/generated/types.d.ts:25623
+dist/generated/types.d.ts:26383

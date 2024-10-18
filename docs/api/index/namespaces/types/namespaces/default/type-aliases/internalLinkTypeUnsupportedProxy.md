@@ -18,4 +18,4 @@ The link is a link to an unsupported proxy. An alert can be shown to the user
 
 ## Defined in
 
-dist/generated/types.d.ts:48515
+dist/generated/types.d.ts:50089

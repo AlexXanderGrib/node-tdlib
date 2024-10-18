@@ -26,4 +26,4 @@ The first letters of the word if known
 
 ## Defined in
 
-dist/generated/types.d.ts:2554
+dist/generated/types.d.ts:2600

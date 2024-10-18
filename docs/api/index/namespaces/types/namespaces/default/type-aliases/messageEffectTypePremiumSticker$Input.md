@@ -20,10 +20,10 @@ An effect from a premium sticker
 
 ### sticker?
 
-> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input-1.md)
+> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input.md)
 
 The premium sticker. The effect can be found at sticker.full_type.premium_animation
 
 ## Defined in
 
-dist/generated/types.d.ts:12884
+dist/generated/types.d.ts:13586

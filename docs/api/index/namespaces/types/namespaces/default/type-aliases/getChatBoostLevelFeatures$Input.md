@@ -24,10 +24,10 @@ Pass true to get the list of features for channels; pass false to get the list o
 
 ### level?
 
-> `readonly` `optional` **level**: [`int32`](int32-1.md)
+> `readonly` `optional` **level**: [`int32`](int32.md)
 
 Chat boost level
 
 ## Defined in
 
-dist/generated/types.d.ts:88261
+dist/generated/types.d.ts:90636

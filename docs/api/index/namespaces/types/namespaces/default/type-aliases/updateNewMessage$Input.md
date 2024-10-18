@@ -20,10 +20,10 @@ A new message was received; can also be an outgoing message
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 The new message
 
 ## Defined in
 
-dist/generated/types.d.ts:52668
+dist/generated/types.d.ts:54284

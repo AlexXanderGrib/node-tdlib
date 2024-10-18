@@ -6,7 +6,9 @@
 
 # Type Alias: sendQuickReplyShortcutMessages()
 
-> **sendQuickReplyShortcutMessages**: (`parameters`) => [`Messages`](Messages.md)
+> **sendQuickReplyShortcutMessages**: (`parameters`) => [`Messages`](Messages-1.md)
+
+Sends messages from a quick reply shortcut. Requires Telegram Business subscription
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Messages`](Messages.md)
+[`Messages`](Messages-1.md)
 
-[Messages](Messages.md)
+[Messages](Messages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78498
+dist/generated/types.d.ts:80507

@@ -18,13 +18,13 @@ An animation
 
 ### animation
 
-> **animation**: [`animation`](animation-1.md) \| `null`
+> **animation**: [`animation`](animation.md) \| `null`
 
 Animation file; may be null
 
 ### caption
 
-> **caption**: [`pageBlockCaption`](pageBlockCaption-1.md)
+> **caption**: [`pageBlockCaption`](pageBlockCaption.md)
 
 Animation caption
 
@@ -36,4 +36,4 @@ True, if the animation must be played automatically
 
 ## Defined in
 
-dist/generated/types.d.ts:20005
+dist/generated/types.d.ts:20631

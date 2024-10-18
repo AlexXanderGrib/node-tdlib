@@ -36,10 +36,10 @@ Title of the video
 
 ### video
 
-> **video**: [`video`](video-1.md)
+> **video**: [`video`](video.md)
 
 Video
 
 ## Defined in
 
-dist/generated/types.d.ts:38737
+dist/generated/types.d.ts:40107

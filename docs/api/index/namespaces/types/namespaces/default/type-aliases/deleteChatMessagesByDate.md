@@ -6,7 +6,9 @@
 
 # Type Alias: deleteChatMessagesByDate()
 
-> **deleteChatMessagesByDate**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteChatMessagesByDate**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes all messages between the specified dates in a chat. Supported only for private chats and basic groups. Messages sent in the last 30 seconds will not be deleted
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78764
+dist/generated/types.d.ts:80773

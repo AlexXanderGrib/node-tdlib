@@ -20,4 +20,4 @@ Increased limits
 
 ## Defined in
 
-dist/generated/types.d.ts:41529
+dist/generated/types.d.ts:42923

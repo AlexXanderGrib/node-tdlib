@@ -129,9 +129,7 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
 };
 
 type AnyKeyof<T extends {}> = keyof T | (string & {});
-type Extendable<T extends {}> = T & {
-  readonly [key: string]: string | boolean | bigint | number | undefined;
-};
+type Extendable<T extends {}> = T & Readonly<Record<string, string | boolean | bigint | number | undefined>>;
 
 type Keys = AnyKeyof<TDLibOptionsReadable>;
 type WritableKeys = AnyKeyof<TDLibOptionsWritable>;

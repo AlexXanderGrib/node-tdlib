@@ -14,7 +14,7 @@ Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -32,4 +32,4 @@ Pass true to delete chat history for all users
 
 ## Defined in
 
-dist/generated/types.d.ts:76228
+dist/generated/types.d.ts:78254

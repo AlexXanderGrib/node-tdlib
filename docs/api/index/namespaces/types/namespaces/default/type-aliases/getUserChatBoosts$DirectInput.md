@@ -14,16 +14,16 @@ Returns the list of boosts applied to a chat by a given user; requires administr
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:88540
+dist/generated/types.d.ts:90915

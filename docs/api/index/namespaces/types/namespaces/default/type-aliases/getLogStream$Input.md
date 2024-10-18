@@ -18,4 +18,4 @@ Returns information about currently used log stream for internal logging of TDLi
 
 ## Defined in
 
-dist/generated/types.d.ts:101686
+dist/generated/types.d.ts:104607

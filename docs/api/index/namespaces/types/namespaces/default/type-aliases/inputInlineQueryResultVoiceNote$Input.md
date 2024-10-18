@@ -44,7 +44,7 @@ Title of the voice note
 
 ### voice\_note\_duration?
 
-> `readonly` `optional` **voice\_note\_duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **voice\_note\_duration**: [`int32`](int32.md)
 
 Duration of the voice note, in seconds
 
@@ -56,4 +56,4 @@ The URL of the voice note file
 
 ## Defined in
 
-dist/generated/types.d.ts:38231
+dist/generated/types.d.ts:39601

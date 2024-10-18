@@ -24,4 +24,4 @@ The value of the option
 
 ## Defined in
 
-dist/generated/types.d.ts:45701
+dist/generated/types.d.ts:47227

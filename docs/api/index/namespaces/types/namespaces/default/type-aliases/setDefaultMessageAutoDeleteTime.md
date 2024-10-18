@@ -6,7 +6,9 @@
 
 # Type Alias: setDefaultMessageAutoDeleteTime()
 
-> **setDefaultMessageAutoDeleteTime**: (`parameters`) => [`Ok`](Ok.md)
+> **setDefaultMessageAutoDeleteTime**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the default message auto-delete time for new chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98102
+dist/generated/types.d.ts:100881

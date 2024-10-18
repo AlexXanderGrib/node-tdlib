@@ -18,10 +18,10 @@ Creates a new supergroup from an existing basic group and sends a corresponding 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to upgrade
 
 ## Defined in
 
-dist/generated/types.d.ts:84389
+dist/generated/types.d.ts:86688

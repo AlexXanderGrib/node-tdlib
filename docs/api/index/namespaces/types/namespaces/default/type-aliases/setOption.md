@@ -6,7 +6,9 @@
 
 # Type Alias: setOption()
 
-> **setOption**: (`parameters`) => [`Ok`](Ok.md)
+> **setOption**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the value of an option. (Check the list of available options on https://core.telegram.org/tdlib/options.) Only writable options can be set. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97985
+dist/generated/types.d.ts:100764

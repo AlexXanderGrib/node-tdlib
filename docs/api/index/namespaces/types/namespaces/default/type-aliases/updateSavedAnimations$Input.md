@@ -20,10 +20,10 @@ The list of saved animations was updated
 
 ### animation\_ids?
 
-> `readonly` `optional` **animation\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **animation\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 The new list of file identifiers of saved animations
 
 ## Defined in
 
-dist/generated/types.d.ts:56264
+dist/generated/types.d.ts:57880

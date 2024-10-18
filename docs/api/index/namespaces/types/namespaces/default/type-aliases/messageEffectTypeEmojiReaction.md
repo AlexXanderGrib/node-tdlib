@@ -18,16 +18,16 @@ An effect from an emoji reaction
 
 ### effect\_animation
 
-> **effect\_animation**: [`sticker`](sticker-1.md)
+> **effect\_animation**: [`sticker`](sticker.md)
 
 Effect animation for the effect in TGS format
 
 ### select\_animation
 
-> **select\_animation**: [`sticker`](sticker-1.md)
+> **select\_animation**: [`sticker`](sticker.md)
 
 Select animation for the effect in TGS format
 
 ## Defined in
 
-dist/generated/types.d.ts:12837
+dist/generated/types.d.ts:13539

@@ -20,4 +20,4 @@ An empty block separating a page
 
 ## Defined in
 
-dist/generated/types.d.ts:19883
+dist/generated/types.d.ts:20509

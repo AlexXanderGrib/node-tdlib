@@ -18,4 +18,4 @@ Represents a null JSON value
 
 ## Defined in
 
-dist/generated/types.d.ts:45759
+dist/generated/types.d.ts:47285

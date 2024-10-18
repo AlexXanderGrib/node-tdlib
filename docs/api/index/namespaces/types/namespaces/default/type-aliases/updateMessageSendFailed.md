@@ -18,22 +18,22 @@ A message failed to send. Be aware that some messages being sent can be irrecove
 
 ### error
 
-> **error**: [`error`](error-1.md)
+> **error**: [`error`](error.md)
 
 The cause of the message sending failure
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 The failed to send message
 
 ### old\_message\_id
 
-> **old\_message\_id**: [`int53`](int53-1.md)
+> **old\_message\_id**: [`int53`](int53.md)
 
 The previous temporary message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52751
+dist/generated/types.d.ts:54367

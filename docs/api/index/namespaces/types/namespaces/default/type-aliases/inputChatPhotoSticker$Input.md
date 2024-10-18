@@ -20,10 +20,10 @@ A sticker on a custom background
 
 ### sticker?
 
-> `readonly` `optional` **sticker**: [`chatPhotoSticker$Input`](chatPhotoSticker$Input-1.md)
+> `readonly` `optional` **sticker**: [`chatPhotoSticker$Input`](chatPhotoSticker$Input.md)
 
 Information about the sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:7574
+dist/generated/types.d.ts:7640

@@ -18,4 +18,4 @@ The thumbnail is in TGS format. It will be used only for sticker sets
 
 ## Defined in
 
-dist/generated/types.d.ts:4165
+dist/generated/types.d.ts:4211

@@ -18,13 +18,13 @@ A message with paid media; can be used only in channel chats with supergroupFull
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md) \| `null`
+> **caption**: [`formattedText`](formattedText.md) \| `null`
 
 Message caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### paid\_media
 
-> **paid\_media**: [`vector`](vector.md)\<[`inputPaidMedia`](inputPaidMedia-1.md)\>
+> **paid\_media**: [`vector`](vector.md)\<[`inputPaidMedia`](inputPaidMedia.md)\>
 
 The content of the paid media
 
@@ -36,10 +36,10 @@ True, if the caption must be shown above the video; otherwise, the caption must 
 
 ### star\_count
 
-> **star\_count**: [`int53`](int53-1.md)
+> **star\_count**: [`int53`](int53.md)
 
-The number of stars that must be paid to see the media; 1-getOption("paid_media_message_star_count_max")
+The number of Telegram Stars that must be paid to see the media; 1-getOption("paid_media_message_star_count_max")
 
 ## Defined in
 
-dist/generated/types.d.ts:29505
+dist/generated/types.d.ts:30379

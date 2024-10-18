@@ -26,4 +26,4 @@ An HTTP URL to pass to getWebAppUrl
 
 ## Defined in
 
-dist/generated/types.d.ts:17442
+dist/generated/types.d.ts:18034

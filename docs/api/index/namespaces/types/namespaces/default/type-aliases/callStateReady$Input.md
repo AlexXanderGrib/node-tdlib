@@ -44,22 +44,22 @@ Encryption key fingerprint represented as 4 emoji
 
 ### encryption\_key?
 
-> `readonly` `optional` **encryption\_key**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **encryption\_key**: [`bytes$Input`](bytes$Input.md)
 
 Call encryption key
 
 ### protocol?
 
-> `readonly` `optional` **protocol**: [`callProtocol$Input`](callProtocol$Input-1.md)
+> `readonly` `optional` **protocol**: [`callProtocol$Input`](callProtocol$Input.md)
 
 Call protocols supported by the other call participant
 
 ### servers?
 
-> `readonly` `optional` **servers**: [`vector$Input`](vector$Input.md)\<[`callServer$Input`](callServer$Input-1.md)\>
+> `readonly` `optional` **servers**: [`vector$Input`](vector$Input.md)\<[`callServer$Input`](callServer$Input.md)\>
 
 List of available call servers
 
 ## Defined in
 
-dist/generated/types.d.ts:34924
+dist/generated/types.d.ts:36294

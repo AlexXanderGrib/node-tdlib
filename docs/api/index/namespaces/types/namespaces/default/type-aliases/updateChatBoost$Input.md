@@ -20,16 +20,16 @@ A chat boost has changed; for bots only
 
 ### boost?
 
-> `readonly` `optional` **boost**: [`chatBoost$Input`](chatBoost$Input-1.md)
+> `readonly` `optional` **boost**: [`chatBoost$Input`](chatBoost$Input.md)
 
 New information about the boost
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:58037
+dist/generated/types.d.ts:59677

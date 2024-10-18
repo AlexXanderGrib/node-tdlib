@@ -20,16 +20,16 @@ The bar for managing business bot was changed in a chat
 
 ### business\_bot\_manage\_bar?
 
-> `readonly` `optional` **business\_bot\_manage\_bar**: [`businessBotManageBar$Input`](businessBotManageBar$Input-1.md) \| `null`
+> `readonly` `optional` **business\_bot\_manage\_bar**: [`businessBotManageBar$Input`](businessBotManageBar$Input.md) \| `null`
 
 The new value of the business bot manage bar; may be null
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:53657
+dist/generated/types.d.ts:55273

@@ -6,7 +6,9 @@
 
 # Type Alias: setCustomLanguagePack()
 
-> **setCustomLanguagePack**: (`parameters`) => [`Ok`](Ok.md)
+> **setCustomLanguagePack**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds or changes a custom local language pack to the current localization target
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97503
+dist/generated/types.d.ts:100282

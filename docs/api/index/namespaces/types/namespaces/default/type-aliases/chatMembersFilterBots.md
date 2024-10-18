@@ -18,4 +18,4 @@ Returns bot members of the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:10281
+dist/generated/types.d.ts:10781

@@ -6,7 +6,9 @@
 
 # Type Alias: toggleSupergroupIsAllHistoryAvailable()
 
-> **toggleSupergroupIsAllHistoryAvailable**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleSupergroupIsAllHistoryAvailable**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether the message history of a supergroup is available to new members; requires can_change_info member right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96321
+dist/generated/types.d.ts:99100

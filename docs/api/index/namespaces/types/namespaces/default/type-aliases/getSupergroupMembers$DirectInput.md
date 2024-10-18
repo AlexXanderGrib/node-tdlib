@@ -20,22 +20,22 @@ The type of users to return; pass null to use supergroupMembersFilterRecent
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of users to be returned; up to 200
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int32`](int32-1.md)
+> `readonly` `optional` **offset**: [`int32`](int32.md)
 
 Number of users to skip
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup or channel
 
 ## Defined in
 
-dist/generated/types.d.ts:96607
+dist/generated/types.d.ts:99386

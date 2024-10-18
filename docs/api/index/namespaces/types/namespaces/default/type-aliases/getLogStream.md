@@ -8,6 +8,8 @@
 
 > **getLogStream**: (`parameters`) => [`LogStream`](LogStream.md)
 
+Returns information about currently used log stream for internal logging of TDLib. Can be called synchronously
+
 ## Parameters
 
 • **parameters**: [`getLogStream$Input`](getLogStream$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:101699
+dist/generated/types.d.ts:104620

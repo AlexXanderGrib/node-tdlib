@@ -32,4 +32,4 @@ Paragraph text
 
 ## Defined in
 
-dist/generated/types.d.ts:19835
+dist/generated/types.d.ts:20461

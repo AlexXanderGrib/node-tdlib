@@ -26,10 +26,10 @@ True, if premium animation of the sticker must be played
 
 ### sticker?
 
-> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input-1.md)
+> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input.md)
 
 The sticker description
 
 ## Defined in
 
-dist/generated/types.d.ts:26075
+dist/generated/types.d.ts:26835

@@ -10,7 +10,7 @@
 
 Version of [linkPreviewTypeSticker](linkPreviewTypeSticker.md) for method parameters.
 
-The link is a link to a sticker message
+The link is a link to a sticker
 
 ## Type declaration
 
@@ -20,10 +20,10 @@ The link is a link to a sticker message
 
 ### sticker?
 
-> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input-1.md)
+> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input.md)
 
-The sticker
+The sticker. It can be an arbitrary WEBP image and can have dimensions bigger than 512
 
 ## Defined in
 
-dist/generated/types.d.ts:21384
+dist/generated/types.d.ts:22134

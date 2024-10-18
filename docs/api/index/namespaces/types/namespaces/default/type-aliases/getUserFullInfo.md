@@ -6,7 +6,9 @@
 
 # Type Alias: getUserFullInfo()
 
-> **getUserFullInfo**: (`parameters`) => [`UserFullInfo`](UserFullInfo.md)
+> **getUserFullInfo**: (`parameters`) => [`UserFullInfo`](UserFullInfo-1.md)
+
+Returns full information about a user by their identifier
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`UserFullInfo`](UserFullInfo.md)
+[`UserFullInfo`](UserFullInfo-1.md)
 
-[UserFullInfo](UserFullInfo.md)
+[UserFullInfo](UserFullInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74400
+dist/generated/types.d.ts:76388

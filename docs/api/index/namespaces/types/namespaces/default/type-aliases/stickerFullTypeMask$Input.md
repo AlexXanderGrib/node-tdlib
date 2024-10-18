@@ -20,10 +20,10 @@ The sticker is a mask in WEBP format to be placed on photos or videos
 
 ### mask\_position?
 
-> `readonly` `optional` **mask\_position**: [`maskPosition$Input`](maskPosition$Input-1.md) \| `null`
+> `readonly` `optional` **mask\_position**: [`maskPosition$Input`](maskPosition$Input.md) \| `null`
 
 Position where the mask is placed; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:4492
+dist/generated/types.d.ts:4538

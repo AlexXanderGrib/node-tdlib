@@ -6,7 +6,9 @@
 
 # Type Alias: getAttachmentMenuBot()
 
-> **getAttachmentMenuBot**: (`parameters`) => [`AttachmentMenuBot`](AttachmentMenuBot.md)
+> **getAttachmentMenuBot**: (`parameters`) => [`AttachmentMenuBot`](AttachmentMenuBot-1.md)
+
+Returns information about a bot that can be added to attachment or side menu
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AttachmentMenuBot`](AttachmentMenuBot.md)
+[`AttachmentMenuBot`](AttachmentMenuBot-1.md)
 
-[AttachmentMenuBot](AttachmentMenuBot.md)
+[AttachmentMenuBot](AttachmentMenuBot-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88586
+dist/generated/types.d.ts:90961

@@ -18,10 +18,10 @@ Information about a file was updated
 
 ### file
 
-> **file**: [`file`](file-1.md)
+> **file**: [`file`](file.md)
 
 New data about the file
 
 ## Defined in
 
-dist/generated/types.d.ts:55251
+dist/generated/types.d.ts:56867

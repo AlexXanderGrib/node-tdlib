@@ -20,4 +20,4 @@ Suggests the user to restore a recently expired Premium subscription
 
 ## Defined in
 
-dist/generated/types.d.ts:50493
+dist/generated/types.d.ts:52091

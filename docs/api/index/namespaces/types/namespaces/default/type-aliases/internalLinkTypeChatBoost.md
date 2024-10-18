@@ -28,4 +28,4 @@ URL to be passed to getChatBoostLinkInfo
 
 ## Defined in
 
-dist/generated/types.d.ts:47667
+dist/generated/types.d.ts:49227

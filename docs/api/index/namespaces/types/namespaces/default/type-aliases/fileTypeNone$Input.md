@@ -20,4 +20,4 @@ The data is not a file
 
 ## Defined in
 
-dist/generated/types.d.ts:48941
+dist/generated/types.d.ts:50525

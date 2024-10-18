@@ -18,4 +18,4 @@ The file is a document
 
 ## Defined in
 
-dist/generated/types.d.ts:48975
+dist/generated/types.d.ts:50559

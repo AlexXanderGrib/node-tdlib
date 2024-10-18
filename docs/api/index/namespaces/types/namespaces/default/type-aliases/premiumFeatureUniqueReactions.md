@@ -18,4 +18,4 @@ Allowed to use more reactions
 
 ## Defined in
 
-dist/generated/types.d.ts:41591
+dist/generated/types.d.ts:42985

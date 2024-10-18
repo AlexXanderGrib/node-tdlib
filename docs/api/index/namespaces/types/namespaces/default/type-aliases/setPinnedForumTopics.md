@@ -6,7 +6,9 @@
 
 # Type Alias: setPinnedForumTopics()
 
-> **setPinnedForumTopics**: (`parameters`) => [`Ok`](Ok.md)
+> **setPinnedForumTopics**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the order of pinned forum topics; requires can_manage_topics right in the supergroup
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81110
+dist/generated/types.d.ts:83159

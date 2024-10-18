@@ -42,13 +42,13 @@ Pass true to create a forum supergroup chat
 
 ### location?
 
-> `readonly` `optional` **location**: [`chatLocation$Input`](chatLocation$Input-1.md) \| `null`
+> `readonly` `optional` **location**: [`chatLocation$Input`](chatLocation$Input.md) \| `null`
 
 Chat location if a location-based supergroup is being created; pass null to create an ordinary supergroup chat
 
 ### message\_auto\_delete\_time?
 
-> `readonly` `optional` **message\_auto\_delete\_time**: [`int32`](int32-1.md)
+> `readonly` `optional` **message\_auto\_delete\_time**: [`int32`](int32.md)
 
 Message auto-delete time value, in seconds; must be from 0 up to 365 * 86400 and be divisible by 86400. If 0, then messages aren't deleted automatically
 
@@ -60,4 +60,4 @@ Title of the new chat; 1-128 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:84273
+dist/generated/types.d.ts:86572

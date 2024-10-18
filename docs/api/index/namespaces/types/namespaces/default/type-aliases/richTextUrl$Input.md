@@ -38,4 +38,4 @@ URL
 
 ## Defined in
 
-dist/generated/types.d.ts:18998
+dist/generated/types.d.ts:19624

@@ -44,7 +44,7 @@ Type of the stickers in the set
 
 ### stickers?
 
-> `readonly` `optional` **stickers**: [`vector$Input`](vector$Input.md)\<[`inputSticker$Input`](inputSticker$Input-1.md)\>
+> `readonly` `optional` **stickers**: [`vector$Input`](vector$Input.md)\<[`inputSticker$Input`](inputSticker$Input.md)\>
 
 List of stickers to be added to the set; 1-200 stickers for custom emoji sticker sets, and 1-120 stickers otherwise. For TGS stickers, uploadStickerFile must be used before the sticker is shown
 
@@ -56,10 +56,10 @@ Sticker set title; 1-64 characters
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Sticker set owner; ignored for regular users
 
 ## Defined in
 
-dist/generated/types.d.ts:99776
+dist/generated/types.d.ts:102555

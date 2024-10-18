@@ -18,10 +18,10 @@ A Telegram Passport element to be saved containing the user's internal passport
 
 ### internal\_passport
 
-> **internal\_passport**: [`inputIdentityDocument`](inputIdentityDocument-1.md)
+> **internal\_passport**: [`inputIdentityDocument`](inputIdentityDocument.md)
 
 The internal passport to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24749
+dist/generated/types.d.ts:25509

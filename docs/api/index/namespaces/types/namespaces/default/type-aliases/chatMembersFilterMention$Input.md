@@ -20,10 +20,10 @@ Returns users which can be mentioned in the chat
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 If non-zero, the identifier of the current message thread
 
 ## Defined in
 
-dist/generated/types.d.ts:10242
+dist/generated/types.d.ts:10742

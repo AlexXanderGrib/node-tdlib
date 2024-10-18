@@ -14,7 +14,7 @@ Searches for public stories from the given venue. For optimal performance, the n
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of stories to be returned; up to 100. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
 
@@ -38,4 +38,4 @@ Provider of the venue
 
 ## Defined in
 
-dist/generated/types.d.ts:76935
+dist/generated/types.d.ts:78961

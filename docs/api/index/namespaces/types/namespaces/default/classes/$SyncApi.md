@@ -28,7 +28,7 @@ Constructs [$SyncApi]($SyncApi.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72869
+dist/generated/types.d.ts:74857
 
 ## Properties
 
@@ -38,13 +38,13 @@ dist/generated/types.d.ts:72869
 
 #### Defined in
 
-dist/generated/types.d.ts:72863
+dist/generated/types.d.ts:74851
 
 ## Methods
 
 ### addLogMessage()
 
-> **addLogMessage**(`parameters`): [`ok`](../type-aliases/ok-1.md)
+> **addLogMessage**(`parameters`): [`ok`](../type-aliases/ok.md)
 
 Adds a message to TDLib internal log. Can be called synchronously
 
@@ -56,19 +56,19 @@ Adds a message to TDLib internal log. Can be called synchronously
 
 #### Returns
 
-[`ok`](../type-aliases/ok-1.md)
+[`ok`](../type-aliases/ok.md)
 
-[Ok](../type-aliases/Ok.md)
+[Ok](../type-aliases/Ok-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:73062
+dist/generated/types.d.ts:75050
 
 ***
 
 ### checkQuickReplyShortcutName()
 
-> **checkQuickReplyShortcutName**(`parameters`): [`ok`](../type-aliases/ok-1.md)
+> **checkQuickReplyShortcutName**(`parameters`): [`ok`](../type-aliases/ok.md)
 
 Checks validness of a name for a quick reply shortcut. Can be called synchronously
 
@@ -80,19 +80,19 @@ Checks validness of a name for a quick reply shortcut. Can be called synchronous
 
 #### Returns
 
-[`ok`](../type-aliases/ok-1.md)
+[`ok`](../type-aliases/ok.md)
 
-[Ok](../type-aliases/Ok.md)
+[Ok](../type-aliases/Ok-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72878
+dist/generated/types.d.ts:74866
 
 ***
 
 ### cleanFileName()
 
-> **cleanFileName**(`parameters`): [`text`](../type-aliases/text-1.md)
+> **cleanFileName**(`parameters`): [`text`](../type-aliases/text.md)
 
 Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
 
@@ -104,19 +104,19 @@ Removes potentially dangerous characters from the name of a file. The encoding o
 
 #### Returns
 
-[`text`](../type-aliases/text-1.md)
+[`text`](../type-aliases/text.md)
 
-[Text](../type-aliases/Text.md)
+[Text](../type-aliases/Text-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72943
+dist/generated/types.d.ts:74931
 
 ***
 
 ### getChatFolderDefaultIconName()
 
-> **getChatFolderDefaultIconName**(`parameters`): [`chatFolderIcon`](../type-aliases/chatFolderIcon-1.md)
+> **getChatFolderDefaultIconName**(`parameters`): [`chatFolderIcon`](../type-aliases/chatFolderIcon.md)
 
 Returns default icon name for a folder. Can be called synchronously
 
@@ -128,19 +128,19 @@ Returns default icon name for a folder. Can be called synchronously
 
 #### Returns
 
-[`chatFolderIcon`](../type-aliases/chatFolderIcon-1.md)
+[`chatFolderIcon`](../type-aliases/chatFolderIcon.md)
 
-[ChatFolderIcon](../type-aliases/ChatFolderIcon.md)
+[ChatFolderIcon](../type-aliases/ChatFolderIcon-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72978
+dist/generated/types.d.ts:74966
 
 ***
 
 ### getCountryFlagEmoji()
 
-> **getCountryFlagEmoji**(`parameters`): [`text`](../type-aliases/text-1.md)
+> **getCountryFlagEmoji**(`parameters`): [`text`](../type-aliases/text.md)
 
 Returns an emoji for the given country. Returns an empty string on failure. Can be called synchronously
 
@@ -152,19 +152,19 @@ Returns an emoji for the given country. Returns an empty string on failure. Can 
 
 #### Returns
 
-[`text`](../type-aliases/text-1.md)
+[`text`](../type-aliases/text.md)
 
-[Text](../type-aliases/Text.md)
+[Text](../type-aliases/Text-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72922
+dist/generated/types.d.ts:74910
 
 ***
 
 ### getFileExtension()
 
-> **getFileExtension**(`parameters`): [`text`](../type-aliases/text-1.md)
+> **getFileExtension**(`parameters`): [`text`](../type-aliases/text.md)
 
 Returns the extension of a file, guessed by its MIME type. Returns an empty string on failure. Can be called synchronously
 
@@ -176,19 +176,19 @@ Returns the extension of a file, guessed by its MIME type. Returns an empty stri
 
 #### Returns
 
-[`text`](../type-aliases/text-1.md)
+[`text`](../type-aliases/text.md)
 
-[Text](../type-aliases/Text.md)
+[Text](../type-aliases/Text-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72936
+dist/generated/types.d.ts:74924
 
 ***
 
 ### getFileMimeType()
 
-> **getFileMimeType**(`parameters`): [`text`](../type-aliases/text-1.md)
+> **getFileMimeType**(`parameters`): [`text`](../type-aliases/text.md)
 
 Returns the MIME type of a file, guessed by its extension. Returns an empty string on failure. Can be called synchronously
 
@@ -200,19 +200,19 @@ Returns the MIME type of a file, guessed by its extension. Returns an empty stri
 
 #### Returns
 
-[`text`](../type-aliases/text-1.md)
+[`text`](../type-aliases/text.md)
 
-[Text](../type-aliases/Text.md)
+[Text](../type-aliases/Text-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72929
+dist/generated/types.d.ts:74917
 
 ***
 
 ### getJsonString()
 
-> **getJsonString**(`parameters`): [`text`](../type-aliases/text-1.md)
+> **getJsonString**(`parameters`): [`text`](../type-aliases/text.md)
 
 Converts a JsonValue object to corresponding JSON-serialized string. Can be called synchronously
 
@@ -224,13 +224,13 @@ Converts a JsonValue object to corresponding JSON-serialized string. Can be call
 
 #### Returns
 
-[`text`](../type-aliases/text-1.md)
+[`text`](../type-aliases/text.md)
 
-[Text](../type-aliases/Text.md)
+[Text](../type-aliases/Text-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72964
+dist/generated/types.d.ts:74952
 
 ***
 
@@ -254,7 +254,7 @@ Converts a JSON-serialized string to corresponding JsonValue object. Can be call
 
 #### Defined in
 
-dist/generated/types.d.ts:72957
+dist/generated/types.d.ts:74945
 
 ***
 
@@ -278,7 +278,7 @@ Returns a string stored in the local database from the specified localization ta
 
 #### Defined in
 
-dist/generated/types.d.ts:72950
+dist/generated/types.d.ts:74938
 
 ***
 
@@ -302,37 +302,13 @@ Returns information about currently used log stream for internal logging of TDLi
 
 #### Defined in
 
-dist/generated/types.d.ts:73020
-
-***
-
-### getLogTagVerbosityLevel()
-
-> **getLogTagVerbosityLevel**(`parameters`): [`logVerbosityLevel`](../type-aliases/logVerbosityLevel-1.md)
-
-Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`getLogTagVerbosityLevel$DirectInput`](../type-aliases/getLogTagVerbosityLevel$DirectInput.md)
-
-[getLogTagVerbosityLevel$Input](../type-aliases/getLogTagVerbosityLevel$Input.md)
-
-#### Returns
-
-[`logVerbosityLevel`](../type-aliases/logVerbosityLevel-1.md)
-
-[LogVerbosityLevel](../type-aliases/LogVerbosityLevel.md)
-
-#### Defined in
-
-dist/generated/types.d.ts:73055
+dist/generated/types.d.ts:75008
 
 ***
 
 ### getLogTags()
 
-> **getLogTags**(`parameters`): [`logTags`](../type-aliases/logTags-1.md)
+> **getLogTags**(`parameters`): [`logTags`](../type-aliases/logTags.md)
 
 Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
 
@@ -344,19 +320,43 @@ Returns the list of available TDLib internal log tags, for example, ["actor", "b
 
 #### Returns
 
-[`logTags`](../type-aliases/logTags-1.md)
+[`logTags`](../type-aliases/logTags.md)
 
-[LogTags](../type-aliases/LogTags.md)
+[LogTags](../type-aliases/LogTags-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:73041
+dist/generated/types.d.ts:75029
+
+***
+
+### getLogTagVerbosityLevel()
+
+> **getLogTagVerbosityLevel**(`parameters`): [`logVerbosityLevel`](../type-aliases/logVerbosityLevel.md)
+
+Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`getLogTagVerbosityLevel$DirectInput`](../type-aliases/getLogTagVerbosityLevel$DirectInput.md)
+
+[getLogTagVerbosityLevel$Input](../type-aliases/getLogTagVerbosityLevel$Input.md)
+
+#### Returns
+
+[`logVerbosityLevel`](../type-aliases/logVerbosityLevel.md)
+
+[LogVerbosityLevel](../type-aliases/LogVerbosityLevel-1.md)
+
+#### Defined in
+
+dist/generated/types.d.ts:75043
 
 ***
 
 ### getLogVerbosityLevel()
 
-> **getLogVerbosityLevel**(`parameters`): [`logVerbosityLevel`](../type-aliases/logVerbosityLevel-1.md)
+> **getLogVerbosityLevel**(`parameters`): [`logVerbosityLevel`](../type-aliases/logVerbosityLevel.md)
 
 Returns current verbosity level of the internal logging of TDLib. Can be called synchronously
 
@@ -368,19 +368,19 @@ Returns current verbosity level of the internal logging of TDLib. Can be called 
 
 #### Returns
 
-[`logVerbosityLevel`](../type-aliases/logVerbosityLevel-1.md)
+[`logVerbosityLevel`](../type-aliases/logVerbosityLevel.md)
 
-[LogVerbosityLevel](../type-aliases/LogVerbosityLevel.md)
+[LogVerbosityLevel](../type-aliases/LogVerbosityLevel-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:73034
+dist/generated/types.d.ts:75022
 
 ***
 
 ### getMarkdownText()
 
-> **getMarkdownText**(`parameters`): [`formattedText`](../type-aliases/formattedText-1.md)
+> **getMarkdownText**(`parameters`): [`formattedText`](../type-aliases/formattedText.md)
 
 Replaces text entities with Markdown formatting in a human-friendly format. Entities that can't be represented in Markdown unambiguously are kept as is. Can be called synchronously
 
@@ -392,13 +392,13 @@ Replaces text entities with Markdown formatting in a human-friendly format. Enti
 
 #### Returns
 
-[`formattedText`](../type-aliases/formattedText-1.md)
+[`formattedText`](../type-aliases/formattedText.md)
 
-[FormattedText](../type-aliases/FormattedText.md)
+[FormattedText](../type-aliases/FormattedText-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72915
+dist/generated/types.d.ts:74903
 
 ***
 
@@ -422,13 +422,13 @@ Returns the value of an option by its name. (Check the list of available options
 
 #### Defined in
 
-dist/generated/types.d.ts:72992
+dist/generated/types.d.ts:74980
 
 ***
 
 ### getPhoneNumberInfoSync()
 
-> **getPhoneNumberInfoSync**(`parameters`): [`phoneNumberInfo`](../type-aliases/phoneNumberInfo-1.md)
+> **getPhoneNumberInfoSync**(`parameters`): [`phoneNumberInfo`](../type-aliases/phoneNumberInfo.md)
 
 Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
 
@@ -440,19 +440,19 @@ Returns information about a phone number by its prefix synchronously. getCountri
 
 #### Returns
 
-[`phoneNumberInfo`](../type-aliases/phoneNumberInfo-1.md)
+[`phoneNumberInfo`](../type-aliases/phoneNumberInfo.md)
 
-[PhoneNumberInfo](../type-aliases/PhoneNumberInfo.md)
+[PhoneNumberInfo](../type-aliases/PhoneNumberInfo-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:73006
+dist/generated/types.d.ts:74994
 
 ***
 
 ### getPushReceiverId()
 
-> **getPushReceiverId**(`parameters`): [`pushReceiverId`](../type-aliases/pushReceiverId-1.md)
+> **getPushReceiverId**(`parameters`): [`pushReceiverId`](../type-aliases/pushReceiverId.md)
 
 Returns a globally unique push notification subscription identifier for identification of an account, which has received a push notification. Can be called synchronously
 
@@ -464,19 +464,19 @@ Returns a globally unique push notification subscription identifier for identifi
 
 #### Returns
 
-[`pushReceiverId`](../type-aliases/pushReceiverId-1.md)
+[`pushReceiverId`](../type-aliases/pushReceiverId.md)
 
-[PushReceiverId](../type-aliases/PushReceiverId.md)
+[PushReceiverId](../type-aliases/PushReceiverId-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72985
+dist/generated/types.d.ts:74973
 
 ***
 
 ### getTextEntities()
 
-> **getTextEntities**(`parameters`): [`textEntities`](../type-aliases/textEntities-1.md)
+> **getTextEntities**(`parameters`): [`textEntities`](../type-aliases/textEntities.md)
 
 Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
 
@@ -488,19 +488,19 @@ Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numb
 
 #### Returns
 
-[`textEntities`](../type-aliases/textEntities-1.md)
+[`textEntities`](../type-aliases/textEntities.md)
 
-[TextEntities](../type-aliases/TextEntities.md)
+[TextEntities](../type-aliases/TextEntities-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72892
+dist/generated/types.d.ts:74880
 
 ***
 
 ### getThemeParametersJsonString()
 
-> **getThemeParametersJsonString**(`parameters`): [`text`](../type-aliases/text-1.md)
+> **getThemeParametersJsonString**(`parameters`): [`text`](../type-aliases/text.md)
 
 Converts a themeParameters object to corresponding JSON-serialized string. Can be called synchronously
 
@@ -512,19 +512,19 @@ Converts a themeParameters object to corresponding JSON-serialized string. Can b
 
 #### Returns
 
-[`text`](../type-aliases/text-1.md)
+[`text`](../type-aliases/text.md)
 
-[Text](../type-aliases/Text.md)
+[Text](../type-aliases/Text-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72971
+dist/generated/types.d.ts:74959
 
 ***
 
 ### parseMarkdown()
 
-> **parseMarkdown**(`parameters`): [`formattedText`](../type-aliases/formattedText-1.md)
+> **parseMarkdown**(`parameters`): [`formattedText`](../type-aliases/formattedText.md)
 
 Parses Markdown entities in a human-friendly format, ignoring markup errors. Can be called synchronously
 
@@ -536,19 +536,19 @@ Parses Markdown entities in a human-friendly format, ignoring markup errors. Can
 
 #### Returns
 
-[`formattedText`](../type-aliases/formattedText-1.md)
+[`formattedText`](../type-aliases/formattedText.md)
 
-[FormattedText](../type-aliases/FormattedText.md)
+[FormattedText](../type-aliases/FormattedText-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72908
+dist/generated/types.d.ts:74896
 
 ***
 
 ### parseTextEntities()
 
-> **parseTextEntities**(`parameters`): [`formattedText`](../type-aliases/formattedText-1.md)
+> **parseTextEntities**(`parameters`): [`formattedText`](../type-aliases/formattedText.md)
 
 Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
 
@@ -562,19 +562,19 @@ Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote,
 
 #### Returns
 
-[`formattedText`](../type-aliases/formattedText-1.md)
+[`formattedText`](../type-aliases/formattedText.md)
 
-[FormattedText](../type-aliases/FormattedText.md)
+[FormattedText](../type-aliases/FormattedText-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72901
+dist/generated/types.d.ts:74889
 
 ***
 
 ### searchQuote()
 
-> **searchQuote**(`parameters`): [`foundPosition`](../type-aliases/foundPosition-1.md)
+> **searchQuote**(`parameters`): [`foundPosition`](../type-aliases/foundPosition.md)
 
 Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
 
@@ -586,19 +586,19 @@ Searches for a given quote in a text. Returns found quote start position in UTF-
 
 #### Returns
 
-[`foundPosition`](../type-aliases/foundPosition-1.md)
+[`foundPosition`](../type-aliases/foundPosition.md)
 
-[FoundPosition](../type-aliases/FoundPosition.md)
+[FoundPosition](../type-aliases/FoundPosition-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72885
+dist/generated/types.d.ts:74873
 
 ***
 
 ### searchStringsByPrefix()
 
-> **searchStringsByPrefix**(`parameters`): [`foundPositions`](../type-aliases/foundPositions-1.md)
+> **searchStringsByPrefix**(`parameters`): [`foundPositions`](../type-aliases/foundPositions.md)
 
 Searches specified query by word prefixes in the provided strings. Returns 0-based positions of strings that matched. Can be called synchronously
 
@@ -610,19 +610,19 @@ Searches specified query by word prefixes in the provided strings. Returns 0-bas
 
 #### Returns
 
-[`foundPositions`](../type-aliases/foundPositions-1.md)
+[`foundPositions`](../type-aliases/foundPositions.md)
 
-[FoundPositions](../type-aliases/FoundPositions.md)
+[FoundPositions](../type-aliases/FoundPositions-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:72999
+dist/generated/types.d.ts:74987
 
 ***
 
 ### setLogStream()
 
-> **setLogStream**(`parameters`): [`ok`](../type-aliases/ok-1.md)
+> **setLogStream**(`parameters`): [`ok`](../type-aliases/ok.md)
 
 Sets new log stream for internal logging of TDLib. Can be called synchronously
 
@@ -634,19 +634,19 @@ Sets new log stream for internal logging of TDLib. Can be called synchronously
 
 #### Returns
 
-[`ok`](../type-aliases/ok-1.md)
+[`ok`](../type-aliases/ok.md)
 
-[Ok](../type-aliases/Ok.md)
+[Ok](../type-aliases/Ok-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:73013
+dist/generated/types.d.ts:75001
 
 ***
 
 ### setLogTagVerbosityLevel()
 
-> **setLogTagVerbosityLevel**(`parameters`): [`ok`](../type-aliases/ok-1.md)
+> **setLogTagVerbosityLevel**(`parameters`): [`ok`](../type-aliases/ok.md)
 
 Sets the verbosity level for a specified TDLib internal log tag. Can be called synchronously
 
@@ -658,19 +658,19 @@ Sets the verbosity level for a specified TDLib internal log tag. Can be called s
 
 #### Returns
 
-[`ok`](../type-aliases/ok-1.md)
+[`ok`](../type-aliases/ok.md)
 
-[Ok](../type-aliases/Ok.md)
+[Ok](../type-aliases/Ok-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:73048
+dist/generated/types.d.ts:75036
 
 ***
 
 ### setLogVerbosityLevel()
 
-> **setLogVerbosityLevel**(`parameters`): [`ok`](../type-aliases/ok-1.md)
+> **setLogVerbosityLevel**(`parameters`): [`ok`](../type-aliases/ok.md)
 
 Sets the verbosity level of the internal logging of TDLib. Can be called synchronously
 
@@ -682,19 +682,19 @@ Sets the verbosity level of the internal logging of TDLib. Can be called synchro
 
 #### Returns
 
-[`ok`](../type-aliases/ok-1.md)
+[`ok`](../type-aliases/ok.md)
 
-[Ok](../type-aliases/Ok.md)
+[Ok](../type-aliases/Ok-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:73027
+dist/generated/types.d.ts:75015
 
 ***
 
 ### testReturnError()
 
-> **testReturnError**(`parameters`): [`error`](../type-aliases/error-1.md)
+> **testReturnError**(`parameters`): [`error`](../type-aliases/error.md)
 
 Returns the specified error and ensures that the Error object is used; for testing only. Can be called synchronously
 
@@ -706,10 +706,10 @@ Returns the specified error and ensures that the Error object is used; for testi
 
 #### Returns
 
-[`error`](../type-aliases/error-1.md)
+[`error`](../type-aliases/error.md)
 
-[Error](../type-aliases/Error.md)
+[Error](../type-aliases/Error-1.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:73069
+dist/generated/types.d.ts:75057

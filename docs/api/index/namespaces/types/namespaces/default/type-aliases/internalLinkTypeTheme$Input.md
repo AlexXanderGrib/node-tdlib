@@ -26,4 +26,4 @@ Name of the theme
 
 ## Defined in
 
-dist/generated/types.d.ts:48466
+dist/generated/types.d.ts:50040

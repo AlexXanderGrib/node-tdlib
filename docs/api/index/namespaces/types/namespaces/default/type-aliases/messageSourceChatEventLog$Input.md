@@ -20,4 +20,4 @@ The message is from a chat event log
 
 ## Defined in
 
-dist/generated/types.d.ts:14303
+dist/generated/types.d.ts:14895

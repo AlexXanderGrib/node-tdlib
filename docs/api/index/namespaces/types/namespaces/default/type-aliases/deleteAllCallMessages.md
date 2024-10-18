@@ -6,7 +6,9 @@
 
 # Type Alias: deleteAllCallMessages()
 
-> **deleteAllCallMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteAllCallMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes all call messages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77085
+dist/generated/types.d.ts:79111

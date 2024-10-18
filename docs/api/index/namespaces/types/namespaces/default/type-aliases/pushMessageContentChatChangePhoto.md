@@ -18,4 +18,4 @@ A chat photo was edited
 
 ## Defined in
 
-dist/generated/types.d.ts:44947
+dist/generated/types.d.ts:46473

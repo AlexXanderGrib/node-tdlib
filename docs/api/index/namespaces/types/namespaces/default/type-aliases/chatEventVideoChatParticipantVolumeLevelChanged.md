@@ -24,10 +24,10 @@ Identifier of the affected group call participant
 
 ### volume\_level
 
-> **volume\_level**: [`int32`](int32-1.md)
+> **volume\_level**: [`int32`](int32.md)
 
 New value of volume_level; 1-20000 in hundreds of percents
 
 ## Defined in
 
-dist/generated/types.d.ts:40473
+dist/generated/types.d.ts:41867

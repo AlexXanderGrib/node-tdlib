@@ -18,13 +18,13 @@ A message with a forwarded story
 
 ### story\_id
 
-> **story\_id**: [`int32`](int32-1.md)
+> **story\_id**: [`int32`](int32.md)
 
 Story identifier
 
 ### story\_sender\_chat\_id
 
-> **story\_sender\_chat\_id**: [`int53`](int53-1.md)
+> **story\_sender\_chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat that posted the story
 
@@ -36,4 +36,4 @@ True, if the story was automatically forwarded because of a mention of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:26557
+dist/generated/types.d.ts:27317

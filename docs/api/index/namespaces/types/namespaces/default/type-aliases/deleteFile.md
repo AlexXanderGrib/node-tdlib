@@ -6,7 +6,9 @@
 
 # Type Alias: deleteFile()
 
-> **deleteFile**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteFile**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes a file from the TDLib file cache
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89233
+dist/generated/types.d.ts:91608

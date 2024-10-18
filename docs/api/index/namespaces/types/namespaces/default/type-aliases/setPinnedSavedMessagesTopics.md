@@ -6,7 +6,9 @@
 
 # Type Alias: setPinnedSavedMessagesTopics()
 
-> **setPinnedSavedMessagesTopics**: (`parameters`) => [`Ok`](Ok.md)
+> **setPinnedSavedMessagesTopics**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the order of pinned Saved Messages topics
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75999
+dist/generated/types.d.ts:78025

@@ -18,4 +18,4 @@ A self-destructed video note message
 
 ## Defined in
 
-dist/generated/types.d.ts:26271
+dist/generated/types.d.ts:27031

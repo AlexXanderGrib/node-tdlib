@@ -18,10 +18,10 @@ The payload for a general callback button
 
 ### data
 
-> **data**: [`bytes`](bytes-1.md)
+> **data**: [`bytes`](bytes.md)
 
 Data that was attached to the callback button
 
 ## Defined in
 
-dist/generated/types.d.ts:38971
+dist/generated/types.d.ts:40341

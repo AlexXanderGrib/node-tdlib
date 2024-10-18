@@ -20,37 +20,37 @@ User rights changed in a chat; for bots only
 
 ### actor\_user\_id?
 
-> `readonly` `optional` **actor\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **actor\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user, changing the rights
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### date?
 
-> `readonly` `optional` **date**: [`int32`](int32-1.md)
+> `readonly` `optional` **date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the user rights were changed
 
 ### invite\_link?
 
-> `readonly` `optional` **invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input-1.md) \| `null`
+> `readonly` `optional` **invite\_link**: [`chatInviteLink$Input`](chatInviteLink$Input.md) \| `null`
 
 If user has joined the chat using an invite link, the invite link; may be null
 
 ### new\_chat\_member?
 
-> `readonly` `optional` **new\_chat\_member**: [`chatMember$Input`](chatMember$Input-1.md)
+> `readonly` `optional` **new\_chat\_member**: [`chatMember$Input`](chatMember$Input.md)
 
 New chat member
 
 ### old\_chat\_member?
 
-> `readonly` `optional` **old\_chat\_member**: [`chatMember$Input`](chatMember$Input-1.md)
+> `readonly` `optional` **old\_chat\_member**: [`chatMember$Input`](chatMember$Input.md)
 
 Previous chat member
 
@@ -68,4 +68,4 @@ True, if the user has joined the chat after sending a join request and being app
 
 ## Defined in
 
-dist/generated/types.d.ts:57919
+dist/generated/types.d.ts:59559

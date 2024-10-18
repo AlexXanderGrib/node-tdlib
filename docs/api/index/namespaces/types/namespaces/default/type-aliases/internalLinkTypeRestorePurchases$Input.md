@@ -20,4 +20,4 @@ The link forces restore of App Store purchases when opened. For official iOS app
 
 ## Defined in
 
-dist/generated/types.d.ts:48305
+dist/generated/types.d.ts:49935

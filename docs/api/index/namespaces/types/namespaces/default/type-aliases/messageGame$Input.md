@@ -20,10 +20,10 @@ A message with a game
 
 ### game?
 
-> `readonly` `optional` **game**: [`game$Input`](game$Input-1.md)
+> `readonly` `optional` **game**: [`game$Input`](game$Input.md)
 
 The game description
 
 ## Defined in
 
-dist/generated/types.d.ts:26522
+dist/generated/types.d.ts:27282

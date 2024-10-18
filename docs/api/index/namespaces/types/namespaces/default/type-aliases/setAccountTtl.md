@@ -6,7 +6,9 @@
 
 # Type Alias: setAccountTtl()
 
-> **setAccountTtl**: (`parameters`) => [`Ok`](Ok.md)
+> **setAccountTtl**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the period of inactivity after which the account of the current user will automatically be deleted
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98013
+dist/generated/types.d.ts:100792

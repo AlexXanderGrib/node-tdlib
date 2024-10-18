@@ -18,4 +18,4 @@ The session is running on an iPhone device
 
 ## Defined in
 
-dist/generated/types.d.ts:46559
+dist/generated/types.d.ts:48085

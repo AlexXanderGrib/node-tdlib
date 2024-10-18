@@ -24,7 +24,7 @@ Emoji used to choose the sticker
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
 Sticker height
 
@@ -36,16 +36,16 @@ Sticker to be sent
 
 ### thumbnail
 
-> **thumbnail**: [`inputThumbnail`](inputThumbnail-1.md) \| `null`
+> **thumbnail**: [`inputThumbnail`](inputThumbnail.md) \| `null`
 
 Sticker thumbnail; pass null to skip thumbnail uploading
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
 Sticker width
 
 ## Defined in
 
-dist/generated/types.d.ts:29663
+dist/generated/types.d.ts:30537

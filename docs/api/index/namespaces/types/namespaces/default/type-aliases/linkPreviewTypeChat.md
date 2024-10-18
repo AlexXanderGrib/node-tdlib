@@ -24,7 +24,7 @@ True, if the link only creates join request
 
 ### photo
 
-> **photo**: [`chatPhoto`](chatPhoto-1.md) \| `null`
+> **photo**: [`chatPhoto`](chatPhoto.md) \| `null`
 
 Photo of the chat; may be null
 
@@ -36,4 +36,4 @@ Type of the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:21095
+dist/generated/types.d.ts:21731

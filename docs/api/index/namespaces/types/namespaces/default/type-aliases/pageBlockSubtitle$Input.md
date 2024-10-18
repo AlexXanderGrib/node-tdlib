@@ -26,4 +26,4 @@ Subtitle
 
 ## Defined in
 
-dist/generated/types.d.ts:19676
+dist/generated/types.d.ts:20302

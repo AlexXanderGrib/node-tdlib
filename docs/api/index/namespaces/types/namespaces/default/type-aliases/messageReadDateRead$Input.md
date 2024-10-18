@@ -20,10 +20,10 @@ Contains read date of the message
 
 ### read\_date?
 
-> `readonly` `optional` **read\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **read\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the message was read by the other user
 
 ## Defined in
 
-dist/generated/types.d.ts:12116
+dist/generated/types.d.ts:12720

@@ -6,7 +6,9 @@
 
 # Type Alias: stopBusinessPoll()
 
-> **stopBusinessPoll**: (`parameters`) => [`BusinessMessage`](BusinessMessage.md)
+> **stopBusinessPoll**: (`parameters`) => [`BusinessMessage`](BusinessMessage-1.md)
+
+Stops a poll sent on behalf of a business account; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessMessage`](BusinessMessage.md)
+[`BusinessMessage`](BusinessMessage-1.md)
 
-[BusinessMessage](BusinessMessage.md)
+[BusinessMessage](BusinessMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80118
+dist/generated/types.d.ts:82109

@@ -20,10 +20,10 @@ Contains an inline keyboard layout
 
 ### rows?
 
-> `readonly` `optional` **rows**: [`vector$Input`](vector$Input.md)\<[`vector$Input`](vector$Input.md)\<[`inlineKeyboardButton$Input`](inlineKeyboardButton$Input-1.md)\>\>
+> `readonly` `optional` **rows**: [`vector$Input`](vector$Input.md)\<[`vector$Input`](vector$Input.md)\<[`inlineKeyboardButton$Input`](inlineKeyboardButton$Input.md)\>\>
 
 A list of rows of inline keyboard buttons
 
 ## Defined in
 
-dist/generated/types.d.ts:17892
+dist/generated/types.d.ts:18484

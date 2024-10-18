@@ -8,7 +8,7 @@
 
 > **starTransactionDirectionIncoming**: `object`
 
-The transaction is incoming and increases the number of owned Telegram stars
+The transaction is incoming and increases the number of owned Telegram Stars
 
 ## Type declaration
 
@@ -18,4 +18,4 @@ The transaction is incoming and increases the number of owned Telegram stars
 
 ## Defined in
 
-dist/generated/types.d.ts:8345
+dist/generated/types.d.ts:8593

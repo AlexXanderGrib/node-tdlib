@@ -14,10 +14,10 @@ Returns information about a secret chat by its identifier. This is an offline re
 
 ### secret\_chat\_id?
 
-> `readonly` `optional` **secret\_chat\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **secret\_chat\_id**: [`int32`](int32.md)
 
 Secret chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:74527
+dist/generated/types.d.ts:76515

@@ -38,4 +38,4 @@ True, if the user is a member of the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:9934
+dist/generated/types.d.ts:10424

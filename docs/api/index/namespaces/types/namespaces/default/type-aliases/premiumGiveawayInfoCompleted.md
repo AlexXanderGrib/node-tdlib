@@ -18,19 +18,19 @@ Describes a completed giveaway
 
 ### activation\_count
 
-> **activation\_count**: [`int32`](int32-1.md)
+> **activation\_count**: [`int32`](int32.md)
 
 Number of winners, which activated their gift codes
 
 ### actual\_winners\_selection\_date
 
-> **actual\_winners\_selection\_date**: [`int32`](int32-1.md)
+> **actual\_winners\_selection\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the winners were selected. May be bigger than winners selection date specified in parameters of the giveaway
 
 ### creation\_date
 
-> **creation\_date**: [`int32`](int32-1.md)
+> **creation\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the giveaway was created
 
@@ -48,10 +48,10 @@ True, if the giveaway was canceled and was fully refunded
 
 ### winner\_count
 
-> **winner\_count**: [`int32`](int32-1.md)
+> **winner\_count**: [`int32`](int32.md)
 
 Number of winners in the giveaway
 
 ## Defined in
 
-dist/generated/types.d.ts:8807
+dist/generated/types.d.ts:9243

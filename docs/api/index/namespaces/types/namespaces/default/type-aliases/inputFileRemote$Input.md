@@ -28,4 +28,4 @@ Remote file identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:3922
+dist/generated/types.d.ts:3968

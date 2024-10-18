@@ -26,7 +26,7 @@ The content of the message to be added; inputMessagePoll, inputMessageForwarded 
 
 ### reply\_to\_message\_id?
 
-> `readonly` `optional` **reply\_to\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **reply\_to\_message\_id**: [`int53`](int53.md)
 
 Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
 
@@ -38,4 +38,4 @@ Name of the target shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:80329
+dist/generated/types.d.ts:82378

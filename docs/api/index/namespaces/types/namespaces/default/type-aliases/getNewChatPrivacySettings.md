@@ -6,7 +6,9 @@
 
 # Type Alias: getNewChatPrivacySettings()
 
-> **getNewChatPrivacySettings**: (`parameters`) => [`NewChatPrivacySettings`](NewChatPrivacySettings.md)
+> **getNewChatPrivacySettings**: (`parameters`) => [`NewChatPrivacySettings`](NewChatPrivacySettings-1.md)
+
+Returns privacy settings for new chat creation
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`NewChatPrivacySettings`](NewChatPrivacySettings.md)
+[`NewChatPrivacySettings`](NewChatPrivacySettings-1.md)
 
-[NewChatPrivacySettings](NewChatPrivacySettings.md)
+[NewChatPrivacySettings](NewChatPrivacySettings-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97881
+dist/generated/types.d.ts:100660

@@ -20,4 +20,4 @@ The list of stories, shown in the main chat list and folder chat lists
 
 ## Defined in
 
-dist/generated/types.d.ts:32623
+dist/generated/types.d.ts:33901

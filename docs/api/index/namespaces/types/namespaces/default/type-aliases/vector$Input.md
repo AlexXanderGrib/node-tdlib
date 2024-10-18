@@ -6,7 +6,7 @@
 
 # Type Alias: vector$Input\<T\>
 
-> **vector$Input**\<`T`\>: `ReadonlyArray`\<`T`\>
+> **vector$Input**\<`T`\>: readonly `T`[]
 
 ## Type Parameters
 

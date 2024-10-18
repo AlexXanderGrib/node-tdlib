@@ -6,7 +6,9 @@
 
 # Type Alias: sendCustomRequest()
 
-> **sendCustomRequest**: (`parameters`) => [`CustomRequestResult`](CustomRequestResult.md)
+> **sendCustomRequest**: (`parameters`) => [`CustomRequestResult`](CustomRequestResult-1.md)
+
+Sends a custom request; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`CustomRequestResult`](CustomRequestResult.md)
+[`CustomRequestResult`](CustomRequestResult-1.md)
 
-[CustomRequestResult](CustomRequestResult.md)
+[CustomRequestResult](CustomRequestResult-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101078
+dist/generated/types.d.ts:103999

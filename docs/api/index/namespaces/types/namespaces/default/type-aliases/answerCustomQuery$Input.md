@@ -18,7 +18,7 @@ Answers a custom query; for bots only
 
 ### custom\_query\_id?
 
-> `readonly` `optional` **custom\_query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **custom\_query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of a custom query
 
@@ -30,4 +30,4 @@ JSON-serialized answer to the query
 
 ## Defined in
 
-dist/generated/types.d.ts:101082
+dist/generated/types.d.ts:104003

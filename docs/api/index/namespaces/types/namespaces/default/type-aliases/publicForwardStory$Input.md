@@ -20,10 +20,10 @@ Contains a public repost to a story
 
 ### story?
 
-> `readonly` `optional` **story**: [`story$Input`](story$Input-1.md)
+> `readonly` `optional` **story**: [`story$Input`](story$Input.md)
 
 Information about the story
 
 ## Defined in
 
-dist/generated/types.d.ts:33672
+dist/generated/types.d.ts:34950

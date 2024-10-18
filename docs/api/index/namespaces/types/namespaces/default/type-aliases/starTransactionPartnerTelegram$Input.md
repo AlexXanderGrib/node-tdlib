@@ -20,4 +20,4 @@ The transaction is a transaction with Telegram through a bot
 
 ## Defined in
 
-dist/generated/types.d.ts:8381
+dist/generated/types.d.ts:8769

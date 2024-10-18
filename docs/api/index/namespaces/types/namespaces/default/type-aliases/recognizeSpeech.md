@@ -6,7 +6,9 @@
 
 # Type Alias: recognizeSpeech()
 
-> **recognizeSpeech**: (`parameters`) => [`Ok`](Ok.md)
+> **recognizeSpeech**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Recognizes speech in a video note or a voice note message
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77954
+dist/generated/types.d.ts:79963

@@ -20,16 +20,16 @@ The number of online group members has changed. This update with non-zero number
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
 ### online\_member\_count
 
-> **online\_member\_count**: [`int32`](int32-1.md)
+> **online\_member\_count**: [`int32`](int32.md)
 
 New number of online members in the chat, or 0 if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:54409
+dist/generated/types.d.ts:56025

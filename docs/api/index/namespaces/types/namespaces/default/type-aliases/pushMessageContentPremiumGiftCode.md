@@ -18,10 +18,10 @@ A message with a Telegram Premium gift code created for the user
 
 ### month\_count
 
-> **month\_count**: [`int32`](int32-1.md)
+> **month\_count**: [`int32`](int32.md)
 
 Number of months the Telegram Premium subscription will be active after code activation
 
 ## Defined in
 
-dist/generated/types.d.ts:44583
+dist/generated/types.d.ts:46109

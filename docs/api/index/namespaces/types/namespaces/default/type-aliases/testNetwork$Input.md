@@ -18,4 +18,4 @@ Sends a simple network request to the Telegram servers; for testing only. Can be
 
 ## Defined in
 
-dist/generated/types.d.ts:102169
+dist/generated/types.d.ts:105090

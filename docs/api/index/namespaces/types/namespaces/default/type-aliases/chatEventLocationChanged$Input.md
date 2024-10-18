@@ -20,16 +20,16 @@ The supergroup location was changed
 
 ### new\_location?
 
-> `readonly` `optional` **new\_location**: [`chatLocation$Input`](chatLocation$Input-1.md) \| `null`
+> `readonly` `optional` **new\_location**: [`chatLocation$Input`](chatLocation$Input.md) \| `null`
 
 New location; may be null
 
 ### old\_location?
 
-> `readonly` `optional` **old\_location**: [`chatLocation$Input`](chatLocation$Input-1.md) \| `null`
+> `readonly` `optional` **old\_location**: [`chatLocation$Input`](chatLocation$Input.md) \| `null`
 
 Previous location; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:39735
+dist/generated/types.d.ts:41105

@@ -24,10 +24,10 @@ Pass true if the invite link needs to contain an invite hash, passing which to j
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:91299
+dist/generated/types.d.ts:93796

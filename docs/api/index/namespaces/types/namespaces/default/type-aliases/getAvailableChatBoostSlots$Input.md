@@ -18,4 +18,4 @@ Returns the list of available chat boost slots for the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:88327
+dist/generated/types.d.ts:90702

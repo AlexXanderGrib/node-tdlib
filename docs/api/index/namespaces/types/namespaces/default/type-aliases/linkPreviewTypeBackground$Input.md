@@ -18,12 +18,18 @@ The link is a link to a background. Link preview title and description are avail
 
 > `readonly` **\_**: `"linkPreviewTypeBackground"`
 
+### background\_type?
+
+> `readonly` `optional` **background\_type**: [`BackgroundType$Input`](BackgroundType$Input.md) \| `null`
+
+Type of the background; may be null if unknown
+
 ### document?
 
-> `readonly` `optional` **document**: [`document$Input`](document$Input-1.md) \| `null`
+> `readonly` `optional` **document**: [`document$Input`](document$Input.md) \| `null`
 
 Document with the background; may be null for filled backgrounds
 
 ## Defined in
 
-dist/generated/types.d.ts:21060
+dist/generated/types.d.ts:21691

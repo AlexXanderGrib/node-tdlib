@@ -18,4 +18,4 @@ The file is a photo published as a story
 
 ## Defined in
 
-dist/generated/types.d.ts:49017
+dist/generated/types.d.ts:50601

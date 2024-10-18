@@ -20,4 +20,4 @@ A bank card number. The getBankCardInfo method can be used to get information ab
 
 ## Defined in
 
-dist/generated/types.d.ts:28583
+dist/generated/types.d.ts:29457

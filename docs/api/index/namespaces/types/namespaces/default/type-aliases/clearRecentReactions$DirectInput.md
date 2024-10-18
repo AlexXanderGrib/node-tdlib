@@ -12,4 +12,4 @@ Clears the list of recently used reactions
 
 ## Defined in
 
-dist/generated/types.d.ts:81251
+dist/generated/types.d.ts:83300

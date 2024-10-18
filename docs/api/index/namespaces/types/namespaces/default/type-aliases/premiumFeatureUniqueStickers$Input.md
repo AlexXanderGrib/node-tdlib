@@ -20,4 +20,4 @@ Allowed to use premium stickers with unique effects
 
 ## Defined in
 
-dist/generated/types.d.ts:41613
+dist/generated/types.d.ts:43007

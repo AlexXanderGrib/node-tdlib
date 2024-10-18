@@ -14,7 +14,7 @@ Searches for recently used hashtags by their prefix
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of hashtags to be returned
 
@@ -26,4 +26,4 @@ Hashtag prefix to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:93722
+dist/generated/types.d.ts:96219

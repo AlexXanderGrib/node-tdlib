@@ -18,4 +18,4 @@ The log is written nowhere
 
 ## Defined in
 
-dist/generated/types.d.ts:58263
+dist/generated/types.d.ts:59903

@@ -6,7 +6,9 @@
 
 # Type Alias: clearRecentReactions()
 
-> **clearRecentReactions**: (`parameters`) => [`Ok`](Ok.md)
+> **clearRecentReactions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Clears the list of recently used reactions
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81258
+dist/generated/types.d.ts:83307

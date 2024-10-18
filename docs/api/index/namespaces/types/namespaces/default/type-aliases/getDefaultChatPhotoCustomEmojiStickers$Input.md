@@ -18,4 +18,4 @@ Returns default list of custom emoji stickers for placing on a chat photo
 
 ## Defined in
 
-dist/generated/types.d.ts:93559
+dist/generated/types.d.ts:96056

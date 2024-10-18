@@ -6,7 +6,9 @@
 
 # Type Alias: setChatTheme()
 
-> **setChatTheme**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatTheme**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the chat theme. Supported only in private and secret chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85603
+dist/generated/types.d.ts:87902

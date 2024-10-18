@@ -26,10 +26,10 @@ Author of the article
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md) \| `null`
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md) \| `null`
 
 Article's main photo; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:20967
+dist/generated/types.d.ts:21593

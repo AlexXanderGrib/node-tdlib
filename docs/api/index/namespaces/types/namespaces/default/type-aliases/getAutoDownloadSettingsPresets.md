@@ -6,7 +6,9 @@
 
 # Type Alias: getAutoDownloadSettingsPresets()
 
-> **getAutoDownloadSettingsPresets**: (`parameters`) => [`AutoDownloadSettingsPresets`](AutoDownloadSettingsPresets.md)
+> **getAutoDownloadSettingsPresets**: (`parameters`) => [`AutoDownloadSettingsPresets`](AutoDownloadSettingsPresets-1.md)
+
+Returns auto-download settings presets for the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AutoDownloadSettingsPresets`](AutoDownloadSettingsPresets.md)
+[`AutoDownloadSettingsPresets`](AutoDownloadSettingsPresets-1.md)
 
-[AutoDownloadSettingsPresets](AutoDownloadSettingsPresets.md)
+[AutoDownloadSettingsPresets](AutoDownloadSettingsPresets-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99083
+dist/generated/types.d.ts:101862

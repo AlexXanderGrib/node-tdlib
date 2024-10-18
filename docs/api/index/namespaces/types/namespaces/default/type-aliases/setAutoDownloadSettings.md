@@ -6,7 +6,9 @@
 
 # Type Alias: setAutoDownloadSettings()
 
-> **setAutoDownloadSettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setAutoDownloadSettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets auto-download settings
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99121
+dist/generated/types.d.ts:101900

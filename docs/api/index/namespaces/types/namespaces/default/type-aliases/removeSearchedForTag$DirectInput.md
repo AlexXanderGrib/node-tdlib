@@ -20,4 +20,4 @@ Hashtag or cashtag to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:77016
+dist/generated/types.d.ts:79042

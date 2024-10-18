@@ -24,10 +24,10 @@ True, if the message deletion can be reported via reportSupergroupAntiSpamFalseP
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 Deleted message
 
 ## Defined in
 
-dist/generated/types.d.ts:39223
+dist/generated/types.d.ts:40593

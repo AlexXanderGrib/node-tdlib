@@ -18,4 +18,4 @@ The ability to save other's unprotected stories
 
 ## Defined in
 
-dist/generated/types.d.ts:42071
+dist/generated/types.d.ts:43465

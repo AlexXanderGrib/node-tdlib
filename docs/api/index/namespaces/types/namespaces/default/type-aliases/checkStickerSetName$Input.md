@@ -24,4 +24,4 @@ Name to be checked
 
 ## Defined in
 
-dist/generated/types.d.ts:99748
+dist/generated/types.d.ts:102527

@@ -18,4 +18,4 @@ An italic text
 
 ## Defined in
 
-dist/generated/types.d.ts:28603
+dist/generated/types.d.ts:29477

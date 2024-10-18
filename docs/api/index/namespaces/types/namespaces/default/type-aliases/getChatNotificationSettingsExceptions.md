@@ -6,7 +6,9 @@
 
 # Type Alias: getChatNotificationSettingsExceptions()
 
-> **getChatNotificationSettingsExceptions**: (`parameters`) => [`Chats`](Chats.md)
+> **getChatNotificationSettingsExceptions**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns the list of chats with non-default notification settings for new messages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86895
+dist/generated/types.d.ts:89194

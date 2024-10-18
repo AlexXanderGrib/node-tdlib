@@ -20,7 +20,7 @@ A voice note message
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md)
 
 Voice note caption
 
@@ -32,10 +32,10 @@ True, if at least one of the recipients has listened to the voice note
 
 ### voice\_note?
 
-> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input-1.md)
+> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input.md)
 
 The voice note description
 
 ## Defined in
 
-dist/generated/types.d.ts:26222
+dist/generated/types.d.ts:26982

@@ -20,7 +20,7 @@ Represents an audio file
 
 ### audio?
 
-> `readonly` `optional` **audio**: [`audio$Input`](audio$Input-1.md)
+> `readonly` `optional` **audio**: [`audio$Input`](audio$Input.md)
 
 Audio file
 
@@ -32,4 +32,4 @@ Unique identifier of the query result
 
 ## Defined in
 
-dist/generated/types.d.ts:38579
+dist/generated/types.d.ts:39949

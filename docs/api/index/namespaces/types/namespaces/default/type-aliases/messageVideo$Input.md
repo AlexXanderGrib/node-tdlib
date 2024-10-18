@@ -20,7 +20,7 @@ A video message
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md)
 
 Video caption
 
@@ -44,10 +44,10 @@ True, if the caption must be shown above the video; otherwise, the caption must 
 
 ### video?
 
-> `readonly` `optional` **video**: [`video$Input`](video$Input-1.md)
+> `readonly` `optional` **video**: [`video$Input`](video$Input.md)
 
 The video description
 
 ## Defined in
 
-dist/generated/types.d.ts:26124
+dist/generated/types.d.ts:26884

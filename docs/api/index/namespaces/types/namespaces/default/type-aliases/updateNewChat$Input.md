@@ -20,10 +20,10 @@ A new chat has been loaded/created. This update is guaranteed to come before the
 
 ### chat?
 
-> `readonly` `optional` **chat**: [`chat$Input`](chat$Input-1.md)
+> `readonly` `optional` **chat**: [`chat$Input`](chat$Input.md)
 
 The chat
 
 ## Defined in
 
-dist/generated/types.d.ts:53204
+dist/generated/types.d.ts:54820

@@ -6,7 +6,9 @@
 
 # Type Alias: sendCallLog()
 
-> **sendCallLog**: (`parameters`) => [`Ok`](Ok.md)
+> **sendCallLog**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sends log file for a call to Telegram servers
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90705
+dist/generated/types.d.ts:93202

@@ -18,4 +18,4 @@ Resends the code to verify an email address to be added to a user's Telegram Pas
 
 ## Defined in
 
-dist/generated/types.d.ts:99451
+dist/generated/types.d.ts:102230

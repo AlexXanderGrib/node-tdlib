@@ -20,10 +20,10 @@ File generation is no longer needed
 
 ### generation\_id?
 
-> `readonly` `optional` **generation\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **generation\_id**: [`int64$Input`](int64$Input.md)
 
 Unique identifier for the generation process
 
 ## Defined in
 
-dist/generated/types.d.ts:55342
+dist/generated/types.d.ts:56958

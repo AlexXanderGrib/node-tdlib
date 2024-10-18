@@ -18,10 +18,10 @@ Returns the list of participant identifiers, on whose behalf a video chat in the
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:90709
+dist/generated/types.d.ts:93206

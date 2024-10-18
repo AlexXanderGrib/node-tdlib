@@ -6,7 +6,9 @@
 
 # Type Alias: toggleForumTopicIsPinned()
 
-> **toggleForumTopicIsPinned**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleForumTopicIsPinned**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the pinned state of a forum topic; requires can_manage_topics right in the supergroup. There can be up to getOption("pinned_forum_topic_count_max") pinned forum topics
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81072
+dist/generated/types.d.ts:83121

@@ -6,7 +6,9 @@
 
 # Type Alias: recoverAuthenticationPassword()
 
-> **recoverAuthenticationPassword**: (`parameters`) => [`Ok`](Ok.md)
+> **recoverAuthenticationPassword**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Recovers the 2-step verification password with a password recovery code sent to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73633
+dist/generated/types.d.ts:75621

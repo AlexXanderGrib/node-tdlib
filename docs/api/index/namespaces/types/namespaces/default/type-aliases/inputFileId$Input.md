@@ -20,10 +20,10 @@ A file defined by its unique identifier
 
 ### id?
 
-> `readonly` `optional` **id**: [`int32`](int32-1.md)
+> `readonly` `optional` **id**: [`int32`](int32.md)
 
 Unique file identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:3894
+dist/generated/types.d.ts:3940

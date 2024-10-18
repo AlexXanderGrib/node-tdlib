@@ -18,7 +18,7 @@ Changes default participant identifier, on whose behalf a video chat in the chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ Default group call participant identifier to join the video chats
 
 ## Defined in
 
-dist/generated/types.d.ts:90737
+dist/generated/types.d.ts:93234

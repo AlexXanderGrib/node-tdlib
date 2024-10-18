@@ -20,4 +20,4 @@ A link from a QR code. The link must be scanned by the in-app camera
 
 ## Defined in
 
-dist/generated/types.d.ts:73789
+dist/generated/types.d.ts:75777

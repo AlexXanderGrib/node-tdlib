@@ -6,7 +6,9 @@
 
 # Type Alias: setInlineGameScore()
 
-> **setInlineGameScore**: (`parameters`) => [`Ok`](Ok.md)
+> **setInlineGameScore**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Updates the game score of the specified user in a game; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83431
+dist/generated/types.d.ts:85730

@@ -26,4 +26,4 @@ Text of the keyboardButtonTypeWebApp button, which opened the Web App
 
 ## Defined in
 
-dist/generated/types.d.ts:28316
+dist/generated/types.d.ts:29190

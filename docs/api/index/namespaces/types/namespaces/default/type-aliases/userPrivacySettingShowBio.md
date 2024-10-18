@@ -18,4 +18,4 @@ A privacy setting for managing whether the user's bio is visible
 
 ## Defined in
 
-dist/generated/types.d.ts:46225
+dist/generated/types.d.ts:47751

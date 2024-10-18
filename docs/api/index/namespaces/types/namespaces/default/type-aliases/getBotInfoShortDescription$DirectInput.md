@@ -14,7 +14,7 @@ Returns the text shown on a bot's profile page and sent together with the link w
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
@@ -26,4 +26,4 @@ A two-letter ISO 639-1 language code or an empty string
 
 ## Defined in
 
-dist/generated/types.d.ts:95623
+dist/generated/types.d.ts:98392

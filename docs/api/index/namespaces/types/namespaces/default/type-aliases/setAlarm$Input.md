@@ -18,10 +18,10 @@ Succeeds after a specified amount of time has passed. Can be called before initi
 
 ### seconds?
 
-> `readonly` `optional` **seconds**: [`double`](double-1.md)
+> `readonly` `optional` **seconds**: [`double`](double.md)
 
 Number of seconds before the function returns
 
 ## Defined in
 
-dist/generated/types.d.ts:101120
+dist/generated/types.d.ts:104041

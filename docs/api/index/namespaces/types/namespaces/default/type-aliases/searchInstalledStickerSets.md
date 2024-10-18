@@ -6,7 +6,9 @@
 
 # Type Alias: searchInstalledStickerSets()
 
-> **searchInstalledStickerSets**: (`parameters`) => [`StickerSets`](StickerSets.md)
+> **searchInstalledStickerSets**: (`parameters`) => [`StickerSets`](StickerSets-1.md)
+
+Searches for installed sticker sets by looking for specified query in their title and name
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StickerSets`](StickerSets.md)
+[`StickerSets`](StickerSets-1.md)
 
-[StickerSets](StickerSets.md)
+[StickerSets](StickerSets-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92970
+dist/generated/types.d.ts:95467

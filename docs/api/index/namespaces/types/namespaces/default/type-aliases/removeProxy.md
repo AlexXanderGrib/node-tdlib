@@ -6,7 +6,9 @@
 
 # Type Alias: removeProxy()
 
-> **removeProxy**: (`parameters`) => [`Ok`](Ok.md)
+> **removeProxy**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a proxy server. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101581
+dist/generated/types.d.ts:104502

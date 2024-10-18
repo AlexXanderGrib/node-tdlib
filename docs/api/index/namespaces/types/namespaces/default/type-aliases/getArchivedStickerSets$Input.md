@@ -18,13 +18,13 @@ Returns a list of archived sticker sets
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of sticker sets to return; up to 100
 
 ### offset\_sticker\_set\_id?
 
-> `readonly` `optional` **offset\_sticker\_set\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **offset\_sticker\_set\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the sticker set from which to return the result; use 0 to get results from the beginning
 
@@ -36,4 +36,4 @@ Type of the sticker sets to return
 
 ## Defined in
 
-dist/generated/types.d.ts:92746
+dist/generated/types.d.ts:95243

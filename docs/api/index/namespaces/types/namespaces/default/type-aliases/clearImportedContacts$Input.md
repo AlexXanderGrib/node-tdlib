@@ -18,4 +18,4 @@ Clears all imported contacts, contact list remains unchanged
 
 ## Defined in
 
-dist/generated/types.d.ts:92257
+dist/generated/types.d.ts:94754

@@ -6,7 +6,9 @@
 
 # Type Alias: toggleGroupCallEnabledStartNotification()
 
-> **toggleGroupCallEnabledStartNotification**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleGroupCallEnabledStartNotification**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether the current user will receive a notification when the group call starts; scheduled group calls only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90979
+dist/generated/types.d.ts:93476

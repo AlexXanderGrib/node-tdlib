@@ -20,4 +20,4 @@ A deleted user or deleted bot. No information on the user besides the user ident
 
 ## Defined in
 
-dist/generated/types.d.ts:6175
+dist/generated/types.d.ts:6221

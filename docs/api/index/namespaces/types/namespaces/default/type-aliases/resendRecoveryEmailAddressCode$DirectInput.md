@@ -12,4 +12,4 @@ Resends the 2-step verification recovery email address verification code
 
 ## Defined in
 
-dist/generated/types.d.ts:74121
+dist/generated/types.d.ts:76109

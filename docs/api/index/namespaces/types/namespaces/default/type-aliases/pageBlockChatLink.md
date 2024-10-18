@@ -18,13 +18,13 @@ A link to a chat
 
 ### accent\_color\_id
 
-> **accent\_color\_id**: [`int32`](int32-1.md)
+> **accent\_color\_id**: [`int32`](int32.md)
 
 Identifier of the accent color for chat title and background of chat photo
 
 ### photo
 
-> **photo**: [`chatPhotoInfo`](chatPhotoInfo-1.md) \| `null`
+> **photo**: [`chatPhotoInfo`](chatPhotoInfo.md) \| `null`
 
 Chat photo; may be null
 
@@ -42,4 +42,4 @@ Chat username by which all other information about the chat can be resolved
 
 ## Defined in
 
-dist/generated/types.d.ts:20475
+dist/generated/types.d.ts:21101

@@ -26,4 +26,4 @@ True, if the message is a pinned message with the specified content
 
 ## Defined in
 
-dist/generated/types.d.ts:44134
+dist/generated/types.d.ts:45660

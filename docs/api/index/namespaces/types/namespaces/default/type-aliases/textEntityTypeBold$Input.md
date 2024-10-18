@@ -20,4 +20,4 @@ A bold text
 
 ## Defined in
 
-dist/generated/types.d.ts:28597
+dist/generated/types.d.ts:29471

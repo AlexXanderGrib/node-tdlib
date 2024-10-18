@@ -22,6 +22,10 @@
 
 > `readonly` **activateStoryStealthMode**: `"activateStoryStealthMode"`
 
+### addBotMediaPreview
+
+> `readonly` **addBotMediaPreview**: `"addBotMediaPreview"`
+
 ### addChatFolderByInviteLink
 
 > `readonly` **addChatFolderByInviteLink**: `"addChatFolderByInviteLink"`
@@ -70,6 +74,10 @@
 
 > `readonly` **addNetworkStatistics**: `"addNetworkStatistics"`
 
+### addPaidMessageReaction
+
+> `readonly` **addPaidMessageReaction**: `"addPaidMessageReaction"`
+
 ### addProxy
 
 > `readonly` **addProxy**: `"addProxy"`
@@ -86,13 +94,13 @@
 
 > `readonly` **addQuickReplyShortcutMessageAlbum**: `"addQuickReplyShortcutMessageAlbum"`
 
-### addRecentSticker
-
-> `readonly` **addRecentSticker**: `"addRecentSticker"`
-
 ### addRecentlyFoundChat
 
 > `readonly` **addRecentlyFoundChat**: `"addRecentlyFoundChat"`
+
+### addRecentSticker
+
+> `readonly` **addRecentSticker**: `"addRecentSticker"`
 
 ### addSavedAnimation
 
@@ -162,22 +170,6 @@
 
 > `readonly` **canBotSendMessages**: `"canBotSendMessages"`
 
-### canPurchaseFromStore
-
-> `readonly` **canPurchaseFromStore**: `"canPurchaseFromStore"`
-
-### canSendMessageToUser
-
-> `readonly` **canSendMessageToUser**: `"canSendMessageToUser"`
-
-### canSendStory
-
-> `readonly` **canSendStory**: `"canSendStory"`
-
-### canTransferOwnership
-
-> `readonly` **canTransferOwnership**: `"canTransferOwnership"`
-
 ### cancelDownloadFile
 
 > `readonly` **cancelDownloadFile**: `"cancelDownloadFile"`
@@ -193,6 +185,22 @@
 ### cancelRecoveryEmailAddressVerification
 
 > `readonly` **cancelRecoveryEmailAddressVerification**: `"cancelRecoveryEmailAddressVerification"`
+
+### canPurchaseFromStore
+
+> `readonly` **canPurchaseFromStore**: `"canPurchaseFromStore"`
+
+### canSendMessageToUser
+
+> `readonly` **canSendMessageToUser**: `"canSendMessageToUser"`
+
+### canSendStory
+
+> `readonly` **canSendStory**: `"canSendStory"`
+
+### canTransferOwnership
+
+> `readonly` **canTransferOwnership**: `"canTransferOwnership"`
 
 ### changeImportedContacts
 
@@ -290,6 +298,10 @@
 
 > `readonly` **clearRecentEmojiStatuses**: `"clearRecentEmojiStatuses"`
 
+### clearRecentlyFoundChats
+
+> `readonly` **clearRecentlyFoundChats**: `"clearRecentlyFoundChats"`
+
 ### clearRecentReactions
 
 > `readonly` **clearRecentReactions**: `"clearRecentReactions"`
@@ -297,10 +309,6 @@
 ### clearRecentStickers
 
 > `readonly` **clearRecentStickers**: `"clearRecentStickers"`
-
-### clearRecentlyFoundChats
-
-> `readonly` **clearRecentlyFoundChats**: `"clearRecentlyFoundChats"`
 
 ### clearSearchedForTags
 
@@ -370,6 +378,10 @@
 
 > `readonly` **createChatInviteLink**: `"createChatInviteLink"`
 
+### createChatSubscriptionInviteLink
+
+> `readonly` **createChatSubscriptionInviteLink**: `"createChatSubscriptionInviteLink"`
+
 ### createForumTopic
 
 > `readonly` **createForumTopic**: `"createForumTopic"`
@@ -425,6 +437,10 @@
 ### deleteAllRevokedChatInviteLinks
 
 > `readonly` **deleteAllRevokedChatInviteLinks**: `"deleteAllRevokedChatInviteLinks"`
+
+### deleteBotMediaPreviews
+
+> `readonly` **deleteBotMediaPreviews**: `"deleteBotMediaPreviews"`
 
 ### deleteBusinessChatLink
 
@@ -562,6 +578,10 @@
 
 > `readonly` **downloadFile**: `"downloadFile"`
 
+### editBotMediaPreview
+
+> `readonly` **editBotMediaPreview**: `"editBotMediaPreview"`
+
 ### editBusinessChatLink
 
 > `readonly` **editBusinessChatLink**: `"editBusinessChatLink"`
@@ -597,6 +617,10 @@
 ### editChatInviteLink
 
 > `readonly` **editChatInviteLink**: `"editChatInviteLink"`
+
+### editChatSubscriptionInviteLink
+
+> `readonly` **editChatSubscriptionInviteLink**: `"editChatSubscriptionInviteLink"`
 
 ### editCustomLanguagePackInfo
 
@@ -658,9 +682,17 @@
 
 > `readonly` **editQuickReplyMessage**: `"editQuickReplyMessage"`
 
+### editStarSubscription
+
+> `readonly` **editStarSubscription**: `"editStarSubscription"`
+
 ### editStory
 
 > `readonly` **editStory**: `"editStory"`
+
+### editStoryCover
+
+> `readonly` **editStoryCover**: `"editStoryCover"`
 
 ### enableProxy
 
@@ -689,10 +721,6 @@
 ### getAccountTtl
 
 > `readonly` **getAccountTtl**: `"getAccountTtl"`
-
-### getActiveLiveLocationMessages
-
-> `readonly` **getActiveLiveLocationMessages**: `"getActiveLiveLocationMessages"`
 
 ### getActiveSessions
 
@@ -778,6 +806,14 @@
 
 > `readonly` **getBotInfoShortDescription**: `"getBotInfoShortDescription"`
 
+### getBotMediaPreviewInfo
+
+> `readonly` **getBotMediaPreviewInfo**: `"getBotMediaPreviewInfo"`
+
+### getBotMediaPreviews
+
+> `readonly` **getBotMediaPreviews**: `"getBotMediaPreviews"`
+
 ### getBotName
 
 > `readonly` **getBotName**: `"getBotName"`
@@ -846,13 +882,13 @@
 
 > `readonly` **getChatBoostLinkInfo**: `"getChatBoostLinkInfo"`
 
-### getChatBoostStatus
-
-> `readonly` **getChatBoostStatus**: `"getChatBoostStatus"`
-
 ### getChatBoosts
 
 > `readonly` **getChatBoosts**: `"getChatBoosts"`
+
+### getChatBoostStatus
+
+> `readonly` **getChatBoostStatus**: `"getChatBoostStatus"`
 
 ### getChatEventLog
 
@@ -954,9 +990,17 @@
 
 > `readonly` **getChatRevenueWithdrawalUrl**: `"getChatRevenueWithdrawalUrl"`
 
+### getChats
+
+> `readonly` **getChats**: `"getChats"`
+
 ### getChatScheduledMessages
 
 > `readonly` **getChatScheduledMessages**: `"getChatScheduledMessages"`
+
+### getChatsForChatFolderInviteLink
+
+> `readonly` **getChatsForChatFolderInviteLink**: `"getChatsForChatFolderInviteLink"`
 
 ### getChatSimilarChatCount
 
@@ -981,14 +1025,6 @@
 ### getChatStoryInteractions
 
 > `readonly` **getChatStoryInteractions**: `"getChatStoryInteractions"`
-
-### getChats
-
-> `readonly` **getChats**: `"getChats"`
-
-### getChatsForChatFolderInviteLink
-
-> `readonly` **getChatsForChatFolderInviteLink**: `"getChatsForChatFolderInviteLink"`
 
 ### getChatsToSendStories
 
@@ -1033,6 +1069,10 @@
 ### getCurrentState
 
 > `readonly` **getCurrentState**: `"getCurrentState"`
+
+### getCurrentWeather
+
+> `readonly` **getCurrentWeather**: `"getCurrentWeather"`
 
 ### getCustomEmojiReactionAnimations
 
@@ -1150,13 +1190,13 @@
 
 > `readonly` **getGroupCallInviteLink**: `"getGroupCallInviteLink"`
 
-### getGroupCallStreamSegment
-
-> `readonly` **getGroupCallStreamSegment**: `"getGroupCallStreamSegment"`
-
 ### getGroupCallStreams
 
 > `readonly` **getGroupCallStreams**: `"getGroupCallStreams"`
+
+### getGroupCallStreamSegment
+
+> `readonly` **getGroupCallStreamSegment**: `"getGroupCallStreamSegment"`
 
 ### getGroupsInCommon
 
@@ -1226,22 +1266,6 @@
 
 > `readonly` **getLocalizationTargetInfo**: `"getLocalizationTargetInfo"`
 
-### getLogStream
-
-> `readonly` **getLogStream**: `"getLogStream"`
-
-### getLogTagVerbosityLevel
-
-> `readonly` **getLogTagVerbosityLevel**: `"getLogTagVerbosityLevel"`
-
-### getLogTags
-
-> `readonly` **getLogTags**: `"getLogTags"`
-
-### getLogVerbosityLevel
-
-> `readonly` **getLogVerbosityLevel**: `"getLogVerbosityLevel"`
-
 ### getLoginUrl
 
 > `readonly` **getLoginUrl**: `"getLoginUrl"`
@@ -1249,6 +1273,26 @@
 ### getLoginUrlInfo
 
 > `readonly` **getLoginUrlInfo**: `"getLoginUrlInfo"`
+
+### getLogStream
+
+> `readonly` **getLogStream**: `"getLogStream"`
+
+### getLogTags
+
+> `readonly` **getLogTags**: `"getLogTags"`
+
+### getLogTagVerbosityLevel
+
+> `readonly` **getLogTagVerbosityLevel**: `"getLogTagVerbosityLevel"`
+
+### getLogVerbosityLevel
+
+> `readonly` **getLogVerbosityLevel**: `"getLogVerbosityLevel"`
+
+### getMainWebApp
+
+> `readonly` **getMainWebApp**: `"getMainWebApp"`
 
 ### getMapThumbnailFile
 
@@ -1306,6 +1350,10 @@
 
 > `readonly` **getMessageLocally**: `"getMessageLocally"`
 
+### getMessageProperties
+
+> `readonly` **getMessageProperties**: `"getMessageProperties"`
+
 ### getMessagePublicForwards
 
 > `readonly` **getMessagePublicForwards**: `"getMessagePublicForwards"`
@@ -1313,6 +1361,10 @@
 ### getMessageReadDate
 
 > `readonly` **getMessageReadDate**: `"getMessageReadDate"`
+
+### getMessages
+
+> `readonly` **getMessages**: `"getMessages"`
 
 ### getMessageStatistics
 
@@ -1329,10 +1381,6 @@
 ### getMessageViewers
 
 > `readonly` **getMessageViewers**: `"getMessageViewers"`
-
-### getMessages
-
-> `readonly` **getMessages**: `"getMessages"`
 
 ### getNetworkStatistics
 
@@ -1385,6 +1433,10 @@
 ### getPollVoters
 
 > `readonly` **getPollVoters**: `"getPollVoters"`
+
+### getPopularWebAppBots
+
+> `readonly` **getPopularWebAppBots**: `"getPopularWebAppBots"`
 
 ### getPreferredCountryLanguage
 
@@ -1442,10 +1494,6 @@
 
 > `readonly` **getRecentInlineBots**: `"getRecentInlineBots"`
 
-### getRecentStickers
-
-> `readonly` **getRecentStickers**: `"getRecentStickers"`
-
 ### getRecentlyOpenedChats
 
 > `readonly` **getRecentlyOpenedChats**: `"getRecentlyOpenedChats"`
@@ -1453,6 +1501,10 @@
 ### getRecentlyVisitedTMeUrls
 
 > `readonly` **getRecentlyVisitedTMeUrls**: `"getRecentlyVisitedTMeUrls"`
+
+### getRecentStickers
+
+> `readonly` **getRecentStickers**: `"getRecentStickers"`
 
 ### getRecommendedChatFolders
 
@@ -1518,6 +1570,10 @@
 
 > `readonly` **getStarAdAccountUrl**: `"getStarAdAccountUrl"`
 
+### getStarGiftPaymentOptions
+
+> `readonly` **getStarGiftPaymentOptions**: `"getStarGiftPaymentOptions"`
+
 ### getStarPaymentOptions
 
 > `readonly` **getStarPaymentOptions**: `"getStarPaymentOptions"`
@@ -1525,6 +1581,10 @@
 ### getStarRevenueStatistics
 
 > `readonly` **getStarRevenueStatistics**: `"getStarRevenueStatistics"`
+
+### getStarSubscriptions
+
+> `readonly` **getStarSubscriptions**: `"getStarSubscriptions"`
 
 ### getStarTransactions
 
@@ -1542,13 +1602,13 @@
 
 > `readonly` **getStickerEmojis**: `"getStickerEmojis"`
 
-### getStickerSet
-
-> `readonly` **getStickerSet**: `"getStickerSet"`
-
 ### getStickers
 
 > `readonly` **getStickers**: `"getStickers"`
+
+### getStickerSet
+
+> `readonly` **getStickerSet**: `"getStickerSet"`
 
 ### getStorageStatistics
 
@@ -1626,10 +1686,6 @@
 
 > `readonly` **getTextEntities**: `"getTextEntities"`
 
-### getThemeParametersJsonString
-
-> `readonly` **getThemeParametersJsonString**: `"getThemeParametersJsonString"`
-
 ### getThemedChatEmojiStatuses
 
 > `readonly` **getThemedChatEmojiStatuses**: `"getThemedChatEmojiStatuses"`
@@ -1637,6 +1693,10 @@
 ### getThemedEmojiStatuses
 
 > `readonly` **getThemedEmojiStatuses**: `"getThemedEmojiStatuses"`
+
+### getThemeParametersJsonString
+
+> `readonly` **getThemeParametersJsonString**: `"getThemeParametersJsonString"`
 
 ### getTimeZones
 
@@ -1854,13 +1914,13 @@
 
 > `readonly` **readChatList**: `"readChatList"`
 
-### readFilePart
-
-> `readonly` **readFilePart**: `"readFilePart"`
-
 ### readdQuickReplyShortcutMessages
 
 > `readonly` **readdQuickReplyShortcutMessages**: `"readdQuickReplyShortcutMessages"`
+
+### readFilePart
+
+> `readonly` **readFilePart**: `"readFilePart"`
 
 ### recognizeSpeech
 
@@ -1926,6 +1986,10 @@
 
 > `readonly` **removeNotificationGroup**: `"removeNotificationGroup"`
 
+### removePendingPaidMessageReactions
+
+> `readonly` **removePendingPaidMessageReactions**: `"removePendingPaidMessageReactions"`
+
 ### removeProxy
 
 > `readonly` **removeProxy**: `"removeProxy"`
@@ -1934,13 +1998,13 @@
 
 > `readonly` **removeRecentHashtag**: `"removeRecentHashtag"`
 
-### removeRecentSticker
-
-> `readonly` **removeRecentSticker**: `"removeRecentSticker"`
-
 ### removeRecentlyFoundChat
 
 > `readonly` **removeRecentlyFoundChat**: `"removeRecentlyFoundChat"`
+
+### removeRecentSticker
+
+> `readonly` **removeRecentSticker**: `"removeRecentSticker"`
 
 ### removeSavedAnimation
 
@@ -1969,6 +2033,10 @@
 ### reorderBotActiveUsernames
 
 > `readonly` **reorderBotActiveUsernames**: `"reorderBotActiveUsernames"`
+
+### reorderBotMediaPreviews
+
+> `readonly` **reorderBotMediaPreviews**: `"reorderBotMediaPreviews"`
 
 ### reorderChatFolders
 
@@ -2090,6 +2158,10 @@
 
 > `readonly` **resetPassword**: `"resetPassword"`
 
+### reuseStarSubscription
+
+> `readonly` **reuseStarSubscription**: `"reuseStarSubscription"`
+
 ### revokeChatInviteLink
 
 > `readonly` **revokeChatInviteLink**: `"revokeChatInviteLink"`
@@ -2202,6 +2274,10 @@
 
 > `readonly` **searchSecretMessages**: `"searchSecretMessages"`
 
+### searchStickers
+
+> `readonly` **searchStickers**: `"searchStickers"`
+
 ### searchStickerSet
 
 > `readonly` **searchStickerSet**: `"searchStickerSet"`
@@ -2209,10 +2285,6 @@
 ### searchStickerSets
 
 > `readonly` **searchStickerSets**: `"searchStickerSets"`
-
-### searchStickers
-
-> `readonly` **searchStickers**: `"searchStickers"`
 
 ### searchStringsByPrefix
 
@@ -2398,6 +2470,10 @@
 
 > `readonly` **setBusinessLocation**: `"setBusinessLocation"`
 
+### setBusinessMessageIsPinned
+
+> `readonly` **setBusinessMessageIsPinned**: `"setBusinessMessageIsPinned"`
+
 ### setBusinessOpeningHours
 
 > `readonly` **setBusinessOpeningHours**: `"setBusinessOpeningHours"`
@@ -2574,6 +2650,10 @@
 
 > `readonly` **setLocation**: `"setLocation"`
 
+### setLoginEmailAddress
+
+> `readonly` **setLoginEmailAddress**: `"setLoginEmailAddress"`
+
 ### setLogStream
 
 > `readonly` **setLogStream**: `"setLogStream"`
@@ -2585,10 +2665,6 @@
 ### setLogVerbosityLevel
 
 > `readonly` **setLogVerbosityLevel**: `"setLogVerbosityLevel"`
-
-### setLoginEmailAddress
-
-> `readonly` **setLoginEmailAddress**: `"setLoginEmailAddress"`
 
 ### setMenuButton
 
@@ -2738,6 +2814,10 @@
 
 > `readonly` **setTdlibParameters**: `"setTdlibParameters"`
 
+### setUsername
+
+> `readonly` **setUsername**: `"setUsername"`
+
 ### setUserPersonalProfilePhoto
 
 > `readonly` **setUserPersonalProfilePhoto**: `"setUserPersonalProfilePhoto"`
@@ -2749,10 +2829,6 @@
 ### setUserSupportInfo
 
 > `readonly` **setUserSupportInfo**: `"setUserSupportInfo"`
-
-### setUsername
-
-> `readonly` **setUsername**: `"setUsername"`
 
 ### setVideoChatDefaultParticipant
 
@@ -2949,6 +3025,10 @@
 ### toggleHasSponsoredMessagesEnabled
 
 > `readonly` **toggleHasSponsoredMessagesEnabled**: `"toggleHasSponsoredMessagesEnabled"`
+
+### togglePaidMessageReactionIsAnonymous
+
+> `readonly` **togglePaidMessageReactionIsAnonymous**: `"togglePaidMessageReactionIsAnonymous"`
 
 ### toggleSavedMessagesTopicIsPinned
 

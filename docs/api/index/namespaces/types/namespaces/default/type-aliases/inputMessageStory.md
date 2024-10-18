@@ -18,16 +18,16 @@ A message with a forwarded story. Stories can't be sent to secret chats. A story
 
 ### story\_id
 
-> **story\_id**: [`int32`](int32-1.md)
+> **story\_id**: [`int32`](int32.md)
 
 Story identifier
 
 ### story\_sender\_chat\_id
 
-> **story\_sender\_chat\_id**: [`int53`](int53-1.md)
+> **story\_sender\_chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat that posted the story
 
 ## Defined in
 
-dist/generated/types.d.ts:30377
+dist/generated/types.d.ts:31251

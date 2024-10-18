@@ -18,4 +18,4 @@ The maximum number of invite links for a chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:41409
+dist/generated/types.d.ts:42803

@@ -6,7 +6,9 @@
 
 # Type Alias: addStickerToSet()
 
-> **addStickerToSet**: (`parameters`) => [`Ok`](Ok.md)
+> **addStickerToSet**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a new sticker to a set
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99912
+dist/generated/types.d.ts:102691

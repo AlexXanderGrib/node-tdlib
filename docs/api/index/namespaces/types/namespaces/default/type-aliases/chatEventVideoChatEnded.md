@@ -18,10 +18,10 @@ A video chat was ended
 
 ### group\_call\_id
 
-> **group\_call\_id**: [`int32`](int32-1.md)
+> **group\_call\_id**: [`int32`](int32.md)
 
 Identifier of the video chat. The video chat can be received through the method getGroupCall
 
 ## Defined in
 
-dist/generated/types.d.ts:40391
+dist/generated/types.d.ts:41785

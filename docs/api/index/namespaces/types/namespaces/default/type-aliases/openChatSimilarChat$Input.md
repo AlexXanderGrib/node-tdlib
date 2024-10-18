@@ -18,16 +18,16 @@ Informs TDLib that a chat was opened from the list of similar chats. The method 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the original chat, which similar chats were requested
 
 ### opened\_chat\_id?
 
-> `readonly` `optional` **opened\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **opened\_chat\_id**: [`int53`](int53.md)
 
 Identifier of the opened chat
 
 ## Defined in
 
-dist/generated/types.d.ts:75329
+dist/generated/types.d.ts:77355

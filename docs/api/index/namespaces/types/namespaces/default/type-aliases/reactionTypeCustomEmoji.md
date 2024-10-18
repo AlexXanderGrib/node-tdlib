@@ -18,10 +18,10 @@ A reaction with a custom emoji
 
 ### custom\_emoji\_id
 
-> **custom\_emoji\_id**: [`int64`](int64-1.md)
+> **custom\_emoji\_id**: [`int64`](int64.md)
 
 Unique identifier of the custom emoji
 
 ## Defined in
 
-dist/generated/types.d.ts:12465
+dist/generated/types.d.ts:13069

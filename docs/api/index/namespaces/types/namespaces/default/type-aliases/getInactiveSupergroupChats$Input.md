@@ -18,4 +18,4 @@ Returns a list of recently inactive supergroups and channels. Can be used when u
 
 ## Defined in
 
-dist/generated/types.d.ts:75699
+dist/generated/types.d.ts:77725

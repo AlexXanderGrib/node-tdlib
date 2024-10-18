@@ -20,16 +20,16 @@ Changes the message auto-delete or self-destruct (for secret chats) time in a ch
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_auto\_delete\_time?
 
-> `readonly` `optional` **message\_auto\_delete\_time**: [`int32`](int32-1.md)
+> `readonly` `optional` **message\_auto\_delete\_time**: [`int32`](int32.md)
 
 New time value, in seconds; unless the chat is secret, it must be from 0 up to 365 * 86400 and be divisible by 86400. If 0, then messages aren't deleted automatically
 
 ## Defined in
 
-dist/generated/types.d.ts:85337
+dist/generated/types.d.ts:87636

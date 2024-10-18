@@ -20,10 +20,10 @@ A forum topic was deleted
 
 ### topic\_info?
 
-> `readonly` `optional` **topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input-1.md)
+> `readonly` `optional` **topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input.md)
 
 Information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40650
+dist/generated/types.d.ts:42044

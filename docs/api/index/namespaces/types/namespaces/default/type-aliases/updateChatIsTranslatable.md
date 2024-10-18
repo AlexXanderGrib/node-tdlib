@@ -18,7 +18,7 @@ Translation of chat messages was enabled or disabled
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ New value of is_translatable
 
 ## Defined in
 
-dist/generated/types.d.ts:54193
+dist/generated/types.d.ts:55809

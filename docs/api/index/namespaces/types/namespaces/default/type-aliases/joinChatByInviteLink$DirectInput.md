@@ -20,4 +20,4 @@ Invite link to use
 
 ## Defined in
 
-dist/generated/types.d.ts:90202
+dist/generated/types.d.ts:92699

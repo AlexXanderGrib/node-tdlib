@@ -18,4 +18,4 @@ The chat contains messages with personal details
 
 ## Defined in
 
-dist/generated/types.d.ts:47221
+dist/generated/types.d.ts:48747

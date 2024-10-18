@@ -18,4 +18,4 @@ A Telegram Passport element containing the user's address
 
 ## Defined in
 
-dist/generated/types.d.ts:23855
+dist/generated/types.d.ts:24615

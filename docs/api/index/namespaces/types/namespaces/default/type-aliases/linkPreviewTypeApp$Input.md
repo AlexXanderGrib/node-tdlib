@@ -26,10 +26,10 @@ Author of the app
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md)
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md)
 
 Photo for the app
 
 ## Defined in
 
-dist/generated/types.d.ts:20933
+dist/generated/types.d.ts:21559

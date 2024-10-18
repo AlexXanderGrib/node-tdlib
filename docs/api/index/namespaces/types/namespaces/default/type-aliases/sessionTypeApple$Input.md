@@ -20,4 +20,4 @@ The session is running on a generic Apple device
 
 ## Defined in
 
-dist/generated/types.d.ts:46483
+dist/generated/types.d.ts:48009

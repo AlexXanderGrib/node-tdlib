@@ -6,7 +6,9 @@
 
 # Type Alias: searchWebApp()
 
-> **searchWebApp**: (`parameters`) => [`FoundWebApp`](FoundWebApp.md)
+> **searchWebApp**: (`parameters`) => [`FoundWebApp`](FoundWebApp-1.md)
+
+Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FoundWebApp`](FoundWebApp.md)
+[`FoundWebApp`](FoundWebApp-1.md)
 
-[FoundWebApp](FoundWebApp.md)
+[FoundWebApp](FoundWebApp-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82729
+dist/generated/types.d.ts:84960

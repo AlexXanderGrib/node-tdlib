@@ -6,7 +6,9 @@
 
 # Type Alias: getKeywordEmojis()
 
-> **getKeywordEmojis**: (`parameters`) => [`Emojis`](Emojis.md)
+> **getKeywordEmojis**: (`parameters`) => [`Emojis`](Emojis-1.md)
+
+Return emojis matching the keyword. Supported only if the file database is enabled. Order of results is unspecified
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Emojis`](Emojis.md)
+[`Emojis`](Emojis-1.md)
 
-[Emojis](Emojis.md)
+[Emojis](Emojis-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93443
+dist/generated/types.d.ts:95940

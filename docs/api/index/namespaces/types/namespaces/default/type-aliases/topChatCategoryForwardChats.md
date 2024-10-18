@@ -18,4 +18,4 @@ A category containing frequently used chats used to forward messages
 
 ## Defined in
 
-dist/generated/types.d.ts:50141
+dist/generated/types.d.ts:51739

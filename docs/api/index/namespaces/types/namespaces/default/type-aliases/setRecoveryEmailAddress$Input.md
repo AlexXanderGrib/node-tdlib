@@ -32,4 +32,4 @@ The 2-step verification password of the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:74045
+dist/generated/types.d.ts:76033

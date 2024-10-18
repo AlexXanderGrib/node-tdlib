@@ -24,16 +24,16 @@ True, if folder tags are enabled
 
 ### chat\_folders
 
-> **chat\_folders**: [`vector`](vector.md)\<[`chatFolderInfo`](chatFolderInfo-1.md)\>
+> **chat\_folders**: [`vector`](vector.md)\<[`chatFolderInfo`](chatFolderInfo.md)\>
 
 The new list of chat folders
 
 ### main\_chat\_list\_position
 
-> **main\_chat\_list\_position**: [`int32`](int32-1.md)
+> **main\_chat\_list\_position**: [`int32`](int32.md)
 
 Position of the main chat list among chat folders, 0-based
 
 ## Defined in
 
-dist/generated/types.d.ts:54363
+dist/generated/types.d.ts:55979

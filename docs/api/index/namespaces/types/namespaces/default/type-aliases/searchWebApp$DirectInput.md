@@ -14,7 +14,7 @@ Returns information about a Web App by its short name. Returns a 404 error if th
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
@@ -26,4 +26,4 @@ Short name of the Web App
 
 ## Defined in
 
-dist/generated/types.d.ts:82711
+dist/generated/types.d.ts:84942

@@ -14,16 +14,16 @@ Returns the last message sent in a chat no later than the specified date
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### date?
 
-> `readonly` `optional` **date**: [`int32`](int32-1.md)
+> `readonly` `optional` **date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) relative to which to search for messages
 
 ## Defined in
 
-dist/generated/types.d.ts:77160
+dist/generated/types.d.ts:79169

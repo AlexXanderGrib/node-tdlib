@@ -6,7 +6,9 @@
 
 # Type Alias: confirmQrCodeAuthentication()
 
-> **confirmQrCodeAuthentication**: (`parameters`) => [`Session`](Session.md)
+> **confirmQrCodeAuthentication**: (`parameters`) => [`Session`](Session-1.md)
+
+Confirms QR code authentication on another device. Returns created session on success
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Session`](Session.md)
+[`Session`](Session-1.md)
 
-[Session](Session.md)
+[Session](Session-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73802
+dist/generated/types.d.ts:75790

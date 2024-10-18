@@ -24,4 +24,4 @@ State of the withdrawal; may be null for refunds from Fragment
 
 ## Defined in
 
-dist/generated/types.d.ts:8415
+dist/generated/types.d.ts:8803

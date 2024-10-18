@@ -20,4 +20,4 @@ The transaction is a transaction with Google Play
 
 ## Defined in
 
-dist/generated/types.d.ts:8409
+dist/generated/types.d.ts:8797

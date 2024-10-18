@@ -6,7 +6,9 @@
 
 # Type Alias: recoverPassword()
 
-> **recoverPassword**: (`parameters`) => [`PasswordState`](PasswordState.md)
+> **recoverPassword**: (`parameters`) => [`PasswordState`](PasswordState-1.md)
+
+Recovers the 2-step verification password using a recovery code sent to an email address that was previously set up
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PasswordState`](PasswordState.md)
+[`PasswordState`](PasswordState-1.md)
 
-[PasswordState](PasswordState.md)
+[PasswordState](PasswordState-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74238
+dist/generated/types.d.ts:76226

@@ -30,4 +30,4 @@ Previous chat description
 
 ## Defined in
 
-dist/generated/types.d.ts:39615
+dist/generated/types.d.ts:40985

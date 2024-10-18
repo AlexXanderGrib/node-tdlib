@@ -20,10 +20,10 @@ Contains a public forward as a message
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 Information about the message
 
 ## Defined in
 
-dist/generated/types.d.ts:33648
+dist/generated/types.d.ts:34926

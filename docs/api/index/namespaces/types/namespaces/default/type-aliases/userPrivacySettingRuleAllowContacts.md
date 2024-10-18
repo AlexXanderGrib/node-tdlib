@@ -18,4 +18,4 @@ A rule to allow all contacts of the user to do something
 
 ## Defined in
 
-dist/generated/types.d.ts:45993
+dist/generated/types.d.ts:47519

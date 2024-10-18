@@ -38,10 +38,10 @@ True, if the video is secret
 
 ### video?
 
-> `readonly` `optional` **video**: [`video$Input`](video$Input-1.md) \| `null`
+> `readonly` `optional` **video**: [`video$Input`](video$Input.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44795
+dist/generated/types.d.ts:46321

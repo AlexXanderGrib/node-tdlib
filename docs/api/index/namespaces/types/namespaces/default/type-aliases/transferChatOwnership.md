@@ -6,7 +6,9 @@
 
 # Type Alias: transferChatOwnership()
 
-> **transferChatOwnership**: (`parameters`) => [`Ok`](Ok.md)
+> **transferChatOwnership**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the owner of a chat; requires owner privileges in the chat. Use the method canTransferOwnership to check whether the ownership can be transferred from the current session. Available only for supergroups and channel chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86604
+dist/generated/types.d.ts:88903

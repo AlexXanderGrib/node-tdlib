@@ -6,7 +6,9 @@
 
 # Type Alias: writeGeneratedFilePart()
 
-> **writeGeneratedFilePart**: (`parameters`) => [`Ok`](Ok.md)
+> **writeGeneratedFilePart**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Writes a part of a generated file. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct write to the destination file
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89071
+dist/generated/types.d.ts:91446

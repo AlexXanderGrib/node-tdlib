@@ -20,4 +20,4 @@ The MIME type of the file
 
 ## Defined in
 
-dist/generated/types.d.ts:81869
+dist/generated/types.d.ts:84062

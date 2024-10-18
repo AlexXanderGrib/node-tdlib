@@ -18,10 +18,10 @@ The list of saved notification sounds was updated. This update may not be sent u
 
 ### notification\_sound\_ids
 
-> **notification\_sound\_ids**: [`vector`](vector.md)\<[`int64`](int64-1.md)\>
+> **notification\_sound\_ids**: [`vector`](vector.md)\<[`int64`](int64.md)\>
 
 The new list of identifiers of saved notification sounds
 
 ## Defined in
 
-dist/generated/types.d.ts:56275
+dist/generated/types.d.ts:57891

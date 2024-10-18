@@ -18,7 +18,7 @@ Starts recording of an active group call. Requires groupCall.can_be_managed grou
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -42,4 +42,4 @@ Pass true to use portrait orientation for video instead of landscape one
 
 ## Defined in
 
-dist/generated/types.d.ts:91365
+dist/generated/types.d.ts:93862

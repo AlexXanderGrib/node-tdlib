@@ -18,4 +18,4 @@ A group containing notifications of type notificationTypeNewMessage and notifica
 
 ## Defined in
 
-dist/generated/types.d.ts:45381
+dist/generated/types.d.ts:46907

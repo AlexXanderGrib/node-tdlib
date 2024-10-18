@@ -18,10 +18,10 @@ Returns the squared received number; for testing only. This is an offline method
 
 ### x?
 
-> `readonly` `optional` **x**: [`int32`](int32-1.md)
+> `readonly` `optional` **x**: [`int32`](int32.md)
 
 Number to square
 
 ## Defined in
 
-dist/generated/types.d.ts:102141
+dist/generated/types.d.ts:105062

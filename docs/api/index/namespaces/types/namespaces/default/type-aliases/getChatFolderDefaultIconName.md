@@ -6,7 +6,9 @@
 
 # Type Alias: getChatFolderDefaultIconName()
 
-> **getChatFolderDefaultIconName**: (`parameters`) => [`ChatFolderIcon`](ChatFolderIcon.md)
+> **getChatFolderDefaultIconName**: (`parameters`) => [`ChatFolderIcon`](ChatFolderIcon-1.md)
+
+Returns default icon name for a folder. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatFolderIcon`](ChatFolderIcon.md)
+[`ChatFolderIcon`](ChatFolderIcon-1.md)
 
-[ChatFolderIcon](ChatFolderIcon.md)
+[ChatFolderIcon](ChatFolderIcon-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84778
+dist/generated/types.d.ts:87077

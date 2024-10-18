@@ -24,4 +24,4 @@ Element type
 
 ## Defined in
 
-dist/generated/types.d.ts:99329
+dist/generated/types.d.ts:102108

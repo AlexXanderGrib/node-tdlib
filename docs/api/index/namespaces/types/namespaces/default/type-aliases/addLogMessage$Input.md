@@ -24,10 +24,10 @@ Text of a message to log
 
 ### verbosity\_level?
 
-> `readonly` `optional` **verbosity\_level**: [`int32`](int32-1.md)
+> `readonly` `optional` **verbosity\_level**: [`int32`](int32.md)
 
 The minimum verbosity level needed for the message to be logged; 0-1023
 
 ## Defined in
 
-dist/generated/types.d.ts:101835
+dist/generated/types.d.ts:104756

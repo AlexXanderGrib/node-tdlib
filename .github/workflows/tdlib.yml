@@ -21,7 +21,7 @@ jobs:
         run: sudo apt-get install -y -q gperf clang-14 libc++-dev libc++abi-dev tar wget
       - name: Install latest CMake
         run: |
-          wget https://github.com/Kitware/CMake/releases/download/v3.25.0/cmake-3.25.0-linux-x86_64.sh 
+          wget https://github.com/Kitware/CMake/releases/download/v3.30.5/cmake-3.30.5-linux-x86_64.sh 
           chmod +x ./cmake-*.sh
           mkdir cmake
           ./cmake-*.sh --prefix=./cmake --skip-license
@@ -151,7 +151,6 @@ jobs:
           name: tdlib-macos-arm64
           path: build/libtdjson.dylib
 
-
   build-windows-x64:
     name: Build TDLib on Windows 64
     runs-on: windows-2022
@@ -192,6 +191,46 @@ jobs:
           name: tdlib-windows-x64
           path: build\Release\tdjson.dll
 
+  build-windows-x86:
+    name: Build TDLib on Windows 32
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: "tdlib/td"
+          ref: ${{ inputs.tdlib }}
+      - name: vcpkg cache
+        uses: actions/cache@v4
+        with:
+          path: '~\AppData\Local\vcpkg\archives'
+          key: vcpkg-${{ github.run_id }}
+          restore-keys: |
+            vcpkg-
+
+      - name: Update
+        run: vcpkg update
+      - name: Install dependencies using vcpkg
+        run: vcpkg install gperf:x86-windows-static openssl:x86-windows-static zlib:x86-windows-static
+
+      - name: CMake version
+        run: cmake --version
+      - name: Build TDLib
+        shell: pwsh
+        run: |
+          mkdir build
+          cd build
+          cmake -A Win32 `
+            -DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake `
+            -DVCPKG_TARGET_TRIPLET=x86-windows-static `
+            -DOPENSSL_USE_STATIC_LIBS=TRUE -DZLIB_USE_STATIC_LIBS=TRUE ..
+          cmake --build . --target tdjson --config Release --parallel 2
+          cd ..
+        # It should be possible to print the dependencies using dumpbin.exe
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tdlib-windows-x86
+          path: build\Release\tdjson.dll
+
   # build-wasm:
   #   name: Build TDLib for Web
   #   runs-on: ubuntu-22.04
@@ -200,7 +239,7 @@ jobs:
   #       run: sudo apt-get install -y -q gperf clang-14 libc++-dev libc++abi-dev tar wget
   #     - name: Install latest CMake
   #       run: |
-  #         wget https://github.com/Kitware/CMake/releases/download/v3.25.0/cmake-3.25.0-linux-x86_64.sh 
+  #         wget https://github.com/Kitware/CMake/releases/download/v3.25.0/cmake-3.25.0-linux-x86_64.sh
   #         chmod +x ./cmake-*.sh
   #         mkdir cmake
   #         ./cmake-*.sh --prefix=./cmake --skip-license
@@ -230,11 +269,10 @@ jobs:
   #         name: tdlib-wasm
   #         path: example/web/tdweb/src/prebuilt/release/*
 
-
   dist:
     name: Bundle artifacts to dist
     runs-on: ubuntu-22.04
-    needs: [build-linux-x64, build-macos-x64, build-windows-x64, build-macos-arm64]
+    needs: [build-linux-x64, build-macos-x64, build-windows-x64, build-windows-x86, build-macos-arm64]
 
     steps:
       - uses: actions/checkout@v4
@@ -277,6 +315,7 @@ jobs:
           mv tdlib-macos-arm64/libtdjson.dylib ./libtdjson-arm64.dylib
           mv tdlib-linux-x64/libtdjson.so ./libtdjson-x64-glibc.so
           mv tdlib-windows-x64/tdjson.dll ./tdjson-x64.dll
+          mv tdlib-windows-x86/tdjson.dll ./tdjson-x32.dll
           mv meta/meta.yml ./
           mv schema/td_api.tl ./
 

@@ -6,7 +6,9 @@
 
 # Type Alias: resetInstalledBackgrounds()
 
-> **resetInstalledBackgrounds**: (`parameters`) => [`Ok`](Ok.md)
+> **resetInstalledBackgrounds**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Resets list of installed backgrounds to its default value
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97309
+dist/generated/types.d.ts:100088

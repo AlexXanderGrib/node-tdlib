@@ -14,7 +14,7 @@ The link is a link to an attachment menu bot to be opened in the specified or a 
 
 - Then, call searchPublicChat with the given bot username, check that the user is a bot and can be added to attachment menu. Then, use getAttachmentMenuBot to receive information about the bot.
 
-- If the bot isn't added to attachment menu, then show a disclaimer about Mini Apps being a third-party apps, ask the user to accept their Terms of service and confirm adding the bot to side and attachment menu.
+- If the bot isn't added to attachment menu, then show a disclaimer about Mini Apps being third-party applications, ask the user to accept their Terms of service and confirm adding the bot to side and attachment menu.
 
 - If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
 
@@ -46,4 +46,4 @@ URL to be passed to openWebApp
 
 ## Defined in
 
-dist/generated/types.d.ts:47394
+dist/generated/types.d.ts:48920

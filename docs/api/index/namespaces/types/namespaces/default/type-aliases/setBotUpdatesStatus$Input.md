@@ -24,10 +24,10 @@ The last error message
 
 ### pending\_update\_count?
 
-> `readonly` `optional` **pending\_update\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **pending\_update\_count**: [`int32`](int32.md)
 
 The number of pending updates
 
 ## Defined in
 
-dist/generated/types.d.ts:99630
+dist/generated/types.d.ts:102409

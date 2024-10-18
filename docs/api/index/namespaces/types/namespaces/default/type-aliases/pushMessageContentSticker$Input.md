@@ -32,10 +32,10 @@ True, if the message is a pinned message with the specified content
 
 ### sticker?
 
-> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input-1.md) \| `null`
+> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44688
+dist/generated/types.d.ts:46214

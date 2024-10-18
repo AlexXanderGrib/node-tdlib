@@ -8,6 +8,8 @@
 
 > **getJsonValue**: (`parameters`) => [`JsonValue`](JsonValue.md)
 
+Converts a JSON-serialized string to corresponding JsonValue object. Can be called synchronously
+
 ## Parameters
 
 • **parameters**: [`getJsonValue$Input`](getJsonValue$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:81996
+dist/generated/types.d.ts:84189

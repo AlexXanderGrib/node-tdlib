@@ -20,10 +20,10 @@ An area pointing to a venue
 
 ### venue?
 
-> `readonly` `optional` **venue**: [`venue$Input`](venue$Input-1.md)
+> `readonly` `optional` **venue**: [`venue$Input`](venue$Input.md)
 
 Information about the venue
 
 ## Defined in
 
-dist/generated/types.d.ts:31916
+dist/generated/types.d.ts:33082

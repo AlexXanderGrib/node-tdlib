@@ -18,7 +18,7 @@ Searches for a specified query in the first name, last name and usernames of the
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,7 +30,7 @@ The type of users to search for; pass null to search among all chat members
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of users to be returned; up to 200
 
@@ -42,4 +42,4 @@ Query to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:86646
+dist/generated/types.d.ts:88945

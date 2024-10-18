@@ -18,16 +18,16 @@ A chat video chat state has changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### video\_chat
 
-> **video\_chat**: [`videoChat`](videoChat-1.md)
+> **video\_chat**: [`videoChat`](videoChat.md)
 
 New value of video_chat
 
 ## Defined in
 
-dist/generated/types.d.ts:54091
+dist/generated/types.d.ts:55707

@@ -6,7 +6,11 @@
 
 # Type Alias: editMessageLiveLocation()
 
-> **editMessageLiveLocation**: (`parameters`) => [`Message`](Message.md)
+> **editMessageLiveLocation**: (`parameters`) => [`Message`](Message-1.md)
+
+Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
+
+- Returns the edited message after the edit is completed on the server side
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78926
+dist/generated/types.d.ts:80929

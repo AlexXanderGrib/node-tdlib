@@ -38,4 +38,4 @@ An HTTP URL, opening the anchor
 
 ## Defined in
 
-dist/generated/types.d.ts:19294
+dist/generated/types.d.ts:19920

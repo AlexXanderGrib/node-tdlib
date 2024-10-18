@@ -20,4 +20,4 @@ Profile photo animation on message and chat screens
 
 ## Defined in
 
-dist/generated/types.d.ts:41683
+dist/generated/types.d.ts:43077

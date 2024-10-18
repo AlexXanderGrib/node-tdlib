@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageAddedReactions()
 
-> **getMessageAddedReactions**: (`parameters`) => [`AddedReactions`](AddedReactions.md)
+> **getMessageAddedReactions**: (`parameters`) => [`AddedReactions`](AddedReactions-1.md)
+
+Returns reactions added for a message, along with their sender
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AddedReactions`](AddedReactions.md)
+[`AddedReactions`](AddedReactions-1.md)
 
-[AddedReactions](AddedReactions.md)
+[AddedReactions](AddedReactions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81500
+dist/generated/types.d.ts:83693

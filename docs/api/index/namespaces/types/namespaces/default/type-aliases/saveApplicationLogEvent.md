@@ -6,7 +6,9 @@
 
 # Type Alias: saveApplicationLogEvent()
 
-> **saveApplicationLogEvent**: (`parameters`) => [`Ok`](Ok.md)
+> **saveApplicationLogEvent**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Saves application log event on the server. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101365
+dist/generated/types.d.ts:104286

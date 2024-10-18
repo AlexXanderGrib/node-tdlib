@@ -14,10 +14,10 @@ Converts a themeParameters object to corresponding JSON-serialized string. Can b
 
 ### theme?
 
-> `readonly` `optional` **theme**: [`themeParameters$Input`](themeParameters$Input-1.md)
+> `readonly` `optional` **theme**: [`themeParameters$Input`](themeParameters$Input.md)
 
 Theme parameters to convert to JSON
 
 ## Defined in
 
-dist/generated/types.d.ts:82039
+dist/generated/types.d.ts:84232

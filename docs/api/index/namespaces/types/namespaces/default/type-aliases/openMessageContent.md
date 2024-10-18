@@ -6,7 +6,11 @@
 
 # Type Alias: openMessageContent()
 
-> **openMessageContent**: (`parameters`) => [`Ok`](Ok.md)
+> **openMessageContent**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message).
+
+- An updateMessageContentOpened update will be generated if something has changed
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83777
+dist/generated/types.d.ts:86076

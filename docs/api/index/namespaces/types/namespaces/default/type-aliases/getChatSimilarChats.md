@@ -6,7 +6,9 @@
 
 # Type Alias: getChatSimilarChats()
 
-> **getChatSimilarChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getChatSimilarChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns a list of chats similar to the given chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75287
+dist/generated/types.d.ts:77313

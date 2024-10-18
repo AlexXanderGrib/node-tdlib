@@ -6,7 +6,9 @@
 
 # Type Alias: searchUserByToken()
 
-> **searchUserByToken**: (`parameters`) => [`User`](User.md)
+> **searchUserByToken**: (`parameters`) => [`User`](User-1.md)
+
+Searches a user by a token from the user's link
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`User`](User.md)
+[`User`](User-1.md)
 
-[User](User.md)
+[User](User-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94909
+dist/generated/types.d.ts:97406

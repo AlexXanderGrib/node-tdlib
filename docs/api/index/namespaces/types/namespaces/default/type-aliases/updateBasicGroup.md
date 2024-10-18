@@ -18,10 +18,10 @@ Some data of a basic group has changed. This update is guaranteed to come before
 
 ### basic\_group
 
-> **basic\_group**: [`basicGroup`](basicGroup-1.md)
+> **basic\_group**: [`basicGroup`](basicGroup.md)
 
 New data about the group
 
 ## Defined in
 
-dist/generated/types.d.ts:55043
+dist/generated/types.d.ts:56659

@@ -38,4 +38,4 @@ Poll question
 
 ## Defined in
 
-dist/generated/types.d.ts:44562
+dist/generated/types.d.ts:46088

@@ -20,4 +20,4 @@ Send away messages always
 
 ## Defined in
 
-dist/generated/types.d.ts:6511
+dist/generated/types.d.ts:6577

@@ -18,4 +18,4 @@ The mask is placed relatively to the forehead
 
 ## Defined in
 
-dist/generated/types.d.ts:4261
+dist/generated/types.d.ts:4307

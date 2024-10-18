@@ -6,7 +6,9 @@
 
 # Type Alias: toggleGroupCallIsMyVideoEnabled()
 
-> **toggleGroupCallIsMyVideoEnabled**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleGroupCallIsMyVideoEnabled**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether current user's video is enabled
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91523
+dist/generated/types.d.ts:94020

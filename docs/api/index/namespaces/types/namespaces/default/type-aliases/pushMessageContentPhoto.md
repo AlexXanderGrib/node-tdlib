@@ -36,10 +36,10 @@ True, if the photo is secret
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md) \| `null`
+> **photo**: [`photo`](photo.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44485
+dist/generated/types.d.ts:46011

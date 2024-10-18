@@ -18,4 +18,4 @@ The message is from chat, message thread or forum topic history preview
 
 ## Defined in
 
-dist/generated/types.d.ts:14253
+dist/generated/types.d.ts:14845

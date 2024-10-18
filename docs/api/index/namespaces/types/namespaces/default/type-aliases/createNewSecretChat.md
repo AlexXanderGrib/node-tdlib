@@ -6,7 +6,9 @@
 
 # Type Alias: createNewSecretChat()
 
-> **createNewSecretChat**: (`parameters`) => [`Chat`](Chat.md)
+> **createNewSecretChat**: (`parameters`) => [`Chat`](Chat-1.md)
+
+Creates a new secret chat. Returns the newly created chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chat`](Chat.md)
+[`Chat`](Chat-1.md)
 
-[Chat](Chat.md)
+[Chat](Chat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84385
+dist/generated/types.d.ts:86684

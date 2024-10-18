@@ -20,4 +20,4 @@ The currently opened chat needs to be kept
 
 ## Defined in
 
-dist/generated/types.d.ts:47257
+dist/generated/types.d.ts:48783

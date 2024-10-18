@@ -6,7 +6,9 @@
 
 # Type Alias: addLogMessage()
 
-> **addLogMessage**: (`parameters`) => [`Ok`](Ok.md)
+> **addLogMessage**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a message to TDLib internal log. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101869
+dist/generated/types.d.ts:104790

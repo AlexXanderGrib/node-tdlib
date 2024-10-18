@@ -18,4 +18,4 @@ Returns the current state of 2-step verification
 
 ## Defined in
 
-dist/generated/types.d.ts:73851
+dist/generated/types.d.ts:75839

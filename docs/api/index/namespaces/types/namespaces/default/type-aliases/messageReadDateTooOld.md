@@ -18,4 +18,4 @@ The message is too old to get read date
 
 ## Defined in
 
-dist/generated/types.d.ts:12141
+dist/generated/types.d.ts:12745

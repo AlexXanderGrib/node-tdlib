@@ -6,7 +6,9 @@
 
 # Type Alias: toggleGroupCallParticipantIsHandRaised()
 
-> **toggleGroupCallParticipantIsHandRaised**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleGroupCallParticipantIsHandRaised**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether a group call participant hand is rased
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91715
+dist/generated/types.d.ts:94212

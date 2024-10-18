@@ -6,7 +6,9 @@
 
 # Type Alias: getChatScheduledMessages()
 
-> **getChatScheduledMessages**: (`parameters`) => [`Messages`](Messages.md)
+> **getChatScheduledMessages**: (`parameters`) => [`Messages`](Messages-1.md)
+
+Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Messages`](Messages.md)
+[`Messages`](Messages-1.md)
 
-[Messages](Messages.md)
+[Messages](Messages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77464
+dist/generated/types.d.ts:79473

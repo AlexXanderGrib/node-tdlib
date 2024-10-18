@@ -20,4 +20,4 @@ A self-destructed photo message
 
 ## Defined in
 
-dist/generated/types.d.ts:26251
+dist/generated/types.d.ts:27011

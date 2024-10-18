@@ -20,4 +20,4 @@ A category containing frequently used chats with inline bots sorted by their usa
 
 ## Defined in
 
-dist/generated/types.d.ts:50121
+dist/generated/types.d.ts:51705

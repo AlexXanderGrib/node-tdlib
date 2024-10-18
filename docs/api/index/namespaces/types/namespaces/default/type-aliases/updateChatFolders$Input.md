@@ -26,16 +26,16 @@ True, if folder tags are enabled
 
 ### chat\_folders?
 
-> `readonly` `optional` **chat\_folders**: [`vector$Input`](vector$Input.md)\<[`chatFolderInfo$Input`](chatFolderInfo$Input-1.md)\>
+> `readonly` `optional` **chat\_folders**: [`vector$Input`](vector$Input.md)\<[`chatFolderInfo$Input`](chatFolderInfo$Input.md)\>
 
 The new list of chat folders
 
 ### main\_chat\_list\_position?
 
-> `readonly` `optional` **main\_chat\_list\_position**: [`int32`](int32-1.md)
+> `readonly` `optional` **main\_chat\_list\_position**: [`int32`](int32.md)
 
 Position of the main chat list among chat folders, 0-based
 
 ## Defined in
 
-dist/generated/types.d.ts:54386
+dist/generated/types.d.ts:56002

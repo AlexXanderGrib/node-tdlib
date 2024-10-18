@@ -6,7 +6,9 @@
 
 # Type Alias: editChatFolder()
 
-> **editChatFolder**: (`parameters`) => [`ChatFolderInfo`](ChatFolderInfo.md)
+> **editChatFolder**: (`parameters`) => [`ChatFolderInfo`](ChatFolderInfo-1.md)
+
+Edits existing chat folder. Returns information about the edited chat folder
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatFolderInfo`](ChatFolderInfo.md)
+[`ChatFolderInfo`](ChatFolderInfo-1.md)
 
-[ChatFolderInfo](ChatFolderInfo.md)
+[ChatFolderInfo](ChatFolderInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84573
+dist/generated/types.d.ts:86872

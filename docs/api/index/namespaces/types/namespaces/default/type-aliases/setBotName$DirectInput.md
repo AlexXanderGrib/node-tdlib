@@ -14,7 +14,7 @@ Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
@@ -32,4 +32,4 @@ New bot's name on the specified language; 0-64 characters; must be non-empty if 
 
 ## Defined in
 
-dist/generated/types.d.ts:95284
+dist/generated/types.d.ts:98053

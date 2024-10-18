@@ -18,10 +18,10 @@ Parses Markdown entities in a human-friendly format, ignoring markup errors. Can
 
 ### text?
 
-> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input.md)
 
 The text to parse. For example, "__italic__ ~~strikethrough~~ ||spoiler|| **bold** `code` ```pre``` __[italic__ text_url](telegram.org) __italic**bold italic__bold**"
 
 ## Defined in
 
-dist/generated/types.d.ts:81746
+dist/generated/types.d.ts:83939

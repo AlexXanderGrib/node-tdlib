@@ -8,6 +8,8 @@
 
 > **reportChatSponsoredMessage**: (`parameters`) => [`ReportChatSponsoredMessageResult`](ReportChatSponsoredMessageResult.md)
 
+Reports a sponsored message to Telegram moderators
+
 ## Parameters
 
 • **parameters**: [`reportChatSponsoredMessage$Input`](reportChatSponsoredMessage$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:77578
+dist/generated/types.d.ts:79587

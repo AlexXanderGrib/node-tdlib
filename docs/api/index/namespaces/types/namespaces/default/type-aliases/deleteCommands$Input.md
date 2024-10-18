@@ -30,4 +30,4 @@ The scope to which the commands are relevant; pass null to delete commands in th
 
 ## Defined in
 
-dist/generated/types.d.ts:94961
+dist/generated/types.d.ts:97458

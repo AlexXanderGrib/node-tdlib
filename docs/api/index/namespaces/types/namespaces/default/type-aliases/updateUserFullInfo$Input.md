@@ -20,16 +20,16 @@ Some data in userFullInfo has been changed
 
 ### user\_full\_info?
 
-> `readonly` `optional` **user\_full\_info**: [`userFullInfo$Input`](userFullInfo$Input-1.md)
+> `readonly` `optional` **user\_full\_info**: [`userFullInfo$Input`](userFullInfo$Input.md)
 
 New full information about the user
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:55133
+dist/generated/types.d.ts:56749

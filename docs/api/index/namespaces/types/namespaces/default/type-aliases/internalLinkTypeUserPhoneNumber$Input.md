@@ -12,7 +12,7 @@ Version of [internalLinkTypeUserPhoneNumber](internalLinkTypeUserPhoneNumber.md)
 
 The link is a link to a user by its phone number. Call searchUserByPhoneNumber with the given phone number to process the link.
 
-- If the user is found, then call createPrivateChat and open the chat. If draft text isn't empty, then put the draft text in the input field
+- If the user is found, then call createPrivateChat and open user's profile information screen or the chat itself. If draft text isn't empty, then put the draft text in the input field
 
 ## Type declaration
 
@@ -26,6 +26,12 @@ The link is a link to a user by its phone number. Call searchUserByPhoneNumber w
 
 Draft text for message to send in the chat
 
+### open\_profile?
+
+> `readonly` `optional` **open\_profile**: [`Bool$Input`](Bool$Input.md)
+
+True, if user's profile information screen must be opened; otherwise, the chat itself must be opened
+
 ### phone\_number?
 
 > `readonly` `optional` **phone\_number**: `string`
@@ -34,4 +40,4 @@ Phone number of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:48551
+dist/generated/types.d.ts:50130

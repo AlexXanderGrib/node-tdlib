@@ -20,10 +20,10 @@ New call was created or information about a call was updated
 
 ### call?
 
-> `readonly` `optional` **call**: [`call$Input`](call$Input-1.md)
+> `readonly` `optional` **call**: [`call$Input`](call$Input.md)
 
 New data about a call
 
 ## Defined in
 
-dist/generated/types.d.ts:55584
+dist/generated/types.d.ts:57200

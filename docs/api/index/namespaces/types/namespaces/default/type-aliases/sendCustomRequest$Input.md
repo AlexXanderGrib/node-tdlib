@@ -30,4 +30,4 @@ JSON-serialized method parameters
 
 ## Defined in
 
-dist/generated/types.d.ts:101044
+dist/generated/types.d.ts:103965

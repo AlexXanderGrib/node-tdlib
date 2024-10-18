@@ -6,7 +6,9 @@
 
 # Type Alias: getGroupCallStreams()
 
-> **getGroupCallStreams**: (`parameters`) => [`GroupCallStreams`](GroupCallStreams.md)
+> **getGroupCallStreams**: (`parameters`) => [`GroupCallStreams`](GroupCallStreams-1.md)
+
+Returns information about available group call streams
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`GroupCallStreams`](GroupCallStreams.md)
+[`GroupCallStreams`](GroupCallStreams-1.md)
 
-[GroupCallStreams](GroupCallStreams.md)
+[GroupCallStreams](GroupCallStreams-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91837
+dist/generated/types.d.ts:94334

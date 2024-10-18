@@ -20,4 +20,4 @@ The chat is public, because it is a location-based supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:16937
+dist/generated/types.d.ts:17529

@@ -6,7 +6,9 @@
 
 # Type Alias: editCustomLanguagePackInfo()
 
-> **editCustomLanguagePackInfo**: (`parameters`) => [`Ok`](Ok.md)
+> **editCustomLanguagePackInfo**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Edits information about a custom local language pack in the current localization target. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97531
+dist/generated/types.d.ts:100310

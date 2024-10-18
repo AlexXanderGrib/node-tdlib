@@ -18,4 +18,4 @@ Returns all found messages, no filter is applied
 
 ## Defined in
 
-dist/generated/types.d.ts:30465
+dist/generated/types.d.ts:31597

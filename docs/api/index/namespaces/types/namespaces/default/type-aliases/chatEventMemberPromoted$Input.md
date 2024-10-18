@@ -32,10 +32,10 @@ Previous status of the chat member
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Affected chat member user identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:39482
+dist/generated/types.d.ts:40852

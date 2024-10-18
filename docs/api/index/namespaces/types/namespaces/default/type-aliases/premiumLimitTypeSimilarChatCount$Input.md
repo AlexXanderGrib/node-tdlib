@@ -20,4 +20,4 @@ The maximum number of received similar chats
 
 ## Defined in
 
-dist/generated/types.d.ts:41515
+dist/generated/types.d.ts:42909

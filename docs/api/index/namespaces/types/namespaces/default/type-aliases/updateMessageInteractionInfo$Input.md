@@ -20,22 +20,22 @@ The information about interactions with a message has changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### interaction\_info?
 
-> `readonly` `optional` **interaction\_info**: [`messageInteractionInfo$Input`](messageInteractionInfo$Input-1.md) \| `null`
+> `readonly` `optional` **interaction\_info**: [`messageInteractionInfo$Input`](messageInteractionInfo$Input.md) \| `null`
 
 New information about interactions with the message; may be null
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52960
+dist/generated/types.d.ts:54576

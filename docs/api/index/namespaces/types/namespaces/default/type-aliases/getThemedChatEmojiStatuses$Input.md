@@ -18,4 +18,4 @@ Returns up to 8 emoji statuses, which must be shown in the emoji status list for
 
 ## Defined in
 
-dist/generated/types.d.ts:88706
+dist/generated/types.d.ts:91081

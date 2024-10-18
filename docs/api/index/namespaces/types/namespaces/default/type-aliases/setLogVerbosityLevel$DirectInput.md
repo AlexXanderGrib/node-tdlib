@@ -14,7 +14,7 @@ Sets the verbosity level of the internal logging of TDLib. Can be called synchro
 
 ### new\_verbosity\_level?
 
-> `readonly` `optional` **new\_verbosity\_level**: [`int32`](int32-1.md)
+> `readonly` `optional` **new\_verbosity\_level**: [`int32`](int32.md)
 
 New value of the verbosity level for logging. Value 0 corresponds to fatal errors, value 1 corresponds to errors, value 2 corresponds to warnings and debug warnings,
 
@@ -22,4 +22,4 @@ New value of the verbosity level for logging. Value 0 corresponds to fatal error
 
 ## Defined in
 
-dist/generated/types.d.ts:101716
+dist/generated/types.d.ts:104637

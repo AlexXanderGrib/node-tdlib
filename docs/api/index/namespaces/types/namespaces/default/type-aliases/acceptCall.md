@@ -6,7 +6,9 @@
 
 # Type Alias: acceptCall()
 
-> **acceptCall**: (`parameters`) => [`Ok`](Ok.md)
+> **acceptCall**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Accepts an incoming call
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90465
+dist/generated/types.d.ts:92962

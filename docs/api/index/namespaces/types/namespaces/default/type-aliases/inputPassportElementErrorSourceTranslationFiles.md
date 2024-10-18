@@ -18,10 +18,10 @@ The translation of the document contains an error. The error is considered resol
 
 ### file\_hashes
 
-> **file\_hashes**: [`vector`](vector.md)\<[`bytes`](bytes-1.md)\>
+> **file\_hashes**: [`vector`](vector.md)\<[`bytes`](bytes.md)\>
 
 Current hashes of all files with the translation
 
 ## Defined in
 
-dist/generated/types.d.ts:25647
+dist/generated/types.d.ts:26407

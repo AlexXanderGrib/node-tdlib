@@ -6,7 +6,9 @@
 
 # Type Alias: toggleBotIsAddedToAttachmentMenu()
 
-> **toggleBotIsAddedToAttachmentMenu**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleBotIsAddedToAttachmentMenu**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds or removes a bot to attachment and side menu. Bot can be added to the menu, only if userTypeBot.can_be_added_to_attachment_menu == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88634
+dist/generated/types.d.ts:91009

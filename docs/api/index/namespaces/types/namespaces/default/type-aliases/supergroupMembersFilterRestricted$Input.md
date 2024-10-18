@@ -26,4 +26,4 @@ Query to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:10384
+dist/generated/types.d.ts:10884

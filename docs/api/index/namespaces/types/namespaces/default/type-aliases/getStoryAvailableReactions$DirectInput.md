@@ -14,10 +14,10 @@ Returns reactions, which can be chosen for a story
 
 ### row\_size?
 
-> `readonly` `optional` **row\_size**: [`int32`](int32-1.md)
+> `readonly` `optional` **row\_size**: [`int32`](int32.md)
 
 Number of reaction per row, 5-25
 
 ## Defined in
 
-dist/generated/types.d.ts:87875
+dist/generated/types.d.ts:90250

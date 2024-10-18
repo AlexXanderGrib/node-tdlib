@@ -24,4 +24,4 @@ If non-empty, name of a new theme, set for the chat. Otherwise, chat theme was r
 
 ## Defined in
 
-dist/generated/types.d.ts:27201
+dist/generated/types.d.ts:27961

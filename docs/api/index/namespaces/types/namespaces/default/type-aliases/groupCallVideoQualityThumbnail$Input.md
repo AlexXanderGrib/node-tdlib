@@ -20,4 +20,4 @@ The worst available video quality
 
 ## Defined in
 
-dist/generated/types.d.ts:35065
+dist/generated/types.d.ts:36435

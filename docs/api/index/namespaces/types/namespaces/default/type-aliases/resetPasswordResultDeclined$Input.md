@@ -20,10 +20,10 @@ The password reset request was declined
 
 ### retry\_date?
 
-> `readonly` `optional` **retry\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **retry\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the password reset can be retried
 
 ## Defined in
 
-dist/generated/types.d.ts:44048
+dist/generated/types.d.ts:45574

@@ -24,10 +24,10 @@ The new value of has_aggressive_anti_spam_enabled
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 The identifier of the supergroup, which isn't a broadcast group
 
 ## Defined in
 
-dist/generated/types.d.ts:96401
+dist/generated/types.d.ts:99180

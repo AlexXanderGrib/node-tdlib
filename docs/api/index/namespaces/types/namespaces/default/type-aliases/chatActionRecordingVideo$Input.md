@@ -20,4 +20,4 @@ The user is recording a video
 
 ## Defined in
 
-dist/generated/types.d.ts:30725
+dist/generated/types.d.ts:31857

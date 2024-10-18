@@ -24,10 +24,10 @@ New value of join_to_send_messages
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup that isn't a broadcast group
 
 ## Defined in
 
-dist/generated/types.d.ts:96211
+dist/generated/types.d.ts:98990

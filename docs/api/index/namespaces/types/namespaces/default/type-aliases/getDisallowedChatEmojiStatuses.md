@@ -6,7 +6,9 @@
 
 # Type Alias: getDisallowedChatEmojiStatuses()
 
-> **getDisallowedChatEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses.md)
+> **getDisallowedChatEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses-1.md)
+
+Returns the list of emoji statuses, which can't be used as chat emoji status, even they are from a sticker set with is_allowed_as_chat_emoji_status == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`EmojiStatuses`](EmojiStatuses.md)
+[`EmojiStatuses`](EmojiStatuses-1.md)
 
-[EmojiStatuses](EmojiStatuses.md)
+[EmojiStatuses](EmojiStatuses-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88753
+dist/generated/types.d.ts:91128

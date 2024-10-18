@@ -18,16 +18,16 @@ The current user shared a chat, which was requested by the bot
 
 ### button\_id
 
-> **button\_id**: [`int32`](int32-1.md)
+> **button\_id**: [`int32`](int32.md)
 
 Identifier of the keyboard button with the request
 
 ### chat
 
-> **chat**: [`sharedChat`](sharedChat-1.md)
+> **chat**: [`sharedChat`](sharedChat.md)
 
 The shared chat
 
 ## Defined in
 
-dist/generated/types.d.ts:28245
+dist/generated/types.d.ts:29119

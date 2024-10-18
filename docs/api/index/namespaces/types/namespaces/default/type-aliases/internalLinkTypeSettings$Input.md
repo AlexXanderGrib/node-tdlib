@@ -20,4 +20,4 @@ The link is a link to application settings
 
 ## Defined in
 
-dist/generated/types.d.ts:48319
+dist/generated/types.d.ts:49949

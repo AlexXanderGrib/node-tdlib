@@ -6,7 +6,9 @@
 
 # Type Alias: searchBackground()
 
-> **searchBackground**: (`parameters`) => [`Background`](Background.md)
+> **searchBackground**: (`parameters`) => [`Background`](Background-1.md)
+
+Searches for a background by its name
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Background`](Background.md)
+[`Background`](Background-1.md)
 
-[Background](Background.md)
+[Background](Background-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97160
+dist/generated/types.d.ts:99939

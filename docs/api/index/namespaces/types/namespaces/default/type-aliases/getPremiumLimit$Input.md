@@ -24,4 +24,4 @@ Type of the limit
 
 ## Defined in
 
-dist/generated/types.d.ts:100432
+dist/generated/types.d.ts:103211

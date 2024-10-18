@@ -18,10 +18,10 @@ Contains a public repost to a story
 
 ### story
 
-> **story**: [`story`](story-1.md)
+> **story**: [`story`](story.md)
 
 Information about the story
 
 ## Defined in
 
-dist/generated/types.d.ts:33659
+dist/generated/types.d.ts:34937

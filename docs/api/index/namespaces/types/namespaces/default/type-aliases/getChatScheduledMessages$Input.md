@@ -8,7 +8,7 @@
 
 > **getChatScheduledMessages$Input**: `object`
 
-Returns all scheduled messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
+Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
 
 ## Type declaration
 
@@ -18,10 +18,10 @@ Returns all scheduled messages in a chat. The messages are returned in a reverse
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:77440
+dist/generated/types.d.ts:79449

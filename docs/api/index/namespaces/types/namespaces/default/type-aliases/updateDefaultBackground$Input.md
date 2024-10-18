@@ -20,7 +20,7 @@ The default background has changed
 
 ### background?
 
-> `readonly` `optional` **background**: [`background$Input`](background$Input-1.md) \| `null`
+> `readonly` `optional` **background**: [`background$Input`](background$Input.md) \| `null`
 
 The new default background; may be null
 
@@ -32,4 +32,4 @@ True, if default background for dark theme has changed
 
 ## Defined in
 
-dist/generated/types.d.ts:56317
+dist/generated/types.d.ts:57933

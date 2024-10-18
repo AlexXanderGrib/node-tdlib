@@ -6,7 +6,9 @@
 
 # Type Alias: viewPremiumFeature()
 
-> **viewPremiumFeature**: (`parameters`) => [`Ok`](Ok.md)
+> **viewPremiumFeature**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs TDLib that the user viewed detailed information about a Premium feature on the Premium features screen
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100529
+dist/generated/types.d.ts:103308

@@ -20,11 +20,11 @@ The message failed to be sent
 
 > **can\_retry**: [`Bool`](Bool.md)
 
-True, if the message can be re-sent
+True, if the message can be re-sent using resendMessages or readdQuickReplyShortcutMessages
 
 ### error
 
-> **error**: [`error`](error-1.md)
+> **error**: [`error`](error.md)
 
 The cause of the message sending failure
 
@@ -48,10 +48,10 @@ True, if the message can be re-sent only if the message to be replied is removed
 
 ### retry\_after
 
-> **retry\_after**: [`double`](double-1.md)
+> **retry\_after**: [`double`](double.md)
 
 Time left before the message can be re-sent, in seconds. No update is sent when this field changes
 
 ## Defined in
 
-dist/generated/types.d.ts:12983
+dist/generated/types.d.ts:13685

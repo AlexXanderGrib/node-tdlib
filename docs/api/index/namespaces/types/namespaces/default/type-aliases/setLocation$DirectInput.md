@@ -14,10 +14,10 @@ Changes the location of the current user. Needs to be called if getOption("is_lo
 
 ### location?
 
-> `readonly` `optional` **location**: [`location$Input`](location$Input-1.md)
+> `readonly` `optional` **location**: [`location$Input`](location$Input.md)
 
 The new location of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:94245
+dist/generated/types.d.ts:96742

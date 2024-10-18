@@ -20,10 +20,10 @@ The chat was boosted by the sender of the message
 
 ### boost\_count?
 
-> `readonly` `optional` **boost\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **boost\_count**: [`int32`](int32.md)
 
 Number of times the chat was boosted
 
 ## Defined in
 
-dist/generated/types.d.ts:27272
+dist/generated/types.d.ts:28032

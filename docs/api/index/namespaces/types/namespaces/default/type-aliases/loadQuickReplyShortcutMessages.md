@@ -6,7 +6,9 @@
 
 # Type Alias: loadQuickReplyShortcutMessages()
 
-> **loadQuickReplyShortcutMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **loadQuickReplyShortcutMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80285
+dist/generated/types.d.ts:82334

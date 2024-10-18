@@ -6,7 +6,9 @@
 
 # Type Alias: getSuitablePersonalChats()
 
-> **getSuitablePersonalChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getSuitablePersonalChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns a list of channel chats, which can be used as a personal chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75729
+dist/generated/types.d.ts:77755

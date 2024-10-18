@@ -22,4 +22,4 @@ Identifier of the language pack to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:97588
+dist/generated/types.d.ts:100367

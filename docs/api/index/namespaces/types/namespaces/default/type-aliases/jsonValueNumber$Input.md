@@ -20,10 +20,10 @@ Represents a numeric JSON value
 
 ### value?
 
-> `readonly` `optional` **value**: [`double`](double-1.md)
+> `readonly` `optional` **value**: [`double`](double.md)
 
 The value
 
 ## Defined in
 
-dist/generated/types.d.ts:45810
+dist/generated/types.d.ts:47336

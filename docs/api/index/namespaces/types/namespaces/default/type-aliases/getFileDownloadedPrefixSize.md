@@ -6,7 +6,9 @@
 
 # Type Alias: getFileDownloadedPrefixSize()
 
-> **getFileDownloadedPrefixSize**: (`parameters`) => [`FileDownloadedPrefixSize`](FileDownloadedPrefixSize.md)
+> **getFileDownloadedPrefixSize**: (`parameters`) => [`FileDownloadedPrefixSize`](FileDownloadedPrefixSize-1.md)
+
+Returns file downloaded prefix size from a given offset, in bytes
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FileDownloadedPrefixSize`](FileDownloadedPrefixSize.md)
+[`FileDownloadedPrefixSize`](FileDownloadedPrefixSize-1.md)
 
-[FileDownloadedPrefixSize](FileDownloadedPrefixSize.md)
+[FileDownloadedPrefixSize](FileDownloadedPrefixSize-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88859
+dist/generated/types.d.ts:91234

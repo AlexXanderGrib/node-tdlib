@@ -18,16 +18,16 @@ The message auto-delete or self-destruct timer setting for a chat was changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_auto\_delete\_time
 
-> **message\_auto\_delete\_time**: [`int32`](int32-1.md)
+> **message\_auto\_delete\_time**: [`int32`](int32.md)
 
 New value of message_auto_delete_time
 
 ## Defined in
 
-dist/generated/types.d.ts:53819
+dist/generated/types.d.ts:55435

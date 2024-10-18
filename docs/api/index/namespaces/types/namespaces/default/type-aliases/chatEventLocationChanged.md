@@ -18,16 +18,16 @@ The supergroup location was changed
 
 ### new\_location
 
-> **new\_location**: [`chatLocation`](chatLocation-1.md) \| `null`
+> **new\_location**: [`chatLocation`](chatLocation.md) \| `null`
 
 New location; may be null
 
 ### old\_location
 
-> **old\_location**: [`chatLocation`](chatLocation-1.md) \| `null`
+> **old\_location**: [`chatLocation`](chatLocation.md) \| `null`
 
 Previous location; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:39717
+dist/generated/types.d.ts:41087

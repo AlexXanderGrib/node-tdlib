@@ -20,4 +20,4 @@ Pass true to order returned backgrounds for a dark theme
 
 ## Defined in
 
-dist/generated/types.d.ts:97251
+dist/generated/types.d.ts:100030

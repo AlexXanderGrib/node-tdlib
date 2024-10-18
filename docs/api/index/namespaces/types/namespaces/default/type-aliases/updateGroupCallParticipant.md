@@ -18,16 +18,16 @@ Information about a group call participant was changed. The updates are sent onl
 
 ### group\_call\_id
 
-> **group\_call\_id**: [`int32`](int32-1.md)
+> **group\_call\_id**: [`int32`](int32.md)
 
 Identifier of group call
 
 ### participant
 
-> **participant**: [`groupCallParticipant`](groupCallParticipant-1.md)
+> **participant**: [`groupCallParticipant`](groupCallParticipant.md)
 
 New data about a participant
 
 ## Defined in
 
-dist/generated/types.d.ts:55619
+dist/generated/types.d.ts:57235

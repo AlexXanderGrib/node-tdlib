@@ -18,10 +18,10 @@ Removes background from the list of installed backgrounds
 
 ### background\_id?
 
-> `readonly` `optional` **background\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **background\_id**: [`int64$Input`](int64$Input.md)
 
 The background identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:97268
+dist/generated/types.d.ts:100047

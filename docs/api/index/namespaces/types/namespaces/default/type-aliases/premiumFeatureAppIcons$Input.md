@@ -20,4 +20,4 @@ Allowed to set a premium application icons
 
 ## Defined in
 
-dist/generated/types.d.ts:41711
+dist/generated/types.d.ts:43105

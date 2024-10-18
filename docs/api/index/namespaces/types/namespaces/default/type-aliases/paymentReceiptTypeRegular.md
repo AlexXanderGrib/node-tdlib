@@ -24,34 +24,34 @@ Title of the saved credentials chosen by the buyer
 
 ### invoice
 
-> **invoice**: [`invoice`](invoice-1.md)
+> **invoice**: [`invoice`](invoice.md)
 
 Information about the invoice
 
 ### order\_info
 
-> **order\_info**: [`orderInfo`](orderInfo-1.md) \| `null`
+> **order\_info**: [`orderInfo`](orderInfo.md) \| `null`
 
 Order information; may be null
 
 ### payment\_provider\_user\_id
 
-> **payment\_provider\_user\_id**: [`int53`](int53-1.md)
+> **payment\_provider\_user\_id**: [`int53`](int53.md)
 
 User identifier of the payment provider bot
 
 ### shipping\_option
 
-> **shipping\_option**: [`shippingOption`](shippingOption-1.md) \| `null`
+> **shipping\_option**: [`shippingOption`](shippingOption.md) \| `null`
 
 Chosen shipping option; may be null
 
 ### tip\_amount
 
-> **tip\_amount**: [`int53`](int53-1.md)
+> **tip\_amount**: [`int53`](int53.md)
 
 The amount of tip chosen by the buyer in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:23299
+dist/generated/types.d.ts:24059

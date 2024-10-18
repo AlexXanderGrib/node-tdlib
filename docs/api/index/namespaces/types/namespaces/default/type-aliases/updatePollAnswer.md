@@ -18,13 +18,13 @@ A user changed the answer to a poll; for bots only
 
 ### option\_ids
 
-> **option\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **option\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 0-based identifiers of answer options, chosen by the user
 
 ### poll\_id
 
-> **poll\_id**: [`int64`](int64-1.md)
+> **poll\_id**: [`int64`](int64.md)
 
 Unique poll identifier
 
@@ -36,4 +36,4 @@ Identifier of the message sender that changed the answer to the poll
 
 ## Defined in
 
-dist/generated/types.d.ts:57827
+dist/generated/types.d.ts:59467

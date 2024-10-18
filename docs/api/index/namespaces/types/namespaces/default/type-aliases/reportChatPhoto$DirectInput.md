@@ -14,13 +14,13 @@ Reports a chat photo to the Telegram moderators. A chat photo can be reported on
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 Identifier of the photo to report. Only full photos from chatPhoto can be reported
 
@@ -38,4 +38,4 @@ Additional report details; 0-1024 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:98235
+dist/generated/types.d.ts:101014

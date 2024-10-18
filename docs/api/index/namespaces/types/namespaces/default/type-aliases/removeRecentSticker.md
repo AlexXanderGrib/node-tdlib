@@ -6,7 +6,9 @@
 
 # Type Alias: removeRecentSticker()
 
-> **removeRecentSticker**: (`parameters`) => [`Ok`](Ok.md)
+> **removeRecentSticker**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a sticker from the list of recently used stickers
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93232
+dist/generated/types.d.ts:95729

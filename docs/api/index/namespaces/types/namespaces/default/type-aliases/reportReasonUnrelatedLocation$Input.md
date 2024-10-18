@@ -20,4 +20,4 @@ The location-based chat is unrelated to its stated location
 
 ## Defined in
 
-dist/generated/types.d.ts:47187
+dist/generated/types.d.ts:48713

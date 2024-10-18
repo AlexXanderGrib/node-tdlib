@@ -32,7 +32,7 @@ Unique identifier of the query result
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md)
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md)
 
 Photo
 
@@ -44,4 +44,4 @@ Title of the result, if known
 
 ## Defined in
 
-dist/generated/types.d.ts:38677
+dist/generated/types.d.ts:40047

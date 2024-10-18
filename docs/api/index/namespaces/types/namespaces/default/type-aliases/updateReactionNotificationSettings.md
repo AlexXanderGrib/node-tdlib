@@ -18,10 +18,10 @@ Notification settings for reactions were updated
 
 ### notification\_settings
 
-> **notification\_settings**: [`reactionNotificationSettings`](reactionNotificationSettings-1.md)
+> **notification\_settings**: [`reactionNotificationSettings`](reactionNotificationSettings.md)
 
 The new notification settings
 
 ## Defined in
 
-dist/generated/types.d.ts:54667
+dist/generated/types.d.ts:56283

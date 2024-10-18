@@ -6,7 +6,9 @@
 
 # Type Alias: setQuickReplyShortcutName()
 
-> **setQuickReplyShortcutName**: (`parameters`) => [`Ok`](Ok.md)
+> **setQuickReplyShortcutName**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes name of a quick reply shortcut
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80201
+dist/generated/types.d.ts:82250

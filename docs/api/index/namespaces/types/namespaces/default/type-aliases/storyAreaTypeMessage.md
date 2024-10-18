@@ -18,16 +18,16 @@ An area pointing to a message
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat with the message
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
 ## Defined in
 
-dist/generated/types.d.ts:31981
+dist/generated/types.d.ts:33147

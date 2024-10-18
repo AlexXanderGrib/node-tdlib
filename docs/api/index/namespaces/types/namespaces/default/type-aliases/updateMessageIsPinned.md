@@ -18,7 +18,7 @@ The message pinned state was changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,10 +30,10 @@ True, if the message is pinned
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 The message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52893
+dist/generated/types.d.ts:54509

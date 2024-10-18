@@ -20,10 +20,10 @@ A message with a poll
 
 ### poll?
 
-> `readonly` `optional` **poll**: [`poll$Input`](poll$Input-1.md)
+> `readonly` `optional` **poll**: [`poll$Input`](poll$Input.md)
 
 The poll description
 
 ## Defined in
 
-dist/generated/types.d.ts:26546
+dist/generated/types.d.ts:27306

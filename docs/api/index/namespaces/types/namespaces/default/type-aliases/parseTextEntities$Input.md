@@ -32,4 +32,4 @@ The text to parse
 
 ## Defined in
 
-dist/generated/types.d.ts:81704
+dist/generated/types.d.ts:83897

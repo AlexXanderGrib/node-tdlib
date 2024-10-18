@@ -20,10 +20,10 @@ A straight line to a given point
 
 ### end\_point?
 
-> `readonly` `optional` **end\_point**: [`point$Input`](point$Input-1.md)
+> `readonly` `optional` **end\_point**: [`point$Input`](point$Input.md)
 
 The end point of the straight line
 
 ## Defined in
 
-dist/generated/types.d.ts:52386
+dist/generated/types.d.ts:54002

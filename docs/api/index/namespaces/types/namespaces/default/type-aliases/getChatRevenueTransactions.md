@@ -6,7 +6,9 @@
 
 # Type Alias: getChatRevenueTransactions()
 
-> **getChatRevenueTransactions**: (`parameters`) => [`ChatRevenueTransactions`](ChatRevenueTransactions.md)
+> **getChatRevenueTransactions**: (`parameters`) => [`ChatRevenueTransactions`](ChatRevenueTransactions-1.md)
+
+Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatRevenueTransactions`](ChatRevenueTransactions.md)
+[`ChatRevenueTransactions`](ChatRevenueTransactions-1.md)
 
-[ChatRevenueTransactions](ChatRevenueTransactions.md)
+[ChatRevenueTransactions](ChatRevenueTransactions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98435
+dist/generated/types.d.ts:101214

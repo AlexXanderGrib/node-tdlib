@@ -14,7 +14,7 @@ Returns approximate number of chats similar to the given chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the target chat; must be an identifier of a channel chat
 
@@ -26,4 +26,4 @@ Pass true to get the number of chats without sending network requests, or -1 if 
 
 ## Defined in
 
-dist/generated/types.d.ts:75307
+dist/generated/types.d.ts:77333

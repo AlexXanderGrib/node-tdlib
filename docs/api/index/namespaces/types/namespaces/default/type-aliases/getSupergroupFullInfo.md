@@ -6,7 +6,9 @@
 
 # Type Alias: getSupergroupFullInfo()
 
-> **getSupergroupFullInfo**: (`parameters`) => [`SupergroupFullInfo`](SupergroupFullInfo.md)
+> **getSupergroupFullInfo**: (`parameters`) => [`SupergroupFullInfo`](SupergroupFullInfo-1.md)
+
+Returns full information about a supergroup or a channel by its identifier, cached for up to 1 minute
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`SupergroupFullInfo`](SupergroupFullInfo.md)
+[`SupergroupFullInfo`](SupergroupFullInfo-1.md)
 
-[SupergroupFullInfo](SupergroupFullInfo.md)
+[SupergroupFullInfo](SupergroupFullInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74512
+dist/generated/types.d.ts:76500

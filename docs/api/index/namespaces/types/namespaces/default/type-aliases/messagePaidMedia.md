@@ -18,7 +18,7 @@ A message with paid media
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md)
+> **caption**: [`formattedText`](formattedText.md)
 
 Media caption
 
@@ -36,10 +36,10 @@ True, if the caption must be shown above the media; otherwise, the caption must 
 
 ### star\_count
 
-> **star\_count**: [`int53`](int53-1.md)
+> **star\_count**: [`int53`](int53.md)
 
-Number of stars needed to buy access to the media in the message
+Number of Telegram Stars needed to buy access to the media in the message
 
 ## Defined in
 
-dist/generated/types.d.ts:25939
+dist/generated/types.d.ts:26699

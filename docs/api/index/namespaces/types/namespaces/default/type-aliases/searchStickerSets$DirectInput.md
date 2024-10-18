@@ -26,4 +26,4 @@ Type of the sticker sets to return
 
 ## Defined in
 
-dist/generated/types.d.ts:92990
+dist/generated/types.d.ts:95487

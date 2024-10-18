@@ -18,4 +18,4 @@ The link is a link to a Telegram Premium gift code
 
 ## Defined in
 
-dist/generated/types.d.ts:21343
+dist/generated/types.d.ts:22093

@@ -6,7 +6,9 @@
 
 # Type Alias: setAccentColor()
 
-> **setAccentColor**: (`parameters`) => [`Ok`](Ok.md)
+> **setAccentColor**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes accent color and background custom emoji for the current user; for Telegram Premium users only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93948
+dist/generated/types.d.ts:96445

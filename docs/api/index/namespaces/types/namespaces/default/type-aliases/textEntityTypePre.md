@@ -18,4 +18,4 @@ Text that must be formatted as if inside a pre HTML tag
 
 ## Defined in
 
-dist/generated/types.d.ts:28673
+dist/generated/types.d.ts:29547

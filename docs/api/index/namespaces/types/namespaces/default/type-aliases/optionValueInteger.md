@@ -18,10 +18,10 @@ Represents an integer option
 
 ### value
 
-> **value**: [`int64`](int64-1.md)
+> **value**: [`int64`](int64.md)
 
 The value of the option
 
 ## Defined in
 
-dist/generated/types.d.ts:45677
+dist/generated/types.d.ts:47203

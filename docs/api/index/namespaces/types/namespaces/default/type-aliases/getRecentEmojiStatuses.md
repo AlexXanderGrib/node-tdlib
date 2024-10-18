@@ -6,7 +6,9 @@
 
 # Type Alias: getRecentEmojiStatuses()
 
-> **getRecentEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses.md)
+> **getRecentEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses-1.md)
+
+Returns recent emoji statuses for self status
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`EmojiStatuses`](EmojiStatuses.md)
+[`EmojiStatuses`](EmojiStatuses-1.md)
 
-[EmojiStatuses](EmojiStatuses.md)
+[EmojiStatuses](EmojiStatuses-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88668
+dist/generated/types.d.ts:91043

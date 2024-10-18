@@ -18,4 +18,4 @@ Returns the list of supported time zones
 
 ## Defined in
 
-dist/generated/types.d.ts:96745
+dist/generated/types.d.ts:99524

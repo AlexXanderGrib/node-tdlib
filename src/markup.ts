@@ -330,3 +330,5 @@ class InlineKeyboardBuilder {
 export function inlineKeyboard(): InlineKeyboardBuilder {
   return new InlineKeyboardBuilder();
 }
+
+export { type InlineKeyboardBuilder, type KeyboardBuilder };

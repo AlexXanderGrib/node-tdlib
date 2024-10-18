@@ -20,4 +20,4 @@ Pass true to get statistics only for the current library launch
 
 ## Defined in
 
-dist/generated/types.d.ts:99008
+dist/generated/types.d.ts:101787

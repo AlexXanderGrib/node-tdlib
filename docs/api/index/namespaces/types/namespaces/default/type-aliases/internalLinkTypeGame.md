@@ -32,4 +32,4 @@ Short name of the game
 
 ## Defined in
 
-dist/generated/types.d.ts:47795
+dist/generated/types.d.ts:49355

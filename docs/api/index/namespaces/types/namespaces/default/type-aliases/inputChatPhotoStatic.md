@@ -24,4 +24,4 @@ Photo to be set as profile photo. Only inputFileLocal and inputFileGenerated are
 
 ## Defined in
 
-dist/generated/types.d.ts:7503
+dist/generated/types.d.ts:7569

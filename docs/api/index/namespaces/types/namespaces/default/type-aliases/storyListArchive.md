@@ -18,4 +18,4 @@ The list of stories, shown in the Arvhive chat list
 
 ## Defined in
 
-dist/generated/types.d.ts:32629
+dist/generated/types.d.ts:33907

@@ -20,4 +20,4 @@ The ability to check who opened the current user's stories after they expire
 
 ## Defined in
 
-dist/generated/types.d.ts:42051
+dist/generated/types.d.ts:43445

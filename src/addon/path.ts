@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prefer-module */
 import path from "path";
 
 /**
@@ -8,6 +7,7 @@ import path from "path";
  */
 export function getAddonFolderPath(): string {
   return path.dirname(
+    // eslint-disable-next-line unicorn/prefer-module
     typeof __filename === "string" ? __filename : (process.env.__filename as string)
   );
 }

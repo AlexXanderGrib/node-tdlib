@@ -6,7 +6,9 @@
 
 # Type Alias: getStoryStatistics()
 
-> **getStoryStatistics**: (`parameters`) => [`StoryStatistics`](StoryStatistics.md)
+> **getStoryStatistics**: (`parameters`) => [`StoryStatistics`](StoryStatistics-1.md)
+
+Returns detailed statistics about a story. Can be used only if story.can_get_statistics == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StoryStatistics`](StoryStatistics.md)
+[`StoryStatistics`](StoryStatistics-1.md)
 
-[StoryStatistics](StoryStatistics.md)
+[StoryStatistics](StoryStatistics-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98741
+dist/generated/types.d.ts:101520

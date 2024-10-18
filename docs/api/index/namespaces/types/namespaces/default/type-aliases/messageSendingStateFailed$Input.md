@@ -22,11 +22,11 @@ The message failed to be sent
 
 > `readonly` `optional` **can\_retry**: [`Bool$Input`](Bool$Input.md)
 
-True, if the message can be re-sent
+True, if the message can be re-sent using resendMessages or readdQuickReplyShortcutMessages
 
 ### error?
 
-> `readonly` `optional` **error**: [`error$Input`](error$Input-1.md)
+> `readonly` `optional` **error**: [`error$Input`](error$Input.md)
 
 The cause of the message sending failure
 
@@ -50,10 +50,10 @@ True, if the message can be re-sent only if the message to be replied is removed
 
 ### retry\_after?
 
-> `readonly` `optional` **retry\_after**: [`double`](double-1.md)
+> `readonly` `optional` **retry\_after**: [`double`](double.md)
 
 Time left before the message can be re-sent, in seconds. No update is sent when this field changes
 
 ## Defined in
 
-dist/generated/types.d.ts:13021
+dist/generated/types.d.ts:13723

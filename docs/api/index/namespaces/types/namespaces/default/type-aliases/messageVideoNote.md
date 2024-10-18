@@ -30,10 +30,10 @@ True, if at least one of the recipients has viewed the video note
 
 ### video\_note
 
-> **video\_note**: [`videoNote`](videoNote-1.md)
+> **video\_note**: [`videoNote`](videoNote.md)
 
 The video note description
 
 ## Defined in
 
-dist/generated/types.d.ts:26155
+dist/generated/types.d.ts:26915

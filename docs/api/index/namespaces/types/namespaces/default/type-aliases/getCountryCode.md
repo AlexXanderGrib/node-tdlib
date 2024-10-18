@@ -6,7 +6,9 @@
 
 # Type Alias: getCountryCode()
 
-> **getCountryCode**: (`parameters`) => [`Text`](Text.md)
+> **getCountryCode**: (`parameters`) => [`Text`](Text-1.md)
+
+Uses the current IP address to find the current country. Returns two-letter ISO 3166-1 alpha-2 country code. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101178
+dist/generated/types.d.ts:104099

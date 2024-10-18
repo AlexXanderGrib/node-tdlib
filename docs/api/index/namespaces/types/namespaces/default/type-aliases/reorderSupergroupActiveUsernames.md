@@ -6,7 +6,9 @@
 
 # Type Alias: reorderSupergroupActiveUsernames()
 
-> **reorderSupergroupActiveUsernames**: (`parameters`) => [`Ok`](Ok.md)
+> **reorderSupergroupActiveUsernames**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes order of active usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96055
+dist/generated/types.d.ts:98824

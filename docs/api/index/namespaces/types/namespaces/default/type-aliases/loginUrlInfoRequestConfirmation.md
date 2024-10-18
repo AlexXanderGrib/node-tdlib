@@ -18,7 +18,7 @@ An authorization confirmation dialog needs to be shown to the user
 
 ### bot\_user\_id
 
-> **bot\_user\_id**: [`int53`](int53-1.md)
+> **bot\_user\_id**: [`int53`](int53.md)
 
 User identifier of a bot linked with the website
 
@@ -42,4 +42,4 @@ An HTTP URL to be opened
 
 ## Defined in
 
-dist/generated/types.d.ts:17937
+dist/generated/types.d.ts:18529

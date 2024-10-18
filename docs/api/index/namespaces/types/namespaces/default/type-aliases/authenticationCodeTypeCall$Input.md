@@ -20,10 +20,10 @@ A digit-only authentication code is delivered via a phone call to the specified 
 
 ### length?
 
-> `readonly` `optional` **length**: [`int32`](int32-1.md)
+> `readonly` `optional` **length**: [`int32`](int32.md)
 
 Length of the code
 
 ## Defined in
 
-dist/generated/types.d.ts:2602
+dist/generated/types.d.ts:2648

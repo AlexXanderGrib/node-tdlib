@@ -20,10 +20,10 @@ The new privacy settigs for the story
 
 ### story\_id?
 
-> `readonly` `optional` **story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **story\_id**: [`int32`](int32.md)
 
 Identifier of the story
 
 ## Defined in
 
-dist/generated/types.d.ts:87409
+dist/generated/types.d.ts:89784

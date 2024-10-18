@@ -18,4 +18,4 @@ The transaction is a transaction with Telegram Ad platform
 
 ## Defined in
 
-dist/generated/types.d.ts:8439
+dist/generated/types.d.ts:8827

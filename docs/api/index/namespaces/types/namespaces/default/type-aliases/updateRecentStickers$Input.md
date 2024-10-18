@@ -26,10 +26,10 @@ True, if the list of stickers attached to photo or video files was updated; othe
 
 ### sticker\_ids?
 
-> `readonly` `optional` **sticker\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **sticker\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 The new list of file identifiers of recently used stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:56211
+dist/generated/types.d.ts:57827

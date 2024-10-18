@@ -8,7 +8,7 @@
 
 > **updateOwnedStarCount**: `object`
 
-The number of Telegram stars owned by the current user has changed
+The number of Telegram Stars owned by the current user has changed
 
 ## Type declaration
 
@@ -18,10 +18,10 @@ The number of Telegram stars owned by the current user has changed
 
 ### star\_count
 
-> **star\_count**: [`int53`](int53-1.md)
+> **star\_count**: [`int53`](int53.md)
 
-The new number of Telegram stars owned
+The new number of Telegram Stars owned
 
 ## Defined in
 
-dist/generated/types.d.ts:56743
+dist/generated/types.d.ts:58383

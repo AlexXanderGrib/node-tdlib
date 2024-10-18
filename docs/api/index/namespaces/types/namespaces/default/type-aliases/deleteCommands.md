@@ -6,7 +6,9 @@
 
 # Type Alias: deleteCommands()
 
-> **deleteCommands**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteCommands**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes commands supported by the bot for the given user scope and language; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94995
+dist/generated/types.d.ts:97492

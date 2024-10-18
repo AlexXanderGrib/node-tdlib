@@ -6,7 +6,9 @@
 
 # Type Alias: addProxy()
 
-> **addProxy**: (`parameters`) => [`Proxy`](Proxy.md)
+> **addProxy**: (`parameters`) => [`Proxy`](Proxy-1.md)
+
+Adds a proxy server for network requests. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Proxy`](Proxy.md)
+[`Proxy`](Proxy-1.md)
 
-[Proxy](Proxy.md)
+[Proxy](Proxy-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101440
+dist/generated/types.d.ts:104361

@@ -36,7 +36,7 @@ Unique identifier of the query result
 
 ### thumbnail
 
-> **thumbnail**: [`thumbnail`](thumbnail-1.md) \| `null`
+> **thumbnail**: [`thumbnail`](thumbnail.md) \| `null`
 
 Result thumbnail in JPEG format; may be null
 
@@ -54,4 +54,4 @@ URL of the result, if it exists
 
 ## Defined in
 
-dist/generated/types.d.ts:38267
+dist/generated/types.d.ts:39637

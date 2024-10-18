@@ -20,10 +20,10 @@ A poll was updated; for bots only
 
 ### poll?
 
-> `readonly` `optional` **poll**: [`poll$Input`](poll$Input-1.md)
+> `readonly` `optional` **poll**: [`poll$Input`](poll$Input.md)
 
 New data about the poll
 
 ## Defined in
 
-dist/generated/types.d.ts:57816
+dist/generated/types.d.ts:59456

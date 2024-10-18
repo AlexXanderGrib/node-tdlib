@@ -20,7 +20,7 @@ A video
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input-1.md)
+> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input.md)
 
 Video caption
 
@@ -38,10 +38,10 @@ True, if the video must be played automatically
 
 ### video?
 
-> `readonly` `optional` **video**: [`video$Input`](video$Input-1.md) \| `null`
+> `readonly` `optional` **video**: [`video$Input`](video$Input.md) \| `null`
 
 Video file; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:20155
+dist/generated/types.d.ts:20781

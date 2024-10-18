@@ -20,10 +20,10 @@ The file contains an error. The error is considered resolved when the file chang
 
 ### file\_hash?
 
-> `readonly` `optional` **file\_hash**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **file\_hash**: [`bytes$Input`](bytes$Input.md)
 
 Current hash of the file which has the error
 
 ## Defined in
 
-dist/generated/types.d.ts:25684
+dist/generated/types.d.ts:26444

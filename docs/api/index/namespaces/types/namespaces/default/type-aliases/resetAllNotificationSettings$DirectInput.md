@@ -12,4 +12,4 @@ Resets all chat and scope notification settings to their default values. By defa
 
 ## Defined in
 
-dist/generated/types.d.ts:86999
+dist/generated/types.d.ts:89298

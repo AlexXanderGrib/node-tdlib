@@ -26,4 +26,4 @@ The access token that will be used to send notifications; may be empty to deregi
 
 ## Defined in
 
-dist/generated/types.d.ts:42998
+dist/generated/types.d.ts:44524

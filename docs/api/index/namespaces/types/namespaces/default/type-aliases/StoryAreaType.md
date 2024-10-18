@@ -6,7 +6,7 @@
 
 # Type Alias: StoryAreaType
 
-> **StoryAreaType**: [`storyAreaTypeLocation`](storyAreaTypeLocation.md) \| [`storyAreaTypeVenue`](storyAreaTypeVenue.md) \| [`storyAreaTypeSuggestedReaction`](storyAreaTypeSuggestedReaction.md) \| [`storyAreaTypeMessage`](storyAreaTypeMessage.md) \| [`storyAreaTypeLink`](storyAreaTypeLink.md)
+> **StoryAreaType**: [`storyAreaTypeLocation`](storyAreaTypeLocation.md) \| [`storyAreaTypeVenue`](storyAreaTypeVenue.md) \| [`storyAreaTypeSuggestedReaction`](storyAreaTypeSuggestedReaction.md) \| [`storyAreaTypeMessage`](storyAreaTypeMessage.md) \| [`storyAreaTypeLink`](storyAreaTypeLink.md) \| [`storyAreaTypeWeather`](storyAreaTypeWeather.md)
 
 Any of:
 - [storyAreaTypeLocation](storyAreaTypeLocation.md)
@@ -14,7 +14,8 @@ Any of:
 - [storyAreaTypeSuggestedReaction](storyAreaTypeSuggestedReaction.md)
 - [storyAreaTypeMessage](storyAreaTypeMessage.md)
 - [storyAreaTypeLink](storyAreaTypeLink.md)
+- [storyAreaTypeWeather](storyAreaTypeWeather.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:62952
+dist/generated/types.d.ts:64730

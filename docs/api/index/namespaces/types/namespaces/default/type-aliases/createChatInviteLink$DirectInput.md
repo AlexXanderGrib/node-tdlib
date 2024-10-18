@@ -14,7 +14,7 @@ Creates a new invite link for a chat. Available for basic groups, supergroups, a
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -26,13 +26,13 @@ Pass true if users joining the chat via the link need to be approved by chat adm
 
 ### expiration\_date?
 
-> `readonly` `optional` **expiration\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **expiration\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the link will expire; pass 0 if never
 
 ### member\_limit?
 
-> `readonly` `optional` **member\_limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **member\_limit**: [`int32`](int32.md)
 
 The maximum number of chat members that can join the chat via the link simultaneously; 0-99999; pass 0 if not limited
 
@@ -44,4 +44,4 @@ Invite link name; 0-32 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:89726
+dist/generated/types.d.ts:92101

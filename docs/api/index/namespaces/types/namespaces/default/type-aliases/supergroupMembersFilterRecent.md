@@ -18,4 +18,4 @@ Returns recently active users in reverse chronological order
 
 ## Defined in
 
-dist/generated/types.d.ts:10295
+dist/generated/types.d.ts:10795

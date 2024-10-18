@@ -26,4 +26,4 @@ HTTP or tg:// URL to be opened when the area is clicked
 
 ## Defined in
 
-dist/generated/types.d.ts:32266
+dist/generated/types.d.ts:33476

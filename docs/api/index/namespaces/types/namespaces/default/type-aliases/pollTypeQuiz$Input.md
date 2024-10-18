@@ -20,16 +20,16 @@ A poll in quiz mode, which has exactly one correct answer option and can be answ
 
 ### correct\_option\_id?
 
-> `readonly` `optional` **correct\_option\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **correct\_option\_id**: [`int32`](int32.md)
 
 0-based identifier of the correct answer option; -1 for a yet unanswered poll
 
 ### explanation?
 
-> `readonly` `optional` **explanation**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **explanation**: [`formattedText$Input`](formattedText$Input.md)
 
 Text that is shown when the user chooses an incorrect answer or taps on the lamp icon; 0-200 characters with at most 2 line feeds; empty for a yet unanswered poll
 
 ## Defined in
 
-dist/generated/types.d.ts:4667
+dist/generated/types.d.ts:4713

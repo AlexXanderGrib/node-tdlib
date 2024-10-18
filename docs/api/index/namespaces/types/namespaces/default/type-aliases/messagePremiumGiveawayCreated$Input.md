@@ -20,4 +20,4 @@ A Telegram Premium giveaway was created for the chat. Use telegramPaymentPurpose
 
 ## Defined in
 
-dist/generated/types.d.ts:27969
+dist/generated/types.d.ts:28739

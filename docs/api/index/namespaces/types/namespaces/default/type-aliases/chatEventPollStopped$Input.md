@@ -20,10 +20,10 @@ A poll in a message was stopped
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 The message with the poll
 
 ## Defined in
 
-dist/generated/types.d.ts:39318
+dist/generated/types.d.ts:40688

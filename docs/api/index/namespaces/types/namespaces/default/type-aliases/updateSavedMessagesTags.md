@@ -18,16 +18,16 @@ Tags used in Saved Messages or a Saved Messages topic have changed
 
 ### saved\_messages\_topic\_id
 
-> **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 Identifier of Saved Messages topic which tags were changed; 0 if tags for the whole chat has changed
 
 ### tags
 
-> **tags**: [`savedMessagesTags`](savedMessagesTags-1.md)
+> **tags**: [`savedMessagesTags`](savedMessagesTags.md)
 
 The new tags
 
 ## Defined in
 
-dist/generated/types.d.ts:56709
+dist/generated/types.d.ts:58325

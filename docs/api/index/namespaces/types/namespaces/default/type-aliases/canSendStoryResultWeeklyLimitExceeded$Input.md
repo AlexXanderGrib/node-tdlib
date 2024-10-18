@@ -20,10 +20,10 @@ The weekly limit for the number of posted stories exceeded. The user needs to bu
 
 ### retry\_after?
 
-> `readonly` `optional` **retry\_after**: [`int32`](int32-1.md)
+> `readonly` `optional` **retry\_after**: [`int32`](int32.md)
 
 Time left before the user can send the next story
 
 ## Defined in
 
-dist/generated/types.d.ts:43760
+dist/generated/types.d.ts:45286

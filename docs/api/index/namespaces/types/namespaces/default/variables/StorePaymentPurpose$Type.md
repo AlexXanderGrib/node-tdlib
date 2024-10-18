@@ -14,6 +14,10 @@
 
 > `readonly` **GiftedPremium**: `"storePaymentPurposeGiftedPremium"`
 
+### GiftedStars
+
+> `readonly` **GiftedStars**: `"storePaymentPurposeGiftedStars"`
+
 ### PremiumGiftCodes
 
 > `readonly` **PremiumGiftCodes**: `"storePaymentPurposePremiumGiftCodes"`
@@ -32,4 +36,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1368
+dist/generated/types.d.ts:1394

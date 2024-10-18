@@ -18,16 +18,16 @@ Changes the order of pinned forum topics; requires can_manage_topics right in th
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_thread\_ids?
 
-> `readonly` `optional` **message\_thread\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_thread\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 The new list of pinned forum topics
 
 ## Defined in
 
-dist/generated/types.d.ts:81076
+dist/generated/types.d.ts:83125

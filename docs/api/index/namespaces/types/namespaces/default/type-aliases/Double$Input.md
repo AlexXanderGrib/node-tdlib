@@ -6,12 +6,12 @@
 
 # Type Alias: Double$Input
 
-> **Double$Input**: [`double`](double-1.md)
+> **Double$Input**: [`double`](double.md)
 
-Version of [Double](Double.md) for method parameters.
+Version of [Double](Double-1.md) for method parameters.
 Any of:
-- [double](double-1.md)
+- [double](double.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:58544
+dist/generated/types.d.ts:60184

@@ -14,16 +14,16 @@ Changes the custom emoji sticker set of a supergroup; requires can_change_info a
 
 ### custom\_emoji\_sticker\_set\_id?
 
-> `readonly` `optional` **custom\_emoji\_sticker\_set\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **custom\_emoji\_sticker\_set\_id**: [`int64$Input`](int64$Input.md)
 
 New value of the custom emoji sticker set identifier for the supergroup. Use 0 to remove the custom emoji sticker set in the supergroup
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:96113
+dist/generated/types.d.ts:98882

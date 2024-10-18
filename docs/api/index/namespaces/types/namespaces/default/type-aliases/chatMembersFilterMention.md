@@ -18,10 +18,10 @@ Returns users which can be mentioned in the chat
 
 ### message\_thread\_id
 
-> **message\_thread\_id**: [`int53`](int53-1.md)
+> **message\_thread\_id**: [`int53`](int53.md)
 
 If non-zero, the identifier of the current message thread
 
 ## Defined in
 
-dist/generated/types.d.ts:10229
+dist/generated/types.d.ts:10729

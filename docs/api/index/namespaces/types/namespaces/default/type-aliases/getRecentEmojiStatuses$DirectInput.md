@@ -12,4 +12,4 @@ Returns recent emoji statuses for self status
 
 ## Defined in
 
-dist/generated/types.d.ts:88661
+dist/generated/types.d.ts:91036

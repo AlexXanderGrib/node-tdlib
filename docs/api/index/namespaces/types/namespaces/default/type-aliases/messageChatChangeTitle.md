@@ -24,4 +24,4 @@ New chat title
 
 ## Defined in
 
-dist/generated/types.d.ts:26923
+dist/generated/types.d.ts:27683

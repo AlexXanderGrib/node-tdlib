@@ -18,4 +18,4 @@ The chat is sponsored by the user's MTProxy server
 
 ## Defined in
 
-dist/generated/types.d.ts:15961
+dist/generated/types.d.ts:16553

@@ -6,7 +6,9 @@
 
 # Type Alias: addMessageReaction()
 
-> **addMessageReaction**: (`parameters`) => [`Ok`](Ok.md)
+> **addMessageReaction**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a reaction or a tag to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81326
+dist/generated/types.d.ts:83375

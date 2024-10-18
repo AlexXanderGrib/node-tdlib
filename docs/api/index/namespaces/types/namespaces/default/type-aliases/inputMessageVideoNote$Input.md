@@ -20,13 +20,13 @@ A video note message
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds; 0-60
 
 ### length?
 
-> `readonly` `optional` **length**: [`int32`](int32-1.md)
+> `readonly` `optional` **length**: [`int32`](int32.md)
 
 Video width and height; must be positive and not greater than 640
 
@@ -38,7 +38,7 @@ Video note self-destruct type; may be null if none; pass null if none; private c
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input.md) \| `null`
 
 Video thumbnail; may be null if empty; pass null to skip thumbnail uploading
 
@@ -50,4 +50,4 @@ Video note to be sent
 
 ## Defined in
 
-dist/generated/types.d.ts:29884
+dist/generated/types.d.ts:30758

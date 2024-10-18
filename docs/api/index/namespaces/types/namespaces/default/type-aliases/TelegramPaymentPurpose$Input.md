@@ -6,14 +6,16 @@
 
 # Type Alias: TelegramPaymentPurpose$Input
 
-> **TelegramPaymentPurpose$Input**: [`telegramPaymentPurposePremiumGiftCodes$Input`](telegramPaymentPurposePremiumGiftCodes$Input.md) \| [`telegramPaymentPurposePremiumGiveaway$Input`](telegramPaymentPurposePremiumGiveaway$Input.md) \| [`telegramPaymentPurposeStars$Input`](telegramPaymentPurposeStars$Input.md)
+> **TelegramPaymentPurpose$Input**: [`telegramPaymentPurposePremiumGiftCodes$Input`](telegramPaymentPurposePremiumGiftCodes$Input.md) \| [`telegramPaymentPurposePremiumGiveaway$Input`](telegramPaymentPurposePremiumGiveaway$Input.md) \| [`telegramPaymentPurposeStars$Input`](telegramPaymentPurposeStars$Input.md) \| [`telegramPaymentPurposeGiftedStars$Input`](telegramPaymentPurposeGiftedStars$Input.md) \| [`telegramPaymentPurposeJoinChat$Input`](telegramPaymentPurposeJoinChat$Input.md)
 
 Version of [TelegramPaymentPurpose](TelegramPaymentPurpose.md) for method parameters.
 Any of:
 - [telegramPaymentPurposePremiumGiftCodes$Input](telegramPaymentPurposePremiumGiftCodes$Input.md)
 - [telegramPaymentPurposePremiumGiveaway$Input](telegramPaymentPurposePremiumGiveaway$Input.md)
 - [telegramPaymentPurposeStars$Input](telegramPaymentPurposeStars$Input.md)
+- [telegramPaymentPurposeGiftedStars$Input](telegramPaymentPurposeGiftedStars$Input.md)
+- [telegramPaymentPurposeJoinChat$Input](telegramPaymentPurposeJoinChat$Input.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:64480
+dist/generated/types.d.ts:66302

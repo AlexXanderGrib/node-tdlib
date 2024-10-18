@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/class-literal-property-style */
 import path from "path";
 import type { TDLib, TDLibClient } from "../shared/client";
 import { getAddonFolderPath } from "./path";
 import { createRequire } from "module";
 import { assert } from "../assert";
 
-export interface Addon {
+export type Addon = {
   td_client_create(): TDLibClient;
   td_client_send(client: TDLibClient, json: string): void;
   td_client_receive(
@@ -18,7 +19,12 @@ export interface Addon {
     callback: null | ((errorMessage: string) => void)
   ): void;
   load_tdjson(path: string): void;
-}
+};
+
+const builtinAddonPath = path.resolve(
+  getAddonFolderPath(),
+  "../../build/Release/td.node"
+);
 
 /**
  *
@@ -26,12 +32,8 @@ export interface Addon {
  * @param {string} [addonPath]
  * @returns {Addon}  {Addon}
  */
-async function loadAddon(addonPath?: string): Promise<Addon> {
+async function loadAddon(addonPath: string = builtinAddonPath): Promise<Addon> {
   const baseDirectory = getAddonFolderPath();
-  addonPath ??= "../../build/Release/td.node";
-  addonPath = path.isAbsolute(addonPath)
-    ? addonPath
-    : path.resolve(baseDirectory, addonPath);
 
   const load = createRequire(baseDirectory);
   const addon: Addon = load(addonPath);

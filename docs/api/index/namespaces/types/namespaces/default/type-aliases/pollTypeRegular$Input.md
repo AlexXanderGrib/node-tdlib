@@ -26,4 +26,4 @@ True, if multiple answer options can be chosen simultaneously
 
 ## Defined in
 
-dist/generated/types.d.ts:4638
+dist/generated/types.d.ts:4684

@@ -18,4 +18,4 @@ A Telegram Passport element containing the user's utility bill
 
 ## Defined in
 
-dist/generated/types.d.ts:23869
+dist/generated/types.d.ts:24629

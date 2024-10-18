@@ -24,7 +24,7 @@ The type of the chat from which the query originated; may be null if unknown
 
 ### id
 
-> **id**: [`int64`](int64-1.md)
+> **id**: [`int64`](int64.md)
 
 Unique query identifier
 
@@ -42,16 +42,16 @@ Text of the query
 
 ### sender\_user\_id
 
-> **sender\_user\_id**: [`int53`](int53-1.md)
+> **sender\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user who sent the query
 
 ### user\_location
 
-> **user\_location**: [`location`](location-1.md) \| `null`
+> **user\_location**: [`location`](location.md) \| `null`
 
 User location; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:57247
+dist/generated/types.d.ts:58887

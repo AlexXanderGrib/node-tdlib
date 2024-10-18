@@ -18,10 +18,10 @@ Returns the received vector of objects containing a string; for testing only. Th
 
 ### x?
 
-> `readonly` `optional` **x**: [`vector$Input`](vector$Input.md)\<[`testString$Input`](testString$Input-1.md)\>
+> `readonly` `optional` **x**: [`vector$Input`](vector$Input.md)\<[`testString$Input`](testString$Input.md)\>
 
 Vector of objects to return
 
 ## Defined in
 
-dist/generated/types.d.ts:102113
+dist/generated/types.d.ts:105034

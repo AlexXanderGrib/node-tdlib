@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's internal passport
 
 ### internal\_passport?
 
-> `readonly` `optional` **internal\_passport**: [`identityDocument$Input`](identityDocument$Input-1.md)
+> `readonly` `optional` **internal\_passport**: [`identityDocument$Input`](identityDocument$Input.md)
 
 Internal passport
 
 ## Defined in
 
-dist/generated/types.d.ts:24450
+dist/generated/types.d.ts:25210

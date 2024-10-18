@@ -26,13 +26,13 @@ True, if a chat message draft must be deleted
 
 ### link\_preview\_options?
 
-> `readonly` `optional` **link\_preview\_options**: [`linkPreviewOptions$Input`](linkPreviewOptions$Input-1.md) \| `null`
+> `readonly` `optional` **link\_preview\_options**: [`linkPreviewOptions$Input`](linkPreviewOptions$Input.md) \| `null`
 
 Options to be used for generation of a link preview; may be null if none; pass null to use default link preview options
 
 ### text?
 
-> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input.md)
 
 Formatted text to be sent; 0-getOption("message_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote,
 
@@ -40,4 +40,4 @@ Formatted text to be sent; 0-getOption("message_text_length_max") characters. On
 
 ## Defined in
 
-dist/generated/types.d.ts:29250
+dist/generated/types.d.ts:30124

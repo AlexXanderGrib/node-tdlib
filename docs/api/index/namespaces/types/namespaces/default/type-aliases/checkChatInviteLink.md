@@ -6,7 +6,9 @@
 
 # Type Alias: checkChatInviteLink()
 
-> **checkChatInviteLink**: (`parameters`) => [`ChatInviteLinkInfo`](ChatInviteLinkInfo.md)
+> **checkChatInviteLink**: (`parameters`) => [`ChatInviteLinkInfo`](ChatInviteLinkInfo-1.md)
+
+Checks the validity of an invite link for a chat and returns information about the corresponding chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatInviteLinkInfo`](ChatInviteLinkInfo.md)
+[`ChatInviteLinkInfo`](ChatInviteLinkInfo-1.md)
 
-[ChatInviteLinkInfo](ChatInviteLinkInfo.md)
+[ChatInviteLinkInfo](ChatInviteLinkInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90187
+dist/generated/types.d.ts:92684

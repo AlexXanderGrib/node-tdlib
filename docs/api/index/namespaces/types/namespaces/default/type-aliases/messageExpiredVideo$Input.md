@@ -20,4 +20,4 @@ A self-destructed video message
 
 ## Defined in
 
-dist/generated/types.d.ts:26265
+dist/generated/types.d.ts:27025

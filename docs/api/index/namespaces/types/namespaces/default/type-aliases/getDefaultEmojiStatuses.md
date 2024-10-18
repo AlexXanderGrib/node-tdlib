@@ -6,7 +6,9 @@
 
 # Type Alias: getDefaultEmojiStatuses()
 
-> **getDefaultEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses.md)
+> **getDefaultEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses-1.md)
+
+Returns default emoji statuses for self status
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`EmojiStatuses`](EmojiStatuses.md)
+[`EmojiStatuses`](EmojiStatuses-1.md)
 
-[EmojiStatuses](EmojiStatuses.md)
+[EmojiStatuses](EmojiStatuses-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88685
+dist/generated/types.d.ts:91060

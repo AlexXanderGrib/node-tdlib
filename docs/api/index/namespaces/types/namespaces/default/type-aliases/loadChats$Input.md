@@ -24,10 +24,10 @@ The chat list in which to load chats; pass null to load chats from the main chat
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of chats to be loaded. For optimal performance, the number of loaded chats is chosen by TDLib and can be smaller than the specified limit, even if the end of the list is not reached
 
 ## Defined in
 
-dist/generated/types.d.ts:74998
+dist/generated/types.d.ts:77024

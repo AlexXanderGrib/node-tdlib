@@ -8,13 +8,17 @@
 
 > **editChatInviteLink$DirectInput**: `object`
 
-Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
+Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels.
+
+- If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used
+
+- Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
 ## Type declaration
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -26,7 +30,7 @@ Pass true if users joining the chat via the link need to be approved by chat adm
 
 ### expiration\_date?
 
-> `readonly` `optional` **expiration\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **expiration\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the link will expire; pass 0 if never
 
@@ -38,7 +42,7 @@ Invite link to be edited
 
 ### member\_limit?
 
-> `readonly` `optional` **member\_limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **member\_limit**: [`int32`](int32.md)
 
 The maximum number of chat members that can join the chat via the link simultaneously; 0-99999; pass 0 if not limited
 
@@ -50,4 +54,4 @@ Invite link name; 0-32 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:89799
+dist/generated/types.d.ts:92234

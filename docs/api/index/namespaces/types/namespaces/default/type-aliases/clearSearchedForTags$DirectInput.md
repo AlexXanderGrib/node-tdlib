@@ -20,4 +20,4 @@ Pass true to clear the list of recently searched for cashtags; otherwise, the li
 
 ## Defined in
 
-dist/generated/types.d.ts:77044
+dist/generated/types.d.ts:79070

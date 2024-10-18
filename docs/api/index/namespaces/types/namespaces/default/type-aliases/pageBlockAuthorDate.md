@@ -24,10 +24,10 @@ Author
 
 ### publish\_date
 
-> **publish\_date**: [`int32`](int32-1.md)
+> **publish\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the article was published; 0 if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:19687
+dist/generated/types.d.ts:20313

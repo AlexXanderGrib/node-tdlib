@@ -20,4 +20,4 @@ The chat has illegal drugs related content
 
 ## Defined in
 
-dist/generated/types.d.ts:47215
+dist/generated/types.d.ts:48741

@@ -24,13 +24,13 @@ Unique identifier of the query result
 
 ### location
 
-> **location**: [`location`](location-1.md)
+> **location**: [`location`](location.md)
 
 Location result
 
 ### thumbnail
 
-> **thumbnail**: [`thumbnail`](thumbnail-1.md) \| `null`
+> **thumbnail**: [`thumbnail`](thumbnail.md) \| `null`
 
 Result thumbnail in JPEG format; may be null
 
@@ -42,4 +42,4 @@ Title of the result
 
 ## Defined in
 
-dist/generated/types.d.ts:38385
+dist/generated/types.d.ts:39755

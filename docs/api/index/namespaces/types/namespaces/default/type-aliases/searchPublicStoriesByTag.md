@@ -6,7 +6,9 @@
 
 # Type Alias: searchPublicStoriesByTag()
 
-> **searchPublicStoriesByTag**: (`parameters`) => [`FoundStories`](FoundStories.md)
+> **searchPublicStoriesByTag**: (`parameters`) => [`FoundStories`](FoundStories-1.md)
+
+Searches for public stories containing the given hashtag or cashtag. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FoundStories`](FoundStories.md)
+[`FoundStories`](FoundStories-1.md)
 
-[FoundStories](FoundStories.md)
+[FoundStories](FoundStories-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76857
+dist/generated/types.d.ts:78883

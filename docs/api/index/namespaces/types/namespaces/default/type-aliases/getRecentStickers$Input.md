@@ -24,4 +24,4 @@ Pass true to return stickers and masks that were recently attached to photos or 
 
 ## Defined in
 
-dist/generated/types.d.ts:93126
+dist/generated/types.d.ts:95623

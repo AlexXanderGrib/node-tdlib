@@ -18,7 +18,7 @@ A document message (a general file)
 
 ### document
 
-> **document**: [`document`](document-1.md) \| `null`
+> **document**: [`document`](document.md) \| `null`
 
 Message content; may be null
 
@@ -30,4 +30,4 @@ True, if the message is a pinned message with the specified content
 
 ## Defined in
 
-dist/generated/types.d.ts:44271
+dist/generated/types.d.ts:45797

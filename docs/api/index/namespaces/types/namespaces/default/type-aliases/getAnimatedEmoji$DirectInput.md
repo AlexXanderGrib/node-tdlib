@@ -20,4 +20,4 @@ The emoji
 
 ## Defined in
 
-dist/generated/types.d.ts:93486
+dist/generated/types.d.ts:95983

@@ -20,16 +20,16 @@ An area pointing to a message
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat with the message. Currently, the chat must be a supergroup or a channel chat
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message. Only successfully sent non-scheduled messages can be specified
+Identifier of the message. Use messageProperties.can_be_shared_in_story to check whether the message is suitable
 
 ## Defined in
 
-dist/generated/types.d.ts:32237
+dist/generated/types.d.ts:33447

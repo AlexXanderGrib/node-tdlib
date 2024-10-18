@@ -22,12 +22,12 @@
 
 ## References
 
-### Markup
-
-Renames and re-exports [markup](namespaces/markup/README.md)
-
-***
-
 ### default
 
 Renames and re-exports [Client](classes/Client.md)
+
+***
+
+### Markup
+
+Renames and re-exports [markup](namespaces/markup/README.md)

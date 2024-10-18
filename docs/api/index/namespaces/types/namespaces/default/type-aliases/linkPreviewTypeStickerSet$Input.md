@@ -20,10 +20,10 @@ The link is a link to a sticker set
 
 ### stickers?
 
-> `readonly` `optional` **stickers**: [`vector$Input`](vector$Input.md)\<[`sticker$Input`](sticker$Input-1.md)\>
+> `readonly` `optional` **stickers**: [`vector$Input`](vector$Input.md)\<[`sticker$Input`](sticker$Input.md)\>
 
 Up to 4 stickers from the sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:21408
+dist/generated/types.d.ts:22158

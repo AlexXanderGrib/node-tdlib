@@ -6,7 +6,9 @@
 
 # Type Alias: toggleSupergroupJoinToSendMessages()
 
-> **toggleSupergroupJoinToSendMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleSupergroupJoinToSendMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether joining is mandatory to send messages to a discussion supergroup; requires can_restrict_members administrator right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96245
+dist/generated/types.d.ts:99024

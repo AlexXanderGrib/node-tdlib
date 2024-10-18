@@ -18,10 +18,10 @@ Number of Saved Messages topics has changed
 
 ### topic\_count
 
-> **topic\_count**: [`int32`](int32-1.md)
+> **topic\_count**: [`int32`](int32.md)
 
 Approximate total number of Saved Messages topics
 
 ## Defined in
 
-dist/generated/types.d.ts:54469
+dist/generated/types.d.ts:56085

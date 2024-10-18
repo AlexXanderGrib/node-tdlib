@@ -32,10 +32,10 @@ A custom title of the administrator; 0-16 characters without emoji; applicable t
 
 ### rights
 
-> **rights**: [`chatAdministratorRights`](chatAdministratorRights-1.md)
+> **rights**: [`chatAdministratorRights`](chatAdministratorRights.md)
 
 Rights of the administrator
 
 ## Defined in
 
-dist/generated/types.d.ts:9957
+dist/generated/types.d.ts:10447

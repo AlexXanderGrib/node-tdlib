@@ -20,4 +20,4 @@ The viewed premium feature
 
 ## Defined in
 
-dist/generated/types.d.ts:100516
+dist/generated/types.d.ts:103295

@@ -18,4 +18,4 @@ Returns current verbosity level of the internal logging of TDLib. Can be called 
 
 ## Defined in
 
-dist/generated/types.d.ts:101735
+dist/generated/types.d.ts:104656

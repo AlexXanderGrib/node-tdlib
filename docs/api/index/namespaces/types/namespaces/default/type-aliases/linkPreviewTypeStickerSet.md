@@ -18,10 +18,10 @@ The link is a link to a sticker set
 
 ### stickers
 
-> **stickers**: [`vector`](vector.md)\<[`sticker`](sticker-1.md)\>
+> **stickers**: [`vector`](vector.md)\<[`sticker`](sticker.md)\>
 
 Up to 4 stickers from the sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:21395
+dist/generated/types.d.ts:22145

@@ -6,7 +6,9 @@
 
 # Type Alias: applyPremiumGiftCode()
 
-> **applyPremiumGiftCode**: (`parameters`) => [`Ok`](Ok.md)
+> **applyPremiumGiftCode**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Applies a Telegram Premium gift code
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100647
+dist/generated/types.d.ts:103426

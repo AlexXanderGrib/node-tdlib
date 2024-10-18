@@ -28,4 +28,4 @@ Name of the link
 
 ## Defined in
 
-dist/generated/types.d.ts:47638
+dist/generated/types.d.ts:49164

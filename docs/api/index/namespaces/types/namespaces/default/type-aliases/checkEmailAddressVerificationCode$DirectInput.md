@@ -20,4 +20,4 @@ Verification code to check
 
 ## Defined in
 
-dist/generated/types.d.ts:99479
+dist/generated/types.d.ts:102258

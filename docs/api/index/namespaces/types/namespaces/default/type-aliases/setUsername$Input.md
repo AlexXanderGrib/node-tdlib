@@ -24,4 +24,4 @@ The new value of the username. Use an empty string to remove the username. The u
 
 ## Defined in
 
-dist/generated/types.d.ts:94056
+dist/generated/types.d.ts:96553

@@ -20,4 +20,4 @@ Resets the login email address. May return an error with a message "TASK_ALREADY
 
 ## Defined in
 
-dist/generated/types.d.ts:73495
+dist/generated/types.d.ts:75483

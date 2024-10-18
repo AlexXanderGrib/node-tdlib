@@ -6,7 +6,9 @@
 
 # Type Alias: disconnectAllWebsites()
 
-> **disconnectAllWebsites**: (`parameters`) => [`Ok`](Ok.md)
+> **disconnectAllWebsites**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Disconnects all websites from the current user's Telegram account
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95897
+dist/generated/types.d.ts:98666

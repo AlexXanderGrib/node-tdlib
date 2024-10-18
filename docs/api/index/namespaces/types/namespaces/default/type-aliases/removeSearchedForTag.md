@@ -6,7 +6,9 @@
 
 # Type Alias: removeSearchedForTag()
 
-> **removeSearchedForTag**: (`parameters`) => [`Ok`](Ok.md)
+> **removeSearchedForTag**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77029
+dist/generated/types.d.ts:79055

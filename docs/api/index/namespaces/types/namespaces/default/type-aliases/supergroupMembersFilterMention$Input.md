@@ -20,7 +20,7 @@ Returns users which can be mentioned in the supergroup
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 If non-zero, the identifier of the current message thread
 
@@ -32,4 +32,4 @@ Query to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:10437
+dist/generated/types.d.ts:10937

@@ -6,7 +6,9 @@
 
 # Type Alias: editBusinessMessageLiveLocation()
 
-> **editBusinessMessageLiveLocation**: (`parameters`) => [`BusinessMessage`](BusinessMessage.md)
+> **editBusinessMessageLiveLocation**: (`parameters`) => [`BusinessMessage`](BusinessMessage-1.md)
+
+Edits the content of a live location in a message sent on behalf of a business account; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessMessage`](BusinessMessage.md)
+[`BusinessMessage`](BusinessMessage-1.md)
 
-[BusinessMessage](BusinessMessage.md)
+[BusinessMessage](BusinessMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79856
+dist/generated/types.d.ts:81847

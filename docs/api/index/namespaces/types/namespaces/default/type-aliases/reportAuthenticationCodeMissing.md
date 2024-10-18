@@ -6,7 +6,9 @@
 
 # Type Alias: reportAuthenticationCodeMissing()
 
-> **reportAuthenticationCodeMissing**: (`parameters`) => [`Ok`](Ok.md)
+> **reportAuthenticationCodeMissing**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73689
+dist/generated/types.d.ts:75677

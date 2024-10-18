@@ -24,10 +24,10 @@ Author of the app
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md)
+> **photo**: [`photo`](photo.md)
 
 Photo for the app
 
 ## Defined in
 
-dist/generated/types.d.ts:20915
+dist/generated/types.d.ts:21541

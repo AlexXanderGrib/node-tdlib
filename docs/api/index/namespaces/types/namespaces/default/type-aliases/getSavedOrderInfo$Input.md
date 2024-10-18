@@ -18,4 +18,4 @@ Returns saved order information. Returns a 404 error if there is no saved order 
 
 ## Defined in
 
-dist/generated/types.d.ts:96964
+dist/generated/types.d.ts:99743

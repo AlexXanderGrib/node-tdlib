@@ -6,7 +6,9 @@
 
 # Type Alias: clearAllDraftMessages()
 
-> **clearAllDraftMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **clearAllDraftMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Clears message drafts in all chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86756
+dist/generated/types.d.ts:89055

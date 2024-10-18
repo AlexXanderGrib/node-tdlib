@@ -166,6 +166,10 @@
 
 > `readonly` **ProfileAccentColorChanged**: `"chatEventProfileAccentColorChanged"`
 
+### ShowMessageSenderToggled
+
+> `readonly` **ShowMessageSenderToggled**: `"chatEventShowMessageSenderToggled"`
+
 ### SignMessagesToggled
 
 > `readonly` **SignMessagesToggled**: `"chatEventSignMessagesToggled"`
@@ -208,4 +212,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1464
+dist/generated/types.d.ts:1491

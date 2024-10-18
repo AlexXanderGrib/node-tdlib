@@ -20,4 +20,4 @@ A Telegram Passport element containing the registration page of the user's passp
 
 ## Defined in
 
-dist/generated/types.d.ts:23919
+dist/generated/types.d.ts:24679

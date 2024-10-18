@@ -154,6 +154,10 @@
 
 > `readonly` **GiftedPremium**: `"messageGiftedPremium"`
 
+### GiftedStars
+
+> `readonly` **GiftedStars**: `"messageGiftedStars"`
+
 ### InviteVideoChatParticipants
 
 > `readonly` **InviteVideoChatParticipants**: `"messageInviteVideoChatParticipants"`
@@ -296,4 +300,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1806
+dist/generated/types.d.ts:1836

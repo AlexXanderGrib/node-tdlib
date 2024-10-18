@@ -20,4 +20,4 @@ The user heard their own voice
 
 ## Defined in
 
-dist/generated/types.d.ts:35739
+dist/generated/types.d.ts:37109

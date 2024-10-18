@@ -36,4 +36,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1697
+dist/generated/types.d.ts:1727

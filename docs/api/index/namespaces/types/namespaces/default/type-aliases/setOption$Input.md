@@ -30,4 +30,4 @@ The new value of the option; pass null to reset option value to a default value
 
 ## Defined in
 
-dist/generated/types.d.ts:97951
+dist/generated/types.d.ts:100730

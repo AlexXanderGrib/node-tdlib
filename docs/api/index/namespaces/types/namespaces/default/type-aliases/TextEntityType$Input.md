@@ -35,4 +35,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:62559
+dist/generated/types.d.ts:64314

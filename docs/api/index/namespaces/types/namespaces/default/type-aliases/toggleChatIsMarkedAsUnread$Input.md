@@ -18,7 +18,7 @@ Changes the marked as unread state of a chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ New value of is_marked_as_unread
 
 ## Defined in
 
-dist/generated/types.d.ts:85807
+dist/generated/types.d.ts:88106

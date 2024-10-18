@@ -18,10 +18,10 @@ A chat member was deleted
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 User identifier of the deleted chat member
 
 ## Defined in
 
-dist/generated/types.d.ts:27037
+dist/generated/types.d.ts:27797

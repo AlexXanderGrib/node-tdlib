@@ -38,7 +38,7 @@ The message reply markup; pass null if none. Must be of type replyMarkupInlineKe
 
 ### sticker\_height?
 
-> `readonly` `optional` **sticker\_height**: [`int32`](int32-1.md)
+> `readonly` `optional` **sticker\_height**: [`int32`](int32.md)
 
 Height of the sticker
 
@@ -50,7 +50,7 @@ The URL of the WEBP, TGS, or WEBM sticker (sticker file size must not exceed 5MB
 
 ### sticker\_width?
 
-> `readonly` `optional` **sticker\_width**: [`int32`](int32-1.md)
+> `readonly` `optional` **sticker\_width**: [`int32`](int32.md)
 
 Width of the sticker
 
@@ -62,4 +62,4 @@ URL of the sticker thumbnail, if it exists
 
 ## Defined in
 
-dist/generated/types.d.ts:37944
+dist/generated/types.d.ts:39314

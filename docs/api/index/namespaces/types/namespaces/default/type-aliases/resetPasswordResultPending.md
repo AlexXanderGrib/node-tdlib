@@ -18,10 +18,10 @@ The password reset request is pending
 
 ### pending\_reset\_date
 
-> **pending\_reset\_date**: [`int32`](int32-1.md)
+> **pending\_reset\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) after which the password can be reset immediately using resetPassword
 
 ## Defined in
 
-dist/generated/types.d.ts:44011
+dist/generated/types.d.ts:45537

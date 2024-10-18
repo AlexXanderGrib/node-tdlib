@@ -6,7 +6,9 @@
 
 # Type Alias: searchQuote()
 
-> **searchQuote**: (`parameters`) => [`FoundPosition`](FoundPosition.md)
+> **searchQuote**: (`parameters`) => [`FoundPosition`](FoundPosition-1.md)
+
+Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FoundPosition`](FoundPosition.md)
+[`FoundPosition`](FoundPosition-1.md)
 
-[FoundPosition](FoundPosition.md)
+[FoundPosition](FoundPosition-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81670
+dist/generated/types.d.ts:83863

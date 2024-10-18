@@ -6,7 +6,9 @@
 
 # Type Alias: getCountries()
 
-> **getCountries**: (`parameters`) => [`Countries`](Countries.md)
+> **getCountries**: (`parameters`) => [`Countries`](Countries-1.md)
+
+Returns information about existing countries. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Countries`](Countries.md)
+[`Countries`](Countries-1.md)
 
-[Countries](Countries.md)
+[Countries](Countries-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101161
+dist/generated/types.d.ts:104082

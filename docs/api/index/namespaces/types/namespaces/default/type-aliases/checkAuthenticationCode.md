@@ -6,7 +6,9 @@
 
 # Type Alias: checkAuthenticationCode()
 
-> **checkAuthenticationCode**: (`parameters`) => [`Ok`](Ok.md)
+> **checkAuthenticationCode**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks the authentication code. Works only when the current authorization state is authorizationStateWaitCode
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73407
+dist/generated/types.d.ts:75395

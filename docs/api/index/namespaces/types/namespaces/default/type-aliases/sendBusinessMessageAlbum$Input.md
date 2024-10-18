@@ -26,7 +26,7 @@ Unique identifier of business connection on behalf of which to send the request
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Target chat
 
@@ -38,7 +38,7 @@ Pass true to disable notification for the message
 
 ### effect\_id?
 
-> `readonly` `optional` **effect\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **effect\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the effect to apply to the message
 
@@ -62,4 +62,4 @@ Information about the message to be replied; pass null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:79598
+dist/generated/types.d.ts:81589

@@ -18,4 +18,4 @@ The link preview type is unsupported yet
 
 ## Defined in
 
-dist/generated/types.d.ts:21511
+dist/generated/types.d.ts:22261

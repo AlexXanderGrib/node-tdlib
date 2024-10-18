@@ -34,10 +34,10 @@ A custom title of the administrator; 0-16 characters without emoji; applicable t
 
 ### rights?
 
-> `readonly` `optional` **rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input-1.md)
+> `readonly` `optional` **rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input.md)
 
 Rights of the administrator
 
 ## Defined in
 
-dist/generated/types.d.ts:9982
+dist/generated/types.d.ts:10472

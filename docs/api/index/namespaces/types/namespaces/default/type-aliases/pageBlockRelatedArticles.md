@@ -18,7 +18,7 @@ Related articles
 
 ### articles
 
-> **articles**: [`vector`](vector.md)\<[`pageBlockRelatedArticle`](pageBlockRelatedArticle-1.md)\>
+> **articles**: [`vector`](vector.md)\<[`pageBlockRelatedArticle`](pageBlockRelatedArticle.md)\>
 
 List of related articles
 
@@ -30,4 +30,4 @@ Block header
 
 ## Defined in
 
-dist/generated/types.d.ts:20627
+dist/generated/types.d.ts:21253

@@ -6,7 +6,9 @@
 
 # Type Alias: removeChatActionBar()
 
-> **removeChatActionBar**: (`parameters`) => [`Ok`](Ok.md)
+> **removeChatActionBar**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a chat action bar without any other action
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98147
+dist/generated/types.d.ts:100926

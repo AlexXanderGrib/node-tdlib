@@ -20,10 +20,10 @@ The user is online
 
 ### expires?
 
-> `readonly` `optional` **expires**: [`int32`](int32-1.md)
+> `readonly` `optional` **expires**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the user's online status will expire
 
 ## Defined in
 
-dist/generated/types.d.ts:31000
+dist/generated/types.d.ts:32132

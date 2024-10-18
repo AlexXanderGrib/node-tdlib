@@ -26,4 +26,4 @@ Sticker file to add
 
 ## Defined in
 
-dist/generated/types.d.ts:93283
+dist/generated/types.d.ts:95780

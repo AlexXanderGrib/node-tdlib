@@ -18,7 +18,7 @@ Toggles whether new participants of a group call can be unmuted only by administ
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -30,4 +30,4 @@ New value of the mute_new_participants setting
 
 ## Defined in
 
-dist/generated/types.d.ts:91223
+dist/generated/types.d.ts:93720

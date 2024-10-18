@@ -6,7 +6,9 @@
 
 # Type Alias: getMapThumbnailFile()
 
-> **getMapThumbnailFile**: (`parameters`) => [`File`](File.md)
+> **getMapThumbnailFile**: (`parameters`) => [`File`](File-1.md)
+
+Returns information about a file with a map thumbnail in PNG format. Only map thumbnail files with size less than 1MB can be downloaded
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`File`](File.md)
+[`File`](File-1.md)
 
-[File](File.md)
+[File](File-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100428
+dist/generated/types.d.ts:103207

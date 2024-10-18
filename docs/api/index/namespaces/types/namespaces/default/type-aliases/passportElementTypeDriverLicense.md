@@ -18,4 +18,4 @@ A Telegram Passport element containing the user's driver license
 
 ## Defined in
 
-dist/generated/types.d.ts:23813
+dist/generated/types.d.ts:24573

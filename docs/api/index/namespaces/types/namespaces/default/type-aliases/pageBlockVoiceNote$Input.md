@@ -20,16 +20,16 @@ A voice note
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input-1.md)
+> `readonly` `optional` **caption**: [`pageBlockCaption$Input`](pageBlockCaption$Input.md)
 
 Voice note caption
 
 ### voice\_note?
 
-> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input-1.md) \| `null`
+> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input.md) \| `null`
 
 Voice note; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:20199
+dist/generated/types.d.ts:20825

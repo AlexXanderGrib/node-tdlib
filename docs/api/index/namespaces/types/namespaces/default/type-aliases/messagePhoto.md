@@ -18,7 +18,7 @@ A photo message
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md)
+> **caption**: [`formattedText`](formattedText.md)
 
 Photo caption
 
@@ -36,7 +36,7 @@ True, if the photo must be blurred and must be shown only while tapped
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md)
+> **photo**: [`photo`](photo.md)
 
 The photo
 
@@ -48,4 +48,4 @@ True, if the caption must be shown above the photo; otherwise, the caption must 
 
 ## Defined in
 
-dist/generated/types.d.ts:25993
+dist/generated/types.d.ts:26753

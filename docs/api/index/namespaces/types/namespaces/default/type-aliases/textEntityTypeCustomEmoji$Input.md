@@ -20,10 +20,10 @@ A custom emoji. The text behind a custom emoji must be an emoji. Only premium us
 
 ### custom\_emoji\_id?
 
-> `readonly` `optional` **custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 Unique identifier of the custom emoji
 
 ## Defined in
 
-dist/generated/types.d.ts:28800
+dist/generated/types.d.ts:29674

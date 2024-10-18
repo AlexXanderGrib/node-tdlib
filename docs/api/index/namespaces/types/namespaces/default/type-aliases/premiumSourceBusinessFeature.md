@@ -24,4 +24,4 @@ The used feature; pass null if none specific feature was used
 
 ## Defined in
 
-dist/generated/types.d.ts:42273
+dist/generated/types.d.ts:43667

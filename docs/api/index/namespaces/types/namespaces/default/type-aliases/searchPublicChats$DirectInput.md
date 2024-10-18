@@ -22,4 +22,4 @@ Query to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:75117
+dist/generated/types.d.ts:77143

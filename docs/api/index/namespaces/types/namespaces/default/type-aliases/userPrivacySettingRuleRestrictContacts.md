@@ -18,4 +18,4 @@ A rule to restrict all contacts of the user from doing something
 
 ## Defined in
 
-dist/generated/types.d.ts:46083
+dist/generated/types.d.ts:47609

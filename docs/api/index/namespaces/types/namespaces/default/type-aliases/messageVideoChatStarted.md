@@ -18,10 +18,10 @@ A newly created video chat
 
 ### group\_call\_id
 
-> **group\_call\_id**: [`int32`](int32-1.md)
+> **group\_call\_id**: [`int32`](int32.md)
 
 Identifier of the video chat. The video chat can be received through the method getGroupCall
 
 ## Defined in
 
-dist/generated/types.d.ts:26783
+dist/generated/types.d.ts:27543

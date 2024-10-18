@@ -18,10 +18,10 @@ The list of saved animations was updated
 
 ### animation\_ids
 
-> **animation\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **animation\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 The new list of file identifiers of saved animations
 
 ## Defined in
 
-dist/generated/types.d.ts:56251
+dist/generated/types.d.ts:57867

@@ -18,10 +18,10 @@ Returns information about a newest pinned message in the chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat the message belongs to
 
 ## Defined in
 
-dist/generated/types.d.ts:74698
+dist/generated/types.d.ts:76686

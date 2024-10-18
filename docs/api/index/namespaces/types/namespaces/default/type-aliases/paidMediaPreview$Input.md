@@ -20,28 +20,28 @@ The media is hidden until the invoice is paid
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Media duration, in seconds; 0 if unknown
 
 ### height?
 
-> `readonly` `optional` **height**: [`int32`](int32-1.md)
+> `readonly` `optional` **height**: [`int32`](int32.md)
 
 Media height; 0 if unknown
 
 ### minithumbnail?
 
-> `readonly` `optional` **minithumbnail**: [`minithumbnail$Input`](minithumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **minithumbnail**: [`minithumbnail$Input`](minithumbnail$Input.md) \| `null`
 
 Media minithumbnail; may be null
 
 ### width?
 
-> `readonly` `optional` **width**: [`int32`](int32-1.md)
+> `readonly` `optional` **width**: [`int32`](int32.md)
 
 Media width; 0 if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:23571
+dist/generated/types.d.ts:24331

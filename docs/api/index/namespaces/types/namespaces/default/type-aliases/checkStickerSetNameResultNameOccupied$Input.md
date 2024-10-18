@@ -20,4 +20,4 @@ The name is occupied
 
 ## Defined in
 
-dist/generated/types.d.ts:43991
+dist/generated/types.d.ts:45517

@@ -18,10 +18,10 @@ A Telegram Passport element to be saved containing the user's temporary registra
 
 ### temporary\_registration
 
-> **temporary\_registration**: [`inputPersonalDocument`](inputPersonalDocument-1.md)
+> **temporary\_registration**: [`inputPersonalDocument`](inputPersonalDocument.md)
 
 The temporary registration document to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24893
+dist/generated/types.d.ts:25653

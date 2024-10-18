@@ -6,7 +6,9 @@
 
 # Type Alias: pingProxy()
 
-> **pingProxy**: (`parameters`) => [`Seconds`](Seconds.md)
+> **pingProxy**: (`parameters`) => [`Seconds`](Seconds-1.md)
+
+Computes time needed to receive a response from a Telegram server through a proxy. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Seconds`](Seconds.md)
+[`Seconds`](Seconds-1.md)
 
-[Seconds](Seconds.md)
+[Seconds](Seconds-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101654
+dist/generated/types.d.ts:104575

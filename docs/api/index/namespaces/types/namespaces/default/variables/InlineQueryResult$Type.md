@@ -60,4 +60,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1527
+dist/generated/types.d.ts:1555

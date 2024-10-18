@@ -18,10 +18,10 @@ The file contains an error. The error will be considered resolved when the file 
 
 ### file\_index
 
-> **file\_index**: [`int32`](int32-1.md)
+> **file\_index**: [`int32`](int32.md)
 
 Index of a file with the error
 
 ## Defined in
 
-dist/generated/types.d.ts:25107
+dist/generated/types.d.ts:25867

@@ -20,4 +20,4 @@ The session is running on an iPad device
 
 ## Defined in
 
-dist/generated/types.d.ts:46553
+dist/generated/types.d.ts:48079

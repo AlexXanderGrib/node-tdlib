@@ -14,7 +14,7 @@ Toggles whether current user's video is paused
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -26,4 +26,4 @@ Pass true if the current user's video is paused
 
 ## Defined in
 
-dist/generated/types.d.ts:91467
+dist/generated/types.d.ts:93964

@@ -6,7 +6,9 @@
 
 # Type Alias: searchSecretMessages()
 
-> **searchSecretMessages**: (`parameters`) => [`FoundMessages`](FoundMessages.md)
+> **searchSecretMessages**: (`parameters`) => [`FoundMessages`](FoundMessages-1.md)
+
+Searches for messages in secret chats. Returns the results in reverse chronological order. For optimal performance, the number of returned messages is chosen by TDLib
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FoundMessages`](FoundMessages.md)
+[`FoundMessages`](FoundMessages-1.md)
 
-[FoundMessages](FoundMessages.md)
+[FoundMessages](FoundMessages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76581
+dist/generated/types.d.ts:78607

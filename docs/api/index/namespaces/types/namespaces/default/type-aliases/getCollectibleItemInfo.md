@@ -6,7 +6,9 @@
 
 # Type Alias: getCollectibleItemInfo()
 
-> **getCollectibleItemInfo**: (`parameters`) => [`CollectibleItemInfo`](CollectibleItemInfo.md)
+> **getCollectibleItemInfo**: (`parameters`) => [`CollectibleItemInfo`](CollectibleItemInfo-1.md)
+
+Returns information about a given collectible item that was purchased at https://fragment.com
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`CollectibleItemInfo`](CollectibleItemInfo.md)
+[`CollectibleItemInfo`](CollectibleItemInfo-1.md)
 
-[CollectibleItemInfo](CollectibleItemInfo.md)
+[CollectibleItemInfo](CollectibleItemInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101272
+dist/generated/types.d.ts:104193

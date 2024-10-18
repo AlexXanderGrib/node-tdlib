@@ -18,4 +18,4 @@ A privacy setting for managing whether a link to the user's account is included 
 
 ## Defined in
 
-dist/generated/types.d.ts:46197
+dist/generated/types.d.ts:47723

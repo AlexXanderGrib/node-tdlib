@@ -6,7 +6,9 @@
 
 # Type Alias: getPremiumStickers()
 
-> **getPremiumStickers**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getPremiumStickers**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns premium stickers from regular sticker sets
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92714
+dist/generated/types.d.ts:95211

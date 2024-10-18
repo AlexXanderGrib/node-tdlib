@@ -20,9 +20,21 @@ Re-exports [inlineKeyboard](../index/namespaces/markup/functions/inlineKeyboard.
 
 ***
 
+### InlineKeyboardBuilder
+
+Re-exports [InlineKeyboardBuilder](../index/namespaces/markup/classes/InlineKeyboardBuilder.md)
+
+***
+
 ### keyboard
 
 Re-exports [keyboard](../index/namespaces/markup/functions/keyboard.md)
+
+***
+
+### KeyboardBuilder
+
+Re-exports [KeyboardBuilder](../index/namespaces/markup/classes/KeyboardBuilder.md)
 
 ***
 

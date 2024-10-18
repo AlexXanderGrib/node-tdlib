@@ -6,7 +6,9 @@
 
 # Type Alias: getPhoneNumberInfo()
 
-> **getPhoneNumberInfo**: (`parameters`) => [`PhoneNumberInfo`](PhoneNumberInfo.md)
+> **getPhoneNumberInfo**: (`parameters`) => [`PhoneNumberInfo`](PhoneNumberInfo-1.md)
+
+Returns information about a phone number by its prefix. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PhoneNumberInfo`](PhoneNumberInfo.md)
+[`PhoneNumberInfo`](PhoneNumberInfo-1.md)
 
-[PhoneNumberInfo](PhoneNumberInfo.md)
+[PhoneNumberInfo](PhoneNumberInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101206
+dist/generated/types.d.ts:104127

@@ -6,7 +6,9 @@
 
 # Type Alias: getSupportName()
 
-> **getSupportName**: (`parameters`) => [`Text`](Text.md)
+> **getSupportName**: (`parameters`) => [`Text`](Text-1.md)
+
+Returns localized name of the Telegram support user; for Telegram support only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101952
+dist/generated/types.d.ts:104873

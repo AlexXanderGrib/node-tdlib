@@ -6,7 +6,9 @@
 
 # Type Alias: setChatLocation()
 
-> **setChatLocation**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatLocation**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86073
+dist/generated/types.d.ts:88372

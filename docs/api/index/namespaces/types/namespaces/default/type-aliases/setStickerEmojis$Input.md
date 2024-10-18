@@ -30,4 +30,4 @@ Sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:100202
+dist/generated/types.d.ts:102981

@@ -6,7 +6,9 @@
 
 # Type Alias: removeSavedAnimation()
 
-> **removeSavedAnimation**: (`parameters`) => [`Ok`](Ok.md)
+> **removeSavedAnimation**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes an animation from the list of saved animations
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93685
+dist/generated/types.d.ts:96182

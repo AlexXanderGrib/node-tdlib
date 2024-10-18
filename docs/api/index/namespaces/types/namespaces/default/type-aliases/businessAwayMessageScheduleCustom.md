@@ -18,16 +18,16 @@ Send away messages only in the specified time span
 
 ### end\_date
 
-> **end\_date**: [`int32`](int32-1.md)
+> **end\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the away messages will stop to be sent
 
 ### start\_date
 
-> **start\_date**: [`int32`](int32-1.md)
+> **start\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the away messages will start to be sent
 
 ## Defined in
 
-dist/generated/types.d.ts:6531
+dist/generated/types.d.ts:6597

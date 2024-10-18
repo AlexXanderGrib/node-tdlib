@@ -18,10 +18,10 @@ New call was created or information about a call was updated
 
 ### call
 
-> **call**: [`call`](call-1.md)
+> **call**: [`call`](call.md)
 
 New data about a call
 
 ## Defined in
 
-dist/generated/types.d.ts:55571
+dist/generated/types.d.ts:57187

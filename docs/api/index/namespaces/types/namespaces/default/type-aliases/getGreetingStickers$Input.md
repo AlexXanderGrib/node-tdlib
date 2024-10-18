@@ -18,4 +18,4 @@ Returns greeting stickers from regular sticker sets that can be used for the sta
 
 ## Defined in
 
-dist/generated/types.d.ts:92673
+dist/generated/types.d.ts:95170

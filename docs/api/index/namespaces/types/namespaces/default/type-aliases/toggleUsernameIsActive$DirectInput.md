@@ -26,4 +26,4 @@ The username to change
 
 ## Defined in
 
-dist/generated/types.d.ts:94100
+dist/generated/types.d.ts:96597

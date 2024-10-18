@@ -6,7 +6,9 @@
 
 # Type Alias: getChatAdministrators()
 
-> **getChatAdministrators**: (`parameters`) => [`ChatAdministrators`](ChatAdministrators.md)
+> **getChatAdministrators**: (`parameters`) => [`ChatAdministrators`](ChatAdministrators-1.md)
+
+Returns a list of administrators of the chat with their custom titles
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatAdministrators`](ChatAdministrators.md)
+[`ChatAdministrators`](ChatAdministrators-1.md)
 
-[ChatAdministrators](ChatAdministrators.md)
+[ChatAdministrators](ChatAdministrators-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86728
+dist/generated/types.d.ts:89027

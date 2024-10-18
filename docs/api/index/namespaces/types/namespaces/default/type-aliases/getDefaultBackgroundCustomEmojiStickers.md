@@ -6,7 +6,9 @@
 
 # Type Alias: getDefaultBackgroundCustomEmojiStickers()
 
-> **getDefaultBackgroundCustomEmojiStickers**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getDefaultBackgroundCustomEmojiStickers**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns default list of custom emoji stickers for reply background
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93606
+dist/generated/types.d.ts:96103

@@ -18,16 +18,16 @@ The list of available message effects has changed
 
 ### reaction\_effect\_ids
 
-> **reaction\_effect\_ids**: [`vector`](vector.md)\<[`int64`](int64-1.md)\>
+> **reaction\_effect\_ids**: [`vector`](vector.md)\<[`int64`](int64.md)\>
 
 The new list of available message effects from emoji reactions
 
 ### sticker\_effect\_ids
 
-> **sticker\_effect\_ids**: [`vector`](vector.md)\<[`int64`](int64-1.md)\>
+> **sticker\_effect\_ids**: [`vector`](vector.md)\<[`int64`](int64.md)\>
 
 The new list of available message effects from Premium stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:56651
+dist/generated/types.d.ts:58267

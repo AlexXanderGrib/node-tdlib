@@ -90,6 +90,8 @@ dist/client.d.ts:68
 
 > `private` **\_thread**: `any`
 
+#### Returns
+
 #### Memberof
 
 Client

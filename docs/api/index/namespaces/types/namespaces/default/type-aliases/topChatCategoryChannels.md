@@ -18,4 +18,4 @@ A category containing frequently used channels
 
 ## Defined in
 
-dist/generated/types.d.ts:50099
+dist/generated/types.d.ts:51683

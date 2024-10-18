@@ -20,7 +20,7 @@ The link is a link to an audio
 
 ### audio?
 
-> `readonly` `optional` **audio**: [`audio$Input`](audio$Input-1.md) \| `null`
+> `readonly` `optional` **audio**: [`audio$Input`](audio$Input.md) \| `null`
 
 The audio description; may be null if unknown
 
@@ -32,7 +32,7 @@ Author of the audio
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Duration of the audio, in seconds; 0 if unknown
 
@@ -50,4 +50,4 @@ URL of the audio; may be empty if none
 
 ## Defined in
 
-dist/generated/types.d.ts:21016
+dist/generated/types.d.ts:21642

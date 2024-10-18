@@ -20,7 +20,7 @@ Some privacy setting rules have been changed
 
 ### rules?
 
-> `readonly` `optional` **rules**: [`userPrivacySettingRules$Input`](userPrivacySettingRules$Input-1.md)
+> `readonly` `optional` **rules**: [`userPrivacySettingRules$Input`](userPrivacySettingRules$Input.md)
 
 New privacy rules
 
@@ -32,4 +32,4 @@ The privacy setting
 
 ## Defined in
 
-dist/generated/types.d.ts:55705
+dist/generated/types.d.ts:57321

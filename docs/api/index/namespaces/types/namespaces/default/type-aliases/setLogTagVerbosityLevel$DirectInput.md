@@ -14,7 +14,7 @@ Sets the verbosity level for a specified TDLib internal log tag. Can be called s
 
 ### new\_verbosity\_level?
 
-> `readonly` `optional` **new\_verbosity\_level**: [`int32`](int32-1.md)
+> `readonly` `optional` **new\_verbosity\_level**: [`int32`](int32.md)
 
 New verbosity level; 1-1024
 
@@ -26,4 +26,4 @@ Logging tag to change verbosity level
 
 ## Defined in
 
-dist/generated/types.d.ts:101785
+dist/generated/types.d.ts:104706

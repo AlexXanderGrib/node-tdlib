@@ -6,12 +6,12 @@
 
 # Type Alias: Int53$Input
 
-> **Int53$Input**: [`int53`](int53-1.md)
+> **Int53$Input**: [`int53`](int53.md)
 
-Version of [Int53](Int53.md) for method parameters.
+Version of [Int53](Int53-1.md) for method parameters.
 Any of:
-- [int53](int53-1.md)
+- [int53](int53.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:58577
+dist/generated/types.d.ts:60217

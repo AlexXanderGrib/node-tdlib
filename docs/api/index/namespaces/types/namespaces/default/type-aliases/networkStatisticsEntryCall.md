@@ -18,7 +18,7 @@ Contains information about the total amount of data that was used for calls
 
 ### duration
 
-> **duration**: [`double`](double-1.md)
+> **duration**: [`double`](double.md)
 
 Total call duration, in seconds
 
@@ -30,16 +30,16 @@ Type of the network the data was sent through. Call setNetworkType to maintain t
 
 ### received\_bytes
 
-> **received\_bytes**: [`int53`](int53-1.md)
+> **received\_bytes**: [`int53`](int53.md)
 
 Total number of bytes received
 
 ### sent\_bytes
 
-> **sent\_bytes**: [`int53`](int53-1.md)
+> **sent\_bytes**: [`int53`](int53.md)
 
 Total number of bytes sent
 
 ## Defined in
 
-dist/generated/types.d.ts:49553
+dist/generated/types.d.ts:51137

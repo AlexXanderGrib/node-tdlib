@@ -20,4 +20,4 @@ Current mobile network code
 
 ## Defined in
 
-dist/generated/types.d.ts:73676
+dist/generated/types.d.ts:75664

@@ -18,10 +18,10 @@ The list of users nearby has changed. The update is guaranteed to be sent only 6
 
 ### users\_nearby
 
-> **users\_nearby**: [`vector`](vector.md)\<[`chatNearby`](chatNearby-1.md)\>
+> **users\_nearby**: [`vector`](vector.md)\<[`chatNearby`](chatNearby.md)\>
 
 The new list of users nearby
 
 ## Defined in
 
-dist/generated/types.d.ts:56531
+dist/generated/types.d.ts:58147

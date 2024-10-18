@@ -6,7 +6,9 @@
 
 # Type Alias: banChatMember()
 
-> **banChatMember**: (`parameters`) => [`Ok`](Ok.md)
+> **banChatMember**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86539
+dist/generated/types.d.ts:88838

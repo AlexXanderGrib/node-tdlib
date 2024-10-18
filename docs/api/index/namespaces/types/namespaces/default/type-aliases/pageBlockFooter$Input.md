@@ -26,4 +26,4 @@ Footer
 
 ## Defined in
 
-dist/generated/types.d.ts:19864
+dist/generated/types.d.ts:20490

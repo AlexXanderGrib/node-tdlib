@@ -6,7 +6,9 @@
 
 # Type Alias: setMessageReactions()
 
-> **setMessageReactions**: (`parameters`) => [`Ok`](Ok.md)
+> **setMessageReactions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets reactions on a message; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81432
+dist/generated/types.d.ts:83625

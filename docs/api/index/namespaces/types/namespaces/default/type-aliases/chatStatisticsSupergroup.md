@@ -48,7 +48,7 @@ A graph containing distribution of active users per language
 
 ### member\_count
 
-> **member\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **member\_count**: [`statisticalValue`](statisticalValue.md)
 
 Number of members in the chat
 
@@ -66,43 +66,43 @@ A graph containing distribution of sent messages by content type
 
 ### message\_count
 
-> **message\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **message\_count**: [`statisticalValue`](statisticalValue.md)
 
 Number of messages sent to the chat
 
 ### period
 
-> **period**: [`dateRange`](dateRange-1.md)
+> **period**: [`dateRange`](dateRange.md)
 
 A period to which the statistics applies
 
 ### sender\_count
 
-> **sender\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **sender\_count**: [`statisticalValue`](statisticalValue.md)
 
 Number of users who sent messages to the chat
 
 ### top\_administrators
 
-> **top\_administrators**: [`vector`](vector.md)\<[`chatStatisticsAdministratorActionsInfo`](chatStatisticsAdministratorActionsInfo-1.md)\>
+> **top\_administrators**: [`vector`](vector.md)\<[`chatStatisticsAdministratorActionsInfo`](chatStatisticsAdministratorActionsInfo.md)\>
 
 List of most active administrators in the last week
 
 ### top\_inviters
 
-> **top\_inviters**: [`vector`](vector.md)\<[`chatStatisticsInviterInfo`](chatStatisticsInviterInfo-1.md)\>
+> **top\_inviters**: [`vector`](vector.md)\<[`chatStatisticsInviterInfo`](chatStatisticsInviterInfo.md)\>
 
 List of most active inviters of new members in the last week
 
 ### top\_senders
 
-> **top\_senders**: [`vector`](vector.md)\<[`chatStatisticsMessageSenderInfo`](chatStatisticsMessageSenderInfo-1.md)\>
+> **top\_senders**: [`vector`](vector.md)\<[`chatStatisticsMessageSenderInfo`](chatStatisticsMessageSenderInfo.md)\>
 
 List of users sent most messages in the last week
 
 ### viewer\_count
 
-> **viewer\_count**: [`statisticalValue`](statisticalValue-1.md)
+> **viewer\_count**: [`statisticalValue`](statisticalValue.md)
 
 Number of users who viewed messages in the chat
 
@@ -114,4 +114,4 @@ A graph containing distribution of message views per day of week
 
 ## Defined in
 
-dist/generated/types.d.ts:51395
+dist/generated/types.d.ts:53011

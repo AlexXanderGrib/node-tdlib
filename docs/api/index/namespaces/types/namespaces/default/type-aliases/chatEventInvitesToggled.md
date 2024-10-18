@@ -24,4 +24,4 @@ New value of can_invite_users permission
 
 ## Defined in
 
-dist/generated/types.d.ts:40189
+dist/generated/types.d.ts:41559

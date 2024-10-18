@@ -6,7 +6,9 @@
 
 # Type Alias: checkLoginEmailAddressCode()
 
-> **checkLoginEmailAddressCode**: (`parameters`) => [`Ok`](Ok.md)
+> **checkLoginEmailAddressCode**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks the login email address authentication
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74011
+dist/generated/types.d.ts:75999

@@ -20,4 +20,4 @@ The link is a link to an invoice
 
 ## Defined in
 
-dist/generated/types.d.ts:21289
+dist/generated/types.d.ts:22039

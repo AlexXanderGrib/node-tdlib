@@ -22,4 +22,4 @@ The link can be used to login the current user on another device, but it must be
 
 ## Defined in
 
-dist/generated/types.d.ts:48291
+dist/generated/types.d.ts:49921

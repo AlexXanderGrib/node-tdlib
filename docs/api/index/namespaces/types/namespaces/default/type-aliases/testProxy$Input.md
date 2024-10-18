@@ -18,13 +18,13 @@ Sends a simple network request to the Telegram servers via proxy; for testing on
 
 ### dc\_id?
 
-> `readonly` `optional` **dc\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **dc\_id**: [`int32`](int32.md)
 
 Identifier of a datacenter with which to test connection
 
 ### port?
 
-> `readonly` `optional` **port**: [`int32`](int32-1.md)
+> `readonly` `optional` **port**: [`int32`](int32.md)
 
 Proxy server port
 
@@ -36,7 +36,7 @@ Proxy server domain or IP address
 
 ### timeout?
 
-> `readonly` `optional` **timeout**: [`double`](double-1.md)
+> `readonly` `optional` **timeout**: [`double`](double.md)
 
 The maximum overall timeout for the request
 
@@ -48,4 +48,4 @@ Proxy type
 
 ## Defined in
 
-dist/generated/types.d.ts:102186
+dist/generated/types.d.ts:105107

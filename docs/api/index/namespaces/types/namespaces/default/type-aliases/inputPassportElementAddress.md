@@ -18,10 +18,10 @@ A Telegram Passport element to be saved containing the user's address
 
 ### address
 
-> **address**: [`address`](address-1.md)
+> **address**: [`address`](address.md)
 
 The address to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24773
+dist/generated/types.d.ts:25533

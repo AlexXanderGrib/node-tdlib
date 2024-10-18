@@ -18,22 +18,22 @@ A small image inside the text
 
 ### document
 
-> **document**: [`document`](document-1.md)
+> **document**: [`document`](document.md)
 
 The image represented as a document. The image can be in GIF, JPEG or PNG format
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
 Height of a bounding box in which the image must be shown; 0 if unknown
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
 Width of a bounding box in which the image must be shown; 0 if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:19159
+dist/generated/types.d.ts:19785

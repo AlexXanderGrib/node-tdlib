@@ -20,4 +20,4 @@ A Telegram Passport element containing the user's personal details
 
 ## Defined in
 
-dist/generated/types.d.ts:23793
+dist/generated/types.d.ts:24553

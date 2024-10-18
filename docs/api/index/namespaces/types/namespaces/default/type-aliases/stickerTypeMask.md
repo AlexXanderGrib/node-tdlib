@@ -18,4 +18,4 @@ The sticker is a mask in WEBP format to be placed on photos or videos
 
 ## Defined in
 
-dist/generated/types.d.ts:4427
+dist/generated/types.d.ts:4473

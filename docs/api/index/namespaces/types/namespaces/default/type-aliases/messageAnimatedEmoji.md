@@ -18,7 +18,7 @@ A message with an animated emoji
 
 ### animated\_emoji
 
-> **animated\_emoji**: [`animatedEmoji`](animatedEmoji-1.md)
+> **animated\_emoji**: [`animatedEmoji`](animatedEmoji.md)
 
 The animated emoji
 
@@ -30,4 +30,4 @@ The corresponding emoji
 
 ## Defined in
 
-dist/generated/types.d.ts:26411
+dist/generated/types.d.ts:27171

@@ -20,16 +20,16 @@ The list of quick reply shortcut messages has changed
 
 ### messages?
 
-> `readonly` `optional` **messages**: [`vector$Input`](vector$Input.md)\<[`quickReplyMessage$Input`](quickReplyMessage$Input-1.md)\>
+> `readonly` `optional` **messages**: [`vector$Input`](vector$Input.md)\<[`quickReplyMessage$Input`](quickReplyMessage$Input.md)\>
 
 The new list of quick reply messages for the shortcut in order from the first to the last sent
 
 ### shortcut\_id?
 
-> `readonly` `optional` **shortcut\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **shortcut\_id**: [`int32`](int32.md)
 
 The identifier of the shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:54583
+dist/generated/types.d.ts:56199

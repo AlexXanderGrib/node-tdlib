@@ -18,7 +18,7 @@ Changes the ability of users to save, forward, or copy chat content. Supported o
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ New value of has_protected_content
 
 ## Defined in
 
-dist/generated/types.d.ts:85693
+dist/generated/types.d.ts:87992

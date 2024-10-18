@@ -20,4 +20,4 @@ A Telegram Passport element containing the user's internal passport
 
 ## Defined in
 
-dist/generated/types.d.ts:23849
+dist/generated/types.d.ts:24609

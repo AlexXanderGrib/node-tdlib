@@ -20,10 +20,10 @@ A message with information about a venue
 
 ### venue?
 
-> `readonly` `optional` **venue**: [`venue$Input`](venue$Input-1.md)
+> `readonly` `optional` **venue**: [`venue$Input`](venue$Input.md)
 
 Venue to send
 
 ## Defined in
 
-dist/generated/types.d.ts:30046
+dist/generated/types.d.ts:30920

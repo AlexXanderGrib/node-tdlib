@@ -32,4 +32,4 @@ Background type; pass null to use the default type of the remote background; bac
 
 ## Defined in
 
-dist/generated/types.d.ts:97185
+dist/generated/types.d.ts:99964

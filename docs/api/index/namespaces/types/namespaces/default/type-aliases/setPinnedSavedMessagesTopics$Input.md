@@ -18,10 +18,10 @@ Changes the order of pinned Saved Messages topics
 
 ### saved\_messages\_topic\_ids?
 
-> `readonly` `optional` **saved\_messages\_topic\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **saved\_messages\_topic\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the new pinned Saved Messages topics
 
 ## Defined in
 
-dist/generated/types.d.ts:75975
+dist/generated/types.d.ts:78001

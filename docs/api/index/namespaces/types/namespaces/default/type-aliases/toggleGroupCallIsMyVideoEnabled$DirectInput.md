@@ -14,7 +14,7 @@ Toggles whether current user's video is enabled
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -26,4 +26,4 @@ Pass true if the current user's video is enabled
 
 ## Defined in
 
-dist/generated/types.d.ts:91505
+dist/generated/types.d.ts:94002

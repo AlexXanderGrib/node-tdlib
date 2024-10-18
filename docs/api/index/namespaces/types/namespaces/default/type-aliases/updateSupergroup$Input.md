@@ -20,10 +20,10 @@ Some data of a supergroup or a channel has changed. This update is guaranteed to
 
 ### supergroup?
 
-> `readonly` `optional` **supergroup**: [`supergroup$Input`](supergroup$Input-1.md)
+> `readonly` `optional` **supergroup**: [`supergroup$Input`](supergroup$Input.md)
 
 New data about the supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:55080
+dist/generated/types.d.ts:56696

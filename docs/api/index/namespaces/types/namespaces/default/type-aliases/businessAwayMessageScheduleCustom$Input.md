@@ -20,16 +20,16 @@ Send away messages only in the specified time span
 
 ### end\_date?
 
-> `readonly` `optional` **end\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **end\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the away messages will stop to be sent
 
 ### start\_date?
 
-> `readonly` `optional` **start\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **start\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the away messages will start to be sent
 
 ## Defined in
 
-dist/generated/types.d.ts:6549
+dist/generated/types.d.ts:6615

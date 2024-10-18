@@ -18,10 +18,10 @@ The link is a link to a video note message
 
 ### video\_note
 
-> **video\_note**: [`videoNote`](videoNote-1.md)
+> **video\_note**: [`videoNote`](videoNote.md)
 
 The video note
 
 ## Defined in
 
-dist/generated/types.d.ts:21677
+dist/generated/types.d.ts:22427

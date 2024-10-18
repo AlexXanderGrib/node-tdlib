@@ -24,16 +24,16 @@ JSON-serialized query data
 
 ### id
 
-> **id**: [`int64`](int64-1.md)
+> **id**: [`int64`](int64.md)
 
 The query identifier
 
 ### timeout
 
-> **timeout**: [`int32`](int32-1.md)
+> **timeout**: [`int32`](int32.md)
 
 Query timeout
 
 ## Defined in
 
-dist/generated/types.d.ts:57759
+dist/generated/types.d.ts:59399

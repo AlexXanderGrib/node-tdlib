@@ -20,16 +20,16 @@ A video story
 
 ### alternative\_video?
 
-> `readonly` `optional` **alternative\_video**: [`storyVideo$Input`](storyVideo$Input-1.md) \| `null`
+> `readonly` `optional` **alternative\_video**: [`storyVideo$Input`](storyVideo$Input.md) \| `null`
 
 Alternative version of the video in MPEG4 format, encoded by x264 codec; may be null
 
 ### video?
 
-> `readonly` `optional` **video**: [`storyVideo$Input`](storyVideo$Input-1.md)
+> `readonly` `optional` **video**: [`storyVideo$Input`](storyVideo$Input.md)
 
 The video in MPEG4 format
 
 ## Defined in
 
-dist/generated/types.d.ts:32497
+dist/generated/types.d.ts:33765

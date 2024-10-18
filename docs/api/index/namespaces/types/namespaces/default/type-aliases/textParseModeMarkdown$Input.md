@@ -20,10 +20,10 @@ The text uses Markdown-style formatting
 
 ### version?
 
-> `readonly` `optional` **version**: [`int32`](int32-1.md)
+> `readonly` `optional` **version**: [`int32`](int32.md)
 
 Version of the parser: 0 or 1 - Telegram Bot API "Markdown" parse mode, 2 - Telegram Bot API "MarkdownV2" parse mode
 
 ## Defined in
 
-dist/generated/types.d.ts:50708
+dist/generated/types.d.ts:52324

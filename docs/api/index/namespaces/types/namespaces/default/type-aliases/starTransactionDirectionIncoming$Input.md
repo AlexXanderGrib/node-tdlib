@@ -10,7 +10,7 @@
 
 Version of [starTransactionDirectionIncoming](starTransactionDirectionIncoming.md) for method parameters.
 
-The transaction is incoming and increases the number of owned Telegram stars
+The transaction is incoming and increases the number of owned Telegram Stars
 
 ## Type declaration
 
@@ -20,4 +20,4 @@ The transaction is incoming and increases the number of owned Telegram stars
 
 ## Defined in
 
-dist/generated/types.d.ts:8353
+dist/generated/types.d.ts:8601

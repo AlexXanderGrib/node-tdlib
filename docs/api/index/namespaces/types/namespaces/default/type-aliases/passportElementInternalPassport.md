@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's internal passport
 
 ### internal\_passport
 
-> **internal\_passport**: [`identityDocument`](identityDocument-1.md)
+> **internal\_passport**: [`identityDocument`](identityDocument.md)
 
 Internal passport
 
 ## Defined in
 
-dist/generated/types.d.ts:24437
+dist/generated/types.d.ts:25197

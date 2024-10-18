@@ -24,16 +24,16 @@ An error message, empty on success
 
 ### shipping\_options?
 
-> `readonly` `optional` **shipping\_options**: [`vector$Input`](vector$Input.md)\<[`shippingOption$Input`](shippingOption$Input-1.md)\>
+> `readonly` `optional` **shipping\_options**: [`vector$Input`](vector$Input.md)\<[`shippingOption$Input`](shippingOption$Input.md)\>
 
 Available shipping options
 
 ### shipping\_query\_id?
 
-> `readonly` `optional` **shipping\_query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **shipping\_query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the shipping query
 
 ## Defined in
 
-dist/generated/types.d.ts:83203
+dist/generated/types.d.ts:85502

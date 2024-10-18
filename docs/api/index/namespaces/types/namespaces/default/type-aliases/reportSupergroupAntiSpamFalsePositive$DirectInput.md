@@ -14,16 +14,16 @@ Reports a false deletion of a message by aggressive anti-spam checks; requires a
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the erroneously deleted message
+Identifier of the erroneously deleted message from chatEventMessageDeleted
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Supergroup identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:96559
+dist/generated/types.d.ts:99338

@@ -10,7 +10,7 @@
 
 Version of [starTransactionDirectionOutgoing](starTransactionDirectionOutgoing.md) for method parameters.
 
-The transaction is outgoing and decreases the number of owned Telegram stars
+The transaction is outgoing and decreases the number of owned Telegram Stars
 
 ## Type declaration
 
@@ -20,4 +20,4 @@ The transaction is outgoing and decreases the number of owned Telegram stars
 
 ## Defined in
 
-dist/generated/types.d.ts:8367
+dist/generated/types.d.ts:8615

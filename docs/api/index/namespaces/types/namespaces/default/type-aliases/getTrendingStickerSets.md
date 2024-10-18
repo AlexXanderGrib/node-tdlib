@@ -6,7 +6,9 @@
 
 # Type Alias: getTrendingStickerSets()
 
-> **getTrendingStickerSets**: (`parameters`) => [`TrendingStickerSets`](TrendingStickerSets.md)
+> **getTrendingStickerSets**: (`parameters`) => [`TrendingStickerSets`](TrendingStickerSets-1.md)
+
+Returns a list of trending sticker sets. For optimal performance, the number of returned sticker sets is chosen by TDLib
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TrendingStickerSets`](TrendingStickerSets.md)
+[`TrendingStickerSets`](TrendingStickerSets-1.md)
 
-[TrendingStickerSets](TrendingStickerSets.md)
+[TrendingStickerSets](TrendingStickerSets-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92838
+dist/generated/types.d.ts:95335

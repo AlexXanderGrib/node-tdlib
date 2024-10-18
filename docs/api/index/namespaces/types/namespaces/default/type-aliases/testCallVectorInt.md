@@ -6,7 +6,9 @@
 
 # Type Alias: testCallVectorInt()
 
-> **testCallVectorInt**: (`parameters`) => [`TestVectorInt`](TestVectorInt.md)
+> **testCallVectorInt**: (`parameters`) => [`TestVectorInt`](TestVectorInt-1.md)
+
+Returns the received vector of numbers; for testing only. This is an offline method. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TestVectorInt`](TestVectorInt.md)
+[`TestVectorInt`](TestVectorInt-1.md)
 
-[TestVectorInt](TestVectorInt.md)
+[TestVectorInt](TestVectorInt-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:102053
+dist/generated/types.d.ts:104974

@@ -18,4 +18,4 @@ Resets list of installed backgrounds to its default value
 
 ## Defined in
 
-dist/generated/types.d.ts:97296
+dist/generated/types.d.ts:100075

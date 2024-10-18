@@ -20,16 +20,16 @@ The chat background was changed
 
 ### background?
 
-> `readonly` `optional` **background**: [`chatBackground$Input`](chatBackground$Input-1.md) \| `null`
+> `readonly` `optional` **background**: [`chatBackground$Input`](chatBackground$Input.md) \| `null`
 
 The new chat background; may be null if background was reset to default
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:53973
+dist/generated/types.d.ts:55589

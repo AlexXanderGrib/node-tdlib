@@ -24,4 +24,4 @@ Sticker file to delete from the list
 
 ## Defined in
 
-dist/generated/types.d.ts:93315
+dist/generated/types.d.ts:95812

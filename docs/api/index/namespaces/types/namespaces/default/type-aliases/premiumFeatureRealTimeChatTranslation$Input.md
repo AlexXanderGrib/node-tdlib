@@ -20,4 +20,4 @@ Allowed to translate chat messages real-time
 
 ## Defined in
 
-dist/generated/types.d.ts:41725
+dist/generated/types.d.ts:43119

@@ -18,10 +18,10 @@ The list of attached files contains an error. The error is considered resolved w
 
 ### file\_hashes
 
-> **file\_hashes**: [`vector`](vector.md)\<[`bytes`](bytes-1.md)\>
+> **file\_hashes**: [`vector`](vector.md)\<[`bytes`](bytes.md)\>
 
 Current hashes of all attached files
 
 ## Defined in
 
-dist/generated/types.d.ts:25695
+dist/generated/types.d.ts:26455

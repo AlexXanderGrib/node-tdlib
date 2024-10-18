@@ -20,4 +20,4 @@ The new order of active usernames. All currently active usernames must be specif
 
 ## Defined in
 
-dist/generated/types.d.ts:94133
+dist/generated/types.d.ts:96630

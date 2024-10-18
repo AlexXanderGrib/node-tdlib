@@ -12,4 +12,4 @@ Returns state of Telegram Premium subscription and promotion videos for Premium 
 
 ## Defined in
 
-dist/generated/types.d.ts:100556
+dist/generated/types.d.ts:103335

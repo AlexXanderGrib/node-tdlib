@@ -24,4 +24,4 @@ True, if the topic was closed; otherwise, the topic was reopened
 
 ## Defined in
 
-dist/generated/types.d.ts:27361
+dist/generated/types.d.ts:28121

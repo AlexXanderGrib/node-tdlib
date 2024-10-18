@@ -6,7 +6,9 @@
 
 # Type Alias: getCreatedPublicChats()
 
-> **getCreatedPublicChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getCreatedPublicChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns a list of public chats of the specified type, owned by the user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75644
+dist/generated/types.d.ts:77670

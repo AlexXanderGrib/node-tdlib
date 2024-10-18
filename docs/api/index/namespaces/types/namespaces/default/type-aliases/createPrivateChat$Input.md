@@ -24,10 +24,10 @@ Pass true to create the chat without a network request. In this case all informa
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:84083
+dist/generated/types.d.ts:86382

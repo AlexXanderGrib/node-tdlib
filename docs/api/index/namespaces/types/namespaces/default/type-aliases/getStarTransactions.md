@@ -6,7 +6,9 @@
 
 # Type Alias: getStarTransactions()
 
-> **getStarTransactions**: (`parameters`) => [`StarTransactions`](StarTransactions.md)
+> **getStarTransactions**: (`parameters`) => [`StarTransactions`](StarTransactions-1.md)
+
+Returns the list of Telegram Star transactions for the specified owner
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StarTransactions`](StarTransactions.md)
+[`StarTransactions`](StarTransactions-1.md)
 
-[StarTransactions](StarTransactions.md)
+[StarTransactions](StarTransactions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100802
+dist/generated/types.d.ts:103619

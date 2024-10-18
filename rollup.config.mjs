@@ -4,8 +4,8 @@ import { glob } from "glob";
 import cleanup from "rollup-plugin-cleanup";
 import prettier from "rollup-plugin-prettier";
 
-import packageJson from "./package.json" assert { type: "json" };
-import prettierConfig from "./.prettierrc.json" assert { type: "json" };
+import packageJson from "./package.json" with { type: "json" };
+import prettierConfig from "./.prettierrc.json" with { type: "json" };
 import replace from "@rollup/plugin-replace";
 
 /** @type {import('rollup').RollupOptions} */

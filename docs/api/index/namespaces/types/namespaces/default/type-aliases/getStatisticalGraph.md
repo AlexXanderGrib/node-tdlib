@@ -8,6 +8,8 @@
 
 > **getStatisticalGraph**: (`parameters`) => [`StatisticalGraph`](StatisticalGraph.md)
 
+Loads an asynchronous or a zoomed in statistical graph
+
 ## Parameters
 
 • **parameters**: [`getStatisticalGraph$Input`](getStatisticalGraph$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:98789
+dist/generated/types.d.ts:101568

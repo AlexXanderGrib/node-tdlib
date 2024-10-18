@@ -18,7 +18,7 @@ Changes notification settings for chats of a given type
 
 ### notification\_settings?
 
-> `readonly` `optional` **notification\_settings**: [`scopeNotificationSettings$Input`](scopeNotificationSettings$Input-1.md)
+> `readonly` `optional` **notification\_settings**: [`scopeNotificationSettings$Input`](scopeNotificationSettings$Input.md)
 
 The new notification settings for the given scope
 
@@ -30,4 +30,4 @@ Types of chats for which to change the notification settings
 
 ## Defined in
 
-dist/generated/types.d.ts:86927
+dist/generated/types.d.ts:89226

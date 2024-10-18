@@ -14,22 +14,22 @@ Writes a part of a generated file. This method is intended to be used only if th
 
 ### data?
 
-> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input.md)
 
 The data to write
 
 ### generation\_id?
 
-> `readonly` `optional` **generation\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **generation\_id**: [`int64$Input`](int64$Input.md)
 
 The identifier of the generation process
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int53`](int53-1.md)
+> `readonly` `optional` **offset**: [`int53`](int53.md)
 
 The offset from which to write the data to the file
 
 ## Defined in
 
-dist/generated/types.d.ts:89048
+dist/generated/types.d.ts:91423

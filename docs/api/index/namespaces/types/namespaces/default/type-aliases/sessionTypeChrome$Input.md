@@ -20,4 +20,4 @@ The session is running on the Chrome browser
 
 ## Defined in
 
-dist/generated/types.d.ts:46511
+dist/generated/types.d.ts:48037

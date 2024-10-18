@@ -18,13 +18,13 @@ A photo
 
 ### caption
 
-> **caption**: [`pageBlockCaption`](pageBlockCaption-1.md)
+> **caption**: [`pageBlockCaption`](pageBlockCaption.md)
 
 Photo caption
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md) \| `null`
+> **photo**: [`photo`](photo.md) \| `null`
 
 Photo file; may be null
 
@@ -36,4 +36,4 @@ URL that needs to be opened when the photo is clicked
 
 ## Defined in
 
-dist/generated/types.d.ts:20083
+dist/generated/types.d.ts:20709

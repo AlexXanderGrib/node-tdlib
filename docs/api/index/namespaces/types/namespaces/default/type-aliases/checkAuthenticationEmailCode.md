@@ -6,7 +6,9 @@
 
 # Type Alias: checkAuthenticationEmailCode()
 
-> **checkAuthenticationEmailCode**: (`parameters`) => [`Ok`](Ok.md)
+> **checkAuthenticationEmailCode**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73379
+dist/generated/types.d.ts:75367

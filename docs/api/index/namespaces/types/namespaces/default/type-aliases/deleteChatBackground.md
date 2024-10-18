@@ -6,7 +6,9 @@
 
 # Type Alias: deleteChatBackground()
 
-> **deleteChatBackground**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteChatBackground**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes background in a specific chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85565
+dist/generated/types.d.ts:87864

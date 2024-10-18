@@ -12,4 +12,4 @@ Returns saved animations
 
 ## Defined in
 
-dist/generated/types.d.ts:93616
+dist/generated/types.d.ts:96113

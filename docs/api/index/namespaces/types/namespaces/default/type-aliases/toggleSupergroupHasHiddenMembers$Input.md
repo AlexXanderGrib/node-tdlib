@@ -24,10 +24,10 @@ New value of has_hidden_members
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:96363
+dist/generated/types.d.ts:99142

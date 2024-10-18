@@ -18,10 +18,10 @@ A forward of the story as a message
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 The message with story forward
 
 ## Defined in
 
-dist/generated/types.d.ts:33297
+dist/generated/types.d.ts:34575

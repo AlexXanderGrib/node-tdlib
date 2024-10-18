@@ -6,7 +6,9 @@
 
 # Type Alias: testSquareInt()
 
-> **testSquareInt**: (`parameters`) => [`TestInt`](TestInt.md)
+> **testSquareInt**: (`parameters`) => [`TestInt`](TestInt-1.md)
+
+Returns the squared received number; for testing only. This is an offline method. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TestInt`](TestInt.md)
+[`TestInt`](TestInt-1.md)
 
-[TestInt](TestInt.md)
+[TestInt](TestInt-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:102165
+dist/generated/types.d.ts:105086

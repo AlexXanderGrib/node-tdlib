@@ -18,4 +18,4 @@ Returns only messages containing URLs
 
 ## Defined in
 
-dist/generated/types.d.ts:30577
+dist/generated/types.d.ts:31709

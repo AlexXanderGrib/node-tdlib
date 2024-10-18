@@ -20,4 +20,4 @@ The file is a sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:49095
+dist/generated/types.d.ts:50679

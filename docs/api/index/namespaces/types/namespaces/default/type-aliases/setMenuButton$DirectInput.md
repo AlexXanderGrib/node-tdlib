@@ -14,16 +14,16 @@ Sets menu button for the given user or for all users; for bots only
 
 ### menu\_button?
 
-> `readonly` `optional` **menu\_button**: [`botMenuButton$Input`](botMenuButton$Input-1.md)
+> `readonly` `optional` **menu\_button**: [`botMenuButton$Input`](botMenuButton$Input.md)
 
 New menu button
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the user or 0 to set menu button for all users
 
 ## Defined in
 
-dist/generated/types.d.ts:95053
+dist/generated/types.d.ts:97550

@@ -44,4 +44,4 @@ Pattern of the email address to which the recovery email was sent; empty until a
 
 ## Defined in
 
-dist/generated/types.d.ts:3331
+dist/generated/types.d.ts:3377

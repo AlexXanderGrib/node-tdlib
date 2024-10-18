@@ -6,7 +6,9 @@
 
 # Type Alias: editStory()
 
-> **editStory**: (`parameters`) => [`Ok`](Ok.md)
+> **editStory**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes content and caption of a story. Can be called only if story.can_be_edited == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87389
+dist/generated/types.d.ts:89716

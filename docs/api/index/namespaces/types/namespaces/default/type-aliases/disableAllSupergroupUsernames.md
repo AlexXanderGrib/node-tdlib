@@ -6,7 +6,9 @@
 
 # Type Alias: disableAllSupergroupUsernames()
 
-> **disableAllSupergroupUsernames**: (`parameters`) => [`Ok`](Ok.md)
+> **disableAllSupergroupUsernames**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Disables all active non-editable usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96017
+dist/generated/types.d.ts:98786

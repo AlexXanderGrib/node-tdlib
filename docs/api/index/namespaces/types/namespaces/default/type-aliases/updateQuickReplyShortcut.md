@@ -18,10 +18,10 @@ Basic information about a quick reply shortcut has changed. This update is guara
 
 ### shortcut
 
-> **shortcut**: [`quickReplyShortcut`](quickReplyShortcut-1.md)
+> **shortcut**: [`quickReplyShortcut`](quickReplyShortcut.md)
 
 New data about the shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:54493
+dist/generated/types.d.ts:56109

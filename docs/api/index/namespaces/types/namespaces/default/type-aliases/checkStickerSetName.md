@@ -8,6 +8,8 @@
 
 > **checkStickerSetName**: (`parameters`) => [`CheckStickerSetNameResult`](CheckStickerSetNameResult.md)
 
+Checks whether a name can be used for a new sticker set
+
 ## Parameters
 
 • **parameters**: [`checkStickerSetName$Input`](checkStickerSetName$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:99772
+dist/generated/types.d.ts:102551

@@ -6,7 +6,9 @@
 
 # Type Alias: getChatMessageCount()
 
-> **getChatMessageCount**: (`parameters`) => [`Count`](Count.md)
+> **getChatMessageCount**: (`parameters`) => [`Count`](Count-1.md)
+
+Returns approximate number of messages of the specified type in the chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Count`](Count.md)
+[`Count`](Count-1.md)
 
-[Count](Count.md)
+[Count](Count-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77368
+dist/generated/types.d.ts:79377

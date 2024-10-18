@@ -18,13 +18,13 @@ An animation message (GIF-style).
 
 ### animation
 
-> **animation**: [`animation`](animation-1.md)
+> **animation**: [`animation`](animation.md)
 
 The animation description
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md)
+> **caption**: [`formattedText`](formattedText.md)
 
 Animation caption
 
@@ -48,4 +48,4 @@ True, if the caption must be shown above the animation; otherwise, the caption m
 
 ## Defined in
 
-dist/generated/types.d.ts:25807
+dist/generated/types.d.ts:26567

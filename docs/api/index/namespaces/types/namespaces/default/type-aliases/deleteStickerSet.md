@@ -6,7 +6,9 @@
 
 # Type Alias: deleteStickerSet()
 
-> **deleteStickerSet**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteStickerSet**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Completely deletes a sticker set
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100132
+dist/generated/types.d.ts:102911

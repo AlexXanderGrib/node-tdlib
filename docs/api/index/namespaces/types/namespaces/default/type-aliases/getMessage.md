@@ -6,7 +6,9 @@
 
 # Type Alias: getMessage()
 
-> **getMessage**: (`parameters`) => [`Message`](Message.md)
+> **getMessage**: (`parameters`) => [`Message`](Message-1.md)
+
+Returns information about a message
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74606
+dist/generated/types.d.ts:76594

@@ -30,4 +30,4 @@ Expected type of the link
 
 ## Defined in
 
-dist/generated/types.d.ts:83819
+dist/generated/types.d.ts:86118

@@ -26,37 +26,37 @@ A message with an invoice; can be used only by bots
 
 ### invoice?
 
-> `readonly` `optional` **invoice**: [`invoice$Input`](invoice$Input-1.md)
+> `readonly` `optional` **invoice**: [`invoice$Input`](invoice$Input.md)
 
 Invoice
 
 ### paid\_media?
 
-> `readonly` `optional` **paid\_media**: [`inputPaidMedia$Input`](inputPaidMedia$Input-1.md) \| `null`
+> `readonly` `optional` **paid\_media**: [`inputPaidMedia$Input`](inputPaidMedia$Input.md) \| `null`
 
 The content of paid media attached to the invoice; pass null if none
 
 ### paid\_media\_caption?
 
-> `readonly` `optional` **paid\_media\_caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **paid\_media\_caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 Paid media caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### payload?
 
-> `readonly` `optional` **payload**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **payload**: [`bytes$Input`](bytes$Input.md)
 
 The invoice payload
 
 ### photo\_height?
 
-> `readonly` `optional` **photo\_height**: [`int32`](int32-1.md)
+> `readonly` `optional` **photo\_height**: [`int32`](int32.md)
 
 Product photo height
 
 ### photo\_size?
 
-> `readonly` `optional` **photo\_size**: [`int32`](int32-1.md)
+> `readonly` `optional` **photo\_size**: [`int32`](int32.md)
 
 Product photo size
 
@@ -68,7 +68,7 @@ Product photo URL; optional
 
 ### photo\_width?
 
-> `readonly` `optional` **photo\_width**: [`int32`](int32-1.md)
+> `readonly` `optional` **photo\_width**: [`int32`](int32.md)
 
 Product photo width
 
@@ -98,4 +98,4 @@ Product title; 1-32 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:30222
+dist/generated/types.d.ts:31096

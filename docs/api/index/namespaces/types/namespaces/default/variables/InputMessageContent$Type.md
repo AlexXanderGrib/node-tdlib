@@ -88,4 +88,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1744
+dist/generated/types.d.ts:1774

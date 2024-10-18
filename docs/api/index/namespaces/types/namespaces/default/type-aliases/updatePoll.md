@@ -18,10 +18,10 @@ A poll was updated; for bots only
 
 ### poll
 
-> **poll**: [`poll`](poll-1.md)
+> **poll**: [`poll`](poll.md)
 
 New data about the poll
 
 ## Defined in
 
-dist/generated/types.d.ts:57803
+dist/generated/types.d.ts:59443

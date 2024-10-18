@@ -30,10 +30,10 @@ Title of the voice note
 
 ### voice\_note
 
-> **voice\_note**: [`voiceNote`](voiceNote-1.md)
+> **voice\_note**: [`voiceNote`](voiceNote.md)
 
 Voice note
 
 ## Defined in
 
-dist/generated/types.d.ts:38791
+dist/generated/types.d.ts:40161

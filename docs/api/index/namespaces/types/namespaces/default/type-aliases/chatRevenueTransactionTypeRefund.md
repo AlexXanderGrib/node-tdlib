@@ -24,10 +24,10 @@ Name of the payment provider
 
 ### refund\_date
 
-> **refund\_date**: [`int32`](int32-1.md)
+> **refund\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the transaction was refunded
 
 ## Defined in
 
-dist/generated/types.d.ts:52119
+dist/generated/types.d.ts:53735

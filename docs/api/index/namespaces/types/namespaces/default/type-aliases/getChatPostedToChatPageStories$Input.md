@@ -10,7 +10,7 @@
 
 Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
 
-- Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+- Then, stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
 
 ## Type declaration
 
@@ -20,19 +20,19 @@ Returns the list of stories that posted by the given chat to its chat page. If f
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### from\_story\_id?
 
-> `readonly` `optional` **from\_story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **from\_story\_id**: [`int32`](int32.md)
 
 Identifier of the story starting from which stories must be returned; use 0 to get results from pinned and the newest story
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of stories to be returned
 
@@ -40,4 +40,4 @@ The maximum number of stories to be returned
 
 ## Defined in
 
-dist/generated/types.d.ts:87636
+dist/generated/types.d.ts:90011

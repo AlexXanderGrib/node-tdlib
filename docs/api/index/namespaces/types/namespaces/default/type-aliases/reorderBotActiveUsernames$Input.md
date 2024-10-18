@@ -18,7 +18,7 @@ Changes order of active usernames of a bot. Can be called only if userTypeBot.ca
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
@@ -30,4 +30,4 @@ The new order of active usernames. All currently active usernames must be specif
 
 ## Defined in
 
-dist/generated/types.d.ts:95435
+dist/generated/types.d.ts:98204

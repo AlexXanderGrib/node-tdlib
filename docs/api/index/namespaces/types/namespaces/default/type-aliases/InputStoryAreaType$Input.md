@@ -6,7 +6,7 @@
 
 # Type Alias: InputStoryAreaType$Input
 
-> **InputStoryAreaType$Input**: [`inputStoryAreaTypeLocation$Input`](inputStoryAreaTypeLocation$Input.md) \| [`inputStoryAreaTypeFoundVenue$Input`](inputStoryAreaTypeFoundVenue$Input.md) \| [`inputStoryAreaTypePreviousVenue$Input`](inputStoryAreaTypePreviousVenue$Input.md) \| [`inputStoryAreaTypeSuggestedReaction$Input`](inputStoryAreaTypeSuggestedReaction$Input.md) \| [`inputStoryAreaTypeMessage$Input`](inputStoryAreaTypeMessage$Input.md) \| [`inputStoryAreaTypeLink$Input`](inputStoryAreaTypeLink$Input.md)
+> **InputStoryAreaType$Input**: [`inputStoryAreaTypeLocation$Input`](inputStoryAreaTypeLocation$Input.md) \| [`inputStoryAreaTypeFoundVenue$Input`](inputStoryAreaTypeFoundVenue$Input.md) \| [`inputStoryAreaTypePreviousVenue$Input`](inputStoryAreaTypePreviousVenue$Input.md) \| [`inputStoryAreaTypeSuggestedReaction$Input`](inputStoryAreaTypeSuggestedReaction$Input.md) \| [`inputStoryAreaTypeMessage$Input`](inputStoryAreaTypeMessage$Input.md) \| [`inputStoryAreaTypeLink$Input`](inputStoryAreaTypeLink$Input.md) \| [`inputStoryAreaTypeWeather$Input`](inputStoryAreaTypeWeather$Input.md)
 
 Version of [InputStoryAreaType](InputStoryAreaType.md) for method parameters.
 Any of:
@@ -16,7 +16,8 @@ Any of:
 - [inputStoryAreaTypeSuggestedReaction$Input](inputStoryAreaTypeSuggestedReaction$Input.md)
 - [inputStoryAreaTypeMessage$Input](inputStoryAreaTypeMessage$Input.md)
 - [inputStoryAreaTypeLink$Input](inputStoryAreaTypeLink$Input.md)
+- [inputStoryAreaTypeWeather$Input](inputStoryAreaTypeWeather$Input.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:62994
+dist/generated/types.d.ts:64775

@@ -24,4 +24,4 @@ Token; may be empty to deregister a device
 
 ## Defined in
 
-dist/generated/types.d.ts:43149
+dist/generated/types.d.ts:44675

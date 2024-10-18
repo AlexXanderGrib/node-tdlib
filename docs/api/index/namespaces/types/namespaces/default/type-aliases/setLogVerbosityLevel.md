@@ -6,7 +6,9 @@
 
 # Type Alias: setLogVerbosityLevel()
 
-> **setLogVerbosityLevel**: (`parameters`) => [`Ok`](Ok.md)
+> **setLogVerbosityLevel**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the verbosity level of the internal logging of TDLib. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101731
+dist/generated/types.d.ts:104652

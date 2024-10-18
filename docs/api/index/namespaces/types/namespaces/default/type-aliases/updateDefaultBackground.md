@@ -18,7 +18,7 @@ The default background has changed
 
 ### background
 
-> **background**: [`background`](background-1.md) \| `null`
+> **background**: [`background`](background.md) \| `null`
 
 The new default background; may be null
 
@@ -30,4 +30,4 @@ True, if default background for dark theme has changed
 
 ## Defined in
 
-dist/generated/types.d.ts:56299
+dist/generated/types.d.ts:57915

@@ -18,4 +18,4 @@ The ability to set custom expiration duration for stories
 
 ## Defined in
 
-dist/generated/types.d.ts:42057
+dist/generated/types.d.ts:43451

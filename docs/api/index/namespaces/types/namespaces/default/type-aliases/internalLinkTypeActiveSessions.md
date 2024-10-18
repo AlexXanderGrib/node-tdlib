@@ -18,4 +18,4 @@ The link is a link to the Devices section of the application. Use getActiveSessi
 
 ## Defined in
 
-dist/generated/types.d.ts:47341
+dist/generated/types.d.ts:48867

@@ -12,4 +12,4 @@ Returns supergroup and channel chats in which the current user has the right to 
 
 ## Defined in
 
-dist/generated/types.d.ts:87178
+dist/generated/types.d.ts:89505

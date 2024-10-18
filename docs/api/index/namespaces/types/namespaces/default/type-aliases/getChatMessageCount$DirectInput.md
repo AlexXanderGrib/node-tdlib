@@ -14,7 +14,7 @@ Returns approximate number of messages of the specified type in the chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat in which to count messages
 
@@ -32,10 +32,10 @@ Pass true to get the number of messages without sending network requests, or -1 
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 If not 0, only messages in the specified Saved Messages topic will be counted; pass 0 to count all messages, or for chats other than Saved Messages
 
 ## Defined in
 
-dist/generated/types.d.ts:77340
+dist/generated/types.d.ts:79349

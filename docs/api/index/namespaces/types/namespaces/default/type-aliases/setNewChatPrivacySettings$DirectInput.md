@@ -14,10 +14,10 @@ Changes privacy settings for new chat creation; can be used only if getOption("c
 
 ### settings?
 
-> `readonly` `optional` **settings**: [`newChatPrivacySettings$Input`](newChatPrivacySettings$Input-1.md)
+> `readonly` `optional` **settings**: [`newChatPrivacySettings$Input`](newChatPrivacySettings$Input.md)
 
 New settings
 
 ## Defined in
 
-dist/generated/types.d.ts:97851
+dist/generated/types.d.ts:100630

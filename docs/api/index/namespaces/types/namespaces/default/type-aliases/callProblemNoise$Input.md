@@ -20,4 +20,4 @@ The user heard background noise
 
 ## Defined in
 
-dist/generated/types.d.ts:35753
+dist/generated/types.d.ts:37123

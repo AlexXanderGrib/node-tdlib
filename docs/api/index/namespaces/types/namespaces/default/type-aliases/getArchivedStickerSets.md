@@ -6,7 +6,9 @@
 
 # Type Alias: getArchivedStickerSets()
 
-> **getArchivedStickerSets**: (`parameters`) => [`StickerSets`](StickerSets.md)
+> **getArchivedStickerSets**: (`parameters`) => [`StickerSets`](StickerSets-1.md)
+
+Returns a list of archived sticker sets
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StickerSets`](StickerSets.md)
+[`StickerSets`](StickerSets-1.md)
 
-[StickerSets](StickerSets.md)
+[StickerSets](StickerSets-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92790
+dist/generated/types.d.ts:95287

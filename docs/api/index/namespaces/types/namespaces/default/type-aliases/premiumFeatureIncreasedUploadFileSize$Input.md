@@ -20,4 +20,4 @@ Increased maximum upload file size
 
 ## Defined in
 
-dist/generated/types.d.ts:41543
+dist/generated/types.d.ts:42937

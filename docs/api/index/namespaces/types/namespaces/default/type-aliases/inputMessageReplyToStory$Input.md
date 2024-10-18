@@ -20,16 +20,16 @@ Describes a story to be replied
 
 ### story\_id?
 
-> `readonly` `optional` **story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **story\_id**: [`int32`](int32.md)
 
 The identifier of the story
 
 ### story\_sender\_chat\_id?
 
-> `readonly` `optional` **story\_sender\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **story\_sender\_chat\_id**: [`int53`](int53.md)
 
 The identifier of the sender of the story. Currently, stories can be replied only in the sender's chat and channel stories can't be replied
 
 ## Defined in
 
-dist/generated/types.d.ts:13351
+dist/generated/types.d.ts:14053

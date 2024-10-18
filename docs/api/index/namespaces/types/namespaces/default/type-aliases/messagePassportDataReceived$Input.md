@@ -20,16 +20,16 @@ Telegram Passport data has been received; for bots only
 
 ### credentials?
 
-> `readonly` `optional` **credentials**: [`encryptedCredentials$Input`](encryptedCredentials$Input-1.md)
+> `readonly` `optional` **credentials**: [`encryptedCredentials$Input`](encryptedCredentials$Input.md)
 
 Encrypted data credentials
 
 ### elements?
 
-> `readonly` `optional` **elements**: [`vector$Input`](vector$Input.md)\<[`encryptedPassportElement$Input`](encryptedPassportElement$Input-1.md)\>
+> `readonly` `optional` **elements**: [`vector$Input`](vector$Input.md)\<[`encryptedPassportElement$Input`](encryptedPassportElement$Input.md)\>
 
 List of received Telegram Passport elements
 
 ## Defined in
 
-dist/generated/types.d.ts:28403
+dist/generated/types.d.ts:29277

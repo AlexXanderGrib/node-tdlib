@@ -24,4 +24,4 @@ The name of the shortcut; 1-32 characters
 
 ## Defined in
 
-dist/generated/types.d.ts:80122
+dist/generated/types.d.ts:82171

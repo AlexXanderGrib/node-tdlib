@@ -26,4 +26,4 @@ The tag which label will be changed
 
 ## Defined in
 
-dist/generated/types.d.ts:81576
+dist/generated/types.d.ts:83769

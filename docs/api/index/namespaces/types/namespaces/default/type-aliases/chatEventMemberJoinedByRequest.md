@@ -18,16 +18,16 @@ A new member was accepted to the chat by an administrator
 
 ### approver\_user\_id
 
-> **approver\_user\_id**: [`int53`](int53-1.md)
+> **approver\_user\_id**: [`int53`](int53.md)
 
 User identifier of the chat administrator, approved user join request
 
 ### invite\_link
 
-> **invite\_link**: [`chatInviteLink`](chatInviteLink-1.md) \| `null`
+> **invite\_link**: [`chatInviteLink`](chatInviteLink.md) \| `null`
 
 Invite link used to join the chat; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:39377
+dist/generated/types.d.ts:40747

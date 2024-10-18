@@ -18,34 +18,34 @@ Animated stickers to be combined into a slot machine
 
 ### background
 
-> **background**: [`sticker`](sticker-1.md)
+> **background**: [`sticker`](sticker.md)
 
 The animated sticker with the slot machine background. The background animation must start playing after all reel animations finish
 
 ### center\_reel
 
-> **center\_reel**: [`sticker`](sticker-1.md)
+> **center\_reel**: [`sticker`](sticker.md)
 
 The animated sticker with the center reel
 
 ### left\_reel
 
-> **left\_reel**: [`sticker`](sticker-1.md)
+> **left\_reel**: [`sticker`](sticker.md)
 
 The animated sticker with the left reel
 
 ### lever
 
-> **lever**: [`sticker`](sticker-1.md)
+> **lever**: [`sticker`](sticker.md)
 
 The animated sticker with the lever animation. The lever animation must play once in the initial dice state
 
 ### right\_reel
 
-> **right\_reel**: [`sticker`](sticker-1.md)
+> **right\_reel**: [`sticker`](sticker.md)
 
 The animated sticker with the right reel
 
 ## Defined in
 
-dist/generated/types.d.ts:36449
+dist/generated/types.d.ts:37819

@@ -18,22 +18,22 @@ Returns information about a button of type inlineKeyboardButtonTypeLoginUrl. The
 
 ### button\_id?
 
-> `readonly` `optional` **button\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **button\_id**: [`int53`](int53.md)
 
 Button identifier
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the message with the button
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Message identifier of the message with the button
+Message identifier of the message with the button. The message must not be scheduled
 
 ## Defined in
 
-dist/generated/types.d.ts:82293
+dist/generated/types.d.ts:84486

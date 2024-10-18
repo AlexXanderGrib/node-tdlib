@@ -20,10 +20,10 @@ A rule to restrict all members of specified basic groups and supergroups from do
 
 ### chat\_ids?
 
-> `readonly` `optional` **chat\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **chat\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 The chat identifiers, total number of chats in all rules must not exceed 20
 
 ## Defined in
 
-dist/generated/types.d.ts:46134
+dist/generated/types.d.ts:47660

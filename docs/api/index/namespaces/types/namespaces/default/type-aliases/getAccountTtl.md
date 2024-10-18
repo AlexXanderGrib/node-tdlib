@@ -6,7 +6,9 @@
 
 # Type Alias: getAccountTtl()
 
-> **getAccountTtl**: (`parameters`) => [`AccountTtl`](AccountTtl.md)
+> **getAccountTtl**: (`parameters`) => [`AccountTtl`](AccountTtl-1.md)
+
+Returns the period of inactivity after which the account of the current user will automatically be deleted
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AccountTtl`](AccountTtl.md)
+[`AccountTtl`](AccountTtl-1.md)
 
-[AccountTtl](AccountTtl.md)
+[AccountTtl](AccountTtl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98030
+dist/generated/types.d.ts:100809

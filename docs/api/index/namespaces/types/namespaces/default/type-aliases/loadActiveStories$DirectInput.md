@@ -22,4 +22,4 @@ The story list in which to load active stories
 
 ## Defined in
 
-dist/generated/types.d.ts:87549
+dist/generated/types.d.ts:89924

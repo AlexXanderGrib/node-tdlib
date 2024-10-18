@@ -6,7 +6,9 @@
 
 # Type Alias: setChatPermissions()
 
-> **setChatPermissions**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatPermissions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the chat members permissions. Supported only for basic groups and supergroups. Requires can_restrict_members administrator right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85451
+dist/generated/types.d.ts:87750

@@ -6,7 +6,11 @@
 
 # Type Alias: searchChatsNearby()
 
-> **searchChatsNearby**: (`parameters`) => [`ChatsNearby`](ChatsNearby.md)
+> **searchChatsNearby**: (`parameters`) => [`ChatsNearby`](ChatsNearby-1.md)
+
+Returns a list of users and location-based supergroups nearby. The list of users nearby will be updated for 60 seconds after the request by the updates updateUsersNearby.
+
+- The request must be sent again every 25 seconds with adjusted location to not miss new chats
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`ChatsNearby`](ChatsNearby.md)
+[`ChatsNearby`](ChatsNearby-1.md)
 
-[ChatsNearby](ChatsNearby.md)
+[ChatsNearby](ChatsNearby-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75242
+dist/generated/types.d.ts:77268

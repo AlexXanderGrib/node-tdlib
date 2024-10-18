@@ -18,7 +18,7 @@ Rates recognized speech in a video note or a voice note message
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the message belongs
 
@@ -30,10 +30,10 @@ Pass true if the speech recognition is good
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
 ## Defined in
 
-dist/generated/types.d.ts:77958
+dist/generated/types.d.ts:79967

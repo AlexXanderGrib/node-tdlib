@@ -18,7 +18,7 @@ Saves application log event on the server. Can be called before authorization
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Optional chat identifier, associated with the event
 
@@ -36,4 +36,4 @@ Event type
 
 ## Defined in
 
-dist/generated/types.d.ts:101321
+dist/generated/types.d.ts:104242

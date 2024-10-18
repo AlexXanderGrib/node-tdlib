@@ -18,4 +18,4 @@ The user has too many chats with username, one of them must be made private firs
 
 ## Defined in
 
-dist/generated/types.d.ts:43927
+dist/generated/types.d.ts:45453

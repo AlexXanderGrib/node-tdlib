@@ -10,4 +10,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:2292
+dist/generated/types.d.ts:2325

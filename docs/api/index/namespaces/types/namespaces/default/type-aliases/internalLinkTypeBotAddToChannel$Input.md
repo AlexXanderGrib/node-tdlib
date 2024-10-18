@@ -24,7 +24,7 @@ The link is a link to a Telegram bot, which is supposed to be added to a channel
 
 ### administrator\_rights?
 
-> `readonly` `optional` **administrator\_rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input-1.md)
+> `readonly` `optional` **administrator\_rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input.md)
 
 Expected administrator rights for the bot
 
@@ -36,4 +36,4 @@ Username of the bot
 
 ## Defined in
 
-dist/generated/types.d.ts:47493
+dist/generated/types.d.ts:49019

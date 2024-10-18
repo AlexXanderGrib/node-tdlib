@@ -6,7 +6,9 @@
 
 # Type Alias: resetAllNotificationSettings()
 
-> **resetAllNotificationSettings**: (`parameters`) => [`Ok`](Ok.md)
+> **resetAllNotificationSettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87006
+dist/generated/types.d.ts:89305

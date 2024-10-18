@@ -20,4 +20,4 @@ The username can be set
 
 ## Defined in
 
-dist/generated/types.d.ts:43879
+dist/generated/types.d.ts:45405

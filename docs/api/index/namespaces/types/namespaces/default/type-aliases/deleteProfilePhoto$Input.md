@@ -18,10 +18,10 @@ Deletes a profile photo
 
 ### profile\_photo\_id?
 
-> `readonly` `optional` **profile\_photo\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **profile\_photo\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the profile photo to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:93886
+dist/generated/types.d.ts:96383

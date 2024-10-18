@@ -18,10 +18,10 @@ The message will be sent at the specified date
 
 ### send\_date
 
-> **send\_date**: [`int32`](int32-1.md)
+> **send\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the message will be sent. The date must be within 367 days in the future
 
 ## Defined in
 
-dist/generated/types.d.ts:29001
+dist/generated/types.d.ts:29875

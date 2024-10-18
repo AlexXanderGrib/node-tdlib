@@ -6,7 +6,9 @@
 
 # Type Alias: readAllMessageThreadMentions()
 
-> **readAllMessageThreadMentions**: (`parameters`) => [`Ok`](Ok.md)
+> **readAllMessageThreadMentions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Marks all mentions in a forum topic as read
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84013
+dist/generated/types.d.ts:86312

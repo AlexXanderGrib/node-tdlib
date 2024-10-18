@@ -20,10 +20,10 @@ Device verification must be performed with the SafetyNet Attestation API
 
 ### nonce?
 
-> `readonly` `optional` **nonce**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **nonce**: [`bytes$Input`](bytes$Input.md)
 
 Nonce to pass to the SafetyNet Attestation API
 
 ## Defined in
 
-dist/generated/types.d.ts:3460
+dist/generated/types.d.ts:3506

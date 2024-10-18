@@ -24,10 +24,10 @@ Parameters to be used for device verification
 
 ### length
 
-> **length**: [`int32`](int32-1.md)
+> **length**: [`int32`](int32.md)
 
 Length of the code
 
 ## Defined in
 
-dist/generated/types.d.ts:2705
+dist/generated/types.d.ts:2751

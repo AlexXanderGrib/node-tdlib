@@ -6,7 +6,9 @@
 
 # Type Alias: setNewChatPrivacySettings()
 
-> **setNewChatPrivacySettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setNewChatPrivacySettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97864
+dist/generated/types.d.ts:100643

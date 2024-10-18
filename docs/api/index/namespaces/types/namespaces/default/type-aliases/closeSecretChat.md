@@ -6,7 +6,9 @@
 
 # Type Alias: closeSecretChat()
 
-> **closeSecretChat**: (`parameters`) => [`Ok`](Ok.md)
+> **closeSecretChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Closes a secret chat, effectively transferring its state to secretChatStateClosed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96663
+dist/generated/types.d.ts:99442

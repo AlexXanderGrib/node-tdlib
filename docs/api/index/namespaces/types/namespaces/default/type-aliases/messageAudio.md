@@ -18,16 +18,16 @@ An audio message
 
 ### audio
 
-> **audio**: [`audio`](audio-1.md)
+> **audio**: [`audio`](audio.md)
 
 The audio description
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md)
+> **caption**: [`formattedText`](formattedText.md)
 
 Audio caption
 
 ## Defined in
 
-dist/generated/types.d.ts:25871
+dist/generated/types.d.ts:26631

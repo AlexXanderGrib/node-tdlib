@@ -18,10 +18,10 @@ Informs TDLib that the chat is closed by the user. Many useful activities depend
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:83645
+dist/generated/types.d.ts:85944

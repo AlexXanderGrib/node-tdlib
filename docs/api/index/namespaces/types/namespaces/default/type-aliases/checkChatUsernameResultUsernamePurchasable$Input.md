@@ -20,4 +20,4 @@ The username can be purchased at https://fragment.com. Information about the use
 
 ## Defined in
 
-dist/generated/types.d.ts:43921
+dist/generated/types.d.ts:45447

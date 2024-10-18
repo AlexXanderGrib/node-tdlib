@@ -20,4 +20,4 @@ A bot command, beginning with "/"
 
 ## Defined in
 
-dist/generated/types.d.ts:28527
+dist/generated/types.d.ts:29401

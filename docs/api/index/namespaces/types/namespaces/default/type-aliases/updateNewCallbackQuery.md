@@ -18,25 +18,25 @@ A new incoming callback query; for bots only
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat where the query was sent
 
 ### chat\_instance
 
-> **chat\_instance**: [`int64`](int64-1.md)
+> **chat\_instance**: [`int64`](int64.md)
 
 Identifier that uniquely corresponds to the chat to which the message was sent
 
 ### id
 
-> **id**: [`int64`](int64-1.md)
+> **id**: [`int64`](int64.md)
 
 Unique query identifier
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 Identifier of the message from which the query originated
 
@@ -48,10 +48,10 @@ Query payload
 
 ### sender\_user\_id
 
-> **sender\_user\_id**: [`int53`](int53-1.md)
+> **sender\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user who sent the query
 
 ## Defined in
 
-dist/generated/types.d.ts:57385
+dist/generated/types.d.ts:59025

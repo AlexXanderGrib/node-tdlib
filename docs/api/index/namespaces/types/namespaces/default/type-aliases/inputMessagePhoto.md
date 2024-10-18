@@ -18,13 +18,13 @@ A photo message
 
 ### added\_sticker\_file\_ids
 
-> **added\_sticker\_file\_ids**: [`vector`](vector.md)\<[`int32`](int32-1.md)\>
+> **added\_sticker\_file\_ids**: [`vector`](vector.md)\<[`int32`](int32.md)\>
 
 File identifiers of the stickers added to the photo, if applicable
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md) \| `null`
+> **caption**: [`formattedText`](formattedText.md) \| `null`
 
 Photo caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
@@ -36,7 +36,7 @@ True, if the photo preview must be covered by a spoiler animation; not supported
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
 Photo height
 
@@ -60,16 +60,16 @@ True, if the caption must be shown above the photo; otherwise, the caption must 
 
 ### thumbnail
 
-> **thumbnail**: [`inputThumbnail`](inputThumbnail-1.md) \| `null`
+> **thumbnail**: [`inputThumbnail`](inputThumbnail.md) \| `null`
 
 Photo thumbnail to be sent; pass null to skip thumbnail uploading. The thumbnail is sent to the other party only in secret chats
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
 Photo width
 
 ## Defined in
 
-dist/generated/types.d.ts:29559
+dist/generated/types.d.ts:30433

@@ -20,4 +20,4 @@ The maximum number of stories sent per month
 
 ## Defined in
 
-dist/generated/types.d.ts:41473
+dist/generated/types.d.ts:42867

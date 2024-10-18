@@ -20,13 +20,13 @@ A photo message
 
 ### added\_sticker\_file\_ids?
 
-> `readonly` `optional` **added\_sticker\_file\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **added\_sticker\_file\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 File identifiers of the stickers added to the photo, if applicable
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 Photo caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
@@ -38,7 +38,7 @@ True, if the photo preview must be covered by a spoiler animation; not supported
 
 ### height?
 
-> `readonly` `optional` **height**: [`int32`](int32-1.md)
+> `readonly` `optional` **height**: [`int32`](int32.md)
 
 Photo height
 
@@ -62,16 +62,16 @@ True, if the caption must be shown above the photo; otherwise, the caption must 
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input.md) \| `null`
 
 Photo thumbnail to be sent; pass null to skip thumbnail uploading. The thumbnail is sent to the other party only in secret chats
 
 ### width?
 
-> `readonly` `optional` **width**: [`int32`](int32-1.md)
+> `readonly` `optional` **width**: [`int32`](int32.md)
 
 Photo width
 
 ## Defined in
 
-dist/generated/types.d.ts:29612
+dist/generated/types.d.ts:30486

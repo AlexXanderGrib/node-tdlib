@@ -24,13 +24,13 @@ The action
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_thread\_id
 
-> **message\_thread\_id**: [`int53`](int53-1.md)
+> **message\_thread\_id**: [`int53`](int53.md)
 
 If not 0, the message thread identifier in which the action was performed
 
@@ -42,4 +42,4 @@ Identifier of a message sender performing the action
 
 ## Defined in
 
-dist/generated/types.d.ts:54931
+dist/generated/types.d.ts:56547

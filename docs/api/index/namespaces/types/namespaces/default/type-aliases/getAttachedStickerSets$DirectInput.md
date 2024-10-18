@@ -14,10 +14,10 @@ Returns a list of sticker sets attached to a file, including regular, mask, and 
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 File identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:92853
+dist/generated/types.d.ts:95350

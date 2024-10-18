@@ -18,10 +18,10 @@ The link is a link to boost a supergroup chat
 
 ### photo
 
-> **photo**: [`chatPhoto`](chatPhoto-1.md) \| `null`
+> **photo**: [`chatPhoto`](chatPhoto.md) \| `null`
 
 Photo of the chat; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:21453
+dist/generated/types.d.ts:22203

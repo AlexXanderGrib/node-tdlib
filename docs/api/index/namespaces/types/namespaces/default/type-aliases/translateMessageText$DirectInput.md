@@ -14,13 +14,13 @@ Extracts text or caption of the given message and translates it to the given lan
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the message belongs
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
@@ -40,4 +40,4 @@ Language code of the language to which the message is translated. Must be one of
 
 ## Defined in
 
-dist/generated/types.d.ts:77885
+dist/generated/types.d.ts:79894

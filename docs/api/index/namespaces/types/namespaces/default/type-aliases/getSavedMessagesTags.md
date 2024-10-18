@@ -6,7 +6,9 @@
 
 # Type Alias: getSavedMessagesTags()
 
-> **getSavedMessagesTags**: (`parameters`) => [`SavedMessagesTags`](SavedMessagesTags.md)
+> **getSavedMessagesTags**: (`parameters`) => [`SavedMessagesTags`](SavedMessagesTags-1.md)
+
+Returns tags used in Saved Messages or a Saved Messages topic
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`SavedMessagesTags`](SavedMessagesTags.md)
+[`SavedMessagesTags`](SavedMessagesTags-1.md)
 
-[SavedMessagesTags](SavedMessagesTags.md)
+[SavedMessagesTags](SavedMessagesTags-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81556
+dist/generated/types.d.ts:83749

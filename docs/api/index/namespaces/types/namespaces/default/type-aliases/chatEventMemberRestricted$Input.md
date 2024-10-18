@@ -38,4 +38,4 @@ Previous status of the chat member
 
 ## Defined in
 
-dist/generated/types.d.ts:39526
+dist/generated/types.d.ts:40896

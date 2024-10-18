@@ -20,4 +20,4 @@ The content must be center-aligned
 
 ## Defined in
 
-dist/generated/types.d.ts:19429
+dist/generated/types.d.ts:20055

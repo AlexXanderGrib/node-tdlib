@@ -18,4 +18,4 @@ A bot command, beginning with "/"
 
 ## Defined in
 
-dist/generated/types.d.ts:28519
+dist/generated/types.d.ts:29393

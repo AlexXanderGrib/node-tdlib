@@ -12,4 +12,4 @@ Returns all website where the current user used Telegram to log in
 
 ## Defined in
 
-dist/generated/types.d.ts:95845
+dist/generated/types.d.ts:98614

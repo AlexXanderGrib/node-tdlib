@@ -20,10 +20,10 @@ Contains active notifications that were shown on previous application launches. 
 
 ### groups?
 
-> `readonly` `optional` **groups**: [`vector$Input`](vector$Input.md)\<[`notificationGroup$Input`](notificationGroup$Input-1.md)\>
+> `readonly` `optional` **groups**: [`vector$Input`](vector$Input.md)\<[`notificationGroup$Input`](notificationGroup$Input.md)\>
 
 Lists of active notification groups
 
 ## Defined in
 
-dist/generated/types.d.ts:54832
+dist/generated/types.d.ts:56448

@@ -32,4 +32,4 @@ Text
 
 ## Defined in
 
-dist/generated/types.d.ts:19143
+dist/generated/types.d.ts:19769

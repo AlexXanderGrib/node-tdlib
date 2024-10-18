@@ -6,7 +6,9 @@
 
 # Type Alias: resendPhoneNumberCode()
 
-> **resendPhoneNumberCode**: (`parameters`) => [`AuthenticationCodeInfo`](AuthenticationCodeInfo.md)
+> **resendPhoneNumberCode**: (`parameters`) => [`AuthenticationCodeInfo`](AuthenticationCodeInfo-1.md)
+
+Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AuthenticationCodeInfo`](AuthenticationCodeInfo.md)
+[`AuthenticationCodeInfo`](AuthenticationCodeInfo-1.md)
 
-[AuthenticationCodeInfo](AuthenticationCodeInfo.md)
+[AuthenticationCodeInfo](AuthenticationCodeInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94558
+dist/generated/types.d.ts:97055

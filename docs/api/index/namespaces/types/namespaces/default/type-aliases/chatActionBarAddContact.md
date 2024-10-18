@@ -18,4 +18,4 @@ The chat is a private or secret chat and the other user can be added to the cont
 
 ## Defined in
 
-dist/generated/types.d.ts:17033
+dist/generated/types.d.ts:17625

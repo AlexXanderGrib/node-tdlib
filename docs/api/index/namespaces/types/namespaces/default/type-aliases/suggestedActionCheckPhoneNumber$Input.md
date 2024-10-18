@@ -20,4 +20,4 @@ Suggests the user to check whether authorization phone number is correct and cha
 
 ## Defined in
 
-dist/generated/types.d.ts:50403
+dist/generated/types.d.ts:52001

@@ -20,10 +20,10 @@ A video chat was ended
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Identifier of the video chat. The video chat can be received through the method getGroupCall
 
 ## Defined in
 
-dist/generated/types.d.ts:40404
+dist/generated/types.d.ts:41798

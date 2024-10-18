@@ -20,16 +20,16 @@ Tags used in Saved Messages or a Saved Messages topic have changed
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 Identifier of Saved Messages topic which tags were changed; 0 if tags for the whole chat has changed
 
 ### tags?
 
-> `readonly` `optional` **tags**: [`savedMessagesTags$Input`](savedMessagesTags$Input-1.md)
+> `readonly` `optional` **tags**: [`savedMessagesTags$Input`](savedMessagesTags$Input.md)
 
 The new tags
 
 ## Defined in
 
-dist/generated/types.d.ts:56727
+dist/generated/types.d.ts:58343

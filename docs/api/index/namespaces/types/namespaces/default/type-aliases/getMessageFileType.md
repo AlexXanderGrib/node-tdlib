@@ -8,6 +8,8 @@
 
 > **getMessageFileType**: (`parameters`) => [`MessageFileType`](MessageFileType.md)
 
+Returns information about a file with messages exported from another application
+
 ## Parameters
 
 • **parameters**: [`getMessageFileType$Input`](getMessageFileType$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:89587
+dist/generated/types.d.ts:91962

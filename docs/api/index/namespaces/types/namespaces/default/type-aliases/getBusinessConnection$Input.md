@@ -24,4 +24,4 @@ Identifier of the business connection to return
 
 ## Defined in
 
-dist/generated/types.d.ts:82265
+dist/generated/types.d.ts:84458

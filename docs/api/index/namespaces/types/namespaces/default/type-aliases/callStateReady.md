@@ -42,22 +42,22 @@ Encryption key fingerprint represented as 4 emoji
 
 ### encryption\_key
 
-> **encryption\_key**: [`bytes`](bytes-1.md)
+> **encryption\_key**: [`bytes`](bytes.md)
 
 Call encryption key
 
 ### protocol
 
-> **protocol**: [`callProtocol`](callProtocol-1.md)
+> **protocol**: [`callProtocol`](callProtocol.md)
 
 Call protocols supported by the other call participant
 
 ### servers
 
-> **servers**: [`vector`](vector.md)\<[`callServer`](callServer-1.md)\>
+> **servers**: [`vector`](vector.md)\<[`callServer`](callServer.md)\>
 
 List of available call servers
 
 ## Defined in
 
-dist/generated/types.d.ts:34881
+dist/generated/types.d.ts:36251

@@ -20,16 +20,16 @@ A message has been successfully sent
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 The sent message. Usually only the message identifier, date, and content are changed, but almost all other fields can also change
 
 ### old\_message\_id?
 
-> `readonly` `optional` **old\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **old\_message\_id**: [`int53`](int53.md)
 
 The previous temporary message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52735
+dist/generated/types.d.ts:54351

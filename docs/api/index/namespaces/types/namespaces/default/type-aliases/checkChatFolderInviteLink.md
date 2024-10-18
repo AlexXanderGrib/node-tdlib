@@ -6,7 +6,9 @@
 
 # Type Alias: checkChatFolderInviteLink()
 
-> **checkChatFolderInviteLink**: (`parameters`) => [`ChatFolderInviteLinkInfo`](ChatFolderInviteLinkInfo.md)
+> **checkChatFolderInviteLink**: (`parameters`) => [`ChatFolderInviteLinkInfo`](ChatFolderInviteLinkInfo-1.md)
+
+Checks the validity of an invite link for a chat folder and returns information about the corresponding chat folder
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatFolderInviteLinkInfo`](ChatFolderInviteLinkInfo.md)
+[`ChatFolderInviteLinkInfo`](ChatFolderInviteLinkInfo-1.md)
 
-[ChatFolderInviteLinkInfo](ChatFolderInviteLinkInfo.md)
+[ChatFolderInviteLinkInfo](ChatFolderInviteLinkInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85006
+dist/generated/types.d.ts:87305

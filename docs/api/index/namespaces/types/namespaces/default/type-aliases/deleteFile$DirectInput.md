@@ -14,10 +14,10 @@ Deletes a file from the TDLib file cache
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 Identifier of the file to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:89220
+dist/generated/types.d.ts:91595

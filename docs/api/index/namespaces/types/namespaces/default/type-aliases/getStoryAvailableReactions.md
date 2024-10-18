@@ -6,7 +6,9 @@
 
 # Type Alias: getStoryAvailableReactions()
 
-> **getStoryAvailableReactions**: (`parameters`) => [`AvailableReactions`](AvailableReactions.md)
+> **getStoryAvailableReactions**: (`parameters`) => [`AvailableReactions`](AvailableReactions-1.md)
+
+Returns reactions, which can be chosen for a story
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AvailableReactions`](AvailableReactions.md)
+[`AvailableReactions`](AvailableReactions-1.md)
 
-[AvailableReactions](AvailableReactions.md)
+[AvailableReactions](AvailableReactions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87888
+dist/generated/types.d.ts:90263

@@ -20,4 +20,4 @@ The ability to use Business features
 
 ## Defined in
 
-dist/generated/types.d.ts:41841
+dist/generated/types.d.ts:43235

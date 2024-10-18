@@ -6,7 +6,7 @@
 
 # Type Alias: InputStoryAreaType
 
-> **InputStoryAreaType**: [`inputStoryAreaTypeLocation`](inputStoryAreaTypeLocation.md) \| [`inputStoryAreaTypeFoundVenue`](inputStoryAreaTypeFoundVenue.md) \| [`inputStoryAreaTypePreviousVenue`](inputStoryAreaTypePreviousVenue.md) \| [`inputStoryAreaTypeSuggestedReaction`](inputStoryAreaTypeSuggestedReaction.md) \| [`inputStoryAreaTypeMessage`](inputStoryAreaTypeMessage.md) \| [`inputStoryAreaTypeLink`](inputStoryAreaTypeLink.md)
+> **InputStoryAreaType**: [`inputStoryAreaTypeLocation`](inputStoryAreaTypeLocation.md) \| [`inputStoryAreaTypeFoundVenue`](inputStoryAreaTypeFoundVenue.md) \| [`inputStoryAreaTypePreviousVenue`](inputStoryAreaTypePreviousVenue.md) \| [`inputStoryAreaTypeSuggestedReaction`](inputStoryAreaTypeSuggestedReaction.md) \| [`inputStoryAreaTypeMessage`](inputStoryAreaTypeMessage.md) \| [`inputStoryAreaTypeLink`](inputStoryAreaTypeLink.md) \| [`inputStoryAreaTypeWeather`](inputStoryAreaTypeWeather.md)
 
 Any of:
 - [inputStoryAreaTypeLocation](inputStoryAreaTypeLocation.md)
@@ -15,7 +15,8 @@ Any of:
 - [inputStoryAreaTypeSuggestedReaction](inputStoryAreaTypeSuggestedReaction.md)
 - [inputStoryAreaTypeMessage](inputStoryAreaTypeMessage.md)
 - [inputStoryAreaTypeLink](inputStoryAreaTypeLink.md)
+- [inputStoryAreaTypeWeather](inputStoryAreaTypeWeather.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:62983
+dist/generated/types.d.ts:64763

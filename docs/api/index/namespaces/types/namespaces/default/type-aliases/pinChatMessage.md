@@ -6,7 +6,9 @@
 
 # Type Alias: pinChatMessage()
 
-> **pinChatMessage**: (`parameters`) => [`Ok`](Ok.md)
+> **pinChatMessage**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Pins a message in a chat. A message can be pinned only if messageProperties.can_be_pinned
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86169
+dist/generated/types.d.ts:88468

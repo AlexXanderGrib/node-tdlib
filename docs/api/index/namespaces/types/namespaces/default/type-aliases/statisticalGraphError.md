@@ -24,4 +24,4 @@ The error message
 
 ## Defined in
 
-dist/generated/types.d.ts:51137
+dist/generated/types.d.ts:52753

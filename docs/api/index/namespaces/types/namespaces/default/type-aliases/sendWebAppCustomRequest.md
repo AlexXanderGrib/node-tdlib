@@ -6,7 +6,9 @@
 
 # Type Alias: sendWebAppCustomRequest()
 
-> **sendWebAppCustomRequest**: (`parameters`) => [`CustomRequestResult`](CustomRequestResult.md)
+> **sendWebAppCustomRequest**: (`parameters`) => [`CustomRequestResult`](CustomRequestResult-1.md)
+
+Sends a custom request from a Web App
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`CustomRequestResult`](CustomRequestResult.md)
+[`CustomRequestResult`](CustomRequestResult-1.md)
 
-[CustomRequestResult](CustomRequestResult.md)
+[CustomRequestResult](CustomRequestResult-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95259
+dist/generated/types.d.ts:97756

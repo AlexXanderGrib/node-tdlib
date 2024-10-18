@@ -6,7 +6,9 @@
 
 # Type Alias: sendBusinessMessage()
 
-> **sendBusinessMessage**: (`parameters`) => [`BusinessMessage`](BusinessMessage.md)
+> **sendBusinessMessage**: (`parameters`) => [`BusinessMessage`](BusinessMessage-1.md)
+
+Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessMessage`](BusinessMessage.md)
+[`BusinessMessage`](BusinessMessage-1.md)
 
-[BusinessMessage](BusinessMessage.md)
+[BusinessMessage](BusinessMessage-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79592
+dist/generated/types.d.ts:81583

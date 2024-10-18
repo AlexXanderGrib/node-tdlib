@@ -12,4 +12,4 @@ Returns up to 8 emoji statuses, which must be shown right after the default Prem
 
 ## Defined in
 
-dist/generated/types.d.ts:88644
+dist/generated/types.d.ts:91019

@@ -36,4 +36,4 @@ Previous status of the chat member
 
 ## Defined in
 
-dist/generated/types.d.ts:39503
+dist/generated/types.d.ts:40873

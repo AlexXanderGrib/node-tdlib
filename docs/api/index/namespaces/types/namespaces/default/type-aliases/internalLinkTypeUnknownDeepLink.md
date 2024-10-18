@@ -24,4 +24,4 @@ Link to be passed to getDeepLinkInfo
 
 ## Defined in
 
-dist/generated/types.d.ts:48491
+dist/generated/types.d.ts:50065

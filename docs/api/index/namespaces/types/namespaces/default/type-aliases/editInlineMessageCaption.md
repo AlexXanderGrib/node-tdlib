@@ -6,7 +6,9 @@
 
 # Type Alias: editInlineMessageCaption()
 
-> **editInlineMessageCaption**: (`parameters`) => [`Ok`](Ok.md)
+> **editInlineMessageCaption**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Edits the caption of an inline message sent via a bot; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79360
+dist/generated/types.d.ts:81351

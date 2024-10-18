@@ -6,7 +6,9 @@
 
 # Type Alias: reorderChatFolders()
 
-> **reorderChatFolders**: (`parameters`) => [`Ok`](Ok.md)
+> **reorderChatFolders**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the order of chat folders
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84705
+dist/generated/types.d.ts:87004

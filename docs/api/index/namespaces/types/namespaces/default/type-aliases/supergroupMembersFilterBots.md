@@ -18,4 +18,4 @@ Returns bot members of the supergroup or channel
 
 ## Defined in
 
-dist/generated/types.d.ts:10453
+dist/generated/types.d.ts:10953

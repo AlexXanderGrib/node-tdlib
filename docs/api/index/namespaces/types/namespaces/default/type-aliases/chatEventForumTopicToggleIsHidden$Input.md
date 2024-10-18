@@ -20,10 +20,10 @@ The General forum topic was hidden or unhidden
 
 ### topic\_info?
 
-> `readonly` `optional` **topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input-1.md)
+> `readonly` `optional` **topic\_info**: [`forumTopicInfo$Input`](forumTopicInfo$Input.md)
 
 New information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40626
+dist/generated/types.d.ts:42020

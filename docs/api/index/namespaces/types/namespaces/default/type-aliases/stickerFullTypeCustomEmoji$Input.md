@@ -20,7 +20,7 @@ The sticker is a custom emoji to be used inside message text and caption. Curren
 
 ### custom\_emoji\_id?
 
-> `readonly` `optional` **custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the custom emoji
 
@@ -32,4 +32,4 @@ True, if the sticker must be repainted to a text color in messages, the color of
 
 ## Defined in
 
-dist/generated/types.d.ts:4521
+dist/generated/types.d.ts:4567

@@ -14,10 +14,10 @@ Returns an HTTPS link, which can be used to add a proxy. Available only for SOCK
 
 ### proxy\_id?
 
-> `readonly` `optional` **proxy\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **proxy\_id**: [`int32`](int32.md)
 
 Proxy identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:101613
+dist/generated/types.d.ts:104534

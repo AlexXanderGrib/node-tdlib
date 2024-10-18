@@ -22,22 +22,22 @@ Pass true to allow the bot to send messages to the current user
 
 ### button\_id?
 
-> `readonly` `optional` **button\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **button\_id**: [`int53`](int53.md)
 
 Button identifier
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the message with the button
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier of the message with the button
 
 ## Defined in
 
-dist/generated/types.d.ts:82371
+dist/generated/types.d.ts:84564

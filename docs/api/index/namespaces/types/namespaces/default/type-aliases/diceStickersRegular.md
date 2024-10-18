@@ -18,10 +18,10 @@ A regular animated sticker
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md)
+> **sticker**: [`sticker`](sticker.md)
 
 The animated sticker with the dice animation
 
 ## Defined in
 
-dist/generated/types.d.ts:36425
+dist/generated/types.d.ts:37795

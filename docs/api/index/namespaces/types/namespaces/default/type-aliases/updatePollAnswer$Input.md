@@ -20,13 +20,13 @@ A user changed the answer to a poll; for bots only
 
 ### option\_ids?
 
-> `readonly` `optional` **option\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **option\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 0-based identifiers of answer options, chosen by the user
 
 ### poll\_id?
 
-> `readonly` `optional` **poll\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **poll\_id**: [`int64$Input`](int64$Input.md)
 
 Unique poll identifier
 
@@ -38,4 +38,4 @@ Identifier of the message sender that changed the answer to the poll
 
 ## Defined in
 
-dist/generated/types.d.ts:57850
+dist/generated/types.d.ts:59490

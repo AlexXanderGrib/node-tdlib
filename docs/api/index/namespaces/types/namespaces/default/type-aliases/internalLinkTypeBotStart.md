@@ -38,4 +38,4 @@ The parameter to be passed to sendBotStartMessage
 
 ## Defined in
 
-dist/generated/types.d.ts:47511
+dist/generated/types.d.ts:49037

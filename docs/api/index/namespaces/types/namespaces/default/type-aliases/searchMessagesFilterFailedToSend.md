@@ -18,4 +18,4 @@ Returns only failed to send messages. This filter can be used only if the messag
 
 ## Defined in
 
-dist/generated/types.d.ts:30675
+dist/generated/types.d.ts:31807

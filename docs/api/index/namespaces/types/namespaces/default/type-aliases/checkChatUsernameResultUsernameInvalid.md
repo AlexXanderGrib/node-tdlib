@@ -18,4 +18,4 @@ The username is invalid
 
 ## Defined in
 
-dist/generated/types.d.ts:43885
+dist/generated/types.d.ts:45411

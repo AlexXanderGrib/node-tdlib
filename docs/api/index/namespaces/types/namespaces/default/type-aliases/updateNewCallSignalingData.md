@@ -18,16 +18,16 @@ New call signaling data arrived
 
 ### call\_id
 
-> **call\_id**: [`int32`](int32-1.md)
+> **call\_id**: [`int32`](int32.md)
 
 The call identifier
 
 ### data
 
-> **data**: [`bytes`](bytes-1.md)
+> **data**: [`bytes`](bytes.md)
 
 The data
 
 ## Defined in
 
-dist/generated/types.d.ts:55653
+dist/generated/types.d.ts:57269

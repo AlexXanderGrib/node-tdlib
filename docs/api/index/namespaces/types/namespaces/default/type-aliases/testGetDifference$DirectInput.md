@@ -12,4 +12,4 @@ Forces an updates.getDifference call to the Telegram servers; for testing only
 
 ## Defined in
 
-dist/generated/types.d.ts:102260
+dist/generated/types.d.ts:105181

@@ -20,7 +20,7 @@ A message with an animated emoji
 
 ### animated\_emoji?
 
-> `readonly` `optional` **animated\_emoji**: [`animatedEmoji$Input`](animatedEmoji$Input-1.md)
+> `readonly` `optional` **animated\_emoji**: [`animatedEmoji$Input`](animatedEmoji$Input.md)
 
 The animated emoji
 
@@ -32,4 +32,4 @@ The corresponding emoji
 
 ## Defined in
 
-dist/generated/types.d.ts:26429
+dist/generated/types.d.ts:27189

@@ -18,28 +18,28 @@ A Telegram Premium giveaway
 
 ### month\_count
 
-> **month\_count**: [`int32`](int32-1.md)
+> **month\_count**: [`int32`](int32.md)
 
 Number of months the Telegram Premium subscription will be active after code activation
 
 ### parameters
 
-> **parameters**: [`premiumGiveawayParameters`](premiumGiveawayParameters-1.md)
+> **parameters**: [`premiumGiveawayParameters`](premiumGiveawayParameters.md)
 
 Giveaway parameters
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md) \| `null`
+> **sticker**: [`sticker`](sticker.md) \| `null`
 
 A sticker to be shown in the message; may be null if unknown
 
 ### winner\_count
 
-> **winner\_count**: [`int32`](int32-1.md)
+> **winner\_count**: [`int32`](int32.md)
 
 Number of users which will receive Telegram Premium subscription gift codes
 
 ## Defined in
 
-dist/generated/types.d.ts:27975
+dist/generated/types.d.ts:28745

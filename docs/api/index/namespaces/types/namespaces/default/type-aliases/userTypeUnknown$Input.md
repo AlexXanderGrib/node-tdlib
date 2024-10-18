@@ -20,4 +20,4 @@ No information on the user besides the user identifier is available, yet this us
 
 ## Defined in
 
-dist/generated/types.d.ts:6283
+dist/generated/types.d.ts:6349

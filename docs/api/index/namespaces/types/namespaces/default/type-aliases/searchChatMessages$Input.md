@@ -22,7 +22,7 @@ Searches for messages with given words in the chat. Returns the results in rever
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat in which to search messages
 
@@ -34,13 +34,13 @@ Additional filter for messages to search; pass null to search for all messages
 
 ### from\_message\_id?
 
-> `readonly` `optional` **from\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **from\_message\_id**: [`int53`](int53.md)
 
 Identifier of the message starting from which history must be fetched; use 0 to get results from the last message
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than -offset.
 
@@ -48,13 +48,13 @@ The maximum number of messages to be returned; must be positive and can't be gre
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 If not 0, only messages in the specified thread will be returned; supergroups only
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int32`](int32-1.md)
+> `readonly` `optional` **offset**: [`int32`](int32.md)
 
 Specify 0 to get results from exactly the message from_message_id or a negative offset to get the specified message and some newer messages
 
@@ -66,7 +66,7 @@ Query to search for
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 If not 0, only messages in the specified Saved Messages topic will be returned; pass 0 to return all messages, or for chats other than Saved Messages
 
@@ -78,4 +78,4 @@ Identifier of the sender of messages to search for; pass null to search for mess
 
 ## Defined in
 
-dist/generated/types.d.ts:76293
+dist/generated/types.d.ts:78319

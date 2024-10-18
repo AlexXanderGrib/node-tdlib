@@ -18,10 +18,10 @@ The message was originally sent by a known user
 
 ### sender\_user\_id
 
-> **sender\_user\_id**: [`int53`](int53-1.md)
+> **sender\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user that originally sent the message
 
 ## Defined in
 
-dist/generated/types.d.ts:12241
+dist/generated/types.d.ts:12845

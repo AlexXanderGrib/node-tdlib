@@ -6,7 +6,9 @@
 
 # Type Alias: setChatSlowModeDelay()
 
-> **setChatSlowModeDelay**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatSlowModeDelay**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the slow mode delay of a chat. Available only for supergroups; requires can_restrict_members right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86111
+dist/generated/types.d.ts:88410

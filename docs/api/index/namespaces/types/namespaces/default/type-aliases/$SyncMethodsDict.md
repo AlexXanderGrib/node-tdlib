@@ -54,13 +54,13 @@
 
 > `readonly` **getLogStream**: [`getLogStream`](getLogStream.md)
 
-### getLogTagVerbosityLevel
-
-> `readonly` **getLogTagVerbosityLevel**: [`getLogTagVerbosityLevel`](getLogTagVerbosityLevel.md)
-
 ### getLogTags
 
 > `readonly` **getLogTags**: [`getLogTags`](getLogTags.md)
+
+### getLogTagVerbosityLevel
+
+> `readonly` **getLogTagVerbosityLevel**: [`getLogTagVerbosityLevel`](getLogTagVerbosityLevel.md)
 
 ### getLogVerbosityLevel
 
@@ -124,4 +124,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:67342
+dist/generated/types.d.ts:69192

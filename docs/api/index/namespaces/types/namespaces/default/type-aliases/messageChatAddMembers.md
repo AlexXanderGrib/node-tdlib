@@ -18,10 +18,10 @@ New chat members were added
 
 ### member\_user\_ids
 
-> **member\_user\_ids**: [`vector`](vector.md)\<[`int53`](int53-1.md)\>
+> **member\_user\_ids**: [`vector`](vector.md)\<[`int53`](int53.md)\>
 
 User identifiers of the new members
 
 ## Defined in
 
-dist/generated/types.d.ts:26985
+dist/generated/types.d.ts:27745

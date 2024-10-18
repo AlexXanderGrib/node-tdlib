@@ -18,16 +18,16 @@ A video story
 
 ### alternative\_video
 
-> **alternative\_video**: [`storyVideo`](storyVideo-1.md) \| `null`
+> **alternative\_video**: [`storyVideo`](storyVideo.md) \| `null`
 
 Alternative version of the video in MPEG4 format, encoded by x264 codec; may be null
 
 ### video
 
-> **video**: [`storyVideo`](storyVideo-1.md)
+> **video**: [`storyVideo`](storyVideo.md)
 
 The video in MPEG4 format
 
 ## Defined in
 
-dist/generated/types.d.ts:32479
+dist/generated/types.d.ts:33747

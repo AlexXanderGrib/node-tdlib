@@ -20,10 +20,10 @@ The link is a link to a Web App
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`photo$Input`](photo$Input-1.md)
+> `readonly` `optional` **photo**: [`photo$Input`](photo$Input.md)
 
 Web App photo
 
 ## Defined in
 
-dist/generated/types.d.ts:21738
+dist/generated/types.d.ts:22488

@@ -6,7 +6,9 @@
 
 # Type Alias: getFile()
 
-> **getFile**: (`parameters`) => [`File`](File.md)
+> **getFile**: (`parameters`) => [`File`](File-1.md)
+
+Returns information about a file; this is an offline request
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`File`](File.md)
+[`File`](File-1.md)
 
-[File](File.md)
+[File](File-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74950
+dist/generated/types.d.ts:76976

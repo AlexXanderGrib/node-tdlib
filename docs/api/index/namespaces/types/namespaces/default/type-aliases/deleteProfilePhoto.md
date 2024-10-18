@@ -6,7 +6,9 @@
 
 # Type Alias: deleteProfilePhoto()
 
-> **deleteProfilePhoto**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteProfilePhoto**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes a profile photo
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93910
+dist/generated/types.d.ts:96407

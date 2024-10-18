@@ -52,4 +52,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1145
+dist/generated/types.d.ts:1169

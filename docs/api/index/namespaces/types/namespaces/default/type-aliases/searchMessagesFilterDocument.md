@@ -18,4 +18,4 @@ Returns only document messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30507
+dist/generated/types.d.ts:31639

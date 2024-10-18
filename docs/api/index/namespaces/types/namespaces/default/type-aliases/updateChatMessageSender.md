@@ -18,7 +18,7 @@ The message sender that is selected to send messages in a chat has changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ New value of message_sender_id; may be null if the user can't change message sen
 
 ## Defined in
 
-dist/generated/types.d.ts:53785
+dist/generated/types.d.ts:55401

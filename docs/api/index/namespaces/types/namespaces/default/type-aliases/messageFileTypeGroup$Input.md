@@ -26,4 +26,4 @@ Title of the group chat; may be empty if unrecognized
 
 ## Defined in
 
-dist/generated/types.d.ts:44096
+dist/generated/types.d.ts:45622

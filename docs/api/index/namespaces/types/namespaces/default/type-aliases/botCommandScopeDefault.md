@@ -18,4 +18,4 @@ A scope covering all users
 
 ## Defined in
 
-dist/generated/types.d.ts:52441
+dist/generated/types.d.ts:54057

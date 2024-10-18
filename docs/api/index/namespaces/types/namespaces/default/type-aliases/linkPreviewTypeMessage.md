@@ -18,4 +18,4 @@ The link is a link to a text or a poll Telegram message
 
 ## Defined in
 
-dist/generated/types.d.ts:21295
+dist/generated/types.d.ts:22045

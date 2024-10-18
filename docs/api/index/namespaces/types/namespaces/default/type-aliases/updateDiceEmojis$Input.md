@@ -26,4 +26,4 @@ The new list of supported dice emojis
 
 ## Defined in
 
-dist/generated/types.d.ts:56902
+dist/generated/types.d.ts:58542

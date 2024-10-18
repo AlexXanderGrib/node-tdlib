@@ -18,16 +18,16 @@ A file was added to the file download list. This update is sent only after file 
 
 ### counts
 
-> **counts**: [`downloadedFileCounts`](downloadedFileCounts-1.md)
+> **counts**: [`downloadedFileCounts`](downloadedFileCounts.md)
 
 New number of being downloaded and recently downloaded files found
 
 ### file\_download
 
-> **file\_download**: [`fileDownload`](fileDownload-1.md)
+> **file\_download**: [`fileDownload`](fileDownload.md)
 
 The added file download
 
 ## Defined in
 
-dist/generated/types.d.ts:55397
+dist/generated/types.d.ts:57013

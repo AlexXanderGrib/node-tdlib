@@ -20,4 +20,4 @@ The message is from a forum topic history
 
 ## Defined in
 
-dist/generated/types.d.ts:14247
+dist/generated/types.d.ts:14839

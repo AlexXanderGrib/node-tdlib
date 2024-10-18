@@ -6,7 +6,9 @@
 
 # Type Alias: getChatBoostLinkInfo()
 
-> **getChatBoostLinkInfo**: (`parameters`) => [`ChatBoostLinkInfo`](ChatBoostLinkInfo.md)
+> **getChatBoostLinkInfo**: (`parameters`) => [`ChatBoostLinkInfo`](ChatBoostLinkInfo-1.md)
+
+Returns information about a link to boost a chat. Can be called for any internal link of the type internalLinkTypeChatBoost
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatBoostLinkInfo`](ChatBoostLinkInfo.md)
+[`ChatBoostLinkInfo`](ChatBoostLinkInfo-1.md)
 
-[ChatBoostLinkInfo](ChatBoostLinkInfo.md)
+[ChatBoostLinkInfo](ChatBoostLinkInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88462
+dist/generated/types.d.ts:90837

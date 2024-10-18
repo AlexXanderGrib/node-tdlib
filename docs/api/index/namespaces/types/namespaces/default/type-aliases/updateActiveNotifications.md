@@ -18,10 +18,10 @@ Contains active notifications that were shown on previous application launches. 
 
 ### groups
 
-> **groups**: [`vector`](vector.md)\<[`notificationGroup`](notificationGroup-1.md)\>
+> **groups**: [`vector`](vector.md)\<[`notificationGroup`](notificationGroup.md)\>
 
 Lists of active notification groups
 
 ## Defined in
 
-dist/generated/types.d.ts:54819
+dist/generated/types.d.ts:56435

@@ -18,7 +18,7 @@ Returns information about the next messages of the specified type in the chat sp
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat in which to return information about messages
 
@@ -30,16 +30,16 @@ Filter for message content. Filters searchMessagesFilterEmpty, searchMessagesFil
 
 ### from\_message\_id?
 
-> `readonly` `optional` **from\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **from\_message\_id**: [`int53`](int53.md)
 
 The message identifier from which to return information about messages; use 0 to get results from the last message
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 If not0, only messages in the specified Saved Messages topic will be considered; pass 0 to consider all messages, or for chats other than Saved Messages
 
 ## Defined in
 
-dist/generated/types.d.ts:77256
+dist/generated/types.d.ts:79265

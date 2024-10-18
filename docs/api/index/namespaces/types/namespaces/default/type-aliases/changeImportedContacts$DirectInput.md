@@ -16,10 +16,10 @@ Changes imported contacts using the list of contacts saved on the device. Import
 
 ### contacts?
 
-> `readonly` `optional` **contacts**: [`vector$Input`](vector$Input.md)\<[`contact$Input`](contact$Input-1.md)\>
+> `readonly` `optional` **contacts**: [`vector$Input`](vector$Input.md)\<[`contact$Input`](contact$Input.md)\>
 
 The new list of contacts, contact's vCard are ignored and are not imported
 
 ## Defined in
 
-dist/generated/types.d.ts:92238
+dist/generated/types.d.ts:94735

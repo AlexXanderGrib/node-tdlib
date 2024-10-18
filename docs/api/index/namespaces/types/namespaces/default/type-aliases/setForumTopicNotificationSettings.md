@@ -6,7 +6,9 @@
 
 # Type Alias: setForumTopicNotificationSettings()
 
-> **setForumTopicNotificationSettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setForumTopicNotificationSettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the notification settings of a forum topic
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:80938
+dist/generated/types.d.ts:82987

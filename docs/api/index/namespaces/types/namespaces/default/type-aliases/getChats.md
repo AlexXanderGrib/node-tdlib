@@ -6,7 +6,9 @@
 
 # Type Alias: getChats()
 
-> **getChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns an ordered list of chats from the beginning of a chat list. For informational purposes only. Use loadChats and updates processing instead to maintain chat lists in a consistent state
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75070
+dist/generated/types.d.ts:77096

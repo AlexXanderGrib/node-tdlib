@@ -20,4 +20,4 @@ Returns users banned from the chat; can be used only by administrators in a supe
 
 ## Defined in
 
-dist/generated/types.d.ts:10275
+dist/generated/types.d.ts:10775

@@ -18,4 +18,4 @@ The user couldn't hear the other side
 
 ## Defined in
 
-dist/generated/types.d.ts:35787
+dist/generated/types.d.ts:37157

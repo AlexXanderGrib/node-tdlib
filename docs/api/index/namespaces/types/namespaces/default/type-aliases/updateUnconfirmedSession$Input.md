@@ -20,10 +20,10 @@ The first unconfirmed session has changed
 
 ### session?
 
-> `readonly` `optional` **session**: [`unconfirmedSession$Input`](unconfirmedSession$Input-1.md) \| `null`
+> `readonly` `optional` **session**: [`unconfirmedSession$Input`](unconfirmedSession$Input.md) \| `null`
 
 The unconfirmed session; may be null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:56568
+dist/generated/types.d.ts:58184

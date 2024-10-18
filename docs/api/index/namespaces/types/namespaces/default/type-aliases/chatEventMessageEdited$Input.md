@@ -20,16 +20,16 @@ A message was edited
 
 ### new\_message?
 
-> `readonly` `optional` **new\_message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **new\_message**: [`message$Input`](message$Input.md)
 
 The message after it was edited
 
 ### old\_message?
 
-> `readonly` `optional` **old\_message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **old\_message**: [`message$Input`](message$Input.md)
 
 The original message before the edit
 
 ## Defined in
 
-dist/generated/types.d.ts:39207
+dist/generated/types.d.ts:40577

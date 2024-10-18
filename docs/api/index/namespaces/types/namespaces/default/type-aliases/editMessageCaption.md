@@ -6,7 +6,9 @@
 
 # Type Alias: editMessageCaption()
 
-> **editMessageCaption**: (`parameters`) => [`Message`](Message.md)
+> **editMessageCaption**: (`parameters`) => [`Message`](Message-1.md)
+
+Edits the message content caption. Returns the edited message after the edit is completed on the server side
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79070
+dist/generated/types.d.ts:81067

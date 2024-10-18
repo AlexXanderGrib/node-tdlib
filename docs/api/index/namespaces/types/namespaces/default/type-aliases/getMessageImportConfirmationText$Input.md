@@ -18,10 +18,10 @@ Returns a confirmation text to be shown to the user before starting message impo
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of a chat to which the messages will be imported. It must be an identifier of a private chat with a mutual contact or an identifier of a supergroup chat with can_change_info member right
 
 ## Defined in
 
-dist/generated/types.d.ts:89591
+dist/generated/types.d.ts:91966

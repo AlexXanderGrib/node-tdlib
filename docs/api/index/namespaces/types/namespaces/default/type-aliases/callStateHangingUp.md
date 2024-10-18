@@ -18,4 +18,4 @@ The call is hanging up after discardCall has been called
 
 ## Defined in
 
-dist/generated/types.d.ts:34965
+dist/generated/types.d.ts:36335

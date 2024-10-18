@@ -18,16 +18,16 @@ The supergroup sticker set with allowed custom emoji was changed
 
 ### new\_sticker\_set\_id
 
-> **new\_sticker\_set\_id**: [`int64`](int64-1.md)
+> **new\_sticker\_set\_id**: [`int64`](int64.md)
 
 New identifier of the chat sticker set; 0 if none
 
 ### old\_sticker\_set\_id
 
-> **old\_sticker\_set\_id**: [`int64`](int64-1.md)
+> **old\_sticker\_set\_id**: [`int64`](int64.md)
 
 Previous identifier of the chat sticker set; 0 if none
 
 ## Defined in
 
-dist/generated/types.d.ts:39921
+dist/generated/types.d.ts:41291

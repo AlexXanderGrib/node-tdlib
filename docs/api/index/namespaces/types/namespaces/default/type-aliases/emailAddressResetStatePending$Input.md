@@ -20,10 +20,10 @@ Email address reset has already been requested. Call resetAuthenticationEmailAdd
 
 ### reset\_in?
 
-> `readonly` `optional` **reset\_in**: [`int32`](int32-1.md)
+> `readonly` `optional` **reset\_in**: [`int32`](int32.md)
 
 Left time before the email address will be reset, in seconds. updateAuthorizationState is not sent when this field changes
 
 ## Defined in
 
-dist/generated/types.d.ts:2980
+dist/generated/types.d.ts:3026

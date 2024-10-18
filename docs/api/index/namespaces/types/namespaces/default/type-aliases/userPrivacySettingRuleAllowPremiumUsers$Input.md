@@ -20,4 +20,4 @@ A rule to allow all Premium Users to do something; currently, allowed only for u
 
 ## Defined in
 
-dist/generated/types.d.ts:46015
+dist/generated/types.d.ts:47541

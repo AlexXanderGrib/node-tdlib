@@ -6,7 +6,9 @@
 
 # Type Alias: createTemporaryPassword()
 
-> **createTemporaryPassword**: (`parameters`) => [`TemporaryPasswordState`](TemporaryPasswordState.md)
+> **createTemporaryPassword**: (`parameters`) => [`TemporaryPasswordState`](TemporaryPasswordState-1.md)
+
+Creates a new temporary password for processing payments
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TemporaryPasswordState`](TemporaryPasswordState.md)
+[`TemporaryPasswordState`](TemporaryPasswordState-1.md)
 
-[TemporaryPasswordState](TemporaryPasswordState.md)
+[TemporaryPasswordState](TemporaryPasswordState-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74310
+dist/generated/types.d.ts:76298

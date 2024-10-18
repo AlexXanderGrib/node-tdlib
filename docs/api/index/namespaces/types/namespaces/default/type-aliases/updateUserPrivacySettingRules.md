@@ -18,7 +18,7 @@ Some privacy setting rules have been changed
 
 ### rules
 
-> **rules**: [`userPrivacySettingRules`](userPrivacySettingRules-1.md)
+> **rules**: [`userPrivacySettingRules`](userPrivacySettingRules.md)
 
 New privacy rules
 
@@ -30,4 +30,4 @@ The privacy setting
 
 ## Defined in
 
-dist/generated/types.d.ts:55687
+dist/generated/types.d.ts:57303

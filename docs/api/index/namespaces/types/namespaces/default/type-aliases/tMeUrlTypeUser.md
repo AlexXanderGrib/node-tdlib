@@ -18,10 +18,10 @@ A URL linking to a user
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 Identifier of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:50213
+dist/generated/types.d.ts:51811

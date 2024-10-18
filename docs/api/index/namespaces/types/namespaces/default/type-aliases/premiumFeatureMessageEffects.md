@@ -18,4 +18,4 @@ The ability to use all available message effects
 
 ## Defined in
 
-dist/generated/types.d.ts:41847
+dist/generated/types.d.ts:43241

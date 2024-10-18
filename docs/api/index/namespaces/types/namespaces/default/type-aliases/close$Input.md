@@ -18,4 +18,4 @@ Closes the TDLib instance. All databases will be flushed to disk and properly cl
 
 ## Defined in
 
-dist/generated/types.d.ts:73738
+dist/generated/types.d.ts:75726

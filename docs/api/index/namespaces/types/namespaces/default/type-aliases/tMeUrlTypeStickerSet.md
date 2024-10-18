@@ -18,10 +18,10 @@ A URL linking to a sticker set
 
 ### sticker\_set\_id
 
-> **sticker\_set\_id**: [`int64`](int64-1.md)
+> **sticker\_set\_id**: [`int64`](int64.md)
 
 Identifier of the sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:50285
+dist/generated/types.d.ts:51883

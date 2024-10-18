@@ -32,7 +32,7 @@ True, if authorization through Google ID is allowed
 
 ### code\_info?
 
-> `readonly` `optional` **code\_info**: [`emailAddressAuthenticationCodeInfo$Input`](emailAddressAuthenticationCodeInfo$Input-1.md)
+> `readonly` `optional` **code\_info**: [`emailAddressAuthenticationCodeInfo$Input`](emailAddressAuthenticationCodeInfo$Input.md)
 
 Information about the sent authentication code
 
@@ -44,4 +44,4 @@ Reset state of the email address; may be null if the email address can't be rese
 
 ## Defined in
 
-dist/generated/types.d.ts:3231
+dist/generated/types.d.ts:3277

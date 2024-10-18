@@ -28,9 +28,9 @@ export type boolTrue = true;
 
 export type boolFalse = false;
 
-export type vector<T> = Array<T>;
+export type vector<T> = T[];
 
-export type vector$Input<T> = ReadonlyArray<T>;
+export type vector$Input<T> = readonly T[];
 
 export const $Methods = Object.freeze({
   getAuthorizationState: "getAuthorizationState",

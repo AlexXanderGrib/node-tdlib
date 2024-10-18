@@ -18,4 +18,4 @@ Returns all contacts of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:92123
+dist/generated/types.d.ts:94620

@@ -6,7 +6,9 @@
 
 # Type Alias: searchRecentlyFoundChats()
 
-> **searchRecentlyFoundChats**: (`parameters`) => [`Chats`](Chats.md)
+> **searchRecentlyFoundChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75477
+dist/generated/types.d.ts:77503

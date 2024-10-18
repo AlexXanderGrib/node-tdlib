@@ -18,13 +18,13 @@ A voice note message
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md) \| `null`
+> **caption**: [`formattedText`](formattedText.md) \| `null`
 
 Voice note caption; may be null if empty; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Duration of the voice note, in seconds
 
@@ -42,10 +42,10 @@ Voice note to be sent. The voice note must be encoded with the Opus codec and st
 
 ### waveform
 
-> **waveform**: [`bytes`](bytes-1.md)
+> **waveform**: [`bytes`](bytes.md)
 
 Waveform representation of the voice note in 5-bit format
 
 ## Defined in
 
-dist/generated/types.d.ts:29915
+dist/generated/types.d.ts:30789

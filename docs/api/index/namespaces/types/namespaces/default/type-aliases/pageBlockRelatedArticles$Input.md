@@ -20,7 +20,7 @@ Related articles
 
 ### articles?
 
-> `readonly` `optional` **articles**: [`vector$Input`](vector$Input.md)\<[`pageBlockRelatedArticle$Input`](pageBlockRelatedArticle$Input-1.md)\>
+> `readonly` `optional` **articles**: [`vector$Input`](vector$Input.md)\<[`pageBlockRelatedArticle$Input`](pageBlockRelatedArticle$Input.md)\>
 
 List of related articles
 
@@ -32,4 +32,4 @@ Block header
 
 ## Defined in
 
-dist/generated/types.d.ts:20645
+dist/generated/types.d.ts:21271

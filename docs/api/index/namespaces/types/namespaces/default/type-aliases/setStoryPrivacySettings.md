@@ -6,7 +6,9 @@
 
 # Type Alias: setStoryPrivacySettings()
 
-> **setStoryPrivacySettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setStoryPrivacySettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_be_edited == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87427
+dist/generated/types.d.ts:89802

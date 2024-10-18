@@ -26,4 +26,4 @@ A tg:// URL for the QR code. The link will be updated frequently
 
 ## Defined in
 
-dist/generated/types.d.ts:3294
+dist/generated/types.d.ts:3340

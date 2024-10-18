@@ -6,7 +6,11 @@
 
 # Type Alias: resendAuthenticationCode()
 
-> **resendAuthenticationCode**: (`parameters`) => [`Ok`](Ok.md)
+> **resendAuthenticationCode**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
+
+- and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73351
+dist/generated/types.d.ts:75339

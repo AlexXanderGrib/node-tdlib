@@ -24,7 +24,7 @@ Space-separated list of emojis to search for; must be non-empty
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of stickers to be returned; 0-100
 
@@ -36,4 +36,4 @@ Type of the stickers to return
 
 ## Defined in
 
-dist/generated/types.d.ts:92625
+dist/generated/types.d.ts:95122

@@ -20,7 +20,7 @@ The payment form is for a regular payment
 
 ### additional\_payment\_options?
 
-> `readonly` `optional` **additional\_payment\_options**: [`vector$Input`](vector$Input.md)\<[`paymentOption$Input`](paymentOption$Input-1.md)\>
+> `readonly` `optional` **additional\_payment\_options**: [`vector$Input`](vector$Input.md)\<[`paymentOption$Input`](paymentOption$Input.md)\>
 
 The list of additional payment options
 
@@ -32,7 +32,7 @@ True, if the user can choose to save credentials
 
 ### invoice?
 
-> `readonly` `optional` **invoice**: [`invoice$Input`](invoice$Input-1.md)
+> `readonly` `optional` **invoice**: [`invoice$Input`](invoice$Input.md)
 
 Full information about the invoice
 
@@ -50,22 +50,22 @@ Information about the payment provider
 
 ### payment\_provider\_user\_id?
 
-> `readonly` `optional` **payment\_provider\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **payment\_provider\_user\_id**: [`int53`](int53.md)
 
 User identifier of the payment provider bot
 
 ### saved\_credentials?
 
-> `readonly` `optional` **saved\_credentials**: [`vector$Input`](vector$Input.md)\<[`savedCredentials$Input`](savedCredentials$Input-1.md)\>
+> `readonly` `optional` **saved\_credentials**: [`vector$Input`](vector$Input.md)\<[`savedCredentials$Input`](savedCredentials$Input.md)\>
 
 The list of saved payment credentials
 
 ### saved\_order\_info?
 
-> `readonly` `optional` **saved\_order\_info**: [`orderInfo$Input`](orderInfo$Input-1.md) \| `null`
+> `readonly` `optional` **saved\_order\_info**: [`orderInfo$Input`](orderInfo$Input.md) \| `null`
 
 Saved server-side order information; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:23107
+dist/generated/types.d.ts:23867

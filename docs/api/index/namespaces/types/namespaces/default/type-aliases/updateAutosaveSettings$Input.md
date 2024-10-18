@@ -26,10 +26,10 @@ Type of chats for which autosave settings were updated
 
 ### settings?
 
-> `readonly` `optional` **settings**: [`scopeAutosaveSettings$Input`](scopeAutosaveSettings$Input-1.md) \| `null`
+> `readonly` `optional` **settings**: [`scopeAutosaveSettings$Input`](scopeAutosaveSettings$Input.md) \| `null`
 
 The new autosave settings; may be null if the settings are reset to default
 
 ## Defined in
 
-dist/generated/types.d.ts:57095
+dist/generated/types.d.ts:58735

@@ -18,7 +18,7 @@ Searches for the specified query in the title and username of already known chat
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of chats to be returned
 
@@ -30,4 +30,4 @@ Query to search for. If the query is empty, returns up to 50 recently found chat
 
 ## Defined in
 
-dist/generated/types.d.ts:75136
+dist/generated/types.d.ts:77162

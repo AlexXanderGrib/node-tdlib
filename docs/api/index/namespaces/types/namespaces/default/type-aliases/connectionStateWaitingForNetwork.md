@@ -18,4 +18,4 @@ Waiting for the network to become available. Use setNetworkType to change the av
 
 ## Defined in
 
-dist/generated/types.d.ts:49987
+dist/generated/types.d.ts:51571

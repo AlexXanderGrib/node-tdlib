@@ -6,7 +6,9 @@
 
 # Type Alias: getCallbackQueryMessage()
 
-> **getCallbackQueryMessage**: (`parameters`) => [`Message`](Message.md)
+> **getCallbackQueryMessage**: (`parameters`) => [`Message`](Message-1.md)
+
+Returns information about a message with the callback button that originated a callback query; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74770
+dist/generated/types.d.ts:76758

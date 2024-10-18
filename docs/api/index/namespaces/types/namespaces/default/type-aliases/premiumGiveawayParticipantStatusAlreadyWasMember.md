@@ -18,10 +18,10 @@ The user can't participate in the giveaway, because they have already been membe
 
 ### joined\_chat\_date
 
-> **joined\_chat\_date**: [`int32`](int32-1.md)
+> **joined\_chat\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the user joined the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:8691
+dist/generated/types.d.ts:9127

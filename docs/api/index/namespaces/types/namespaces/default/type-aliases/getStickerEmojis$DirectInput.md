@@ -20,4 +20,4 @@ Sticker file identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:93354
+dist/generated/types.d.ts:95851

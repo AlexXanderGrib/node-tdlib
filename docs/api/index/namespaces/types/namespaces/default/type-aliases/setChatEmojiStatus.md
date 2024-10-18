@@ -6,7 +6,9 @@
 
 # Type Alias: setChatEmojiStatus()
 
-> **setChatEmojiStatus**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatEmojiStatus**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the emoji status of a chat. Use chatBoostLevelFeatures.can_set_emoji_status to check whether an emoji status can be set. Requires can_change_info administrator right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85413
+dist/generated/types.d.ts:87712

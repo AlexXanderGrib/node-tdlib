@@ -20,4 +20,4 @@ The file is a photo
 
 ## Defined in
 
-dist/generated/types.d.ts:49011
+dist/generated/types.d.ts:50595

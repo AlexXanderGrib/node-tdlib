@@ -18,10 +18,10 @@ A repost of the story as a story
 
 ### story
 
-> **story**: [`story`](story-1.md)
+> **story**: [`story`](story.md)
 
 The reposted story
 
 ## Defined in
 
-dist/generated/types.d.ts:33321
+dist/generated/types.d.ts:34599

@@ -6,7 +6,9 @@
 
 # Type Alias: getChatPinnedMessage()
 
-> **getChatPinnedMessage**: (`parameters`) => [`Message`](Message.md)
+> **getChatPinnedMessage**: (`parameters`) => [`Message`](Message-1.md)
+
+Returns information about a newest pinned message in the chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74722
+dist/generated/types.d.ts:76710

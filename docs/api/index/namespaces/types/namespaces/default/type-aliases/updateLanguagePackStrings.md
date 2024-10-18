@@ -30,10 +30,10 @@ Localization target to which the language pack belongs
 
 ### strings
 
-> **strings**: [`vector`](vector.md)\<[`languagePackString`](languagePackString-1.md)\>
+> **strings**: [`vector`](vector.md)\<[`languagePackString`](languagePackString.md)\>
 
 List of changed language pack strings; empty if all strings have changed
 
 ## Defined in
 
-dist/generated/types.d.ts:56429
+dist/generated/types.d.ts:58045

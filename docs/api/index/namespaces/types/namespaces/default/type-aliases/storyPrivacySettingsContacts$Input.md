@@ -20,10 +20,10 @@ The story can be viewed by all contacts except chosen users
 
 ### except\_user\_ids?
 
-> `readonly` `optional` **except\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **except\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 User identifiers of the contacts that can't see the story; always unknown and empty for non-owned stories
 
 ## Defined in
 
-dist/generated/types.d.ts:45930
+dist/generated/types.d.ts:47456

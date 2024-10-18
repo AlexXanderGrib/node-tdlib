@@ -30,4 +30,4 @@ The web page URL
 
 ## Defined in
 
-dist/generated/types.d.ts:93810
+dist/generated/types.d.ts:96307

@@ -20,4 +20,4 @@ Information about the invoice of the type inputMessageInvoice
 
 ## Defined in
 
-dist/generated/types.d.ts:97026
+dist/generated/types.d.ts:99805

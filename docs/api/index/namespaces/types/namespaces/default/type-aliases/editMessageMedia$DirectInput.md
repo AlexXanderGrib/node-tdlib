@@ -12,13 +12,13 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
 
-- Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
+- Returns the edited message after the edit is completed on the server side
 
 ## Type declaration
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat the message belongs to
 
@@ -30,9 +30,9 @@ New content of the message. Must be one of the following types: inputMessageAnim
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message
+Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 
 ### reply\_markup?
 
@@ -42,4 +42,4 @@ The new message reply markup; pass null if none; for bots only
 
 ## Defined in
 
-dist/generated/types.d.ts:78964
+dist/generated/types.d.ts:80967

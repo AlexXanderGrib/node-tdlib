@@ -8,19 +8,19 @@
 
 > **reportMessageReactions$DirectInput**: `object`
 
-Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if message.can_report_reactions
+Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if messageProperties.can_report_reactions
 
 ## Type declaration
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
@@ -32,4 +32,4 @@ Identifier of the sender, which added the reaction
 
 ## Defined in
 
-dist/generated/types.d.ts:98288
+dist/generated/types.d.ts:101067

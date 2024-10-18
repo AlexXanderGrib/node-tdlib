@@ -24,4 +24,4 @@ Title of the supergroup or channel
 
 ## Defined in
 
-dist/generated/types.d.ts:26899
+dist/generated/types.d.ts:27659

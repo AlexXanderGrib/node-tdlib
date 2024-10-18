@@ -20,4 +20,4 @@ The user must subscribe to Telegram Premium to be able to post stories
 
 ## Defined in
 
-dist/generated/types.d.ts:43713
+dist/generated/types.d.ts:45239

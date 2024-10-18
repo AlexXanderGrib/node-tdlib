@@ -20,7 +20,7 @@ The message pinned state was changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -32,10 +32,10 @@ True, if the message is pinned
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 The message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:52916
+dist/generated/types.d.ts:54532

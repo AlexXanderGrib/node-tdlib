@@ -18,7 +18,7 @@ A document message (general file)
 
 ### caption
 
-> **caption**: [`formattedText`](formattedText-1.md) \| `null`
+> **caption**: [`formattedText`](formattedText.md) \| `null`
 
 Document caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
@@ -36,10 +36,10 @@ Document to be sent
 
 ### thumbnail
 
-> **thumbnail**: [`inputThumbnail`](inputThumbnail-1.md) \| `null`
+> **thumbnail**: [`inputThumbnail`](inputThumbnail.md) \| `null`
 
 Document thumbnail; pass null to skip thumbnail uploading
 
 ## Defined in
 
-dist/generated/types.d.ts:29451
+dist/generated/types.d.ts:30325

@@ -14,16 +14,16 @@ Changes accent color and background custom emoji for the current user; for Teleg
 
 ### accent\_color\_id?
 
-> `readonly` `optional` **accent\_color\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **accent\_color\_id**: [`int32`](int32.md)
 
 Identifier of the accent color to use
 
 ### background\_custom\_emoji\_id?
 
-> `readonly` `optional` **background\_custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **background\_custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of a custom emoji to be shown on the reply header and link preview background; 0 if none
 
 ## Defined in
 
-dist/generated/types.d.ts:93930
+dist/generated/types.d.ts:96427

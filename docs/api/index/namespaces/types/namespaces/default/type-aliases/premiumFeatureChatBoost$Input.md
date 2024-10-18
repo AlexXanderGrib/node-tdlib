@@ -20,4 +20,4 @@ The ability to boost chats
 
 ## Defined in
 
-dist/generated/types.d.ts:41753
+dist/generated/types.d.ts:43147

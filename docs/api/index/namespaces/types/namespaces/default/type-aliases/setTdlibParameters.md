@@ -6,7 +6,9 @@
 
 # Type Alias: setTdlibParameters()
 
-> **setTdlibParameters**: (`parameters`) => [`Ok`](Ok.md)
+> **setTdlibParameters**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the parameters for TDLib initialization. Works only when the current authorization state is authorizationStateWaitTdlibParameters
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73245
+dist/generated/types.d.ts:75233

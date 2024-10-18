@@ -24,4 +24,4 @@ The new type of the default reaction
 
 ## Defined in
 
-dist/generated/types.d.ts:56685
+dist/generated/types.d.ts:58301

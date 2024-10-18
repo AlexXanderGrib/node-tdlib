@@ -26,10 +26,10 @@ True, if the user is a bot
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`chatPhoto$Input`](chatPhoto$Input-1.md) \| `null`
+> `readonly` `optional` **photo**: [`chatPhoto$Input`](chatPhoto$Input.md) \| `null`
 
 Photo of the user; may be null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:21543
+dist/generated/types.d.ts:22293

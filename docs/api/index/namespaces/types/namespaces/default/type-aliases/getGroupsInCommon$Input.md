@@ -18,22 +18,22 @@ Returns a list of common group chats with a given user. Chats are sorted by thei
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of chats to be returned; up to 100
 
 ### offset\_chat\_id?
 
-> `readonly` `optional` **offset\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **offset\_chat\_id**: [`int53`](int53.md)
 
 Chat identifier starting from which to return chats; use 0 for the first request
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:76003
+dist/generated/types.d.ts:78029

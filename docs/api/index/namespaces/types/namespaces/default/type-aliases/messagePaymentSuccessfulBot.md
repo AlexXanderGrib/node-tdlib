@@ -24,7 +24,7 @@ Currency for price of the product
 
 ### invoice\_payload
 
-> **invoice\_payload**: [`bytes`](bytes-1.md)
+> **invoice\_payload**: [`bytes`](bytes.md)
 
 Invoice payload
 
@@ -42,7 +42,7 @@ True, if this is a recurring payment
 
 ### order\_info
 
-> **order\_info**: [`orderInfo`](orderInfo-1.md) \| `null`
+> **order\_info**: [`orderInfo`](orderInfo.md) \| `null`
 
 Information about the order; may be null
 
@@ -66,10 +66,10 @@ Telegram payment identifier
 
 ### total\_amount
 
-> **total\_amount**: [`int53`](int53-1.md)
+> **total\_amount**: [`int53`](int53.md)
 
 Total price for the product, in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:27585
+dist/generated/types.d.ts:28345

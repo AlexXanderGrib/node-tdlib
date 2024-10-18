@@ -14,10 +14,10 @@ Changes privacy settings for message read date
 
 ### settings?
 
-> `readonly` `optional` **settings**: [`readDatePrivacySettings$Input`](readDatePrivacySettings$Input-1.md)
+> `readonly` `optional` **settings**: [`readDatePrivacySettings$Input`](readDatePrivacySettings$Input.md)
 
 New settings
 
 ## Defined in
 
-dist/generated/types.d.ts:97806
+dist/generated/types.d.ts:100585

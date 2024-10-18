@@ -20,10 +20,10 @@ A background previously set in the chat; for chat backgrounds only
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message with the background
 
 ## Defined in
 
-dist/generated/types.d.ts:43544
+dist/generated/types.d.ts:45070

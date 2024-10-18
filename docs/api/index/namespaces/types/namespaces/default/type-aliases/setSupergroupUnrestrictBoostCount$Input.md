@@ -18,16 +18,16 @@ Changes the number of times the supergroup must be boosted by a user to ignore s
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup
 
 ### unrestrict\_boost\_count?
 
-> `readonly` `optional` **unrestrict\_boost\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **unrestrict\_boost\_count**: [`int32`](int32.md)
 
 New value of the unrestrict_boost_count supergroup setting; 0-8. Use 0 to remove the setting
 
 ## Defined in
 
-dist/generated/types.d.ts:96135
+dist/generated/types.d.ts:98904

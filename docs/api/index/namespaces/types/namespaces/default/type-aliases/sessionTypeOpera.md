@@ -18,4 +18,4 @@ The session is running on the Opera browser
 
 ## Defined in
 
-dist/generated/types.d.ts:46601
+dist/generated/types.d.ts:48127

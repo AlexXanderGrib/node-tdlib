@@ -20,4 +20,4 @@ The selfie with the document contains an error. The error will be considered res
 
 ## Defined in
 
-dist/generated/types.d.ts:25063
+dist/generated/types.d.ts:25823

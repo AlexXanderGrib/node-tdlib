@@ -6,7 +6,9 @@
 
 # Type Alias: leaveGroupCall()
 
-> **leaveGroupCall**: (`parameters`) => [`Ok`](Ok.md)
+> **leaveGroupCall**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Leaves a group call
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91781
+dist/generated/types.d.ts:94278

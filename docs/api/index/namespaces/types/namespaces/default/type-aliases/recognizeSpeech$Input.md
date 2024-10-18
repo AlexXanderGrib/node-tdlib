@@ -8,7 +8,7 @@
 
 > **recognizeSpeech$Input**: `object`
 
-Recognizes speech in a video note or a voice note message. The message must be successfully sent, must not be scheduled, and must be from a non-secret chat
+Recognizes speech in a video note or a voice note message
 
 ## Type declaration
 
@@ -18,16 +18,16 @@ Recognizes speech in a video note or a voice note message. The message must be s
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the message belongs
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message
+Identifier of the message. Use messageProperties.can_recognize_speech to check whether the message is suitable
 
 ## Defined in
 
-dist/generated/types.d.ts:77920
+dist/generated/types.d.ts:79929

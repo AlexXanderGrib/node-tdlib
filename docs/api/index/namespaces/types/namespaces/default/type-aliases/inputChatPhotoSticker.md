@@ -18,10 +18,10 @@ A sticker on a custom background
 
 ### sticker
 
-> **sticker**: [`chatPhotoSticker`](chatPhotoSticker-1.md)
+> **sticker**: [`chatPhotoSticker`](chatPhotoSticker.md)
 
 Information about the sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:7561
+dist/generated/types.d.ts:7627

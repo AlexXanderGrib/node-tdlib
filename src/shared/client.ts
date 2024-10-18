@@ -1,6 +1,6 @@
 export type TDLibClient = { __type: "TDLibClient" };
 
-export interface TDLib {
+export type TDLib = {
   readonly _isTDLib: true;
   readonly name: string;
 

@@ -20,4 +20,4 @@ The other side couldn't hear the user
 
 ## Defined in
 
-dist/generated/types.d.ts:35809
+dist/generated/types.d.ts:37179

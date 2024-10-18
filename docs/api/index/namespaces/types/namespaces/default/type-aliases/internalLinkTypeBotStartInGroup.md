@@ -28,7 +28,7 @@ The link is a link to a Telegram bot, which is supposed to be added to a group c
 
 ### administrator\_rights
 
-> **administrator\_rights**: [`chatAdministratorRights`](chatAdministratorRights-1.md) \| `null`
+> **administrator\_rights**: [`chatAdministratorRights`](chatAdministratorRights.md) \| `null`
 
 Expected administrator rights for the bot; may be null
 
@@ -46,4 +46,4 @@ The parameter to be passed to sendBotStartMessage
 
 ## Defined in
 
-dist/generated/types.d.ts:47567
+dist/generated/types.d.ts:49093

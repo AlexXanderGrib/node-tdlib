@@ -6,7 +6,9 @@
 
 # Type Alias: searchOutgoingDocumentMessages()
 
-> **searchOutgoingDocumentMessages**: (`parameters`) => [`FoundMessages`](FoundMessages.md)
+> **searchOutgoingDocumentMessages**: (`parameters`) => [`FoundMessages`](FoundMessages-1.md)
+
+Searches for outgoing messages with content of the type messageDocument in all chats except secret chats. Returns the results in reverse chronological order
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FoundMessages`](FoundMessages.md)
+[`FoundMessages`](FoundMessages-1.md)
 
-[FoundMessages](FoundMessages.md)
+[FoundMessages](FoundMessages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76761
+dist/generated/types.d.ts:78787

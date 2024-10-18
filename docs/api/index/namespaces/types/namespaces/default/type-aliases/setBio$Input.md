@@ -24,4 +24,4 @@ The new value of the user bio; 0-getOption("bio_length_max") characters without 
 
 ## Defined in
 
-dist/generated/types.d.ts:94028
+dist/generated/types.d.ts:96525

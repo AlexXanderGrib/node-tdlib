@@ -24,13 +24,13 @@ True, if scrolling needs to be allowed
 
 ### caption
 
-> **caption**: [`pageBlockCaption`](pageBlockCaption-1.md)
+> **caption**: [`pageBlockCaption`](pageBlockCaption.md)
 
 Block caption
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
 Block height; 0 if unknown
 
@@ -48,7 +48,7 @@ True, if the block must be full width
 
 ### poster\_photo
 
-> **poster\_photo**: [`photo`](photo-1.md) \| `null`
+> **poster\_photo**: [`photo`](photo.md) \| `null`
 
 Poster photo, if available; may be null
 
@@ -60,10 +60,10 @@ URL of the embedded page, if available
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
 Block width; 0 if unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:20239
+dist/generated/types.d.ts:20865

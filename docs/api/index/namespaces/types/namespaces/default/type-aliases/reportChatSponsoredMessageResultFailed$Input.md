@@ -20,4 +20,4 @@ The sponsored message is too old or not found
 
 ## Defined in
 
-dist/generated/types.d.ts:14599
+dist/generated/types.d.ts:15191

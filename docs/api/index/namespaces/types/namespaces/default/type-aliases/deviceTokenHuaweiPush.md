@@ -30,4 +30,4 @@ Device registration token; may be empty to deregister a device
 
 ## Defined in
 
-dist/generated/types.d.ts:43197
+dist/generated/types.d.ts:44723

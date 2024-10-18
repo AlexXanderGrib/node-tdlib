@@ -32,4 +32,4 @@ The URL to open
 
 ## Defined in
 
-dist/generated/types.d.ts:17921
+dist/generated/types.d.ts:18513

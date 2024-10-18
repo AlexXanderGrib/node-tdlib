@@ -20,28 +20,28 @@ The list of unread reactions added to a message was changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ### unread\_reaction\_count?
 
-> `readonly` `optional` **unread\_reaction\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **unread\_reaction\_count**: [`int32`](int32.md)
 
 The new number of messages with unread reactions left in the chat
 
 ### unread\_reactions?
 
-> `readonly` `optional` **unread\_reactions**: [`vector$Input`](vector$Input.md)\<[`unreadReaction$Input`](unreadReaction$Input-1.md)\>
+> `readonly` `optional` **unread\_reactions**: [`vector$Input`](vector$Input.md)\<[`unreadReaction$Input`](unreadReaction$Input.md)\>
 
 The new list of unread reactions
 
 ## Defined in
 
-dist/generated/types.d.ts:53087
+dist/generated/types.d.ts:54703

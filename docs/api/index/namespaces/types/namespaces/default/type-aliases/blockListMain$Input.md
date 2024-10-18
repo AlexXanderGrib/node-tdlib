@@ -20,4 +20,4 @@ The main block list that disallows writing messages to the current user, receivi
 
 ## Defined in
 
-dist/generated/types.d.ts:48889
+dist/generated/types.d.ts:50473

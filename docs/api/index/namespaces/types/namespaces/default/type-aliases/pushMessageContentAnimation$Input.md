@@ -20,7 +20,7 @@ An animation message (GIF-style).
 
 ### animation?
 
-> `readonly` `optional` **animation**: [`animation$Input`](animation$Input-1.md) \| `null`
+> `readonly` `optional` **animation**: [`animation$Input`](animation$Input.md) \| `null`
 
 Message content; may be null
 
@@ -38,4 +38,4 @@ True, if the message is a pinned message with the specified content
 
 ## Defined in
 
-dist/generated/types.d.ts:44168
+dist/generated/types.d.ts:45694

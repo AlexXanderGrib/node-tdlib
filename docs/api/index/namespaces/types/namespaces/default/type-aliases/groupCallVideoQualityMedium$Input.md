@@ -20,4 +20,4 @@ The medium video quality
 
 ## Defined in
 
-dist/generated/types.d.ts:35079
+dist/generated/types.d.ts:36449

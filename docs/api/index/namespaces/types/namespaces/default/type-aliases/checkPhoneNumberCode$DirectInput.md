@@ -20,4 +20,4 @@ Authentication code to check
 
 ## Defined in
 
-dist/generated/types.d.ts:94573
+dist/generated/types.d.ts:97070

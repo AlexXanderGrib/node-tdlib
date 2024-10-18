@@ -20,4 +20,4 @@ Allowed to use custom emoji stickers in message texts and captions
 
 ## Defined in
 
-dist/generated/types.d.ts:41627
+dist/generated/types.d.ts:43021

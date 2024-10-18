@@ -20,10 +20,10 @@ A chat invite link
 
 ### info?
 
-> `readonly` `optional` **info**: [`chatInviteLinkInfo$Input`](chatInviteLinkInfo$Input-1.md)
+> `readonly` `optional` **info**: [`chatInviteLinkInfo$Input`](chatInviteLinkInfo$Input.md)
 
 Information about the chat invite link
 
 ## Defined in
 
-dist/generated/types.d.ts:50274
+dist/generated/types.d.ts:51872

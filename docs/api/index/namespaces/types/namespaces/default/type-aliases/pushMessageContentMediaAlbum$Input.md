@@ -44,10 +44,10 @@ True, if the album has at least one video file
 
 ### total\_count?
 
-> `readonly` `optional` **total\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **total\_count**: [`int32`](int32.md)
 
 Number of messages in the album
 
 ## Defined in
 
-dist/generated/types.d.ts:45200
+dist/generated/types.d.ts:46726

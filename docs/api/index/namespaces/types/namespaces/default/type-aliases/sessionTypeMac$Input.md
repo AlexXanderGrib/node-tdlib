@@ -20,4 +20,4 @@ The session is running on a Mac device
 
 ## Defined in
 
-dist/generated/types.d.ts:46595
+dist/generated/types.d.ts:48121

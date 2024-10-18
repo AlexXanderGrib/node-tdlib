@@ -20,4 +20,4 @@ Type of the public chats to return
 
 ## Defined in
 
-dist/generated/types.d.ts:75631
+dist/generated/types.d.ts:77657

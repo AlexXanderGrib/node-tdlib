@@ -20,16 +20,16 @@ The supergroup sticker set with allowed custom emoji was changed
 
 ### new\_sticker\_set\_id?
 
-> `readonly` `optional` **new\_sticker\_set\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **new\_sticker\_set\_id**: [`int64$Input`](int64$Input.md)
 
 New identifier of the chat sticker set; 0 if none
 
 ### old\_sticker\_set\_id?
 
-> `readonly` `optional` **old\_sticker\_set\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **old\_sticker\_set\_id**: [`int64$Input`](int64$Input.md)
 
 Previous identifier of the chat sticker set; 0 if none
 
 ## Defined in
 
-dist/generated/types.d.ts:39939
+dist/generated/types.d.ts:41309

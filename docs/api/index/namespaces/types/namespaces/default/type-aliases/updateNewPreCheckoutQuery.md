@@ -24,25 +24,25 @@ Currency for the product price
 
 ### id
 
-> **id**: [`int64`](int64-1.md)
+> **id**: [`int64`](int64.md)
 
 Unique query identifier
 
 ### invoice\_payload
 
-> **invoice\_payload**: [`bytes`](bytes-1.md)
+> **invoice\_payload**: [`bytes`](bytes.md)
 
 Invoice payload
 
 ### order\_info
 
-> **order\_info**: [`orderInfo`](orderInfo-1.md) \| `null`
+> **order\_info**: [`orderInfo`](orderInfo.md) \| `null`
 
 Information about the order; may be null
 
 ### sender\_user\_id
 
-> **sender\_user\_id**: [`int53`](int53-1.md)
+> **sender\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user who sent the query
 
@@ -54,10 +54,10 @@ Identifier of a shipping option chosen by the user; may be empty if not applicab
 
 ### total\_amount
 
-> **total\_amount**: [`int53`](int53-1.md)
+> **total\_amount**: [`int53`](int53.md)
 
 Total price for the product, in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:57651
+dist/generated/types.d.ts:59291

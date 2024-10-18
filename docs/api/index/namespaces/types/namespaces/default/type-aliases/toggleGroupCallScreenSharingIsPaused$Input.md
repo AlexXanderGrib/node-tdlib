@@ -18,7 +18,7 @@ Pauses or unpauses screen sharing in a joined group call
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -30,4 +30,4 @@ Pass true to pause screen sharing; pass false to unpause it
 
 ## Defined in
 
-dist/generated/types.d.ts:91119
+dist/generated/types.d.ts:93616

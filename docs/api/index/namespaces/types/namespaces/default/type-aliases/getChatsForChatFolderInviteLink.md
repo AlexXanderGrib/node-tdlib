@@ -6,7 +6,9 @@
 
 # Type Alias: getChatsForChatFolderInviteLink()
 
-> **getChatsForChatFolderInviteLink**: (`parameters`) => [`Chats`](Chats.md)
+> **getChatsForChatFolderInviteLink**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns identifiers of chats from a chat folder, suitable for adding to a chat folder invite link
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84806
+dist/generated/types.d.ts:87105

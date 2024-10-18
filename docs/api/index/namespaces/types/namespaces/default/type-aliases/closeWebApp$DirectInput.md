@@ -14,10 +14,10 @@ Informs TDLib that a previously opened Web App was closed
 
 ### web\_app\_launch\_id?
 
-> `readonly` `optional` **web\_app\_launch\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **web\_app\_launch\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of Web App launch, received from openWebApp
 
 ## Defined in
 
-dist/generated/types.d.ts:83032
+dist/generated/types.d.ts:85331

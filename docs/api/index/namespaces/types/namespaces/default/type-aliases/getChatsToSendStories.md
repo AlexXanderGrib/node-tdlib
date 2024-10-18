@@ -6,7 +6,9 @@
 
 # Type Alias: getChatsToSendStories()
 
-> **getChatsToSendStories**: (`parameters`) => [`Chats`](Chats.md)
+> **getChatsToSendStories**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns supergroup and channel chats in which the current user has the right to post stories. The chats must be rechecked with canSendStory before actually trying to post a story there
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87185
+dist/generated/types.d.ts:89512

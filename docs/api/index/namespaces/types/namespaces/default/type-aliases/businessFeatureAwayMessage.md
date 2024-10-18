@@ -18,4 +18,4 @@ The ability to set up an away message
 
 ## Defined in
 
-dist/generated/types.d.ts:41917
+dist/generated/types.d.ts:43311

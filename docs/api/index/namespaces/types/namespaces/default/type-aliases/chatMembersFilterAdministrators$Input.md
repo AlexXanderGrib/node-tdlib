@@ -20,4 +20,4 @@ Returns the owner and administrators
 
 ## Defined in
 
-dist/generated/types.d.ts:10209
+dist/generated/types.d.ts:10709

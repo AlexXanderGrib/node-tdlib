@@ -20,4 +20,4 @@ The user participates in the giveaway
 
 ## Defined in
 
-dist/generated/types.d.ts:8685
+dist/generated/types.d.ts:9121

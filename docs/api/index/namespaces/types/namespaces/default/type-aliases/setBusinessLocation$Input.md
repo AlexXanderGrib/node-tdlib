@@ -18,10 +18,10 @@ Changes the business location of the current user. Requires Telegram Business su
 
 ### location?
 
-> `readonly` `optional` **location**: [`businessLocation$Input`](businessLocation$Input-1.md) \| `null`
+> `readonly` `optional` **location**: [`businessLocation$Input`](businessLocation$Input.md) \| `null`
 
 The new location of the business; pass null to remove the location
 
 ## Defined in
 
-dist/generated/types.d.ts:94290
+dist/generated/types.d.ts:96787

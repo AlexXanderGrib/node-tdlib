@@ -20,10 +20,10 @@ A button with a user reference to be handled in the same way as textEntityTypeMe
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:17702
+dist/generated/types.d.ts:18294

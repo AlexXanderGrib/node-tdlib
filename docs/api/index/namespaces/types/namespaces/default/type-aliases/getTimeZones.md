@@ -6,7 +6,9 @@
 
 # Type Alias: getTimeZones()
 
-> **getTimeZones**: (`parameters`) => [`TimeZones`](TimeZones.md)
+> **getTimeZones**: (`parameters`) => [`TimeZones`](TimeZones-1.md)
+
+Returns the list of supported time zones
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TimeZones`](TimeZones.md)
+[`TimeZones`](TimeZones-1.md)
 
-[TimeZones](TimeZones.md)
+[TimeZones](TimeZones-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96758
+dist/generated/types.d.ts:99537

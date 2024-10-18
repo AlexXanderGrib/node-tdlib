@@ -6,7 +6,9 @@
 
 # Type Alias: setChatAccentColor()
 
-> **setChatAccentColor**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatAccentColor**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes accent color and background custom emoji of a channel chat. Requires can_change_info administrator right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85279
+dist/generated/types.d.ts:87578

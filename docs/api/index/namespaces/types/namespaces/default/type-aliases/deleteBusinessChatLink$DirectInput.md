@@ -20,4 +20,4 @@ The link to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:94823
+dist/generated/types.d.ts:97320

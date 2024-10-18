@@ -6,7 +6,9 @@
 
 # Type Alias: toggleChatViewAsTopics()
 
-> **toggleChatViewAsTopics**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleChatViewAsTopics**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the view_as_topics setting of a forum chat or Saved Messages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85765
+dist/generated/types.d.ts:88064

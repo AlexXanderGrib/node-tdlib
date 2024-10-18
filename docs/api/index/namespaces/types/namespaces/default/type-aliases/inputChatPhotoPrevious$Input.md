@@ -20,10 +20,10 @@ A previously used profile photo of the current user
 
 ### chat\_photo\_id?
 
-> `readonly` `optional` **chat\_photo\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **chat\_photo\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the current user's profile photo to reuse
 
 ## Defined in
 
-dist/generated/types.d.ts:7492
+dist/generated/types.d.ts:7558

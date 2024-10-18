@@ -14,7 +14,7 @@ Edits title and icon of a topic in a forum supergroup chat; requires can_manage_
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
@@ -26,13 +26,13 @@ Pass true to edit the icon of the topic. Icon of the General topic can't be edit
 
 ### icon\_custom\_emoji\_id?
 
-> `readonly` `optional` **icon\_custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **icon\_custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the new custom emoji for topic icon; pass 0 to remove the custom emoji. Ignored if edit_icon_custom_emoji is false. Telegram Premium users can use any custom emoji, other users can use only a custom emoji returned by getForumTopicDefaultIcons
 
 ### message\_thread\_id?
 
-> `readonly` `optional` **message\_thread\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_thread\_id**: [`int53`](int53.md)
 
 Message thread identifier of the forum topic
 
@@ -44,4 +44,4 @@ New name of the topic; 0-128 characters. If empty, the previous topic name is ke
 
 ## Defined in
 
-dist/generated/types.d.ts:80703
+dist/generated/types.d.ts:82752

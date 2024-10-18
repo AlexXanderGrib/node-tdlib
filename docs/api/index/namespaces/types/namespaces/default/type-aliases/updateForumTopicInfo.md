@@ -18,16 +18,16 @@ Basic information about a topic in a forum chat was changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### info
 
-> **info**: [`forumTopicInfo`](forumTopicInfo-1.md)
+> **info**: [`forumTopicInfo`](forumTopicInfo.md)
 
 New information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:54599
+dist/generated/types.d.ts:56215

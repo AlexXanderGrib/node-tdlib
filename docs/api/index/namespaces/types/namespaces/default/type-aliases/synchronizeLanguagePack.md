@@ -6,7 +6,11 @@
 
 # Type Alias: synchronizeLanguagePack()
 
-> **synchronizeLanguagePack**: (`parameters`) => [`Ok`](Ok.md)
+> **synchronizeLanguagePack**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Fetches the latest versions of all strings from a language pack in the current localization target from the server.
+
+- This method doesn't need to be called explicitly for the current used/base language packs. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97437
+dist/generated/types.d.ts:100216

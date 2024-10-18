@@ -6,7 +6,9 @@
 
 # Type Alias: getUserSupportInfo()
 
-> **getUserSupportInfo**: (`parameters`) => [`UserSupportInfo`](UserSupportInfo.md)
+> **getUserSupportInfo**: (`parameters`) => [`UserSupportInfo`](UserSupportInfo-1.md)
+
+Returns support information for the given user; for Telegram support only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`UserSupportInfo`](UserSupportInfo.md)
+[`UserSupportInfo`](UserSupportInfo-1.md)
 
-[UserSupportInfo](UserSupportInfo.md)
+[UserSupportInfo](UserSupportInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101897
+dist/generated/types.d.ts:104818

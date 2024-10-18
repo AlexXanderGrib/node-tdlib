@@ -20,4 +20,4 @@ A mobile network
 
 ## Defined in
 
-dist/generated/types.d.ts:49451
+dist/generated/types.d.ts:51035

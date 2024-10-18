@@ -20,4 +20,4 @@ A rule to allow all users to do something
 
 ## Defined in
 
-dist/generated/types.d.ts:45987
+dist/generated/types.d.ts:47513

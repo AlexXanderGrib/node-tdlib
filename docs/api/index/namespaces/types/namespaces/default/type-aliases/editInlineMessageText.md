@@ -6,7 +6,9 @@
 
 # Type Alias: editInlineMessageText()
 
-> **editInlineMessageText**: (`parameters`) => [`Ok`](Ok.md)
+> **editInlineMessageText**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Edits the text of an inline text or game message sent via a bot; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79172
+dist/generated/types.d.ts:81163

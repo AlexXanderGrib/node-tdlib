@@ -14,10 +14,10 @@ Changes the business greeting message settings of the current user. Requires Tel
 
 ### greeting\_message\_settings?
 
-> `readonly` `optional` **greeting\_message\_settings**: [`businessGreetingMessageSettings$Input`](businessGreetingMessageSettings$Input-1.md) \| `null`
+> `readonly` `optional` **greeting\_message\_settings**: [`businessGreetingMessageSettings$Input`](businessGreetingMessageSettings$Input.md) \| `null`
 
 The new settings for the greeting message of the business; pass null to disable the greeting message
 
 ## Defined in
 
-dist/generated/types.d.ts:94357
+dist/generated/types.d.ts:96854

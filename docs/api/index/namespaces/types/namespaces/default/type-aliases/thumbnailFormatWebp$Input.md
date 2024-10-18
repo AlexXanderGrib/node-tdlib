@@ -20,4 +20,4 @@ The thumbnail is in WEBP format. It will be used only for some stickers and stic
 
 ## Defined in
 
-dist/generated/types.d.ts:4201
+dist/generated/types.d.ts:4247

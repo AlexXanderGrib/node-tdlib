@@ -24,4 +24,4 @@ Message text to be shown in the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:27433
+dist/generated/types.d.ts:28193

@@ -6,7 +6,9 @@
 
 # Type Alias: sendInlineQueryResultMessage()
 
-> **sendInlineQueryResultMessage**: (`parameters`) => [`Message`](Message.md)
+> **sendInlineQueryResultMessage**: (`parameters`) => [`Message`](Message-1.md)
+
+Sends the result of an inline query as a message. Returns the sent message. Always clears a chat draft message
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78362
+dist/generated/types.d.ts:80371

@@ -36,10 +36,10 @@ Type of the reaction
 
 ### total\_count
 
-> **total\_count**: [`int32`](int32-1.md)
+> **total\_count**: [`int32`](int32.md)
 
 Number of times the reaction was added
 
 ## Defined in
 
-dist/generated/types.d.ts:31927
+dist/generated/types.d.ts:33093

@@ -20,4 +20,4 @@ The file is a notification sound
 
 ## Defined in
 
-dist/generated/types.d.ts:48997
+dist/generated/types.d.ts:50581

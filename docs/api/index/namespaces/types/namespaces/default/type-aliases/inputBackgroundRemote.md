@@ -18,10 +18,10 @@ A background from the server
 
 ### background\_id
 
-> **background\_id**: [`int64`](int64-1.md)
+> **background\_id**: [`int64`](int64.md)
 
 The background identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:43507
+dist/generated/types.d.ts:45033

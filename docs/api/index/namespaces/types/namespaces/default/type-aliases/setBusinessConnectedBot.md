@@ -6,7 +6,9 @@
 
 # Type Alias: setBusinessConnectedBot()
 
-> **setBusinessConnectedBot**: (`parameters`) => [`Ok`](Ok.md)
+> **setBusinessConnectedBot**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds or changes business bot that is connected to the current user account
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94631
+dist/generated/types.d.ts:97128

@@ -36,7 +36,7 @@ TDLibOptions
 
 #### Defined in
 
-dist/options.d.ts:154
+dist/options.d.ts:152
 
 ## Properties
 
@@ -46,7 +46,7 @@ dist/options.d.ts:154
 
 #### Defined in
 
-dist/options.d.ts:148
+dist/options.d.ts:146
 
 ## Methods
 
@@ -68,7 +68,7 @@ TDLibOptions
 
 #### Defined in
 
-dist/options.d.ts:189
+dist/options.d.ts:187
 
 ***
 
@@ -90,7 +90,7 @@ TDLibOptions
 
 #### Defined in
 
-dist/options.d.ts:181
+dist/options.d.ts:179
 
 ***
 
@@ -118,7 +118,7 @@ TDLibOptions
 
 #### Defined in
 
-dist/options.d.ts:163
+dist/options.d.ts:161
 
 ***
 
@@ -148,7 +148,7 @@ TDLibOptions
 
 #### Defined in
 
-dist/options.d.ts:173
+dist/options.d.ts:171
 
 ***
 
@@ -178,4 +178,4 @@ Removed instance caching, use `new TDLibOptions()` instead
 
 #### Defined in
 
-dist/options.d.ts:147
+dist/options.d.ts:145

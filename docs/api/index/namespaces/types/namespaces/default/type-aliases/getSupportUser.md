@@ -6,7 +6,9 @@
 
 # Type Alias: getSupportUser()
 
-> **getSupportUser**: (`parameters`) => [`User`](User.md)
+> **getSupportUser**: (`parameters`) => [`User`](User-1.md)
+
+Returns a user that can be contacted to get support
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`User`](User.md)
+[`User`](User-1.md)
 
-[User](User.md)
+[User](User-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97094
+dist/generated/types.d.ts:99873

@@ -18,4 +18,4 @@ The secret chat is not yet created; waiting for the other user to get online
 
 ## Defined in
 
-dist/generated/types.d.ts:11839
+dist/generated/types.d.ts:12443

@@ -28,7 +28,7 @@ Constructs [$AsyncApi]($AsyncApi.md)
 
 #### Defined in
 
-dist/generated/types.d.ts:67384
+dist/generated/types.d.ts:69234
 
 ## Properties
 
@@ -38,13 +38,13 @@ dist/generated/types.d.ts:67384
 
 #### Defined in
 
-dist/generated/types.d.ts:67378
+dist/generated/types.d.ts:69228
 
 ## Methods
 
 ### acceptCall()
 
-> **acceptCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **acceptCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Accepts an incoming call
 
@@ -56,19 +56,19 @@ Accepts an incoming call
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70408
+dist/generated/types.d.ts:72326
 
 ***
 
 ### acceptTermsOfService()
 
-> **acceptTermsOfService**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **acceptTermsOfService**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Accepts Telegram terms of services
 
@@ -80,19 +80,19 @@ Accepts Telegram terms of services
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72540
+dist/generated/types.d.ts:74528
 
 ***
 
 ### activateStoryStealthMode()
 
-> **activateStoryStealthMode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **activateStoryStealthMode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Activates stealth mode for stories, which hides all views of stories from the current user in the last "story_stealth_mode_past_period" seconds
 
@@ -106,19 +106,43 @@ Activates stealth mode for stories, which hides all views of stories from the cu
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69999
+dist/generated/types.d.ts:71899
+
+***
+
+### addBotMediaPreview()
+
+> **addBotMediaPreview**(`parameters`): `Promise`\<[`botMediaPreview`](../type-aliases/botMediaPreview.md)\>
+
+Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
+
+#### Parameters
+
+• **parameters**: [`addBotMediaPreview$DirectInput`](../type-aliases/addBotMediaPreview$DirectInput.md)
+
+[addBotMediaPreview$Input](../type-aliases/addBotMediaPreview$Input.md)
+
+#### Returns
+
+`Promise`\<[`botMediaPreview`](../type-aliases/botMediaPreview.md)\>
+
+Promise<[BotMediaPreview](../type-aliases/BotMediaPreview-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:73335
 
 ***
 
 ### addChatFolderByInviteLink()
 
-> **addChatFolderByInviteLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addChatFolderByInviteLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds a chat folder by an invite link
 
@@ -130,19 +154,19 @@ Adds a chat folder by an invite link
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69437
+dist/generated/types.d.ts:71323
 
 ***
 
 ### addChatMember()
 
-> **addChatMember**(`parameters`): `Promise`\<[`failedToAddMembers`](../type-aliases/failedToAddMembers-1.md)\>
+> **addChatMember**(`parameters`): `Promise`\<[`failedToAddMembers`](../type-aliases/failedToAddMembers.md)\>
 
 Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
 
@@ -154,19 +178,19 @@ Adds a new member to a chat; requires can_invite_users member right. Members can
 
 #### Returns
 
-`Promise`\<[`failedToAddMembers`](../type-aliases/failedToAddMembers-1.md)\>
+`Promise`\<[`failedToAddMembers`](../type-aliases/failedToAddMembers.md)\>
 
-Promise<[FailedToAddMembers](../type-aliases/FailedToAddMembers.md)>
+Promise<[FailedToAddMembers](../type-aliases/FailedToAddMembers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69677
+dist/generated/types.d.ts:71563
 
 ***
 
 ### addChatMembers()
 
-> **addChatMembers**(`parameters`): `Promise`\<[`failedToAddMembers`](../type-aliases/failedToAddMembers-1.md)\>
+> **addChatMembers**(`parameters`): `Promise`\<[`failedToAddMembers`](../type-aliases/failedToAddMembers.md)\>
 
 Adds multiple new members to a chat; requires can_invite_users member right. Currently, this method is only available for supergroups and channels.
 
@@ -180,19 +204,19 @@ Adds multiple new members to a chat; requires can_invite_users member right. Cur
 
 #### Returns
 
-`Promise`\<[`failedToAddMembers`](../type-aliases/failedToAddMembers-1.md)\>
+`Promise`\<[`failedToAddMembers`](../type-aliases/failedToAddMembers.md)\>
 
-Promise<[FailedToAddMembers](../type-aliases/FailedToAddMembers.md)>
+Promise<[FailedToAddMembers](../type-aliases/FailedToAddMembers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69686
+dist/generated/types.d.ts:71572
 
 ***
 
 ### addChatToList()
 
-> **addChatToList**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addChatToList**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive chat lists, so it is automatically removed from another one if needed
 
@@ -204,19 +228,19 @@ Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive c
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69318
+dist/generated/types.d.ts:71204
 
 ***
 
 ### addContact()
 
-> **addContact**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addContact**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds a user to the contact list or edits an existing contact by their user identifier
 
@@ -228,19 +252,19 @@ Adds a user to the contact list or edits an existing contact by their user ident
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70681
+dist/generated/types.d.ts:72599
 
 ***
 
 ### addCustomServerLanguagePack()
 
-> **addCustomServerLanguagePack**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addCustomServerLanguagePack**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds a custom server language pack to the list of installed language packs in current localization target. Can be called before authorization
 
@@ -252,19 +276,19 @@ Adds a custom server language pack to the list of installed language packs in cu
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71841
+dist/generated/types.d.ts:73801
 
 ***
 
 ### addFavoriteSticker()
 
-> **addFavoriteSticker**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addFavoriteSticker**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds a new sticker to the list of favorite stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
 
@@ -278,19 +302,19 @@ Adds a new sticker to the list of favorite stickers. The new sticker is added to
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70939
+dist/generated/types.d.ts:72857
 
 ***
 
 ### addFileToDownloads()
 
-> **addFileToDownloads**(`parameters`): `Promise`\<[`file`](../type-aliases/file-1.md)\>
+> **addFileToDownloads**(`parameters`): `Promise`\<[`file`](../type-aliases/file.md)\>
 
 Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
 
@@ -304,19 +328,19 @@ Adds a file from a message to the list of file downloads. Download progress and 
 
 #### Returns
 
-`Promise`\<[`file`](../type-aliases/file-1.md)\>
+`Promise`\<[`file`](../type-aliases/file.md)\>
 
-Promise<[File](../type-aliases/File.md)>
+Promise<[File](../type-aliases/File-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70224
+dist/generated/types.d.ts:72124
 
 ***
 
 ### addLocalMessage()
 
-> **addLocalMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **addLocalMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Adds a local message to a chat. The message is persistent across application restarts only if the message database is used. Returns the added message
 
@@ -328,19 +352,19 @@ Adds a local message to a chat. The message is persistent across application res
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68416
+dist/generated/types.d.ts:70266
 
 ***
 
 ### addLogMessage()
 
-> **addLogMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addLogMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds a message to TDLib internal log. Can be called synchronously
 
@@ -352,19 +376,19 @@ Adds a message to TDLib internal log. Can be called synchronously
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72743
+dist/generated/types.d.ts:74731
 
 ***
 
 ### addMessageReaction()
 
-> **addMessageReaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addMessageReaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds a reaction or a tag to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
 
@@ -376,19 +400,19 @@ Adds a reaction or a tag to a message. Use getMessageAvailableReactions to recei
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68804
+dist/generated/types.d.ts:70655
 
 ***
 
 ### addNetworkStatistics()
 
-> **addNetworkStatistics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addNetworkStatistics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds the specified data to data usage statistics. Can be called before authorization
 
@@ -400,19 +424,43 @@ Adds the specified data to data usage statistics. Can be called before authoriza
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72155
+dist/generated/types.d.ts:74115
+
+***
+
+### addPaidMessageReaction()
+
+> **addPaidMessageReaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Adds the paid message reaction to a message. Use getMessageAvailableReactions to receive the list of available reactions for the message
+
+#### Parameters
+
+• **parameters**: [`addPaidMessageReaction$DirectInput`](../type-aliases/addPaidMessageReaction$DirectInput.md)
+
+[addPaidMessageReaction$Input](../type-aliases/addPaidMessageReaction$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70669
 
 ***
 
 ### addProxy()
 
-> **addProxy**(`parameters`): `Promise`\<[`proxy`](../type-aliases/proxy-1.md)\>
+> **addProxy**(`parameters`): `Promise`\<[`proxy`](../type-aliases/proxy.md)\>
 
 Adds a proxy server for network requests. Can be called before authorization
 
@@ -424,19 +472,19 @@ Adds a proxy server for network requests. Can be called before authorization
 
 #### Returns
 
-`Promise`\<[`proxy`](../type-aliases/proxy-1.md)\>
+`Promise`\<[`proxy`](../type-aliases/proxy.md)\>
 
-Promise<[Proxy](../type-aliases/Proxy.md)>
+Promise<[Proxy](../type-aliases/Proxy-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72638
+dist/generated/types.d.ts:74626
 
 ***
 
 ### addQuickReplyShortcutInlineQueryResultMessage()
 
-> **addQuickReplyShortcutInlineQueryResultMessage**(`parameters`): `Promise`\<[`quickReplyMessage`](../type-aliases/quickReplyMessage-1.md)\>
+> **addQuickReplyShortcutInlineQueryResultMessage**(`parameters`): `Promise`\<[`quickReplyMessage`](../type-aliases/quickReplyMessage.md)\>
 
 Adds a message to a quick reply shortcut via inline bot. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
 
@@ -450,19 +498,19 @@ Adds a message to a quick reply shortcut via inline bot. If shortcut doesn't exi
 
 #### Returns
 
-`Promise`\<[`quickReplyMessage`](../type-aliases/quickReplyMessage-1.md)\>
+`Promise`\<[`quickReplyMessage`](../type-aliases/quickReplyMessage.md)\>
 
-Promise<[QuickReplyMessage](../type-aliases/QuickReplyMessage.md)>
+Promise<[QuickReplyMessage](../type-aliases/QuickReplyMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68658
+dist/generated/types.d.ts:70509
 
 ***
 
 ### addQuickReplyShortcutMessage()
 
-> **addQuickReplyShortcutMessage**(`parameters`): `Promise`\<[`quickReplyMessage`](../type-aliases/quickReplyMessage-1.md)\>
+> **addQuickReplyShortcutMessage**(`parameters`): `Promise`\<[`quickReplyMessage`](../type-aliases/quickReplyMessage.md)\>
 
 Adds a message to a quick reply shortcut. If shortcut doesn't exist and there are less than getOption("quick_reply_shortcut_count_max") shortcuts, then a new shortcut is created.
 
@@ -476,19 +524,19 @@ Adds a message to a quick reply shortcut. If shortcut doesn't exist and there ar
 
 #### Returns
 
-`Promise`\<[`quickReplyMessage`](../type-aliases/quickReplyMessage-1.md)\>
+`Promise`\<[`quickReplyMessage`](../type-aliases/quickReplyMessage.md)\>
 
-Promise<[QuickReplyMessage](../type-aliases/QuickReplyMessage.md)>
+Promise<[QuickReplyMessage](../type-aliases/QuickReplyMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68649
+dist/generated/types.d.ts:70500
 
 ***
 
 ### addQuickReplyShortcutMessageAlbum()
 
-> **addQuickReplyShortcutMessageAlbum**(`parameters`): `Promise`\<[`quickReplyMessages`](../type-aliases/quickReplyMessages-1.md)\>
+> **addQuickReplyShortcutMessageAlbum**(`parameters`): `Promise`\<[`quickReplyMessages`](../type-aliases/quickReplyMessages.md)\>
 
 Adds 2-10 messages grouped together into an album to a quick reply shortcut. Currently, only audio, document, photo and video messages can be grouped into an album.
 
@@ -502,19 +550,43 @@ Adds 2-10 messages grouped together into an album to a quick reply shortcut. Cur
 
 #### Returns
 
-`Promise`\<[`quickReplyMessages`](../type-aliases/quickReplyMessages-1.md)\>
+`Promise`\<[`quickReplyMessages`](../type-aliases/quickReplyMessages.md)\>
 
-Promise<[QuickReplyMessages](../type-aliases/QuickReplyMessages.md)>
+Promise<[QuickReplyMessages](../type-aliases/QuickReplyMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68667
+dist/generated/types.d.ts:70518
+
+***
+
+### addRecentlyFoundChat()
+
+> **addRecentlyFoundChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Adds a chat to the list of recently found chats. The chat is added to the beginning of the list. If the chat is already in the list, it will be removed from the list first
+
+#### Parameters
+
+• **parameters**: [`addRecentlyFoundChat$DirectInput`](../type-aliases/addRecentlyFoundChat$DirectInput.md)
+
+[addRecentlyFoundChat$Input](../type-aliases/addRecentlyFoundChat$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69792
 
 ***
 
 ### addRecentSticker()
 
-> **addRecentSticker**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **addRecentSticker**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Manually adds a new sticker to the list of recently used stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
 
@@ -528,43 +600,19 @@ Manually adds a new sticker to the list of recently used stickers. The new stick
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70909
-
-***
-
-### addRecentlyFoundChat()
-
-> **addRecentlyFoundChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Adds a chat to the list of recently found chats. The chat is added to the beginning of the list. If the chat is already in the list, it will be removed from the list first
-
-#### Parameters
-
-• **parameters**: [`addRecentlyFoundChat$DirectInput`](../type-aliases/addRecentlyFoundChat$DirectInput.md)
-
-[addRecentlyFoundChat$Input](../type-aliases/addRecentlyFoundChat$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67935
+dist/generated/types.d.ts:72827
 
 ***
 
 ### addSavedAnimation()
 
-> **addSavedAnimation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addSavedAnimation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Manually adds a new animation to the list of saved animations. The new animation is added to the beginning of the list. If the animation was already in the list, it is removed first.
 
@@ -578,19 +626,19 @@ Manually adds a new animation to the list of saved animations. The new animation
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71032
+dist/generated/types.d.ts:72950
 
 ***
 
 ### addSavedNotificationSound()
 
-> **addSavedNotificationSound**(`parameters`): `Promise`\<[`notificationSound`](../type-aliases/notificationSound-1.md)\>
+> **addSavedNotificationSound**(`parameters`): `Promise`\<[`notificationSound`](../type-aliases/notificationSound.md)\>
 
 Adds a new notification sound to the list of saved notification sounds. The new notification sound is added to the top of the list. If it is already in the list, its position isn't changed
 
@@ -602,19 +650,19 @@ Adds a new notification sound to the list of saved notification sounds. The new 
 
 #### Returns
 
-`Promise`\<[`notificationSound`](../type-aliases/notificationSound-1.md)\>
+`Promise`\<[`notificationSound`](../type-aliases/notificationSound.md)\>
 
-Promise<[NotificationSound](../type-aliases/NotificationSound.md)>
+Promise<[NotificationSound](../type-aliases/NotificationSound-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69767
+dist/generated/types.d.ts:71653
 
 ***
 
 ### addStickerToSet()
 
-> **addStickerToSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **addStickerToSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds a new sticker to a set
 
@@ -626,19 +674,19 @@ Adds a new sticker to a set
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72330
+dist/generated/types.d.ts:74290
 
 ***
 
 ### allowBotToSendMessages()
 
-> **allowBotToSendMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **allowBotToSendMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Allows the specified bot to send messages to the user
 
@@ -650,19 +698,19 @@ Allows the specified bot to send messages to the user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71389
+dist/generated/types.d.ts:73307
 
 ***
 
 ### answerCallbackQuery()
 
-> **answerCallbackQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **answerCallbackQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the result of a callback query; for bots only
 
@@ -674,19 +722,19 @@ Sets the result of a callback query; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69097
+dist/generated/types.d.ts:70983
 
 ***
 
 ### answerCustomQuery()
 
-> **answerCustomQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **answerCustomQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Answers a custom query; for bots only
 
@@ -698,19 +746,19 @@ Answers a custom query; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72561
+dist/generated/types.d.ts:74549
 
 ***
 
 ### answerInlineQuery()
 
-> **answerInlineQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **answerInlineQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the result of an inline query; for bots only
 
@@ -722,19 +770,19 @@ Sets the result of an inline query; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69032
+dist/generated/types.d.ts:70904
 
 ***
 
 ### answerPreCheckoutQuery()
 
-> **answerPreCheckoutQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **answerPreCheckoutQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the result of a pre-checkout query; for bots only
 
@@ -746,19 +794,19 @@ Sets the result of a pre-checkout query; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69111
+dist/generated/types.d.ts:70997
 
 ***
 
 ### answerShippingQuery()
 
-> **answerShippingQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **answerShippingQuery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the result of a shipping query; for bots only
 
@@ -770,19 +818,19 @@ Sets the result of a shipping query; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69104
+dist/generated/types.d.ts:70990
 
 ***
 
 ### answerWebAppQuery()
 
-> **answerWebAppQuery**(`parameters`): `Promise`\<[`sentWebAppMessage`](../type-aliases/sentWebAppMessage-1.md)\>
+> **answerWebAppQuery**(`parameters`): `Promise`\<[`sentWebAppMessage`](../type-aliases/sentWebAppMessage.md)\>
 
 Sets the result of interaction with a Web App and sends corresponding message on behalf of the user to the chat from which the query originated; for bots only
 
@@ -794,19 +842,19 @@ Sets the result of interaction with a Web App and sends corresponding message on
 
 #### Returns
 
-`Promise`\<[`sentWebAppMessage`](../type-aliases/sentWebAppMessage-1.md)\>
+`Promise`\<[`sentWebAppMessage`](../type-aliases/sentWebAppMessage.md)\>
 
-Promise<[SentWebAppMessage](../type-aliases/SentWebAppMessage.md)>
+Promise<[SentWebAppMessage](../type-aliases/SentWebAppMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69083
+dist/generated/types.d.ts:70969
 
 ***
 
 ### applyPremiumGiftCode()
 
-> **applyPremiumGiftCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **applyPremiumGiftCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Applies a Telegram Premium gift code
 
@@ -818,19 +866,19 @@ Applies a Telegram Premium gift code
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72477
+dist/generated/types.d.ts:74437
 
 ***
 
 ### assignAppStoreTransaction()
 
-> **assignAppStoreTransaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **assignAppStoreTransaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs server about a purchase through App Store. For official applications only
 
@@ -842,19 +890,19 @@ Informs server about a purchase through App Store. For official applications onl
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72519
+dist/generated/types.d.ts:74493
 
 ***
 
 ### assignGooglePlayTransaction()
 
-> **assignGooglePlayTransaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **assignGooglePlayTransaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs server about a purchase through Google Play. For official applications only
 
@@ -866,19 +914,19 @@ Informs server about a purchase through Google Play. For official applications o
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72526
+dist/generated/types.d.ts:74500
 
 ***
 
 ### banChatMember()
 
-> **banChatMember**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **banChatMember**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
 
@@ -890,19 +938,19 @@ Bans a member in a chat; requires can_restrict_members administrator right. Memb
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69704
+dist/generated/types.d.ts:71590
 
 ***
 
 ### blockMessageSenderFromReplies()
 
-> **blockMessageSenderFromReplies**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **blockMessageSenderFromReplies**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Blocks an original sender of a message in the Replies chat
 
@@ -914,19 +962,19 @@ Blocks an original sender of a message in the Replies chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70667
+dist/generated/types.d.ts:72585
 
 ***
 
 ### boostChat()
 
-> **boostChat**(`parameters`): `Promise`\<[`chatBoostSlots`](../type-aliases/chatBoostSlots-1.md)\>
+> **boostChat**(`parameters`): `Promise`\<[`chatBoostSlots`](../type-aliases/chatBoostSlots.md)\>
 
 Boosts a chat and returns the list of available chat boost slots for the current user after the boost
 
@@ -938,19 +986,19 @@ Boosts a chat and returns the list of available chat boost slots for the current
 
 #### Returns
 
-`Promise`\<[`chatBoostSlots`](../type-aliases/chatBoostSlots-1.md)\>
+`Promise`\<[`chatBoostSlots`](../type-aliases/chatBoostSlots.md)\>
 
-Promise<[ChatBoostSlots](../type-aliases/ChatBoostSlots.md)>
+Promise<[ChatBoostSlots](../type-aliases/ChatBoostSlots-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70043
+dist/generated/types.d.ts:71943
 
 ***
 
 ### canBotSendMessages()
 
-> **canBotSendMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **canBotSendMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks whether the specified bot can send messages to the user. Returns a 404 error if can't and the access can be granted by call to allowBotToSendMessages
 
@@ -962,19 +1010,115 @@ Checks whether the specified bot can send messages to the user. Returns a 404 er
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71382
+dist/generated/types.d.ts:73300
+
+***
+
+### cancelDownloadFile()
+
+> **cancelDownloadFile**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Stops the downloading of a file. If a file has already been downloaded, does nothing
+
+#### Parameters
+
+• **parameters**: [`cancelDownloadFile$DirectInput`](../type-aliases/cancelDownloadFile$DirectInput.md)
+
+[cancelDownloadFile$Input](../type-aliases/cancelDownloadFile$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72055
+
+***
+
+### cancelPasswordReset()
+
+> **cancelPasswordReset**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Cancels reset of 2-step verification password. The method can be called if passwordState.pending_reset_date > 0
+
+#### Parameters
+
+• **parameters**: [`cancelPasswordReset$DirectInput`](../type-aliases/cancelPasswordReset$DirectInput.md)
+
+[cancelPasswordReset$Input](../type-aliases/cancelPasswordReset$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69516
+
+***
+
+### cancelPreliminaryUploadFile()
+
+> **cancelPreliminaryUploadFile**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
+
+#### Parameters
+
+• **parameters**: [`cancelPreliminaryUploadFile$DirectInput`](../type-aliases/cancelPreliminaryUploadFile$DirectInput.md)
+
+[cancelPreliminaryUploadFile$Input](../type-aliases/cancelPreliminaryUploadFile$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72080
+
+***
+
+### cancelRecoveryEmailAddressVerification()
+
+> **cancelRecoveryEmailAddressVerification**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
+
+Cancels verification of the 2-step verification recovery email address
+
+#### Parameters
+
+• **parameters**: [`cancelRecoveryEmailAddressVerification$DirectInput`](../type-aliases/cancelRecoveryEmailAddressVerification$DirectInput.md)
+
+[cancelRecoveryEmailAddressVerification$Input](../type-aliases/cancelRecoveryEmailAddressVerification$Input.md)
+
+#### Returns
+
+`Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
+
+Promise<[PasswordState](../type-aliases/PasswordState-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69481
 
 ***
 
 ### canPurchaseFromStore()
 
-> **canPurchaseFromStore**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **canPurchaseFromStore**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks whether an in-store purchase is possible. Must be called before any in-store purchase
 
@@ -986,13 +1130,13 @@ Checks whether an in-store purchase is possible. Must be called before any in-st
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72512
+dist/generated/types.d.ts:74486
 
 ***
 
@@ -1016,7 +1160,7 @@ Promise<[CanSendMessageToUserResult](../type-aliases/CanSendMessageToUserResult.
 
 #### Defined in
 
-dist/generated/types.d.ts:71948
+dist/generated/types.d.ts:73908
 
 ***
 
@@ -1040,7 +1184,7 @@ Promise<[CanSendStoryResult](../type-aliases/CanSendStoryResult.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69851
+dist/generated/types.d.ts:71744
 
 ***
 
@@ -1064,109 +1208,13 @@ Promise<[CanTransferOwnershipResult](../type-aliases/CanTransferOwnershipResult.
 
 #### Defined in
 
-dist/generated/types.d.ts:69711
-
-***
-
-### cancelDownloadFile()
-
-> **cancelDownloadFile**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Stops the downloading of a file. If a file has already been downloaded, does nothing
-
-#### Parameters
-
-• **parameters**: [`cancelDownloadFile$DirectInput`](../type-aliases/cancelDownloadFile$DirectInput.md)
-
-[cancelDownloadFile$Input](../type-aliases/cancelDownloadFile$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70155
-
-***
-
-### cancelPasswordReset()
-
-> **cancelPasswordReset**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Cancels reset of 2-step verification password. The method can be called if passwordState.pending_reset_date > 0
-
-#### Parameters
-
-• **parameters**: [`cancelPasswordReset$DirectInput`](../type-aliases/cancelPasswordReset$DirectInput.md)
-
-[cancelPasswordReset$Input](../type-aliases/cancelPasswordReset$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:67666
-
-***
-
-### cancelPreliminaryUploadFile()
-
-> **cancelPreliminaryUploadFile**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Stops the preliminary uploading of a file. Supported only for files uploaded by using preliminaryUploadFile. For other files the behavior is undefined
-
-#### Parameters
-
-• **parameters**: [`cancelPreliminaryUploadFile$DirectInput`](../type-aliases/cancelPreliminaryUploadFile$DirectInput.md)
-
-[cancelPreliminaryUploadFile$Input](../type-aliases/cancelPreliminaryUploadFile$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70180
-
-***
-
-### cancelRecoveryEmailAddressVerification()
-
-> **cancelRecoveryEmailAddressVerification**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
-
-Cancels verification of the 2-step verification recovery email address
-
-#### Parameters
-
-• **parameters**: [`cancelRecoveryEmailAddressVerification$DirectInput`](../type-aliases/cancelRecoveryEmailAddressVerification$DirectInput.md)
-
-[cancelRecoveryEmailAddressVerification$Input](../type-aliases/cancelRecoveryEmailAddressVerification$Input.md)
-
-#### Returns
-
-`Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
-
-Promise<[PasswordState](../type-aliases/PasswordState.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:67631
+dist/generated/types.d.ts:71597
 
 ***
 
 ### changeImportedContacts()
 
-> **changeImportedContacts**(`parameters`): `Promise`\<[`importedContacts`](../type-aliases/importedContacts-1.md)\>
+> **changeImportedContacts**(`parameters`): `Promise`\<[`importedContacts`](../type-aliases/importedContacts.md)\>
 
 Changes imported contacts using the list of contacts saved on the device. Imports newly added contacts and, if at least the file database is enabled, deletes recently deleted contacts.
 
@@ -1180,19 +1228,19 @@ Changes imported contacts using the list of contacts saved on the device. Import
 
 #### Returns
 
-`Promise`\<[`importedContacts`](../type-aliases/importedContacts-1.md)\>
+`Promise`\<[`importedContacts`](../type-aliases/importedContacts.md)\>
 
-Promise<[ImportedContacts](../type-aliases/ImportedContacts.md)>
+Promise<[ImportedContacts](../type-aliases/ImportedContacts-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70725
+dist/generated/types.d.ts:72643
 
 ***
 
 ### changeStickerSet()
 
-> **changeStickerSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **changeStickerSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Installs/uninstalls or activates/archives a sticker set
 
@@ -1204,19 +1252,19 @@ Installs/uninstalls or activates/archives a sticker set
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70879
+dist/generated/types.d.ts:72797
 
 ***
 
 ### checkAuthenticationBotToken()
 
-> **checkAuthenticationBotToken**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkAuthenticationBotToken**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
 
@@ -1228,19 +1276,19 @@ Checks the authentication token of a bot; to log in as a bot. Works only when th
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67513
+dist/generated/types.d.ts:69363
 
 ***
 
 ### checkAuthenticationCode()
 
-> **checkAuthenticationCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkAuthenticationCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks the authentication code. Works only when the current authorization state is authorizationStateWaitCode
 
@@ -1252,19 +1300,19 @@ Checks the authentication code. Works only when the current authorization state 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67439
+dist/generated/types.d.ts:69289
 
 ***
 
 ### checkAuthenticationEmailCode()
 
-> **checkAuthenticationEmailCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkAuthenticationEmailCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks the authentication of an email address. Works only when the current authorization state is authorizationStateWaitEmailCode
 
@@ -1276,19 +1324,19 @@ Checks the authentication of an email address. Works only when the current autho
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67432
+dist/generated/types.d.ts:69282
 
 ***
 
 ### checkAuthenticationPassword()
 
-> **checkAuthenticationPassword**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkAuthenticationPassword**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks the 2-step verification password for correctness. Works only when the current authorization state is authorizationStateWaitPassword
 
@@ -1300,19 +1348,19 @@ Checks the 2-step verification password for correctness. Works only when the cur
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67471
+dist/generated/types.d.ts:69321
 
 ***
 
 ### checkAuthenticationPasswordRecoveryCode()
 
-> **checkAuthenticationPasswordRecoveryCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkAuthenticationPasswordRecoveryCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks whether a 2-step verification password recovery code sent to an email address is valid. Works only when the current authorization state is authorizationStateWaitPassword
 
@@ -1324,19 +1372,19 @@ Checks whether a 2-step verification password recovery code sent to an email add
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67485
+dist/generated/types.d.ts:69335
 
 ***
 
 ### checkChatFolderInviteLink()
 
-> **checkChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLinkInfo`](../type-aliases/chatFolderInviteLinkInfo-1.md)\>
+> **checkChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLinkInfo`](../type-aliases/chatFolderInviteLinkInfo.md)\>
 
 Checks the validity of an invite link for a chat folder and returns information about the corresponding chat folder
 
@@ -1348,19 +1396,19 @@ Checks the validity of an invite link for a chat folder and returns information 
 
 #### Returns
 
-`Promise`\<[`chatFolderInviteLinkInfo`](../type-aliases/chatFolderInviteLinkInfo-1.md)\>
+`Promise`\<[`chatFolderInviteLinkInfo`](../type-aliases/chatFolderInviteLinkInfo.md)\>
 
-Promise<[ChatFolderInviteLinkInfo](../type-aliases/ChatFolderInviteLinkInfo.md)>
+Promise<[ChatFolderInviteLinkInfo](../type-aliases/ChatFolderInviteLinkInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69430
+dist/generated/types.d.ts:71316
 
 ***
 
 ### checkChatInviteLink()
 
-> **checkChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLinkInfo`](../type-aliases/chatInviteLinkInfo-1.md)\>
+> **checkChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLinkInfo`](../type-aliases/chatInviteLinkInfo.md)\>
 
 Checks the validity of an invite link for a chat and returns information about the corresponding chat
 
@@ -1372,13 +1420,13 @@ Checks the validity of an invite link for a chat and returns information about t
 
 #### Returns
 
-`Promise`\<[`chatInviteLinkInfo`](../type-aliases/chatInviteLinkInfo-1.md)\>
+`Promise`\<[`chatInviteLinkInfo`](../type-aliases/chatInviteLinkInfo.md)\>
 
-Promise<[ChatInviteLinkInfo](../type-aliases/ChatInviteLinkInfo.md)>
+Promise<[ChatInviteLinkInfo](../type-aliases/ChatInviteLinkInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70366
+dist/generated/types.d.ts:72284
 
 ***
 
@@ -1402,13 +1450,13 @@ Promise<[CheckChatUsernameResult](../type-aliases/CheckChatUsernameResult.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67963
+dist/generated/types.d.ts:69820
 
 ***
 
 ### checkCreatedPublicChatsLimit()
 
-> **checkCreatedPublicChatsLimit**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkCreatedPublicChatsLimit**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
 
@@ -1420,19 +1468,19 @@ Checks whether the maximum number of owned public chats has been reached. Return
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67977
+dist/generated/types.d.ts:69834
 
 ***
 
 ### checkEmailAddressVerificationCode()
 
-> **checkEmailAddressVerificationCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkEmailAddressVerificationCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks the email address verification code for Telegram Passport
 
@@ -1444,19 +1492,19 @@ Checks the email address verification code for Telegram Passport
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72267
+dist/generated/types.d.ts:74227
 
 ***
 
 ### checkLoginEmailAddressCode()
 
-> **checkLoginEmailAddressCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkLoginEmailAddressCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks the login email address authentication
 
@@ -1468,19 +1516,19 @@ Checks the login email address authentication
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67594
+dist/generated/types.d.ts:69444
 
 ***
 
 ### checkPasswordRecoveryCode()
 
-> **checkPasswordRecoveryCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkPasswordRecoveryCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks whether a 2-step verification password recovery code sent to an email address is valid
 
@@ -1492,19 +1540,19 @@ Checks whether a 2-step verification password recovery code sent to an email add
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67645
+dist/generated/types.d.ts:69495
 
 ***
 
 ### checkPhoneNumberCode()
 
-> **checkPhoneNumberCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkPhoneNumberCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Check the authentication code and completes the request for which the code was sent if appropriate
 
@@ -1516,19 +1564,19 @@ Check the authentication code and completes the request for which the code was s
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71242
+dist/generated/types.d.ts:73160
 
 ***
 
 ### checkPremiumGiftCode()
 
-> **checkPremiumGiftCode**(`parameters`): `Promise`\<[`premiumGiftCodeInfo`](../type-aliases/premiumGiftCodeInfo-1.md)\>
+> **checkPremiumGiftCode**(`parameters`): `Promise`\<[`premiumGiftCodeInfo`](../type-aliases/premiumGiftCodeInfo.md)\>
 
 Return information about a Telegram Premium gift code
 
@@ -1540,19 +1588,19 @@ Return information about a Telegram Premium gift code
 
 #### Returns
 
-`Promise`\<[`premiumGiftCodeInfo`](../type-aliases/premiumGiftCodeInfo-1.md)\>
+`Promise`\<[`premiumGiftCodeInfo`](../type-aliases/premiumGiftCodeInfo.md)\>
 
-Promise<[PremiumGiftCodeInfo](../type-aliases/PremiumGiftCodeInfo.md)>
+Promise<[PremiumGiftCodeInfo](../type-aliases/PremiumGiftCodeInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72470
+dist/generated/types.d.ts:74430
 
 ***
 
 ### checkQuickReplyShortcutName()
 
-> **checkQuickReplyShortcutName**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **checkQuickReplyShortcutName**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Checks validness of a name for a quick reply shortcut. Can be called synchronously
 
@@ -1564,19 +1612,19 @@ Checks validness of a name for a quick reply shortcut. Can be called synchronous
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68598
+dist/generated/types.d.ts:70449
 
 ***
 
 ### checkRecoveryEmailAddressCode()
 
-> **checkRecoveryEmailAddressCode**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+> **checkRecoveryEmailAddressCode**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
 Checks the 2-step verification recovery email address verification code
 
@@ -1588,13 +1636,13 @@ Checks the 2-step verification recovery email address verification code
 
 #### Returns
 
-`Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+`Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
-Promise<[PasswordState](../type-aliases/PasswordState.md)>
+Promise<[PasswordState](../type-aliases/PasswordState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67617
+dist/generated/types.d.ts:69467
 
 ***
 
@@ -1618,13 +1666,13 @@ Promise<[CheckStickerSetNameResult](../type-aliases/CheckStickerSetNameResult.md
 
 #### Defined in
 
-dist/generated/types.d.ts:72316
+dist/generated/types.d.ts:74276
 
 ***
 
 ### cleanFileName()
 
-> **cleanFileName**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **cleanFileName**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Removes potentially dangerous characters from the name of a file. The encoding of the file name is supposed to be UTF-8. Returns an empty string on failure. Can be called synchronously
 
@@ -1636,19 +1684,19 @@ Removes potentially dangerous characters from the name of a file. The encoding o
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68918
+dist/generated/types.d.ts:70790
 
 ***
 
 ### clearAllDraftMessages()
 
-> **clearAllDraftMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **clearAllDraftMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Clears message drafts in all chats
 
@@ -1660,19 +1708,19 @@ Clears message drafts in all chats
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69746
+dist/generated/types.d.ts:71632
 
 ***
 
 ### clearAutosaveSettingsExceptions()
 
-> **clearAutosaveSettingsExceptions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **clearAutosaveSettingsExceptions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Clears the list of all autosave settings exceptions. The method is guaranteed to work only after at least one call to getAutosaveSettings
 
@@ -1684,19 +1732,19 @@ Clears the list of all autosave settings exceptions. The method is guaranteed to
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72197
+dist/generated/types.d.ts:74157
 
 ***
 
 ### clearImportedContacts()
 
-> **clearImportedContacts**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **clearImportedContacts**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Clears all imported contacts, contact list remains unchanged
 
@@ -1708,19 +1756,19 @@ Clears all imported contacts, contact list remains unchanged
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70732
+dist/generated/types.d.ts:72650
 
 ***
 
 ### clearRecentEmojiStatuses()
 
-> **clearRecentEmojiStatuses**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **clearRecentEmojiStatuses**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Clears the list of recently used emoji statuses for self status
 
@@ -1732,67 +1780,19 @@ Clears the list of recently used emoji statuses for self status
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70113
-
-***
-
-### clearRecentReactions()
-
-> **clearRecentReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Clears the list of recently used reactions
-
-#### Parameters
-
-• **parameters**: [`clearRecentReactions$DirectInput`](../type-aliases/clearRecentReactions$DirectInput.md)
-
-[clearRecentReactions$Input](../type-aliases/clearRecentReactions$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68797
-
-***
-
-### clearRecentStickers()
-
-> **clearRecentStickers**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Clears the list of recently used stickers
-
-#### Parameters
-
-• **parameters**: [`clearRecentStickers$DirectInput`](../type-aliases/clearRecentStickers$DirectInput.md)
-
-[clearRecentStickers$Input](../type-aliases/clearRecentStickers$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70923
+dist/generated/types.d.ts:72013
 
 ***
 
 ### clearRecentlyFoundChats()
 
-> **clearRecentlyFoundChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **clearRecentlyFoundChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Clears the list of recently found chats
 
@@ -1804,19 +1804,67 @@ Clears the list of recently found chats
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67949
+dist/generated/types.d.ts:69806
+
+***
+
+### clearRecentReactions()
+
+> **clearRecentReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Clears the list of recently used reactions
+
+#### Parameters
+
+• **parameters**: [`clearRecentReactions$DirectInput`](../type-aliases/clearRecentReactions$DirectInput.md)
+
+[clearRecentReactions$Input](../type-aliases/clearRecentReactions$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70648
+
+***
+
+### clearRecentStickers()
+
+> **clearRecentStickers**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Clears the list of recently used stickers
+
+#### Parameters
+
+• **parameters**: [`clearRecentStickers$DirectInput`](../type-aliases/clearRecentStickers$DirectInput.md)
+
+[clearRecentStickers$Input](../type-aliases/clearRecentStickers$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72841
 
 ***
 
 ### clearSearchedForTags()
 
-> **clearSearchedForTags**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **clearSearchedForTags**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Clears the list of recently searched for hashtags or cashtags
 
@@ -1828,19 +1876,19 @@ Clears the list of recently searched for hashtags or cashtags
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68191
+dist/generated/types.d.ts:70048
 
 ***
 
 ### clickAnimatedEmojiMessage()
 
-> **clickAnimatedEmojiMessage**(`parameters`): `Promise`\<[`sticker`](../type-aliases/sticker-1.md)\>
+> **clickAnimatedEmojiMessage**(`parameters`): `Promise`\<[`sticker`](../type-aliases/sticker.md)\>
 
 Informs TDLib that a message with an animated emoji was clicked by the user. Returns a big animated sticker to be played or a 404 error if usual animation needs to be played
 
@@ -1852,19 +1900,19 @@ Informs TDLib that a message with an animated emoji was clicked by the user. Ret
 
 #### Returns
 
-`Promise`\<[`sticker`](../type-aliases/sticker-1.md)\>
+`Promise`\<[`sticker`](../type-aliases/sticker.md)\>
 
-Promise<[Sticker](../type-aliases/Sticker.md)>
+Promise<[Sticker](../type-aliases/Sticker-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69192
+dist/generated/types.d.ts:71078
 
 ***
 
 ### clickChatSponsoredMessage()
 
-> **clickChatSponsoredMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **clickChatSponsoredMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that the user opened the sponsored chat via the button, the name, the photo, or a mention in the sponsored message
 
@@ -1876,19 +1924,19 @@ Informs TDLib that the user opened the sponsored chat via the button, the name, 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68270
+dist/generated/types.d.ts:70120
 
 ***
 
 ### clickPremiumSubscriptionButton()
 
-> **clickPremiumSubscriptionButton**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **clickPremiumSubscriptionButton**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that the user clicked Premium subscription button on the Premium features screen
 
@@ -1900,19 +1948,19 @@ Informs TDLib that the user clicked Premium subscription button on the Premium f
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72449
+dist/generated/types.d.ts:74409
 
 ***
 
 ### close()
 
-> **close**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **close**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Closes the TDLib instance. All databases will be flushed to disk and properly closed. After the close completes, updateAuthorizationState with authorizationStateClosed will be sent. Can be called before initialization
 
@@ -1924,19 +1972,19 @@ Closes the TDLib instance. All databases will be flushed to disk and properly cl
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67527
+dist/generated/types.d.ts:69377
 
 ***
 
 ### closeChat()
 
-> **closeChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **closeChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that the chat is closed by the user. Many useful activities depend on the chat being opened or closed
 
@@ -1948,19 +1996,19 @@ Informs TDLib that the chat is closed by the user. Many useful activities depend
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69167
+dist/generated/types.d.ts:71053
 
 ***
 
 ### closeSecretChat()
 
-> **closeSecretChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **closeSecretChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Closes a secret chat, effectively transferring its state to secretChatStateClosed
 
@@ -1972,19 +2020,19 @@ Closes a secret chat, effectively transferring its state to secretChatStateClose
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71671
+dist/generated/types.d.ts:73631
 
 ***
 
 ### closeStory()
 
-> **closeStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **closeStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that a story is closed by the user
 
@@ -1996,19 +2044,19 @@ Informs TDLib that a story is closed by the user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69955
+dist/generated/types.d.ts:71855
 
 ***
 
 ### closeWebApp()
 
-> **closeWebApp**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **closeWebApp**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that a previously opened Web App was closed
 
@@ -2020,19 +2068,19 @@ Informs TDLib that a previously opened Web App was closed
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69076
+dist/generated/types.d.ts:70962
 
 ***
 
 ### confirmQrCodeAuthentication()
 
-> **confirmQrCodeAuthentication**(`parameters`): `Promise`\<[`session`](../type-aliases/session-1.md)\>
+> **confirmQrCodeAuthentication**(`parameters`): `Promise`\<[`session`](../type-aliases/session.md)\>
 
 Confirms QR code authentication on another device. Returns created session on success
 
@@ -2044,19 +2092,19 @@ Confirms QR code authentication on another device. Returns created session on su
 
 #### Returns
 
-`Promise`\<[`session`](../type-aliases/session-1.md)\>
+`Promise`\<[`session`](../type-aliases/session.md)\>
 
-Promise<[Session](../type-aliases/Session.md)>
+Promise<[Session](../type-aliases/Session-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67543
+dist/generated/types.d.ts:69393
 
 ***
 
 ### confirmSession()
 
-> **confirmSession**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **confirmSession**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Confirms an unconfirmed session of the current user from another device
 
@@ -2068,19 +2116,19 @@ Confirms an unconfirmed session of the current user from another device
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71487
+dist/generated/types.d.ts:73447
 
 ***
 
 ### createBasicGroupChat()
 
-> **createBasicGroupChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **createBasicGroupChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Returns an existing chat corresponding to a known basic group
 
@@ -2092,19 +2140,19 @@ Returns an existing chat corresponding to a known basic group
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69262
+dist/generated/types.d.ts:71148
 
 ***
 
 ### createBusinessChatLink()
 
-> **createBusinessChatLink**(`parameters`): `Promise`\<[`businessChatLink`](../type-aliases/businessChatLink-1.md)\>
+> **createBusinessChatLink**(`parameters`): `Promise`\<[`businessChatLink`](../type-aliases/businessChatLink.md)\>
 
 Creates a business chat link for the current account. Requires Telegram Business subscription. There can be up to getOption("business_chat_link_count_max") links created. Returns the created link
 
@@ -2116,19 +2164,19 @@ Creates a business chat link for the current account. Requires Telegram Business
 
 #### Returns
 
-`Promise`\<[`businessChatLink`](../type-aliases/businessChatLink-1.md)\>
+`Promise`\<[`businessChatLink`](../type-aliases/businessChatLink.md)\>
 
-Promise<[BusinessChatLink](../type-aliases/BusinessChatLink.md)>
+Promise<[BusinessChatLink](../type-aliases/BusinessChatLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71291
+dist/generated/types.d.ts:73209
 
 ***
 
 ### createCall()
 
-> **createCall**(`parameters`): `Promise`\<[`callId`](../type-aliases/callId-1.md)\>
+> **createCall**(`parameters`): `Promise`\<[`callId`](../type-aliases/callId.md)\>
 
 Creates a new call
 
@@ -2140,19 +2188,19 @@ Creates a new call
 
 #### Returns
 
-`Promise`\<[`callId`](../type-aliases/callId-1.md)\>
+`Promise`\<[`callId`](../type-aliases/callId.md)\>
 
-Promise<[CallId](../type-aliases/CallId.md)>
+Promise<[CallId](../type-aliases/CallId-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70401
+dist/generated/types.d.ts:72319
 
 ***
 
 ### createChatFolder()
 
-> **createChatFolder**(`parameters`): `Promise`\<[`chatFolderInfo`](../type-aliases/chatFolderInfo-1.md)\>
+> **createChatFolder**(`parameters`): `Promise`\<[`chatFolderInfo`](../type-aliases/chatFolderInfo.md)\>
 
 Creates new chat folder. Returns information about the created chat folder. There can be up to getOption("chat_folder_count_max") chat folders, but the limit can be increased with Telegram Premium
 
@@ -2164,19 +2212,19 @@ Creates new chat folder. Returns information about the created chat folder. Ther
 
 #### Returns
 
-`Promise`\<[`chatFolderInfo`](../type-aliases/chatFolderInfo-1.md)\>
+`Promise`\<[`chatFolderInfo`](../type-aliases/chatFolderInfo.md)\>
 
-Promise<[ChatFolderInfo](../type-aliases/ChatFolderInfo.md)>
+Promise<[ChatFolderInfo](../type-aliases/ChatFolderInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69332
+dist/generated/types.d.ts:71218
 
 ***
 
 ### createChatFolderInviteLink()
 
-> **createChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLink`](../type-aliases/chatFolderInviteLink-1.md)\>
+> **createChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLink`](../type-aliases/chatFolderInviteLink.md)\>
 
 Creates a new invite link for a chat folder. A link can be created for a chat folder if it has only pinned and included chats
 
@@ -2188,19 +2236,19 @@ Creates a new invite link for a chat folder. A link can be created for a chat fo
 
 #### Returns
 
-`Promise`\<[`chatFolderInviteLink`](../type-aliases/chatFolderInviteLink-1.md)\>
+`Promise`\<[`chatFolderInviteLink`](../type-aliases/chatFolderInviteLink.md)\>
 
-Promise<[ChatFolderInviteLink](../type-aliases/ChatFolderInviteLink.md)>
+Promise<[ChatFolderInviteLink](../type-aliases/ChatFolderInviteLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69402
+dist/generated/types.d.ts:71288
 
 ***
 
 ### createChatInviteLink()
 
-> **createChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink-1.md)\>
+> **createChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
 
 Creates a new invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat
 
@@ -2212,19 +2260,43 @@ Creates a new invite link for a chat. Available for basic groups, supergroups, a
 
 #### Returns
 
-`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink-1.md)\>
+`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
 
-Promise<[ChatInviteLink](../type-aliases/ChatInviteLink.md)>
+Promise<[ChatInviteLink](../type-aliases/ChatInviteLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70301
+dist/generated/types.d.ts:72201
+
+***
+
+### createChatSubscriptionInviteLink()
+
+> **createChatSubscriptionInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
+
+Creates a new subscription invite link for a channel chat. Requires can_invite_users right in the chat
+
+#### Parameters
+
+• **parameters**: [`createChatSubscriptionInviteLink$DirectInput`](../type-aliases/createChatSubscriptionInviteLink$DirectInput.md)
+
+[createChatSubscriptionInviteLink$Input](../type-aliases/createChatSubscriptionInviteLink$Input.md)
+
+#### Returns
+
+`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
+
+Promise<[ChatInviteLink](../type-aliases/ChatInviteLink-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72208
 
 ***
 
 ### createForumTopic()
 
-> **createForumTopic**(`parameters`): `Promise`\<[`forumTopicInfo`](../type-aliases/forumTopicInfo-1.md)\>
+> **createForumTopic**(`parameters`): `Promise`\<[`forumTopicInfo`](../type-aliases/forumTopicInfo.md)\>
 
 Creates a topic in a forum supergroup chat; requires can_manage_topics administrator or can_create_topics member right in the supergroup
 
@@ -2236,19 +2308,19 @@ Creates a topic in a forum supergroup chat; requires can_manage_topics administr
 
 #### Returns
 
-`Promise`\<[`forumTopicInfo`](../type-aliases/forumTopicInfo-1.md)\>
+`Promise`\<[`forumTopicInfo`](../type-aliases/forumTopicInfo.md)\>
 
-Promise<[ForumTopicInfo](../type-aliases/ForumTopicInfo.md)>
+Promise<[ForumTopicInfo](../type-aliases/ForumTopicInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68699
+dist/generated/types.d.ts:70550
 
 ***
 
 ### createInvoiceLink()
 
-> **createInvoiceLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **createInvoiceLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Creates a link for the given invoice; for bots only
 
@@ -2260,19 +2332,19 @@ Creates a link for the given invoice; for bots only
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71741
+dist/generated/types.d.ts:73701
 
 ***
 
 ### createNewBasicGroupChat()
 
-> **createNewBasicGroupChat**(`parameters`): `Promise`\<[`createdBasicGroupChat`](../type-aliases/createdBasicGroupChat-1.md)\>
+> **createNewBasicGroupChat**(`parameters`): `Promise`\<[`createdBasicGroupChat`](../type-aliases/createdBasicGroupChat.md)\>
 
 Creates a new basic group and sends a corresponding messageBasicGroupChatCreate. Returns information about the newly created chat
 
@@ -2284,19 +2356,19 @@ Creates a new basic group and sends a corresponding messageBasicGroupChatCreate.
 
 #### Returns
 
-`Promise`\<[`createdBasicGroupChat`](../type-aliases/createdBasicGroupChat-1.md)\>
+`Promise`\<[`createdBasicGroupChat`](../type-aliases/createdBasicGroupChat.md)\>
 
-Promise<[CreatedBasicGroupChat](../type-aliases/CreatedBasicGroupChat.md)>
+Promise<[CreatedBasicGroupChat](../type-aliases/CreatedBasicGroupChat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69283
+dist/generated/types.d.ts:71169
 
 ***
 
 ### createNewSecretChat()
 
-> **createNewSecretChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **createNewSecretChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Creates a new secret chat. Returns the newly created chat
 
@@ -2308,19 +2380,19 @@ Creates a new secret chat. Returns the newly created chat
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69297
+dist/generated/types.d.ts:71183
 
 ***
 
 ### createNewStickerSet()
 
-> **createNewStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../type-aliases/stickerSet-1.md)\>
+> **createNewStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../type-aliases/stickerSet.md)\>
 
 Creates a new sticker set. Returns the newly created sticker set
 
@@ -2332,19 +2404,19 @@ Creates a new sticker set. Returns the newly created sticker set
 
 #### Returns
 
-`Promise`\<[`stickerSet`](../type-aliases/stickerSet-1.md)\>
+`Promise`\<[`stickerSet`](../type-aliases/stickerSet.md)\>
 
-Promise<[StickerSet](../type-aliases/StickerSet.md)>
+Promise<[StickerSet](../type-aliases/StickerSet-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72323
+dist/generated/types.d.ts:74283
 
 ***
 
 ### createNewSupergroupChat()
 
-> **createNewSupergroupChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **createNewSupergroupChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Creates a new supergroup or channel and sends a corresponding messageSupergroupChatCreate. Returns the newly created chat
 
@@ -2356,19 +2428,19 @@ Creates a new supergroup or channel and sends a corresponding messageSupergroupC
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69290
+dist/generated/types.d.ts:71176
 
 ***
 
 ### createPrivateChat()
 
-> **createPrivateChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **createPrivateChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Returns an existing chat corresponding to a given user
 
@@ -2380,19 +2452,19 @@ Returns an existing chat corresponding to a given user
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69255
+dist/generated/types.d.ts:71141
 
 ***
 
 ### createSecretChat()
 
-> **createSecretChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **createSecretChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Returns an existing chat corresponding to a known secret chat
 
@@ -2404,19 +2476,19 @@ Returns an existing chat corresponding to a known secret chat
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69276
+dist/generated/types.d.ts:71162
 
 ***
 
 ### createSupergroupChat()
 
-> **createSupergroupChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **createSupergroupChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Returns an existing chat corresponding to a known supergroup or channel
 
@@ -2428,19 +2500,19 @@ Returns an existing chat corresponding to a known supergroup or channel
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69269
+dist/generated/types.d.ts:71155
 
 ***
 
 ### createTemporaryPassword()
 
-> **createTemporaryPassword**(`parameters`): `Promise`\<[`temporaryPasswordState`](../type-aliases/temporaryPasswordState-1.md)\>
+> **createTemporaryPassword**(`parameters`): `Promise`\<[`temporaryPasswordState`](../type-aliases/temporaryPasswordState.md)\>
 
 Creates a new temporary password for processing payments
 
@@ -2452,19 +2524,19 @@ Creates a new temporary password for processing payments
 
 #### Returns
 
-`Promise`\<[`temporaryPasswordState`](../type-aliases/temporaryPasswordState-1.md)\>
+`Promise`\<[`temporaryPasswordState`](../type-aliases/temporaryPasswordState.md)\>
 
-Promise<[TemporaryPasswordState](../type-aliases/TemporaryPasswordState.md)>
+Promise<[TemporaryPasswordState](../type-aliases/TemporaryPasswordState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67673
+dist/generated/types.d.ts:69523
 
 ***
 
 ### createVideoChat()
 
-> **createVideoChat**(`parameters`): `Promise`\<[`groupCallId`](../type-aliases/groupCallId-1.md)\>
+> **createVideoChat**(`parameters`): `Promise`\<[`groupCallId`](../type-aliases/groupCallId.md)\>
 
 Creates a video chat (a group call bound to a chat). Available only for basic groups, supergroups and channels; requires can_manage_video_chats administrator right
 
@@ -2476,19 +2548,19 @@ Creates a video chat (a group call bound to a chat). Available only for basic gr
 
 #### Returns
 
-`Promise`\<[`groupCallId`](../type-aliases/groupCallId-1.md)\>
+`Promise`\<[`groupCallId`](../type-aliases/groupCallId.md)\>
 
-Promise<[GroupCallId](../type-aliases/GroupCallId.md)>
+Promise<[GroupCallId](../type-aliases/GroupCallId-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70464
+dist/generated/types.d.ts:72382
 
 ***
 
 ### deleteAccount()
 
-> **deleteAccount**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteAccount**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes the account of the current user, deleting all information associated with the user from the server. The phone number of the account can be used to create a new account.
 
@@ -2502,19 +2574,19 @@ Deletes the account of the current user, deleting all information associated wit
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71985
+dist/generated/types.d.ts:73945
 
 ***
 
 ### deleteAllCallMessages()
 
-> **deleteAllCallMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteAllCallMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all call messages
 
@@ -2526,19 +2598,19 @@ Deletes all call messages
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68198
+dist/generated/types.d.ts:70055
 
 ***
 
 ### deleteAllRevokedChatInviteLinks()
 
-> **deleteAllRevokedChatInviteLinks**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteAllRevokedChatInviteLinks**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all revoked chat invite links created by a given chat administrator. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
@@ -2550,19 +2622,43 @@ Deletes all revoked chat invite links created by a given chat administrator. Req
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70359
+dist/generated/types.d.ts:72277
+
+***
+
+### deleteBotMediaPreviews()
+
+> **deleteBotMediaPreviews**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Delete media previews from the list of media previews of a bot
+
+#### Parameters
+
+• **parameters**: [`deleteBotMediaPreviews$DirectInput`](../type-aliases/deleteBotMediaPreviews$DirectInput.md)
+
+[deleteBotMediaPreviews$Input](../type-aliases/deleteBotMediaPreviews$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:73356
 
 ***
 
 ### deleteBusinessChatLink()
 
-> **deleteBusinessChatLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteBusinessChatLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes a business chat link of the current account
 
@@ -2574,19 +2670,19 @@ Deletes a business chat link of the current account
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71305
+dist/generated/types.d.ts:73223
 
 ***
 
 ### deleteBusinessConnectedBot()
 
-> **deleteBusinessConnectedBot**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteBusinessConnectedBot**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes the business bot that is connected to the current user account
 
@@ -2598,19 +2694,19 @@ Deletes the business bot that is connected to the current user account
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71263
+dist/generated/types.d.ts:73181
 
 ***
 
 ### deleteChat()
 
-> **deleteChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes a chat along with all messages in the corresponding chat for all chat members. For group chats this will release the usernames and remove all members.
 
@@ -2624,19 +2720,19 @@ Deletes a chat along with all messages in the corresponding chat for all chat me
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68090
+dist/generated/types.d.ts:69947
 
 ***
 
 ### deleteChatBackground()
 
-> **deleteChatBackground**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteChatBackground**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes background in a specific chat
 
@@ -2648,19 +2744,19 @@ Deletes background in a specific chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69530
+dist/generated/types.d.ts:71416
 
 ***
 
 ### deleteChatFolder()
 
-> **deleteChatFolder**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteChatFolder**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes existing chat folder
 
@@ -2672,19 +2768,19 @@ Deletes existing chat folder
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69346
+dist/generated/types.d.ts:71232
 
 ***
 
 ### deleteChatFolderInviteLink()
 
-> **deleteChatFolderInviteLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteChatFolderInviteLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes an invite link for a chat folder
 
@@ -2696,19 +2792,19 @@ Deletes an invite link for a chat folder
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69423
+dist/generated/types.d.ts:71309
 
 ***
 
 ### deleteChatHistory()
 
-> **deleteChatHistory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteChatHistory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat.can_be_deleted_for_all_users fields to find whether and how the method can be applied to the chat
 
@@ -2720,19 +2816,19 @@ Deletes all messages in the chat. Use chat.can_be_deleted_only_for_self and chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68081
+dist/generated/types.d.ts:69938
 
 ***
 
 ### deleteChatMessagesByDate()
 
-> **deleteChatMessagesByDate**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteChatMessagesByDate**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all messages between the specified dates in a chat. Supported only for private chats and basic groups. Messages sent in the last 30 seconds will not be deleted
 
@@ -2744,19 +2840,19 @@ Deletes all messages between the specified dates in a chat. Supported only for p
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68437
+dist/generated/types.d.ts:70287
 
 ***
 
 ### deleteChatMessagesBySender()
 
-> **deleteChatMessagesBySender**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteChatMessagesBySender**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all messages sent by the specified message sender in a chat. Supported only for supergroups; requires can_delete_messages administrator privileges
 
@@ -2768,19 +2864,19 @@ Deletes all messages sent by the specified message sender in a chat. Supported o
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68430
+dist/generated/types.d.ts:70280
 
 ***
 
 ### deleteChatReplyMarkup()
 
-> **deleteChatReplyMarkup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteChatReplyMarkup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes the default reply markup from a chat. Must be called after a one-time keyboard or a replyMarkupForceReply reply markup has been used. An updateChatReplyMarkup update will be sent if the reply markup is changed
 
@@ -2792,19 +2888,19 @@ Deletes the default reply markup from a chat. Must be called after a one-time ke
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69146
+dist/generated/types.d.ts:71032
 
 ***
 
 ### deleteCommands()
 
-> **deleteCommands**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteCommands**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes commands supported by the bot for the given user scope and language; for bots only
 
@@ -2816,19 +2912,19 @@ Deletes commands supported by the bot for the given user scope and language; for
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71340
+dist/generated/types.d.ts:73258
 
 ***
 
 ### deleteDefaultBackground()
 
-> **deleteDefaultBackground**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteDefaultBackground**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes default background for chats
 
@@ -2840,19 +2936,19 @@ Deletes default background for chats
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71783
+dist/generated/types.d.ts:73743
 
 ***
 
 ### deleteFile()
 
-> **deleteFile**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteFile**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes a file from the TDLib file cache
 
@@ -2864,19 +2960,19 @@ Deletes a file from the TDLib file cache
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70215
+dist/generated/types.d.ts:72115
 
 ***
 
 ### deleteForumTopic()
 
-> **deleteForumTopic**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteForumTopic**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all messages in a forum topic; requires can_delete_messages administrator right in the supergroup unless the user is creator of the topic, the topic has no messages from other users and has at most 11 messages
 
@@ -2888,19 +2984,19 @@ Deletes all messages in a forum topic; requires can_delete_messages administrato
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68769
+dist/generated/types.d.ts:70620
 
 ***
 
 ### deleteLanguagePack()
 
-> **deleteLanguagePack**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteLanguagePack**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all information about a language pack in the current localization target. The language pack which is currently in use (including base language pack) or is being synchronized can't be deleted.
 
@@ -2914,19 +3010,19 @@ Deletes all information about a language pack in the current localization target
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71871
+dist/generated/types.d.ts:73831
 
 ***
 
 ### deleteMessages()
 
-> **deleteMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes messages
 
@@ -2938,19 +3034,19 @@ Deletes messages
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68423
+dist/generated/types.d.ts:70273
 
 ***
 
 ### deletePassportElement()
 
-> **deletePassportElement**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deletePassportElement**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes a Telegram Passport element
 
@@ -2962,19 +3058,19 @@ Deletes a Telegram Passport element
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72232
+dist/generated/types.d.ts:74192
 
 ***
 
 ### deleteProfilePhoto()
 
-> **deleteProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes a profile photo
 
@@ -2986,19 +3082,19 @@ Deletes a profile photo
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71088
+dist/generated/types.d.ts:73006
 
 ***
 
 ### deleteQuickReplyShortcut()
 
-> **deleteQuickReplyShortcut**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteQuickReplyShortcut**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes a quick reply shortcut
 
@@ -3010,19 +3106,19 @@ Deletes a quick reply shortcut
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68619
+dist/generated/types.d.ts:70470
 
 ***
 
 ### deleteQuickReplyShortcutMessages()
 
-> **deleteQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes specified quick reply messages
 
@@ -3034,19 +3130,19 @@ Deletes specified quick reply messages
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68640
+dist/generated/types.d.ts:70491
 
 ***
 
 ### deleteRevokedChatInviteLink()
 
-> **deleteRevokedChatInviteLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteRevokedChatInviteLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
@@ -3058,19 +3154,19 @@ Deletes revoked chat invite links. Requires administrator privileges and can_inv
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70352
+dist/generated/types.d.ts:72270
 
 ***
 
 ### deleteSavedCredentials()
 
-> **deleteSavedCredentials**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteSavedCredentials**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes saved credentials for all payment provider bots
 
@@ -3082,19 +3178,19 @@ Deletes saved credentials for all payment provider bots
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71734
+dist/generated/types.d.ts:73694
 
 ***
 
 ### deleteSavedMessagesTopicHistory()
 
-> **deleteSavedMessagesTopicHistory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteSavedMessagesTopicHistory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all messages in a Saved Messages topic
 
@@ -3106,19 +3202,19 @@ Deletes all messages in a Saved Messages topic
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68028
+dist/generated/types.d.ts:69885
 
 ***
 
 ### deleteSavedMessagesTopicMessagesByDate()
 
-> **deleteSavedMessagesTopicMessagesByDate**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteSavedMessagesTopicMessagesByDate**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes all messages between the specified dates in a Saved Messages topic. Messages sent in the last 30 seconds will not be deleted
 
@@ -3130,19 +3226,19 @@ Deletes all messages between the specified dates in a Saved Messages topic. Mess
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68035
+dist/generated/types.d.ts:69892
 
 ***
 
 ### deleteSavedOrderInfo()
 
-> **deleteSavedOrderInfo**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteSavedOrderInfo**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes saved order information
 
@@ -3154,19 +3250,19 @@ Deletes saved order information
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71727
+dist/generated/types.d.ts:73687
 
 ***
 
 ### deleteStickerSet()
 
-> **deleteStickerSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteStickerSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Completely deletes a sticker set
 
@@ -3178,19 +3274,19 @@ Completely deletes a sticker set
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72365
+dist/generated/types.d.ts:74325
 
 ***
 
 ### deleteStory()
 
-> **deleteStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **deleteStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Deletes a previously sent story. Can be called only if story.can_be_deleted == true
 
@@ -3202,19 +3298,19 @@ Deletes a previously sent story. Can be called only if story.can_be_deleted == t
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69886
+dist/generated/types.d.ts:71786
 
 ***
 
 ### destroy()
 
-> **destroy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **destroy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Closes the TDLib instance, destroying all local data without a proper logout. The current user session will remain in the list of all active sessions. All local data will be destroyed.
 
@@ -3228,19 +3324,19 @@ Closes the TDLib instance, destroying all local data without a proper logout. Th
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67536
+dist/generated/types.d.ts:69386
 
 ***
 
 ### disableAllSupergroupUsernames()
 
-> **disableAllSupergroupUsernames**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **disableAllSupergroupUsernames**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Disables all active non-editable usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
 
@@ -3252,19 +3348,19 @@ Disables all active non-editable usernames of a supergroup or channel, requires 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71552
+dist/generated/types.d.ts:73512
 
 ***
 
 ### disableProxy()
 
-> **disableProxy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **disableProxy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Disables the currently enabled proxy. Can be called before authorization
 
@@ -3276,19 +3372,19 @@ Disables the currently enabled proxy. Can be called before authorization
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72659
+dist/generated/types.d.ts:74647
 
 ***
 
 ### discardCall()
 
-> **discardCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **discardCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Discards a call
 
@@ -3300,19 +3396,19 @@ Discards a call
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70422
+dist/generated/types.d.ts:72340
 
 ***
 
 ### disconnectAllWebsites()
 
-> **disconnectAllWebsites**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **disconnectAllWebsites**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Disconnects all websites from the current user's Telegram account
 
@@ -3324,19 +3420,19 @@ Disconnects all websites from the current user's Telegram account
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71529
+dist/generated/types.d.ts:73489
 
 ***
 
 ### disconnectWebsite()
 
-> **disconnectWebsite**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **disconnectWebsite**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Disconnects website from the current user's Telegram account
 
@@ -3348,19 +3444,19 @@ Disconnects website from the current user's Telegram account
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71522
+dist/generated/types.d.ts:73482
 
 ***
 
 ### downloadFile()
 
-> **downloadFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file-1.md)\>
+> **downloadFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file.md)\>
 
 Downloads a file from the cloud. Download progress and completion of the download will be notified through updateFile updates
 
@@ -3372,19 +3468,43 @@ Downloads a file from the cloud. Download progress and completion of the downloa
 
 #### Returns
 
-`Promise`\<[`file`](../type-aliases/file-1.md)\>
+`Promise`\<[`file`](../type-aliases/file.md)\>
 
-Promise<[File](../type-aliases/File.md)>
+Promise<[File](../type-aliases/File-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70141
+dist/generated/types.d.ts:72041
+
+***
+
+### editBotMediaPreview()
+
+> **editBotMediaPreview**(`parameters`): `Promise`\<[`botMediaPreview`](../type-aliases/botMediaPreview.md)\>
+
+Replaces media preview in the list of media previews of a bot. Returns the new preview after edit is completed server-side
+
+#### Parameters
+
+• **parameters**: [`editBotMediaPreview$DirectInput`](../type-aliases/editBotMediaPreview$DirectInput.md)
+
+[editBotMediaPreview$Input](../type-aliases/editBotMediaPreview$Input.md)
+
+#### Returns
+
+`Promise`\<[`botMediaPreview`](../type-aliases/botMediaPreview.md)\>
+
+Promise<[BotMediaPreview](../type-aliases/BotMediaPreview-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:73342
 
 ***
 
 ### editBusinessChatLink()
 
-> **editBusinessChatLink**(`parameters`): `Promise`\<[`businessChatLink`](../type-aliases/businessChatLink-1.md)\>
+> **editBusinessChatLink**(`parameters`): `Promise`\<[`businessChatLink`](../type-aliases/businessChatLink.md)\>
 
 Edits a business chat link of the current account. Requires Telegram Business subscription. Returns the edited link
 
@@ -3396,19 +3516,19 @@ Edits a business chat link of the current account. Requires Telegram Business su
 
 #### Returns
 
-`Promise`\<[`businessChatLink`](../type-aliases/businessChatLink-1.md)\>
+`Promise`\<[`businessChatLink`](../type-aliases/businessChatLink.md)\>
 
-Promise<[BusinessChatLink](../type-aliases/BusinessChatLink.md)>
+Promise<[BusinessChatLink](../type-aliases/BusinessChatLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71298
+dist/generated/types.d.ts:73216
 
 ***
 
 ### editBusinessMessageCaption()
 
-> **editBusinessMessageCaption**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+> **editBusinessMessageCaption**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
 Edits the caption of a message sent on behalf of a business account; for bots only
 
@@ -3420,19 +3540,19 @@ Edits the caption of a message sent on behalf of a business account; for bots on
 
 #### Returns
 
-`Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+`Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
-Promise<[BusinessMessage](../type-aliases/BusinessMessage.md)>
+Promise<[BusinessMessage](../type-aliases/BusinessMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68577
+dist/generated/types.d.ts:70421
 
 ***
 
 ### editBusinessMessageLiveLocation()
 
-> **editBusinessMessageLiveLocation**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+> **editBusinessMessageLiveLocation**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
 Edits the content of a live location in a message sent on behalf of a business account; for bots only
 
@@ -3444,19 +3564,19 @@ Edits the content of a live location in a message sent on behalf of a business a
 
 #### Returns
 
-`Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+`Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
-Promise<[BusinessMessage](../type-aliases/BusinessMessage.md)>
+Promise<[BusinessMessage](../type-aliases/BusinessMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68563
+dist/generated/types.d.ts:70407
 
 ***
 
 ### editBusinessMessageMedia()
 
-> **editBusinessMessageMedia**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+> **editBusinessMessageMedia**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
 Edits the content of a message with an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
 
@@ -3468,19 +3588,19 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Returns
 
-`Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+`Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
-Promise<[BusinessMessage](../type-aliases/BusinessMessage.md)>
+Promise<[BusinessMessage](../type-aliases/BusinessMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68570
+dist/generated/types.d.ts:70414
 
 ***
 
 ### editBusinessMessageReplyMarkup()
 
-> **editBusinessMessageReplyMarkup**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+> **editBusinessMessageReplyMarkup**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
 Edits the reply markup of a message sent on behalf of a business account; for bots only
 
@@ -3492,19 +3612,19 @@ Edits the reply markup of a message sent on behalf of a business account; for bo
 
 #### Returns
 
-`Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+`Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
-Promise<[BusinessMessage](../type-aliases/BusinessMessage.md)>
+Promise<[BusinessMessage](../type-aliases/BusinessMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68584
+dist/generated/types.d.ts:70428
 
 ***
 
 ### editBusinessMessageText()
 
-> **editBusinessMessageText**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+> **editBusinessMessageText**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
 Edits the text of a text or game message sent on behalf of a business account; for bots only
 
@@ -3516,19 +3636,19 @@ Edits the text of a text or game message sent on behalf of a business account; f
 
 #### Returns
 
-`Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+`Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
-Promise<[BusinessMessage](../type-aliases/BusinessMessage.md)>
+Promise<[BusinessMessage](../type-aliases/BusinessMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68556
+dist/generated/types.d.ts:70400
 
 ***
 
 ### editChatFolder()
 
-> **editChatFolder**(`parameters`): `Promise`\<[`chatFolderInfo`](../type-aliases/chatFolderInfo-1.md)\>
+> **editChatFolder**(`parameters`): `Promise`\<[`chatFolderInfo`](../type-aliases/chatFolderInfo.md)\>
 
 Edits existing chat folder. Returns information about the edited chat folder
 
@@ -3540,19 +3660,19 @@ Edits existing chat folder. Returns information about the edited chat folder
 
 #### Returns
 
-`Promise`\<[`chatFolderInfo`](../type-aliases/chatFolderInfo-1.md)\>
+`Promise`\<[`chatFolderInfo`](../type-aliases/chatFolderInfo.md)\>
 
-Promise<[ChatFolderInfo](../type-aliases/ChatFolderInfo.md)>
+Promise<[ChatFolderInfo](../type-aliases/ChatFolderInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69339
+dist/generated/types.d.ts:71225
 
 ***
 
 ### editChatFolderInviteLink()
 
-> **editChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLink`](../type-aliases/chatFolderInviteLink-1.md)\>
+> **editChatFolderInviteLink**(`parameters`): `Promise`\<[`chatFolderInviteLink`](../type-aliases/chatFolderInviteLink.md)\>
 
 Edits an invite link for a chat folder
 
@@ -3564,21 +3684,25 @@ Edits an invite link for a chat folder
 
 #### Returns
 
-`Promise`\<[`chatFolderInviteLink`](../type-aliases/chatFolderInviteLink-1.md)\>
+`Promise`\<[`chatFolderInviteLink`](../type-aliases/chatFolderInviteLink.md)\>
 
-Promise<[ChatFolderInviteLink](../type-aliases/ChatFolderInviteLink.md)>
+Promise<[ChatFolderInviteLink](../type-aliases/ChatFolderInviteLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69416
+dist/generated/types.d.ts:71302
 
 ***
 
 ### editChatInviteLink()
 
-> **editChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink-1.md)\>
+> **editChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
 
-Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
+Edits a non-primary invite link for a chat. Available for basic groups, supergroups, and channels.
+
+- If the link creates a subscription, then expiration_date, member_limit and creates_join_request must not be used
+
+- Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
 #### Parameters
 
@@ -3588,19 +3712,43 @@ Edits a non-primary invite link for a chat. Available for basic groups, supergro
 
 #### Returns
 
-`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink-1.md)\>
+`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
 
-Promise<[ChatInviteLink](../type-aliases/ChatInviteLink.md)>
+Promise<[ChatInviteLink](../type-aliases/ChatInviteLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70308
+dist/generated/types.d.ts:72219
+
+***
+
+### editChatSubscriptionInviteLink()
+
+> **editChatSubscriptionInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
+
+Edits a subscription invite link for a channel chat. Requires can_invite_users right in the chat for own links and owner privileges for other links
+
+#### Parameters
+
+• **parameters**: [`editChatSubscriptionInviteLink$DirectInput`](../type-aliases/editChatSubscriptionInviteLink$DirectInput.md)
+
+[editChatSubscriptionInviteLink$Input](../type-aliases/editChatSubscriptionInviteLink$Input.md)
+
+#### Returns
+
+`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
+
+Promise<[ChatInviteLink](../type-aliases/ChatInviteLink-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72226
 
 ***
 
 ### editCustomLanguagePackInfo()
 
-> **editCustomLanguagePackInfo**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editCustomLanguagePackInfo**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Edits information about a custom local language pack in the current localization target. Can be called before authorization
 
@@ -3612,19 +3760,19 @@ Edits information about a custom local language pack in the current localization
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71855
+dist/generated/types.d.ts:73815
 
 ***
 
 ### editForumTopic()
 
-> **editForumTopic**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editForumTopic**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Edits title and icon of a topic in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
 
@@ -3636,19 +3784,19 @@ Edits title and icon of a topic in a forum supergroup chat; requires can_manage_
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68706
+dist/generated/types.d.ts:70557
 
 ***
 
 ### editInlineMessageCaption()
 
-> **editInlineMessageCaption**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editInlineMessageCaption**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Edits the caption of an inline message sent via a bot; for bots only
 
@@ -3660,19 +3808,19 @@ Edits the caption of an inline message sent via a bot; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68512
+dist/generated/types.d.ts:70356
 
 ***
 
 ### editInlineMessageLiveLocation()
 
-> **editInlineMessageLiveLocation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editInlineMessageLiveLocation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Edits the content of a live location in an inline message sent via a bot; for bots only
 
@@ -3684,19 +3832,19 @@ Edits the content of a live location in an inline message sent via a bot; for bo
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68498
+dist/generated/types.d.ts:70342
 
 ***
 
 ### editInlineMessageMedia()
 
-> **editInlineMessageMedia**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editInlineMessageMedia**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
 
@@ -3708,19 +3856,19 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68505
+dist/generated/types.d.ts:70349
 
 ***
 
 ### editInlineMessageReplyMarkup()
 
-> **editInlineMessageReplyMarkup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editInlineMessageReplyMarkup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Edits the reply markup of an inline message sent via a bot; for bots only
 
@@ -3732,19 +3880,19 @@ Edits the reply markup of an inline message sent via a bot; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68519
+dist/generated/types.d.ts:70363
 
 ***
 
 ### editInlineMessageText()
 
-> **editInlineMessageText**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editInlineMessageText**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Edits the text of an inline text or game message sent via a bot; for bots only
 
@@ -3756,23 +3904,21 @@ Edits the text of an inline text or game message sent via a bot; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68491
+dist/generated/types.d.ts:70335
 
 ***
 
 ### editMessageCaption()
 
-> **editMessageCaption**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **editMessageCaption**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
-Edits the message content caption. Returns the edited message after the edit is completed on the server side.
-
-- Can be used only if message.can_be_edited == true
+Edits the message content caption. Returns the edited message after the edit is completed on the server side
 
 #### Parameters
 
@@ -3782,23 +3928,23 @@ Edits the message content caption. Returns the edited message after the edit is 
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68475
+dist/generated/types.d.ts:70321
 
 ***
 
 ### editMessageLiveLocation()
 
-> **editMessageLiveLocation**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **editMessageLiveLocation**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
 
-- Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
+- Returns the edited message after the edit is completed on the server side
 
 #### Parameters
 
@@ -3808,25 +3954,25 @@ Edits the message content of a live location. Messages can be edited for a limit
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68455
+dist/generated/types.d.ts:70303
 
 ***
 
 ### editMessageMedia()
 
-> **editMessageMedia**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **editMessageMedia**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
 
 - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
 
-- Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
+- Returns the edited message after the edit is completed on the server side
 
 #### Parameters
 
@@ -3836,23 +3982,21 @@ Edits the content of a message with an animation, an audio, a document, a photo 
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68466
+dist/generated/types.d.ts:70314
 
 ***
 
 ### editMessageReplyMarkup()
 
-> **editMessageReplyMarkup**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **editMessageReplyMarkup**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
-Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side.
-
-- Can be used only if message.can_be_edited == true
+Edits the message reply markup; for bots only. Returns the edited message after the edit is completed on the server side
 
 #### Parameters
 
@@ -3862,19 +4006,19 @@ Edits the message reply markup; for bots only. Returns the edited message after 
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68484
+dist/generated/types.d.ts:70328
 
 ***
 
 ### editMessageSchedulingState()
 
-> **editMessageSchedulingState**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editMessageSchedulingState**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
 
@@ -3886,23 +4030,21 @@ Edits the time when a scheduled message will be sent. Scheduling state of all me
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68526
+dist/generated/types.d.ts:70370
 
 ***
 
 ### editMessageText()
 
-> **editMessageText**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **editMessageText**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
-Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side.
-
-- Can be used only if message.can_be_edited == true
+Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
 
 #### Parameters
 
@@ -3912,19 +4054,19 @@ Edits the text of a message (or a text of a game message). Returns the edited me
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68446
+dist/generated/types.d.ts:70294
 
 ***
 
 ### editProxy()
 
-> **editProxy**(`parameters`): `Promise`\<[`proxy`](../type-aliases/proxy-1.md)\>
+> **editProxy**(`parameters`): `Promise`\<[`proxy`](../type-aliases/proxy.md)\>
 
 Edits an existing proxy server for network requests. Can be called before authorization
 
@@ -3936,19 +4078,19 @@ Edits an existing proxy server for network requests. Can be called before author
 
 #### Returns
 
-`Promise`\<[`proxy`](../type-aliases/proxy-1.md)\>
+`Promise`\<[`proxy`](../type-aliases/proxy.md)\>
 
-Promise<[Proxy](../type-aliases/Proxy.md)>
+Promise<[Proxy](../type-aliases/Proxy-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72645
+dist/generated/types.d.ts:74633
 
 ***
 
 ### editQuickReplyMessage()
 
-> **editQuickReplyMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editQuickReplyMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
 
@@ -3962,19 +4104,43 @@ Asynchronously edits the text, media or caption of a quick reply message. Use qu
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68685
+dist/generated/types.d.ts:70536
+
+***
+
+### editStarSubscription()
+
+> **editStarSubscription**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Cancels or reenables Telegram Star subscription to a channel
+
+#### Parameters
+
+• **parameters**: [`editStarSubscription$DirectInput`](../type-aliases/editStarSubscription$DirectInput.md)
+
+[editStarSubscription$Input](../type-aliases/editStarSubscription$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74507
 
 ***
 
 ### editStory()
 
-> **editStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **editStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes content and caption of a story. Can be called only if story.can_be_edited == true
 
@@ -3986,19 +4152,43 @@ Changes content and caption of a story. Can be called only if story.can_be_edite
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69865
+dist/generated/types.d.ts:71758
+
+***
+
+### editStoryCover()
+
+> **editStoryCover**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Changes cover of a video story. Can be called only if story.can_be_edited == true and the story isn't being edited now
+
+#### Parameters
+
+• **parameters**: [`editStoryCover$DirectInput`](../type-aliases/editStoryCover$DirectInput.md)
+
+[editStoryCover$Input](../type-aliases/editStoryCover$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:71765
 
 ***
 
 ### enableProxy()
 
-> **enableProxy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **enableProxy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Enables a proxy. Only one proxy can be enabled at a time. Can be called before authorization
 
@@ -4010,19 +4200,19 @@ Enables a proxy. Only one proxy can be enabled at a time. Can be called before a
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72652
+dist/generated/types.d.ts:74640
 
 ***
 
 ### endGroupCall()
 
-> **endGroupCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **endGroupCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Ends a group call. Requires groupCall.can_be_managed
 
@@ -4034,19 +4224,19 @@ Ends a group call. Requires groupCall.can_be_managed
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70639
+dist/generated/types.d.ts:72557
 
 ***
 
 ### endGroupCallRecording()
 
-> **endGroupCallRecording**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **endGroupCallRecording**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Ends recording of an active group call. Requires groupCall.can_be_managed group call flag
 
@@ -4058,19 +4248,19 @@ Ends recording of an active group call. Requires groupCall.can_be_managed group 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70576
+dist/generated/types.d.ts:72494
 
 ***
 
 ### endGroupCallScreenSharing()
 
-> **endGroupCallScreenSharing**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **endGroupCallScreenSharing**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Ends screen sharing in a joined group call
 
@@ -4082,19 +4272,19 @@ Ends screen sharing in a joined group call
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70527
+dist/generated/types.d.ts:72445
 
 ***
 
 ### finishFileGeneration()
 
-> **finishFileGeneration**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **finishFileGeneration**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Finishes the file generation
 
@@ -4106,19 +4296,19 @@ Finishes the file generation
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70201
+dist/generated/types.d.ts:72101
 
 ***
 
 ### forwardMessages()
 
-> **forwardMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **forwardMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
 Forwards previously sent messages. Returns the forwarded messages in the same order as the message identifiers passed in message_ids. If a message can't be forwarded, null will be returned instead of the message
 
@@ -4130,19 +4320,19 @@ Forwards previously sent messages. Returns the forwarded messages in the same or
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68393
+dist/generated/types.d.ts:70243
 
 ***
 
 ### getAccountTtl()
 
-> **getAccountTtl**(`parameters`): `Promise`\<[`accountTtl`](../type-aliases/accountTtl-1.md)\>
+> **getAccountTtl**(`parameters`): `Promise`\<[`accountTtl`](../type-aliases/accountTtl.md)\>
 
 Returns the period of inactivity after which the account of the current user will automatically be deleted
 
@@ -4154,43 +4344,19 @@ Returns the period of inactivity after which the account of the current user wil
 
 #### Returns
 
-`Promise`\<[`accountTtl`](../type-aliases/accountTtl-1.md)\>
+`Promise`\<[`accountTtl`](../type-aliases/accountTtl.md)\>
 
-Promise<[AccountTtl](../type-aliases/AccountTtl.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:71976
-
-***
-
-### getActiveLiveLocationMessages()
-
-> **getActiveLiveLocationMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
-
-Returns all active live locations that need to be updated by the application. The list is persistent across application restarts only if the message database is used
-
-#### Parameters
-
-• **parameters**: [`getActiveLiveLocationMessages$DirectInput`](../type-aliases/getActiveLiveLocationMessages$DirectInput.md)
-
-[getActiveLiveLocationMessages$Input](../type-aliases/getActiveLiveLocationMessages$Input.md)
-
-#### Returns
-
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
-
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[AccountTtl](../type-aliases/AccountTtl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68212
+dist/generated/types.d.ts:73936
 
 ***
 
 ### getActiveSessions()
 
-> **getActiveSessions**(`parameters`): `Promise`\<[`sessions`](../type-aliases/sessions-1.md)\>
+> **getActiveSessions**(`parameters`): `Promise`\<[`sessions`](../type-aliases/sessions.md)\>
 
 Returns all active sessions of the current user
 
@@ -4202,19 +4368,19 @@ Returns all active sessions of the current user
 
 #### Returns
 
-`Promise`\<[`sessions`](../type-aliases/sessions-1.md)\>
+`Promise`\<[`sessions`](../type-aliases/sessions.md)\>
 
-Promise<[Sessions](../type-aliases/Sessions.md)>
+Promise<[Sessions](../type-aliases/Sessions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71466
+dist/generated/types.d.ts:73426
 
 ***
 
 ### getAllPassportElements()
 
-> **getAllPassportElements**(`parameters`): `Promise`\<[`passportElements`](../type-aliases/passportElements-1.md)\>
+> **getAllPassportElements**(`parameters`): `Promise`\<[`passportElements`](../type-aliases/passportElements.md)\>
 
 Returns all available Telegram Passport elements
 
@@ -4226,19 +4392,19 @@ Returns all available Telegram Passport elements
 
 #### Returns
 
-`Promise`\<[`passportElements`](../type-aliases/passportElements-1.md)\>
+`Promise`\<[`passportElements`](../type-aliases/passportElements.md)\>
 
-Promise<[PassportElements](../type-aliases/PassportElements.md)>
+Promise<[PassportElements](../type-aliases/PassportElements-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72218
+dist/generated/types.d.ts:74178
 
 ***
 
 ### getAllStickerEmojis()
 
-> **getAllStickerEmojis**(`parameters`): `Promise`\<[`emojis`](../type-aliases/emojis-1.md)\>
+> **getAllStickerEmojis**(`parameters`): `Promise`\<[`emojis`](../type-aliases/emojis.md)\>
 
 Returns unique emoji that correspond to stickers to be found by the getStickers(sticker_type, query, 1000000, chat_id)
 
@@ -4250,19 +4416,19 @@ Returns unique emoji that correspond to stickers to be found by the getStickers(
 
 #### Returns
 
-`Promise`\<[`emojis`](../type-aliases/emojis-1.md)\>
+`Promise`\<[`emojis`](../type-aliases/emojis.md)\>
 
-Promise<[Emojis](../type-aliases/Emojis.md)>
+Promise<[Emojis](../type-aliases/Emojis-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70795
+dist/generated/types.d.ts:72713
 
 ***
 
 ### getAnimatedEmoji()
 
-> **getAnimatedEmoji**(`parameters`): `Promise`\<[`animatedEmoji`](../type-aliases/animatedEmoji-1.md)\>
+> **getAnimatedEmoji**(`parameters`): `Promise`\<[`animatedEmoji`](../type-aliases/animatedEmoji.md)\>
 
 Returns an animated emoji corresponding to a given emoji. Returns a 404 error if the emoji has no animated emoji
 
@@ -4274,13 +4440,13 @@ Returns an animated emoji corresponding to a given emoji. Returns a 404 error if
 
 #### Returns
 
-`Promise`\<[`animatedEmoji`](../type-aliases/animatedEmoji-1.md)\>
+`Promise`\<[`animatedEmoji`](../type-aliases/animatedEmoji.md)\>
 
-Promise<[AnimatedEmoji](../type-aliases/AnimatedEmoji.md)>
+Promise<[AnimatedEmoji](../type-aliases/AnimatedEmoji-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70981
+dist/generated/types.d.ts:72899
 
 ***
 
@@ -4304,13 +4470,13 @@ Promise<[JsonValue](../type-aliases/JsonValue.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72617
+dist/generated/types.d.ts:74605
 
 ***
 
 ### getApplicationDownloadLink()
 
-> **getApplicationDownloadLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getApplicationDownloadLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns the link for downloading official Telegram application to be used when the current user invites friends to Telegram
 
@@ -4322,19 +4488,19 @@ Returns the link for downloading official Telegram application to be used when t
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72631
+dist/generated/types.d.ts:74619
 
 ***
 
 ### getArchiveChatListSettings()
 
-> **getArchiveChatListSettings**(`parameters`): `Promise`\<[`archiveChatListSettings`](../type-aliases/archiveChatListSettings-1.md)\>
+> **getArchiveChatListSettings**(`parameters`): `Promise`\<[`archiveChatListSettings`](../type-aliases/archiveChatListSettings.md)\>
 
 Returns settings for automatic moving of chats to and from the Archive chat lists
 
@@ -4346,19 +4512,19 @@ Returns settings for automatic moving of chats to and from the Archive chat list
 
 #### Returns
 
-`Promise`\<[`archiveChatListSettings`](../type-aliases/archiveChatListSettings-1.md)\>
+`Promise`\<[`archiveChatListSettings`](../type-aliases/archiveChatListSettings.md)\>
 
-Promise<[ArchiveChatListSettings](../type-aliases/ArchiveChatListSettings.md)>
+Promise<[ArchiveChatListSettings](../type-aliases/ArchiveChatListSettings-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69458
+dist/generated/types.d.ts:71344
 
 ***
 
 ### getArchivedStickerSets()
 
-> **getArchivedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+> **getArchivedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
 Returns a list of archived sticker sets
 
@@ -4370,19 +4536,19 @@ Returns a list of archived sticker sets
 
 #### Returns
 
-`Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+`Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
-Promise<[StickerSets](../type-aliases/StickerSets.md)>
+Promise<[StickerSets](../type-aliases/StickerSets-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70830
+dist/generated/types.d.ts:72748
 
 ***
 
 ### getAttachedStickerSets()
 
-> **getAttachedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+> **getAttachedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
 Returns a list of sticker sets attached to a file, including regular, mask, and emoji sticker sets. Currently, only animations, photos, and videos can have attached sticker sets
 
@@ -4394,19 +4560,19 @@ Returns a list of sticker sets attached to a file, including regular, mask, and 
 
 #### Returns
 
-`Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+`Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
-Promise<[StickerSets](../type-aliases/StickerSets.md)>
+Promise<[StickerSets](../type-aliases/StickerSets-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70844
+dist/generated/types.d.ts:72762
 
 ***
 
 ### getAttachmentMenuBot()
 
-> **getAttachmentMenuBot**(`parameters`): `Promise`\<[`attachmentMenuBot`](../type-aliases/attachmentMenuBot-1.md)\>
+> **getAttachmentMenuBot**(`parameters`): `Promise`\<[`attachmentMenuBot`](../type-aliases/attachmentMenuBot.md)\>
 
 Returns information about a bot that can be added to attachment or side menu
 
@@ -4418,13 +4584,13 @@ Returns information about a bot that can be added to attachment or side menu
 
 #### Returns
 
-`Promise`\<[`attachmentMenuBot`](../type-aliases/attachmentMenuBot-1.md)\>
+`Promise`\<[`attachmentMenuBot`](../type-aliases/attachmentMenuBot.md)\>
 
-Promise<[AttachmentMenuBot](../type-aliases/AttachmentMenuBot.md)>
+Promise<[AttachmentMenuBot](../type-aliases/AttachmentMenuBot-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70078
+dist/generated/types.d.ts:71978
 
 ***
 
@@ -4448,13 +4614,13 @@ Promise<[AuthorizationState](../type-aliases/AuthorizationState.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67393
+dist/generated/types.d.ts:69243
 
 ***
 
 ### getAutoDownloadSettingsPresets()
 
-> **getAutoDownloadSettingsPresets**(`parameters`): `Promise`\<[`autoDownloadSettingsPresets`](../type-aliases/autoDownloadSettingsPresets-1.md)\>
+> **getAutoDownloadSettingsPresets**(`parameters`): `Promise`\<[`autoDownloadSettingsPresets`](../type-aliases/autoDownloadSettingsPresets.md)\>
 
 Returns auto-download settings presets for the current user
 
@@ -4466,19 +4632,19 @@ Returns auto-download settings presets for the current user
 
 #### Returns
 
-`Promise`\<[`autoDownloadSettingsPresets`](../type-aliases/autoDownloadSettingsPresets-1.md)\>
+`Promise`\<[`autoDownloadSettingsPresets`](../type-aliases/autoDownloadSettingsPresets.md)\>
 
-Promise<[AutoDownloadSettingsPresets](../type-aliases/AutoDownloadSettingsPresets.md)>
+Promise<[AutoDownloadSettingsPresets](../type-aliases/AutoDownloadSettingsPresets-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72169
+dist/generated/types.d.ts:74129
 
 ***
 
 ### getAutosaveSettings()
 
-> **getAutosaveSettings**(`parameters`): `Promise`\<[`autosaveSettings`](../type-aliases/autosaveSettings-1.md)\>
+> **getAutosaveSettings**(`parameters`): `Promise`\<[`autosaveSettings`](../type-aliases/autosaveSettings.md)\>
 
 Returns autosave settings for the current user
 
@@ -4490,19 +4656,19 @@ Returns autosave settings for the current user
 
 #### Returns
 
-`Promise`\<[`autosaveSettings`](../type-aliases/autosaveSettings-1.md)\>
+`Promise`\<[`autosaveSettings`](../type-aliases/autosaveSettings.md)\>
 
-Promise<[AutosaveSettings](../type-aliases/AutosaveSettings.md)>
+Promise<[AutosaveSettings](../type-aliases/AutosaveSettings-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72183
+dist/generated/types.d.ts:74143
 
 ***
 
 ### getAvailableChatBoostSlots()
 
-> **getAvailableChatBoostSlots**(`parameters`): `Promise`\<[`chatBoostSlots`](../type-aliases/chatBoostSlots-1.md)\>
+> **getAvailableChatBoostSlots**(`parameters`): `Promise`\<[`chatBoostSlots`](../type-aliases/chatBoostSlots.md)\>
 
 Returns the list of available chat boost slots for the current user
 
@@ -4514,19 +4680,19 @@ Returns the list of available chat boost slots for the current user
 
 #### Returns
 
-`Promise`\<[`chatBoostSlots`](../type-aliases/chatBoostSlots-1.md)\>
+`Promise`\<[`chatBoostSlots`](../type-aliases/chatBoostSlots.md)\>
 
-Promise<[ChatBoostSlots](../type-aliases/ChatBoostSlots.md)>
+Promise<[ChatBoostSlots](../type-aliases/ChatBoostSlots-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70029
+dist/generated/types.d.ts:71929
 
 ***
 
 ### getBackgroundUrl()
 
-> **getBackgroundUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getBackgroundUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Constructs a persistent HTTP URL for a background
 
@@ -4538,19 +4704,19 @@ Constructs a persistent HTTP URL for a background
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71762
+dist/generated/types.d.ts:73722
 
 ***
 
 ### getBankCardInfo()
 
-> **getBankCardInfo**(`parameters`): `Promise`\<[`bankCardInfo`](../type-aliases/bankCardInfo-1.md)\>
+> **getBankCardInfo**(`parameters`): `Promise`\<[`bankCardInfo`](../type-aliases/bankCardInfo.md)\>
 
 Returns information about a bank card
 
@@ -4562,19 +4728,19 @@ Returns information about a bank card
 
 #### Returns
 
-`Promise`\<[`bankCardInfo`](../type-aliases/bankCardInfo-1.md)\>
+`Promise`\<[`bankCardInfo`](../type-aliases/bankCardInfo.md)\>
 
-Promise<[BankCardInfo](../type-aliases/BankCardInfo.md)>
+Promise<[BankCardInfo](../type-aliases/BankCardInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72204
+dist/generated/types.d.ts:74164
 
 ***
 
 ### getBasicGroup()
 
-> **getBasicGroup**(`parameters`): `Promise`\<[`basicGroup`](../type-aliases/basicGroup-1.md)\>
+> **getBasicGroup**(`parameters`): `Promise`\<[`basicGroup`](../type-aliases/basicGroup.md)\>
 
 Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
 
@@ -4586,19 +4752,19 @@ Returns information about a basic group by its identifier. This is an offline re
 
 #### Returns
 
-`Promise`\<[`basicGroup`](../type-aliases/basicGroup-1.md)\>
+`Promise`\<[`basicGroup`](../type-aliases/basicGroup.md)\>
 
-Promise<[BasicGroup](../type-aliases/BasicGroup.md)>
+Promise<[BasicGroup](../type-aliases/BasicGroup-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67708
+dist/generated/types.d.ts:69558
 
 ***
 
 ### getBasicGroupFullInfo()
 
-> **getBasicGroupFullInfo**(`parameters`): `Promise`\<[`basicGroupFullInfo`](../type-aliases/basicGroupFullInfo-1.md)\>
+> **getBasicGroupFullInfo**(`parameters`): `Promise`\<[`basicGroupFullInfo`](../type-aliases/basicGroupFullInfo.md)\>
 
 Returns full information about a basic group by its identifier
 
@@ -4610,19 +4776,19 @@ Returns full information about a basic group by its identifier
 
 #### Returns
 
-`Promise`\<[`basicGroupFullInfo`](../type-aliases/basicGroupFullInfo-1.md)\>
+`Promise`\<[`basicGroupFullInfo`](../type-aliases/basicGroupFullInfo.md)\>
 
-Promise<[BasicGroupFullInfo](../type-aliases/BasicGroupFullInfo.md)>
+Promise<[BasicGroupFullInfo](../type-aliases/BasicGroupFullInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67715
+dist/generated/types.d.ts:69565
 
 ***
 
 ### getBlockedMessageSenders()
 
-> **getBlockedMessageSenders**(`parameters`): `Promise`\<[`messageSenders`](../type-aliases/messageSenders-1.md)\>
+> **getBlockedMessageSenders**(`parameters`): `Promise`\<[`messageSenders`](../type-aliases/messageSenders.md)\>
 
 Returns users and chats that were blocked by the current user
 
@@ -4634,19 +4800,19 @@ Returns users and chats that were blocked by the current user
 
 #### Returns
 
-`Promise`\<[`messageSenders`](../type-aliases/messageSenders-1.md)\>
+`Promise`\<[`messageSenders`](../type-aliases/messageSenders.md)\>
 
-Promise<[MessageSenders](../type-aliases/MessageSenders.md)>
+Promise<[MessageSenders](../type-aliases/MessageSenders-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70674
+dist/generated/types.d.ts:72592
 
 ***
 
 ### getBotInfoDescription()
 
-> **getBotInfoDescription**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getBotInfoDescription**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns the text shown in the chat with a bot if the chat is empty in the given language. Can be called only if userTypeBot.can_be_edited == true
 
@@ -4658,19 +4824,19 @@ Returns the text shown in the chat with a bot if the chat is empty in the given 
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71445
+dist/generated/types.d.ts:73405
 
 ***
 
 ### getBotInfoShortDescription()
 
-> **getBotInfoShortDescription**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getBotInfoShortDescription**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns the text shown on a bot's profile page and sent together with the link when users share the bot in the given language. Can be called only if userTypeBot.can_be_edited == true
 
@@ -4682,19 +4848,67 @@ Returns the text shown on a bot's profile page and sent together with the link w
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71459
+dist/generated/types.d.ts:73419
+
+***
+
+### getBotMediaPreviewInfo()
+
+> **getBotMediaPreviewInfo**(`parameters`): `Promise`\<[`botMediaPreviewInfo`](../type-aliases/botMediaPreviewInfo.md)\>
+
+Returns the list of media previews for the given language and the list of languages for which the bot has dedicated previews
+
+#### Parameters
+
+• **parameters**: [`getBotMediaPreviewInfo$DirectInput`](../type-aliases/getBotMediaPreviewInfo$DirectInput.md)
+
+[getBotMediaPreviewInfo$Input](../type-aliases/getBotMediaPreviewInfo$Input.md)
+
+#### Returns
+
+`Promise`\<[`botMediaPreviewInfo`](../type-aliases/botMediaPreviewInfo.md)\>
+
+Promise<[BotMediaPreviewInfo](../type-aliases/BotMediaPreviewInfo-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:73328
+
+***
+
+### getBotMediaPreviews()
+
+> **getBotMediaPreviews**(`parameters`): `Promise`\<[`botMediaPreviews`](../type-aliases/botMediaPreviews.md)\>
+
+Returns the list of media previews of a bot
+
+#### Parameters
+
+• **parameters**: [`getBotMediaPreviews$DirectInput`](../type-aliases/getBotMediaPreviews$DirectInput.md)
+
+[getBotMediaPreviews$Input](../type-aliases/getBotMediaPreviews$Input.md)
+
+#### Returns
+
+`Promise`\<[`botMediaPreviews`](../type-aliases/botMediaPreviews.md)\>
+
+Promise<[BotMediaPreviews](../type-aliases/BotMediaPreviews-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:73321
 
 ***
 
 ### getBotName()
 
-> **getBotName**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getBotName**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns the name of a bot in the given language. Can be called only if userTypeBot.can_be_edited == true
 
@@ -4706,19 +4920,19 @@ Returns the name of a bot in the given language. Can be called only if userTypeB
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71410
+dist/generated/types.d.ts:73370
 
 ***
 
 ### getBusinessChatLinkInfo()
 
-> **getBusinessChatLinkInfo**(`parameters`): `Promise`\<[`businessChatLinkInfo`](../type-aliases/businessChatLinkInfo-1.md)\>
+> **getBusinessChatLinkInfo**(`parameters`): `Promise`\<[`businessChatLinkInfo`](../type-aliases/businessChatLinkInfo.md)\>
 
 Returns information about a business chat link
 
@@ -4730,19 +4944,19 @@ Returns information about a business chat link
 
 #### Returns
 
-`Promise`\<[`businessChatLinkInfo`](../type-aliases/businessChatLinkInfo-1.md)\>
+`Promise`\<[`businessChatLinkInfo`](../type-aliases/businessChatLinkInfo.md)\>
 
-Promise<[BusinessChatLinkInfo](../type-aliases/BusinessChatLinkInfo.md)>
+Promise<[BusinessChatLinkInfo](../type-aliases/BusinessChatLinkInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71312
+dist/generated/types.d.ts:73230
 
 ***
 
 ### getBusinessChatLinks()
 
-> **getBusinessChatLinks**(`parameters`): `Promise`\<[`businessChatLinks`](../type-aliases/businessChatLinks-1.md)\>
+> **getBusinessChatLinks**(`parameters`): `Promise`\<[`businessChatLinks`](../type-aliases/businessChatLinks.md)\>
 
 Returns business chat links created for the current account
 
@@ -4754,19 +4968,19 @@ Returns business chat links created for the current account
 
 #### Returns
 
-`Promise`\<[`businessChatLinks`](../type-aliases/businessChatLinks-1.md)\>
+`Promise`\<[`businessChatLinks`](../type-aliases/businessChatLinks.md)\>
 
-Promise<[BusinessChatLinks](../type-aliases/BusinessChatLinks.md)>
+Promise<[BusinessChatLinks](../type-aliases/BusinessChatLinks-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71284
+dist/generated/types.d.ts:73202
 
 ***
 
 ### getBusinessConnectedBot()
 
-> **getBusinessConnectedBot**(`parameters`): `Promise`\<[`businessConnectedBot`](../type-aliases/businessConnectedBot-1.md)\>
+> **getBusinessConnectedBot**(`parameters`): `Promise`\<[`businessConnectedBot`](../type-aliases/businessConnectedBot.md)\>
 
 Returns the business bot that is connected to the current user account. Returns a 404 error if there is no connected bot
 
@@ -4778,19 +4992,19 @@ Returns the business bot that is connected to the current user account. Returns 
 
 #### Returns
 
-`Promise`\<[`businessConnectedBot`](../type-aliases/businessConnectedBot-1.md)\>
+`Promise`\<[`businessConnectedBot`](../type-aliases/businessConnectedBot.md)\>
 
-Promise<[BusinessConnectedBot](../type-aliases/BusinessConnectedBot.md)>
+Promise<[BusinessConnectedBot](../type-aliases/BusinessConnectedBot-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71249
+dist/generated/types.d.ts:73167
 
 ***
 
 ### getBusinessConnection()
 
-> **getBusinessConnection**(`parameters`): `Promise`\<[`businessConnection`](../type-aliases/businessConnection-1.md)\>
+> **getBusinessConnection**(`parameters`): `Promise`\<[`businessConnection`](../type-aliases/businessConnection.md)\>
 
 Returns information about a business connection by its identifier; for bots only
 
@@ -4802,19 +5016,19 @@ Returns information about a business connection by its identifier; for bots only
 
 #### Returns
 
-`Promise`\<[`businessConnection`](../type-aliases/businessConnection-1.md)\>
+`Promise`\<[`businessConnection`](../type-aliases/businessConnection.md)\>
 
-Promise<[BusinessConnection](../type-aliases/BusinessConnection.md)>
+Promise<[BusinessConnection](../type-aliases/BusinessConnection-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68988
+dist/generated/types.d.ts:70860
 
 ***
 
 ### getBusinessFeatures()
 
-> **getBusinessFeatures**(`parameters`): `Promise`\<[`businessFeatures`](../type-aliases/businessFeatures-1.md)\>
+> **getBusinessFeatures**(`parameters`): `Promise`\<[`businessFeatures`](../type-aliases/businessFeatures.md)\>
 
 Returns information about features, available to Business users
 
@@ -4826,19 +5040,19 @@ Returns information about features, available to Business users
 
 #### Returns
 
-`Promise`\<[`businessFeatures`](../type-aliases/businessFeatures-1.md)\>
+`Promise`\<[`businessFeatures`](../type-aliases/businessFeatures.md)\>
 
-Promise<[BusinessFeatures](../type-aliases/BusinessFeatures.md)>
+Promise<[BusinessFeatures](../type-aliases/BusinessFeatures-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72533
+dist/generated/types.d.ts:74521
 
 ***
 
 ### getCallbackQueryAnswer()
 
-> **getCallbackQueryAnswer**(`parameters`): `Promise`\<[`callbackQueryAnswer`](../type-aliases/callbackQueryAnswer-1.md)\>
+> **getCallbackQueryAnswer**(`parameters`): `Promise`\<[`callbackQueryAnswer`](../type-aliases/callbackQueryAnswer.md)\>
 
 Sends a callback query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
 
@@ -4850,19 +5064,19 @@ Sends a callback query to a bot and returns an answer. Returns an error with cod
 
 #### Returns
 
-`Promise`\<[`callbackQueryAnswer`](../type-aliases/callbackQueryAnswer-1.md)\>
+`Promise`\<[`callbackQueryAnswer`](../type-aliases/callbackQueryAnswer.md)\>
 
-Promise<[CallbackQueryAnswer](../type-aliases/CallbackQueryAnswer.md)>
+Promise<[CallbackQueryAnswer](../type-aliases/CallbackQueryAnswer-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69090
+dist/generated/types.d.ts:70976
 
 ***
 
 ### getCallbackQueryMessage()
 
-> **getCallbackQueryMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **getCallbackQueryMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Returns information about a message with the callback button that originated a callback query; for bots only
 
@@ -4874,19 +5088,19 @@ Returns information about a message with the callback button that originated a c
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67782
+dist/generated/types.d.ts:69632
 
 ***
 
 ### getChat()
 
-> **getChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **getChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
 
@@ -4898,19 +5112,19 @@ Returns information about a chat by its identifier; this is an offline request i
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67743
+dist/generated/types.d.ts:69593
 
 ***
 
 ### getChatActiveStories()
 
-> **getChatActiveStories**(`parameters`): `Promise`\<[`chatActiveStories`](../type-aliases/chatActiveStories-1.md)\>
+> **getChatActiveStories**(`parameters`): `Promise`\<[`chatActiveStories`](../type-aliases/chatActiveStories.md)\>
 
 Returns the list of active stories posted by the given chat
 
@@ -4922,19 +5136,19 @@ Returns the list of active stories posted by the given chat
 
 #### Returns
 
-`Promise`\<[`chatActiveStories`](../type-aliases/chatActiveStories-1.md)\>
+`Promise`\<[`chatActiveStories`](../type-aliases/chatActiveStories.md)\>
 
-Promise<[ChatActiveStories](../type-aliases/ChatActiveStories.md)>
+Promise<[ChatActiveStories](../type-aliases/ChatActiveStories-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69916
+dist/generated/types.d.ts:71816
 
 ***
 
 ### getChatAdministrators()
 
-> **getChatAdministrators**(`parameters`): `Promise`\<[`chatAdministrators`](../type-aliases/chatAdministrators-1.md)\>
+> **getChatAdministrators**(`parameters`): `Promise`\<[`chatAdministrators`](../type-aliases/chatAdministrators.md)\>
 
 Returns a list of administrators of the chat with their custom titles
 
@@ -4946,23 +5160,23 @@ Returns a list of administrators of the chat with their custom titles
 
 #### Returns
 
-`Promise`\<[`chatAdministrators`](../type-aliases/chatAdministrators-1.md)\>
+`Promise`\<[`chatAdministrators`](../type-aliases/chatAdministrators.md)\>
 
-Promise<[ChatAdministrators](../type-aliases/ChatAdministrators.md)>
+Promise<[ChatAdministrators](../type-aliases/ChatAdministrators-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69739
+dist/generated/types.d.ts:71625
 
 ***
 
 ### getChatArchivedStories()
 
-> **getChatArchivedStories**(`parameters`): `Promise`\<[`stories`](../type-aliases/stories-1.md)\>
+> **getChatArchivedStories**(`parameters`): `Promise`\<[`stories`](../type-aliases/stories.md)\>
 
 Returns the list of all stories posted by the given chat; requires can_edit_stories right in the chat.
 
-- The stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+- The stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
 
 #### Parameters
 
@@ -4972,19 +5186,19 @@ Returns the list of all stories posted by the given chat; requires can_edit_stor
 
 #### Returns
 
-`Promise`\<[`stories`](../type-aliases/stories-1.md)\>
+`Promise`\<[`stories`](../type-aliases/stories.md)\>
 
-Promise<[Stories](../type-aliases/Stories.md)>
+Promise<[Stories](../type-aliases/Stories-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69934
+dist/generated/types.d.ts:71834
 
 ***
 
 ### getChatAvailableMessageSenders()
 
-> **getChatAvailableMessageSenders**(`parameters`): `Promise`\<[`chatMessageSenders`](../type-aliases/chatMessageSenders-1.md)\>
+> **getChatAvailableMessageSenders**(`parameters`): `Promise`\<[`chatMessageSenders`](../type-aliases/chatMessageSenders.md)\>
 
 Returns the list of message sender identifiers, which can be used to send messages in a chat
 
@@ -4996,19 +5210,19 @@ Returns the list of message sender identifiers, which can be used to send messag
 
 #### Returns
 
-`Promise`\<[`chatMessageSenders`](../type-aliases/chatMessageSenders-1.md)\>
+`Promise`\<[`chatMessageSenders`](../type-aliases/chatMessageSenders.md)\>
 
-Promise<[ChatMessageSenders](../type-aliases/ChatMessageSenders.md)>
+Promise<[ChatMessageSenders](../type-aliases/ChatMessageSenders-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68347
+dist/generated/types.d.ts:70197
 
 ***
 
 ### getChatBoostFeatures()
 
-> **getChatBoostFeatures**(`parameters`): `Promise`\<[`chatBoostFeatures`](../type-aliases/chatBoostFeatures-1.md)\>
+> **getChatBoostFeatures**(`parameters`): `Promise`\<[`chatBoostFeatures`](../type-aliases/chatBoostFeatures.md)\>
 
 Returns the list of features available for different chat boost levels; this is an offline request
 
@@ -5020,19 +5234,19 @@ Returns the list of features available for different chat boost levels; this is 
 
 #### Returns
 
-`Promise`\<[`chatBoostFeatures`](../type-aliases/chatBoostFeatures-1.md)\>
+`Promise`\<[`chatBoostFeatures`](../type-aliases/chatBoostFeatures.md)\>
 
-Promise<[ChatBoostFeatures](../type-aliases/ChatBoostFeatures.md)>
+Promise<[ChatBoostFeatures](../type-aliases/ChatBoostFeatures-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70022
+dist/generated/types.d.ts:71922
 
 ***
 
 ### getChatBoostLevelFeatures()
 
-> **getChatBoostLevelFeatures**(`parameters`): `Promise`\<[`chatBoostLevelFeatures`](../type-aliases/chatBoostLevelFeatures-1.md)\>
+> **getChatBoostLevelFeatures**(`parameters`): `Promise`\<[`chatBoostLevelFeatures`](../type-aliases/chatBoostLevelFeatures.md)\>
 
 Returns the list of features available on the specific chat boost level; this is an offline request
 
@@ -5044,19 +5258,19 @@ Returns the list of features available on the specific chat boost level; this is
 
 #### Returns
 
-`Promise`\<[`chatBoostLevelFeatures`](../type-aliases/chatBoostLevelFeatures-1.md)\>
+`Promise`\<[`chatBoostLevelFeatures`](../type-aliases/chatBoostLevelFeatures.md)\>
 
-Promise<[ChatBoostLevelFeatures](../type-aliases/ChatBoostLevelFeatures.md)>
+Promise<[ChatBoostLevelFeatures](../type-aliases/ChatBoostLevelFeatures-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70015
+dist/generated/types.d.ts:71915
 
 ***
 
 ### getChatBoostLink()
 
-> **getChatBoostLink**(`parameters`): `Promise`\<[`chatBoostLink`](../type-aliases/chatBoostLink-1.md)\>
+> **getChatBoostLink**(`parameters`): `Promise`\<[`chatBoostLink`](../type-aliases/chatBoostLink.md)\>
 
 Returns an HTTPS link to boost the specified supergroup or channel chat
 
@@ -5068,19 +5282,19 @@ Returns an HTTPS link to boost the specified supergroup or channel chat
 
 #### Returns
 
-`Promise`\<[`chatBoostLink`](../type-aliases/chatBoostLink-1.md)\>
+`Promise`\<[`chatBoostLink`](../type-aliases/chatBoostLink.md)\>
 
-Promise<[ChatBoostLink](../type-aliases/ChatBoostLink.md)>
+Promise<[ChatBoostLink](../type-aliases/ChatBoostLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70050
+dist/generated/types.d.ts:71950
 
 ***
 
 ### getChatBoostLinkInfo()
 
-> **getChatBoostLinkInfo**(`parameters`): `Promise`\<[`chatBoostLinkInfo`](../type-aliases/chatBoostLinkInfo-1.md)\>
+> **getChatBoostLinkInfo**(`parameters`): `Promise`\<[`chatBoostLinkInfo`](../type-aliases/chatBoostLinkInfo.md)\>
 
 Returns information about a link to boost a chat. Can be called for any internal link of the type internalLinkTypeChatBoost
 
@@ -5092,43 +5306,19 @@ Returns information about a link to boost a chat. Can be called for any internal
 
 #### Returns
 
-`Promise`\<[`chatBoostLinkInfo`](../type-aliases/chatBoostLinkInfo-1.md)\>
+`Promise`\<[`chatBoostLinkInfo`](../type-aliases/chatBoostLinkInfo.md)\>
 
-Promise<[ChatBoostLinkInfo](../type-aliases/ChatBoostLinkInfo.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70057
-
-***
-
-### getChatBoostStatus()
-
-> **getChatBoostStatus**(`parameters`): `Promise`\<[`chatBoostStatus`](../type-aliases/chatBoostStatus-1.md)\>
-
-Returns the current boost status for a supergroup or a channel chat
-
-#### Parameters
-
-• **parameters**: [`getChatBoostStatus$DirectInput`](../type-aliases/getChatBoostStatus$DirectInput.md)
-
-[getChatBoostStatus$Input](../type-aliases/getChatBoostStatus$Input.md)
-
-#### Returns
-
-`Promise`\<[`chatBoostStatus`](../type-aliases/chatBoostStatus-1.md)\>
-
-Promise<[ChatBoostStatus](../type-aliases/ChatBoostStatus.md)>
+Promise<[ChatBoostLinkInfo](../type-aliases/ChatBoostLinkInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70036
+dist/generated/types.d.ts:71957
 
 ***
 
 ### getChatBoosts()
 
-> **getChatBoosts**(`parameters`): `Promise`\<[`foundChatBoosts`](../type-aliases/foundChatBoosts-1.md)\>
+> **getChatBoosts**(`parameters`): `Promise`\<[`foundChatBoosts`](../type-aliases/foundChatBoosts.md)\>
 
 Returns the list of boosts applied to a chat; requires administrator rights in the chat
 
@@ -5140,19 +5330,43 @@ Returns the list of boosts applied to a chat; requires administrator rights in t
 
 #### Returns
 
-`Promise`\<[`foundChatBoosts`](../type-aliases/foundChatBoosts-1.md)\>
+`Promise`\<[`foundChatBoosts`](../type-aliases/foundChatBoosts.md)\>
 
-Promise<[FoundChatBoosts](../type-aliases/FoundChatBoosts.md)>
+Promise<[FoundChatBoosts](../type-aliases/FoundChatBoosts-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70064
+dist/generated/types.d.ts:71964
+
+***
+
+### getChatBoostStatus()
+
+> **getChatBoostStatus**(`parameters`): `Promise`\<[`chatBoostStatus`](../type-aliases/chatBoostStatus.md)\>
+
+Returns the current boost status for a supergroup or a channel chat
+
+#### Parameters
+
+• **parameters**: [`getChatBoostStatus$DirectInput`](../type-aliases/getChatBoostStatus$DirectInput.md)
+
+[getChatBoostStatus$Input](../type-aliases/getChatBoostStatus$Input.md)
+
+#### Returns
+
+`Promise`\<[`chatBoostStatus`](../type-aliases/chatBoostStatus.md)\>
+
+Promise<[ChatBoostStatus](../type-aliases/ChatBoostStatus-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:71936
 
 ***
 
 ### getChatEventLog()
 
-> **getChatEventLog**(`parameters`): `Promise`\<[`chatEvents`](../type-aliases/chatEvents-1.md)\>
+> **getChatEventLog**(`parameters`): `Promise`\<[`chatEvents`](../type-aliases/chatEvents.md)\>
 
 Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only for supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing event_id)
 
@@ -5164,19 +5378,19 @@ Returns a list of service actions taken by chat members and administrators in th
 
 #### Returns
 
-`Promise`\<[`chatEvents`](../type-aliases/chatEvents-1.md)\>
+`Promise`\<[`chatEvents`](../type-aliases/chatEvents.md)\>
 
-Promise<[ChatEvents](../type-aliases/ChatEvents.md)>
+Promise<[ChatEvents](../type-aliases/ChatEvents-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71678
+dist/generated/types.d.ts:73638
 
 ***
 
 ### getChatFolder()
 
-> **getChatFolder**(`parameters`): `Promise`\<[`chatFolder`](../type-aliases/chatFolder-1.md)\>
+> **getChatFolder**(`parameters`): `Promise`\<[`chatFolder`](../type-aliases/chatFolder.md)\>
 
 Returns information about a chat folder by its identifier
 
@@ -5188,19 +5402,19 @@ Returns information about a chat folder by its identifier
 
 #### Returns
 
-`Promise`\<[`chatFolder`](../type-aliases/chatFolder-1.md)\>
+`Promise`\<[`chatFolder`](../type-aliases/chatFolder.md)\>
 
-Promise<[ChatFolder](../type-aliases/ChatFolder.md)>
+Promise<[ChatFolder](../type-aliases/ChatFolder-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69325
+dist/generated/types.d.ts:71211
 
 ***
 
 ### getChatFolderChatCount()
 
-> **getChatFolderChatCount**(`parameters`): `Promise`\<[`count`](../type-aliases/count-1.md)\>
+> **getChatFolderChatCount**(`parameters`): `Promise`\<[`count`](../type-aliases/count.md)\>
 
 Returns approximate number of chats in a being created chat folder. Main and archive chat lists must be fully preloaded for this function to work correctly
 
@@ -5212,19 +5426,19 @@ Returns approximate number of chats in a being created chat folder. Main and arc
 
 #### Returns
 
-`Promise`\<[`count`](../type-aliases/count-1.md)\>
+`Promise`\<[`count`](../type-aliases/count.md)\>
 
-Promise<[Count](../type-aliases/Count.md)>
+Promise<[Count](../type-aliases/Count-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69360
+dist/generated/types.d.ts:71246
 
 ***
 
 ### getChatFolderChatsToLeave()
 
-> **getChatFolderChatsToLeave**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getChatFolderChatsToLeave**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns identifiers of pinned or always included chats from a chat folder, which are suggested to be left when the chat folder is deleted
 
@@ -5236,19 +5450,19 @@ Returns identifiers of pinned or always included chats from a chat folder, which
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69353
+dist/generated/types.d.ts:71239
 
 ***
 
 ### getChatFolderDefaultIconName()
 
-> **getChatFolderDefaultIconName**(`parameters`): `Promise`\<[`chatFolderIcon`](../type-aliases/chatFolderIcon-1.md)\>
+> **getChatFolderDefaultIconName**(`parameters`): `Promise`\<[`chatFolderIcon`](../type-aliases/chatFolderIcon.md)\>
 
 Returns default icon name for a folder. Can be called synchronously
 
@@ -5260,19 +5474,19 @@ Returns default icon name for a folder. Can be called synchronously
 
 #### Returns
 
-`Promise`\<[`chatFolderIcon`](../type-aliases/chatFolderIcon-1.md)\>
+`Promise`\<[`chatFolderIcon`](../type-aliases/chatFolderIcon.md)\>
 
-Promise<[ChatFolderIcon](../type-aliases/ChatFolderIcon.md)>
+Promise<[ChatFolderIcon](../type-aliases/ChatFolderIcon-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69388
+dist/generated/types.d.ts:71274
 
 ***
 
 ### getChatFolderInviteLinks()
 
-> **getChatFolderInviteLinks**(`parameters`): `Promise`\<[`chatFolderInviteLinks`](../type-aliases/chatFolderInviteLinks-1.md)\>
+> **getChatFolderInviteLinks**(`parameters`): `Promise`\<[`chatFolderInviteLinks`](../type-aliases/chatFolderInviteLinks.md)\>
 
 Returns invite links created by the current user for a shareable chat folder
 
@@ -5284,19 +5498,19 @@ Returns invite links created by the current user for a shareable chat folder
 
 #### Returns
 
-`Promise`\<[`chatFolderInviteLinks`](../type-aliases/chatFolderInviteLinks-1.md)\>
+`Promise`\<[`chatFolderInviteLinks`](../type-aliases/chatFolderInviteLinks.md)\>
 
-Promise<[ChatFolderInviteLinks](../type-aliases/ChatFolderInviteLinks.md)>
+Promise<[ChatFolderInviteLinks](../type-aliases/ChatFolderInviteLinks-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69409
+dist/generated/types.d.ts:71295
 
 ***
 
 ### getChatFolderNewChats()
 
-> **getChatFolderNewChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getChatFolderNewChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns new chats added to a shareable chat folder by its owner. The method must be called at most once in getOption("chat_folder_new_chats_update_period") for the given chat folder
 
@@ -5308,21 +5522,21 @@ Returns new chats added to a shareable chat folder by its owner. The method must
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69444
+dist/generated/types.d.ts:71330
 
 ***
 
 ### getChatHistory()
 
-> **getChatHistory**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **getChatHistory**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Returns messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id).
+Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
 
 - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
 
@@ -5334,19 +5548,19 @@ Returns messages in a chat. The messages are returned in a reverse chronological
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68065
+dist/generated/types.d.ts:69922
 
 ***
 
 ### getChatInviteLink()
 
-> **getChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink-1.md)\>
+> **getChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
 
 Returns information about an invite link. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
 
@@ -5358,19 +5572,19 @@ Returns information about an invite link. Requires administrator privileges and 
 
 #### Returns
 
-`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink-1.md)\>
+`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
 
-Promise<[ChatInviteLink](../type-aliases/ChatInviteLink.md)>
+Promise<[ChatInviteLink](../type-aliases/ChatInviteLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70315
+dist/generated/types.d.ts:72233
 
 ***
 
 ### getChatInviteLinkCounts()
 
-> **getChatInviteLinkCounts**(`parameters`): `Promise`\<[`chatInviteLinkCounts`](../type-aliases/chatInviteLinkCounts-1.md)\>
+> **getChatInviteLinkCounts**(`parameters`): `Promise`\<[`chatInviteLinkCounts`](../type-aliases/chatInviteLinkCounts.md)\>
 
 Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
 
@@ -5382,19 +5596,19 @@ Returns the list of chat administrators with number of their invite links. Requi
 
 #### Returns
 
-`Promise`\<[`chatInviteLinkCounts`](../type-aliases/chatInviteLinkCounts-1.md)\>
+`Promise`\<[`chatInviteLinkCounts`](../type-aliases/chatInviteLinkCounts.md)\>
 
-Promise<[ChatInviteLinkCounts](../type-aliases/ChatInviteLinkCounts.md)>
+Promise<[ChatInviteLinkCounts](../type-aliases/ChatInviteLinkCounts-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70322
+dist/generated/types.d.ts:72240
 
 ***
 
 ### getChatInviteLinkMembers()
 
-> **getChatInviteLinkMembers**(`parameters`): `Promise`\<[`chatInviteLinkMembers`](../type-aliases/chatInviteLinkMembers-1.md)\>
+> **getChatInviteLinkMembers**(`parameters`): `Promise`\<[`chatInviteLinkMembers`](../type-aliases/chatInviteLinkMembers.md)\>
 
 Returns chat members joined a chat via an invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
@@ -5406,19 +5620,19 @@ Returns chat members joined a chat via an invite link. Requires administrator pr
 
 #### Returns
 
-`Promise`\<[`chatInviteLinkMembers`](../type-aliases/chatInviteLinkMembers-1.md)\>
+`Promise`\<[`chatInviteLinkMembers`](../type-aliases/chatInviteLinkMembers.md)\>
 
-Promise<[ChatInviteLinkMembers](../type-aliases/ChatInviteLinkMembers.md)>
+Promise<[ChatInviteLinkMembers](../type-aliases/ChatInviteLinkMembers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70336
+dist/generated/types.d.ts:72254
 
 ***
 
 ### getChatInviteLinks()
 
-> **getChatInviteLinks**(`parameters`): `Promise`\<[`chatInviteLinks`](../type-aliases/chatInviteLinks-1.md)\>
+> **getChatInviteLinks**(`parameters`): `Promise`\<[`chatInviteLinks`](../type-aliases/chatInviteLinks.md)\>
 
 Returns invite links for a chat created by specified administrator. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
 
@@ -5430,19 +5644,19 @@ Returns invite links for a chat created by specified administrator. Requires adm
 
 #### Returns
 
-`Promise`\<[`chatInviteLinks`](../type-aliases/chatInviteLinks-1.md)\>
+`Promise`\<[`chatInviteLinks`](../type-aliases/chatInviteLinks.md)\>
 
-Promise<[ChatInviteLinks](../type-aliases/ChatInviteLinks.md)>
+Promise<[ChatInviteLinks](../type-aliases/ChatInviteLinks-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70329
+dist/generated/types.d.ts:72247
 
 ***
 
 ### getChatJoinRequests()
 
-> **getChatJoinRequests**(`parameters`): `Promise`\<[`chatJoinRequests`](../type-aliases/chatJoinRequests-1.md)\>
+> **getChatJoinRequests**(`parameters`): `Promise`\<[`chatJoinRequests`](../type-aliases/chatJoinRequests.md)\>
 
 Returns pending join requests in a chat
 
@@ -5454,19 +5668,19 @@ Returns pending join requests in a chat
 
 #### Returns
 
-`Promise`\<[`chatJoinRequests`](../type-aliases/chatJoinRequests-1.md)\>
+`Promise`\<[`chatJoinRequests`](../type-aliases/chatJoinRequests.md)\>
 
-Promise<[ChatJoinRequests](../type-aliases/ChatJoinRequests.md)>
+Promise<[ChatJoinRequests](../type-aliases/ChatJoinRequests-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70380
+dist/generated/types.d.ts:72298
 
 ***
 
 ### getChatListsToAddChat()
 
-> **getChatListsToAddChat**(`parameters`): `Promise`\<[`chatLists`](../type-aliases/chatLists-1.md)\>
+> **getChatListsToAddChat**(`parameters`): `Promise`\<[`chatLists`](../type-aliases/chatLists.md)\>
 
 Returns chat lists to which the chat can be added. This is an offline request
 
@@ -5478,19 +5692,19 @@ Returns chat lists to which the chat can be added. This is an offline request
 
 #### Returns
 
-`Promise`\<[`chatLists`](../type-aliases/chatLists-1.md)\>
+`Promise`\<[`chatLists`](../type-aliases/chatLists.md)\>
 
-Promise<[ChatLists](../type-aliases/ChatLists.md)>
+Promise<[ChatLists](../type-aliases/ChatLists-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69311
+dist/generated/types.d.ts:71197
 
 ***
 
 ### getChatMember()
 
-> **getChatMember**(`parameters`): `Promise`\<[`chatMember`](../type-aliases/chatMember-1.md)\>
+> **getChatMember**(`parameters`): `Promise`\<[`chatMember`](../type-aliases/chatMember.md)\>
 
 Returns information about a single member of a chat
 
@@ -5502,19 +5716,19 @@ Returns information about a single member of a chat
 
 #### Returns
 
-`Promise`\<[`chatMember`](../type-aliases/chatMember-1.md)\>
+`Promise`\<[`chatMember`](../type-aliases/chatMember.md)\>
 
-Promise<[ChatMember](../type-aliases/ChatMember.md)>
+Promise<[ChatMember](../type-aliases/ChatMember-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69725
+dist/generated/types.d.ts:71611
 
 ***
 
 ### getChatMessageByDate()
 
-> **getChatMessageByDate**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **getChatMessageByDate**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Returns the last message sent in a chat no later than the specified date
 
@@ -5526,19 +5740,19 @@ Returns the last message sent in a chat no later than the specified date
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68219
+dist/generated/types.d.ts:70069
 
 ***
 
 ### getChatMessageCalendar()
 
-> **getChatMessageCalendar**(`parameters`): `Promise`\<[`messageCalendar`](../type-aliases/messageCalendar-1.md)\>
+> **getChatMessageCalendar**(`parameters`): `Promise`\<[`messageCalendar`](../type-aliases/messageCalendar.md)\>
 
 Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
 
@@ -5550,19 +5764,19 @@ Returns information about the next messages of the specified type in the chat sp
 
 #### Returns
 
-`Promise`\<[`messageCalendar`](../type-aliases/messageCalendar-1.md)\>
+`Promise`\<[`messageCalendar`](../type-aliases/messageCalendar.md)\>
 
-Promise<[MessageCalendar](../type-aliases/MessageCalendar.md)>
+Promise<[MessageCalendar](../type-aliases/MessageCalendar-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68235
+dist/generated/types.d.ts:70085
 
 ***
 
 ### getChatMessageCount()
 
-> **getChatMessageCount**(`parameters`): `Promise`\<[`count`](../type-aliases/count-1.md)\>
+> **getChatMessageCount**(`parameters`): `Promise`\<[`count`](../type-aliases/count.md)\>
 
 Returns approximate number of messages of the specified type in the chat
 
@@ -5574,19 +5788,19 @@ Returns approximate number of messages of the specified type in the chat
 
 #### Returns
 
-`Promise`\<[`count`](../type-aliases/count-1.md)\>
+`Promise`\<[`count`](../type-aliases/count.md)\>
 
-Promise<[Count](../type-aliases/Count.md)>
+Promise<[Count](../type-aliases/Count-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68242
+dist/generated/types.d.ts:70092
 
 ***
 
 ### getChatMessagePosition()
 
-> **getChatMessagePosition**(`parameters`): `Promise`\<[`count`](../type-aliases/count-1.md)\>
+> **getChatMessagePosition**(`parameters`): `Promise`\<[`count`](../type-aliases/count.md)\>
 
 Returns approximate 1-based position of a message among messages, which can be found by the specified filter in the chat. Cannot be used in secret chats
 
@@ -5598,19 +5812,19 @@ Returns approximate 1-based position of a message among messages, which can be f
 
 #### Returns
 
-`Promise`\<[`count`](../type-aliases/count-1.md)\>
+`Promise`\<[`count`](../type-aliases/count.md)\>
 
-Promise<[Count](../type-aliases/Count.md)>
+Promise<[Count](../type-aliases/Count-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68249
+dist/generated/types.d.ts:70099
 
 ***
 
 ### getChatNotificationSettingsExceptions()
 
-> **getChatNotificationSettingsExceptions**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getChatNotificationSettingsExceptions**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns the list of chats with non-default notification settings for new messages
 
@@ -5622,19 +5836,19 @@ Returns the list of chats with non-default notification settings for new message
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69781
+dist/generated/types.d.ts:71667
 
 ***
 
 ### getChatPinnedMessage()
 
-> **getChatPinnedMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **getChatPinnedMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Returns information about a newest pinned message in the chat
 
@@ -5646,23 +5860,23 @@ Returns information about a newest pinned message in the chat
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67775
+dist/generated/types.d.ts:69625
 
 ***
 
 ### getChatPostedToChatPageStories()
 
-> **getChatPostedToChatPageStories**(`parameters`): `Promise`\<[`stories`](../type-aliases/stories-1.md)\>
+> **getChatPostedToChatPageStories**(`parameters`): `Promise`\<[`stories`](../type-aliases/stories.md)\>
 
 Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
 
-- Then, stories are returned in a reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+- Then, stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
 
 #### Parameters
 
@@ -5672,19 +5886,19 @@ Returns the list of stories that posted by the given chat to its chat page. If f
 
 #### Returns
 
-`Promise`\<[`stories`](../type-aliases/stories-1.md)\>
+`Promise`\<[`stories`](../type-aliases/stories.md)\>
 
-Promise<[Stories](../type-aliases/Stories.md)>
+Promise<[Stories](../type-aliases/Stories-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69925
+dist/generated/types.d.ts:71825
 
 ***
 
 ### getChatRevenueStatistics()
 
-> **getChatRevenueStatistics**(`parameters`): `Promise`\<[`chatRevenueStatistics`](../type-aliases/chatRevenueStatistics-1.md)\>
+> **getChatRevenueStatistics**(`parameters`): `Promise`\<[`chatRevenueStatistics`](../type-aliases/chatRevenueStatistics.md)\>
 
 Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
 
@@ -5696,19 +5910,19 @@ Returns detailed revenue statistics about a chat. Currently, this method can be 
 
 #### Returns
 
-`Promise`\<[`chatRevenueStatistics`](../type-aliases/chatRevenueStatistics-1.md)\>
+`Promise`\<[`chatRevenueStatistics`](../type-aliases/chatRevenueStatistics.md)\>
 
-Promise<[ChatRevenueStatistics](../type-aliases/ChatRevenueStatistics.md)>
+Promise<[ChatRevenueStatistics](../type-aliases/ChatRevenueStatistics-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72034
+dist/generated/types.d.ts:73994
 
 ***
 
 ### getChatRevenueTransactions()
 
-> **getChatRevenueTransactions**(`parameters`): `Promise`\<[`chatRevenueTransactions`](../type-aliases/chatRevenueTransactions-1.md)\>
+> **getChatRevenueTransactions**(`parameters`): `Promise`\<[`chatRevenueTransactions`](../type-aliases/chatRevenueTransactions.md)\>
 
 Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
 
@@ -5720,19 +5934,19 @@ Returns the list of revenue transactions for a chat. Currently, this method can 
 
 #### Returns
 
-`Promise`\<[`chatRevenueTransactions`](../type-aliases/chatRevenueTransactions-1.md)\>
+`Promise`\<[`chatRevenueTransactions`](../type-aliases/chatRevenueTransactions.md)\>
 
-Promise<[ChatRevenueTransactions](../type-aliases/ChatRevenueTransactions.md)>
+Promise<[ChatRevenueTransactions](../type-aliases/ChatRevenueTransactions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72048
+dist/generated/types.d.ts:74008
 
 ***
 
 ### getChatRevenueWithdrawalUrl()
 
-> **getChatRevenueWithdrawalUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getChatRevenueWithdrawalUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
 
@@ -5744,21 +5958,45 @@ Returns a URL for chat revenue withdrawal; requires owner privileges in the chat
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72041
+dist/generated/types.d.ts:74001
+
+***
+
+### getChats()
+
+> **getChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
+
+Returns an ordered list of chats from the beginning of a chat list. For informational purposes only. Use loadChats and updates processing instead to maintain chat lists in a consistent state
+
+#### Parameters
+
+• **parameters**: [`getChats$DirectInput`](../type-aliases/getChats$DirectInput.md)
+
+[getChats$Input](../type-aliases/getChats$Input.md)
+
+#### Returns
+
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
+
+Promise<[Chats](../type-aliases/Chats-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69697
 
 ***
 
 ### getChatScheduledMessages()
 
-> **getChatScheduledMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **getChatScheduledMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Returns all scheduled messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
+Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
 
 #### Parameters
 
@@ -5768,19 +6006,43 @@ Returns all scheduled messages in a chat. The messages are returned in a reverse
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68256
+dist/generated/types.d.ts:70106
+
+***
+
+### getChatsForChatFolderInviteLink()
+
+> **getChatsForChatFolderInviteLink**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
+
+Returns identifiers of chats from a chat folder, suitable for adding to a chat folder invite link
+
+#### Parameters
+
+• **parameters**: [`getChatsForChatFolderInviteLink$DirectInput`](../type-aliases/getChatsForChatFolderInviteLink$DirectInput.md)
+
+[getChatsForChatFolderInviteLink$Input](../type-aliases/getChatsForChatFolderInviteLink$Input.md)
+
+#### Returns
+
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
+
+Promise<[Chats](../type-aliases/Chats-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:71281
 
 ***
 
 ### getChatSimilarChatCount()
 
-> **getChatSimilarChatCount**(`parameters`): `Promise`\<[`count`](../type-aliases/count-1.md)\>
+> **getChatSimilarChatCount**(`parameters`): `Promise`\<[`count`](../type-aliases/count.md)\>
 
 Returns approximate number of chats similar to the given chat
 
@@ -5792,19 +6054,19 @@ Returns approximate number of chats similar to the given chat
 
 #### Returns
 
-`Promise`\<[`count`](../type-aliases/count-1.md)\>
+`Promise`\<[`count`](../type-aliases/count.md)\>
 
-Promise<[Count](../type-aliases/Count.md)>
+Promise<[Count](../type-aliases/Count-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67900
+dist/generated/types.d.ts:69757
 
 ***
 
 ### getChatSimilarChats()
 
-> **getChatSimilarChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getChatSimilarChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns a list of chats similar to the given chat
 
@@ -5816,19 +6078,19 @@ Returns a list of chats similar to the given chat
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67893
+dist/generated/types.d.ts:69750
 
 ***
 
 ### getChatSparseMessagePositions()
 
-> **getChatSparseMessagePositions**(`parameters`): `Promise`\<[`messagePositions`](../type-aliases/messagePositions-1.md)\>
+> **getChatSparseMessagePositions**(`parameters`): `Promise`\<[`messagePositions`](../type-aliases/messagePositions.md)\>
 
 Returns sparse positions of messages of the specified type in the chat to be used for shared media scroll implementation. Returns the results in reverse chronological order (i.e., in order of decreasing message_id).
 
@@ -5842,19 +6104,19 @@ Returns sparse positions of messages of the specified type in the chat to be use
 
 #### Returns
 
-`Promise`\<[`messagePositions`](../type-aliases/messagePositions-1.md)\>
+`Promise`\<[`messagePositions`](../type-aliases/messagePositions.md)\>
 
-Promise<[MessagePositions](../type-aliases/MessagePositions.md)>
+Promise<[MessagePositions](../type-aliases/MessagePositions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68228
+dist/generated/types.d.ts:70078
 
 ***
 
 ### getChatSponsoredMessages()
 
-> **getChatSponsoredMessages**(`parameters`): `Promise`\<[`sponsoredMessages`](../type-aliases/sponsoredMessages-1.md)\>
+> **getChatSponsoredMessages**(`parameters`): `Promise`\<[`sponsoredMessages`](../type-aliases/sponsoredMessages.md)\>
 
 Returns sponsored messages to be shown in a chat; for channel chats only
 
@@ -5866,13 +6128,13 @@ Returns sponsored messages to be shown in a chat; for channel chats only
 
 #### Returns
 
-`Promise`\<[`sponsoredMessages`](../type-aliases/sponsoredMessages-1.md)\>
+`Promise`\<[`sponsoredMessages`](../type-aliases/sponsoredMessages.md)\>
 
-Promise<[SponsoredMessages](../type-aliases/SponsoredMessages.md)>
+Promise<[SponsoredMessages](../type-aliases/SponsoredMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68263
+dist/generated/types.d.ts:70113
 
 ***
 
@@ -5896,13 +6158,13 @@ Promise<[ChatStatistics](../type-aliases/ChatStatistics.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72076
+dist/generated/types.d.ts:74036
 
 ***
 
 ### getChatStoryInteractions()
 
-> **getChatStoryInteractions**(`parameters`): `Promise`\<[`storyInteractions`](../type-aliases/storyInteractions-1.md)\>
+> **getChatStoryInteractions**(`parameters`): `Promise`\<[`storyInteractions`](../type-aliases/storyInteractions.md)\>
 
 Returns interactions with a story posted in a chat. Can be used only if story is posted on behalf of a chat and the user is an administrator in the chat
 
@@ -5914,67 +6176,19 @@ Returns interactions with a story posted in a chat. Can be used only if story is
 
 #### Returns
 
-`Promise`\<[`storyInteractions`](../type-aliases/storyInteractions-1.md)\>
+`Promise`\<[`storyInteractions`](../type-aliases/storyInteractions.md)\>
 
-Promise<[StoryInteractions](../type-aliases/StoryInteractions.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:69983
-
-***
-
-### getChats()
-
-> **getChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
-
-Returns an ordered list of chats from the beginning of a chat list. For informational purposes only. Use loadChats and updates processing instead to maintain chat lists in a consistent state
-
-#### Parameters
-
-• **parameters**: [`getChats$DirectInput`](../type-aliases/getChats$DirectInput.md)
-
-[getChats$Input](../type-aliases/getChats$Input.md)
-
-#### Returns
-
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
-
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[StoryInteractions](../type-aliases/StoryInteractions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67840
-
-***
-
-### getChatsForChatFolderInviteLink()
-
-> **getChatsForChatFolderInviteLink**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
-
-Returns identifiers of chats from a chat folder, suitable for adding to a chat folder invite link
-
-#### Parameters
-
-• **parameters**: [`getChatsForChatFolderInviteLink$DirectInput`](../type-aliases/getChatsForChatFolderInviteLink$DirectInput.md)
-
-[getChatsForChatFolderInviteLink$Input](../type-aliases/getChatsForChatFolderInviteLink$Input.md)
-
-#### Returns
-
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
-
-Promise<[Chats](../type-aliases/Chats.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:69395
+dist/generated/types.d.ts:71883
 
 ***
 
 ### getChatsToSendStories()
 
-> **getChatsToSendStories**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getChatsToSendStories**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns supergroup and channel chats in which the current user has the right to post stories. The chats must be rechecked with canSendStory before actually trying to post a story there
 
@@ -5986,19 +6200,19 @@ Returns supergroup and channel chats in which the current user has the right to 
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69844
+dist/generated/types.d.ts:71737
 
 ***
 
 ### getCloseFriends()
 
-> **getCloseFriends**(`parameters`): `Promise`\<[`users`](../type-aliases/users-1.md)\>
+> **getCloseFriends**(`parameters`): `Promise`\<[`users`](../type-aliases/users.md)\>
 
 Returns all close friends of the current user
 
@@ -6010,19 +6224,19 @@ Returns all close friends of the current user
 
 #### Returns
 
-`Promise`\<[`users`](../type-aliases/users-1.md)\>
+`Promise`\<[`users`](../type-aliases/users.md)\>
 
-Promise<[Users](../type-aliases/Users.md)>
+Promise<[Users](../type-aliases/Users-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70746
+dist/generated/types.d.ts:72664
 
 ***
 
 ### getCollectibleItemInfo()
 
-> **getCollectibleItemInfo**(`parameters`): `Promise`\<[`collectibleItemInfo`](../type-aliases/collectibleItemInfo-1.md)\>
+> **getCollectibleItemInfo**(`parameters`): `Promise`\<[`collectibleItemInfo`](../type-aliases/collectibleItemInfo.md)\>
 
 Returns information about a given collectible item that was purchased at https://fragment.com
 
@@ -6034,19 +6248,19 @@ Returns information about a given collectible item that was purchased at https:/
 
 #### Returns
 
-`Promise`\<[`collectibleItemInfo`](../type-aliases/collectibleItemInfo-1.md)\>
+`Promise`\<[`collectibleItemInfo`](../type-aliases/collectibleItemInfo.md)\>
 
-Promise<[CollectibleItemInfo](../type-aliases/CollectibleItemInfo.md)>
+Promise<[CollectibleItemInfo](../type-aliases/CollectibleItemInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72603
+dist/generated/types.d.ts:74591
 
 ***
 
 ### getCommands()
 
-> **getCommands**(`parameters`): `Promise`\<[`botCommands`](../type-aliases/botCommands-1.md)\>
+> **getCommands**(`parameters`): `Promise`\<[`botCommands`](../type-aliases/botCommands.md)\>
 
 Returns the list of commands supported by the bot for the given user scope and language; for bots only
 
@@ -6058,19 +6272,19 @@ Returns the list of commands supported by the bot for the given user scope and l
 
 #### Returns
 
-`Promise`\<[`botCommands`](../type-aliases/botCommands-1.md)\>
+`Promise`\<[`botCommands`](../type-aliases/botCommands.md)\>
 
-Promise<[BotCommands](../type-aliases/BotCommands.md)>
+Promise<[BotCommands](../type-aliases/BotCommands-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71347
+dist/generated/types.d.ts:73265
 
 ***
 
 ### getConnectedWebsites()
 
-> **getConnectedWebsites**(`parameters`): `Promise`\<[`connectedWebsites`](../type-aliases/connectedWebsites-1.md)\>
+> **getConnectedWebsites**(`parameters`): `Promise`\<[`connectedWebsites`](../type-aliases/connectedWebsites.md)\>
 
 Returns all website where the current user used Telegram to log in
 
@@ -6082,19 +6296,19 @@ Returns all website where the current user used Telegram to log in
 
 #### Returns
 
-`Promise`\<[`connectedWebsites`](../type-aliases/connectedWebsites-1.md)\>
+`Promise`\<[`connectedWebsites`](../type-aliases/connectedWebsites.md)\>
 
-Promise<[ConnectedWebsites](../type-aliases/ConnectedWebsites.md)>
+Promise<[ConnectedWebsites](../type-aliases/ConnectedWebsites-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71515
+dist/generated/types.d.ts:73475
 
 ***
 
 ### getContacts()
 
-> **getContacts**(`parameters`): `Promise`\<[`users`](../type-aliases/users-1.md)\>
+> **getContacts**(`parameters`): `Promise`\<[`users`](../type-aliases/users.md)\>
 
 Returns all contacts of the user
 
@@ -6106,19 +6320,19 @@ Returns all contacts of the user
 
 #### Returns
 
-`Promise`\<[`users`](../type-aliases/users-1.md)\>
+`Promise`\<[`users`](../type-aliases/users.md)\>
 
-Promise<[Users](../type-aliases/Users.md)>
+Promise<[Users](../type-aliases/Users-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70695
+dist/generated/types.d.ts:72613
 
 ***
 
 ### getCountries()
 
-> **getCountries**(`parameters`): `Promise`\<[`countries`](../type-aliases/countries-1.md)\>
+> **getCountries**(`parameters`): `Promise`\<[`countries`](../type-aliases/countries.md)\>
 
 Returns information about existing countries. Can be called before authorization
 
@@ -6130,19 +6344,19 @@ Returns information about existing countries. Can be called before authorization
 
 #### Returns
 
-`Promise`\<[`countries`](../type-aliases/countries-1.md)\>
+`Promise`\<[`countries`](../type-aliases/countries.md)\>
 
-Promise<[Countries](../type-aliases/Countries.md)>
+Promise<[Countries](../type-aliases/Countries-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72575
+dist/generated/types.d.ts:74563
 
 ***
 
 ### getCountryCode()
 
-> **getCountryCode**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getCountryCode**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Uses the current IP address to find the current country. Returns two-letter ISO 3166-1 alpha-2 country code. Can be called before authorization
 
@@ -6154,19 +6368,19 @@ Uses the current IP address to find the current country. Returns two-letter ISO 
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72582
+dist/generated/types.d.ts:74570
 
 ***
 
 ### getCountryFlagEmoji()
 
-> **getCountryFlagEmoji**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getCountryFlagEmoji**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns an emoji for the given country. Returns an empty string on failure. Can be called synchronously
 
@@ -6178,19 +6392,19 @@ Returns an emoji for the given country. Returns an empty string on failure. Can 
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68897
+dist/generated/types.d.ts:70769
 
 ***
 
 ### getCreatedPublicChats()
 
-> **getCreatedPublicChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getCreatedPublicChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns a list of public chats of the specified type, owned by the user
 
@@ -6202,19 +6416,19 @@ Returns a list of public chats of the specified type, owned by the user
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67970
+dist/generated/types.d.ts:69827
 
 ***
 
 ### getCurrentState()
 
-> **getCurrentState**(`parameters`): `Promise`\<[`updates`](../type-aliases/updates-1.md)\>
+> **getCurrentState**(`parameters`): `Promise`\<[`updates`](../type-aliases/updates.md)\>
 
 Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others. This is especially useful if TDLib is run in a separate process. Can be called before initialization
 
@@ -6226,19 +6440,43 @@ Returns all updates needed to restore current TDLib state, i.e. all actual updat
 
 #### Returns
 
-`Promise`\<[`updates`](../type-aliases/updates-1.md)\>
+`Promise`\<[`updates`](../type-aliases/updates.md)\>
 
-Promise<[Updates](../type-aliases/Updates.md)>
+Promise<[Updates](../type-aliases/Updates-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67550
+dist/generated/types.d.ts:69400
+
+***
+
+### getCurrentWeather()
+
+> **getCurrentWeather**(`parameters`): `Promise`\<[`currentWeather`](../type-aliases/currentWeather.md)\>
+
+Returns the current weather in the given location
+
+#### Parameters
+
+• **parameters**: [`getCurrentWeather$DirectInput`](../type-aliases/getCurrentWeather$DirectInput.md)
+
+[getCurrentWeather$Input](../type-aliases/getCurrentWeather$Input.md)
+
+#### Returns
+
+`Promise`\<[`currentWeather`](../type-aliases/currentWeather.md)\>
+
+Promise<[CurrentWeather](../type-aliases/CurrentWeather-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:71723
 
 ***
 
 ### getCustomEmojiReactionAnimations()
 
-> **getCustomEmojiReactionAnimations**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getCustomEmojiReactionAnimations**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns TGS stickers with generic animations for custom emoji reactions
 
@@ -6250,19 +6488,19 @@ Returns TGS stickers with generic animations for custom emoji reactions
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68783
+dist/generated/types.d.ts:70634
 
 ***
 
 ### getCustomEmojiStickers()
 
-> **getCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns the list of custom emoji stickers by their identifiers. Stickers are returned in arbitrary order. Only found stickers are returned
 
@@ -6274,19 +6512,19 @@ Returns the list of custom emoji stickers by their identifiers. Stickers are ret
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70995
+dist/generated/types.d.ts:72913
 
 ***
 
 ### getDatabaseStatistics()
 
-> **getDatabaseStatistics**(`parameters`): `Promise`\<[`databaseStatistics`](../type-aliases/databaseStatistics-1.md)\>
+> **getDatabaseStatistics**(`parameters`): `Promise`\<[`databaseStatistics`](../type-aliases/databaseStatistics.md)\>
 
 Returns database statistics
 
@@ -6298,19 +6536,19 @@ Returns database statistics
 
 #### Returns
 
-`Promise`\<[`databaseStatistics`](../type-aliases/databaseStatistics-1.md)\>
+`Promise`\<[`databaseStatistics`](../type-aliases/databaseStatistics.md)\>
 
-Promise<[DatabaseStatistics](../type-aliases/DatabaseStatistics.md)>
+Promise<[DatabaseStatistics](../type-aliases/DatabaseStatistics-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72125
+dist/generated/types.d.ts:74085
 
 ***
 
 ### getDeepLinkInfo()
 
-> **getDeepLinkInfo**(`parameters`): `Promise`\<[`deepLinkInfo`](../type-aliases/deepLinkInfo-1.md)\>
+> **getDeepLinkInfo**(`parameters`): `Promise`\<[`deepLinkInfo`](../type-aliases/deepLinkInfo.md)\>
 
 Returns information about a tg:// deep link. Use "tg://need_update_for_some_feature" or "tg:some_unsupported_feature" for testing. Returns a 404 error for unknown links. Can be called before authorization
 
@@ -6322,19 +6560,19 @@ Returns information about a tg:// deep link. Use "tg://need_update_for_some_feat
 
 #### Returns
 
-`Promise`\<[`deepLinkInfo`](../type-aliases/deepLinkInfo-1.md)\>
+`Promise`\<[`deepLinkInfo`](../type-aliases/deepLinkInfo.md)\>
 
-Promise<[DeepLinkInfo](../type-aliases/DeepLinkInfo.md)>
+Promise<[DeepLinkInfo](../type-aliases/DeepLinkInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72610
+dist/generated/types.d.ts:74598
 
 ***
 
 ### getDefaultBackgroundCustomEmojiStickers()
 
-> **getDefaultBackgroundCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getDefaultBackgroundCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns default list of custom emoji stickers for reply background
 
@@ -6346,19 +6584,19 @@ Returns default list of custom emoji stickers for reply background
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71016
+dist/generated/types.d.ts:72934
 
 ***
 
 ### getDefaultChatEmojiStatuses()
 
-> **getDefaultChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+> **getDefaultChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
 Returns default emoji statuses for chats
 
@@ -6370,19 +6608,19 @@ Returns default emoji statuses for chats
 
 #### Returns
 
-`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
-Promise<[EmojiStatuses](../type-aliases/EmojiStatuses.md)>
+Promise<[EmojiStatuses](../type-aliases/EmojiStatuses-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70127
+dist/generated/types.d.ts:72027
 
 ***
 
 ### getDefaultChatPhotoCustomEmojiStickers()
 
-> **getDefaultChatPhotoCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getDefaultChatPhotoCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns default list of custom emoji stickers for placing on a chat photo
 
@@ -6394,19 +6632,19 @@ Returns default list of custom emoji stickers for placing on a chat photo
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71002
+dist/generated/types.d.ts:72920
 
 ***
 
 ### getDefaultEmojiStatuses()
 
-> **getDefaultEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+> **getDefaultEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
 Returns default emoji statuses for self status
 
@@ -6418,19 +6656,19 @@ Returns default emoji statuses for self status
 
 #### Returns
 
-`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
-Promise<[EmojiStatuses](../type-aliases/EmojiStatuses.md)>
+Promise<[EmojiStatuses](../type-aliases/EmojiStatuses-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70106
+dist/generated/types.d.ts:72006
 
 ***
 
 ### getDefaultMessageAutoDeleteTime()
 
-> **getDefaultMessageAutoDeleteTime**(`parameters`): `Promise`\<[`messageAutoDeleteTime`](../type-aliases/messageAutoDeleteTime-1.md)\>
+> **getDefaultMessageAutoDeleteTime**(`parameters`): `Promise`\<[`messageAutoDeleteTime`](../type-aliases/messageAutoDeleteTime.md)\>
 
 Returns default message auto-delete time setting for new chats
 
@@ -6442,19 +6680,19 @@ Returns default message auto-delete time setting for new chats
 
 #### Returns
 
-`Promise`\<[`messageAutoDeleteTime`](../type-aliases/messageAutoDeleteTime-1.md)\>
+`Promise`\<[`messageAutoDeleteTime`](../type-aliases/messageAutoDeleteTime.md)\>
 
-Promise<[MessageAutoDeleteTime](../type-aliases/MessageAutoDeleteTime.md)>
+Promise<[MessageAutoDeleteTime](../type-aliases/MessageAutoDeleteTime-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71999
+dist/generated/types.d.ts:73959
 
 ***
 
 ### getDefaultProfilePhotoCustomEmojiStickers()
 
-> **getDefaultProfilePhotoCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getDefaultProfilePhotoCustomEmojiStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns default list of custom emoji stickers for placing on a profile photo
 
@@ -6466,19 +6704,19 @@ Returns default list of custom emoji stickers for placing on a profile photo
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71009
+dist/generated/types.d.ts:72927
 
 ***
 
 ### getDisallowedChatEmojiStatuses()
 
-> **getDisallowedChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+> **getDisallowedChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
 Returns the list of emoji statuses, which can't be used as chat emoji status, even they are from a sticker set with is_allowed_as_chat_emoji_status == true
 
@@ -6490,19 +6728,19 @@ Returns the list of emoji statuses, which can't be used as chat emoji status, ev
 
 #### Returns
 
-`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
-Promise<[EmojiStatuses](../type-aliases/EmojiStatuses.md)>
+Promise<[EmojiStatuses](../type-aliases/EmojiStatuses-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70134
+dist/generated/types.d.ts:72034
 
 ***
 
 ### getEmojiCategories()
 
-> **getEmojiCategories**(`parameters`): `Promise`\<[`emojiCategories`](../type-aliases/emojiCategories-1.md)\>
+> **getEmojiCategories**(`parameters`): `Promise`\<[`emojiCategories`](../type-aliases/emojiCategories.md)\>
 
 Returns available emoji categories
 
@@ -6514,19 +6752,19 @@ Returns available emoji categories
 
 #### Returns
 
-`Promise`\<[`emojiCategories`](../type-aliases/emojiCategories-1.md)\>
+`Promise`\<[`emojiCategories`](../type-aliases/emojiCategories.md)\>
 
-Promise<[EmojiCategories](../type-aliases/EmojiCategories.md)>
+Promise<[EmojiCategories](../type-aliases/EmojiCategories-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70974
+dist/generated/types.d.ts:72892
 
 ***
 
 ### getEmojiReaction()
 
-> **getEmojiReaction**(`parameters`): `Promise`\<[`emojiReaction`](../type-aliases/emojiReaction-1.md)\>
+> **getEmojiReaction**(`parameters`): `Promise`\<[`emojiReaction`](../type-aliases/emojiReaction.md)\>
 
 Returns information about an emoji reaction. Returns a 404 error if the reaction is not found
 
@@ -6538,19 +6776,19 @@ Returns information about an emoji reaction. Returns a 404 error if the reaction
 
 #### Returns
 
-`Promise`\<[`emojiReaction`](../type-aliases/emojiReaction-1.md)\>
+`Promise`\<[`emojiReaction`](../type-aliases/emojiReaction.md)\>
 
-Promise<[EmojiReaction](../type-aliases/EmojiReaction.md)>
+Promise<[EmojiReaction](../type-aliases/EmojiReaction-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68776
+dist/generated/types.d.ts:70627
 
 ***
 
 ### getEmojiSuggestionsUrl()
 
-> **getEmojiSuggestionsUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getEmojiSuggestionsUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns an HTTP URL which can be used to automatically log in to the translation platform and suggest new emoji replacements. The URL will be valid for 30 seconds after generation
 
@@ -6562,19 +6800,19 @@ Returns an HTTP URL which can be used to automatically log in to the translation
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70988
+dist/generated/types.d.ts:72906
 
 ***
 
 ### getExternalLink()
 
-> **getExternalLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getExternalLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns an HTTP URL which can be used to automatically authorize the current user on a website after clicking an HTTP link. Use the method getExternalLinkInfo to find whether a prior user confirmation is needed
 
@@ -6586,13 +6824,13 @@ Returns an HTTP URL which can be used to automatically authorize the current use
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69220
+dist/generated/types.d.ts:71106
 
 ***
 
@@ -6616,13 +6854,13 @@ Promise<[LoginUrlInfo](../type-aliases/LoginUrlInfo.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69213
+dist/generated/types.d.ts:71099
 
 ***
 
 ### getFavoriteStickers()
 
-> **getFavoriteStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getFavoriteStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns favorite stickers
 
@@ -6634,19 +6872,19 @@ Returns favorite stickers
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70930
+dist/generated/types.d.ts:72848
 
 ***
 
 ### getFile()
 
-> **getFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file-1.md)\>
+> **getFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file.md)\>
 
 Returns information about a file; this is an offline request
 
@@ -6658,19 +6896,19 @@ Returns information about a file; this is an offline request
 
 #### Returns
 
-`Promise`\<[`file`](../type-aliases/file-1.md)\>
+`Promise`\<[`file`](../type-aliases/file.md)\>
 
-Promise<[File](../type-aliases/File.md)>
+Promise<[File](../type-aliases/File-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67817
+dist/generated/types.d.ts:69674
 
 ***
 
 ### getFileDownloadedPrefixSize()
 
-> **getFileDownloadedPrefixSize**(`parameters`): `Promise`\<[`fileDownloadedPrefixSize`](../type-aliases/fileDownloadedPrefixSize-1.md)\>
+> **getFileDownloadedPrefixSize**(`parameters`): `Promise`\<[`fileDownloadedPrefixSize`](../type-aliases/fileDownloadedPrefixSize.md)\>
 
 Returns file downloaded prefix size from a given offset, in bytes
 
@@ -6682,19 +6920,19 @@ Returns file downloaded prefix size from a given offset, in bytes
 
 #### Returns
 
-`Promise`\<[`fileDownloadedPrefixSize`](../type-aliases/fileDownloadedPrefixSize-1.md)\>
+`Promise`\<[`fileDownloadedPrefixSize`](../type-aliases/fileDownloadedPrefixSize.md)\>
 
-Promise<[FileDownloadedPrefixSize](../type-aliases/FileDownloadedPrefixSize.md)>
+Promise<[FileDownloadedPrefixSize](../type-aliases/FileDownloadedPrefixSize-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70148
+dist/generated/types.d.ts:72048
 
 ***
 
 ### getFileExtension()
 
-> **getFileExtension**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getFileExtension**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns the extension of a file, guessed by its MIME type. Returns an empty string on failure. Can be called synchronously
 
@@ -6706,19 +6944,19 @@ Returns the extension of a file, guessed by its MIME type. Returns an empty stri
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68911
+dist/generated/types.d.ts:70783
 
 ***
 
 ### getFileMimeType()
 
-> **getFileMimeType**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getFileMimeType**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns the MIME type of a file, guessed by its extension. Returns an empty string on failure. Can be called synchronously
 
@@ -6730,19 +6968,19 @@ Returns the MIME type of a file, guessed by its extension. Returns an empty stri
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68904
+dist/generated/types.d.ts:70776
 
 ***
 
 ### getForumTopic()
 
-> **getForumTopic**(`parameters`): `Promise`\<[`forumTopic`](../type-aliases/forumTopic-1.md)\>
+> **getForumTopic**(`parameters`): `Promise`\<[`forumTopic`](../type-aliases/forumTopic.md)\>
 
 Returns information about a forum topic
 
@@ -6754,19 +6992,19 @@ Returns information about a forum topic
 
 #### Returns
 
-`Promise`\<[`forumTopic`](../type-aliases/forumTopic-1.md)\>
+`Promise`\<[`forumTopic`](../type-aliases/forumTopic.md)\>
 
-Promise<[ForumTopic](../type-aliases/ForumTopic.md)>
+Promise<[ForumTopic](../type-aliases/ForumTopic-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68713
+dist/generated/types.d.ts:70564
 
 ***
 
 ### getForumTopicDefaultIcons()
 
-> **getForumTopicDefaultIcons**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getForumTopicDefaultIcons**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns the list of custom emoji, which can be used as forum topic icon by all users
 
@@ -6778,19 +7016,19 @@ Returns the list of custom emoji, which can be used as forum topic icon by all u
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68692
+dist/generated/types.d.ts:70543
 
 ***
 
 ### getForumTopicLink()
 
-> **getForumTopicLink**(`parameters`): `Promise`\<[`messageLink`](../type-aliases/messageLink-1.md)\>
+> **getForumTopicLink**(`parameters`): `Promise`\<[`messageLink`](../type-aliases/messageLink.md)\>
 
 Returns an HTTPS link to a topic in a forum chat. This is an offline request
 
@@ -6802,19 +7040,19 @@ Returns an HTTPS link to a topic in a forum chat. This is an offline request
 
 #### Returns
 
-`Promise`\<[`messageLink`](../type-aliases/messageLink-1.md)\>
+`Promise`\<[`messageLink`](../type-aliases/messageLink.md)\>
 
-Promise<[MessageLink](../type-aliases/MessageLink.md)>
+Promise<[MessageLink](../type-aliases/MessageLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68720
+dist/generated/types.d.ts:70571
 
 ***
 
 ### getForumTopics()
 
-> **getForumTopics**(`parameters`): `Promise`\<[`forumTopics`](../type-aliases/forumTopics-1.md)\>
+> **getForumTopics**(`parameters`): `Promise`\<[`forumTopics`](../type-aliases/forumTopics.md)\>
 
 Returns found forum topics in a forum chat. This is a temporary method for getting information about topic list from the server
 
@@ -6826,19 +7064,19 @@ Returns found forum topics in a forum chat. This is a temporary method for getti
 
 #### Returns
 
-`Promise`\<[`forumTopics`](../type-aliases/forumTopics-1.md)\>
+`Promise`\<[`forumTopics`](../type-aliases/forumTopics.md)\>
 
-Promise<[ForumTopics](../type-aliases/ForumTopics.md)>
+Promise<[ForumTopics](../type-aliases/ForumTopics-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68727
+dist/generated/types.d.ts:70578
 
 ***
 
 ### getGameHighScores()
 
-> **getGameHighScores**(`parameters`): `Promise`\<[`gameHighScores`](../type-aliases/gameHighScores-1.md)\>
+> **getGameHighScores**(`parameters`): `Promise`\<[`gameHighScores`](../type-aliases/gameHighScores.md)\>
 
 Returns the high scores for a game and some part of the high score table in the range of the specified user; for bots only
 
@@ -6850,19 +7088,19 @@ Returns the high scores for a game and some part of the high score table in the 
 
 #### Returns
 
-`Promise`\<[`gameHighScores`](../type-aliases/gameHighScores-1.md)\>
+`Promise`\<[`gameHighScores`](../type-aliases/gameHighScores.md)\>
 
-Promise<[GameHighScores](../type-aliases/GameHighScores.md)>
+Promise<[GameHighScores](../type-aliases/GameHighScores-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69132
+dist/generated/types.d.ts:71018
 
 ***
 
 ### getGreetingStickers()
 
-> **getGreetingStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getGreetingStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns greeting stickers from regular sticker sets that can be used for the start page of other users
 
@@ -6874,19 +7112,19 @@ Returns greeting stickers from regular sticker sets that can be used for the sta
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70809
+dist/generated/types.d.ts:72727
 
 ***
 
 ### getGroupCall()
 
-> **getGroupCall**(`parameters`): `Promise`\<[`groupCall`](../type-aliases/groupCall-1.md)\>
+> **getGroupCall**(`parameters`): `Promise`\<[`groupCall`](../type-aliases/groupCall.md)\>
 
 Returns information about a group call
 
@@ -6898,19 +7136,19 @@ Returns information about a group call
 
 #### Returns
 
-`Promise`\<[`groupCall`](../type-aliases/groupCall-1.md)\>
+`Promise`\<[`groupCall`](../type-aliases/groupCall.md)\>
 
-Promise<[GroupCall](../type-aliases/GroupCall.md)>
+Promise<[GroupCall](../type-aliases/GroupCall-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70485
+dist/generated/types.d.ts:72403
 
 ***
 
 ### getGroupCallInviteLink()
 
-> **getGroupCallInviteLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getGroupCallInviteLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns invite link to a video chat in a public chat
 
@@ -6922,43 +7160,19 @@ Returns invite link to a video chat in a public chat
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70555
-
-***
-
-### getGroupCallStreamSegment()
-
-> **getGroupCallStreamSegment**(`parameters`): `Promise`\<[`filePart`](../type-aliases/filePart-1.md)\>
-
-Returns a file with a segment of a group call stream in a modified OGG format for audio or MPEG-4 format for video
-
-#### Parameters
-
-• **parameters**: [`getGroupCallStreamSegment$DirectInput`](../type-aliases/getGroupCallStreamSegment$DirectInput.md)
-
-[getGroupCallStreamSegment$Input](../type-aliases/getGroupCallStreamSegment$Input.md)
-
-#### Returns
-
-`Promise`\<[`filePart`](../type-aliases/filePart-1.md)\>
-
-Promise<[FilePart](../type-aliases/FilePart.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70653
+dist/generated/types.d.ts:72473
 
 ***
 
 ### getGroupCallStreams()
 
-> **getGroupCallStreams**(`parameters`): `Promise`\<[`groupCallStreams`](../type-aliases/groupCallStreams-1.md)\>
+> **getGroupCallStreams**(`parameters`): `Promise`\<[`groupCallStreams`](../type-aliases/groupCallStreams.md)\>
 
 Returns information about available group call streams
 
@@ -6970,19 +7184,43 @@ Returns information about available group call streams
 
 #### Returns
 
-`Promise`\<[`groupCallStreams`](../type-aliases/groupCallStreams-1.md)\>
+`Promise`\<[`groupCallStreams`](../type-aliases/groupCallStreams.md)\>
 
-Promise<[GroupCallStreams](../type-aliases/GroupCallStreams.md)>
+Promise<[GroupCallStreams](../type-aliases/GroupCallStreams-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70646
+dist/generated/types.d.ts:72564
+
+***
+
+### getGroupCallStreamSegment()
+
+> **getGroupCallStreamSegment**(`parameters`): `Promise`\<[`filePart`](../type-aliases/filePart.md)\>
+
+Returns a file with a segment of a group call stream in a modified OGG format for audio or MPEG-4 format for video
+
+#### Parameters
+
+• **parameters**: [`getGroupCallStreamSegment$DirectInput`](../type-aliases/getGroupCallStreamSegment$DirectInput.md)
+
+[getGroupCallStreamSegment$Input](../type-aliases/getGroupCallStreamSegment$Input.md)
+
+#### Returns
+
+`Promise`\<[`filePart`](../type-aliases/filePart.md)\>
+
+Promise<[FilePart](../type-aliases/FilePart-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72571
 
 ***
 
 ### getGroupsInCommon()
 
-> **getGroupsInCommon**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getGroupsInCommon**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
 
@@ -6994,19 +7232,19 @@ Returns a list of common group chats with a given user. Chats are sorted by thei
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68056
+dist/generated/types.d.ts:69913
 
 ***
 
 ### getImportedContactCount()
 
-> **getImportedContactCount**(`parameters`): `Promise`\<[`count`](../type-aliases/count-1.md)\>
+> **getImportedContactCount**(`parameters`): `Promise`\<[`count`](../type-aliases/count.md)\>
 
 Returns the total number of imported contacts
 
@@ -7018,19 +7256,19 @@ Returns the total number of imported contacts
 
 #### Returns
 
-`Promise`\<[`count`](../type-aliases/count-1.md)\>
+`Promise`\<[`count`](../type-aliases/count.md)\>
 
-Promise<[Count](../type-aliases/Count.md)>
+Promise<[Count](../type-aliases/Count-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70716
+dist/generated/types.d.ts:72634
 
 ***
 
 ### getInactiveSupergroupChats()
 
-> **getInactiveSupergroupChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getInactiveSupergroupChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives CHANNELS_TOO_MUCH error. Also, the limit can be increased with Telegram Premium
 
@@ -7042,19 +7280,19 @@ Returns a list of recently inactive supergroups and channels. Can be used when u
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67993
+dist/generated/types.d.ts:69850
 
 ***
 
 ### getInlineGameHighScores()
 
-> **getInlineGameHighScores**(`parameters`): `Promise`\<[`gameHighScores`](../type-aliases/gameHighScores-1.md)\>
+> **getInlineGameHighScores**(`parameters`): `Promise`\<[`gameHighScores`](../type-aliases/gameHighScores.md)\>
 
 Returns game high scores and some part of the high score table in the range of the specified user; for bots only
 
@@ -7066,19 +7304,19 @@ Returns game high scores and some part of the high score table in the range of t
 
 #### Returns
 
-`Promise`\<[`gameHighScores`](../type-aliases/gameHighScores-1.md)\>
+`Promise`\<[`gameHighScores`](../type-aliases/gameHighScores.md)\>
 
-Promise<[GameHighScores](../type-aliases/GameHighScores.md)>
+Promise<[GameHighScores](../type-aliases/GameHighScores-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69139
+dist/generated/types.d.ts:71025
 
 ***
 
 ### getInlineQueryResults()
 
-> **getInlineQueryResults**(`parameters`): `Promise`\<[`inlineQueryResults`](../type-aliases/inlineQueryResults-1.md)\>
+> **getInlineQueryResults**(`parameters`): `Promise`\<[`inlineQueryResults`](../type-aliases/inlineQueryResults.md)\>
 
 Sends an inline query to a bot and returns its results. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
 
@@ -7090,19 +7328,19 @@ Sends an inline query to a bot and returns its results. Returns an error with co
 
 #### Returns
 
-`Promise`\<[`inlineQueryResults`](../type-aliases/inlineQueryResults-1.md)\>
+`Promise`\<[`inlineQueryResults`](../type-aliases/inlineQueryResults.md)\>
 
-Promise<[InlineQueryResults](../type-aliases/InlineQueryResults.md)>
+Promise<[InlineQueryResults](../type-aliases/InlineQueryResults-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69025
+dist/generated/types.d.ts:70897
 
 ***
 
 ### getInstalledBackgrounds()
 
-> **getInstalledBackgrounds**(`parameters`): `Promise`\<[`backgrounds`](../type-aliases/backgrounds-1.md)\>
+> **getInstalledBackgrounds**(`parameters`): `Promise`\<[`backgrounds`](../type-aliases/backgrounds.md)\>
 
 Returns backgrounds installed by the user
 
@@ -7114,19 +7352,19 @@ Returns backgrounds installed by the user
 
 #### Returns
 
-`Promise`\<[`backgrounds`](../type-aliases/backgrounds-1.md)\>
+`Promise`\<[`backgrounds`](../type-aliases/backgrounds.md)\>
 
-Promise<[Backgrounds](../type-aliases/Backgrounds.md)>
+Promise<[Backgrounds](../type-aliases/Backgrounds-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71790
+dist/generated/types.d.ts:73750
 
 ***
 
 ### getInstalledStickerSets()
 
-> **getInstalledStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+> **getInstalledStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
 Returns a list of installed sticker sets
 
@@ -7138,19 +7376,19 @@ Returns a list of installed sticker sets
 
 #### Returns
 
-`Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+`Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
-Promise<[StickerSets](../type-aliases/StickerSets.md)>
+Promise<[StickerSets](../type-aliases/StickerSets-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70823
+dist/generated/types.d.ts:72741
 
 ***
 
 ### getInternalLink()
 
-> **getInternalLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getInternalLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns an HTTPS or a tg: link with the given type. Can be called before authorization
 
@@ -7162,13 +7400,13 @@ Returns an HTTPS or a tg: link with the given type. Can be called before authori
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69199
+dist/generated/types.d.ts:71085
 
 ***
 
@@ -7192,13 +7430,13 @@ Promise<[InternalLinkType](../type-aliases/InternalLinkType.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69206
+dist/generated/types.d.ts:71092
 
 ***
 
 ### getJsonString()
 
-> **getJsonString**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getJsonString**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Converts a JsonValue object to corresponding JSON-serialized string. Can be called synchronously
 
@@ -7210,13 +7448,13 @@ Converts a JsonValue object to corresponding JSON-serialized string. Can be call
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68939
+dist/generated/types.d.ts:70811
 
 ***
 
@@ -7240,13 +7478,13 @@ Promise<[JsonValue](../type-aliases/JsonValue.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68932
+dist/generated/types.d.ts:70804
 
 ***
 
 ### getKeywordEmojis()
 
-> **getKeywordEmojis**(`parameters`): `Promise`\<[`emojis`](../type-aliases/emojis-1.md)\>
+> **getKeywordEmojis**(`parameters`): `Promise`\<[`emojis`](../type-aliases/emojis.md)\>
 
 Return emojis matching the keyword. Supported only if the file database is enabled. Order of results is unspecified
 
@@ -7258,19 +7496,19 @@ Return emojis matching the keyword. Supported only if the file database is enabl
 
 #### Returns
 
-`Promise`\<[`emojis`](../type-aliases/emojis-1.md)\>
+`Promise`\<[`emojis`](../type-aliases/emojis.md)\>
 
-Promise<[Emojis](../type-aliases/Emojis.md)>
+Promise<[Emojis](../type-aliases/Emojis-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70967
+dist/generated/types.d.ts:72885
 
 ***
 
 ### getLanguagePackInfo()
 
-> **getLanguagePackInfo**(`parameters`): `Promise`\<[`languagePackInfo`](../type-aliases/languagePackInfo-1.md)\>
+> **getLanguagePackInfo**(`parameters`): `Promise`\<[`languagePackInfo`](../type-aliases/languagePackInfo.md)\>
 
 Returns information about a language pack. Returned language pack identifier may be different from a provided one. Can be called before authorization
 
@@ -7282,13 +7520,13 @@ Returns information about a language pack. Returned language pack identifier may
 
 #### Returns
 
-`Promise`\<[`languagePackInfo`](../type-aliases/languagePackInfo-1.md)\>
+`Promise`\<[`languagePackInfo`](../type-aliases/languagePackInfo.md)\>
 
-Promise<[LanguagePackInfo](../type-aliases/LanguagePackInfo.md)>
+Promise<[LanguagePackInfo](../type-aliases/LanguagePackInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71818
+dist/generated/types.d.ts:73778
 
 ***
 
@@ -7312,13 +7550,13 @@ Promise<[LanguagePackStringValue](../type-aliases/LanguagePackStringValue.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68925
+dist/generated/types.d.ts:70797
 
 ***
 
 ### getLanguagePackStrings()
 
-> **getLanguagePackStrings**(`parameters`): `Promise`\<[`languagePackStrings`](../type-aliases/languagePackStrings-1.md)\>
+> **getLanguagePackStrings**(`parameters`): `Promise`\<[`languagePackStrings`](../type-aliases/languagePackStrings.md)\>
 
 Returns strings from a language pack in the current localization target by their keys. Can be called before authorization
 
@@ -7330,19 +7568,19 @@ Returns strings from a language pack in the current localization target by their
 
 #### Returns
 
-`Promise`\<[`languagePackStrings`](../type-aliases/languagePackStrings-1.md)\>
+`Promise`\<[`languagePackStrings`](../type-aliases/languagePackStrings.md)\>
 
-Promise<[LanguagePackStrings](../type-aliases/LanguagePackStrings.md)>
+Promise<[LanguagePackStrings](../type-aliases/LanguagePackStrings-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71825
+dist/generated/types.d.ts:73785
 
 ***
 
 ### getLinkPreview()
 
-> **getLinkPreview**(`parameters`): `Promise`\<[`linkPreview`](../type-aliases/linkPreview-1.md)\>
+> **getLinkPreview**(`parameters`): `Promise`\<[`linkPreview`](../type-aliases/linkPreview.md)\>
 
 Returns a link preview by the text of a message. Do not call this function too often. Returns a 404 error if the text has no link preview
 
@@ -7354,19 +7592,19 @@ Returns a link preview by the text of a message. Do not call this function too o
 
 #### Returns
 
-`Promise`\<[`linkPreview`](../type-aliases/linkPreview-1.md)\>
+`Promise`\<[`linkPreview`](../type-aliases/linkPreview.md)\>
 
-Promise<[LinkPreview](../type-aliases/LinkPreview.md)>
+Promise<[LinkPreview](../type-aliases/LinkPreview-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71067
+dist/generated/types.d.ts:72985
 
 ***
 
 ### getLocalizationTargetInfo()
 
-> **getLocalizationTargetInfo**(`parameters`): `Promise`\<[`localizationTargetInfo`](../type-aliases/localizationTargetInfo-1.md)\>
+> **getLocalizationTargetInfo**(`parameters`): `Promise`\<[`localizationTargetInfo`](../type-aliases/localizationTargetInfo.md)\>
 
 Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
 
@@ -7378,115 +7616,19 @@ Returns information about the current localization target. This is an offline re
 
 #### Returns
 
-`Promise`\<[`localizationTargetInfo`](../type-aliases/localizationTargetInfo-1.md)\>
+`Promise`\<[`localizationTargetInfo`](../type-aliases/localizationTargetInfo.md)\>
 
-Promise<[LocalizationTargetInfo](../type-aliases/LocalizationTargetInfo.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:71811
-
-***
-
-### getLogStream()
-
-> **getLogStream**(`parameters`): `Promise`\<[`LogStream`](../type-aliases/LogStream.md)\>
-
-Returns information about currently used log stream for internal logging of TDLib. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`getLogStream$DirectInput`](../type-aliases/getLogStream$DirectInput.md)
-
-[getLogStream$Input](../type-aliases/getLogStream$Input.md)
-
-#### Returns
-
-`Promise`\<[`LogStream`](../type-aliases/LogStream.md)\>
-
-Promise<[LogStream](../type-aliases/LogStream.md)>
+Promise<[LocalizationTargetInfo](../type-aliases/LocalizationTargetInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72701
-
-***
-
-### getLogTagVerbosityLevel()
-
-> **getLogTagVerbosityLevel**(`parameters`): `Promise`\<[`logVerbosityLevel`](../type-aliases/logVerbosityLevel-1.md)\>
-
-Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`getLogTagVerbosityLevel$DirectInput`](../type-aliases/getLogTagVerbosityLevel$DirectInput.md)
-
-[getLogTagVerbosityLevel$Input](../type-aliases/getLogTagVerbosityLevel$Input.md)
-
-#### Returns
-
-`Promise`\<[`logVerbosityLevel`](../type-aliases/logVerbosityLevel-1.md)\>
-
-Promise<[LogVerbosityLevel](../type-aliases/LogVerbosityLevel.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:72736
-
-***
-
-### getLogTags()
-
-> **getLogTags**(`parameters`): `Promise`\<[`logTags`](../type-aliases/logTags-1.md)\>
-
-Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`getLogTags$DirectInput`](../type-aliases/getLogTags$DirectInput.md)
-
-[getLogTags$Input](../type-aliases/getLogTags$Input.md)
-
-#### Returns
-
-`Promise`\<[`logTags`](../type-aliases/logTags-1.md)\>
-
-Promise<[LogTags](../type-aliases/LogTags.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:72722
-
-***
-
-### getLogVerbosityLevel()
-
-> **getLogVerbosityLevel**(`parameters`): `Promise`\<[`logVerbosityLevel`](../type-aliases/logVerbosityLevel-1.md)\>
-
-Returns current verbosity level of the internal logging of TDLib. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`getLogVerbosityLevel$DirectInput`](../type-aliases/getLogVerbosityLevel$DirectInput.md)
-
-[getLogVerbosityLevel$Input](../type-aliases/getLogVerbosityLevel$Input.md)
-
-#### Returns
-
-`Promise`\<[`logVerbosityLevel`](../type-aliases/logVerbosityLevel-1.md)\>
-
-Promise<[LogVerbosityLevel](../type-aliases/LogVerbosityLevel.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:72715
+dist/generated/types.d.ts:73771
 
 ***
 
 ### getLoginUrl()
 
-> **getLoginUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getLoginUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns an HTTP URL which can be used to automatically authorize the user on a website after clicking an inline button of type inlineKeyboardButtonTypeLoginUrl.
 
@@ -7500,13 +7642,13 @@ Returns an HTTP URL which can be used to automatically authorize the user on a w
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69004
+dist/generated/types.d.ts:70876
 
 ***
 
@@ -7530,13 +7672,133 @@ Promise<[LoginUrlInfo](../type-aliases/LoginUrlInfo.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68995
+dist/generated/types.d.ts:70867
+
+***
+
+### getLogStream()
+
+> **getLogStream**(`parameters`): `Promise`\<[`LogStream`](../type-aliases/LogStream.md)\>
+
+Returns information about currently used log stream for internal logging of TDLib. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`getLogStream$DirectInput`](../type-aliases/getLogStream$DirectInput.md)
+
+[getLogStream$Input](../type-aliases/getLogStream$Input.md)
+
+#### Returns
+
+`Promise`\<[`LogStream`](../type-aliases/LogStream.md)\>
+
+Promise<[LogStream](../type-aliases/LogStream.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74689
+
+***
+
+### getLogTags()
+
+> **getLogTags**(`parameters`): `Promise`\<[`logTags`](../type-aliases/logTags.md)\>
+
+Returns the list of available TDLib internal log tags, for example, ["actor", "binlog", "connections", "notifications", "proxy"]. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`getLogTags$DirectInput`](../type-aliases/getLogTags$DirectInput.md)
+
+[getLogTags$Input](../type-aliases/getLogTags$Input.md)
+
+#### Returns
+
+`Promise`\<[`logTags`](../type-aliases/logTags.md)\>
+
+Promise<[LogTags](../type-aliases/LogTags-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74710
+
+***
+
+### getLogTagVerbosityLevel()
+
+> **getLogTagVerbosityLevel**(`parameters`): `Promise`\<[`logVerbosityLevel`](../type-aliases/logVerbosityLevel.md)\>
+
+Returns current verbosity level for a specified TDLib internal log tag. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`getLogTagVerbosityLevel$DirectInput`](../type-aliases/getLogTagVerbosityLevel$DirectInput.md)
+
+[getLogTagVerbosityLevel$Input](../type-aliases/getLogTagVerbosityLevel$Input.md)
+
+#### Returns
+
+`Promise`\<[`logVerbosityLevel`](../type-aliases/logVerbosityLevel.md)\>
+
+Promise<[LogVerbosityLevel](../type-aliases/LogVerbosityLevel-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74724
+
+***
+
+### getLogVerbosityLevel()
+
+> **getLogVerbosityLevel**(`parameters`): `Promise`\<[`logVerbosityLevel`](../type-aliases/logVerbosityLevel.md)\>
+
+Returns current verbosity level of the internal logging of TDLib. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`getLogVerbosityLevel$DirectInput`](../type-aliases/getLogVerbosityLevel$DirectInput.md)
+
+[getLogVerbosityLevel$Input](../type-aliases/getLogVerbosityLevel$Input.md)
+
+#### Returns
+
+`Promise`\<[`logVerbosityLevel`](../type-aliases/logVerbosityLevel.md)\>
+
+Promise<[LogVerbosityLevel](../type-aliases/LogVerbosityLevel-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74703
+
+***
+
+### getMainWebApp()
+
+> **getMainWebApp**(`parameters`): `Promise`\<[`mainWebApp`](../type-aliases/mainWebApp.md)\>
+
+Returns information needed to open the main Web App of a bot
+
+#### Parameters
+
+• **parameters**: [`getMainWebApp$DirectInput`](../type-aliases/getMainWebApp$DirectInput.md)
+
+[getMainWebApp$Input](../type-aliases/getMainWebApp$Input.md)
+
+#### Returns
+
+`Promise`\<[`mainWebApp`](../type-aliases/mainWebApp.md)\>
+
+Promise<[MainWebApp](../type-aliases/MainWebApp-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70932
 
 ***
 
 ### getMapThumbnailFile()
 
-> **getMapThumbnailFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file-1.md)\>
+> **getMapThumbnailFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file.md)\>
 
 Returns information about a file with a map thumbnail in PNG format. Only map thumbnail files with size less than 1MB can be downloaded
 
@@ -7548,19 +7810,19 @@ Returns information about a file with a map thumbnail in PNG format. Only map th
 
 #### Returns
 
-`Promise`\<[`file`](../type-aliases/file-1.md)\>
+`Promise`\<[`file`](../type-aliases/file.md)\>
 
-Promise<[File](../type-aliases/File.md)>
+Promise<[File](../type-aliases/File-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72414
+dist/generated/types.d.ts:74374
 
 ***
 
 ### getMarkdownText()
 
-> **getMarkdownText**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+> **getMarkdownText**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
 Replaces text entities with Markdown formatting in a human-friendly format. Entities that can't be represented in Markdown unambiguously are kept as is. Can be called synchronously
 
@@ -7572,19 +7834,19 @@ Replaces text entities with Markdown formatting in a human-friendly format. Enti
 
 #### Returns
 
-`Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+`Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
-Promise<[FormattedText](../type-aliases/FormattedText.md)>
+Promise<[FormattedText](../type-aliases/FormattedText-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68890
+dist/generated/types.d.ts:70762
 
 ***
 
 ### getMe()
 
-> **getMe**(`parameters`): `Promise`\<[`user`](../type-aliases/user-1.md)\>
+> **getMe**(`parameters`): `Promise`\<[`user`](../type-aliases/user.md)\>
 
 Returns the current user
 
@@ -7596,19 +7858,19 @@ Returns the current user
 
 #### Returns
 
-`Promise`\<[`user`](../type-aliases/user-1.md)\>
+`Promise`\<[`user`](../type-aliases/user.md)\>
 
-Promise<[User](../type-aliases/User.md)>
+Promise<[User](../type-aliases/User-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67687
+dist/generated/types.d.ts:69537
 
 ***
 
 ### getMenuButton()
 
-> **getMenuButton**(`parameters`): `Promise`\<[`botMenuButton`](../type-aliases/botMenuButton-1.md)\>
+> **getMenuButton**(`parameters`): `Promise`\<[`botMenuButton`](../type-aliases/botMenuButton.md)\>
 
 Returns menu button set by the bot for the given user; for bots only
 
@@ -7620,19 +7882,19 @@ Returns menu button set by the bot for the given user; for bots only
 
 #### Returns
 
-`Promise`\<[`botMenuButton`](../type-aliases/botMenuButton-1.md)\>
+`Promise`\<[`botMenuButton`](../type-aliases/botMenuButton.md)\>
 
-Promise<[BotMenuButton](../type-aliases/BotMenuButton.md)>
+Promise<[BotMenuButton](../type-aliases/BotMenuButton-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71361
+dist/generated/types.d.ts:73279
 
 ***
 
 ### getMessage()
 
-> **getMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **getMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Returns information about a message
 
@@ -7644,19 +7906,19 @@ Returns information about a message
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67750
+dist/generated/types.d.ts:69600
 
 ***
 
 ### getMessageAddedReactions()
 
-> **getMessageAddedReactions**(`parameters`): `Promise`\<[`addedReactions`](../type-aliases/addedReactions-1.md)\>
+> **getMessageAddedReactions**(`parameters`): `Promise`\<[`addedReactions`](../type-aliases/addedReactions.md)\>
 
 Returns reactions added for a message, along with their sender
 
@@ -7668,19 +7930,19 @@ Returns reactions added for a message, along with their sender
 
 #### Returns
 
-`Promise`\<[`addedReactions`](../type-aliases/addedReactions-1.md)\>
+`Promise`\<[`addedReactions`](../type-aliases/addedReactions.md)\>
 
-Promise<[AddedReactions](../type-aliases/AddedReactions.md)>
+Promise<[AddedReactions](../type-aliases/AddedReactions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68825
+dist/generated/types.d.ts:70697
 
 ***
 
 ### getMessageAvailableReactions()
 
-> **getMessageAvailableReactions**(`parameters`): `Promise`\<[`availableReactions`](../type-aliases/availableReactions-1.md)\>
+> **getMessageAvailableReactions**(`parameters`): `Promise`\<[`availableReactions`](../type-aliases/availableReactions.md)\>
 
 Returns reactions, which can be added to a message. The list can change after updateActiveEmojiReactions, updateChatAvailableReactions for the chat, or updateMessageInteractionInfo for the message
 
@@ -7692,19 +7954,19 @@ Returns reactions, which can be added to a message. The list can change after up
 
 #### Returns
 
-`Promise`\<[`availableReactions`](../type-aliases/availableReactions-1.md)\>
+`Promise`\<[`availableReactions`](../type-aliases/availableReactions.md)\>
 
-Promise<[AvailableReactions](../type-aliases/AvailableReactions.md)>
+Promise<[AvailableReactions](../type-aliases/AvailableReactions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68790
+dist/generated/types.d.ts:70641
 
 ***
 
 ### getMessageEffect()
 
-> **getMessageEffect**(`parameters`): `Promise`\<[`messageEffect`](../type-aliases/messageEffect-1.md)\>
+> **getMessageEffect**(`parameters`): `Promise`\<[`messageEffect`](../type-aliases/messageEffect.md)\>
 
 Returns information about a message effect. Returns a 404 error if the effect is not found
 
@@ -7716,21 +7978,21 @@ Returns information about a message effect. Returns a 404 error if the effect is
 
 #### Returns
 
-`Promise`\<[`messageEffect`](../type-aliases/messageEffect-1.md)\>
+`Promise`\<[`messageEffect`](../type-aliases/messageEffect.md)\>
 
-Promise<[MessageEffect](../type-aliases/MessageEffect.md)>
+Promise<[MessageEffect](../type-aliases/MessageEffect-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68853
+dist/generated/types.d.ts:70725
 
 ***
 
 ### getMessageEmbeddingCode()
 
-> **getMessageEmbeddingCode**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getMessageEmbeddingCode**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
-Returns an HTML code for embedding the message. Available only for messages in supergroups and channels with a username
+Returns an HTML code for embedding the message. Available only if messageProperties.can_get_embedding_code
 
 #### Parameters
 
@@ -7740,13 +8002,13 @@ Returns an HTML code for embedding the message. Available only for messages in s
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68305
+dist/generated/types.d.ts:70155
 
 ***
 
@@ -7770,13 +8032,13 @@ Promise<[MessageFileType](../type-aliases/MessageFileType.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70273
+dist/generated/types.d.ts:72173
 
 ***
 
 ### getMessageImportConfirmationText()
 
-> **getMessageImportConfirmationText**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getMessageImportConfirmationText**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns a confirmation text to be shown to the user before starting message import
 
@@ -7788,21 +8050,21 @@ Returns a confirmation text to be shown to the user before starting message impo
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70280
+dist/generated/types.d.ts:72180
 
 ***
 
 ### getMessageLink()
 
-> **getMessageLink**(`parameters`): `Promise`\<[`messageLink`](../type-aliases/messageLink-1.md)\>
+> **getMessageLink**(`parameters`): `Promise`\<[`messageLink`](../type-aliases/messageLink.md)\>
 
-Returns an HTTPS link to a message in a chat. Available only for already sent messages in supergroups and channels, or if message.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
+Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
 
 #### Parameters
 
@@ -7812,19 +8074,19 @@ Returns an HTTPS link to a message in a chat. Available only for already sent me
 
 #### Returns
 
-`Promise`\<[`messageLink`](../type-aliases/messageLink-1.md)\>
+`Promise`\<[`messageLink`](../type-aliases/messageLink.md)\>
 
-Promise<[MessageLink](../type-aliases/MessageLink.md)>
+Promise<[MessageLink](../type-aliases/MessageLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68298
+dist/generated/types.d.ts:70148
 
 ***
 
 ### getMessageLinkInfo()
 
-> **getMessageLinkInfo**(`parameters`): `Promise`\<[`messageLinkInfo`](../type-aliases/messageLinkInfo-1.md)\>
+> **getMessageLinkInfo**(`parameters`): `Promise`\<[`messageLinkInfo`](../type-aliases/messageLinkInfo.md)\>
 
 Returns information about a public or private message link. Can be called for any internal link of the type internalLinkTypeMessage
 
@@ -7836,19 +8098,19 @@ Returns information about a public or private message link. Can be called for an
 
 #### Returns
 
-`Promise`\<[`messageLinkInfo`](../type-aliases/messageLinkInfo-1.md)\>
+`Promise`\<[`messageLinkInfo`](../type-aliases/messageLinkInfo.md)\>
 
-Promise<[MessageLinkInfo](../type-aliases/MessageLinkInfo.md)>
+Promise<[MessageLinkInfo](../type-aliases/MessageLinkInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68312
+dist/generated/types.d.ts:70162
 
 ***
 
 ### getMessageLocally()
 
-> **getMessageLocally**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **getMessageLocally**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Returns information about a message, if it is available without sending network request. This is an offline request
 
@@ -7860,21 +8122,45 @@ Returns information about a message, if it is available without sending network 
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67757
+dist/generated/types.d.ts:69607
+
+***
+
+### getMessageProperties()
+
+> **getMessageProperties**(`parameters`): `Promise`\<[`messageProperties`](../type-aliases/messageProperties.md)\>
+
+Returns properties of a message; this is an offline request
+
+#### Parameters
+
+• **parameters**: [`getMessageProperties$DirectInput`](../type-aliases/getMessageProperties$DirectInput.md)
+
+[getMessageProperties$Input](../type-aliases/getMessageProperties$Input.md)
+
+#### Returns
+
+`Promise`\<[`messageProperties`](../type-aliases/messageProperties.md)\>
+
+Promise<[MessageProperties](../type-aliases/MessageProperties-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69646
 
 ***
 
 ### getMessagePublicForwards()
 
-> **getMessagePublicForwards**(`parameters`): `Promise`\<[`publicForwards`](../type-aliases/publicForwards-1.md)\>
+> **getMessagePublicForwards**(`parameters`): `Promise`\<[`publicForwards`](../type-aliases/publicForwards.md)\>
 
-Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if message.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
+Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
 
 #### Parameters
 
@@ -7884,13 +8170,13 @@ Returns forwarded copies of a channel message to different public channels and p
 
 #### Returns
 
-`Promise`\<[`publicForwards`](../type-aliases/publicForwards-1.md)\>
+`Promise`\<[`publicForwards`](../type-aliases/publicForwards.md)\>
 
-Promise<[PublicForwards](../type-aliases/PublicForwards.md)>
+Promise<[PublicForwards](../type-aliases/PublicForwards-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72090
+dist/generated/types.d.ts:74050
 
 ***
 
@@ -7898,7 +8184,7 @@ dist/generated/types.d.ts:72090
 
 > **getMessageReadDate**(`parameters`): `Promise`\<[`MessageReadDate`](../type-aliases/MessageReadDate.md)\>
 
-Returns read date of a recent outgoing message in a private chat. The method can be called if message.can_get_read_date == true and the message is read
+Returns read date of a recent outgoing message in a private chat. The method can be called if messageProperties.can_get_read_date == true
 
 #### Parameters
 
@@ -7914,111 +8200,13 @@ Promise<[MessageReadDate](../type-aliases/MessageReadDate.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67803
-
-***
-
-### getMessageStatistics()
-
-> **getMessageStatistics**(`parameters`): `Promise`\<[`messageStatistics`](../type-aliases/messageStatistics-1.md)\>
-
-Returns detailed statistics about a message. Can be used only if message.can_get_statistics == true
-
-#### Parameters
-
-• **parameters**: [`getMessageStatistics$DirectInput`](../type-aliases/getMessageStatistics$DirectInput.md)
-
-[getMessageStatistics$Input](../type-aliases/getMessageStatistics$Input.md)
-
-#### Returns
-
-`Promise`\<[`messageStatistics`](../type-aliases/messageStatistics-1.md)\>
-
-Promise<[MessageStatistics](../type-aliases/MessageStatistics.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:72083
-
-***
-
-### getMessageThread()
-
-> **getMessageThread**(`parameters`): `Promise`\<[`messageThreadInfo`](../type-aliases/messageThreadInfo-1.md)\>
-
-Returns information about a message thread. Can be used only if message.can_get_message_thread == true
-
-#### Parameters
-
-• **parameters**: [`getMessageThread$DirectInput`](../type-aliases/getMessageThread$DirectInput.md)
-
-[getMessageThread$Input](../type-aliases/getMessageThread$Input.md)
-
-#### Returns
-
-`Promise`\<[`messageThreadInfo`](../type-aliases/messageThreadInfo-1.md)\>
-
-Promise<[MessageThreadInfo](../type-aliases/MessageThreadInfo.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:67796
-
-***
-
-### getMessageThreadHistory()
-
-> **getMessageThreadHistory**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
-
-Returns messages in a message thread of a message. Can be used only if message.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
-
-- The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
-
-#### Parameters
-
-• **parameters**: [`getMessageThreadHistory$DirectInput`](../type-aliases/getMessageThreadHistory$DirectInput.md)
-
-[getMessageThreadHistory$Input](../type-aliases/getMessageThreadHistory$Input.md)
-
-#### Returns
-
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
-
-Promise<[Messages](../type-aliases/Messages.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:68074
-
-***
-
-### getMessageViewers()
-
-> **getMessageViewers**(`parameters`): `Promise`\<[`messageViewers`](../type-aliases/messageViewers-1.md)\>
-
-Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if message.can_get_viewers == true
-
-#### Parameters
-
-• **parameters**: [`getMessageViewers$DirectInput`](../type-aliases/getMessageViewers$DirectInput.md)
-
-[getMessageViewers$Input](../type-aliases/getMessageViewers$Input.md)
-
-#### Returns
-
-`Promise`\<[`messageViewers`](../type-aliases/messageViewers-1.md)\>
-
-Promise<[MessageViewers](../type-aliases/MessageViewers.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:67810
+dist/generated/types.d.ts:69660
 
 ***
 
 ### getMessages()
 
-> **getMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **getMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
 Returns information about messages. If a message is not found, returns null on the corresponding position of the result
 
@@ -8030,19 +8218,117 @@ Returns information about messages. If a message is not found, returns null on t
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67789
+dist/generated/types.d.ts:69639
+
+***
+
+### getMessageStatistics()
+
+> **getMessageStatistics**(`parameters`): `Promise`\<[`messageStatistics`](../type-aliases/messageStatistics.md)\>
+
+Returns detailed statistics about a message. Can be used only if messageProperties.can_get_statistics == true
+
+#### Parameters
+
+• **parameters**: [`getMessageStatistics$DirectInput`](../type-aliases/getMessageStatistics$DirectInput.md)
+
+[getMessageStatistics$Input](../type-aliases/getMessageStatistics$Input.md)
+
+#### Returns
+
+`Promise`\<[`messageStatistics`](../type-aliases/messageStatistics.md)\>
+
+Promise<[MessageStatistics](../type-aliases/MessageStatistics-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74043
+
+***
+
+### getMessageThread()
+
+> **getMessageThread**(`parameters`): `Promise`\<[`messageThreadInfo`](../type-aliases/messageThreadInfo.md)\>
+
+Returns information about a message thread. Can be used only if messageProperties.can_get_message_thread == true
+
+#### Parameters
+
+• **parameters**: [`getMessageThread$DirectInput`](../type-aliases/getMessageThread$DirectInput.md)
+
+[getMessageThread$Input](../type-aliases/getMessageThread$Input.md)
+
+#### Returns
+
+`Promise`\<[`messageThreadInfo`](../type-aliases/messageThreadInfo.md)\>
+
+Promise<[MessageThreadInfo](../type-aliases/MessageThreadInfo-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69653
+
+***
+
+### getMessageThreadHistory()
+
+> **getMessageThreadHistory**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
+
+Returns messages in a message thread of a message. Can be used only if messageProperties.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
+
+- The messages are returned in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+
+#### Parameters
+
+• **parameters**: [`getMessageThreadHistory$DirectInput`](../type-aliases/getMessageThreadHistory$DirectInput.md)
+
+[getMessageThreadHistory$Input](../type-aliases/getMessageThreadHistory$Input.md)
+
+#### Returns
+
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
+
+Promise<[Messages](../type-aliases/Messages-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69931
+
+***
+
+### getMessageViewers()
+
+> **getMessageViewers**(`parameters`): `Promise`\<[`messageViewers`](../type-aliases/messageViewers.md)\>
+
+Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
+
+#### Parameters
+
+• **parameters**: [`getMessageViewers$DirectInput`](../type-aliases/getMessageViewers$DirectInput.md)
+
+[getMessageViewers$Input](../type-aliases/getMessageViewers$Input.md)
+
+#### Returns
+
+`Promise`\<[`messageViewers`](../type-aliases/messageViewers.md)\>
+
+Promise<[MessageViewers](../type-aliases/MessageViewers-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:69667
 
 ***
 
 ### getNetworkStatistics()
 
-> **getNetworkStatistics**(`parameters`): `Promise`\<[`networkStatistics`](../type-aliases/networkStatistics-1.md)\>
+> **getNetworkStatistics**(`parameters`): `Promise`\<[`networkStatistics`](../type-aliases/networkStatistics.md)\>
 
 Returns network data usage statistics. Can be called before authorization
 
@@ -8054,19 +8340,19 @@ Returns network data usage statistics. Can be called before authorization
 
 #### Returns
 
-`Promise`\<[`networkStatistics`](../type-aliases/networkStatistics-1.md)\>
+`Promise`\<[`networkStatistics`](../type-aliases/networkStatistics.md)\>
 
-Promise<[NetworkStatistics](../type-aliases/NetworkStatistics.md)>
+Promise<[NetworkStatistics](../type-aliases/NetworkStatistics-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72148
+dist/generated/types.d.ts:74108
 
 ***
 
 ### getNewChatPrivacySettings()
 
-> **getNewChatPrivacySettings**(`parameters`): `Promise`\<[`newChatPrivacySettings`](../type-aliases/newChatPrivacySettings-1.md)\>
+> **getNewChatPrivacySettings**(`parameters`): `Promise`\<[`newChatPrivacySettings`](../type-aliases/newChatPrivacySettings.md)\>
 
 Returns privacy settings for new chat creation
 
@@ -8078,13 +8364,13 @@ Returns privacy settings for new chat creation
 
 #### Returns
 
-`Promise`\<[`newChatPrivacySettings`](../type-aliases/newChatPrivacySettings-1.md)\>
+`Promise`\<[`newChatPrivacySettings`](../type-aliases/newChatPrivacySettings.md)\>
 
-Promise<[NewChatPrivacySettings](../type-aliases/NewChatPrivacySettings.md)>
+Promise<[NewChatPrivacySettings](../type-aliases/NewChatPrivacySettings-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71941
+dist/generated/types.d.ts:73901
 
 ***
 
@@ -8108,13 +8394,13 @@ Promise<[OptionValue](../type-aliases/OptionValue.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71955
+dist/generated/types.d.ts:73915
 
 ***
 
 ### getOwnedStickerSets()
 
-> **getOwnedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+> **getOwnedStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
 Returns sticker sets owned by the current user
 
@@ -8126,19 +8412,19 @@ Returns sticker sets owned by the current user
 
 #### Returns
 
-`Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+`Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
-Promise<[StickerSets](../type-aliases/StickerSets.md)>
+Promise<[StickerSets](../type-aliases/StickerSets-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72407
+dist/generated/types.d.ts:74367
 
 ***
 
 ### getPassportAuthorizationForm()
 
-> **getPassportAuthorizationForm**(`parameters`): `Promise`\<[`passportAuthorizationForm`](../type-aliases/passportAuthorizationForm-1.md)\>
+> **getPassportAuthorizationForm**(`parameters`): `Promise`\<[`passportAuthorizationForm`](../type-aliases/passportAuthorizationForm.md)\>
 
 Returns a Telegram Passport authorization form for sharing data with a service
 
@@ -8150,19 +8436,19 @@ Returns a Telegram Passport authorization form for sharing data with a service
 
 #### Returns
 
-`Promise`\<[`passportAuthorizationForm`](../type-aliases/passportAuthorizationForm-1.md)\>
+`Promise`\<[`passportAuthorizationForm`](../type-aliases/passportAuthorizationForm.md)\>
 
-Promise<[PassportAuthorizationForm](../type-aliases/PassportAuthorizationForm.md)>
+Promise<[PassportAuthorizationForm](../type-aliases/PassportAuthorizationForm-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72274
+dist/generated/types.d.ts:74234
 
 ***
 
 ### getPassportAuthorizationFormAvailableElements()
 
-> **getPassportAuthorizationFormAvailableElements**(`parameters`): `Promise`\<[`passportElementsWithErrors`](../type-aliases/passportElementsWithErrors-1.md)\>
+> **getPassportAuthorizationFormAvailableElements**(`parameters`): `Promise`\<[`passportElementsWithErrors`](../type-aliases/passportElementsWithErrors.md)\>
 
 Returns already available Telegram Passport elements suitable for completing a Telegram Passport authorization form. Result can be received only once for each authorization form
 
@@ -8174,13 +8460,13 @@ Returns already available Telegram Passport elements suitable for completing a T
 
 #### Returns
 
-`Promise`\<[`passportElementsWithErrors`](../type-aliases/passportElementsWithErrors-1.md)\>
+`Promise`\<[`passportElementsWithErrors`](../type-aliases/passportElementsWithErrors.md)\>
 
-Promise<[PassportElementsWithErrors](../type-aliases/PassportElementsWithErrors.md)>
+Promise<[PassportElementsWithErrors](../type-aliases/PassportElementsWithErrors-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72281
+dist/generated/types.d.ts:74241
 
 ***
 
@@ -8204,13 +8490,13 @@ Promise<[PassportElement](../type-aliases/PassportElement.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72211
+dist/generated/types.d.ts:74171
 
 ***
 
 ### getPasswordState()
 
-> **getPasswordState**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+> **getPasswordState**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
 Returns the current state of 2-step verification
 
@@ -8222,19 +8508,19 @@ Returns the current state of 2-step verification
 
 #### Returns
 
-`Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+`Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
-Promise<[PasswordState](../type-aliases/PasswordState.md)>
+Promise<[PasswordState](../type-aliases/PasswordState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67564
+dist/generated/types.d.ts:69414
 
 ***
 
 ### getPaymentForm()
 
-> **getPaymentForm**(`parameters`): `Promise`\<[`paymentForm`](../type-aliases/paymentForm-1.md)\>
+> **getPaymentForm**(`parameters`): `Promise`\<[`paymentForm`](../type-aliases/paymentForm.md)\>
 
 Returns an invoice payment form. This method must be called when the user presses inline button of the type inlineKeyboardButtonTypeBuy, or wants to buy access to media in a messagePaidMedia message
 
@@ -8246,19 +8532,19 @@ Returns an invoice payment form. This method must be called when the user presse
 
 #### Returns
 
-`Promise`\<[`paymentForm`](../type-aliases/paymentForm-1.md)\>
+`Promise`\<[`paymentForm`](../type-aliases/paymentForm.md)\>
 
-Promise<[PaymentForm](../type-aliases/PaymentForm.md)>
+Promise<[PaymentForm](../type-aliases/PaymentForm-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71692
+dist/generated/types.d.ts:73652
 
 ***
 
 ### getPaymentReceipt()
 
-> **getPaymentReceipt**(`parameters`): `Promise`\<[`paymentReceipt`](../type-aliases/paymentReceipt-1.md)\>
+> **getPaymentReceipt**(`parameters`): `Promise`\<[`paymentReceipt`](../type-aliases/paymentReceipt.md)\>
 
 Returns information about a successful payment
 
@@ -8270,19 +8556,19 @@ Returns information about a successful payment
 
 #### Returns
 
-`Promise`\<[`paymentReceipt`](../type-aliases/paymentReceipt-1.md)\>
+`Promise`\<[`paymentReceipt`](../type-aliases/paymentReceipt.md)\>
 
-Promise<[PaymentReceipt](../type-aliases/PaymentReceipt.md)>
+Promise<[PaymentReceipt](../type-aliases/PaymentReceipt-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71713
+dist/generated/types.d.ts:73673
 
 ***
 
 ### getPhoneNumberInfo()
 
-> **getPhoneNumberInfo**(`parameters`): `Promise`\<[`phoneNumberInfo`](../type-aliases/phoneNumberInfo-1.md)\>
+> **getPhoneNumberInfo**(`parameters`): `Promise`\<[`phoneNumberInfo`](../type-aliases/phoneNumberInfo.md)\>
 
 Returns information about a phone number by its prefix. Can be called before authorization
 
@@ -8294,19 +8580,19 @@ Returns information about a phone number by its prefix. Can be called before aut
 
 #### Returns
 
-`Promise`\<[`phoneNumberInfo`](../type-aliases/phoneNumberInfo-1.md)\>
+`Promise`\<[`phoneNumberInfo`](../type-aliases/phoneNumberInfo.md)\>
 
-Promise<[PhoneNumberInfo](../type-aliases/PhoneNumberInfo.md)>
+Promise<[PhoneNumberInfo](../type-aliases/PhoneNumberInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72589
+dist/generated/types.d.ts:74577
 
 ***
 
 ### getPhoneNumberInfoSync()
 
-> **getPhoneNumberInfoSync**(`parameters`): `Promise`\<[`phoneNumberInfo`](../type-aliases/phoneNumberInfo-1.md)\>
+> **getPhoneNumberInfoSync**(`parameters`): `Promise`\<[`phoneNumberInfo`](../type-aliases/phoneNumberInfo.md)\>
 
 Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
 
@@ -8318,19 +8604,19 @@ Returns information about a phone number by its prefix synchronously. getCountri
 
 #### Returns
 
-`Promise`\<[`phoneNumberInfo`](../type-aliases/phoneNumberInfo-1.md)\>
+`Promise`\<[`phoneNumberInfo`](../type-aliases/phoneNumberInfo.md)\>
 
-Promise<[PhoneNumberInfo](../type-aliases/PhoneNumberInfo.md)>
+Promise<[PhoneNumberInfo](../type-aliases/PhoneNumberInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72596
+dist/generated/types.d.ts:74584
 
 ***
 
 ### getPollVoters()
 
-> **getPollVoters**(`parameters`): `Promise`\<[`messageSenders`](../type-aliases/messageSenders-1.md)\>
+> **getPollVoters**(`parameters`): `Promise`\<[`messageSenders`](../type-aliases/messageSenders.md)\>
 
 Returns message senders voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
 
@@ -8342,19 +8628,43 @@ Returns message senders voted for the specified option in a non-anonymous polls.
 
 #### Returns
 
-`Promise`\<[`messageSenders`](../type-aliases/messageSenders-1.md)\>
+`Promise`\<[`messageSenders`](../type-aliases/messageSenders.md)\>
 
-Promise<[MessageSenders](../type-aliases/MessageSenders.md)>
+Promise<[MessageSenders](../type-aliases/MessageSenders-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68960
+dist/generated/types.d.ts:70832
+
+***
+
+### getPopularWebAppBots()
+
+> **getPopularWebAppBots**(`parameters`): `Promise`\<[`foundUsers`](../type-aliases/foundUsers.md)\>
+
+Returns popular Web App bots
+
+#### Parameters
+
+• **parameters**: [`getPopularWebAppBots$DirectInput`](../type-aliases/getPopularWebAppBots$DirectInput.md)
+
+[getPopularWebAppBots$Input](../type-aliases/getPopularWebAppBots$Input.md)
+
+#### Returns
+
+`Promise`\<[`foundUsers`](../type-aliases/foundUsers.md)\>
+
+Promise<[FoundUsers](../type-aliases/FoundUsers-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70911
 
 ***
 
 ### getPreferredCountryLanguage()
 
-> **getPreferredCountryLanguage**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getPreferredCountryLanguage**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details. Returns a 404 error if unknown
 
@@ -8366,19 +8676,19 @@ Returns an IETF language tag of the language preferred in the country, which mus
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72246
+dist/generated/types.d.ts:74206
 
 ***
 
 ### getPremiumFeatures()
 
-> **getPremiumFeatures**(`parameters`): `Promise`\<[`premiumFeatures`](../type-aliases/premiumFeatures-1.md)\>
+> **getPremiumFeatures**(`parameters`): `Promise`\<[`premiumFeatures`](../type-aliases/premiumFeatures.md)\>
 
 Returns information about features, available to Premium users
 
@@ -8390,19 +8700,19 @@ Returns information about features, available to Premium users
 
 #### Returns
 
-`Promise`\<[`premiumFeatures`](../type-aliases/premiumFeatures-1.md)\>
+`Promise`\<[`premiumFeatures`](../type-aliases/premiumFeatures.md)\>
 
-Promise<[PremiumFeatures](../type-aliases/PremiumFeatures.md)>
+Promise<[PremiumFeatures](../type-aliases/PremiumFeatures-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72428
+dist/generated/types.d.ts:74388
 
 ***
 
 ### getPremiumGiftCodePaymentOptions()
 
-> **getPremiumGiftCodePaymentOptions**(`parameters`): `Promise`\<[`premiumGiftCodePaymentOptions`](../type-aliases/premiumGiftCodePaymentOptions-1.md)\>
+> **getPremiumGiftCodePaymentOptions**(`parameters`): `Promise`\<[`premiumGiftCodePaymentOptions`](../type-aliases/premiumGiftCodePaymentOptions.md)\>
 
 Returns available options for Telegram Premium gift code or giveaway creation
 
@@ -8414,13 +8724,13 @@ Returns available options for Telegram Premium gift code or giveaway creation
 
 #### Returns
 
-`Promise`\<[`premiumGiftCodePaymentOptions`](../type-aliases/premiumGiftCodePaymentOptions-1.md)\>
+`Promise`\<[`premiumGiftCodePaymentOptions`](../type-aliases/premiumGiftCodePaymentOptions.md)\>
 
-Promise<[PremiumGiftCodePaymentOptions](../type-aliases/PremiumGiftCodePaymentOptions.md)>
+Promise<[PremiumGiftCodePaymentOptions](../type-aliases/PremiumGiftCodePaymentOptions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72463
+dist/generated/types.d.ts:74423
 
 ***
 
@@ -8444,13 +8754,13 @@ Promise<[PremiumGiveawayInfo](../type-aliases/PremiumGiveawayInfo.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72491
+dist/generated/types.d.ts:74451
 
 ***
 
 ### getPremiumLimit()
 
-> **getPremiumLimit**(`parameters`): `Promise`\<[`premiumLimit`](../type-aliases/premiumLimit-1.md)\>
+> **getPremiumLimit**(`parameters`): `Promise`\<[`premiumLimit`](../type-aliases/premiumLimit.md)\>
 
 Returns information about a limit, increased for Premium users. Returns a 404 error if the limit is unknown
 
@@ -8462,19 +8772,19 @@ Returns information about a limit, increased for Premium users. Returns a 404 er
 
 #### Returns
 
-`Promise`\<[`premiumLimit`](../type-aliases/premiumLimit-1.md)\>
+`Promise`\<[`premiumLimit`](../type-aliases/premiumLimit.md)\>
 
-Promise<[PremiumLimit](../type-aliases/PremiumLimit.md)>
+Promise<[PremiumLimit](../type-aliases/PremiumLimit-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72421
+dist/generated/types.d.ts:74381
 
 ***
 
 ### getPremiumState()
 
-> **getPremiumState**(`parameters`): `Promise`\<[`premiumState`](../type-aliases/premiumState-1.md)\>
+> **getPremiumState**(`parameters`): `Promise`\<[`premiumState`](../type-aliases/premiumState.md)\>
 
 Returns state of Telegram Premium subscription and promotion videos for Premium features
 
@@ -8486,19 +8796,19 @@ Returns state of Telegram Premium subscription and promotion videos for Premium 
 
 #### Returns
 
-`Promise`\<[`premiumState`](../type-aliases/premiumState-1.md)\>
+`Promise`\<[`premiumState`](../type-aliases/premiumState.md)\>
 
-Promise<[PremiumState](../type-aliases/PremiumState.md)>
+Promise<[PremiumState](../type-aliases/PremiumState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72456
+dist/generated/types.d.ts:74416
 
 ***
 
 ### getPremiumStickerExamples()
 
-> **getPremiumStickerExamples**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getPremiumStickerExamples**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns examples of premium stickers for demonstration purposes
 
@@ -8510,19 +8820,19 @@ Returns examples of premium stickers for demonstration purposes
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72435
+dist/generated/types.d.ts:74395
 
 ***
 
 ### getPremiumStickers()
 
-> **getPremiumStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getPremiumStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns premium stickers from regular sticker sets
 
@@ -8534,19 +8844,19 @@ Returns premium stickers from regular sticker sets
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70816
+dist/generated/types.d.ts:72734
 
 ***
 
 ### getProxies()
 
-> **getProxies**(`parameters`): `Promise`\<[`proxies`](../type-aliases/proxies-1.md)\>
+> **getProxies**(`parameters`): `Promise`\<[`proxies`](../type-aliases/proxies.md)\>
 
 Returns the list of proxies that are currently set up. Can be called before authorization
 
@@ -8558,19 +8868,19 @@ Returns the list of proxies that are currently set up. Can be called before auth
 
 #### Returns
 
-`Promise`\<[`proxies`](../type-aliases/proxies-1.md)\>
+`Promise`\<[`proxies`](../type-aliases/proxies.md)\>
 
-Promise<[Proxies](../type-aliases/Proxies.md)>
+Promise<[Proxies](../type-aliases/Proxies-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72673
+dist/generated/types.d.ts:74661
 
 ***
 
 ### getProxyLink()
 
-> **getProxyLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getProxyLink**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns an HTTPS link, which can be used to add a proxy. Available only for SOCKS5 and MTProto proxies. Can be called before authorization
 
@@ -8582,19 +8892,19 @@ Returns an HTTPS link, which can be used to add a proxy. Available only for SOCK
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72680
+dist/generated/types.d.ts:74668
 
 ***
 
 ### getPushReceiverId()
 
-> **getPushReceiverId**(`parameters`): `Promise`\<[`pushReceiverId`](../type-aliases/pushReceiverId-1.md)\>
+> **getPushReceiverId**(`parameters`): `Promise`\<[`pushReceiverId`](../type-aliases/pushReceiverId.md)\>
 
 Returns a globally unique push notification subscription identifier for identification of an account, which has received a push notification. Can be called synchronously
 
@@ -8606,19 +8916,19 @@ Returns a globally unique push notification subscription identifier for identifi
 
 #### Returns
 
-`Promise`\<[`pushReceiverId`](../type-aliases/pushReceiverId-1.md)\>
+`Promise`\<[`pushReceiverId`](../type-aliases/pushReceiverId.md)\>
 
-Promise<[PushReceiverId](../type-aliases/PushReceiverId.md)>
+Promise<[PushReceiverId](../type-aliases/PushReceiverId-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71892
+dist/generated/types.d.ts:73852
 
 ***
 
 ### getReadDatePrivacySettings()
 
-> **getReadDatePrivacySettings**(`parameters`): `Promise`\<[`readDatePrivacySettings`](../type-aliases/readDatePrivacySettings-1.md)\>
+> **getReadDatePrivacySettings**(`parameters`): `Promise`\<[`readDatePrivacySettings`](../type-aliases/readDatePrivacySettings.md)\>
 
 Returns privacy settings for message read date
 
@@ -8630,19 +8940,19 @@ Returns privacy settings for message read date
 
 #### Returns
 
-`Promise`\<[`readDatePrivacySettings`](../type-aliases/readDatePrivacySettings-1.md)\>
+`Promise`\<[`readDatePrivacySettings`](../type-aliases/readDatePrivacySettings.md)\>
 
-Promise<[ReadDatePrivacySettings](../type-aliases/ReadDatePrivacySettings.md)>
+Promise<[ReadDatePrivacySettings](../type-aliases/ReadDatePrivacySettings-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71927
+dist/generated/types.d.ts:73887
 
 ***
 
 ### getRecentEmojiStatuses()
 
-> **getRecentEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+> **getRecentEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
 Returns recent emoji statuses for self status
 
@@ -8654,19 +8964,19 @@ Returns recent emoji statuses for self status
 
 #### Returns
 
-`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
-Promise<[EmojiStatuses](../type-aliases/EmojiStatuses.md)>
+Promise<[EmojiStatuses](../type-aliases/EmojiStatuses-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70099
+dist/generated/types.d.ts:71999
 
 ***
 
 ### getRecentInlineBots()
 
-> **getRecentInlineBots**(`parameters`): `Promise`\<[`users`](../type-aliases/users-1.md)\>
+> **getRecentInlineBots**(`parameters`): `Promise`\<[`users`](../type-aliases/users.md)\>
 
 Returns up to 20 recently used inline bots in the order of their last usage
 
@@ -8678,43 +8988,19 @@ Returns up to 20 recently used inline bots in the order of their last usage
 
 #### Returns
 
-`Promise`\<[`users`](../type-aliases/users-1.md)\>
+`Promise`\<[`users`](../type-aliases/users.md)\>
 
-Promise<[Users](../type-aliases/Users.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:71046
-
-***
-
-### getRecentStickers()
-
-> **getRecentStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
-
-Returns a list of recently used stickers
-
-#### Parameters
-
-• **parameters**: [`getRecentStickers$DirectInput`](../type-aliases/getRecentStickers$DirectInput.md)
-
-[getRecentStickers$Input](../type-aliases/getRecentStickers$Input.md)
-
-#### Returns
-
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
-
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Users](../type-aliases/Users-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70900
+dist/generated/types.d.ts:72964
 
 ***
 
 ### getRecentlyOpenedChats()
 
-> **getRecentlyOpenedChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getRecentlyOpenedChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
 
@@ -8726,19 +9012,19 @@ Returns recently opened chats; this is an offline request. Returns chats in the 
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67956
+dist/generated/types.d.ts:69813
 
 ***
 
 ### getRecentlyVisitedTMeUrls()
 
-> **getRecentlyVisitedTMeUrls**(`parameters`): `Promise`\<[`tMeUrls`](../type-aliases/tMeUrls-1.md)\>
+> **getRecentlyVisitedTMeUrls**(`parameters`): `Promise`\<[`tMeUrls`](../type-aliases/tMeUrls.md)\>
 
 Returns t.me URLs recently visited by a newly registered user
 
@@ -8750,19 +9036,43 @@ Returns t.me URLs recently visited by a newly registered user
 
 #### Returns
 
-`Promise`\<[`tMeUrls`](../type-aliases/tMeUrls-1.md)\>
+`Promise`\<[`tMeUrls`](../type-aliases/tMeUrls.md)\>
 
-Promise<[TMeUrls](../type-aliases/TMeUrls.md)>
+Promise<[TMeUrls](../type-aliases/TMeUrls-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71899
+dist/generated/types.d.ts:73859
+
+***
+
+### getRecentStickers()
+
+> **getRecentStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
+
+Returns a list of recently used stickers
+
+#### Parameters
+
+• **parameters**: [`getRecentStickers$DirectInput`](../type-aliases/getRecentStickers$DirectInput.md)
+
+[getRecentStickers$Input](../type-aliases/getRecentStickers$Input.md)
+
+#### Returns
+
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
+
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72818
 
 ***
 
 ### getRecommendedChatFolders()
 
-> **getRecommendedChatFolders**(`parameters`): `Promise`\<[`recommendedChatFolders`](../type-aliases/recommendedChatFolders-1.md)\>
+> **getRecommendedChatFolders**(`parameters`): `Promise`\<[`recommendedChatFolders`](../type-aliases/recommendedChatFolders.md)\>
 
 Returns recommended chat folders for the current user
 
@@ -8774,19 +9084,19 @@ Returns recommended chat folders for the current user
 
 #### Returns
 
-`Promise`\<[`recommendedChatFolders`](../type-aliases/recommendedChatFolders-1.md)\>
+`Promise`\<[`recommendedChatFolders`](../type-aliases/recommendedChatFolders.md)\>
 
-Promise<[RecommendedChatFolders](../type-aliases/RecommendedChatFolders.md)>
+Promise<[RecommendedChatFolders](../type-aliases/RecommendedChatFolders-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69381
+dist/generated/types.d.ts:71267
 
 ***
 
 ### getRecommendedChats()
 
-> **getRecommendedChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getRecommendedChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns a list of channel chats recommended to the current user
 
@@ -8798,19 +9108,19 @@ Returns a list of channel chats recommended to the current user
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67886
+dist/generated/types.d.ts:69743
 
 ***
 
 ### getRecoveryEmailAddress()
 
-> **getRecoveryEmailAddress**(`parameters`): `Promise`\<[`recoveryEmailAddress`](../type-aliases/recoveryEmailAddress-1.md)\>
+> **getRecoveryEmailAddress**(`parameters`): `Promise`\<[`recoveryEmailAddress`](../type-aliases/recoveryEmailAddress.md)\>
 
 Returns a 2-step verification recovery email address that was previously set up. This method can be used to verify a password provided by the user
 
@@ -8822,19 +9132,19 @@ Returns a 2-step verification recovery email address that was previously set up.
 
 #### Returns
 
-`Promise`\<[`recoveryEmailAddress`](../type-aliases/recoveryEmailAddress-1.md)\>
+`Promise`\<[`recoveryEmailAddress`](../type-aliases/recoveryEmailAddress.md)\>
 
-Promise<[RecoveryEmailAddress](../type-aliases/RecoveryEmailAddress.md)>
+Promise<[RecoveryEmailAddress](../type-aliases/RecoveryEmailAddress-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67601
+dist/generated/types.d.ts:69451
 
 ***
 
 ### getRemoteFile()
 
-> **getRemoteFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file-1.md)\>
+> **getRemoteFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file.md)\>
 
 Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
 
@@ -8848,19 +9158,19 @@ Returns information about a file by its remote identifier; this is an offline re
 
 #### Returns
 
-`Promise`\<[`file`](../type-aliases/file-1.md)\>
+`Promise`\<[`file`](../type-aliases/file.md)\>
 
-Promise<[File](../type-aliases/File.md)>
+Promise<[File](../type-aliases/File-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67826
+dist/generated/types.d.ts:69683
 
 ***
 
 ### getRepliedMessage()
 
-> **getRepliedMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **getRepliedMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Returns information about a non-bundled message that is replied by a given message. Also, returns the pinned message, the game message, the invoice message,
 
@@ -8876,19 +9186,19 @@ Returns information about a non-bundled message that is replied by a given messa
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67768
+dist/generated/types.d.ts:69618
 
 ***
 
 ### getSavedAnimations()
 
-> **getSavedAnimations**(`parameters`): `Promise`\<[`animations`](../type-aliases/animations-1.md)\>
+> **getSavedAnimations**(`parameters`): `Promise`\<[`animations`](../type-aliases/animations.md)\>
 
 Returns saved animations
 
@@ -8900,19 +9210,19 @@ Returns saved animations
 
 #### Returns
 
-`Promise`\<[`animations`](../type-aliases/animations-1.md)\>
+`Promise`\<[`animations`](../type-aliases/animations.md)\>
 
-Promise<[Animations](../type-aliases/Animations.md)>
+Promise<[Animations](../type-aliases/Animations-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71023
+dist/generated/types.d.ts:72941
 
 ***
 
 ### getSavedMessagesTags()
 
-> **getSavedMessagesTags**(`parameters`): `Promise`\<[`savedMessagesTags`](../type-aliases/savedMessagesTags-1.md)\>
+> **getSavedMessagesTags**(`parameters`): `Promise`\<[`savedMessagesTags`](../type-aliases/savedMessagesTags.md)\>
 
 Returns tags used in Saved Messages or a Saved Messages topic
 
@@ -8924,21 +9234,21 @@ Returns tags used in Saved Messages or a Saved Messages topic
 
 #### Returns
 
-`Promise`\<[`savedMessagesTags`](../type-aliases/savedMessagesTags-1.md)\>
+`Promise`\<[`savedMessagesTags`](../type-aliases/savedMessagesTags.md)\>
 
-Promise<[SavedMessagesTags](../type-aliases/SavedMessagesTags.md)>
+Promise<[SavedMessagesTags](../type-aliases/SavedMessagesTags-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68839
+dist/generated/types.d.ts:70711
 
 ***
 
 ### getSavedMessagesTopicHistory()
 
-> **getSavedMessagesTopicHistory**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **getSavedMessagesTopicHistory**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Returns messages in a Saved Messages topic. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id)
+Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
 
 #### Parameters
 
@@ -8948,19 +9258,19 @@ Returns messages in a Saved Messages topic. The messages are returned in a rever
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68014
+dist/generated/types.d.ts:69871
 
 ***
 
 ### getSavedMessagesTopicMessageByDate()
 
-> **getSavedMessagesTopicMessageByDate**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **getSavedMessagesTopicMessageByDate**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Returns the last message sent in a Saved Messages topic no later than the specified date
 
@@ -8972,19 +9282,19 @@ Returns the last message sent in a Saved Messages topic no later than the specif
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68021
+dist/generated/types.d.ts:69878
 
 ***
 
 ### getSavedNotificationSound()
 
-> **getSavedNotificationSound**(`parameters`): `Promise`\<[`notificationSounds`](../type-aliases/notificationSounds-1.md)\>
+> **getSavedNotificationSound**(`parameters`): `Promise`\<[`notificationSounds`](../type-aliases/notificationSounds.md)\>
 
 Returns saved notification sound by its identifier. Returns a 404 error if there is no saved notification sound with the specified identifier
 
@@ -8996,19 +9306,19 @@ Returns saved notification sound by its identifier. Returns a 404 error if there
 
 #### Returns
 
-`Promise`\<[`notificationSounds`](../type-aliases/notificationSounds-1.md)\>
+`Promise`\<[`notificationSounds`](../type-aliases/notificationSounds.md)\>
 
-Promise<[NotificationSounds](../type-aliases/NotificationSounds.md)>
+Promise<[NotificationSounds](../type-aliases/NotificationSounds-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69753
+dist/generated/types.d.ts:71639
 
 ***
 
 ### getSavedNotificationSounds()
 
-> **getSavedNotificationSounds**(`parameters`): `Promise`\<[`notificationSounds`](../type-aliases/notificationSounds-1.md)\>
+> **getSavedNotificationSounds**(`parameters`): `Promise`\<[`notificationSounds`](../type-aliases/notificationSounds.md)\>
 
 Returns the list of saved notification sounds. If a sound isn't in the list, then default sound needs to be used
 
@@ -9020,19 +9330,19 @@ Returns the list of saved notification sounds. If a sound isn't in the list, the
 
 #### Returns
 
-`Promise`\<[`notificationSounds`](../type-aliases/notificationSounds-1.md)\>
+`Promise`\<[`notificationSounds`](../type-aliases/notificationSounds.md)\>
 
-Promise<[NotificationSounds](../type-aliases/NotificationSounds.md)>
+Promise<[NotificationSounds](../type-aliases/NotificationSounds-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69760
+dist/generated/types.d.ts:71646
 
 ***
 
 ### getSavedOrderInfo()
 
-> **getSavedOrderInfo**(`parameters`): `Promise`\<[`orderInfo`](../type-aliases/orderInfo-1.md)\>
+> **getSavedOrderInfo**(`parameters`): `Promise`\<[`orderInfo`](../type-aliases/orderInfo.md)\>
 
 Returns saved order information. Returns a 404 error if there is no saved order information
 
@@ -9044,19 +9354,19 @@ Returns saved order information. Returns a 404 error if there is no saved order 
 
 #### Returns
 
-`Promise`\<[`orderInfo`](../type-aliases/orderInfo-1.md)\>
+`Promise`\<[`orderInfo`](../type-aliases/orderInfo.md)\>
 
-Promise<[OrderInfo](../type-aliases/OrderInfo.md)>
+Promise<[OrderInfo](../type-aliases/OrderInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71720
+dist/generated/types.d.ts:73680
 
 ***
 
 ### getScopeNotificationSettings()
 
-> **getScopeNotificationSettings**(`parameters`): `Promise`\<[`scopeNotificationSettings`](../type-aliases/scopeNotificationSettings-1.md)\>
+> **getScopeNotificationSettings**(`parameters`): `Promise`\<[`scopeNotificationSettings`](../type-aliases/scopeNotificationSettings.md)\>
 
 Returns the notification settings for chats of a given type
 
@@ -9068,19 +9378,19 @@ Returns the notification settings for chats of a given type
 
 #### Returns
 
-`Promise`\<[`scopeNotificationSettings`](../type-aliases/scopeNotificationSettings-1.md)\>
+`Promise`\<[`scopeNotificationSettings`](../type-aliases/scopeNotificationSettings.md)\>
 
-Promise<[ScopeNotificationSettings](../type-aliases/ScopeNotificationSettings.md)>
+Promise<[ScopeNotificationSettings](../type-aliases/ScopeNotificationSettings-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69788
+dist/generated/types.d.ts:71674
 
 ***
 
 ### getSearchedForTags()
 
-> **getSearchedForTags**(`parameters`): `Promise`\<[`hashtags`](../type-aliases/hashtags-1.md)\>
+> **getSearchedForTags**(`parameters`): `Promise`\<[`hashtags`](../type-aliases/hashtags.md)\>
 
 Returns recently searched for hashtags or cashtags by their prefix
 
@@ -9092,19 +9402,19 @@ Returns recently searched for hashtags or cashtags by their prefix
 
 #### Returns
 
-`Promise`\<[`hashtags`](../type-aliases/hashtags-1.md)\>
+`Promise`\<[`hashtags`](../type-aliases/hashtags.md)\>
 
-Promise<[Hashtags](../type-aliases/Hashtags.md)>
+Promise<[Hashtags](../type-aliases/Hashtags-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68177
+dist/generated/types.d.ts:70034
 
 ***
 
 ### getSecretChat()
 
-> **getSecretChat**(`parameters`): `Promise`\<[`secretChat`](../type-aliases/secretChat-1.md)\>
+> **getSecretChat**(`parameters`): `Promise`\<[`secretChat`](../type-aliases/secretChat.md)\>
 
 Returns information about a secret chat by its identifier. This is an offline request
 
@@ -9116,21 +9426,21 @@ Returns information about a secret chat by its identifier. This is an offline re
 
 #### Returns
 
-`Promise`\<[`secretChat`](../type-aliases/secretChat-1.md)\>
+`Promise`\<[`secretChat`](../type-aliases/secretChat.md)\>
 
-Promise<[SecretChat](../type-aliases/SecretChat.md)>
+Promise<[SecretChat](../type-aliases/SecretChat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67736
+dist/generated/types.d.ts:69586
 
 ***
 
 ### getStarAdAccountUrl()
 
-> **getStarAdAccountUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getStarAdAccountUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram stars
+Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram Stars
 
 #### Parameters
 
@@ -9140,21 +9450,45 @@ Returns a URL for a Telegram Ad platform account that can be used to set up adve
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72069
+dist/generated/types.d.ts:74029
+
+***
+
+### getStarGiftPaymentOptions()
+
+> **getStarGiftPaymentOptions**(`parameters`): `Promise`\<[`starPaymentOptions`](../type-aliases/starPaymentOptions.md)\>
+
+Returns available options for Telegram Stars gifting
+
+#### Parameters
+
+• **parameters**: [`getStarGiftPaymentOptions$DirectInput`](../type-aliases/getStarGiftPaymentOptions$DirectInput.md)
+
+[getStarGiftPaymentOptions$Input](../type-aliases/getStarGiftPaymentOptions$Input.md)
+
+#### Returns
+
+`Promise`\<[`starPaymentOptions`](../type-aliases/starPaymentOptions.md)\>
+
+Promise<[StarPaymentOptions](../type-aliases/StarPaymentOptions-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74465
 
 ***
 
 ### getStarPaymentOptions()
 
-> **getStarPaymentOptions**(`parameters`): `Promise`\<[`starPaymentOptions`](../type-aliases/starPaymentOptions-1.md)\>
+> **getStarPaymentOptions**(`parameters`): `Promise`\<[`starPaymentOptions`](../type-aliases/starPaymentOptions.md)\>
 
-Returns available options for Telegram stars purchase
+Returns available options for Telegram Stars purchase
 
 #### Parameters
 
@@ -9164,21 +9498,21 @@ Returns available options for Telegram stars purchase
 
 #### Returns
 
-`Promise`\<[`starPaymentOptions`](../type-aliases/starPaymentOptions-1.md)\>
+`Promise`\<[`starPaymentOptions`](../type-aliases/starPaymentOptions.md)\>
 
-Promise<[StarPaymentOptions](../type-aliases/StarPaymentOptions.md)>
+Promise<[StarPaymentOptions](../type-aliases/StarPaymentOptions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72498
+dist/generated/types.d.ts:74458
 
 ***
 
 ### getStarRevenueStatistics()
 
-> **getStarRevenueStatistics**(`parameters`): `Promise`\<[`starRevenueStatistics`](../type-aliases/starRevenueStatistics-1.md)\>
+> **getStarRevenueStatistics**(`parameters`): `Promise`\<[`starRevenueStatistics`](../type-aliases/starRevenueStatistics.md)\>
 
-Returns detailed Telegram star revenue statistics
+Returns detailed Telegram Star revenue statistics
 
 #### Parameters
 
@@ -9188,21 +9522,45 @@ Returns detailed Telegram star revenue statistics
 
 #### Returns
 
-`Promise`\<[`starRevenueStatistics`](../type-aliases/starRevenueStatistics-1.md)\>
+`Promise`\<[`starRevenueStatistics`](../type-aliases/starRevenueStatistics.md)\>
 
-Promise<[StarRevenueStatistics](../type-aliases/StarRevenueStatistics.md)>
+Promise<[StarRevenueStatistics](../type-aliases/StarRevenueStatistics-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72055
+dist/generated/types.d.ts:74015
+
+***
+
+### getStarSubscriptions()
+
+> **getStarSubscriptions**(`parameters`): `Promise`\<[`starSubscriptions`](../type-aliases/starSubscriptions.md)\>
+
+Returns the list of Telegram Star subscriptions for the current user
+
+#### Parameters
+
+• **parameters**: [`getStarSubscriptions$DirectInput`](../type-aliases/getStarSubscriptions$DirectInput.md)
+
+[getStarSubscriptions$Input](../type-aliases/getStarSubscriptions$Input.md)
+
+#### Returns
+
+`Promise`\<[`starSubscriptions`](../type-aliases/starSubscriptions.md)\>
+
+Promise<[StarSubscriptions](../type-aliases/StarSubscriptions-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74479
 
 ***
 
 ### getStarTransactions()
 
-> **getStarTransactions**(`parameters`): `Promise`\<[`starTransactions`](../type-aliases/starTransactions-1.md)\>
+> **getStarTransactions**(`parameters`): `Promise`\<[`starTransactions`](../type-aliases/starTransactions.md)\>
 
-Returns the list of Telegram star transactions for the specified owner
+Returns the list of Telegram Star transactions for the specified owner
 
 #### Parameters
 
@@ -9212,21 +9570,21 @@ Returns the list of Telegram star transactions for the specified owner
 
 #### Returns
 
-`Promise`\<[`starTransactions`](../type-aliases/starTransactions-1.md)\>
+`Promise`\<[`starTransactions`](../type-aliases/starTransactions.md)\>
 
-Promise<[StarTransactions](../type-aliases/StarTransactions.md)>
+Promise<[StarTransactions](../type-aliases/StarTransactions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72505
+dist/generated/types.d.ts:74472
 
 ***
 
 ### getStarWithdrawalUrl()
 
-> **getStarWithdrawalUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getStarWithdrawalUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Returns a URL for Telegram star withdrawal
+Returns a URL for Telegram Star withdrawal
 
 #### Parameters
 
@@ -9236,13 +9594,13 @@ Returns a URL for Telegram star withdrawal
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72062
+dist/generated/types.d.ts:74022
 
 ***
 
@@ -9266,13 +9624,13 @@ Promise<[StatisticalGraph](../type-aliases/StatisticalGraph.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72104
+dist/generated/types.d.ts:74064
 
 ***
 
 ### getStickerEmojis()
 
-> **getStickerEmojis**(`parameters`): `Promise`\<[`emojis`](../type-aliases/emojis-1.md)\>
+> **getStickerEmojis**(`parameters`): `Promise`\<[`emojis`](../type-aliases/emojis.md)\>
 
 Returns emoji corresponding to a sticker. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
 
@@ -9284,43 +9642,19 @@ Returns emoji corresponding to a sticker. The list is only for informational pur
 
 #### Returns
 
-`Promise`\<[`emojis`](../type-aliases/emojis-1.md)\>
+`Promise`\<[`emojis`](../type-aliases/emojis.md)\>
 
-Promise<[Emojis](../type-aliases/Emojis.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70953
-
-***
-
-### getStickerSet()
-
-> **getStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../type-aliases/stickerSet-1.md)\>
-
-Returns information about a sticker set by its identifier
-
-#### Parameters
-
-• **parameters**: [`getStickerSet$DirectInput`](../type-aliases/getStickerSet$DirectInput.md)
-
-[getStickerSet$Input](../type-aliases/getStickerSet$Input.md)
-
-#### Returns
-
-`Promise`\<[`stickerSet`](../type-aliases/stickerSet-1.md)\>
-
-Promise<[StickerSet](../type-aliases/StickerSet.md)>
+Promise<[Emojis](../type-aliases/Emojis-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70851
+dist/generated/types.d.ts:72871
 
 ***
 
 ### getStickers()
 
-> **getStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **getStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Returns stickers from the installed sticker sets that correspond to any of the given emoji or can be found by sticker-specific keywords. If the query is non-empty, then favorite, recently used or trending stickers may also be returned
 
@@ -9332,19 +9666,43 @@ Returns stickers from the installed sticker sets that correspond to any of the g
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70788
+dist/generated/types.d.ts:72706
+
+***
+
+### getStickerSet()
+
+> **getStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../type-aliases/stickerSet.md)\>
+
+Returns information about a sticker set by its identifier
+
+#### Parameters
+
+• **parameters**: [`getStickerSet$DirectInput`](../type-aliases/getStickerSet$DirectInput.md)
+
+[getStickerSet$Input](../type-aliases/getStickerSet$Input.md)
+
+#### Returns
+
+`Promise`\<[`stickerSet`](../type-aliases/stickerSet.md)\>
+
+Promise<[StickerSet](../type-aliases/StickerSet-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72769
 
 ***
 
 ### getStorageStatistics()
 
-> **getStorageStatistics**(`parameters`): `Promise`\<[`storageStatistics`](../type-aliases/storageStatistics-1.md)\>
+> **getStorageStatistics**(`parameters`): `Promise`\<[`storageStatistics`](../type-aliases/storageStatistics.md)\>
 
 Returns storage usage statistics. Can be called before authorization
 
@@ -9356,19 +9714,19 @@ Returns storage usage statistics. Can be called before authorization
 
 #### Returns
 
-`Promise`\<[`storageStatistics`](../type-aliases/storageStatistics-1.md)\>
+`Promise`\<[`storageStatistics`](../type-aliases/storageStatistics.md)\>
 
-Promise<[StorageStatistics](../type-aliases/StorageStatistics.md)>
+Promise<[StorageStatistics](../type-aliases/StorageStatistics-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72111
+dist/generated/types.d.ts:74071
 
 ***
 
 ### getStorageStatisticsFast()
 
-> **getStorageStatisticsFast**(`parameters`): `Promise`\<[`storageStatisticsFast`](../type-aliases/storageStatisticsFast-1.md)\>
+> **getStorageStatisticsFast**(`parameters`): `Promise`\<[`storageStatisticsFast`](../type-aliases/storageStatisticsFast.md)\>
 
 Quickly returns approximate storage usage statistics. Can be called before authorization
 
@@ -9380,19 +9738,19 @@ Quickly returns approximate storage usage statistics. Can be called before autho
 
 #### Returns
 
-`Promise`\<[`storageStatisticsFast`](../type-aliases/storageStatisticsFast-1.md)\>
+`Promise`\<[`storageStatisticsFast`](../type-aliases/storageStatisticsFast.md)\>
 
-Promise<[StorageStatisticsFast](../type-aliases/StorageStatisticsFast.md)>
+Promise<[StorageStatisticsFast](../type-aliases/StorageStatisticsFast-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72118
+dist/generated/types.d.ts:74078
 
 ***
 
 ### getStory()
 
-> **getStory**(`parameters`): `Promise`\<[`story`](../type-aliases/story-1.md)\>
+> **getStory**(`parameters`): `Promise`\<[`story`](../type-aliases/story.md)\>
 
 Returns a story
 
@@ -9404,19 +9762,19 @@ Returns a story
 
 #### Returns
 
-`Promise`\<[`story`](../type-aliases/story-1.md)\>
+`Promise`\<[`story`](../type-aliases/story.md)\>
 
-Promise<[Story](../type-aliases/Story.md)>
+Promise<[Story](../type-aliases/Story-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69837
+dist/generated/types.d.ts:71730
 
 ***
 
 ### getStoryAvailableReactions()
 
-> **getStoryAvailableReactions**(`parameters`): `Promise`\<[`availableReactions`](../type-aliases/availableReactions-1.md)\>
+> **getStoryAvailableReactions**(`parameters`): `Promise`\<[`availableReactions`](../type-aliases/availableReactions.md)\>
 
 Returns reactions, which can be chosen for a story
 
@@ -9428,19 +9786,19 @@ Returns reactions, which can be chosen for a story
 
 #### Returns
 
-`Promise`\<[`availableReactions`](../type-aliases/availableReactions-1.md)\>
+`Promise`\<[`availableReactions`](../type-aliases/availableReactions.md)\>
 
-Promise<[AvailableReactions](../type-aliases/AvailableReactions.md)>
+Promise<[AvailableReactions](../type-aliases/AvailableReactions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69962
+dist/generated/types.d.ts:71862
 
 ***
 
 ### getStoryInteractions()
 
-> **getStoryInteractions**(`parameters`): `Promise`\<[`storyInteractions`](../type-aliases/storyInteractions-1.md)\>
+> **getStoryInteractions**(`parameters`): `Promise`\<[`storyInteractions`](../type-aliases/storyInteractions.md)\>
 
 Returns interactions with a story. The method can be called only for stories posted on behalf of the current user
 
@@ -9452,19 +9810,19 @@ Returns interactions with a story. The method can be called only for stories pos
 
 #### Returns
 
-`Promise`\<[`storyInteractions`](../type-aliases/storyInteractions-1.md)\>
+`Promise`\<[`storyInteractions`](../type-aliases/storyInteractions.md)\>
 
-Promise<[StoryInteractions](../type-aliases/StoryInteractions.md)>
+Promise<[StoryInteractions](../type-aliases/StoryInteractions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69976
+dist/generated/types.d.ts:71876
 
 ***
 
 ### getStoryNotificationSettingsExceptions()
 
-> **getStoryNotificationSettingsExceptions**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getStoryNotificationSettingsExceptions**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns the list of chats with non-default notification settings for stories
 
@@ -9476,19 +9834,19 @@ Returns the list of chats with non-default notification settings for stories
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69893
+dist/generated/types.d.ts:71793
 
 ***
 
 ### getStoryPublicForwards()
 
-> **getStoryPublicForwards**(`parameters`): `Promise`\<[`publicForwards`](../type-aliases/publicForwards-1.md)\>
+> **getStoryPublicForwards**(`parameters`): `Promise`\<[`publicForwards`](../type-aliases/publicForwards.md)\>
 
 Returns forwards of a story as a message to public chats and reposts by public channels. Can be used only if the story is posted on behalf of the current user or story.can_get_statistics == true.
 
@@ -9502,19 +9860,19 @@ Returns forwards of a story as a message to public chats and reposts by public c
 
 #### Returns
 
-`Promise`\<[`publicForwards`](../type-aliases/publicForwards-1.md)\>
+`Promise`\<[`publicForwards`](../type-aliases/publicForwards.md)\>
 
-Promise<[PublicForwards](../type-aliases/PublicForwards.md)>
+Promise<[PublicForwards](../type-aliases/PublicForwards-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70008
+dist/generated/types.d.ts:71908
 
 ***
 
 ### getStoryStatistics()
 
-> **getStoryStatistics**(`parameters`): `Promise`\<[`storyStatistics`](../type-aliases/storyStatistics-1.md)\>
+> **getStoryStatistics**(`parameters`): `Promise`\<[`storyStatistics`](../type-aliases/storyStatistics.md)\>
 
 Returns detailed statistics about a story. Can be used only if story.can_get_statistics == true
 
@@ -9526,19 +9884,19 @@ Returns detailed statistics about a story. Can be used only if story.can_get_sta
 
 #### Returns
 
-`Promise`\<[`storyStatistics`](../type-aliases/storyStatistics-1.md)\>
+`Promise`\<[`storyStatistics`](../type-aliases/storyStatistics.md)\>
 
-Promise<[StoryStatistics](../type-aliases/StoryStatistics.md)>
+Promise<[StoryStatistics](../type-aliases/StoryStatistics-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72097
+dist/generated/types.d.ts:74057
 
 ***
 
 ### getSuggestedFileName()
 
-> **getSuggestedFileName**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getSuggestedFileName**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns suggested name for saving a file in a given directory
 
@@ -9550,19 +9908,19 @@ Returns suggested name for saving a file in a given directory
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70162
+dist/generated/types.d.ts:72062
 
 ***
 
 ### getSuggestedStickerSetName()
 
-> **getSuggestedStickerSetName**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getSuggestedStickerSetName**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns a suggested name for a new sticker set with a given title
 
@@ -9574,19 +9932,19 @@ Returns a suggested name for a new sticker set with a given title
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72309
+dist/generated/types.d.ts:74269
 
 ***
 
 ### getSuitableDiscussionChats()
 
-> **getSuitableDiscussionChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getSuitableDiscussionChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns a list of basic group and supergroup chats, which can be used as a discussion group for a channel. Returned basic group chats must be first upgraded to supergroups before they can be set as a discussion group.
 
@@ -9600,19 +9958,19 @@ Returns a list of basic group and supergroup chats, which can be used as a discu
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67986
+dist/generated/types.d.ts:69843
 
 ***
 
 ### getSuitablePersonalChats()
 
-> **getSuitablePersonalChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getSuitablePersonalChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns a list of channel chats, which can be used as a personal chat
 
@@ -9624,19 +9982,19 @@ Returns a list of channel chats, which can be used as a personal chat
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68000
+dist/generated/types.d.ts:69857
 
 ***
 
 ### getSupergroup()
 
-> **getSupergroup**(`parameters`): `Promise`\<[`supergroup`](../type-aliases/supergroup-1.md)\>
+> **getSupergroup**(`parameters`): `Promise`\<[`supergroup`](../type-aliases/supergroup.md)\>
 
 Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
 
@@ -9648,19 +10006,19 @@ Returns information about a supergroup or a channel by its identifier. This is a
 
 #### Returns
 
-`Promise`\<[`supergroup`](../type-aliases/supergroup-1.md)\>
+`Promise`\<[`supergroup`](../type-aliases/supergroup.md)\>
 
-Promise<[Supergroup](../type-aliases/Supergroup.md)>
+Promise<[Supergroup](../type-aliases/Supergroup-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67722
+dist/generated/types.d.ts:69572
 
 ***
 
 ### getSupergroupFullInfo()
 
-> **getSupergroupFullInfo**(`parameters`): `Promise`\<[`supergroupFullInfo`](../type-aliases/supergroupFullInfo-1.md)\>
+> **getSupergroupFullInfo**(`parameters`): `Promise`\<[`supergroupFullInfo`](../type-aliases/supergroupFullInfo.md)\>
 
 Returns full information about a supergroup or a channel by its identifier, cached for up to 1 minute
 
@@ -9672,19 +10030,19 @@ Returns full information about a supergroup or a channel by its identifier, cach
 
 #### Returns
 
-`Promise`\<[`supergroupFullInfo`](../type-aliases/supergroupFullInfo-1.md)\>
+`Promise`\<[`supergroupFullInfo`](../type-aliases/supergroupFullInfo.md)\>
 
-Promise<[SupergroupFullInfo](../type-aliases/SupergroupFullInfo.md)>
+Promise<[SupergroupFullInfo](../type-aliases/SupergroupFullInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67729
+dist/generated/types.d.ts:69579
 
 ***
 
 ### getSupergroupMembers()
 
-> **getSupergroupMembers**(`parameters`): `Promise`\<[`chatMembers`](../type-aliases/chatMembers-1.md)\>
+> **getSupergroupMembers**(`parameters`): `Promise`\<[`chatMembers`](../type-aliases/chatMembers.md)\>
 
 Returns information about members or banned users in a supergroup or channel. Can be used only if supergroupFullInfo.can_get_members == true; additionally, administrator privileges may be required for some filters
 
@@ -9696,19 +10054,19 @@ Returns information about members or banned users in a supergroup or channel. Ca
 
 #### Returns
 
-`Promise`\<[`chatMembers`](../type-aliases/chatMembers-1.md)\>
+`Promise`\<[`chatMembers`](../type-aliases/chatMembers.md)\>
 
-Promise<[ChatMembers](../type-aliases/ChatMembers.md)>
+Promise<[ChatMembers](../type-aliases/ChatMembers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71664
+dist/generated/types.d.ts:73624
 
 ***
 
 ### getSupportName()
 
-> **getSupportName**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **getSupportName**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Returns localized name of the Telegram support user; for Telegram support only
 
@@ -9720,19 +10078,19 @@ Returns localized name of the Telegram support user; for Telegram support only
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72764
+dist/generated/types.d.ts:74752
 
 ***
 
 ### getSupportUser()
 
-> **getSupportUser**(`parameters`): `Promise`\<[`user`](../type-aliases/user-1.md)\>
+> **getSupportUser**(`parameters`): `Promise`\<[`user`](../type-aliases/user.md)\>
 
 Returns a user that can be contacted to get support
 
@@ -9744,19 +10102,19 @@ Returns a user that can be contacted to get support
 
 #### Returns
 
-`Promise`\<[`user`](../type-aliases/user-1.md)\>
+`Promise`\<[`user`](../type-aliases/user.md)\>
 
-Promise<[User](../type-aliases/User.md)>
+Promise<[User](../type-aliases/User-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71755
+dist/generated/types.d.ts:73715
 
 ***
 
 ### getTemporaryPasswordState()
 
-> **getTemporaryPasswordState**(`parameters`): `Promise`\<[`temporaryPasswordState`](../type-aliases/temporaryPasswordState-1.md)\>
+> **getTemporaryPasswordState**(`parameters`): `Promise`\<[`temporaryPasswordState`](../type-aliases/temporaryPasswordState.md)\>
 
 Returns information about the current temporary password
 
@@ -9768,19 +10126,19 @@ Returns information about the current temporary password
 
 #### Returns
 
-`Promise`\<[`temporaryPasswordState`](../type-aliases/temporaryPasswordState-1.md)\>
+`Promise`\<[`temporaryPasswordState`](../type-aliases/temporaryPasswordState.md)\>
 
-Promise<[TemporaryPasswordState](../type-aliases/TemporaryPasswordState.md)>
+Promise<[TemporaryPasswordState](../type-aliases/TemporaryPasswordState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67680
+dist/generated/types.d.ts:69530
 
 ***
 
 ### getTextEntities()
 
-> **getTextEntities**(`parameters`): `Promise`\<[`textEntities`](../type-aliases/textEntities-1.md)\>
+> **getTextEntities**(`parameters`): `Promise`\<[`textEntities`](../type-aliases/textEntities.md)\>
 
 Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
 
@@ -9792,43 +10150,19 @@ Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numb
 
 #### Returns
 
-`Promise`\<[`textEntities`](../type-aliases/textEntities-1.md)\>
+`Promise`\<[`textEntities`](../type-aliases/textEntities.md)\>
 
-Promise<[TextEntities](../type-aliases/TextEntities.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:68867
-
-***
-
-### getThemeParametersJsonString()
-
-> **getThemeParametersJsonString**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
-
-Converts a themeParameters object to corresponding JSON-serialized string. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`getThemeParametersJsonString$DirectInput`](../type-aliases/getThemeParametersJsonString$DirectInput.md)
-
-[getThemeParametersJsonString$Input](../type-aliases/getThemeParametersJsonString$Input.md)
-
-#### Returns
-
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
-
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[TextEntities](../type-aliases/TextEntities-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68946
+dist/generated/types.d.ts:70739
 
 ***
 
 ### getThemedChatEmojiStatuses()
 
-> **getThemedChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+> **getThemedChatEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
 Returns up to 8 emoji statuses, which must be shown in the emoji status list for chats
 
@@ -9840,19 +10174,19 @@ Returns up to 8 emoji statuses, which must be shown in the emoji status list for
 
 #### Returns
 
-`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
-Promise<[EmojiStatuses](../type-aliases/EmojiStatuses.md)>
+Promise<[EmojiStatuses](../type-aliases/EmojiStatuses-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70120
+dist/generated/types.d.ts:72020
 
 ***
 
 ### getThemedEmojiStatuses()
 
-> **getThemedEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+> **getThemedEmojiStatuses**(`parameters`): `Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
 Returns up to 8 emoji statuses, which must be shown right after the default Premium Badge in the emoji status list for self status
 
@@ -9864,19 +10198,43 @@ Returns up to 8 emoji statuses, which must be shown right after the default Prem
 
 #### Returns
 
-`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses-1.md)\>
+`Promise`\<[`emojiStatuses`](../type-aliases/emojiStatuses.md)\>
 
-Promise<[EmojiStatuses](../type-aliases/EmojiStatuses.md)>
+Promise<[EmojiStatuses](../type-aliases/EmojiStatuses-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70092
+dist/generated/types.d.ts:71992
+
+***
+
+### getThemeParametersJsonString()
+
+> **getThemeParametersJsonString**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
+
+Converts a themeParameters object to corresponding JSON-serialized string. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`getThemeParametersJsonString$DirectInput`](../type-aliases/getThemeParametersJsonString$DirectInput.md)
+
+[getThemeParametersJsonString$Input](../type-aliases/getThemeParametersJsonString$Input.md)
+
+#### Returns
+
+`Promise`\<[`text`](../type-aliases/text.md)\>
+
+Promise<[Text](../type-aliases/Text-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70818
 
 ***
 
 ### getTimeZones()
 
-> **getTimeZones**(`parameters`): `Promise`\<[`timeZones`](../type-aliases/timeZones-1.md)\>
+> **getTimeZones**(`parameters`): `Promise`\<[`timeZones`](../type-aliases/timeZones.md)\>
 
 Returns the list of supported time zones
 
@@ -9888,19 +10246,19 @@ Returns the list of supported time zones
 
 #### Returns
 
-`Promise`\<[`timeZones`](../type-aliases/timeZones-1.md)\>
+`Promise`\<[`timeZones`](../type-aliases/timeZones.md)\>
 
-Promise<[TimeZones](../type-aliases/TimeZones.md)>
+Promise<[TimeZones](../type-aliases/TimeZones-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71685
+dist/generated/types.d.ts:73645
 
 ***
 
 ### getTopChats()
 
-> **getTopChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **getTopChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Returns a list of frequently used chats
 
@@ -9912,19 +10270,19 @@ Returns a list of frequently used chats
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67914
+dist/generated/types.d.ts:69771
 
 ***
 
 ### getTrendingStickerSets()
 
-> **getTrendingStickerSets**(`parameters`): `Promise`\<[`trendingStickerSets`](../type-aliases/trendingStickerSets-1.md)\>
+> **getTrendingStickerSets**(`parameters`): `Promise`\<[`trendingStickerSets`](../type-aliases/trendingStickerSets.md)\>
 
 Returns a list of trending sticker sets. For optimal performance, the number of returned sticker sets is chosen by TDLib
 
@@ -9936,19 +10294,19 @@ Returns a list of trending sticker sets. For optimal performance, the number of 
 
 #### Returns
 
-`Promise`\<[`trendingStickerSets`](../type-aliases/trendingStickerSets-1.md)\>
+`Promise`\<[`trendingStickerSets`](../type-aliases/trendingStickerSets.md)\>
 
-Promise<[TrendingStickerSets](../type-aliases/TrendingStickerSets.md)>
+Promise<[TrendingStickerSets](../type-aliases/TrendingStickerSets-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70837
+dist/generated/types.d.ts:72755
 
 ***
 
 ### getUser()
 
-> **getUser**(`parameters`): `Promise`\<[`user`](../type-aliases/user-1.md)\>
+> **getUser**(`parameters`): `Promise`\<[`user`](../type-aliases/user.md)\>
 
 Returns information about a user by their identifier. This is an offline request if the current user is not a bot
 
@@ -9960,19 +10318,19 @@ Returns information about a user by their identifier. This is an offline request
 
 #### Returns
 
-`Promise`\<[`user`](../type-aliases/user-1.md)\>
+`Promise`\<[`user`](../type-aliases/user.md)\>
 
-Promise<[User](../type-aliases/User.md)>
+Promise<[User](../type-aliases/User-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67694
+dist/generated/types.d.ts:69544
 
 ***
 
 ### getUserChatBoosts()
 
-> **getUserChatBoosts**(`parameters`): `Promise`\<[`foundChatBoosts`](../type-aliases/foundChatBoosts-1.md)\>
+> **getUserChatBoosts**(`parameters`): `Promise`\<[`foundChatBoosts`](../type-aliases/foundChatBoosts.md)\>
 
 Returns the list of boosts applied to a chat by a given user; requires administrator rights in the chat; for bots only
 
@@ -9984,19 +10342,19 @@ Returns the list of boosts applied to a chat by a given user; requires administr
 
 #### Returns
 
-`Promise`\<[`foundChatBoosts`](../type-aliases/foundChatBoosts-1.md)\>
+`Promise`\<[`foundChatBoosts`](../type-aliases/foundChatBoosts.md)\>
 
-Promise<[FoundChatBoosts](../type-aliases/FoundChatBoosts.md)>
+Promise<[FoundChatBoosts](../type-aliases/FoundChatBoosts-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70071
+dist/generated/types.d.ts:71971
 
 ***
 
 ### getUserFullInfo()
 
-> **getUserFullInfo**(`parameters`): `Promise`\<[`userFullInfo`](../type-aliases/userFullInfo-1.md)\>
+> **getUserFullInfo**(`parameters`): `Promise`\<[`userFullInfo`](../type-aliases/userFullInfo.md)\>
 
 Returns full information about a user by their identifier
 
@@ -10008,19 +10366,19 @@ Returns full information about a user by their identifier
 
 #### Returns
 
-`Promise`\<[`userFullInfo`](../type-aliases/userFullInfo-1.md)\>
+`Promise`\<[`userFullInfo`](../type-aliases/userFullInfo.md)\>
 
-Promise<[UserFullInfo](../type-aliases/UserFullInfo.md)>
+Promise<[UserFullInfo](../type-aliases/UserFullInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67701
+dist/generated/types.d.ts:69551
 
 ***
 
 ### getUserLink()
 
-> **getUserLink**(`parameters`): `Promise`\<[`userLink`](../type-aliases/userLink-1.md)\>
+> **getUserLink**(`parameters`): `Promise`\<[`userLink`](../type-aliases/userLink.md)\>
 
 Returns an HTTPS link, which can be used to get information about the current user
 
@@ -10032,19 +10390,19 @@ Returns an HTTPS link, which can be used to get information about the current us
 
 #### Returns
 
-`Promise`\<[`userLink`](../type-aliases/userLink-1.md)\>
+`Promise`\<[`userLink`](../type-aliases/userLink.md)\>
 
-Promise<[UserLink](../type-aliases/UserLink.md)>
+Promise<[UserLink](../type-aliases/UserLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71319
+dist/generated/types.d.ts:73237
 
 ***
 
 ### getUserPrivacySettingRules()
 
-> **getUserPrivacySettingRules**(`parameters`): `Promise`\<[`userPrivacySettingRules`](../type-aliases/userPrivacySettingRules-1.md)\>
+> **getUserPrivacySettingRules**(`parameters`): `Promise`\<[`userPrivacySettingRules`](../type-aliases/userPrivacySettingRules.md)\>
 
 Returns the current privacy settings
 
@@ -10056,19 +10414,19 @@ Returns the current privacy settings
 
 #### Returns
 
-`Promise`\<[`userPrivacySettingRules`](../type-aliases/userPrivacySettingRules-1.md)\>
+`Promise`\<[`userPrivacySettingRules`](../type-aliases/userPrivacySettingRules.md)\>
 
-Promise<[UserPrivacySettingRules](../type-aliases/UserPrivacySettingRules.md)>
+Promise<[UserPrivacySettingRules](../type-aliases/UserPrivacySettingRules-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71913
+dist/generated/types.d.ts:73873
 
 ***
 
 ### getUserProfilePhotos()
 
-> **getUserProfilePhotos**(`parameters`): `Promise`\<[`chatPhotos`](../type-aliases/chatPhotos-1.md)\>
+> **getUserProfilePhotos**(`parameters`): `Promise`\<[`chatPhotos`](../type-aliases/chatPhotos.md)\>
 
 Returns the profile photos of a user. Personal and public photo aren't returned
 
@@ -10080,19 +10438,19 @@ Returns the profile photos of a user. Personal and public photo aren't returned
 
 #### Returns
 
-`Promise`\<[`chatPhotos`](../type-aliases/chatPhotos-1.md)\>
+`Promise`\<[`chatPhotos`](../type-aliases/chatPhotos.md)\>
 
-Promise<[ChatPhotos](../type-aliases/ChatPhotos.md)>
+Promise<[ChatPhotos](../type-aliases/ChatPhotos-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70781
+dist/generated/types.d.ts:72699
 
 ***
 
 ### getUserSupportInfo()
 
-> **getUserSupportInfo**(`parameters`): `Promise`\<[`userSupportInfo`](../type-aliases/userSupportInfo-1.md)\>
+> **getUserSupportInfo**(`parameters`): `Promise`\<[`userSupportInfo`](../type-aliases/userSupportInfo.md)\>
 
 Returns support information for the given user; for Telegram support only
 
@@ -10104,19 +10462,19 @@ Returns support information for the given user; for Telegram support only
 
 #### Returns
 
-`Promise`\<[`userSupportInfo`](../type-aliases/userSupportInfo-1.md)\>
+`Promise`\<[`userSupportInfo`](../type-aliases/userSupportInfo.md)\>
 
-Promise<[UserSupportInfo](../type-aliases/UserSupportInfo.md)>
+Promise<[UserSupportInfo](../type-aliases/UserSupportInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72750
+dist/generated/types.d.ts:74738
 
 ***
 
 ### getVideoChatAvailableParticipants()
 
-> **getVideoChatAvailableParticipants**(`parameters`): `Promise`\<[`messageSenders`](../type-aliases/messageSenders-1.md)\>
+> **getVideoChatAvailableParticipants**(`parameters`): `Promise`\<[`messageSenders`](../type-aliases/messageSenders.md)\>
 
 Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
 
@@ -10128,19 +10486,19 @@ Returns the list of participant identifiers, on whose behalf a video chat in the
 
 #### Returns
 
-`Promise`\<[`messageSenders`](../type-aliases/messageSenders-1.md)\>
+`Promise`\<[`messageSenders`](../type-aliases/messageSenders.md)\>
 
-Promise<[MessageSenders](../type-aliases/MessageSenders.md)>
+Promise<[MessageSenders](../type-aliases/MessageSenders-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70450
+dist/generated/types.d.ts:72368
 
 ***
 
 ### getVideoChatRtmpUrl()
 
-> **getVideoChatRtmpUrl**(`parameters`): `Promise`\<[`rtmpUrl`](../type-aliases/rtmpUrl-1.md)\>
+> **getVideoChatRtmpUrl**(`parameters`): `Promise`\<[`rtmpUrl`](../type-aliases/rtmpUrl.md)\>
 
 Returns RTMP URL for streaming to the chat; requires owner privileges
 
@@ -10152,19 +10510,19 @@ Returns RTMP URL for streaming to the chat; requires owner privileges
 
 #### Returns
 
-`Promise`\<[`rtmpUrl`](../type-aliases/rtmpUrl-1.md)\>
+`Promise`\<[`rtmpUrl`](../type-aliases/rtmpUrl.md)\>
 
-Promise<[RtmpUrl](../type-aliases/RtmpUrl.md)>
+Promise<[RtmpUrl](../type-aliases/RtmpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70471
+dist/generated/types.d.ts:72389
 
 ***
 
 ### getWebAppLinkUrl()
 
-> **getWebAppLinkUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getWebAppLinkUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
 Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
 
@@ -10176,21 +10534,21 @@ Returns an HTTPS URL of a Web App to open after a link of the type internalLinkT
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69046
+dist/generated/types.d.ts:70925
 
 ***
 
 ### getWebAppUrl()
 
-> **getWebAppUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+> **getWebAppUrl**(`parameters`): `Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, an inlineQueryResultsButtonTypeWebApp button, or an internalLinkTypeSideMenuBot link
+Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTypeWebApp button, or an inlineQueryResultsButtonTypeWebApp button
 
 #### Parameters
 
@@ -10200,19 +10558,19 @@ Returns an HTTPS URL of a Web App to open from the side menu, a keyboardButtonTy
 
 #### Returns
 
-`Promise`\<[`httpUrl`](../type-aliases/httpUrl-1.md)\>
+`Promise`\<[`httpUrl`](../type-aliases/httpUrl.md)\>
 
-Promise<[HttpUrl](../type-aliases/HttpUrl.md)>
+Promise<[HttpUrl](../type-aliases/HttpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69053
+dist/generated/types.d.ts:70939
 
 ***
 
 ### getWebPageInstantView()
 
-> **getWebPageInstantView**(`parameters`): `Promise`\<[`webPageInstantView`](../type-aliases/webPageInstantView-1.md)\>
+> **getWebPageInstantView**(`parameters`): `Promise`\<[`webPageInstantView`](../type-aliases/webPageInstantView.md)\>
 
 Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
 
@@ -10224,19 +10582,19 @@ Returns an instant view version of a web page if available. Returns a 404 error 
 
 #### Returns
 
-`Promise`\<[`webPageInstantView`](../type-aliases/webPageInstantView-1.md)\>
+`Promise`\<[`webPageInstantView`](../type-aliases/webPageInstantView.md)\>
 
-Promise<[WebPageInstantView](../type-aliases/WebPageInstantView.md)>
+Promise<[WebPageInstantView](../type-aliases/WebPageInstantView-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71074
+dist/generated/types.d.ts:72992
 
 ***
 
 ### hideContactCloseBirthdays()
 
-> **hideContactCloseBirthdays**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **hideContactCloseBirthdays**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Hides the list of contacts that have close birthdays for 24 hours
 
@@ -10248,19 +10606,19 @@ Hides the list of contacts that have close birthdays for 24 hours
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68981
+dist/generated/types.d.ts:70853
 
 ***
 
 ### hideSuggestedAction()
 
-> **hideSuggestedAction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **hideSuggestedAction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Hides a suggested action
 
@@ -10272,19 +10630,19 @@ Hides a suggested action
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68974
+dist/generated/types.d.ts:70846
 
 ***
 
 ### importContacts()
 
-> **importContacts**(`parameters`): `Promise`\<[`importedContacts`](../type-aliases/importedContacts-1.md)\>
+> **importContacts**(`parameters`): `Promise`\<[`importedContacts`](../type-aliases/importedContacts.md)\>
 
 Adds new contacts or edits existing contacts by their phone numbers; contacts' user identifiers are ignored
 
@@ -10296,19 +10654,19 @@ Adds new contacts or edits existing contacts by their phone numbers; contacts' u
 
 #### Returns
 
-`Promise`\<[`importedContacts`](../type-aliases/importedContacts-1.md)\>
+`Promise`\<[`importedContacts`](../type-aliases/importedContacts.md)\>
 
-Promise<[ImportedContacts](../type-aliases/ImportedContacts.md)>
+Promise<[ImportedContacts](../type-aliases/ImportedContacts-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70688
+dist/generated/types.d.ts:72606
 
 ***
 
 ### importMessages()
 
-> **importMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **importMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Imports messages exported from another app
 
@@ -10320,19 +10678,19 @@ Imports messages exported from another app
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70287
+dist/generated/types.d.ts:72187
 
 ***
 
 ### inviteGroupCallParticipants()
 
-> **inviteGroupCallParticipants**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **inviteGroupCallParticipants**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Invites users to an active group call. Sends a service message of type messageInviteVideoChatParticipants for video chats
 
@@ -10344,19 +10702,19 @@ Invites users to an active group call. Sends a service message of type messageIn
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70548
+dist/generated/types.d.ts:72466
 
 ***
 
 ### joinChat()
 
-> **joinChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **joinChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds the current user as a new member to a chat. Private and secret chats can't be joined using this method. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
 
@@ -10368,19 +10726,19 @@ Adds the current user as a new member to a chat. Private and secret chats can't 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69663
+dist/generated/types.d.ts:71549
 
 ***
 
 ### joinChatByInviteLink()
 
-> **joinChatByInviteLink**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **joinChatByInviteLink**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Uses an invite link to add the current user to the chat if possible. May return an error with a message "INVITE_REQUEST_SENT" if only a join request was created
 
@@ -10392,19 +10750,19 @@ Uses an invite link to add the current user to the chat if possible. May return 
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70373
+dist/generated/types.d.ts:72291
 
 ***
 
 ### joinGroupCall()
 
-> **joinGroupCall**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **joinGroupCall**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Joins an active group call. Returns join response payload for tgcalls
 
@@ -10416,19 +10774,19 @@ Joins an active group call. Returns join response payload for tgcalls
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70506
+dist/generated/types.d.ts:72424
 
 ***
 
 ### launchPrepaidPremiumGiveaway()
 
-> **launchPrepaidPremiumGiveaway**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **launchPrepaidPremiumGiveaway**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Launches a prepaid Telegram Premium giveaway
 
@@ -10440,19 +10798,19 @@ Launches a prepaid Telegram Premium giveaway
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72484
+dist/generated/types.d.ts:74444
 
 ***
 
 ### leaveChat()
 
-> **leaveChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **leaveChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes the current user from chat members. Private and secret chats can't be left using this method
 
@@ -10464,19 +10822,19 @@ Removes the current user from chat members. Private and secret chats can't be le
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69670
+dist/generated/types.d.ts:71556
 
 ***
 
 ### leaveGroupCall()
 
-> **leaveGroupCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **leaveGroupCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Leaves a group call
 
@@ -10488,19 +10846,19 @@ Leaves a group call
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70632
+dist/generated/types.d.ts:72550
 
 ***
 
 ### loadActiveStories()
 
-> **loadActiveStories**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **loadActiveStories**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
 
@@ -10514,19 +10872,19 @@ Loads more active stories from a story list. The loaded stories will be sent thr
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69902
+dist/generated/types.d.ts:71802
 
 ***
 
 ### loadChats()
 
-> **loadChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **loadChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
 
@@ -10538,19 +10896,19 @@ Loads more chats from a chat list. The loaded chats and their positions in the c
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67833
+dist/generated/types.d.ts:69690
 
 ***
 
 ### loadGroupCallParticipants()
 
-> **loadGroupCallParticipants**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **loadGroupCallParticipants**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Loads more participants of a group call. The loaded participants will be received through updates. Use the field groupCall.loaded_all_participants to check whether all participants have already been loaded
 
@@ -10562,19 +10920,19 @@ Loads more participants of a group call. The loaded participants will be receive
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70625
+dist/generated/types.d.ts:72543
 
 ***
 
 ### loadQuickReplyShortcutMessages()
 
-> **loadQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **loadQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Loads quick reply messages that can be sent by a given quick reply shortcut. The loaded messages will be sent through updateQuickReplyShortcutMessages
 
@@ -10586,19 +10944,19 @@ Loads quick reply messages that can be sent by a given quick reply shortcut. The
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68633
+dist/generated/types.d.ts:70484
 
 ***
 
 ### loadQuickReplyShortcuts()
 
-> **loadQuickReplyShortcuts**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **loadQuickReplyShortcuts**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Loads quick reply shortcuts created by the current user. The loaded topics will be sent through updateQuickReplyShortcuts
 
@@ -10610,19 +10968,19 @@ Loads quick reply shortcuts created by the current user. The loaded topics will 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68605
+dist/generated/types.d.ts:70456
 
 ***
 
 ### loadSavedMessagesTopics()
 
-> **loadSavedMessagesTopics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **loadSavedMessagesTopics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Loads more Saved Messages topics. The loaded topics will be sent through updateSavedMessagesTopic. Topics are sorted by their topic.order in descending order. Returns a 404 error if all topics have been loaded
 
@@ -10634,19 +10992,19 @@ Loads more Saved Messages topics. The loaded topics will be sent through updateS
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68007
+dist/generated/types.d.ts:69864
 
 ***
 
 ### logOut()
 
-> **logOut**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **logOut**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Closes the TDLib instance after a proper logout. Requires an available network connection. All local data will be destroyed. After the logout completes, updateAuthorizationState with authorizationStateClosed will be sent
 
@@ -10658,19 +11016,19 @@ Closes the TDLib instance after a proper logout. Requires an available network c
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67520
+dist/generated/types.d.ts:69370
 
 ***
 
 ### openChat()
 
-> **openChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **openChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that the chat is opened by the user. Many useful activities depend on the chat being opened or closed (e.g., in supergroups and channels all updates are received only for opened chats)
 
@@ -10682,19 +11040,19 @@ Informs TDLib that the chat is opened by the user. Many useful activities depend
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69160
+dist/generated/types.d.ts:71046
 
 ***
 
 ### openChatSimilarChat()
 
-> **openChatSimilarChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **openChatSimilarChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that a chat was opened from the list of similar chats. The method is independent of openChat and closeChat methods
 
@@ -10706,19 +11064,19 @@ Informs TDLib that a chat was opened from the list of similar chats. The method 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67907
+dist/generated/types.d.ts:69764
 
 ***
 
 ### openMessageContent()
 
-> **openMessageContent**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **openMessageContent**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message).
 
@@ -10732,19 +11090,19 @@ Informs TDLib that the message content has been opened (e.g., the user has opene
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69185
+dist/generated/types.d.ts:71071
 
 ***
 
 ### openStory()
 
-> **openStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **openStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that a story is opened and is being viewed by the user
 
@@ -10756,19 +11114,19 @@ Informs TDLib that a story is opened and is being viewed by the user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69948
+dist/generated/types.d.ts:71848
 
 ***
 
 ### openWebApp()
 
-> **openWebApp**(`parameters`): `Promise`\<[`webAppInfo`](../type-aliases/webAppInfo-1.md)\>
+> **openWebApp**(`parameters`): `Promise`\<[`webAppInfo`](../type-aliases/webAppInfo.md)\>
 
 Informs TDLib that a Web App is being opened from the attachment menu, a botMenuButton button, an internalLinkTypeAttachmentMenuBot link, or an inlineKeyboardButtonTypeWebApp button.
 
@@ -10782,19 +11140,19 @@ Informs TDLib that a Web App is being opened from the attachment menu, a botMenu
 
 #### Returns
 
-`Promise`\<[`webAppInfo`](../type-aliases/webAppInfo-1.md)\>
+`Promise`\<[`webAppInfo`](../type-aliases/webAppInfo.md)\>
 
-Promise<[WebAppInfo](../type-aliases/WebAppInfo.md)>
+Promise<[WebAppInfo](../type-aliases/WebAppInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69069
+dist/generated/types.d.ts:70955
 
 ***
 
 ### optimizeStorage()
 
-> **optimizeStorage**(`parameters`): `Promise`\<[`storageStatistics`](../type-aliases/storageStatistics-1.md)\>
+> **optimizeStorage**(`parameters`): `Promise`\<[`storageStatistics`](../type-aliases/storageStatistics.md)\>
 
 Optimizes storage usage, i.e. deletes some files and returns new storage usage statistics. Secret thumbnails can't be deleted
 
@@ -10806,19 +11164,19 @@ Optimizes storage usage, i.e. deletes some files and returns new storage usage s
 
 #### Returns
 
-`Promise`\<[`storageStatistics`](../type-aliases/storageStatistics-1.md)\>
+`Promise`\<[`storageStatistics`](../type-aliases/storageStatistics.md)\>
 
-Promise<[StorageStatistics](../type-aliases/StorageStatistics.md)>
+Promise<[StorageStatistics](../type-aliases/StorageStatistics-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72132
+dist/generated/types.d.ts:74092
 
 ***
 
 ### parseMarkdown()
 
-> **parseMarkdown**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+> **parseMarkdown**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
 Parses Markdown entities in a human-friendly format, ignoring markup errors. Can be called synchronously
 
@@ -10830,19 +11188,19 @@ Parses Markdown entities in a human-friendly format, ignoring markup errors. Can
 
 #### Returns
 
-`Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+`Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
-Promise<[FormattedText](../type-aliases/FormattedText.md)>
+Promise<[FormattedText](../type-aliases/FormattedText-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68883
+dist/generated/types.d.ts:70755
 
 ***
 
 ### parseTextEntities()
 
-> **parseTextEntities**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+> **parseTextEntities**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
 Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl
 
@@ -10856,21 +11214,21 @@ Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote,
 
 #### Returns
 
-`Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+`Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
-Promise<[FormattedText](../type-aliases/FormattedText.md)>
+Promise<[FormattedText](../type-aliases/FormattedText-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68876
+dist/generated/types.d.ts:70748
 
 ***
 
 ### pinChatMessage()
 
-> **pinChatMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **pinChatMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Pins a message in a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
+Pins a message in a chat. A message can be pinned only if messageProperties.can_be_pinned
 
 #### Parameters
 
@@ -10880,19 +11238,19 @@ Pins a message in a chat; requires can_pin_messages member right if the chat is 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69635
+dist/generated/types.d.ts:71521
 
 ***
 
 ### pingProxy()
 
-> **pingProxy**(`parameters`): `Promise`\<[`seconds`](../type-aliases/seconds-1.md)\>
+> **pingProxy**(`parameters`): `Promise`\<[`seconds`](../type-aliases/seconds.md)\>
 
 Computes time needed to receive a response from a Telegram server through a proxy. Can be called before authorization
 
@@ -10904,19 +11262,19 @@ Computes time needed to receive a response from a Telegram server through a prox
 
 #### Returns
 
-`Promise`\<[`seconds`](../type-aliases/seconds-1.md)\>
+`Promise`\<[`seconds`](../type-aliases/seconds.md)\>
 
-Promise<[Seconds](../type-aliases/Seconds.md)>
+Promise<[Seconds](../type-aliases/Seconds-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72687
+dist/generated/types.d.ts:74675
 
 ***
 
 ### preliminaryUploadFile()
 
-> **preliminaryUploadFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file-1.md)\>
+> **preliminaryUploadFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file.md)\>
 
 Preliminary uploads a file to the cloud before sending it in a message, which can be useful for uploading of being recorded voice and video notes.
 
@@ -10932,19 +11290,19 @@ Preliminary uploads a file to the cloud before sending it in a message, which ca
 
 #### Returns
 
-`Promise`\<[`file`](../type-aliases/file-1.md)\>
+`Promise`\<[`file`](../type-aliases/file.md)\>
 
-Promise<[File](../type-aliases/File.md)>
+Promise<[File](../type-aliases/File-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70173
+dist/generated/types.d.ts:72073
 
 ***
 
 ### processChatFolderNewChats()
 
-> **processChatFolderNewChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **processChatFolderNewChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Process new chats added to a shareable chat folder by its owner
 
@@ -10956,19 +11314,19 @@ Process new chats added to a shareable chat folder by its owner
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69451
+dist/generated/types.d.ts:71337
 
 ***
 
 ### processChatJoinRequest()
 
-> **processChatJoinRequest**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **processChatJoinRequest**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Handles a pending join request in a chat
 
@@ -10980,19 +11338,19 @@ Handles a pending join request in a chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70387
+dist/generated/types.d.ts:72305
 
 ***
 
 ### processChatJoinRequests()
 
-> **processChatJoinRequests**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **processChatJoinRequests**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Handles all pending join requests for a given link in a chat
 
@@ -11004,19 +11362,19 @@ Handles all pending join requests for a given link in a chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70394
+dist/generated/types.d.ts:72312
 
 ***
 
 ### processPushNotification()
 
-> **processPushNotification**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **processPushNotification**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Handles a push notification. Returns error with code 406 if the push notification is not supported and connection to the server is required to fetch new data. Can be called before authorization
 
@@ -11028,19 +11386,19 @@ Handles a push notification. Returns error with code 406 if the push notificatio
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71885
+dist/generated/types.d.ts:73845
 
 ***
 
 ### rateSpeechRecognition()
 
-> **rateSpeechRecognition**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **rateSpeechRecognition**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Rates recognized speech in a video note or a voice note message
 
@@ -11052,19 +11410,19 @@ Rates recognized speech in a video note or a voice note message
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68340
+dist/generated/types.d.ts:70190
 
 ***
 
 ### readAllChatMentions()
 
-> **readAllChatMentions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **readAllChatMentions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Marks all mentions in a chat as read
 
@@ -11076,19 +11434,19 @@ Marks all mentions in a chat as read
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69227
+dist/generated/types.d.ts:71113
 
 ***
 
 ### readAllChatReactions()
 
-> **readAllChatReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **readAllChatReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Marks all reactions in a chat or a forum topic as read
 
@@ -11100,19 +11458,19 @@ Marks all reactions in a chat or a forum topic as read
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69241
+dist/generated/types.d.ts:71127
 
 ***
 
 ### readAllMessageThreadMentions()
 
-> **readAllMessageThreadMentions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **readAllMessageThreadMentions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Marks all mentions in a forum topic as read
 
@@ -11124,19 +11482,19 @@ Marks all mentions in a forum topic as read
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69234
+dist/generated/types.d.ts:71120
 
 ***
 
 ### readAllMessageThreadReactions()
 
-> **readAllMessageThreadReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **readAllMessageThreadReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Marks all reactions in a forum topic as read
 
@@ -11148,19 +11506,19 @@ Marks all reactions in a forum topic as read
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69248
+dist/generated/types.d.ts:71134
 
 ***
 
 ### readChatList()
 
-> **readChatList**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **readChatList**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Traverse all chats in a chat list and marks all messages in the chats as read
 
@@ -11172,43 +11530,19 @@ Traverse all chats in a chat list and marks all messages in the chats as read
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:69830
-
-***
-
-### readFilePart()
-
-> **readFilePart**(`parameters`): `Promise`\<[`filePart`](../type-aliases/filePart-1.md)\>
-
-Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
-
-#### Parameters
-
-• **parameters**: [`readFilePart$DirectInput`](../type-aliases/readFilePart$DirectInput.md)
-
-[readFilePart$Input](../type-aliases/readFilePart$Input.md)
-
-#### Returns
-
-`Promise`\<[`filePart`](../type-aliases/filePart-1.md)\>
-
-Promise<[FilePart](../type-aliases/FilePart.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70208
+dist/generated/types.d.ts:71716
 
 ***
 
 ### readdQuickReplyShortcutMessages()
 
-> **readdQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`quickReplyMessages`](../type-aliases/quickReplyMessages-1.md)\>
+> **readdQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`quickReplyMessages`](../type-aliases/quickReplyMessages.md)\>
 
 Readds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
 
@@ -11222,21 +11556,45 @@ Readds quick reply messages which failed to add. Can be called only for messages
 
 #### Returns
 
-`Promise`\<[`quickReplyMessages`](../type-aliases/quickReplyMessages-1.md)\>
+`Promise`\<[`quickReplyMessages`](../type-aliases/quickReplyMessages.md)\>
 
-Promise<[QuickReplyMessages](../type-aliases/QuickReplyMessages.md)>
+Promise<[QuickReplyMessages](../type-aliases/QuickReplyMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68676
+dist/generated/types.d.ts:70527
+
+***
+
+### readFilePart()
+
+> **readFilePart**(`parameters`): `Promise`\<[`filePart`](../type-aliases/filePart.md)\>
+
+Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
+
+#### Parameters
+
+• **parameters**: [`readFilePart$DirectInput`](../type-aliases/readFilePart$DirectInput.md)
+
+[readFilePart$Input](../type-aliases/readFilePart$Input.md)
+
+#### Returns
+
+`Promise`\<[`filePart`](../type-aliases/filePart.md)\>
+
+Promise<[FilePart](../type-aliases/FilePart-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72108
 
 ***
 
 ### recognizeSpeech()
 
-> **recognizeSpeech**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **recognizeSpeech**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Recognizes speech in a video note or a voice note message. The message must be successfully sent, must not be scheduled, and must be from a non-secret chat
+Recognizes speech in a video note or a voice note message
 
 #### Parameters
 
@@ -11246,19 +11604,19 @@ Recognizes speech in a video note or a voice note message. The message must be s
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68333
+dist/generated/types.d.ts:70183
 
 ***
 
 ### recoverAuthenticationPassword()
 
-> **recoverAuthenticationPassword**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **recoverAuthenticationPassword**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Recovers the 2-step verification password with a password recovery code sent to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
 
@@ -11270,19 +11628,19 @@ Recovers the 2-step verification password with a password recovery code sent to 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67492
+dist/generated/types.d.ts:69342
 
 ***
 
 ### recoverPassword()
 
-> **recoverPassword**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+> **recoverPassword**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
 Recovers the 2-step verification password using a recovery code sent to an email address that was previously set up
 
@@ -11294,19 +11652,19 @@ Recovers the 2-step verification password using a recovery code sent to an email
 
 #### Returns
 
-`Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+`Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
-Promise<[PasswordState](../type-aliases/PasswordState.md)>
+Promise<[PasswordState](../type-aliases/PasswordState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67652
+dist/generated/types.d.ts:69502
 
 ***
 
 ### refundStarPayment()
 
-> **refundStarPayment**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **refundStarPayment**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Refunds a previously done payment in Telegram Stars
 
@@ -11318,19 +11676,19 @@ Refunds a previously done payment in Telegram Stars
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71748
+dist/generated/types.d.ts:73708
 
 ***
 
 ### registerDevice()
 
-> **registerDevice**(`parameters`): `Promise`\<[`pushReceiverId`](../type-aliases/pushReceiverId-1.md)\>
+> **registerDevice**(`parameters`): `Promise`\<[`pushReceiverId`](../type-aliases/pushReceiverId.md)\>
 
 Registers the currently used device for receiving push notifications. Returns a globally unique identifier of the push notification subscription
 
@@ -11342,19 +11700,19 @@ Registers the currently used device for receiving push notifications. Returns a 
 
 #### Returns
 
-`Promise`\<[`pushReceiverId`](../type-aliases/pushReceiverId-1.md)\>
+`Promise`\<[`pushReceiverId`](../type-aliases/pushReceiverId.md)\>
 
-Promise<[PushReceiverId](../type-aliases/PushReceiverId.md)>
+Promise<[PushReceiverId](../type-aliases/PushReceiverId-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71878
+dist/generated/types.d.ts:73838
 
 ***
 
 ### registerUser()
 
-> **registerUser**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **registerUser**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Finishes user registration. Works only when the current authorization state is authorizationStateWaitRegistration
 
@@ -11366,19 +11724,19 @@ Finishes user registration. Works only when the current authorization state is a
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67455
+dist/generated/types.d.ts:69305
 
 ***
 
 ### removeAllFilesFromDownloads()
 
-> **removeAllFilesFromDownloads**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeAllFilesFromDownloads**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes all files from the file download list
 
@@ -11390,19 +11748,19 @@ Removes all files from the file download list
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70252
+dist/generated/types.d.ts:72152
 
 ***
 
 ### removeBusinessConnectedBotFromChat()
 
-> **removeBusinessConnectedBotFromChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeBusinessConnectedBotFromChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
 
@@ -11414,19 +11772,19 @@ Removes the connected business bot from a specific chat by adding the chat to bu
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71277
+dist/generated/types.d.ts:73195
 
 ***
 
 ### removeChatActionBar()
 
-> **removeChatActionBar**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeChatActionBar**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a chat action bar without any other action
 
@@ -11438,19 +11796,19 @@ Removes a chat action bar without any other action
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72006
+dist/generated/types.d.ts:73966
 
 ***
 
 ### removeContacts()
 
-> **removeContacts**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeContacts**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes users from the contact list
 
@@ -11462,19 +11820,19 @@ Removes users from the contact list
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70709
+dist/generated/types.d.ts:72627
 
 ***
 
 ### removeFavoriteSticker()
 
-> **removeFavoriteSticker**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeFavoriteSticker**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a sticker from the list of favorite stickers
 
@@ -11486,19 +11844,19 @@ Removes a sticker from the list of favorite stickers
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70946
+dist/generated/types.d.ts:72864
 
 ***
 
 ### removeFileFromDownloads()
 
-> **removeFileFromDownloads**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeFileFromDownloads**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a file from the file download list
 
@@ -11510,19 +11868,19 @@ Removes a file from the file download list
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70245
+dist/generated/types.d.ts:72145
 
 ***
 
 ### removeInstalledBackground()
 
-> **removeInstalledBackground**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeInstalledBackground**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes background from the list of installed backgrounds
 
@@ -11534,19 +11892,19 @@ Removes background from the list of installed backgrounds
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71797
+dist/generated/types.d.ts:73757
 
 ***
 
 ### removeMessageReaction()
 
-> **removeMessageReaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeMessageReaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a reaction from a message. A chosen reaction can always be removed
 
@@ -11558,19 +11916,19 @@ Removes a reaction from a message. A chosen reaction can always be removed
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68811
+dist/generated/types.d.ts:70662
 
 ***
 
 ### removeNotification()
 
-> **removeNotification**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeNotification**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
 
@@ -11582,19 +11940,19 @@ Removes an active notification from notification list. Needs to be called only i
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68284
+dist/generated/types.d.ts:70134
 
 ***
 
 ### removeNotificationGroup()
 
-> **removeNotificationGroup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeNotificationGroup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a group of active notifications. Needs to be called only if the notification group is removed by the current user
 
@@ -11606,19 +11964,43 @@ Removes a group of active notifications. Needs to be called only if the notifica
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68291
+dist/generated/types.d.ts:70141
+
+***
+
+### removePendingPaidMessageReactions()
+
+> **removePendingPaidMessageReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Removes all pending paid reactions on a message. Can be called within 5 seconds after the last addPaidMessageReaction call
+
+#### Parameters
+
+• **parameters**: [`removePendingPaidMessageReactions$DirectInput`](../type-aliases/removePendingPaidMessageReactions$DirectInput.md)
+
+[removePendingPaidMessageReactions$Input](../type-aliases/removePendingPaidMessageReactions$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70676
 
 ***
 
 ### removeProxy()
 
-> **removeProxy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeProxy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a proxy server. Can be called before authorization
 
@@ -11630,19 +12012,19 @@ Removes a proxy server. Can be called before authorization
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72666
+dist/generated/types.d.ts:74654
 
 ***
 
 ### removeRecentHashtag()
 
-> **removeRecentHashtag**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeRecentHashtag**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a hashtag from the list of recently used hashtags
 
@@ -11654,43 +12036,19 @@ Removes a hashtag from the list of recently used hashtags
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:71060
-
-***
-
-### removeRecentSticker()
-
-> **removeRecentSticker**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Removes a sticker from the list of recently used stickers
-
-#### Parameters
-
-• **parameters**: [`removeRecentSticker$DirectInput`](../type-aliases/removeRecentSticker$DirectInput.md)
-
-[removeRecentSticker$Input](../type-aliases/removeRecentSticker$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70916
+dist/generated/types.d.ts:72978
 
 ***
 
 ### removeRecentlyFoundChat()
 
-> **removeRecentlyFoundChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeRecentlyFoundChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a chat from the list of recently found chats
 
@@ -11702,19 +12060,43 @@ Removes a chat from the list of recently found chats
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67942
+dist/generated/types.d.ts:69799
+
+***
+
+### removeRecentSticker()
+
+> **removeRecentSticker**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Removes a sticker from the list of recently used stickers
+
+#### Parameters
+
+• **parameters**: [`removeRecentSticker$DirectInput`](../type-aliases/removeRecentSticker$DirectInput.md)
+
+[removeRecentSticker$Input](../type-aliases/removeRecentSticker$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72834
 
 ***
 
 ### removeSavedAnimation()
 
-> **removeSavedAnimation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeSavedAnimation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes an animation from the list of saved animations
 
@@ -11726,19 +12108,19 @@ Removes an animation from the list of saved animations
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71039
+dist/generated/types.d.ts:72957
 
 ***
 
 ### removeSavedNotificationSound()
 
-> **removeSavedNotificationSound**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeSavedNotificationSound**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a notification sound from the list of saved notification sounds
 
@@ -11750,19 +12132,19 @@ Removes a notification sound from the list of saved notification sounds
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69774
+dist/generated/types.d.ts:71660
 
 ***
 
 ### removeSearchedForTag()
 
-> **removeSearchedForTag**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeSearchedForTag**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a hashtag or a cashtag from the list of recently searched for hashtags or cashtags
 
@@ -11774,19 +12156,19 @@ Removes a hashtag or a cashtag from the list of recently searched for hashtags o
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68184
+dist/generated/types.d.ts:70041
 
 ***
 
 ### removeStickerFromSet()
 
-> **removeStickerFromSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeStickerFromSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a sticker from the set to which it belongs. The sticker set must be owned by the current user
 
@@ -11798,19 +12180,19 @@ Removes a sticker from the set to which it belongs. The sticker set must be owne
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72379
+dist/generated/types.d.ts:74339
 
 ***
 
 ### removeTopChat()
 
-> **removeTopChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **removeTopChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a chat from the list of frequently used chats. Supported only if the chat info database is enabled
 
@@ -11822,19 +12204,19 @@ Removes a chat from the list of frequently used chats. Supported only if the cha
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67921
+dist/generated/types.d.ts:69778
 
 ***
 
 ### reorderActiveUsernames()
 
-> **reorderActiveUsernames**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reorderActiveUsernames**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes order of active usernames of the current user
 
@@ -11846,19 +12228,19 @@ Changes order of active usernames of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71137
+dist/generated/types.d.ts:73055
 
 ***
 
 ### reorderBotActiveUsernames()
 
-> **reorderBotActiveUsernames**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reorderBotActiveUsernames**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
 
@@ -11870,19 +12252,43 @@ Changes order of active usernames of a bot. Can be called only if userTypeBot.ca
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71431
+dist/generated/types.d.ts:73391
+
+***
+
+### reorderBotMediaPreviews()
+
+> **reorderBotMediaPreviews**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Changes order of media previews in the list of media previews of a bot
+
+#### Parameters
+
+• **parameters**: [`reorderBotMediaPreviews$DirectInput`](../type-aliases/reorderBotMediaPreviews$DirectInput.md)
+
+[reorderBotMediaPreviews$Input](../type-aliases/reorderBotMediaPreviews$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:73349
 
 ***
 
 ### reorderChatFolders()
 
-> **reorderChatFolders**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reorderChatFolders**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the order of chat folders
 
@@ -11894,19 +12300,19 @@ Changes the order of chat folders
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69367
+dist/generated/types.d.ts:71253
 
 ***
 
 ### reorderInstalledStickerSets()
 
-> **reorderInstalledStickerSets**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reorderInstalledStickerSets**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the order of installed sticker sets
 
@@ -11918,19 +12324,19 @@ Changes the order of installed sticker sets
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70893
+dist/generated/types.d.ts:72811
 
 ***
 
 ### reorderQuickReplyShortcuts()
 
-> **reorderQuickReplyShortcuts**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reorderQuickReplyShortcuts**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the order of quick reply shortcuts
 
@@ -11942,19 +12348,19 @@ Changes the order of quick reply shortcuts
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68626
+dist/generated/types.d.ts:70477
 
 ***
 
 ### reorderSupergroupActiveUsernames()
 
-> **reorderSupergroupActiveUsernames**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reorderSupergroupActiveUsernames**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes order of active usernames of a supergroup or channel, requires owner privileges in the supergroup or channel
 
@@ -11966,19 +12372,19 @@ Changes order of active usernames of a supergroup or channel, requires owner pri
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71559
+dist/generated/types.d.ts:73519
 
 ***
 
 ### replacePrimaryChatInviteLink()
 
-> **replacePrimaryChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink-1.md)\>
+> **replacePrimaryChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
 
 Replaces current primary invite link for a chat with a new primary invite link. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right
 
@@ -11990,19 +12396,19 @@ Replaces current primary invite link for a chat with a new primary invite link. 
 
 #### Returns
 
-`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink-1.md)\>
+`Promise`\<[`chatInviteLink`](../type-aliases/chatInviteLink.md)\>
 
-Promise<[ChatInviteLink](../type-aliases/ChatInviteLink.md)>
+Promise<[ChatInviteLink](../type-aliases/ChatInviteLink-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70294
+dist/generated/types.d.ts:72194
 
 ***
 
 ### replaceStickerInSet()
 
-> **replaceStickerInSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **replaceStickerInSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
 
@@ -12014,19 +12420,19 @@ Replaces existing sticker in a set. The function is equivalent to removeStickerF
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72337
+dist/generated/types.d.ts:74297
 
 ***
 
 ### replaceVideoChatRtmpUrl()
 
-> **replaceVideoChatRtmpUrl**(`parameters`): `Promise`\<[`rtmpUrl`](../type-aliases/rtmpUrl-1.md)\>
+> **replaceVideoChatRtmpUrl**(`parameters`): `Promise`\<[`rtmpUrl`](../type-aliases/rtmpUrl.md)\>
 
 Replaces the current RTMP URL for streaming to the chat; requires owner privileges
 
@@ -12038,19 +12444,19 @@ Replaces the current RTMP URL for streaming to the chat; requires owner privileg
 
 #### Returns
 
-`Promise`\<[`rtmpUrl`](../type-aliases/rtmpUrl-1.md)\>
+`Promise`\<[`rtmpUrl`](../type-aliases/rtmpUrl.md)\>
 
-Promise<[RtmpUrl](../type-aliases/RtmpUrl.md)>
+Promise<[RtmpUrl](../type-aliases/RtmpUrl-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70478
+dist/generated/types.d.ts:72396
 
 ***
 
 ### reportAuthenticationCodeMissing()
 
-> **reportAuthenticationCodeMissing**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reportAuthenticationCodeMissing**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Reports that authentication code wasn't delivered via SMS; for official mobile applications only. Works only when the current authorization state is authorizationStateWaitCode
 
@@ -12062,19 +12468,19 @@ Reports that authentication code wasn't delivered via SMS; for official mobile a
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67506
+dist/generated/types.d.ts:69356
 
 ***
 
 ### reportChat()
 
-> **reportChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reportChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
 
@@ -12086,19 +12492,19 @@ Reports a chat to the Telegram moderators. A chat can be reported only from the 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72013
+dist/generated/types.d.ts:73973
 
 ***
 
 ### reportChatPhoto()
 
-> **reportChatPhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reportChatPhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Reports a chat photo to the Telegram moderators. A chat photo can be reported only if chat.can_be_reported
 
@@ -12110,13 +12516,13 @@ Reports a chat photo to the Telegram moderators. A chat photo can be reported on
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72020
+dist/generated/types.d.ts:73980
 
 ***
 
@@ -12140,15 +12546,15 @@ Promise<[ReportChatSponsoredMessageResult](../type-aliases/ReportChatSponsoredMe
 
 #### Defined in
 
-dist/generated/types.d.ts:68277
+dist/generated/types.d.ts:70127
 
 ***
 
 ### reportMessageReactions()
 
-> **reportMessageReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reportMessageReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if message.can_report_reactions
+Reports reactions set on a message to the Telegram moderators. Reactions on a message can be reported only if messageProperties.can_report_reactions
 
 #### Parameters
 
@@ -12158,19 +12564,19 @@ Reports reactions set on a message to the Telegram moderators. Reactions on a me
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72027
+dist/generated/types.d.ts:73987
 
 ***
 
 ### reportPhoneNumberCodeMissing()
 
-> **reportPhoneNumberCodeMissing**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reportPhoneNumberCodeMissing**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Reports that authentication code wasn't delivered via SMS to the specified phone number; for official mobile applications only
 
@@ -12182,19 +12588,19 @@ Reports that authentication code wasn't delivered via SMS to the specified phone
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71228
+dist/generated/types.d.ts:73146
 
 ***
 
 ### reportStory()
 
-> **reportStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reportStory**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Reports a story to the Telegram moderators
 
@@ -12206,19 +12612,19 @@ Reports a story to the Telegram moderators
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69990
+dist/generated/types.d.ts:71890
 
 ***
 
 ### reportSupergroupAntiSpamFalsePositive()
 
-> **reportSupergroupAntiSpamFalsePositive**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reportSupergroupAntiSpamFalsePositive**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Reports a false deletion of a message by aggressive anti-spam checks; requires administrator rights in the supergroup. Can be called only for messages from chatEventMessageDeleted with can_report_anti_spam_false_positive == true
 
@@ -12230,19 +12636,19 @@ Reports a false deletion of a message by aggressive anti-spam checks; requires a
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71657
+dist/generated/types.d.ts:73617
 
 ***
 
 ### reportSupergroupSpam()
 
-> **reportSupergroupSpam**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **reportSupergroupSpam**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Reports messages in a supergroup as spam; requires administrator rights in the supergroup
 
@@ -12254,19 +12660,19 @@ Reports messages in a supergroup as spam; requires administrator rights in the s
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71650
+dist/generated/types.d.ts:73610
 
 ***
 
 ### requestAuthenticationPasswordRecovery()
 
-> **requestAuthenticationPasswordRecovery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **requestAuthenticationPasswordRecovery**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Requests to send a 2-step verification password recovery code to an email address that was previously set up. Works only when the current authorization state is authorizationStateWaitPassword
 
@@ -12278,19 +12684,19 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67478
+dist/generated/types.d.ts:69328
 
 ***
 
 ### requestPasswordRecovery()
 
-> **requestPasswordRecovery**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+> **requestPasswordRecovery**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
 Requests to send a 2-step verification password recovery code to an email address that was previously set up
 
@@ -12302,19 +12708,19 @@ Requests to send a 2-step verification password recovery code to an email addres
 
 #### Returns
 
-`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
-Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo.md)>
+Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67638
+dist/generated/types.d.ts:69488
 
 ***
 
 ### requestQrCodeAuthentication()
 
-> **requestQrCodeAuthentication**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **requestQrCodeAuthentication**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Requests QR code authentication by scanning a QR code on another logged in device. Works only when the current authorization state is authorizationStateWaitPhoneNumber,
 
@@ -12328,19 +12734,19 @@ Requests QR code authentication by scanning a QR code on another logged in devic
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67448
+dist/generated/types.d.ts:69298
 
 ***
 
 ### resendAuthenticationCode()
 
-> **resendAuthenticationCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **resendAuthenticationCode**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
 
@@ -12354,19 +12760,19 @@ Resends an authentication code to the user. Works only when the current authoriz
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67425
+dist/generated/types.d.ts:69275
 
 ***
 
 ### resendEmailAddressVerificationCode()
 
-> **resendEmailAddressVerificationCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+> **resendEmailAddressVerificationCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
 Resends the code to verify an email address to be added to a user's Telegram Passport
 
@@ -12378,19 +12784,19 @@ Resends the code to verify an email address to be added to a user's Telegram Pas
 
 #### Returns
 
-`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
-Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo.md)>
+Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72260
+dist/generated/types.d.ts:74220
 
 ***
 
 ### resendLoginEmailAddressCode()
 
-> **resendLoginEmailAddressCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+> **resendLoginEmailAddressCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
 Resends the login email address verification code
 
@@ -12402,19 +12808,19 @@ Resends the login email address verification code
 
 #### Returns
 
-`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
-Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo.md)>
+Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67587
+dist/generated/types.d.ts:69437
 
 ***
 
 ### resendMessages()
 
-> **resendMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **resendMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
 Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
 
@@ -12428,19 +12834,19 @@ Resends messages which failed to send. Can be called only for messages for which
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68409
+dist/generated/types.d.ts:70259
 
 ***
 
 ### resendPhoneNumberCode()
 
-> **resendPhoneNumberCode**(`parameters`): `Promise`\<[`authenticationCodeInfo`](../type-aliases/authenticationCodeInfo-1.md)\>
+> **resendPhoneNumberCode**(`parameters`): `Promise`\<[`authenticationCodeInfo`](../type-aliases/authenticationCodeInfo.md)\>
 
 Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
 
@@ -12452,19 +12858,19 @@ Resends the authentication code sent to a phone number. Works only if the previo
 
 #### Returns
 
-`Promise`\<[`authenticationCodeInfo`](../type-aliases/authenticationCodeInfo-1.md)\>
+`Promise`\<[`authenticationCodeInfo`](../type-aliases/authenticationCodeInfo.md)\>
 
-Promise<[AuthenticationCodeInfo](../type-aliases/AuthenticationCodeInfo.md)>
+Promise<[AuthenticationCodeInfo](../type-aliases/AuthenticationCodeInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71235
+dist/generated/types.d.ts:73153
 
 ***
 
 ### resendRecoveryEmailAddressCode()
 
-> **resendRecoveryEmailAddressCode**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+> **resendRecoveryEmailAddressCode**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
 Resends the 2-step verification recovery email address verification code
 
@@ -12476,19 +12882,19 @@ Resends the 2-step verification recovery email address verification code
 
 #### Returns
 
-`Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+`Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
-Promise<[PasswordState](../type-aliases/PasswordState.md)>
+Promise<[PasswordState](../type-aliases/PasswordState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67624
+dist/generated/types.d.ts:69474
 
 ***
 
 ### resetAllNotificationSettings()
 
-> **resetAllNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **resetAllNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Resets all chat and scope notification settings to their default values. By default, all chats are unmuted and message previews are shown
 
@@ -12500,19 +12906,19 @@ Resets all chat and scope notification settings to their default values. By defa
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69809
+dist/generated/types.d.ts:71695
 
 ***
 
 ### resetAuthenticationEmailAddress()
 
-> **resetAuthenticationEmailAddress**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **resetAuthenticationEmailAddress**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Resets the login email address. May return an error with a message "TASK_ALREADY_EXISTS" if reset is still pending.
 
@@ -12526,19 +12932,19 @@ Resets the login email address. May return an error with a message "TASK_ALREADY
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67464
+dist/generated/types.d.ts:69314
 
 ***
 
 ### resetInstalledBackgrounds()
 
-> **resetInstalledBackgrounds**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **resetInstalledBackgrounds**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Resets list of installed backgrounds to its default value
 
@@ -12550,19 +12956,19 @@ Resets list of installed backgrounds to its default value
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71804
+dist/generated/types.d.ts:73764
 
 ***
 
 ### resetNetworkStatistics()
 
-> **resetNetworkStatistics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **resetNetworkStatistics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Resets all network data usage statistics to zero. Can be called before authorization
 
@@ -12574,13 +12980,13 @@ Resets all network data usage statistics to zero. Can be called before authoriza
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72162
+dist/generated/types.d.ts:74122
 
 ***
 
@@ -12604,13 +13010,37 @@ Promise<[ResetPasswordResult](../type-aliases/ResetPasswordResult.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67659
+dist/generated/types.d.ts:69509
+
+***
+
+### reuseStarSubscription()
+
+> **reuseStarSubscription**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Reuses an active subscription and joins the subscribed chat again
+
+#### Parameters
+
+• **parameters**: [`reuseStarSubscription$DirectInput`](../type-aliases/reuseStarSubscription$DirectInput.md)
+
+[reuseStarSubscription$Input](../type-aliases/reuseStarSubscription$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74514
 
 ***
 
 ### revokeChatInviteLink()
 
-> **revokeChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLinks`](../type-aliases/chatInviteLinks-1.md)\>
+> **revokeChatInviteLink**(`parameters`): `Promise`\<[`chatInviteLinks`](../type-aliases/chatInviteLinks.md)\>
 
 Revokes invite link for a chat. Available for basic groups, supergroups, and channels. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links.
 
@@ -12624,19 +13054,19 @@ Revokes invite link for a chat. Available for basic groups, supergroups, and cha
 
 #### Returns
 
-`Promise`\<[`chatInviteLinks`](../type-aliases/chatInviteLinks-1.md)\>
+`Promise`\<[`chatInviteLinks`](../type-aliases/chatInviteLinks.md)\>
 
-Promise<[ChatInviteLinks](../type-aliases/ChatInviteLinks.md)>
+Promise<[ChatInviteLinks](../type-aliases/ChatInviteLinks-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70345
+dist/generated/types.d.ts:72263
 
 ***
 
 ### revokeGroupCallInviteLink()
 
-> **revokeGroupCallInviteLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **revokeGroupCallInviteLink**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Revokes invite link for a group call. Requires groupCall.can_be_managed group call flag
 
@@ -12648,19 +13078,19 @@ Revokes invite link for a group call. Requires groupCall.can_be_managed group ca
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70562
+dist/generated/types.d.ts:72480
 
 ***
 
 ### saveApplicationLogEvent()
 
-> **saveApplicationLogEvent**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **saveApplicationLogEvent**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Saves application log event on the server. Can be called before authorization
 
@@ -12672,19 +13102,19 @@ Saves application log event on the server. Can be called before authorization
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72624
+dist/generated/types.d.ts:74612
 
 ***
 
 ### searchBackground()
 
-> **searchBackground**(`parameters`): `Promise`\<[`background`](../type-aliases/background-1.md)\>
+> **searchBackground**(`parameters`): `Promise`\<[`background`](../type-aliases/background.md)\>
 
 Searches for a background by its name
 
@@ -12696,19 +13126,19 @@ Searches for a background by its name
 
 #### Returns
 
-`Promise`\<[`background`](../type-aliases/background-1.md)\>
+`Promise`\<[`background`](../type-aliases/background.md)\>
 
-Promise<[Background](../type-aliases/Background.md)>
+Promise<[Background](../type-aliases/Background-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71769
+dist/generated/types.d.ts:73729
 
 ***
 
 ### searchCallMessages()
 
-> **searchCallMessages**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+> **searchCallMessages**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
 Searches for call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
 
@@ -12720,19 +13150,19 @@ Searches for call messages. Returns the results in reverse chronological order (
 
 #### Returns
 
-`Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+`Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
-Promise<[FoundMessages](../type-aliases/FoundMessages.md)>
+Promise<[FoundMessages](../type-aliases/FoundMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68135
+dist/generated/types.d.ts:69992
 
 ***
 
 ### searchChatMembers()
 
-> **searchChatMembers**(`parameters`): `Promise`\<[`chatMembers`](../type-aliases/chatMembers-1.md)\>
+> **searchChatMembers**(`parameters`): `Promise`\<[`chatMembers`](../type-aliases/chatMembers.md)\>
 
 Searches for a specified query in the first name, last name and usernames of the members of a specified chat. Requires administrator rights if the chat is a channel
 
@@ -12744,19 +13174,19 @@ Searches for a specified query in the first name, last name and usernames of the
 
 #### Returns
 
-`Promise`\<[`chatMembers`](../type-aliases/chatMembers-1.md)\>
+`Promise`\<[`chatMembers`](../type-aliases/chatMembers.md)\>
 
-Promise<[ChatMembers](../type-aliases/ChatMembers.md)>
+Promise<[ChatMembers](../type-aliases/ChatMembers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69732
+dist/generated/types.d.ts:71618
 
 ***
 
 ### searchChatMessages()
 
-> **searchChatMessages**(`parameters`): `Promise`\<[`foundChatMessages`](../type-aliases/foundChatMessages-1.md)\>
+> **searchChatMessages**(`parameters`): `Promise`\<[`foundChatMessages`](../type-aliases/foundChatMessages.md)\>
 
 Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message_id. Cannot be used in secret chats with a non-empty query
 
@@ -12772,19 +13202,19 @@ Searches for messages with given words in the chat. Returns the results in rever
 
 #### Returns
 
-`Promise`\<[`foundChatMessages`](../type-aliases/foundChatMessages-1.md)\>
+`Promise`\<[`foundChatMessages`](../type-aliases/foundChatMessages.md)\>
 
-Promise<[FoundChatMessages](../type-aliases/FoundChatMessages.md)>
+Promise<[FoundChatMessages](../type-aliases/FoundChatMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68101
+dist/generated/types.d.ts:69958
 
 ***
 
 ### searchChatRecentLocationMessages()
 
-> **searchChatRecentLocationMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **searchChatRecentLocationMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
 Returns information about the recent locations of chat members that were sent to the chat. Returns up to 1 location message per user
 
@@ -12796,19 +13226,19 @@ Returns information about the recent locations of chat members that were sent to
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68205
+dist/generated/types.d.ts:70062
 
 ***
 
 ### searchChats()
 
-> **searchChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **searchChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
 
@@ -12820,19 +13250,19 @@ Searches for the specified query in the title and username of already known chat
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67863
+dist/generated/types.d.ts:69720
 
 ***
 
 ### searchChatsNearby()
 
-> **searchChatsNearby**(`parameters`): `Promise`\<[`chatsNearby`](../type-aliases/chatsNearby-1.md)\>
+> **searchChatsNearby**(`parameters`): `Promise`\<[`chatsNearby`](../type-aliases/chatsNearby.md)\>
 
 Returns a list of users and location-based supergroups nearby. The list of users nearby will be updated for 60 seconds after the request by the updates updateUsersNearby.
 
@@ -12846,19 +13276,19 @@ Returns a list of users and location-based supergroups nearby. The list of users
 
 #### Returns
 
-`Promise`\<[`chatsNearby`](../type-aliases/chatsNearby-1.md)\>
+`Promise`\<[`chatsNearby`](../type-aliases/chatsNearby.md)\>
 
-Promise<[ChatsNearby](../type-aliases/ChatsNearby.md)>
+Promise<[ChatsNearby](../type-aliases/ChatsNearby-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67879
+dist/generated/types.d.ts:69736
 
 ***
 
 ### searchChatsOnServer()
 
-> **searchChatsOnServer**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **searchChatsOnServer**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Searches for the specified query in the title and username of already known chats via request to the server. Returns chats in the order seen in the main chat list
 
@@ -12870,19 +13300,19 @@ Searches for the specified query in the title and username of already known chat
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67870
+dist/generated/types.d.ts:69727
 
 ***
 
 ### searchContacts()
 
-> **searchContacts**(`parameters`): `Promise`\<[`users`](../type-aliases/users-1.md)\>
+> **searchContacts**(`parameters`): `Promise`\<[`users`](../type-aliases/users.md)\>
 
 Searches for the specified query in the first names, last names and usernames of the known user contacts
 
@@ -12894,19 +13324,19 @@ Searches for the specified query in the first names, last names and usernames of
 
 #### Returns
 
-`Promise`\<[`users`](../type-aliases/users-1.md)\>
+`Promise`\<[`users`](../type-aliases/users.md)\>
 
-Promise<[Users](../type-aliases/Users.md)>
+Promise<[Users](../type-aliases/Users-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70702
+dist/generated/types.d.ts:72620
 
 ***
 
 ### searchEmojis()
 
-> **searchEmojis**(`parameters`): `Promise`\<[`emojiKeywords`](../type-aliases/emojiKeywords-1.md)\>
+> **searchEmojis**(`parameters`): `Promise`\<[`emojiKeywords`](../type-aliases/emojiKeywords.md)\>
 
 Searches for emojis by keywords. Supported only if the file database is enabled. Order of results is unspecified
 
@@ -12918,19 +13348,19 @@ Searches for emojis by keywords. Supported only if the file database is enabled.
 
 #### Returns
 
-`Promise`\<[`emojiKeywords`](../type-aliases/emojiKeywords-1.md)\>
+`Promise`\<[`emojiKeywords`](../type-aliases/emojiKeywords.md)\>
 
-Promise<[EmojiKeywords](../type-aliases/EmojiKeywords.md)>
+Promise<[EmojiKeywords](../type-aliases/EmojiKeywords-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70960
+dist/generated/types.d.ts:72878
 
 ***
 
 ### searchFileDownloads()
 
-> **searchFileDownloads**(`parameters`): `Promise`\<[`foundFileDownloads`](../type-aliases/foundFileDownloads-1.md)\>
+> **searchFileDownloads**(`parameters`): `Promise`\<[`foundFileDownloads`](../type-aliases/foundFileDownloads.md)\>
 
 Searches for files in the file download list or recently downloaded files from the list
 
@@ -12942,19 +13372,19 @@ Searches for files in the file download list or recently downloaded files from t
 
 #### Returns
 
-`Promise`\<[`foundFileDownloads`](../type-aliases/foundFileDownloads-1.md)\>
+`Promise`\<[`foundFileDownloads`](../type-aliases/foundFileDownloads.md)\>
 
-Promise<[FoundFileDownloads](../type-aliases/FoundFileDownloads.md)>
+Promise<[FoundFileDownloads](../type-aliases/FoundFileDownloads-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70259
+dist/generated/types.d.ts:72159
 
 ***
 
 ### searchHashtags()
 
-> **searchHashtags**(`parameters`): `Promise`\<[`hashtags`](../type-aliases/hashtags-1.md)\>
+> **searchHashtags**(`parameters`): `Promise`\<[`hashtags`](../type-aliases/hashtags.md)\>
 
 Searches for recently used hashtags by their prefix
 
@@ -12966,19 +13396,19 @@ Searches for recently used hashtags by their prefix
 
 #### Returns
 
-`Promise`\<[`hashtags`](../type-aliases/hashtags-1.md)\>
+`Promise`\<[`hashtags`](../type-aliases/hashtags.md)\>
 
-Promise<[Hashtags](../type-aliases/Hashtags.md)>
+Promise<[Hashtags](../type-aliases/Hashtags-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71053
+dist/generated/types.d.ts:72971
 
 ***
 
 ### searchInstalledStickerSets()
 
-> **searchInstalledStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+> **searchInstalledStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
 Searches for installed sticker sets by looking for specified query in their title and name
 
@@ -12990,19 +13420,19 @@ Searches for installed sticker sets by looking for specified query in their titl
 
 #### Returns
 
-`Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
+`Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
 
-Promise<[StickerSets](../type-aliases/StickerSets.md)>
+Promise<[StickerSets](../type-aliases/StickerSets-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70865
+dist/generated/types.d.ts:72783
 
 ***
 
 ### searchMessages()
 
-> **searchMessages**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+> **searchMessages**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
 Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).
 
@@ -13016,19 +13446,19 @@ Searches for messages in all chats except secret chats. Returns the results in r
 
 #### Returns
 
-`Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+`Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
-Promise<[FoundMessages](../type-aliases/FoundMessages.md)>
+Promise<[FoundMessages](../type-aliases/FoundMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68110
+dist/generated/types.d.ts:69967
 
 ***
 
 ### searchOutgoingDocumentMessages()
 
-> **searchOutgoingDocumentMessages**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+> **searchOutgoingDocumentMessages**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
 Searches for outgoing messages with content of the type messageDocument in all chats except secret chats. Returns the results in reverse chronological order
 
@@ -13040,19 +13470,19 @@ Searches for outgoing messages with content of the type messageDocument in all c
 
 #### Returns
 
-`Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+`Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
-Promise<[FoundMessages](../type-aliases/FoundMessages.md)>
+Promise<[FoundMessages](../type-aliases/FoundMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68142
+dist/generated/types.d.ts:69999
 
 ***
 
 ### searchPublicChat()
 
-> **searchPublicChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **searchPublicChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Searches a public chat by its username. Currently, only private chats, supergroups and channels can be public. Returns the chat if found; otherwise, an error is returned
 
@@ -13064,19 +13494,19 @@ Searches a public chat by its username. Currently, only private chats, supergrou
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67847
+dist/generated/types.d.ts:69704
 
 ***
 
 ### searchPublicChats()
 
-> **searchPublicChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **searchPublicChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Searches public chats by looking for specified query in their username and title. Currently, only private chats, supergroups and channels can be public. Returns a meaningful number of results.
 
@@ -13090,19 +13520,19 @@ Searches public chats by looking for specified query in their username and title
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67856
+dist/generated/types.d.ts:69713
 
 ***
 
 ### searchPublicMessagesByTag()
 
-> **searchPublicMessagesByTag**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+> **searchPublicMessagesByTag**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
 Searches for public channel posts containing the given hashtag or cashtag. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
 
@@ -13114,19 +13544,19 @@ Searches for public channel posts containing the given hashtag or cashtag. For o
 
 #### Returns
 
-`Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+`Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
-Promise<[FoundMessages](../type-aliases/FoundMessages.md)>
+Promise<[FoundMessages](../type-aliases/FoundMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68149
+dist/generated/types.d.ts:70006
 
 ***
 
 ### searchPublicStoriesByLocation()
 
-> **searchPublicStoriesByLocation**(`parameters`): `Promise`\<[`foundStories`](../type-aliases/foundStories-1.md)\>
+> **searchPublicStoriesByLocation**(`parameters`): `Promise`\<[`foundStories`](../type-aliases/foundStories.md)\>
 
 Searches for public stories by the given address location. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
 
@@ -13138,19 +13568,19 @@ Searches for public stories by the given address location. For optimal performan
 
 #### Returns
 
-`Promise`\<[`foundStories`](../type-aliases/foundStories-1.md)\>
+`Promise`\<[`foundStories`](../type-aliases/foundStories.md)\>
 
-Promise<[FoundStories](../type-aliases/FoundStories.md)>
+Promise<[FoundStories](../type-aliases/FoundStories-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68163
+dist/generated/types.d.ts:70020
 
 ***
 
 ### searchPublicStoriesByTag()
 
-> **searchPublicStoriesByTag**(`parameters`): `Promise`\<[`foundStories`](../type-aliases/foundStories-1.md)\>
+> **searchPublicStoriesByTag**(`parameters`): `Promise`\<[`foundStories`](../type-aliases/foundStories.md)\>
 
 Searches for public stories containing the given hashtag or cashtag. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
 
@@ -13162,19 +13592,19 @@ Searches for public stories containing the given hashtag or cashtag. For optimal
 
 #### Returns
 
-`Promise`\<[`foundStories`](../type-aliases/foundStories-1.md)\>
+`Promise`\<[`foundStories`](../type-aliases/foundStories.md)\>
 
-Promise<[FoundStories](../type-aliases/FoundStories.md)>
+Promise<[FoundStories](../type-aliases/FoundStories-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68156
+dist/generated/types.d.ts:70013
 
 ***
 
 ### searchPublicStoriesByVenue()
 
-> **searchPublicStoriesByVenue**(`parameters`): `Promise`\<[`foundStories`](../type-aliases/foundStories-1.md)\>
+> **searchPublicStoriesByVenue**(`parameters`): `Promise`\<[`foundStories`](../type-aliases/foundStories.md)\>
 
 Searches for public stories from the given venue. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
 
@@ -13186,19 +13616,19 @@ Searches for public stories from the given venue. For optimal performance, the n
 
 #### Returns
 
-`Promise`\<[`foundStories`](../type-aliases/foundStories-1.md)\>
+`Promise`\<[`foundStories`](../type-aliases/foundStories.md)\>
 
-Promise<[FoundStories](../type-aliases/FoundStories.md)>
+Promise<[FoundStories](../type-aliases/FoundStories-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68170
+dist/generated/types.d.ts:70027
 
 ***
 
 ### searchQuote()
 
-> **searchQuote**(`parameters`): `Promise`\<[`foundPosition`](../type-aliases/foundPosition-1.md)\>
+> **searchQuote**(`parameters`): `Promise`\<[`foundPosition`](../type-aliases/foundPosition.md)\>
 
 Searches for a given quote in a text. Returns found quote start position in UTF-16 code units. Returns a 404 error if the quote is not found. Can be called synchronously
 
@@ -13210,19 +13640,19 @@ Searches for a given quote in a text. Returns found quote start position in UTF-
 
 #### Returns
 
-`Promise`\<[`foundPosition`](../type-aliases/foundPosition-1.md)\>
+`Promise`\<[`foundPosition`](../type-aliases/foundPosition.md)\>
 
-Promise<[FoundPosition](../type-aliases/FoundPosition.md)>
+Promise<[FoundPosition](../type-aliases/FoundPosition-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68860
+dist/generated/types.d.ts:70732
 
 ***
 
 ### searchRecentlyFoundChats()
 
-> **searchRecentlyFoundChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+> **searchRecentlyFoundChats**(`parameters`): `Promise`\<[`chats`](../type-aliases/chats.md)\>
 
 Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
 
@@ -13234,19 +13664,19 @@ Searches for the specified query in the title and username of up to 50 recently 
 
 #### Returns
 
-`Promise`\<[`chats`](../type-aliases/chats-1.md)\>
+`Promise`\<[`chats`](../type-aliases/chats.md)\>
 
-Promise<[Chats](../type-aliases/Chats.md)>
+Promise<[Chats](../type-aliases/Chats-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67928
+dist/generated/types.d.ts:69785
 
 ***
 
 ### searchSavedMessages()
 
-> **searchSavedMessages**(`parameters`): `Promise`\<[`foundChatMessages`](../type-aliases/foundChatMessages-1.md)\>
+> **searchSavedMessages**(`parameters`): `Promise`\<[`foundChatMessages`](../type-aliases/foundChatMessages.md)\>
 
 Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
 
@@ -13262,19 +13692,19 @@ Searches for messages tagged by the given reaction and with the given words in t
 
 #### Returns
 
-`Promise`\<[`foundChatMessages`](../type-aliases/foundChatMessages-1.md)\>
+`Promise`\<[`foundChatMessages`](../type-aliases/foundChatMessages.md)\>
 
-Promise<[FoundChatMessages](../type-aliases/FoundChatMessages.md)>
+Promise<[FoundChatMessages](../type-aliases/FoundChatMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68128
+dist/generated/types.d.ts:69985
 
 ***
 
 ### searchSecretMessages()
 
-> **searchSecretMessages**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+> **searchSecretMessages**(`parameters`): `Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
 Searches for messages in secret chats. Returns the results in reverse chronological order. For optimal performance, the number of returned messages is chosen by TDLib
 
@@ -13286,67 +13716,19 @@ Searches for messages in secret chats. Returns the results in reverse chronologi
 
 #### Returns
 
-`Promise`\<[`foundMessages`](../type-aliases/foundMessages-1.md)\>
+`Promise`\<[`foundMessages`](../type-aliases/foundMessages.md)\>
 
-Promise<[FoundMessages](../type-aliases/FoundMessages.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:68117
-
-***
-
-### searchStickerSet()
-
-> **searchStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../type-aliases/stickerSet-1.md)\>
-
-Searches for a sticker set by its name
-
-#### Parameters
-
-• **parameters**: [`searchStickerSet$DirectInput`](../type-aliases/searchStickerSet$DirectInput.md)
-
-[searchStickerSet$Input](../type-aliases/searchStickerSet$Input.md)
-
-#### Returns
-
-`Promise`\<[`stickerSet`](../type-aliases/stickerSet-1.md)\>
-
-Promise<[StickerSet](../type-aliases/StickerSet.md)>
+Promise<[FoundMessages](../type-aliases/FoundMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70858
-
-***
-
-### searchStickerSets()
-
-> **searchStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
-
-Searches for sticker sets by looking for specified query in their title and name. Excludes installed sticker sets from the results
-
-#### Parameters
-
-• **parameters**: [`searchStickerSets$DirectInput`](../type-aliases/searchStickerSets$DirectInput.md)
-
-[searchStickerSets$Input](../type-aliases/searchStickerSets$Input.md)
-
-#### Returns
-
-`Promise`\<[`stickerSets`](../type-aliases/stickerSets-1.md)\>
-
-Promise<[StickerSets](../type-aliases/StickerSets.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:70872
+dist/generated/types.d.ts:69974
 
 ***
 
 ### searchStickers()
 
-> **searchStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+> **searchStickers**(`parameters`): `Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
 Searches for stickers from public sticker sets that correspond to any of the given emoji
 
@@ -13358,19 +13740,67 @@ Searches for stickers from public sticker sets that correspond to any of the giv
 
 #### Returns
 
-`Promise`\<[`stickers`](../type-aliases/stickers-1.md)\>
+`Promise`\<[`stickers`](../type-aliases/stickers.md)\>
 
-Promise<[Stickers](../type-aliases/Stickers.md)>
+Promise<[Stickers](../type-aliases/Stickers-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70802
+dist/generated/types.d.ts:72720
+
+***
+
+### searchStickerSet()
+
+> **searchStickerSet**(`parameters`): `Promise`\<[`stickerSet`](../type-aliases/stickerSet.md)\>
+
+Searches for a sticker set by its name
+
+#### Parameters
+
+• **parameters**: [`searchStickerSet$DirectInput`](../type-aliases/searchStickerSet$DirectInput.md)
+
+[searchStickerSet$Input](../type-aliases/searchStickerSet$Input.md)
+
+#### Returns
+
+`Promise`\<[`stickerSet`](../type-aliases/stickerSet.md)\>
+
+Promise<[StickerSet](../type-aliases/StickerSet-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72776
+
+***
+
+### searchStickerSets()
+
+> **searchStickerSets**(`parameters`): `Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
+
+Searches for sticker sets by looking for specified query in their title and name. Excludes installed sticker sets from the results
+
+#### Parameters
+
+• **parameters**: [`searchStickerSets$DirectInput`](../type-aliases/searchStickerSets$DirectInput.md)
+
+[searchStickerSets$Input](../type-aliases/searchStickerSets$Input.md)
+
+#### Returns
+
+`Promise`\<[`stickerSets`](../type-aliases/stickerSets.md)\>
+
+Promise<[StickerSets](../type-aliases/StickerSets-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72790
 
 ***
 
 ### searchStringsByPrefix()
 
-> **searchStringsByPrefix**(`parameters`): `Promise`\<[`foundPositions`](../type-aliases/foundPositions-1.md)\>
+> **searchStringsByPrefix**(`parameters`): `Promise`\<[`foundPositions`](../type-aliases/foundPositions.md)\>
 
 Searches specified query by word prefixes in the provided strings. Returns 0-based positions of strings that matched. Can be called synchronously
 
@@ -13382,19 +13812,19 @@ Searches specified query by word prefixes in the provided strings. Returns 0-bas
 
 #### Returns
 
-`Promise`\<[`foundPositions`](../type-aliases/foundPositions-1.md)\>
+`Promise`\<[`foundPositions`](../type-aliases/foundPositions.md)\>
 
-Promise<[FoundPositions](../type-aliases/FoundPositions.md)>
+Promise<[FoundPositions](../type-aliases/FoundPositions-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72547
+dist/generated/types.d.ts:74535
 
 ***
 
 ### searchUserByPhoneNumber()
 
-> **searchUserByPhoneNumber**(`parameters`): `Promise`\<[`user`](../type-aliases/user-1.md)\>
+> **searchUserByPhoneNumber**(`parameters`): `Promise`\<[`user`](../type-aliases/user.md)\>
 
 Searches a user by their phone number. Returns a 404 error if the user can't be found
 
@@ -13406,19 +13836,19 @@ Searches a user by their phone number. Returns a 404 error if the user can't be 
 
 #### Returns
 
-`Promise`\<[`user`](../type-aliases/user-1.md)\>
+`Promise`\<[`user`](../type-aliases/user.md)\>
 
-Promise<[User](../type-aliases/User.md)>
+Promise<[User](../type-aliases/User-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70767
+dist/generated/types.d.ts:72685
 
 ***
 
 ### searchUserByToken()
 
-> **searchUserByToken**(`parameters`): `Promise`\<[`user`](../type-aliases/user-1.md)\>
+> **searchUserByToken**(`parameters`): `Promise`\<[`user`](../type-aliases/user.md)\>
 
 Searches a user by a token from the user's link
 
@@ -13430,19 +13860,19 @@ Searches a user by a token from the user's link
 
 #### Returns
 
-`Promise`\<[`user`](../type-aliases/user-1.md)\>
+`Promise`\<[`user`](../type-aliases/user.md)\>
 
-Promise<[User](../type-aliases/User.md)>
+Promise<[User](../type-aliases/User-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71326
+dist/generated/types.d.ts:73244
 
 ***
 
 ### searchWebApp()
 
-> **searchWebApp**(`parameters`): `Promise`\<[`foundWebApp`](../type-aliases/foundWebApp-1.md)\>
+> **searchWebApp**(`parameters`): `Promise`\<[`foundWebApp`](../type-aliases/foundWebApp.md)\>
 
 Returns information about a Web App by its short name. Returns a 404 error if the Web App is not found
 
@@ -13454,19 +13884,19 @@ Returns information about a Web App by its short name. Returns a 404 error if th
 
 #### Returns
 
-`Promise`\<[`foundWebApp`](../type-aliases/foundWebApp-1.md)\>
+`Promise`\<[`foundWebApp`](../type-aliases/foundWebApp.md)\>
 
-Promise<[FoundWebApp](../type-aliases/FoundWebApp.md)>
+Promise<[FoundWebApp](../type-aliases/FoundWebApp-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69039
+dist/generated/types.d.ts:70918
 
 ***
 
 ### sendAuthenticationFirebaseSms()
 
-> **sendAuthenticationFirebaseSms**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendAuthenticationFirebaseSms**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
 
@@ -13478,19 +13908,19 @@ Sends Firebase Authentication SMS to the phone number of the user. Works only wh
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67499
+dist/generated/types.d.ts:69349
 
 ***
 
 ### sendBotStartMessage()
 
-> **sendBotStartMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **sendBotStartMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Invites a bot to a chat (if it is not yet a member) and sends it the /start command; requires can_invite_users member right. Bots can't be invited to a private chat other than the chat with the bot.
 
@@ -13504,19 +13934,19 @@ Invites a bot to a chat (if it is not yet a member) and sends it the /start comm
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68379
+dist/generated/types.d.ts:70229
 
 ***
 
 ### sendBusinessMessage()
 
-> **sendBusinessMessage**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+> **sendBusinessMessage**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
 Sends a message on behalf of a business account; for bots only. Returns the message after it was sent
 
@@ -13528,19 +13958,19 @@ Sends a message on behalf of a business account; for bots only. Returns the mess
 
 #### Returns
 
-`Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+`Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
-Promise<[BusinessMessage](../type-aliases/BusinessMessage.md)>
+Promise<[BusinessMessage](../type-aliases/BusinessMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68540
+dist/generated/types.d.ts:70384
 
 ***
 
 ### sendBusinessMessageAlbum()
 
-> **sendBusinessMessageAlbum**(`parameters`): `Promise`\<[`businessMessages`](../type-aliases/businessMessages-1.md)\>
+> **sendBusinessMessageAlbum**(`parameters`): `Promise`\<[`businessMessages`](../type-aliases/businessMessages.md)\>
 
 Sends 2-10 messages grouped together into an album on behalf of a business account; for bots only. Currently, only audio, document, photo and video messages can be grouped into an album.
 
@@ -13554,19 +13984,19 @@ Sends 2-10 messages grouped together into an album on behalf of a business accou
 
 #### Returns
 
-`Promise`\<[`businessMessages`](../type-aliases/businessMessages-1.md)\>
+`Promise`\<[`businessMessages`](../type-aliases/businessMessages.md)\>
 
-Promise<[BusinessMessages](../type-aliases/BusinessMessages.md)>
+Promise<[BusinessMessages](../type-aliases/BusinessMessages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68549
+dist/generated/types.d.ts:70393
 
 ***
 
 ### sendCallDebugInformation()
 
-> **sendCallDebugInformation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendCallDebugInformation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends debug information for a call to Telegram servers
 
@@ -13578,19 +14008,19 @@ Sends debug information for a call to Telegram servers
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70436
+dist/generated/types.d.ts:72354
 
 ***
 
 ### sendCallLog()
 
-> **sendCallLog**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendCallLog**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends log file for a call to Telegram servers
 
@@ -13602,19 +14032,19 @@ Sends log file for a call to Telegram servers
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70443
+dist/generated/types.d.ts:72361
 
 ***
 
 ### sendCallRating()
 
-> **sendCallRating**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendCallRating**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends a call rating
 
@@ -13626,19 +14056,19 @@ Sends a call rating
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70429
+dist/generated/types.d.ts:72347
 
 ***
 
 ### sendCallSignalingData()
 
-> **sendCallSignalingData**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendCallSignalingData**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends call signaling data
 
@@ -13650,19 +14080,19 @@ Sends call signaling data
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70415
+dist/generated/types.d.ts:72333
 
 ***
 
 ### sendChatAction()
 
-> **sendChatAction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendChatAction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends a notification about user activity in a chat
 
@@ -13674,19 +14104,19 @@ Sends a notification about user activity in a chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69153
+dist/generated/types.d.ts:71039
 
 ***
 
 ### sendCustomRequest()
 
-> **sendCustomRequest**(`parameters`): `Promise`\<[`customRequestResult`](../type-aliases/customRequestResult-1.md)\>
+> **sendCustomRequest**(`parameters`): `Promise`\<[`customRequestResult`](../type-aliases/customRequestResult.md)\>
 
 Sends a custom request; for bots only
 
@@ -13698,19 +14128,19 @@ Sends a custom request; for bots only
 
 #### Returns
 
-`Promise`\<[`customRequestResult`](../type-aliases/customRequestResult-1.md)\>
+`Promise`\<[`customRequestResult`](../type-aliases/customRequestResult.md)\>
 
-Promise<[CustomRequestResult](../type-aliases/CustomRequestResult.md)>
+Promise<[CustomRequestResult](../type-aliases/CustomRequestResult-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72554
+dist/generated/types.d.ts:74542
 
 ***
 
 ### sendEmailAddressVerificationCode()
 
-> **sendEmailAddressVerificationCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+> **sendEmailAddressVerificationCode**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
 Sends a code to verify an email address to be added to a user's Telegram Passport
 
@@ -13722,19 +14152,19 @@ Sends a code to verify an email address to be added to a user's Telegram Passpor
 
 #### Returns
 
-`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
-Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo.md)>
+Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72253
+dist/generated/types.d.ts:74213
 
 ***
 
 ### sendInlineQueryResultMessage()
 
-> **sendInlineQueryResultMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **sendInlineQueryResultMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Sends the result of an inline query as a message. Returns the sent message. Always clears a chat draft message
 
@@ -13746,19 +14176,19 @@ Sends the result of an inline query as a message. Returns the sent message. Alwa
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68386
+dist/generated/types.d.ts:70236
 
 ***
 
 ### sendMessage()
 
-> **sendMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **sendMessage**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Sends a message. Returns the sent message
 
@@ -13770,19 +14200,19 @@ Sends a message. Returns the sent message
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68361
+dist/generated/types.d.ts:70211
 
 ***
 
 ### sendMessageAlbum()
 
-> **sendMessageAlbum**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **sendMessageAlbum**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
 Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album.
 
@@ -13796,19 +14226,19 @@ Sends 2-10 messages grouped together into an album. Currently, only audio, docum
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68370
+dist/generated/types.d.ts:70220
 
 ***
 
 ### sendPassportAuthorizationForm()
 
-> **sendPassportAuthorizationForm**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendPassportAuthorizationForm**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends a Telegram Passport authorization form, effectively sharing data with the service. This method must be called after getPassportAuthorizationFormAvailableElements if some previously available elements are going to be reused
 
@@ -13820,19 +14250,19 @@ Sends a Telegram Passport authorization form, effectively sharing data with the 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72288
+dist/generated/types.d.ts:74248
 
 ***
 
 ### sendPaymentForm()
 
-> **sendPaymentForm**(`parameters`): `Promise`\<[`paymentResult`](../type-aliases/paymentResult-1.md)\>
+> **sendPaymentForm**(`parameters`): `Promise`\<[`paymentResult`](../type-aliases/paymentResult.md)\>
 
 Sends a filled-out payment form to the bot for final verification
 
@@ -13844,19 +14274,19 @@ Sends a filled-out payment form to the bot for final verification
 
 #### Returns
 
-`Promise`\<[`paymentResult`](../type-aliases/paymentResult-1.md)\>
+`Promise`\<[`paymentResult`](../type-aliases/paymentResult.md)\>
 
-Promise<[PaymentResult](../type-aliases/PaymentResult.md)>
+Promise<[PaymentResult](../type-aliases/PaymentResult-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71706
+dist/generated/types.d.ts:73666
 
 ***
 
 ### sendPhoneNumberCode()
 
-> **sendPhoneNumberCode**(`parameters`): `Promise`\<[`authenticationCodeInfo`](../type-aliases/authenticationCodeInfo-1.md)\>
+> **sendPhoneNumberCode**(`parameters`): `Promise`\<[`authenticationCodeInfo`](../type-aliases/authenticationCodeInfo.md)\>
 
 Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
 
@@ -13868,19 +14298,19 @@ Sends a code to the specified phone number. Aborts previous phone number verific
 
 #### Returns
 
-`Promise`\<[`authenticationCodeInfo`](../type-aliases/authenticationCodeInfo-1.md)\>
+`Promise`\<[`authenticationCodeInfo`](../type-aliases/authenticationCodeInfo.md)\>
 
-Promise<[AuthenticationCodeInfo](../type-aliases/AuthenticationCodeInfo.md)>
+Promise<[AuthenticationCodeInfo](../type-aliases/AuthenticationCodeInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71214
+dist/generated/types.d.ts:73132
 
 ***
 
 ### sendPhoneNumberFirebaseSms()
 
-> **sendPhoneNumberFirebaseSms**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendPhoneNumberFirebaseSms**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends Firebase Authentication SMS to the specified phone number. Works only when received a code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
 
@@ -13892,19 +14322,19 @@ Sends Firebase Authentication SMS to the specified phone number. Works only when
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71221
+dist/generated/types.d.ts:73139
 
 ***
 
 ### sendQuickReplyShortcutMessages()
 
-> **sendQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+> **sendQuickReplyShortcutMessages**(`parameters`): `Promise`\<[`messages`](../type-aliases/messages.md)\>
 
 Sends messages from a quick reply shortcut. Requires Telegram Business subscription
 
@@ -13916,19 +14346,19 @@ Sends messages from a quick reply shortcut. Requires Telegram Business subscript
 
 #### Returns
 
-`Promise`\<[`messages`](../type-aliases/messages-1.md)\>
+`Promise`\<[`messages`](../type-aliases/messages.md)\>
 
-Promise<[Messages](../type-aliases/Messages.md)>
+Promise<[Messages](../type-aliases/Messages-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68400
+dist/generated/types.d.ts:70250
 
 ***
 
 ### sendStory()
 
-> **sendStory**(`parameters`): `Promise`\<[`story`](../type-aliases/story-1.md)\>
+> **sendStory**(`parameters`): `Promise`\<[`story`](../type-aliases/story.md)\>
 
 Sends a new story to a chat; requires can_post_stories right for supergroup and channel chats. Returns a temporary story
 
@@ -13940,19 +14370,19 @@ Sends a new story to a chat; requires can_post_stories right for supergroup and 
 
 #### Returns
 
-`Promise`\<[`story`](../type-aliases/story-1.md)\>
+`Promise`\<[`story`](../type-aliases/story.md)\>
 
-Promise<[Story](../type-aliases/Story.md)>
+Promise<[Story](../type-aliases/Story-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69858
+dist/generated/types.d.ts:71751
 
 ***
 
 ### sendWebAppCustomRequest()
 
-> **sendWebAppCustomRequest**(`parameters`): `Promise`\<[`customRequestResult`](../type-aliases/customRequestResult-1.md)\>
+> **sendWebAppCustomRequest**(`parameters`): `Promise`\<[`customRequestResult`](../type-aliases/customRequestResult.md)\>
 
 Sends a custom request from a Web App
 
@@ -13964,19 +14394,19 @@ Sends a custom request from a Web App
 
 #### Returns
 
-`Promise`\<[`customRequestResult`](../type-aliases/customRequestResult-1.md)\>
+`Promise`\<[`customRequestResult`](../type-aliases/customRequestResult.md)\>
 
-Promise<[CustomRequestResult](../type-aliases/CustomRequestResult.md)>
+Promise<[CustomRequestResult](../type-aliases/CustomRequestResult-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71396
+dist/generated/types.d.ts:73314
 
 ***
 
 ### sendWebAppData()
 
-> **sendWebAppData**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sendWebAppData**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends data received from a keyboardButtonTypeWebApp Web App to a bot
 
@@ -13988,19 +14418,19 @@ Sends data received from a keyboardButtonTypeWebApp Web App to a bot
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69060
+dist/generated/types.d.ts:70946
 
 ***
 
 ### setAccentColor()
 
-> **setAccentColor**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setAccentColor**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes accent color and background custom emoji for the current user; for Telegram Premium users only
 
@@ -14012,19 +14442,19 @@ Changes accent color and background custom emoji for the current user; for Teleg
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71095
+dist/generated/types.d.ts:73013
 
 ***
 
 ### setAccountTtl()
 
-> **setAccountTtl**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setAccountTtl**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the period of inactivity after which the account of the current user will automatically be deleted
 
@@ -14036,19 +14466,19 @@ Changes the period of inactivity after which the account of the current user wil
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71969
+dist/generated/types.d.ts:73929
 
 ***
 
 ### setAlarm()
 
-> **setAlarm**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setAlarm**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Succeeds after a specified amount of time has passed. Can be called before initialization
 
@@ -14060,19 +14490,19 @@ Succeeds after a specified amount of time has passed. Can be called before initi
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72568
+dist/generated/types.d.ts:74556
 
 ***
 
 ### setApplicationVerificationToken()
 
-> **setApplicationVerificationToken**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setApplicationVerificationToken**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Application verification has been completed. Can be called before authorization
 
@@ -14084,19 +14514,19 @@ Application verification has been completed. Can be called before authorization
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70266
+dist/generated/types.d.ts:72166
 
 ***
 
 ### setArchiveChatListSettings()
 
-> **setArchiveChatListSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setArchiveChatListSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes settings for automatic moving of chats to and from the Archive chat lists
 
@@ -14108,19 +14538,19 @@ Changes settings for automatic moving of chats to and from the Archive chat list
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69465
+dist/generated/types.d.ts:71351
 
 ***
 
 ### setAuthenticationEmailAddress()
 
-> **setAuthenticationEmailAddress**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setAuthenticationEmailAddress**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the email address of the user and sends an authentication code to the email address. Works only when the current authorization state is authorizationStateWaitEmailAddress
 
@@ -14132,19 +14562,19 @@ Sets the email address of the user and sends an authentication code to the email
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67416
+dist/generated/types.d.ts:69266
 
 ***
 
 ### setAuthenticationPhoneNumber()
 
-> **setAuthenticationPhoneNumber**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setAuthenticationPhoneNumber**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the phone number of the user and sends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitPhoneNumber,
 
@@ -14158,19 +14588,19 @@ Sets the phone number of the user and sends an authentication code to the user. 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67409
+dist/generated/types.d.ts:69259
 
 ***
 
 ### setAutoDownloadSettings()
 
-> **setAutoDownloadSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setAutoDownloadSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets auto-download settings
 
@@ -14182,19 +14612,19 @@ Sets auto-download settings
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72176
+dist/generated/types.d.ts:74136
 
 ***
 
 ### setAutosaveSettings()
 
-> **setAutosaveSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setAutosaveSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets autosave settings for the given scope. The method is guaranteed to work only after at least one call to getAutosaveSettings
 
@@ -14206,19 +14636,19 @@ Sets autosave settings for the given scope. The method is guaranteed to work onl
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72190
+dist/generated/types.d.ts:74150
 
 ***
 
 ### setBio()
 
-> **setBio**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBio**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the bio of the current user
 
@@ -14230,19 +14660,19 @@ Changes the bio of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71116
+dist/generated/types.d.ts:73034
 
 ***
 
 ### setBirthdate()
 
-> **setBirthdate**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBirthdate**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the birthdate of the current user
 
@@ -14254,19 +14684,19 @@ Changes the birthdate of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71144
+dist/generated/types.d.ts:73062
 
 ***
 
 ### setBotInfoDescription()
 
-> **setBotInfoDescription**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBotInfoDescription**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the text shown in the chat with a bot if the chat is empty. Can be called only if userTypeBot.can_be_edited == true
 
@@ -14278,19 +14708,19 @@ Sets the text shown in the chat with a bot if the chat is empty. Can be called o
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71438
+dist/generated/types.d.ts:73398
 
 ***
 
 ### setBotInfoShortDescription()
 
-> **setBotInfoShortDescription**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBotInfoShortDescription**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the text shown on a bot's profile page and sent together with the link when users share the bot. Can be called only if userTypeBot.can_be_edited == true
 
@@ -14302,19 +14732,19 @@ Sets the text shown on a bot's profile page and sent together with the link when
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71452
+dist/generated/types.d.ts:73412
 
 ***
 
 ### setBotName()
 
-> **setBotName**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBotName**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
 
@@ -14326,19 +14756,19 @@ Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71403
+dist/generated/types.d.ts:73363
 
 ***
 
 ### setBotProfilePhoto()
 
-> **setBotProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBotProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes a profile photo for a bot
 
@@ -14350,19 +14780,19 @@ Changes a profile photo for a bot
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71417
+dist/generated/types.d.ts:73377
 
 ***
 
 ### setBotUpdatesStatus()
 
-> **setBotUpdatesStatus**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBotUpdatesStatus**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
 
@@ -14374,19 +14804,19 @@ Informs the server about the number of pending bot updates if they haven't been 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72295
+dist/generated/types.d.ts:74255
 
 ***
 
 ### setBusinessAwayMessageSettings()
 
-> **setBusinessAwayMessageSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBusinessAwayMessageSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the business away message settings of the current user. Requires Telegram Business subscription
 
@@ -14398,19 +14828,19 @@ Changes the business away message settings of the current user. Requires Telegra
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71200
+dist/generated/types.d.ts:73118
 
 ***
 
 ### setBusinessConnectedBot()
 
-> **setBusinessConnectedBot**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBusinessConnectedBot**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds or changes business bot that is connected to the current user account
 
@@ -14422,19 +14852,19 @@ Adds or changes business bot that is connected to the current user account
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71256
+dist/generated/types.d.ts:73174
 
 ***
 
 ### setBusinessGreetingMessageSettings()
 
-> **setBusinessGreetingMessageSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBusinessGreetingMessageSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the business greeting message settings of the current user. Requires Telegram Business subscription
 
@@ -14446,19 +14876,19 @@ Changes the business greeting message settings of the current user. Requires Tel
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71193
+dist/generated/types.d.ts:73111
 
 ***
 
 ### setBusinessLocation()
 
-> **setBusinessLocation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBusinessLocation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the business location of the current user. Requires Telegram Business subscription
 
@@ -14470,19 +14900,43 @@ Changes the business location of the current user. Requires Telegram Business su
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71179
+dist/generated/types.d.ts:73097
+
+***
+
+### setBusinessMessageIsPinned()
+
+> **setBusinessMessageIsPinned**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Pins or unpins a message sent on behalf of a business account; for bots only
+
+#### Parameters
+
+• **parameters**: [`setBusinessMessageIsPinned$DirectInput`](../type-aliases/setBusinessMessageIsPinned$DirectInput.md)
+
+[setBusinessMessageIsPinned$Input](../type-aliases/setBusinessMessageIsPinned$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70442
 
 ***
 
 ### setBusinessOpeningHours()
 
-> **setBusinessOpeningHours**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBusinessOpeningHours**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the business opening hours of the current user. Requires Telegram Business subscription
 
@@ -14494,19 +14948,19 @@ Changes the business opening hours of the current user. Requires Telegram Busine
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71186
+dist/generated/types.d.ts:73104
 
 ***
 
 ### setBusinessStartPage()
 
-> **setBusinessStartPage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setBusinessStartPage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the business start page of the current user. Requires Telegram Business subscription
 
@@ -14518,19 +14972,19 @@ Changes the business start page of the current user. Requires Telegram Business 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71207
+dist/generated/types.d.ts:73125
 
 ***
 
 ### setChatAccentColor()
 
-> **setChatAccentColor**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatAccentColor**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes accent color and background custom emoji of a channel chat. Requires can_change_info administrator right
 
@@ -14542,19 +14996,19 @@ Changes accent color and background custom emoji of a channel chat. Requires can
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69486
+dist/generated/types.d.ts:71372
 
 ***
 
 ### setChatActiveStoriesList()
 
-> **setChatActiveStoriesList**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatActiveStoriesList**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes story list in which stories from the chat are shown
 
@@ -14566,19 +15020,19 @@ Changes story list in which stories from the chat are shown
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69909
+dist/generated/types.d.ts:71809
 
 ***
 
 ### setChatAvailableReactions()
 
-> **setChatAvailableReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatAvailableReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes reactions, available in a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
 
@@ -14590,19 +15044,19 @@ Changes reactions, available in a chat. Available for basic groups, supergroups,
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69593
+dist/generated/types.d.ts:71479
 
 ***
 
 ### setChatBackground()
 
-> **setChatBackground**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatBackground**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the background in a specific chat. Supported only in private and secret chats with non-deleted users, and in chats with sufficient boost level and can_change_info administrator right
 
@@ -14614,19 +15068,19 @@ Sets the background in a specific chat. Supported only in private and secret cha
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69523
+dist/generated/types.d.ts:71409
 
 ***
 
 ### setChatClientData()
 
-> **setChatClientData**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatClientData**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes application-specific data associated with a chat
 
@@ -14638,19 +15092,19 @@ Changes application-specific data associated with a chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69600
+dist/generated/types.d.ts:71486
 
 ***
 
 ### setChatDescription()
 
-> **setChatDescription**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatDescription**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes information about a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
 
@@ -14662,19 +15116,19 @@ Changes information about a chat. Available for basic groups, supergroups, and c
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69607
+dist/generated/types.d.ts:71493
 
 ***
 
 ### setChatDiscussionGroup()
 
-> **setChatDiscussionGroup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatDiscussionGroup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the discussion group of a channel chat; requires can_change_info administrator right in the channel if it is specified
 
@@ -14686,19 +15140,19 @@ Changes the discussion group of a channel chat; requires can_change_info adminis
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69614
+dist/generated/types.d.ts:71500
 
 ***
 
 ### setChatDraftMessage()
 
-> **setChatDraftMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatDraftMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the draft message in a chat
 
@@ -14710,19 +15164,19 @@ Changes the draft message in a chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69544
+dist/generated/types.d.ts:71430
 
 ***
 
 ### setChatEmojiStatus()
 
-> **setChatEmojiStatus**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatEmojiStatus**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the emoji status of a chat. Use chatBoostLevelFeatures.can_set_emoji_status to check whether an emoji status can be set. Requires can_change_info administrator right
 
@@ -14734,19 +15188,19 @@ Changes the emoji status of a chat. Use chatBoostLevelFeatures.can_set_emoji_sta
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69509
+dist/generated/types.d.ts:71395
 
 ***
 
 ### setChatLocation()
 
-> **setChatLocation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatLocation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the location of a chat. Available only for some location-based supergroups, use supergroupFullInfo.can_set_location to check whether the method is allowed to use
 
@@ -14758,19 +15212,19 @@ Changes the location of a chat. Available only for some location-based supergrou
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69621
+dist/generated/types.d.ts:71507
 
 ***
 
 ### setChatMemberStatus()
 
-> **setChatMemberStatus**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatMemberStatus**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the status of a chat member; requires can_invite_users member right to add a chat member, can_promote_members administrator right to change administrator rights of the member,
 
@@ -14786,19 +15240,19 @@ Changes the status of a chat member; requires can_invite_users member right to a
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69697
+dist/generated/types.d.ts:71583
 
 ***
 
 ### setChatMessageAutoDeleteTime()
 
-> **setChatMessageAutoDeleteTime**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatMessageAutoDeleteTime**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels
 
@@ -14812,19 +15266,19 @@ Changes the message auto-delete or self-destruct (for secret chats) time in a ch
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69502
+dist/generated/types.d.ts:71388
 
 ***
 
 ### setChatMessageSender()
 
-> **setChatMessageSender**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatMessageSender**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Selects a message sender to send messages in a chat
 
@@ -14836,19 +15290,19 @@ Selects a message sender to send messages in a chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68354
+dist/generated/types.d.ts:70204
 
 ***
 
 ### setChatNotificationSettings()
 
-> **setChatNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the notification settings of a chat. Notification settings of a chat with the current user (Saved Messages) can't be changed
 
@@ -14860,19 +15314,19 @@ Changes the notification settings of a chat. Notification settings of a chat wit
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69551
+dist/generated/types.d.ts:71437
 
 ***
 
 ### setChatPermissions()
 
-> **setChatPermissions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatPermissions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the chat members permissions. Supported only for basic groups and supergroups. Requires can_restrict_members administrator right
 
@@ -14884,19 +15338,19 @@ Changes the chat members permissions. Supported only for basic groups and superg
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69516
+dist/generated/types.d.ts:71402
 
 ***
 
 ### setChatPhoto()
 
-> **setChatPhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatPhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the photo of a chat. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
 
@@ -14908,19 +15362,19 @@ Changes the photo of a chat. Supported only for basic groups, supergroups and ch
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69479
+dist/generated/types.d.ts:71365
 
 ***
 
 ### setChatPinnedStories()
 
-> **setChatPinnedStories**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatPinnedStories**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the list of pinned stories on a chat page; requires can_edit_stories right in the chat
 
@@ -14932,19 +15386,19 @@ Changes the list of pinned stories on a chat page; requires can_edit_stories rig
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69941
+dist/generated/types.d.ts:71841
 
 ***
 
 ### setChatProfileAccentColor()
 
-> **setChatProfileAccentColor**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatProfileAccentColor**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes accent color and background custom emoji for profile of a supergroup or channel chat. Requires can_change_info administrator right
 
@@ -14956,19 +15410,19 @@ Changes accent color and background custom emoji for profile of a supergroup or 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69493
+dist/generated/types.d.ts:71379
 
 ***
 
 ### setChatSlowModeDelay()
 
-> **setChatSlowModeDelay**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatSlowModeDelay**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the slow mode delay of a chat. Available only for supergroups; requires can_restrict_members right
 
@@ -14980,19 +15434,19 @@ Changes the slow mode delay of a chat. Available only for supergroups; requires 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69628
+dist/generated/types.d.ts:71514
 
 ***
 
 ### setChatTheme()
 
-> **setChatTheme**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatTheme**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the chat theme. Supported only in private and secret chats
 
@@ -15004,19 +15458,19 @@ Changes the chat theme. Supported only in private and secret chats
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69537
+dist/generated/types.d.ts:71423
 
 ***
 
 ### setChatTitle()
 
-> **setChatTitle**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setChatTitle**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the chat title. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
 
@@ -15028,19 +15482,19 @@ Changes the chat title. Supported only for basic groups, supergroups and channel
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69472
+dist/generated/types.d.ts:71358
 
 ***
 
 ### setCloseFriends()
 
-> **setCloseFriends**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setCloseFriends**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the list of close friends of the current user
 
@@ -15052,19 +15506,19 @@ Changes the list of close friends of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70739
+dist/generated/types.d.ts:72657
 
 ***
 
 ### setCommands()
 
-> **setCommands**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setCommands**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the list of commands supported by the bot for the given user scope and language; for bots only
 
@@ -15076,19 +15530,19 @@ Sets the list of commands supported by the bot for the given user scope and lang
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71333
+dist/generated/types.d.ts:73251
 
 ***
 
 ### setCustomEmojiStickerSetThumbnail()
 
-> **setCustomEmojiStickerSetThumbnail**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setCustomEmojiStickerSetThumbnail**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets a custom emoji sticker set thumbnail
 
@@ -15100,19 +15554,19 @@ Sets a custom emoji sticker set thumbnail
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72351
+dist/generated/types.d.ts:74311
 
 ***
 
 ### setCustomLanguagePack()
 
-> **setCustomLanguagePack**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setCustomLanguagePack**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds or changes a custom local language pack to the current localization target
 
@@ -15124,19 +15578,19 @@ Adds or changes a custom local language pack to the current localization target
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71848
+dist/generated/types.d.ts:73808
 
 ***
 
 ### setCustomLanguagePackString()
 
-> **setCustomLanguagePackString**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setCustomLanguagePackString**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds, edits or deletes a string in a custom local language pack. Can be called before authorization
 
@@ -15148,19 +15602,19 @@ Adds, edits or deletes a string in a custom local language pack. Can be called b
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71862
+dist/generated/types.d.ts:73822
 
 ***
 
 ### setDatabaseEncryptionKey()
 
-> **setDatabaseEncryptionKey**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setDatabaseEncryptionKey**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the database encryption key. Usually the encryption key is never changed and is stored in some OS keychain
 
@@ -15172,19 +15626,19 @@ Changes the database encryption key. Usually the encryption key is never changed
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67557
+dist/generated/types.d.ts:69407
 
 ***
 
 ### setDefaultBackground()
 
-> **setDefaultBackground**(`parameters`): `Promise`\<[`background`](../type-aliases/background-1.md)\>
+> **setDefaultBackground**(`parameters`): `Promise`\<[`background`](../type-aliases/background.md)\>
 
 Sets default background for chats; adds the background to the list of installed backgrounds
 
@@ -15196,19 +15650,19 @@ Sets default background for chats; adds the background to the list of installed 
 
 #### Returns
 
-`Promise`\<[`background`](../type-aliases/background-1.md)\>
+`Promise`\<[`background`](../type-aliases/background.md)\>
 
-Promise<[Background](../type-aliases/Background.md)>
+Promise<[Background](../type-aliases/Background-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71776
+dist/generated/types.d.ts:73736
 
 ***
 
 ### setDefaultChannelAdministratorRights()
 
-> **setDefaultChannelAdministratorRights**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setDefaultChannelAdministratorRights**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets default administrator rights for adding the bot to channel chats; for bots only
 
@@ -15220,19 +15674,19 @@ Sets default administrator rights for adding the bot to channel chats; for bots 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71375
+dist/generated/types.d.ts:73293
 
 ***
 
 ### setDefaultGroupAdministratorRights()
 
-> **setDefaultGroupAdministratorRights**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setDefaultGroupAdministratorRights**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets default administrator rights for adding the bot to basic group and supergroup chats; for bots only
 
@@ -15244,19 +15698,19 @@ Sets default administrator rights for adding the bot to basic group and supergro
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71368
+dist/generated/types.d.ts:73286
 
 ***
 
 ### setDefaultMessageAutoDeleteTime()
 
-> **setDefaultMessageAutoDeleteTime**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setDefaultMessageAutoDeleteTime**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the default message auto-delete time for new chats
 
@@ -15268,19 +15722,19 @@ Changes the default message auto-delete time for new chats
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71992
+dist/generated/types.d.ts:73952
 
 ***
 
 ### setDefaultReactionType()
 
-> **setDefaultReactionType**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setDefaultReactionType**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes type of default reaction for the current user
 
@@ -15292,19 +15746,19 @@ Changes type of default reaction for the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68832
+dist/generated/types.d.ts:70704
 
 ***
 
 ### setEmojiStatus()
 
-> **setEmojiStatus**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setEmojiStatus**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the emoji status of the current user; for Telegram Premium users only
 
@@ -15316,19 +15770,19 @@ Changes the emoji status of the current user; for Telegram Premium users only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71158
+dist/generated/types.d.ts:73076
 
 ***
 
 ### setFileGenerationProgress()
 
-> **setFileGenerationProgress**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setFileGenerationProgress**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib on a file generation progress
 
@@ -15340,19 +15794,19 @@ Informs TDLib on a file generation progress
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70194
+dist/generated/types.d.ts:72094
 
 ***
 
 ### setForumTopicNotificationSettings()
 
-> **setForumTopicNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setForumTopicNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the notification settings of a forum topic
 
@@ -15364,19 +15818,19 @@ Changes the notification settings of a forum topic
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68734
+dist/generated/types.d.ts:70585
 
 ***
 
 ### setGameScore()
 
-> **setGameScore**(`parameters`): `Promise`\<[`message`](../type-aliases/message-1.md)\>
+> **setGameScore**(`parameters`): `Promise`\<[`message`](../type-aliases/message.md)\>
 
 Updates the game score of the specified user in the game; for bots only
 
@@ -15388,19 +15842,19 @@ Updates the game score of the specified user in the game; for bots only
 
 #### Returns
 
-`Promise`\<[`message`](../type-aliases/message-1.md)\>
+`Promise`\<[`message`](../type-aliases/message.md)\>
 
-Promise<[Message](../type-aliases/Message.md)>
+Promise<[Message](../type-aliases/Message-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69118
+dist/generated/types.d.ts:71004
 
 ***
 
 ### setGroupCallParticipantIsSpeaking()
 
-> **setGroupCallParticipantIsSpeaking**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setGroupCallParticipantIsSpeaking**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that speaking state of a participant of an active group has changed
 
@@ -15412,19 +15866,19 @@ Informs TDLib that speaking state of a participant of an active group has change
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70597
+dist/generated/types.d.ts:72515
 
 ***
 
 ### setGroupCallParticipantVolumeLevel()
 
-> **setGroupCallParticipantVolumeLevel**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setGroupCallParticipantVolumeLevel**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes volume level of a participant of an active group call. If the current user can manage the group call, then the participant's volume level will be changed for all users with the default volume level
 
@@ -15436,19 +15890,19 @@ Changes volume level of a participant of an active group call. If the current us
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70611
+dist/generated/types.d.ts:72529
 
 ***
 
 ### setGroupCallTitle()
 
-> **setGroupCallTitle**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setGroupCallTitle**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets group call title. Requires groupCall.can_be_managed group call flag
 
@@ -15460,19 +15914,19 @@ Sets group call title. Requires groupCall.can_be_managed group call flag
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70534
+dist/generated/types.d.ts:72452
 
 ***
 
 ### setInactiveSessionTtl()
 
-> **setInactiveSessionTtl**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setInactiveSessionTtl**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the period of inactivity after which sessions will automatically be terminated
 
@@ -15484,19 +15938,19 @@ Changes the period of inactivity after which sessions will automatically be term
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71508
+dist/generated/types.d.ts:73468
 
 ***
 
 ### setInlineGameScore()
 
-> **setInlineGameScore**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setInlineGameScore**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Updates the game score of the specified user in a game; for bots only
 
@@ -15508,19 +15962,19 @@ Updates the game score of the specified user in a game; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69125
+dist/generated/types.d.ts:71011
 
 ***
 
 ### setLocation()
 
-> **setLocation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setLocation**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
 
@@ -15532,91 +15986,19 @@ Changes the location of the current user. Needs to be called if getOption("is_lo
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:71165
-
-***
-
-### setLogStream()
-
-> **setLogStream**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Sets new log stream for internal logging of TDLib. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`setLogStream$DirectInput`](../type-aliases/setLogStream$DirectInput.md)
-
-[setLogStream$Input](../type-aliases/setLogStream$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72694
-
-***
-
-### setLogTagVerbosityLevel()
-
-> **setLogTagVerbosityLevel**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Sets the verbosity level for a specified TDLib internal log tag. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`setLogTagVerbosityLevel$DirectInput`](../type-aliases/setLogTagVerbosityLevel$DirectInput.md)
-
-[setLogTagVerbosityLevel$Input](../type-aliases/setLogTagVerbosityLevel$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:72729
-
-***
-
-### setLogVerbosityLevel()
-
-> **setLogVerbosityLevel**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Sets the verbosity level of the internal logging of TDLib. Can be called synchronously
-
-#### Parameters
-
-• **parameters**: [`setLogVerbosityLevel$DirectInput`](../type-aliases/setLogVerbosityLevel$DirectInput.md)
-
-[setLogVerbosityLevel$Input](../type-aliases/setLogVerbosityLevel$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:72708
+dist/generated/types.d.ts:73083
 
 ***
 
 ### setLoginEmailAddress()
 
-> **setLoginEmailAddress**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+> **setLoginEmailAddress**(`parameters`): `Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
 Changes the login email address of the user. The email address can be changed only if the current user already has login email and passwordState.login_email_address_pattern is non-empty.
 
@@ -15630,19 +16012,91 @@ Changes the login email address of the user. The email address can be changed on
 
 #### Returns
 
-`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo-1.md)\>
+`Promise`\<[`emailAddressAuthenticationCodeInfo`](../type-aliases/emailAddressAuthenticationCodeInfo.md)\>
 
-Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo.md)>
+Promise<[EmailAddressAuthenticationCodeInfo](../type-aliases/EmailAddressAuthenticationCodeInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67580
+dist/generated/types.d.ts:69430
+
+***
+
+### setLogStream()
+
+> **setLogStream**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Sets new log stream for internal logging of TDLib. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`setLogStream$DirectInput`](../type-aliases/setLogStream$DirectInput.md)
+
+[setLogStream$Input](../type-aliases/setLogStream$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74682
+
+***
+
+### setLogTagVerbosityLevel()
+
+> **setLogTagVerbosityLevel**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Sets the verbosity level for a specified TDLib internal log tag. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`setLogTagVerbosityLevel$DirectInput`](../type-aliases/setLogTagVerbosityLevel$DirectInput.md)
+
+[setLogTagVerbosityLevel$Input](../type-aliases/setLogTagVerbosityLevel$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74717
+
+***
+
+### setLogVerbosityLevel()
+
+> **setLogVerbosityLevel**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Sets the verbosity level of the internal logging of TDLib. Can be called synchronously
+
+#### Parameters
+
+• **parameters**: [`setLogVerbosityLevel$DirectInput`](../type-aliases/setLogVerbosityLevel$DirectInput.md)
+
+[setLogVerbosityLevel$Input](../type-aliases/setLogVerbosityLevel$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74696
 
 ***
 
 ### setMenuButton()
 
-> **setMenuButton**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setMenuButton**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets menu button for the given user or for all users; for bots only
 
@@ -15654,21 +16108,21 @@ Sets menu button for the given user or for all users; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71354
+dist/generated/types.d.ts:73272
 
 ***
 
 ### setMessageFactCheck()
 
-> **setMessageFactCheck**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setMessageFactCheck**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
+Changes the fact-check of a message. Can be only used if messageProperties.can_set_fact_check == true
 
 #### Parameters
 
@@ -15678,19 +16132,19 @@ Changes the fact-check of a message. Can be only used if getOption("can_edit_fac
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68533
+dist/generated/types.d.ts:70377
 
 ***
 
 ### setMessageReactions()
 
-> **setMessageReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setMessageReactions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets reactions on a message; for bots only
 
@@ -15702,19 +16156,19 @@ Sets reactions on a message; for bots only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68818
+dist/generated/types.d.ts:70690
 
 ***
 
 ### setMessageSenderBlockList()
 
-> **setMessageSenderBlockList**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setMessageSenderBlockList**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
 
@@ -15726,19 +16180,19 @@ Changes the block list of a message sender. Currently, only users and supergroup
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70660
+dist/generated/types.d.ts:72578
 
 ***
 
 ### setName()
 
-> **setName**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setName**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the first and last name of the current user
 
@@ -15750,19 +16204,19 @@ Changes the first and last name of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71109
+dist/generated/types.d.ts:73027
 
 ***
 
 ### setNetworkType()
 
-> **setNetworkType**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setNetworkType**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the current network type. Can be called before authorization. Calling this method forces all network connections to reopen, mitigating the delay in switching between different networks,
 
@@ -15776,19 +16230,19 @@ Sets the current network type. Can be called before authorization. Calling this 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72141
+dist/generated/types.d.ts:74101
 
 ***
 
 ### setNewChatPrivacySettings()
 
-> **setNewChatPrivacySettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setNewChatPrivacySettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes privacy settings for new chat creation; can be used only if getOption("can_set_new_chat_privacy_settings")
 
@@ -15800,19 +16254,19 @@ Changes privacy settings for new chat creation; can be used only if getOption("c
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71934
+dist/generated/types.d.ts:73894
 
 ***
 
 ### setOption()
 
-> **setOption**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setOption**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the value of an option. (Check the list of available options on https://core.telegram.org/tdlib/options.) Only writable options can be set. Can be called before authorization
 
@@ -15824,13 +16278,13 @@ Sets the value of an option. (Check the list of available options on https://cor
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71962
+dist/generated/types.d.ts:73922
 
 ***
 
@@ -15854,13 +16308,13 @@ Promise<[PassportElement](../type-aliases/PassportElement.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72225
+dist/generated/types.d.ts:74185
 
 ***
 
 ### setPassportElementErrors()
 
-> **setPassportElementErrors**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setPassportElementErrors**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs the user that some of the elements in their Telegram Passport contain errors; for bots only. The user will not be able to resend the elements, until the errors are fixed
 
@@ -15872,19 +16326,19 @@ Informs the user that some of the elements in their Telegram Passport contain er
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72239
+dist/generated/types.d.ts:74199
 
 ***
 
 ### setPassword()
 
-> **setPassword**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+> **setPassword**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
 Changes the 2-step verification password for the current user. If a new recovery email address is specified, then the change will not be applied until the new recovery email address is confirmed
 
@@ -15896,19 +16350,19 @@ Changes the 2-step verification password for the current user. If a new recovery
 
 #### Returns
 
-`Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+`Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
-Promise<[PasswordState](../type-aliases/PasswordState.md)>
+Promise<[PasswordState](../type-aliases/PasswordState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67571
+dist/generated/types.d.ts:69421
 
 ***
 
 ### setPersonalChat()
 
-> **setPersonalChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setPersonalChat**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the personal chat of the current user
 
@@ -15920,19 +16374,19 @@ Changes the personal chat of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71151
+dist/generated/types.d.ts:73069
 
 ***
 
 ### setPinnedChats()
 
-> **setPinnedChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setPinnedChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the order of pinned chats
 
@@ -15944,19 +16398,19 @@ Changes the order of pinned chats
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69823
+dist/generated/types.d.ts:71709
 
 ***
 
 ### setPinnedForumTopics()
 
-> **setPinnedForumTopics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setPinnedForumTopics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the order of pinned forum topics; requires can_manage_topics right in the supergroup
 
@@ -15968,19 +16422,19 @@ Changes the order of pinned forum topics; requires can_manage_topics right in th
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68762
+dist/generated/types.d.ts:70613
 
 ***
 
 ### setPinnedSavedMessagesTopics()
 
-> **setPinnedSavedMessagesTopics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setPinnedSavedMessagesTopics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the order of pinned Saved Messages topics
 
@@ -15992,19 +16446,19 @@ Changes the order of pinned Saved Messages topics
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68049
+dist/generated/types.d.ts:69906
 
 ***
 
 ### setPollAnswer()
 
-> **setPollAnswer**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setPollAnswer**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the user answer to a poll. A poll in quiz mode can be answered only once
 
@@ -16016,19 +16470,19 @@ Changes the user answer to a poll. A poll in quiz mode can be answered only once
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68953
+dist/generated/types.d.ts:70825
 
 ***
 
 ### setProfileAccentColor()
 
-> **setProfileAccentColor**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setProfileAccentColor**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes accent color and background custom emoji for profile of the current user; for Telegram Premium users only
 
@@ -16040,19 +16494,19 @@ Changes accent color and background custom emoji for profile of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71102
+dist/generated/types.d.ts:73020
 
 ***
 
 ### setProfilePhoto()
 
-> **setProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes a profile photo for the current user
 
@@ -16064,19 +16518,19 @@ Changes a profile photo for the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71081
+dist/generated/types.d.ts:72999
 
 ***
 
 ### setQuickReplyShortcutName()
 
-> **setQuickReplyShortcutName**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setQuickReplyShortcutName**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes name of a quick reply shortcut
 
@@ -16088,19 +16542,19 @@ Changes name of a quick reply shortcut
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68612
+dist/generated/types.d.ts:70463
 
 ***
 
 ### setReactionNotificationSettings()
 
-> **setReactionNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setReactionNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes notification settings for reactions
 
@@ -16112,19 +16566,19 @@ Changes notification settings for reactions
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69802
+dist/generated/types.d.ts:71688
 
 ***
 
 ### setReadDatePrivacySettings()
 
-> **setReadDatePrivacySettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setReadDatePrivacySettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes privacy settings for message read date
 
@@ -16136,19 +16590,19 @@ Changes privacy settings for message read date
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71920
+dist/generated/types.d.ts:73880
 
 ***
 
 ### setRecoveryEmailAddress()
 
-> **setRecoveryEmailAddress**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+> **setRecoveryEmailAddress**(`parameters`): `Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
 Changes the 2-step verification recovery email address of the user. If a new recovery email address is specified, then the change will not be applied until the new recovery email address is confirmed.
 
@@ -16162,19 +16616,19 @@ Changes the 2-step verification recovery email address of the user. If a new rec
 
 #### Returns
 
-`Promise`\<[`passwordState`](../type-aliases/passwordState-1.md)\>
+`Promise`\<[`passwordState`](../type-aliases/passwordState.md)\>
 
-Promise<[PasswordState](../type-aliases/PasswordState.md)>
+Promise<[PasswordState](../type-aliases/PasswordState-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:67610
+dist/generated/types.d.ts:69460
 
 ***
 
 ### setSavedMessagesTagLabel()
 
-> **setSavedMessagesTagLabel**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setSavedMessagesTagLabel**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes label of a Saved Messages tag; for Telegram Premium users only
 
@@ -16186,19 +16640,19 @@ Changes label of a Saved Messages tag; for Telegram Premium users only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68846
+dist/generated/types.d.ts:70718
 
 ***
 
 ### setScopeNotificationSettings()
 
-> **setScopeNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setScopeNotificationSettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes notification settings for chats of a given type
 
@@ -16210,19 +16664,19 @@ Changes notification settings for chats of a given type
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69795
+dist/generated/types.d.ts:71681
 
 ***
 
 ### setStickerEmojis()
 
-> **setStickerEmojis**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setStickerEmojis**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the list of emojis corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
 
@@ -16234,19 +16688,19 @@ Changes the list of emojis corresponding to a sticker. The sticker must belong t
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72386
+dist/generated/types.d.ts:74346
 
 ***
 
 ### setStickerKeywords()
 
-> **setStickerKeywords**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setStickerKeywords**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
 
@@ -16258,19 +16712,19 @@ Changes the list of keywords of a sticker. The sticker must belong to a regular 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72393
+dist/generated/types.d.ts:74353
 
 ***
 
 ### setStickerMaskPosition()
 
-> **setStickerMaskPosition**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setStickerMaskPosition**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the mask position of a mask sticker. The sticker must belong to a mask sticker set that is owned by the current user
 
@@ -16282,19 +16736,19 @@ Changes the mask position of a mask sticker. The sticker must belong to a mask s
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72400
+dist/generated/types.d.ts:74360
 
 ***
 
 ### setStickerPositionInSet()
 
-> **setStickerPositionInSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setStickerPositionInSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the position of a sticker in the set to which it belongs. The sticker set must be owned by the current user
 
@@ -16306,19 +16760,19 @@ Changes the position of a sticker in the set to which it belongs. The sticker se
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72372
+dist/generated/types.d.ts:74332
 
 ***
 
 ### setStickerSetThumbnail()
 
-> **setStickerSetThumbnail**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setStickerSetThumbnail**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets a sticker set thumbnail
 
@@ -16330,19 +16784,19 @@ Sets a sticker set thumbnail
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72344
+dist/generated/types.d.ts:74304
 
 ***
 
 ### setStickerSetTitle()
 
-> **setStickerSetTitle**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setStickerSetTitle**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets a sticker set title
 
@@ -16354,19 +16808,19 @@ Sets a sticker set title
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72358
+dist/generated/types.d.ts:74318
 
 ***
 
 ### setStoryPrivacySettings()
 
-> **setStoryPrivacySettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setStoryPrivacySettings**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_be_edited == true
 
@@ -16378,19 +16832,19 @@ Changes privacy settings of a story. The method can be called only for stories p
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69872
+dist/generated/types.d.ts:71772
 
 ***
 
 ### setStoryReaction()
 
-> **setStoryReaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setStoryReaction**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes chosen reaction on a story that has already been sent
 
@@ -16402,19 +16856,19 @@ Changes chosen reaction on a story that has already been sent
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69969
+dist/generated/types.d.ts:71869
 
 ***
 
 ### setSupergroupCustomEmojiStickerSet()
 
-> **setSupergroupCustomEmojiStickerSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setSupergroupCustomEmojiStickerSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
 
@@ -16426,19 +16880,19 @@ Changes the custom emoji sticker set of a supergroup; requires can_change_info a
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71573
+dist/generated/types.d.ts:73533
 
 ***
 
 ### setSupergroupStickerSet()
 
-> **setSupergroupStickerSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setSupergroupStickerSet**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the sticker set of a supergroup; requires can_change_info administrator right
 
@@ -16450,19 +16904,19 @@ Changes the sticker set of a supergroup; requires can_change_info administrator 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71566
+dist/generated/types.d.ts:73526
 
 ***
 
 ### setSupergroupUnrestrictBoostCount()
 
-> **setSupergroupUnrestrictBoostCount**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setSupergroupUnrestrictBoostCount**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the number of times the supergroup must be boosted by a user to ignore slow mode and chat permission restrictions; requires can_restrict_members administrator right
 
@@ -16474,19 +16928,19 @@ Changes the number of times the supergroup must be boosted by a user to ignore s
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71580
+dist/generated/types.d.ts:73540
 
 ***
 
 ### setSupergroupUsername()
 
-> **setSupergroupUsername**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setSupergroupUsername**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the editable username of a supergroup or channel, requires owner privileges in the supergroup or channel
 
@@ -16498,19 +16952,19 @@ Changes the editable username of a supergroup or channel, requires owner privile
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71536
+dist/generated/types.d.ts:73496
 
 ***
 
 ### setTdlibParameters()
 
-> **setTdlibParameters**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setTdlibParameters**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sets the parameters for TDLib initialization. Works only when the current authorization state is authorizationStateWaitTdlibParameters
 
@@ -16522,91 +16976,19 @@ Sets the parameters for TDLib initialization. Works only when the current author
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:67400
-
-***
-
-### setUserPersonalProfilePhoto()
-
-> **setUserPersonalProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Changes a personal profile photo of a contact user
-
-#### Parameters
-
-• **parameters**: [`setUserPersonalProfilePhoto$DirectInput`](../type-aliases/setUserPersonalProfilePhoto$DirectInput.md)
-
-[setUserPersonalProfilePhoto$Input](../type-aliases/setUserPersonalProfilePhoto$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70753
-
-***
-
-### setUserPrivacySettingRules()
-
-> **setUserPrivacySettingRules**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Changes user privacy settings
-
-#### Parameters
-
-• **parameters**: [`setUserPrivacySettingRules$DirectInput`](../type-aliases/setUserPrivacySettingRules$DirectInput.md)
-
-[setUserPrivacySettingRules$Input](../type-aliases/setUserPrivacySettingRules$Input.md)
-
-#### Returns
-
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
-
-Promise<[Ok](../type-aliases/Ok.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:71906
-
-***
-
-### setUserSupportInfo()
-
-> **setUserSupportInfo**(`parameters`): `Promise`\<[`userSupportInfo`](../type-aliases/userSupportInfo-1.md)\>
-
-Sets support information for the given user; for Telegram support only
-
-#### Parameters
-
-• **parameters**: [`setUserSupportInfo$DirectInput`](../type-aliases/setUserSupportInfo$DirectInput.md)
-
-[setUserSupportInfo$Input](../type-aliases/setUserSupportInfo$Input.md)
-
-#### Returns
-
-`Promise`\<[`userSupportInfo`](../type-aliases/userSupportInfo-1.md)\>
-
-Promise<[UserSupportInfo](../type-aliases/UserSupportInfo.md)>
-
-#### Defined in
-
-dist/generated/types.d.ts:72757
+dist/generated/types.d.ts:69250
 
 ***
 
 ### setUsername()
 
-> **setUsername**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setUsername**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the editable username of the current user
 
@@ -16618,19 +17000,91 @@ Changes the editable username of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71123
+dist/generated/types.d.ts:73041
+
+***
+
+### setUserPersonalProfilePhoto()
+
+> **setUserPersonalProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Changes a personal profile photo of a contact user
+
+#### Parameters
+
+• **parameters**: [`setUserPersonalProfilePhoto$DirectInput`](../type-aliases/setUserPersonalProfilePhoto$DirectInput.md)
+
+[setUserPersonalProfilePhoto$Input](../type-aliases/setUserPersonalProfilePhoto$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:72671
+
+***
+
+### setUserPrivacySettingRules()
+
+> **setUserPrivacySettingRules**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Changes user privacy settings
+
+#### Parameters
+
+• **parameters**: [`setUserPrivacySettingRules$DirectInput`](../type-aliases/setUserPrivacySettingRules$DirectInput.md)
+
+[setUserPrivacySettingRules$Input](../type-aliases/setUserPrivacySettingRules$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:73866
+
+***
+
+### setUserSupportInfo()
+
+> **setUserSupportInfo**(`parameters`): `Promise`\<[`userSupportInfo`](../type-aliases/userSupportInfo.md)\>
+
+Sets support information for the given user; for Telegram support only
+
+#### Parameters
+
+• **parameters**: [`setUserSupportInfo$DirectInput`](../type-aliases/setUserSupportInfo$DirectInput.md)
+
+[setUserSupportInfo$Input](../type-aliases/setUserSupportInfo$Input.md)
+
+#### Returns
+
+`Promise`\<[`userSupportInfo`](../type-aliases/userSupportInfo.md)\>
+
+Promise<[UserSupportInfo](../type-aliases/UserSupportInfo-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:74745
 
 ***
 
 ### setVideoChatDefaultParticipant()
 
-> **setVideoChatDefaultParticipant**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **setVideoChatDefaultParticipant**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes default participant identifier, on whose behalf a video chat in the chat will be joined
 
@@ -16642,19 +17096,19 @@ Changes default participant identifier, on whose behalf a video chat in the chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70457
+dist/generated/types.d.ts:72375
 
 ***
 
 ### shareChatWithBot()
 
-> **shareChatWithBot**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **shareChatWithBot**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Shares a chat after pressing a keyboardButtonTypeRequestChat button with the bot
 
@@ -16666,19 +17120,19 @@ Shares a chat after pressing a keyboardButtonTypeRequestChat button with the bot
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69018
+dist/generated/types.d.ts:70890
 
 ***
 
 ### sharePhoneNumber()
 
-> **sharePhoneNumber**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **sharePhoneNumber**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Shares the phone number of the current user with a mutual contact. Supposed to be called when the user clicks on chatActionBarSharePhoneNumber
 
@@ -16690,19 +17144,19 @@ Shares the phone number of the current user with a mutual contact. Supposed to b
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70774
+dist/generated/types.d.ts:72692
 
 ***
 
 ### shareUsersWithBot()
 
-> **shareUsersWithBot**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **shareUsersWithBot**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
 
@@ -16714,19 +17168,19 @@ Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69011
+dist/generated/types.d.ts:70883
 
 ***
 
 ### startGroupCallRecording()
 
-> **startGroupCallRecording**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **startGroupCallRecording**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Starts recording of an active group call. Requires groupCall.can_be_managed group call flag
 
@@ -16738,19 +17192,19 @@ Starts recording of an active group call. Requires groupCall.can_be_managed grou
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70569
+dist/generated/types.d.ts:72487
 
 ***
 
 ### startGroupCallScreenSharing()
 
-> **startGroupCallScreenSharing**(`parameters`): `Promise`\<[`text`](../type-aliases/text-1.md)\>
+> **startGroupCallScreenSharing**(`parameters`): `Promise`\<[`text`](../type-aliases/text.md)\>
 
 Starts screen sharing in a joined group call. Returns join response payload for tgcalls
 
@@ -16762,19 +17216,19 @@ Starts screen sharing in a joined group call. Returns join response payload for 
 
 #### Returns
 
-`Promise`\<[`text`](../type-aliases/text-1.md)\>
+`Promise`\<[`text`](../type-aliases/text.md)\>
 
-Promise<[Text](../type-aliases/Text.md)>
+Promise<[Text](../type-aliases/Text-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70513
+dist/generated/types.d.ts:72431
 
 ***
 
 ### startScheduledGroupCall()
 
-> **startScheduledGroupCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **startScheduledGroupCall**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Starts a scheduled group call
 
@@ -16786,19 +17240,19 @@ Starts a scheduled group call
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70492
+dist/generated/types.d.ts:72410
 
 ***
 
 ### stopBusinessPoll()
 
-> **stopBusinessPoll**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+> **stopBusinessPoll**(`parameters`): `Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
 Stops a poll sent on behalf of a business account; for bots only
 
@@ -16810,21 +17264,21 @@ Stops a poll sent on behalf of a business account; for bots only
 
 #### Returns
 
-`Promise`\<[`businessMessage`](../type-aliases/businessMessage-1.md)\>
+`Promise`\<[`businessMessage`](../type-aliases/businessMessage.md)\>
 
-Promise<[BusinessMessage](../type-aliases/BusinessMessage.md)>
+Promise<[BusinessMessage](../type-aliases/BusinessMessage-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68591
+dist/generated/types.d.ts:70435
 
 ***
 
 ### stopPoll()
 
-> **stopPoll**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **stopPoll**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Stops a poll. A poll in a message can be stopped when the message has can_be_edited flag is set
+Stops a poll
 
 #### Parameters
 
@@ -16834,19 +17288,19 @@ Stops a poll. A poll in a message can be stopped when the message has can_be_edi
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68967
+dist/generated/types.d.ts:70839
 
 ***
 
 ### suggestUserProfilePhoto()
 
-> **suggestUserProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **suggestUserProfilePhoto**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Suggests a profile photo to another regular user with common messages
 
@@ -16858,19 +17312,19 @@ Suggests a profile photo to another regular user with common messages
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70760
+dist/generated/types.d.ts:72678
 
 ***
 
 ### synchronizeLanguagePack()
 
-> **synchronizeLanguagePack**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **synchronizeLanguagePack**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Fetches the latest versions of all strings from a language pack in the current localization target from the server.
 
@@ -16884,19 +17338,19 @@ Fetches the latest versions of all strings from a language pack in the current l
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71834
+dist/generated/types.d.ts:73794
 
 ***
 
 ### terminateAllOtherSessions()
 
-> **terminateAllOtherSessions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **terminateAllOtherSessions**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Terminates all other sessions of the current user
 
@@ -16908,19 +17362,19 @@ Terminates all other sessions of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71480
+dist/generated/types.d.ts:73440
 
 ***
 
 ### terminateSession()
 
-> **terminateSession**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **terminateSession**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Terminates a session of the current user
 
@@ -16932,19 +17386,19 @@ Terminates a session of the current user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71473
+dist/generated/types.d.ts:73433
 
 ***
 
 ### testCallBytes()
 
-> **testCallBytes**(`parameters`): `Promise`\<[`testBytes`](../type-aliases/testBytes-1.md)\>
+> **testCallBytes**(`parameters`): `Promise`\<[`testBytes`](../type-aliases/testBytes.md)\>
 
 Returns the received bytes; for testing only. This is an offline method. Can be called before authorization
 
@@ -16956,19 +17410,19 @@ Returns the received bytes; for testing only. This is an offline method. Can be 
 
 #### Returns
 
-`Promise`\<[`testBytes`](../type-aliases/testBytes-1.md)\>
+`Promise`\<[`testBytes`](../type-aliases/testBytes.md)\>
 
-Promise<[TestBytes](../type-aliases/TestBytes.md)>
+Promise<[TestBytes](../type-aliases/TestBytes-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72785
+dist/generated/types.d.ts:74773
 
 ***
 
 ### testCallEmpty()
 
-> **testCallEmpty**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **testCallEmpty**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Does nothing; for testing only. This is an offline method. Can be called before authorization
 
@@ -16980,19 +17434,19 @@ Does nothing; for testing only. This is an offline method. Can be called before 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72771
+dist/generated/types.d.ts:74759
 
 ***
 
 ### testCallString()
 
-> **testCallString**(`parameters`): `Promise`\<[`testString`](../type-aliases/testString-1.md)\>
+> **testCallString**(`parameters`): `Promise`\<[`testString`](../type-aliases/testString.md)\>
 
 Returns the received string; for testing only. This is an offline method. Can be called before authorization
 
@@ -17004,19 +17458,19 @@ Returns the received string; for testing only. This is an offline method. Can be
 
 #### Returns
 
-`Promise`\<[`testString`](../type-aliases/testString-1.md)\>
+`Promise`\<[`testString`](../type-aliases/testString.md)\>
 
-Promise<[TestString](../type-aliases/TestString.md)>
+Promise<[TestString](../type-aliases/TestString-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72778
+dist/generated/types.d.ts:74766
 
 ***
 
 ### testCallVectorInt()
 
-> **testCallVectorInt**(`parameters`): `Promise`\<[`testVectorInt`](../type-aliases/testVectorInt-1.md)\>
+> **testCallVectorInt**(`parameters`): `Promise`\<[`testVectorInt`](../type-aliases/testVectorInt.md)\>
 
 Returns the received vector of numbers; for testing only. This is an offline method. Can be called before authorization
 
@@ -17028,19 +17482,19 @@ Returns the received vector of numbers; for testing only. This is an offline met
 
 #### Returns
 
-`Promise`\<[`testVectorInt`](../type-aliases/testVectorInt-1.md)\>
+`Promise`\<[`testVectorInt`](../type-aliases/testVectorInt.md)\>
 
-Promise<[TestVectorInt](../type-aliases/TestVectorInt.md)>
+Promise<[TestVectorInt](../type-aliases/TestVectorInt-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72792
+dist/generated/types.d.ts:74780
 
 ***
 
 ### testCallVectorIntObject()
 
-> **testCallVectorIntObject**(`parameters`): `Promise`\<[`testVectorIntObject`](../type-aliases/testVectorIntObject-1.md)\>
+> **testCallVectorIntObject**(`parameters`): `Promise`\<[`testVectorIntObject`](../type-aliases/testVectorIntObject.md)\>
 
 Returns the received vector of objects containing a number; for testing only. This is an offline method. Can be called before authorization
 
@@ -17052,19 +17506,19 @@ Returns the received vector of objects containing a number; for testing only. Th
 
 #### Returns
 
-`Promise`\<[`testVectorIntObject`](../type-aliases/testVectorIntObject-1.md)\>
+`Promise`\<[`testVectorIntObject`](../type-aliases/testVectorIntObject.md)\>
 
-Promise<[TestVectorIntObject](../type-aliases/TestVectorIntObject.md)>
+Promise<[TestVectorIntObject](../type-aliases/TestVectorIntObject-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72799
+dist/generated/types.d.ts:74787
 
 ***
 
 ### testCallVectorString()
 
-> **testCallVectorString**(`parameters`): `Promise`\<[`testVectorString`](../type-aliases/testVectorString-1.md)\>
+> **testCallVectorString**(`parameters`): `Promise`\<[`testVectorString`](../type-aliases/testVectorString.md)\>
 
 Returns the received vector of strings; for testing only. This is an offline method. Can be called before authorization
 
@@ -17076,19 +17530,19 @@ Returns the received vector of strings; for testing only. This is an offline met
 
 #### Returns
 
-`Promise`\<[`testVectorString`](../type-aliases/testVectorString-1.md)\>
+`Promise`\<[`testVectorString`](../type-aliases/testVectorString.md)\>
 
-Promise<[TestVectorString](../type-aliases/TestVectorString.md)>
+Promise<[TestVectorString](../type-aliases/TestVectorString-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72806
+dist/generated/types.d.ts:74794
 
 ***
 
 ### testCallVectorStringObject()
 
-> **testCallVectorStringObject**(`parameters`): `Promise`\<[`testVectorStringObject`](../type-aliases/testVectorStringObject-1.md)\>
+> **testCallVectorStringObject**(`parameters`): `Promise`\<[`testVectorStringObject`](../type-aliases/testVectorStringObject.md)\>
 
 Returns the received vector of objects containing a string; for testing only. This is an offline method. Can be called before authorization
 
@@ -17100,19 +17554,19 @@ Returns the received vector of objects containing a string; for testing only. Th
 
 #### Returns
 
-`Promise`\<[`testVectorStringObject`](../type-aliases/testVectorStringObject-1.md)\>
+`Promise`\<[`testVectorStringObject`](../type-aliases/testVectorStringObject.md)\>
 
-Promise<[TestVectorStringObject](../type-aliases/TestVectorStringObject.md)>
+Promise<[TestVectorStringObject](../type-aliases/TestVectorStringObject-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72813
+dist/generated/types.d.ts:74801
 
 ***
 
 ### testGetDifference()
 
-> **testGetDifference**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **testGetDifference**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Forces an updates.getDifference call to the Telegram servers; for testing only
 
@@ -17124,19 +17578,19 @@ Forces an updates.getDifference call to the Telegram servers; for testing only
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72841
+dist/generated/types.d.ts:74829
 
 ***
 
 ### testNetwork()
 
-> **testNetwork**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **testNetwork**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends a simple network request to the Telegram servers; for testing only. Can be called before authorization
 
@@ -17148,19 +17602,19 @@ Sends a simple network request to the Telegram servers; for testing only. Can be
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72827
+dist/generated/types.d.ts:74815
 
 ***
 
 ### testProxy()
 
-> **testProxy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **testProxy**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Sends a simple network request to the Telegram servers via proxy; for testing only. Can be called before authorization
 
@@ -17172,19 +17626,19 @@ Sends a simple network request to the Telegram servers via proxy; for testing on
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72834
+dist/generated/types.d.ts:74822
 
 ***
 
 ### testReturnError()
 
-> **testReturnError**(`parameters`): `Promise`\<[`error`](../type-aliases/error-1.md)\>
+> **testReturnError**(`parameters`): `Promise`\<[`error`](../type-aliases/error.md)\>
 
 Returns the specified error and ensures that the Error object is used; for testing only. Can be called synchronously
 
@@ -17196,19 +17650,19 @@ Returns the specified error and ensures that the Error object is used; for testi
 
 #### Returns
 
-`Promise`\<[`error`](../type-aliases/error-1.md)\>
+`Promise`\<[`error`](../type-aliases/error.md)\>
 
-Promise<[Error](../type-aliases/Error.md)>
+Promise<[Error](../type-aliases/Error-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72855
+dist/generated/types.d.ts:74843
 
 ***
 
 ### testSquareInt()
 
-> **testSquareInt**(`parameters`): `Promise`\<[`testInt`](../type-aliases/testInt-1.md)\>
+> **testSquareInt**(`parameters`): `Promise`\<[`testInt`](../type-aliases/testInt.md)\>
 
 Returns the squared received number; for testing only. This is an offline method. Can be called before authorization
 
@@ -17220,13 +17674,13 @@ Returns the squared received number; for testing only. This is an offline method
 
 #### Returns
 
-`Promise`\<[`testInt`](../type-aliases/testInt-1.md)\>
+`Promise`\<[`testInt`](../type-aliases/testInt.md)\>
 
-Promise<[TestInt](../type-aliases/TestInt.md)>
+Promise<[TestInt](../type-aliases/TestInt-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72820
+dist/generated/types.d.ts:74808
 
 ***
 
@@ -17250,13 +17704,13 @@ Promise<[Update](../type-aliases/Update.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72848
+dist/generated/types.d.ts:74836
 
 ***
 
 ### toggleAllDownloadsArePaused()
 
-> **toggleAllDownloadsArePaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleAllDownloadsArePaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes pause state of all files in the file download list
 
@@ -17268,19 +17722,19 @@ Changes pause state of all files in the file download list
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70238
+dist/generated/types.d.ts:72138
 
 ***
 
 ### toggleBotIsAddedToAttachmentMenu()
 
-> **toggleBotIsAddedToAttachmentMenu**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleBotIsAddedToAttachmentMenu**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Adds or removes a bot to attachment and side menu. Bot can be added to the menu, only if userTypeBot.can_be_added_to_attachment_menu == true
 
@@ -17292,19 +17746,19 @@ Adds or removes a bot to attachment and side menu. Bot can be added to the menu,
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70085
+dist/generated/types.d.ts:71985
 
 ***
 
 ### toggleBotUsernameIsActive()
 
-> **toggleBotUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleBotUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes active state for a username of a bot. The editable username can't be disabled. May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached. Can be called only if userTypeBot.can_be_edited == true
 
@@ -17316,19 +17770,19 @@ Changes active state for a username of a bot. The editable username can't be dis
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71424
+dist/generated/types.d.ts:73384
 
 ***
 
 ### toggleBusinessConnectedBotChatIsPaused()
 
-> **toggleBusinessConnectedBotChatIsPaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleBusinessConnectedBotChatIsPaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Pauses or resumes the connected business bot in a specific chat
 
@@ -17340,19 +17794,19 @@ Pauses or resumes the connected business bot in a specific chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71270
+dist/generated/types.d.ts:73188
 
 ***
 
 ### toggleChatDefaultDisableNotification()
 
-> **toggleChatDefaultDisableNotification**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleChatDefaultDisableNotification**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the value of the default disable_notification parameter, used when a message is sent to a chat
 
@@ -17364,19 +17818,19 @@ Changes the value of the default disable_notification parameter, used when a mes
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69586
+dist/generated/types.d.ts:71472
 
 ***
 
 ### toggleChatFolderTags()
 
-> **toggleChatFolderTags**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleChatFolderTags**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether chat folder tags are enabled
 
@@ -17388,19 +17842,19 @@ Toggles whether chat folder tags are enabled
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69374
+dist/generated/types.d.ts:71260
 
 ***
 
 ### toggleChatHasProtectedContent()
 
-> **toggleChatHasProtectedContent**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleChatHasProtectedContent**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the ability of users to save, forward, or copy chat content. Supported only for basic groups, supergroups and channels. Requires owner privileges
 
@@ -17412,19 +17866,19 @@ Changes the ability of users to save, forward, or copy chat content. Supported o
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69558
+dist/generated/types.d.ts:71444
 
 ***
 
 ### toggleChatIsMarkedAsUnread()
 
-> **toggleChatIsMarkedAsUnread**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleChatIsMarkedAsUnread**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the marked as unread state of a chat
 
@@ -17436,19 +17890,19 @@ Changes the marked as unread state of a chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69579
+dist/generated/types.d.ts:71465
 
 ***
 
 ### toggleChatIsPinned()
 
-> **toggleChatIsPinned**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleChatIsPinned**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
 
@@ -17460,19 +17914,19 @@ Changes the pinned state of a chat. There can be up to getOption("pinned_chat_co
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69816
+dist/generated/types.d.ts:71702
 
 ***
 
 ### toggleChatIsTranslatable()
 
-> **toggleChatIsTranslatable**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleChatIsTranslatable**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the translatable state of a chat
 
@@ -17484,19 +17938,19 @@ Changes the translatable state of a chat
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69572
+dist/generated/types.d.ts:71458
 
 ***
 
 ### toggleChatViewAsTopics()
 
-> **toggleChatViewAsTopics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleChatViewAsTopics**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the view_as_topics setting of a forum chat or Saved Messages
 
@@ -17508,19 +17962,19 @@ Changes the view_as_topics setting of a forum chat or Saved Messages
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69565
+dist/generated/types.d.ts:71451
 
 ***
 
 ### toggleDownloadIsPaused()
 
-> **toggleDownloadIsPaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleDownloadIsPaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes pause state of a file in the file download list
 
@@ -17532,19 +17986,19 @@ Changes pause state of a file in the file download list
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70231
+dist/generated/types.d.ts:72131
 
 ***
 
 ### toggleForumTopicIsClosed()
 
-> **toggleForumTopicIsClosed**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleForumTopicIsClosed**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether a topic is closed in a forum supergroup chat; requires can_manage_topics right in the supergroup unless the user is creator of the topic
 
@@ -17556,19 +18010,19 @@ Toggles whether a topic is closed in a forum supergroup chat; requires can_manag
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68741
+dist/generated/types.d.ts:70592
 
 ***
 
 ### toggleForumTopicIsPinned()
 
-> **toggleForumTopicIsPinned**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleForumTopicIsPinned**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the pinned state of a forum topic; requires can_manage_topics right in the supergroup. There can be up to getOption("pinned_forum_topic_count_max") pinned forum topics
 
@@ -17580,19 +18034,19 @@ Changes the pinned state of a forum topic; requires can_manage_topics right in t
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68755
+dist/generated/types.d.ts:70606
 
 ***
 
 ### toggleGeneralForumTopicIsHidden()
 
-> **toggleGeneralForumTopicIsHidden**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleGeneralForumTopicIsHidden**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether a General topic is hidden in a forum supergroup chat; requires can_manage_topics right in the supergroup
 
@@ -17604,19 +18058,19 @@ Toggles whether a General topic is hidden in a forum supergroup chat; requires c
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68748
+dist/generated/types.d.ts:70599
 
 ***
 
 ### toggleGroupCallEnabledStartNotification()
 
-> **toggleGroupCallEnabledStartNotification**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleGroupCallEnabledStartNotification**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether the current user will receive a notification when the group call starts; scheduled group calls only
 
@@ -17628,19 +18082,19 @@ Toggles whether the current user will receive a notification when the group call
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70499
+dist/generated/types.d.ts:72417
 
 ***
 
 ### toggleGroupCallIsMyVideoEnabled()
 
-> **toggleGroupCallIsMyVideoEnabled**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleGroupCallIsMyVideoEnabled**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether current user's video is enabled
 
@@ -17652,19 +18106,19 @@ Toggles whether current user's video is enabled
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70590
+dist/generated/types.d.ts:72508
 
 ***
 
 ### toggleGroupCallIsMyVideoPaused()
 
-> **toggleGroupCallIsMyVideoPaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleGroupCallIsMyVideoPaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether current user's video is paused
 
@@ -17676,19 +18130,19 @@ Toggles whether current user's video is paused
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70583
+dist/generated/types.d.ts:72501
 
 ***
 
 ### toggleGroupCallMuteNewParticipants()
 
-> **toggleGroupCallMuteNewParticipants**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleGroupCallMuteNewParticipants**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether new participants of a group call can be unmuted only by administrators of the group call. Requires groupCall.can_toggle_mute_new_participants group call flag
 
@@ -17700,19 +18154,19 @@ Toggles whether new participants of a group call can be unmuted only by administ
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70541
+dist/generated/types.d.ts:72459
 
 ***
 
 ### toggleGroupCallParticipantIsHandRaised()
 
-> **toggleGroupCallParticipantIsHandRaised**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleGroupCallParticipantIsHandRaised**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether a group call participant hand is rased
 
@@ -17724,19 +18178,19 @@ Toggles whether a group call participant hand is rased
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70618
+dist/generated/types.d.ts:72536
 
 ***
 
 ### toggleGroupCallParticipantIsMuted()
 
-> **toggleGroupCallParticipantIsMuted**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleGroupCallParticipantIsMuted**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether a participant of an active group call is muted, unmuted, or allowed to unmute themselves
 
@@ -17748,19 +18202,19 @@ Toggles whether a participant of an active group call is muted, unmuted, or allo
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70604
+dist/generated/types.d.ts:72522
 
 ***
 
 ### toggleGroupCallScreenSharingIsPaused()
 
-> **toggleGroupCallScreenSharingIsPaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleGroupCallScreenSharingIsPaused**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Pauses or unpauses screen sharing in a joined group call
 
@@ -17772,19 +18226,19 @@ Pauses or unpauses screen sharing in a joined group call
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70520
+dist/generated/types.d.ts:72438
 
 ***
 
 ### toggleHasSponsoredMessagesEnabled()
 
-> **toggleHasSponsoredMessagesEnabled**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleHasSponsoredMessagesEnabled**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
 
@@ -17796,19 +18250,43 @@ Toggles whether the current user has sponsored messages enabled. The setting has
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71172
+dist/generated/types.d.ts:73090
+
+***
+
+### togglePaidMessageReactionIsAnonymous()
+
+> **togglePaidMessageReactionIsAnonymous**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Changes whether the paid message reaction of the user to a message is anonymous. The message must have paid reaction added by the user
+
+#### Parameters
+
+• **parameters**: [`togglePaidMessageReactionIsAnonymous$DirectInput`](../type-aliases/togglePaidMessageReactionIsAnonymous$DirectInput.md)
+
+[togglePaidMessageReactionIsAnonymous$Input](../type-aliases/togglePaidMessageReactionIsAnonymous$Input.md)
+
+#### Returns
+
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
+
+Promise<[Ok](../type-aliases/Ok-1.md)>
+
+#### Defined in
+
+dist/generated/types.d.ts:70683
 
 ***
 
 ### toggleSavedMessagesTopicIsPinned()
 
-> **toggleSavedMessagesTopicIsPinned**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSavedMessagesTopicIsPinned**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the pinned state of a Saved Messages topic. There can be up to getOption("pinned_saved_messages_topic_count_max") pinned topics. The limit can be increased with Telegram Premium
 
@@ -17820,19 +18298,19 @@ Changes the pinned state of a Saved Messages topic. There can be up to getOption
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68042
+dist/generated/types.d.ts:69899
 
 ***
 
 ### toggleSessionCanAcceptCalls()
 
-> **toggleSessionCanAcceptCalls**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSessionCanAcceptCalls**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether a session can accept incoming calls
 
@@ -17844,19 +18322,19 @@ Toggles whether a session can accept incoming calls
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71494
+dist/generated/types.d.ts:73454
 
 ***
 
 ### toggleSessionCanAcceptSecretChats()
 
-> **toggleSessionCanAcceptSecretChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSessionCanAcceptSecretChats**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether a session can accept incoming secret chats
 
@@ -17868,19 +18346,19 @@ Toggles whether a session can accept incoming secret chats
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71501
+dist/generated/types.d.ts:73461
 
 ***
 
 ### toggleStoryIsPostedToChatPage()
 
-> **toggleStoryIsPostedToChatPage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleStoryIsPostedToChatPage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
 
@@ -17892,19 +18370,19 @@ Toggles whether a story is accessible after expiration. Can be called only if st
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69879
+dist/generated/types.d.ts:71779
 
 ***
 
 ### toggleSupergroupCanHaveSponsoredMessages()
 
-> **toggleSupergroupCanHaveSponsoredMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupCanHaveSponsoredMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
 
@@ -17916,19 +18394,19 @@ Toggles whether sponsored messages are shown in the channel chat; requires owner
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71615
+dist/generated/types.d.ts:73575
 
 ***
 
 ### toggleSupergroupHasAggressiveAntiSpamEnabled()
 
-> **toggleSupergroupHasAggressiveAntiSpamEnabled**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupHasAggressiveAntiSpamEnabled**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether aggressive anti-spam checks are enabled in the supergroup. Can be called only if supergroupFullInfo.can_toggle_aggressive_anti_spam == true
 
@@ -17940,19 +18418,19 @@ Toggles whether aggressive anti-spam checks are enabled in the supergroup. Can b
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71629
+dist/generated/types.d.ts:73589
 
 ***
 
 ### toggleSupergroupHasHiddenMembers()
 
-> **toggleSupergroupHasHiddenMembers**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupHasHiddenMembers**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether non-administrators can receive only administrators and bots using getSupergroupMembers or searchChatMembers. Can be called only if supergroupFullInfo.can_hide_members == true
 
@@ -17964,19 +18442,19 @@ Toggles whether non-administrators can receive only administrators and bots usin
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71622
+dist/generated/types.d.ts:73582
 
 ***
 
 ### toggleSupergroupIsAllHistoryAvailable()
 
-> **toggleSupergroupIsAllHistoryAvailable**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupIsAllHistoryAvailable**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether the message history of a supergroup is available to new members; requires can_change_info member right
 
@@ -17988,19 +18466,19 @@ Toggles whether the message history of a supergroup is available to new members;
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71608
+dist/generated/types.d.ts:73568
 
 ***
 
 ### toggleSupergroupIsBroadcastGroup()
 
-> **toggleSupergroupIsBroadcastGroup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupIsBroadcastGroup**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Upgrades supergroup to a broadcast group; requires owner privileges in the supergroup
 
@@ -18012,19 +18490,19 @@ Upgrades supergroup to a broadcast group; requires owner privileges in the super
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71643
+dist/generated/types.d.ts:73603
 
 ***
 
 ### toggleSupergroupIsForum()
 
-> **toggleSupergroupIsForum**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupIsForum**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether the supergroup is a forum; requires owner privileges in the supergroup. Discussion supergroups can't be converted to forums
 
@@ -18036,19 +18514,19 @@ Toggles whether the supergroup is a forum; requires owner privileges in the supe
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71636
+dist/generated/types.d.ts:73596
 
 ***
 
 ### toggleSupergroupJoinByRequest()
 
-> **toggleSupergroupJoinByRequest**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupJoinByRequest**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether all users directly joining the supergroup need to be approved by supergroup administrators; requires can_restrict_members administrator right
 
@@ -18060,19 +18538,19 @@ Toggles whether all users directly joining the supergroup need to be approved by
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71601
+dist/generated/types.d.ts:73561
 
 ***
 
 ### toggleSupergroupJoinToSendMessages()
 
-> **toggleSupergroupJoinToSendMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupJoinToSendMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Toggles whether joining is mandatory to send messages to a discussion supergroup; requires can_restrict_members administrator right
 
@@ -18084,21 +18562,21 @@ Toggles whether joining is mandatory to send messages to a discussion supergroup
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71594
+dist/generated/types.d.ts:73554
 
 ***
 
 ### toggleSupergroupSignMessages()
 
-> **toggleSupergroupSignMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupSignMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Toggles whether sender signature is added to sent messages in a channel; requires can_change_info member right
+Toggles whether sender signature or link to the account is added to sent messages in a channel; requires can_change_info member right
 
 #### Parameters
 
@@ -18108,19 +18586,19 @@ Toggles whether sender signature is added to sent messages in a channel; require
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71587
+dist/generated/types.d.ts:73547
 
 ***
 
 ### toggleSupergroupUsernameIsActive()
 
-> **toggleSupergroupUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleSupergroupUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes active state for a username of a supergroup or channel, requires owner privileges in the supergroup or channel. The editable username can't be disabled.
 
@@ -18134,19 +18612,19 @@ Changes active state for a username of a supergroup or channel, requires owner p
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71545
+dist/generated/types.d.ts:73505
 
 ***
 
 ### toggleUsernameIsActive()
 
-> **toggleUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **toggleUsernameIsActive**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes active state for a username of the current user. The editable username can't be disabled. May return an error with a message "USERNAMES_ACTIVE_TOO_MUCH" if the maximum number of active usernames has been reached
 
@@ -18158,19 +18636,19 @@ Changes active state for a username of the current user. The editable username c
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71130
+dist/generated/types.d.ts:73048
 
 ***
 
 ### transferChatOwnership()
 
-> **transferChatOwnership**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **transferChatOwnership**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Changes the owner of a chat; requires owner privileges in the chat. Use the method canTransferOwnership to check whether the ownership can be transferred from the current session. Available only for supergroups and channel chats
 
@@ -18182,19 +18660,19 @@ Changes the owner of a chat; requires owner privileges in the chat. Use the meth
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69718
+dist/generated/types.d.ts:71604
 
 ***
 
 ### translateMessageText()
 
-> **translateMessageText**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+> **translateMessageText**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
 Extracts text or caption of the given message and translates it to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
 
@@ -18206,19 +18684,19 @@ Extracts text or caption of the given message and translates it to the given lan
 
 #### Returns
 
-`Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+`Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
-Promise<[FormattedText](../type-aliases/FormattedText.md)>
+Promise<[FormattedText](../type-aliases/FormattedText-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68326
+dist/generated/types.d.ts:70176
 
 ***
 
 ### translateText()
 
-> **translateText**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+> **translateText**(`parameters`): `Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
 Translates a text to the given language. If the current user is a Telegram Premium user, then text formatting is preserved
 
@@ -18230,19 +18708,19 @@ Translates a text to the given language. If the current user is a Telegram Premi
 
 #### Returns
 
-`Promise`\<[`formattedText`](../type-aliases/formattedText-1.md)\>
+`Promise`\<[`formattedText`](../type-aliases/formattedText.md)\>
 
-Promise<[FormattedText](../type-aliases/FormattedText.md)>
+Promise<[FormattedText](../type-aliases/FormattedText-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:68319
+dist/generated/types.d.ts:70169
 
 ***
 
 ### unpinAllChatMessages()
 
-> **unpinAllChatMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **unpinAllChatMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes all pinned messages from a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
 
@@ -18254,19 +18732,19 @@ Removes all pinned messages from a chat; requires can_pin_messages member right 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69649
+dist/generated/types.d.ts:71535
 
 ***
 
 ### unpinAllMessageThreadMessages()
 
-> **unpinAllMessageThreadMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **unpinAllMessageThreadMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes all pinned messages from a forum topic; requires can_pin_messages member right in the supergroup
 
@@ -18278,19 +18756,19 @@ Removes all pinned messages from a forum topic; requires can_pin_messages member
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69656
+dist/generated/types.d.ts:71542
 
 ***
 
 ### unpinChatMessage()
 
-> **unpinChatMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **unpinChatMessage**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Removes a pinned message from a chat; requires can_pin_messages member right if the chat is a basic group or supergroup, or can_edit_messages administrator right if the chat is a channel
 
@@ -18302,19 +18780,19 @@ Removes a pinned message from a chat; requires can_pin_messages member right if 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69642
+dist/generated/types.d.ts:71528
 
 ***
 
 ### upgradeBasicGroupChatToSupergroupChat()
 
-> **upgradeBasicGroupChatToSupergroupChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+> **upgradeBasicGroupChatToSupergroupChat**(`parameters`): `Promise`\<[`chat`](../type-aliases/chat.md)\>
 
 Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
 
@@ -18326,19 +18804,19 @@ Creates a new supergroup from an existing basic group and sends a corresponding 
 
 #### Returns
 
-`Promise`\<[`chat`](../type-aliases/chat-1.md)\>
+`Promise`\<[`chat`](../type-aliases/chat.md)\>
 
-Promise<[Chat](../type-aliases/Chat.md)>
+Promise<[Chat](../type-aliases/Chat-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69304
+dist/generated/types.d.ts:71190
 
 ***
 
 ### uploadStickerFile()
 
-> **uploadStickerFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file-1.md)\>
+> **uploadStickerFile**(`parameters`): `Promise`\<[`file`](../type-aliases/file.md)\>
 
 Uploads a file with a sticker; returns the uploaded file
 
@@ -18350,19 +18828,19 @@ Uploads a file with a sticker; returns the uploaded file
 
 #### Returns
 
-`Promise`\<[`file`](../type-aliases/file-1.md)\>
+`Promise`\<[`file`](../type-aliases/file.md)\>
 
-Promise<[File](../type-aliases/File.md)>
+Promise<[File](../type-aliases/File-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72302
+dist/generated/types.d.ts:74262
 
 ***
 
 ### validateOrderInfo()
 
-> **validateOrderInfo**(`parameters`): `Promise`\<[`validatedOrderInfo`](../type-aliases/validatedOrderInfo-1.md)\>
+> **validateOrderInfo**(`parameters`): `Promise`\<[`validatedOrderInfo`](../type-aliases/validatedOrderInfo.md)\>
 
 Validates the order information provided by a user and returns the available shipping options for a flexible invoice
 
@@ -18374,19 +18852,19 @@ Validates the order information provided by a user and returns the available shi
 
 #### Returns
 
-`Promise`\<[`validatedOrderInfo`](../type-aliases/validatedOrderInfo-1.md)\>
+`Promise`\<[`validatedOrderInfo`](../type-aliases/validatedOrderInfo.md)\>
 
-Promise<[ValidatedOrderInfo](../type-aliases/ValidatedOrderInfo.md)>
+Promise<[ValidatedOrderInfo](../type-aliases/ValidatedOrderInfo-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:71699
+dist/generated/types.d.ts:73659
 
 ***
 
 ### viewMessages()
 
-> **viewMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **viewMessages**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that messages are being viewed by the user. Sponsored messages must be marked as viewed only when the entire text of the message is shown on the screen (excluding the button).
 
@@ -18400,19 +18878,19 @@ Informs TDLib that messages are being viewed by the user. Sponsored messages mus
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:69176
+dist/generated/types.d.ts:71062
 
 ***
 
 ### viewPremiumFeature()
 
-> **viewPremiumFeature**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **viewPremiumFeature**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs TDLib that the user viewed detailed information about a Premium feature on the Premium features screen
 
@@ -18424,19 +18902,19 @@ Informs TDLib that the user viewed detailed information about a Premium feature 
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:72442
+dist/generated/types.d.ts:74402
 
 ***
 
 ### viewTrendingStickerSets()
 
-> **viewTrendingStickerSets**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **viewTrendingStickerSets**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Informs the server that some trending sticker sets have been viewed by the user
 
@@ -18448,19 +18926,19 @@ Informs the server that some trending sticker sets have been viewed by the user
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70886
+dist/generated/types.d.ts:72804
 
 ***
 
 ### writeGeneratedFilePart()
 
-> **writeGeneratedFilePart**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+> **writeGeneratedFilePart**(`parameters`): `Promise`\<[`ok`](../type-aliases/ok.md)\>
 
 Writes a part of a generated file. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct write to the destination file
 
@@ -18472,10 +18950,10 @@ Writes a part of a generated file. This method is intended to be used only if th
 
 #### Returns
 
-`Promise`\<[`ok`](../type-aliases/ok-1.md)\>
+`Promise`\<[`ok`](../type-aliases/ok.md)\>
 
-Promise<[Ok](../type-aliases/Ok.md)>
+Promise<[Ok](../type-aliases/Ok-1.md)>
 
 #### Defined in
 
-dist/generated/types.d.ts:70187
+dist/generated/types.d.ts:72087

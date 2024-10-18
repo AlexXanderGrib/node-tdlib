@@ -20,4 +20,4 @@ Suggested action to hide
 
 ## Defined in
 
-dist/generated/types.d.ts:82231
+dist/generated/types.d.ts:84424

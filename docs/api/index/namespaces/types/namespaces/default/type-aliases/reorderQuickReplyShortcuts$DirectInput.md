@@ -14,10 +14,10 @@ Changes the order of quick reply shortcuts
 
 ### shortcut\_ids?
 
-> `readonly` `optional` **shortcut\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **shortcut\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 The new order of quick reply shortcuts
 
 ## Defined in
 
-dist/generated/types.d.ts:80244
+dist/generated/types.d.ts:82293

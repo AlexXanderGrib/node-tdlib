@@ -18,7 +18,7 @@ The payment form is for a regular payment
 
 ### additional\_payment\_options
 
-> **additional\_payment\_options**: [`vector`](vector.md)\<[`paymentOption`](paymentOption-1.md)\>
+> **additional\_payment\_options**: [`vector`](vector.md)\<[`paymentOption`](paymentOption.md)\>
 
 The list of additional payment options
 
@@ -30,7 +30,7 @@ True, if the user can choose to save credentials
 
 ### invoice
 
-> **invoice**: [`invoice`](invoice-1.md)
+> **invoice**: [`invoice`](invoice.md)
 
 Full information about the invoice
 
@@ -48,22 +48,22 @@ Information about the payment provider
 
 ### payment\_provider\_user\_id
 
-> **payment\_provider\_user\_id**: [`int53`](int53-1.md)
+> **payment\_provider\_user\_id**: [`int53`](int53.md)
 
 User identifier of the payment provider bot
 
 ### saved\_credentials
 
-> **saved\_credentials**: [`vector`](vector.md)\<[`savedCredentials`](savedCredentials-1.md)\>
+> **saved\_credentials**: [`vector`](vector.md)\<[`savedCredentials`](savedCredentials.md)\>
 
 The list of saved payment credentials
 
 ### saved\_order\_info
 
-> **saved\_order\_info**: [`orderInfo`](orderInfo-1.md) \| `null`
+> **saved\_order\_info**: [`orderInfo`](orderInfo.md) \| `null`
 
 Saved server-side order information; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:23059
+dist/generated/types.d.ts:23819

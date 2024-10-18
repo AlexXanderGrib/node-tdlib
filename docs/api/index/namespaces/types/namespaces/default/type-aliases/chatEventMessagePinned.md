@@ -18,10 +18,10 @@ A message was pinned
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 Pinned message
 
 ## Defined in
 
-dist/generated/types.d.ts:39257
+dist/generated/types.d.ts:40627

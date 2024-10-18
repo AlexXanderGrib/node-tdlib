@@ -18,10 +18,10 @@ Changes the birthdate of the current user
 
 ### birthdate?
 
-> `readonly` `optional` **birthdate**: [`birthdate$Input`](birthdate$Input-1.md) \| `null`
+> `readonly` `optional` **birthdate**: [`birthdate$Input`](birthdate$Input.md) \| `null`
 
 The new value of the current user's birthdate; pass null to remove the birthdate
 
 ## Defined in
 
-dist/generated/types.d.ts:94150
+dist/generated/types.d.ts:96647

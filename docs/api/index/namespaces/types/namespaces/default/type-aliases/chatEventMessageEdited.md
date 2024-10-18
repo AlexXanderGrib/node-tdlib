@@ -18,16 +18,16 @@ A message was edited
 
 ### new\_message
 
-> **new\_message**: [`message`](message-1.md)
+> **new\_message**: [`message`](message.md)
 
 The message after it was edited
 
 ### old\_message
 
-> **old\_message**: [`message`](message-1.md)
+> **old\_message**: [`message`](message.md)
 
 The original message before the edit
 
 ## Defined in
 
-dist/generated/types.d.ts:39189
+dist/generated/types.d.ts:40559

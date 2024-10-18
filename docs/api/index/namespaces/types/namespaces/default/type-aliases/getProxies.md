@@ -6,7 +6,9 @@
 
 # Type Alias: getProxies()
 
-> **getProxies**: (`parameters`) => [`Proxies`](Proxies.md)
+> **getProxies**: (`parameters`) => [`Proxies`](Proxies-1.md)
+
+Returns the list of proxies that are currently set up. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Proxies`](Proxies.md)
+[`Proxies`](Proxies-1.md)
 
-[Proxies](Proxies.md)
+[Proxies](Proxies-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101598
+dist/generated/types.d.ts:104519

@@ -20,4 +20,4 @@ The session is running on the Vivaldi browser
 
 ## Defined in
 
-dist/generated/types.d.ts:46665
+dist/generated/types.d.ts:48191

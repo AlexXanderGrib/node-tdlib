@@ -6,7 +6,9 @@
 
 # Type Alias: createPrivateChat()
 
-> **createPrivateChat**: (`parameters`) => [`Chat`](Chat.md)
+> **createPrivateChat**: (`parameters`) => [`Chat`](Chat-1.md)
+
+Returns an existing chat corresponding to a given user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chat`](Chat.md)
+[`Chat`](Chat-1.md)
 
-[Chat](Chat.md)
+[Chat](Chat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84117
+dist/generated/types.d.ts:86416

@@ -6,7 +6,9 @@
 
 # Type Alias: getAllStickerEmojis()
 
-> **getAllStickerEmojis**: (`parameters`) => [`Emojis`](Emojis.md)
+> **getAllStickerEmojis**: (`parameters`) => [`Emojis`](Emojis-1.md)
+
+Returns unique emoji that correspond to stickers to be found by the getStickers(sticker_type, query, 1000000, chat_id)
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Emojis`](Emojis.md)
+[`Emojis`](Emojis-1.md)
 
-[Emojis](Emojis.md)
+[Emojis](Emojis-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92621
+dist/generated/types.d.ts:95118

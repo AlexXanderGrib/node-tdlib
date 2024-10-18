@@ -28,4 +28,4 @@ Remote identifier of the file to get
 
 ## Defined in
 
-dist/generated/types.d.ts:74974
+dist/generated/types.d.ts:77000

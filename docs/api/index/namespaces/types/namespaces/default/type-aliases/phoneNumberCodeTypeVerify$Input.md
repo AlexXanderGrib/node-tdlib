@@ -20,4 +20,4 @@ Verifies ownership of a phone number to be added to the user's Telegram Passport
 
 ## Defined in
 
-dist/generated/types.d.ts:52601
+dist/generated/types.d.ts:54217

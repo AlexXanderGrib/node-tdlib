@@ -18,4 +18,4 @@ Returns the list of available TDLib internal log tags, for example, ["actor", "b
 
 ## Defined in
 
-dist/generated/types.d.ts:101752
+dist/generated/types.d.ts:104673

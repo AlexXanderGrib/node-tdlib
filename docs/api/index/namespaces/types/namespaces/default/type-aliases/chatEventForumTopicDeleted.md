@@ -18,10 +18,10 @@ A forum topic was deleted
 
 ### topic\_info
 
-> **topic\_info**: [`forumTopicInfo`](forumTopicInfo-1.md)
+> **topic\_info**: [`forumTopicInfo`](forumTopicInfo.md)
 
 Information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40637
+dist/generated/types.d.ts:42031

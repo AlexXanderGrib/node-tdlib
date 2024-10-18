@@ -48,4 +48,4 @@ Pass true to change also the recovery email address
 
 ## Defined in
 
-dist/generated/types.d.ts:73868
+dist/generated/types.d.ts:75856

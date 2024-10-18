@@ -20,7 +20,7 @@ A forum topic has been created
 
 ### icon?
 
-> `readonly` `optional` **icon**: [`forumTopicIcon$Input`](forumTopicIcon$Input-1.md)
+> `readonly` `optional` **icon**: [`forumTopicIcon$Input`](forumTopicIcon$Input.md)
 
 Icon of the topic
 
@@ -32,4 +32,4 @@ Name of the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:27301
+dist/generated/types.d.ts:28061

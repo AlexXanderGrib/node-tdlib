@@ -6,7 +6,9 @@
 
 # Type Alias: getVideoChatAvailableParticipants()
 
-> **getVideoChatAvailableParticipants**: (`parameters`) => [`MessageSenders`](MessageSenders.md)
+> **getVideoChatAvailableParticipants**: (`parameters`) => [`MessageSenders`](MessageSenders-1.md)
+
+Returns the list of participant identifiers, on whose behalf a video chat in the chat can be joined
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageSenders`](MessageSenders.md)
+[`MessageSenders`](MessageSenders-1.md)
 
-[MessageSenders](MessageSenders.md)
+[MessageSenders](MessageSenders-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90733
+dist/generated/types.d.ts:93230

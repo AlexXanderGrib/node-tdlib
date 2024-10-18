@@ -28,4 +28,4 @@ The reason why the account was deleted; optional
 
 ## Defined in
 
-dist/generated/types.d.ts:98054
+dist/generated/types.d.ts:100833

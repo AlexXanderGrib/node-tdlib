@@ -26,25 +26,25 @@ Currency for the product price
 
 ### id?
 
-> `readonly` `optional` **id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **id**: [`int64$Input`](int64$Input.md)
 
 Unique query identifier
 
 ### invoice\_payload?
 
-> `readonly` `optional` **invoice\_payload**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **invoice\_payload**: [`bytes$Input`](bytes$Input.md)
 
 Invoice payload
 
 ### order\_info?
 
-> `readonly` `optional` **order\_info**: [`orderInfo$Input`](orderInfo$Input-1.md) \| `null`
+> `readonly` `optional` **order\_info**: [`orderInfo$Input`](orderInfo$Input.md) \| `null`
 
 Information about the order; may be null
 
 ### sender\_user\_id?
 
-> `readonly` `optional` **sender\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **sender\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user who sent the query
 
@@ -56,10 +56,10 @@ Identifier of a shipping option chosen by the user; may be empty if not applicab
 
 ### total\_amount?
 
-> `readonly` `optional` **total\_amount**: [`int53`](int53-1.md)
+> `readonly` `optional` **total\_amount**: [`int53`](int53.md)
 
 Total price for the product, in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:57694
+dist/generated/types.d.ts:59334

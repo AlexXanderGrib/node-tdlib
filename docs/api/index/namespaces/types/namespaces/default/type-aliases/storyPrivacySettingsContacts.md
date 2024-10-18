@@ -18,10 +18,10 @@ The story can be viewed by all contacts except chosen users
 
 ### except\_user\_ids
 
-> **except\_user\_ids**: [`vector`](vector.md)\<[`int53`](int53-1.md)\>
+> **except\_user\_ids**: [`vector`](vector.md)\<[`int53`](int53.md)\>
 
 User identifiers of the contacts that can't see the story; always unknown and empty for non-owned stories
 
 ## Defined in
 
-dist/generated/types.d.ts:45917
+dist/generated/types.d.ts:47443

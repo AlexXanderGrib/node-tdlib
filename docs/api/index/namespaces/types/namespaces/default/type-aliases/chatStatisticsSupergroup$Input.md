@@ -50,7 +50,7 @@ A graph containing distribution of active users per language
 
 ### member\_count?
 
-> `readonly` `optional` **member\_count**: [`statisticalValue$Input`](statisticalValue$Input-1.md)
+> `readonly` `optional` **member\_count**: [`statisticalValue$Input`](statisticalValue$Input.md)
 
 Number of members in the chat
 
@@ -68,43 +68,43 @@ A graph containing distribution of sent messages by content type
 
 ### message\_count?
 
-> `readonly` `optional` **message\_count**: [`statisticalValue$Input`](statisticalValue$Input-1.md)
+> `readonly` `optional` **message\_count**: [`statisticalValue$Input`](statisticalValue$Input.md)
 
 Number of messages sent to the chat
 
 ### period?
 
-> `readonly` `optional` **period**: [`dateRange$Input`](dateRange$Input-1.md)
+> `readonly` `optional` **period**: [`dateRange$Input`](dateRange$Input.md)
 
 A period to which the statistics applies
 
 ### sender\_count?
 
-> `readonly` `optional` **sender\_count**: [`statisticalValue$Input`](statisticalValue$Input-1.md)
+> `readonly` `optional` **sender\_count**: [`statisticalValue$Input`](statisticalValue$Input.md)
 
 Number of users who sent messages to the chat
 
 ### top\_administrators?
 
-> `readonly` `optional` **top\_administrators**: [`vector$Input`](vector$Input.md)\<[`chatStatisticsAdministratorActionsInfo$Input`](chatStatisticsAdministratorActionsInfo$Input-1.md)\>
+> `readonly` `optional` **top\_administrators**: [`vector$Input`](vector$Input.md)\<[`chatStatisticsAdministratorActionsInfo$Input`](chatStatisticsAdministratorActionsInfo$Input.md)\>
 
 List of most active administrators in the last week
 
 ### top\_inviters?
 
-> `readonly` `optional` **top\_inviters**: [`vector$Input`](vector$Input.md)\<[`chatStatisticsInviterInfo$Input`](chatStatisticsInviterInfo$Input-1.md)\>
+> `readonly` `optional` **top\_inviters**: [`vector$Input`](vector$Input.md)\<[`chatStatisticsInviterInfo$Input`](chatStatisticsInviterInfo$Input.md)\>
 
 List of most active inviters of new members in the last week
 
 ### top\_senders?
 
-> `readonly` `optional` **top\_senders**: [`vector$Input`](vector$Input.md)\<[`chatStatisticsMessageSenderInfo$Input`](chatStatisticsMessageSenderInfo$Input-1.md)\>
+> `readonly` `optional` **top\_senders**: [`vector$Input`](vector$Input.md)\<[`chatStatisticsMessageSenderInfo$Input`](chatStatisticsMessageSenderInfo$Input.md)\>
 
 List of users sent most messages in the last week
 
 ### viewer\_count?
 
-> `readonly` `optional` **viewer\_count**: [`statisticalValue$Input`](statisticalValue$Input-1.md)
+> `readonly` `optional` **viewer\_count**: [`statisticalValue$Input`](statisticalValue$Input.md)
 
 Number of users who viewed messages in the chat
 
@@ -116,4 +116,4 @@ A graph containing distribution of message views per day of week
 
 ## Defined in
 
-dist/generated/types.d.ts:51483
+dist/generated/types.d.ts:53099

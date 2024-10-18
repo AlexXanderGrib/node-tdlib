@@ -20,4 +20,4 @@ The sticker is a video in WEBM format
 
 ## Defined in
 
-dist/generated/types.d.ts:4407
+dist/generated/types.d.ts:4453

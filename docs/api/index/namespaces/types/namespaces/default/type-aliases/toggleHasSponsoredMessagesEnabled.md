@@ -6,7 +6,9 @@
 
 # Type Alias: toggleHasSponsoredMessagesEnabled()
 
-> **toggleHasSponsoredMessagesEnabled**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleHasSponsoredMessagesEnabled**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94286
+dist/generated/types.d.ts:96783

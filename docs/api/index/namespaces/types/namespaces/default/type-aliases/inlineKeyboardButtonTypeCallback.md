@@ -18,10 +18,10 @@ A button that sends a callback query to a bot
 
 ### data
 
-> **data**: [`bytes`](bytes-1.md)
+> **data**: [`bytes`](bytes.md)
 
 Data to be sent to the bot via a callback query
 
 ## Defined in
 
-dist/generated/types.d.ts:17579
+dist/generated/types.d.ts:18171

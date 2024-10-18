@@ -18,28 +18,28 @@ A user sent a join request to a chat; for bots only
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### invite\_link
 
-> **invite\_link**: [`chatInviteLink`](chatInviteLink-1.md) \| `null`
+> **invite\_link**: [`chatInviteLink`](chatInviteLink.md) \| `null`
 
 The invite link, which was used to send join request; may be null
 
 ### request
 
-> **request**: [`chatJoinRequest`](chatJoinRequest-1.md)
+> **request**: [`chatJoinRequest`](chatJoinRequest.md)
 
 Join request
 
 ### user\_chat\_id
 
-> **user\_chat\_id**: [`int53`](int53-1.md)
+> **user\_chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the private chat with the user
 
 ## Defined in
 
-dist/generated/types.d.ts:57965
+dist/generated/types.d.ts:59605

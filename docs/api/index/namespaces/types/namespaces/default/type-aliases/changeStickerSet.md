@@ -6,7 +6,9 @@
 
 # Type Alias: changeStickerSet()
 
-> **changeStickerSet**: (`parameters`) => [`Ok`](Ok.md)
+> **changeStickerSet**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Installs/uninstalls or activates/archives a sticker set
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93056
+dist/generated/types.d.ts:95553

@@ -26,10 +26,10 @@ True, if the message is a pinned message with the specified content
 
 ### voice\_note?
 
-> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input-1.md) \| `null`
+> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44873
+dist/generated/types.d.ts:46399

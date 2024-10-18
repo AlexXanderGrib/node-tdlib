@@ -18,7 +18,7 @@ Changes the mask position of a mask sticker. The sticker must belong to a mask s
 
 ### mask\_position?
 
-> `readonly` `optional` **mask\_position**: [`maskPosition$Input`](maskPosition$Input-1.md) \| `null`
+> `readonly` `optional` **mask\_position**: [`maskPosition$Input`](maskPosition$Input.md) \| `null`
 
 Position where the mask is placed; pass null to remove mask position
 
@@ -30,4 +30,4 @@ Sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:100278
+dist/generated/types.d.ts:103057

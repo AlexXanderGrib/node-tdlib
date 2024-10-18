@@ -6,7 +6,9 @@
 
 # Type Alias: setChatClientData()
 
-> **setChatClientData**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatClientData**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes application-specific data associated with a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85955
+dist/generated/types.d.ts:88254

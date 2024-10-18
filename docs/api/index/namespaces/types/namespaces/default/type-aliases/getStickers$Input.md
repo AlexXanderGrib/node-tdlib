@@ -18,13 +18,13 @@ Returns stickers from the installed sticker sets that correspond to any of the g
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier for which to return stickers. Available custom emoji stickers may be different for different chats
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of stickers to be returned
 
@@ -42,4 +42,4 @@ Type of the stickers to return
 
 ## Defined in
 
-dist/generated/types.d.ts:92509
+dist/generated/types.d.ts:95006

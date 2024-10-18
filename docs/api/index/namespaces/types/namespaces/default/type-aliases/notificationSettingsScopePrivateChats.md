@@ -18,4 +18,4 @@ Notification settings applied to all private and secret chats when the correspon
 
 ## Defined in
 
-dist/generated/types.d.ts:14819
+dist/generated/types.d.ts:15411

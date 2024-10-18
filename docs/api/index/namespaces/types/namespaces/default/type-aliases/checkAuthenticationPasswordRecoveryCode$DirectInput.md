@@ -20,4 +20,4 @@ Recovery code to check
 
 ## Defined in
 
-dist/generated/types.d.ts:73572
+dist/generated/types.d.ts:75560

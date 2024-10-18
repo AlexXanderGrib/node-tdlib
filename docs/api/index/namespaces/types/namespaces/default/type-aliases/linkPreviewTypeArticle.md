@@ -24,10 +24,10 @@ Author of the article
 
 ### photo
 
-> **photo**: [`photo`](photo-1.md) \| `null`
+> **photo**: [`photo`](photo.md) \| `null`
 
 Article's main photo; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:20949
+dist/generated/types.d.ts:21575

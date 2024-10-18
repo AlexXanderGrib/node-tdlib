@@ -18,10 +18,10 @@ A straight line to a given point
 
 ### end\_point
 
-> **end\_point**: [`point`](point-1.md)
+> **end\_point**: [`point`](point.md)
 
 The end point of the straight line
 
 ## Defined in
 
-dist/generated/types.d.ts:52373
+dist/generated/types.d.ts:53989

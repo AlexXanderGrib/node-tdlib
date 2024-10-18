@@ -8,6 +8,11 @@
 
 ## Index
 
+### Classes
+
+- [InlineKeyboardBuilder](classes/InlineKeyboardBuilder.md)
+- [KeyboardBuilder](classes/KeyboardBuilder.md)
+
 ### Functions
 
 - [forceReply](functions/forceReply.md)

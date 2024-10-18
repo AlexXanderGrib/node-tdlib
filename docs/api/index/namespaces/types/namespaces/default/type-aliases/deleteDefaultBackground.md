@@ -6,7 +6,9 @@
 
 # Type Alias: deleteDefaultBackground()
 
-> **deleteDefaultBackground**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteDefaultBackground**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes default background for chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97236
+dist/generated/types.d.ts:100015

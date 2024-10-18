@@ -42,4 +42,4 @@ Identifier of the purchased store product
 
 ## Defined in
 
-dist/generated/types.d.ts:100872
+dist/generated/types.d.ts:103727

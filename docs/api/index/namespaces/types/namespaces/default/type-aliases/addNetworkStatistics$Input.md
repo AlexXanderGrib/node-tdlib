@@ -24,4 +24,4 @@ The network statistics entry with the data to be added to statistics
 
 ## Defined in
 
-dist/generated/types.d.ts:99025
+dist/generated/types.d.ts:101804

@@ -20,4 +20,4 @@ The bank card number
 
 ## Defined in
 
-dist/generated/types.d.ts:99208
+dist/generated/types.d.ts:101987

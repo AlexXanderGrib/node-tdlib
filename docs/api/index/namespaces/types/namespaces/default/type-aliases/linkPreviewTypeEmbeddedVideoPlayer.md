@@ -24,15 +24,21 @@ Author of the video
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds
 
 ### height
 
-> **height**: [`int32`](int32-1.md)
+> **height**: [`int32`](int32.md)
 
-Expected height of the preview
+Expected height of the embedded player
+
+### thumbnail
+
+> **thumbnail**: [`photo`](photo.md) \| `null`
+
+Thumbnail of the video; may be null if unknown
 
 ### url
 
@@ -42,10 +48,10 @@ URL of the external video player
 
 ### width
 
-> **width**: [`int32`](int32-1.md)
+> **width**: [`int32`](int32.md)
 
-Expected width of the preview
+Expected width of the embedded player
 
 ## Defined in
 
-dist/generated/types.d.ts:21217
+dist/generated/types.d.ts:21957

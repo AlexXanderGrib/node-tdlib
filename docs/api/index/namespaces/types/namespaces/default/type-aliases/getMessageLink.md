@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageLink()
 
-> **getMessageLink**: (`parameters`) => [`MessageLink`](MessageLink.md)
+> **getMessageLink**: (`parameters`) => [`MessageLink`](MessageLink-1.md)
+
+Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageLink`](MessageLink.md)
+[`MessageLink`](MessageLink-1.md)
 
-[MessageLink](MessageLink.md)
+[MessageLink](MessageLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77722
+dist/generated/types.d.ts:79731

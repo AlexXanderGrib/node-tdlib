@@ -20,4 +20,4 @@ String to return
 
 ## Defined in
 
-dist/generated/types.d.ts:101984
+dist/generated/types.d.ts:104905

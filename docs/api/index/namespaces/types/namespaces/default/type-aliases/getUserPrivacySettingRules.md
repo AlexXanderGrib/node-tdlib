@@ -6,7 +6,9 @@
 
 # Type Alias: getUserPrivacySettingRules()
 
-> **getUserPrivacySettingRules**: (`parameters`) => [`UserPrivacySettingRules`](UserPrivacySettingRules.md)
+> **getUserPrivacySettingRules**: (`parameters`) => [`UserPrivacySettingRules`](UserPrivacySettingRules-1.md)
+
+Returns the current privacy settings
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`UserPrivacySettingRules`](UserPrivacySettingRules.md)
+[`UserPrivacySettingRules`](UserPrivacySettingRules-1.md)
 
-[UserPrivacySettingRules](UserPrivacySettingRules.md)
+[UserPrivacySettingRules](UserPrivacySettingRules-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97791
+dist/generated/types.d.ts:100570

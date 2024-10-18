@@ -6,7 +6,9 @@
 
 # Type Alias: endGroupCallRecording()
 
-> **endGroupCallRecording**: (`parameters`) => [`Ok`](Ok.md)
+> **endGroupCallRecording**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Ends recording of an active group call. Requires groupCall.can_be_managed group call flag
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91447
+dist/generated/types.d.ts:93944

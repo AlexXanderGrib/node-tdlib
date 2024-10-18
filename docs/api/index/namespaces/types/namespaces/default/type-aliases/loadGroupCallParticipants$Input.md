@@ -18,16 +18,16 @@ Loads more participants of a group call. The loaded participants will be receive
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier. The group call must be previously received through getGroupCall and must be joined or being joined
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of participants to load; up to 100
 
 ## Defined in
 
-dist/generated/types.d.ts:91719
+dist/generated/types.d.ts:94216

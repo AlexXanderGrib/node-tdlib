@@ -12,4 +12,4 @@ Cancels verification of the 2-step verification recovery email address
 
 ## Defined in
 
-dist/generated/types.d.ts:74138
+dist/generated/types.d.ts:76126

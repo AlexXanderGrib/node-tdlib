@@ -18,4 +18,4 @@ A main list of chats
 
 ## Defined in
 
-dist/generated/types.d.ts:15885
+dist/generated/types.d.ts:16477

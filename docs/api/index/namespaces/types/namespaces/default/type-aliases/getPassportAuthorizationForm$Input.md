@@ -18,7 +18,7 @@ Returns a Telegram Passport authorization form for sharing data with a service
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 User identifier of the service's bot
 
@@ -42,4 +42,4 @@ Telegram Passport element types requested by the service
 
 ## Defined in
 
-dist/generated/types.d.ts:99496
+dist/generated/types.d.ts:102275

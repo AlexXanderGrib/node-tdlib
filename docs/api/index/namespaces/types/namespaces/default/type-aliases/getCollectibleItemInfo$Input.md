@@ -24,4 +24,4 @@ Type of the collectible item. The item must be used by a user and must be visibl
 
 ## Defined in
 
-dist/generated/types.d.ts:101248
+dist/generated/types.d.ts:104169

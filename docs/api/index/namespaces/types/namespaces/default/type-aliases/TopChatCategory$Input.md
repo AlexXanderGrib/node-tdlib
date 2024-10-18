@@ -6,7 +6,7 @@
 
 # Type Alias: TopChatCategory$Input
 
-> **TopChatCategory$Input**: [`topChatCategoryUsers$Input`](topChatCategoryUsers$Input.md) \| [`topChatCategoryBots$Input`](topChatCategoryBots$Input.md) \| [`topChatCategoryGroups$Input`](topChatCategoryGroups$Input.md) \| [`topChatCategoryChannels$Input`](topChatCategoryChannels$Input.md) \| [`topChatCategoryInlineBots$Input`](topChatCategoryInlineBots$Input.md) \| [`topChatCategoryCalls$Input`](topChatCategoryCalls$Input.md) \| [`topChatCategoryForwardChats$Input`](topChatCategoryForwardChats$Input.md)
+> **TopChatCategory$Input**: [`topChatCategoryUsers$Input`](topChatCategoryUsers$Input.md) \| [`topChatCategoryBots$Input`](topChatCategoryBots$Input.md) \| [`topChatCategoryGroups$Input`](topChatCategoryGroups$Input.md) \| [`topChatCategoryChannels$Input`](topChatCategoryChannels$Input.md) \| [`topChatCategoryInlineBots$Input`](topChatCategoryInlineBots$Input.md) \| [`topChatCategoryWebAppBots$Input`](topChatCategoryWebAppBots$Input.md) \| [`topChatCategoryCalls$Input`](topChatCategoryCalls$Input.md) \| [`topChatCategoryForwardChats$Input`](topChatCategoryForwardChats$Input.md)
 
 Version of [TopChatCategory](TopChatCategory.md) for method parameters.
 Any of:
@@ -15,9 +15,10 @@ Any of:
 - [topChatCategoryGroups$Input](topChatCategoryGroups$Input.md)
 - [topChatCategoryChannels$Input](topChatCategoryChannels$Input.md)
 - [topChatCategoryInlineBots$Input](topChatCategoryInlineBots$Input.md)
+- [topChatCategoryWebAppBots$Input](topChatCategoryWebAppBots$Input.md)
 - [topChatCategoryCalls$Input](topChatCategoryCalls$Input.md)
 - [topChatCategoryForwardChats$Input](topChatCategoryForwardChats$Input.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:65636
+dist/generated/types.d.ts:67462

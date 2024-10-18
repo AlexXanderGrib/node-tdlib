@@ -18,22 +18,22 @@ Searches for a given quote in a text. Returns found quote start position in UTF-
 
 ### quote?
 
-> `readonly` `optional` **quote**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **quote**: [`formattedText$Input`](formattedText$Input.md)
 
 Quote to search for
 
 ### quote\_position?
 
-> `readonly` `optional` **quote\_position**: [`int32`](int32-1.md)
+> `readonly` `optional` **quote\_position**: [`int32`](int32.md)
 
 Approximate quote position in UTF-16 code units
 
 ### text?
 
-> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input.md)
 
 Text in which to search for the quote
 
 ## Defined in
 
-dist/generated/types.d.ts:81626
+dist/generated/types.d.ts:83819

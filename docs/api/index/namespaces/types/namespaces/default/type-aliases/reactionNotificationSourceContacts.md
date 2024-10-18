@@ -18,4 +18,4 @@ Notifications for reactions are shown only for reactions from contacts
 
 ## Defined in
 
-dist/generated/types.d.ts:15153
+dist/generated/types.d.ts:15745

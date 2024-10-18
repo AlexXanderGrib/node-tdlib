@@ -50,7 +50,7 @@ The message reply markup; pass null if none. Must be of type replyMarkupInlineKe
 
 ### thumbnail\_height?
 
-> `readonly` `optional` **thumbnail\_height**: [`int32`](int32-1.md)
+> `readonly` `optional` **thumbnail\_height**: [`int32`](int32.md)
 
 Thumbnail height, if known
 
@@ -62,7 +62,7 @@ URL of the result thumbnail, if it exists
 
 ### thumbnail\_width?
 
-> `readonly` `optional` **thumbnail\_width**: [`int32`](int32-1.md)
+> `readonly` `optional` **thumbnail\_width**: [`int32`](int32.md)
 
 Thumbnail width, if known
 
@@ -80,4 +80,4 @@ URL of the result, if it exists
 
 ## Defined in
 
-dist/generated/types.d.ts:37311
+dist/generated/types.d.ts:38681

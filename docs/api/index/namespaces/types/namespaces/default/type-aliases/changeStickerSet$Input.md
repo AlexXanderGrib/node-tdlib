@@ -30,10 +30,10 @@ The new value of is_installed
 
 ### set\_id?
 
-> `readonly` `optional` **set\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **set\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:93012
+dist/generated/types.d.ts:95509

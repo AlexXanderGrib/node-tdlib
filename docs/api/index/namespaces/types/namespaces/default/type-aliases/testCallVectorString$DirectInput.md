@@ -20,4 +20,4 @@ Vector of strings to return
 
 ## Defined in
 
-dist/generated/types.d.ts:102096
+dist/generated/types.d.ts:105017

@@ -26,4 +26,4 @@ True, if the set background is the same as the background of the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:44998
+dist/generated/types.d.ts:46524

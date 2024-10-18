@@ -18,4 +18,4 @@ The sticker is a custom emoji to be used inside message text and caption
 
 ## Defined in
 
-dist/generated/types.d.ts:4441
+dist/generated/types.d.ts:4487

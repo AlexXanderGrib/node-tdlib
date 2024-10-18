@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's utility bill
 
 ### utility\_bill
 
-> **utility\_bill**: [`personalDocument`](personalDocument-1.md)
+> **utility\_bill**: [`personalDocument`](personalDocument.md)
 
 Utility bill
 
 ## Defined in
 
-dist/generated/types.d.ts:24485
+dist/generated/types.d.ts:25245

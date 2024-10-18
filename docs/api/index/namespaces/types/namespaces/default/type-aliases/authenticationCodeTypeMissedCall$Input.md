@@ -20,7 +20,7 @@ An authentication code is delivered by an immediately canceled call to the speci
 
 ### length?
 
-> `readonly` `optional` **length**: [`int32`](int32-1.md)
+> `readonly` `optional` **length**: [`int32`](int32.md)
 
 Number of digits in the code, excluding the prefix
 
@@ -32,4 +32,4 @@ Prefix of the phone number from which the call will be made
 
 ## Defined in
 
-dist/generated/types.d.ts:2655
+dist/generated/types.d.ts:2701

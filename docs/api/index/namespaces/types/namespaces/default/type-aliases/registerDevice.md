@@ -6,7 +6,9 @@
 
 # Type Alias: registerDevice()
 
-> **registerDevice**: (`parameters`) => [`PushReceiverId`](PushReceiverId.md)
+> **registerDevice**: (`parameters`) => [`PushReceiverId`](PushReceiverId-1.md)
+
+Registers the currently used device for receiving push notifications. Returns a globally unique identifier of the push notification subscription
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PushReceiverId`](PushReceiverId.md)
+[`PushReceiverId`](PushReceiverId-1.md)
 
-[PushReceiverId](PushReceiverId.md)
+[PushReceiverId](PushReceiverId-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97641
+dist/generated/types.d.ts:100420

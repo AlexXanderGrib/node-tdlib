@@ -6,7 +6,9 @@
 
 # Type Alias: checkCreatedPublicChatsLimit()
 
-> **checkCreatedPublicChatsLimit**: (`parameters`) => [`Ok`](Ok.md)
+> **checkCreatedPublicChatsLimit**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75672
+dist/generated/types.d.ts:77698

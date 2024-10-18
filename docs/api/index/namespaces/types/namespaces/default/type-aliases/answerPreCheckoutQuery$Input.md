@@ -24,10 +24,10 @@ An error message, empty on success
 
 ### pre\_checkout\_query\_id?
 
-> `readonly` `optional` **pre\_checkout\_query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **pre\_checkout\_query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the pre-checkout query
 
 ## Defined in
 
-dist/generated/types.d.ts:83251
+dist/generated/types.d.ts:85550

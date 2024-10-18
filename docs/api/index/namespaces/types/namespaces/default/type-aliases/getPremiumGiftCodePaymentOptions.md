@@ -6,7 +6,9 @@
 
 # Type Alias: getPremiumGiftCodePaymentOptions()
 
-> **getPremiumGiftCodePaymentOptions**: (`parameters`) => [`PremiumGiftCodePaymentOptions`](PremiumGiftCodePaymentOptions.md)
+> **getPremiumGiftCodePaymentOptions**: (`parameters`) => [`PremiumGiftCodePaymentOptions`](PremiumGiftCodePaymentOptions-1.md)
+
+Returns available options for Telegram Premium gift code or giveaway creation
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PremiumGiftCodePaymentOptions`](PremiumGiftCodePaymentOptions.md)
+[`PremiumGiftCodePaymentOptions`](PremiumGiftCodePaymentOptions-1.md)
 
-[PremiumGiftCodePaymentOptions](PremiumGiftCodePaymentOptions.md)
+[PremiumGiftCodePaymentOptions](PremiumGiftCodePaymentOptions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100591
+dist/generated/types.d.ts:103370

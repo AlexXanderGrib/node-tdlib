@@ -26,4 +26,4 @@ The web page URL
 
 ## Defined in
 
-dist/generated/types.d.ts:93826
+dist/generated/types.d.ts:96323

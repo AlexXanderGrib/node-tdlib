@@ -14,13 +14,13 @@ Returns the list of boosts applied to a chat; requires administrator rights in t
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of boosts to be returned; up to 100. For optimal performance, the number of returned boosts can be smaller than the specified limit
 
@@ -38,4 +38,4 @@ Pass true to receive only boosts received from gift codes and giveaways created 
 
 ## Defined in
 
-dist/generated/types.d.ts:88492
+dist/generated/types.d.ts:90867

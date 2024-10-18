@@ -24,7 +24,7 @@ Reason why the call was discarded
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Call duration, in seconds
 
@@ -36,4 +36,4 @@ True, if the call was a video call
 
 ## Defined in
 
-dist/generated/types.d.ts:26705
+dist/generated/types.d.ts:27465

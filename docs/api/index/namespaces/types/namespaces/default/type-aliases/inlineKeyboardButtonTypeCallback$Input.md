@@ -20,10 +20,10 @@ A button that sends a callback query to a bot
 
 ### data?
 
-> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input.md)
 
 Data to be sent to the bot via a callback query
 
 ## Defined in
 
-dist/generated/types.d.ts:17592
+dist/generated/types.d.ts:18184

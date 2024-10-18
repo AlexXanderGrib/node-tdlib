@@ -6,7 +6,9 @@
 
 # Type Alias: deleteChatFolder()
 
-> **deleteChatFolder**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteChatFolder**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes existing chat folder
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84611
+dist/generated/types.d.ts:86910

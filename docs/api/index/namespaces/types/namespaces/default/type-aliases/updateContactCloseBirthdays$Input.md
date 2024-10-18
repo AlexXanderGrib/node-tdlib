@@ -20,10 +20,10 @@ The list of contacts that had birthdays recently or will have birthday soon has 
 
 ### close\_birthday\_users?
 
-> `readonly` `optional` **close\_birthday\_users**: [`vector$Input`](vector$Input.md)\<[`closeBirthdayUser$Input`](closeBirthdayUser$Input-1.md)\>
+> `readonly` `optional` **close\_birthday\_users**: [`vector$Input`](vector$Input.md)\<[`closeBirthdayUser$Input`](closeBirthdayUser$Input.md)\>
 
 List of contact users with close birthday
 
 ## Defined in
 
-dist/generated/types.d.ts:57066
+dist/generated/types.d.ts:58706

@@ -20,4 +20,4 @@ The category must be used for emoji status selection
 
 ## Defined in
 
-dist/generated/types.d.ts:31775
+dist/generated/types.d.ts:32907

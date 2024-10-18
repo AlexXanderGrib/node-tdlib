@@ -18,4 +18,4 @@ A button to buy something. This button must be in the first column and row of th
 
 ## Defined in
 
-dist/generated/types.d.ts:17675
+dist/generated/types.d.ts:18267

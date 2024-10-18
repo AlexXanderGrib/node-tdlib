@@ -20,4 +20,4 @@ Notification settings applied to all channel chats when the corresponding chat s
 
 ## Defined in
 
-dist/generated/types.d.ts:14855
+dist/generated/types.d.ts:15447

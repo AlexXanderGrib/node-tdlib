@@ -6,7 +6,9 @@
 
 # Type Alias: setStickerKeywords()
 
-> **setStickerKeywords**: (`parameters`) => [`Ok`](Ok.md)
+> **setStickerKeywords**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the list of keywords of a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100274
+dist/generated/types.d.ts:103053

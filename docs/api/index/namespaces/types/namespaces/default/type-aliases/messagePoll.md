@@ -18,10 +18,10 @@ A message with a poll
 
 ### poll
 
-> **poll**: [`poll`](poll-1.md)
+> **poll**: [`poll`](poll.md)
 
 The poll description
 
 ## Defined in
 
-dist/generated/types.d.ts:26533
+dist/generated/types.d.ts:27293

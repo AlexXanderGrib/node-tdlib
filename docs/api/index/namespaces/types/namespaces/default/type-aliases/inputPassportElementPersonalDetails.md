@@ -18,10 +18,10 @@ A Telegram Passport element to be saved containing the user's personal details
 
 ### personal\_details
 
-> **personal\_details**: [`personalDetails`](personalDetails-1.md)
+> **personal\_details**: [`personalDetails`](personalDetails.md)
 
 Personal details of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:24653
+dist/generated/types.d.ts:25413

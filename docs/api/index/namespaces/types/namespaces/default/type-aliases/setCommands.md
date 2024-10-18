@@ -6,7 +6,9 @@
 
 # Type Alias: setCommands()
 
-> **setCommands**: (`parameters`) => [`Ok`](Ok.md)
+> **setCommands**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the list of commands supported by the bot for the given user scope and language; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94957
+dist/generated/types.d.ts:97454

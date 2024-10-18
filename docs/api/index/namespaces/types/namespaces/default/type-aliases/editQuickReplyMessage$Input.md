@@ -26,16 +26,16 @@ New content of the message. Must be one of the following types: inputMessageText
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
 ### shortcut\_id?
 
-> `readonly` `optional` **shortcut\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **shortcut\_id**: [`int32`](int32.md)
 
 Unique identifier of the quick reply shortcut with the message
 
 ## Defined in
 
-dist/generated/types.d.ts:80555
+dist/generated/types.d.ts:82604

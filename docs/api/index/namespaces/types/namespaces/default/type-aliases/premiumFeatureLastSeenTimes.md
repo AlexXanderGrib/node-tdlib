@@ -18,4 +18,4 @@ The ability to view last seen and read times of other users even they can't view
 
 ## Defined in
 
-dist/generated/types.d.ts:41819
+dist/generated/types.d.ts:43213

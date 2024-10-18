@@ -6,7 +6,9 @@
 
 # Type Alias: setDatabaseEncryptionKey()
 
-> **setDatabaseEncryptionKey**: (`parameters`) => [`Ok`](Ok.md)
+> **setDatabaseEncryptionKey**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the database encryption key. Usually the encryption key is never changed and is stored in some OS keychain
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73847
+dist/generated/types.d.ts:75835

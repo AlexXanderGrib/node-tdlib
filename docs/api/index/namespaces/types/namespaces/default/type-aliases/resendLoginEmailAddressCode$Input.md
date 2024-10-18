@@ -18,4 +18,4 @@ Resends the login email address verification code
 
 ## Defined in
 
-dist/generated/types.d.ts:73970
+dist/generated/types.d.ts:75958

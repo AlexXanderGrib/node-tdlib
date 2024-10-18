@@ -6,7 +6,9 @@
 
 # Type Alias: getChatMessageByDate()
 
-> **getChatMessageByDate**: (`parameters`) => [`Message`](Message.md)
+> **getChatMessageByDate**: (`parameters`) => [`Message`](Message-1.md)
+
+Returns the last message sent in a chat no later than the specified date
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77178
+dist/generated/types.d.ts:79187

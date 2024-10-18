@@ -12,4 +12,4 @@ Returns auto-download settings presets for the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:99076
+dist/generated/types.d.ts:101855

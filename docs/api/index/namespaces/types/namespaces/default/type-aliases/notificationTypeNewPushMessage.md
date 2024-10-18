@@ -30,7 +30,7 @@ True, if the message is outgoing
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 The message identifier. The message will not be available in the chat history, but the identifier can be used in viewMessages, or as a message to be replied in the same chat
 
@@ -48,4 +48,4 @@ Name of the sender
 
 ## Defined in
 
-dist/generated/types.d.ts:45303
+dist/generated/types.d.ts:46829

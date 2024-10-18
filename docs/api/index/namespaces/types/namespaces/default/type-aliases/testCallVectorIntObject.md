@@ -6,7 +6,9 @@
 
 # Type Alias: testCallVectorIntObject()
 
-> **testCallVectorIntObject**: (`parameters`) => [`TestVectorIntObject`](TestVectorIntObject.md)
+> **testCallVectorIntObject**: (`parameters`) => [`TestVectorIntObject`](TestVectorIntObject-1.md)
+
+Returns the received vector of objects containing a number; for testing only. This is an offline method. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`TestVectorIntObject`](TestVectorIntObject.md)
+[`TestVectorIntObject`](TestVectorIntObject-1.md)
 
-[TestVectorIntObject](TestVectorIntObject.md)
+[TestVectorIntObject](TestVectorIntObject-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:102081
+dist/generated/types.d.ts:105002

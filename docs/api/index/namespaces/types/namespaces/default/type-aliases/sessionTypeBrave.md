@@ -18,4 +18,4 @@ The session is running on the Brave browser
 
 ## Defined in
 
-dist/generated/types.d.ts:46489
+dist/generated/types.d.ts:48015

@@ -18,7 +18,7 @@ The sticker is a custom emoji to be used inside message text and caption. Curren
 
 ### custom\_emoji\_id
 
-> **custom\_emoji\_id**: [`int64`](int64-1.md)
+> **custom\_emoji\_id**: [`int64`](int64.md)
 
 Identifier of the custom emoji
 
@@ -30,4 +30,4 @@ True, if the sticker must be repainted to a text color in messages, the color of
 
 ## Defined in
 
-dist/generated/types.d.ts:4503
+dist/generated/types.d.ts:4549

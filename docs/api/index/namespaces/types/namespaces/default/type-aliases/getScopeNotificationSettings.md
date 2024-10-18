@@ -6,7 +6,9 @@
 
 # Type Alias: getScopeNotificationSettings()
 
-> **getScopeNotificationSettings**: (`parameters`) => [`ScopeNotificationSettings`](ScopeNotificationSettings.md)
+> **getScopeNotificationSettings**: (`parameters`) => [`ScopeNotificationSettings`](ScopeNotificationSettings-1.md)
+
+Returns the notification settings for chats of a given type
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ScopeNotificationSettings`](ScopeNotificationSettings.md)
+[`ScopeNotificationSettings`](ScopeNotificationSettings-1.md)
 
-[ScopeNotificationSettings](ScopeNotificationSettings.md)
+[ScopeNotificationSettings](ScopeNotificationSettings-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86923
+dist/generated/types.d.ts:89222

@@ -18,10 +18,10 @@ Some data of a user has changed. This update is guaranteed to come before the us
 
 ### user
 
-> **user**: [`user`](user-1.md)
+> **user**: [`user`](user.md)
 
 New data about the user
 
 ## Defined in
 
-dist/generated/types.d.ts:55019
+dist/generated/types.d.ts:56635

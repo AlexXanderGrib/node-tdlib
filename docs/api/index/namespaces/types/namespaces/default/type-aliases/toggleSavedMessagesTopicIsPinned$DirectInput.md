@@ -20,10 +20,10 @@ Pass true to pin the topic; pass false to unpin it
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 Identifier of Saved Messages topic to pin or unpin
 
 ## Defined in
 
-dist/generated/types.d.ts:75953
+dist/generated/types.d.ts:77979

@@ -34,6 +34,10 @@
 
 > `readonly` **SuggestedReaction**: `"inputStoryAreaTypeSuggestedReaction"`
 
+### Weather
+
+> `readonly` **Weather**: `"inputStoryAreaTypeWeather"`
+
 ## Defined in
 
-dist/generated/types.d.ts:1668
+dist/generated/types.d.ts:1696

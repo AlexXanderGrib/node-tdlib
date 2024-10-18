@@ -20,4 +20,4 @@ The ability to convert voice notes to text
 
 ## Defined in
 
-dist/generated/types.d.ts:41571
+dist/generated/types.d.ts:42965

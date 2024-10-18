@@ -6,7 +6,9 @@
 
 # Type Alias: getSuggestedStickerSetName()
 
-> **getSuggestedStickerSetName**: (`parameters`) => [`Text`](Text.md)
+> **getSuggestedStickerSetName**: (`parameters`) => [`Text`](Text-1.md)
+
+Returns a suggested name for a new sticker set with a given title
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99744
+dist/generated/types.d.ts:102523

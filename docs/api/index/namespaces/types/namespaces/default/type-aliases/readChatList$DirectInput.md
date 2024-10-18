@@ -20,4 +20,4 @@ Chat list in which to mark all chats as read
 
 ## Defined in
 
-dist/generated/types.d.ts:87107
+dist/generated/types.d.ts:89406

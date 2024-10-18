@@ -24,4 +24,4 @@ Partially recognized text
 
 ## Defined in
 
-dist/generated/types.d.ts:36547
+dist/generated/types.d.ts:37917

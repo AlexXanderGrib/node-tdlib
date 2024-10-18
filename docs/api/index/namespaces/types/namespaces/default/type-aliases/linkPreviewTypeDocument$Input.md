@@ -26,10 +26,10 @@ Author of the document
 
 ### document?
 
-> `readonly` `optional` **document**: [`document$Input`](document$Input-1.md)
+> `readonly` `optional` **document**: [`document$Input`](document$Input.md)
 
 The document description
 
 ## Defined in
 
-dist/generated/types.d.ts:21157
+dist/generated/types.d.ts:21793

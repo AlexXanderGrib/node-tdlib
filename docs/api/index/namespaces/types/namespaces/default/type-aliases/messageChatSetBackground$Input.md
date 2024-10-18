@@ -20,13 +20,13 @@ A new background was set in the chat
 
 ### background?
 
-> `readonly` `optional` **background**: [`chatBackground$Input`](chatBackground$Input-1.md)
+> `readonly` `optional` **background**: [`chatBackground$Input`](chatBackground$Input.md)
 
 The new background
 
 ### old\_background\_message\_id?
 
-> `readonly` `optional` **old\_background\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **old\_background\_message\_id**: [`int53`](int53.md)
 
 Identifier of the message with a previously set same background; 0 if none. Can be an identifier of a deleted message
 
@@ -38,4 +38,4 @@ True, if the background was set only for self
 
 ## Defined in
 
-dist/generated/types.d.ts:27180
+dist/generated/types.d.ts:27940

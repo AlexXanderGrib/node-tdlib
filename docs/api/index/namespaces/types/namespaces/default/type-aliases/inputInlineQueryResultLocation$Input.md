@@ -32,13 +32,13 @@ The content of the message to be sent. Must be one of the following types: input
 
 ### live\_period?
 
-> `readonly` `optional` **live\_period**: [`int32`](int32-1.md)
+> `readonly` `optional` **live\_period**: [`int32`](int32.md)
 
 Amount of time relative to the message sent time until the location can be updated, in seconds
 
 ### location?
 
-> `readonly` `optional` **location**: [`location$Input`](location$Input-1.md)
+> `readonly` `optional` **location**: [`location$Input`](location$Input.md)
 
 Location result
 
@@ -50,7 +50,7 @@ The message reply markup; pass null if none. Must be of type replyMarkupInlineKe
 
 ### thumbnail\_height?
 
-> `readonly` `optional` **thumbnail\_height**: [`int32`](int32-1.md)
+> `readonly` `optional` **thumbnail\_height**: [`int32`](int32.md)
 
 Thumbnail height, if known
 
@@ -62,7 +62,7 @@ URL of the result thumbnail, if it exists
 
 ### thumbnail\_width?
 
-> `readonly` `optional` **thumbnail\_width**: [`int32`](int32-1.md)
+> `readonly` `optional` **thumbnail\_width**: [`int32`](int32.md)
 
 Thumbnail width, if known
 
@@ -74,4 +74,4 @@ Title of the result
 
 ## Defined in
 
-dist/generated/types.d.ts:37746
+dist/generated/types.d.ts:39116

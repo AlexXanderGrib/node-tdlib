@@ -6,7 +6,9 @@
 
 # Type Alias: editChatFolderInviteLink()
 
-> **editChatFolderInviteLink**: (`parameters`) => [`ChatFolderInviteLink`](ChatFolderInviteLink.md)
+> **editChatFolderInviteLink**: (`parameters`) => [`ChatFolderInviteLink`](ChatFolderInviteLink-1.md)
+
+Edits an invite link for a chat folder
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatFolderInviteLink`](ChatFolderInviteLink.md)
+[`ChatFolderInviteLink`](ChatFolderInviteLink-1.md)
 
-[ChatFolderInviteLink](ChatFolderInviteLink.md)
+[ChatFolderInviteLink](ChatFolderInviteLink-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84940
+dist/generated/types.d.ts:87239

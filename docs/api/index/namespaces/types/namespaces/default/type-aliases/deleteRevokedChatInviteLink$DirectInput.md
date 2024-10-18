@@ -14,7 +14,7 @@ Deletes revoked chat invite links. Requires administrator privileges and can_inv
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -26,4 +26,4 @@ Invite link to revoke
 
 ## Defined in
 
-dist/generated/types.d.ts:90103
+dist/generated/types.d.ts:92600

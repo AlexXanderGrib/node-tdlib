@@ -20,4 +20,4 @@ The maximum number of joined supergroups and channels
 
 ## Defined in
 
-dist/generated/types.d.ts:41263
+dist/generated/types.d.ts:42657

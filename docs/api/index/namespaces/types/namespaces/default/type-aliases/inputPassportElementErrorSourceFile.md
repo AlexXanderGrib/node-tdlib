@@ -18,10 +18,10 @@ The file contains an error. The error is considered resolved when the file chang
 
 ### file\_hash
 
-> **file\_hash**: [`bytes`](bytes-1.md)
+> **file\_hash**: [`bytes`](bytes.md)
 
 Current hash of the file which has the error
 
 ## Defined in
 
-dist/generated/types.d.ts:25671
+dist/generated/types.d.ts:26431

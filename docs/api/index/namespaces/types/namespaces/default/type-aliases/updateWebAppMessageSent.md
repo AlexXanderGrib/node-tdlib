@@ -18,10 +18,10 @@ A message was sent by an opened Web App, so the Web App needs to be closed
 
 ### web\_app\_launch\_id
 
-> **web\_app\_launch\_id**: [`int64`](int64-1.md)
+> **web\_app\_launch\_id**: [`int64`](int64.md)
 
 Identifier of Web App launch
 
 ## Defined in
 
-dist/generated/types.d.ts:56603
+dist/generated/types.d.ts:58219

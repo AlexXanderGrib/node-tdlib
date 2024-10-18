@@ -20,4 +20,4 @@ The ability to show an emoji status along with the business name
 
 ## Defined in
 
-dist/generated/types.d.ts:41981
+dist/generated/types.d.ts:43375

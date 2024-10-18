@@ -20,4 +20,4 @@ The ability to choose accent color for replies and user profile
 
 ## Defined in
 
-dist/generated/types.d.ts:41767
+dist/generated/types.d.ts:43161

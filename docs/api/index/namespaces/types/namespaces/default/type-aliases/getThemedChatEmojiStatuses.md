@@ -6,7 +6,9 @@
 
 # Type Alias: getThemedChatEmojiStatuses()
 
-> **getThemedChatEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses.md)
+> **getThemedChatEmojiStatuses**: (`parameters`) => [`EmojiStatuses`](EmojiStatuses-1.md)
+
+Returns up to 8 emoji statuses, which must be shown in the emoji status list for chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`EmojiStatuses`](EmojiStatuses.md)
+[`EmojiStatuses`](EmojiStatuses-1.md)
 
-[EmojiStatuses](EmojiStatuses.md)
+[EmojiStatuses](EmojiStatuses-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88719
+dist/generated/types.d.ts:91094

@@ -18,16 +18,16 @@ The link is a link to a cloud theme. TDLib has no theme support yet
 
 ### documents
 
-> **documents**: [`vector`](vector.md)\<[`document`](document-1.md)\>
+> **documents**: [`vector`](vector.md)\<[`document`](document.md)\>
 
 The list of files with theme description
 
 ### settings
 
-> **settings**: [`themeSettings`](themeSettings-1.md)
+> **settings**: [`themeSettings`](themeSettings.md)
 
 Settings for the cloud theme
 
 ## Defined in
 
-dist/generated/types.d.ts:21477
+dist/generated/types.d.ts:22227

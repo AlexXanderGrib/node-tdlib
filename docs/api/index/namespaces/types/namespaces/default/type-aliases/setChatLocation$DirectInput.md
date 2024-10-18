@@ -14,16 +14,16 @@ Changes the location of a chat. Available only for some location-based supergrou
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### location?
 
-> `readonly` `optional` **location**: [`chatLocation$Input`](chatLocation$Input-1.md)
+> `readonly` `optional` **location**: [`chatLocation$Input`](chatLocation$Input.md)
 
 New location for the chat; must be valid and not null
 
 ## Defined in
 
-dist/generated/types.d.ts:86055
+dist/generated/types.d.ts:88354

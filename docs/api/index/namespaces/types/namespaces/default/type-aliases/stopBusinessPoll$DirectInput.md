@@ -20,13 +20,13 @@ Unique identifier of business connection on behalf of which the message with the
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message containing the poll
 
@@ -38,4 +38,4 @@ The new message reply markup; pass null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:80090
+dist/generated/types.d.ts:82081

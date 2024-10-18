@@ -62,13 +62,13 @@ Title of the result
 
 ### video\_duration?
 
-> `readonly` `optional` **video\_duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **video\_duration**: [`int32`](int32.md)
 
 Video duration, in seconds
 
 ### video\_height?
 
-> `readonly` `optional` **video\_height**: [`int32`](int32-1.md)
+> `readonly` `optional` **video\_height**: [`int32`](int32.md)
 
 Height of the video
 
@@ -80,10 +80,10 @@ URL of the embedded video player or video file
 
 ### video\_width?
 
-> `readonly` `optional` **video\_width**: [`int32`](int32-1.md)
+> `readonly` `optional` **video\_width**: [`int32`](int32.md)
 
 Width of the video
 
 ## Defined in
 
-dist/generated/types.d.ts:38132
+dist/generated/types.d.ts:39502

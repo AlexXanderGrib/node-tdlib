@@ -20,16 +20,16 @@ The linked chat of a supergroup was changed
 
 ### new\_linked\_chat\_id?
 
-> `readonly` `optional` **new\_linked\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **new\_linked\_chat\_id**: [`int53`](int53.md)
 
 New supergroup linked chat identifier
 
 ### old\_linked\_chat\_id?
 
-> `readonly` `optional` **old\_linked\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **old\_linked\_chat\_id**: [`int53`](int53.md)
 
 Previous supergroup linked chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:39701
+dist/generated/types.d.ts:41071

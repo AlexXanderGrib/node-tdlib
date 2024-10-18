@@ -26,4 +26,4 @@ The scope to which the commands are relevant; pass null to delete commands in th
 
 ## Defined in
 
-dist/generated/types.d.ts:94977
+dist/generated/types.d.ts:97474

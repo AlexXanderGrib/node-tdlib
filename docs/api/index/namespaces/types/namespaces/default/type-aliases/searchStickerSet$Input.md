@@ -24,4 +24,4 @@ Name of the sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:92898
+dist/generated/types.d.ts:95395

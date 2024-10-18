@@ -20,4 +20,4 @@ Returns only messages with mentions of the current user, or messages that are re
 
 ## Defined in
 
-dist/generated/types.d.ts:30641
+dist/generated/types.d.ts:31773

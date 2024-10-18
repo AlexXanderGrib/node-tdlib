@@ -20,7 +20,7 @@ A button that requests a chat to be shared by the current user; available only i
 
 ### bot\_administrator\_rights?
 
-> `readonly` `optional` **bot\_administrator\_rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input-1.md) \| `null`
+> `readonly` `optional` **bot\_administrator\_rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input.md) \| `null`
 
 Expected bot administrator rights in the chat; may be null if they aren't restricted
 
@@ -56,7 +56,7 @@ True, if the chat must be a forum supergroup; otherwise, the chat must not be a 
 
 ### id?
 
-> `readonly` `optional` **id**: [`int32`](int32-1.md)
+> `readonly` `optional` **id**: [`int32`](int32.md)
 
 Unique button identifier
 
@@ -92,10 +92,10 @@ True, if the chat must or must not be a forum supergroup
 
 ### user\_administrator\_rights?
 
-> `readonly` `optional` **user\_administrator\_rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input-1.md) \| `null`
+> `readonly` `optional` **user\_administrator\_rights**: [`chatAdministratorRights$Input`](chatAdministratorRights$Input.md) \| `null`
 
 Expected user administrator rights in the chat; may be null if they aren't restricted
 
 ## Defined in
 
-dist/generated/types.d.ts:17358
+dist/generated/types.d.ts:17950

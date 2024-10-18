@@ -20,4 +20,4 @@ TDLib client is in its final state. All databases are closed and all resources a
 
 ## Defined in
 
-dist/generated/types.d.ts:3431
+dist/generated/types.d.ts:3477

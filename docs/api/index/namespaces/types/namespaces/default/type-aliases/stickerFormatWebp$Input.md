@@ -20,4 +20,4 @@ The sticker is an image in WEBP format
 
 ## Defined in
 
-dist/generated/types.d.ts:4379
+dist/generated/types.d.ts:4425

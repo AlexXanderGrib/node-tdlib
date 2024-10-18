@@ -18,7 +18,7 @@ A forum topic has been created
 
 ### icon
 
-> **icon**: [`forumTopicIcon`](forumTopicIcon-1.md)
+> **icon**: [`forumTopicIcon`](forumTopicIcon.md)
 
 Icon of the topic
 
@@ -30,4 +30,4 @@ Name of the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:27283
+dist/generated/types.d.ts:28043

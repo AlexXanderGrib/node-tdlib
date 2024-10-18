@@ -6,7 +6,9 @@
 
 # Type Alias: getPhoneNumberInfoSync()
 
-> **getPhoneNumberInfoSync**: (`parameters`) => [`PhoneNumberInfo`](PhoneNumberInfo.md)
+> **getPhoneNumberInfoSync**: (`parameters`) => [`PhoneNumberInfo`](PhoneNumberInfo-1.md)
+
+Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PhoneNumberInfo`](PhoneNumberInfo.md)
+[`PhoneNumberInfo`](PhoneNumberInfo-1.md)
 
-[PhoneNumberInfo](PhoneNumberInfo.md)
+[PhoneNumberInfo](PhoneNumberInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101244
+dist/generated/types.d.ts:104165

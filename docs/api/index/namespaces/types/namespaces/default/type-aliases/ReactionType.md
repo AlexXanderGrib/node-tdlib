@@ -6,12 +6,13 @@
 
 # Type Alias: ReactionType
 
-> **ReactionType**: [`reactionTypeEmoji`](reactionTypeEmoji.md) \| [`reactionTypeCustomEmoji`](reactionTypeCustomEmoji.md)
+> **ReactionType**: [`reactionTypeEmoji`](reactionTypeEmoji.md) \| [`reactionTypeCustomEmoji`](reactionTypeCustomEmoji.md) \| [`reactionTypePaid`](reactionTypePaid.md)
 
 Any of:
 - [reactionTypeEmoji](reactionTypeEmoji.md)
 - [reactionTypeCustomEmoji](reactionTypeCustomEmoji.md)
+- [reactionTypePaid](reactionTypePaid.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:60337
+dist/generated/types.d.ts:62065

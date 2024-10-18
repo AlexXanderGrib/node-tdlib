@@ -18,7 +18,7 @@ Adds a user to the contact list or edits an existing contact by their user ident
 
 ### contact?
 
-> `readonly` `optional` **contact**: [`contact$Input`](contact$Input-1.md)
+> `readonly` `optional` **contact**: [`contact$Input`](contact$Input.md)
 
 The contact to add or edit; phone number may be empty and needs to be specified only if known, vCard is ignored
 
@@ -32,4 +32,4 @@ Pass true to share the current user's phone number with the new contact. A corre
 
 ## Defined in
 
-dist/generated/types.d.ts:92053
+dist/generated/types.d.ts:94550

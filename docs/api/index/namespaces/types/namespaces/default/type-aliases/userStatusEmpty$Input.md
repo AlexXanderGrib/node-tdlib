@@ -20,4 +20,4 @@ The user's status has never been changed
 
 ## Defined in
 
-dist/generated/types.d.ts:30981
+dist/generated/types.d.ts:32113

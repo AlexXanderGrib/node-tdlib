@@ -3,12 +3,12 @@ import { assert } from "./assert";
 export type Subscription<T> = (value: T) => void;
 export type Unsubscribe = () => void;
 type Observer<T> = (subscriber: Subscriber<T>) => Unsubscribe;
-export interface Observable<T> {
+export type Observable<T> = {
   subscribe(handler: Subscription<T>): Unsubscribe;
   toRxObserver(): (subscriber: Subscriber<T>) => Unsubscribe;
 }
 
-interface Subscriber<T> {
+type Subscriber<T> = {
   next(value?: T): void;
   error?(error: any): void;
   complete?(): void;
@@ -23,8 +23,8 @@ interface Subscriber<T> {
  * @template T
  */
 export class EventBus<T> implements Observable<T> {
-  private readonly _subscriptions: Map<Subscription<T>, Unsubscribe> = new Map();
-  private readonly _onComplete: Set<Subscription<void>> = new Set();
+  private readonly _subscriptions = new Map<Subscription<T>, Unsubscribe>();
+  private readonly _onComplete = new Set<Subscription<void>>();
   private _completed = false;
   /**
    *

@@ -16,13 +16,13 @@ Invites a bot to a chat (if it is not yet a member) and sends it the /start comm
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the bot
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the target chat
 
@@ -34,4 +34,4 @@ A hidden parameter sent to the bot for deep linking purposes (https://core.teleg
 
 ## Defined in
 
-dist/generated/types.d.ts:78249
+dist/generated/types.d.ts:80258

@@ -20,4 +20,4 @@ Suggests the user to gift Telegram Premium to friends for Christmas
 
 ## Defined in
 
-dist/generated/types.d.ts:50521
+dist/generated/types.d.ts:52119

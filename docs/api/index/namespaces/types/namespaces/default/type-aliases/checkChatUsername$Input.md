@@ -18,7 +18,7 @@ Checks whether a username can be set for a chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier; must be identifier of a supergroup chat, or a channel chat, or a private chat with self, or 0 if the chat is being created
 
@@ -30,4 +30,4 @@ Username to be checked
 
 ## Defined in
 
-dist/generated/types.d.ts:75582
+dist/generated/types.d.ts:77608

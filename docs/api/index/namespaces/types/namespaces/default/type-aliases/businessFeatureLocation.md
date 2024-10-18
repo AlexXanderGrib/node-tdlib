@@ -18,4 +18,4 @@ The ability to set location
 
 ## Defined in
 
-dist/generated/types.d.ts:41861
+dist/generated/types.d.ts:43255

@@ -36,4 +36,4 @@ Username for logging in; may be empty
 
 ## Defined in
 
-dist/generated/types.d.ts:50767
+dist/generated/types.d.ts:52383

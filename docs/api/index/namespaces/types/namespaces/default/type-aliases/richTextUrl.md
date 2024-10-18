@@ -36,4 +36,4 @@ URL
 
 ## Defined in
 
-dist/generated/types.d.ts:18975
+dist/generated/types.d.ts:19601

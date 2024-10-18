@@ -20,4 +20,4 @@ The chat contains spam messages
 
 ## Defined in
 
-dist/generated/types.d.ts:47117
+dist/generated/types.d.ts:48643

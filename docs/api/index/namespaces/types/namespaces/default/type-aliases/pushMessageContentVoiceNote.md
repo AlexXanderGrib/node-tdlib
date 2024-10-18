@@ -24,10 +24,10 @@ True, if the message is a pinned message with the specified content
 
 ### voice\_note
 
-> **voice\_note**: [`voiceNote`](voiceNote-1.md) \| `null`
+> **voice\_note**: [`voiceNote`](voiceNote.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44855
+dist/generated/types.d.ts:46381

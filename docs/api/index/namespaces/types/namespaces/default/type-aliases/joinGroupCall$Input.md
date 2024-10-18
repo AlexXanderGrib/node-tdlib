@@ -18,13 +18,13 @@ Joins an active group call. Returns join response payload for tgcalls
 
 ### audio\_source\_id?
 
-> `readonly` `optional` **audio\_source\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **audio\_source\_id**: [`int32`](int32.md)
 
 Caller audio channel synchronization source identifier; received from tgcalls
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Group call identifier
 
@@ -60,4 +60,4 @@ Group call join payload; received from tgcalls
 
 ## Defined in
 
-dist/generated/types.d.ts:90983
+dist/generated/types.d.ts:93480

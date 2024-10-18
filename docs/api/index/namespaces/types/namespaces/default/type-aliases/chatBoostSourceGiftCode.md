@@ -24,10 +24,10 @@ The created Telegram Premium gift code, which is known only if this is a gift co
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 Identifier of a user, for which the gift code was created
 
 ## Defined in
 
-dist/generated/types.d.ts:33985
+dist/generated/types.d.ts:35355

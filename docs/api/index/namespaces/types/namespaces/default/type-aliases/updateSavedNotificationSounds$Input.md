@@ -20,10 +20,10 @@ The list of saved notification sounds was updated. This update may not be sent u
 
 ### notification\_sound\_ids?
 
-> `readonly` `optional` **notification\_sound\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input-1.md)\>
+> `readonly` `optional` **notification\_sound\_ids**: [`vector$Input`](vector$Input.md)\<[`int64$Input`](int64$Input.md)\>
 
 The new list of identifiers of saved notification sounds
 
 ## Defined in
 
-dist/generated/types.d.ts:56288
+dist/generated/types.d.ts:57904

@@ -6,7 +6,9 @@
 
 # Type Alias: getPremiumState()
 
-> **getPremiumState**: (`parameters`) => [`PremiumState`](PremiumState.md)
+> **getPremiumState**: (`parameters`) => [`PremiumState`](PremiumState-1.md)
+
+Returns state of Telegram Premium subscription and promotion videos for Premium features
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PremiumState`](PremiumState.md)
+[`PremiumState`](PremiumState-1.md)
 
-[PremiumState](PremiumState.md)
+[PremiumState](PremiumState-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100563
+dist/generated/types.d.ts:103342

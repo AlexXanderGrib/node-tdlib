@@ -30,4 +30,4 @@ Provider of the venue
 
 ## Defined in
 
-dist/generated/types.d.ts:32141
+dist/generated/types.d.ts:33351

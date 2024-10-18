@@ -6,7 +6,9 @@
 
 # Type Alias: reportSupergroupSpam()
 
-> **reportSupergroupSpam**: (`parameters`) => [`Ok`](Ok.md)
+> **reportSupergroupSpam**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Reports messages in a supergroup as spam; requires administrator rights in the supergroup
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96539
+dist/generated/types.d.ts:99318

@@ -18,7 +18,7 @@ Represents information about a game
 
 ### game
 
-> **game**: [`game`](game-1.md)
+> **game**: [`game`](game.md)
 
 Game result
 
@@ -30,4 +30,4 @@ Unique identifier of the query result
 
 ## Defined in
 
-dist/generated/types.d.ts:38483
+dist/generated/types.d.ts:39853

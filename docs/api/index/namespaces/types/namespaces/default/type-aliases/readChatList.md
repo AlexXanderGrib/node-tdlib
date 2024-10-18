@@ -6,7 +6,9 @@
 
 # Type Alias: readChatList()
 
-> **readChatList**: (`parameters`) => [`Ok`](Ok.md)
+> **readChatList**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Traverse all chats in a chat list and marks all messages in the chats as read
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87120
+dist/generated/types.d.ts:89419

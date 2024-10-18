@@ -6,7 +6,9 @@
 
 # Type Alias: getDeepLinkInfo()
 
-> **getDeepLinkInfo**: (`parameters`) => [`DeepLinkInfo`](DeepLinkInfo.md)
+> **getDeepLinkInfo**: (`parameters`) => [`DeepLinkInfo`](DeepLinkInfo-1.md)
+
+Returns information about a tg:// deep link. Use "tg://need_update_for_some_feature" or "tg:some_unsupported_feature" for testing. Returns a 404 error for unknown links. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`DeepLinkInfo`](DeepLinkInfo.md)
+[`DeepLinkInfo`](DeepLinkInfo-1.md)
 
-[DeepLinkInfo](DeepLinkInfo.md)
+[DeepLinkInfo](DeepLinkInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101300
+dist/generated/types.d.ts:104221

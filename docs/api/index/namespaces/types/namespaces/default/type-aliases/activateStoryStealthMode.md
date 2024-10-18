@@ -6,7 +6,11 @@
 
 # Type Alias: activateStoryStealthMode()
 
-> **activateStoryStealthMode**: (`parameters`) => [`Ok`](Ok.md)
+> **activateStoryStealthMode**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Activates stealth mode for stories, which hides all views of stories from the current user in the last "story_stealth_mode_past_period" seconds
+
+- and for the next "story_stealth_mode_future_period" seconds; for Telegram Premium users only
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88193
+dist/generated/types.d.ts:90568

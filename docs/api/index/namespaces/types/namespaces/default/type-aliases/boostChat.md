@@ -6,7 +6,9 @@
 
 # Type Alias: boostChat()
 
-> **boostChat**: (`parameters`) => [`ChatBoostSlots`](ChatBoostSlots.md)
+> **boostChat**: (`parameters`) => [`ChatBoostSlots`](ChatBoostSlots-1.md)
+
+Boosts a chat and returns the list of available chat boost slots for the current user after the boost
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatBoostSlots`](ChatBoostSlots.md)
+[`ChatBoostSlots`](ChatBoostSlots-1.md)
 
-[ChatBoostSlots](ChatBoostSlots.md)
+[ChatBoostSlots](ChatBoostSlots-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88406
+dist/generated/types.d.ts:90781

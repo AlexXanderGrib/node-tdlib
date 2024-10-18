@@ -18,4 +18,4 @@ The maximum number of pinned chats in the archive chat list
 
 ## Defined in
 
-dist/generated/types.d.ts:41353
+dist/generated/types.d.ts:42747

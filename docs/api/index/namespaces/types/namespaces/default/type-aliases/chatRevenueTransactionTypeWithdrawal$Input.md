@@ -32,10 +32,10 @@ State of the withdrawal
 
 ### withdrawal\_date?
 
-> `readonly` `optional` **withdrawal\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **withdrawal\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the earnings withdrawal started
 
 ## Defined in
 
-dist/generated/types.d.ts:52098
+dist/generated/types.d.ts:53714

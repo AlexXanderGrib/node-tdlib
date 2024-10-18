@@ -6,7 +6,9 @@
 
 # Type Alias: getProxyLink()
 
-> **getProxyLink**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getProxyLink**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns an HTTPS link, which can be used to add a proxy. Available only for SOCKS5 and MTProto proxies. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101626
+dist/generated/types.d.ts:104547

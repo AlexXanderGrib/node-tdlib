@@ -18,10 +18,10 @@ The list of contacts that had birthdays recently or will have birthday soon has 
 
 ### close\_birthday\_users
 
-> **close\_birthday\_users**: [`vector`](vector.md)\<[`closeBirthdayUser`](closeBirthdayUser-1.md)\>
+> **close\_birthday\_users**: [`vector`](vector.md)\<[`closeBirthdayUser`](closeBirthdayUser.md)\>
 
 List of contact users with close birthday
 
 ## Defined in
 
-dist/generated/types.d.ts:57053
+dist/generated/types.d.ts:58693

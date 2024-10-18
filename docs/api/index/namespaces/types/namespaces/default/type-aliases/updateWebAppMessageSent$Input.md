@@ -20,10 +20,10 @@ A message was sent by an opened Web App, so the Web App needs to be closed
 
 ### web\_app\_launch\_id?
 
-> `readonly` `optional` **web\_app\_launch\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **web\_app\_launch\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of Web App launch
 
 ## Defined in
 
-dist/generated/types.d.ts:56616
+dist/generated/types.d.ts:58232

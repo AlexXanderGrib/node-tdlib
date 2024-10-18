@@ -18,10 +18,10 @@ A basic group (a chat with 0-200 other users)
 
 ### basic\_group\_id
 
-> **basic\_group\_id**: [`int53`](int53-1.md)
+> **basic\_group\_id**: [`int53`](int53.md)
 
 Basic group identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:15313
+dist/generated/types.d.ts:15905

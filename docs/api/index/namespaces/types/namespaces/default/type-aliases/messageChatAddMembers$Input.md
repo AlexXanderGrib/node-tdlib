@@ -20,10 +20,10 @@ New chat members were added
 
 ### member\_user\_ids?
 
-> `readonly` `optional` **member\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **member\_user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 User identifiers of the new members
 
 ## Defined in
 
-dist/generated/types.d.ts:26998
+dist/generated/types.d.ts:27758

@@ -6,7 +6,9 @@
 
 # Type Alias: setCustomEmojiStickerSetThumbnail()
 
-> **setCustomEmojiStickerSetThumbnail**: (`parameters`) => [`Ok`](Ok.md)
+> **setCustomEmojiStickerSetThumbnail**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets a custom emoji sticker set thumbnail
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100066
+dist/generated/types.d.ts:102845

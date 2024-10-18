@@ -20,4 +20,4 @@ Represents an unknown option or an option which has a default value
 
 ## Defined in
 
-dist/generated/types.d.ts:45671
+dist/generated/types.d.ts:47197

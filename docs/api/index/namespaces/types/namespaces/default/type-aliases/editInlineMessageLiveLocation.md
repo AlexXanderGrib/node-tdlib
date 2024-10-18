@@ -6,7 +6,9 @@
 
 # Type Alias: editInlineMessageLiveLocation()
 
-> **editInlineMessageLiveLocation**: (`parameters`) => [`Ok`](Ok.md)
+> **editInlineMessageLiveLocation**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Edits the content of a live location in an inline message sent via a bot; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:79254
+dist/generated/types.d.ts:81245

@@ -14,7 +14,7 @@ Searches for outgoing messages with content of the type messageDocument in all c
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned; up to 100
 
@@ -26,4 +26,4 @@ Query to search for in document file name and message caption
 
 ## Defined in
 
-dist/generated/types.d.ts:76743
+dist/generated/types.d.ts:78769

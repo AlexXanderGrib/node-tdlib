@@ -32,10 +32,10 @@ Thumbnail to set; pass null to remove the sticker set thumbnail
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Sticker set owner; ignored for regular users
 
 ## Defined in
 
-dist/generated/types.d.ts:100000
+dist/generated/types.d.ts:102779

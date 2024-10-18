@@ -24,4 +24,4 @@ Type of the public chats, for which to check the limit
 
 ## Defined in
 
-dist/generated/types.d.ts:75648
+dist/generated/types.d.ts:77674

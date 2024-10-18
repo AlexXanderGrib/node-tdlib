@@ -20,4 +20,4 @@ The user is typing a message
 
 ## Defined in
 
-dist/generated/types.d.ts:30711
+dist/generated/types.d.ts:31843

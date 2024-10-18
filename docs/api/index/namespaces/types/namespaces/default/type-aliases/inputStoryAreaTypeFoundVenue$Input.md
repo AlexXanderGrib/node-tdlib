@@ -20,7 +20,7 @@ An area pointing to a venue found by the bot getOption("venue_search_bot_usernam
 
 ### query\_id?
 
-> `readonly` `optional` **query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the inline query, used to found the venue
 
@@ -32,4 +32,4 @@ Identifier of the inline query result
 
 ## Defined in
 
-dist/generated/types.d.ts:32125
+dist/generated/types.d.ts:33335

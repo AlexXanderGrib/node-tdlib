@@ -6,7 +6,9 @@
 
 # Type Alias: getConnectedWebsites()
 
-> **getConnectedWebsites**: (`parameters`) => [`ConnectedWebsites`](ConnectedWebsites.md)
+> **getConnectedWebsites**: (`parameters`) => [`ConnectedWebsites`](ConnectedWebsites-1.md)
+
+Returns all website where the current user used Telegram to log in
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ConnectedWebsites`](ConnectedWebsites.md)
+[`ConnectedWebsites`](ConnectedWebsites-1.md)
 
-[ConnectedWebsites](ConnectedWebsites.md)
+[ConnectedWebsites](ConnectedWebsites-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95852
+dist/generated/types.d.ts:98621

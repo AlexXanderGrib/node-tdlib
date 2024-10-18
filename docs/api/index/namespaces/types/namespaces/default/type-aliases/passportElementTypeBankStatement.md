@@ -18,4 +18,4 @@ A Telegram Passport element containing the user's bank statement
 
 ## Defined in
 
-dist/generated/types.d.ts:23883
+dist/generated/types.d.ts:24643

@@ -20,10 +20,10 @@ The message will be sent at the specified date
 
 ### send\_date?
 
-> `readonly` `optional` **send\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **send\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the message will be sent. The date must be within 367 days in the future
 
 ## Defined in
 
-dist/generated/types.d.ts:29014
+dist/generated/types.d.ts:29888

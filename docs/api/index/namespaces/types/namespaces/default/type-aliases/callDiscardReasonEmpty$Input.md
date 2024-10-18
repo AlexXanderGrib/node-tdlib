@@ -20,4 +20,4 @@ The call wasn't discarded, or the reason is unknown
 
 ## Defined in
 
-dist/generated/types.d.ts:34507
+dist/generated/types.d.ts:35877

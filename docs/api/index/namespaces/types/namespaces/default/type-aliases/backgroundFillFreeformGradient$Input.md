@@ -20,10 +20,10 @@ Describes a freeform gradient fill of a background
 
 ### colors?
 
-> `readonly` `optional` **colors**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **colors**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 A list of 3 or 4 colors of the freeform gradient in the RGB24 format
 
 ## Defined in
 
-dist/generated/types.d.ts:43336
+dist/generated/types.d.ts:44862

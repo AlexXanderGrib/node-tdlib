@@ -20,10 +20,10 @@ One of files with the translation of the document contains an error. The error w
 
 ### file\_index?
 
-> `readonly` `optional` **file\_index**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_index**: [`int32`](int32.md)
 
 Index of a file with the error
 
 ## Defined in
 
-dist/generated/types.d.ts:25082
+dist/generated/types.d.ts:25842

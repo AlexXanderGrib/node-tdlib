@@ -24,10 +24,10 @@ True, if the first line of the text contains a link. If true, the input field ne
 
 ### text
 
-> **text**: [`formattedText`](formattedText-1.md)
+> **text**: [`formattedText`](formattedText.md)
 
 Message draft text
 
 ## Defined in
 
-dist/generated/types.d.ts:47963
+dist/generated/types.d.ts:49583

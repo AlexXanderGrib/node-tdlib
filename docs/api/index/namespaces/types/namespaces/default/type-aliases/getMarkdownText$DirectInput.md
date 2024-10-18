@@ -14,10 +14,10 @@ Replaces text entities with Markdown formatting in a human-friendly format. Enti
 
 ### text?
 
-> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input.md)
 
 The text
 
 ## Defined in
 
-dist/generated/types.d.ts:81785
+dist/generated/types.d.ts:83978

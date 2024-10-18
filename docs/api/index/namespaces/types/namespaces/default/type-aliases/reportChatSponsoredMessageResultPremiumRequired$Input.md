@@ -20,4 +20,4 @@ The user asked to hide sponsored messages, but Telegram Premium is required for 
 
 ## Defined in
 
-dist/generated/types.d.ts:14661
+dist/generated/types.d.ts:15253

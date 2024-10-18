@@ -24,4 +24,4 @@ Subheader
 
 ## Defined in
 
-dist/generated/types.d.ts:19745
+dist/generated/types.d.ts:20371

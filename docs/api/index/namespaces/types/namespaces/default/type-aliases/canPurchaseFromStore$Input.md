@@ -24,4 +24,4 @@ Transaction purpose
 
 ## Defined in
 
-dist/generated/types.d.ts:100806
+dist/generated/types.d.ts:103661

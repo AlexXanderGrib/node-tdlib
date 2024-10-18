@@ -6,7 +6,9 @@
 
 # Type Alias: toggleSupergroupCanHaveSponsoredMessages()
 
-> **toggleSupergroupCanHaveSponsoredMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleSupergroupCanHaveSponsoredMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96359
+dist/generated/types.d.ts:99138

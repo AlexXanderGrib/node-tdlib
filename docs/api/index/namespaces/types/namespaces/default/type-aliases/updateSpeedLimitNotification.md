@@ -26,4 +26,4 @@ True, if upload speed was limited; false, if download speed was limited
 
 ## Defined in
 
-dist/generated/types.d.ts:57027
+dist/generated/types.d.ts:58667

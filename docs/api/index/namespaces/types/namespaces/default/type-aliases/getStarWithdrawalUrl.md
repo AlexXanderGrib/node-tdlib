@@ -6,7 +6,9 @@
 
 # Type Alias: getStarWithdrawalUrl()
 
-> **getStarWithdrawalUrl**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getStarWithdrawalUrl**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns a URL for Telegram Star withdrawal
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98521
+dist/generated/types.d.ts:101300

@@ -54,12 +54,12 @@ type AuthenticatorState = {
   register: Waiter<registerUser$DirectInput, [tos: TermsOfService]>;
 };
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
-export interface StageTDLibParameters {
+ 
+export type StageTDLibParameters = {
   tdlibParameters(parameters: AuthenticatorState["parameters"]): StageSelect;
 }
 
-export interface StageSelect {
+export type StageSelect = {
   token(token: AuthenticatorState["token"]): StageAuthenticate;
   phone(
     phone: AuthenticatorState["phone"],
@@ -67,17 +67,17 @@ export interface StageSelect {
   ): StageUser;
 }
 
-export interface StageAuthenticate {
+export type StageAuthenticate = {
   authenticate(options?: AuthenticateOptions): Promise<void>;
 }
 
-export interface StageUser extends StageAuthenticate {
+export type StageUser = {
   email(email: AuthenticatorState["email"]): StageUser;
   code(email: AuthenticatorState["code"]): StageUser;
   emailCode(email: AuthenticatorState["emailCode"]): StageUser;
   password(password: AuthenticatorState["password"]): StageUser;
   register(data: AuthenticatorState["register"]): StageUser;
-}
+} & StageAuthenticate
 
 /**
  *

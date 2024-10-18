@@ -20,4 +20,4 @@ File name or path to the file
 
 ## Defined in
 
-dist/generated/types.d.ts:81897
+dist/generated/types.d.ts:84090

@@ -6,7 +6,9 @@
 
 # Type Alias: getBotName()
 
-> **getBotName**: (`parameters`) => [`Text`](Text.md)
+> **getBotName**: (`parameters`) => [`Text`](Text-1.md)
+
+Returns the name of a bot in the given language. Can be called only if userTypeBot.can_be_edited == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95345
+dist/generated/types.d.ts:98114

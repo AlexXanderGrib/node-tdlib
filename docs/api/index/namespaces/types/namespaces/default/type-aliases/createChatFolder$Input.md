@@ -18,10 +18,10 @@ Creates new chat folder. Returns information about the created chat folder. Ther
 
 ### folder?
 
-> `readonly` `optional` **folder**: [`chatFolder$Input`](chatFolder$Input-1.md)
+> `readonly` `optional` **folder**: [`chatFolder$Input`](chatFolder$Input.md)
 
 The new chat folder
 
 ## Defined in
 
-dist/generated/types.d.ts:84511
+dist/generated/types.d.ts:86810

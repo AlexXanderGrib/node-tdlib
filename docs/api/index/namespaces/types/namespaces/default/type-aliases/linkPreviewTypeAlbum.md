@@ -30,4 +30,4 @@ The list of album media
 
 ## Defined in
 
-dist/generated/types.d.ts:20847
+dist/generated/types.d.ts:21473

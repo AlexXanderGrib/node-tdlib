@@ -8,7 +8,7 @@
 
 > **linkPreviewTypeSticker**: `object`
 
-The link is a link to a sticker message
+The link is a link to a sticker
 
 ## Type declaration
 
@@ -18,10 +18,10 @@ The link is a link to a sticker message
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md)
+> **sticker**: [`sticker`](sticker.md)
 
-The sticker
+The sticker. It can be an arbitrary WEBP image and can have dimensions bigger than 512
 
 ## Defined in
 
-dist/generated/types.d.ts:21371
+dist/generated/types.d.ts:22121

@@ -20,10 +20,10 @@ Information about a file was updated
 
 ### file?
 
-> `readonly` `optional` **file**: [`file$Input`](file$Input-1.md)
+> `readonly` `optional` **file**: [`file$Input`](file$Input.md)
 
 New data about the file
 
 ## Defined in
 
-dist/generated/types.d.ts:55264
+dist/generated/types.d.ts:56880

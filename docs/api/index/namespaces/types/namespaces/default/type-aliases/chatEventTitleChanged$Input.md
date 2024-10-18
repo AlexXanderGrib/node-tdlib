@@ -32,4 +32,4 @@ Previous chat title
 
 ## Defined in
 
-dist/generated/types.d.ts:39973
+dist/generated/types.d.ts:41343

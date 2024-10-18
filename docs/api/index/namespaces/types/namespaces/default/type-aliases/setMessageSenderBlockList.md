@@ -6,7 +6,9 @@
 
 # Type Alias: setMessageSenderBlockList()
 
-> **setMessageSenderBlockList**: (`parameters`) => [`Ok`](Ok.md)
+> **setMessageSenderBlockList**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the block list of a message sender. Currently, only users and supergroup chats can be blocked
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91943
+dist/generated/types.d.ts:94440

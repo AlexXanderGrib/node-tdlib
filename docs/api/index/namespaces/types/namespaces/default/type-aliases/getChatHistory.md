@@ -6,7 +6,11 @@
 
 # Type Alias: getChatHistory()
 
-> **getChatHistory**: (`parameters`) => [`Messages`](Messages.md)
+> **getChatHistory**: (`parameters`) => [`Messages`](Messages-1.md)
+
+Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
+
+- For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Messages`](Messages.md)
+[`Messages`](Messages-1.md)
 
-[Messages](Messages.md)
+[Messages](Messages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76125
+dist/generated/types.d.ts:78151

@@ -18,16 +18,16 @@ Informs TDLib that a message with an animated emoji was clicked by the user. Ret
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the message
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the clicked message
 
 ## Defined in
 
-dist/generated/types.d.ts:83781
+dist/generated/types.d.ts:86080

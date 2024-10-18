@@ -24,4 +24,4 @@ Pass true to enable folder tags; pass false to disable them
 
 ## Defined in
 
-dist/generated/types.d.ts:84709
+dist/generated/types.d.ts:87008

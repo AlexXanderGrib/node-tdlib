@@ -18,16 +18,16 @@ The message auto-delete timer was changed
 
 ### new\_message\_auto\_delete\_time
 
-> **new\_message\_auto\_delete\_time**: [`int32`](int32-1.md)
+> **new\_message\_auto\_delete\_time**: [`int32`](int32.md)
 
 New value of message_auto_delete_time
 
 ### old\_message\_auto\_delete\_time
 
-> **old\_message\_auto\_delete\_time**: [`int32`](int32-1.md)
+> **old\_message\_auto\_delete\_time**: [`int32`](int32.md)
 
 Previous value of message_auto_delete_time
 
 ## Defined in
 
-dist/generated/types.d.ts:39751
+dist/generated/types.d.ts:41121

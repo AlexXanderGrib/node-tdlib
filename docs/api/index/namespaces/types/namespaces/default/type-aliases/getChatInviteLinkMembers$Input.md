@@ -18,7 +18,7 @@ Returns chat members joined a chat via an invite link. Requires administrator pr
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,16 +30,22 @@ Invite link for which to return chat members
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of chat members to return; up to 100
 
 ### offset\_member?
 
-> `readonly` `optional` **offset\_member**: [`chatInviteLinkMember$Input`](chatInviteLinkMember$Input-1.md) \| `null`
+> `readonly` `optional` **offset\_member**: [`chatInviteLinkMember$Input`](chatInviteLinkMember$Input.md) \| `null`
 
 A chat member from which to return next chat members; pass null to get results from the beginning
 
+### only\_with\_expired\_subscription?
+
+> `readonly` `optional` **only\_with\_expired\_subscription**: [`Bool$Input`](Bool$Input.md)
+
+Pass true if the link is a subscription link and only members with expired subscription must be returned
+
 ## Defined in
 
-dist/generated/types.d.ts:89985
+dist/generated/types.d.ts:92472

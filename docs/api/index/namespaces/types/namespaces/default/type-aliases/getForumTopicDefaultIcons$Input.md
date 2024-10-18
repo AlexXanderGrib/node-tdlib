@@ -18,4 +18,4 @@ Returns the list of custom emoji, which can be used as forum topic icon by all u
 
 ## Defined in
 
-dist/generated/types.d.ts:80607
+dist/generated/types.d.ts:82656

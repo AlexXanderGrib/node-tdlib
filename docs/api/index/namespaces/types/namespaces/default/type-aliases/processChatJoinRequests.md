@@ -6,7 +6,9 @@
 
 # Type Alias: processChatJoinRequests()
 
-> **processChatJoinRequests**: (`parameters`) => [`Ok`](Ok.md)
+> **processChatJoinRequests**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Handles all pending join requests for a given link in a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90379
+dist/generated/types.d.ts:92876

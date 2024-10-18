@@ -6,7 +6,9 @@
 
 # Type Alias: setStickerEmojis()
 
-> **setStickerEmojis**: (`parameters`) => [`Ok`](Ok.md)
+> **setStickerEmojis**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the list of emojis corresponding to a sticker. The sticker must belong to a regular or custom emoji sticker set that is owned by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100236
+dist/generated/types.d.ts:103015

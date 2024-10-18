@@ -18,7 +18,7 @@ A supergroup has been created from a basic group
 
 ### basic\_group\_id
 
-> **basic\_group\_id**: [`int53`](int53-1.md)
+> **basic\_group\_id**: [`int53`](int53.md)
 
 The identifier of the original basic group
 
@@ -30,4 +30,4 @@ Title of the newly created supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:27085
+dist/generated/types.d.ts:27845

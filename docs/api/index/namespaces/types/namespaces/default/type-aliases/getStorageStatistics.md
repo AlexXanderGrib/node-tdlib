@@ -6,7 +6,9 @@
 
 # Type Alias: getStorageStatistics()
 
-> **getStorageStatistics**: (`parameters`) => [`StorageStatistics`](StorageStatistics.md)
+> **getStorageStatistics**: (`parameters`) => [`StorageStatistics`](StorageStatistics-1.md)
+
+Returns storage usage statistics. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StorageStatistics`](StorageStatistics.md)
+[`StorageStatistics`](StorageStatistics-1.md)
 
-[StorageStatistics](StorageStatistics.md)
+[StorageStatistics](StorageStatistics-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98817
+dist/generated/types.d.ts:101596

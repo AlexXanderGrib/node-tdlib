@@ -20,10 +20,10 @@ Basic information about a quick reply shortcut has changed. This update is guara
 
 ### shortcut?
 
-> `readonly` `optional` **shortcut**: [`quickReplyShortcut$Input`](quickReplyShortcut$Input-1.md)
+> `readonly` `optional` **shortcut**: [`quickReplyShortcut$Input`](quickReplyShortcut$Input.md)
 
 New data about the shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:54506
+dist/generated/types.d.ts:56122

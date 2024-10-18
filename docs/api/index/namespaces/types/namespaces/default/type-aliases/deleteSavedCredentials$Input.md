@@ -18,4 +18,4 @@ Deletes saved credentials for all payment provider bots
 
 ## Defined in
 
-dist/generated/types.d.ts:96998
+dist/generated/types.d.ts:99777

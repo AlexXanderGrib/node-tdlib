@@ -18,4 +18,4 @@ The file is a notification sound
 
 ## Defined in
 
-dist/generated/types.d.ts:48989
+dist/generated/types.d.ts:50573

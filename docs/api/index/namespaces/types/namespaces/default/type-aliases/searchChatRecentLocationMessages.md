@@ -6,7 +6,9 @@
 
 # Type Alias: searchChatRecentLocationMessages()
 
-> **searchChatRecentLocationMessages**: (`parameters`) => [`Messages`](Messages.md)
+> **searchChatRecentLocationMessages**: (`parameters`) => [`Messages`](Messages-1.md)
+
+Returns information about the recent locations of chat members that were sent to the chat. Returns up to 1 location message per user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Messages`](Messages.md)
+[`Messages`](Messages-1.md)
 
-[Messages](Messages.md)
+[Messages](Messages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77123
+dist/generated/types.d.ts:79149

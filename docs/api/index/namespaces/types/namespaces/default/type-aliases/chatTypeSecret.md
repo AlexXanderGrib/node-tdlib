@@ -18,16 +18,16 @@ A secret chat with a user
 
 ### secret\_chat\_id
 
-> **secret\_chat\_id**: [`int32`](int32-1.md)
+> **secret\_chat\_id**: [`int32`](int32.md)
 
 Secret chat identifier
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 User identifier of the other user in the secret chat
 
 ## Defined in
 
-dist/generated/types.d.ts:15371
+dist/generated/types.d.ts:15963

@@ -18,16 +18,16 @@ An audio file
 
 ### audio
 
-> **audio**: [`audio`](audio-1.md) \| `null`
+> **audio**: [`audio`](audio.md) \| `null`
 
 Audio file; may be null
 
 ### caption
 
-> **caption**: [`pageBlockCaption`](pageBlockCaption-1.md)
+> **caption**: [`pageBlockCaption`](pageBlockCaption.md)
 
 Audio file caption
 
 ## Defined in
 
-dist/generated/types.d.ts:20049
+dist/generated/types.d.ts:20675

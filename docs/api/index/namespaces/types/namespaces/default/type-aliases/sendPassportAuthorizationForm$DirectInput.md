@@ -14,7 +14,7 @@ Sends a Telegram Passport authorization form, effectively sharing data with the 
 
 ### authorization\_form\_id?
 
-> `readonly` `optional` **authorization\_form\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **authorization\_form\_id**: [`int32`](int32.md)
 
 Authorization form identifier
 
@@ -26,4 +26,4 @@ Types of Telegram Passport elements chosen by user to complete the authorization
 
 ## Defined in
 
-dist/generated/types.d.ts:99608
+dist/generated/types.d.ts:102387

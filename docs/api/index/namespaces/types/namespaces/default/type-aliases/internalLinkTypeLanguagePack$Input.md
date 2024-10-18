@@ -28,4 +28,4 @@ Language pack identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:47910
+dist/generated/types.d.ts:49470

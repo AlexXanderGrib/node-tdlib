@@ -20,10 +20,10 @@ The story can be viewed by certain specified users
 
 ### user\_ids?
 
-> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the users; always unknown and empty for non-owned stories
 
 ## Defined in
 
-dist/generated/types.d.ts:45968
+dist/generated/types.d.ts:47494

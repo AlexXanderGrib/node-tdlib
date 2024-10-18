@@ -6,7 +6,9 @@
 
 # Type Alias: getInactiveSupergroupChats()
 
-> **getInactiveSupergroupChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getInactiveSupergroupChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives CHANNELS_TOO_MUCH error. Also, the limit can be increased with Telegram Premium
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75712
+dist/generated/types.d.ts:77738

@@ -18,10 +18,10 @@ Changes the default message auto-delete time for new chats
 
 ### message\_auto\_delete\_time?
 
-> `readonly` `optional` **message\_auto\_delete\_time**: [`messageAutoDeleteTime$Input`](messageAutoDeleteTime$Input-1.md)
+> `readonly` `optional` **message\_auto\_delete\_time**: [`messageAutoDeleteTime$Input`](messageAutoDeleteTime$Input.md)
 
 New default message auto-delete time; must be from 0 up to 365 * 86400 and be divisible by 86400. If 0, then messages aren't deleted automatically
 
 ## Defined in
 
-dist/generated/types.d.ts:98078
+dist/generated/types.d.ts:100857

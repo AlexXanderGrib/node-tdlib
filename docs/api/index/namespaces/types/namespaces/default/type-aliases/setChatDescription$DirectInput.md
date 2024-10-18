@@ -14,7 +14,7 @@ Changes information about a chat. Available for basic groups, supergroups, and c
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
@@ -26,4 +26,4 @@ Changes information about a chat. Available for basic groups, supergroups, and c
 
 ## Defined in
 
-dist/generated/types.d.ts:85975
+dist/generated/types.d.ts:88274

@@ -8,7 +8,7 @@
 
 > **getMessageStatistics$Input**: `object`
 
-Returns detailed statistics about a message. Can be used only if message.can_get_statistics == true
+Returns detailed statistics about a message. Can be used only if messageProperties.can_get_statistics == true
 
 ## Type declaration
 
@@ -18,7 +18,7 @@ Returns detailed statistics about a message. Can be used only if message.can_get
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,10 +30,10 @@ Pass true if a dark theme is used by the application
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Message identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:98591
+dist/generated/types.d.ts:101370

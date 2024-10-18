@@ -20,4 +20,4 @@ The secret chat is ready to use
 
 ## Defined in
 
-dist/generated/types.d.ts:11861
+dist/generated/types.d.ts:12465

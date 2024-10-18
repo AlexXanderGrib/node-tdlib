@@ -6,7 +6,9 @@
 
 # Type Alias: setArchiveChatListSettings()
 
-> **setArchiveChatListSettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setArchiveChatListSettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes settings for automatic moving of chats to and from the Archive chat lists
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85155
+dist/generated/types.d.ts:87454

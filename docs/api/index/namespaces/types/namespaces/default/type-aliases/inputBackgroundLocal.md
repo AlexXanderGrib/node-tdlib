@@ -24,4 +24,4 @@ Background file to use. Only inputFileLocal and inputFileGenerated are supported
 
 ## Defined in
 
-dist/generated/types.d.ts:43483
+dist/generated/types.d.ts:45009

@@ -6,7 +6,9 @@
 
 # Type Alias: getCloseFriends()
 
-> **getCloseFriends**: (`parameters`) => [`Users`](Users.md)
+> **getCloseFriends**: (`parameters`) => [`Users`](Users-1.md)
+
+Returns all close friends of the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Users`](Users.md)
+[`Users`](Users-1.md)
 
-[Users](Users.md)
+[Users](Users-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92315
+dist/generated/types.d.ts:94812

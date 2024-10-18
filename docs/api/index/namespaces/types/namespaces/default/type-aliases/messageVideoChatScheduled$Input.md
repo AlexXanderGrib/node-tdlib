@@ -20,16 +20,16 @@ A new video chat was scheduled
 
 ### group\_call\_id?
 
-> `readonly` `optional` **group\_call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **group\_call\_id**: [`int32`](int32.md)
 
 Identifier of the video chat. The video chat can be received through the method getGroupCall
 
 ### start\_date?
 
-> `readonly` `optional` **start\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **start\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the group call is supposed to be started by an administrator
 
 ## Defined in
 
-dist/generated/types.d.ts:26767
+dist/generated/types.d.ts:27527

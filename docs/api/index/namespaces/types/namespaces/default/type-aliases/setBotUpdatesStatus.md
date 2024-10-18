@@ -6,7 +6,9 @@
 
 # Type Alias: setBotUpdatesStatus()
 
-> **setBotUpdatesStatus**: (`parameters`) => [`Ok`](Ok.md)
+> **setBotUpdatesStatus**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99664
+dist/generated/types.d.ts:102443

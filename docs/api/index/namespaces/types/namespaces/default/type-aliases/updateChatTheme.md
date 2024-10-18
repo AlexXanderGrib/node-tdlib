@@ -18,7 +18,7 @@ The chat theme was changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ The new name of the chat theme; may be empty if theme was reset to default
 
 ## Defined in
 
-dist/generated/types.d.ts:53989
+dist/generated/types.d.ts:55605

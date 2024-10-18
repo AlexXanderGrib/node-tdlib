@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's passport
 
 ### passport?
 
-> `readonly` `optional` **passport**: [`identityDocument$Input`](identityDocument$Input-1.md)
+> `readonly` `optional` **passport**: [`identityDocument$Input`](identityDocument$Input.md)
 
 Passport
 
 ## Defined in
 
-dist/generated/types.d.ts:24378
+dist/generated/types.d.ts:25138

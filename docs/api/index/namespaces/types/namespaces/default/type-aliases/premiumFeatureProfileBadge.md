@@ -18,4 +18,4 @@ A badge in the user's profile
 
 ## Defined in
 
-dist/generated/types.d.ts:41647
+dist/generated/types.d.ts:43041

@@ -20,4 +20,4 @@ The code to check
 
 ## Defined in
 
-dist/generated/types.d.ts:100606
+dist/generated/types.d.ts:103385

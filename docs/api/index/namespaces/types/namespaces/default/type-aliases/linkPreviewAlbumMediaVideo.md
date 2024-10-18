@@ -18,10 +18,10 @@ The media is a video
 
 ### video
 
-> **video**: [`video`](video-1.md)
+> **video**: [`video`](video.md)
 
 Video description
 
 ## Defined in
 
-dist/generated/types.d.ts:20823
+dist/generated/types.d.ts:21449

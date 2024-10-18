@@ -18,4 +18,4 @@ Withdrawal failed
 
 ## Defined in
 
-dist/generated/types.d.ts:52027
+dist/generated/types.d.ts:53643

@@ -20,4 +20,4 @@ Returns only photo messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30529
+dist/generated/types.d.ts:31661

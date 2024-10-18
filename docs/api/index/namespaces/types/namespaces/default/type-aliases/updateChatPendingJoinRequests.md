@@ -18,16 +18,16 @@ The chat pending join requests were changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### pending\_join\_requests
 
-> **pending\_join\_requests**: [`chatJoinRequestsInfo`](chatJoinRequestsInfo-1.md) \| `null`
+> **pending\_join\_requests**: [`chatJoinRequestsInfo`](chatJoinRequestsInfo.md) \| `null`
 
 The new data about pending join requests; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:53887
+dist/generated/types.d.ts:55503

@@ -22,13 +22,13 @@ Searches for messages tagged by the given reaction and with the given words in t
 
 ### from\_message\_id?
 
-> `readonly` `optional` **from\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **from\_message\_id**: [`int53`](int53.md)
 
 Identifier of the message starting from which messages must be fetched; use 0 to get results from the last message
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned; must be positive and can't be greater than 100. If the offset is negative, the limit must be greater than -offset.
 
@@ -36,7 +36,7 @@ The maximum number of messages to be returned; must be positive and can't be gre
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int32`](int32-1.md)
+> `readonly` `optional` **offset**: [`int32`](int32.md)
 
 Specify 0 to get results from exactly the message from_message_id or a negative offset to get the specified message and some newer messages
 
@@ -48,7 +48,7 @@ Query to search for
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 If not 0, only messages in the specified Saved Messages topic will be considered; pass 0 to consider all messages
 
@@ -60,4 +60,4 @@ Tag to search for; pass null to return all suitable messages
 
 ## Defined in
 
-dist/generated/types.d.ts:76589
+dist/generated/types.d.ts:78615

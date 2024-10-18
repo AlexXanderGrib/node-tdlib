@@ -6,7 +6,9 @@
 
 # Type Alias: searchStickerSet()
 
-> **searchStickerSet**: (`parameters`) => [`StickerSet`](StickerSet.md)
+> **searchStickerSet**: (`parameters`) => [`StickerSet`](StickerSet-1.md)
+
+Searches for a sticker set by its name
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StickerSet`](StickerSet.md)
+[`StickerSet`](StickerSet-1.md)
 
-[StickerSet](StickerSet.md)
+[StickerSet](StickerSet-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92922
+dist/generated/types.d.ts:95419

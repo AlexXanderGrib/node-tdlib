@@ -6,7 +6,11 @@
 
 # Type Alias: deleteChat()
 
-> **deleteChat**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes a chat along with all messages in the corresponding chat for all chat members. For group chats this will release the usernames and remove all members.
+
+- Use the field chat.can_be_deleted_for_all_users to find whether the method can be applied to the chat
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76285
+dist/generated/types.d.ts:78311

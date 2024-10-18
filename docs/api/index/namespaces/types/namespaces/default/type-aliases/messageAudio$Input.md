@@ -20,16 +20,16 @@ An audio message
 
 ### audio?
 
-> `readonly` `optional` **audio**: [`audio$Input`](audio$Input-1.md)
+> `readonly` `optional` **audio**: [`audio$Input`](audio$Input.md)
 
 The audio description
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md)
 
 Audio caption
 
 ## Defined in
 
-dist/generated/types.d.ts:25889
+dist/generated/types.d.ts:26649

@@ -38,4 +38,4 @@ Name of the added member
 
 ## Defined in
 
-dist/generated/types.d.ts:44926
+dist/generated/types.d.ts:46452

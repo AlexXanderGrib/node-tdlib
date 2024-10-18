@@ -6,7 +6,9 @@
 
 # Type Alias: deleteSavedMessagesTopicMessagesByDate()
 
-> **deleteSavedMessagesTopicMessagesByDate**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteSavedMessagesTopicMessagesByDate**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes all messages between the specified dates in a Saved Messages topic. Messages sent in the last 30 seconds will not be deleted
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75933
+dist/generated/types.d.ts:77959

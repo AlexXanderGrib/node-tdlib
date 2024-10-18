@@ -6,7 +6,9 @@
 
 # Type Alias: enableProxy()
 
-> **enableProxy**: (`parameters`) => [`Ok`](Ok.md)
+> **enableProxy**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Enables a proxy. Only one proxy can be enabled at a time. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101536
+dist/generated/types.d.ts:104457

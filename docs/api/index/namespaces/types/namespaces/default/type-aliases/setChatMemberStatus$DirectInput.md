@@ -18,7 +18,7 @@ Changes the status of a chat member; requires can_invite_users member right to a
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -36,4 +36,4 @@ The new status of the member in the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:86454
+dist/generated/types.d.ts:88753

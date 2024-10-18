@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's address
 
 ### address?
 
-> `readonly` `optional` **address**: [`address$Input`](address$Input-1.md)
+> `readonly` `optional` **address**: [`address$Input`](address$Input.md)
 
 Address
 
 ## Defined in
 
-dist/generated/types.d.ts:24474
+dist/generated/types.d.ts:25234

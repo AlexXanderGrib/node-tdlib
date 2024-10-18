@@ -20,4 +20,4 @@ The name of the option
 
 ## Defined in
 
-dist/generated/types.d.ts:97934
+dist/generated/types.d.ts:100713

@@ -18,10 +18,10 @@ A Telegram Passport element to be saved containing the user's bank statement
 
 ### bank\_statement
 
-> **bank\_statement**: [`inputPersonalDocument`](inputPersonalDocument-1.md)
+> **bank\_statement**: [`inputPersonalDocument`](inputPersonalDocument.md)
 
 The bank statement to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24821
+dist/generated/types.d.ts:25581

@@ -54,13 +54,13 @@ Title of the query result
 
 ### video\_duration
 
-> **video\_duration**: [`int32`](int32-1.md)
+> **video\_duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds
 
 ### video\_height
 
-> **video\_height**: [`int32`](int32-1.md)
+> **video\_height**: [`int32`](int32.md)
 
 Height of the video
 
@@ -78,10 +78,10 @@ The URL of the video file (file size must not exceed 1MB)
 
 ### video\_width
 
-> **video\_width**: [`int32`](int32-1.md)
+> **video\_width**: [`int32`](int32.md)
 
 Width of the video
 
 ## Defined in
 
-dist/generated/types.d.ts:37129
+dist/generated/types.d.ts:38499

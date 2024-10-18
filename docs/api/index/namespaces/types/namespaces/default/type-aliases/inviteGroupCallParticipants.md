@@ -6,7 +6,9 @@
 
 # Type Alias: inviteGroupCallParticipants()
 
-> **inviteGroupCallParticipants**: (`parameters`) => [`Ok`](Ok.md)
+> **inviteGroupCallParticipants**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Invites users to an active group call. Sends a service message of type messageInviteVideoChatParticipants for video chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91295
+dist/generated/types.d.ts:93792

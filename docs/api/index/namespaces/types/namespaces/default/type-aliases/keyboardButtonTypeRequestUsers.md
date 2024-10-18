@@ -18,13 +18,13 @@ A button that requests users to be shared by the current user; available only in
 
 ### id
 
-> **id**: [`int32`](int32-1.md)
+> **id**: [`int32`](int32.md)
 
 Unique button identifier
 
 ### max\_quantity
 
-> **max\_quantity**: [`int32`](int32-1.md)
+> **max\_quantity**: [`int32`](int32.md)
 
 The maximum number of users to share
 
@@ -72,4 +72,4 @@ True, if the shared users must be Telegram Premium users; otherwise, the shared 
 
 ## Defined in
 
-dist/generated/types.d.ts:17181
+dist/generated/types.d.ts:17773

@@ -24,4 +24,4 @@ The referrer from the link
 
 ## Defined in
 
-dist/generated/types.d.ts:42321
+dist/generated/types.d.ts:43715

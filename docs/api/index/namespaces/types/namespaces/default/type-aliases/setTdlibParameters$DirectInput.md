@@ -20,7 +20,7 @@ Application identifier hash for Telegram API access, which can be obtained at ht
 
 ### api\_id?
 
-> `readonly` `optional` **api\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **api\_id**: [`int32`](int32.md)
 
 Application identifier for Telegram API access, which can be obtained at https://my.telegram.org
 
@@ -38,7 +38,7 @@ The path to the directory for the persistent database; if empty, the current wor
 
 ### database\_encryption\_key?
 
-> `readonly` `optional` **database\_encryption\_key**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **database\_encryption\_key**: [`bytes$Input`](bytes$Input.md)
 
 Encryption key for the database. If the encryption key is invalid, then an error with code 401 will be returned
 
@@ -98,4 +98,4 @@ Pass true to use Telegram test environment instead of the production environment
 
 ## Defined in
 
-dist/generated/types.d.ts:73167
+dist/generated/types.d.ts:75155

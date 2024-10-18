@@ -18,24 +18,18 @@ The transaction is a transaction with a bot
 
 > `readonly` **\_**: `"starTransactionPartnerBot"`
 
-### bot\_user\_id?
+### purpose?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **purpose**: [`BotTransactionPurpose$Input`](BotTransactionPurpose$Input.md)
+
+Purpose of the transaction
+
+### user\_id?
+
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the bot
 
-### invoice\_payload?
-
-> `readonly` `optional` **invoice\_payload**: [`bytes$Input`](bytes$Input-1.md)
-
-Invoice payload; for bots only
-
-### product\_info?
-
-> `readonly` `optional` **product\_info**: [`productInfo$Input`](productInfo$Input-1.md) \| `null`
-
-Information about the bought product; may be null if not applicable
-
 ## Defined in
 
-dist/generated/types.d.ts:8476
+dist/generated/types.d.ts:8859

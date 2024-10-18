@@ -14,10 +14,10 @@ Computes time needed to receive a response from a Telegram server through a prox
 
 ### proxy\_id?
 
-> `readonly` `optional` **proxy\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **proxy\_id**: [`int32`](int32.md)
 
 Proxy identifier. Use 0 to ping a Telegram server without a proxy
 
 ## Defined in
 
-dist/generated/types.d.ts:101641
+dist/generated/types.d.ts:104562

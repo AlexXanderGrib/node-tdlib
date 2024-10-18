@@ -26,7 +26,7 @@ True, if the link only creates join request
 
 ### photo?
 
-> `readonly` `optional` **photo**: [`chatPhoto$Input`](chatPhoto$Input-1.md) \| `null`
+> `readonly` `optional` **photo**: [`chatPhoto$Input`](chatPhoto$Input.md) \| `null`
 
 Photo of the chat; may be null
 
@@ -38,4 +38,4 @@ Type of the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:21118
+dist/generated/types.d.ts:21754

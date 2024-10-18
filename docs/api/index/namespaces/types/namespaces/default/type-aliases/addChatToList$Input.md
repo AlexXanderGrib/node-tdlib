@@ -18,7 +18,7 @@ Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive c
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ The chat list. Use getChatListsToAddChat to get suitable chat lists
 
 ## Defined in
 
-dist/generated/types.d.ts:84445
+dist/generated/types.d.ts:86744

@@ -20,4 +20,4 @@ A privacy setting for managing whether the user's profile photo is visible
 
 ## Defined in
 
-dist/generated/types.d.ts:46191
+dist/generated/types.d.ts:47717

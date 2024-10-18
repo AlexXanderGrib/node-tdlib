@@ -18,7 +18,7 @@ Withdrawal succeeded
 
 ### date
 
-> **date**: [`int32`](int32-1.md)
+> **date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the withdrawal was completed
 
@@ -30,4 +30,4 @@ The URL where the withdrawal transaction can be viewed
 
 ## Defined in
 
-dist/generated/types.d.ts:51993
+dist/generated/types.d.ts:53609

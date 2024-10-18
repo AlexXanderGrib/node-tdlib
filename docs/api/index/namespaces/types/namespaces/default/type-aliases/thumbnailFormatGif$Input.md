@@ -20,4 +20,4 @@ The thumbnail is in static GIF format. It will be used only for some bot inline 
 
 ## Defined in
 
-dist/generated/types.d.ts:4131
+dist/generated/types.d.ts:4177

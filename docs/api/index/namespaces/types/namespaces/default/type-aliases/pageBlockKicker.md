@@ -24,4 +24,4 @@ Kicker
 
 ## Defined in
 
-dist/generated/types.d.ts:19769
+dist/generated/types.d.ts:20395

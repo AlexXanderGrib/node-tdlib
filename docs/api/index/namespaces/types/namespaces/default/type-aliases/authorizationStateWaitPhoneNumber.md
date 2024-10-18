@@ -18,4 +18,4 @@ TDLib needs the user's phone number to authorize. Call setAuthenticationPhoneNum
 
 ## Defined in
 
-dist/generated/types.d.ts:3155
+dist/generated/types.d.ts:3201

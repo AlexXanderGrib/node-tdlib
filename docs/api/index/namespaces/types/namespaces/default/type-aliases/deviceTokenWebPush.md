@@ -36,4 +36,4 @@ Base64url-encoded P-256 elliptic curve Diffie-Hellman public key
 
 ## Defined in
 
-dist/generated/types.d.ts:43057
+dist/generated/types.d.ts:44583

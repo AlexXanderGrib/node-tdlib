@@ -6,7 +6,9 @@
 
 # Type Alias: toggleStoryIsPostedToChatPage()
 
-> **toggleStoryIsPostedToChatPage**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleStoryIsPostedToChatPage**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether a story is accessible after expiration. Can be called only if story.can_toggle_is_posted_to_chat_page == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87475
+dist/generated/types.d.ts:89850

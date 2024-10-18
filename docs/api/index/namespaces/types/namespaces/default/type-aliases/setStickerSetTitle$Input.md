@@ -30,4 +30,4 @@ New sticker set title
 
 ## Defined in
 
-dist/generated/types.d.ts:100070
+dist/generated/types.d.ts:102849

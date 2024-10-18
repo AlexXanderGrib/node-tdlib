@@ -26,10 +26,10 @@ Unique identifier of the query result
 
 ### sticker?
 
-> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input-1.md)
+> `readonly` `optional` **sticker**: [`sticker$Input`](sticker$Input.md)
 
 Sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:38721
+dist/generated/types.d.ts:40091

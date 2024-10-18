@@ -18,4 +18,4 @@ The user is eligible for the giveaway
 
 ## Defined in
 
-dist/generated/types.d.ts:8663
+dist/generated/types.d.ts:9099

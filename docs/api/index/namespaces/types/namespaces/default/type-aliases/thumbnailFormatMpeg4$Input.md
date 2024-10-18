@@ -20,4 +20,4 @@ The thumbnail is in MPEG4 format. It will be used only for some animations and v
 
 ## Defined in
 
-dist/generated/types.d.ts:4145
+dist/generated/types.d.ts:4191

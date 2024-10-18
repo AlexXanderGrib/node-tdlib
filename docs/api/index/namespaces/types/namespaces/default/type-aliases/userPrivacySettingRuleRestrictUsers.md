@@ -18,10 +18,10 @@ A rule to restrict all specified users from doing something
 
 ### user\_ids
 
-> **user\_ids**: [`vector`](vector.md)\<[`int53`](int53-1.md)\>
+> **user\_ids**: [`vector`](vector.md)\<[`int53`](int53.md)\>
 
 The user identifiers, total number of users in all rules must not exceed 1000
 
 ## Defined in
 
-dist/generated/types.d.ts:46097
+dist/generated/types.d.ts:47623

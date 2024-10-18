@@ -6,7 +6,9 @@
 
 # Type Alias: getSupergroupMembers()
 
-> **getSupergroupMembers**: (`parameters`) => [`ChatMembers`](ChatMembers.md)
+> **getSupergroupMembers**: (`parameters`) => [`ChatMembers`](ChatMembers-1.md)
+
+Returns information about members or banned users in a supergroup or channel. Can be used only if supergroupFullInfo.can_get_members == true; additionally, administrator privileges may be required for some filters
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatMembers`](ChatMembers.md)
+[`ChatMembers`](ChatMembers-1.md)
 
-[ChatMembers](ChatMembers.md)
+[ChatMembers](ChatMembers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96635
+dist/generated/types.d.ts:99414

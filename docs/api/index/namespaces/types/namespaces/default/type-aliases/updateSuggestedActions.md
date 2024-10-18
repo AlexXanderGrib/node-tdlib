@@ -30,4 +30,4 @@ Removed suggested actions
 
 ## Defined in
 
-dist/generated/types.d.ts:56991
+dist/generated/types.d.ts:58631

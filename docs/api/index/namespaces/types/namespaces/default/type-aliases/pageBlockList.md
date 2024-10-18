@@ -18,10 +18,10 @@ A list of data blocks
 
 ### items
 
-> **items**: [`vector`](vector.md)\<[`pageBlockListItem`](pageBlockListItem-1.md)\>
+> **items**: [`vector`](vector.md)\<[`pageBlockListItem`](pageBlockListItem.md)\>
 
 The items of the list
 
 ## Defined in
 
-dist/generated/types.d.ts:19913
+dist/generated/types.d.ts:20539

@@ -6,7 +6,9 @@
 
 # Type Alias: cancelDownloadFile()
 
-> **cancelDownloadFile**: (`parameters`) => [`Ok`](Ok.md)
+> **cancelDownloadFile**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Stops the downloading of a file. If a file has already been downloaded, does nothing
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88897
+dist/generated/types.d.ts:91272

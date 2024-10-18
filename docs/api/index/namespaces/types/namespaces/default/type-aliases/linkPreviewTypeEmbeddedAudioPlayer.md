@@ -24,9 +24,21 @@ Author of the audio
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Duration of the audio, in seconds
+
+### height
+
+> **height**: [`int32`](int32.md)
+
+Expected height of the embedded player
+
+### thumbnail
+
+> **thumbnail**: [`photo`](photo.md) \| `null`
+
+Thumbnail of the audio; may be null if unknown
 
 ### url
 
@@ -34,6 +46,12 @@ Duration of the audio, in seconds
 
 URL of the external audio player
 
+### width
+
+> **width**: [`int32`](int32.md)
+
+Expected width of the embedded player
+
 ## Defined in
 
-dist/generated/types.d.ts:21173
+dist/generated/types.d.ts:21883

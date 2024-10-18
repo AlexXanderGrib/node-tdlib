@@ -6,7 +6,9 @@
 
 # Type Alias: setPollAnswer()
 
-> **setPollAnswer**: (`parameters`) => [`Ok`](Ok.md)
+> **setPollAnswer**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the user answer to a poll. A poll in quiz mode can be answered only once
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82100
+dist/generated/types.d.ts:84293

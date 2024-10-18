@@ -18,7 +18,7 @@ Returns interactions with a story. The method can be called only for stories pos
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of story interactions to return
 
@@ -54,10 +54,10 @@ Query to search for in names, usernames and titles; may be empty to get all rele
 
 ### story\_id?
 
-> `readonly` `optional` **story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **story\_id**: [`int32`](int32.md)
 
 Story identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:87950
+dist/generated/types.d.ts:90325

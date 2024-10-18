@@ -6,7 +6,9 @@
 
 # Type Alias: setReactionNotificationSettings()
 
-> **setReactionNotificationSettings**: (`parameters`) => [`Ok`](Ok.md)
+> **setReactionNotificationSettings**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes notification settings for reactions
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86989
+dist/generated/types.d.ts:89288

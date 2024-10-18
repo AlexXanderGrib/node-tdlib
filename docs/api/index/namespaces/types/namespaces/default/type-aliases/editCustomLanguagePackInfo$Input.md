@@ -18,10 +18,10 @@ Edits information about a custom local language pack in the current localization
 
 ### info?
 
-> `readonly` `optional` **info**: [`languagePackInfo$Input`](languagePackInfo$Input-1.md)
+> `readonly` `optional` **info**: [`languagePackInfo$Input`](languagePackInfo$Input.md)
 
 New information about the custom local language pack
 
 ## Defined in
 
-dist/generated/types.d.ts:97507
+dist/generated/types.d.ts:100286

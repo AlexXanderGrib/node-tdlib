@@ -24,10 +24,10 @@ Identifier of a previously added custom local language pack in the current local
 
 ### new\_string?
 
-> `readonly` `optional` **new\_string**: [`languagePackString$Input`](languagePackString$Input-1.md)
+> `readonly` `optional` **new\_string**: [`languagePackString$Input`](languagePackString$Input.md)
 
 New language pack string
 
 ## Defined in
 
-dist/generated/types.d.ts:97535
+dist/generated/types.d.ts:100314

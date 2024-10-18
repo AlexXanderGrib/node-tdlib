@@ -20,4 +20,4 @@ Returns only messages containing URLs
 
 ## Defined in
 
-dist/generated/types.d.ts:30585
+dist/generated/types.d.ts:31717

@@ -36,16 +36,16 @@ Identifier of the chosen result
 
 ### sender\_user\_id
 
-> **sender\_user\_id**: [`int53`](int53-1.md)
+> **sender\_user\_id**: [`int53`](int53.md)
 
 Identifier of the user who sent the query
 
 ### user\_location
 
-> **user\_location**: [`location`](location-1.md) \| `null`
+> **user\_location**: [`location`](location.md) \| `null`
 
 User location; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:57321
+dist/generated/types.d.ts:58961

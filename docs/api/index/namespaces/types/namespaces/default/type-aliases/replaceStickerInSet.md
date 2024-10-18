@@ -6,7 +6,9 @@
 
 # Type Alias: replaceStickerInSet()
 
-> **replaceStickerInSet**: (`parameters`) => [`Ok`](Ok.md)
+> **replaceStickerInSet**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Replaces existing sticker in a set. The function is equivalent to removeStickerFromSet, then addStickerToSet, then setStickerPositionInSet
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99970
+dist/generated/types.d.ts:102749

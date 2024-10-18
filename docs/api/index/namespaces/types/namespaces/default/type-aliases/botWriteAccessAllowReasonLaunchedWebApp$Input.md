@@ -20,10 +20,10 @@ The user launched a Web App using getWebAppLinkUrl
 
 ### web\_app?
 
-> `readonly` `optional` **web\_app**: [`webApp$Input`](webApp$Input-1.md)
+> `readonly` `optional` **web\_app**: [`webApp$Input`](webApp$Input.md)
 
 Information about the Web App
 
 ## Defined in
 
-dist/generated/types.d.ts:37046
+dist/generated/types.d.ts:38416

@@ -30,4 +30,4 @@ If non-empty, a token which can be used to receive a zoomed in graph
 
 ## Defined in
 
-dist/generated/types.d.ts:51079
+dist/generated/types.d.ts:52695

@@ -20,10 +20,10 @@ The sticker is a regular sticker
 
 ### premium\_animation?
 
-> `readonly` `optional` **premium\_animation**: [`file$Input`](file$Input-1.md) \| `null`
+> `readonly` `optional` **premium\_animation**: [`file$Input`](file$Input.md) \| `null`
 
 Premium animation of the sticker; may be null. If present, only Telegram Premium users can use the sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:4468
+dist/generated/types.d.ts:4514

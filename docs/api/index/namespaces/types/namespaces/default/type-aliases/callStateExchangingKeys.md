@@ -18,4 +18,4 @@ The call has been answered and encryption keys are being exchanged
 
 ## Defined in
 
-dist/generated/types.d.ts:34867
+dist/generated/types.d.ts:36237

@@ -20,4 +20,4 @@ The name of the background
 
 ## Defined in
 
-dist/generated/types.d.ts:97147
+dist/generated/types.d.ts:99926

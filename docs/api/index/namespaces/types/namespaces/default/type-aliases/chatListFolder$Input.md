@@ -20,10 +20,10 @@ A list of chats added to a chat folder
 
 ### chat\_folder\_id?
 
-> `readonly` `optional` **chat\_folder\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **chat\_folder\_id**: [`int32`](int32.md)
 
 Chat folder identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:15926
+dist/generated/types.d.ts:16518

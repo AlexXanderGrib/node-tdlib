@@ -6,7 +6,9 @@
 
 # Type Alias: getMe()
 
-> **getMe**: (`parameters`) => [`User`](User.md)
+> **getMe**: (`parameters`) => [`User`](User-1.md)
+
+Returns the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`User`](User.md)
+[`User`](User-1.md)
 
-[User](User.md)
+[User](User-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74344
+dist/generated/types.d.ts:76332

@@ -6,7 +6,9 @@
 
 # Type Alias: testCallEmpty()
 
-> **testCallEmpty**: (`parameters`) => [`Ok`](Ok.md)
+> **testCallEmpty**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Does nothing; for testing only. This is an offline method. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101969
+dist/generated/types.d.ts:104890

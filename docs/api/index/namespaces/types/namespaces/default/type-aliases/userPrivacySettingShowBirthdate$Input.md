@@ -20,4 +20,4 @@ A privacy setting for managing whether the user's birthdate is visible
 
 ## Defined in
 
-dist/generated/types.d.ts:46247
+dist/generated/types.d.ts:47773

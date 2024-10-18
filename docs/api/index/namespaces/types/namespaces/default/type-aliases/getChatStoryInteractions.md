@@ -6,7 +6,9 @@
 
 # Type Alias: getChatStoryInteractions()
 
-> **getChatStoryInteractions**: (`parameters`) => [`StoryInteractions`](StoryInteractions.md)
+> **getChatStoryInteractions**: (`parameters`) => [`StoryInteractions`](StoryInteractions-1.md)
+
+Returns interactions with a story posted in a chat. Can be used only if story is posted on behalf of a chat and the user is an administrator in the chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StoryInteractions`](StoryInteractions.md)
+[`StoryInteractions`](StoryInteractions-1.md)
 
-[StoryInteractions](StoryInteractions.md)
+[StoryInteractions](StoryInteractions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88112
+dist/generated/types.d.ts:90487

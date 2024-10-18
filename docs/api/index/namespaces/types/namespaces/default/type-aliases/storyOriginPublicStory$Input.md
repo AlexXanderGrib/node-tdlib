@@ -20,16 +20,16 @@ The original story was a public story with known sender
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat that posted original story
 
 ### story\_id?
 
-> `readonly` `optional` **story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **story\_id**: [`int32`](int32.md)
 
 Story identifier of the original story
 
 ## Defined in
 
-dist/generated/types.d.ts:32661
+dist/generated/types.d.ts:33939

@@ -18,4 +18,4 @@ Returns only video messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30535
+dist/generated/types.d.ts:31667

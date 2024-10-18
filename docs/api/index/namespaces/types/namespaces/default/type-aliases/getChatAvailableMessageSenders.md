@@ -6,7 +6,9 @@
 
 # Type Alias: getChatAvailableMessageSenders()
 
-> **getChatAvailableMessageSenders**: (`parameters`) => [`ChatMessageSenders`](ChatMessageSenders.md)
+> **getChatAvailableMessageSenders**: (`parameters`) => [`ChatMessageSenders`](ChatMessageSenders-1.md)
+
+Returns the list of message sender identifiers, which can be used to send messages in a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatMessageSenders`](ChatMessageSenders.md)
+[`ChatMessageSenders`](ChatMessageSenders-1.md)
 
-[ChatMessageSenders](ChatMessageSenders.md)
+[ChatMessageSenders](ChatMessageSenders-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78030
+dist/generated/types.d.ts:80039

@@ -26,4 +26,4 @@ Name of the story sender
 
 ## Defined in
 
-dist/generated/types.d.ts:32690
+dist/generated/types.d.ts:33968

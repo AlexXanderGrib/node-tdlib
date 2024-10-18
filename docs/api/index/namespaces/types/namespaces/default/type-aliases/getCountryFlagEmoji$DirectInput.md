@@ -20,4 +20,4 @@ A two-letter ISO 3166-1 alpha-2 country code as received from getCountries
 
 ## Defined in
 
-dist/generated/types.d.ts:81813
+dist/generated/types.d.ts:84006

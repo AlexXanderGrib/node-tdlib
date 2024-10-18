@@ -8,6 +8,8 @@
 
 > **canSendMessageToUser**: (`parameters`) => [`CanSendMessageToUserResult`](CanSendMessageToUserResult.md)
 
+Check whether the current user can message another user or try to create a chat with them
+
 ## Parameters
 
 • **parameters**: [`canSendMessageToUser$Input`](canSendMessageToUser$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:97919
+dist/generated/types.d.ts:100698

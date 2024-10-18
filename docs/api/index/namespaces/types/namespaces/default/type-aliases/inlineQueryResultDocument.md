@@ -24,7 +24,7 @@ Represents a document
 
 ### document
 
-> **document**: [`document`](document-1.md)
+> **document**: [`document`](document.md)
 
 Document
 
@@ -42,4 +42,4 @@ Document title
 
 ## Defined in
 
-dist/generated/types.d.ts:38595
+dist/generated/types.d.ts:39965

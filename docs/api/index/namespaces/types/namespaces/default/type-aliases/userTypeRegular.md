@@ -18,4 +18,4 @@ A regular user
 
 ## Defined in
 
-dist/generated/types.d.ts:6153
+dist/generated/types.d.ts:6199

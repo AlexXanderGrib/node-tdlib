@@ -20,16 +20,16 @@ Some data in basicGroupFullInfo has been changed
 
 ### basic\_group\_full\_info?
 
-> `readonly` `optional` **basic\_group\_full\_info**: [`basicGroupFullInfo$Input`](basicGroupFullInfo$Input-1.md)
+> `readonly` `optional` **basic\_group\_full\_info**: [`basicGroupFullInfo$Input`](basicGroupFullInfo$Input.md)
 
 New full information about the group
 
 ### basic\_group\_id?
 
-> `readonly` `optional` **basic\_group\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **basic\_group\_id**: [`int53`](int53.md)
 
 Identifier of a basic group
 
 ## Defined in
 
-dist/generated/types.d.ts:55167
+dist/generated/types.d.ts:56783

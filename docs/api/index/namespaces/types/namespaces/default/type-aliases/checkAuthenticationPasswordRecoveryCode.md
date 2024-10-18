@@ -6,7 +6,9 @@
 
 # Type Alias: checkAuthenticationPasswordRecoveryCode()
 
-> **checkAuthenticationPasswordRecoveryCode**: (`parameters`) => [`Ok`](Ok.md)
+> **checkAuthenticationPasswordRecoveryCode**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Checks whether a 2-step verification password recovery code sent to an email address is valid. Works only when the current authorization state is authorizationStateWaitPassword
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73585
+dist/generated/types.d.ts:75573

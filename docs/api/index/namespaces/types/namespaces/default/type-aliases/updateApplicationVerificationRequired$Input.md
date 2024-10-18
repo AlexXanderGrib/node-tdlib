@@ -22,7 +22,7 @@ A request can't be completed unless application verification is performed; for o
 
 ### cloud\_project\_number?
 
-> `readonly` `optional` **cloud\_project\_number**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **cloud\_project\_number**: [`int64$Input`](int64$Input.md)
 
 Cloud project number to pass to the Play Integrity API on Android
 
@@ -36,10 +36,10 @@ Unique base64url-encoded nonce for the classic Play Integrity verification (http
 
 ### verification\_id?
 
-> `readonly` `optional` **verification\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **verification\_id**: [`int53`](int53.md)
 
 Unique identifier for the verification process
 
 ## Defined in
 
-dist/generated/types.d.ts:55548
+dist/generated/types.d.ts:57164

@@ -6,7 +6,9 @@
 
 # Type Alias: sendWebAppData()
 
-> **sendWebAppData**: (`parameters`) => [`Ok`](Ok.md)
+> **sendWebAppData**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sends data received from a keyboardButtonTypeWebApp Web App to a bot
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82923
+dist/generated/types.d.ts:85222

@@ -3,6 +3,7 @@ import { typename } from "./generated/types";
 
 const tdTypename = "@type";
 
+// eslint-disable-next-line security/detect-non-literal-regexp
 const mainKey = new RegExp(`"${typename}":`, "g");
 const tdKey = new RegExp(`"${tdTypename}":`, "g");
 
@@ -57,5 +58,5 @@ export function serialize(data: unknown): string {
  * @returns {T}  {T}
  */
 export function deserialize<T = unknown>(json: string): T {
-  return JSON.parse(json.replace(tdKey, `"${typename}":`));
+  return JSON.parse(json.replaceAll(tdKey, `"${typename}":`));
 }

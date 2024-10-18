@@ -18,10 +18,10 @@ Deletes all messages in a Saved Messages topic
 
 ### saved\_messages\_topic\_id?
 
-> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **saved\_messages\_topic\_id**: [`int53`](int53.md)
 
 Identifier of Saved Messages topic which messages will be deleted
 
 ## Defined in
 
-dist/generated/types.d.ts:75861
+dist/generated/types.d.ts:77887

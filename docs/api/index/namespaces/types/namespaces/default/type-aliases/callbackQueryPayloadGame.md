@@ -24,4 +24,4 @@ A short name of the game that was attached to the callback button
 
 ## Defined in
 
-dist/generated/types.d.ts:39029
+dist/generated/types.d.ts:40399

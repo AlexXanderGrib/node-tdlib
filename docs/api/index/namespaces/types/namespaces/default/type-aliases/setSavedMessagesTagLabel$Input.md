@@ -30,4 +30,4 @@ The tag which label will be changed
 
 ## Defined in
 
-dist/generated/types.d.ts:81560
+dist/generated/types.d.ts:83753

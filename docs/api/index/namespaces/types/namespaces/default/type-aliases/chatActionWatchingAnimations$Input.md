@@ -26,4 +26,4 @@ The animated emoji
 
 ## Defined in
 
-dist/generated/types.d.ts:30948
+dist/generated/types.d.ts:32080

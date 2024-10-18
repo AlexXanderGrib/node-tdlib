@@ -6,7 +6,9 @@
 
 # Type Alias: reportChatPhoto()
 
-> **reportChatPhoto**: (`parameters`) => [`Ok`](Ok.md)
+> **reportChatPhoto**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Reports a chat photo to the Telegram moderators. A chat photo can be reported only if chat.can_be_reported
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98263
+dist/generated/types.d.ts:101042

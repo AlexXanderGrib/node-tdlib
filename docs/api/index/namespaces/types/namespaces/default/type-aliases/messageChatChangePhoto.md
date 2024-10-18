@@ -18,10 +18,10 @@ An updated chat photo
 
 ### photo
 
-> **photo**: [`chatPhoto`](chatPhoto-1.md)
+> **photo**: [`chatPhoto`](chatPhoto.md)
 
 New chat photo
 
 ## Defined in
 
-dist/generated/types.d.ts:26947
+dist/generated/types.d.ts:27707

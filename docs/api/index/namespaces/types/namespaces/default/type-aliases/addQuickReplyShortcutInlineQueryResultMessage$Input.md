@@ -26,13 +26,13 @@ Pass true to hide the bot, via which the message is sent. Can be used only for b
 
 ### query\_id?
 
-> `readonly` `optional` **query\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **query\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the inline query
 
 ### reply\_to\_message\_id?
 
-> `readonly` `optional` **reply\_to\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **reply\_to\_message\_id**: [`int53`](int53.md)
 
 Identifier of a quick reply message in the same shortcut to be replied; pass 0 if none
 
@@ -50,4 +50,4 @@ Name of the target shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:80383
+dist/generated/types.d.ts:82432

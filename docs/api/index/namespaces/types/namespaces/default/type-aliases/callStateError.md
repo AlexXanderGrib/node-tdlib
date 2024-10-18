@@ -18,10 +18,10 @@ The call has ended with an error
 
 ### error
 
-> **error**: [`error`](error-1.md)
+> **error**: [`error`](error.md)
 
 Error. An error with the code 4005000 will be returned if an outgoing call is missed because of an expired timeout
 
 ## Defined in
 
-dist/generated/types.d.ts:35033
+dist/generated/types.d.ts:36403

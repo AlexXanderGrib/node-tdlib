@@ -6,7 +6,9 @@
 
 # Type Alias: getStoryInteractions()
 
-> **getStoryInteractions**: (`parameters`) => [`StoryInteractions`](StoryInteractions.md)
+> **getStoryInteractions**: (`parameters`) => [`StoryInteractions`](StoryInteractions-1.md)
+
+Returns interactions with a story. The method can be called only for stories posted on behalf of the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StoryInteractions`](StoryInteractions.md)
+[`StoryInteractions`](StoryInteractions-1.md)
 
-[StoryInteractions](StoryInteractions.md)
+[StoryInteractions](StoryInteractions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:88034
+dist/generated/types.d.ts:90409

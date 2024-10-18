@@ -12,4 +12,4 @@ Disables the currently enabled proxy. Can be called before authorization
 
 ## Defined in
 
-dist/generated/types.d.ts:101546
+dist/generated/types.d.ts:104467

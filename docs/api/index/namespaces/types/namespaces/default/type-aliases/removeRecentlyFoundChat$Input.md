@@ -18,10 +18,10 @@ Removes a chat from the list of recently found chats
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to be removed
 
 ## Defined in
 
-dist/generated/types.d.ts:75509
+dist/generated/types.d.ts:77535

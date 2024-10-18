@@ -26,4 +26,4 @@ The paid amount
 
 ## Defined in
 
-dist/generated/types.d.ts:45118
+dist/generated/types.d.ts:46644

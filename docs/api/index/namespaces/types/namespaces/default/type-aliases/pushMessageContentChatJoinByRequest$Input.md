@@ -20,4 +20,4 @@ A new member was accepted to the chat by an administrator
 
 ## Defined in
 
-dist/generated/types.d.ts:45099
+dist/generated/types.d.ts:46625

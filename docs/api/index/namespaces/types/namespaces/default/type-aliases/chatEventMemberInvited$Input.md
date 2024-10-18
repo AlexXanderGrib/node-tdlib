@@ -26,10 +26,10 @@ New member status
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 New member user identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:39429
+dist/generated/types.d.ts:40799

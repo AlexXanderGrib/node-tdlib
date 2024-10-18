@@ -18,7 +18,7 @@ Returns detailed statistics about a chat. Currently, this method can be used onl
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ Pass true if a dark theme is used by the application
 
 ## Defined in
 
-dist/generated/types.d.ts:98553
+dist/generated/types.d.ts:101332

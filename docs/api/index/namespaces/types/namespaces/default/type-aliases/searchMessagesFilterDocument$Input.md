@@ -20,4 +20,4 @@ Returns only document messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30515
+dist/generated/types.d.ts:31647

@@ -18,4 +18,4 @@ Returns only audio messages
 
 ## Defined in
 
-dist/generated/types.d.ts:30493
+dist/generated/types.d.ts:31625

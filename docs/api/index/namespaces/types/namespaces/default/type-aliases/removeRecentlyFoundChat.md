@@ -6,7 +6,9 @@
 
 # Type Alias: removeRecentlyFoundChat()
 
-> **removeRecentlyFoundChat**: (`parameters`) => [`Ok`](Ok.md)
+> **removeRecentlyFoundChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a chat from the list of recently found chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75533
+dist/generated/types.d.ts:77559

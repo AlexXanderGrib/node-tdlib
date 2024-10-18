@@ -42,6 +42,10 @@
 
 > `readonly` **BusinessChat**: `"internalLinkTypeBusinessChat"`
 
+### BuyStars
+
+> `readonly` **BuyStars**: `"internalLinkTypeBuyStars"`
+
 ### ChangePhoneNumber
 
 > `readonly` **ChangePhoneNumber**: `"internalLinkTypeChangePhoneNumber"`
@@ -89,6 +93,10 @@
 ### LanguageSettings
 
 > `readonly` **LanguageSettings**: `"internalLinkTypeLanguageSettings"`
+
+### MainWebApp
+
+> `readonly` **MainWebApp**: `"internalLinkTypeMainWebApp"`
 
 ### Message
 
@@ -142,10 +150,6 @@
 
 > `readonly` **Settings**: `"internalLinkTypeSettings"`
 
-### SideMenuBot
-
-> `readonly` **SideMenuBot**: `"internalLinkTypeSideMenuBot"`
-
 ### StickerSet
 
 > `readonly` **StickerSet**: `"internalLinkTypeStickerSet"`
@@ -188,4 +192,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1092
+dist/generated/types.d.ts:1115

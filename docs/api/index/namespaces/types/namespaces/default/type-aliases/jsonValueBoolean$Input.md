@@ -26,4 +26,4 @@ The value
 
 ## Defined in
 
-dist/generated/types.d.ts:45786
+dist/generated/types.d.ts:47312

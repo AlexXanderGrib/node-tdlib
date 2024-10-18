@@ -18,7 +18,7 @@ Represents a link to an MP3 audio file
 
 ### audio\_duration
 
-> **audio\_duration**: [`int32`](int32-1.md)
+> **audio\_duration**: [`int32`](int32.md)
 
 Audio file duration, in seconds
 
@@ -60,4 +60,4 @@ Title of the audio file
 
 ## Defined in
 
-dist/generated/types.d.ts:37367
+dist/generated/types.d.ts:38737

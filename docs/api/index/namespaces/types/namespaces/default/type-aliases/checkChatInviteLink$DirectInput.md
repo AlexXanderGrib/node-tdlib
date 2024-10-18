@@ -20,4 +20,4 @@ Invite link to be checked
 
 ## Defined in
 
-dist/generated/types.d.ts:90174
+dist/generated/types.d.ts:92671

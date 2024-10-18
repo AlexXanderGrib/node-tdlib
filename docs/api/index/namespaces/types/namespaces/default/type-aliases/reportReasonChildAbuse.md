@@ -18,4 +18,4 @@ The chat has child abuse related content
 
 ## Defined in
 
-dist/generated/types.d.ts:47151
+dist/generated/types.d.ts:48677

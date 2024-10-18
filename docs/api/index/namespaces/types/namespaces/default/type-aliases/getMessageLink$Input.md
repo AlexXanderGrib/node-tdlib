@@ -8,7 +8,7 @@
 
 > **getMessageLink$Input**: `object`
 
-Returns an HTTPS link to a message in a chat. Available only for already sent messages in supergroups and channels, or if message.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
+Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
 
 ## Type declaration
 
@@ -18,7 +18,7 @@ Returns an HTTPS link to a message in a chat. Available only for already sent me
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the message belongs
 
@@ -36,16 +36,16 @@ Pass true to create a link to the message as a channel post comment, in a messag
 
 ### media\_timestamp?
 
-> `readonly` `optional` **media\_timestamp**: [`int32`](int32-1.md)
+> `readonly` `optional` **media\_timestamp**: [`int32`](int32.md)
 
 If not 0, timestamp from which the video/audio/video note/voice note/story playing must start, in seconds. The media can be in the message content or in its link preview
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message
 
 ## Defined in
 
-dist/generated/types.d.ts:77658
+dist/generated/types.d.ts:79667

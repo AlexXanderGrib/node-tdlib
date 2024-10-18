@@ -24,4 +24,4 @@ Pass true to get only locally available information without sending network requ
 
 ## Defined in
 
-dist/generated/types.d.ts:97313
+dist/generated/types.d.ts:100092

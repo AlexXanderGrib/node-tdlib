@@ -12,4 +12,4 @@ Clears the list of all autosave settings exceptions. The method is guaranteed to
 
 ## Defined in
 
-dist/generated/types.d.ts:99186
+dist/generated/types.d.ts:101965

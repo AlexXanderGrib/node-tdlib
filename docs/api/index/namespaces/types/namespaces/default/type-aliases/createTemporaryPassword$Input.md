@@ -24,10 +24,10 @@ The 2-step verification password of the current user
 
 ### valid\_for?
 
-> `readonly` `optional` **valid\_for**: [`int32`](int32-1.md)
+> `readonly` `optional` **valid\_for**: [`int32`](int32.md)
 
 Time during which the temporary password will be valid, in seconds; must be between 60 and 86400
 
 ## Defined in
 
-dist/generated/types.d.ts:74276
+dist/generated/types.d.ts:76264

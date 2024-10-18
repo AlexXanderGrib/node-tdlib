@@ -6,7 +6,9 @@
 
 # Type Alias: getGroupCallInviteLink()
 
-> **getGroupCallInviteLink**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getGroupCallInviteLink**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns invite link to a video chat in a public chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91333
+dist/generated/types.d.ts:93830

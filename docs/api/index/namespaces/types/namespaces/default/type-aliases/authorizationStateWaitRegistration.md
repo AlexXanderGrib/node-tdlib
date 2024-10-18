@@ -18,10 +18,10 @@ The user is unregistered and need to accept terms of service and enter their fir
 
 ### terms\_of\_service
 
-> **terms\_of\_service**: [`termsOfService`](termsOfService-1.md)
+> **terms\_of\_service**: [`termsOfService`](termsOfService.md)
 
 Telegram terms of service
 
 ## Defined in
 
-dist/generated/types.d.ts:3305
+dist/generated/types.d.ts:3351

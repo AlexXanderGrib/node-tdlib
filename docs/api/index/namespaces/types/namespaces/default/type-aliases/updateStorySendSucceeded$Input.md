@@ -20,16 +20,16 @@ A story has been successfully sent
 
 ### old\_story\_id?
 
-> `readonly` `optional` **old\_story\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **old\_story\_id**: [`int32`](int32.md)
 
 The previous temporary story identifier
 
 ### story?
 
-> `readonly` `optional` **story**: [`story$Input`](story$Input-1.md)
+> `readonly` `optional` **story**: [`story$Input`](story$Input.md)
 
 The sent story
 
 ## Defined in
 
-dist/generated/types.d.ts:55915
+dist/generated/types.d.ts:57531

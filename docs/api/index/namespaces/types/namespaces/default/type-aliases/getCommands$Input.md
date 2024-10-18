@@ -30,4 +30,4 @@ The scope to which the commands are relevant; pass null to get commands in the d
 
 ## Defined in
 
-dist/generated/types.d.ts:94999
+dist/generated/types.d.ts:97496

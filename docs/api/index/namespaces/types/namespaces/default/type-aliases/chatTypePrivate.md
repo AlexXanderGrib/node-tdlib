@@ -18,10 +18,10 @@ An ordinary chat with a user
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 User identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:15289
+dist/generated/types.d.ts:15881

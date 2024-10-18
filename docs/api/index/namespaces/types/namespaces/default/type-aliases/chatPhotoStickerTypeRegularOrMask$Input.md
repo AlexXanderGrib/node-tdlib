@@ -20,16 +20,16 @@ Information about the sticker, which was used to create the chat photo
 
 ### sticker\_id?
 
-> `readonly` `optional` **sticker\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **sticker\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of the sticker in the set
 
 ### sticker\_set\_id?
 
-> `readonly` `optional` **sticker\_set\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **sticker\_set\_id**: [`int64$Input`](int64$Input.md)
 
 Sticker set identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:7243
+dist/generated/types.d.ts:7309

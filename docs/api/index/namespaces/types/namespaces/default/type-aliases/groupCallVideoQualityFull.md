@@ -18,4 +18,4 @@ The best available video quality
 
 ## Defined in
 
-dist/generated/types.d.ts:35085
+dist/generated/types.d.ts:36455

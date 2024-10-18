@@ -6,7 +6,9 @@
 
 # Type Alias: removeNotification()
 
-> **removeNotification**: (`parameters`) => [`Ok`](Ok.md)
+> **removeNotification**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes an active notification from notification list. Needs to be called only if the notification is removed by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77616
+dist/generated/types.d.ts:79625

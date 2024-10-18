@@ -6,7 +6,9 @@
 
 # Type Alias: deleteChatMessagesBySender()
 
-> **deleteChatMessagesBySender**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteChatMessagesBySender**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes all messages sent by the specified message sender in a chat. Supported only for supergroups; requires can_delete_messages administrator privileges
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78706
+dist/generated/types.d.ts:80715

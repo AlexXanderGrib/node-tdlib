@@ -18,4 +18,4 @@ The maximum number of pinned Saved Messages topics
 
 ## Defined in
 
-dist/generated/types.d.ts:41367
+dist/generated/types.d.ts:42761

@@ -6,7 +6,9 @@
 
 # Type Alias: setGroupCallTitle()
 
-> **setGroupCallTitle**: (`parameters`) => [`Ok`](Ok.md)
+> **setGroupCallTitle**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets group call title. Requires groupCall.can_be_managed group call flag
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91219
+dist/generated/types.d.ts:93716

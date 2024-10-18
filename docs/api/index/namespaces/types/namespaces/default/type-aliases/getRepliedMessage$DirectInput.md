@@ -18,16 +18,16 @@ Returns information about a non-bundled message that is replied by a given messa
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the reply message
 
 ## Defined in
 
-dist/generated/types.d.ts:74672
+dist/generated/types.d.ts:76660

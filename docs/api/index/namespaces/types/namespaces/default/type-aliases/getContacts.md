@@ -6,7 +6,9 @@
 
 # Type Alias: getContacts()
 
-> **getContacts**: (`parameters`) => [`Users`](Users.md)
+> **getContacts**: (`parameters`) => [`Users`](Users-1.md)
+
+Returns all contacts of the user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Users`](Users.md)
+[`Users`](Users-1.md)
 
-[Users](Users.md)
+[Users](Users-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92136
+dist/generated/types.d.ts:94633

@@ -6,7 +6,9 @@
 
 # Type Alias: getBackgroundUrl()
 
-> **getBackgroundUrl**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getBackgroundUrl**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Constructs a persistent HTTP URL for a background
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97132
+dist/generated/types.d.ts:99911

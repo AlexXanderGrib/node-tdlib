@@ -18,16 +18,16 @@ A message with information about an invitation to a video chat
 
 ### group\_call\_id
 
-> **group\_call\_id**: [`int32`](int32-1.md)
+> **group\_call\_id**: [`int32`](int32.md)
 
 Identifier of the video chat. The video chat can be received through the method getGroupCall
 
 ### user\_ids
 
-> **user\_ids**: [`vector`](vector.md)\<[`int53`](int53-1.md)\>
+> **user\_ids**: [`vector`](vector.md)\<[`int53`](int53.md)\>
 
 Invited user identifiers
 
 ## Defined in
 
-dist/generated/types.d.ts:26831
+dist/generated/types.d.ts:27591

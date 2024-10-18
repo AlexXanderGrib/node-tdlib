@@ -36,4 +36,4 @@ The new message reply markup; pass null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:79128
+dist/generated/types.d.ts:81119

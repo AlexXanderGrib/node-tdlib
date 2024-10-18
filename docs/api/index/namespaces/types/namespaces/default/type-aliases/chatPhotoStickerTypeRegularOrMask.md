@@ -18,16 +18,16 @@ Information about the sticker, which was used to create the chat photo
 
 ### sticker\_id
 
-> **sticker\_id**: [`int64`](int64-1.md)
+> **sticker\_id**: [`int64`](int64.md)
 
 Identifier of the sticker in the set
 
 ### sticker\_set\_id
 
-> **sticker\_set\_id**: [`int64`](int64-1.md)
+> **sticker\_set\_id**: [`int64`](int64.md)
 
 Sticker set identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:7225
+dist/generated/types.d.ts:7291

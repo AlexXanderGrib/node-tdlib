@@ -26,4 +26,4 @@ Exact user's status is hidden because the current user enabled userPrivacySettin
 
 ## Defined in
 
-dist/generated/types.d.ts:31072
+dist/generated/types.d.ts:32204

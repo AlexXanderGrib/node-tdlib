@@ -20,7 +20,7 @@ A user in the chat came within proximity alert range
 
 ### distance?
 
-> `readonly` `optional` **distance**: [`int32`](int32-1.md)
+> `readonly` `optional` **distance**: [`int32`](int32.md)
 
 The distance between the users
 
@@ -38,4 +38,4 @@ The identifier of a user or chat that subscribed for the proximity alert
 
 ## Defined in
 
-dist/generated/types.d.ts:28442
+dist/generated/types.d.ts:29316

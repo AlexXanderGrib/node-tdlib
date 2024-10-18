@@ -18,13 +18,13 @@ A video note message
 
 ### duration
 
-> **duration**: [`int32`](int32-1.md)
+> **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds; 0-60
 
 ### length
 
-> **length**: [`int32`](int32-1.md)
+> **length**: [`int32`](int32.md)
 
 Video width and height; must be positive and not greater than 640
 
@@ -36,7 +36,7 @@ Video note self-destruct type; may be null if none; pass null if none; private c
 
 ### thumbnail
 
-> **thumbnail**: [`inputThumbnail`](inputThumbnail-1.md) \| `null`
+> **thumbnail**: [`inputThumbnail`](inputThumbnail.md) \| `null`
 
 Video thumbnail; may be null if empty; pass null to skip thumbnail uploading
 
@@ -48,4 +48,4 @@ Video note to be sent
 
 ## Defined in
 
-dist/generated/types.d.ts:29851
+dist/generated/types.d.ts:30725

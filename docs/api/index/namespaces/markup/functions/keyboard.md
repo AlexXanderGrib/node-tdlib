@@ -6,7 +6,7 @@
 
 # Function: keyboard()
 
-> **keyboard**(`options`?): `KeyboardBuilder`
+> **keyboard**(`options`?): [`KeyboardBuilder`](../classes/KeyboardBuilder.md)
 
 ## Parameters
 
@@ -14,9 +14,9 @@
 
 ## Returns
 
-`KeyboardBuilder`
+[`KeyboardBuilder`](../classes/KeyboardBuilder.md)
 
-KeyboardBuilder
+[KeyboardBuilder](../classes/KeyboardBuilder.md)
 
 ## Export
 

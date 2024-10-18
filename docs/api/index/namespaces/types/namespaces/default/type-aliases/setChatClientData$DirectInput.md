@@ -14,7 +14,7 @@ Changes application-specific data associated with a chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -26,4 +26,4 @@ New value of client_data
 
 ## Defined in
 
-dist/generated/types.d.ts:85937
+dist/generated/types.d.ts:88236

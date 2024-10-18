@@ -20,4 +20,4 @@ The session is running on the Firefox browser
 
 ## Defined in
 
-dist/generated/types.d.ts:46539
+dist/generated/types.d.ts:48065

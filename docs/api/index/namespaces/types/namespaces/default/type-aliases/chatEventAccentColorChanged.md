@@ -18,28 +18,28 @@ The chat accent color or background custom emoji were changed
 
 ### new\_accent\_color\_id
 
-> **new\_accent\_color\_id**: [`int32`](int32-1.md)
+> **new\_accent\_color\_id**: [`int32`](int32.md)
 
 New identifier of chat accent color
 
 ### new\_background\_custom\_emoji\_id
 
-> **new\_background\_custom\_emoji\_id**: [`int64`](int64-1.md)
+> **new\_background\_custom\_emoji\_id**: [`int64`](int64.md)
 
 New identifier of the custom emoji; 0 if none
 
 ### old\_accent\_color\_id
 
-> **old\_accent\_color\_id**: [`int32`](int32-1.md)
+> **old\_accent\_color\_id**: [`int32`](int32.md)
 
 Previous identifier of chat accent color
 
 ### old\_background\_custom\_emoji\_id
 
-> **old\_background\_custom\_emoji\_id**: [`int64`](int64-1.md)
+> **old\_background\_custom\_emoji\_id**: [`int64`](int64.md)
 
 Previous identifier of the custom emoji; 0 if none
 
 ## Defined in
 
-dist/generated/types.d.ts:40057
+dist/generated/types.d.ts:41427

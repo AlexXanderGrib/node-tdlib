@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's temporary registration
 
 ### temporary\_registration
 
-> **temporary\_registration**: [`personalDocument`](personalDocument-1.md)
+> **temporary\_registration**: [`personalDocument`](personalDocument.md)
 
 Temporary registration
 
 ## Defined in
 
-dist/generated/types.d.ts:24581
+dist/generated/types.d.ts:25341

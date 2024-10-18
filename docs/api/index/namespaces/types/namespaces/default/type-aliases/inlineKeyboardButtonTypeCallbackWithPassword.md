@@ -18,10 +18,10 @@ A button that asks for the 2-step verification password of the current user and 
 
 ### data
 
-> **data**: [`bytes`](bytes-1.md)
+> **data**: [`bytes`](bytes.md)
 
 Data to be sent to the bot via a callback query
 
 ## Defined in
 
-dist/generated/types.d.ts:17603
+dist/generated/types.d.ts:18195

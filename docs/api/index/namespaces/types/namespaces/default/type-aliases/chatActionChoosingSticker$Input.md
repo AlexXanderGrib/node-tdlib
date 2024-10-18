@@ -20,4 +20,4 @@ The user is picking a sticker to send
 
 ## Defined in
 
-dist/generated/types.d.ts:30849
+dist/generated/types.d.ts:31981

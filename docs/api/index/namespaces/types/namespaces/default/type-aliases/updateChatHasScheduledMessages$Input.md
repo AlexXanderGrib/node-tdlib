@@ -20,7 +20,7 @@ A chat's has_scheduled_messages field has changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -32,4 +32,4 @@ New value of has_scheduled_messages
 
 ## Defined in
 
-dist/generated/types.d.ts:54347
+dist/generated/types.d.ts:55963

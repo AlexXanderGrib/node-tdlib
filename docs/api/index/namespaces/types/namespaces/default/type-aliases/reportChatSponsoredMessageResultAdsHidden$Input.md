@@ -20,4 +20,4 @@ Sponsored messages were hidden for the user in all chats
 
 ## Defined in
 
-dist/generated/types.d.ts:14647
+dist/generated/types.d.ts:15239

@@ -20,4 +20,4 @@ The name is invalid
 
 ## Defined in
 
-dist/generated/types.d.ts:43977
+dist/generated/types.d.ts:45503

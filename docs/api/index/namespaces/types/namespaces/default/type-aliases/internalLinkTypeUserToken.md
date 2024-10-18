@@ -26,4 +26,4 @@ The token
 
 ## Defined in
 
-dist/generated/types.d.ts:48569
+dist/generated/types.d.ts:50153

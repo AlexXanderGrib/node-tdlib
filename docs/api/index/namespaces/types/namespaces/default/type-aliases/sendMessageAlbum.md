@@ -6,7 +6,11 @@
 
 # Type Alias: sendMessageAlbum()
 
-> **sendMessageAlbum**: (`parameters`) => [`Messages`](Messages.md)
+> **sendMessageAlbum**: (`parameters`) => [`Messages`](Messages-1.md)
+
+Sends 2-10 messages grouped together into an album. Currently, only audio, document, photo and video messages can be grouped into an album.
+
+- Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Messages`](Messages.md)
+[`Messages`](Messages-1.md)
 
-[Messages](Messages.md)
+[Messages](Messages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78220
+dist/generated/types.d.ts:80229

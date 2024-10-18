@@ -8,7 +8,7 @@
 
 > **setMessageFactCheck$Input**: `object`
 
-Changes the fact-check of a message. Can be only used if getOption("can_edit_fact_check") == true
+Changes the fact-check of a message. Can be only used if messageProperties.can_set_fact_check == true
 
 ## Type declaration
 
@@ -18,22 +18,22 @@ Changes the fact-check of a message. Can be only used if getOption("can_edit_fac
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The channel chat the message belongs to
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message. The message must be one of the following types: messageAnimation, messageAudio, messageDocument, messagePhoto, messageText, messageVideo
+Identifier of the message
 
 ### text?
 
-> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 New text of the fact-check; 0-getOption("fact_check_length_max") characters; pass null to remove it. Only Bold, Italic, and TextUrl entities with https://t.me/ links are supported
 
 ## Defined in
 
-dist/generated/types.d.ts:79450
+dist/generated/types.d.ts:81441

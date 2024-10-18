@@ -6,7 +6,9 @@
 
 # Type Alias: setGroupCallParticipantVolumeLevel()
 
-> **setGroupCallParticipantVolumeLevel**: (`parameters`) => [`Ok`](Ok.md)
+> **setGroupCallParticipantVolumeLevel**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes volume level of a participant of an active group call. If the current user can manage the group call, then the participant's volume level will be changed for all users with the default volume level
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91667
+dist/generated/types.d.ts:94164

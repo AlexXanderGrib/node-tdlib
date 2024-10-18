@@ -26,10 +26,10 @@ Play Integrity API token for the Android application, or secret from push notifi
 
 ### verification\_id?
 
-> `readonly` `optional` **verification\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **verification\_id**: [`int53`](int53.md)
 
 Unique identifier for the verification process as received from updateApplicationVerificationRequired
 
 ## Defined in
 
-dist/generated/types.d.ts:89521
+dist/generated/types.d.ts:91896

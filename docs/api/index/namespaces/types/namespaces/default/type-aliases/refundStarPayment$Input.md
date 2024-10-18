@@ -24,10 +24,10 @@ Telegram payment identifier
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the user that did the payment
 
 ## Defined in
 
-dist/generated/types.d.ts:97043
+dist/generated/types.d.ts:99822

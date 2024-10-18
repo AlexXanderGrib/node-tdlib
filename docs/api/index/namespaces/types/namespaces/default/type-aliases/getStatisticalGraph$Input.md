@@ -18,7 +18,7 @@ Loads an asynchronous or a zoomed in statistical graph
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,10 +30,10 @@ The token for graph loading
 
 ### x?
 
-> `readonly` `optional` **x**: [`int53`](int53-1.md)
+> `readonly` `optional` **x**: [`int53`](int53.md)
 
 X-value for zoomed in graph or 0 otherwise
 
 ## Defined in
 
-dist/generated/types.d.ts:98745
+dist/generated/types.d.ts:101524

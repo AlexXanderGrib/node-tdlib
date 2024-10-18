@@ -20,4 +20,4 @@ Suggests the user to subscribe to the Premium subscription with annual payments
 
 ## Defined in
 
-dist/generated/types.d.ts:50507
+dist/generated/types.d.ts:52105

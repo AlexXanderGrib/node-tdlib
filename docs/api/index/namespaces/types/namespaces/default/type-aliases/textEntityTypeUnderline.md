@@ -18,4 +18,4 @@ An underlined text
 
 ## Defined in
 
-dist/generated/types.d.ts:28617
+dist/generated/types.d.ts:29491

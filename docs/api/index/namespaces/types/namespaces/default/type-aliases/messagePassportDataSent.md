@@ -24,4 +24,4 @@ List of Telegram Passport element types sent
 
 ## Defined in
 
-dist/generated/types.d.ts:28361
+dist/generated/types.d.ts:29235

@@ -12,4 +12,4 @@ Returns examples of premium stickers for demonstration purposes
 
 ## Defined in
 
-dist/generated/types.d.ts:100494
+dist/generated/types.d.ts:103273

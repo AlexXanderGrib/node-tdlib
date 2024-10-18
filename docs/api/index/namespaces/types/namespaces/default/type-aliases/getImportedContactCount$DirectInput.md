@@ -12,4 +12,4 @@ Returns the total number of imported contacts
 
 ## Defined in
 
-dist/generated/types.d.ts:92212
+dist/generated/types.d.ts:94709

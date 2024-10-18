@@ -30,7 +30,7 @@ Pass true to delete the message
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 The identifier of an incoming message in the Replies chat
 
@@ -42,4 +42,4 @@ Pass true to report the sender to the Telegram moderators
 
 ## Defined in
 
-dist/generated/types.d.ts:91947
+dist/generated/types.d.ts:94444

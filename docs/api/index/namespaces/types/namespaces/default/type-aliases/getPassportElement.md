@@ -8,6 +8,8 @@
 
 > **getPassportElement**: (`parameters`) => [`PassportElement`](PassportElement.md)
 
+Returns one of the available Telegram Passport elements
+
 ## Parameters
 
 • **parameters**: [`getPassportElement$Input`](getPassportElement$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:99259
+dist/generated/types.d.ts:102038

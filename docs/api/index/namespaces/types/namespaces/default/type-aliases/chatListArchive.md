@@ -18,4 +18,4 @@ A list of chats usually located at the top of the main chat list. Unmuted chats 
 
 ## Defined in
 
-dist/generated/types.d.ts:15899
+dist/generated/types.d.ts:16491

@@ -18,22 +18,22 @@ A Telegram Premium giveaway without public winners has been completed for the ch
 
 ### giveaway\_message\_id
 
-> **giveaway\_message\_id**: [`int53`](int53-1.md)
+> **giveaway\_message\_id**: [`int53`](int53.md)
 
 Identifier of the message with the giveaway; can be 0 if the message was deleted
 
 ### unclaimed\_prize\_count
 
-> **unclaimed\_prize\_count**: [`int32`](int32-1.md)
+> **unclaimed\_prize\_count**: [`int32`](int32.md)
 
 Number of undistributed prizes
 
 ### winner\_count
 
-> **winner\_count**: [`int32`](int32-1.md)
+> **winner\_count**: [`int32`](int32.md)
 
 Number of winners in the giveaway
 
 ## Defined in
 
-dist/generated/types.d.ts:28029
+dist/generated/types.d.ts:28799

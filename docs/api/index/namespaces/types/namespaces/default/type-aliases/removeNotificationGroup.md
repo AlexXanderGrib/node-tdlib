@@ -6,7 +6,9 @@
 
 # Type Alias: removeNotificationGroup()
 
-> **removeNotificationGroup**: (`parameters`) => [`Ok`](Ok.md)
+> **removeNotificationGroup**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a group of active notifications. Needs to be called only if the notification group is removed by the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:77654
+dist/generated/types.d.ts:79663

@@ -18,4 +18,4 @@ Clears the list of all autosave settings exceptions. The method is guaranteed to
 
 ## Defined in
 
-dist/generated/types.d.ts:99180
+dist/generated/types.d.ts:101959

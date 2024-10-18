@@ -6,7 +6,9 @@
 
 # Type Alias: setChatAvailableReactions()
 
-> **setChatAvailableReactions**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatAvailableReactions**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes reactions, available in a chat. Available for basic groups, supergroups, and channels. Requires can_change_info member right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85917
+dist/generated/types.d.ts:88216

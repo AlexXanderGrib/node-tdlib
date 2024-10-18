@@ -36,4 +36,4 @@ Block contents
 
 ## Defined in
 
-dist/generated/types.d.ts:20583
+dist/generated/types.d.ts:21209

@@ -6,7 +6,9 @@
 
 # Type Alias: getDefaultMessageAutoDeleteTime()
 
-> **getDefaultMessageAutoDeleteTime**: (`parameters`) => [`MessageAutoDeleteTime`](MessageAutoDeleteTime.md)
+> **getDefaultMessageAutoDeleteTime**: (`parameters`) => [`MessageAutoDeleteTime`](MessageAutoDeleteTime-1.md)
+
+Returns default message auto-delete time setting for new chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageAutoDeleteTime`](MessageAutoDeleteTime.md)
+[`MessageAutoDeleteTime`](MessageAutoDeleteTime-1.md)
 
-[MessageAutoDeleteTime](MessageAutoDeleteTime.md)
+[MessageAutoDeleteTime](MessageAutoDeleteTime-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98119
+dist/generated/types.d.ts:100898

@@ -6,7 +6,9 @@
 
 # Type Alias: disableProxy()
 
-> **disableProxy**: (`parameters`) => [`Ok`](Ok.md)
+> **disableProxy**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Disables the currently enabled proxy. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101553
+dist/generated/types.d.ts:104474

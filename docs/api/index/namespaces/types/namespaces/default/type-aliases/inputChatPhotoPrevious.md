@@ -18,10 +18,10 @@ A previously used profile photo of the current user
 
 ### chat\_photo\_id
 
-> **chat\_photo\_id**: [`int64`](int64-1.md)
+> **chat\_photo\_id**: [`int64`](int64.md)
 
 Identifier of the current user's profile photo to reuse
 
 ## Defined in
 
-dist/generated/types.d.ts:7479
+dist/generated/types.d.ts:7545

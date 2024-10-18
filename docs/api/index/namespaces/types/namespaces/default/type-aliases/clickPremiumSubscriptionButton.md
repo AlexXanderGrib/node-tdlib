@@ -6,7 +6,9 @@
 
 # Type Alias: clickPremiumSubscriptionButton()
 
-> **clickPremiumSubscriptionButton**: (`parameters`) => [`Ok`](Ok.md)
+> **clickPremiumSubscriptionButton**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs TDLib that the user clicked Premium subscription button on the Premium features screen
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100546
+dist/generated/types.d.ts:103325

@@ -6,7 +6,9 @@
 
 # Type Alias: getChatFolderNewChats()
 
-> **getChatFolderNewChats**: (`parameters`) => [`Chats`](Chats.md)
+> **getChatFolderNewChats**: (`parameters`) => [`Chats`](Chats-1.md)
+
+Returns new chats added to a shareable chat folder by its owner. The method must be called at most once in getOption("chat_folder_new_chats_update_period") for the given chat folder
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Chats`](Chats.md)
+[`Chats`](Chats-1.md)
 
-[Chats](Chats.md)
+[Chats](Chats-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85072
+dist/generated/types.d.ts:87371

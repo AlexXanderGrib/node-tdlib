@@ -24,7 +24,7 @@ Fill of the background
 
 ### intensity
 
-> **intensity**: [`int32`](int32-1.md)
+> **intensity**: [`int32`](int32.md)
 
 Intensity of the pattern when it is shown above the filled background; 0-100
 
@@ -42,4 +42,4 @@ True, if the background needs to be slightly moved when device is tilted
 
 ## Defined in
 
-dist/generated/types.d.ts:43381
+dist/generated/types.d.ts:44907

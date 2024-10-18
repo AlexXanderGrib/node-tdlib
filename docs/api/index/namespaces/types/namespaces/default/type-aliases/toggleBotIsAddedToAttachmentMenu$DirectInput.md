@@ -20,7 +20,7 @@ Pass true if the current user allowed the bot to send them messages. Ignored if 
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Bot's user identifier
 
@@ -32,4 +32,4 @@ Pass true to add the bot to attachment menu; pass false to remove the bot from a
 
 ## Defined in
 
-dist/generated/types.d.ts:88611
+dist/generated/types.d.ts:90986

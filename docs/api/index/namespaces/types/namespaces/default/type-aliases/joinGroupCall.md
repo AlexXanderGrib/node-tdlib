@@ -6,7 +6,9 @@
 
 # Type Alias: joinGroupCall()
 
-> **joinGroupCall**: (`parameters`) => [`Text`](Text.md)
+> **joinGroupCall**: (`parameters`) => [`Text`](Text-1.md)
+
+Joins an active group call. Returns join response payload for tgcalls
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91067
+dist/generated/types.d.ts:93564

@@ -20,16 +20,16 @@ Chat emoji status has changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### emoji\_status?
 
-> `readonly` `optional` **emoji\_status**: [`emojiStatus$Input`](emojiStatus$Input-1.md) \| `null`
+> `readonly` `optional` **emoji\_status**: [`emojiStatus$Input`](emojiStatus$Input.md) \| `null`
 
 The new chat emoji status; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:53769
+dist/generated/types.d.ts:55385

@@ -14,7 +14,7 @@ Changes the editable username of a supergroup or channel, requires owner privile
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup or channel
 
@@ -26,4 +26,4 @@ New value of the username. Use an empty string to remove the username. The usern
 
 ## Defined in
 
-dist/generated/types.d.ts:95917
+dist/generated/types.d.ts:98686

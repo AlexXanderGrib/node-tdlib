@@ -18,16 +18,16 @@ A pinned forum topic was changed
 
 ### new\_topic\_info
 
-> **new\_topic\_info**: [`forumTopicInfo`](forumTopicInfo-1.md) \| `null`
+> **new\_topic\_info**: [`forumTopicInfo`](forumTopicInfo.md) \| `null`
 
 Information about the new pinned topic; may be null
 
 ### old\_topic\_info
 
-> **old\_topic\_info**: [`forumTopicInfo`](forumTopicInfo-1.md) \| `null`
+> **old\_topic\_info**: [`forumTopicInfo`](forumTopicInfo.md) \| `null`
 
 Information about the old pinned topic; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:40661
+dist/generated/types.d.ts:42055

@@ -24,4 +24,4 @@ The authentication code
 
 ## Defined in
 
-dist/generated/types.d.ts:47415
+dist/generated/types.d.ts:48941

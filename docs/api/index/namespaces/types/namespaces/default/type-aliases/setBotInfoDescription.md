@@ -6,7 +6,9 @@
 
 # Type Alias: setBotInfoDescription()
 
-> **setBotInfoDescription**: (`parameters`) => [`Ok`](Ok.md)
+> **setBotInfoDescription**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the text shown in the chat with a bot if the chat is empty. Can be called only if userTypeBot.can_be_edited == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95517
+dist/generated/types.d.ts:98286

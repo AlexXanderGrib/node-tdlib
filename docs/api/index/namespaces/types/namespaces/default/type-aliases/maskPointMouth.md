@@ -18,4 +18,4 @@ The mask is placed relatively to the mouth
 
 ## Defined in
 
-dist/generated/types.d.ts:4289
+dist/generated/types.d.ts:4335

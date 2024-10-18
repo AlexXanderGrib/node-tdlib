@@ -14,25 +14,25 @@ Downloads a file from the cloud. Download progress and completion of the downloa
 
 ### file\_id?
 
-> `readonly` `optional` **file\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **file\_id**: [`int32`](int32.md)
 
 Identifier of the file to download
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int53`](int53-1.md)
+> `readonly` `optional` **limit**: [`int53`](int53.md)
 
 Number of bytes which need to be downloaded starting from the "offset" position before the download will automatically be canceled; use 0 to download without a limit
 
 ### offset?
 
-> `readonly` `optional` **offset**: [`int53`](int53-1.md)
+> `readonly` `optional` **offset**: [`int53`](int53.md)
 
 The starting position from which the file needs to be downloaded
 
 ### priority?
 
-> `readonly` `optional` **priority**: [`int32`](int32-1.md)
+> `readonly` `optional` **priority**: [`int32`](int32.md)
 
 Priority of the download (1-32). The higher the priority, the earlier the file will be downloaded. If the priorities of two files are equal, then the last one for which downloadFile/addFileToDownloads was called will be downloaded first
 
@@ -44,4 +44,4 @@ Pass true to return response only after the file download has succeeded, has fai
 
 ## Defined in
 
-dist/generated/types.d.ts:88788
+dist/generated/types.d.ts:91163

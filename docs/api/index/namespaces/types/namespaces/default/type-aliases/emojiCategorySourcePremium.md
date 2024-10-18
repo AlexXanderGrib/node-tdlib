@@ -18,4 +18,4 @@ The category contains premium stickers that must be found by getPremiumStickers
 
 ## Defined in
 
-dist/generated/types.d.ts:31647
+dist/generated/types.d.ts:32779

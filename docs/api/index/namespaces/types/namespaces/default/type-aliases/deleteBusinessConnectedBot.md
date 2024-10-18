@@ -6,7 +6,9 @@
 
 # Type Alias: deleteBusinessConnectedBot()
 
-> **deleteBusinessConnectedBot**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteBusinessConnectedBot**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes the business bot that is connected to the current user account
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94659
+dist/generated/types.d.ts:97156

@@ -26,16 +26,16 @@ True, if the message is a pinned message with the specified content
 
 ### month\_count?
 
-> `readonly` `optional` **month\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **month\_count**: [`int32`](int32.md)
 
 Number of months the Telegram Premium subscription will be active after code activation; 0 for pinned message
 
 ### winner\_count?
 
-> `readonly` `optional` **winner\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **winner\_count**: [`int32`](int32.md)
 
 Number of users which will receive Telegram Premium subscription gift codes; 0 for pinned message
 
 ## Defined in
 
-dist/generated/types.d.ts:44630
+dist/generated/types.d.ts:46156

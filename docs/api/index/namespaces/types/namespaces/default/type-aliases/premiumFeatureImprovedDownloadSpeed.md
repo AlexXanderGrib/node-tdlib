@@ -18,4 +18,4 @@ Improved download speed
 
 ## Defined in
 
-dist/generated/types.d.ts:41549
+dist/generated/types.d.ts:42943

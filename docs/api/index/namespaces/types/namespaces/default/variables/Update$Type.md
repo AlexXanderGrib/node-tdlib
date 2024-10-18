@@ -18,6 +18,10 @@
 
 > `readonly` **ActiveEmojiReactions**: `"updateActiveEmojiReactions"`
 
+### ActiveLiveLocationMessages
+
+> `readonly` **ActiveLiveLocationMessages**: `"updateActiveLiveLocationMessages"`
+
 ### ActiveNotifications
 
 > `readonly` **ActiveNotifications**: `"updateActiveNotifications"`
@@ -378,13 +382,13 @@
 
 > `readonly` **NewBusinessMessage**: `"updateNewBusinessMessage"`
 
-### NewCallSignalingData
-
-> `readonly` **NewCallSignalingData**: `"updateNewCallSignalingData"`
-
 ### NewCallbackQuery
 
 > `readonly` **NewCallbackQuery**: `"updateNewCallbackQuery"`
+
+### NewCallSignalingData
+
+> `readonly` **NewCallSignalingData**: `"updateNewCallSignalingData"`
 
 ### NewChat
 
@@ -594,13 +598,13 @@
 
 > `readonly` **UserPrivacySettingRules**: `"updateUserPrivacySettingRules"`
 
-### UserStatus
-
-> `readonly` **UserStatus**: `"updateUserStatus"`
-
 ### UsersNearby
 
 > `readonly` **UsersNearby**: `"updateUsersNearby"`
+
+### UserStatus
+
+> `readonly` **UserStatus**: `"updateUserStatus"`
 
 ### WebAppMessageSent
 
@@ -608,4 +612,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:793
+dist/generated/types.d.ts:813

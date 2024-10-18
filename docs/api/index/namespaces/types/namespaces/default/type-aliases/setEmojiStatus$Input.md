@@ -18,10 +18,10 @@ Changes the emoji status of the current user; for Telegram Premium users only
 
 ### emoji\_status?
 
-> `readonly` `optional` **emoji\_status**: [`emojiStatus$Input`](emojiStatus$Input-1.md) \| `null`
+> `readonly` `optional` **emoji\_status**: [`emojiStatus$Input`](emojiStatus$Input.md) \| `null`
 
 New emoji status; pass null to switch to the default badge
 
 ## Defined in
 
-dist/generated/types.d.ts:94206
+dist/generated/types.d.ts:96703

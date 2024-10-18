@@ -14,25 +14,25 @@ Returns a list of service actions taken by chat members and administrators in th
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### filters?
 
-> `readonly` `optional` **filters**: [`chatEventLogFilters$Input`](chatEventLogFilters$Input-1.md) \| `null`
+> `readonly` `optional` **filters**: [`chatEventLogFilters$Input`](chatEventLogFilters$Input.md) \| `null`
 
 The types of events to return; pass null to get chat events of all types
 
 ### from\_event\_id?
 
-> `readonly` `optional` **from\_event\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **from\_event\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of an event from which to return results. Use 0 to get results from the latest events
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of events to return; up to 100
 
@@ -44,10 +44,10 @@ Search query by which to filter events
 
 ### user\_ids?
 
-> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **user\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 User identifiers by which to filter events. By default, events relating to all users will be returned
 
 ## Defined in
 
-dist/generated/types.d.ts:96703
+dist/generated/types.d.ts:99482

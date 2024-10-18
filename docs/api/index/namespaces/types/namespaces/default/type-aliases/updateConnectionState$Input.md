@@ -26,4 +26,4 @@ The new connection state
 
 ## Defined in
 
-dist/generated/types.d.ts:56486
+dist/generated/types.d.ts:58102

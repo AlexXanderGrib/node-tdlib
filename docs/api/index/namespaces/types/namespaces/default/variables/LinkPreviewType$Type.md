@@ -46,6 +46,10 @@
 
 > `readonly` **Document**: `"linkPreviewTypeDocument"`
 
+### EmbeddedAnimationPlayer
+
+> `readonly` **EmbeddedAnimationPlayer**: `"linkPreviewTypeEmbeddedAnimationPlayer"`
+
 ### EmbeddedAudioPlayer
 
 > `readonly` **EmbeddedAudioPlayer**: `"linkPreviewTypeEmbeddedAudioPlayer"`
@@ -124,4 +128,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1993
+dist/generated/types.d.ts:2024

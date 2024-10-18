@@ -20,10 +20,10 @@ The list of favorite stickers was updated
 
 ### sticker\_ids?
 
-> `readonly` `optional` **sticker\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **sticker\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 The new list of file identifiers of favorite stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:56240
+dist/generated/types.d.ts:57856

@@ -20,4 +20,4 @@ Pass true to clear the list of stickers recently attached to photo or video file
 
 ## Defined in
 
-dist/generated/types.d.ts:93247
+dist/generated/types.d.ts:95744

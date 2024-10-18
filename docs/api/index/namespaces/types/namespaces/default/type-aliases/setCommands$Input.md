@@ -18,7 +18,7 @@ Sets the list of commands supported by the bot for the given user scope and lang
 
 ### commands?
 
-> `readonly` `optional` **commands**: [`vector$Input`](vector$Input.md)\<[`botCommand$Input`](botCommand$Input-1.md)\>
+> `readonly` `optional` **commands**: [`vector$Input`](vector$Input.md)\<[`botCommand$Input`](botCommand$Input.md)\>
 
 List of the bot's commands
 
@@ -36,4 +36,4 @@ The scope to which the commands are relevant; pass null to change commands in th
 
 ## Defined in
 
-dist/generated/types.d.ts:94913
+dist/generated/types.d.ts:97410

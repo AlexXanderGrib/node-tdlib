@@ -26,7 +26,7 @@ If non-empty, new text of the button in forwarded messages
 
 ### id?
 
-> `readonly` `optional` **id**: [`int53`](int53-1.md)
+> `readonly` `optional` **id**: [`int53`](int53.md)
 
 Unique button identifier
 
@@ -38,4 +38,4 @@ An HTTP URL to pass to getLoginUrlInfo
 
 ## Defined in
 
-dist/generated/types.d.ts:17534
+dist/generated/types.d.ts:18126

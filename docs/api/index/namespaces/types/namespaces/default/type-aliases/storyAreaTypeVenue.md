@@ -18,10 +18,10 @@ An area pointing to a venue
 
 ### venue
 
-> **venue**: [`venue`](venue-1.md)
+> **venue**: [`venue`](venue.md)
 
 Information about the venue
 
 ## Defined in
 
-dist/generated/types.d.ts:31903
+dist/generated/types.d.ts:33069

@@ -24,4 +24,4 @@ Pass true to delete the messages for all users
 
 ## Defined in
 
-dist/generated/types.d.ts:77061
+dist/generated/types.d.ts:79087

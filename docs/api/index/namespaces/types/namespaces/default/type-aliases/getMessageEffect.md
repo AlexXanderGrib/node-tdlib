@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageEffect()
 
-> **getMessageEffect**: (`parameters`) => [`MessageEffect`](MessageEffect.md)
+> **getMessageEffect**: (`parameters`) => [`MessageEffect`](MessageEffect-1.md)
+
+Returns information about a message effect. Returns a 404 error if the effect is not found
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageEffect`](MessageEffect.md)
+[`MessageEffect`](MessageEffect-1.md)
 
-[MessageEffect](MessageEffect.md)
+[MessageEffect](MessageEffect-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81622
+dist/generated/types.d.ts:83815

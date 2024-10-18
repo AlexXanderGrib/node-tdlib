@@ -6,7 +6,9 @@
 
 # Type Alias: getChatInviteLinkCounts()
 
-> **getChatInviteLinkCounts**: (`parameters`) => [`ChatInviteLinkCounts`](ChatInviteLinkCounts.md)
+> **getChatInviteLinkCounts**: (`parameters`) => [`ChatInviteLinkCounts`](ChatInviteLinkCounts-1.md)
+
+Returns the list of chat administrators with number of their invite links. Requires owner privileges in the chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatInviteLinkCounts`](ChatInviteLinkCounts.md)
+[`ChatInviteLinkCounts`](ChatInviteLinkCounts-1.md)
 
-[ChatInviteLinkCounts](ChatInviteLinkCounts.md)
+[ChatInviteLinkCounts](ChatInviteLinkCounts-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89903
+dist/generated/types.d.ts:92390

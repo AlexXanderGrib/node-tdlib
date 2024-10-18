@@ -6,7 +6,9 @@
 
 # Type Alias: setDefaultGroupAdministratorRights()
 
-> **setDefaultGroupAdministratorRights**: (`parameters`) => [`Ok`](Ok.md)
+> **setDefaultGroupAdministratorRights**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets default administrator rights for adding the bot to basic group and supergroup chats; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95127
+dist/generated/types.d.ts:97624

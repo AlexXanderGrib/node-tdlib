@@ -24,4 +24,4 @@ Payment form URL
 
 ## Defined in
 
-dist/generated/types.d.ts:23001
+dist/generated/types.d.ts:23761

@@ -20,4 +20,4 @@ A spoiler text
 
 ## Defined in
 
-dist/generated/types.d.ts:28653
+dist/generated/types.d.ts:29527

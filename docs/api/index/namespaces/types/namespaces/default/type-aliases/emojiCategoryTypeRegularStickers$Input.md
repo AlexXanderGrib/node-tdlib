@@ -20,4 +20,4 @@ The category must be used by default for regular sticker selection. It may conta
 
 ## Defined in
 
-dist/generated/types.d.ts:31761
+dist/generated/types.d.ts:32893

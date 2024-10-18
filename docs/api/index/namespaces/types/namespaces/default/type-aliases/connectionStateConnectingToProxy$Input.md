@@ -20,4 +20,4 @@ Establishing a connection with a proxy server
 
 ## Defined in
 
-dist/generated/types.d.ts:50009
+dist/generated/types.d.ts:51593

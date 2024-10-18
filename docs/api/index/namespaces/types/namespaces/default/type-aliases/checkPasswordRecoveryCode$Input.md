@@ -24,4 +24,4 @@ Recovery code to check
 
 ## Defined in
 
-dist/generated/types.d.ts:74166
+dist/generated/types.d.ts:76154

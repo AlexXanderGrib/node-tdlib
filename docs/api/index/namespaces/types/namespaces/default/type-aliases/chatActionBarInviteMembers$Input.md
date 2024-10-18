@@ -20,4 +20,4 @@ The chat is a recently created group chat to which new members can be invited
 
 ## Defined in
 
-dist/generated/types.d.ts:16989
+dist/generated/types.d.ts:17581

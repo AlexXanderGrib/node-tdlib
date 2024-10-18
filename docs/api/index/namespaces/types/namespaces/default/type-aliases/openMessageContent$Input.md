@@ -20,16 +20,16 @@ Informs TDLib that the message content has been opened (e.g., the user has opene
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier of the message
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the message with the opened content
 
 ## Defined in
 
-dist/generated/types.d.ts:83739
+dist/generated/types.d.ts:86038

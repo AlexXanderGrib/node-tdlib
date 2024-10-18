@@ -20,13 +20,13 @@ A forwarded message
 
 ### copy\_options?
 
-> `readonly` `optional` **copy\_options**: [`messageCopyOptions$Input`](messageCopyOptions$Input-1.md) \| `null`
+> `readonly` `optional` **copy\_options**: [`messageCopyOptions$Input`](messageCopyOptions$Input.md) \| `null`
 
 Options to be used to copy content of the message without reference to the original sender; pass null to forward the message as usual
 
 ### from\_chat\_id?
 
-> `readonly` `optional` **from\_chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **from\_chat\_id**: [`int53`](int53.md)
 
 Identifier for the chat this forwarded message came from
 
@@ -38,10 +38,10 @@ True, if a game message is being shared from a launched game; applies only to ga
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message to forward. A message can be forwarded only if message.can_be_forwarded
+Identifier of the message to forward. A message can be forwarded only if messageProperties.can_be_forwarded
 
 ## Defined in
 
-dist/generated/types.d.ts:30439
+dist/generated/types.d.ts:31313

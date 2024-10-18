@@ -24,4 +24,4 @@ JSON-encoded push notification payload
 
 ## Defined in
 
-dist/generated/types.d.ts:97673
+dist/generated/types.d.ts:100452

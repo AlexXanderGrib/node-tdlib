@@ -20,4 +20,4 @@ A rule to restrict all users from doing something
 
 ## Defined in
 
-dist/generated/types.d.ts:46077
+dist/generated/types.d.ts:47603

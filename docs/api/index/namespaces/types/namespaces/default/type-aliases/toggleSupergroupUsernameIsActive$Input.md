@@ -26,7 +26,7 @@ Pass true to activate the username; pass false to disable it
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup or channel
 
@@ -38,4 +38,4 @@ The username to change
 
 ## Defined in
 
-dist/generated/types.d.ts:95941
+dist/generated/types.d.ts:98710

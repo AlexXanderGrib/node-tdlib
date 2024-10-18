@@ -6,7 +6,9 @@
 
 # Type Alias: removeBusinessConnectedBotFromChat()
 
-> **removeBusinessConnectedBotFromChat**: (`parameters`) => [`Ok`](Ok.md)
+> **removeBusinessConnectedBotFromChat**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes the connected business bot from a specific chat by adding the chat to businessRecipients.excluded_chat_ids
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94725
+dist/generated/types.d.ts:97222

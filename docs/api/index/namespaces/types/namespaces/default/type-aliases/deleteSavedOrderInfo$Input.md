@@ -18,4 +18,4 @@ Deletes saved order information
 
 ## Defined in
 
-dist/generated/types.d.ts:96981
+dist/generated/types.d.ts:99760

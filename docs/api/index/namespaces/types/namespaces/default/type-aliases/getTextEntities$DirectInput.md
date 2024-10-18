@@ -20,4 +20,4 @@ The text in which to look for entities
 
 ## Defined in
 
-dist/generated/types.d.ts:81685
+dist/generated/types.d.ts:83878

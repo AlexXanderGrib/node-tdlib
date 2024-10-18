@@ -6,7 +6,9 @@
 
 # Type Alias: getFileExtension()
 
-> **getFileExtension**: (`parameters`) => [`Text`](Text.md)
+> **getFileExtension**: (`parameters`) => [`Text`](Text-1.md)
+
+Returns the extension of a file, guessed by its MIME type. Returns an empty string on failure. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81882
+dist/generated/types.d.ts:84075

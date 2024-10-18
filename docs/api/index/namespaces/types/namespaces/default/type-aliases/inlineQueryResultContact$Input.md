@@ -20,7 +20,7 @@ Represents a user contact
 
 ### contact?
 
-> `readonly` `optional` **contact**: [`contact$Input`](contact$Input-1.md)
+> `readonly` `optional` **contact**: [`contact$Input`](contact$Input.md)
 
 A user contact
 
@@ -32,10 +32,10 @@ Unique identifier of the query result
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`thumbnail$Input`](thumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`thumbnail$Input`](thumbnail$Input.md) \| `null`
 
 Result thumbnail in JPEG format; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:38364
+dist/generated/types.d.ts:39734

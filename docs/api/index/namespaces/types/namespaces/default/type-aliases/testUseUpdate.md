@@ -8,6 +8,8 @@
 
 > **testUseUpdate**: (`parameters`) => [`Update`](Update.md)
 
+Does nothing and ensures that the Update object is used; for testing only. This is an offline method. Can be called before authorization
+
 ## Parameters
 
 • **parameters**: [`testUseUpdate$Input`](testUseUpdate$Input.md)
@@ -22,4 +24,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:102284
+dist/generated/types.d.ts:105205

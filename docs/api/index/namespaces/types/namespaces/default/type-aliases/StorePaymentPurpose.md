@@ -6,7 +6,7 @@
 
 # Type Alias: StorePaymentPurpose
 
-> **StorePaymentPurpose**: [`storePaymentPurposePremiumSubscription`](storePaymentPurposePremiumSubscription.md) \| [`storePaymentPurposeGiftedPremium`](storePaymentPurposeGiftedPremium.md) \| [`storePaymentPurposePremiumGiftCodes`](storePaymentPurposePremiumGiftCodes.md) \| [`storePaymentPurposePremiumGiveaway`](storePaymentPurposePremiumGiveaway.md) \| [`storePaymentPurposeStars`](storePaymentPurposeStars.md)
+> **StorePaymentPurpose**: [`storePaymentPurposePremiumSubscription`](storePaymentPurposePremiumSubscription.md) \| [`storePaymentPurposeGiftedPremium`](storePaymentPurposeGiftedPremium.md) \| [`storePaymentPurposePremiumGiftCodes`](storePaymentPurposePremiumGiftCodes.md) \| [`storePaymentPurposePremiumGiveaway`](storePaymentPurposePremiumGiveaway.md) \| [`storePaymentPurposeStars`](storePaymentPurposeStars.md) \| [`storePaymentPurposeGiftedStars`](storePaymentPurposeGiftedStars.md)
 
 Any of:
 - [storePaymentPurposePremiumSubscription](storePaymentPurposePremiumSubscription.md)
@@ -14,7 +14,8 @@ Any of:
 - [storePaymentPurposePremiumGiftCodes](storePaymentPurposePremiumGiftCodes.md)
 - [storePaymentPurposePremiumGiveaway](storePaymentPurposePremiumGiveaway.md)
 - [storePaymentPurposeStars](storePaymentPurposeStars.md)
+- [storePaymentPurposeGiftedStars](storePaymentPurposeGiftedStars.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:64455
+dist/generated/types.d.ts:66272

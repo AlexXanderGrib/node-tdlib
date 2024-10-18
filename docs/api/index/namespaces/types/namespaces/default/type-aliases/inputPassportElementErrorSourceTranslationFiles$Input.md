@@ -20,10 +20,10 @@ The translation of the document contains an error. The error is considered resol
 
 ### file\_hashes?
 
-> `readonly` `optional` **file\_hashes**: [`vector$Input`](vector$Input.md)\<[`bytes$Input`](bytes$Input-1.md)\>
+> `readonly` `optional` **file\_hashes**: [`vector$Input`](vector$Input.md)\<[`bytes$Input`](bytes$Input.md)\>
 
 Current hashes of all files with the translation
 
 ## Defined in
 
-dist/generated/types.d.ts:25660
+dist/generated/types.d.ts:26420

@@ -6,7 +6,9 @@
 
 # Type Alias: searchStringsByPrefix()
 
-> **searchStringsByPrefix**: (`parameters`) => [`FoundPositions`](FoundPositions.md)
+> **searchStringsByPrefix**: (`parameters`) => [`FoundPositions`](FoundPositions-1.md)
+
+Searches specified query by word prefixes in the provided strings. Returns 0-based positions of strings that matched. Can be called synchronously
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FoundPositions`](FoundPositions.md)
+[`FoundPositions`](FoundPositions-1.md)
 
-[FoundPositions](FoundPositions.md)
+[FoundPositions](FoundPositions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101040
+dist/generated/types.d.ts:103961

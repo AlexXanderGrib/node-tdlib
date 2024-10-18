@@ -12,4 +12,4 @@ Returns default list of custom emoji stickers for placing on a profile photo
 
 ## Defined in
 
-dist/generated/types.d.ts:93582
+dist/generated/types.d.ts:96079

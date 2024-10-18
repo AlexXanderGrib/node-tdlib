@@ -20,10 +20,10 @@ The message was sent by a known user
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the user that sent the message
 
 ## Defined in
 
-dist/generated/types.d.ts:11976
+dist/generated/types.d.ts:12580

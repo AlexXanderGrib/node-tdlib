@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageLocally()
 
-> **getMessageLocally**: (`parameters`) => [`Message`](Message.md)
+> **getMessageLocally**: (`parameters`) => [`Message`](Message-1.md)
+
+Returns information about a message, if it is available without sending network request. This is an offline request
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74644
+dist/generated/types.d.ts:76632

@@ -26,10 +26,10 @@ True, if the message is a pinned message with the specified content
 
 ### video\_note?
 
-> `readonly` `optional` **video\_note**: [`videoNote$Input`](videoNote$Input-1.md) \| `null`
+> `readonly` `optional` **video\_note**: [`videoNote$Input`](videoNote$Input.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44839
+dist/generated/types.d.ts:46365

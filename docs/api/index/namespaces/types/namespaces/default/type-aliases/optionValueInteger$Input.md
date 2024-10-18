@@ -20,10 +20,10 @@ Represents an integer option
 
 ### value?
 
-> `readonly` `optional` **value**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **value**: [`int64$Input`](int64$Input.md)
 
 The value of the option
 
 ## Defined in
 
-dist/generated/types.d.ts:45690
+dist/generated/types.d.ts:47216

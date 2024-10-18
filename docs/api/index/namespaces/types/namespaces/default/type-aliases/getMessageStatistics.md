@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageStatistics()
 
-> **getMessageStatistics**: (`parameters`) => [`MessageStatistics`](MessageStatistics.md)
+> **getMessageStatistics**: (`parameters`) => [`MessageStatistics`](MessageStatistics-1.md)
+
+Returns detailed statistics about a message. Can be used only if messageProperties.can_get_statistics == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`MessageStatistics`](MessageStatistics.md)
+[`MessageStatistics`](MessageStatistics-1.md)
 
-[MessageStatistics](MessageStatistics.md)
+[MessageStatistics](MessageStatistics-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98635
+dist/generated/types.d.ts:101414

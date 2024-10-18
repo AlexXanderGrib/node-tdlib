@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's temporary registration
 
 ### temporary\_registration?
 
-> `readonly` `optional` **temporary\_registration**: [`personalDocument$Input`](personalDocument$Input-1.md)
+> `readonly` `optional` **temporary\_registration**: [`personalDocument$Input`](personalDocument$Input.md)
 
 Temporary registration
 
 ## Defined in
 
-dist/generated/types.d.ts:24594
+dist/generated/types.d.ts:25354

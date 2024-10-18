@@ -18,10 +18,10 @@ A profile photo was suggested to a user in a private chat
 
 ### photo
 
-> **photo**: [`chatPhoto`](chatPhoto-1.md)
+> **photo**: [`chatPhoto`](chatPhoto.md)
 
 The suggested chat photo. Use the method setProfilePhoto with inputChatPhotoPrevious to apply the photo
 
 ## Defined in
 
-dist/generated/types.d.ts:27409
+dist/generated/types.d.ts:28169

@@ -18,4 +18,4 @@ The session is running on a Windows device
 
 ## Defined in
 
-dist/generated/types.d.ts:46671
+dist/generated/types.d.ts:48197

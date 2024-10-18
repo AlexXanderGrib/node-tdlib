@@ -18,10 +18,10 @@ Returns the list of message sender identifiers, which can be used to send messag
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:78006
+dist/generated/types.d.ts:80015

@@ -20,10 +20,10 @@ The list of bots added to attachment or side menu has changed
 
 ### bots?
 
-> `readonly` `optional` **bots**: [`vector$Input`](vector$Input.md)\<[`attachmentMenuBot$Input`](attachmentMenuBot$Input-1.md)\>
+> `readonly` `optional` **bots**: [`vector$Input`](vector$Input.md)\<[`attachmentMenuBot$Input`](attachmentMenuBot$Input.md)\>
 
 The new list of bots. The bots must not be shown on scheduled messages screen
 
 ## Defined in
 
-dist/generated/types.d.ts:56592
+dist/generated/types.d.ts:58208

@@ -18,7 +18,7 @@ A data field contains an error. The error is considered resolved when the field'
 
 ### data\_hash
 
-> **data\_hash**: [`bytes`](bytes-1.md)
+> **data\_hash**: [`bytes`](bytes.md)
 
 Current data hash
 
@@ -30,4 +30,4 @@ Field name
 
 ## Defined in
 
-dist/generated/types.d.ts:25517
+dist/generated/types.d.ts:26277

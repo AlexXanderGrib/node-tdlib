@@ -18,16 +18,16 @@ A message with a live location was viewed. When the update is received, the appl
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat with the live location message
 
 ### message\_id
 
-> **message\_id**: [`int53`](int53-1.md)
+> **message\_id**: [`int53`](int53.md)
 
 Identifier of the message with live location
 
 ## Defined in
 
-dist/generated/types.d.ts:53157
+dist/generated/types.d.ts:54773

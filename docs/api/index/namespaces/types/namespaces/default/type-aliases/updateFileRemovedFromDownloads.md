@@ -18,16 +18,16 @@ A file was removed from the file download list. This update is sent only after f
 
 ### counts
 
-> **counts**: [`downloadedFileCounts`](downloadedFileCounts-1.md)
+> **counts**: [`downloadedFileCounts`](downloadedFileCounts.md)
 
 New number of being downloaded and recently downloaded files found
 
 ### file\_id
 
-> **file\_id**: [`int32`](int32-1.md)
+> **file\_id**: [`int32`](int32.md)
 
 File identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:55485
+dist/generated/types.d.ts:57101

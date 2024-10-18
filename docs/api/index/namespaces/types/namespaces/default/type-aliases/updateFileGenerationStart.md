@@ -30,7 +30,7 @@ The path to a file that must be created and where the new file is generated
 
 ### generation\_id
 
-> **generation\_id**: [`int64`](int64-1.md)
+> **generation\_id**: [`int64`](int64.md)
 
 Unique identifier for the generation process
 
@@ -42,4 +42,4 @@ The path to a file from which a new file is generated; may be empty
 
 ## Defined in
 
-dist/generated/types.d.ts:55275
+dist/generated/types.d.ts:56891

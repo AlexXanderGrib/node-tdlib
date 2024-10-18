@@ -6,7 +6,9 @@
 
 # Type Alias: getChatActiveStories()
 
-> **getChatActiveStories**: (`parameters`) => [`ChatActiveStories`](ChatActiveStories.md)
+> **getChatActiveStories**: (`parameters`) => [`ChatActiveStories`](ChatActiveStories-1.md)
+
+Returns the list of active stories posted by the given chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatActiveStories`](ChatActiveStories.md)
+[`ChatActiveStories`](ChatActiveStories-1.md)
 
-[ChatActiveStories](ChatActiveStories.md)
+[ChatActiveStories](ChatActiveStories-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87630
+dist/generated/types.d.ts:90005

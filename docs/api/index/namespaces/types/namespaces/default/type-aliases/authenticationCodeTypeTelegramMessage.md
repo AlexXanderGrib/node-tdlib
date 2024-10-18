@@ -18,10 +18,10 @@ A digit-only authentication code is delivered via a private Telegram message, wh
 
 ### length
 
-> **length**: [`int32`](int32-1.md)
+> **length**: [`int32`](int32.md)
 
 Length of the code
 
 ## Defined in
 
-dist/generated/types.d.ts:2493
+dist/generated/types.d.ts:2539

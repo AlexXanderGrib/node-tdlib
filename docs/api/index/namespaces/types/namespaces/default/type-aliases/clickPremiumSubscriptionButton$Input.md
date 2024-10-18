@@ -18,4 +18,4 @@ Informs TDLib that the user clicked Premium subscription button on the Premium f
 
 ## Defined in
 
-dist/generated/types.d.ts:100533
+dist/generated/types.d.ts:103312

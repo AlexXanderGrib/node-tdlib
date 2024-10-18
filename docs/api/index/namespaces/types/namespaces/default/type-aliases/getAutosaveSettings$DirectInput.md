@@ -12,4 +12,4 @@ Returns autosave settings for the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:99131
+dist/generated/types.d.ts:101910

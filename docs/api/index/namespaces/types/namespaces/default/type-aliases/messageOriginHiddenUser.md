@@ -24,4 +24,4 @@ Name of the sender
 
 ## Defined in
 
-dist/generated/types.d.ts:12265
+dist/generated/types.d.ts:12869

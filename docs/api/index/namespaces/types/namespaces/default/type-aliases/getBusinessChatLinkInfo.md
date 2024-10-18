@@ -6,7 +6,9 @@
 
 # Type Alias: getBusinessChatLinkInfo()
 
-> **getBusinessChatLinkInfo**: (`parameters`) => [`BusinessChatLinkInfo`](BusinessChatLinkInfo.md)
+> **getBusinessChatLinkInfo**: (`parameters`) => [`BusinessChatLinkInfo`](BusinessChatLinkInfo-1.md)
+
+Returns information about a business chat link
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BusinessChatLinkInfo`](BusinessChatLinkInfo.md)
+[`BusinessChatLinkInfo`](BusinessChatLinkInfo-1.md)
 
-[BusinessChatLinkInfo](BusinessChatLinkInfo.md)
+[BusinessChatLinkInfo](BusinessChatLinkInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94864
+dist/generated/types.d.ts:97361

@@ -10,6 +10,14 @@
 
 ## Type declaration
 
+### GiftedStars
+
+> `readonly` **GiftedStars**: `"telegramPaymentPurposeGiftedStars"`
+
+### JoinChat
+
+> `readonly` **JoinChat**: `"telegramPaymentPurposeJoinChat"`
+
 ### PremiumGiftCodes
 
 > `readonly` **PremiumGiftCodes**: `"telegramPaymentPurposePremiumGiftCodes"`
@@ -24,4 +32,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1362
+dist/generated/types.d.ts:1386

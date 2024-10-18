@@ -14,4 +14,4 @@ Closes the TDLib instance, destroying all local data without a proper logout. Th
 
 ## Defined in
 
-dist/generated/types.d.ts:73765
+dist/generated/types.d.ts:75753

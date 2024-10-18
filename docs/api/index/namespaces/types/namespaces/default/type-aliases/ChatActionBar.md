@@ -19,4 +19,4 @@ Any of:
 
 ## Defined in
 
-dist/generated/types.d.ts:61152
+dist/generated/types.d.ts:62892

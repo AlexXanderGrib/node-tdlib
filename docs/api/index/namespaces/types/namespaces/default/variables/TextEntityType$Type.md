@@ -100,4 +100,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1781
+dist/generated/types.d.ts:1811

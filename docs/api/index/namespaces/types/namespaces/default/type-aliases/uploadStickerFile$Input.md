@@ -32,10 +32,10 @@ Sticker format
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Sticker file owner; ignored for regular users
 
 ## Defined in
 
-dist/generated/types.d.ts:99668
+dist/generated/types.d.ts:102447

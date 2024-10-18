@@ -18,4 +18,4 @@ The 2-step verification needs to be enabled first
 
 ## Defined in
 
-dist/generated/types.d.ts:43809
+dist/generated/types.d.ts:45335

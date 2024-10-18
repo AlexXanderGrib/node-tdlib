@@ -18,16 +18,16 @@ A forum topic was edited
 
 ### new\_topic\_info
 
-> **new\_topic\_info**: [`forumTopicInfo`](forumTopicInfo-1.md)
+> **new\_topic\_info**: [`forumTopicInfo`](forumTopicInfo.md)
 
 New information about the topic
 
 ### old\_topic\_info
 
-> **old\_topic\_info**: [`forumTopicInfo`](forumTopicInfo-1.md)
+> **old\_topic\_info**: [`forumTopicInfo`](forumTopicInfo.md)
 
 Old information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40555
+dist/generated/types.d.ts:41949

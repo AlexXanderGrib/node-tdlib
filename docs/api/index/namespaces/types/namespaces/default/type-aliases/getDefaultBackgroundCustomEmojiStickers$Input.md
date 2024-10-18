@@ -18,4 +18,4 @@ Returns default list of custom emoji stickers for reply background
 
 ## Defined in
 
-dist/generated/types.d.ts:93593
+dist/generated/types.d.ts:96090

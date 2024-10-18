@@ -18,10 +18,10 @@ Returns premium stickers from regular sticker sets
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of stickers to be returned; 0-100
 
 ## Defined in
 
-dist/generated/types.d.ts:92690
+dist/generated/types.d.ts:95187

@@ -20,4 +20,4 @@ The user is recording a voice note
 
 ## Defined in
 
-dist/generated/types.d.ts:30763
+dist/generated/types.d.ts:31895

@@ -30,10 +30,10 @@ True, if the message is a pinned message with the specified content
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md) \| `null`
+> **sticker**: [`sticker`](sticker.md) \| `null`
 
 Message content; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:44665
+dist/generated/types.d.ts:46191

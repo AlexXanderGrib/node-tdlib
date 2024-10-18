@@ -20,10 +20,10 @@ One of the files containing the translation of the document contains an error. T
 
 ### file\_hash?
 
-> `readonly` `optional` **file\_hash**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **file\_hash**: [`bytes$Input`](bytes$Input.md)
 
 Current hash of the file containing the translation
 
 ## Defined in
 
-dist/generated/types.d.ts:25636
+dist/generated/types.d.ts:26396

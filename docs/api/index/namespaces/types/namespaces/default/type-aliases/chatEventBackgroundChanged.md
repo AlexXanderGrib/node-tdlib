@@ -18,16 +18,16 @@ The chat background was changed
 
 ### new\_background
 
-> **new\_background**: [`chatBackground`](chatBackground-1.md) \| `null`
+> **new\_background**: [`chatBackground`](chatBackground.md) \| `null`
 
 New background; may be null if none
 
 ### old\_background
 
-> **old\_background**: [`chatBackground`](chatBackground-1.md) \| `null`
+> **old\_background**: [`chatBackground`](chatBackground.md) \| `null`
 
 Previous background; may be null if none
 
 ## Defined in
 
-dist/generated/types.d.ts:39581
+dist/generated/types.d.ts:40951

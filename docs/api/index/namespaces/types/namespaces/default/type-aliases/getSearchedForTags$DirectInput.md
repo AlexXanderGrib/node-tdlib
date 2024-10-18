@@ -14,7 +14,7 @@ Returns recently searched for hashtags or cashtags by their prefix
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of items to be returned
 
@@ -26,4 +26,4 @@ Prefix of hashtags or cashtags to return
 
 ## Defined in
 
-dist/generated/types.d.ts:76983
+dist/generated/types.d.ts:79009

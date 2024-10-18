@@ -20,13 +20,13 @@ A voice note message
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 Voice note caption; may be null if empty; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Duration of the voice note, in seconds
 
@@ -44,10 +44,10 @@ Voice note to be sent. The voice note must be encoded with the Opus codec and st
 
 ### waveform?
 
-> `readonly` `optional` **waveform**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **waveform**: [`bytes$Input`](bytes$Input.md)
 
 Waveform representation of the voice note in 5-bit format
 
 ## Defined in
 
-dist/generated/types.d.ts:29948
+dist/generated/types.d.ts:30822

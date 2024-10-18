@@ -24,13 +24,13 @@ The input background to use; pass null to create a new filled or chat theme back
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### dark\_theme\_dimming?
 
-> `readonly` `optional` **dark\_theme\_dimming**: [`int32`](int32-1.md)
+> `readonly` `optional` **dark\_theme\_dimming**: [`int32`](int32.md)
 
 Dimming of the background in dark themes, as a percentage; 0-100. Applied only to Wallpaper and Fill types of background
 
@@ -50,4 +50,4 @@ Background type; pass null to use default background type for the chosen backgro
 
 ## Defined in
 
-dist/generated/types.d.ts:85455
+dist/generated/types.d.ts:87754

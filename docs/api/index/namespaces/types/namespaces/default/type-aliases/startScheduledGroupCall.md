@@ -6,7 +6,9 @@
 
 # Type Alias: startScheduledGroupCall()
 
-> **startScheduledGroupCall**: (`parameters`) => [`Ok`](Ok.md)
+> **startScheduledGroupCall**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Starts a scheduled group call
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90941
+dist/generated/types.d.ts:93438

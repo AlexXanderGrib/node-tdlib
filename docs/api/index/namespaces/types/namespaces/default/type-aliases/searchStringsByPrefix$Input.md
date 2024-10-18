@@ -18,7 +18,7 @@ Searches specified query by word prefixes in the provided strings. Returns 0-bas
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of objects to return
 
@@ -42,4 +42,4 @@ The strings to search in for the query
 
 ## Defined in
 
-dist/generated/types.d.ts:100986
+dist/generated/types.d.ts:103907

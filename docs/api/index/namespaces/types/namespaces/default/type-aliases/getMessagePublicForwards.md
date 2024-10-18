@@ -6,7 +6,9 @@
 
 # Type Alias: getMessagePublicForwards()
 
-> **getMessagePublicForwards**: (`parameters`) => [`PublicForwards`](PublicForwards.md)
+> **getMessagePublicForwards**: (`parameters`) => [`PublicForwards`](PublicForwards-1.md)
+
+Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PublicForwards`](PublicForwards.md)
+[`PublicForwards`](PublicForwards-1.md)
 
-[PublicForwards](PublicForwards.md)
+[PublicForwards](PublicForwards-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98693
+dist/generated/types.d.ts:101472

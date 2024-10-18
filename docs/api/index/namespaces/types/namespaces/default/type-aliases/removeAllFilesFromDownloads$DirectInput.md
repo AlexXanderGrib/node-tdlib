@@ -32,4 +32,4 @@ Pass true to remove only completed downloads
 
 ## Defined in
 
-dist/generated/types.d.ts:89426
+dist/generated/types.d.ts:91801

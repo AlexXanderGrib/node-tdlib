@@ -6,7 +6,9 @@
 
 # Type Alias: checkPremiumGiftCode()
 
-> **checkPremiumGiftCode**: (`parameters`) => [`PremiumGiftCodeInfo`](PremiumGiftCodeInfo.md)
+> **checkPremiumGiftCode**: (`parameters`) => [`PremiumGiftCodeInfo`](PremiumGiftCodeInfo-1.md)
+
+Return information about a Telegram Premium gift code
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PremiumGiftCodeInfo`](PremiumGiftCodeInfo.md)
+[`PremiumGiftCodeInfo`](PremiumGiftCodeInfo-1.md)
 
-[PremiumGiftCodeInfo](PremiumGiftCodeInfo.md)
+[PremiumGiftCodeInfo](PremiumGiftCodeInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100619
+dist/generated/types.d.ts:103398

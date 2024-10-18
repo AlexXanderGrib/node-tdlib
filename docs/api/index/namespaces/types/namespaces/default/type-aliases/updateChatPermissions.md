@@ -18,16 +18,16 @@ Chat permissions were changed
 
 ### chat\_id
 
-> **chat\_id**: [`int53`](int53-1.md)
+> **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### permissions
 
-> **permissions**: [`chatPermissions`](chatPermissions-1.md)
+> **permissions**: [`chatPermissions`](chatPermissions.md)
 
 The new chat permissions
 
 ## Defined in
 
-dist/generated/types.d.ts:53347
+dist/generated/types.d.ts:54963

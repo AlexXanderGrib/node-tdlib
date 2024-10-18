@@ -6,7 +6,9 @@
 
 # Type Alias: getVideoChatRtmpUrl()
 
-> **getVideoChatRtmpUrl**: (`parameters`) => [`RtmpUrl`](RtmpUrl.md)
+> **getVideoChatRtmpUrl**: (`parameters`) => [`RtmpUrl`](RtmpUrl-1.md)
+
+Returns RTMP URL for streaming to the chat; requires owner privileges
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`RtmpUrl`](RtmpUrl.md)
+[`RtmpUrl`](RtmpUrl-1.md)
 
-[RtmpUrl](RtmpUrl.md)
+[RtmpUrl](RtmpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90857
+dist/generated/types.d.ts:93354

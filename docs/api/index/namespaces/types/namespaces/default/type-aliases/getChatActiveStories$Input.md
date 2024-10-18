@@ -18,10 +18,10 @@ Returns the list of active stories posted by the given chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:87606
+dist/generated/types.d.ts:89981

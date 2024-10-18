@@ -24,4 +24,4 @@ Pass true to enable sponsored messages for the current user; false to disable th
 
 ## Defined in
 
-dist/generated/types.d.ts:94262
+dist/generated/types.d.ts:96759

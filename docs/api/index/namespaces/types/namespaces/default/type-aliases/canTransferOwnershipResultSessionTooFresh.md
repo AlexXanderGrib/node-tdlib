@@ -18,10 +18,10 @@ The session was created recently, user needs to wait
 
 ### retry\_after
 
-> **retry\_after**: [`int32`](int32-1.md)
+> **retry\_after**: [`int32`](int32.md)
 
 Time left before the session can be used to transfer ownership of a chat, in seconds
 
 ## Defined in
 
-dist/generated/types.d.ts:43847
+dist/generated/types.d.ts:45373

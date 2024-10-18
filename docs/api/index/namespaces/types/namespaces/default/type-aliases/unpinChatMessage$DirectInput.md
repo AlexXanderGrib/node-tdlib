@@ -14,16 +14,16 @@ Removes a pinned message from a chat; requires can_pin_messages member right if 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
 Identifier of the removed pinned message
 
 ## Defined in
 
-dist/generated/types.d.ts:86189
+dist/generated/types.d.ts:88488

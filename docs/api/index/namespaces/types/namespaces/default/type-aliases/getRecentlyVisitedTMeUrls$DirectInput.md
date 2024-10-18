@@ -20,4 +20,4 @@ Google Play referrer to identify the user
 
 ## Defined in
 
-dist/generated/types.d.ts:97712
+dist/generated/types.d.ts:100491

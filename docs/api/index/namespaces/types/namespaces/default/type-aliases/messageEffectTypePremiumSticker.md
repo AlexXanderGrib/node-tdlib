@@ -18,10 +18,10 @@ An effect from a premium sticker
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md)
+> **sticker**: [`sticker`](sticker.md)
 
 The premium sticker. The effect can be found at sticker.full_type.premium_animation
 
 ## Defined in
 
-dist/generated/types.d.ts:12871
+dist/generated/types.d.ts:13573

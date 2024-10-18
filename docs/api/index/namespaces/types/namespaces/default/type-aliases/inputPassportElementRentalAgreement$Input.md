@@ -20,10 +20,10 @@ A Telegram Passport element to be saved containing the user's rental agreement
 
 ### rental\_agreement?
 
-> `readonly` `optional` **rental\_agreement**: [`inputPersonalDocument$Input`](inputPersonalDocument$Input-1.md)
+> `readonly` `optional` **rental\_agreement**: [`inputPersonalDocument$Input`](inputPersonalDocument$Input.md)
 
 The rental agreement to be saved
 
 ## Defined in
 
-dist/generated/types.d.ts:24858
+dist/generated/types.d.ts:25618

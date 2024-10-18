@@ -28,10 +28,10 @@ If true, the chat was automatically archived and can be moved back to the main c
 
 ### distance?
 
-> `readonly` `optional` **distance**: [`int32`](int32-1.md)
+> `readonly` `optional` **distance**: [`int32`](int32.md)
 
 If non-negative, the current user was found by the other user through searchChatsNearby and this is the distance between the users
 
 ## Defined in
 
-dist/generated/types.d.ts:17017
+dist/generated/types.d.ts:17609

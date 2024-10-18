@@ -20,16 +20,16 @@ The chat photo was changed
 
 ### new\_photo?
 
-> `readonly` `optional` **new\_photo**: [`chatPhoto$Input`](chatPhoto$Input-1.md) \| `null`
+> `readonly` `optional` **new\_photo**: [`chatPhoto$Input`](chatPhoto$Input.md) \| `null`
 
 New chat photo value; may be null
 
 ### old\_photo?
 
-> `readonly` `optional` **old\_photo**: [`chatPhoto$Input`](chatPhoto$Input-1.md) \| `null`
+> `readonly` `optional` **old\_photo**: [`chatPhoto$Input`](chatPhoto$Input.md) \| `null`
 
 Previous chat photo value; may be null
 
 ## Defined in
 
-dist/generated/types.d.ts:39837
+dist/generated/types.d.ts:41207

@@ -22,4 +22,4 @@ The new network type; pass null to set network type to networkTypeOther
 
 ## Defined in
 
-dist/generated/types.d.ts:98978
+dist/generated/types.d.ts:101757

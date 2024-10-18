@@ -26,4 +26,4 @@ URL to be passed to getMessageLinkInfo
 
 ## Defined in
 
-dist/generated/types.d.ts:47937
+dist/generated/types.d.ts:49557

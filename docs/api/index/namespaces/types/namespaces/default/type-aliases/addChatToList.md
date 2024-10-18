@@ -6,7 +6,9 @@
 
 # Type Alias: addChatToList()
 
-> **addChatToList**: (`parameters`) => [`Ok`](Ok.md)
+> **addChatToList**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive chat lists, so it is automatically removed from another one if needed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:84479
+dist/generated/types.d.ts:86778

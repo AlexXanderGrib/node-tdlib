@@ -6,7 +6,9 @@
 
 # Type Alias: setAlarm()
 
-> **setAlarm**: (`parameters`) => [`Ok`](Ok.md)
+> **setAlarm**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Succeeds after a specified amount of time has passed. Can be called before initialization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:101144
+dist/generated/types.d.ts:104065

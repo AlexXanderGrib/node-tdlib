@@ -50,10 +50,10 @@ True, if the application needs to resize the keyboard vertically
 
 ### rows?
 
-> `readonly` `optional` **rows**: [`vector$Input`](vector$Input.md)\<[`vector$Input`](vector$Input.md)\<[`keyboardButton$Input`](keyboardButton$Input-1.md)\>\>
+> `readonly` `optional` **rows**: [`vector$Input`](vector$Input.md)\<[`vector$Input`](vector$Input.md)\<[`keyboardButton$Input`](keyboardButton$Input.md)\>\>
 
 A list of rows of bot keyboard buttons
 
 ## Defined in
 
-dist/generated/types.d.ts:17843
+dist/generated/types.d.ts:18435

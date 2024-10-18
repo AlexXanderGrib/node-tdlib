@@ -14,7 +14,7 @@ Deletes an invite link for a chat folder
 
 ### chat\_folder\_id?
 
-> `readonly` `optional` **chat\_folder\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **chat\_folder\_id**: [`int32`](int32.md)
 
 Chat folder identifier
 
@@ -26,4 +26,4 @@ Invite link to be deleted
 
 ## Defined in
 
-dist/generated/types.d.ts:84960
+dist/generated/types.d.ts:87259

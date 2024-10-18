@@ -20,10 +20,10 @@ Pass true to get only locally available information without sending network requ
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the other user
 
 ## Defined in
 
-dist/generated/types.d.ts:97901
+dist/generated/types.d.ts:100680

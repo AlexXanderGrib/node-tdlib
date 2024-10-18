@@ -44,19 +44,19 @@ Extended media attached to the invoice; may be null if none
 
 ### paid\_media\_caption?
 
-> `readonly` `optional` **paid\_media\_caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **paid\_media\_caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 Extended media caption; may be null if none
 
 ### product\_info?
 
-> `readonly` `optional` **product\_info**: [`productInfo$Input`](productInfo$Input-1.md)
+> `readonly` `optional` **product\_info**: [`productInfo$Input`](productInfo$Input.md)
 
 Information about the product
 
 ### receipt\_message\_id?
 
-> `readonly` `optional` **receipt\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **receipt\_message\_id**: [`int53`](int53.md)
 
 The identifier of the message with the receipt, after the product has been purchased
 
@@ -68,10 +68,10 @@ Unique invoice bot start_parameter to be passed to getInternalLink
 
 ### total\_amount?
 
-> `readonly` `optional` **total\_amount**: [`int53`](int53-1.md)
+> `readonly` `optional` **total\_amount**: [`int53`](int53.md)
 
 Product total price in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:26654
+dist/generated/types.d.ts:27414

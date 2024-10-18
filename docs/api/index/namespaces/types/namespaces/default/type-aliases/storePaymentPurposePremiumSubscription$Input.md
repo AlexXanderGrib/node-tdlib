@@ -32,4 +32,4 @@ Pass true if this is an upgrade from a monthly subscription to early subscriptio
 
 ## Defined in
 
-dist/generated/types.d.ts:42499
+dist/generated/types.d.ts:43893

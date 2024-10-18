@@ -14,10 +14,10 @@ Changes the database encryption key. Usually the encryption key is never changed
 
 ### new\_encryption\_key?
 
-> `readonly` `optional` **new\_encryption\_key**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **new\_encryption\_key**: [`bytes$Input`](bytes$Input.md)
 
 New encryption key
 
 ## Defined in
 
-dist/generated/types.d.ts:73834
+dist/generated/types.d.ts:75822

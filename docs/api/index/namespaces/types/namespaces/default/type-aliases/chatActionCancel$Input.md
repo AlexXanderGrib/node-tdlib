@@ -20,4 +20,4 @@ The user has canceled the previous action
 
 ## Defined in
 
-dist/generated/types.d.ts:30967
+dist/generated/types.d.ts:32099

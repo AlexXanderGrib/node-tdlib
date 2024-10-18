@@ -12,4 +12,4 @@ Returns the current authorization state; this is an offline request. For informa
 
 ## Defined in
 
-dist/generated/types.d.ts:73080
+dist/generated/types.d.ts:75068

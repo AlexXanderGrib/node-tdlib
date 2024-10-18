@@ -6,7 +6,9 @@
 
 # Type Alias: discardCall()
 
-> **discardCall**: (`parameters`) => [`Ok`](Ok.md)
+> **discardCall**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Discards a call
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90571
+dist/generated/types.d.ts:93068

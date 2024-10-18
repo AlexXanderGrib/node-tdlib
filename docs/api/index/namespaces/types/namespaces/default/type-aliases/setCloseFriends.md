@@ -6,7 +6,9 @@
 
 # Type Alias: setCloseFriends()
 
-> **setCloseFriends**: (`parameters`) => [`Ok`](Ok.md)
+> **setCloseFriends**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the list of close friends of the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92298
+dist/generated/types.d.ts:94795

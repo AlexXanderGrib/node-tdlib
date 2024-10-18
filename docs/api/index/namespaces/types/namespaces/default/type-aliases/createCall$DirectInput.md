@@ -20,16 +20,16 @@ Pass true to create a video call
 
 ### protocol?
 
-> `readonly` `optional` **protocol**: [`callProtocol$Input`](callProtocol$Input-1.md)
+> `readonly` `optional` **protocol**: [`callProtocol$Input`](callProtocol$Input.md)
 
 The call protocols supported by the application
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the user to be called
 
 ## Defined in
 
-dist/generated/types.d.ts:90404
+dist/generated/types.d.ts:92901

@@ -6,7 +6,9 @@
 
 # Type Alias: getLocalizationTargetInfo()
 
-> **getLocalizationTargetInfo**: (`parameters`) => [`LocalizationTargetInfo`](LocalizationTargetInfo.md)
+> **getLocalizationTargetInfo**: (`parameters`) => [`LocalizationTargetInfo`](LocalizationTargetInfo-1.md)
+
+Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`LocalizationTargetInfo`](LocalizationTargetInfo.md)
+[`LocalizationTargetInfo`](LocalizationTargetInfo-1.md)
 
-[LocalizationTargetInfo](LocalizationTargetInfo.md)
+[LocalizationTargetInfo](LocalizationTargetInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97337
+dist/generated/types.d.ts:100116

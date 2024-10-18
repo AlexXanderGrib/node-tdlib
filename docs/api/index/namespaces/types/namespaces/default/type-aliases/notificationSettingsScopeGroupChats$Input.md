@@ -20,4 +20,4 @@ Notification settings applied to all basic group and supergroup chats when the c
 
 ## Defined in
 
-dist/generated/types.d.ts:14841
+dist/generated/types.d.ts:15433

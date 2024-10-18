@@ -24,4 +24,4 @@ An internal link pointing to the chat
 
 ## Defined in
 
-dist/generated/types.d.ts:47317
+dist/generated/types.d.ts:48843

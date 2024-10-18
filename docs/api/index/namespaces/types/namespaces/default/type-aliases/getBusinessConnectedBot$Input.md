@@ -18,4 +18,4 @@ Returns the business bot that is connected to the current user account. Returns 
 
 ## Defined in
 
-dist/generated/types.d.ts:94590
+dist/generated/types.d.ts:97087

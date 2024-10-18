@@ -20,7 +20,7 @@ Device verification must be performed with the classic Play Integrity verificati
 
 ### cloud\_project\_number?
 
-> `readonly` `optional` **cloud\_project\_number**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **cloud\_project\_number**: [`int64$Input`](int64$Input.md)
 
 Cloud project number to pass to the Play Integrity API
 
@@ -32,4 +32,4 @@ Base64url-encoded nonce to pass to the Play Integrity API
 
 ## Defined in
 
-dist/generated/types.d.ts:3489
+dist/generated/types.d.ts:3535

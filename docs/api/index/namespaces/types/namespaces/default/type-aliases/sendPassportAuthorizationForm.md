@@ -6,7 +6,9 @@
 
 # Type Alias: sendPassportAuthorizationForm()
 
-> **sendPassportAuthorizationForm**: (`parameters`) => [`Ok`](Ok.md)
+> **sendPassportAuthorizationForm**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sends a Telegram Passport authorization form, effectively sharing data with the service. This method must be called after getPassportAuthorizationFormAvailableElements if some previously available elements are going to be reused
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99626
+dist/generated/types.d.ts:102405

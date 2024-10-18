@@ -18,4 +18,4 @@ The message can be opened only once and will be self-destructed once closed
 
 ## Defined in
 
-dist/generated/types.d.ts:29063
+dist/generated/types.d.ts:29937

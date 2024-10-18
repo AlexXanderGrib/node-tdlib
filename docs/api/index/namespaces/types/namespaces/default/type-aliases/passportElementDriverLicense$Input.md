@@ -20,10 +20,10 @@ A Telegram Passport element containing the user's driver license
 
 ### driver\_license?
 
-> `readonly` `optional` **driver\_license**: [`identityDocument$Input`](identityDocument$Input-1.md)
+> `readonly` `optional` **driver\_license**: [`identityDocument$Input`](identityDocument$Input.md)
 
 Driver license
 
 ## Defined in
 
-dist/generated/types.d.ts:24402
+dist/generated/types.d.ts:25162

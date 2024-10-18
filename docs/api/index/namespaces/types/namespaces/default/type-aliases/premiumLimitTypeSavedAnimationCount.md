@@ -18,4 +18,4 @@ The maximum number of saved animations
 
 ## Defined in
 
-dist/generated/types.d.ts:41297
+dist/generated/types.d.ts:42691

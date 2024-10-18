@@ -24,10 +24,10 @@ Pass true to create the chat without a network request. In this case all informa
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Supergroup or channel identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:84159
+dist/generated/types.d.ts:86458

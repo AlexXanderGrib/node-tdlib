@@ -6,7 +6,9 @@
 
 # Type Alias: clickAnimatedEmojiMessage()
 
-> **clickAnimatedEmojiMessage**: (`parameters`) => [`Sticker`](Sticker.md)
+> **clickAnimatedEmojiMessage**: (`parameters`) => [`Sticker`](Sticker-1.md)
+
+Informs TDLib that a message with an animated emoji was clicked by the user. Returns a big animated sticker to be played or a 404 error if usual animation needs to be played
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Sticker`](Sticker.md)
+[`Sticker`](Sticker-1.md)
 
-[Sticker](Sticker.md)
+[Sticker](Sticker-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83815
+dist/generated/types.d.ts:86114

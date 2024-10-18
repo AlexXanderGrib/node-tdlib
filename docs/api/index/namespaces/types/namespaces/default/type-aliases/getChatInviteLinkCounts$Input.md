@@ -18,10 +18,10 @@ Returns the list of chat administrators with number of their invite links. Requi
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:89879
+dist/generated/types.d.ts:92366

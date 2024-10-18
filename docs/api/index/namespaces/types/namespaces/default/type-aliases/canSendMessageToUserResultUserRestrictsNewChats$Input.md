@@ -20,4 +20,4 @@ The user can't be messaged, because they restrict new chats with non-contacts
 
 ## Defined in
 
-dist/generated/types.d.ts:46407
+dist/generated/types.d.ts:47933

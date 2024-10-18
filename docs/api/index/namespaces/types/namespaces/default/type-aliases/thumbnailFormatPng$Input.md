@@ -20,4 +20,4 @@ The thumbnail is in PNG format. It will be used only for background patterns
 
 ## Defined in
 
-dist/generated/types.d.ts:4159
+dist/generated/types.d.ts:4205

@@ -30,4 +30,4 @@ JSON-encoded data with the credential identifier from the payment provider
 
 ## Defined in
 
-dist/generated/types.d.ts:22831
+dist/generated/types.d.ts:23591

@@ -6,7 +6,9 @@
 
 # Type Alias: getMessageImportConfirmationText()
 
-> **getMessageImportConfirmationText**: (`parameters`) => [`Text`](Text.md)
+> **getMessageImportConfirmationText**: (`parameters`) => [`Text`](Text-1.md)
+
+Returns a confirmation text to be shown to the user before starting message import
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Text`](Text.md)
+[`Text`](Text-1.md)
 
-[Text](Text.md)
+[Text](Text-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:89615
+dist/generated/types.d.ts:91990

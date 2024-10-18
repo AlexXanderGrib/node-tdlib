@@ -18,10 +18,10 @@ Returns information about a bot that can be added to attachment or side menu
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Bot's user identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:88562
+dist/generated/types.d.ts:90937

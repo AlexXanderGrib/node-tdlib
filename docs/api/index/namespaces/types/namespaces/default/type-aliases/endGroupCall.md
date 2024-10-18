@@ -6,7 +6,9 @@
 
 # Type Alias: endGroupCall()
 
-> **endGroupCall**: (`parameters`) => [`Ok`](Ok.md)
+> **endGroupCall**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Ends a group call. Requires groupCall.can_be_managed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:91809
+dist/generated/types.d.ts:94306

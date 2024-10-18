@@ -6,7 +6,9 @@
 
 # Type Alias: searchHashtags()
 
-> **searchHashtags**: (`parameters`) => [`Hashtags`](Hashtags.md)
+> **searchHashtags**: (`parameters`) => [`Hashtags`](Hashtags-1.md)
+
+Searches for recently used hashtags by their prefix
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Hashtags`](Hashtags.md)
+[`Hashtags`](Hashtags-1.md)
 
-[Hashtags](Hashtags.md)
+[Hashtags](Hashtags-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93740
+dist/generated/types.d.ts:96237

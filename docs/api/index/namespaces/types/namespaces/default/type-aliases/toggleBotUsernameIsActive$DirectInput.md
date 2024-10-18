@@ -14,7 +14,7 @@ Changes active state for a username of a bot. The editable username can't be dis
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
@@ -32,4 +32,4 @@ The username to change
 
 ## Defined in
 
-dist/generated/types.d.ts:95408
+dist/generated/types.d.ts:98177

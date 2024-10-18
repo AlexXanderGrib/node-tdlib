@@ -26,34 +26,34 @@ The chat list with changed number of unread messages
 
 ### marked\_as\_unread\_count?
 
-> `readonly` `optional` **marked\_as\_unread\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **marked\_as\_unread\_count**: [`int32`](int32.md)
 
 Total number of chats marked as unread
 
 ### marked\_as\_unread\_unmuted\_count?
 
-> `readonly` `optional` **marked\_as\_unread\_unmuted\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **marked\_as\_unread\_unmuted\_count**: [`int32`](int32.md)
 
 Total number of unmuted chats marked as unread
 
 ### total\_count?
 
-> `readonly` `optional` **total\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **total\_count**: [`int32`](int32.md)
 
 Approximate total number of chats in the chat list
 
 ### unread\_count?
 
-> `readonly` `optional` **unread\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **unread\_count**: [`int32`](int32.md)
 
 Total number of unread chats
 
 ### unread\_unmuted\_count?
 
-> `readonly` `optional` **unread\_unmuted\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **unread\_unmuted\_count**: [`int32`](int32.md)
 
 Total number of unread unmuted chats
 
 ## Defined in
 
-dist/generated/types.d.ts:55803
+dist/generated/types.d.ts:57419

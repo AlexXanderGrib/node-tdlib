@@ -18,10 +18,10 @@ A business connection has changed; for bots only
 
 ### connection
 
-> **connection**: [`businessConnection`](businessConnection-1.md)
+> **connection**: [`businessConnection`](businessConnection.md)
 
 New data about the connection
 
 ## Defined in
 
-dist/generated/types.d.ts:57111
+dist/generated/types.d.ts:58751

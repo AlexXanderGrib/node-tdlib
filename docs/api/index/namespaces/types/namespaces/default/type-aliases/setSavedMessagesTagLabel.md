@@ -6,7 +6,9 @@
 
 # Type Alias: setSavedMessagesTagLabel()
 
-> **setSavedMessagesTagLabel**: (`parameters`) => [`Ok`](Ok.md)
+> **setSavedMessagesTagLabel**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes label of a Saved Messages tag; for Telegram Premium users only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81594
+dist/generated/types.d.ts:83787

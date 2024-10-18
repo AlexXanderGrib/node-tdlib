@@ -18,7 +18,7 @@ Translates a text to the given language. If the current user is a Telegram Premi
 
 ### text?
 
-> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **text**: [`formattedText$Input`](formattedText$Input.md)
 
 Text to translate
 
@@ -38,4 +38,4 @@ Language code of the language to which the message is translated. Must be one of
 
 ## Defined in
 
-dist/generated/types.d.ts:77802
+dist/generated/types.d.ts:79811

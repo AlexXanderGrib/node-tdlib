@@ -20,4 +20,4 @@ The thumbnail is in WEBM format. It will be used only for sticker sets
 
 ## Defined in
 
-dist/generated/types.d.ts:4187
+dist/generated/types.d.ts:4233

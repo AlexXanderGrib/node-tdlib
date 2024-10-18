@@ -38,4 +38,4 @@ True, if App Sandbox is enabled
 
 ## Defined in
 
-dist/generated/types.d.ts:42964
+dist/generated/types.d.ts:44490

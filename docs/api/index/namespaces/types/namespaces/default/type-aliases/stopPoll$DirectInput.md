@@ -8,21 +8,21 @@
 
 > **stopPoll$DirectInput**: `object`
 
-Stops a poll. A poll in a message can be stopped when the message has can_be_edited flag is set
+Stops a poll
 
 ## Type declaration
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the poll belongs
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message containing the poll
+Identifier of the message containing the poll. Use messageProperties.can_be_edited to check whether the poll can be stopped
 
 ### reply\_markup?
 
@@ -32,4 +32,4 @@ The new message reply markup; pass null if none; for bots only
 
 ## Defined in
 
-dist/generated/types.d.ts:82193
+dist/generated/types.d.ts:84386

@@ -6,7 +6,9 @@
 
 # Type Alias: stopPoll()
 
-> **stopPoll**: (`parameters`) => [`Ok`](Ok.md)
+> **stopPoll**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Stops a poll
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:82216
+dist/generated/types.d.ts:84409

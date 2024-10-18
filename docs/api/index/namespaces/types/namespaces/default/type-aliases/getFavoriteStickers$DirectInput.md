@@ -12,4 +12,4 @@ Returns favorite stickers
 
 ## Defined in
 
-dist/generated/types.d.ts:93270
+dist/generated/types.d.ts:95767

@@ -6,7 +6,9 @@
 
 # Type Alias: addCustomServerLanguagePack()
 
-> **addCustomServerLanguagePack**: (`parameters`) => [`Ok`](Ok.md)
+> **addCustomServerLanguagePack**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a custom server language pack to the list of installed language packs in current localization target. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97465
+dist/generated/types.d.ts:100244

@@ -10,7 +10,7 @@
 
 Version of [internalLinkTypeChatFolderSettings](internalLinkTypeChatFolderSettings.md) for method parameters.
 
-The link is a link to the folder section of the app settings
+The link is a link to the folder section of the application settings
 
 ## Type declaration
 
@@ -20,4 +20,4 @@ The link is a link to the folder section of the app settings
 
 ## Defined in
 
-dist/generated/types.d.ts:47731
+dist/generated/types.d.ts:49291

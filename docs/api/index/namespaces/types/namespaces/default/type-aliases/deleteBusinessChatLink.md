@@ -6,7 +6,9 @@
 
 # Type Alias: deleteBusinessChatLink()
 
-> **deleteBusinessChatLink**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteBusinessChatLink**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes a business chat link of the current account
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94836
+dist/generated/types.d.ts:97333

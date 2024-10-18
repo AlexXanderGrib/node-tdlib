@@ -18,7 +18,7 @@ The payload for a callback button requiring password
 
 ### data
 
-> **data**: [`bytes`](bytes-1.md)
+> **data**: [`bytes`](bytes.md)
 
 Data that was attached to the callback button
 
@@ -30,4 +30,4 @@ The 2-step verification password for the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:38995
+dist/generated/types.d.ts:40365

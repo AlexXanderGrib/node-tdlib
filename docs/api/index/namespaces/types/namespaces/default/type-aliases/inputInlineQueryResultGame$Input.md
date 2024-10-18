@@ -38,4 +38,4 @@ The message reply markup; pass null if none. Must be of type replyMarkupInlineKe
 
 ## Defined in
 
-dist/generated/types.d.ts:37672
+dist/generated/types.d.ts:39042

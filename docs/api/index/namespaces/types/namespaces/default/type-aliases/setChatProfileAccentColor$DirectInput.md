@@ -14,13 +14,13 @@ Changes accent color and background custom emoji for profile of a supergroup or 
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### profile\_accent\_color\_id?
 
-> `readonly` `optional` **profile\_accent\_color\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **profile\_accent\_color\_id**: [`int32`](int32.md)
 
 Identifier of the accent color to use for profile; pass -1 if none. The chat must have at least profileAccentColor.min_supergroup_chat_boost_level for supergroups
 
@@ -28,10 +28,10 @@ Identifier of the accent color to use for profile; pass -1 if none. The chat mus
 
 ### profile\_background\_custom\_emoji\_id?
 
-> `readonly` `optional` **profile\_background\_custom\_emoji\_id**: [`int64$Input`](int64$Input-1.md)
+> `readonly` `optional` **profile\_background\_custom\_emoji\_id**: [`int64$Input`](int64$Input.md)
 
 Identifier of a custom emoji to be shown on the chat's profile photo background; 0 if none. Use chatBoostLevelFeatures.can_set_profile_background_custom_emoji to check whether a custom emoji can be set
 
 ## Defined in
 
-dist/generated/types.d.ts:85306
+dist/generated/types.d.ts:87605

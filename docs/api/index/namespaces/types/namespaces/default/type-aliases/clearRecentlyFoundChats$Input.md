@@ -18,4 +18,4 @@ Clears the list of recently found chats
 
 ## Defined in
 
-dist/generated/types.d.ts:75537
+dist/generated/types.d.ts:77563

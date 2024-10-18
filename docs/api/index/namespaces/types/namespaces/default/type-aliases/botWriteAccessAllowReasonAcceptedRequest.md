@@ -18,4 +18,4 @@ The user accepted bot's request to send messages with allowBotToSendMessages
 
 ## Defined in
 
-dist/generated/types.d.ts:37057
+dist/generated/types.d.ts:38427

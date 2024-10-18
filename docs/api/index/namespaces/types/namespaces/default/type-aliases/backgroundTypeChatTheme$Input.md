@@ -26,4 +26,4 @@ Name of the chat theme
 
 ## Defined in
 
-dist/generated/types.d.ts:43472
+dist/generated/types.d.ts:44998

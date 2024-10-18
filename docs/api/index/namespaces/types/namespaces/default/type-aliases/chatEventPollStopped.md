@@ -18,10 +18,10 @@ A poll in a message was stopped
 
 ### message
 
-> **message**: [`message`](message-1.md)
+> **message**: [`message`](message.md)
 
 The message with the poll
 
 ## Defined in
 
-dist/generated/types.d.ts:39305
+dist/generated/types.d.ts:40675

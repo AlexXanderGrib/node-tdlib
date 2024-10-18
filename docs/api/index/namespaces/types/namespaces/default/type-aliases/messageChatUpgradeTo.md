@@ -18,10 +18,10 @@ A basic group was upgraded to a supergroup and was deactivated as the result
 
 ### supergroup\_id
 
-> **supergroup\_id**: [`int53`](int53-1.md)
+> **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup to which the basic group was upgraded
 
 ## Defined in
 
-dist/generated/types.d.ts:27061
+dist/generated/types.d.ts:27821

@@ -18,4 +18,4 @@ Removes 2-step verification password without previous password and access to rec
 
 ## Defined in
 
-dist/generated/types.d.ts:74242
+dist/generated/types.d.ts:76230

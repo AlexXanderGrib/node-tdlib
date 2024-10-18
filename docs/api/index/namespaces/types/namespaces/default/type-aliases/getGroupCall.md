@@ -6,7 +6,9 @@
 
 # Type Alias: getGroupCall()
 
-> **getGroupCall**: (`parameters`) => [`GroupCall`](GroupCall.md)
+> **getGroupCall**: (`parameters`) => [`GroupCall`](GroupCall-1.md)
+
+Returns information about a group call
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`GroupCall`](GroupCall.md)
+[`GroupCall`](GroupCall-1.md)
 
-[GroupCall](GroupCall.md)
+[GroupCall](GroupCall-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90913
+dist/generated/types.d.ts:93410

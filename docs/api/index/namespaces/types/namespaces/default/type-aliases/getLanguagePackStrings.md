@@ -6,7 +6,9 @@
 
 # Type Alias: getLanguagePackStrings()
 
-> **getLanguagePackStrings**: (`parameters`) => [`LanguagePackStrings`](LanguagePackStrings.md)
+> **getLanguagePackStrings**: (`parameters`) => [`LanguagePackStrings`](LanguagePackStrings-1.md)
+
+Returns strings from a language pack in the current localization target by their keys. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`LanguagePackStrings`](LanguagePackStrings.md)
+[`LanguagePackStrings`](LanguagePackStrings-1.md)
 
-[LanguagePackStrings](LanguagePackStrings.md)
+[LanguagePackStrings](LanguagePackStrings-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97403
+dist/generated/types.d.ts:100182

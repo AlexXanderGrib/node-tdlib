@@ -18,4 +18,4 @@ A category containing frequently used chats used for calls
 
 ## Defined in
 
-dist/generated/types.d.ts:50127
+dist/generated/types.d.ts:51725

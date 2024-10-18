@@ -16,7 +16,7 @@ Readds quick reply messages which failed to add. Can be called only for messages
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the quick reply messages to readd. Message identifiers must be in a strictly increasing order
 
@@ -28,4 +28,4 @@ Name of the target shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:80529
+dist/generated/types.d.ts:82578

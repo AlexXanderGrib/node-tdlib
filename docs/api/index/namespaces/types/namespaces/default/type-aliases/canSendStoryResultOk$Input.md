@@ -20,4 +20,4 @@ A story can be sent
 
 ## Defined in
 
-dist/generated/types.d.ts:43699
+dist/generated/types.d.ts:45225

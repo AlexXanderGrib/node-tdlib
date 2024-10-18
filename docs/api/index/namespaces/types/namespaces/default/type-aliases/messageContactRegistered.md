@@ -18,4 +18,4 @@ A contact has registered with Telegram
 
 ## Defined in
 
-dist/generated/types.d.ts:28197
+dist/generated/types.d.ts:29071

@@ -6,7 +6,9 @@
 
 # Type Alias: toggleGeneralForumTopicIsHidden()
 
-> **toggleGeneralForumTopicIsHidden**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleGeneralForumTopicIsHidden**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Toggles whether a General topic is hidden in a forum supergroup chat; requires can_manage_topics right in the supergroup
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81024
+dist/generated/types.d.ts:83073

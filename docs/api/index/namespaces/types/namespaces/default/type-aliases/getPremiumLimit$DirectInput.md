@@ -20,4 +20,4 @@ Type of the limit
 
 ## Defined in
 
-dist/generated/types.d.ts:100443
+dist/generated/types.d.ts:103222

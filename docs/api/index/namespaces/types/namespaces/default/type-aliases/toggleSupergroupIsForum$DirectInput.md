@@ -20,10 +20,10 @@ New value of is_forum
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Identifier of the supergroup
 
 ## Defined in
 
-dist/generated/types.d.ts:96455
+dist/generated/types.d.ts:99234

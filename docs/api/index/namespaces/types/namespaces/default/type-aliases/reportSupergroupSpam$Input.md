@@ -18,16 +18,16 @@ Reports messages in a supergroup as spam; requires administrator rights in the s
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
-Identifiers of messages to report
+Identifiers of messages to report. Use messageProperties.can_be_reported to check whether the message can be reported
 
 ### supergroup\_id?
 
-> `readonly` `optional` **supergroup\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **supergroup\_id**: [`int53`](int53.md)
 
 Supergroup identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:96505
+dist/generated/types.d.ts:99284

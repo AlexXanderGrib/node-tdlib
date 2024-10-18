@@ -16,22 +16,22 @@ Resends messages which failed to send. Can be called only for messages for which
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to send messages
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Identifiers of the messages to resend. Message identifiers must be in a strictly increasing order
 
 ### quote?
 
-> `readonly` `optional` **quote**: [`inputTextQuote$Input`](inputTextQuote$Input-1.md) \| `null`
+> `readonly` `optional` **quote**: [`inputTextQuote$Input`](inputTextQuote$Input.md) \| `null`
 
 New manually chosen quote from the message to be replied; pass null if none. Ignored if more than one message is re-sent, or if messageSendingStateFailed.need_another_reply_quote == false
 
 ## Defined in
 
-dist/generated/types.d.ts:78527
+dist/generated/types.d.ts:80536

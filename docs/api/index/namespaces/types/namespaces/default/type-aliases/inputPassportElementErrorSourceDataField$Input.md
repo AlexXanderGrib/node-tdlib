@@ -20,7 +20,7 @@ A data field contains an error. The error is considered resolved when the field'
 
 ### data\_hash?
 
-> `readonly` `optional` **data\_hash**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **data\_hash**: [`bytes$Input`](bytes$Input.md)
 
 Current data hash
 
@@ -32,4 +32,4 @@ Field name
 
 ## Defined in
 
-dist/generated/types.d.ts:25535
+dist/generated/types.d.ts:26295

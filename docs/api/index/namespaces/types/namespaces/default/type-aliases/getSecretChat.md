@@ -6,7 +6,9 @@
 
 # Type Alias: getSecretChat()
 
-> **getSecretChat**: (`parameters`) => [`SecretChat`](SecretChat.md)
+> **getSecretChat**: (`parameters`) => [`SecretChat`](SecretChat-1.md)
+
+Returns information about a secret chat by its identifier. This is an offline request
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`SecretChat`](SecretChat.md)
+[`SecretChat`](SecretChat-1.md)
 
-[SecretChat](SecretChat.md)
+[SecretChat](SecretChat-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74540
+dist/generated/types.d.ts:76528

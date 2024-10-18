@@ -20,4 +20,4 @@ The session is running on the Safari browser
 
 ## Defined in
 
-dist/generated/types.d.ts:46623
+dist/generated/types.d.ts:48149

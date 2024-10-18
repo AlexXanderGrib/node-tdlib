@@ -20,7 +20,7 @@ New terms of service must be accepted by the user. If the terms of service are d
 
 ### terms\_of\_service?
 
-> `readonly` `optional` **terms\_of\_service**: [`termsOfService$Input`](termsOfService$Input-1.md)
+> `readonly` `optional` **terms\_of\_service**: [`termsOfService$Input`](termsOfService$Input.md)
 
 The new terms of service
 
@@ -32,4 +32,4 @@ Identifier of the terms of service
 
 ## Defined in
 
-dist/generated/types.d.ts:56515
+dist/generated/types.d.ts:58131

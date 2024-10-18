@@ -6,7 +6,9 @@
 
 # Type Alias: processChatFolderNewChats()
 
-> **processChatFolderNewChats**: (`parameters`) => [`Ok`](Ok.md)
+> **processChatFolderNewChats**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Process new chats added to a shareable chat folder by its owner
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85110
+dist/generated/types.d.ts:87409

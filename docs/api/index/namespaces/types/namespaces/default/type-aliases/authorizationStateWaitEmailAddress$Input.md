@@ -32,4 +32,4 @@ True, if authorization through Google ID is allowed
 
 ## Defined in
 
-dist/generated/types.d.ts:3187
+dist/generated/types.d.ts:3233

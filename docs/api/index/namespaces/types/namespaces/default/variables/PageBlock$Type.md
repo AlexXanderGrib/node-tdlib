@@ -128,4 +128,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:2029
+dist/generated/types.d.ts:2061

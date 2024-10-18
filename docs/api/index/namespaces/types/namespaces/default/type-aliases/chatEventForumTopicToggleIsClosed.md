@@ -18,10 +18,10 @@ A forum topic was closed or reopened
 
 ### topic\_info
 
-> **topic\_info**: [`forumTopicInfo`](forumTopicInfo-1.md)
+> **topic\_info**: [`forumTopicInfo`](forumTopicInfo.md)
 
 New information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:40589
+dist/generated/types.d.ts:41983

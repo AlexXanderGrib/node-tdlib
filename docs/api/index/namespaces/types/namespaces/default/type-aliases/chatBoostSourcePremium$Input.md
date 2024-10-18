@@ -20,10 +20,10 @@ A user with Telegram Premium subscription or gifted Telegram Premium boosted the
 
 ### user\_id?
 
-> `readonly` `optional` **user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **user\_id**: [`int53`](int53.md)
 
 Identifier of the user
 
 ## Defined in
 
-dist/generated/types.d.ts:34086
+dist/generated/types.d.ts:35456

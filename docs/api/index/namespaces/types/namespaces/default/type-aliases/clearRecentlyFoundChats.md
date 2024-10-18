@@ -6,7 +6,9 @@
 
 # Type Alias: clearRecentlyFoundChats()
 
-> **clearRecentlyFoundChats**: (`parameters`) => [`Ok`](Ok.md)
+> **clearRecentlyFoundChats**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Clears the list of recently found chats
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:75550
+dist/generated/types.d.ts:77576

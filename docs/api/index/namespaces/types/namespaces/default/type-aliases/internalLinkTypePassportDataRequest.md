@@ -18,7 +18,7 @@ The link contains a request of Telegram passport data. Call getPassportAuthoriza
 
 ### bot\_user\_id
 
-> **bot\_user\_id**: [`int53`](int53-1.md)
+> **bot\_user\_id**: [`int53`](int53.md)
 
 User identifier of the service's bot; the corresponding user may be unknown yet
 
@@ -50,4 +50,4 @@ Telegram Passport element types requested by the service
 
 ## Defined in
 
-dist/generated/types.d.ts:47997
+dist/generated/types.d.ts:49617

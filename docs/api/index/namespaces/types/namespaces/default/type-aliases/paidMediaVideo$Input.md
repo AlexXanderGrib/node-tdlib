@@ -20,10 +20,10 @@ The media is a video
 
 ### video?
 
-> `readonly` `optional` **video**: [`video$Input`](video$Input-1.md)
+> `readonly` `optional` **video**: [`video$Input`](video$Input.md)
 
 The video
 
 ## Defined in
 
-dist/generated/types.d.ts:23634
+dist/generated/types.d.ts:24394

@@ -6,7 +6,9 @@
 
 # Type Alias: removeContacts()
 
-> **removeContacts**: (`parameters`) => [`Ok`](Ok.md)
+> **removeContacts**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes users from the contact list
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92202
+dist/generated/types.d.ts:94699

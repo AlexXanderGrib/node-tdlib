@@ -42,19 +42,19 @@ Extended media attached to the invoice; may be null if none
 
 ### paid\_media\_caption
 
-> **paid\_media\_caption**: [`formattedText`](formattedText-1.md) \| `null`
+> **paid\_media\_caption**: [`formattedText`](formattedText.md) \| `null`
 
 Extended media caption; may be null if none
 
 ### product\_info
 
-> **product\_info**: [`productInfo`](productInfo-1.md)
+> **product\_info**: [`productInfo`](productInfo.md)
 
 Information about the product
 
 ### receipt\_message\_id
 
-> **receipt\_message\_id**: [`int53`](int53-1.md)
+> **receipt\_message\_id**: [`int53`](int53.md)
 
 The identifier of the message with the receipt, after the product has been purchased
 
@@ -66,10 +66,10 @@ Unique invoice bot start_parameter to be passed to getInternalLink
 
 ### total\_amount
 
-> **total\_amount**: [`int53`](int53-1.md)
+> **total\_amount**: [`int53`](int53.md)
 
 Product total price in the smallest units of the currency
 
 ## Defined in
 
-dist/generated/types.d.ts:26601
+dist/generated/types.d.ts:27361

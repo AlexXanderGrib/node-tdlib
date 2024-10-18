@@ -18,4 +18,4 @@ Returns application config, provided by the server. Can be called before authori
 
 ## Defined in
 
-dist/generated/types.d.ts:101304
+dist/generated/types.d.ts:104225

@@ -26,4 +26,4 @@ The token to use for data loading
 
 ## Defined in
 
-dist/generated/types.d.ts:51126
+dist/generated/types.d.ts:52742

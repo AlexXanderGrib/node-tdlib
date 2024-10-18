@@ -20,4 +20,4 @@ The maximum number of pinned chats in the main chat list
 
 ## Defined in
 
-dist/generated/types.d.ts:41277
+dist/generated/types.d.ts:42671

@@ -6,7 +6,9 @@
 
 # Type Alias: getImportedContactCount()
 
-> **getImportedContactCount**: (`parameters`) => [`Count`](Count.md)
+> **getImportedContactCount**: (`parameters`) => [`Count`](Count-1.md)
+
+Returns the total number of imported contacts
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Count`](Count.md)
+[`Count`](Count-1.md)
 
-[Count](Count.md)
+[Count](Count-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92219
+dist/generated/types.d.ts:94716

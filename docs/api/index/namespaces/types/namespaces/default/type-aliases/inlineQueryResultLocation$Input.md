@@ -26,13 +26,13 @@ Unique identifier of the query result
 
 ### location?
 
-> `readonly` `optional` **location**: [`location$Input`](location$Input-1.md)
+> `readonly` `optional` **location**: [`location$Input`](location$Input.md)
 
 Location result
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`thumbnail$Input`](thumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`thumbnail$Input`](thumbnail$Input.md) \| `null`
 
 Result thumbnail in JPEG format; may be null
 
@@ -44,4 +44,4 @@ Title of the result
 
 ## Defined in
 
-dist/generated/types.d.ts:38413
+dist/generated/types.d.ts:39783

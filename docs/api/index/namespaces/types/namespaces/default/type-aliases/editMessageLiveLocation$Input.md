@@ -10,7 +10,7 @@
 
 Edits the message content of a live location. Messages can be edited for a limited period of time specified in the live location.
 
-- Returns the edited message after the edit is completed on the server side. Can be used only if message.can_be_edited == true
+- Returns the edited message after the edit is completed on the server side
 
 ## Type declaration
 
@@ -20,19 +20,19 @@ Edits the message content of a live location. Messages can be edited for a limit
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 The chat the message belongs to
 
 ### heading?
 
-> `readonly` `optional` **heading**: [`int32`](int32-1.md)
+> `readonly` `optional` **heading**: [`int32`](int32.md)
 
 The new direction in which the location moves, in degrees; 1-360. Pass 0 if unknown
 
 ### live\_period?
 
-> `readonly` `optional` **live\_period**: [`int32`](int32-1.md)
+> `readonly` `optional` **live\_period**: [`int32`](int32.md)
 
 New time relative to the message send date, for which the location can be updated, in seconds. If 0x7FFFFFFF specified, then the location can be updated forever.
 
@@ -40,19 +40,19 @@ New time relative to the message send date, for which the location can be update
 
 ### location?
 
-> `readonly` `optional` **location**: [`location$Input`](location$Input-1.md) \| `null`
+> `readonly` `optional` **location**: [`location$Input`](location$Input.md) \| `null`
 
 New location content of the message; pass null to stop sharing the live location
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message
+Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
 
 ### proximity\_alert\_radius?
 
-> `readonly` `optional` **proximity\_alert\_radius**: [`int32`](int32-1.md)
+> `readonly` `optional` **proximity\_alert\_radius**: [`int32`](int32.md)
 
 The new maximum distance for proximity alerts, in meters (0-100000). Pass 0 if the notification is disabled
 
@@ -64,4 +64,4 @@ The new message reply markup; pass null if none; for bots only
 
 ## Defined in
 
-dist/generated/types.d.ts:78834
+dist/generated/types.d.ts:80837

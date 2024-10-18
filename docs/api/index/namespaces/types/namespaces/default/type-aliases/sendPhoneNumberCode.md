@@ -6,7 +6,9 @@
 
 # Type Alias: sendPhoneNumberCode()
 
-> **sendPhoneNumberCode**: (`parameters`) => [`AuthenticationCodeInfo`](AuthenticationCodeInfo.md)
+> **sendPhoneNumberCode**: (`parameters`) => [`AuthenticationCodeInfo`](AuthenticationCodeInfo-1.md)
+
+Sends a code to the specified phone number. Aborts previous phone number verification if there was one. On success, returns information about the sent code
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`AuthenticationCodeInfo`](AuthenticationCodeInfo.md)
+[`AuthenticationCodeInfo`](AuthenticationCodeInfo-1.md)
 
-[AuthenticationCodeInfo](AuthenticationCodeInfo.md)
+[AuthenticationCodeInfo](AuthenticationCodeInfo-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:94474
+dist/generated/types.d.ts:96971

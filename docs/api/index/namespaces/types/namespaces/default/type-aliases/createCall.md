@@ -6,7 +6,9 @@
 
 # Type Alias: createCall()
 
-> **createCall**: (`parameters`) => [`CallId`](CallId.md)
+> **createCall**: (`parameters`) => [`CallId`](CallId-1.md)
+
+Creates a new call
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`CallId`](CallId.md)
+[`CallId`](CallId-1.md)
 
-[CallId](CallId.md)
+[CallId](CallId-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90427
+dist/generated/types.d.ts:92924

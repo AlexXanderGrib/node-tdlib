@@ -18,10 +18,10 @@ A message containing a user contact
 
 ### contact
 
-> **contact**: [`contact`](contact-1.md)
+> **contact**: [`contact`](contact.md)
 
 Contact to send
 
 ## Defined in
 
-dist/generated/types.d.ts:30057
+dist/generated/types.d.ts:30931

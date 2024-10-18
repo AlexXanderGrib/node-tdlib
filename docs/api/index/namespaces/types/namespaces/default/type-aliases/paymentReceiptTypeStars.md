@@ -8,7 +8,7 @@
 
 > **paymentReceiptTypeStars**: `object`
 
-The payment was done using Telegram stars
+The payment was done using Telegram Stars
 
 ## Type declaration
 
@@ -18,9 +18,9 @@ The payment was done using Telegram stars
 
 ### star\_count
 
-> **star\_count**: [`int53`](int53-1.md)
+> **star\_count**: [`int53`](int53.md)
 
-Number of Telegram stars that were paid
+Number of Telegram Stars that were paid
 
 ### transaction\_id
 
@@ -30,4 +30,4 @@ Unique identifier of the transaction that can be used to dispute it
 
 ## Defined in
 
-dist/generated/types.d.ts:23373
+dist/generated/types.d.ts:24133

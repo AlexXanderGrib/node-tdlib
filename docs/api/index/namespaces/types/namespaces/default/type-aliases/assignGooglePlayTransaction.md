@@ -6,7 +6,9 @@
 
 # Type Alias: assignGooglePlayTransaction()
 
-> **assignGooglePlayTransaction**: (`parameters`) => [`Ok`](Ok.md)
+> **assignGooglePlayTransaction**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs server about a purchase through Google Play. For official applications only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:100926
+dist/generated/types.d.ts:103781

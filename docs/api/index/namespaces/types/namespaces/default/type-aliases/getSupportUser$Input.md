@@ -18,4 +18,4 @@ Returns a user that can be contacted to get support
 
 ## Defined in
 
-dist/generated/types.d.ts:97081
+dist/generated/types.d.ts:99860

@@ -6,7 +6,9 @@
 
 # Type Alias: getInstalledBackgrounds()
 
-> **getInstalledBackgrounds**: (`parameters`) => [`Backgrounds`](Backgrounds.md)
+> **getInstalledBackgrounds**: (`parameters`) => [`Backgrounds`](Backgrounds-1.md)
+
+Returns backgrounds installed by the user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Backgrounds`](Backgrounds.md)
+[`Backgrounds`](Backgrounds-1.md)
 
-[Backgrounds](Backgrounds.md)
+[Backgrounds](Backgrounds-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97264
+dist/generated/types.d.ts:100043

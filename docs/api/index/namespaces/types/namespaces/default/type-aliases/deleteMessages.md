@@ -6,7 +6,9 @@
 
 # Type Alias: deleteMessages()
 
-> **deleteMessages**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteMessages**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes messages
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78668
+dist/generated/types.d.ts:80677

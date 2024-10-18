@@ -6,7 +6,9 @@
 
 # Type Alias: close()
 
-> **close**: (`parameters`) => [`Ok`](Ok.md)
+> **close**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Closes the TDLib instance. All databases will be flushed to disk and properly closed. After the close completes, updateAuthorizationState with authorizationStateClosed will be sent. Can be called before initialization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:73751
+dist/generated/types.d.ts:75739

@@ -6,7 +6,9 @@
 
 # Type Alias: reorderBotActiveUsernames()
 
-> **reorderBotActiveUsernames**: (`parameters`) => [`Ok`](Ok.md)
+> **reorderBotActiveUsernames**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes order of active usernames of a bot. Can be called only if userTypeBot.can_be_edited == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95469
+dist/generated/types.d.ts:98238

@@ -18,16 +18,16 @@ The list of quick reply shortcut messages has changed
 
 ### messages
 
-> **messages**: [`vector`](vector.md)\<[`quickReplyMessage`](quickReplyMessage-1.md)\>
+> **messages**: [`vector`](vector.md)\<[`quickReplyMessage`](quickReplyMessage.md)\>
 
 The new list of quick reply messages for the shortcut in order from the first to the last sent
 
 ### shortcut\_id
 
-> **shortcut\_id**: [`int32`](int32-1.md)
+> **shortcut\_id**: [`int32`](int32.md)
 
 The identifier of the shortcut
 
 ## Defined in
 
-dist/generated/types.d.ts:54565
+dist/generated/types.d.ts:56181

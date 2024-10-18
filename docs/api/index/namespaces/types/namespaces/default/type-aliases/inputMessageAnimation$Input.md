@@ -20,7 +20,7 @@ An animation message (GIF-style).
 
 ### added\_sticker\_file\_ids?
 
-> `readonly` `optional` **added\_sticker\_file\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **added\_sticker\_file\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 File identifiers of the stickers added to the animation, if applicable
 
@@ -32,13 +32,13 @@ Animation file to be sent
 
 ### caption?
 
-> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input-1.md) \| `null`
+> `readonly` `optional` **caption**: [`formattedText$Input`](formattedText$Input.md) \| `null`
 
 Animation caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Duration of the animation, in seconds
 
@@ -50,7 +50,7 @@ True, if the animation preview must be covered by a spoiler animation; not suppo
 
 ### height?
 
-> `readonly` `optional` **height**: [`int32`](int32-1.md)
+> `readonly` `optional` **height**: [`int32`](int32.md)
 
 Height of the animation; may be replaced by the server
 
@@ -62,16 +62,16 @@ True, if the caption must be shown above the animation; otherwise, the caption m
 
 ### thumbnail?
 
-> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input-1.md) \| `null`
+> `readonly` `optional` **thumbnail**: [`inputThumbnail$Input`](inputThumbnail$Input.md) \| `null`
 
 Animation thumbnail; pass null to skip thumbnail uploading
 
 ### width?
 
-> `readonly` `optional` **width**: [`int32`](int32-1.md)
+> `readonly` `optional` **width**: [`int32`](int32.md)
 
 Width of the animation; may be replaced by the server
 
 ## Defined in
 
-dist/generated/types.d.ts:29326
+dist/generated/types.d.ts:30200

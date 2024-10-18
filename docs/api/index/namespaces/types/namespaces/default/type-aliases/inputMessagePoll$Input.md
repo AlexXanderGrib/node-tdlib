@@ -20,7 +20,7 @@ A message with a poll. Polls can't be sent to secret chats. Polls can be sent on
 
 ### close\_date?
 
-> `readonly` `optional` **close\_date**: [`int32`](int32-1.md)
+> `readonly` `optional` **close\_date**: [`int32`](int32.md)
 
 Point in time (Unix timestamp) when the poll will automatically be closed; for bots only
 
@@ -38,19 +38,19 @@ True, if the poll needs to be sent already closed; for bots only
 
 ### open\_period?
 
-> `readonly` `optional` **open\_period**: [`int32`](int32-1.md)
+> `readonly` `optional` **open\_period**: [`int32`](int32.md)
 
 Amount of time the poll will be active after creation, in seconds; for bots only
 
 ### options?
 
-> `readonly` `optional` **options**: [`vector$Input`](vector$Input.md)\<[`formattedText$Input`](formattedText$Input-1.md)\>
+> `readonly` `optional` **options**: [`vector$Input`](vector$Input.md)\<[`formattedText$Input`](formattedText$Input.md)\>
 
 List of poll answer options, 2-10 strings 1-100 characters each. Only custom emoji entities are allowed to be added and only by Premium users
 
 ### question?
 
-> `readonly` `optional` **question**: [`formattedText$Input`](formattedText$Input-1.md)
+> `readonly` `optional` **question**: [`formattedText$Input`](formattedText$Input.md)
 
 Poll question; 1-255 characters (up to 300 characters for bots). Only custom emoji entities are allowed to be added and only by Premium users
 
@@ -62,4 +62,4 @@ Type of the poll
 
 ## Defined in
 
-dist/generated/types.d.ts:30336
+dist/generated/types.d.ts:31210

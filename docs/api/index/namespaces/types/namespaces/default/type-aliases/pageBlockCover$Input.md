@@ -26,4 +26,4 @@ Cover
 
 ## Defined in
 
-dist/generated/types.d.ts:20228
+dist/generated/types.d.ts:20854

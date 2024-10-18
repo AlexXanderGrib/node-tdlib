@@ -6,7 +6,9 @@
 
 # Type Alias: toggleSupergroupIsBroadcastGroup()
 
-> **toggleSupergroupIsBroadcastGroup**: (`parameters`) => [`Ok`](Ok.md)
+> **toggleSupergroupIsBroadcastGroup**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Upgrades supergroup to a broadcast group; requires owner privileges in the supergroup
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96501
+dist/generated/types.d.ts:99280

@@ -24,4 +24,4 @@ Animation file to be removed
 
 ## Defined in
 
-dist/generated/types.d.ts:93661
+dist/generated/types.d.ts:96158

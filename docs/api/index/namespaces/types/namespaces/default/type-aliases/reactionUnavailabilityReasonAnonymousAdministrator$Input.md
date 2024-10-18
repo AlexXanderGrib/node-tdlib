@@ -20,4 +20,4 @@ The user is an anonymous administrator in the supergroup, but isn't a creator of
 
 ## Defined in
 
-dist/generated/types.d.ts:36381
+dist/generated/types.d.ts:37751

@@ -18,4 +18,4 @@ The file is a video published as a story
 
 ## Defined in
 
-dist/generated/types.d.ts:49157
+dist/generated/types.d.ts:50741

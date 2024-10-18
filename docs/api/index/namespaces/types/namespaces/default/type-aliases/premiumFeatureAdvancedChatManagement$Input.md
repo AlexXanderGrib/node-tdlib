@@ -20,4 +20,4 @@ Ability to change position of the main chat list, archive and mute all new chats
 
 ## Defined in
 
-dist/generated/types.d.ts:41641
+dist/generated/types.d.ts:43035

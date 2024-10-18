@@ -6,7 +6,9 @@
 
 # Type Alias: closeStory()
 
-> **closeStory**: (`parameters`) => [`Ok`](Ok.md)
+> **closeStory**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Informs TDLib that a story is closed by the user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:87860
+dist/generated/types.d.ts:90235

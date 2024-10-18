@@ -20,4 +20,4 @@ Play Integrity API or SafetyNet Attestation API token for the Android applicatio
 
 ## Defined in
 
-dist/generated/types.d.ts:94489
+dist/generated/types.d.ts:96986

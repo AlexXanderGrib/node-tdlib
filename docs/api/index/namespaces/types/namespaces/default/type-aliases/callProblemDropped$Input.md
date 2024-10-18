@@ -20,4 +20,4 @@ The call ended unexpectedly
 
 ## Defined in
 
-dist/generated/types.d.ts:35823
+dist/generated/types.d.ts:37193

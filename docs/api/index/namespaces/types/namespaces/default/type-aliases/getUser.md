@@ -6,7 +6,9 @@
 
 # Type Alias: getUser()
 
-> **getUser**: (`parameters`) => [`User`](User.md)
+> **getUser**: (`parameters`) => [`User`](User-1.md)
+
+Returns information about a user by their identifier. This is an offline request if the current user is not a bot
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`User`](User.md)
+[`User`](User-1.md)
 
-[User](User.md)
+[User](User-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74372
+dist/generated/types.d.ts:76360

@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's passport registration pages
 
 ### passport\_registration
 
-> **passport\_registration**: [`personalDocument`](personalDocument-1.md)
+> **passport\_registration**: [`personalDocument`](personalDocument.md)
 
 Passport registration pages
 
 ## Defined in
 
-dist/generated/types.d.ts:24557
+dist/generated/types.d.ts:25317

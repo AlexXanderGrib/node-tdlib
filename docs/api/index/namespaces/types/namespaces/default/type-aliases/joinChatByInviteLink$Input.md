@@ -24,4 +24,4 @@ Invite link to use
 
 ## Defined in
 
-dist/generated/types.d.ts:90191
+dist/generated/types.d.ts:92688

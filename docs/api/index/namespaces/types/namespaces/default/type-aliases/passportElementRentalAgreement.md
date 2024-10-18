@@ -18,10 +18,10 @@ A Telegram Passport element containing the user's rental agreement
 
 ### rental\_agreement
 
-> **rental\_agreement**: [`personalDocument`](personalDocument-1.md)
+> **rental\_agreement**: [`personalDocument`](personalDocument.md)
 
 Rental agreement
 
 ## Defined in
 
-dist/generated/types.d.ts:24533
+dist/generated/types.d.ts:25293

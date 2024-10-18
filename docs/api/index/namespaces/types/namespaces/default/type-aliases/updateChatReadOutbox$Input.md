@@ -20,16 +20,16 @@ Outgoing messages were read
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### last\_read\_outbox\_message\_id?
 
-> `readonly` `optional` **last\_read\_outbox\_message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **last\_read\_outbox\_message\_id**: [`int53`](int53.md)
 
 Identifier of last read outgoing message
 
 ## Defined in
 
-dist/generated/types.d.ts:53589
+dist/generated/types.d.ts:55205

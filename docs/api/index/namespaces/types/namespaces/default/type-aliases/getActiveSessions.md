@@ -6,7 +6,9 @@
 
 # Type Alias: getActiveSessions()
 
-> **getActiveSessions**: (`parameters`) => [`Sessions`](Sessions.md)
+> **getActiveSessions**: (`parameters`) => [`Sessions`](Sessions-1.md)
+
+Returns all active sessions of the current user
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Sessions`](Sessions.md)
+[`Sessions`](Sessions-1.md)
 
-[Sessions](Sessions.md)
+[Sessions](Sessions-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95658
+dist/generated/types.d.ts:98427

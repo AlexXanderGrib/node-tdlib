@@ -24,4 +24,4 @@ Pass true if the background is deleted for a dark theme
 
 ## Defined in
 
-dist/generated/types.d.ts:97212
+dist/generated/types.d.ts:99991

@@ -14,10 +14,10 @@ Checks whether the specified bot can send messages to the user. Returns a 404 er
 
 ### bot\_user\_id?
 
-> `readonly` `optional` **bot\_user\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **bot\_user\_id**: [`int53`](int53.md)
 
 Identifier of the target bot
 
 ## Defined in
 
-dist/generated/types.d.ts:95170
+dist/generated/types.d.ts:97667

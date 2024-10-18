@@ -6,13 +6,15 @@
 
 # Type Alias: TelegramPaymentPurpose
 
-> **TelegramPaymentPurpose**: [`telegramPaymentPurposePremiumGiftCodes`](telegramPaymentPurposePremiumGiftCodes.md) \| [`telegramPaymentPurposePremiumGiveaway`](telegramPaymentPurposePremiumGiveaway.md) \| [`telegramPaymentPurposeStars`](telegramPaymentPurposeStars.md)
+> **TelegramPaymentPurpose**: [`telegramPaymentPurposePremiumGiftCodes`](telegramPaymentPurposePremiumGiftCodes.md) \| [`telegramPaymentPurposePremiumGiveaway`](telegramPaymentPurposePremiumGiveaway.md) \| [`telegramPaymentPurposeStars`](telegramPaymentPurposeStars.md) \| [`telegramPaymentPurposeGiftedStars`](telegramPaymentPurposeGiftedStars.md) \| [`telegramPaymentPurposeJoinChat`](telegramPaymentPurposeJoinChat.md)
 
 Any of:
 - [telegramPaymentPurposePremiumGiftCodes](telegramPaymentPurposePremiumGiftCodes.md)
 - [telegramPaymentPurposePremiumGiveaway](telegramPaymentPurposePremiumGiveaway.md)
 - [telegramPaymentPurposeStars](telegramPaymentPurposeStars.md)
+- [telegramPaymentPurposeGiftedStars](telegramPaymentPurposeGiftedStars.md)
+- [telegramPaymentPurposeJoinChat](telegramPaymentPurposeJoinChat.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:64472
+dist/generated/types.d.ts:66292

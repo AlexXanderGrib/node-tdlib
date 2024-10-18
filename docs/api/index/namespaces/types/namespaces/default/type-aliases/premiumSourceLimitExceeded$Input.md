@@ -26,4 +26,4 @@ Type of the exceeded limit
 
 ## Defined in
 
-dist/generated/types.d.ts:42238
+dist/generated/types.d.ts:43632

@@ -18,10 +18,10 @@ Represents a numeric JSON value
 
 ### value
 
-> **value**: [`double`](double-1.md)
+> **value**: [`double`](double.md)
 
 The value
 
 ## Defined in
 
-dist/generated/types.d.ts:45797
+dist/generated/types.d.ts:47323

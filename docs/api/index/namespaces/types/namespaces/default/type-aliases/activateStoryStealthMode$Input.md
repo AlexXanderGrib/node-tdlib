@@ -20,4 +20,4 @@ Activates stealth mode for stories, which hides all views of stories from the cu
 
 ## Defined in
 
-dist/generated/types.d.ts:88176
+dist/generated/types.d.ts:90551

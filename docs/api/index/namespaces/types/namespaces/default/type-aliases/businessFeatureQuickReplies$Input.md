@@ -20,4 +20,4 @@ The ability to use quick replies
 
 ## Defined in
 
-dist/generated/types.d.ts:41897
+dist/generated/types.d.ts:43291

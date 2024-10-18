@@ -24,10 +24,10 @@ Unique identifier of the query result
 
 ### sticker
 
-> **sticker**: [`sticker`](sticker-1.md)
+> **sticker**: [`sticker`](sticker.md)
 
 Sticker
 
 ## Defined in
 
-dist/generated/types.d.ts:38703
+dist/generated/types.d.ts:40073

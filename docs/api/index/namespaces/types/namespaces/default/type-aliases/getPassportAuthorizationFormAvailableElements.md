@@ -6,7 +6,9 @@
 
 # Type Alias: getPassportAuthorizationFormAvailableElements()
 
-> **getPassportAuthorizationFormAvailableElements**: (`parameters`) => [`PassportElementsWithErrors`](PassportElementsWithErrors.md)
+> **getPassportAuthorizationFormAvailableElements**: (`parameters`) => [`PassportElementsWithErrors`](PassportElementsWithErrors-1.md)
+
+Returns already available Telegram Passport elements suitable for completing a Telegram Passport authorization form. Result can be received only once for each authorization form
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PassportElementsWithErrors`](PassportElementsWithErrors.md)
+[`PassportElementsWithErrors`](PassportElementsWithErrors-1.md)
 
-[PassportElementsWithErrors](PassportElementsWithErrors.md)
+[PassportElementsWithErrors](PassportElementsWithErrors-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99588
+dist/generated/types.d.ts:102367

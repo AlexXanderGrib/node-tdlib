@@ -14,7 +14,7 @@ Deletes all messages sent by the specified message sender in a chat. Supported o
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -26,4 +26,4 @@ Identifier of the sender of messages to delete
 
 ## Defined in
 
-dist/generated/types.d.ts:78688
+dist/generated/types.d.ts:80697

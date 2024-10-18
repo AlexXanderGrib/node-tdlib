@@ -20,4 +20,4 @@ The username is occupied
 
 ## Defined in
 
-dist/generated/types.d.ts:43907
+dist/generated/types.d.ts:45433

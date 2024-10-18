@@ -28,4 +28,4 @@ The Telegram Premium gift code
 
 ## Defined in
 
-dist/generated/types.d.ts:48168
+dist/generated/types.d.ts:49788

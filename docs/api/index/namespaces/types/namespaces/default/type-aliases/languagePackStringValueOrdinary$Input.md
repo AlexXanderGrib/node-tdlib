@@ -26,4 +26,4 @@ String value
 
 ## Defined in
 
-dist/generated/types.d.ts:40930
+dist/generated/types.d.ts:42324

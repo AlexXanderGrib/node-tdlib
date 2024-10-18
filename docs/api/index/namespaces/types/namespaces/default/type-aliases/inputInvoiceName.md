@@ -24,4 +24,4 @@ Name of the invoice
 
 ## Defined in
 
-dist/generated/types.d.ts:23495
+dist/generated/types.d.ts:24255

@@ -18,7 +18,7 @@ Returns unique emoji that correspond to stickers to be found by the getStickers(
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier for which to find stickers
 
@@ -42,4 +42,4 @@ Type of the stickers to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:92567
+dist/generated/types.d.ts:95064

@@ -6,7 +6,9 @@
 
 # Type Alias: getCommands()
 
-> **getCommands**: (`parameters`) => [`BotCommands`](BotCommands.md)
+> **getCommands**: (`parameters`) => [`BotCommands`](BotCommands-1.md)
+
+Returns the list of commands supported by the bot for the given user scope and language; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BotCommands`](BotCommands.md)
+[`BotCommands`](BotCommands-1.md)
 
-[BotCommands](BotCommands.md)
+[BotCommands](BotCommands-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95033
+dist/generated/types.d.ts:97530

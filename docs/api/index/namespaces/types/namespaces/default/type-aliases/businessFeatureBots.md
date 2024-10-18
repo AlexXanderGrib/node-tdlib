@@ -18,4 +18,4 @@ The ability to connect a bot to the account
 
 ## Defined in
 
-dist/generated/types.d.ts:41959
+dist/generated/types.d.ts:43353

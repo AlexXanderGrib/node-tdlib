@@ -20,16 +20,16 @@ The current user shared a chat, which was requested by the bot
 
 ### button\_id?
 
-> `readonly` `optional` **button\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **button\_id**: [`int32`](int32.md)
 
 Identifier of the keyboard button with the request
 
 ### chat?
 
-> `readonly` `optional` **chat**: [`sharedChat$Input`](sharedChat$Input-1.md)
+> `readonly` `optional` **chat**: [`sharedChat$Input`](sharedChat$Input.md)
 
 The shared chat
 
 ## Defined in
 
-dist/generated/types.d.ts:28263
+dist/generated/types.d.ts:29137

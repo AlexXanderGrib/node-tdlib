@@ -20,4 +20,4 @@ The maximum number of created public chats
 
 ## Defined in
 
-dist/generated/types.d.ts:41291
+dist/generated/types.d.ts:42685

@@ -6,7 +6,9 @@
 
 # Type Alias: getNetworkStatistics()
 
-> **getNetworkStatistics**: (`parameters`) => [`NetworkStatistics`](NetworkStatistics.md)
+> **getNetworkStatistics**: (`parameters`) => [`NetworkStatistics`](NetworkStatistics-1.md)
+
+Returns network data usage statistics. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`NetworkStatistics`](NetworkStatistics.md)
+[`NetworkStatistics`](NetworkStatistics-1.md)
 
-[NetworkStatistics](NetworkStatistics.md)
+[NetworkStatistics](NetworkStatistics-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:99021
+dist/generated/types.d.ts:101800

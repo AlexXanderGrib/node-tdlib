@@ -20,10 +20,10 @@ A forwarded messages
 
 ### total\_count?
 
-> `readonly` `optional` **total\_count**: [`int32`](int32-1.md)
+> `readonly` `optional` **total\_count**: [`int32`](int32.md)
 
 Number of forwarded messages
 
 ## Defined in
 
-dist/generated/types.d.ts:45156
+dist/generated/types.d.ts:46682

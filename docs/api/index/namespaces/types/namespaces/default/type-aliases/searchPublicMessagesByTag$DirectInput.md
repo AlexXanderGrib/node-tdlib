@@ -14,7 +14,7 @@ Searches for public channel posts containing the given hashtag or cashtag. For o
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of messages to be returned; up to 100. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
 
@@ -32,4 +32,4 @@ Hashtag or cashtag to search for
 
 ## Defined in
 
-dist/generated/types.d.ts:76786
+dist/generated/types.d.ts:78812

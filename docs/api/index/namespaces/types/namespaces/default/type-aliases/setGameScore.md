@@ -6,7 +6,9 @@
 
 # Type Alias: setGameScore()
 
-> **setGameScore**: (`parameters`) => [`Message`](Message.md)
+> **setGameScore**: (`parameters`) => [`Message`](Message-1.md)
+
+Updates the game score of the specified user in the game; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83363
+dist/generated/types.d.ts:85662

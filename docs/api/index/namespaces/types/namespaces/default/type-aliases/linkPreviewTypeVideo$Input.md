@@ -26,13 +26,13 @@ Author of the video
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds; 0 if unknown
 
 ### height?
 
-> `readonly` `optional` **height**: [`int32`](int32-1.md)
+> `readonly` `optional` **height**: [`int32`](int32.md)
 
 Expected height of the preview
 
@@ -50,16 +50,16 @@ URL of the video; may be empty if none
 
 ### video?
 
-> `readonly` `optional` **video**: [`video$Input`](video$Input-1.md) \| `null`
+> `readonly` `optional` **video**: [`video$Input`](video$Input.md) \| `null`
 
 The video description; may be null if unknown
 
 ### width?
 
-> `readonly` `optional` **width**: [`int32`](int32-1.md)
+> `readonly` `optional` **width**: [`int32`](int32.md)
 
 Expected width of the preview
 
 ## Defined in
 
-dist/generated/types.d.ts:21602
+dist/generated/types.d.ts:22352

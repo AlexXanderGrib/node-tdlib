@@ -6,7 +6,9 @@
 
 # Type Alias: setChatPhoto()
 
-> **setChatPhoto**: (`parameters`) => [`Ok`](Ok.md)
+> **setChatPhoto**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Changes the photo of a chat. Supported only for basic groups, supergroups and channels. Requires can_change_info member right
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:85231
+dist/generated/types.d.ts:87530

@@ -6,7 +6,9 @@
 
 # Type Alias: answerCallbackQuery()
 
-> **answerCallbackQuery**: (`parameters`) => [`Ok`](Ok.md)
+> **answerCallbackQuery**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the result of a callback query; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83199
+dist/generated/types.d.ts:85498

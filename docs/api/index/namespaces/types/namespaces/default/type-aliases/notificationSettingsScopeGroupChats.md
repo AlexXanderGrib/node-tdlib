@@ -18,4 +18,4 @@ Notification settings applied to all basic group and supergroup chats when the c
 
 ## Defined in
 
-dist/generated/types.d.ts:14833
+dist/generated/types.d.ts:15425

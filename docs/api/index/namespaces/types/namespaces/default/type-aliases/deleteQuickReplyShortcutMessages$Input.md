@@ -18,16 +18,16 @@ Deletes specified quick reply messages
 
 ### message\_ids?
 
-> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53-1.md)\>
+> `readonly` `optional` **message\_ids**: [`vector$Input`](vector$Input.md)\<[`int53`](int53.md)\>
 
 Unique identifiers of the messages
 
 ### shortcut\_id?
 
-> `readonly` `optional` **shortcut\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **shortcut\_id**: [`int32`](int32.md)
 
 Unique identifier of the quick reply shortcut to which the messages belong
 
 ## Defined in
 
-dist/generated/types.d.ts:80289
+dist/generated/types.d.ts:82338

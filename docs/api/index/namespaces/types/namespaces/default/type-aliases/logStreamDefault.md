@@ -18,4 +18,4 @@ The log is written to stderr or an OS specific log
 
 ## Defined in
 
-dist/generated/types.d.ts:58205
+dist/generated/types.d.ts:59845

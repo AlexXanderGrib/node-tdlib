@@ -20,16 +20,16 @@ Basic information about a topic in a forum chat was changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### info?
 
-> `readonly` `optional` **info**: [`forumTopicInfo$Input`](forumTopicInfo$Input-1.md)
+> `readonly` `optional` **info**: [`forumTopicInfo$Input`](forumTopicInfo$Input.md)
 
 New information about the topic
 
 ## Defined in
 
-dist/generated/types.d.ts:54617
+dist/generated/types.d.ts:56233

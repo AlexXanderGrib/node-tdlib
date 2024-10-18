@@ -24,4 +24,4 @@ Pass true to get the list of features for channels; pass false to get the list o
 
 ## Defined in
 
-dist/generated/types.d.ts:88299
+dist/generated/types.d.ts:90674

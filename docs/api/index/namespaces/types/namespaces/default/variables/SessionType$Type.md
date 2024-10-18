@@ -80,4 +80,4 @@
 
 ## Defined in
 
-dist/generated/types.d.ts:1158
+dist/generated/types.d.ts:1182

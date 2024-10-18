@@ -6,7 +6,9 @@
 
 # Type Alias: getFavoriteStickers()
 
-> **getFavoriteStickers**: (`parameters`) => [`Stickers`](Stickers.md)
+> **getFavoriteStickers**: (`parameters`) => [`Stickers`](Stickers-1.md)
+
+Returns favorite stickers
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Stickers`](Stickers.md)
+[`Stickers`](Stickers-1.md)
 
-[Stickers](Stickers.md)
+[Stickers](Stickers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93277
+dist/generated/types.d.ts:95774

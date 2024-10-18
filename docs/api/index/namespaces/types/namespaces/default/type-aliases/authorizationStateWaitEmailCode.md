@@ -30,7 +30,7 @@ True, if authorization through Google ID is allowed
 
 ### code\_info
 
-> **code\_info**: [`emailAddressAuthenticationCodeInfo`](emailAddressAuthenticationCodeInfo-1.md)
+> **code\_info**: [`emailAddressAuthenticationCodeInfo`](emailAddressAuthenticationCodeInfo.md)
 
 Information about the sent authentication code
 
@@ -42,4 +42,4 @@ Reset state of the email address; may be null if the email address can't be rese
 
 ## Defined in
 
-dist/generated/types.d.ts:3203
+dist/generated/types.d.ts:3249

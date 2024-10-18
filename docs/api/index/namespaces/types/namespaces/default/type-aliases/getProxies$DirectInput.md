@@ -12,4 +12,4 @@ Returns the list of proxies that are currently set up. Can be called before auth
 
 ## Defined in
 
-dist/generated/types.d.ts:101591
+dist/generated/types.d.ts:104512

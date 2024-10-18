@@ -18,4 +18,4 @@ The ability to set up a greeting message
 
 ## Defined in
 
-dist/generated/types.d.ts:41903
+dist/generated/types.d.ts:43297

@@ -18,10 +18,10 @@ The selfie contains an error. The error is considered resolved when the file wit
 
 ### file\_hash
 
-> **file\_hash**: [`bytes`](bytes-1.md)
+> **file\_hash**: [`bytes`](bytes.md)
 
 Current hash of the file containing the selfie
 
 ## Defined in
 
-dist/generated/types.d.ts:25599
+dist/generated/types.d.ts:26359

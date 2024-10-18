@@ -18,4 +18,4 @@ The session is running on the Edge browser
 
 ## Defined in
 
-dist/generated/types.d.ts:46517
+dist/generated/types.d.ts:48043

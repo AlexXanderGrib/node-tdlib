@@ -6,7 +6,9 @@
 
 # Type Alias: optimizeStorage()
 
-> **optimizeStorage**: (`parameters`) => [`StorageStatistics`](StorageStatistics.md)
+> **optimizeStorage**: (`parameters`) => [`StorageStatistics`](StorageStatistics-1.md)
+
+Optimizes storage usage, i.e. deletes some files and returns new storage usage statistics. Secret thumbnails can't be deleted
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`StorageStatistics`](StorageStatistics.md)
+[`StorageStatistics`](StorageStatistics-1.md)
 
-[StorageStatistics](StorageStatistics.md)
+[StorageStatistics](StorageStatistics-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98959
+dist/generated/types.d.ts:101738

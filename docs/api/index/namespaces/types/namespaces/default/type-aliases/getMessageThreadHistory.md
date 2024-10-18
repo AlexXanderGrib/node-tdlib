@@ -6,7 +6,11 @@
 
 # Type Alias: getMessageThreadHistory()
 
-> **getMessageThreadHistory**: (`parameters`) => [`Messages`](Messages.md)
+> **getMessageThreadHistory**: (`parameters`) => [`Messages`](Messages-1.md)
+
+Returns messages in a message thread of a message. Can be used only if messageProperties.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
+
+- The messages are returned in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Messages`](Messages.md)
+[`Messages`](Messages-1.md)
 
-[Messages](Messages.md)
+[Messages](Messages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76203
+dist/generated/types.d.ts:78229

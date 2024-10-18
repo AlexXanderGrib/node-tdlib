@@ -6,7 +6,9 @@
 
 # Type Alias: addChatMember()
 
-> **addChatMember**: (`parameters`) => [`FailedToAddMembers`](FailedToAddMembers.md)
+> **addChatMember**: (`parameters`) => [`FailedToAddMembers`](FailedToAddMembers-1.md)
+
+Adds a new member to a chat; requires can_invite_users member right. Members can't be added to private or secret chats. Returns information about members that weren't added
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`FailedToAddMembers`](FailedToAddMembers.md)
+[`FailedToAddMembers`](FailedToAddMembers-1.md)
 
-[FailedToAddMembers](FailedToAddMembers.md)
+[FailedToAddMembers](FailedToAddMembers-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86377
+dist/generated/types.d.ts:88676

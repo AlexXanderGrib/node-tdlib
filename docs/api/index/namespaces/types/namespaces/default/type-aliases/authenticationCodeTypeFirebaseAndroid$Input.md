@@ -26,10 +26,10 @@ Parameters to be used for device verification
 
 ### length?
 
-> `readonly` `optional` **length**: [`int32`](int32-1.md)
+> `readonly` `optional` **length**: [`int32`](int32.md)
 
 Length of the code
 
 ## Defined in
 
-dist/generated/types.d.ts:2723
+dist/generated/types.d.ts:2769

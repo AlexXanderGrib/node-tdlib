@@ -18,10 +18,10 @@ Email address can be reset after the given period. Call resetAuthenticationEmail
 
 ### wait\_period
 
-> **wait\_period**: [`int32`](int32-1.md)
+> **wait\_period**: [`int32`](int32.md)
 
 Time required to wait before the email address can be reset; 0 if the user is subscribed to Telegram Premium
 
 ## Defined in
 
-dist/generated/types.d.ts:2943
+dist/generated/types.d.ts:2989

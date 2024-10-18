@@ -20,4 +20,4 @@ The file is an audio file
 
 ## Defined in
 
-dist/generated/types.d.ts:48969
+dist/generated/types.d.ts:50553

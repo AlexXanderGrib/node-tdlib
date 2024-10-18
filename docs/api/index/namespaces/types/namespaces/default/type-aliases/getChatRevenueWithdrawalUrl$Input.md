@@ -18,7 +18,7 @@ Returns a URL for chat revenue withdrawal; requires owner privileges in the chat
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
@@ -30,4 +30,4 @@ The 2-step verification password of the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:98353
+dist/generated/types.d.ts:101132

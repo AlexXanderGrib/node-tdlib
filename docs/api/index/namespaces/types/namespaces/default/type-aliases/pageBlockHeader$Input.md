@@ -26,4 +26,4 @@ Header
 
 ## Defined in
 
-dist/generated/types.d.ts:19734
+dist/generated/types.d.ts:20360

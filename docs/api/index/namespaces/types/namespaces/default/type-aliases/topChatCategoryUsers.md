@@ -18,4 +18,4 @@ A category containing frequently used private chats with non-bot users
 
 ## Defined in
 
-dist/generated/types.d.ts:50057
+dist/generated/types.d.ts:51641

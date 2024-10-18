@@ -14,10 +14,10 @@ Adds new contacts or edits existing contacts by their phone numbers; contacts' u
 
 ### contacts?
 
-> `readonly` `optional` **contacts**: [`vector$Input`](vector$Input.md)\<[`contact$Input`](contact$Input-1.md)\>
+> `readonly` `optional` **contacts**: [`vector$Input`](vector$Input.md)\<[`contact$Input`](contact$Input.md)\>
 
 The list of contacts to import or edit; contacts' vCard are ignored and are not imported
 
 ## Defined in
 
-dist/generated/types.d.ts:92106
+dist/generated/types.d.ts:94603

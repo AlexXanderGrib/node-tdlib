@@ -20,4 +20,4 @@ Email address authentication to check
 
 ## Defined in
 
-dist/generated/types.d.ts:73998
+dist/generated/types.d.ts:75986

@@ -24,16 +24,16 @@ The chat list with changed number of unread messages
 
 ### unread\_count
 
-> **unread\_count**: [`int32`](int32-1.md)
+> **unread\_count**: [`int32`](int32.md)
 
 Total number of unread messages
 
 ### unread\_unmuted\_count
 
-> **unread\_unmuted\_count**: [`int32`](int32-1.md)
+> **unread\_unmuted\_count**: [`int32`](int32.md)
 
 Total number of unread messages in unmuted chats
 
 ## Defined in
 
-dist/generated/types.d.ts:55721
+dist/generated/types.d.ts:57337

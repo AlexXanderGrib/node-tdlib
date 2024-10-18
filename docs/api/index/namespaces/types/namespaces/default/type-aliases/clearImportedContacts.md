@@ -6,7 +6,9 @@
 
 # Type Alias: clearImportedContacts()
 
-> **clearImportedContacts**: (`parameters`) => [`Ok`](Ok.md)
+> **clearImportedContacts**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Clears all imported contacts, contact list remains unchanged
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92270
+dist/generated/types.d.ts:94767

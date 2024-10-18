@@ -20,7 +20,7 @@ The media is a video
 
 ### duration?
 
-> `readonly` `optional` **duration**: [`int32`](int32-1.md)
+> `readonly` `optional` **duration**: [`int32`](int32.md)
 
 Duration of the video, in seconds
 
@@ -32,4 +32,4 @@ True, if the video is supposed to be streamed
 
 ## Defined in
 
-dist/generated/types.d.ts:28911
+dist/generated/types.d.ts:29785

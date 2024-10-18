@@ -6,7 +6,9 @@
 
 # Type Alias: getStarAdAccountUrl()
 
-> **getStarAdAccountUrl**: (`parameters`) => [`HttpUrl`](HttpUrl.md)
+> **getStarAdAccountUrl**: (`parameters`) => [`HttpUrl`](HttpUrl-1.md)
+
+Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for the chat paid in the owned Telegram Stars
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`HttpUrl`](HttpUrl.md)
+[`HttpUrl`](HttpUrl-1.md)
 
-[HttpUrl](HttpUrl.md)
+[HttpUrl](HttpUrl-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:98549
+dist/generated/types.d.ts:101328

@@ -6,7 +6,9 @@
 
 # Type Alias: testNetwork()
 
-> **testNetwork**: (`parameters`) => [`Ok`](Ok.md)
+> **testNetwork**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sends a simple network request to the Telegram servers; for testing only. Can be called before authorization
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:102182
+dist/generated/types.d.ts:105103

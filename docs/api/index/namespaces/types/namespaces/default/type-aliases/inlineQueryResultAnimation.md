@@ -18,7 +18,7 @@ Represents an animation file
 
 ### animation
 
-> **animation**: [`animation`](animation-1.md)
+> **animation**: [`animation`](animation.md)
 
 Animation file
 
@@ -36,4 +36,4 @@ Animation title
 
 ## Defined in
 
-dist/generated/types.d.ts:38517
+dist/generated/types.d.ts:39887

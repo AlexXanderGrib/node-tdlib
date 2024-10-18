@@ -20,4 +20,4 @@ The ability to disallow incoming voice and video note messages in private chats 
 
 ## Defined in
 
-dist/generated/types.d.ts:41803
+dist/generated/types.d.ts:43197

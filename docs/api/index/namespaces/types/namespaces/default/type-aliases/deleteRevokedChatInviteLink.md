@@ -6,7 +6,9 @@
 
 # Type Alias: deleteRevokedChatInviteLink()
 
-> **deleteRevokedChatInviteLink**: (`parameters`) => [`Ok`](Ok.md)
+> **deleteRevokedChatInviteLink**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90121
+dist/generated/types.d.ts:92618

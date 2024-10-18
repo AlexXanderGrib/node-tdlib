@@ -20,10 +20,10 @@ The list of quick reply shortcuts has changed
 
 ### shortcut\_ids?
 
-> `readonly` `optional` **shortcut\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32-1.md)\>
+> `readonly` `optional` **shortcut\_ids**: [`vector$Input`](vector$Input.md)\<[`int32`](int32.md)\>
 
 The new list of identifiers of quick reply shortcuts
 
 ## Defined in
 
-dist/generated/types.d.ts:54554
+dist/generated/types.d.ts:56170

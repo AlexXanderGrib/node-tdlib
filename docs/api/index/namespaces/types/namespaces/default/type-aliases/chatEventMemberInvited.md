@@ -24,10 +24,10 @@ New member status
 
 ### user\_id
 
-> **user\_id**: [`int53`](int53-1.md)
+> **user\_id**: [`int53`](int53.md)
 
 New member user identifier
 
 ## Defined in
 
-dist/generated/types.d.ts:39411
+dist/generated/types.d.ts:40781

@@ -6,7 +6,9 @@
 
 # Type Alias: setBotName()
 
-> **setBotName**: (`parameters`) => [`Ok`](Ok.md)
+> **setBotName**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sets the name of a bot. Can be called only if userTypeBot.can_be_edited == true
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:95307
+dist/generated/types.d.ts:98076

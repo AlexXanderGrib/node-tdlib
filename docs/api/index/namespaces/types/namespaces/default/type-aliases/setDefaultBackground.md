@@ -6,7 +6,9 @@
 
 # Type Alias: setDefaultBackground()
 
-> **setDefaultBackground**: (`parameters`) => [`Background`](Background.md)
+> **setDefaultBackground**: (`parameters`) => [`Background`](Background-1.md)
+
+Sets default background for chats; adds the background to the list of installed backgrounds
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Background`](Background.md)
+[`Background`](Background-1.md)
 
-[Background](Background.md)
+[Background](Background-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97208
+dist/generated/types.d.ts:99987

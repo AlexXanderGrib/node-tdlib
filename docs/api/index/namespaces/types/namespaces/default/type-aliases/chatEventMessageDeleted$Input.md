@@ -26,10 +26,10 @@ True, if the message deletion can be reported via reportSupergroupAntiSpamFalseP
 
 ### message?
 
-> `readonly` `optional` **message**: [`message$Input`](message$Input-1.md)
+> `readonly` `optional` **message**: [`message$Input`](message$Input.md)
 
 Deleted message
 
 ## Defined in
 
-dist/generated/types.d.ts:39241
+dist/generated/types.d.ts:40611

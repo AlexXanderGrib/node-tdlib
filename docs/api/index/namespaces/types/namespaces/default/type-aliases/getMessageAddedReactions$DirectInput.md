@@ -14,21 +14,21 @@ Returns reactions added for a message, along with their sender
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Identifier of the chat to which the message belongs
 
 ### limit?
 
-> `readonly` `optional` **limit**: [`int32`](int32-1.md)
+> `readonly` `optional` **limit**: [`int32`](int32.md)
 
 The maximum number of reactions to be returned; must be positive and can't be greater than 100
 
 ### message\_id?
 
-> `readonly` `optional` **message\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **message\_id**: [`int53`](int53.md)
 
-Identifier of the message
+Identifier of the message. Use message.interaction_info.reactions.can_get_added_reactions to check whether added reactions can be received for the message
 
 ### offset?
 
@@ -40,8 +40,8 @@ Offset of the first entry to return as received from the previous request; use e
 
 > `readonly` `optional` **reaction\_type**: [`ReactionType$Input`](ReactionType$Input.md) \| `null`
 
-Type of the reactions to return; pass null to return all added reactions
+Type of the reactions to return; pass null to return all added reactions; reactionTypePaid isn't supported
 
 ## Defined in
 
-dist/generated/types.d.ts:81467
+dist/generated/types.d.ts:83660

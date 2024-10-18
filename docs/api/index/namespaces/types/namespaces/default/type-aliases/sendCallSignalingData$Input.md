@@ -18,16 +18,16 @@ Sends call signaling data
 
 ### call\_id?
 
-> `readonly` `optional` **call\_id**: [`int32`](int32-1.md)
+> `readonly` `optional` **call\_id**: [`int32`](int32.md)
 
 Call identifier
 
 ### data?
 
-> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input-1.md)
+> `readonly` `optional` **data**: [`bytes$Input`](bytes$Input.md)
 
 The data
 
 ## Defined in
 
-dist/generated/types.d.ts:90469
+dist/generated/types.d.ts:92966

@@ -56,7 +56,7 @@ The message reply markup; pass null if none. Must be of type replyMarkupInlineKe
 
 ### thumbnail\_height?
 
-> `readonly` `optional` **thumbnail\_height**: [`int32`](int32-1.md)
+> `readonly` `optional` **thumbnail\_height**: [`int32`](int32.md)
 
 Height of the thumbnail
 
@@ -68,7 +68,7 @@ The URL of the file thumbnail, if it exists
 
 ### thumbnail\_width?
 
-> `readonly` `optional` **thumbnail\_width**: [`int32`](int32-1.md)
+> `readonly` `optional` **thumbnail\_width**: [`int32`](int32.md)
 
 Width of the thumbnail
 
@@ -80,4 +80,4 @@ Title of the resulting file
 
 ## Defined in
 
-dist/generated/types.d.ts:37593
+dist/generated/types.d.ts:38963

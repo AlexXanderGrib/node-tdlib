@@ -14,10 +14,10 @@ Changes the period of inactivity after which the account of the current user wil
 
 ### ttl?
 
-> `readonly` `optional` **ttl**: [`accountTtl$Input`](accountTtl$Input-1.md)
+> `readonly` `optional` **ttl**: [`accountTtl$Input`](accountTtl$Input.md)
 
 New account TTL
 
 ## Defined in
 
-dist/generated/types.d.ts:98000
+dist/generated/types.d.ts:100779

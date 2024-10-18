@@ -6,7 +6,9 @@
 
 # Type Alias: importContacts()
 
-> **importContacts**: (`parameters`) => [`ImportedContacts`](ImportedContacts.md)
+> **importContacts**: (`parameters`) => [`ImportedContacts`](ImportedContacts-1.md)
+
+Adds new contacts or edits existing contacts by their phone numbers; contacts' user identifiers are ignored
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ImportedContacts`](ImportedContacts.md)
+[`ImportedContacts`](ImportedContacts-1.md)
 
-[ImportedContacts](ImportedContacts.md)
+[ImportedContacts](ImportedContacts-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:92119
+dist/generated/types.d.ts:94616

@@ -6,7 +6,11 @@
 
 # Type Alias: addFavoriteSticker()
 
-> **addFavoriteSticker**: (`parameters`) => [`Ok`](Ok.md)
+> **addFavoriteSticker**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Adds a new sticker to the list of favorite stickers. The new sticker is added to the top of the list. If the sticker was already in the list, it is removed from the list first.
+
+- Only stickers belonging to a sticker set or in WEBP or WEBM format can be added to this list. Emoji stickers can't be added to favorite stickers
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93311
+dist/generated/types.d.ts:95808

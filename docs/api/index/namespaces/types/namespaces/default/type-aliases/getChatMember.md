@@ -6,7 +6,9 @@
 
 # Type Alias: getChatMember()
 
-> **getChatMember**: (`parameters`) => [`ChatMember`](ChatMember.md)
+> **getChatMember**: (`parameters`) => [`ChatMember`](ChatMember-1.md)
+
+Returns information about a single member of a chat
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ChatMember`](ChatMember.md)
+[`ChatMember`](ChatMember-1.md)
 
-[ChatMember](ChatMember.md)
+[ChatMember](ChatMember-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:86642
+dist/generated/types.d.ts:88941

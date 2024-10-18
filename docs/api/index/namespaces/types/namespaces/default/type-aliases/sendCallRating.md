@@ -6,7 +6,9 @@
 
 # Type Alias: sendCallRating()
 
-> **sendCallRating**: (`parameters`) => [`Ok`](Ok.md)
+> **sendCallRating**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Sends a call rating
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:90629
+dist/generated/types.d.ts:93126

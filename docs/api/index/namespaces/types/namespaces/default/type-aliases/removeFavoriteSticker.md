@@ -6,7 +6,9 @@
 
 # Type Alias: removeFavoriteSticker()
 
-> **removeFavoriteSticker**: (`parameters`) => [`Ok`](Ok.md)
+> **removeFavoriteSticker**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a sticker from the list of favorite stickers
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:93339
+dist/generated/types.d.ts:95836

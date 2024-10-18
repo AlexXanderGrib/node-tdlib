@@ -6,7 +6,9 @@
 
 # Type Alias: sendMessage()
 
-> **sendMessage**: (`parameters`) => [`Message`](Message.md)
+> **sendMessage**: (`parameters`) => [`Message`](Message-1.md)
+
+Sends a message. Returns the sent message
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Message`](Message.md)
+[`Message`](Message-1.md)
 
-[Message](Message.md)
+[Message](Message-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:78146
+dist/generated/types.d.ts:80155

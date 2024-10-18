@@ -6,7 +6,9 @@
 
 # Type Alias: removeMessageReaction()
 
-> **removeMessageReaction**: (`parameters`) => [`Ok`](Ok.md)
+> **removeMessageReaction**: (`parameters`) => [`Ok`](Ok-1.md)
+
+Removes a reaction from a message. A chosen reaction can always be removed
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`Ok`](Ok.md)
+[`Ok`](Ok-1.md)
 
-[Ok](Ok.md)
+[Ok](Ok-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:81374
+dist/generated/types.d.ts:83423

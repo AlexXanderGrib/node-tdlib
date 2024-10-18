@@ -20,16 +20,16 @@ Chat permissions were changed
 
 ### chat\_id?
 
-> `readonly` `optional` **chat\_id**: [`int53`](int53-1.md)
+> `readonly` `optional` **chat\_id**: [`int53`](int53.md)
 
 Chat identifier
 
 ### permissions?
 
-> `readonly` `optional` **permissions**: [`chatPermissions$Input`](chatPermissions$Input-1.md)
+> `readonly` `optional` **permissions**: [`chatPermissions$Input`](chatPermissions$Input.md)
 
 The new chat permissions
 
 ## Defined in
 
-dist/generated/types.d.ts:53365
+dist/generated/types.d.ts:54981

@@ -12,4 +12,4 @@ Returns the current user
 
 ## Defined in
 
-dist/generated/types.d.ts:74337
+dist/generated/types.d.ts:76325

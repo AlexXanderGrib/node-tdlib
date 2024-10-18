@@ -20,4 +20,4 @@ The thumbnail is in JPEG format
 
 ## Defined in
 
-dist/generated/types.d.ts:4117
+dist/generated/types.d.ts:4163

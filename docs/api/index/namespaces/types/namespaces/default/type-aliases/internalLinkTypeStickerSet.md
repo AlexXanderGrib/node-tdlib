@@ -32,4 +32,4 @@ Name of the sticker set
 
 ## Defined in
 
-dist/generated/types.d.ts:48383
+dist/generated/types.d.ts:49957

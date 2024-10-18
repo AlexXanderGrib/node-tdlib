@@ -6,7 +6,9 @@
 
 # Type Alias: cancelRecoveryEmailAddressVerification()
 
-> **cancelRecoveryEmailAddressVerification**: (`parameters`) => [`PasswordState`](PasswordState.md)
+> **cancelRecoveryEmailAddressVerification**: (`parameters`) => [`PasswordState`](PasswordState-1.md)
+
+Cancels verification of the 2-step verification recovery email address
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PasswordState`](PasswordState.md)
+[`PasswordState`](PasswordState-1.md)
 
-[PasswordState](PasswordState.md)
+[PasswordState](PasswordState-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74145
+dist/generated/types.d.ts:76133

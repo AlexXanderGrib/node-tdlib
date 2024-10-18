@@ -36,7 +36,7 @@ The message reply markup; pass null if none. Must be of type replyMarkupInlineKe
 
 ### thumbnail\_height
 
-> **thumbnail\_height**: [`int32`](int32-1.md)
+> **thumbnail\_height**: [`int32`](int32.md)
 
 Thumbnail height, if known
 
@@ -48,16 +48,16 @@ URL of the result thumbnail, if it exists
 
 ### thumbnail\_width
 
-> **thumbnail\_width**: [`int32`](int32-1.md)
+> **thumbnail\_width**: [`int32`](int32.md)
 
 Thumbnail width, if known
 
 ### venue
 
-> **venue**: [`venue`](venue-1.md)
+> **venue**: [`venue`](venue.md)
 
 Venue result
 
 ## Defined in
 
-dist/generated/types.d.ts:37985
+dist/generated/types.d.ts:39355

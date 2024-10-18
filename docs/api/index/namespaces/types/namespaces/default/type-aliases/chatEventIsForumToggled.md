@@ -24,4 +24,4 @@ New value of is_forum
 
 ## Defined in
 
-dist/generated/types.d.ts:40507
+dist/generated/types.d.ts:41901

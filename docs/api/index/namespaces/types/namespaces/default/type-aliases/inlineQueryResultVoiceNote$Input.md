@@ -32,10 +32,10 @@ Title of the voice note
 
 ### voice\_note?
 
-> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input-1.md)
+> `readonly` `optional` **voice\_note**: [`voiceNote$Input`](voiceNote$Input.md)
 
 Voice note
 
 ## Defined in
 
-dist/generated/types.d.ts:38814
+dist/generated/types.d.ts:40184

@@ -20,4 +20,4 @@ The user is currently logging out
 
 ## Defined in
 
-dist/generated/types.d.ts:3409
+dist/generated/types.d.ts:3455

@@ -6,7 +6,9 @@
 
 # Type Alias: getPaymentReceipt()
 
-> **getPaymentReceipt**: (`parameters`) => [`PaymentReceipt`](PaymentReceipt.md)
+> **getPaymentReceipt**: (`parameters`) => [`PaymentReceipt`](PaymentReceipt-1.md)
+
+Returns information about a successful payment
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`PaymentReceipt`](PaymentReceipt.md)
+[`PaymentReceipt`](PaymentReceipt-1.md)
 
-[PaymentReceipt](PaymentReceipt.md)
+[PaymentReceipt](PaymentReceipt-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:96960
+dist/generated/types.d.ts:99739

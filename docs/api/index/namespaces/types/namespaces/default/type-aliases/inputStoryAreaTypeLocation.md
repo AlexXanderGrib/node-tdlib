@@ -18,16 +18,16 @@ An area pointing to a location
 
 ### address
 
-> **address**: [`locationAddress`](locationAddress-1.md) \| `null`
+> **address**: [`locationAddress`](locationAddress.md) \| `null`
 
 Address of the location; pass null if unknown
 
 ### location
 
-> **location**: [`location`](location-1.md)
+> **location**: [`location`](location.md)
 
 The location
 
 ## Defined in
 
-dist/generated/types.d.ts:32073
+dist/generated/types.d.ts:33283

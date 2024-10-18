@@ -6,7 +6,9 @@
 
 # Type Alias: getReadDatePrivacySettings()
 
-> **getReadDatePrivacySettings**: (`parameters`) => [`ReadDatePrivacySettings`](ReadDatePrivacySettings.md)
+> **getReadDatePrivacySettings**: (`parameters`) => [`ReadDatePrivacySettings`](ReadDatePrivacySettings-1.md)
+
+Returns privacy settings for message read date
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`ReadDatePrivacySettings`](ReadDatePrivacySettings.md)
+[`ReadDatePrivacySettings`](ReadDatePrivacySettings-1.md)
 
-[ReadDatePrivacySettings](ReadDatePrivacySettings.md)
+[ReadDatePrivacySettings](ReadDatePrivacySettings-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:97836
+dist/generated/types.d.ts:100615

@@ -26,4 +26,4 @@ Local path to the file
 
 ## Defined in
 
-dist/generated/types.d.ts:3946
+dist/generated/types.d.ts:3992

@@ -20,4 +20,4 @@ Returns a list of basic group and supergroup chats, which can be used as a discu
 
 ## Defined in
 
-dist/generated/types.d.ts:75678
+dist/generated/types.d.ts:77704

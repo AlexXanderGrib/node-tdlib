@@ -24,4 +24,4 @@ The 2-step verification password to check
 
 ## Defined in
 
-dist/generated/types.d.ts:73516
+dist/generated/types.d.ts:75504

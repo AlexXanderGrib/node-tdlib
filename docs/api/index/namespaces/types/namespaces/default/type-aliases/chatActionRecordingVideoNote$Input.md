@@ -20,4 +20,4 @@ The user is recording a video note
 
 ## Defined in
 
-dist/generated/types.d.ts:30905
+dist/generated/types.d.ts:32037

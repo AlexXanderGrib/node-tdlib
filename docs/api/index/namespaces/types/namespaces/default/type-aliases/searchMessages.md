@@ -6,7 +6,11 @@
 
 # Type Alias: searchMessages()
 
-> **searchMessages**: (`parameters`) => [`FoundMessages`](FoundMessages.md)
+> **searchMessages**: (`parameters`) => [`FoundMessages`](FoundMessages-1.md)
+
+Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).
+
+- For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
 
 ## Parameters
 
@@ -16,10 +20,10 @@
 
 ## Returns
 
-[`FoundMessages`](FoundMessages.md)
+[`FoundMessages`](FoundMessages-1.md)
 
-[FoundMessages](FoundMessages.md)
+[FoundMessages](FoundMessages-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:76513
+dist/generated/types.d.ts:78539

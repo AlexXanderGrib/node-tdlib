@@ -20,4 +20,4 @@ The user added the bot to attachment or side menu using toggleBotIsAddedToAttach
 
 ## Defined in
 
-dist/generated/types.d.ts:37027
+dist/generated/types.d.ts:38397

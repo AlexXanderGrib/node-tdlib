@@ -18,7 +18,7 @@ Number of chats in a story list has changed
 
 ### chat\_count
 
-> **chat\_count**: [`int32`](int32-1.md)
+> **chat\_count**: [`int32`](int32.md)
 
 Approximate total number of chats with active stories in the list
 
@@ -30,4 +30,4 @@ The story list
 
 ## Defined in
 
-dist/generated/types.d.ts:55999
+dist/generated/types.d.ts:57615

@@ -12,4 +12,4 @@ Returns TGS stickers with generic animations for custom emoji reactions
 
 ## Defined in
 
-dist/generated/types.d.ts:81186
+dist/generated/types.d.ts:83235

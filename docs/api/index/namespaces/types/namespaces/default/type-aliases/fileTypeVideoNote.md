@@ -18,4 +18,4 @@ The file is a video note
 
 ## Defined in
 
-dist/generated/types.d.ts:49143
+dist/generated/types.d.ts:50727

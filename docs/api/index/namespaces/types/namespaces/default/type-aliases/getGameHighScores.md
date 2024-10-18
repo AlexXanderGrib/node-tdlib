@@ -6,7 +6,9 @@
 
 # Type Alias: getGameHighScores()
 
-> **getGameHighScores**: (`parameters`) => [`GameHighScores`](GameHighScores.md)
+> **getGameHighScores**: (`parameters`) => [`GameHighScores`](GameHighScores-1.md)
+
+Returns the high scores for a game and some part of the high score table in the range of the specified user; for bots only
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`GameHighScores`](GameHighScores.md)
+[`GameHighScores`](GameHighScores-1.md)
 
-[GameHighScores](GameHighScores.md)
+[GameHighScores](GameHighScores-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:83479
+dist/generated/types.d.ts:85778

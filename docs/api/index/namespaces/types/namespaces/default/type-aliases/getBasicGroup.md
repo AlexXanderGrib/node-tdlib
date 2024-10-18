@@ -6,7 +6,9 @@
 
 # Type Alias: getBasicGroup()
 
-> **getBasicGroup**: (`parameters`) => [`BasicGroup`](BasicGroup.md)
+> **getBasicGroup**: (`parameters`) => [`BasicGroup`](BasicGroup-1.md)
+
+Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
 
 ## Parameters
 
@@ -16,10 +18,10 @@
 
 ## Returns
 
-[`BasicGroup`](BasicGroup.md)
+[`BasicGroup`](BasicGroup-1.md)
 
-[BasicGroup](BasicGroup.md)
+[BasicGroup](BasicGroup-1.md)
 
 ## Defined in
 
-dist/generated/types.d.ts:74428
+dist/generated/types.d.ts:76416
