@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-unix:
+  test-base:
     strategy:
       matrix:
         os: [ubuntu-22.04, macos-12, macos-14, windows-2022]

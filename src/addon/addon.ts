@@ -53,15 +53,24 @@ async function loadAddon(addonPath: string = builtinAddonPath): Promise<Addon> {
 const isGlibc = () =>
   !!(process.report?.getReport() as any)?.header?.glibcVersionRuntime;
 
+function getPlatform() {
+  return {
+    platform: process.platform === "android" ? "linux" : process.platform,
+    arch: process.arch === "ia32" ? ("x32" as const) : process.arch
+  };
+}
+
 /**
  *
  *
  * @returns {Promise<string>}  {Promise<string>}
  */
 async function getTDLibPath(): Promise<string> {
-  let packageName = `@tdlib-native/tdjson-${process.platform}-${process.arch}`;
+  const { platform, arch } = getPlatform();
 
-  if (process.platform === "linux") {
+  let packageName = `@tdlib-native/tdjson-${platform}-${arch}`;
+
+  if (platform === "linux") {
     assert(
       isGlibc(),
       "TDLib build for MUSL libc is not ready yet. You can ask for do it quicker: https://github.com/AlexXanderGrib/node-tdlib/issues"
@@ -259,7 +268,7 @@ export class TDLibAddon implements TDLib {
     if (this._getMeta(client).destroyed) {
       throw new Error("Client is destroyed");
     }
-    
+
     this._addon.td_json_client_send(client, json);
   }
 
