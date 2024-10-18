@@ -28,9 +28,9 @@ export type boolTrue = true;
 
 export type boolFalse = false;
 
-export type vector<T> = T[];
+export type vector<T> = Array<T>;
 
-export type vector$Input<T> = readonly T[];
+export type vector$Input<T> = ReadonlyArray<T>;
 
 export const $Methods = Object.freeze({
   getAuthorizationState: "getAuthorizationState",
@@ -10514,7 +10514,7 @@ export type gift = {
   default_sell_star_count: int53;
 
   /**
-   * Number of remaining times the gift can be purchased by all users; 0 if not limited
+   * Number of remaining times the gift can be purchased by all users; 0 if not limited or the gift was sold out
    * @type {int32} {@link int32}
    */
   remaining_count: int32;
@@ -10559,7 +10559,7 @@ export type gift$Input = {
   readonly default_sell_star_count?: int53;
 
   /**
-   * Number of remaining times the gift can be purchased by all users; 0 if not limited
+   * Number of remaining times the gift can be purchased by all users; 0 if not limited or the gift was sold out
    * @type {int32} {@link int32}
    */
   readonly remaining_count?: int32;
@@ -21536,7 +21536,7 @@ export type publicChatTypeIsLocationBased$Input = {
 };
 
 /**
- * The chat can be reported as spam using the method reportChat with the reason reportReasonSpam. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
+ * The chat can be reported as spam using the method reportChat with an empty option_id and message_ids. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
  */
 export type chatActionBarReportSpam = {
   _: "chatActionBarReportSpam";
@@ -21551,7 +21551,7 @@ export type chatActionBarReportSpam = {
 /**
  * Version of {@link chatActionBarReportSpam} for method parameters.
  *
- * The chat can be reported as spam using the method reportChat with the reason reportReasonSpam. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
+ * The chat can be reported as spam using the method reportChat with an empty option_id and message_ids. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
  */
 export type chatActionBarReportSpam$Input = {
   readonly _: "chatActionBarReportSpam";
@@ -21564,7 +21564,7 @@ export type chatActionBarReportSpam$Input = {
 };
 
 /**
- * The chat is a location-based supergroup, which can be reported as having unrelated location using the method reportChat with the reason reportReasonUnrelatedLocation
+ * The chat is a location-based supergroup, which can't be reported anymore
  */
 export type chatActionBarReportUnrelatedLocation = {
   _: "chatActionBarReportUnrelatedLocation";
@@ -21573,7 +21573,7 @@ export type chatActionBarReportUnrelatedLocation = {
 /**
  * Version of {@link chatActionBarReportUnrelatedLocation} for method parameters.
  *
- * The chat is a location-based supergroup, which can be reported as having unrelated location using the method reportChat with the reason reportReasonUnrelatedLocation
+ * The chat is a location-based supergroup, which can't be reported anymore
  */
 export type chatActionBarReportUnrelatedLocation$Input = {
   readonly _: "chatActionBarReportUnrelatedLocation";
@@ -27088,10 +27088,10 @@ export type linkPreviewTypeTheme = {
   documents: vector<document>;
 
   /**
-   * Settings for the cloud theme
+   * Settings for the cloud theme; may be null if unknown
    * @type {themeSettings} {@link themeSettings}
    */
-  settings: themeSettings;
+  settings: themeSettings | null;
 };
 
 /**
@@ -27109,10 +27109,10 @@ export type linkPreviewTypeTheme$Input = {
   readonly documents?: vector$Input<document$Input>;
 
   /**
-   * Settings for the cloud theme
+   * Settings for the cloud theme; may be null if unknown
    * @type {themeSettings} {@link themeSettings}
    */
-  readonly settings?: themeSettings$Input;
+  readonly settings?: themeSettings$Input | null;
 };
 
 /**
@@ -27302,10 +27302,10 @@ export type linkPreviewTypeWebApp = {
   _: "linkPreviewTypeWebApp";
 
   /**
-   * Web App photo
+   * Web App photo; may be null if none
    * @type {photo} {@link photo}
    */
-  photo: photo;
+  photo: photo | null;
 };
 
 /**
@@ -27317,10 +27317,10 @@ export type linkPreviewTypeWebApp$Input = {
   readonly _: "linkPreviewTypeWebApp";
 
   /**
-   * Web App photo
+   * Web App photo; may be null if none
    * @type {photo} {@link photo}
    */
-  readonly photo?: photo$Input;
+  readonly photo?: photo$Input | null;
 };
 
 /**
@@ -28046,91 +28046,91 @@ export type themeParameters = {
   _: "themeParameters";
 
   /**
-   * A color of the background in the RGB24 format
+   * A color of the background in the RGB format
    * @type {int32} {@link int32}
    */
   background_color: int32;
 
   /**
-   * A secondary color for the background in the RGB24 format
+   * A secondary color for the background in the RGB format
    * @type {int32} {@link int32}
    */
   secondary_background_color: int32;
 
   /**
-   * A color of the header background in the RGB24 format
+   * A color of the header background in the RGB format
    * @type {int32} {@link int32}
    */
   header_background_color: int32;
 
   /**
-   * A color of the bottom bar background in the RGB24 format
+   * A color of the bottom bar background in the RGB format
    * @type {int32} {@link int32}
    */
   bottom_bar_background_color: int32;
 
   /**
-   * A color of the section background in the RGB24 format
+   * A color of the section background in the RGB format
    * @type {int32} {@link int32}
    */
   section_background_color: int32;
 
   /**
-   * A color of the section separator in the RGB24 format
+   * A color of the section separator in the RGB format
    * @type {int32} {@link int32}
    */
   section_separator_color: int32;
 
   /**
-   * A color of text in the RGB24 format
+   * A color of text in the RGB format
    * @type {int32} {@link int32}
    */
   text_color: int32;
 
   /**
-   * An accent color of the text in the RGB24 format
+   * An accent color of the text in the RGB format
    * @type {int32} {@link int32}
    */
   accent_text_color: int32;
 
   /**
-   * A color of text on the section headers in the RGB24 format
+   * A color of text on the section headers in the RGB format
    * @type {int32} {@link int32}
    */
   section_header_text_color: int32;
 
   /**
-   * A color of the subtitle text in the RGB24 format
+   * A color of the subtitle text in the RGB format
    * @type {int32} {@link int32}
    */
   subtitle_text_color: int32;
 
   /**
-   * A color of the text for destructive actions in the RGB24 format
+   * A color of the text for destructive actions in the RGB format
    * @type {int32} {@link int32}
    */
   destructive_text_color: int32;
 
   /**
-   * A color of hints in the RGB24 format
+   * A color of hints in the RGB format
    * @type {int32} {@link int32}
    */
   hint_color: int32;
 
   /**
-   * A color of links in the RGB24 format
+   * A color of links in the RGB format
    * @type {int32} {@link int32}
    */
   link_color: int32;
 
   /**
-   * A color of the buttons in the RGB24 format
+   * A color of the buttons in the RGB format
    * @type {int32} {@link int32}
    */
   button_color: int32;
 
   /**
-   * A color of text on the buttons in the RGB24 format
+   * A color of text on the buttons in the RGB format
    * @type {int32} {@link int32}
    */
   button_text_color: int32;
@@ -28145,91 +28145,91 @@ export type themeParameters$Input = {
   readonly _: "themeParameters";
 
   /**
-   * A color of the background in the RGB24 format
+   * A color of the background in the RGB format
    * @type {int32} {@link int32}
    */
   readonly background_color?: int32;
 
   /**
-   * A secondary color for the background in the RGB24 format
+   * A secondary color for the background in the RGB format
    * @type {int32} {@link int32}
    */
   readonly secondary_background_color?: int32;
 
   /**
-   * A color of the header background in the RGB24 format
+   * A color of the header background in the RGB format
    * @type {int32} {@link int32}
    */
   readonly header_background_color?: int32;
 
   /**
-   * A color of the bottom bar background in the RGB24 format
+   * A color of the bottom bar background in the RGB format
    * @type {int32} {@link int32}
    */
   readonly bottom_bar_background_color?: int32;
 
   /**
-   * A color of the section background in the RGB24 format
+   * A color of the section background in the RGB format
    * @type {int32} {@link int32}
    */
   readonly section_background_color?: int32;
 
   /**
-   * A color of the section separator in the RGB24 format
+   * A color of the section separator in the RGB format
    * @type {int32} {@link int32}
    */
   readonly section_separator_color?: int32;
 
   /**
-   * A color of text in the RGB24 format
+   * A color of text in the RGB format
    * @type {int32} {@link int32}
    */
   readonly text_color?: int32;
 
   /**
-   * An accent color of the text in the RGB24 format
+   * An accent color of the text in the RGB format
    * @type {int32} {@link int32}
    */
   readonly accent_text_color?: int32;
 
   /**
-   * A color of text on the section headers in the RGB24 format
+   * A color of text on the section headers in the RGB format
    * @type {int32} {@link int32}
    */
   readonly section_header_text_color?: int32;
 
   /**
-   * A color of the subtitle text in the RGB24 format
+   * A color of the subtitle text in the RGB format
    * @type {int32} {@link int32}
    */
   readonly subtitle_text_color?: int32;
 
   /**
-   * A color of the text for destructive actions in the RGB24 format
+   * A color of the text for destructive actions in the RGB format
    * @type {int32} {@link int32}
    */
   readonly destructive_text_color?: int32;
 
   /**
-   * A color of hints in the RGB24 format
+   * A color of hints in the RGB format
    * @type {int32} {@link int32}
    */
   readonly hint_color?: int32;
 
   /**
-   * A color of links in the RGB24 format
+   * A color of links in the RGB format
    * @type {int32} {@link int32}
    */
   readonly link_color?: int32;
 
   /**
-   * A color of the buttons in the RGB24 format
+   * A color of the buttons in the RGB format
    * @type {int32} {@link int32}
    */
   readonly button_color?: int32;
 
   /**
-   * A color of text on the buttons in the RGB24 format
+   * A color of text on the buttons in the RGB format
    * @type {int32} {@link int32}
    */
   readonly button_text_color?: int32;
@@ -45954,13 +45954,13 @@ export type attachmentMenuBotColor = {
   _: "attachmentMenuBotColor";
 
   /**
-   * Color in the RGB24 format for light themes
+   * Color in the RGB format for light themes
    * @type {int32} {@link int32}
    */
   light_color: int32;
 
   /**
-   * Color in the RGB24 format for dark themes
+   * Color in the RGB format for dark themes
    * @type {int32} {@link int32}
    */
   dark_color: int32;
@@ -45975,13 +45975,13 @@ export type attachmentMenuBotColor$Input = {
   readonly _: "attachmentMenuBotColor";
 
   /**
-   * Color in the RGB24 format for light themes
+   * Color in the RGB format for light themes
    * @type {int32} {@link int32}
    */
   readonly light_color?: int32;
 
   /**
-   * Color in the RGB24 format for dark themes
+   * Color in the RGB format for dark themes
    * @type {int32} {@link int32}
    */
   readonly dark_color?: int32;
@@ -54070,7 +54070,7 @@ export type backgroundFillSolid = {
   _: "backgroundFillSolid";
 
   /**
-   * A color of the background in the RGB24 format
+   * A color of the background in the RGB format
    * @type {int32} {@link int32}
    */
   color: int32;
@@ -54085,7 +54085,7 @@ export type backgroundFillSolid$Input = {
   readonly _: "backgroundFillSolid";
 
   /**
-   * A color of the background in the RGB24 format
+   * A color of the background in the RGB format
    * @type {int32} {@link int32}
    */
   readonly color?: int32;
@@ -54098,13 +54098,13 @@ export type backgroundFillGradient = {
   _: "backgroundFillGradient";
 
   /**
-   * A top color of the background in the RGB24 format
+   * A top color of the background in the RGB format
    * @type {int32} {@link int32}
    */
   top_color: int32;
 
   /**
-   * A bottom color of the background in the RGB24 format
+   * A bottom color of the background in the RGB format
    * @type {int32} {@link int32}
    */
   bottom_color: int32;
@@ -54125,13 +54125,13 @@ export type backgroundFillGradient$Input = {
   readonly _: "backgroundFillGradient";
 
   /**
-   * A top color of the background in the RGB24 format
+   * A top color of the background in the RGB format
    * @type {int32} {@link int32}
    */
   readonly top_color?: int32;
 
   /**
-   * A bottom color of the background in the RGB24 format
+   * A bottom color of the background in the RGB format
    * @type {int32} {@link int32}
    */
   readonly bottom_color?: int32;
@@ -54150,7 +54150,7 @@ export type backgroundFillFreeformGradient = {
   _: "backgroundFillFreeformGradient";
 
   /**
-   * A list of 3 or 4 colors of the freeform gradient in the RGB24 format
+   * A list of 3 or 4 colors of the freeform gradient in the RGB format
    * @type {vector<int32>} {@link vector<int32>}
    */
   colors: vector<int32>;
@@ -54165,7 +54165,7 @@ export type backgroundFillFreeformGradient$Input = {
   readonly _: "backgroundFillFreeformGradient";
 
   /**
-   * A list of 3 or 4 colors of the freeform gradient in the RGB24 format
+   * A list of 3 or 4 colors of the freeform gradient in the RGB format
    * @type {vector<int32>} {@link vector<int32>}
    */
   readonly colors?: vector$Input<int32>;
@@ -93550,7 +93550,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Send a gift to another user
+   * Sends a gift to another user. May return an error with a message "STARGIFT_USAGE_LIMITED" if the gift was sold out
    *
    * @param {sendGift$DirectInput} parameters {@link sendGift$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -125592,7 +125592,7 @@ export type getAvailableGifts$DirectInput = {};
 export type getAvailableGifts = (parameters: getAvailableGifts$Input) => Gifts;
 
 /**
- * Send a gift to another user
+ * Sends a gift to another user. May return an error with a message "STARGIFT_USAGE_LIMITED" if the gift was sold out
  */
 export type sendGift$Input = {
   readonly _: "sendGift";
@@ -125623,7 +125623,7 @@ export type sendGift$Input = {
 };
 
 /**
- * Send a gift to another user
+ * Sends a gift to another user. May return an error with a message "STARGIFT_USAGE_LIMITED" if the gift was sold out
  */
 export type sendGift$DirectInput = {
   /**
@@ -125652,7 +125652,7 @@ export type sendGift$DirectInput = {
 };
 
 /**
- * Send a gift to another user
+ * Sends a gift to another user. May return an error with a message "STARGIFT_USAGE_LIMITED" if the gift was sold out
  *
  * @param {sendGift$Input} parameters {@link sendGift$Input}
  * @returns {Ok} {@link Ok}

@@ -912,7 +912,7 @@ starGiveawayPaymentOptions options:vector<starGiveawayPaymentOption> = StarGivea
 //@sticker The sticker representing the gift
 //@star_count Number of Telegram Stars that must be paid for the gift
 //@default_sell_star_count Number of Telegram Stars that can be claimed by the receiver instead of the gift by default. If the gift was paid with just bought Telegram Stars, then full value can be claimed
-//@remaining_count Number of remaining times the gift can be purchased by all users; 0 if not limited
+//@remaining_count Number of remaining times the gift can be purchased by all users; 0 if not limited or the gift was sold out
 //@total_count Number of total times the gift can be purchased by all users; 0 if not limited
 gift id:int64 sticker:sticker star_count:int53 default_sell_star_count:int53 remaining_count:int32 total_count:int32 = Gift;
 
@@ -2200,11 +2200,11 @@ publicChatTypeIsLocationBased = PublicChatType;
 
 //@class ChatActionBar @description Describes actions which must be possible to do through a chat action bar
 
-//@description The chat can be reported as spam using the method reportChat with the reason reportReasonSpam. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
+//@description The chat can be reported as spam using the method reportChat with an empty option_id and message_ids. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
 //@can_unarchive If true, the chat was automatically archived and can be moved back to the main chat list using addChatToList simultaneously with setting chat notification settings to default using setChatNotificationSettings
 chatActionBarReportSpam can_unarchive:Bool = ChatActionBar;
 
-//@description The chat is a location-based supergroup, which can be reported as having unrelated location using the method reportChat with the reason reportReasonUnrelatedLocation
+//@description The chat is a location-based supergroup, which can't be reported anymore
 chatActionBarReportUnrelatedLocation = ChatActionBar;
 
 //@description The chat is a recently created group chat to which new members can be invited
@@ -2837,7 +2837,7 @@ linkPreviewTypeStory story_sender_chat_id:int53 story_id:int32 = LinkPreviewType
 //@description The link is a link to boost a supergroup chat @photo Photo of the chat; may be null
 linkPreviewTypeSupergroupBoost photo:chatPhoto = LinkPreviewType;
 
-//@description The link is a link to a cloud theme. TDLib has no theme support yet @documents The list of files with theme description @settings Settings for the cloud theme
+//@description The link is a link to a cloud theme. TDLib has no theme support yet @documents The list of files with theme description @settings Settings for the cloud theme; may be null if unknown
 linkPreviewTypeTheme documents:vector<document> settings:themeSettings = LinkPreviewType;
 
 //@description The link preview type is unsupported yet
@@ -2860,7 +2860,7 @@ linkPreviewTypeVideoNote video_note:videoNote = LinkPreviewType;
 //@description The link is a link to a voice note message @voice_note The voice note
 linkPreviewTypeVoiceNote voice_note:voiceNote = LinkPreviewType;
 
-//@description The link is a link to a Web App @photo Web App photo
+//@description The link is a link to a Web App @photo Web App photo; may be null if none
 linkPreviewTypeWebApp photo:photo = LinkPreviewType;
 
 
@@ -2944,21 +2944,21 @@ locationAddress country_code:string state:string city:string street:string = Loc
 
 
 //@description Contains parameters of the application theme
-//@background_color A color of the background in the RGB24 format
-//@secondary_background_color A secondary color for the background in the RGB24 format
-//@header_background_color A color of the header background in the RGB24 format
-//@bottom_bar_background_color A color of the bottom bar background in the RGB24 format
-//@section_background_color A color of the section background in the RGB24 format
-//@section_separator_color A color of the section separator in the RGB24 format
-//@text_color A color of text in the RGB24 format
-//@accent_text_color An accent color of the text in the RGB24 format
-//@section_header_text_color A color of text on the section headers in the RGB24 format
-//@subtitle_text_color A color of the subtitle text in the RGB24 format
-//@destructive_text_color A color of the text for destructive actions in the RGB24 format
-//@hint_color A color of hints in the RGB24 format
-//@link_color A color of links in the RGB24 format
-//@button_color A color of the buttons in the RGB24 format
-//@button_text_color A color of text on the buttons in the RGB24 format
+//@background_color A color of the background in the RGB format
+//@secondary_background_color A secondary color for the background in the RGB format
+//@header_background_color A color of the header background in the RGB format
+//@bottom_bar_background_color A color of the bottom bar background in the RGB format
+//@section_background_color A color of the section background in the RGB format
+//@section_separator_color A color of the section separator in the RGB format
+//@text_color A color of text in the RGB format
+//@accent_text_color An accent color of the text in the RGB format
+//@section_header_text_color A color of text on the section headers in the RGB format
+//@subtitle_text_color A color of the subtitle text in the RGB format
+//@destructive_text_color A color of the text for destructive actions in the RGB format
+//@hint_color A color of hints in the RGB format
+//@link_color A color of links in the RGB format
+//@button_color A color of the buttons in the RGB format
+//@button_text_color A color of text on the buttons in the RGB format
 themeParameters background_color:int32 secondary_background_color:int32 header_background_color:int32 bottom_bar_background_color:int32 section_background_color:int32 section_separator_color:int32 text_color:int32 accent_text_color:int32 section_header_text_color:int32 subtitle_text_color:int32 destructive_text_color:int32 hint_color:int32 link_color:int32 button_color:int32 button_text_color:int32 = ThemeParameters;
 
 
@@ -5038,7 +5038,7 @@ speechRecognitionResultError error:error = SpeechRecognitionResult;
 businessConnection id:string user_id:int53 user_chat_id:int53 date:int32 can_reply:Bool is_enabled:Bool = BusinessConnection;
 
 
-//@description Describes a color to highlight a bot added to attachment menu @light_color Color in the RGB24 format for light themes @dark_color Color in the RGB24 format for dark themes
+//@description Describes a color to highlight a bot added to attachment menu @light_color Color in the RGB format for light themes @dark_color Color in the RGB format for dark themes
 attachmentMenuBotColor light_color:int32 dark_color:int32 = AttachmentMenuBotColor;
 
 //@description Represents a bot, which can be added to attachment or side menu
@@ -5974,16 +5974,16 @@ pushReceiverId id:int64 = PushReceiverId;
 
 //@class BackgroundFill @description Describes a fill of a background
 
-//@description Describes a solid fill of a background @color A color of the background in the RGB24 format
+//@description Describes a solid fill of a background @color A color of the background in the RGB format
 backgroundFillSolid color:int32 = BackgroundFill;
 
 //@description Describes a gradient fill of a background
-//@top_color A top color of the background in the RGB24 format
-//@bottom_color A bottom color of the background in the RGB24 format
+//@top_color A top color of the background in the RGB format
+//@bottom_color A bottom color of the background in the RGB format
 //@rotation_angle Clockwise rotation angle of the gradient, in degrees; 0-359. Must always be divisible by 45
 backgroundFillGradient top_color:int32 bottom_color:int32 rotation_angle:int32 = BackgroundFill;
 
-//@description Describes a freeform gradient fill of a background @colors A list of 3 or 4 colors of the freeform gradient in the RGB24 format
+//@description Describes a freeform gradient fill of a background @colors A list of 3 or 4 colors of the freeform gradient in the RGB format
 backgroundFillFreeformGradient colors:vector<int32> = BackgroundFill;
 
 
@@ -11241,7 +11241,7 @@ deleteSavedCredentials = Ok;
 //@description Returns gifts that can be sent to other users
 getAvailableGifts = Gifts;
 
-//@description Send a gift to another user
+//@description Sends a gift to another user. May return an error with a message "STARGIFT_USAGE_LIMITED" if the gift was sold out
 //@gift_id Identifier of the gift to send
 //@user_id Identifier of the user that will receive the gift
 //@text Text to show along with the gift; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed

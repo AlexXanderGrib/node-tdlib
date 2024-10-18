@@ -9,6 +9,6 @@ export const tdlibPath: string;
 export const version: string;
 /**
  * @type {string}
- * @default "21e5ce0e977fe012e0cee4e6fcfe704b47b00774"
+ * @default "c1fea0f26355d94842f25651edc154842563e97b"
  */
 export const commit: string;

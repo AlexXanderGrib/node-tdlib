@@ -124,9 +124,11 @@
     "node-addon-api": "^8.2.1"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-darwin-arm64": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
-    "@tdlib-native/tdjson-darwin-x64": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
-    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
-    "@tdlib-native/tdjson-win32-x64": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774"
+    "@tdlib-native/tdjson-darwin-x64": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
+    "@tdlib-native/tdjson-darwin-arm64": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
+    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
+    "@tdlib-native/tdjson-win32-x64": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
+    "@tdlib-native/tdjson-win32-x32": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b"
   }
 }

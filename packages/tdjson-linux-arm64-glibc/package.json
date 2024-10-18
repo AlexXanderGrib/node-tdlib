@@ -1,0 +1,47 @@
+{
+  "name": "@tdlib-native/tdjson-linux-arm64-glibc",
+  "version": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
+  "description": "Built TDLib",
+  "keywords": [
+    "tdlib",
+    "binary"
+  ],
+  "author": "Alexander <me@alexxgrib.me> (https://alexxgrib.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexXanderGrib/node-tdlib/issues"
+  },
+  "homepage": "https://github.com/AlexXanderGrib/node-tdlib#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexXanderGrib/node-tdlib.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "tdlib": {
+    "version": "1.8.37",
+    "commit": "c1fea0f26355d94842f25651edc154842563e97b"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "libc": [
+    "glibc"
+  ],
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "libtdjson-arm64-glibc.so"
+  ]
+}
