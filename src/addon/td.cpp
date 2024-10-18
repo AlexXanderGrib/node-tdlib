@@ -1,6 +1,7 @@
 // Credit: @Bannerets
 // Source: https://github.com/Bannerets/tdl/blob/master/packages/tdl-tdlib-addon/td.cpp
 
+#define NAPI_VERSION 4
 #include <napi.h>
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__)
@@ -36,14 +37,14 @@ td_set_log_fatal_error_callback_t td_set_log_fatal_error_callback;
 
 Napi::External<void> td_client_create(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
-  void* client = td_json_client_create();
+  void *client = td_json_client_create();
   return Napi::External<void>::New(env, client);
 }
 
 void td_client_send(const Napi::CallbackInfo& info) {
-  void* client = info[0].As<Napi::External<void>>().Data();
+  void *client = info[0].As<Napi::External<void>>().Data();
   std::string request_str = info[1].As<Napi::String>().Utf8Value();
-  const char* request = request_str.c_str();
+  const char *request = request_str.c_str();
   td_json_client_send(client, request);
 }
 
@@ -54,14 +55,14 @@ class ReceiverAsyncWorker : public Napi::AsyncWorker
 public:
   ReceiverAsyncWorker(
     const Napi::Function& callback,
-    void* client,
+    void *client,
     double timeout
   ) : Napi::AsyncWorker(callback), client(client), timeout(timeout)
   {}
 
 protected:
   void Execute() override {
-    const char* tdres = td_json_client_receive(client, timeout);
+    const char *tdres = td_json_client_receive(client, timeout);
     // It's also important to copy the string
     res = std::string(tdres == NULL ? "" : tdres);
   }
@@ -78,14 +79,14 @@ protected:
   }
 
 private:
-  void* client;
+  void *client;
   double timeout;
   std::string res;
 };
 
 void td_client_receive(const Napi::CallbackInfo& info) {
   // Napi::Env env = info.Env();
-  void* client = info[0].As<Napi::External<void>>().Data();
+  void *client = info[0].As<Napi::External<void>>().Data();
   double timeout = info[1].As<Napi::Number>().DoubleValue();
   Napi::Function cb = info[2].As<Napi::Function>();
   (new ReceiverAsyncWorker(cb, client, timeout))->Queue();
@@ -93,10 +94,10 @@ void td_client_receive(const Napi::CallbackInfo& info) {
 
 Napi::Value td_client_execute(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
-  void* client = info[0].IsNull() ? NULL : info[0].As<Napi::External<void>>().Data();
+  void *client = info[0].IsNull() ? NULL : info[0].As<Napi::External<void>>().Data();
   std::string request_str = info[1].As<Napi::String>().Utf8Value();
-  const char* request = request_str.c_str();
-  const char* response = td_json_client_execute(client, request);
+  const char *request = request_str.c_str();
+  const char *response = td_json_client_execute(client, request);
   if (response == NULL) return env.Null();
   return Napi::String::New(env, response);
 }
@@ -105,24 +106,23 @@ Napi::Value td_client_execute(const Napi::CallbackInfo& info) {
 //       the function to JS?
 
 void td_client_destroy(const Napi::CallbackInfo& info) {
-  void* client = info[0].As<Napi::External<void>>().Data();
+  void *client = info[0].As<Napi::External<void>>().Data();
   td_json_client_destroy(client);
 }
 
 Napi::FunctionReference js_fatal_cb;
 
-// This should work, but I haven't tested it
 extern "C" void fatal_cb (const char *error_message) {
-  // if (js_fatal_cb == NULL) return;
   js_fatal_cb.Call({ Napi::String::New(js_fatal_cb.Env(), error_message) });
 }
 
+// Not thread safe
 void td_set_fatal_error_callback(const Napi::CallbackInfo& info) {
-  // Not thread safe
   if (info[0].IsNull() || info[0].IsUndefined()) {
     td_set_log_fatal_error_callback(NULL);
   } else {
     js_fatal_cb = Napi::Persistent(info[0].As<Napi::Function>());
+    js_fatal_cb.SuppressDestruct();
     td_set_log_fatal_error_callback(&fatal_cb);
   }
 }
@@ -139,17 +139,18 @@ void td_set_fatal_error_callback(const Napi::CallbackInfo& info) {
 void load_tdjson(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
   std::string library_file_str = info[0].As<Napi::String>().Utf8Value();
-  const char* library_file = library_file_str.c_str();
-  void* handle = DLOPEN(library_file)
+  const char *library_file = library_file_str.c_str();
+  dlerror(); // Clear errors
+  void *handle = DLOPEN(library_file)
   if (handle == NULL) {
-    char* dlerror_message = dlerror();
+    char *dlerror_message = dlerror();
     std::string err_message(dlerror_message == NULL ? "NULL" : dlerror_message);
     std::string js_err_message = "Dynamic Loading Error: " + err_message;
     auto err = Napi::Error::New(env, js_err_message);
     err.ThrowAsJavaScriptException();
     return;
   }
-  char* dlsym_err_cstr;
+  char *dlsym_err_cstr;
   FINDFUNC(td_json_client_create);
   FINDFUNC(td_json_client_send);
   FINDFUNC(td_json_client_receive);
