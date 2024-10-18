@@ -9,6 +9,6 @@ module.exports.tdlibPath = require('path').resolve(__dirname, "tdjson-x64.dll");
 module.exports.version = "1.8.37";
 /**
  * @type {string}
- * @default "21e5ce0e977fe012e0cee4e6fcfe704b47b00774"
+ * @default "c1fea0f26355d94842f25651edc154842563e97b"
  */
-module.exports.commit = "21e5ce0e977fe012e0cee4e6fcfe704b47b00774";
+module.exports.commit = "c1fea0f26355d94842f25651edc154842563e97b";

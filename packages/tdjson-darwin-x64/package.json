@@ -1,6 +1,6 @@
 {
   "name": "@tdlib-native/tdjson-darwin-x64",
-  "version": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
+  "version": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
   "description": "Built TDLib",
   "keywords": [
     "tdlib",
@@ -9,9 +9,9 @@
   "author": "Alexander <me@alexxgrib.me> (https://alexxgrib.me/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexxgrib/node-tdlib/issues"
+    "url": "https://github.com/AlexXanderGrib/node-tdlib/issues"
   },
-  "homepage": "https://github.com/alexxgrib/node-tdlib#readme",
+  "homepage": "https://github.com/AlexXanderGrib/node-tdlib#readme",
   "publishConfig": {
     "access": "public"
   },
@@ -24,7 +24,7 @@
   },
   "tdlib": {
     "version": "1.8.37",
-    "commit": "21e5ce0e977fe012e0cee4e6fcfe704b47b00774"
+    "commit": "c1fea0f26355d94842f25651edc154842563e97b"
   },
   "os": [
     "darwin"
