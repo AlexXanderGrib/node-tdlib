@@ -1,6 +1,6 @@
 {
   "name": "@tdlib-native/tdjson-darwin-x64",
-  "version": "1.8.35-commit.8d08b34e22a08e58db8341839c4e18ee06c516c5",
+  "version": "1.8.37-commit.21e5ce0e977fe012e0cee4e6fcfe704b47b00774",
   "description": "Built TDLib",
   "keywords": [
     "tdlib",
