@@ -4,20 +4,29 @@ import type { TDLib, TDLibClient } from "../shared/client";
 import { getAddonFolderPath } from "./path";
 import { createRequire } from "module";
 import { assert } from "../assert";
+import { promiseWithResolvers } from "../shared/async";
 
-export type Addon = {
-  td_client_create(): TDLibClient;
-  td_client_send(client: TDLibClient, json: string): void;
-  td_client_receive(
-    client: TDLibClient,
-    timeoutMs: number,
-    callback: (error: Error | null, result: string) => void
-  ): void;
-  td_client_execute(client: TDLibClient | null, json: string): string | null;
-  td_client_destroy(client: TDLibClient): void;
-  td_set_fatal_error_callback(
+type Addon = {
+  td_json_client_create(timeoutMs: number): TDLibClient;
+  td_json_client_send(client: TDLibClient, json: string): void;
+  td_json_client_receive(client: TDLibClient): Promise<string | null>;
+  td_json_client_execute(client: TDLibClient | null, json: string): string | null;
+  td_json_client_destroy(client: TDLibClient): void;
+
+  td_set_log_message_callback(
+    level: number,
     callback: null | ((errorMessage: string) => void)
   ): void;
+
+  td_create_client_id(): TDLibClient;
+  td_send(client: TDLibClient, json: string): void;
+  td_receive(): Promise<string | null>;
+  td_execute(json: string): string;
+
+  tdn_init(timeoutMs: number): void;
+  tdn_ref(): void;
+  tdn_unref(): void;
+
   load_tdjson(path: string): void;
 };
 
@@ -64,12 +73,29 @@ async function getTDLibPath(): Promise<string> {
   try {
     const { tdlibPath } = await import(packageName);
     return tdlibPath;
-  } catch(error) {
-    console.log(error)
+  } catch (error) {
     throw new Error(
-      `There is no prebuilt TDLib for your platform (${process.platform} ${process.arch}). You can ask for it: https://github.com/AlexXanderGrib/node-tdlib/issues`
+      `There is no prebuilt TDLib for your platform (${process.platform} ${process.arch}). You can ask for it: https://github.com/AlexXanderGrib/node-tdlib/issues`,
+      {
+        cause: error
+      }
     );
   }
+}
+
+class ReceiveQueueEntry {
+  constructor(
+    public readonly client: TDLibClient,
+    public readonly promise: PromiseWithResolvers<string | null>
+  ) {
+    Object.freeze(this);
+  }
+}
+
+class ClientMeta {
+  destroyed = false;
+
+  constructor(public readonly timeout: number) {}
 }
 
 /**
@@ -97,15 +123,15 @@ export class TDLibAddon implements TDLib {
     return new TDLibAddon(addon);
   }
 
-  private _destroyed = false;
-
   /**
    * Creates an instance of TDLibAddon.
    * @param {Addon} _addon
    * @memberof TDLibAddon
    */
   private constructor(private readonly _addon: Addon) {}
+
   readonly _isTDLib = true;
+  private readonly _clients = new WeakMap<TDLibClient, ClientMeta>();
 
   /**
    *
@@ -123,8 +149,21 @@ export class TDLibAddon implements TDLib {
    * @returns {TDLibClient}  {TDLibClient}
    * @memberof TDLibAddon
    */
-  create(): TDLibClient {
-    return this._addon.td_client_create();
+  create(timeout: number): TDLibClient {
+    const client = this._addon.td_json_client_create(timeout);
+    this._clients.set(client, new ClientMeta(timeout));
+
+    return client;
+  }
+
+  private _getMeta(client: TDLibClient): ClientMeta {
+    const meta = this._clients.get(client);
+
+    if (!meta) {
+      throw new Error("Unknown client");
+    }
+
+    return meta;
   }
 
   /**
@@ -132,11 +171,21 @@ export class TDLibAddon implements TDLib {
    *
    * @param {TDLibClient} client
    * @memberof TDLibAddon
-   * @returns {void}
+   * @returns {Promise<void>}
    */
-  destroy(client: TDLibClient): void {
-    this._destroyed = true;
-    this._addon.td_client_destroy(client);
+  async destroy(client: TDLibClient): Promise<void> {
+    if (this._getMeta(client).destroyed) {
+      throw new Error("Client already destroyed");
+    }
+
+    for (const entry of this._queue) {
+      if (entry.client === client) {
+        entry.promise.reject(new Error("Client is destroyed"));
+      }
+    }
+
+    await this._thread;
+    this._addon.td_json_client_destroy(client);
   }
 
   /**
@@ -148,29 +197,54 @@ export class TDLibAddon implements TDLib {
    * @memberof TDLibAddon
    */
   execute(client: TDLibClient | null, json: string): string | null {
-    return this._addon.td_client_execute(client, json);
+    return this._addon.td_json_client_execute(client, json);
+  }
+
+  private readonly _queue: ReceiveQueueEntry[] = [];
+  private _thread: Promise<void> | undefined;
+
+  private async _receive() {
+    while (this._queue.length > 0) {
+      const task = this._queue.shift();
+      if (!task) break;
+
+      await this._addon
+        .td_json_client_receive(task.client)
+        .then(task.promise.resolve, task.promise.reject);
+    }
   }
 
   /**
    *
    *
    * @param {TDLibClient} client
-   * @param {number} timeout
    * @returns {Promise<string|null>}  {(Promise<string | null>)}
    * @memberof TDLibAddon
    */
-  receive(client: TDLibClient, timeout: number): Promise<string | null> {
-    if(this._destroyed) {
-      return Promise.reject(new Error("TDLib client is destroyed"));
+  receive(client: TDLibClient): Promise<string | null> {
+    const meta = this._getMeta(client);
+
+    if (meta.destroyed) {
+      return Promise.reject(new Error("Client is destroyed"));
     }
 
-    return new Promise((resolve, reject) => {
-      this._addon.td_client_receive(client, timeout, (error, result) => {
-        if (error) return reject(error);
+    const entryWithSameClient = this._queue.find((entry) => entry.client === client);
 
-        resolve(result);
+    if (entryWithSameClient) {
+      return Promise.reject(new Error("This client is already receiving updates"));
+    }
+
+    const promise = promiseWithResolvers<string | null>();
+    const entry = new ReceiveQueueEntry(client, promise);
+    this._queue.push(entry);
+
+    if (!this._thread) {
+      this._thread = this._receive().finally(() => {
+        this._thread = undefined;
       });
-    });
+    }
+
+    return promise.promise;
   }
 
   /**
@@ -182,7 +256,11 @@ export class TDLibAddon implements TDLib {
    * @returns {void}
    */
   send(client: TDLibClient, json: string): void {
-    this._addon.td_client_send(client, json);
+    if (this._getMeta(client).destroyed) {
+      throw new Error("Client is destroyed");
+    }
+    
+    this._addon.td_json_client_send(client, json);
   }
 
   /**
@@ -192,7 +270,10 @@ export class TDLibAddon implements TDLib {
    * @memberof TDLibAddon
    * @returns {void}
    */
-  setLogFatalErrorCallback(callback: ((errorMessage: string) => void) | null): void {
-    this._addon.td_set_fatal_error_callback(callback);
+  setLogMessageCallback(
+    level: number,
+    callback: ((errorMessage: string) => void) | null
+  ): void {
+    this._addon.td_set_log_message_callback(level, callback);
   }
 }

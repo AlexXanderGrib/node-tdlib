@@ -64,7 +64,7 @@ async function init() {
     .token(process.env.TELEGRAM_BOT_TOKEN);
 
   // Start polling responses from TDLib
-  client.start();
+  await client.start();
   await authenticator.authenticate();
   // client authorized as bot
 
@@ -86,7 +86,7 @@ async function init() {
 
   // Destroy
   await client.api.close({});
-  client.destroy();
+  await client.destroy();
 }
 ```
 

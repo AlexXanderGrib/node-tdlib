@@ -1,26 +1,21 @@
-import { describe, test, expect, beforeAll, afterAll, assert } from "vitest";
-import { TDLibAddon } from "../addon";
+import { describe, test, expect, beforeAll, assert, afterAll } from "vitest";
 import { Client, TDError } from "../client";
 import { randomBytes } from "crypto";
 import { Meta } from "../generated/meta";
 import type { error } from "../generated/types";
-
-let adapter: TDLibAddon;
+import { getTestClient } from "./client";
 
 describe("Client Serialization (async)", () => {
   let client: Client;
 
   beforeAll(async () => {
-    adapter ??= await TDLibAddon.create(process.env.TDLIB_PATH);
-    Client.execute(adapter, "setLogVerbosityLevel", { new_verbosity_level: 0 });
-
-    client = new Client(adapter);
-    client.start();
+    client = await getTestClient();
+    await client.start();
   });
 
   afterAll(async () => {
     await client.api.close({});
-    // client.destroy();
+    await client.destroy();
   });
 
   const string = 'Test {"_": "Passed"}';
@@ -124,7 +119,7 @@ describe("Client Serialization (async)", () => {
 
     try {
       await client.api.testReturnError({ error: input });
-      
+
       assert.fail("Should throw error");
     } catch (error) {
       expect(error).toBeInstanceOf(TDError);
@@ -137,16 +132,13 @@ describe("Client Serialization (sync)", () => {
   let client: Client;
 
   beforeAll(async () => {
-    adapter ??= await TDLibAddon.create();
-
-    client = new Client(adapter);
-    client.syncApi.setLogVerbosityLevel({ new_verbosity_level: 0 });
-    client.start();
+    client = await getTestClient();
+    await client.start();
   });
 
   afterAll(async () => {
     await client.api.close({});
-    client.destroy();
+    await client.destroy();
   });
 
   test("version", () => {

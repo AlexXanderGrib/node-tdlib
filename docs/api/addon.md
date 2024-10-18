@@ -48,7 +48,7 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:105](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L105)
+[addon/addon.ts:117](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L117)
 
 #### Properties
 
@@ -58,7 +58,15 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:105](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L105)
+[addon/addon.ts:117](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L117)
+
+##### \_destroyed
+
+> `private` **\_destroyed**: `boolean` = `false`
+
+###### Defined in
+
+[addon/addon.ts:110](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L110)
 
 ##### \_isTDLib
 
@@ -70,7 +78,15 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:106](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L106)
+[addon/addon.ts:118](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L118)
+
+##### \_receivePromise
+
+> `private` **\_receivePromise**: `undefined` \| `Promise`\<`null` \| `string`\>
+
+###### Defined in
+
+[addon/addon.ts:164](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L164)
 
 #### Accessors
 
@@ -92,7 +108,7 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:114](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L114)
+[addon/addon.ts:126](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L126)
 
 #### Methods
 
@@ -116,7 +132,7 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:124](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L124)
+[addon/addon.ts:136](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L136)
 
 ##### destroy()
 
@@ -140,7 +156,7 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:135](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L135)
+[addon/addon.ts:147](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L147)
 
 ##### execute()
 
@@ -168,7 +184,7 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:147](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L147)
+[addon/addon.ts:160](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L160)
 
 ##### receive()
 
@@ -196,7 +212,7 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:159](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L159)
+[addon/addon.ts:174](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L174)
 
 ##### send()
 
@@ -222,7 +238,7 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:177](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L177)
+[addon/addon.ts:199](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L199)
 
 ##### setLogFatalErrorCallback()
 
@@ -246,7 +262,7 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:188](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L188)
+[addon/addon.ts:210](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L210)
 
 ##### create()
 
@@ -272,4 +288,4 @@ TDLibAddon
 
 ###### Defined in
 
-[addon/addon.ts:92](https://github.com/AlexXanderGrib/node-tdlib/blob/dde3fa316c78cce4c52612c221106a72f9a4c4f2/src/addon/addon.ts#L92)
+[addon/addon.ts:102](https://github.com/AlexXanderGrib/node-tdlib/blob/859348a5415c3b5927e971eb043cc739aa681992/src/addon/addon.ts#L102)

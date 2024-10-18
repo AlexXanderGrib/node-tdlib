@@ -1,28 +1,20 @@
 import { describe, test, expect, beforeAll, afterAll } from "vitest";
-import { TDLibAddon } from "../addon";
 import { Client } from "../client";
 import type { Update } from "../generated/types";
 import "dotenv/config";
-
-let adapter: TDLibAddon;
+import { getTestClient } from "./client";
 
 describe("Updates", () => {
   let client: Client;
 
   beforeAll(async () => {
-    adapter ??= await TDLibAddon.create(process.env.TDLIB_PATH);
-    Client.execute(adapter, "setLogVerbosityLevel", { new_verbosity_level: 0 });
-
-    expect(adapter.name).toBe("addon");
-    adapter.setLogFatalErrorCallback(console.error);
-
-    client = new Client(adapter);
-    client.start();
+    client = await getTestClient();
+    await client.start();
   });
 
   afterAll(async () => {
     await client.api.close({});
-    // client.destroy();
+    await client.destroy();
   });
 
   test("Updates", async () => {

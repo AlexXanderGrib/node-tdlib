@@ -97,7 +97,7 @@ export class Client {
    */
   constructor(adapter: TDLib) {
     this._adapter = adapter;
-    this._client = adapter.create();
+    this._client = adapter.create(3000);
     Object.seal(this);
   }
 
@@ -249,6 +249,8 @@ export class Client {
     return Client.execute(this, method, parameters);
   }
 
+  private _running: Promise<void> | undefined;
+
   /**
    *
    *
@@ -258,7 +260,18 @@ export class Client {
    */
   private async _thread(): Promise<void> {
     while (this._state === ClientState.RUNNING) {
-      const value = await this._adapter.receive(this._client, 3000);
+      let value: string | null | undefined;
+
+      try {
+        value = await this._adapter.receive(this._client);
+      } catch (error) {
+        if (error instanceof Error && error.message.includes("destroyed")) {
+          break;
+        }
+
+        throw error;
+      }
+
       debugJson("Received %s", value);
 
       if (!value) {
@@ -328,18 +341,21 @@ export class Client {
   /**
    *
    *
-   * @returns {this}
+   * @returns {Promise<void>}
    * @memberof Client
    */
-  start(): this {
+  async start(): Promise<void> {
     assert(
-      this._state === ClientState.PAUSED,
+      this._state === ClientState.PAUSED && !this._running,
       "Cannot start: This client is running or destroyed"
     );
 
     this._state = ClientState.RUNNING;
-    this._thread();
-    return this;
+    this._running = this._thread().finally(() => {
+      this._running = undefined;
+    });
+
+    await this.api.testCallEmpty({});
   }
 
   /**
@@ -348,14 +364,14 @@ export class Client {
    * @returns {this}
    * @memberof Client
    */
-  pause(): this {
+  async pause(): Promise<void> {
     assert(
       this._state === ClientState.RUNNING,
       "Cannot pause: This client is paused or destroyed"
     );
 
     this._state = ClientState.PAUSED;
-    return this;
+    await this._running;
   }
 
   /**
@@ -364,7 +380,7 @@ export class Client {
    * @returns {void}
    * @memberof Client
    */
-  destroy(): void {
+  async destroy(): Promise<void> {
     if (this._state === ClientState.STOPPED) return;
 
     this._state = ClientState.STOPPED;
@@ -375,7 +391,7 @@ export class Client {
     }
 
     this._requests.clear();
-    this._adapter.destroy(this._client);
+    await this._adapter.destroy(this._client);
   }
 }
 
