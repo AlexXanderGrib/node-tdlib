@@ -162,7 +162,7 @@ dlerror(void)
     if (lastError != 0) {
         sprintf(errorMessage, "Win32 error %lu", lastError);
         lastError = 0;
-        return errorMessage;`
+        return errorMessage;
     } else {
         return NULL;
     }
