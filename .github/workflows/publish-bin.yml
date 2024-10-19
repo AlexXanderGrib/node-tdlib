@@ -64,7 +64,7 @@ jobs:
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
           docker run --rm -e TELEGRAM_API_HASH="${{ secrets.TELEGRAM_API_HASH }}" -e TELEGRAM_API_ID="${{ secrets.TELEGRAM_API_ID }}"  \
             -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}}-${{matrix.image}} \
-            bash -c "cd /usr/src/app && ./scripts/test-linux-arm64.sh"
+            sh -c "cd /usr/src/app && ./scripts/test-linux-arm64.sh"
 
   publish:
     runs-on: ubuntu-22.04
