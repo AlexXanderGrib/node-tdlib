@@ -70,6 +70,10 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [test-base, test-linux-arm64]
 
+    permissions:
+      contents: read
+      id-token: write
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
