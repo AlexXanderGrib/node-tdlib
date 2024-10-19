@@ -1,16 +1,19 @@
-FROM alpine:3.20
-
+FROM alpine:3.20 as build
 WORKDIR /tmp
-VOLUME [ "/result" ]
+ENV GIT_REF=HEAD
 
 RUN apk update && apk upgrade && \
-  apk add alpine-sdk linux-headers git zlib-dev openssl-dev gperf php cmake && \
-  git clone https://github.com/tdlib/td.git && \
-  cd td && rm -rf build && mkdir build 
-
-RUN cd build && \
+  apk add alpine-sdk linux-headers git zlib-dev openssl-dev gperf php cmake
+  
+RUN git clone https://github.com/tdlib/td.git && \ 
+  cd td && git checkout ${GIT_REF} && rm -rf build && mkdir build && cd build && \
   cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib .. && \
-  cmake --build . --target tdjson -- -j 2 && \
-  strip build/libtdjson.so
+  cmake --build . --target tdjson -- -j 2 
 
-RUN mv /tmp/td/build/libtdjson.so /result/
+RUN cp /tmp/td/build/libtdjson.so /libtdjson.so
+RUN strip /libtdjson.so
+
+FROM alpine:3.20
+VOLUME [ "/result" ]
+COPY --from=build /libtdjson.so /result/
+

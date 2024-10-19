@@ -93,7 +93,6 @@ jobs:
           name: tdlib-linux-arm64
           path: ${{ env.TO_UPLOAD }}
 
-  
   build-macos-x64:
     name: Build TDLib on macOS x86_64
     runs-on: macos-12
@@ -317,10 +316,60 @@ jobs:
           name: tdlib-macos
           path: to-upload
 
+  build-linux-docker-musl:
+    strategy:
+      matrix:
+        arch: [amd64, arm64]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: ${{matrix.arch}}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          push: false
+          platforms: linux/${{matrix.arch}}
+          build-args: GIT_REF=${{ inputs.tdlib }}
+          tags: tdlib:build
+          file: ./scripts/Dockerfile.musl
+
+      - name: Run Container and Copy Result
+        run: |
+          mkdir -p result
+          container_id=$(docker create tdlib:build)
+          docker cp $container_id:/result/libtdjson.so ./result/
+          docker rm $container_id
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: tdlib-linux-${{matrix.arch}}-musl
+          path: ./result/libtdjson.so
+
   dist:
     name: Bundle artifacts to dist
     runs-on: ubuntu-22.04
-    needs: [build-linux-x64, build-linux-arm64, build-macos-x64, build-windows-x64, build-windows-x86, build-macos-arm64, build-macos]
+    needs:
+      [
+        build-linux-x64,
+        build-linux-arm64,
+        build-macos-x64,
+        build-windows-x64,
+        build-windows-x86,
+        build-macos-arm64,
+        build-macos,
+        build-linux-docker-musl
+      ]
 
     steps:
       - uses: actions/checkout@v4
@@ -348,8 +397,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm ci
-    
-
       - run: |
           cd td
           mv tdlib-macos-x64/libtdjson.dylib ./libtdjson-x64.dylib
@@ -357,6 +404,8 @@ jobs:
           mv tdlib-macos/libtdjson.dylib ./libtdjson-universal.dylib
           mv tdlib-linux-x64/libtdjson.so ./libtdjson-x64-glibc.so
           mv tdlib-linux-arm64/libtdjson.so ./libtdjson-arm64-glibc.so
+          mv tdlib-linux-x64-musl/libtdjson.so ./libtdjson-x64-musl.so
+          mv tdlib-linux-arm64-musl/libtdjson.so ./libtdjson-arm64-musl.so
           mv tdlib-windows-x64/tdjson.dll ./tdjson-x64.dll
           mv tdlib-windows-x86/tdjson.dll ./tdjson-x32.dll
           mv meta/meta.yml ./
