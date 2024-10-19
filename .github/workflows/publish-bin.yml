@@ -71,6 +71,11 @@ jobs:
     needs: [test-base, test-linux-arm64]
 
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
       - name: Publish
         run: |
           for dir in ./packages/tdjson-*; do
@@ -83,3 +88,5 @@ jobs:
             echo "$dir is not a directory"
           fi
           done
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
