@@ -3,8 +3,8 @@ import path from "path";
 import type { TDLib, TDLibClient } from "../shared/client";
 import { getAddonFolderPath } from "./path";
 import { createRequire } from "module";
-import { assert } from "../assert";
 import { promiseWithResolvers } from "../shared/async";
+import { family } from "detect-libc";
 
 type Addon = {
   td_json_client_create(timeoutMs: number): TDLibClient;
@@ -50,33 +50,20 @@ async function loadAddon(addonPath: string = builtinAddonPath): Promise<Addon> {
   return addon;
 }
 
-const isGlibc = () =>
-  !!(process.report?.getReport() as any)?.header?.glibcVersionRuntime;
-
-function getPlatform() {
-  return {
-    platform: process.platform === "android" ? "linux" : process.platform,
-    arch: process.arch
-  };
-}
-
 /**
  *
  *
  * @returns {Promise<string>}  {Promise<string>}
  */
 async function getTDLibPath(): Promise<string> {
-  const { platform, arch } = getPlatform();
+  let packageName = `@tdlib-native/tdjson-${process.platform}-${process.arch}`;
 
-  let packageName = `@tdlib-native/tdjson-${platform}-${arch}`;
-
-  if (platform === "linux") {
-    assert(
-      isGlibc(),
-      "TDLib build for MUSL libc is not ready yet. You can ask for do it quicker: https://github.com/AlexXanderGrib/node-tdlib/issues"
-    );
-
+  if (process.platform === "android") {
     packageName += "-glibc";
+  }
+
+  if (process.platform === "linux") {
+    packageName += `-${await family()}`;
   }
 
   try {
