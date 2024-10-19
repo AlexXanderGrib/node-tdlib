@@ -61,11 +61,11 @@ jobs:
           echo "commit-hash: $TDLIB_COMMIT_HASH" >> meta.yml
       - uses: actions/upload-artifact@v4
         with:
-          name: meta
+          name: tdlib-meta
           path: meta.yml
       - uses: actions/upload-artifact@v4
         with:
-          name: schema
+          name: tdlib-schema
           path: td/generate/scheme/td_api.tl
 
   build-linux-arm64:
@@ -255,17 +255,21 @@ jobs:
 
     strategy:
       matrix:
-        arch: [amd64, arm64]
-    runs-on: ubuntu-latest
+        spec:
+          - os: macos-14
+            arch: arm64
+          - os: ubuntu-22.04
+            arch: amd64
+    runs-on: ${{matrix.spec.os}}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-        with:
-          platforms: ${{matrix.arch}}
+      # - name: Set up QEMU
+      #   uses: docker/setup-qemu-action@v3
+      #   with:
+      #     platforms: ${{matrix.spec.arch}}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -274,11 +278,13 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: false
-          platforms: linux/${{matrix.arch}}
+          platforms: linux/${{matrix.spec.arch}}
           build-args: GIT_REF=${{ inputs.tdlib }}
           tags: tdlib:build
           file: ./scripts/Dockerfile.musl
           load: true
+        env:
+          DOCKER_BUILD_RECORD_UPLOAD: false
 
       - name: Run Container and Copy Result
         run: |
@@ -290,7 +296,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: tdlib-linux-${{matrix.arch}}-musl
+          name: tdlib-linux-${{matrix.spec.arch}}-musl
           path: ./result/libtdjson.so
 
   dist:
@@ -314,6 +320,7 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - uses: actions/download-artifact@v4
         with:
+          pattern: tdlib-*
           path: td
 
       - name: List arifacts
@@ -343,8 +350,8 @@ jobs:
           mv tdlib-linux-arm64-musl/libtdjson.so ./libtdjson-arm64-musl.so
           mv tdlib-windows-x64/tdjson.dll ./tdjson-x64.dll
           mv tdlib-windows-x86/tdjson.dll ./tdjson-x32.dll
-          mv meta/meta.yml ./
-          mv schema/td_api.tl ./
+          mv tdlib-meta/meta.yml ./
+          mv tdlib-schema/td_api.tl ./
 
       - uses: actions/upload-artifact@v4
         with:
