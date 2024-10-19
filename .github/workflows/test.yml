@@ -35,22 +35,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create empty .env
-        run: touch .env
-
       - name: Run jest
         run: npm test
         env:
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
-
-      - name: Upload coverage to Codecov
-        run: npx codecov
-        # env:
-        #   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
-      # Only if needed
-      # - name: Upload coverage to Codacy
-      #   run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
-      #   env:
-      #     CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
