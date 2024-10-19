@@ -78,7 +78,7 @@ jobs:
           nix_path: nixpkgs=channel:nixpkgs-unstable
       - name: Restore Nix cache
         id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: /nix/store
           key: ${{ runner.os }}-nix-${{ hashFiles('scripts/*.nix') }}
@@ -98,7 +98,7 @@ jobs:
     strategy:
       matrix:
         spec:
-          - os: macos-12
+          - os: macos-13
             arch: x64
             opt: /usr/local/opt
           - os: macos-14
@@ -261,8 +261,10 @@ jobs:
           # Takes 2 h to build with emulation
           - os: ubuntu-22.04
             arch: arm64
+            artifact_arch: arm64
           - os: ubuntu-22.04
             arch: amd64
+            artifact_arch: x64
     runs-on: ${{matrix.spec.os}}
 
     steps:
@@ -299,7 +301,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: tdlib-linux-${{matrix.spec.arch}}-musl
+          name: tdlib-linux-${{matrix.spec.artifact_arch}}-musl
           path: ./result/libtdjson.so
 
   dist:
