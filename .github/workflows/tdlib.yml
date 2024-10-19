@@ -94,6 +94,7 @@ jobs:
           path: ${{ env.TO_UPLOAD }}
 
   prebuild-macos:
+    name: Build TDLib on macOS
     strategy:
       matrix:
         spec:
