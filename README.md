@@ -16,23 +16,25 @@
 ## Why use this package?
 
 - **Fast.** `TDLib` is a fastest way to interact with Telegram on NodeJS. It's written in C++ with optimized network stack and caching.
-  | API Type | Package | Method | Time |
-  | --- | --- | --- | --- |
-  | `TDLib` | [`tdl`](https://npmjs.com/package/tdl) | [`getChat`](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1get_chat.html#a830588ea8cd104a043c8617a8cebf153) | 21ms |
-  | `Telegram API` | [`telegram (gram.js)`](https://npmjs.com/package/telegram) | [`messages.getChats`](https://core.telegram.org/method/messages.getChats) | 40ms |
-  | `Telegram Bot API` | [`telegraf`](https://npmjs.com/package/telegraf) | [`getChat`](https://core.telegram.org/bots/api#getchat) | 30ms |
-
-  <!-- TODO: get accurate statistic -->
-
-- **Better DX.** This package based on works [`tdl`](https://npmjs.com/package/tdl) but aims to provide better DX since it does not have tld's legacy:
-  - All calls to tdlib are object oriented: `api.getOption()` instead of `api.invoke({ _: "getOption" })`
-  - TDLib is prebuilt, you download build only for your platform
-- **Secure.** The library has only 2 dependencies - `node-addon-api` for building TDLib addon (and platform-dependent prebuilt tdlib) and `debug`
-  - Built with npm provenance
+- **Better DX.** Easy, well documented API. Instant type completion
+  ```typescript
+  /**
+   * Sends a message. Returns the sent message
+   *
+   * @throws {TDError}
+   * @param {sendMessage$DirectInput} parameters {@link sendMessage$Input}
+   * @returns {Promise<Message>} Promise<{@link Message}>
+   */
+  async sendMessage(parameters: sendMessage$DirectInput): Promise<Message>
+  ```
+- **Secure.** 
+  - Only 3 dependencies: `node-addon-api`, `debug`, `detect-libc`
+  - Built on CI with provenance
 - **Multi-Platform.** Supported platforms:
-  - Linux: x64, arm64 (glibc, musl build for apline coming in 3.0.0)
+  - Linux: x64, arm64 (glibc, musl)
+  - Android: arm64 (glibc, musl)
   - MacOS: x64, Apple Silicon (arm64)
-  - Windows: x64, x32 
+  - Windows: x64, x32
 
 ## 📦 Installation
 
@@ -48,6 +50,15 @@
   ```shell
   pnpm add tdlib-native
   ```
+
+## 3.0 Changelog
+
+- Made builds for linux arm64
+- Made builds for musl libc
+- Made builds for windows x32 (since tg desktop supports it)
+- Fixed client thread safety, fixed disposal of tdlib clients
+- Made `client.start()`, `client.pause()` and `client.destroy()` - async
+- Upgraded TDLib to 1.8.37
 
 ## ⚙️ Usage
 
@@ -109,6 +120,7 @@ const updates = new Observable(client.updates.toRxObserver());
 
 This package is based on [eilvelia/tdl](https://github.com/eilvelia/tdl)
 
-Licenses: 
+Licenses:
+
 - C++ addon - [MIT](./docs/licenses/addon.license.txt)
 - Ci pipeline - [Blue Oak Model License 1.0.0](./docs/licenses/ci.license.md)
