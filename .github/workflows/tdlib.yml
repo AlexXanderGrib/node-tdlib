@@ -351,7 +351,7 @@ jobs:
           docker rm $container_id
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: tdlib-linux-${{matrix.arch}}-musl
           path: ./result/libtdjson.so
