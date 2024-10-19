@@ -69,7 +69,7 @@ jobs:
           path: td/generate/scheme/td_api.tl
 
   build-linux-arm64:
-    name: Build TDLib on Linux arm64
+    name: Build TDLib on Linux arm64 (glibc)
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
