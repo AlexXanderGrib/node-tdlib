@@ -41,6 +41,8 @@ const builds = [
   { os: "darwin", cpu: "arm64", file: "libtdjson-arm64.dylib" },
   { os: "linux", cpu: "x64", file: "libtdjson-x64-glibc.so", libc: "glibc" },
   { os: "linux", cpu: "arm64", file: "libtdjson-arm64-glibc.so", libc: "glibc" },
+  { os: "linux", cpu: "x64", file: "libtdjson-x64-musl.so", libc: "musl" },
+  { os: "linux", cpu: "arm64", file: "libtdjson-arm64-musl.so", libc: "musl" },
   { os: "win32", cpu: "x64", file: "tdjson-x64.dll" },
   { os: "win32", cpu: "ia32", file: "tdjson-x32.dll" }
 ];

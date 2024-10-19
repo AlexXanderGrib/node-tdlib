@@ -1,4 +1,4 @@
-FROM alpine:3.20 as build
+FROM alpine:3.20 AS build
 WORKDIR /tmp
 ENV GIT_REF=HEAD
 

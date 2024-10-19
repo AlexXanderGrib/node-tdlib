@@ -277,6 +277,7 @@ jobs:
           build-args: GIT_REF=${{ inputs.tdlib }}
           tags: tdlib:build
           file: ./scripts/Dockerfile.musl
+          load: true
 
       - name: Run Container and Copy Result
         run: |
