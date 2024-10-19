@@ -256,7 +256,10 @@ jobs:
     strategy:
       matrix:
         spec:
-          - os: macos-14
+          # Tried macos-14, it cant run docker now https://github.com/marketplace/actions/setup-docker-on-macos
+          # Need to be replaced with any arm64 image as soon as possible
+          # Takes 2 h to build with emulation
+          - os: ubuntu-22.04
             arch: arm64
           - os: ubuntu-22.04
             arch: amd64
@@ -266,10 +269,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # - name: Set up QEMU
-      #   uses: docker/setup-qemu-action@v3
-      #   with:
-      #     platforms: ${{matrix.spec.arch}}
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: ${{matrix.spec.arch}}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
