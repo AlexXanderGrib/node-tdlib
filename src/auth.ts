@@ -1,4 +1,4 @@
-import { Client } from "./client";
+import { Client, TDError } from "./client";
 import {
   setTdlibParameters$DirectInput,
   phoneNumberAuthenticationSettings$Input,
@@ -138,7 +138,7 @@ export class Authenticator
       case AuthorizationState$Type.Closed:
       case AuthorizationState$Type.Closing:
       case AuthorizationState$Type.LoggingOut: {
-        throw new Error("Closing");
+        throw new TDError("Closing");
       }
 
       case AuthorizationState$Type.WaitCode: {
