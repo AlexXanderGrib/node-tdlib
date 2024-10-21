@@ -44,8 +44,6 @@ jobs:
         run: npm test -- --run
         env:
           TDLIB_PATH: ${{ steps.test-bin.outputs.path }}
-          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
 
   test-linux-arm64:
     runs-on: ubuntu-20.04

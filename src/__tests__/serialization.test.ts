@@ -5,7 +5,7 @@ import { Meta } from "../generated/meta";
 import type { error, optionValueString } from "../generated/types";
 import { getTestClient } from "./client";
 
-describe("Client Serialization (async)", () => {
+describe("Client Serialization (async)", { concurrent: true }, () => {
   let client: Client;
 
   beforeAll(async () => {
