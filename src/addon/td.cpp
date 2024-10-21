@@ -344,9 +344,6 @@ namespace TdCallbacks {
     FAIL("Failed to get " #F " (null)", Napi::Value()); \
   }
 
-// #define FINDFUNC_OPT(F) \
-//   F = (F##_t) dlsym(handle, #F); \
-//   dlerror();
 
 Napi::Value LoadTdjson(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
