@@ -354,8 +354,6 @@ export class Client {
     this._running = this._thread().finally(() => {
       this._running = undefined;
     });
-
-    await this.api.testCallEmpty({});
   }
 
   /**
