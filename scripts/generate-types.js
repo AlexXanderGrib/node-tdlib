@@ -58,7 +58,7 @@ const letter = /^\w/;
  */
 function parseTd(declarationWithCommends) {
   const mainRegex =
-    /^((?<namespace>\w+?)\.)?((?<name>\w+?)(#(?<id>[0-9a-f]{1,13}))?)(\s(?<body>.*))?\s*=\s*(?<result>.*);$/g;
+    /^((?<namespace>\w+?)\.)?((?<name>\w+?)(#(?<id>[\da-f]{1,13}))?)(\s(?<body>.*))?\s*=\s*(?<result>.*);$/g;
 
   /**
    * @type {Declaration}
@@ -98,7 +98,7 @@ function parseTd(declarationWithCommends) {
   parsed.name = match.groups?.name ?? "";
   parsed.result = match.groups?.result ?? "";
 
-  if (match.groups?.id) parsed.id = parseInt(match.groups.id, 16);
+  if (match.groups?.id) parsed.id = Number.parseInt(match.groups.id, 16);
   if (match.groups?.namespace) parsed.namespace = match.groups.namespace;
 
   parsed.body = {};
@@ -108,7 +108,7 @@ function parseTd(declarationWithCommends) {
     let pair = bodyRegex.exec(text);
 
     while (pair !== null) {
-      // @ts-ignore
+      // @ts-expect-error groups are always defined
       parsed.body[pair.groups.key] = pair.groups.value;
       pair = bodyRegex.exec(text);
     }
@@ -141,7 +141,7 @@ class Namespace {
  * @returns {string}
  */
 function splitComments(comment) {
-  return comment.replace(/\n/g, "\n * \n * ").replace(/\* -/g, "* - ");
+  return comment.replaceAll('\n', "\n * \n * ").replaceAll('* -', "* - ");
 }
 
 /**
@@ -153,10 +153,10 @@ function splitComments(comment) {
 function getInputAlias(typename) {
   const genericIndex = typename.indexOf("<");
 
-  if (genericIndex > -1) {
+  if (genericIndex !== -1) {
     const name = typename.slice(0, genericIndex);
     // +-1 = stripping < >;
-    const generic = typename.slice(genericIndex + 1, typename.length - 1);
+    const generic = typename.slice(genericIndex + 1, - 1);
 
     return `${name}$Input<${getInputAlias(generic)}>`;
   }
@@ -320,14 +320,14 @@ function parse(text) {
   const results = [];
   const group = [];
 
-  lines.forEach((line, index) => {
+  for (let [index, line] of lines.entries()) {
     if (letter.test(line)) {
       group.push(line);
 
-      let prev = lines[--index];
-      while (prev && prev.startsWith("//")) {
-        group.push(prev);
-        prev = lines[--index];
+      let previous = lines[--index];
+      while (previous && previous.startsWith("//")) {
+        group.push(previous);
+        previous = lines[--index];
       }
 
       const text = group.splice(0, group.length).reverse().join("\n");
@@ -335,7 +335,7 @@ function parse(text) {
 
       if (result) results.push(result);
     }
-  });
+  }
 
   return results;
 }
@@ -349,21 +349,21 @@ function parse(text) {
 function getCommonStart(strings) {
   let commonStart = "";
 
-  strings.forEach((string, index) => {
+  for (const [index, string] of strings.entries()) {
     if (index === 0) {
       commonStart = string;
-      return;
+      continue;
     }
 
-    if (string.startsWith(commonStart)) return;
+    if (string.startsWith(commonStart)) continue;
 
-    for (let i = 0; i < commonStart.length; i++) {
-      if (commonStart[i] === string[i]) continue;
+    for (let index_ = 0; index_ < commonStart.length; index_++) {
+      if (commonStart[index_] === string[index_]) continue;
 
-      commonStart = commonStart.slice(0, i);
+      commonStart = commonStart.slice(0, index_);
       break;
     }
-  });
+  }
 
   return commonStart;
 }
@@ -380,23 +380,23 @@ async function convert(text) {
   const namespaces = {};
 
   const types = parse(typesText);
-  types.forEach((declaration) => {
+  for (const declaration of types) {
     const namespace = declaration.namespace ?? globalNamespace;
-    const ref = (namespaces[namespace] ??= new Namespace());
-    ref.declarations.push(declaration);
+    const reference = (namespaces[namespace] ??= new Namespace());
+    reference.declarations.push(declaration);
 
     if (!declaration.result.includes(" ")) {
-      const set = (ref.joins[declaration.result] ??= new Set());
+      const set = (reference.joins[declaration.result] ??= new Set());
       set.add(declaration.name);
     }
 
     if (!(declaration.name in primitives)) {
-      ref.types.push(generateType(declaration));
+      reference.types.push(generateType(declaration));
     }
-  });
+  }
 
-  Object.values(namespaces).forEach((ref) => {
-    Object.entries(ref.joins).forEach(([key, set]) => {
+  for (const reference of Object.values(namespaces)) {
+    for (const [key, set] of Object.entries(reference.joins)) {
       const types = [...set];
       const inputs = types.map((type) => getInputAlias(type));
       const generateEnum = types.length > 1;
@@ -415,10 +415,10 @@ async function convert(text) {
           return result;
         });
 
-        ref.types.unshift(createEnum(enumName, entries));
+        reference.types.unshift(createEnum(enumName, entries));
       }
 
-      ref.types.push(`  
+      reference.types.push(`  
   /**
    * Any of:
   ${types.map((type) => ` * - {@link ${type}}`).join("\n")}
@@ -432,31 +432,31 @@ async function convert(text) {
    */
   export type ${getInputAlias(key)} = ${inputs.join(" | ")}
     `);
-    });
-  });
+    }
+  }
 
   const functions = parse(functionsText);
 
-  functions.forEach((declaration) => {
+  for (const declaration of functions) {
     const namespace = declaration.namespace ?? globalNamespace;
 
-    const ref = (namespaces[namespace] ??= new Namespace());
-    ref.declarations.push(declaration);
+    const reference = (namespaces[namespace] ??= new Namespace());
+    reference.declarations.push(declaration);
 
     const code = generateFunction(declaration);
-    ref.functions[declaration.name] = code;
+    reference.functions[declaration.name] = code;
 
     if (code.includes("Can be called synchronously")) {
-      ref.syncFunctions.add(declaration.name);
+      reference.syncFunctions.add(declaration.name);
     }
-  });
+  }
 
   /**
    * @param {string} name
-   * @param {Namespace} ref
+   * @param {Namespace} reference
    */
-  function getMethodType(name, ref) {
-    const declaration = ref.declarations.find(
+  function getMethodType(name, reference) {
+    const declaration = reference.declarations.find(
       (declaration) => declaration.name === name
     );
 
@@ -467,11 +467,11 @@ async function convert(text) {
     };
   }
 
-  Object.values(namespaces).forEach((ref) => {
-    ref.types.unshift(
+  for (const reference of Object.values(namespaces)) {
+    reference.types.unshift(
       createEnum(
         "$Methods",
-        Object.keys(ref.functions).map((name) => {
+        Object.keys(reference.functions).map((name) => {
           /**
            * @type {[string, string]}
            */
@@ -481,20 +481,20 @@ async function convert(text) {
       )
     );
 
-    ref.types.push(`export type $MethodsDict = {
-      ${Object.keys(ref.functions)
+    reference.types.push(`export type $MethodsDict = {
+      ${Object.keys(reference.functions)
         .map((name) => `readonly ${name}: ${name};`)
         .join("\n")}
     }`);
 
-    ref.types.push(`export type $SyncMethodsDict = {
-      ${Object.keys(ref.functions)
-        .filter((name) => ref.syncFunctions.has(name))
+    reference.types.push(`export type $SyncMethodsDict = {
+      ${Object.keys(reference.functions)
+        .filter((name) => reference.syncFunctions.has(name))
         .map((name) => `readonly ${name}: ${name};`)
         .join("\n")}
     }`);
 
-    ref.types.push(`
+    reference.types.push(`
     
     /** 
      * Convenience class for API calls
@@ -514,9 +514,9 @@ async function convert(text) {
         Object.freeze(this)
       }
   
-      ${Object.keys(ref.functions)
+      ${Object.keys(reference.functions)
         .map((name) => {
-          const { comment = "", input, result } = getMethodType(name, ref);
+          const { comment = "", input, result } = getMethodType(name, reference);
           const alias = input.replace("$Input", "$DirectInput");
 
           return `
@@ -539,7 +539,7 @@ async function convert(text) {
     Object.freeze($AsyncApi);
     Object.freeze($AsyncApi.prototype);`);
 
-    ref.types.push(`
+    reference.types.push(`
     
     /** 
      * Convenience class for sync API calls 
@@ -559,10 +559,10 @@ async function convert(text) {
         Object.freeze(this)
       }
   
-      ${Object.keys(ref.functions)
-        .filter((name) => ref.syncFunctions.has(name))
+      ${Object.keys(reference.functions)
+        .filter((name) => reference.syncFunctions.has(name))
         .map((name) => {
-          const { comment = "", input, result } = getMethodType(name, ref);
+          const { comment = "", input, result } = getMethodType(name, reference);
           const alias = input.replace("$Input", "$DirectInput");
 
           return `
@@ -583,40 +583,40 @@ async function convert(text) {
     
     Object.freeze($SyncApi);
     Object.freeze($SyncApi.prototype);`);
-  });
+  }
 
   /** @type {string[]} */
   const results = [];
 
   /**
    *
-   * @param {Namespace} ref
+   * @param {Namespace} reference
    * @returns
    */
-  function joinNamespace(ref) {
-    return `${ref.types.join("\n\n")}
+  function joinNamespace(reference) {
+    return `${reference.types.join("\n\n")}
     
-  ${Object.values(ref.functions).join("\n\n")}`;
+  ${Object.values(reference.functions).join("\n\n")}`;
   }
 
-  Object.entries(namespaces).forEach(([namespace, ref]) => {
-    const text = joinNamespace(ref);
+  for (const [namespace, reference] of Object.entries(namespaces)) {
+    const text = joinNamespace(reference);
 
     if (namespace === globalNamespace) {
       results.push(text);
     } else {
       results.push(`namespace ${namespace} { ${text} }`);
     }
-  });
+  }
 
-  Object.entries(primitives).forEach(([name, value]) => {
-    if (typeof value !== "string") return;
+  for (const [name, value] of Object.entries(primitives)) {
+    if (typeof value !== "string") continue;
 
     results.unshift(`
       ${name in primitiveComments ? `/** ${primitiveComments[name]} */` : ""}
       export type ${name} = ${value}
     `);
-  });
+  }
 
   results.unshift(`
     export const typename = "${typeType}";
@@ -633,12 +633,12 @@ async function run() {
   const label = "Typings";
   console.time(label);
 
-  const text = await readFile(resolve(__dirname, "../td/td_api.tl"), "utf-8");
+  const text = await readFile(resolve(__dirname, "../td/td_api.tl"), "utf8");
   console.timeLog(label, "Read td_api.tl");
   const result = await convert(text);
   console.timeLog(label, "Generated");
 
-  // @ts-ignore
+  // @ts-expect-error prettierConfig from json is incompatible with .format() types
   const formatted = await prettier.format(result, {
     ...prettierConfig,
     parser: "typescript"
@@ -647,7 +647,7 @@ async function run() {
 
   const outputPath = resolve(__dirname, "../src/generated/types.ts");
 
-  await writeFile(outputPath, formatted, "utf-8");
+  await writeFile(outputPath, formatted, "utf8");
   console.timeLog(label, "Written");
   console.timeEnd(label);
 }
