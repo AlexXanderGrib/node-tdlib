@@ -83,10 +83,15 @@ async function init() {
     .token(process.env.TELEGRAM_BOT_TOKEN);
 
   // Start polling responses from TDLib
-  await client.start();
-  await authenticator.authenticate();
-  // client authorized as bot
+  // And authenticate bot
+  // THIS SHOULD BE USED via Promise.all
+  // OR ELSE .authenticate() skips an update and hangs
+  await Promise.all([
+    client.start(),
+    authenticator.authenticate()
+  ]);
 
+  // client authorized as bot
   // Call any tdlib method
   await client.api.getOption({ name: "version" });
   // => Promise { _: "optionValueString", value: "1.8.37" }
@@ -115,6 +120,41 @@ async function init() {
 // Observable will complete after client.destroy() call
 const updates = new Observable(client.updates.toRxObserver());
 ```
+
+### Projects built with `tdlib-native`
+
+<table><tbody><tr><td align="center" valign="top" width="11%">
+<a href="https://t.me/guardcore_bot">
+<img
+src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/guardcore-bot.jpg?raw=1"
+width="75"
+height="75"
+alt="GuardCore Bot's Avatar"
+/><br />
+GuardCore Bot
+</a>
+</td><td align="center" valign="top" width="11%">
+<a href="https://t.me/tvoya_statya_bot">
+<img
+src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/tvoya-statya-bot.jpg?raw=1"
+width="75"
+height="75"
+alt="Твоя Статья УК РФ's Avatar"
+/><br />
+Твоя Статья УК РФ
+</a>
+</td><td align="center" valign="top" width="11%">
+<a href="https://github.com/AlexXanderGrib/node-tdlib/issues/new">
+<img
+src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/add.png?raw=1"
+width="75"
+height="75"
+alt=""
+/><br />
+Add your project
+</a>
+</td></tr></tbody></table>
+
 
 ## Credits
 

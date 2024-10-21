@@ -30,7 +30,7 @@ InlineKeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:230](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L230)
+[markup.ts:230](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L230)
 
 ##### \_row
 
@@ -38,7 +38,7 @@ InlineKeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:231](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L231)
+[markup.ts:231](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L231)
 
 #### Accessors
 
@@ -56,7 +56,7 @@ InlineKeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:239](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L239)
+[markup.ts:239](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L239)
 
 #### Methods
 
@@ -78,7 +78,7 @@ InlineKeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:306](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L306)
+[markup.ts:306](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L306)
 
 ##### button()
 
@@ -100,7 +100,7 @@ InlineKeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:281](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L281)
+[markup.ts:281](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L281)
 
 ##### callbackButton()
 
@@ -124,7 +124,7 @@ InlineKeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:251](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L251)
+[markup.ts:251](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L251)
 
 ##### row()
 
@@ -142,7 +142,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:292](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L292)
+[markup.ts:292](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L292)
 
 ##### toJSON()
 
@@ -162,7 +162,7 @@ InlineKeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:319](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L319)
+[markup.ts:319](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L319)
 
 ##### urlButton()
 
@@ -186,7 +186,7 @@ InlineKeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:266](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L266)
+[markup.ts:266](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L266)
 
 ***
 
@@ -216,7 +216,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:80](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L80)
+[markup.ts:80](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L80)
 
 #### Properties
 
@@ -226,7 +226,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:63](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L63)
+[markup.ts:63](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L63)
 
 ##### \_options
 
@@ -234,7 +234,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:61](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L61)
+[markup.ts:61](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L61)
 
 ##### \_row
 
@@ -242,7 +242,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:62](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L62)
+[markup.ts:62](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L62)
 
 #### Accessors
 
@@ -260,7 +260,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:71](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L71)
+[markup.ts:71](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L71)
 
 #### Methods
 
@@ -282,7 +282,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:188](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L188)
+[markup.ts:188](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L188)
 
 ##### button()
 
@@ -306,7 +306,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:103](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L103)
+[markup.ts:103](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L103)
 
 ##### oneTime()
 
@@ -328,7 +328,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:165](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L165)
+[markup.ts:165](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L165)
 
 ##### persistent()
 
@@ -350,7 +350,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:129](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L129)
+[markup.ts:129](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L129)
 
 ##### personal()
 
@@ -372,7 +372,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:153](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L153)
+[markup.ts:153](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L153)
 
 ##### placeholder()
 
@@ -394,7 +394,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:177](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L177)
+[markup.ts:177](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L177)
 
 ##### resize()
 
@@ -416,7 +416,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:141](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L141)
+[markup.ts:141](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L141)
 
 ##### row()
 
@@ -434,7 +434,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:114](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L114)
+[markup.ts:114](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L114)
 
 ##### textButton()
 
@@ -456,7 +456,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:91](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L91)
+[markup.ts:91](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L91)
 
 ##### toJSON()
 
@@ -476,7 +476,7 @@ KeyboardBuilder
 
 ###### Defined in
 
-[markup.ts:206](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L206)
+[markup.ts:206](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L206)
 
 ## Functions
 
@@ -502,7 +502,7 @@ KeyboardBuilder
 
 #### Defined in
 
-[markup.ts:20](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L20)
+[markup.ts:20](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L20)
 
 ***
 
@@ -520,7 +520,7 @@ KeyboardBuilder
 
 #### Defined in
 
-[markup.ts:330](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L330)
+[markup.ts:330](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L330)
 
 ***
 
@@ -542,7 +542,7 @@ KeyboardBuilder
 
 #### Defined in
 
-[markup.ts:218](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L218)
+[markup.ts:218](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L218)
 
 ***
 
@@ -566,4 +566,4 @@ KeyboardBuilder
 
 #### Defined in
 
-[markup.ts:38](https://github.com/AlexXanderGrib/node-tdlib/blob/58fca63917243bb3fadd647426b993ff30796d7b/src/markup.ts#L38)
+[markup.ts:38](https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/src/markup.ts#L38)
