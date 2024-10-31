@@ -113,15 +113,15 @@
     "node-addon-api": "^8.2.1"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-android-arm64-musl": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-darwin-arm64": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-darwin-x64": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-linux-x64-musl": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-win32-ia32": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b",
-    "@tdlib-native/tdjson-win32-x64": "1.8.37-commit.c1fea0f26355d94842f25651edc154842563e97b"
+    "@tdlib-native/tdjson-darwin-x64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-darwin-arm64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-linux-x64-musl": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-android-arm64-musl": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-win32-x64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-win32-ia32": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b"
   }
 }

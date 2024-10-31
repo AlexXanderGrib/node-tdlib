@@ -100,7 +100,6 @@ export const $Methods = Object.freeze({
   searchPublicChats: "searchPublicChats",
   searchChats: "searchChats",
   searchChatsOnServer: "searchChatsOnServer",
-  searchChatsNearby: "searchChatsNearby",
   getRecommendedChats: "getRecommendedChats",
   getChatSimilarChats: "getChatSimilarChats",
   getChatSimilarChatCount: "getChatSimilarChatCount",
@@ -569,7 +568,6 @@ export const $Methods = Object.freeze({
   setBirthdate: "setBirthdate",
   setPersonalChat: "setPersonalChat",
   setEmojiStatus: "setEmojiStatus",
-  setLocation: "setLocation",
   toggleHasSponsoredMessagesEnabled: "toggleHasSponsoredMessagesEnabled",
   setBusinessLocation: "setBusinessLocation",
   setBusinessOpeningHours: "setBusinessOpeningHours",
@@ -857,6 +855,7 @@ export const Update$Type = Object.freeze({
   MessageUnreadReactions: "updateMessageUnreadReactions",
   MessageFactCheck: "updateMessageFactCheck",
   MessageLiveLocationViewed: "updateMessageLiveLocationViewed",
+  VideoPublished: "updateVideoPublished",
   NewChat: "updateNewChat",
   ChatTitle: "updateChatTitle",
   ChatPhoto: "updateChatPhoto",
@@ -953,7 +952,6 @@ export const Update$Type = Object.freeze({
   LanguagePackStrings: "updateLanguagePackStrings",
   ConnectionState: "updateConnectionState",
   TermsOfService: "updateTermsOfService",
-  UsersNearby: "updateUsersNearby",
   UnconfirmedSession: "updateUnconfirmedSession",
   AttachmentMenuBots: "updateAttachmentMenuBots",
   WebAppMessageSent: "updateWebAppMessageSent",
@@ -1574,7 +1572,6 @@ export type TelegramPaymentPurpose$Type =
 
 export const StorePaymentPurpose$Type = Object.freeze({
   PremiumSubscription: "storePaymentPurposePremiumSubscription",
-  GiftedPremium: "storePaymentPurposeGiftedPremium",
   PremiumGiftCodes: "storePaymentPurposePremiumGiftCodes",
   PremiumGiveaway: "storePaymentPurposePremiumGiveaway",
   StarGiveaway: "storePaymentPurposeStarGiveaway",
@@ -2099,7 +2096,8 @@ export type MessageSelfDestructType$Type =
 
 export const MessageSchedulingState$Type = Object.freeze({
   AtDate: "messageSchedulingStateSendAtDate",
-  WhenOnline: "messageSchedulingStateSendWhenOnline"
+  WhenOnline: "messageSchedulingStateSendWhenOnline",
+  WhenVideoProcessed: "messageSchedulingStateSendWhenVideoProcessed"
 } as const);
 
 export type MessageSchedulingState$Type =
@@ -2546,7 +2544,6 @@ export type KeyboardButtonType$Type =
 
 export const ChatActionBar$Type = Object.freeze({
   ReportSpam: "chatActionBarReportSpam",
-  ReportUnrelatedLocation: "chatActionBarReportUnrelatedLocation",
   InviteMembers: "chatActionBarInviteMembers",
   ReportAddBlock: "chatActionBarReportAddBlock",
   AddContact: "chatActionBarAddContact",
@@ -2803,6 +2800,7 @@ export const StarTransactionPartner$Type = Object.freeze({
   GooglePlay: "starTransactionPartnerGooglePlay",
   Fragment: "starTransactionPartnerFragment",
   TelegramAds: "starTransactionPartnerTelegramAds",
+  TelegramApi: "starTransactionPartnerTelegramApi",
   Bot: "starTransactionPartnerBot",
   Business: "starTransactionPartnerBusiness",
   Chat: "starTransactionPartnerChat",
@@ -9716,7 +9714,7 @@ export type starSubscriptions = {
   star_count: int53;
 
   /**
-   * List of subbscriptions for Telegram Stars
+   * List of subscriptions for Telegram Stars
    * @type {vector<starSubscription>} {@link vector<starSubscription>}
    */
   subscriptions: vector<starSubscription>;
@@ -9749,7 +9747,7 @@ export type starSubscriptions$Input = {
   readonly star_count?: int53;
 
   /**
-   * List of subbscriptions for Telegram Stars
+   * List of subscriptions for Telegram Stars
    * @type {vector<starSubscription>} {@link vector<starSubscription>}
    */
   readonly subscriptions?: vector$Input<starSubscription$Input>;
@@ -9990,6 +9988,12 @@ export type premiumGiftCodePaymentOption = {
   amount: int53;
 
   /**
+   * The discount associated with this option, as a percentage
+   * @type {int32} {@link int32}
+   */
+  discount_percentage: int32;
+
+  /**
    * Number of users which will be able to activate the gift codes
    * @type {int32} {@link int32}
    */
@@ -10012,6 +10016,12 @@ export type premiumGiftCodePaymentOption = {
    * @type {int32} {@link int32}
    */
   store_product_quantity: int32;
+
+  /**
+   * A sticker to be shown along with the gift code; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker | null;
 };
 
 /**
@@ -10033,6 +10043,12 @@ export type premiumGiftCodePaymentOption$Input = {
    * @type {int53} {@link int53}
    */
   readonly amount?: int53;
+
+  /**
+   * The discount associated with this option, as a percentage
+   * @type {int32} {@link int32}
+   */
+  readonly discount_percentage?: int32;
 
   /**
    * Number of users which will be able to activate the gift codes
@@ -10057,6 +10073,12 @@ export type premiumGiftCodePaymentOption$Input = {
    * @type {int32} {@link int32}
    */
   readonly store_product_quantity?: int32;
+
+  /**
+   * A sticker to be shown along with the gift code; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input | null;
 };
 
 /**
@@ -10524,6 +10546,18 @@ export type gift = {
    * @type {int32} {@link int32}
    */
   total_count: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the gift was send for the first time; for sold out gifts only
+   * @type {int32} {@link int32}
+   */
+  first_send_date: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the gift was send for the last time; for sold out gifts only
+   * @type {int32} {@link int32}
+   */
+  last_send_date: int32;
 };
 
 /**
@@ -10569,6 +10603,18 @@ export type gift$Input = {
    * @type {int32} {@link int32}
    */
   readonly total_count?: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the gift was send for the first time; for sold out gifts only
+   * @type {int32} {@link int32}
+   */
+  readonly first_send_date?: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the gift was send for the last time; for sold out gifts only
+   * @type {int32} {@link int32}
+   */
+  readonly last_send_date?: int32;
 };
 
 /**
@@ -10802,7 +10848,7 @@ export type botTransactionPurposePaidMedia = {
   _: "botTransactionPurposePaidMedia";
 
   /**
-   * The bought media if the trancastion wasn't refunded
+   * The bought media if the transaction wasn't refunded
    * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
   media: vector<PaidMedia>;
@@ -10823,7 +10869,7 @@ export type botTransactionPurposePaidMedia$Input = {
   readonly _: "botTransactionPurposePaidMedia";
 
   /**
-   * The bought media if the trancastion wasn't refunded
+   * The bought media if the transaction wasn't refunded
    * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
   readonly media?: vector$Input<PaidMedia$Input>;
@@ -10888,7 +10934,7 @@ export type chatTransactionPurposePaidMedia = {
   message_id: int53;
 
   /**
-   * The bought media if the trancastion wasn't refunded
+   * The bought media if the transaction wasn't refunded
    * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
   media: vector<PaidMedia>;
@@ -10909,7 +10955,7 @@ export type chatTransactionPurposePaidMedia$Input = {
   readonly message_id?: int53;
 
   /**
-   * The bought media if the trancastion wasn't refunded
+   * The bought media if the transaction wasn't refunded
    * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
   readonly media?: vector$Input<PaidMedia$Input>;
@@ -11138,7 +11184,7 @@ export type starTransactionPartnerFragment = {
   _: "starTransactionPartnerFragment";
 
   /**
-   * State of the withdrawal; may be null for refunds from Fragment
+   * State of the withdrawal; may be null for refunds from Fragment or for Telegram Stars bought on Fragment
    * @type {RevenueWithdrawalState} {@link RevenueWithdrawalState}
    */
   withdrawal_state: RevenueWithdrawalState | null;
@@ -11153,7 +11199,7 @@ export type starTransactionPartnerFragment$Input = {
   readonly _: "starTransactionPartnerFragment";
 
   /**
-   * State of the withdrawal; may be null for refunds from Fragment
+   * State of the withdrawal; may be null for refunds from Fragment or for Telegram Stars bought on Fragment
    * @type {RevenueWithdrawalState} {@link RevenueWithdrawalState}
    */
   readonly withdrawal_state?: RevenueWithdrawalState$Input | null;
@@ -11173,6 +11219,34 @@ export type starTransactionPartnerTelegramAds = {
  */
 export type starTransactionPartnerTelegramAds$Input = {
   readonly _: "starTransactionPartnerTelegramAds";
+};
+
+/**
+ * The transaction is a transaction with Telegram for API usage
+ */
+export type starTransactionPartnerTelegramApi = {
+  _: "starTransactionPartnerTelegramApi";
+
+  /**
+   * The number of billed requests
+   * @type {int32} {@link int32}
+   */
+  request_count: int32;
+};
+
+/**
+ * Version of {@link starTransactionPartnerTelegramApi} for method parameters.
+ *
+ * The transaction is a transaction with Telegram for API usage
+ */
+export type starTransactionPartnerTelegramApi$Input = {
+  readonly _: "starTransactionPartnerTelegramApi";
+
+  /**
+   * The number of billed requests
+   * @type {int32} {@link int32}
+   */
+  readonly request_count?: int32;
 };
 
 /**
@@ -11228,7 +11302,7 @@ export type starTransactionPartnerBusiness = {
   user_id: int53;
 
   /**
-   * The bought media if the trancastion wasn't refunded
+   * The bought media if the transaction wasn't refunded
    * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
   media: vector<PaidMedia>;
@@ -11249,7 +11323,7 @@ export type starTransactionPartnerBusiness$Input = {
   readonly user_id?: int53;
 
   /**
-   * The bought media if the trancastion wasn't refunded
+   * The bought media if the transaction wasn't refunded
    * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
   readonly media?: vector$Input<PaidMedia$Input>;
@@ -11296,7 +11370,7 @@ export type starTransactionPartnerChat$Input = {
 };
 
 /**
- * The transaction is a transcation with another user
+ * The transaction is a transaction with another user
  */
 export type starTransactionPartnerUser = {
   _: "starTransactionPartnerUser";
@@ -11317,7 +11391,7 @@ export type starTransactionPartnerUser = {
 /**
  * Version of {@link starTransactionPartnerUser} for method parameters.
  *
- * The transaction is a transcation with another user
+ * The transaction is a transaction with another user
  */
 export type starTransactionPartnerUser$Input = {
   readonly _: "starTransactionPartnerUser";
@@ -12552,6 +12626,12 @@ export type botInfo = {
   default_channel_administrator_rights: chatAdministratorRights | null;
 
   /**
+   * True, if the bot's revenue statistics are available
+   * @type {Bool} {@link Bool}
+   */
+  can_get_revenue_statistics: Bool;
+
+  /**
    * True, if the bot has media previews
    * @type {Bool} {@link Bool}
    */
@@ -12643,6 +12723,12 @@ export type botInfo$Input = {
    * @type {chatAdministratorRights} {@link chatAdministratorRights}
    */
   readonly default_channel_administrator_rights?: chatAdministratorRights$Input | null;
+
+  /**
+   * True, if the bot's revenue statistics are available
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_get_revenue_statistics?: Bool$Input;
 
   /**
    * True, if the bot has media previews
@@ -12784,12 +12870,6 @@ export type userFullInfo = {
   personal_chat_id: int53;
 
   /**
-   * The list of available options for gifting Telegram Premium to the user
-   * @type {vector<premiumPaymentOption>} {@link vector<premiumPaymentOption>}
-   */
-  premium_gift_options: vector<premiumPaymentOption>;
-
-  /**
    * Number of gifts saved to profile by the user
    * @type {int32} {@link int32}
    */
@@ -12923,12 +13003,6 @@ export type userFullInfo$Input = {
    * @type {int53} {@link int53}
    */
   readonly personal_chat_id?: int53;
-
-  /**
-   * The list of available options for gifting Telegram Premium to the user
-   * @type {vector<premiumPaymentOption>} {@link vector<premiumPaymentOption>}
-   */
-  readonly premium_gift_options?: vector$Input<premiumPaymentOption$Input>;
 
   /**
    * Number of gifts saved to profile by the user
@@ -14838,7 +14912,7 @@ export type supergroup = {
    *
    * - getChatSimilarChats, getChatsToSendStories, getCreatedPublicChats, getGroupsInCommon, getInactiveSupergroupChats, getRecommendedChats, getSuitableDiscussionChats,
    *
-   * - getUserPrivacySettingRules, getVideoChatAvailableParticipants, searchChatsNearby, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or in userFullInfo.personal_chat_id,
+   * - getUserPrivacySettingRules, getVideoChatAvailableParticipants, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or in userFullInfo.personal_chat_id,
    *
    * - or for chats with messages or stories from publicForwards and foundStories
    * @type {int32} {@link int32}
@@ -14995,7 +15069,7 @@ export type supergroup$Input = {
    *
    * - getChatSimilarChats, getChatsToSendStories, getCreatedPublicChats, getGroupsInCommon, getInactiveSupergroupChats, getRecommendedChats, getSuitableDiscussionChats,
    *
-   * - getUserPrivacySettingRules, getVideoChatAvailableParticipants, searchChatsNearby, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or in userFullInfo.personal_chat_id,
+   * - getUserPrivacySettingRules, getVideoChatAvailableParticipants, searchPublicChats, or in chatFolderInviteLinkInfo.missing_chat_ids, or in userFullInfo.personal_chat_id,
    *
    * - or for chats with messages or stories from publicForwards and foundStories
    * @type {int32} {@link int32}
@@ -17564,13 +17638,13 @@ export type message = {
   contains_unread_mention: Bool;
 
   /**
-   * Point in time (Unix timestamp) when the message was sent
+   * Point in time (Unix timestamp) when the message was sent; 0 for scheduled messages
    * @type {int32} {@link int32}
    */
   date: int32;
 
   /**
-   * Point in time (Unix timestamp) when the message was last edited
+   * Point in time (Unix timestamp) when the message was last edited; 0 for scheduled messages
    * @type {int32} {@link int32}
    */
   edit_date: int32;
@@ -17789,13 +17863,13 @@ export type message$Input = {
   readonly contains_unread_mention?: Bool$Input;
 
   /**
-   * Point in time (Unix timestamp) when the message was sent
+   * Point in time (Unix timestamp) when the message was sent; 0 for scheduled messages
    * @type {int32} {@link int32}
    */
   readonly date?: int32;
 
   /**
-   * Point in time (Unix timestamp) when the message was last edited
+   * Point in time (Unix timestamp) when the message was last edited; 0 for scheduled messages
    * @type {int32} {@link int32}
    */
   readonly edit_date?: int32;
@@ -21424,86 +21498,6 @@ export type createdBasicGroupChat$Input = {
 };
 
 /**
- * Describes a chat located nearby
- */
-export type chatNearby = {
-  _: "chatNearby";
-
-  /**
-   * Chat identifier
-   * @type {int53} {@link int53}
-   */
-  chat_id: int53;
-
-  /**
-   * Distance to the chat location, in meters
-   * @type {int32} {@link int32}
-   */
-  distance: int32;
-};
-
-/**
- * Version of {@link chatNearby} for method parameters.
- *
- * Describes a chat located nearby
- */
-export type chatNearby$Input = {
-  readonly _: "chatNearby";
-
-  /**
-   * Chat identifier
-   * @type {int53} {@link int53}
-   */
-  readonly chat_id?: int53;
-
-  /**
-   * Distance to the chat location, in meters
-   * @type {int32} {@link int32}
-   */
-  readonly distance?: int32;
-};
-
-/**
- * Represents a list of chats located nearby
- */
-export type chatsNearby = {
-  _: "chatsNearby";
-
-  /**
-   * List of users nearby
-   * @type {vector<chatNearby>} {@link vector<chatNearby>}
-   */
-  users_nearby: vector<chatNearby>;
-
-  /**
-   * List of location-based supergroups nearby
-   * @type {vector<chatNearby>} {@link vector<chatNearby>}
-   */
-  supergroups_nearby: vector<chatNearby>;
-};
-
-/**
- * Version of {@link chatsNearby} for method parameters.
- *
- * Represents a list of chats located nearby
- */
-export type chatsNearby$Input = {
-  readonly _: "chatsNearby";
-
-  /**
-   * List of users nearby
-   * @type {vector<chatNearby>} {@link vector<chatNearby>}
-   */
-  readonly users_nearby?: vector$Input<chatNearby$Input>;
-
-  /**
-   * List of location-based supergroups nearby
-   * @type {vector<chatNearby>} {@link vector<chatNearby>}
-   */
-  readonly supergroups_nearby?: vector$Input<chatNearby$Input>;
-};
-
-/**
  * The chat is public, because it has an active username
  */
 export type publicChatTypeHasUsername = {
@@ -21564,22 +21558,6 @@ export type chatActionBarReportSpam$Input = {
 };
 
 /**
- * The chat is a location-based supergroup, which can't be reported anymore
- */
-export type chatActionBarReportUnrelatedLocation = {
-  _: "chatActionBarReportUnrelatedLocation";
-};
-
-/**
- * Version of {@link chatActionBarReportUnrelatedLocation} for method parameters.
- *
- * The chat is a location-based supergroup, which can't be reported anymore
- */
-export type chatActionBarReportUnrelatedLocation$Input = {
-  readonly _: "chatActionBarReportUnrelatedLocation";
-};
-
-/**
  * The chat is a recently created group chat to which new members can be invited
  */
 export type chatActionBarInviteMembers = {
@@ -21608,12 +21586,6 @@ export type chatActionBarReportAddBlock = {
    * @type {Bool} {@link Bool}
    */
   can_unarchive: Bool;
-
-  /**
-   * If non-negative, the current user was found by the other user through searchChatsNearby and this is the distance between the users
-   * @type {int32} {@link int32}
-   */
-  distance: int32;
 };
 
 /**
@@ -21631,12 +21603,6 @@ export type chatActionBarReportAddBlock$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly can_unarchive?: Bool$Input;
-
-  /**
-   * If non-negative, the current user was found by the other user through searchChatsNearby and this is the distance between the users
-   * @type {int32} {@link int32}
-   */
-  readonly distance?: int32;
 };
 
 /**
@@ -29400,7 +29366,7 @@ export type inputInvoiceMessage = {
   chat_id: int53;
 
   /**
-   * Message identifier
+   * Message identifier. Use messageProperties.can_be_paid to check whether the message can be used in the method
    * @type {int53} {@link int53}
    */
   message_id: int53;
@@ -29421,7 +29387,7 @@ export type inputInvoiceMessage$Input = {
   readonly chat_id?: int53;
 
   /**
-   * Message identifier
+   * Message identifier. Use messageProperties.can_be_paid to check whether the message can be used in the method
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
@@ -34470,6 +34436,12 @@ export type messageGiftedPremium = {
   receiver_user_id: int53;
 
   /**
+   * Message added to the gifted Telegram Premium by the sender
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+
+  /**
    * Currency for the paid amount
    * @type {string} {@link string}
    */
@@ -34527,6 +34499,12 @@ export type messageGiftedPremium$Input = {
   readonly receiver_user_id?: int53;
 
   /**
+   * Message added to the gifted Telegram Premium by the sender
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
    * Currency for the paid amount
    * @type {string} {@link string}
    */
@@ -34574,6 +34552,12 @@ export type messagePremiumGiftCode = {
    * @type {MessageSender} {@link MessageSender}
    */
   creator_id: MessageSender | null;
+
+  /**
+   * Message added to the gift
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
 
   /**
    * True, if the gift code was created for a giveaway
@@ -34643,6 +34627,12 @@ export type messagePremiumGiftCode$Input = {
    * @type {MessageSender} {@link MessageSender}
    */
   readonly creator_id?: MessageSender$Input | null;
+
+  /**
+   * Message added to the gift
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
 
   /**
    * True, if the gift code was created for a giveaway
@@ -35648,7 +35638,7 @@ export type textEntityTypeMention$Input = {
 };
 
 /**
- * A hashtag text, beginning with "#"
+ * A hashtag text, beginning with "#" and optionally containing a chat username at the end
  */
 export type textEntityTypeHashtag = {
   _: "textEntityTypeHashtag";
@@ -35657,14 +35647,14 @@ export type textEntityTypeHashtag = {
 /**
  * Version of {@link textEntityTypeHashtag} for method parameters.
  *
- * A hashtag text, beginning with "#"
+ * A hashtag text, beginning with "#" and optionally containing a chat username at the end
  */
 export type textEntityTypeHashtag$Input = {
   readonly _: "textEntityTypeHashtag";
 };
 
 /**
- * A cashtag text, beginning with "$" and consisting of capital English letters (e.g., "$USD")
+ * A cashtag text, beginning with "$", consisting of capital English letters (e.g., "$USD"), and optionally containing a chat username at the end
  */
 export type textEntityTypeCashtag = {
   _: "textEntityTypeCashtag";
@@ -35673,7 +35663,7 @@ export type textEntityTypeCashtag = {
 /**
  * Version of {@link textEntityTypeCashtag} for method parameters.
  *
- * A cashtag text, beginning with "$" and consisting of capital English letters (e.g., "$USD")
+ * A cashtag text, beginning with "$", consisting of capital English letters (e.g., "$USD"), and optionally containing a chat username at the end
  */
 export type textEntityTypeCashtag$Input = {
   readonly _: "textEntityTypeCashtag";
@@ -36284,6 +36274,34 @@ export type messageSchedulingStateSendWhenOnline$Input = {
 };
 
 /**
+ * The message will be sent when the video in the message is converted and optimized; can be used only by the server
+ */
+export type messageSchedulingStateSendWhenVideoProcessed = {
+  _: "messageSchedulingStateSendWhenVideoProcessed";
+
+  /**
+   * Approximate point in time (Unix timestamp) when the message is expected to be sent
+   * @type {int32} {@link int32}
+   */
+  send_date: int32;
+};
+
+/**
+ * Version of {@link messageSchedulingStateSendWhenVideoProcessed} for method parameters.
+ *
+ * The message will be sent when the video in the message is converted and optimized; can be used only by the server
+ */
+export type messageSchedulingStateSendWhenVideoProcessed$Input = {
+  readonly _: "messageSchedulingStateSendWhenVideoProcessed";
+
+  /**
+   * Approximate point in time (Unix timestamp) when the message is expected to be sent
+   * @type {int32} {@link int32}
+   */
+  readonly send_date?: int32;
+};
+
+/**
  * The message will be self-destructed in the specified time after its content was opened
  */
 export type messageSelfDestructTypeTimer = {
@@ -36352,6 +36370,12 @@ export type messageSendOptions = {
   protect_content: Bool;
 
   /**
+   * Pass true to allow the message to ignore regular broadcast limits for a small fee; for bots only
+   * @type {Bool} {@link Bool}
+   */
+  allow_paid_broadcast: Bool;
+
+  /**
    * Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum
    * @type {Bool} {@link Bool}
    */
@@ -36409,6 +36433,12 @@ export type messageSendOptions$Input = {
   readonly protect_content?: Bool$Input;
 
   /**
+   * Pass true to allow the message to ignore regular broadcast limits for a small fee; for bots only
+   * @type {Bool} {@link Bool}
+   */
+  readonly allow_paid_broadcast?: Bool$Input;
+
+  /**
    * Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum
    * @type {Bool} {@link Bool}
    */
@@ -36446,7 +36476,9 @@ export type messageCopyOptions = {
   _: "messageCopyOptions";
 
   /**
-   * True, if content of the message needs to be copied without reference to the original sender. Always true if the message is forwarded to a secret chat or is local
+   * True, if content of the message needs to be copied without reference to the original sender. Always true if the message is forwarded to a secret chat or is local.
+   *
+   * - Use messageProperties.can_be_saved and messageProperties.can_be_copied_to_secret_chat to check whether the message is suitable
    * @type {Bool} {@link Bool}
    */
   send_copy: Bool;
@@ -36479,7 +36511,9 @@ export type messageCopyOptions$Input = {
   readonly _: "messageCopyOptions";
 
   /**
-   * True, if content of the message needs to be copied without reference to the original sender. Always true if the message is forwarded to a secret chat or is local
+   * True, if content of the message needs to be copied without reference to the original sender. Always true if the message is forwarded to a secret chat or is local.
+   *
+   * - Use messageProperties.can_be_saved and messageProperties.can_be_copied_to_secret_chat to check whether the message is suitable
    * @type {Bool} {@link Bool}
    */
   readonly send_copy?: Bool$Input;
@@ -37266,7 +37300,7 @@ export type inputMessageVideoNote = {
   _: "inputMessageVideoNote";
 
   /**
-   * Video note to be sent
+   * Video note to be sent. The video is expected to be encoded to MPEG4 format with H.264 codec and have no data outside of the visible circle
    * @type {InputFile} {@link InputFile}
    */
   video_note: InputFile;
@@ -37305,7 +37339,7 @@ export type inputMessageVideoNote$Input = {
   readonly _: "inputMessageVideoNote";
 
   /**
-   * Video note to be sent
+   * Video note to be sent. The video is expected to be encoded to MPEG4 format with H.264 codec and have no data outside of the visible circle
    * @type {InputFile} {@link InputFile}
    */
   readonly video_note?: InputFile$Input;
@@ -38012,7 +38046,7 @@ export type messageProperties = {
   can_be_deleted_for_all_users: Bool;
 
   /**
-   * True, if the message can be edited using the methods editMessageText, editMessageMedia, editMessageCaption, or editMessageReplyMarkup.
+   * True, if the message can be edited using the methods editMessageText, editMessageCaption, or editMessageReplyMarkup.
    *
    * - For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message
    * @type {Bool} {@link Bool}
@@ -38060,6 +38094,12 @@ export type messageProperties = {
    * @type {Bool} {@link Bool}
    */
   can_be_shared_in_story: Bool;
+
+  /**
+   * True, if the message can be edited using the method editMessageMedia
+   * @type {Bool} {@link Bool}
+   */
+  can_edit_media: Bool;
 
   /**
    * True, if scheduling state of the message can be edited
@@ -38173,7 +38213,7 @@ export type messageProperties$Input = {
   readonly can_be_deleted_for_all_users?: Bool$Input;
 
   /**
-   * True, if the message can be edited using the methods editMessageText, editMessageMedia, editMessageCaption, or editMessageReplyMarkup.
+   * True, if the message can be edited using the methods editMessageText, editMessageCaption, or editMessageReplyMarkup.
    *
    * - For live location and poll messages this fields shows whether editMessageLiveLocation or stopPoll can be used with this message
    * @type {Bool} {@link Bool}
@@ -38221,6 +38261,12 @@ export type messageProperties$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly can_be_shared_in_story?: Bool$Input;
+
+  /**
+   * True, if the message can be edited using the method editMessageMedia
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_edit_media?: Bool$Input;
 
   /**
    * True, if scheduling state of the message can be edited
@@ -52884,58 +52930,6 @@ export type storePaymentPurposePremiumSubscription$Input = {
 };
 
 /**
- * The user gifting Telegram Premium to another user
- */
-export type storePaymentPurposeGiftedPremium = {
-  _: "storePaymentPurposeGiftedPremium";
-
-  /**
-   * Identifier of the user to which Telegram Premium is gifted
-   * @type {int53} {@link int53}
-   */
-  user_id: int53;
-
-  /**
-   * ISO 4217 currency code of the payment currency
-   * @type {string} {@link string}
-   */
-  currency: string;
-
-  /**
-   * Paid amount, in the smallest units of the currency
-   * @type {int53} {@link int53}
-   */
-  amount: int53;
-};
-
-/**
- * Version of {@link storePaymentPurposeGiftedPremium} for method parameters.
- *
- * The user gifting Telegram Premium to another user
- */
-export type storePaymentPurposeGiftedPremium$Input = {
-  readonly _: "storePaymentPurposeGiftedPremium";
-
-  /**
-   * Identifier of the user to which Telegram Premium is gifted
-   * @type {int53} {@link int53}
-   */
-  readonly user_id?: int53;
-
-  /**
-   * ISO 4217 currency code of the payment currency
-   * @type {string} {@link string}
-   */
-  readonly currency?: string;
-
-  /**
-   * Paid amount, in the smallest units of the currency
-   * @type {int53} {@link int53}
-   */
-  readonly amount?: int53;
-};
-
-/**
  * The user creating Telegram Premium gift codes for other users
  */
 export type storePaymentPurposePremiumGiftCodes = {
@@ -52964,6 +52958,12 @@ export type storePaymentPurposePremiumGiftCodes = {
    * @type {vector<int53>} {@link vector<int53>}
    */
   user_ids: vector<int53>;
+
+  /**
+   * Text to show along with the gift codes; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
 };
 
 /**
@@ -52997,6 +52997,12 @@ export type storePaymentPurposePremiumGiftCodes$Input = {
    * @type {vector<int53>} {@link vector<int53>}
    */
   readonly user_ids?: vector$Input<int53>;
+
+  /**
+   * Text to show along with the gift codes; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
 };
 
 /**
@@ -53278,6 +53284,12 @@ export type telegramPaymentPurposePremiumGiftCodes = {
    * @type {int32} {@link int32}
    */
   month_count: int32;
+
+  /**
+   * Text to show along with the gift codes; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
 };
 
 /**
@@ -53317,6 +53329,12 @@ export type telegramPaymentPurposePremiumGiftCodes$Input = {
    * @type {int32} {@link int32}
    */
   readonly month_count?: int32;
+
+  /**
+   * Text to show along with the gift codes; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
 };
 
 /**
@@ -60084,7 +60102,7 @@ export type internalLinkTypePremiumFeatures$Input = {
 };
 
 /**
- * The link is a link to the screen for gifting Telegram Premium subscriptions to friends via inputInvoiceTelegram payments or in-store purchases
+ * The link is a link to the screen for gifting Telegram Premium subscriptions to friends via inputInvoiceTelegram with telegramPaymentPurposePremiumGiftCodes payments or in-store purchases
  */
 export type internalLinkTypePremiumGift = {
   _: "internalLinkTypePremiumGift";
@@ -60099,7 +60117,7 @@ export type internalLinkTypePremiumGift = {
 /**
  * Version of {@link internalLinkTypePremiumGift} for method parameters.
  *
- * The link is a link to the screen for gifting Telegram Premium subscriptions to friends via inputInvoiceTelegram payments or in-store purchases
+ * The link is a link to the screen for gifting Telegram Premium subscriptions to friends via inputInvoiceTelegram with telegramPaymentPurposePremiumGiftCodes payments or in-store purchases
  */
 export type internalLinkTypePremiumGift$Input = {
   readonly _: "internalLinkTypePremiumGift";
@@ -65470,7 +65488,9 @@ export type updateMessageSendSucceeded = {
   _: "updateMessageSendSucceeded";
 
   /**
-   * The sent message. Usually only the message identifier, date, and content are changed, but almost all other fields can also change
+   * The sent message. Almost any field of the new message can be different from the corresponding field of the original message.
+   *
+   * - For example, the field scheduling_state may change, making the message scheduled, or non-scheduled
    * @type {message} {@link message}
    */
   message: message;
@@ -65491,7 +65511,9 @@ export type updateMessageSendSucceeded$Input = {
   readonly _: "updateMessageSendSucceeded";
 
   /**
-   * The sent message. Usually only the message identifier, date, and content are changed, but almost all other fields can also change
+   * The sent message. Almost any field of the new message can be different from the corresponding field of the original message.
+   *
+   * - For example, the field scheduling_state may change, making the message scheduled, or non-scheduled
    * @type {message} {@link message}
    */
   readonly message?: message$Input;
@@ -66018,6 +66040,46 @@ export type updateMessageLiveLocationViewed$Input = {
 
   /**
    * Identifier of the message with live location
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * An automatically scheduled message with video has been successfully sent after conversion
+ */
+export type updateVideoPublished = {
+  _: "updateVideoPublished";
+
+  /**
+   * Identifier of the chat with the message
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Identifier of the sent message
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+};
+
+/**
+ * Version of {@link updateVideoPublished} for method parameters.
+ *
+ * An automatically scheduled message with video has been successfully sent after conversion
+ */
+export type updateVideoPublished$Input = {
+  readonly _: "updateVideoPublished";
+
+  /**
+   * Identifier of the chat with the message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the sent message
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
@@ -69957,34 +70019,6 @@ export type updateTermsOfService$Input = {
    * @type {termsOfService} {@link termsOfService}
    */
   readonly terms_of_service?: termsOfService$Input;
-};
-
-/**
- * The list of users nearby has changed. The update is guaranteed to be sent only 60 seconds after a successful searchChatsNearby request
- */
-export type updateUsersNearby = {
-  _: "updateUsersNearby";
-
-  /**
-   * The new list of users nearby
-   * @type {vector<chatNearby>} {@link vector<chatNearby>}
-   */
-  users_nearby: vector<chatNearby>;
-};
-
-/**
- * Version of {@link updateUsersNearby} for method parameters.
- *
- * The list of users nearby has changed. The update is guaranteed to be sent only 60 seconds after a successful searchChatsNearby request
- */
-export type updateUsersNearby$Input = {
-  readonly _: "updateUsersNearby";
-
-  /**
-   * The new list of users nearby
-   * @type {vector<chatNearby>} {@link vector<chatNearby>}
-   */
-  readonly users_nearby?: vector$Input<chatNearby$Input>;
 };
 
 /**
@@ -74128,6 +74162,7 @@ export type UserTransactionPurpose$Input =
  * - {@link starTransactionPartnerGooglePlay}
  * - {@link starTransactionPartnerFragment}
  * - {@link starTransactionPartnerTelegramAds}
+ * - {@link starTransactionPartnerTelegramApi}
  * - {@link starTransactionPartnerBot}
  * - {@link starTransactionPartnerBusiness}
  * - {@link starTransactionPartnerChat}
@@ -74140,6 +74175,7 @@ export type StarTransactionPartner =
   | starTransactionPartnerGooglePlay
   | starTransactionPartnerFragment
   | starTransactionPartnerTelegramAds
+  | starTransactionPartnerTelegramApi
   | starTransactionPartnerBot
   | starTransactionPartnerBusiness
   | starTransactionPartnerChat
@@ -74154,6 +74190,7 @@ export type StarTransactionPartner =
  * - {@link starTransactionPartnerGooglePlay$Input}
  * - {@link starTransactionPartnerFragment$Input}
  * - {@link starTransactionPartnerTelegramAds$Input}
+ * - {@link starTransactionPartnerTelegramApi$Input}
  * - {@link starTransactionPartnerBot$Input}
  * - {@link starTransactionPartnerBusiness$Input}
  * - {@link starTransactionPartnerChat$Input}
@@ -74166,6 +74203,7 @@ export type StarTransactionPartner$Input =
   | starTransactionPartnerGooglePlay$Input
   | starTransactionPartnerFragment$Input
   | starTransactionPartnerTelegramAds$Input
+  | starTransactionPartnerTelegramApi$Input
   | starTransactionPartnerBot$Input
   | starTransactionPartnerBusiness$Input
   | starTransactionPartnerChat$Input
@@ -75986,32 +76024,6 @@ export type CreatedBasicGroupChat$Input = createdBasicGroupChat$Input;
 
 /**
  * Any of:
- * - {@link chatNearby}
- */
-export type ChatNearby = chatNearby;
-
-/**
- * Version of {@link ChatNearby} for method parameters.
- * Any of:
- * - {@link chatNearby$Input}
- */
-export type ChatNearby$Input = chatNearby$Input;
-
-/**
- * Any of:
- * - {@link chatsNearby}
- */
-export type ChatsNearby = chatsNearby;
-
-/**
- * Version of {@link ChatsNearby} for method parameters.
- * Any of:
- * - {@link chatsNearby$Input}
- */
-export type ChatsNearby$Input = chatsNearby$Input;
-
-/**
- * Any of:
  * - {@link publicChatTypeHasUsername}
  * - {@link publicChatTypeIsLocationBased}
  */
@@ -76032,7 +76044,6 @@ export type PublicChatType$Input =
 /**
  * Any of:
  * - {@link chatActionBarReportSpam}
- * - {@link chatActionBarReportUnrelatedLocation}
  * - {@link chatActionBarInviteMembers}
  * - {@link chatActionBarReportAddBlock}
  * - {@link chatActionBarAddContact}
@@ -76041,7 +76052,6 @@ export type PublicChatType$Input =
  */
 export type ChatActionBar =
   | chatActionBarReportSpam
-  | chatActionBarReportUnrelatedLocation
   | chatActionBarInviteMembers
   | chatActionBarReportAddBlock
   | chatActionBarAddContact
@@ -76052,7 +76062,6 @@ export type ChatActionBar =
  * Version of {@link ChatActionBar} for method parameters.
  * Any of:
  * - {@link chatActionBarReportSpam$Input}
- * - {@link chatActionBarReportUnrelatedLocation$Input}
  * - {@link chatActionBarInviteMembers$Input}
  * - {@link chatActionBarReportAddBlock$Input}
  * - {@link chatActionBarAddContact$Input}
@@ -76061,7 +76070,6 @@ export type ChatActionBar =
  */
 export type ChatActionBar$Input =
   | chatActionBarReportSpam$Input
-  | chatActionBarReportUnrelatedLocation$Input
   | chatActionBarInviteMembers$Input
   | chatActionBarReportAddBlock$Input
   | chatActionBarAddContact$Input
@@ -78261,20 +78269,24 @@ export type InputPaidMedia$Input = inputPaidMedia$Input;
  * Any of:
  * - {@link messageSchedulingStateSendAtDate}
  * - {@link messageSchedulingStateSendWhenOnline}
+ * - {@link messageSchedulingStateSendWhenVideoProcessed}
  */
 export type MessageSchedulingState =
   | messageSchedulingStateSendAtDate
-  | messageSchedulingStateSendWhenOnline;
+  | messageSchedulingStateSendWhenOnline
+  | messageSchedulingStateSendWhenVideoProcessed;
 
 /**
  * Version of {@link MessageSchedulingState} for method parameters.
  * Any of:
  * - {@link messageSchedulingStateSendAtDate$Input}
  * - {@link messageSchedulingStateSendWhenOnline$Input}
+ * - {@link messageSchedulingStateSendWhenVideoProcessed$Input}
  */
 export type MessageSchedulingState$Input =
   | messageSchedulingStateSendAtDate$Input
-  | messageSchedulingStateSendWhenOnline$Input;
+  | messageSchedulingStateSendWhenOnline$Input
+  | messageSchedulingStateSendWhenVideoProcessed$Input;
 
 /**
  * Any of:
@@ -80997,7 +81009,6 @@ export type PremiumState$Input = premiumState$Input;
 /**
  * Any of:
  * - {@link storePaymentPurposePremiumSubscription}
- * - {@link storePaymentPurposeGiftedPremium}
  * - {@link storePaymentPurposePremiumGiftCodes}
  * - {@link storePaymentPurposePremiumGiveaway}
  * - {@link storePaymentPurposeStarGiveaway}
@@ -81006,7 +81017,6 @@ export type PremiumState$Input = premiumState$Input;
  */
 export type StorePaymentPurpose =
   | storePaymentPurposePremiumSubscription
-  | storePaymentPurposeGiftedPremium
   | storePaymentPurposePremiumGiftCodes
   | storePaymentPurposePremiumGiveaway
   | storePaymentPurposeStarGiveaway
@@ -81017,7 +81027,6 @@ export type StorePaymentPurpose =
  * Version of {@link StorePaymentPurpose} for method parameters.
  * Any of:
  * - {@link storePaymentPurposePremiumSubscription$Input}
- * - {@link storePaymentPurposeGiftedPremium$Input}
  * - {@link storePaymentPurposePremiumGiftCodes$Input}
  * - {@link storePaymentPurposePremiumGiveaway$Input}
  * - {@link storePaymentPurposeStarGiveaway$Input}
@@ -81026,7 +81035,6 @@ export type StorePaymentPurpose =
  */
 export type StorePaymentPurpose$Input =
   | storePaymentPurposePremiumSubscription$Input
-  | storePaymentPurposeGiftedPremium$Input
   | storePaymentPurposePremiumGiftCodes$Input
   | storePaymentPurposePremiumGiveaway$Input
   | storePaymentPurposeStarGiveaway$Input
@@ -83588,6 +83596,7 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateMessageUnreadReactions}
  * - {@link updateMessageFactCheck}
  * - {@link updateMessageLiveLocationViewed}
+ * - {@link updateVideoPublished}
  * - {@link updateNewChat}
  * - {@link updateChatTitle}
  * - {@link updateChatPhoto}
@@ -83684,7 +83693,6 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateLanguagePackStrings}
  * - {@link updateConnectionState}
  * - {@link updateTermsOfService}
- * - {@link updateUsersNearby}
  * - {@link updateUnconfirmedSession}
  * - {@link updateAttachmentMenuBots}
  * - {@link updateWebAppMessageSent}
@@ -83741,6 +83749,7 @@ export type Update =
   | updateMessageUnreadReactions
   | updateMessageFactCheck
   | updateMessageLiveLocationViewed
+  | updateVideoPublished
   | updateNewChat
   | updateChatTitle
   | updateChatPhoto
@@ -83837,7 +83846,6 @@ export type Update =
   | updateLanguagePackStrings
   | updateConnectionState
   | updateTermsOfService
-  | updateUsersNearby
   | updateUnconfirmedSession
   | updateAttachmentMenuBots
   | updateWebAppMessageSent
@@ -83896,6 +83904,7 @@ export type Update =
  * - {@link updateMessageUnreadReactions$Input}
  * - {@link updateMessageFactCheck$Input}
  * - {@link updateMessageLiveLocationViewed$Input}
+ * - {@link updateVideoPublished$Input}
  * - {@link updateNewChat$Input}
  * - {@link updateChatTitle$Input}
  * - {@link updateChatPhoto$Input}
@@ -83992,7 +84001,6 @@ export type Update =
  * - {@link updateLanguagePackStrings$Input}
  * - {@link updateConnectionState$Input}
  * - {@link updateTermsOfService$Input}
- * - {@link updateUsersNearby$Input}
  * - {@link updateUnconfirmedSession$Input}
  * - {@link updateAttachmentMenuBots$Input}
  * - {@link updateWebAppMessageSent$Input}
@@ -84049,6 +84057,7 @@ export type Update$Input =
   | updateMessageUnreadReactions$Input
   | updateMessageFactCheck$Input
   | updateMessageLiveLocationViewed$Input
+  | updateVideoPublished$Input
   | updateNewChat$Input
   | updateChatTitle$Input
   | updateChatPhoto$Input
@@ -84145,7 +84154,6 @@ export type Update$Input =
   | updateLanguagePackStrings$Input
   | updateConnectionState$Input
   | updateTermsOfService$Input
-  | updateUsersNearby$Input
   | updateUnconfirmedSession$Input
   | updateAttachmentMenuBots$Input
   | updateWebAppMessageSent$Input
@@ -84418,7 +84426,6 @@ export type $MethodsDict = {
   readonly searchPublicChats: searchPublicChats;
   readonly searchChats: searchChats;
   readonly searchChatsOnServer: searchChatsOnServer;
-  readonly searchChatsNearby: searchChatsNearby;
   readonly getRecommendedChats: getRecommendedChats;
   readonly getChatSimilarChats: getChatSimilarChats;
   readonly getChatSimilarChatCount: getChatSimilarChatCount;
@@ -84885,7 +84892,6 @@ export type $MethodsDict = {
   readonly setBirthdate: setBirthdate;
   readonly setPersonalChat: setPersonalChat;
   readonly setEmojiStatus: setEmojiStatus;
-  readonly setLocation: setLocation;
   readonly toggleHasSponsoredMessagesEnabled: toggleHasSponsoredMessagesEnabled;
   readonly setBusinessLocation: setBusinessLocation;
   readonly setBusinessOpeningHours: setBusinessOpeningHours;
@@ -86103,19 +86109,6 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns a list of users and location-based supergroups nearby. The method was disabled and returns an empty list of chats now
-   *
-   * @param {searchChatsNearby$DirectInput} parameters {@link searchChatsNearby$Input}
-   * @returns {Promise<ChatsNearby>} Promise<{@link ChatsNearby}>
-   */
-  async searchChatsNearby(
-    parameters: searchChatsNearby$DirectInput
-  ): Promise<ChatsNearby> {
-    const result = await this.client.invoke("searchChatsNearby", parameters);
-    return result as ChatsNearby;
-  }
-
-  /**
    * Returns a list of channel chats recommended to the current user
    *
    * @param {getRecommendedChats$DirectInput} parameters {@link getRecommendedChats$Input}
@@ -86818,7 +86811,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns sponsored messages to be shown in a chat; for channel chats only
+   * Returns sponsored messages to be shown in a chat; for channel chats and chats with bots only
    *
    * @param {getChatSponsoredMessages$DirectInput} parameters {@link getChatSponsoredMessages$Input}
    * @returns {Promise<SponsoredMessages>} Promise<{@link SponsoredMessages}>
@@ -87176,11 +87169,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
+   * Edits the media content of a message, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
    *
-   * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
-   *
-   * - Returns the edited message after the edit is completed on the server side
+   * - The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
    *
    * @param {editMessageMedia$DirectInput} parameters {@link editMessageMedia$Input}
    * @returns {Promise<Message>} Promise<{@link Message}>
@@ -87248,7 +87239,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
+   * Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
    *
    * @param {editInlineMessageMedia$DirectInput} parameters {@link editInlineMessageMedia$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -87376,7 +87367,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Edits the content of a message with an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
+   * Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
    *
    * @param {editBusinessMessageMedia$DirectInput} parameters {@link editBusinessMessageMedia$Input}
    * @returns {Promise<BusinessMessage>} Promise<{@link BusinessMessage}>
@@ -87627,7 +87618,7 @@ export class $AsyncApi {
   /**
    * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
    *
-   * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+   * - Media message can be edited only to a media message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
    *
    * @param {editQuickReplyMessage$DirectInput} parameters {@link editQuickReplyMessage$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -92339,17 +92330,6 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
-   *
-   * @param {setLocation$DirectInput} parameters {@link setLocation$Input}
-   * @returns {Promise<Ok>} Promise<{@link Ok}>
-   */
-  async setLocation(parameters: setLocation$DirectInput): Promise<Ok> {
-    const result = await this.client.invoke("setLocation", parameters);
-    return result as Ok;
-  }
-
-  /**
    * Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
    *
    * @param {toggleHasSponsoredMessagesEnabled$DirectInput} parameters {@link toggleHasSponsoredMessagesEnabled$Input}
@@ -94140,7 +94120,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+   * Returns detailed revenue statistics about a chat. Currently, this method can be used only
+   *
+   * - for channels if supergroupFullInfo.can_get_revenue_statistics == true or bots if userFullInfo.bot_info.can_get_revenue_statistics == true
    *
    * @param {getChatRevenueStatistics$DirectInput} parameters {@link getChatRevenueStatistics$Input}
    * @returns {Promise<ChatRevenueStatistics>} Promise<{@link ChatRevenueStatistics}>
@@ -94153,7 +94135,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+   * Returns a URL for chat revenue withdrawal; requires owner privileges in the channel chat or the bot. Currently, this method can be used only
+   *
+   * - if getOption("can_withdraw_chat_revenue") for channels with supergroupFullInfo.can_get_revenue_statistics == true or bots with userFullInfo.bot_info.can_get_revenue_statistics == true
    *
    * @param {getChatRevenueWithdrawalUrl$DirectInput} parameters {@link getChatRevenueWithdrawalUrl$Input}
    * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
@@ -94169,7 +94153,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+   * Returns the list of revenue transactions for a chat. Currently, this method can be used only
+   *
+   * - for channels if supergroupFullInfo.can_get_revenue_statistics == true or bots if userFullInfo.bot_info.can_get_revenue_statistics == true
    *
    * @param {getChatRevenueTransactions$DirectInput} parameters {@link getChatRevenueTransactions$Input}
    * @returns {Promise<ChatRevenueTransactions>} Promise<{@link ChatRevenueTransactions}>
@@ -98676,38 +98662,6 @@ export type searchChatsOnServer$DirectInput = {
 export type searchChatsOnServer = (parameters: searchChatsOnServer$Input) => Chats;
 
 /**
- * Returns a list of users and location-based supergroups nearby. The method was disabled and returns an empty list of chats now
- */
-export type searchChatsNearby$Input = {
-  readonly _: "searchChatsNearby";
-
-  /**
-   * Current user location
-   * @type {location$Input} {@link location}
-   */
-  readonly location?: location$Input;
-};
-
-/**
- * Returns a list of users and location-based supergroups nearby. The method was disabled and returns an empty list of chats now
- */
-export type searchChatsNearby$DirectInput = {
-  /**
-   * Current user location
-   * @type {location$Input} {@link location}
-   */
-  readonly location?: location$Input;
-};
-
-/**
- * Returns a list of users and location-based supergroups nearby. The method was disabled and returns an empty list of chats now
- *
- * @param {searchChatsNearby$Input} parameters {@link searchChatsNearby$Input}
- * @returns {ChatsNearby} {@link ChatsNearby}
- */
-export type searchChatsNearby = (parameters: searchChatsNearby$Input) => ChatsNearby;
-
-/**
  * Returns a list of channel chats recommended to the current user
  */
 export type getRecommendedChats$Input = {
@@ -100578,6 +100532,12 @@ export type searchPublicStoriesByTag$Input = {
   readonly _: "searchPublicStoriesByTag";
 
   /**
+   * Identifier of the chat that posted the stories to search for; pass 0 to search stories in all chats
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
+  /**
    * Hashtag or cashtag to search for
    * @type {string} {@link string}
    */
@@ -100600,6 +100560,12 @@ export type searchPublicStoriesByTag$Input = {
  * Searches for public stories containing the given hashtag or cashtag. For optimal performance, the number of returned stories is chosen by TDLib and can be smaller than the specified limit
  */
 export type searchPublicStoriesByTag$DirectInput = {
+  /**
+   * Identifier of the chat that posted the stories to search for; pass 0 to search stories in all chats
+   * @type {int53} {@link int53}
+   */
+  readonly story_sender_chat_id?: int53;
+
   /**
    * Hashtag or cashtag to search for
    * @type {string} {@link string}
@@ -101332,7 +101298,7 @@ export type getChatScheduledMessages = (
 ) => Messages;
 
 /**
- * Returns sponsored messages to be shown in a chat; for channel chats only
+ * Returns sponsored messages to be shown in a chat; for channel chats and chats with bots only
  */
 export type getChatSponsoredMessages$Input = {
   readonly _: "getChatSponsoredMessages";
@@ -101345,7 +101311,7 @@ export type getChatSponsoredMessages$Input = {
 };
 
 /**
- * Returns sponsored messages to be shown in a chat; for channel chats only
+ * Returns sponsored messages to be shown in a chat; for channel chats and chats with bots only
  */
 export type getChatSponsoredMessages$DirectInput = {
   /**
@@ -101356,7 +101322,7 @@ export type getChatSponsoredMessages$DirectInput = {
 };
 
 /**
- * Returns sponsored messages to be shown in a chat; for channel chats only
+ * Returns sponsored messages to be shown in a chat; for channel chats and chats with bots only
  *
  * @param {getChatSponsoredMessages$Input} parameters {@link getChatSponsoredMessages$Input}
  * @returns {SponsoredMessages} {@link SponsoredMessages}
@@ -102450,7 +102416,9 @@ export type forwardMessages$Input = {
   readonly options?: messageSendOptions$Input | null;
 
   /**
-   * Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local
+   * Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local.
+   *
+   * - Use messageProperties.can_be_saved and messageProperties.can_be_copied_to_secret_chat to check whether the message is suitable
    * @type {Bool$Input} {@link Bool}
    */
   readonly send_copy?: Bool$Input;
@@ -102497,7 +102465,9 @@ export type forwardMessages$DirectInput = {
   readonly options?: messageSendOptions$Input | null;
 
   /**
-   * Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local
+   * Pass true to copy content of the messages without reference to the original sender. Always true if the messages are forwarded to a secret chat or are local.
+   *
+   * - Use messageProperties.can_be_saved and messageProperties.can_be_copied_to_secret_chat to check whether the message is suitable
    * @type {Bool$Input} {@link Bool}
    */
   readonly send_copy?: Bool$Input;
@@ -103074,11 +103044,9 @@ export type editMessageLiveLocation = (
 ) => Message;
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
+ * Edits the media content of a message, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
  *
- * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
- *
- * - Returns the edited message after the edit is completed on the server side
+ * - The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
  */
 export type editMessageMedia$Input = {
   readonly _: "editMessageMedia";
@@ -103090,7 +103058,7 @@ export type editMessageMedia$Input = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
+   * Identifier of the message. Use messageProperties.can_edit_media to check whether the message can be edited
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
@@ -103109,11 +103077,9 @@ export type editMessageMedia$Input = {
 };
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
+ * Edits the media content of a message, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
  *
- * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
- *
- * - Returns the edited message after the edit is completed on the server side
+ * - The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
  */
 export type editMessageMedia$DirectInput = {
   /**
@@ -103123,7 +103089,7 @@ export type editMessageMedia$DirectInput = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the message. Use messageProperties.can_be_edited to check whether the message can be edited
+   * Identifier of the message. Use messageProperties.can_edit_media to check whether the message can be edited
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
@@ -103142,11 +103108,9 @@ export type editMessageMedia$DirectInput = {
 };
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
+ * Edits the media content of a message, including message caption. If only the caption needs to be edited, use editMessageCaption instead.
  *
- * - The media can't be edited if the message was set to self-destruct or to a self-destructing media. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa.
- *
- * - Returns the edited message after the edit is completed on the server side
+ * - The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa. Returns the edited message after the edit is completed on the server side
  *
  * @param {editMessageMedia$Input} parameters {@link editMessageMedia$Input}
  * @returns {Message} {@link Message}
@@ -103446,7 +103410,7 @@ export type editInlineMessageLiveLocation = (
 ) => Ok;
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
+ * Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
  */
 export type editInlineMessageMedia$Input = {
   readonly _: "editInlineMessageMedia";
@@ -103471,7 +103435,7 @@ export type editInlineMessageMedia$Input = {
 };
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
+ * Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
  */
 export type editInlineMessageMedia$DirectInput = {
   /**
@@ -103494,7 +103458,7 @@ export type editInlineMessageMedia$DirectInput = {
 };
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
+ * Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in an inline message sent via a bot; for bots only
  *
  * @param {editInlineMessageMedia$Input} parameters {@link editInlineMessageMedia$Input}
  * @returns {Ok} {@link Ok}
@@ -103638,7 +103602,7 @@ export type editMessageSchedulingState$Input = {
   readonly message_id?: int53;
 
   /**
-   * The new message scheduling state; pass null to send the message immediately
+   * The new message scheduling state; pass null to send the message immediately. Must be null for messages in the state messageSchedulingStateSendWhenVideoProcessed
    * @type {MessageSchedulingState$Input} {@link MessageSchedulingState}
    */
   readonly scheduling_state?: MessageSchedulingState$Input | null;
@@ -103661,7 +103625,7 @@ export type editMessageSchedulingState$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * The new message scheduling state; pass null to send the message immediately
+   * The new message scheduling state; pass null to send the message immediately. Must be null for messages in the state messageSchedulingStateSendWhenVideoProcessed
    * @type {MessageSchedulingState$Input} {@link MessageSchedulingState}
    */
   readonly scheduling_state?: MessageSchedulingState$Input | null;
@@ -104168,7 +104132,7 @@ export type editBusinessMessageLiveLocation = (
 ) => BusinessMessage;
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
+ * Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
  */
 export type editBusinessMessageMedia$Input = {
   readonly _: "editBusinessMessageMedia";
@@ -104205,7 +104169,7 @@ export type editBusinessMessageMedia$Input = {
 };
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
+ * Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
  */
 export type editBusinessMessageMedia$DirectInput = {
   /**
@@ -104240,7 +104204,7 @@ export type editBusinessMessageMedia$DirectInput = {
 };
 
 /**
- * Edits the content of a message with an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
+ * Edits the media content of a message with a text, an animation, an audio, a document, a photo or a video in a message sent on behalf of a business account; for bots only
  *
  * @param {editBusinessMessageMedia$Input} parameters {@link editBusinessMessageMedia$Input}
  * @returns {BusinessMessage} {@link BusinessMessage}
@@ -105074,7 +105038,7 @@ export type readdQuickReplyShortcutMessages = (
 /**
  * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
  *
- * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+ * - Media message can be edited only to a media message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
  */
 export type editQuickReplyMessage$Input = {
   readonly _: "editQuickReplyMessage";
@@ -105101,7 +105065,7 @@ export type editQuickReplyMessage$Input = {
 /**
  * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
  *
- * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+ * - Media message can be edited only to a media message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
  */
 export type editQuickReplyMessage$DirectInput = {
   /**
@@ -105126,7 +105090,7 @@ export type editQuickReplyMessage$DirectInput = {
 /**
  * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
  *
- * - Text message can be edited only to a text message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
+ * - Media message can be edited only to a media message. The type of message content in an album can't be changed with exception of replacing a photo with a video or vice versa
  *
  * @param {editQuickReplyMessage$Input} parameters {@link editQuickReplyMessage$Input}
  * @returns {Ok} {@link Ok}
@@ -106300,7 +106264,7 @@ export type setMessageReactions$Input = {
   readonly message_id?: int53;
 
   /**
-   * Types of the reaction to set
+   * Types of the reaction to set; pass an empty list to remove the reactions
    * @type {vector$Input<ReactionType$Input>} {@link vector<ReactionType>}
    */
   readonly reaction_types?: vector$Input<ReactionType$Input>;
@@ -106329,7 +106293,7 @@ export type setMessageReactions$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * Types of the reaction to set
+   * Types of the reaction to set; pass an empty list to remove the reactions
    * @type {vector$Input<ReactionType$Input>} {@link vector<ReactionType>}
    */
   readonly reaction_types?: vector$Input<ReactionType$Input>;
@@ -120356,6 +120320,12 @@ export type searchStickerSet$Input = {
    * @type {string} {@link string}
    */
   readonly name?: string;
+
+  /**
+   * Pass true to ignore local cache of sticker sets and always send a network request
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly ignore_cache?: Bool$Input;
 };
 
 /**
@@ -120367,6 +120337,12 @@ export type searchStickerSet$DirectInput = {
    * @type {string} {@link string}
    */
   readonly name?: string;
+
+  /**
+   * Pass true to ignore local cache of sticker sets and always send a network request
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly ignore_cache?: Bool$Input;
 };
 
 /**
@@ -121910,38 +121886,6 @@ export type setEmojiStatus$DirectInput = {
  * @returns {Ok} {@link Ok}
  */
 export type setEmojiStatus = (parameters: setEmojiStatus$Input) => Ok;
-
-/**
- * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
- */
-export type setLocation$Input = {
-  readonly _: "setLocation";
-
-  /**
-   * The new location of the user
-   * @type {location$Input} {@link location}
-   */
-  readonly location?: location$Input;
-};
-
-/**
- * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
- */
-export type setLocation$DirectInput = {
-  /**
-   * The new location of the user
-   * @type {location$Input} {@link location}
-   */
-  readonly location?: location$Input;
-};
-
-/**
- * Changes the location of the current user. Needs to be called if getOption("is_location_visible") is true and location changes for more than 1 kilometer. Must not be called if the user has a business location
- *
- * @param {setLocation$Input} parameters {@link setLocation$Input}
- * @returns {Ok} {@link Ok}
- */
-export type setLocation = (parameters: setLocation$Input) => Ok;
 
 /**
  * Toggles whether the current user has sponsored messages enabled. The setting has no effect for users without Telegram Premium for which sponsored messages are always enabled
@@ -127364,7 +127308,9 @@ export type reportMessageReactions = (
 ) => Ok;
 
 /**
- * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ * Returns detailed revenue statistics about a chat. Currently, this method can be used only
+ *
+ * - for channels if supergroupFullInfo.can_get_revenue_statistics == true or bots if userFullInfo.bot_info.can_get_revenue_statistics == true
  */
 export type getChatRevenueStatistics$Input = {
   readonly _: "getChatRevenueStatistics";
@@ -127383,7 +127329,9 @@ export type getChatRevenueStatistics$Input = {
 };
 
 /**
- * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ * Returns detailed revenue statistics about a chat. Currently, this method can be used only
+ *
+ * - for channels if supergroupFullInfo.can_get_revenue_statistics == true or bots if userFullInfo.bot_info.can_get_revenue_statistics == true
  */
 export type getChatRevenueStatistics$DirectInput = {
   /**
@@ -127400,7 +127348,9 @@ export type getChatRevenueStatistics$DirectInput = {
 };
 
 /**
- * Returns detailed revenue statistics about a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ * Returns detailed revenue statistics about a chat. Currently, this method can be used only
+ *
+ * - for channels if supergroupFullInfo.can_get_revenue_statistics == true or bots if userFullInfo.bot_info.can_get_revenue_statistics == true
  *
  * @param {getChatRevenueStatistics$Input} parameters {@link getChatRevenueStatistics$Input}
  * @returns {ChatRevenueStatistics} {@link ChatRevenueStatistics}
@@ -127410,7 +127360,9 @@ export type getChatRevenueStatistics = (
 ) => ChatRevenueStatistics;
 
 /**
- * Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ * Returns a URL for chat revenue withdrawal; requires owner privileges in the channel chat or the bot. Currently, this method can be used only
+ *
+ * - if getOption("can_withdraw_chat_revenue") for channels with supergroupFullInfo.can_get_revenue_statistics == true or bots with userFullInfo.bot_info.can_get_revenue_statistics == true
  */
 export type getChatRevenueWithdrawalUrl$Input = {
   readonly _: "getChatRevenueWithdrawalUrl";
@@ -127429,7 +127381,9 @@ export type getChatRevenueWithdrawalUrl$Input = {
 };
 
 /**
- * Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ * Returns a URL for chat revenue withdrawal; requires owner privileges in the channel chat or the bot. Currently, this method can be used only
+ *
+ * - if getOption("can_withdraw_chat_revenue") for channels with supergroupFullInfo.can_get_revenue_statistics == true or bots with userFullInfo.bot_info.can_get_revenue_statistics == true
  */
 export type getChatRevenueWithdrawalUrl$DirectInput = {
   /**
@@ -127446,7 +127400,9 @@ export type getChatRevenueWithdrawalUrl$DirectInput = {
 };
 
 /**
- * Returns a URL for chat revenue withdrawal; requires owner privileges in the chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true and getOption("can_withdraw_chat_revenue")
+ * Returns a URL for chat revenue withdrawal; requires owner privileges in the channel chat or the bot. Currently, this method can be used only
+ *
+ * - if getOption("can_withdraw_chat_revenue") for channels with supergroupFullInfo.can_get_revenue_statistics == true or bots with userFullInfo.bot_info.can_get_revenue_statistics == true
  *
  * @param {getChatRevenueWithdrawalUrl$Input} parameters {@link getChatRevenueWithdrawalUrl$Input}
  * @returns {HttpUrl} {@link HttpUrl}
@@ -127456,7 +127412,9 @@ export type getChatRevenueWithdrawalUrl = (
 ) => HttpUrl;
 
 /**
- * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ * Returns the list of revenue transactions for a chat. Currently, this method can be used only
+ *
+ * - for channels if supergroupFullInfo.can_get_revenue_statistics == true or bots if userFullInfo.bot_info.can_get_revenue_statistics == true
  */
 export type getChatRevenueTransactions$Input = {
   readonly _: "getChatRevenueTransactions";
@@ -127481,7 +127439,9 @@ export type getChatRevenueTransactions$Input = {
 };
 
 /**
- * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ * Returns the list of revenue transactions for a chat. Currently, this method can be used only
+ *
+ * - for channels if supergroupFullInfo.can_get_revenue_statistics == true or bots if userFullInfo.bot_info.can_get_revenue_statistics == true
  */
 export type getChatRevenueTransactions$DirectInput = {
   /**
@@ -127504,7 +127464,9 @@ export type getChatRevenueTransactions$DirectInput = {
 };
 
 /**
- * Returns the list of revenue transactions for a chat. Currently, this method can be used only for channels if supergroupFullInfo.can_get_revenue_statistics == true
+ * Returns the list of revenue transactions for a chat. Currently, this method can be used only
+ *
+ * - for channels if supergroupFullInfo.can_get_revenue_statistics == true or bots if userFullInfo.bot_info.can_get_revenue_statistics == true
  *
  * @param {getChatRevenueTransactions$Input} parameters {@link getChatRevenueTransactions$Input}
  * @returns {ChatRevenueTransactions} {@link ChatRevenueTransactions}
