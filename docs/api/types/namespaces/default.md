@@ -2700,14 +2700,6 @@ Re-exports [chatActionBarReportSpam](../README.md#chatactionbarreportspam)
 
 Re-exports [chatActionBarReportSpam$Input](../README.md#chatactionbarreportspam$input)
 
-### chatActionBarReportUnrelatedLocation
-
-Re-exports [chatActionBarReportUnrelatedLocation](../README.md#chatactionbarreportunrelatedlocation)
-
-### chatActionBarReportUnrelatedLocation$Input
-
-Re-exports [chatActionBarReportUnrelatedLocation$Input](../README.md#chatactionbarreportunrelatedlocation$input)
-
 ### chatActionBarSharePhoneNumber
 
 Re-exports [chatActionBarSharePhoneNumber](../README.md#chatactionbarsharephonenumber)
@@ -4108,22 +4100,6 @@ Re-exports [chatMessageSenders$Input](../README.md#chatmessagesenders$input)
 
 Re-exports [ChatMessageSenders$Input](../README.md#chatmessagesenders$input-1)
 
-### chatNearby
-
-Re-exports [chatNearby](../README.md#chatnearby)
-
-### ChatNearby
-
-Re-exports [ChatNearby](../README.md#chatnearby-1)
-
-### chatNearby$Input
-
-Re-exports [chatNearby$Input](../README.md#chatnearby$input)
-
-### ChatNearby$Input
-
-Re-exports [ChatNearby$Input](../README.md#chatnearby$input-1)
-
 ### chatNotificationSettings
 
 Re-exports [chatNotificationSettings](../README.md#chatnotificationsettings)
@@ -4379,22 +4355,6 @@ Re-exports [chats$Input](../README.md#chats$input)
 ### Chats$Input
 
 Re-exports [Chats$Input](../README.md#chats$input-1)
-
-### chatsNearby
-
-Re-exports [chatsNearby](../README.md#chatsnearby)
-
-### ChatsNearby
-
-Re-exports [ChatsNearby](../README.md#chatsnearby-1)
-
-### chatsNearby$Input
-
-Re-exports [chatsNearby$Input](../README.md#chatsnearby$input)
-
-### ChatsNearby$Input
-
-Re-exports [ChatsNearby$Input](../README.md#chatsnearby$input-1)
 
 ### ChatSource
 
@@ -15096,6 +15056,14 @@ Re-exports [messageSchedulingStateSendWhenOnline](../README.md#messagescheduling
 
 Re-exports [messageSchedulingStateSendWhenOnline$Input](../README.md#messageschedulingstatesendwhenonline$input)
 
+### messageSchedulingStateSendWhenVideoProcessed
+
+Re-exports [messageSchedulingStateSendWhenVideoProcessed](../README.md#messageschedulingstatesendwhenvideoprocessed)
+
+### messageSchedulingStateSendWhenVideoProcessed$Input
+
+Re-exports [messageSchedulingStateSendWhenVideoProcessed$Input](../README.md#messageschedulingstatesendwhenvideoprocessed$input)
+
 ### messageScreenshotTaken
 
 Re-exports [messageScreenshotTaken](../README.md#messagescreenshottaken)
@@ -20348,18 +20316,6 @@ Re-exports [searchChats$DirectInput](../README.md#searchchats$directinput)
 
 Re-exports [searchChats$Input](../README.md#searchchats$input)
 
-### searchChatsNearby
-
-Re-exports [searchChatsNearby](../README.md#searchchatsnearby-2)
-
-### searchChatsNearby$DirectInput
-
-Re-exports [searchChatsNearby$DirectInput](../README.md#searchchatsnearby$directinput)
-
-### searchChatsNearby$Input
-
-Re-exports [searchChatsNearby$Input](../README.md#searchchatsnearby$input)
-
 ### searchChatsOnServer
 
 Re-exports [searchChatsOnServer](../README.md#searchchatsonserver-2)
@@ -22128,18 +22084,6 @@ Re-exports [setInlineGameScore$DirectInput](../README.md#setinlinegamescore$dire
 
 Re-exports [setInlineGameScore$Input](../README.md#setinlinegamescore$input)
 
-### setLocation
-
-Re-exports [setLocation](../README.md#setlocation-2)
-
-### setLocation$DirectInput
-
-Re-exports [setLocation$DirectInput](../README.md#setlocation$directinput)
-
-### setLocation$Input
-
-Re-exports [setLocation$Input](../README.md#setlocation$input)
-
 ### setLoginEmailAddress
 
 Re-exports [setLoginEmailAddress](../README.md#setloginemailaddress-2)
@@ -23148,6 +23092,14 @@ Re-exports [starTransactionPartnerTelegramAds](../README.md#startransactionpartn
 
 Re-exports [starTransactionPartnerTelegramAds$Input](../README.md#startransactionpartnertelegramads$input)
 
+### starTransactionPartnerTelegramApi
+
+Re-exports [starTransactionPartnerTelegramApi](../README.md#startransactionpartnertelegramapi)
+
+### starTransactionPartnerTelegramApi$Input
+
+Re-exports [starTransactionPartnerTelegramApi$Input](../README.md#startransactionpartnertelegramapi$input)
+
 ### starTransactionPartnerUnsupported
 
 Re-exports [starTransactionPartnerUnsupported](../README.md#startransactionpartnerunsupported)
@@ -23246,11 +23198,11 @@ Re-exports [StatisticalValue$Input](../README.md#statisticalvalue$input-1)
 
 ### sticker
 
-Re-exports [sticker](../README.md#sticker-60)
+Re-exports [sticker](../README.md#sticker-62)
 
 ### Sticker
 
-Re-exports [Sticker](../README.md#sticker-62)
+Re-exports [Sticker](../README.md#sticker-64)
 
 ### sticker$Input
 
@@ -23531,14 +23483,6 @@ Re-exports [StorePaymentPurpose$Input](../README.md#storepaymentpurpose$input)
 ### StorePaymentPurpose$Type
 
 Re-exports [StorePaymentPurpose$Type](../README.md#storepaymentpurpose$type-1)
-
-### storePaymentPurposeGiftedPremium
-
-Re-exports [storePaymentPurposeGiftedPremium](../README.md#storepaymentpurposegiftedpremium)
-
-### storePaymentPurposeGiftedPremium$Input
-
-Re-exports [storePaymentPurposeGiftedPremium$Input](../README.md#storepaymentpurposegiftedpremium$input)
 
 ### storePaymentPurposeGiftedStars
 
@@ -24690,11 +24634,11 @@ Re-exports [TestVectorStringObject$Input](../README.md#testvectorstringobject$in
 
 ### text
 
-Re-exports [text](../README.md#text-122)
+Re-exports [text](../README.md#text-130)
 
 ### Text
 
-Re-exports [Text](../README.md#text-124)
+Re-exports [Text](../README.md#text-132)
 
 ### text$Input
 
@@ -27084,14 +27028,6 @@ Re-exports [updateUserPrivacySettingRules](../README.md#updateuserprivacysetting
 
 Re-exports [updateUserPrivacySettingRules$Input](../README.md#updateuserprivacysettingrules$input)
 
-### updateUsersNearby
-
-Re-exports [updateUsersNearby](../README.md#updateusersnearby)
-
-### updateUsersNearby$Input
-
-Re-exports [updateUsersNearby$Input](../README.md#updateusersnearby$input)
-
 ### updateUserStatus
 
 Re-exports [updateUserStatus](../README.md#updateuserstatus)
@@ -27099,6 +27035,14 @@ Re-exports [updateUserStatus](../README.md#updateuserstatus)
 ### updateUserStatus$Input
 
 Re-exports [updateUserStatus$Input](../README.md#updateuserstatus$input)
+
+### updateVideoPublished
+
+Re-exports [updateVideoPublished](../README.md#updatevideopublished)
+
+### updateVideoPublished$Input
+
+Re-exports [updateVideoPublished$Input](../README.md#updatevideopublished$input)
 
 ### updateWebAppMessageSent
 

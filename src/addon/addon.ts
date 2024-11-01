@@ -32,7 +32,11 @@ type Addon = {
 
 const builtinAddonPath = path.resolve(
   getAddonFolderPath(),
-  "../../build/Release/td.node"
+  "..",
+  "..",
+  "build",
+  "Release",
+  "td.node"
 );
 
 /**

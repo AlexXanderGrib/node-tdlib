@@ -1,6 +1,6 @@
 {
   "name": "tdlib-native",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "🚀 Telegram TDLib native nodejs wrapper",
   "packageManager": "npm@10.9.0",
   "scripts": {
@@ -81,6 +81,7 @@
   "homepage": "https://github.com/AlexXanderGrib/node-tdlib#readme",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@rollup/plugin-replace": "^6.0.1",
     "@types/debug": "^4.1.12",
     "@types/node": "^22.7.7",
     "dotenv": "^16.4.5",
@@ -113,15 +114,15 @@
     "node-addon-api": "^8.2.1"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-darwin-x64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
-    "@tdlib-native/tdjson-darwin-arm64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
-    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
-    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
-    "@tdlib-native/tdjson-linux-x64-musl": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
-    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
     "@tdlib-native/tdjson-android-arm64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
     "@tdlib-native/tdjson-android-arm64-musl": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
-    "@tdlib-native/tdjson-win32-x64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
-    "@tdlib-native/tdjson-win32-ia32": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b"
+    "@tdlib-native/tdjson-darwin-arm64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-darwin-x64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-linux-x64-musl": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-win32-ia32": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
+    "@tdlib-native/tdjson-win32-x64": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b"
   }
 }

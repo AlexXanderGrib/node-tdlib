@@ -1,7 +1,9 @@
+import { fileURLToPath } from "url";
+
 /**
  * @type {string}
  */
-export const tdlibPath = new URL("libtdjson-x64-glibc.so", import.meta.url).pathname;
+export const tdlibPath = fileURLToPath(new URL("libtdjson-x64-glibc.so", import.meta.url));
 /**
  * @type {string}
  * @default "1.8.39"

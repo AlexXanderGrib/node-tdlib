@@ -1,7 +1,9 @@
+import { fileURLToPath } from "url";
+
 /**
  * @type {string}
  */
-export const tdlibPath = new URL("tdjson-x32.dll", import.meta.url).pathname;
+export const tdlibPath = fileURLToPath(new URL("tdjson-x32.dll", import.meta.url));
 /**
  * @type {string}
  * @default "1.8.39"

@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import packageJson from "./package.json";
 import { builtinModules } from "module";
+import replace from "@rollup/plugin-replace";
 
 const external = [
   Object.keys(packageJson.devDependencies),
@@ -19,15 +20,34 @@ export default defineConfig({
 
     rollupOptions: {
       external,
-      output: {
-        preserveModules: true,
-        exports: "named"
-      }
+
+      output: [
+        {
+          format: "cjs",
+          plugins: [
+            replace({
+              "compilerMagic$(getCurrentFile())": '__filename'
+            })
+          ],
+          preserveModules: true,
+          exports: "named"
+        },
+        {
+          format: "esm",
+          entryFileNames: "[name].mjs",
+
+          plugins: [
+            replace({
+              "compilerMagic$(getCurrentFile())": "fileURLToPath(import.meta.url)"
+            })
+          ],
+          preserveModules: true
+        }
+      ]
     },
 
     lib: {
       name: "tdlib-native",
-      formats: ["cjs", "es"],
       entry: {
         index: "./src/index.ts",
         markup: "./src/markup.ts",

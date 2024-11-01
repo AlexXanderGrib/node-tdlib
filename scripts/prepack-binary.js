@@ -164,7 +164,7 @@ for (const { os, cpu, file, libc } of builds) {
 
   const { cjs, esm, types } = generateExports({
     tdlibPath: {
-      esm: `new URL("${file}", import.meta.url).pathname`,
+      esm: `fileURLToPath(new URL("${file}", import.meta.url))`,
       cjs: `require('path').resolve(__dirname, "${file}")`,
       type: "string"
     },
@@ -173,7 +173,10 @@ for (const { os, cpu, file, libc } of builds) {
   });
 
   writeFileSync(`${directory}/index.js`, cjs);
-  writeFileSync(`${directory}/index.mjs`, esm);
+  writeFileSync(
+    `${directory}/index.mjs`,
+    'import { fileURLToPath } from "url";\n\n' + esm
+  );
   writeFileSync(`${directory}/index.d.ts`, types);
 
   optionalDependencies[packageJson.name] = packageJson.version;

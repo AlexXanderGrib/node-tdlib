@@ -1,12 +1,22 @@
-/* eslint-disable unicorn/prefer-module */
 import path from "path";
+import { fileURLToPath } from "url";
 
 function getCurrentFile() {
+  /* eslint-disable unicorn/prefer-module */
   if (typeof __filename !== "undefined") {
     return __filename;
   }
+  /* eslint-enable unicorn/prefer-module */
 
-  return new URL("", import.meta.url).pathname;
+  if (typeof import.meta.filename === "string") {
+    return import.meta.filename;
+  }
+
+  return fileURLToPath(import.meta.url);
+}
+
+function compilerMagic$<T>(value: T): T {
+  return value;
 }
 
 /**
@@ -15,5 +25,5 @@ function getCurrentFile() {
  * @returns {string}  {string}
  */
 export function getAddonFolderPath(): string {
-  return path.dirname(getCurrentFile());
+  return path.dirname(compilerMagic$(getCurrentFile()));
 }
