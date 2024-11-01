@@ -26,7 +26,8 @@ export default defineConfig({
           format: "cjs",
           plugins: [
             replace({
-              "compilerMagic$(getCurrentFile())": '__filename'
+              "compilerMagic$(getCurrentFile())": "/* compilerMagic$ */ __filename",
+              delimiters: ["", ""]
             })
           ],
           preserveModules: true,
@@ -38,7 +39,8 @@ export default defineConfig({
 
           plugins: [
             replace({
-              "compilerMagic$(getCurrentFile())": "fileURLToPath(import.meta.url)"
+              "compilerMagic$(getCurrentFile())": "/* compilerMagic$ */ fileURLToPath(import.meta.url)",
+              delimiters: ["", ""]
             })
           ],
           preserveModules: true
