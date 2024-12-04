@@ -262,8 +262,11 @@ export const $Methods = Object.freeze({
   shareChatWithBot: "shareChatWithBot",
   getInlineQueryResults: "getInlineQueryResults",
   answerInlineQuery: "answerInlineQuery",
+  savePreparedInlineMessage: "savePreparedInlineMessage",
+  getPreparedInlineMessage: "getPreparedInlineMessage",
   getGrossingWebAppBots: "getGrossingWebAppBots",
   searchWebApp: "searchWebApp",
+  getWebAppPlaceholder: "getWebAppPlaceholder",
   getWebAppLinkUrl: "getWebAppLinkUrl",
   getMainWebApp: "getMainWebApp",
   getWebAppUrl: "getWebAppUrl",
@@ -271,6 +274,7 @@ export const $Methods = Object.freeze({
   openWebApp: "openWebApp",
   closeWebApp: "closeWebApp",
   answerWebAppQuery: "answerWebAppQuery",
+  checkWebAppFileDownload: "checkWebAppFileDownload",
   getCallbackQueryAnswer: "getCallbackQueryAnswer",
   answerCallbackQuery: "answerCallbackQuery",
   answerShippingQuery: "answerShippingQuery",
@@ -510,9 +514,12 @@ export const $Methods = Object.freeze({
   getCloseFriends: "getCloseFriends",
   setUserPersonalProfilePhoto: "setUserPersonalProfilePhoto",
   suggestUserProfilePhoto: "suggestUserProfilePhoto",
+  toggleBotCanManageEmojiStatus: "toggleBotCanManageEmojiStatus",
+  setUserEmojiStatus: "setUserEmojiStatus",
   searchUserByPhoneNumber: "searchUserByPhoneNumber",
   sharePhoneNumber: "sharePhoneNumber",
   getUserProfilePhotos: "getUserProfilePhotos",
+  getStickerOutline: "getStickerOutline",
   getStickers: "getStickers",
   getAllStickerEmojis: "getAllStickerEmojis",
   searchStickers: "searchStickers",
@@ -552,6 +559,7 @@ export const $Methods = Object.freeze({
   addSavedAnimation: "addSavedAnimation",
   removeSavedAnimation: "removeSavedAnimation",
   getRecentInlineBots: "getRecentInlineBots",
+  getOwnedBots: "getOwnedBots",
   searchHashtags: "searchHashtags",
   removeRecentHashtag: "removeRecentHashtag",
   getLinkPreview: "getLinkPreview",
@@ -780,7 +788,15 @@ export const $Methods = Object.freeze({
   assignAppStoreTransaction: "assignAppStoreTransaction",
   assignGooglePlayTransaction: "assignGooglePlayTransaction",
   editStarSubscription: "editStarSubscription",
+  editUserStarSubscription: "editUserStarSubscription",
   reuseStarSubscription: "reuseStarSubscription",
+  setChatAffiliateProgram: "setChatAffiliateProgram",
+  searchChatAffiliateProgram: "searchChatAffiliateProgram",
+  searchAffiliatePrograms: "searchAffiliatePrograms",
+  connectChatAffiliateProgram: "connectChatAffiliateProgram",
+  disconnectChatAffiliateProgram: "disconnectChatAffiliateProgram",
+  getChatAffiliateProgram: "getChatAffiliateProgram",
+  getChatAffiliatePrograms: "getChatAffiliatePrograms",
   getBusinessFeatures: "getBusinessFeatures",
   acceptTermsOfService: "acceptTermsOfService",
   searchStringsByPrefix: "searchStringsByPrefix",
@@ -1179,6 +1195,10 @@ export const FileType$Type = Object.freeze({
   Secret: "fileTypeSecret",
   SecretThumbnail: "fileTypeSecretThumbnail",
   Secure: "fileTypeSecure",
+  SelfDestructingPhoto: "fileTypeSelfDestructingPhoto",
+  SelfDestructingVideo: "fileTypeSelfDestructingVideo",
+  SelfDestructingVideoNote: "fileTypeSelfDestructingVideoNote",
+  SelfDestructingVoiceNote: "fileTypeSelfDestructingVoiceNote",
   Sticker: "fileTypeSticker",
   Thumbnail: "fileTypeThumbnail",
   Unknown: "fileTypeUnknown",
@@ -1209,6 +1229,7 @@ export const InternalLinkType$Type = Object.freeze({
   BusinessChat: "internalLinkTypeBusinessChat",
   BuyStars: "internalLinkTypeBuyStars",
   ChangePhoneNumber: "internalLinkTypeChangePhoneNumber",
+  ChatAffiliateProgram: "internalLinkTypeChatAffiliateProgram",
   ChatBoost: "internalLinkTypeChatBoost",
   ChatFolderInvite: "internalLinkTypeChatFolderInvite",
   ChatFolderSettings: "internalLinkTypeChatFolderSettings",
@@ -1249,14 +1270,6 @@ export const InternalLinkType$Type = Object.freeze({
 
 export type InternalLinkType$Type =
   (typeof InternalLinkType$Type)[keyof typeof InternalLinkType$Type];
-
-export const TargetChat$Type = Object.freeze({
-  Current: "targetChatCurrent",
-  Chosen: "targetChatChosen",
-  InternalLink: "targetChatInternalLink"
-} as const);
-
-export type TargetChat$Type = (typeof TargetChat$Type)[keyof typeof TargetChat$Type];
 
 export const ReportStoryResult$Type = Object.freeze({
   Ok: "reportStoryResultOk",
@@ -1337,7 +1350,8 @@ export const UserPrivacySetting$Type = Object.freeze({
   AllowPeerToPeerCalls: "userPrivacySettingAllowPeerToPeerCalls",
   AllowFindingByPhoneNumber: "userPrivacySettingAllowFindingByPhoneNumber",
   AllowPrivateVoiceAndVideoNoteMessages:
-    "userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages"
+    "userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages",
+  AutosaveGifts: "userPrivacySettingAutosaveGifts"
 } as const);
 
 export type UserPrivacySetting$Type =
@@ -1346,11 +1360,13 @@ export type UserPrivacySetting$Type =
 export const UserPrivacySettingRule$Type = Object.freeze({
   AllowAll: "userPrivacySettingRuleAllowAll",
   AllowContacts: "userPrivacySettingRuleAllowContacts",
+  AllowBots: "userPrivacySettingRuleAllowBots",
   AllowPremiumUsers: "userPrivacySettingRuleAllowPremiumUsers",
   AllowUsers: "userPrivacySettingRuleAllowUsers",
   AllowChatMembers: "userPrivacySettingRuleAllowChatMembers",
   RestrictAll: "userPrivacySettingRuleRestrictAll",
   RestrictContacts: "userPrivacySettingRuleRestrictContacts",
+  RestrictBots: "userPrivacySettingRuleRestrictBots",
   RestrictUsers: "userPrivacySettingRuleRestrictUsers",
   RestrictChatMembers: "userPrivacySettingRuleRestrictChatMembers"
 } as const);
@@ -1800,6 +1816,14 @@ export const InputInlineQueryResult$Type = Object.freeze({
 
 export type InputInlineQueryResult$Type =
   (typeof InputInlineQueryResult$Type)[keyof typeof InputInlineQueryResult$Type];
+
+export const TargetChat$Type = Object.freeze({
+  Current: "targetChatCurrent",
+  Chosen: "targetChatChosen",
+  InternalLink: "targetChatInternalLink"
+} as const);
+
+export type TargetChat$Type = (typeof TargetChat$Type)[keyof typeof TargetChat$Type];
 
 export const BotWriteAccessAllowReason$Type = Object.freeze({
   ConnectedWebsite: "botWriteAccessAllowReasonConnectedWebsite",
@@ -2334,7 +2358,8 @@ export type PaymentReceiptType$Type =
 
 export const PaymentFormType$Type = Object.freeze({
   Regular: "paymentFormTypeRegular",
-  Stars: "paymentFormTypeStars"
+  Stars: "paymentFormTypeStars",
+  StarSubscription: "paymentFormTypeStarSubscription"
 } as const);
 
 export type PaymentFormType$Type =
@@ -2494,6 +2519,15 @@ export const SavedMessagesTopicType$Type = Object.freeze({
 
 export type SavedMessagesTopicType$Type =
   (typeof SavedMessagesTopicType$Type)[keyof typeof SavedMessagesTopicType$Type];
+
+export const WebAppOpenMode$Type = Object.freeze({
+  Compact: "webAppOpenModeCompact",
+  FullSize: "webAppOpenModeFullSize",
+  FullScreen: "webAppOpenModeFullScreen"
+} as const);
+
+export type WebAppOpenMode$Type =
+  (typeof WebAppOpenMode$Type)[keyof typeof WebAppOpenMode$Type];
 
 export const LoginUrlInfo$Type = Object.freeze({
   Open: "loginUrlInfoOpen",
@@ -2794,49 +2828,36 @@ export const GiveawayParticipantStatus$Type = Object.freeze({
 export type GiveawayParticipantStatus$Type =
   (typeof GiveawayParticipantStatus$Type)[keyof typeof GiveawayParticipantStatus$Type];
 
-export const StarTransactionPartner$Type = Object.freeze({
-  Telegram: "starTransactionPartnerTelegram",
-  AppStore: "starTransactionPartnerAppStore",
-  GooglePlay: "starTransactionPartnerGooglePlay",
-  Fragment: "starTransactionPartnerFragment",
-  TelegramAds: "starTransactionPartnerTelegramAds",
-  TelegramApi: "starTransactionPartnerTelegramApi",
-  Bot: "starTransactionPartnerBot",
-  Business: "starTransactionPartnerBusiness",
-  Chat: "starTransactionPartnerChat",
-  User: "starTransactionPartnerUser",
-  Unsupported: "starTransactionPartnerUnsupported"
+export const StarTransactionType$Type = Object.freeze({
+  PremiumBotDeposit: "starTransactionTypePremiumBotDeposit",
+  AppStoreDeposit: "starTransactionTypeAppStoreDeposit",
+  GooglePlayDeposit: "starTransactionTypeGooglePlayDeposit",
+  FragmentDeposit: "starTransactionTypeFragmentDeposit",
+  UserDeposit: "starTransactionTypeUserDeposit",
+  GiveawayDeposit: "starTransactionTypeGiveawayDeposit",
+  FragmentWithdrawal: "starTransactionTypeFragmentWithdrawal",
+  TelegramAdsWithdrawal: "starTransactionTypeTelegramAdsWithdrawal",
+  TelegramApiUsage: "starTransactionTypeTelegramApiUsage",
+  BotPaidMediaPurchase: "starTransactionTypeBotPaidMediaPurchase",
+  BotPaidMediaSale: "starTransactionTypeBotPaidMediaSale",
+  ChannelPaidMediaPurchase: "starTransactionTypeChannelPaidMediaPurchase",
+  ChannelPaidMediaSale: "starTransactionTypeChannelPaidMediaSale",
+  BotInvoicePurchase: "starTransactionTypeBotInvoicePurchase",
+  BotInvoiceSale: "starTransactionTypeBotInvoiceSale",
+  BotSubscriptionPurchase: "starTransactionTypeBotSubscriptionPurchase",
+  BotSubscriptionSale: "starTransactionTypeBotSubscriptionSale",
+  ChannelSubscriptionPurchase: "starTransactionTypeChannelSubscriptionPurchase",
+  ChannelSubscriptionSale: "starTransactionTypeChannelSubscriptionSale",
+  GiftPurchase: "starTransactionTypeGiftPurchase",
+  GiftSale: "starTransactionTypeGiftSale",
+  ChannelPaidReactionSend: "starTransactionTypeChannelPaidReactionSend",
+  ChannelPaidReactionReceive: "starTransactionTypeChannelPaidReactionReceive",
+  AffiliateProgramCommission: "starTransactionTypeAffiliateProgramCommission",
+  Unsupported: "starTransactionTypeUnsupported"
 } as const);
 
-export type StarTransactionPartner$Type =
-  (typeof StarTransactionPartner$Type)[keyof typeof StarTransactionPartner$Type];
-
-export const UserTransactionPurpose$Type = Object.freeze({
-  edStars: "userTransactionPurposeGiftedStars",
-  Sell: "userTransactionPurposeGiftSell",
-  Send: "userTransactionPurposeGiftSend"
-} as const);
-
-export type UserTransactionPurpose$Type =
-  (typeof UserTransactionPurpose$Type)[keyof typeof UserTransactionPurpose$Type];
-
-export const ChatTransactionPurpose$Type = Object.freeze({
-  PaidMedia: "chatTransactionPurposePaidMedia",
-  Join: "chatTransactionPurposeJoin",
-  Reaction: "chatTransactionPurposeReaction",
-  Giveaway: "chatTransactionPurposeGiveaway"
-} as const);
-
-export type ChatTransactionPurpose$Type =
-  (typeof ChatTransactionPurpose$Type)[keyof typeof ChatTransactionPurpose$Type];
-
-export const BotTransactionPurpose$Type = Object.freeze({
-  PaidMedia: "botTransactionPurposePaidMedia",
-  InvoicePayment: "botTransactionPurposeInvoicePayment"
-} as const);
-
-export type BotTransactionPurpose$Type =
-  (typeof BotTransactionPurpose$Type)[keyof typeof BotTransactionPurpose$Type];
+export type StarTransactionType$Type =
+  (typeof StarTransactionType$Type)[keyof typeof StarTransactionType$Type];
 
 export const StarTransactionDirection$Type = Object.freeze({
   Incoming: "starTransactionDirectionIncoming",
@@ -2845,6 +2866,23 @@ export const StarTransactionDirection$Type = Object.freeze({
 
 export type StarTransactionDirection$Type =
   (typeof StarTransactionDirection$Type)[keyof typeof StarTransactionDirection$Type];
+
+export const AffiliateProgramSortOrder$Type = Object.freeze({
+  Profitability: "affiliateProgramSortOrderProfitability",
+  CreationDate: "affiliateProgramSortOrderCreationDate",
+  Revenue: "affiliateProgramSortOrderRevenue"
+} as const);
+
+export type AffiliateProgramSortOrder$Type =
+  (typeof AffiliateProgramSortOrder$Type)[keyof typeof AffiliateProgramSortOrder$Type];
+
+export const StarSubscriptionType$Type = Object.freeze({
+  Channel: "starSubscriptionTypeChannel",
+  Bot: "starSubscriptionTypeBot"
+} as const);
+
+export type StarSubscriptionType$Type =
+  (typeof StarSubscriptionType$Type)[keyof typeof StarSubscriptionType$Type];
 
 export const InputChatPhoto$Type = Object.freeze({
   Previous: "inputChatPhotoPrevious",
@@ -5462,7 +5500,7 @@ export type stickerFullTypeCustomEmoji$Input = {
 };
 
 /**
- * Represents a closed vector path. The path begins at the end point of the last command
+ * Represents a closed vector path. The path begins at the end point of the last command. The coordinate system origin is in the upper-left corner
  */
 export type closedVectorPath = {
   _: "closedVectorPath";
@@ -5477,7 +5515,7 @@ export type closedVectorPath = {
 /**
  * Version of {@link closedVectorPath} for method parameters.
  *
- * Represents a closed vector path. The path begins at the end point of the last command
+ * Represents a closed vector path. The path begins at the end point of the last command. The coordinate system origin is in the upper-left corner
  */
 export type closedVectorPath$Input = {
   readonly _: "closedVectorPath";
@@ -5487,6 +5525,34 @@ export type closedVectorPath$Input = {
    * @type {vector<VectorPathCommand>} {@link vector<VectorPathCommand>}
    */
   readonly commands?: vector$Input<VectorPathCommand$Input>;
+};
+
+/**
+ * Represents outline of an image
+ */
+export type outline = {
+  _: "outline";
+
+  /**
+   * The list of closed vector paths
+   * @type {vector<closedVectorPath>} {@link vector<closedVectorPath>}
+   */
+  paths: vector<closedVectorPath>;
+};
+
+/**
+ * Version of {@link outline} for method parameters.
+ *
+ * Represents outline of an image
+ */
+export type outline$Input = {
+  readonly _: "outline";
+
+  /**
+   * The list of closed vector paths
+   * @type {vector<closedVectorPath>} {@link vector<closedVectorPath>}
+   */
+  readonly paths?: vector$Input<closedVectorPath$Input>;
 };
 
 /**
@@ -6058,12 +6124,6 @@ export type sticker = {
   full_type: StickerFullType;
 
   /**
-   * Sticker's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
-   * @type {vector<closedVectorPath>} {@link vector<closedVectorPath>}
-   */
-  outline: vector<closedVectorPath>;
-
-  /**
    * Sticker thumbnail in WEBP or JPEG format; may be null
    * @type {thumbnail} {@link thumbnail}
    */
@@ -6125,12 +6185,6 @@ export type sticker$Input = {
    * @type {StickerFullType} {@link StickerFullType}
    */
   readonly full_type?: StickerFullType$Input;
-
-  /**
-   * Sticker's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
-   * @type {vector<closedVectorPath>} {@link vector<closedVectorPath>}
-   */
-  readonly outline?: vector$Input<closedVectorPath$Input>;
 
   /**
    * Sticker thumbnail in WEBP or JPEG format; may be null
@@ -7062,7 +7116,7 @@ export type poll$Input = {
 };
 
 /**
- * Describes an alternative reencoded quality of a video file
+ * Describes an alternative re-encoded quality of a video file
  */
 export type alternativeVideo = {
   _: "alternativeVideo";
@@ -7101,7 +7155,7 @@ export type alternativeVideo = {
 /**
  * Version of {@link alternativeVideo} for method parameters.
  *
- * Describes an alternative reencoded quality of a video file
+ * Describes an alternative re-encoded quality of a video file
  */
 export type alternativeVideo$Input = {
   readonly _: "alternativeVideo";
@@ -9550,6 +9604,150 @@ export type chatAdministratorRights$Input = {
 };
 
 /**
+ * Describes a possibly non-integer amount of Telegram Stars
+ */
+export type starAmount = {
+  _: "starAmount";
+
+  /**
+   * The integer amount of Telegram Stars rounded to 0
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * The number of 1/1000000000 shares of Telegram Stars; from -999999999 to 999999999
+   * @type {int32} {@link int32}
+   */
+  nanostar_count: int32;
+};
+
+/**
+ * Version of {@link starAmount} for method parameters.
+ *
+ * Describes a possibly non-integer amount of Telegram Stars
+ */
+export type starAmount$Input = {
+  readonly _: "starAmount";
+
+  /**
+   * The integer amount of Telegram Stars rounded to 0
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * The number of 1/1000000000 shares of Telegram Stars; from -999999999 to 999999999
+   * @type {int32} {@link int32}
+   */
+  readonly nanostar_count?: int32;
+};
+
+/**
+ * Describes a subscription to a channel chat
+ */
+export type starSubscriptionTypeChannel = {
+  _: "starSubscriptionTypeChannel";
+
+  /**
+   * True, if the subscription is active and the user can use the method reuseStarSubscription to join the subscribed chat again
+   * @type {Bool} {@link Bool}
+   */
+  can_reuse: Bool;
+
+  /**
+   * The invite link that can be used to renew the subscription if it has been expired; may be empty, if the link isn't available anymore
+   * @type {string} {@link string}
+   */
+  invite_link: string;
+};
+
+/**
+ * Version of {@link starSubscriptionTypeChannel} for method parameters.
+ *
+ * Describes a subscription to a channel chat
+ */
+export type starSubscriptionTypeChannel$Input = {
+  readonly _: "starSubscriptionTypeChannel";
+
+  /**
+   * True, if the subscription is active and the user can use the method reuseStarSubscription to join the subscribed chat again
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_reuse?: Bool$Input;
+
+  /**
+   * The invite link that can be used to renew the subscription if it has been expired; may be empty, if the link isn't available anymore
+   * @type {string} {@link string}
+   */
+  readonly invite_link?: string;
+};
+
+/**
+ * Describes a subscription in a bot or a business account
+ */
+export type starSubscriptionTypeBot = {
+  _: "starSubscriptionTypeBot";
+
+  /**
+   * True, if the subscription was canceled by the bot and can't be extended
+   * @type {Bool} {@link Bool}
+   */
+  is_canceled_by_bot: Bool;
+
+  /**
+   * Subscription invoice title
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Subscription invoice photo
+   * @type {photo} {@link photo}
+   */
+  photo: photo;
+
+  /**
+   * The link to the subscription invoice
+   * @type {string} {@link string}
+   */
+  invoice_link: string;
+};
+
+/**
+ * Version of {@link starSubscriptionTypeBot} for method parameters.
+ *
+ * Describes a subscription in a bot or a business account
+ */
+export type starSubscriptionTypeBot$Input = {
+  readonly _: "starSubscriptionTypeBot";
+
+  /**
+   * True, if the subscription was canceled by the bot and can't be extended
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_canceled_by_bot?: Bool$Input;
+
+  /**
+   * Subscription invoice title
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Subscription invoice photo
+   * @type {photo} {@link photo}
+   */
+  readonly photo?: photo$Input;
+
+  /**
+   * The link to the subscription invoice
+   * @type {string} {@link string}
+   */
+  readonly invoice_link?: string;
+};
+
+/**
  * Describes subscription plan paid in Telegram Stars
  */
 export type starSubscriptionPricing = {
@@ -9590,7 +9788,7 @@ export type starSubscriptionPricing$Input = {
 };
 
 /**
- * Contains information about subscription to a channel chat paid in Telegram Stars
+ * Contains information about subscription to a channel chat, a bot, or a business account that was paid in Telegram Stars
  */
 export type starSubscription = {
   _: "starSubscription";
@@ -9602,7 +9800,7 @@ export type starSubscription = {
   id: string;
 
   /**
-   * Identifier of the channel chat that is subscribed
+   * Identifier of the chat that is subscribed
    * @type {int53} {@link int53}
    */
   chat_id: int53;
@@ -9612,12 +9810,6 @@ export type starSubscription = {
    * @type {int32} {@link int32}
    */
   expiration_date: int32;
-
-  /**
-   * True, if the subscription is active and the user can use the method reuseStarSubscription to join the subscribed chat again
-   * @type {Bool} {@link Bool}
-   */
-  can_reuse: Bool;
 
   /**
    * True, if the subscription was canceled
@@ -9632,22 +9824,22 @@ export type starSubscription = {
   is_expiring: Bool;
 
   /**
-   * The invite link that can be used to renew the subscription if it has been expired; may be empty, if the link isn't available anymore
-   * @type {string} {@link string}
-   */
-  invite_link: string;
-
-  /**
    * The subscription plan
    * @type {starSubscriptionPricing} {@link starSubscriptionPricing}
    */
   pricing: starSubscriptionPricing;
+
+  /**
+   * Type of the subscription
+   * @type {StarSubscriptionType} {@link StarSubscriptionType}
+   */
+  type: StarSubscriptionType;
 };
 
 /**
  * Version of {@link starSubscription} for method parameters.
  *
- * Contains information about subscription to a channel chat paid in Telegram Stars
+ * Contains information about subscription to a channel chat, a bot, or a business account that was paid in Telegram Stars
  */
 export type starSubscription$Input = {
   readonly _: "starSubscription";
@@ -9659,7 +9851,7 @@ export type starSubscription$Input = {
   readonly id?: string;
 
   /**
-   * Identifier of the channel chat that is subscribed
+   * Identifier of the chat that is subscribed
    * @type {int53} {@link int53}
    */
   readonly chat_id?: int53;
@@ -9669,12 +9861,6 @@ export type starSubscription$Input = {
    * @type {int32} {@link int32}
    */
   readonly expiration_date?: int32;
-
-  /**
-   * True, if the subscription is active and the user can use the method reuseStarSubscription to join the subscribed chat again
-   * @type {Bool} {@link Bool}
-   */
-  readonly can_reuse?: Bool$Input;
 
   /**
    * True, if the subscription was canceled
@@ -9689,16 +9875,16 @@ export type starSubscription$Input = {
   readonly is_expiring?: Bool$Input;
 
   /**
-   * The invite link that can be used to renew the subscription if it has been expired; may be empty, if the link isn't available anymore
-   * @type {string} {@link string}
-   */
-  readonly invite_link?: string;
-
-  /**
    * The subscription plan
    * @type {starSubscriptionPricing} {@link starSubscriptionPricing}
    */
   readonly pricing?: starSubscriptionPricing$Input;
+
+  /**
+   * Type of the subscription
+   * @type {StarSubscriptionType} {@link StarSubscriptionType}
+   */
+  readonly type?: StarSubscriptionType$Input;
 };
 
 /**
@@ -9709,9 +9895,9 @@ export type starSubscriptions = {
 
   /**
    * The amount of owned Telegram Stars
-   * @type {int53} {@link int53}
+   * @type {starAmount} {@link starAmount}
    */
-  star_count: int53;
+  star_amount: starAmount;
 
   /**
    * List of subscriptions for Telegram Stars
@@ -9742,9 +9928,9 @@ export type starSubscriptions$Input = {
 
   /**
    * The amount of owned Telegram Stars
-   * @type {int53} {@link int53}
+   * @type {starAmount} {@link starAmount}
    */
-  readonly star_count?: int53;
+  readonly star_amount?: starAmount$Input;
 
   /**
    * List of subscriptions for Telegram Stars
@@ -9757,6 +9943,450 @@ export type starSubscriptions$Input = {
    * @type {int53} {@link int53}
    */
   readonly required_star_count?: int53;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  readonly next_offset?: string;
+};
+
+/**
+ * The affiliate programs must be sorted by the profitability
+ */
+export type affiliateProgramSortOrderProfitability = {
+  _: "affiliateProgramSortOrderProfitability";
+};
+
+/**
+ * Version of {@link affiliateProgramSortOrderProfitability} for method parameters.
+ *
+ * The affiliate programs must be sorted by the profitability
+ */
+export type affiliateProgramSortOrderProfitability$Input = {
+  readonly _: "affiliateProgramSortOrderProfitability";
+};
+
+/**
+ * The affiliate programs must be sorted by creation date
+ */
+export type affiliateProgramSortOrderCreationDate = {
+  _: "affiliateProgramSortOrderCreationDate";
+};
+
+/**
+ * Version of {@link affiliateProgramSortOrderCreationDate} for method parameters.
+ *
+ * The affiliate programs must be sorted by creation date
+ */
+export type affiliateProgramSortOrderCreationDate$Input = {
+  readonly _: "affiliateProgramSortOrderCreationDate";
+};
+
+/**
+ * The affiliate programs must be sorted by the expected revenue
+ */
+export type affiliateProgramSortOrderRevenue = {
+  _: "affiliateProgramSortOrderRevenue";
+};
+
+/**
+ * Version of {@link affiliateProgramSortOrderRevenue} for method parameters.
+ *
+ * The affiliate programs must be sorted by the expected revenue
+ */
+export type affiliateProgramSortOrderRevenue$Input = {
+  readonly _: "affiliateProgramSortOrderRevenue";
+};
+
+/**
+ * Describes parameters of an affiliate program
+ */
+export type affiliateProgramParameters = {
+  _: "affiliateProgramParameters";
+
+  /**
+   * The number of Telegram Stars received by the affiliate for each 1000 Telegram Stars received by the program owner;
+   *
+   * - getOption("affiliate_program_commission_per_mille_min")-getOption("affiliate_program_commission_per_mille_max")
+   * @type {int32} {@link int32}
+   */
+  commission_per_mille: int32;
+
+  /**
+   * Number of months the program will be active; 0-36. If 0, then the program is eternal
+   * @type {int32} {@link int32}
+   */
+  month_count: int32;
+};
+
+/**
+ * Version of {@link affiliateProgramParameters} for method parameters.
+ *
+ * Describes parameters of an affiliate program
+ */
+export type affiliateProgramParameters$Input = {
+  readonly _: "affiliateProgramParameters";
+
+  /**
+   * The number of Telegram Stars received by the affiliate for each 1000 Telegram Stars received by the program owner;
+   *
+   * - getOption("affiliate_program_commission_per_mille_min")-getOption("affiliate_program_commission_per_mille_max")
+   * @type {int32} {@link int32}
+   */
+  readonly commission_per_mille?: int32;
+
+  /**
+   * Number of months the program will be active; 0-36. If 0, then the program is eternal
+   * @type {int32} {@link int32}
+   */
+  readonly month_count?: int32;
+};
+
+/**
+ * Contains information about an active affiliate program
+ */
+export type affiliateProgramInfo = {
+  _: "affiliateProgramInfo";
+
+  /**
+   * Parameters of the affiliate program
+   * @type {affiliateProgramParameters} {@link affiliateProgramParameters}
+   */
+  parameters: affiliateProgramParameters;
+
+  /**
+   * Point in time (Unix timestamp) when the affiliate program will be closed; 0 if the affiliate program isn't scheduled to be closed.
+   *
+   * - If positive, then the program can't be connected using connectChatAffiliateProgram, but active connections will work until the date
+   * @type {int32} {@link int32}
+   */
+  end_date: int32;
+
+  /**
+   * The amount of daily revenue per user in Telegram Stars of the bot that created the affiliate program
+   * @type {starAmount} {@link starAmount}
+   */
+  daily_revenue_per_user_amount: starAmount;
+};
+
+/**
+ * Version of {@link affiliateProgramInfo} for method parameters.
+ *
+ * Contains information about an active affiliate program
+ */
+export type affiliateProgramInfo$Input = {
+  readonly _: "affiliateProgramInfo";
+
+  /**
+   * Parameters of the affiliate program
+   * @type {affiliateProgramParameters} {@link affiliateProgramParameters}
+   */
+  readonly parameters?: affiliateProgramParameters$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the affiliate program will be closed; 0 if the affiliate program isn't scheduled to be closed.
+   *
+   * - If positive, then the program can't be connected using connectChatAffiliateProgram, but active connections will work until the date
+   * @type {int32} {@link int32}
+   */
+  readonly end_date?: int32;
+
+  /**
+   * The amount of daily revenue per user in Telegram Stars of the bot that created the affiliate program
+   * @type {starAmount} {@link starAmount}
+   */
+  readonly daily_revenue_per_user_amount?: starAmount$Input;
+};
+
+/**
+ * Contains information about an affiliate that received commission from a Telegram Star transaction
+ */
+export type affiliateInfo = {
+  _: "affiliateInfo";
+
+  /**
+   * The number of Telegram Stars received by the affiliate for each 1000 Telegram Stars received by the program owner
+   * @type {int32} {@link int32}
+   */
+  commission_per_mille: int32;
+
+  /**
+   * Identifier of the chat which received the commission
+   * @type {int53} {@link int53}
+   */
+  affiliate_chat_id: int53;
+
+  /**
+   * The amount of Telegram Stars that were received by the affiliate; can be negative for refunds
+   * @type {starAmount} {@link starAmount}
+   */
+  star_amount: starAmount;
+};
+
+/**
+ * Version of {@link affiliateInfo} for method parameters.
+ *
+ * Contains information about an affiliate that received commission from a Telegram Star transaction
+ */
+export type affiliateInfo$Input = {
+  readonly _: "affiliateInfo";
+
+  /**
+   * The number of Telegram Stars received by the affiliate for each 1000 Telegram Stars received by the program owner
+   * @type {int32} {@link int32}
+   */
+  readonly commission_per_mille?: int32;
+
+  /**
+   * Identifier of the chat which received the commission
+   * @type {int53} {@link int53}
+   */
+  readonly affiliate_chat_id?: int53;
+
+  /**
+   * The amount of Telegram Stars that were received by the affiliate; can be negative for refunds
+   * @type {starAmount} {@link starAmount}
+   */
+  readonly star_amount?: starAmount$Input;
+};
+
+/**
+ * Describes a found affiliate program
+ */
+export type foundAffiliateProgram = {
+  _: "foundAffiliateProgram";
+
+  /**
+   * User identifier of the bot created the program
+   * @type {int53} {@link int53}
+   */
+  bot_user_id: int53;
+
+  /**
+   * Information about the affiliate program
+   * @type {affiliateProgramInfo} {@link affiliateProgramInfo}
+   */
+  parameters: affiliateProgramInfo;
+};
+
+/**
+ * Version of {@link foundAffiliateProgram} for method parameters.
+ *
+ * Describes a found affiliate program
+ */
+export type foundAffiliateProgram$Input = {
+  readonly _: "foundAffiliateProgram";
+
+  /**
+   * User identifier of the bot created the program
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Information about the affiliate program
+   * @type {affiliateProgramInfo} {@link affiliateProgramInfo}
+   */
+  readonly parameters?: affiliateProgramInfo$Input;
+};
+
+/**
+ * Represents a list of found affiliate programs
+ */
+export type foundAffiliatePrograms = {
+  _: "foundAffiliatePrograms";
+
+  /**
+   * The total number of found affiliate programs
+   * @type {int32} {@link int32}
+   */
+  total_count: int32;
+
+  /**
+   * The list of affiliate programs
+   * @type {vector<foundAffiliateProgram>} {@link vector<foundAffiliateProgram>}
+   */
+  programs: vector<foundAffiliateProgram>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  next_offset: string;
+};
+
+/**
+ * Version of {@link foundAffiliatePrograms} for method parameters.
+ *
+ * Represents a list of found affiliate programs
+ */
+export type foundAffiliatePrograms$Input = {
+  readonly _: "foundAffiliatePrograms";
+
+  /**
+   * The total number of found affiliate programs
+   * @type {int32} {@link int32}
+   */
+  readonly total_count?: int32;
+
+  /**
+   * The list of affiliate programs
+   * @type {vector<foundAffiliateProgram>} {@link vector<foundAffiliateProgram>}
+   */
+  readonly programs?: vector$Input<foundAffiliateProgram$Input>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  readonly next_offset?: string;
+};
+
+/**
+ * Describes an affiliate program that was connected to a chat
+ */
+export type chatAffiliateProgram = {
+  _: "chatAffiliateProgram";
+
+  /**
+   * The link that can be used to refer users if the program is still active
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * User identifier of the bot created the program
+   * @type {int53} {@link int53}
+   */
+  bot_user_id: int53;
+
+  /**
+   * The parameters of the affiliate program
+   * @type {affiliateProgramParameters} {@link affiliateProgramParameters}
+   */
+  parameters: affiliateProgramParameters;
+
+  /**
+   * Point in time (Unix timestamp) when the affiliate program was connected
+   * @type {int32} {@link int32}
+   */
+  connection_date: int32;
+
+  /**
+   * True, if the program was canceled by the bot, or disconnected by the chat owner and isn't available anymore
+   * @type {Bool} {@link Bool}
+   */
+  is_disconnected: Bool;
+
+  /**
+   * The number of users that used the affiliate program
+   * @type {int64} {@link int64}
+   */
+  user_count: int64;
+
+  /**
+   * The number of Telegram Stars that were earned by the affiliate program
+   * @type {int64} {@link int64}
+   */
+  revenue_star_count: int64;
+};
+
+/**
+ * Version of {@link chatAffiliateProgram} for method parameters.
+ *
+ * Describes an affiliate program that was connected to a chat
+ */
+export type chatAffiliateProgram$Input = {
+  readonly _: "chatAffiliateProgram";
+
+  /**
+   * The link that can be used to refer users if the program is still active
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * User identifier of the bot created the program
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * The parameters of the affiliate program
+   * @type {affiliateProgramParameters} {@link affiliateProgramParameters}
+   */
+  readonly parameters?: affiliateProgramParameters$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the affiliate program was connected
+   * @type {int32} {@link int32}
+   */
+  readonly connection_date?: int32;
+
+  /**
+   * True, if the program was canceled by the bot, or disconnected by the chat owner and isn't available anymore
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_disconnected?: Bool$Input;
+
+  /**
+   * The number of users that used the affiliate program
+   * @type {int64} {@link int64}
+   */
+  readonly user_count?: int64$Input;
+
+  /**
+   * The number of Telegram Stars that were earned by the affiliate program
+   * @type {int64} {@link int64}
+   */
+  readonly revenue_star_count?: int64$Input;
+};
+
+/**
+ * Represents a list of affiliate programs that were connected to a chat
+ */
+export type chatAffiliatePrograms = {
+  _: "chatAffiliatePrograms";
+
+  /**
+   * The total number of affiliate programs that were connected to the chat
+   * @type {int32} {@link int32}
+   */
+  total_count: int32;
+
+  /**
+   * The list of connected affiliate programs
+   * @type {vector<chatAffiliateProgram>} {@link vector<chatAffiliateProgram>}
+   */
+  programs: vector<chatAffiliateProgram>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  next_offset: string;
+};
+
+/**
+ * Version of {@link chatAffiliatePrograms} for method parameters.
+ *
+ * Represents a list of affiliate programs that were connected to a chat
+ */
+export type chatAffiliatePrograms$Input = {
+  readonly _: "chatAffiliatePrograms";
+
+  /**
+   * The total number of affiliate programs that were connected to the chat
+   * @type {int32} {@link int32}
+   */
+  readonly total_count?: int32;
+
+  /**
+   * The list of connected affiliate programs
+   * @type {vector<chatAffiliateProgram>} {@link vector<chatAffiliateProgram>}
+   */
+  readonly programs?: vector$Input<chatAffiliateProgram$Input>;
 
   /**
    * The offset for the next request. If empty, then there are no more results
@@ -10536,6 +11166,12 @@ export type gift = {
   default_sell_star_count: int53;
 
   /**
+   * True, if the gift is a birthday gift
+   * @type {Bool} {@link Bool}
+   */
+  is_for_birthday: Bool;
+
+  /**
    * Number of remaining times the gift can be purchased by all users; 0 if not limited or the gift was sold out
    * @type {int32} {@link int32}
    */
@@ -10591,6 +11227,12 @@ export type gift$Input = {
    * @type {int53} {@link int53}
    */
   readonly default_sell_star_count?: int53;
+
+  /**
+   * True, if the gift is a birthday gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_for_birthday?: Bool$Input;
 
   /**
    * Number of remaining times the gift can be purchased by all users; 0 if not limited or the gift was sold out
@@ -10694,7 +11336,7 @@ export type userGift = {
   message_id: int53;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; only for the gift receiver
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; 0 if the gift can't be sold by the current user
    * @type {int53} {@link int53}
    */
   sell_star_count: int53;
@@ -10751,7 +11393,7 @@ export type userGift$Input = {
   readonly message_id?: int53;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; only for the gift receiver
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; 0 if the gift can't be sold by the current user
    * @type {int53} {@link int53}
    */
   readonly sell_star_count?: int53;
@@ -10842,390 +11484,198 @@ export type starTransactionDirectionOutgoing$Input = {
 };
 
 /**
- * Paid media were bought
+ * The transaction is a deposit of Telegram Stars from the Premium bot; for regular users only
  */
-export type botTransactionPurposePaidMedia = {
-  _: "botTransactionPurposePaidMedia";
-
-  /**
-   * The bought media if the transaction wasn't refunded
-   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
-   */
-  media: vector<PaidMedia>;
-
-  /**
-   * Bot-provided payload; for bots only
-   * @type {string} {@link string}
-   */
-  payload: string;
+export type starTransactionTypePremiumBotDeposit = {
+  _: "starTransactionTypePremiumBotDeposit";
 };
 
 /**
- * Version of {@link botTransactionPurposePaidMedia} for method parameters.
+ * Version of {@link starTransactionTypePremiumBotDeposit} for method parameters.
  *
- * Paid media were bought
+ * The transaction is a deposit of Telegram Stars from the Premium bot; for regular users only
  */
-export type botTransactionPurposePaidMedia$Input = {
-  readonly _: "botTransactionPurposePaidMedia";
-
-  /**
-   * The bought media if the transaction wasn't refunded
-   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
-   */
-  readonly media?: vector$Input<PaidMedia$Input>;
-
-  /**
-   * Bot-provided payload; for bots only
-   * @type {string} {@link string}
-   */
-  readonly payload?: string;
+export type starTransactionTypePremiumBotDeposit$Input = {
+  readonly _: "starTransactionTypePremiumBotDeposit";
 };
 
 /**
- * User bought a product from the bot
+ * The transaction is a deposit of Telegram Stars from App Store; for regular users only
  */
-export type botTransactionPurposeInvoicePayment = {
-  _: "botTransactionPurposeInvoicePayment";
-
-  /**
-   * Information about the bought product; may be null if not applicable
-   * @type {productInfo} {@link productInfo}
-   */
-  product_info: productInfo | null;
-
-  /**
-   * Invoice payload; for bots only
-   * @type {bytes} {@link bytes}
-   */
-  invoice_payload: bytes;
+export type starTransactionTypeAppStoreDeposit = {
+  _: "starTransactionTypeAppStoreDeposit";
 };
 
 /**
- * Version of {@link botTransactionPurposeInvoicePayment} for method parameters.
+ * Version of {@link starTransactionTypeAppStoreDeposit} for method parameters.
  *
- * User bought a product from the bot
+ * The transaction is a deposit of Telegram Stars from App Store; for regular users only
  */
-export type botTransactionPurposeInvoicePayment$Input = {
-  readonly _: "botTransactionPurposeInvoicePayment";
-
-  /**
-   * Information about the bought product; may be null if not applicable
-   * @type {productInfo} {@link productInfo}
-   */
-  readonly product_info?: productInfo$Input | null;
-
-  /**
-   * Invoice payload; for bots only
-   * @type {bytes} {@link bytes}
-   */
-  readonly invoice_payload?: bytes$Input;
+export type starTransactionTypeAppStoreDeposit$Input = {
+  readonly _: "starTransactionTypeAppStoreDeposit";
 };
 
 /**
- * Paid media were bought
+ * The transaction is a deposit of Telegram Stars from Google Play; for regular users only
  */
-export type chatTransactionPurposePaidMedia = {
-  _: "chatTransactionPurposePaidMedia";
+export type starTransactionTypeGooglePlayDeposit = {
+  _: "starTransactionTypeGooglePlayDeposit";
+};
+
+/**
+ * Version of {@link starTransactionTypeGooglePlayDeposit} for method parameters.
+ *
+ * The transaction is a deposit of Telegram Stars from Google Play; for regular users only
+ */
+export type starTransactionTypeGooglePlayDeposit$Input = {
+  readonly _: "starTransactionTypeGooglePlayDeposit";
+};
+
+/**
+ * The transaction is a deposit of Telegram Stars from Fragment; for regular users and bots only
+ */
+export type starTransactionTypeFragmentDeposit = {
+  _: "starTransactionTypeFragmentDeposit";
+};
+
+/**
+ * Version of {@link starTransactionTypeFragmentDeposit} for method parameters.
+ *
+ * The transaction is a deposit of Telegram Stars from Fragment; for regular users and bots only
+ */
+export type starTransactionTypeFragmentDeposit$Input = {
+  readonly _: "starTransactionTypeFragmentDeposit";
+};
+
+/**
+ * The transaction is a deposit of Telegram Stars by another user; for regular users only
+ */
+export type starTransactionTypeUserDeposit = {
+  _: "starTransactionTypeUserDeposit";
 
   /**
-   * Identifier of the corresponding message with paid media; can be 0 or an identifier of a deleted message
+   * Identifier of the user that gifted Telegram Stars; 0 if the user was anonymous
    * @type {int53} {@link int53}
    */
-  message_id: int53;
+  user_id: int53;
 
   /**
-   * The bought media if the transaction wasn't refunded
-   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
-   */
-  media: vector<PaidMedia>;
-};
-
-/**
- * Version of {@link chatTransactionPurposePaidMedia} for method parameters.
- *
- * Paid media were bought
- */
-export type chatTransactionPurposePaidMedia$Input = {
-  readonly _: "chatTransactionPurposePaidMedia";
-
-  /**
-   * Identifier of the corresponding message with paid media; can be 0 or an identifier of a deleted message
-   * @type {int53} {@link int53}
-   */
-  readonly message_id?: int53;
-
-  /**
-   * The bought media if the transaction wasn't refunded
-   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
-   */
-  readonly media?: vector$Input<PaidMedia$Input>;
-};
-
-/**
- * User joined the channel and subscribed to regular payments in Telegram Stars
- */
-export type chatTransactionPurposeJoin = {
-  _: "chatTransactionPurposeJoin";
-
-  /**
-   * The number of seconds between consecutive Telegram Star debiting
-   * @type {int32} {@link int32}
-   */
-  period: int32;
-};
-
-/**
- * Version of {@link chatTransactionPurposeJoin} for method parameters.
- *
- * User joined the channel and subscribed to regular payments in Telegram Stars
- */
-export type chatTransactionPurposeJoin$Input = {
-  readonly _: "chatTransactionPurposeJoin";
-
-  /**
-   * The number of seconds between consecutive Telegram Star debiting
-   * @type {int32} {@link int32}
-   */
-  readonly period?: int32;
-};
-
-/**
- * User paid for a reaction
- */
-export type chatTransactionPurposeReaction = {
-  _: "chatTransactionPurposeReaction";
-
-  /**
-   * Identifier of the reacted message; can be 0 or an identifier of a deleted message
-   * @type {int53} {@link int53}
-   */
-  message_id: int53;
-};
-
-/**
- * Version of {@link chatTransactionPurposeReaction} for method parameters.
- *
- * User paid for a reaction
- */
-export type chatTransactionPurposeReaction$Input = {
-  readonly _: "chatTransactionPurposeReaction";
-
-  /**
-   * Identifier of the reacted message; can be 0 or an identifier of a deleted message
-   * @type {int53} {@link int53}
-   */
-  readonly message_id?: int53;
-};
-
-/**
- * User received Telegram Stars from a giveaway
- */
-export type chatTransactionPurposeGiveaway = {
-  _: "chatTransactionPurposeGiveaway";
-
-  /**
-   * Identifier of the message with giveaway; can be 0 or an identifier of a deleted message
-   * @type {int53} {@link int53}
-   */
-  giveaway_message_id: int53;
-};
-
-/**
- * Version of {@link chatTransactionPurposeGiveaway} for method parameters.
- *
- * User received Telegram Stars from a giveaway
- */
-export type chatTransactionPurposeGiveaway$Input = {
-  readonly _: "chatTransactionPurposeGiveaway";
-
-  /**
-   * Identifier of the message with giveaway; can be 0 or an identifier of a deleted message
-   * @type {int53} {@link int53}
-   */
-  readonly giveaway_message_id?: int53;
-};
-
-/**
- * A user gifted Telegram Stars
- */
-export type userTransactionPurposeGiftedStars = {
-  _: "userTransactionPurposeGiftedStars";
-
-  /**
-   * A sticker to be shown in the transaction information; may be null if unknown
+   * The sticker to be shown in the transaction information; may be null if unknown
    * @type {sticker} {@link sticker}
    */
   sticker: sticker | null;
 };
 
 /**
- * Version of {@link userTransactionPurposeGiftedStars} for method parameters.
+ * Version of {@link starTransactionTypeUserDeposit} for method parameters.
  *
- * A user gifted Telegram Stars
+ * The transaction is a deposit of Telegram Stars by another user; for regular users only
  */
-export type userTransactionPurposeGiftedStars$Input = {
-  readonly _: "userTransactionPurposeGiftedStars";
+export type starTransactionTypeUserDeposit$Input = {
+  readonly _: "starTransactionTypeUserDeposit";
 
   /**
-   * A sticker to be shown in the transaction information; may be null if unknown
+   * Identifier of the user that gifted Telegram Stars; 0 if the user was anonymous
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The sticker to be shown in the transaction information; may be null if unknown
    * @type {sticker} {@link sticker}
    */
   readonly sticker?: sticker$Input | null;
 };
 
 /**
- * The current user sold a gift received from another user
+ * The transaction is a deposit of Telegram Stars from a giveaway; for regular users only
  */
-export type userTransactionPurposeGiftSell = {
-  _: "userTransactionPurposeGiftSell";
+export type starTransactionTypeGiveawayDeposit = {
+  _: "starTransactionTypeGiveawayDeposit";
 
   /**
-   * The gift
-   * @type {gift} {@link gift}
+   * Identifier of a supergroup or a channel chat that created the giveaway
+   * @type {int53} {@link int53}
    */
-  gift: gift;
-};
-
-/**
- * Version of {@link userTransactionPurposeGiftSell} for method parameters.
- *
- * The current user sold a gift received from another user
- */
-export type userTransactionPurposeGiftSell$Input = {
-  readonly _: "userTransactionPurposeGiftSell";
+  chat_id: int53;
 
   /**
-   * The gift
-   * @type {gift} {@link gift}
+   * Identifier of the message with the giveaway; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
    */
-  readonly gift?: gift$Input;
+  giveaway_message_id: int53;
 };
 
 /**
- * The current user sent a gift to another user
+ * Version of {@link starTransactionTypeGiveawayDeposit} for method parameters.
+ *
+ * The transaction is a deposit of Telegram Stars from a giveaway; for regular users only
  */
-export type userTransactionPurposeGiftSend = {
-  _: "userTransactionPurposeGiftSend";
+export type starTransactionTypeGiveawayDeposit$Input = {
+  readonly _: "starTransactionTypeGiveawayDeposit";
 
   /**
-   * The gift
-   * @type {gift} {@link gift}
+   * Identifier of a supergroup or a channel chat that created the giveaway
+   * @type {int53} {@link int53}
    */
-  gift: gift;
-};
-
-/**
- * Version of {@link userTransactionPurposeGiftSend} for method parameters.
- *
- * The current user sent a gift to another user
- */
-export type userTransactionPurposeGiftSend$Input = {
-  readonly _: "userTransactionPurposeGiftSend";
+  readonly chat_id?: int53;
 
   /**
-   * The gift
-   * @type {gift} {@link gift}
+   * Identifier of the message with the giveaway; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
    */
-  readonly gift?: gift$Input;
+  readonly giveaway_message_id?: int53;
 };
 
 /**
- * The transaction is a transaction with Telegram through a bot
+ * The transaction is a withdrawal of earned Telegram Stars to Fragment; for bots and channel chats only
  */
-export type starTransactionPartnerTelegram = {
-  _: "starTransactionPartnerTelegram";
-};
-
-/**
- * Version of {@link starTransactionPartnerTelegram} for method parameters.
- *
- * The transaction is a transaction with Telegram through a bot
- */
-export type starTransactionPartnerTelegram$Input = {
-  readonly _: "starTransactionPartnerTelegram";
-};
-
-/**
- * The transaction is a transaction with App Store
- */
-export type starTransactionPartnerAppStore = {
-  _: "starTransactionPartnerAppStore";
-};
-
-/**
- * Version of {@link starTransactionPartnerAppStore} for method parameters.
- *
- * The transaction is a transaction with App Store
- */
-export type starTransactionPartnerAppStore$Input = {
-  readonly _: "starTransactionPartnerAppStore";
-};
-
-/**
- * The transaction is a transaction with Google Play
- */
-export type starTransactionPartnerGooglePlay = {
-  _: "starTransactionPartnerGooglePlay";
-};
-
-/**
- * Version of {@link starTransactionPartnerGooglePlay} for method parameters.
- *
- * The transaction is a transaction with Google Play
- */
-export type starTransactionPartnerGooglePlay$Input = {
-  readonly _: "starTransactionPartnerGooglePlay";
-};
-
-/**
- * The transaction is a transaction with Fragment
- */
-export type starTransactionPartnerFragment = {
-  _: "starTransactionPartnerFragment";
+export type starTransactionTypeFragmentWithdrawal = {
+  _: "starTransactionTypeFragmentWithdrawal";
 
   /**
-   * State of the withdrawal; may be null for refunds from Fragment or for Telegram Stars bought on Fragment
+   * State of the withdrawal; may be null for refunds from Fragment
    * @type {RevenueWithdrawalState} {@link RevenueWithdrawalState}
    */
   withdrawal_state: RevenueWithdrawalState | null;
 };
 
 /**
- * Version of {@link starTransactionPartnerFragment} for method parameters.
+ * Version of {@link starTransactionTypeFragmentWithdrawal} for method parameters.
  *
- * The transaction is a transaction with Fragment
+ * The transaction is a withdrawal of earned Telegram Stars to Fragment; for bots and channel chats only
  */
-export type starTransactionPartnerFragment$Input = {
-  readonly _: "starTransactionPartnerFragment";
+export type starTransactionTypeFragmentWithdrawal$Input = {
+  readonly _: "starTransactionTypeFragmentWithdrawal";
 
   /**
-   * State of the withdrawal; may be null for refunds from Fragment or for Telegram Stars bought on Fragment
+   * State of the withdrawal; may be null for refunds from Fragment
    * @type {RevenueWithdrawalState} {@link RevenueWithdrawalState}
    */
   readonly withdrawal_state?: RevenueWithdrawalState$Input | null;
 };
 
 /**
- * The transaction is a transaction with Telegram Ad platform
+ * The transaction is a withdrawal of earned Telegram Stars to Telegram Ad platform; for bots and channel chats only
  */
-export type starTransactionPartnerTelegramAds = {
-  _: "starTransactionPartnerTelegramAds";
+export type starTransactionTypeTelegramAdsWithdrawal = {
+  _: "starTransactionTypeTelegramAdsWithdrawal";
 };
 
 /**
- * Version of {@link starTransactionPartnerTelegramAds} for method parameters.
+ * Version of {@link starTransactionTypeTelegramAdsWithdrawal} for method parameters.
  *
- * The transaction is a transaction with Telegram Ad platform
+ * The transaction is a withdrawal of earned Telegram Stars to Telegram Ad platform; for bots and channel chats only
  */
-export type starTransactionPartnerTelegramAds$Input = {
-  readonly _: "starTransactionPartnerTelegramAds";
+export type starTransactionTypeTelegramAdsWithdrawal$Input = {
+  readonly _: "starTransactionTypeTelegramAdsWithdrawal";
 };
 
 /**
- * The transaction is a transaction with Telegram for API usage
+ * The transaction is a payment for Telegram API usage; for bots only
  */
-export type starTransactionPartnerTelegramApi = {
-  _: "starTransactionPartnerTelegramApi";
+export type starTransactionTypeTelegramApiUsage = {
+  _: "starTransactionTypeTelegramApiUsage";
 
   /**
    * The number of billed requests
@@ -11235,12 +11685,12 @@ export type starTransactionPartnerTelegramApi = {
 };
 
 /**
- * Version of {@link starTransactionPartnerTelegramApi} for method parameters.
+ * Version of {@link starTransactionTypeTelegramApiUsage} for method parameters.
  *
- * The transaction is a transaction with Telegram for API usage
+ * The transaction is a payment for Telegram API usage; for bots only
  */
-export type starTransactionPartnerTelegramApi$Input = {
-  readonly _: "starTransactionPartnerTelegramApi";
+export type starTransactionTypeTelegramApiUsage$Input = {
+  readonly _: "starTransactionTypeTelegramApiUsage";
 
   /**
    * The number of billed requests
@@ -11250,53 +11700,13 @@ export type starTransactionPartnerTelegramApi$Input = {
 };
 
 /**
- * The transaction is a transaction with a bot
+ * The transaction is a purchase of paid media from a bot or a business account by the current user; for regular users only
  */
-export type starTransactionPartnerBot = {
-  _: "starTransactionPartnerBot";
+export type starTransactionTypeBotPaidMediaPurchase = {
+  _: "starTransactionTypeBotPaidMediaPurchase";
 
   /**
-   * Identifier of the bot
-   * @type {int53} {@link int53}
-   */
-  user_id: int53;
-
-  /**
-   * Purpose of the transaction
-   * @type {BotTransactionPurpose} {@link BotTransactionPurpose}
-   */
-  purpose: BotTransactionPurpose;
-};
-
-/**
- * Version of {@link starTransactionPartnerBot} for method parameters.
- *
- * The transaction is a transaction with a bot
- */
-export type starTransactionPartnerBot$Input = {
-  readonly _: "starTransactionPartnerBot";
-
-  /**
-   * Identifier of the bot
-   * @type {int53} {@link int53}
-   */
-  readonly user_id?: int53;
-
-  /**
-   * Purpose of the transaction
-   * @type {BotTransactionPurpose} {@link BotTransactionPurpose}
-   */
-  readonly purpose?: BotTransactionPurpose$Input;
-};
-
-/**
- * The transaction is a transaction with a business account
- */
-export type starTransactionPartnerBusiness = {
-  _: "starTransactionPartnerBusiness";
-
-  /**
-   * Identifier of the business account user
+   * Identifier of the bot or the business account user that sent the paid media
    * @type {int53} {@link int53}
    */
   user_id: int53;
@@ -11309,15 +11719,15 @@ export type starTransactionPartnerBusiness = {
 };
 
 /**
- * Version of {@link starTransactionPartnerBusiness} for method parameters.
+ * Version of {@link starTransactionTypeBotPaidMediaPurchase} for method parameters.
  *
- * The transaction is a transaction with a business account
+ * The transaction is a purchase of paid media from a bot or a business account by the current user; for regular users only
  */
-export type starTransactionPartnerBusiness$Input = {
-  readonly _: "starTransactionPartnerBusiness";
+export type starTransactionTypeBotPaidMediaPurchase$Input = {
+  readonly _: "starTransactionTypeBotPaidMediaPurchase";
 
   /**
-   * Identifier of the business account user
+   * Identifier of the bot or the business account user that sent the paid media
    * @type {int53} {@link int53}
    */
   readonly user_id?: int53;
@@ -11330,99 +11740,699 @@ export type starTransactionPartnerBusiness$Input = {
 };
 
 /**
- * The transaction is a transaction with a supergroup or a channel chat
+ * The transaction is a sale of paid media by the bot or a business account managed by the bot; for bots only
  */
-export type starTransactionPartnerChat = {
-  _: "starTransactionPartnerChat";
+export type starTransactionTypeBotPaidMediaSale = {
+  _: "starTransactionTypeBotPaidMediaSale";
 
   /**
-   * Identifier of the chat
-   * @type {int53} {@link int53}
-   */
-  chat_id: int53;
-
-  /**
-   * Purpose of the transaction
-   * @type {ChatTransactionPurpose} {@link ChatTransactionPurpose}
-   */
-  purpose: ChatTransactionPurpose;
-};
-
-/**
- * Version of {@link starTransactionPartnerChat} for method parameters.
- *
- * The transaction is a transaction with a supergroup or a channel chat
- */
-export type starTransactionPartnerChat$Input = {
-  readonly _: "starTransactionPartnerChat";
-
-  /**
-   * Identifier of the chat
-   * @type {int53} {@link int53}
-   */
-  readonly chat_id?: int53;
-
-  /**
-   * Purpose of the transaction
-   * @type {ChatTransactionPurpose} {@link ChatTransactionPurpose}
-   */
-  readonly purpose?: ChatTransactionPurpose$Input;
-};
-
-/**
- * The transaction is a transaction with another user
- */
-export type starTransactionPartnerUser = {
-  _: "starTransactionPartnerUser";
-
-  /**
-   * Identifier of the user; 0 if the user was anonymous
+   * Identifier of the user that bought the media
    * @type {int53} {@link int53}
    */
   user_id: int53;
 
   /**
-   * Purpose of the transaction
-   * @type {UserTransactionPurpose} {@link UserTransactionPurpose}
+   * The bought media
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
-  purpose: UserTransactionPurpose;
+  media: vector<PaidMedia>;
+
+  /**
+   * Bot-provided payload
+   * @type {string} {@link string}
+   */
+  payload: string;
+
+  /**
+   * Information about the affiliate which received commission from the transaction; may be null if none
+   * @type {affiliateInfo} {@link affiliateInfo}
+   */
+  affiliate: affiliateInfo | null;
 };
 
 /**
- * Version of {@link starTransactionPartnerUser} for method parameters.
+ * Version of {@link starTransactionTypeBotPaidMediaSale} for method parameters.
  *
- * The transaction is a transaction with another user
+ * The transaction is a sale of paid media by the bot or a business account managed by the bot; for bots only
  */
-export type starTransactionPartnerUser$Input = {
-  readonly _: "starTransactionPartnerUser";
+export type starTransactionTypeBotPaidMediaSale$Input = {
+  readonly _: "starTransactionTypeBotPaidMediaSale";
 
   /**
-   * Identifier of the user; 0 if the user was anonymous
+   * Identifier of the user that bought the media
    * @type {int53} {@link int53}
    */
   readonly user_id?: int53;
 
   /**
-   * Purpose of the transaction
-   * @type {UserTransactionPurpose} {@link UserTransactionPurpose}
+   * The bought media
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
    */
-  readonly purpose?: UserTransactionPurpose$Input;
+  readonly media?: vector$Input<PaidMedia$Input>;
+
+  /**
+   * Bot-provided payload
+   * @type {string} {@link string}
+   */
+  readonly payload?: string;
+
+  /**
+   * Information about the affiliate which received commission from the transaction; may be null if none
+   * @type {affiliateInfo} {@link affiliateInfo}
+   */
+  readonly affiliate?: affiliateInfo$Input | null;
 };
 
 /**
- * The transaction is a transaction with unknown partner
+ * The transaction is a purchase of paid media from a channel by the current user; for regular users only
  */
-export type starTransactionPartnerUnsupported = {
-  _: "starTransactionPartnerUnsupported";
+export type starTransactionTypeChannelPaidMediaPurchase = {
+  _: "starTransactionTypeChannelPaidMediaPurchase";
+
+  /**
+   * Identifier of the channel chat that sent the paid media
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Identifier of the corresponding message with paid media; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+
+  /**
+   * The bought media if the transaction wasn't refunded
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
+   */
+  media: vector<PaidMedia>;
 };
 
 /**
- * Version of {@link starTransactionPartnerUnsupported} for method parameters.
+ * Version of {@link starTransactionTypeChannelPaidMediaPurchase} for method parameters.
  *
- * The transaction is a transaction with unknown partner
+ * The transaction is a purchase of paid media from a channel by the current user; for regular users only
  */
-export type starTransactionPartnerUnsupported$Input = {
-  readonly _: "starTransactionPartnerUnsupported";
+export type starTransactionTypeChannelPaidMediaPurchase$Input = {
+  readonly _: "starTransactionTypeChannelPaidMediaPurchase";
+
+  /**
+   * Identifier of the channel chat that sent the paid media
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the corresponding message with paid media; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * The bought media if the transaction wasn't refunded
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
+   */
+  readonly media?: vector$Input<PaidMedia$Input>;
+};
+
+/**
+ * The transaction is a sale of paid media by the channel chat; for channel chats only
+ */
+export type starTransactionTypeChannelPaidMediaSale = {
+  _: "starTransactionTypeChannelPaidMediaSale";
+
+  /**
+   * Identifier of the user that bought the media
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Identifier of the corresponding message with paid media; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+
+  /**
+   * The bought media
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
+   */
+  media: vector<PaidMedia>;
+};
+
+/**
+ * Version of {@link starTransactionTypeChannelPaidMediaSale} for method parameters.
+ *
+ * The transaction is a sale of paid media by the channel chat; for channel chats only
+ */
+export type starTransactionTypeChannelPaidMediaSale$Input = {
+  readonly _: "starTransactionTypeChannelPaidMediaSale";
+
+  /**
+   * Identifier of the user that bought the media
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Identifier of the corresponding message with paid media; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * The bought media
+   * @type {vector<PaidMedia>} {@link vector<PaidMedia>}
+   */
+  readonly media?: vector$Input<PaidMedia$Input>;
+};
+
+/**
+ * The transaction is a purchase of a product from a bot or a business account by the current user; for regular users only
+ */
+export type starTransactionTypeBotInvoicePurchase = {
+  _: "starTransactionTypeBotInvoicePurchase";
+
+  /**
+   * Identifier of the bot or the business account user that created the invoice
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Information about the bought product
+   * @type {productInfo} {@link productInfo}
+   */
+  product_info: productInfo;
+};
+
+/**
+ * Version of {@link starTransactionTypeBotInvoicePurchase} for method parameters.
+ *
+ * The transaction is a purchase of a product from a bot or a business account by the current user; for regular users only
+ */
+export type starTransactionTypeBotInvoicePurchase$Input = {
+  readonly _: "starTransactionTypeBotInvoicePurchase";
+
+  /**
+   * Identifier of the bot or the business account user that created the invoice
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Information about the bought product
+   * @type {productInfo} {@link productInfo}
+   */
+  readonly product_info?: productInfo$Input;
+};
+
+/**
+ * The transaction is a sale of a product by the bot; for bots only
+ */
+export type starTransactionTypeBotInvoiceSale = {
+  _: "starTransactionTypeBotInvoiceSale";
+
+  /**
+   * Identifier of the user that bought the product
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Information about the bought product
+   * @type {productInfo} {@link productInfo}
+   */
+  product_info: productInfo;
+
+  /**
+   * Invoice payload
+   * @type {bytes} {@link bytes}
+   */
+  invoice_payload: bytes;
+
+  /**
+   * Information about the affiliate which received commission from the transaction; may be null if none
+   * @type {affiliateInfo} {@link affiliateInfo}
+   */
+  affiliate: affiliateInfo | null;
+};
+
+/**
+ * Version of {@link starTransactionTypeBotInvoiceSale} for method parameters.
+ *
+ * The transaction is a sale of a product by the bot; for bots only
+ */
+export type starTransactionTypeBotInvoiceSale$Input = {
+  readonly _: "starTransactionTypeBotInvoiceSale";
+
+  /**
+   * Identifier of the user that bought the product
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Information about the bought product
+   * @type {productInfo} {@link productInfo}
+   */
+  readonly product_info?: productInfo$Input;
+
+  /**
+   * Invoice payload
+   * @type {bytes} {@link bytes}
+   */
+  readonly invoice_payload?: bytes$Input;
+
+  /**
+   * Information about the affiliate which received commission from the transaction; may be null if none
+   * @type {affiliateInfo} {@link affiliateInfo}
+   */
+  readonly affiliate?: affiliateInfo$Input | null;
+};
+
+/**
+ * The transaction is a purchase of a subscription from a bot or a business account by the current user; for regular users only
+ */
+export type starTransactionTypeBotSubscriptionPurchase = {
+  _: "starTransactionTypeBotSubscriptionPurchase";
+
+  /**
+   * Identifier of the bot or the business account user that created the subscription link
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debitings
+   * @type {int32} {@link int32}
+   */
+  subscription_period: int32;
+
+  /**
+   * Information about the bought subscription
+   * @type {productInfo} {@link productInfo}
+   */
+  product_info: productInfo;
+};
+
+/**
+ * Version of {@link starTransactionTypeBotSubscriptionPurchase} for method parameters.
+ *
+ * The transaction is a purchase of a subscription from a bot or a business account by the current user; for regular users only
+ */
+export type starTransactionTypeBotSubscriptionPurchase$Input = {
+  readonly _: "starTransactionTypeBotSubscriptionPurchase";
+
+  /**
+   * Identifier of the bot or the business account user that created the subscription link
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debitings
+   * @type {int32} {@link int32}
+   */
+  readonly subscription_period?: int32;
+
+  /**
+   * Information about the bought subscription
+   * @type {productInfo} {@link productInfo}
+   */
+  readonly product_info?: productInfo$Input;
+};
+
+/**
+ * The transaction is a sale of a subscription by the bot; for bots only
+ */
+export type starTransactionTypeBotSubscriptionSale = {
+  _: "starTransactionTypeBotSubscriptionSale";
+
+  /**
+   * Identifier of the user that bought the subscription
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debitings
+   * @type {int32} {@link int32}
+   */
+  subscription_period: int32;
+
+  /**
+   * Information about the bought subscription
+   * @type {productInfo} {@link productInfo}
+   */
+  product_info: productInfo;
+
+  /**
+   * Invoice payload
+   * @type {bytes} {@link bytes}
+   */
+  invoice_payload: bytes;
+
+  /**
+   * Information about the affiliate which received commission from the transaction; may be null if none
+   * @type {affiliateInfo} {@link affiliateInfo}
+   */
+  affiliate: affiliateInfo | null;
+};
+
+/**
+ * Version of {@link starTransactionTypeBotSubscriptionSale} for method parameters.
+ *
+ * The transaction is a sale of a subscription by the bot; for bots only
+ */
+export type starTransactionTypeBotSubscriptionSale$Input = {
+  readonly _: "starTransactionTypeBotSubscriptionSale";
+
+  /**
+   * Identifier of the user that bought the subscription
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debitings
+   * @type {int32} {@link int32}
+   */
+  readonly subscription_period?: int32;
+
+  /**
+   * Information about the bought subscription
+   * @type {productInfo} {@link productInfo}
+   */
+  readonly product_info?: productInfo$Input;
+
+  /**
+   * Invoice payload
+   * @type {bytes} {@link bytes}
+   */
+  readonly invoice_payload?: bytes$Input;
+
+  /**
+   * Information about the affiliate which received commission from the transaction; may be null if none
+   * @type {affiliateInfo} {@link affiliateInfo}
+   */
+  readonly affiliate?: affiliateInfo$Input | null;
+};
+
+/**
+ * The transaction is a purchase of a subscription to a channel chat by the current user; for regular users only
+ */
+export type starTransactionTypeChannelSubscriptionPurchase = {
+  _: "starTransactionTypeChannelSubscriptionPurchase";
+
+  /**
+   * Identifier of the channel chat that created the subscription
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debitings
+   * @type {int32} {@link int32}
+   */
+  subscription_period: int32;
+};
+
+/**
+ * Version of {@link starTransactionTypeChannelSubscriptionPurchase} for method parameters.
+ *
+ * The transaction is a purchase of a subscription to a channel chat by the current user; for regular users only
+ */
+export type starTransactionTypeChannelSubscriptionPurchase$Input = {
+  readonly _: "starTransactionTypeChannelSubscriptionPurchase";
+
+  /**
+   * Identifier of the channel chat that created the subscription
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debitings
+   * @type {int32} {@link int32}
+   */
+  readonly subscription_period?: int32;
+};
+
+/**
+ * The transaction is a sale of a subscription by the channel chat; for channel chats only
+ */
+export type starTransactionTypeChannelSubscriptionSale = {
+  _: "starTransactionTypeChannelSubscriptionSale";
+
+  /**
+   * Identifier of the user that bought the subscription
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debitings
+   * @type {int32} {@link int32}
+   */
+  subscription_period: int32;
+};
+
+/**
+ * Version of {@link starTransactionTypeChannelSubscriptionSale} for method parameters.
+ *
+ * The transaction is a sale of a subscription by the channel chat; for channel chats only
+ */
+export type starTransactionTypeChannelSubscriptionSale$Input = {
+  readonly _: "starTransactionTypeChannelSubscriptionSale";
+
+  /**
+   * Identifier of the user that bought the subscription
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debitings
+   * @type {int32} {@link int32}
+   */
+  readonly subscription_period?: int32;
+};
+
+/**
+ * The transaction is a purchase of a gift to another user; for regular users and bots only
+ */
+export type starTransactionTypeGiftPurchase = {
+  _: "starTransactionTypeGiftPurchase";
+
+  /**
+   * Identifier of the user that received the gift
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  gift: gift;
+};
+
+/**
+ * Version of {@link starTransactionTypeGiftPurchase} for method parameters.
+ *
+ * The transaction is a purchase of a gift to another user; for regular users and bots only
+ */
+export type starTransactionTypeGiftPurchase$Input = {
+  readonly _: "starTransactionTypeGiftPurchase";
+
+  /**
+   * Identifier of the user that received the gift
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  readonly gift?: gift$Input;
+};
+
+/**
+ * The transaction is a sale of a gift received from another user or bot; for regular users only
+ */
+export type starTransactionTypeGiftSale = {
+  _: "starTransactionTypeGiftSale";
+
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  gift: gift;
+};
+
+/**
+ * Version of {@link starTransactionTypeGiftSale} for method parameters.
+ *
+ * The transaction is a sale of a gift received from another user or bot; for regular users only
+ */
+export type starTransactionTypeGiftSale$Input = {
+  readonly _: "starTransactionTypeGiftSale";
+
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  readonly gift?: gift$Input;
+};
+
+/**
+ * The transaction is a sending of a paid reaction to a message in a channel chat by the current user; for regular users only
+ */
+export type starTransactionTypeChannelPaidReactionSend = {
+  _: "starTransactionTypeChannelPaidReactionSend";
+
+  /**
+   * Identifier of the channel chat
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Identifier of the reacted message; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+};
+
+/**
+ * Version of {@link starTransactionTypeChannelPaidReactionSend} for method parameters.
+ *
+ * The transaction is a sending of a paid reaction to a message in a channel chat by the current user; for regular users only
+ */
+export type starTransactionTypeChannelPaidReactionSend$Input = {
+  readonly _: "starTransactionTypeChannelPaidReactionSend";
+
+  /**
+   * Identifier of the channel chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the reacted message; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * The transaction is a receiving of a paid reaction to a message by the channel chat; for channel chats only
+ */
+export type starTransactionTypeChannelPaidReactionReceive = {
+  _: "starTransactionTypeChannelPaidReactionReceive";
+
+  /**
+   * Identifier of the user that added the paid reaction
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Identifier of the reacted message; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+};
+
+/**
+ * Version of {@link starTransactionTypeChannelPaidReactionReceive} for method parameters.
+ *
+ * The transaction is a receiving of a paid reaction to a message by the channel chat; for channel chats only
+ */
+export type starTransactionTypeChannelPaidReactionReceive$Input = {
+  readonly _: "starTransactionTypeChannelPaidReactionReceive";
+
+  /**
+   * Identifier of the user that added the paid reaction
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Identifier of the reacted message; can be 0 or an identifier of a deleted message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * The transaction is a receiving of a commission from an affiliate program; for regular users, bots and channel chats only
+ */
+export type starTransactionTypeAffiliateProgramCommission = {
+  _: "starTransactionTypeAffiliateProgramCommission";
+
+  /**
+   * Identifier of the chat that created the affiliate program
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * The number of Telegram Stars received by the affiliate for each 1000 Telegram Stars received by the program owner
+   * @type {int32} {@link int32}
+   */
+  commission_per_mille: int32;
+};
+
+/**
+ * Version of {@link starTransactionTypeAffiliateProgramCommission} for method parameters.
+ *
+ * The transaction is a receiving of a commission from an affiliate program; for regular users, bots and channel chats only
+ */
+export type starTransactionTypeAffiliateProgramCommission$Input = {
+  readonly _: "starTransactionTypeAffiliateProgramCommission";
+
+  /**
+   * Identifier of the chat that created the affiliate program
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The number of Telegram Stars received by the affiliate for each 1000 Telegram Stars received by the program owner
+   * @type {int32} {@link int32}
+   */
+  readonly commission_per_mille?: int32;
+};
+
+/**
+ * The transaction is a transaction of an unsupported type
+ */
+export type starTransactionTypeUnsupported = {
+  _: "starTransactionTypeUnsupported";
+};
+
+/**
+ * Version of {@link starTransactionTypeUnsupported} for method parameters.
+ *
+ * The transaction is a transaction of an unsupported type
+ */
+export type starTransactionTypeUnsupported$Input = {
+  readonly _: "starTransactionTypeUnsupported";
 };
 
 /**
@@ -11439,9 +12449,9 @@ export type starTransaction = {
 
   /**
    * The amount of added owned Telegram Stars; negative for outgoing transactions
-   * @type {int53} {@link int53}
+   * @type {starAmount} {@link starAmount}
    */
-  star_count: int53;
+  star_amount: starAmount;
 
   /**
    * True, if the transaction is a refund of a previous transaction
@@ -11456,10 +12466,10 @@ export type starTransaction = {
   date: int32;
 
   /**
-   * Source of the incoming transaction, or its recipient for outgoing transactions
-   * @type {StarTransactionPartner} {@link StarTransactionPartner}
+   * Type of the transaction
+   * @type {StarTransactionType} {@link StarTransactionType}
    */
-  partner: StarTransactionPartner;
+  type: StarTransactionType;
 };
 
 /**
@@ -11478,9 +12488,9 @@ export type starTransaction$Input = {
 
   /**
    * The amount of added owned Telegram Stars; negative for outgoing transactions
-   * @type {int53} {@link int53}
+   * @type {starAmount} {@link starAmount}
    */
-  readonly star_count?: int53;
+  readonly star_amount?: starAmount$Input;
 
   /**
    * True, if the transaction is a refund of a previous transaction
@@ -11495,10 +12505,10 @@ export type starTransaction$Input = {
   readonly date?: int32;
 
   /**
-   * Source of the incoming transaction, or its recipient for outgoing transactions
-   * @type {StarTransactionPartner} {@link StarTransactionPartner}
+   * Type of the transaction
+   * @type {StarTransactionType} {@link StarTransactionType}
    */
-  readonly partner?: StarTransactionPartner$Input;
+  readonly type?: StarTransactionType$Input;
 };
 
 /**
@@ -11509,9 +12519,9 @@ export type starTransactions = {
 
   /**
    * The amount of owned Telegram Stars
-   * @type {int53} {@link int53}
+   * @type {starAmount} {@link starAmount}
    */
-  star_count: int53;
+  star_amount: starAmount;
 
   /**
    * List of transactions with Telegram Stars
@@ -11536,9 +12546,9 @@ export type starTransactions$Input = {
 
   /**
    * The amount of owned Telegram Stars
-   * @type {int53} {@link int53}
+   * @type {starAmount} {@link starAmount}
    */
-  readonly star_count?: int53;
+  readonly star_amount?: starAmount$Input;
 
   /**
    * List of transactions with Telegram Stars
@@ -12626,10 +13636,46 @@ export type botInfo = {
   default_channel_administrator_rights: chatAdministratorRights | null;
 
   /**
-   * True, if the bot's revenue statistics are available
+   * Information about the affiliate program of the bot; may be null if none
+   * @type {affiliateProgramInfo} {@link affiliateProgramInfo}
+   */
+  affiliate_program: affiliateProgramInfo | null;
+
+  /**
+   * Default light background color for bot Web Apps; -1 if not specified
+   * @type {int32} {@link int32}
+   */
+  web_app_background_light_color: int32;
+
+  /**
+   * Default dark background color for bot Web Apps; -1 if not specified
+   * @type {int32} {@link int32}
+   */
+  web_app_background_dark_color: int32;
+
+  /**
+   * Default light header color for bot Web Apps; -1 if not specified
+   * @type {int32} {@link int32}
+   */
+  web_app_header_light_color: int32;
+
+  /**
+   * Default dark header color for bot Web Apps; -1 if not specified
+   * @type {int32} {@link int32}
+   */
+  web_app_header_dark_color: int32;
+
+  /**
+   * True, if the bot's revenue statistics are available to the current user
    * @type {Bool} {@link Bool}
    */
   can_get_revenue_statistics: Bool;
+
+  /**
+   * True, if the bot can manage emoji status of the current user
+   * @type {Bool} {@link Bool}
+   */
+  can_manage_emoji_status: Bool;
 
   /**
    * True, if the bot has media previews
@@ -12725,10 +13771,46 @@ export type botInfo$Input = {
   readonly default_channel_administrator_rights?: chatAdministratorRights$Input | null;
 
   /**
-   * True, if the bot's revenue statistics are available
+   * Information about the affiliate program of the bot; may be null if none
+   * @type {affiliateProgramInfo} {@link affiliateProgramInfo}
+   */
+  readonly affiliate_program?: affiliateProgramInfo$Input | null;
+
+  /**
+   * Default light background color for bot Web Apps; -1 if not specified
+   * @type {int32} {@link int32}
+   */
+  readonly web_app_background_light_color?: int32;
+
+  /**
+   * Default dark background color for bot Web Apps; -1 if not specified
+   * @type {int32} {@link int32}
+   */
+  readonly web_app_background_dark_color?: int32;
+
+  /**
+   * Default light header color for bot Web Apps; -1 if not specified
+   * @type {int32} {@link int32}
+   */
+  readonly web_app_header_light_color?: int32;
+
+  /**
+   * Default dark header color for bot Web Apps; -1 if not specified
+   * @type {int32} {@link int32}
+   */
+  readonly web_app_header_dark_color?: int32;
+
+  /**
+   * True, if the bot's revenue statistics are available to the current user
    * @type {Bool} {@link Bool}
    */
   readonly can_get_revenue_statistics?: Bool$Input;
+
+  /**
+   * True, if the bot can manage emoji status of the current user
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_manage_emoji_status?: Bool$Input;
 
   /**
    * True, if the bot has media previews
@@ -22762,6 +23844,250 @@ export type loginUrlInfoRequestConfirmation$Input = {
 };
 
 /**
+ * Contains parameters of the application theme
+ */
+export type themeParameters = {
+  _: "themeParameters";
+
+  /**
+   * A color of the background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  background_color: int32;
+
+  /**
+   * A secondary color for the background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  secondary_background_color: int32;
+
+  /**
+   * A color of the header background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  header_background_color: int32;
+
+  /**
+   * A color of the bottom bar background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  bottom_bar_background_color: int32;
+
+  /**
+   * A color of the section background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  section_background_color: int32;
+
+  /**
+   * A color of the section separator in the RGB format
+   * @type {int32} {@link int32}
+   */
+  section_separator_color: int32;
+
+  /**
+   * A color of text in the RGB format
+   * @type {int32} {@link int32}
+   */
+  text_color: int32;
+
+  /**
+   * An accent color of the text in the RGB format
+   * @type {int32} {@link int32}
+   */
+  accent_text_color: int32;
+
+  /**
+   * A color of text on the section headers in the RGB format
+   * @type {int32} {@link int32}
+   */
+  section_header_text_color: int32;
+
+  /**
+   * A color of the subtitle text in the RGB format
+   * @type {int32} {@link int32}
+   */
+  subtitle_text_color: int32;
+
+  /**
+   * A color of the text for destructive actions in the RGB format
+   * @type {int32} {@link int32}
+   */
+  destructive_text_color: int32;
+
+  /**
+   * A color of hints in the RGB format
+   * @type {int32} {@link int32}
+   */
+  hint_color: int32;
+
+  /**
+   * A color of links in the RGB format
+   * @type {int32} {@link int32}
+   */
+  link_color: int32;
+
+  /**
+   * A color of the buttons in the RGB format
+   * @type {int32} {@link int32}
+   */
+  button_color: int32;
+
+  /**
+   * A color of text on the buttons in the RGB format
+   * @type {int32} {@link int32}
+   */
+  button_text_color: int32;
+};
+
+/**
+ * Version of {@link themeParameters} for method parameters.
+ *
+ * Contains parameters of the application theme
+ */
+export type themeParameters$Input = {
+  readonly _: "themeParameters";
+
+  /**
+   * A color of the background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly background_color?: int32;
+
+  /**
+   * A secondary color for the background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly secondary_background_color?: int32;
+
+  /**
+   * A color of the header background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly header_background_color?: int32;
+
+  /**
+   * A color of the bottom bar background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly bottom_bar_background_color?: int32;
+
+  /**
+   * A color of the section background in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly section_background_color?: int32;
+
+  /**
+   * A color of the section separator in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly section_separator_color?: int32;
+
+  /**
+   * A color of text in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly text_color?: int32;
+
+  /**
+   * An accent color of the text in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly accent_text_color?: int32;
+
+  /**
+   * A color of text on the section headers in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly section_header_text_color?: int32;
+
+  /**
+   * A color of the subtitle text in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly subtitle_text_color?: int32;
+
+  /**
+   * A color of the text for destructive actions in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly destructive_text_color?: int32;
+
+  /**
+   * A color of hints in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly hint_color?: int32;
+
+  /**
+   * A color of links in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly link_color?: int32;
+
+  /**
+   * A color of the buttons in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly button_color?: int32;
+
+  /**
+   * A color of text on the buttons in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly button_text_color?: int32;
+};
+
+/**
+ * The Web App is opened in the compact mode
+ */
+export type webAppOpenModeCompact = {
+  _: "webAppOpenModeCompact";
+};
+
+/**
+ * Version of {@link webAppOpenModeCompact} for method parameters.
+ *
+ * The Web App is opened in the compact mode
+ */
+export type webAppOpenModeCompact$Input = {
+  readonly _: "webAppOpenModeCompact";
+};
+
+/**
+ * The Web App is opened in the full-size mode
+ */
+export type webAppOpenModeFullSize = {
+  _: "webAppOpenModeFullSize";
+};
+
+/**
+ * Version of {@link webAppOpenModeFullSize} for method parameters.
+ *
+ * The Web App is opened in the full-size mode
+ */
+export type webAppOpenModeFullSize$Input = {
+  readonly _: "webAppOpenModeFullSize";
+};
+
+/**
+ * The Web App is opened in the full-screen mode
+ */
+export type webAppOpenModeFullScreen = {
+  _: "webAppOpenModeFullScreen";
+};
+
+/**
+ * Version of {@link webAppOpenModeFullScreen} for method parameters.
+ *
+ * The Web App is opened in the full-screen mode
+ */
+export type webAppOpenModeFullScreen$Input = {
+  readonly _: "webAppOpenModeFullScreen";
+};
+
+/**
  * Contains information about a Web App found by its short name
  */
 export type foundWebApp = {
@@ -22866,10 +24192,10 @@ export type mainWebApp = {
   url: string;
 
   /**
-   * True, if the Web App must always be opened in the compact mode instead of the full-size mode
-   * @type {Bool} {@link Bool}
+   * The mode in which the Web App must be opened
+   * @type {WebAppOpenMode} {@link WebAppOpenMode}
    */
-  is_compact: Bool;
+  mode: WebAppOpenMode;
 };
 
 /**
@@ -22887,10 +24213,62 @@ export type mainWebApp$Input = {
   readonly url?: string;
 
   /**
-   * True, if the Web App must always be opened in the compact mode instead of the full-size mode
-   * @type {Bool} {@link Bool}
+   * The mode in which the Web App must be opened
+   * @type {WebAppOpenMode} {@link WebAppOpenMode}
    */
-  readonly is_compact?: Bool$Input;
+  readonly mode?: WebAppOpenMode$Input;
+};
+
+/**
+ * Options to be used when a Web App is opened
+ */
+export type webAppOpenParameters = {
+  _: "webAppOpenParameters";
+
+  /**
+   * Preferred Web App theme; pass null to use the default theme
+   * @type {themeParameters} {@link themeParameters}
+   */
+  theme: themeParameters | null;
+
+  /**
+   * Short name of the current application; 0-64 English letters, digits, and underscores
+   * @type {string} {@link string}
+   */
+  application_name: string;
+
+  /**
+   * The mode in which the Web App is opened; pass null to open in webAppOpenModeFullSize
+   * @type {WebAppOpenMode} {@link WebAppOpenMode}
+   */
+  mode: WebAppOpenMode | null;
+};
+
+/**
+ * Version of {@link webAppOpenParameters} for method parameters.
+ *
+ * Options to be used when a Web App is opened
+ */
+export type webAppOpenParameters$Input = {
+  readonly _: "webAppOpenParameters";
+
+  /**
+   * Preferred Web App theme; pass null to use the default theme
+   * @type {themeParameters} {@link themeParameters}
+   */
+  readonly theme?: themeParameters$Input | null;
+
+  /**
+   * Short name of the current application; 0-64 English letters, digits, and underscores
+   * @type {string} {@link string}
+   */
+  readonly application_name?: string;
+
+  /**
+   * The mode in which the Web App is opened; pass null to open in webAppOpenModeFullSize
+   * @type {WebAppOpenMode} {@link WebAppOpenMode}
+   */
+  readonly mode?: WebAppOpenMode$Input | null;
 };
 
 /**
@@ -28006,202 +29384,6 @@ export type locationAddress$Input = {
 };
 
 /**
- * Contains parameters of the application theme
- */
-export type themeParameters = {
-  _: "themeParameters";
-
-  /**
-   * A color of the background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  background_color: int32;
-
-  /**
-   * A secondary color for the background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  secondary_background_color: int32;
-
-  /**
-   * A color of the header background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  header_background_color: int32;
-
-  /**
-   * A color of the bottom bar background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  bottom_bar_background_color: int32;
-
-  /**
-   * A color of the section background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  section_background_color: int32;
-
-  /**
-   * A color of the section separator in the RGB format
-   * @type {int32} {@link int32}
-   */
-  section_separator_color: int32;
-
-  /**
-   * A color of text in the RGB format
-   * @type {int32} {@link int32}
-   */
-  text_color: int32;
-
-  /**
-   * An accent color of the text in the RGB format
-   * @type {int32} {@link int32}
-   */
-  accent_text_color: int32;
-
-  /**
-   * A color of text on the section headers in the RGB format
-   * @type {int32} {@link int32}
-   */
-  section_header_text_color: int32;
-
-  /**
-   * A color of the subtitle text in the RGB format
-   * @type {int32} {@link int32}
-   */
-  subtitle_text_color: int32;
-
-  /**
-   * A color of the text for destructive actions in the RGB format
-   * @type {int32} {@link int32}
-   */
-  destructive_text_color: int32;
-
-  /**
-   * A color of hints in the RGB format
-   * @type {int32} {@link int32}
-   */
-  hint_color: int32;
-
-  /**
-   * A color of links in the RGB format
-   * @type {int32} {@link int32}
-   */
-  link_color: int32;
-
-  /**
-   * A color of the buttons in the RGB format
-   * @type {int32} {@link int32}
-   */
-  button_color: int32;
-
-  /**
-   * A color of text on the buttons in the RGB format
-   * @type {int32} {@link int32}
-   */
-  button_text_color: int32;
-};
-
-/**
- * Version of {@link themeParameters} for method parameters.
- *
- * Contains parameters of the application theme
- */
-export type themeParameters$Input = {
-  readonly _: "themeParameters";
-
-  /**
-   * A color of the background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly background_color?: int32;
-
-  /**
-   * A secondary color for the background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly secondary_background_color?: int32;
-
-  /**
-   * A color of the header background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly header_background_color?: int32;
-
-  /**
-   * A color of the bottom bar background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly bottom_bar_background_color?: int32;
-
-  /**
-   * A color of the section background in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly section_background_color?: int32;
-
-  /**
-   * A color of the section separator in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly section_separator_color?: int32;
-
-  /**
-   * A color of text in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly text_color?: int32;
-
-  /**
-   * An accent color of the text in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly accent_text_color?: int32;
-
-  /**
-   * A color of text on the section headers in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly section_header_text_color?: int32;
-
-  /**
-   * A color of the subtitle text in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly subtitle_text_color?: int32;
-
-  /**
-   * A color of the text for destructive actions in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly destructive_text_color?: int32;
-
-  /**
-   * A color of hints in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly hint_color?: int32;
-
-  /**
-   * A color of links in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly link_color?: int32;
-
-  /**
-   * A color of the buttons in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly button_color?: int32;
-
-  /**
-   * A color of text on the buttons in the RGB format
-   * @type {int32} {@link int32}
-   */
-  readonly button_text_color?: int32;
-};
-
-/**
  * Portion of the price of a product (e.g., "delivery cost", "tax amount")
  */
 export type labeledPricePart = {
@@ -28258,6 +29440,12 @@ export type invoice = {
    * @type {vector<labeledPricePart>} {@link vector<labeledPricePart>}
    */
   price_parts: vector<labeledPricePart>;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debiting for subscription invoices; 0 if the invoice doesn't create subscription
+   * @type {int32} {@link int32}
+   */
+  subscription_period: int32;
 
   /**
    * The maximum allowed amount of tip in the smallest units of the currency
@@ -28351,6 +29539,12 @@ export type invoice$Input = {
    * @type {vector<labeledPricePart>} {@link vector<labeledPricePart>}
    */
   readonly price_parts?: vector$Input<labeledPricePart$Input>;
+
+  /**
+   * The number of seconds between consecutive Telegram Star debiting for subscription invoices; 0 if the invoice doesn't create subscription
+   * @type {int32} {@link int32}
+   */
+  readonly subscription_period?: int32;
 
   /**
    * The maximum allowed amount of tip in the smallest units of the currency
@@ -29015,6 +30209,34 @@ export type paymentFormTypeStars$Input = {
    * @type {int53} {@link int53}
    */
   readonly star_count?: int53;
+};
+
+/**
+ * The payment form is for a payment in Telegram Stars for subscription
+ */
+export type paymentFormTypeStarSubscription = {
+  _: "paymentFormTypeStarSubscription";
+
+  /**
+   * Information about subscription plan
+   * @type {starSubscriptionPricing} {@link starSubscriptionPricing}
+   */
+  pricing: starSubscriptionPricing;
+};
+
+/**
+ * Version of {@link paymentFormTypeStarSubscription} for method parameters.
+ *
+ * The payment form is for a payment in Telegram Stars for subscription
+ */
+export type paymentFormTypeStarSubscription$Input = {
+  readonly _: "paymentFormTypeStarSubscription";
+
+  /**
+   * Information about subscription plan
+   * @type {starSubscriptionPricing} {@link starSubscriptionPricing}
+   */
+  readonly pricing?: starSubscriptionPricing$Input;
 };
 
 /**
@@ -34106,7 +35328,7 @@ export type messageGameScore$Input = {
 };
 
 /**
- * A payment has been completed
+ * A payment has been sent to a bot or a business account
  */
 export type messagePaymentSuccessful = {
   _: "messagePaymentSuccessful";
@@ -34136,6 +35358,12 @@ export type messagePaymentSuccessful = {
   total_amount: int53;
 
   /**
+   * Point in time (Unix timestamp) when the subscription will expire; 0 if unknown or the payment isn't recurring
+   * @type {int32} {@link int32}
+   */
+  subscription_until_date: int32;
+
+  /**
    * True, if this is a recurring payment
    * @type {Bool} {@link Bool}
    */
@@ -34157,7 +35385,7 @@ export type messagePaymentSuccessful = {
 /**
  * Version of {@link messagePaymentSuccessful} for method parameters.
  *
- * A payment has been completed
+ * A payment has been sent to a bot or a business account
  */
 export type messagePaymentSuccessful$Input = {
   readonly _: "messagePaymentSuccessful";
@@ -34187,6 +35415,12 @@ export type messagePaymentSuccessful$Input = {
   readonly total_amount?: int53;
 
   /**
+   * Point in time (Unix timestamp) when the subscription will expire; 0 if unknown or the payment isn't recurring
+   * @type {int32} {@link int32}
+   */
+  readonly subscription_until_date?: int32;
+
+  /**
    * True, if this is a recurring payment
    * @type {Bool} {@link Bool}
    */
@@ -34206,7 +35440,7 @@ export type messagePaymentSuccessful$Input = {
 };
 
 /**
- * A payment has been completed; for bots only
+ * A payment has been received by the bot or the business account
  */
 export type messagePaymentSuccessfulBot = {
   _: "messagePaymentSuccessfulBot";
@@ -34222,6 +35456,12 @@ export type messagePaymentSuccessfulBot = {
    * @type {int53} {@link int53}
    */
   total_amount: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the subscription will expire; 0 if unknown or the payment isn't recurring
+   * @type {int32} {@link int32}
+   */
+  subscription_until_date: int32;
 
   /**
    * True, if this is a recurring payment
@@ -34242,13 +35482,13 @@ export type messagePaymentSuccessfulBot = {
   invoice_payload: bytes;
 
   /**
-   * Identifier of the shipping option chosen by the user; may be empty if not applicable
+   * Identifier of the shipping option chosen by the user; may be empty if not applicable; for bots only
    * @type {string} {@link string}
    */
   shipping_option_id: string;
 
   /**
-   * Information about the order; may be null
+   * Information about the order; may be null; for bots only
    * @type {orderInfo} {@link orderInfo}
    */
   order_info: orderInfo | null;
@@ -34269,7 +35509,7 @@ export type messagePaymentSuccessfulBot = {
 /**
  * Version of {@link messagePaymentSuccessfulBot} for method parameters.
  *
- * A payment has been completed; for bots only
+ * A payment has been received by the bot or the business account
  */
 export type messagePaymentSuccessfulBot$Input = {
   readonly _: "messagePaymentSuccessfulBot";
@@ -34285,6 +35525,12 @@ export type messagePaymentSuccessfulBot$Input = {
    * @type {int53} {@link int53}
    */
   readonly total_amount?: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the subscription will expire; 0 if unknown or the payment isn't recurring
+   * @type {int32} {@link int32}
+   */
+  readonly subscription_until_date?: int32;
 
   /**
    * True, if this is a recurring payment
@@ -34305,13 +35551,13 @@ export type messagePaymentSuccessfulBot$Input = {
   readonly invoice_payload?: bytes$Input;
 
   /**
-   * Identifier of the shipping option chosen by the user; may be empty if not applicable
+   * Identifier of the shipping option chosen by the user; may be empty if not applicable; for bots only
    * @type {string} {@link string}
    */
   readonly shipping_option_id?: string;
 
   /**
-   * Information about the order; may be null
+   * Information about the order; may be null; for bots only
    * @type {orderInfo} {@link orderInfo}
    */
   readonly order_info?: orderInfo$Input | null;
@@ -35224,7 +36470,7 @@ export type messageGift = {
   text: formattedText;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; 0 if the gift can't be sold by the receiver
    * @type {int53} {@link int53}
    */
   sell_star_count: int53;
@@ -35269,7 +36515,7 @@ export type messageGift$Input = {
   readonly text?: formattedText$Input;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift
+   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; 0 if the gift can't be sold by the receiver
    * @type {int53} {@link int53}
    */
   readonly sell_star_count?: int53;
@@ -37152,7 +38398,7 @@ export type inputMessageVideo = {
   _: "inputMessageVideo";
 
   /**
-   * Video to be sent. The video is expected to be reencoded to MPEG4 format with H.264 codec by the sender
+   * Video to be sent. The video is expected to be re-encoded to MPEG4 format with H.264 codec by the sender
    * @type {InputFile} {@link InputFile}
    */
   video: InputFile;
@@ -37227,7 +38473,7 @@ export type inputMessageVideo$Input = {
   readonly _: "inputMessageVideo";
 
   /**
-   * Video to be sent. The video is expected to be reencoded to MPEG4 format with H.264 codec by the sender
+   * Video to be sent. The video is expected to be re-encoded to MPEG4 format with H.264 codec by the sender
    * @type {InputFile} {@link InputFile}
    */
   readonly video?: InputFile$Input;
@@ -39248,10 +40494,10 @@ export type stickerSet = {
   thumbnail: thumbnail | null;
 
   /**
-   * Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
-   * @type {vector<closedVectorPath>} {@link vector<closedVectorPath>}
+   * Sticker set thumbnail's outline; may be null if unknown
+   * @type {outline} {@link outline}
    */
-  thumbnail_outline: vector<closedVectorPath>;
+  thumbnail_outline: outline | null;
 
   /**
    * True, if the sticker set is owned by the current user
@@ -39347,10 +40593,10 @@ export type stickerSet$Input = {
   readonly thumbnail?: thumbnail$Input | null;
 
   /**
-   * Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
-   * @type {vector<closedVectorPath>} {@link vector<closedVectorPath>}
+   * Sticker set thumbnail's outline; may be null if unknown
+   * @type {outline} {@link outline}
    */
-  readonly thumbnail_outline?: vector$Input<closedVectorPath$Input>;
+  readonly thumbnail_outline?: outline$Input | null;
 
   /**
    * True, if the sticker set is owned by the current user
@@ -39444,10 +40690,10 @@ export type stickerSetInfo = {
   thumbnail: thumbnail | null;
 
   /**
-   * Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
-   * @type {vector<closedVectorPath>} {@link vector<closedVectorPath>}
+   * Sticker set thumbnail's outline; may be null if unknown
+   * @type {outline} {@link outline}
    */
-  thumbnail_outline: vector<closedVectorPath>;
+  thumbnail_outline: outline | null;
 
   /**
    * True, if the sticker set is owned by the current user
@@ -39543,10 +40789,10 @@ export type stickerSetInfo$Input = {
   readonly thumbnail?: thumbnail$Input | null;
 
   /**
-   * Sticker set thumbnail's outline represented as a list of closed vector paths; may be empty. The coordinate system origin is in the upper-left corner
-   * @type {vector<closedVectorPath>} {@link vector<closedVectorPath>}
+   * Sticker set thumbnail's outline; may be null if unknown
+   * @type {outline} {@link outline}
    */
-  readonly thumbnail_outline?: vector$Input<closedVectorPath$Input>;
+  readonly thumbnail_outline?: outline$Input | null;
 
   /**
    * True, if the sticker set is owned by the current user
@@ -46510,6 +47756,142 @@ export type userLink$Input = {
 };
 
 /**
+ * Describes allowed types for the target chat
+ */
+export type targetChatTypes = {
+  _: "targetChatTypes";
+
+  /**
+   * True, if private chats with ordinary users are allowed
+   * @type {Bool} {@link Bool}
+   */
+  allow_user_chats: Bool;
+
+  /**
+   * True, if private chats with other bots are allowed
+   * @type {Bool} {@link Bool}
+   */
+  allow_bot_chats: Bool;
+
+  /**
+   * True, if basic group and supergroup chats are allowed
+   * @type {Bool} {@link Bool}
+   */
+  allow_group_chats: Bool;
+
+  /**
+   * True, if channel chats are allowed
+   * @type {Bool} {@link Bool}
+   */
+  allow_channel_chats: Bool;
+};
+
+/**
+ * Version of {@link targetChatTypes} for method parameters.
+ *
+ * Describes allowed types for the target chat
+ */
+export type targetChatTypes$Input = {
+  readonly _: "targetChatTypes";
+
+  /**
+   * True, if private chats with ordinary users are allowed
+   * @type {Bool} {@link Bool}
+   */
+  readonly allow_user_chats?: Bool$Input;
+
+  /**
+   * True, if private chats with other bots are allowed
+   * @type {Bool} {@link Bool}
+   */
+  readonly allow_bot_chats?: Bool$Input;
+
+  /**
+   * True, if basic group and supergroup chats are allowed
+   * @type {Bool} {@link Bool}
+   */
+  readonly allow_group_chats?: Bool$Input;
+
+  /**
+   * True, if channel chats are allowed
+   * @type {Bool} {@link Bool}
+   */
+  readonly allow_channel_chats?: Bool$Input;
+};
+
+/**
+ * The currently opened chat and forum topic must be kept
+ */
+export type targetChatCurrent = {
+  _: "targetChatCurrent";
+};
+
+/**
+ * Version of {@link targetChatCurrent} for method parameters.
+ *
+ * The currently opened chat and forum topic must be kept
+ */
+export type targetChatCurrent$Input = {
+  readonly _: "targetChatCurrent";
+};
+
+/**
+ * The chat needs to be chosen by the user among chats of the specified types
+ */
+export type targetChatChosen = {
+  _: "targetChatChosen";
+
+  /**
+   * Allowed types for the chat
+   * @type {targetChatTypes} {@link targetChatTypes}
+   */
+  types: targetChatTypes;
+};
+
+/**
+ * Version of {@link targetChatChosen} for method parameters.
+ *
+ * The chat needs to be chosen by the user among chats of the specified types
+ */
+export type targetChatChosen$Input = {
+  readonly _: "targetChatChosen";
+
+  /**
+   * Allowed types for the chat
+   * @type {targetChatTypes} {@link targetChatTypes}
+   */
+  readonly types?: targetChatTypes$Input;
+};
+
+/**
+ * The chat needs to be open with the provided internal link
+ */
+export type targetChatInternalLink = {
+  _: "targetChatInternalLink";
+
+  /**
+   * An internal link pointing to the chat
+   * @type {InternalLinkType} {@link InternalLinkType}
+   */
+  link: InternalLinkType;
+};
+
+/**
+ * Version of {@link targetChatInternalLink} for method parameters.
+ *
+ * The chat needs to be open with the provided internal link
+ */
+export type targetChatInternalLink$Input = {
+  readonly _: "targetChatInternalLink";
+
+  /**
+   * An internal link pointing to the chat
+   * @type {InternalLinkType} {@link InternalLinkType}
+   */
+  readonly link?: InternalLinkType$Input;
+};
+
+/**
  * Represents a link to an animated GIF or an animated (i.e., without sound) H.264/MPEG-4 AVC video
  */
 export type inputInlineQueryResultAnimation = {
@@ -48695,6 +50077,98 @@ export type inlineQueryResults$Input = {
    * @type {string} {@link string}
    */
   readonly next_offset?: string;
+};
+
+/**
+ * Represents an inline message that can be sent via the bot
+ */
+export type preparedInlineMessageId = {
+  _: "preparedInlineMessageId";
+
+  /**
+   * Unique identifier for the message
+   * @type {string} {@link string}
+   */
+  id: string;
+
+  /**
+   * Point in time (Unix timestamp) when the message can't be used anymore
+   * @type {int32} {@link int32}
+   */
+  expiration_date: int32;
+};
+
+/**
+ * Version of {@link preparedInlineMessageId} for method parameters.
+ *
+ * Represents an inline message that can be sent via the bot
+ */
+export type preparedInlineMessageId$Input = {
+  readonly _: "preparedInlineMessageId";
+
+  /**
+   * Unique identifier for the message
+   * @type {string} {@link string}
+   */
+  readonly id?: string;
+
+  /**
+   * Point in time (Unix timestamp) when the message can't be used anymore
+   * @type {int32} {@link int32}
+   */
+  readonly expiration_date?: int32;
+};
+
+/**
+ * Represents a ready to send inline message. Use sendInlineQueryResultMessage to send the message
+ */
+export type preparedInlineMessage = {
+  _: "preparedInlineMessage";
+
+  /**
+   * Unique identifier of the inline query to pass to sendInlineQueryResultMessage
+   * @type {int64} {@link int64}
+   */
+  inline_query_id: int64;
+
+  /**
+   * Resulted inline message of the query
+   * @type {InlineQueryResult} {@link InlineQueryResult}
+   */
+  result: InlineQueryResult;
+
+  /**
+   * Types of the chats to which the message can be sent
+   * @type {targetChatTypes} {@link targetChatTypes}
+   */
+  chat_types: targetChatTypes;
+};
+
+/**
+ * Version of {@link preparedInlineMessage} for method parameters.
+ *
+ * Represents a ready to send inline message. Use sendInlineQueryResultMessage to send the message
+ */
+export type preparedInlineMessage$Input = {
+  readonly _: "preparedInlineMessage";
+
+  /**
+   * Unique identifier of the inline query to pass to sendInlineQueryResultMessage
+   * @type {int64} {@link int64}
+   */
+  readonly inline_query_id?: int64$Input;
+
+  /**
+   * Resulted inline message of the query
+   * @type {InlineQueryResult} {@link InlineQueryResult}
+   */
+  readonly result?: InlineQueryResult$Input;
+
+  /**
+   * Types of the chats to which the message can be sent
+   * @type {targetChatTypes} {@link targetChatTypes}
+   */
+  readonly chat_types?: targetChatTypes$Input;
 };
 
 /**
@@ -57330,6 +58804,22 @@ export type userPrivacySettingRuleAllowContacts$Input = {
 };
 
 /**
+ * A rule to allow all bots to do something
+ */
+export type userPrivacySettingRuleAllowBots = {
+  _: "userPrivacySettingRuleAllowBots";
+};
+
+/**
+ * Version of {@link userPrivacySettingRuleAllowBots} for method parameters.
+ *
+ * A rule to allow all bots to do something
+ */
+export type userPrivacySettingRuleAllowBots$Input = {
+  readonly _: "userPrivacySettingRuleAllowBots";
+};
+
+/**
  * A rule to allow all Premium Users to do something; currently, allowed only for userPrivacySettingAllowChatInvites
  */
 export type userPrivacySettingRuleAllowPremiumUsers = {
@@ -57431,6 +58921,22 @@ export type userPrivacySettingRuleRestrictContacts = {
  */
 export type userPrivacySettingRuleRestrictContacts$Input = {
   readonly _: "userPrivacySettingRuleRestrictContacts";
+};
+
+/**
+ * A rule to restrict all bots from doing something
+ */
+export type userPrivacySettingRuleRestrictBots = {
+  _: "userPrivacySettingRuleRestrictBots";
+};
+
+/**
+ * Version of {@link userPrivacySettingRuleRestrictBots} for method parameters.
+ *
+ * A rule to restrict all bots from doing something
+ */
+export type userPrivacySettingRuleRestrictBots$Input = {
+  readonly _: "userPrivacySettingRuleRestrictBots";
 };
 
 /**
@@ -57691,6 +59197,22 @@ export type userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages = {
  */
 export type userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages$Input = {
   readonly _: "userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages";
+};
+
+/**
+ * A privacy setting for managing whether received gifts are automatically shown on the user's profile page
+ */
+export type userPrivacySettingAutosaveGifts = {
+  _: "userPrivacySettingAutosaveGifts";
+};
+
+/**
+ * Version of {@link userPrivacySettingAutosaveGifts} for method parameters.
+ *
+ * A privacy setting for managing whether received gifts are automatically shown on the user's profile page
+ */
+export type userPrivacySettingAutosaveGifts$Input = {
+  readonly _: "userPrivacySettingAutosaveGifts";
 };
 
 /**
@@ -58982,114 +60504,6 @@ export type reportStoryResultTextRequired$Input = {
 };
 
 /**
- * The currently opened chat needs to be kept
- */
-export type targetChatCurrent = {
-  _: "targetChatCurrent";
-};
-
-/**
- * Version of {@link targetChatCurrent} for method parameters.
- *
- * The currently opened chat needs to be kept
- */
-export type targetChatCurrent$Input = {
-  readonly _: "targetChatCurrent";
-};
-
-/**
- * The chat needs to be chosen by the user among chats of the specified types
- */
-export type targetChatChosen = {
-  _: "targetChatChosen";
-
-  /**
-   * True, if private chats with ordinary users are allowed
-   * @type {Bool} {@link Bool}
-   */
-  allow_user_chats: Bool;
-
-  /**
-   * True, if private chats with other bots are allowed
-   * @type {Bool} {@link Bool}
-   */
-  allow_bot_chats: Bool;
-
-  /**
-   * True, if basic group and supergroup chats are allowed
-   * @type {Bool} {@link Bool}
-   */
-  allow_group_chats: Bool;
-
-  /**
-   * True, if channel chats are allowed
-   * @type {Bool} {@link Bool}
-   */
-  allow_channel_chats: Bool;
-};
-
-/**
- * Version of {@link targetChatChosen} for method parameters.
- *
- * The chat needs to be chosen by the user among chats of the specified types
- */
-export type targetChatChosen$Input = {
-  readonly _: "targetChatChosen";
-
-  /**
-   * True, if private chats with ordinary users are allowed
-   * @type {Bool} {@link Bool}
-   */
-  readonly allow_user_chats?: Bool$Input;
-
-  /**
-   * True, if private chats with other bots are allowed
-   * @type {Bool} {@link Bool}
-   */
-  readonly allow_bot_chats?: Bool$Input;
-
-  /**
-   * True, if basic group and supergroup chats are allowed
-   * @type {Bool} {@link Bool}
-   */
-  readonly allow_group_chats?: Bool$Input;
-
-  /**
-   * True, if channel chats are allowed
-   * @type {Bool} {@link Bool}
-   */
-  readonly allow_channel_chats?: Bool$Input;
-};
-
-/**
- * The chat needs to be open with the provided internal link
- */
-export type targetChatInternalLink = {
-  _: "targetChatInternalLink";
-
-  /**
-   * An internal link pointing to the chat
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  link: InternalLinkType;
-};
-
-/**
- * Version of {@link targetChatInternalLink} for method parameters.
- *
- * The chat needs to be open with the provided internal link
- */
-export type targetChatInternalLink$Input = {
-  readonly _: "targetChatInternalLink";
-
-  /**
-   * An internal link pointing to the chat
-   * @type {InternalLinkType} {@link InternalLinkType}
-   */
-  readonly link?: InternalLinkType$Input;
-};
-
-/**
  * The link is a link to the Devices section of the application. Use getActiveSessions to get the list of active sessions and show them to the user
  */
 export type internalLinkTypeActiveSessions = {
@@ -59498,6 +60912,46 @@ export type internalLinkTypeChangePhoneNumber$Input = {
 };
 
 /**
+ * The link is an affiliate program link. Call searchChatAffiliateProgram with the given username and referrer to process the link
+ */
+export type internalLinkTypeChatAffiliateProgram = {
+  _: "internalLinkTypeChatAffiliateProgram";
+
+  /**
+   * Username to be passed to searchChatAffiliateProgram
+   * @type {string} {@link string}
+   */
+  username: string;
+
+  /**
+   * Referrer to be passed to searchChatAffiliateProgram
+   * @type {string} {@link string}
+   */
+  referrer: string;
+};
+
+/**
+ * Version of {@link internalLinkTypeChatAffiliateProgram} for method parameters.
+ *
+ * The link is an affiliate program link. Call searchChatAffiliateProgram with the given username and referrer to process the link
+ */
+export type internalLinkTypeChatAffiliateProgram$Input = {
+  readonly _: "internalLinkTypeChatAffiliateProgram";
+
+  /**
+   * Username to be passed to searchChatAffiliateProgram
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+
+  /**
+   * Referrer to be passed to searchChatAffiliateProgram
+   * @type {string} {@link string}
+   */
+  readonly referrer?: string;
+};
+
+/**
  * The link is a link to boost a Telegram chat. Call getChatBoostLinkInfo with the given URL to process the link.
  *
  * - If the chat is found, then call getChatBoostStatus and getAvailableChatBoostSlots to get the current boost status and check whether the chat can be boosted.
@@ -59818,7 +61272,7 @@ export type internalLinkTypeLanguageSettings$Input = {
  *
  * - then if the user accepts the terms and confirms adding, use toggleBotIsAddedToAttachmentMenu to add the bot.
  *
- * - Then, use getMainWebApp with the given start parameter and open the returned URL as a Web App
+ * - Then, use getMainWebApp with the given start parameter and mode and open the returned URL as a Web App
  */
 export type internalLinkTypeMainWebApp = {
   _: "internalLinkTypeMainWebApp";
@@ -59836,10 +61290,10 @@ export type internalLinkTypeMainWebApp = {
   start_parameter: string;
 
   /**
-   * True, if the Web App must be opened in the compact mode instead of the full-size mode
-   * @type {Bool} {@link Bool}
+   * The mode to be passed to getMainWebApp
+   * @type {WebAppOpenMode} {@link WebAppOpenMode}
    */
-  is_compact: Bool;
+  mode: WebAppOpenMode;
 };
 
 /**
@@ -59853,7 +61307,7 @@ export type internalLinkTypeMainWebApp = {
  *
  * - then if the user accepts the terms and confirms adding, use toggleBotIsAddedToAttachmentMenu to add the bot.
  *
- * - Then, use getMainWebApp with the given start parameter and open the returned URL as a Web App
+ * - Then, use getMainWebApp with the given start parameter and mode and open the returned URL as a Web App
  */
 export type internalLinkTypeMainWebApp$Input = {
   readonly _: "internalLinkTypeMainWebApp";
@@ -59871,10 +61325,10 @@ export type internalLinkTypeMainWebApp$Input = {
   readonly start_parameter?: string;
 
   /**
-   * True, if the Web App must be opened in the compact mode instead of the full-size mode
-   * @type {Bool} {@link Bool}
+   * The mode to be passed to getMainWebApp
+   * @type {WebAppOpenMode} {@link WebAppOpenMode}
    */
-  readonly is_compact?: Bool$Input;
+  readonly mode?: WebAppOpenMode$Input;
 };
 
 /**
@@ -60684,10 +62138,10 @@ export type internalLinkTypeWebApp = {
   start_parameter: string;
 
   /**
-   * True, if the Web App must be opened in the compact mode instead of the full-size mode
-   * @type {Bool} {@link Bool}
+   * The mode in which the Web App must be opened
+   * @type {WebAppOpenMode} {@link WebAppOpenMode}
    */
-  is_compact: Bool;
+  mode: WebAppOpenMode;
 };
 
 /**
@@ -60723,10 +62177,10 @@ export type internalLinkTypeWebApp$Input = {
   readonly start_parameter?: string;
 
   /**
-   * True, if the Web App must be opened in the compact mode instead of the full-size mode
-   * @type {Bool} {@link Bool}
+   * The mode in which the Web App must be opened
+   * @type {WebAppOpenMode} {@link WebAppOpenMode}
    */
-  readonly is_compact?: Bool$Input;
+  readonly mode?: WebAppOpenMode$Input;
 };
 
 /**
@@ -61171,6 +62625,70 @@ export type fileTypeSecure = {
  */
 export type fileTypeSecure$Input = {
   readonly _: "fileTypeSecure";
+};
+
+/**
+ * The file is a self-destructing photo in a private chat
+ */
+export type fileTypeSelfDestructingPhoto = {
+  _: "fileTypeSelfDestructingPhoto";
+};
+
+/**
+ * Version of {@link fileTypeSelfDestructingPhoto} for method parameters.
+ *
+ * The file is a self-destructing photo in a private chat
+ */
+export type fileTypeSelfDestructingPhoto$Input = {
+  readonly _: "fileTypeSelfDestructingPhoto";
+};
+
+/**
+ * The file is a self-destructing video in a private chat
+ */
+export type fileTypeSelfDestructingVideo = {
+  _: "fileTypeSelfDestructingVideo";
+};
+
+/**
+ * Version of {@link fileTypeSelfDestructingVideo} for method parameters.
+ *
+ * The file is a self-destructing video in a private chat
+ */
+export type fileTypeSelfDestructingVideo$Input = {
+  readonly _: "fileTypeSelfDestructingVideo";
+};
+
+/**
+ * The file is a self-destructing video note in a private chat
+ */
+export type fileTypeSelfDestructingVideoNote = {
+  _: "fileTypeSelfDestructingVideoNote";
+};
+
+/**
+ * Version of {@link fileTypeSelfDestructingVideoNote} for method parameters.
+ *
+ * The file is a self-destructing video note in a private chat
+ */
+export type fileTypeSelfDestructingVideoNote$Input = {
+  readonly _: "fileTypeSelfDestructingVideoNote";
+};
+
+/**
+ * The file is a self-destructing voice note in a private chat
+ */
+export type fileTypeSelfDestructingVoiceNote = {
+  _: "fileTypeSelfDestructingVoiceNote";
+};
+
+/**
+ * Version of {@link fileTypeSelfDestructingVoiceNote} for method parameters.
+ *
+ * The file is a self-destructing voice note in a private chat
+ */
+export type fileTypeSelfDestructingVoiceNote$Input = {
+  readonly _: "fileTypeSelfDestructingVoiceNote";
 };
 
 /**
@@ -64920,22 +66438,22 @@ export type starRevenueStatus = {
   _: "starRevenueStatus";
 
   /**
-   * Total number of Telegram Stars earned
-   * @type {int53} {@link int53}
+   * Total amount of Telegram Stars earned
+   * @type {starAmount} {@link starAmount}
    */
-  total_count: int53;
+  total_amount: starAmount;
 
   /**
-   * The number of Telegram Stars that aren't withdrawn yet
-   * @type {int53} {@link int53}
+   * The amount of Telegram Stars that aren't withdrawn yet
+   * @type {starAmount} {@link starAmount}
    */
-  current_count: int53;
+  current_amount: starAmount;
 
   /**
-   * The number of Telegram Stars that are available for withdrawal
-   * @type {int53} {@link int53}
+   * The amount of Telegram Stars that are available for withdrawal
+   * @type {starAmount} {@link starAmount}
    */
-  available_count: int53;
+  available_amount: starAmount;
 
   /**
    * True, if Telegram Stars can be withdrawn now or later
@@ -64959,22 +66477,22 @@ export type starRevenueStatus$Input = {
   readonly _: "starRevenueStatus";
 
   /**
-   * Total number of Telegram Stars earned
-   * @type {int53} {@link int53}
+   * Total amount of Telegram Stars earned
+   * @type {starAmount} {@link starAmount}
    */
-  readonly total_count?: int53;
+  readonly total_amount?: starAmount$Input;
 
   /**
-   * The number of Telegram Stars that aren't withdrawn yet
-   * @type {int53} {@link int53}
+   * The amount of Telegram Stars that aren't withdrawn yet
+   * @type {starAmount} {@link starAmount}
    */
-  readonly current_count?: int53;
+  readonly current_amount?: starAmount$Input;
 
   /**
-   * The number of Telegram Stars that are available for withdrawal
-   * @type {int53} {@link int53}
+   * The amount of Telegram Stars that are available for withdrawal
+   * @type {starAmount} {@link starAmount}
    */
-  readonly available_count?: int53;
+  readonly available_amount?: starAmount$Input;
 
   /**
    * True, if Telegram Stars can be withdrawn now or later
@@ -70276,10 +71794,10 @@ export type updateOwnedStarCount = {
   _: "updateOwnedStarCount";
 
   /**
-   * The new number of Telegram Stars owned
-   * @type {int53} {@link int53}
+   * The new amount of owned Telegram Stars
+   * @type {starAmount} {@link starAmount}
    */
-  star_count: int53;
+  star_amount: starAmount;
 };
 
 /**
@@ -70291,10 +71809,10 @@ export type updateOwnedStarCount$Input = {
   readonly _: "updateOwnedStarCount";
 
   /**
-   * The new number of Telegram Stars owned
-   * @type {int53} {@link int53}
+   * The new amount of owned Telegram Stars
+   * @type {starAmount} {@link starAmount}
    */
-  readonly star_count?: int53;
+  readonly star_amount?: starAmount$Input;
 };
 
 /**
@@ -73098,6 +74616,19 @@ export type ClosedVectorPath$Input = closedVectorPath$Input;
 
 /**
  * Any of:
+ * - {@link outline}
+ */
+export type Outline = outline;
+
+/**
+ * Version of {@link Outline} for method parameters.
+ * Any of:
+ * - {@link outline$Input}
+ */
+export type Outline$Input = outline$Input;
+
+/**
+ * Any of:
  * - {@link pollOption}
  */
 export type PollOption = pollOption;
@@ -73834,6 +75365,38 @@ export type ChatAdministratorRights$Input = chatAdministratorRights$Input;
 
 /**
  * Any of:
+ * - {@link starAmount}
+ */
+export type StarAmount = starAmount;
+
+/**
+ * Version of {@link StarAmount} for method parameters.
+ * Any of:
+ * - {@link starAmount$Input}
+ */
+export type StarAmount$Input = starAmount$Input;
+
+/**
+ * Any of:
+ * - {@link starSubscriptionTypeChannel}
+ * - {@link starSubscriptionTypeBot}
+ */
+export type StarSubscriptionType =
+  | starSubscriptionTypeChannel
+  | starSubscriptionTypeBot;
+
+/**
+ * Version of {@link StarSubscriptionType} for method parameters.
+ * Any of:
+ * - {@link starSubscriptionTypeChannel$Input}
+ * - {@link starSubscriptionTypeBot$Input}
+ */
+export type StarSubscriptionType$Input =
+  | starSubscriptionTypeChannel$Input
+  | starSubscriptionTypeBot$Input;
+
+/**
+ * Any of:
  * - {@link starSubscriptionPricing}
  */
 export type StarSubscriptionPricing = starSubscriptionPricing;
@@ -73870,6 +75433,120 @@ export type StarSubscriptions = starSubscriptions;
  * - {@link starSubscriptions$Input}
  */
 export type StarSubscriptions$Input = starSubscriptions$Input;
+
+/**
+ * Any of:
+ * - {@link affiliateProgramSortOrderProfitability}
+ * - {@link affiliateProgramSortOrderCreationDate}
+ * - {@link affiliateProgramSortOrderRevenue}
+ */
+export type AffiliateProgramSortOrder =
+  | affiliateProgramSortOrderProfitability
+  | affiliateProgramSortOrderCreationDate
+  | affiliateProgramSortOrderRevenue;
+
+/**
+ * Version of {@link AffiliateProgramSortOrder} for method parameters.
+ * Any of:
+ * - {@link affiliateProgramSortOrderProfitability$Input}
+ * - {@link affiliateProgramSortOrderCreationDate$Input}
+ * - {@link affiliateProgramSortOrderRevenue$Input}
+ */
+export type AffiliateProgramSortOrder$Input =
+  | affiliateProgramSortOrderProfitability$Input
+  | affiliateProgramSortOrderCreationDate$Input
+  | affiliateProgramSortOrderRevenue$Input;
+
+/**
+ * Any of:
+ * - {@link affiliateProgramParameters}
+ */
+export type AffiliateProgramParameters = affiliateProgramParameters;
+
+/**
+ * Version of {@link AffiliateProgramParameters} for method parameters.
+ * Any of:
+ * - {@link affiliateProgramParameters$Input}
+ */
+export type AffiliateProgramParameters$Input = affiliateProgramParameters$Input;
+
+/**
+ * Any of:
+ * - {@link affiliateProgramInfo}
+ */
+export type AffiliateProgramInfo = affiliateProgramInfo;
+
+/**
+ * Version of {@link AffiliateProgramInfo} for method parameters.
+ * Any of:
+ * - {@link affiliateProgramInfo$Input}
+ */
+export type AffiliateProgramInfo$Input = affiliateProgramInfo$Input;
+
+/**
+ * Any of:
+ * - {@link affiliateInfo}
+ */
+export type AffiliateInfo = affiliateInfo;
+
+/**
+ * Version of {@link AffiliateInfo} for method parameters.
+ * Any of:
+ * - {@link affiliateInfo$Input}
+ */
+export type AffiliateInfo$Input = affiliateInfo$Input;
+
+/**
+ * Any of:
+ * - {@link foundAffiliateProgram}
+ */
+export type FoundAffiliateProgram = foundAffiliateProgram;
+
+/**
+ * Version of {@link FoundAffiliateProgram} for method parameters.
+ * Any of:
+ * - {@link foundAffiliateProgram$Input}
+ */
+export type FoundAffiliateProgram$Input = foundAffiliateProgram$Input;
+
+/**
+ * Any of:
+ * - {@link foundAffiliatePrograms}
+ */
+export type FoundAffiliatePrograms = foundAffiliatePrograms;
+
+/**
+ * Version of {@link FoundAffiliatePrograms} for method parameters.
+ * Any of:
+ * - {@link foundAffiliatePrograms$Input}
+ */
+export type FoundAffiliatePrograms$Input = foundAffiliatePrograms$Input;
+
+/**
+ * Any of:
+ * - {@link chatAffiliateProgram}
+ */
+export type ChatAffiliateProgram = chatAffiliateProgram;
+
+/**
+ * Version of {@link ChatAffiliateProgram} for method parameters.
+ * Any of:
+ * - {@link chatAffiliateProgram$Input}
+ */
+export type ChatAffiliateProgram$Input = chatAffiliateProgram$Input;
+
+/**
+ * Any of:
+ * - {@link chatAffiliatePrograms}
+ */
+export type ChatAffiliatePrograms = chatAffiliatePrograms;
+
+/**
+ * Version of {@link ChatAffiliatePrograms} for method parameters.
+ * Any of:
+ * - {@link chatAffiliatePrograms$Input}
+ */
+export type ChatAffiliatePrograms$Input = chatAffiliatePrograms$Input;
 
 /**
  * Any of:
@@ -74088,127 +75765,114 @@ export type StarTransactionDirection$Input =
 
 /**
  * Any of:
- * - {@link botTransactionPurposePaidMedia}
- * - {@link botTransactionPurposeInvoicePayment}
+ * - {@link starTransactionTypePremiumBotDeposit}
+ * - {@link starTransactionTypeAppStoreDeposit}
+ * - {@link starTransactionTypeGooglePlayDeposit}
+ * - {@link starTransactionTypeFragmentDeposit}
+ * - {@link starTransactionTypeUserDeposit}
+ * - {@link starTransactionTypeGiveawayDeposit}
+ * - {@link starTransactionTypeFragmentWithdrawal}
+ * - {@link starTransactionTypeTelegramAdsWithdrawal}
+ * - {@link starTransactionTypeTelegramApiUsage}
+ * - {@link starTransactionTypeBotPaidMediaPurchase}
+ * - {@link starTransactionTypeBotPaidMediaSale}
+ * - {@link starTransactionTypeChannelPaidMediaPurchase}
+ * - {@link starTransactionTypeChannelPaidMediaSale}
+ * - {@link starTransactionTypeBotInvoicePurchase}
+ * - {@link starTransactionTypeBotInvoiceSale}
+ * - {@link starTransactionTypeBotSubscriptionPurchase}
+ * - {@link starTransactionTypeBotSubscriptionSale}
+ * - {@link starTransactionTypeChannelSubscriptionPurchase}
+ * - {@link starTransactionTypeChannelSubscriptionSale}
+ * - {@link starTransactionTypeGiftPurchase}
+ * - {@link starTransactionTypeGiftSale}
+ * - {@link starTransactionTypeChannelPaidReactionSend}
+ * - {@link starTransactionTypeChannelPaidReactionReceive}
+ * - {@link starTransactionTypeAffiliateProgramCommission}
+ * - {@link starTransactionTypeUnsupported}
  */
-export type BotTransactionPurpose =
-  | botTransactionPurposePaidMedia
-  | botTransactionPurposeInvoicePayment;
+export type StarTransactionType =
+  | starTransactionTypePremiumBotDeposit
+  | starTransactionTypeAppStoreDeposit
+  | starTransactionTypeGooglePlayDeposit
+  | starTransactionTypeFragmentDeposit
+  | starTransactionTypeUserDeposit
+  | starTransactionTypeGiveawayDeposit
+  | starTransactionTypeFragmentWithdrawal
+  | starTransactionTypeTelegramAdsWithdrawal
+  | starTransactionTypeTelegramApiUsage
+  | starTransactionTypeBotPaidMediaPurchase
+  | starTransactionTypeBotPaidMediaSale
+  | starTransactionTypeChannelPaidMediaPurchase
+  | starTransactionTypeChannelPaidMediaSale
+  | starTransactionTypeBotInvoicePurchase
+  | starTransactionTypeBotInvoiceSale
+  | starTransactionTypeBotSubscriptionPurchase
+  | starTransactionTypeBotSubscriptionSale
+  | starTransactionTypeChannelSubscriptionPurchase
+  | starTransactionTypeChannelSubscriptionSale
+  | starTransactionTypeGiftPurchase
+  | starTransactionTypeGiftSale
+  | starTransactionTypeChannelPaidReactionSend
+  | starTransactionTypeChannelPaidReactionReceive
+  | starTransactionTypeAffiliateProgramCommission
+  | starTransactionTypeUnsupported;
 
 /**
- * Version of {@link BotTransactionPurpose} for method parameters.
+ * Version of {@link StarTransactionType} for method parameters.
  * Any of:
- * - {@link botTransactionPurposePaidMedia$Input}
- * - {@link botTransactionPurposeInvoicePayment$Input}
+ * - {@link starTransactionTypePremiumBotDeposit$Input}
+ * - {@link starTransactionTypeAppStoreDeposit$Input}
+ * - {@link starTransactionTypeGooglePlayDeposit$Input}
+ * - {@link starTransactionTypeFragmentDeposit$Input}
+ * - {@link starTransactionTypeUserDeposit$Input}
+ * - {@link starTransactionTypeGiveawayDeposit$Input}
+ * - {@link starTransactionTypeFragmentWithdrawal$Input}
+ * - {@link starTransactionTypeTelegramAdsWithdrawal$Input}
+ * - {@link starTransactionTypeTelegramApiUsage$Input}
+ * - {@link starTransactionTypeBotPaidMediaPurchase$Input}
+ * - {@link starTransactionTypeBotPaidMediaSale$Input}
+ * - {@link starTransactionTypeChannelPaidMediaPurchase$Input}
+ * - {@link starTransactionTypeChannelPaidMediaSale$Input}
+ * - {@link starTransactionTypeBotInvoicePurchase$Input}
+ * - {@link starTransactionTypeBotInvoiceSale$Input}
+ * - {@link starTransactionTypeBotSubscriptionPurchase$Input}
+ * - {@link starTransactionTypeBotSubscriptionSale$Input}
+ * - {@link starTransactionTypeChannelSubscriptionPurchase$Input}
+ * - {@link starTransactionTypeChannelSubscriptionSale$Input}
+ * - {@link starTransactionTypeGiftPurchase$Input}
+ * - {@link starTransactionTypeGiftSale$Input}
+ * - {@link starTransactionTypeChannelPaidReactionSend$Input}
+ * - {@link starTransactionTypeChannelPaidReactionReceive$Input}
+ * - {@link starTransactionTypeAffiliateProgramCommission$Input}
+ * - {@link starTransactionTypeUnsupported$Input}
  */
-export type BotTransactionPurpose$Input =
-  | botTransactionPurposePaidMedia$Input
-  | botTransactionPurposeInvoicePayment$Input;
-
-/**
- * Any of:
- * - {@link chatTransactionPurposePaidMedia}
- * - {@link chatTransactionPurposeJoin}
- * - {@link chatTransactionPurposeReaction}
- * - {@link chatTransactionPurposeGiveaway}
- */
-export type ChatTransactionPurpose =
-  | chatTransactionPurposePaidMedia
-  | chatTransactionPurposeJoin
-  | chatTransactionPurposeReaction
-  | chatTransactionPurposeGiveaway;
-
-/**
- * Version of {@link ChatTransactionPurpose} for method parameters.
- * Any of:
- * - {@link chatTransactionPurposePaidMedia$Input}
- * - {@link chatTransactionPurposeJoin$Input}
- * - {@link chatTransactionPurposeReaction$Input}
- * - {@link chatTransactionPurposeGiveaway$Input}
- */
-export type ChatTransactionPurpose$Input =
-  | chatTransactionPurposePaidMedia$Input
-  | chatTransactionPurposeJoin$Input
-  | chatTransactionPurposeReaction$Input
-  | chatTransactionPurposeGiveaway$Input;
-
-/**
- * Any of:
- * - {@link userTransactionPurposeGiftedStars}
- * - {@link userTransactionPurposeGiftSell}
- * - {@link userTransactionPurposeGiftSend}
- */
-export type UserTransactionPurpose =
-  | userTransactionPurposeGiftedStars
-  | userTransactionPurposeGiftSell
-  | userTransactionPurposeGiftSend;
-
-/**
- * Version of {@link UserTransactionPurpose} for method parameters.
- * Any of:
- * - {@link userTransactionPurposeGiftedStars$Input}
- * - {@link userTransactionPurposeGiftSell$Input}
- * - {@link userTransactionPurposeGiftSend$Input}
- */
-export type UserTransactionPurpose$Input =
-  | userTransactionPurposeGiftedStars$Input
-  | userTransactionPurposeGiftSell$Input
-  | userTransactionPurposeGiftSend$Input;
-
-/**
- * Any of:
- * - {@link starTransactionPartnerTelegram}
- * - {@link starTransactionPartnerAppStore}
- * - {@link starTransactionPartnerGooglePlay}
- * - {@link starTransactionPartnerFragment}
- * - {@link starTransactionPartnerTelegramAds}
- * - {@link starTransactionPartnerTelegramApi}
- * - {@link starTransactionPartnerBot}
- * - {@link starTransactionPartnerBusiness}
- * - {@link starTransactionPartnerChat}
- * - {@link starTransactionPartnerUser}
- * - {@link starTransactionPartnerUnsupported}
- */
-export type StarTransactionPartner =
-  | starTransactionPartnerTelegram
-  | starTransactionPartnerAppStore
-  | starTransactionPartnerGooglePlay
-  | starTransactionPartnerFragment
-  | starTransactionPartnerTelegramAds
-  | starTransactionPartnerTelegramApi
-  | starTransactionPartnerBot
-  | starTransactionPartnerBusiness
-  | starTransactionPartnerChat
-  | starTransactionPartnerUser
-  | starTransactionPartnerUnsupported;
-
-/**
- * Version of {@link StarTransactionPartner} for method parameters.
- * Any of:
- * - {@link starTransactionPartnerTelegram$Input}
- * - {@link starTransactionPartnerAppStore$Input}
- * - {@link starTransactionPartnerGooglePlay$Input}
- * - {@link starTransactionPartnerFragment$Input}
- * - {@link starTransactionPartnerTelegramAds$Input}
- * - {@link starTransactionPartnerTelegramApi$Input}
- * - {@link starTransactionPartnerBot$Input}
- * - {@link starTransactionPartnerBusiness$Input}
- * - {@link starTransactionPartnerChat$Input}
- * - {@link starTransactionPartnerUser$Input}
- * - {@link starTransactionPartnerUnsupported$Input}
- */
-export type StarTransactionPartner$Input =
-  | starTransactionPartnerTelegram$Input
-  | starTransactionPartnerAppStore$Input
-  | starTransactionPartnerGooglePlay$Input
-  | starTransactionPartnerFragment$Input
-  | starTransactionPartnerTelegramAds$Input
-  | starTransactionPartnerTelegramApi$Input
-  | starTransactionPartnerBot$Input
-  | starTransactionPartnerBusiness$Input
-  | starTransactionPartnerChat$Input
-  | starTransactionPartnerUser$Input
-  | starTransactionPartnerUnsupported$Input;
+export type StarTransactionType$Input =
+  | starTransactionTypePremiumBotDeposit$Input
+  | starTransactionTypeAppStoreDeposit$Input
+  | starTransactionTypeGooglePlayDeposit$Input
+  | starTransactionTypeFragmentDeposit$Input
+  | starTransactionTypeUserDeposit$Input
+  | starTransactionTypeGiveawayDeposit$Input
+  | starTransactionTypeFragmentWithdrawal$Input
+  | starTransactionTypeTelegramAdsWithdrawal$Input
+  | starTransactionTypeTelegramApiUsage$Input
+  | starTransactionTypeBotPaidMediaPurchase$Input
+  | starTransactionTypeBotPaidMediaSale$Input
+  | starTransactionTypeChannelPaidMediaPurchase$Input
+  | starTransactionTypeChannelPaidMediaSale$Input
+  | starTransactionTypeBotInvoicePurchase$Input
+  | starTransactionTypeBotInvoiceSale$Input
+  | starTransactionTypeBotSubscriptionPurchase$Input
+  | starTransactionTypeBotSubscriptionSale$Input
+  | starTransactionTypeChannelSubscriptionPurchase$Input
+  | starTransactionTypeChannelSubscriptionSale$Input
+  | starTransactionTypeGiftPurchase$Input
+  | starTransactionTypeGiftSale$Input
+  | starTransactionTypeChannelPaidReactionSend$Input
+  | starTransactionTypeChannelPaidReactionReceive$Input
+  | starTransactionTypeAffiliateProgramCommission$Input
+  | starTransactionTypeUnsupported$Input;
 
 /**
  * Any of:
@@ -76238,6 +77902,42 @@ export type LoginUrlInfo$Input =
 
 /**
  * Any of:
+ * - {@link themeParameters}
+ */
+export type ThemeParameters = themeParameters;
+
+/**
+ * Version of {@link ThemeParameters} for method parameters.
+ * Any of:
+ * - {@link themeParameters$Input}
+ */
+export type ThemeParameters$Input = themeParameters$Input;
+
+/**
+ * Any of:
+ * - {@link webAppOpenModeCompact}
+ * - {@link webAppOpenModeFullSize}
+ * - {@link webAppOpenModeFullScreen}
+ */
+export type WebAppOpenMode =
+  | webAppOpenModeCompact
+  | webAppOpenModeFullSize
+  | webAppOpenModeFullScreen;
+
+/**
+ * Version of {@link WebAppOpenMode} for method parameters.
+ * Any of:
+ * - {@link webAppOpenModeCompact$Input}
+ * - {@link webAppOpenModeFullSize$Input}
+ * - {@link webAppOpenModeFullScreen$Input}
+ */
+export type WebAppOpenMode$Input =
+  | webAppOpenModeCompact$Input
+  | webAppOpenModeFullSize$Input
+  | webAppOpenModeFullScreen$Input;
+
+/**
+ * Any of:
  * - {@link foundWebApp}
  */
 export type FoundWebApp = foundWebApp;
@@ -76274,6 +77974,19 @@ export type MainWebApp = mainWebApp;
  * - {@link mainWebApp$Input}
  */
 export type MainWebApp$Input = mainWebApp$Input;
+
+/**
+ * Any of:
+ * - {@link webAppOpenParameters}
+ */
+export type WebAppOpenParameters = webAppOpenParameters;
+
+/**
+ * Version of {@link WebAppOpenParameters} for method parameters.
+ * Any of:
+ * - {@link webAppOpenParameters$Input}
+ */
+export type WebAppOpenParameters$Input = webAppOpenParameters$Input;
 
 /**
  * Any of:
@@ -77037,19 +78750,6 @@ export type LocationAddress$Input = locationAddress$Input;
 
 /**
  * Any of:
- * - {@link themeParameters}
- */
-export type ThemeParameters = themeParameters;
-
-/**
- * Version of {@link ThemeParameters} for method parameters.
- * Any of:
- * - {@link themeParameters$Input}
- */
-export type ThemeParameters$Input = themeParameters$Input;
-
-/**
- * Any of:
  * - {@link labeledPricePart}
  */
 export type LabeledPricePart = labeledPricePart;
@@ -77180,18 +78880,24 @@ export type PaymentOption$Input = paymentOption$Input;
  * Any of:
  * - {@link paymentFormTypeRegular}
  * - {@link paymentFormTypeStars}
+ * - {@link paymentFormTypeStarSubscription}
  */
-export type PaymentFormType = paymentFormTypeRegular | paymentFormTypeStars;
+export type PaymentFormType =
+  | paymentFormTypeRegular
+  | paymentFormTypeStars
+  | paymentFormTypeStarSubscription;
 
 /**
  * Version of {@link PaymentFormType} for method parameters.
  * Any of:
  * - {@link paymentFormTypeRegular$Input}
  * - {@link paymentFormTypeStars$Input}
+ * - {@link paymentFormTypeStarSubscription$Input}
  */
 export type PaymentFormType$Input =
   | paymentFormTypeRegular$Input
-  | paymentFormTypeStars$Input;
+  | paymentFormTypeStars$Input
+  | paymentFormTypeStarSubscription$Input;
 
 /**
  * Any of:
@@ -80038,6 +81744,42 @@ export type UserLink$Input = userLink$Input;
 
 /**
  * Any of:
+ * - {@link targetChatTypes}
+ */
+export type TargetChatTypes = targetChatTypes;
+
+/**
+ * Version of {@link TargetChatTypes} for method parameters.
+ * Any of:
+ * - {@link targetChatTypes$Input}
+ */
+export type TargetChatTypes$Input = targetChatTypes$Input;
+
+/**
+ * Any of:
+ * - {@link targetChatCurrent}
+ * - {@link targetChatChosen}
+ * - {@link targetChatInternalLink}
+ */
+export type TargetChat =
+  | targetChatCurrent
+  | targetChatChosen
+  | targetChatInternalLink;
+
+/**
+ * Version of {@link TargetChat} for method parameters.
+ * Any of:
+ * - {@link targetChatCurrent$Input}
+ * - {@link targetChatChosen$Input}
+ * - {@link targetChatInternalLink$Input}
+ */
+export type TargetChat$Input =
+  | targetChatCurrent$Input
+  | targetChatChosen$Input
+  | targetChatInternalLink$Input;
+
+/**
+ * Any of:
  * - {@link inputInlineQueryResultAnimation}
  * - {@link inputInlineQueryResultArticle}
  * - {@link inputInlineQueryResultAudio}
@@ -80198,6 +81940,32 @@ export type InlineQueryResults = inlineQueryResults;
  * - {@link inlineQueryResults$Input}
  */
 export type InlineQueryResults$Input = inlineQueryResults$Input;
+
+/**
+ * Any of:
+ * - {@link preparedInlineMessageId}
+ */
+export type PreparedInlineMessageId = preparedInlineMessageId;
+
+/**
+ * Version of {@link PreparedInlineMessageId} for method parameters.
+ * Any of:
+ * - {@link preparedInlineMessageId$Input}
+ */
+export type PreparedInlineMessageId$Input = preparedInlineMessageId$Input;
+
+/**
+ * Any of:
+ * - {@link preparedInlineMessage}
+ */
+export type PreparedInlineMessage = preparedInlineMessage;
+
+/**
+ * Version of {@link PreparedInlineMessage} for method parameters.
+ * Any of:
+ * - {@link preparedInlineMessage$Input}
+ */
+export type PreparedInlineMessage$Input = preparedInlineMessage$Input;
 
 /**
  * Any of:
@@ -81806,22 +83574,26 @@ export type StoryPrivacySettings$Input =
  * Any of:
  * - {@link userPrivacySettingRuleAllowAll}
  * - {@link userPrivacySettingRuleAllowContacts}
+ * - {@link userPrivacySettingRuleAllowBots}
  * - {@link userPrivacySettingRuleAllowPremiumUsers}
  * - {@link userPrivacySettingRuleAllowUsers}
  * - {@link userPrivacySettingRuleAllowChatMembers}
  * - {@link userPrivacySettingRuleRestrictAll}
  * - {@link userPrivacySettingRuleRestrictContacts}
+ * - {@link userPrivacySettingRuleRestrictBots}
  * - {@link userPrivacySettingRuleRestrictUsers}
  * - {@link userPrivacySettingRuleRestrictChatMembers}
  */
 export type UserPrivacySettingRule =
   | userPrivacySettingRuleAllowAll
   | userPrivacySettingRuleAllowContacts
+  | userPrivacySettingRuleAllowBots
   | userPrivacySettingRuleAllowPremiumUsers
   | userPrivacySettingRuleAllowUsers
   | userPrivacySettingRuleAllowChatMembers
   | userPrivacySettingRuleRestrictAll
   | userPrivacySettingRuleRestrictContacts
+  | userPrivacySettingRuleRestrictBots
   | userPrivacySettingRuleRestrictUsers
   | userPrivacySettingRuleRestrictChatMembers;
 
@@ -81830,22 +83602,26 @@ export type UserPrivacySettingRule =
  * Any of:
  * - {@link userPrivacySettingRuleAllowAll$Input}
  * - {@link userPrivacySettingRuleAllowContacts$Input}
+ * - {@link userPrivacySettingRuleAllowBots$Input}
  * - {@link userPrivacySettingRuleAllowPremiumUsers$Input}
  * - {@link userPrivacySettingRuleAllowUsers$Input}
  * - {@link userPrivacySettingRuleAllowChatMembers$Input}
  * - {@link userPrivacySettingRuleRestrictAll$Input}
  * - {@link userPrivacySettingRuleRestrictContacts$Input}
+ * - {@link userPrivacySettingRuleRestrictBots$Input}
  * - {@link userPrivacySettingRuleRestrictUsers$Input}
  * - {@link userPrivacySettingRuleRestrictChatMembers$Input}
  */
 export type UserPrivacySettingRule$Input =
   | userPrivacySettingRuleAllowAll$Input
   | userPrivacySettingRuleAllowContacts$Input
+  | userPrivacySettingRuleAllowBots$Input
   | userPrivacySettingRuleAllowPremiumUsers$Input
   | userPrivacySettingRuleAllowUsers$Input
   | userPrivacySettingRuleAllowChatMembers$Input
   | userPrivacySettingRuleRestrictAll$Input
   | userPrivacySettingRuleRestrictContacts$Input
+  | userPrivacySettingRuleRestrictBots$Input
   | userPrivacySettingRuleRestrictUsers$Input
   | userPrivacySettingRuleRestrictChatMembers$Input;
 
@@ -81875,6 +83651,7 @@ export type UserPrivacySettingRules$Input = userPrivacySettingRules$Input;
  * - {@link userPrivacySettingAllowPeerToPeerCalls}
  * - {@link userPrivacySettingAllowFindingByPhoneNumber}
  * - {@link userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages}
+ * - {@link userPrivacySettingAutosaveGifts}
  */
 export type UserPrivacySetting =
   | userPrivacySettingShowStatus
@@ -81887,7 +83664,8 @@ export type UserPrivacySetting =
   | userPrivacySettingAllowCalls
   | userPrivacySettingAllowPeerToPeerCalls
   | userPrivacySettingAllowFindingByPhoneNumber
-  | userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages;
+  | userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages
+  | userPrivacySettingAutosaveGifts;
 
 /**
  * Version of {@link UserPrivacySetting} for method parameters.
@@ -81903,6 +83681,7 @@ export type UserPrivacySetting =
  * - {@link userPrivacySettingAllowPeerToPeerCalls$Input}
  * - {@link userPrivacySettingAllowFindingByPhoneNumber$Input}
  * - {@link userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages$Input}
+ * - {@link userPrivacySettingAutosaveGifts$Input}
  */
 export type UserPrivacySetting$Input =
   | userPrivacySettingShowStatus$Input
@@ -81915,7 +83694,8 @@ export type UserPrivacySetting$Input =
   | userPrivacySettingAllowCalls$Input
   | userPrivacySettingAllowPeerToPeerCalls$Input
   | userPrivacySettingAllowFindingByPhoneNumber$Input
-  | userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages$Input;
+  | userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages$Input
+  | userPrivacySettingAutosaveGifts$Input;
 
 /**
  * Any of:
@@ -82239,29 +84019,6 @@ export type ReportStoryResult$Input =
 
 /**
  * Any of:
- * - {@link targetChatCurrent}
- * - {@link targetChatChosen}
- * - {@link targetChatInternalLink}
- */
-export type TargetChat =
-  | targetChatCurrent
-  | targetChatChosen
-  | targetChatInternalLink;
-
-/**
- * Version of {@link TargetChat} for method parameters.
- * Any of:
- * - {@link targetChatCurrent$Input}
- * - {@link targetChatChosen$Input}
- * - {@link targetChatInternalLink$Input}
- */
-export type TargetChat$Input =
-  | targetChatCurrent$Input
-  | targetChatChosen$Input
-  | targetChatInternalLink$Input;
-
-/**
- * Any of:
  * - {@link internalLinkTypeActiveSessions}
  * - {@link internalLinkTypeAttachmentMenuBot}
  * - {@link internalLinkTypeAuthenticationCode}
@@ -82272,6 +84029,7 @@ export type TargetChat$Input =
  * - {@link internalLinkTypeBusinessChat}
  * - {@link internalLinkTypeBuyStars}
  * - {@link internalLinkTypeChangePhoneNumber}
+ * - {@link internalLinkTypeChatAffiliateProgram}
  * - {@link internalLinkTypeChatBoost}
  * - {@link internalLinkTypeChatFolderInvite}
  * - {@link internalLinkTypeChatFolderSettings}
@@ -82319,6 +84077,7 @@ export type InternalLinkType =
   | internalLinkTypeBusinessChat
   | internalLinkTypeBuyStars
   | internalLinkTypeChangePhoneNumber
+  | internalLinkTypeChatAffiliateProgram
   | internalLinkTypeChatBoost
   | internalLinkTypeChatFolderInvite
   | internalLinkTypeChatFolderSettings
@@ -82368,6 +84127,7 @@ export type InternalLinkType =
  * - {@link internalLinkTypeBusinessChat$Input}
  * - {@link internalLinkTypeBuyStars$Input}
  * - {@link internalLinkTypeChangePhoneNumber$Input}
+ * - {@link internalLinkTypeChatAffiliateProgram$Input}
  * - {@link internalLinkTypeChatBoost$Input}
  * - {@link internalLinkTypeChatFolderInvite$Input}
  * - {@link internalLinkTypeChatFolderSettings$Input}
@@ -82415,6 +84175,7 @@ export type InternalLinkType$Input =
   | internalLinkTypeBusinessChat$Input
   | internalLinkTypeBuyStars$Input
   | internalLinkTypeChangePhoneNumber$Input
+  | internalLinkTypeChatAffiliateProgram$Input
   | internalLinkTypeChatBoost$Input
   | internalLinkTypeChatFolderInvite$Input
   | internalLinkTypeChatFolderSettings$Input
@@ -82544,6 +84305,10 @@ export type FilePart$Input = filePart$Input;
  * - {@link fileTypeSecret}
  * - {@link fileTypeSecretThumbnail}
  * - {@link fileTypeSecure}
+ * - {@link fileTypeSelfDestructingPhoto}
+ * - {@link fileTypeSelfDestructingVideo}
+ * - {@link fileTypeSelfDestructingVideoNote}
+ * - {@link fileTypeSelfDestructingVoiceNote}
  * - {@link fileTypeSticker}
  * - {@link fileTypeThumbnail}
  * - {@link fileTypeUnknown}
@@ -82565,6 +84330,10 @@ export type FileType =
   | fileTypeSecret
   | fileTypeSecretThumbnail
   | fileTypeSecure
+  | fileTypeSelfDestructingPhoto
+  | fileTypeSelfDestructingVideo
+  | fileTypeSelfDestructingVideoNote
+  | fileTypeSelfDestructingVoiceNote
   | fileTypeSticker
   | fileTypeThumbnail
   | fileTypeUnknown
@@ -82588,6 +84357,10 @@ export type FileType =
  * - {@link fileTypeSecret$Input}
  * - {@link fileTypeSecretThumbnail$Input}
  * - {@link fileTypeSecure$Input}
+ * - {@link fileTypeSelfDestructingPhoto$Input}
+ * - {@link fileTypeSelfDestructingVideo$Input}
+ * - {@link fileTypeSelfDestructingVideoNote$Input}
+ * - {@link fileTypeSelfDestructingVoiceNote$Input}
  * - {@link fileTypeSticker$Input}
  * - {@link fileTypeThumbnail$Input}
  * - {@link fileTypeUnknown$Input}
@@ -82609,6 +84382,10 @@ export type FileType$Input =
   | fileTypeSecret$Input
   | fileTypeSecretThumbnail$Input
   | fileTypeSecure$Input
+  | fileTypeSelfDestructingPhoto$Input
+  | fileTypeSelfDestructingVideo$Input
+  | fileTypeSelfDestructingVideoNote$Input
+  | fileTypeSelfDestructingVoiceNote$Input
   | fileTypeSticker$Input
   | fileTypeThumbnail$Input
   | fileTypeUnknown$Input
@@ -84587,8 +86364,11 @@ export type $MethodsDict = {
   readonly shareChatWithBot: shareChatWithBot;
   readonly getInlineQueryResults: getInlineQueryResults;
   readonly answerInlineQuery: answerInlineQuery;
+  readonly savePreparedInlineMessage: savePreparedInlineMessage;
+  readonly getPreparedInlineMessage: getPreparedInlineMessage;
   readonly getGrossingWebAppBots: getGrossingWebAppBots;
   readonly searchWebApp: searchWebApp;
+  readonly getWebAppPlaceholder: getWebAppPlaceholder;
   readonly getWebAppLinkUrl: getWebAppLinkUrl;
   readonly getMainWebApp: getMainWebApp;
   readonly getWebAppUrl: getWebAppUrl;
@@ -84596,6 +86376,7 @@ export type $MethodsDict = {
   readonly openWebApp: openWebApp;
   readonly closeWebApp: closeWebApp;
   readonly answerWebAppQuery: answerWebAppQuery;
+  readonly checkWebAppFileDownload: checkWebAppFileDownload;
   readonly getCallbackQueryAnswer: getCallbackQueryAnswer;
   readonly answerCallbackQuery: answerCallbackQuery;
   readonly answerShippingQuery: answerShippingQuery;
@@ -84835,9 +86616,12 @@ export type $MethodsDict = {
   readonly getCloseFriends: getCloseFriends;
   readonly setUserPersonalProfilePhoto: setUserPersonalProfilePhoto;
   readonly suggestUserProfilePhoto: suggestUserProfilePhoto;
+  readonly toggleBotCanManageEmojiStatus: toggleBotCanManageEmojiStatus;
+  readonly setUserEmojiStatus: setUserEmojiStatus;
   readonly searchUserByPhoneNumber: searchUserByPhoneNumber;
   readonly sharePhoneNumber: sharePhoneNumber;
   readonly getUserProfilePhotos: getUserProfilePhotos;
+  readonly getStickerOutline: getStickerOutline;
   readonly getStickers: getStickers;
   readonly getAllStickerEmojis: getAllStickerEmojis;
   readonly searchStickers: searchStickers;
@@ -84876,6 +86660,7 @@ export type $MethodsDict = {
   readonly addSavedAnimation: addSavedAnimation;
   readonly removeSavedAnimation: removeSavedAnimation;
   readonly getRecentInlineBots: getRecentInlineBots;
+  readonly getOwnedBots: getOwnedBots;
   readonly searchHashtags: searchHashtags;
   readonly removeRecentHashtag: removeRecentHashtag;
   readonly getLinkPreview: getLinkPreview;
@@ -85101,7 +86886,15 @@ export type $MethodsDict = {
   readonly assignAppStoreTransaction: assignAppStoreTransaction;
   readonly assignGooglePlayTransaction: assignGooglePlayTransaction;
   readonly editStarSubscription: editStarSubscription;
+  readonly editUserStarSubscription: editUserStarSubscription;
   readonly reuseStarSubscription: reuseStarSubscription;
+  readonly setChatAffiliateProgram: setChatAffiliateProgram;
+  readonly searchChatAffiliateProgram: searchChatAffiliateProgram;
+  readonly searchAffiliatePrograms: searchAffiliatePrograms;
+  readonly connectChatAffiliateProgram: connectChatAffiliateProgram;
+  readonly disconnectChatAffiliateProgram: disconnectChatAffiliateProgram;
+  readonly getChatAffiliateProgram: getChatAffiliateProgram;
+  readonly getChatAffiliatePrograms: getChatAffiliatePrograms;
   readonly getBusinessFeatures: getBusinessFeatures;
   readonly acceptTermsOfService: acceptTermsOfService;
   readonly searchStringsByPrefix: searchStringsByPrefix;
@@ -88319,6 +90112,32 @@ export class $AsyncApi {
   }
 
   /**
+   * Saves an inline message to be sent by the given user; for bots only
+   *
+   * @param {savePreparedInlineMessage$DirectInput} parameters {@link savePreparedInlineMessage$Input}
+   * @returns {Promise<PreparedInlineMessageId>} Promise<{@link PreparedInlineMessageId}>
+   */
+  async savePreparedInlineMessage(
+    parameters: savePreparedInlineMessage$DirectInput
+  ): Promise<PreparedInlineMessageId> {
+    const result = await this.client.invoke("savePreparedInlineMessage", parameters);
+    return result as PreparedInlineMessageId;
+  }
+
+  /**
+   * Saves an inline message to be sent by the given user
+   *
+   * @param {getPreparedInlineMessage$DirectInput} parameters {@link getPreparedInlineMessage$Input}
+   * @returns {Promise<PreparedInlineMessage>} Promise<{@link PreparedInlineMessage}>
+   */
+  async getPreparedInlineMessage(
+    parameters: getPreparedInlineMessage$DirectInput
+  ): Promise<PreparedInlineMessage> {
+    const result = await this.client.invoke("getPreparedInlineMessage", parameters);
+    return result as PreparedInlineMessage;
+  }
+
+  /**
    * Returns the most grossing Web App bots
    *
    * @param {getGrossingWebAppBots$DirectInput} parameters {@link getGrossingWebAppBots$Input}
@@ -88340,6 +90159,19 @@ export class $AsyncApi {
   async searchWebApp(parameters: searchWebApp$DirectInput): Promise<FoundWebApp> {
     const result = await this.client.invoke("searchWebApp", parameters);
     return result as FoundWebApp;
+  }
+
+  /**
+   * Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+   *
+   * @param {getWebAppPlaceholder$DirectInput} parameters {@link getWebAppPlaceholder$Input}
+   * @returns {Promise<Outline>} Promise<{@link Outline}>
+   */
+  async getWebAppPlaceholder(
+    parameters: getWebAppPlaceholder$DirectInput
+  ): Promise<Outline> {
+    const result = await this.client.invoke("getWebAppPlaceholder", parameters);
+    return result as Outline;
   }
 
   /**
@@ -88423,6 +90255,19 @@ export class $AsyncApi {
   ): Promise<SentWebAppMessage> {
     const result = await this.client.invoke("answerWebAppQuery", parameters);
     return result as SentWebAppMessage;
+  }
+
+  /**
+   * Checks whether a file can be downloaded and saved locally by Web App request
+   *
+   * @param {checkWebAppFileDownload$DirectInput} parameters {@link checkWebAppFileDownload$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async checkWebAppFileDownload(
+    parameters: checkWebAppFileDownload$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("checkWebAppFileDownload", parameters);
+    return result as Ok;
   }
 
   /**
@@ -91045,7 +92890,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns RTMP URL for streaming to the chat; requires owner privileges
+   * Returns RTMP URL for streaming to the chat; requires can_manage_video_chats administrator right
    *
    * @param {getVideoChatRtmpUrl$DirectInput} parameters {@link getVideoChatRtmpUrl$Input}
    * @returns {Promise<RtmpUrl>} Promise<{@link RtmpUrl}>
@@ -91610,6 +93455,33 @@ export class $AsyncApi {
   }
 
   /**
+   * Toggles whether the bot can manage emoji status of the current user
+   *
+   * @param {toggleBotCanManageEmojiStatus$DirectInput} parameters {@link toggleBotCanManageEmojiStatus$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async toggleBotCanManageEmojiStatus(
+    parameters: toggleBotCanManageEmojiStatus$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "toggleBotCanManageEmojiStatus",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Changes the emoji status of a user; for bots only
+   *
+   * @param {setUserEmojiStatus$DirectInput} parameters {@link setUserEmojiStatus$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setUserEmojiStatus(parameters: setUserEmojiStatus$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("setUserEmojiStatus", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Searches a user by their phone number. Returns a 404 error if the user can't be found
    *
    * @param {searchUserByPhoneNumber$DirectInput} parameters {@link searchUserByPhoneNumber$Input}
@@ -91644,6 +93516,19 @@ export class $AsyncApi {
   ): Promise<ChatPhotos> {
     const result = await this.client.invoke("getUserProfilePhotos", parameters);
     return result as ChatPhotos;
+  }
+
+  /**
+   * Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+   *
+   * @param {getStickerOutline$DirectInput} parameters {@link getStickerOutline$Input}
+   * @returns {Promise<Outline>} Promise<{@link Outline}>
+   */
+  async getStickerOutline(
+    parameters: getStickerOutline$DirectInput
+  ): Promise<Outline> {
+    const result = await this.client.invoke("getStickerOutline", parameters);
+    return result as Outline;
   }
 
   /**
@@ -92138,6 +94023,17 @@ export class $AsyncApi {
     parameters: getRecentInlineBots$DirectInput
   ): Promise<Users> {
     const result = await this.client.invoke("getRecentInlineBots", parameters);
+    return result as Users;
+  }
+
+  /**
+   * Returns the list of owned by the current user bots
+   *
+   * @param {getOwnedBots$DirectInput} parameters {@link getOwnedBots$Input}
+   * @returns {Promise<Users>} Promise<{@link Users}>
+   */
+  async getOwnedBots(parameters: getOwnedBots$DirectInput): Promise<Users> {
+    const result = await this.client.invoke("getOwnedBots", parameters);
     return result as Users;
   }
 
@@ -95138,7 +97034,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Cancels or reenables Telegram Star subscription to a channel
+   * Cancels or re-enables Telegram Star subscription
    *
    * @param {editStarSubscription$DirectInput} parameters {@link editStarSubscription$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -95151,7 +97047,20 @@ export class $AsyncApi {
   }
 
   /**
-   * Reuses an active subscription and joins the subscribed chat again
+   * Cancels or re-enables Telegram Star subscription for a user; for bots only
+   *
+   * @param {editUserStarSubscription$DirectInput} parameters {@link editUserStarSubscription$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async editUserStarSubscription(
+    parameters: editUserStarSubscription$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("editUserStarSubscription", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Reuses an active Telegram Star subscription to a channel chat and joins the chat again
    *
    * @param {reuseStarSubscription$DirectInput} parameters {@link reuseStarSubscription$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -95161,6 +97070,106 @@ export class $AsyncApi {
   ): Promise<Ok> {
     const result = await this.client.invoke("reuseStarSubscription", parameters);
     return result as Ok;
+  }
+
+  /**
+   * Changes affiliate program for a bot
+   *
+   * @param {setChatAffiliateProgram$DirectInput} parameters {@link setChatAffiliateProgram$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setChatAffiliateProgram(
+    parameters: setChatAffiliateProgram$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setChatAffiliateProgram", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Searches a chat with an affiliate program. Returns the chat if found and the program is active
+   *
+   * @param {searchChatAffiliateProgram$DirectInput} parameters {@link searchChatAffiliateProgram$Input}
+   * @returns {Promise<Chat>} Promise<{@link Chat}>
+   */
+  async searchChatAffiliateProgram(
+    parameters: searchChatAffiliateProgram$DirectInput
+  ): Promise<Chat> {
+    const result = await this.client.invoke(
+      "searchChatAffiliateProgram",
+      parameters
+    );
+    return result as Chat;
+  }
+
+  /**
+   * Searches affiliate programs that can be applied to the given chat
+   *
+   * @param {searchAffiliatePrograms$DirectInput} parameters {@link searchAffiliatePrograms$Input}
+   * @returns {Promise<FoundAffiliatePrograms>} Promise<{@link FoundAffiliatePrograms}>
+   */
+  async searchAffiliatePrograms(
+    parameters: searchAffiliatePrograms$DirectInput
+  ): Promise<FoundAffiliatePrograms> {
+    const result = await this.client.invoke("searchAffiliatePrograms", parameters);
+    return result as FoundAffiliatePrograms;
+  }
+
+  /**
+   * Connects an affiliate program to the given chat. Returns information about the connected affiliate program
+   *
+   * @param {connectChatAffiliateProgram$DirectInput} parameters {@link connectChatAffiliateProgram$Input}
+   * @returns {Promise<ChatAffiliateProgram>} Promise<{@link ChatAffiliateProgram}>
+   */
+  async connectChatAffiliateProgram(
+    parameters: connectChatAffiliateProgram$DirectInput
+  ): Promise<ChatAffiliateProgram> {
+    const result = await this.client.invoke(
+      "connectChatAffiliateProgram",
+      parameters
+    );
+    return result as ChatAffiliateProgram;
+  }
+
+  /**
+   * Disconnects an affiliate program from the given chat and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+   *
+   * @param {disconnectChatAffiliateProgram$DirectInput} parameters {@link disconnectChatAffiliateProgram$Input}
+   * @returns {Promise<ChatAffiliateProgram>} Promise<{@link ChatAffiliateProgram}>
+   */
+  async disconnectChatAffiliateProgram(
+    parameters: disconnectChatAffiliateProgram$DirectInput
+  ): Promise<ChatAffiliateProgram> {
+    const result = await this.client.invoke(
+      "disconnectChatAffiliateProgram",
+      parameters
+    );
+    return result as ChatAffiliateProgram;
+  }
+
+  /**
+   * Returns an affiliate program that were connected to the given chat by identifier of the bot that created the program
+   *
+   * @param {getChatAffiliateProgram$DirectInput} parameters {@link getChatAffiliateProgram$Input}
+   * @returns {Promise<ChatAffiliateProgram>} Promise<{@link ChatAffiliateProgram}>
+   */
+  async getChatAffiliateProgram(
+    parameters: getChatAffiliateProgram$DirectInput
+  ): Promise<ChatAffiliateProgram> {
+    const result = await this.client.invoke("getChatAffiliateProgram", parameters);
+    return result as ChatAffiliateProgram;
+  }
+
+  /**
+   * Returns affiliate programs that were connected to the given chat
+   *
+   * @param {getChatAffiliatePrograms$DirectInput} parameters {@link getChatAffiliatePrograms$Input}
+   * @returns {Promise<ChatAffiliatePrograms>} Promise<{@link ChatAffiliatePrograms}>
+   */
+  async getChatAffiliatePrograms(
+    parameters: getChatAffiliatePrograms$DirectInput
+  ): Promise<ChatAffiliatePrograms> {
+    const result = await this.client.invoke("getChatAffiliatePrograms", parameters);
+    return result as ChatAffiliatePrograms;
   }
 
   /**
@@ -107794,6 +109803,110 @@ export type answerInlineQuery$DirectInput = {
 export type answerInlineQuery = (parameters: answerInlineQuery$Input) => Ok;
 
 /**
+ * Saves an inline message to be sent by the given user; for bots only
+ */
+export type savePreparedInlineMessage$Input = {
+  readonly _: "savePreparedInlineMessage";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The description of the message
+   * @type {InputInlineQueryResult$Input} {@link InputInlineQueryResult}
+   */
+  readonly result?: InputInlineQueryResult$Input;
+
+  /**
+   * Types of the chats to which the message can be sent
+   * @type {targetChatTypes$Input} {@link targetChatTypes}
+   */
+  readonly chat_types?: targetChatTypes$Input;
+};
+
+/**
+ * Saves an inline message to be sent by the given user; for bots only
+ */
+export type savePreparedInlineMessage$DirectInput = {
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The description of the message
+   * @type {InputInlineQueryResult$Input} {@link InputInlineQueryResult}
+   */
+  readonly result?: InputInlineQueryResult$Input;
+
+  /**
+   * Types of the chats to which the message can be sent
+   * @type {targetChatTypes$Input} {@link targetChatTypes}
+   */
+  readonly chat_types?: targetChatTypes$Input;
+};
+
+/**
+ * Saves an inline message to be sent by the given user; for bots only
+ *
+ * @param {savePreparedInlineMessage$Input} parameters {@link savePreparedInlineMessage$Input}
+ * @returns {PreparedInlineMessageId} {@link PreparedInlineMessageId}
+ */
+export type savePreparedInlineMessage = (
+  parameters: savePreparedInlineMessage$Input
+) => PreparedInlineMessageId;
+
+/**
+ * Saves an inline message to be sent by the given user
+ */
+export type getPreparedInlineMessage$Input = {
+  readonly _: "getPreparedInlineMessage";
+
+  /**
+   * Identifier of the bot that created the message
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Identifier of the prepared message
+   * @type {string} {@link string}
+   */
+  readonly prepared_message_id?: string;
+};
+
+/**
+ * Saves an inline message to be sent by the given user
+ */
+export type getPreparedInlineMessage$DirectInput = {
+  /**
+   * Identifier of the bot that created the message
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Identifier of the prepared message
+   * @type {string} {@link string}
+   */
+  readonly prepared_message_id?: string;
+};
+
+/**
+ * Saves an inline message to be sent by the given user
+ *
+ * @param {getPreparedInlineMessage$Input} parameters {@link getPreparedInlineMessage$Input}
+ * @returns {PreparedInlineMessage} {@link PreparedInlineMessage}
+ */
+export type getPreparedInlineMessage = (
+  parameters: getPreparedInlineMessage$Input
+) => PreparedInlineMessage;
+
+/**
  * Returns the most grossing Web App bots
  */
 export type getGrossingWebAppBots$Input = {
@@ -107884,6 +109997,40 @@ export type searchWebApp$DirectInput = {
 export type searchWebApp = (parameters: searchWebApp$Input) => FoundWebApp;
 
 /**
+ * Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+ */
+export type getWebAppPlaceholder$Input = {
+  readonly _: "getWebAppPlaceholder";
+
+  /**
+   * Identifier of the target bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+ */
+export type getWebAppPlaceholder$DirectInput = {
+  /**
+   * Identifier of the target bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+ *
+ * @param {getWebAppPlaceholder$Input} parameters {@link getWebAppPlaceholder$Input}
+ * @returns {Outline} {@link Outline}
+ */
+export type getWebAppPlaceholder = (
+  parameters: getWebAppPlaceholder$Input
+) => Outline;
+
+/**
  * Returns an HTTPS URL of a Web App to open after a link of the type internalLinkTypeWebApp is clicked
  */
 export type getWebAppLinkUrl$Input = {
@@ -107914,22 +110061,16 @@ export type getWebAppLinkUrl$Input = {
   readonly start_parameter?: string;
 
   /**
-   * Preferred Web App theme; pass null to use the default theme
-   * @type {themeParameters$Input} {@link themeParameters}
-   */
-  readonly theme?: themeParameters$Input | null;
-
-  /**
-   * Short name of the current application; 0-64 English letters, digits, and underscores
-   * @type {string} {@link string}
-   */
-  readonly application_name?: string;
-
-  /**
    * Pass true if the current user allowed the bot to send them messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly allow_write_access?: Bool$Input;
+
+  /**
+   * Parameters to use to open the Web App
+   * @type {webAppOpenParameters$Input} {@link webAppOpenParameters}
+   */
+  readonly parameters?: webAppOpenParameters$Input;
 };
 
 /**
@@ -107961,22 +110102,16 @@ export type getWebAppLinkUrl$DirectInput = {
   readonly start_parameter?: string;
 
   /**
-   * Preferred Web App theme; pass null to use the default theme
-   * @type {themeParameters$Input} {@link themeParameters}
-   */
-  readonly theme?: themeParameters$Input | null;
-
-  /**
-   * Short name of the current application; 0-64 English letters, digits, and underscores
-   * @type {string} {@link string}
-   */
-  readonly application_name?: string;
-
-  /**
    * Pass true if the current user allowed the bot to send them messages
    * @type {Bool$Input} {@link Bool}
    */
   readonly allow_write_access?: Bool$Input;
+
+  /**
+   * Parameters to use to open the Web App
+   * @type {webAppOpenParameters$Input} {@link webAppOpenParameters}
+   */
+  readonly parameters?: webAppOpenParameters$Input;
 };
 
 /**
@@ -108012,16 +110147,10 @@ export type getMainWebApp$Input = {
   readonly start_parameter?: string;
 
   /**
-   * Preferred Web App theme; pass null to use the default theme
-   * @type {themeParameters$Input} {@link themeParameters}
+   * Parameters to use to open the Web App
+   * @type {webAppOpenParameters$Input} {@link webAppOpenParameters}
    */
-  readonly theme?: themeParameters$Input | null;
-
-  /**
-   * Short name of the current application; 0-64 English letters, digits, and underscores
-   * @type {string} {@link string}
-   */
-  readonly application_name?: string;
+  readonly parameters?: webAppOpenParameters$Input;
 };
 
 /**
@@ -108047,16 +110176,10 @@ export type getMainWebApp$DirectInput = {
   readonly start_parameter?: string;
 
   /**
-   * Preferred Web App theme; pass null to use the default theme
-   * @type {themeParameters$Input} {@link themeParameters}
+   * Parameters to use to open the Web App
+   * @type {webAppOpenParameters$Input} {@link webAppOpenParameters}
    */
-  readonly theme?: themeParameters$Input | null;
-
-  /**
-   * Short name of the current application; 0-64 English letters, digits, and underscores
-   * @type {string} {@link string}
-   */
-  readonly application_name?: string;
+  readonly parameters?: webAppOpenParameters$Input;
 };
 
 /**
@@ -108086,16 +110209,10 @@ export type getWebAppUrl$Input = {
   readonly url?: string;
 
   /**
-   * Preferred Web App theme; pass null to use the default theme
-   * @type {themeParameters$Input} {@link themeParameters}
+   * Parameters to use to open the Web App
+   * @type {webAppOpenParameters$Input} {@link webAppOpenParameters}
    */
-  readonly theme?: themeParameters$Input | null;
-
-  /**
-   * Short name of the current application; 0-64 English letters, digits, and underscores
-   * @type {string} {@link string}
-   */
-  readonly application_name?: string;
+  readonly parameters?: webAppOpenParameters$Input;
 };
 
 /**
@@ -108115,16 +110232,10 @@ export type getWebAppUrl$DirectInput = {
   readonly url?: string;
 
   /**
-   * Preferred Web App theme; pass null to use the default theme
-   * @type {themeParameters$Input} {@link themeParameters}
+   * Parameters to use to open the Web App
+   * @type {webAppOpenParameters$Input} {@link webAppOpenParameters}
    */
-  readonly theme?: themeParameters$Input | null;
-
-  /**
-   * Short name of the current application; 0-64 English letters, digits, and underscores
-   * @type {string} {@link string}
-   */
-  readonly application_name?: string;
+  readonly parameters?: webAppOpenParameters$Input;
 };
 
 /**
@@ -108218,18 +110329,6 @@ export type openWebApp$Input = {
   readonly url?: string;
 
   /**
-   * Preferred Web App theme; pass null to use the default theme
-   * @type {themeParameters$Input} {@link themeParameters}
-   */
-  readonly theme?: themeParameters$Input | null;
-
-  /**
-   * Short name of the current application; 0-64 English letters, digits, and underscores
-   * @type {string} {@link string}
-   */
-  readonly application_name?: string;
-
-  /**
    * If not 0, the message thread identifier in which the message will be sent
    * @type {int53} {@link int53}
    */
@@ -108240,6 +110339,12 @@ export type openWebApp$Input = {
    * @type {InputMessageReplyTo$Input} {@link InputMessageReplyTo}
    */
   readonly reply_to?: InputMessageReplyTo$Input | null;
+
+  /**
+   * Parameters to use to open the Web App
+   * @type {webAppOpenParameters$Input} {@link webAppOpenParameters}
+   */
+  readonly parameters?: webAppOpenParameters$Input;
 };
 
 /**
@@ -108267,18 +110372,6 @@ export type openWebApp$DirectInput = {
   readonly url?: string;
 
   /**
-   * Preferred Web App theme; pass null to use the default theme
-   * @type {themeParameters$Input} {@link themeParameters}
-   */
-  readonly theme?: themeParameters$Input | null;
-
-  /**
-   * Short name of the current application; 0-64 English letters, digits, and underscores
-   * @type {string} {@link string}
-   */
-  readonly application_name?: string;
-
-  /**
    * If not 0, the message thread identifier in which the message will be sent
    * @type {int53} {@link int53}
    */
@@ -108289,6 +110382,12 @@ export type openWebApp$DirectInput = {
    * @type {InputMessageReplyTo$Input} {@link InputMessageReplyTo}
    */
   readonly reply_to?: InputMessageReplyTo$Input | null;
+
+  /**
+   * Parameters to use to open the Web App
+   * @type {webAppOpenParameters$Input} {@link webAppOpenParameters}
+   */
+  readonly parameters?: webAppOpenParameters$Input;
 };
 
 /**
@@ -108378,6 +110477,64 @@ export type answerWebAppQuery$DirectInput = {
 export type answerWebAppQuery = (
   parameters: answerWebAppQuery$Input
 ) => SentWebAppMessage;
+
+/**
+ * Checks whether a file can be downloaded and saved locally by Web App request
+ */
+export type checkWebAppFileDownload$Input = {
+  readonly _: "checkWebAppFileDownload";
+
+  /**
+   * Identifier of the bot, providing the Web App
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Name of the file
+   * @type {string} {@link string}
+   */
+  readonly file_name?: string;
+
+  /**
+   * URL of the file
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+};
+
+/**
+ * Checks whether a file can be downloaded and saved locally by Web App request
+ */
+export type checkWebAppFileDownload$DirectInput = {
+  /**
+   * Identifier of the bot, providing the Web App
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Name of the file
+   * @type {string} {@link string}
+   */
+  readonly file_name?: string;
+
+  /**
+   * URL of the file
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+};
+
+/**
+ * Checks whether a file can be downloaded and saved locally by Web App request
+ *
+ * @param {checkWebAppFileDownload$Input} parameters {@link checkWebAppFileDownload$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type checkWebAppFileDownload = (
+  parameters: checkWebAppFileDownload$Input
+) => Ok;
 
 /**
  * Sends a callback query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
@@ -117772,7 +119929,7 @@ export type createVideoChat$Input = {
   readonly start_date?: int32;
 
   /**
-   * Pass true to create an RTMP stream instead of an ordinary video chat; requires owner privileges
+   * Pass true to create an RTMP stream instead of an ordinary video chat
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_rtmp_stream?: Bool$Input;
@@ -117801,7 +119958,7 @@ export type createVideoChat$DirectInput = {
   readonly start_date?: int32;
 
   /**
-   * Pass true to create an RTMP stream instead of an ordinary video chat; requires owner privileges
+   * Pass true to create an RTMP stream instead of an ordinary video chat
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_rtmp_stream?: Bool$Input;
@@ -117816,7 +119973,7 @@ export type createVideoChat$DirectInput = {
 export type createVideoChat = (parameters: createVideoChat$Input) => GroupCallId;
 
 /**
- * Returns RTMP URL for streaming to the chat; requires owner privileges
+ * Returns RTMP URL for streaming to the chat; requires can_manage_video_chats administrator right
  */
 export type getVideoChatRtmpUrl$Input = {
   readonly _: "getVideoChatRtmpUrl";
@@ -117829,7 +119986,7 @@ export type getVideoChatRtmpUrl$Input = {
 };
 
 /**
- * Returns RTMP URL for streaming to the chat; requires owner privileges
+ * Returns RTMP URL for streaming to the chat; requires can_manage_video_chats administrator right
  */
 export type getVideoChatRtmpUrl$DirectInput = {
   /**
@@ -117840,7 +119997,7 @@ export type getVideoChatRtmpUrl$DirectInput = {
 };
 
 /**
- * Returns RTMP URL for streaming to the chat; requires owner privileges
+ * Returns RTMP URL for streaming to the chat; requires can_manage_video_chats administrator right
  *
  * @param {getVideoChatRtmpUrl$Input} parameters {@link getVideoChatRtmpUrl$Input}
  * @returns {RtmpUrl} {@link RtmpUrl}
@@ -119680,6 +121837,96 @@ export type suggestUserProfilePhoto = (
 ) => Ok;
 
 /**
+ * Toggles whether the bot can manage emoji status of the current user
+ */
+export type toggleBotCanManageEmojiStatus$Input = {
+  readonly _: "toggleBotCanManageEmojiStatus";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Pass true if the bot is allowed to change emoji status of the user; pass false otherwise
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly can_manage_emoji_status?: Bool$Input;
+};
+
+/**
+ * Toggles whether the bot can manage emoji status of the current user
+ */
+export type toggleBotCanManageEmojiStatus$DirectInput = {
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Pass true if the bot is allowed to change emoji status of the user; pass false otherwise
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly can_manage_emoji_status?: Bool$Input;
+};
+
+/**
+ * Toggles whether the bot can manage emoji status of the current user
+ *
+ * @param {toggleBotCanManageEmojiStatus$Input} parameters {@link toggleBotCanManageEmojiStatus$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type toggleBotCanManageEmojiStatus = (
+  parameters: toggleBotCanManageEmojiStatus$Input
+) => Ok;
+
+/**
+ * Changes the emoji status of a user; for bots only
+ */
+export type setUserEmojiStatus$Input = {
+  readonly _: "setUserEmojiStatus";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * New emoji status; pass null to switch to the default badge
+   * @type {emojiStatus$Input} {@link emojiStatus}
+   */
+  readonly emoji_status?: emojiStatus$Input | null;
+};
+
+/**
+ * Changes the emoji status of a user; for bots only
+ */
+export type setUserEmojiStatus$DirectInput = {
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * New emoji status; pass null to switch to the default badge
+   * @type {emojiStatus$Input} {@link emojiStatus}
+   */
+  readonly emoji_status?: emojiStatus$Input | null;
+};
+
+/**
+ * Changes the emoji status of a user; for bots only
+ *
+ * @param {setUserEmojiStatus$Input} parameters {@link setUserEmojiStatus$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setUserEmojiStatus = (parameters: setUserEmojiStatus$Input) => Ok;
+
+/**
  * Searches a user by their phone number. Returns a 404 error if the user can't be found
  */
 export type searchUserByPhoneNumber$Input = {
@@ -119814,6 +122061,62 @@ export type getUserProfilePhotos$DirectInput = {
 export type getUserProfilePhotos = (
   parameters: getUserProfilePhotos$Input
 ) => ChatPhotos;
+
+/**
+ * Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+ */
+export type getStickerOutline$Input = {
+  readonly _: "getStickerOutline";
+
+  /**
+   * File identifier of the sticker
+   * @type {int32} {@link int32}
+   */
+  readonly sticker_file_id?: int32;
+
+  /**
+   * Pass true to get the outline scaled for animated emoji
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly for_animated_emoji?: Bool$Input;
+
+  /**
+   * Pass true to get the outline scaled for clicked animated emoji message
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly for_clicked_animated_emoji_message?: Bool$Input;
+};
+
+/**
+ * Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+ */
+export type getStickerOutline$DirectInput = {
+  /**
+   * File identifier of the sticker
+   * @type {int32} {@link int32}
+   */
+  readonly sticker_file_id?: int32;
+
+  /**
+   * Pass true to get the outline scaled for animated emoji
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly for_animated_emoji?: Bool$Input;
+
+  /**
+   * Pass true to get the outline scaled for clicked animated emoji message
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly for_clicked_animated_emoji_message?: Bool$Input;
+};
+
+/**
+ * Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+ *
+ * @param {getStickerOutline$Input} parameters {@link getStickerOutline$Input}
+ * @returns {Outline} {@link Outline}
+ */
+export type getStickerOutline = (parameters: getStickerOutline$Input) => Outline;
 
 /**
  * Returns stickers from the installed sticker sets that correspond to any of the given emoji or can be found by sticker-specific keywords. If the query is non-empty, then favorite, recently used or trending stickers may also be returned
@@ -119964,10 +122267,28 @@ export type searchStickers$Input = {
   readonly sticker_type?: StickerType$Input;
 
   /**
-   * Space-separated list of emojis to search for; must be non-empty
+   * Space-separated list of emojis to search for
    * @type {string} {@link string}
    */
   readonly emojis?: string;
+
+  /**
+   * Query to search for; may be empty to search for emoji only
+   * @type {string} {@link string}
+   */
+  readonly query?: string;
+
+  /**
+   * List of possible IETF language tags of the user's input language; may be empty if unknown
+   * @type {vector$Input<string>} {@link vector<string>}
+   */
+  readonly input_language_codes?: vector$Input<string>;
+
+  /**
+   * The offset from which to return the stickers; must be non-negative
+   * @type {int32} {@link int32}
+   */
+  readonly offset?: int32;
 
   /**
    * The maximum number of stickers to be returned; 0-100
@@ -119987,10 +122308,28 @@ export type searchStickers$DirectInput = {
   readonly sticker_type?: StickerType$Input;
 
   /**
-   * Space-separated list of emojis to search for; must be non-empty
+   * Space-separated list of emojis to search for
    * @type {string} {@link string}
    */
   readonly emojis?: string;
+
+  /**
+   * Query to search for; may be empty to search for emoji only
+   * @type {string} {@link string}
+   */
+  readonly query?: string;
+
+  /**
+   * List of possible IETF language tags of the user's input language; may be empty if unknown
+   * @type {vector$Input<string>} {@link vector<string>}
+   */
+  readonly input_language_codes?: vector$Input<string>;
+
+  /**
+   * The offset from which to return the stickers; must be non-negative
+   * @type {int32} {@link int32}
+   */
+  readonly offset?: int32;
 
   /**
    * The maximum number of stickers to be returned; 0-100
@@ -121272,6 +123611,26 @@ export type getRecentInlineBots$DirectInput = {};
  * @returns {Users} {@link Users}
  */
 export type getRecentInlineBots = (parameters: getRecentInlineBots$Input) => Users;
+
+/**
+ * Returns the list of owned by the current user bots
+ */
+export type getOwnedBots$Input = {
+  readonly _: "getOwnedBots";
+};
+
+/**
+ * Returns the list of owned by the current user bots
+ */
+export type getOwnedBots$DirectInput = {};
+
+/**
+ * Returns the list of owned by the current user bots
+ *
+ * @param {getOwnedBots$Input} parameters {@link getOwnedBots$Input}
+ * @returns {Users} {@link Users}
+ */
+export type getOwnedBots = (parameters: getOwnedBots$Input) => Users;
 
 /**
  * Searches for recently used hashtags by their prefix
@@ -125766,6 +128125,12 @@ export type createInvoiceLink$Input = {
   readonly _: "createInvoiceLink";
 
   /**
+   * Unique identifier of business connection on behalf of which to send the request
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
+  /**
    * Information about the invoice of the type inputMessageInvoice
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
@@ -125776,6 +128141,12 @@ export type createInvoiceLink$Input = {
  * Creates a link for the given invoice; for bots only
  */
 export type createInvoiceLink$DirectInput = {
+  /**
+   * Unique identifier of business connection on behalf of which to send the request
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
   /**
    * Information about the invoice of the type inputMessageInvoice
    * @type {InputMessageContent$Input} {@link InputMessageContent}
@@ -130628,7 +132999,7 @@ export type assignGooglePlayTransaction = (
 ) => Ok;
 
 /**
- * Cancels or reenables Telegram Star subscription to a channel
+ * Cancels or re-enables Telegram Star subscription
  */
 export type editStarSubscription$Input = {
   readonly _: "editStarSubscription";
@@ -130647,7 +133018,7 @@ export type editStarSubscription$Input = {
 };
 
 /**
- * Cancels or reenables Telegram Star subscription to a channel
+ * Cancels or re-enables Telegram Star subscription
  */
 export type editStarSubscription$DirectInput = {
   /**
@@ -130664,7 +133035,7 @@ export type editStarSubscription$DirectInput = {
 };
 
 /**
- * Cancels or reenables Telegram Star subscription to a channel
+ * Cancels or re-enables Telegram Star subscription
  *
  * @param {editStarSubscription$Input} parameters {@link editStarSubscription$Input}
  * @returns {Ok} {@link Ok}
@@ -130672,7 +133043,65 @@ export type editStarSubscription$DirectInput = {
 export type editStarSubscription = (parameters: editStarSubscription$Input) => Ok;
 
 /**
- * Reuses an active subscription and joins the subscribed chat again
+ * Cancels or re-enables Telegram Star subscription for a user; for bots only
+ */
+export type editUserStarSubscription$Input = {
+  readonly _: "editUserStarSubscription";
+
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Telegram payment identifier of the subscription
+   * @type {string} {@link string}
+   */
+  readonly telegram_payment_charge_id?: string;
+
+  /**
+   * Pass true to cancel the subscription; pass false to allow the user to enable it
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_canceled?: Bool$Input;
+};
+
+/**
+ * Cancels or re-enables Telegram Star subscription for a user; for bots only
+ */
+export type editUserStarSubscription$DirectInput = {
+  /**
+   * User identifier
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Telegram payment identifier of the subscription
+   * @type {string} {@link string}
+   */
+  readonly telegram_payment_charge_id?: string;
+
+  /**
+   * Pass true to cancel the subscription; pass false to allow the user to enable it
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_canceled?: Bool$Input;
+};
+
+/**
+ * Cancels or re-enables Telegram Star subscription for a user; for bots only
+ *
+ * @param {editUserStarSubscription$Input} parameters {@link editUserStarSubscription$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type editUserStarSubscription = (
+  parameters: editUserStarSubscription$Input
+) => Ok;
+
+/**
+ * Reuses an active Telegram Star subscription to a channel chat and joins the chat again
  */
 export type reuseStarSubscription$Input = {
   readonly _: "reuseStarSubscription";
@@ -130685,7 +133114,7 @@ export type reuseStarSubscription$Input = {
 };
 
 /**
- * Reuses an active subscription and joins the subscribed chat again
+ * Reuses an active Telegram Star subscription to a channel chat and joins the chat again
  */
 export type reuseStarSubscription$DirectInput = {
   /**
@@ -130696,12 +133125,374 @@ export type reuseStarSubscription$DirectInput = {
 };
 
 /**
- * Reuses an active subscription and joins the subscribed chat again
+ * Reuses an active Telegram Star subscription to a channel chat and joins the chat again
  *
  * @param {reuseStarSubscription$Input} parameters {@link reuseStarSubscription$Input}
  * @returns {Ok} {@link Ok}
  */
 export type reuseStarSubscription = (parameters: reuseStarSubscription$Input) => Ok;
+
+/**
+ * Changes affiliate program for a bot
+ */
+export type setChatAffiliateProgram$Input = {
+  readonly _: "setChatAffiliateProgram";
+
+  /**
+   * Identifier of the chat with an owned bot for which affiliate program is changed
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Parameters of the affiliate program; pass null to close the currently active program. If there is an active program, then commission and program duration can only be increased.
+   *
+   * - If the active program is scheduled to be closed, then it can't be changed anymore
+   * @type {affiliateProgramParameters$Input} {@link affiliateProgramParameters}
+   */
+  readonly parameters?: affiliateProgramParameters$Input | null;
+};
+
+/**
+ * Changes affiliate program for a bot
+ */
+export type setChatAffiliateProgram$DirectInput = {
+  /**
+   * Identifier of the chat with an owned bot for which affiliate program is changed
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Parameters of the affiliate program; pass null to close the currently active program. If there is an active program, then commission and program duration can only be increased.
+   *
+   * - If the active program is scheduled to be closed, then it can't be changed anymore
+   * @type {affiliateProgramParameters$Input} {@link affiliateProgramParameters}
+   */
+  readonly parameters?: affiliateProgramParameters$Input | null;
+};
+
+/**
+ * Changes affiliate program for a bot
+ *
+ * @param {setChatAffiliateProgram$Input} parameters {@link setChatAffiliateProgram$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setChatAffiliateProgram = (
+  parameters: setChatAffiliateProgram$Input
+) => Ok;
+
+/**
+ * Searches a chat with an affiliate program. Returns the chat if found and the program is active
+ */
+export type searchChatAffiliateProgram$Input = {
+  readonly _: "searchChatAffiliateProgram";
+
+  /**
+   * Username of the chat
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+
+  /**
+   * The referrer from an internalLinkTypeChatAffiliateProgram link
+   * @type {string} {@link string}
+   */
+  readonly referrer?: string;
+};
+
+/**
+ * Searches a chat with an affiliate program. Returns the chat if found and the program is active
+ */
+export type searchChatAffiliateProgram$DirectInput = {
+  /**
+   * Username of the chat
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+
+  /**
+   * The referrer from an internalLinkTypeChatAffiliateProgram link
+   * @type {string} {@link string}
+   */
+  readonly referrer?: string;
+};
+
+/**
+ * Searches a chat with an affiliate program. Returns the chat if found and the program is active
+ *
+ * @param {searchChatAffiliateProgram$Input} parameters {@link searchChatAffiliateProgram$Input}
+ * @returns {Chat} {@link Chat}
+ */
+export type searchChatAffiliateProgram = (
+  parameters: searchChatAffiliateProgram$Input
+) => Chat;
+
+/**
+ * Searches affiliate programs that can be applied to the given chat
+ */
+export type searchAffiliatePrograms$Input = {
+  readonly _: "searchAffiliatePrograms";
+
+  /**
+   * Identifier of the chat for which affiliate programs are searched for. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Sort order for the results
+   * @type {AffiliateProgramSortOrder$Input} {@link AffiliateProgramSortOrder}
+   */
+  readonly sort_order?: AffiliateProgramSortOrder$Input;
+
+  /**
+   * Offset of the first affiliate program to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of affiliate programs to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Searches affiliate programs that can be applied to the given chat
+ */
+export type searchAffiliatePrograms$DirectInput = {
+  /**
+   * Identifier of the chat for which affiliate programs are searched for. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Sort order for the results
+   * @type {AffiliateProgramSortOrder$Input} {@link AffiliateProgramSortOrder}
+   */
+  readonly sort_order?: AffiliateProgramSortOrder$Input;
+
+  /**
+   * Offset of the first affiliate program to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of affiliate programs to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Searches affiliate programs that can be applied to the given chat
+ *
+ * @param {searchAffiliatePrograms$Input} parameters {@link searchAffiliatePrograms$Input}
+ * @returns {FoundAffiliatePrograms} {@link FoundAffiliatePrograms}
+ */
+export type searchAffiliatePrograms = (
+  parameters: searchAffiliatePrograms$Input
+) => FoundAffiliatePrograms;
+
+/**
+ * Connects an affiliate program to the given chat. Returns information about the connected affiliate program
+ */
+export type connectChatAffiliateProgram$Input = {
+  readonly _: "connectChatAffiliateProgram";
+
+  /**
+   * Identifier of the chat to which the affiliate program will be connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the bot, which affiliate program is connected
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Connects an affiliate program to the given chat. Returns information about the connected affiliate program
+ */
+export type connectChatAffiliateProgram$DirectInput = {
+  /**
+   * Identifier of the chat to which the affiliate program will be connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the bot, which affiliate program is connected
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Connects an affiliate program to the given chat. Returns information about the connected affiliate program
+ *
+ * @param {connectChatAffiliateProgram$Input} parameters {@link connectChatAffiliateProgram$Input}
+ * @returns {ChatAffiliateProgram} {@link ChatAffiliateProgram}
+ */
+export type connectChatAffiliateProgram = (
+  parameters: connectChatAffiliateProgram$Input
+) => ChatAffiliateProgram;
+
+/**
+ * Disconnects an affiliate program from the given chat and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+ */
+export type disconnectChatAffiliateProgram$Input = {
+  readonly _: "disconnectChatAffiliateProgram";
+
+  /**
+   * Identifier of the chat for which the affiliate program is connected
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The referral link of the affiliate program
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+};
+
+/**
+ * Disconnects an affiliate program from the given chat and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+ */
+export type disconnectChatAffiliateProgram$DirectInput = {
+  /**
+   * Identifier of the chat for which the affiliate program is connected
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The referral link of the affiliate program
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+};
+
+/**
+ * Disconnects an affiliate program from the given chat and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+ *
+ * @param {disconnectChatAffiliateProgram$Input} parameters {@link disconnectChatAffiliateProgram$Input}
+ * @returns {ChatAffiliateProgram} {@link ChatAffiliateProgram}
+ */
+export type disconnectChatAffiliateProgram = (
+  parameters: disconnectChatAffiliateProgram$Input
+) => ChatAffiliateProgram;
+
+/**
+ * Returns an affiliate program that were connected to the given chat by identifier of the bot that created the program
+ */
+export type getChatAffiliateProgram$Input = {
+  readonly _: "getChatAffiliateProgram";
+
+  /**
+   * Identifier of the chat for which the affiliate program was connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the bot that created the program
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Returns an affiliate program that were connected to the given chat by identifier of the bot that created the program
+ */
+export type getChatAffiliateProgram$DirectInput = {
+  /**
+   * Identifier of the chat for which the affiliate program was connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the bot that created the program
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Returns an affiliate program that were connected to the given chat by identifier of the bot that created the program
+ *
+ * @param {getChatAffiliateProgram$Input} parameters {@link getChatAffiliateProgram$Input}
+ * @returns {ChatAffiliateProgram} {@link ChatAffiliateProgram}
+ */
+export type getChatAffiliateProgram = (
+  parameters: getChatAffiliateProgram$Input
+) => ChatAffiliateProgram;
+
+/**
+ * Returns affiliate programs that were connected to the given chat
+ */
+export type getChatAffiliatePrograms$Input = {
+  readonly _: "getChatAffiliatePrograms";
+
+  /**
+   * Identifier of the chat for which the affiliate programs were connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Offset of the first affiliate program to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of affiliate programs to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns affiliate programs that were connected to the given chat
+ */
+export type getChatAffiliatePrograms$DirectInput = {
+  /**
+   * Identifier of the chat for which the affiliate programs were connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Offset of the first affiliate program to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of affiliate programs to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns affiliate programs that were connected to the given chat
+ *
+ * @param {getChatAffiliatePrograms$Input} parameters {@link getChatAffiliatePrograms$Input}
+ * @returns {ChatAffiliatePrograms} {@link ChatAffiliatePrograms}
+ */
+export type getChatAffiliatePrograms = (
+  parameters: getChatAffiliatePrograms$Input
+) => ChatAffiliatePrograms;
 
 /**
  * Returns information about features, available to Business users
