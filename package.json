@@ -111,7 +111,7 @@
   "dependencies": {
     "debug": "^4.3.7",
     "detect-libc": "^2.0.3",
-    "node-addon-api": "^8.2.1"
+    "node-addon-api": "^8.2.2"
   },
   "optionalDependencies": {
     "@tdlib-native/tdjson-android-arm64-glibc": "1.8.39-commit.056963e48fa8d3f89556239c22d6ac843d3c8a5b",
