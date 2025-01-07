@@ -6,6 +6,6 @@
 
 - Platform: macOS (darwin)
 - Cpu Arch: x64 (also known as: x86_64, AMD64)
-- TDLib Version: [1.8.39 `056963e`](https://github.com/tdlib/td/tree/056963e48fa8d3f89556239c22d6ac843d3c8a5b)
+- TDLib Version: [1.8.41 `eb98bbe`](https://github.com/tdlib/td/tree/eb98bbe611e1132f98914e4cd4e2c727079cc84d)
 - TDLib License: [Boost Software License 1.0](https://github.com/tdlib/td/blob/master/LICENSE_1_0.txt)
 - Package License: MIT
