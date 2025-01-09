@@ -472,6 +472,7 @@ export const $Methods = Object.freeze({
   getVideoChatAvailableParticipants: "getVideoChatAvailableParticipants",
   setVideoChatDefaultParticipant: "setVideoChatDefaultParticipant",
   createVideoChat: "createVideoChat",
+  createGroupCall: "createGroupCall",
   getVideoChatRtmpUrl: "getVideoChatRtmpUrl",
   replaceVideoChatRtmpUrl: "replaceVideoChatRtmpUrl",
   getGroupCall: "getGroupCall",
@@ -624,6 +625,8 @@ export const $Methods = Object.freeze({
   getBotInfoDescription: "getBotInfoDescription",
   setBotInfoShortDescription: "setBotInfoShortDescription",
   getBotInfoShortDescription: "getBotInfoShortDescription",
+  setMessageSenderBotVerification: "setMessageSenderBotVerification",
+  removeMessageSenderBotVerification: "removeMessageSenderBotVerification",
   getActiveSessions: "getActiveSessions",
   terminateSession: "terminateSession",
   terminateAllOtherSessions: "terminateAllOtherSessions",
@@ -669,7 +672,11 @@ export const $Methods = Object.freeze({
   sendGift: "sendGift",
   sellGift: "sellGift",
   toggleGiftIsSaved: "toggleGiftIsSaved",
+  getGiftUpgradePreview: "getGiftUpgradePreview",
+  upgradeGift: "upgradeGift",
+  transferGift: "transferGift",
   getUserGifts: "getUserGifts",
+  getUserGift: "getUserGift",
   createInvoiceLink: "createInvoiceLink",
   refundStarPayment: "refundStarPayment",
   getSupportUser: "getSupportUser",
@@ -793,10 +800,10 @@ export const $Methods = Object.freeze({
   setChatAffiliateProgram: "setChatAffiliateProgram",
   searchChatAffiliateProgram: "searchChatAffiliateProgram",
   searchAffiliatePrograms: "searchAffiliatePrograms",
-  connectChatAffiliateProgram: "connectChatAffiliateProgram",
-  disconnectChatAffiliateProgram: "disconnectChatAffiliateProgram",
-  getChatAffiliateProgram: "getChatAffiliateProgram",
-  getChatAffiliatePrograms: "getChatAffiliatePrograms",
+  connectAffiliateProgram: "connectAffiliateProgram",
+  disconnectAffiliateProgram: "disconnectAffiliateProgram",
+  getConnectedAffiliateProgram: "getConnectedAffiliateProgram",
+  getConnectedAffiliatePrograms: "getConnectedAffiliatePrograms",
   getBusinessFeatures: "getBusinessFeatures",
   acceptTermsOfService: "acceptTermsOfService",
   searchStringsByPrefix: "searchStringsByPrefix",
@@ -1113,6 +1120,7 @@ export const SuggestedAction$Type = Object.freeze({
   SubscribeToAnnualPremium: "suggestedActionSubscribeToAnnualPremium",
   GiftPremiumForChristmas: "suggestedActionGiftPremiumForChristmas",
   SetBirthdate: "suggestedActionSetBirthdate",
+  SetProfilePhoto: "suggestedActionSetProfilePhoto",
   ExtendPremium: "suggestedActionExtendPremium",
   ExtendStarSubscriptions: "suggestedActionExtendStarSubscriptions"
 } as const);
@@ -1442,6 +1450,7 @@ export const PushMessageContent$Type = Object.freeze({
   PremiumGiftCode: "pushMessageContentPremiumGiftCode",
   Giveaway: "pushMessageContentGiveaway",
   Gift: "pushMessageContentGift",
+  UpgradedGift: "pushMessageContentUpgradedGift",
   ScreenshotTaken: "pushMessageContentScreenshotTaken",
   Sticker: "pushMessageContentSticker",
   Story: "pushMessageContentStory",
@@ -1916,7 +1925,8 @@ export const CallDiscardReason$Type = Object.freeze({
   Missed: "callDiscardReasonMissed",
   Declined: "callDiscardReasonDeclined",
   Disconnected: "callDiscardReasonDisconnected",
-  HungUp: "callDiscardReasonHungUp"
+  HungUp: "callDiscardReasonHungUp",
+  AllowGroupCall: "callDiscardReasonAllowGroupCall"
 } as const);
 
 export type CallDiscardReason$Type =
@@ -2061,6 +2071,15 @@ export const ChatAction$Type = Object.freeze({
 } as const);
 
 export type ChatAction$Type = (typeof ChatAction$Type)[keyof typeof ChatAction$Type];
+
+export const SearchMessagesChatTypeFilter$Type = Object.freeze({
+  Private: "searchMessagesChatTypeFilterPrivate",
+  Group: "searchMessagesChatTypeFilterGroup",
+  Channel: "searchMessagesChatTypeFilterChannel"
+} as const);
+
+export type SearchMessagesChatTypeFilter$Type =
+  (typeof SearchMessagesChatTypeFilter$Type)[keyof typeof SearchMessagesChatTypeFilter$Type];
 
 export const SearchMessagesFilter$Type = Object.freeze({
   Empty: "searchMessagesFilterEmpty",
@@ -2228,6 +2247,8 @@ export const MessageContent$Type = Object.freeze({
   GiftedStars: "messageGiftedStars",
   GiveawayPrizeStars: "messageGiveawayPrizeStars",
   Gift: "messageGift",
+  UpgradedGift: "messageUpgradedGift",
+  RefundedUpgradedGift: "messageRefundedUpgradedGift",
   ContactRegistered: "messageContactRegistered",
   UsersShared: "messageUsersShared",
   ChatShared: "messageChatShared",
@@ -2849,7 +2870,9 @@ export const StarTransactionType$Type = Object.freeze({
   ChannelSubscriptionPurchase: "starTransactionTypeChannelSubscriptionPurchase",
   ChannelSubscriptionSale: "starTransactionTypeChannelSubscriptionSale",
   GiftPurchase: "starTransactionTypeGiftPurchase",
+  GiftTransfer: "starTransactionTypeGiftTransfer",
   GiftSale: "starTransactionTypeGiftSale",
+  GiftUpgrade: "starTransactionTypeGiftUpgrade",
   ChannelPaidReactionSend: "starTransactionTypeChannelPaidReactionSend",
   ChannelPaidReactionReceive: "starTransactionTypeChannelPaidReactionReceive",
   AffiliateProgramCommission: "starTransactionTypeAffiliateProgramCommission",
@@ -2867,6 +2890,13 @@ export const StarTransactionDirection$Type = Object.freeze({
 export type StarTransactionDirection$Type =
   (typeof StarTransactionDirection$Type)[keyof typeof StarTransactionDirection$Type];
 
+export const SentGift$Type = Object.freeze({
+  Regular: "sentGiftRegular",
+  Upgraded: "sentGiftUpgraded"
+} as const);
+
+export type SentGift$Type = (typeof SentGift$Type)[keyof typeof SentGift$Type];
+
 export const AffiliateProgramSortOrder$Type = Object.freeze({
   Profitability: "affiliateProgramSortOrderProfitability",
   CreationDate: "affiliateProgramSortOrderCreationDate",
@@ -2875,6 +2905,15 @@ export const AffiliateProgramSortOrder$Type = Object.freeze({
 
 export type AffiliateProgramSortOrder$Type =
   (typeof AffiliateProgramSortOrder$Type)[keyof typeof AffiliateProgramSortOrder$Type];
+
+export const AffiliateType$Type = Object.freeze({
+  CurrentUser: "affiliateTypeCurrentUser",
+  Bot: "affiliateTypeBot",
+  Channel: "affiliateTypeChannel"
+} as const);
+
+export type AffiliateType$Type =
+  (typeof AffiliateType$Type)[keyof typeof AffiliateType$Type];
 
 export const StarSubscriptionType$Type = Object.freeze({
   Channel: "starSubscriptionTypeChannel",
@@ -7816,6 +7855,186 @@ export type botMenuButton$Input = {
 };
 
 /**
+ * Describes parameters of verification that is provided by a bot
+ */
+export type botVerificationParameters = {
+  _: "botVerificationParameters";
+
+  /**
+   * Identifier of the custom emoji that is used as the verification sign
+   * @type {int64} {@link int64}
+   */
+  icon_custom_emoji_id: int64;
+
+  /**
+   * Name of the organization that provides verification
+   * @type {string} {@link string}
+   */
+  organization_name: string;
+
+  /**
+   * Default custom description of verification reason to be used as placeholder in setMessageSenderBotVerification; may be null if none
+   * @type {formattedText} {@link formattedText}
+   */
+  default_custom_description: formattedText | null;
+
+  /**
+   * True, if the bot is allowed to provide custom description for verified entities
+   * @type {Bool} {@link Bool}
+   */
+  can_set_custom_description: Bool;
+};
+
+/**
+ * Version of {@link botVerificationParameters} for method parameters.
+ *
+ * Describes parameters of verification that is provided by a bot
+ */
+export type botVerificationParameters$Input = {
+  readonly _: "botVerificationParameters";
+
+  /**
+   * Identifier of the custom emoji that is used as the verification sign
+   * @type {int64} {@link int64}
+   */
+  readonly icon_custom_emoji_id?: int64$Input;
+
+  /**
+   * Name of the organization that provides verification
+   * @type {string} {@link string}
+   */
+  readonly organization_name?: string;
+
+  /**
+   * Default custom description of verification reason to be used as placeholder in setMessageSenderBotVerification; may be null if none
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly default_custom_description?: formattedText$Input | null;
+
+  /**
+   * True, if the bot is allowed to provide custom description for verified entities
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_set_custom_description?: Bool$Input;
+};
+
+/**
+ * Describes verification status provided by a bot
+ */
+export type botVerification = {
+  _: "botVerification";
+
+  /**
+   * Identifier of the bot that provided the verification
+   * @type {int53} {@link int53}
+   */
+  bot_user_id: int53;
+
+  /**
+   * Identifier of the custom emoji that is used as the verification sign
+   * @type {int64} {@link int64}
+   */
+  icon_custom_emoji_id: int64;
+
+  /**
+   * Custom description of verification reason set by the bot
+   * @type {formattedText} {@link formattedText}
+   */
+  custom_description: formattedText;
+};
+
+/**
+ * Version of {@link botVerification} for method parameters.
+ *
+ * Describes verification status provided by a bot
+ */
+export type botVerification$Input = {
+  readonly _: "botVerification";
+
+  /**
+   * Identifier of the bot that provided the verification
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Identifier of the custom emoji that is used as the verification sign
+   * @type {int64} {@link int64}
+   */
+  readonly icon_custom_emoji_id?: int64$Input;
+
+  /**
+   * Custom description of verification reason set by the bot
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly custom_description?: formattedText$Input;
+};
+
+/**
+ * Contains information about verification status of a chat or a user
+ */
+export type verificationStatus = {
+  _: "verificationStatus";
+
+  /**
+   * True, if the chat or the user is verified by Telegram
+   * @type {Bool} {@link Bool}
+   */
+  is_verified: Bool;
+
+  /**
+   * True, if the chat or the user is marked as scam by Telegram
+   * @type {Bool} {@link Bool}
+   */
+  is_scam: Bool;
+
+  /**
+   * True, if the chat or the user is marked as fake by Telegram
+   * @type {Bool} {@link Bool}
+   */
+  is_fake: Bool;
+
+  /**
+   * Identifier of the custom emoji to be shown as verification sign provided by a bot for the user; 0 if none
+   * @type {int64} {@link int64}
+   */
+  bot_verification_icon_custom_emoji_id: int64;
+};
+
+/**
+ * Version of {@link verificationStatus} for method parameters.
+ *
+ * Contains information about verification status of a chat or a user
+ */
+export type verificationStatus$Input = {
+  readonly _: "verificationStatus";
+
+  /**
+   * True, if the chat or the user is verified by Telegram
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_verified?: Bool$Input;
+
+  /**
+   * True, if the chat or the user is marked as scam by Telegram
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_scam?: Bool$Input;
+
+  /**
+   * True, if the chat or the user is marked as fake by Telegram
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_fake?: Bool$Input;
+
+  /**
+   * Identifier of the custom emoji to be shown as verification sign provided by a bot for the user; 0 if none
+   * @type {int64} {@link int64}
+   */
+  readonly bot_verification_icon_custom_emoji_id?: int64$Input;
+};
+
+/**
  * Represents a location to which a chat is connected
  */
 export type chatLocation = {
@@ -9952,6 +10171,78 @@ export type starSubscriptions$Input = {
 };
 
 /**
+ * The affiliate is the current user
+ */
+export type affiliateTypeCurrentUser = {
+  _: "affiliateTypeCurrentUser";
+};
+
+/**
+ * Version of {@link affiliateTypeCurrentUser} for method parameters.
+ *
+ * The affiliate is the current user
+ */
+export type affiliateTypeCurrentUser$Input = {
+  readonly _: "affiliateTypeCurrentUser";
+};
+
+/**
+ * The affiliate is a bot owned by the current user
+ */
+export type affiliateTypeBot = {
+  _: "affiliateTypeBot";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+};
+
+/**
+ * Version of {@link affiliateTypeBot} for method parameters.
+ *
+ * The affiliate is a bot owned by the current user
+ */
+export type affiliateTypeBot$Input = {
+  readonly _: "affiliateTypeBot";
+
+  /**
+   * User identifier of the bot
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+};
+
+/**
+ * The affiliate is a channel chat where the current user has can_post_messages administrator right
+ */
+export type affiliateTypeChannel = {
+  _: "affiliateTypeChannel";
+
+  /**
+   * Identifier of the channel chat
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+};
+
+/**
+ * Version of {@link affiliateTypeChannel} for method parameters.
+ *
+ * The affiliate is a channel chat where the current user has can_post_messages administrator right
+ */
+export type affiliateTypeChannel$Input = {
+  readonly _: "affiliateTypeChannel";
+
+  /**
+   * Identifier of the channel chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
  * The affiliate programs must be sorted by the profitability
  */
 export type affiliateProgramSortOrderProfitability = {
@@ -10058,7 +10349,7 @@ export type affiliateProgramInfo = {
   /**
    * Point in time (Unix timestamp) when the affiliate program will be closed; 0 if the affiliate program isn't scheduled to be closed.
    *
-   * - If positive, then the program can't be connected using connectChatAffiliateProgram, but active connections will work until the date
+   * - If positive, then the program can't be connected using connectAffiliateProgram, but active connections will work until the date
    * @type {int32} {@link int32}
    */
   end_date: int32;
@@ -10087,7 +10378,7 @@ export type affiliateProgramInfo$Input = {
   /**
    * Point in time (Unix timestamp) when the affiliate program will be closed; 0 if the affiliate program isn't scheduled to be closed.
    *
-   * - If positive, then the program can't be connected using connectChatAffiliateProgram, but active connections will work until the date
+   * - If positive, then the program can't be connected using connectAffiliateProgram, but active connections will work until the date
    * @type {int32} {@link int32}
    */
   readonly end_date?: int32;
@@ -10167,7 +10458,7 @@ export type foundAffiliateProgram = {
    * Information about the affiliate program
    * @type {affiliateProgramInfo} {@link affiliateProgramInfo}
    */
-  parameters: affiliateProgramInfo;
+  info: affiliateProgramInfo;
 };
 
 /**
@@ -10188,7 +10479,7 @@ export type foundAffiliateProgram$Input = {
    * Information about the affiliate program
    * @type {affiliateProgramInfo} {@link affiliateProgramInfo}
    */
-  readonly parameters?: affiliateProgramInfo$Input;
+  readonly info?: affiliateProgramInfo$Input;
 };
 
 /**
@@ -10244,10 +10535,10 @@ export type foundAffiliatePrograms$Input = {
 };
 
 /**
- * Describes an affiliate program that was connected to a chat
+ * Describes an affiliate program that was connected to an affiliate
  */
-export type chatAffiliateProgram = {
-  _: "chatAffiliateProgram";
+export type connectedAffiliateProgram = {
+  _: "connectedAffiliateProgram";
 
   /**
    * The link that can be used to refer users if the program is still active
@@ -10293,12 +10584,12 @@ export type chatAffiliateProgram = {
 };
 
 /**
- * Version of {@link chatAffiliateProgram} for method parameters.
+ * Version of {@link connectedAffiliateProgram} for method parameters.
  *
- * Describes an affiliate program that was connected to a chat
+ * Describes an affiliate program that was connected to an affiliate
  */
-export type chatAffiliateProgram$Input = {
-  readonly _: "chatAffiliateProgram";
+export type connectedAffiliateProgram$Input = {
+  readonly _: "connectedAffiliateProgram";
 
   /**
    * The link that can be used to refer users if the program is still active
@@ -10344,22 +10635,22 @@ export type chatAffiliateProgram$Input = {
 };
 
 /**
- * Represents a list of affiliate programs that were connected to a chat
+ * Represents a list of affiliate programs that were connected to an affiliate
  */
-export type chatAffiliatePrograms = {
-  _: "chatAffiliatePrograms";
+export type connectedAffiliatePrograms = {
+  _: "connectedAffiliatePrograms";
 
   /**
-   * The total number of affiliate programs that were connected to the chat
+   * The total number of affiliate programs that were connected to the affiliate
    * @type {int32} {@link int32}
    */
   total_count: int32;
 
   /**
    * The list of connected affiliate programs
-   * @type {vector<chatAffiliateProgram>} {@link vector<chatAffiliateProgram>}
+   * @type {vector<connectedAffiliateProgram>} {@link vector<connectedAffiliateProgram>}
    */
-  programs: vector<chatAffiliateProgram>;
+  programs: vector<connectedAffiliateProgram>;
 
   /**
    * The offset for the next request. If empty, then there are no more results
@@ -10369,24 +10660,24 @@ export type chatAffiliatePrograms = {
 };
 
 /**
- * Version of {@link chatAffiliatePrograms} for method parameters.
+ * Version of {@link connectedAffiliatePrograms} for method parameters.
  *
- * Represents a list of affiliate programs that were connected to a chat
+ * Represents a list of affiliate programs that were connected to an affiliate
  */
-export type chatAffiliatePrograms$Input = {
-  readonly _: "chatAffiliatePrograms";
+export type connectedAffiliatePrograms$Input = {
+  readonly _: "connectedAffiliatePrograms";
 
   /**
-   * The total number of affiliate programs that were connected to the chat
+   * The total number of affiliate programs that were connected to the affiliate
    * @type {int32} {@link int32}
    */
   readonly total_count?: int32;
 
   /**
    * The list of connected affiliate programs
-   * @type {vector<chatAffiliateProgram>} {@link vector<chatAffiliateProgram>}
+   * @type {vector<connectedAffiliateProgram>} {@link vector<connectedAffiliateProgram>}
    */
-  readonly programs?: vector$Input<chatAffiliateProgram$Input>;
+  readonly programs?: vector$Input<connectedAffiliateProgram$Input>;
 
   /**
    * The offset for the next request. If empty, then there are no more results
@@ -11136,6 +11427,262 @@ export type starGiveawayPaymentOptions$Input = {
 };
 
 /**
+ * Describes a model of an upgraded gift
+ */
+export type upgradedGiftModel = {
+  _: "upgradedGiftModel";
+
+  /**
+   * Name of the model
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * The sticker representing the upgraded gift
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker;
+
+  /**
+   * The number of upgraded gift that receive this model for each 1000 gifts upgraded
+   * @type {int32} {@link int32}
+   */
+  rarity_per_mille: int32;
+};
+
+/**
+ * Version of {@link upgradedGiftModel} for method parameters.
+ *
+ * Describes a model of an upgraded gift
+ */
+export type upgradedGiftModel$Input = {
+  readonly _: "upgradedGiftModel";
+
+  /**
+   * Name of the model
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * The sticker representing the upgraded gift
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input;
+
+  /**
+   * The number of upgraded gift that receive this model for each 1000 gifts upgraded
+   * @type {int32} {@link int32}
+   */
+  readonly rarity_per_mille?: int32;
+};
+
+/**
+ * Describes a symbol shown on the pattern of an upgraded gift
+ */
+export type upgradedGiftSymbol = {
+  _: "upgradedGiftSymbol";
+
+  /**
+   * Name of the symbol
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * The sticker representing the upgraded gift
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker;
+
+  /**
+   * The number of upgraded gift that receive this symbol for each 1000 gifts upgraded
+   * @type {int32} {@link int32}
+   */
+  rarity_per_mille: int32;
+};
+
+/**
+ * Version of {@link upgradedGiftSymbol} for method parameters.
+ *
+ * Describes a symbol shown on the pattern of an upgraded gift
+ */
+export type upgradedGiftSymbol$Input = {
+  readonly _: "upgradedGiftSymbol";
+
+  /**
+   * Name of the symbol
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * The sticker representing the upgraded gift
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input;
+
+  /**
+   * The number of upgraded gift that receive this symbol for each 1000 gifts upgraded
+   * @type {int32} {@link int32}
+   */
+  readonly rarity_per_mille?: int32;
+};
+
+/**
+ * Describes a backdrop of an upgraded gift
+ */
+export type upgradedGiftBackdrop = {
+  _: "upgradedGiftBackdrop";
+
+  /**
+   * Name of the backdrop
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * A color in the center of the backdrop in the RGB format
+   * @type {int32} {@link int32}
+   */
+  center_color: int32;
+
+  /**
+   * A color on the edges of the backdrop in the RGB format
+   * @type {int32} {@link int32}
+   */
+  edge_color: int32;
+
+  /**
+   * A color to be applied for the symbol in the RGB format
+   * @type {int32} {@link int32}
+   */
+  symbol_color: int32;
+
+  /**
+   * A color for the text on the backdrop in the RGB format
+   * @type {int32} {@link int32}
+   */
+  text_color: int32;
+
+  /**
+   * The number of upgraded gift that receive this backdrop for each 1000 gifts upgraded
+   * @type {int32} {@link int32}
+   */
+  rarity_per_mille: int32;
+};
+
+/**
+ * Version of {@link upgradedGiftBackdrop} for method parameters.
+ *
+ * Describes a backdrop of an upgraded gift
+ */
+export type upgradedGiftBackdrop$Input = {
+  readonly _: "upgradedGiftBackdrop";
+
+  /**
+   * Name of the backdrop
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * A color in the center of the backdrop in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly center_color?: int32;
+
+  /**
+   * A color on the edges of the backdrop in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly edge_color?: int32;
+
+  /**
+   * A color to be applied for the symbol in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly symbol_color?: int32;
+
+  /**
+   * A color for the text on the backdrop in the RGB format
+   * @type {int32} {@link int32}
+   */
+  readonly text_color?: int32;
+
+  /**
+   * The number of upgraded gift that receive this backdrop for each 1000 gifts upgraded
+   * @type {int32} {@link int32}
+   */
+  readonly rarity_per_mille?: int32;
+};
+
+/**
+ * Describes the original details about the gift
+ */
+export type upgradedGiftOriginalDetails = {
+  _: "upgradedGiftOriginalDetails";
+
+  /**
+   * Identifier of the user that sent the gift; 0 if the gift was private
+   * @type {int53} {@link int53}
+   */
+  sender_user_id: int53;
+
+  /**
+   * Identifier of the user that received the gift
+   * @type {int53} {@link int53}
+   */
+  receiver_user_id: int53;
+
+  /**
+   * Message added to the gift
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+
+  /**
+   * Point in time (Unix timestamp) when the gift was sent
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+};
+
+/**
+ * Version of {@link upgradedGiftOriginalDetails} for method parameters.
+ *
+ * Describes the original details about the gift
+ */
+export type upgradedGiftOriginalDetails$Input = {
+  readonly _: "upgradedGiftOriginalDetails";
+
+  /**
+   * Identifier of the user that sent the gift; 0 if the gift was private
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the user that received the gift
+   * @type {int53} {@link int53}
+   */
+  readonly receiver_user_id?: int53;
+
+  /**
+   * Message added to the gift
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the gift was sent
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+};
+
+/**
  * Describes a gift that can be sent to another user
  */
 export type gift = {
@@ -11160,10 +11707,16 @@ export type gift = {
   star_count: int53;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift by default. If the gift was paid with just bought Telegram Stars, then full value can be claimed
+   * Number of Telegram Stars that can be claimed by the receiver instead of the regular gift by default. If the gift was paid with just bought Telegram Stars, then full value can be claimed
    * @type {int53} {@link int53}
    */
   default_sell_star_count: int53;
+
+  /**
+   * Number of Telegram Stars that must be paid to upgrade the gift; 0 if upgrade isn't possible
+   * @type {int53} {@link int53}
+   */
+  upgrade_star_count: int53;
 
   /**
    * True, if the gift is a birthday gift
@@ -11223,10 +11776,16 @@ export type gift$Input = {
   readonly star_count?: int53;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift by default. If the gift was paid with just bought Telegram Stars, then full value can be claimed
+   * Number of Telegram Stars that can be claimed by the receiver instead of the regular gift by default. If the gift was paid with just bought Telegram Stars, then full value can be claimed
    * @type {int53} {@link int53}
    */
   readonly default_sell_star_count?: int53;
+
+  /**
+   * Number of Telegram Stars that must be paid to upgrade the gift; 0 if upgrade isn't possible
+   * @type {int53} {@link int53}
+   */
+  readonly upgrade_star_count?: int53;
 
   /**
    * True, if the gift is a birthday gift
@@ -11288,6 +11847,274 @@ export type gifts$Input = {
 };
 
 /**
+ * Describes an upgraded gift that can be gifted to another user or transferred to TON blockchain as an NFT
+ */
+export type upgradedGift = {
+  _: "upgradedGift";
+
+  /**
+   * Unique identifier of the gift
+   * @type {int64} {@link int64}
+   */
+  id: int64;
+
+  /**
+   * The title of the upgraded gift
+   * @type {string} {@link string}
+   */
+  title: string;
+
+  /**
+   * Unique number of the upgraded gift among gifts upgraded from the same gift
+   * @type {int32} {@link int32}
+   */
+  number: int32;
+
+  /**
+   * Total number of gifts that were upgraded from the same gift
+   * @type {int32} {@link int32}
+   */
+  total_upgraded_count: int32;
+
+  /**
+   * The maximum number of gifts that can be upgraded from the same gift
+   * @type {int32} {@link int32}
+   */
+  max_upgraded_count: int32;
+
+  /**
+   * User identifier of the user that owns the upgraded gift; 0 if none
+   * @type {int53} {@link int53}
+   */
+  owner_user_id: int53;
+
+  /**
+   * Model of the upgraded gift
+   * @type {upgradedGiftModel} {@link upgradedGiftModel}
+   */
+  model: upgradedGiftModel;
+
+  /**
+   * Symbol of the upgraded gift
+   * @type {upgradedGiftSymbol} {@link upgradedGiftSymbol}
+   */
+  symbol: upgradedGiftSymbol;
+
+  /**
+   * Backdrop of the upgraded gift
+   * @type {upgradedGiftBackdrop} {@link upgradedGiftBackdrop}
+   */
+  backdrop: upgradedGiftBackdrop;
+
+  /**
+   * Information about the originally sent gift; may be null if unknown
+   * @type {upgradedGiftOriginalDetails} {@link upgradedGiftOriginalDetails}
+   */
+  original_details: upgradedGiftOriginalDetails | null;
+};
+
+/**
+ * Version of {@link upgradedGift} for method parameters.
+ *
+ * Describes an upgraded gift that can be gifted to another user or transferred to TON blockchain as an NFT
+ */
+export type upgradedGift$Input = {
+  readonly _: "upgradedGift";
+
+  /**
+   * Unique identifier of the gift
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
+
+  /**
+   * The title of the upgraded gift
+   * @type {string} {@link string}
+   */
+  readonly title?: string;
+
+  /**
+   * Unique number of the upgraded gift among gifts upgraded from the same gift
+   * @type {int32} {@link int32}
+   */
+  readonly number?: int32;
+
+  /**
+   * Total number of gifts that were upgraded from the same gift
+   * @type {int32} {@link int32}
+   */
+  readonly total_upgraded_count?: int32;
+
+  /**
+   * The maximum number of gifts that can be upgraded from the same gift
+   * @type {int32} {@link int32}
+   */
+  readonly max_upgraded_count?: int32;
+
+  /**
+   * User identifier of the user that owns the upgraded gift; 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly owner_user_id?: int53;
+
+  /**
+   * Model of the upgraded gift
+   * @type {upgradedGiftModel} {@link upgradedGiftModel}
+   */
+  readonly model?: upgradedGiftModel$Input;
+
+  /**
+   * Symbol of the upgraded gift
+   * @type {upgradedGiftSymbol} {@link upgradedGiftSymbol}
+   */
+  readonly symbol?: upgradedGiftSymbol$Input;
+
+  /**
+   * Backdrop of the upgraded gift
+   * @type {upgradedGiftBackdrop} {@link upgradedGiftBackdrop}
+   */
+  readonly backdrop?: upgradedGiftBackdrop$Input;
+
+  /**
+   * Information about the originally sent gift; may be null if unknown
+   * @type {upgradedGiftOriginalDetails} {@link upgradedGiftOriginalDetails}
+   */
+  readonly original_details?: upgradedGiftOriginalDetails$Input | null;
+};
+
+/**
+ * Contains result of gift upgrading
+ */
+export type upgradeGiftResult = {
+  _: "upgradeGiftResult";
+
+  /**
+   * The upgraded gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  gift: upgradedGift;
+
+  /**
+   * True, if the gift is displayed on the user's profile page
+   * @type {Bool} {@link Bool}
+   */
+  is_saved: Bool;
+
+  /**
+   * True, if the gift can be transferred to another user
+   * @type {Bool} {@link Bool}
+   */
+  can_be_transferred: Bool;
+
+  /**
+   * Number of Telegram Stars that must be paid to transfer the upgraded gift
+   * @type {int53} {@link int53}
+   */
+  transfer_star_count: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the gift can be transferred to TON blockchain as an NFT
+   * @type {int32} {@link int32}
+   */
+  export_date: int32;
+};
+
+/**
+ * Version of {@link upgradeGiftResult} for method parameters.
+ *
+ * Contains result of gift upgrading
+ */
+export type upgradeGiftResult$Input = {
+  readonly _: "upgradeGiftResult";
+
+  /**
+   * The upgraded gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  readonly gift?: upgradedGift$Input;
+
+  /**
+   * True, if the gift is displayed on the user's profile page
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_saved?: Bool$Input;
+
+  /**
+   * True, if the gift can be transferred to another user
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_transferred?: Bool$Input;
+
+  /**
+   * Number of Telegram Stars that must be paid to transfer the upgraded gift
+   * @type {int53} {@link int53}
+   */
+  readonly transfer_star_count?: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the gift can be transferred to TON blockchain as an NFT
+   * @type {int32} {@link int32}
+   */
+  readonly export_date?: int32;
+};
+
+/**
+ * Regular gift
+ */
+export type sentGiftRegular = {
+  _: "sentGiftRegular";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  gift: gift;
+};
+
+/**
+ * Version of {@link sentGiftRegular} for method parameters.
+ *
+ * Regular gift
+ */
+export type sentGiftRegular$Input = {
+  readonly _: "sentGiftRegular";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  readonly gift?: gift$Input;
+};
+
+/**
+ * Upgraded gift
+ */
+export type sentGiftUpgraded = {
+  _: "sentGiftUpgraded";
+
+  /**
+   * The gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  gift: upgradedGift;
+};
+
+/**
+ * Version of {@link sentGiftUpgraded} for method parameters.
+ *
+ * Upgraded gift
+ */
+export type sentGiftUpgraded$Input = {
+  readonly _: "sentGiftUpgraded";
+
+  /**
+   * The gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  readonly gift?: upgradedGift$Input;
+};
+
+/**
  * Represents a gift received by a user
  */
 export type userGift = {
@@ -11312,10 +12139,28 @@ export type userGift = {
   is_private: Bool;
 
   /**
-   * True, if the gift is displayed on the user's profile page; may be false only for the receiver of the gift
+   * True, if the gift is displayed on the user's profile page; only for the receiver of the gift
    * @type {Bool} {@link Bool}
    */
   is_saved: Bool;
+
+  /**
+   * True, if the gift is a regular gift that can be upgraded to a unique gift; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  can_be_upgraded: Bool;
+
+  /**
+   * True, if the gift is an upgraded gift that can be transferred to another user; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  can_be_transferred: Bool;
+
+  /**
+   * True, if the gift was refunded and isn't available anymore
+   * @type {Bool} {@link Bool}
+   */
+  was_refunded: Bool;
 
   /**
    * Point in time (Unix timestamp) when the gift was sent
@@ -11325,21 +12170,39 @@ export type userGift = {
 
   /**
    * The gift
-   * @type {gift} {@link gift}
+   * @type {SentGift} {@link SentGift}
    */
-  gift: gift;
+  gift: SentGift;
 
   /**
-   * Identifier of the message with the gift in the chat with the sender of the gift; can be 0 or an identifier of a deleted message; only for the gift receiver
+   * Identifier of the message with the gift in the chat with the sender of the gift; can be 0 or an identifier of a deleted message; only for the receiver of the gift
    * @type {int53} {@link int53}
    */
   message_id: int53;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; 0 if the gift can't be sold by the current user
+   * Number of Telegram Stars that can be claimed by the receiver instead of the regular gift; 0 if the gift can't be sold by the current user
    * @type {int53} {@link int53}
    */
   sell_star_count: int53;
+
+  /**
+   * Number of Telegram Stars that were paid by the sender for the ability to upgrade the gift
+   * @type {int53} {@link int53}
+   */
+  prepaid_upgrade_star_count: int53;
+
+  /**
+   * Number of Telegram Stars that must be paid to transfer the upgraded gift; only for the receiver of the gift
+   * @type {int53} {@link int53}
+   */
+  transfer_star_count: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the upgraded gift can be transferred to TON blockchain as an NFT; 0 if NFT export isn't possible; only for the receiver of the gift
+   * @type {int32} {@link int32}
+   */
+  export_date: int32;
 };
 
 /**
@@ -11369,10 +12232,28 @@ export type userGift$Input = {
   readonly is_private?: Bool$Input;
 
   /**
-   * True, if the gift is displayed on the user's profile page; may be false only for the receiver of the gift
+   * True, if the gift is displayed on the user's profile page; only for the receiver of the gift
    * @type {Bool} {@link Bool}
    */
   readonly is_saved?: Bool$Input;
+
+  /**
+   * True, if the gift is a regular gift that can be upgraded to a unique gift; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_upgraded?: Bool$Input;
+
+  /**
+   * True, if the gift is an upgraded gift that can be transferred to another user; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_transferred?: Bool$Input;
+
+  /**
+   * True, if the gift was refunded and isn't available anymore
+   * @type {Bool} {@link Bool}
+   */
+  readonly was_refunded?: Bool$Input;
 
   /**
    * Point in time (Unix timestamp) when the gift was sent
@@ -11382,21 +12263,39 @@ export type userGift$Input = {
 
   /**
    * The gift
-   * @type {gift} {@link gift}
+   * @type {SentGift} {@link SentGift}
    */
-  readonly gift?: gift$Input;
+  readonly gift?: SentGift$Input;
 
   /**
-   * Identifier of the message with the gift in the chat with the sender of the gift; can be 0 or an identifier of a deleted message; only for the gift receiver
+   * Identifier of the message with the gift in the chat with the sender of the gift; can be 0 or an identifier of a deleted message; only for the receiver of the gift
    * @type {int53} {@link int53}
    */
   readonly message_id?: int53;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; 0 if the gift can't be sold by the current user
+   * Number of Telegram Stars that can be claimed by the receiver instead of the regular gift; 0 if the gift can't be sold by the current user
    * @type {int53} {@link int53}
    */
   readonly sell_star_count?: int53;
+
+  /**
+   * Number of Telegram Stars that were paid by the sender for the ability to upgrade the gift
+   * @type {int53} {@link int53}
+   */
+  readonly prepaid_upgrade_star_count?: int53;
+
+  /**
+   * Number of Telegram Stars that must be paid to transfer the upgraded gift; only for the receiver of the gift
+   * @type {int53} {@link int53}
+   */
+  readonly transfer_star_count?: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the upgraded gift can be transferred to TON blockchain as an NFT; 0 if NFT export isn't possible; only for the receiver of the gift
+   * @type {int32} {@link int32}
+   */
+  readonly export_date?: int32;
 };
 
 /**
@@ -11449,6 +12348,58 @@ export type userGifts$Input = {
    * @type {string} {@link string}
    */
   readonly next_offset?: string;
+};
+
+/**
+ * Contains examples of possible upgraded gifts for the given regular gift
+ */
+export type giftUpgradePreview = {
+  _: "giftUpgradePreview";
+
+  /**
+   * Examples of possible models that can be chosen for the gift after upgrade
+   * @type {vector<upgradedGiftModel>} {@link vector<upgradedGiftModel>}
+   */
+  models: vector<upgradedGiftModel>;
+
+  /**
+   * Examples of possible symbols that can be chosen for the gift after upgrade
+   * @type {vector<upgradedGiftSymbol>} {@link vector<upgradedGiftSymbol>}
+   */
+  symbols: vector<upgradedGiftSymbol>;
+
+  /**
+   * Examples of possible backdrops that can be chosen for the gift after upgrade
+   * @type {vector<upgradedGiftBackdrop>} {@link vector<upgradedGiftBackdrop>}
+   */
+  backdrops: vector<upgradedGiftBackdrop>;
+};
+
+/**
+ * Version of {@link giftUpgradePreview} for method parameters.
+ *
+ * Contains examples of possible upgraded gifts for the given regular gift
+ */
+export type giftUpgradePreview$Input = {
+  readonly _: "giftUpgradePreview";
+
+  /**
+   * Examples of possible models that can be chosen for the gift after upgrade
+   * @type {vector<upgradedGiftModel>} {@link vector<upgradedGiftModel>}
+   */
+  readonly models?: vector$Input<upgradedGiftModel$Input>;
+
+  /**
+   * Examples of possible symbols that can be chosen for the gift after upgrade
+   * @type {vector<upgradedGiftSymbol>} {@link vector<upgradedGiftSymbol>}
+   */
+  readonly symbols?: vector$Input<upgradedGiftSymbol$Input>;
+
+  /**
+   * Examples of possible backdrops that can be chosen for the gift after upgrade
+   * @type {vector<upgradedGiftBackdrop>} {@link vector<upgradedGiftBackdrop>}
+   */
+  readonly backdrops?: vector$Input<upgradedGiftBackdrop$Input>;
 };
 
 /**
@@ -12220,7 +13171,7 @@ export type starTransactionTypeChannelSubscriptionSale$Input = {
 };
 
 /**
- * The transaction is a purchase of a gift to another user; for regular users and bots only
+ * The transaction is a purchase of a regular gift to another user; for regular users and bots only
  */
 export type starTransactionTypeGiftPurchase = {
   _: "starTransactionTypeGiftPurchase";
@@ -12241,7 +13192,7 @@ export type starTransactionTypeGiftPurchase = {
 /**
  * Version of {@link starTransactionTypeGiftPurchase} for method parameters.
  *
- * The transaction is a purchase of a gift to another user; for regular users and bots only
+ * The transaction is a purchase of a regular gift to another user; for regular users and bots only
  */
 export type starTransactionTypeGiftPurchase$Input = {
   readonly _: "starTransactionTypeGiftPurchase";
@@ -12257,6 +13208,46 @@ export type starTransactionTypeGiftPurchase$Input = {
    * @type {gift} {@link gift}
    */
   readonly gift?: gift$Input;
+};
+
+/**
+ * The transaction is a transfer of an upgraded gift to another user; for regular users only
+ */
+export type starTransactionTypeGiftTransfer = {
+  _: "starTransactionTypeGiftTransfer";
+
+  /**
+   * Identifier of the user that received the gift
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * The gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  gift: upgradedGift;
+};
+
+/**
+ * Version of {@link starTransactionTypeGiftTransfer} for method parameters.
+ *
+ * The transaction is a transfer of an upgraded gift to another user; for regular users only
+ */
+export type starTransactionTypeGiftTransfer$Input = {
+  readonly _: "starTransactionTypeGiftTransfer";
+
+  /**
+   * Identifier of the user that received the gift
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * The gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  readonly gift?: upgradedGift$Input;
 };
 
 /**
@@ -12297,6 +13288,34 @@ export type starTransactionTypeGiftSale$Input = {
    * @type {gift} {@link gift}
    */
   readonly gift?: gift$Input;
+};
+
+/**
+ * The transaction is an upgrade of a gift; for regular users only
+ */
+export type starTransactionTypeGiftUpgrade = {
+  _: "starTransactionTypeGiftUpgrade";
+
+  /**
+   * The upgraded gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  gift: upgradedGift;
+};
+
+/**
+ * Version of {@link starTransactionTypeGiftUpgrade} for method parameters.
+ *
+ * The transaction is an upgrade of a gift; for regular users only
+ */
+export type starTransactionTypeGiftUpgrade$Input = {
+  readonly _: "starTransactionTypeGiftUpgrade";
+
+  /**
+   * The upgraded gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  readonly gift?: upgradedGift$Input;
 };
 
 /**
@@ -13272,31 +14291,31 @@ export type user = {
   profile_photo: profilePhoto | null;
 
   /**
-   * Identifier of the accent color for name, and backgrounds of profile photo, reply header, and link preview. For Telegram Premium users only
+   * Identifier of the accent color for name, and backgrounds of profile photo, reply header, and link preview
    * @type {int32} {@link int32}
    */
   accent_color_id: int32;
 
   /**
-   * Identifier of a custom emoji to be shown on the reply header and link preview background; 0 if none. For Telegram Premium users only
+   * Identifier of a custom emoji to be shown on the reply header and link preview background; 0 if none
    * @type {int64} {@link int64}
    */
   background_custom_emoji_id: int64;
 
   /**
-   * Identifier of the accent color for the user's profile; -1 if none. For Telegram Premium users only
+   * Identifier of the accent color for the user's profile; -1 if none
    * @type {int32} {@link int32}
    */
   profile_accent_color_id: int32;
 
   /**
-   * Identifier of a custom emoji to be shown on the background of the user's profile; 0 if none. For Telegram Premium users only
+   * Identifier of a custom emoji to be shown on the background of the user's profile; 0 if none
    * @type {int64} {@link int64}
    */
   profile_background_custom_emoji_id: int64;
 
   /**
-   * Emoji status to be shown instead of the default Telegram Premium badge; may be null. For Telegram Premium users only
+   * Emoji status to be shown instead of the default Telegram Premium badge; may be null
    * @type {emojiStatus} {@link emojiStatus}
    */
   emoji_status: emojiStatus | null;
@@ -13320,10 +14339,10 @@ export type user = {
   is_close_friend: Bool;
 
   /**
-   * True, if the user is verified
-   * @type {Bool} {@link Bool}
+   * Information about verification status of the user; may be null if none
+   * @type {verificationStatus} {@link verificationStatus}
    */
-  is_verified: Bool;
+  verification_status: verificationStatus | null;
 
   /**
    * True, if the user is a Telegram Premium user
@@ -13342,18 +14361,6 @@ export type user = {
    * @type {string} {@link string}
    */
   restriction_reason: string;
-
-  /**
-   * True, if many users reported this user as a scam
-   * @type {Bool} {@link Bool}
-   */
-  is_scam: Bool;
-
-  /**
-   * True, if many users reported this user as a fake account
-   * @type {Bool} {@link Bool}
-   */
-  is_fake: Bool;
 
   /**
    * True, if the user has non-expired stories available to the current user
@@ -13449,31 +14456,31 @@ export type user$Input = {
   readonly profile_photo?: profilePhoto$Input | null;
 
   /**
-   * Identifier of the accent color for name, and backgrounds of profile photo, reply header, and link preview. For Telegram Premium users only
+   * Identifier of the accent color for name, and backgrounds of profile photo, reply header, and link preview
    * @type {int32} {@link int32}
    */
   readonly accent_color_id?: int32;
 
   /**
-   * Identifier of a custom emoji to be shown on the reply header and link preview background; 0 if none. For Telegram Premium users only
+   * Identifier of a custom emoji to be shown on the reply header and link preview background; 0 if none
    * @type {int64} {@link int64}
    */
   readonly background_custom_emoji_id?: int64$Input;
 
   /**
-   * Identifier of the accent color for the user's profile; -1 if none. For Telegram Premium users only
+   * Identifier of the accent color for the user's profile; -1 if none
    * @type {int32} {@link int32}
    */
   readonly profile_accent_color_id?: int32;
 
   /**
-   * Identifier of a custom emoji to be shown on the background of the user's profile; 0 if none. For Telegram Premium users only
+   * Identifier of a custom emoji to be shown on the background of the user's profile; 0 if none
    * @type {int64} {@link int64}
    */
   readonly profile_background_custom_emoji_id?: int64$Input;
 
   /**
-   * Emoji status to be shown instead of the default Telegram Premium badge; may be null. For Telegram Premium users only
+   * Emoji status to be shown instead of the default Telegram Premium badge; may be null
    * @type {emojiStatus} {@link emojiStatus}
    */
   readonly emoji_status?: emojiStatus$Input | null;
@@ -13497,10 +14504,10 @@ export type user$Input = {
   readonly is_close_friend?: Bool$Input;
 
   /**
-   * True, if the user is verified
-   * @type {Bool} {@link Bool}
+   * Information about verification status of the user; may be null if none
+   * @type {verificationStatus} {@link verificationStatus}
    */
-  readonly is_verified?: Bool$Input;
+  readonly verification_status?: verificationStatus$Input | null;
 
   /**
    * True, if the user is a Telegram Premium user
@@ -13519,18 +14526,6 @@ export type user$Input = {
    * @type {string} {@link string}
    */
   readonly restriction_reason?: string;
-
-  /**
-   * True, if many users reported this user as a scam
-   * @type {Bool} {@link Bool}
-   */
-  readonly is_scam?: Bool$Input;
-
-  /**
-   * True, if many users reported this user as a fake account
-   * @type {Bool} {@link Bool}
-   */
-  readonly is_fake?: Bool$Input;
 
   /**
    * True, if the user has non-expired stories available to the current user
@@ -13666,6 +14661,12 @@ export type botInfo = {
   web_app_header_dark_color: int32;
 
   /**
+   * Parameters of the verification that can be provided by the bot; may be null if none or the current user isn't the owner of the bot
+   * @type {botVerificationParameters} {@link botVerificationParameters}
+   */
+  verification_parameters: botVerificationParameters | null;
+
+  /**
    * True, if the bot's revenue statistics are available to the current user
    * @type {Bool} {@link Bool}
    */
@@ -13799,6 +14800,12 @@ export type botInfo$Input = {
    * @type {int32} {@link int32}
    */
   readonly web_app_header_dark_color?: int32;
+
+  /**
+   * Parameters of the verification that can be provided by the bot; may be null if none or the current user isn't the owner of the bot
+   * @type {botVerificationParameters} {@link botVerificationParameters}
+   */
+  readonly verification_parameters?: botVerificationParameters$Input | null;
 
   /**
    * True, if the bot's revenue statistics are available to the current user
@@ -13964,6 +14971,12 @@ export type userFullInfo = {
   group_in_common_count: int32;
 
   /**
+   * Information about verification status of the user provided by a bot; may be null if none or unknown
+   * @type {botVerification} {@link botVerification}
+   */
+  bot_verification: botVerification | null;
+
+  /**
    * Information about business settings for Telegram Business accounts; may be null if none
    * @type {businessInfo} {@link businessInfo}
    */
@@ -14097,6 +15110,12 @@ export type userFullInfo$Input = {
    * @type {int32} {@link int32}
    */
   readonly group_in_common_count?: int32;
+
+  /**
+   * Information about verification status of the user provided by a bot; may be null if none or unknown
+   * @type {botVerification} {@link botVerification}
+   */
+  readonly bot_verification?: botVerification$Input | null;
 
   /**
    * Information about business settings for Telegram Business accounts; may be null if none
@@ -15518,22 +16537,10 @@ export type chatInviteLinkInfo = {
   is_public: Bool;
 
   /**
-   * True, if the chat is verified
-   * @type {Bool} {@link Bool}
+   * Information about verification status of the chat; may be null if none
+   * @type {verificationStatus} {@link verificationStatus}
    */
-  is_verified: Bool;
-
-  /**
-   * True, if many users reported this chat as a scam
-   * @type {Bool} {@link Bool}
-   */
-  is_scam: Bool;
-
-  /**
-   * True, if many users reported this chat as a fake account
-   * @type {Bool} {@link Bool}
-   */
-  is_fake: Bool;
+  verification_status: verificationStatus | null;
 };
 
 /**
@@ -15617,22 +16624,10 @@ export type chatInviteLinkInfo$Input = {
   readonly is_public?: Bool$Input;
 
   /**
-   * True, if the chat is verified
-   * @type {Bool} {@link Bool}
+   * Information about verification status of the chat; may be null if none
+   * @type {verificationStatus} {@link verificationStatus}
    */
-  readonly is_verified?: Bool$Input;
-
-  /**
-   * True, if many users reported this chat as a scam
-   * @type {Bool} {@link Bool}
-   */
-  readonly is_scam?: Bool$Input;
-
-  /**
-   * True, if many users reported this chat as a fake account
-   * @type {Bool} {@link Bool}
-   */
-  readonly is_fake?: Bool$Input;
+  readonly verification_status?: verificationStatus$Input | null;
 };
 
 /**
@@ -16068,10 +17063,10 @@ export type supergroup = {
   is_forum: Bool;
 
   /**
-   * True, if the supergroup or channel is verified
-   * @type {Bool} {@link Bool}
+   * Information about verification status of the supergroup or channel; may be null if none
+   * @type {verificationStatus} {@link verificationStatus}
    */
-  is_verified: Bool;
+  verification_status: verificationStatus | null;
 
   /**
    * True, if content of media messages in the supergroup or channel chat must be hidden with 18+ spoiler
@@ -16084,18 +17079,6 @@ export type supergroup = {
    * @type {string} {@link string}
    */
   restriction_reason: string;
-
-  /**
-   * True, if many users reported this supergroup or channel as a scam
-   * @type {Bool} {@link Bool}
-   */
-  is_scam: Bool;
-
-  /**
-   * True, if many users reported this supergroup or channel as a fake account
-   * @type {Bool} {@link Bool}
-   */
-  is_fake: Bool;
 
   /**
    * True, if the supergroup or channel has non-expired stories available to the current user
@@ -16225,10 +17208,10 @@ export type supergroup$Input = {
   readonly is_forum?: Bool$Input;
 
   /**
-   * True, if the supergroup or channel is verified
-   * @type {Bool} {@link Bool}
+   * Information about verification status of the supergroup or channel; may be null if none
+   * @type {verificationStatus} {@link verificationStatus}
    */
-  readonly is_verified?: Bool$Input;
+  readonly verification_status?: verificationStatus$Input | null;
 
   /**
    * True, if content of media messages in the supergroup or channel chat must be hidden with 18+ spoiler
@@ -16241,18 +17224,6 @@ export type supergroup$Input = {
    * @type {string} {@link string}
    */
   readonly restriction_reason?: string;
-
-  /**
-   * True, if many users reported this supergroup or channel as a scam
-   * @type {Bool} {@link Bool}
-   */
-  readonly is_scam?: Bool$Input;
-
-  /**
-   * True, if many users reported this supergroup or channel as a fake account
-   * @type {Bool} {@link Bool}
-   */
-  readonly is_fake?: Bool$Input;
 
   /**
    * True, if the supergroup or channel has non-expired stories available to the current user
@@ -16462,6 +17433,12 @@ export type supergroupFullInfo = {
   bot_commands: vector<botCommands>;
 
   /**
+   * Information about verification status of the supergroup or the channel provided by a bot; may be null if none or unknown
+   * @type {botVerification} {@link botVerification}
+   */
+  bot_verification: botVerification | null;
+
+  /**
    * Identifier of the basic group from which supergroup was upgraded; 0 if none
    * @type {int53} {@link int53}
    */
@@ -16669,6 +17646,12 @@ export type supergroupFullInfo$Input = {
    * @type {vector<botCommands>} {@link vector<botCommands>}
    */
   readonly bot_commands?: vector$Input<botCommands$Input>;
+
+  /**
+   * Information about verification status of the supergroup or the channel provided by a bot; may be null if none or unknown
+   * @type {botVerification} {@link botVerification}
+   */
+  readonly bot_verification?: botVerification$Input | null;
 
   /**
    * Identifier of the basic group from which supergroup was upgraded; 0 if none
@@ -20904,16 +21887,56 @@ export type chatFolderIcon$Input = {
 };
 
 /**
+ * Describes name of a chat folder
+ */
+export type chatFolderName = {
+  _: "chatFolderName";
+
+  /**
+   * The text of the chat folder name; 1-12 characters without line feeds. May contain only CustomEmoji entities
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+
+  /**
+   * True, if custom emoji in the name must be animated
+   * @type {Bool} {@link Bool}
+   */
+  animate_custom_emoji: Bool;
+};
+
+/**
+ * Version of {@link chatFolderName} for method parameters.
+ *
+ * Describes name of a chat folder
+ */
+export type chatFolderName$Input = {
+  readonly _: "chatFolderName";
+
+  /**
+   * The text of the chat folder name; 1-12 characters without line feeds. May contain only CustomEmoji entities
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+
+  /**
+   * True, if custom emoji in the name must be animated
+   * @type {Bool} {@link Bool}
+   */
+  readonly animate_custom_emoji?: Bool$Input;
+};
+
+/**
  * Represents a folder for user chats
  */
 export type chatFolder = {
   _: "chatFolder";
 
   /**
-   * The title of the folder; 1-12 characters without line feeds
-   * @type {string} {@link string}
+   * The name of the folder
+   * @type {chatFolderName} {@link chatFolderName}
    */
-  title: string;
+  name: chatFolderName;
 
   /**
    * The chosen icon for the chat folder; may be null. If null, use getChatFolderDefaultIconName to get default icon name for the folder
@@ -21009,10 +22032,10 @@ export type chatFolder$Input = {
   readonly _: "chatFolder";
 
   /**
-   * The title of the folder; 1-12 characters without line feeds
-   * @type {string} {@link string}
+   * The name of the folder
+   * @type {chatFolderName} {@link chatFolderName}
    */
-  readonly title?: string;
+  readonly name?: chatFolderName$Input;
 
   /**
    * The chosen icon for the chat folder; may be null. If null, use getChatFolderDefaultIconName to get default icon name for the folder
@@ -21112,10 +22135,10 @@ export type chatFolderInfo = {
   id: int32;
 
   /**
-   * The title of the folder; 1-12 characters without line feeds
-   * @type {string} {@link string}
+   * The name of the folder
+   * @type {chatFolderName} {@link chatFolderName}
    */
-  title: string;
+  name: chatFolderName;
 
   /**
    * The chosen or default icon for the chat folder
@@ -21157,10 +22180,10 @@ export type chatFolderInfo$Input = {
   readonly id?: int32;
 
   /**
-   * The title of the folder; 1-12 characters without line feeds
-   * @type {string} {@link string}
+   * The name of the folder
+   * @type {chatFolderName} {@link chatFolderName}
    */
-  readonly title?: string;
+  readonly name?: chatFolderName$Input;
 
   /**
    * The chosen or default icon for the chat folder
@@ -36452,7 +37475,7 @@ export type messageGiveawayPrizeStars$Input = {
 };
 
 /**
- * A gift was received or sent by the current user
+ * A regular gift was received or sent by the current user
  */
 export type messageGift = {
   _: "messageGift";
@@ -36470,10 +37493,16 @@ export type messageGift = {
   text: formattedText;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; 0 if the gift can't be sold by the receiver
+   * Number of Telegram Stars that can be claimed by the receiver instead of the regular gift; 0 if the gift can't be sold by the receiver
    * @type {int53} {@link int53}
    */
   sell_star_count: int53;
+
+  /**
+   * Number of Telegram Stars that were paid by the sender for the ability to upgrade the gift
+   * @type {int53} {@link int53}
+   */
+  prepaid_upgrade_star_count: int53;
 
   /**
    * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
@@ -36488,16 +37517,42 @@ export type messageGift = {
   is_saved: Bool;
 
   /**
+   * True, if the gift can be upgraded to a unique gift; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  can_be_upgraded: Bool;
+
+  /**
    * True, if the gift was converted to Telegram Stars; only for the receiver of the gift
    * @type {Bool} {@link Bool}
    */
   was_converted: Bool;
+
+  /**
+   * True, if the gift was upgraded to a unique gift
+   * @type {Bool} {@link Bool}
+   */
+  was_upgraded: Bool;
+
+  /**
+   * True, if the gift was refunded and isn't available anymore
+   * @type {Bool} {@link Bool}
+   */
+  was_refunded: Bool;
+
+  /**
+   * Identifier of the service message messageUpgradedGift or messageRefundedUpgradedGift with upgraded version of the gift; can be 0 if none or an identifier of a deleted message.
+   *
+   * - Use getUserGift to get information about the gift
+   * @type {int53} {@link int53}
+   */
+  upgrade_message_id: int53;
 };
 
 /**
  * Version of {@link messageGift} for method parameters.
  *
- * A gift was received or sent by the current user
+ * A regular gift was received or sent by the current user
  */
 export type messageGift$Input = {
   readonly _: "messageGift";
@@ -36515,10 +37570,16 @@ export type messageGift$Input = {
   readonly text?: formattedText$Input;
 
   /**
-   * Number of Telegram Stars that can be claimed by the receiver instead of the gift; 0 if the gift can't be sold by the receiver
+   * Number of Telegram Stars that can be claimed by the receiver instead of the regular gift; 0 if the gift can't be sold by the receiver
    * @type {int53} {@link int53}
    */
   readonly sell_star_count?: int53;
+
+  /**
+   * Number of Telegram Stars that were paid by the sender for the ability to upgrade the gift
+   * @type {int53} {@link int53}
+   */
+  readonly prepaid_upgrade_star_count?: int53;
 
   /**
    * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone will be able to see them
@@ -36533,10 +37594,176 @@ export type messageGift$Input = {
   readonly is_saved?: Bool$Input;
 
   /**
+   * True, if the gift can be upgraded to a unique gift; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_upgraded?: Bool$Input;
+
+  /**
    * True, if the gift was converted to Telegram Stars; only for the receiver of the gift
    * @type {Bool} {@link Bool}
    */
   readonly was_converted?: Bool$Input;
+
+  /**
+   * True, if the gift was upgraded to a unique gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly was_upgraded?: Bool$Input;
+
+  /**
+   * True, if the gift was refunded and isn't available anymore
+   * @type {Bool} {@link Bool}
+   */
+  readonly was_refunded?: Bool$Input;
+
+  /**
+   * Identifier of the service message messageUpgradedGift or messageRefundedUpgradedGift with upgraded version of the gift; can be 0 if none or an identifier of a deleted message.
+   *
+   * - Use getUserGift to get information about the gift
+   * @type {int53} {@link int53}
+   */
+  readonly upgrade_message_id?: int53;
+};
+
+/**
+ * An upgraded gift was received or sent by the current user
+ */
+export type messageUpgradedGift = {
+  _: "messageUpgradedGift";
+
+  /**
+   * The gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  gift: upgradedGift;
+
+  /**
+   * True, if the gift was obtained by upgrading of a previously received gift; otherwise, this is a transferred gift
+   * @type {Bool} {@link Bool}
+   */
+  is_upgrade: Bool;
+
+  /**
+   * True, if the gift is displayed on the user's profile page; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  is_saved: Bool;
+
+  /**
+   * True, if the gift can be transferred to another user; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  can_be_transferred: Bool;
+
+  /**
+   * True, if the gift was transferred to another user; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  was_transferred: Bool;
+
+  /**
+   * Number of Telegram Stars that must be paid to transfer the upgraded gift; only for the receiver of the gift
+   * @type {int53} {@link int53}
+   */
+  transfer_star_count: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the gift can be transferred to TON blockchain as an NFT; 0 if NFT export isn't possible; only for the receiver of the gift
+   * @type {int32} {@link int32}
+   */
+  export_date: int32;
+};
+
+/**
+ * Version of {@link messageUpgradedGift} for method parameters.
+ *
+ * An upgraded gift was received or sent by the current user
+ */
+export type messageUpgradedGift$Input = {
+  readonly _: "messageUpgradedGift";
+
+  /**
+   * The gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  readonly gift?: upgradedGift$Input;
+
+  /**
+   * True, if the gift was obtained by upgrading of a previously received gift; otherwise, this is a transferred gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_upgrade?: Bool$Input;
+
+  /**
+   * True, if the gift is displayed on the user's profile page; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_saved?: Bool$Input;
+
+  /**
+   * True, if the gift can be transferred to another user; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_transferred?: Bool$Input;
+
+  /**
+   * True, if the gift was transferred to another user; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly was_transferred?: Bool$Input;
+
+  /**
+   * Number of Telegram Stars that must be paid to transfer the upgraded gift; only for the receiver of the gift
+   * @type {int53} {@link int53}
+   */
+  readonly transfer_star_count?: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the gift can be transferred to TON blockchain as an NFT; 0 if NFT export isn't possible; only for the receiver of the gift
+   * @type {int32} {@link int32}
+   */
+  readonly export_date?: int32;
+};
+
+/**
+ * A gift which purchase, upgrade or transfer were refunded
+ */
+export type messageRefundedUpgradedGift = {
+  _: "messageRefundedUpgradedGift";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  gift: gift;
+
+  /**
+   * True, if the gift was obtained by upgrading of a previously received gift
+   * @type {Bool} {@link Bool}
+   */
+  is_upgrade: Bool;
+};
+
+/**
+ * Version of {@link messageRefundedUpgradedGift} for method parameters.
+ *
+ * A gift which purchase, upgrade or transfer were refunded
+ */
+export type messageRefundedUpgradedGift$Input = {
+  readonly _: "messageRefundedUpgradedGift";
+
+  /**
+   * The gift
+   * @type {gift} {@link gift}
+   */
+  readonly gift?: gift$Input;
+
+  /**
+   * True, if the gift was obtained by upgrading of a previously received gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_upgrade?: Bool$Input;
 };
 
 /**
@@ -39869,6 +41096,54 @@ export type searchMessagesFilterPinned = {
  */
 export type searchMessagesFilterPinned$Input = {
   readonly _: "searchMessagesFilterPinned";
+};
+
+/**
+ * Returns only messages in private chats
+ */
+export type searchMessagesChatTypeFilterPrivate = {
+  _: "searchMessagesChatTypeFilterPrivate";
+};
+
+/**
+ * Version of {@link searchMessagesChatTypeFilterPrivate} for method parameters.
+ *
+ * Returns only messages in private chats
+ */
+export type searchMessagesChatTypeFilterPrivate$Input = {
+  readonly _: "searchMessagesChatTypeFilterPrivate";
+};
+
+/**
+ * Returns only messages in basic group and supergroup chats
+ */
+export type searchMessagesChatTypeFilterGroup = {
+  _: "searchMessagesChatTypeFilterGroup";
+};
+
+/**
+ * Version of {@link searchMessagesChatTypeFilterGroup} for method parameters.
+ *
+ * Returns only messages in basic group and supergroup chats
+ */
+export type searchMessagesChatTypeFilterGroup$Input = {
+  readonly _: "searchMessagesChatTypeFilterGroup";
+};
+
+/**
+ * Returns only messages in channel chats
+ */
+export type searchMessagesChatTypeFilterChannel = {
+  _: "searchMessagesChatTypeFilterChannel";
+};
+
+/**
+ * Version of {@link searchMessagesChatTypeFilterChannel} for method parameters.
+ *
+ * Returns only messages in channel chats
+ */
+export type searchMessagesChatTypeFilterChannel$Input = {
+  readonly _: "searchMessagesChatTypeFilterChannel";
 };
 
 /**
@@ -44732,6 +46007,34 @@ export type callDiscardReasonHungUp$Input = {
 };
 
 /**
+ * The call was ended because it has been used successfully to transfer private encryption key for the associated group call
+ */
+export type callDiscardReasonAllowGroupCall = {
+  _: "callDiscardReasonAllowGroupCall";
+
+  /**
+   * Encrypted using the call private key encryption key for the associated group call
+   * @type {bytes} {@link bytes}
+   */
+  encrypted_group_call_key: bytes;
+};
+
+/**
+ * Version of {@link callDiscardReasonAllowGroupCall} for method parameters.
+ *
+ * The call was ended because it has been used successfully to transfer private encryption key for the associated group call
+ */
+export type callDiscardReasonAllowGroupCall$Input = {
+  readonly _: "callDiscardReasonAllowGroupCall";
+
+  /**
+   * Encrypted using the call private key encryption key for the associated group call
+   * @type {bytes} {@link bytes}
+   */
+  readonly encrypted_group_call_key?: bytes$Input;
+};
+
+/**
  * Specifies the supported call protocols
  */
 export type callProtocol = {
@@ -46286,6 +47589,12 @@ export type call = {
    * @type {CallState} {@link CallState}
    */
   state: CallState;
+
+  /**
+   * Identifier of the group call associated with the call; 0 if the group call isn't created yet. The group call can be received through the method getGroupCall
+   * @type {int32} {@link int32}
+   */
+  group_call_id: int32;
 };
 
 /**
@@ -46325,6 +47634,12 @@ export type call$Input = {
    * @type {CallState} {@link CallState}
    */
   readonly state?: CallState$Input;
+
+  /**
+   * Identifier of the group call associated with the call; 0 if the group call isn't created yet. The group call can be received through the method getGroupCall
+   * @type {int32} {@link int32}
+   */
+  readonly group_call_id?: int32;
 };
 
 /**
@@ -48058,12 +49373,6 @@ export type inputInlineQueryResultArticle = {
   url: string;
 
   /**
-   * True, if the URL must be not shown
-   * @type {Bool} {@link Bool}
-   */
-  hide_url: Bool;
-
-  /**
    * Title of the result
    * @type {string} {@link string}
    */
@@ -48125,12 +49434,6 @@ export type inputInlineQueryResultArticle$Input = {
    * @type {string} {@link string}
    */
   readonly url?: string;
-
-  /**
-   * True, if the URL must be not shown
-   * @type {Bool} {@link Bool}
-   */
-  readonly hide_url?: Bool$Input;
 
   /**
    * Title of the result
@@ -49266,12 +50569,6 @@ export type inlineQueryResultArticle = {
   url: string;
 
   /**
-   * True, if the URL must be not shown
-   * @type {Bool} {@link Bool}
-   */
-  hide_url: Bool;
-
-  /**
    * Title of the result
    * @type {string} {@link string}
    */
@@ -49309,12 +50606,6 @@ export type inlineQueryResultArticle$Input = {
    * @type {string} {@link string}
    */
   readonly url?: string;
-
-  /**
-   * True, if the URL must be not shown
-   * @type {Bool} {@link Bool}
-   */
-  readonly hide_url?: Bool$Input;
 
   /**
    * Title of the result
@@ -57216,6 +58507,34 @@ export type pushMessageContentGift$Input = {
 };
 
 /**
+ * A message with an upgraded gift
+ */
+export type pushMessageContentUpgradedGift = {
+  _: "pushMessageContentUpgradedGift";
+
+  /**
+   * True, if the gift was obtained by upgrading of a previously received gift; otherwise, this is a transferred gift
+   * @type {Bool} {@link Bool}
+   */
+  is_upgrade: Bool;
+};
+
+/**
+ * Version of {@link pushMessageContentUpgradedGift} for method parameters.
+ *
+ * A message with an upgraded gift
+ */
+export type pushMessageContentUpgradedGift$Input = {
+  readonly _: "pushMessageContentUpgradedGift";
+
+  /**
+   * True, if the gift was obtained by upgrading of a previously received gift; otherwise, this is a transferred gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_upgrade?: Bool$Input;
+};
+
+/**
  * A screenshot of a message in the chat has been taken
  */
 export type pushMessageContentScreenshotTaken = {
@@ -64404,6 +65723,22 @@ export type suggestedActionSetBirthdate$Input = {
 };
 
 /**
+ * Suggests the user to set profile photo
+ */
+export type suggestedActionSetProfilePhoto = {
+  _: "suggestedActionSetProfilePhoto";
+};
+
+/**
+ * Version of {@link suggestedActionSetProfilePhoto} for method parameters.
+ *
+ * Suggests the user to set profile photo
+ */
+export type suggestedActionSetProfilePhoto$Input = {
+  readonly _: "suggestedActionSetProfilePhoto";
+};
+
+/**
  * Suggests the user to extend their expiring Telegram Premium subscription
  */
 export type suggestedActionExtendPremium = {
@@ -71350,7 +72685,7 @@ export type updateAccentColors = {
   colors: vector<accentColor>;
 
   /**
-   * The list of accent color identifiers, which can be set through setAccentColor and setChatAccentColor. The colors must be shown in the specififed order
+   * The list of accent color identifiers, which can be set through setAccentColor and setChatAccentColor. The colors must be shown in the specified order
    * @type {vector<int32>} {@link vector<int32>}
    */
   available_accent_color_ids: vector<int32>;
@@ -71373,7 +72708,7 @@ export type updateAccentColors$Input = {
   readonly colors?: vector$Input<accentColor$Input>;
 
   /**
-   * The list of accent color identifiers, which can be set through setAccentColor and setChatAccentColor. The colors must be shown in the specififed order
+   * The list of accent color identifiers, which can be set through setAccentColor and setChatAccentColor. The colors must be shown in the specified order
    * @type {vector<int32>} {@link vector<int32>}
    */
   readonly available_accent_color_ids?: vector$Input<int32>;
@@ -71392,7 +72727,7 @@ export type updateProfileAccentColors = {
   colors: vector<profileAccentColor>;
 
   /**
-   * The list of accent color identifiers, which can be set through setProfileAccentColor and setChatProfileAccentColor. The colors must be shown in the specififed order
+   * The list of accent color identifiers, which can be set through setProfileAccentColor and setChatProfileAccentColor. The colors must be shown in the specified order
    * @type {vector<int32>} {@link vector<int32>}
    */
   available_accent_color_ids: vector<int32>;
@@ -71413,7 +72748,7 @@ export type updateProfileAccentColors$Input = {
   readonly colors?: vector$Input<profileAccentColor$Input>;
 
   /**
-   * The list of accent color identifiers, which can be set through setProfileAccentColor and setChatProfileAccentColor. The colors must be shown in the specififed order
+   * The list of accent color identifiers, which can be set through setProfileAccentColor and setChatProfileAccentColor. The colors must be shown in the specified order
    * @type {vector<int32>} {@link vector<int32>}
    */
   readonly available_accent_color_ids?: vector$Input<int32>;
@@ -74996,6 +76331,45 @@ export type BotMenuButton$Input = botMenuButton$Input;
 
 /**
  * Any of:
+ * - {@link botVerificationParameters}
+ */
+export type BotVerificationParameters = botVerificationParameters;
+
+/**
+ * Version of {@link BotVerificationParameters} for method parameters.
+ * Any of:
+ * - {@link botVerificationParameters$Input}
+ */
+export type BotVerificationParameters$Input = botVerificationParameters$Input;
+
+/**
+ * Any of:
+ * - {@link botVerification}
+ */
+export type BotVerification = botVerification;
+
+/**
+ * Version of {@link BotVerification} for method parameters.
+ * Any of:
+ * - {@link botVerification$Input}
+ */
+export type BotVerification$Input = botVerification$Input;
+
+/**
+ * Any of:
+ * - {@link verificationStatus}
+ */
+export type VerificationStatus = verificationStatus;
+
+/**
+ * Version of {@link VerificationStatus} for method parameters.
+ * Any of:
+ * - {@link verificationStatus$Input}
+ */
+export type VerificationStatus$Input = verificationStatus$Input;
+
+/**
+ * Any of:
  * - {@link chatLocation}
  */
 export type ChatLocation = chatLocation;
@@ -75436,6 +76810,29 @@ export type StarSubscriptions$Input = starSubscriptions$Input;
 
 /**
  * Any of:
+ * - {@link affiliateTypeCurrentUser}
+ * - {@link affiliateTypeBot}
+ * - {@link affiliateTypeChannel}
+ */
+export type AffiliateType =
+  | affiliateTypeCurrentUser
+  | affiliateTypeBot
+  | affiliateTypeChannel;
+
+/**
+ * Version of {@link AffiliateType} for method parameters.
+ * Any of:
+ * - {@link affiliateTypeCurrentUser$Input}
+ * - {@link affiliateTypeBot$Input}
+ * - {@link affiliateTypeChannel$Input}
+ */
+export type AffiliateType$Input =
+  | affiliateTypeCurrentUser$Input
+  | affiliateTypeBot$Input
+  | affiliateTypeChannel$Input;
+
+/**
+ * Any of:
  * - {@link affiliateProgramSortOrderProfitability}
  * - {@link affiliateProgramSortOrderCreationDate}
  * - {@link affiliateProgramSortOrderRevenue}
@@ -75524,29 +76921,29 @@ export type FoundAffiliatePrograms$Input = foundAffiliatePrograms$Input;
 
 /**
  * Any of:
- * - {@link chatAffiliateProgram}
+ * - {@link connectedAffiliateProgram}
  */
-export type ChatAffiliateProgram = chatAffiliateProgram;
+export type ConnectedAffiliateProgram = connectedAffiliateProgram;
 
 /**
- * Version of {@link ChatAffiliateProgram} for method parameters.
+ * Version of {@link ConnectedAffiliateProgram} for method parameters.
  * Any of:
- * - {@link chatAffiliateProgram$Input}
+ * - {@link connectedAffiliateProgram$Input}
  */
-export type ChatAffiliateProgram$Input = chatAffiliateProgram$Input;
+export type ConnectedAffiliateProgram$Input = connectedAffiliateProgram$Input;
 
 /**
  * Any of:
- * - {@link chatAffiliatePrograms}
+ * - {@link connectedAffiliatePrograms}
  */
-export type ChatAffiliatePrograms = chatAffiliatePrograms;
+export type ConnectedAffiliatePrograms = connectedAffiliatePrograms;
 
 /**
- * Version of {@link ChatAffiliatePrograms} for method parameters.
+ * Version of {@link ConnectedAffiliatePrograms} for method parameters.
  * Any of:
- * - {@link chatAffiliatePrograms$Input}
+ * - {@link connectedAffiliatePrograms$Input}
  */
-export type ChatAffiliatePrograms$Input = chatAffiliatePrograms$Input;
+export type ConnectedAffiliatePrograms$Input = connectedAffiliatePrograms$Input;
 
 /**
  * Any of:
@@ -75694,6 +77091,58 @@ export type StarGiveawayPaymentOptions$Input = starGiveawayPaymentOptions$Input;
 
 /**
  * Any of:
+ * - {@link upgradedGiftModel}
+ */
+export type UpgradedGiftModel = upgradedGiftModel;
+
+/**
+ * Version of {@link UpgradedGiftModel} for method parameters.
+ * Any of:
+ * - {@link upgradedGiftModel$Input}
+ */
+export type UpgradedGiftModel$Input = upgradedGiftModel$Input;
+
+/**
+ * Any of:
+ * - {@link upgradedGiftSymbol}
+ */
+export type UpgradedGiftSymbol = upgradedGiftSymbol;
+
+/**
+ * Version of {@link UpgradedGiftSymbol} for method parameters.
+ * Any of:
+ * - {@link upgradedGiftSymbol$Input}
+ */
+export type UpgradedGiftSymbol$Input = upgradedGiftSymbol$Input;
+
+/**
+ * Any of:
+ * - {@link upgradedGiftBackdrop}
+ */
+export type UpgradedGiftBackdrop = upgradedGiftBackdrop;
+
+/**
+ * Version of {@link UpgradedGiftBackdrop} for method parameters.
+ * Any of:
+ * - {@link upgradedGiftBackdrop$Input}
+ */
+export type UpgradedGiftBackdrop$Input = upgradedGiftBackdrop$Input;
+
+/**
+ * Any of:
+ * - {@link upgradedGiftOriginalDetails}
+ */
+export type UpgradedGiftOriginalDetails = upgradedGiftOriginalDetails;
+
+/**
+ * Version of {@link UpgradedGiftOriginalDetails} for method parameters.
+ * Any of:
+ * - {@link upgradedGiftOriginalDetails$Input}
+ */
+export type UpgradedGiftOriginalDetails$Input = upgradedGiftOriginalDetails$Input;
+
+/**
+ * Any of:
  * - {@link gift}
  */
 export type Gift = gift;
@@ -75720,6 +77169,47 @@ export type Gifts$Input = gifts$Input;
 
 /**
  * Any of:
+ * - {@link upgradedGift}
+ */
+export type UpgradedGift = upgradedGift;
+
+/**
+ * Version of {@link UpgradedGift} for method parameters.
+ * Any of:
+ * - {@link upgradedGift$Input}
+ */
+export type UpgradedGift$Input = upgradedGift$Input;
+
+/**
+ * Any of:
+ * - {@link upgradeGiftResult}
+ */
+export type UpgradeGiftResult = upgradeGiftResult;
+
+/**
+ * Version of {@link UpgradeGiftResult} for method parameters.
+ * Any of:
+ * - {@link upgradeGiftResult$Input}
+ */
+export type UpgradeGiftResult$Input = upgradeGiftResult$Input;
+
+/**
+ * Any of:
+ * - {@link sentGiftRegular}
+ * - {@link sentGiftUpgraded}
+ */
+export type SentGift = sentGiftRegular | sentGiftUpgraded;
+
+/**
+ * Version of {@link SentGift} for method parameters.
+ * Any of:
+ * - {@link sentGiftRegular$Input}
+ * - {@link sentGiftUpgraded$Input}
+ */
+export type SentGift$Input = sentGiftRegular$Input | sentGiftUpgraded$Input;
+
+/**
+ * Any of:
  * - {@link userGift}
  */
 export type UserGift = userGift;
@@ -75743,6 +77233,19 @@ export type UserGifts = userGifts;
  * - {@link userGifts$Input}
  */
 export type UserGifts$Input = userGifts$Input;
+
+/**
+ * Any of:
+ * - {@link giftUpgradePreview}
+ */
+export type GiftUpgradePreview = giftUpgradePreview;
+
+/**
+ * Version of {@link GiftUpgradePreview} for method parameters.
+ * Any of:
+ * - {@link giftUpgradePreview$Input}
+ */
+export type GiftUpgradePreview$Input = giftUpgradePreview$Input;
 
 /**
  * Any of:
@@ -75785,7 +77288,9 @@ export type StarTransactionDirection$Input =
  * - {@link starTransactionTypeChannelSubscriptionPurchase}
  * - {@link starTransactionTypeChannelSubscriptionSale}
  * - {@link starTransactionTypeGiftPurchase}
+ * - {@link starTransactionTypeGiftTransfer}
  * - {@link starTransactionTypeGiftSale}
+ * - {@link starTransactionTypeGiftUpgrade}
  * - {@link starTransactionTypeChannelPaidReactionSend}
  * - {@link starTransactionTypeChannelPaidReactionReceive}
  * - {@link starTransactionTypeAffiliateProgramCommission}
@@ -75812,7 +77317,9 @@ export type StarTransactionType =
   | starTransactionTypeChannelSubscriptionPurchase
   | starTransactionTypeChannelSubscriptionSale
   | starTransactionTypeGiftPurchase
+  | starTransactionTypeGiftTransfer
   | starTransactionTypeGiftSale
+  | starTransactionTypeGiftUpgrade
   | starTransactionTypeChannelPaidReactionSend
   | starTransactionTypeChannelPaidReactionReceive
   | starTransactionTypeAffiliateProgramCommission
@@ -75841,7 +77348,9 @@ export type StarTransactionType =
  * - {@link starTransactionTypeChannelSubscriptionPurchase$Input}
  * - {@link starTransactionTypeChannelSubscriptionSale$Input}
  * - {@link starTransactionTypeGiftPurchase$Input}
+ * - {@link starTransactionTypeGiftTransfer$Input}
  * - {@link starTransactionTypeGiftSale$Input}
+ * - {@link starTransactionTypeGiftUpgrade$Input}
  * - {@link starTransactionTypeChannelPaidReactionSend$Input}
  * - {@link starTransactionTypeChannelPaidReactionReceive$Input}
  * - {@link starTransactionTypeAffiliateProgramCommission$Input}
@@ -75868,7 +77377,9 @@ export type StarTransactionType$Input =
   | starTransactionTypeChannelSubscriptionPurchase$Input
   | starTransactionTypeChannelSubscriptionSale$Input
   | starTransactionTypeGiftPurchase$Input
+  | starTransactionTypeGiftTransfer$Input
   | starTransactionTypeGiftSale$Input
+  | starTransactionTypeGiftUpgrade$Input
   | starTransactionTypeChannelPaidReactionSend$Input
   | starTransactionTypeChannelPaidReactionReceive$Input
   | starTransactionTypeAffiliateProgramCommission$Input
@@ -77380,6 +78891,19 @@ export type ChatFolderIcon = chatFolderIcon;
  * - {@link chatFolderIcon$Input}
  */
 export type ChatFolderIcon$Input = chatFolderIcon$Input;
+
+/**
+ * Any of:
+ * - {@link chatFolderName}
+ */
+export type ChatFolderName = chatFolderName;
+
+/**
+ * Version of {@link ChatFolderName} for method parameters.
+ * Any of:
+ * - {@link chatFolderName$Input}
+ */
+export type ChatFolderName$Input = chatFolderName$Input;
 
 /**
  * Any of:
@@ -79588,6 +81112,8 @@ export type InputPassportElementError$Input = inputPassportElementError$Input;
  * - {@link messageGiftedStars}
  * - {@link messageGiveawayPrizeStars}
  * - {@link messageGift}
+ * - {@link messageUpgradedGift}
+ * - {@link messageRefundedUpgradedGift}
  * - {@link messageContactRegistered}
  * - {@link messageUsersShared}
  * - {@link messageChatShared}
@@ -79664,6 +81190,8 @@ export type MessageContent =
   | messageGiftedStars
   | messageGiveawayPrizeStars
   | messageGift
+  | messageUpgradedGift
+  | messageRefundedUpgradedGift
   | messageContactRegistered
   | messageUsersShared
   | messageChatShared
@@ -79742,6 +81270,8 @@ export type MessageContent =
  * - {@link messageGiftedStars$Input}
  * - {@link messageGiveawayPrizeStars$Input}
  * - {@link messageGift$Input}
+ * - {@link messageUpgradedGift$Input}
+ * - {@link messageRefundedUpgradedGift$Input}
  * - {@link messageContactRegistered$Input}
  * - {@link messageUsersShared$Input}
  * - {@link messageChatShared$Input}
@@ -79818,6 +81348,8 @@ export type MessageContent$Input =
   | messageGiftedStars$Input
   | messageGiveawayPrizeStars$Input
   | messageGift$Input
+  | messageUpgradedGift$Input
+  | messageRefundedUpgradedGift$Input
   | messageContactRegistered$Input
   | messageUsersShared$Input
   | messageChatShared$Input
@@ -80217,6 +81749,29 @@ export type SearchMessagesFilter$Input =
   | searchMessagesFilterUnreadReaction$Input
   | searchMessagesFilterFailedToSend$Input
   | searchMessagesFilterPinned$Input;
+
+/**
+ * Any of:
+ * - {@link searchMessagesChatTypeFilterPrivate}
+ * - {@link searchMessagesChatTypeFilterGroup}
+ * - {@link searchMessagesChatTypeFilterChannel}
+ */
+export type SearchMessagesChatTypeFilter =
+  | searchMessagesChatTypeFilterPrivate
+  | searchMessagesChatTypeFilterGroup
+  | searchMessagesChatTypeFilterChannel;
+
+/**
+ * Version of {@link SearchMessagesChatTypeFilter} for method parameters.
+ * Any of:
+ * - {@link searchMessagesChatTypeFilterPrivate$Input}
+ * - {@link searchMessagesChatTypeFilterGroup$Input}
+ * - {@link searchMessagesChatTypeFilterChannel$Input}
+ */
+export type SearchMessagesChatTypeFilter$Input =
+  | searchMessagesChatTypeFilterPrivate$Input
+  | searchMessagesChatTypeFilterGroup$Input
+  | searchMessagesChatTypeFilterChannel$Input;
 
 /**
  * Any of:
@@ -81138,13 +82693,15 @@ export type ResendCodeReason$Input =
  * - {@link callDiscardReasonDeclined}
  * - {@link callDiscardReasonDisconnected}
  * - {@link callDiscardReasonHungUp}
+ * - {@link callDiscardReasonAllowGroupCall}
  */
 export type CallDiscardReason =
   | callDiscardReasonEmpty
   | callDiscardReasonMissed
   | callDiscardReasonDeclined
   | callDiscardReasonDisconnected
-  | callDiscardReasonHungUp;
+  | callDiscardReasonHungUp
+  | callDiscardReasonAllowGroupCall;
 
 /**
  * Version of {@link CallDiscardReason} for method parameters.
@@ -81154,13 +82711,15 @@ export type CallDiscardReason =
  * - {@link callDiscardReasonDeclined$Input}
  * - {@link callDiscardReasonDisconnected$Input}
  * - {@link callDiscardReasonHungUp$Input}
+ * - {@link callDiscardReasonAllowGroupCall$Input}
  */
 export type CallDiscardReason$Input =
   | callDiscardReasonEmpty$Input
   | callDiscardReasonMissed$Input
   | callDiscardReasonDeclined$Input
   | callDiscardReasonDisconnected$Input
-  | callDiscardReasonHungUp$Input;
+  | callDiscardReasonHungUp$Input
+  | callDiscardReasonAllowGroupCall$Input;
 
 /**
  * Any of:
@@ -83225,6 +84784,7 @@ export type MessageFileType$Input =
  * - {@link pushMessageContentPremiumGiftCode}
  * - {@link pushMessageContentGiveaway}
  * - {@link pushMessageContentGift}
+ * - {@link pushMessageContentUpgradedGift}
  * - {@link pushMessageContentScreenshotTaken}
  * - {@link pushMessageContentSticker}
  * - {@link pushMessageContentStory}
@@ -83263,6 +84823,7 @@ export type PushMessageContent =
   | pushMessageContentPremiumGiftCode
   | pushMessageContentGiveaway
   | pushMessageContentGift
+  | pushMessageContentUpgradedGift
   | pushMessageContentScreenshotTaken
   | pushMessageContentSticker
   | pushMessageContentStory
@@ -83303,6 +84864,7 @@ export type PushMessageContent =
  * - {@link pushMessageContentPremiumGiftCode$Input}
  * - {@link pushMessageContentGiveaway$Input}
  * - {@link pushMessageContentGift$Input}
+ * - {@link pushMessageContentUpgradedGift$Input}
  * - {@link pushMessageContentScreenshotTaken$Input}
  * - {@link pushMessageContentSticker$Input}
  * - {@link pushMessageContentStory$Input}
@@ -83341,6 +84903,7 @@ export type PushMessageContent$Input =
   | pushMessageContentPremiumGiftCode$Input
   | pushMessageContentGiveaway$Input
   | pushMessageContentGift$Input
+  | pushMessageContentUpgradedGift$Input
   | pushMessageContentScreenshotTaken$Input
   | pushMessageContentSticker$Input
   | pushMessageContentStory$Input
@@ -84781,6 +86344,7 @@ export type TMeUrls$Input = tMeUrls$Input;
  * - {@link suggestedActionSubscribeToAnnualPremium}
  * - {@link suggestedActionGiftPremiumForChristmas}
  * - {@link suggestedActionSetBirthdate}
+ * - {@link suggestedActionSetProfilePhoto}
  * - {@link suggestedActionExtendPremium}
  * - {@link suggestedActionExtendStarSubscriptions}
  */
@@ -84796,6 +86360,7 @@ export type SuggestedAction =
   | suggestedActionSubscribeToAnnualPremium
   | suggestedActionGiftPremiumForChristmas
   | suggestedActionSetBirthdate
+  | suggestedActionSetProfilePhoto
   | suggestedActionExtendPremium
   | suggestedActionExtendStarSubscriptions;
 
@@ -84813,6 +86378,7 @@ export type SuggestedAction =
  * - {@link suggestedActionSubscribeToAnnualPremium$Input}
  * - {@link suggestedActionGiftPremiumForChristmas$Input}
  * - {@link suggestedActionSetBirthdate$Input}
+ * - {@link suggestedActionSetProfilePhoto$Input}
  * - {@link suggestedActionExtendPremium$Input}
  * - {@link suggestedActionExtendStarSubscriptions$Input}
  */
@@ -84828,6 +86394,7 @@ export type SuggestedAction$Input =
   | suggestedActionSubscribeToAnnualPremium$Input
   | suggestedActionGiftPremiumForChristmas$Input
   | suggestedActionSetBirthdate$Input
+  | suggestedActionSetProfilePhoto$Input
   | suggestedActionExtendPremium$Input
   | suggestedActionExtendStarSubscriptions$Input;
 
@@ -86574,6 +88141,7 @@ export type $MethodsDict = {
   readonly getVideoChatAvailableParticipants: getVideoChatAvailableParticipants;
   readonly setVideoChatDefaultParticipant: setVideoChatDefaultParticipant;
   readonly createVideoChat: createVideoChat;
+  readonly createGroupCall: createGroupCall;
   readonly getVideoChatRtmpUrl: getVideoChatRtmpUrl;
   readonly replaceVideoChatRtmpUrl: replaceVideoChatRtmpUrl;
   readonly getGroupCall: getGroupCall;
@@ -86725,6 +88293,8 @@ export type $MethodsDict = {
   readonly getBotInfoDescription: getBotInfoDescription;
   readonly setBotInfoShortDescription: setBotInfoShortDescription;
   readonly getBotInfoShortDescription: getBotInfoShortDescription;
+  readonly setMessageSenderBotVerification: setMessageSenderBotVerification;
+  readonly removeMessageSenderBotVerification: removeMessageSenderBotVerification;
   readonly getActiveSessions: getActiveSessions;
   readonly terminateSession: terminateSession;
   readonly terminateAllOtherSessions: terminateAllOtherSessions;
@@ -86768,7 +88338,11 @@ export type $MethodsDict = {
   readonly sendGift: sendGift;
   readonly sellGift: sellGift;
   readonly toggleGiftIsSaved: toggleGiftIsSaved;
+  readonly getGiftUpgradePreview: getGiftUpgradePreview;
+  readonly upgradeGift: upgradeGift;
+  readonly transferGift: transferGift;
   readonly getUserGifts: getUserGifts;
+  readonly getUserGift: getUserGift;
   readonly createInvoiceLink: createInvoiceLink;
   readonly refundStarPayment: refundStarPayment;
   readonly getSupportUser: getSupportUser;
@@ -86891,10 +88465,10 @@ export type $MethodsDict = {
   readonly setChatAffiliateProgram: setChatAffiliateProgram;
   readonly searchChatAffiliateProgram: searchChatAffiliateProgram;
   readonly searchAffiliatePrograms: searchAffiliatePrograms;
-  readonly connectChatAffiliateProgram: connectChatAffiliateProgram;
-  readonly disconnectChatAffiliateProgram: disconnectChatAffiliateProgram;
-  readonly getChatAffiliateProgram: getChatAffiliateProgram;
-  readonly getChatAffiliatePrograms: getChatAffiliatePrograms;
+  readonly connectAffiliateProgram: connectAffiliateProgram;
+  readonly disconnectAffiliateProgram: disconnectAffiliateProgram;
+  readonly getConnectedAffiliateProgram: getConnectedAffiliateProgram;
+  readonly getConnectedAffiliatePrograms: getConnectedAffiliatePrograms;
   readonly getBusinessFeatures: getBusinessFeatures;
   readonly acceptTermsOfService: acceptTermsOfService;
   readonly searchStringsByPrefix: searchStringsByPrefix;
@@ -92890,6 +94464,17 @@ export class $AsyncApi {
   }
 
   /**
+   * Creates a group call from a one-to-one call
+   *
+   * @param {createGroupCall$DirectInput} parameters {@link createGroupCall$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async createGroupCall(parameters: createGroupCall$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("createGroupCall", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Returns RTMP URL for streaming to the chat; requires can_manage_video_chats administrator right
    *
    * @param {getVideoChatRtmpUrl$DirectInput} parameters {@link getVideoChatRtmpUrl$Input}
@@ -94027,7 +95612,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the list of owned by the current user bots
+   * Returns the list of bots owned by the current user
    *
    * @param {getOwnedBots$DirectInput} parameters {@link getOwnedBots$Input}
    * @returns {Promise<Users>} Promise<{@link Users}>
@@ -94866,6 +96451,38 @@ export class $AsyncApi {
   }
 
   /**
+   * Changes the verification status of a user or a chat by an owned bot
+   *
+   * @param {setMessageSenderBotVerification$DirectInput} parameters {@link setMessageSenderBotVerification$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setMessageSenderBotVerification(
+    parameters: setMessageSenderBotVerification$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "setMessageSenderBotVerification",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Removes the verification status of a user or a chat by an owned bot
+   *
+   * @param {removeMessageSenderBotVerification$DirectInput} parameters {@link removeMessageSenderBotVerification$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async removeMessageSenderBotVerification(
+    parameters: removeMessageSenderBotVerification$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "removeMessageSenderBotVerification",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
    * Returns all active sessions of the current user
    *
    * @param {getActiveSessions$DirectInput} parameters {@link getActiveSessions$Input}
@@ -95459,6 +97076,43 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns examples of possible upgraded gifts for a regular gift
+   *
+   * @param {getGiftUpgradePreview$DirectInput} parameters {@link getGiftUpgradePreview$Input}
+   * @returns {Promise<GiftUpgradePreview>} Promise<{@link GiftUpgradePreview}>
+   */
+  async getGiftUpgradePreview(
+    parameters: getGiftUpgradePreview$DirectInput
+  ): Promise<GiftUpgradePreview> {
+    const result = await this.client.invoke("getGiftUpgradePreview", parameters);
+    return result as GiftUpgradePreview;
+  }
+
+  /**
+   * Upgrades a gift received by the current user. Unless the gift has prepaid_upgrade_star_count > 0, the user must pay gift.upgrade_star_count Telegram Stars for the upgrade
+   *
+   * @param {upgradeGift$DirectInput} parameters {@link upgradeGift$Input}
+   * @returns {Promise<UpgradeGiftResult>} Promise<{@link UpgradeGiftResult}>
+   */
+  async upgradeGift(
+    parameters: upgradeGift$DirectInput
+  ): Promise<UpgradeGiftResult> {
+    const result = await this.client.invoke("upgradeGift", parameters);
+    return result as UpgradeGiftResult;
+  }
+
+  /**
+   * Sends a gift upgraded by the current user to another user
+   *
+   * @param {transferGift$DirectInput} parameters {@link transferGift$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async transferGift(parameters: transferGift$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("transferGift", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Returns gifts saved to profile by the given user
    *
    * @param {getUserGifts$DirectInput} parameters {@link getUserGifts$Input}
@@ -95467,6 +97121,17 @@ export class $AsyncApi {
   async getUserGifts(parameters: getUserGifts$DirectInput): Promise<UserGifts> {
     const result = await this.client.invoke("getUserGifts", parameters);
     return result as UserGifts;
+  }
+
+  /**
+   * Returns information about a gift received or sent by the current user
+   *
+   * @param {getUserGift$DirectInput} parameters {@link getUserGift$Input}
+   * @returns {Promise<UserGift>} Promise<{@link UserGift}>
+   */
+  async getUserGift(parameters: getUserGift$DirectInput): Promise<UserGift> {
+    const result = await this.client.invoke("getUserGift", parameters);
+    return result as UserGift;
   }
 
   /**
@@ -97102,7 +98767,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Searches affiliate programs that can be applied to the given chat
+   * Searches affiliate programs that can be connected to the given affiliate
    *
    * @param {searchAffiliatePrograms$DirectInput} parameters {@link searchAffiliatePrograms$Input}
    * @returns {Promise<FoundAffiliatePrograms>} Promise<{@link FoundAffiliatePrograms}>
@@ -97115,61 +98780,64 @@ export class $AsyncApi {
   }
 
   /**
-   * Connects an affiliate program to the given chat. Returns information about the connected affiliate program
+   * Connects an affiliate program to the given affiliate. Returns information about the connected affiliate program
    *
-   * @param {connectChatAffiliateProgram$DirectInput} parameters {@link connectChatAffiliateProgram$Input}
-   * @returns {Promise<ChatAffiliateProgram>} Promise<{@link ChatAffiliateProgram}>
+   * @param {connectAffiliateProgram$DirectInput} parameters {@link connectAffiliateProgram$Input}
+   * @returns {Promise<ConnectedAffiliateProgram>} Promise<{@link ConnectedAffiliateProgram}>
    */
-  async connectChatAffiliateProgram(
-    parameters: connectChatAffiliateProgram$DirectInput
-  ): Promise<ChatAffiliateProgram> {
+  async connectAffiliateProgram(
+    parameters: connectAffiliateProgram$DirectInput
+  ): Promise<ConnectedAffiliateProgram> {
+    const result = await this.client.invoke("connectAffiliateProgram", parameters);
+    return result as ConnectedAffiliateProgram;
+  }
+
+  /**
+   * Disconnects an affiliate program from the given affiliate and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+   *
+   * @param {disconnectAffiliateProgram$DirectInput} parameters {@link disconnectAffiliateProgram$Input}
+   * @returns {Promise<ConnectedAffiliateProgram>} Promise<{@link ConnectedAffiliateProgram}>
+   */
+  async disconnectAffiliateProgram(
+    parameters: disconnectAffiliateProgram$DirectInput
+  ): Promise<ConnectedAffiliateProgram> {
     const result = await this.client.invoke(
-      "connectChatAffiliateProgram",
+      "disconnectAffiliateProgram",
       parameters
     );
-    return result as ChatAffiliateProgram;
+    return result as ConnectedAffiliateProgram;
   }
 
   /**
-   * Disconnects an affiliate program from the given chat and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+   * Returns an affiliate program that were connected to the given affiliate by identifier of the bot that created the program
    *
-   * @param {disconnectChatAffiliateProgram$DirectInput} parameters {@link disconnectChatAffiliateProgram$Input}
-   * @returns {Promise<ChatAffiliateProgram>} Promise<{@link ChatAffiliateProgram}>
+   * @param {getConnectedAffiliateProgram$DirectInput} parameters {@link getConnectedAffiliateProgram$Input}
+   * @returns {Promise<ConnectedAffiliateProgram>} Promise<{@link ConnectedAffiliateProgram}>
    */
-  async disconnectChatAffiliateProgram(
-    parameters: disconnectChatAffiliateProgram$DirectInput
-  ): Promise<ChatAffiliateProgram> {
+  async getConnectedAffiliateProgram(
+    parameters: getConnectedAffiliateProgram$DirectInput
+  ): Promise<ConnectedAffiliateProgram> {
     const result = await this.client.invoke(
-      "disconnectChatAffiliateProgram",
+      "getConnectedAffiliateProgram",
       parameters
     );
-    return result as ChatAffiliateProgram;
+    return result as ConnectedAffiliateProgram;
   }
 
   /**
-   * Returns an affiliate program that were connected to the given chat by identifier of the bot that created the program
+   * Returns affiliate programs that were connected to the given affiliate
    *
-   * @param {getChatAffiliateProgram$DirectInput} parameters {@link getChatAffiliateProgram$Input}
-   * @returns {Promise<ChatAffiliateProgram>} Promise<{@link ChatAffiliateProgram}>
+   * @param {getConnectedAffiliatePrograms$DirectInput} parameters {@link getConnectedAffiliatePrograms$Input}
+   * @returns {Promise<ConnectedAffiliatePrograms>} Promise<{@link ConnectedAffiliatePrograms}>
    */
-  async getChatAffiliateProgram(
-    parameters: getChatAffiliateProgram$DirectInput
-  ): Promise<ChatAffiliateProgram> {
-    const result = await this.client.invoke("getChatAffiliateProgram", parameters);
-    return result as ChatAffiliateProgram;
-  }
-
-  /**
-   * Returns affiliate programs that were connected to the given chat
-   *
-   * @param {getChatAffiliatePrograms$DirectInput} parameters {@link getChatAffiliatePrograms$Input}
-   * @returns {Promise<ChatAffiliatePrograms>} Promise<{@link ChatAffiliatePrograms}>
-   */
-  async getChatAffiliatePrograms(
-    parameters: getChatAffiliatePrograms$DirectInput
-  ): Promise<ChatAffiliatePrograms> {
-    const result = await this.client.invoke("getChatAffiliatePrograms", parameters);
-    return result as ChatAffiliatePrograms;
+  async getConnectedAffiliatePrograms(
+    parameters: getConnectedAffiliatePrograms$DirectInput
+  ): Promise<ConnectedAffiliatePrograms> {
+    const result = await this.client.invoke(
+      "getConnectedAffiliatePrograms",
+      parameters
+    );
+    return result as ConnectedAffiliatePrograms;
   }
 
   /**
@@ -102073,12 +103741,6 @@ export type searchMessages$Input = {
   readonly chat_list?: ChatList$Input | null;
 
   /**
-   * Pass true to search only for messages in channels
-   * @type {Bool$Input} {@link Bool}
-   */
-  readonly only_in_channels?: Bool$Input;
-
-  /**
    * Query to search for
    * @type {string} {@link string}
    */
@@ -102101,6 +103763,12 @@ export type searchMessages$Input = {
    * @type {SearchMessagesFilter$Input} {@link SearchMessagesFilter}
    */
   readonly filter?: SearchMessagesFilter$Input | null;
+
+  /**
+   * Additional filter for type of the chat of the searched messages; pass null to search for messages in all chats
+   * @type {SearchMessagesChatTypeFilter$Input} {@link SearchMessagesChatTypeFilter}
+   */
+  readonly chat_type_filter?: SearchMessagesChatTypeFilter$Input | null;
 
   /**
    * If not 0, the minimum date of the messages to return
@@ -102128,12 +103796,6 @@ export type searchMessages$DirectInput = {
   readonly chat_list?: ChatList$Input | null;
 
   /**
-   * Pass true to search only for messages in channels
-   * @type {Bool$Input} {@link Bool}
-   */
-  readonly only_in_channels?: Bool$Input;
-
-  /**
    * Query to search for
    * @type {string} {@link string}
    */
@@ -102156,6 +103818,12 @@ export type searchMessages$DirectInput = {
    * @type {SearchMessagesFilter$Input} {@link SearchMessagesFilter}
    */
   readonly filter?: SearchMessagesFilter$Input | null;
+
+  /**
+   * Additional filter for type of the chat of the searched messages; pass null to search for messages in all chats
+   * @type {SearchMessagesChatTypeFilter$Input} {@link SearchMessagesChatTypeFilter}
+   */
+  readonly chat_type_filter?: SearchMessagesChatTypeFilter$Input | null;
 
   /**
    * If not 0, the minimum date of the messages to return
@@ -115733,7 +117401,7 @@ export type setStoryPrivacySettings$Input = {
   readonly story_id?: int32;
 
   /**
-   * The new privacy settigs for the story
+   * The new privacy settings for the story
    * @type {StoryPrivacySettings$Input} {@link StoryPrivacySettings}
    */
   readonly privacy_settings?: StoryPrivacySettings$Input;
@@ -115750,7 +117418,7 @@ export type setStoryPrivacySettings$DirectInput = {
   readonly story_id?: int32;
 
   /**
-   * The new privacy settigs for the story
+   * The new privacy settings for the story
    * @type {StoryPrivacySettings$Input} {@link StoryPrivacySettings}
    */
   readonly privacy_settings?: StoryPrivacySettings$Input;
@@ -119465,6 +121133,12 @@ export type createCall$Input = {
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_video?: Bool$Input;
+
+  /**
+   * Identifier of the group call to which the user will be added after exchanging private key via the call; pass 0 if none; currently, ignored
+   * @type {int32} {@link int32}
+   */
+  readonly group_call_id?: int32;
 };
 
 /**
@@ -119488,6 +121162,12 @@ export type createCall$DirectInput = {
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_video?: Bool$Input;
+
+  /**
+   * Identifier of the group call to which the user will be added after exchanging private key via the call; pass 0 if none; currently, ignored
+   * @type {int32} {@link int32}
+   */
+  readonly group_call_id?: int32;
 };
 
 /**
@@ -119971,6 +121651,38 @@ export type createVideoChat$DirectInput = {
  * @returns {GroupCallId} {@link GroupCallId}
  */
 export type createVideoChat = (parameters: createVideoChat$Input) => GroupCallId;
+
+/**
+ * Creates a group call from a one-to-one call
+ */
+export type createGroupCall$Input = {
+  readonly _: "createGroupCall";
+
+  /**
+   * Call identifier
+   * @type {int32} {@link int32}
+   */
+  readonly call_id?: int32;
+};
+
+/**
+ * Creates a group call from a one-to-one call
+ */
+export type createGroupCall$DirectInput = {
+  /**
+   * Call identifier
+   * @type {int32} {@link int32}
+   */
+  readonly call_id?: int32;
+};
+
+/**
+ * Creates a group call from a one-to-one call
+ *
+ * @param {createGroupCall$Input} parameters {@link createGroupCall$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type createGroupCall = (parameters: createGroupCall$Input) => Ok;
 
 /**
  * Returns RTMP URL for streaming to the chat; requires can_manage_video_chats administrator right
@@ -123613,19 +125325,19 @@ export type getRecentInlineBots$DirectInput = {};
 export type getRecentInlineBots = (parameters: getRecentInlineBots$Input) => Users;
 
 /**
- * Returns the list of owned by the current user bots
+ * Returns the list of bots owned by the current user
  */
 export type getOwnedBots$Input = {
   readonly _: "getOwnedBots";
 };
 
 /**
- * Returns the list of owned by the current user bots
+ * Returns the list of bots owned by the current user
  */
 export type getOwnedBots$DirectInput = {};
 
 /**
- * Returns the list of owned by the current user bots
+ * Returns the list of bots owned by the current user
  *
  * @param {getOwnedBots$Input} parameters {@link getOwnedBots$Input}
  * @returns {Users} {@link Users}
@@ -126225,6 +127937,114 @@ export type getBotInfoShortDescription = (
 ) => Text;
 
 /**
+ * Changes the verification status of a user or a chat by an owned bot
+ */
+export type setMessageSenderBotVerification$Input = {
+  readonly _: "setMessageSenderBotVerification";
+
+  /**
+   * Identifier of the owned bot, which will verify the user or the chat
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Identifier of the user or the supergroup or channel chat, which will be verified by the bot
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly verified_id?: MessageSender$Input;
+
+  /**
+   * Custom description of verification reason; 0-getOption("bot_verification_custom_description_length_max").
+   *
+   * - If empty, then "was verified by organization "organization_name"" will be used as description. Can be specified only if the bot is allowed to provide custom description
+   * @type {string} {@link string}
+   */
+  readonly custom_description?: string;
+};
+
+/**
+ * Changes the verification status of a user or a chat by an owned bot
+ */
+export type setMessageSenderBotVerification$DirectInput = {
+  /**
+   * Identifier of the owned bot, which will verify the user or the chat
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Identifier of the user or the supergroup or channel chat, which will be verified by the bot
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly verified_id?: MessageSender$Input;
+
+  /**
+   * Custom description of verification reason; 0-getOption("bot_verification_custom_description_length_max").
+   *
+   * - If empty, then "was verified by organization "organization_name"" will be used as description. Can be specified only if the bot is allowed to provide custom description
+   * @type {string} {@link string}
+   */
+  readonly custom_description?: string;
+};
+
+/**
+ * Changes the verification status of a user or a chat by an owned bot
+ *
+ * @param {setMessageSenderBotVerification$Input} parameters {@link setMessageSenderBotVerification$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setMessageSenderBotVerification = (
+  parameters: setMessageSenderBotVerification$Input
+) => Ok;
+
+/**
+ * Removes the verification status of a user or a chat by an owned bot
+ */
+export type removeMessageSenderBotVerification$Input = {
+  readonly _: "removeMessageSenderBotVerification";
+
+  /**
+   * Identifier of the owned bot, which verified the user or the chat
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Identifier of the user or the supergroup or channel chat, which verification is removed
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly verified_id?: MessageSender$Input;
+};
+
+/**
+ * Removes the verification status of a user or a chat by an owned bot
+ */
+export type removeMessageSenderBotVerification$DirectInput = {
+  /**
+   * Identifier of the owned bot, which verified the user or the chat
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * Identifier of the user or the supergroup or channel chat, which verification is removed
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly verified_id?: MessageSender$Input;
+};
+
+/**
+ * Removes the verification status of a user or a chat by an owned bot
+ *
+ * @param {removeMessageSenderBotVerification$Input} parameters {@link removeMessageSenderBotVerification$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type removeMessageSenderBotVerification = (
+  parameters: removeMessageSenderBotVerification$Input
+) => Ok;
+
+/**
  * Returns all active sessions of the current user
  */
 export type getActiveSessions$Input = {
@@ -127923,6 +129743,12 @@ export type sendGift$Input = {
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_private?: Bool$Input;
+
+  /**
+   * Pass true to additionally pay for the gift upgrade and allow the receiver to upgrade it for free
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly pay_for_upgrade?: Bool$Input;
 };
 
 /**
@@ -127952,6 +129778,12 @@ export type sendGift$DirectInput = {
    * @type {Bool$Input} {@link Bool}
    */
   readonly is_private?: Bool$Input;
+
+  /**
+   * Pass true to additionally pay for the gift upgrade and allow the receiver to upgrade it for free
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly pay_for_upgrade?: Bool$Input;
 };
 
 /**
@@ -128063,6 +129895,164 @@ export type toggleGiftIsSaved$DirectInput = {
 export type toggleGiftIsSaved = (parameters: toggleGiftIsSaved$Input) => Ok;
 
 /**
+ * Returns examples of possible upgraded gifts for a regular gift
+ */
+export type getGiftUpgradePreview$Input = {
+  readonly _: "getGiftUpgradePreview";
+
+  /**
+   * Identifier of the gift
+   * @type {int64$Input} {@link int64}
+   */
+  readonly gift_id?: int64$Input;
+};
+
+/**
+ * Returns examples of possible upgraded gifts for a regular gift
+ */
+export type getGiftUpgradePreview$DirectInput = {
+  /**
+   * Identifier of the gift
+   * @type {int64$Input} {@link int64}
+   */
+  readonly gift_id?: int64$Input;
+};
+
+/**
+ * Returns examples of possible upgraded gifts for a regular gift
+ *
+ * @param {getGiftUpgradePreview$Input} parameters {@link getGiftUpgradePreview$Input}
+ * @returns {GiftUpgradePreview} {@link GiftUpgradePreview}
+ */
+export type getGiftUpgradePreview = (
+  parameters: getGiftUpgradePreview$Input
+) => GiftUpgradePreview;
+
+/**
+ * Upgrades a gift received by the current user. Unless the gift has prepaid_upgrade_star_count > 0, the user must pay gift.upgrade_star_count Telegram Stars for the upgrade
+ */
+export type upgradeGift$Input = {
+  readonly _: "upgradeGift";
+
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the message with the gift in the chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Pass true to keep the original gift text, sender and receiver in the upgraded gift
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly keep_original_details?: Bool$Input;
+};
+
+/**
+ * Upgrades a gift received by the current user. Unless the gift has prepaid_upgrade_star_count > 0, the user must pay gift.upgrade_star_count Telegram Stars for the upgrade
+ */
+export type upgradeGift$DirectInput = {
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the message with the gift in the chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Pass true to keep the original gift text, sender and receiver in the upgraded gift
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly keep_original_details?: Bool$Input;
+};
+
+/**
+ * Upgrades a gift received by the current user. Unless the gift has prepaid_upgrade_star_count > 0, the user must pay gift.upgrade_star_count Telegram Stars for the upgrade
+ *
+ * @param {upgradeGift$Input} parameters {@link upgradeGift$Input}
+ * @returns {UpgradeGiftResult} {@link UpgradeGiftResult}
+ */
+export type upgradeGift = (parameters: upgradeGift$Input) => UpgradeGiftResult;
+
+/**
+ * Sends a gift upgraded by the current user to another user
+ */
+export type transferGift$Input = {
+  readonly _: "transferGift";
+
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the message with the upgraded gift in the chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Identifier of the user that will receive the gift
+   * @type {int53} {@link int53}
+   */
+  readonly receiver_user_id?: int53;
+
+  /**
+   * The amount of Telegram Stars required for the transfer
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+};
+
+/**
+ * Sends a gift upgraded by the current user to another user
+ */
+export type transferGift$DirectInput = {
+  /**
+   * Identifier of the user that sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the message with the upgraded gift in the chat with the user
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Identifier of the user that will receive the gift
+   * @type {int53} {@link int53}
+   */
+  readonly receiver_user_id?: int53;
+
+  /**
+   * The amount of Telegram Stars required for the transfer
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+};
+
+/**
+ * Sends a gift upgraded by the current user to another user
+ *
+ * @param {transferGift$Input} parameters {@link transferGift$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type transferGift = (parameters: transferGift$Input) => Ok;
+
+/**
  * Returns gifts saved to profile by the given user
  */
 export type getUserGifts$Input = {
@@ -128117,6 +130107,38 @@ export type getUserGifts$DirectInput = {
  * @returns {UserGifts} {@link UserGifts}
  */
 export type getUserGifts = (parameters: getUserGifts$Input) => UserGifts;
+
+/**
+ * Returns information about a gift received or sent by the current user
+ */
+export type getUserGift$Input = {
+  readonly _: "getUserGift";
+
+  /**
+   * Identifier of the message with the gift
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Returns information about a gift received or sent by the current user
+ */
+export type getUserGift$DirectInput = {
+  /**
+   * Identifier of the message with the gift
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Returns information about a gift received or sent by the current user
+ *
+ * @param {getUserGift$Input} parameters {@link getUserGift$Input}
+ * @returns {UserGift} {@link UserGift}
+ */
+export type getUserGift = (parameters: getUserGift$Input) => UserGift;
 
 /**
  * Creates a link for the given invoice; for bots only
@@ -133229,16 +135251,16 @@ export type searchChatAffiliateProgram = (
 ) => Chat;
 
 /**
- * Searches affiliate programs that can be applied to the given chat
+ * Searches affiliate programs that can be connected to the given affiliate
  */
 export type searchAffiliatePrograms$Input = {
   readonly _: "searchAffiliatePrograms";
 
   /**
-   * Identifier of the chat for which affiliate programs are searched for. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
-   * @type {int53} {@link int53}
+   * The affiliate for which affiliate programs are searched for
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * Sort order for the results
@@ -133260,14 +135282,14 @@ export type searchAffiliatePrograms$Input = {
 };
 
 /**
- * Searches affiliate programs that can be applied to the given chat
+ * Searches affiliate programs that can be connected to the given affiliate
  */
 export type searchAffiliatePrograms$DirectInput = {
   /**
-   * Identifier of the chat for which affiliate programs are searched for. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
-   * @type {int53} {@link int53}
+   * The affiliate for which affiliate programs are searched for
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * Sort order for the results
@@ -133289,7 +135311,7 @@ export type searchAffiliatePrograms$DirectInput = {
 };
 
 /**
- * Searches affiliate programs that can be applied to the given chat
+ * Searches affiliate programs that can be connected to the given affiliate
  *
  * @param {searchAffiliatePrograms$Input} parameters {@link searchAffiliatePrograms$Input}
  * @returns {FoundAffiliatePrograms} {@link FoundAffiliatePrograms}
@@ -133299,16 +135321,16 @@ export type searchAffiliatePrograms = (
 ) => FoundAffiliatePrograms;
 
 /**
- * Connects an affiliate program to the given chat. Returns information about the connected affiliate program
+ * Connects an affiliate program to the given affiliate. Returns information about the connected affiliate program
  */
-export type connectChatAffiliateProgram$Input = {
-  readonly _: "connectChatAffiliateProgram";
+export type connectAffiliateProgram$Input = {
+  readonly _: "connectAffiliateProgram";
 
   /**
-   * Identifier of the chat to which the affiliate program will be connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
-   * @type {int53} {@link int53}
+   * The affiliate to which the affiliate program will be connected
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * Identifier of the bot, which affiliate program is connected
@@ -133318,14 +135340,14 @@ export type connectChatAffiliateProgram$Input = {
 };
 
 /**
- * Connects an affiliate program to the given chat. Returns information about the connected affiliate program
+ * Connects an affiliate program to the given affiliate. Returns information about the connected affiliate program
  */
-export type connectChatAffiliateProgram$DirectInput = {
+export type connectAffiliateProgram$DirectInput = {
   /**
-   * Identifier of the chat to which the affiliate program will be connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
-   * @type {int53} {@link int53}
+   * The affiliate to which the affiliate program will be connected
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * Identifier of the bot, which affiliate program is connected
@@ -133335,26 +135357,26 @@ export type connectChatAffiliateProgram$DirectInput = {
 };
 
 /**
- * Connects an affiliate program to the given chat. Returns information about the connected affiliate program
+ * Connects an affiliate program to the given affiliate. Returns information about the connected affiliate program
  *
- * @param {connectChatAffiliateProgram$Input} parameters {@link connectChatAffiliateProgram$Input}
- * @returns {ChatAffiliateProgram} {@link ChatAffiliateProgram}
+ * @param {connectAffiliateProgram$Input} parameters {@link connectAffiliateProgram$Input}
+ * @returns {ConnectedAffiliateProgram} {@link ConnectedAffiliateProgram}
  */
-export type connectChatAffiliateProgram = (
-  parameters: connectChatAffiliateProgram$Input
-) => ChatAffiliateProgram;
+export type connectAffiliateProgram = (
+  parameters: connectAffiliateProgram$Input
+) => ConnectedAffiliateProgram;
 
 /**
- * Disconnects an affiliate program from the given chat and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+ * Disconnects an affiliate program from the given affiliate and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
  */
-export type disconnectChatAffiliateProgram$Input = {
-  readonly _: "disconnectChatAffiliateProgram";
+export type disconnectAffiliateProgram$Input = {
+  readonly _: "disconnectAffiliateProgram";
 
   /**
-   * Identifier of the chat for which the affiliate program is connected
-   * @type {int53} {@link int53}
+   * The affiliate to which the affiliate program is connected
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * The referral link of the affiliate program
@@ -133364,14 +135386,14 @@ export type disconnectChatAffiliateProgram$Input = {
 };
 
 /**
- * Disconnects an affiliate program from the given chat and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+ * Disconnects an affiliate program from the given affiliate and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
  */
-export type disconnectChatAffiliateProgram$DirectInput = {
+export type disconnectAffiliateProgram$DirectInput = {
   /**
-   * Identifier of the chat for which the affiliate program is connected
-   * @type {int53} {@link int53}
+   * The affiliate to which the affiliate program is connected
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * The referral link of the affiliate program
@@ -133381,26 +135403,26 @@ export type disconnectChatAffiliateProgram$DirectInput = {
 };
 
 /**
- * Disconnects an affiliate program from the given chat and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
+ * Disconnects an affiliate program from the given affiliate and immediately deactivates its referral link. Returns updated information about the disconnected affiliate program
  *
- * @param {disconnectChatAffiliateProgram$Input} parameters {@link disconnectChatAffiliateProgram$Input}
- * @returns {ChatAffiliateProgram} {@link ChatAffiliateProgram}
+ * @param {disconnectAffiliateProgram$Input} parameters {@link disconnectAffiliateProgram$Input}
+ * @returns {ConnectedAffiliateProgram} {@link ConnectedAffiliateProgram}
  */
-export type disconnectChatAffiliateProgram = (
-  parameters: disconnectChatAffiliateProgram$Input
-) => ChatAffiliateProgram;
+export type disconnectAffiliateProgram = (
+  parameters: disconnectAffiliateProgram$Input
+) => ConnectedAffiliateProgram;
 
 /**
- * Returns an affiliate program that were connected to the given chat by identifier of the bot that created the program
+ * Returns an affiliate program that were connected to the given affiliate by identifier of the bot that created the program
  */
-export type getChatAffiliateProgram$Input = {
-  readonly _: "getChatAffiliateProgram";
+export type getConnectedAffiliateProgram$Input = {
+  readonly _: "getConnectedAffiliateProgram";
 
   /**
-   * Identifier of the chat for which the affiliate program was connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
-   * @type {int53} {@link int53}
+   * The affiliate to which the affiliate program will be connected
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * Identifier of the bot that created the program
@@ -133410,14 +135432,14 @@ export type getChatAffiliateProgram$Input = {
 };
 
 /**
- * Returns an affiliate program that were connected to the given chat by identifier of the bot that created the program
+ * Returns an affiliate program that were connected to the given affiliate by identifier of the bot that created the program
  */
-export type getChatAffiliateProgram$DirectInput = {
+export type getConnectedAffiliateProgram$DirectInput = {
   /**
-   * Identifier of the chat for which the affiliate program was connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
-   * @type {int53} {@link int53}
+   * The affiliate to which the affiliate program will be connected
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * Identifier of the bot that created the program
@@ -133427,26 +135449,26 @@ export type getChatAffiliateProgram$DirectInput = {
 };
 
 /**
- * Returns an affiliate program that were connected to the given chat by identifier of the bot that created the program
+ * Returns an affiliate program that were connected to the given affiliate by identifier of the bot that created the program
  *
- * @param {getChatAffiliateProgram$Input} parameters {@link getChatAffiliateProgram$Input}
- * @returns {ChatAffiliateProgram} {@link ChatAffiliateProgram}
+ * @param {getConnectedAffiliateProgram$Input} parameters {@link getConnectedAffiliateProgram$Input}
+ * @returns {ConnectedAffiliateProgram} {@link ConnectedAffiliateProgram}
  */
-export type getChatAffiliateProgram = (
-  parameters: getChatAffiliateProgram$Input
-) => ChatAffiliateProgram;
+export type getConnectedAffiliateProgram = (
+  parameters: getConnectedAffiliateProgram$Input
+) => ConnectedAffiliateProgram;
 
 /**
- * Returns affiliate programs that were connected to the given chat
+ * Returns affiliate programs that were connected to the given affiliate
  */
-export type getChatAffiliatePrograms$Input = {
-  readonly _: "getChatAffiliatePrograms";
+export type getConnectedAffiliatePrograms$Input = {
+  readonly _: "getConnectedAffiliatePrograms";
 
   /**
-   * Identifier of the chat for which the affiliate programs were connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
-   * @type {int53} {@link int53}
+   * The affiliate to which the affiliate program were connected
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * Offset of the first affiliate program to return as received from the previous request; use empty string to get the first chunk of results
@@ -133462,14 +135484,14 @@ export type getChatAffiliatePrograms$Input = {
 };
 
 /**
- * Returns affiliate programs that were connected to the given chat
+ * Returns affiliate programs that were connected to the given affiliate
  */
-export type getChatAffiliatePrograms$DirectInput = {
+export type getConnectedAffiliatePrograms$DirectInput = {
   /**
-   * Identifier of the chat for which the affiliate programs were connected. Can be an identifier of the Saved Messages chat, of a chat with an owned bot, or of a channel chat with can_post_messages administrator right
-   * @type {int53} {@link int53}
+   * The affiliate to which the affiliate program were connected
+   * @type {AffiliateType$Input} {@link AffiliateType}
    */
-  readonly chat_id?: int53;
+  readonly affiliate?: AffiliateType$Input;
 
   /**
    * Offset of the first affiliate program to return as received from the previous request; use empty string to get the first chunk of results
@@ -133485,14 +135507,14 @@ export type getChatAffiliatePrograms$DirectInput = {
 };
 
 /**
- * Returns affiliate programs that were connected to the given chat
+ * Returns affiliate programs that were connected to the given affiliate
  *
- * @param {getChatAffiliatePrograms$Input} parameters {@link getChatAffiliatePrograms$Input}
- * @returns {ChatAffiliatePrograms} {@link ChatAffiliatePrograms}
+ * @param {getConnectedAffiliatePrograms$Input} parameters {@link getConnectedAffiliatePrograms$Input}
+ * @returns {ConnectedAffiliatePrograms} {@link ConnectedAffiliatePrograms}
  */
-export type getChatAffiliatePrograms = (
-  parameters: getChatAffiliatePrograms$Input
-) => ChatAffiliatePrograms;
+export type getConnectedAffiliatePrograms = (
+  parameters: getConnectedAffiliatePrograms$Input
+) => ConnectedAffiliatePrograms;
 
 /**
  * Returns information about features, available to Business users
