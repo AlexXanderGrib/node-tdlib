@@ -3,7 +3,7 @@
 > Cross platform TDLib wrapper
 
 <img src="https://alexxandergrib.github.io/node-tdlib/icons/tdlib-native-logo.svg" align="right"
-     alt="Logo" width="72" height="72">
+     alt="Logo" width="96" height="96">
 
 [![Test Status](https://github.com/AlexXanderGrib/node-tdlib/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-tdlib)
 [![Downloads](https://img.shields.io/npm/dt/tdlib-native.svg)](https://npmjs.com/package/tdlib-native)
