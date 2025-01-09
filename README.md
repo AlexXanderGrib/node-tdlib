@@ -2,6 +2,9 @@
 
 > Cross platform TDLib wrapper
 
+<img src="https://alexxandergrib.github.io/node-tdlib/icons/tdlib-native-logo.svg" align="right"
+     alt="Logo" width="72" height="72">
+
 [![Test Status](https://github.com/AlexXanderGrib/node-tdlib/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-tdlib)
 [![Downloads](https://img.shields.io/npm/dt/tdlib-native.svg)](https://npmjs.com/package/tdlib-native)
 [![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-tdlib.svg)](https://github.com/AlexXanderGrib/node-tdlib)
@@ -123,7 +126,7 @@ const updates = new Observable(client.updates.toRxObserver());
 <table><tbody><tr><td align="center" valign="top" width="11%">
 <a href="https://t.me/guardcore_bot">
 <img
-src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/guardcore-bot.jpg?raw=1"
+src="https://alexxandergrib.github.io/node-tdlib/icons/guardcore-bot.jpg"
 width="75"
 height="75"
 alt="GuardCore Bot's Avatar"
@@ -133,7 +136,7 @@ GuardCore Bot
 </td><td align="center" valign="top" width="11%">
 <a href="https://t.me/tvoya_statya_bot">
 <img
-src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/tvoya-statya-bot.jpg?raw=1"
+src="https://alexxandergrib.github.io/node-tdlib/icons/tvoya-statya-bot.jpg"
 width="75"
 height="75"
 alt="Твоя Статья УК РФ's Avatar"
@@ -143,7 +146,7 @@ alt="Твоя Статья УК РФ's Avatar"
 </td><td align="center" valign="top" width="11%">
 <a href="https://github.com/AlexXanderGrib/node-tdlib/issues/new">
 <img
-src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/add.png?raw=1"
+src="https://alexxandergrib.github.io/node-tdlib/icons/add.png"
 width="75"
 height="75"
 alt=""
