@@ -11,7 +11,6 @@ export async function getTestClient() {
 async function setupAddon(): Promise<TDLibAddon> {
   const addon = await TDLibAddon.create(process.env.TDLIB_PATH);
   addon.setLogMessageCallback(3, console.error);
-  Client.disableLogs(addon);
 
   return addon;
 }

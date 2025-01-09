@@ -27,7 +27,7 @@
    */
   async sendMessage(parameters: sendMessage$DirectInput): Promise<Message>
   ```
-- **Secure.** 
+- **Secure.**
   - Only 3 dependencies: `node-addon-api`, `debug`, `detect-libc`
   - Built on CI with provenance
 - **Multi-Platform.** Supported platforms:
@@ -86,10 +86,7 @@ async function init() {
   // And authenticate bot
   // THIS SHOULD BE USED via Promise.all
   // OR ELSE .authenticate() skips an update and hangs
-  await Promise.all([
-    client.start(),
-    authenticator.authenticate()
-  ]);
+  await Promise.all([client.start(), authenticator.authenticate()]);
 
   // client authorized as bot
   // Call any tdlib method
@@ -154,7 +151,6 @@ alt=""
 Add your project
 </a>
 </td></tr></tbody></table>
-
 
 ## Credits
 
