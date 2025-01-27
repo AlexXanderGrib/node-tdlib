@@ -4,11 +4,11 @@
 module.exports.tdlibPath = require('path').resolve(__dirname, "libtdjson-x64-musl.so");
 /**
  * @type {string}
- * @default "1.8.42"
+ * @default "1.8.44"
  */
-module.exports.version = "1.8.42";
+module.exports.version = "1.8.44";
 /**
  * @type {string}
- * @default "2be9e799a2bc523550d4f83f4d2d66d41c9573b9"
+ * @default "28c6f2e9c045372d50217919bf5768b7fbbe0294"
  */
-module.exports.commit = "2be9e799a2bc523550d4f83f4d2d66d41c9573b9";
+module.exports.commit = "28c6f2e9c045372d50217919bf5768b7fbbe0294";
