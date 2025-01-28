@@ -1,4 +1,4 @@
-[**TDLib Native**](README.md) • **Docs**
+[**TDLib Native**](README.md)
 
 ***
 
@@ -6,15 +6,11 @@
 
 # addon
 
-## References
-
-### default
-
-Renames and re-exports [TDLibAddon](addon.md#tdlibaddon)
-
 ## Classes
 
 ### TDLibAddon
+
+Defined in: [addon/addon.ts:108](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L108)
 
 #### Export
 
@@ -32,11 +28,15 @@ TDLibAddon
 
 > `private` **new TDLibAddon**(`_addon`): [`TDLibAddon`](addon.md#tdlibaddon)
 
+Defined in: [addon/addon.ts:131](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L131)
+
 Creates an instance of TDLibAddon.
 
 ###### Parameters
 
-• **\_addon**: `Addon`
+###### \_addon
+
+`Addon`
 
 ###### Returns
 
@@ -46,61 +46,51 @@ Creates an instance of TDLibAddon.
 
 TDLibAddon
 
-###### Defined in
-
-[addon/addon.ts:131](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L131)
-
 #### Properties
 
 ##### \_addon
 
 > `private` `readonly` **\_addon**: `Addon`
 
-###### Defined in
-
-[addon/addon.ts:131](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L131)
+Defined in: [addon/addon.ts:131](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L131)
 
 ##### \_clients
 
 > `private` `readonly` **\_clients**: `WeakMap`\<`TDLibClient`, `ClientMeta`\>
 
-###### Defined in
-
-[addon/addon.ts:134](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L134)
+Defined in: [addon/addon.ts:134](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L134)
 
 ##### \_isTDLib
 
 > `readonly` **\_isTDLib**: `true` = `true`
 
+Defined in: [addon/addon.ts:133](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L133)
+
 ###### Implementation of
 
 `TDLib._isTDLib`
-
-###### Defined in
-
-[addon/addon.ts:133](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L133)
 
 ##### \_queue
 
 > `private` `readonly` **\_queue**: `ReceiveQueueEntry`[] = `[]`
 
-###### Defined in
-
-[addon/addon.ts:203](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L203)
+Defined in: [addon/addon.ts:203](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L203)
 
 ##### \_thread
 
 > `private` **\_thread**: `undefined` \| `Promise`\<`void`\>
 
-###### Defined in
-
-[addon/addon.ts:204](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L204)
+Defined in: [addon/addon.ts:204](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L204)
 
 #### Accessors
 
 ##### name
 
-> `get` **name**(): `string`
+###### Get Signature
+
+> **get** **name**(): `string`
+
+Defined in: [addon/addon.ts:142](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L142)
 
 ###### Memberof
 
@@ -114,47 +104,45 @@ TDLibAddon
 
 `TDLib.name`
 
-###### Defined in
-
-[addon/addon.ts:142](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L142)
-
 #### Methods
 
 ##### \_getMeta()
 
 > `private` **\_getMeta**(`client`): `ClientMeta`
 
+Defined in: [addon/addon.ts:159](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L159)
+
 ###### Parameters
 
-• **client**: `TDLibClient`
+###### client
+
+`TDLibClient`
 
 ###### Returns
 
 `ClientMeta`
 
-###### Defined in
-
-[addon/addon.ts:159](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L159)
-
 ##### \_receive()
 
 > `private` **\_receive**(): `Promise`\<`void`\>
+
+Defined in: [addon/addon.ts:206](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L206)
 
 ###### Returns
 
 `Promise`\<`void`\>
 
-###### Defined in
-
-[addon/addon.ts:206](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L206)
-
 ##### create()
 
 > **create**(`timeout`): `TDLibClient`
 
+Defined in: [addon/addon.ts:152](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L152)
+
 ###### Parameters
 
-• **timeout**: `number`
+###### timeout
+
+`number`
 
 ###### Returns
 
@@ -170,17 +158,17 @@ TDLibAddon
 
 `TDLib.create`
 
-###### Defined in
-
-[addon/addon.ts:152](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L152)
-
 ##### destroy()
 
 > **destroy**(`client`): `Promise`\<`void`\>
 
+Defined in: [addon/addon.ts:176](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L176)
+
 ###### Parameters
 
-• **client**: `TDLibClient`
+###### client
+
+`TDLibClient`
 
 ###### Returns
 
@@ -194,19 +182,21 @@ TDLibAddon
 
 `TDLib.destroy`
 
-###### Defined in
-
-[addon/addon.ts:176](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L176)
-
 ##### execute()
 
 > **execute**(`client`, `json`): `null` \| `string`
 
+Defined in: [addon/addon.ts:199](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L199)
+
 ###### Parameters
 
-• **client**: `null` \| `TDLibClient`
+###### client
 
-• **json**: `string`
+`null` | `TDLibClient`
+
+###### json
+
+`string`
 
 ###### Returns
 
@@ -222,17 +212,17 @@ TDLibAddon
 
 `TDLib.execute`
 
-###### Defined in
-
-[addon/addon.ts:199](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L199)
-
 ##### receive()
 
 > **receive**(`client`): `Promise`\<`null` \| `string`\>
 
+Defined in: [addon/addon.ts:224](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L224)
+
 ###### Parameters
 
-• **client**: `TDLibClient`
+###### client
+
+`TDLibClient`
 
 ###### Returns
 
@@ -248,19 +238,21 @@ TDLibAddon
 
 `TDLib.receive`
 
-###### Defined in
-
-[addon/addon.ts:224](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L224)
-
 ##### send()
 
 > **send**(`client`, `json`): `void`
 
+Defined in: [addon/addon.ts:258](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L258)
+
 ###### Parameters
 
-• **client**: `TDLibClient`
+###### client
 
-• **json**: `string`
+`TDLibClient`
+
+###### json
+
+`string`
 
 ###### Returns
 
@@ -274,19 +266,21 @@ TDLibAddon
 
 `TDLib.send`
 
-###### Defined in
-
-[addon/addon.ts:258](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L258)
-
 ##### setLogMessageCallback()
 
 > **setLogMessageCallback**(`level`, `callback`): `void`
 
+Defined in: [addon/addon.ts:273](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L273)
+
 ###### Parameters
 
-• **level**: `number`
+###### level
 
-• **callback**: `null` \| (`errorMessage`) => `void`
+`number`
+
+###### callback
+
+`null` | (`errorMessage`) => `void`
 
 ###### Returns
 
@@ -300,21 +294,23 @@ TDLibAddon
 
 `TDLib.setLogMessageCallback`
 
-###### Defined in
-
-[addon/addon.ts:273](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L273)
-
 ##### create()
 
 > `static` **create**(`tdlibPath`?, `addonPath`?): `Promise`\<[`TDLibAddon`](addon.md#tdlibaddon)\>
 
+Defined in: [addon/addon.ts:118](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/addon/addon.ts#L118)
+
 ###### Parameters
 
-• **tdlibPath?**: `string`
+###### tdlibPath?
+
+`string`
 
 Resolves to prebuild TDLib for your platform
 
-• **addonPath?**: `string`
+###### addonPath?
+
+`string`
 
 ###### Returns
 
@@ -326,6 +322,8 @@ Resolves to prebuild TDLib for your platform
 
 TDLibAddon
 
-###### Defined in
+## References
 
-[addon/addon.ts:118](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/addon/addon.ts#L118)
+### default
+
+Renames and re-exports [TDLibAddon](addon.md#tdlibaddon)

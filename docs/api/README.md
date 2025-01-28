@@ -1,10 +1,13 @@
-**TDLib Native** • [**Docs**](modules.md)
+**TDLib Native**
 
 ***
 
 # TDLib Native
 
 > Cross platform TDLib wrapper
+
+<img src="https://alexxandergrib.github.io/node-tdlib/icons/tdlib-native-logo.svg" align="right"
+     alt="Logo" width="96" height="96">
 
 [![Test Status](https://github.com/AlexXanderGrib/node-tdlib/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-tdlib)
 [![Downloads](https://img.shields.io/npm/dt/tdlib-native.svg)](https://npmjs.com/package/tdlib-native)
@@ -31,7 +34,7 @@
    */
   async sendMessage(parameters: sendMessage$DirectInput): Promise<Message>
   ```
-- **Secure.** 
+- **Secure.**
   - Only 3 dependencies: `node-addon-api`, `debug`, `detect-libc`
   - Built on CI with provenance
 - **Multi-Platform.** Supported platforms:
@@ -90,10 +93,7 @@ async function init() {
   // And authenticate bot
   // THIS SHOULD BE USED via Promise.all
   // OR ELSE .authenticate() skips an update and hangs
-  await Promise.all([
-    client.start(),
-    authenticator.authenticate()
-  ]);
+  await Promise.all([client.start(), authenticator.authenticate()]);
 
   // client authorized as bot
   // Call any tdlib method
@@ -130,7 +130,7 @@ const updates = new Observable(client.updates.toRxObserver());
 <table><tbody><tr><td align="center" valign="top" width="11%">
 <a href="https://t.me/guardcore_bot">
 <img
-src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/guardcore-bot.jpg?raw=1"
+src="https://alexxandergrib.github.io/node-tdlib/icons/guardcore-bot.jpg"
 width="75"
 height="75"
 alt="GuardCore Bot's Avatar"
@@ -140,7 +140,7 @@ GuardCore Bot
 </td><td align="center" valign="top" width="11%">
 <a href="https://t.me/tvoya_statya_bot">
 <img
-src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/tvoya-statya-bot.jpg?raw=1"
+src="https://alexxandergrib.github.io/node-tdlib/icons/tvoya-statya-bot.jpg"
 width="75"
 height="75"
 alt="Твоя Статья УК РФ's Avatar"
@@ -150,7 +150,7 @@ alt="Твоя Статья УК РФ's Avatar"
 </td><td align="center" valign="top" width="11%">
 <a href="https://github.com/AlexXanderGrib/node-tdlib/issues/new">
 <img
-src="https://github.com/AlexXanderGrib/node-tdlib/blob/6b8b34a2134f6ad0510a0e2f2b8c45f5e7c61880/docs/icons/add.png?raw=1"
+src="https://alexxandergrib.github.io/node-tdlib/icons/add.png"
 width="75"
 height="75"
 alt=""

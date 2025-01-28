@@ -1,4 +1,4 @@
-[**TDLib Native**](README.md) • **Docs**
+[**TDLib Native**](README.md)
 
 ***
 
@@ -9,6 +9,8 @@
 ## Classes
 
 ### InlineKeyboardBuilder
+
+Defined in: [markup.ts:229](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L229)
 
 InlineKeyboardBuilder
 
@@ -28,23 +30,23 @@ InlineKeyboardBuilder
 
 > `private` **\_buttons**: [`inlineKeyboardButton$Input`](types/README.md#inlinekeyboardbutton$input)[][] = `[]`
 
-###### Defined in
-
-[markup.ts:230](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L230)
+Defined in: [markup.ts:230](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L230)
 
 ##### \_row
 
 > `private` **\_row**: `number` = `0`
 
-###### Defined in
-
-[markup.ts:231](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L231)
+Defined in: [markup.ts:231](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L231)
 
 #### Accessors
 
 ##### \_currentRow
 
-> `get` `private` **\_currentRow**(): [`inlineKeyboardButton$Input`](types/README.md#inlinekeyboardbutton$input)[]
+###### Get Signature
+
+> **get** `private` **\_currentRow**(): [`inlineKeyboardButton$Input`](types/README.md#inlinekeyboardbutton$input)[]
+
+Defined in: [markup.ts:239](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L239)
 
 ###### Memberof
 
@@ -54,15 +56,13 @@ InlineKeyboardBuilder
 
 [`inlineKeyboardButton$Input`](types/README.md#inlinekeyboardbutton$input)[]
 
-###### Defined in
-
-[markup.ts:239](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L239)
-
 #### Methods
 
 ##### build()
 
 > **build**(): [`replyMarkupInlineKeyboard$Input`](types/README.md#replymarkupinlinekeyboard$input)
+
+Defined in: [markup.ts:306](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L306)
 
 Generates keyboard
 
@@ -76,19 +76,21 @@ Generates keyboard
 
 InlineKeyboardBuilder
 
-###### Defined in
-
-[markup.ts:306](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L306)
-
 ##### button()
 
 > **button**(`text`, `type`): `this`
 
+Defined in: [markup.ts:281](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L281)
+
 ###### Parameters
 
-• **text**: `string`
+###### text
 
-• **type**: [`InlineKeyboardButtonType$Input`](types/README.md#inlinekeyboardbuttontype$input)
+`string`
+
+###### type
+
+[`InlineKeyboardButtonType$Input`](types/README.md#inlinekeyboardbuttontype$input)
 
 ###### Returns
 
@@ -97,22 +99,24 @@ InlineKeyboardBuilder
 ###### Memberof
 
 InlineKeyboardBuilder
-
-###### Defined in
-
-[markup.ts:281](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L281)
 
 ##### callbackButton()
 
 > **callbackButton**(`text`, `data`): `this`
 
+Defined in: [markup.ts:251](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L251)
+
 Adds callback button
 
 ###### Parameters
 
-• **text**: `string`
+###### text
 
-• **data**: `string` \| `Uint8Array`
+`string`
+
+###### data
+
+`string` | `Uint8Array`
 
 ###### Returns
 
@@ -122,13 +126,11 @@ Adds callback button
 
 InlineKeyboardBuilder
 
-###### Defined in
-
-[markup.ts:251](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L251)
-
 ##### row()
 
 > **row**(): `this`
+
+Defined in: [markup.ts:292](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L292)
 
 Creates new row
 
@@ -140,13 +142,11 @@ Creates new row
 
 KeyboardBuilder
 
-###### Defined in
-
-[markup.ts:292](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L292)
-
 ##### toJSON()
 
 > **toJSON**(): [`replyMarkupInlineKeyboard$Input`](types/README.md#replymarkupinlinekeyboard$input)
+
+Defined in: [markup.ts:319](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L319)
 
 Generates keyboard
 
@@ -160,21 +160,23 @@ Generates keyboard
 
 InlineKeyboardBuilder
 
-###### Defined in
-
-[markup.ts:319](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L319)
-
 ##### urlButton()
 
 > **urlButton**(`text`, `url`): `this`
+
+Defined in: [markup.ts:266](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L266)
 
 Adds url button
 
 ###### Parameters
 
-• **text**: `string`
+###### text
 
-• **url**: `string` \| `URL`
+`string`
+
+###### url
+
+`string` | `URL`
 
 ###### Returns
 
@@ -184,13 +186,11 @@ Adds url button
 
 InlineKeyboardBuilder
 
-###### Defined in
-
-[markup.ts:266](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L266)
-
 ***
 
 ### KeyboardBuilder
+
+Defined in: [markup.ts:60](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L60)
 
 KeyboardBuilder
 
@@ -200,11 +200,15 @@ KeyboardBuilder
 
 > **new KeyboardBuilder**(`options`): [`KeyboardBuilder`](markup.md#keyboardbuilder)
 
+Defined in: [markup.ts:80](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L80)
+
 Creates an instance of KeyboardBuilder.
 
 ###### Parameters
 
-• **options**: `Partial`\<`KeyboardOptions`\>
+###### options
+
+`Partial`\<`KeyboardOptions`\>
 
 ###### Returns
 
@@ -214,41 +218,35 @@ Creates an instance of KeyboardBuilder.
 
 KeyboardBuilder
 
-###### Defined in
-
-[markup.ts:80](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L80)
-
 #### Properties
 
 ##### \_buttons
 
 > `private` **\_buttons**: [`keyboardButton$Input`](types/README.md#keyboardbutton$input)[][] = `[]`
 
-###### Defined in
-
-[markup.ts:63](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L63)
+Defined in: [markup.ts:63](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L63)
 
 ##### \_options
 
 > `private` `readonly` **\_options**: `Partial`\<`KeyboardOptions`\>
 
-###### Defined in
-
-[markup.ts:61](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L61)
+Defined in: [markup.ts:61](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L61)
 
 ##### \_row
 
 > `private` **\_row**: `number` = `0`
 
-###### Defined in
-
-[markup.ts:62](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L62)
+Defined in: [markup.ts:62](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L62)
 
 #### Accessors
 
 ##### \_currentRow
 
-> `get` `private` **\_currentRow**(): [`keyboardButton$Input`](types/README.md#keyboardbutton$input)[]
+###### Get Signature
+
+> **get** `private` **\_currentRow**(): [`keyboardButton$Input`](types/README.md#keyboardbutton$input)[]
+
+Defined in: [markup.ts:71](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L71)
 
 ###### Memberof
 
@@ -258,15 +256,13 @@ KeyboardBuilder
 
 [`keyboardButton$Input`](types/README.md#keyboardbutton$input)[]
 
-###### Defined in
-
-[markup.ts:71](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L71)
-
 #### Methods
 
 ##### build()
 
 > **build**(): [`replyMarkupShowKeyboard$Input`](types/README.md#replymarkupshowkeyboard$input)
+
+Defined in: [markup.ts:188](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L188)
 
 Generates keyboard
 
@@ -280,21 +276,23 @@ Generates keyboard
 
 KeyboardBuilder
 
-###### Defined in
-
-[markup.ts:188](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L188)
-
 ##### button()
 
 > **button**(`text`, `type`?): `this`
+
+Defined in: [markup.ts:103](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L103)
 
 Adds button to current row
 
 ###### Parameters
 
-• **text**: `string`
+###### text
 
-• **type?**: [`KeyboardButtonType$Input`](types/README.md#keyboardbuttontype$input)
+`string`
+
+###### type?
+
+[`KeyboardButtonType$Input`](types/README.md#keyboardbuttontype$input)
 
 ###### Returns
 
@@ -303,20 +301,20 @@ Adds button to current row
 ###### Memberof
 
 KeyboardBuilder
-
-###### Defined in
-
-[markup.ts:103](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L103)
 
 ##### oneTime()
 
 > **oneTime**(`isOneTime`?): `this`
 
-Sets [replyMarkupShowKeyboard$Input.one_time](types/README.md#one_time-1)
+Defined in: [markup.ts:165](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L165)
+
+Sets [replyMarkupShowKeyboard$Input.one\_time](types/README.md#one_time-1)
 
 ###### Parameters
 
-• **isOneTime?**: `boolean` = `true`
+###### isOneTime?
+
+`boolean` = `true`
 
 ###### Returns
 
@@ -325,20 +323,20 @@ Sets [replyMarkupShowKeyboard$Input.one_time](types/README.md#one_time-1)
 ###### Memberof
 
 KeyboardBuilder
-
-###### Defined in
-
-[markup.ts:165](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L165)
 
 ##### persistent()
 
 > **persistent**(`isPersistent`?): `this`
 
-Sets [replyMarkupShowKeyboard$Input.is_persistent](types/README.md#is_persistent-1)
+Defined in: [markup.ts:129](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L129)
+
+Sets [replyMarkupShowKeyboard$Input.is\_persistent](types/README.md#is_persistent-1)
 
 ###### Parameters
 
-• **isPersistent?**: `boolean` = `true`
+###### isPersistent?
+
+`boolean` = `true`
 
 ###### Returns
 
@@ -347,20 +345,20 @@ Sets [replyMarkupShowKeyboard$Input.is_persistent](types/README.md#is_persistent
 ###### Memberof
 
 KeyboardBuilder
-
-###### Defined in
-
-[markup.ts:129](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L129)
 
 ##### personal()
 
 > **personal**(`isPersonal`?): `this`
 
-Sets [replyMarkupShowKeyboard$Input.is_personal](types/README.md#is_personal-11)
+Defined in: [markup.ts:153](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L153)
+
+Sets [replyMarkupShowKeyboard$Input.is\_personal](types/README.md#is_personal-11)
 
 ###### Parameters
 
-• **isPersonal?**: `boolean` = `true`
+###### isPersonal?
+
+`boolean` = `true`
 
 ###### Returns
 
@@ -369,20 +367,20 @@ Sets [replyMarkupShowKeyboard$Input.is_personal](types/README.md#is_personal-11)
 ###### Memberof
 
 KeyboardBuilder
-
-###### Defined in
-
-[markup.ts:153](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L153)
 
 ##### placeholder()
 
 > **placeholder**(`value`): `this`
 
-Sets [replyMarkupShowKeyboard$Input.input_field_placeholder](types/README.md#input_field_placeholder-3)
+Defined in: [markup.ts:177](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L177)
+
+Sets [replyMarkupShowKeyboard$Input.input\_field\_placeholder](types/README.md#input_field_placeholder-3)
 
 ###### Parameters
 
-• **value**: `string`
+###### value
+
+`string`
 
 ###### Returns
 
@@ -391,20 +389,20 @@ Sets [replyMarkupShowKeyboard$Input.input_field_placeholder](types/README.md#inp
 ###### Memberof
 
 KeyboardBuilder
-
-###### Defined in
-
-[markup.ts:177](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L177)
 
 ##### resize()
 
 > **resize**(`doResize`?): `this`
 
-Sets [replyMarkupShowKeyboard$Input.resize_keyboard](types/README.md#resize_keyboard-1)
+Defined in: [markup.ts:141](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L141)
+
+Sets [replyMarkupShowKeyboard$Input.resize\_keyboard](types/README.md#resize_keyboard-1)
 
 ###### Parameters
 
-• **doResize?**: `boolean` = `true`
+###### doResize?
+
+`boolean` = `true`
 
 ###### Returns
 
@@ -414,13 +412,11 @@ Sets [replyMarkupShowKeyboard$Input.resize_keyboard](types/README.md#resize_keyb
 
 KeyboardBuilder
 
-###### Defined in
-
-[markup.ts:141](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L141)
-
 ##### row()
 
 > **row**(): `this`
+
+Defined in: [markup.ts:114](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L114)
 
 Creates new row
 
@@ -432,19 +428,19 @@ Creates new row
 
 KeyboardBuilder
 
-###### Defined in
-
-[markup.ts:114](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L114)
-
 ##### textButton()
 
 > **textButton**(`text`): `this`
+
+Defined in: [markup.ts:91](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L91)
 
 Adds text button
 
 ###### Parameters
 
-• **text**: `string`
+###### text
+
+`string`
 
 ###### Returns
 
@@ -454,13 +450,11 @@ Adds text button
 
 KeyboardBuilder
 
-###### Defined in
-
-[markup.ts:91](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L91)
-
 ##### toJSON()
 
 > **toJSON**(): [`replyMarkupShowKeyboard$Input`](types/README.md#replymarkupshowkeyboard$input)
+
+Defined in: [markup.ts:206](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L206)
 
 Generates keyboard
 
@@ -474,23 +468,25 @@ Generates keyboard
 
 KeyboardBuilder
 
-###### Defined in
-
-[markup.ts:206](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L206)
-
 ## Functions
 
 ### forceReply()
 
 > **forceReply**(`__namedParameters`?): [`replyMarkupForceReply`](types/README.md#replymarkupforcereply)
 
+Defined in: [markup.ts:20](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L20)
+
 #### Parameters
 
-• **\_\_namedParameters?** = `{}`
+##### \_\_namedParameters?
 
-• **\_\_namedParameters.personal?**: `undefined` \| `boolean` = `false`
+###### personal
 
-• **\_\_namedParameters.placeholder?**: `undefined` \| `string` = `""`
+`boolean` = `false`
+
+###### placeholder
+
+`string` = `""`
 
 #### Returns
 
@@ -500,15 +496,13 @@ KeyboardBuilder
 
 #### Export
 
-#### Defined in
-
-[markup.ts:20](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L20)
-
 ***
 
 ### inlineKeyboard()
 
 > **inlineKeyboard**(): [`InlineKeyboardBuilder`](markup.md#inlinekeyboardbuilder)
+
+Defined in: [markup.ts:330](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L330)
 
 #### Returns
 
@@ -518,19 +512,19 @@ KeyboardBuilder
 
 #### Export
 
-#### Defined in
-
-[markup.ts:330](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L330)
-
 ***
 
 ### keyboard()
 
 > **keyboard**(`options`?): [`KeyboardBuilder`](markup.md#keyboardbuilder)
 
+Defined in: [markup.ts:218](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L218)
+
 #### Parameters
 
-• **options?**: `Partial`\<`KeyboardOptions`\> = `{}`
+##### options?
+
+`Partial`\<`KeyboardOptions`\> = `{}`
 
 #### Returns
 
@@ -540,21 +534,21 @@ KeyboardBuilder
 
 #### Export
 
-#### Defined in
-
-[markup.ts:218](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L218)
-
 ***
 
 ### removeKeyboard()
 
 > **removeKeyboard**(`__namedParameters`?): [`replyMarkupRemoveKeyboard`](types/README.md#replymarkupremovekeyboard)
 
+Defined in: [markup.ts:38](https://github.com/AlexXanderGrib/node-tdlib/blob/17c1bca716f6d31d603b4bce8ec8562a13018f91/src/markup.ts#L38)
+
 #### Parameters
 
-• **\_\_namedParameters?** = `{}`
+##### \_\_namedParameters?
 
-• **\_\_namedParameters.personal?**: `undefined` \| `boolean` = `false`
+###### personal
+
+`boolean` = `false`
 
 #### Returns
 
@@ -563,7 +557,3 @@ KeyboardBuilder
 {replyMarkupRemoveKeyboard}
 
 #### Export
-
-#### Defined in
-
-[markup.ts:38](https://github.com/AlexXanderGrib/node-tdlib/blob/65543aa7cd818ab0d753d5d5050a5b1564b1ec6f/src/markup.ts#L38)

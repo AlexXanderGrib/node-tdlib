@@ -1,4 +1,4 @@
-[**TDLib Native**](README.md) • **Docs**
+[**TDLib Native**](README.md)
 
 ***
 

@@ -1,4 +1,4 @@
-[**TDLib Native**](../../README.md) • **Docs**
+[**TDLib Native**](../../README.md)
 
 ***
 
@@ -419,6 +419,126 @@ Re-exports [addStickerToSet$DirectInput](../README.md#addstickertoset$directinpu
 ### addStickerToSet$Input
 
 Re-exports [addStickerToSet$Input](../README.md#addstickertoset$input)
+
+### affiliateInfo
+
+Re-exports [affiliateInfo](../README.md#affiliateinfo)
+
+### AffiliateInfo
+
+Re-exports [AffiliateInfo](../README.md#affiliateinfo-1)
+
+### affiliateInfo$Input
+
+Re-exports [affiliateInfo$Input](../README.md#affiliateinfo$input)
+
+### AffiliateInfo$Input
+
+Re-exports [AffiliateInfo$Input](../README.md#affiliateinfo$input-1)
+
+### affiliateProgramInfo
+
+Re-exports [affiliateProgramInfo](../README.md#affiliateprograminfo)
+
+### AffiliateProgramInfo
+
+Re-exports [AffiliateProgramInfo](../README.md#affiliateprograminfo-1)
+
+### affiliateProgramInfo$Input
+
+Re-exports [affiliateProgramInfo$Input](../README.md#affiliateprograminfo$input)
+
+### AffiliateProgramInfo$Input
+
+Re-exports [AffiliateProgramInfo$Input](../README.md#affiliateprograminfo$input-1)
+
+### affiliateProgramParameters
+
+Re-exports [affiliateProgramParameters](../README.md#affiliateprogramparameters)
+
+### AffiliateProgramParameters
+
+Re-exports [AffiliateProgramParameters](../README.md#affiliateprogramparameters-1)
+
+### affiliateProgramParameters$Input
+
+Re-exports [affiliateProgramParameters$Input](../README.md#affiliateprogramparameters$input)
+
+### AffiliateProgramParameters$Input
+
+Re-exports [AffiliateProgramParameters$Input](../README.md#affiliateprogramparameters$input-1)
+
+### AffiliateProgramSortOrder
+
+Re-exports [AffiliateProgramSortOrder](../README.md#affiliateprogramsortorder)
+
+### AffiliateProgramSortOrder$Input
+
+Re-exports [AffiliateProgramSortOrder$Input](../README.md#affiliateprogramsortorder$input)
+
+### AffiliateProgramSortOrder$Type
+
+Re-exports [AffiliateProgramSortOrder$Type](../README.md#affiliateprogramsortorder$type-1)
+
+### affiliateProgramSortOrderCreationDate
+
+Re-exports [affiliateProgramSortOrderCreationDate](../README.md#affiliateprogramsortordercreationdate)
+
+### affiliateProgramSortOrderCreationDate$Input
+
+Re-exports [affiliateProgramSortOrderCreationDate$Input](../README.md#affiliateprogramsortordercreationdate$input)
+
+### affiliateProgramSortOrderProfitability
+
+Re-exports [affiliateProgramSortOrderProfitability](../README.md#affiliateprogramsortorderprofitability)
+
+### affiliateProgramSortOrderProfitability$Input
+
+Re-exports [affiliateProgramSortOrderProfitability$Input](../README.md#affiliateprogramsortorderprofitability$input)
+
+### affiliateProgramSortOrderRevenue
+
+Re-exports [affiliateProgramSortOrderRevenue](../README.md#affiliateprogramsortorderrevenue)
+
+### affiliateProgramSortOrderRevenue$Input
+
+Re-exports [affiliateProgramSortOrderRevenue$Input](../README.md#affiliateprogramsortorderrevenue$input)
+
+### AffiliateType
+
+Re-exports [AffiliateType](../README.md#affiliatetype)
+
+### AffiliateType$Input
+
+Re-exports [AffiliateType$Input](../README.md#affiliatetype$input)
+
+### AffiliateType$Type
+
+Re-exports [AffiliateType$Type](../README.md#affiliatetype$type-1)
+
+### affiliateTypeBot
+
+Re-exports [affiliateTypeBot](../README.md#affiliatetypebot)
+
+### affiliateTypeBot$Input
+
+Re-exports [affiliateTypeBot$Input](../README.md#affiliatetypebot$input)
+
+### affiliateTypeChannel
+
+Re-exports [affiliateTypeChannel](../README.md#affiliatetypechannel)
+
+### affiliateTypeChannel$Input
+
+Re-exports [affiliateTypeChannel$Input](../README.md#affiliatetypechannel$input)
+
+### affiliateTypeCurrentUser
+
+Re-exports [affiliateTypeCurrentUser](../README.md#affiliatetypecurrentuser)
+
+### affiliateTypeCurrentUser$Input
+
+Re-exports [affiliateTypeCurrentUser$Input](../README.md#affiliatetypecurrentuser$input)
 
 ### allowBotToSendMessages
 
@@ -1496,33 +1616,37 @@ Re-exports [botMenuButton$Input](../README.md#botmenubutton$input)
 
 Re-exports [BotMenuButton$Input](../README.md#botmenubutton$input-1)
 
-### BotTransactionPurpose
+### botVerification
 
-Re-exports [BotTransactionPurpose](../README.md#bottransactionpurpose)
+Re-exports [botVerification](../README.md#botverification)
 
-### BotTransactionPurpose$Input
+### BotVerification
 
-Re-exports [BotTransactionPurpose$Input](../README.md#bottransactionpurpose$input)
+Re-exports [BotVerification](../README.md#botverification-1)
 
-### BotTransactionPurpose$Type
+### botVerification$Input
 
-Re-exports [BotTransactionPurpose$Type](../README.md#bottransactionpurpose$type-1)
+Re-exports [botVerification$Input](../README.md#botverification$input)
 
-### botTransactionPurposeInvoicePayment
+### BotVerification$Input
 
-Re-exports [botTransactionPurposeInvoicePayment](../README.md#bottransactionpurposeinvoicepayment)
+Re-exports [BotVerification$Input](../README.md#botverification$input-1)
 
-### botTransactionPurposeInvoicePayment$Input
+### botVerificationParameters
 
-Re-exports [botTransactionPurposeInvoicePayment$Input](../README.md#bottransactionpurposeinvoicepayment$input)
+Re-exports [botVerificationParameters](../README.md#botverificationparameters)
 
-### botTransactionPurposePaidMedia
+### BotVerificationParameters
 
-Re-exports [botTransactionPurposePaidMedia](../README.md#bottransactionpurposepaidmedia)
+Re-exports [BotVerificationParameters](../README.md#botverificationparameters-1)
 
-### botTransactionPurposePaidMedia$Input
+### botVerificationParameters$Input
 
-Re-exports [botTransactionPurposePaidMedia$Input](../README.md#bottransactionpurposepaidmedia$input)
+Re-exports [botVerificationParameters$Input](../README.md#botverificationparameters$input)
+
+### BotVerificationParameters$Input
+
+Re-exports [BotVerificationParameters$Input](../README.md#botverificationparameters$input-1)
 
 ### BotWriteAccessAllowReason
 
@@ -2087,6 +2211,14 @@ Re-exports [CallDiscardReason$Input](../README.md#calldiscardreason$input)
 ### CallDiscardReason$Type
 
 Re-exports [CallDiscardReason$Type](../README.md#calldiscardreason$type-1)
+
+### callDiscardReasonAllowGroupCall
+
+Re-exports [callDiscardReasonAllowGroupCall](../README.md#calldiscardreasonallowgroupcall)
+
+### callDiscardReasonAllowGroupCall$Input
+
+Re-exports [callDiscardReasonAllowGroupCall$Input](../README.md#calldiscardreasonallowgroupcall$input)
 
 ### callDiscardReasonDeclined
 
@@ -3664,6 +3796,22 @@ Re-exports [chatFolderInviteLinks$Input](../README.md#chatfolderinvitelinks$inpu
 
 Re-exports [ChatFolderInviteLinks$Input](../README.md#chatfolderinvitelinks$input-1)
 
+### chatFolderName
+
+Re-exports [chatFolderName](../README.md#chatfoldername)
+
+### ChatFolderName
+
+Re-exports [ChatFolderName](../README.md#chatfoldername-1)
+
+### chatFolderName$Input
+
+Re-exports [chatFolderName$Input](../README.md#chatfoldername$input)
+
+### ChatFolderName$Input
+
+Re-exports [ChatFolderName$Input](../README.md#chatfoldername$input-1)
+
 ### chatInviteLink
 
 Re-exports [chatInviteLink](../README.md#chatinvitelink)
@@ -4520,50 +4668,6 @@ Re-exports [chatTheme$Input](../README.md#chattheme$input)
 
 Re-exports [ChatTheme$Input](../README.md#chattheme$input-1)
 
-### ChatTransactionPurpose
-
-Re-exports [ChatTransactionPurpose](../README.md#chattransactionpurpose)
-
-### ChatTransactionPurpose$Input
-
-Re-exports [ChatTransactionPurpose$Input](../README.md#chattransactionpurpose$input)
-
-### ChatTransactionPurpose$Type
-
-Re-exports [ChatTransactionPurpose$Type](../README.md#chattransactionpurpose$type-1)
-
-### chatTransactionPurposeGiveaway
-
-Re-exports [chatTransactionPurposeGiveaway](../README.md#chattransactionpurposegiveaway)
-
-### chatTransactionPurposeGiveaway$Input
-
-Re-exports [chatTransactionPurposeGiveaway$Input](../README.md#chattransactionpurposegiveaway$input)
-
-### chatTransactionPurposeJoin
-
-Re-exports [chatTransactionPurposeJoin](../README.md#chattransactionpurposejoin)
-
-### chatTransactionPurposeJoin$Input
-
-Re-exports [chatTransactionPurposeJoin$Input](../README.md#chattransactionpurposejoin$input)
-
-### chatTransactionPurposePaidMedia
-
-Re-exports [chatTransactionPurposePaidMedia](../README.md#chattransactionpurposepaidmedia)
-
-### chatTransactionPurposePaidMedia$Input
-
-Re-exports [chatTransactionPurposePaidMedia$Input](../README.md#chattransactionpurposepaidmedia$input)
-
-### chatTransactionPurposeReaction
-
-Re-exports [chatTransactionPurposeReaction](../README.md#chattransactionpurposereaction)
-
-### chatTransactionPurposeReaction$Input
-
-Re-exports [chatTransactionPurposeReaction$Input](../README.md#chattransactionpurposereaction$input)
-
 ### ChatType
 
 Re-exports [ChatType](../README.md#chattype)
@@ -4908,6 +5012,18 @@ Re-exports [checkStickerSetNameResultOk](../README.md#checkstickersetnameresulto
 
 Re-exports [checkStickerSetNameResultOk$Input](../README.md#checkstickersetnameresultok$input)
 
+### checkWebAppFileDownload
+
+Re-exports [checkWebAppFileDownload](../README.md#checkwebappfiledownload-2)
+
+### checkWebAppFileDownload$DirectInput
+
+Re-exports [checkWebAppFileDownload$DirectInput](../README.md#checkwebappfiledownload$directinput)
+
+### checkWebAppFileDownload$Input
+
+Re-exports [checkWebAppFileDownload$Input](../README.md#checkwebappfiledownload$input)
+
 ### cleanFileName
 
 Re-exports [cleanFileName](../README.md#cleanfilename-4)
@@ -5224,6 +5340,50 @@ Re-exports [confirmSession$DirectInput](../README.md#confirmsession$directinput)
 
 Re-exports [confirmSession$Input](../README.md#confirmsession$input)
 
+### connectAffiliateProgram
+
+Re-exports [connectAffiliateProgram](../README.md#connectaffiliateprogram-2)
+
+### connectAffiliateProgram$DirectInput
+
+Re-exports [connectAffiliateProgram$DirectInput](../README.md#connectaffiliateprogram$directinput)
+
+### connectAffiliateProgram$Input
+
+Re-exports [connectAffiliateProgram$Input](../README.md#connectaffiliateprogram$input)
+
+### connectedAffiliateProgram
+
+Re-exports [connectedAffiliateProgram](../README.md#connectedaffiliateprogram)
+
+### ConnectedAffiliateProgram
+
+Re-exports [ConnectedAffiliateProgram](../README.md#connectedaffiliateprogram-1)
+
+### connectedAffiliateProgram$Input
+
+Re-exports [connectedAffiliateProgram$Input](../README.md#connectedaffiliateprogram$input)
+
+### ConnectedAffiliateProgram$Input
+
+Re-exports [ConnectedAffiliateProgram$Input](../README.md#connectedaffiliateprogram$input-1)
+
+### connectedAffiliatePrograms
+
+Re-exports [connectedAffiliatePrograms](../README.md#connectedaffiliateprograms)
+
+### ConnectedAffiliatePrograms
+
+Re-exports [ConnectedAffiliatePrograms](../README.md#connectedaffiliateprograms-1)
+
+### connectedAffiliatePrograms$Input
+
+Re-exports [connectedAffiliatePrograms$Input](../README.md#connectedaffiliateprograms$input)
+
+### ConnectedAffiliatePrograms$Input
+
+Re-exports [ConnectedAffiliatePrograms$Input](../README.md#connectedaffiliateprograms$input-1)
+
 ### connectedWebsite
 
 Re-exports [connectedWebsite](../README.md#connectedwebsite)
@@ -5483,6 +5643,18 @@ Re-exports [createForumTopic$DirectInput](../README.md#createforumtopic$directin
 ### createForumTopic$Input
 
 Re-exports [createForumTopic$Input](../README.md#createforumtopic$input)
+
+### createGroupCall
+
+Re-exports [createGroupCall](../README.md#creategroupcall-2)
+
+### createGroupCall$DirectInput
+
+Re-exports [createGroupCall$DirectInput](../README.md#creategroupcall$directinput)
+
+### createGroupCall$Input
+
+Re-exports [createGroupCall$Input](../README.md#creategroupcall$input)
 
 ### createInvoiceLink
 
@@ -6272,6 +6444,18 @@ Re-exports [discardCall$DirectInput](../README.md#discardcall$directinput)
 
 Re-exports [discardCall$Input](../README.md#discardcall$input)
 
+### disconnectAffiliateProgram
+
+Re-exports [disconnectAffiliateProgram](../README.md#disconnectaffiliateprogram-2)
+
+### disconnectAffiliateProgram$DirectInput
+
+Re-exports [disconnectAffiliateProgram$DirectInput](../README.md#disconnectaffiliateprogram$directinput)
+
+### disconnectAffiliateProgram$Input
+
+Re-exports [disconnectAffiliateProgram$Input](../README.md#disconnectaffiliateprogram$input)
+
 ### disconnectAllWebsites
 
 Re-exports [disconnectAllWebsites](../README.md#disconnectallwebsites-2)
@@ -6716,6 +6900,18 @@ Re-exports [editStoryCover$DirectInput](../README.md#editstorycover$directinput)
 
 Re-exports [editStoryCover$Input](../README.md#editstorycover$input)
 
+### editUserStarSubscription
+
+Re-exports [editUserStarSubscription](../README.md#edituserstarsubscription-2)
+
+### editUserStarSubscription$DirectInput
+
+Re-exports [editUserStarSubscription$DirectInput](../README.md#edituserstarsubscription$directinput)
+
+### editUserStarSubscription$Input
+
+Re-exports [editUserStarSubscription$Input](../README.md#edituserstarsubscription$input)
+
 ### EmailAddressAuthentication
 
 Re-exports [EmailAddressAuthentication](../README.md#emailaddressauthentication)
@@ -6980,6 +7176,22 @@ Re-exports [emojiStatus$Input](../README.md#emojistatus$input)
 
 Re-exports [EmojiStatus$Input](../README.md#emojistatus$input-1)
 
+### emojiStatusCustomEmojis
+
+Re-exports [emojiStatusCustomEmojis](../README.md#emojistatuscustomemojis)
+
+### EmojiStatusCustomEmojis
+
+Re-exports [EmojiStatusCustomEmojis](../README.md#emojistatuscustomemojis-1)
+
+### emojiStatusCustomEmojis$Input
+
+Re-exports [emojiStatusCustomEmojis$Input](../README.md#emojistatuscustomemojis$input)
+
+### EmojiStatusCustomEmojis$Input
+
+Re-exports [EmojiStatusCustomEmojis$Input](../README.md#emojistatuscustomemojis$input-1)
+
 ### emojiStatuses
 
 Re-exports [emojiStatuses](../README.md#emojistatuses)
@@ -6995,6 +7207,34 @@ Re-exports [emojiStatuses$Input](../README.md#emojistatuses$input)
 ### EmojiStatuses$Input
 
 Re-exports [EmojiStatuses$Input](../README.md#emojistatuses$input-1)
+
+### EmojiStatusType
+
+Re-exports [EmojiStatusType](../README.md#emojistatustype)
+
+### EmojiStatusType$Input
+
+Re-exports [EmojiStatusType$Input](../README.md#emojistatustype$input)
+
+### EmojiStatusType$Type
+
+Re-exports [EmojiStatusType$Type](../README.md#emojistatustype$type-1)
+
+### emojiStatusTypeCustomEmoji
+
+Re-exports [emojiStatusTypeCustomEmoji](../README.md#emojistatustypecustomemoji)
+
+### emojiStatusTypeCustomEmoji$Input
+
+Re-exports [emojiStatusTypeCustomEmoji$Input](../README.md#emojistatustypecustomemoji$input)
+
+### emojiStatusTypeUpgradedGift
+
+Re-exports [emojiStatusTypeUpgradedGift](../README.md#emojistatustypeupgradedgift)
+
+### emojiStatusTypeUpgradedGift$Input
+
+Re-exports [emojiStatusTypeUpgradedGift$Input](../README.md#emojistatustypeupgradedgift$input)
 
 ### enableProxy
 
@@ -7304,6 +7544,38 @@ Re-exports [fileTypeSecure](../README.md#filetypesecure)
 
 Re-exports [fileTypeSecure$Input](../README.md#filetypesecure$input)
 
+### fileTypeSelfDestructingPhoto
+
+Re-exports [fileTypeSelfDestructingPhoto](../README.md#filetypeselfdestructingphoto)
+
+### fileTypeSelfDestructingPhoto$Input
+
+Re-exports [fileTypeSelfDestructingPhoto$Input](../README.md#filetypeselfdestructingphoto$input)
+
+### fileTypeSelfDestructingVideo
+
+Re-exports [fileTypeSelfDestructingVideo](../README.md#filetypeselfdestructingvideo)
+
+### fileTypeSelfDestructingVideo$Input
+
+Re-exports [fileTypeSelfDestructingVideo$Input](../README.md#filetypeselfdestructingvideo$input)
+
+### fileTypeSelfDestructingVideoNote
+
+Re-exports [fileTypeSelfDestructingVideoNote](../README.md#filetypeselfdestructingvideonote)
+
+### fileTypeSelfDestructingVideoNote$Input
+
+Re-exports [fileTypeSelfDestructingVideoNote$Input](../README.md#filetypeselfdestructingvideonote$input)
+
+### fileTypeSelfDestructingVoiceNote
+
+Re-exports [fileTypeSelfDestructingVoiceNote](../README.md#filetypeselfdestructingvoicenote)
+
+### fileTypeSelfDestructingVoiceNote$Input
+
+Re-exports [fileTypeSelfDestructingVoiceNote$Input](../README.md#filetypeselfdestructingvoicenote$input)
+
 ### fileTypeSticker
 
 Re-exports [fileTypeSticker](../README.md#filetypesticker)
@@ -7543,6 +7815,38 @@ Re-exports [forwardSource$Input](../README.md#forwardsource$input)
 ### ForwardSource$Input
 
 Re-exports [ForwardSource$Input](../README.md#forwardsource$input-1)
+
+### foundAffiliateProgram
+
+Re-exports [foundAffiliateProgram](../README.md#foundaffiliateprogram)
+
+### FoundAffiliateProgram
+
+Re-exports [FoundAffiliateProgram](../README.md#foundaffiliateprogram-1)
+
+### foundAffiliateProgram$Input
+
+Re-exports [foundAffiliateProgram$Input](../README.md#foundaffiliateprogram$input)
+
+### FoundAffiliateProgram$Input
+
+Re-exports [FoundAffiliateProgram$Input](../README.md#foundaffiliateprogram$input-1)
+
+### foundAffiliatePrograms
+
+Re-exports [foundAffiliatePrograms](../README.md#foundaffiliateprograms)
+
+### FoundAffiliatePrograms
+
+Re-exports [FoundAffiliatePrograms](../README.md#foundaffiliateprograms-1)
+
+### foundAffiliatePrograms$Input
+
+Re-exports [foundAffiliatePrograms$Input](../README.md#foundaffiliateprograms$input)
+
+### FoundAffiliatePrograms$Input
+
+Re-exports [FoundAffiliatePrograms$Input](../README.md#foundaffiliateprograms$input-1)
 
 ### foundChatBoosts
 
@@ -8047,6 +8351,30 @@ Re-exports [getBotName$DirectInput](../README.md#getbotname$directinput)
 ### getBotName$Input
 
 Re-exports [getBotName$Input](../README.md#getbotname$input)
+
+### getBotSimilarBotCount
+
+Re-exports [getBotSimilarBotCount](../README.md#getbotsimilarbotcount-2)
+
+### getBotSimilarBotCount$DirectInput
+
+Re-exports [getBotSimilarBotCount$DirectInput](../README.md#getbotsimilarbotcount$directinput)
+
+### getBotSimilarBotCount$Input
+
+Re-exports [getBotSimilarBotCount$Input](../README.md#getbotsimilarbotcount$input)
+
+### getBotSimilarBots
+
+Re-exports [getBotSimilarBots](../README.md#getbotsimilarbots-2)
+
+### getBotSimilarBots$DirectInput
+
+Re-exports [getBotSimilarBots$DirectInput](../README.md#getbotsimilarbots$directinput)
+
+### getBotSimilarBots$Input
+
+Re-exports [getBotSimilarBots$Input](../README.md#getbotsimilarbots$input)
 
 ### getBusinessChatLinkInfo
 
@@ -8720,6 +9048,30 @@ Re-exports [getCommands$DirectInput](../README.md#getcommands$directinput)
 
 Re-exports [getCommands$Input](../README.md#getcommands$input)
 
+### getConnectedAffiliateProgram
+
+Re-exports [getConnectedAffiliateProgram](../README.md#getconnectedaffiliateprogram-2)
+
+### getConnectedAffiliateProgram$DirectInput
+
+Re-exports [getConnectedAffiliateProgram$DirectInput](../README.md#getconnectedaffiliateprogram$directinput)
+
+### getConnectedAffiliateProgram$Input
+
+Re-exports [getConnectedAffiliateProgram$Input](../README.md#getconnectedaffiliateprogram$input)
+
+### getConnectedAffiliatePrograms
+
+Re-exports [getConnectedAffiliatePrograms](../README.md#getconnectedaffiliateprograms-2)
+
+### getConnectedAffiliatePrograms$DirectInput
+
+Re-exports [getConnectedAffiliatePrograms$DirectInput](../README.md#getconnectedaffiliateprograms$directinput)
+
+### getConnectedAffiliatePrograms$Input
+
+Re-exports [getConnectedAffiliatePrograms$Input](../README.md#getconnectedaffiliateprograms$input)
+
 ### getConnectedWebsites
 
 Re-exports [getConnectedWebsites](../README.md#getconnectedwebsites-2)
@@ -9127,6 +9479,18 @@ Re-exports [getGameHighScores$DirectInput](../README.md#getgamehighscores$direct
 ### getGameHighScores$Input
 
 Re-exports [getGameHighScores$Input](../README.md#getgamehighscores$input)
+
+### getGiftUpgradePreview
+
+Re-exports [getGiftUpgradePreview](../README.md#getgiftupgradepreview-2)
+
+### getGiftUpgradePreview$DirectInput
+
+Re-exports [getGiftUpgradePreview$DirectInput](../README.md#getgiftupgradepreview$directinput)
+
+### getGiftUpgradePreview$Input
+
+Re-exports [getGiftUpgradePreview$Input](../README.md#getgiftupgradepreview$input)
 
 ### getGiveawayInfo
 
@@ -9800,6 +10164,18 @@ Re-exports [getOption$DirectInput](../README.md#getoption$directinput)
 
 Re-exports [getOption$Input](../README.md#getoption$input)
 
+### getOwnedBots
+
+Re-exports [getOwnedBots](../README.md#getownedbots-2)
+
+### getOwnedBots$DirectInput
+
+Re-exports [getOwnedBots$DirectInput](../README.md#getownedbots$directinput)
+
+### getOwnedBots$Input
+
+Re-exports [getOwnedBots$Input](../README.md#getownedbots$input)
+
 ### getOwnedStickerSets
 
 Re-exports [getOwnedStickerSets](../README.md#getownedstickersets-2)
@@ -10016,6 +10392,18 @@ Re-exports [getPremiumStickers$DirectInput](../README.md#getpremiumstickers$dire
 
 Re-exports [getPremiumStickers$Input](../README.md#getpremiumstickers$input)
 
+### getPreparedInlineMessage
+
+Re-exports [getPreparedInlineMessage](../README.md#getpreparedinlinemessage-2)
+
+### getPreparedInlineMessage$DirectInput
+
+Re-exports [getPreparedInlineMessage$DirectInput](../README.md#getpreparedinlinemessage$directinput)
+
+### getPreparedInlineMessage$Input
+
+Re-exports [getPreparedInlineMessage$Input](../README.md#getpreparedinlinemessage$input)
+
 ### getProxies
 
 Re-exports [getProxies](../README.md#getproxies-2)
@@ -10063,6 +10451,30 @@ Re-exports [getReadDatePrivacySettings$DirectInput](../README.md#getreaddatepriv
 ### getReadDatePrivacySettings$Input
 
 Re-exports [getReadDatePrivacySettings$Input](../README.md#getreaddateprivacysettings$input)
+
+### getReceivedGift
+
+Re-exports [getReceivedGift](../README.md#getreceivedgift-2)
+
+### getReceivedGift$DirectInput
+
+Re-exports [getReceivedGift$DirectInput](../README.md#getreceivedgift$directinput)
+
+### getReceivedGift$Input
+
+Re-exports [getReceivedGift$Input](../README.md#getreceivedgift$input)
+
+### getReceivedGifts
+
+Re-exports [getReceivedGifts](../README.md#getreceivedgifts-2)
+
+### getReceivedGifts$DirectInput
+
+Re-exports [getReceivedGifts$DirectInput](../README.md#getreceivedgifts$directinput)
+
+### getReceivedGifts$Input
+
+Re-exports [getReceivedGifts$Input](../README.md#getreceivedgifts$input)
 
 ### getRecentEmojiStatuses
 
@@ -10424,6 +10836,18 @@ Re-exports [getStickerEmojis$DirectInput](../README.md#getstickeremojis$directin
 
 Re-exports [getStickerEmojis$Input](../README.md#getstickeremojis$input)
 
+### getStickerOutline
+
+Re-exports [getStickerOutline](../README.md#getstickeroutline-2)
+
+### getStickerOutline$DirectInput
+
+Re-exports [getStickerOutline$DirectInput](../README.md#getstickeroutline$directinput)
+
+### getStickerOutline$Input
+
+Re-exports [getStickerOutline$Input](../README.md#getstickeroutline$input)
+
 ### getStickers
 
 Re-exports [getStickers](../README.md#getstickers-2)
@@ -10760,6 +11184,42 @@ Re-exports [getTrendingStickerSets$DirectInput](../README.md#gettrendingstickers
 
 Re-exports [getTrendingStickerSets$Input](../README.md#gettrendingstickersets$input)
 
+### getUpgradedGift
+
+Re-exports [getUpgradedGift](../README.md#getupgradedgift-2)
+
+### getUpgradedGift$DirectInput
+
+Re-exports [getUpgradedGift$DirectInput](../README.md#getupgradedgift$directinput)
+
+### getUpgradedGift$Input
+
+Re-exports [getUpgradedGift$Input](../README.md#getupgradedgift$input)
+
+### getUpgradedGiftEmojiStatuses
+
+Re-exports [getUpgradedGiftEmojiStatuses](../README.md#getupgradedgiftemojistatuses-2)
+
+### getUpgradedGiftEmojiStatuses$DirectInput
+
+Re-exports [getUpgradedGiftEmojiStatuses$DirectInput](../README.md#getupgradedgiftemojistatuses$directinput)
+
+### getUpgradedGiftEmojiStatuses$Input
+
+Re-exports [getUpgradedGiftEmojiStatuses$Input](../README.md#getupgradedgiftemojistatuses$input)
+
+### getUpgradedGiftWithdrawalUrl
+
+Re-exports [getUpgradedGiftWithdrawalUrl](../README.md#getupgradedgiftwithdrawalurl-2)
+
+### getUpgradedGiftWithdrawalUrl$DirectInput
+
+Re-exports [getUpgradedGiftWithdrawalUrl$DirectInput](../README.md#getupgradedgiftwithdrawalurl$directinput)
+
+### getUpgradedGiftWithdrawalUrl$Input
+
+Re-exports [getUpgradedGiftWithdrawalUrl$Input](../README.md#getupgradedgiftwithdrawalurl$input)
+
 ### getUser
 
 Re-exports [getUser](../README.md#getuser-2)
@@ -10795,18 +11255,6 @@ Re-exports [getUserFullInfo$DirectInput](../README.md#getuserfullinfo$directinpu
 ### getUserFullInfo$Input
 
 Re-exports [getUserFullInfo$Input](../README.md#getuserfullinfo$input)
-
-### getUserGifts
-
-Re-exports [getUserGifts](../README.md#getusergifts-2)
-
-### getUserGifts$DirectInput
-
-Re-exports [getUserGifts$DirectInput](../README.md#getusergifts$directinput)
-
-### getUserGifts$Input
-
-Re-exports [getUserGifts$Input](../README.md#getusergifts$input)
 
 ### getUserLink
 
@@ -10892,6 +11340,18 @@ Re-exports [getWebAppLinkUrl$DirectInput](../README.md#getwebapplinkurl$directin
 
 Re-exports [getWebAppLinkUrl$Input](../README.md#getwebapplinkurl$input)
 
+### getWebAppPlaceholder
+
+Re-exports [getWebAppPlaceholder](../README.md#getwebappplaceholder-2)
+
+### getWebAppPlaceholder$DirectInput
+
+Re-exports [getWebAppPlaceholder$DirectInput](../README.md#getwebappplaceholder$directinput)
+
+### getWebAppPlaceholder$Input
+
+Re-exports [getWebAppPlaceholder$Input](../README.md#getwebappplaceholder$input)
+
 ### getWebAppUrl
 
 Re-exports [getWebAppUrl](../README.md#getwebappurl-2)
@@ -10947,6 +11407,22 @@ Re-exports [gifts$Input](../README.md#gifts$input)
 ### Gifts$Input
 
 Re-exports [Gifts$Input](../README.md#gifts$input-1)
+
+### giftUpgradePreview
+
+Re-exports [giftUpgradePreview](../README.md#giftupgradepreview)
+
+### GiftUpgradePreview
+
+Re-exports [GiftUpgradePreview](../README.md#giftupgradepreview-1)
+
+### giftUpgradePreview$Input
+
+Re-exports [giftUpgradePreview$Input](../README.md#giftupgradepreview$input)
+
+### GiftUpgradePreview$Input
+
+Re-exports [GiftUpgradePreview$Input](../README.md#giftupgradepreview$input-1)
 
 ### GiveawayInfo
 
@@ -12568,6 +13044,14 @@ Re-exports [inputStoryAreaTypeSuggestedReaction](../README.md#inputstoryareatype
 
 Re-exports [inputStoryAreaTypeSuggestedReaction$Input](../README.md#inputstoryareatypesuggestedreaction$input)
 
+### inputStoryAreaTypeUpgradedGift
+
+Re-exports [inputStoryAreaTypeUpgradedGift](../README.md#inputstoryareatypeupgradedgift)
+
+### inputStoryAreaTypeUpgradedGift$Input
+
+Re-exports [inputStoryAreaTypeUpgradedGift$Input](../README.md#inputstoryareatypeupgradedgift$input)
+
 ### inputStoryAreaTypeWeather
 
 Re-exports [inputStoryAreaTypeWeather](../README.md#inputstoryareatypeweather)
@@ -12767,6 +13251,14 @@ Re-exports [internalLinkTypeChangePhoneNumber](../README.md#internallinktypechan
 ### internalLinkTypeChangePhoneNumber$Input
 
 Re-exports [internalLinkTypeChangePhoneNumber$Input](../README.md#internallinktypechangephonenumber$input)
+
+### internalLinkTypeChatAffiliateProgram
+
+Re-exports [internalLinkTypeChatAffiliateProgram](../README.md#internallinktypechataffiliateprogram)
+
+### internalLinkTypeChatAffiliateProgram$Input
+
+Re-exports [internalLinkTypeChatAffiliateProgram$Input](../README.md#internallinktypechataffiliateprogram$input)
 
 ### internalLinkTypeChatBoost
 
@@ -13015,6 +13507,14 @@ Re-exports [internalLinkTypeUnsupportedProxy](../README.md#internallinktypeunsup
 ### internalLinkTypeUnsupportedProxy$Input
 
 Re-exports [internalLinkTypeUnsupportedProxy$Input](../README.md#internallinktypeunsupportedproxy$input)
+
+### internalLinkTypeUpgradedGift
+
+Re-exports [internalLinkTypeUpgradedGift](../README.md#internallinktypeupgradedgift)
+
+### internalLinkTypeUpgradedGift$Input
+
+Re-exports [internalLinkTypeUpgradedGift$Input](../README.md#internallinktypeupgradedgift$input)
 
 ### internalLinkTypeUserPhoneNumber
 
@@ -13715,6 +14215,14 @@ Re-exports [linkPreviewTypeUnsupported](../README.md#linkpreviewtypeunsupported)
 ### linkPreviewTypeUnsupported$Input
 
 Re-exports [linkPreviewTypeUnsupported$Input](../README.md#linkpreviewtypeunsupported$input)
+
+### linkPreviewTypeUpgradedGift
+
+Re-exports [linkPreviewTypeUpgradedGift](../README.md#linkpreviewtypeupgradedgift)
+
+### linkPreviewTypeUpgradedGift$Input
+
+Re-exports [linkPreviewTypeUpgradedGift$Input](../README.md#linkpreviewtypeupgradedgift$input)
 
 ### linkPreviewTypeUser
 
@@ -14968,6 +15476,14 @@ Re-exports [messageReadDateUserPrivacyRestricted](../README.md#messagereaddateus
 
 Re-exports [messageReadDateUserPrivacyRestricted$Input](../README.md#messagereaddateuserprivacyrestricted$input)
 
+### messageRefundedUpgradedGift
+
+Re-exports [messageRefundedUpgradedGift](../README.md#messagerefundedupgradedgift)
+
+### messageRefundedUpgradedGift$Input
+
+Re-exports [messageRefundedUpgradedGift$Input](../README.md#messagerefundedupgradedgift$input)
+
 ### messageReplyInfo
 
 Re-exports [messageReplyInfo](../README.md#messagereplyinfo)
@@ -15375,6 +15891,14 @@ Re-exports [messageUnsupported](../README.md#messageunsupported)
 ### messageUnsupported$Input
 
 Re-exports [messageUnsupported$Input](../README.md#messageunsupported$input)
+
+### messageUpgradedGift
+
+Re-exports [messageUpgradedGift](../README.md#messageupgradedgift)
+
+### messageUpgradedGift$Input
+
+Re-exports [messageUpgradedGift$Input](../README.md#messageupgradedgift$input)
 
 ### messageUsersShared
 
@@ -15820,6 +16344,18 @@ Re-exports [ok$Input](../README.md#ok$input)
 
 Re-exports [Ok$Input](../README.md#ok$input-1)
 
+### openBotSimilarBot
+
+Re-exports [openBotSimilarBot](../README.md#openbotsimilarbot-2)
+
+### openBotSimilarBot$DirectInput
+
+Re-exports [openBotSimilarBot$DirectInput](../README.md#openbotsimilarbot$directinput)
+
+### openBotSimilarBot$Input
+
+Re-exports [openBotSimilarBot$Input](../README.md#openbotsimilarbot$input)
+
 ### openChat
 
 Re-exports [openChat](../README.md#openchat-2)
@@ -15951,6 +16487,22 @@ Re-exports [orderInfo$Input](../README.md#orderinfo$input)
 ### OrderInfo$Input
 
 Re-exports [OrderInfo$Input](../README.md#orderinfo$input-1)
+
+### outline
+
+Re-exports [outline](../README.md#outline)
+
+### Outline
+
+Re-exports [Outline](../README.md#outline-1)
+
+### outline$Input
+
+Re-exports [outline$Input](../README.md#outline$input)
+
+### Outline$Input
+
+Re-exports [Outline$Input](../README.md#outline$input-1)
 
 ### PageBlock
 
@@ -16887,6 +17439,14 @@ Re-exports [paymentFormTypeStars](../README.md#paymentformtypestars)
 ### paymentFormTypeStars$Input
 
 Re-exports [paymentFormTypeStars$Input](../README.md#paymentformtypestars$input)
+
+### paymentFormTypeStarSubscription
+
+Re-exports [paymentFormTypeStarSubscription](../README.md#paymentformtypestarsubscription)
+
+### paymentFormTypeStarSubscription$Input
+
+Re-exports [paymentFormTypeStarSubscription$Input](../README.md#paymentformtypestarsubscription$input)
 
 ### paymentOption
 
@@ -17900,6 +18460,38 @@ Re-exports [prepaidGiveaway$Input](../README.md#prepaidgiveaway$input)
 
 Re-exports [PrepaidGiveaway$Input](../README.md#prepaidgiveaway$input-1)
 
+### preparedInlineMessage
+
+Re-exports [preparedInlineMessage](../README.md#preparedinlinemessage)
+
+### PreparedInlineMessage
+
+Re-exports [PreparedInlineMessage](../README.md#preparedinlinemessage-1)
+
+### preparedInlineMessage$Input
+
+Re-exports [preparedInlineMessage$Input](../README.md#preparedinlinemessage$input)
+
+### PreparedInlineMessage$Input
+
+Re-exports [PreparedInlineMessage$Input](../README.md#preparedinlinemessage$input-1)
+
+### preparedInlineMessageId
+
+Re-exports [preparedInlineMessageId](../README.md#preparedinlinemessageid)
+
+### PreparedInlineMessageId
+
+Re-exports [PreparedInlineMessageId](../README.md#preparedinlinemessageid-1)
+
+### preparedInlineMessageId$Input
+
+Re-exports [preparedInlineMessageId$Input](../README.md#preparedinlinemessageid$input)
+
+### PreparedInlineMessageId$Input
+
+Re-exports [PreparedInlineMessageId$Input](../README.md#preparedinlinemessageid$input-1)
+
 ### processChatFolderNewChats
 
 Re-exports [processChatFolderNewChats](../README.md#processchatfoldernewchats-2)
@@ -18428,6 +19020,14 @@ Re-exports [pushMessageContentText](../README.md#pushmessagecontenttext)
 
 Re-exports [pushMessageContentText$Input](../README.md#pushmessagecontenttext$input)
 
+### pushMessageContentUpgradedGift
+
+Re-exports [pushMessageContentUpgradedGift](../README.md#pushmessagecontentupgradedgift)
+
+### pushMessageContentUpgradedGift$Input
+
+Re-exports [pushMessageContentUpgradedGift$Input](../README.md#pushmessagecontentupgradedgift$input)
+
 ### pushMessageContentVideo
 
 Re-exports [pushMessageContentVideo](../README.md#pushmessagecontentvideo)
@@ -18744,6 +19344,38 @@ Re-exports [readFilePart$DirectInput](../README.md#readfilepart$directinput)
 
 Re-exports [readFilePart$Input](../README.md#readfilepart$input)
 
+### receivedGift
+
+Re-exports [receivedGift](../README.md#receivedgift)
+
+### ReceivedGift
+
+Re-exports [ReceivedGift](../README.md#receivedgift-1)
+
+### receivedGift$Input
+
+Re-exports [receivedGift$Input](../README.md#receivedgift$input)
+
+### ReceivedGift$Input
+
+Re-exports [ReceivedGift$Input](../README.md#receivedgift$input-1)
+
+### receivedGifts
+
+Re-exports [receivedGifts](../README.md#receivedgifts)
+
+### ReceivedGifts
+
+Re-exports [ReceivedGifts](../README.md#receivedgifts-1)
+
+### receivedGifts$Input
+
+Re-exports [receivedGifts$Input](../README.md#receivedgifts$input)
+
+### ReceivedGifts$Input
+
+Re-exports [ReceivedGifts$Input](../README.md#receivedgifts$input-1)
+
 ### recognizeSpeech
 
 Re-exports [recognizeSpeech](../README.md#recognizespeech-2)
@@ -18975,6 +19607,18 @@ Re-exports [removeMessageReaction$DirectInput](../README.md#removemessagereactio
 ### removeMessageReaction$Input
 
 Re-exports [removeMessageReaction$Input](../README.md#removemessagereaction$input)
+
+### removeMessageSenderBotVerification
+
+Re-exports [removeMessageSenderBotVerification](../README.md#removemessagesenderbotverification-2)
+
+### removeMessageSenderBotVerification$DirectInput
+
+Re-exports [removeMessageSenderBotVerification$DirectInput](../README.md#removemessagesenderbotverification$directinput)
+
+### removeMessageSenderBotVerification$Input
+
+Re-exports [removeMessageSenderBotVerification$Input](../README.md#removemessagesenderbotverification$input)
 
 ### removeNotification
 
@@ -20212,6 +20856,18 @@ Re-exports [savedMessagesTopicTypeSavedFromChat](../README.md#savedmessagestopic
 
 Re-exports [savedMessagesTopicTypeSavedFromChat$Input](../README.md#savedmessagestopictypesavedfromchat$input)
 
+### savePreparedInlineMessage
+
+Re-exports [savePreparedInlineMessage](../README.md#savepreparedinlinemessage-2)
+
+### savePreparedInlineMessage$DirectInput
+
+Re-exports [savePreparedInlineMessage$DirectInput](../README.md#savepreparedinlinemessage$directinput)
+
+### savePreparedInlineMessage$Input
+
+Re-exports [savePreparedInlineMessage$Input](../README.md#savepreparedinlinemessage$input)
+
 ### scopeAutosaveSettings
 
 Re-exports [scopeAutosaveSettings](../README.md#scopeautosavesettings)
@@ -20244,6 +20900,18 @@ Re-exports [scopeNotificationSettings$Input](../README.md#scopenotificationsetti
 
 Re-exports [ScopeNotificationSettings$Input](../README.md#scopenotificationsettings$input-1)
 
+### searchAffiliatePrograms
+
+Re-exports [searchAffiliatePrograms](../README.md#searchaffiliateprograms-2)
+
+### searchAffiliatePrograms$DirectInput
+
+Re-exports [searchAffiliatePrograms$DirectInput](../README.md#searchaffiliateprograms$directinput)
+
+### searchAffiliatePrograms$Input
+
+Re-exports [searchAffiliatePrograms$Input](../README.md#searchaffiliateprograms$input)
+
 ### searchBackground
 
 Re-exports [searchBackground](../README.md#searchbackground-2)
@@ -20267,6 +20935,18 @@ Re-exports [searchCallMessages$DirectInput](../README.md#searchcallmessages$dire
 ### searchCallMessages$Input
 
 Re-exports [searchCallMessages$Input](../README.md#searchcallmessages$input)
+
+### searchChatAffiliateProgram
+
+Re-exports [searchChatAffiliateProgram](../README.md#searchchataffiliateprogram-2)
+
+### searchChatAffiliateProgram$DirectInput
+
+Re-exports [searchChatAffiliateProgram$DirectInput](../README.md#searchchataffiliateprogram$directinput)
+
+### searchChatAffiliateProgram$Input
+
+Re-exports [searchChatAffiliateProgram$Input](../README.md#searchchataffiliateprogram$input)
 
 ### searchChatMembers
 
@@ -20399,6 +21079,42 @@ Re-exports [searchMessages$DirectInput](../README.md#searchmessages$directinput)
 ### searchMessages$Input
 
 Re-exports [searchMessages$Input](../README.md#searchmessages$input)
+
+### SearchMessagesChatTypeFilter
+
+Re-exports [SearchMessagesChatTypeFilter](../README.md#searchmessageschattypefilter)
+
+### SearchMessagesChatTypeFilter$Input
+
+Re-exports [SearchMessagesChatTypeFilter$Input](../README.md#searchmessageschattypefilter$input)
+
+### SearchMessagesChatTypeFilter$Type
+
+Re-exports [SearchMessagesChatTypeFilter$Type](../README.md#searchmessageschattypefilter$type-1)
+
+### searchMessagesChatTypeFilterChannel
+
+Re-exports [searchMessagesChatTypeFilterChannel](../README.md#searchmessageschattypefilterchannel)
+
+### searchMessagesChatTypeFilterChannel$Input
+
+Re-exports [searchMessagesChatTypeFilterChannel$Input](../README.md#searchmessageschattypefilterchannel$input)
+
+### searchMessagesChatTypeFilterGroup
+
+Re-exports [searchMessagesChatTypeFilterGroup](../README.md#searchmessageschattypefiltergroup)
+
+### searchMessagesChatTypeFilterGroup$Input
+
+Re-exports [searchMessagesChatTypeFilterGroup$Input](../README.md#searchmessageschattypefiltergroup$input)
+
+### searchMessagesChatTypeFilterPrivate
+
+Re-exports [searchMessagesChatTypeFilterPrivate](../README.md#searchmessageschattypefilterprivate)
+
+### searchMessagesChatTypeFilterPrivate$Input
+
+Re-exports [searchMessagesChatTypeFilterPrivate$Input](../README.md#searchmessageschattypefilterprivate$input)
 
 ### SearchMessagesFilter
 
@@ -21120,6 +21836,34 @@ Re-exports [sendWebAppData$DirectInput](../README.md#sendwebappdata$directinput)
 
 Re-exports [sendWebAppData$Input](../README.md#sendwebappdata$input)
 
+### SentGift
+
+Re-exports [SentGift](../README.md#sentgift)
+
+### SentGift$Input
+
+Re-exports [SentGift$Input](../README.md#sentgift$input)
+
+### SentGift$Type
+
+Re-exports [SentGift$Type](../README.md#sentgift$type-1)
+
+### sentGiftRegular
+
+Re-exports [sentGiftRegular](../README.md#sentgiftregular)
+
+### sentGiftRegular$Input
+
+Re-exports [sentGiftRegular$Input](../README.md#sentgiftregular$input)
+
+### sentGiftUpgraded
+
+Re-exports [sentGiftUpgraded](../README.md#sentgiftupgraded)
+
+### sentGiftUpgraded$Input
+
+Re-exports [sentGiftUpgraded$Input](../README.md#sentgiftupgraded$input)
+
 ### sentWebAppMessage
 
 Re-exports [sentWebAppMessage](../README.md#sentwebappmessage)
@@ -21615,6 +22359,18 @@ Re-exports [setChatActiveStoriesList$DirectInput](../README.md#setchatactivestor
 ### setChatActiveStoriesList$Input
 
 Re-exports [setChatActiveStoriesList$Input](../README.md#setchatactivestorieslist$input)
+
+### setChatAffiliateProgram
+
+Re-exports [setChatAffiliateProgram](../README.md#setchataffiliateprogram-2)
+
+### setChatAffiliateProgram$DirectInput
+
+Re-exports [setChatAffiliateProgram$DirectInput](../README.md#setchataffiliateprogram$directinput)
+
+### setChatAffiliateProgram$Input
+
+Re-exports [setChatAffiliateProgram$Input](../README.md#setchataffiliateprogram$input)
 
 ### setChatAvailableReactions
 
@@ -22180,6 +22936,18 @@ Re-exports [setMessageSenderBlockList$DirectInput](../README.md#setmessagesender
 
 Re-exports [setMessageSenderBlockList$Input](../README.md#setmessagesenderblocklist$input)
 
+### setMessageSenderBotVerification
+
+Re-exports [setMessageSenderBotVerification](../README.md#setmessagesenderbotverification-2)
+
+### setMessageSenderBotVerification$DirectInput
+
+Re-exports [setMessageSenderBotVerification$DirectInput](../README.md#setmessagesenderbotverification$directinput)
+
+### setMessageSenderBotVerification$Input
+
+Re-exports [setMessageSenderBotVerification$Input](../README.md#setmessagesenderbotverification$input)
+
 ### setName
 
 Re-exports [setName](../README.md#setname-2)
@@ -22576,6 +23344,18 @@ Re-exports [setTdlibParameters$DirectInput](../README.md#settdlibparameters$dire
 
 Re-exports [setTdlibParameters$Input](../README.md#settdlibparameters$input)
 
+### setUserEmojiStatus
+
+Re-exports [setUserEmojiStatus](../README.md#setuseremojistatus-2)
+
+### setUserEmojiStatus$DirectInput
+
+Re-exports [setUserEmojiStatus$DirectInput](../README.md#setuseremojistatus$directinput)
+
+### setUserEmojiStatus$Input
+
+Re-exports [setUserEmojiStatus$Input](../README.md#setuseremojistatus$input)
+
 ### setUsername
 
 Re-exports [setUsername](../README.md#setusername-2)
@@ -22788,6 +23568,22 @@ Re-exports [sponsoredMessages$Input](../README.md#sponsoredmessages$input)
 
 Re-exports [SponsoredMessages$Input](../README.md#sponsoredmessages$input-1)
 
+### starAmount
+
+Re-exports [starAmount](../README.md#staramount)
+
+### StarAmount
+
+Re-exports [StarAmount](../README.md#staramount-1)
+
+### starAmount$Input
+
+Re-exports [starAmount$Input](../README.md#staramount$input)
+
+### StarAmount$Input
+
+Re-exports [StarAmount$Input](../README.md#staramount$input-1)
+
 ### starGiveawayPaymentOption
 
 Re-exports [starGiveawayPaymentOption](../README.md#stargiveawaypaymentoption)
@@ -22948,6 +23744,34 @@ Re-exports [starSubscriptions$Input](../README.md#starsubscriptions$input)
 
 Re-exports [StarSubscriptions$Input](../README.md#starsubscriptions$input-1)
 
+### StarSubscriptionType
+
+Re-exports [StarSubscriptionType](../README.md#starsubscriptiontype)
+
+### StarSubscriptionType$Input
+
+Re-exports [StarSubscriptionType$Input](../README.md#starsubscriptiontype$input)
+
+### StarSubscriptionType$Type
+
+Re-exports [StarSubscriptionType$Type](../README.md#starsubscriptiontype$type-1)
+
+### starSubscriptionTypeBot
+
+Re-exports [starSubscriptionTypeBot](../README.md#starsubscriptiontypebot)
+
+### starSubscriptionTypeBot$Input
+
+Re-exports [starSubscriptionTypeBot$Input](../README.md#starsubscriptiontypebot$input)
+
+### starSubscriptionTypeChannel
+
+Re-exports [starSubscriptionTypeChannel](../README.md#starsubscriptiontypechannel)
+
+### starSubscriptionTypeChannel$Input
+
+Re-exports [starSubscriptionTypeChannel$Input](../README.md#starsubscriptiontypechannel$input)
+
 ### startGroupCallRecording
 
 Re-exports [startGroupCallRecording](../README.md#startgroupcallrecording-2)
@@ -23016,106 +23840,6 @@ Re-exports [starTransactionDirectionOutgoing](../README.md#startransactiondirect
 
 Re-exports [starTransactionDirectionOutgoing$Input](../README.md#startransactiondirectionoutgoing$input)
 
-### StarTransactionPartner
-
-Re-exports [StarTransactionPartner](../README.md#startransactionpartner)
-
-### StarTransactionPartner$Input
-
-Re-exports [StarTransactionPartner$Input](../README.md#startransactionpartner$input)
-
-### StarTransactionPartner$Type
-
-Re-exports [StarTransactionPartner$Type](../README.md#startransactionpartner$type-1)
-
-### starTransactionPartnerAppStore
-
-Re-exports [starTransactionPartnerAppStore](../README.md#startransactionpartnerappstore)
-
-### starTransactionPartnerAppStore$Input
-
-Re-exports [starTransactionPartnerAppStore$Input](../README.md#startransactionpartnerappstore$input)
-
-### starTransactionPartnerBot
-
-Re-exports [starTransactionPartnerBot](../README.md#startransactionpartnerbot)
-
-### starTransactionPartnerBot$Input
-
-Re-exports [starTransactionPartnerBot$Input](../README.md#startransactionpartnerbot$input)
-
-### starTransactionPartnerBusiness
-
-Re-exports [starTransactionPartnerBusiness](../README.md#startransactionpartnerbusiness)
-
-### starTransactionPartnerBusiness$Input
-
-Re-exports [starTransactionPartnerBusiness$Input](../README.md#startransactionpartnerbusiness$input)
-
-### starTransactionPartnerChat
-
-Re-exports [starTransactionPartnerChat](../README.md#startransactionpartnerchat)
-
-### starTransactionPartnerChat$Input
-
-Re-exports [starTransactionPartnerChat$Input](../README.md#startransactionpartnerchat$input)
-
-### starTransactionPartnerFragment
-
-Re-exports [starTransactionPartnerFragment](../README.md#startransactionpartnerfragment)
-
-### starTransactionPartnerFragment$Input
-
-Re-exports [starTransactionPartnerFragment$Input](../README.md#startransactionpartnerfragment$input)
-
-### starTransactionPartnerGooglePlay
-
-Re-exports [starTransactionPartnerGooglePlay](../README.md#startransactionpartnergoogleplay)
-
-### starTransactionPartnerGooglePlay$Input
-
-Re-exports [starTransactionPartnerGooglePlay$Input](../README.md#startransactionpartnergoogleplay$input)
-
-### starTransactionPartnerTelegram
-
-Re-exports [starTransactionPartnerTelegram](../README.md#startransactionpartnertelegram)
-
-### starTransactionPartnerTelegram$Input
-
-Re-exports [starTransactionPartnerTelegram$Input](../README.md#startransactionpartnertelegram$input)
-
-### starTransactionPartnerTelegramAds
-
-Re-exports [starTransactionPartnerTelegramAds](../README.md#startransactionpartnertelegramads)
-
-### starTransactionPartnerTelegramAds$Input
-
-Re-exports [starTransactionPartnerTelegramAds$Input](../README.md#startransactionpartnertelegramads$input)
-
-### starTransactionPartnerTelegramApi
-
-Re-exports [starTransactionPartnerTelegramApi](../README.md#startransactionpartnertelegramapi)
-
-### starTransactionPartnerTelegramApi$Input
-
-Re-exports [starTransactionPartnerTelegramApi$Input](../README.md#startransactionpartnertelegramapi$input)
-
-### starTransactionPartnerUnsupported
-
-Re-exports [starTransactionPartnerUnsupported](../README.md#startransactionpartnerunsupported)
-
-### starTransactionPartnerUnsupported$Input
-
-Re-exports [starTransactionPartnerUnsupported$Input](../README.md#startransactionpartnerunsupported$input)
-
-### starTransactionPartnerUser
-
-Re-exports [starTransactionPartnerUser](../README.md#startransactionpartneruser)
-
-### starTransactionPartnerUser$Input
-
-Re-exports [starTransactionPartnerUser$Input](../README.md#startransactionpartneruser$input)
-
 ### starTransactions
 
 Re-exports [starTransactions](../README.md#startransactions)
@@ -23131,6 +23855,234 @@ Re-exports [starTransactions$Input](../README.md#startransactions$input)
 ### StarTransactions$Input
 
 Re-exports [StarTransactions$Input](../README.md#startransactions$input-1)
+
+### StarTransactionType
+
+Re-exports [StarTransactionType](../README.md#startransactiontype)
+
+### StarTransactionType$Input
+
+Re-exports [StarTransactionType$Input](../README.md#startransactiontype$input)
+
+### StarTransactionType$Type
+
+Re-exports [StarTransactionType$Type](../README.md#startransactiontype$type-1)
+
+### starTransactionTypeAffiliateProgramCommission
+
+Re-exports [starTransactionTypeAffiliateProgramCommission](../README.md#startransactiontypeaffiliateprogramcommission)
+
+### starTransactionTypeAffiliateProgramCommission$Input
+
+Re-exports [starTransactionTypeAffiliateProgramCommission$Input](../README.md#startransactiontypeaffiliateprogramcommission$input)
+
+### starTransactionTypeAppStoreDeposit
+
+Re-exports [starTransactionTypeAppStoreDeposit](../README.md#startransactiontypeappstoredeposit)
+
+### starTransactionTypeAppStoreDeposit$Input
+
+Re-exports [starTransactionTypeAppStoreDeposit$Input](../README.md#startransactiontypeappstoredeposit$input)
+
+### starTransactionTypeBotInvoicePurchase
+
+Re-exports [starTransactionTypeBotInvoicePurchase](../README.md#startransactiontypebotinvoicepurchase)
+
+### starTransactionTypeBotInvoicePurchase$Input
+
+Re-exports [starTransactionTypeBotInvoicePurchase$Input](../README.md#startransactiontypebotinvoicepurchase$input)
+
+### starTransactionTypeBotInvoiceSale
+
+Re-exports [starTransactionTypeBotInvoiceSale](../README.md#startransactiontypebotinvoicesale)
+
+### starTransactionTypeBotInvoiceSale$Input
+
+Re-exports [starTransactionTypeBotInvoiceSale$Input](../README.md#startransactiontypebotinvoicesale$input)
+
+### starTransactionTypeBotPaidMediaPurchase
+
+Re-exports [starTransactionTypeBotPaidMediaPurchase](../README.md#startransactiontypebotpaidmediapurchase)
+
+### starTransactionTypeBotPaidMediaPurchase$Input
+
+Re-exports [starTransactionTypeBotPaidMediaPurchase$Input](../README.md#startransactiontypebotpaidmediapurchase$input)
+
+### starTransactionTypeBotPaidMediaSale
+
+Re-exports [starTransactionTypeBotPaidMediaSale](../README.md#startransactiontypebotpaidmediasale)
+
+### starTransactionTypeBotPaidMediaSale$Input
+
+Re-exports [starTransactionTypeBotPaidMediaSale$Input](../README.md#startransactiontypebotpaidmediasale$input)
+
+### starTransactionTypeBotSubscriptionPurchase
+
+Re-exports [starTransactionTypeBotSubscriptionPurchase](../README.md#startransactiontypebotsubscriptionpurchase)
+
+### starTransactionTypeBotSubscriptionPurchase$Input
+
+Re-exports [starTransactionTypeBotSubscriptionPurchase$Input](../README.md#startransactiontypebotsubscriptionpurchase$input)
+
+### starTransactionTypeBotSubscriptionSale
+
+Re-exports [starTransactionTypeBotSubscriptionSale](../README.md#startransactiontypebotsubscriptionsale)
+
+### starTransactionTypeBotSubscriptionSale$Input
+
+Re-exports [starTransactionTypeBotSubscriptionSale$Input](../README.md#startransactiontypebotsubscriptionsale$input)
+
+### starTransactionTypeChannelPaidMediaPurchase
+
+Re-exports [starTransactionTypeChannelPaidMediaPurchase](../README.md#startransactiontypechannelpaidmediapurchase)
+
+### starTransactionTypeChannelPaidMediaPurchase$Input
+
+Re-exports [starTransactionTypeChannelPaidMediaPurchase$Input](../README.md#startransactiontypechannelpaidmediapurchase$input)
+
+### starTransactionTypeChannelPaidMediaSale
+
+Re-exports [starTransactionTypeChannelPaidMediaSale](../README.md#startransactiontypechannelpaidmediasale)
+
+### starTransactionTypeChannelPaidMediaSale$Input
+
+Re-exports [starTransactionTypeChannelPaidMediaSale$Input](../README.md#startransactiontypechannelpaidmediasale$input)
+
+### starTransactionTypeChannelPaidReactionReceive
+
+Re-exports [starTransactionTypeChannelPaidReactionReceive](../README.md#startransactiontypechannelpaidreactionreceive)
+
+### starTransactionTypeChannelPaidReactionReceive$Input
+
+Re-exports [starTransactionTypeChannelPaidReactionReceive$Input](../README.md#startransactiontypechannelpaidreactionreceive$input)
+
+### starTransactionTypeChannelPaidReactionSend
+
+Re-exports [starTransactionTypeChannelPaidReactionSend](../README.md#startransactiontypechannelpaidreactionsend)
+
+### starTransactionTypeChannelPaidReactionSend$Input
+
+Re-exports [starTransactionTypeChannelPaidReactionSend$Input](../README.md#startransactiontypechannelpaidreactionsend$input)
+
+### starTransactionTypeChannelSubscriptionPurchase
+
+Re-exports [starTransactionTypeChannelSubscriptionPurchase](../README.md#startransactiontypechannelsubscriptionpurchase)
+
+### starTransactionTypeChannelSubscriptionPurchase$Input
+
+Re-exports [starTransactionTypeChannelSubscriptionPurchase$Input](../README.md#startransactiontypechannelsubscriptionpurchase$input)
+
+### starTransactionTypeChannelSubscriptionSale
+
+Re-exports [starTransactionTypeChannelSubscriptionSale](../README.md#startransactiontypechannelsubscriptionsale)
+
+### starTransactionTypeChannelSubscriptionSale$Input
+
+Re-exports [starTransactionTypeChannelSubscriptionSale$Input](../README.md#startransactiontypechannelsubscriptionsale$input)
+
+### starTransactionTypeFragmentDeposit
+
+Re-exports [starTransactionTypeFragmentDeposit](../README.md#startransactiontypefragmentdeposit)
+
+### starTransactionTypeFragmentDeposit$Input
+
+Re-exports [starTransactionTypeFragmentDeposit$Input](../README.md#startransactiontypefragmentdeposit$input)
+
+### starTransactionTypeFragmentWithdrawal
+
+Re-exports [starTransactionTypeFragmentWithdrawal](../README.md#startransactiontypefragmentwithdrawal)
+
+### starTransactionTypeFragmentWithdrawal$Input
+
+Re-exports [starTransactionTypeFragmentWithdrawal$Input](../README.md#startransactiontypefragmentwithdrawal$input)
+
+### starTransactionTypeGiftPurchase
+
+Re-exports [starTransactionTypeGiftPurchase](../README.md#startransactiontypegiftpurchase)
+
+### starTransactionTypeGiftPurchase$Input
+
+Re-exports [starTransactionTypeGiftPurchase$Input](../README.md#startransactiontypegiftpurchase$input)
+
+### starTransactionTypeGiftSale
+
+Re-exports [starTransactionTypeGiftSale](../README.md#startransactiontypegiftsale)
+
+### starTransactionTypeGiftSale$Input
+
+Re-exports [starTransactionTypeGiftSale$Input](../README.md#startransactiontypegiftsale$input)
+
+### starTransactionTypeGiftTransfer
+
+Re-exports [starTransactionTypeGiftTransfer](../README.md#startransactiontypegifttransfer)
+
+### starTransactionTypeGiftTransfer$Input
+
+Re-exports [starTransactionTypeGiftTransfer$Input](../README.md#startransactiontypegifttransfer$input)
+
+### starTransactionTypeGiftUpgrade
+
+Re-exports [starTransactionTypeGiftUpgrade](../README.md#startransactiontypegiftupgrade)
+
+### starTransactionTypeGiftUpgrade$Input
+
+Re-exports [starTransactionTypeGiftUpgrade$Input](../README.md#startransactiontypegiftupgrade$input)
+
+### starTransactionTypeGiveawayDeposit
+
+Re-exports [starTransactionTypeGiveawayDeposit](../README.md#startransactiontypegiveawaydeposit)
+
+### starTransactionTypeGiveawayDeposit$Input
+
+Re-exports [starTransactionTypeGiveawayDeposit$Input](../README.md#startransactiontypegiveawaydeposit$input)
+
+### starTransactionTypeGooglePlayDeposit
+
+Re-exports [starTransactionTypeGooglePlayDeposit](../README.md#startransactiontypegoogleplaydeposit)
+
+### starTransactionTypeGooglePlayDeposit$Input
+
+Re-exports [starTransactionTypeGooglePlayDeposit$Input](../README.md#startransactiontypegoogleplaydeposit$input)
+
+### starTransactionTypePremiumBotDeposit
+
+Re-exports [starTransactionTypePremiumBotDeposit](../README.md#startransactiontypepremiumbotdeposit)
+
+### starTransactionTypePremiumBotDeposit$Input
+
+Re-exports [starTransactionTypePremiumBotDeposit$Input](../README.md#startransactiontypepremiumbotdeposit$input)
+
+### starTransactionTypeTelegramAdsWithdrawal
+
+Re-exports [starTransactionTypeTelegramAdsWithdrawal](../README.md#startransactiontypetelegramadswithdrawal)
+
+### starTransactionTypeTelegramAdsWithdrawal$Input
+
+Re-exports [starTransactionTypeTelegramAdsWithdrawal$Input](../README.md#startransactiontypetelegramadswithdrawal$input)
+
+### starTransactionTypeTelegramApiUsage
+
+Re-exports [starTransactionTypeTelegramApiUsage](../README.md#startransactiontypetelegramapiusage)
+
+### starTransactionTypeTelegramApiUsage$Input
+
+Re-exports [starTransactionTypeTelegramApiUsage$Input](../README.md#startransactiontypetelegramapiusage$input)
+
+### starTransactionTypeUnsupported
+
+Re-exports [starTransactionTypeUnsupported](../README.md#startransactiontypeunsupported)
+
+### starTransactionTypeUnsupported$Input
+
+Re-exports [starTransactionTypeUnsupported$Input](../README.md#startransactiontypeunsupported$input)
+
+### starTransactionTypeUserDeposit
+
+Re-exports [starTransactionTypeUserDeposit](../README.md#startransactiontypeuserdeposit)
+
+### starTransactionTypeUserDeposit$Input
+
+Re-exports [starTransactionTypeUserDeposit$Input](../README.md#startransactiontypeuserdeposit$input)
 
 ### startScheduledGroupCall
 
@@ -23198,11 +24150,11 @@ Re-exports [StatisticalValue$Input](../README.md#statisticalvalue$input-1)
 
 ### sticker
 
-Re-exports [sticker](../README.md#sticker-62)
+Re-exports [sticker](../README.md#sticker-64)
 
 ### Sticker
 
-Re-exports [Sticker](../README.md#sticker-64)
+Re-exports [Sticker](../README.md#sticker-66)
 
 ### sticker$Input
 
@@ -23640,6 +24592,14 @@ Re-exports [storyAreaTypeSuggestedReaction](../README.md#storyareatypesuggestedr
 
 Re-exports [storyAreaTypeSuggestedReaction$Input](../README.md#storyareatypesuggestedreaction$input)
 
+### storyAreaTypeUpgradedGift
+
+Re-exports [storyAreaTypeUpgradedGift](../README.md#storyareatypeupgradedgift)
+
+### storyAreaTypeUpgradedGift$Input
+
+Re-exports [storyAreaTypeUpgradedGift$Input](../README.md#storyareatypeupgradedgift$input)
+
 ### storyAreaTypeVenue
 
 Re-exports [storyAreaTypeVenue](../README.md#storyareatypevenue)
@@ -24056,6 +25016,14 @@ Re-exports [suggestedActionSetPassword](../README.md#suggestedactionsetpassword)
 
 Re-exports [suggestedActionSetPassword$Input](../README.md#suggestedactionsetpassword$input)
 
+### suggestedActionSetProfilePhoto
+
+Re-exports [suggestedActionSetProfilePhoto](../README.md#suggestedactionsetprofilephoto)
+
+### suggestedActionSetProfilePhoto$Input
+
+Re-exports [suggestedActionSetProfilePhoto$Input](../README.md#suggestedactionsetprofilephoto$input)
+
 ### suggestedActionSubscribeToAnnualPremium
 
 Re-exports [suggestedActionSubscribeToAnnualPremium](../README.md#suggestedactionsubscribetoannualpremium)
@@ -24247,6 +25215,22 @@ Re-exports [targetChatInternalLink](../README.md#targetchatinternallink)
 ### targetChatInternalLink$Input
 
 Re-exports [targetChatInternalLink$Input](../README.md#targetchatinternallink$input)
+
+### targetChatTypes
+
+Re-exports [targetChatTypes](../README.md#targetchattypes)
+
+### TargetChatTypes
+
+Re-exports [TargetChatTypes](../README.md#targetchattypes-1)
+
+### targetChatTypes$Input
+
+Re-exports [targetChatTypes$Input](../README.md#targetchattypes$input)
+
+### TargetChatTypes$Input
+
+Re-exports [TargetChatTypes$Input](../README.md#targetchattypes$input-1)
 
 ### TelegramPaymentPurpose
 
@@ -24634,11 +25618,11 @@ Re-exports [TestVectorStringObject$Input](../README.md#testvectorstringobject$in
 
 ### text
 
-Re-exports [text](../README.md#text-130)
+Re-exports [text](../README.md#text-134)
 
 ### Text
 
-Re-exports [Text](../README.md#text-132)
+Re-exports [Text](../README.md#text-136)
 
 ### text$Input
 
@@ -25148,6 +26132,18 @@ Re-exports [toggleAllDownloadsArePaused$DirectInput](../README.md#togglealldownl
 
 Re-exports [toggleAllDownloadsArePaused$Input](../README.md#togglealldownloadsarepaused$input)
 
+### toggleBotCanManageEmojiStatus
+
+Re-exports [toggleBotCanManageEmojiStatus](../README.md#togglebotcanmanageemojistatus-2)
+
+### toggleBotCanManageEmojiStatus$DirectInput
+
+Re-exports [toggleBotCanManageEmojiStatus$DirectInput](../README.md#togglebotcanmanageemojistatus$directinput)
+
+### toggleBotCanManageEmojiStatus$Input
+
+Re-exports [toggleBotCanManageEmojiStatus$Input](../README.md#togglebotcanmanageemojistatus$input)
+
 ### toggleBotIsAddedToAttachmentMenu
 
 Re-exports [toggleBotIsAddedToAttachmentMenu](../README.md#togglebotisaddedtoattachmentmenu-2)
@@ -25207,6 +26203,18 @@ Re-exports [toggleChatFolderTags$DirectInput](../README.md#togglechatfoldertags$
 ### toggleChatFolderTags$Input
 
 Re-exports [toggleChatFolderTags$Input](../README.md#togglechatfoldertags$input)
+
+### toggleChatGiftNotifications
+
+Re-exports [toggleChatGiftNotifications](../README.md#togglechatgiftnotifications-2)
+
+### toggleChatGiftNotifications$DirectInput
+
+Re-exports [toggleChatGiftNotifications$DirectInput](../README.md#togglechatgiftnotifications$directinput)
+
+### toggleChatGiftNotifications$Input
+
+Re-exports [toggleChatGiftNotifications$Input](../README.md#togglechatgiftnotifications$input)
 
 ### toggleChatHasProtectedContent
 
@@ -25703,6 +26711,18 @@ Re-exports [transferChatOwnership$DirectInput](../README.md#transferchatownershi
 ### transferChatOwnership$Input
 
 Re-exports [transferChatOwnership$Input](../README.md#transferchatownership$input)
+
+### transferGift
+
+Re-exports [transferGift](../README.md#transfergift-2)
+
+### transferGift$DirectInput
+
+Re-exports [transferGift$DirectInput](../README.md#transfergift$directinput)
+
+### transferGift$Input
+
+Re-exports [transferGift$Input](../README.md#transfergift$input)
 
 ### translateMessageText
 
@@ -27064,6 +28084,130 @@ Re-exports [upgradeBasicGroupChatToSupergroupChat$DirectInput](../README.md#upgr
 
 Re-exports [upgradeBasicGroupChatToSupergroupChat$Input](../README.md#upgradebasicgroupchattosupergroupchat$input)
 
+### upgradedGift
+
+Re-exports [upgradedGift](../README.md#upgradedgift)
+
+### UpgradedGift
+
+Re-exports [UpgradedGift](../README.md#upgradedgift-1)
+
+### upgradedGift$Input
+
+Re-exports [upgradedGift$Input](../README.md#upgradedgift$input)
+
+### UpgradedGift$Input
+
+Re-exports [UpgradedGift$Input](../README.md#upgradedgift$input-1)
+
+### upgradedGiftBackdrop
+
+Re-exports [upgradedGiftBackdrop](../README.md#upgradedgiftbackdrop)
+
+### UpgradedGiftBackdrop
+
+Re-exports [UpgradedGiftBackdrop](../README.md#upgradedgiftbackdrop-1)
+
+### upgradedGiftBackdrop$Input
+
+Re-exports [upgradedGiftBackdrop$Input](../README.md#upgradedgiftbackdrop$input)
+
+### UpgradedGiftBackdrop$Input
+
+Re-exports [UpgradedGiftBackdrop$Input](../README.md#upgradedgiftbackdrop$input-1)
+
+### upgradedGiftBackdropColors
+
+Re-exports [upgradedGiftBackdropColors](../README.md#upgradedgiftbackdropcolors)
+
+### UpgradedGiftBackdropColors
+
+Re-exports [UpgradedGiftBackdropColors](../README.md#upgradedgiftbackdropcolors-1)
+
+### upgradedGiftBackdropColors$Input
+
+Re-exports [upgradedGiftBackdropColors$Input](../README.md#upgradedgiftbackdropcolors$input)
+
+### UpgradedGiftBackdropColors$Input
+
+Re-exports [UpgradedGiftBackdropColors$Input](../README.md#upgradedgiftbackdropcolors$input-1)
+
+### upgradedGiftModel
+
+Re-exports [upgradedGiftModel](../README.md#upgradedgiftmodel)
+
+### UpgradedGiftModel
+
+Re-exports [UpgradedGiftModel](../README.md#upgradedgiftmodel-1)
+
+### upgradedGiftModel$Input
+
+Re-exports [upgradedGiftModel$Input](../README.md#upgradedgiftmodel$input)
+
+### UpgradedGiftModel$Input
+
+Re-exports [UpgradedGiftModel$Input](../README.md#upgradedgiftmodel$input-1)
+
+### upgradedGiftOriginalDetails
+
+Re-exports [upgradedGiftOriginalDetails](../README.md#upgradedgiftoriginaldetails)
+
+### UpgradedGiftOriginalDetails
+
+Re-exports [UpgradedGiftOriginalDetails](../README.md#upgradedgiftoriginaldetails-1)
+
+### upgradedGiftOriginalDetails$Input
+
+Re-exports [upgradedGiftOriginalDetails$Input](../README.md#upgradedgiftoriginaldetails$input)
+
+### UpgradedGiftOriginalDetails$Input
+
+Re-exports [UpgradedGiftOriginalDetails$Input](../README.md#upgradedgiftoriginaldetails$input-1)
+
+### upgradedGiftSymbol
+
+Re-exports [upgradedGiftSymbol](../README.md#upgradedgiftsymbol)
+
+### UpgradedGiftSymbol
+
+Re-exports [UpgradedGiftSymbol](../README.md#upgradedgiftsymbol-1)
+
+### upgradedGiftSymbol$Input
+
+Re-exports [upgradedGiftSymbol$Input](../README.md#upgradedgiftsymbol$input)
+
+### UpgradedGiftSymbol$Input
+
+Re-exports [UpgradedGiftSymbol$Input](../README.md#upgradedgiftsymbol$input-1)
+
+### upgradeGift
+
+Re-exports [upgradeGift](../README.md#upgradegift-2)
+
+### upgradeGift$DirectInput
+
+Re-exports [upgradeGift$DirectInput](../README.md#upgradegift$directinput)
+
+### upgradeGift$Input
+
+Re-exports [upgradeGift$Input](../README.md#upgradegift$input)
+
+### upgradeGiftResult
+
+Re-exports [upgradeGiftResult](../README.md#upgradegiftresult)
+
+### UpgradeGiftResult
+
+Re-exports [UpgradeGiftResult](../README.md#upgradegiftresult-1)
+
+### upgradeGiftResult$Input
+
+Re-exports [upgradeGiftResult$Input](../README.md#upgradegiftresult$input)
+
+### UpgradeGiftResult$Input
+
+Re-exports [UpgradeGiftResult$Input](../README.md#upgradegiftresult$input-1)
+
 ### uploadStickerFile
 
 Re-exports [uploadStickerFile](../README.md#uploadstickerfile-2)
@@ -27107,38 +28251,6 @@ Re-exports [userFullInfo$Input](../README.md#userfullinfo$input)
 ### UserFullInfo$Input
 
 Re-exports [UserFullInfo$Input](../README.md#userfullinfo$input-1)
-
-### userGift
-
-Re-exports [userGift](../README.md#usergift)
-
-### UserGift
-
-Re-exports [UserGift](../README.md#usergift-1)
-
-### userGift$Input
-
-Re-exports [userGift$Input](../README.md#usergift$input)
-
-### UserGift$Input
-
-Re-exports [UserGift$Input](../README.md#usergift$input-1)
-
-### userGifts
-
-Re-exports [userGifts](../README.md#usergifts)
-
-### UserGifts
-
-Re-exports [UserGifts](../README.md#usergifts-1)
-
-### userGifts$Input
-
-Re-exports [userGifts$Input](../README.md#usergifts$input)
-
-### UserGifts$Input
-
-Re-exports [UserGifts$Input](../README.md#usergifts$input-1)
 
 ### userLink
 
@@ -27224,6 +28336,14 @@ Re-exports [userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages](../README.m
 
 Re-exports [userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages$Input](../README.md#userprivacysettingallowprivatevoiceandvideonotemessages$input)
 
+### userPrivacySettingAutosaveGifts
+
+Re-exports [userPrivacySettingAutosaveGifts](../README.md#userprivacysettingautosavegifts)
+
+### userPrivacySettingAutosaveGifts$Input
+
+Re-exports [userPrivacySettingAutosaveGifts$Input](../README.md#userprivacysettingautosavegifts$input)
+
 ### UserPrivacySettingRule
 
 Re-exports [UserPrivacySettingRule](../README.md#userprivacysettingrule)
@@ -27243,6 +28363,14 @@ Re-exports [userPrivacySettingRuleAllowAll](../README.md#userprivacysettingrulea
 ### userPrivacySettingRuleAllowAll$Input
 
 Re-exports [userPrivacySettingRuleAllowAll$Input](../README.md#userprivacysettingruleallowall$input)
+
+### userPrivacySettingRuleAllowBots
+
+Re-exports [userPrivacySettingRuleAllowBots](../README.md#userprivacysettingruleallowbots)
+
+### userPrivacySettingRuleAllowBots$Input
+
+Re-exports [userPrivacySettingRuleAllowBots$Input](../README.md#userprivacysettingruleallowbots$input)
 
 ### userPrivacySettingRuleAllowChatMembers
 
@@ -27283,6 +28411,14 @@ Re-exports [userPrivacySettingRuleRestrictAll](../README.md#userprivacysettingru
 ### userPrivacySettingRuleRestrictAll$Input
 
 Re-exports [userPrivacySettingRuleRestrictAll$Input](../README.md#userprivacysettingrulerestrictall$input)
+
+### userPrivacySettingRuleRestrictBots
+
+Re-exports [userPrivacySettingRuleRestrictBots](../README.md#userprivacysettingrulerestrictbots)
+
+### userPrivacySettingRuleRestrictBots$Input
+
+Re-exports [userPrivacySettingRuleRestrictBots$Input](../README.md#userprivacysettingrulerestrictbots$input)
 
 ### userPrivacySettingRuleRestrictChatMembers
 
@@ -27464,42 +28600,6 @@ Re-exports [userSupportInfo$Input](../README.md#usersupportinfo$input)
 
 Re-exports [UserSupportInfo$Input](../README.md#usersupportinfo$input-1)
 
-### UserTransactionPurpose
-
-Re-exports [UserTransactionPurpose](../README.md#usertransactionpurpose)
-
-### UserTransactionPurpose$Input
-
-Re-exports [UserTransactionPurpose$Input](../README.md#usertransactionpurpose$input)
-
-### UserTransactionPurpose$Type
-
-Re-exports [UserTransactionPurpose$Type](../README.md#usertransactionpurpose$type-1)
-
-### userTransactionPurposeGiftedStars
-
-Re-exports [userTransactionPurposeGiftedStars](../README.md#usertransactionpurposegiftedstars)
-
-### userTransactionPurposeGiftedStars$Input
-
-Re-exports [userTransactionPurposeGiftedStars$Input](../README.md#usertransactionpurposegiftedstars$input)
-
-### userTransactionPurposeGiftSell
-
-Re-exports [userTransactionPurposeGiftSell](../README.md#usertransactionpurposegiftsell)
-
-### userTransactionPurposeGiftSell$Input
-
-Re-exports [userTransactionPurposeGiftSell$Input](../README.md#usertransactionpurposegiftsell$input)
-
-### userTransactionPurposeGiftSend
-
-Re-exports [userTransactionPurposeGiftSend](../README.md#usertransactionpurposegiftsend)
-
-### userTransactionPurposeGiftSend$Input
-
-Re-exports [userTransactionPurposeGiftSend$Input](../README.md#usertransactionpurposegiftsend$input)
-
 ### UserType
 
 Re-exports [UserType](../README.md#usertype)
@@ -27623,6 +28723,22 @@ Re-exports [venue$Input](../README.md#venue$input)
 ### Venue$Input
 
 Re-exports [Venue$Input](../README.md#venue$input-1)
+
+### verificationStatus
+
+Re-exports [verificationStatus](../README.md#verificationstatus)
+
+### VerificationStatus
+
+Re-exports [VerificationStatus](../README.md#verificationstatus-1)
+
+### verificationStatus$Input
+
+Re-exports [verificationStatus$Input](../README.md#verificationstatus$input)
+
+### VerificationStatus$Input
+
+Re-exports [VerificationStatus$Input](../README.md#verificationstatus$input-1)
 
 ### video
 
@@ -27755,6 +28871,58 @@ Re-exports [webAppInfo$Input](../README.md#webappinfo$input)
 ### WebAppInfo$Input
 
 Re-exports [WebAppInfo$Input](../README.md#webappinfo$input-1)
+
+### WebAppOpenMode
+
+Re-exports [WebAppOpenMode](../README.md#webappopenmode)
+
+### WebAppOpenMode$Input
+
+Re-exports [WebAppOpenMode$Input](../README.md#webappopenmode$input)
+
+### WebAppOpenMode$Type
+
+Re-exports [WebAppOpenMode$Type](../README.md#webappopenmode$type-1)
+
+### webAppOpenModeCompact
+
+Re-exports [webAppOpenModeCompact](../README.md#webappopenmodecompact)
+
+### webAppOpenModeCompact$Input
+
+Re-exports [webAppOpenModeCompact$Input](../README.md#webappopenmodecompact$input)
+
+### webAppOpenModeFullScreen
+
+Re-exports [webAppOpenModeFullScreen](../README.md#webappopenmodefullscreen)
+
+### webAppOpenModeFullScreen$Input
+
+Re-exports [webAppOpenModeFullScreen$Input](../README.md#webappopenmodefullscreen$input)
+
+### webAppOpenModeFullSize
+
+Re-exports [webAppOpenModeFullSize](../README.md#webappopenmodefullsize)
+
+### webAppOpenModeFullSize$Input
+
+Re-exports [webAppOpenModeFullSize$Input](../README.md#webappopenmodefullsize$input)
+
+### webAppOpenParameters
+
+Re-exports [webAppOpenParameters](../README.md#webappopenparameters)
+
+### WebAppOpenParameters
+
+Re-exports [WebAppOpenParameters](../README.md#webappopenparameters-1)
+
+### webAppOpenParameters$Input
+
+Re-exports [webAppOpenParameters$Input](../README.md#webappopenparameters$input)
+
+### WebAppOpenParameters$Input
+
+Re-exports [WebAppOpenParameters$Input](../README.md#webappopenparameters$input-1)
 
 ### webPageInstantView
 
