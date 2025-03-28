@@ -27,7 +27,7 @@ class Downloader {
   async get(filename) {
     const cached = this._cache.get(filename);
     if (cached) {
-      console.log("[Downloader] Got", filename, "from cache");
+      // console.log("[Downloader] Got", filename, "from cache");
       return cached;
     }
 
@@ -37,7 +37,7 @@ class Downloader {
     if (!baseUrl.endsWith("/")) baseUrl += "/";
 
     const url = new URL(baseUrl + filename);
-    console.log("[Downloader] Downloading", url.toString());
+    // console.log("[Downloader] Downloading", url.toString());
 
     /**
      * @type {Buffer}
