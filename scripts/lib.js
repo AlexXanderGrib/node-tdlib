@@ -2,7 +2,7 @@ const { readFileSync } = require("fs");
 const { readFile } = require("fs/promises");
 const path = require("path");
 const { resolve } = require("path");
-const { pathToFileURL } = require("url");
+const { pathToFileURL, fileURLToPath } = require("url");
 
 class Downloader {
   /**
@@ -45,7 +45,8 @@ class Downloader {
     let content;
 
     if (url.protocol === "file:") {
-      content = await readFile(url.pathname);
+      const path = fileURLToPath(url);
+      content = await readFile(path);
     } else {
       const response = await fetch(url);
       const buffer = await response.arrayBuffer();
