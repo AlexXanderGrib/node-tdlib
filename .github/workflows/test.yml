@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run jest
+      - name: Run test
         run: npm test
         env:
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
