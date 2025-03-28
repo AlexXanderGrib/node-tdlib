@@ -1,16 +1,33 @@
 const assert = require("assert");
-const { readFileSync } = require("fs");
+const { family } = require("detect-libc");
+const { builds, downloader } = require("./lib");
+const { writeFile } = require("fs/promises");
+const path = require("path");
+const { tmpdir } = require("os");
 
-const isGlibc = () => !!process.report?.getReport()?.header?.glibcVersionRuntime;
+(async function main() {
+  const libc = (await family()) ?? undefined;
+  const build = builds.find(
+    (b) => b.cpu === process.arch && b.os === process.platform && b.libc === libc
+  );
 
-let packageName = `../packages/tdjson-${process.platform}-${process.arch}`;
+  assert(
+    build,
+    `Build not found for this platform ${process.platform} ${process.arch} libc - ${libc}`
+  );
 
-if (process.platform === "linux") {
-  packageName += isGlibc() ? "-glibc" : "-musl";
-}
+  let name = `tdjson-${build.os}-${build.cpu}`;
 
-const { tdlibPath, version, commit } = require(packageName);
+  if (build.libc) {
+    name += `-${build.libc}`;
+  }
 
-const meta = readFileSync("./td/meta.yml", "utf-8");
-assert.equal(meta, `version: ${version}\ncommit-hash: ${commit}\n`);
-console.log(tdlibPath);
+  const meta = await downloader.get("meta.yml");
+
+  const { tdlibPath, commit, version } = require(`${process.cwd()}/packages/${name}`);
+  const metaContent = `version: ${version}\ncommit-hash: ${commit}`;
+
+  assert.equal(metaContent, meta.toString('ascii').trim());
+
+  console.log(tdlibPath);
+})();

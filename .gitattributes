@@ -1,2 +1,5 @@
 * text=auto eol=lf
 src/generated/types.ts linguist-generated=true
+*.dylib filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text

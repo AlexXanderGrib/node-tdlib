@@ -1,20 +1,21 @@
 // @ts-check
-const { writeFile, readFile } = require("fs/promises");
+const { writeFile } = require("fs/promises");
 const { resolve } = require("path");
 const prettier = require("prettier");
 const prettierConfig = require("../.prettierrc.json");
+const { downloader } = require("./lib");
 
 const primitiveComments = {
-  bytes: "(string) of bytes in Base64",
+  bytes: "String of bytes in Base64",
   bytes$Input: "String in Base64 or Uint8Array. Will be converted to Base64",
 
-  int64: "(string) of digits. Use BigInt for handling this",
+  int64: "String of digits. Use BigInt for handling this",
   int64$Input: "String or BigInt. Will be converted to String",
 
   int53:
-    "(float64) Integer number ranging from Number.MIN_SAFE_INTEGER to Number.MAX_SAFE_INTEGER",
+    "Integer in range [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER], represented by: float64",
 
-  int32: "(int32) Integer number ranging from -2147483648 to 2147483647",
+  int32: "Integer in range [-2147483648, 2147483647]",
   double: "(float64)"
 };
 
@@ -141,7 +142,7 @@ class Namespace {
  * @returns {string}
  */
 function splitComments(comment) {
-  return comment.replaceAll('\n', "\n * \n * ").replaceAll('* -', "* - ");
+  return comment.replaceAll("\n", "\n * \n * ").replaceAll("* -", "* - ");
 }
 
 /**
@@ -156,7 +157,7 @@ function getInputAlias(typename) {
   if (genericIndex !== -1) {
     const name = typename.slice(0, genericIndex);
     // +-1 = stripping < >;
-    const generic = typename.slice(genericIndex + 1, - 1);
+    const generic = typename.slice(genericIndex + 1, -1);
 
     return `${name}$Input<${getInputAlias(generic)}>`;
   }
@@ -633,7 +634,7 @@ async function run() {
   const label = "Typings";
   console.time(label);
 
-  const text = await readFile(resolve(__dirname, "../td/td_api.tl"), "utf8");
+  const text = (await downloader.get("td_api.tl")).toString("utf8");
   console.timeLog(label, "Read td_api.tl");
   const result = await convert(text);
   console.timeLog(label, "Generated");

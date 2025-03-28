@@ -8,13 +8,12 @@ import pluginSecurity from "eslint-plugin-security";
 export default tseslint.config(
   {
     ignores: [
-      "./dist",
-      "./node_modules",
-      "./dist",
-      "./src/generated/types.ts",
-      "./*.js",
-      "./scripts",
-      "./*.mjs",
+      "dist",
+      "node_modules",
+      "src/generated/types.ts",
+      "*.js",
+      "scripts",
+      "*.mjs",
     ],
   },
 

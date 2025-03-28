@@ -3,7 +3,7 @@
 export const typename = "_";
 export type typename = typeof typename;
 
-/** (string) of bytes in Base64 */
+/** String of bytes in Base64 */
 export type bytes = string;
 
 /** String in Base64 or Uint8Array. Will be converted to Base64 */
@@ -12,13 +12,13 @@ export type bytes$Input = string | Uint8Array;
 /** (float64) */
 export type double = number;
 
-/** (float64) Integer number ranging from Number.MIN_SAFE_INTEGER to Number.MAX_SAFE_INTEGER */
+/** Integer in range [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER], represented by: float64 */
 export type int53 = number;
 
-/** (int32) Integer number ranging from -2147483648 to 2147483647 */
+/** Integer in range [-2147483648, 2147483647] */
 export type int32 = number;
 
-/** (string) of digits. Use BigInt for handling this */
+/** String of digits. Use BigInt for handling this */
 export type int64 = string;
 
 /** String or BigInt. Will be converted to String */
@@ -230,10 +230,12 @@ export const $Methods = Object.freeze({
   clearRecentReactions: "clearRecentReactions",
   addMessageReaction: "addMessageReaction",
   removeMessageReaction: "removeMessageReaction",
+  getChatAvailablePaidMessageReactionSenders:
+    "getChatAvailablePaidMessageReactionSenders",
   addPendingPaidMessageReaction: "addPendingPaidMessageReaction",
   commitPendingPaidMessageReactions: "commitPendingPaidMessageReactions",
   removePendingPaidMessageReactions: "removePendingPaidMessageReactions",
-  togglePaidMessageReactionIsAnonymous: "togglePaidMessageReactionIsAnonymous",
+  setPaidMessageReactionType: "setPaidMessageReactionType",
   setMessageReactions: "setMessageReactions",
   getMessageAddedReactions: "getMessageAddedReactions",
   setDefaultReactionType: "setDefaultReactionType",
@@ -676,6 +678,7 @@ export const $Methods = Object.freeze({
   sendGift: "sendGift",
   sellGift: "sellGift",
   toggleGiftIsSaved: "toggleGiftIsSaved",
+  setPinnedGifts: "setPinnedGifts",
   toggleChatGiftNotifications: "toggleChatGiftNotifications",
   getGiftUpgradePreview: "getGiftUpgradePreview",
   upgradeGift: "upgradeGift",
@@ -713,6 +716,9 @@ export const $Methods = Object.freeze({
   getReadDatePrivacySettings: "getReadDatePrivacySettings",
   setNewChatPrivacySettings: "setNewChatPrivacySettings",
   getNewChatPrivacySettings: "getNewChatPrivacySettings",
+  getPaidMessageRevenue: "getPaidMessageRevenue",
+  allowUnpaidMessagesFromUser: "allowUnpaidMessagesFromUser",
+  setChatPaidMessageStarCount: "setChatPaidMessageStarCount",
   canSendMessageToUser: "canSendMessageToUser",
   getOption: "getOption",
   setOption: "setOption",
@@ -788,7 +794,8 @@ export const $Methods = Object.freeze({
   viewPremiumFeature: "viewPremiumFeature",
   clickPremiumSubscriptionButton: "clickPremiumSubscriptionButton",
   getPremiumState: "getPremiumState",
-  getPremiumGiftCodePaymentOptions: "getPremiumGiftCodePaymentOptions",
+  getPremiumGiftPaymentOptions: "getPremiumGiftPaymentOptions",
+  getPremiumGiveawayPaymentOptions: "getPremiumGiveawayPaymentOptions",
   checkPremiumGiftCode: "checkPremiumGiftCode",
   applyPremiumGiftCode: "applyPremiumGiftCode",
   launchPrepaidGiveaway: "launchPrepaidGiveaway",
@@ -953,6 +960,8 @@ export const Update$Type = Object.freeze({
   FileDownload: "updateFileDownload",
   FileRemovedFromDownloads: "updateFileRemovedFromDownloads",
   ApplicationVerificationRequired: "updateApplicationVerificationRequired",
+  ApplicationRecaptchaVerificationRequired:
+    "updateApplicationRecaptchaVerificationRequired",
   Call: "updateCall",
   GroupCall: "updateGroupCall",
   GroupCallParticipant: "updateGroupCallParticipant",
@@ -988,6 +997,7 @@ export const Update$Type = Object.freeze({
   ActiveEmojiReactions: "updateActiveEmojiReactions",
   AvailableMessageEffects: "updateAvailableMessageEffects",
   DefaultReactionType: "updateDefaultReactionType",
+  DefaultPaidReactionType: "updateDefaultPaidReactionType",
   SavedMessagesTags: "updateSavedMessagesTags",
   ActiveLiveLocationMessages: "updateActiveLiveLocationMessages",
   OwnedStarCount: "updateOwnedStarCount",
@@ -1347,6 +1357,7 @@ export type SessionType$Type =
 
 export const CanSendMessageToUserResult$Type = Object.freeze({
   Ok: "canSendMessageToUserResultOk",
+  UserHasPaidMessages: "canSendMessageToUserResultUserHasPaidMessages",
   UserIsDeleted: "canSendMessageToUserResultUserIsDeleted",
   UserRestrictsNewChats: "canSendMessageToUserResultUserRestrictsNewChats"
 } as const);
@@ -1367,7 +1378,8 @@ export const UserPrivacySetting$Type = Object.freeze({
   AllowFindingByPhoneNumber: "userPrivacySettingAllowFindingByPhoneNumber",
   AllowPrivateVoiceAndVideoNoteMessages:
     "userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages",
-  AutosaveGifts: "userPrivacySettingAutosaveGifts"
+  AutosaveGifts: "userPrivacySettingAutosaveGifts",
+  AllowUnpaidMessages: "userPrivacySettingAllowUnpaidMessages"
 } as const);
 
 export type UserPrivacySetting$Type =
@@ -1467,6 +1479,9 @@ export const PushMessageContent$Type = Object.freeze({
   VideoNote: "pushMessageContentVideoNote",
   VoiceNote: "pushMessageContentVoiceNote",
   BasicGroupChatCreate: "pushMessageContentBasicGroupChatCreate",
+  VideoChatStarted: "pushMessageContentVideoChatStarted",
+  VideoChatEnded: "pushMessageContentVideoChatEnded",
+  InviteVideoChatParticipants: "pushMessageContentInviteVideoChatParticipants",
   ChatAddMembers: "pushMessageContentChatAddMembers",
   ChatChangePhoto: "pushMessageContentChatChangePhoto",
   ChatChangeTitle: "pushMessageContentChatChangeTitle",
@@ -1477,6 +1492,7 @@ export const PushMessageContent$Type = Object.freeze({
   ChatJoinByRequest: "pushMessageContentChatJoinByRequest",
   RecurringPayment: "pushMessageContentRecurringPayment",
   SuggestProfilePhoto: "pushMessageContentSuggestProfilePhoto",
+  ProximityAlertTriggered: "pushMessageContentProximityAlertTriggered",
   MessageForwards: "pushMessageContentMessageForwards",
   MediaAlbum: "pushMessageContentMediaAlbum"
 } as const);
@@ -1592,6 +1608,7 @@ export type DeviceToken$Type =
   (typeof DeviceToken$Type)[keyof typeof DeviceToken$Type];
 
 export const TelegramPaymentPurpose$Type = Object.freeze({
+  PremiumGift: "telegramPaymentPurposePremiumGift",
   PremiumGiftCodes: "telegramPaymentPurposePremiumGiftCodes",
   PremiumGiveaway: "telegramPaymentPurposePremiumGiveaway",
   Stars: "telegramPaymentPurposeStars",
@@ -1605,6 +1622,7 @@ export type TelegramPaymentPurpose$Type =
 
 export const StorePaymentPurpose$Type = Object.freeze({
   PremiumSubscription: "storePaymentPurposePremiumSubscription",
+  PremiumGift: "storePaymentPurposePremiumGift",
   PremiumGiftCodes: "storePaymentPurposePremiumGiftCodes",
   PremiumGiveaway: "storePaymentPurposePremiumGiveaway",
   StarGiveaway: "storePaymentPurposeStarGiveaway",
@@ -2738,6 +2756,15 @@ export const MessageEffectType$Type = Object.freeze({
 export type MessageEffectType$Type =
   (typeof MessageEffectType$Type)[keyof typeof MessageEffectType$Type];
 
+export const PaidReactionType$Type = Object.freeze({
+  Regular: "paidReactionTypeRegular",
+  Anonymous: "paidReactionTypeAnonymous",
+  Chat: "paidReactionTypeChat"
+} as const);
+
+export type PaidReactionType$Type =
+  (typeof PaidReactionType$Type)[keyof typeof PaidReactionType$Type];
+
 export const ReactionType$Type = Object.freeze({
   Emoji: "reactionTypeEmoji",
   CustomEmoji: "reactionTypeCustomEmoji",
@@ -2895,6 +2922,9 @@ export const StarTransactionType$Type = Object.freeze({
   ChannelPaidReactionSend: "starTransactionTypeChannelPaidReactionSend",
   ChannelPaidReactionReceive: "starTransactionTypeChannelPaidReactionReceive",
   AffiliateProgramCommission: "starTransactionTypeAffiliateProgramCommission",
+  PaidMessageSend: "starTransactionTypePaidMessageSend",
+  PaidMessageReceive: "starTransactionTypePaidMessageReceive",
+  PremiumPurchase: "starTransactionTypePremiumPurchase",
   Unsupported: "starTransactionTypeUnsupported"
 } as const);
 
@@ -7180,6 +7210,12 @@ export type alternativeVideo = {
   _: "alternativeVideo";
 
   /**
+   * Unique identifier of the alternative video, which is used in the HLS file
+   * @type {int64} {@link int64}
+   */
+  id: int64;
+
+  /**
    * Video width
    * @type {int32} {@link int32}
    */
@@ -7217,6 +7253,12 @@ export type alternativeVideo = {
  */
 export type alternativeVideo$Input = {
   readonly _: "alternativeVideo";
+
+  /**
+   * Unique identifier of the alternative video, which is used in the HLS file
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
 
   /**
    * Video width
@@ -10910,10 +10952,138 @@ export type premiumStatePaymentOption$Input = {
 };
 
 /**
- * Describes an option for creating Telegram Premium gift codes or Telegram Premium giveaway. Use telegramPaymentPurposePremiumGiftCodes or telegramPaymentPurposePremiumGiveaway for out-of-store payments
+ * Describes an option for gifting Telegram Premium to a user. Use telegramPaymentPurposePremiumGift for out-of-store payments or payments in Telegram Stars
  */
-export type premiumGiftCodePaymentOption = {
-  _: "premiumGiftCodePaymentOption";
+export type premiumGiftPaymentOption = {
+  _: "premiumGiftPaymentOption";
+
+  /**
+   * ISO 4217 currency code for the payment
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * The amount to pay, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * The alternative amount of Telegram Stars to pay; 0 if payment in Telegram Stars is not possible
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+
+  /**
+   * The discount associated with this option, as a percentage
+   * @type {int32} {@link int32}
+   */
+  discount_percentage: int32;
+
+  /**
+   * Number of months the Telegram Premium subscription will be active
+   * @type {int32} {@link int32}
+   */
+  month_count: int32;
+
+  /**
+   * Identifier of the store product associated with the option
+   * @type {string} {@link string}
+   */
+  store_product_id: string;
+
+  /**
+   * A sticker to be shown along with the option; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker | null;
+};
+
+/**
+ * Version of {@link premiumGiftPaymentOption} for method parameters.
+ *
+ * Describes an option for gifting Telegram Premium to a user. Use telegramPaymentPurposePremiumGift for out-of-store payments or payments in Telegram Stars
+ */
+export type premiumGiftPaymentOption$Input = {
+  readonly _: "premiumGiftPaymentOption";
+
+  /**
+   * ISO 4217 currency code for the payment
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * The amount to pay, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * The alternative amount of Telegram Stars to pay; 0 if payment in Telegram Stars is not possible
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
+
+  /**
+   * The discount associated with this option, as a percentage
+   * @type {int32} {@link int32}
+   */
+  readonly discount_percentage?: int32;
+
+  /**
+   * Number of months the Telegram Premium subscription will be active
+   * @type {int32} {@link int32}
+   */
+  readonly month_count?: int32;
+
+  /**
+   * Identifier of the store product associated with the option
+   * @type {string} {@link string}
+   */
+  readonly store_product_id?: string;
+
+  /**
+   * A sticker to be shown along with the option; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input | null;
+};
+
+/**
+ * Contains a list of options for gifting Telegram Premium to a user
+ */
+export type premiumGiftPaymentOptions = {
+  _: "premiumGiftPaymentOptions";
+
+  /**
+   * The list of options sorted by Telegram Premium subscription duration
+   * @type {vector<premiumGiftPaymentOption>} {@link vector<premiumGiftPaymentOption>}
+   */
+  options: vector<premiumGiftPaymentOption>;
+};
+
+/**
+ * Version of {@link premiumGiftPaymentOptions} for method parameters.
+ *
+ * Contains a list of options for gifting Telegram Premium to a user
+ */
+export type premiumGiftPaymentOptions$Input = {
+  readonly _: "premiumGiftPaymentOptions";
+
+  /**
+   * The list of options sorted by Telegram Premium subscription duration
+   * @type {vector<premiumGiftPaymentOption>} {@link vector<premiumGiftPaymentOption>}
+   */
+  readonly options?: vector$Input<premiumGiftPaymentOption$Input>;
+};
+
+/**
+ * Describes an option for creating of Telegram Premium giveaway or manual distribution of Telegram Premium among chat members. Use telegramPaymentPurposePremiumGiftCodes or telegramPaymentPurposePremiumGiveaway for out-of-store payments
+ */
+export type premiumGiveawayPaymentOption = {
+  _: "premiumGiveawayPaymentOption";
 
   /**
    * ISO 4217 currency code for Telegram Premium gift code payment
@@ -10926,12 +11096,6 @@ export type premiumGiftCodePaymentOption = {
    * @type {int53} {@link int53}
    */
   amount: int53;
-
-  /**
-   * The discount associated with this option, as a percentage
-   * @type {int32} {@link int32}
-   */
-  discount_percentage: int32;
 
   /**
    * Number of users which will be able to activate the gift codes
@@ -10956,21 +11120,15 @@ export type premiumGiftCodePaymentOption = {
    * @type {int32} {@link int32}
    */
   store_product_quantity: int32;
-
-  /**
-   * A sticker to be shown along with the gift code; may be null if unknown
-   * @type {sticker} {@link sticker}
-   */
-  sticker: sticker | null;
 };
 
 /**
- * Version of {@link premiumGiftCodePaymentOption} for method parameters.
+ * Version of {@link premiumGiveawayPaymentOption} for method parameters.
  *
- * Describes an option for creating Telegram Premium gift codes or Telegram Premium giveaway. Use telegramPaymentPurposePremiumGiftCodes or telegramPaymentPurposePremiumGiveaway for out-of-store payments
+ * Describes an option for creating of Telegram Premium giveaway or manual distribution of Telegram Premium among chat members. Use telegramPaymentPurposePremiumGiftCodes or telegramPaymentPurposePremiumGiveaway for out-of-store payments
  */
-export type premiumGiftCodePaymentOption$Input = {
-  readonly _: "premiumGiftCodePaymentOption";
+export type premiumGiveawayPaymentOption$Input = {
+  readonly _: "premiumGiveawayPaymentOption";
 
   /**
    * ISO 4217 currency code for Telegram Premium gift code payment
@@ -10983,12 +11141,6 @@ export type premiumGiftCodePaymentOption$Input = {
    * @type {int53} {@link int53}
    */
   readonly amount?: int53;
-
-  /**
-   * The discount associated with this option, as a percentage
-   * @type {int32} {@link int32}
-   */
-  readonly discount_percentage?: int32;
 
   /**
    * Number of users which will be able to activate the gift codes
@@ -11013,40 +11165,34 @@ export type premiumGiftCodePaymentOption$Input = {
    * @type {int32} {@link int32}
    */
   readonly store_product_quantity?: int32;
-
-  /**
-   * A sticker to be shown along with the gift code; may be null if unknown
-   * @type {sticker} {@link sticker}
-   */
-  readonly sticker?: sticker$Input | null;
 };
 
 /**
- * Contains a list of options for creating Telegram Premium gift codes or Telegram Premium giveaway
+ * Contains a list of options for creating of Telegram Premium giveaway or manual distribution of Telegram Premium among chat members
  */
-export type premiumGiftCodePaymentOptions = {
-  _: "premiumGiftCodePaymentOptions";
+export type premiumGiveawayPaymentOptions = {
+  _: "premiumGiveawayPaymentOptions";
 
   /**
    * The list of options
-   * @type {vector<premiumGiftCodePaymentOption>} {@link vector<premiumGiftCodePaymentOption>}
+   * @type {vector<premiumGiveawayPaymentOption>} {@link vector<premiumGiveawayPaymentOption>}
    */
-  options: vector<premiumGiftCodePaymentOption>;
+  options: vector<premiumGiveawayPaymentOption>;
 };
 
 /**
- * Version of {@link premiumGiftCodePaymentOptions} for method parameters.
+ * Version of {@link premiumGiveawayPaymentOptions} for method parameters.
  *
- * Contains a list of options for creating Telegram Premium gift codes or Telegram Premium giveaway
+ * Contains a list of options for creating of Telegram Premium giveaway or manual distribution of Telegram Premium among chat members
  */
-export type premiumGiftCodePaymentOptions$Input = {
-  readonly _: "premiumGiftCodePaymentOptions";
+export type premiumGiveawayPaymentOptions$Input = {
+  readonly _: "premiumGiveawayPaymentOptions";
 
   /**
    * The list of options
-   * @type {vector<premiumGiftCodePaymentOption>} {@link vector<premiumGiftCodePaymentOption>}
+   * @type {vector<premiumGiveawayPaymentOption>} {@link vector<premiumGiveawayPaymentOption>}
    */
-  readonly options?: vector$Input<premiumGiftCodePaymentOption$Input>;
+  readonly options?: vector$Input<premiumGiveawayPaymentOption$Input>;
 };
 
 /**
@@ -11306,7 +11452,7 @@ export type starGiveawayWinnerOption$Input = {
 };
 
 /**
- * Describes an option for creating Telegram Star giveaway. Use telegramPaymentPurposeStarGiveaway for out-of-store payments
+ * Describes an option for creating of Telegram Star giveaway. Use telegramPaymentPurposeStarGiveaway for out-of-store payments
  */
 export type starGiveawayPaymentOption = {
   _: "starGiveawayPaymentOption";
@@ -11363,7 +11509,7 @@ export type starGiveawayPaymentOption = {
 /**
  * Version of {@link starGiveawayPaymentOption} for method parameters.
  *
- * Describes an option for creating Telegram Star giveaway. Use telegramPaymentPurposeStarGiveaway for out-of-store payments
+ * Describes an option for creating of Telegram Star giveaway. Use telegramPaymentPurposeStarGiveaway for out-of-store payments
  */
 export type starGiveawayPaymentOption$Input = {
   readonly _: "starGiveawayPaymentOption";
@@ -11418,7 +11564,7 @@ export type starGiveawayPaymentOption$Input = {
 };
 
 /**
- * Contains a list of options for creating Telegram Star giveaway
+ * Contains a list of options for creating of Telegram Star giveaway
  */
 export type starGiveawayPaymentOptions = {
   _: "starGiveawayPaymentOptions";
@@ -11433,7 +11579,7 @@ export type starGiveawayPaymentOptions = {
 /**
  * Version of {@link starGiveawayPaymentOptions} for method parameters.
  *
- * Contains a list of options for creating Telegram Star giveaway
+ * Contains a list of options for creating of Telegram Star giveaway
  */
 export type starGiveawayPaymentOptions$Input = {
   readonly _: "starGiveawayPaymentOptions";
@@ -11954,6 +12100,12 @@ export type upgradedGift = {
   owner_name: string;
 
   /**
+   * Address of the gift NFT in TON blockchain; may be empty if none
+   * @type {string} {@link string}
+   */
+  gift_address: string;
+
+  /**
    * Model of the upgraded gift
    * @type {upgradedGiftModel} {@link upgradedGiftModel}
    */
@@ -12039,6 +12191,12 @@ export type upgradedGift$Input = {
    * @type {string} {@link string}
    */
   readonly owner_name?: string;
+
+  /**
+   * Address of the gift NFT in TON blockchain; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly gift_address?: string;
 
   /**
    * Model of the upgraded gift
@@ -12246,6 +12404,12 @@ export type receivedGift = {
   is_saved: Bool;
 
   /**
+   * True, if the gift is pinned to the top of the chat's profile page
+   * @type {Bool} {@link Bool}
+   */
+  is_pinned: Bool;
+
+  /**
    * True, if the gift is a regular gift that can be upgraded to a unique gift; only for the receiver of the gift
    * @type {Bool} {@link Bool}
    */
@@ -12337,6 +12501,12 @@ export type receivedGift$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly is_saved?: Bool$Input;
+
+  /**
+   * True, if the gift is pinned to the top of the chat's profile page
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_pinned?: Bool$Input;
 
   /**
    * True, if the gift is a regular gift that can be upgraded to a unique gift; only for the receiver of the gift
@@ -12686,7 +12856,7 @@ export type starTransactionTypeGiveawayDeposit$Input = {
 };
 
 /**
- * The transaction is a withdrawal of earned Telegram Stars to Fragment; for bots and channel chats only
+ * The transaction is a withdrawal of earned Telegram Stars to Fragment; for regular users, bots, supergroup and channel chats only
  */
 export type starTransactionTypeFragmentWithdrawal = {
   _: "starTransactionTypeFragmentWithdrawal";
@@ -12701,7 +12871,7 @@ export type starTransactionTypeFragmentWithdrawal = {
 /**
  * Version of {@link starTransactionTypeFragmentWithdrawal} for method parameters.
  *
- * The transaction is a withdrawal of earned Telegram Stars to Fragment; for bots and channel chats only
+ * The transaction is a withdrawal of earned Telegram Stars to Fragment; for regular users, bots, supergroup and channel chats only
  */
 export type starTransactionTypeFragmentWithdrawal$Input = {
   readonly _: "starTransactionTypeFragmentWithdrawal";
@@ -13404,6 +13574,12 @@ export type starTransactionTypeGiftUpgrade = {
   _: "starTransactionTypeGiftUpgrade";
 
   /**
+   * Identifier of the user that initially sent the gift
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
    * The upgraded gift
    * @type {upgradedGift} {@link upgradedGift}
    */
@@ -13417,6 +13593,12 @@ export type starTransactionTypeGiftUpgrade = {
  */
 export type starTransactionTypeGiftUpgrade$Input = {
   readonly _: "starTransactionTypeGiftUpgrade";
+
+  /**
+   * Identifier of the user that initially sent the gift
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
 
   /**
    * The upgraded gift
@@ -13543,6 +13725,162 @@ export type starTransactionTypeAffiliateProgramCommission$Input = {
    * @type {int32} {@link int32}
    */
   readonly commission_per_mille?: int32;
+};
+
+/**
+ * The transaction is a sending of a paid message; for regular users only
+ */
+export type starTransactionTypePaidMessageSend = {
+  _: "starTransactionTypePaidMessageSend";
+
+  /**
+   * Identifier of the chat that received the payment
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Number of sent paid messages
+   * @type {int32} {@link int32}
+   */
+  message_count: int32;
+};
+
+/**
+ * Version of {@link starTransactionTypePaidMessageSend} for method parameters.
+ *
+ * The transaction is a sending of a paid message; for regular users only
+ */
+export type starTransactionTypePaidMessageSend$Input = {
+  readonly _: "starTransactionTypePaidMessageSend";
+
+  /**
+   * Identifier of the chat that received the payment
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Number of sent paid messages
+   * @type {int32} {@link int32}
+   */
+  readonly message_count?: int32;
+};
+
+/**
+ * The transaction is a receiving of a paid message; for regular users and supergroup chats only
+ */
+export type starTransactionTypePaidMessageReceive = {
+  _: "starTransactionTypePaidMessageReceive";
+
+  /**
+   * Identifier of the sender of the message
+   * @type {MessageSender} {@link MessageSender}
+   */
+  sender_id: MessageSender;
+
+  /**
+   * Number of received paid messages
+   * @type {int32} {@link int32}
+   */
+  message_count: int32;
+
+  /**
+   * The number of Telegram Stars received by the Telegram for each 1000 Telegram Stars paid for message sending
+   * @type {int32} {@link int32}
+   */
+  commission_per_mille: int32;
+
+  /**
+   * The amount of Telegram Stars that were received by Telegram; can be negative for refunds
+   * @type {starAmount} {@link starAmount}
+   */
+  commission_star_amount: starAmount;
+};
+
+/**
+ * Version of {@link starTransactionTypePaidMessageReceive} for method parameters.
+ *
+ * The transaction is a receiving of a paid message; for regular users and supergroup chats only
+ */
+export type starTransactionTypePaidMessageReceive$Input = {
+  readonly _: "starTransactionTypePaidMessageReceive";
+
+  /**
+   * Identifier of the sender of the message
+   * @type {MessageSender} {@link MessageSender}
+   */
+  readonly sender_id?: MessageSender$Input;
+
+  /**
+   * Number of received paid messages
+   * @type {int32} {@link int32}
+   */
+  readonly message_count?: int32;
+
+  /**
+   * The number of Telegram Stars received by the Telegram for each 1000 Telegram Stars paid for message sending
+   * @type {int32} {@link int32}
+   */
+  readonly commission_per_mille?: int32;
+
+  /**
+   * The amount of Telegram Stars that were received by Telegram; can be negative for refunds
+   * @type {starAmount} {@link starAmount}
+   */
+  readonly commission_star_amount?: starAmount$Input;
+};
+
+/**
+ * The transaction is a purchase of Telegram Premium subscription; for regular users only
+ */
+export type starTransactionTypePremiumPurchase = {
+  _: "starTransactionTypePremiumPurchase";
+
+  /**
+   * Identifier of the user that received the Telegram Premium subscription
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Number of months the Telegram Premium subscription will be active
+   * @type {int32} {@link int32}
+   */
+  month_count: int32;
+
+  /**
+   * A sticker to be shown in the transaction information; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker | null;
+};
+
+/**
+ * Version of {@link starTransactionTypePremiumPurchase} for method parameters.
+ *
+ * The transaction is a purchase of Telegram Premium subscription; for regular users only
+ */
+export type starTransactionTypePremiumPurchase$Input = {
+  readonly _: "starTransactionTypePremiumPurchase";
+
+  /**
+   * Identifier of the user that received the Telegram Premium subscription
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Number of months the Telegram Premium subscription will be active
+   * @type {int32} {@link int32}
+   */
+  readonly month_count?: int32;
+
+  /**
+   * A sticker to be shown in the transaction information; may be null if unknown
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input | null;
 };
 
 /**
@@ -14632,6 +14970,12 @@ export type user = {
   restricts_new_chats: Bool;
 
   /**
+   * Number of Telegram Stars that must be paid by general user for each sent message to the user. If positive and userFullInfo is unknown, use canSendMessageToUser to check whether the current user must pay
+   * @type {int53} {@link int53}
+   */
+  paid_message_star_count: int53;
+
+  /**
    * If false, the user is inaccessible, and the only information known about the user is inside this class. Identifier of the user can't be passed to any method
    * @type {Bool} {@link Bool}
    */
@@ -14795,6 +15139,12 @@ export type user$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly restricts_new_chats?: Bool$Input;
+
+  /**
+   * Number of Telegram Stars that must be paid by general user for each sent message to the user. If positive and userFullInfo is unknown, use canSendMessageToUser to check whether the current user must pay
+   * @type {int53} {@link int53}
+   */
+  readonly paid_message_star_count?: int53;
 
   /**
    * If false, the user is inaccessible, and the only information known about the user is inside this class. Identifier of the user can't be passed to any method
@@ -15222,6 +15572,18 @@ export type userFullInfo = {
   group_in_common_count: int32;
 
   /**
+   * Number of Telegram Stars that must be paid by the user for each sent message to the current user
+   * @type {int53} {@link int53}
+   */
+  incoming_paid_message_star_count: int53;
+
+  /**
+   * Number of Telegram Stars that must be paid by the current user for each sent message to the user
+   * @type {int53} {@link int53}
+   */
+  outgoing_paid_message_star_count: int53;
+
+  /**
    * Information about verification status of the user provided by a bot; may be null if none or unknown
    * @type {botVerification} {@link botVerification}
    */
@@ -15361,6 +15723,18 @@ export type userFullInfo$Input = {
    * @type {int32} {@link int32}
    */
   readonly group_in_common_count?: int32;
+
+  /**
+   * Number of Telegram Stars that must be paid by the user for each sent message to the current user
+   * @type {int53} {@link int53}
+   */
+  readonly incoming_paid_message_star_count?: int53;
+
+  /**
+   * Number of Telegram Stars that must be paid by the current user for each sent message to the user
+   * @type {int53} {@link int53}
+   */
+  readonly outgoing_paid_message_star_count?: int53;
 
   /**
    * Information about verification status of the user provided by a bot; may be null if none or unknown
@@ -17332,6 +17706,12 @@ export type supergroup = {
   restriction_reason: string;
 
   /**
+   * Number of Telegram Stars that must be paid by non-administrator users of the supergroup chat for each sent message
+   * @type {int53} {@link int53}
+   */
+  paid_message_star_count: int53;
+
+  /**
    * True, if the supergroup or channel has non-expired stories available to the current user
    * @type {Bool} {@link Bool}
    */
@@ -17477,6 +17857,12 @@ export type supergroup$Input = {
   readonly restriction_reason?: string;
 
   /**
+   * Number of Telegram Stars that must be paid by non-administrator users of the supergroup chat for each sent message
+   * @type {int53} {@link int53}
+   */
+  readonly paid_message_star_count?: int53;
+
+  /**
    * True, if the supergroup or channel has non-expired stories available to the current user
    * @type {Bool} {@link Bool}
    */
@@ -17548,6 +17934,12 @@ export type supergroupFullInfo = {
    * @type {double} {@link double}
    */
   slow_mode_delay_expires_in: double;
+
+  /**
+   * True, if paid messages can be enabled in the supergroup chat; for supergroup only
+   * @type {Bool} {@link Bool}
+   */
+  can_enable_paid_messages: Bool;
 
   /**
    * True, if paid reaction can be enabled in the channel chat; for channels only
@@ -17775,6 +18167,12 @@ export type supergroupFullInfo$Input = {
    * @type {double} {@link double}
    */
   readonly slow_mode_delay_expires_in?: double;
+
+  /**
+   * True, if paid messages can be enabled in the supergroup chat; for supergroup only
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_enable_paid_messages?: Bool$Input;
 
   /**
    * True, if paid reaction can be enabled in the channel chat; for channels only
@@ -18718,6 +19116,66 @@ export type reactionTypePaid$Input = {
 };
 
 /**
+ * A paid reaction on behalf of the current user
+ */
+export type paidReactionTypeRegular = {
+  _: "paidReactionTypeRegular";
+};
+
+/**
+ * Version of {@link paidReactionTypeRegular} for method parameters.
+ *
+ * A paid reaction on behalf of the current user
+ */
+export type paidReactionTypeRegular$Input = {
+  readonly _: "paidReactionTypeRegular";
+};
+
+/**
+ * An anonymous paid reaction
+ */
+export type paidReactionTypeAnonymous = {
+  _: "paidReactionTypeAnonymous";
+};
+
+/**
+ * Version of {@link paidReactionTypeAnonymous} for method parameters.
+ *
+ * An anonymous paid reaction
+ */
+export type paidReactionTypeAnonymous$Input = {
+  readonly _: "paidReactionTypeAnonymous";
+};
+
+/**
+ * A paid reaction on behalf of an owned chat
+ */
+export type paidReactionTypeChat = {
+  _: "paidReactionTypeChat";
+
+  /**
+   * Identifier of the chat
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+};
+
+/**
+ * Version of {@link paidReactionTypeChat} for method parameters.
+ *
+ * A paid reaction on behalf of an owned chat
+ */
+export type paidReactionTypeChat$Input = {
+  readonly _: "paidReactionTypeChat";
+
+  /**
+   * Identifier of the chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
  * Contains information about a user that added paid reactions
  */
 export type paidReactor = {
@@ -19438,6 +19896,12 @@ export type messageSendingStateFailed = {
   need_drop_reply: Bool;
 
   /**
+   * The number of Telegram Stars that must be paid to send the message; 0 if the current amount is correct
+   * @type {int53} {@link int53}
+   */
+  required_paid_message_star_count: int53;
+
+  /**
    * Time left before the message can be re-sent, in seconds. No update is sent when this field changes
    * @type {double} {@link double}
    */
@@ -19481,6 +19945,12 @@ export type messageSendingStateFailed$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly need_drop_reply?: Bool$Input;
+
+  /**
+   * The number of Telegram Stars that must be paid to send the message; 0 if the current amount is correct
+   * @type {int53} {@link int53}
+   */
+  readonly required_paid_message_star_count?: int53;
 
   /**
    * Time left before the message can be re-sent, in seconds. No update is sent when this field changes
@@ -20074,6 +20544,12 @@ export type message = {
   sender_boost_count: int32;
 
   /**
+   * The number of Telegram Stars the sender paid to send the message
+   * @type {int53} {@link int53}
+   */
+  paid_message_star_count: int53;
+
+  /**
    * For channel posts and anonymous group messages, optional author signature
    * @type {string} {@link string}
    */
@@ -20297,6 +20773,12 @@ export type message$Input = {
    * @type {int32} {@link int32}
    */
   readonly sender_boost_count?: int32;
+
+  /**
+   * The number of Telegram Stars the sender paid to send the message
+   * @type {int53} {@link int53}
+   */
+  readonly paid_message_star_count?: int53;
 
   /**
    * For channel posts and anonymous group messages, optional author signature
@@ -23910,6 +24392,82 @@ export type publicChatTypeIsLocationBased$Input = {
 };
 
 /**
+ * Contains basic information about another user that started a chat with the current user
+ */
+export type accountInfo = {
+  _: "accountInfo";
+
+  /**
+   * Month when the user was registered in Telegram; 0-12; may be 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  registration_month: int32;
+
+  /**
+   * Year when the user was registered in Telegram; 0-9999; may be 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  registration_year: int32;
+
+  /**
+   * A two-letter ISO 3166-1 alpha-2 country code based on the phone number of the user; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  phone_number_country_code: string;
+
+  /**
+   * Point in time (Unix timestamp) when the user changed name last time; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  last_name_change_date: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the user changed photo last time; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  last_photo_change_date: int32;
+};
+
+/**
+ * Version of {@link accountInfo} for method parameters.
+ *
+ * Contains basic information about another user that started a chat with the current user
+ */
+export type accountInfo$Input = {
+  readonly _: "accountInfo";
+
+  /**
+   * Month when the user was registered in Telegram; 0-12; may be 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly registration_month?: int32;
+
+  /**
+   * Year when the user was registered in Telegram; 0-9999; may be 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly registration_year?: int32;
+
+  /**
+   * A two-letter ISO 3166-1 alpha-2 country code based on the phone number of the user; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  readonly phone_number_country_code?: string;
+
+  /**
+   * Point in time (Unix timestamp) when the user changed name last time; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly last_name_change_date?: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the user changed photo last time; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly last_photo_change_date?: int32;
+};
+
+/**
  * The chat can be reported as spam using the method reportChat with an empty option_id and message_ids. If the chat is a private chat with a user with an emoji status, then a notice about emoji status usage must be shown
  */
 export type chatActionBarReportSpam = {
@@ -23966,6 +24524,12 @@ export type chatActionBarReportAddBlock = {
    * @type {Bool} {@link Bool}
    */
   can_unarchive: Bool;
+
+  /**
+   * Basic information about the other user in the chat; may be null if unknown
+   * @type {accountInfo} {@link accountInfo}
+   */
+  account_info: accountInfo | null;
 };
 
 /**
@@ -23983,6 +24547,12 @@ export type chatActionBarReportAddBlock$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly can_unarchive?: Bool$Input;
+
+  /**
+   * Basic information about the other user in the chat; may be null if unknown
+   * @type {accountInfo} {@link accountInfo}
+   */
+  readonly account_info?: accountInfo$Input | null;
 };
 
 /**
@@ -29852,6 +30422,18 @@ export type linkPreviewTypeVideo = {
    * @type {video} {@link video}
    */
   video: video;
+
+  /**
+   * Cover of the video; may be null if none
+   * @type {photo} {@link photo}
+   */
+  cover: photo | null;
+
+  /**
+   * Timestamp from which the video playing must start, in seconds
+   * @type {int32} {@link int32}
+   */
+  start_timestamp: int32;
 };
 
 /**
@@ -29867,6 +30449,18 @@ export type linkPreviewTypeVideo$Input = {
    * @type {video} {@link video}
    */
   readonly video?: video$Input;
+
+  /**
+   * Cover of the video; may be null if none
+   * @type {photo} {@link photo}
+   */
+  readonly cover?: photo$Input | null;
+
+  /**
+   * Timestamp from which the video playing must start, in seconds
+   * @type {int32} {@link int32}
+   */
+  readonly start_timestamp?: int32;
 };
 
 /**
@@ -39280,13 +39874,19 @@ export type messageSendOptions = {
   allow_paid_broadcast: Bool;
 
   /**
+   * The number of Telegram Stars the user agreed to pay to send the messages
+   * @type {int53} {@link int53}
+   */
+  paid_message_star_count: int53;
+
+  /**
    * Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum
    * @type {Bool} {@link Bool}
    */
   update_order_of_installed_sticker_sets: Bool;
 
   /**
-   * Message scheduling state; pass null to send message immediately. Messages sent to a secret chat, live location messages and self-destructing messages can't be scheduled
+   * Message scheduling state; pass null to send message immediately. Messages sent to a secret chat, to a chat with paid messages, live location messages and self-destructing messages can't be scheduled
    * @type {MessageSchedulingState} {@link MessageSchedulingState}
    */
   scheduling_state: MessageSchedulingState | null;
@@ -39343,13 +39943,19 @@ export type messageSendOptions$Input = {
   readonly allow_paid_broadcast?: Bool$Input;
 
   /**
+   * The number of Telegram Stars the user agreed to pay to send the messages
+   * @type {int53} {@link int53}
+   */
+  readonly paid_message_star_count?: int53;
+
+  /**
    * Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum
    * @type {Bool} {@link Bool}
    */
   readonly update_order_of_installed_sticker_sets?: Bool$Input;
 
   /**
-   * Message scheduling state; pass null to send message immediately. Messages sent to a secret chat, live location messages and self-destructing messages can't be scheduled
+   * Message scheduling state; pass null to send message immediately. Messages sent to a secret chat, to a chat with paid messages, live location messages and self-destructing messages can't be scheduled
    * @type {MessageSchedulingState} {@link MessageSchedulingState}
    */
   readonly scheduling_state?: MessageSchedulingState$Input | null;
@@ -47370,6 +47976,12 @@ export type groupCall = {
   id: int32;
 
   /**
+   * Identifier of one-to-one call from which the group call was created; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  from_call_id: int32;
+
+  /**
    * Group call title
    * @type {string} {@link string}
    */
@@ -47503,6 +48115,12 @@ export type groupCall$Input = {
    * @type {int32} {@link int32}
    */
   readonly id?: int32;
+
+  /**
+   * Identifier of one-to-one call from which the group call was created; 0 if unknown
+   * @type {int32} {@link int32}
+   */
+  readonly from_call_id?: int32;
 
   /**
    * Group call title
@@ -56234,13 +56852,77 @@ export type storePaymentPurposePremiumSubscription$Input = {
 };
 
 /**
- * The user creating Telegram Premium gift codes for other users
+ * The user gifting Telegram Premium to another user
+ */
+export type storePaymentPurposePremiumGift = {
+  _: "storePaymentPurposePremiumGift";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * Identifiers of the user which will receive Telegram Premium
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Text to show along with the gift codes; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+};
+
+/**
+ * Version of {@link storePaymentPurposePremiumGift} for method parameters.
+ *
+ * The user gifting Telegram Premium to another user
+ */
+export type storePaymentPurposePremiumGift$Input = {
+  readonly _: "storePaymentPurposePremiumGift";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * Identifiers of the user which will receive Telegram Premium
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Text to show along with the gift codes; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+};
+
+/**
+ * The user boosting a chat by creating Telegram Premium gift codes for other users
  */
 export type storePaymentPurposePremiumGiftCodes = {
   _: "storePaymentPurposePremiumGiftCodes";
 
   /**
-   * Identifier of the supergroup or channel chat, which will be automatically boosted by the users for duration of the Premium subscription and which is administered by the user; 0 if none
+   * Identifier of the supergroup or channel chat, which will be automatically boosted by the users for duration of the Premium subscription and which is administered by the user
    * @type {int53} {@link int53}
    */
   boosted_chat_id: int53;
@@ -56273,13 +56955,13 @@ export type storePaymentPurposePremiumGiftCodes = {
 /**
  * Version of {@link storePaymentPurposePremiumGiftCodes} for method parameters.
  *
- * The user creating Telegram Premium gift codes for other users
+ * The user boosting a chat by creating Telegram Premium gift codes for other users
  */
 export type storePaymentPurposePremiumGiftCodes$Input = {
   readonly _: "storePaymentPurposePremiumGiftCodes";
 
   /**
-   * Identifier of the supergroup or channel chat, which will be automatically boosted by the users for duration of the Premium subscription and which is administered by the user; 0 if none
+   * Identifier of the supergroup or channel chat, which will be automatically boosted by the users for duration of the Premium subscription and which is administered by the user
    * @type {int53} {@link int53}
    */
   readonly boosted_chat_id?: int53;
@@ -56554,13 +57236,89 @@ export type storePaymentPurposeGiftedStars$Input = {
 };
 
 /**
- * The user creating Telegram Premium gift codes for other users
+ * The user gifting Telegram Premium to another user
+ */
+export type telegramPaymentPurposePremiumGift = {
+  _: "telegramPaymentPurposePremiumGift";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  amount: int53;
+
+  /**
+   * Identifier of the user which will receive Telegram Premium
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Number of months the Telegram Premium subscription will be active for the user
+   * @type {int32} {@link int32}
+   */
+  month_count: int32;
+
+  /**
+   * Text to show to the user receiving Telegram Premium; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText} {@link formattedText}
+   */
+  text: formattedText;
+};
+
+/**
+ * Version of {@link telegramPaymentPurposePremiumGift} for method parameters.
+ *
+ * The user gifting Telegram Premium to another user
+ */
+export type telegramPaymentPurposePremiumGift$Input = {
+  readonly _: "telegramPaymentPurposePremiumGift";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * Paid amount, in the smallest units of the currency
+   * @type {int53} {@link int53}
+   */
+  readonly amount?: int53;
+
+  /**
+   * Identifier of the user which will receive Telegram Premium
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Number of months the Telegram Premium subscription will be active for the user
+   * @type {int32} {@link int32}
+   */
+  readonly month_count?: int32;
+
+  /**
+   * Text to show to the user receiving Telegram Premium; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+};
+
+/**
+ * The user boosting a chat by creating Telegram Premium gift codes for other users
  */
 export type telegramPaymentPurposePremiumGiftCodes = {
   _: "telegramPaymentPurposePremiumGiftCodes";
 
   /**
-   * Identifier of the supergroup or channel chat, which will be automatically boosted by the users for duration of the Premium subscription and which is administered by the user; 0 if none
+   * Identifier of the supergroup or channel chat, which will be automatically boosted by the users for duration of the Premium subscription and which is administered by the user
    * @type {int53} {@link int53}
    */
   boosted_chat_id: int53;
@@ -56599,13 +57357,13 @@ export type telegramPaymentPurposePremiumGiftCodes = {
 /**
  * Version of {@link telegramPaymentPurposePremiumGiftCodes} for method parameters.
  *
- * The user creating Telegram Premium gift codes for other users
+ * The user boosting a chat by creating Telegram Premium gift codes for other users
  */
 export type telegramPaymentPurposePremiumGiftCodes$Input = {
   readonly _: "telegramPaymentPurposePremiumGiftCodes";
 
   /**
-   * Identifier of the supergroup or channel chat, which will be automatically boosted by the users for duration of the Premium subscription and which is administered by the user; 0 if none
+   * Identifier of the supergroup or channel chat, which will be automatically boosted by the users for duration of the Premium subscription and which is administered by the user
    * @type {int53} {@link int53}
    */
   readonly boosted_chat_id?: int53;
@@ -59148,6 +59906,12 @@ export type pushMessageContentStory = {
   _: "pushMessageContentStory";
 
   /**
+   * True, if the user was mentioned in the story
+   * @type {Bool} {@link Bool}
+   */
+  is_mention: Bool;
+
+  /**
    * True, if the message is a pinned message with the specified content
    * @type {Bool} {@link Bool}
    */
@@ -59161,6 +59925,12 @@ export type pushMessageContentStory = {
  */
 export type pushMessageContentStory$Input = {
   readonly _: "pushMessageContentStory";
+
+  /**
+   * True, if the user was mentioned in the story
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_mention?: Bool$Input;
 
   /**
    * True, if the message is a pinned message with the specified content
@@ -59367,6 +60137,66 @@ export type pushMessageContentBasicGroupChatCreate = {
  */
 export type pushMessageContentBasicGroupChatCreate$Input = {
   readonly _: "pushMessageContentBasicGroupChatCreate";
+};
+
+/**
+ * A video chat or live stream was started
+ */
+export type pushMessageContentVideoChatStarted = {
+  _: "pushMessageContentVideoChatStarted";
+};
+
+/**
+ * Version of {@link pushMessageContentVideoChatStarted} for method parameters.
+ *
+ * A video chat or live stream was started
+ */
+export type pushMessageContentVideoChatStarted$Input = {
+  readonly _: "pushMessageContentVideoChatStarted";
+};
+
+/**
+ * A video chat or live stream has ended
+ */
+export type pushMessageContentVideoChatEnded = {
+  _: "pushMessageContentVideoChatEnded";
+};
+
+/**
+ * Version of {@link pushMessageContentVideoChatEnded} for method parameters.
+ *
+ * A video chat or live stream has ended
+ */
+export type pushMessageContentVideoChatEnded$Input = {
+  readonly _: "pushMessageContentVideoChatEnded";
+};
+
+/**
+ * An invitation of participants to a video chat or live stream
+ */
+export type pushMessageContentInviteVideoChatParticipants = {
+  _: "pushMessageContentInviteVideoChatParticipants";
+
+  /**
+   * True, if the current user was invited to the video chat or the live stream
+   * @type {Bool} {@link Bool}
+   */
+  is_current_user: Bool;
+};
+
+/**
+ * Version of {@link pushMessageContentInviteVideoChatParticipants} for method parameters.
+ *
+ * An invitation of participants to a video chat or live stream
+ */
+export type pushMessageContentInviteVideoChatParticipants$Input = {
+  readonly _: "pushMessageContentInviteVideoChatParticipants";
+
+  /**
+   * True, if the current user was invited to the video chat or the live stream
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_current_user?: Bool$Input;
 };
 
 /**
@@ -59647,6 +60477,34 @@ export type pushMessageContentSuggestProfilePhoto = {
  */
 export type pushMessageContentSuggestProfilePhoto$Input = {
   readonly _: "pushMessageContentSuggestProfilePhoto";
+};
+
+/**
+ * A user in the chat came within proximity alert range from the current user
+ */
+export type pushMessageContentProximityAlertTriggered = {
+  _: "pushMessageContentProximityAlertTriggered";
+
+  /**
+   * The distance to the user
+   * @type {int32} {@link int32}
+   */
+  distance: int32;
+};
+
+/**
+ * Version of {@link pushMessageContentProximityAlertTriggered} for method parameters.
+ *
+ * A user in the chat came within proximity alert range from the current user
+ */
+export type pushMessageContentProximityAlertTriggered$Input = {
+  readonly _: "pushMessageContentProximityAlertTriggered";
+
+  /**
+   * The distance to the user
+   * @type {int32} {@link int32}
+   */
+  readonly distance?: int32;
 };
 
 /**
@@ -61074,6 +61932,22 @@ export type userPrivacySettingAutosaveGifts$Input = {
 };
 
 /**
+ * A privacy setting for managing whether the user can receive messages without additional payment
+ */
+export type userPrivacySettingAllowUnpaidMessages = {
+  _: "userPrivacySettingAllowUnpaidMessages";
+};
+
+/**
+ * Version of {@link userPrivacySettingAllowUnpaidMessages} for method parameters.
+ *
+ * A privacy setting for managing whether the user can receive messages without additional payment
+ */
+export type userPrivacySettingAllowUnpaidMessages$Input = {
+  readonly _: "userPrivacySettingAllowUnpaidMessages";
+};
+
+/**
  * Contains privacy settings for message read date in private chats. Read dates are always shown to the users that can see online status of the current user regardless of this setting
  */
 export type readDatePrivacySettings = {
@@ -61102,7 +61976,7 @@ export type readDatePrivacySettings$Input = {
 };
 
 /**
- * Contains privacy settings for new chats with non-contacts
+ * Contains privacy settings for chats with non-contacts
  */
 export type newChatPrivacySettings = {
   _: "newChatPrivacySettings";
@@ -61112,12 +61986,20 @@ export type newChatPrivacySettings = {
    * @type {Bool} {@link Bool}
    */
   allow_new_chats_from_unknown_users: Bool;
+
+  /**
+   * Number of Telegram Stars that must be paid for every incoming private message by non-contacts; 0-getOption("paid_message_star_count_max").
+   *
+   * - If positive, then allow_new_chats_from_unknown_users must be true. The current user will receive getOption("paid_message_earnings_per_mille") Telegram Stars for each 1000 Telegram Stars paid for message sending
+   * @type {int53} {@link int53}
+   */
+  incoming_paid_message_star_count: int53;
 };
 
 /**
  * Version of {@link newChatPrivacySettings} for method parameters.
  *
- * Contains privacy settings for new chats with non-contacts
+ * Contains privacy settings for chats with non-contacts
  */
 export type newChatPrivacySettings$Input = {
   readonly _: "newChatPrivacySettings";
@@ -61127,6 +62009,14 @@ export type newChatPrivacySettings$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly allow_new_chats_from_unknown_users?: Bool$Input;
+
+  /**
+   * Number of Telegram Stars that must be paid for every incoming private message by non-contacts; 0-getOption("paid_message_star_count_max").
+   *
+   * - If positive, then allow_new_chats_from_unknown_users must be true. The current user will receive getOption("paid_message_earnings_per_mille") Telegram Stars for each 1000 Telegram Stars paid for message sending
+   * @type {int53} {@link int53}
+   */
+  readonly incoming_paid_message_star_count?: int53;
 };
 
 /**
@@ -61143,6 +62033,34 @@ export type canSendMessageToUserResultOk = {
  */
 export type canSendMessageToUserResultOk$Input = {
   readonly _: "canSendMessageToUserResultOk";
+};
+
+/**
+ * The user can be messaged, but the messages are paid
+ */
+export type canSendMessageToUserResultUserHasPaidMessages = {
+  _: "canSendMessageToUserResultUserHasPaidMessages";
+
+  /**
+   * Number of Telegram Stars that must be paid by the current user for each sent message to the user
+   * @type {int53} {@link int53}
+   */
+  outgoing_paid_message_star_count: int53;
+};
+
+/**
+ * Version of {@link canSendMessageToUserResultUserHasPaidMessages} for method parameters.
+ *
+ * The user can be messaged, but the messages are paid
+ */
+export type canSendMessageToUserResultUserHasPaidMessages$Input = {
+  readonly _: "canSendMessageToUserResultUserHasPaidMessages";
+
+  /**
+   * Number of Telegram Stars that must be paid by the current user for each sent message to the user
+   * @type {int53} {@link int53}
+   */
+  readonly outgoing_paid_message_star_count?: int53;
 };
 
 /**
@@ -63414,7 +64332,7 @@ export type internalLinkTypePremiumFeatures$Input = {
 };
 
 /**
- * The link is a link to the screen for gifting Telegram Premium subscriptions to friends via inputInvoiceTelegram with telegramPaymentPurposePremiumGiftCodes payments or in-store purchases
+ * The link is a link to the screen for gifting Telegram Premium subscriptions to friends via inputInvoiceTelegram with telegramPaymentPurposePremiumGift payments or in-store purchases
  */
 export type internalLinkTypePremiumGift = {
   _: "internalLinkTypePremiumGift";
@@ -63429,7 +64347,7 @@ export type internalLinkTypePremiumGift = {
 /**
  * Version of {@link internalLinkTypePremiumGift} for method parameters.
  *
- * The link is a link to the screen for gifting Telegram Premium subscriptions to friends via inputInvoiceTelegram with telegramPaymentPurposePremiumGiftCodes payments or in-store purchases
+ * The link is a link to the screen for gifting Telegram Premium subscriptions to friends via inputInvoiceTelegram with telegramPaymentPurposePremiumGift payments or in-store purchases
  */
 export type internalLinkTypePremiumGift$Input = {
   readonly _: "internalLinkTypePremiumGift";
@@ -63994,11 +64912,13 @@ export type internalLinkTypeVideoChat$Input = {
 };
 
 /**
- * The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot, then call searchWebApp with the received bot and the given web_app_short_name.
+ * The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot. If the bot is restricted for the current user, then show an error message.
  *
- * - Process received foundWebApp by showing a confirmation dialog if needed. If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being third-party applications
+ * - Otherwise, call searchWebApp with the received bot and the given web_app_short_name. Process received foundWebApp by showing a confirmation dialog if needed.
  *
- * - instead of the dialog and ask the user to accept their Terms of service. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
+ * - If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being third-party applications instead of the dialog
+ *
+ * - and ask the user to accept their Terms of service. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
  *
  * - Then, call getWebAppLinkUrl and open the returned URL as a Web App
  */
@@ -64033,11 +64953,13 @@ export type internalLinkTypeWebApp = {
 /**
  * Version of {@link internalLinkTypeWebApp} for method parameters.
  *
- * The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot, then call searchWebApp with the received bot and the given web_app_short_name.
+ * The link is a link to a Web App. Call searchPublicChat with the given bot username, check that the user is a bot. If the bot is restricted for the current user, then show an error message.
  *
- * - Process received foundWebApp by showing a confirmation dialog if needed. If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being third-party applications
+ * - Otherwise, call searchWebApp with the received bot and the given web_app_short_name. Process received foundWebApp by showing a confirmation dialog if needed.
  *
- * - instead of the dialog and ask the user to accept their Terms of service. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
+ * - If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being third-party applications instead of the dialog
+ *
+ * - and ask the user to accept their Terms of service. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
  *
  * - Then, call getWebAppLinkUrl and open the returned URL as a Web App
  */
@@ -66463,6 +67385,34 @@ export type fileDownloadedPrefixSize$Input = {
    * @type {int53} {@link int53}
    */
   readonly size?: int53;
+};
+
+/**
+ * Contains a number of Telegram Stars
+ */
+export type starCount = {
+  _: "starCount";
+
+  /**
+   * Number of Telegram Stars
+   * @type {int53} {@link int53}
+   */
+  star_count: int53;
+};
+
+/**
+ * Version of {@link starCount} for method parameters.
+ *
+ * Contains a number of Telegram Stars
+ */
+export type starCount$Input = {
+  readonly _: "starCount";
+
+  /**
+   * Number of Telegram Stars
+   * @type {int53} {@link int53}
+   */
+  readonly star_count?: int53;
 };
 
 /**
@@ -72314,6 +73264,62 @@ export type updateApplicationVerificationRequired$Input = {
 };
 
 /**
+ * A request can't be completed unless reCAPTCHA verification is performed; for official mobile applications only.
+ *
+ * - The method setApplicationVerificationToken must be called once the verification is completed or failed
+ */
+export type updateApplicationRecaptchaVerificationRequired = {
+  _: "updateApplicationRecaptchaVerificationRequired";
+
+  /**
+   * Unique identifier for the verification process
+   * @type {int53} {@link int53}
+   */
+  verification_id: int53;
+
+  /**
+   * The action for the check
+   * @type {string} {@link string}
+   */
+  action: string;
+
+  /**
+   * Identifier of the reCAPTCHA key
+   * @type {string} {@link string}
+   */
+  recaptcha_key_id: string;
+};
+
+/**
+ * Version of {@link updateApplicationRecaptchaVerificationRequired} for method parameters.
+ *
+ * A request can't be completed unless reCAPTCHA verification is performed; for official mobile applications only.
+ *
+ * - The method setApplicationVerificationToken must be called once the verification is completed or failed
+ */
+export type updateApplicationRecaptchaVerificationRequired$Input = {
+  readonly _: "updateApplicationRecaptchaVerificationRequired";
+
+  /**
+   * Unique identifier for the verification process
+   * @type {int53} {@link int53}
+   */
+  readonly verification_id?: int53;
+
+  /**
+   * The action for the check
+   * @type {string} {@link string}
+   */
+  readonly action?: string;
+
+  /**
+   * Identifier of the reCAPTCHA key
+   * @type {string} {@link string}
+   */
+  readonly recaptcha_key_id?: string;
+};
+
+/**
  * New call was created or information about a call was updated
  */
 export type updateCall = {
@@ -73619,6 +74625,34 @@ export type updateDefaultReactionType$Input = {
    * @type {ReactionType} {@link ReactionType}
    */
   readonly reaction_type?: ReactionType$Input;
+};
+
+/**
+ * The type of default paid reaction has changed
+ */
+export type updateDefaultPaidReactionType = {
+  _: "updateDefaultPaidReactionType";
+
+  /**
+   * The new type of the default paid reaction
+   * @type {PaidReactionType} {@link PaidReactionType}
+   */
+  type: PaidReactionType;
+};
+
+/**
+ * Version of {@link updateDefaultPaidReactionType} for method parameters.
+ *
+ * The type of default paid reaction has changed
+ */
+export type updateDefaultPaidReactionType$Input = {
+  readonly _: "updateDefaultPaidReactionType";
+
+  /**
+   * The new type of the default paid reaction
+   * @type {PaidReactionType} {@link PaidReactionType}
+   */
+  readonly type?: PaidReactionType$Input;
 };
 
 /**
@@ -77553,30 +78587,56 @@ export type PremiumStatePaymentOption$Input = premiumStatePaymentOption$Input;
 
 /**
  * Any of:
- * - {@link premiumGiftCodePaymentOption}
+ * - {@link premiumGiftPaymentOption}
  */
-export type PremiumGiftCodePaymentOption = premiumGiftCodePaymentOption;
+export type PremiumGiftPaymentOption = premiumGiftPaymentOption;
 
 /**
- * Version of {@link PremiumGiftCodePaymentOption} for method parameters.
+ * Version of {@link PremiumGiftPaymentOption} for method parameters.
  * Any of:
- * - {@link premiumGiftCodePaymentOption$Input}
+ * - {@link premiumGiftPaymentOption$Input}
  */
-export type PremiumGiftCodePaymentOption$Input = premiumGiftCodePaymentOption$Input;
+export type PremiumGiftPaymentOption$Input = premiumGiftPaymentOption$Input;
 
 /**
  * Any of:
- * - {@link premiumGiftCodePaymentOptions}
+ * - {@link premiumGiftPaymentOptions}
  */
-export type PremiumGiftCodePaymentOptions = premiumGiftCodePaymentOptions;
+export type PremiumGiftPaymentOptions = premiumGiftPaymentOptions;
 
 /**
- * Version of {@link PremiumGiftCodePaymentOptions} for method parameters.
+ * Version of {@link PremiumGiftPaymentOptions} for method parameters.
  * Any of:
- * - {@link premiumGiftCodePaymentOptions$Input}
+ * - {@link premiumGiftPaymentOptions$Input}
  */
-export type PremiumGiftCodePaymentOptions$Input =
-  premiumGiftCodePaymentOptions$Input;
+export type PremiumGiftPaymentOptions$Input = premiumGiftPaymentOptions$Input;
+
+/**
+ * Any of:
+ * - {@link premiumGiveawayPaymentOption}
+ */
+export type PremiumGiveawayPaymentOption = premiumGiveawayPaymentOption;
+
+/**
+ * Version of {@link PremiumGiveawayPaymentOption} for method parameters.
+ * Any of:
+ * - {@link premiumGiveawayPaymentOption$Input}
+ */
+export type PremiumGiveawayPaymentOption$Input = premiumGiveawayPaymentOption$Input;
+
+/**
+ * Any of:
+ * - {@link premiumGiveawayPaymentOptions}
+ */
+export type PremiumGiveawayPaymentOptions = premiumGiveawayPaymentOptions;
+
+/**
+ * Version of {@link PremiumGiveawayPaymentOptions} for method parameters.
+ * Any of:
+ * - {@link premiumGiveawayPaymentOptions$Input}
+ */
+export type PremiumGiveawayPaymentOptions$Input =
+  premiumGiveawayPaymentOptions$Input;
 
 /**
  * Any of:
@@ -77874,6 +78934,9 @@ export type StarTransactionDirection$Input =
  * - {@link starTransactionTypeChannelPaidReactionSend}
  * - {@link starTransactionTypeChannelPaidReactionReceive}
  * - {@link starTransactionTypeAffiliateProgramCommission}
+ * - {@link starTransactionTypePaidMessageSend}
+ * - {@link starTransactionTypePaidMessageReceive}
+ * - {@link starTransactionTypePremiumPurchase}
  * - {@link starTransactionTypeUnsupported}
  */
 export type StarTransactionType =
@@ -77903,6 +78966,9 @@ export type StarTransactionType =
   | starTransactionTypeChannelPaidReactionSend
   | starTransactionTypeChannelPaidReactionReceive
   | starTransactionTypeAffiliateProgramCommission
+  | starTransactionTypePaidMessageSend
+  | starTransactionTypePaidMessageReceive
+  | starTransactionTypePremiumPurchase
   | starTransactionTypeUnsupported;
 
 /**
@@ -77934,6 +79000,9 @@ export type StarTransactionType =
  * - {@link starTransactionTypeChannelPaidReactionSend$Input}
  * - {@link starTransactionTypeChannelPaidReactionReceive$Input}
  * - {@link starTransactionTypeAffiliateProgramCommission$Input}
+ * - {@link starTransactionTypePaidMessageSend$Input}
+ * - {@link starTransactionTypePaidMessageReceive$Input}
+ * - {@link starTransactionTypePremiumPurchase$Input}
  * - {@link starTransactionTypeUnsupported$Input}
  */
 export type StarTransactionType$Input =
@@ -77963,6 +79032,9 @@ export type StarTransactionType$Input =
   | starTransactionTypeChannelPaidReactionSend$Input
   | starTransactionTypeChannelPaidReactionReceive$Input
   | starTransactionTypeAffiliateProgramCommission$Input
+  | starTransactionTypePaidMessageSend$Input
+  | starTransactionTypePaidMessageReceive$Input
+  | starTransactionTypePremiumPurchase$Input
   | starTransactionTypeUnsupported$Input;
 
 /**
@@ -78828,6 +79900,29 @@ export type ReactionType$Input =
   | reactionTypeEmoji$Input
   | reactionTypeCustomEmoji$Input
   | reactionTypePaid$Input;
+
+/**
+ * Any of:
+ * - {@link paidReactionTypeRegular}
+ * - {@link paidReactionTypeAnonymous}
+ * - {@link paidReactionTypeChat}
+ */
+export type PaidReactionType =
+  | paidReactionTypeRegular
+  | paidReactionTypeAnonymous
+  | paidReactionTypeChat;
+
+/**
+ * Version of {@link PaidReactionType} for method parameters.
+ * Any of:
+ * - {@link paidReactionTypeRegular$Input}
+ * - {@link paidReactionTypeAnonymous$Input}
+ * - {@link paidReactionTypeChat$Input}
+ */
+export type PaidReactionType$Input =
+  | paidReactionTypeRegular$Input
+  | paidReactionTypeAnonymous$Input
+  | paidReactionTypeChat$Input;
 
 /**
  * Any of:
@@ -79840,6 +80935,19 @@ export type PublicChatType =
 export type PublicChatType$Input =
   | publicChatTypeHasUsername$Input
   | publicChatTypeIsLocationBased$Input;
+
+/**
+ * Any of:
+ * - {@link accountInfo}
+ */
+export type AccountInfo = accountInfo;
+
+/**
+ * Version of {@link AccountInfo} for method parameters.
+ * Any of:
+ * - {@link accountInfo$Input}
+ */
+export type AccountInfo$Input = accountInfo$Input;
 
 /**
  * Any of:
@@ -84960,6 +86068,7 @@ export type PremiumState$Input = premiumState$Input;
 /**
  * Any of:
  * - {@link storePaymentPurposePremiumSubscription}
+ * - {@link storePaymentPurposePremiumGift}
  * - {@link storePaymentPurposePremiumGiftCodes}
  * - {@link storePaymentPurposePremiumGiveaway}
  * - {@link storePaymentPurposeStarGiveaway}
@@ -84968,6 +86077,7 @@ export type PremiumState$Input = premiumState$Input;
  */
 export type StorePaymentPurpose =
   | storePaymentPurposePremiumSubscription
+  | storePaymentPurposePremiumGift
   | storePaymentPurposePremiumGiftCodes
   | storePaymentPurposePremiumGiveaway
   | storePaymentPurposeStarGiveaway
@@ -84978,6 +86088,7 @@ export type StorePaymentPurpose =
  * Version of {@link StorePaymentPurpose} for method parameters.
  * Any of:
  * - {@link storePaymentPurposePremiumSubscription$Input}
+ * - {@link storePaymentPurposePremiumGift$Input}
  * - {@link storePaymentPurposePremiumGiftCodes$Input}
  * - {@link storePaymentPurposePremiumGiveaway$Input}
  * - {@link storePaymentPurposeStarGiveaway$Input}
@@ -84986,6 +86097,7 @@ export type StorePaymentPurpose =
  */
 export type StorePaymentPurpose$Input =
   | storePaymentPurposePremiumSubscription$Input
+  | storePaymentPurposePremiumGift$Input
   | storePaymentPurposePremiumGiftCodes$Input
   | storePaymentPurposePremiumGiveaway$Input
   | storePaymentPurposeStarGiveaway$Input
@@ -84994,6 +86106,7 @@ export type StorePaymentPurpose$Input =
 
 /**
  * Any of:
+ * - {@link telegramPaymentPurposePremiumGift}
  * - {@link telegramPaymentPurposePremiumGiftCodes}
  * - {@link telegramPaymentPurposePremiumGiveaway}
  * - {@link telegramPaymentPurposeStars}
@@ -85002,6 +86115,7 @@ export type StorePaymentPurpose$Input =
  * - {@link telegramPaymentPurposeJoinChat}
  */
 export type TelegramPaymentPurpose =
+  | telegramPaymentPurposePremiumGift
   | telegramPaymentPurposePremiumGiftCodes
   | telegramPaymentPurposePremiumGiveaway
   | telegramPaymentPurposeStars
@@ -85012,6 +86126,7 @@ export type TelegramPaymentPurpose =
 /**
  * Version of {@link TelegramPaymentPurpose} for method parameters.
  * Any of:
+ * - {@link telegramPaymentPurposePremiumGift$Input}
  * - {@link telegramPaymentPurposePremiumGiftCodes$Input}
  * - {@link telegramPaymentPurposePremiumGiveaway$Input}
  * - {@link telegramPaymentPurposeStars$Input}
@@ -85020,6 +86135,7 @@ export type TelegramPaymentPurpose =
  * - {@link telegramPaymentPurposeJoinChat$Input}
  */
 export type TelegramPaymentPurpose$Input =
+  | telegramPaymentPurposePremiumGift$Input
   | telegramPaymentPurposePremiumGiftCodes$Input
   | telegramPaymentPurposePremiumGiveaway$Input
   | telegramPaymentPurposeStars$Input
@@ -85417,6 +86533,9 @@ export type MessageFileType$Input =
  * - {@link pushMessageContentVideoNote}
  * - {@link pushMessageContentVoiceNote}
  * - {@link pushMessageContentBasicGroupChatCreate}
+ * - {@link pushMessageContentVideoChatStarted}
+ * - {@link pushMessageContentVideoChatEnded}
+ * - {@link pushMessageContentInviteVideoChatParticipants}
  * - {@link pushMessageContentChatAddMembers}
  * - {@link pushMessageContentChatChangePhoto}
  * - {@link pushMessageContentChatChangeTitle}
@@ -85427,6 +86546,7 @@ export type MessageFileType$Input =
  * - {@link pushMessageContentChatJoinByRequest}
  * - {@link pushMessageContentRecurringPayment}
  * - {@link pushMessageContentSuggestProfilePhoto}
+ * - {@link pushMessageContentProximityAlertTriggered}
  * - {@link pushMessageContentMessageForwards}
  * - {@link pushMessageContentMediaAlbum}
  */
@@ -85456,6 +86576,9 @@ export type PushMessageContent =
   | pushMessageContentVideoNote
   | pushMessageContentVoiceNote
   | pushMessageContentBasicGroupChatCreate
+  | pushMessageContentVideoChatStarted
+  | pushMessageContentVideoChatEnded
+  | pushMessageContentInviteVideoChatParticipants
   | pushMessageContentChatAddMembers
   | pushMessageContentChatChangePhoto
   | pushMessageContentChatChangeTitle
@@ -85466,6 +86589,7 @@ export type PushMessageContent =
   | pushMessageContentChatJoinByRequest
   | pushMessageContentRecurringPayment
   | pushMessageContentSuggestProfilePhoto
+  | pushMessageContentProximityAlertTriggered
   | pushMessageContentMessageForwards
   | pushMessageContentMediaAlbum;
 
@@ -85497,6 +86621,9 @@ export type PushMessageContent =
  * - {@link pushMessageContentVideoNote$Input}
  * - {@link pushMessageContentVoiceNote$Input}
  * - {@link pushMessageContentBasicGroupChatCreate$Input}
+ * - {@link pushMessageContentVideoChatStarted$Input}
+ * - {@link pushMessageContentVideoChatEnded$Input}
+ * - {@link pushMessageContentInviteVideoChatParticipants$Input}
  * - {@link pushMessageContentChatAddMembers$Input}
  * - {@link pushMessageContentChatChangePhoto$Input}
  * - {@link pushMessageContentChatChangeTitle$Input}
@@ -85507,6 +86634,7 @@ export type PushMessageContent =
  * - {@link pushMessageContentChatJoinByRequest$Input}
  * - {@link pushMessageContentRecurringPayment$Input}
  * - {@link pushMessageContentSuggestProfilePhoto$Input}
+ * - {@link pushMessageContentProximityAlertTriggered$Input}
  * - {@link pushMessageContentMessageForwards$Input}
  * - {@link pushMessageContentMediaAlbum$Input}
  */
@@ -85536,6 +86664,9 @@ export type PushMessageContent$Input =
   | pushMessageContentVideoNote$Input
   | pushMessageContentVoiceNote$Input
   | pushMessageContentBasicGroupChatCreate$Input
+  | pushMessageContentVideoChatStarted$Input
+  | pushMessageContentVideoChatEnded$Input
+  | pushMessageContentInviteVideoChatParticipants$Input
   | pushMessageContentChatAddMembers$Input
   | pushMessageContentChatChangePhoto$Input
   | pushMessageContentChatChangeTitle$Input
@@ -85546,6 +86677,7 @@ export type PushMessageContent$Input =
   | pushMessageContentChatJoinByRequest$Input
   | pushMessageContentRecurringPayment$Input
   | pushMessageContentSuggestProfilePhoto$Input
+  | pushMessageContentProximityAlertTriggered$Input
   | pushMessageContentMessageForwards$Input
   | pushMessageContentMediaAlbum$Input;
 
@@ -85839,6 +86971,7 @@ export type UserPrivacySettingRules$Input = userPrivacySettingRules$Input;
  * - {@link userPrivacySettingAllowFindingByPhoneNumber}
  * - {@link userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages}
  * - {@link userPrivacySettingAutosaveGifts}
+ * - {@link userPrivacySettingAllowUnpaidMessages}
  */
 export type UserPrivacySetting =
   | userPrivacySettingShowStatus
@@ -85852,7 +86985,8 @@ export type UserPrivacySetting =
   | userPrivacySettingAllowPeerToPeerCalls
   | userPrivacySettingAllowFindingByPhoneNumber
   | userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages
-  | userPrivacySettingAutosaveGifts;
+  | userPrivacySettingAutosaveGifts
+  | userPrivacySettingAllowUnpaidMessages;
 
 /**
  * Version of {@link UserPrivacySetting} for method parameters.
@@ -85869,6 +87003,7 @@ export type UserPrivacySetting =
  * - {@link userPrivacySettingAllowFindingByPhoneNumber$Input}
  * - {@link userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages$Input}
  * - {@link userPrivacySettingAutosaveGifts$Input}
+ * - {@link userPrivacySettingAllowUnpaidMessages$Input}
  */
 export type UserPrivacySetting$Input =
   | userPrivacySettingShowStatus$Input
@@ -85882,7 +87017,8 @@ export type UserPrivacySetting$Input =
   | userPrivacySettingAllowPeerToPeerCalls$Input
   | userPrivacySettingAllowFindingByPhoneNumber$Input
   | userPrivacySettingAllowPrivateVoiceAndVideoNoteMessages$Input
-  | userPrivacySettingAutosaveGifts$Input;
+  | userPrivacySettingAutosaveGifts$Input
+  | userPrivacySettingAllowUnpaidMessages$Input;
 
 /**
  * Any of:
@@ -85913,11 +87049,13 @@ export type NewChatPrivacySettings$Input = newChatPrivacySettings$Input;
 /**
  * Any of:
  * - {@link canSendMessageToUserResultOk}
+ * - {@link canSendMessageToUserResultUserHasPaidMessages}
  * - {@link canSendMessageToUserResultUserIsDeleted}
  * - {@link canSendMessageToUserResultUserRestrictsNewChats}
  */
 export type CanSendMessageToUserResult =
   | canSendMessageToUserResultOk
+  | canSendMessageToUserResultUserHasPaidMessages
   | canSendMessageToUserResultUserIsDeleted
   | canSendMessageToUserResultUserRestrictsNewChats;
 
@@ -85925,11 +87063,13 @@ export type CanSendMessageToUserResult =
  * Version of {@link CanSendMessageToUserResult} for method parameters.
  * Any of:
  * - {@link canSendMessageToUserResultOk$Input}
+ * - {@link canSendMessageToUserResultUserHasPaidMessages$Input}
  * - {@link canSendMessageToUserResultUserIsDeleted$Input}
  * - {@link canSendMessageToUserResultUserRestrictsNewChats$Input}
  */
 export type CanSendMessageToUserResult$Input =
   | canSendMessageToUserResultOk$Input
+  | canSendMessageToUserResultUserHasPaidMessages$Input
   | canSendMessageToUserResultUserIsDeleted$Input
   | canSendMessageToUserResultUserRestrictsNewChats$Input;
 
@@ -87080,6 +88220,19 @@ export type FileDownloadedPrefixSize$Input = fileDownloadedPrefixSize$Input;
 
 /**
  * Any of:
+ * - {@link starCount}
+ */
+export type StarCount = starCount;
+
+/**
+ * Version of {@link StarCount} for method parameters.
+ * Any of:
+ * - {@link starCount$Input}
+ */
+export type StarCount$Input = starCount$Input;
+
+/**
+ * Any of:
  * - {@link deepLinkInfo}
  */
 export type DeepLinkInfo = deepLinkInfo;
@@ -87636,6 +88789,7 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateFileDownload}
  * - {@link updateFileRemovedFromDownloads}
  * - {@link updateApplicationVerificationRequired}
+ * - {@link updateApplicationRecaptchaVerificationRequired}
  * - {@link updateCall}
  * - {@link updateGroupCall}
  * - {@link updateGroupCallParticipant}
@@ -87671,6 +88825,7 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateActiveEmojiReactions}
  * - {@link updateAvailableMessageEffects}
  * - {@link updateDefaultReactionType}
+ * - {@link updateDefaultPaidReactionType}
  * - {@link updateSavedMessagesTags}
  * - {@link updateActiveLiveLocationMessages}
  * - {@link updateOwnedStarCount}
@@ -87789,6 +88944,7 @@ export type Update =
   | updateFileDownload
   | updateFileRemovedFromDownloads
   | updateApplicationVerificationRequired
+  | updateApplicationRecaptchaVerificationRequired
   | updateCall
   | updateGroupCall
   | updateGroupCallParticipant
@@ -87824,6 +88980,7 @@ export type Update =
   | updateActiveEmojiReactions
   | updateAvailableMessageEffects
   | updateDefaultReactionType
+  | updateDefaultPaidReactionType
   | updateSavedMessagesTags
   | updateActiveLiveLocationMessages
   | updateOwnedStarCount
@@ -87944,6 +89101,7 @@ export type Update =
  * - {@link updateFileDownload$Input}
  * - {@link updateFileRemovedFromDownloads$Input}
  * - {@link updateApplicationVerificationRequired$Input}
+ * - {@link updateApplicationRecaptchaVerificationRequired$Input}
  * - {@link updateCall$Input}
  * - {@link updateGroupCall$Input}
  * - {@link updateGroupCallParticipant$Input}
@@ -87979,6 +89137,7 @@ export type Update =
  * - {@link updateActiveEmojiReactions$Input}
  * - {@link updateAvailableMessageEffects$Input}
  * - {@link updateDefaultReactionType$Input}
+ * - {@link updateDefaultPaidReactionType$Input}
  * - {@link updateSavedMessagesTags$Input}
  * - {@link updateActiveLiveLocationMessages$Input}
  * - {@link updateOwnedStarCount$Input}
@@ -88097,6 +89256,7 @@ export type Update$Input =
   | updateFileDownload$Input
   | updateFileRemovedFromDownloads$Input
   | updateApplicationVerificationRequired$Input
+  | updateApplicationRecaptchaVerificationRequired$Input
   | updateCall$Input
   | updateGroupCall$Input
   | updateGroupCallParticipant$Input
@@ -88132,6 +89292,7 @@ export type Update$Input =
   | updateActiveEmojiReactions$Input
   | updateAvailableMessageEffects$Input
   | updateDefaultReactionType$Input
+  | updateDefaultPaidReactionType$Input
   | updateSavedMessagesTags$Input
   | updateActiveLiveLocationMessages$Input
   | updateOwnedStarCount$Input
@@ -88527,10 +89688,11 @@ export type $MethodsDict = {
   readonly clearRecentReactions: clearRecentReactions;
   readonly addMessageReaction: addMessageReaction;
   readonly removeMessageReaction: removeMessageReaction;
+  readonly getChatAvailablePaidMessageReactionSenders: getChatAvailablePaidMessageReactionSenders;
   readonly addPendingPaidMessageReaction: addPendingPaidMessageReaction;
   readonly commitPendingPaidMessageReactions: commitPendingPaidMessageReactions;
   readonly removePendingPaidMessageReactions: removePendingPaidMessageReactions;
-  readonly togglePaidMessageReactionIsAnonymous: togglePaidMessageReactionIsAnonymous;
+  readonly setPaidMessageReactionType: setPaidMessageReactionType;
   readonly setMessageReactions: setMessageReactions;
   readonly getMessageAddedReactions: getMessageAddedReactions;
   readonly setDefaultReactionType: setDefaultReactionType;
@@ -88970,6 +90132,7 @@ export type $MethodsDict = {
   readonly sendGift: sendGift;
   readonly sellGift: sellGift;
   readonly toggleGiftIsSaved: toggleGiftIsSaved;
+  readonly setPinnedGifts: setPinnedGifts;
   readonly toggleChatGiftNotifications: toggleChatGiftNotifications;
   readonly getGiftUpgradePreview: getGiftUpgradePreview;
   readonly upgradeGift: upgradeGift;
@@ -89007,6 +90170,9 @@ export type $MethodsDict = {
   readonly getReadDatePrivacySettings: getReadDatePrivacySettings;
   readonly setNewChatPrivacySettings: setNewChatPrivacySettings;
   readonly getNewChatPrivacySettings: getNewChatPrivacySettings;
+  readonly getPaidMessageRevenue: getPaidMessageRevenue;
+  readonly allowUnpaidMessagesFromUser: allowUnpaidMessagesFromUser;
+  readonly setChatPaidMessageStarCount: setChatPaidMessageStarCount;
   readonly canSendMessageToUser: canSendMessageToUser;
   readonly getOption: getOption;
   readonly setOption: setOption;
@@ -89081,7 +90247,8 @@ export type $MethodsDict = {
   readonly viewPremiumFeature: viewPremiumFeature;
   readonly clickPremiumSubscriptionButton: clickPremiumSubscriptionButton;
   readonly getPremiumState: getPremiumState;
-  readonly getPremiumGiftCodePaymentOptions: getPremiumGiftCodePaymentOptions;
+  readonly getPremiumGiftPaymentOptions: getPremiumGiftPaymentOptions;
+  readonly getPremiumGiveawayPaymentOptions: getPremiumGiveawayPaymentOptions;
   readonly checkPremiumGiftCode: checkPremiumGiftCode;
   readonly applyPremiumGiftCode: applyPremiumGiftCode;
   readonly launchPrepaidGiveaway: launchPrepaidGiveaway;
@@ -89204,7 +90371,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
+   * Returns the current authorization state. This is an offline method. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
    *
    * @param {getAuthorizationState$DirectInput} parameters {@link getAuthorizationState$Input}
    * @returns {Promise<AuthorizationState>} Promise<{@link AuthorizationState}>
@@ -89789,7 +90956,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a user by their identifier. This is an offline request if the current user is not a bot
+   * Returns information about a user by their identifier. This is an offline method if the current user is not a bot
    *
    * @param {getUser$DirectInput} parameters {@link getUser$Input}
    * @returns {Promise<User>} Promise<{@link User}>
@@ -89813,7 +90980,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
+   * Returns information about a basic group by its identifier. This is an offline method if the current user is not a bot
    *
    * @param {getBasicGroup$DirectInput} parameters {@link getBasicGroup$Input}
    * @returns {Promise<BasicGroup>} Promise<{@link BasicGroup}>
@@ -89837,7 +91004,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
+   * Returns information about a supergroup or a channel by its identifier. This is an offline method if the current user is not a bot
    *
    * @param {getSupergroup$DirectInput} parameters {@link getSupergroup$Input}
    * @returns {Promise<Supergroup>} Promise<{@link Supergroup}>
@@ -89861,7 +91028,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a secret chat by its identifier. This is an offline request
+   * Returns information about a secret chat by its identifier. This is an offline method
    *
    * @param {getSecretChat$DirectInput} parameters {@link getSecretChat$Input}
    * @returns {Promise<SecretChat>} Promise<{@link SecretChat}>
@@ -89872,7 +91039,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
+   * Returns information about a chat by its identifier. This is an offline method if the current user is not a bot
    *
    * @param {getChat$DirectInput} parameters {@link getChat$Input}
    * @returns {Promise<Chat>} Promise<{@link Chat}>
@@ -89894,7 +91061,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
+   * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline method
    *
    * @param {getMessageLocally$DirectInput} parameters {@link getMessageLocally$Input}
    * @returns {Promise<Message>} Promise<{@link Message}>
@@ -89963,7 +91130,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns properties of a message; this is an offline request
+   * Returns properties of a message. This is an offline method
    *
    * @param {getMessageProperties$DirectInput} parameters {@link getMessageProperties$Input}
    * @returns {Promise<MessageProperties>} Promise<{@link MessageProperties}>
@@ -90015,7 +91182,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a file; this is an offline request
+   * Returns information about a file. This is an offline method
    *
    * @param {getFile$DirectInput} parameters {@link getFile$Input}
    * @returns {Promise<File>} Promise<{@link File}>
@@ -90026,7 +91193,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
+   * Returns information about a file by its remote identifier. This is an offline method. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
    *
    * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
    *
@@ -90087,7 +91254,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
+   * Searches for the specified query in the title and username of already known chats. This is an offline method. Returns chats in the order seen in the main chat list
    *
    * @param {searchChats$DirectInput} parameters {@link searchChats$Input}
    * @returns {Promise<Chats>} Promise<{@link Chats}>
@@ -90222,7 +91389,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
+   * Searches for the specified query in the title and username of up to 50 recently found chats. This is an offline method
    *
    * @param {searchRecentlyFoundChats$DirectInput} parameters {@link searchRecentlyFoundChats$Input}
    * @returns {Promise<Chats>} Promise<{@link Chats}>
@@ -90274,7 +91441,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
+   * Returns recently opened chats. This is an offline method. Returns chats in the order of last opening
    *
    * @param {getRecentlyOpenedChats$DirectInput} parameters {@link getRecentlyOpenedChats$Input}
    * @returns {Promise<Chats>} Promise<{@link Chats}>
@@ -90500,7 +91667,7 @@ export class $AsyncApi {
   /**
    * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
    *
-   * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
+   * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline method if only_local is true
    *
    * @param {getChatHistory$DirectInput} parameters {@link getChatHistory$Input}
    * @returns {Promise<Messages>} Promise<{@link Messages}>
@@ -90916,7 +92083,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
+   * Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline method
    *
    * @param {getMessageLink$DirectInput} parameters {@link getMessageLink$Input}
    * @returns {Promise<MessageLink>} Promise<{@link MessageLink}>
@@ -91102,7 +92269,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+   * Sends messages from a quick reply shortcut. Requires Telegram Business subscription. Can't be used to send paid messages
    *
    * @param {sendQuickReplyShortcutMessages$DirectInput} parameters {@link sendQuickReplyShortcutMessages$Input}
    * @returns {Promise<Messages>} Promise<{@link Messages}>
@@ -91718,7 +92885,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns an HTTPS link to a topic in a forum chat. This is an offline request
+   * Returns an HTTPS link to a topic in a forum chat. This is an offline method
    *
    * @param {getForumTopicLink$DirectInput} parameters {@link getForumTopicLink$Input}
    * @returns {Promise<MessageLink>} Promise<{@link MessageLink}>
@@ -91908,6 +93075,22 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns the list of message sender identifiers, which can be used to send a paid reaction in a chat
+   *
+   * @param {getChatAvailablePaidMessageReactionSenders$DirectInput} parameters {@link getChatAvailablePaidMessageReactionSenders$Input}
+   * @returns {Promise<MessageSenders>} Promise<{@link MessageSenders}>
+   */
+  async getChatAvailablePaidMessageReactionSenders(
+    parameters: getChatAvailablePaidMessageReactionSenders$DirectInput
+  ): Promise<MessageSenders> {
+    const result = await this.client.invoke(
+      "getChatAvailablePaidMessageReactionSenders",
+      parameters
+    );
+    return result as MessageSenders;
+  }
+
+  /**
    * Adds the paid message reaction to a message. Use getMessageAvailableReactions to check whether the reaction is available for the message
    *
    * @param {addPendingPaidMessageReaction$DirectInput} parameters {@link addPendingPaidMessageReaction$Input}
@@ -91956,16 +93139,16 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes whether the paid message reaction of the user to a message is anonymous. The message must have paid reaction added by the user
+   * Changes type of paid message reaction of the current user on a message. The message must have paid reaction added by the current user
    *
-   * @param {togglePaidMessageReactionIsAnonymous$DirectInput} parameters {@link togglePaidMessageReactionIsAnonymous$Input}
+   * @param {setPaidMessageReactionType$DirectInput} parameters {@link setPaidMessageReactionType$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
-  async togglePaidMessageReactionIsAnonymous(
-    parameters: togglePaidMessageReactionIsAnonymous$DirectInput
+  async setPaidMessageReactionType(
+    parameters: setPaidMessageReactionType$DirectInput
   ): Promise<Ok> {
     const result = await this.client.invoke(
-      "togglePaidMessageReactionIsAnonymous",
+      "setPaidMessageReactionType",
       parameters
     );
     return result as Ok;
@@ -92408,7 +93591,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+   * Returns a default placeholder for Web Apps of a bot. This is an offline method. Returns a 404 error if the placeholder isn't known
    *
    * @param {getWebAppPlaceholder$DirectInput} parameters {@link getWebAppPlaceholder$Input}
    * @returns {Promise<Outline>} Promise<{@link Outline}>
@@ -92911,7 +94094,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns chat lists to which the chat can be added. This is an offline request
+   * Returns chat lists to which the chat can be added. This is an offline method
    *
    * @param {getChatListsToAddChat$DirectInput} parameters {@link getChatListsToAddChat$Input}
    * @returns {Promise<ChatLists>} Promise<{@link ChatLists}>
@@ -94234,7 +95417,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the list of features available on the specific chat boost level; this is an offline request
+   * Returns the list of features available on the specific chat boost level. This is an offline method
    *
    * @param {getChatBoostLevelFeatures$DirectInput} parameters {@link getChatBoostLevelFeatures$Input}
    * @returns {Promise<ChatBoostLevelFeatures>} Promise<{@link ChatBoostLevelFeatures}>
@@ -94247,7 +95430,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the list of features available for different chat boost levels; this is an offline request
+   * Returns the list of features available for different chat boost levels. This is an offline method
    *
    * @param {getChatBoostFeatures$DirectInput} parameters {@link getChatBoostFeatures$Input}
    * @returns {Promise<ChatBoostFeatures>} Promise<{@link ChatBoostFeatures}>
@@ -94728,7 +95911,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Application verification has been completed. Can be called before authorization
+   * Application or reCAPTCHA verification has been completed. Can be called before authorization
    *
    * @param {setApplicationVerificationToken$DirectInput} parameters {@link setApplicationVerificationToken$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -95715,7 +96898,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Suggests a profile photo to another regular user with common messages
+   * Suggests a profile photo to another regular user with common messages and allowing non-paid messages
    *
    * @param {suggestUserProfilePhoto$DirectInput} parameters {@link suggestUserProfilePhoto$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -95792,7 +96975,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+   * Returns outline of a sticker. This is an offline method. Returns a 404 error if the outline isn't known
    *
    * @param {getStickerOutline$DirectInput} parameters {@link getStickerOutline$Input}
    * @returns {Promise<Outline>} Promise<{@link Outline}>
@@ -96348,7 +97531,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
+   * Returns an instant view version of a web page if available. This is an offline method if only_local is true. Returns a 404 error if the web page has no instant view page
    *
    * @param {getWebPageInstantView$DirectInput} parameters {@link getWebPageInstantView$Input}
    * @returns {Promise<WebPageInstantView>} Promise<{@link WebPageInstantView}>
@@ -97753,13 +98936,24 @@ export class $AsyncApi {
   }
 
   /**
-   * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the chat
+   * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
    *
    * @param {toggleGiftIsSaved$DirectInput} parameters {@link toggleGiftIsSaved$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
    */
   async toggleGiftIsSaved(parameters: toggleGiftIsSaved$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("toggleGiftIsSaved", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes the list of pinned gifts on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
+   *
+   * @param {setPinnedGifts$DirectInput} parameters {@link setPinnedGifts$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setPinnedGifts(parameters: setPinnedGifts$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("setPinnedGifts", parameters);
     return result as Ok;
   }
 
@@ -97998,7 +99192,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
+   * Returns information about the current localization target. This is an offline method if only_local is true. Can be called before authorization
    *
    * @param {getLocalizationTargetInfo$DirectInput} parameters {@link getLocalizationTargetInfo$Input}
    * @returns {Promise<LocalizationTargetInfo>} Promise<{@link LocalizationTargetInfo}>
@@ -98265,6 +99459,51 @@ export class $AsyncApi {
   ): Promise<NewChatPrivacySettings> {
     const result = await this.client.invoke("getNewChatPrivacySettings", parameters);
     return result as NewChatPrivacySettings;
+  }
+
+  /**
+   * Returns the total number of Telegram Stars received by the current user for paid messages from the given user
+   *
+   * @param {getPaidMessageRevenue$DirectInput} parameters {@link getPaidMessageRevenue$Input}
+   * @returns {Promise<StarCount>} Promise<{@link StarCount}>
+   */
+  async getPaidMessageRevenue(
+    parameters: getPaidMessageRevenue$DirectInput
+  ): Promise<StarCount> {
+    const result = await this.client.invoke("getPaidMessageRevenue", parameters);
+    return result as StarCount;
+  }
+
+  /**
+   * Allows the specified user to send unpaid private messages to the current user by adding a rule to userPrivacySettingAllowUnpaidMessages
+   *
+   * @param {allowUnpaidMessagesFromUser$DirectInput} parameters {@link allowUnpaidMessagesFromUser$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async allowUnpaidMessagesFromUser(
+    parameters: allowUnpaidMessagesFromUser$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "allowUnpaidMessagesFromUser",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Changes the amount of Telegram Stars that must be paid to send a message to a supergroup chat; requires can_restrict_members administrator right and supergroupFullInfo.can_enable_paid_messages
+   *
+   * @param {setChatPaidMessageStarCount$DirectInput} parameters {@link setChatPaidMessageStarCount$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setChatPaidMessageStarCount(
+    parameters: setChatPaidMessageStarCount$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "setChatPaidMessageStarCount",
+      parameters
+    );
+    return result as Ok;
   }
 
   /**
@@ -99258,19 +100497,35 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
+   * Returns available options for gifting Telegram Premium to a user
    *
-   * @param {getPremiumGiftCodePaymentOptions$DirectInput} parameters {@link getPremiumGiftCodePaymentOptions$Input}
-   * @returns {Promise<PremiumGiftCodePaymentOptions>} Promise<{@link PremiumGiftCodePaymentOptions}>
+   * @param {getPremiumGiftPaymentOptions$DirectInput} parameters {@link getPremiumGiftPaymentOptions$Input}
+   * @returns {Promise<PremiumGiftPaymentOptions>} Promise<{@link PremiumGiftPaymentOptions}>
    */
-  async getPremiumGiftCodePaymentOptions(
-    parameters: getPremiumGiftCodePaymentOptions$DirectInput
-  ): Promise<PremiumGiftCodePaymentOptions> {
+  async getPremiumGiftPaymentOptions(
+    parameters: getPremiumGiftPaymentOptions$DirectInput
+  ): Promise<PremiumGiftPaymentOptions> {
     const result = await this.client.invoke(
-      "getPremiumGiftCodePaymentOptions",
+      "getPremiumGiftPaymentOptions",
       parameters
     );
-    return result as PremiumGiftCodePaymentOptions;
+    return result as PremiumGiftPaymentOptions;
+  }
+
+  /**
+   * Returns available options for creating of Telegram Premium giveaway or manual distribution of Telegram Premium among chat members
+   *
+   * @param {getPremiumGiveawayPaymentOptions$DirectInput} parameters {@link getPremiumGiveawayPaymentOptions$Input}
+   * @returns {Promise<PremiumGiveawayPaymentOptions>} Promise<{@link PremiumGiveawayPaymentOptions}>
+   */
+  async getPremiumGiveawayPaymentOptions(
+    parameters: getPremiumGiveawayPaymentOptions$DirectInput
+  ): Promise<PremiumGiveawayPaymentOptions> {
+    const result = await this.client.invoke(
+      "getPremiumGiveawayPaymentOptions",
+      parameters
+    );
+    return result as PremiumGiveawayPaymentOptions;
   }
 
   /**
@@ -100486,19 +101741,19 @@ Object.freeze($SyncApi);
 Object.freeze($SyncApi.prototype);
 
 /**
- * Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
+ * Returns the current authorization state. This is an offline method. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
  */
 export type getAuthorizationState$Input = {
   readonly _: "getAuthorizationState";
 };
 
 /**
- * Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
+ * Returns the current authorization state. This is an offline method. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
  */
 export type getAuthorizationState$DirectInput = {};
 
 /**
- * Returns the current authorization state; this is an offline request. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
+ * Returns the current authorization state. This is an offline method. For informational purposes only. Use updateAuthorizationState instead to maintain the current authorization state. Can be called before initialization
  *
  * @param {getAuthorizationState$Input} parameters {@link getAuthorizationState$Input}
  * @returns {AuthorizationState} {@link AuthorizationState}
@@ -102018,7 +103273,7 @@ export type getMe$DirectInput = {};
 export type getMe = (parameters: getMe$Input) => User;
 
 /**
- * Returns information about a user by their identifier. This is an offline request if the current user is not a bot
+ * Returns information about a user by their identifier. This is an offline method if the current user is not a bot
  */
 export type getUser$Input = {
   readonly _: "getUser";
@@ -102031,7 +103286,7 @@ export type getUser$Input = {
 };
 
 /**
- * Returns information about a user by their identifier. This is an offline request if the current user is not a bot
+ * Returns information about a user by their identifier. This is an offline method if the current user is not a bot
  */
 export type getUser$DirectInput = {
   /**
@@ -102042,7 +103297,7 @@ export type getUser$DirectInput = {
 };
 
 /**
- * Returns information about a user by their identifier. This is an offline request if the current user is not a bot
+ * Returns information about a user by their identifier. This is an offline method if the current user is not a bot
  *
  * @param {getUser$Input} parameters {@link getUser$Input}
  * @returns {User} {@link User}
@@ -102082,7 +103337,7 @@ export type getUserFullInfo$DirectInput = {
 export type getUserFullInfo = (parameters: getUserFullInfo$Input) => UserFullInfo;
 
 /**
- * Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
+ * Returns information about a basic group by its identifier. This is an offline method if the current user is not a bot
  */
 export type getBasicGroup$Input = {
   readonly _: "getBasicGroup";
@@ -102095,7 +103350,7 @@ export type getBasicGroup$Input = {
 };
 
 /**
- * Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
+ * Returns information about a basic group by its identifier. This is an offline method if the current user is not a bot
  */
 export type getBasicGroup$DirectInput = {
   /**
@@ -102106,7 +103361,7 @@ export type getBasicGroup$DirectInput = {
 };
 
 /**
- * Returns information about a basic group by its identifier. This is an offline request if the current user is not a bot
+ * Returns information about a basic group by its identifier. This is an offline method if the current user is not a bot
  *
  * @param {getBasicGroup$Input} parameters {@link getBasicGroup$Input}
  * @returns {BasicGroup} {@link BasicGroup}
@@ -102148,7 +103403,7 @@ export type getBasicGroupFullInfo = (
 ) => BasicGroupFullInfo;
 
 /**
- * Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
+ * Returns information about a supergroup or a channel by its identifier. This is an offline method if the current user is not a bot
  */
 export type getSupergroup$Input = {
   readonly _: "getSupergroup";
@@ -102161,7 +103416,7 @@ export type getSupergroup$Input = {
 };
 
 /**
- * Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
+ * Returns information about a supergroup or a channel by its identifier. This is an offline method if the current user is not a bot
  */
 export type getSupergroup$DirectInput = {
   /**
@@ -102172,7 +103427,7 @@ export type getSupergroup$DirectInput = {
 };
 
 /**
- * Returns information about a supergroup or a channel by its identifier. This is an offline request if the current user is not a bot
+ * Returns information about a supergroup or a channel by its identifier. This is an offline method if the current user is not a bot
  *
  * @param {getSupergroup$Input} parameters {@link getSupergroup$Input}
  * @returns {Supergroup} {@link Supergroup}
@@ -102214,7 +103469,7 @@ export type getSupergroupFullInfo = (
 ) => SupergroupFullInfo;
 
 /**
- * Returns information about a secret chat by its identifier. This is an offline request
+ * Returns information about a secret chat by its identifier. This is an offline method
  */
 export type getSecretChat$Input = {
   readonly _: "getSecretChat";
@@ -102227,7 +103482,7 @@ export type getSecretChat$Input = {
 };
 
 /**
- * Returns information about a secret chat by its identifier. This is an offline request
+ * Returns information about a secret chat by its identifier. This is an offline method
  */
 export type getSecretChat$DirectInput = {
   /**
@@ -102238,7 +103493,7 @@ export type getSecretChat$DirectInput = {
 };
 
 /**
- * Returns information about a secret chat by its identifier. This is an offline request
+ * Returns information about a secret chat by its identifier. This is an offline method
  *
  * @param {getSecretChat$Input} parameters {@link getSecretChat$Input}
  * @returns {SecretChat} {@link SecretChat}
@@ -102246,7 +103501,7 @@ export type getSecretChat$DirectInput = {
 export type getSecretChat = (parameters: getSecretChat$Input) => SecretChat;
 
 /**
- * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
+ * Returns information about a chat by its identifier. This is an offline method if the current user is not a bot
  */
 export type getChat$Input = {
   readonly _: "getChat";
@@ -102259,7 +103514,7 @@ export type getChat$Input = {
 };
 
 /**
- * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
+ * Returns information about a chat by its identifier. This is an offline method if the current user is not a bot
  */
 export type getChat$DirectInput = {
   /**
@@ -102270,7 +103525,7 @@ export type getChat$DirectInput = {
 };
 
 /**
- * Returns information about a chat by its identifier; this is an offline request if the current user is not a bot
+ * Returns information about a chat by its identifier. This is an offline method if the current user is not a bot
  *
  * @param {getChat$Input} parameters {@link getChat$Input}
  * @returns {Chat} {@link Chat}
@@ -102322,7 +103577,7 @@ export type getMessage$DirectInput = {
 export type getMessage = (parameters: getMessage$Input) => Message;
 
 /**
- * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
+ * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline method
  */
 export type getMessageLocally$Input = {
   readonly _: "getMessageLocally";
@@ -102341,7 +103596,7 @@ export type getMessageLocally$Input = {
 };
 
 /**
- * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
+ * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline method
  */
 export type getMessageLocally$DirectInput = {
   /**
@@ -102358,7 +103613,7 @@ export type getMessageLocally$DirectInput = {
 };
 
 /**
- * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline request
+ * Returns information about a message, if it is available without sending network request. Returns a 404 error if message isn't available locally. This is an offline method
  *
  * @param {getMessageLocally$Input} parameters {@link getMessageLocally$Input}
  * @returns {Message} {@link Message}
@@ -102564,7 +103819,7 @@ export type getMessages$DirectInput = {
 export type getMessages = (parameters: getMessages$Input) => Messages;
 
 /**
- * Returns properties of a message; this is an offline request
+ * Returns properties of a message. This is an offline method
  */
 export type getMessageProperties$Input = {
   readonly _: "getMessageProperties";
@@ -102583,7 +103838,7 @@ export type getMessageProperties$Input = {
 };
 
 /**
- * Returns properties of a message; this is an offline request
+ * Returns properties of a message. This is an offline method
  */
 export type getMessageProperties$DirectInput = {
   /**
@@ -102600,7 +103855,7 @@ export type getMessageProperties$DirectInput = {
 };
 
 /**
- * Returns properties of a message; this is an offline request
+ * Returns properties of a message. This is an offline method
  *
  * @param {getMessageProperties$Input} parameters {@link getMessageProperties$Input}
  * @returns {MessageProperties} {@link MessageProperties}
@@ -102748,7 +104003,7 @@ export type getMessageViewers = (
 ) => MessageViewers;
 
 /**
- * Returns information about a file; this is an offline request
+ * Returns information about a file. This is an offline method
  */
 export type getFile$Input = {
   readonly _: "getFile";
@@ -102761,7 +104016,7 @@ export type getFile$Input = {
 };
 
 /**
- * Returns information about a file; this is an offline request
+ * Returns information about a file. This is an offline method
  */
 export type getFile$DirectInput = {
   /**
@@ -102772,7 +104027,7 @@ export type getFile$DirectInput = {
 };
 
 /**
- * Returns information about a file; this is an offline request
+ * Returns information about a file. This is an offline method
  *
  * @param {getFile$Input} parameters {@link getFile$Input}
  * @returns {File} {@link File}
@@ -102780,7 +104035,7 @@ export type getFile$DirectInput = {
 export type getFile = (parameters: getFile$Input) => File;
 
 /**
- * Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier. This is an offline method. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
  *
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  */
@@ -102801,7 +104056,7 @@ export type getRemoteFile$Input = {
 };
 
 /**
- * Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier. This is an offline method. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
  *
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  */
@@ -102820,7 +104075,7 @@ export type getRemoteFile$DirectInput = {
 };
 
 /**
- * Returns information about a file by its remote identifier; this is an offline request. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier. This is an offline method. Can be used to register a URL as a file for further uploading, or sending as a message. Even the request succeeds, the file can be used only if it is still accessible to the user.
  *
  * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  *
@@ -102988,7 +104243,7 @@ export type searchPublicChats$DirectInput = {
 export type searchPublicChats = (parameters: searchPublicChats$Input) => Chats;
 
 /**
- * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
+ * Searches for the specified query in the title and username of already known chats. This is an offline method. Returns chats in the order seen in the main chat list
  */
 export type searchChats$Input = {
   readonly _: "searchChats";
@@ -103007,7 +104262,7 @@ export type searchChats$Input = {
 };
 
 /**
- * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
+ * Searches for the specified query in the title and username of already known chats. This is an offline method. Returns chats in the order seen in the main chat list
  */
 export type searchChats$DirectInput = {
   /**
@@ -103024,7 +104279,7 @@ export type searchChats$DirectInput = {
 };
 
 /**
- * Searches for the specified query in the title and username of already known chats; this is an offline request. Returns chats in the order seen in the main chat list
+ * Searches for the specified query in the title and username of already known chats. This is an offline method. Returns chats in the order seen in the main chat list
  *
  * @param {searchChats$Input} parameters {@link searchChats$Input}
  * @returns {Chats} {@link Chats}
@@ -103428,7 +104683,7 @@ export type removeTopChat$DirectInput = {
 export type removeTopChat = (parameters: removeTopChat$Input) => Ok;
 
 /**
- * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
+ * Searches for the specified query in the title and username of up to 50 recently found chats. This is an offline method
  */
 export type searchRecentlyFoundChats$Input = {
   readonly _: "searchRecentlyFoundChats";
@@ -103447,7 +104702,7 @@ export type searchRecentlyFoundChats$Input = {
 };
 
 /**
- * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
+ * Searches for the specified query in the title and username of up to 50 recently found chats. This is an offline method
  */
 export type searchRecentlyFoundChats$DirectInput = {
   /**
@@ -103464,7 +104719,7 @@ export type searchRecentlyFoundChats$DirectInput = {
 };
 
 /**
- * Searches for the specified query in the title and username of up to 50 recently found chats; this is an offline request
+ * Searches for the specified query in the title and username of up to 50 recently found chats. This is an offline method
  *
  * @param {searchRecentlyFoundChats$Input} parameters {@link searchRecentlyFoundChats$Input}
  * @returns {Chats} {@link Chats}
@@ -103562,7 +104817,7 @@ export type clearRecentlyFoundChats = (
 ) => Ok;
 
 /**
- * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
+ * Returns recently opened chats. This is an offline method. Returns chats in the order of last opening
  */
 export type getRecentlyOpenedChats$Input = {
   readonly _: "getRecentlyOpenedChats";
@@ -103575,7 +104830,7 @@ export type getRecentlyOpenedChats$Input = {
 };
 
 /**
- * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
+ * Returns recently opened chats. This is an offline method. Returns chats in the order of last opening
  */
 export type getRecentlyOpenedChats$DirectInput = {
   /**
@@ -103586,7 +104841,7 @@ export type getRecentlyOpenedChats$DirectInput = {
 };
 
 /**
- * Returns recently opened chats; this is an offline request. Returns chats in the order of last opening
+ * Returns recently opened chats. This is an offline method. Returns chats in the order of last opening
  *
  * @param {getRecentlyOpenedChats$Input} parameters {@link getRecentlyOpenedChats$Input}
  * @returns {Chats} {@link Chats}
@@ -104166,7 +105421,7 @@ export type getGroupsInCommon = (parameters: getGroupsInCommon$Input) => Chats;
 /**
  * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
  *
- * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
+ * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline method if only_local is true
  */
 export type getChatHistory$Input = {
   readonly _: "getChatHistory";
@@ -104207,7 +105462,7 @@ export type getChatHistory$Input = {
 /**
  * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
  *
- * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
+ * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline method if only_local is true
  */
 export type getChatHistory$DirectInput = {
   /**
@@ -104246,7 +105501,7 @@ export type getChatHistory$DirectInput = {
 /**
  * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
  *
- * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
+ * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline method if only_local is true
  *
  * @param {getChatHistory$Input} parameters {@link getChatHistory$Input}
  * @returns {Messages} {@link Messages}
@@ -106086,7 +107341,7 @@ export type removeNotificationGroup = (
 ) => Ok;
 
 /**
- * Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
+ * Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline method
  */
 export type getMessageLink$Input = {
   readonly _: "getMessageLink";
@@ -106123,7 +107378,7 @@ export type getMessageLink$Input = {
 };
 
 /**
- * Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
+ * Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline method
  */
 export type getMessageLink$DirectInput = {
   /**
@@ -106158,7 +107413,7 @@ export type getMessageLink$DirectInput = {
 };
 
 /**
- * Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
+ * Returns an HTTPS link to a message in a chat. Available only if messageProperties.can_get_link, or if messageProperties.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline method
  *
  * @param {getMessageLink$Input} parameters {@link getMessageLink$Input}
  * @returns {MessageLink} {@link MessageLink}
@@ -107024,7 +108279,7 @@ export type forwardMessages$DirectInput = {
 export type forwardMessages = (parameters: forwardMessages$Input) => Messages;
 
 /**
- * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+ * Sends messages from a quick reply shortcut. Requires Telegram Business subscription. Can't be used to send paid messages
  */
 export type sendQuickReplyShortcutMessages$Input = {
   readonly _: "sendQuickReplyShortcutMessages";
@@ -107049,7 +108304,7 @@ export type sendQuickReplyShortcutMessages$Input = {
 };
 
 /**
- * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+ * Sends messages from a quick reply shortcut. Requires Telegram Business subscription. Can't be used to send paid messages
  */
 export type sendQuickReplyShortcutMessages$DirectInput = {
   /**
@@ -107072,7 +108327,7 @@ export type sendQuickReplyShortcutMessages$DirectInput = {
 };
 
 /**
- * Sends messages from a quick reply shortcut. Requires Telegram Business subscription
+ * Sends messages from a quick reply shortcut. Requires Telegram Business subscription. Can't be used to send paid messages
  *
  * @param {sendQuickReplyShortcutMessages$Input} parameters {@link sendQuickReplyShortcutMessages$Input}
  * @returns {Messages} {@link Messages}
@@ -107106,6 +108361,12 @@ export type resendMessages$Input = {
    * @type {inputTextQuote$Input} {@link inputTextQuote}
    */
   readonly quote?: inputTextQuote$Input | null;
+
+  /**
+   * The number of Telegram Stars the user agreed to pay to send the messages. Ignored if messageSendingStateFailed.required_paid_message_star_count == 0
+   * @type {int53} {@link int53}
+   */
+  readonly paid_message_star_count?: int53;
 };
 
 /**
@@ -107131,6 +108392,12 @@ export type resendMessages$DirectInput = {
    * @type {inputTextQuote$Input} {@link inputTextQuote}
    */
   readonly quote?: inputTextQuote$Input | null;
+
+  /**
+   * The number of Telegram Stars the user agreed to pay to send the messages. Ignored if messageSendingStateFailed.required_paid_message_star_count == 0
+   * @type {int53} {@link int53}
+   */
+  readonly paid_message_star_count?: int53;
 };
 
 /**
@@ -109838,7 +111105,7 @@ export type getForumTopic$DirectInput = {
 export type getForumTopic = (parameters: getForumTopic$Input) => ForumTopic;
 
 /**
- * Returns an HTTPS link to a topic in a forum chat. This is an offline request
+ * Returns an HTTPS link to a topic in a forum chat. This is an offline method
  */
 export type getForumTopicLink$Input = {
   readonly _: "getForumTopicLink";
@@ -109857,7 +111124,7 @@ export type getForumTopicLink$Input = {
 };
 
 /**
- * Returns an HTTPS link to a topic in a forum chat. This is an offline request
+ * Returns an HTTPS link to a topic in a forum chat. This is an offline method
  */
 export type getForumTopicLink$DirectInput = {
   /**
@@ -109874,7 +111141,7 @@ export type getForumTopicLink$DirectInput = {
 };
 
 /**
- * Returns an HTTPS link to a topic in a forum chat. This is an offline request
+ * Returns an HTTPS link to a topic in a forum chat. This is an offline method
  *
  * @param {getForumTopicLink$Input} parameters {@link getForumTopicLink$Input}
  * @returns {MessageLink} {@link MessageLink}
@@ -110550,6 +111817,40 @@ export type removeMessageReaction$DirectInput = {
 export type removeMessageReaction = (parameters: removeMessageReaction$Input) => Ok;
 
 /**
+ * Returns the list of message sender identifiers, which can be used to send a paid reaction in a chat
+ */
+export type getChatAvailablePaidMessageReactionSenders$Input = {
+  readonly _: "getChatAvailablePaidMessageReactionSenders";
+
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Returns the list of message sender identifiers, which can be used to send a paid reaction in a chat
+ */
+export type getChatAvailablePaidMessageReactionSenders$DirectInput = {
+  /**
+   * Chat identifier
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Returns the list of message sender identifiers, which can be used to send a paid reaction in a chat
+ *
+ * @param {getChatAvailablePaidMessageReactionSenders$Input} parameters {@link getChatAvailablePaidMessageReactionSenders$Input}
+ * @returns {MessageSenders} {@link MessageSenders}
+ */
+export type getChatAvailablePaidMessageReactionSenders = (
+  parameters: getChatAvailablePaidMessageReactionSenders$Input
+) => MessageSenders;
+
+/**
  * Adds the paid message reaction to a message. Use getMessageAvailableReactions to check whether the reaction is available for the message
  */
 export type addPendingPaidMessageReaction$Input = {
@@ -110574,16 +111875,10 @@ export type addPendingPaidMessageReaction$Input = {
   readonly star_count?: int53;
 
   /**
-   * Pass true if the user didn't choose anonymity explicitly, for example, the reaction is set from the message bubble
-   * @type {Bool$Input} {@link Bool}
+   * Type of the paid reaction; pass null if the user didn't choose reaction type explicitly, for example, the reaction is set from the message bubble
+   * @type {PaidReactionType$Input} {@link PaidReactionType}
    */
-  readonly use_default_is_anonymous?: Bool$Input;
-
-  /**
-   * Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors. Ignored if use_default_is_anonymous == true
-   * @type {Bool$Input} {@link Bool}
-   */
-  readonly is_anonymous?: Bool$Input;
+  readonly type?: PaidReactionType$Input | null;
 };
 
 /**
@@ -110609,16 +111904,10 @@ export type addPendingPaidMessageReaction$DirectInput = {
   readonly star_count?: int53;
 
   /**
-   * Pass true if the user didn't choose anonymity explicitly, for example, the reaction is set from the message bubble
-   * @type {Bool$Input} {@link Bool}
+   * Type of the paid reaction; pass null if the user didn't choose reaction type explicitly, for example, the reaction is set from the message bubble
+   * @type {PaidReactionType$Input} {@link PaidReactionType}
    */
-  readonly use_default_is_anonymous?: Bool$Input;
-
-  /**
-   * Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors. Ignored if use_default_is_anonymous == true
-   * @type {Bool$Input} {@link Bool}
-   */
-  readonly is_anonymous?: Bool$Input;
+  readonly type?: PaidReactionType$Input | null;
 };
 
 /**
@@ -110724,10 +112013,10 @@ export type removePendingPaidMessageReactions = (
 ) => Ok;
 
 /**
- * Changes whether the paid message reaction of the user to a message is anonymous. The message must have paid reaction added by the user
+ * Changes type of paid message reaction of the current user on a message. The message must have paid reaction added by the current user
  */
-export type togglePaidMessageReactionIsAnonymous$Input = {
-  readonly _: "togglePaidMessageReactionIsAnonymous";
+export type setPaidMessageReactionType$Input = {
+  readonly _: "setPaidMessageReactionType";
 
   /**
    * Identifier of the chat to which the message belongs
@@ -110742,16 +112031,16 @@ export type togglePaidMessageReactionIsAnonymous$Input = {
   readonly message_id?: int53;
 
   /**
-   * Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors
-   * @type {Bool$Input} {@link Bool}
+   * New type of the paid reaction
+   * @type {PaidReactionType$Input} {@link PaidReactionType}
    */
-  readonly is_anonymous?: Bool$Input;
+  readonly type?: PaidReactionType$Input;
 };
 
 /**
- * Changes whether the paid message reaction of the user to a message is anonymous. The message must have paid reaction added by the user
+ * Changes type of paid message reaction of the current user on a message. The message must have paid reaction added by the current user
  */
-export type togglePaidMessageReactionIsAnonymous$DirectInput = {
+export type setPaidMessageReactionType$DirectInput = {
   /**
    * Identifier of the chat to which the message belongs
    * @type {int53} {@link int53}
@@ -110765,20 +112054,20 @@ export type togglePaidMessageReactionIsAnonymous$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * Pass true to make paid reaction of the user on the message anonymous; pass false to make the user's profile visible among top reactors
-   * @type {Bool$Input} {@link Bool}
+   * New type of the paid reaction
+   * @type {PaidReactionType$Input} {@link PaidReactionType}
    */
-  readonly is_anonymous?: Bool$Input;
+  readonly type?: PaidReactionType$Input;
 };
 
 /**
- * Changes whether the paid message reaction of the user to a message is anonymous. The message must have paid reaction added by the user
+ * Changes type of paid message reaction of the current user on a message. The message must have paid reaction added by the current user
  *
- * @param {togglePaidMessageReactionIsAnonymous$Input} parameters {@link togglePaidMessageReactionIsAnonymous$Input}
+ * @param {setPaidMessageReactionType$Input} parameters {@link setPaidMessageReactionType$Input}
  * @returns {Ok} {@link Ok}
  */
-export type togglePaidMessageReactionIsAnonymous = (
-  parameters: togglePaidMessageReactionIsAnonymous$Input
+export type setPaidMessageReactionType = (
+  parameters: setPaidMessageReactionType$Input
 ) => Ok;
 
 /**
@@ -112524,7 +113813,7 @@ export type searchWebApp$DirectInput = {
 export type searchWebApp = (parameters: searchWebApp$Input) => FoundWebApp;
 
 /**
- * Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+ * Returns a default placeholder for Web Apps of a bot. This is an offline method. Returns a 404 error if the placeholder isn't known
  */
 export type getWebAppPlaceholder$Input = {
   readonly _: "getWebAppPlaceholder";
@@ -112537,7 +113826,7 @@ export type getWebAppPlaceholder$Input = {
 };
 
 /**
- * Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+ * Returns a default placeholder for Web Apps of a bot. This is an offline method. Returns a 404 error if the placeholder isn't known
  */
 export type getWebAppPlaceholder$DirectInput = {
   /**
@@ -112548,7 +113837,7 @@ export type getWebAppPlaceholder$DirectInput = {
 };
 
 /**
- * Returns a default placeholder for Web Apps of a bot; this is an offline request. Returns a 404 error if the placeholder isn't known
+ * Returns a default placeholder for Web Apps of a bot. This is an offline method. Returns a 404 error if the placeholder isn't known
  *
  * @param {getWebAppPlaceholder$Input} parameters {@link getWebAppPlaceholder$Input}
  * @returns {Outline} {@link Outline}
@@ -112662,7 +113951,7 @@ export type getMainWebApp$Input = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the target bot
+   * Identifier of the target bot. If the bot is restricted for the current user, then show an error instead of calling the method
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -112691,7 +113980,7 @@ export type getMainWebApp$DirectInput = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the target bot
+   * Identifier of the target bot. If the bot is restricted for the current user, then show an error instead of calling the method
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -112724,7 +114013,7 @@ export type getWebAppUrl$Input = {
   readonly _: "getWebAppUrl";
 
   /**
-   * Identifier of the target bot
+   * Identifier of the target bot. If the bot is restricted for the current user, then show an error instead of calling the method
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -112747,7 +114036,7 @@ export type getWebAppUrl$Input = {
  */
 export type getWebAppUrl$DirectInput = {
   /**
-   * Identifier of the target bot
+   * Identifier of the target bot. If the bot is restricted for the current user, then show an error instead of calling the method
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -112844,7 +114133,7 @@ export type openWebApp$Input = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the bot, providing the Web App
+   * Identifier of the bot, providing the Web App. If the bot is restricted for the current user, then show an error instead of calling the method
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -112887,7 +114176,7 @@ export type openWebApp$DirectInput = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the bot, providing the Web App
+   * Identifier of the bot, providing the Web App. If the bot is restricted for the current user, then show an error instead of calling the method
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -114632,7 +115921,7 @@ export type upgradeBasicGroupChatToSupergroupChat = (
 ) => Chat;
 
 /**
- * Returns chat lists to which the chat can be added. This is an offline request
+ * Returns chat lists to which the chat can be added. This is an offline method
  */
 export type getChatListsToAddChat$Input = {
   readonly _: "getChatListsToAddChat";
@@ -114645,7 +115934,7 @@ export type getChatListsToAddChat$Input = {
 };
 
 /**
- * Returns chat lists to which the chat can be added. This is an offline request
+ * Returns chat lists to which the chat can be added. This is an offline method
  */
 export type getChatListsToAddChat$DirectInput = {
   /**
@@ -114656,7 +115945,7 @@ export type getChatListsToAddChat$DirectInput = {
 };
 
 /**
- * Returns chat lists to which the chat can be added. This is an offline request
+ * Returns chat lists to which the chat can be added. This is an offline method
  *
  * @param {getChatListsToAddChat$Input} parameters {@link getChatListsToAddChat$Input}
  * @returns {ChatLists} {@link ChatLists}
@@ -119278,7 +120567,7 @@ export type getStoryPublicForwards = (
 ) => PublicForwards;
 
 /**
- * Returns the list of features available on the specific chat boost level; this is an offline request
+ * Returns the list of features available on the specific chat boost level. This is an offline method
  */
 export type getChatBoostLevelFeatures$Input = {
   readonly _: "getChatBoostLevelFeatures";
@@ -119297,7 +120586,7 @@ export type getChatBoostLevelFeatures$Input = {
 };
 
 /**
- * Returns the list of features available on the specific chat boost level; this is an offline request
+ * Returns the list of features available on the specific chat boost level. This is an offline method
  */
 export type getChatBoostLevelFeatures$DirectInput = {
   /**
@@ -119314,7 +120603,7 @@ export type getChatBoostLevelFeatures$DirectInput = {
 };
 
 /**
- * Returns the list of features available on the specific chat boost level; this is an offline request
+ * Returns the list of features available on the specific chat boost level. This is an offline method
  *
  * @param {getChatBoostLevelFeatures$Input} parameters {@link getChatBoostLevelFeatures$Input}
  * @returns {ChatBoostLevelFeatures} {@link ChatBoostLevelFeatures}
@@ -119324,7 +120613,7 @@ export type getChatBoostLevelFeatures = (
 ) => ChatBoostLevelFeatures;
 
 /**
- * Returns the list of features available for different chat boost levels; this is an offline request
+ * Returns the list of features available for different chat boost levels. This is an offline method
  */
 export type getChatBoostFeatures$Input = {
   readonly _: "getChatBoostFeatures";
@@ -119337,7 +120626,7 @@ export type getChatBoostFeatures$Input = {
 };
 
 /**
- * Returns the list of features available for different chat boost levels; this is an offline request
+ * Returns the list of features available for different chat boost levels. This is an offline method
  */
 export type getChatBoostFeatures$DirectInput = {
   /**
@@ -119348,7 +120637,7 @@ export type getChatBoostFeatures$DirectInput = {
 };
 
 /**
- * Returns the list of features available for different chat boost levels; this is an offline request
+ * Returns the list of features available for different chat boost levels. This is an offline method
  *
  * @param {getChatBoostFeatures$Input} parameters {@link getChatBoostFeatures$Input}
  * @returns {ChatBoostFeatures} {@link ChatBoostFeatures}
@@ -120812,19 +122101,19 @@ export type searchFileDownloads = (
 ) => FoundFileDownloads;
 
 /**
- * Application verification has been completed. Can be called before authorization
+ * Application or reCAPTCHA verification has been completed. Can be called before authorization
  */
 export type setApplicationVerificationToken$Input = {
   readonly _: "setApplicationVerificationToken";
 
   /**
-   * Unique identifier for the verification process as received from updateApplicationVerificationRequired
+   * Unique identifier for the verification process as received from updateApplicationVerificationRequired or updateApplicationRecaptchaVerificationRequired
    * @type {int53} {@link int53}
    */
   readonly verification_id?: int53;
 
   /**
-   * Play Integrity API token for the Android application, or secret from push notification for the iOS application;
+   * Play Integrity API token for the Android application, or secret from push notification for the iOS application for application verification, or reCAPTCHA token for reCAPTCHA verifications;
    *
    * - pass an empty string to abort verification and receive error VERIFICATION_FAILED for the request
    * @type {string} {@link string}
@@ -120833,17 +122122,17 @@ export type setApplicationVerificationToken$Input = {
 };
 
 /**
- * Application verification has been completed. Can be called before authorization
+ * Application or reCAPTCHA verification has been completed. Can be called before authorization
  */
 export type setApplicationVerificationToken$DirectInput = {
   /**
-   * Unique identifier for the verification process as received from updateApplicationVerificationRequired
+   * Unique identifier for the verification process as received from updateApplicationVerificationRequired or updateApplicationRecaptchaVerificationRequired
    * @type {int53} {@link int53}
    */
   readonly verification_id?: int53;
 
   /**
-   * Play Integrity API token for the Android application, or secret from push notification for the iOS application;
+   * Play Integrity API token for the Android application, or secret from push notification for the iOS application for application verification, or reCAPTCHA token for reCAPTCHA verifications;
    *
    * - pass an empty string to abort verification and receive error VERIFICATION_FAILED for the request
    * @type {string} {@link string}
@@ -120852,7 +122141,7 @@ export type setApplicationVerificationToken$DirectInput = {
 };
 
 /**
- * Application verification has been completed. Can be called before authorization
+ * Application or reCAPTCHA verification has been completed. Can be called before authorization
  *
  * @param {setApplicationVerificationToken$Input} parameters {@link setApplicationVerificationToken$Input}
  * @returns {Ok} {@link Ok}
@@ -122016,7 +123305,7 @@ export type createCall$Input = {
   readonly is_video?: Bool$Input;
 
   /**
-   * Identifier of the group call to which the user will be added after exchanging private key via the call; pass 0 if none; currently, ignored
+   * Identifier of the group call to which the user will be added after exchanging private key via the call; pass 0 if none
    * @type {int32} {@link int32}
    */
   readonly group_call_id?: int32;
@@ -122045,7 +123334,7 @@ export type createCall$DirectInput = {
   readonly is_video?: Bool$Input;
 
   /**
-   * Identifier of the group call to which the user will be added after exchanging private key via the call; pass 0 if none; currently, ignored
+   * Identifier of the group call to which the user will be added after exchanging private key via the call; pass 0 if none
    * @type {int32} {@link int32}
    */
   readonly group_call_id?: int32;
@@ -122790,6 +124079,12 @@ export type joinGroupCall$Input = {
    * @type {string} {@link string}
    */
   readonly invite_hash?: string;
+
+  /**
+   * Fingerprint of the encryption key for E2E group calls not bound to a chat; pass 0 for voice chats
+   * @type {int64$Input} {@link int64}
+   */
+  readonly key_fingerprint?: int64$Input;
 };
 
 /**
@@ -122837,6 +124132,12 @@ export type joinGroupCall$DirectInput = {
    * @type {string} {@link string}
    */
   readonly invite_hash?: string;
+
+  /**
+   * Fingerprint of the encryption key for E2E group calls not bound to a chat; pass 0 for voice chats
+   * @type {int64$Input} {@link int64}
+   */
+  readonly key_fingerprint?: int64$Input;
 };
 
 /**
@@ -124384,7 +125685,7 @@ export type setUserPersonalProfilePhoto = (
 ) => Ok;
 
 /**
- * Suggests a profile photo to another regular user with common messages
+ * Suggests a profile photo to another regular user with common messages and allowing non-paid messages
  */
 export type suggestUserProfilePhoto$Input = {
   readonly _: "suggestUserProfilePhoto";
@@ -124403,7 +125704,7 @@ export type suggestUserProfilePhoto$Input = {
 };
 
 /**
- * Suggests a profile photo to another regular user with common messages
+ * Suggests a profile photo to another regular user with common messages and allowing non-paid messages
  */
 export type suggestUserProfilePhoto$DirectInput = {
   /**
@@ -124420,7 +125721,7 @@ export type suggestUserProfilePhoto$DirectInput = {
 };
 
 /**
- * Suggests a profile photo to another regular user with common messages
+ * Suggests a profile photo to another regular user with common messages and allowing non-paid messages
  *
  * @param {suggestUserProfilePhoto$Input} parameters {@link suggestUserProfilePhoto$Input}
  * @returns {Ok} {@link Ok}
@@ -124656,7 +125957,7 @@ export type getUserProfilePhotos = (
 ) => ChatPhotos;
 
 /**
- * Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+ * Returns outline of a sticker. This is an offline method. Returns a 404 error if the outline isn't known
  */
 export type getStickerOutline$Input = {
   readonly _: "getStickerOutline";
@@ -124681,7 +125982,7 @@ export type getStickerOutline$Input = {
 };
 
 /**
- * Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+ * Returns outline of a sticker. This is an offline method. Returns a 404 error if the outline isn't known
  */
 export type getStickerOutline$DirectInput = {
   /**
@@ -124704,7 +126005,7 @@ export type getStickerOutline$DirectInput = {
 };
 
 /**
- * Returns outline of a sticker; this is an offline request. Returns a 404 error if the outline isn't known
+ * Returns outline of a sticker. This is an offline method. Returns a 404 error if the outline isn't known
  *
  * @param {getStickerOutline$Input} parameters {@link getStickerOutline$Input}
  * @returns {Outline} {@link Outline}
@@ -126346,7 +127647,7 @@ export type getLinkPreview$DirectInput = {
 export type getLinkPreview = (parameters: getLinkPreview$Input) => LinkPreview;
 
 /**
- * Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
+ * Returns an instant view version of a web page if available. This is an offline method if only_local is true. Returns a 404 error if the web page has no instant view page
  */
 export type getWebPageInstantView$Input = {
   readonly _: "getWebPageInstantView";
@@ -126358,14 +127659,14 @@ export type getWebPageInstantView$Input = {
   readonly url?: string;
 
   /**
-   * Pass true to get full instant view for the web page
+   * Pass true to get only locally available information without sending network requests
    * @type {Bool$Input} {@link Bool}
    */
-  readonly force_full?: Bool$Input;
+  readonly only_local?: Bool$Input;
 };
 
 /**
- * Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
+ * Returns an instant view version of a web page if available. This is an offline method if only_local is true. Returns a 404 error if the web page has no instant view page
  */
 export type getWebPageInstantView$DirectInput = {
   /**
@@ -126375,14 +127676,14 @@ export type getWebPageInstantView$DirectInput = {
   readonly url?: string;
 
   /**
-   * Pass true to get full instant view for the web page
+   * Pass true to get only locally available information without sending network requests
    * @type {Bool$Input} {@link Bool}
    */
-  readonly force_full?: Bool$Input;
+  readonly only_local?: Bool$Input;
 };
 
 /**
- * Returns an instant view version of a web page if available. Returns a 404 error if the web page has no instant view page
+ * Returns an instant view version of a web page if available. This is an offline method if only_local is true. Returns a 404 error if the web page has no instant view page
  *
  * @param {getWebPageInstantView$Input} parameters {@link getWebPageInstantView$Input}
  * @returns {WebPageInstantView} {@link WebPageInstantView}
@@ -130614,7 +131915,9 @@ export type sendGift$Input = {
   readonly owner_id?: MessageSender$Input;
 
   /**
-   * Text to show along with the gift; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * Text to show along with the gift; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed.
+   *
+   * - Must be empty if the receiver enabled paid messages
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly text?: formattedText$Input;
@@ -130649,7 +131952,9 @@ export type sendGift$DirectInput = {
   readonly owner_id?: MessageSender$Input;
 
   /**
-   * Text to show along with the gift; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed
+   * Text to show along with the gift; 0-getOption("gift_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, and CustomEmoji entities are allowed.
+   *
+   * - Must be empty if the receiver enabled paid messages
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly text?: formattedText$Input;
@@ -130708,7 +132013,7 @@ export type sellGift$DirectInput = {
 export type sellGift = (parameters: sellGift$Input) => Ok;
 
 /**
- * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the chat
+ * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
  */
 export type toggleGiftIsSaved$Input = {
   readonly _: "toggleGiftIsSaved";
@@ -130727,7 +132032,7 @@ export type toggleGiftIsSaved$Input = {
 };
 
 /**
- * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the chat
+ * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
  */
 export type toggleGiftIsSaved$DirectInput = {
   /**
@@ -130744,12 +132049,56 @@ export type toggleGiftIsSaved$DirectInput = {
 };
 
 /**
- * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the chat
+ * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
  *
  * @param {toggleGiftIsSaved$Input} parameters {@link toggleGiftIsSaved$Input}
  * @returns {Ok} {@link Ok}
  */
 export type toggleGiftIsSaved = (parameters: toggleGiftIsSaved$Input) => Ok;
+
+/**
+ * Changes the list of pinned gifts on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
+ */
+export type setPinnedGifts$Input = {
+  readonly _: "setPinnedGifts";
+
+  /**
+   * Identifier of the user or the channel chat that received the gifts
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input;
+
+  /**
+   * New list of pinned gifts. All gifts must be upgraded and saved on the profile page first. There can be up to getOption("pinned_gift_count_max") pinned gifts
+   * @type {vector$Input<string>} {@link vector<string>}
+   */
+  readonly received_gift_ids?: vector$Input<string>;
+};
+
+/**
+ * Changes the list of pinned gifts on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
+ */
+export type setPinnedGifts$DirectInput = {
+  /**
+   * Identifier of the user or the channel chat that received the gifts
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input;
+
+  /**
+   * New list of pinned gifts. All gifts must be upgraded and saved on the profile page first. There can be up to getOption("pinned_gift_count_max") pinned gifts
+   * @type {vector$Input<string>} {@link vector<string>}
+   */
+  readonly received_gift_ids?: vector$Input<string>;
+};
+
+/**
+ * Changes the list of pinned gifts on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
+ *
+ * @param {setPinnedGifts$Input} parameters {@link setPinnedGifts$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setPinnedGifts = (parameters: setPinnedGifts$Input) => Ok;
 
 /**
  * Toggles whether notifications for new gifts received by a channel chat are sent to the current user; requires can_post_messages administrator right in the chat
@@ -130962,31 +132311,31 @@ export type getReceivedGifts$Input = {
   readonly exclude_unsaved?: Bool$Input;
 
   /**
-   * Pass true to exclude gifts that are saved to the chat's profile page; for channel chats with can_post_messages administrator right only
+   * Pass true to exclude gifts that are saved to the chat's profile page. Always false for gifts received by other users and channel chats without can_post_messages administrator right
    * @type {Bool$Input} {@link Bool}
    */
   readonly exclude_saved?: Bool$Input;
 
   /**
-   * Pass true to exclude gifts that can be purchased unlimited number of times; for channel chats with can_post_messages administrator right only
+   * Pass true to exclude gifts that can be purchased unlimited number of times
    * @type {Bool$Input} {@link Bool}
    */
   readonly exclude_unlimited?: Bool$Input;
 
   /**
-   * Pass true to exclude gifts that can be purchased limited number of times; for channel chats with can_post_messages administrator right only
+   * Pass true to exclude gifts that can be purchased limited number of times
    * @type {Bool$Input} {@link Bool}
    */
   readonly exclude_limited?: Bool$Input;
 
   /**
-   * Pass true to exclude upgraded gifts; for channel chats with can_post_messages administrator right only
+   * Pass true to exclude upgraded gifts
    * @type {Bool$Input} {@link Bool}
    */
   readonly exclude_upgraded?: Bool$Input;
 
   /**
-   * Pass true to sort results by gift price instead of send date; for channel chats with can_post_messages administrator right only
+   * Pass true to sort results by gift price instead of send date
    * @type {Bool$Input} {@link Bool}
    */
   readonly sort_by_price?: Bool$Input;
@@ -131021,31 +132370,31 @@ export type getReceivedGifts$DirectInput = {
   readonly exclude_unsaved?: Bool$Input;
 
   /**
-   * Pass true to exclude gifts that are saved to the chat's profile page; for channel chats with can_post_messages administrator right only
+   * Pass true to exclude gifts that are saved to the chat's profile page. Always false for gifts received by other users and channel chats without can_post_messages administrator right
    * @type {Bool$Input} {@link Bool}
    */
   readonly exclude_saved?: Bool$Input;
 
   /**
-   * Pass true to exclude gifts that can be purchased unlimited number of times; for channel chats with can_post_messages administrator right only
+   * Pass true to exclude gifts that can be purchased unlimited number of times
    * @type {Bool$Input} {@link Bool}
    */
   readonly exclude_unlimited?: Bool$Input;
 
   /**
-   * Pass true to exclude gifts that can be purchased limited number of times; for channel chats with can_post_messages administrator right only
+   * Pass true to exclude gifts that can be purchased limited number of times
    * @type {Bool$Input} {@link Bool}
    */
   readonly exclude_limited?: Bool$Input;
 
   /**
-   * Pass true to exclude upgraded gifts; for channel chats with can_post_messages administrator right only
+   * Pass true to exclude upgraded gifts
    * @type {Bool$Input} {@link Bool}
    */
   readonly exclude_upgraded?: Bool$Input;
 
   /**
-   * Pass true to sort results by gift price instead of send date; for channel chats with can_post_messages administrator right only
+   * Pass true to sort results by gift price instead of send date
    * @type {Bool$Input} {@link Bool}
    */
   readonly sort_by_price?: Bool$Input;
@@ -131548,7 +132897,7 @@ export type resetInstalledBackgrounds = (
 ) => Ok;
 
 /**
- * Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
+ * Returns information about the current localization target. This is an offline method if only_local is true. Can be called before authorization
  */
 export type getLocalizationTargetInfo$Input = {
   readonly _: "getLocalizationTargetInfo";
@@ -131561,7 +132910,7 @@ export type getLocalizationTargetInfo$Input = {
 };
 
 /**
- * Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
+ * Returns information about the current localization target. This is an offline method if only_local is true. Can be called before authorization
  */
 export type getLocalizationTargetInfo$DirectInput = {
   /**
@@ -131572,7 +132921,7 @@ export type getLocalizationTargetInfo$DirectInput = {
 };
 
 /**
- * Returns information about the current localization target. This is an offline request if only_local is true. Can be called before authorization
+ * Returns information about the current localization target. This is an offline method if only_local is true. Can be called before authorization
  *
  * @param {getLocalizationTargetInfo$Input} parameters {@link getLocalizationTargetInfo$Input}
  * @returns {LocalizationTargetInfo} {@link LocalizationTargetInfo}
@@ -132234,6 +133583,136 @@ export type getNewChatPrivacySettings$DirectInput = {};
 export type getNewChatPrivacySettings = (
   parameters: getNewChatPrivacySettings$Input
 ) => NewChatPrivacySettings;
+
+/**
+ * Returns the total number of Telegram Stars received by the current user for paid messages from the given user
+ */
+export type getPaidMessageRevenue$Input = {
+  readonly _: "getPaidMessageRevenue";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+};
+
+/**
+ * Returns the total number of Telegram Stars received by the current user for paid messages from the given user
+ */
+export type getPaidMessageRevenue$DirectInput = {
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+};
+
+/**
+ * Returns the total number of Telegram Stars received by the current user for paid messages from the given user
+ *
+ * @param {getPaidMessageRevenue$Input} parameters {@link getPaidMessageRevenue$Input}
+ * @returns {StarCount} {@link StarCount}
+ */
+export type getPaidMessageRevenue = (
+  parameters: getPaidMessageRevenue$Input
+) => StarCount;
+
+/**
+ * Allows the specified user to send unpaid private messages to the current user by adding a rule to userPrivacySettingAllowUnpaidMessages
+ */
+export type allowUnpaidMessagesFromUser$Input = {
+  readonly _: "allowUnpaidMessagesFromUser";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Pass true to refund the user previously paid messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly refund_payments?: Bool$Input;
+};
+
+/**
+ * Allows the specified user to send unpaid private messages to the current user by adding a rule to userPrivacySettingAllowUnpaidMessages
+ */
+export type allowUnpaidMessagesFromUser$DirectInput = {
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Pass true to refund the user previously paid messages
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly refund_payments?: Bool$Input;
+};
+
+/**
+ * Allows the specified user to send unpaid private messages to the current user by adding a rule to userPrivacySettingAllowUnpaidMessages
+ *
+ * @param {allowUnpaidMessagesFromUser$Input} parameters {@link allowUnpaidMessagesFromUser$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type allowUnpaidMessagesFromUser = (
+  parameters: allowUnpaidMessagesFromUser$Input
+) => Ok;
+
+/**
+ * Changes the amount of Telegram Stars that must be paid to send a message to a supergroup chat; requires can_restrict_members administrator right and supergroupFullInfo.can_enable_paid_messages
+ */
+export type setChatPaidMessageStarCount$Input = {
+  readonly _: "setChatPaidMessageStarCount";
+
+  /**
+   * Identifier of the supergroup chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The new number of Telegram Stars that must be paid for each message that is sent to the supergroup chat unless the sender is an administrator of the chat; 0-getOption("paid_message_star_count_max").
+   *
+   * - The supergroup will receive getOption("paid_message_earnings_per_mille") Telegram Stars for each 1000 Telegram Stars paid for message sending
+   * @type {int53} {@link int53}
+   */
+  readonly paid_message_star_count?: int53;
+};
+
+/**
+ * Changes the amount of Telegram Stars that must be paid to send a message to a supergroup chat; requires can_restrict_members administrator right and supergroupFullInfo.can_enable_paid_messages
+ */
+export type setChatPaidMessageStarCount$DirectInput = {
+  /**
+   * Identifier of the supergroup chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The new number of Telegram Stars that must be paid for each message that is sent to the supergroup chat unless the sender is an administrator of the chat; 0-getOption("paid_message_star_count_max").
+   *
+   * - The supergroup will receive getOption("paid_message_earnings_per_mille") Telegram Stars for each 1000 Telegram Stars paid for message sending
+   * @type {int53} {@link int53}
+   */
+  readonly paid_message_star_count?: int53;
+};
+
+/**
+ * Changes the amount of Telegram Stars that must be paid to send a message to a supergroup chat; requires can_restrict_members administrator right and supergroupFullInfo.can_enable_paid_messages
+ *
+ * @param {setChatPaidMessageStarCount$Input} parameters {@link setChatPaidMessageStarCount$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setChatPaidMessageStarCount = (
+  parameters: setChatPaidMessageStarCount$Input
+) => Ok;
 
 /**
  * Check whether the current user can message another user or try to create a chat with them
@@ -132916,7 +134395,7 @@ export type getStarRevenueStatistics$Input = {
   readonly _: "getStarRevenueStatistics";
 
   /**
-   * Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
+   * Identifier of the owner of the Telegram Stars; can be identifier of the current user, an owned bot, or a supergroup or a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -132933,7 +134412,7 @@ export type getStarRevenueStatistics$Input = {
  */
 export type getStarRevenueStatistics$DirectInput = {
   /**
-   * Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
+   * Identifier of the owner of the Telegram Stars; can be identifier of the current user, an owned bot, or a supergroup or a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -132962,7 +134441,7 @@ export type getStarWithdrawalUrl$Input = {
   readonly _: "getStarWithdrawalUrl";
 
   /**
-   * Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of an owned channel chat
+   * Identifier of the owner of the Telegram Stars; can be identifier of the current user, an owned bot, or an owned supergroup or channel chat
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -132985,7 +134464,7 @@ export type getStarWithdrawalUrl$Input = {
  */
 export type getStarWithdrawalUrl$DirectInput = {
   /**
-   * Identifier of the owner of the Telegram Stars; can be identifier of an owned bot, or identifier of an owned channel chat
+   * Identifier of the owner of the Telegram Stars; can be identifier of the current user, an owned bot, or an owned supergroup or channel chat
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -135492,38 +136971,60 @@ export type getPremiumState$DirectInput = {};
 export type getPremiumState = (parameters: getPremiumState$Input) => PremiumState;
 
 /**
- * Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
+ * Returns available options for gifting Telegram Premium to a user
  */
-export type getPremiumGiftCodePaymentOptions$Input = {
-  readonly _: "getPremiumGiftCodePaymentOptions";
-
-  /**
-   * Identifier of the supergroup or channel chat, which will be automatically boosted by receivers of the gift codes and which is administered by the user; 0 if none
-   * @type {int53} {@link int53}
-   */
-  readonly boosted_chat_id?: int53;
+export type getPremiumGiftPaymentOptions$Input = {
+  readonly _: "getPremiumGiftPaymentOptions";
 };
 
 /**
- * Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
+ * Returns available options for gifting Telegram Premium to a user
  */
-export type getPremiumGiftCodePaymentOptions$DirectInput = {
-  /**
-   * Identifier of the supergroup or channel chat, which will be automatically boosted by receivers of the gift codes and which is administered by the user; 0 if none
-   * @type {int53} {@link int53}
-   */
-  readonly boosted_chat_id?: int53;
-};
+export type getPremiumGiftPaymentOptions$DirectInput = {};
 
 /**
- * Returns available options for Telegram Premium gift code or Telegram Premium giveaway creation
+ * Returns available options for gifting Telegram Premium to a user
  *
- * @param {getPremiumGiftCodePaymentOptions$Input} parameters {@link getPremiumGiftCodePaymentOptions$Input}
- * @returns {PremiumGiftCodePaymentOptions} {@link PremiumGiftCodePaymentOptions}
+ * @param {getPremiumGiftPaymentOptions$Input} parameters {@link getPremiumGiftPaymentOptions$Input}
+ * @returns {PremiumGiftPaymentOptions} {@link PremiumGiftPaymentOptions}
  */
-export type getPremiumGiftCodePaymentOptions = (
-  parameters: getPremiumGiftCodePaymentOptions$Input
-) => PremiumGiftCodePaymentOptions;
+export type getPremiumGiftPaymentOptions = (
+  parameters: getPremiumGiftPaymentOptions$Input
+) => PremiumGiftPaymentOptions;
+
+/**
+ * Returns available options for creating of Telegram Premium giveaway or manual distribution of Telegram Premium among chat members
+ */
+export type getPremiumGiveawayPaymentOptions$Input = {
+  readonly _: "getPremiumGiveawayPaymentOptions";
+
+  /**
+   * Identifier of the supergroup or channel chat, which will be automatically boosted by receivers of the gift codes and which is administered by the user
+   * @type {int53} {@link int53}
+   */
+  readonly boosted_chat_id?: int53;
+};
+
+/**
+ * Returns available options for creating of Telegram Premium giveaway or manual distribution of Telegram Premium among chat members
+ */
+export type getPremiumGiveawayPaymentOptions$DirectInput = {
+  /**
+   * Identifier of the supergroup or channel chat, which will be automatically boosted by receivers of the gift codes and which is administered by the user
+   * @type {int53} {@link int53}
+   */
+  readonly boosted_chat_id?: int53;
+};
+
+/**
+ * Returns available options for creating of Telegram Premium giveaway or manual distribution of Telegram Premium among chat members
+ *
+ * @param {getPremiumGiveawayPaymentOptions$Input} parameters {@link getPremiumGiveawayPaymentOptions$Input}
+ * @returns {PremiumGiveawayPaymentOptions} {@link PremiumGiveawayPaymentOptions}
+ */
+export type getPremiumGiveawayPaymentOptions = (
+  parameters: getPremiumGiveawayPaymentOptions$Input
+) => PremiumGiveawayPaymentOptions;
 
 /**
  * Return information about a Telegram Premium gift code
@@ -135790,7 +137291,7 @@ export type getStarTransactions$Input = {
   /**
    * Identifier of the owner of the Telegram Stars; can be the identifier of the current user, identifier of an owned bot,
    *
-   * - or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
+   * - or identifier of a supergroup or a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;
@@ -135827,7 +137328,7 @@ export type getStarTransactions$DirectInput = {
   /**
    * Identifier of the owner of the Telegram Stars; can be the identifier of the current user, identifier of an owned bot,
    *
-   * - or identifier of a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
+   * - or identifier of a supergroup or a channel chat with supergroupFullInfo.can_get_star_revenue_statistics == true
    * @type {MessageSender$Input} {@link MessageSender}
    */
   readonly owner_id?: MessageSender$Input;

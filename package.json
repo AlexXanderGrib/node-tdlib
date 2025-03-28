@@ -1,6 +1,6 @@
 {
   "name": "tdlib-native",
-  "version": "3.4.1",
+  "version": "3.5.0",
   "description": "🚀 Telegram TDLib native nodejs wrapper",
   "packageManager": "npm@11.0.0",
   "scripts": {
@@ -114,15 +114,15 @@
     "node-addon-api": "^8.3.0"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-darwin-x64": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-darwin-arm64": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-linux-x64-musl": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-android-arm64-musl": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-win32-x64": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294",
-    "@tdlib-native/tdjson-win32-ia32": "1.8.44-commit.28c6f2e9c045372d50217919bf5768b7fbbe0294"
+    "@tdlib-native/tdjson-darwin-x64": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-darwin-arm64": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-linux-x64-musl": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-android-arm64-musl": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-win32-x64": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-win32-ia32": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3"
   }
 }

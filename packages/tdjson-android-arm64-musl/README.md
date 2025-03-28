@@ -7,6 +7,6 @@
 - Platform: Android (Linux compatible)
 - Cpu Arch: ARM64 (also known as: aarch64)
 - Lib C: musl libc
-- TDLib Version: [1.8.44 `28c6f2e`](https://github.com/tdlib/td/tree/28c6f2e9c045372d50217919bf5768b7fbbe0294)
+- TDLib Version: [1.8.46 `b498497`](https://github.com/tdlib/td/tree/b498497bbfd6b80c86f800b3546a0170206317d3)
 - TDLib License: [Boost Software License 1.0](https://github.com/tdlib/td/blob/master/LICENSE_1_0.txt)
 - Package License: MIT
