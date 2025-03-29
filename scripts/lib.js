@@ -60,13 +60,13 @@ class Downloader {
 
 const packagePath = resolve(__dirname, "../package.json");
 const packageJson = JSON.parse(readFileSync(packagePath, "utf-8"));
-// const repo = packageJson.config.tdlib_prebuilt_repository;
-// const tag = packageJson.config.tdlib_prebuilt_tag;
+const repo = packageJson.config.tdlib_prebuilt_repository;
+const tag = packageJson.config.tdlib_prebuilt_tag;
 
-const directoryPath = path.resolve(process.cwd(), "./prebuilt-tdlib/td");
-const url = pathToFileURL(directoryPath);
+// const directoryPath = path.resolve(process.cwd(), "./prebuilt-tdlib/td");
+// const url = pathToFileURL(directoryPath);
 
-const downloader = new Downloader(url.toString());
+const downloader = new Downloader(`https://github.com/${repo}/releases/download/${tag}`);
 
 /**
  * @type {{ os: NodeJS.Platform; cpu: NodeJS.Architecture; file: string; libc?: "glibc" | "musl" }[]}

@@ -3,6 +3,10 @@
   "version": "3.5.0",
   "description": "🚀 Telegram TDLib native nodejs wrapper",
   "packageManager": "npm@11.2.0",
+  "config": {
+    "tdlib_prebuilt_repository": "AlexXanderGrib/prebuilt-tdlib",
+    "tdlib_prebuilt_tag": "0.1.8.46-b498497"
+  },
   "scripts": {
     "test": "vitest",
     "clean:dist": "rm -rf dist",

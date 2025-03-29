@@ -39,10 +39,7 @@ const archNames = new Map([
     repository: packageJson.repository,
     engines: packageJson.engines,
 
-    tdlib: {
-      version: meta.version,
-      commit: meta["commit-hash"]
-    }
+    tdlib: { version: meta.version, commit: meta["commit-hash"] }
   };
 
   const optionalDependencies = {};
@@ -52,10 +49,7 @@ const archNames = new Map([
     const packageJson = {
       name: `@tdlib-native/${name}`,
       ...basePackageJson,
-      repository: {
-        ...basePackageJson.repository,
-        directory: `packages/${name}`
-      },
+      repository: { ...basePackageJson.repository, directory: `packages/${name}` },
       description: `Prebuilt TDLib for ${os} ${cpu}`,
       keywords: ["tdlib", "binary", os, cpu],
       os: [os],
@@ -78,9 +72,6 @@ const archNames = new Map([
     const directory = resolve(__dirname, "../packages", name);
 
     await mkdir(directory, { recursive: true });
-
-    const content = await downloader.get(file);
-    await writeFile(`${directory}/${file}`, content);
 
     const { cjs, esm, types } = generateExports({
       tdlibPath: {
