@@ -73,6 +73,9 @@ const archNames = new Map([
 
     await mkdir(directory, { recursive: true });
 
+    const content = await downloader.get(file);
+    await writeFile(`${directory}/${file}`, content);
+
     const { cjs, esm, types } = generateExports({
       tdlibPath: {
         esm: `fileURLToPath(new URL("${file}", import.meta.url))`,
@@ -105,7 +108,8 @@ const archNames = new Map([
         `${directory}/index.mjs`,
         'import { fileURLToPath } from "url";\n\n' + esm
       ),
-      writeFile(`${directory}/index.d.ts`, types)
+      writeFile(`${directory}/index.d.ts`, types),
+      writeFile(`${directory}/.gitignore`, `${file}`, "ascii")
     ]);
 
     optionalDependencies[packageJson.name] = packageJson.version;

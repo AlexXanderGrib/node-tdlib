@@ -22,22 +22,29 @@ class Downloader {
   /**
    *
    * @param {string} filename
-   * @returns {Promise<Buffer>}
+   * @returns {string}
    */
-  async get(filename) {
-    const cached = this._cache.get(filename);
-    if (cached) {
-      // console.log("[Downloader] Got", filename, "from cache");
-      return cached;
-    }
-
+  resolve(filename) {
     if (filename.startsWith("/")) filename = filename.slice(1);
 
     let baseUrl = this.baseUrl;
     if (!baseUrl.endsWith("/")) baseUrl += "/";
 
-    const url = new URL(baseUrl + filename);
-    // console.log("[Downloader] Downloading", url.toString());
+    return new URL(baseUrl + filename).toString();
+  }
+
+  /**
+   *
+   * @param {string} filename
+   * @returns {Promise<Buffer>}
+   */
+  async get(filename) {
+    const cached = this._cache.get(filename);
+    if (cached) {
+      return cached;
+    }
+
+    const url = this.resolve(filename);
 
     /**
      * @type {Buffer}
@@ -63,10 +70,9 @@ const packageJson = JSON.parse(readFileSync(packagePath, "utf-8"));
 const repo = packageJson.config.tdlib_prebuilt_repository;
 const tag = packageJson.config.tdlib_prebuilt_tag;
 
-// const directoryPath = path.resolve(process.cwd(), "./prebuilt-tdlib/td");
-// const url = pathToFileURL(directoryPath);
-
-const downloader = new Downloader(`https://github.com/${repo}/releases/download/${tag}`);
+const downloader = new Downloader(
+  `https://github.com/${repo}/releases/download/${tag}`
+);
 
 /**
  * @type {{ os: NodeJS.Platform; cpu: NodeJS.Architecture; file: string; libc?: "glibc" | "musl" }[]}
