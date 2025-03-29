@@ -1,0 +1,1 @@
+wget -O libtdjson-x64-musl.so https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.46-b498497/libtdjson-x64-musl.so
