@@ -113,7 +113,7 @@
     "node": ">=16"
   },
   "dependencies": {
-    "debug": "^4.4.0",
+    "debug": "^4.4.1",
     "detect-libc": "^2.0.3",
     "node-addon-api": "^8.3.1"
   },
