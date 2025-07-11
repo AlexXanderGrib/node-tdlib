@@ -115,7 +115,7 @@
   "dependencies": {
     "debug": "^4.4.0",
     "detect-libc": "^2.0.3",
-    "node-addon-api": "^8.3.1"
+    "node-addon-api": "^8.4.0"
   },
   "optionalDependencies": {
     "@tdlib-native/tdjson-darwin-x64": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
