@@ -1,0 +1,109 @@
+name: Publish prebuilt TDLib
+on:
+  workflow_dispatch:
+
+jobs:
+  test-base:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, macos-13, macos-14, windows-2022]
+        version: [18, 20, 22]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.version }}
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm ci --omit=dev
+
+      - name: Test for presence of binary
+        id: test-bin
+        shell: bash
+        run: |
+          path=$(node scripts/test-binary-module.js) || exit 1
+          echo "path=$path" >> ${GITHUB_OUTPUT}
+
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      - uses: actions/cache@v4
+        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Show tdlib path
+        run: echo "${{ steps.test-bin.outputs.path }}"
+
+      - name: Test
+        run: npm test -- --run
+        env:
+          TDLIB_PATH: ${{ steps.test-bin.outputs.path }}
+
+  test-linux-arm64:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        version: [20, 22]
+        image: [bookworm, alpine]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci --omit=dev
+
+      - name: Test for presence of binary
+        id: test-bin
+        shell: bash
+        run: |
+          path=$(node scripts/test-binary-module.js) || exit 1
+          echo "path=$path" >> ${GITHUB_OUTPUT}
+
+      - name: Test in docker
+        run: |
+          docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+          docker run --rm -e TELEGRAM_API_HASH="${{ secrets.TELEGRAM_API_HASH }}" -e TELEGRAM_API_ID="${{ secrets.TELEGRAM_API_ID }}"  \
+            -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}}-${{matrix.image}} \
+            sh -c "cd /usr/src/app && ./scripts/test-linux-arm64.sh"
+
+  publish:
+    runs-on: ubuntu-22.04
+    needs: [test-base, test-linux-arm64]
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Publish
+        run: |
+
+          for dir in ./packages/tdjson-*; do
+          if [ -d "$dir" ]; then
+            cd "$dir" || exit 1
+            echo "Downloading binary"
+            bash download.sh
+            echo "Publishing $dir"
+            npm publish --access public --provenance
+            cd - > /dev/null || exit 1
+          else
+            echo "$dir is not a directory"
+          fi
+          done
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,132 @@
+{
+  "name": "tdlib-native",
+  "version": "3.5.0",
+  "description": "🚀 Telegram TDLib native nodejs wrapper",
+  "packageManager": "npm@11.2.0",
+  "config": {
+    "tdlib_prebuilt_repository": "AlexXanderGrib/prebuilt-tdlib",
+    "tdlib_prebuilt_tag": "0.1.8.46-b498497"
+  },
+  "scripts": {
+    "test": "vitest",
+    "clean:dist": "rm -rf dist",
+    "clean:gyp": "node-gyp clean",
+    "build:types": "node scripts/generate-types.js && node scripts/generate-meta.js",
+    "build:dist": "vite build",
+    "build:docs": "typedoc",
+    "build:gyp": "node-gyp rebuild",
+    "build": "npm run build:dist && npm run build:docs",
+    "prepack": "npm run build",
+    "lint": "eslint src/*",
+    "prettify": "prettier --write src/**/*",
+    "install": "node-gyp rebuild"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "type": "commonjs",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./addon": {
+      "types": "./dist/addon.d.ts",
+      "require": "./dist/addon.js",
+      "import": "./dist/addon.mjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "require": "./dist/types.js",
+      "import": "./dist/types.mjs"
+    },
+    "./markup": {
+      "types": "./dist/markup.d.ts",
+      "require": "./dist/markup.js",
+      "import": "./dist/markup.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexXanderGrib/node-tdlib.git"
+  },
+  "keywords": [
+    "telegram",
+    "tdlib",
+    "tdl",
+    "node",
+    "backend"
+  ],
+  "files": [
+    "dist/",
+    "src/",
+    "coverage/",
+    "examples/",
+    "binding.gyp",
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE.txt",
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md"
+  ],
+  "author": "Alexander <me@alexxgrib.me> (https://alexxgrib.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexXanderGrib/node-tdlib/issues"
+  },
+  "homepage": "https://github.com/AlexXanderGrib/node-tdlib#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@types/debug": "^4.1.12",
+    "@types/node": "^22.13.14",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.23.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-unicorn": "^58.0.0",
+    "node-gyp": "^11.1.0",
+    "prettier": "^3.5.3",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-prettier": "^4.1.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typedoc": "^0.28.1",
+    "typedoc-plugin-markdown": "^4.6.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.28.0",
+    "vite": "^6.2.3",
+    "vite-plugin-dts": "^4.5.3",
+    "vitest": "^3.0.9"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "debug": "^4.4.0",
+    "detect-libc": "^2.0.3",
+    "node-addon-api": "^8.3.1"
+  },
+  "optionalDependencies": {
+    "@tdlib-native/tdjson-darwin-x64": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-darwin-arm64": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-linux-x64-musl": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-android-arm64-musl": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-win32-x64": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+    "@tdlib-native/tdjson-win32-ia32": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3"
+  }
+}

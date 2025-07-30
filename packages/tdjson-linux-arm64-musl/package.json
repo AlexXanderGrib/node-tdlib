@@ -1,0 +1,52 @@
+{
+  "name": "@tdlib-native/tdjson-linux-arm64-musl",
+  "version": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+  "description": "Prebuilt TDLib for linux arm64",
+  "keywords": [
+    "tdlib",
+    "binary",
+    "linux",
+    "arm64"
+  ],
+  "author": "Alexander <me@alexxgrib.me> (https://alexxgrib.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexXanderGrib/node-tdlib/issues"
+  },
+  "homepage": "https://github.com/AlexXanderGrib/node-tdlib#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexXanderGrib/node-tdlib.git",
+    "directory": "packages/tdjson-linux-arm64-musl"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "tdlib": {
+    "version": "1.8.46",
+    "commit": "b498497bbfd6b80c86f800b3546a0170206317d3"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "libc": [
+    "musl"
+  ],
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "libtdjson-arm64-musl.so",
+    "README.md",
+    "LICENSE.txt"
+  ]
+}

@@ -1,0 +1,1 @@
+export { TDLibAddon } from "./addon";

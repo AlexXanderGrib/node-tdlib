@@ -1,0 +1,27 @@
+{
+  "name": "TDLib Native",
+  "out": "./docs/api",
+  "entryPoints": [
+    "./src/index.ts",
+    "./src/addon.ts",
+    "./src/types.ts",
+    "./src/markup.ts"
+  ],
+  "exclude": [
+    "src/__test__",
+    "**/node_modules/**"
+  ],
+  "externalPattern": [
+    "**/node_modules/**"
+  ],
+  "excludePrivate": false,
+  "hideGenerator": false,
+  "readme": "README.md",
+  "theme": "default",
+  "tsconfig": "./tsconfig.json",
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ],
+  "outputFileStrategy": "modules",
+  "cleanOutputDir": true
+}
