@@ -6,8 +6,8 @@ jobs:
   test-base:
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-13, macos-14, windows-2022]
-        version: [18, 20, 22]
+        os: [ubuntu-latest, macos-13, macos-14, windows-2022]
+        version: [18, 20, 22, 24]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
           TDLIB_PATH: ${{ steps.test-bin.outputs.path }}
 
   test-linux-arm64:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         version: [20, 22]
@@ -76,7 +76,7 @@ jobs:
             sh -c "cd /usr/src/app && ./scripts/test-linux-arm64.sh"
 
   publish:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: [test-base, test-linux-arm64]
 
     permissions:
