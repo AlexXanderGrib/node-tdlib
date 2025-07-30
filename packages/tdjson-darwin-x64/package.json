@@ -1,6 +1,6 @@
 {
   "name": "@tdlib-native/tdjson-darwin-x64",
-  "version": "1.8.46-commit.b498497bbfd6b80c86f800b3546a0170206317d3",
+  "version": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
   "description": "Prebuilt TDLib for darwin x64",
   "keywords": [
     "tdlib",
@@ -26,8 +26,8 @@
     "node": ">=16"
   },
   "tdlib": {
-    "version": "1.8.46",
-    "commit": "b498497bbfd6b80c86f800b3546a0170206317d3"
+    "version": "1.8.51",
+    "commit": "6d74326c5ce53aeb52496f157f0080d9b8515970"
   },
   "os": [
     "darwin"

@@ -6,11 +6,11 @@ import { fileURLToPath } from "url";
 export const tdlibPath = fileURLToPath(new URL("libtdjson-arm64-musl.so", import.meta.url));
 /**
  * @type {string}
- * @default "1.8.46"
+ * @default "1.8.51"
  */
-export const version = "1.8.46";
+export const version = "1.8.51";
 /**
  * @type {string}
- * @default "b498497bbfd6b80c86f800b3546a0170206317d3"
+ * @default "6d74326c5ce53aeb52496f157f0080d9b8515970"
  */
-export const commit = "b498497bbfd6b80c86f800b3546a0170206317d3";
+export const commit = "6d74326c5ce53aeb52496f157f0080d9b8515970";

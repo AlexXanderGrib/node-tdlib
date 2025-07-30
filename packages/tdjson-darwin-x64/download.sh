@@ -1,1 +1,1 @@
-wget -O libtdjson-x64.dylib https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.46-b498497/libtdjson-x64.dylib
+wget -O libtdjson-x64.dylib https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.51-6d74326/libtdjson-x64.dylib
