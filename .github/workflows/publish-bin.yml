@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [20, 22]
+        version: [22]
         image: [bookworm, alpine]
     steps:
       - uses: actions/checkout@v4
