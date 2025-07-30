@@ -7,7 +7,7 @@ import { promiseWithResolvers } from "../shared/async";
 import { family } from "detect-libc";
 
 type Addon = {
-  td_json_client_create(timeoutMs: number): TDLibClient;
+  td_json_client_create(timeoutSec: number): TDLibClient;
   td_json_client_send(client: TDLibClient, json: string): void;
   td_json_client_receive(client: TDLibClient): Promise<string | null>;
   td_json_client_execute(client: TDLibClient | null, json: string): string | null;
@@ -23,7 +23,7 @@ type Addon = {
   td_receive(): Promise<string | null>;
   td_execute(json: string): string;
 
-  tdn_init(timeoutMs: number): void;
+  tdn_init(timeoutSec: number): void;
   tdn_ref(): void;
   tdn_unref(): void;
 

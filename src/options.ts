@@ -44,9 +44,7 @@ type TDLibOptionsWritable = {
   readonly ignore_platform_restrictions?: boolean;
   /** If true, sensitive content will be shown on all user devices. getOption needs to be called explicitly to fetch the latest value of the option, changed from another device */
   readonly ignore_sensitive_content_restrictions?: boolean;
-  /** If true, other users will be allowed to see the current user's location. getOption needs to be called explicitly to fetch the latest value of the option, changed from another device */
-  readonly is_location_visible?: boolean;
-  /** Since TDLib 1.8.36. If true, added paid reactions are anonymous by default. If false, they are non-anonymous. */
+  /** TDLib 1.8.36-1.8.44. If true, added paid reactions are anonymous by default. If false, they are non-anonymous. */
   readonly is_paid_reaction_anonymous?: boolean;
   /** Path to a database for storing language pack strings, so that this database can be shared between different accounts. By default, language pack strings are stored only in memory. Changes of value of this option will be applied only after TDLib restart, so it should be set before call to setTdlibParameters. */
   readonly language_pack_database_path?: string;
@@ -81,6 +79,10 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
   readonly active_story_count_max?: integer;
   /** Since TDLib 1.8.24. The maximum number of added shareable chat folders for the current user */
   readonly added_shareable_chat_folder_count_max?: integer;
+  /** Since TDLib 1.8.41. The maximum commission that can be used for an affiliate program */
+  readonly affiliate_program_commission_per_mille_max?: integer;
+  /** Since TDLib 1.8.41. The minimum commission that can be used for an affiliate program */
+  readonly affiliate_program_commission_per_mille_min?: integer;
   /** Username of a bot which can be used in inline mode for animations search */
   readonly animation_search_bot_username?: string;
   /** Since TDLib 1.8.24. User identifier of the Telegram Anti-Spam bot */
@@ -95,6 +97,8 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
   readonly bio_length_max?: integer;
   /** Since TDLib 1.8.34. The maximum number of media previews that can be added for a bot */
   readonly bot_media_preview_count_max?: integer;
+  /** Since TDLib 1.8.42. The maximum length of custom description for verification provided by a third-party organization */
+  readonly bot_verification_custom_description_length_max?: integer;
   /** Since TDLib 1.8.28. The maximum number of created short chat links by a Telegram Business account */
   readonly business_chat_link_count_max?: integer;
   /** Since TDLib 1.8.28. The maximum allowed length of the start page message of a Telegram Business account */
@@ -105,8 +109,12 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
   readonly call_connect_timeout_ms?: integer;
   /** Maximum time to wait for call packet delivery to be passed to libtgvoip */
   readonly call_packet_timeout_ms?: integer;
+  /** Since TDLib 1.8.48. If true, the user can accept calls from this device */
+  readonly can_accept_calls?: boolean;
   /** If true, the option “archive_and_mute_new_chats_from_unknown_users” can be changed */
   readonly can_archive_and_mute_new_chats_from_unknown_users?: boolean;
+  /** Since TDLib 1.8.46. If true, the user can enable paid messages */
+  readonly can_enable_paid_messages?: boolean;
   /** Since TDLib 1.8.34. If true, Telegram Stars can be gifted to other users */
   readonly can_gift_stars?: boolean;
   /** If true, the option “ignore_sensitive_content_restrictions” can be changed */
@@ -149,6 +157,14 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
   readonly gift_premium_from_attachment_menu?: boolean;
   /** Since TDLib 1.8.24. If true, then a suggestion to gift Telegram Premium needs to be shown in the input field if appropriate */
   readonly gift_premium_from_input_field?: boolean;
+  /** Since TDLib 1.8.49. The amount of Telegram Stars received by the user for each 1000 Telegram Stars paid for gifts bought from them */
+  readonly gift_resale_earnings_per_mille?: integer;
+  /** Since TDLib 1.8.49. The maximum price in Telegram Stars for a gift that is available for resale */
+  readonly gift_resale_star_count_max?: integer;
+  /** Since TDLib 1.8.49. The minimum price in Telegram Stars for a gift that is available for resale */
+  readonly gift_resale_star_count_min?: integer;
+  /** Since TDLib 1.8.38. The number of seconds after gift receiving for which it can be sold for Telegram Stars */
+  readonly gift_sell_period?: integer;
   /** Since TDLib 1.8.37. The maximum length of a message added to a sent gift */
   readonly gift_text_length_max?: integer;
   /** Since TDLib 1.8.24. The maximum number of additional chats that can be added to a giveaway */
@@ -161,6 +177,8 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
   readonly giveaway_duration_max?: integer;
   /** Identifier of the bot which is shown as the sender of anonymous messages in groups when viewed from an outdated client */
   readonly group_anonymous_bot_user_id?: integer;
+  /** Since TDLib 1.8.48. The maximum number of participants in a group call that is not bound to a chat */
+  readonly group_call_participant_count_max?: integer;
   /** Since TDLib 1.8.24. If true, then the current user subscribed to Telegram Premium */
   readonly is_premium?: boolean;
   /** Since TDLib 1.8.24. If true, then the current user can subscribe to Telegram Premium. Otherwise, all premium-related features must be hidden */
@@ -183,6 +201,10 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
   readonly notification_sound_size_max?: integer;
   /** Since TDLib 1.8.32. The maximum price of a paid post in Telegram Stars */
   readonly paid_media_message_star_count_max?: integer;
+  /** Since TDLib 1.8.46. The maximum number of Telegram Stars that can be set as the price for paid messages */
+  readonly paid_message_star_count_max?: integer;
+  /** Since TDLib 1.8.46. The amount of Telegram Stars received by the user or the supergroup for each 1000 Telegram Stars paid for their incoming messages */
+  readonly paid_message_earnings_per_mille?: integer;
   /** Since TDLib 1.8.35. The maximum number of Telegram Stars that can be added as paid reaction to a message in one request */
   readonly paid_reaction_star_count_max?: integer;
   /** Maximum number of pinned cloud chats in the Archive chat list for the current user. The same amount of secret chats can be pinned locally */
@@ -191,6 +213,8 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
   readonly pinned_chat_count_max?: integer;
   /** Since TDLib 1.8.24. The maximum number of pinned forum topics */
   readonly pinned_forum_topic_count_max?: integer;
+  /** Since TDLib 1.8.46. The maximum number of pinned unique gifts */
+  readonly pinned_gift_count_max?: integer;
   /** Since TDLib 1.8.24. The maximum number of pinned topics in Saved Messages for the current user */
   readonly pinned_saved_messages_topic_count_max?: integer;
   /** Since TDLib 1.8.29. The maximum number of pinned stories on a chat page */
@@ -245,12 +269,16 @@ type TDLibOptionsReadable = TDLibOptionsWritable & {
   readonly test_mode?: boolean;
   /** Since TDLib 1.8.35. The number of US dollars that can be received by withdrawing 1000 Telegram Stars */
   readonly thousand_star_to_usd_rate?: integer;
+  /** Since TDLib 1.8.45. A prefix of the URL that can be used to get information about a TON blockchain address */
+  readonly ton_blockchain_explorer_url?: string;
   /** An estimation of the current Unix timestamp. The option will not be updated automatically unless the difference between the previous estimation and the locally available monotonic clocks changes significantly */
   readonly unix_time?: integer;
   /** Since TDLib 1.8.35. The number of US dollars needed to buy 1000 Telegram Stars */
   readonly usd_to_thousand_star_rate?: integer;
   /** Username of a bot which can be used in inline mode for venues search */
   readonly venue_search_bot_username?: string;
+  /** Since TDLib 1.8.37. Identifier of the Verification Codes chat with codes from Telegram Gateway */
+  readonly verification_codes_bot_chat_id?: integer;
   /** TDLib version. This options is guaranteed to come before all other updates. Can be received synchronously. */
   readonly version?: string;
   /** Since TDLib 1.8.32. A space-separated list of URL protocols that are allowed to be open by the call to web_app_open_link from Web Apps. */
@@ -315,7 +343,7 @@ export class TDLibOptions {
     const warner = setTimeout(() => {
       warnOnce(
         "W001",
-        "tdlibOptions.get() takes to long to respond. This method waits for tdlibParameters to be passed. Use api.setTdlibParameters()"
+        "tdlibOptions.get() takes too long to respond. This method waits for tdlibParameters to be passed. Use api.setTdlibParameters()"
       );
     }, 1000);
 
@@ -380,7 +408,7 @@ export class TDLibOptions {
     const warner = setTimeout(() => {
       warnOnce(
         "W002",
-        "tdlibOptions.set() takes to long to respond. This method waits for tdlibParameters to be passed. Use api.setTdlibParameters()"
+        "tdlibOptions.set() takes too long to respond. This method waits for tdlibParameters to be passed. Use api.setTdlibParameters()"
       );
     }, 1000);
 

@@ -648,10 +648,10 @@ namespace TdCallbacks {
     auto *data = new TsfnData(verbosity_level, safe_message);
     tsfn_ptr->NonBlockingCall(data);
     
-    if (verbosity_level == 0) {
-      // Brief pause for critical messages, but much shorter than before
-      std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    }
+    // if (verbosity_level == 0) {
+    //   // Brief pause for critical messages, but much shorter than before
+    //   std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    // }
   }
 
   void SetLogMessageCallback(const Napi::CallbackInfo& info) {

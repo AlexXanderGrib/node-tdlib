@@ -2,7 +2,7 @@ const { writeFile } = require("fs/promises");
 const { resolve } = require("path");
 const { downloader } = require("./lib");
 
-(async function main(params) {
+(async function main() {
   const text = (await downloader.get("meta.yml")).toString('utf-8');
   const meta = {};
 
