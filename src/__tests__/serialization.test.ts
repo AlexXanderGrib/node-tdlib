@@ -108,9 +108,7 @@ describe("Client Serialization (async)", { concurrent: true }, () => {
 
     const commitHash = await client.api.getOption({ name: "commit_hash" });
     expect(commitHash._).toBe("optionValueString");
-    expect([Meta.commitHash, "GITDIR-NOTFOUND"]).toContain(
-      (commitHash as optionValueString).value
-    );
+    expect(Meta.commitHash).toBe((commitHash as optionValueString).value);
   });
 
   test("error", async () => {

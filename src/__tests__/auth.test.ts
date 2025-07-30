@@ -16,7 +16,7 @@ describe("Updates", () => {
 
       const authenticator = Authenticator.create(client)
         .tdlibParameters(async () => {
-          const version = await client.api.getOption({ name: "version" });
+          const version = await client.tdlibOptions.get("version");
           const apiHash = process.env.TELEGRAM_API_HASH || "";
 
           return {
@@ -24,9 +24,7 @@ describe("Updates", () => {
             api_id: Number.parseInt(process.env.TELEGRAM_API_ID || "0"),
             system_language_code: "ru",
             device_model: "Test Server github.com/AlexXanderGrib/node-tdlib",
-            application_version: `Build for TDLib-${
-              version._ === "optionValueString" ? version.value : ""
-            }`,
+            application_version: `Build for TDLib-${version ?? ""}`,
             database_directory: path.resolve(".td/db"),
             database_encryption_key: apiHash,
             files_directory: path.resolve(".td/files"),
