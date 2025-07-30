@@ -12,9 +12,21 @@ function getCurrentFile() {
     return import.meta.filename;
   }
 
+  // Ignore while supporting node 18
+  // eslint-disable-next-line unicorn/prefer-import-meta-properties
   return fileURLToPath(import.meta.url);
 }
 
+/**
+ * Used to compile getCurrentFile() by replacing it
+ * see vite.config.mjs
+ * 
+ * compilerMagic$(getCurrentFile()) is replaced by
+ * - __filename for cjs
+ * - fileURLToPath(import.meta.url) for esm
+ * 
+ * it still just a normal function for tests, where replace does not happen
+ */
 function compilerMagic$<T>(value: T): T {
   return value;
 }

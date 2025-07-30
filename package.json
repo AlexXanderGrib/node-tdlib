@@ -11,7 +11,7 @@
     "test": "vitest",
     "clean:dist": "rm -rf dist",
     "clean:gyp": "node-gyp clean",
-    "build:types": "node scripts/generate-types.js && node scripts/generate-meta.js",
+    "sync-tdlib": "node scripts/prepack-binary.js && node scripts/generate-types.js && node scripts/generate-meta.js",
     "build:dist": "vite build",
     "build:docs": "typedoc",
     "build:gyp": "node-gyp rebuild",
