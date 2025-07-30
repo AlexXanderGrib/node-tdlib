@@ -97,7 +97,7 @@ export class Client {
    */
   constructor(adapter: TDLib) {
     this._adapter = adapter;
-    this._client = adapter.create(3000);
+    this._client = adapter.create(300);
     Object.seal(this);
   }
 
