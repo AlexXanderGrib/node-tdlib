@@ -1,6 +1,6 @@
 {
   "name": "tdlib-native",
-  "version": "3.7.0",
+  "version": "3.7.1",
   "description": "🚀 Telegram TDLib native nodejs wrapper",
   "packageManager": "npm@11.5.2",
   "config": {
@@ -80,7 +80,8 @@
     "CONTRIBUTING.md",
     "LICENSE.txt",
     "SECURITY.md",
-    "CODE_OF_CONDUCT.md"
+    "CODE_OF_CONDUCT.md",
+    "td.d.ts"
   ],
   "author": "Alexander <me@alexxgrib.me> (https://alexxgrib.me/)",
   "license": "MIT",

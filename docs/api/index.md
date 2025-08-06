@@ -10,7 +10,7 @@
 
 ### Authenticator
 
-Defined in: [auth.ts:92](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L92)
+Defined in: [auth.ts:92](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L92)
 
 #### Export
 
@@ -37,7 +37,7 @@ Authenticator
 
 > `private` **new Authenticator**(`client`): [`Authenticator`](#authenticator)
 
-Defined in: [auth.ts:115](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L115)
+Defined in: [auth.ts:115](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L115)
 
 Creates an instance of Authenticator.
 
@@ -61,13 +61,13 @@ Authenticator
 
 > `private` `readonly` **\_client**: [`Client`](#client)
 
-Defined in: [auth.ts:107](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L107)
+Defined in: [auth.ts:107](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L107)
 
 ##### \_state
 
 > `private` `readonly` **\_state**: `Partial`\<`AuthenticatorState`\> = `{}`
 
-Defined in: [auth.ts:108](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L108)
+Defined in: [auth.ts:108](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L108)
 
 #### Methods
 
@@ -75,7 +75,7 @@ Defined in: [auth.ts:108](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74
 
 > `private` **\_handleUpdate**(`state`, `resolve`): `Promise`\<`void`\>
 
-Defined in: [auth.ts:128](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L128)
+Defined in: [auth.ts:128](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L128)
 
 ###### Parameters
 
@@ -101,7 +101,7 @@ Authenticator
 
 > **authenticate**(`options?`): `Promise`\<`void`\>
 
-Defined in: [auth.ts:254](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L254)
+Defined in: [auth.ts:254](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L254)
 
 ###### Parameters
 
@@ -139,7 +139,7 @@ Authenticator
 
 > **code**(`code`): `StageUser`
 
-Defined in: [auth.ts:336](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L336)
+Defined in: [auth.ts:336](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L336)
 
 ###### Parameters
 
@@ -165,7 +165,7 @@ Authenticator
 
 > **email**(`email`): `StageUser`
 
-Defined in: [auth.ts:324](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L324)
+Defined in: [auth.ts:324](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L324)
 
 ###### Parameters
 
@@ -191,7 +191,7 @@ Authenticator
 
 > **emailCode**(`emailCode`): `StageUser`
 
-Defined in: [auth.ts:348](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L348)
+Defined in: [auth.ts:348](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L348)
 
 ###### Parameters
 
@@ -217,7 +217,7 @@ Authenticator
 
 > **password**(`password`): `StageUser`
 
-Defined in: [auth.ts:360](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L360)
+Defined in: [auth.ts:360](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L360)
 
 ###### Parameters
 
@@ -243,7 +243,7 @@ Authenticator
 
 > **phone**(`phone`, `settings?`): `StageUser`
 
-Defined in: [auth.ts:308](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L308)
+Defined in: [auth.ts:308](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L308)
 
 ###### Parameters
 
@@ -273,7 +273,7 @@ Authenticator
 
 > **register**(`data`): `StageUser`
 
-Defined in: [auth.ts:372](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L372)
+Defined in: [auth.ts:372](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L372)
 
 ###### Parameters
 
@@ -299,7 +299,7 @@ Authenticator
 
 > **tdlibParameters**(`parameters`): `StageSelect`
 
-Defined in: [auth.ts:283](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L283)
+Defined in: [auth.ts:283](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L283)
 
 ###### Parameters
 
@@ -325,7 +325,7 @@ Authenticator
 
 > **token**(`token`): `StageAuthenticate`
 
-Defined in: [auth.ts:295](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L295)
+Defined in: [auth.ts:295](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L295)
 
 ###### Parameters
 
@@ -351,7 +351,7 @@ Authenticator
 
 > `static` **create**(`client`): `StageTDLibParameters`
 
-Defined in: [auth.ts:103](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/auth.ts#L103)
+Defined in: [auth.ts:103](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/auth.ts#L103)
 
 ###### Parameters
 
@@ -375,7 +375,7 @@ Authenticator
 
 ### Client
 
-Defined in: [client.ts:86](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L86)
+Defined in: [client.ts:86](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L86)
 
 #### Export
 
@@ -387,7 +387,7 @@ Client
 
 > **new Client**(`adapter`): [`Client`](#client)
 
-Defined in: [client.ts:98](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L98)
+Defined in: [client.ts:98](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L98)
 
 Creates an instance of Client.
 
@@ -411,55 +411,55 @@ Client
 
 > `private` `readonly` **\_adapter**: `TDLib`
 
-Defined in: [client.ts:90](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L90)
+Defined in: [client.ts:90](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L90)
 
 ##### \_client
 
 > `private` `readonly` **\_client**: `TDLibClient`
 
-Defined in: [client.ts:87](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L87)
+Defined in: [client.ts:87](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L87)
 
 ##### \_requests
 
 > `private` `readonly` **\_requests**: `Map`\<`number`, `PromiseWithResolvers`\<`any`\>\>
 
-Defined in: [client.ts:88](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L88)
+Defined in: [client.ts:88](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L88)
 
 ##### \_running
 
 > `private` **\_running**: `undefined` \| `Promise`\<`void`\>
 
-Defined in: [client.ts:252](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L252)
+Defined in: [client.ts:252](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L252)
 
 ##### \_state
 
 > `private` **\_state**: `ClientState` = `ClientState.PAUSED`
 
-Defined in: [client.ts:91](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L91)
+Defined in: [client.ts:91](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L91)
 
 ##### \_tdlibOptions
 
 > `readonly` **\_tdlibOptions**: [`TDLibOptions`](#tdliboptions-1)
 
-Defined in: [client.ts:106](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L106)
+Defined in: [client.ts:106](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L106)
 
 ##### \_updates
 
 > `private` `readonly` **\_updates**: `EventBus`\<[`Update`](types/README.md#update)\>
 
-Defined in: [client.ts:89](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L89)
+Defined in: [client.ts:89](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L89)
 
 ##### api
 
 > `readonly` **api**: [`$AsyncApi`](types/README.md#asyncapi)
 
-Defined in: [client.ts:104](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L104)
+Defined in: [client.ts:104](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L104)
 
 ##### syncApi
 
 > `readonly` **syncApi**: [`$SyncApi`](types/README.md#syncapi)
 
-Defined in: [client.ts:105](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L105)
+Defined in: [client.ts:105](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L105)
 
 #### Accessors
 
@@ -469,7 +469,7 @@ Defined in: [client.ts:105](https://github.com/AlexXanderGrib/node-tdlib/blob/ce
 
 > **get** **tdlibOptions**(): [`TDLibOptions`](#tdliboptions-1)
 
-Defined in: [client.ts:326](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L326)
+Defined in: [client.ts:326](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L326)
 
 ###### See
 
@@ -489,7 +489,7 @@ Client
 
 > **get** **updates**(): `Observable`\<[`Update`](types/README.md#update)\>
 
-Defined in: [client.ts:337](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L337)
+Defined in: [client.ts:337](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L337)
 
 ###### Memberof
 
@@ -505,7 +505,7 @@ Client
 
 > `private` **\_thread**(): `Promise`\<`void`\>
 
-Defined in: [client.ts:261](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L261)
+Defined in: [client.ts:261](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L261)
 
 ###### Returns
 
@@ -519,7 +519,7 @@ Client
 
 > **destroy**(): `Promise`\<`void`\>
 
-Defined in: [client.ts:381](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L381)
+Defined in: [client.ts:381](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L381)
 
 ###### Returns
 
@@ -533,7 +533,7 @@ Client
 
 > **execute**\<`T`\>(`method`, `parameters`): `ReturnType`\<[`$SyncApi`](types/README.md#syncapi)\[`T`\]\>
 
-Defined in: [client.ts:245](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L245)
+Defined in: [client.ts:245](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L245)
 
 ###### Type Parameters
 
@@ -569,7 +569,7 @@ Client
 
 > **invoke**\<`T`\>(`method`, `parameters`): `Promise`\<`ReturnType`\<[`$MethodsDict`](types/README.md#methodsdict)\[`T`\]\>\>
 
-Defined in: [client.ts:118](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L118)
+Defined in: [client.ts:118](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L118)
 
 ###### Type Parameters
 
@@ -605,7 +605,7 @@ Client
 
 > **pause**(): `Promise`\<`void`\>
 
-Defined in: [client.ts:365](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L365)
+Defined in: [client.ts:365](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L365)
 
 ###### Returns
 
@@ -619,7 +619,7 @@ Client
 
 > **start**(): `Promise`\<`void`\>
 
-Defined in: [client.ts:347](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L347)
+Defined in: [client.ts:347](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L347)
 
 ###### Returns
 
@@ -633,7 +633,7 @@ Client
 
 > `static` **disableLogs**(`lib`): `void`
 
-Defined in: [client.ts:153](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L153)
+Defined in: [client.ts:153](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L153)
 
 Disables logging of TDLib instance
 
@@ -657,7 +657,7 @@ Client
 
 > `static` **execute**\<`T`\>(`executor`, `method`, `parameters`): `ReturnType`\<[`$SyncApi`](types/README.md#syncapi)\[`T`\]\>
 
-Defined in: [client.ts:168](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L168)
+Defined in: [client.ts:168](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L168)
 
 ###### Type Parameters
 
@@ -697,7 +697,7 @@ Client
 
 ### TDError
 
-Defined in: [client.ts:37](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L37)
+Defined in: [client.ts:37](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L37)
 
 #### Export
 
@@ -719,7 +719,7 @@ TDError
 
 > **new TDError**(`message`, `options?`): [`TDError`](#tderror)
 
-Defined in: [client.ts:51](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L51)
+Defined in: [client.ts:51](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L51)
 
 Creates an instance of TDError.
 
@@ -761,7 +761,7 @@ TDError
 
 > `readonly` **\_**: `"error"` = `"error"`
 
-Defined in: [client.ts:38](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L38)
+Defined in: [client.ts:38](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L38)
 
 ###### Implementation of
 
@@ -771,7 +771,7 @@ Defined in: [client.ts:38](https://github.com/AlexXanderGrib/node-tdlib/blob/ce7
 
 > `readonly` **code**: `number`
 
-Defined in: [client.ts:39](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L39)
+Defined in: [client.ts:39](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L39)
 
 Error code; subject to future changes. If the error code is 406, the error message must not be processed in any way and must not be displayed to the user
 
@@ -783,13 +783,13 @@ Error code; subject to future changes. If the error code is 406, the error messa
 
 > `readonly` **method**: `string`
 
-Defined in: [client.ts:40](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L40)
+Defined in: [client.ts:40](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L40)
 
 ##### name
 
 > **name**: `string` = `"TDError"`
 
-Defined in: [client.ts:43](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L43)
+Defined in: [client.ts:43](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L43)
 
 ###### Overrides
 
@@ -799,7 +799,7 @@ Defined in: [client.ts:43](https://github.com/AlexXanderGrib/node-tdlib/blob/ce7
 
 > `readonly` **parameters**: `unknown`
 
-Defined in: [client.ts:41](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L41)
+Defined in: [client.ts:41](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L41)
 
 #### Methods
 
@@ -807,7 +807,7 @@ Defined in: [client.ts:41](https://github.com/AlexXanderGrib/node-tdlib/blob/ce7
 
 > **toJSON**(): `object`
 
-Defined in: [client.ts:67](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/client.ts#L67)
+Defined in: [client.ts:67](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/client.ts#L67)
 
 ###### Returns
 
@@ -845,7 +845,7 @@ TDError
 
 ### TDLibOptions
 
-Defined in: [options.ts:306](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/options.ts#L306)
+Defined in: [options.ts:306](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/options.ts#L306)
 
 #### See
 
@@ -861,7 +861,7 @@ TDLibOptions
 
 > **new TDLibOptions**(`api`): [`TDLibOptions`](#tdliboptions-1)
 
-Defined in: [options.ts:327](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/options.ts#L327)
+Defined in: [options.ts:327](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/options.ts#L327)
 
 Creates an instance of TDLibOptions.
 
@@ -885,7 +885,7 @@ TDLibOptions
 
 > `private` `readonly` **\_api**: [`$AsyncApi`](types/README.md#asyncapi)
 
-Defined in: [options.ts:320](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/options.ts#L320)
+Defined in: [options.ts:320](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/options.ts#L320)
 
 #### Methods
 
@@ -893,7 +893,7 @@ Defined in: [options.ts:320](https://github.com/AlexXanderGrib/node-tdlib/blob/c
 
 > **assign**(`values`): `Promise`\<`void`\>
 
-Defined in: [options.ts:442](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/options.ts#L442)
+Defined in: [options.ts:442](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/options.ts#L442)
 
 **Waits for `setTdlibParameters` to be called to respond.**
 
@@ -920,7 +920,7 @@ TDLibOptions
 
 > **delete**(`key`): `Promise`\<`void`\>
 
-Defined in: [options.ts:429](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/options.ts#L429)
+Defined in: [options.ts:429](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/options.ts#L429)
 
 **Waits for `setTdlibParameters` to be called to respond.**
 
@@ -947,7 +947,7 @@ TDLibOptions
 
 > **get**\<`T`\>(`key`): `Promise`\<`OptionsReadable`\[`T`\]\>
 
-Defined in: [options.ts:342](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/options.ts#L342)
+Defined in: [options.ts:342](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/options.ts#L342)
 
 **Waits for `setTdlibParameters` to be called to respond.**
 Exception: "version", "commit_hash"
@@ -983,7 +983,7 @@ TDLibOptions
 
 > **set**\<`T`\>(`key`, `value`): `Promise`\<`void`\>
 
-Defined in: [options.ts:381](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/options.ts#L381)
+Defined in: [options.ts:381](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/options.ts#L381)
 
 **Waits for `setTdlibParameters` to be called to respond.**
 
@@ -1022,7 +1022,7 @@ TDLibOptions
 
 > `static` **for**(`api`): [`TDLibOptions`](#tdliboptions-1)
 
-Defined in: [options.ts:316](https://github.com/AlexXanderGrib/node-tdlib/blob/ce74c9989ef8f5c321eca112bb6ffe9796056b41/src/options.ts#L316)
+Defined in: [options.ts:316](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/options.ts#L316)
 
 ###### Parameters
 
