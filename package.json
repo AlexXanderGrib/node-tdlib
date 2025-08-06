@@ -1,8 +1,8 @@
 {
   "name": "tdlib-native",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "description": "🚀 Telegram TDLib native nodejs wrapper",
-  "packageManager": "npm@11.5.1",
+  "packageManager": "npm@11.5.2",
   "config": {
     "tdlib_prebuilt_repository": "AlexXanderGrib/prebuilt-tdlib",
     "tdlib_prebuilt_tag": "0.1.8.51-6d74326"
@@ -29,6 +29,11 @@
   "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
+    "./td.node": {
+      "types": "./td.d.ts",
+      "require": "./build/Release/td.node",
+      "import": null
+    },
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
@@ -87,7 +92,7 @@
     "@eslint/js": "^9.32.0",
     "@rollup/plugin-replace": "^6.0.2",
     "@types/debug": "^4.1.12",
-    "@types/node": "^24.1.0",
+    "@types/node": "^24.2.0",
     "dotenv": "^17.2.1",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
@@ -95,10 +100,10 @@
     "eslint-plugin-unicorn": "^60.0.0",
     "node-gyp": "^11.3.0",
     "prettier": "^3.6.2",
-    "typedoc": "^0.28.8",
+    "typedoc": "^0.28.9",
     "typedoc-plugin-markdown": "^4.8.0",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.0",
     "vite": "^7.0.6",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
