@@ -53,8 +53,9 @@ jobs:
   test-linux-arm64:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        version: [22]
+        version: [20, 22, 24]
         image: [bookworm, alpine]
     steps:
       - uses: actions/checkout@v4
@@ -71,7 +72,7 @@ jobs:
       - name: Test in docker
         run: |
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-          docker run --rm -e TELEGRAM_API_HASH="${{ secrets.TELEGRAM_API_HASH }}" -e TELEGRAM_API_ID="${{ secrets.TELEGRAM_API_ID }}"  \
+          docker run --rm --memory="10gb" -e TELEGRAM_API_HASH="${{ secrets.TELEGRAM_API_HASH }}" -e TELEGRAM_API_ID="${{ secrets.TELEGRAM_API_ID }}"  \
             -v $(pwd):/usr/src/app --platform linux/arm64 node:${{matrix.version}}-${{matrix.image}} \
             sh -c "cd /usr/src/app && ./scripts/test-linux-arm64.sh"
 
