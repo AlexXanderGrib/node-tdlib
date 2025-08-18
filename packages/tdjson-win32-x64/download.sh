@@ -1,1 +1,1 @@
-wget -O tdjson-x64.dll https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.51-6d74326/tdjson-x64.dll
+wget -O tdjson-x64.dll https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.52-18f6c78/tdjson-x64.dll

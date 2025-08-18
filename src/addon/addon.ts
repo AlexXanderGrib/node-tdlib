@@ -4,7 +4,6 @@ import type { TDLib, TDLibClient } from "../shared/client";
 import { getAddonFolderPath } from "./path";
 import { createRequire } from "module";
 import { promiseWithResolvers } from "../shared/async";
-import { family } from "detect-libc";
 import { Addon } from "./native-exports";
 
 const builtinAddonPath = path.resolve(
@@ -37,27 +36,8 @@ async function loadAddon(addonPath: string = builtinAddonPath): Promise<Addon> {
  * @returns {Promise<string>}  {Promise<string>}
  */
 async function getTDLibPath(): Promise<string> {
-  let packageName = `@tdlib-native/tdjson-${process.platform}-${process.arch}`;
-
-  if (process.platform === "android") {
-    packageName += "-glibc";
-  }
-
-  if (process.platform === "linux") {
-    packageName += `-${await family()}`;
-  }
-
-  try {
-    const { tdlibPath } = await import(packageName);
-    return tdlibPath;
-  } catch (error) {
-    throw new Error(
-      `There is no prebuilt TDLib for your platform (${process.platform} ${process.arch}). You can ask for it: https://github.com/AlexXanderGrib/node-tdlib/issues`,
-      {
-        cause: error
-      }
-    );
-  }
+  const provider = await import("@tdlib-native/tdjson" as string);
+  return provider.tdlibPath;
 }
 
 class ReceiveQueueEntry {

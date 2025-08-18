@@ -4,11 +4,11 @@
 export const tdlibPath: string;
 /**
  * @type {string}
- * @default "1.8.51"
+ * @default "1.8.52"
  */
 export const version: string;
 /**
  * @type {string}
- * @default "6d74326c5ce53aeb52496f157f0080d9b8515970"
+ * @default "18f6c78cfb736cb24db789534e7ff3d274df77b3"
  */
 export const commit: string;

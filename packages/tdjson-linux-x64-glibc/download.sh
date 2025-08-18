@@ -1,1 +1,1 @@
-wget -O libtdjson-x64-glibc.so https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.51-6d74326/libtdjson-x64-glibc.so
+wget -O libtdjson-x64-glibc.so https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.52-18f6c78/libtdjson-x64-glibc.so

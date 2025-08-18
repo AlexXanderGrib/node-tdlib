@@ -5,7 +5,7 @@
   "packageManager": "npm@11.5.2",
   "config": {
     "tdlib_prebuilt_repository": "AlexXanderGrib/prebuilt-tdlib",
-    "tdlib_prebuilt_tag": "0.1.8.51-6d74326"
+    "tdlib_prebuilt_tag": "0.1.8.52-18f6c78"
   },
   "scripts": {
     "test": "vitest",
@@ -70,6 +70,7 @@
     "backend"
   ],
   "files": [
+    "addon/",
     "dist/",
     "src/",
     "coverage/",
@@ -90,22 +91,23 @@
   },
   "homepage": "https://github.com/AlexXanderGrib/node-tdlib#readme",
   "devDependencies": {
-    "@eslint/js": "^9.32.0",
+    "@eslint/js": "^9.33.0",
     "@rollup/plugin-replace": "^6.0.2",
     "@types/debug": "^4.1.12",
-    "@types/node": "^24.2.0",
+    "@types/node": "^24.3.0",
+    "detect-libc": "^2.0.4",
     "dotenv": "^17.2.1",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-unicorn": "^60.0.0",
     "node-gyp": "^11.3.0",
     "prettier": "^3.6.2",
-    "typedoc": "^0.28.9",
-    "typedoc-plugin-markdown": "^4.8.0",
+    "typedoc": "^0.28.10",
+    "typedoc-plugin-markdown": "^4.8.1",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.0",
-    "vite": "^7.0.6",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
   },
@@ -114,19 +116,9 @@
   },
   "dependencies": {
     "debug": "^4.4.1",
-    "detect-libc": "^2.0.4",
     "node-addon-api": "^8.5.0"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-darwin-x64": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-darwin-arm64": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-linux-x64-musl": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-android-arm64-musl": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-win32-x64": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970",
-    "@tdlib-native/tdjson-win32-ia32": "1.8.51-commit.6d74326c5ce53aeb52496f157f0080d9b8515970"
+    "@tdlib-native/tdjson": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3"
   }
 }

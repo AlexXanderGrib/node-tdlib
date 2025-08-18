@@ -3,14 +3,16 @@ import { fileURLToPath } from "url";
 /**
  * @type {string}
  */
-export const tdlibPath = fileURLToPath(new URL("libtdjson-arm64-glibc.so", import.meta.url));
+export const tdlibPath = fileURLToPath(
+  new URL("libtdjson-arm64-glibc.so", import.meta.url)
+);
 /**
  * @type {string}
- * @default "1.8.51"
+ * @default "1.8.52"
  */
-export const version = "1.8.51";
+export const version = "1.8.52";
 /**
  * @type {string}
- * @default "6d74326c5ce53aeb52496f157f0080d9b8515970"
+ * @default "18f6c78cfb736cb24db789534e7ff3d274df77b3"
  */
-export const commit = "6d74326c5ce53aeb52496f157f0080d9b8515970";
+export const commit = "18f6c78cfb736cb24db789534e7ff3d274df77b3";

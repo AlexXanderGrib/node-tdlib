@@ -1,0 +1,55 @@
+{
+  "name": "@tdlib-native/tdjson",
+  "version": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+  "description": "Prebuilt TDLib that downloads version for current os",
+  "keywords": [
+    "tdlib",
+    "binary"
+  ],
+  "author": "Alexander <me@alexxgrib.me> (https://alexxgrib.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexXanderGrib/node-tdlib/issues"
+  },
+  "homepage": "https://github.com/AlexXanderGrib/node-tdlib#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexXanderGrib/node-tdlib.git",
+    "directory": "packages/tdjson"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "tdlib": {
+    "version": "1.8.52",
+    "commit": "18f6c78cfb736cb24db789534e7ff3d274df77b3"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "dependencies": {
+    "detect-libc": "^2.0.4"
+  },
+  "optionalDependencies": {
+    "@tdlib-native/tdjson-darwin-x64": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-darwin-arm64": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-linux-x64-musl": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-android-arm64-musl": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-win32-x64": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+    "@tdlib-native/tdjson-win32-ia32": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3"
+  }
+}

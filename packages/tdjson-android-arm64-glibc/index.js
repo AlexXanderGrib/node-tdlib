@@ -1,14 +1,17 @@
 /**
  * @type {string}
  */
-module.exports.tdlibPath = require('path').resolve(__dirname, "libtdjson-arm64-glibc.so");
+module.exports.tdlibPath = require("path").resolve(
+  __dirname,
+  "libtdjson-arm64-glibc.so"
+);
 /**
  * @type {string}
- * @default "1.8.51"
+ * @default "1.8.52"
  */
-module.exports.version = "1.8.51";
+module.exports.version = "1.8.52";
 /**
  * @type {string}
- * @default "6d74326c5ce53aeb52496f157f0080d9b8515970"
+ * @default "18f6c78cfb736cb24db789534e7ff3d274df77b3"
  */
-module.exports.commit = "6d74326c5ce53aeb52496f157f0080d9b8515970";
+module.exports.commit = "18f6c78cfb736cb24db789534e7ff3d274df77b3";

@@ -105,5 +105,12 @@ jobs:
             echo "$dir is not a directory"
           fi
           done
+
+          if [ -d ./packages/tdjson ]; then
+            echo "Publishing tdjson"
+            cd ./packages/tdjson || exit 1
+            npm publish --access public --provenance
+            cd - > /dev/null || exit 1
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
