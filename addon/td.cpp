@@ -58,8 +58,6 @@ namespace ValidationHelpers {
   }
 }
 
-static const char empty_str[] = "";
-
 class ReceiveWorker {
 public:
   // Constructor that returns result code instead of throwing

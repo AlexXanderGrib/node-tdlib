@@ -87,23 +87,17 @@ namespace TdLibLoader {
         F.store(func); \
       } while(0)
     
-    // Load all function pointers
-    try {
-      SAFE_LOAD_FUNC(td_json_client_create);
-      SAFE_LOAD_FUNC(td_json_client_send);
-      SAFE_LOAD_FUNC(td_json_client_receive);
-      SAFE_LOAD_FUNC(td_json_client_execute);
-      SAFE_LOAD_FUNC(td_json_client_destroy);
-      SAFE_LOAD_FUNC(td_create_client_id);
-      SAFE_LOAD_FUNC(td_send);
-      SAFE_LOAD_FUNC(td_receive);
-      SAFE_LOAD_FUNC(td_execute);
-      SAFE_LOAD_FUNC(td_set_log_message_callback);
-    } catch (const std::exception& e) {
-      dlclose(handle);
-      error_msg = std::string("Exception during function loading: ") + e.what();
-      return false;
-    }
+    // Load all function pointers - remove try-catch block
+    SAFE_LOAD_FUNC(td_json_client_create);
+    SAFE_LOAD_FUNC(td_json_client_send);
+    SAFE_LOAD_FUNC(td_json_client_receive);
+    SAFE_LOAD_FUNC(td_json_client_execute);
+    SAFE_LOAD_FUNC(td_json_client_destroy);
+    SAFE_LOAD_FUNC(td_create_client_id);
+    SAFE_LOAD_FUNC(td_send);
+    SAFE_LOAD_FUNC(td_receive);
+    SAFE_LOAD_FUNC(td_execute);
+    SAFE_LOAD_FUNC(td_set_log_message_callback);
     
     #undef SAFE_LOAD_FUNC
     
@@ -122,25 +116,20 @@ namespace TdLibLoader {
     }
     
     #ifdef TDLIB_STATIC_LINK
-    try {
-      // Load static function pointers
-      td_json_client_create.store(&::td_json_client_create);
-      td_json_client_send.store(&::td_json_client_send);
-      td_json_client_receive.store(&::td_json_client_receive);
-      td_json_client_execute.store(&::td_json_client_execute);
-      td_json_client_destroy.store(&::td_json_client_destroy);
-      td_create_client_id.store(&::td_create_client_id);
-      td_send.store(&::td_send);
-      td_receive.store(&::td_receive);
-      td_execute.store(&::td_execute);
-      td_set_log_message_callback.store(&::td_set_log_message_callback);
-      
-      current_mode.store(LoadingMode::STATIC);
-      return true;
-    } catch (const std::exception& e) {
-      error_msg = std::string("Exception during static loading: ") + e.what();
-      return false;
-    }
+    // Load static function pointers - remove try-catch block
+    td_json_client_create.store(&::td_json_client_create);
+    td_json_client_send.store(&::td_json_client_send);
+    td_json_client_receive.store(&::td_json_client_receive);
+    td_json_client_execute.store(&::td_json_client_execute);
+    td_json_client_destroy.store(&::td_json_client_destroy);
+    td_create_client_id.store(&::td_create_client_id);
+    td_send.store(&::td_send);
+    td_receive.store(&::td_receive);
+    td_execute.store(&::td_execute);
+    td_set_log_message_callback.store(&::td_set_log_message_callback);
+    
+    current_mode.store(LoadingMode::STATIC);
+    return true;
     #else
     error_msg = "Static linking is not enabled. Compile with TDLIB_STATIC_LINK defined.";
     return false;
