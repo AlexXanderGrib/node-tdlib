@@ -9,7 +9,6 @@
 #include <condition_variable>
 #include <memory>
 #include <string>
-#include <stdexcept>
 
 #include "tdlib_loader.h"
 
@@ -23,6 +22,18 @@
 
 #define FAIL(MSG, RET) SAFE_THROW(Napi::Error, MSG, RET)
 #define TYPEFAIL(MSG, RET) SAFE_THROW(Napi::TypeError, MSG, RET)
+
+// Result type for operations that can fail
+enum class OperationResult {
+  SUCCESS,
+  INVALID_TIMEOUT,
+  INVALID_CLIENT_ID,
+  INVALID_VERBOSITY,
+  WORKER_CREATION_FAILED,
+  THREAD_CREATION_FAILED,
+  ALREADY_DESTROYED,
+  CLIENT_NULL
+};
 
 // Validation helpers
 namespace ValidationHelpers {
@@ -51,24 +62,20 @@ static const char empty_str[] = "";
 
 class ReceiveWorker {
 public:
-  ReceiveWorker(const Napi::Env& env, void *client, double timeout)
-    : client_(client), timeout_(timeout), 
-      tsfn_(Tsfn::New(env, "ReceiveTSFN", 0, 1, this)),
-      ready_(false), stop_(false),  destroyed_(false), ref_count_(1)
-  {
+  // Constructor that returns result code instead of throwing
+  static OperationResult Create(const Napi::Env& env, void *client, double timeout, 
+                               std::unique_ptr<ReceiveWorker>& out_worker) {
     if (!ValidationHelpers::IsValidTimeout(timeout)) {
-      throw std::invalid_argument("Invalid timeout value");
+      return OperationResult::INVALID_TIMEOUT;
     }
     
-    try {
-      thread_ = std::thread(&ReceiveWorker::loop, this);
-      if (client == nullptr) { // New tdjson interface
-        thread_.detach();
-      }
-      tsfn_.Ref(env);
-    } catch (const std::exception& e) {
-      throw std::runtime_error(std::string("Failed to create worker thread: ") + e.what());
+    auto worker = std::unique_ptr<ReceiveWorker>(new ReceiveWorker());
+    if (!worker->Initialize(env, client, timeout)) {
+      return OperationResult::WORKER_CREATION_FAILED;
     }
+    
+    out_worker = std::move(worker);
+    return OperationResult::SUCCESS;
   }
 
   ~ReceiveWorker() {
@@ -156,6 +163,35 @@ public:
   }
 
 private:
+  ReceiveWorker() : client_(nullptr), timeout_(0.0), ready_(false), stop_(false), 
+                   destroyed_(false), ref_count_(1) {}
+
+  bool Initialize(const Napi::Env& env, void *client, double timeout) {
+    client_ = client;
+    timeout_ = timeout;
+    
+    // Create the thread-safe function directly
+    tsfn_ = Tsfn::New(env, "ReceiveTSFN", 0, 1, this);
+    
+    // Try to create the worker thread
+    bool thread_created = false;
+    if (client == nullptr) { // New tdjson interface
+      thread_ = std::thread(&ReceiveWorker::loop, this);
+      thread_.detach();
+      thread_created = true;
+    } else {
+      thread_ = std::thread(&ReceiveWorker::loop, this);
+      thread_created = thread_.joinable();
+    }
+    
+    if (!thread_created) {
+      return false;
+    }
+    
+    tsfn_.Ref(env);
+    return true;
+  }
+
   using TsfnCtx = ReceiveWorker;
   
   // Called on the main thread
@@ -189,21 +225,17 @@ private:
       const char *response = nullptr;
       void* current_client = client_.load();
       
-      try {
-        if (current_client == nullptr) {
-          auto receive_func = TdLibLoader::td_receive.load();
-          if (receive_func != nullptr) {
-            response = receive_func(timeout_);
-          }
-        } else {
-          auto receive_func = TdLibLoader::td_json_client_receive.load();
-          if (receive_func != nullptr) {
-            response = receive_func(current_client, timeout_);
-          }
+      // Remove try-catch block since we're not using exceptions
+      if (current_client == nullptr) {
+        auto receive_func = TdLibLoader::td_receive.load();
+        if (receive_func != nullptr) {
+          response = receive_func(timeout_);
         }
-      } catch (...) {
-        // Ignore exceptions in receive calls
-        response = nullptr;
+      } else {
+        auto receive_func = TdLibLoader::td_json_client_receive.load();
+        if (receive_func != nullptr) {
+          response = receive_func(current_client, timeout_);
+        }
       }
       
       // Copy response to ensure thread safety
@@ -269,21 +301,41 @@ namespace Tdo {
       FAIL("td_json_client_create returned null", Napi::Value());
     }
     
-    try {
-      auto worker = new ReceiveWorker(env, client, timeout);
-      return Napi::External<ReceiveWorker>::New(env, worker, [](Napi::Env, ReceiveWorker* worker) {
-        if (worker != nullptr) {
-          worker->Release();
-        }
-      });
-    } catch (const std::exception& e) {
+    std::unique_ptr<ReceiveWorker> worker;
+    OperationResult result = ReceiveWorker::Create(env, client, timeout, worker);
+    
+    if (result != OperationResult::SUCCESS) {
       // Clean up client if worker creation fails
       auto destroy_func = TdLibLoader::td_json_client_destroy.load();
       if (destroy_func != nullptr) {
         destroy_func(client);
       }
-      FAIL(std::string("Failed to create worker: ") + e.what(), Napi::Value());
+      
+      const char* error_msg = "Failed to create worker";
+      switch (result) {
+        case OperationResult::INVALID_TIMEOUT:
+          error_msg = "Invalid timeout value";
+          break;
+        case OperationResult::WORKER_CREATION_FAILED:
+          error_msg = "Failed to create worker";
+          break;
+        case OperationResult::THREAD_CREATION_FAILED:
+          error_msg = "Failed to create worker thread";
+          break;
+        default:
+          error_msg = "Unknown error creating worker";
+          break;
+      }
+      FAIL(error_msg, Napi::Value());
     }
+    
+    // Release ownership to the External object
+    ReceiveWorker* raw_worker = worker.release();
+    return Napi::External<ReceiveWorker>::New(env, raw_worker, [](Napi::Env, ReceiveWorker* worker) {
+      if (worker != nullptr) {
+        worker->Release();
+      }
+    });
   }
 
   void ClientSend(const Napi::CallbackInfo& info) {
@@ -406,7 +458,8 @@ namespace Tdo {
 namespace Tdn {
   static std::unique_ptr<ReceiveWorker> worker_ptr = nullptr;
   static std::mutex worker_mutex;
-  static std::once_flag init_flag;
+  static std::atomic<bool> init_attempted{false};
+  static OperationResult last_init_result = OperationResult::SUCCESS;
 
   void Init(const Napi::CallbackInfo& info) {
     Napi::Env env = info.Env();
@@ -416,30 +469,77 @@ namespace Tdn {
       return;
     }
     
-    std::call_once(init_flag, [&]() {
+    // Use atomic flag instead of std::once_flag to avoid potential exception issues
+    bool expected = false;
+    if (!init_attempted.compare_exchange_strong(expected, true)) {
       std::lock_guard<std::mutex> lock(worker_mutex);
       if (worker_ptr != nullptr) {
         FAIL("The worker is already initialized", );
         return;
       }
       
-      if (info.Length() < 1 || !info[0].IsNumber()) {
-        FAIL("Expected first argument (timeout) to be a number", );
-        return;
+      // Return previous initialization error if any
+      const char* error_msg = "Previous initialization failed";
+      switch (last_init_result) {
+        case OperationResult::INVALID_TIMEOUT:
+          error_msg = "Invalid timeout value (must be 0-300 seconds)";
+          break;
+        case OperationResult::WORKER_CREATION_FAILED:
+          error_msg = "Failed to create worker";
+          break;
+        case OperationResult::THREAD_CREATION_FAILED:
+          error_msg = "Failed to create worker thread";
+          break;
+        default:
+          break;
       }
-      
-      double timeout = info[0].As<Napi::Number>().DoubleValue();
-      if (!ValidationHelpers::IsValidTimeout(timeout)) {
-        FAIL("Invalid timeout value (must be 0-300 seconds)", );
-        return;
+      FAIL(error_msg, );
+      return;
+    }
+    
+    std::lock_guard<std::mutex> lock(worker_mutex);
+    if (worker_ptr != nullptr) {
+      FAIL("The worker is already initialized", );
+      return;
+    }
+    
+    if (info.Length() < 1 || !info[0].IsNumber()) {
+      last_init_result = OperationResult::INVALID_TIMEOUT;
+      FAIL("Expected first argument (timeout) to be a number", );
+      return;
+    }
+    
+    double timeout = info[0].As<Napi::Number>().DoubleValue();
+    if (!ValidationHelpers::IsValidTimeout(timeout)) {
+      last_init_result = OperationResult::INVALID_TIMEOUT;
+      FAIL("Invalid timeout value (must be 0-300 seconds)", );
+      return;
+    }
+    
+    std::unique_ptr<ReceiveWorker> worker;
+    OperationResult result = ReceiveWorker::Create(env, nullptr, timeout, worker);
+    last_init_result = result;
+    
+    if (result != OperationResult::SUCCESS) {
+      const char* error_msg = "Failed to initialize worker";
+      switch (result) {
+        case OperationResult::INVALID_TIMEOUT:
+          error_msg = "Invalid timeout value";
+          break;
+        case OperationResult::WORKER_CREATION_FAILED:
+          error_msg = "Failed to create worker";
+          break;
+        case OperationResult::THREAD_CREATION_FAILED:
+          error_msg = "Failed to create worker thread";
+          break;
+        default:
+          break;
       }
-      
-      try {
-        worker_ptr = std::make_unique<ReceiveWorker>(env, nullptr, timeout);
-      } catch (const std::exception& e) {
-        FAIL(std::string("Failed to initialize worker: ") + e.what(), );
-      }
-    });
+      FAIL(error_msg, );
+      return;
+    }
+    
+    worker_ptr = std::move(worker);
   }
 
   void Ref(const Napi::CallbackInfo& info) {
@@ -587,15 +687,12 @@ namespace TdCallbacks {
     if (data == nullptr) return;
     
     if (env != nullptr && callback != nullptr) {
-      try {
-        callback.Call({
-          Napi::Number::New(env, data->verbosity_level),
-          Napi::String::New(env, data->message)
-        });
-      } catch (const Napi::Error& e) {
-        // Log error but don't crash
-        // In production, you might want to use a proper logging system
-      }
+      // Remove try-catch since we're not using exceptions
+      // Just call the callback - if it fails, N-API will handle it
+      callback.Call({
+        Napi::Number::New(env, data->verbosity_level),
+        Napi::String::New(env, data->message)
+      });
     }
     delete data;
   }
@@ -668,6 +765,7 @@ namespace TdCallbacks {
       tsfn_ptr->Release();
     }
     
+    // Create TSFN directly
     tsfn_ptr = std::make_unique<Tsfn>(
       Tsfn::New(env, info[1].As<Napi::Function>(), "TdCallbackTSFN", 0, 1)
     );
