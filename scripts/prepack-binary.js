@@ -44,6 +44,163 @@ const archNames = new Map([
 ]);
 
 (async function main() {
+  const [prebuiltPackage] = await Promise.all([
+    generatePrebuilt()
+    // generateAddon()
+  ]);
+
+  const deps = (packageJson.optionalDependencies ??= {});
+
+  deps[prebuiltPackage.name] = prebuiltPackage.version;
+  // deps[addonPackage.name] = addonPackage.version;
+
+  await writeFormatted(packagePath, JSON.stringify(packageJson, undefined, 2));
+})();
+
+// async function generateAddon() {
+//   const version = await readFile("./addon/version.txt", "utf-8");
+
+//   const basePackageJson = {
+//     version: `0.${version}`,
+//     description: "Built TDLib Addon",
+//     keywords: ["tdlib", "addon"],
+
+//     author: packageJson.author,
+//     license: packageJson.license,
+//     bugs: packageJson.bugs,
+//     homepage: packageJson.homepage,
+//     publishConfig: packageJson.publishConfig,
+//     repository: packageJson.repository,
+//     engines: packageJson.engines
+//   };
+
+//   const types = await readFile("./addon/addon.d.ts", "utf-8");
+//   const optionalDependencies = {};
+
+//   for (const build of builds) {
+//     const name = build.addonPackageName;
+//     const packageJson = {
+//       name: `@tdlib-native/${name}`,
+//       ...basePackageJson,
+//       repository: { ...basePackageJson.repository, directory: `packages/${name}` },
+//       description: `TDLib Node Addon for ${build.os} ${build.cpu}`,
+//       keywords: ["tdlib", "node", "addon", build.os, build.cpu],
+//       ...build.getPackageFields(),
+//       main: "./index.js",
+
+//       module: "./index.mjs",
+//       types: "./index.d.ts",
+//       files: ["index.js", "index.mjs", build.addonName, "README.md", "LICENSE.txt"]
+//     };
+
+//     const directory = resolve(__dirname, "../packages", name);
+
+//     await mkdir(directory, { recursive: true });
+
+//     await Promise.all([
+//       writeFormatted(
+//         `${directory}/package.json`,
+//         JSON.stringify(packageJson, undefined, 2)
+//       ),
+//       writeFile(`${directory}/README.md`, ``),
+//       copyFile("./LICENSE.txt", `${directory}/LICENSE.txt`),
+//       writeFormatted(
+//         `${directory}/index.js`,
+//         `const addon = require('./${build.addonName}');\n module.exports.addon = addon;`
+//       ),
+//       writeFormatted(
+//         `${directory}/index.mjs`,
+//         `import { createRequire } from "module"; const require = createRequire(); export const addon = require('./${build.addonName}');`
+//       ),
+
+//       writeFile(`${directory}/.gitignore`, `${build.addonName}`, "ascii")
+//     ]);
+
+//     optionalDependencies[packageJson.name] = packageJson.version;
+//   }
+
+//   const name = "addon";
+//   const directory = resolve(__dirname, "../packages", name);
+//   await mkdir(directory, { recursive: true });
+
+//   const prebuiltPackageJson = {
+//     name: `@tdlib-native/${name}`,
+//     ...basePackageJson,
+//     repository: { ...basePackageJson.repository, directory: `packages/${name}` },
+//     description: `Tdlib Addon`,
+//     keywords: ["tdlib", "addon"],
+//     main: "./index.js",
+//     module: "./index.mjs",
+//     types: "./index.d.ts",
+//     files: ["index.js", "index.mjs", "index.d.ts", "README.md", "LICENSE.txt"],
+//     dependencies: {
+//       "detect-libc": "^2.0.4"
+//     },
+//     optionalDependencies
+//   };
+
+//   const detectionCode = `(function requirePlatformAddon() {
+//   const {arch, platform} = process;
+// ${builds
+//   .map((build, index) => {
+//     const statement = index === 0 ? "if" : "else if";
+//     return `${statement} (${build.getJsCondition()}) { return require("@tdlib-native/${build.addonPackageName}"); }`;
+//   })
+//   .join("\n")} else {
+//     let sysInfo = platform + " " + arch;
+
+//     if (libc) {
+//       sysInfo += " " + libc;
+//     }
+    
+//     throw new Error(
+//       "Your system (" + sysInfo + ") is not supported yet. You can ask for support here: https://github.com/AlexXanderGrib/node-tdlib/issues"
+//     ); }
+// })()`;
+
+//   await Promise.all([
+//     writeFormatted(
+//       `${directory}/package.json`,
+//       JSON.stringify(prebuiltPackageJson, undefined, 2)
+//     ),
+
+//     copyFile("./LICENSE.txt", `${directory}/LICENSE.txt`),
+//     writeFile(
+//       `${directory}/README.md`,
+//       `\n\n## Optional Dependencies
+// One of this packages will be automatically installed based on your platform. Installed version is exactly pinned
+
+// ${Object.entries(optionalDependencies)
+//   .map(
+//     ([name, version]) =>
+//       `- [${name}](https://www.npmjs.com/package/${name}/v/${version})`
+//   )
+//   .join("\n")}`
+//     ),
+//     writeFormatted(
+//       `${directory}/index.js`,
+//       `const { familySync } = require("detect-libc");
+// const libc = familySync();
+// module.exports = ${detectionCode};`
+//     ),
+//     writeFormatted(
+//       `${directory}/index.mjs`,
+//       `import { createRequire } from "module";
+// import { familySync } from "detect-libc";
+// const require = createRequire();
+// const libc = familySync();
+// const forwarded = ${detectionCode};
+// export const { tdlibPath, version, commit } = forwarded;
+
+// `
+//     ),
+//     writeFormatted(`${directory}/index.d.ts`, types)
+//   ]);
+
+//   return prebuiltPackageJson;
+// }
+
+async function generatePrebuilt() {
   const meta = await getMeta();
 
   const basePackageJson = {
@@ -64,17 +221,15 @@ const archNames = new Map([
 
   const optionalDependencies = {};
 
-  for (const { os, cpu, file, libc } of builds) {
-    const name = `tdjson-${os}-${cpu}${libc ? `-${libc}` : ""}`;
+  for (const build of builds) {
+    const name = build.tdlibPackageName;
     const packageJson = {
       name: `@tdlib-native/${name}`,
       ...basePackageJson,
       repository: { ...basePackageJson.repository, directory: `packages/${name}` },
-      description: `Prebuilt TDLib for ${os} ${cpu}`,
-      keywords: ["tdlib", "binary", os, cpu],
-      os: [os],
-      cpu: [cpu],
-      libc: libc ? [libc] : undefined,
+      description: `Prebuilt TDLib for ${build.os} ${build.cpu}`,
+      keywords: ["tdlib", "binary", build.os, build.cpu],
+      ...build.getPackageFields(),
       main: "./index.js",
 
       module: "./index.mjs",
@@ -83,7 +238,7 @@ const archNames = new Map([
         "index.js",
         "index.mjs",
         "index.d.ts",
-        file,
+        build.tdlib,
         "README.md",
         "LICENSE.txt"
       ]
@@ -93,12 +248,10 @@ const archNames = new Map([
 
     await mkdir(directory, { recursive: true });
 
-    const url = downloader.resolve(file);
-
     const { cjs, esm, types } = generateExports({
       tdlibPath: {
-        esm: `fileURLToPath(new URL("${file}", import.meta.url))`,
-        cjs: `require('path').resolve(__dirname, "${file}")`,
+        esm: `fileURLToPath(new URL("${build.tdlib}", import.meta.url))`,
+        cjs: `require('path').resolve(__dirname, "${build.tdlib}")`,
         type: "string"
       },
       version: meta.version,
@@ -115,10 +268,10 @@ const archNames = new Map([
         generateReadme({
           version: meta.version,
           commit: meta["commit-hash"],
-          cpu,
-          libc,
+          cpu: build.cpu,
+          libc: build.libc,
           name,
-          os
+          os: build.os
         })
       ),
       copyFile("./LICENSE.txt", `${directory}/LICENSE.txt`),
@@ -128,8 +281,7 @@ const archNames = new Map([
         'import { fileURLToPath } from "url";\n\n' + esm
       ),
       writeFormatted(`${directory}/index.d.ts`, types),
-      writeFile(`${directory}/.gitignore`, `${file}`, "ascii"),
-      writeFile(`${directory}/download.sh`, `wget -O ${file} ${url}`)
+      writeFile(`${directory}/.gitignore`, `${build.tdlib}`, "ascii")
     ]);
 
     optionalDependencies[packageJson.name] = packageJson.version;
@@ -196,47 +348,37 @@ ${[...entires].map(([key, value]) => `- ${key}: ${value}`).join("\n")}
 `;
   }
 
-  const prebuiltLoader = await (async () => {
-    const name = "tdjson";
-    const directory = resolve(__dirname, "../packages", name);
-    await mkdir(directory, { recursive: true });
+  const name = "tdjson";
+  const directory = resolve(__dirname, "../packages", name);
+  await mkdir(directory, { recursive: true });
 
-    const packageJson = {
-      name: `@tdlib-native/${name}`,
-      ...basePackageJson,
-      repository: { ...basePackageJson.repository, directory: `packages/${name}` },
-      description: `Prebuilt TDLib that downloads version for current os`,
-      keywords: ["tdlib", "binary"],
-      main: "./index.js",
-      module: "./index.mjs",
-      types: "./index.d.ts",
-      files: ["index.js", "index.mjs", "index.d.ts", "README.md", "LICENSE.txt"],
-      dependencies: {
-        "detect-libc": "^2.0.4"
-      },
-      optionalDependencies
-    };
+  const prebuiltPackageJson = {
+    name: `@tdlib-native/${name}`,
+    ...basePackageJson,
+    repository: { ...basePackageJson.repository, directory: `packages/${name}` },
+    description: `Prebuilt TDLib that downloads version for current os`,
+    keywords: ["tdlib", "binary"],
+    main: "./index.js",
+    module: "./index.mjs",
+    types: "./index.d.ts",
+    files: ["index.js", "index.mjs", "index.d.ts", "README.md", "LICENSE.txt"],
+    dependencies: {
+      "detect-libc": "^2.0.4"
+    },
+    optionalDependencies
+  };
 
-    const detectionCode = `(function requirePlatformTdlib() {
+  const detectionCode = `(function requirePlatformTdlib() {
+  const {arch, platform} = process;
+
 ${builds
   .map((build, index) => {
-    const name = `tdjson-${build.os}-${build.cpu}${build.libc ? `-${build.libc}` : ""}`;
-
-    let condition = `process.platform === "${build.os}" && process.arch === "${build.cpu}"`;
-
-    if (build.os === "android" && build.libc === "glibc") {
-      condition += `&& (libc === "${build.libc}" || libc === null || libc === undefined)`;
-
-    } else if (build.libc) {
-      condition += `&& libc === "${build.libc}"`;
-    }
-
     const statement = index === 0 ? "if" : "else if";
 
-    return `${statement} (${condition}) { return require("@tdlib-native/${name}"); }`;
+    return `${statement} (${build.getJsCondition()}) { return require("@tdlib-native/${build.tdlibPackageName}"); }`;
   })
   .join("\n")} else {
-    let sysInfo = process.platform + " " + process.arch;
+    let sysInfo = platform + " " + arch;
 
     if (libc) {
       sysInfo += " " + libc;
@@ -247,22 +389,22 @@ ${builds
     ); }
 })()`;
 
-    await Promise.all([
-      writeFormatted(
-        `${directory}/package.json`,
-        JSON.stringify(packageJson, undefined, 2)
-      ),
+  await Promise.all([
+    writeFormatted(
+      `${directory}/package.json`,
+      JSON.stringify(prebuiltPackageJson, undefined, 2)
+    ),
 
-      copyFile("./LICENSE.txt", `${directory}/LICENSE.txt`),
-      writeFile(
-        `${directory}/README.md`,
-        generateReadme({
-          version: meta.version,
-          commit: meta["commit-hash"],
-          name,
-          description: packageJson.description
-        }) +
-          `\n\n## Optional Dependencies
+    copyFile("./LICENSE.txt", `${directory}/LICENSE.txt`),
+    writeFile(
+      `${directory}/README.md`,
+      generateReadme({
+        version: meta.version,
+        commit: meta["commit-hash"],
+        name,
+        description: prebuiltPackageJson.description
+      }) +
+        `\n\n## Optional Dependencies
 One of this packages will be automatically installed based on your platform. Installed version is exactly pinned
 
 ${Object.entries(optionalDependencies)
@@ -271,16 +413,16 @@ ${Object.entries(optionalDependencies)
       `- [${name}](https://www.npmjs.com/package/${name}/v/${version})`
   )
   .join("\n")}`
-      ),
-      writeFormatted(
-        `${directory}/index.js`,
-        `const { familySync } = require("detect-libc");
+    ),
+    writeFormatted(
+      `${directory}/index.js`,
+      `const { familySync } = require("detect-libc");
 const libc = familySync();
 module.exports = ${detectionCode};`
-      ),
-      writeFormatted(
-        `${directory}/index.mjs`,
-        `import { createRequire } from "module";
+    ),
+    writeFormatted(
+      `${directory}/index.mjs`,
+      `import { createRequire } from "module";
 import { familySync } from "detect-libc";
 const require = createRequire();
 const libc = familySync();
@@ -288,10 +430,10 @@ const forwarded = ${detectionCode};
 export const { tdlibPath, version, commit } = forwarded;
 
 `
-      ),
-      writeFormatted(
-        `${directory}/index.d.ts`,
-        `
+    ),
+    writeFormatted(
+      `${directory}/index.d.ts`,
+      `
 /**
  * @type {string}
  */
@@ -305,15 +447,11 @@ export const version: string;
  */
 export const commit: string;
 `
-      )
-    ]);
+    )
+  ]);
 
-    return packageJson;
-  })();
-
-  (packageJson.optionalDependencies ??= {})[prebuiltLoader.name] = prebuiltLoader.version;
-  await writeFormatted(packagePath, JSON.stringify(packageJson, undefined, 2));
-})();
+  return prebuiltPackageJson;
+}
 
 /**
  * @return {Promise<{ version: string; "commit-hash": string }>}

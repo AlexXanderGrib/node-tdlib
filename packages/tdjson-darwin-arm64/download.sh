@@ -1,1 +1,0 @@
-wget -O libtdjson-arm64.dylib https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.52-18f6c78/libtdjson-arm64.dylib

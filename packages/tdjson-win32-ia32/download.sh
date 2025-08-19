@@ -1,1 +1,0 @@
-wget -O tdjson-x32.dll https://github.com/AlexXanderGrib/prebuilt-tdlib/releases/download/0.1.8.52-18f6c78/tdjson-x32.dll

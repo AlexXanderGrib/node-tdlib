@@ -1,52 +1,34 @@
 const { familySync } = require("detect-libc");
 const libc = familySync();
 module.exports = (function requirePlatformTdlib() {
-  if (process.platform === "darwin" && process.arch === "x64") {
+  const { arch, platform } = process;
+
+  if (platform === "darwin" && arch === "x64") {
     return require("@tdlib-native/tdjson-darwin-x64");
-  } else if (process.platform === "darwin" && process.arch === "arm64") {
+  } else if (platform === "darwin" && arch === "arm64") {
     return require("@tdlib-native/tdjson-darwin-arm64");
-  } else if (
-    process.platform === "linux" &&
-    process.arch === "x64" &&
-    libc === "glibc"
-  ) {
+  } else if (platform === "linux" && arch === "x64" && libc === "glibc") {
     return require("@tdlib-native/tdjson-linux-x64-glibc");
-  } else if (
-    process.platform === "linux" &&
-    process.arch === "arm64" &&
-    libc === "glibc"
-  ) {
+  } else if (platform === "linux" && arch === "arm64" && libc === "glibc") {
     return require("@tdlib-native/tdjson-linux-arm64-glibc");
-  } else if (
-    process.platform === "linux" &&
-    process.arch === "x64" &&
-    libc === "musl"
-  ) {
+  } else if (platform === "linux" && arch === "x64" && libc === "musl") {
     return require("@tdlib-native/tdjson-linux-x64-musl");
-  } else if (
-    process.platform === "linux" &&
-    process.arch === "arm64" &&
-    libc === "musl"
-  ) {
+  } else if (platform === "linux" && arch === "arm64" && libc === "musl") {
     return require("@tdlib-native/tdjson-linux-arm64-musl");
   } else if (
-    process.platform === "android" &&
-    process.arch === "arm64" &&
+    platform === "android" &&
+    arch === "arm64" &&
     (libc === "glibc" || libc === null || libc === undefined)
   ) {
     return require("@tdlib-native/tdjson-android-arm64-glibc");
-  } else if (
-    process.platform === "android" &&
-    process.arch === "arm64" &&
-    libc === "musl"
-  ) {
+  } else if (platform === "android" && arch === "arm64" && libc === "musl") {
     return require("@tdlib-native/tdjson-android-arm64-musl");
-  } else if (process.platform === "win32" && process.arch === "x64") {
+  } else if (platform === "win32" && arch === "x64") {
     return require("@tdlib-native/tdjson-win32-x64");
-  } else if (process.platform === "win32" && process.arch === "ia32") {
+  } else if (platform === "win32" && arch === "ia32") {
     return require("@tdlib-native/tdjson-win32-ia32");
   } else {
-    let sysInfo = process.platform + " " + process.arch;
+    let sysInfo = platform + " " + arch;
 
     if (libc) {
       sysInfo += " " + libc;

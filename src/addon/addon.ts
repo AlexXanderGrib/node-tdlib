@@ -36,8 +36,8 @@ async function loadAddon(addonPath: string = builtinAddonPath): Promise<Addon> {
  * @returns {Promise<string>}  {Promise<string>}
  */
 async function getTDLibPath(): Promise<string> {
-  const provider = await import("@tdlib-native/tdjson" as string);
-  return provider.tdlibPath;
+  const { tdlibPath } = await import("@tdlib-native/tdjson");
+  return tdlibPath;
 }
 
 class ReceiveQueueEntry {

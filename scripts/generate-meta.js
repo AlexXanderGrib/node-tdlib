@@ -1,3 +1,4 @@
+// @ts-check
 const { writeFile } = require("fs/promises");
 const { resolve } = require("path");
 const { downloader } = require("./lib");

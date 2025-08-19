@@ -19,3 +19,4 @@ export type Addon = {
   tdn_unref(): void;
   load_tdjson(path: string): void;
 };
+
