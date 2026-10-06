@@ -5,7 +5,7 @@
   "packageManager": "npm@11.5.2",
   "config": {
     "tdlib_prebuilt_repository": "AlexXanderGrib/prebuilt-tdlib",
-    "tdlib_prebuilt_tag": "0.1.8.52-18f6c78"
+    "tdlib_prebuilt_tag": "0.1.8.67-42e6a52"
   },
   "scripts": {
     "test": "vitest",
@@ -18,7 +18,8 @@
     "build": "npm run build:dist && npm run build:docs",
     "prepack": "npm run build",
     "lint": "eslint src/*",
-    "prettify": "prettier --write src/**/*"
+    "prettify": "prettier --write src/**/*",
+    "test:addon": "npm run build:dist && node --test test/native-addon.cjs"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -118,6 +119,6 @@
     "node-addon-api": "^8.5.0"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3"
+    "@tdlib-native/tdjson": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20"
   }
 }

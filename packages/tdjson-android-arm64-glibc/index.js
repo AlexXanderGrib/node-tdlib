@@ -7,11 +7,11 @@ module.exports.tdlibPath = require("path").resolve(
 );
 /**
  * @type {string}
- * @default "1.8.52"
+ * @default "1.8.67"
  */
-module.exports.version = "1.8.52";
+module.exports.version = "1.8.67";
 /**
  * @type {string}
- * @default "18f6c78cfb736cb24db789534e7ff3d274df77b3"
+ * @default "42e6a5259551178d1dab54a22ad96d14bd906e20"
  */
-module.exports.commit = "18f6c78cfb736cb24db789534e7ff3d274df77b3";
+module.exports.commit = "42e6a5259551178d1dab54a22ad96d14bd906e20";

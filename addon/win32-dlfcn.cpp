@@ -27,7 +27,7 @@
  * Win32 error code from last failure.
  */
 
-static DWORD lastError = 0;
+static thread_local DWORD lastError = 0;
 
 #ifdef __cplusplus
 extern "C" {
@@ -95,17 +95,17 @@ dlopen(
         return NULL;
     }
 
-    errorMode = GetErrorMode();
+    errorMode = GetThreadErrorMode();
 
     /* Have LoadLibrary return NULL on failure; prevent GUI error message. */
-    SetErrorMode(errorMode | SEM_FAILCRITICALERRORS);
+    SetThreadErrorMode(errorMode | SEM_FAILCRITICALERRORS, NULL);
 
     handle = (void*) LoadLibraryW(unicodeFilename);
 
     if (handle == NULL)
         lastError = GetLastError();
 
-    SetErrorMode(errorMode);
+    SetThreadErrorMode(errorMode, NULL);
 
     free(unicodeFilename);
 
@@ -157,7 +157,7 @@ dlsym(
 char*
 dlerror(void)
 {
-    static char errorMessage[64];
+    static thread_local char errorMessage[64];
 
     if (lastError != 0) {
         sprintf(errorMessage, "Win32 error %lu", lastError);

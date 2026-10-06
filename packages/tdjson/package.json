@@ -1,6 +1,6 @@
 {
   "name": "@tdlib-native/tdjson",
-  "version": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
+  "version": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
   "description": "Prebuilt TDLib that downloads version for current os",
   "keywords": [
     "tdlib",
@@ -24,8 +24,8 @@
     "node": ">=16"
   },
   "tdlib": {
-    "version": "1.8.52",
-    "commit": "18f6c78cfb736cb24db789534e7ff3d274df77b3"
+    "version": "1.8.67",
+    "commit": "42e6a5259551178d1dab54a22ad96d14bd906e20"
   },
   "main": "./index.js",
   "module": "./index.mjs",
@@ -41,15 +41,15 @@
     "detect-libc": "^2.0.4"
   },
   "optionalDependencies": {
-    "@tdlib-native/tdjson-darwin-x64": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-darwin-arm64": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-linux-x64-musl": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-android-arm64-musl": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-win32-x64": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3",
-    "@tdlib-native/tdjson-win32-ia32": "1.8.52-commit.18f6c78cfb736cb24db789534e7ff3d274df77b3"
+    "@tdlib-native/tdjson-darwin-x64": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-darwin-arm64": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-linux-x64-glibc": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-linux-arm64-glibc": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-linux-x64-musl": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-linux-arm64-musl": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-android-arm64-glibc": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-android-arm64-musl": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-win32-x64": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+    "@tdlib-native/tdjson-win32-ia32": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20"
   }
 }

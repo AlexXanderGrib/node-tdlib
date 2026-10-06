@@ -1,6 +1,6 @@
 import { createRequire } from "module";
 import { familySync } from "detect-libc";
-const require = createRequire();
+const require = createRequire(import.meta.url);
 const libc = familySync();
 const forwarded = (function requirePlatformTdlib() {
   const { arch, platform } = process;

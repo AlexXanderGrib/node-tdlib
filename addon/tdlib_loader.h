@@ -3,6 +3,7 @@
 #include <napi.h>
 #include <atomic>
 #include <string>
+#include <mutex>
 
 // Type definitions for TDLib functions
 typedef void * (*td_json_client_create_t)();
@@ -33,10 +34,11 @@ namespace TdLibLoader {
   extern std::atomic<td_execute_t> td_execute;
   extern std::atomic<td_set_log_message_callback_t> td_set_log_message_callback;
 
-  enum class LoadingMode {
-    STATIC,
-    DYNAMIC
-  };
+  // Serializes JavaScript entry points across Node worker environments.
+  std::recursive_mutex& Mutex();
+  void RetainResource();
+  void ReleaseResource();
+  void MarkClientIdCreated();
 
   // Check if TDLib is loaded
   bool IsTdLoaded();
@@ -44,18 +46,11 @@ namespace TdLibLoader {
   // Load TDLib dynamically from shared library
   bool LoadTdJsonDynamic(const std::string& library_path, std::string& error_msg);
   
-  // Load TDLib statically (link-time)
-  bool LoadTdJsonStatic(std::string& error_msg);
-  
-  // Unload TDLib (only works for dynamic loading)
-  void UnloadTdJson();
-  
-  // Get current loading mode
-  LoadingMode GetLoadingMode();
+  // Unload TDLib when no native resources can still use it.
+  bool UnloadTdJson(std::string& error_msg);
   
   // N-API wrapper functions
   Napi::Value LoadTdJsonDynamic(const Napi::CallbackInfo& info);
-  Napi::Value LoadTdJsonStatic(const Napi::CallbackInfo& info);
   Napi::Value IsTdLoaded(const Napi::CallbackInfo& info);
   void UnloadTdJson(const Napi::CallbackInfo& info);
   Napi::Value GetLoadingMode(const Napi::CallbackInfo& info);
