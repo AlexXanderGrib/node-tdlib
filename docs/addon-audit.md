@@ -129,6 +129,9 @@ strings cannot impersonate routing IDs or authorization closure events.
 Per-client queues preserve event order and apply the limits described above.
 The public `Client` removes `@client_id` after routing, preserving existing API
 result and update shapes. Raw adapter JSON retains TDLib's transport envelope.
+Modern clients emit no updates until their first request. The high-level `Client`
+sends an untagged `getAuthorizationState` during construction so authentication
+can observe the initial update without requiring an application API call.
 
 Each Node environment owns its client handles, promise deferreds, and one
 thread-safe function with a single coalesced wake-up slot. The receiver transfers
@@ -211,6 +214,8 @@ The raw mode keeps the compatibility receiver in the parent and routes events
 to four workers (200 tagged responses). All three modes passed against TDLib
 1.8.67 on Linux x64/Node 24.21.0. They validate concurrency, routing, isolation
 of sibling teardown, and shutdown. Multiple real bot logins were not tested.
+Public workers must receive the initial auth-state update before making any
+application request, covering modern client initialization without credentials.
 CI runs all modes against the pinned binary.
 
 ```sh

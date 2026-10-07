@@ -21,9 +21,18 @@ async function worker() {
     const { Client } = require(path.join(root, "dist/index.js"));
     const adapter = await TDLibAddon.create(library);
     const client = new Client(adapter);
+    let initialized;
+    const initialState = new Promise((resolve) => {
+      initialized = resolve;
+    });
     const closed = new Promise((resolve) =>
       client.updates.subscribe((update) => {
         assert.equal("@client_id" in update, false);
+        if (
+          update._ === "updateAuthorizationState" &&
+          update.authorization_state._ === "authorizationStateWaitTdlibParameters"
+        )
+          initialized();
         if (
           update._ === "updateAuthorizationState" &&
           update.authorization_state._ === "authorizationStateClosed"
@@ -32,6 +41,8 @@ async function worker() {
       })
     );
     await client.start();
+    // Authentication must receive its first update without an application call.
+    await initialState;
     parentPort.postMessage({ type: "ready" });
     await new Promise((resolve) => parentPort.once("message", resolve));
     for (let sequence = 0; sequence < requestsPerWorker; sequence++) {

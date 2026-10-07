@@ -100,6 +100,10 @@ export class Client {
     this._adapter = adapter;
     this._client = adapter.create(300);
     Object.seal(this);
+    // Modern TDLib clients emit no updates until their first request. Kick off
+    // initialization so Authenticator can observe the initial auth-state update.
+    // This untagged state response is ignored by the high-level receive loop.
+    adapter.send(this._client, serialize({ [typename]: "getAuthorizationState" }));
   }
 
   readonly api = new $AsyncApi(this);
