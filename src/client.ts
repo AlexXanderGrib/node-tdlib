@@ -89,6 +89,7 @@ export class Client {
   private readonly _updates = new EventBus<Update>();
   private readonly _adapter: TDLib;
   private _state = ClientState.PAUSED;
+  private _destroying: Promise<void> | undefined;
 
   /**
    * Creates an instance of Client.
@@ -99,6 +100,10 @@ export class Client {
     this._adapter = adapter;
     this._client = adapter.create(300);
     Object.seal(this);
+    // Modern TDLib clients emit no updates until their first request. Kick off
+    // initialization so Authenticator can observe the initial auth-state update.
+    // This untagged state response is ignored by the high-level receive loop.
+    adapter.send(this._client, serialize({ [typename]: "getAuthorizationState" }));
   }
 
   readonly api = new $AsyncApi(this);
@@ -266,6 +271,7 @@ export class Client {
         value = await this._adapter.receive(this._client);
       } catch (error) {
         if (error instanceof Error && error.message.includes("destroyed")) {
+          await this._destroy(new TDError(error.message, { code: -1 }));
           break;
         }
 
@@ -291,6 +297,9 @@ export class Client {
 
       /* eslint-disable security/detect-object-injection */
 
+      // The native dispatcher has already routed this transport envelope.
+      // Keep the public response/update shape independent of the JSON API.
+      delete data["@client_id"];
       const extra = data?.[tag];
 
       if (extra) {
@@ -379,17 +388,23 @@ export class Client {
    * @memberof Client
    */
   async destroy(): Promise<void> {
+    await this._destroy(new TDError("Client is destroyed", { code: -1 }));
+  }
+
+  private async _destroy(reason: TDError): Promise<void> {
+    if (this._destroying) return this._destroying;
     if (this._state === ClientState.STOPPED) return;
 
     this._state = ClientState.STOPPED;
     this._updates.complete();
 
     for (const async of this._requests.values()) {
-      async.reject(new TDError("Client is destroyed", { code: -1 }));
+      async.reject(reason);
     }
 
     this._requests.clear();
-    await this._adapter.destroy(this._client);
+    this._destroying = this._adapter.destroy(this._client);
+    await this._destroying;
   }
 }
 

@@ -41,6 +41,13 @@ class ClientMeta {
   destroyed = false;
 }
 
+export type TDLibAddonOptions = {
+  /** Maximum buffered responses per client. Overflow closes that client. Default: 256. */
+  maxQueuedResponses?: number;
+  /** Maximum buffered JSON bytes per client. Default: 8 MiB. */
+  maxQueuedBytes?: number;
+};
+
 /**
  *
  *
@@ -55,15 +62,20 @@ export class TDLibAddon implements TDLib {
    * @static
    * @param {string} [tdlibPath] Resolves to prebuild TDLib for your platform
    * @param {string} [addonPath]
-   * @returns {Promise<TDLib>}
+   * @param {TDLibAddonOptions} [options] Per-client response queue limits
+   * @returns {Promise<TDLibAddon>}
    * @memberof TDLibAddon
    */
-  static async create(tdlibPath?: string, addonPath?: string): Promise<TDLibAddon> {
+  static async create(
+    tdlibPath?: string,
+    addonPath?: string,
+    options: TDLibAddonOptions = {}
+  ): Promise<TDLibAddon> {
     tdlibPath ??= await getTDLibPath();
     const addon = await loadAddon(addonPath);
     addon.load_tdjson(tdlibPath);
 
-    return new TDLibAddon(addon);
+    return new TDLibAddon(addon, options);
   }
 
   /**
@@ -71,7 +83,10 @@ export class TDLibAddon implements TDLib {
    * @param {Addon} _addon
    * @memberof TDLibAddon
    */
-  private constructor(private readonly _addon: Addon) {}
+  private constructor(
+    private readonly _addon: Addon,
+    private readonly _options: TDLibAddonOptions
+  ) {}
 
   readonly _isTDLib = true;
   private readonly _clients = new WeakMap<TDLibClient, ClientMeta>();
@@ -93,7 +108,11 @@ export class TDLibAddon implements TDLib {
    * @memberof TDLibAddon
    */
   create(timeout: number): TDLibClient {
-    const client = this._addon.td_json_client_create(timeout);
+    const client = this._addon.td_client_create(
+      timeout,
+      this._options.maxQueuedResponses,
+      this._options.maxQueuedBytes
+    );
     this._clients.set(client, new ClientMeta());
 
     return client;
@@ -123,7 +142,7 @@ export class TDLibAddon implements TDLib {
     }
     // Mark first so receive loops cannot enqueue more work during destruction.
     meta.destroyed = true;
-    this._addon.td_json_client_destroy(client);
+    await this._addon.td_client_destroy(client);
   }
 
   /**
@@ -138,7 +157,7 @@ export class TDLibAddon implements TDLib {
     if (client !== null && this._getMeta(client).destroyed) {
       throw new Error("Client is destroyed");
     }
-    return this._addon.td_json_client_execute(client, json);
+    return this._addon.td_client_execute(client, json);
   }
 
   /**
@@ -155,7 +174,7 @@ export class TDLibAddon implements TDLib {
       return Promise.reject(new Error("Client is destroyed"));
     }
 
-    return this._addon.td_json_client_receive(client);
+    return this._addon.td_client_receive(client);
   }
 
   /**
@@ -171,7 +190,7 @@ export class TDLibAddon implements TDLib {
       throw new Error("Client is destroyed");
     }
 
-    this._addon.td_json_client_send(client, json);
+    this._addon.td_client_send(client, json);
   }
 
   /**

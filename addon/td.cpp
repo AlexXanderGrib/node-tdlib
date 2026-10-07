@@ -15,6 +15,7 @@
 #include <unordered_set>
 
 #include "tdlib_loader.h"
+#include "td_dispatcher.h"
 
 namespace {
 class ReceiveWorker;
@@ -277,6 +278,9 @@ namespace Tdo {
 Napi::Value ClientCreate(const Napi::CallbackInfo& info) {
   auto env = info.Env();
   RequireLoaded(env);
+  if (TdLibLoader::td_json_client_create.load() == nullptr) {
+    throw Napi::Error::New(env, "The loaded TDLib does not support the legacy JSON API");
+  }
   double timeout = Timeout(info);
   void* client = TdLibLoader::td_json_client_create.load()();
   if (client == nullptr) throw Napi::Error::New(env, "td_json_client_create returned null");
@@ -302,6 +306,9 @@ Napi::Value ClientReceive(const Napi::CallbackInfo& info) {
 }
 Napi::Value ClientExecute(const Napi::CallbackInfo& info) {
   RequireLoaded(info.Env());
+  if (TdLibLoader::td_json_client_execute.load() == nullptr) {
+    throw Napi::Error::New(info.Env(), "The loaded TDLib does not support the legacy JSON API");
+  }
   auto request = Request(info, 1);
   void* client = nullptr;
   if (!info[0].IsNull() && !info[0].IsUndefined()) {
@@ -319,6 +326,9 @@ void Init(const Napi::CallbackInfo& info) {
   auto env = info.Env();
   RequireLoaded(env);
   double timeout = Timeout(info);
+  if (TdDispatcher::IsActive()) {
+    throw Napi::Error::New(env, "The managed dispatcher owns the TDLib receive stream");
+  }
   if (modern_owner != nullptr) {
     throw Napi::Error::New(env, "The worker is already initialized in a Node environment");
   }
@@ -339,6 +349,9 @@ Napi::Value CreateClientId(const Napi::CallbackInfo& info) {
 }
 void Send(const Napi::CallbackInfo& info) {
   RequireLoaded(info.Env());
+  if (TdDispatcher::IsActive()) {
+    throw Napi::Error::New(info.Env(), "Use the managed client API while the dispatcher is active");
+  }
   int id = Integer(info.Env(), info[0], 1, INT32_MAX, "Invalid client ID");
   auto request = Request(info, 1);
   TdLibLoader::td_send.load()(id, request.c_str());
@@ -485,6 +498,16 @@ Napi::Object Init(Napi::Env env, Napi::Object exports) {
   exports["td_json_client_receive"] = Export(env, Tdo::ClientReceive);
   exports["td_json_client_execute"] = Export(env, Tdo::ClientExecute);
   exports["td_json_client_destroy"] = Export(env, Tdo::ClientDestroy);
+  exports["td_client_create"] = Export(env, [](const Napi::CallbackInfo& info) {
+    if (modern_owner != nullptr) {
+      throw Napi::Error::New(info.Env(), "The raw receiver owns the TDLib receive stream");
+    }
+    return TdDispatcher::Create(info);
+  });
+  exports["td_client_send"] = Export(env, TdDispatcher::Send);
+  exports["td_client_receive"] = Export(env, TdDispatcher::Receive);
+  exports["td_client_execute"] = Export(env, TdDispatcher::Execute);
+  exports["td_client_destroy"] = Export(env, TdDispatcher::Destroy);
   exports["tdn_init"] = Export(env, Tdn::Init);
   exports["tdn_ref"] = Export(env, Tdn::Ref);
   exports["tdn_unref"] = Export(env, Tdn::Unref);

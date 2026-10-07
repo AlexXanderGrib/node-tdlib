@@ -7,25 +7,29 @@ TypeScript bindings use the same commit.
 
 ## Reliability changes
 
-- Join receive threads before destroying clients. Poll TDLib in waits of at most
-  100 ms while preserving the caller's total timeout; shutdown can interrupt long
-  waits. TDLib's own client destruction can take additional time.
+- Use one shared modern receive thread for public clients across Node workers.
+  Poll TDLib in waits of at most 100 ms, preserving independent client timeouts.
+  Close clients and drain their final closed updates before completing destruction.
+  Low-level legacy receive threads still join before destroying legacy clients.
 - Keep receive workers alive until both their JavaScript owner and their
   thread-safe function have finalized. Clean up clients and threads when a Node
   worker environment terminates, including when the modern receiver is unreferenced.
 - Settle outstanding receive promises when explicitly destroying a client, reject
   duplicate receives, and reject use of destroyed clients. The TypeScript adapter
   marks destruction immediately and allows independent clients to receive concurrently.
-- Associate modern receivers and log callbacks with their owning Node environment.
-  Only one environment can own the process-wide modern receiver or log callback.
+- Associate each public client with its Node environment and deliver through one
+  thread-safe function per environment. Worker termination closes only its clients.
+  The retained raw modern receiver and log callback each have one environment owner;
+  a raw receiver cannot compete with the managed public dispatcher.
 - Resolve all dynamic library symbols before publishing any pointers; failed loads
   close their handles and allow retries. Repeating a load of the same path succeeds.
   Serialize JavaScript entry points across environments so unloading cannot race
   with native calls or resource creation.
 - Reject unloading while clients, workers, or log callbacks are active. After modern
   client IDs have been created, keep TDLib loaded for the rest of the process:
-  the modern API does not expose client destruction or a reliable way to prove that
-  every client has finished closing across environment teardown.
+  TDLib owns a process-wide manager and native schedulers whose lifetime extends
+  beyond individual client closure. Client closure does not prove library unloading
+  is safe.
 - Validate finite timeouts and integer IDs/log levels before converting them to
   C integers. Reject embedded NUL characters in requests and library paths.
 - Enable C++ exceptions consistently so thread/allocation failures reach JavaScript.
@@ -39,7 +43,7 @@ TypeScript bindings use the same commit.
 
 ## Memory changes and tradeoffs
 
-Receive responses use one reusable native string rather than a temporary string
+Legacy receive responses use one reusable native string rather than a temporary string
 plus a separately allocated character array. Timeout notifications and deferred
 promise bookkeeping need no separate C++ payload allocation. Buffers larger than
 64 KiB are released after delivery. Synchronous responses go directly into a
@@ -54,8 +58,19 @@ attempts free their payload immediately. These limits apply to diagnostic logs o
 A synthetic burst of 10,000 messages of 32 KiB, measured before JavaScript drained
 the queue on Linux x64 with Node 24.21.0, grew RSS by about **313 MiB before** and
 **4 MiB after**. This measures log backlogs; it is not a claim about ordinary TDLib
-client memory usage. The receive path still copies data owned by TDLib once for
-safe transfer between threads, and each client still has a receive thread.
+client memory usage. The managed receive path copies TDLib-owned data once for
+safe transfer between threads, then moves it into client queues. Public clients
+share one addon receive thread. Legacy low-level clients retain per-client threads.
+
+Managed response queues default to 256 messages and 8 MiB per client, configurable
+through `TDLibAddon.create(path, addonPath, options)`. An oversized response can
+satisfy an already waiting consumer intact; an oversized buffered response or
+excess backlog closes that client and rejects receives and outstanding high-level
+API requests with an explicit overflow error. Other clients continue working.
+JSON is never truncated and updates are never silently dropped from a live client.
+These bounds cover addon buffering, not TDLib's own internal queues, databases,
+network resources, or JavaScript objects already delivered to applications.
+A paused client can overflow because the shared receiver continues draining TDLib.
 
 Reproduce the current measurement with:
 
@@ -68,20 +83,18 @@ node test/addon-memory.cjs /absolute/path/to/td.node
 
 ## Validation
 
-`npm run test:addon` builds the public adapter and runs 15 native regression tests
+`npm run test:addon` builds the public adapter and runs 23 native regression tests
 against a deterministic C ABI fixture. The fixture aborts on receive/destroy races
-and simultaneous receive calls. Tests cover failed loads/retries, validation,
-2 MiB responses through both receive APIs, long-wait cancellation, garbage
-collection, callback floods/replacement/exceptions, Node worker termination,
-modern environment ownership, and public adapter lifecycle behavior.
-Both CommonJS and ESM adapters also resolve a default CommonJS binary dispatcher.
-Three simultaneous Node workers also keep client responses separate and continue
-operating after a sibling is terminated with a receive pending.
+and simultaneous modern receive calls. Coverage includes failed loads/retries,
+validation, 2 MiB responses, timeouts, garbage collection, callback floods and
+exceptions, CommonJS/ESM resolution, modern-only libraries, nested/escaped JSON
+routing, response order, queue limits, delayed final closure, high-level request
+rejection, simultaneous workers, sibling termination, and receiver recreation.
 
-All 13 tests also passed with AddressSanitizer and UndefinedBehaviorSanitizer on
-the addon. For that run, `RTLD_DEEPBIND` was disabled in the test build because it
-bypasses sanitizer interposition, and leak detection was disabled for the
-uninstrumented Node executable. No sanitizer errors were reported.
+All 23 tests passed with AddressSanitizer and UndefinedBehaviorSanitizer on the
+addon. `RTLD_DEEPBIND` was disabled in the test build because it bypasses sanitizer
+interposition, and leak detection was disabled for the uninstrumented Node
+executable. No sanitizer errors were reported; ThreadSanitizer was not run.
 
 The 15 serialization/utility tests passed against the downloaded TDLib 1.8.67
 Linux glibc binary. Type checking, linting, native compilation, and distribution
@@ -98,88 +111,63 @@ removed. `load_tdjson` and its `load_tdjson_dynamic` alias remain supported;
 exercised with the actual TDLib 1.8.67 Linux x64 glibc library, so TDLib can be
 upgraded independently of the addon.
 
-## Modern JSON API migration assessment
+## Modern JSON API and worker architecture
 
-TDLib's [JSON interface header](https://github.com/tdlib/td/blob/master/td/telegram/td_json_client.h)
-documents `td_create_client_id`, `td_send`, `td_receive`, and `td_execute` as the
-main interface. It says the old `td_json_client_*` interface will be removed in
-TDLib 2.0.0. The [implementation](https://github.com/tdlib/td/blob/master/td/telegram/ClientJson.cpp)
-uses a process-wide client manager and adds `@client_id` to received events.
-Requests, responses, and `@extra` keep the same JSON encoding.
+The public `TDLibAddon` now uses `td_create_client_id`, `td_send`, `td_receive`,
+and `td_execute`. The
+[JSON interface contract](https://github.com/tdlib/td/blob/42e6a5259551178d1dab54a22ad96d14bd906e20/td/telegram/td_json_client.h)
+allows sends from any thread but permits only one concurrent receive caller.
+The old `td_json_client_*` interface is scheduled for removal in TDLib 2.0.0.
+The dynamic loader requires modern symbols and treats legacy symbols as optional.
+A modern-only fixture validates that legacy removal does not break the adapter;
+this is not a claim to have tested an unreleased TDLib 2.0 binary.
 
-The addon already exports the modern functions and has a process-wide receiver;
-the public `TDLibAddon` adapter still uses the legacy interface. Migrating that
-adapter is recommended, especially for multiple accounts. One shared receive
-thread would replace the current receive thread per client, reducing addon thread
-and buffer overhead. No RAM saving from that migration has been measured yet.
-TDLib's own client/database memory remains separate.
+One native dispatcher receives all modern clients' responses and routes them by
+TDLib's top-level `@client_id`. A scanner inspects trusted TDLib-produced JSON
+without building a second parsed object; nested `@extra` fields and escaped
+strings cannot impersonate routing IDs or authorization closure events.
+Per-client queues preserve event order and apply the limits described above.
+The public `Client` removes `@client_id` after routing, preserving existing API
+result and update shapes. Raw adapter JSON retains TDLib's transport envelope.
+Modern clients emit no updates until their first request. The high-level `Client`
+sends an untagged `getAuthorizationState` during construction so authentication
+can observe the initial update without requiring an application API call.
 
-Migration requires a single receive dispatcher that preserves each client's event
-order and routes events by `@client_id`. Per-client buffering must have an explicit
-policy for paused consumers: preserve updates without unbounded memory growth.
-The adapter must send `close` and continue receiving until
-`updateAuthorizationState` reports `authorizationStateClosed`; modern clients are
-destroyed automatically, so there is no `td_destroy` equivalent. Multiple adapter
-instances must share the dispatcher, and Node worker environments need an explicit
-ownership/routing policy because simultaneous `td_receive` calls are forbidden.
-Existing application-facing client handles can remain opaque objects containing
-an internal numeric TDLib ID. The migration is assessed here, not implemented.
+Each Node environment owns its client handles, promise deferreds, and one
+thread-safe function with a single coalesced wake-up slot. The receiver transfers
+owned strings, never JavaScript values, across environments. A shared deadline
+queue tracks independent receive timeouts without scanning all clients on each
+received message. The dispatcher sleeps when no clients remain and joins when
+its last environment exits; a later environment can start a fresh receiver.
+Active managed clients keep their owning event loop alive until closure.
 
-A smoke test against the real TDLib 1.8.67 library created two modern clients,
-received version responses with matching `@client_id` and `@extra`, then sent
-`close` to both and received `authorizationStateClosed` for each. This confirms
-the native API works; it does not validate a public adapter migration.
+`destroy()` sends `close`, rejects a pending receive promptly, and resolves only
+after `updateAuthorizationState` reports `authorizationStateClosed`. An `ok`
+response to `close` is not enough. Environment cleanup sends close for all its
+clients and lets the shared receiver drain closure even after JavaScript is gone.
+It does not close sibling environments' clients. Worker termination therefore
+can wait for TDLib's database/network shutdown; it is not a guaranteed immediate
+kill. Prefer `await client.destroy()` before stopping a worker.
 
-## Multiple bots in Node worker threads
+Native entry points retain the loader mutex to serialize loading and calls.
+The shared receive thread and managed environment cleanup do not acquire it,
+so closure can drain while cleanup waits. Logging remains process-wide with
+one callback owner; configure it centrally. The raw `tdn_*` receiver remains for
+advanced compatibility, but cannot be used alongside the managed dispatcher.
+Legacy low-level exports are retained when the loaded library provides them.
+Applications using the public API need no JavaScript broker or message-port
+routing layer.
 
-Worker threads are feasible with independent TDLib client instances. A worker is
-an independent JavaScript environment, but native libraries and C++ globals live
-in the shared process. Creating a client in each worker gives separate auth and
-update streams, not a separate copy of TDLib or its global logging configuration.
-Create the public adapter and `Client` inside the worker; do not transfer native
-client handles between JavaScript environments. Use a distinct database directory
-for every active auth, with separate file directories as the simplest layout.
-Different bot tokens authenticate different clients through
-`checkAuthenticationBotToken`. Distinct clients may use the same application
-`api_id` and `api_hash`.
+### Multiple bots with independent auth
 
-The current public adapter uses the legacy API, which has a receive stream per
-client. Each client has its own addon receive thread and environment-bound
-thread-safe function. Environment cleanup joins and destroys only that
-environment's legacy clients. A global recursive mutex protects library loading,
-unloading, and synchronous native entry points. TDLib's background actor threads
-still run concurrently, but synchronous executes or slow client destruction can
-hold that mutex and delay calls from other workers. Logging is process-wide and
-the addon permits only one environment to own its callback. Configure logging
-centrally; do not install independent callbacks in every bot worker.
-
-For the modern API, the
-[TDLib JSON contract](https://github.com/tdlib/td/blob/42e6a5259551178d1dab54a22ad96d14bd906e20/td/telegram/td_json_client.h)
-allows sending from any thread but requires one receive caller at a time. All
-clients' events share that receive stream. A mutex around several per-worker
-receive loops would prevent overlapping calls but would not ensure that the
-correct worker receives each client's event. Our addon currently restricts
-`tdn_init` and modern client creation to one owning environment. `td_send` can
-be called from other environments using an assigned client ID. An independent
-modern `TDLibAddon.create()` in every worker is not implemented.
-
-The recommended migration keeps the modern receive thread shared and gives
-each worker its own client and API facade. Start with a dedicated broker worker
-that owns IDs, continually drains `td_receive`, and routes events by `@client_id`
-over message ports. Bot workers run auth and business logic; commands can be
-forwarded through the broker or sent directly using the assigned ID. This adds
-message passing and serialization overhead. An eventual native dispatcher could
-deliver through a thread-safe function per environment, avoiding a JavaScript
-broker hop, but it needs explicit client ownership and safe environment teardown.
-Both designs need per-client ordering, byte/count limits for buffered events, and
-an explicit policy for slow consumers; port queues alone do not provide a bound.
-
-When a bot worker exits, the modern dispatcher must close its clients and keep
-receiving until `authorizationStateClosed`, even though there is no worker left
-to receive those events. Terminating the receive owner without replacing it or
-closing every client can leave clients and responses alive. Use graceful close
-before worker termination. Existing legacy termination cleanup is validated;
-automatic modern client closure on environment termination is not implemented.
+Create `TDLibAddon` and `Client` inside each worker. Native libraries and C++
+globals are shared by the process; JavaScript objects and handles belong to their
+creating environment. Do not transfer native handles between workers. Use a
+distinct database directory for every active auth, with separate file directories
+as the simplest layout. Different bot tokens authenticate different clients with
+`checkAuthenticationBotToken` (or `Authenticator.token`). They can share the same
+application `api_id` and `api_hash`. A worker can also own several clients.
+See the [README worker example](../README.md#worker-threads).
 
 ### What Telegram's Bot API server does
 
@@ -198,7 +186,7 @@ the JSON receive functions. The server
 actors assigned to scheduler 4. Thus a bot is an actor, not a dedicated OS thread.
 This is evidence for multiple authenticated clients in one process; reproducing
 its actor backend would require much more than switching JSON function names.
-The shared modern JSON manager is sufficient for this wrapper's proposed design.
+The shared modern JSON manager provides the backend used by this wrapper.
 
 ### Resource implications and validation
 
@@ -219,20 +207,24 @@ is a requirement.
 
 `test/worker-threads.cjs` exercises the actual shared library without credentials
 or database initialization. Four workers using the public `Client` API each
-completed 50 version requests and 50 authorization-state requests, then received
-the closed state and destroyed their clients. The modern mode used one receiver
-in the parent and routed events to four workers; each worker sent 50 tagged
-requests and received only its client's responses in order, then closed cleanly.
-Both modes passed against TDLib 1.8.67 on Linux x64/Node 24.21.0. These validate
-concurrency, routing, and shutdown; multiple real bot logins were not tested.
-CI runs both modes against the pinned binary.
+complete 50 version requests and 50 authorization-state requests, then close
+cleanly (400 responses). The termination mode terminates one worker and verifies
+that its three siblings complete another 50 requests each (550 responses total).
+The raw mode keeps the compatibility receiver in the parent and routes events
+to four workers (200 tagged responses). All three modes passed against TDLib
+1.8.67 on Linux x64/Node 24.21.0. They validate concurrency, routing, isolation
+of sibling teardown, and shutdown. Multiple real bot logins were not tested.
+Public workers must receive the initial auth-state update before making any
+application request, covering modern client initialization without credentials.
+CI runs all modes against the pinned binary.
 
 ```sh
 npm run build:gyp
 npm run build:dist
 # Set TDLIB_PATH to the downloaded shared library if optional packages are absent.
-node test/worker-threads.cjs legacy
-node test/worker-threads.cjs modern
+node test/worker-threads.cjs public
+node test/worker-threads.cjs termination
+node test/worker-threads.cjs raw
 ```
 
 ## Binary package publication

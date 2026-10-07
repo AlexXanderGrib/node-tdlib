@@ -2,6 +2,15 @@ export type ClientId = number;
 export type Client = { __type: "TDLibClient" };
 
 export type Addon = {
+  td_client_create(
+    timeoutSec: number,
+    maxQueuedResponses?: number,
+    maxQueuedBytes?: number
+  ): Client;
+  td_client_send(client: Client, json: string): void;
+  td_client_receive(client: Client): Promise<string | null>;
+  td_client_execute(client: Client | null, json: string): string | null;
+  td_client_destroy(client: Client): Promise<void>;
   td_json_client_create(timeoutSec: number): Client;
   td_json_client_send(client: Client, json: string): void;
   td_json_client_receive(client: Client): Promise<string | null>;

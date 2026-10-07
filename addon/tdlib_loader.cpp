@@ -90,11 +90,6 @@ namespace TdLibLoader {
         F##_loaded = func; \
       } while(0)
     
-    SAFE_LOAD_FUNC(td_json_client_create);
-    SAFE_LOAD_FUNC(td_json_client_send);
-    SAFE_LOAD_FUNC(td_json_client_receive);
-    SAFE_LOAD_FUNC(td_json_client_execute);
-    SAFE_LOAD_FUNC(td_json_client_destroy);
     SAFE_LOAD_FUNC(td_create_client_id);
     SAFE_LOAD_FUNC(td_send);
     SAFE_LOAD_FUNC(td_receive);
@@ -102,6 +97,22 @@ namespace TdLibLoader {
     SAFE_LOAD_FUNC(td_set_log_message_callback);
     
     #undef SAFE_LOAD_FUNC
+
+    // TDLib 2.0 removes the legacy API. It must not be a load prerequisite.
+    auto td_json_client_create_loaded = reinterpret_cast<td_json_client_create_t>(dlsym(handle, "td_json_client_create"));
+    auto td_json_client_send_loaded = reinterpret_cast<td_json_client_send_t>(dlsym(handle, "td_json_client_send"));
+    auto td_json_client_receive_loaded = reinterpret_cast<td_json_client_receive_t>(dlsym(handle, "td_json_client_receive"));
+    auto td_json_client_execute_loaded = reinterpret_cast<td_json_client_execute_t>(dlsym(handle, "td_json_client_execute"));
+    auto td_json_client_destroy_loaded = reinterpret_cast<td_json_client_destroy_t>(dlsym(handle, "td_json_client_destroy"));
+    if (!td_json_client_create_loaded || !td_json_client_send_loaded || !td_json_client_receive_loaded ||
+        !td_json_client_execute_loaded || !td_json_client_destroy_loaded) {
+      td_json_client_create_loaded = nullptr;
+      td_json_client_send_loaded = nullptr;
+      td_json_client_receive_loaded = nullptr;
+      td_json_client_execute_loaded = nullptr;
+      td_json_client_destroy_loaded = nullptr;
+    }
+    dlerror();
     
     loaded_path = library_path;
     td_json_client_create.store(td_json_client_create_loaded);

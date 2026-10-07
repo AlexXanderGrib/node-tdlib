@@ -1,6 +1,15 @@
 import { TDLibClient } from "../shared/client";
 
 export type Addon = {
+  td_client_create(
+    timeoutSec: number,
+    maxQueuedResponses?: number,
+    maxQueuedBytes?: number
+  ): TDLibClient;
+  td_client_send(client: TDLibClient, json: string): void;
+  td_client_receive(client: TDLibClient): Promise<string | null>;
+  td_client_execute(client: TDLibClient | null, json: string): string | null;
+  td_client_destroy(client: TDLibClient): Promise<void>;
   td_json_client_create(timeoutSec: number): TDLibClient;
   td_json_client_send(client: TDLibClient, json: string): void;
   td_json_client_receive(client: TDLibClient): Promise<string | null>;
