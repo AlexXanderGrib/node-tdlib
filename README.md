@@ -193,7 +193,6 @@ with `TDLibAddon.create(undefined, undefined, { maxQueuedResponses: 1024,
 maxQueuedBytes: 16 * 1024 * 1024 })`. Overflow closes the affected client and rejects
 its pending calls with an explicit error. Paused consumers can overflow. These
 limits cover addon queues; Node worker memory limits do not cap TDLib's native RAM.
-See the [native architecture and validation notes](docs/addon-audit.md).
 
 ### Projects built with `tdlib-native`
 

@@ -175,11 +175,11 @@ class PlatformLibrary {
    * @returns {boolean}
    */
   matches(platform, arch, libc) {
-    void platform;
-    void arch;
-    void libc;
-
-    return eval(this.getJsCondition());
+    if (platform !== this.os || arch !== this.cpu) return false;
+    if (this.os === "android" && this.libc === "glibc") {
+      return libc === "glibc" || libc == null;
+    }
+    return !this.libc || libc === this.libc;
   }
 
   toJSON() {
