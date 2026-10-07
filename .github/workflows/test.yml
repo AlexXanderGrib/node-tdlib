@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
 
 jobs:
   test:
@@ -47,8 +46,9 @@ jobs:
 
       - name: Test concurrent workers with real TDLib
         run: |
-          node test/worker-threads.cjs legacy
-          node test/worker-threads.cjs modern
+          node test/worker-threads.cjs public
+          node test/worker-threads.cjs termination
+          node test/worker-threads.cjs raw
         env:
           TDLIB_PATH: ${{ steps.tdlib.outputs.path }}
 

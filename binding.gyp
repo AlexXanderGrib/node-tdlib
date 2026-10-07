@@ -4,7 +4,7 @@
       "target_name": "td",
       "cflags!": ["-fno-exceptions"],
       "cflags_cc!": ["-fno-exceptions"],
-      "sources": ["addon/td.cpp", "addon/tdlib_loader.cpp"],
+      "sources": ["addon/td.cpp", "addon/tdlib_loader.cpp", "addon/td_dispatcher.cpp"],
       "include_dirs": ["<!@(node -p \"require('node-addon-api').include\")"],
       "dependencies": ["<!(node -p \"require('node-addon-api').gyp\")"],
       "defines": [

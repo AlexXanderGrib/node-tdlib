@@ -1,6 +1,6 @@
 // Opt-in smoke test against real TDLib; no credentials or database initialization.
-// Build first, then run: node test/worker-threads.cjs legacy (or modern).
-// modern demonstrates a manual broker, not a migrated public adapter.
+// Build first, then run: node test/worker-threads.cjs public (or termination/raw).
+// raw demonstrates the retained low-level receiver with a manual broker.
 const assert = require("node:assert/strict");
 const path = require("node:path");
 const {
@@ -16,13 +16,14 @@ const requestsPerWorker = 50;
 
 async function worker() {
   const { mode, library, id, clientId, expectedVersion } = workerData;
-  if (mode === "legacy") {
+  if (mode === "public") {
     const { TDLibAddon } = require(path.join(root, "dist/addon.js"));
     const { Client } = require(path.join(root, "dist/index.js"));
     const adapter = await TDLibAddon.create(library);
     const client = new Client(adapter);
     const closed = new Promise((resolve) =>
       client.updates.subscribe((update) => {
+        assert.equal("@client_id" in update, false);
         if (
           update._ === "updateAuthorizationState" &&
           update.authorization_state._ === "authorizationStateClosed"
@@ -35,12 +36,24 @@ async function worker() {
     await new Promise((resolve) => parentPort.once("message", resolve));
     for (let sequence = 0; sequence < requestsPerWorker; sequence++) {
       const version = await client.api.getOption({ name: "version" });
+      assert.equal("@client_id" in version, false);
       assert.equal(version.value, expectedVersion);
       const state = await client.api.getAuthorizationState({});
       assert.equal(state._, "authorizationStateWaitTdlibParameters");
     }
     parentPort.postMessage({ type: "done", id, responses: requestsPerWorker * 2 });
-    await new Promise((resolve) => parentPort.once("message", resolve));
+    let command = await new Promise((resolve) =>
+      parentPort.once("message", resolve)
+    );
+    if (command.type === "continue") {
+      for (let sequence = 0; sequence < requestsPerWorker; sequence++) {
+        const version = await client.api.getOption({ name: "version" });
+        assert.equal(version.value, expectedVersion);
+      }
+      parentPort.postMessage({ type: "alive", id, responses: requestsPerWorker });
+      command = await new Promise((resolve) => parentPort.once("message", resolve));
+    }
+    assert.equal(command.type, "close");
     await client.api.close({});
     await closed;
     await client.destroy();
@@ -89,8 +102,11 @@ async function worker() {
 }
 
 async function main() {
-  const mode = process.argv[2] || "legacy";
-  assert.ok(["legacy", "modern"].includes(mode), "Use legacy or modern");
+  const mode = process.argv[2] || "public";
+  assert.ok(
+    ["public", "termination", "raw"].includes(mode),
+    "Use public, termination, or raw"
+  );
   const library =
     process.env.TDLIB_PATH || require("@tdlib-native/tdjson").tdlibPath;
   const addon = require(addonPath);
@@ -99,13 +115,15 @@ async function main() {
   const expectedVersion = JSON.parse(
     addon.td_execute('{"@type":"getOption","name":"version"}')
   ).value;
-  if (mode === "modern") addon.tdn_init(0.1);
+  if (mode === "raw") addon.tdn_init(0.1);
 
   const workers = [];
   const owners = new Map();
   const ready = [];
   const done = [];
   const exits = [];
+  const alive = [];
+  const terminating = new Set();
   let stopReceiving = false;
   let receiveLoop;
   const timeout = setTimeout(() => {
@@ -114,9 +132,15 @@ async function main() {
   }, 20000);
   try {
     for (let id = 0; id < 4; id++) {
-      const clientId = mode === "modern" ? addon.td_create_client_id() : undefined;
+      const clientId = mode === "raw" ? addon.td_create_client_id() : undefined;
       const botWorker = new Worker(__filename, {
-        workerData: { mode, library, id, clientId, expectedVersion }
+        workerData: {
+          mode: mode === "termination" ? "public" : mode,
+          library,
+          id,
+          clientId,
+          expectedVersion
+        }
       });
       workers.push(botWorker);
       if (clientId !== undefined) owners.set(clientId, botWorker);
@@ -129,17 +153,20 @@ async function main() {
         });
       ready.push(waitFor("ready"));
       done.push(waitFor("done"));
+      alive.push(waitFor("alive"));
       exits.push(
         new Promise((resolve, reject) => {
           botWorker.once("error", reject);
           botWorker.once("exit", (code) =>
-            code === 0 ? resolve() : reject(new Error(`Worker exit: ${code}`))
+            code === 0 || (code === 1 && terminating.has(id))
+              ? resolve()
+              : reject(new Error(`Worker exit: ${code}`))
           );
         })
       );
     }
     await Promise.all(ready);
-    if (mode === "modern") {
+    if (mode === "raw") {
       receiveLoop = (async () => {
         while (!stopReceiving) {
           const raw = await addon.td_receive();
@@ -158,7 +185,17 @@ async function main() {
     }
     workers.forEach((botWorker) => botWorker.postMessage({ type: "go" }));
     const results = await Promise.all(done);
-    workers.forEach((botWorker) => botWorker.postMessage({ type: "close" }));
+    if (mode === "termination") {
+      terminating.add(0);
+      assert.equal(await workers[0].terminate(), 1);
+      workers
+        .slice(1)
+        .forEach((botWorker) => botWorker.postMessage({ type: "continue" }));
+      results.push(...(await Promise.all(alive.slice(1))));
+    }
+    workers
+      .filter((_, id) => !terminating.has(id))
+      .forEach((botWorker) => botWorker.postMessage({ type: "close" }));
     await Promise.all(exits);
     stopReceiving = true;
     if (receiveLoop) await receiveLoop;
@@ -175,7 +212,7 @@ async function main() {
     clearTimeout(timeout);
     stopReceiving = true;
     await Promise.all(workers.map((botWorker) => botWorker.terminate()));
-    if (mode === "modern") addon.tdn_unref();
+    if (mode === "raw") addon.tdn_unref();
   }
 }
 
