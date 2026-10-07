@@ -41,6 +41,8 @@
 
 ## 📦 Installation
 
+Requires Node.js 18 or later and a C++ build toolchain for the native addon.
+
 - **Using `npm`**
   ```shell
   npm i tdlib-native
@@ -54,14 +56,16 @@
   pnpm add tdlib-native
   ```
 
-## 3.0 Changelog
+## 4.0 changes
 
-- Made builds for linux arm64
-- Made builds for musl libc
-- Made builds for windows x32 (since tg desktop supports it)
-- Fixed client thread safety, fixed disposal of tdlib clients
-- Made `client.start()`, `client.pause()` and `client.destroy()` - async
-- Upgraded TDLib to 1.8.37
+- TDLib 1.8.67 with matching generated types and prebuilt platform packages.
+- Public clients use the modern JSON API and share one native receiver across
+  Node workers. Each worker owns its clients and authentication state.
+- `destroy()` waits for TDLib's final closed update. Receive queue overflow
+  closes the affected client and rejects pending requests.
+- Static loading and `load_tdjson_static` are removed. The library stays loaded
+  after a modern client is created; `unload_tdjson()` rejects attempts to unload it.
+- The raw `tdn_*` receiver cannot run alongside public managed clients.
 
 ## ⚙️ Usage
 
@@ -94,11 +98,11 @@ async function init() {
   // client authorized as bot
   // Call any tdlib method
   await client.api.getOption({ name: "version" });
-  // => Promise { _: "optionValueString", value: "1.8.37" }
+  // => Promise { _: "optionValueString", value: "1.8.67" }
 
   // or use a wrapper
   await client.tdlibOptions.get("version");
-  // => Promise "1.8.22"
+  // => Promise "1.8.67"
 
   // Subscribe to updates
   client.updates.subscribe(console.log);

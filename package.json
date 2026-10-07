@@ -1,6 +1,6 @@
 {
   "name": "tdlib-native",
-  "version": "3.8.0",
+  "version": "4.0.0",
   "description": "🚀 Telegram TDLib native nodejs wrapper",
   "packageManager": "npm@11.5.2",
   "config": {
@@ -112,7 +112,7 @@
     "vitest": "^3.2.4"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "dependencies": {
     "debug": "^4.4.1",
