@@ -1,824 +1,511 @@
-#define NAPI_VERSION 5
 #define NODE_API_NO_EXTERNAL_BUFFERS_ALLOWED 1
 
 #include <napi.h>
-#include <thread>
-#include <chrono>
+#include <algorithm>
 #include <atomic>
-#include <mutex>
+#include <cstdint>
+#include <chrono>
+#include <cmath>
 #include <condition_variable>
 #include <memory>
+#include <mutex>
 #include <string>
+#include <thread>
+#include <type_traits>
+#include <unordered_set>
 
 #include "tdlib_loader.h"
 
-// Error handling macros with better safety
-#define SAFE_THROW(TYPE, MSG, RET) \
-  do { \
-    auto error = TYPE::New(env, MSG); \
-    error.ThrowAsJavaScriptException(); \
-    return RET; \
-  } while(0)
-
-#define FAIL(MSG, RET) SAFE_THROW(Napi::Error, MSG, RET)
-#define TYPEFAIL(MSG, RET) SAFE_THROW(Napi::TypeError, MSG, RET)
-
-// Result type for operations that can fail
-enum class OperationResult {
-  SUCCESS,
-  INVALID_TIMEOUT,
-  INVALID_CLIENT_ID,
-  INVALID_VERBOSITY,
-  WORKER_CREATION_FAILED,
-  THREAD_CREATION_FAILED,
-  ALREADY_DESTROYED,
-  CLIENT_NULL
+namespace {
+class ReceiveWorker;
+struct AddonState {
+  std::unordered_set<ReceiveWorker*> workers;
+  ReceiveWorker* modern_worker = nullptr;
 };
 
-// Validation helpers
-namespace ValidationHelpers {
-  bool IsValidTimeout(double timeout) {
-    return timeout >= 0.0 && timeout <= 300.0; // Max 5 minutes
-  }
-  
-  bool IsValidClientId(int client_id) {
-    return client_id > 0 && client_id < INT32_MAX;
-  }
-  
-  bool IsValidVerbosityLevel(int level) {
-    return level >= 0 && level <= 1023; // TDLib max verbosity
-  }
-  
-  std::string SafeStringCopy(const char* str) {
-    if (str == nullptr) return "";
-    // Limit string length to prevent excessive memory usage
-    const size_t MAX_STRING_LENGTH = 1024 * 1024; // 1MB
-    size_t len = strnlen(str, MAX_STRING_LENGTH);
-    return std::string(str, len);
+// TDLib allows just one process-wide td_receive caller and log callback.
+napi_env modern_owner = nullptr;
+
+AddonState* State(Napi::Env env) { return env.GetInstanceData<AddonState>(); }
+
+void RequireLoaded(Napi::Env env) {
+  if (!TdLibLoader::IsTdLoaded()) {
+    throw Napi::Error::New(env, "TDLib not loaded. Call load_tdjson() first.");
   }
 }
 
+double Timeout(const Napi::CallbackInfo& info) {
+  auto env = info.Env();
+  if (info.Length() < 1 || !info[0].IsNumber()) {
+    throw Napi::TypeError::New(env, "Expected first argument (timeout) to be a number");
+  }
+  double timeout = info[0].As<Napi::Number>().DoubleValue();
+  if (!std::isfinite(timeout) || timeout < 0 || timeout > 300) {
+    throw Napi::RangeError::New(env, "Invalid timeout value (must be 0-300 seconds)");
+  }
+  return timeout;
+}
+
+int Integer(Napi::Env env, Napi::Value value, int min, int max, const char* name) {
+  if (!value.IsNumber()) throw Napi::TypeError::New(env, name);
+  double number = value.As<Napi::Number>().DoubleValue();
+  if (!std::isfinite(number) || std::floor(number) != number || number < min || number > max) {
+    throw Napi::RangeError::New(env, name);
+  }
+  return static_cast<int>(number);
+}
+
+std::string Request(const Napi::CallbackInfo& info, size_t index) {
+  if (info.Length() <= index || !info[index].IsString()) {
+    throw Napi::TypeError::New(info.Env(), "Expected request to be a string");
+  }
+  auto request = info[index].As<Napi::String>().Utf8Value();
+  if (request.find('\0') != std::string::npos) {
+    throw Napi::TypeError::New(info.Env(), "Request must not contain NUL characters");
+  }
+  return request;
+}
+
+Napi::Value Response(Napi::Env env, const char* response) {
+  return response == nullptr ? env.Null() : Napi::String::New(env, response);
+}
+
 class ReceiveWorker {
-public:
-  // Constructor that returns result code instead of throwing
-  static OperationResult Create(const Napi::Env& env, void *client, double timeout, 
-                               std::unique_ptr<ReceiveWorker>& out_worker) {
-    if (!ValidationHelpers::IsValidTimeout(timeout)) {
-      return OperationResult::INVALID_TIMEOUT;
+ public:
+  struct Deleter {
+    void operator()(ReceiveWorker* worker) const {
+      worker->Shutdown();
+      worker->Release();
     }
-    
-    auto worker = std::unique_ptr<ReceiveWorker>(new ReceiveWorker());
-    if (!worker->Initialize(env, client, timeout)) {
-      return OperationResult::WORKER_CREATION_FAILED;
+  };
+  using Owner = std::unique_ptr<ReceiveWorker, Deleter>;
+
+  static Owner Create(Napi::Env env, void* client, double timeout) {
+    ReceiveWorker* raw;
+    try {
+      raw = new ReceiveWorker(State(env), client, timeout);
+    } catch (...) {
+      if (client != nullptr) TdLibLoader::td_json_client_destroy.load()(client);
+      throw;
     }
-    
-    out_worker = std::move(worker);
-    return OperationResult::SUCCESS;
+    Owner worker(raw);
+    worker->state_->workers.insert(worker.get());
+    worker->tsfn_ = Tsfn::New(env, "ReceiveTSFN", 1, 1, worker.get(),
+      [](Napi::Env, void*, ReceiveWorker* ctx) {
+        std::lock_guard<std::recursive_mutex> lock(TdLibLoader::Mutex());
+        ctx->Release();
+      });
+    // Queued callbacks retain their context even after External finalization.
+    worker->refs_.fetch_add(1);
+    try {
+      worker->thread_ = std::thread(&ReceiveWorker::Loop, worker.get());
+    } catch (...) {
+      worker->tsfn_.Release();
+      throw;
+    }
+    return worker;
   }
 
   ~ReceiveWorker() {
-    shutdown();
+    Shutdown();
+    if (state_ != nullptr) state_->workers.erase(this);
   }
 
-  void shutdown() {
-    bool expected = false;
-    if (!destroyed_.compare_exchange_strong(expected, true)) {
-      return; // Already destroyed
-    }
-    
+  void Release() {
+    if (refs_.fetch_sub(1) == 1) delete this;
+  }
+
+  void Shutdown(napi_env env = nullptr) {
+    if (destroyed_) return;
+    destroyed_ = true;
     {
       std::lock_guard<std::mutex> lock(mutex_);
       stop_ = true;
-      ready_ = true;
     }
-    cv_.notify_all();
-    
-    // Clean up client safely
-    void* expected_client = client_.load();
-    if (expected_client != nullptr && client_.compare_exchange_strong(expected_client, nullptr)) {
-      auto destroy_func = TdLibLoader::td_json_client_destroy.load();
-      if (destroy_func != nullptr) {
-        destroy_func(expected_client);
-      }
+    cv_.notify_one();
+    if (thread_.joinable()) thread_.join();
+    // Never destroy a client while td_json_client_receive is using it.
+    if (client_ != nullptr) {
+      TdLibLoader::td_json_client_destroy.load()(client_);
+      client_ = nullptr;
     }
-    
-    if (thread_.joinable()) {
-      thread_.join();
-    }
-  }
-
-  // Thread-safe reference counting
-  void AddRef() {
-    ref_count_.fetch_add(1);
-  }
-  
-  void Release() {
-    if (ref_count_.fetch_sub(1) == 1) {
-      delete this;
+    TdLibLoader::ReleaseResource();
+    auto deferred = deferred_;
+    deferred_ = nullptr;
+    std::string().swap(response_);
+    if (env != nullptr && deferred) {
+      napi_reject_deferred(env, deferred,
+        Napi::Error::New(env, "Client is destroyed").Value());
     }
   }
 
-  // A task can be added only after the previous task is finished.
-  Napi::Promise NewTask(const Napi::Env& env) {
-    if (destroyed_.load()) {
-      auto error = Napi::Error::New(env, "Worker has been destroyed");
-      auto fail_deferred = Napi::Promise::Deferred::New(env);
-      fail_deferred.Reject(error.Value());
-      return fail_deferred.Promise();
+  Napi::Promise NewTask(Napi::Env env) {
+    napi_deferred deferred;
+    napi_value promise;
+    if (napi_create_promise(env, &deferred, &promise) != napi_ok) {
+      throw Napi::Error::New(env, "Failed to create receive promise");
     }
-    
-    std::lock_guard<std::mutex> lock(deferred_mutex_);
-    if (deferred_ != nullptr) {
-      auto error = Napi::Error::New(env, "receive is not finished yet");
-      auto fail_deferred = Napi::Promise::Deferred::New(env);
-      fail_deferred.Reject(error.Value());
-      return fail_deferred.Promise();
+    if (destroyed_ || deferred_ != nullptr) {
+      napi_reject_deferred(env, deferred, Napi::Error::New(env, destroyed_ ?
+        "Client is destroyed" : "receive is not finished yet").Value());
+      return Napi::Promise(env, promise);
     }
-    
-    deferred_ = std::make_unique<Napi::Promise::Deferred>(env);
+    deferred_ = deferred;
     {
       std::lock_guard<std::mutex> lock(mutex_);
       ready_ = true;
     }
-    cv_.notify_all();
-    return deferred_->Promise();
+    cv_.notify_one();
+    return Napi::Promise(env, promise);
   }
 
-  void Ref(const Napi::Env& env) { 
-    if (!destroyed_.load()) {
-      tsfn_.Ref(env); 
-    }
+  void* Client(Napi::Env env) const {
+    if (destroyed_) throw Napi::Error::New(env, "Client is destroyed");
+    return client_;
   }
-  
-  void Unref(const Napi::Env& env) { 
-    if (!destroyed_.load()) {
-      tsfn_.Unref(env); 
-    }
-  }
-  
-  void* GetClient() { 
-    return client_.load(); 
+  void Ref(Napi::Env env) { tsfn_.Ref(env); }
+  void Unref(Napi::Env env) { tsfn_.Unref(env); }
+  void DetachState() { state_ = nullptr; }
+
+ private:
+  ReceiveWorker(AddonState* state, void* client, double timeout)
+    : state_(state), client_(client), timeout_(timeout) {
+    TdLibLoader::RetainResource();
   }
 
-private:
-  ReceiveWorker() : client_(nullptr), timeout_(0.0), ready_(false), stop_(false), 
-                   destroyed_(false), ref_count_(1) {}
-
-  bool Initialize(const Napi::Env& env, void *client, double timeout) {
-    client_ = client;
-    timeout_ = timeout;
-    
-    // Create the thread-safe function directly
-    tsfn_ = Tsfn::New(env, "ReceiveTSFN", 0, 1, this);
-    
-    // Try to create the worker thread
-    bool thread_created = false;
-    if (client == nullptr) { // New tdjson interface
-      thread_ = std::thread(&ReceiveWorker::loop, this);
-      thread_.detach();
-      thread_created = true;
+  static void CallJs(Napi::Env env, Napi::Function, ReceiveWorker* ctx, void*) {
+    if (env == nullptr || ctx->destroyed_ || ctx->deferred_ == nullptr) return;
+    // Node can stop allowing JS during worker termination before env is null.
+    // Use status-returning N-API here so teardown never throws across a C ABI.
+    auto deferred = ctx->deferred_;
+    ctx->deferred_ = nullptr;
+    napi_value value;
+    napi_status status = ctx->response_.empty() ? napi_get_null(env, &value) :
+      napi_create_string_utf8(env, ctx->response_.data(), ctx->response_.size(), &value);
+    ctx->ClearResponse();
+    if (status == napi_ok && !ctx->receive_failed_) {
+      napi_resolve_deferred(env, deferred, value);
     } else {
-      thread_ = std::thread(&ReceiveWorker::loop, this);
-      thread_created = thread_.joinable();
-    }
-    
-    if (!thread_created) {
-      return false;
-    }
-    
-    tsfn_.Ref(env);
-    return true;
-  }
-
-  using TsfnCtx = ReceiveWorker;
-  
-  // Called on the main thread
-  static void CallJs(Napi::Env env, Napi::Function, TsfnCtx *ctx, char *data) {
-    if (env != nullptr && ctx != nullptr && !ctx->destroyed_.load()) {
-      std::lock_guard<std::mutex> lock(ctx->deferred_mutex_);
-      if (ctx->deferred_ != nullptr) {
-        const char *res = data;
-        auto val = (res == nullptr || *res == '\0') ? 
-          env.Null() : Napi::String::New(env, res);
-        
-        auto deferred = std::move(ctx->deferred_);
-        deferred->Resolve(val);
-        // ctx may not exist anymore after this point
+      napi_value message, error;
+      if (napi_create_string_utf8(env, "Failed to receive TDLib response", NAPI_AUTO_LENGTH, &message) == napi_ok &&
+          napi_create_error(env, nullptr, message, &error) == napi_ok) {
+        napi_reject_deferred(env, deferred, error);
       }
     }
-    delete[] data; // Clean up copied data
   }
-  
-  using Tsfn = Napi::TypedThreadSafeFunction<TsfnCtx, char, CallJs>;
 
-  void loop() {
+  using Tsfn = Napi::TypedThreadSafeFunction<ReceiveWorker, void, CallJs>;
+
+  void ClearResponse() {
+    // Reuse small buffers, but do not retain large chat/file responses.
+    if (response_.capacity() > 64 * 1024) std::string().swap(response_);
+    else response_.clear();
+  }
+
+  void Loop() {
     std::unique_lock<std::mutex> lock(mutex_);
-    while (!stop_.load()) {
-      cv_.wait(lock, [this] { return ready_.load() || stop_.load(); });
-      if (stop_.load()) break;
-      
+    while (!stop_) {
+      cv_.wait(lock, [this] { return ready_ || stop_; });
+      if (stop_) break;
       ready_ = false;
       lock.unlock();
-      
-      const char *response = nullptr;
-      void* current_client = client_.load();
-      
-      // Remove try-catch block since we're not using exceptions
-      if (current_client == nullptr) {
-        auto receive_func = TdLibLoader::td_receive.load();
-        if (receive_func != nullptr) {
-          response = receive_func(timeout_);
-        }
-      } else {
-        auto receive_func = TdLibLoader::td_json_client_receive.load();
-        if (receive_func != nullptr) {
-          response = receive_func(current_client, timeout_);
-        }
+      receive_failed_ = false;
+      try {
+        const auto deadline = std::chrono::steady_clock::now() +
+          std::chrono::duration<double>(timeout_);
+        do {
+          // Short waits preserve the requested timeout and bound shutdown latency.
+          const double remaining = std::chrono::duration<double>(
+            deadline - std::chrono::steady_clock::now()).count();
+          const double wait = std::max(0.0, std::min(remaining, 0.1));
+          const char* response = client_ == nullptr ?
+            TdLibLoader::td_receive.load()(wait) :
+            TdLibLoader::td_json_client_receive.load()(client_, wait);
+          if (response != nullptr) {
+            response_.assign(response); // One copy; never truncate JSON.
+            break;
+          }
+        } while (!stop_ && std::chrono::steady_clock::now() < deadline);
+      } catch (...) {
+        receive_failed_ = true;
       }
-      
-      // Copy response to ensure thread safety
-      char* data_copy = nullptr;
-      if (response != nullptr && *response != '\0') {
-        std::string safe_response = ValidationHelpers::SafeStringCopy(response);
-        data_copy = new char[safe_response.length() + 1];
-        std::strcpy(data_copy, safe_response.c_str());
-      } else {
-        data_copy = new char[1];
-        data_copy[0] = '\0';
-      }
-      
       lock.lock();
-      if (!stop_.load()) {
-        tsfn_.NonBlockingCall(data_copy);
-      } else {
-        delete[] data_copy; // Clean up if stopping
-      }
+      if (stop_) break;
+      // There is at most one outstanding receive, so a queue of one suffices.
+      if (tsfn_.NonBlockingCall(nullptr) != napi_ok) break;
     }
+    lock.unlock();
     tsfn_.Release();
   }
 
-  std::atomic<void*> client_;
+  AddonState* state_;
+  void* client_;
   double timeout_;
   Tsfn tsfn_;
-  std::unique_ptr<Napi::Promise::Deferred> deferred_;
-  std::mutex deferred_mutex_;
-  std::atomic<bool> ready_;
-  std::atomic<bool> stop_;
-  std::atomic<bool> destroyed_;
-  std::atomic<int> ref_count_;
+  napi_deferred deferred_ = nullptr;
+  std::string response_;
+  bool receive_failed_ = false;
+  bool destroyed_ = false;
+  bool ready_ = false;
+  std::atomic<bool> stop_{false};
+  std::atomic<unsigned> refs_{1};
   std::mutex mutex_;
   std::condition_variable cv_;
   std::thread thread_;
 };
 
-// Old tdjson interface
+ReceiveWorker* ClientWorker(const Napi::CallbackInfo& info) {
+  if (info.Length() < 1 || !info[0].IsExternal()) {
+    throw Napi::TypeError::New(info.Env(), "Expected first argument to be a client external object");
+  }
+  auto* worker = info[0].As<Napi::External<ReceiveWorker>>().Data();
+  if (State(info.Env())->workers.count(worker) == 0 ||
+      worker == State(info.Env())->modern_worker) {
+    throw Napi::TypeError::New(info.Env(), "Unknown client");
+  }
+  return worker;
+}
+
+ReceiveWorker* ModernWorker(Napi::Env env) {
+  auto* worker = State(env)->modern_worker;
+  if (worker == nullptr) throw Napi::Error::New(env, "The worker is uninitialized");
+  return worker;
+}
+} // namespace
+
 namespace Tdo {
-  Napi::Value ClientCreate(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (!TdLibLoader::IsTdLoaded()) {
-      FAIL("TDLib not loaded. Call load_tdjson_dynamic() or load_tdjson_static() first.", Napi::Value());
-    }
-    
-    if (info.Length() < 1 || !info[0].IsNumber()) {
-      TYPEFAIL("Expected first argument to be a number", Napi::Value());
-    }
-    
-    double timeout = info[0].As<Napi::Number>().DoubleValue();
-    if (!ValidationHelpers::IsValidTimeout(timeout)) {
-      FAIL("Invalid timeout value (must be 0-300 seconds)", Napi::Value());
-    }
-    
-    auto create_func = TdLibLoader::td_json_client_create.load();
-    if (create_func == nullptr) {
-      FAIL("TDLib not loaded", Napi::Value());
-    }
-    
-    void *client = create_func();
-    if (client == nullptr) {
-      FAIL("td_json_client_create returned null", Napi::Value());
-    }
-    
-    std::unique_ptr<ReceiveWorker> worker;
-    OperationResult result = ReceiveWorker::Create(env, client, timeout, worker);
-    
-    if (result != OperationResult::SUCCESS) {
-      // Clean up client if worker creation fails
-      auto destroy_func = TdLibLoader::td_json_client_destroy.load();
-      if (destroy_func != nullptr) {
-        destroy_func(client);
-      }
-      
-      const char* error_msg = "Failed to create worker";
-      switch (result) {
-        case OperationResult::INVALID_TIMEOUT:
-          error_msg = "Invalid timeout value";
-          break;
-        case OperationResult::WORKER_CREATION_FAILED:
-          error_msg = "Failed to create worker";
-          break;
-        case OperationResult::THREAD_CREATION_FAILED:
-          error_msg = "Failed to create worker thread";
-          break;
-        default:
-          error_msg = "Unknown error creating worker";
-          break;
-      }
-      FAIL(error_msg, Napi::Value());
-    }
-    
-    // Release ownership to the External object
-    ReceiveWorker* raw_worker = worker.release();
-    return Napi::External<ReceiveWorker>::New(env, raw_worker, [](Napi::Env, ReceiveWorker* worker) {
-      if (worker != nullptr) {
-        worker->Release();
-      }
+Napi::Value ClientCreate(const Napi::CallbackInfo& info) {
+  auto env = info.Env();
+  RequireLoaded(env);
+  double timeout = Timeout(info);
+  void* client = TdLibLoader::td_json_client_create.load()();
+  if (client == nullptr) throw Napi::Error::New(env, "td_json_client_create returned null");
+  // Transfer client ownership before anything that can fail during setup.
+  auto worker = ReceiveWorker::Create(env, client, timeout);
+  auto external = Napi::External<ReceiveWorker>::New(env, worker.get(),
+    [](Napi::Env env, ReceiveWorker* worker) {
+      std::lock_guard<std::recursive_mutex> lock(TdLibLoader::Mutex());
+      worker->Shutdown(env);
+      worker->Release();
     });
-  }
-
-  void ClientSend(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (!TdLibLoader::IsTdLoaded()) {
-      FAIL("TDLib not loaded", );
-      return;
-    }
-    
-    if (info.Length() < 2) {
-      TYPEFAIL("Expected two arguments", );
-      return;
-    }
-    
-    if (!info[0].IsExternal()) {
-      TYPEFAIL("Expected first argument to be an external object", );
-      return;
-    }
-    
-    if (!info[1].IsString()) {
-      TYPEFAIL("Expected second argument to be a string", );
-      return;
-    }
-    
-    auto *worker = info[0].As<Napi::External<ReceiveWorker>>().Data();
-    if (worker == nullptr) {
-      FAIL("Invalid worker object", );
-      return;
-    }
-    
-    void* client = worker->GetClient();
-    if (client == nullptr) {
-      FAIL("Client has been destroyed", );
-      return;
-    }
-    
-    auto send_func = TdLibLoader::td_json_client_send.load();
-    if (send_func == nullptr) {
-      FAIL("TDLib not loaded", );
-      return;
-    }
-    
-    std::string request = info[1].As<Napi::String>().Utf8Value();
-    send_func(client, request.c_str());
-  }
-
-  Napi::Value ClientReceive(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (info.Length() < 1 || !info[0].IsExternal()) {
-      TYPEFAIL("Expected first argument to be an external object", Napi::Value());
-    }
-    
-    auto *worker = info[0].As<Napi::External<ReceiveWorker>>().Data();
-    if (worker == nullptr) {
-      FAIL("Invalid worker object", Napi::Value());
-    }
-    
-    return worker->NewTask(env);
-  }
-
-  Napi::Value ClientExecute(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (!TdLibLoader::IsTdLoaded()) {
-      FAIL("TDLib not loaded", Napi::Value());
-    }
-    
-    if (info.Length() < 2) {
-      TYPEFAIL("Expected two arguments", Napi::Value());
-    }
-    
-    if (!info[1].IsString()) {
-      TYPEFAIL("Expected second argument to be a string", Napi::Value());
-    }
-    
-    void *client = nullptr;
-    if (!info[0].IsNull() && !info[0].IsUndefined()) {
-      if (!info[0].IsExternal()) {
-        TYPEFAIL("Expected first argument to be an external object, null, or undefined", Napi::Value());
-      }
-      auto *worker = info[0].As<Napi::External<ReceiveWorker>>().Data();
-      if (worker != nullptr) {
-        client = worker->GetClient();
-      }
-    }
-    
-    auto execute_func = TdLibLoader::td_json_client_execute.load();
-    if (execute_func == nullptr) {
-      FAIL("TDLib not loaded", Napi::Value());
-    }
-    
-    std::string request = info[1].As<Napi::String>().Utf8Value();
-    const char *response = execute_func(client, request.c_str());
-    
-    if (response == nullptr) {
-      return env.Null();
-    }
-    
-    return Napi::String::New(env, ValidationHelpers::SafeStringCopy(response));
-  }
-
-  void ClientDestroy(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (info.Length() < 1 || !info[0].IsExternal()) {
-      TYPEFAIL("Expected first argument to be an external object", );
-      return;
-    }
-    
-    auto *worker = info[0].As<Napi::External<ReceiveWorker>>().Data();
-    if (worker != nullptr) {
-      worker->shutdown(); // Safe shutdown instead of direct delete
-    }
-  }
+  worker.release();
+  return external;
 }
+void ClientSend(const Napi::CallbackInfo& info) {
+  RequireLoaded(info.Env());
+  auto* worker = ClientWorker(info);
+  auto request = Request(info, 1);
+  TdLibLoader::td_json_client_send.load()(worker->Client(info.Env()), request.c_str());
+}
+Napi::Value ClientReceive(const Napi::CallbackInfo& info) {
+  return ClientWorker(info)->NewTask(info.Env());
+}
+Napi::Value ClientExecute(const Napi::CallbackInfo& info) {
+  RequireLoaded(info.Env());
+  auto request = Request(info, 1);
+  void* client = nullptr;
+  if (!info[0].IsNull() && !info[0].IsUndefined()) {
+    client = ClientWorker(info)->Client(info.Env());
+  }
+  return Response(info.Env(), TdLibLoader::td_json_client_execute.load()(client, request.c_str()));
+}
+void ClientDestroy(const Napi::CallbackInfo& info) {
+  ClientWorker(info)->Shutdown(info.Env());
+}
+} // namespace Tdo
 
-// New tdjson interface with thread-safe singleton
 namespace Tdn {
-  static std::unique_ptr<ReceiveWorker> worker_ptr = nullptr;
-  static std::mutex worker_mutex;
-  static std::atomic<bool> init_attempted{false};
-  static OperationResult last_init_result = OperationResult::SUCCESS;
-
-  void Init(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (!TdLibLoader::IsTdLoaded()) {
-      FAIL("TDLib not loaded. Call load_tdjson_dynamic() or load_tdjson_static() first.", );
-      return;
-    }
-    
-    // Use atomic flag instead of std::once_flag to avoid potential exception issues
-    bool expected = false;
-    if (!init_attempted.compare_exchange_strong(expected, true)) {
-      std::lock_guard<std::mutex> lock(worker_mutex);
-      if (worker_ptr != nullptr) {
-        FAIL("The worker is already initialized", );
-        return;
-      }
-      
-      // Return previous initialization error if any
-      const char* error_msg = "Previous initialization failed";
-      switch (last_init_result) {
-        case OperationResult::INVALID_TIMEOUT:
-          error_msg = "Invalid timeout value (must be 0-300 seconds)";
-          break;
-        case OperationResult::WORKER_CREATION_FAILED:
-          error_msg = "Failed to create worker";
-          break;
-        case OperationResult::THREAD_CREATION_FAILED:
-          error_msg = "Failed to create worker thread";
-          break;
-        default:
-          break;
-      }
-      FAIL(error_msg, );
-      return;
-    }
-    
-    std::lock_guard<std::mutex> lock(worker_mutex);
-    if (worker_ptr != nullptr) {
-      FAIL("The worker is already initialized", );
-      return;
-    }
-    
-    if (info.Length() < 1 || !info[0].IsNumber()) {
-      last_init_result = OperationResult::INVALID_TIMEOUT;
-      FAIL("Expected first argument (timeout) to be a number", );
-      return;
-    }
-    
-    double timeout = info[0].As<Napi::Number>().DoubleValue();
-    if (!ValidationHelpers::IsValidTimeout(timeout)) {
-      last_init_result = OperationResult::INVALID_TIMEOUT;
-      FAIL("Invalid timeout value (must be 0-300 seconds)", );
-      return;
-    }
-    
-    std::unique_ptr<ReceiveWorker> worker;
-    OperationResult result = ReceiveWorker::Create(env, nullptr, timeout, worker);
-    last_init_result = result;
-    
-    if (result != OperationResult::SUCCESS) {
-      const char* error_msg = "Failed to initialize worker";
-      switch (result) {
-        case OperationResult::INVALID_TIMEOUT:
-          error_msg = "Invalid timeout value";
-          break;
-        case OperationResult::WORKER_CREATION_FAILED:
-          error_msg = "Failed to create worker";
-          break;
-        case OperationResult::THREAD_CREATION_FAILED:
-          error_msg = "Failed to create worker thread";
-          break;
-        default:
-          break;
-      }
-      FAIL(error_msg, );
-      return;
-    }
-    
-    worker_ptr = std::move(worker);
+void Init(const Napi::CallbackInfo& info) {
+  auto env = info.Env();
+  RequireLoaded(env);
+  double timeout = Timeout(info);
+  if (modern_owner != nullptr) {
+    throw Napi::Error::New(env, "The worker is already initialized in a Node environment");
   }
-
-  void Ref(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    std::lock_guard<std::mutex> lock(worker_mutex);
-    if (worker_ptr == nullptr) {
-      FAIL("The worker is uninitialized", );
-      return;
-    }
-    worker_ptr->Ref(env);
-  }
-
-  void Unref(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    std::lock_guard<std::mutex> lock(worker_mutex);
-    if (worker_ptr == nullptr) {
-      FAIL("The worker is uninitialized", );
-      return;
-    }
-    worker_ptr->Unref(env);
-  }
-
-  Napi::Value CreateClientId(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (!TdLibLoader::IsTdLoaded()) {
-      FAIL("TDLib not loaded", Napi::Value());
-    }
-    
-    auto create_func = TdLibLoader::td_create_client_id.load();
-    auto send_func = TdLibLoader::td_send.load();
-    auto receive_func = TdLibLoader::td_receive.load();
-    
-    if (create_func == nullptr) {
-      FAIL("td_create_client_id is not available", Napi::Value());
-    }
-    if (send_func == nullptr) {
-      FAIL("td_send is not available", Napi::Value());
-    }
-    if (receive_func == nullptr) {
-      FAIL("td_receive is not available", Napi::Value());
-    }
-    
-    {
-      std::lock_guard<std::mutex> lock(worker_mutex);
-      if (worker_ptr == nullptr) {
-        FAIL("The worker is uninitialized", Napi::Value());
-      }
-    }
-    
-    int client_id = create_func();
-    if (!ValidationHelpers::IsValidClientId(client_id)) {
-      FAIL("Invalid client ID returned by TDLib", Napi::Value());
-    }
-    
-    return Napi::Number::New(env, client_id);
-  }
-
-  void Send(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (!TdLibLoader::IsTdLoaded()) {
-      FAIL("TDLib not loaded", );
-      return;
-    }
-    
-    if (info.Length() < 2) {
-      TYPEFAIL("Expected two arguments", );
-      return;
-    }
-    
-    if (!info[0].IsNumber()) {
-      TYPEFAIL("Expected first argument to be a number", );
-      return;
-    }
-    
-    if (!info[1].IsString()) {
-      TYPEFAIL("Expected second argument to be a string", );
-      return;
-    }
-    
-    int client_id = info[0].As<Napi::Number>().Int32Value();
-    if (!ValidationHelpers::IsValidClientId(client_id)) {
-      FAIL("Invalid client ID", );
-      return;
-    }
-    
-    auto send_func = TdLibLoader::td_send.load();
-    if (send_func == nullptr) {
-      FAIL("TDLib not loaded", );
-      return;
-    }
-    
-    std::string request = info[1].As<Napi::String>().Utf8Value();
-    send_func(client_id, request.c_str());
-  }
-
-  Napi::Value Receive(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    std::lock_guard<std::mutex> lock(worker_mutex);
-    if (worker_ptr == nullptr) {
-      FAIL("The worker is uninitialized", Napi::Value());
-    }
-    return worker_ptr->NewTask(env);
-  }
-
-  Napi::Value Execute(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (!TdLibLoader::IsTdLoaded()) {
-      FAIL("TDLib not loaded", Napi::Value());
-    }
-    
-    if (info.Length() < 1 || !info[0].IsString()) {
-      TYPEFAIL("Expected first argument to be a string", Napi::Value());
-    }
-    
-    auto execute_func = TdLibLoader::td_execute.load();
-    if (execute_func == nullptr) {
-      FAIL("TDLib not loaded", Napi::Value());
-    }
-    
-    std::string request = info[0].As<Napi::String>().Utf8Value();
-    const char *response = execute_func(request.c_str());
-    
-    if (response == nullptr) {
-      return env.Null();
-    }
-    
-    return Napi::String::New(env, ValidationHelpers::SafeStringCopy(response));
-  }
+  auto worker = ReceiveWorker::Create(env, nullptr, timeout);
+  State(env)->modern_worker = worker.release();
+  modern_owner = env;
 }
+void Ref(const Napi::CallbackInfo& info) { ModernWorker(info.Env())->Ref(info.Env()); }
+void Unref(const Napi::CallbackInfo& info) { ModernWorker(info.Env())->Unref(info.Env()); }
+Napi::Value CreateClientId(const Napi::CallbackInfo& info) {
+  RequireLoaded(info.Env());
+  ModernWorker(info.Env());
+  int id = TdLibLoader::td_create_client_id.load()();
+  if (id <= 0) throw Napi::Error::New(info.Env(), "Invalid client ID returned by TDLib");
+  // The new API has no destroy function; TDLib can own clients after env teardown.
+  TdLibLoader::MarkClientIdCreated();
+  return Napi::Number::New(info.Env(), id);
+}
+void Send(const Napi::CallbackInfo& info) {
+  RequireLoaded(info.Env());
+  int id = Integer(info.Env(), info[0], 1, INT32_MAX, "Invalid client ID");
+  auto request = Request(info, 1);
+  TdLibLoader::td_send.load()(id, request.c_str());
+}
+Napi::Value Receive(const Napi::CallbackInfo& info) { return ModernWorker(info.Env())->NewTask(info.Env()); }
+Napi::Value Execute(const Napi::CallbackInfo& info) {
+  RequireLoaded(info.Env());
+  auto request = Request(info, 0);
+  return Response(info.Env(), TdLibLoader::td_execute.load()(request.c_str()));
+}
+} // namespace Tdn
 
 namespace TdCallbacks {
-  using TsfnCtx = std::nullptr_t;
-  struct TsfnData {
-    int verbosity_level;
-    std::string message;
-    
-    TsfnData(int level, const std::string& msg) 
-      : verbosity_level(level), message(msg) {}
-  };
-  
-  void CallJs(Napi::Env env, Napi::Function callback, TsfnCtx *, TsfnData *data) {
-    if (data == nullptr) return;
-    
-    if (env != nullptr && callback != nullptr) {
-      // Remove try-catch since we're not using exceptions
-      // Just call the callback - if it fails, N-API will handle it
-      callback.Call({
-        Napi::Number::New(env, data->verbosity_level),
-        Napi::String::New(env, data->message)
-      });
+struct LogData {
+  int level;
+  std::string message;
+};
+void CallJs(Napi::Env env, Napi::Function callback, void*, LogData* raw) {
+  std::unique_ptr<LogData> data(raw);
+  if (env == nullptr || callback.IsEmpty()) return;
+  napi_value args[2], receiver, result;
+  if (napi_create_int32(env, data->level, &args[0]) != napi_ok ||
+      napi_create_string_utf8(env, data->message.data(), data->message.size(), &args[1]) != napi_ok ||
+      napi_get_undefined(env, &receiver) != napi_ok) return;
+  if (napi_call_function(env, receiver, callback, 2, args, &result) == napi_pending_exception) {
+    napi_value error;
+    if (napi_get_and_clear_last_exception(env, &error) == napi_ok) {
+      napi_fatal_exception(env, error);
     }
-    delete data;
-  }
-  
-  using Tsfn = Napi::TypedThreadSafeFunction<TsfnCtx, TsfnData, CallJs>;
-
-  static std::unique_ptr<Tsfn> tsfn_ptr = nullptr;
-  static std::mutex tsfn_mutex;
-
-  extern "C" void c_message_callback(int verbosity_level, const char *message) {
-    std::lock_guard<std::mutex> lock(tsfn_mutex);
-    if (tsfn_ptr == nullptr) return;
-    
-    if (!ValidationHelpers::IsValidVerbosityLevel(verbosity_level)) {
-      return; // Ignore invalid verbosity levels
-    }
-    
-    std::string safe_message = ValidationHelpers::SafeStringCopy(message);
-    auto *data = new TsfnData(verbosity_level, safe_message);
-    tsfn_ptr->NonBlockingCall(data);
-  }
-
-  void SetLogMessageCallback(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    
-    if (!TdLibLoader::IsTdLoaded()) {
-      FAIL("TDLib not loaded", );
-      return;
-    }
-    
-    if (info.Length() < 2) {
-      TYPEFAIL("Expected two arguments", );
-      return;
-    }
-    
-    if (!info[0].IsNumber()) {
-      TYPEFAIL("Expected first argument to be a number", );
-      return;
-    }
-    
-    int max_verbosity_level = info[0].As<Napi::Number>().Int32Value();
-    if (!ValidationHelpers::IsValidVerbosityLevel(max_verbosity_level)) {
-      FAIL("Invalid verbosity level", );
-      return;
-    }
-    
-    auto callback_func = TdLibLoader::td_set_log_message_callback.load();
-    if (callback_func == nullptr) {
-      FAIL("TDLib not loaded", );
-      return;
-    }
-    
-    if (info[1].IsNull() || info[1].IsUndefined()) {
-      callback_func(max_verbosity_level, nullptr);
-      std::lock_guard<std::mutex> lock(tsfn_mutex);
-      if (tsfn_ptr != nullptr) {
-        tsfn_ptr->Release();
-        tsfn_ptr.reset();
-      }
-      return;
-    }
-    
-    if (!info[1].IsFunction()) {
-      TYPEFAIL("Expected second argument to be one of: a function, null, undefined", );
-      return;
-    }
-    
-    std::lock_guard<std::mutex> lock(tsfn_mutex);
-    if (tsfn_ptr != nullptr) {
-      tsfn_ptr->Release();
-    }
-    
-    // Create TSFN directly
-    tsfn_ptr = std::make_unique<Tsfn>(
-      Tsfn::New(env, info[1].As<Napi::Function>(), "TdCallbackTSFN", 0, 1)
-    );
-    tsfn_ptr->Unref(env);
-    callback_func(max_verbosity_level, &c_message_callback);
   }
 }
 
+using Tsfn = Napi::TypedThreadSafeFunction<void, LogData, CallJs>;
+std::unique_ptr<Tsfn> callback;
+std::mutex callback_mutex;
+napi_env owner = nullptr;
+
+extern "C" void Log(int level, const char* message) {
+  // TDLib forbids calling any TDLib method inside this callback. Never take
+  // the loader mutex here; TDLib calls us while JS entry points hold it.
+  std::lock_guard<std::mutex> lock(callback_mutex);
+  if (!callback) return;
+  try {
+    auto data = std::make_unique<LogData>();
+    data->level = level;
+    // Log messages are diagnostic text, so truncating them is safe.
+    constexpr size_t max_length = 16 * 1024;
+    size_t length = 0;
+    if (message != nullptr) while (length < max_length && message[length] != '\0') ++length;
+    data->message.assign(message == nullptr ? "" : message, length);
+    if (callback->NonBlockingCall(data.get()) == napi_ok) data.release();
+    // Queue-full and closing results release the message immediately.
+  } catch (...) {
+    // Exceptions must never escape into TDLib's C callback.
+  }
+}
+
+void Clear(napi_env env) {
+  if (owner != env) return;
+  TdLibLoader::td_set_log_message_callback.load()(0, nullptr);
+  std::lock_guard<std::mutex> lock(callback_mutex);
+  callback->Release();
+  callback.reset();
+  owner = nullptr;
+  TdLibLoader::ReleaseResource();
+}
+
+void SetLogMessageCallback(const Napi::CallbackInfo& info) {
+  auto env = info.Env();
+  RequireLoaded(env);
+  int level = Integer(env, info[0], 0, 1024, "Invalid verbosity level");
+  if (info.Length() < 2 || (!info[1].IsNull() && !info[1].IsUndefined() && !info[1].IsFunction())) {
+    throw Napi::TypeError::New(env, "Expected second argument to be a function, null, or undefined");
+  }
+  if (owner != nullptr && owner != env) {
+    throw Napi::Error::New(env, "The log callback belongs to another Node environment");
+  }
+  if (info[1].IsNull() || info[1].IsUndefined()) {
+    Clear(env);
+    return;
+  }
+  // Bounded to at most 256 * 16 KiB of queued message text during log floods.
+  auto next = std::make_unique<Tsfn>(Tsfn::New(
+    env, info[1].As<Napi::Function>(), "TdCallbackTSFN", 256, 1));
+  next->Unref(env);
+  bool retained = owner != nullptr;
+  {
+    std::lock_guard<std::mutex> lock(callback_mutex);
+    if (callback) callback->Release();
+    callback = std::move(next);
+    owner = env;
+  }
+  if (!retained) TdLibLoader::RetainResource();
+  // Outside callback_mutex: registering may synchronously emit a log message.
+  TdLibLoader::td_set_log_message_callback.load()(level, Log);
+}
+} // namespace TdCallbacks
+
+namespace {
+void Cleanup(void* data) {
+  auto* state = static_cast<AddonState*>(data);
+  std::lock_guard<std::recursive_mutex> lock(TdLibLoader::Mutex());
+  for (auto* worker : state->workers) {
+    worker->Shutdown();
+    worker->DetachState();
+  }
+  state->workers.clear();
+  if (state->modern_worker != nullptr) {
+    state->modern_worker->Release();
+    state->modern_worker = nullptr;
+    modern_owner = nullptr;
+  }
+}
+
+// Serialize native entry points across worker_threads so load/unload cannot
+// race with synchronous calls or client/callback creation.
+template <typename Callback>
+Napi::Function Export(Napi::Env env, Callback callback) {
+  return Napi::Function::New(env, [callback](const Napi::CallbackInfo& info) -> Napi::Value {
+    std::lock_guard<std::recursive_mutex> lock(TdLibLoader::Mutex());
+    if constexpr (std::is_void_v<decltype(callback(info))>) {
+      callback(info);
+      return info.Env().Undefined();
+    } else {
+      return callback(info);
+    }
+  });
+}
+} // namespace
+
 Napi::Object Init(Napi::Env env, Napi::Object exports) {
-  // Old interface
-  exports["td_json_client_create"] = Napi::Function::New(env, Tdo::ClientCreate);
-  exports["td_json_client_send"] = Napi::Function::New(env, Tdo::ClientSend);
-  exports["td_json_client_receive"] = Napi::Function::New(env, Tdo::ClientReceive);
-  exports["td_json_client_execute"] = Napi::Function::New(env, Tdo::ClientExecute);
-  exports["td_json_client_destroy"] = Napi::Function::New(env, Tdo::ClientDestroy);
-  
-  // New interface
-  exports["tdn_init"] = Napi::Function::New(env, Tdn::Init);
-  exports["tdn_ref"] = Napi::Function::New(env, Tdn::Ref);
-  exports["tdn_unref"] = Napi::Function::New(env, Tdn::Unref);
-  exports["td_create_client_id"] = Napi::Function::New(env, Tdn::CreateClientId);
-  exports["td_send"] = Napi::Function::New(env, Tdn::Send);
-  exports["td_receive"] = Napi::Function::New(env, Tdn::Receive);
-  exports["td_execute"] = Napi::Function::New(env, Tdn::Execute);
-  
-  // Callbacks
-  exports["td_set_log_message_callback"] = Napi::Function::New(env, TdCallbacks::SetLogMessageCallback);
-  
-  // Library loading functions
-  exports["load_tdjson_dynamic"] = Napi::Function::New(env, [](const Napi::CallbackInfo& info) {
+  auto state = std::make_unique<AddonState>();
+  env.SetInstanceData<AddonState>(state.get());
+  napi_add_env_cleanup_hook(env, Cleanup, state.get());
+  state.release();
+  // Register separately so the callback is removed while TDLib is still loaded.
+  napi_add_env_cleanup_hook(env, [](void* data) {
+    std::lock_guard<std::recursive_mutex> lock(TdLibLoader::Mutex());
+    TdCallbacks::Clear(static_cast<napi_env>(data));
+  }, env);
+
+  exports["td_json_client_create"] = Export(env, Tdo::ClientCreate);
+  exports["td_json_client_send"] = Export(env, Tdo::ClientSend);
+  exports["td_json_client_receive"] = Export(env, Tdo::ClientReceive);
+  exports["td_json_client_execute"] = Export(env, Tdo::ClientExecute);
+  exports["td_json_client_destroy"] = Export(env, Tdo::ClientDestroy);
+  exports["tdn_init"] = Export(env, Tdn::Init);
+  exports["tdn_ref"] = Export(env, Tdn::Ref);
+  exports["tdn_unref"] = Export(env, Tdn::Unref);
+  exports["td_create_client_id"] = Export(env, Tdn::CreateClientId);
+  exports["td_send"] = Export(env, Tdn::Send);
+  exports["td_receive"] = Export(env, Tdn::Receive);
+  exports["td_execute"] = Export(env, Tdn::Execute);
+  exports["td_set_log_message_callback"] = Export(env, TdCallbacks::SetLogMessageCallback);
+  exports["load_tdjson_dynamic"] = Export(env, [](const Napi::CallbackInfo& info) {
     return TdLibLoader::LoadTdJsonDynamic(info);
   });
-
-  exports["load_tdjson_static"] = Napi::Function::New(env, [](const Napi::CallbackInfo& info) {
-    return TdLibLoader::LoadTdJsonStatic(info);
-  });
-
-  exports["is_td_loaded"] = Napi::Function::New(env, [](const Napi::CallbackInfo& info) {
+  exports["is_td_loaded"] = Export(env, [](const Napi::CallbackInfo& info) {
     return TdLibLoader::IsTdLoaded(info);
   });
-
-  exports["unload_tdjson"] = Napi::Function::New(env, [](const Napi::CallbackInfo& info) {
-    return TdLibLoader::UnloadTdJson(info);
+  exports["unload_tdjson"] = Export(env, [](const Napi::CallbackInfo& info) {
+    TdLibLoader::UnloadTdJson(info);
   });
-
-  exports["get_loading_mode"] = Napi::Function::New(env, [](const Napi::CallbackInfo& info) {
+  exports["get_loading_mode"] = Export(env, [](const Napi::CallbackInfo& info) {
     return TdLibLoader::GetLoadingMode(info);
   });
-
-  // Legacy function for backward compatibility
-  exports["load_tdjson"] = Napi::Function::New(env, [](const Napi::CallbackInfo& info) {
-    return TdLibLoader::LoadTdJsonDynamic(info);
-  });
-  
-  
+  exports["load_tdjson"] = exports.Get("load_tdjson_dynamic");
   return exports;
 }
 

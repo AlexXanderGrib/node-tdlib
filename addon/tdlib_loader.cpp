@@ -1,5 +1,6 @@
 #include "tdlib_loader.h"
 #include <mutex>
+#include <memory>
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__)
 #  include "win32-dlfcn.h"
@@ -9,26 +10,10 @@
 
 #ifdef RTLD_DEEPBIND
 #  pragma message("Using RTLD_DEEPBIND")
-#  define DLOPEN(FILE) dlopen(FILE, RTLD_LAZY | RTLD_LOCAL | RTLD_DEEPBIND)
+#  define DLOPEN(FILE) dlopen(FILE, RTLD_NOW | RTLD_LOCAL | RTLD_DEEPBIND)
 #else
 #  pragma message("Using standard dlopen")
-#  define DLOPEN(FILE) dlopen(FILE, RTLD_LAZY | RTLD_LOCAL)
-#endif
-
-// For static linking, declare external functions
-#ifdef TDLIB_STATIC_LINK
-extern "C" {
-  void *td_json_client_create();
-  void td_json_client_send(void *client, const char *request);
-  const char *td_json_client_receive(void *client, double timeout);
-  const char *td_json_client_execute(void *client, const char *request);
-  void td_json_client_destroy(void *client);
-  int td_create_client_id();
-  void td_send(int client_id, const char *request);
-  const char *td_receive(double timeout);
-  const char *td_execute(const char *request);
-  void td_set_log_message_callback(int max_verbosity_level, td_log_message_callback_ptr callback);
-}
+#  define DLOPEN(FILE) dlopen(FILE, RTLD_NOW | RTLD_LOCAL)
 #endif
 
 namespace TdLibLoader {
@@ -46,19 +31,33 @@ namespace TdLibLoader {
 
   // Internal state
   static std::atomic<void*> library_handle{nullptr};
-  static std::atomic<LoadingMode> current_mode{LoadingMode::DYNAMIC};
-  static std::mutex loader_mutex;
+  static std::recursive_mutex loader_mutex;
+  static std::atomic<bool> loaded{false};
+  static std::string loaded_path;
+  static size_t active_resources = 0;
+  static bool client_id_created = false;
+
+  std::recursive_mutex& Mutex() { return loader_mutex; }
+  void RetainResource() {
+    std::lock_guard<std::recursive_mutex> lock(loader_mutex);
+    ++active_resources;
+  }
+  void ReleaseResource() {
+    std::lock_guard<std::recursive_mutex> lock(loader_mutex);
+    --active_resources;
+  }
+  void MarkClientIdCreated() { client_id_created = true; }
 
   bool IsTdLoaded() {
-    return td_create_client_id.load() != nullptr && 
-           td_json_client_create.load() != nullptr;
+    return loaded.load();
   }
 
   bool LoadTdJsonDynamic(const std::string& library_path, std::string& error_msg) {
-    std::lock_guard<std::mutex> lock(loader_mutex);
+    std::lock_guard<std::recursive_mutex> lock(loader_mutex);
     
     // Check if already loaded
     if (IsTdLoaded()) {
+      if (loaded_path == library_path) return true;
       error_msg = "TDLib is already loaded";
       return false;
     }
@@ -73,21 +72,24 @@ namespace TdLibLoader {
       return false;
     }
     
-    // Macro for safe function loading
+    auto close_library = [](void* library) { dlclose(library); };
+    std::unique_ptr<void, decltype(close_library)> handle_owner(handle, close_library);
+
+    // Resolve every symbol before publishing any function pointers.
     #define SAFE_LOAD_FUNC(F) \
+      F##_t F##_loaded; \
       do { \
-        F##_t func = (F##_t) dlsym(handle, #F); \
+        dlerror(); \
+        F##_t func = reinterpret_cast<F##_t>(dlsym(handle, #F)); \
         char *dlsym_err_cstr = dlerror(); \
         if (dlsym_err_cstr != nullptr || func == nullptr) { \
           std::string dlsym_err(dlsym_err_cstr == nullptr ? "Function not found" : dlsym_err_cstr); \
-          dlclose(handle); \
           error_msg = "Failed to get " #F ": " + dlsym_err; \
           return false; \
         } \
-        F.store(func); \
+        F##_loaded = func; \
       } while(0)
     
-    // Load all function pointers - remove try-catch block
     SAFE_LOAD_FUNC(td_json_client_create);
     SAFE_LOAD_FUNC(td_json_client_send);
     SAFE_LOAD_FUNC(td_json_client_receive);
@@ -101,44 +103,36 @@ namespace TdLibLoader {
     
     #undef SAFE_LOAD_FUNC
     
-    library_handle.store(handle);
-    current_mode.store(LoadingMode::DYNAMIC);
+    loaded_path = library_path;
+    td_json_client_create.store(td_json_client_create_loaded);
+    td_json_client_send.store(td_json_client_send_loaded);
+    td_json_client_receive.store(td_json_client_receive_loaded);
+    td_json_client_execute.store(td_json_client_execute_loaded);
+    td_json_client_destroy.store(td_json_client_destroy_loaded);
+    td_create_client_id.store(td_create_client_id_loaded);
+    td_send.store(td_send_loaded);
+    td_receive.store(td_receive_loaded);
+    td_execute.store(td_execute_loaded);
+    td_set_log_message_callback.store(td_set_log_message_callback_loaded);
+    library_handle.store(handle_owner.release());
+    loaded.store(true);
     return true;
   }
 
-  bool LoadTdJsonStatic(std::string& error_msg) {
-    std::lock_guard<std::mutex> lock(loader_mutex);
+  bool UnloadTdJson(std::string& error_msg) {
+    std::lock_guard<std::recursive_mutex> lock(loader_mutex);
     
-    // Check if already loaded
-    if (IsTdLoaded()) {
-      error_msg = "TDLib is already loaded";
+    if (client_id_created) {
+      error_msg = "Cannot unload TDLib after creating modern client IDs; TDLib manages their lifetime";
       return false;
     }
-    
-    #ifdef TDLIB_STATIC_LINK
-    // Load static function pointers - remove try-catch block
-    td_json_client_create.store(&::td_json_client_create);
-    td_json_client_send.store(&::td_json_client_send);
-    td_json_client_receive.store(&::td_json_client_receive);
-    td_json_client_execute.store(&::td_json_client_execute);
-    td_json_client_destroy.store(&::td_json_client_destroy);
-    td_create_client_id.store(&::td_create_client_id);
-    td_send.store(&::td_send);
-    td_receive.store(&::td_receive);
-    td_execute.store(&::td_execute);
-    td_set_log_message_callback.store(&::td_set_log_message_callback);
-    
-    current_mode.store(LoadingMode::STATIC);
-    return true;
-    #else
-    error_msg = "Static linking is not enabled. Compile with TDLIB_STATIC_LINK defined.";
-    return false;
-    #endif
-  }
+    if (active_resources != 0) {
+      error_msg = "Cannot unload TDLib while clients, receive workers, or log callbacks are active";
+      return false;
+    }
+    loaded.store(false);
+    loaded_path.clear();
 
-  void UnloadTdJson() {
-    std::lock_guard<std::mutex> lock(loader_mutex);
-    
     // Clear function pointers
     td_json_client_create.store(nullptr);
     td_json_client_send.store(nullptr);
@@ -153,14 +147,11 @@ namespace TdLibLoader {
     
     // Close dynamic library if loaded
     void* handle = library_handle.load();
-    if (handle != nullptr && current_mode.load() == LoadingMode::DYNAMIC) {
+    if (handle != nullptr) {
       dlclose(handle);
       library_handle.store(nullptr);
     }
-  }
-
-  LoadingMode GetLoadingMode() {
-    return current_mode.load();
+    return true;
   }
 
   // N-API wrapper functions
@@ -174,24 +165,13 @@ namespace TdLibLoader {
     }
     
     std::string library_file = info[0].As<Napi::String>().Utf8Value();
+    if (library_file.empty() || library_file.find('\0') != std::string::npos) {
+      Napi::TypeError::New(env, "Expected a nonempty library path without NUL characters").ThrowAsJavaScriptException();
+      return Napi::Value();
+    }
     std::string error_msg;
     
     bool success = LoadTdJsonDynamic(library_file, error_msg);
-    
-    if (!success) {
-      auto error = Napi::Error::New(env, error_msg);
-      error.ThrowAsJavaScriptException();
-      return Napi::Value();
-    }
-    
-    return Napi::Boolean::New(env, true);
-  }
-
-  Napi::Value LoadTdJsonStatic(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    std::string error_msg;
-    
-    bool success = LoadTdJsonStatic(error_msg);
     
     if (!success) {
       auto error = Napi::Error::New(env, error_msg);
@@ -208,12 +188,13 @@ namespace TdLibLoader {
   }
 
   void UnloadTdJson(const Napi::CallbackInfo& info) {
-    UnloadTdJson();
+    std::string error_msg;
+    if (!UnloadTdJson(error_msg)) {
+      Napi::Error::New(info.Env(), error_msg).ThrowAsJavaScriptException();
+    }
   }
 
   Napi::Value GetLoadingMode(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
-    LoadingMode mode = GetLoadingMode();
-    return Napi::String::New(env, mode == LoadingMode::STATIC ? "static" : "dynamic");
+    return Napi::String::New(info.Env(), "dynamic");
   }
 }

@@ -6,11 +6,11 @@ import { fileURLToPath } from "url";
 export const tdlibPath = fileURLToPath(new URL("tdjson-x32.dll", import.meta.url));
 /**
  * @type {string}
- * @default "1.8.52"
+ * @default "1.8.67"
  */
-export const version = "1.8.52";
+export const version = "1.8.67";
 /**
  * @type {string}
- * @default "18f6c78cfb736cb24db789534e7ff3d274df77b3"
+ * @default "42e6a5259551178d1dab54a22ad96d14bd906e20"
  */
-export const commit = "18f6c78cfb736cb24db789534e7ff3d274df77b3";
+export const commit = "42e6a5259551178d1dab54a22ad96d14bd906e20";

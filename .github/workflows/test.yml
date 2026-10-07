@@ -36,9 +36,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run test
-        run: npm test
+      - name: Run native addon regression tests
+        run: npm run test:addon
+
+      - name: Download pinned TDLib binary
+        id: tdlib
+        run: |
+          path=$(node scripts/test-binary-module.js)
+          echo "path=$path" >> "$GITHUB_OUTPUT"
+
+      - name: Test concurrent workers with real TDLib
+        run: |
+          node test/worker-threads.cjs legacy
+          node test/worker-threads.cjs modern
         env:
+          TDLIB_PATH: ${{ steps.tdlib.outputs.path }}
+
+      - name: Run test
+        run: npm test -- --run
+        env:
+          TDLIB_PATH: ${{ steps.tdlib.outputs.path }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

@@ -5,8 +5,8 @@ import { builtinModules } from "module";
 import replace from "@rollup/plugin-replace";
 
 const external = [
-  Object.keys(packageJson.devDependencies),
-  Object.keys(packageJson.optionalDependencies),
+  ...Object.keys(packageJson.devDependencies),
+  ...Object.keys(packageJson.optionalDependencies),
   ...Object.keys(packageJson.dependencies),
   ...builtinModules
 ];
@@ -26,7 +26,8 @@ export default defineConfig({
           format: "cjs",
           plugins: [
             replace({
-              "compilerMagic$(getCurrentFile())": "/* compilerMagic$(getCurrentFile()) */ __filename",
+              "compilerMagic$(getCurrentFile())":
+                "/* compilerMagic$(getCurrentFile()) */ __filename",
               delimiters: ["", ""]
             })
           ],
@@ -39,7 +40,8 @@ export default defineConfig({
 
           plugins: [
             replace({
-              "compilerMagic$(getCurrentFile())": "/* compilerMagic$(getCurrentFile()) */ fileURLToPath(import.meta.url)",
+              "compilerMagic$(getCurrentFile())":
+                "/* compilerMagic$(getCurrentFile()) */ fileURLToPath(import.meta.url)",
               delimiters: ["", ""]
             })
           ],

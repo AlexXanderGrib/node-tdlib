@@ -110,7 +110,7 @@ const archNames = new Map([
 //       ),
 //       writeFormatted(
 //         `${directory}/index.mjs`,
-//         `import { createRequire } from "module"; const require = createRequire(); export const addon = require('./${build.addonName}');`
+//         `import { createRequire } from "module"; const require = createRequire(import.meta.url); export const addon = require('./${build.addonName}');`
 //       ),
 
 //       writeFile(`${directory}/.gitignore`, `${build.addonName}`, "ascii")
@@ -152,7 +152,7 @@ const archNames = new Map([
 //     if (libc) {
 //       sysInfo += " " + libc;
 //     }
-    
+
 //     throw new Error(
 //       "Your system (" + sysInfo + ") is not supported yet. You can ask for support here: https://github.com/AlexXanderGrib/node-tdlib/issues"
 //     ); }
@@ -187,7 +187,7 @@ const archNames = new Map([
 //       `${directory}/index.mjs`,
 //       `import { createRequire } from "module";
 // import { familySync } from "detect-libc";
-// const require = createRequire();
+// const require = createRequire(import.meta.url);
 // const libc = familySync();
 // const forwarded = ${detectionCode};
 // export const { tdlibPath, version, commit } = forwarded;
@@ -281,7 +281,16 @@ async function generatePrebuilt() {
         'import { fileURLToPath } from "url";\n\n' + esm
       ),
       writeFormatted(`${directory}/index.d.ts`, types),
-      writeFile(`${directory}/.gitignore`, `${build.tdlib}`, "ascii")
+      writeFile(
+        `${directory}/.gitignore`,
+        `${build.tdlib}\n${build.tdlib}.tmp\n`,
+        "ascii"
+      ),
+      writeFile(
+        `${directory}/download.sh`,
+        `#!/usr/bin/env bash\nset -euo pipefail\ncurl --fail --location --retry 3 --output '${build.tdlib}.tmp' '${downloader.resolve(build.tdlib)}'\nmv '${build.tdlib}.tmp' '${build.tdlib}'\n`,
+        "utf-8"
+      )
     ]);
 
     optionalDependencies[packageJson.name] = packageJson.version;
@@ -424,7 +433,7 @@ module.exports = ${detectionCode};`
       `${directory}/index.mjs`,
       `import { createRequire } from "module";
 import { familySync } from "detect-libc";
-const require = createRequire();
+const require = createRequire(import.meta.url);
 const libc = familySync();
 const forwarded = ${detectionCode};
 export const { tdlibPath, version, commit } = forwarded;

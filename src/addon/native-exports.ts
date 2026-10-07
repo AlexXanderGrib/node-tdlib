@@ -8,15 +8,18 @@ export type Addon = {
   td_json_client_destroy(client: TDLibClient): void;
   td_set_log_message_callback(
     level: number,
-    callback: null | ((errorMessage: string) => void)
+    callback: null | ((verbosityLevel: number, errorMessage: string) => void)
   ): void;
-  td_create_client_id(): TDLibClient;
-  td_send(client: TDLibClient, json: string): void;
+  td_create_client_id(): number;
+  td_send(client: number, json: string): void;
   td_receive(): Promise<string | null>;
-  td_execute(json: string): string;
+  td_execute(json: string): string | null;
   tdn_init(timeoutSec: number): void;
   tdn_ref(): void;
   tdn_unref(): void;
-  load_tdjson(path: string): void;
+  load_tdjson(path: string): boolean;
+  load_tdjson_dynamic(path: string): boolean;
+  is_td_loaded(): boolean;
+  get_loading_mode(): "dynamic";
+  unload_tdjson(): void;
 };
-

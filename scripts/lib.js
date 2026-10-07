@@ -57,6 +57,9 @@ class Downloader {
       content = await readFile(path);
     } else {
       const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to download ${url}: HTTP ${response.status}`);
+      }
       const buffer = await response.arrayBuffer();
       content = Buffer.from(buffer);
     }

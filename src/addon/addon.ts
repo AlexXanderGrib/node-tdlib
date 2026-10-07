@@ -3,17 +3,9 @@ import path from "path";
 import type { TDLib, TDLibClient } from "../shared/client";
 import { getAddonFolderPath } from "./path";
 import { createRequire } from "module";
-import { promiseWithResolvers } from "../shared/async";
 import { Addon } from "./native-exports";
 
-const builtinAddonPath = path.resolve(
-  getAddonFolderPath(),
-  "..",
-  "..",
-  "build",
-  "Release",
-  "td.node"
-);
+const builtinAddonPath = "tdlib-native/td.node";
 
 /**
  *
@@ -24,7 +16,7 @@ const builtinAddonPath = path.resolve(
 async function loadAddon(addonPath: string = builtinAddonPath): Promise<Addon> {
   const baseDirectory = getAddonFolderPath();
 
-  const load = createRequire(baseDirectory);
+  const load = createRequire(path.join(baseDirectory, "package.json"));
   const addon: Addon = load(addonPath);
 
   return addon;
@@ -36,23 +28,17 @@ async function loadAddon(addonPath: string = builtinAddonPath): Promise<Addon> {
  * @returns {Promise<string>}  {Promise<string>}
  */
 async function getTDLibPath(): Promise<string> {
-  const { tdlibPath } = await import("@tdlib-native/tdjson");
+  // The dispatcher forwards module.exports, which Node cannot expose as named
+  // exports through import() reliably. Use its supported CommonJS entry point.
+  const load = createRequire(path.join(getAddonFolderPath(), "package.json"));
+  const { tdlibPath }: typeof import("@tdlib-native/tdjson") = load(
+    "@tdlib-native/tdjson"
+  );
   return tdlibPath;
-}
-
-class ReceiveQueueEntry {
-  constructor(
-    public readonly client: TDLibClient,
-    public readonly promise: PromiseWithResolvers<string | null>
-  ) {
-    Object.freeze(this);
-  }
 }
 
 class ClientMeta {
   destroyed = false;
-
-  constructor(public readonly timeout: number) {}
 }
 
 /**
@@ -108,7 +94,7 @@ export class TDLibAddon implements TDLib {
    */
   create(timeout: number): TDLibClient {
     const client = this._addon.td_json_client_create(timeout);
-    this._clients.set(client, new ClientMeta(timeout));
+    this._clients.set(client, new ClientMeta());
 
     return client;
   }
@@ -131,17 +117,12 @@ export class TDLibAddon implements TDLib {
    * @returns {Promise<void>}
    */
   async destroy(client: TDLibClient): Promise<void> {
-    if (this._getMeta(client).destroyed) {
+    const meta = this._getMeta(client);
+    if (meta.destroyed) {
       throw new Error("Client already destroyed");
     }
-
-    for (const entry of this._queue) {
-      if (entry.client === client) {
-        entry.promise.reject(new Error("Client is destroyed"));
-      }
-    }
-
-    await this._thread;
+    // Mark first so receive loops cannot enqueue more work during destruction.
+    meta.destroyed = true;
     this._addon.td_json_client_destroy(client);
   }
 
@@ -154,21 +135,10 @@ export class TDLibAddon implements TDLib {
    * @memberof TDLibAddon
    */
   execute(client: TDLibClient | null, json: string): string | null {
-    return this._addon.td_json_client_execute(client, json);
-  }
-
-  private readonly _queue: ReceiveQueueEntry[] = [];
-  private _thread: Promise<void> | undefined;
-
-  private async _receive() {
-    while (this._queue.length > 0) {
-      const task = this._queue.shift();
-      if (!task) break;
-
-      await this._addon
-        .td_json_client_receive(task.client)
-        .then(task.promise.resolve, task.promise.reject);
+    if (client !== null && this._getMeta(client).destroyed) {
+      throw new Error("Client is destroyed");
     }
+    return this._addon.td_json_client_execute(client, json);
   }
 
   /**
@@ -185,23 +155,7 @@ export class TDLibAddon implements TDLib {
       return Promise.reject(new Error("Client is destroyed"));
     }
 
-    const entryWithSameClient = this._queue.find((entry) => entry.client === client);
-
-    if (entryWithSameClient) {
-      return Promise.reject(new Error("This client is already receiving updates"));
-    }
-
-    const promise = promiseWithResolvers<string | null>();
-    const entry = new ReceiveQueueEntry(client, promise);
-    this._queue.push(entry);
-
-    if (!this._thread) {
-      this._thread = this._receive().finally(() => {
-        this._thread = undefined;
-      });
-    }
-
-    return promise.promise;
+    return this._addon.td_json_client_receive(client);
   }
 
   /**
@@ -231,6 +185,9 @@ export class TDLibAddon implements TDLib {
     level: number,
     callback: ((errorMessage: string) => void) | null
   ): void {
-    this._addon.td_set_log_message_callback(level, callback);
+    this._addon.td_set_log_message_callback(
+      level,
+      callback === null ? callback : (_level, message) => callback(message)
+    );
   }
 }
