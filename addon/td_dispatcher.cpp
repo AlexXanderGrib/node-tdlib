@@ -329,6 +329,8 @@ std::shared_ptr<Environment> Attach(Napi::Env env) {
   return owner;
 }
 
+std::unordered_map<void*, std::weak_ptr<Client>> handles;
+
 std::shared_ptr<Client> Get(const Napi::CallbackInfo& info, bool live = false) {
   if (info.Length() < 1 || !info[0].IsExternal()) {
     throw Napi::TypeError::New(info.Env(), "Expected a client external object");
@@ -338,7 +340,6 @@ std::shared_ptr<Client> Get(const Napi::CallbackInfo& info, bool live = false) {
   auto& broker = Broker();
   auto owner = broker.environments.find(info.Env());
   if (owner == broker.environments.end()) throw Napi::TypeError::New(info.Env(), "Unknown client");
-  extern std::unordered_map<void*, std::weak_ptr<Client>> handles;
   auto handle = handles.find(pointer);
   auto client = handle == handles.end() ? nullptr : handle->second.lock();
   if (!client || client->owner.lock() != owner->second) {
@@ -349,7 +350,6 @@ std::shared_ptr<Client> Get(const Napi::CallbackInfo& info, bool live = false) {
   }
   return client;
 }
-std::unordered_map<void*, std::weak_ptr<Client>> handles;
 
 std::string Request(const Napi::CallbackInfo& info, size_t index) {
   if (info.Length() <= index || !info[index].IsString()) {
