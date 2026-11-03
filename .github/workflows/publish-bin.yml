@@ -63,8 +63,8 @@ jobs:
         with:
           node-version: "24.x"
           registry-url: "https://registry.npmjs.org"
+      - name: Install npm with trusted publishing support
+        run: npm install --global npm@11.19.1
 
       - name: Publish platform packages, then dispatcher
         run: node scripts/publish-binaries.js
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
