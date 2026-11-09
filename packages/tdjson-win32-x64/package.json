@@ -1,6 +1,6 @@
 {
   "name": "@tdlib-native/tdjson-win32-x64",
-  "version": "1.8.67-commit.42e6a5259551178d1dab54a22ad96d14bd906e20",
+  "version": "1.8.70-commit.c8828d50f5eac2fc7089ce1089d7ce9095c61b5e",
   "description": "Prebuilt TDLib for win32 x64",
   "keywords": [
     "tdlib",
@@ -23,11 +23,11 @@
     "directory": "packages/tdjson-win32-x64"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "tdlib": {
-    "version": "1.8.67",
-    "commit": "42e6a5259551178d1dab54a22ad96d14bd906e20"
+    "version": "1.8.70",
+    "commit": "c8828d50f5eac2fc7089ce1089d7ce9095c61b5e"
   },
   "os": [
     "win32"
