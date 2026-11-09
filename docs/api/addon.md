@@ -10,7 +10,7 @@
 
 ### TDLibAddon
 
-Defined in: [addon/addon.ts:85](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L85)
+Defined in: [addon/addon.ts:58](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L58)
 
 #### Export
 
@@ -26,9 +26,9 @@ TDLibAddon
 
 ##### Constructor
 
-> `private` **new TDLibAddon**(`_addon`): [`TDLibAddon`](#tdlibaddon)
+> `private` **new TDLibAddon**(`_addon`, `_options`): [`TDLibAddon`](#tdlibaddon)
 
-Defined in: [addon/addon.ts:108](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L108)
+Defined in: [addon/addon.ts:86](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L86)
 
 Creates an instance of TDLibAddon.
 
@@ -37,6 +37,10 @@ Creates an instance of TDLibAddon.
 ###### \_addon
 
 [`NativeExports`](#nativeexports)
+
+###### \_options
+
+[`TDLibAddonOptions`](#tdlibaddonoptions)
 
 ###### Returns
 
@@ -52,35 +56,29 @@ TDLibAddon
 
 > `private` `readonly` **\_addon**: [`NativeExports`](#nativeexports)
 
-Defined in: [addon/addon.ts:108](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L108)
+Defined in: [addon/addon.ts:87](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L87)
 
 ##### \_clients
 
 > `private` `readonly` **\_clients**: `WeakMap`\<`TDLibClient`, `ClientMeta`\>
 
-Defined in: [addon/addon.ts:111](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L111)
+Defined in: [addon/addon.ts:92](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L92)
 
 ##### \_isTDLib
 
 > `readonly` **\_isTDLib**: `true` = `true`
 
-Defined in: [addon/addon.ts:110](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L110)
+Defined in: [addon/addon.ts:91](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L91)
 
 ###### Implementation of
 
 `TDLib._isTDLib`
 
-##### \_queue
+##### \_options
 
-> `private` `readonly` **\_queue**: `ReceiveQueueEntry`[] = `[]`
+> `private` `readonly` **\_options**: [`TDLibAddonOptions`](#tdlibaddonoptions)
 
-Defined in: [addon/addon.ts:180](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L180)
-
-##### \_thread
-
-> `private` **\_thread**: `undefined` \| `Promise`\<`void`\>
-
-Defined in: [addon/addon.ts:181](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L181)
+Defined in: [addon/addon.ts:88](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L88)
 
 #### Accessors
 
@@ -90,7 +88,7 @@ Defined in: [addon/addon.ts:181](https://github.com/AlexXanderGrib/node-tdlib/bl
 
 > **get** **name**(): `string`
 
-Defined in: [addon/addon.ts:119](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L119)
+Defined in: [addon/addon.ts:100](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L100)
 
 ###### Memberof
 
@@ -110,7 +108,7 @@ TDLibAddon
 
 > `private` **\_getMeta**(`client`): `ClientMeta`
 
-Defined in: [addon/addon.ts:136](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L136)
+Defined in: [addon/addon.ts:121](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L121)
 
 ###### Parameters
 
@@ -122,21 +120,11 @@ Defined in: [addon/addon.ts:136](https://github.com/AlexXanderGrib/node-tdlib/bl
 
 `ClientMeta`
 
-##### \_receive()
-
-> `private` **\_receive**(): `Promise`\<`void`\>
-
-Defined in: [addon/addon.ts:183](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L183)
-
-###### Returns
-
-`Promise`\<`void`\>
-
 ##### create()
 
 > **create**(`timeout`): `TDLibClient`
 
-Defined in: [addon/addon.ts:129](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L129)
+Defined in: [addon/addon.ts:110](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L110)
 
 ###### Parameters
 
@@ -162,7 +150,7 @@ TDLibAddon
 
 > **destroy**(`client`): `Promise`\<`void`\>
 
-Defined in: [addon/addon.ts:153](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L153)
+Defined in: [addon/addon.ts:138](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L138)
 
 ###### Parameters
 
@@ -186,7 +174,7 @@ TDLibAddon
 
 > **execute**(`client`, `json`): `null` \| `string`
 
-Defined in: [addon/addon.ts:176](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L176)
+Defined in: [addon/addon.ts:156](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L156)
 
 ###### Parameters
 
@@ -216,7 +204,7 @@ TDLibAddon
 
 > **receive**(`client`): `Promise`\<`null` \| `string`\>
 
-Defined in: [addon/addon.ts:201](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L201)
+Defined in: [addon/addon.ts:170](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L170)
 
 ###### Parameters
 
@@ -242,7 +230,7 @@ TDLibAddon
 
 > **send**(`client`, `json`): `void`
 
-Defined in: [addon/addon.ts:235](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L235)
+Defined in: [addon/addon.ts:188](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L188)
 
 ###### Parameters
 
@@ -270,7 +258,7 @@ TDLibAddon
 
 > **setLogMessageCallback**(`level`, `callback`): `void`
 
-Defined in: [addon/addon.ts:250](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L250)
+Defined in: [addon/addon.ts:203](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L203)
 
 ###### Parameters
 
@@ -296,9 +284,9 @@ TDLibAddon
 
 ##### create()
 
-> `static` **create**(`tdlibPath?`, `addonPath?`): `Promise`\<[`TDLibAddon`](#tdlibaddon)\>
+> `static` **create**(`tdlibPath?`, `addonPath?`, `options?`): `Promise`\<[`TDLibAddon`](#tdlibaddon)\>
 
-Defined in: [addon/addon.ts:95](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/addon.ts#L95)
+Defined in: [addon/addon.ts:69](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L69)
 
 ###### Parameters
 
@@ -311,6 +299,12 @@ Resolves to prebuild TDLib for your platform
 ###### addonPath?
 
 `string`
+
+###### options?
+
+[`TDLibAddonOptions`](#tdlibaddonoptions) = `{}`
+
+Per-client response queue limits
 
 ###### Returns
 
@@ -328,15 +322,35 @@ TDLibAddon
 
 > **NativeExports** = `object`
 
-Defined in: [addon/native-exports.ts:3](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L3)
+Defined in: [addon/native-exports.ts:3](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L3)
 
 #### Methods
 
+##### get\_loading\_mode()
+
+> **get\_loading\_mode**(): `"dynamic"`
+
+Defined in: [addon/native-exports.ts:32](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L32)
+
+###### Returns
+
+`"dynamic"`
+
+##### is\_td\_loaded()
+
+> **is\_td\_loaded**(): `boolean`
+
+Defined in: [addon/native-exports.ts:31](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L31)
+
+###### Returns
+
+`boolean`
+
 ##### load\_tdjson()
 
-> **load\_tdjson**(`path`): `void`
+> **load\_tdjson**(`path`): `boolean`
 
-Defined in: [addon/native-exports.ts:20](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L20)
+Defined in: [addon/native-exports.ts:29](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L29)
 
 ###### Parameters
 
@@ -346,23 +360,135 @@ Defined in: [addon/native-exports.ts:20](https://github.com/AlexXanderGrib/node-
 
 ###### Returns
 
-`void`
+`boolean`
 
-##### td\_create\_client\_id()
+##### load\_tdjson\_dynamic()
 
-> **td\_create\_client\_id**(): `TDLibClient`
+> **load\_tdjson\_dynamic**(`path`): `boolean`
 
-Defined in: [addon/native-exports.ts:13](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L13)
+Defined in: [addon/native-exports.ts:30](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L30)
+
+###### Parameters
+
+###### path
+
+`string`
+
+###### Returns
+
+`boolean`
+
+##### td\_client\_create()
+
+> **td\_client\_create**(`timeoutSec`, `maxQueuedResponses?`, `maxQueuedBytes?`): `TDLibClient`
+
+Defined in: [addon/native-exports.ts:4](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L4)
+
+###### Parameters
+
+###### timeoutSec
+
+`number`
+
+###### maxQueuedResponses?
+
+`number`
+
+###### maxQueuedBytes?
+
+`number`
 
 ###### Returns
 
 `TDLibClient`
 
+##### td\_client\_destroy()
+
+> **td\_client\_destroy**(`client`): `Promise`\<`void`\>
+
+Defined in: [addon/native-exports.ts:12](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L12)
+
+###### Parameters
+
+###### client
+
+`TDLibClient`
+
+###### Returns
+
+`Promise`\<`void`\>
+
+##### td\_client\_execute()
+
+> **td\_client\_execute**(`client`, `json`): `null` \| `string`
+
+Defined in: [addon/native-exports.ts:11](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L11)
+
+###### Parameters
+
+###### client
+
+`null` | `TDLibClient`
+
+###### json
+
+`string`
+
+###### Returns
+
+`null` \| `string`
+
+##### td\_client\_receive()
+
+> **td\_client\_receive**(`client`): `Promise`\<`null` \| `string`\>
+
+Defined in: [addon/native-exports.ts:10](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L10)
+
+###### Parameters
+
+###### client
+
+`TDLibClient`
+
+###### Returns
+
+`Promise`\<`null` \| `string`\>
+
+##### td\_client\_send()
+
+> **td\_client\_send**(`client`, `json`): `void`
+
+Defined in: [addon/native-exports.ts:9](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L9)
+
+###### Parameters
+
+###### client
+
+`TDLibClient`
+
+###### json
+
+`string`
+
+###### Returns
+
+`void`
+
+##### td\_create\_client\_id()
+
+> **td\_create\_client\_id**(): `number`
+
+Defined in: [addon/native-exports.ts:22](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L22)
+
+###### Returns
+
+`number`
+
 ##### td\_execute()
 
-> **td\_execute**(`json`): `string`
+> **td\_execute**(`json`): `null` \| `string`
 
-Defined in: [addon/native-exports.ts:16](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L16)
+Defined in: [addon/native-exports.ts:25](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L25)
 
 ###### Parameters
 
@@ -372,13 +498,13 @@ Defined in: [addon/native-exports.ts:16](https://github.com/AlexXanderGrib/node-
 
 ###### Returns
 
-`string`
+`null` \| `string`
 
 ##### td\_json\_client\_create()
 
 > **td\_json\_client\_create**(`timeoutSec`): `TDLibClient`
 
-Defined in: [addon/native-exports.ts:4](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L4)
+Defined in: [addon/native-exports.ts:13](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L13)
 
 ###### Parameters
 
@@ -394,7 +520,7 @@ Defined in: [addon/native-exports.ts:4](https://github.com/AlexXanderGrib/node-t
 
 > **td\_json\_client\_destroy**(`client`): `void`
 
-Defined in: [addon/native-exports.ts:8](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L8)
+Defined in: [addon/native-exports.ts:17](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L17)
 
 ###### Parameters
 
@@ -410,7 +536,7 @@ Defined in: [addon/native-exports.ts:8](https://github.com/AlexXanderGrib/node-t
 
 > **td\_json\_client\_execute**(`client`, `json`): `null` \| `string`
 
-Defined in: [addon/native-exports.ts:7](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L7)
+Defined in: [addon/native-exports.ts:16](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L16)
 
 ###### Parameters
 
@@ -430,7 +556,7 @@ Defined in: [addon/native-exports.ts:7](https://github.com/AlexXanderGrib/node-t
 
 > **td\_json\_client\_receive**(`client`): `Promise`\<`null` \| `string`\>
 
-Defined in: [addon/native-exports.ts:6](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L6)
+Defined in: [addon/native-exports.ts:15](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L15)
 
 ###### Parameters
 
@@ -446,7 +572,7 @@ Defined in: [addon/native-exports.ts:6](https://github.com/AlexXanderGrib/node-t
 
 > **td\_json\_client\_send**(`client`, `json`): `void`
 
-Defined in: [addon/native-exports.ts:5](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L5)
+Defined in: [addon/native-exports.ts:14](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L14)
 
 ###### Parameters
 
@@ -466,7 +592,7 @@ Defined in: [addon/native-exports.ts:5](https://github.com/AlexXanderGrib/node-t
 
 > **td\_receive**(): `Promise`\<`null` \| `string`\>
 
-Defined in: [addon/native-exports.ts:15](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L15)
+Defined in: [addon/native-exports.ts:24](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L24)
 
 ###### Returns
 
@@ -476,13 +602,13 @@ Defined in: [addon/native-exports.ts:15](https://github.com/AlexXanderGrib/node-
 
 > **td\_send**(`client`, `json`): `void`
 
-Defined in: [addon/native-exports.ts:14](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L14)
+Defined in: [addon/native-exports.ts:23](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L23)
 
 ###### Parameters
 
 ###### client
 
-`TDLibClient`
+`number`
 
 ###### json
 
@@ -496,7 +622,7 @@ Defined in: [addon/native-exports.ts:14](https://github.com/AlexXanderGrib/node-
 
 > **td\_set\_log\_message\_callback**(`level`, `callback`): `void`
 
-Defined in: [addon/native-exports.ts:9](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L9)
+Defined in: [addon/native-exports.ts:18](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L18)
 
 ###### Parameters
 
@@ -506,7 +632,7 @@ Defined in: [addon/native-exports.ts:9](https://github.com/AlexXanderGrib/node-t
 
 ###### callback
 
-`null` | (`errorMessage`) => `void`
+`null` | (`verbosityLevel`, `errorMessage`) => `void`
 
 ###### Returns
 
@@ -516,7 +642,7 @@ Defined in: [addon/native-exports.ts:9](https://github.com/AlexXanderGrib/node-t
 
 > **tdn\_init**(`timeoutSec`): `void`
 
-Defined in: [addon/native-exports.ts:17](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L17)
+Defined in: [addon/native-exports.ts:26](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L26)
 
 ###### Parameters
 
@@ -532,7 +658,7 @@ Defined in: [addon/native-exports.ts:17](https://github.com/AlexXanderGrib/node-
 
 > **tdn\_ref**(): `void`
 
-Defined in: [addon/native-exports.ts:18](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L18)
+Defined in: [addon/native-exports.ts:27](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L27)
 
 ###### Returns
 
@@ -542,11 +668,47 @@ Defined in: [addon/native-exports.ts:18](https://github.com/AlexXanderGrib/node-
 
 > **tdn\_unref**(): `void`
 
-Defined in: [addon/native-exports.ts:19](https://github.com/AlexXanderGrib/node-tdlib/blob/8e963d3ee48e8d4dae2160204f179278bbc5626e/src/addon/native-exports.ts#L19)
+Defined in: [addon/native-exports.ts:28](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L28)
 
 ###### Returns
 
 `void`
+
+##### unload\_tdjson()
+
+> **unload\_tdjson**(): `void`
+
+Defined in: [addon/native-exports.ts:33](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/native-exports.ts#L33)
+
+###### Returns
+
+`void`
+
+***
+
+### TDLibAddonOptions
+
+> **TDLibAddonOptions** = `object`
+
+Defined in: [addon/addon.ts:44](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L44)
+
+#### Properties
+
+##### maxQueuedBytes?
+
+> `optional` **maxQueuedBytes**: `number`
+
+Defined in: [addon/addon.ts:48](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L48)
+
+Maximum buffered JSON bytes per client. Default: 8 MiB.
+
+##### maxQueuedResponses?
+
+> `optional` **maxQueuedResponses**: `number`
+
+Defined in: [addon/addon.ts:46](https://github.com/AlexXanderGrib/node-tdlib/blob/4c7052a83eab928b6a39f7df6439e0a1fac674de/src/addon/addon.ts#L46)
+
+Maximum buffered responses per client. Overflow closes that client. Default: 256.
 
 ## References
 

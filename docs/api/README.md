@@ -45,6 +45,8 @@
 
 ## 📦 Installation
 
+Requires Node.js 18 or later and a C++ build toolchain for the native addon.
+
 - **Using `npm`**
   ```shell
   npm i tdlib-native
@@ -58,14 +60,16 @@
   pnpm add tdlib-native
   ```
 
-## 3.0 Changelog
+## 4.0 changes
 
-- Made builds for linux arm64
-- Made builds for musl libc
-- Made builds for windows x32 (since tg desktop supports it)
-- Fixed client thread safety, fixed disposal of tdlib clients
-- Made `client.start()`, `client.pause()` and `client.destroy()` - async
-- Upgraded TDLib to 1.8.37
+- TDLib 1.8.67 with matching generated types and prebuilt platform packages.
+- Public clients use the modern JSON API and share one native receiver across
+  Node workers. Each worker owns its clients and authentication state.
+- `destroy()` waits for TDLib's final closed update. Receive queue overflow
+  closes the affected client and rejects pending requests.
+- Static loading and `load_tdjson_static` are removed. The library stays loaded
+  after a modern client is created; `unload_tdjson()` rejects attempts to unload it.
+- The raw `tdn_*` receiver cannot run alongside public managed clients.
 
 ## ⚙️ Usage
 
@@ -98,11 +102,11 @@ async function init() {
   // client authorized as bot
   // Call any tdlib method
   await client.api.getOption({ name: "version" });
-  // => Promise { _: "optionValueString", value: "1.8.37" }
+  // => Promise { _: "optionValueString", value: "1.8.67" }
 
   // or use a wrapper
   await client.tdlibOptions.get("version");
-  // => Promise "1.8.22"
+  // => Promise "1.8.67"
 
   // Subscribe to updates
   client.updates.subscribe(console.log);
@@ -124,6 +128,79 @@ async function init() {
 // Observable will complete after client.destroy() call
 const updates = new Observable(client.updates.toRxObserver());
 ```
+
+### Worker threads
+
+Create the adapter and clients inside each worker. Public clients share one native
+TDLib receiver across the process; each worker receives only its clients' events.
+No JavaScript broker is required. A worker can own one or several clients.
+
+For example, start a worker for each bot from your main script:
+
+```javascript
+const { Worker } = require("node:worker_threads");
+
+for (const bot of bots) {
+  new Worker(require.resolve("./bot-worker.cjs"), {
+    workerData: bot // { token, apiId, apiHash, directory }
+  });
+}
+```
+
+In `bot-worker.cjs`:
+
+```javascript
+const path = require("node:path");
+const { workerData, parentPort } = require("node:worker_threads");
+const { Client, Authenticator } = require("tdlib-native");
+const { TDLibAddon } = require("tdlib-native/addon");
+
+async function run() {
+  const adapter = await TDLibAddon.create();
+  const client = new Client(adapter);
+  const auth = Authenticator.create(client)
+    .tdlibParameters({
+      api_id: workerData.apiId,
+      api_hash: workerData.apiHash,
+      database_directory: path.resolve(workerData.directory, "db"),
+      files_directory: path.resolve(workerData.directory, "files"),
+      system_language_code: "en",
+      device_model: "Node worker",
+      application_version: "1.0"
+    })
+    .token(workerData.token);
+
+  try {
+    await Promise.all([client.start(), auth.authenticate()]);
+  } catch (error) {
+    await client.destroy();
+    parentPort.close();
+    throw error;
+  }
+  // Subscribe to updates and run this bot's application logic here.
+
+  parentPort.once("message", async () => {
+    await client.destroy(); // Waits for TDLib's final closed state.
+    parentPort.close();
+  });
+}
+
+run().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+```
+
+Give each active auth a unique database directory. Tokens and auth state are per
+client; logging and the loaded TDLib library are process-wide. Configure logging
+centrally. Prefer graceful destruction before worker termination; forced worker
+termination also closes its clients and can wait for TDLib shutdown.
+
+Receive backlogs default to 256 messages and 8 MiB per client. You can adjust them
+with `TDLibAddon.create(undefined, undefined, { maxQueuedResponses: 1024,
+maxQueuedBytes: 16 * 1024 * 1024 })`. Overflow closes the affected client and rejects
+its pending calls with an explicit error. Paused consumers can overflow. These
+limits cover addon queues; Node worker memory limits do not cap TDLib's native RAM.
 
 ### Projects built with `tdlib-native`
 

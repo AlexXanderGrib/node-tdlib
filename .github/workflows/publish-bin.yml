@@ -22,7 +22,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        # The new binary version is not published yet; tests download it below.
+        run: |
+          npm pkg delete optionalDependencies
+          npm ci
 
       - name: Download pinned TDLib binary
         id: tdlib
