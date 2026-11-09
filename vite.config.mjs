@@ -6,7 +6,7 @@ import replace from "@rollup/plugin-replace";
 
 const external = [
   ...Object.keys(packageJson.devDependencies),
-  ...Object.keys(packageJson.optionalDependencies),
+  ...Object.keys(packageJson.optionalDependencies ?? {}),
   ...Object.keys(packageJson.dependencies),
   ...builtinModules
 ];
