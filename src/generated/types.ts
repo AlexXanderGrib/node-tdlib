@@ -130,6 +130,7 @@ export const $Methods = Object.freeze({
   getSuitableDiscussionChats: "getSuitableDiscussionChats",
   getInactiveSupergroupChats: "getInactiveSupergroupChats",
   getSuitablePersonalChats: "getSuitablePersonalChats",
+  getSuitableCommunityChats: "getSuitableCommunityChats",
   loadDirectMessagesChatTopics: "loadDirectMessagesChatTopics",
   getDirectMessagesChatTopic: "getDirectMessagesChatTopic",
   getDirectMessagesChatTopicHistory: "getDirectMessagesChatTopicHistory",
@@ -151,9 +152,22 @@ export const $Methods = Object.freeze({
   deleteSavedMessagesTopicMessagesByDate: "deleteSavedMessagesTopicMessagesByDate",
   toggleSavedMessagesTopicIsPinned: "toggleSavedMessagesTopicIsPinned",
   setPinnedSavedMessagesTopics: "setPinnedSavedMessagesTopics",
-  loadCommunityFullInfo: "loadCommunityFullInfo",
+  getCommunityFullInfo: "getCommunityFullInfo",
+  getJoinedCommunities: "getJoinedCommunities",
   createCommunity: "createCommunity",
   setCommunityName: "setCommunityName",
+  setCommunityPhoto: "setCommunityPhoto",
+  setCommunityPermissions: "setCommunityPermissions",
+  setCommunityNotificationSettings: "setCommunityNotificationSettings",
+  addCommunityChat: "addCommunityChat",
+  removeCommunityChat: "removeCommunityChat",
+  getCommunityAddChatRequests: "getCommunityAddChatRequests",
+  processCommunityAddChatRequest: "processCommunityAddChatRequest",
+  processCommunityAddChatRequests: "processCommunityAddChatRequests",
+  toggleCommunityAreChatsCollapsed: "toggleCommunityAreChatsCollapsed",
+  toggleCommunityMemberIsBanned: "toggleCommunityMemberIsBanned",
+  getCommunityMemberChats: "getCommunityMemberChats",
+  deleteCommunity: "deleteCommunity",
   getGroupsInCommon: "getGroupsInCommon",
   getChatHistory: "getChatHistory",
   getMessageThreadHistory: "getMessageThreadHistory",
@@ -215,8 +229,12 @@ export const $Methods = Object.freeze({
   createRichMessageWithAi: "createRichMessageWithAi",
   fixTextWithAi: "fixTextWithAi",
   fixRichMessageWithAi: "fixRichMessageWithAi",
+  fixRecognizedTextWithAi: "fixRecognizedTextWithAi",
+  fixRecognizedRichMessageWithAi: "fixRecognizedRichMessageWithAi",
   recognizeSpeech: "recognizeSpeech",
   rateSpeechRecognition: "rateSpeechRecognition",
+  recognizeSpeechInFile: "recognizeSpeechInFile",
+  getSpeechRecognitionLanguages: "getSpeechRecognitionLanguages",
   getChatAvailableMessageSenders: "getChatAvailableMessageSenders",
   setChatMessageSender: "setChatMessageSender",
   sendMessage: "sendMessage",
@@ -238,14 +256,18 @@ export const $Methods = Object.freeze({
   editMessageMedia: "editMessageMedia",
   editMessageCaption: "editMessageCaption",
   editMessageReplyMarkup: "editMessageReplyMarkup",
+  editMessageWidgetData: "editMessageWidgetData",
   editInlineMessageText: "editInlineMessageText",
   editInlineMessageLiveLocation: "editInlineMessageLiveLocation",
   editInlineMessageMedia: "editInlineMessageMedia",
   editInlineMessageCaption: "editInlineMessageCaption",
   editInlineMessageReplyMarkup: "editInlineMessageReplyMarkup",
+  editInlineMessageWidgetData: "editInlineMessageWidgetData",
+  editWidgetData: "editWidgetData",
   editEphemeralMessage: "editEphemeralMessage",
   editEphemeralMessageCaption: "editEphemeralMessageCaption",
-  editCallbackQueryMessage: "editCallbackQueryMessage",
+  replyToCallbackQueryWithEphemeralMessage:
+    "replyToCallbackQueryWithEphemeralMessage",
   editMessageSchedulingState: "editMessageSchedulingState",
   deleteMessageEphemeralContent: "deleteMessageEphemeralContent",
   setMessageFactCheck: "setMessageFactCheck",
@@ -332,6 +354,7 @@ export const $Methods = Object.freeze({
   getMessageEffect: "getMessageEffect",
   searchQuote: "searchQuote",
   getTextEntities: "getTextEntities",
+  getTextEmojiRanges: "getTextEmojiRanges",
   parseTextEntities: "parseTextEntities",
   parseMarkdown: "parseMarkdown",
   getMarkdownText: "getMarkdownText",
@@ -380,6 +403,9 @@ export const $Methods = Object.freeze({
   answerChatJoinRequestQuery: "answerChatJoinRequestQuery",
   getCallbackQueryAnswer: "getCallbackQueryAnswer",
   answerCallbackQuery: "answerCallbackQuery",
+  answerWidgetQuery: "answerWidgetQuery",
+  getWidgetQueryAnswer: "getWidgetQueryAnswer",
+  getWidgetPublicData: "getWidgetPublicData",
   answerShippingQuery: "answerShippingQuery",
   answerPreCheckoutQuery: "answerPreCheckoutQuery",
   setGameScore: "setGameScore",
@@ -506,6 +532,7 @@ export const $Methods = Object.freeze({
   startLiveStory: "startLiveStory",
   editStory: "editStory",
   editStoryCover: "editStoryCover",
+  editStoryMusic: "editStoryMusic",
   setStoryPrivacySettings: "setStoryPrivacySettings",
   toggleStoryIsPostedToChatPage: "toggleStoryIsPostedToChatPage",
   deleteStory: "deleteStory",
@@ -766,6 +793,7 @@ export const $Methods = Object.freeze({
   getBusinessChatLinkInfo: "getBusinessChatLinkInfo",
   getUserLink: "getUserLink",
   searchUserByToken: "searchUserByToken",
+  applyUnpaidMessagesToken: "applyUnpaidMessagesToken",
   setCommands: "setCommands",
   deleteCommands: "deleteCommands",
   getCommands: "getCommands",
@@ -790,6 +818,8 @@ export const $Methods = Object.freeze({
   setBotName: "setBotName",
   getBotName: "getBotName",
   setBotProfilePhoto: "setBotProfilePhoto",
+  addBotSecondaryUsername: "addBotSecondaryUsername",
+  deleteBotSecondaryUsername: "deleteBotSecondaryUsername",
   toggleBotUsernameIsActive: "toggleBotUsernameIsActive",
   reorderBotActiveUsernames: "reorderBotActiveUsernames",
   setBotInfoDescription: "setBotInfoDescription",
@@ -852,6 +882,7 @@ export const $Methods = Object.freeze({
   placeGiftAuctionBid: "placeGiftAuctionBid",
   increaseGiftAuctionBid: "increaseGiftAuctionBid",
   sellGift: "sellGift",
+  deleteGift: "deleteGift",
   toggleGiftIsSaved: "toggleGiftIsSaved",
   setPinnedGifts: "setPinnedGifts",
   toggleChatGiftNotifications: "toggleChatGiftNotifications",
@@ -871,6 +902,9 @@ export const $Methods = Object.freeze({
   getUpgradedGift: "getUpgradedGift",
   getUpgradedGiftValueInfo: "getUpgradedGiftValueInfo",
   getUpgradedGiftWithdrawalUrl: "getUpgradedGiftWithdrawalUrl",
+  withdrawUpgradedGift: "withdrawUpgradedGift",
+  getUpgradedGiftDepositInfo: "getUpgradedGiftDepositInfo",
+  displayUpgradedGift: "displayUpgradedGift",
   getUpgradedGiftsPromotionalAnimation: "getUpgradedGiftsPromotionalAnimation",
   setGiftResalePrice: "setGiftResalePrice",
   searchGiftsForResale: "searchGiftsForResale",
@@ -892,6 +926,8 @@ export const $Methods = Object.freeze({
   getInstalledBackgrounds: "getInstalledBackgrounds",
   removeInstalledBackground: "removeInstalledBackground",
   resetInstalledBackgrounds: "resetInstalledBackgrounds",
+  getProfileShareThemeBackdrops: "getProfileShareThemeBackdrops",
+  setProfileShareTheme: "setProfileShareTheme",
   getLocalizationTargetInfo: "getLocalizationTargetInfo",
   getLanguagePackInfo: "getLanguagePackInfo",
   getLanguagePackStrings: "getLanguagePackStrings",
@@ -930,6 +966,46 @@ export const $Methods = Object.freeze({
   getChatRevenueWithdrawalUrl: "getChatRevenueWithdrawalUrl",
   getChatRevenueTransactions: "getChatRevenueTransactions",
   getTonTransactions: "getTonTransactions",
+  getTonWalletTransactions: "getTonWalletTransactions",
+  getTonWalletTransaction: "getTonWalletTransaction",
+  getTonWalletTransactionByMsgHash: "getTonWalletTransactionByMsgHash",
+  loadTonWalletState: "loadTonWalletState",
+  loadTonWalletGaslessTransfersInfo: "loadTonWalletGaslessTransfersInfo",
+  checkWalletBotBalance: "checkWalletBotBalance",
+  getUserTonWalletAddresses: "getUserTonWalletAddresses",
+  createUserTonWallet: "createUserTonWallet",
+  getAddressTonWallet: "getAddressTonWallet",
+  getTonWalletSecretPhrase: "getTonWalletSecretPhrase",
+  getTonWalletOwnershipProofChallenge: "getTonWalletOwnershipProofChallenge",
+  enableTonWalletBackup: "enableTonWalletBackup",
+  disableTonWalletBackup: "disableTonWalletBackup",
+  disableTonWalletBackupWithProof: "disableTonWalletBackupWithProof",
+  sendTonWalletTransfer: "sendTonWalletTransfer",
+  deleteTonWallet: "deleteTonWallet",
+  replaceTonWallet: "replaceTonWallet",
+  getCurrencyExchangeRates: "getCurrencyExchangeRates",
+  getTonWalletNfts: "getTonWalletNfts",
+  getTonWalletCardBackgroundGiftCollectionNames:
+    "getTonWalletCardBackgroundGiftCollectionNames",
+  setTonWalletCardStickers: "setTonWalletCardStickers",
+  getTonConnectSessions: "getTonConnectSessions",
+  createTonConnectSession: "createTonConnectSession",
+  setTonConnectSessionWalletClientId: "setTonConnectSessionWalletClientId",
+  sendTonConnectSessionConnectResult: "sendTonConnectSessionConnectResult",
+  getTonConnectSessionPendingRequests: "getTonConnectSessionPendingRequests",
+  getTonConnectDAppPendingRequests: "getTonConnectDAppPendingRequests",
+  claimTonConnectRequest: "claimTonConnectRequest",
+  answerTonConnectRequest: "answerTonConnectRequest",
+  getTonConnectSessionNextEventId: "getTonConnectSessionNextEventId",
+  disconnectTonConnectSession: "disconnectTonConnectSession",
+  getOnRampProviders: "getOnRampProviders",
+  getOnRampProviderBaseCurrencies: "getOnRampProviderBaseCurrencies",
+  getOnRampPaymentAvailability: "getOnRampPaymentAvailability",
+  getOnRampPaymentLimits: "getOnRampPaymentLimits",
+  getOnRampPaymentQuote: "getOnRampPaymentQuote",
+  createOnRampPaymentSession: "createOnRampPaymentSession",
+  sendTonCenterApiRequest: "sendTonCenterApiRequest",
+  getTonCenterStreamingApiUrl: "getTonCenterStreamingApiUrl",
   getStarRevenueStatistics: "getStarRevenueStatistics",
   getStarWithdrawalUrl: "getStarWithdrawalUrl",
   getStarAdAccountUrl: "getStarAdAccountUrl",
@@ -1033,6 +1109,7 @@ export const $Methods = Object.freeze({
   getPhoneNumberInfoSync: "getPhoneNumberInfoSync",
   getCollectibleItemInfo: "getCollectibleItemInfo",
   getDeepLinkInfo: "getDeepLinkInfo",
+  dismissWebToken: "dismissWebToken",
   getApplicationConfig: "getApplicationConfig",
   saveApplicationLogEvent: "saveApplicationLogEvent",
   getApplicationDownloadLink: "getApplicationDownloadLink",
@@ -1043,6 +1120,8 @@ export const $Methods = Object.freeze({
   removeProxy: "removeProxy",
   getProxies: "getProxies",
   pingProxy: "pingProxy",
+  processWebProxyCarrierMessage: "processWebProxyCarrierMessage",
+  reportWebProxyCarrierError: "reportWebProxyCarrierError",
   setLogStream: "setLogStream",
   getLogStream: "getLogStream",
   setLogVerbosityLevel: "setLogVerbosityLevel",
@@ -1202,6 +1281,7 @@ export const Update$Type = Object.freeze({
   ChatActiveStories: "updateChatActiveStories",
   StoryListChatCount: "updateStoryListChatCount",
   StoryStealthMode: "updateStoryStealthMode",
+  AllowedBotUsernamePremiumSuffixes: "updateAllowedBotUsernamePremiumSuffixes",
   TrustedMiniAppBots: "updateTrustedMiniAppBots",
   Option: "updateOption",
   StickerSet: "updateStickerSet",
@@ -1218,6 +1298,9 @@ export const Update$Type = Object.freeze({
   WebBrowserSettings: "updateWebBrowserSettings",
   LanguagePackStrings: "updateLanguagePackStrings",
   ConnectionState: "updateConnectionState",
+  WebProxyCarrierOpened: "updateWebProxyCarrierOpened",
+  WebProxyCarrierData: "updateWebProxyCarrierData",
+  WebProxyCarrierClosed: "updateWebProxyCarrierClosed",
   FreezeState: "updateFreezeState",
   AgeVerificationParameters: "updateAgeVerificationParameters",
   TermsOfService: "updateTermsOfService",
@@ -1232,10 +1315,16 @@ export const Update$Type = Object.freeze({
   ActiveLiveLocationMessages: "updateActiveLiveLocationMessages",
   OwnedStarCount: "updateOwnedStarCount",
   OwnedGramCount: "updateOwnedGramCount",
+  TonWalletState: "updateTonWalletState",
+  TonWalletGaslessTransfersInfo: "updateTonWalletGaslessTransfersInfo",
+  TonWalletTonConnectSession: "updateTonWalletTonConnectSession",
+  TonWalletTonConnectSessionDisconnectRequired:
+    "updateTonWalletTonConnectSessionDisconnectRequired",
   ChatRevenueAmount: "updateChatRevenueAmount",
   StarRevenueStatus: "updateStarRevenueStatus",
   GramRevenueStatus: "updateGramRevenueStatus",
   SpeechRecognitionTrial: "updateSpeechRecognitionTrial",
+  SpeechRecognitionInFile: "updateSpeechRecognitionInFile",
   GroupCallMessageLevels: "updateGroupCallMessageLevels",
   DiceEmojis: "updateDiceEmojis",
   StakeDiceState: "updateStakeDiceState",
@@ -1256,6 +1345,9 @@ export const Update$Type = Object.freeze({
   NewCallbackQuery: "updateNewCallbackQuery",
   NewInlineCallbackQuery: "updateNewInlineCallbackQuery",
   NewBusinessCallbackQuery: "updateNewBusinessCallbackQuery",
+  NewWidgetQuery: "updateNewWidgetQuery",
+  NewInlineWidgetQuery: "updateNewInlineWidgetQuery",
+  NewWidgetCopyQuery: "updateNewWidgetCopyQuery",
   NewShippingQuery: "updateNewShippingQuery",
   NewPreCheckoutQuery: "updateNewPreCheckoutQuery",
   NewCustomEvent: "updateNewCustomEvent",
@@ -1349,10 +1441,30 @@ export const StatisticalGraph$Type = Object.freeze({
 export type StatisticalGraph$Type =
   (typeof StatisticalGraph$Type)[keyof typeof StatisticalGraph$Type];
 
+export const WebProxyCarrierError$Type = Object.freeze({
+  Unsupported: "webProxyCarrierErrorUnsupported",
+  Paused: "webProxyCarrierErrorPaused",
+  LoadFailed: "webProxyCarrierErrorLoadFailed",
+  Terminated: "webProxyCarrierErrorTerminated",
+  Refused: "webProxyCarrierErrorRefused"
+} as const);
+
+export type WebProxyCarrierError$Type =
+  (typeof WebProxyCarrierError$Type)[keyof typeof WebProxyCarrierError$Type];
+
+export const WebProxyCarrierMessage$Type = Object.freeze({
+  Text: "webProxyCarrierMessageText",
+  Binary: "webProxyCarrierMessageBinary"
+} as const);
+
+export type WebProxyCarrierMessage$Type =
+  (typeof WebProxyCarrierMessage$Type)[keyof typeof WebProxyCarrierMessage$Type];
+
 export const ProxyType$Type = Object.freeze({
   Socks5: "proxyTypeSocks5",
   Http: "proxyTypeHttp",
-  Mtproto: "proxyTypeMtproto"
+  Mtproto: "proxyTypeMtproto",
+  Web: "proxyTypeWeb"
 } as const);
 
 export type ProxyType$Type = (typeof ProxyType$Type)[keyof typeof ProxyType$Type];
@@ -1370,6 +1482,7 @@ export const SuggestedAction$Type = Object.freeze({
   CheckPassword: "suggestedActionCheckPassword",
   CheckPhoneNumber: "suggestedActionCheckPhoneNumber",
   ViewChecksHint: "suggestedActionViewChecksHint",
+  ViewFirstTonWalletTransferHint: "suggestedActionViewFirstTonWalletTransferHint",
   ConvertToBroadcastGroup: "suggestedActionConvertToBroadcastGroup",
   SetPassword: "suggestedActionSetPassword",
   UpgradePremium: "suggestedActionUpgradePremium",
@@ -1549,6 +1662,8 @@ export const InternalLinkType$Type = Object.freeze({
   StoryAlbum: "internalLinkTypeStoryAlbum",
   TextCompositionStyle: "internalLinkTypeTextCompositionStyle",
   Theme: "internalLinkTypeTheme",
+  TonConnect: "internalLinkTypeTonConnect",
+  TonWalletTransfer: "internalLinkTypeTonWalletTransfer",
   UnknownDeepLink: "internalLinkTypeUnknownDeepLink",
   UpgradedGift: "internalLinkTypeUpgradedGift",
   UserPhoneNumber: "internalLinkTypeUserPhoneNumber",
@@ -1768,6 +1883,8 @@ export const PushMessageContent$Type = Object.freeze({
   Poll: "pushMessageContentPoll",
   PremiumGiftCode: "pushMessageContentPremiumGiftCode",
   Giveaway: "pushMessageContentGiveaway",
+  TonWalletTransfer: "pushMessageContentTonWalletTransfer",
+  TonConnectRequest: "pushMessageContentTonConnectRequest",
   Gift: "pushMessageContentGift",
   UpgradedGift: "pushMessageContentUpgradedGift",
   ScreenshotTaken: "pushMessageContentScreenshotTaken",
@@ -2145,6 +2262,15 @@ export const ChatEventAction$Type = Object.freeze({
 export type ChatEventAction$Type =
   (typeof ChatEventAction$Type)[keyof typeof ChatEventAction$Type];
 
+export const WidgetQueryType$Type = Object.freeze({
+  Data: "widgetQueryTypeData",
+  SignData: "widgetQueryTypeSignData",
+  SentTransaction: "widgetQueryTypeSentTransaction"
+} as const);
+
+export type WidgetQueryType$Type =
+  (typeof WidgetQueryType$Type)[keyof typeof WidgetQueryType$Type];
+
 export const CallbackQueryPayload$Type = Object.freeze({
   Data: "callbackQueryPayloadData",
   DataWithPassword: "callbackQueryPayloadDataWithPassword",
@@ -2417,7 +2543,6 @@ export type StoryContentType$Type =
 
 export const InputStoryAreaType$Type = Object.freeze({
   Location: "inputStoryAreaTypeLocation",
-  FoundVenue: "inputStoryAreaTypeFoundVenue",
   PreviousVenue: "inputStoryAreaTypePreviousVenue",
   SuggestedReaction: "inputStoryAreaTypeSuggestedReaction",
   Message: "inputStoryAreaTypeMessage",
@@ -2557,6 +2682,8 @@ export const InputMessageContent$Type = Object.freeze({
   StakeDice: "inputMessageStakeDice",
   Story: "inputMessageStory",
   Checklist: "inputMessageChecklist",
+  Widget: "inputMessageWidget",
+  SharedWidget: "inputMessageSharedWidget",
   Forwarded: "inputMessageForwarded"
 } as const);
 
@@ -2651,6 +2778,7 @@ export const TextEntityType$Type = Object.freeze({
   EmailAddress: "textEntityTypeEmailAddress",
   PhoneNumber: "textEntityTypePhoneNumber",
   BankCardNumber: "textEntityTypeBankCardNumber",
+  TonAddress: "textEntityTypeTonAddress",
   Bold: "textEntityTypeBold",
   Italic: "textEntityTypeItalic",
   Underline: "textEntityTypeUnderline",
@@ -2714,6 +2842,7 @@ export const MessageContent$Type = Object.freeze({
   Poll: "messagePoll",
   StakeDice: "messageStakeDice",
   Story: "messageStory",
+  Widget: "messageWidget",
   Checklist: "messageChecklist",
   Invoice: "messageInvoice",
   Call: "messageCall",
@@ -2770,6 +2899,8 @@ export const MessageContent$Type = Object.freeze({
   GiftedStars: "messageGiftedStars",
   GiftedGrams: "messageGiftedGrams",
   GiveawayPrizeStars: "messageGiveawayPrizeStars",
+  TonWalletTransfer: "messageTonWalletTransfer",
+  TonConnectRequest: "messageTonConnectRequest",
   Gift: "messageGift",
   UpgradedGift: "messageUpgradedGift",
   RefundedUpgradedGift: "messageRefundedUpgradedGift",
@@ -2778,6 +2909,7 @@ export const MessageContent$Type = Object.freeze({
   PaidMessagesRefunded: "messagePaidMessagesRefunded",
   PaidMessagePriceChanged: "messagePaidMessagePriceChanged",
   DirectMessagePriceChanged: "messageDirectMessagePriceChanged",
+  UnpaidMessagesAllowedByLink: "messageUnpaidMessagesAllowedByLink",
   ChecklistTasksDone: "messageChecklistTasksDone",
   ChecklistTasksAdded: "messageChecklistTasksAdded",
   SuggestedPostApprovalFailed: "messageSuggestedPostApprovalFailed",
@@ -3091,6 +3223,7 @@ export const RichText$Type = Object.freeze({
   Hashtag: "richTextHashtag",
   Cashtag: "richTextCashtag",
   BankCardNumber: "richTextBankCardNumber",
+  TonAddress: "richTextTonAddress",
   BotCommand: "richTextBotCommand",
   Fixed: "richTextFixed",
   MentionName: "richTextMentionName",
@@ -3110,6 +3243,29 @@ export const RichText$Type = Object.freeze({
 } as const);
 
 export type RichText$Type = (typeof RichText$Type)[keyof typeof RichText$Type];
+
+export const InputProfileShareTheme$Type = Object.freeze({
+  Emoji: "inputProfileShareThemeEmoji",
+  UpgradedGift: "inputProfileShareThemeUpgradedGift"
+} as const);
+
+export type InputProfileShareTheme$Type =
+  (typeof InputProfileShareTheme$Type)[keyof typeof InputProfileShareTheme$Type];
+
+export const ProfileShareTheme$Type = Object.freeze({
+  Emoji: "profileShareThemeEmoji",
+  UpgradedGift: "profileShareThemeUpgradedGift"
+} as const);
+
+export type ProfileShareTheme$Type =
+  (typeof ProfileShareTheme$Type)[keyof typeof ProfileShareTheme$Type];
+
+export const EmojiType$Type = Object.freeze({
+  Regular: "emojiTypeRegular",
+  CustomEmoji: "emojiTypeCustomEmoji"
+} as const);
+
+export type EmojiType$Type = (typeof EmojiType$Type)[keyof typeof EmojiType$Type];
 
 export const BuiltInTheme$Type = Object.freeze({
   Classic: "builtInThemeClassic",
@@ -3261,24 +3417,6 @@ export const DraftMessageContent$Type = Object.freeze({
 
 export type DraftMessageContent$Type =
   (typeof DraftMessageContent$Type)[keyof typeof DraftMessageContent$Type];
-
-export const ReactionNotificationSource$Type = Object.freeze({
-  None: "reactionNotificationSourceNone",
-  Contacts: "reactionNotificationSourceContacts",
-  All: "reactionNotificationSourceAll"
-} as const);
-
-export type ReactionNotificationSource$Type =
-  (typeof ReactionNotificationSource$Type)[keyof typeof ReactionNotificationSource$Type];
-
-export const NotificationSettingsScope$Type = Object.freeze({
-  PrivateChats: "notificationSettingsScopePrivateChats",
-  GroupChats: "notificationSettingsScopeGroupChats",
-  ChannelChats: "notificationSettingsScopeChannelChats"
-} as const);
-
-export type NotificationSettingsScope$Type =
-  (typeof NotificationSettingsScope$Type)[keyof typeof NotificationSettingsScope$Type];
 
 export const ReportSponsoredResult$Type = Object.freeze({
   Ok: "reportSponsoredResultOk",
@@ -3494,6 +3632,24 @@ export const CommunityMemberStatus$Type = Object.freeze({
 export type CommunityMemberStatus$Type =
   (typeof CommunityMemberStatus$Type)[keyof typeof CommunityMemberStatus$Type];
 
+export const ReactionNotificationSource$Type = Object.freeze({
+  None: "reactionNotificationSourceNone",
+  Contacts: "reactionNotificationSourceContacts",
+  All: "reactionNotificationSourceAll"
+} as const);
+
+export type ReactionNotificationSource$Type =
+  (typeof ReactionNotificationSource$Type)[keyof typeof ReactionNotificationSource$Type];
+
+export const NotificationSettingsScope$Type = Object.freeze({
+  PrivateChats: "notificationSettingsScopePrivateChats",
+  GroupChats: "notificationSettingsScopeGroupChats",
+  ChannelChats: "notificationSettingsScopeChannelChats"
+} as const);
+
+export type NotificationSettingsScope$Type =
+  (typeof NotificationSettingsScope$Type)[keyof typeof NotificationSettingsScope$Type];
+
 export const GiveawayPrize$Type = Object.freeze({
   Premium: "giveawayPrizePremium",
   Stars: "giveawayPrizeStars"
@@ -3529,6 +3685,78 @@ export const ActiveStoryState$Type = Object.freeze({
 
 export type ActiveStoryState$Type =
   (typeof ActiveStoryState$Type)[keyof typeof ActiveStoryState$Type];
+
+export const TonConnectConnectItem$Type = Object.freeze({
+  Address: "tonConnectConnectItemAddress",
+  Proof: "tonConnectConnectItemProof"
+} as const);
+
+export type TonConnectConnectItem$Type =
+  (typeof TonConnectConnectItem$Type)[keyof typeof TonConnectConnectItem$Type];
+
+export const TonConnectSessionState$Type = Object.freeze({
+  Pending: "tonConnectSessionStatePending",
+  Ready: "tonConnectSessionStateReady",
+  Closing: "tonConnectSessionStateClosing",
+  Closed: "tonConnectSessionStateClosed"
+} as const);
+
+export type TonConnectSessionState$Type =
+  (typeof TonConnectSessionState$Type)[keyof typeof TonConnectSessionState$Type];
+
+export const TonConnectManifest$Type = Object.freeze({
+  Pending: "tonConnectManifestPending",
+  Info: "tonConnectManifestInfo",
+  Failed: "tonConnectManifestFailed",
+  Invalid: "tonConnectManifestInvalid"
+} as const);
+
+export type TonConnectManifest$Type =
+  (typeof TonConnectManifest$Type)[keyof typeof TonConnectManifest$Type];
+
+export const TonConnectRequestState$Type = Object.freeze({
+  Pending: "tonConnectRequestStatePending",
+  Accepted: "tonConnectRequestStateAccepted",
+  Rejected: "tonConnectRequestStateRejected"
+} as const);
+
+export type TonConnectRequestState$Type =
+  (typeof TonConnectRequestState$Type)[keyof typeof TonConnectRequestState$Type];
+
+export const TonWalletTransactionType$Type = Object.freeze({
+  OnRampDeposit: "tonWalletTransactionTypeOnRampDeposit",
+  Transfer: "tonWalletTransactionTypeTransfer",
+  NftTransfer: "tonWalletTransactionTypeNftTransfer",
+  TelegramGiftTransfer: "tonWalletTransactionTypeTelegramGiftTransfer",
+  KeyChange: "tonWalletTransactionTypeKeyChange"
+} as const);
+
+export type TonWalletTransactionType$Type =
+  (typeof TonWalletTransactionType$Type)[keyof typeof TonWalletTransactionType$Type];
+
+export const TonWalletTransactionState$Type = Object.freeze({
+  Succeeded: "tonWalletTransactionStateSucceeded",
+  Failed: "tonWalletTransactionStateFailed"
+} as const);
+
+export type TonWalletTransactionState$Type =
+  (typeof TonWalletTransactionState$Type)[keyof typeof TonWalletTransactionState$Type];
+
+export const TonWalletTransferReceiver$Type = Object.freeze({
+  User: "tonWalletTransferReceiverUser",
+  Address: "tonWalletTransferReceiverAddress"
+} as const);
+
+export type TonWalletTransferReceiver$Type =
+  (typeof TonWalletTransferReceiver$Type)[keyof typeof TonWalletTransferReceiver$Type];
+
+export const TonCenterApiRequestType$Type = Object.freeze({
+  Get: "tonCenterApiRequestTypeGet",
+  Post: "tonCenterApiRequestTypePost"
+} as const);
+
+export type TonCenterApiRequestType$Type =
+  (typeof TonCenterApiRequestType$Type)[keyof typeof TonCenterApiRequestType$Type];
 
 export const TonTransactionType$Type = Object.freeze({
   FragmentDeposit: "tonTransactionTypeFragmentDeposit",
@@ -4695,6 +4923,74 @@ export type textEntities$Input = {
 };
 
 /**
+ * Describes a part of a text
+ */
+export type textRange = {
+  _: "textRange";
+
+  /**
+   * Offset of the part, in UTF-16 code units
+   * @type {int32} {@link int32}
+   */
+  offset: int32;
+
+  /**
+   * Length of the part, in UTF-16 code units
+   * @type {int32} {@link int32}
+   */
+  length: int32;
+};
+
+/**
+ * Version of {@link textRange} for method parameters.
+ *
+ * Describes a part of a text
+ */
+export type textRange$Input = {
+  readonly _: "textRange";
+
+  /**
+   * Offset of the part, in UTF-16 code units
+   * @type {int32} {@link int32}
+   */
+  readonly offset?: int32;
+
+  /**
+   * Length of the part, in UTF-16 code units
+   * @type {int32} {@link int32}
+   */
+  readonly length?: int32;
+};
+
+/**
+ * Contains a list of text parts
+ */
+export type textRanges = {
+  _: "textRanges";
+
+  /**
+   * List of text parts
+   * @type {vector<textRange>} {@link vector<textRange>}
+   */
+  ranges: vector<textRange>;
+};
+
+/**
+ * Version of {@link textRanges} for method parameters.
+ *
+ * Contains a list of text parts
+ */
+export type textRanges$Input = {
+  readonly _: "textRanges";
+
+  /**
+   * List of text parts
+   * @type {vector<textRange>} {@link vector<textRange>}
+   */
+  readonly ranges?: vector$Input<textRange$Input>;
+};
+
+/**
  * A text with some entities
  */
 export type formattedText = {
@@ -4709,7 +5005,11 @@ export type formattedText = {
   /**
    * Entities contained in the text. Entities can be nested, but must not mutually intersect with each other.
    *
-   * - Pre, Code, PreCode, and DateTime entities can't contain other entities. BlockQuote entities can't contain other BlockQuote entities. Bold, Italic, Underline, Strikethrough, and Spoiler entities can contain and can be part of any other entities. All other entities can't contain each other
+   * - Pre, Code, PreCode, and DateTime entities can't contain other entities. BlockQuote entities can't contain other BlockQuote entities.
+   *
+   * - Bold, Italic, Underline, Strikethrough, and Spoiler entities can contain and can be part of any other entities.
+   *
+   * - All other entities can't contain each other
    * @type {vector<textEntity>} {@link vector<textEntity>}
    */
   entities: vector<textEntity>;
@@ -4732,7 +5032,11 @@ export type formattedText$Input = {
   /**
    * Entities contained in the text. Entities can be nested, but must not mutually intersect with each other.
    *
-   * - Pre, Code, PreCode, and DateTime entities can't contain other entities. BlockQuote entities can't contain other BlockQuote entities. Bold, Italic, Underline, Strikethrough, and Spoiler entities can contain and can be part of any other entities. All other entities can't contain each other
+   * - Pre, Code, PreCode, and DateTime entities can't contain other entities. BlockQuote entities can't contain other BlockQuote entities.
+   *
+   * - Bold, Italic, Underline, Strikethrough, and Spoiler entities can contain and can be part of any other entities.
+   *
+   * - All other entities can't contain each other
    * @type {vector<textEntity>} {@link vector<textEntity>}
    */
   readonly entities?: vector$Input<textEntity$Input>;
@@ -5719,7 +6023,9 @@ export type authorizationStateWaitOtherDeviceConfirmation$Input = {
 };
 
 /**
- * The user is unregistered and needs to accept terms of service and enter their first name and last name to finish registration. Call registerUser to accept the terms of service and provide the data
+ * The user is unregistered and needs to accept terms of service and enter their first name and last name to finish registration.
+ *
+ * - Call registerUser to accept the terms of service and provide the data
  */
 export type authorizationStateWaitRegistration = {
   _: "authorizationStateWaitRegistration";
@@ -5734,7 +6040,9 @@ export type authorizationStateWaitRegistration = {
 /**
  * Version of {@link authorizationStateWaitRegistration} for method parameters.
  *
- * The user is unregistered and needs to accept terms of service and enter their first name and last name to finish registration. Call registerUser to accept the terms of service and provide the data
+ * The user is unregistered and needs to accept terms of service and enter their first name and last name to finish registration.
+ *
+ * - Call registerUser to accept the terms of service and provide the data
  */
 export type authorizationStateWaitRegistration$Input = {
   readonly _: "authorizationStateWaitRegistration";
@@ -6079,7 +6387,7 @@ export type recoveryEmailAddress$Input = {
 };
 
 /**
- * Returns information about the availability of a temporary password, which can be used for payments
+ * Contains information about the availability of a temporary password, which can be used for payments and withdrawal of upgraded gifts
  */
 export type temporaryPasswordState = {
   _: "temporaryPasswordState";
@@ -6100,7 +6408,7 @@ export type temporaryPasswordState = {
 /**
  * Version of {@link temporaryPasswordState} for method parameters.
  *
- * Returns information about the availability of a temporary password, which can be used for payments
+ * Contains information about the availability of a temporary password, which can be used for payments and withdrawal of upgraded gifts
  */
 export type temporaryPasswordState$Input = {
   readonly _: "temporaryPasswordState";
@@ -6241,7 +6549,9 @@ export type remoteFile = {
    *
    * - If the identifier starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known.
    *
-   * - If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string.
+   * - If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation
+   *
+   * - process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string.
    *
    * - Application must generate the file by downloading it to the specified location
    * @type {string} {@link string}
@@ -6286,7 +6596,9 @@ export type remoteFile$Input = {
    *
    * - If the identifier starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known.
    *
-   * - If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string.
+   * - If downloadFile/addFileToDownloads is called on such a file or if it is sent to a secret chat, TDLib starts a file generation
+   *
+   * - process by sending updateFileGenerationStart to the application with the HTTP URL in the original_path and "#url#" as the conversion string.
    *
    * - Application must generate the file by downloading it to the specified location
    * @type {string} {@link string}
@@ -8813,6 +9125,12 @@ export type animatedEmoji = {
    * @type {file} {@link file}
    */
   sound: file | null;
+
+  /**
+   * True, if the emoji is a regular emoji
+   * @type {Bool} {@link Bool}
+   */
+  is_regular_emoji: Bool;
 };
 
 /**
@@ -8852,6 +9170,12 @@ export type animatedEmoji$Input = {
    * @type {file} {@link file}
    */
   readonly sound?: file$Input | null;
+
+  /**
+   * True, if the emoji is a regular emoji
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_regular_emoji?: Bool$Input;
 };
 
 /**
@@ -9481,7 +9805,7 @@ export type poll = {
   country_codes: vector<string>;
 
   /**
-   * The list of 0-based poll identifiers in which the options of the poll must be shown; empty if the order of options must not be changed
+   * The list of 0-based poll option identifiers in which the options of the poll must be shown; empty if the order of options must not be changed
    * @type {vector<int32>} {@link vector<int32>}
    */
   option_order: vector<int32>;
@@ -9598,7 +9922,7 @@ export type poll$Input = {
   readonly country_codes?: vector$Input<string>;
 
   /**
-   * The list of 0-based poll identifiers in which the options of the poll must be shown; empty if the order of options must not be changed
+   * The list of 0-based poll option identifiers in which the options of the poll must be shown; empty if the order of options must not be changed
    * @type {vector<int32>} {@link vector<int32>}
    */
   readonly option_order?: vector$Input<int32>;
@@ -10303,6 +10627,12 @@ export type userTypeBot = {
   has_topics: Bool;
 
   /**
+   * True, if the bot has topics, which are shown in a sidebar
+   * @type {Bool} {@link Bool}
+   */
+  has_topic_sidebar: Bool;
+
+  /**
    * True, if users can create and delete topics in the chat with the bot
    * @type {Bool} {@link Bool}
    */
@@ -10402,6 +10732,12 @@ export type userTypeBot$Input = {
   readonly has_topics?: Bool$Input;
 
   /**
+   * True, if the bot has topics, which are shown in a sidebar
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_topic_sidebar?: Bool$Input;
+
+  /**
    * True, if users can create and delete topics in the chat with the bot
    * @type {Bool} {@link Bool}
    */
@@ -10463,7 +10799,9 @@ export type userTypeBot$Input = {
 };
 
 /**
- * No information on the user besides the user identifier is available, yet this user has not been deleted. This object is extremely rare and must be handled like a deleted user. It is not possible to perform any actions on users of this type
+ * No information on the user besides the user identifier is available, yet this user has not been deleted.
+ *
+ * - This object is extremely rare and must be handled like a deleted user. It is not possible to perform any actions on users of this type
  */
 export type userTypeUnknown = {
   _: "userTypeUnknown";
@@ -10472,7 +10810,9 @@ export type userTypeUnknown = {
 /**
  * Version of {@link userTypeUnknown} for method parameters.
  *
- * No information on the user besides the user identifier is available, yet this user has not been deleted. This object is extremely rare and must be handled like a deleted user. It is not possible to perform any actions on users of this type
+ * No information on the user besides the user identifier is available, yet this user has not been deleted.
+ *
+ * - This object is extremely rare and must be handled like a deleted user. It is not possible to perform any actions on users of this type
  */
 export type userTypeUnknown$Input = {
   readonly _: "userTypeUnknown";
@@ -10733,7 +11073,7 @@ export type botVerification = {
   icon_custom_emoji_id: int64;
 
   /**
-   * Custom description of verification reason set by the bot. Can contain only Mention, Hashtag, Cashtag, PhoneNumber, BankCardNumber, Url, and EmailAddress entities
+   * Custom description of verification reason set by the bot. Can contain only Mention, Hashtag, Cashtag, PhoneNumber, BankCardNumber, TonAddress, Url, and EmailAddress entities
    * @type {formattedText} {@link formattedText}
    */
   custom_description: formattedText;
@@ -10760,7 +11100,7 @@ export type botVerification$Input = {
   readonly icon_custom_emoji_id?: int64$Input;
 
   /**
-   * Custom description of verification reason set by the bot. Can contain only Mention, Hashtag, Cashtag, PhoneNumber, BankCardNumber, Url, and EmailAddress entities
+   * Custom description of verification reason set by the bot. Can contain only Mention, Hashtag, Cashtag, PhoneNumber, BankCardNumber, TonAddress, Url, and EmailAddress entities
    * @type {formattedText} {@link formattedText}
    */
   readonly custom_description?: formattedText$Input;
@@ -11351,7 +11691,7 @@ export type businessBotRights = {
   can_view_gifts_and_stars: Bool;
 
   /**
-   * True, if the bot can sell regular gifts received by the business account
+   * True, if the bot can sell or delete regular gifts received by the business account
    * @type {Bool} {@link Bool}
    */
   can_sell_gifts: Bool;
@@ -11444,7 +11784,7 @@ export type businessBotRights$Input = {
   readonly can_view_gifts_and_stars?: Bool$Input;
 
   /**
-   * True, if the bot can sell regular gifts received by the business account
+   * True, if the bot can sell or delete regular gifts received by the business account
    * @type {Bool} {@link Bool}
    */
   readonly can_sell_gifts?: Bool$Input;
@@ -12247,7 +12587,7 @@ export type chatPhoto = {
   minithumbnail: minithumbnail | null;
 
   /**
-   * Available variants of the photo in JPEG format, in different size
+   * Available variants of the photo in JPEG format, in different sizes
    * @type {vector<photoSize>} {@link vector<photoSize>}
    */
   sizes: vector<photoSize>;
@@ -12298,7 +12638,7 @@ export type chatPhoto$Input = {
   readonly minithumbnail?: minithumbnail$Input | null;
 
   /**
-   * Available variants of the photo in JPEG format, in different size
+   * Available variants of the photo in JPEG format, in different sizes
    * @type {vector<photoSize>} {@link vector<photoSize>}
    */
   readonly sizes?: vector$Input<photoSize$Input>;
@@ -12541,7 +12881,7 @@ export type chatPermissions = {
   can_send_polls: Bool;
 
   /**
-   * True, if the user can send animations, games, stickers, and dice and use inline bots
+   * True, if the user can send animations, games, stickers, widgets, and dice and use inline bots
    * @type {Bool} {@link Bool}
    */
   can_send_other_messages: Bool;
@@ -12646,7 +12986,7 @@ export type chatPermissions$Input = {
   readonly can_send_polls?: Bool$Input;
 
   /**
-   * True, if the user can send animations, games, stickers, and dice and use inline bots
+   * True, if the user can send animations, games, stickers, widgets, and dice and use inline bots
    * @type {Bool} {@link Bool}
    */
   readonly can_send_other_messages?: Bool$Input;
@@ -13396,6 +13736,94 @@ export type webAppOpenParameters$Input = {
    * @type {WebAppOpenMode} {@link WebAppOpenMode}
    */
   readonly mode?: WebAppOpenMode$Input | null;
+};
+
+/**
+ * Describes position of a rectangle area on a story media or a TON wallet card
+ */
+export type areaPosition = {
+  _: "areaPosition";
+
+  /**
+   * The abscissa of the rectangle's center, as a percentage of the media or the card width
+   * @type {double} {@link double}
+   */
+  x_percentage: double;
+
+  /**
+   * The ordinate of the rectangle's center, as a percentage of the media or the card height
+   * @type {double} {@link double}
+   */
+  y_percentage: double;
+
+  /**
+   * The width of the rectangle, as a percentage of the media or the card width
+   * @type {double} {@link double}
+   */
+  width_percentage: double;
+
+  /**
+   * The height of the rectangle, as a percentage of the media or the card height
+   * @type {double} {@link double}
+   */
+  height_percentage: double;
+
+  /**
+   * Clockwise rotation angle of the rectangle, in degrees; 0-360
+   * @type {double} {@link double}
+   */
+  rotation_angle: double;
+
+  /**
+   * The radius of the rectangle corner rounding, as a percentage of the media or the card width
+   * @type {double} {@link double}
+   */
+  corner_radius_percentage: double;
+};
+
+/**
+ * Version of {@link areaPosition} for method parameters.
+ *
+ * Describes position of a rectangle area on a story media or a TON wallet card
+ */
+export type areaPosition$Input = {
+  readonly _: "areaPosition";
+
+  /**
+   * The abscissa of the rectangle's center, as a percentage of the media or the card width
+   * @type {double} {@link double}
+   */
+  readonly x_percentage?: double;
+
+  /**
+   * The ordinate of the rectangle's center, as a percentage of the media or the card height
+   * @type {double} {@link double}
+   */
+  readonly y_percentage?: double;
+
+  /**
+   * The width of the rectangle, as a percentage of the media or the card width
+   * @type {double} {@link double}
+   */
+  readonly width_percentage?: double;
+
+  /**
+   * The height of the rectangle, as a percentage of the media or the card height
+   * @type {double} {@link double}
+   */
+  readonly height_percentage?: double;
+
+  /**
+   * Clockwise rotation angle of the rectangle, in degrees; 0-360
+   * @type {double} {@link double}
+   */
+  readonly rotation_angle?: double;
+
+  /**
+   * The radius of the rectangle corner rounding, as a percentage of the media or the card width
+   * @type {double} {@link double}
+   */
+  readonly corner_radius_percentage?: double;
 };
 
 /**
@@ -14401,7 +14829,7 @@ export type foundAffiliateProgram = {
   _: "foundAffiliateProgram";
 
   /**
-   * User identifier of the bot created the program
+   * User identifier of the bot that created the program
    * @type {int53} {@link int53}
    */
   bot_user_id: int53;
@@ -14422,7 +14850,7 @@ export type foundAffiliateProgram$Input = {
   readonly _: "foundAffiliateProgram";
 
   /**
-   * User identifier of the bot created the program
+   * User identifier of the bot that created the program
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -14499,7 +14927,7 @@ export type connectedAffiliateProgram = {
   url: string;
 
   /**
-   * User identifier of the bot created the program
+   * User identifier of the bot that created the program
    * @type {int53} {@link int53}
    */
   bot_user_id: int53;
@@ -14550,7 +14978,7 @@ export type connectedAffiliateProgram$Input = {
   readonly url?: string;
 
   /**
-   * User identifier of the bot created the program
+   * User identifier of the bot that created the program
    * @type {int53} {@link int53}
    */
   readonly bot_user_id?: int53;
@@ -16015,7 +16443,7 @@ export type upgradedGiftOriginResale$Input = {
 };
 
 /**
- * The gift was assigned from blockchain and isn't owned by the current user. The gift can't be transferred, resold or withdrawn to blockchain
+ * The gift was assigned from blockchain and isn't owned by the current user. The gift can't be transferred, resold, or withdrawn to blockchain
  */
 export type upgradedGiftOriginBlockchain = {
   _: "upgradedGiftOriginBlockchain";
@@ -16024,7 +16452,7 @@ export type upgradedGiftOriginBlockchain = {
 /**
  * Version of {@link upgradedGiftOriginBlockchain} for method parameters.
  *
- * The gift was assigned from blockchain and isn't owned by the current user. The gift can't be transferred, resold or withdrawn to blockchain
+ * The gift was assigned from blockchain and isn't owned by the current user. The gift can't be transferred, resold, or withdrawn to blockchain
  */
 export type upgradedGiftOriginBlockchain$Input = {
   readonly _: "upgradedGiftOriginBlockchain";
@@ -16683,10 +17111,10 @@ export type gift = {
   overall_limits: giftPurchaseLimits | null;
 
   /**
-   * Background of the gift
+   * Background of the gift; may be null if the gift has no background
    * @type {giftBackground} {@link giftBackground}
    */
-  background: giftBackground;
+  background: giftBackground | null;
 
   /**
    * Point in time (Unix timestamp) when the gift was sent for the first time; for sold out gifts only
@@ -16796,10 +17224,10 @@ export type gift$Input = {
   readonly overall_limits?: giftPurchaseLimits$Input | null;
 
   /**
-   * Background of the gift
+   * Background of the gift; may be null if the gift has no background
    * @type {giftBackground} {@link giftBackground}
    */
-  readonly background?: giftBackground$Input;
+  readonly background?: giftBackground$Input | null;
 
   /**
    * Point in time (Unix timestamp) when the gift was sent for the first time; for sold out gifts only
@@ -16927,6 +17355,12 @@ export type upgradedGift = {
    * @type {string} {@link string}
    */
   gift_address: string;
+
+  /**
+   * True, if the gift NFT can be used as background_nft_address in setTonWalletCardStickers
+   * @type {Bool} {@link Bool}
+   */
+  can_be_ton_wallet_card_background: Bool;
 
   /**
    * Model of the upgraded gift
@@ -17110,6 +17544,12 @@ export type upgradedGift$Input = {
    * @type {string} {@link string}
    */
   readonly gift_address?: string;
+
+  /**
+   * True, if the gift NFT can be used as background_nft_address in setTonWalletCardStickers
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_ton_wallet_card_background?: Bool$Input;
 
   /**
    * Model of the upgraded gift
@@ -17360,6 +17800,62 @@ export type upgradedGiftValueInfo$Input = {
    * @type {string} {@link string}
    */
   readonly fragment_url?: string;
+};
+
+/**
+ * Contains information needed to deposit an upgraded gift from the TON wallet of the current user to a Telegram account.
+ *
+ * - The gift must be transferred by an internal message from the wallet to nft_address with gram_amount attached and with payload as the message body
+ */
+export type upgradedGiftDepositInfo = {
+  _: "upgradedGiftDepositInfo";
+
+  /**
+   * Address in TON blockchain to which the message must be sent
+   * @type {string} {@link string}
+   */
+  nft_address: string;
+
+  /**
+   * Body of the NFT transfer message
+   * @type {bytes} {@link bytes}
+   */
+  payload: bytes;
+
+  /**
+   * The amount of TON Grams that must be attached to the message to cover fees, in the smallest units of the cryptocurrency; excess amount will be returned to the wallet
+   * @type {int64} {@link int64}
+   */
+  gram_amount: int64;
+};
+
+/**
+ * Version of {@link upgradedGiftDepositInfo} for method parameters.
+ *
+ * Contains information needed to deposit an upgraded gift from the TON wallet of the current user to a Telegram account.
+ *
+ * - The gift must be transferred by an internal message from the wallet to nft_address with gram_amount attached and with payload as the message body
+ */
+export type upgradedGiftDepositInfo$Input = {
+  readonly _: "upgradedGiftDepositInfo";
+
+  /**
+   * Address in TON blockchain to which the message must be sent
+   * @type {string} {@link string}
+   */
+  readonly nft_address?: string;
+
+  /**
+   * Body of the NFT transfer message
+   * @type {bytes} {@link bytes}
+   */
+  readonly payload?: bytes$Input;
+
+  /**
+   * The amount of TON Grams that must be attached to the message to cover fees, in the smallest units of the cryptocurrency; excess amount will be returned to the wallet
+   * @type {int64} {@link int64}
+   */
+  readonly gram_amount?: int64$Input;
 };
 
 /**
@@ -17895,7 +18391,7 @@ export type upgradedGiftBackdropCount = {
   backdrop: upgradedGiftBackdrop;
 
   /**
-   * Total number of gifts with the symbol
+   * Total number of gifts with the backdrop
    * @type {int32} {@link int32}
    */
   total_count: int32;
@@ -17916,7 +18412,7 @@ export type upgradedGiftBackdropCount$Input = {
   readonly backdrop?: upgradedGiftBackdrop$Input;
 
   /**
-   * Total number of gifts with the symbol
+   * Total number of gifts with the backdrop
    * @type {int32} {@link int32}
    */
   readonly total_count?: int32;
@@ -18241,7 +18737,7 @@ export type receivedGift = {
   unique_gift_number: int32;
 
   /**
-   * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone are able to see them
+   * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone is able to see them
    * @type {Bool} {@link Bool}
    */
   is_private: Bool;
@@ -18269,6 +18765,12 @@ export type receivedGift = {
    * @type {Bool} {@link Bool}
    */
   can_be_transferred: Bool;
+
+  /**
+   * True, if the gift is a regular gift that can be deleted using deleteGift; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  can_be_deleted: Bool;
 
   /**
    * True, if the gift was refunded and isn't available anymore
@@ -18388,7 +18890,7 @@ export type receivedGift$Input = {
   readonly unique_gift_number?: int32;
 
   /**
-   * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone are able to see them
+   * True, if the sender and gift text are shown only to the gift receiver; otherwise, everyone is able to see them
    * @type {Bool} {@link Bool}
    */
   readonly is_private?: Bool$Input;
@@ -18416,6 +18918,12 @@ export type receivedGift$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly can_be_transferred?: Bool$Input;
+
+  /**
+   * True, if the gift is a regular gift that can be deleted using deleteGift; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_deleted?: Bool$Input;
 
   /**
    * True, if the gift was refunded and isn't available anymore
@@ -18575,7 +19083,7 @@ export type attributeCraftPersistenceProbability = {
   /**
    * The 4 numbers that describe probability of the craft result to have the same attribute as one of the original gifts
    *
-   * - if 1, 2, 3, or 4 gifts with the attribute are used in the craft. Each number represents the number of crafted gifts with the original attribute per 1000 successful craftings
+   * - if 1, 2, 3, or 4 gifts with the attribute are used in the craft. Each number represents the number of crafted gifts with the original attribute per 1000 successful crafts
    * @type {vector<int32>} {@link vector<int32>}
    */
   persistence_chance_per_mille: vector<int32>;
@@ -18592,7 +19100,7 @@ export type attributeCraftPersistenceProbability$Input = {
   /**
    * The 4 numbers that describe probability of the craft result to have the same attribute as one of the original gifts
    *
-   * - if 1, 2, 3, or 4 gifts with the attribute are used in the craft. Each number represents the number of crafted gifts with the original attribute per 1000 successful craftings
+   * - if 1, 2, 3, or 4 gifts with the attribute are used in the craft. Each number represents the number of crafted gifts with the original attribute per 1000 successful crafts
    * @type {vector<int32>} {@link vector<int32>}
    */
   readonly persistence_chance_per_mille?: vector$Input<int32>;
@@ -18619,7 +19127,7 @@ export type giftsForCrafting = {
   /**
    * The 4 objects that describe probabilities of the crafted gift to have the backdrop or symbol of one of the original gifts
    *
-   * - for the cases when 1, 2, 3 or 4 gifts are used in the craft correspondingly
+   * - for the cases when 1-4 gifts are used in the craft correspondingly
    * @type {vector<attributeCraftPersistenceProbability>} {@link vector<attributeCraftPersistenceProbability>}
    */
   attribute_persistence_probabilities: vector<attributeCraftPersistenceProbability>;
@@ -18654,7 +19162,7 @@ export type giftsForCrafting$Input = {
   /**
    * The 4 objects that describe probabilities of the crafted gift to have the backdrop or symbol of one of the original gifts
    *
-   * - for the cases when 1, 2, 3 or 4 gifts are used in the craft correspondingly
+   * - for the cases when 1-4 gifts are used in the craft correspondingly
    * @type {vector<attributeCraftPersistenceProbability>} {@link vector<attributeCraftPersistenceProbability>}
    */
   readonly attribute_persistence_probabilities?: vector$Input<attributeCraftPersistenceProbability$Input>;
@@ -19259,7 +19767,7 @@ export type auctionStateFinished$Input = {
 };
 
 /**
- * Represent auction state of a gift
+ * Represents auction state of a gift
  */
 export type giftAuctionState = {
   _: "giftAuctionState";
@@ -19280,7 +19788,7 @@ export type giftAuctionState = {
 /**
  * Version of {@link giftAuctionState} for method parameters.
  *
- * Represent auction state of a gift
+ * Represents auction state of a gift
  */
 export type giftAuctionState$Input = {
   readonly _: "giftAuctionState";
@@ -20017,10 +20525,10 @@ export type starTransactionTypeBotSubscriptionPurchase = {
   subscription_period: int32;
 
   /**
-   * Information about the bought subscription
+   * Information about the bought subscription; may be null if no information about the subscription is available
    * @type {productInfo} {@link productInfo}
    */
-  product_info: productInfo;
+  product_info: productInfo | null;
 };
 
 /**
@@ -20044,10 +20552,10 @@ export type starTransactionTypeBotSubscriptionPurchase$Input = {
   readonly subscription_period?: int32;
 
   /**
-   * Information about the bought subscription
+   * Information about the bought subscription; may be null if no information about the subscription is available
    * @type {productInfo} {@link productInfo}
    */
-  readonly product_info?: productInfo$Input;
+  readonly product_info?: productInfo$Input | null;
 };
 
 /**
@@ -20069,10 +20577,10 @@ export type starTransactionTypeBotSubscriptionSale = {
   subscription_period: int32;
 
   /**
-   * Information about the bought subscription
+   * Information about the bought subscription; may be null if no information about the subscription is available
    * @type {productInfo} {@link productInfo}
    */
-  product_info: productInfo;
+  product_info: productInfo | null;
 
   /**
    * Invoice payload
@@ -20108,10 +20616,10 @@ export type starTransactionTypeBotSubscriptionSale$Input = {
   readonly subscription_period?: int32;
 
   /**
-   * Information about the bought subscription
+   * Information about the bought subscription; may be null if no information about the subscription is available
    * @type {productInfo} {@link productInfo}
    */
-  readonly product_info?: productInfo$Input;
+  readonly product_info?: productInfo$Input | null;
 
   /**
    * Invoice payload
@@ -20935,7 +21443,7 @@ export type starTransactionTypePaidGroupCallMessageReceive$Input = {
 };
 
 /**
- * The transaction is a sending of a paid group reaction; relevant for regular users only
+ * The transaction is a sending of a paid group call reaction; relevant for regular users only
  */
 export type starTransactionTypePaidGroupCallReactionSend = {
   _: "starTransactionTypePaidGroupCallReactionSend";
@@ -20950,7 +21458,7 @@ export type starTransactionTypePaidGroupCallReactionSend = {
 /**
  * Version of {@link starTransactionTypePaidGroupCallReactionSend} for method parameters.
  *
- * The transaction is a sending of a paid group reaction; relevant for regular users only
+ * The transaction is a sending of a paid group call reaction; relevant for regular users only
  */
 export type starTransactionTypePaidGroupCallReactionSend$Input = {
   readonly _: "starTransactionTypePaidGroupCallReactionSend";
@@ -21755,6 +22263,2766 @@ export type tonTransactions$Input = {
 };
 
 /**
+ * A GET request
+ */
+export type tonCenterApiRequestTypeGet = {
+  _: "tonCenterApiRequestTypeGet";
+
+  /**
+   * URL-encoded query of the request
+   * @type {string} {@link string}
+   */
+  query: string;
+};
+
+/**
+ * Version of {@link tonCenterApiRequestTypeGet} for method parameters.
+ *
+ * A GET request
+ */
+export type tonCenterApiRequestTypeGet$Input = {
+  readonly _: "tonCenterApiRequestTypeGet";
+
+  /**
+   * URL-encoded query of the request
+   * @type {string} {@link string}
+   */
+  readonly query?: string;
+};
+
+/**
+ * A POST request
+ */
+export type tonCenterApiRequestTypePost = {
+  _: "tonCenterApiRequestTypePost";
+
+  /**
+   * Payload of the request
+   * @type {string} {@link string}
+   */
+  payload: string;
+};
+
+/**
+ * Version of {@link tonCenterApiRequestTypePost} for method parameters.
+ *
+ * A POST request
+ */
+export type tonCenterApiRequestTypePost$Input = {
+  readonly _: "tonCenterApiRequestTypePost";
+
+  /**
+   * Payload of the request
+   * @type {string} {@link string}
+   */
+  readonly payload?: string;
+};
+
+/**
+ * The receiver is specified by its username
+ */
+export type tonWalletTransferReceiverUser = {
+  _: "tonWalletTransferReceiverUser";
+
+  /**
+   * Username of the user. Use searchPublicChat to find the user, check that it is a regular user,
+   *
+   * - and then use createUserTonWallet to get information about the user's TON wallet
+   * @type {string} {@link string}
+   */
+  username: string;
+};
+
+/**
+ * Version of {@link tonWalletTransferReceiverUser} for method parameters.
+ *
+ * The receiver is specified by its username
+ */
+export type tonWalletTransferReceiverUser$Input = {
+  readonly _: "tonWalletTransferReceiverUser";
+
+  /**
+   * Username of the user. Use searchPublicChat to find the user, check that it is a regular user,
+   *
+   * - and then use createUserTonWallet to get information about the user's TON wallet
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+};
+
+/**
+ * The receiver is specified by its address
+ */
+export type tonWalletTransferReceiverAddress = {
+  _: "tonWalletTransferReceiverAddress";
+
+  /**
+   * Address of the receiver. Use getAddressTonWallet to get information about the user's TON wallet
+   * @type {string} {@link string}
+   */
+  address: string;
+};
+
+/**
+ * Version of {@link tonWalletTransferReceiverAddress} for method parameters.
+ *
+ * The receiver is specified by its address
+ */
+export type tonWalletTransferReceiverAddress$Input = {
+  readonly _: "tonWalletTransferReceiverAddress";
+
+  /**
+   * Address of the receiver. Use getAddressTonWallet to get information about the user's TON wallet
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+};
+
+/**
+ * Contains an HTTP URL for TON Center Streaming API
+ */
+export type tonCenterStreamingApiUrl = {
+  _: "tonCenterStreamingApiUrl";
+
+  /**
+   * The URL
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * Time after which the URL expires
+   * @type {int32} {@link int32}
+   */
+  expires_in: int32;
+};
+
+/**
+ * Version of {@link tonCenterStreamingApiUrl} for method parameters.
+ *
+ * Contains an HTTP URL for TON Center Streaming API
+ */
+export type tonCenterStreamingApiUrl$Input = {
+  readonly _: "tonCenterStreamingApiUrl";
+
+  /**
+   * The URL
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * Time after which the URL expires
+   * @type {int32} {@link int32}
+   */
+  readonly expires_in?: int32;
+};
+
+/**
+ * Describes balance of the current user in the bot https://t.me/walt
+ */
+export type walletBotBalance = {
+  _: "walletBotBalance";
+
+  /**
+   * True, if the user has positive TON Gram balance
+   * @type {Bool} {@link Bool}
+   */
+  has_balance: Bool;
+
+  /**
+   * The URL to open to launch the bot; may be empty if none
+   * @type {string} {@link string}
+   */
+  url: string;
+};
+
+/**
+ * Version of {@link walletBotBalance} for method parameters.
+ *
+ * Describes balance of the current user in the bot https://t.me/walt
+ */
+export type walletBotBalance$Input = {
+  readonly _: "walletBotBalance";
+
+  /**
+   * True, if the user has positive TON Gram balance
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_balance?: Bool$Input;
+
+  /**
+   * The URL to open to launch the bot; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+};
+
+/**
+ * Contains TON wallet address of a user
+ */
+export type userTonWalletAddress = {
+  _: "userTonWalletAddress";
+
+  /**
+   * Identifier of the user; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  user_id: int53;
+
+  /**
+   * Address of the user's wallet in the TON blockchain
+   * @type {string} {@link string}
+   */
+  wallet_address: string;
+
+  /**
+   * Public key of the user
+   * @type {bytes} {@link bytes}
+   */
+  public_key: bytes;
+};
+
+/**
+ * Version of {@link userTonWalletAddress} for method parameters.
+ *
+ * Contains TON wallet address of a user
+ */
+export type userTonWalletAddress$Input = {
+  readonly _: "userTonWalletAddress";
+
+  /**
+   * Identifier of the user; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Address of the user's wallet in the TON blockchain
+   * @type {string} {@link string}
+   */
+  readonly wallet_address?: string;
+
+  /**
+   * Public key of the user
+   * @type {bytes} {@link bytes}
+   */
+  readonly public_key?: bytes$Input;
+};
+
+/**
+ * Represents a list of TON wallet addresses of users
+ */
+export type userTonWalletAddresses = {
+  _: "userTonWalletAddresses";
+
+  /**
+   * A list of TON wallet addresses
+   * @type {vector<userTonWalletAddress>} {@link vector<userTonWalletAddress>}
+   */
+  addresses: vector<userTonWalletAddress>;
+};
+
+/**
+ * Version of {@link userTonWalletAddresses} for method parameters.
+ *
+ * Represents a list of TON wallet addresses of users
+ */
+export type userTonWalletAddresses$Input = {
+  readonly _: "userTonWalletAddresses";
+
+  /**
+   * A list of TON wallet addresses
+   * @type {vector<userTonWalletAddress>} {@link vector<userTonWalletAddress>}
+   */
+  readonly addresses?: vector$Input<userTonWalletAddress$Input>;
+};
+
+/**
+ * Represents a challenge for TON wallet ownership proof
+ */
+export type tonWalletOwnershipProofChallenge = {
+  _: "tonWalletOwnershipProofChallenge";
+
+  /**
+   * Payload of the challenge
+   * @type {string} {@link string}
+   */
+  payload: string;
+
+  /**
+   * Domain of the proof requester
+   * @type {string} {@link string}
+   */
+  domain: string;
+};
+
+/**
+ * Version of {@link tonWalletOwnershipProofChallenge} for method parameters.
+ *
+ * Represents a challenge for TON wallet ownership proof
+ */
+export type tonWalletOwnershipProofChallenge$Input = {
+  readonly _: "tonWalletOwnershipProofChallenge";
+
+  /**
+   * Payload of the challenge
+   * @type {string} {@link string}
+   */
+  readonly payload?: string;
+
+  /**
+   * Domain of the proof requester
+   * @type {string} {@link string}
+   */
+  readonly domain?: string;
+};
+
+/**
+ * Represents a proof of TON wallet ownership
+ */
+export type tonWalletOwnershipProof = {
+  _: "tonWalletOwnershipProof";
+
+  /**
+   * Public key of the wallet
+   * @type {bytes} {@link bytes}
+   */
+  public_key: bytes;
+
+  /**
+   * The current UNIX timestamp which was used to create the proof
+   * @type {int32} {@link int32}
+   */
+  timestamp: int32;
+
+  /**
+   * The signature proving the ownership
+   * @type {bytes} {@link bytes}
+   */
+  signature: bytes;
+};
+
+/**
+ * Version of {@link tonWalletOwnershipProof} for method parameters.
+ *
+ * Represents a proof of TON wallet ownership
+ */
+export type tonWalletOwnershipProof$Input = {
+  readonly _: "tonWalletOwnershipProof";
+
+  /**
+   * Public key of the wallet
+   * @type {bytes} {@link bytes}
+   */
+  readonly public_key?: bytes$Input;
+
+  /**
+   * The current UNIX timestamp which was used to create the proof
+   * @type {int32} {@link int32}
+   */
+  readonly timestamp?: int32;
+
+  /**
+   * The signature proving the ownership
+   * @type {bytes} {@link bytes}
+   */
+  readonly signature?: bytes$Input;
+};
+
+/**
+ * Contains the secret phrase of a TON wallet
+ */
+export type tonWalletSecretPhrase = {
+  _: "tonWalletSecretPhrase";
+
+  /**
+   * The secret phrase as a space separated list of words
+   * @type {string} {@link string}
+   */
+  secret_phrase: string;
+};
+
+/**
+ * Version of {@link tonWalletSecretPhrase} for method parameters.
+ *
+ * Contains the secret phrase of a TON wallet
+ */
+export type tonWalletSecretPhrase$Input = {
+  readonly _: "tonWalletSecretPhrase";
+
+  /**
+   * The secret phrase as a space separated list of words
+   * @type {string} {@link string}
+   */
+  readonly secret_phrase?: string;
+};
+
+/**
+ * Represents state of gasless transfers for the current user
+ */
+export type tonWalletGaslessTransfersInfo = {
+  _: "tonWalletGaslessTransfersInfo";
+
+  /**
+   * Number of left gasless transfers. The daily available number of gasless transfers is available as getOption("ton_wallet_gasless_transfer_daily_count_max")
+   * @type {int32} {@link int32}
+   */
+  left_count: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the number of left transfers will be reset; 0 if never
+   * @type {int32} {@link int32}
+   */
+  reset_date: int32;
+
+  /**
+   * Address of the relayer for gasless transfers; may be empty if unavailable
+   * @type {string} {@link string}
+   */
+  relayer_address: string;
+};
+
+/**
+ * Version of {@link tonWalletGaslessTransfersInfo} for method parameters.
+ *
+ * Represents state of gasless transfers for the current user
+ */
+export type tonWalletGaslessTransfersInfo$Input = {
+  readonly _: "tonWalletGaslessTransfersInfo";
+
+  /**
+   * Number of left gasless transfers. The daily available number of gasless transfers is available as getOption("ton_wallet_gasless_transfer_daily_count_max")
+   * @type {int32} {@link int32}
+   */
+  readonly left_count?: int32;
+
+  /**
+   * Point in time (Unix timestamp) when the number of left transfers will be reset; 0 if never
+   * @type {int32} {@link int32}
+   */
+  readonly reset_date?: int32;
+
+  /**
+   * Address of the relayer for gasless transfers; may be empty if unavailable
+   * @type {string} {@link string}
+   */
+  readonly relayer_address?: string;
+};
+
+/**
+ * Describes exchange rate of a currency to USD
+ */
+export type currencyExchangeRate = {
+  _: "currencyExchangeRate";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  currency: string;
+
+  /**
+   * Exchange rate of the currency to USD
+   * @type {double} {@link double}
+   */
+  rate: double;
+};
+
+/**
+ * Version of {@link currencyExchangeRate} for method parameters.
+ *
+ * Describes exchange rate of a currency to USD
+ */
+export type currencyExchangeRate$Input = {
+  readonly _: "currencyExchangeRate";
+
+  /**
+   * ISO 4217 currency code of the payment currency
+   * @type {string} {@link string}
+   */
+  readonly currency?: string;
+
+  /**
+   * Exchange rate of the currency to USD
+   * @type {double} {@link double}
+   */
+  readonly rate?: double;
+};
+
+/**
+ * Represents a list of currency exchange rates
+ */
+export type currencyExchangeRates = {
+  _: "currencyExchangeRates";
+
+  /**
+   * A list of currency exchange rates
+   * @type {vector<currencyExchangeRate>} {@link vector<currencyExchangeRate>}
+   */
+  rates: vector<currencyExchangeRate>;
+};
+
+/**
+ * Version of {@link currencyExchangeRates} for method parameters.
+ *
+ * Represents a list of currency exchange rates
+ */
+export type currencyExchangeRates$Input = {
+  readonly _: "currencyExchangeRates";
+
+  /**
+   * A list of currency exchange rates
+   * @type {vector<currencyExchangeRate>} {@link vector<currencyExchangeRate>}
+   */
+  readonly rates?: vector$Input<currencyExchangeRate$Input>;
+};
+
+/**
+ * Describes an on-ramp provider
+ */
+export type onRampProvider = {
+  _: "onRampProvider";
+
+  /**
+   * Unique identifier of the provider
+   * @type {string} {@link string}
+   */
+  id: string;
+
+  /**
+   * Name of the provider
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * List of cryptocurrencies supported by the provider
+   * @type {vector<string>} {@link vector<string>}
+   */
+  cryptocurrencies: vector<string>;
+
+  /**
+   * True, if the provider supports base currencies and can be used in the method getOnRampProviderBaseCurrencies
+   * @type {Bool} {@link Bool}
+   */
+  supports_base_currencies: Bool;
+
+  /**
+   * True, if the provider supports limits retrieval using the method getOnRampPaymentLimits
+   * @type {Bool} {@link Bool}
+   */
+  supports_limits: Bool;
+
+  /**
+   * True, if the provider supports quote retrieval using the method getOnRampPaymentQuote
+   * @type {Bool} {@link Bool}
+   */
+  supports_quote: Bool;
+};
+
+/**
+ * Version of {@link onRampProvider} for method parameters.
+ *
+ * Describes an on-ramp provider
+ */
+export type onRampProvider$Input = {
+  readonly _: "onRampProvider";
+
+  /**
+   * Unique identifier of the provider
+   * @type {string} {@link string}
+   */
+  readonly id?: string;
+
+  /**
+   * Name of the provider
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * List of cryptocurrencies supported by the provider
+   * @type {vector<string>} {@link vector<string>}
+   */
+  readonly cryptocurrencies?: vector$Input<string>;
+
+  /**
+   * True, if the provider supports base currencies and can be used in the method getOnRampProviderBaseCurrencies
+   * @type {Bool} {@link Bool}
+   */
+  readonly supports_base_currencies?: Bool$Input;
+
+  /**
+   * True, if the provider supports limits retrieval using the method getOnRampPaymentLimits
+   * @type {Bool} {@link Bool}
+   */
+  readonly supports_limits?: Bool$Input;
+
+  /**
+   * True, if the provider supports quote retrieval using the method getOnRampPaymentQuote
+   * @type {Bool} {@link Bool}
+   */
+  readonly supports_quote?: Bool$Input;
+};
+
+/**
+ * Represents a list of on-ramp providers
+ */
+export type onRampProviders = {
+  _: "onRampProviders";
+
+  /**
+   * A list of providers
+   * @type {vector<onRampProvider>} {@link vector<onRampProvider>}
+   */
+  providers: vector<onRampProvider>;
+};
+
+/**
+ * Version of {@link onRampProviders} for method parameters.
+ *
+ * Represents a list of on-ramp providers
+ */
+export type onRampProviders$Input = {
+  readonly _: "onRampProviders";
+
+  /**
+   * A list of providers
+   * @type {vector<onRampProvider>} {@link vector<onRampProvider>}
+   */
+  readonly providers?: vector$Input<onRampProvider$Input>;
+};
+
+/**
+ * Represents a list of currencies
+ */
+export type currencies = {
+  _: "currencies";
+
+  /**
+   * A list of ISO 4217 currency codes
+   * @type {vector<string>} {@link vector<string>}
+   */
+  currencies: vector<string>;
+};
+
+/**
+ * Version of {@link currencies} for method parameters.
+ *
+ * Represents a list of currencies
+ */
+export type currencies$Input = {
+  readonly _: "currencies";
+
+  /**
+   * A list of ISO 4217 currency codes
+   * @type {vector<string>} {@link vector<string>}
+   */
+  readonly currencies?: vector$Input<string>;
+};
+
+/**
+ * Describes a payment method of an on-ramp provider
+ */
+export type onRampPaymentMethod = {
+  _: "onRampPaymentMethod";
+
+  /**
+   * Name of the method
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * True, if the method is available to the user
+   * @type {Bool} {@link Bool}
+   */
+  is_available: Bool;
+};
+
+/**
+ * Version of {@link onRampPaymentMethod} for method parameters.
+ *
+ * Describes a payment method of an on-ramp provider
+ */
+export type onRampPaymentMethod$Input = {
+  readonly _: "onRampPaymentMethod";
+
+  /**
+   * Name of the method
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * True, if the method is available to the user
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_available?: Bool$Input;
+};
+
+/**
+ * Describes availability of cryptocurrency purchase through an on-ramp provider
+ */
+export type onRampPaymentAvailability = {
+  _: "onRampPaymentAvailability";
+
+  /**
+   * True, if the current user can use the provider
+   * @type {Bool} {@link Bool}
+   */
+  is_allowed: Bool;
+
+  /**
+   * True, if the current user can purchase through the provider
+   * @type {Bool} {@link Bool}
+   */
+  is_purchase_allowed: Bool;
+
+  /**
+   * The list of available payment methods
+   * @type {vector<onRampPaymentMethod>} {@link vector<onRampPaymentMethod>}
+   */
+  methods: vector<onRampPaymentMethod>;
+
+  /**
+   * A two-letter ISO 3166-1 alpha-2 country code of the current user's country
+   * @type {string} {@link string}
+   */
+  country_code: string;
+
+  /**
+   * Code of the state of the current user; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  state: string;
+};
+
+/**
+ * Version of {@link onRampPaymentAvailability} for method parameters.
+ *
+ * Describes availability of cryptocurrency purchase through an on-ramp provider
+ */
+export type onRampPaymentAvailability$Input = {
+  readonly _: "onRampPaymentAvailability";
+
+  /**
+   * True, if the current user can use the provider
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_allowed?: Bool$Input;
+
+  /**
+   * True, if the current user can purchase through the provider
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_purchase_allowed?: Bool$Input;
+
+  /**
+   * The list of available payment methods
+   * @type {vector<onRampPaymentMethod>} {@link vector<onRampPaymentMethod>}
+   */
+  readonly methods?: vector$Input<onRampPaymentMethod$Input>;
+
+  /**
+   * A two-letter ISO 3166-1 alpha-2 country code of the current user's country
+   * @type {string} {@link string}
+   */
+  readonly country_code?: string;
+
+  /**
+   * Code of the state of the current user; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  readonly state?: string;
+};
+
+/**
+ * Describes limits for an on-ramp purchase
+ */
+export type onRampPaymentLimits = {
+  _: "onRampPaymentLimits";
+
+  /**
+   * The payment method to be used
+   * @type {string} {@link string}
+   */
+  payment_method: string;
+
+  /**
+   * The minimum allowed amount of the base currency
+   * @type {string} {@link string}
+   */
+  base_currency_min_amount: string;
+
+  /**
+   * The maximum allowed amount of the base currency
+   * @type {string} {@link string}
+   */
+  base_currency_max_amount: string;
+
+  /**
+   * The minimum allowed amount of the bought cryptocurrency
+   * @type {string} {@link string}
+   */
+  cryptocurrency_min_amount: string;
+
+  /**
+   * The maximum allowed amount of the bought cryptocurrency
+   * @type {string} {@link string}
+   */
+  cryptocurrency_max_amount: string;
+};
+
+/**
+ * Version of {@link onRampPaymentLimits} for method parameters.
+ *
+ * Describes limits for an on-ramp purchase
+ */
+export type onRampPaymentLimits$Input = {
+  readonly _: "onRampPaymentLimits";
+
+  /**
+   * The payment method to be used
+   * @type {string} {@link string}
+   */
+  readonly payment_method?: string;
+
+  /**
+   * The minimum allowed amount of the base currency
+   * @type {string} {@link string}
+   */
+  readonly base_currency_min_amount?: string;
+
+  /**
+   * The maximum allowed amount of the base currency
+   * @type {string} {@link string}
+   */
+  readonly base_currency_max_amount?: string;
+
+  /**
+   * The minimum allowed amount of the bought cryptocurrency
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency_min_amount?: string;
+
+  /**
+   * The maximum allowed amount of the bought cryptocurrency
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency_max_amount?: string;
+};
+
+/**
+ * Describes a quote for an on-ramp purchase
+ */
+export type onRampPaymentQuote = {
+  _: "onRampPaymentQuote";
+
+  /**
+   * The payment method to be used
+   * @type {string} {@link string}
+   */
+  payment_method: string;
+
+  /**
+   * Point in time (Unix timestamp) when the quote will expire
+   * @type {int32} {@link int32}
+   */
+  expiration_date: int32;
+
+  /**
+   * Paid amount of the base currency
+   * @type {string} {@link string}
+   */
+  base_currency_amount: string;
+
+  /**
+   * Purchased amount of the cryptocurrency
+   * @type {string} {@link string}
+   */
+  cryptocurrency_amount: string;
+
+  /**
+   * The price of the cryptocurrency
+   * @type {string} {@link string}
+   */
+  cryptocurrency_price: string;
+
+  /**
+   * Fee amount
+   * @type {string} {@link string}
+   */
+  fee_amount: string;
+
+  /**
+   * Extra fee amount
+   * @type {string} {@link string}
+   */
+  extra_fee_amount: string;
+
+  /**
+   * Network fee amount
+   * @type {string} {@link string}
+   */
+  network_fee_amount: string;
+
+  /**
+   * Total paid amount
+   * @type {string} {@link string}
+   */
+  total_amount: string;
+};
+
+/**
+ * Version of {@link onRampPaymentQuote} for method parameters.
+ *
+ * Describes a quote for an on-ramp purchase
+ */
+export type onRampPaymentQuote$Input = {
+  readonly _: "onRampPaymentQuote";
+
+  /**
+   * The payment method to be used
+   * @type {string} {@link string}
+   */
+  readonly payment_method?: string;
+
+  /**
+   * Point in time (Unix timestamp) when the quote will expire
+   * @type {int32} {@link int32}
+   */
+  readonly expiration_date?: int32;
+
+  /**
+   * Paid amount of the base currency
+   * @type {string} {@link string}
+   */
+  readonly base_currency_amount?: string;
+
+  /**
+   * Purchased amount of the cryptocurrency
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency_amount?: string;
+
+  /**
+   * The price of the cryptocurrency
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency_price?: string;
+
+  /**
+   * Fee amount
+   * @type {string} {@link string}
+   */
+  readonly fee_amount?: string;
+
+  /**
+   * Extra fee amount
+   * @type {string} {@link string}
+   */
+  readonly extra_fee_amount?: string;
+
+  /**
+   * Network fee amount
+   * @type {string} {@link string}
+   */
+  readonly network_fee_amount?: string;
+
+  /**
+   * Total paid amount
+   * @type {string} {@link string}
+   */
+  readonly total_amount?: string;
+};
+
+/**
+ * Describes a session for an on-ramp purchase
+ */
+export type onRampPaymentSession = {
+  _: "onRampPaymentSession";
+
+  /**
+   * Identifier of the session
+   * @type {string} {@link string}
+   */
+  session_id: string;
+
+  /**
+   * Point in time (Unix timestamp) when the session will expire
+   * @type {int32} {@link int32}
+   */
+  expiration_date: int32;
+
+  /**
+   * HTTPS URL to be opened in a WebView to complete the purchase
+   * @type {string} {@link string}
+   */
+  url: string;
+};
+
+/**
+ * Version of {@link onRampPaymentSession} for method parameters.
+ *
+ * Describes a session for an on-ramp purchase
+ */
+export type onRampPaymentSession$Input = {
+  readonly _: "onRampPaymentSession";
+
+  /**
+   * Identifier of the session
+   * @type {string} {@link string}
+   */
+  readonly session_id?: string;
+
+  /**
+   * Point in time (Unix timestamp) when the session will expire
+   * @type {int32} {@link int32}
+   */
+  readonly expiration_date?: int32;
+
+  /**
+   * HTTPS URL to be opened in a WebView to complete the purchase
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+};
+
+/**
+ * Describes state of the wallet of the current user in the TON blockchain
+ */
+export type tonWalletState = {
+  _: "tonWalletState";
+
+  /**
+   * Address of the wallet; may be empty if none
+   * @type {string} {@link string}
+   */
+  address: string;
+
+  /**
+   * Public key of the wallet; may be empty if none
+   * @type {bytes} {@link bytes}
+   */
+  public_key: bytes;
+
+  /**
+   * The total amount of owned TON Grams, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  gram_amount: int64;
+
+  /**
+   * True, if the wallet is being created
+   * @type {Bool} {@link Bool}
+   */
+  is_being_created: Bool;
+
+  /**
+   * True, if backup for the wallet key is enabled
+   * @type {Bool} {@link Bool}
+   */
+  is_backup_enabled: Bool;
+
+  /**
+   * True, if the user can enable backup for the wallet key
+   * @type {Bool} {@link Bool}
+   */
+  can_enable_backup: Bool;
+
+  /**
+   * True, if the wallet key can be exported using getTonWalletSecretPhrase
+   * @type {Bool} {@link Bool}
+   */
+  can_export_phrase: Bool;
+};
+
+/**
+ * Version of {@link tonWalletState} for method parameters.
+ *
+ * Describes state of the wallet of the current user in the TON blockchain
+ */
+export type tonWalletState$Input = {
+  readonly _: "tonWalletState";
+
+  /**
+   * Address of the wallet; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+
+  /**
+   * Public key of the wallet; may be empty if none
+   * @type {bytes} {@link bytes}
+   */
+  readonly public_key?: bytes$Input;
+
+  /**
+   * The total amount of owned TON Grams, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly gram_amount?: int64$Input;
+
+  /**
+   * True, if the wallet is being created
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_being_created?: Bool$Input;
+
+  /**
+   * True, if backup for the wallet key is enabled
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_backup_enabled?: Bool$Input;
+
+  /**
+   * True, if the user can enable backup for the wallet key
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_enable_backup?: Bool$Input;
+
+  /**
+   * True, if the wallet key can be exported using getTonWalletSecretPhrase
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_export_phrase?: Bool$Input;
+};
+
+/**
+ * Represents an attribute of an NFT in the TON blockchain
+ */
+export type tonNftAttribute = {
+  _: "tonNftAttribute";
+
+  /**
+   * Trait type
+   * @type {string} {@link string}
+   */
+  trait_type: string;
+
+  /**
+   * Value of the attribute
+   * @type {string} {@link string}
+   */
+  value: string;
+};
+
+/**
+ * Version of {@link tonNftAttribute} for method parameters.
+ *
+ * Represents an attribute of an NFT in the TON blockchain
+ */
+export type tonNftAttribute$Input = {
+  readonly _: "tonNftAttribute";
+
+  /**
+   * Trait type
+   * @type {string} {@link string}
+   */
+  readonly trait_type?: string;
+
+  /**
+   * Value of the attribute
+   * @type {string} {@link string}
+   */
+  readonly value?: string;
+};
+
+/**
+ * Represents an NFT in the TON blockchain
+ */
+export type tonNft = {
+  _: "tonNft";
+
+  /**
+   * Address of the collection to which the NFT belongs; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  collection_address: string;
+
+  /**
+   * Address of the NFT
+   * @type {string} {@link string}
+   */
+  address: string;
+
+  /**
+   * Address of the owner of the NFT
+   * @type {string} {@link string}
+   */
+  owner_address: string;
+
+  /**
+   * Index of the NFT among all NFTs from the collection as a decimal number
+   * @type {string} {@link string}
+   */
+  index: string;
+
+  /**
+   * Name of the NFT
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * Represents an NFT in the TON blockchain
+   * @type {string} {@link string}
+   */
+  description: string;
+
+  /**
+   * Image of the NFT; may be null if none
+   * @type {photoSize} {@link photoSize}
+   */
+  image: photoSize | null;
+
+  /**
+   * Thumbnail of the NFT; may be null if none
+   * @type {photoSize} {@link photoSize}
+   */
+  thumbnail: photoSize | null;
+
+  /**
+   * Content of the NFT; may be null if none
+   * @type {document} {@link document}
+   */
+  content: document | null;
+
+  /**
+   * Sticker of the NFT; may be null if none
+   * @type {sticker} {@link sticker}
+   */
+  sticker: sticker | null;
+
+  /**
+   * Attributes of the NFT
+   * @type {vector<tonNftAttribute>} {@link vector<tonNftAttribute>}
+   */
+  attributes: vector<tonNftAttribute>;
+
+  /**
+   * Additional data about the NFT; may be null if none
+   * @type {JsonValue} {@link JsonValue}
+   */
+  extra: JsonValue | null;
+
+  /**
+   * The upgraded gift corresponding to the NFT; may be null if none. Information about the owner of the gift isn't available.
+   *
+   * - Original details of the gift are available only to the sender and the receiver of the original gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  gift: upgradedGift | null;
+};
+
+/**
+ * Version of {@link tonNft} for method parameters.
+ *
+ * Represents an NFT in the TON blockchain
+ */
+export type tonNft$Input = {
+  readonly _: "tonNft";
+
+  /**
+   * Address of the collection to which the NFT belongs; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  readonly collection_address?: string;
+
+  /**
+   * Address of the NFT
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+
+  /**
+   * Address of the owner of the NFT
+   * @type {string} {@link string}
+   */
+  readonly owner_address?: string;
+
+  /**
+   * Index of the NFT among all NFTs from the collection as a decimal number
+   * @type {string} {@link string}
+   */
+  readonly index?: string;
+
+  /**
+   * Name of the NFT
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * Represents an NFT in the TON blockchain
+   * @type {string} {@link string}
+   */
+  readonly description?: string;
+
+  /**
+   * Image of the NFT; may be null if none
+   * @type {photoSize} {@link photoSize}
+   */
+  readonly image?: photoSize$Input | null;
+
+  /**
+   * Thumbnail of the NFT; may be null if none
+   * @type {photoSize} {@link photoSize}
+   */
+  readonly thumbnail?: photoSize$Input | null;
+
+  /**
+   * Content of the NFT; may be null if none
+   * @type {document} {@link document}
+   */
+  readonly content?: document$Input | null;
+
+  /**
+   * Sticker of the NFT; may be null if none
+   * @type {sticker} {@link sticker}
+   */
+  readonly sticker?: sticker$Input | null;
+
+  /**
+   * Attributes of the NFT
+   * @type {vector<tonNftAttribute>} {@link vector<tonNftAttribute>}
+   */
+  readonly attributes?: vector$Input<tonNftAttribute$Input>;
+
+  /**
+   * Additional data about the NFT; may be null if none
+   * @type {JsonValue} {@link JsonValue}
+   */
+  readonly extra?: JsonValue$Input | null;
+
+  /**
+   * The upgraded gift corresponding to the NFT; may be null if none. Information about the owner of the gift isn't available.
+   *
+   * - Original details of the gift are available only to the sender and the receiver of the original gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  readonly gift?: upgradedGift$Input | null;
+};
+
+/**
+ * Represents a list of TON NFTs
+ */
+export type tonNfts = {
+  _: "tonNfts";
+
+  /**
+   * List of NFTs
+   * @type {vector<tonNft>} {@link vector<tonNft>}
+   */
+  nfts: vector<tonNft>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  next_offset: string;
+};
+
+/**
+ * Version of {@link tonNfts} for method parameters.
+ *
+ * Represents a list of TON NFTs
+ */
+export type tonNfts$Input = {
+  readonly _: "tonNfts";
+
+  /**
+   * List of NFTs
+   * @type {vector<tonNft>} {@link vector<tonNft>}
+   */
+  readonly nfts?: vector$Input<tonNft$Input>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  readonly next_offset?: string;
+};
+
+/**
+ * Describes a sticker on a TON wallet card
+ */
+export type tonWalletCardSticker = {
+  _: "tonWalletCardSticker";
+
+  /**
+   * Position of the sticker on the card
+   * @type {areaPosition} {@link areaPosition}
+   */
+  position: areaPosition;
+
+  /**
+   * The NFT shown as the sticker. If nft.gift is non-null, then it is enough to draw the sticker and there is no need to download the media of the NFT
+   * @type {tonNft} {@link tonNft}
+   */
+  nft: tonNft;
+};
+
+/**
+ * Version of {@link tonWalletCardSticker} for method parameters.
+ *
+ * Describes a sticker on a TON wallet card
+ */
+export type tonWalletCardSticker$Input = {
+  readonly _: "tonWalletCardSticker";
+
+  /**
+   * Position of the sticker on the card
+   * @type {areaPosition} {@link areaPosition}
+   */
+  readonly position?: areaPosition$Input;
+
+  /**
+   * The NFT shown as the sticker. If nft.gift is non-null, then it is enough to draw the sticker and there is no need to download the media of the NFT
+   * @type {tonNft} {@link tonNft}
+   */
+  readonly nft?: tonNft$Input;
+};
+
+/**
+ * Describes a TON wallet card, which is shown on the profile page of a user to everyone
+ */
+export type tonWalletCard = {
+  _: "tonWalletCard";
+
+  /**
+   * Address of the wallet
+   * @type {string} {@link string}
+   */
+  address: string;
+
+  /**
+   * Balance of the wallet, in the smallest units of the cryptocurrency; may be slightly outdated
+   * @type {int64} {@link int64}
+   */
+  gram_amount: int64;
+
+  /**
+   * Stickers placed on the card
+   * @type {vector<tonWalletCardSticker>} {@link vector<tonWalletCardSticker>}
+   */
+  stickers: vector<tonWalletCardSticker>;
+
+  /**
+   * Address of the NFT of one of the stickers, whose colors must be used for the card background; may be empty if the default background must be used
+   * @type {string} {@link string}
+   */
+  background_nft_address: string;
+};
+
+/**
+ * Version of {@link tonWalletCard} for method parameters.
+ *
+ * Describes a TON wallet card, which is shown on the profile page of a user to everyone
+ */
+export type tonWalletCard$Input = {
+  readonly _: "tonWalletCard";
+
+  /**
+   * Address of the wallet
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+
+  /**
+   * Balance of the wallet, in the smallest units of the cryptocurrency; may be slightly outdated
+   * @type {int64} {@link int64}
+   */
+  readonly gram_amount?: int64$Input;
+
+  /**
+   * Stickers placed on the card
+   * @type {vector<tonWalletCardSticker>} {@link vector<tonWalletCardSticker>}
+   */
+  readonly stickers?: vector$Input<tonWalletCardSticker$Input>;
+
+  /**
+   * Address of the NFT of one of the stickers, whose colors must be used for the card background; may be empty if the default background must be used
+   * @type {string} {@link string}
+   */
+  readonly background_nft_address?: string;
+};
+
+/**
+ * Describes a sticker to be placed on the TON wallet card of the current user
+ */
+export type inputTonWalletCardSticker = {
+  _: "inputTonWalletCardSticker";
+
+  /**
+   * Position of the sticker on the card
+   * @type {areaPosition} {@link areaPosition}
+   */
+  position: areaPosition;
+
+  /**
+   * Address of an NFT owned by the wallet, which is an upgraded gift; use getTonWalletNfts to get the list of owned NFTs
+   * @type {string} {@link string}
+   */
+  nft_address: string;
+};
+
+/**
+ * Version of {@link inputTonWalletCardSticker} for method parameters.
+ *
+ * Describes a sticker to be placed on the TON wallet card of the current user
+ */
+export type inputTonWalletCardSticker$Input = {
+  readonly _: "inputTonWalletCardSticker";
+
+  /**
+   * Position of the sticker on the card
+   * @type {areaPosition} {@link areaPosition}
+   */
+  readonly position?: areaPosition$Input;
+
+  /**
+   * Address of an NFT owned by the wallet, which is an upgraded gift; use getTonWalletNfts to get the list of owned NFTs
+   * @type {string} {@link string}
+   */
+  readonly nft_address?: string;
+};
+
+/**
+ * Contains a list of names of upgraded gift collections. The name of the collection of an upgraded gift is the part of upgradedGift.name before the last "-"
+ */
+export type upgradedGiftCollectionNames = {
+  _: "upgradedGiftCollectionNames";
+
+  /**
+   * The names
+   * @type {vector<string>} {@link vector<string>}
+   */
+  names: vector<string>;
+};
+
+/**
+ * Version of {@link upgradedGiftCollectionNames} for method parameters.
+ *
+ * Contains a list of names of upgraded gift collections. The name of the collection of an upgraded gift is the part of upgradedGift.name before the last "-"
+ */
+export type upgradedGiftCollectionNames$Input = {
+  readonly _: "upgradedGiftCollectionNames";
+
+  /**
+   * The names
+   * @type {vector<string>} {@link vector<string>}
+   */
+  readonly names?: vector$Input<string>;
+};
+
+/**
+ * The transaction succeeded
+ */
+export type tonWalletTransactionStateSucceeded = {
+  _: "tonWalletTransactionStateSucceeded";
+
+  /**
+   * Hash of the transaction
+   * @type {string} {@link string}
+   */
+  tx_hash: string;
+};
+
+/**
+ * Version of {@link tonWalletTransactionStateSucceeded} for method parameters.
+ *
+ * The transaction succeeded
+ */
+export type tonWalletTransactionStateSucceeded$Input = {
+  readonly _: "tonWalletTransactionStateSucceeded";
+
+  /**
+   * Hash of the transaction
+   * @type {string} {@link string}
+   */
+  readonly tx_hash?: string;
+};
+
+/**
+ * The transaction failed
+ */
+export type tonWalletTransactionStateFailed = {
+  _: "tonWalletTransactionStateFailed";
+};
+
+/**
+ * Version of {@link tonWalletTransactionStateFailed} for method parameters.
+ *
+ * The transaction failed
+ */
+export type tonWalletTransactionStateFailed$Input = {
+  readonly _: "tonWalletTransactionStateFailed";
+};
+
+/**
+ * The transaction is a deposit from an on-ramp provider
+ */
+export type tonWalletTransactionTypeOnRampDeposit = {
+  _: "tonWalletTransactionTypeOnRampDeposit";
+
+  /**
+   * The amount of received cryptocurrency, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  amount: int64;
+
+  /**
+   * Name of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  provider_name: string;
+};
+
+/**
+ * Version of {@link tonWalletTransactionTypeOnRampDeposit} for method parameters.
+ *
+ * The transaction is a deposit from an on-ramp provider
+ */
+export type tonWalletTransactionTypeOnRampDeposit$Input = {
+  readonly _: "tonWalletTransactionTypeOnRampDeposit";
+
+  /**
+   * The amount of received cryptocurrency, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly amount?: int64$Input;
+
+  /**
+   * Name of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_name?: string;
+};
+
+/**
+ * A transfer of TON Grams to or from the wallet
+ */
+export type tonWalletTransactionTypeTransfer = {
+  _: "tonWalletTransactionTypeTransfer";
+
+  /**
+   * The amount of received cryptocurrency, in the smallest units of the cryptocurrency; negative for outgoing transactions
+   * @type {int64} {@link int64}
+   */
+  amount: int64;
+
+  /**
+   * True, if the fee was paid by Telegram
+   * @type {Bool} {@link Bool}
+   */
+  is_gasless: Bool;
+
+  /**
+   * Comment added to the transaction
+   * @type {string} {@link string}
+   */
+  comment: string;
+
+  /**
+   * True, if the comment is encrypted and must be decrypted using the user's private key
+   * @type {Bool} {@link Bool}
+   */
+  is_comment_encrypted: Bool;
+};
+
+/**
+ * Version of {@link tonWalletTransactionTypeTransfer} for method parameters.
+ *
+ * A transfer of TON Grams to or from the wallet
+ */
+export type tonWalletTransactionTypeTransfer$Input = {
+  readonly _: "tonWalletTransactionTypeTransfer";
+
+  /**
+   * The amount of received cryptocurrency, in the smallest units of the cryptocurrency; negative for outgoing transactions
+   * @type {int64} {@link int64}
+   */
+  readonly amount?: int64$Input;
+
+  /**
+   * True, if the fee was paid by Telegram
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_gasless?: Bool$Input;
+
+  /**
+   * Comment added to the transaction
+   * @type {string} {@link string}
+   */
+  readonly comment?: string;
+
+  /**
+   * True, if the comment is encrypted and must be decrypted using the user's private key
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_comment_encrypted?: Bool$Input;
+};
+
+/**
+ * A transfer of a TON NFT to or from the wallet
+ */
+export type tonWalletTransactionTypeNftTransfer = {
+  _: "tonWalletTransactionTypeNftTransfer";
+
+  /**
+   * The transferred NFT
+   * @type {tonNft} {@link tonNft}
+   */
+  nft: tonNft;
+
+  /**
+   * True, if the transfer is outgoing
+   * @type {Bool} {@link Bool}
+   */
+  is_outgoing: Bool;
+
+  /**
+   * Comment added to the transaction
+   * @type {string} {@link string}
+   */
+  comment: string;
+
+  /**
+   * True, if the comment is encrypted and must be decrypted using the user's private key
+   * @type {Bool} {@link Bool}
+   */
+  is_comment_encrypted: Bool;
+};
+
+/**
+ * Version of {@link tonWalletTransactionTypeNftTransfer} for method parameters.
+ *
+ * A transfer of a TON NFT to or from the wallet
+ */
+export type tonWalletTransactionTypeNftTransfer$Input = {
+  readonly _: "tonWalletTransactionTypeNftTransfer";
+
+  /**
+   * The transferred NFT
+   * @type {tonNft} {@link tonNft}
+   */
+  readonly nft?: tonNft$Input;
+
+  /**
+   * True, if the transfer is outgoing
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_outgoing?: Bool$Input;
+
+  /**
+   * Comment added to the transaction
+   * @type {string} {@link string}
+   */
+  readonly comment?: string;
+
+  /**
+   * True, if the comment is encrypted and must be decrypted using the user's private key
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_comment_encrypted?: Bool$Input;
+};
+
+/**
+ * A Telegram gift was minted as a TON NFT or was transferred from Telegram to the wallet or back; peer details aren't available for the transaction
+ */
+export type tonWalletTransactionTypeTelegramGiftTransfer = {
+  _: "tonWalletTransactionTypeTelegramGiftTransfer";
+
+  /**
+   * The minted or transferred NFT
+   * @type {tonNft} {@link tonNft}
+   */
+  nft: tonNft;
+
+  /**
+   * True, if the transfer is from the wallet to Telegram
+   * @type {Bool} {@link Bool}
+   */
+  is_outgoing: Bool;
+
+  /**
+   * True, if the gift was displayed on the current user's profile page before or after the transfer
+   * @type {Bool} {@link Bool}
+   */
+  is_saved: Bool;
+};
+
+/**
+ * Version of {@link tonWalletTransactionTypeTelegramGiftTransfer} for method parameters.
+ *
+ * A Telegram gift was minted as a TON NFT or was transferred from Telegram to the wallet or back; peer details aren't available for the transaction
+ */
+export type tonWalletTransactionTypeTelegramGiftTransfer$Input = {
+  readonly _: "tonWalletTransactionTypeTelegramGiftTransfer";
+
+  /**
+   * The minted or transferred NFT
+   * @type {tonNft} {@link tonNft}
+   */
+  readonly nft?: tonNft$Input;
+
+  /**
+   * True, if the transfer is from the wallet to Telegram
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_outgoing?: Bool$Input;
+
+  /**
+   * True, if the gift was displayed on the current user's profile page before or after the transfer
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_saved?: Bool$Input;
+};
+
+/**
+ * Change of the wallet key
+ */
+export type tonWalletTransactionTypeKeyChange = {
+  _: "tonWalletTransactionTypeKeyChange";
+};
+
+/**
+ * Version of {@link tonWalletTransactionTypeKeyChange} for method parameters.
+ *
+ * Change of the wallet key
+ */
+export type tonWalletTransactionTypeKeyChange$Input = {
+  readonly _: "tonWalletTransactionTypeKeyChange";
+};
+
+/**
+ * Represents a transaction with the TON wallet of the current user
+ */
+export type tonWalletTransaction = {
+  _: "tonWalletTransaction";
+
+  /**
+   * Unique identifier of the transaction
+   * @type {string} {@link string}
+   */
+  id: string;
+
+  /**
+   * Address in the TON blockchain of the transaction peer; may be empty if the transaction isn't a wallet transfer
+   * @type {string} {@link string}
+   */
+  peer_address: string;
+
+  /**
+   * Identifier of the other user who participated in the transaction; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  peer_user_id: int53;
+
+  /**
+   * Identifier of the domain assigned to the peer address; may be empty if none
+   * @type {string} {@link string}
+   */
+  peer_domain: string;
+
+  /**
+   * Point in time (Unix timestamp) when the transaction was completed
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+
+  /**
+   * The fee amount paid for the transaction in TON Grams, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  fee_amount: int64;
+
+  /**
+   * State of the transaction
+   * @type {TonWalletTransactionState} {@link TonWalletTransactionState}
+   */
+  state: TonWalletTransactionState;
+
+  /**
+   * Type of the transaction
+   * @type {TonWalletTransactionType} {@link TonWalletTransactionType}
+   */
+  type: TonWalletTransactionType;
+};
+
+/**
+ * Version of {@link tonWalletTransaction} for method parameters.
+ *
+ * Represents a transaction with the TON wallet of the current user
+ */
+export type tonWalletTransaction$Input = {
+  readonly _: "tonWalletTransaction";
+
+  /**
+   * Unique identifier of the transaction
+   * @type {string} {@link string}
+   */
+  readonly id?: string;
+
+  /**
+   * Address in the TON blockchain of the transaction peer; may be empty if the transaction isn't a wallet transfer
+   * @type {string} {@link string}
+   */
+  readonly peer_address?: string;
+
+  /**
+   * Identifier of the other user who participated in the transaction; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  readonly peer_user_id?: int53;
+
+  /**
+   * Identifier of the domain assigned to the peer address; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly peer_domain?: string;
+
+  /**
+   * Point in time (Unix timestamp) when the transaction was completed
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+
+  /**
+   * The fee amount paid for the transaction in TON Grams, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly fee_amount?: int64$Input;
+
+  /**
+   * State of the transaction
+   * @type {TonWalletTransactionState} {@link TonWalletTransactionState}
+   */
+  readonly state?: TonWalletTransactionState$Input;
+
+  /**
+   * Type of the transaction
+   * @type {TonWalletTransactionType} {@link TonWalletTransactionType}
+   */
+  readonly type?: TonWalletTransactionType$Input;
+};
+
+/**
+ * Represents a list of TON Gram transactions
+ */
+export type tonWalletTransactions = {
+  _: "tonWalletTransactions";
+
+  /**
+   * The total amount of owned TON Grams, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  gram_amount: int64;
+
+  /**
+   * List of transactions
+   * @type {vector<tonWalletTransaction>} {@link vector<tonWalletTransaction>}
+   */
+  transactions: vector<tonWalletTransaction>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  next_offset: string;
+};
+
+/**
+ * Version of {@link tonWalletTransactions} for method parameters.
+ *
+ * Represents a list of TON Gram transactions
+ */
+export type tonWalletTransactions$Input = {
+  readonly _: "tonWalletTransactions";
+
+  /**
+   * The total amount of owned TON Grams, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly gram_amount?: int64$Input;
+
+  /**
+   * List of transactions
+   * @type {vector<tonWalletTransaction>} {@link vector<tonWalletTransaction>}
+   */
+  readonly transactions?: vector$Input<tonWalletTransaction$Input>;
+
+  /**
+   * The offset for the next request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  readonly next_offset?: string;
+};
+
+/**
+ * The request must be accepted or rejected if it isn't expired yet
+ */
+export type tonConnectRequestStatePending = {
+  _: "tonConnectRequestStatePending";
+
+  /**
+   * Point in time (Unix timestamp) when the request will expire or has expired
+   * @type {int32} {@link int32}
+   */
+  expiration_date: int32;
+};
+
+/**
+ * Version of {@link tonConnectRequestStatePending} for method parameters.
+ *
+ * The request must be accepted or rejected if it isn't expired yet
+ */
+export type tonConnectRequestStatePending$Input = {
+  readonly _: "tonConnectRequestStatePending";
+
+  /**
+   * Point in time (Unix timestamp) when the request will expire or has expired
+   * @type {int32} {@link int32}
+   */
+  readonly expiration_date?: int32;
+};
+
+/**
+ * The request was accepted
+ */
+export type tonConnectRequestStateAccepted = {
+  _: "tonConnectRequestStateAccepted";
+};
+
+/**
+ * Version of {@link tonConnectRequestStateAccepted} for method parameters.
+ *
+ * The request was accepted
+ */
+export type tonConnectRequestStateAccepted$Input = {
+  readonly _: "tonConnectRequestStateAccepted";
+};
+
+/**
+ * The request was rejected
+ */
+export type tonConnectRequestStateRejected = {
+  _: "tonConnectRequestStateRejected";
+};
+
+/**
+ * Version of {@link tonConnectRequestStateRejected} for method parameters.
+ *
+ * The request was rejected
+ */
+export type tonConnectRequestStateRejected$Input = {
+  readonly _: "tonConnectRequestStateRejected";
+};
+
+/**
+ * The manifest is being downloaded
+ */
+export type tonConnectManifestPending = {
+  _: "tonConnectManifestPending";
+};
+
+/**
+ * Version of {@link tonConnectManifestPending} for method parameters.
+ *
+ * The manifest is being downloaded
+ */
+export type tonConnectManifestPending$Input = {
+  readonly _: "tonConnectManifestPending";
+};
+
+/**
+ * The manifest is available
+ */
+export type tonConnectManifestInfo = {
+  _: "tonConnectManifestInfo";
+
+  /**
+   * URL of the dApp
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * Name of the dApp
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * App icon in PNG or ICO format
+   * @type {document} {@link document}
+   */
+  icon: document;
+};
+
+/**
+ * Version of {@link tonConnectManifestInfo} for method parameters.
+ *
+ * The manifest is available
+ */
+export type tonConnectManifestInfo$Input = {
+  readonly _: "tonConnectManifestInfo";
+
+  /**
+   * URL of the dApp
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * Name of the dApp
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * App icon in PNG or ICO format
+   * @type {document} {@link document}
+   */
+  readonly icon?: document$Input;
+};
+
+/**
+ * The manifest has failed to download
+ */
+export type tonConnectManifestFailed = {
+  _: "tonConnectManifestFailed";
+};
+
+/**
+ * Version of {@link tonConnectManifestFailed} for method parameters.
+ *
+ * The manifest has failed to download
+ */
+export type tonConnectManifestFailed$Input = {
+  readonly _: "tonConnectManifestFailed";
+};
+
+/**
+ * The manifest is invalid
+ */
+export type tonConnectManifestInvalid = {
+  _: "tonConnectManifestInvalid";
+};
+
+/**
+ * Version of {@link tonConnectManifestInvalid} for method parameters.
+ *
+ * The manifest is invalid
+ */
+export type tonConnectManifestInvalid$Input = {
+  readonly _: "tonConnectManifestInvalid";
+};
+
+/**
+ * The session is pending
+ */
+export type tonConnectSessionStatePending = {
+  _: "tonConnectSessionStatePending";
+};
+
+/**
+ * Version of {@link tonConnectSessionStatePending} for method parameters.
+ *
+ * The session is pending
+ */
+export type tonConnectSessionStatePending$Input = {
+  readonly _: "tonConnectSessionStatePending";
+};
+
+/**
+ * The session is ready
+ */
+export type tonConnectSessionStateReady = {
+  _: "tonConnectSessionStateReady";
+};
+
+/**
+ * Version of {@link tonConnectSessionStateReady} for method parameters.
+ *
+ * The session is ready
+ */
+export type tonConnectSessionStateReady$Input = {
+  readonly _: "tonConnectSessionStateReady";
+};
+
+/**
+ * The session is being closed
+ */
+export type tonConnectSessionStateClosing = {
+  _: "tonConnectSessionStateClosing";
+};
+
+/**
+ * Version of {@link tonConnectSessionStateClosing} for method parameters.
+ *
+ * The session is being closed
+ */
+export type tonConnectSessionStateClosing$Input = {
+  readonly _: "tonConnectSessionStateClosing";
+};
+
+/**
+ * The session is closed
+ */
+export type tonConnectSessionStateClosed = {
+  _: "tonConnectSessionStateClosed";
+};
+
+/**
+ * Version of {@link tonConnectSessionStateClosed} for method parameters.
+ *
+ * The session is closed
+ */
+export type tonConnectSessionStateClosed$Input = {
+  readonly _: "tonConnectSessionStateClosed";
+};
+
+/**
+ * Address of the wallet
+ */
+export type tonConnectConnectItemAddress = {
+  _: "tonConnectConnectItemAddress";
+
+  /**
+   * Stringified TON network global_id (e.g. "-239" for mainnet); may be empty
+   * @type {string} {@link string}
+   */
+  network: string;
+};
+
+/**
+ * Version of {@link tonConnectConnectItemAddress} for method parameters.
+ *
+ * Address of the wallet
+ */
+export type tonConnectConnectItemAddress$Input = {
+  readonly _: "tonConnectConnectItemAddress";
+
+  /**
+   * Stringified TON network global_id (e.g. "-239" for mainnet); may be empty
+   * @type {string} {@link string}
+   */
+  readonly network?: string;
+};
+
+/**
+ * Proof of the wallet ownership
+ */
+export type tonConnectConnectItemProof = {
+  _: "tonConnectConnectItemProof";
+
+  /**
+   * Payload to be used for the proof (e.g. nonce + expiration timestamp)
+   * @type {string} {@link string}
+   */
+  payload: string;
+};
+
+/**
+ * Version of {@link tonConnectConnectItemProof} for method parameters.
+ *
+ * Proof of the wallet ownership
+ */
+export type tonConnectConnectItemProof$Input = {
+  readonly _: "tonConnectConnectItemProof";
+
+  /**
+   * Payload to be used for the proof (e.g. nonce + expiration timestamp)
+   * @type {string} {@link string}
+   */
+  readonly payload?: string;
+};
+
+/**
+ * Contains information about a request to connect the user's TON wallet to a dApp using TON Connect
+ */
+export type tonConnectConnectRequest = {
+  _: "tonConnectConnectRequest";
+
+  /**
+   * URL of the manifest of the dApp
+   * @type {string} {@link string}
+   */
+  manifest_url: string;
+
+  /**
+   * Items requested from the wallet
+   * @type {vector<TonConnectConnectItem>} {@link vector<TonConnectConnectItem>}
+   */
+  items: vector<TonConnectConnectItem>;
+};
+
+/**
+ * Version of {@link tonConnectConnectRequest} for method parameters.
+ *
+ * Contains information about a request to connect the user's TON wallet to a dApp using TON Connect
+ */
+export type tonConnectConnectRequest$Input = {
+  readonly _: "tonConnectConnectRequest";
+
+  /**
+   * URL of the manifest of the dApp
+   * @type {string} {@link string}
+   */
+  readonly manifest_url?: string;
+
+  /**
+   * Items requested from the wallet
+   * @type {vector<TonConnectConnectItem>} {@link vector<TonConnectConnectItem>}
+   */
+  readonly items?: vector$Input<TonConnectConnectItem$Input>;
+};
+
+/**
+ * Contains data required to give access to the TON wallet of the current user in acceptOauthRequest
+ */
+export type tonConnectConnectData = {
+  _: "tonConnectConnectData";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64} {@link int64}
+   */
+  session_id: int64;
+
+  /**
+   * Answer to the challenge received from setTonConnectSessionWalletClientId
+   * @type {bytes} {@link bytes}
+   */
+  challenge_answer: bytes;
+
+  /**
+   * Body of the result of the connection request as in sendTonConnectSessionConnectResult
+   * @type {bytes} {@link bytes}
+   */
+  body: bytes;
+
+  /**
+   * Proof of the TON wallet ownership for the payload oauthLinkInfo.ton_proof_payload
+   * @type {tonWalletOwnershipProof} {@link tonWalletOwnershipProof}
+   */
+  proof: tonWalletOwnershipProof;
+};
+
+/**
+ * Version of {@link tonConnectConnectData} for method parameters.
+ *
+ * Contains data required to give access to the TON wallet of the current user in acceptOauthRequest
+ */
+export type tonConnectConnectData$Input = {
+  readonly _: "tonConnectConnectData";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Answer to the challenge received from setTonConnectSessionWalletClientId
+   * @type {bytes} {@link bytes}
+   */
+  readonly challenge_answer?: bytes$Input;
+
+  /**
+   * Body of the result of the connection request as in sendTonConnectSessionConnectResult
+   * @type {bytes} {@link bytes}
+   */
+  readonly body?: bytes$Input;
+
+  /**
+   * Proof of the TON wallet ownership for the payload oauthLinkInfo.ton_proof_payload
+   * @type {tonWalletOwnershipProof} {@link tonWalletOwnershipProof}
+   */
+  readonly proof?: tonWalletOwnershipProof$Input;
+};
+
+/**
+ * Represents a TON Connect session. See https://github.com/ton-blockchain/ton-connect/tree/main/spec for full TON Connect protocol documentation
+ */
+export type tonConnectSession = {
+  _: "tonConnectSession";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64} {@link int64}
+   */
+  id: int64;
+
+  /**
+   * Hex-encoded public X25519 key of the dApp
+   * @type {string} {@link string}
+   */
+  dapp_client_id: string;
+
+  /**
+   * Hex-encoded public X25519 key of the current user's application; may be empty if none
+   * @type {string} {@link string}
+   */
+  wallet_client_id: string;
+
+  /**
+   * Point in time (Unix timestamp) when the session was created
+   * @type {int32} {@link int32}
+   */
+  creation_date: int32;
+
+  /**
+   * Manifest of the dApp
+   * @type {TonConnectManifest} {@link TonConnectManifest}
+   */
+  manifest: TonConnectManifest;
+
+  /**
+   * Nonce used for the session
+   * @type {bytes} {@link bytes}
+   */
+  nonce: bytes;
+
+  /**
+   * Session state
+   * @type {TonConnectSessionState} {@link TonConnectSessionState}
+   */
+  state: TonConnectSessionState;
+};
+
+/**
+ * Version of {@link tonConnectSession} for method parameters.
+ *
+ * Represents a TON Connect session. See https://github.com/ton-blockchain/ton-connect/tree/main/spec for full TON Connect protocol documentation
+ */
+export type tonConnectSession$Input = {
+  readonly _: "tonConnectSession";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
+
+  /**
+   * Hex-encoded public X25519 key of the dApp
+   * @type {string} {@link string}
+   */
+  readonly dapp_client_id?: string;
+
+  /**
+   * Hex-encoded public X25519 key of the current user's application; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly wallet_client_id?: string;
+
+  /**
+   * Point in time (Unix timestamp) when the session was created
+   * @type {int32} {@link int32}
+   */
+  readonly creation_date?: int32;
+
+  /**
+   * Manifest of the dApp
+   * @type {TonConnectManifest} {@link TonConnectManifest}
+   */
+  readonly manifest?: TonConnectManifest$Input;
+
+  /**
+   * Nonce used for the session
+   * @type {bytes} {@link bytes}
+   */
+  readonly nonce?: bytes$Input;
+
+  /**
+   * Session state
+   * @type {TonConnectSessionState} {@link TonConnectSessionState}
+   */
+  readonly state?: TonConnectSessionState$Input;
+};
+
+/**
+ * Contains a list of TON Connect sessions
+ */
+export type tonConnectSessions = {
+  _: "tonConnectSessions";
+
+  /**
+   * The list of sessions
+   * @type {vector<tonConnectSession>} {@link vector<tonConnectSession>}
+   */
+  sessions: vector<tonConnectSession>;
+};
+
+/**
+ * Version of {@link tonConnectSessions} for method parameters.
+ *
+ * Contains a list of TON Connect sessions
+ */
+export type tonConnectSessions$Input = {
+  readonly _: "tonConnectSessions";
+
+  /**
+   * The list of sessions
+   * @type {vector<tonConnectSession>} {@link vector<tonConnectSession>}
+   */
+  readonly sessions?: vector$Input<tonConnectSession$Input>;
+};
+
+/**
+ * Represents a pending TON Connect request
+ */
+export type tonConnectRequest = {
+  _: "tonConnectRequest";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64} {@link int64}
+   */
+  session_id: int64;
+
+  /**
+   * Unique identifier of the service message in the chat 777000 with the request
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+
+  /**
+   * Body of the request
+   * @type {bytes} {@link bytes}
+   */
+  body: bytes;
+
+  /**
+   * Point in time (Unix timestamp) when the request will expire; 0 if never
+   * @type {int32} {@link int32}
+   */
+  expiration_date: int32;
+
+  /**
+   * Topic of the request; may be empty if none
+   * @type {string} {@link string}
+   */
+  topic: string;
+
+  /**
+   * Identifier to trace the request; may be empty if none
+   * @type {string} {@link string}
+   */
+  trace_id: string;
+};
+
+/**
+ * Version of {@link tonConnectRequest} for method parameters.
+ *
+ * Represents a pending TON Connect request
+ */
+export type tonConnectRequest$Input = {
+  readonly _: "tonConnectRequest";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Unique identifier of the service message in the chat 777000 with the request
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Body of the request
+   * @type {bytes} {@link bytes}
+   */
+  readonly body?: bytes$Input;
+
+  /**
+   * Point in time (Unix timestamp) when the request will expire; 0 if never
+   * @type {int32} {@link int32}
+   */
+  readonly expiration_date?: int32;
+
+  /**
+   * Topic of the request; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly topic?: string;
+
+  /**
+   * Identifier to trace the request; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly trace_id?: string;
+};
+
+/**
+ * Represents a session with its pending TON Connect requests
+ */
+export type tonConnectRequests = {
+  _: "tonConnectRequests";
+
+  /**
+   * The session
+   * @type {tonConnectSession} {@link tonConnectSession}
+   */
+  session: tonConnectSession;
+
+  /**
+   * The requests
+   * @type {vector<tonConnectRequest>} {@link vector<tonConnectRequest>}
+   */
+  requests: vector<tonConnectRequest>;
+};
+
+/**
+ * Version of {@link tonConnectRequests} for method parameters.
+ *
+ * Represents a session with its pending TON Connect requests
+ */
+export type tonConnectRequests$Input = {
+  readonly _: "tonConnectRequests";
+
+  /**
+   * The session
+   * @type {tonConnectSession} {@link tonConnectSession}
+   */
+  readonly session?: tonConnectSession$Input;
+
+  /**
+   * The requests
+   * @type {vector<tonConnectRequest>} {@link vector<tonConnectRequest>}
+   */
+  readonly requests?: vector$Input<tonConnectRequest$Input>;
+};
+
+/**
+ * Represents a TON Connect challenge
+ */
+export type tonConnectChallenge = {
+  _: "tonConnectChallenge";
+
+  /**
+   * 104-byte challenge
+   * @type {bytes} {@link bytes}
+   */
+  challenge: bytes;
+
+  /**
+   * Unique identifier of the first outgoing event
+   * @type {int64} {@link int64}
+   */
+  event_id: int64;
+};
+
+/**
+ * Version of {@link tonConnectChallenge} for method parameters.
+ *
+ * Represents a TON Connect challenge
+ */
+export type tonConnectChallenge$Input = {
+  readonly _: "tonConnectChallenge";
+
+  /**
+   * 104-byte challenge
+   * @type {bytes} {@link bytes}
+   */
+  readonly challenge?: bytes$Input;
+
+  /**
+   * Unique identifier of the first outgoing event
+   * @type {int64} {@link int64}
+   */
+  readonly event_id?: int64$Input;
+};
+
+/**
+ * Represents identifier of an event in a TON Connect session
+ */
+export type tonConnectSessionEventId = {
+  _: "tonConnectSessionEventId";
+
+  /**
+   * The event identifier
+   * @type {int64} {@link int64}
+   */
+  event_id: int64;
+};
+
+/**
+ * Version of {@link tonConnectSessionEventId} for method parameters.
+ *
+ * Represents identifier of an event in a TON Connect session
+ */
+export type tonConnectSessionEventId$Input = {
+  readonly _: "tonConnectSessionEventId";
+
+  /**
+   * The event identifier
+   * @type {int64} {@link int64}
+   */
+  readonly event_id?: int64$Input;
+};
+
+/**
+ * Represents result of cryptocurrency transfer from the current user's TON wallet
+ */
+export type tonWalletTransferResult = {
+  _: "tonWalletTransferResult";
+
+  /**
+   * True, if the transfer is gasless
+   * @type {Bool} {@link Bool}
+   */
+  is_gasless: Bool;
+
+  /**
+   * Unique identifier of the sent message; use getTonWalletTransactionByMsgHash to poll information about the transaction
+   * @type {bytes} {@link bytes}
+   */
+  msg_hash: bytes;
+
+  /**
+   * The completed transaction; may be null if the transaction is still pending
+   * @type {tonWalletTransaction} {@link tonWalletTransaction}
+   */
+  transaction: tonWalletTransaction | null;
+};
+
+/**
+ * Version of {@link tonWalletTransferResult} for method parameters.
+ *
+ * Represents result of cryptocurrency transfer from the current user's TON wallet
+ */
+export type tonWalletTransferResult$Input = {
+  readonly _: "tonWalletTransferResult";
+
+  /**
+   * True, if the transfer is gasless
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_gasless?: Bool$Input;
+
+  /**
+   * Unique identifier of the sent message; use getTonWalletTransactionByMsgHash to poll information about the transaction
+   * @type {bytes} {@link bytes}
+   */
+  readonly msg_hash?: bytes$Input;
+
+  /**
+   * The completed transaction; may be null if the transaction is still pending
+   * @type {tonWalletTransaction} {@link tonWalletTransaction}
+   */
+  readonly transaction?: tonWalletTransaction$Input | null;
+};
+
+/**
  * The chat has an active live story
  */
 export type activeStoryStateLive = {
@@ -22431,6 +25699,510 @@ export type profileAccentColor$Input = {
 };
 
 /**
+ * Notification settings applied to all private and secret chats when the corresponding chat setting has a default value
+ */
+export type notificationSettingsScopePrivateChats = {
+  _: "notificationSettingsScopePrivateChats";
+};
+
+/**
+ * Version of {@link notificationSettingsScopePrivateChats} for method parameters.
+ *
+ * Notification settings applied to all private and secret chats when the corresponding chat setting has a default value
+ */
+export type notificationSettingsScopePrivateChats$Input = {
+  readonly _: "notificationSettingsScopePrivateChats";
+};
+
+/**
+ * Notification settings applied to all basic group and supergroup chats when the corresponding chat setting has a default value
+ */
+export type notificationSettingsScopeGroupChats = {
+  _: "notificationSettingsScopeGroupChats";
+};
+
+/**
+ * Version of {@link notificationSettingsScopeGroupChats} for method parameters.
+ *
+ * Notification settings applied to all basic group and supergroup chats when the corresponding chat setting has a default value
+ */
+export type notificationSettingsScopeGroupChats$Input = {
+  readonly _: "notificationSettingsScopeGroupChats";
+};
+
+/**
+ * Notification settings applied to all channel chats when the corresponding chat setting has a default value
+ */
+export type notificationSettingsScopeChannelChats = {
+  _: "notificationSettingsScopeChannelChats";
+};
+
+/**
+ * Version of {@link notificationSettingsScopeChannelChats} for method parameters.
+ *
+ * Notification settings applied to all channel chats when the corresponding chat setting has a default value
+ */
+export type notificationSettingsScopeChannelChats$Input = {
+  readonly _: "notificationSettingsScopeChannelChats";
+};
+
+/**
+ * Contains information about notification settings for a chat or a forum topic
+ */
+export type chatNotificationSettings = {
+  _: "chatNotificationSettings";
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of mute_for
+   * @type {Bool} {@link Bool}
+   */
+  use_default_mute_for: Bool;
+
+  /**
+   * Time left before notifications will be unmuted, in seconds
+   * @type {int32} {@link int32}
+   */
+  mute_for: int32;
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of sound_id
+   * @type {Bool} {@link Bool}
+   */
+  use_default_sound: Bool;
+
+  /**
+   * Identifier of the notification sound to be played for messages; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  sound_id: int64;
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of show_preview
+   * @type {Bool} {@link Bool}
+   */
+  use_default_show_preview: Bool;
+
+  /**
+   * True, if message content must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  show_preview: Bool;
+
+  /**
+   * If true, the value for the chat's community or the relevant type of chat is used instead of mute_stories
+   * @type {Bool} {@link Bool}
+   */
+  use_default_mute_stories: Bool;
+
+  /**
+   * True, if story notifications are disabled for the chat
+   * @type {Bool} {@link Bool}
+   */
+  mute_stories: Bool;
+
+  /**
+   * If true, the value for the chat's community or the relevant type of chat is used instead of story_sound_id
+   * @type {Bool} {@link Bool}
+   */
+  use_default_story_sound: Bool;
+
+  /**
+   * Identifier of the notification sound to be played for stories; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  story_sound_id: int64;
+
+  /**
+   * If true, the value for the chat's community or the relevant type of chat is used instead of show_story_poster
+   * @type {Bool} {@link Bool}
+   */
+  use_default_show_story_poster: Bool;
+
+  /**
+   * True, if the chat that posted a story must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  show_story_poster: Bool;
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of disable_pinned_message_notifications
+   * @type {Bool} {@link Bool}
+   */
+  use_default_disable_pinned_message_notifications: Bool;
+
+  /**
+   * If true, notifications for incoming pinned messages will be created as for an ordinary unread message
+   * @type {Bool} {@link Bool}
+   */
+  disable_pinned_message_notifications: Bool;
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of disable_mention_notifications
+   * @type {Bool} {@link Bool}
+   */
+  use_default_disable_mention_notifications: Bool;
+
+  /**
+   * If true, notifications for messages with mentions will be created as for an ordinary unread message
+   * @type {Bool} {@link Bool}
+   */
+  disable_mention_notifications: Bool;
+};
+
+/**
+ * Version of {@link chatNotificationSettings} for method parameters.
+ *
+ * Contains information about notification settings for a chat or a forum topic
+ */
+export type chatNotificationSettings$Input = {
+  readonly _: "chatNotificationSettings";
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of mute_for
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_mute_for?: Bool$Input;
+
+  /**
+   * Time left before notifications will be unmuted, in seconds
+   * @type {int32} {@link int32}
+   */
+  readonly mute_for?: int32;
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of sound_id
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_sound?: Bool$Input;
+
+  /**
+   * Identifier of the notification sound to be played for messages; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  readonly sound_id?: int64$Input;
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of show_preview
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_show_preview?: Bool$Input;
+
+  /**
+   * True, if message content must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_preview?: Bool$Input;
+
+  /**
+   * If true, the value for the chat's community or the relevant type of chat is used instead of mute_stories
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_mute_stories?: Bool$Input;
+
+  /**
+   * True, if story notifications are disabled for the chat
+   * @type {Bool} {@link Bool}
+   */
+  readonly mute_stories?: Bool$Input;
+
+  /**
+   * If true, the value for the chat's community or the relevant type of chat is used instead of story_sound_id
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_story_sound?: Bool$Input;
+
+  /**
+   * Identifier of the notification sound to be played for stories; 0 if sound is disabled
+   * @type {int64} {@link int64}
+   */
+  readonly story_sound_id?: int64$Input;
+
+  /**
+   * If true, the value for the chat's community or the relevant type of chat is used instead of show_story_poster
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_show_story_poster?: Bool$Input;
+
+  /**
+   * True, if the chat that posted a story must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_story_poster?: Bool$Input;
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of disable_pinned_message_notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_disable_pinned_message_notifications?: Bool$Input;
+
+  /**
+   * If true, notifications for incoming pinned messages will be created as for an ordinary unread message
+   * @type {Bool} {@link Bool}
+   */
+  readonly disable_pinned_message_notifications?: Bool$Input;
+
+  /**
+   * If true, the value for the topic's chat, the chat's community, or the relevant type of chat is used instead of disable_mention_notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_disable_mention_notifications?: Bool$Input;
+
+  /**
+   * If true, notifications for messages with mentions will be created as for an ordinary unread message
+   * @type {Bool} {@link Bool}
+   */
+  readonly disable_mention_notifications?: Bool$Input;
+};
+
+/**
+ * Contains information about notification settings for several chats
+ */
+export type scopeNotificationSettings = {
+  _: "scopeNotificationSettings";
+
+  /**
+   * Time left before notifications will be unmuted, in seconds
+   * @type {int32} {@link int32}
+   */
+  mute_for: int32;
+
+  /**
+   * Identifier of the notification sound to be played; 0 if sound is disabled; pass -1 to use the app-dependent default sound
+   * @type {int64} {@link int64}
+   */
+  sound_id: int64;
+
+  /**
+   * True, if message content must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  show_preview: Bool;
+
+  /**
+   * If true, story notifications are received only for the first 5 chats from topChatCategoryUsers regardless of the value of mute_stories
+   * @type {Bool} {@link Bool}
+   */
+  use_default_mute_stories: Bool;
+
+  /**
+   * True, if story notifications are disabled
+   * @type {Bool} {@link Bool}
+   */
+  mute_stories: Bool;
+
+  /**
+   * Identifier of the notification sound to be played for stories; 0 if sound is disabled; pass -1 to use the app-dependent default sound
+   * @type {int64} {@link int64}
+   */
+  story_sound_id: int64;
+
+  /**
+   * True, if the chat that posted a story must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  show_story_poster: Bool;
+
+  /**
+   * True, if notifications for incoming pinned messages will be created as for an ordinary unread message
+   * @type {Bool} {@link Bool}
+   */
+  disable_pinned_message_notifications: Bool;
+
+  /**
+   * True, if notifications for messages with mentions will be created as for an ordinary unread message
+   * @type {Bool} {@link Bool}
+   */
+  disable_mention_notifications: Bool;
+};
+
+/**
+ * Version of {@link scopeNotificationSettings} for method parameters.
+ *
+ * Contains information about notification settings for several chats
+ */
+export type scopeNotificationSettings$Input = {
+  readonly _: "scopeNotificationSettings";
+
+  /**
+   * Time left before notifications will be unmuted, in seconds
+   * @type {int32} {@link int32}
+   */
+  readonly mute_for?: int32;
+
+  /**
+   * Identifier of the notification sound to be played; 0 if sound is disabled; pass -1 to use the app-dependent default sound
+   * @type {int64} {@link int64}
+   */
+  readonly sound_id?: int64$Input;
+
+  /**
+   * True, if message content must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_preview?: Bool$Input;
+
+  /**
+   * If true, story notifications are received only for the first 5 chats from topChatCategoryUsers regardless of the value of mute_stories
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_mute_stories?: Bool$Input;
+
+  /**
+   * True, if story notifications are disabled
+   * @type {Bool} {@link Bool}
+   */
+  readonly mute_stories?: Bool$Input;
+
+  /**
+   * Identifier of the notification sound to be played for stories; 0 if sound is disabled; pass -1 to use the app-dependent default sound
+   * @type {int64} {@link int64}
+   */
+  readonly story_sound_id?: int64$Input;
+
+  /**
+   * True, if the chat that posted a story must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_story_poster?: Bool$Input;
+
+  /**
+   * True, if notifications for incoming pinned messages will be created as for an ordinary unread message
+   * @type {Bool} {@link Bool}
+   */
+  readonly disable_pinned_message_notifications?: Bool$Input;
+
+  /**
+   * True, if notifications for messages with mentions will be created as for an ordinary unread message
+   * @type {Bool} {@link Bool}
+   */
+  readonly disable_mention_notifications?: Bool$Input;
+};
+
+/**
+ * Notifications for reactions are disabled
+ */
+export type reactionNotificationSourceNone = {
+  _: "reactionNotificationSourceNone";
+};
+
+/**
+ * Version of {@link reactionNotificationSourceNone} for method parameters.
+ *
+ * Notifications for reactions are disabled
+ */
+export type reactionNotificationSourceNone$Input = {
+  readonly _: "reactionNotificationSourceNone";
+};
+
+/**
+ * Notifications for reactions are shown only for reactions from contacts
+ */
+export type reactionNotificationSourceContacts = {
+  _: "reactionNotificationSourceContacts";
+};
+
+/**
+ * Version of {@link reactionNotificationSourceContacts} for method parameters.
+ *
+ * Notifications for reactions are shown only for reactions from contacts
+ */
+export type reactionNotificationSourceContacts$Input = {
+  readonly _: "reactionNotificationSourceContacts";
+};
+
+/**
+ * Notifications for reactions are shown for all reactions
+ */
+export type reactionNotificationSourceAll = {
+  _: "reactionNotificationSourceAll";
+};
+
+/**
+ * Version of {@link reactionNotificationSourceAll} for method parameters.
+ *
+ * Notifications for reactions are shown for all reactions
+ */
+export type reactionNotificationSourceAll$Input = {
+  readonly _: "reactionNotificationSourceAll";
+};
+
+/**
+ * Contains information about notification settings for reactions and poll votes
+ */
+export type reactionNotificationSettings = {
+  _: "reactionNotificationSettings";
+
+  /**
+   * Source of message reactions for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  message_reaction_source: ReactionNotificationSource;
+
+  /**
+   * Source of story reactions for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  story_reaction_source: ReactionNotificationSource;
+
+  /**
+   * Source of poll votes for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  poll_vote_source: ReactionNotificationSource;
+
+  /**
+   * Identifier of the notification sound to be played; 0 if sound is disabled; pass -1 to use the app-dependent default sound
+   * @type {int64} {@link int64}
+   */
+  sound_id: int64;
+
+  /**
+   * True, if reaction sender and emoji must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  show_preview: Bool;
+};
+
+/**
+ * Version of {@link reactionNotificationSettings} for method parameters.
+ *
+ * Contains information about notification settings for reactions and poll votes
+ */
+export type reactionNotificationSettings$Input = {
+  readonly _: "reactionNotificationSettings";
+
+  /**
+   * Source of message reactions for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  readonly message_reaction_source?: ReactionNotificationSource$Input;
+
+  /**
+   * Source of story reactions for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  readonly story_reaction_source?: ReactionNotificationSource$Input;
+
+  /**
+   * Source of poll votes for which notifications are shown
+   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
+   */
+  readonly poll_vote_source?: ReactionNotificationSource$Input;
+
+  /**
+   * Identifier of the notification sound to be played; 0 if sound is disabled; pass -1 to use the app-dependent default sound
+   * @type {int64} {@link int64}
+   */
+  readonly sound_id?: int64$Input;
+
+  /**
+   * True, if reaction sender and emoji must be displayed in notifications
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_preview?: Bool$Input;
+};
+
+/**
  * Contains identifier of a community
  */
 export type communityId = {
@@ -22713,6 +26485,12 @@ export type community = {
    * @type {communityPermissions} {@link communityPermissions}
    */
   permissions: communityPermissions;
+
+  /**
+   * True, if all chats of the community are collapsed into one entry in the chat list
+   * @type {Bool} {@link Bool}
+   */
+  are_chats_collapsed: Bool;
 };
 
 /**
@@ -22764,6 +26542,12 @@ export type community$Input = {
    * @type {communityPermissions} {@link communityPermissions}
    */
   readonly permissions?: communityPermissions$Input;
+
+  /**
+   * True, if all chats of the community are collapsed into one entry in the chat list
+   * @type {Bool} {@link Bool}
+   */
+  readonly are_chats_collapsed?: Bool$Input;
 };
 
 /**
@@ -22853,6 +26637,12 @@ export type communityFullInfo = {
    * @type {int32} {@link int32}
    */
   add_chat_request_count: int32;
+
+  /**
+   * Notification settings for the community. Default notification settings are chosen based on the type of a chat in the community
+   * @type {chatNotificationSettings} {@link chatNotificationSettings}
+   */
+  notification_settings: chatNotificationSettings;
 };
 
 /**
@@ -22892,6 +26682,196 @@ export type communityFullInfo$Input = {
    * @type {int32} {@link int32}
    */
   readonly add_chat_request_count?: int32;
+
+  /**
+   * Notification settings for the community. Default notification settings are chosen based on the type of a chat in the community
+   * @type {chatNotificationSettings} {@link chatNotificationSettings}
+   */
+  readonly notification_settings?: chatNotificationSettings$Input;
+};
+
+/**
+ * Represents a list of communities
+ */
+export type communities = {
+  _: "communities";
+
+  /**
+   * List of community identifiers
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  community_ids: vector<int53>;
+};
+
+/**
+ * Version of {@link communities} for method parameters.
+ *
+ * Represents a list of communities
+ */
+export type communities$Input = {
+  readonly _: "communities";
+
+  /**
+   * List of community identifiers
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly community_ids?: vector$Input<int53>;
+};
+
+/**
+ * Describes a request to add a chat to a community
+ */
+export type communityAddChatRequest = {
+  _: "communityAddChatRequest";
+
+  /**
+   * Identifier of the chat to be added
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * True, if the chat will be visible only to administrators of the community
+   * @type {Bool} {@link Bool}
+   */
+  is_hidden: Bool;
+
+  /**
+   * Identifier of the user who sent the request
+   * @type {int53} {@link int53}
+   */
+  sender_user_id: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the request was sent
+   * @type {int32} {@link int32}
+   */
+  date: int32;
+};
+
+/**
+ * Version of {@link communityAddChatRequest} for method parameters.
+ *
+ * Describes a request to add a chat to a community
+ */
+export type communityAddChatRequest$Input = {
+  readonly _: "communityAddChatRequest";
+
+  /**
+   * Identifier of the chat to be added
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * True, if the chat will be visible only to administrators of the community
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_hidden?: Bool$Input;
+
+  /**
+   * Identifier of the user who sent the request
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Point in time (Unix timestamp) when the request was sent
+   * @type {int32} {@link int32}
+   */
+  readonly date?: int32;
+};
+
+/**
+ * Contains a list of requests to add chats to a community
+ */
+export type communityAddChatRequests = {
+  _: "communityAddChatRequests";
+
+  /**
+   * Approximate total number of requests found
+   * @type {int32} {@link int32}
+   */
+  total_count: int32;
+
+  /**
+   * List of the requests
+   * @type {vector<communityAddChatRequest>} {@link vector<communityAddChatRequest>}
+   */
+  requests: vector<communityAddChatRequest>;
+
+  /**
+   * The offset for the next getCommunityAddChatRequests request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  next_offset: string;
+};
+
+/**
+ * Version of {@link communityAddChatRequests} for method parameters.
+ *
+ * Contains a list of requests to add chats to a community
+ */
+export type communityAddChatRequests$Input = {
+  readonly _: "communityAddChatRequests";
+
+  /**
+   * Approximate total number of requests found
+   * @type {int32} {@link int32}
+   */
+  readonly total_count?: int32;
+
+  /**
+   * List of the requests
+   * @type {vector<communityAddChatRequest>} {@link vector<communityAddChatRequest>}
+   */
+  readonly requests?: vector$Input<communityAddChatRequest$Input>;
+
+  /**
+   * The offset for the next getCommunityAddChatRequests request. If empty, then there are no more results
+   * @type {string} {@link string}
+   */
+  readonly next_offset?: string;
+};
+
+/**
+ * Contains information about chats in a community, which are joined or owned by a member of the community
+ */
+export type communityMemberChats = {
+  _: "communityMemberChats";
+
+  /**
+   * Identifiers of the chats owned by the member. The chats will be removed from the community if the member is banned in the community
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  owned_chat_ids: vector<int53>;
+
+  /**
+   * Identifiers of the non-owned chats joined by the member
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  joined_chat_ids: vector<int53>;
+};
+
+/**
+ * Version of {@link communityMemberChats} for method parameters.
+ *
+ * Contains information about chats in a community, which are joined or owned by a member of the community
+ */
+export type communityMemberChats$Input = {
+  readonly _: "communityMemberChats";
+
+  /**
+   * Identifiers of the chats owned by the member. The chats will be removed from the community if the member is banned in the community
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly owned_chat_ids?: vector$Input<int53>;
+
+  /**
+   * Identifiers of the non-owned chats joined by the member
+   * @type {vector<int53>} {@link vector<int53>}
+   */
+  readonly joined_chat_ids?: vector$Input<int53>;
 };
 
 /**
@@ -23245,7 +27225,7 @@ export type usernames = {
   _: "usernames";
 
   /**
-   * List of active usernames; the first one must be shown as the primary username. The order of active usernames can be changed with reorderActiveUsernames, reorderBotActiveUsernames or reorderSupergroupActiveUsernames
+   * List of active usernames; the first one must be shown as the primary username. The order of active usernames can be changed with reorderActiveUsernames, reorderBotActiveUsernames, or reorderSupergroupActiveUsernames
    * @type {vector<string>} {@link vector<string>}
    */
   active_usernames: vector<string>;
@@ -23267,6 +27247,14 @@ export type usernames = {
    * @type {vector<string>} {@link vector<string>}
    */
   collectible_usernames: vector<string>;
+
+  /**
+   * Secondary non-collectible username. Currently, must be non-empty only for bot accounts. Can't be used in toggleBotUsernameIsActive;
+   *
+   * - use addBotSecondaryUsername or deleteBotSecondaryUsername to edit it. If the username is disabled, then Telegram Premium subscription is required to re-enable it
+   * @type {string} {@link string}
+   */
+  secondary_username: string;
 };
 
 /**
@@ -23278,7 +27266,7 @@ export type usernames$Input = {
   readonly _: "usernames";
 
   /**
-   * List of active usernames; the first one must be shown as the primary username. The order of active usernames can be changed with reorderActiveUsernames, reorderBotActiveUsernames or reorderSupergroupActiveUsernames
+   * List of active usernames; the first one must be shown as the primary username. The order of active usernames can be changed with reorderActiveUsernames, reorderBotActiveUsernames, or reorderSupergroupActiveUsernames
    * @type {vector<string>} {@link vector<string>}
    */
   readonly active_usernames?: vector$Input<string>;
@@ -23300,6 +27288,14 @@ export type usernames$Input = {
    * @type {vector<string>} {@link vector<string>}
    */
   readonly collectible_usernames?: vector$Input<string>;
+
+  /**
+   * Secondary non-collectible username. Currently, must be non-empty only for bot accounts. Can't be used in toggleBotUsernameIsActive;
+   *
+   * - use addBotSecondaryUsername or deleteBotSecondaryUsername to edit it. If the username is disabled, then Telegram Premium subscription is required to re-enable it
+   * @type {string} {@link string}
+   */
+  readonly secondary_username?: string;
 };
 
 /**
@@ -24127,6 +28123,18 @@ export type userFullInfo = {
   note: formattedText | null;
 
   /**
+   * TON wallet card of the user; may be null if none
+   * @type {tonWalletCard} {@link tonWalletCard}
+   */
+  ton_wallet_card: tonWalletCard | null;
+
+  /**
+   * Theme of the screen for sharing a link to the user; may be null if the default theme is used
+   * @type {ProfileShareTheme} {@link ProfileShareTheme}
+   */
+  share_theme: ProfileShareTheme | null;
+
+  /**
    * Information about business settings for Telegram Business accounts; may be null if none
    * @type {businessInfo} {@link businessInfo}
    */
@@ -24332,6 +28340,18 @@ export type userFullInfo$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly note?: formattedText$Input | null;
+
+  /**
+   * TON wallet card of the user; may be null if none
+   * @type {tonWalletCard} {@link tonWalletCard}
+   */
+  readonly ton_wallet_card?: tonWalletCard$Input | null;
+
+  /**
+   * Theme of the screen for sharing a link to the user; may be null if the default theme is used
+   * @type {ProfileShareTheme} {@link ProfileShareTheme}
+   */
+  readonly share_theme?: ProfileShareTheme$Input | null;
 
   /**
    * Information about business settings for Telegram Business accounts; may be null if none
@@ -24643,7 +28663,9 @@ export type chatMemberStatusRestricted = {
   is_member: Bool;
 
   /**
-   * Point in time (Unix timestamp) when restrictions will be lifted from the user; 0 if never. If the user is restricted for more than 366 days or for less than 30 seconds from the current time, the user is considered to be restricted forever
+   * Point in time (Unix timestamp) when restrictions will be lifted from the user; 0 if never.
+   *
+   * - If the user is restricted for more than 366 days or for less than 30 seconds from the current time, the user is considered to be restricted forever
    * @type {int32} {@link int32}
    */
   restricted_until_date: int32;
@@ -24670,7 +28692,9 @@ export type chatMemberStatusRestricted$Input = {
   readonly is_member?: Bool$Input;
 
   /**
-   * Point in time (Unix timestamp) when restrictions will be lifted from the user; 0 if never. If the user is restricted for more than 366 days or for less than 30 seconds from the current time, the user is considered to be restricted forever
+   * Point in time (Unix timestamp) when restrictions will be lifted from the user; 0 if never.
+   *
+   * - If the user is restricted for more than 366 days or for less than 30 seconds from the current time, the user is considered to be restricted forever
    * @type {int32} {@link int32}
    */
   readonly restricted_until_date?: int32;
@@ -24705,7 +28729,9 @@ export type chatMemberStatusBanned = {
   _: "chatMemberStatusBanned";
 
   /**
-   * Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days or for less than 30 seconds from the current time, the user is considered to be banned forever. Always 0 in basic groups
+   * Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days
+   *
+   * - or for less than 30 seconds from the current time, the user is considered to be banned forever. Always 0 in basic groups
    * @type {int32} {@link int32}
    */
   banned_until_date: int32;
@@ -24720,7 +28746,9 @@ export type chatMemberStatusBanned$Input = {
   readonly _: "chatMemberStatusBanned";
 
   /**
-   * Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days or for less than 30 seconds from the current time, the user is considered to be banned forever. Always 0 in basic groups
+   * Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days
+   *
+   * - or for less than 30 seconds from the current time, the user is considered to be banned forever. Always 0 in basic groups
    * @type {int32} {@link int32}
    */
   readonly banned_until_date?: int32;
@@ -25195,7 +29223,7 @@ export type chatJoinResultSuccess$Input = {
 };
 
 /**
- * The join request was sent and have to be approved by administrators of the chat
+ * The join request was sent and has to be approved by administrators of the chat
  */
 export type chatJoinResultRequestSent = {
   _: "chatJoinResultRequestSent";
@@ -25204,7 +29232,7 @@ export type chatJoinResultRequestSent = {
 /**
  * Version of {@link chatJoinResultRequestSent} for method parameters.
  *
- * The join request was sent and have to be approved by administrators of the chat
+ * The join request was sent and has to be approved by administrators of the chat
  */
 export type chatJoinResultRequestSent$Input = {
   readonly _: "chatJoinResultRequestSent";
@@ -26463,6 +30491,12 @@ export type supergroup = {
   has_forum_tabs: Bool;
 
   /**
+   * True, if the supergroup is a forum, which topics are shown in a sidebar. If true, then has_forum_tabs is false
+   * @type {Bool} {@link Bool}
+   */
+  has_forum_sidebar: Bool;
+
+  /**
    * Information about the restrictions that must be applied to the corresponding supergroup or channel chat; may be null if none
    * @type {restrictionInfo} {@link restrictionInfo}
    */
@@ -26628,6 +30662,12 @@ export type supergroup$Input = {
   readonly has_forum_tabs?: Bool$Input;
 
   /**
+   * True, if the supergroup is a forum, which topics are shown in a sidebar. If true, then has_forum_tabs is false
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_forum_sidebar?: Bool$Input;
+
+  /**
    * Information about the restrictions that must be applied to the corresponding supergroup or channel chat; may be null if none
    * @type {restrictionInfo} {@link restrictionInfo}
    */
@@ -26791,7 +30831,7 @@ export type supergroupFullInfo = {
   can_toggle_aggressive_anti_spam: Bool;
 
   /**
-   * True, if new chat members will have access to old messages. In public, discussion, of forum groups and all channels, old messages are always available,
+   * True, if new chat members will have access to old messages. In public, discussion, or forum groups and all channels, old messages are always available,
    *
    * - so this option affects only private non-forum supergroups without a linked chat. The value of this field is only available to chat administrators
    * @type {Bool} {@link Bool}
@@ -26893,6 +30933,12 @@ export type supergroupFullInfo = {
    * @type {ProfileTab} {@link ProfileTab}
    */
   main_profile_tab: ProfileTab | null;
+
+  /**
+   * Theme of the screen for sharing a link to the supergroup or the channel; may be null if the default theme is used
+   * @type {ProfileShareTheme} {@link ProfileShareTheme}
+   */
+  share_theme: ProfileShareTheme | null;
 
   /**
    * Identifier of the basic group from which supergroup was upgraded; 0 if none
@@ -27054,7 +31100,7 @@ export type supergroupFullInfo$Input = {
   readonly can_toggle_aggressive_anti_spam?: Bool$Input;
 
   /**
-   * True, if new chat members will have access to old messages. In public, discussion, of forum groups and all channels, old messages are always available,
+   * True, if new chat members will have access to old messages. In public, discussion, or forum groups and all channels, old messages are always available,
    *
    * - so this option affects only private non-forum supergroups without a linked chat. The value of this field is only available to chat administrators
    * @type {Bool} {@link Bool}
@@ -27158,6 +31204,12 @@ export type supergroupFullInfo$Input = {
   readonly main_profile_tab?: ProfileTab$Input | null;
 
   /**
+   * Theme of the screen for sharing a link to the supergroup or the channel; may be null if the default theme is used
+   * @type {ProfileShareTheme} {@link ProfileShareTheme}
+   */
+  readonly share_theme?: ProfileShareTheme$Input | null;
+
+  /**
    * Identifier of the basic group from which supergroup was upgraded; 0 if none
    * @type {int53} {@link int53}
    */
@@ -27249,7 +31301,9 @@ export type secretChat = {
   is_outbound: Bool;
 
   /**
-   * Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 little-endian bytes, which must be split into groups of 2 bits, each denoting a pixel of one of 4 colors FFFFFF, D5E6F3, 2D5775, and 2F99C9.
+   * Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 little-endian bytes,
+   *
+   * - which must be split into groups of 2 bits, each denoting a pixel of one of 4 colors FFFFFF, D5E6F3, 2D5775, and 2F99C9.
    *
    * - The pixels must be used to make a 12x12 square image filled from left to right, top to bottom. Alternatively, the first 32 bytes of the hash can be converted to the hexadecimal format and printed as 32 2-digit hex numbers
    * @type {bytes} {@link bytes}
@@ -27298,7 +31352,9 @@ export type secretChat$Input = {
   readonly is_outbound?: Bool$Input;
 
   /**
-   * Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 little-endian bytes, which must be split into groups of 2 bits, each denoting a pixel of one of 4 colors FFFFFF, D5E6F3, 2D5775, and 2F99C9.
+   * Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 little-endian bytes,
+   *
+   * - which must be split into groups of 2 bits, each denoting a pixel of one of 4 colors FFFFFF, D5E6F3, 2D5775, and 2F99C9.
    *
    * - The pixels must be used to make a 12x12 square image filled from left to right, top to bottom. Alternatively, the first 32 bytes of the hash can be converted to the hexadecimal format and printed as 32 2-digit hex numbers
    * @type {bytes} {@link bytes}
@@ -28245,7 +32301,7 @@ export type liveStoryDonors = {
   _: "liveStoryDonors";
 
   /**
-   * Total amount of spend Telegram Stars
+   * Total amount of spent Telegram Stars
    * @type {int53} {@link int53}
    */
   total_star_count: int53;
@@ -28266,7 +32322,7 @@ export type liveStoryDonors$Input = {
   readonly _: "liveStoryDonors";
 
   /**
-   * Total amount of spend Telegram Stars
+   * Total amount of spent Telegram Stars
    * @type {int53} {@link int53}
    */
   readonly total_star_count?: int53;
@@ -28297,7 +32353,9 @@ export type messageForwardInfo = {
   date: int32;
 
   /**
-   * For messages forwarded to the chat with the current user (Saved Messages), to the Replies bot chat, or to the channel's discussion group, information about the source message from which the message was forwarded last time; may be null for other forwards or if unknown
+   * For messages forwarded to the chat with the current user (Saved Messages), to the Replies bot chat, or to the channel's discussion group,
+   *
+   * - information about the source message from which the message was forwarded last time; may be null for other forwards or if unknown
    * @type {forwardSource} {@link forwardSource}
    */
   source: forwardSource | null;
@@ -28330,7 +32388,9 @@ export type messageForwardInfo$Input = {
   readonly date?: int32;
 
   /**
-   * For messages forwarded to the chat with the current user (Saved Messages), to the Replies bot chat, or to the channel's discussion group, information about the source message from which the message was forwarded last time; may be null for other forwards or if unknown
+   * For messages forwarded to the chat with the current user (Saved Messages), to the Replies bot chat, or to the channel's discussion group,
+   *
+   * - information about the source message from which the message was forwarded last time; may be null for other forwards or if unknown
    * @type {forwardSource} {@link forwardSource}
    */
   readonly source?: forwardSource$Input | null;
@@ -29105,13 +33165,27 @@ export type textQuote = {
   _: "textQuote";
 
   /**
-   * Text of the quote. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, and DateTime entities can be present in the text
+   * Text of the quote. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, and DateTime entities can be present in the text.
+   *
+   * - May be empty if the quote was chosen from a rich message
    * @type {formattedText} {@link formattedText}
    */
   text: formattedText;
 
   /**
-   * Approximate quote position in the original message in UTF-16 code units as specified by the message sender
+   * Rich text of the quote if it was chosen from a rich message; empty if the quote wasn't chosen from a rich message.
+   *
+   * - Only richTextPlain, richTextBold, richTextItalic, richTextUnderline, richTextStrikethrough, richTextSpoiler, richTextSubscript, richTextSuperscript,
+   *
+   * - richTextDateTime, richTextCustomEmoji, richTextMathematicalExpression, and richTexts can be present in the texts
+   * @type {vector<RichText>} {@link vector<RichText>}
+   */
+  rich_texts: vector<RichText>;
+
+  /**
+   * Approximate quote position in the original message in UTF-16 code units as specified by the message sender. For quotes from rich messages,
+   *
+   * - it is the position in the text formed by joining plain texts of all quotable texts of the message, separated by line feeds
    * @type {int32} {@link int32}
    */
   position: int32;
@@ -29132,13 +33206,27 @@ export type textQuote$Input = {
   readonly _: "textQuote";
 
   /**
-   * Text of the quote. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, and DateTime entities can be present in the text
+   * Text of the quote. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, and DateTime entities can be present in the text.
+   *
+   * - May be empty if the quote was chosen from a rich message
    * @type {formattedText} {@link formattedText}
    */
   readonly text?: formattedText$Input;
 
   /**
-   * Approximate quote position in the original message in UTF-16 code units as specified by the message sender
+   * Rich text of the quote if it was chosen from a rich message; empty if the quote wasn't chosen from a rich message.
+   *
+   * - Only richTextPlain, richTextBold, richTextItalic, richTextUnderline, richTextStrikethrough, richTextSpoiler, richTextSubscript, richTextSuperscript,
+   *
+   * - richTextDateTime, richTextCustomEmoji, richTextMathematicalExpression, and richTexts can be present in the texts
+   * @type {vector<RichText>} {@link vector<RichText>}
+   */
+  readonly rich_texts?: vector$Input<RichText$Input>;
+
+  /**
+   * Approximate quote position in the original message in UTF-16 code units as specified by the message sender. For quotes from rich messages,
+   *
+   * - it is the position in the text formed by joining plain texts of all quotable texts of the message, separated by line feeds
    * @type {int32} {@link int32}
    */
   readonly position?: int32;
@@ -29157,13 +33245,29 @@ export type inputTextQuote = {
   _: "inputTextQuote";
 
   /**
-   * Text of the quote; 0-getOption("message_reply_quote_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, and DateTime entities are allowed to be kept and must be kept in the quote
+   * Text of the quote; 0-getOption("message_reply_quote_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, and DateTime entities are allowed to be kept and must be kept in the quote.
+   *
+   * - Ignored if rich_texts are non-empty
    * @type {formattedText} {@link formattedText}
    */
   text: formattedText;
 
   /**
-   * Quote position in the original message in UTF-16 code units
+   * Quote from a rich message; pass an empty array if the quote isn't chosen from a rich message. Must contain one element for each quoted text of the message in the order of their appearance.
+   *
+   * - The first and the last elements can contain only a part of the corresponding text; all other elements must contain the whole text. Formatting of the quoted parts must be kept.
+   *
+   * - Mathematical expressions must be quoted entirely. Buttons in pageBlockButtonRow, anchors and dividers can't be quoted.
+   *
+   * - There can be up to 32 quoted texts with total length up to getOption("message_reply_quote_length_max") characters
+   * @type {vector<RichText>} {@link vector<RichText>}
+   */
+  rich_texts: vector<RichText>;
+
+  /**
+   * Quote position in the original message in UTF-16 code units. For quotes from rich messages, it is the position in the text formed by joining plain texts
+   *
+   * - of all quotable texts of the message, separated by line feeds
    * @type {int32} {@link int32}
    */
   position: int32;
@@ -29178,13 +33282,29 @@ export type inputTextQuote$Input = {
   readonly _: "inputTextQuote";
 
   /**
-   * Text of the quote; 0-getOption("message_reply_quote_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, and DateTime entities are allowed to be kept and must be kept in the quote
+   * Text of the quote; 0-getOption("message_reply_quote_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, and DateTime entities are allowed to be kept and must be kept in the quote.
+   *
+   * - Ignored if rich_texts are non-empty
    * @type {formattedText} {@link formattedText}
    */
   readonly text?: formattedText$Input;
 
   /**
-   * Quote position in the original message in UTF-16 code units
+   * Quote from a rich message; pass an empty array if the quote isn't chosen from a rich message. Must contain one element for each quoted text of the message in the order of their appearance.
+   *
+   * - The first and the last elements can contain only a part of the corresponding text; all other elements must contain the whole text. Formatting of the quoted parts must be kept.
+   *
+   * - Mathematical expressions must be quoted entirely. Buttons in pageBlockButtonRow, anchors and dividers can't be quoted.
+   *
+   * - There can be up to 32 quoted texts with total length up to getOption("message_reply_quote_length_max") characters
+   * @type {vector<RichText>} {@link vector<RichText>}
+   */
+  readonly rich_texts?: vector$Input<RichText$Input>;
+
+  /**
+   * Quote position in the original message in UTF-16 code units. For quotes from rich messages, it is the position in the text formed by joining plain texts
+   *
+   * - of all quotable texts of the message, separated by line feeds
    * @type {int32} {@link int32}
    */
   readonly position?: int32;
@@ -29245,7 +33365,7 @@ export type messageReplyToMessage = {
    *
    * - messageGiveaway, messageGiveawayWinners, messageInvoice, messageLocation, messagePaidMedia, messagePhoto, messagePoll, messageStakeDice,
    *
-   * - messageSticker, messageStory, messageText (for link preview), messageVenue, messageVideo, messageVideoNote, or messageVoiceNote
+   * - messageSticker, messageStory, messageText (for link preview), messageVenue, messageVideo, messageVideoNote, messageVoiceNote, or messageWidget
    * @type {MessageContent} {@link MessageContent}
    */
   content: MessageContent | null;
@@ -29308,7 +33428,7 @@ export type messageReplyToMessage$Input = {
    *
    * - messageGiveaway, messageGiveawayWinners, messageInvoice, messageLocation, messagePaidMedia, messagePhoto, messagePoll, messageStakeDice,
    *
-   * - messageSticker, messageStory, messageText (for link preview), messageVenue, messageVideo, messageVideoNote, or messageVoiceNote
+   * - messageSticker, messageStory, messageText (for link preview), messageVenue, messageVideo, messageVideoNote, messageVoiceNote, or messageWidget
    * @type {MessageContent} {@link MessageContent}
    */
   readonly content?: MessageContent$Input | null;
@@ -29873,7 +33993,9 @@ export type message = {
   sender_boost_count: int32;
 
   /**
-   * Tag of the sender of the message in the supergroup at the time the message was sent; may be empty if none or unknown. For messages sent in basic groups or supergroup administrators, the current custom title or tag must be used instead
+   * Tag of the sender of the message in the supergroup at the time the message was sent; may be empty if none or unknown.
+   *
+   * - For messages sent in basic groups or by supergroup administrators, the current custom title or tag must be used instead
    * @type {string} {@link string}
    */
   sender_tag: string;
@@ -30154,7 +34276,9 @@ export type message$Input = {
   readonly sender_boost_count?: int32;
 
   /**
-   * Tag of the sender of the message in the supergroup at the time the message was sent; may be empty if none or unknown. For messages sent in basic groups or supergroup administrators, the current custom title or tag must be used instead
+   * Tag of the sender of the message in the supergroup at the time the message was sent; may be empty if none or unknown.
+   *
+   * - For messages sent in basic groups or by supergroup administrators, the current custom title or tag must be used instead
    * @type {string} {@link string}
    */
   readonly sender_tag?: string;
@@ -31663,510 +35787,6 @@ export type foundFileDownloads$Input = {
 };
 
 /**
- * Notification settings applied to all private and secret chats when the corresponding chat setting has a default value
- */
-export type notificationSettingsScopePrivateChats = {
-  _: "notificationSettingsScopePrivateChats";
-};
-
-/**
- * Version of {@link notificationSettingsScopePrivateChats} for method parameters.
- *
- * Notification settings applied to all private and secret chats when the corresponding chat setting has a default value
- */
-export type notificationSettingsScopePrivateChats$Input = {
-  readonly _: "notificationSettingsScopePrivateChats";
-};
-
-/**
- * Notification settings applied to all basic group and supergroup chats when the corresponding chat setting has a default value
- */
-export type notificationSettingsScopeGroupChats = {
-  _: "notificationSettingsScopeGroupChats";
-};
-
-/**
- * Version of {@link notificationSettingsScopeGroupChats} for method parameters.
- *
- * Notification settings applied to all basic group and supergroup chats when the corresponding chat setting has a default value
- */
-export type notificationSettingsScopeGroupChats$Input = {
-  readonly _: "notificationSettingsScopeGroupChats";
-};
-
-/**
- * Notification settings applied to all channel chats when the corresponding chat setting has a default value
- */
-export type notificationSettingsScopeChannelChats = {
-  _: "notificationSettingsScopeChannelChats";
-};
-
-/**
- * Version of {@link notificationSettingsScopeChannelChats} for method parameters.
- *
- * Notification settings applied to all channel chats when the corresponding chat setting has a default value
- */
-export type notificationSettingsScopeChannelChats$Input = {
-  readonly _: "notificationSettingsScopeChannelChats";
-};
-
-/**
- * Contains information about notification settings for a chat or a forum topic
- */
-export type chatNotificationSettings = {
-  _: "chatNotificationSettings";
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of mute_for
-   * @type {Bool} {@link Bool}
-   */
-  use_default_mute_for: Bool;
-
-  /**
-   * Time left before notifications will be unmuted, in seconds
-   * @type {int32} {@link int32}
-   */
-  mute_for: int32;
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of sound_id
-   * @type {Bool} {@link Bool}
-   */
-  use_default_sound: Bool;
-
-  /**
-   * Identifier of the notification sound to be played for messages; 0 if sound is disabled
-   * @type {int64} {@link int64}
-   */
-  sound_id: int64;
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of show_preview
-   * @type {Bool} {@link Bool}
-   */
-  use_default_show_preview: Bool;
-
-  /**
-   * True, if message content must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  show_preview: Bool;
-
-  /**
-   * If true, the value for the relevant type of chat is used instead of mute_stories
-   * @type {Bool} {@link Bool}
-   */
-  use_default_mute_stories: Bool;
-
-  /**
-   * True, if story notifications are disabled for the chat
-   * @type {Bool} {@link Bool}
-   */
-  mute_stories: Bool;
-
-  /**
-   * If true, the value for the relevant type of chat is used instead of story_sound_id
-   * @type {Bool} {@link Bool}
-   */
-  use_default_story_sound: Bool;
-
-  /**
-   * Identifier of the notification sound to be played for stories; 0 if sound is disabled
-   * @type {int64} {@link int64}
-   */
-  story_sound_id: int64;
-
-  /**
-   * If true, the value for the relevant type of chat is used instead of show_story_poster
-   * @type {Bool} {@link Bool}
-   */
-  use_default_show_story_poster: Bool;
-
-  /**
-   * True, if the chat that posted a story must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  show_story_poster: Bool;
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of disable_pinned_message_notifications
-   * @type {Bool} {@link Bool}
-   */
-  use_default_disable_pinned_message_notifications: Bool;
-
-  /**
-   * If true, notifications for incoming pinned messages will be created as for an ordinary unread message
-   * @type {Bool} {@link Bool}
-   */
-  disable_pinned_message_notifications: Bool;
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of disable_mention_notifications
-   * @type {Bool} {@link Bool}
-   */
-  use_default_disable_mention_notifications: Bool;
-
-  /**
-   * If true, notifications for messages with mentions will be created as for an ordinary unread message
-   * @type {Bool} {@link Bool}
-   */
-  disable_mention_notifications: Bool;
-};
-
-/**
- * Version of {@link chatNotificationSettings} for method parameters.
- *
- * Contains information about notification settings for a chat or a forum topic
- */
-export type chatNotificationSettings$Input = {
-  readonly _: "chatNotificationSettings";
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of mute_for
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_mute_for?: Bool$Input;
-
-  /**
-   * Time left before notifications will be unmuted, in seconds
-   * @type {int32} {@link int32}
-   */
-  readonly mute_for?: int32;
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of sound_id
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_sound?: Bool$Input;
-
-  /**
-   * Identifier of the notification sound to be played for messages; 0 if sound is disabled
-   * @type {int64} {@link int64}
-   */
-  readonly sound_id?: int64$Input;
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of show_preview
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_show_preview?: Bool$Input;
-
-  /**
-   * True, if message content must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  readonly show_preview?: Bool$Input;
-
-  /**
-   * If true, the value for the relevant type of chat is used instead of mute_stories
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_mute_stories?: Bool$Input;
-
-  /**
-   * True, if story notifications are disabled for the chat
-   * @type {Bool} {@link Bool}
-   */
-  readonly mute_stories?: Bool$Input;
-
-  /**
-   * If true, the value for the relevant type of chat is used instead of story_sound_id
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_story_sound?: Bool$Input;
-
-  /**
-   * Identifier of the notification sound to be played for stories; 0 if sound is disabled
-   * @type {int64} {@link int64}
-   */
-  readonly story_sound_id?: int64$Input;
-
-  /**
-   * If true, the value for the relevant type of chat is used instead of show_story_poster
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_show_story_poster?: Bool$Input;
-
-  /**
-   * True, if the chat that posted a story must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  readonly show_story_poster?: Bool$Input;
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of disable_pinned_message_notifications
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_disable_pinned_message_notifications?: Bool$Input;
-
-  /**
-   * If true, notifications for incoming pinned messages will be created as for an ordinary unread message
-   * @type {Bool} {@link Bool}
-   */
-  readonly disable_pinned_message_notifications?: Bool$Input;
-
-  /**
-   * If true, the value for the relevant type of chat or the forum chat is used instead of disable_mention_notifications
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_disable_mention_notifications?: Bool$Input;
-
-  /**
-   * If true, notifications for messages with mentions will be created as for an ordinary unread message
-   * @type {Bool} {@link Bool}
-   */
-  readonly disable_mention_notifications?: Bool$Input;
-};
-
-/**
- * Contains information about notification settings for several chats
- */
-export type scopeNotificationSettings = {
-  _: "scopeNotificationSettings";
-
-  /**
-   * Time left before notifications will be unmuted, in seconds
-   * @type {int32} {@link int32}
-   */
-  mute_for: int32;
-
-  /**
-   * Identifier of the notification sound to be played; 0 if sound is disabled; pass -1 to use the app-dependent default sound
-   * @type {int64} {@link int64}
-   */
-  sound_id: int64;
-
-  /**
-   * True, if message content must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  show_preview: Bool;
-
-  /**
-   * If true, story notifications are received only for the first 5 chats from topChatCategoryUsers regardless of the value of mute_stories
-   * @type {Bool} {@link Bool}
-   */
-  use_default_mute_stories: Bool;
-
-  /**
-   * True, if story notifications are disabled
-   * @type {Bool} {@link Bool}
-   */
-  mute_stories: Bool;
-
-  /**
-   * Identifier of the notification sound to be played for stories; 0 if sound is disabled; pass -1 to use the app-dependent default sound
-   * @type {int64} {@link int64}
-   */
-  story_sound_id: int64;
-
-  /**
-   * True, if the chat that posted a story must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  show_story_poster: Bool;
-
-  /**
-   * True, if notifications for incoming pinned messages will be created as for an ordinary unread message
-   * @type {Bool} {@link Bool}
-   */
-  disable_pinned_message_notifications: Bool;
-
-  /**
-   * True, if notifications for messages with mentions will be created as for an ordinary unread message
-   * @type {Bool} {@link Bool}
-   */
-  disable_mention_notifications: Bool;
-};
-
-/**
- * Version of {@link scopeNotificationSettings} for method parameters.
- *
- * Contains information about notification settings for several chats
- */
-export type scopeNotificationSettings$Input = {
-  readonly _: "scopeNotificationSettings";
-
-  /**
-   * Time left before notifications will be unmuted, in seconds
-   * @type {int32} {@link int32}
-   */
-  readonly mute_for?: int32;
-
-  /**
-   * Identifier of the notification sound to be played; 0 if sound is disabled; pass -1 to use the app-dependent default sound
-   * @type {int64} {@link int64}
-   */
-  readonly sound_id?: int64$Input;
-
-  /**
-   * True, if message content must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  readonly show_preview?: Bool$Input;
-
-  /**
-   * If true, story notifications are received only for the first 5 chats from topChatCategoryUsers regardless of the value of mute_stories
-   * @type {Bool} {@link Bool}
-   */
-  readonly use_default_mute_stories?: Bool$Input;
-
-  /**
-   * True, if story notifications are disabled
-   * @type {Bool} {@link Bool}
-   */
-  readonly mute_stories?: Bool$Input;
-
-  /**
-   * Identifier of the notification sound to be played for stories; 0 if sound is disabled; pass -1 to use the app-dependent default sound
-   * @type {int64} {@link int64}
-   */
-  readonly story_sound_id?: int64$Input;
-
-  /**
-   * True, if the chat that posted a story must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  readonly show_story_poster?: Bool$Input;
-
-  /**
-   * True, if notifications for incoming pinned messages will be created as for an ordinary unread message
-   * @type {Bool} {@link Bool}
-   */
-  readonly disable_pinned_message_notifications?: Bool$Input;
-
-  /**
-   * True, if notifications for messages with mentions will be created as for an ordinary unread message
-   * @type {Bool} {@link Bool}
-   */
-  readonly disable_mention_notifications?: Bool$Input;
-};
-
-/**
- * Notifications for reactions are disabled
- */
-export type reactionNotificationSourceNone = {
-  _: "reactionNotificationSourceNone";
-};
-
-/**
- * Version of {@link reactionNotificationSourceNone} for method parameters.
- *
- * Notifications for reactions are disabled
- */
-export type reactionNotificationSourceNone$Input = {
-  readonly _: "reactionNotificationSourceNone";
-};
-
-/**
- * Notifications for reactions are shown only for reactions from contacts
- */
-export type reactionNotificationSourceContacts = {
-  _: "reactionNotificationSourceContacts";
-};
-
-/**
- * Version of {@link reactionNotificationSourceContacts} for method parameters.
- *
- * Notifications for reactions are shown only for reactions from contacts
- */
-export type reactionNotificationSourceContacts$Input = {
-  readonly _: "reactionNotificationSourceContacts";
-};
-
-/**
- * Notifications for reactions are shown for all reactions
- */
-export type reactionNotificationSourceAll = {
-  _: "reactionNotificationSourceAll";
-};
-
-/**
- * Version of {@link reactionNotificationSourceAll} for method parameters.
- *
- * Notifications for reactions are shown for all reactions
- */
-export type reactionNotificationSourceAll$Input = {
-  readonly _: "reactionNotificationSourceAll";
-};
-
-/**
- * Contains information about notification settings for reactions and poll votes
- */
-export type reactionNotificationSettings = {
-  _: "reactionNotificationSettings";
-
-  /**
-   * Source of message reactions for which notifications are shown
-   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
-   */
-  message_reaction_source: ReactionNotificationSource;
-
-  /**
-   * Source of story reactions for which notifications are shown
-   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
-   */
-  story_reaction_source: ReactionNotificationSource;
-
-  /**
-   * Source of poll votes for which notifications are shown
-   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
-   */
-  poll_vote_source: ReactionNotificationSource;
-
-  /**
-   * Identifier of the notification sound to be played; 0 if sound is disabled; pass -1 to use the app-dependent default sound
-   * @type {int64} {@link int64}
-   */
-  sound_id: int64;
-
-  /**
-   * True, if reaction sender and emoji must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  show_preview: Bool;
-};
-
-/**
- * Version of {@link reactionNotificationSettings} for method parameters.
- *
- * Contains information about notification settings for reactions and poll votes
- */
-export type reactionNotificationSettings$Input = {
-  readonly _: "reactionNotificationSettings";
-
-  /**
-   * Source of message reactions for which notifications are shown
-   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
-   */
-  readonly message_reaction_source?: ReactionNotificationSource$Input;
-
-  /**
-   * Source of story reactions for which notifications are shown
-   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
-   */
-  readonly story_reaction_source?: ReactionNotificationSource$Input;
-
-  /**
-   * Source of poll votes for which notifications are shown
-   * @type {ReactionNotificationSource} {@link ReactionNotificationSource}
-   */
-  readonly poll_vote_source?: ReactionNotificationSource$Input;
-
-  /**
-   * Identifier of the notification sound to be played; 0 if sound is disabled; pass -1 to use the app-dependent default sound
-   * @type {int64} {@link int64}
-   */
-  readonly sound_id?: int64$Input;
-
-  /**
-   * True, if reaction sender and emoji must be displayed in notifications
-   * @type {Bool} {@link Bool}
-   */
-  readonly show_preview?: Bool$Input;
-};
-
-/**
  * A text message draft
  */
 export type draftMessageContentText = {
@@ -32705,19 +36325,25 @@ export type chatFolder = {
   is_shareable: Bool;
 
   /**
-   * The chat identifiers of pinned chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") pinned and always included non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
+   * The chat identifiers of pinned chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") pinned
+   *
+   * - and always included non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
    * @type {vector<int53>} {@link vector<int53>}
    */
   pinned_chat_ids: vector<int53>;
 
   /**
-   * The chat identifiers of always included chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") pinned and always included non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
+   * The chat identifiers of always included chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") pinned
+   *
+   * - and always included non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
    * @type {vector<int53>} {@link vector<int53>}
    */
   included_chat_ids: vector<int53>;
 
   /**
-   * The chat identifiers of always excluded chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") always excluded non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
+   * The chat identifiers of always excluded chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") always excluded non-secret chats
+   *
+   * - and the same number of secret chats, but the limit can be increased with Telegram Premium
    * @type {vector<int53>} {@link vector<int53>}
    */
   excluded_chat_ids: vector<int53>;
@@ -32804,19 +36430,25 @@ export type chatFolder$Input = {
   readonly is_shareable?: Bool$Input;
 
   /**
-   * The chat identifiers of pinned chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") pinned and always included non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
+   * The chat identifiers of pinned chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") pinned
+   *
+   * - and always included non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
    * @type {vector<int53>} {@link vector<int53>}
    */
   readonly pinned_chat_ids?: vector$Input<int53>;
 
   /**
-   * The chat identifiers of always included chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") pinned and always included non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
+   * The chat identifiers of always included chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") pinned
+   *
+   * - and always included non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
    * @type {vector<int53>} {@link vector<int53>}
    */
   readonly included_chat_ids?: vector$Input<int53>;
 
   /**
-   * The chat identifiers of always excluded chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") always excluded non-secret chats and the same number of secret chats, but the limit can be increased with Telegram Premium
+   * The chat identifiers of always excluded chats in the folder. There can be up to getOption("chat_folder_chosen_chat_count_max") always excluded non-secret chats
+   *
+   * - and the same number of secret chats, but the limit can be increased with Telegram Premium
    * @type {vector<int53>} {@link vector<int53>}
    */
   readonly excluded_chat_ids?: vector$Input<int53>;
@@ -33887,7 +37519,9 @@ export type chat = {
   available_reactions: ChatAvailableReactions;
 
   /**
-   * Current message auto-delete or self-destruct timer setting for the chat, in seconds; 0 if disabled. Self-destruct timer in secret chats starts after the message or its content is viewed. Auto-delete timer in other chats starts from the send date
+   * Current message auto-delete or self-destruct timer setting for the chat, in seconds; 0 if disabled.
+   *
+   * - Self-destruct timer in secret chats starts after the message or its content is viewed. Auto-delete timer in other chats starts from the send date
    * @type {int32} {@link int32}
    */
   message_auto_delete_time: int32;
@@ -34160,7 +37794,9 @@ export type chat$Input = {
   readonly available_reactions?: ChatAvailableReactions$Input;
 
   /**
-   * Current message auto-delete or self-destruct timer setting for the chat, in seconds; 0 if disabled. Self-destruct timer in secret chats starts after the message or its content is viewed. Auto-delete timer in other chats starts from the send date
+   * Current message auto-delete or self-destruct timer setting for the chat, in seconds; 0 if disabled.
+   *
+   * - Self-destruct timer in secret chats starts after the message or its content is viewed. Auto-delete timer in other chats starts from the send date
    * @type {int32} {@link int32}
    */
   readonly message_auto_delete_time?: int32;
@@ -36095,6 +39731,34 @@ export type oauthLinkInfo = {
   request_phone_number_access: Bool;
 
   /**
+   * True, if access to the user's TON wallet is requested by the app. If true and the user agrees to give access, then use createTonConnectSession
+   *
+   * - with dapp_client_id and ton_connect_manifest_url to create the TON Connect session, then setTonConnectSessionWalletClientId, then create a tonWalletOwnershipProof
+   *
+   * - for the given domain with the payload ton_proof_payload, and then pass all data to acceptOauthRequest in the parameter ton_connect_connect_data
+   * @type {Bool} {@link Bool}
+   */
+  request_ton_wallet_access: Bool;
+
+  /**
+   * Hex-encoded public X25519 key of the dApp; may be empty if TON wallet access wasn't requested
+   * @type {string} {@link string}
+   */
+  dapp_client_id: string;
+
+  /**
+   * URL of the TON Connect manifest of the dApp; may be empty if TON wallet access wasn't requested
+   * @type {string} {@link string}
+   */
+  ton_connect_manifest_url: string;
+
+  /**
+   * Payload for TON wallet ownership proof; may be empty if TON wallet access wasn't requested
+   * @type {string} {@link string}
+   */
+  ton_proof_payload: string;
+
+  /**
    * The version of a browser used for the authorization
    * @type {string} {@link string}
    */
@@ -36190,6 +39854,34 @@ export type oauthLinkInfo$Input = {
   readonly request_phone_number_access?: Bool$Input;
 
   /**
+   * True, if access to the user's TON wallet is requested by the app. If true and the user agrees to give access, then use createTonConnectSession
+   *
+   * - with dapp_client_id and ton_connect_manifest_url to create the TON Connect session, then setTonConnectSessionWalletClientId, then create a tonWalletOwnershipProof
+   *
+   * - for the given domain with the payload ton_proof_payload, and then pass all data to acceptOauthRequest in the parameter ton_connect_connect_data
+   * @type {Bool} {@link Bool}
+   */
+  readonly request_ton_wallet_access?: Bool$Input;
+
+  /**
+   * Hex-encoded public X25519 key of the dApp; may be empty if TON wallet access wasn't requested
+   * @type {string} {@link string}
+   */
+  readonly dapp_client_id?: string;
+
+  /**
+   * URL of the TON Connect manifest of the dApp; may be empty if TON wallet access wasn't requested
+   * @type {string} {@link string}
+   */
+  readonly ton_connect_manifest_url?: string;
+
+  /**
+   * Payload for TON wallet ownership proof; may be empty if TON wallet access wasn't requested
+   * @type {string} {@link string}
+   */
+  readonly ton_proof_payload?: string;
+
+  /**
    * The version of a browser used for the authorization
    * @type {string} {@link string}
    */
@@ -36257,7 +39949,7 @@ export type messageThreadInfo = {
   unread_message_count: int32;
 
   /**
-   * The messages from which the thread starts. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+   * The messages from which the thread starts. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
    * @type {vector<message>} {@link vector<message>}
    */
   messages: vector<message>;
@@ -36302,7 +39994,7 @@ export type messageThreadInfo$Input = {
   readonly unread_message_count?: int32;
 
   /**
-   * The messages from which the thread starts. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+   * The messages from which the thread starts. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
    * @type {vector<message>} {@link vector<message>}
    */
   readonly messages?: vector$Input<message$Input>;
@@ -36315,7 +40007,7 @@ export type messageThreadInfo$Input = {
 };
 
 /**
- * Topic containing messages sent by the current user of forwarded from an unknown chat
+ * Topic containing messages sent by the current user or forwarded from an unknown chat
  */
 export type savedMessagesTopicTypeMyNotes = {
   _: "savedMessagesTopicTypeMyNotes";
@@ -36324,7 +40016,7 @@ export type savedMessagesTopicTypeMyNotes = {
 /**
  * Version of {@link savedMessagesTopicTypeMyNotes} for method parameters.
  *
- * Topic containing messages sent by the current user of forwarded from an unknown chat
+ * Topic containing messages sent by the current user or forwarded from an unknown chat
  */
 export type savedMessagesTopicTypeMyNotes$Input = {
   readonly _: "savedMessagesTopicTypeMyNotes";
@@ -37303,7 +40995,13 @@ export type themeSettings = {
   animate_outgoing_message_fill: Bool;
 
   /**
-   * Accent color of outgoing messages in ARGB format
+   * True, if there is chosen accent color for outgoing messages; otherwise, the color must be deduced from other theme settings
+   * @type {Bool} {@link Bool}
+   */
+  has_outgoing_message_accent_color: Bool;
+
+  /**
+   * Accent color of outgoing messages in ARGB format; must be ignored if has_outgoing_message_accent_color is false
    * @type {int32} {@link int32}
    */
   outgoing_message_accent_color: int32;
@@ -37348,10 +41046,312 @@ export type themeSettings$Input = {
   readonly animate_outgoing_message_fill?: Bool$Input;
 
   /**
-   * Accent color of outgoing messages in ARGB format
+   * True, if there is chosen accent color for outgoing messages; otherwise, the color must be deduced from other theme settings
+   * @type {Bool} {@link Bool}
+   */
+  readonly has_outgoing_message_accent_color?: Bool$Input;
+
+  /**
+   * Accent color of outgoing messages in ARGB format; must be ignored if has_outgoing_message_accent_color is false
    * @type {int32} {@link int32}
    */
   readonly outgoing_message_accent_color?: int32;
+};
+
+/**
+ * Describes a backdrop, which can be used as a background of a theme of the screen for sharing a link to a user or a chat
+ */
+export type profileShareThemeBackdrop = {
+  _: "profileShareThemeBackdrop";
+
+  /**
+   * Unique identifier of the backdrop
+   * @type {int32} {@link int32}
+   */
+  id: int32;
+
+  /**
+   * Name of the backdrop
+   * @type {string} {@link string}
+   */
+  name: string;
+
+  /**
+   * Colors of the backdrop
+   * @type {upgradedGiftBackdropColors} {@link upgradedGiftBackdropColors}
+   */
+  colors: upgradedGiftBackdropColors;
+};
+
+/**
+ * Version of {@link profileShareThemeBackdrop} for method parameters.
+ *
+ * Describes a backdrop, which can be used as a background of a theme of the screen for sharing a link to a user or a chat
+ */
+export type profileShareThemeBackdrop$Input = {
+  readonly _: "profileShareThemeBackdrop";
+
+  /**
+   * Unique identifier of the backdrop
+   * @type {int32} {@link int32}
+   */
+  readonly id?: int32;
+
+  /**
+   * Name of the backdrop
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * Colors of the backdrop
+   * @type {upgradedGiftBackdropColors} {@link upgradedGiftBackdropColors}
+   */
+  readonly colors?: upgradedGiftBackdropColors$Input;
+};
+
+/**
+ * Contains a list of backdrops, which can be used as a background of a theme of the screen for sharing a link to a user or a chat
+ */
+export type profileShareThemeBackdrops = {
+  _: "profileShareThemeBackdrops";
+
+  /**
+   * The list of backdrops
+   * @type {vector<profileShareThemeBackdrop>} {@link vector<profileShareThemeBackdrop>}
+   */
+  backdrops: vector<profileShareThemeBackdrop>;
+};
+
+/**
+ * Version of {@link profileShareThemeBackdrops} for method parameters.
+ *
+ * Contains a list of backdrops, which can be used as a background of a theme of the screen for sharing a link to a user or a chat
+ */
+export type profileShareThemeBackdrops$Input = {
+  readonly _: "profileShareThemeBackdrops";
+
+  /**
+   * The list of backdrops
+   * @type {vector<profileShareThemeBackdrop>} {@link vector<profileShareThemeBackdrop>}
+   */
+  readonly backdrops?: vector$Input<profileShareThemeBackdrop$Input>;
+};
+
+/**
+ * A regular emoji
+ */
+export type emojiTypeRegular = {
+  _: "emojiTypeRegular";
+
+  /**
+   * Text representation of the emoji
+   * @type {string} {@link string}
+   */
+  emoji: string;
+};
+
+/**
+ * Version of {@link emojiTypeRegular} for method parameters.
+ *
+ * A regular emoji
+ */
+export type emojiTypeRegular$Input = {
+  readonly _: "emojiTypeRegular";
+
+  /**
+   * Text representation of the emoji
+   * @type {string} {@link string}
+   */
+  readonly emoji?: string;
+};
+
+/**
+ * A custom emoji
+ */
+export type emojiTypeCustomEmoji = {
+  _: "emojiTypeCustomEmoji";
+
+  /**
+   * Identifier of the custom emoji
+   * @type {int64} {@link int64}
+   */
+  custom_emoji_id: int64;
+};
+
+/**
+ * Version of {@link emojiTypeCustomEmoji} for method parameters.
+ *
+ * A custom emoji
+ */
+export type emojiTypeCustomEmoji$Input = {
+  readonly _: "emojiTypeCustomEmoji";
+
+  /**
+   * Identifier of the custom emoji
+   * @type {int64} {@link int64}
+   */
+  readonly custom_emoji_id?: int64$Input;
+};
+
+/**
+ * A theme with emoji placed on a background
+ */
+export type profileShareThemeEmoji = {
+  _: "profileShareThemeEmoji";
+
+  /**
+   * The emoji; 0-6 regular or custom emoji. If empty, then use_default_background is false
+   * @type {vector<EmojiType>} {@link vector<EmojiType>}
+   */
+  emojis: vector<EmojiType>;
+
+  /**
+   * True, if the default background is used; otherwise, the backdrop with identifier background_backdrop_id is used as background
+   * @type {Bool} {@link Bool}
+   */
+  use_default_background: Bool;
+
+  /**
+   * Identifier of the backdrop used as background; must be ignored if use_default_background is true. Use getProfileShareThemeBackdrops to get details about the backdrop
+   * @type {int32} {@link int32}
+   */
+  background_backdrop_id: int32;
+};
+
+/**
+ * Version of {@link profileShareThemeEmoji} for method parameters.
+ *
+ * A theme with emoji placed on a background
+ */
+export type profileShareThemeEmoji$Input = {
+  readonly _: "profileShareThemeEmoji";
+
+  /**
+   * The emoji; 0-6 regular or custom emoji. If empty, then use_default_background is false
+   * @type {vector<EmojiType>} {@link vector<EmojiType>}
+   */
+  readonly emojis?: vector$Input<EmojiType$Input>;
+
+  /**
+   * True, if the default background is used; otherwise, the backdrop with identifier background_backdrop_id is used as background
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_background?: Bool$Input;
+
+  /**
+   * Identifier of the backdrop used as background; must be ignored if use_default_background is true. Use getProfileShareThemeBackdrops to get details about the backdrop
+   * @type {int32} {@link int32}
+   */
+  readonly background_backdrop_id?: int32;
+};
+
+/**
+ * A theme based on an upgraded gift owned by the user or the chat
+ */
+export type profileShareThemeUpgradedGift = {
+  _: "profileShareThemeUpgradedGift";
+
+  /**
+   * The upgraded gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  gift: upgradedGift;
+};
+
+/**
+ * Version of {@link profileShareThemeUpgradedGift} for method parameters.
+ *
+ * A theme based on an upgraded gift owned by the user or the chat
+ */
+export type profileShareThemeUpgradedGift$Input = {
+  readonly _: "profileShareThemeUpgradedGift";
+
+  /**
+   * The upgraded gift
+   * @type {upgradedGift} {@link upgradedGift}
+   */
+  readonly gift?: upgradedGift$Input;
+};
+
+/**
+ * A theme with emoji placed on a background
+ */
+export type inputProfileShareThemeEmoji = {
+  _: "inputProfileShareThemeEmoji";
+
+  /**
+   * The emoji; 0-6 regular or custom emoji. If empty, then use_default_background must be false
+   * @type {vector<EmojiType>} {@link vector<EmojiType>}
+   */
+  emojis: vector<EmojiType>;
+
+  /**
+   * Pass true to use the default background; otherwise, the backdrop with identifier background_backdrop_id will be used as background
+   * @type {Bool} {@link Bool}
+   */
+  use_default_background: Bool;
+
+  /**
+   * Identifier of the backdrop to be used as background; ignored if use_default_background is true. Use getProfileShareThemeBackdrops to get the list of available backdrops
+   * @type {int32} {@link int32}
+   */
+  background_backdrop_id: int32;
+};
+
+/**
+ * Version of {@link inputProfileShareThemeEmoji} for method parameters.
+ *
+ * A theme with emoji placed on a background
+ */
+export type inputProfileShareThemeEmoji$Input = {
+  readonly _: "inputProfileShareThemeEmoji";
+
+  /**
+   * The emoji; 0-6 regular or custom emoji. If empty, then use_default_background must be false
+   * @type {vector<EmojiType>} {@link vector<EmojiType>}
+   */
+  readonly emojis?: vector$Input<EmojiType$Input>;
+
+  /**
+   * Pass true to use the default background; otherwise, the backdrop with identifier background_backdrop_id will be used as background
+   * @type {Bool} {@link Bool}
+   */
+  readonly use_default_background?: Bool$Input;
+
+  /**
+   * Identifier of the backdrop to be used as background; ignored if use_default_background is true. Use getProfileShareThemeBackdrops to get the list of available backdrops
+   * @type {int32} {@link int32}
+   */
+  readonly background_backdrop_id?: int32;
+};
+
+/**
+ * A theme based on an upgraded gift
+ */
+export type inputProfileShareThemeUpgradedGift = {
+  _: "inputProfileShareThemeUpgradedGift";
+
+  /**
+   * Identifier of the upgraded gift, which is owned by the user or the chat, for which the theme is set
+   * @type {string} {@link string}
+   */
+  received_gift_id: string;
+};
+
+/**
+ * Version of {@link inputProfileShareThemeUpgradedGift} for method parameters.
+ *
+ * A theme based on an upgraded gift
+ */
+export type inputProfileShareThemeUpgradedGift$Input = {
+  readonly _: "inputProfileShareThemeUpgradedGift";
+
+  /**
+   * Identifier of the upgraded gift, which is owned by the user or the chat, for which the theme is set
+   * @type {string} {@link string}
+   */
+  readonly received_gift_id?: string;
 };
 
 /**
@@ -37883,6 +41883,46 @@ export type richTextBankCardNumber$Input = {
 };
 
 /**
+ * An address in the TON blockchain
+ */
+export type richTextTonAddress = {
+  _: "richTextTonAddress";
+
+  /**
+   * Text
+   * @type {RichText} {@link RichText}
+   */
+  text: RichText;
+
+  /**
+   * The address
+   * @type {string} {@link string}
+   */
+  address: string;
+};
+
+/**
+ * Version of {@link richTextTonAddress} for method parameters.
+ *
+ * An address in the TON blockchain
+ */
+export type richTextTonAddress$Input = {
+  readonly _: "richTextTonAddress";
+
+  /**
+   * Text
+   * @type {RichText} {@link RichText}
+   */
+  readonly text?: RichText$Input;
+
+  /**
+   * The address
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+};
+
+/**
  * A bot command
  */
 export type richTextBotCommand = {
@@ -38169,7 +42209,7 @@ export type richTextIcon = {
   _: "richTextIcon";
 
   /**
-   * The image represented as a document. The image can be in GIF, JPEG or PNG format
+   * The image represented as a document. The image can be in GIF, JPEG, or PNG format
    * @type {document} {@link document}
    */
   document: document;
@@ -38196,7 +42236,7 @@ export type richTextIcon$Input = {
   readonly _: "richTextIcon";
 
   /**
-   * The image represented as a document. The image can be in GIF, JPEG or PNG format
+   * The image represented as a document. The image can be in GIF, JPEG, or PNG format
    * @type {document} {@link document}
    */
   readonly document?: document$Input;
@@ -38587,9 +42627,9 @@ export type pageBlockListItem = {
   value: int32;
 
   /**
-   * Type of the item numbering type; must be one of "a" for lowercase letters, "A" for uppercase letters, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals,
+   * Type of item numbering; must be one of "a" for lowercase letters, "A" for uppercase letters, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals,
    *
-   * - "1" for decimal numbers, or empty for unordered lists
+   * - "1" for decimal numbers, or an empty string for unordered lists
    * @type {string} {@link string}
    */
   type: string;
@@ -38634,9 +42674,9 @@ export type pageBlockListItem$Input = {
   readonly value?: int32;
 
   /**
-   * Type of the item numbering type; must be one of "a" for lowercase letters, "A" for uppercase letters, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals,
+   * Type of item numbering; must be one of "a" for lowercase letters, "A" for uppercase letters, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals,
    *
-   * - "1" for decimal numbers, or empty for unordered lists
+   * - "1" for decimal numbers, or an empty string for unordered lists
    * @type {string} {@link string}
    */
   readonly type?: string;
@@ -38673,9 +42713,9 @@ export type inputPageBlockListItem = {
   value: int32;
 
   /**
-   * Type of the item numbering type; must be one of "a" for a lowercase letter, "A" for an uppercase letter, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals,
+   * Type of item numbering; pass "a" for lowercase letters, "A" for uppercase letters, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals,
    *
-   * - "1" for decimal numbers, or empty for unordered lists
+   * - "1" for decimal numbers, or an empty string for unordered lists
    * @type {string} {@link string}
    */
   type: string;
@@ -38714,9 +42754,9 @@ export type inputPageBlockListItem$Input = {
   readonly value?: int32;
 
   /**
-   * Type of the item numbering type; must be one of "a" for a lowercase letter, "A" for an uppercase letter, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals,
+   * Type of item numbering; pass "a" for lowercase letters, "A" for uppercase letters, "i" for lowercase Roman numerals, "I" for uppercase Roman numerals,
    *
-   * - "1" for decimal numbers, or empty for unordered lists
+   * - "1" for decimal numbers, or an empty string for unordered lists
    * @type {string} {@link string}
    */
   readonly type?: string;
@@ -41619,7 +45659,7 @@ export type linkPreviewTypePremiumGiftCode$Input = {
 };
 
 /**
- * The link is a link to a dialog for creating of a managed bot
+ * The link is a link to a dialog for creating a managed bot
  */
 export type linkPreviewTypeRequestManagedBot = {
   _: "linkPreviewTypeRequestManagedBot";
@@ -41628,7 +45668,7 @@ export type linkPreviewTypeRequestManagedBot = {
 /**
  * Version of {@link linkPreviewTypeRequestManagedBot} for method parameters.
  *
- * The link is a link to a dialog for creating of a managed bot
+ * The link is a link to a dialog for creating a managed bot
  */
 export type linkPreviewTypeRequestManagedBot$Input = {
   readonly _: "linkPreviewTypeRequestManagedBot";
@@ -46275,7 +50315,7 @@ export type passportAuthorizationForm$Input = {
 };
 
 /**
- * Contains information about a Telegram Passport elements and corresponding errors
+ * Contains information about Telegram Passport elements and corresponding errors
  */
 export type passportElementsWithErrors = {
   _: "passportElementsWithErrors";
@@ -46296,7 +50336,7 @@ export type passportElementsWithErrors = {
 /**
  * Version of {@link passportElementsWithErrors} for method parameters.
  *
- * Contains information about a Telegram Passport elements and corresponding errors
+ * Contains information about Telegram Passport elements and corresponding errors
  */
 export type passportElementsWithErrors$Input = {
   readonly _: "passportElementsWithErrors";
@@ -46385,10 +50425,10 @@ export type encryptedPassportElement = {
   data: bytes;
 
   /**
-   * The front side of an identity document
+   * The front side of an identity document; may be null if the element isn't an identity document
    * @type {datedFile} {@link datedFile}
    */
-  front_side: datedFile;
+  front_side: datedFile | null;
 
   /**
    * The reverse side of an identity document; may be null
@@ -46448,10 +50488,10 @@ export type encryptedPassportElement$Input = {
   readonly data?: bytes$Input;
 
   /**
-   * The front side of an identity document
+   * The front side of an identity document; may be null if the element isn't an identity document
    * @type {datedFile} {@link datedFile}
    */
-  readonly front_side?: datedFile$Input;
+  readonly front_side?: datedFile$Input | null;
 
   /**
    * The reverse side of an identity document; may be null
@@ -48311,6 +52351,154 @@ export type messageStory$Input = {
 };
 
 /**
+ * A message with an HTML widget
+ */
+export type messageWidget = {
+  _: "messageWidget";
+
+  /**
+   * Width of the widget; 0 if the widget must occupy the whole width of the message bubble
+   * @type {int32} {@link int32}
+   */
+  width: int32;
+
+  /**
+   * Height of the widget; 0 if the height of the widget isn't fixed
+   * @type {int32} {@link int32}
+   */
+  height: int32;
+
+  /**
+   * HTML code of the widget
+   * @type {string} {@link string}
+   */
+  html: string;
+
+  /**
+   * Public data of the widget
+   * @type {string} {@link string}
+   */
+  public_data: string;
+
+  /**
+   * Data of the widget, which is specific to the chat
+   * @type {string} {@link string}
+   */
+  chat_data: string;
+
+  /**
+   * Identifier of the shared widget; 0 if the widget isn't shared
+   * @type {int64} {@link int64}
+   */
+  widget_id: int64;
+
+  /**
+   * Widget caption
+   * @type {formattedText} {@link formattedText}
+   */
+  caption: formattedText;
+
+  /**
+   * True, if the caption must be shown above the widget; otherwise, the caption must be shown below the widget
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+
+  /**
+   * True, if the message is a copy of the widget
+   * @type {Bool} {@link Bool}
+   */
+  is_copy: Bool;
+
+  /**
+   * True, if the widget can send queries to the bot
+   * @type {Bool} {@link Bool}
+   */
+  can_send_queries: Bool;
+
+  /**
+   * True, if the widget can send queries to the bot in the background
+   * @type {Bool} {@link Bool}
+   */
+  can_send_background_queries: Bool;
+};
+
+/**
+ * Version of {@link messageWidget} for method parameters.
+ *
+ * A message with an HTML widget
+ */
+export type messageWidget$Input = {
+  readonly _: "messageWidget";
+
+  /**
+   * Width of the widget; 0 if the widget must occupy the whole width of the message bubble
+   * @type {int32} {@link int32}
+   */
+  readonly width?: int32;
+
+  /**
+   * Height of the widget; 0 if the height of the widget isn't fixed
+   * @type {int32} {@link int32}
+   */
+  readonly height?: int32;
+
+  /**
+   * HTML code of the widget
+   * @type {string} {@link string}
+   */
+  readonly html?: string;
+
+  /**
+   * Public data of the widget
+   * @type {string} {@link string}
+   */
+  readonly public_data?: string;
+
+  /**
+   * Data of the widget, which is specific to the chat
+   * @type {string} {@link string}
+   */
+  readonly chat_data?: string;
+
+  /**
+   * Identifier of the shared widget; 0 if the widget isn't shared
+   * @type {int64} {@link int64}
+   */
+  readonly widget_id?: int64$Input;
+
+  /**
+   * Widget caption
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input;
+
+  /**
+   * True, if the caption must be shown above the widget; otherwise, the caption must be shown below the widget
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
+
+  /**
+   * True, if the message is a copy of the widget
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_copy?: Bool$Input;
+
+  /**
+   * True, if the widget can send queries to the bot
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_send_queries?: Bool$Input;
+
+  /**
+   * True, if the widget can send queries to the bot in the background
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_send_background_queries?: Bool$Input;
+};
+
+/**
  * A message with a checklist
  */
 export type messageChecklist = {
@@ -48531,7 +52719,7 @@ export type messageCall$Input = {
  *
  * - and getOption("can_accept_calls") is true, then incoming call screen must be shown to the user. Use getGroupCallParticipants to show current group call participants on the screen.
  *
- * - Use joinGroupCall to accept the call or declineGroupCallInvitation to decline it. If the call become active or missed, then the call screen must be hidden
+ * - Use joinGroupCall to accept the call or declineGroupCallInvitation to decline it. If the call becomes active or missed, then the call screen must be hidden
  */
 export type messageGroupCall = {
   _: "messageGroupCall";
@@ -48580,7 +52768,7 @@ export type messageGroupCall = {
  *
  * - and getOption("can_accept_calls") is true, then incoming call screen must be shown to the user. Use getGroupCallParticipants to show current group call participants on the screen.
  *
- * - Use joinGroupCall to accept the call or declineGroupCallInvitation to decline it. If the call become active or missed, then the call screen must be hidden
+ * - Use joinGroupCall to accept the call or declineGroupCallInvitation to decline it. If the call becomes active or missed, then the call screen must be hidden
  */
 export type messageGroupCall$Input = {
   readonly _: "messageGroupCall";
@@ -49009,7 +53197,7 @@ export type messageChatOwnerLeft = {
   _: "messageChatOwnerLeft";
 
   /**
-   * Identifier of the user who will become the new owner of the chat if the previous owner isn't return; 0 if none
+   * Identifier of the user who will become the new owner of the chat if the previous owner doesn't return; 0 if none
    * @type {int53} {@link int53}
    */
   new_owner_user_id: int53;
@@ -49024,7 +53212,7 @@ export type messageChatOwnerLeft$Input = {
   readonly _: "messageChatOwnerLeft";
 
   /**
-   * Identifier of the user who will become the new owner of the chat if the previous owner isn't return; 0 if none
+   * Identifier of the user who will become the new owner of the chat if the previous owner doesn't return; 0 if none
    * @type {int53} {@link int53}
    */
   readonly new_owner_user_id?: int53;
@@ -51119,6 +55307,170 @@ export type messageGiveawayPrizeStars$Input = {
 };
 
 /**
+ * Represents a transfer with the TON wallet of the current user
+ */
+export type messageTonWalletTransfer = {
+  _: "messageTonWalletTransfer";
+
+  /**
+   * Sender of the transfer; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  sender_user_id: int53;
+
+  /**
+   * Unique identifier of the transaction; may be empty if the transfer isn't sent yet. Use getTonWalletTransaction to get additional information about the transaction
+   * @type {string} {@link string}
+   */
+  transaction_id: string;
+
+  /**
+   * Address in the TON blockchain of the transaction peer
+   * @type {string} {@link string}
+   */
+  peer_address: string;
+
+  /**
+   * The amount of received cryptocurrency, in the smallest units of the cryptocurrency; negative for outgoing transactions
+   * @type {int64} {@link int64}
+   */
+  amount: int64;
+
+  /**
+   * Comment added to the transaction
+   * @type {string} {@link string}
+   */
+  comment: string;
+
+  /**
+   * True, if the comment is encrypted and must be decrypted using the receiver's or sender's private key
+   * @type {Bool} {@link Bool}
+   */
+  is_comment_encrypted: Bool;
+};
+
+/**
+ * Version of {@link messageTonWalletTransfer} for method parameters.
+ *
+ * Represents a transfer with the TON wallet of the current user
+ */
+export type messageTonWalletTransfer$Input = {
+  readonly _: "messageTonWalletTransfer";
+
+  /**
+   * Sender of the transfer; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Unique identifier of the transaction; may be empty if the transfer isn't sent yet. Use getTonWalletTransaction to get additional information about the transaction
+   * @type {string} {@link string}
+   */
+  readonly transaction_id?: string;
+
+  /**
+   * Address in the TON blockchain of the transaction peer
+   * @type {string} {@link string}
+   */
+  readonly peer_address?: string;
+
+  /**
+   * The amount of received cryptocurrency, in the smallest units of the cryptocurrency; negative for outgoing transactions
+   * @type {int64} {@link int64}
+   */
+  readonly amount?: int64$Input;
+
+  /**
+   * Comment added to the transaction
+   * @type {string} {@link string}
+   */
+  readonly comment?: string;
+
+  /**
+   * True, if the comment is encrypted and must be decrypted using the receiver's or sender's private key
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_comment_encrypted?: Bool$Input;
+};
+
+/**
+ * A request from a dApp was received through TON Connect
+ */
+export type messageTonConnectRequest = {
+  _: "messageTonConnectRequest";
+
+  /**
+   * Unique identifier of the TON Connect session
+   * @type {int64} {@link int64}
+   */
+  session_id: int64;
+
+  /**
+   * State of the request
+   * @type {TonConnectRequestState} {@link TonConnectRequestState}
+   */
+  state: TonConnectRequestState;
+
+  /**
+   * Name of the dApp; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  dapp_name: string;
+
+  /**
+   * Topic of the request; may be empty if none
+   * @type {string} {@link string}
+   */
+  topic: string;
+
+  /**
+   * Identifier to trace the request; may be empty if none
+   * @type {string} {@link string}
+   */
+  trace_id: string;
+};
+
+/**
+ * Version of {@link messageTonConnectRequest} for method parameters.
+ *
+ * A request from a dApp was received through TON Connect
+ */
+export type messageTonConnectRequest$Input = {
+  readonly _: "messageTonConnectRequest";
+
+  /**
+   * Unique identifier of the TON Connect session
+   * @type {int64} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * State of the request
+   * @type {TonConnectRequestState} {@link TonConnectRequestState}
+   */
+  readonly state?: TonConnectRequestState$Input;
+
+  /**
+   * Name of the dApp; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  readonly dapp_name?: string;
+
+  /**
+   * Topic of the request; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly topic?: string;
+
+  /**
+   * Identifier to trace the request; may be empty if none
+   * @type {string} {@link string}
+   */
+  readonly trace_id?: string;
+};
+
+/**
  * A regular gift was received or sent by the current user, or the current user was notified about a channel gift
  */
 export type messageGift = {
@@ -51207,6 +55559,12 @@ export type messageGift = {
    * @type {Bool} {@link Bool}
    */
   can_be_upgraded: Bool;
+
+  /**
+   * True, if the gift can be deleted using deleteGift; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  can_be_deleted: Bool;
 
   /**
    * True, if the gift was converted to Telegram Stars; only for the receiver of the gift
@@ -51330,6 +55688,12 @@ export type messageGift$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly can_be_upgraded?: Bool$Input;
+
+  /**
+   * True, if the gift can be deleted using deleteGift; only for the receiver of the gift
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_be_deleted?: Bool$Input;
 
   /**
    * True, if the gift was converted to Telegram Stars; only for the receiver of the gift
@@ -51571,7 +55935,7 @@ export type messageUpgradedGift$Input = {
 };
 
 /**
- * A gift which purchase, upgrade or transfer were refunded
+ * A gift which purchase, upgrade, or transfer were refunded
  */
 export type messageRefundedUpgradedGift = {
   _: "messageRefundedUpgradedGift";
@@ -51604,7 +55968,7 @@ export type messageRefundedUpgradedGift = {
 /**
  * Version of {@link messageRefundedUpgradedGift} for method parameters.
  *
- * A gift which purchase, upgrade or transfer were refunded
+ * A gift which purchase, upgrade, or transfer were refunded
  */
 export type messageRefundedUpgradedGift$Input = {
   readonly _: "messageRefundedUpgradedGift";
@@ -51872,6 +56236,22 @@ export type messageDirectMessagePriceChanged$Input = {
    * @type {int53} {@link int53}
    */
   readonly paid_message_star_count?: int53;
+};
+
+/**
+ * The sender of the message used a link of the other user, which allows sending unpaid messages to the user
+ */
+export type messageUnpaidMessagesAllowedByLink = {
+  _: "messageUnpaidMessagesAllowedByLink";
+};
+
+/**
+ * Version of {@link messageUnpaidMessagesAllowedByLink} for method parameters.
+ *
+ * The sender of the message used a link of the other user, which allows sending unpaid messages to the user
+ */
+export type messageUnpaidMessagesAllowedByLink$Input = {
+  readonly _: "messageUnpaidMessagesAllowedByLink";
 };
 
 /**
@@ -52763,6 +57143,22 @@ export type textEntityTypeBankCardNumber$Input = {
 };
 
 /**
+ * An address in the TON blockchain
+ */
+export type textEntityTypeTonAddress = {
+  _: "textEntityTypeTonAddress";
+};
+
+/**
+ * Version of {@link textEntityTypeTonAddress} for method parameters.
+ *
+ * An address in the TON blockchain
+ */
+export type textEntityTypeTonAddress$Input = {
+  readonly _: "textEntityTypeTonAddress";
+};
+
+/**
  * A bold text
  */
 export type textEntityTypeBold = {
@@ -52963,7 +57359,7 @@ export type textEntityTypeTextUrl$Input = {
 };
 
 /**
- * A text shows instead of a raw mention of the user (e.g., when the user has no username)
+ * A text shown instead of a raw mention of the user (e.g., when the user has no username)
  */
 export type textEntityTypeMentionName = {
   _: "textEntityTypeMentionName";
@@ -52978,7 +57374,7 @@ export type textEntityTypeMentionName = {
 /**
  * Version of {@link textEntityTypeMentionName} for method parameters.
  *
- * A text shows instead of a raw mention of the user (e.g., when the user has no username)
+ * A text shown instead of a raw mention of the user (e.g., when the user has no username)
  */
 export type textEntityTypeMentionName$Input = {
   readonly _: "textEntityTypeMentionName";
@@ -53025,7 +57421,9 @@ export type textEntityTypeMediaTimestamp = {
   _: "textEntityTypeMediaTimestamp";
 
   /**
-   * Timestamp from which a video/audio/video note/voice note/story playing must start, in seconds. The media can be in the content or the link preview of the current message, or in the same places in the replied message
+   * Timestamp from which a video/audio/video note/voice note/story playing must start, in seconds.
+   *
+   * - The media can be in the content or the link preview of the current message, or in the same places in the replied message
    * @type {int32} {@link int32}
    */
   media_timestamp: int32;
@@ -53040,7 +57438,9 @@ export type textEntityTypeMediaTimestamp$Input = {
   readonly _: "textEntityTypeMediaTimestamp";
 
   /**
-   * Timestamp from which a video/audio/video note/voice note/story playing must start, in seconds. The media can be in the content or the link preview of the current message, or in the same places in the replied message
+   * Timestamp from which a video/audio/video note/voice note/story playing must start, in seconds.
+   *
+   * - The media can be in the content or the link preview of the current message, or in the same places in the replied message
    * @type {int32} {@link int32}
    */
   readonly media_timestamp?: int32;
@@ -53153,7 +57553,7 @@ export type inputThumbnail = {
   _: "inputThumbnail";
 
   /**
-   * Thumbnail file to send. Sending thumbnails by file_id is currently not supported
+   * Thumbnail file to send. Sending thumbnails by inputFileId or inputFileRemote is currently not supported
    * @type {InputFile} {@link InputFile}
    */
   thumbnail: InputFile;
@@ -53180,7 +57580,7 @@ export type inputThumbnail$Input = {
   readonly _: "inputThumbnail";
 
   /**
-   * Thumbnail file to send. Sending thumbnails by file_id is currently not supported
+   * Thumbnail file to send. Sending thumbnails by inputFileId or inputFileRemote is currently not supported
    * @type {InputFile} {@link InputFile}
    */
   readonly thumbnail?: InputFile$Input;
@@ -53755,7 +58155,7 @@ export type inputVideoNote$Input = {
 };
 
 /**
- * A video note to be sent
+ * A voice note to be sent
  */
 export type inputVoiceNote = {
   _: "inputVoiceNote";
@@ -53782,7 +58182,7 @@ export type inputVoiceNote = {
 /**
  * Version of {@link inputVoiceNote} for method parameters.
  *
- * A video note to be sent
+ * A voice note to be sent
  */
 export type inputVoiceNote$Input = {
   readonly _: "inputVoiceNote";
@@ -54161,7 +58561,7 @@ export type messageSendOptions = {
   paid_message_star_count: int53;
 
   /**
-   * Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum
+   * Pass true if the user has explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum
    * @type {Bool} {@link Bool}
    */
   update_order_of_installed_sticker_sets: Bool;
@@ -54238,7 +58638,7 @@ export type messageSendOptions$Input = {
   readonly paid_message_star_count?: int53;
 
   /**
-   * Pass true if the user explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum
+   * Pass true if the user has explicitly chosen a sticker or a custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum
    * @type {Bool} {@link Bool}
    */
   readonly update_order_of_installed_sticker_sets?: Bool$Input;
@@ -56867,6 +61267,194 @@ export type inputMessageChecklist$Input = {
 };
 
 /**
+ * A message with an HTML widget; for bots only
+ */
+export type inputMessageWidget = {
+  _: "inputMessageWidget";
+
+  /**
+   * Width of the widget; 0 if the widget must occupy the whole width of the message bubble
+   * @type {int32} {@link int32}
+   */
+  width: int32;
+
+  /**
+   * Height of the widget; 0 if the height of the widget isn't fixed
+   * @type {int32} {@link int32}
+   */
+  height: int32;
+
+  /**
+   * HTML code of the widget; 1-32768 bytes; must not exceed 4096 bytes when compressed by zlib with the maximal compression level
+   * @type {string} {@link string}
+   */
+  html: string;
+
+  /**
+   * Public data of the widget, which will be available in copies and forwards of the message
+   * @type {string} {@link string}
+   */
+  public_data: string;
+
+  /**
+   * Data of the widget, which is specific to the chat
+   * @type {string} {@link string}
+   */
+  chat_data: string;
+
+  /**
+   * Widget caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
+   * @type {formattedText} {@link formattedText}
+   */
+  caption: formattedText | null;
+
+  /**
+   * True, if the caption must be shown above the widget; otherwise, the caption must be shown below the widget
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+
+  /**
+   * Pass true to allow the widget to send queries to the bot
+   * @type {Bool} {@link Bool}
+   */
+  allow_queries: Bool;
+
+  /**
+   * Pass true to create a shared widget, which can be sent again by its identifier
+   * @type {Bool} {@link Bool}
+   */
+  is_shared: Bool;
+};
+
+/**
+ * Version of {@link inputMessageWidget} for method parameters.
+ *
+ * A message with an HTML widget; for bots only
+ */
+export type inputMessageWidget$Input = {
+  readonly _: "inputMessageWidget";
+
+  /**
+   * Width of the widget; 0 if the widget must occupy the whole width of the message bubble
+   * @type {int32} {@link int32}
+   */
+  readonly width?: int32;
+
+  /**
+   * Height of the widget; 0 if the height of the widget isn't fixed
+   * @type {int32} {@link int32}
+   */
+  readonly height?: int32;
+
+  /**
+   * HTML code of the widget; 1-32768 bytes; must not exceed 4096 bytes when compressed by zlib with the maximal compression level
+   * @type {string} {@link string}
+   */
+  readonly html?: string;
+
+  /**
+   * Public data of the widget, which will be available in copies and forwards of the message
+   * @type {string} {@link string}
+   */
+  readonly public_data?: string;
+
+  /**
+   * Data of the widget, which is specific to the chat
+   * @type {string} {@link string}
+   */
+  readonly chat_data?: string;
+
+  /**
+   * Widget caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input | null;
+
+  /**
+   * True, if the caption must be shown above the widget; otherwise, the caption must be shown below the widget
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
+
+  /**
+   * Pass true to allow the widget to send queries to the bot
+   * @type {Bool} {@link Bool}
+   */
+  readonly allow_queries?: Bool$Input;
+
+  /**
+   * Pass true to create a shared widget, which can be sent again by its identifier
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_shared?: Bool$Input;
+};
+
+/**
+ * A message with an existing shared widget; for bots only
+ */
+export type inputMessageSharedWidget = {
+  _: "inputMessageSharedWidget";
+
+  /**
+   * Identifier of the shared widget
+   * @type {int64} {@link int64}
+   */
+  widget_id: int64;
+
+  /**
+   * Data of the widget, which is specific to the chat
+   * @type {string} {@link string}
+   */
+  chat_data: string;
+
+  /**
+   * Widget caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
+   * @type {formattedText} {@link formattedText}
+   */
+  caption: formattedText | null;
+
+  /**
+   * True, if the caption must be shown above the widget; otherwise, the caption must be shown below the widget
+   * @type {Bool} {@link Bool}
+   */
+  show_caption_above_media: Bool;
+};
+
+/**
+ * Version of {@link inputMessageSharedWidget} for method parameters.
+ *
+ * A message with an existing shared widget; for bots only
+ */
+export type inputMessageSharedWidget$Input = {
+  readonly _: "inputMessageSharedWidget";
+
+  /**
+   * Identifier of the shared widget
+   * @type {int64} {@link int64}
+   */
+  readonly widget_id?: int64$Input;
+
+  /**
+   * Data of the widget, which is specific to the chat
+   * @type {string} {@link string}
+   */
+  readonly chat_data?: string;
+
+  /**
+   * Widget caption; pass null to use an empty caption; 0-getOption("message_caption_length_max") characters
+   * @type {formattedText} {@link formattedText}
+   */
+  readonly caption?: formattedText$Input | null;
+
+  /**
+   * True, if the caption must be shown above the widget; otherwise, the caption must be shown below the widget
+   * @type {Bool} {@link Bool}
+   */
+  readonly show_caption_above_media?: Bool$Input;
+};
+
+/**
  * A forwarded message
  */
 export type inputMessageForwarded = {
@@ -57011,7 +61599,7 @@ export type messageProperties = {
   /**
    * True, if the message can be edited using the methods editMessageText, editMessageCaption, or editMessageReplyMarkup.
    *
-   * - For live location, poll, and checklist messages this fields shows whether editMessageLiveLocation, stopPoll, or editMessageChecklist respectively can be used with this message
+   * - For live location, poll, and checklist messages this field shows whether editMessageLiveLocation, stopPoll, or editMessageChecklist respectively can be used with this message
    * @type {Bool} {@link Bool}
    */
   can_be_edited: Bool;
@@ -57101,7 +61689,7 @@ export type messageProperties = {
   can_get_link: Bool;
 
   /**
-   * True, if media timestamp links can be generated for media timestamp entities in the message text, caption or link preview description using getMessageLink
+   * True, if media timestamp links can be generated for media timestamp entities in the message text, caption, or link preview description using getMessageLink
    * @type {Bool} {@link Bool}
    */
   can_get_media_timestamp_links: Bool;
@@ -57177,6 +61765,12 @@ export type messageProperties = {
    * @type {Bool} {@link Bool}
    */
   can_set_fact_check: Bool;
+
+  /**
+   * Identifiers of custom emoji used in the message
+   * @type {vector<int64>} {@link vector<int64>}
+   */
+  custom_emoji_ids: vector<int64>;
 
   /**
    * True, if content of the message can't be saved locally, because it is protected by the current user; if true, then can_be_saved is false
@@ -57256,7 +61850,7 @@ export type messageProperties$Input = {
   /**
    * True, if the message can be edited using the methods editMessageText, editMessageCaption, or editMessageReplyMarkup.
    *
-   * - For live location, poll, and checklist messages this fields shows whether editMessageLiveLocation, stopPoll, or editMessageChecklist respectively can be used with this message
+   * - For live location, poll, and checklist messages this field shows whether editMessageLiveLocation, stopPoll, or editMessageChecklist respectively can be used with this message
    * @type {Bool} {@link Bool}
    */
   readonly can_be_edited?: Bool$Input;
@@ -57346,7 +61940,7 @@ export type messageProperties$Input = {
   readonly can_get_link?: Bool$Input;
 
   /**
-   * True, if media timestamp links can be generated for media timestamp entities in the message text, caption or link preview description using getMessageLink
+   * True, if media timestamp links can be generated for media timestamp entities in the message text, caption, or link preview description using getMessageLink
    * @type {Bool} {@link Bool}
    */
   readonly can_get_media_timestamp_links?: Bool$Input;
@@ -57422,6 +62016,12 @@ export type messageProperties$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly can_set_fact_check?: Bool$Input;
+
+  /**
+   * Identifiers of custom emoji used in the message
+   * @type {vector<int64>} {@link vector<int64>}
+   */
+  readonly custom_emoji_ids?: vector$Input<int64$Input>;
 
   /**
    * True, if content of the message can't be saved locally, because it is protected by the current user; if true, then can_be_saved is false
@@ -59239,94 +63839,6 @@ export type currentWeather$Input = {
 };
 
 /**
- * Describes position of a clickable rectangle area on a story media
- */
-export type storyAreaPosition = {
-  _: "storyAreaPosition";
-
-  /**
-   * The abscissa of the rectangle's center, as a percentage of the media width
-   * @type {double} {@link double}
-   */
-  x_percentage: double;
-
-  /**
-   * The ordinate of the rectangle's center, as a percentage of the media height
-   * @type {double} {@link double}
-   */
-  y_percentage: double;
-
-  /**
-   * The width of the rectangle, as a percentage of the media width
-   * @type {double} {@link double}
-   */
-  width_percentage: double;
-
-  /**
-   * The height of the rectangle, as a percentage of the media height
-   * @type {double} {@link double}
-   */
-  height_percentage: double;
-
-  /**
-   * Clockwise rotation angle of the rectangle, in degrees; 0-360
-   * @type {double} {@link double}
-   */
-  rotation_angle: double;
-
-  /**
-   * The radius of the rectangle corner rounding, as a percentage of the media width
-   * @type {double} {@link double}
-   */
-  corner_radius_percentage: double;
-};
-
-/**
- * Version of {@link storyAreaPosition} for method parameters.
- *
- * Describes position of a clickable rectangle area on a story media
- */
-export type storyAreaPosition$Input = {
-  readonly _: "storyAreaPosition";
-
-  /**
-   * The abscissa of the rectangle's center, as a percentage of the media width
-   * @type {double} {@link double}
-   */
-  readonly x_percentage?: double;
-
-  /**
-   * The ordinate of the rectangle's center, as a percentage of the media height
-   * @type {double} {@link double}
-   */
-  readonly y_percentage?: double;
-
-  /**
-   * The width of the rectangle, as a percentage of the media width
-   * @type {double} {@link double}
-   */
-  readonly width_percentage?: double;
-
-  /**
-   * The height of the rectangle, as a percentage of the media height
-   * @type {double} {@link double}
-   */
-  readonly height_percentage?: double;
-
-  /**
-   * Clockwise rotation angle of the rectangle, in degrees; 0-360
-   * @type {double} {@link double}
-   */
-  readonly rotation_angle?: double;
-
-  /**
-   * The radius of the rectangle corner rounding, as a percentage of the media width
-   * @type {double} {@link double}
-   */
-  readonly corner_radius_percentage?: double;
-};
-
-/**
  * An area pointing to a location
  */
 export type storyAreaTypeLocation = {
@@ -59499,7 +64011,7 @@ export type storyAreaTypeMessage$Input = {
 };
 
 /**
- * An area pointing to a HTTP or tg:// link
+ * An area pointing to an HTTP or tg:// link
  */
 export type storyAreaTypeLink = {
   _: "storyAreaTypeLink";
@@ -59514,7 +64026,7 @@ export type storyAreaTypeLink = {
 /**
  * Version of {@link storyAreaTypeLink} for method parameters.
  *
- * An area pointing to a HTTP or tg:// link
+ * An area pointing to an HTTP or tg:// link
  */
 export type storyAreaTypeLink$Input = {
   readonly _: "storyAreaTypeLink";
@@ -59614,9 +64126,9 @@ export type storyArea = {
 
   /**
    * Position of the area
-   * @type {storyAreaPosition} {@link storyAreaPosition}
+   * @type {areaPosition} {@link areaPosition}
    */
-  position: storyAreaPosition;
+  position: areaPosition;
 
   /**
    * Type of the area
@@ -59635,9 +64147,9 @@ export type storyArea$Input = {
 
   /**
    * Position of the area
-   * @type {storyAreaPosition} {@link storyAreaPosition}
+   * @type {areaPosition} {@link areaPosition}
    */
-  readonly position?: storyAreaPosition$Input;
+  readonly position?: areaPosition$Input;
 
   /**
    * Type of the area
@@ -59684,46 +64196,6 @@ export type inputStoryAreaTypeLocation$Input = {
    * @type {locationAddress} {@link locationAddress}
    */
   readonly address?: locationAddress$Input | null;
-};
-
-/**
- * An area pointing to a venue found by the bot getOption("venue_search_bot_username")
- */
-export type inputStoryAreaTypeFoundVenue = {
-  _: "inputStoryAreaTypeFoundVenue";
-
-  /**
-   * Identifier of the inline query, used to found the venue
-   * @type {int64} {@link int64}
-   */
-  query_id: int64;
-
-  /**
-   * Identifier of the inline query result
-   * @type {string} {@link string}
-   */
-  result_id: string;
-};
-
-/**
- * Version of {@link inputStoryAreaTypeFoundVenue} for method parameters.
- *
- * An area pointing to a venue found by the bot getOption("venue_search_bot_username")
- */
-export type inputStoryAreaTypeFoundVenue$Input = {
-  readonly _: "inputStoryAreaTypeFoundVenue";
-
-  /**
-   * Identifier of the inline query, used to found the venue
-   * @type {int64} {@link int64}
-   */
-  readonly query_id?: int64$Input;
-
-  /**
-   * Identifier of the inline query result
-   * @type {string} {@link string}
-   */
-  readonly result_id?: string;
 };
 
 /**
@@ -59859,7 +64331,7 @@ export type inputStoryAreaTypeMessage$Input = {
 };
 
 /**
- * An area pointing to a HTTP or tg:// link
+ * An area pointing to an HTTP or tg:// link
  */
 export type inputStoryAreaTypeLink = {
   _: "inputStoryAreaTypeLink";
@@ -59874,7 +64346,7 @@ export type inputStoryAreaTypeLink = {
 /**
  * Version of {@link inputStoryAreaTypeLink} for method parameters.
  *
- * An area pointing to a HTTP or tg:// link
+ * An area pointing to an HTTP or tg:// link
  */
 export type inputStoryAreaTypeLink$Input = {
   readonly _: "inputStoryAreaTypeLink";
@@ -59974,9 +64446,9 @@ export type inputStoryArea = {
 
   /**
    * Position of the area
-   * @type {storyAreaPosition} {@link storyAreaPosition}
+   * @type {areaPosition} {@link areaPosition}
    */
-  position: storyAreaPosition;
+  position: areaPosition;
 
   /**
    * Type of the area
@@ -59995,9 +64467,9 @@ export type inputStoryArea$Input = {
 
   /**
    * Position of the area
-   * @type {storyAreaPosition} {@link storyAreaPosition}
+   * @type {areaPosition} {@link areaPosition}
    */
-  readonly position?: storyAreaPosition$Input;
+  readonly position?: areaPosition$Input;
 
   /**
    * Type of the area
@@ -60015,7 +64487,7 @@ export type inputStoryAreas = {
   /**
    * List of input story areas. Currently, a story can have
    *
-   * - up to 10 inputStoryAreaTypeLocation, inputStoryAreaTypeFoundVenue, and inputStoryAreaTypePreviousVenue areas,
+   * - up to 10 inputStoryAreaTypeLocation and inputStoryAreaTypePreviousVenue areas,
    *
    * - up to getOption("story_suggested_reaction_area_count_max") inputStoryAreaTypeSuggestedReaction areas,
    *
@@ -60042,7 +64514,7 @@ export type inputStoryAreas$Input = {
   /**
    * List of input story areas. Currently, a story can have
    *
-   * - up to 10 inputStoryAreaTypeLocation, inputStoryAreaTypeFoundVenue, and inputStoryAreaTypePreviousVenue areas,
+   * - up to 10 inputStoryAreaTypeLocation and inputStoryAreaTypePreviousVenue areas,
    *
    * - up to getOption("story_suggested_reaction_area_count_max") inputStoryAreaTypeSuggestedReaction areas,
    *
@@ -60865,6 +65337,12 @@ export type story = {
   caption: formattedText;
 
   /**
+   * Music attached to the story; may be null if none
+   * @type {audio} {@link audio}
+   */
+  music: audio | null;
+
+  /**
    * Identifiers of story albums to which the story is added; only for manageable stories
    * @type {vector<int32>} {@link vector<int32>}
    */
@@ -61034,6 +65512,12 @@ export type story$Input = {
    * @type {formattedText} {@link formattedText}
    */
   readonly caption?: formattedText$Input;
+
+  /**
+   * Music attached to the story; may be null if none
+   * @type {audio} {@link audio}
+   */
+  readonly music?: audio$Input | null;
 
   /**
    * Identifiers of story albums to which the story is added; only for manageable stories
@@ -61361,7 +65845,7 @@ export type chatActiveStories = {
   list: StoryList | null;
 
   /**
-   * A parameter used to determine order of the stories in the story list; 0 if the stories don't need to be shown in the story list. Stories must be sorted by the pair (order, story_poster_chat_id) in descending order
+   * A parameter used to determine order of the stories in the story list; 0 if the stories don't need to be shown in the story list. Stories must be sorted by the pair (order, chat_id) in descending order
    * @type {int53} {@link int53}
    */
   order: int53;
@@ -61408,7 +65892,7 @@ export type chatActiveStories$Input = {
   readonly list?: StoryList$Input | null;
 
   /**
-   * A parameter used to determine order of the stories in the story list; 0 if the stories don't need to be shown in the story list. Stories must be sorted by the pair (order, story_poster_chat_id) in descending order
+   * A parameter used to determine order of the stories in the story list; 0 if the stories don't need to be shown in the story list. Stories must be sorted by the pair (order, chat_id) in descending order
    * @type {int53} {@link int53}
    */
   readonly order?: int53;
@@ -62503,7 +66987,7 @@ export type chatBoostSourceGiveaway = {
   user_id: int53;
 
   /**
-   * The created Telegram Premium gift code if it was used by the user or can be claimed by the current user; an empty string otherwise; for Telegram Premium giveways only
+   * The created Telegram Premium gift code if it was used by the user or can be claimed by the current user; an empty string otherwise; for Telegram Premium giveaways only
    * @type {string} {@link string}
    */
   gift_code: string;
@@ -62542,7 +67026,7 @@ export type chatBoostSourceGiveaway$Input = {
   readonly user_id?: int53;
 
   /**
-   * The created Telegram Premium gift code if it was used by the user or can be claimed by the current user; an empty string otherwise; for Telegram Premium giveways only
+   * The created Telegram Premium gift code if it was used by the user or can be claimed by the current user; an empty string otherwise; for Telegram Premium giveaways only
    * @type {string} {@link string}
    */
   readonly gift_code?: string;
@@ -64091,7 +68575,7 @@ export type groupCallRecentSpeaker = {
   participant_id: MessageSender;
 
   /**
-   * True, is the user has spoken recently
+   * True, if the user has spoken recently
    * @type {Bool} {@link Bool}
    */
   is_speaking: Bool;
@@ -64112,7 +68596,7 @@ export type groupCallRecentSpeaker$Input = {
   readonly participant_id?: MessageSender$Input;
 
   /**
-   * True, is the user has spoken recently
+   * True, if the user has spoken recently
    * @type {Bool} {@link Bool}
    */
   readonly is_speaking?: Bool$Input;
@@ -65069,7 +69553,7 @@ export type groupCallMessageLevel = {
   second_color: int32;
 
   /**
-   * Background color for the message the RGB format
+   * Background color for the message in the RGB format
    * @type {int32} {@link int32}
    */
   background_color: int32;
@@ -65120,7 +69604,7 @@ export type groupCallMessageLevel$Input = {
   readonly second_color?: int32;
 
   /**
-   * Background color for the message the RGB format
+   * Background color for the message in the RGB format
    * @type {int32} {@link int32}
    */
   readonly background_color?: int32;
@@ -65633,7 +70117,11 @@ export type phoneNumberAuthenticationSettings = {
   has_unknown_phone_number: Bool;
 
   /**
-   * For official applications only. True, if the application can use Android SMS Retriever API (requires Google Play Services >= 10.2) to automatically receive the authentication code from the SMS. See https://developers.google.com/identity/sms-retriever/ for more details
+   * For official applications only. True, if the application can use Android SMS Retriever API
+   *
+   * - (requires Google Play Services >= 10.2) to automatically receive the authentication code from the SMS.
+   *
+   * - See https://developers.google.com/identity/sms-retriever/ for more details
    * @type {Bool} {@link Bool}
    */
   allow_sms_retriever_api: Bool;
@@ -65684,7 +70172,11 @@ export type phoneNumberAuthenticationSettings$Input = {
   readonly has_unknown_phone_number?: Bool$Input;
 
   /**
-   * For official applications only. True, if the application can use Android SMS Retriever API (requires Google Play Services >= 10.2) to automatically receive the authentication code from the SMS. See https://developers.google.com/identity/sms-retriever/ for more details
+   * For official applications only. True, if the application can use Android SMS Retriever API
+   *
+   * - (requires Google Play Services >= 10.2) to automatically receive the authentication code from the SMS.
+   *
+   * - See https://developers.google.com/identity/sms-retriever/ for more details
    * @type {Bool} {@link Bool}
    */
   readonly allow_sms_retriever_api?: Bool$Input;
@@ -66455,6 +70947,34 @@ export type speechRecognitionResultError$Input = {
 };
 
 /**
+ * Contains a list of probable languages of speech
+ */
+export type speechRecognitionLanguages = {
+  _: "speechRecognitionLanguages";
+
+  /**
+   * IETF language tags of the languages in descending order of their probability; for example, "en-US"
+   * @type {vector<string>} {@link vector<string>}
+   */
+  language_codes: vector<string>;
+};
+
+/**
+ * Version of {@link speechRecognitionLanguages} for method parameters.
+ *
+ * Contains a list of probable languages of speech
+ */
+export type speechRecognitionLanguages$Input = {
+  readonly _: "speechRecognitionLanguages";
+
+  /**
+   * IETF language tags of the languages in descending order of their probability; for example, "en-US"
+   * @type {vector<string>} {@link vector<string>}
+   */
+  readonly language_codes?: vector$Input<string>;
+};
+
+/**
  * Describes a connection of the bot with a business account
  */
 export type businessConnection = {
@@ -67003,10 +71523,16 @@ export type userLink = {
   url: string;
 
   /**
-   * Left time for which the link is valid, in seconds; 0 if the link is a public username link
+   * Left time for which the link is valid, in seconds; 0 if the link is permanent
    * @type {int32} {@link int32}
    */
   expires_in: int32;
+
+  /**
+   * True, if a permanent link to the current user can be received; false if all links to the current user expire
+   * @type {Bool} {@link Bool}
+   */
+  can_get_permanent_link: Bool;
 };
 
 /**
@@ -67024,10 +71550,16 @@ export type userLink$Input = {
   readonly url?: string;
 
   /**
-   * Left time for which the link is valid, in seconds; 0 if the link is a public username link
+   * Left time for which the link is valid, in seconds; 0 if the link is permanent
    * @type {int32} {@link int32}
    */
   readonly expires_in?: int32;
+
+  /**
+   * True, if a permanent link to the current user can be received; false if all links to the current user expire
+   * @type {Bool} {@link Bool}
+   */
+  readonly can_get_permanent_link?: Bool$Input;
 };
 
 /**
@@ -67233,7 +71765,9 @@ export type inputInlineQueryResultAnimation = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageAnimation, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageAnimation, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -67308,7 +71842,9 @@ export type inputInlineQueryResultAnimation$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageAnimation, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageAnimation, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -67369,7 +71905,9 @@ export type inputInlineQueryResultArticle = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -67432,7 +71970,9 @@ export type inputInlineQueryResultArticle$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -67481,7 +72021,9 @@ export type inputInlineQueryResultAudio = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageAudio, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageAudio, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -67532,7 +72074,9 @@ export type inputInlineQueryResultAudio$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageAudio, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageAudio, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -67581,7 +72125,9 @@ export type inputInlineQueryResultContact = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -67632,7 +72178,9 @@ export type inputInlineQueryResultContact$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -67699,7 +72247,9 @@ export type inputInlineQueryResultDocument = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageDocument, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageDocument, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -67768,7 +72318,9 @@ export type inputInlineQueryResultDocument$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageDocument, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageDocument, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -67881,7 +72433,9 @@ export type inputInlineQueryResultLocation = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -67944,7 +72498,9 @@ export type inputInlineQueryResultLocation$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -68005,7 +72561,9 @@ export type inputInlineQueryResultPhoto = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessagePhoto, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessagePhoto, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -68068,7 +72626,9 @@ export type inputInlineQueryResultPhoto$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessagePhoto, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessagePhoto, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -68117,7 +72677,9 @@ export type inputInlineQueryResultSticker = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageSticker, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageSticker, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -68168,7 +72730,9 @@ export type inputInlineQueryResultSticker$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageSticker, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageSticker, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -68217,7 +72781,9 @@ export type inputInlineQueryResultVenue = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -68268,7 +72834,9 @@ export type inputInlineQueryResultVenue$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -68341,7 +72909,9 @@ export type inputInlineQueryResultVideo = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageVideo, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageVideo, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -68416,7 +72986,9 @@ export type inputInlineQueryResultVideo$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageVideo, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageVideo, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -68459,7 +73031,9 @@ export type inputInlineQueryResultVoiceNote = {
   reply_markup: ReplyMarkup | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageVoiceNote, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageVoiceNote, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   input_message_content: InputMessageContent;
@@ -68504,7 +73078,9 @@ export type inputInlineQueryResultVoiceNote$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage, inputMessageVoiceNote, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue or inputMessageContact
+   * The content of the message to be sent. Must be one of the following types: inputMessageText, inputMessageRichMessage,
+   *
+   * - inputMessageVoiceNote, inputMessageInvoice, inputMessageLiveLocation, inputMessageLocation, inputMessageVenue, inputMessageWidget, inputMessageSharedWidget, or inputMessageContact
    * @type {InputMessageContent} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -69596,6 +74172,246 @@ export type callbackQueryAnswer$Input = {
    * @type {string} {@link string}
    */
   readonly url?: string;
+};
+
+/**
+ * Describes a TON wallet of the user, who is used in a widget query
+ */
+export type widgetQueryWallet = {
+  _: "widgetQueryWallet";
+
+  /**
+   * Address of the wallet
+   * @type {string} {@link string}
+   */
+  address: string;
+
+  /**
+   * Balance of the wallet, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  gram_amount: int64;
+
+  /**
+   * Public key of the wallet; may be empty if unknown
+   * @type {bytes} {@link bytes}
+   */
+  public_key: bytes;
+
+  /**
+   * Serialized StateInit of the wallet contract; must be empty if and only if public_key is empty
+   * @type {bytes} {@link bytes}
+   */
+  state_init: bytes;
+};
+
+/**
+ * Version of {@link widgetQueryWallet} for method parameters.
+ *
+ * Describes a TON wallet of the user, who is used in a widget query
+ */
+export type widgetQueryWallet$Input = {
+  readonly _: "widgetQueryWallet";
+
+  /**
+   * Address of the wallet
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+
+  /**
+   * Balance of the wallet, in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly gram_amount?: int64$Input;
+
+  /**
+   * Public key of the wallet; may be empty if unknown
+   * @type {bytes} {@link bytes}
+   */
+  readonly public_key?: bytes$Input;
+
+  /**
+   * Serialized StateInit of the wallet contract; must be empty if and only if public_key is empty
+   * @type {bytes} {@link bytes}
+   */
+  readonly state_init?: bytes$Input;
+};
+
+/**
+ * The query contains data for the bot
+ */
+export type widgetQueryTypeData = {
+  _: "widgetQueryTypeData";
+
+  /**
+   * True, if the TON wallet card of the user who sends the query is sent to the bot along with the query
+   * @type {Bool} {@link Bool}
+   */
+  with_wallet: Bool;
+};
+
+/**
+ * Version of {@link widgetQueryTypeData} for method parameters.
+ *
+ * The query contains data for the bot
+ */
+export type widgetQueryTypeData$Input = {
+  readonly _: "widgetQueryTypeData";
+
+  /**
+   * True, if the TON wallet card of the user who sends the query is sent to the bot along with the query
+   * @type {Bool} {@link Bool}
+   */
+  readonly with_wallet?: Bool$Input;
+};
+
+/**
+ * The query contains data signed by a TON wallet of the user who sends the query
+ */
+export type widgetQueryTypeSignData = {
+  _: "widgetQueryTypeSignData";
+
+  /**
+   * The wallet that signed the data
+   * @type {widgetQueryWallet} {@link widgetQueryWallet}
+   */
+  wallet: widgetQueryWallet;
+
+  /**
+   * JSON-serialized signed data
+   * @type {string} {@link string}
+   */
+  sign_data: string;
+};
+
+/**
+ * Version of {@link widgetQueryTypeSignData} for method parameters.
+ *
+ * The query contains data signed by a TON wallet of the user who sends the query
+ */
+export type widgetQueryTypeSignData$Input = {
+  readonly _: "widgetQueryTypeSignData";
+
+  /**
+   * The wallet that signed the data
+   * @type {widgetQueryWallet} {@link widgetQueryWallet}
+   */
+  readonly wallet?: widgetQueryWallet$Input;
+
+  /**
+   * JSON-serialized signed data
+   * @type {string} {@link string}
+   */
+  readonly sign_data?: string;
+};
+
+/**
+ * The query notifies the bot about a transaction sent from a TON wallet of the user who sends the query
+ */
+export type widgetQueryTypeSentTransaction = {
+  _: "widgetQueryTypeSentTransaction";
+
+  /**
+   * The wallet from which the transaction was sent
+   * @type {widgetQueryWallet} {@link widgetQueryWallet}
+   */
+  wallet: widgetQueryWallet;
+
+  /**
+   * Value of msg_hash of the transaction
+   * @type {string} {@link string}
+   */
+  msg_hash: string;
+};
+
+/**
+ * Version of {@link widgetQueryTypeSentTransaction} for method parameters.
+ *
+ * The query notifies the bot about a transaction sent from a TON wallet of the user who sends the query
+ */
+export type widgetQueryTypeSentTransaction$Input = {
+  readonly _: "widgetQueryTypeSentTransaction";
+
+  /**
+   * The wallet from which the transaction was sent
+   * @type {widgetQueryWallet} {@link widgetQueryWallet}
+   */
+  readonly wallet?: widgetQueryWallet$Input;
+
+  /**
+   * Value of msg_hash of the transaction
+   * @type {string} {@link string}
+   */
+  readonly msg_hash?: string;
+};
+
+/**
+ * Contains an answer to a widget query
+ */
+export type widgetQueryAnswer = {
+  _: "widgetQueryAnswer";
+
+  /**
+   * Data returned by the bot
+   * @type {string} {@link string}
+   */
+  data: string;
+};
+
+/**
+ * Version of {@link widgetQueryAnswer} for method parameters.
+ *
+ * Contains an answer to a widget query
+ */
+export type widgetQueryAnswer$Input = {
+  readonly _: "widgetQueryAnswer";
+
+  /**
+   * Data returned by the bot
+   * @type {string} {@link string}
+   */
+  readonly data?: string;
+};
+
+/**
+ * Contains public data of a widget
+ */
+export type widgetPublicData = {
+  _: "widgetPublicData";
+
+  /**
+   * Public data of the widget
+   * @type {string} {@link string}
+   */
+  data: string;
+
+  /**
+   * The number of seconds after which the public data can be polled again
+   * @type {int32} {@link int32}
+   */
+  poll_period: int32;
+};
+
+/**
+ * Version of {@link widgetPublicData} for method parameters.
+ *
+ * Contains public data of a widget
+ */
+export type widgetPublicData$Input = {
+  readonly _: "widgetPublicData";
+
+  /**
+   * Public data of the widget
+   * @type {string} {@link string}
+   */
+  readonly data?: string;
+
+  /**
+   * The number of seconds after which the public data can be polled again
+   * @type {int32} {@link int32}
+   */
+  readonly poll_period?: int32;
 };
 
 /**
@@ -72883,7 +77699,7 @@ export type premiumFeatureForumTopicIcon$Input = {
 };
 
 /**
- * Allowed to set a premium application icons
+ * Allowed to set premium application icons
  */
 export type premiumFeatureAppIcons = {
   _: "premiumFeatureAppIcons";
@@ -72892,7 +77708,7 @@ export type premiumFeatureAppIcons = {
 /**
  * Version of {@link premiumFeatureAppIcons} for method parameters.
  *
- * Allowed to set a premium application icons
+ * Allowed to set premium application icons
  */
 export type premiumFeatureAppIcons$Input = {
   readonly _: "premiumFeatureAppIcons";
@@ -73335,7 +78151,7 @@ export type premiumStoryFeaturePriorityOrder$Input = {
 };
 
 /**
- * The ability to hide the fact that the user viewed other's stories
+ * The ability to hide the fact that the user viewed others' stories
  */
 export type premiumStoryFeatureStealthMode = {
   _: "premiumStoryFeatureStealthMode";
@@ -73344,7 +78160,7 @@ export type premiumStoryFeatureStealthMode = {
 /**
  * Version of {@link premiumStoryFeatureStealthMode} for method parameters.
  *
- * The ability to hide the fact that the user viewed other's stories
+ * The ability to hide the fact that the user viewed others' stories
  */
 export type premiumStoryFeatureStealthMode$Input = {
   readonly _: "premiumStoryFeatureStealthMode";
@@ -73383,7 +78199,7 @@ export type premiumStoryFeatureCustomExpirationDuration$Input = {
 };
 
 /**
- * The ability to save other's unprotected stories
+ * The ability to save others' unprotected stories
  */
 export type premiumStoryFeatureSaveStories = {
   _: "premiumStoryFeatureSaveStories";
@@ -73392,7 +78208,7 @@ export type premiumStoryFeatureSaveStories = {
 /**
  * Version of {@link premiumStoryFeatureSaveStories} for method parameters.
  *
- * The ability to save other's unprotected stories
+ * The ability to save others' unprotected stories
  */
 export type premiumStoryFeatureSaveStories$Input = {
   readonly _: "premiumStoryFeatureSaveStories";
@@ -73625,7 +78441,7 @@ export type premiumSourceBusinessFeature = {
   _: "premiumSourceBusinessFeature";
 
   /**
-   * The used feature; pass null if none specific feature was used
+   * The used feature; pass null if no specific feature was used
    * @type {BusinessFeature} {@link BusinessFeature}
    */
   feature: BusinessFeature | null;
@@ -73640,7 +78456,7 @@ export type premiumSourceBusinessFeature$Input = {
   readonly _: "premiumSourceBusinessFeature";
 
   /**
-   * The used feature; pass null if none specific feature was used
+   * The used feature; pass null if no specific feature was used
    * @type {BusinessFeature} {@link BusinessFeature}
    */
   readonly feature?: BusinessFeature$Input | null;
@@ -74643,7 +79459,9 @@ export type telegramPaymentPurposeStars = {
   star_count: int53;
 
   /**
-   * Identifier of the chat that is supposed to receive the Telegram Stars; pass 0 if none
+   * Identifier of the chat that is supposed to receive the Telegram Stars; pass 0 if none. If non-zero and getOption("star_top_up_disabled"),
+   *
+   * - then the payment isn't allowed and the user can't buy Telegram Stars in this place
    * @type {int53} {@link int53}
    */
   chat_id: int53;
@@ -74676,7 +79494,9 @@ export type telegramPaymentPurposeStars$Input = {
   readonly star_count?: int53;
 
   /**
-   * Identifier of the chat that is supposed to receive the Telegram Stars; pass 0 if none
+   * Identifier of the chat that is supposed to receive the Telegram Stars; pass 0 if none. If non-zero and getOption("star_top_up_disabled"),
+   *
+   * - then the payment isn't allowed and the user can't buy Telegram Stars in this place
    * @type {int53} {@link int53}
    */
   readonly chat_id?: int53;
@@ -75885,7 +80705,7 @@ export type inputChatThemeGift = {
   _: "inputChatThemeGift";
 
   /**
-   * Name of the upgraded gift. A gift can be used only in one chat in a time.
+   * Name of the upgraded gift. A gift can be used only in one chat at a time.
    *
    * - When the same gift is used in another chat, theme in the previous chat is reset to default
    * @type {string} {@link string}
@@ -75902,7 +80722,7 @@ export type inputChatThemeGift$Input = {
   readonly _: "inputChatThemeGift";
 
   /**
-   * Name of the upgraded gift. A gift can be used only in one chat in a time.
+   * Name of the upgraded gift. A gift can be used only in one chat at a time.
    *
    * - When the same gift is used in another chat, theme in the previous chat is reset to default
    * @type {string} {@link string}
@@ -77247,6 +82067,86 @@ export type pushMessageContentGiveaway$Input = {
 };
 
 /**
+ * A message with a TON wallet transfer
+ */
+export type pushMessageContentTonWalletTransfer = {
+  _: "pushMessageContentTonWalletTransfer";
+
+  /**
+   * Sender of the transfer; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  sender_user_id: int53;
+
+  /**
+   * String representation of the received amount
+   * @type {string} {@link string}
+   */
+  amount: string;
+
+  /**
+   * Comment added to the transaction if it is public
+   * @type {string} {@link string}
+   */
+  comment: string;
+};
+
+/**
+ * Version of {@link pushMessageContentTonWalletTransfer} for method parameters.
+ *
+ * A message with a TON wallet transfer
+ */
+export type pushMessageContentTonWalletTransfer$Input = {
+  readonly _: "pushMessageContentTonWalletTransfer";
+
+  /**
+   * Sender of the transfer; 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * String representation of the received amount
+   * @type {string} {@link string}
+   */
+  readonly amount?: string;
+
+  /**
+   * Comment added to the transaction if it is public
+   * @type {string} {@link string}
+   */
+  readonly comment?: string;
+};
+
+/**
+ * A message with a request from a dApp was received through TON Connect
+ */
+export type pushMessageContentTonConnectRequest = {
+  _: "pushMessageContentTonConnectRequest";
+
+  /**
+   * Name of the dApp; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  dapp_name: string;
+};
+
+/**
+ * Version of {@link pushMessageContentTonConnectRequest} for method parameters.
+ *
+ * A message with a request from a dApp was received through TON Connect
+ */
+export type pushMessageContentTonConnectRequest$Input = {
+  readonly _: "pushMessageContentTonConnectRequest";
+
+  /**
+   * Name of the dApp; may be empty if unknown
+   * @type {string} {@link string}
+   */
+  readonly dapp_name?: string;
+};
+
+/**
  * A message with a gift
  */
 export type pushMessageContentGift = {
@@ -78143,7 +83043,7 @@ export type pushMessageContentPollOptionAdded$Input = {
 };
 
 /**
- * A forwarded messages
+ * Forwarded messages
  */
 export type pushMessageContentMessageForwards = {
   _: "pushMessageContentMessageForwards";
@@ -78158,7 +83058,7 @@ export type pushMessageContentMessageForwards = {
 /**
  * Version of {@link pushMessageContentMessageForwards} for method parameters.
  *
- * A forwarded messages
+ * Forwarded messages
  */
 export type pushMessageContentMessageForwards$Input = {
   readonly _: "pushMessageContentMessageForwards";
@@ -79267,7 +84167,7 @@ export type userPrivacySettingRuleAllowUsers$Input = {
 };
 
 /**
- * A rule to allow all members of certain specified basic groups and supergroups to doing something
+ * A rule to allow all members of certain specified basic groups and supergroups to do something
  */
 export type userPrivacySettingRuleAllowChatMembers = {
   _: "userPrivacySettingRuleAllowChatMembers";
@@ -79282,7 +84182,7 @@ export type userPrivacySettingRuleAllowChatMembers = {
 /**
  * Version of {@link userPrivacySettingRuleAllowChatMembers} for method parameters.
  *
- * A rule to allow all members of certain specified basic groups and supergroups to doing something
+ * A rule to allow all members of certain specified basic groups and supergroups to do something
  */
 export type userPrivacySettingRuleAllowChatMembers$Input = {
   readonly _: "userPrivacySettingRuleAllowChatMembers";
@@ -79657,7 +84557,7 @@ export type readDatePrivacySettings = {
   _: "readDatePrivacySettings";
 
   /**
-   * True, if message read date is shown to other users in private chats. If false and the current user isn't a Telegram Premium user, then they will not be able to see other's message read date
+   * True, if message read date is shown to other users in private chats. If false and the current user isn't a Telegram Premium user, then they will not be able to see others' message read date
    * @type {Bool} {@link Bool}
    */
   show_read_date: Bool;
@@ -79672,7 +84572,7 @@ export type readDatePrivacySettings$Input = {
   readonly _: "readDatePrivacySettings";
 
   /**
-   * True, if message read date is shown to other users in private chats. If false and the current user isn't a Telegram Premium user, then they will not be able to see other's message read date
+   * True, if message read date is shown to other users in private chats. If false and the current user isn't a Telegram Premium user, then they will not be able to see others' message read date
    * @type {Bool} {@link Bool}
    */
   readonly show_read_date?: Bool$Input;
@@ -81821,7 +86721,7 @@ export type settingsSectionSendGift$Input = {
  *
  * - If the bot isn't added to attachment menu, then show a disclaimer about Mini Apps being third-party applications, ask the user to accept their Terms of service and confirm adding the bot to side and attachment menu.
  *
- * - If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
+ * - If the user accepts the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
  *
  * - If the attachment menu bot can't be used in the opened chat, show an error to the user. If the bot is added to attachment menu and can be used in the chat, then use openWebApp with the given URL
  */
@@ -81856,7 +86756,7 @@ export type internalLinkTypeAttachmentMenuBot = {
  *
  * - If the bot isn't added to attachment menu, then show a disclaimer about Mini Apps being third-party applications, ask the user to accept their Terms of service and confirm adding the bot to side and attachment menu.
  *
- * - If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
+ * - If the user accepts the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
  *
  * - If the attachment menu bot can't be used in the opened chat, show an error to the user. If the bot is added to attachment menu and can be used in the chat, then use openWebApp with the given URL
  */
@@ -82937,7 +87837,7 @@ export type internalLinkTypeNewStory$Input = {
 /**
  * The link is an OAuth link. Call getOauthLinkInfo with the given URL to process the link if the link was received from outside of the application; otherwise, ignore it.
  *
- * - After getOauthLinkInfo, show the user confirmation dialog and process it with checkOauthRequestMatchCode, acceptOauthRequest or declineOauthRequest
+ * - After getOauthLinkInfo, show the user confirmation dialog and process it with checkOauthRequestMatchCode, acceptOauthRequest, or declineOauthRequest
  */
 export type internalLinkTypeOauth = {
   _: "internalLinkTypeOauth";
@@ -82954,7 +87854,7 @@ export type internalLinkTypeOauth = {
  *
  * The link is an OAuth link. Call getOauthLinkInfo with the given URL to process the link if the link was received from outside of the application; otherwise, ignore it.
  *
- * - After getOauthLinkInfo, show the user confirmation dialog and process it with checkOauthRequestMatchCode, acceptOauthRequest or declineOauthRequest
+ * - After getOauthLinkInfo, show the user confirmation dialog and process it with checkOauthRequestMatchCode, acceptOauthRequest, or declineOauthRequest
  */
 export type internalLinkTypeOauth$Input = {
   readonly _: "internalLinkTypeOauth";
@@ -83233,6 +88133,14 @@ export type internalLinkTypePublicChat = {
    * @type {Bool} {@link Bool}
    */
   open_profile: Bool;
+
+  /**
+   * Token, which allows the current user to send unpaid messages; may be empty if none.
+   *
+   * - If the token isn't empty and the chat is a private chat with a regular user, then call applyUnpaidMessagesToken with the user and the token
+   * @type {string} {@link string}
+   */
+  unpaid_messages_token: string;
 };
 
 /**
@@ -83264,6 +88172,14 @@ export type internalLinkTypePublicChat$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly open_profile?: Bool$Input;
+
+  /**
+   * Token, which allows the current user to send unpaid messages; may be empty if none.
+   *
+   * - If the token isn't empty and the chat is a private chat with a regular user, then call applyUnpaidMessagesToken with the user and the token
+   * @type {string} {@link string}
+   */
+  readonly unpaid_messages_token?: string;
 };
 
 /**
@@ -83303,7 +88219,7 @@ export type internalLinkTypeRequestManagedBot = {
   manager_bot_username: string;
 
   /**
-   * Suggested username for the bot; always ends with "bot" case-insensitive
+   * Suggested username for the bot; always ends with "bot" or a string from updateAllowedBotUsernamePremiumSuffixes case-insensitive
    * @type {string} {@link string}
    */
   suggested_bot_username: string;
@@ -83334,7 +88250,7 @@ export type internalLinkTypeRequestManagedBot$Input = {
   readonly manager_bot_username?: string;
 
   /**
-   * Suggested username for the bot; always ends with "bot" case-insensitive
+   * Suggested username for the bot; always ends with "bot" or a string from updateAllowedBotUsernamePremiumSuffixes case-insensitive
    * @type {string} {@link string}
    */
   readonly suggested_bot_username?: string;
@@ -83651,6 +88567,134 @@ export type internalLinkTypeTheme$Input = {
 };
 
 /**
+ * The link is a universal TON Connect link
+ */
+export type internalLinkTypeTonConnect = {
+  _: "internalLinkTypeTonConnect";
+
+  /**
+   * TON Connect version
+   * @type {int32} {@link int32}
+   */
+  version: int32;
+
+  /**
+   * Hex-encoded public X25519 key of the dApp
+   * @type {string} {@link string}
+   */
+  dapp_client_id: string;
+
+  /**
+   * TON Connect connect request
+   * @type {tonConnectConnectRequest} {@link tonConnectConnectRequest}
+   */
+  connect_request: tonConnectConnectRequest;
+
+  /**
+   * Request return strategy; one of "back", "none", or a URL to open
+   * @type {string} {@link string}
+   */
+  return_strategy: string;
+
+  /**
+   * Embedded RPC request represented as base64url-encoded JSON
+   * @type {string} {@link string}
+   */
+  rpc_request: string;
+
+  /**
+   * Identifier to trace the connection request
+   * @type {string} {@link string}
+   */
+  trace_id: string;
+};
+
+/**
+ * Version of {@link internalLinkTypeTonConnect} for method parameters.
+ *
+ * The link is a universal TON Connect link
+ */
+export type internalLinkTypeTonConnect$Input = {
+  readonly _: "internalLinkTypeTonConnect";
+
+  /**
+   * TON Connect version
+   * @type {int32} {@link int32}
+   */
+  readonly version?: int32;
+
+  /**
+   * Hex-encoded public X25519 key of the dApp
+   * @type {string} {@link string}
+   */
+  readonly dapp_client_id?: string;
+
+  /**
+   * TON Connect connect request
+   * @type {tonConnectConnectRequest} {@link tonConnectConnectRequest}
+   */
+  readonly connect_request?: tonConnectConnectRequest$Input;
+
+  /**
+   * Request return strategy; one of "back", "none", or a URL to open
+   * @type {string} {@link string}
+   */
+  readonly return_strategy?: string;
+
+  /**
+   * Embedded RPC request represented as base64url-encoded JSON
+   * @type {string} {@link string}
+   */
+  readonly rpc_request?: string;
+
+  /**
+   * Identifier to trace the connection request
+   * @type {string} {@link string}
+   */
+  readonly trace_id?: string;
+};
+
+/**
+ * The link is a link for sending Grams from the user's TON wallet
+ */
+export type internalLinkTypeTonWalletTransfer = {
+  _: "internalLinkTypeTonWalletTransfer";
+
+  /**
+   * Chosen receiver of the transfer; may be null if none
+   * @type {TonWalletTransferReceiver} {@link TonWalletTransferReceiver}
+   */
+  receiver: TonWalletTransferReceiver | null;
+
+  /**
+   * The pre-filled amount of TON Grams to send; in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  gram_amount: int64;
+};
+
+/**
+ * Version of {@link internalLinkTypeTonWalletTransfer} for method parameters.
+ *
+ * The link is a link for sending Grams from the user's TON wallet
+ */
+export type internalLinkTypeTonWalletTransfer$Input = {
+  readonly _: "internalLinkTypeTonWalletTransfer";
+
+  /**
+   * Chosen receiver of the transfer; may be null if none
+   * @type {TonWalletTransferReceiver} {@link TonWalletTransferReceiver}
+   */
+  readonly receiver?: TonWalletTransferReceiver$Input | null;
+
+  /**
+   * The pre-filled amount of TON Grams to send; in the smallest units of the cryptocurrency
+   * @type {int64} {@link int64}
+   */
+  readonly gram_amount?: int64$Input;
+};
+
+/**
  * The link is an unknown tg: link. Call getDeepLinkInfo to process the link
  */
 export type internalLinkTypeUnknownDeepLink = {
@@ -83731,6 +88775,14 @@ export type internalLinkTypeUserPhoneNumber = {
    * @type {Bool} {@link Bool}
    */
   open_profile: Bool;
+
+  /**
+   * Token, which allows the current user to send unpaid messages to the user; may be empty if none.
+   *
+   * - If the token isn't empty and the user is found, then call applyUnpaidMessagesToken with the user and the token
+   * @type {string} {@link string}
+   */
+  unpaid_messages_token: string;
 };
 
 /**
@@ -83760,6 +88812,14 @@ export type internalLinkTypeUserPhoneNumber$Input = {
    * @type {Bool} {@link Bool}
    */
   readonly open_profile?: Bool$Input;
+
+  /**
+   * Token, which allows the current user to send unpaid messages to the user; may be empty if none.
+   *
+   * - If the token isn't empty and the user is found, then call applyUnpaidMessagesToken with the user and the token
+   * @type {string} {@link string}
+   */
+  readonly unpaid_messages_token?: string;
 };
 
 /**
@@ -83775,6 +88835,14 @@ export type internalLinkTypeUserToken = {
    * @type {string} {@link string}
    */
   token: string;
+
+  /**
+   * Token, which allows the current user to send unpaid messages to the user; may be empty if none.
+   *
+   * - If the token isn't empty and the user is found, then call applyUnpaidMessagesToken with the user and the token
+   * @type {string} {@link string}
+   */
+  unpaid_messages_token: string;
 };
 
 /**
@@ -83792,6 +88860,14 @@ export type internalLinkTypeUserToken$Input = {
    * @type {string} {@link string}
    */
   readonly token?: string;
+
+  /**
+   * Token, which allows the current user to send unpaid messages to the user; may be empty if none.
+   *
+   * - If the token isn't empty and the user is found, then call applyUnpaidMessagesToken with the user and the token
+   * @type {string} {@link string}
+   */
+  readonly unpaid_messages_token?: string;
 };
 
 /**
@@ -83853,7 +88929,7 @@ export type internalLinkTypeVideoChat$Input = {
  *
  * - If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being third-party applications instead of the dialog
  *
- * - and ask the user to accept their Terms of service. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
+ * - and ask the user to accept their Terms of service. If the user accepts the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
  *
  * - Then, call getWebAppLinkUrl and open the returned URL as a Web App
  */
@@ -83894,7 +88970,7 @@ export type internalLinkTypeWebApp = {
  *
  * - If the bot can be added to attachment or side menu, but isn't added yet, then show a disclaimer about Mini Apps being third-party applications instead of the dialog
  *
- * - and ask the user to accept their Terms of service. If the user accept the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
+ * - and ask the user to accept their Terms of service. If the user accepts the terms and confirms adding, then use toggleBotIsAddedToAttachmentMenu to add the bot.
  *
  * - Then, call getWebAppLinkUrl and open the returned URL as a Web App
  */
@@ -86267,6 +91343,22 @@ export type suggestedActionViewChecksHint$Input = {
 };
 
 /**
+ * Suggests the user to view a hint about receiving of the first TON wallet transfer
+ */
+export type suggestedActionViewFirstTonWalletTransferHint = {
+  _: "suggestedActionViewFirstTonWalletTransferHint";
+};
+
+/**
+ * Version of {@link suggestedActionViewFirstTonWalletTransferHint} for method parameters.
+ *
+ * Suggests the user to view a hint about receiving of the first TON wallet transfer
+ */
+export type suggestedActionViewFirstTonWalletTransferHint$Input = {
+  readonly _: "suggestedActionViewFirstTonWalletTransferHint";
+};
+
+/**
  * Suggests the user to convert specified supergroup to a broadcast group
  */
 export type suggestedActionConvertToBroadcastGroup = {
@@ -86947,6 +92039,54 @@ export type proxyTypeMtproto$Input = {
 };
 
 /**
+ * A web proxy server. MTProto traffic goes through an HTTPS relay page hosted by the application in a hidden web view; see updateWebProxyCarrierOpened.
+ *
+ * - The proxy server must be a domain name and the port must be 443
+ */
+export type proxyTypeWeb = {
+  _: "proxyTypeWeb";
+
+  /**
+   * Base path of the relay on the server, without leading and trailing slashes; may be empty. Consists of 0-128 characters;
+   *
+   * - each "/"-separated segment must match [A-Za-z0-9][A-Za-z0-9_-]*
+   * @type {string} {@link string}
+   */
+  path: string;
+
+  /**
+   * The MTProto proxy secret in hexadecimal encoding; must be 16 bytes long, optionally prefixed with the byte 0xdd
+   * @type {string} {@link string}
+   */
+  secret: string;
+};
+
+/**
+ * Version of {@link proxyTypeWeb} for method parameters.
+ *
+ * A web proxy server. MTProto traffic goes through an HTTPS relay page hosted by the application in a hidden web view; see updateWebProxyCarrierOpened.
+ *
+ * - The proxy server must be a domain name and the port must be 443
+ */
+export type proxyTypeWeb$Input = {
+  readonly _: "proxyTypeWeb";
+
+  /**
+   * Base path of the relay on the server, without leading and trailing slashes; may be empty. Consists of 0-128 characters;
+   *
+   * - each "/"-separated segment must match [A-Za-z0-9][A-Za-z0-9_-]*
+   * @type {string} {@link string}
+   */
+  readonly path?: string;
+
+  /**
+   * The MTProto proxy secret in hexadecimal encoding; must be 16 bytes long, optionally prefixed with the byte 0xdd
+   * @type {string} {@link string}
+   */
+  readonly secret?: string;
+};
+
+/**
  * Contains information about a proxy server added to the list of proxies
  */
 export type addedProxy = {
@@ -87048,6 +92188,278 @@ export type addedProxies$Input = {
    * @type {vector<addedProxy>} {@link vector<addedProxy>}
    */
   readonly proxies?: vector$Input<addedProxy$Input>;
+};
+
+/**
+ * Describes a web proxy carrier: an HTTPS relay page, which carries traffic of a web proxy and must be loaded by the application as the top-level document of a hidden web view.
+ *
+ * - Before loading the page, the application must arrange for an object named carrier.bridge_object_name to be defined in the top-level document whenever its origin is exactly carrier.origin,
+ *
+ * - and in no other document or frame. The object must be read-only and must have two members:
+ *
+ * - a method postMessage(value), which passes an ArrayBuffer or a typed array to processWebProxyCarrierMessage as webProxyCarrierMessageBinary, passes a string as webProxyCarrierMessageText,
+ *
+ * - and rejects any other value; and a property onmessage, which the page sets to a function. The application delivers data to the page by calling that function with an object {data: value},
+ *
+ * - where value is an ArrayBuffer for binary data and a string for text. Each carrier needs its own web view
+ */
+export type webProxyCarrier = {
+  _: "webProxyCarrier";
+
+  /**
+   * Unique identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  id: int32;
+
+  /**
+   * Identifier of the added proxy that uses the carrier; 0 if the carrier is used by pingProxy or testProxy
+   * @type {int32} {@link int32}
+   */
+  proxy_id: int32;
+
+  /**
+   * The HTTPS URL to load. The URL contains the capability for the proxy and a fragment, which must be kept; the URL must never be logged or shown to the user
+   * @type {string} {@link string}
+   */
+  url: string;
+
+  /**
+   * Origin of the relay page, for example, "https://proxy.example.com". The web view must not be allowed to navigate to another origin
+   * @type {string} {@link string}
+   */
+  origin: string;
+
+  /**
+   * The only path prefix on carrier.origin from which the page may load resources or to which it may send requests, for example, "/" or "/relay/"
+   * @type {string} {@link string}
+   */
+  path_prefix: string;
+
+  /**
+   * Name of the object to define in the top-level document; currently, always "TelegramWebProxy"
+   * @type {string} {@link string}
+   */
+  bridge_object_name: string;
+
+  /**
+   * True, if the carrier is needed only to test the proxy and will be closed after the test.
+   *
+   * - The application may refuse to open such carriers, for example, to avoid creating a web view for every saved proxy
+   * @type {Bool} {@link Bool}
+   */
+  is_temporary: Bool;
+};
+
+/**
+ * Version of {@link webProxyCarrier} for method parameters.
+ *
+ * Describes a web proxy carrier: an HTTPS relay page, which carries traffic of a web proxy and must be loaded by the application as the top-level document of a hidden web view.
+ *
+ * - Before loading the page, the application must arrange for an object named carrier.bridge_object_name to be defined in the top-level document whenever its origin is exactly carrier.origin,
+ *
+ * - and in no other document or frame. The object must be read-only and must have two members:
+ *
+ * - a method postMessage(value), which passes an ArrayBuffer or a typed array to processWebProxyCarrierMessage as webProxyCarrierMessageBinary, passes a string as webProxyCarrierMessageText,
+ *
+ * - and rejects any other value; and a property onmessage, which the page sets to a function. The application delivers data to the page by calling that function with an object {data: value},
+ *
+ * - where value is an ArrayBuffer for binary data and a string for text. Each carrier needs its own web view
+ */
+export type webProxyCarrier$Input = {
+  readonly _: "webProxyCarrier";
+
+  /**
+   * Unique identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  readonly id?: int32;
+
+  /**
+   * Identifier of the added proxy that uses the carrier; 0 if the carrier is used by pingProxy or testProxy
+   * @type {int32} {@link int32}
+   */
+  readonly proxy_id?: int32;
+
+  /**
+   * The HTTPS URL to load. The URL contains the capability for the proxy and a fragment, which must be kept; the URL must never be logged or shown to the user
+   * @type {string} {@link string}
+   */
+  readonly url?: string;
+
+  /**
+   * Origin of the relay page, for example, "https://proxy.example.com". The web view must not be allowed to navigate to another origin
+   * @type {string} {@link string}
+   */
+  readonly origin?: string;
+
+  /**
+   * The only path prefix on carrier.origin from which the page may load resources or to which it may send requests, for example, "/" or "/relay/"
+   * @type {string} {@link string}
+   */
+  readonly path_prefix?: string;
+
+  /**
+   * Name of the object to define in the top-level document; currently, always "TelegramWebProxy"
+   * @type {string} {@link string}
+   */
+  readonly bridge_object_name?: string;
+
+  /**
+   * True, if the carrier is needed only to test the proxy and will be closed after the test.
+   *
+   * - The application may refuse to open such carriers, for example, to avoid creating a web view for every saved proxy
+   * @type {Bool} {@link Bool}
+   */
+  readonly is_temporary?: Bool$Input;
+};
+
+/**
+ * A string message
+ */
+export type webProxyCarrierMessageText = {
+  _: "webProxyCarrierMessageText";
+
+  /**
+   * The string
+   * @type {string} {@link string}
+   */
+  text: string;
+};
+
+/**
+ * Version of {@link webProxyCarrierMessageText} for method parameters.
+ *
+ * A string message
+ */
+export type webProxyCarrierMessageText$Input = {
+  readonly _: "webProxyCarrierMessageText";
+
+  /**
+   * The string
+   * @type {string} {@link string}
+   */
+  readonly text?: string;
+};
+
+/**
+ * A binary message, passed as an ArrayBuffer or a typed array
+ */
+export type webProxyCarrierMessageBinary = {
+  _: "webProxyCarrierMessageBinary";
+
+  /**
+   * Data of the message
+   * @type {bytes} {@link bytes}
+   */
+  data: bytes;
+};
+
+/**
+ * Version of {@link webProxyCarrierMessageBinary} for method parameters.
+ *
+ * A binary message, passed as an ArrayBuffer or a typed array
+ */
+export type webProxyCarrierMessageBinary$Input = {
+  readonly _: "webProxyCarrierMessageBinary";
+
+  /**
+   * Data of the message
+   * @type {bytes} {@link bytes}
+   */
+  readonly data?: bytes$Input;
+};
+
+/**
+ * The application can't open the carrier, because the platform can't create hidden web views or define the bridge object; TDLib will not retry until the proxy is enabled again
+ */
+export type webProxyCarrierErrorUnsupported = {
+  _: "webProxyCarrierErrorUnsupported";
+};
+
+/**
+ * Version of {@link webProxyCarrierErrorUnsupported} for method parameters.
+ *
+ * The application can't open the carrier, because the platform can't create hidden web views or define the bridge object; TDLib will not retry until the proxy is enabled again
+ */
+export type webProxyCarrierErrorUnsupported$Input = {
+  readonly _: "webProxyCarrierErrorUnsupported";
+};
+
+/**
+ * The application can't open the carrier now, for example, because it is in the background; TDLib will request it again after the next call to setNetworkType or after a delay
+ */
+export type webProxyCarrierErrorPaused = {
+  _: "webProxyCarrierErrorPaused";
+};
+
+/**
+ * Version of {@link webProxyCarrierErrorPaused} for method parameters.
+ *
+ * The application can't open the carrier now, for example, because it is in the background; TDLib will request it again after the next call to setNetworkType or after a delay
+ */
+export type webProxyCarrierErrorPaused$Input = {
+  readonly _: "webProxyCarrierErrorPaused";
+};
+
+/**
+ * The page failed to load: a network, TLS, or HTTP error, or a forbidden navigation
+ */
+export type webProxyCarrierErrorLoadFailed = {
+  _: "webProxyCarrierErrorLoadFailed";
+
+  /**
+   * The error to be logged; must not contain the URL
+   * @type {string} {@link string}
+   */
+  message: string;
+};
+
+/**
+ * Version of {@link webProxyCarrierErrorLoadFailed} for method parameters.
+ *
+ * The page failed to load: a network, TLS, or HTTP error, or a forbidden navigation
+ */
+export type webProxyCarrierErrorLoadFailed$Input = {
+  readonly _: "webProxyCarrierErrorLoadFailed";
+
+  /**
+   * The error to be logged; must not contain the URL
+   * @type {string} {@link string}
+   */
+  readonly message?: string;
+};
+
+/**
+ * The web view or its renderer process was terminated, or passing data between the application and the page failed
+ */
+export type webProxyCarrierErrorTerminated = {
+  _: "webProxyCarrierErrorTerminated";
+};
+
+/**
+ * Version of {@link webProxyCarrierErrorTerminated} for method parameters.
+ *
+ * The web view or its renderer process was terminated, or passing data between the application and the page failed
+ */
+export type webProxyCarrierErrorTerminated$Input = {
+  readonly _: "webProxyCarrierErrorTerminated";
+};
+
+/**
+ * The application refused to open a temporary carrier
+ */
+export type webProxyCarrierErrorRefused = {
+  _: "webProxyCarrierErrorRefused";
+};
+
+/**
+ * Version of {@link webProxyCarrierErrorRefused} for method parameters.
+ *
+ * The application refused to open a temporary carrier
+ */
+export type webProxyCarrierErrorRefused$Input = {
+  readonly _: "webProxyCarrierErrorRefused";
 };
 
 /**
@@ -88113,7 +93525,7 @@ export type chatRevenueAmount = {
   available_amount: int64;
 
   /**
-   * True, if Telegram Stars can be withdrawn now or later
+   * True, if the cryptocurrency can be withdrawn now or later
    * @type {Bool} {@link Bool}
    */
   withdrawal_enabled: Bool;
@@ -88152,7 +93564,7 @@ export type chatRevenueAmount$Input = {
   readonly available_amount?: int64$Input;
 
   /**
-   * True, if Telegram Stars can be withdrawn now or later
+   * True, if the cryptocurrency can be withdrawn now or later
    * @type {Bool} {@link Bool}
    */
   readonly withdrawal_enabled?: Bool$Input;
@@ -88183,7 +93595,7 @@ export type chatRevenueStatistics = {
   revenue_amount: chatRevenueAmount;
 
   /**
-   * Current conversion rate of the cryptocurrency in which revenue is calculated to USD
+   * Current exchange rate of the cryptocurrency in which revenue is calculated to USD
    * @type {double} {@link double}
    */
   usd_rate: double;
@@ -88216,7 +93628,7 @@ export type chatRevenueStatistics$Input = {
   readonly revenue_amount?: chatRevenueAmount$Input;
 
   /**
-   * Current conversion rate of the cryptocurrency in which revenue is calculated to USD
+   * Current exchange rate of the cryptocurrency in which revenue is calculated to USD
    * @type {double} {@link double}
    */
   readonly usd_rate?: double;
@@ -88555,7 +93967,7 @@ export type chatRevenueTransactionTypeFragmentRefund$Input = {
 };
 
 /**
- * Contains a chat revenue transactions
+ * Contains a chat revenue transaction
  */
 export type chatRevenueTransaction = {
   _: "chatRevenueTransaction";
@@ -88582,7 +93994,7 @@ export type chatRevenueTransaction = {
 /**
  * Version of {@link chatRevenueTransaction} for method parameters.
  *
- * Contains a chat revenue transactions
+ * Contains a chat revenue transaction
  */
 export type chatRevenueTransaction$Input = {
   readonly _: "chatRevenueTransaction";
@@ -88753,7 +94165,7 @@ export type starRevenueStatistics = {
   status: starRevenueStatus;
 
   /**
-   * Current conversion rate of a Telegram Star to USD
+   * Current exchange rate of a Telegram Star to USD
    * @type {double} {@link double}
    */
   usd_rate: double;
@@ -88780,7 +94192,7 @@ export type starRevenueStatistics$Input = {
   readonly status?: starRevenueStatus$Input;
 
   /**
-   * Current conversion rate of a Telegram Star to USD
+   * Current exchange rate of a Telegram Star to USD
    * @type {double} {@link double}
    */
   readonly usd_rate?: double;
@@ -88869,7 +94281,7 @@ export type gramRevenueStatistics = {
   status: gramRevenueStatus;
 
   /**
-   * Current conversion rate of nanogram to USD cents
+   * Current exchange rate of nanogram to USD cents
    * @type {double} {@link double}
    */
   usd_rate: double;
@@ -88896,7 +94308,7 @@ export type gramRevenueStatistics$Input = {
   readonly status?: gramRevenueStatus$Input;
 
   /**
-   * Current conversion rate of nanogram to USD cents
+   * Current exchange rate of nanogram to USD cents
    * @type {double} {@link double}
    */
   readonly usd_rate?: double;
@@ -92367,7 +97779,9 @@ export type updateNotificationGroup$Input = {
 };
 
 /**
- * Contains active notifications that were shown on previous application launches. This update is sent only if the message database is used. In that case it comes once before any updateNotification and updateNotificationGroup update
+ * Contains active notifications that were shown on previous application launches. This update is sent only
+ *
+ * - if the message database is used. In that case it comes once before any updateNotification and updateNotificationGroup update
  */
 export type updateActiveNotifications = {
   _: "updateActiveNotifications";
@@ -92382,7 +97796,9 @@ export type updateActiveNotifications = {
 /**
  * Version of {@link updateActiveNotifications} for method parameters.
  *
- * Contains active notifications that were shown on previous application launches. This update is sent only if the message database is used. In that case it comes once before any updateNotification and updateNotificationGroup update
+ * Contains active notifications that were shown on previous application launches. This update is sent only
+ *
+ * - if the message database is used. In that case it comes once before any updateNotification and updateNotificationGroup update
  */
 export type updateActiveNotifications$Input = {
   readonly _: "updateActiveNotifications";
@@ -94591,6 +100007,34 @@ export type updateStoryStealthMode$Input = {
 };
 
 /**
+ * Lists of suffixes allowed in secondary bot usernames, which can be added additionally to the main username if the bot's owner has a Telegram Premium subscription
+ */
+export type updateAllowedBotUsernamePremiumSuffixes = {
+  _: "updateAllowedBotUsernamePremiumSuffixes";
+
+  /**
+   * The list of allowed suffixes
+   * @type {vector<string>} {@link vector<string>}
+   */
+  suffixes: vector<string>;
+};
+
+/**
+ * Version of {@link updateAllowedBotUsernamePremiumSuffixes} for method parameters.
+ *
+ * Lists of suffixes allowed in secondary bot usernames, which can be added additionally to the main username if the bot's owner has a Telegram Premium subscription
+ */
+export type updateAllowedBotUsernamePremiumSuffixes$Input = {
+  readonly _: "updateAllowedBotUsernamePremiumSuffixes";
+
+  /**
+   * The list of allowed suffixes
+   * @type {vector<string>} {@link vector<string>}
+   */
+  readonly suffixes?: vector$Input<string>;
+};
+
+/**
  * Lists of bots which Mini Apps must be allowed to read text from clipboard and must be opened without a warning
  */
 export type updateTrustedMiniAppBots = {
@@ -95151,6 +100595,114 @@ export type updateConnectionState$Input = {
 };
 
 /**
+ * A web proxy carrier must be opened as described in webProxyCarrier. Messages passed by the page to the bridge object must be passed to processWebProxyCarrierMessage.
+ *
+ * - Failures of the carrier must be reported with reportWebProxyCarrierError
+ */
+export type updateWebProxyCarrierOpened = {
+  _: "updateWebProxyCarrierOpened";
+
+  /**
+   * The carrier
+   * @type {webProxyCarrier} {@link webProxyCarrier}
+   */
+  carrier: webProxyCarrier;
+};
+
+/**
+ * Version of {@link updateWebProxyCarrierOpened} for method parameters.
+ *
+ * A web proxy carrier must be opened as described in webProxyCarrier. Messages passed by the page to the bridge object must be passed to processWebProxyCarrierMessage.
+ *
+ * - Failures of the carrier must be reported with reportWebProxyCarrierError
+ */
+export type updateWebProxyCarrierOpened$Input = {
+  readonly _: "updateWebProxyCarrierOpened";
+
+  /**
+   * The carrier
+   * @type {webProxyCarrier} {@link webProxyCarrier}
+   */
+  readonly carrier?: webProxyCarrier$Input;
+};
+
+/**
+ * Data must be delivered as an ArrayBuffer to the page of a web proxy carrier through the onmessage function of the bridge object, in the order of the updates
+ */
+export type updateWebProxyCarrierData = {
+  _: "updateWebProxyCarrierData";
+
+  /**
+   * Identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  carrier_id: int32;
+
+  /**
+   * The data to deliver
+   * @type {bytes} {@link bytes}
+   */
+  data: bytes;
+};
+
+/**
+ * Version of {@link updateWebProxyCarrierData} for method parameters.
+ *
+ * Data must be delivered as an ArrayBuffer to the page of a web proxy carrier through the onmessage function of the bridge object, in the order of the updates
+ */
+export type updateWebProxyCarrierData$Input = {
+  readonly _: "updateWebProxyCarrierData";
+
+  /**
+   * Identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  readonly carrier_id?: int32;
+
+  /**
+   * The data to deliver
+   * @type {bytes} {@link bytes}
+   */
+  readonly data?: bytes$Input;
+};
+
+/**
+ * A web proxy carrier must be closed. If the page has passed any message to the bridge object, then the application must deliver the string {"t":"close"} to the page,
+ *
+ * - so that it can end its relay session, and destroy the web view shortly after, for example, in 200 milliseconds; otherwise, the web view must be destroyed immediately.
+ *
+ * - Messages from the carrier received after this update must be ignored
+ */
+export type updateWebProxyCarrierClosed = {
+  _: "updateWebProxyCarrierClosed";
+
+  /**
+   * Identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  carrier_id: int32;
+};
+
+/**
+ * Version of {@link updateWebProxyCarrierClosed} for method parameters.
+ *
+ * A web proxy carrier must be closed. If the page has passed any message to the bridge object, then the application must deliver the string {"t":"close"} to the page,
+ *
+ * - so that it can end its relay session, and destroy the web view shortly after, for example, in 200 milliseconds; otherwise, the web view must be destroyed immediately.
+ *
+ * - Messages from the carrier received after this update must be ignored
+ */
+export type updateWebProxyCarrierClosed$Input = {
+  readonly _: "updateWebProxyCarrierClosed";
+
+  /**
+   * Identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  readonly carrier_id?: int32;
+};
+
+/**
  * The freeze state of the current user's account has changed
  */
 export type updateFreezeState = {
@@ -95509,7 +101061,7 @@ export type updateSavedMessagesTags = {
   _: "updateSavedMessagesTags";
 
   /**
-   * Identifier of Saved Messages topic which tags were changed; 0 if tags for the whole chat has changed
+   * Identifier of Saved Messages topic which tags were changed; 0 if tags for the whole chat have changed
    * @type {int53} {@link int53}
    */
   saved_messages_topic_id: int53;
@@ -95530,7 +101082,7 @@ export type updateSavedMessagesTags$Input = {
   readonly _: "updateSavedMessagesTags";
 
   /**
-   * Identifier of Saved Messages topic which tags were changed; 0 if tags for the whole chat has changed
+   * Identifier of Saved Messages topic which tags were changed; 0 if tags for the whole chat have changed
    * @type {int53} {@link int53}
    */
   readonly saved_messages_topic_id?: int53;
@@ -95624,6 +101176,118 @@ export type updateOwnedGramCount$Input = {
    * @type {int53} {@link int53}
    */
   readonly gram_amount?: int53;
+};
+
+/**
+ * The state of the TON wallet of the current user has changed
+ */
+export type updateTonWalletState = {
+  _: "updateTonWalletState";
+
+  /**
+   * The new state of the wallet
+   * @type {tonWalletState} {@link tonWalletState}
+   */
+  state: tonWalletState;
+};
+
+/**
+ * Version of {@link updateTonWalletState} for method parameters.
+ *
+ * The state of the TON wallet of the current user has changed
+ */
+export type updateTonWalletState$Input = {
+  readonly _: "updateTonWalletState";
+
+  /**
+   * The new state of the wallet
+   * @type {tonWalletState} {@link tonWalletState}
+   */
+  readonly state?: tonWalletState$Input;
+};
+
+/**
+ * The information about gasless transfers has changed
+ */
+export type updateTonWalletGaslessTransfersInfo = {
+  _: "updateTonWalletGaslessTransfersInfo";
+
+  /**
+   * The new information about gasless transfers
+   * @type {tonWalletGaslessTransfersInfo} {@link tonWalletGaslessTransfersInfo}
+   */
+  info: tonWalletGaslessTransfersInfo;
+};
+
+/**
+ * Version of {@link updateTonWalletGaslessTransfersInfo} for method parameters.
+ *
+ * The information about gasless transfers has changed
+ */
+export type updateTonWalletGaslessTransfersInfo$Input = {
+  readonly _: "updateTonWalletGaslessTransfersInfo";
+
+  /**
+   * The new information about gasless transfers
+   * @type {tonWalletGaslessTransfersInfo} {@link tonWalletGaslessTransfersInfo}
+   */
+  readonly info?: tonWalletGaslessTransfersInfo$Input;
+};
+
+/**
+ * A session of a TON Connect has changed
+ */
+export type updateTonWalletTonConnectSession = {
+  _: "updateTonWalletTonConnectSession";
+
+  /**
+   * The new state of the session
+   * @type {tonConnectSession} {@link tonConnectSession}
+   */
+  session: tonConnectSession;
+};
+
+/**
+ * Version of {@link updateTonWalletTonConnectSession} for method parameters.
+ *
+ * A session of a TON Connect has changed
+ */
+export type updateTonWalletTonConnectSession$Input = {
+  readonly _: "updateTonWalletTonConnectSession";
+
+  /**
+   * The new state of the session
+   * @type {tonConnectSession} {@link tonConnectSession}
+   */
+  readonly session?: tonConnectSession$Input;
+};
+
+/**
+ * TON Connect sessions must be disconnected in a regular way
+ */
+export type updateTonWalletTonConnectSessionDisconnectRequired = {
+  _: "updateTonWalletTonConnectSessionDisconnectRequired";
+
+  /**
+   * Identifiers of the sessions
+   * @type {vector<int64>} {@link vector<int64>}
+   */
+  session_ids: vector<int64>;
+};
+
+/**
+ * Version of {@link updateTonWalletTonConnectSessionDisconnectRequired} for method parameters.
+ *
+ * TON Connect sessions must be disconnected in a regular way
+ */
+export type updateTonWalletTonConnectSessionDisconnectRequired$Input = {
+  readonly _: "updateTonWalletTonConnectSessionDisconnectRequired";
+
+  /**
+   * Identifiers of the sessions
+   * @type {vector<int64>} {@link vector<int64>}
+   */
+  readonly session_ids?: vector$Input<int64$Input>;
 };
 
 /**
@@ -95796,6 +101460,46 @@ export type updateSpeechRecognitionTrial$Input = {
    * @type {int32} {@link int32}
    */
   readonly next_reset_date?: int32;
+};
+
+/**
+ * Speech in an audio file was partially recognized. The final result will be returned by the corresponding recognizeSpeechInFile request
+ */
+export type updateSpeechRecognitionInFile = {
+  _: "updateSpeechRecognitionInFile";
+
+  /**
+   * Identifier of the speech recognition as specified in recognizeSpeechInFile
+   * @type {int64} {@link int64}
+   */
+  recognition_id: int64;
+
+  /**
+   * Partially recognized text
+   * @type {string} {@link string}
+   */
+  partial_text: string;
+};
+
+/**
+ * Version of {@link updateSpeechRecognitionInFile} for method parameters.
+ *
+ * Speech in an audio file was partially recognized. The final result will be returned by the corresponding recognizeSpeechInFile request
+ */
+export type updateSpeechRecognitionInFile$Input = {
+  readonly _: "updateSpeechRecognitionInFile";
+
+  /**
+   * Identifier of the speech recognition as specified in recognizeSpeechInFile
+   * @type {int64} {@link int64}
+   */
+  readonly recognition_id?: int64$Input;
+
+  /**
+   * Partially recognized text
+   * @type {string} {@link string}
+   */
+  readonly partial_text?: string;
 };
 
 /**
@@ -96768,6 +102472,354 @@ export type updateNewBusinessCallbackQuery$Input = {
    * @type {CallbackQueryPayload} {@link CallbackQueryPayload}
    */
   readonly payload?: CallbackQueryPayload$Input;
+};
+
+/**
+ * A new incoming widget query; for bots only
+ */
+export type updateNewWidgetQuery = {
+  _: "updateNewWidgetQuery";
+
+  /**
+   * Unique query identifier
+   * @type {int64} {@link int64}
+   */
+  id: int64;
+
+  /**
+   * Identifier of the user who sent the query
+   * @type {int53} {@link int53}
+   */
+  sender_user_id: int53;
+
+  /**
+   * Identifier of the chat where the query was sent
+   * @type {int53} {@link int53}
+   */
+  chat_id: int53;
+
+  /**
+   * Identifier of the message from which the query originated
+   * @type {int53} {@link int53}
+   */
+  message_id: int53;
+
+  /**
+   * Identifier that uniquely corresponds to the chat to which the message was sent
+   * @type {int64} {@link int64}
+   */
+  chat_instance: int64;
+
+  /**
+   * Type of the chat to which the message was sent
+   * @type {string} {@link string}
+   */
+  chat_type: string;
+
+  /**
+   * Type of the query
+   * @type {WidgetQueryType} {@link WidgetQueryType}
+   */
+  query_type: WidgetQueryType;
+
+  /**
+   * Data of the query
+   * @type {bytes} {@link bytes}
+   */
+  data: bytes;
+
+  /**
+   * Identifier of the shared widget from which the query originated; 0 if the widget isn't shared
+   * @type {int64} {@link int64}
+   */
+  widget_id: int64;
+
+  /**
+   * TON wallet card of the user who sent the query; may be null if none
+   * @type {tonWalletCard} {@link tonWalletCard}
+   */
+  wallet_card: tonWalletCard | null;
+};
+
+/**
+ * Version of {@link updateNewWidgetQuery} for method parameters.
+ *
+ * A new incoming widget query; for bots only
+ */
+export type updateNewWidgetQuery$Input = {
+  readonly _: "updateNewWidgetQuery";
+
+  /**
+   * Unique query identifier
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
+
+  /**
+   * Identifier of the user who sent the query
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the chat where the query was sent
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the message from which the query originated
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Identifier that uniquely corresponds to the chat to which the message was sent
+   * @type {int64} {@link int64}
+   */
+  readonly chat_instance?: int64$Input;
+
+  /**
+   * Type of the chat to which the message was sent
+   * @type {string} {@link string}
+   */
+  readonly chat_type?: string;
+
+  /**
+   * Type of the query
+   * @type {WidgetQueryType} {@link WidgetQueryType}
+   */
+  readonly query_type?: WidgetQueryType$Input;
+
+  /**
+   * Data of the query
+   * @type {bytes} {@link bytes}
+   */
+  readonly data?: bytes$Input;
+
+  /**
+   * Identifier of the shared widget from which the query originated; 0 if the widget isn't shared
+   * @type {int64} {@link int64}
+   */
+  readonly widget_id?: int64$Input;
+
+  /**
+   * TON wallet card of the user who sent the query; may be null if none
+   * @type {tonWalletCard} {@link tonWalletCard}
+   */
+  readonly wallet_card?: tonWalletCard$Input | null;
+};
+
+/**
+ * A new incoming widget query from a message sent via a bot; for bots only
+ */
+export type updateNewInlineWidgetQuery = {
+  _: "updateNewInlineWidgetQuery";
+
+  /**
+   * Unique query identifier
+   * @type {int64} {@link int64}
+   */
+  id: int64;
+
+  /**
+   * Identifier of the user who sent the query
+   * @type {int53} {@link int53}
+   */
+  sender_user_id: int53;
+
+  /**
+   * Identifier of the inline message from which the query originated
+   * @type {string} {@link string}
+   */
+  inline_message_id: string;
+
+  /**
+   * Identifier that uniquely corresponds to the chat to which the message was sent
+   * @type {int64} {@link int64}
+   */
+  chat_instance: int64;
+
+  /**
+   * Type of the chat to which the message was sent
+   * @type {string} {@link string}
+   */
+  chat_type: string;
+
+  /**
+   * Type of the query
+   * @type {WidgetQueryType} {@link WidgetQueryType}
+   */
+  query_type: WidgetQueryType;
+
+  /**
+   * Data of the query
+   * @type {bytes} {@link bytes}
+   */
+  data: bytes;
+
+  /**
+   * Identifier of the shared widget from which the query originated; 0 if the widget isn't shared
+   * @type {int64} {@link int64}
+   */
+  widget_id: int64;
+
+  /**
+   * TON wallet card of the user who sent the query; may be null if none
+   * @type {tonWalletCard} {@link tonWalletCard}
+   */
+  wallet_card: tonWalletCard | null;
+};
+
+/**
+ * Version of {@link updateNewInlineWidgetQuery} for method parameters.
+ *
+ * A new incoming widget query from a message sent via a bot; for bots only
+ */
+export type updateNewInlineWidgetQuery$Input = {
+  readonly _: "updateNewInlineWidgetQuery";
+
+  /**
+   * Unique query identifier
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
+
+  /**
+   * Identifier of the user who sent the query
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Identifier of the inline message from which the query originated
+   * @type {string} {@link string}
+   */
+  readonly inline_message_id?: string;
+
+  /**
+   * Identifier that uniquely corresponds to the chat to which the message was sent
+   * @type {int64} {@link int64}
+   */
+  readonly chat_instance?: int64$Input;
+
+  /**
+   * Type of the chat to which the message was sent
+   * @type {string} {@link string}
+   */
+  readonly chat_type?: string;
+
+  /**
+   * Type of the query
+   * @type {WidgetQueryType} {@link WidgetQueryType}
+   */
+  readonly query_type?: WidgetQueryType$Input;
+
+  /**
+   * Data of the query
+   * @type {bytes} {@link bytes}
+   */
+  readonly data?: bytes$Input;
+
+  /**
+   * Identifier of the shared widget from which the query originated; 0 if the widget isn't shared
+   * @type {int64} {@link int64}
+   */
+  readonly widget_id?: int64$Input;
+
+  /**
+   * TON wallet card of the user who sent the query; may be null if none
+   * @type {tonWalletCard} {@link tonWalletCard}
+   */
+  readonly wallet_card?: tonWalletCard$Input | null;
+};
+
+/**
+ * A new incoming widget query from a copy of a shared widget; for bots only
+ */
+export type updateNewWidgetCopyQuery = {
+  _: "updateNewWidgetCopyQuery";
+
+  /**
+   * Unique query identifier
+   * @type {int64} {@link int64}
+   */
+  id: int64;
+
+  /**
+   * Identifier of the user who sent the query
+   * @type {int53} {@link int53}
+   */
+  sender_user_id: int53;
+
+  /**
+   * Type of the query
+   * @type {WidgetQueryType} {@link WidgetQueryType}
+   */
+  query_type: WidgetQueryType;
+
+  /**
+   * Data of the query
+   * @type {bytes} {@link bytes}
+   */
+  data: bytes;
+
+  /**
+   * Identifier of the shared widget from which the query originated
+   * @type {int64} {@link int64}
+   */
+  widget_id: int64;
+
+  /**
+   * TON wallet card of the user who sent the query; may be null if none
+   * @type {tonWalletCard} {@link tonWalletCard}
+   */
+  wallet_card: tonWalletCard | null;
+};
+
+/**
+ * Version of {@link updateNewWidgetCopyQuery} for method parameters.
+ *
+ * A new incoming widget query from a copy of a shared widget; for bots only
+ */
+export type updateNewWidgetCopyQuery$Input = {
+  readonly _: "updateNewWidgetCopyQuery";
+
+  /**
+   * Unique query identifier
+   * @type {int64} {@link int64}
+   */
+  readonly id?: int64$Input;
+
+  /**
+   * Identifier of the user who sent the query
+   * @type {int53} {@link int53}
+   */
+  readonly sender_user_id?: int53;
+
+  /**
+   * Type of the query
+   * @type {WidgetQueryType} {@link WidgetQueryType}
+   */
+  readonly query_type?: WidgetQueryType$Input;
+
+  /**
+   * Data of the query
+   * @type {bytes} {@link bytes}
+   */
+  readonly data?: bytes$Input;
+
+  /**
+   * Identifier of the shared widget from which the query originated
+   * @type {int64} {@link int64}
+   */
+  readonly widget_id?: int64$Input;
+
+  /**
+   * TON wallet card of the user who sent the query; may be null if none
+   * @type {tonWalletCard} {@link tonWalletCard}
+   */
+  readonly wallet_card?: tonWalletCard$Input | null;
 };
 
 /**
@@ -98322,6 +104374,32 @@ export type TextEntities = textEntities;
  * - {@link textEntities$Input}
  */
 export type TextEntities$Input = textEntities$Input;
+
+/**
+ * Any of:
+ * - {@link textRange}
+ */
+export type TextRange = textRange;
+
+/**
+ * Version of {@link TextRange} for method parameters.
+ * Any of:
+ * - {@link textRange$Input}
+ */
+export type TextRange$Input = textRange$Input;
+
+/**
+ * Any of:
+ * - {@link textRanges}
+ */
+export type TextRanges = textRanges;
+
+/**
+ * Version of {@link TextRanges} for method parameters.
+ * Any of:
+ * - {@link textRanges$Input}
+ */
+export type TextRanges$Input = textRanges$Input;
 
 /**
  * Any of:
@@ -100028,6 +106106,19 @@ export type WebAppOpenParameters$Input = webAppOpenParameters$Input;
 
 /**
  * Any of:
+ * - {@link areaPosition}
+ */
+export type AreaPosition = areaPosition;
+
+/**
+ * Version of {@link AreaPosition} for method parameters.
+ * Any of:
+ * - {@link areaPosition$Input}
+ */
+export type AreaPosition$Input = areaPosition$Input;
+
+/**
+ * Any of:
  * - {@link giftResalePriceStar}
  * - {@link giftResalePriceGram}
  */
@@ -100839,6 +106930,19 @@ export type UpgradedGiftValueInfo$Input = upgradedGiftValueInfo$Input;
 
 /**
  * Any of:
+ * - {@link upgradedGiftDepositInfo}
+ */
+export type UpgradedGiftDepositInfo = upgradedGiftDepositInfo;
+
+/**
+ * Version of {@link UpgradedGiftDepositInfo} for method parameters.
+ * Any of:
+ * - {@link upgradedGiftDepositInfo$Input}
+ */
+export type UpgradedGiftDepositInfo$Input = upgradedGiftDepositInfo$Input;
+
+/**
+ * Any of:
  * - {@link upgradeGiftResult}
  */
 export type UpgradeGiftResult = upgradeGiftResult;
@@ -101545,6 +107649,673 @@ export type TonTransactions$Input = tonTransactions$Input;
 
 /**
  * Any of:
+ * - {@link tonCenterApiRequestTypeGet}
+ * - {@link tonCenterApiRequestTypePost}
+ */
+export type TonCenterApiRequestType =
+  | tonCenterApiRequestTypeGet
+  | tonCenterApiRequestTypePost;
+
+/**
+ * Version of {@link TonCenterApiRequestType} for method parameters.
+ * Any of:
+ * - {@link tonCenterApiRequestTypeGet$Input}
+ * - {@link tonCenterApiRequestTypePost$Input}
+ */
+export type TonCenterApiRequestType$Input =
+  | tonCenterApiRequestTypeGet$Input
+  | tonCenterApiRequestTypePost$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletTransferReceiverUser}
+ * - {@link tonWalletTransferReceiverAddress}
+ */
+export type TonWalletTransferReceiver =
+  | tonWalletTransferReceiverUser
+  | tonWalletTransferReceiverAddress;
+
+/**
+ * Version of {@link TonWalletTransferReceiver} for method parameters.
+ * Any of:
+ * - {@link tonWalletTransferReceiverUser$Input}
+ * - {@link tonWalletTransferReceiverAddress$Input}
+ */
+export type TonWalletTransferReceiver$Input =
+  | tonWalletTransferReceiverUser$Input
+  | tonWalletTransferReceiverAddress$Input;
+
+/**
+ * Any of:
+ * - {@link tonCenterStreamingApiUrl}
+ */
+export type TonCenterStreamingApiUrl = tonCenterStreamingApiUrl;
+
+/**
+ * Version of {@link TonCenterStreamingApiUrl} for method parameters.
+ * Any of:
+ * - {@link tonCenterStreamingApiUrl$Input}
+ */
+export type TonCenterStreamingApiUrl$Input = tonCenterStreamingApiUrl$Input;
+
+/**
+ * Any of:
+ * - {@link walletBotBalance}
+ */
+export type WalletBotBalance = walletBotBalance;
+
+/**
+ * Version of {@link WalletBotBalance} for method parameters.
+ * Any of:
+ * - {@link walletBotBalance$Input}
+ */
+export type WalletBotBalance$Input = walletBotBalance$Input;
+
+/**
+ * Any of:
+ * - {@link userTonWalletAddress}
+ */
+export type UserTonWalletAddress = userTonWalletAddress;
+
+/**
+ * Version of {@link UserTonWalletAddress} for method parameters.
+ * Any of:
+ * - {@link userTonWalletAddress$Input}
+ */
+export type UserTonWalletAddress$Input = userTonWalletAddress$Input;
+
+/**
+ * Any of:
+ * - {@link userTonWalletAddresses}
+ */
+export type UserTonWalletAddresses = userTonWalletAddresses;
+
+/**
+ * Version of {@link UserTonWalletAddresses} for method parameters.
+ * Any of:
+ * - {@link userTonWalletAddresses$Input}
+ */
+export type UserTonWalletAddresses$Input = userTonWalletAddresses$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletOwnershipProofChallenge}
+ */
+export type TonWalletOwnershipProofChallenge = tonWalletOwnershipProofChallenge;
+
+/**
+ * Version of {@link TonWalletOwnershipProofChallenge} for method parameters.
+ * Any of:
+ * - {@link tonWalletOwnershipProofChallenge$Input}
+ */
+export type TonWalletOwnershipProofChallenge$Input =
+  tonWalletOwnershipProofChallenge$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletOwnershipProof}
+ */
+export type TonWalletOwnershipProof = tonWalletOwnershipProof;
+
+/**
+ * Version of {@link TonWalletOwnershipProof} for method parameters.
+ * Any of:
+ * - {@link tonWalletOwnershipProof$Input}
+ */
+export type TonWalletOwnershipProof$Input = tonWalletOwnershipProof$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletSecretPhrase}
+ */
+export type TonWalletSecretPhrase = tonWalletSecretPhrase;
+
+/**
+ * Version of {@link TonWalletSecretPhrase} for method parameters.
+ * Any of:
+ * - {@link tonWalletSecretPhrase$Input}
+ */
+export type TonWalletSecretPhrase$Input = tonWalletSecretPhrase$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletGaslessTransfersInfo}
+ */
+export type TonWalletGaslessTransfersInfo = tonWalletGaslessTransfersInfo;
+
+/**
+ * Version of {@link TonWalletGaslessTransfersInfo} for method parameters.
+ * Any of:
+ * - {@link tonWalletGaslessTransfersInfo$Input}
+ */
+export type TonWalletGaslessTransfersInfo$Input =
+  tonWalletGaslessTransfersInfo$Input;
+
+/**
+ * Any of:
+ * - {@link currencyExchangeRate}
+ */
+export type CurrencyExchangeRate = currencyExchangeRate;
+
+/**
+ * Version of {@link CurrencyExchangeRate} for method parameters.
+ * Any of:
+ * - {@link currencyExchangeRate$Input}
+ */
+export type CurrencyExchangeRate$Input = currencyExchangeRate$Input;
+
+/**
+ * Any of:
+ * - {@link currencyExchangeRates}
+ */
+export type CurrencyExchangeRates = currencyExchangeRates;
+
+/**
+ * Version of {@link CurrencyExchangeRates} for method parameters.
+ * Any of:
+ * - {@link currencyExchangeRates$Input}
+ */
+export type CurrencyExchangeRates$Input = currencyExchangeRates$Input;
+
+/**
+ * Any of:
+ * - {@link onRampProvider}
+ */
+export type OnRampProvider = onRampProvider;
+
+/**
+ * Version of {@link OnRampProvider} for method parameters.
+ * Any of:
+ * - {@link onRampProvider$Input}
+ */
+export type OnRampProvider$Input = onRampProvider$Input;
+
+/**
+ * Any of:
+ * - {@link onRampProviders}
+ */
+export type OnRampProviders = onRampProviders;
+
+/**
+ * Version of {@link OnRampProviders} for method parameters.
+ * Any of:
+ * - {@link onRampProviders$Input}
+ */
+export type OnRampProviders$Input = onRampProviders$Input;
+
+/**
+ * Any of:
+ * - {@link currencies}
+ */
+export type Currencies = currencies;
+
+/**
+ * Version of {@link Currencies} for method parameters.
+ * Any of:
+ * - {@link currencies$Input}
+ */
+export type Currencies$Input = currencies$Input;
+
+/**
+ * Any of:
+ * - {@link onRampPaymentMethod}
+ */
+export type OnRampPaymentMethod = onRampPaymentMethod;
+
+/**
+ * Version of {@link OnRampPaymentMethod} for method parameters.
+ * Any of:
+ * - {@link onRampPaymentMethod$Input}
+ */
+export type OnRampPaymentMethod$Input = onRampPaymentMethod$Input;
+
+/**
+ * Any of:
+ * - {@link onRampPaymentAvailability}
+ */
+export type OnRampPaymentAvailability = onRampPaymentAvailability;
+
+/**
+ * Version of {@link OnRampPaymentAvailability} for method parameters.
+ * Any of:
+ * - {@link onRampPaymentAvailability$Input}
+ */
+export type OnRampPaymentAvailability$Input = onRampPaymentAvailability$Input;
+
+/**
+ * Any of:
+ * - {@link onRampPaymentLimits}
+ */
+export type OnRampPaymentLimits = onRampPaymentLimits;
+
+/**
+ * Version of {@link OnRampPaymentLimits} for method parameters.
+ * Any of:
+ * - {@link onRampPaymentLimits$Input}
+ */
+export type OnRampPaymentLimits$Input = onRampPaymentLimits$Input;
+
+/**
+ * Any of:
+ * - {@link onRampPaymentQuote}
+ */
+export type OnRampPaymentQuote = onRampPaymentQuote;
+
+/**
+ * Version of {@link OnRampPaymentQuote} for method parameters.
+ * Any of:
+ * - {@link onRampPaymentQuote$Input}
+ */
+export type OnRampPaymentQuote$Input = onRampPaymentQuote$Input;
+
+/**
+ * Any of:
+ * - {@link onRampPaymentSession}
+ */
+export type OnRampPaymentSession = onRampPaymentSession;
+
+/**
+ * Version of {@link OnRampPaymentSession} for method parameters.
+ * Any of:
+ * - {@link onRampPaymentSession$Input}
+ */
+export type OnRampPaymentSession$Input = onRampPaymentSession$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletState}
+ */
+export type TonWalletState = tonWalletState;
+
+/**
+ * Version of {@link TonWalletState} for method parameters.
+ * Any of:
+ * - {@link tonWalletState$Input}
+ */
+export type TonWalletState$Input = tonWalletState$Input;
+
+/**
+ * Any of:
+ * - {@link tonNftAttribute}
+ */
+export type TonNftAttribute = tonNftAttribute;
+
+/**
+ * Version of {@link TonNftAttribute} for method parameters.
+ * Any of:
+ * - {@link tonNftAttribute$Input}
+ */
+export type TonNftAttribute$Input = tonNftAttribute$Input;
+
+/**
+ * Any of:
+ * - {@link tonNft}
+ */
+export type TonNft = tonNft;
+
+/**
+ * Version of {@link TonNft} for method parameters.
+ * Any of:
+ * - {@link tonNft$Input}
+ */
+export type TonNft$Input = tonNft$Input;
+
+/**
+ * Any of:
+ * - {@link tonNfts}
+ */
+export type TonNfts = tonNfts;
+
+/**
+ * Version of {@link TonNfts} for method parameters.
+ * Any of:
+ * - {@link tonNfts$Input}
+ */
+export type TonNfts$Input = tonNfts$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletCardSticker}
+ */
+export type TonWalletCardSticker = tonWalletCardSticker;
+
+/**
+ * Version of {@link TonWalletCardSticker} for method parameters.
+ * Any of:
+ * - {@link tonWalletCardSticker$Input}
+ */
+export type TonWalletCardSticker$Input = tonWalletCardSticker$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletCard}
+ */
+export type TonWalletCard = tonWalletCard;
+
+/**
+ * Version of {@link TonWalletCard} for method parameters.
+ * Any of:
+ * - {@link tonWalletCard$Input}
+ */
+export type TonWalletCard$Input = tonWalletCard$Input;
+
+/**
+ * Any of:
+ * - {@link inputTonWalletCardSticker}
+ */
+export type InputTonWalletCardSticker = inputTonWalletCardSticker;
+
+/**
+ * Version of {@link InputTonWalletCardSticker} for method parameters.
+ * Any of:
+ * - {@link inputTonWalletCardSticker$Input}
+ */
+export type InputTonWalletCardSticker$Input = inputTonWalletCardSticker$Input;
+
+/**
+ * Any of:
+ * - {@link upgradedGiftCollectionNames}
+ */
+export type UpgradedGiftCollectionNames = upgradedGiftCollectionNames;
+
+/**
+ * Version of {@link UpgradedGiftCollectionNames} for method parameters.
+ * Any of:
+ * - {@link upgradedGiftCollectionNames$Input}
+ */
+export type UpgradedGiftCollectionNames$Input = upgradedGiftCollectionNames$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletTransactionStateSucceeded}
+ * - {@link tonWalletTransactionStateFailed}
+ */
+export type TonWalletTransactionState =
+  | tonWalletTransactionStateSucceeded
+  | tonWalletTransactionStateFailed;
+
+/**
+ * Version of {@link TonWalletTransactionState} for method parameters.
+ * Any of:
+ * - {@link tonWalletTransactionStateSucceeded$Input}
+ * - {@link tonWalletTransactionStateFailed$Input}
+ */
+export type TonWalletTransactionState$Input =
+  | tonWalletTransactionStateSucceeded$Input
+  | tonWalletTransactionStateFailed$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletTransactionTypeOnRampDeposit}
+ * - {@link tonWalletTransactionTypeTransfer}
+ * - {@link tonWalletTransactionTypeNftTransfer}
+ * - {@link tonWalletTransactionTypeTelegramGiftTransfer}
+ * - {@link tonWalletTransactionTypeKeyChange}
+ */
+export type TonWalletTransactionType =
+  | tonWalletTransactionTypeOnRampDeposit
+  | tonWalletTransactionTypeTransfer
+  | tonWalletTransactionTypeNftTransfer
+  | tonWalletTransactionTypeTelegramGiftTransfer
+  | tonWalletTransactionTypeKeyChange;
+
+/**
+ * Version of {@link TonWalletTransactionType} for method parameters.
+ * Any of:
+ * - {@link tonWalletTransactionTypeOnRampDeposit$Input}
+ * - {@link tonWalletTransactionTypeTransfer$Input}
+ * - {@link tonWalletTransactionTypeNftTransfer$Input}
+ * - {@link tonWalletTransactionTypeTelegramGiftTransfer$Input}
+ * - {@link tonWalletTransactionTypeKeyChange$Input}
+ */
+export type TonWalletTransactionType$Input =
+  | tonWalletTransactionTypeOnRampDeposit$Input
+  | tonWalletTransactionTypeTransfer$Input
+  | tonWalletTransactionTypeNftTransfer$Input
+  | tonWalletTransactionTypeTelegramGiftTransfer$Input
+  | tonWalletTransactionTypeKeyChange$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletTransaction}
+ */
+export type TonWalletTransaction = tonWalletTransaction;
+
+/**
+ * Version of {@link TonWalletTransaction} for method parameters.
+ * Any of:
+ * - {@link tonWalletTransaction$Input}
+ */
+export type TonWalletTransaction$Input = tonWalletTransaction$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletTransactions}
+ */
+export type TonWalletTransactions = tonWalletTransactions;
+
+/**
+ * Version of {@link TonWalletTransactions} for method parameters.
+ * Any of:
+ * - {@link tonWalletTransactions$Input}
+ */
+export type TonWalletTransactions$Input = tonWalletTransactions$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectRequestStatePending}
+ * - {@link tonConnectRequestStateAccepted}
+ * - {@link tonConnectRequestStateRejected}
+ */
+export type TonConnectRequestState =
+  | tonConnectRequestStatePending
+  | tonConnectRequestStateAccepted
+  | tonConnectRequestStateRejected;
+
+/**
+ * Version of {@link TonConnectRequestState} for method parameters.
+ * Any of:
+ * - {@link tonConnectRequestStatePending$Input}
+ * - {@link tonConnectRequestStateAccepted$Input}
+ * - {@link tonConnectRequestStateRejected$Input}
+ */
+export type TonConnectRequestState$Input =
+  | tonConnectRequestStatePending$Input
+  | tonConnectRequestStateAccepted$Input
+  | tonConnectRequestStateRejected$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectManifestPending}
+ * - {@link tonConnectManifestInfo}
+ * - {@link tonConnectManifestFailed}
+ * - {@link tonConnectManifestInvalid}
+ */
+export type TonConnectManifest =
+  | tonConnectManifestPending
+  | tonConnectManifestInfo
+  | tonConnectManifestFailed
+  | tonConnectManifestInvalid;
+
+/**
+ * Version of {@link TonConnectManifest} for method parameters.
+ * Any of:
+ * - {@link tonConnectManifestPending$Input}
+ * - {@link tonConnectManifestInfo$Input}
+ * - {@link tonConnectManifestFailed$Input}
+ * - {@link tonConnectManifestInvalid$Input}
+ */
+export type TonConnectManifest$Input =
+  | tonConnectManifestPending$Input
+  | tonConnectManifestInfo$Input
+  | tonConnectManifestFailed$Input
+  | tonConnectManifestInvalid$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectSessionStatePending}
+ * - {@link tonConnectSessionStateReady}
+ * - {@link tonConnectSessionStateClosing}
+ * - {@link tonConnectSessionStateClosed}
+ */
+export type TonConnectSessionState =
+  | tonConnectSessionStatePending
+  | tonConnectSessionStateReady
+  | tonConnectSessionStateClosing
+  | tonConnectSessionStateClosed;
+
+/**
+ * Version of {@link TonConnectSessionState} for method parameters.
+ * Any of:
+ * - {@link tonConnectSessionStatePending$Input}
+ * - {@link tonConnectSessionStateReady$Input}
+ * - {@link tonConnectSessionStateClosing$Input}
+ * - {@link tonConnectSessionStateClosed$Input}
+ */
+export type TonConnectSessionState$Input =
+  | tonConnectSessionStatePending$Input
+  | tonConnectSessionStateReady$Input
+  | tonConnectSessionStateClosing$Input
+  | tonConnectSessionStateClosed$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectConnectItemAddress}
+ * - {@link tonConnectConnectItemProof}
+ */
+export type TonConnectConnectItem =
+  | tonConnectConnectItemAddress
+  | tonConnectConnectItemProof;
+
+/**
+ * Version of {@link TonConnectConnectItem} for method parameters.
+ * Any of:
+ * - {@link tonConnectConnectItemAddress$Input}
+ * - {@link tonConnectConnectItemProof$Input}
+ */
+export type TonConnectConnectItem$Input =
+  | tonConnectConnectItemAddress$Input
+  | tonConnectConnectItemProof$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectConnectRequest}
+ */
+export type TonConnectConnectRequest = tonConnectConnectRequest;
+
+/**
+ * Version of {@link TonConnectConnectRequest} for method parameters.
+ * Any of:
+ * - {@link tonConnectConnectRequest$Input}
+ */
+export type TonConnectConnectRequest$Input = tonConnectConnectRequest$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectConnectData}
+ */
+export type TonConnectConnectData = tonConnectConnectData;
+
+/**
+ * Version of {@link TonConnectConnectData} for method parameters.
+ * Any of:
+ * - {@link tonConnectConnectData$Input}
+ */
+export type TonConnectConnectData$Input = tonConnectConnectData$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectSession}
+ */
+export type TonConnectSession = tonConnectSession;
+
+/**
+ * Version of {@link TonConnectSession} for method parameters.
+ * Any of:
+ * - {@link tonConnectSession$Input}
+ */
+export type TonConnectSession$Input = tonConnectSession$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectSessions}
+ */
+export type TonConnectSessions = tonConnectSessions;
+
+/**
+ * Version of {@link TonConnectSessions} for method parameters.
+ * Any of:
+ * - {@link tonConnectSessions$Input}
+ */
+export type TonConnectSessions$Input = tonConnectSessions$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectRequest}
+ */
+export type TonConnectRequest = tonConnectRequest;
+
+/**
+ * Version of {@link TonConnectRequest} for method parameters.
+ * Any of:
+ * - {@link tonConnectRequest$Input}
+ */
+export type TonConnectRequest$Input = tonConnectRequest$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectRequests}
+ */
+export type TonConnectRequests = tonConnectRequests;
+
+/**
+ * Version of {@link TonConnectRequests} for method parameters.
+ * Any of:
+ * - {@link tonConnectRequests$Input}
+ */
+export type TonConnectRequests$Input = tonConnectRequests$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectChallenge}
+ */
+export type TonConnectChallenge = tonConnectChallenge;
+
+/**
+ * Version of {@link TonConnectChallenge} for method parameters.
+ * Any of:
+ * - {@link tonConnectChallenge$Input}
+ */
+export type TonConnectChallenge$Input = tonConnectChallenge$Input;
+
+/**
+ * Any of:
+ * - {@link tonConnectSessionEventId}
+ */
+export type TonConnectSessionEventId = tonConnectSessionEventId;
+
+/**
+ * Version of {@link TonConnectSessionEventId} for method parameters.
+ * Any of:
+ * - {@link tonConnectSessionEventId$Input}
+ */
+export type TonConnectSessionEventId$Input = tonConnectSessionEventId$Input;
+
+/**
+ * Any of:
+ * - {@link tonWalletTransferResult}
+ */
+export type TonWalletTransferResult = tonWalletTransferResult;
+
+/**
+ * Version of {@link TonWalletTransferResult} for method parameters.
+ * Any of:
+ * - {@link tonWalletTransferResult$Input}
+ */
+export type TonWalletTransferResult$Input = tonWalletTransferResult$Input;
+
+/**
+ * Any of:
  * - {@link activeStoryStateLive}
  * - {@link activeStoryStateUnread}
  * - {@link activeStoryStateRead}
@@ -101685,6 +108456,91 @@ export type ProfileAccentColor$Input = profileAccentColor$Input;
 
 /**
  * Any of:
+ * - {@link notificationSettingsScopePrivateChats}
+ * - {@link notificationSettingsScopeGroupChats}
+ * - {@link notificationSettingsScopeChannelChats}
+ */
+export type NotificationSettingsScope =
+  | notificationSettingsScopePrivateChats
+  | notificationSettingsScopeGroupChats
+  | notificationSettingsScopeChannelChats;
+
+/**
+ * Version of {@link NotificationSettingsScope} for method parameters.
+ * Any of:
+ * - {@link notificationSettingsScopePrivateChats$Input}
+ * - {@link notificationSettingsScopeGroupChats$Input}
+ * - {@link notificationSettingsScopeChannelChats$Input}
+ */
+export type NotificationSettingsScope$Input =
+  | notificationSettingsScopePrivateChats$Input
+  | notificationSettingsScopeGroupChats$Input
+  | notificationSettingsScopeChannelChats$Input;
+
+/**
+ * Any of:
+ * - {@link chatNotificationSettings}
+ */
+export type ChatNotificationSettings = chatNotificationSettings;
+
+/**
+ * Version of {@link ChatNotificationSettings} for method parameters.
+ * Any of:
+ * - {@link chatNotificationSettings$Input}
+ */
+export type ChatNotificationSettings$Input = chatNotificationSettings$Input;
+
+/**
+ * Any of:
+ * - {@link scopeNotificationSettings}
+ */
+export type ScopeNotificationSettings = scopeNotificationSettings;
+
+/**
+ * Version of {@link ScopeNotificationSettings} for method parameters.
+ * Any of:
+ * - {@link scopeNotificationSettings$Input}
+ */
+export type ScopeNotificationSettings$Input = scopeNotificationSettings$Input;
+
+/**
+ * Any of:
+ * - {@link reactionNotificationSourceNone}
+ * - {@link reactionNotificationSourceContacts}
+ * - {@link reactionNotificationSourceAll}
+ */
+export type ReactionNotificationSource =
+  | reactionNotificationSourceNone
+  | reactionNotificationSourceContacts
+  | reactionNotificationSourceAll;
+
+/**
+ * Version of {@link ReactionNotificationSource} for method parameters.
+ * Any of:
+ * - {@link reactionNotificationSourceNone$Input}
+ * - {@link reactionNotificationSourceContacts$Input}
+ * - {@link reactionNotificationSourceAll$Input}
+ */
+export type ReactionNotificationSource$Input =
+  | reactionNotificationSourceNone$Input
+  | reactionNotificationSourceContacts$Input
+  | reactionNotificationSourceAll$Input;
+
+/**
+ * Any of:
+ * - {@link reactionNotificationSettings}
+ */
+export type ReactionNotificationSettings = reactionNotificationSettings;
+
+/**
+ * Version of {@link ReactionNotificationSettings} for method parameters.
+ * Any of:
+ * - {@link reactionNotificationSettings$Input}
+ */
+export type ReactionNotificationSettings$Input = reactionNotificationSettings$Input;
+
+/**
+ * Any of:
  * - {@link communityId}
  */
 export type CommunityId = communityId;
@@ -101791,6 +108647,58 @@ export type CommunityFullInfo = communityFullInfo;
  * - {@link communityFullInfo$Input}
  */
 export type CommunityFullInfo$Input = communityFullInfo$Input;
+
+/**
+ * Any of:
+ * - {@link communities}
+ */
+export type Communities = communities;
+
+/**
+ * Version of {@link Communities} for method parameters.
+ * Any of:
+ * - {@link communities$Input}
+ */
+export type Communities$Input = communities$Input;
+
+/**
+ * Any of:
+ * - {@link communityAddChatRequest}
+ */
+export type CommunityAddChatRequest = communityAddChatRequest;
+
+/**
+ * Version of {@link CommunityAddChatRequest} for method parameters.
+ * Any of:
+ * - {@link communityAddChatRequest$Input}
+ */
+export type CommunityAddChatRequest$Input = communityAddChatRequest$Input;
+
+/**
+ * Any of:
+ * - {@link communityAddChatRequests}
+ */
+export type CommunityAddChatRequests = communityAddChatRequests;
+
+/**
+ * Version of {@link CommunityAddChatRequests} for method parameters.
+ * Any of:
+ * - {@link communityAddChatRequests$Input}
+ */
+export type CommunityAddChatRequests$Input = communityAddChatRequests$Input;
+
+/**
+ * Any of:
+ * - {@link communityMemberChats}
+ */
+export type CommunityMemberChats = communityMemberChats;
+
+/**
+ * Version of {@link CommunityMemberChats} for method parameters.
+ * Any of:
+ * - {@link communityMemberChats$Input}
+ */
+export type CommunityMemberChats$Input = communityMemberChats$Input;
 
 /**
  * Any of:
@@ -103329,91 +110237,6 @@ export type FoundFileDownloads$Input = foundFileDownloads$Input;
 
 /**
  * Any of:
- * - {@link notificationSettingsScopePrivateChats}
- * - {@link notificationSettingsScopeGroupChats}
- * - {@link notificationSettingsScopeChannelChats}
- */
-export type NotificationSettingsScope =
-  | notificationSettingsScopePrivateChats
-  | notificationSettingsScopeGroupChats
-  | notificationSettingsScopeChannelChats;
-
-/**
- * Version of {@link NotificationSettingsScope} for method parameters.
- * Any of:
- * - {@link notificationSettingsScopePrivateChats$Input}
- * - {@link notificationSettingsScopeGroupChats$Input}
- * - {@link notificationSettingsScopeChannelChats$Input}
- */
-export type NotificationSettingsScope$Input =
-  | notificationSettingsScopePrivateChats$Input
-  | notificationSettingsScopeGroupChats$Input
-  | notificationSettingsScopeChannelChats$Input;
-
-/**
- * Any of:
- * - {@link chatNotificationSettings}
- */
-export type ChatNotificationSettings = chatNotificationSettings;
-
-/**
- * Version of {@link ChatNotificationSettings} for method parameters.
- * Any of:
- * - {@link chatNotificationSettings$Input}
- */
-export type ChatNotificationSettings$Input = chatNotificationSettings$Input;
-
-/**
- * Any of:
- * - {@link scopeNotificationSettings}
- */
-export type ScopeNotificationSettings = scopeNotificationSettings;
-
-/**
- * Version of {@link ScopeNotificationSettings} for method parameters.
- * Any of:
- * - {@link scopeNotificationSettings$Input}
- */
-export type ScopeNotificationSettings$Input = scopeNotificationSettings$Input;
-
-/**
- * Any of:
- * - {@link reactionNotificationSourceNone}
- * - {@link reactionNotificationSourceContacts}
- * - {@link reactionNotificationSourceAll}
- */
-export type ReactionNotificationSource =
-  | reactionNotificationSourceNone
-  | reactionNotificationSourceContacts
-  | reactionNotificationSourceAll;
-
-/**
- * Version of {@link ReactionNotificationSource} for method parameters.
- * Any of:
- * - {@link reactionNotificationSourceNone$Input}
- * - {@link reactionNotificationSourceContacts$Input}
- * - {@link reactionNotificationSourceAll$Input}
- */
-export type ReactionNotificationSource$Input =
-  | reactionNotificationSourceNone$Input
-  | reactionNotificationSourceContacts$Input
-  | reactionNotificationSourceAll$Input;
-
-/**
- * Any of:
- * - {@link reactionNotificationSettings}
- */
-export type ReactionNotificationSettings = reactionNotificationSettings;
-
-/**
- * Version of {@link ReactionNotificationSettings} for method parameters.
- * Any of:
- * - {@link reactionNotificationSettings$Input}
- */
-export type ReactionNotificationSettings$Input = reactionNotificationSettings$Input;
-
-/**
- * Any of:
  * - {@link draftMessageContentText}
  * - {@link draftMessageContentRichMessage}
  * - {@link draftMessageContentInputRichMessage}
@@ -104298,6 +111121,85 @@ export type ThemeSettings$Input = themeSettings$Input;
 
 /**
  * Any of:
+ * - {@link profileShareThemeBackdrop}
+ */
+export type ProfileShareThemeBackdrop = profileShareThemeBackdrop;
+
+/**
+ * Version of {@link ProfileShareThemeBackdrop} for method parameters.
+ * Any of:
+ * - {@link profileShareThemeBackdrop$Input}
+ */
+export type ProfileShareThemeBackdrop$Input = profileShareThemeBackdrop$Input;
+
+/**
+ * Any of:
+ * - {@link profileShareThemeBackdrops}
+ */
+export type ProfileShareThemeBackdrops = profileShareThemeBackdrops;
+
+/**
+ * Version of {@link ProfileShareThemeBackdrops} for method parameters.
+ * Any of:
+ * - {@link profileShareThemeBackdrops$Input}
+ */
+export type ProfileShareThemeBackdrops$Input = profileShareThemeBackdrops$Input;
+
+/**
+ * Any of:
+ * - {@link emojiTypeRegular}
+ * - {@link emojiTypeCustomEmoji}
+ */
+export type EmojiType = emojiTypeRegular | emojiTypeCustomEmoji;
+
+/**
+ * Version of {@link EmojiType} for method parameters.
+ * Any of:
+ * - {@link emojiTypeRegular$Input}
+ * - {@link emojiTypeCustomEmoji$Input}
+ */
+export type EmojiType$Input = emojiTypeRegular$Input | emojiTypeCustomEmoji$Input;
+
+/**
+ * Any of:
+ * - {@link profileShareThemeEmoji}
+ * - {@link profileShareThemeUpgradedGift}
+ */
+export type ProfileShareTheme =
+  | profileShareThemeEmoji
+  | profileShareThemeUpgradedGift;
+
+/**
+ * Version of {@link ProfileShareTheme} for method parameters.
+ * Any of:
+ * - {@link profileShareThemeEmoji$Input}
+ * - {@link profileShareThemeUpgradedGift$Input}
+ */
+export type ProfileShareTheme$Input =
+  | profileShareThemeEmoji$Input
+  | profileShareThemeUpgradedGift$Input;
+
+/**
+ * Any of:
+ * - {@link inputProfileShareThemeEmoji}
+ * - {@link inputProfileShareThemeUpgradedGift}
+ */
+export type InputProfileShareTheme =
+  | inputProfileShareThemeEmoji
+  | inputProfileShareThemeUpgradedGift;
+
+/**
+ * Version of {@link InputProfileShareTheme} for method parameters.
+ * Any of:
+ * - {@link inputProfileShareThemeEmoji$Input}
+ * - {@link inputProfileShareThemeUpgradedGift$Input}
+ */
+export type InputProfileShareTheme$Input =
+  | inputProfileShareThemeEmoji$Input
+  | inputProfileShareThemeUpgradedGift$Input;
+
+/**
+ * Any of:
  * - {@link inlineButton}
  */
 export type InlineButton = inlineButton;
@@ -104325,6 +111227,7 @@ export type InlineButton$Input = inlineButton$Input;
  * - {@link richTextHashtag}
  * - {@link richTextCashtag}
  * - {@link richTextBankCardNumber}
+ * - {@link richTextTonAddress}
  * - {@link richTextBotCommand}
  * - {@link richTextFixed}
  * - {@link richTextMentionName}
@@ -104357,6 +111260,7 @@ export type RichText =
   | richTextHashtag
   | richTextCashtag
   | richTextBankCardNumber
+  | richTextTonAddress
   | richTextBotCommand
   | richTextFixed
   | richTextMentionName
@@ -104391,6 +111295,7 @@ export type RichText =
  * - {@link richTextHashtag$Input}
  * - {@link richTextCashtag$Input}
  * - {@link richTextBankCardNumber$Input}
+ * - {@link richTextTonAddress$Input}
  * - {@link richTextBotCommand$Input}
  * - {@link richTextFixed$Input}
  * - {@link richTextMentionName$Input}
@@ -104423,6 +111328,7 @@ export type RichText$Input =
   | richTextHashtag$Input
   | richTextCashtag$Input
   | richTextBankCardNumber$Input
+  | richTextTonAddress$Input
   | richTextBotCommand$Input
   | richTextFixed$Input
   | richTextMentionName$Input
@@ -105893,6 +112799,7 @@ export type PollMedia$Input =
  * - {@link messagePoll}
  * - {@link messageStakeDice}
  * - {@link messageStory}
+ * - {@link messageWidget}
  * - {@link messageChecklist}
  * - {@link messageInvoice}
  * - {@link messageCall}
@@ -105948,6 +112855,8 @@ export type PollMedia$Input =
  * - {@link messageGiftedStars}
  * - {@link messageGiftedGrams}
  * - {@link messageGiveawayPrizeStars}
+ * - {@link messageTonWalletTransfer}
+ * - {@link messageTonConnectRequest}
  * - {@link messageGift}
  * - {@link messageUpgradedGift}
  * - {@link messageRefundedUpgradedGift}
@@ -105956,6 +112865,7 @@ export type PollMedia$Input =
  * - {@link messagePaidMessagesRefunded}
  * - {@link messagePaidMessagePriceChanged}
  * - {@link messageDirectMessagePriceChanged}
+ * - {@link messageUnpaidMessagesAllowedByLink}
  * - {@link messageChecklistTasksDone}
  * - {@link messageChecklistTasksAdded}
  * - {@link messageSuggestedPostApprovalFailed}
@@ -106000,6 +112910,7 @@ export type MessageContent =
   | messagePoll
   | messageStakeDice
   | messageStory
+  | messageWidget
   | messageChecklist
   | messageInvoice
   | messageCall
@@ -106055,6 +112966,8 @@ export type MessageContent =
   | messageGiftedStars
   | messageGiftedGrams
   | messageGiveawayPrizeStars
+  | messageTonWalletTransfer
+  | messageTonConnectRequest
   | messageGift
   | messageUpgradedGift
   | messageRefundedUpgradedGift
@@ -106063,6 +112976,7 @@ export type MessageContent =
   | messagePaidMessagesRefunded
   | messagePaidMessagePriceChanged
   | messageDirectMessagePriceChanged
+  | messageUnpaidMessagesAllowedByLink
   | messageChecklistTasksDone
   | messageChecklistTasksAdded
   | messageSuggestedPostApprovalFailed
@@ -106109,6 +113023,7 @@ export type MessageContent =
  * - {@link messagePoll$Input}
  * - {@link messageStakeDice$Input}
  * - {@link messageStory$Input}
+ * - {@link messageWidget$Input}
  * - {@link messageChecklist$Input}
  * - {@link messageInvoice$Input}
  * - {@link messageCall$Input}
@@ -106164,6 +113079,8 @@ export type MessageContent =
  * - {@link messageGiftedStars$Input}
  * - {@link messageGiftedGrams$Input}
  * - {@link messageGiveawayPrizeStars$Input}
+ * - {@link messageTonWalletTransfer$Input}
+ * - {@link messageTonConnectRequest$Input}
  * - {@link messageGift$Input}
  * - {@link messageUpgradedGift$Input}
  * - {@link messageRefundedUpgradedGift$Input}
@@ -106172,6 +113089,7 @@ export type MessageContent =
  * - {@link messagePaidMessagesRefunded$Input}
  * - {@link messagePaidMessagePriceChanged$Input}
  * - {@link messageDirectMessagePriceChanged$Input}
+ * - {@link messageUnpaidMessagesAllowedByLink$Input}
  * - {@link messageChecklistTasksDone$Input}
  * - {@link messageChecklistTasksAdded$Input}
  * - {@link messageSuggestedPostApprovalFailed$Input}
@@ -106216,6 +113134,7 @@ export type MessageContent$Input =
   | messagePoll$Input
   | messageStakeDice$Input
   | messageStory$Input
+  | messageWidget$Input
   | messageChecklist$Input
   | messageInvoice$Input
   | messageCall$Input
@@ -106271,6 +113190,8 @@ export type MessageContent$Input =
   | messageGiftedStars$Input
   | messageGiftedGrams$Input
   | messageGiveawayPrizeStars$Input
+  | messageTonWalletTransfer$Input
+  | messageTonConnectRequest$Input
   | messageGift$Input
   | messageUpgradedGift$Input
   | messageRefundedUpgradedGift$Input
@@ -106279,6 +113200,7 @@ export type MessageContent$Input =
   | messagePaidMessagesRefunded$Input
   | messagePaidMessagePriceChanged$Input
   | messageDirectMessagePriceChanged$Input
+  | messageUnpaidMessagesAllowedByLink$Input
   | messageChecklistTasksDone$Input
   | messageChecklistTasksAdded$Input
   | messageSuggestedPostApprovalFailed$Input
@@ -106349,6 +113271,7 @@ export type DateTimeFormattingType$Input =
  * - {@link textEntityTypeEmailAddress}
  * - {@link textEntityTypePhoneNumber}
  * - {@link textEntityTypeBankCardNumber}
+ * - {@link textEntityTypeTonAddress}
  * - {@link textEntityTypeBold}
  * - {@link textEntityTypeItalic}
  * - {@link textEntityTypeUnderline}
@@ -106374,6 +113297,7 @@ export type TextEntityType =
   | textEntityTypeEmailAddress
   | textEntityTypePhoneNumber
   | textEntityTypeBankCardNumber
+  | textEntityTypeTonAddress
   | textEntityTypeBold
   | textEntityTypeItalic
   | textEntityTypeUnderline
@@ -106401,6 +113325,7 @@ export type TextEntityType =
  * - {@link textEntityTypeEmailAddress$Input}
  * - {@link textEntityTypePhoneNumber$Input}
  * - {@link textEntityTypeBankCardNumber$Input}
+ * - {@link textEntityTypeTonAddress$Input}
  * - {@link textEntityTypeBold$Input}
  * - {@link textEntityTypeItalic$Input}
  * - {@link textEntityTypeUnderline$Input}
@@ -106426,6 +113351,7 @@ export type TextEntityType$Input =
   | textEntityTypeEmailAddress$Input
   | textEntityTypePhoneNumber$Input
   | textEntityTypeBankCardNumber$Input
+  | textEntityTypeTonAddress$Input
   | textEntityTypeBold$Input
   | textEntityTypeItalic$Input
   | textEntityTypeUnderline$Input
@@ -106858,6 +113784,8 @@ export type InputPageBlock$Input =
  * - {@link inputMessageStakeDice}
  * - {@link inputMessageStory}
  * - {@link inputMessageChecklist}
+ * - {@link inputMessageWidget}
+ * - {@link inputMessageSharedWidget}
  * - {@link inputMessageForwarded}
  */
 export type InputMessageContent =
@@ -106883,6 +113811,8 @@ export type InputMessageContent =
   | inputMessageStakeDice
   | inputMessageStory
   | inputMessageChecklist
+  | inputMessageWidget
+  | inputMessageSharedWidget
   | inputMessageForwarded;
 
 /**
@@ -106910,6 +113840,8 @@ export type InputMessageContent =
  * - {@link inputMessageStakeDice$Input}
  * - {@link inputMessageStory$Input}
  * - {@link inputMessageChecklist$Input}
+ * - {@link inputMessageWidget$Input}
+ * - {@link inputMessageSharedWidget$Input}
  * - {@link inputMessageForwarded$Input}
  */
 export type InputMessageContent$Input =
@@ -106935,6 +113867,8 @@ export type InputMessageContent$Input =
   | inputMessageStakeDice$Input
   | inputMessageStory$Input
   | inputMessageChecklist$Input
+  | inputMessageWidget$Input
+  | inputMessageSharedWidget$Input
   | inputMessageForwarded$Input;
 
 /**
@@ -107393,19 +114327,6 @@ export type CurrentWeather$Input = currentWeather$Input;
 
 /**
  * Any of:
- * - {@link storyAreaPosition}
- */
-export type StoryAreaPosition = storyAreaPosition;
-
-/**
- * Version of {@link StoryAreaPosition} for method parameters.
- * Any of:
- * - {@link storyAreaPosition$Input}
- */
-export type StoryAreaPosition$Input = storyAreaPosition$Input;
-
-/**
- * Any of:
  * - {@link storyAreaTypeLocation}
  * - {@link storyAreaTypeVenue}
  * - {@link storyAreaTypeSuggestedReaction}
@@ -107459,7 +114380,6 @@ export type StoryArea$Input = storyArea$Input;
 /**
  * Any of:
  * - {@link inputStoryAreaTypeLocation}
- * - {@link inputStoryAreaTypeFoundVenue}
  * - {@link inputStoryAreaTypePreviousVenue}
  * - {@link inputStoryAreaTypeSuggestedReaction}
  * - {@link inputStoryAreaTypeMessage}
@@ -107469,7 +114389,6 @@ export type StoryArea$Input = storyArea$Input;
  */
 export type InputStoryAreaType =
   | inputStoryAreaTypeLocation
-  | inputStoryAreaTypeFoundVenue
   | inputStoryAreaTypePreviousVenue
   | inputStoryAreaTypeSuggestedReaction
   | inputStoryAreaTypeMessage
@@ -107481,7 +114400,6 @@ export type InputStoryAreaType =
  * Version of {@link InputStoryAreaType} for method parameters.
  * Any of:
  * - {@link inputStoryAreaTypeLocation$Input}
- * - {@link inputStoryAreaTypeFoundVenue$Input}
  * - {@link inputStoryAreaTypePreviousVenue$Input}
  * - {@link inputStoryAreaTypeSuggestedReaction$Input}
  * - {@link inputStoryAreaTypeMessage$Input}
@@ -107491,7 +114409,6 @@ export type InputStoryAreaType =
  */
 export type InputStoryAreaType$Input =
   | inputStoryAreaTypeLocation$Input
-  | inputStoryAreaTypeFoundVenue$Input
   | inputStoryAreaTypePreviousVenue$Input
   | inputStoryAreaTypeSuggestedReaction$Input
   | inputStoryAreaTypeMessage$Input
@@ -108759,6 +115676,19 @@ export type SpeechRecognitionResult$Input =
 
 /**
  * Any of:
+ * - {@link speechRecognitionLanguages}
+ */
+export type SpeechRecognitionLanguages = speechRecognitionLanguages;
+
+/**
+ * Version of {@link SpeechRecognitionLanguages} for method parameters.
+ * Any of:
+ * - {@link speechRecognitionLanguages$Input}
+ */
+export type SpeechRecognitionLanguages$Input = speechRecognitionLanguages$Input;
+
+/**
+ * Any of:
  * - {@link businessConnection}
  */
 export type BusinessConnection = businessConnection;
@@ -109122,6 +116052,68 @@ export type CallbackQueryAnswer = callbackQueryAnswer;
  * - {@link callbackQueryAnswer$Input}
  */
 export type CallbackQueryAnswer$Input = callbackQueryAnswer$Input;
+
+/**
+ * Any of:
+ * - {@link widgetQueryWallet}
+ */
+export type WidgetQueryWallet = widgetQueryWallet;
+
+/**
+ * Version of {@link WidgetQueryWallet} for method parameters.
+ * Any of:
+ * - {@link widgetQueryWallet$Input}
+ */
+export type WidgetQueryWallet$Input = widgetQueryWallet$Input;
+
+/**
+ * Any of:
+ * - {@link widgetQueryTypeData}
+ * - {@link widgetQueryTypeSignData}
+ * - {@link widgetQueryTypeSentTransaction}
+ */
+export type WidgetQueryType =
+  | widgetQueryTypeData
+  | widgetQueryTypeSignData
+  | widgetQueryTypeSentTransaction;
+
+/**
+ * Version of {@link WidgetQueryType} for method parameters.
+ * Any of:
+ * - {@link widgetQueryTypeData$Input}
+ * - {@link widgetQueryTypeSignData$Input}
+ * - {@link widgetQueryTypeSentTransaction$Input}
+ */
+export type WidgetQueryType$Input =
+  | widgetQueryTypeData$Input
+  | widgetQueryTypeSignData$Input
+  | widgetQueryTypeSentTransaction$Input;
+
+/**
+ * Any of:
+ * - {@link widgetQueryAnswer}
+ */
+export type WidgetQueryAnswer = widgetQueryAnswer;
+
+/**
+ * Version of {@link WidgetQueryAnswer} for method parameters.
+ * Any of:
+ * - {@link widgetQueryAnswer$Input}
+ */
+export type WidgetQueryAnswer$Input = widgetQueryAnswer$Input;
+
+/**
+ * Any of:
+ * - {@link widgetPublicData}
+ */
+export type WidgetPublicData = widgetPublicData;
+
+/**
+ * Version of {@link WidgetPublicData} for method parameters.
+ * Any of:
+ * - {@link widgetPublicData$Input}
+ */
+export type WidgetPublicData$Input = widgetPublicData$Input;
 
 /**
  * Any of:
@@ -110488,6 +117480,8 @@ export type MessageFileType$Input =
  * - {@link pushMessageContentPoll}
  * - {@link pushMessageContentPremiumGiftCode}
  * - {@link pushMessageContentGiveaway}
+ * - {@link pushMessageContentTonWalletTransfer}
+ * - {@link pushMessageContentTonConnectRequest}
  * - {@link pushMessageContentGift}
  * - {@link pushMessageContentUpgradedGift}
  * - {@link pushMessageContentScreenshotTaken}
@@ -110536,6 +117530,8 @@ export type PushMessageContent =
   | pushMessageContentPoll
   | pushMessageContentPremiumGiftCode
   | pushMessageContentGiveaway
+  | pushMessageContentTonWalletTransfer
+  | pushMessageContentTonConnectRequest
   | pushMessageContentGift
   | pushMessageContentUpgradedGift
   | pushMessageContentScreenshotTaken
@@ -110586,6 +117582,8 @@ export type PushMessageContent =
  * - {@link pushMessageContentPoll$Input}
  * - {@link pushMessageContentPremiumGiftCode$Input}
  * - {@link pushMessageContentGiveaway$Input}
+ * - {@link pushMessageContentTonWalletTransfer$Input}
+ * - {@link pushMessageContentTonConnectRequest$Input}
  * - {@link pushMessageContentGift$Input}
  * - {@link pushMessageContentUpgradedGift$Input}
  * - {@link pushMessageContentScreenshotTaken$Input}
@@ -110634,6 +117632,8 @@ export type PushMessageContent$Input =
   | pushMessageContentPoll$Input
   | pushMessageContentPremiumGiftCode$Input
   | pushMessageContentGiveaway$Input
+  | pushMessageContentTonWalletTransfer$Input
+  | pushMessageContentTonConnectRequest$Input
   | pushMessageContentGift$Input
   | pushMessageContentUpgradedGift$Input
   | pushMessageContentScreenshotTaken$Input
@@ -111511,6 +118511,8 @@ export type SettingsSection$Input =
  * - {@link internalLinkTypeStoryAlbum}
  * - {@link internalLinkTypeTextCompositionStyle}
  * - {@link internalLinkTypeTheme}
+ * - {@link internalLinkTypeTonConnect}
+ * - {@link internalLinkTypeTonWalletTransfer}
  * - {@link internalLinkTypeUnknownDeepLink}
  * - {@link internalLinkTypeUpgradedGift}
  * - {@link internalLinkTypeUserPhoneNumber}
@@ -111570,6 +118572,8 @@ export type InternalLinkType =
   | internalLinkTypeStoryAlbum
   | internalLinkTypeTextCompositionStyle
   | internalLinkTypeTheme
+  | internalLinkTypeTonConnect
+  | internalLinkTypeTonWalletTransfer
   | internalLinkTypeUnknownDeepLink
   | internalLinkTypeUpgradedGift
   | internalLinkTypeUserPhoneNumber
@@ -111631,6 +118635,8 @@ export type InternalLinkType =
  * - {@link internalLinkTypeStoryAlbum$Input}
  * - {@link internalLinkTypeTextCompositionStyle$Input}
  * - {@link internalLinkTypeTheme$Input}
+ * - {@link internalLinkTypeTonConnect$Input}
+ * - {@link internalLinkTypeTonWalletTransfer$Input}
  * - {@link internalLinkTypeUnknownDeepLink$Input}
  * - {@link internalLinkTypeUpgradedGift$Input}
  * - {@link internalLinkTypeUserPhoneNumber$Input}
@@ -111690,6 +118696,8 @@ export type InternalLinkType$Input =
   | internalLinkTypeStoryAlbum$Input
   | internalLinkTypeTextCompositionStyle$Input
   | internalLinkTypeTheme$Input
+  | internalLinkTypeTonConnect$Input
+  | internalLinkTypeTonWalletTransfer$Input
   | internalLinkTypeUnknownDeepLink$Input
   | internalLinkTypeUpgradedGift$Input
   | internalLinkTypeUserPhoneNumber$Input
@@ -112314,6 +119322,7 @@ export type TMeUrls$Input = tMeUrls$Input;
  * - {@link suggestedActionCheckPassword}
  * - {@link suggestedActionCheckPhoneNumber}
  * - {@link suggestedActionViewChecksHint}
+ * - {@link suggestedActionViewFirstTonWalletTransferHint}
  * - {@link suggestedActionConvertToBroadcastGroup}
  * - {@link suggestedActionSetPassword}
  * - {@link suggestedActionUpgradePremium}
@@ -112333,6 +119342,7 @@ export type SuggestedAction =
   | suggestedActionCheckPassword
   | suggestedActionCheckPhoneNumber
   | suggestedActionViewChecksHint
+  | suggestedActionViewFirstTonWalletTransferHint
   | suggestedActionConvertToBroadcastGroup
   | suggestedActionSetPassword
   | suggestedActionUpgradePremium
@@ -112354,6 +119364,7 @@ export type SuggestedAction =
  * - {@link suggestedActionCheckPassword$Input}
  * - {@link suggestedActionCheckPhoneNumber$Input}
  * - {@link suggestedActionViewChecksHint$Input}
+ * - {@link suggestedActionViewFirstTonWalletTransferHint$Input}
  * - {@link suggestedActionConvertToBroadcastGroup$Input}
  * - {@link suggestedActionSetPassword$Input}
  * - {@link suggestedActionUpgradePremium$Input}
@@ -112373,6 +119384,7 @@ export type SuggestedAction$Input =
   | suggestedActionCheckPassword$Input
   | suggestedActionCheckPhoneNumber$Input
   | suggestedActionViewChecksHint$Input
+  | suggestedActionViewFirstTonWalletTransferHint$Input
   | suggestedActionConvertToBroadcastGroup$Input
   | suggestedActionSetPassword$Input
   | suggestedActionUpgradePremium$Input
@@ -112500,8 +119512,13 @@ export type TextParseMode$Input =
  * - {@link proxyTypeSocks5}
  * - {@link proxyTypeHttp}
  * - {@link proxyTypeMtproto}
+ * - {@link proxyTypeWeb}
  */
-export type ProxyType = proxyTypeSocks5 | proxyTypeHttp | proxyTypeMtproto;
+export type ProxyType =
+  | proxyTypeSocks5
+  | proxyTypeHttp
+  | proxyTypeMtproto
+  | proxyTypeWeb;
 
 /**
  * Version of {@link ProxyType} for method parameters.
@@ -112509,11 +119526,13 @@ export type ProxyType = proxyTypeSocks5 | proxyTypeHttp | proxyTypeMtproto;
  * - {@link proxyTypeSocks5$Input}
  * - {@link proxyTypeHttp$Input}
  * - {@link proxyTypeMtproto$Input}
+ * - {@link proxyTypeWeb$Input}
  */
 export type ProxyType$Input =
   | proxyTypeSocks5$Input
   | proxyTypeHttp$Input
-  | proxyTypeMtproto$Input;
+  | proxyTypeMtproto$Input
+  | proxyTypeWeb$Input;
 
 /**
  * Any of:
@@ -112540,6 +119559,69 @@ export type AddedProxies = addedProxies;
  * - {@link addedProxies$Input}
  */
 export type AddedProxies$Input = addedProxies$Input;
+
+/**
+ * Any of:
+ * - {@link webProxyCarrier}
+ */
+export type WebProxyCarrier = webProxyCarrier;
+
+/**
+ * Version of {@link WebProxyCarrier} for method parameters.
+ * Any of:
+ * - {@link webProxyCarrier$Input}
+ */
+export type WebProxyCarrier$Input = webProxyCarrier$Input;
+
+/**
+ * Any of:
+ * - {@link webProxyCarrierMessageText}
+ * - {@link webProxyCarrierMessageBinary}
+ */
+export type WebProxyCarrierMessage =
+  | webProxyCarrierMessageText
+  | webProxyCarrierMessageBinary;
+
+/**
+ * Version of {@link WebProxyCarrierMessage} for method parameters.
+ * Any of:
+ * - {@link webProxyCarrierMessageText$Input}
+ * - {@link webProxyCarrierMessageBinary$Input}
+ */
+export type WebProxyCarrierMessage$Input =
+  | webProxyCarrierMessageText$Input
+  | webProxyCarrierMessageBinary$Input;
+
+/**
+ * Any of:
+ * - {@link webProxyCarrierErrorUnsupported}
+ * - {@link webProxyCarrierErrorPaused}
+ * - {@link webProxyCarrierErrorLoadFailed}
+ * - {@link webProxyCarrierErrorTerminated}
+ * - {@link webProxyCarrierErrorRefused}
+ */
+export type WebProxyCarrierError =
+  | webProxyCarrierErrorUnsupported
+  | webProxyCarrierErrorPaused
+  | webProxyCarrierErrorLoadFailed
+  | webProxyCarrierErrorTerminated
+  | webProxyCarrierErrorRefused;
+
+/**
+ * Version of {@link WebProxyCarrierError} for method parameters.
+ * Any of:
+ * - {@link webProxyCarrierErrorUnsupported$Input}
+ * - {@link webProxyCarrierErrorPaused$Input}
+ * - {@link webProxyCarrierErrorLoadFailed$Input}
+ * - {@link webProxyCarrierErrorTerminated$Input}
+ * - {@link webProxyCarrierErrorRefused$Input}
+ */
+export type WebProxyCarrierError$Input =
+  | webProxyCarrierErrorUnsupported$Input
+  | webProxyCarrierErrorPaused$Input
+  | webProxyCarrierErrorLoadFailed$Input
+  | webProxyCarrierErrorTerminated$Input
+  | webProxyCarrierErrorRefused$Input;
 
 /**
  * Any of:
@@ -113109,6 +120191,7 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateChatActiveStories}
  * - {@link updateStoryListChatCount}
  * - {@link updateStoryStealthMode}
+ * - {@link updateAllowedBotUsernamePremiumSuffixes}
  * - {@link updateTrustedMiniAppBots}
  * - {@link updateOption}
  * - {@link updateStickerSet}
@@ -113125,6 +120208,9 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateWebBrowserSettings}
  * - {@link updateLanguagePackStrings}
  * - {@link updateConnectionState}
+ * - {@link updateWebProxyCarrierOpened}
+ * - {@link updateWebProxyCarrierData}
+ * - {@link updateWebProxyCarrierClosed}
  * - {@link updateFreezeState}
  * - {@link updateAgeVerificationParameters}
  * - {@link updateTermsOfService}
@@ -113139,10 +120225,15 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateActiveLiveLocationMessages}
  * - {@link updateOwnedStarCount}
  * - {@link updateOwnedGramCount}
+ * - {@link updateTonWalletState}
+ * - {@link updateTonWalletGaslessTransfersInfo}
+ * - {@link updateTonWalletTonConnectSession}
+ * - {@link updateTonWalletTonConnectSessionDisconnectRequired}
  * - {@link updateChatRevenueAmount}
  * - {@link updateStarRevenueStatus}
  * - {@link updateGramRevenueStatus}
  * - {@link updateSpeechRecognitionTrial}
+ * - {@link updateSpeechRecognitionInFile}
  * - {@link updateGroupCallMessageLevels}
  * - {@link updateDiceEmojis}
  * - {@link updateStakeDiceState}
@@ -113163,6 +120254,9 @@ export type PhoneNumberCodeType$Input =
  * - {@link updateNewCallbackQuery}
  * - {@link updateNewInlineCallbackQuery}
  * - {@link updateNewBusinessCallbackQuery}
+ * - {@link updateNewWidgetQuery}
+ * - {@link updateNewInlineWidgetQuery}
+ * - {@link updateNewWidgetCopyQuery}
  * - {@link updateNewShippingQuery}
  * - {@link updateNewPreCheckoutQuery}
  * - {@link updateNewCustomEvent}
@@ -113300,6 +120394,7 @@ export type Update =
   | updateChatActiveStories
   | updateStoryListChatCount
   | updateStoryStealthMode
+  | updateAllowedBotUsernamePremiumSuffixes
   | updateTrustedMiniAppBots
   | updateOption
   | updateStickerSet
@@ -113316,6 +120411,9 @@ export type Update =
   | updateWebBrowserSettings
   | updateLanguagePackStrings
   | updateConnectionState
+  | updateWebProxyCarrierOpened
+  | updateWebProxyCarrierData
+  | updateWebProxyCarrierClosed
   | updateFreezeState
   | updateAgeVerificationParameters
   | updateTermsOfService
@@ -113330,10 +120428,15 @@ export type Update =
   | updateActiveLiveLocationMessages
   | updateOwnedStarCount
   | updateOwnedGramCount
+  | updateTonWalletState
+  | updateTonWalletGaslessTransfersInfo
+  | updateTonWalletTonConnectSession
+  | updateTonWalletTonConnectSessionDisconnectRequired
   | updateChatRevenueAmount
   | updateStarRevenueStatus
   | updateGramRevenueStatus
   | updateSpeechRecognitionTrial
+  | updateSpeechRecognitionInFile
   | updateGroupCallMessageLevels
   | updateDiceEmojis
   | updateStakeDiceState
@@ -113354,6 +120457,9 @@ export type Update =
   | updateNewCallbackQuery
   | updateNewInlineCallbackQuery
   | updateNewBusinessCallbackQuery
+  | updateNewWidgetQuery
+  | updateNewInlineWidgetQuery
+  | updateNewWidgetCopyQuery
   | updateNewShippingQuery
   | updateNewPreCheckoutQuery
   | updateNewCustomEvent
@@ -113493,6 +120599,7 @@ export type Update =
  * - {@link updateChatActiveStories$Input}
  * - {@link updateStoryListChatCount$Input}
  * - {@link updateStoryStealthMode$Input}
+ * - {@link updateAllowedBotUsernamePremiumSuffixes$Input}
  * - {@link updateTrustedMiniAppBots$Input}
  * - {@link updateOption$Input}
  * - {@link updateStickerSet$Input}
@@ -113509,6 +120616,9 @@ export type Update =
  * - {@link updateWebBrowserSettings$Input}
  * - {@link updateLanguagePackStrings$Input}
  * - {@link updateConnectionState$Input}
+ * - {@link updateWebProxyCarrierOpened$Input}
+ * - {@link updateWebProxyCarrierData$Input}
+ * - {@link updateWebProxyCarrierClosed$Input}
  * - {@link updateFreezeState$Input}
  * - {@link updateAgeVerificationParameters$Input}
  * - {@link updateTermsOfService$Input}
@@ -113523,10 +120633,15 @@ export type Update =
  * - {@link updateActiveLiveLocationMessages$Input}
  * - {@link updateOwnedStarCount$Input}
  * - {@link updateOwnedGramCount$Input}
+ * - {@link updateTonWalletState$Input}
+ * - {@link updateTonWalletGaslessTransfersInfo$Input}
+ * - {@link updateTonWalletTonConnectSession$Input}
+ * - {@link updateTonWalletTonConnectSessionDisconnectRequired$Input}
  * - {@link updateChatRevenueAmount$Input}
  * - {@link updateStarRevenueStatus$Input}
  * - {@link updateGramRevenueStatus$Input}
  * - {@link updateSpeechRecognitionTrial$Input}
+ * - {@link updateSpeechRecognitionInFile$Input}
  * - {@link updateGroupCallMessageLevels$Input}
  * - {@link updateDiceEmojis$Input}
  * - {@link updateStakeDiceState$Input}
@@ -113547,6 +120662,9 @@ export type Update =
  * - {@link updateNewCallbackQuery$Input}
  * - {@link updateNewInlineCallbackQuery$Input}
  * - {@link updateNewBusinessCallbackQuery$Input}
+ * - {@link updateNewWidgetQuery$Input}
+ * - {@link updateNewInlineWidgetQuery$Input}
+ * - {@link updateNewWidgetCopyQuery$Input}
  * - {@link updateNewShippingQuery$Input}
  * - {@link updateNewPreCheckoutQuery$Input}
  * - {@link updateNewCustomEvent$Input}
@@ -113684,6 +120802,7 @@ export type Update$Input =
   | updateChatActiveStories$Input
   | updateStoryListChatCount$Input
   | updateStoryStealthMode$Input
+  | updateAllowedBotUsernamePremiumSuffixes$Input
   | updateTrustedMiniAppBots$Input
   | updateOption$Input
   | updateStickerSet$Input
@@ -113700,6 +120819,9 @@ export type Update$Input =
   | updateWebBrowserSettings$Input
   | updateLanguagePackStrings$Input
   | updateConnectionState$Input
+  | updateWebProxyCarrierOpened$Input
+  | updateWebProxyCarrierData$Input
+  | updateWebProxyCarrierClosed$Input
   | updateFreezeState$Input
   | updateAgeVerificationParameters$Input
   | updateTermsOfService$Input
@@ -113714,10 +120836,15 @@ export type Update$Input =
   | updateActiveLiveLocationMessages$Input
   | updateOwnedStarCount$Input
   | updateOwnedGramCount$Input
+  | updateTonWalletState$Input
+  | updateTonWalletGaslessTransfersInfo$Input
+  | updateTonWalletTonConnectSession$Input
+  | updateTonWalletTonConnectSessionDisconnectRequired$Input
   | updateChatRevenueAmount$Input
   | updateStarRevenueStatus$Input
   | updateGramRevenueStatus$Input
   | updateSpeechRecognitionTrial$Input
+  | updateSpeechRecognitionInFile$Input
   | updateGroupCallMessageLevels$Input
   | updateDiceEmojis$Input
   | updateStakeDiceState$Input
@@ -113738,6 +120865,9 @@ export type Update$Input =
   | updateNewCallbackQuery$Input
   | updateNewInlineCallbackQuery$Input
   | updateNewBusinessCallbackQuery$Input
+  | updateNewWidgetQuery$Input
+  | updateNewInlineWidgetQuery$Input
+  | updateNewWidgetCopyQuery$Input
   | updateNewShippingQuery$Input
   | updateNewPreCheckoutQuery$Input
   | updateNewCustomEvent$Input
@@ -114013,6 +121143,7 @@ export type $MethodsDict = {
   readonly getSuitableDiscussionChats: getSuitableDiscussionChats;
   readonly getInactiveSupergroupChats: getInactiveSupergroupChats;
   readonly getSuitablePersonalChats: getSuitablePersonalChats;
+  readonly getSuitableCommunityChats: getSuitableCommunityChats;
   readonly loadDirectMessagesChatTopics: loadDirectMessagesChatTopics;
   readonly getDirectMessagesChatTopic: getDirectMessagesChatTopic;
   readonly getDirectMessagesChatTopicHistory: getDirectMessagesChatTopicHistory;
@@ -114031,9 +121162,22 @@ export type $MethodsDict = {
   readonly deleteSavedMessagesTopicMessagesByDate: deleteSavedMessagesTopicMessagesByDate;
   readonly toggleSavedMessagesTopicIsPinned: toggleSavedMessagesTopicIsPinned;
   readonly setPinnedSavedMessagesTopics: setPinnedSavedMessagesTopics;
-  readonly loadCommunityFullInfo: loadCommunityFullInfo;
+  readonly getCommunityFullInfo: getCommunityFullInfo;
+  readonly getJoinedCommunities: getJoinedCommunities;
   readonly createCommunity: createCommunity;
   readonly setCommunityName: setCommunityName;
+  readonly setCommunityPhoto: setCommunityPhoto;
+  readonly setCommunityPermissions: setCommunityPermissions;
+  readonly setCommunityNotificationSettings: setCommunityNotificationSettings;
+  readonly addCommunityChat: addCommunityChat;
+  readonly removeCommunityChat: removeCommunityChat;
+  readonly getCommunityAddChatRequests: getCommunityAddChatRequests;
+  readonly processCommunityAddChatRequest: processCommunityAddChatRequest;
+  readonly processCommunityAddChatRequests: processCommunityAddChatRequests;
+  readonly toggleCommunityAreChatsCollapsed: toggleCommunityAreChatsCollapsed;
+  readonly toggleCommunityMemberIsBanned: toggleCommunityMemberIsBanned;
+  readonly getCommunityMemberChats: getCommunityMemberChats;
+  readonly deleteCommunity: deleteCommunity;
   readonly getGroupsInCommon: getGroupsInCommon;
   readonly getChatHistory: getChatHistory;
   readonly getMessageThreadHistory: getMessageThreadHistory;
@@ -114095,8 +121239,12 @@ export type $MethodsDict = {
   readonly createRichMessageWithAi: createRichMessageWithAi;
   readonly fixTextWithAi: fixTextWithAi;
   readonly fixRichMessageWithAi: fixRichMessageWithAi;
+  readonly fixRecognizedTextWithAi: fixRecognizedTextWithAi;
+  readonly fixRecognizedRichMessageWithAi: fixRecognizedRichMessageWithAi;
   readonly recognizeSpeech: recognizeSpeech;
   readonly rateSpeechRecognition: rateSpeechRecognition;
+  readonly recognizeSpeechInFile: recognizeSpeechInFile;
+  readonly getSpeechRecognitionLanguages: getSpeechRecognitionLanguages;
   readonly getChatAvailableMessageSenders: getChatAvailableMessageSenders;
   readonly setChatMessageSender: setChatMessageSender;
   readonly sendMessage: sendMessage;
@@ -114118,14 +121266,17 @@ export type $MethodsDict = {
   readonly editMessageMedia: editMessageMedia;
   readonly editMessageCaption: editMessageCaption;
   readonly editMessageReplyMarkup: editMessageReplyMarkup;
+  readonly editMessageWidgetData: editMessageWidgetData;
   readonly editInlineMessageText: editInlineMessageText;
   readonly editInlineMessageLiveLocation: editInlineMessageLiveLocation;
   readonly editInlineMessageMedia: editInlineMessageMedia;
   readonly editInlineMessageCaption: editInlineMessageCaption;
   readonly editInlineMessageReplyMarkup: editInlineMessageReplyMarkup;
+  readonly editInlineMessageWidgetData: editInlineMessageWidgetData;
+  readonly editWidgetData: editWidgetData;
   readonly editEphemeralMessage: editEphemeralMessage;
   readonly editEphemeralMessageCaption: editEphemeralMessageCaption;
-  readonly editCallbackQueryMessage: editCallbackQueryMessage;
+  readonly replyToCallbackQueryWithEphemeralMessage: replyToCallbackQueryWithEphemeralMessage;
   readonly editMessageSchedulingState: editMessageSchedulingState;
   readonly deleteMessageEphemeralContent: deleteMessageEphemeralContent;
   readonly setMessageFactCheck: setMessageFactCheck;
@@ -114209,6 +121360,7 @@ export type $MethodsDict = {
   readonly getMessageEffect: getMessageEffect;
   readonly searchQuote: searchQuote;
   readonly getTextEntities: getTextEntities;
+  readonly getTextEmojiRanges: getTextEmojiRanges;
   readonly parseTextEntities: parseTextEntities;
   readonly parseMarkdown: parseMarkdown;
   readonly getMarkdownText: getMarkdownText;
@@ -114257,6 +121409,9 @@ export type $MethodsDict = {
   readonly answerChatJoinRequestQuery: answerChatJoinRequestQuery;
   readonly getCallbackQueryAnswer: getCallbackQueryAnswer;
   readonly answerCallbackQuery: answerCallbackQuery;
+  readonly answerWidgetQuery: answerWidgetQuery;
+  readonly getWidgetQueryAnswer: getWidgetQueryAnswer;
+  readonly getWidgetPublicData: getWidgetPublicData;
   readonly answerShippingQuery: answerShippingQuery;
   readonly answerPreCheckoutQuery: answerPreCheckoutQuery;
   readonly setGameScore: setGameScore;
@@ -114382,6 +121537,7 @@ export type $MethodsDict = {
   readonly startLiveStory: startLiveStory;
   readonly editStory: editStory;
   readonly editStoryCover: editStoryCover;
+  readonly editStoryMusic: editStoryMusic;
   readonly setStoryPrivacySettings: setStoryPrivacySettings;
   readonly toggleStoryIsPostedToChatPage: toggleStoryIsPostedToChatPage;
   readonly deleteStory: deleteStory;
@@ -114641,6 +121797,7 @@ export type $MethodsDict = {
   readonly getBusinessChatLinkInfo: getBusinessChatLinkInfo;
   readonly getUserLink: getUserLink;
   readonly searchUserByToken: searchUserByToken;
+  readonly applyUnpaidMessagesToken: applyUnpaidMessagesToken;
   readonly setCommands: setCommands;
   readonly deleteCommands: deleteCommands;
   readonly getCommands: getCommands;
@@ -114665,6 +121822,8 @@ export type $MethodsDict = {
   readonly setBotName: setBotName;
   readonly getBotName: getBotName;
   readonly setBotProfilePhoto: setBotProfilePhoto;
+  readonly addBotSecondaryUsername: addBotSecondaryUsername;
+  readonly deleteBotSecondaryUsername: deleteBotSecondaryUsername;
   readonly toggleBotUsernameIsActive: toggleBotUsernameIsActive;
   readonly reorderBotActiveUsernames: reorderBotActiveUsernames;
   readonly setBotInfoDescription: setBotInfoDescription;
@@ -114725,6 +121884,7 @@ export type $MethodsDict = {
   readonly placeGiftAuctionBid: placeGiftAuctionBid;
   readonly increaseGiftAuctionBid: increaseGiftAuctionBid;
   readonly sellGift: sellGift;
+  readonly deleteGift: deleteGift;
   readonly toggleGiftIsSaved: toggleGiftIsSaved;
   readonly setPinnedGifts: setPinnedGifts;
   readonly toggleChatGiftNotifications: toggleChatGiftNotifications;
@@ -114744,6 +121904,9 @@ export type $MethodsDict = {
   readonly getUpgradedGift: getUpgradedGift;
   readonly getUpgradedGiftValueInfo: getUpgradedGiftValueInfo;
   readonly getUpgradedGiftWithdrawalUrl: getUpgradedGiftWithdrawalUrl;
+  readonly withdrawUpgradedGift: withdrawUpgradedGift;
+  readonly getUpgradedGiftDepositInfo: getUpgradedGiftDepositInfo;
+  readonly displayUpgradedGift: displayUpgradedGift;
   readonly getUpgradedGiftsPromotionalAnimation: getUpgradedGiftsPromotionalAnimation;
   readonly setGiftResalePrice: setGiftResalePrice;
   readonly searchGiftsForResale: searchGiftsForResale;
@@ -114765,6 +121928,8 @@ export type $MethodsDict = {
   readonly getInstalledBackgrounds: getInstalledBackgrounds;
   readonly removeInstalledBackground: removeInstalledBackground;
   readonly resetInstalledBackgrounds: resetInstalledBackgrounds;
+  readonly getProfileShareThemeBackdrops: getProfileShareThemeBackdrops;
+  readonly setProfileShareTheme: setProfileShareTheme;
   readonly getLocalizationTargetInfo: getLocalizationTargetInfo;
   readonly getLanguagePackInfo: getLanguagePackInfo;
   readonly getLanguagePackStrings: getLanguagePackStrings;
@@ -114803,6 +121968,45 @@ export type $MethodsDict = {
   readonly getChatRevenueWithdrawalUrl: getChatRevenueWithdrawalUrl;
   readonly getChatRevenueTransactions: getChatRevenueTransactions;
   readonly getTonTransactions: getTonTransactions;
+  readonly getTonWalletTransactions: getTonWalletTransactions;
+  readonly getTonWalletTransaction: getTonWalletTransaction;
+  readonly getTonWalletTransactionByMsgHash: getTonWalletTransactionByMsgHash;
+  readonly loadTonWalletState: loadTonWalletState;
+  readonly loadTonWalletGaslessTransfersInfo: loadTonWalletGaslessTransfersInfo;
+  readonly checkWalletBotBalance: checkWalletBotBalance;
+  readonly getUserTonWalletAddresses: getUserTonWalletAddresses;
+  readonly createUserTonWallet: createUserTonWallet;
+  readonly getAddressTonWallet: getAddressTonWallet;
+  readonly getTonWalletSecretPhrase: getTonWalletSecretPhrase;
+  readonly getTonWalletOwnershipProofChallenge: getTonWalletOwnershipProofChallenge;
+  readonly enableTonWalletBackup: enableTonWalletBackup;
+  readonly disableTonWalletBackup: disableTonWalletBackup;
+  readonly disableTonWalletBackupWithProof: disableTonWalletBackupWithProof;
+  readonly sendTonWalletTransfer: sendTonWalletTransfer;
+  readonly deleteTonWallet: deleteTonWallet;
+  readonly replaceTonWallet: replaceTonWallet;
+  readonly getCurrencyExchangeRates: getCurrencyExchangeRates;
+  readonly getTonWalletNfts: getTonWalletNfts;
+  readonly getTonWalletCardBackgroundGiftCollectionNames: getTonWalletCardBackgroundGiftCollectionNames;
+  readonly setTonWalletCardStickers: setTonWalletCardStickers;
+  readonly getTonConnectSessions: getTonConnectSessions;
+  readonly createTonConnectSession: createTonConnectSession;
+  readonly setTonConnectSessionWalletClientId: setTonConnectSessionWalletClientId;
+  readonly sendTonConnectSessionConnectResult: sendTonConnectSessionConnectResult;
+  readonly getTonConnectSessionPendingRequests: getTonConnectSessionPendingRequests;
+  readonly getTonConnectDAppPendingRequests: getTonConnectDAppPendingRequests;
+  readonly claimTonConnectRequest: claimTonConnectRequest;
+  readonly answerTonConnectRequest: answerTonConnectRequest;
+  readonly getTonConnectSessionNextEventId: getTonConnectSessionNextEventId;
+  readonly disconnectTonConnectSession: disconnectTonConnectSession;
+  readonly getOnRampProviders: getOnRampProviders;
+  readonly getOnRampProviderBaseCurrencies: getOnRampProviderBaseCurrencies;
+  readonly getOnRampPaymentAvailability: getOnRampPaymentAvailability;
+  readonly getOnRampPaymentLimits: getOnRampPaymentLimits;
+  readonly getOnRampPaymentQuote: getOnRampPaymentQuote;
+  readonly createOnRampPaymentSession: createOnRampPaymentSession;
+  readonly sendTonCenterApiRequest: sendTonCenterApiRequest;
+  readonly getTonCenterStreamingApiUrl: getTonCenterStreamingApiUrl;
   readonly getStarRevenueStatistics: getStarRevenueStatistics;
   readonly getStarWithdrawalUrl: getStarWithdrawalUrl;
   readonly getStarAdAccountUrl: getStarAdAccountUrl;
@@ -114905,6 +122109,7 @@ export type $MethodsDict = {
   readonly getPhoneNumberInfoSync: getPhoneNumberInfoSync;
   readonly getCollectibleItemInfo: getCollectibleItemInfo;
   readonly getDeepLinkInfo: getDeepLinkInfo;
+  readonly dismissWebToken: dismissWebToken;
   readonly getApplicationConfig: getApplicationConfig;
   readonly saveApplicationLogEvent: saveApplicationLogEvent;
   readonly getApplicationDownloadLink: getApplicationDownloadLink;
@@ -114915,6 +122120,8 @@ export type $MethodsDict = {
   readonly removeProxy: removeProxy;
   readonly getProxies: getProxies;
   readonly pingProxy: pingProxy;
+  readonly processWebProxyCarrierMessage: processWebProxyCarrierMessage;
+  readonly reportWebProxyCarrierError: reportWebProxyCarrierError;
   readonly setLogStream: setLogStream;
   readonly getLogStream: getLogStream;
   readonly setLogVerbosityLevel: setLogVerbosityLevel;
@@ -114945,6 +122152,7 @@ export type $SyncMethodsDict = {
   readonly checkQuickReplyShortcutName: checkQuickReplyShortcutName;
   readonly searchQuote: searchQuote;
   readonly getTextEntities: getTextEntities;
+  readonly getTextEmojiRanges: getTextEmojiRanges;
   readonly parseTextEntities: parseTextEntities;
   readonly parseMarkdown: parseMarkdown;
   readonly getMarkdownText: getMarkdownText;
@@ -115084,7 +122292,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
+   * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, authorization_state.code_info.next_type is not null
    *
    * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
    *
@@ -115215,7 +122423,7 @@ export class $AsyncApi {
   /**
    * Resets the login email address. May return an error with a message "TASK_ALREADY_EXISTS" if reset is still pending.
    *
-   * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.can_reset_email_address == true
+   * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.email_address_reset_state != null
    *
    * @param {resetAuthenticationEmailAddress$DirectInput} parameters {@link resetAuthenticationEmailAddress$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -115295,7 +122503,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
+   * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is
+   *
+   * - authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
    *
    * @param {sendAuthenticationFirebaseSms$DirectInput} parameters {@link sendAuthenticationFirebaseSms$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -115327,7 +122537,11 @@ export class $AsyncApi {
   }
 
   /**
-   * Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
+   * Checks the authentication token of a bot; to log in as a bot.
+   *
+   * - Works only when the current authorization state is authorizationStateWaitPhoneNumber.
+   *
+   * - Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
    *
    * @param {checkAuthenticationBotToken$DirectInput} parameters {@link checkAuthenticationBotToken$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -115394,7 +122608,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others. This is especially useful if TDLib is run in a separate process. Can be called before initialization
+   * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others.
+   *
+   * - This is especially useful if TDLib is run in a separate process. Can be called before initialization
    *
    * @param {getCurrentState$DirectInput} parameters {@link getCurrentState$Input}
    * @returns {Promise<Updates>} Promise<{@link Updates}>
@@ -115648,7 +122864,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Creates a new temporary password for processing payments
+   * Creates a new temporary password for processing payments and withdrawal of upgraded gifts
    *
    * @param {createTemporaryPassword$DirectInput} parameters {@link createTemporaryPassword$Input}
    * @returns {Promise<TemporaryPasswordState>} Promise<{@link TemporaryPasswordState}>
@@ -115832,7 +123048,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
+   * Returns information about the newest pinned message in the chat. Returns a 404 error if the message doesn't exist
    *
    * @param {getChatPinnedMessage$DirectInput} parameters {@link getChatPinnedMessage$Input}
    * @returns {Promise<Message>} Promise<{@link Message}>
@@ -115934,7 +123150,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
+   * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users,
+   *
+   * - opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
    *
    * @param {getMessageViewers$DirectInput} parameters {@link getMessageViewers$Input}
    * @returns {Promise<MessageViewers>} Promise<{@link MessageViewers}>
@@ -115969,9 +123187,15 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a file by its remote identifier. This is an offline method. Can be used to register a URL as a file for further uploading, or sending as a message. Even if the request succeeds, the file can be used only if it is still accessible to the user.
+   * Returns information about a file by its remote identifier. This is an offline method.
    *
-   * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
+   * - Can be used to register a URL as a file for further uploading, or sending as a message.
+   *
+   * - Even if the request succeeds, the file can be used only if it is still accessible to the user.
+   *
+   * - For example, if the file is from a message, then the message must be not deleted and accessible to the user.
+   *
+   * - If the file database is disabled, then the corresponding object with the file must be preloaded by the application
    *
    * @param {getRemoteFile$DirectInput} parameters {@link getRemoteFile$Input}
    * @returns {Promise<File>} Promise<{@link File}>
@@ -115982,7 +123206,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
+   * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates.
+   *
+   * - Chats are sorted by the pair (chatPosition.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
    *
    * @param {loadChats$DirectInput} parameters {@link loadChats$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -116256,7 +123482,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
+   * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached.
+   *
+   * - The limit can be increased with Telegram Premium
    *
    * @param {checkCreatedPublicChatsLimit$DirectInput} parameters {@link checkCreatedPublicChatsLimit$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -116290,7 +123518,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives the error "CHANNELS_TOO_MUCH". Also, the limit can be increased with Telegram Premium
+   * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels
+   *
+   * - and receives the error "CHANNELS_TOO_MUCH". Also, the limit can be increased with Telegram Premium
    *
    * @param {getInactiveSupergroupChats$DirectInput} parameters {@link getInactiveSupergroupChats$Input}
    * @returns {Promise<Chats>} Promise<{@link Chats}>
@@ -116315,6 +123545,19 @@ export class $AsyncApi {
     parameters: getSuitablePersonalChats$DirectInput
   ): Promise<Chats> {
     const result = await this.client.invoke("getSuitablePersonalChats", parameters);
+    return result as Chats;
+  }
+
+  /**
+   * Returns a list of supergroup and channel chats owned by the current user, which can be added to a community
+   *
+   * @param {getSuitableCommunityChats$DirectInput} parameters {@link getSuitableCommunityChats$Input}
+   * @returns {Promise<Chats>} Promise<{@link Chats}>
+   */
+  async getSuitableCommunityChats(
+    parameters: getSuitableCommunityChats$DirectInput
+  ): Promise<Chats> {
+    const result = await this.client.invoke("getSuitableCommunityChats", parameters);
     return result as Chats;
   }
 
@@ -116353,7 +123596,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns messages in the topic in a channel direct messages chat administered by the current user. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+   * Returns messages in the topic in a channel direct messages chat administered by the current user. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
    *
    * @param {getDirectMessagesChatTopicHistory$DirectInput} parameters {@link getDirectMessagesChatTopicHistory$Input}
    * @returns {Promise<Messages>} Promise<{@link Messages}>
@@ -116510,7 +123753,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+   * Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
    *
    * @param {getSavedMessagesTopicHistory$DirectInput} parameters {@link getSavedMessagesTopicHistory$Input}
    * @returns {Promise<Messages>} Promise<{@link Messages}>
@@ -116606,16 +123849,29 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns full information about a community. The data will be sent through update.
+   * Returns full information about a community
    *
-   * @param {loadCommunityFullInfo$DirectInput} parameters {@link loadCommunityFullInfo$Input}
-   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   * @param {getCommunityFullInfo$DirectInput} parameters {@link getCommunityFullInfo$Input}
+   * @returns {Promise<CommunityFullInfo>} Promise<{@link CommunityFullInfo}>
    */
-  async loadCommunityFullInfo(
-    parameters: loadCommunityFullInfo$DirectInput
-  ): Promise<Ok> {
-    const result = await this.client.invoke("loadCommunityFullInfo", parameters);
-    return result as Ok;
+  async getCommunityFullInfo(
+    parameters: getCommunityFullInfo$DirectInput
+  ): Promise<CommunityFullInfo> {
+    const result = await this.client.invoke("getCommunityFullInfo", parameters);
+    return result as CommunityFullInfo;
+  }
+
+  /**
+   * Returns the list of communities joined by the current user
+   *
+   * @param {getJoinedCommunities$DirectInput} parameters {@link getJoinedCommunities$Input}
+   * @returns {Promise<Communities>} Promise<{@link Communities}>
+   */
+  async getJoinedCommunities(
+    parameters: getJoinedCommunities$DirectInput
+  ): Promise<Communities> {
+    const result = await this.client.invoke("getJoinedCommunities", parameters);
+    return result as Communities;
   }
 
   /**
@@ -116643,6 +123899,184 @@ export class $AsyncApi {
   }
 
   /**
+   * Changes the photo of a community; requires can_change_info administrator right in the community
+   *
+   * @param {setCommunityPhoto$DirectInput} parameters {@link setCommunityPhoto$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setCommunityPhoto(parameters: setCommunityPhoto$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("setCommunityPhoto", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes permissions of regular members in the given community; requires can_ban_members administrator right in the community
+   *
+   * @param {setCommunityPermissions$DirectInput} parameters {@link setCommunityPermissions$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setCommunityPermissions(
+    parameters: setCommunityPermissions$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setCommunityPermissions", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Changes notification settings of a community
+   *
+   * @param {setCommunityNotificationSettings$DirectInput} parameters {@link setCommunityNotificationSettings$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setCommunityNotificationSettings(
+    parameters: setCommunityNotificationSettings$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "setCommunityNotificationSettings",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Adds a chat to a community. If the current user isn't allowed to change the list of chats in the community, then a request to add the chat
+   *
+   * - is sent to administrators of the community instead and the method fails with the error "COMMUNITY_REQUEST_CREATED"
+   *
+   * @param {addCommunityChat$DirectInput} parameters {@link addCommunityChat$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async addCommunityChat(parameters: addCommunityChat$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("addCommunityChat", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Removes a chat from a community. Members of the chat, which aren't members of other chats in the community, will be removed from the community.
+   *
+   * - Requires owner privileges in the supergroup or channel chat, or ownership of the bot for chats with bots, or can_edit_chat_list administrator right in the community
+   *
+   * @param {removeCommunityChat$DirectInput} parameters {@link removeCommunityChat$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async removeCommunityChat(
+    parameters: removeCommunityChat$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("removeCommunityChat", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns pending requests to add chats to a community. Administrators of the community with can_edit_chat_list right receive all requests; other users receive only requests sent by them
+   *
+   * @param {getCommunityAddChatRequests$DirectInput} parameters {@link getCommunityAddChatRequests$Input}
+   * @returns {Promise<CommunityAddChatRequests>} Promise<{@link CommunityAddChatRequests}>
+   */
+  async getCommunityAddChatRequests(
+    parameters: getCommunityAddChatRequests$DirectInput
+  ): Promise<CommunityAddChatRequests> {
+    const result = await this.client.invoke(
+      "getCommunityAddChatRequests",
+      parameters
+    );
+    return result as CommunityAddChatRequests;
+  }
+
+  /**
+   * Handles a pending request to add a chat to a community; requires can_edit_chat_list administrator right in the community
+   *
+   * @param {processCommunityAddChatRequest$DirectInput} parameters {@link processCommunityAddChatRequest$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async processCommunityAddChatRequest(
+    parameters: processCommunityAddChatRequest$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "processCommunityAddChatRequest",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Handles all pending requests to add chats to a community; requires can_edit_chat_list administrator right in the community
+   *
+   * @param {processCommunityAddChatRequests$DirectInput} parameters {@link processCommunityAddChatRequests$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async processCommunityAddChatRequests(
+    parameters: processCommunityAddChatRequests$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "processCommunityAddChatRequests",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Changes whether all chats of a community are collapsed into one entry in the chat list. If the chats are expanded, then the community is removed from all chat folders
+   *
+   * @param {toggleCommunityAreChatsCollapsed$DirectInput} parameters {@link toggleCommunityAreChatsCollapsed$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async toggleCommunityAreChatsCollapsed(
+    parameters: toggleCommunityAreChatsCollapsed$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "toggleCommunityAreChatsCollapsed",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Bans or unbans a member of a community; requires can_ban_members administrator right in the community. A banned member is banned in all chats of the community.
+   *
+   * - Administrators of the community can be banned only by the owner of the community and administrators, which can edit administrator rights of the member.
+   *
+   * - If an owner of a chat in the community is banned, then the chat is removed from the community; in this case, can_edit_chat_list administrator right is also required
+   *
+   * @param {toggleCommunityMemberIsBanned$DirectInput} parameters {@link toggleCommunityMemberIsBanned$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async toggleCommunityMemberIsBanned(
+    parameters: toggleCommunityMemberIsBanned$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "toggleCommunityMemberIsBanned",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Returns chats in a community, which were joined by a member of the community; requires can_ban_members administrator right in the community.
+   *
+   * - Can be used to show chats that will be affected by the member ban
+   *
+   * @param {getCommunityMemberChats$DirectInput} parameters {@link getCommunityMemberChats$Input}
+   * @returns {Promise<CommunityMemberChats>} Promise<{@link CommunityMemberChats}>
+   */
+  async getCommunityMemberChats(
+    parameters: getCommunityMemberChats$DirectInput
+  ): Promise<CommunityMemberChats> {
+    const result = await this.client.invoke("getCommunityMemberChats", parameters);
+    return result as CommunityMemberChats;
+  }
+
+  /**
+   * Deletes a community; requires owner privileges
+   *
+   * @param {deleteCommunity$DirectInput} parameters {@link deleteCommunity$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteCommunity(parameters: deleteCommunity$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("deleteCommunity", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
    *
    * @param {getGroupsInCommon$DirectInput} parameters {@link getGroupsInCommon$Input}
@@ -116656,7 +124090,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
+   * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id).
    *
    * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline method if only_local is true
    *
@@ -116671,7 +124105,7 @@ export class $AsyncApi {
   /**
    * Returns messages in a message thread of a message. Can be used only if messageProperties.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
    *
-   * - The messages are returned in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+   * - The messages are returned in reverse chronological order (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
    *
    * @param {getMessageThreadHistory$DirectInput} parameters {@link getMessageThreadHistory$Input}
    * @returns {Promise<Messages>} Promise<{@link Messages}>
@@ -116708,7 +124142,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message_id. Cannot be used in secret chats with a non-empty query
+   * Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message.id. Cannot be used in secret chats with a non-empty query
    *
    * - (searchSecretMessages must be used instead), or without an enabled message database. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit.
    *
@@ -116725,7 +124159,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).
+   * Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (message.date, message.chat_id, message.id)).
    *
    * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
    *
@@ -116755,7 +124189,7 @@ export class $AsyncApi {
   /**
    * Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
    *
-   * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id.
+   * - Returns the results in reverse chronological order, i.e. in order of decreasing message.id.
    *
    * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
    *
@@ -116770,7 +124204,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Searches for call and group call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+   * Searches for call and group call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
    *
    * @param {searchCallMessages$DirectInput} parameters {@link searchCallMessages$Input}
    * @returns {Promise<FoundMessages>} Promise<{@link FoundMessages}>
@@ -116982,7 +124416,11 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
+   * Returns information about the next messages of the specified type in the chat split by days.
+   *
+   * - Returns the results in reverse chronological order. Can return partial result for the last returned day.
+   *
+   * - Behavior of this method depends on the value of the option "utc_time_offset"
    *
    * @param {getChatMessageCalendar$DirectInput} parameters {@link getChatMessageCalendar$Input}
    * @returns {Promise<MessageCalendar>} Promise<{@link MessageCalendar}>
@@ -117021,7 +124459,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+   * Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
    *
    * @param {getChatScheduledMessages$DirectInput} parameters {@link getChatScheduledMessages$Input}
    * @returns {Promise<Messages>} Promise<{@link Messages}>
@@ -117490,6 +124928,39 @@ export class $AsyncApi {
   }
 
   /**
+   * Fixes text received as a result of speech recognition using an AI model by correcting recognition errors and adding punctuation; must not be used in secret chats.
+   *
+   * - May return an error with a message "AICOMPOSE_FLOOD_PREMIUM" if Telegram Premium is required to send further requests
+   *
+   * @param {fixRecognizedTextWithAi$DirectInput} parameters {@link fixRecognizedTextWithAi$Input}
+   * @returns {Promise<FormattedText>} Promise<{@link FormattedText}>
+   */
+  async fixRecognizedTextWithAi(
+    parameters: fixRecognizedTextWithAi$DirectInput
+  ): Promise<FormattedText> {
+    const result = await this.client.invoke("fixRecognizedTextWithAi", parameters);
+    return result as FormattedText;
+  }
+
+  /**
+   * Fixes a rich message with text received as a result of speech recognition using an AI model by correcting recognition errors and adding punctuation.
+   *
+   * - May return an error with a message "AICOMPOSE_FLOOD_PREMIUM" if Telegram Premium is required to send further requests
+   *
+   * @param {fixRecognizedRichMessageWithAi$DirectInput} parameters {@link fixRecognizedRichMessageWithAi$Input}
+   * @returns {Promise<RichMessage>} Promise<{@link RichMessage}>
+   */
+  async fixRecognizedRichMessageWithAi(
+    parameters: fixRecognizedRichMessageWithAi$DirectInput
+  ): Promise<RichMessage> {
+    const result = await this.client.invoke(
+      "fixRecognizedRichMessageWithAi",
+      parameters
+    );
+    return result as RichMessage;
+  }
+
+  /**
    * Recognizes speech in a video note or a voice note message
    *
    * @param {recognizeSpeech$DirectInput} parameters {@link recognizeSpeech$Input}
@@ -117511,6 +124982,37 @@ export class $AsyncApi {
   ): Promise<Ok> {
     const result = await this.client.invoke("rateSpeechRecognition", parameters);
     return result as Ok;
+  }
+
+  /**
+   * Recognizes speech in an audio file and returns the recognized text. The file must be in OGG format with Opus codec and must have size up to 1 MB.
+   *
+   * - The same rules as for recognizeSpeech apply to the Telegram Premium requirement and speech recognition trial; must not be used in secret chats
+   *
+   * @param {recognizeSpeechInFile$DirectInput} parameters {@link recognizeSpeechInFile$Input}
+   * @returns {Promise<Text>} Promise<{@link Text}>
+   */
+  async recognizeSpeechInFile(
+    parameters: recognizeSpeechInFile$DirectInput
+  ): Promise<Text> {
+    const result = await this.client.invoke("recognizeSpeechInFile", parameters);
+    return result as Text;
+  }
+
+  /**
+   * Returns 1-3 most probable languages of speech in voice notes
+   *
+   * @param {getSpeechRecognitionLanguages$DirectInput} parameters {@link getSpeechRecognitionLanguages$Input}
+   * @returns {Promise<SpeechRecognitionLanguages>} Promise<{@link SpeechRecognitionLanguages}>
+   */
+  async getSpeechRecognitionLanguages(
+    parameters: getSpeechRecognitionLanguages$DirectInput
+  ): Promise<SpeechRecognitionLanguages> {
+    const result = await this.client.invoke(
+      "getSpeechRecognitionLanguages",
+      parameters
+    );
+    return result as SpeechRecognitionLanguages;
   }
 
   /**
@@ -117627,9 +125129,11 @@ export class $AsyncApi {
   }
 
   /**
-   * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+   * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true
    *
-   * - If a message is re-sent, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
+   * - and after specified in messageSendingStateFailed.retry_after time passed. If a message is re-sent, the corresponding failed to send message is deleted.
+   *
+   * - Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
    *
    * @param {resendMessages$DirectInput} parameters {@link resendMessages$Input}
    * @returns {Promise<Messages>} Promise<{@link Messages}>
@@ -117799,6 +125303,19 @@ export class $AsyncApi {
   }
 
   /**
+   * Edits data of a widget sent by the bot; for bots only
+   *
+   * @param {editMessageWidgetData$DirectInput} parameters {@link editMessageWidgetData$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async editMessageWidgetData(
+    parameters: editMessageWidgetData$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("editMessageWidgetData", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Edits the text of an inline text or game message sent via the bot; for bots only
    *
    * @param {editInlineMessageText$DirectInput} parameters {@link editInlineMessageText$Input}
@@ -117870,6 +125387,33 @@ export class $AsyncApi {
   }
 
   /**
+   * Edits data of a widget in an inline message sent via the bot; for bots only
+   *
+   * @param {editInlineMessageWidgetData$DirectInput} parameters {@link editInlineMessageWidgetData$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async editInlineMessageWidgetData(
+    parameters: editInlineMessageWidgetData$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "editInlineMessageWidgetData",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Edits public data of a shared widget created by the bot; for bots only
+   *
+   * @param {editWidgetData$DirectInput} parameters {@link editWidgetData$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async editWidgetData(parameters: editWidgetData$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("editWidgetData", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Edits the text, media, or reply markup of an ephemeral message sent by the bot; for bots only
    *
    * @param {editEphemeralMessage$DirectInput} parameters {@link editEphemeralMessage$Input}
@@ -117899,16 +125443,19 @@ export class $AsyncApi {
   }
 
   /**
-   * Edits the message from which a callback query has originated with an ephemeral message; for bots only
+   * Replies to a callback query with an ephemeral message; for bots only. Returns the sent message
    *
-   * @param {editCallbackQueryMessage$DirectInput} parameters {@link editCallbackQueryMessage$Input}
-   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   * @param {replyToCallbackQueryWithEphemeralMessage$DirectInput} parameters {@link replyToCallbackQueryWithEphemeralMessage$Input}
+   * @returns {Promise<Message>} Promise<{@link Message}>
    */
-  async editCallbackQueryMessage(
-    parameters: editCallbackQueryMessage$DirectInput
-  ): Promise<Ok> {
-    const result = await this.client.invoke("editCallbackQueryMessage", parameters);
-    return result as Ok;
+  async replyToCallbackQueryWithEphemeralMessage(
+    parameters: replyToCallbackQueryWithEphemeralMessage$DirectInput
+  ): Promise<Message> {
+    const result = await this.client.invoke(
+      "replyToCallbackQueryWithEphemeralMessage",
+      parameters
+    );
+    return result as Message;
   }
 
   /**
@@ -118419,9 +125966,11 @@ export class $AsyncApi {
   }
 
   /**
-   * Re-adds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+   * Re-adds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true
    *
-   * - If a message is re-added, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-added, null will be returned instead of the message
+   * - and after specified in messageSendingStateFailed.retry_after time passed. If a message is re-added, the corresponding failed to send message is deleted.
+   *
+   * - Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-added, null will be returned instead of the message
    *
    * @param {readdQuickReplyShortcutMessages$DirectInput} parameters {@link readdQuickReplyShortcutMessages$Input}
    * @returns {Promise<QuickReplyMessages>} Promise<{@link QuickReplyMessages}>
@@ -118437,7 +125986,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+   * Asynchronously edits the text, media, or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
    *
    * - Media message can be edited only to a media message. Checklist messages can be edited only to a checklist message.
    *
@@ -118574,7 +126123,7 @@ export class $AsyncApi {
   /**
    * Returns messages in a topic in a forum supergroup chat or a chat with a bot with topics. The messages are returned in reverse chronological order
    *
-   * - (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+   * - (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
    *
    * @param {getForumTopicHistory$DirectInput} parameters {@link getForumTopicHistory$Input}
    * @returns {Promise<Messages>} Promise<{@link Messages}>
@@ -118587,7 +126136,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns an HTTPS link to a topic in a forum supergroup chat. This is an offline method
+   * Returns an HTTPS link to a topic in a forum supergroup chat or a chat with a bot. This is an offline method
    *
    * @param {getForumTopicLink$DirectInput} parameters {@link getForumTopicLink$Input}
    * @returns {Promise<MessageLink>} Promise<{@link MessageLink}>
@@ -119091,7 +126640,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
+   * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, TON blockchain addresses, URLs, and email addresses) found in the text. Can be called synchronously
    *
    * @param {getTextEntities$DirectInput} parameters {@link getTextEntities$Input}
    * @returns {Promise<TextEntities>} Promise<{@link TextEntities}>
@@ -119101,6 +126650,19 @@ export class $AsyncApi {
   ): Promise<TextEntities> {
     const result = await this.client.invoke("getTextEntities", parameters);
     return result as TextEntities;
+  }
+
+  /**
+   * Returns positions of all emoji found in the text in order of their appearance. Can be called synchronously
+   *
+   * @param {getTextEmojiRanges$DirectInput} parameters {@link getTextEmojiRanges$Input}
+   * @returns {Promise<TextRanges>} Promise<{@link TextRanges}>
+   */
+  async getTextEmojiRanges(
+    parameters: getTextEmojiRanges$DirectInput
+  ): Promise<TextRanges> {
+    const result = await this.client.invoke("getTextEmojiRanges", parameters);
+    return result as TextRanges;
   }
 
   /**
@@ -119323,7 +126885,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Adds tasks of a checklist in a message as done or not done
+   * Marks tasks of a checklist in a message as done or not done
    *
    * @param {markChecklistTasksAsDone$DirectInput} parameters {@link markChecklistTasksAsDone$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -119401,7 +126963,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
+   * Shares users after pressing a keyboardButtonTypeRequestUsers or keyboardButtonTypeRequestManagedBot button with the bot
    *
    * @param {shareUsersWithBot$DirectInput} parameters {@link shareUsersWithBot$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -119473,7 +127035,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Saves an inline message to be sent by the given user
+   * Returns an inline message prepared by a bot to be sent by the current user
    *
    * @param {getPreparedInlineMessage$DirectInput} parameters {@link getPreparedInlineMessage$Input}
    * @returns {Promise<PreparedInlineMessage>} Promise<{@link PreparedInlineMessage}>
@@ -119703,6 +127265,43 @@ export class $AsyncApi {
   }
 
   /**
+   * Sets the result of a widget query; for bots only
+   *
+   * @param {answerWidgetQuery$DirectInput} parameters {@link answerWidgetQuery$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async answerWidgetQuery(parameters: answerWidgetQuery$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("answerWidgetQuery", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Sends a widget query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
+   *
+   * @param {getWidgetQueryAnswer$DirectInput} parameters {@link getWidgetQueryAnswer$Input}
+   * @returns {Promise<WidgetQueryAnswer>} Promise<{@link WidgetQueryAnswer}>
+   */
+  async getWidgetQueryAnswer(
+    parameters: getWidgetQueryAnswer$DirectInput
+  ): Promise<WidgetQueryAnswer> {
+    const result = await this.client.invoke("getWidgetQueryAnswer", parameters);
+    return result as WidgetQueryAnswer;
+  }
+
+  /**
+   * Returns the current public data of a widget. Must be called only if the widget is visible on the screen and asked to poll its public data
+   *
+   * @param {getWidgetPublicData$DirectInput} parameters {@link getWidgetPublicData$Input}
+   * @returns {Promise<WidgetPublicData>} Promise<{@link WidgetPublicData}>
+   */
+  async getWidgetPublicData(
+    parameters: getWidgetPublicData$DirectInput
+  ): Promise<WidgetPublicData> {
+    const result = await this.client.invoke("getWidgetPublicData", parameters);
+    return result as WidgetPublicData;
+  }
+
+  /**
    * Sets the result of a shipping query; for bots only
    *
    * @param {answerShippingQuery$DirectInput} parameters {@link answerShippingQuery$Input}
@@ -119873,7 +127472,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message).
+   * Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location, or venue, or has listened to an audio file or voice note message).
    *
    * - An updateMessageContentOpened update will be generated if something has changed
    *
@@ -119990,7 +127589,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about an OAuth deep link. Use checkOauthRequestMatchCode, acceptOauthRequest or declineOauthRequest to process the link
+   * Returns information about an OAuth deep link. Use checkOauthRequestMatchCode, acceptOauthRequest, or declineOauthRequest to process the link
    *
    * @param {getOauthLinkInfo$DirectInput} parameters {@link getOauthLinkInfo$Input}
    * @returns {Promise<OauthLinkInfo>} Promise<{@link OauthLinkInfo}>
@@ -120175,7 +127774,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
+   * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges.
+   *
+   * - Deactivates the original basic group
    *
    * @param {upgradeBasicGroupChatToSupergroupChat$DirectInput} parameters {@link upgradeBasicGroupChatToSupergroupChat$Input}
    * @returns {Promise<Chat>} Promise<{@link Chat}>
@@ -120455,7 +128056,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Process new chats added to a shareable chat folder by its owner
+   * Processes new chats added to a shareable chat folder by its owner
    *
    * @param {processChatFolderNewChats$DirectInput} parameters {@link processChatFolderNewChats$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -120546,7 +128147,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
+   * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires can_change_info administrator right in basic groups, supergroups and channels.
    *
    * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
    *
@@ -120956,7 +128557,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
+   * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats.
+   *
+   * - In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
    *
    * @param {banChatMember$DirectInput} parameters {@link banChatMember$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -121209,7 +128812,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
+   * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max")
+   *
+   * - pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
    *
    * @param {toggleChatIsPinned$DirectInput} parameters {@link toggleChatIsPinned$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -121338,6 +128943,17 @@ export class $AsyncApi {
   }
 
   /**
+   * Changes music attached to a story. Can be called only if story.can_be_edited == true and the story isn't being edited now
+   *
+   * @param {editStoryMusic$DirectInput} parameters {@link editStoryMusic$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async editStoryMusic(parameters: editStoryMusic$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("editStoryMusic", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_set_privacy_settings == true
    *
    * @param {setStoryPrivacySettings$DirectInput} parameters {@link setStoryPrivacySettings$Input}
@@ -121396,7 +129012,7 @@ export class $AsyncApi {
   /**
    * Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
    *
-   * - the pair (active_stories.order, active_stories.story_poster_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
+   * - the pair (active_stories.order, active_stories.chat_id) in descending order. Returns a 404 error if all active stories have been loaded
    *
    * @param {loadActiveStories$DirectInput} parameters {@link loadActiveStories$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -121433,9 +129049,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
+   * Returns the list of stories that were posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
    *
-   * - Then, stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+   * - Then, stories are returned in reverse chronological order (i.e., in order of decreasing story.id). For optimal performance, the number of returned stories is chosen by TDLib
    *
    * @param {getChatPostedToChatPageStories$DirectInput} parameters {@link getChatPostedToChatPageStories$Input}
    * @returns {Promise<Stories>} Promise<{@link Stories}>
@@ -121453,7 +129069,7 @@ export class $AsyncApi {
   /**
    * Returns the list of all stories posted by the given chat; requires can_edit_stories administrator right in the chat.
    *
-   * - The stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+   * - The stories are returned in reverse chronological order (i.e., in order of decreasing story.id). For optimal performance, the number of returned stories is chosen by TDLib
    *
    * @param {getChatArchivedStories$DirectInput} parameters {@link getChatArchivedStories$Input}
    * @returns {Promise<Stories>} Promise<{@link Stories}>
@@ -122102,7 +129718,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
+   * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only
+   *
+   * - if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
    *
    * @param {readFilePart$DirectInput} parameters {@link readFilePart$Input}
    * @returns {Promise<Data>} Promise<{@link Data}>
@@ -122126,7 +129744,9 @@ export class $AsyncApi {
   /**
    * Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
    *
-   * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+   * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile,
+   *
+   * - i.e. it continues if downloadFile is canceled or is used to download a part of the file
    *
    * @param {addFileToDownloads$DirectInput} parameters {@link addFileToDownloads$Input}
    * @returns {Promise<File>} Promise<{@link File}>
@@ -122411,7 +130031,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
+   * Deletes a revoked chat invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
    *
    * @param {deleteRevokedChatInviteLink$DirectInput} parameters {@link deleteRevokedChatInviteLink$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -123261,7 +130881,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Toggles whether a group call participant hand is rased; for video chats only
+   * Toggles whether a group call participant hand is raised; for video chats only
    *
    * @param {toggleGroupCallParticipantIsHandRaised$DirectInput} parameters {@link toggleGroupCallParticipantIsHandRaised$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -124606,7 +132226,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
+   * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo.next_type was not null and the server-specified timeout has passed
    *
    * @param {resendPhoneNumberCode$DirectInput} parameters {@link resendPhoneNumberCode$Input}
    * @returns {Promise<AuthenticationCodeInfo>} Promise<{@link AuthenticationCodeInfo}>
@@ -124809,6 +132429,23 @@ export class $AsyncApi {
   }
 
   /**
+   * Allows the current user to send unpaid messages to the given user, which requires payment for incoming messages, using a token from an internal link
+   *
+   * - of the type internalLinkTypePublicChat, internalLinkTypeUserPhoneNumber, or internalLinkTypeUserToken. The first message sent to the user will be preceded by a messageUnpaidMessagesAllowedByLink message.
+   *
+   * - Repeated calls and calls for the current user have no effect
+   *
+   * @param {applyUnpaidMessagesToken$DirectInput} parameters {@link applyUnpaidMessagesToken$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async applyUnpaidMessagesToken(
+    parameters: applyUnpaidMessagesToken$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("applyUnpaidMessagesToken", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Sets the list of commands supported by the bot for the given user scope and language; for bots only
    *
    * @param {setCommands$DirectInput} parameters {@link setCommands$Input}
@@ -124961,7 +132598,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
+   * Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview
+   *
+   * - after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
    *
    * @param {addBotMediaPreview$DirectInput} parameters {@link addBotMediaPreview$Input}
    * @returns {Promise<BotMediaPreview>} Promise<{@link BotMediaPreview}>
@@ -125013,7 +132652,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Checks whether a username can be set for a new bot. Use checkChatUsername to check username for other chat types
+   * Checks whether a username can be set for a new bot or assigned as a secondary username to an existing bot. Use checkChatUsername to check username for other chat types
    *
    * @param {checkBotUsername$DirectInput} parameters {@link checkBotUsername$Input}
    * @returns {Promise<CheckChatUsernameResult>} Promise<{@link CheckChatUsernameResult}>
@@ -125113,6 +132752,37 @@ export class $AsyncApi {
    */
   async setBotProfilePhoto(parameters: setBotProfilePhoto$DirectInput): Promise<Ok> {
     const result = await this.client.invoke("setBotProfilePhoto", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Adds a secondary username to a bot. Can be called only if userTypeBot.can_be_edited, the bot has no secondary username and the current user has Telegram Premium subscription.
+   *
+   * - May return an error with a message "OWNER_USERNAMES_LIMIT_EXCEEDED" if the current user already owns at least getOption("secondary_bot_username_count_max") bots with a secondary username
+   *
+   * @param {addBotSecondaryUsername$DirectInput} parameters {@link addBotSecondaryUsername$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async addBotSecondaryUsername(
+    parameters: addBotSecondaryUsername$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("addBotSecondaryUsername", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Removes a secondary username from a bot. Can be called only if userTypeBot.can_be_edited == true and the bot has a secondary username
+   *
+   * @param {deleteBotSecondaryUsername$DirectInput} parameters {@link deleteBotSecondaryUsername$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteBotSecondaryUsername(
+    parameters: deleteBotSecondaryUsername$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "deleteBotSecondaryUsername",
+      parameters
+    );
     return result as Ok;
   }
 
@@ -125328,7 +132998,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns all website where the current user used Telegram to log in
+   * Returns all websites where the current user used Telegram to log in
    *
    * @param {getConnectedWebsites$DirectInput} parameters {@link getConnectedWebsites$Input}
    * @returns {Promise<ConnectedWebsites>} Promise<{@link ConnectedWebsites}>
@@ -125441,7 +133111,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
+   * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to set a custom emoji sticker set
    *
    * @param {setSupergroupCustomEmojiStickerSet$DirectInput} parameters {@link setSupergroupCustomEmojiStickerSet$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -125553,7 +133223,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+   * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel.
+   *
+   * - The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
    *
    * @param {toggleSupergroupCanHaveSponsoredMessages$DirectInput} parameters {@link toggleSupergroupCanHaveSponsoredMessages$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -125701,7 +133373,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only in supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing event_id)
+   * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only in supergroups and channels.
+   *
+   * - Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing chatEvent.id)
    *
    * @param {getChatEventLog$DirectInput} parameters {@link getChatEventLog$Input}
    * @returns {Promise<ChatEvents>} Promise<{@link ChatEvents}>
@@ -125952,6 +133626,17 @@ export class $AsyncApi {
   }
 
   /**
+   * Deletes a gift without receiving Telegram Stars for it. Use receivedGift.can_be_deleted or messageGift.can_be_deleted to check whether the gift can be deleted
+   *
+   * @param {deleteGift$DirectInput} parameters {@link deleteGift$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteGift(parameters: deleteGift$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("deleteGift", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
    *
    * @param {toggleGiftIsSaved$DirectInput} parameters {@link toggleGiftIsSaved$Input}
@@ -126142,7 +133827,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns upgraded gifts of the current user who can be used to craft another gifts
+   * Returns upgraded gifts of the current user, which can be used to craft other gifts
    *
    * @param {getGiftsForCrafting$DirectInput} parameters {@link getGiftsForCrafting$Input}
    * @returns {Promise<GiftsForCrafting>} Promise<{@link GiftsForCrafting}>
@@ -126181,7 +133866,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns a URL for upgraded gift withdrawal in the TON blockchain as an NFT; requires owner privileges for gifts owned by a chat
+   * Returns a URL for upgraded gift withdrawal in the TON blockchain as an NFT; requires owner privileges for gifts owned by a chat.
+   *
+   * - The user must have a valid temporary password; see createTemporaryPassword
    *
    * @param {getUpgradedGiftWithdrawalUrl$DirectInput} parameters {@link getUpgradedGiftWithdrawalUrl$Input}
    * @returns {Promise<HttpUrl>} Promise<{@link HttpUrl}>
@@ -126194,6 +133881,54 @@ export class $AsyncApi {
       parameters
     );
     return result as HttpUrl;
+  }
+
+  /**
+   * Withdraws an upgraded gift to the TON blockchain as an NFT directly to the TON wallet of the current user, which is created automatically if the user has no wallet yet;
+   *
+   * - requires owner privileges for gifts owned by a chat. The user must have a valid temporary password; see createTemporaryPassword.
+   *
+   * - The gift will be received by the wallet in a few seconds after the request succeeds
+   *
+   * @param {withdrawUpgradedGift$DirectInput} parameters {@link withdrawUpgradedGift$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async withdrawUpgradedGift(
+    parameters: withdrawUpgradedGift$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("withdrawUpgradedGift", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns information needed to deposit an upgraded gift from the TON wallet of the current user to a Telegram account. Use sendTonWalletTransfer to complete transfer of the gift.
+   *
+   * - The gift will be received by the new owner with a message about the gift after the transfer is confirmed in the blockchain
+   *
+   * @param {getUpgradedGiftDepositInfo$DirectInput} parameters {@link getUpgradedGiftDepositInfo$Input}
+   * @returns {Promise<UpgradedGiftDepositInfo>} Promise<{@link UpgradedGiftDepositInfo}>
+   */
+  async getUpgradedGiftDepositInfo(
+    parameters: getUpgradedGiftDepositInfo$DirectInput
+  ): Promise<UpgradedGiftDepositInfo> {
+    const result = await this.client.invoke(
+      "getUpgradedGiftDepositInfo",
+      parameters
+    );
+    return result as UpgradedGiftDepositInfo;
+  }
+
+  /**
+   * Shows an upgraded gift from the TON wallet of the current user on a profile page or hides it from all profile pages; the gift remains in the wallet
+   *
+   * @param {displayUpgradedGift$DirectInput} parameters {@link displayUpgradedGift$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async displayUpgradedGift(
+    parameters: displayUpgradedGift$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("displayUpgradedGift", parameters);
+    return result as Ok;
   }
 
   /**
@@ -126472,6 +134207,37 @@ export class $AsyncApi {
   }
 
   /**
+   * Returns the list of backdrops, which can be used as a background of a theme of the screen for sharing a link to a user or a chat
+   *
+   * @param {getProfileShareThemeBackdrops$DirectInput} parameters {@link getProfileShareThemeBackdrops$Input}
+   * @returns {Promise<ProfileShareThemeBackdrops>} Promise<{@link ProfileShareThemeBackdrops}>
+   */
+  async getProfileShareThemeBackdrops(
+    parameters: getProfileShareThemeBackdrops$DirectInput
+  ): Promise<ProfileShareThemeBackdrops> {
+    const result = await this.client.invoke(
+      "getProfileShareThemeBackdrops",
+      parameters
+    );
+    return result as ProfileShareThemeBackdrops;
+  }
+
+  /**
+   * Changes the theme of the screen for sharing a link to the current user or a chat. The chat must have a username.
+   *
+   * - Requires can_change_info administrator right in supergroups and channels
+   *
+   * @param {setProfileShareTheme$DirectInput} parameters {@link setProfileShareTheme$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async setProfileShareTheme(
+    parameters: setProfileShareTheme$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("setProfileShareTheme", parameters);
+    return result as Ok;
+  }
+
+  /**
    * Returns information about the current localization target. This is an offline method if only_local is true. Can be called before authorization
    *
    * @param {getLocalizationTargetInfo$DirectInput} parameters {@link getLocalizationTargetInfo$Input}
@@ -126571,7 +134337,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Adds, edits or deletes a string in a custom local language pack. Can be called before authorization
+   * Adds, edits, or deletes a string in a custom local language pack. Can be called before authorization
    *
    * @param {setCustomLanguagePackString$DirectInput} parameters {@link setCustomLanguagePackString$Input}
    * @returns {Promise<Ok>} Promise<{@link Ok}>
@@ -126902,7 +134668,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
+   * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, if chat.can_be_reported, or if messageProperties.can_report_chat
    *
    * @param {reportChat$DirectInput} parameters {@link reportChat$Input}
    * @returns {Promise<ReportChatResult>} Promise<{@link ReportChatResult}>
@@ -126988,7 +134754,7 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns the list of TON blockchain transactions of the current user
+   * Returns the list of TON Gram transactions of the current user
    *
    * @param {getTonTransactions$DirectInput} parameters {@link getTonTransactions$Input}
    * @returns {Promise<TonTransactions>} Promise<{@link TonTransactions}>
@@ -126998,6 +134764,558 @@ export class $AsyncApi {
   ): Promise<TonTransactions> {
     const result = await this.client.invoke("getTonTransactions", parameters);
     return result as TonTransactions;
+  }
+
+  /**
+   * Returns the list of TON wallet transactions of the current user; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {getTonWalletTransactions$DirectInput} parameters {@link getTonWalletTransactions$Input}
+   * @returns {Promise<TonWalletTransactions>} Promise<{@link TonWalletTransactions}>
+   */
+  async getTonWalletTransactions(
+    parameters: getTonWalletTransactions$DirectInput
+  ): Promise<TonWalletTransactions> {
+    const result = await this.client.invoke("getTonWalletTransactions", parameters);
+    return result as TonWalletTransactions;
+  }
+
+  /**
+   * Returns a TON wallet transaction by its identifier
+   *
+   * @param {getTonWalletTransaction$DirectInput} parameters {@link getTonWalletTransaction$Input}
+   * @returns {Promise<TonWalletTransaction>} Promise<{@link TonWalletTransaction}>
+   */
+  async getTonWalletTransaction(
+    parameters: getTonWalletTransaction$DirectInput
+  ): Promise<TonWalletTransaction> {
+    const result = await this.client.invoke("getTonWalletTransaction", parameters);
+    return result as TonWalletTransaction;
+  }
+
+  /**
+   * Returns a TON wallet transaction by its msg_hash; returns an error if the transaction isn't finalized yet
+   *
+   * @param {getTonWalletTransactionByMsgHash$DirectInput} parameters {@link getTonWalletTransactionByMsgHash$Input}
+   * @returns {Promise<TonWalletTransaction>} Promise<{@link TonWalletTransaction}>
+   */
+  async getTonWalletTransactionByMsgHash(
+    parameters: getTonWalletTransactionByMsgHash$DirectInput
+  ): Promise<TonWalletTransaction> {
+    const result = await this.client.invoke(
+      "getTonWalletTransactionByMsgHash",
+      parameters
+    );
+    return result as TonWalletTransaction;
+  }
+
+  /**
+   * Loads state of the TON wallet of the current user; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {loadTonWalletState$DirectInput} parameters {@link loadTonWalletState$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async loadTonWalletState(parameters: loadTonWalletState$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("loadTonWalletState", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Loads or reloads the current state of gasless transfers for the current user; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {loadTonWalletGaslessTransfersInfo$DirectInput} parameters {@link loadTonWalletGaslessTransfersInfo$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async loadTonWalletGaslessTransfersInfo(
+    parameters: loadTonWalletGaslessTransfersInfo$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "loadTonWalletGaslessTransfersInfo",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Returns information about balance of the current user in the bot https://t.me/walt; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {checkWalletBotBalance$DirectInput} parameters {@link checkWalletBotBalance$Input}
+   * @returns {Promise<WalletBotBalance>} Promise<{@link WalletBotBalance}>
+   */
+  async checkWalletBotBalance(
+    parameters: checkWalletBotBalance$DirectInput
+  ): Promise<WalletBotBalance> {
+    const result = await this.client.invoke("checkWalletBotBalance", parameters);
+    return result as WalletBotBalance;
+  }
+
+  /**
+   * Returns TON wallet addresses of the specified users; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {getUserTonWalletAddresses$DirectInput} parameters {@link getUserTonWalletAddresses$Input}
+   * @returns {Promise<UserTonWalletAddresses>} Promise<{@link UserTonWalletAddresses}>
+   */
+  async getUserTonWalletAddresses(
+    parameters: getUserTonWalletAddresses$DirectInput
+  ): Promise<UserTonWalletAddresses> {
+    const result = await this.client.invoke("getUserTonWalletAddresses", parameters);
+    return result as UserTonWalletAddresses;
+  }
+
+  /**
+   * Creates a TON wallet for the specified regular user; can be used only if getOption("can_use_ton_wallet"). The current user must have positive TON wallet balance
+   *
+   * @param {createUserTonWallet$DirectInput} parameters {@link createUserTonWallet$Input}
+   * @returns {Promise<UserTonWalletAddress>} Promise<{@link UserTonWalletAddress}>
+   */
+  async createUserTonWallet(
+    parameters: createUserTonWallet$DirectInput
+  ): Promise<UserTonWalletAddress> {
+    const result = await this.client.invoke("createUserTonWallet", parameters);
+    return result as UserTonWalletAddress;
+  }
+
+  /**
+   * Returns information about a TON wallet with the given address; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {getAddressTonWallet$DirectInput} parameters {@link getAddressTonWallet$Input}
+   * @returns {Promise<UserTonWalletAddress>} Promise<{@link UserTonWalletAddress}>
+   */
+  async getAddressTonWallet(
+    parameters: getAddressTonWallet$DirectInput
+  ): Promise<UserTonWalletAddress> {
+    const result = await this.client.invoke("getAddressTonWallet", parameters);
+    return result as UserTonWalletAddress;
+  }
+
+  /**
+   * Returns the secret phrase of the user's TON wallet. Works only if tonWalletState.can_export_phrase is true
+   *
+   * @param {getTonWalletSecretPhrase$DirectInput} parameters {@link getTonWalletSecretPhrase$Input}
+   * @returns {Promise<TonWalletSecretPhrase>} Promise<{@link TonWalletSecretPhrase}>
+   */
+  async getTonWalletSecretPhrase(
+    parameters: getTonWalletSecretPhrase$DirectInput
+  ): Promise<TonWalletSecretPhrase> {
+    const result = await this.client.invoke("getTonWalletSecretPhrase", parameters);
+    return result as TonWalletSecretPhrase;
+  }
+
+  /**
+   * Returns a challenge which may be used to prove ownership of a TON wallet; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {getTonWalletOwnershipProofChallenge$DirectInput} parameters {@link getTonWalletOwnershipProofChallenge$Input}
+   * @returns {Promise<TonWalletOwnershipProofChallenge>} Promise<{@link TonWalletOwnershipProofChallenge}>
+   */
+  async getTonWalletOwnershipProofChallenge(
+    parameters: getTonWalletOwnershipProofChallenge$DirectInput
+  ): Promise<TonWalletOwnershipProofChallenge> {
+    const result = await this.client.invoke(
+      "getTonWalletOwnershipProofChallenge",
+      parameters
+    );
+    return result as TonWalletOwnershipProofChallenge;
+  }
+
+  /**
+   * Enables backup of the TON wallet of the user. Works only if tonWalletState.can_enable_backup is true
+   *
+   * @param {enableTonWalletBackup$DirectInput} parameters {@link enableTonWalletBackup$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async enableTonWalletBackup(
+    parameters: enableTonWalletBackup$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("enableTonWalletBackup", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Disables backup of the TON wallet of the user. Works only if tonWalletState.is_backup_enabled is true
+   *
+   * @param {disableTonWalletBackup$DirectInput} parameters {@link disableTonWalletBackup$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async disableTonWalletBackup(
+    parameters: disableTonWalletBackup$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("disableTonWalletBackup", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Disables backup of the TON wallet of the user using proof of wallet ownership instead of the password. Works only if tonWalletState.is_backup_enabled is true
+   *
+   * @param {disableTonWalletBackupWithProof$DirectInput} parameters {@link disableTonWalletBackupWithProof$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async disableTonWalletBackupWithProof(
+    parameters: disableTonWalletBackupWithProof$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "disableTonWalletBackupWithProof",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Sends a cryptocurrency from the user's TON wallet; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {sendTonWalletTransfer$DirectInput} parameters {@link sendTonWalletTransfer$Input}
+   * @returns {Promise<TonWalletTransferResult>} Promise<{@link TonWalletTransferResult}>
+   */
+  async sendTonWalletTransfer(
+    parameters: sendTonWalletTransfer$DirectInput
+  ): Promise<TonWalletTransferResult> {
+    const result = await this.client.invoke("sendTonWalletTransfer", parameters);
+    return result as TonWalletTransferResult;
+  }
+
+  /**
+   * Deletes the current TON wallet of the user and creates a new one; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {deleteTonWallet$DirectInput} parameters {@link deleteTonWallet$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async deleteTonWallet(parameters: deleteTonWallet$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("deleteTonWallet", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Replaces the current TON wallet with another existing v6r2 wallet or changes private key of the current TON wallet; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {replaceTonWallet$DirectInput} parameters {@link replaceTonWallet$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async replaceTonWallet(parameters: replaceTonWallet$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("replaceTonWallet", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns exchange rates of currencies to USD
+   *
+   * @param {getCurrencyExchangeRates$DirectInput} parameters {@link getCurrencyExchangeRates$Input}
+   * @returns {Promise<CurrencyExchangeRates>} Promise<{@link CurrencyExchangeRates}>
+   */
+  async getCurrencyExchangeRates(
+    parameters: getCurrencyExchangeRates$DirectInput
+  ): Promise<CurrencyExchangeRates> {
+    const result = await this.client.invoke("getCurrencyExchangeRates", parameters);
+    return result as CurrencyExchangeRates;
+  }
+
+  /**
+   * Returns NFTs stored on the TON wallet of the user; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {getTonWalletNfts$DirectInput} parameters {@link getTonWalletNfts$Input}
+   * @returns {Promise<TonNfts>} Promise<{@link TonNfts}>
+   */
+  async getTonWalletNfts(
+    parameters: getTonWalletNfts$DirectInput
+  ): Promise<TonNfts> {
+    const result = await this.client.invoke("getTonWalletNfts", parameters);
+    return result as TonNfts;
+  }
+
+  /**
+   * Returns names of upgraded gift collections whose NFTs can be used as background_nft_address in setTonWalletCardStickers; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {getTonWalletCardBackgroundGiftCollectionNames$DirectInput} parameters {@link getTonWalletCardBackgroundGiftCollectionNames$Input}
+   * @returns {Promise<UpgradedGiftCollectionNames>} Promise<{@link UpgradedGiftCollectionNames}>
+   */
+  async getTonWalletCardBackgroundGiftCollectionNames(
+    parameters: getTonWalletCardBackgroundGiftCollectionNames$DirectInput
+  ): Promise<UpgradedGiftCollectionNames> {
+    const result = await this.client.invoke(
+      "getTonWalletCardBackgroundGiftCollectionNames",
+      parameters
+    );
+    return result as UpgradedGiftCollectionNames;
+  }
+
+  /**
+   * Changes the list of stickers on the TON wallet card of the current user; can be used only if getOption("can_use_ton_wallet").
+   *
+   * - The whole list of stickers is replaced. The request can take up to 20 seconds to complete, so it must be called only on explicit user action.
+   *
+   * - Stickers are removed automatically if the corresponding NFT leaves the wallet or the wallet is replaced. Returns the updated card
+   *
+   * @param {setTonWalletCardStickers$DirectInput} parameters {@link setTonWalletCardStickers$Input}
+   * @returns {Promise<TonWalletCard>} Promise<{@link TonWalletCard}>
+   */
+  async setTonWalletCardStickers(
+    parameters: setTonWalletCardStickers$DirectInput
+  ): Promise<TonWalletCard> {
+    const result = await this.client.invoke("setTonWalletCardStickers", parameters);
+    return result as TonWalletCard;
+  }
+
+  /**
+   * Returns active TON Connect sessions; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {getTonConnectSessions$DirectInput} parameters {@link getTonConnectSessions$Input}
+   * @returns {Promise<TonConnectSessions>} Promise<{@link TonConnectSessions}>
+   */
+  async getTonConnectSessions(
+    parameters: getTonConnectSessions$DirectInput
+  ): Promise<TonConnectSessions> {
+    const result = await this.client.invoke("getTonConnectSessions", parameters);
+    return result as TonConnectSessions;
+  }
+
+  /**
+   * Creates a TON Connect session; can be used only if getOption("can_use_ton_wallet")
+   *
+   * @param {createTonConnectSession$DirectInput} parameters {@link createTonConnectSession$Input}
+   * @returns {Promise<TonConnectSession>} Promise<{@link TonConnectSession}>
+   */
+  async createTonConnectSession(
+    parameters: createTonConnectSession$DirectInput
+  ): Promise<TonConnectSession> {
+    const result = await this.client.invoke("createTonConnectSession", parameters);
+    return result as TonConnectSession;
+  }
+
+  /**
+   * Sets wallet_client_id for a pending TON Connect session. Then, sendTonConnectSessionConnectResult must be used to accept or reject the session.
+   *
+   * - If the session was created for an OAuth request, then acceptOauthRequest must be used instead
+   *
+   * @param {setTonConnectSessionWalletClientId$DirectInput} parameters {@link setTonConnectSessionWalletClientId$Input}
+   * @returns {Promise<TonConnectChallenge>} Promise<{@link TonConnectChallenge}>
+   */
+  async setTonConnectSessionWalletClientId(
+    parameters: setTonConnectSessionWalletClientId$DirectInput
+  ): Promise<TonConnectChallenge> {
+    const result = await this.client.invoke(
+      "setTonConnectSessionWalletClientId",
+      parameters
+    );
+    return result as TonConnectChallenge;
+  }
+
+  /**
+   * Accepts or rejects a TON Connect session
+   *
+   * @param {sendTonConnectSessionConnectResult$DirectInput} parameters {@link sendTonConnectSessionConnectResult$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async sendTonConnectSessionConnectResult(
+    parameters: sendTonConnectSessionConnectResult$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "sendTonConnectSessionConnectResult",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Returns pending requests in a TON Connect session
+   *
+   * @param {getTonConnectSessionPendingRequests$DirectInput} parameters {@link getTonConnectSessionPendingRequests$Input}
+   * @returns {Promise<TonConnectRequests>} Promise<{@link TonConnectRequests}>
+   */
+  async getTonConnectSessionPendingRequests(
+    parameters: getTonConnectSessionPendingRequests$DirectInput
+  ): Promise<TonConnectRequests> {
+    const result = await this.client.invoke(
+      "getTonConnectSessionPendingRequests",
+      parameters
+    );
+    return result as TonConnectRequests;
+  }
+
+  /**
+   * Returns pending requests with a dApp through TON Connect
+   *
+   * @param {getTonConnectDAppPendingRequests$DirectInput} parameters {@link getTonConnectDAppPendingRequests$Input}
+   * @returns {Promise<TonConnectRequests>} Promise<{@link TonConnectRequests}>
+   */
+  async getTonConnectDAppPendingRequests(
+    parameters: getTonConnectDAppPendingRequests$DirectInput
+  ): Promise<TonConnectRequests> {
+    const result = await this.client.invoke(
+      "getTonConnectDAppPendingRequests",
+      parameters
+    );
+    return result as TonConnectRequests;
+  }
+
+  /**
+   * Claims a request received through TON Connect for processing on this device
+   *
+   * @param {claimTonConnectRequest$DirectInput} parameters {@link claimTonConnectRequest$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async claimTonConnectRequest(
+    parameters: claimTonConnectRequest$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("claimTonConnectRequest", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Sends an answer for a request received through TON Connect
+   *
+   * @param {answerTonConnectRequest$DirectInput} parameters {@link answerTonConnectRequest$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async answerTonConnectRequest(
+    parameters: answerTonConnectRequest$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke("answerTonConnectRequest", parameters);
+    return result as Ok;
+  }
+
+  /**
+   * Returns the next event identifier for the given TON Connect session
+   *
+   * @param {getTonConnectSessionNextEventId$DirectInput} parameters {@link getTonConnectSessionNextEventId$Input}
+   * @returns {Promise<TonConnectSessionEventId>} Promise<{@link TonConnectSessionEventId}>
+   */
+  async getTonConnectSessionNextEventId(
+    parameters: getTonConnectSessionNextEventId$DirectInput
+  ): Promise<TonConnectSessionEventId> {
+    const result = await this.client.invoke(
+      "getTonConnectSessionNextEventId",
+      parameters
+    );
+    return result as TonConnectSessionEventId;
+  }
+
+  /**
+   * Closes a TON Connect session
+   *
+   * @param {disconnectTonConnectSession$DirectInput} parameters {@link disconnectTonConnectSession$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async disconnectTonConnectSession(
+    parameters: disconnectTonConnectSession$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "disconnectTonConnectSession",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Returns available on-ramp providers
+   *
+   * @param {getOnRampProviders$DirectInput} parameters {@link getOnRampProviders$Input}
+   * @returns {Promise<OnRampProviders>} Promise<{@link OnRampProviders}>
+   */
+  async getOnRampProviders(
+    parameters: getOnRampProviders$DirectInput
+  ): Promise<OnRampProviders> {
+    const result = await this.client.invoke("getOnRampProviders", parameters);
+    return result as OnRampProviders;
+  }
+
+  /**
+   * Returns the list of fiat currencies supported by an on-ramp provider for the given cryptocurrency
+   *
+   * @param {getOnRampProviderBaseCurrencies$DirectInput} parameters {@link getOnRampProviderBaseCurrencies$Input}
+   * @returns {Promise<Currencies>} Promise<{@link Currencies}>
+   */
+  async getOnRampProviderBaseCurrencies(
+    parameters: getOnRampProviderBaseCurrencies$DirectInput
+  ): Promise<Currencies> {
+    const result = await this.client.invoke(
+      "getOnRampProviderBaseCurrencies",
+      parameters
+    );
+    return result as Currencies;
+  }
+
+  /**
+   * Returns the available on-ramp payment methods based on the current user location
+   *
+   * @param {getOnRampPaymentAvailability$DirectInput} parameters {@link getOnRampPaymentAvailability$Input}
+   * @returns {Promise<OnRampPaymentAvailability>} Promise<{@link OnRampPaymentAvailability}>
+   */
+  async getOnRampPaymentAvailability(
+    parameters: getOnRampPaymentAvailability$DirectInput
+  ): Promise<OnRampPaymentAvailability> {
+    const result = await this.client.invoke(
+      "getOnRampPaymentAvailability",
+      parameters
+    );
+    return result as OnRampPaymentAvailability;
+  }
+
+  /**
+   * Returns the limits for an on-ramp payment; only for providers that support limits retrieval
+   *
+   * @param {getOnRampPaymentLimits$DirectInput} parameters {@link getOnRampPaymentLimits$Input}
+   * @returns {Promise<OnRampPaymentLimits>} Promise<{@link OnRampPaymentLimits}>
+   */
+  async getOnRampPaymentLimits(
+    parameters: getOnRampPaymentLimits$DirectInput
+  ): Promise<OnRampPaymentLimits> {
+    const result = await this.client.invoke("getOnRampPaymentLimits", parameters);
+    return result as OnRampPaymentLimits;
+  }
+
+  /**
+   * Returns a quote for an on-ramp payment; only for providers that support quote retrieval
+   *
+   * @param {getOnRampPaymentQuote$DirectInput} parameters {@link getOnRampPaymentQuote$Input}
+   * @returns {Promise<OnRampPaymentQuote>} Promise<{@link OnRampPaymentQuote}>
+   */
+  async getOnRampPaymentQuote(
+    parameters: getOnRampPaymentQuote$DirectInput
+  ): Promise<OnRampPaymentQuote> {
+    const result = await this.client.invoke("getOnRampPaymentQuote", parameters);
+    return result as OnRampPaymentQuote;
+  }
+
+  /**
+   * Creates a session for an on-ramp payment
+   *
+   * @param {createOnRampPaymentSession$DirectInput} parameters {@link createOnRampPaymentSession$Input}
+   * @returns {Promise<OnRampPaymentSession>} Promise<{@link OnRampPaymentSession}>
+   */
+  async createOnRampPaymentSession(
+    parameters: createOnRampPaymentSession$DirectInput
+  ): Promise<OnRampPaymentSession> {
+    const result = await this.client.invoke(
+      "createOnRampPaymentSession",
+      parameters
+    );
+    return result as OnRampPaymentSession;
+  }
+
+  /**
+   * Sends a request to TON Center API and returns its response in JSON format
+   *
+   * @param {sendTonCenterApiRequest$DirectInput} parameters {@link sendTonCenterApiRequest$Input}
+   * @returns {Promise<Text>} Promise<{@link Text}>
+   */
+  async sendTonCenterApiRequest(
+    parameters: sendTonCenterApiRequest$DirectInput
+  ): Promise<Text> {
+    const result = await this.client.invoke("sendTonCenterApiRequest", parameters);
+    return result as Text;
+  }
+
+  /**
+   * Returns a URL for TON Center Streaming API
+   *
+   * @param {getTonCenterStreamingApiUrl$DirectInput} parameters {@link getTonCenterStreamingApiUrl$Input}
+   * @returns {Promise<TonCenterStreamingApiUrl>} Promise<{@link TonCenterStreamingApiUrl}>
+   */
+  async getTonCenterStreamingApiUrl(
+    parameters: getTonCenterStreamingApiUrl$DirectInput
+  ): Promise<TonCenterStreamingApiUrl> {
+    const result = await this.client.invoke(
+      "getTonCenterStreamingApiUrl",
+      parameters
+    );
+    return result as TonCenterStreamingApiUrl;
   }
 
   /**
@@ -127094,7 +135412,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
+   * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only
+   *
+   * - if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
    *
    * @param {getMessagePublicForwards$DirectInput} parameters {@link getMessagePublicForwards$Input}
    * @returns {Promise<PublicForwards>} Promise<{@link PublicForwards}>
@@ -127447,7 +135767,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details. Returns a 404 error if unknown
+   * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details.
+   *
+   * - Returns a 404 error if unknown
    *
    * @param {getPreferredCountryLanguage$DirectInput} parameters {@link getPreferredCountryLanguage$Input}
    * @returns {Promise<Text>} Promise<{@link Text}>
@@ -128332,7 +136654,9 @@ export class $AsyncApi {
   }
 
   /**
-   * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
+   * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing
+   *
+   * - localization to the specified language if properly localized country information is expected. Can be called synchronously
    *
    * @param {getPhoneNumberInfoSync$DirectInput} parameters {@link getPhoneNumberInfoSync$Input}
    * @returns {Promise<PhoneNumberInfo>} Promise<{@link PhoneNumberInfo}>
@@ -128368,6 +136692,17 @@ export class $AsyncApi {
   ): Promise<DeepLinkInfo> {
     const result = await this.client.invoke("getDeepLinkInfo", parameters);
     return result as DeepLinkInfo;
+  }
+
+  /**
+   * Dismisses a received web token without consumption; for official Telegram apps only
+   *
+   * @param {dismissWebToken$DirectInput} parameters {@link dismissWebToken$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async dismissWebToken(parameters: dismissWebToken$DirectInput): Promise<Ok> {
+    const result = await this.client.invoke("dismissWebToken", parameters);
+    return result as Ok;
   }
 
   /**
@@ -128487,6 +136822,40 @@ export class $AsyncApi {
   async pingProxy(parameters: pingProxy$DirectInput): Promise<Seconds> {
     const result = await this.client.invoke("pingProxy", parameters);
     return result as Seconds;
+  }
+
+  /**
+   * Passes a message, which the page of a web proxy carrier passed to postMessage of the bridge object, to TDLib. Must be called in the order in which the messages were passed.
+   *
+   * - Can be called before authorization
+   *
+   * @param {processWebProxyCarrierMessage$DirectInput} parameters {@link processWebProxyCarrierMessage$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async processWebProxyCarrierMessage(
+    parameters: processWebProxyCarrierMessage$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "processWebProxyCarrierMessage",
+      parameters
+    );
+    return result as Ok;
+  }
+
+  /**
+   * Reports that a web proxy carrier failed. TDLib closes the carrier and decides whether and when to request a new one. Can be called before authorization
+   *
+   * @param {reportWebProxyCarrierError$DirectInput} parameters {@link reportWebProxyCarrierError$Input}
+   * @returns {Promise<Ok>} Promise<{@link Ok}>
+   */
+  async reportWebProxyCarrierError(
+    parameters: reportWebProxyCarrierError$DirectInput
+  ): Promise<Ok> {
+    const result = await this.client.invoke(
+      "reportWebProxyCarrierError",
+      parameters
+    );
+    return result as Ok;
   }
 
   /**
@@ -128822,13 +137191,23 @@ export class $SyncApi {
   }
 
   /**
-   * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
+   * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, TON blockchain addresses, URLs, and email addresses) found in the text. Can be called synchronously
    *
    * @param {getTextEntities$DirectInput} parameters - {@link getTextEntities$Input}
    * @returns {TextEntities} {@link TextEntities}
    */
   getTextEntities(parameters: getTextEntities$DirectInput): TextEntities {
     return this.client.execute("getTextEntities", parameters) as TextEntities;
+  }
+
+  /**
+   * Returns positions of all emoji found in the text in order of their appearance. Can be called synchronously
+   *
+   * @param {getTextEmojiRanges$DirectInput} parameters - {@link getTextEmojiRanges$Input}
+   * @returns {TextRanges} {@link TextRanges}
+   */
+  getTextEmojiRanges(parameters: getTextEmojiRanges$DirectInput): TextRanges {
+    return this.client.execute("getTextEmojiRanges", parameters) as TextRanges;
   }
 
   /**
@@ -129001,7 +137380,9 @@ export class $SyncApi {
   }
 
   /**
-   * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
+   * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing
+   *
+   * - localization to the specified language if properly localized country information is expected. Can be called synchronously
    *
    * @param {getPhoneNumberInfoSync$DirectInput} parameters - {@link getPhoneNumberInfoSync$Input}
    * @returns {PhoneNumberInfo} {@link PhoneNumberInfo}
@@ -129562,7 +137943,7 @@ export type setAuthenticationEmailAddress = (
 ) => Ok;
 
 /**
- * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
+ * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, authorization_state.code_info.next_type is not null
  *
  * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
  */
@@ -129577,7 +137958,7 @@ export type resendAuthenticationCode$Input = {
 };
 
 /**
- * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
+ * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, authorization_state.code_info.next_type is not null
  *
  * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
  */
@@ -129590,7 +137971,7 @@ export type resendAuthenticationCode$DirectInput = {
 };
 
 /**
- * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, the next_code_type of the result is not null
+ * Resends an authentication code to the user. Works only when the current authorization state is authorizationStateWaitCode, authorization_state.code_info.next_type is not null
  *
  * - and the server-specified timeout has passed, or when the current authorization state is authorizationStateWaitEmailCode
  *
@@ -129942,7 +138323,7 @@ export type registerUser = (parameters: registerUser$Input) => Ok;
 /**
  * Resets the login email address. May return an error with a message "TASK_ALREADY_EXISTS" if reset is still pending.
  *
- * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.can_reset_email_address == true
+ * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.email_address_reset_state != null
  */
 export type resetAuthenticationEmailAddress$Input = {
   readonly _: "resetAuthenticationEmailAddress";
@@ -129951,14 +138332,14 @@ export type resetAuthenticationEmailAddress$Input = {
 /**
  * Resets the login email address. May return an error with a message "TASK_ALREADY_EXISTS" if reset is still pending.
  *
- * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.can_reset_email_address == true
+ * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.email_address_reset_state != null
  */
 export type resetAuthenticationEmailAddress$DirectInput = {};
 
 /**
  * Resets the login email address. May return an error with a message "TASK_ALREADY_EXISTS" if reset is still pending.
  *
- * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.can_reset_email_address == true
+ * - Works only when the current authorization state is authorizationStateWaitEmailCode and authorization_state.email_address_reset_state != null
  *
  * @param {resetAuthenticationEmailAddress$Input} parameters {@link resetAuthenticationEmailAddress$Input}
  * @returns {Ok} {@link Ok}
@@ -130116,7 +138497,9 @@ export type recoverAuthenticationPassword = (
 ) => Ok;
 
 /**
- * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
+ * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is
+ *
+ * - authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
  */
 export type sendAuthenticationFirebaseSms$Input = {
   readonly _: "sendAuthenticationFirebaseSms";
@@ -130129,7 +138512,9 @@ export type sendAuthenticationFirebaseSms$Input = {
 };
 
 /**
- * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
+ * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is
+ *
+ * - authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
  */
 export type sendAuthenticationFirebaseSms$DirectInput = {
   /**
@@ -130140,7 +138525,9 @@ export type sendAuthenticationFirebaseSms$DirectInput = {
 };
 
 /**
- * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
+ * Sends Firebase Authentication SMS to the phone number of the user. Works only when the current authorization state is
+ *
+ * - authorizationStateWaitCode and the server returned code of the type authenticationCodeTypeFirebaseAndroid or authenticationCodeTypeFirebaseIos
  *
  * @param {sendAuthenticationFirebaseSms$Input} parameters {@link sendAuthenticationFirebaseSms$Input}
  * @returns {Ok} {@link Ok}
@@ -130184,7 +138571,11 @@ export type reportAuthenticationCodeMissing = (
 ) => Ok;
 
 /**
- * Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
+ * Checks the authentication token of a bot; to log in as a bot.
+ *
+ * - Works only when the current authorization state is authorizationStateWaitPhoneNumber.
+ *
+ * - Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
  */
 export type checkAuthenticationBotToken$Input = {
   readonly _: "checkAuthenticationBotToken";
@@ -130197,7 +138588,11 @@ export type checkAuthenticationBotToken$Input = {
 };
 
 /**
- * Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
+ * Checks the authentication token of a bot; to log in as a bot.
+ *
+ * - Works only when the current authorization state is authorizationStateWaitPhoneNumber.
+ *
+ * - Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
  */
 export type checkAuthenticationBotToken$DirectInput = {
   /**
@@ -130208,7 +138603,11 @@ export type checkAuthenticationBotToken$DirectInput = {
 };
 
 /**
- * Checks the authentication token of a bot; to log in as a bot. Works only when the current authorization state is authorizationStateWaitPhoneNumber. Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
+ * Checks the authentication token of a bot; to log in as a bot.
+ *
+ * - Works only when the current authorization state is authorizationStateWaitPhoneNumber.
+ *
+ * - Can be used instead of setAuthenticationPhoneNumber and checkAuthenticationCode to log in
  *
  * @param {checkAuthenticationBotToken$Input} parameters {@link checkAuthenticationBotToken$Input}
  * @returns {Ok} {@link Ok}
@@ -130318,19 +138717,25 @@ export type confirmQrCodeAuthentication = (
 ) => Session;
 
 /**
- * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others. This is especially useful if TDLib is run in a separate process. Can be called before initialization
+ * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others.
+ *
+ * - This is especially useful if TDLib is run in a separate process. Can be called before initialization
  */
 export type getCurrentState$Input = {
   readonly _: "getCurrentState";
 };
 
 /**
- * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others. This is especially useful if TDLib is run in a separate process. Can be called before initialization
+ * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others.
+ *
+ * - This is especially useful if TDLib is run in a separate process. Can be called before initialization
  */
 export type getCurrentState$DirectInput = {};
 
 /**
- * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others. This is especially useful if TDLib is run in a separate process. Can be called before initialization
+ * Returns all updates needed to restore current TDLib state, i.e. all actual updateAuthorizationState/updateUser/updateNewChat and others.
+ *
+ * - This is especially useful if TDLib is run in a separate process. Can be called before initialization
  *
  * @param {getCurrentState$Input} parameters {@link getCurrentState$Input}
  * @returns {Updates} {@link Updates}
@@ -130912,7 +139317,7 @@ export type cancelPasswordReset$DirectInput = {};
 export type cancelPasswordReset = (parameters: cancelPasswordReset$Input) => Ok;
 
 /**
- * Creates a new temporary password for processing payments
+ * Creates a new temporary password for processing payments and withdrawal of upgraded gifts
  */
 export type createTemporaryPassword$Input = {
   readonly _: "createTemporaryPassword";
@@ -130931,7 +139336,7 @@ export type createTemporaryPassword$Input = {
 };
 
 /**
- * Creates a new temporary password for processing payments
+ * Creates a new temporary password for processing payments and withdrawal of upgraded gifts
  */
 export type createTemporaryPassword$DirectInput = {
   /**
@@ -130948,7 +139353,7 @@ export type createTemporaryPassword$DirectInput = {
 };
 
 /**
- * Creates a new temporary password for processing payments
+ * Creates a new temporary password for processing payments and withdrawal of upgraded gifts
  *
  * @param {createTemporaryPassword$Input} parameters {@link createTemporaryPassword$Input}
  * @returns {TemporaryPasswordState} {@link TemporaryPasswordState}
@@ -131440,7 +139845,7 @@ export type getRepliedMessage$DirectInput = {
 export type getRepliedMessage = (parameters: getRepliedMessage$Input) => Message;
 
 /**
- * Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
+ * Returns information about the newest pinned message in the chat. Returns a 404 error if the message doesn't exist
  */
 export type getChatPinnedMessage$Input = {
   readonly _: "getChatPinnedMessage";
@@ -131453,7 +139858,7 @@ export type getChatPinnedMessage$Input = {
 };
 
 /**
- * Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
+ * Returns information about the newest pinned message in the chat. Returns a 404 error if the message doesn't exist
  */
 export type getChatPinnedMessage$DirectInput = {
   /**
@@ -131464,7 +139869,7 @@ export type getChatPinnedMessage$DirectInput = {
 };
 
 /**
- * Returns information about a newest pinned message in the chat. Returns a 404 error if the message doesn't exist
+ * Returns information about the newest pinned message in the chat. Returns a 404 error if the message doesn't exist
  *
  * @param {getChatPinnedMessage$Input} parameters {@link getChatPinnedMessage$Input}
  * @returns {Message} {@link Message}
@@ -131582,7 +139987,7 @@ export type getFullRichMessage$Input = {
   readonly _: "getFullRichMessage";
 
   /**
-   * Identifier of the chat the messages belong to
+   * Identifier of the chat the message belongs to
    * @type {int53} {@link int53}
    */
   readonly chat_id?: int53;
@@ -131599,7 +140004,7 @@ export type getFullRichMessage$Input = {
  */
 export type getFullRichMessage$DirectInput = {
   /**
-   * Identifier of the chat the messages belong to
+   * Identifier of the chat the message belongs to
    * @type {int53} {@link int53}
    */
   readonly chat_id?: int53;
@@ -131818,7 +140223,9 @@ export type getMessageReadDate = (
 ) => MessageReadDate;
 
 /**
- * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
+ * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users,
+ *
+ * - opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
  */
 export type getMessageViewers$Input = {
   readonly _: "getMessageViewers";
@@ -131837,7 +140244,9 @@ export type getMessageViewers$Input = {
 };
 
 /**
- * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
+ * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users,
+ *
+ * - opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
  */
 export type getMessageViewers$DirectInput = {
   /**
@@ -131854,7 +140263,9 @@ export type getMessageViewers$DirectInput = {
 };
 
 /**
- * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users, opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
+ * Returns viewers of a recent outgoing message in a basic group or a supergroup chat. For video notes and voice notes only users,
+ *
+ * - opened content of the message, are returned. The method can be called if messageProperties.can_get_viewers == true
  *
  * @param {getMessageViewers$Input} parameters {@link getMessageViewers$Input}
  * @returns {MessageViewers} {@link MessageViewers}
@@ -131940,9 +140351,15 @@ export type getFile$DirectInput = {
 export type getFile = (parameters: getFile$Input) => File;
 
 /**
- * Returns information about a file by its remote identifier. This is an offline method. Can be used to register a URL as a file for further uploading, or sending as a message. Even if the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier. This is an offline method.
  *
- * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
+ * - Can be used to register a URL as a file for further uploading, or sending as a message.
+ *
+ * - Even if the request succeeds, the file can be used only if it is still accessible to the user.
+ *
+ * - For example, if the file is from a message, then the message must be not deleted and accessible to the user.
+ *
+ * - If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  */
 export type getRemoteFile$Input = {
   readonly _: "getRemoteFile";
@@ -131961,9 +140378,15 @@ export type getRemoteFile$Input = {
 };
 
 /**
- * Returns information about a file by its remote identifier. This is an offline method. Can be used to register a URL as a file for further uploading, or sending as a message. Even if the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier. This is an offline method.
  *
- * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
+ * - Can be used to register a URL as a file for further uploading, or sending as a message.
+ *
+ * - Even if the request succeeds, the file can be used only if it is still accessible to the user.
+ *
+ * - For example, if the file is from a message, then the message must be not deleted and accessible to the user.
+ *
+ * - If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  */
 export type getRemoteFile$DirectInput = {
   /**
@@ -131980,9 +140403,15 @@ export type getRemoteFile$DirectInput = {
 };
 
 /**
- * Returns information about a file by its remote identifier. This is an offline method. Can be used to register a URL as a file for further uploading, or sending as a message. Even if the request succeeds, the file can be used only if it is still accessible to the user.
+ * Returns information about a file by its remote identifier. This is an offline method.
  *
- * - For example, if the file is from a message, then the message must be not deleted and accessible to the user. If the file database is disabled, then the corresponding object with the file must be preloaded by the application
+ * - Can be used to register a URL as a file for further uploading, or sending as a message.
+ *
+ * - Even if the request succeeds, the file can be used only if it is still accessible to the user.
+ *
+ * - For example, if the file is from a message, then the message must be not deleted and accessible to the user.
+ *
+ * - If the file database is disabled, then the corresponding object with the file must be preloaded by the application
  *
  * @param {getRemoteFile$Input} parameters {@link getRemoteFile$Input}
  * @returns {File} {@link File}
@@ -131990,7 +140419,9 @@ export type getRemoteFile$DirectInput = {
 export type getRemoteFile = (parameters: getRemoteFile$Input) => File;
 
 /**
- * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
+ * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates.
+ *
+ * - Chats are sorted by the pair (chatPosition.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
  */
 export type loadChats$Input = {
   readonly _: "loadChats";
@@ -132009,7 +140440,9 @@ export type loadChats$Input = {
 };
 
 /**
- * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
+ * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates.
+ *
+ * - Chats are sorted by the pair (chatPosition.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
  */
 export type loadChats$DirectInput = {
   /**
@@ -132026,7 +140459,9 @@ export type loadChats$DirectInput = {
 };
 
 /**
- * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates. Chats are sorted by the pair (chat.position.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
+ * Loads more chats from a chat list. The loaded chats and their positions in the chat list will be sent through updates.
+ *
+ * - Chats are sorted by the pair (chatPosition.order, chat.id) in descending order. Returns a 404 error if all chats have been loaded
  *
  * @param {loadChats$Input} parameters {@link loadChats$Input}
  * @returns {Ok} {@link Ok}
@@ -132884,7 +141319,9 @@ export type getCreatedPublicChats = (
 ) => Chats;
 
 /**
- * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
+ * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached.
+ *
+ * - The limit can be increased with Telegram Premium
  */
 export type checkCreatedPublicChatsLimit$Input = {
   readonly _: "checkCreatedPublicChatsLimit";
@@ -132897,7 +141334,9 @@ export type checkCreatedPublicChatsLimit$Input = {
 };
 
 /**
- * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
+ * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached.
+ *
+ * - The limit can be increased with Telegram Premium
  */
 export type checkCreatedPublicChatsLimit$DirectInput = {
   /**
@@ -132908,7 +141347,9 @@ export type checkCreatedPublicChatsLimit$DirectInput = {
 };
 
 /**
- * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached. The limit can be increased with Telegram Premium
+ * Checks whether the maximum number of owned public chats has been reached. Returns corresponding error if the limit was reached.
+ *
+ * - The limit can be increased with Telegram Premium
  *
  * @param {checkCreatedPublicChatsLimit$Input} parameters {@link checkCreatedPublicChatsLimit$Input}
  * @returns {Ok} {@link Ok}
@@ -132946,19 +141387,25 @@ export type getSuitableDiscussionChats = (
 ) => Chats;
 
 /**
- * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives the error "CHANNELS_TOO_MUCH". Also, the limit can be increased with Telegram Premium
+ * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels
+ *
+ * - and receives the error "CHANNELS_TOO_MUCH". Also, the limit can be increased with Telegram Premium
  */
 export type getInactiveSupergroupChats$Input = {
   readonly _: "getInactiveSupergroupChats";
 };
 
 /**
- * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives the error "CHANNELS_TOO_MUCH". Also, the limit can be increased with Telegram Premium
+ * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels
+ *
+ * - and receives the error "CHANNELS_TOO_MUCH". Also, the limit can be increased with Telegram Premium
  */
 export type getInactiveSupergroupChats$DirectInput = {};
 
 /**
- * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels and receives the error "CHANNELS_TOO_MUCH". Also, the limit can be increased with Telegram Premium
+ * Returns a list of recently inactive supergroups and channels. Can be used when user reaches limit on the number of joined supergroups and channels
+ *
+ * - and receives the error "CHANNELS_TOO_MUCH". Also, the limit can be increased with Telegram Premium
  *
  * @param {getInactiveSupergroupChats$Input} parameters {@link getInactiveSupergroupChats$Input}
  * @returns {Chats} {@link Chats}
@@ -132987,6 +141434,28 @@ export type getSuitablePersonalChats$DirectInput = {};
  */
 export type getSuitablePersonalChats = (
   parameters: getSuitablePersonalChats$Input
+) => Chats;
+
+/**
+ * Returns a list of supergroup and channel chats owned by the current user, which can be added to a community
+ */
+export type getSuitableCommunityChats$Input = {
+  readonly _: "getSuitableCommunityChats";
+};
+
+/**
+ * Returns a list of supergroup and channel chats owned by the current user, which can be added to a community
+ */
+export type getSuitableCommunityChats$DirectInput = {};
+
+/**
+ * Returns a list of supergroup and channel chats owned by the current user, which can be added to a community
+ *
+ * @param {getSuitableCommunityChats$Input} parameters {@link getSuitableCommunityChats$Input}
+ * @returns {Chats} {@link Chats}
+ */
+export type getSuitableCommunityChats = (
+  parameters: getSuitableCommunityChats$Input
 ) => Chats;
 
 /**
@@ -133088,7 +141557,7 @@ export type getDirectMessagesChatTopic = (
 ) => DirectMessagesChatTopic;
 
 /**
- * Returns messages in the topic in a channel direct messages chat administered by the current user. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns messages in the topic in a channel direct messages chat administered by the current user. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  */
 export type getDirectMessagesChatTopicHistory$Input = {
   readonly _: "getDirectMessagesChatTopicHistory";
@@ -133127,7 +141596,7 @@ export type getDirectMessagesChatTopicHistory$Input = {
 };
 
 /**
- * Returns messages in the topic in a channel direct messages chat administered by the current user. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns messages in the topic in a channel direct messages chat administered by the current user. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  */
 export type getDirectMessagesChatTopicHistory$DirectInput = {
   /**
@@ -133164,7 +141633,7 @@ export type getDirectMessagesChatTopicHistory$DirectInput = {
 };
 
 /**
- * Returns messages in the topic in a channel direct messages chat administered by the current user. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns messages in the topic in a channel direct messages chat administered by the current user. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  *
  * @param {getDirectMessagesChatTopicHistory$Input} parameters {@link getDirectMessagesChatTopicHistory$Input}
  * @returns {Messages} {@link Messages}
@@ -133648,7 +142117,7 @@ export type loadSavedMessagesTopics = (
 ) => Ok;
 
 /**
- * Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  */
 export type getSavedMessagesTopicHistory$Input = {
   readonly _: "getSavedMessagesTopicHistory";
@@ -133681,7 +142150,7 @@ export type getSavedMessagesTopicHistory$Input = {
 };
 
 /**
- * Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  */
 export type getSavedMessagesTopicHistory$DirectInput = {
   /**
@@ -133712,7 +142181,7 @@ export type getSavedMessagesTopicHistory$DirectInput = {
 };
 
 /**
- * Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns messages in a Saved Messages topic. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  *
  * @param {getSavedMessagesTopicHistory$Input} parameters {@link getSavedMessagesTopicHistory$Input}
  * @returns {Messages} {@link Messages}
@@ -133940,10 +142409,10 @@ export type setPinnedSavedMessagesTopics = (
 ) => Ok;
 
 /**
- * Returns full information about a community. The data will be sent through update.
+ * Returns full information about a community
  */
-export type loadCommunityFullInfo$Input = {
-  readonly _: "loadCommunityFullInfo";
+export type getCommunityFullInfo$Input = {
+  readonly _: "getCommunityFullInfo";
 
   /**
    * Community identifier
@@ -133953,9 +142422,9 @@ export type loadCommunityFullInfo$Input = {
 };
 
 /**
- * Returns full information about a community. The data will be sent through update.
+ * Returns full information about a community
  */
-export type loadCommunityFullInfo$DirectInput = {
+export type getCommunityFullInfo$DirectInput = {
   /**
    * Community identifier
    * @type {int53} {@link int53}
@@ -133964,12 +142433,36 @@ export type loadCommunityFullInfo$DirectInput = {
 };
 
 /**
- * Returns full information about a community. The data will be sent through update.
+ * Returns full information about a community
  *
- * @param {loadCommunityFullInfo$Input} parameters {@link loadCommunityFullInfo$Input}
- * @returns {Ok} {@link Ok}
+ * @param {getCommunityFullInfo$Input} parameters {@link getCommunityFullInfo$Input}
+ * @returns {CommunityFullInfo} {@link CommunityFullInfo}
  */
-export type loadCommunityFullInfo = (parameters: loadCommunityFullInfo$Input) => Ok;
+export type getCommunityFullInfo = (
+  parameters: getCommunityFullInfo$Input
+) => CommunityFullInfo;
+
+/**
+ * Returns the list of communities joined by the current user
+ */
+export type getJoinedCommunities$Input = {
+  readonly _: "getJoinedCommunities";
+};
+
+/**
+ * Returns the list of communities joined by the current user
+ */
+export type getJoinedCommunities$DirectInput = {};
+
+/**
+ * Returns the list of communities joined by the current user
+ *
+ * @param {getJoinedCommunities$Input} parameters {@link getJoinedCommunities$Input}
+ * @returns {Communities} {@link Communities}
+ */
+export type getJoinedCommunities = (
+  parameters: getJoinedCommunities$Input
+) => Communities;
 
 /**
  * Creates a new community for the given chat. Returns identifier of the created community
@@ -134076,6 +142569,628 @@ export type setCommunityName$DirectInput = {
 export type setCommunityName = (parameters: setCommunityName$Input) => Ok;
 
 /**
+ * Changes the photo of a community; requires can_change_info administrator right in the community
+ */
+export type setCommunityPhoto$Input = {
+  readonly _: "setCommunityPhoto";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * New community photo; pass null to delete the community photo
+   * @type {InputChatPhoto$Input} {@link InputChatPhoto}
+   */
+  readonly photo?: InputChatPhoto$Input | null;
+};
+
+/**
+ * Changes the photo of a community; requires can_change_info administrator right in the community
+ */
+export type setCommunityPhoto$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * New community photo; pass null to delete the community photo
+   * @type {InputChatPhoto$Input} {@link InputChatPhoto}
+   */
+  readonly photo?: InputChatPhoto$Input | null;
+};
+
+/**
+ * Changes the photo of a community; requires can_change_info administrator right in the community
+ *
+ * @param {setCommunityPhoto$Input} parameters {@link setCommunityPhoto$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setCommunityPhoto = (parameters: setCommunityPhoto$Input) => Ok;
+
+/**
+ * Changes permissions of regular members in the given community; requires can_ban_members administrator right in the community
+ */
+export type setCommunityPermissions$Input = {
+  readonly _: "setCommunityPermissions";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * New permissions of the community
+   * @type {communityPermissions$Input} {@link communityPermissions}
+   */
+  readonly permissions?: communityPermissions$Input;
+};
+
+/**
+ * Changes permissions of regular members in the given community; requires can_ban_members administrator right in the community
+ */
+export type setCommunityPermissions$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * New permissions of the community
+   * @type {communityPermissions$Input} {@link communityPermissions}
+   */
+  readonly permissions?: communityPermissions$Input;
+};
+
+/**
+ * Changes permissions of regular members in the given community; requires can_ban_members administrator right in the community
+ *
+ * @param {setCommunityPermissions$Input} parameters {@link setCommunityPermissions$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setCommunityPermissions = (
+  parameters: setCommunityPermissions$Input
+) => Ok;
+
+/**
+ * Changes notification settings of a community
+ */
+export type setCommunityNotificationSettings$Input = {
+  readonly _: "setCommunityNotificationSettings";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * New notification settings for the community
+   * @type {chatNotificationSettings$Input} {@link chatNotificationSettings}
+   */
+  readonly notification_settings?: chatNotificationSettings$Input;
+};
+
+/**
+ * Changes notification settings of a community
+ */
+export type setCommunityNotificationSettings$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * New notification settings for the community
+   * @type {chatNotificationSettings$Input} {@link chatNotificationSettings}
+   */
+  readonly notification_settings?: chatNotificationSettings$Input;
+};
+
+/**
+ * Changes notification settings of a community
+ *
+ * @param {setCommunityNotificationSettings$Input} parameters {@link setCommunityNotificationSettings$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setCommunityNotificationSettings = (
+  parameters: setCommunityNotificationSettings$Input
+) => Ok;
+
+/**
+ * Adds a chat to a community. If the current user isn't allowed to change the list of chats in the community, then a request to add the chat
+ *
+ * - is sent to administrators of the community instead and the method fails with the error "COMMUNITY_REQUEST_CREATED"
+ */
+export type addCommunityChat$Input = {
+  readonly _: "addCommunityChat";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the chat to add; only chats with owned bots and owned basic group, supergroup and channel chats are allowed;
+   *
+   * - basic group chats will be automatically upgraded to supergroup chats. A community can have up to getOption("community_chat_count_max") supergroup and channel chats
+   *
+   * - and up to getOption("community_bot_count_max") chats with bots; otherwise, the method fails with the error "COMMUNITY_PEERS_TOO_MUCH"
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Pass true if the chat will be visible only to administrators of the community
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_hidden?: Bool$Input;
+};
+
+/**
+ * Adds a chat to a community. If the current user isn't allowed to change the list of chats in the community, then a request to add the chat
+ *
+ * - is sent to administrators of the community instead and the method fails with the error "COMMUNITY_REQUEST_CREATED"
+ */
+export type addCommunityChat$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the chat to add; only chats with owned bots and owned basic group, supergroup and channel chats are allowed;
+   *
+   * - basic group chats will be automatically upgraded to supergroup chats. A community can have up to getOption("community_chat_count_max") supergroup and channel chats
+   *
+   * - and up to getOption("community_bot_count_max") chats with bots; otherwise, the method fails with the error "COMMUNITY_PEERS_TOO_MUCH"
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Pass true if the chat will be visible only to administrators of the community
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_hidden?: Bool$Input;
+};
+
+/**
+ * Adds a chat to a community. If the current user isn't allowed to change the list of chats in the community, then a request to add the chat
+ *
+ * - is sent to administrators of the community instead and the method fails with the error "COMMUNITY_REQUEST_CREATED"
+ *
+ * @param {addCommunityChat$Input} parameters {@link addCommunityChat$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type addCommunityChat = (parameters: addCommunityChat$Input) => Ok;
+
+/**
+ * Removes a chat from a community. Members of the chat, which aren't members of other chats in the community, will be removed from the community.
+ *
+ * - Requires owner privileges in the supergroup or channel chat, or ownership of the bot for chats with bots, or can_edit_chat_list administrator right in the community
+ */
+export type removeCommunityChat$Input = {
+  readonly _: "removeCommunityChat";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the chat to remove
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Removes a chat from a community. Members of the chat, which aren't members of other chats in the community, will be removed from the community.
+ *
+ * - Requires owner privileges in the supergroup or channel chat, or ownership of the bot for chats with bots, or can_edit_chat_list administrator right in the community
+ */
+export type removeCommunityChat$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the chat to remove
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Removes a chat from a community. Members of the chat, which aren't members of other chats in the community, will be removed from the community.
+ *
+ * - Requires owner privileges in the supergroup or channel chat, or ownership of the bot for chats with bots, or can_edit_chat_list administrator right in the community
+ *
+ * @param {removeCommunityChat$Input} parameters {@link removeCommunityChat$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type removeCommunityChat = (parameters: removeCommunityChat$Input) => Ok;
+
+/**
+ * Returns pending requests to add chats to a community. Administrators of the community with can_edit_chat_list right receive all requests; other users receive only requests sent by them
+ */
+export type getCommunityAddChatRequests$Input = {
+  readonly _: "getCommunityAddChatRequests";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of requests to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns pending requests to add chats to a community. Administrators of the community with can_edit_chat_list right receive all requests; other users receive only requests sent by them
+ */
+export type getCommunityAddChatRequests$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of requests to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns pending requests to add chats to a community. Administrators of the community with can_edit_chat_list right receive all requests; other users receive only requests sent by them
+ *
+ * @param {getCommunityAddChatRequests$Input} parameters {@link getCommunityAddChatRequests$Input}
+ * @returns {CommunityAddChatRequests} {@link CommunityAddChatRequests}
+ */
+export type getCommunityAddChatRequests = (
+  parameters: getCommunityAddChatRequests$Input
+) => CommunityAddChatRequests;
+
+/**
+ * Handles a pending request to add a chat to a community; requires can_edit_chat_list administrator right in the community
+ */
+export type processCommunityAddChatRequest$Input = {
+  readonly _: "processCommunityAddChatRequest";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the chat from the request
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Pass true to approve the request and add the chat to the community; pass false to decline it.
+   *
+   * - If the community already has the maximum number of chats, then approval fails with the error "COMMUNITY_PEERS_TOO_MUCH"
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly approve?: Bool$Input;
+};
+
+/**
+ * Handles a pending request to add a chat to a community; requires can_edit_chat_list administrator right in the community
+ */
+export type processCommunityAddChatRequest$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the chat from the request
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Pass true to approve the request and add the chat to the community; pass false to decline it.
+   *
+   * - If the community already has the maximum number of chats, then approval fails with the error "COMMUNITY_PEERS_TOO_MUCH"
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly approve?: Bool$Input;
+};
+
+/**
+ * Handles a pending request to add a chat to a community; requires can_edit_chat_list administrator right in the community
+ *
+ * @param {processCommunityAddChatRequest$Input} parameters {@link processCommunityAddChatRequest$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type processCommunityAddChatRequest = (
+  parameters: processCommunityAddChatRequest$Input
+) => Ok;
+
+/**
+ * Handles all pending requests to add chats to a community; requires can_edit_chat_list administrator right in the community
+ */
+export type processCommunityAddChatRequests$Input = {
+  readonly _: "processCommunityAddChatRequests";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Pass true to approve all requests and add the chats to the community; pass false to decline them
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly approve?: Bool$Input;
+};
+
+/**
+ * Handles all pending requests to add chats to a community; requires can_edit_chat_list administrator right in the community
+ */
+export type processCommunityAddChatRequests$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Pass true to approve all requests and add the chats to the community; pass false to decline them
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly approve?: Bool$Input;
+};
+
+/**
+ * Handles all pending requests to add chats to a community; requires can_edit_chat_list administrator right in the community
+ *
+ * @param {processCommunityAddChatRequests$Input} parameters {@link processCommunityAddChatRequests$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type processCommunityAddChatRequests = (
+  parameters: processCommunityAddChatRequests$Input
+) => Ok;
+
+/**
+ * Changes whether all chats of a community are collapsed into one entry in the chat list. If the chats are expanded, then the community is removed from all chat folders
+ */
+export type toggleCommunityAreChatsCollapsed$Input = {
+  readonly _: "toggleCommunityAreChatsCollapsed";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Pass true to collapse all chats of the community into one entry in the chat list
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly are_chats_collapsed?: Bool$Input;
+};
+
+/**
+ * Changes whether all chats of a community are collapsed into one entry in the chat list. If the chats are expanded, then the community is removed from all chat folders
+ */
+export type toggleCommunityAreChatsCollapsed$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Pass true to collapse all chats of the community into one entry in the chat list
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly are_chats_collapsed?: Bool$Input;
+};
+
+/**
+ * Changes whether all chats of a community are collapsed into one entry in the chat list. If the chats are expanded, then the community is removed from all chat folders
+ *
+ * @param {toggleCommunityAreChatsCollapsed$Input} parameters {@link toggleCommunityAreChatsCollapsed$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type toggleCommunityAreChatsCollapsed = (
+  parameters: toggleCommunityAreChatsCollapsed$Input
+) => Ok;
+
+/**
+ * Bans or unbans a member of a community; requires can_ban_members administrator right in the community. A banned member is banned in all chats of the community.
+ *
+ * - Administrators of the community can be banned only by the owner of the community and administrators, which can edit administrator rights of the member.
+ *
+ * - If an owner of a chat in the community is banned, then the chat is removed from the community; in this case, can_edit_chat_list administrator right is also required
+ */
+export type toggleCommunityMemberIsBanned$Input = {
+  readonly _: "toggleCommunityMemberIsBanned";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the member to ban or unban
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly member_id?: MessageSender$Input;
+
+  /**
+   * Pass true to ban the member; pass false to unban the member
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_banned?: Bool$Input;
+};
+
+/**
+ * Bans or unbans a member of a community; requires can_ban_members administrator right in the community. A banned member is banned in all chats of the community.
+ *
+ * - Administrators of the community can be banned only by the owner of the community and administrators, which can edit administrator rights of the member.
+ *
+ * - If an owner of a chat in the community is banned, then the chat is removed from the community; in this case, can_edit_chat_list administrator right is also required
+ */
+export type toggleCommunityMemberIsBanned$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the member to ban or unban
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly member_id?: MessageSender$Input;
+
+  /**
+   * Pass true to ban the member; pass false to unban the member
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_banned?: Bool$Input;
+};
+
+/**
+ * Bans or unbans a member of a community; requires can_ban_members administrator right in the community. A banned member is banned in all chats of the community.
+ *
+ * - Administrators of the community can be banned only by the owner of the community and administrators, which can edit administrator rights of the member.
+ *
+ * - If an owner of a chat in the community is banned, then the chat is removed from the community; in this case, can_edit_chat_list administrator right is also required
+ *
+ * @param {toggleCommunityMemberIsBanned$Input} parameters {@link toggleCommunityMemberIsBanned$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type toggleCommunityMemberIsBanned = (
+  parameters: toggleCommunityMemberIsBanned$Input
+) => Ok;
+
+/**
+ * Returns chats in a community, which were joined by a member of the community; requires can_ban_members administrator right in the community.
+ *
+ * - Can be used to show chats that will be affected by the member ban
+ */
+export type getCommunityMemberChats$Input = {
+  readonly _: "getCommunityMemberChats";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the member
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly member_id?: MessageSender$Input;
+};
+
+/**
+ * Returns chats in a community, which were joined by a member of the community; requires can_ban_members administrator right in the community.
+ *
+ * - Can be used to show chats that will be affected by the member ban
+ */
+export type getCommunityMemberChats$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+
+  /**
+   * Identifier of the member
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly member_id?: MessageSender$Input;
+};
+
+/**
+ * Returns chats in a community, which were joined by a member of the community; requires can_ban_members administrator right in the community.
+ *
+ * - Can be used to show chats that will be affected by the member ban
+ *
+ * @param {getCommunityMemberChats$Input} parameters {@link getCommunityMemberChats$Input}
+ * @returns {CommunityMemberChats} {@link CommunityMemberChats}
+ */
+export type getCommunityMemberChats = (
+  parameters: getCommunityMemberChats$Input
+) => CommunityMemberChats;
+
+/**
+ * Deletes a community; requires owner privileges
+ */
+export type deleteCommunity$Input = {
+  readonly _: "deleteCommunity";
+
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+};
+
+/**
+ * Deletes a community; requires owner privileges
+ */
+export type deleteCommunity$DirectInput = {
+  /**
+   * Identifier of the community
+   * @type {int53} {@link int53}
+   */
+  readonly community_id?: int53;
+};
+
+/**
+ * Deletes a community; requires owner privileges
+ *
+ * @param {deleteCommunity$Input} parameters {@link deleteCommunity$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type deleteCommunity = (parameters: deleteCommunity$Input) => Ok;
+
+/**
  * Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
  */
 export type getGroupsInCommon$Input = {
@@ -134132,7 +143247,7 @@ export type getGroupsInCommon$DirectInput = {
 export type getGroupsInCommon = (parameters: getGroupsInCommon$Input) => Chats;
 
 /**
- * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
+ * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id).
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline method if only_local is true
  */
@@ -134173,7 +143288,7 @@ export type getChatHistory$Input = {
 };
 
 /**
- * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
+ * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id).
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline method if only_local is true
  */
@@ -134212,7 +143327,7 @@ export type getChatHistory$DirectInput = {
 };
 
 /**
- * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id).
+ * Returns messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id).
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib. This is an offline method if only_local is true
  *
@@ -134224,7 +143339,7 @@ export type getChatHistory = (parameters: getChatHistory$Input) => Messages;
 /**
  * Returns messages in a message thread of a message. Can be used only if messageProperties.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
  *
- * - The messages are returned in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * - The messages are returned in reverse chronological order (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  */
 export type getMessageThreadHistory$Input = {
   readonly _: "getMessageThreadHistory";
@@ -134265,7 +143380,7 @@ export type getMessageThreadHistory$Input = {
 /**
  * Returns messages in a message thread of a message. Can be used only if messageProperties.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
  *
- * - The messages are returned in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * - The messages are returned in reverse chronological order (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  */
 export type getMessageThreadHistory$DirectInput = {
   /**
@@ -134304,7 +143419,7 @@ export type getMessageThreadHistory$DirectInput = {
 /**
  * Returns messages in a message thread of a message. Can be used only if messageProperties.can_get_message_thread == true. Message thread of a channel message is in the channel's linked supergroup.
  *
- * - The messages are returned in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * - The messages are returned in reverse chronological order (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  *
  * @param {getMessageThreadHistory$Input} parameters {@link getMessageThreadHistory$Input}
  * @returns {Messages} {@link Messages}
@@ -134408,7 +143523,7 @@ export type deleteChat$DirectInput = {
 export type deleteChat = (parameters: deleteChat$Input) => Ok;
 
 /**
- * Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message_id. Cannot be used in secret chats with a non-empty query
+ * Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message.id. Cannot be used in secret chats with a non-empty query
  *
  * - (searchSecretMessages must be used instead), or without an enabled message database. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit.
  *
@@ -134469,7 +143584,7 @@ export type searchChatMessages$Input = {
 };
 
 /**
- * Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message_id. Cannot be used in secret chats with a non-empty query
+ * Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message.id. Cannot be used in secret chats with a non-empty query
  *
  * - (searchSecretMessages must be used instead), or without an enabled message database. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit.
  *
@@ -134528,7 +143643,7 @@ export type searchChatMessages$DirectInput = {
 };
 
 /**
- * Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message_id. Cannot be used in secret chats with a non-empty query
+ * Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message.id. Cannot be used in secret chats with a non-empty query
  *
  * - (searchSecretMessages must be used instead), or without an enabled message database. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit.
  *
@@ -134542,7 +143657,7 @@ export type searchChatMessages = (
 ) => FoundChatMessages;
 
 /**
- * Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).
+ * Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (message.date, message.chat_id, message.id)).
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  */
@@ -134601,7 +143716,7 @@ export type searchMessages$Input = {
 };
 
 /**
- * Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).
+ * Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (message.date, message.chat_id, message.id)).
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  */
@@ -134658,7 +143773,7 @@ export type searchMessages$DirectInput = {
 };
 
 /**
- * Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (date, chat_id, message_id)).
+ * Searches for messages in all chats except secret chats. Returns the results in reverse chronological order (i.e., in order of decreasing (message.date, message.chat_id, message.id)).
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  *
@@ -134752,7 +143867,7 @@ export type searchSecretMessages = (
 /**
  * Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
  *
- * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id.
+ * - Returns the results in reverse chronological order, i.e. in order of decreasing message.id.
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  */
@@ -134801,7 +143916,7 @@ export type searchSavedMessages$Input = {
 /**
  * Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
  *
- * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id.
+ * - Returns the results in reverse chronological order, i.e. in order of decreasing message.id.
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  */
@@ -134848,7 +143963,7 @@ export type searchSavedMessages$DirectInput = {
 /**
  * Searches for messages tagged by the given reaction and with the given words in the Saved Messages chat; for Telegram Premium users only.
  *
- * - Returns the results in reverse chronological order, i.e. in order of decreasing message_id.
+ * - Returns the results in reverse chronological order, i.e. in order of decreasing message.id.
  *
  * - For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
  *
@@ -134860,7 +143975,7 @@ export type searchSavedMessages = (
 ) => FoundChatMessages;
 
 /**
- * Searches for call and group call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * Searches for call and group call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  */
 export type searchCallMessages$Input = {
   readonly _: "searchCallMessages";
@@ -134885,7 +144000,7 @@ export type searchCallMessages$Input = {
 };
 
 /**
- * Searches for call and group call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * Searches for call and group call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  */
 export type searchCallMessages$DirectInput = {
   /**
@@ -134908,7 +144023,7 @@ export type searchCallMessages$DirectInput = {
 };
 
 /**
- * Searches for call and group call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * Searches for call and group call messages. Returns the results in reverse chronological order (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  *
  * @param {searchCallMessages$Input} parameters {@link searchCallMessages$Input}
  * @returns {FoundMessages} {@link FoundMessages}
@@ -135648,7 +144763,11 @@ export type getChatSparseMessagePositions = (
 ) => MessagePositions;
 
 /**
- * Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
+ * Returns information about the next messages of the specified type in the chat split by days.
+ *
+ * - Returns the results in reverse chronological order. Can return partial result for the last returned day.
+ *
+ * - Behavior of this method depends on the value of the option "utc_time_offset"
  */
 export type getChatMessageCalendar$Input = {
   readonly _: "getChatMessageCalendar";
@@ -135681,7 +144800,11 @@ export type getChatMessageCalendar$Input = {
 };
 
 /**
- * Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
+ * Returns information about the next messages of the specified type in the chat split by days.
+ *
+ * - Returns the results in reverse chronological order. Can return partial result for the last returned day.
+ *
+ * - Behavior of this method depends on the value of the option "utc_time_offset"
  */
 export type getChatMessageCalendar$DirectInput = {
   /**
@@ -135712,7 +144835,11 @@ export type getChatMessageCalendar$DirectInput = {
 };
 
 /**
- * Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order. Can return partial result for the last returned day. Behavior of this method depends on the value of the option "utc_time_offset"
+ * Returns information about the next messages of the specified type in the chat split by days.
+ *
+ * - Returns the results in reverse chronological order. Can return partial result for the last returned day.
+ *
+ * - Behavior of this method depends on the value of the option "utc_time_offset"
  *
  * @param {getChatMessageCalendar$Input} parameters {@link getChatMessageCalendar$Input}
  * @returns {MessageCalendar} {@link MessageCalendar}
@@ -135864,7 +144991,7 @@ export type getChatMessagePosition = (
 ) => Count;
 
 /**
- * Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  */
 export type getChatScheduledMessages$Input = {
   readonly _: "getChatScheduledMessages";
@@ -135877,7 +145004,7 @@ export type getChatScheduledMessages$Input = {
 };
 
 /**
- * Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  */
 export type getChatScheduledMessages$DirectInput = {
   /**
@@ -135888,7 +145015,7 @@ export type getChatScheduledMessages$DirectInput = {
 };
 
 /**
- * Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message_id)
+ * Returns all scheduled messages in a chat. The messages are returned in reverse chronological order (i.e., in order of decreasing message.id)
  *
  * @param {getChatScheduledMessages$Input} parameters {@link getChatScheduledMessages$Input}
  * @returns {Messages} {@link Messages}
@@ -137346,7 +146473,7 @@ export type composeTextWithAi$Input = {
   readonly translate_to_language_code?: string;
 
   /**
-   * Name of the style of the resulted text; handle updateTextCompositionStyles to get the list of supported styles; pass an empty string to keep the current style of the text
+   * Name of the style of the resulting text; handle updateTextCompositionStyles to get the list of supported styles; pass an empty string to keep the current style of the text
    * @type {string} {@link string}
    */
   readonly style_name?: string;
@@ -137375,7 +146502,7 @@ export type composeTextWithAi$DirectInput = {
   readonly translate_to_language_code?: string;
 
   /**
-   * Name of the style of the resulted text; handle updateTextCompositionStyles to get the list of supported styles; pass an empty string to keep the current style of the text
+   * Name of the style of the resulting text; handle updateTextCompositionStyles to get the list of supported styles; pass an empty string to keep the current style of the text
    * @type {string} {@link string}
    */
   readonly style_name?: string;
@@ -137416,7 +146543,7 @@ export type composeRichMessageWithAi$Input = {
   readonly translate_to_language_code?: string;
 
   /**
-   * Name of the style of the resulted text; handle updateTextCompositionStyles to get the list of supported styles; pass an empty string to keep the current style of the text or if a custom prompt is used
+   * Name of the style of the resulting text; handle updateTextCompositionStyles to get the list of supported styles; pass an empty string to keep the current style of the text or if a custom prompt is used
    * @type {string} {@link string}
    */
   readonly style_name?: string;
@@ -137451,7 +146578,7 @@ export type composeRichMessageWithAi$DirectInput = {
   readonly translate_to_language_code?: string;
 
   /**
-   * Name of the style of the resulted text; handle updateTextCompositionStyles to get the list of supported styles; pass an empty string to keep the current style of the text or if a custom prompt is used
+   * Name of the style of the resulting text; handle updateTextCompositionStyles to get the list of supported styles; pass an empty string to keep the current style of the text or if a custom prompt is used
    * @type {string} {@link string}
    */
   readonly style_name?: string;
@@ -137604,6 +146731,86 @@ export type fixRichMessageWithAi = (
 ) => RichMessage;
 
 /**
+ * Fixes text received as a result of speech recognition using an AI model by correcting recognition errors and adding punctuation; must not be used in secret chats.
+ *
+ * - May return an error with a message "AICOMPOSE_FLOOD_PREMIUM" if Telegram Premium is required to send further requests
+ */
+export type fixRecognizedTextWithAi$Input = {
+  readonly _: "fixRecognizedTextWithAi";
+
+  /**
+   * The recognized text
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+};
+
+/**
+ * Fixes text received as a result of speech recognition using an AI model by correcting recognition errors and adding punctuation; must not be used in secret chats.
+ *
+ * - May return an error with a message "AICOMPOSE_FLOOD_PREMIUM" if Telegram Premium is required to send further requests
+ */
+export type fixRecognizedTextWithAi$DirectInput = {
+  /**
+   * The recognized text
+   * @type {formattedText$Input} {@link formattedText}
+   */
+  readonly text?: formattedText$Input;
+};
+
+/**
+ * Fixes text received as a result of speech recognition using an AI model by correcting recognition errors and adding punctuation; must not be used in secret chats.
+ *
+ * - May return an error with a message "AICOMPOSE_FLOOD_PREMIUM" if Telegram Premium is required to send further requests
+ *
+ * @param {fixRecognizedTextWithAi$Input} parameters {@link fixRecognizedTextWithAi$Input}
+ * @returns {FormattedText} {@link FormattedText}
+ */
+export type fixRecognizedTextWithAi = (
+  parameters: fixRecognizedTextWithAi$Input
+) => FormattedText;
+
+/**
+ * Fixes a rich message with text received as a result of speech recognition using an AI model by correcting recognition errors and adding punctuation.
+ *
+ * - May return an error with a message "AICOMPOSE_FLOOD_PREMIUM" if Telegram Premium is required to send further requests
+ */
+export type fixRecognizedRichMessageWithAi$Input = {
+  readonly _: "fixRecognizedRichMessageWithAi";
+
+  /**
+   * The message with the recognized text
+   * @type {inputRichMessage$Input} {@link inputRichMessage}
+   */
+  readonly message?: inputRichMessage$Input;
+};
+
+/**
+ * Fixes a rich message with text received as a result of speech recognition using an AI model by correcting recognition errors and adding punctuation.
+ *
+ * - May return an error with a message "AICOMPOSE_FLOOD_PREMIUM" if Telegram Premium is required to send further requests
+ */
+export type fixRecognizedRichMessageWithAi$DirectInput = {
+  /**
+   * The message with the recognized text
+   * @type {inputRichMessage$Input} {@link inputRichMessage}
+   */
+  readonly message?: inputRichMessage$Input;
+};
+
+/**
+ * Fixes a rich message with text received as a result of speech recognition using an AI model by correcting recognition errors and adding punctuation.
+ *
+ * - May return an error with a message "AICOMPOSE_FLOOD_PREMIUM" if Telegram Premium is required to send further requests
+ *
+ * @param {fixRecognizedRichMessageWithAi$Input} parameters {@link fixRecognizedRichMessageWithAi$Input}
+ * @returns {RichMessage} {@link RichMessage}
+ */
+export type fixRecognizedRichMessageWithAi = (
+  parameters: fixRecognizedRichMessageWithAi$Input
+) => RichMessage;
+
+/**
  * Recognizes speech in a video note or a voice note message
  */
 export type recognizeSpeech$Input = {
@@ -137702,6 +146909,92 @@ export type rateSpeechRecognition$DirectInput = {
  * @returns {Ok} {@link Ok}
  */
 export type rateSpeechRecognition = (parameters: rateSpeechRecognition$Input) => Ok;
+
+/**
+ * Recognizes speech in an audio file and returns the recognized text. The file must be in OGG format with Opus codec and must have size up to 1 MB.
+ *
+ * - The same rules as for recognizeSpeech apply to the Telegram Premium requirement and speech recognition trial; must not be used in secret chats
+ */
+export type recognizeSpeechInFile$Input = {
+  readonly _: "recognizeSpeechInFile";
+
+  /**
+   * The audio file
+   * @type {InputFile$Input} {@link InputFile}
+   */
+  readonly audio_file?: InputFile$Input;
+
+  /**
+   * Unique identifier of the speech recognition, which will be used in updateSpeechRecognitionInFile to send partially recognized text; pass 0 if partial results aren't needed
+   * @type {int64$Input} {@link int64}
+   */
+  readonly recognition_id?: int64$Input;
+};
+
+/**
+ * Recognizes speech in an audio file and returns the recognized text. The file must be in OGG format with Opus codec and must have size up to 1 MB.
+ *
+ * - The same rules as for recognizeSpeech apply to the Telegram Premium requirement and speech recognition trial; must not be used in secret chats
+ */
+export type recognizeSpeechInFile$DirectInput = {
+  /**
+   * The audio file
+   * @type {InputFile$Input} {@link InputFile}
+   */
+  readonly audio_file?: InputFile$Input;
+
+  /**
+   * Unique identifier of the speech recognition, which will be used in updateSpeechRecognitionInFile to send partially recognized text; pass 0 if partial results aren't needed
+   * @type {int64$Input} {@link int64}
+   */
+  readonly recognition_id?: int64$Input;
+};
+
+/**
+ * Recognizes speech in an audio file and returns the recognized text. The file must be in OGG format with Opus codec and must have size up to 1 MB.
+ *
+ * - The same rules as for recognizeSpeech apply to the Telegram Premium requirement and speech recognition trial; must not be used in secret chats
+ *
+ * @param {recognizeSpeechInFile$Input} parameters {@link recognizeSpeechInFile$Input}
+ * @returns {Text} {@link Text}
+ */
+export type recognizeSpeechInFile = (
+  parameters: recognizeSpeechInFile$Input
+) => Text;
+
+/**
+ * Returns 1-3 most probable languages of speech in voice notes
+ */
+export type getSpeechRecognitionLanguages$Input = {
+  readonly _: "getSpeechRecognitionLanguages";
+
+  /**
+   * Identifier of the chat; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Returns 1-3 most probable languages of speech in voice notes
+ */
+export type getSpeechRecognitionLanguages$DirectInput = {
+  /**
+   * Identifier of the chat; pass 0 if none
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+};
+
+/**
+ * Returns 1-3 most probable languages of speech in voice notes
+ *
+ * @param {getSpeechRecognitionLanguages$Input} parameters {@link getSpeechRecognitionLanguages$Input}
+ * @returns {SpeechRecognitionLanguages} {@link SpeechRecognitionLanguages}
+ */
+export type getSpeechRecognitionLanguages = (
+  parameters: getSpeechRecognitionLanguages$Input
+) => SpeechRecognitionLanguages;
 
 /**
  * Returns the list of message sender identifiers, which can be used to send messages in a chat
@@ -138064,7 +147357,7 @@ export type sendInlineQueryResultMessage$Input = {
   readonly result_id?: string;
 
   /**
-   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username"), getOption("photo_search_bot_username"), and getOption("venue_search_bot_username")
+   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username") and getOption("photo_search_bot_username")
    * @type {Bool$Input} {@link Bool}
    */
   readonly hide_via_bot?: Bool$Input;
@@ -138111,7 +147404,7 @@ export type sendInlineQueryResultMessage$DirectInput = {
   readonly result_id?: string;
 
   /**
-   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username"), getOption("photo_search_bot_username"), and getOption("venue_search_bot_username")
+   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username") and getOption("photo_search_bot_username")
    * @type {Bool$Input} {@link Bool}
    */
   readonly hide_via_bot?: Bool$Input;
@@ -138294,9 +147587,11 @@ export type sendQuickReplyShortcutMessages = (
 ) => Messages;
 
 /**
- * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true
  *
- * - If a message is re-sent, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
+ * - and after specified in messageSendingStateFailed.retry_after time passed. If a message is re-sent, the corresponding failed to send message is deleted.
+ *
+ * - Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
  */
 export type resendMessages$Input = {
   readonly _: "resendMessages";
@@ -138327,9 +147622,11 @@ export type resendMessages$Input = {
 };
 
 /**
- * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true
  *
- * - If a message is re-sent, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
+ * - and after specified in messageSendingStateFailed.retry_after time passed. If a message is re-sent, the corresponding failed to send message is deleted.
+ *
+ * - Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
  */
 export type resendMessages$DirectInput = {
   /**
@@ -138358,9 +147655,11 @@ export type resendMessages$DirectInput = {
 };
 
 /**
- * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ * Resends messages which failed to send. Can be called only for messages for which messageSendingStateFailed.can_retry is true
  *
- * - If a message is re-sent, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
+ * - and after specified in messageSendingStateFailed.retry_after time passed. If a message is re-sent, the corresponding failed to send message is deleted.
+ *
+ * - Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-sent, null will be returned instead of the message
  *
  * @param {resendMessages$Input} parameters {@link resendMessages$Input}
  * @returns {Messages} {@link Messages}
@@ -138424,7 +147723,7 @@ export type sendEphemeralMessage$Input = {
   readonly sending_id?: int32;
 
   /**
-   * Pass true to get a fake message instead of actually sending them
+   * Pass true to get a fake message instead of actually sending it
    * @type {Bool$Input} {@link Bool}
    */
   readonly only_preview?: Bool$Input;
@@ -138501,7 +147800,7 @@ export type sendEphemeralMessage$DirectInput = {
   readonly sending_id?: int32;
 
   /**
-   * Pass true to get a fake message instead of actually sending them
+   * Pass true to get a fake message instead of actually sending it
    * @type {Bool$Input} {@link Bool}
    */
   readonly only_preview?: Bool$Input;
@@ -139090,7 +148389,7 @@ export type editMessageMedia$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
+   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto, or inputMessageVideo
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -139121,7 +148420,7 @@ export type editMessageMedia$DirectInput = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
+   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto, or inputMessageVideo
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -139276,6 +148575,98 @@ export type editMessageReplyMarkup = (
 ) => Message;
 
 /**
+ * Edits data of a widget sent by the bot; for bots only
+ */
+export type editMessageWidgetData$Input = {
+  readonly _: "editMessageWidgetData";
+
+  /**
+   * The chat the message belongs to
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the widget message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Pass true to edit public data of the widget
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly edit_public_data?: Bool$Input;
+
+  /**
+   * New public data of the widget; ignored if edit_public_data is false
+   * @type {string} {@link string}
+   */
+  readonly public_data?: string;
+
+  /**
+   * Pass true to edit data of the widget, which is specific to the chat
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly edit_chat_data?: Bool$Input;
+
+  /**
+   * New data of the widget, which is specific to the chat; ignored if edit_chat_data is false
+   * @type {string} {@link string}
+   */
+  readonly chat_data?: string;
+};
+
+/**
+ * Edits data of a widget sent by the bot; for bots only
+ */
+export type editMessageWidgetData$DirectInput = {
+  /**
+   * The chat the message belongs to
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the widget message
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Pass true to edit public data of the widget
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly edit_public_data?: Bool$Input;
+
+  /**
+   * New public data of the widget; ignored if edit_public_data is false
+   * @type {string} {@link string}
+   */
+  readonly public_data?: string;
+
+  /**
+   * Pass true to edit data of the widget, which is specific to the chat
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly edit_chat_data?: Bool$Input;
+
+  /**
+   * New data of the widget, which is specific to the chat; ignored if edit_chat_data is false
+   * @type {string} {@link string}
+   */
+  readonly chat_data?: string;
+};
+
+/**
+ * Edits data of a widget sent by the bot; for bots only
+ *
+ * @param {editMessageWidgetData$Input} parameters {@link editMessageWidgetData$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type editMessageWidgetData = (parameters: editMessageWidgetData$Input) => Ok;
+
+/**
  * Edits the text of an inline text or game message sent via the bot; for bots only
  */
 export type editInlineMessageText$Input = {
@@ -139412,7 +148803,7 @@ export type editInlineMessageMedia$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
+   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto, or inputMessageVideo
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -139435,7 +148826,7 @@ export type editInlineMessageMedia$DirectInput = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
+   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto, or inputMessageVideo
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -139566,6 +148957,144 @@ export type editInlineMessageReplyMarkup$DirectInput = {
 export type editInlineMessageReplyMarkup = (
   parameters: editInlineMessageReplyMarkup$Input
 ) => Ok;
+
+/**
+ * Edits data of a widget in an inline message sent via the bot; for bots only
+ */
+export type editInlineMessageWidgetData$Input = {
+  readonly _: "editInlineMessageWidgetData";
+
+  /**
+   * Inline message identifier
+   * @type {string} {@link string}
+   */
+  readonly inline_message_id?: string;
+
+  /**
+   * Pass true to edit public data of the widget
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly edit_public_data?: Bool$Input;
+
+  /**
+   * New public data of the widget; ignored if edit_public_data is false
+   * @type {string} {@link string}
+   */
+  readonly public_data?: string;
+
+  /**
+   * Pass true to edit data of the widget, which is specific to the chat
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly edit_chat_data?: Bool$Input;
+
+  /**
+   * New data of the widget, which is specific to the chat; ignored if edit_chat_data is false
+   * @type {string} {@link string}
+   */
+  readonly chat_data?: string;
+};
+
+/**
+ * Edits data of a widget in an inline message sent via the bot; for bots only
+ */
+export type editInlineMessageWidgetData$DirectInput = {
+  /**
+   * Inline message identifier
+   * @type {string} {@link string}
+   */
+  readonly inline_message_id?: string;
+
+  /**
+   * Pass true to edit public data of the widget
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly edit_public_data?: Bool$Input;
+
+  /**
+   * New public data of the widget; ignored if edit_public_data is false
+   * @type {string} {@link string}
+   */
+  readonly public_data?: string;
+
+  /**
+   * Pass true to edit data of the widget, which is specific to the chat
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly edit_chat_data?: Bool$Input;
+
+  /**
+   * New data of the widget, which is specific to the chat; ignored if edit_chat_data is false
+   * @type {string} {@link string}
+   */
+  readonly chat_data?: string;
+};
+
+/**
+ * Edits data of a widget in an inline message sent via the bot; for bots only
+ *
+ * @param {editInlineMessageWidgetData$Input} parameters {@link editInlineMessageWidgetData$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type editInlineMessageWidgetData = (
+  parameters: editInlineMessageWidgetData$Input
+) => Ok;
+
+/**
+ * Edits public data of a shared widget created by the bot; for bots only
+ */
+export type editWidgetData$Input = {
+  readonly _: "editWidgetData";
+
+  /**
+   * Identifier of the shared widget
+   * @type {int64$Input} {@link int64}
+   */
+  readonly widget_id?: int64$Input;
+
+  /**
+   * New public data of the widget
+   * @type {string} {@link string}
+   */
+  readonly public_data?: string;
+
+  /**
+   * Time during which the public data can be cached, in seconds; 5-3600. Pass 0 to keep the current value, which is 30 by default
+   * @type {int32} {@link int32}
+   */
+  readonly cache_time?: int32;
+};
+
+/**
+ * Edits public data of a shared widget created by the bot; for bots only
+ */
+export type editWidgetData$DirectInput = {
+  /**
+   * Identifier of the shared widget
+   * @type {int64$Input} {@link int64}
+   */
+  readonly widget_id?: int64$Input;
+
+  /**
+   * New public data of the widget
+   * @type {string} {@link string}
+   */
+  readonly public_data?: string;
+
+  /**
+   * Time during which the public data can be cached, in seconds; 5-3600. Pass 0 to keep the current value, which is 30 by default
+   * @type {int32} {@link int32}
+   */
+  readonly cache_time?: int32;
+};
+
+/**
+ * Edits public data of a shared widget created by the bot; for bots only
+ *
+ * @param {editWidgetData$Input} parameters {@link editWidgetData$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type editWidgetData = (parameters: editWidgetData$Input) => Ok;
 
 /**
  * Edits the text, media, or reply markup of an ephemeral message sent by the bot; for bots only
@@ -139746,16 +149275,22 @@ export type editEphemeralMessageCaption = (
 ) => Ok;
 
 /**
- * Edits the message from which a callback query has originated with an ephemeral message; for bots only
+ * Replies to a callback query with an ephemeral message; for bots only. Returns the sent message
  */
-export type editCallbackQueryMessage$Input = {
-  readonly _: "editCallbackQueryMessage";
+export type replyToCallbackQueryWithEphemeralMessage$Input = {
+  readonly _: "replyToCallbackQueryWithEphemeralMessage";
 
   /**
    * Identifier of the callback query
    * @type {int64$Input} {@link int64}
    */
   readonly callback_query_id?: int64$Input;
+
+  /**
+   * Pass true if the ephemeral message must replace the message from which the callback query originated
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly replace_callback_query_message?: Bool$Input;
 
   /**
    * Pass true if the content of the message must be protected from forwarding and saving
@@ -139772,21 +149307,29 @@ export type editCallbackQueryMessage$Input = {
   /**
    * New content of the message. Must be one of the following types: inputMessageText, inputMessageAnimation,
    *
-   * - inputMessageAudio, inputMessageDocument, inputMessagePhoto, inputMessageRichMessage, inputMessageSticker, inputMessageVideo, inputMessageVideoNote, inputMessageVoiceNote
+   * - inputMessageAudio, inputMessageDocument, inputMessagePhoto, inputMessageRichMessage, inputMessageSticker, inputMessageVideo, inputMessageVideoNote, inputMessageVoiceNote,
+   *
+   * - inputMessageLocation, inputMessageVenue, inputMessageContact
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
 };
 
 /**
- * Edits the message from which a callback query has originated with an ephemeral message; for bots only
+ * Replies to a callback query with an ephemeral message; for bots only. Returns the sent message
  */
-export type editCallbackQueryMessage$DirectInput = {
+export type replyToCallbackQueryWithEphemeralMessage$DirectInput = {
   /**
    * Identifier of the callback query
    * @type {int64$Input} {@link int64}
    */
   readonly callback_query_id?: int64$Input;
+
+  /**
+   * Pass true if the ephemeral message must replace the message from which the callback query originated
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly replace_callback_query_message?: Bool$Input;
 
   /**
    * Pass true if the content of the message must be protected from forwarding and saving
@@ -139803,21 +149346,23 @@ export type editCallbackQueryMessage$DirectInput = {
   /**
    * New content of the message. Must be one of the following types: inputMessageText, inputMessageAnimation,
    *
-   * - inputMessageAudio, inputMessageDocument, inputMessagePhoto, inputMessageRichMessage, inputMessageSticker, inputMessageVideo, inputMessageVideoNote, inputMessageVoiceNote
+   * - inputMessageAudio, inputMessageDocument, inputMessagePhoto, inputMessageRichMessage, inputMessageSticker, inputMessageVideo, inputMessageVideoNote, inputMessageVoiceNote,
+   *
+   * - inputMessageLocation, inputMessageVenue, inputMessageContact
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
 };
 
 /**
- * Edits the message from which a callback query has originated with an ephemeral message; for bots only
+ * Replies to a callback query with an ephemeral message; for bots only. Returns the sent message
  *
- * @param {editCallbackQueryMessage$Input} parameters {@link editCallbackQueryMessage$Input}
- * @returns {Ok} {@link Ok}
+ * @param {replyToCallbackQueryWithEphemeralMessage$Input} parameters {@link replyToCallbackQueryWithEphemeralMessage$Input}
+ * @returns {Message} {@link Message}
  */
-export type editCallbackQueryMessage = (
-  parameters: editCallbackQueryMessage$Input
-) => Ok;
+export type replyToCallbackQueryWithEphemeralMessage = (
+  parameters: replyToCallbackQueryWithEphemeralMessage$Input
+) => Message;
 
 /**
  * Edits the time when a scheduled message will be sent. Scheduling state of all messages in the same album or forwarded together with the message will be also changed
@@ -140490,7 +150035,7 @@ export type editBusinessMessageMedia$Input = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
+   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto, or inputMessageVideo
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -140525,7 +150070,7 @@ export type editBusinessMessageMedia$DirectInput = {
   readonly reply_markup?: ReplyMarkup$Input | null;
 
   /**
-   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto or inputMessageVideo
+   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageDocument, inputMessagePhoto, or inputMessageVideo
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -141686,7 +151231,7 @@ export type addQuickReplyShortcutMessage$Input = {
   readonly reply_to_message_id?: int53;
 
   /**
-   * The content of the message to be added; inputMessagePaidMedia, inputMessageForwarded and inputMessageLiveLocation
+   * The content of the message to be added; inputMessagePaidMedia, inputMessageForwarded and inputMessageLiveLocation aren't supported
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -141711,7 +151256,7 @@ export type addQuickReplyShortcutMessage$DirectInput = {
   readonly reply_to_message_id?: int53;
 
   /**
-   * The content of the message to be added; inputMessagePaidMedia, inputMessageForwarded and inputMessageLiveLocation
+   * The content of the message to be added; inputMessagePaidMedia, inputMessageForwarded and inputMessageLiveLocation aren't supported
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
@@ -141762,7 +151307,7 @@ export type addQuickReplyShortcutInlineQueryResultMessage$Input = {
   readonly result_id?: string;
 
   /**
-   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username"), getOption("photo_search_bot_username"), and getOption("venue_search_bot_username")
+   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username") and getOption("photo_search_bot_username")
    * @type {Bool$Input} {@link Bool}
    */
   readonly hide_via_bot?: Bool$Input;
@@ -141799,7 +151344,7 @@ export type addQuickReplyShortcutInlineQueryResultMessage$DirectInput = {
   readonly result_id?: string;
 
   /**
-   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username"), getOption("photo_search_bot_username"), and getOption("venue_search_bot_username")
+   * Pass true to hide the bot, via which the message is sent. Can be used only for bots getOption("animation_search_bot_username") and getOption("photo_search_bot_username")
    * @type {Bool$Input} {@link Bool}
    */
   readonly hide_via_bot?: Bool$Input;
@@ -141882,9 +151427,11 @@ export type addQuickReplyShortcutMessageAlbum = (
 ) => QuickReplyMessages;
 
 /**
- * Re-adds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ * Re-adds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true
  *
- * - If a message is re-added, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-added, null will be returned instead of the message
+ * - and after specified in messageSendingStateFailed.retry_after time passed. If a message is re-added, the corresponding failed to send message is deleted.
+ *
+ * - Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-added, null will be returned instead of the message
  */
 export type readdQuickReplyShortcutMessages$Input = {
   readonly _: "readdQuickReplyShortcutMessages";
@@ -141903,9 +151450,11 @@ export type readdQuickReplyShortcutMessages$Input = {
 };
 
 /**
- * Re-adds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ * Re-adds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true
  *
- * - If a message is re-added, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-added, null will be returned instead of the message
+ * - and after specified in messageSendingStateFailed.retry_after time passed. If a message is re-added, the corresponding failed to send message is deleted.
+ *
+ * - Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-added, null will be returned instead of the message
  */
 export type readdQuickReplyShortcutMessages$DirectInput = {
   /**
@@ -141922,9 +151471,11 @@ export type readdQuickReplyShortcutMessages$DirectInput = {
 };
 
 /**
- * Re-adds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true and after specified in messageSendingStateFailed.retry_after time passed.
+ * Re-adds quick reply messages which failed to add. Can be called only for messages for which messageSendingStateFailed.can_retry is true
  *
- * - If a message is re-added, the corresponding failed to send message is deleted. Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-added, null will be returned instead of the message
+ * - and after specified in messageSendingStateFailed.retry_after time passed. If a message is re-added, the corresponding failed to send message is deleted.
+ *
+ * - Returns the sent messages in the same order as the message identifiers passed in message_ids. If a message can't be re-added, null will be returned instead of the message
  *
  * @param {readdQuickReplyShortcutMessages$Input} parameters {@link readdQuickReplyShortcutMessages$Input}
  * @returns {QuickReplyMessages} {@link QuickReplyMessages}
@@ -141934,7 +151485,7 @@ export type readdQuickReplyShortcutMessages = (
 ) => QuickReplyMessages;
 
 /**
- * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+ * Asynchronously edits the text, media, or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
  *
  * - Media message can be edited only to a media message. Checklist messages can be edited only to a checklist message.
  *
@@ -141956,14 +151507,16 @@ export type editQuickReplyMessage$Input = {
   readonly message_id?: int53;
 
   /**
-   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageChecklist, inputMessageDocument, inputMessagePhoto, inputMessageRichMessage, inputMessageText, or inputMessageVideo
+   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio,
+   *
+   * - inputMessageChecklist, inputMessageDocument, inputMessagePhoto, inputMessageRichMessage, inputMessageText, or inputMessageVideo
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
 };
 
 /**
- * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+ * Asynchronously edits the text, media, or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
  *
  * - Media message can be edited only to a media message. Checklist messages can be edited only to a checklist message.
  *
@@ -141983,14 +151536,16 @@ export type editQuickReplyMessage$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio, inputMessageChecklist, inputMessageDocument, inputMessagePhoto, inputMessageRichMessage, inputMessageText, or inputMessageVideo
+   * New content of the message. Must be one of the following types: inputMessageAnimation, inputMessageAudio,
+   *
+   * - inputMessageChecklist, inputMessageDocument, inputMessagePhoto, inputMessageRichMessage, inputMessageText, or inputMessageVideo
    * @type {InputMessageContent$Input} {@link InputMessageContent}
    */
   readonly input_message_content?: InputMessageContent$Input;
 };
 
 /**
- * Asynchronously edits the text, media or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
+ * Asynchronously edits the text, media, or caption of a quick reply message. Use quickReplyMessage.can_be_edited to check whether a message can be edited.
  *
  * - Media message can be edited only to a media message. Checklist messages can be edited only to a checklist message.
  *
@@ -142276,7 +151831,9 @@ export type createForumTopic$Input = {
   readonly is_name_implicit?: Bool$Input;
 
   /**
-   * Icon of the topic. Icon color must be one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F. Telegram Premium users can use any custom emoji as topic icon, other users can use only a custom emoji returned by getForumTopicDefaultIcons
+   * Icon of the topic. Icon color must be one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F.
+   *
+   * - Telegram Premium users can use any custom emoji as topic icon, other users can use only a custom emoji returned by getForumTopicDefaultIcons
    * @type {forumTopicIcon$Input} {@link forumTopicIcon}
    */
   readonly icon?: forumTopicIcon$Input;
@@ -142305,7 +151862,9 @@ export type createForumTopic$DirectInput = {
   readonly is_name_implicit?: Bool$Input;
 
   /**
-   * Icon of the topic. Icon color must be one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F. Telegram Premium users can use any custom emoji as topic icon, other users can use only a custom emoji returned by getForumTopicDefaultIcons
+   * Icon of the topic. Icon color must be one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F.
+   *
+   * - Telegram Premium users can use any custom emoji as topic icon, other users can use only a custom emoji returned by getForumTopicDefaultIcons
    * @type {forumTopicIcon$Input} {@link forumTopicIcon}
    */
   readonly icon?: forumTopicIcon$Input;
@@ -142354,7 +151913,9 @@ export type editForumTopic$Input = {
   readonly edit_icon_custom_emoji?: Bool$Input;
 
   /**
-   * Identifier of the new custom emoji for topic icon; pass 0 to remove the custom emoji. Ignored if edit_icon_custom_emoji is false. Telegram Premium users can use any custom emoji, other users can use only a custom emoji returned by getForumTopicDefaultIcons
+   * Identifier of the new custom emoji for topic icon; pass 0 to remove the custom emoji. Ignored if edit_icon_custom_emoji is false.
+   *
+   * - Telegram Premium users can use any custom emoji, other users can use only a custom emoji returned by getForumTopicDefaultIcons
    * @type {int64$Input} {@link int64}
    */
   readonly icon_custom_emoji_id?: int64$Input;
@@ -142391,7 +151952,9 @@ export type editForumTopic$DirectInput = {
   readonly edit_icon_custom_emoji?: Bool$Input;
 
   /**
-   * Identifier of the new custom emoji for topic icon; pass 0 to remove the custom emoji. Ignored if edit_icon_custom_emoji is false. Telegram Premium users can use any custom emoji, other users can use only a custom emoji returned by getForumTopicDefaultIcons
+   * Identifier of the new custom emoji for topic icon; pass 0 to remove the custom emoji. Ignored if edit_icon_custom_emoji is false.
+   *
+   * - Telegram Premium users can use any custom emoji, other users can use only a custom emoji returned by getForumTopicDefaultIcons
    * @type {int64$Input} {@link int64}
    */
   readonly icon_custom_emoji_id?: int64$Input;
@@ -142454,7 +152017,7 @@ export type getForumTopic = (parameters: getForumTopic$Input) => ForumTopic;
 /**
  * Returns messages in a topic in a forum supergroup chat or a chat with a bot with topics. The messages are returned in reverse chronological order
  *
- * - (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * - (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  */
 export type getForumTopicHistory$Input = {
   readonly _: "getForumTopicHistory";
@@ -142495,7 +152058,7 @@ export type getForumTopicHistory$Input = {
 /**
  * Returns messages in a topic in a forum supergroup chat or a chat with a bot with topics. The messages are returned in reverse chronological order
  *
- * - (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * - (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  */
 export type getForumTopicHistory$DirectInput = {
   /**
@@ -142534,7 +152097,7 @@ export type getForumTopicHistory$DirectInput = {
 /**
  * Returns messages in a topic in a forum supergroup chat or a chat with a bot with topics. The messages are returned in reverse chronological order
  *
- * - (i.e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
+ * - (i.e., in order of decreasing message.id). For optimal performance, the number of returned messages is chosen by TDLib
  *
  * @param {getForumTopicHistory$Input} parameters {@link getForumTopicHistory$Input}
  * @returns {Messages} {@link Messages}
@@ -142544,7 +152107,7 @@ export type getForumTopicHistory = (
 ) => Messages;
 
 /**
- * Returns an HTTPS link to a topic in a forum supergroup chat. This is an offline method
+ * Returns an HTTPS link to a topic in a forum supergroup chat or a chat with a bot. This is an offline method
  */
 export type getForumTopicLink$Input = {
   readonly _: "getForumTopicLink";
@@ -142563,7 +152126,7 @@ export type getForumTopicLink$Input = {
 };
 
 /**
- * Returns an HTTPS link to a topic in a forum supergroup chat. This is an offline method
+ * Returns an HTTPS link to a topic in a forum supergroup chat or a chat with a bot. This is an offline method
  */
 export type getForumTopicLink$DirectInput = {
   /**
@@ -142580,7 +152143,7 @@ export type getForumTopicLink$DirectInput = {
 };
 
 /**
- * Returns an HTTPS link to a topic in a forum supergroup chat. This is an offline method
+ * Returns an HTTPS link to a topic in a forum supergroup chat or a chat with a bot. This is an offline method
  *
  * @param {getForumTopicLink$Input} parameters {@link getForumTopicLink$Input}
  * @returns {MessageLink} {@link MessageLink}
@@ -143372,7 +152935,7 @@ export type getMessageAvailableReactions$Input = {
   readonly message_id?: int53;
 
   /**
-   * Number of reaction per row, 5-25
+   * Number of reactions per row, 5-25
    * @type {int32} {@link int32}
    */
   readonly row_size?: int32;
@@ -143395,7 +152958,7 @@ export type getMessageAvailableReactions$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * Number of reaction per row, 5-25
+   * Number of reactions per row, 5-25
    * @type {int32} {@link int32}
    */
   readonly row_size?: int32;
@@ -144278,7 +153841,7 @@ export type searchQuote$DirectInput = {
 export type searchQuote = (parameters: searchQuote$Input) => FoundPosition;
 
 /**
- * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
+ * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, TON blockchain addresses, URLs, and email addresses) found in the text. Can be called synchronously
  */
 export type getTextEntities$Input = {
   readonly _: "getTextEntities";
@@ -144291,7 +153854,7 @@ export type getTextEntities$Input = {
 };
 
 /**
- * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
+ * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, TON blockchain addresses, URLs, and email addresses) found in the text. Can be called synchronously
  */
 export type getTextEntities$DirectInput = {
   /**
@@ -144302,12 +153865,46 @@ export type getTextEntities$DirectInput = {
 };
 
 /**
- * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, URLs, and email addresses) found in the text. Can be called synchronously
+ * Returns all entities (mentions, hashtags, cashtags, bot commands, bank card numbers, TON blockchain addresses, URLs, and email addresses) found in the text. Can be called synchronously
  *
  * @param {getTextEntities$Input} parameters {@link getTextEntities$Input}
  * @returns {TextEntities} {@link TextEntities}
  */
 export type getTextEntities = (parameters: getTextEntities$Input) => TextEntities;
+
+/**
+ * Returns positions of all emoji found in the text in order of their appearance. Can be called synchronously
+ */
+export type getTextEmojiRanges$Input = {
+  readonly _: "getTextEmojiRanges";
+
+  /**
+   * The text in which to look for emoji
+   * @type {string} {@link string}
+   */
+  readonly text?: string;
+};
+
+/**
+ * Returns positions of all emoji found in the text in order of their appearance. Can be called synchronously
+ */
+export type getTextEmojiRanges$DirectInput = {
+  /**
+   * The text in which to look for emoji
+   * @type {string} {@link string}
+   */
+  readonly text?: string;
+};
+
+/**
+ * Returns positions of all emoji found in the text in order of their appearance. Can be called synchronously
+ *
+ * @param {getTextEmojiRanges$Input} parameters {@link getTextEmojiRanges$Input}
+ * @returns {TextRanges} {@link TextRanges}
+ */
+export type getTextEmojiRanges = (
+  parameters: getTextEmojiRanges$Input
+) => TextRanges;
 
 /**
  * Parses Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre, PreCode, TextUrl,
@@ -144852,7 +154449,7 @@ export type setPollAnswer$Input = {
   readonly message_id?: int53;
 
   /**
-   * 0-based identifiers of answer options, chosen by the user. User can choose more than 1 answer option only is the poll allows multiple answers
+   * 0-based identifiers of answer options, chosen by the user. User can choose more than 1 answer option only if the poll allows multiple answers
    * @type {vector$Input<int32>} {@link vector<int32>}
    */
   readonly option_ids?: vector$Input<int32>;
@@ -144875,7 +154472,7 @@ export type setPollAnswer$DirectInput = {
   readonly message_id?: int53;
 
   /**
-   * 0-based identifiers of answer options, chosen by the user. User can choose more than 1 answer option only is the poll allows multiple answers
+   * 0-based identifiers of answer options, chosen by the user. User can choose more than 1 answer option only if the poll allows multiple answers
    * @type {vector$Input<int32>} {@link vector<int32>}
    */
   readonly option_ids?: vector$Input<int32>;
@@ -144922,7 +154519,9 @@ export type getPollVoters$Input = {
   readonly offset?: int32;
 
   /**
-   * The maximum number of voters to be returned; must be positive and can't be greater than 50. For optimal performance, the number of returned voters is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
+   * The maximum number of voters to be returned; must be positive and can't be greater than 50. For optimal performance,
+   *
+   * - the number of returned voters is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
    * @type {int32} {@link int32}
    */
   readonly limit?: int32;
@@ -144959,7 +154558,9 @@ export type getPollVoters$DirectInput = {
   readonly offset?: int32;
 
   /**
-   * The maximum number of voters to be returned; must be positive and can't be greater than 50. For optimal performance, the number of returned voters is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
+   * The maximum number of voters to be returned; must be positive and can't be greater than 50. For optimal performance,
+   *
+   * - the number of returned voters is chosen by TDLib and can be smaller than the specified limit, even if the end of the voter list has not been reached
    * @type {int32} {@link int32}
    */
   readonly limit?: int32;
@@ -145146,7 +154747,7 @@ export type addChecklistTasks$DirectInput = {
 export type addChecklistTasks = (parameters: addChecklistTasks$Input) => Ok;
 
 /**
- * Adds tasks of a checklist in a message as done or not done
+ * Marks tasks of a checklist in a message as done or not done
  */
 export type markChecklistTasksAsDone$Input = {
   readonly _: "markChecklistTasksAsDone";
@@ -145177,7 +154778,7 @@ export type markChecklistTasksAsDone$Input = {
 };
 
 /**
- * Adds tasks of a checklist in a message as done or not done
+ * Marks tasks of a checklist in a message as done or not done
  */
 export type markChecklistTasksAsDone$DirectInput = {
   /**
@@ -145206,7 +154807,7 @@ export type markChecklistTasksAsDone$DirectInput = {
 };
 
 /**
- * Adds tasks of a checklist in a message as done or not done
+ * Marks tasks of a checklist in a message as done or not done
  *
  * @param {markChecklistTasksAsDone$Input} parameters {@link markChecklistTasksAsDone$Input}
  * @returns {Ok} {@link Ok}
@@ -145434,7 +155035,7 @@ export type getLoginUrl$DirectInput = {
 export type getLoginUrl = (parameters: getLoginUrl$Input) => HttpUrl;
 
 /**
- * Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
+ * Shares users after pressing a keyboardButtonTypeRequestUsers or keyboardButtonTypeRequestManagedBot button with the bot
  */
 export type shareUsersWithBot$Input = {
   readonly _: "shareUsersWithBot";
@@ -145465,7 +155066,7 @@ export type shareUsersWithBot$Input = {
 };
 
 /**
- * Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
+ * Shares users after pressing a keyboardButtonTypeRequestUsers or keyboardButtonTypeRequestManagedBot button with the bot
  */
 export type shareUsersWithBot$DirectInput = {
   /**
@@ -145494,7 +155095,7 @@ export type shareUsersWithBot$DirectInput = {
 };
 
 /**
- * Shares users after pressing a keyboardButtonTypeRequestUsers button with the bot
+ * Shares users after pressing a keyboardButtonTypeRequestUsers or keyboardButtonTypeRequestManagedBot button with the bot
  *
  * @param {shareUsersWithBot$Input} parameters {@link shareUsersWithBot$Input}
  * @returns {Ok} {@link Ok}
@@ -145856,7 +155457,7 @@ export type savePreparedInlineMessage = (
 ) => PreparedInlineMessageId;
 
 /**
- * Saves an inline message to be sent by the given user
+ * Returns an inline message prepared by a bot to be sent by the current user
  */
 export type getPreparedInlineMessage$Input = {
   readonly _: "getPreparedInlineMessage";
@@ -145875,7 +155476,7 @@ export type getPreparedInlineMessage$Input = {
 };
 
 /**
- * Saves an inline message to be sent by the given user
+ * Returns an inline message prepared by a bot to be sent by the current user
  */
 export type getPreparedInlineMessage$DirectInput = {
   /**
@@ -145892,7 +155493,7 @@ export type getPreparedInlineMessage$DirectInput = {
 };
 
 /**
- * Saves an inline message to be sent by the given user
+ * Returns an inline message prepared by a bot to be sent by the current user
  *
  * @param {getPreparedInlineMessage$Input} parameters {@link getPreparedInlineMessage$Input}
  * @returns {PreparedInlineMessage} {@link PreparedInlineMessage}
@@ -146682,13 +156283,13 @@ export type answerChatJoinRequestQuery$Input = {
   readonly query_id?: int64$Input;
 
   /**
-   * The result
+   * The result; must be null if a URL is passed
    * @type {ChatJoinRequestResult$Input} {@link ChatJoinRequestResult}
    */
   readonly result?: ChatJoinRequestResult$Input;
 
   /**
-   * URL of the Web App to open
+   * URL of the Web App to open; must be empty if a result is passed
    * @type {string} {@link string}
    */
   readonly url?: string;
@@ -146705,13 +156306,13 @@ export type answerChatJoinRequestQuery$DirectInput = {
   readonly query_id?: int64$Input;
 
   /**
-   * The result
+   * The result; must be null if a URL is passed
    * @type {ChatJoinRequestResult$Input} {@link ChatJoinRequestResult}
    */
   readonly result?: ChatJoinRequestResult$Input;
 
   /**
-   * URL of the Web App to open
+   * URL of the Web App to open; must be empty if a result is passed
    * @type {string} {@link string}
    */
   readonly url?: string;
@@ -146864,6 +156465,166 @@ export type answerCallbackQuery$DirectInput = {
  * @returns {Ok} {@link Ok}
  */
 export type answerCallbackQuery = (parameters: answerCallbackQuery$Input) => Ok;
+
+/**
+ * Sets the result of a widget query; for bots only
+ */
+export type answerWidgetQuery$Input = {
+  readonly _: "answerWidgetQuery";
+
+  /**
+   * Identifier of the widget query
+   * @type {int64$Input} {@link int64}
+   */
+  readonly widget_query_id?: int64$Input;
+
+  /**
+   * Data to be returned to the widget
+   * @type {string} {@link string}
+   */
+  readonly data?: string;
+};
+
+/**
+ * Sets the result of a widget query; for bots only
+ */
+export type answerWidgetQuery$DirectInput = {
+  /**
+   * Identifier of the widget query
+   * @type {int64$Input} {@link int64}
+   */
+  readonly widget_query_id?: int64$Input;
+
+  /**
+   * Data to be returned to the widget
+   * @type {string} {@link string}
+   */
+  readonly data?: string;
+};
+
+/**
+ * Sets the result of a widget query; for bots only
+ *
+ * @param {answerWidgetQuery$Input} parameters {@link answerWidgetQuery$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type answerWidgetQuery = (parameters: answerWidgetQuery$Input) => Ok;
+
+/**
+ * Sends a widget query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
+ */
+export type getWidgetQueryAnswer$Input = {
+  readonly _: "getWidgetQueryAnswer";
+
+  /**
+   * Identifier of the chat with the message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the widget message from which the query originated. The message must not be scheduled
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Type of the query
+   * @type {WidgetQueryType$Input} {@link WidgetQueryType}
+   */
+  readonly query_type?: WidgetQueryType$Input;
+
+  /**
+   * Data of the query
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly data?: bytes$Input;
+};
+
+/**
+ * Sends a widget query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
+ */
+export type getWidgetQueryAnswer$DirectInput = {
+  /**
+   * Identifier of the chat with the message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the widget message from which the query originated. The message must not be scheduled
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Type of the query
+   * @type {WidgetQueryType$Input} {@link WidgetQueryType}
+   */
+  readonly query_type?: WidgetQueryType$Input;
+
+  /**
+   * Data of the query
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly data?: bytes$Input;
+};
+
+/**
+ * Sends a widget query to a bot and returns an answer. Returns an error with code 502 if the bot fails to answer the query before the query timeout expires
+ *
+ * @param {getWidgetQueryAnswer$Input} parameters {@link getWidgetQueryAnswer$Input}
+ * @returns {WidgetQueryAnswer} {@link WidgetQueryAnswer}
+ */
+export type getWidgetQueryAnswer = (
+  parameters: getWidgetQueryAnswer$Input
+) => WidgetQueryAnswer;
+
+/**
+ * Returns the current public data of a widget. Must be called only if the widget is visible on the screen and asked to poll its public data
+ */
+export type getWidgetPublicData$Input = {
+  readonly _: "getWidgetPublicData";
+
+  /**
+   * Identifier of the chat with the message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the widget message. The message must not be scheduled
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Returns the current public data of a widget. Must be called only if the widget is visible on the screen and asked to poll its public data
+ */
+export type getWidgetPublicData$DirectInput = {
+  /**
+   * Identifier of the chat with the message
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * Identifier of the widget message. The message must not be scheduled
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+};
+
+/**
+ * Returns the current public data of a widget. Must be called only if the widget is visible on the screen and asked to poll its public data
+ *
+ * @param {getWidgetPublicData$Input} parameters {@link getWidgetPublicData$Input}
+ * @returns {WidgetPublicData} {@link WidgetPublicData}
+ */
+export type getWidgetPublicData = (
+  parameters: getWidgetPublicData$Input
+) => WidgetPublicData;
 
 /**
  * Sets the result of a shipping query; for bots only
@@ -147734,7 +157495,7 @@ export type viewMessages$DirectInput = {
 export type viewMessages = (parameters: viewMessages$Input) => Ok;
 
 /**
- * Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message).
+ * Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location, or venue, or has listened to an audio file or voice note message).
  *
  * - An updateMessageContentOpened update will be generated if something has changed
  */
@@ -147755,7 +157516,7 @@ export type openMessageContent$Input = {
 };
 
 /**
- * Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message).
+ * Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location, or venue, or has listened to an audio file or voice note message).
  *
  * - An updateMessageContentOpened update will be generated if something has changed
  */
@@ -147774,7 +157535,7 @@ export type openMessageContent$DirectInput = {
 };
 
 /**
- * Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location or venue, or has listened to an audio file or voice note message).
+ * Informs TDLib that the message content has been opened (e.g., the user has opened a photo, video, document, location, or venue, or has listened to an audio file or voice note message).
  *
  * - An updateMessageContentOpened update will be generated if something has changed
  *
@@ -148176,7 +157937,7 @@ export type getLinkWebBrowserType = (
 ) => WebBrowserType;
 
 /**
- * Returns information about an OAuth deep link. Use checkOauthRequestMatchCode, acceptOauthRequest or declineOauthRequest to process the link
+ * Returns information about an OAuth deep link. Use checkOauthRequestMatchCode, acceptOauthRequest, or declineOauthRequest to process the link
  */
 export type getOauthLinkInfo$Input = {
   readonly _: "getOauthLinkInfo";
@@ -148195,7 +157956,7 @@ export type getOauthLinkInfo$Input = {
 };
 
 /**
- * Returns information about an OAuth deep link. Use checkOauthRequestMatchCode, acceptOauthRequest or declineOauthRequest to process the link
+ * Returns information about an OAuth deep link. Use checkOauthRequestMatchCode, acceptOauthRequest, or declineOauthRequest to process the link
  */
 export type getOauthLinkInfo$DirectInput = {
   /**
@@ -148212,7 +157973,7 @@ export type getOauthLinkInfo$DirectInput = {
 };
 
 /**
- * Returns information about an OAuth deep link. Use checkOauthRequestMatchCode, acceptOauthRequest or declineOauthRequest to process the link
+ * Returns information about an OAuth deep link. Use checkOauthRequestMatchCode, acceptOauthRequest, or declineOauthRequest to process the link
  *
  * @param {getOauthLinkInfo$Input} parameters {@link getOauthLinkInfo$Input}
  * @returns {OauthLinkInfo} {@link OauthLinkInfo}
@@ -148302,6 +158063,12 @@ export type acceptOauthRequest$Input = {
    * @type {Bool$Input} {@link Bool}
    */
   readonly allow_phone_number_access?: Bool$Input;
+
+  /**
+   * Pass data required to access the user's TON wallet via TON Connect if the current user allowed this; pass null if the access wasn't requested or the user declined access
+   * @type {tonConnectConnectData$Input} {@link tonConnectConnectData}
+   */
+  readonly ton_connect_connect_data?: tonConnectConnectData$Input | null;
 };
 
 /**
@@ -148333,6 +158100,12 @@ export type acceptOauthRequest$DirectInput = {
    * @type {Bool$Input} {@link Bool}
    */
   readonly allow_phone_number_access?: Bool$Input;
+
+  /**
+   * Pass data required to access the user's TON wallet via TON Connect if the current user allowed this; pass null if the access wasn't requested or the user declined access
+   * @type {tonConnectConnectData$Input} {@link tonConnectConnectData}
+   */
+  readonly ton_connect_connect_data?: tonConnectConnectData$Input | null;
 };
 
 /**
@@ -148834,7 +158607,9 @@ export type createNewSecretChat$DirectInput = {
 export type createNewSecretChat = (parameters: createNewSecretChat$Input) => Chat;
 
 /**
- * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
+ * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges.
+ *
+ * - Deactivates the original basic group
  */
 export type upgradeBasicGroupChatToSupergroupChat$Input = {
   readonly _: "upgradeBasicGroupChatToSupergroupChat";
@@ -148847,7 +158622,9 @@ export type upgradeBasicGroupChatToSupergroupChat$Input = {
 };
 
 /**
- * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
+ * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges.
+ *
+ * - Deactivates the original basic group
  */
 export type upgradeBasicGroupChatToSupergroupChat$DirectInput = {
   /**
@@ -148858,7 +158635,9 @@ export type upgradeBasicGroupChatToSupergroupChat$DirectInput = {
 };
 
 /**
- * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges. Deactivates the original basic group
+ * Creates a new supergroup from an existing basic group and sends a corresponding messageChatUpgradeTo and messageChatUpgradeFrom; requires owner privileges.
+ *
+ * - Deactivates the original basic group
  *
  * @param {upgradeBasicGroupChatToSupergroupChat$Input} parameters {@link upgradeBasicGroupChatToSupergroupChat$Input}
  * @returns {Chat} {@link Chat}
@@ -149656,7 +159435,7 @@ export type getChatFolderNewChats = (
 ) => Chats;
 
 /**
- * Process new chats added to a shareable chat folder by its owner
+ * Processes new chats added to a shareable chat folder by its owner
  */
 export type processChatFolderNewChats$Input = {
   readonly _: "processChatFolderNewChats";
@@ -149675,7 +159454,7 @@ export type processChatFolderNewChats$Input = {
 };
 
 /**
- * Process new chats added to a shareable chat folder by its owner
+ * Processes new chats added to a shareable chat folder by its owner
  */
 export type processChatFolderNewChats$DirectInput = {
   /**
@@ -149692,7 +159471,7 @@ export type processChatFolderNewChats$DirectInput = {
 };
 
 /**
- * Process new chats added to a shareable chat folder by its owner
+ * Processes new chats added to a shareable chat folder by its owner
  *
  * @param {processChatFolderNewChats$Input} parameters {@link processChatFolderNewChats$Input}
  * @returns {Ok} {@link Ok}
@@ -149964,7 +159743,7 @@ export type setChatProfileAccentColor = (
 ) => Ok;
 
 /**
- * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
+ * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires can_change_info administrator right in basic groups, supergroups and channels.
  *
  * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
  */
@@ -149985,7 +159764,7 @@ export type setChatMessageAutoDeleteTime$Input = {
 };
 
 /**
- * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
+ * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires can_change_info administrator right in basic groups, supergroups and channels.
  *
  * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
  */
@@ -150004,7 +159783,7 @@ export type setChatMessageAutoDeleteTime$DirectInput = {
 };
 
 /**
- * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires change_info administrator right in basic groups, supergroups and channels.
+ * Changes the message auto-delete or self-destruct (for secret chats) time in a chat. Requires can_change_info administrator right in basic groups, supergroups and channels.
  *
  * - Message auto-delete time can't be changed in a chat with the current user (Saved Messages) and the chat 777000 (Telegram).
  *
@@ -150136,7 +159915,9 @@ export type setChatBackground$Input = {
   readonly dark_theme_dimming?: int32;
 
   /**
-   * Pass true to set background only for self; pass false to set background for all chat users. Always false for backgrounds set in boosted chats. Background can be set for both users only by Telegram Premium users and if set background isn't of the type inputBackgroundPrevious
+   * Pass true to set background only for self; pass false to set background for all chat users. Always false for backgrounds set in boosted chats.
+   *
+   * - Background can be set for both users only by Telegram Premium users and if set background isn't of the type inputBackgroundPrevious
    * @type {Bool$Input} {@link Bool}
    */
   readonly only_for_self?: Bool$Input;
@@ -150173,7 +159954,9 @@ export type setChatBackground$DirectInput = {
   readonly dark_theme_dimming?: int32;
 
   /**
-   * Pass true to set background only for self; pass false to set background for all chat users. Always false for backgrounds set in boosted chats. Background can be set for both users only by Telegram Premium users and if set background isn't of the type inputBackgroundPrevious
+   * Pass true to set background only for self; pass false to set background for all chat users. Always false for backgrounds set in boosted chats.
+   *
+   * - Background can be set for both users only by Telegram Premium users and if set background isn't of the type inputBackgroundPrevious
    * @type {Bool$Input} {@link Bool}
    */
   readonly only_for_self?: Bool$Input;
@@ -150492,7 +160275,7 @@ export type processChatHasProtectedContentDisableRequest$Input = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the message with the request. The message must be incoming and has content of the type messageChatHasProtectedContentDisableRequested
+   * Identifier of the message with the request. The message must be incoming and have content of the type messageChatHasProtectedContentDisableRequested
    * @type {int53} {@link int53}
    */
   readonly request_message_id?: int53;
@@ -150515,7 +160298,7 @@ export type processChatHasProtectedContentDisableRequest$DirectInput = {
   readonly chat_id?: int53;
 
   /**
-   * Identifier of the message with the request. The message must be incoming and has content of the type messageChatHasProtectedContentDisableRequested
+   * Identifier of the message with the request. The message must be incoming and have content of the type messageChatHasProtectedContentDisableRequested
    * @type {int53} {@link int53}
    */
   readonly request_message_id?: int53;
@@ -151496,7 +161279,9 @@ export type setChatMemberTag$DirectInput = {
 export type setChatMemberTag = (parameters: setChatMemberTag$Input) => Ok;
 
 /**
- * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
+ * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats.
+ *
+ * - In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
  */
 export type banChatMember$Input = {
   readonly _: "banChatMember";
@@ -151514,7 +161299,9 @@ export type banChatMember$Input = {
   readonly member_id?: MessageSender$Input;
 
   /**
-   * Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days or for less than 30 seconds from the current time, the user is considered to be banned forever. Ignored in basic groups and if a chat is banned
+   * Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days
+   *
+   * - or for less than 30 seconds from the current time, the user is considered to be banned forever. Ignored in basic groups and if a chat is banned
    * @type {int32} {@link int32}
    */
   readonly banned_until_date?: int32;
@@ -151527,7 +161314,9 @@ export type banChatMember$Input = {
 };
 
 /**
- * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
+ * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats.
+ *
+ * - In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
  */
 export type banChatMember$DirectInput = {
   /**
@@ -151543,7 +161332,9 @@ export type banChatMember$DirectInput = {
   readonly member_id?: MessageSender$Input;
 
   /**
-   * Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days or for less than 30 seconds from the current time, the user is considered to be banned forever. Ignored in basic groups and if a chat is banned
+   * Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days
+   *
+   * - or for less than 30 seconds from the current time, the user is considered to be banned forever. Ignored in basic groups and if a chat is banned
    * @type {int32} {@link int32}
    */
   readonly banned_until_date?: int32;
@@ -151556,7 +161347,9 @@ export type banChatMember$DirectInput = {
 };
 
 /**
- * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
+ * Bans a member in a chat; requires can_restrict_members administrator right. Members can't be banned in private or secret chats.
+ *
+ * - In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
  *
  * @param {banChatMember$Input} parameters {@link banChatMember$Input}
  * @returns {Ok} {@link Ok}
@@ -152188,7 +161981,9 @@ export type resetAllNotificationSettings = (
 ) => Ok;
 
 /**
- * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
+ * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max")
+ *
+ * - pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
  */
 export type toggleChatIsPinned$Input = {
   readonly _: "toggleChatIsPinned";
@@ -152213,7 +162008,9 @@ export type toggleChatIsPinned$Input = {
 };
 
 /**
- * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
+ * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max")
+ *
+ * - pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
  */
 export type toggleChatIsPinned$DirectInput = {
   /**
@@ -152236,7 +162033,9 @@ export type toggleChatIsPinned$DirectInput = {
 };
 
 /**
- * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max") pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
+ * Changes the pinned state of a chat. There can be up to getOption("pinned_chat_count_max")/getOption("pinned_archived_chat_count_max")
+ *
+ * - pinned non-secret chats and the same number of secret chats in the main/archive chat list. The limit can be increased with Telegram Premium
  *
  * @param {toggleChatIsPinned$Input} parameters {@link toggleChatIsPinned$Input}
  * @returns {Ok} {@link Ok}
@@ -152494,6 +162293,12 @@ export type postStory$Input = {
   readonly caption?: formattedText$Input | null;
 
   /**
+   * Music to be attached to the story; pass null if none. The music can be up to 60 seconds long. The bot getOption("audio_search_bot_username") can be used to find the music files
+   * @type {inputAudio$Input} {@link inputAudio}
+   */
+  readonly music?: inputAudio$Input | null;
+
+  /**
    * The privacy settings for the story; ignored for stories posted on behalf of supergroup and channel chats
    * @type {StoryPrivacySettings$Input} {@link StoryPrivacySettings}
    */
@@ -152557,6 +162362,12 @@ export type postStory$DirectInput = {
    * @type {formattedText$Input} {@link formattedText}
    */
   readonly caption?: formattedText$Input | null;
+
+  /**
+   * Music to be attached to the story; pass null if none. The music can be up to 60 seconds long. The bot getOption("audio_search_bot_username") can be used to find the music files
+   * @type {inputAudio$Input} {@link inputAudio}
+   */
+  readonly music?: inputAudio$Input | null;
 
   /**
    * The privacy settings for the story; ignored for stories posted on behalf of supergroup and channel chats
@@ -152834,6 +162645,62 @@ export type editStoryCover$DirectInput = {
 export type editStoryCover = (parameters: editStoryCover$Input) => Ok;
 
 /**
+ * Changes music attached to a story. Can be called only if story.can_be_edited == true and the story isn't being edited now
+ */
+export type editStoryMusic$Input = {
+  readonly _: "editStoryMusic";
+
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_poster_chat_id?: int53;
+
+  /**
+   * Identifier of the story to edit
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * The new music; pass null to remove music from the story. The music can be up to 60 seconds long
+   * @type {inputAudio$Input} {@link inputAudio}
+   */
+  readonly music?: inputAudio$Input | null;
+};
+
+/**
+ * Changes music attached to a story. Can be called only if story.can_be_edited == true and the story isn't being edited now
+ */
+export type editStoryMusic$DirectInput = {
+  /**
+   * Identifier of the chat that posted the story
+   * @type {int53} {@link int53}
+   */
+  readonly story_poster_chat_id?: int53;
+
+  /**
+   * Identifier of the story to edit
+   * @type {int32} {@link int32}
+   */
+  readonly story_id?: int32;
+
+  /**
+   * The new music; pass null to remove music from the story. The music can be up to 60 seconds long
+   * @type {inputAudio$Input} {@link inputAudio}
+   */
+  readonly music?: inputAudio$Input | null;
+};
+
+/**
+ * Changes music attached to a story. Can be called only if story.can_be_edited == true and the story isn't being edited now
+ *
+ * @param {editStoryMusic$Input} parameters {@link editStoryMusic$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type editStoryMusic = (parameters: editStoryMusic$Input) => Ok;
+
+/**
  * Changes privacy settings of a story. The method can be called only for stories posted on behalf of the current user and if story.can_set_privacy_settings == true
  */
 export type setStoryPrivacySettings$Input = {
@@ -153006,7 +162873,7 @@ export type getStoryNotificationSettingsExceptions = (
 /**
  * Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
  *
- * - the pair (active_stories.order, active_stories.story_poster_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
+ * - the pair (active_stories.order, active_stories.chat_id) in descending order. Returns a 404 error if all active stories have been loaded
  */
 export type loadActiveStories$Input = {
   readonly _: "loadActiveStories";
@@ -153021,7 +162888,7 @@ export type loadActiveStories$Input = {
 /**
  * Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
  *
- * - the pair (active_stories.order, active_stories.story_poster_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
+ * - the pair (active_stories.order, active_stories.chat_id) in descending order. Returns a 404 error if all active stories have been loaded
  */
 export type loadActiveStories$DirectInput = {
   /**
@@ -153034,7 +162901,7 @@ export type loadActiveStories$DirectInput = {
 /**
  * Loads more active stories from a story list. The loaded stories will be sent through updates. Active stories are sorted by
  *
- * - the pair (active_stories.order, active_stories.story_poster_chat_id) in descending order. Returns a 404 error if all active stories have been loaded
+ * - the pair (active_stories.order, active_stories.chat_id) in descending order. Returns a 404 error if all active stories have been loaded
  *
  * @param {loadActiveStories$Input} parameters {@link loadActiveStories$Input}
  * @returns {Ok} {@link Ok}
@@ -153122,9 +162989,9 @@ export type getChatActiveStories = (
 ) => ChatActiveStories;
 
 /**
- * Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
+ * Returns the list of stories that were posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
  *
- * - Then, stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+ * - Then, stories are returned in reverse chronological order (i.e., in order of decreasing story.id). For optimal performance, the number of returned stories is chosen by TDLib
  */
 export type getChatPostedToChatPageStories$Input = {
   readonly _: "getChatPostedToChatPageStories";
@@ -153151,9 +163018,9 @@ export type getChatPostedToChatPageStories$Input = {
 };
 
 /**
- * Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
+ * Returns the list of stories that were posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
  *
- * - Then, stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+ * - Then, stories are returned in reverse chronological order (i.e., in order of decreasing story.id). For optimal performance, the number of returned stories is chosen by TDLib
  */
 export type getChatPostedToChatPageStories$DirectInput = {
   /**
@@ -153178,9 +163045,9 @@ export type getChatPostedToChatPageStories$DirectInput = {
 };
 
 /**
- * Returns the list of stories that posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
+ * Returns the list of stories that were posted by the given chat to its chat page. If from_story_id == 0, then pinned stories are returned first.
  *
- * - Then, stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+ * - Then, stories are returned in reverse chronological order (i.e., in order of decreasing story.id). For optimal performance, the number of returned stories is chosen by TDLib
  *
  * @param {getChatPostedToChatPageStories$Input} parameters {@link getChatPostedToChatPageStories$Input}
  * @returns {Stories} {@link Stories}
@@ -153192,7 +163059,7 @@ export type getChatPostedToChatPageStories = (
 /**
  * Returns the list of all stories posted by the given chat; requires can_edit_stories administrator right in the chat.
  *
- * - The stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+ * - The stories are returned in reverse chronological order (i.e., in order of decreasing story.id). For optimal performance, the number of returned stories is chosen by TDLib
  */
 export type getChatArchivedStories$Input = {
   readonly _: "getChatArchivedStories";
@@ -153221,7 +163088,7 @@ export type getChatArchivedStories$Input = {
 /**
  * Returns the list of all stories posted by the given chat; requires can_edit_stories administrator right in the chat.
  *
- * - The stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+ * - The stories are returned in reverse chronological order (i.e., in order of decreasing story.id). For optimal performance, the number of returned stories is chosen by TDLib
  */
 export type getChatArchivedStories$DirectInput = {
   /**
@@ -153248,7 +163115,7 @@ export type getChatArchivedStories$DirectInput = {
 /**
  * Returns the list of all stories posted by the given chat; requires can_edit_stories administrator right in the chat.
  *
- * - The stories are returned in reverse chronological order (i.e., in order of decreasing story_id). For optimal performance, the number of returned stories is chosen by TDLib
+ * - The stories are returned in reverse chronological order (i.e., in order of decreasing story.id). For optimal performance, the number of returned stories is chosen by TDLib
  *
  * @param {getChatArchivedStories$Input} parameters {@link getChatArchivedStories$Input}
  * @returns {Stories} {@link Stories}
@@ -153396,7 +163263,7 @@ export type getStoryAvailableReactions$Input = {
   readonly _: "getStoryAvailableReactions";
 
   /**
-   * Number of reaction per row, 5-25
+   * Number of reactions per row, 5-25
    * @type {int32} {@link int32}
    */
   readonly row_size?: int32;
@@ -153407,7 +163274,7 @@ export type getStoryAvailableReactions$Input = {
  */
 export type getStoryAvailableReactions$DirectInput = {
   /**
-   * Number of reaction per row, 5-25
+   * Number of reactions per row, 5-25
    * @type {int32} {@link int32}
    */
   readonly row_size?: int32;
@@ -154190,7 +164057,7 @@ export type addStoryAlbumStories$Input = {
   /**
    * Identifier of the stories to add to the album; 1-getOption("story_album_size_max") identifiers.
    *
-   * - If after addition the album has more than getOption("story_album_size_max") stories, then the last one are removed from the album
+   * - If after addition the album has more than getOption("story_album_size_max") stories, then the last ones are removed from the album
    * @type {vector$Input<int32>} {@link vector<int32>}
    */
   readonly story_ids?: vector$Input<int32>;
@@ -154217,7 +164084,7 @@ export type addStoryAlbumStories$DirectInput = {
   /**
    * Identifier of the stories to add to the album; 1-getOption("story_album_size_max") identifiers.
    *
-   * - If after addition the album has more than getOption("story_album_size_max") stories, then the last one are removed from the album
+   * - If after addition the album has more than getOption("story_album_size_max") stories, then the last ones are removed from the album
    * @type {vector$Input<int32>} {@link vector<int32>}
    */
   readonly story_ids?: vector$Input<int32>;
@@ -155022,7 +164889,9 @@ export type downloadFile$Input = {
   readonly limit?: int53;
 
   /**
-   * Pass true to return response only after the file download has succeeded, has failed, has been canceled, or a new downloadFile request with different offset/limit parameters was sent; pass false to return file state immediately, just after the download has been started
+   * Pass true to return response only after the file download has succeeded, has failed, has been canceled, or a new downloadFile request
+   *
+   * - with different offset/limit parameters was sent; pass false to return file state immediately, just after the download has been started
    * @type {Bool$Input} {@link Bool}
    */
   readonly synchronous?: Bool$Input;
@@ -155057,7 +164926,9 @@ export type downloadFile$DirectInput = {
   readonly limit?: int53;
 
   /**
-   * Pass true to return response only after the file download has succeeded, has failed, has been canceled, or a new downloadFile request with different offset/limit parameters was sent; pass false to return file state immediately, just after the download has been started
+   * Pass true to return response only after the file download has succeeded, has failed, has been canceled, or a new downloadFile request
+   *
+   * - with different offset/limit parameters was sent; pass false to return file state immediately, just after the download has been started
    * @type {Bool$Input} {@link Bool}
    */
   readonly synchronous?: Bool$Input;
@@ -155470,7 +165341,9 @@ export type finishFileGeneration$DirectInput = {
 export type finishFileGeneration = (parameters: finishFileGeneration$Input) => Ok;
 
 /**
- * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
+ * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only
+ *
+ * - if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
  */
 export type readFilePart$Input = {
   readonly _: "readFilePart";
@@ -155495,7 +165368,9 @@ export type readFilePart$Input = {
 };
 
 /**
- * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
+ * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only
+ *
+ * - if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
  */
 export type readFilePart$DirectInput = {
   /**
@@ -155518,7 +165393,9 @@ export type readFilePart$DirectInput = {
 };
 
 /**
- * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
+ * Reads a part of a file from the TDLib file cache and returns read bytes. This method is intended to be used only
+ *
+ * - if the application has no direct access to TDLib's file system, because it is usually slower than a direct read from the file
  *
  * @param {readFilePart$Input} parameters {@link readFilePart$Input}
  * @returns {Data} {@link Data}
@@ -155560,7 +165437,9 @@ export type deleteFile = (parameters: deleteFile$Input) => Ok;
 /**
  * Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
  *
- * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+ * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile,
+ *
+ * - i.e. it continues if downloadFile is canceled or is used to download a part of the file
  */
 export type addFileToDownloads$Input = {
   readonly _: "addFileToDownloads";
@@ -155593,7 +165472,9 @@ export type addFileToDownloads$Input = {
 /**
  * Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
  *
- * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+ * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile,
+ *
+ * - i.e. it continues if downloadFile is canceled or is used to download a part of the file
  */
 export type addFileToDownloads$DirectInput = {
   /**
@@ -155624,7 +165505,9 @@ export type addFileToDownloads$DirectInput = {
 /**
  * Adds a file from a message to the list of file downloads. Download progress and completion of the download will be notified through updateFile updates.
  *
- * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile, i.e. it continues if downloadFile is canceled or is used to download a part of the file
+ * - If message database is used, the list of file downloads is persistent across application restarts. The downloading is independent of download using downloadFile,
+ *
+ * - i.e. it continues if downloadFile is canceled or is used to download a part of the file
  *
  * @param {addFileToDownloads$Input} parameters {@link addFileToDownloads$Input}
  * @returns {File} {@link File}
@@ -156722,7 +166605,7 @@ export type revokeChatInviteLink = (
 ) => ChatInviteLinks;
 
 /**
- * Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
+ * Deletes a revoked chat invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  */
 export type deleteRevokedChatInviteLink$Input = {
   readonly _: "deleteRevokedChatInviteLink";
@@ -156734,14 +166617,14 @@ export type deleteRevokedChatInviteLink$Input = {
   readonly chat_id?: int53;
 
   /**
-   * Invite link to revoke
+   * Invite link to delete
    * @type {string} {@link string}
    */
   readonly invite_link?: string;
 };
 
 /**
- * Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
+ * Deletes a revoked chat invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  */
 export type deleteRevokedChatInviteLink$DirectInput = {
   /**
@@ -156751,14 +166634,14 @@ export type deleteRevokedChatInviteLink$DirectInput = {
   readonly chat_id?: int53;
 
   /**
-   * Invite link to revoke
+   * Invite link to delete
    * @type {string} {@link string}
    */
   readonly invite_link?: string;
 };
 
 /**
- * Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
+ * Deletes a revoked chat invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
  *
  * @param {deleteRevokedChatInviteLink$Input} parameters {@link deleteRevokedChatInviteLink$Input}
  * @returns {Ok} {@link Ok}
@@ -159660,7 +169543,7 @@ export type setGroupCallParticipantVolumeLevel = (
 ) => Ok;
 
 /**
- * Toggles whether a group call participant hand is rased; for video chats only
+ * Toggles whether a group call participant hand is raised; for video chats only
  */
 export type toggleGroupCallParticipantIsHandRaised$Input = {
   readonly _: "toggleGroupCallParticipantIsHandRaised";
@@ -159685,7 +169568,7 @@ export type toggleGroupCallParticipantIsHandRaised$Input = {
 };
 
 /**
- * Toggles whether a group call participant hand is rased; for video chats only
+ * Toggles whether a group call participant hand is raised; for video chats only
  */
 export type toggleGroupCallParticipantIsHandRaised$DirectInput = {
   /**
@@ -159708,7 +169591,7 @@ export type toggleGroupCallParticipantIsHandRaised$DirectInput = {
 };
 
 /**
- * Toggles whether a group call participant hand is rased; for video chats only
+ * Toggles whether a group call participant hand is raised; for video chats only
  *
  * @param {toggleGroupCallParticipantIsHandRaised$Input} parameters {@link toggleGroupCallParticipantIsHandRaised$Input}
  * @returns {Ok} {@link Ok}
@@ -163912,7 +173795,7 @@ export type reportPhoneNumberCodeMissing = (
 ) => Ok;
 
 /**
- * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
+ * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo.next_type was not null and the server-specified timeout has passed
  */
 export type resendPhoneNumberCode$Input = {
   readonly _: "resendPhoneNumberCode";
@@ -163925,7 +173808,7 @@ export type resendPhoneNumberCode$Input = {
 };
 
 /**
- * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
+ * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo.next_type was not null and the server-specified timeout has passed
  */
 export type resendPhoneNumberCode$DirectInput = {
   /**
@@ -163936,7 +173819,7 @@ export type resendPhoneNumberCode$DirectInput = {
 };
 
 /**
- * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo next_code_type was not null and the server-specified timeout has passed
+ * Resends the authentication code sent to a phone number. Works only if the previously received authenticationCodeInfo.next_type was not null and the server-specified timeout has passed
  *
  * @param {resendPhoneNumberCode$Input} parameters {@link resendPhoneNumberCode$Input}
  * @returns {AuthenticationCodeInfo} {@link AuthenticationCodeInfo}
@@ -164356,12 +174239,52 @@ export type getBusinessChatLinkInfo = (
  */
 export type getUserLink$Input = {
   readonly _: "getUserLink";
+
+  /**
+   * Pass true to get a link, which allows other users to send unpaid messages to the current user. By default, a temporary link is returned in this case
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly remove_messages_fee?: Bool$Input;
+
+  /**
+   * Pass true to get a permanent link; ignored if remove_messages_fee is false. Can be used only if can_get_permanent_link is true in a previously received userLink
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly return_permanent_link?: Bool$Input;
+
+  /**
+   * Pass true to revoke previously created links, which allow other users to send unpaid messages to the current user;
+   *
+   * - ignored if remove_messages_fee is false. If return_permanent_link is true, then the permanent link is revoked too; otherwise, only temporary links are revoked
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly revoke_previous_links?: Bool$Input;
 };
 
 /**
  * Returns an HTTPS link, which can be used to get information about the current user
  */
-export type getUserLink$DirectInput = {};
+export type getUserLink$DirectInput = {
+  /**
+   * Pass true to get a link, which allows other users to send unpaid messages to the current user. By default, a temporary link is returned in this case
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly remove_messages_fee?: Bool$Input;
+
+  /**
+   * Pass true to get a permanent link; ignored if remove_messages_fee is false. Can be used only if can_get_permanent_link is true in a previously received userLink
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly return_permanent_link?: Bool$Input;
+
+  /**
+   * Pass true to revoke previously created links, which allow other users to send unpaid messages to the current user;
+   *
+   * - ignored if remove_messages_fee is false. If return_permanent_link is true, then the permanent link is revoked too; otherwise, only temporary links are revoked
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly revoke_previous_links?: Bool$Input;
+};
 
 /**
  * Returns an HTTPS link, which can be used to get information about the current user
@@ -164402,6 +174325,64 @@ export type searchUserByToken$DirectInput = {
  * @returns {User} {@link User}
  */
 export type searchUserByToken = (parameters: searchUserByToken$Input) => User;
+
+/**
+ * Allows the current user to send unpaid messages to the given user, which requires payment for incoming messages, using a token from an internal link
+ *
+ * - of the type internalLinkTypePublicChat, internalLinkTypeUserPhoneNumber, or internalLinkTypeUserToken. The first message sent to the user will be preceded by a messageUnpaidMessagesAllowedByLink message.
+ *
+ * - Repeated calls and calls for the current user have no effect
+ */
+export type applyUnpaidMessagesToken$Input = {
+  readonly _: "applyUnpaidMessagesToken";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Token from the link
+   * @type {string} {@link string}
+   */
+  readonly token?: string;
+};
+
+/**
+ * Allows the current user to send unpaid messages to the given user, which requires payment for incoming messages, using a token from an internal link
+ *
+ * - of the type internalLinkTypePublicChat, internalLinkTypeUserPhoneNumber, or internalLinkTypeUserToken. The first message sent to the user will be preceded by a messageUnpaidMessagesAllowedByLink message.
+ *
+ * - Repeated calls and calls for the current user have no effect
+ */
+export type applyUnpaidMessagesToken$DirectInput = {
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Token from the link
+   * @type {string} {@link string}
+   */
+  readonly token?: string;
+};
+
+/**
+ * Allows the current user to send unpaid messages to the given user, which requires payment for incoming messages, using a token from an internal link
+ *
+ * - of the type internalLinkTypePublicChat, internalLinkTypeUserPhoneNumber, or internalLinkTypeUserToken. The first message sent to the user will be preceded by a messageUnpaidMessagesAllowedByLink message.
+ *
+ * - Repeated calls and calls for the current user have no effect
+ *
+ * @param {applyUnpaidMessagesToken$Input} parameters {@link applyUnpaidMessagesToken$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type applyUnpaidMessagesToken = (
+  parameters: applyUnpaidMessagesToken$Input
+) => Ok;
 
 /**
  * Sets the list of commands supported by the bot for the given user scope and language; for bots only
@@ -164896,7 +174877,9 @@ export type getBotMediaPreviewInfo = (
 ) => BotMediaPreviewInfo;
 
 /**
- * Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
+ * Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview
+ *
+ * - after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
  */
 export type addBotMediaPreview$Input = {
   readonly _: "addBotMediaPreview";
@@ -164923,7 +174906,9 @@ export type addBotMediaPreview$Input = {
 };
 
 /**
- * Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
+ * Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview
+ *
+ * - after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
  */
 export type addBotMediaPreview$DirectInput = {
   /**
@@ -164948,7 +174933,9 @@ export type addBotMediaPreview$DirectInput = {
 };
 
 /**
- * Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
+ * Adds a new media preview to the beginning of the list of media previews of a bot. Returns the added preview
+ *
+ * - after addition is completed server-side. The total number of previews must not exceed getOption("bot_media_preview_count_max") for the given language
  *
  * @param {addBotMediaPreview$Input} parameters {@link addBotMediaPreview$Input}
  * @returns {BotMediaPreview} {@link BotMediaPreview}
@@ -165144,7 +175131,7 @@ export type deleteBotMediaPreviews = (
 ) => Ok;
 
 /**
- * Checks whether a username can be set for a new bot. Use checkChatUsername to check username for other chat types
+ * Checks whether a username can be set for a new bot or assigned as a secondary username to an existing bot. Use checkChatUsername to check username for other chat types
  */
 export type checkBotUsername$Input = {
   readonly _: "checkBotUsername";
@@ -165154,10 +175141,16 @@ export type checkBotUsername$Input = {
    * @type {string} {@link string}
    */
   readonly username?: string;
+
+  /**
+   * Pass true to check whether the username is suitable as a secondary username for an existing bot; pass false to check whether the username is suitable for createBot
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_secondary?: Bool$Input;
 };
 
 /**
- * Checks whether a username can be set for a new bot. Use checkChatUsername to check username for other chat types
+ * Checks whether a username can be set for a new bot or assigned as a secondary username to an existing bot. Use checkChatUsername to check username for other chat types
  */
 export type checkBotUsername$DirectInput = {
   /**
@@ -165165,10 +175158,16 @@ export type checkBotUsername$DirectInput = {
    * @type {string} {@link string}
    */
   readonly username?: string;
+
+  /**
+   * Pass true to check whether the username is suitable as a secondary username for an existing bot; pass false to check whether the username is suitable for createBot
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_secondary?: Bool$Input;
 };
 
 /**
- * Checks whether a username can be set for a new bot. Use checkChatUsername to check username for other chat types
+ * Checks whether a username can be set for a new bot or assigned as a secondary username to an existing bot. Use checkChatUsername to check username for other chat types
  *
  * @param {checkBotUsername$Input} parameters {@link checkBotUsername$Input}
  * @returns {CheckChatUsernameResult} {@link CheckChatUsernameResult}
@@ -165198,7 +175197,11 @@ export type createBot$Input = {
   readonly name?: string;
 
   /**
-   * Username of the bot. The username must end with "bot". Use checkBotUsername to find whether the name is suitable
+   * Username of the bot. The username must end with "bot" or a string from updateAllowedBotUsernamePremiumSuffixes case-insensitive.
+   *
+   * - Use checkBotUsername to find whether the name is suitable. If the username doesn't end with "bot", then the current user must have Telegram Premium subscription,
+   *
+   * - the chosen username will be assigned as secondary and an additional regular username ending with "bot" will be automatically assigned to the created bot
    * @type {string} {@link string}
    */
   readonly username?: string;
@@ -165229,7 +175232,11 @@ export type createBot$DirectInput = {
   readonly name?: string;
 
   /**
-   * Username of the bot. The username must end with "bot". Use checkBotUsername to find whether the name is suitable
+   * Username of the bot. The username must end with "bot" or a string from updateAllowedBotUsernamePremiumSuffixes case-insensitive.
+   *
+   * - Use checkBotUsername to find whether the name is suitable. If the username doesn't end with "bot", then the current user must have Telegram Premium subscription,
+   *
+   * - the chosen username will be assigned as secondary and an additional regular username ending with "bot" will be automatically assigned to the created bot
    * @type {string} {@link string}
    */
   readonly username?: string;
@@ -165518,6 +175525,92 @@ export type setBotProfilePhoto$DirectInput = {
  * @returns {Ok} {@link Ok}
  */
 export type setBotProfilePhoto = (parameters: setBotProfilePhoto$Input) => Ok;
+
+/**
+ * Adds a secondary username to a bot. Can be called only if userTypeBot.can_be_edited, the bot has no secondary username and the current user has Telegram Premium subscription.
+ *
+ * - May return an error with a message "OWNER_USERNAMES_LIMIT_EXCEEDED" if the current user already owns at least getOption("secondary_bot_username_count_max") bots with a secondary username
+ */
+export type addBotSecondaryUsername$Input = {
+  readonly _: "addBotSecondaryUsername";
+
+  /**
+   * Identifier of the target bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * The new secondary username; must be non-empty. Use checkBotUsername to check username validness
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+};
+
+/**
+ * Adds a secondary username to a bot. Can be called only if userTypeBot.can_be_edited, the bot has no secondary username and the current user has Telegram Premium subscription.
+ *
+ * - May return an error with a message "OWNER_USERNAMES_LIMIT_EXCEEDED" if the current user already owns at least getOption("secondary_bot_username_count_max") bots with a secondary username
+ */
+export type addBotSecondaryUsername$DirectInput = {
+  /**
+   * Identifier of the target bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+
+  /**
+   * The new secondary username; must be non-empty. Use checkBotUsername to check username validness
+   * @type {string} {@link string}
+   */
+  readonly username?: string;
+};
+
+/**
+ * Adds a secondary username to a bot. Can be called only if userTypeBot.can_be_edited, the bot has no secondary username and the current user has Telegram Premium subscription.
+ *
+ * - May return an error with a message "OWNER_USERNAMES_LIMIT_EXCEEDED" if the current user already owns at least getOption("secondary_bot_username_count_max") bots with a secondary username
+ *
+ * @param {addBotSecondaryUsername$Input} parameters {@link addBotSecondaryUsername$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type addBotSecondaryUsername = (
+  parameters: addBotSecondaryUsername$Input
+) => Ok;
+
+/**
+ * Removes a secondary username from a bot. Can be called only if userTypeBot.can_be_edited == true and the bot has a secondary username
+ */
+export type deleteBotSecondaryUsername$Input = {
+  readonly _: "deleteBotSecondaryUsername";
+
+  /**
+   * Identifier of the target bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Removes a secondary username from a bot. Can be called only if userTypeBot.can_be_edited == true and the bot has a secondary username
+ */
+export type deleteBotSecondaryUsername$DirectInput = {
+  /**
+   * Identifier of the target bot
+   * @type {int53} {@link int53}
+   */
+  readonly bot_user_id?: int53;
+};
+
+/**
+ * Removes a secondary username from a bot. Can be called only if userTypeBot.can_be_edited == true and the bot has a secondary username
+ *
+ * @param {deleteBotSecondaryUsername$Input} parameters {@link deleteBotSecondaryUsername$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type deleteBotSecondaryUsername = (
+  parameters: deleteBotSecondaryUsername$Input
+) => Ok;
 
 /**
  * Changes active state for a username of a bot. The editable username can be disabled only if there are other active usernames.
@@ -165854,12 +175947,12 @@ export type setMessageSenderBotVerification$Input = {
   readonly verified_id?: MessageSender$Input;
 
   /**
-   * Custom description of verification reason; 0-getOption("bot_verification_custom_description_length_max").
+   * Custom description of verification reason; 0-getOption("bot_verification_custom_description_length_max") characters. Only TextUrl entities are supported.
    *
    * - If empty, then "was verified by organization "organization_name"" will be used as description. Can be specified only if the bot is allowed to provide custom description
-   * @type {string} {@link string}
+   * @type {formattedText$Input} {@link formattedText}
    */
-  readonly custom_description?: string;
+  readonly custom_description?: formattedText$Input;
 };
 
 /**
@@ -165879,12 +175972,12 @@ export type setMessageSenderBotVerification$DirectInput = {
   readonly verified_id?: MessageSender$Input;
 
   /**
-   * Custom description of verification reason; 0-getOption("bot_verification_custom_description_length_max").
+   * Custom description of verification reason; 0-getOption("bot_verification_custom_description_length_max") characters. Only TextUrl entities are supported.
    *
    * - If empty, then "was verified by organization "organization_name"" will be used as description. Can be specified only if the bot is allowed to provide custom description
-   * @type {string} {@link string}
+   * @type {formattedText$Input} {@link formattedText}
    */
-  readonly custom_description?: string;
+  readonly custom_description?: formattedText$Input;
 };
 
 /**
@@ -166174,19 +176267,19 @@ export type setInactiveSessionTtl$DirectInput = {
 export type setInactiveSessionTtl = (parameters: setInactiveSessionTtl$Input) => Ok;
 
 /**
- * Returns all website where the current user used Telegram to log in
+ * Returns all websites where the current user used Telegram to log in
  */
 export type getConnectedWebsites$Input = {
   readonly _: "getConnectedWebsites";
 };
 
 /**
- * Returns all website where the current user used Telegram to log in
+ * Returns all websites where the current user used Telegram to log in
  */
 export type getConnectedWebsites$DirectInput = {};
 
 /**
- * Returns all website where the current user used Telegram to log in
+ * Returns all websites where the current user used Telegram to log in
  *
  * @param {getConnectedWebsites$Input} parameters {@link getConnectedWebsites$Input}
  * @returns {ConnectedWebsites} {@link ConnectedWebsites}
@@ -166482,7 +176575,7 @@ export type setSupergroupStickerSet = (
 ) => Ok;
 
 /**
- * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
+ * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to set a custom emoji sticker set
  */
 export type setSupergroupCustomEmojiStickerSet$Input = {
   readonly _: "setSupergroupCustomEmojiStickerSet";
@@ -166501,7 +176594,7 @@ export type setSupergroupCustomEmojiStickerSet$Input = {
 };
 
 /**
- * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
+ * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to set a custom emoji sticker set
  */
 export type setSupergroupCustomEmojiStickerSet$DirectInput = {
   /**
@@ -166518,7 +176611,7 @@ export type setSupergroupCustomEmojiStickerSet$DirectInput = {
 };
 
 /**
- * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to pass the corresponding color
+ * Changes the custom emoji sticker set of a supergroup; requires can_change_info administrator right. The chat must have at least chatBoostFeatures.min_custom_emoji_sticker_set_boost_level boost level to set a custom emoji sticker set
  *
  * @param {setSupergroupCustomEmojiStickerSet$Input} parameters {@link setSupergroupCustomEmojiStickerSet$Input}
  * @returns {Ok} {@link Ok}
@@ -166844,7 +176937,9 @@ export type toggleSupergroupIsAllHistoryAvailable = (
 ) => Ok;
 
 /**
- * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+ * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel.
+ *
+ * - The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
  */
 export type toggleSupergroupCanHaveSponsoredMessages$Input = {
   readonly _: "toggleSupergroupCanHaveSponsoredMessages";
@@ -166863,7 +176958,9 @@ export type toggleSupergroupCanHaveSponsoredMessages$Input = {
 };
 
 /**
- * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+ * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel.
+ *
+ * - The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
  */
 export type toggleSupergroupCanHaveSponsoredMessages$DirectInput = {
   /**
@@ -166880,7 +176977,9 @@ export type toggleSupergroupCanHaveSponsoredMessages$DirectInput = {
 };
 
 /**
- * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel. The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
+ * Toggles whether sponsored messages are shown in the channel chat; requires owner privileges in the channel.
+ *
+ * - The chat must have at least chatBoostFeatures.min_sponsored_message_disable_boost_level boost level to disable sponsored messages
  *
  * @param {toggleSupergroupCanHaveSponsoredMessages$Input} parameters {@link toggleSupergroupCanHaveSponsoredMessages$Input}
  * @returns {Ok} {@link Ok}
@@ -167056,6 +177155,12 @@ export type toggleSupergroupIsForum$Input = {
    * @type {Bool$Input} {@link Bool}
    */
   readonly has_forum_tabs?: Bool$Input;
+
+  /**
+   * New value of has_forum_sidebar; ignored if is_forum is false. Must be false if has_forum_tabs is true
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly has_forum_sidebar?: Bool$Input;
 };
 
 /**
@@ -167079,6 +177184,12 @@ export type toggleSupergroupIsForum$DirectInput = {
    * @type {Bool$Input} {@link Bool}
    */
   readonly has_forum_tabs?: Bool$Input;
+
+  /**
+   * New value of has_forum_sidebar; ignored if is_forum is false. Must be false if has_forum_tabs is true
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly has_forum_sidebar?: Bool$Input;
 };
 
 /**
@@ -167318,7 +177429,9 @@ export type closeSecretChat$DirectInput = {
 export type closeSecretChat = (parameters: closeSecretChat$Input) => Ok;
 
 /**
- * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only in supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing event_id)
+ * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only in supergroups and channels.
+ *
+ * - Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing chatEvent.id)
  */
 export type getChatEventLog$Input = {
   readonly _: "getChatEventLog";
@@ -167361,7 +177474,9 @@ export type getChatEventLog$Input = {
 };
 
 /**
- * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only in supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing event_id)
+ * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only in supergroups and channels.
+ *
+ * - Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing chatEvent.id)
  */
 export type getChatEventLog$DirectInput = {
   /**
@@ -167402,7 +177517,9 @@ export type getChatEventLog$DirectInput = {
 };
 
 /**
- * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only in supergroups and channels. Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing event_id)
+ * Returns a list of service actions taken by chat members and administrators in the last 48 hours. Available only in supergroups and channels.
+ *
+ * - Requires administrator rights. Returns results in reverse chronological order (i.e., in order of decreasing chatEvent.id)
  *
  * @param {getChatEventLog$Input} parameters {@link getChatEventLog$Input}
  * @returns {ChatEvents} {@link ChatEvents}
@@ -168208,6 +178325,50 @@ export type sellGift$DirectInput = {
 export type sellGift = (parameters: sellGift$Input) => Ok;
 
 /**
+ * Deletes a gift without receiving Telegram Stars for it. Use receivedGift.can_be_deleted or messageGift.can_be_deleted to check whether the gift can be deleted
+ */
+export type deleteGift$Input = {
+  readonly _: "deleteGift";
+
+  /**
+   * Unique identifier of business connection on behalf of which to send the request; for bots only
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
+  /**
+   * Identifier of the gift
+   * @type {string} {@link string}
+   */
+  readonly received_gift_id?: string;
+};
+
+/**
+ * Deletes a gift without receiving Telegram Stars for it. Use receivedGift.can_be_deleted or messageGift.can_be_deleted to check whether the gift can be deleted
+ */
+export type deleteGift$DirectInput = {
+  /**
+   * Unique identifier of business connection on behalf of which to send the request; for bots only
+   * @type {string} {@link string}
+   */
+  readonly business_connection_id?: string;
+
+  /**
+   * Identifier of the gift
+   * @type {string} {@link string}
+   */
+  readonly received_gift_id?: string;
+};
+
+/**
+ * Deletes a gift without receiving Telegram Stars for it. Use receivedGift.can_be_deleted or messageGift.can_be_deleted to check whether the gift can be deleted
+ *
+ * @param {deleteGift$Input} parameters {@link deleteGift$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type deleteGift = (parameters: deleteGift$Input) => Ok;
+
+/**
  * Toggles whether a gift is shown on the current user's or the channel's profile page; requires can_post_messages administrator right in the channel chat
  */
 export type toggleGiftIsSaved$Input = {
@@ -168566,7 +178727,9 @@ export type craftGift$Input = {
   /**
    * Identifier of the gifts to use for crafting. In the case of a successful craft, the resulting gift will have the number of the first gift.
    *
-   * - Consequently, the first gift must not have been withdrawn to the TON blockchain as an NFT and must have an empty gift_address
+   * - Consequently, unless getOption("can_craft_from_withdrawn_first_gift") is true, the first gift must not have been withdrawn to the TON blockchain as an NFT
+   *
+   * - and must have an empty gift_address
    * @type {vector$Input<string>} {@link vector<string>}
    */
   readonly received_gift_ids?: vector$Input<string>;
@@ -168579,7 +178742,9 @@ export type craftGift$DirectInput = {
   /**
    * Identifier of the gifts to use for crafting. In the case of a successful craft, the resulting gift will have the number of the first gift.
    *
-   * - Consequently, the first gift must not have been withdrawn to the TON blockchain as an NFT and must have an empty gift_address
+   * - Consequently, unless getOption("can_craft_from_withdrawn_first_gift") is true, the first gift must not have been withdrawn to the TON blockchain as an NFT
+   *
+   * - and must have an empty gift_address
    * @type {vector$Input<string>} {@link vector<string>}
    */
   readonly received_gift_ids?: vector$Input<string>;
@@ -169144,7 +179309,7 @@ export type getReceivedGift$DirectInput = {
 export type getReceivedGift = (parameters: getReceivedGift$Input) => ReceivedGift;
 
 /**
- * Returns upgraded gifts of the current user who can be used to craft another gifts
+ * Returns upgraded gifts of the current user, which can be used to craft other gifts
  */
 export type getGiftsForCrafting$Input = {
   readonly _: "getGiftsForCrafting";
@@ -169169,7 +179334,7 @@ export type getGiftsForCrafting$Input = {
 };
 
 /**
- * Returns upgraded gifts of the current user who can be used to craft another gifts
+ * Returns upgraded gifts of the current user, which can be used to craft other gifts
  */
 export type getGiftsForCrafting$DirectInput = {
   /**
@@ -169192,7 +179357,7 @@ export type getGiftsForCrafting$DirectInput = {
 };
 
 /**
- * Returns upgraded gifts of the current user who can be used to craft another gifts
+ * Returns upgraded gifts of the current user, which can be used to craft other gifts
  *
  * @param {getGiftsForCrafting$Input} parameters {@link getGiftsForCrafting$Input}
  * @returns {GiftsForCrafting} {@link GiftsForCrafting}
@@ -169268,7 +179433,9 @@ export type getUpgradedGiftValueInfo = (
 ) => UpgradedGiftValueInfo;
 
 /**
- * Returns a URL for upgraded gift withdrawal in the TON blockchain as an NFT; requires owner privileges for gifts owned by a chat
+ * Returns a URL for upgraded gift withdrawal in the TON blockchain as an NFT; requires owner privileges for gifts owned by a chat.
+ *
+ * - The user must have a valid temporary password; see createTemporaryPassword
  */
 export type getUpgradedGiftWithdrawalUrl$Input = {
   readonly _: "getUpgradedGiftWithdrawalUrl";
@@ -169278,16 +179445,12 @@ export type getUpgradedGiftWithdrawalUrl$Input = {
    * @type {string} {@link string}
    */
   readonly received_gift_id?: string;
-
-  /**
-   * The 2-step verification password of the current user
-   * @type {string} {@link string}
-   */
-  readonly password?: string;
 };
 
 /**
- * Returns a URL for upgraded gift withdrawal in the TON blockchain as an NFT; requires owner privileges for gifts owned by a chat
+ * Returns a URL for upgraded gift withdrawal in the TON blockchain as an NFT; requires owner privileges for gifts owned by a chat.
+ *
+ * - The user must have a valid temporary password; see createTemporaryPassword
  */
 export type getUpgradedGiftWithdrawalUrl$DirectInput = {
   /**
@@ -169295,16 +179458,12 @@ export type getUpgradedGiftWithdrawalUrl$DirectInput = {
    * @type {string} {@link string}
    */
   readonly received_gift_id?: string;
-
-  /**
-   * The 2-step verification password of the current user
-   * @type {string} {@link string}
-   */
-  readonly password?: string;
 };
 
 /**
- * Returns a URL for upgraded gift withdrawal in the TON blockchain as an NFT; requires owner privileges for gifts owned by a chat
+ * Returns a URL for upgraded gift withdrawal in the TON blockchain as an NFT; requires owner privileges for gifts owned by a chat.
+ *
+ * - The user must have a valid temporary password; see createTemporaryPassword
  *
  * @param {getUpgradedGiftWithdrawalUrl$Input} parameters {@link getUpgradedGiftWithdrawalUrl$Input}
  * @returns {HttpUrl} {@link HttpUrl}
@@ -169312,6 +179471,170 @@ export type getUpgradedGiftWithdrawalUrl$DirectInput = {
 export type getUpgradedGiftWithdrawalUrl = (
   parameters: getUpgradedGiftWithdrawalUrl$Input
 ) => HttpUrl;
+
+/**
+ * Withdraws an upgraded gift to the TON blockchain as an NFT directly to the TON wallet of the current user, which is created automatically if the user has no wallet yet;
+ *
+ * - requires owner privileges for gifts owned by a chat. The user must have a valid temporary password; see createTemporaryPassword.
+ *
+ * - The gift will be received by the wallet in a few seconds after the request succeeds
+ */
+export type withdrawUpgradedGift$Input = {
+  readonly _: "withdrawUpgradedGift";
+
+  /**
+   * Identifier of the gift
+   * @type {string} {@link string}
+   */
+  readonly received_gift_id?: string;
+
+  /**
+   * Pass true to keep the gift displayed on the user's or the chat's profile page after withdrawal
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly keep_on_profile?: Bool$Input;
+};
+
+/**
+ * Withdraws an upgraded gift to the TON blockchain as an NFT directly to the TON wallet of the current user, which is created automatically if the user has no wallet yet;
+ *
+ * - requires owner privileges for gifts owned by a chat. The user must have a valid temporary password; see createTemporaryPassword.
+ *
+ * - The gift will be received by the wallet in a few seconds after the request succeeds
+ */
+export type withdrawUpgradedGift$DirectInput = {
+  /**
+   * Identifier of the gift
+   * @type {string} {@link string}
+   */
+  readonly received_gift_id?: string;
+
+  /**
+   * Pass true to keep the gift displayed on the user's or the chat's profile page after withdrawal
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly keep_on_profile?: Bool$Input;
+};
+
+/**
+ * Withdraws an upgraded gift to the TON blockchain as an NFT directly to the TON wallet of the current user, which is created automatically if the user has no wallet yet;
+ *
+ * - requires owner privileges for gifts owned by a chat. The user must have a valid temporary password; see createTemporaryPassword.
+ *
+ * - The gift will be received by the wallet in a few seconds after the request succeeds
+ *
+ * @param {withdrawUpgradedGift$Input} parameters {@link withdrawUpgradedGift$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type withdrawUpgradedGift = (parameters: withdrawUpgradedGift$Input) => Ok;
+
+/**
+ * Returns information needed to deposit an upgraded gift from the TON wallet of the current user to a Telegram account. Use sendTonWalletTransfer to complete transfer of the gift.
+ *
+ * - The gift will be received by the new owner with a message about the gift after the transfer is confirmed in the blockchain
+ */
+export type getUpgradedGiftDepositInfo$Input = {
+  readonly _: "getUpgradedGiftDepositInfo";
+
+  /**
+   * Identifier of the user or the channel chat that will receive the gift
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input;
+
+  /**
+   * Unique name of the upgraded gift
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * Pass true to hide the sender of the gift in the message received by the new owner
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly hide_sender?: Bool$Input;
+};
+
+/**
+ * Returns information needed to deposit an upgraded gift from the TON wallet of the current user to a Telegram account. Use sendTonWalletTransfer to complete transfer of the gift.
+ *
+ * - The gift will be received by the new owner with a message about the gift after the transfer is confirmed in the blockchain
+ */
+export type getUpgradedGiftDepositInfo$DirectInput = {
+  /**
+   * Identifier of the user or the channel chat that will receive the gift
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input;
+
+  /**
+   * Unique name of the upgraded gift
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+
+  /**
+   * Pass true to hide the sender of the gift in the message received by the new owner
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly hide_sender?: Bool$Input;
+};
+
+/**
+ * Returns information needed to deposit an upgraded gift from the TON wallet of the current user to a Telegram account. Use sendTonWalletTransfer to complete transfer of the gift.
+ *
+ * - The gift will be received by the new owner with a message about the gift after the transfer is confirmed in the blockchain
+ *
+ * @param {getUpgradedGiftDepositInfo$Input} parameters {@link getUpgradedGiftDepositInfo$Input}
+ * @returns {UpgradedGiftDepositInfo} {@link UpgradedGiftDepositInfo}
+ */
+export type getUpgradedGiftDepositInfo = (
+  parameters: getUpgradedGiftDepositInfo$Input
+) => UpgradedGiftDepositInfo;
+
+/**
+ * Shows an upgraded gift from the TON wallet of the current user on a profile page or hides it from all profile pages; the gift remains in the wallet
+ */
+export type displayUpgradedGift$Input = {
+  readonly _: "displayUpgradedGift";
+
+  /**
+   * Identifier of the current user or a channel chat owned by the current user on whose profile page the gift will be shown; pass null to hide the gift from all profile pages
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input | null;
+
+  /**
+   * Unique name of the upgraded gift
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+};
+
+/**
+ * Shows an upgraded gift from the TON wallet of the current user on a profile page or hides it from all profile pages; the gift remains in the wallet
+ */
+export type displayUpgradedGift$DirectInput = {
+  /**
+   * Identifier of the current user or a channel chat owned by the current user on whose profile page the gift will be shown; pass null to hide the gift from all profile pages
+   * @type {MessageSender$Input} {@link MessageSender}
+   */
+  readonly owner_id?: MessageSender$Input | null;
+
+  /**
+   * Unique name of the upgraded gift
+   * @type {string} {@link string}
+   */
+  readonly name?: string;
+};
+
+/**
+ * Shows an upgraded gift from the TON wallet of the current user on a profile page or hides it from all profile pages; the gift remains in the wallet
+ *
+ * @param {displayUpgradedGift$Input} parameters {@link displayUpgradedGift$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type displayUpgradedGift = (parameters: displayUpgradedGift$Input) => Ok;
 
 /**
  * Returns promotional animation for upgraded gifts
@@ -169764,7 +180087,7 @@ export type addGiftCollectionGifts$Input = {
   /**
    * Identifier of the gifts to add to the collection; 1-getOption("gift_collection_size_max") identifiers.
    *
-   * - If after addition the collection has more than getOption("gift_collection_size_max") gifts, then the last one are removed from the collection
+   * - If after addition the collection has more than getOption("gift_collection_size_max") gifts, then the last ones are removed from the collection
    * @type {vector$Input<string>} {@link vector<string>}
    */
   readonly received_gift_ids?: vector$Input<string>;
@@ -169789,7 +180112,7 @@ export type addGiftCollectionGifts$DirectInput = {
   /**
    * Identifier of the gifts to add to the collection; 1-getOption("gift_collection_size_max") identifiers.
    *
-   * - If after addition the collection has more than getOption("gift_collection_size_max") gifts, then the last one are removed from the collection
+   * - If after addition the collection has more than getOption("gift_collection_size_max") gifts, then the last ones are removed from the collection
    * @type {vector$Input<string>} {@link vector<string>}
    */
   readonly received_gift_ids?: vector$Input<string>;
@@ -170288,6 +180611,78 @@ export type resetInstalledBackgrounds = (
 ) => Ok;
 
 /**
+ * Returns the list of backdrops, which can be used as a background of a theme of the screen for sharing a link to a user or a chat
+ */
+export type getProfileShareThemeBackdrops$Input = {
+  readonly _: "getProfileShareThemeBackdrops";
+};
+
+/**
+ * Returns the list of backdrops, which can be used as a background of a theme of the screen for sharing a link to a user or a chat
+ */
+export type getProfileShareThemeBackdrops$DirectInput = {};
+
+/**
+ * Returns the list of backdrops, which can be used as a background of a theme of the screen for sharing a link to a user or a chat
+ *
+ * @param {getProfileShareThemeBackdrops$Input} parameters {@link getProfileShareThemeBackdrops$Input}
+ * @returns {ProfileShareThemeBackdrops} {@link ProfileShareThemeBackdrops}
+ */
+export type getProfileShareThemeBackdrops = (
+  parameters: getProfileShareThemeBackdrops$Input
+) => ProfileShareThemeBackdrops;
+
+/**
+ * Changes the theme of the screen for sharing a link to the current user or a chat. The chat must have a username.
+ *
+ * - Requires can_change_info administrator right in supergroups and channels
+ */
+export type setProfileShareTheme$Input = {
+  readonly _: "setProfileShareTheme";
+
+  /**
+   * Identifier of the chat with the current user, or identifier of a supergroup or a channel chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The new theme; pass null to use the default theme
+   * @type {InputProfileShareTheme$Input} {@link InputProfileShareTheme}
+   */
+  readonly theme?: InputProfileShareTheme$Input | null;
+};
+
+/**
+ * Changes the theme of the screen for sharing a link to the current user or a chat. The chat must have a username.
+ *
+ * - Requires can_change_info administrator right in supergroups and channels
+ */
+export type setProfileShareTheme$DirectInput = {
+  /**
+   * Identifier of the chat with the current user, or identifier of a supergroup or a channel chat
+   * @type {int53} {@link int53}
+   */
+  readonly chat_id?: int53;
+
+  /**
+   * The new theme; pass null to use the default theme
+   * @type {InputProfileShareTheme$Input} {@link InputProfileShareTheme}
+   */
+  readonly theme?: InputProfileShareTheme$Input | null;
+};
+
+/**
+ * Changes the theme of the screen for sharing a link to the current user or a chat. The chat must have a username.
+ *
+ * - Requires can_change_info administrator right in supergroups and channels
+ *
+ * @param {setProfileShareTheme$Input} parameters {@link setProfileShareTheme$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type setProfileShareTheme = (parameters: setProfileShareTheme$Input) => Ok;
+
+/**
  * Returns information about the current localization target. This is an offline method if only_local is true. Can be called before authorization
  */
 export type getLocalizationTargetInfo$Input = {
@@ -170554,7 +180949,7 @@ export type editCustomLanguagePackInfo = (
 ) => Ok;
 
 /**
- * Adds, edits or deletes a string in a custom local language pack. Can be called before authorization
+ * Adds, edits, or deletes a string in a custom local language pack. Can be called before authorization
  */
 export type setCustomLanguagePackString$Input = {
   readonly _: "setCustomLanguagePackString";
@@ -170573,7 +180968,7 @@ export type setCustomLanguagePackString$Input = {
 };
 
 /**
- * Adds, edits or deletes a string in a custom local language pack. Can be called before authorization
+ * Adds, edits, or deletes a string in a custom local language pack. Can be called before authorization
  */
 export type setCustomLanguagePackString$DirectInput = {
   /**
@@ -170590,7 +180985,7 @@ export type setCustomLanguagePackString$DirectInput = {
 };
 
 /**
- * Adds, edits or deletes a string in a custom local language pack. Can be called before authorization
+ * Adds, edits, or deletes a string in a custom local language pack. Can be called before authorization
  *
  * @param {setCustomLanguagePackString$Input} parameters {@link setCustomLanguagePackString$Input}
  * @returns {Ok} {@link Ok}
@@ -171418,7 +181813,7 @@ export type removeChatActionBar$DirectInput = {
 export type removeChatActionBar = (parameters: removeChatActionBar$Input) => Ok;
 
 /**
- * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
+ * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, if chat.can_be_reported, or if messageProperties.can_report_chat
  */
 export type reportChat$Input = {
   readonly _: "reportChat";
@@ -171436,7 +181831,7 @@ export type reportChat$Input = {
   readonly option_id?: bytes$Input;
 
   /**
-   * Identifiers of reported messages. Use messageProperties.can_report_chat to check whether the message can be reported
+   * Identifiers of reported messages. Use messageProperties.can_report_chat to check whether the message can be reported. Ephemeral messages must be reported separately
    * @type {vector$Input<int53>} {@link vector<int53>}
    */
   readonly message_ids?: vector$Input<int53>;
@@ -171449,7 +181844,7 @@ export type reportChat$Input = {
 };
 
 /**
- * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
+ * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, if chat.can_be_reported, or if messageProperties.can_report_chat
  */
 export type reportChat$DirectInput = {
   /**
@@ -171465,7 +181860,7 @@ export type reportChat$DirectInput = {
   readonly option_id?: bytes$Input;
 
   /**
-   * Identifiers of reported messages. Use messageProperties.can_report_chat to check whether the message can be reported
+   * Identifiers of reported messages. Use messageProperties.can_report_chat to check whether the message can be reported. Ephemeral messages must be reported separately
    * @type {vector$Input<int53>} {@link vector<int53>}
    */
   readonly message_ids?: vector$Input<int53>;
@@ -171478,7 +181873,7 @@ export type reportChat$DirectInput = {
 };
 
 /**
- * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if chat.can_be_reported
+ * Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, if chat.can_be_reported, or if messageProperties.can_report_chat
  *
  * @param {reportChat$Input} parameters {@link reportChat$Input}
  * @returns {ReportChatResult} {@link ReportChatResult}
@@ -171780,7 +182175,7 @@ export type getChatRevenueTransactions = (
 ) => ChatRevenueTransactions;
 
 /**
- * Returns the list of TON blockchain transactions of the current user
+ * Returns the list of TON Gram transactions of the current user
  */
 export type getTonTransactions$Input = {
   readonly _: "getTonTransactions";
@@ -171805,7 +182200,7 @@ export type getTonTransactions$Input = {
 };
 
 /**
- * Returns the list of TON blockchain transactions of the current user
+ * Returns the list of TON Gram transactions of the current user
  */
 export type getTonTransactions$DirectInput = {
   /**
@@ -171828,7 +182223,7 @@ export type getTonTransactions$DirectInput = {
 };
 
 /**
- * Returns the list of TON blockchain transactions of the current user
+ * Returns the list of TON Gram transactions of the current user
  *
  * @param {getTonTransactions$Input} parameters {@link getTonTransactions$Input}
  * @returns {TonTransactions} {@link TonTransactions}
@@ -171836,6 +182231,1840 @@ export type getTonTransactions$DirectInput = {
 export type getTonTransactions = (
   parameters: getTonTransactions$Input
 ) => TonTransactions;
+
+/**
+ * Returns the list of TON wallet transactions of the current user; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonWalletTransactions$Input = {
+  readonly _: "getTonWalletTransactions";
+
+  /**
+   * Direction of the transactions to receive; pass null to get all transactions
+   * @type {TransactionDirection$Input} {@link TransactionDirection}
+   */
+  readonly direction?: TransactionDirection$Input | null;
+
+  /**
+   * Offset of the first transaction to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of transactions to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns the list of TON wallet transactions of the current user; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonWalletTransactions$DirectInput = {
+  /**
+   * Direction of the transactions to receive; pass null to get all transactions
+   * @type {TransactionDirection$Input} {@link TransactionDirection}
+   */
+  readonly direction?: TransactionDirection$Input | null;
+
+  /**
+   * Offset of the first transaction to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of transactions to return
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns the list of TON wallet transactions of the current user; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {getTonWalletTransactions$Input} parameters {@link getTonWalletTransactions$Input}
+ * @returns {TonWalletTransactions} {@link TonWalletTransactions}
+ */
+export type getTonWalletTransactions = (
+  parameters: getTonWalletTransactions$Input
+) => TonWalletTransactions;
+
+/**
+ * Returns a TON wallet transaction by its identifier
+ */
+export type getTonWalletTransaction$Input = {
+  readonly _: "getTonWalletTransaction";
+
+  /**
+   * Identifier of the transaction
+   * @type {string} {@link string}
+   */
+  readonly transaction_id?: string;
+};
+
+/**
+ * Returns a TON wallet transaction by its identifier
+ */
+export type getTonWalletTransaction$DirectInput = {
+  /**
+   * Identifier of the transaction
+   * @type {string} {@link string}
+   */
+  readonly transaction_id?: string;
+};
+
+/**
+ * Returns a TON wallet transaction by its identifier
+ *
+ * @param {getTonWalletTransaction$Input} parameters {@link getTonWalletTransaction$Input}
+ * @returns {TonWalletTransaction} {@link TonWalletTransaction}
+ */
+export type getTonWalletTransaction = (
+  parameters: getTonWalletTransaction$Input
+) => TonWalletTransaction;
+
+/**
+ * Returns a TON wallet transaction by its msg_hash; returns an error if the transaction isn't finalized yet
+ */
+export type getTonWalletTransactionByMsgHash$Input = {
+  readonly _: "getTonWalletTransactionByMsgHash";
+
+  /**
+   * Value of msg_hash of the transaction
+   * @type {string} {@link string}
+   */
+  readonly msg_hash?: string;
+};
+
+/**
+ * Returns a TON wallet transaction by its msg_hash; returns an error if the transaction isn't finalized yet
+ */
+export type getTonWalletTransactionByMsgHash$DirectInput = {
+  /**
+   * Value of msg_hash of the transaction
+   * @type {string} {@link string}
+   */
+  readonly msg_hash?: string;
+};
+
+/**
+ * Returns a TON wallet transaction by its msg_hash; returns an error if the transaction isn't finalized yet
+ *
+ * @param {getTonWalletTransactionByMsgHash$Input} parameters {@link getTonWalletTransactionByMsgHash$Input}
+ * @returns {TonWalletTransaction} {@link TonWalletTransaction}
+ */
+export type getTonWalletTransactionByMsgHash = (
+  parameters: getTonWalletTransactionByMsgHash$Input
+) => TonWalletTransaction;
+
+/**
+ * Loads state of the TON wallet of the current user; can be used only if getOption("can_use_ton_wallet")
+ */
+export type loadTonWalletState$Input = {
+  readonly _: "loadTonWalletState";
+};
+
+/**
+ * Loads state of the TON wallet of the current user; can be used only if getOption("can_use_ton_wallet")
+ */
+export type loadTonWalletState$DirectInput = {};
+
+/**
+ * Loads state of the TON wallet of the current user; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {loadTonWalletState$Input} parameters {@link loadTonWalletState$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type loadTonWalletState = (parameters: loadTonWalletState$Input) => Ok;
+
+/**
+ * Loads or reloads the current state of gasless transfers for the current user; can be used only if getOption("can_use_ton_wallet")
+ */
+export type loadTonWalletGaslessTransfersInfo$Input = {
+  readonly _: "loadTonWalletGaslessTransfersInfo";
+};
+
+/**
+ * Loads or reloads the current state of gasless transfers for the current user; can be used only if getOption("can_use_ton_wallet")
+ */
+export type loadTonWalletGaslessTransfersInfo$DirectInput = {};
+
+/**
+ * Loads or reloads the current state of gasless transfers for the current user; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {loadTonWalletGaslessTransfersInfo$Input} parameters {@link loadTonWalletGaslessTransfersInfo$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type loadTonWalletGaslessTransfersInfo = (
+  parameters: loadTonWalletGaslessTransfersInfo$Input
+) => Ok;
+
+/**
+ * Returns information about balance of the current user in the bot https://t.me/walt; can be used only if getOption("can_use_ton_wallet")
+ */
+export type checkWalletBotBalance$Input = {
+  readonly _: "checkWalletBotBalance";
+};
+
+/**
+ * Returns information about balance of the current user in the bot https://t.me/walt; can be used only if getOption("can_use_ton_wallet")
+ */
+export type checkWalletBotBalance$DirectInput = {};
+
+/**
+ * Returns information about balance of the current user in the bot https://t.me/walt; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {checkWalletBotBalance$Input} parameters {@link checkWalletBotBalance$Input}
+ * @returns {WalletBotBalance} {@link WalletBotBalance}
+ */
+export type checkWalletBotBalance = (
+  parameters: checkWalletBotBalance$Input
+) => WalletBotBalance;
+
+/**
+ * Returns TON wallet addresses of the specified users; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getUserTonWalletAddresses$Input = {
+  readonly _: "getUserTonWalletAddresses";
+
+  /**
+   * Identifiers of the users whose wallet addresses have to be returned. If a user has no TON wallet, it will be skipped in the result
+   * @type {vector$Input<int53>} {@link vector<int53>}
+   */
+  readonly user_ids?: vector$Input<int53>;
+};
+
+/**
+ * Returns TON wallet addresses of the specified users; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getUserTonWalletAddresses$DirectInput = {
+  /**
+   * Identifiers of the users whose wallet addresses have to be returned. If a user has no TON wallet, it will be skipped in the result
+   * @type {vector$Input<int53>} {@link vector<int53>}
+   */
+  readonly user_ids?: vector$Input<int53>;
+};
+
+/**
+ * Returns TON wallet addresses of the specified users; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {getUserTonWalletAddresses$Input} parameters {@link getUserTonWalletAddresses$Input}
+ * @returns {UserTonWalletAddresses} {@link UserTonWalletAddresses}
+ */
+export type getUserTonWalletAddresses = (
+  parameters: getUserTonWalletAddresses$Input
+) => UserTonWalletAddresses;
+
+/**
+ * Creates a TON wallet for the specified regular user; can be used only if getOption("can_use_ton_wallet"). The current user must have positive TON wallet balance
+ */
+export type createUserTonWallet$Input = {
+  readonly _: "createUserTonWallet";
+
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+};
+
+/**
+ * Creates a TON wallet for the specified regular user; can be used only if getOption("can_use_ton_wallet"). The current user must have positive TON wallet balance
+ */
+export type createUserTonWallet$DirectInput = {
+  /**
+   * Identifier of the user
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+};
+
+/**
+ * Creates a TON wallet for the specified regular user; can be used only if getOption("can_use_ton_wallet"). The current user must have positive TON wallet balance
+ *
+ * @param {createUserTonWallet$Input} parameters {@link createUserTonWallet$Input}
+ * @returns {UserTonWalletAddress} {@link UserTonWalletAddress}
+ */
+export type createUserTonWallet = (
+  parameters: createUserTonWallet$Input
+) => UserTonWalletAddress;
+
+/**
+ * Returns information about a TON wallet with the given address; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getAddressTonWallet$Input = {
+  readonly _: "getAddressTonWallet";
+
+  /**
+   * Address in the TON blockchain
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+};
+
+/**
+ * Returns information about a TON wallet with the given address; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getAddressTonWallet$DirectInput = {
+  /**
+   * Address in the TON blockchain
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+};
+
+/**
+ * Returns information about a TON wallet with the given address; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {getAddressTonWallet$Input} parameters {@link getAddressTonWallet$Input}
+ * @returns {UserTonWalletAddress} {@link UserTonWalletAddress}
+ */
+export type getAddressTonWallet = (
+  parameters: getAddressTonWallet$Input
+) => UserTonWalletAddress;
+
+/**
+ * Returns the secret phrase of the user's TON wallet. Works only if tonWalletState.can_export_phrase is true
+ */
+export type getTonWalletSecretPhrase$Input = {
+  readonly _: "getTonWalletSecretPhrase";
+
+  /**
+   * Password of the current user; pass an empty string unless receive an error with a message "PASSWORD_MISSING" for a passwordless request
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+};
+
+/**
+ * Returns the secret phrase of the user's TON wallet. Works only if tonWalletState.can_export_phrase is true
+ */
+export type getTonWalletSecretPhrase$DirectInput = {
+  /**
+   * Password of the current user; pass an empty string unless receive an error with a message "PASSWORD_MISSING" for a passwordless request
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+};
+
+/**
+ * Returns the secret phrase of the user's TON wallet. Works only if tonWalletState.can_export_phrase is true
+ *
+ * @param {getTonWalletSecretPhrase$Input} parameters {@link getTonWalletSecretPhrase$Input}
+ * @returns {TonWalletSecretPhrase} {@link TonWalletSecretPhrase}
+ */
+export type getTonWalletSecretPhrase = (
+  parameters: getTonWalletSecretPhrase$Input
+) => TonWalletSecretPhrase;
+
+/**
+ * Returns a challenge which may be used to prove ownership of a TON wallet; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonWalletOwnershipProofChallenge$Input = {
+  readonly _: "getTonWalletOwnershipProofChallenge";
+};
+
+/**
+ * Returns a challenge which may be used to prove ownership of a TON wallet; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonWalletOwnershipProofChallenge$DirectInput = {};
+
+/**
+ * Returns a challenge which may be used to prove ownership of a TON wallet; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {getTonWalletOwnershipProofChallenge$Input} parameters {@link getTonWalletOwnershipProofChallenge$Input}
+ * @returns {TonWalletOwnershipProofChallenge} {@link TonWalletOwnershipProofChallenge}
+ */
+export type getTonWalletOwnershipProofChallenge = (
+  parameters: getTonWalletOwnershipProofChallenge$Input
+) => TonWalletOwnershipProofChallenge;
+
+/**
+ * Enables backup of the TON wallet of the user. Works only if tonWalletState.can_enable_backup is true
+ */
+export type enableTonWalletBackup$Input = {
+  readonly _: "enableTonWalletBackup";
+
+  /**
+   * The secret phrase of the user's TON wallet as a space separated list of words
+   * @type {string} {@link string}
+   */
+  readonly secret_phrase?: string;
+
+  /**
+   * Proof of the TON wallet ownership; use getTonWalletOwnershipProofChallenge to get a challenge for the proof
+   * @type {tonWalletOwnershipProof$Input} {@link tonWalletOwnershipProof}
+   */
+  readonly proof?: tonWalletOwnershipProof$Input;
+};
+
+/**
+ * Enables backup of the TON wallet of the user. Works only if tonWalletState.can_enable_backup is true
+ */
+export type enableTonWalletBackup$DirectInput = {
+  /**
+   * The secret phrase of the user's TON wallet as a space separated list of words
+   * @type {string} {@link string}
+   */
+  readonly secret_phrase?: string;
+
+  /**
+   * Proof of the TON wallet ownership; use getTonWalletOwnershipProofChallenge to get a challenge for the proof
+   * @type {tonWalletOwnershipProof$Input} {@link tonWalletOwnershipProof}
+   */
+  readonly proof?: tonWalletOwnershipProof$Input;
+};
+
+/**
+ * Enables backup of the TON wallet of the user. Works only if tonWalletState.can_enable_backup is true
+ *
+ * @param {enableTonWalletBackup$Input} parameters {@link enableTonWalletBackup$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type enableTonWalletBackup = (parameters: enableTonWalletBackup$Input) => Ok;
+
+/**
+ * Disables backup of the TON wallet of the user. Works only if tonWalletState.is_backup_enabled is true
+ */
+export type disableTonWalletBackup$Input = {
+  readonly _: "disableTonWalletBackup";
+
+  /**
+   * Password of the current user; pass an empty string unless receive an error with a message "PASSWORD_MISSING" for a passwordless request
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+};
+
+/**
+ * Disables backup of the TON wallet of the user. Works only if tonWalletState.is_backup_enabled is true
+ */
+export type disableTonWalletBackup$DirectInput = {
+  /**
+   * Password of the current user; pass an empty string unless receive an error with a message "PASSWORD_MISSING" for a passwordless request
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+};
+
+/**
+ * Disables backup of the TON wallet of the user. Works only if tonWalletState.is_backup_enabled is true
+ *
+ * @param {disableTonWalletBackup$Input} parameters {@link disableTonWalletBackup$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type disableTonWalletBackup = (
+  parameters: disableTonWalletBackup$Input
+) => Ok;
+
+/**
+ * Disables backup of the TON wallet of the user using proof of wallet ownership instead of the password. Works only if tonWalletState.is_backup_enabled is true
+ */
+export type disableTonWalletBackupWithProof$Input = {
+  readonly _: "disableTonWalletBackupWithProof";
+
+  /**
+   * Proof of the TON wallet ownership; use getTonWalletOwnershipProofChallenge to get a challenge for the proof
+   * @type {tonWalletOwnershipProof$Input} {@link tonWalletOwnershipProof}
+   */
+  readonly proof?: tonWalletOwnershipProof$Input;
+};
+
+/**
+ * Disables backup of the TON wallet of the user using proof of wallet ownership instead of the password. Works only if tonWalletState.is_backup_enabled is true
+ */
+export type disableTonWalletBackupWithProof$DirectInput = {
+  /**
+   * Proof of the TON wallet ownership; use getTonWalletOwnershipProofChallenge to get a challenge for the proof
+   * @type {tonWalletOwnershipProof$Input} {@link tonWalletOwnershipProof}
+   */
+  readonly proof?: tonWalletOwnershipProof$Input;
+};
+
+/**
+ * Disables backup of the TON wallet of the user using proof of wallet ownership instead of the password. Works only if tonWalletState.is_backup_enabled is true
+ *
+ * @param {disableTonWalletBackupWithProof$Input} parameters {@link disableTonWalletBackupWithProof$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type disableTonWalletBackupWithProof = (
+  parameters: disableTonWalletBackupWithProof$Input
+) => Ok;
+
+/**
+ * Sends a cryptocurrency from the user's TON wallet; can be used only if getOption("can_use_ton_wallet")
+ */
+export type sendTonWalletTransfer$Input = {
+  readonly _: "sendTonWalletTransfer";
+
+  /**
+   * Identifier of the user who will receive the transfer; pass 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Address in the TON blockchain of the transaction peer
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+
+  /**
+   * The amount of the sent cryptocurrency, in the smallest units of the cryptocurrency
+   * @type {int64$Input} {@link int64}
+   */
+  readonly amount?: int64$Input;
+
+  /**
+   * Comment added to the transaction
+   * @type {string} {@link string}
+   */
+  readonly comment?: string;
+
+  /**
+   * Pass true if the comment is encrypted and must be decrypted using the receiver's or sender's private key
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_comment_encrypted?: Bool$Input;
+
+  /**
+   * Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates
+   * @type {int32} {@link int32}
+   */
+  readonly sending_id?: int32;
+
+  /**
+   * Serialized data for regular cryptocurrency transfer request. The minimum allowed transfer amount is getOption("ton_wallet_transfer_amount_min")
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly regular_transfer_data?: bytes$Input;
+
+  /**
+   * Serialized data for gasless cryptocurrency transfer request; pass an empty string to force a regular request.
+   *
+   * - The minimum allowed transfer amount for a gasless transfer is getOption("ton_wallet_gasless_transfer_amount_min")
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly gasless_transfer_data?: bytes$Input;
+};
+
+/**
+ * Sends a cryptocurrency from the user's TON wallet; can be used only if getOption("can_use_ton_wallet")
+ */
+export type sendTonWalletTransfer$DirectInput = {
+  /**
+   * Identifier of the user who will receive the transfer; pass 0 if unknown
+   * @type {int53} {@link int53}
+   */
+  readonly user_id?: int53;
+
+  /**
+   * Address in the TON blockchain of the transaction peer
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+
+  /**
+   * The amount of the sent cryptocurrency, in the smallest units of the cryptocurrency
+   * @type {int64$Input} {@link int64}
+   */
+  readonly amount?: int64$Input;
+
+  /**
+   * Comment added to the transaction
+   * @type {string} {@link string}
+   */
+  readonly comment?: string;
+
+  /**
+   * Pass true if the comment is encrypted and must be decrypted using the receiver's or sender's private key
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_comment_encrypted?: Bool$Input;
+
+  /**
+   * Non-persistent identifier, which will be returned back in messageSendingStatePending object and can be used to match sent messages and corresponding updateNewMessage updates
+   * @type {int32} {@link int32}
+   */
+  readonly sending_id?: int32;
+
+  /**
+   * Serialized data for regular cryptocurrency transfer request. The minimum allowed transfer amount is getOption("ton_wallet_transfer_amount_min")
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly regular_transfer_data?: bytes$Input;
+
+  /**
+   * Serialized data for gasless cryptocurrency transfer request; pass an empty string to force a regular request.
+   *
+   * - The minimum allowed transfer amount for a gasless transfer is getOption("ton_wallet_gasless_transfer_amount_min")
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly gasless_transfer_data?: bytes$Input;
+};
+
+/**
+ * Sends a cryptocurrency from the user's TON wallet; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {sendTonWalletTransfer$Input} parameters {@link sendTonWalletTransfer$Input}
+ * @returns {TonWalletTransferResult} {@link TonWalletTransferResult}
+ */
+export type sendTonWalletTransfer = (
+  parameters: sendTonWalletTransfer$Input
+) => TonWalletTransferResult;
+
+/**
+ * Deletes the current TON wallet of the user and creates a new one; can be used only if getOption("can_use_ton_wallet")
+ */
+export type deleteTonWallet$Input = {
+  readonly _: "deleteTonWallet";
+
+  /**
+   * Password of the current user; pass an empty string unless receive an error with a message "PASSWORD_MISSING" for a passwordless request
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+};
+
+/**
+ * Deletes the current TON wallet of the user and creates a new one; can be used only if getOption("can_use_ton_wallet")
+ */
+export type deleteTonWallet$DirectInput = {
+  /**
+   * Password of the current user; pass an empty string unless receive an error with a message "PASSWORD_MISSING" for a passwordless request
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+};
+
+/**
+ * Deletes the current TON wallet of the user and creates a new one; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {deleteTonWallet$Input} parameters {@link deleteTonWallet$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type deleteTonWallet = (parameters: deleteTonWallet$Input) => Ok;
+
+/**
+ * Replaces the current TON wallet with another existing v6r2 wallet or changes private key of the current TON wallet; can be used only if getOption("can_use_ton_wallet")
+ */
+export type replaceTonWallet$Input = {
+  readonly _: "replaceTonWallet";
+
+  /**
+   * Password of the current user; pass an empty string unless receive an error with a message "PASSWORD_MISSING" for a passwordless request
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+
+  /**
+   * Original public key of the new TON wallet
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly anchor_public_key?: bytes$Input;
+
+  /**
+   * Proof of ownership of the new private key of the TON wallet; use getTonWalletOwnershipProofChallenge to get a challenge for the proof
+   * @type {tonWalletOwnershipProof$Input} {@link tonWalletOwnershipProof}
+   */
+  readonly proof?: tonWalletOwnershipProof$Input;
+};
+
+/**
+ * Replaces the current TON wallet with another existing v6r2 wallet or changes private key of the current TON wallet; can be used only if getOption("can_use_ton_wallet")
+ */
+export type replaceTonWallet$DirectInput = {
+  /**
+   * Password of the current user; pass an empty string unless receive an error with a message "PASSWORD_MISSING" for a passwordless request
+   * @type {string} {@link string}
+   */
+  readonly password?: string;
+
+  /**
+   * Original public key of the new TON wallet
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly anchor_public_key?: bytes$Input;
+
+  /**
+   * Proof of ownership of the new private key of the TON wallet; use getTonWalletOwnershipProofChallenge to get a challenge for the proof
+   * @type {tonWalletOwnershipProof$Input} {@link tonWalletOwnershipProof}
+   */
+  readonly proof?: tonWalletOwnershipProof$Input;
+};
+
+/**
+ * Replaces the current TON wallet with another existing v6r2 wallet or changes private key of the current TON wallet; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {replaceTonWallet$Input} parameters {@link replaceTonWallet$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type replaceTonWallet = (parameters: replaceTonWallet$Input) => Ok;
+
+/**
+ * Returns exchange rates of currencies to USD
+ */
+export type getCurrencyExchangeRates$Input = {
+  readonly _: "getCurrencyExchangeRates";
+};
+
+/**
+ * Returns exchange rates of currencies to USD
+ */
+export type getCurrencyExchangeRates$DirectInput = {};
+
+/**
+ * Returns exchange rates of currencies to USD
+ *
+ * @param {getCurrencyExchangeRates$Input} parameters {@link getCurrencyExchangeRates$Input}
+ * @returns {CurrencyExchangeRates} {@link CurrencyExchangeRates}
+ */
+export type getCurrencyExchangeRates = (
+  parameters: getCurrencyExchangeRates$Input
+) => CurrencyExchangeRates;
+
+/**
+ * Returns NFTs stored on the TON wallet of the user; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonWalletNfts$Input = {
+  readonly _: "getTonWalletNfts";
+
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of NFTs to be returned; must be positive and can't be greater than 20
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns NFTs stored on the TON wallet of the user; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonWalletNfts$DirectInput = {
+  /**
+   * Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results
+   * @type {string} {@link string}
+   */
+  readonly offset?: string;
+
+  /**
+   * The maximum number of NFTs to be returned; must be positive and can't be greater than 20
+   * @type {int32} {@link int32}
+   */
+  readonly limit?: int32;
+};
+
+/**
+ * Returns NFTs stored on the TON wallet of the user; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {getTonWalletNfts$Input} parameters {@link getTonWalletNfts$Input}
+ * @returns {TonNfts} {@link TonNfts}
+ */
+export type getTonWalletNfts = (parameters: getTonWalletNfts$Input) => TonNfts;
+
+/**
+ * Returns names of upgraded gift collections whose NFTs can be used as background_nft_address in setTonWalletCardStickers; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonWalletCardBackgroundGiftCollectionNames$Input = {
+  readonly _: "getTonWalletCardBackgroundGiftCollectionNames";
+};
+
+/**
+ * Returns names of upgraded gift collections whose NFTs can be used as background_nft_address in setTonWalletCardStickers; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonWalletCardBackgroundGiftCollectionNames$DirectInput = {};
+
+/**
+ * Returns names of upgraded gift collections whose NFTs can be used as background_nft_address in setTonWalletCardStickers; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {getTonWalletCardBackgroundGiftCollectionNames$Input} parameters {@link getTonWalletCardBackgroundGiftCollectionNames$Input}
+ * @returns {UpgradedGiftCollectionNames} {@link UpgradedGiftCollectionNames}
+ */
+export type getTonWalletCardBackgroundGiftCollectionNames = (
+  parameters: getTonWalletCardBackgroundGiftCollectionNames$Input
+) => UpgradedGiftCollectionNames;
+
+/**
+ * Changes the list of stickers on the TON wallet card of the current user; can be used only if getOption("can_use_ton_wallet").
+ *
+ * - The whole list of stickers is replaced. The request can take up to 20 seconds to complete, so it must be called only on explicit user action.
+ *
+ * - Stickers are removed automatically if the corresponding NFT leaves the wallet or the wallet is replaced. Returns the updated card
+ */
+export type setTonWalletCardStickers$Input = {
+  readonly _: "setTonWalletCardStickers";
+
+  /**
+   * The new list of stickers; pass an empty list to remove all stickers. Up to 10 stickers can be added. Each NFT can be used only once
+   * @type {vector$Input<inputTonWalletCardSticker$Input>} {@link vector<inputTonWalletCardSticker>}
+   */
+  readonly stickers?: vector$Input<inputTonWalletCardSticker$Input>;
+
+  /**
+   * Address of the NFT from the new list of stickers, whose colors will be used for the card background; pass an empty string to use the default background.
+   *
+   * - The NFT must correspond to an upgraded gift with can_be_ton_wallet_card_background == true
+   * @type {string} {@link string}
+   */
+  readonly background_nft_address?: string;
+};
+
+/**
+ * Changes the list of stickers on the TON wallet card of the current user; can be used only if getOption("can_use_ton_wallet").
+ *
+ * - The whole list of stickers is replaced. The request can take up to 20 seconds to complete, so it must be called only on explicit user action.
+ *
+ * - Stickers are removed automatically if the corresponding NFT leaves the wallet or the wallet is replaced. Returns the updated card
+ */
+export type setTonWalletCardStickers$DirectInput = {
+  /**
+   * The new list of stickers; pass an empty list to remove all stickers. Up to 10 stickers can be added. Each NFT can be used only once
+   * @type {vector$Input<inputTonWalletCardSticker$Input>} {@link vector<inputTonWalletCardSticker>}
+   */
+  readonly stickers?: vector$Input<inputTonWalletCardSticker$Input>;
+
+  /**
+   * Address of the NFT from the new list of stickers, whose colors will be used for the card background; pass an empty string to use the default background.
+   *
+   * - The NFT must correspond to an upgraded gift with can_be_ton_wallet_card_background == true
+   * @type {string} {@link string}
+   */
+  readonly background_nft_address?: string;
+};
+
+/**
+ * Changes the list of stickers on the TON wallet card of the current user; can be used only if getOption("can_use_ton_wallet").
+ *
+ * - The whole list of stickers is replaced. The request can take up to 20 seconds to complete, so it must be called only on explicit user action.
+ *
+ * - Stickers are removed automatically if the corresponding NFT leaves the wallet or the wallet is replaced. Returns the updated card
+ *
+ * @param {setTonWalletCardStickers$Input} parameters {@link setTonWalletCardStickers$Input}
+ * @returns {TonWalletCard} {@link TonWalletCard}
+ */
+export type setTonWalletCardStickers = (
+  parameters: setTonWalletCardStickers$Input
+) => TonWalletCard;
+
+/**
+ * Returns active TON Connect sessions; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonConnectSessions$Input = {
+  readonly _: "getTonConnectSessions";
+};
+
+/**
+ * Returns active TON Connect sessions; can be used only if getOption("can_use_ton_wallet")
+ */
+export type getTonConnectSessions$DirectInput = {};
+
+/**
+ * Returns active TON Connect sessions; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {getTonConnectSessions$Input} parameters {@link getTonConnectSessions$Input}
+ * @returns {TonConnectSessions} {@link TonConnectSessions}
+ */
+export type getTonConnectSessions = (
+  parameters: getTonConnectSessions$Input
+) => TonConnectSessions;
+
+/**
+ * Creates a TON Connect session; can be used only if getOption("can_use_ton_wallet")
+ */
+export type createTonConnectSession$Input = {
+  readonly _: "createTonConnectSession";
+
+  /**
+   * Hex-encoded public X25519 key of the dApp
+   * @type {string} {@link string}
+   */
+  readonly dapp_client_id?: string;
+
+  /**
+   * URL of the manifest of the dApp
+   * @type {string} {@link string}
+   */
+  readonly manifest_url?: string;
+};
+
+/**
+ * Creates a TON Connect session; can be used only if getOption("can_use_ton_wallet")
+ */
+export type createTonConnectSession$DirectInput = {
+  /**
+   * Hex-encoded public X25519 key of the dApp
+   * @type {string} {@link string}
+   */
+  readonly dapp_client_id?: string;
+
+  /**
+   * URL of the manifest of the dApp
+   * @type {string} {@link string}
+   */
+  readonly manifest_url?: string;
+};
+
+/**
+ * Creates a TON Connect session; can be used only if getOption("can_use_ton_wallet")
+ *
+ * @param {createTonConnectSession$Input} parameters {@link createTonConnectSession$Input}
+ * @returns {TonConnectSession} {@link TonConnectSession}
+ */
+export type createTonConnectSession = (
+  parameters: createTonConnectSession$Input
+) => TonConnectSession;
+
+/**
+ * Sets wallet_client_id for a pending TON Connect session. Then, sendTonConnectSessionConnectResult must be used to accept or reject the session.
+ *
+ * - If the session was created for an OAuth request, then acceptOauthRequest must be used instead
+ */
+export type setTonConnectSessionWalletClientId$Input = {
+  readonly _: "setTonConnectSessionWalletClientId";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Hex-encoded public X25519 key of the current user's application calculated from the TON wallet private key and session parameters
+   * @type {string} {@link string}
+   */
+  readonly wallet_client_id?: string;
+};
+
+/**
+ * Sets wallet_client_id for a pending TON Connect session. Then, sendTonConnectSessionConnectResult must be used to accept or reject the session.
+ *
+ * - If the session was created for an OAuth request, then acceptOauthRequest must be used instead
+ */
+export type setTonConnectSessionWalletClientId$DirectInput = {
+  /**
+   * Unique identifier of the session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Hex-encoded public X25519 key of the current user's application calculated from the TON wallet private key and session parameters
+   * @type {string} {@link string}
+   */
+  readonly wallet_client_id?: string;
+};
+
+/**
+ * Sets wallet_client_id for a pending TON Connect session. Then, sendTonConnectSessionConnectResult must be used to accept or reject the session.
+ *
+ * - If the session was created for an OAuth request, then acceptOauthRequest must be used instead
+ *
+ * @param {setTonConnectSessionWalletClientId$Input} parameters {@link setTonConnectSessionWalletClientId$Input}
+ * @returns {TonConnectChallenge} {@link TonConnectChallenge}
+ */
+export type setTonConnectSessionWalletClientId = (
+  parameters: setTonConnectSessionWalletClientId$Input
+) => TonConnectChallenge;
+
+/**
+ * Accepts or rejects a TON Connect session
+ */
+export type sendTonConnectSessionConnectResult$Input = {
+  readonly _: "sendTonConnectSessionConnectResult";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Answer to the challenge received from setTonConnectSessionWalletClientId
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly challenge_answer?: bytes$Input;
+
+  /**
+   * Pass true to reject the request; pass false to accept it
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_error?: Bool$Input;
+
+  /**
+   * Body of the result
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly body?: bytes$Input;
+
+  /**
+   * Identifier to trace the connection request
+   * @type {string} {@link string}
+   */
+  readonly trace_id?: string;
+};
+
+/**
+ * Accepts or rejects a TON Connect session
+ */
+export type sendTonConnectSessionConnectResult$DirectInput = {
+  /**
+   * Unique identifier of the session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Answer to the challenge received from setTonConnectSessionWalletClientId
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly challenge_answer?: bytes$Input;
+
+  /**
+   * Pass true to reject the request; pass false to accept it
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_error?: Bool$Input;
+
+  /**
+   * Body of the result
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly body?: bytes$Input;
+
+  /**
+   * Identifier to trace the connection request
+   * @type {string} {@link string}
+   */
+  readonly trace_id?: string;
+};
+
+/**
+ * Accepts or rejects a TON Connect session
+ *
+ * @param {sendTonConnectSessionConnectResult$Input} parameters {@link sendTonConnectSessionConnectResult$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type sendTonConnectSessionConnectResult = (
+  parameters: sendTonConnectSessionConnectResult$Input
+) => Ok;
+
+/**
+ * Returns pending requests in a TON Connect session
+ */
+export type getTonConnectSessionPendingRequests$Input = {
+  readonly _: "getTonConnectSessionPendingRequests";
+
+  /**
+   * Unique identifier of the session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+};
+
+/**
+ * Returns pending requests in a TON Connect session
+ */
+export type getTonConnectSessionPendingRequests$DirectInput = {
+  /**
+   * Unique identifier of the session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+};
+
+/**
+ * Returns pending requests in a TON Connect session
+ *
+ * @param {getTonConnectSessionPendingRequests$Input} parameters {@link getTonConnectSessionPendingRequests$Input}
+ * @returns {TonConnectRequests} {@link TonConnectRequests}
+ */
+export type getTonConnectSessionPendingRequests = (
+  parameters: getTonConnectSessionPendingRequests$Input
+) => TonConnectRequests;
+
+/**
+ * Returns pending requests with a dApp through TON Connect
+ */
+export type getTonConnectDAppPendingRequests$Input = {
+  readonly _: "getTonConnectDAppPendingRequests";
+
+  /**
+   * Hex-encoded public X25519 key of the dApp
+   * @type {string} {@link string}
+   */
+  readonly dapp_client_id?: string;
+};
+
+/**
+ * Returns pending requests with a dApp through TON Connect
+ */
+export type getTonConnectDAppPendingRequests$DirectInput = {
+  /**
+   * Hex-encoded public X25519 key of the dApp
+   * @type {string} {@link string}
+   */
+  readonly dapp_client_id?: string;
+};
+
+/**
+ * Returns pending requests with a dApp through TON Connect
+ *
+ * @param {getTonConnectDAppPendingRequests$Input} parameters {@link getTonConnectDAppPendingRequests$Input}
+ * @returns {TonConnectRequests} {@link TonConnectRequests}
+ */
+export type getTonConnectDAppPendingRequests = (
+  parameters: getTonConnectDAppPendingRequests$Input
+) => TonConnectRequests;
+
+/**
+ * Claims a request received through TON Connect for processing on this device
+ */
+export type claimTonConnectRequest$Input = {
+  readonly _: "claimTonConnectRequest";
+
+  /**
+   * Unique identifier of the TON Connect session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Identifier of the message with the request
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Identifier of the request assigned by the dApp
+   * @type {string} {@link string}
+   */
+  readonly dapp_request_id?: string;
+
+  /**
+   * Pass true to reject the request
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_rejected?: Bool$Input;
+};
+
+/**
+ * Claims a request received through TON Connect for processing on this device
+ */
+export type claimTonConnectRequest$DirectInput = {
+  /**
+   * Unique identifier of the TON Connect session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Identifier of the message with the request
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Identifier of the request assigned by the dApp
+   * @type {string} {@link string}
+   */
+  readonly dapp_request_id?: string;
+
+  /**
+   * Pass true to reject the request
+   * @type {Bool$Input} {@link Bool}
+   */
+  readonly is_rejected?: Bool$Input;
+};
+
+/**
+ * Claims a request received through TON Connect for processing on this device
+ *
+ * @param {claimTonConnectRequest$Input} parameters {@link claimTonConnectRequest$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type claimTonConnectRequest = (
+  parameters: claimTonConnectRequest$Input
+) => Ok;
+
+/**
+ * Sends an answer for a request received through TON Connect
+ */
+export type answerTonConnectRequest$Input = {
+  readonly _: "answerTonConnectRequest";
+
+  /**
+   * Unique identifier of the TON Connect session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Identifier of the message with the request
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Identifier to trace the request
+   * @type {string} {@link string}
+   */
+  readonly trace_id?: string;
+
+  /**
+   * Body of the response
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly body?: bytes$Input;
+};
+
+/**
+ * Sends an answer for a request received through TON Connect
+ */
+export type answerTonConnectRequest$DirectInput = {
+  /**
+   * Unique identifier of the TON Connect session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Identifier of the message with the request
+   * @type {int53} {@link int53}
+   */
+  readonly message_id?: int53;
+
+  /**
+   * Identifier to trace the request
+   * @type {string} {@link string}
+   */
+  readonly trace_id?: string;
+
+  /**
+   * Body of the response
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly body?: bytes$Input;
+};
+
+/**
+ * Sends an answer for a request received through TON Connect
+ *
+ * @param {answerTonConnectRequest$Input} parameters {@link answerTonConnectRequest$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type answerTonConnectRequest = (
+  parameters: answerTonConnectRequest$Input
+) => Ok;
+
+/**
+ * Returns the next event identifier for the given TON Connect session
+ */
+export type getTonConnectSessionNextEventId$Input = {
+  readonly _: "getTonConnectSessionNextEventId";
+
+  /**
+   * Unique identifier of the TON Connect session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+};
+
+/**
+ * Returns the next event identifier for the given TON Connect session
+ */
+export type getTonConnectSessionNextEventId$DirectInput = {
+  /**
+   * Unique identifier of the TON Connect session
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+};
+
+/**
+ * Returns the next event identifier for the given TON Connect session
+ *
+ * @param {getTonConnectSessionNextEventId$Input} parameters {@link getTonConnectSessionNextEventId$Input}
+ * @returns {TonConnectSessionEventId} {@link TonConnectSessionEventId}
+ */
+export type getTonConnectSessionNextEventId = (
+  parameters: getTonConnectSessionNextEventId$Input
+) => TonConnectSessionEventId;
+
+/**
+ * Closes a TON Connect session
+ */
+export type disconnectTonConnectSession$Input = {
+  readonly _: "disconnectTonConnectSession";
+
+  /**
+   * Unique identifier of the TON Connect session to close
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Encrypted body of the disconnect event; may be empty if the session has already been closed. Use getTonConnectSessionNextEventId to get event identifier for the event
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly body?: bytes$Input;
+};
+
+/**
+ * Closes a TON Connect session
+ */
+export type disconnectTonConnectSession$DirectInput = {
+  /**
+   * Unique identifier of the TON Connect session to close
+   * @type {int64$Input} {@link int64}
+   */
+  readonly session_id?: int64$Input;
+
+  /**
+   * Encrypted body of the disconnect event; may be empty if the session has already been closed. Use getTonConnectSessionNextEventId to get event identifier for the event
+   * @type {bytes$Input} {@link bytes}
+   */
+  readonly body?: bytes$Input;
+};
+
+/**
+ * Closes a TON Connect session
+ *
+ * @param {disconnectTonConnectSession$Input} parameters {@link disconnectTonConnectSession$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type disconnectTonConnectSession = (
+  parameters: disconnectTonConnectSession$Input
+) => Ok;
+
+/**
+ * Returns available on-ramp providers
+ */
+export type getOnRampProviders$Input = {
+  readonly _: "getOnRampProviders";
+
+  /**
+   * Pass a cryptocurrency to receive only providers that support it; pass an empty string to receive all providers
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+};
+
+/**
+ * Returns available on-ramp providers
+ */
+export type getOnRampProviders$DirectInput = {
+  /**
+   * Pass a cryptocurrency to receive only providers that support it; pass an empty string to receive all providers
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+};
+
+/**
+ * Returns available on-ramp providers
+ *
+ * @param {getOnRampProviders$Input} parameters {@link getOnRampProviders$Input}
+ * @returns {OnRampProviders} {@link OnRampProviders}
+ */
+export type getOnRampProviders = (
+  parameters: getOnRampProviders$Input
+) => OnRampProviders;
+
+/**
+ * Returns the list of fiat currencies supported by an on-ramp provider for the given cryptocurrency
+ */
+export type getOnRampProviderBaseCurrencies$Input = {
+  readonly _: "getOnRampProviderBaseCurrencies";
+
+  /**
+   * Unique identifier of the on-ramp provider; only for providers that support base currencies
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+};
+
+/**
+ * Returns the list of fiat currencies supported by an on-ramp provider for the given cryptocurrency
+ */
+export type getOnRampProviderBaseCurrencies$DirectInput = {
+  /**
+   * Unique identifier of the on-ramp provider; only for providers that support base currencies
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+};
+
+/**
+ * Returns the list of fiat currencies supported by an on-ramp provider for the given cryptocurrency
+ *
+ * @param {getOnRampProviderBaseCurrencies$Input} parameters {@link getOnRampProviderBaseCurrencies$Input}
+ * @returns {Currencies} {@link Currencies}
+ */
+export type getOnRampProviderBaseCurrencies = (
+  parameters: getOnRampProviderBaseCurrencies$Input
+) => Currencies;
+
+/**
+ * Returns the available on-ramp payment methods based on the current user location
+ */
+export type getOnRampPaymentAvailability$Input = {
+  readonly _: "getOnRampPaymentAvailability";
+
+  /**
+   * Unique identifier of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * ISO 4217 currency code of the currency that will be used for the purchase; pass an empty string if unknown
+   * @type {string} {@link string}
+   */
+  readonly base_currency?: string;
+};
+
+/**
+ * Returns the available on-ramp payment methods based on the current user location
+ */
+export type getOnRampPaymentAvailability$DirectInput = {
+  /**
+   * Unique identifier of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * ISO 4217 currency code of the currency that will be used for the purchase; pass an empty string if unknown
+   * @type {string} {@link string}
+   */
+  readonly base_currency?: string;
+};
+
+/**
+ * Returns the available on-ramp payment methods based on the current user location
+ *
+ * @param {getOnRampPaymentAvailability$Input} parameters {@link getOnRampPaymentAvailability$Input}
+ * @returns {OnRampPaymentAvailability} {@link OnRampPaymentAvailability}
+ */
+export type getOnRampPaymentAvailability = (
+  parameters: getOnRampPaymentAvailability$Input
+) => OnRampPaymentAvailability;
+
+/**
+ * Returns the limits for an on-ramp payment; only for providers that support limits retrieval
+ */
+export type getOnRampPaymentLimits$Input = {
+  readonly _: "getOnRampPaymentLimits";
+
+  /**
+   * Unique identifier of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * ISO 4217 currency code of the currency that will be used for the purchase
+   * @type {string} {@link string}
+   */
+  readonly base_currency?: string;
+
+  /**
+   * Name of the chosen payment method; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly payment_method_name?: string;
+};
+
+/**
+ * Returns the limits for an on-ramp payment; only for providers that support limits retrieval
+ */
+export type getOnRampPaymentLimits$DirectInput = {
+  /**
+   * Unique identifier of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * ISO 4217 currency code of the currency that will be used for the purchase
+   * @type {string} {@link string}
+   */
+  readonly base_currency?: string;
+
+  /**
+   * Name of the chosen payment method; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly payment_method_name?: string;
+};
+
+/**
+ * Returns the limits for an on-ramp payment; only for providers that support limits retrieval
+ *
+ * @param {getOnRampPaymentLimits$Input} parameters {@link getOnRampPaymentLimits$Input}
+ * @returns {OnRampPaymentLimits} {@link OnRampPaymentLimits}
+ */
+export type getOnRampPaymentLimits = (
+  parameters: getOnRampPaymentLimits$Input
+) => OnRampPaymentLimits;
+
+/**
+ * Returns a quote for an on-ramp payment; only for providers that support quote retrieval
+ */
+export type getOnRampPaymentQuote$Input = {
+  readonly _: "getOnRampPaymentQuote";
+
+  /**
+   * Unique identifier of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * ISO 4217 currency code of the currency that will be used for the purchase
+   * @type {string} {@link string}
+   */
+  readonly base_currency?: string;
+
+  /**
+   * The amount of the cryptocurrency to buy; pass an empty string if the user selected base_currency_amount
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency_amount?: string;
+
+  /**
+   * The amount of the base currency to spend; pass an empty string if the user selected cryptocurrency_amount
+   * @type {string} {@link string}
+   */
+  readonly base_currency_amount?: string;
+
+  /**
+   * Name of the chosen payment method; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly payment_method_name?: string;
+};
+
+/**
+ * Returns a quote for an on-ramp payment; only for providers that support quote retrieval
+ */
+export type getOnRampPaymentQuote$DirectInput = {
+  /**
+   * Unique identifier of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * ISO 4217 currency code of the currency that will be used for the purchase
+   * @type {string} {@link string}
+   */
+  readonly base_currency?: string;
+
+  /**
+   * The amount of the cryptocurrency to buy; pass an empty string if the user selected base_currency_amount
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency_amount?: string;
+
+  /**
+   * The amount of the base currency to spend; pass an empty string if the user selected cryptocurrency_amount
+   * @type {string} {@link string}
+   */
+  readonly base_currency_amount?: string;
+
+  /**
+   * Name of the chosen payment method; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly payment_method_name?: string;
+};
+
+/**
+ * Returns a quote for an on-ramp payment; only for providers that support quote retrieval
+ *
+ * @param {getOnRampPaymentQuote$Input} parameters {@link getOnRampPaymentQuote$Input}
+ * @returns {OnRampPaymentQuote} {@link OnRampPaymentQuote}
+ */
+export type getOnRampPaymentQuote = (
+  parameters: getOnRampPaymentQuote$Input
+) => OnRampPaymentQuote;
+
+/**
+ * Creates a session for an on-ramp payment
+ */
+export type createOnRampPaymentSession$Input = {
+  readonly _: "createOnRampPaymentSession";
+
+  /**
+   * Unique identifier of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * Address to which the cryptocurrency will be sent
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+
+  /**
+   * Name of the chosen payment method; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly payment_method_name?: string;
+
+  /**
+   * ISO 4217 currency code of the currency that will be used for the purchase; pass an empty string if unknown
+   * @type {string} {@link string}
+   */
+  readonly base_currency?: string;
+
+  /**
+   * The amount of the cryptocurrency to buy; pass an empty string if the user selected base_currency_amount
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency_amount?: string;
+
+  /**
+   * The amount of the base currency to spend; pass an empty string if the user selected cryptocurrency_amount
+   * @type {string} {@link string}
+   */
+  readonly base_currency_amount?: string;
+
+  /**
+   * Memo for the query; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly memo?: string;
+
+  /**
+   * Preferred theme for the WebView; pass "light" for a light theme, "dark" for a dark theme, or leave empty for a default theme
+   * @type {string} {@link string}
+   */
+  readonly theme?: string;
+
+  /**
+   * The URL opened on successful payment; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly success_return_url?: string;
+
+  /**
+   * The URL opened on failed payment; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly fail_return_url?: string;
+};
+
+/**
+ * Creates a session for an on-ramp payment
+ */
+export type createOnRampPaymentSession$DirectInput = {
+  /**
+   * Unique identifier of the on-ramp provider
+   * @type {string} {@link string}
+   */
+  readonly provider_id?: string;
+
+  /**
+   * The cryptocurrency that will be bought
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency?: string;
+
+  /**
+   * Address to which the cryptocurrency will be sent
+   * @type {string} {@link string}
+   */
+  readonly address?: string;
+
+  /**
+   * Name of the chosen payment method; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly payment_method_name?: string;
+
+  /**
+   * ISO 4217 currency code of the currency that will be used for the purchase; pass an empty string if unknown
+   * @type {string} {@link string}
+   */
+  readonly base_currency?: string;
+
+  /**
+   * The amount of the cryptocurrency to buy; pass an empty string if the user selected base_currency_amount
+   * @type {string} {@link string}
+   */
+  readonly cryptocurrency_amount?: string;
+
+  /**
+   * The amount of the base currency to spend; pass an empty string if the user selected cryptocurrency_amount
+   * @type {string} {@link string}
+   */
+  readonly base_currency_amount?: string;
+
+  /**
+   * Memo for the query; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly memo?: string;
+
+  /**
+   * Preferred theme for the WebView; pass "light" for a light theme, "dark" for a dark theme, or leave empty for a default theme
+   * @type {string} {@link string}
+   */
+  readonly theme?: string;
+
+  /**
+   * The URL opened on successful payment; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly success_return_url?: string;
+
+  /**
+   * The URL opened on failed payment; pass an empty string if none
+   * @type {string} {@link string}
+   */
+  readonly fail_return_url?: string;
+};
+
+/**
+ * Creates a session for an on-ramp payment
+ *
+ * @param {createOnRampPaymentSession$Input} parameters {@link createOnRampPaymentSession$Input}
+ * @returns {OnRampPaymentSession} {@link OnRampPaymentSession}
+ */
+export type createOnRampPaymentSession = (
+  parameters: createOnRampPaymentSession$Input
+) => OnRampPaymentSession;
+
+/**
+ * Sends a request to TON Center API and returns its response in JSON format
+ */
+export type sendTonCenterApiRequest$Input = {
+  readonly _: "sendTonCenterApiRequest";
+
+  /**
+   * The path of the requested endpoint. See https://toncenter.com/api/v3/index.html for the list of supported endpoints
+   * @type {string} {@link string}
+   */
+  readonly endpoint?: string;
+
+  /**
+   * Type of the request
+   * @type {TonCenterApiRequestType$Input} {@link TonCenterApiRequestType}
+   */
+  readonly type?: TonCenterApiRequestType$Input;
+};
+
+/**
+ * Sends a request to TON Center API and returns its response in JSON format
+ */
+export type sendTonCenterApiRequest$DirectInput = {
+  /**
+   * The path of the requested endpoint. See https://toncenter.com/api/v3/index.html for the list of supported endpoints
+   * @type {string} {@link string}
+   */
+  readonly endpoint?: string;
+
+  /**
+   * Type of the request
+   * @type {TonCenterApiRequestType$Input} {@link TonCenterApiRequestType}
+   */
+  readonly type?: TonCenterApiRequestType$Input;
+};
+
+/**
+ * Sends a request to TON Center API and returns its response in JSON format
+ *
+ * @param {sendTonCenterApiRequest$Input} parameters {@link sendTonCenterApiRequest$Input}
+ * @returns {Text} {@link Text}
+ */
+export type sendTonCenterApiRequest = (
+  parameters: sendTonCenterApiRequest$Input
+) => Text;
+
+/**
+ * Returns a URL for TON Center Streaming API
+ */
+export type getTonCenterStreamingApiUrl$Input = {
+  readonly _: "getTonCenterStreamingApiUrl";
+};
+
+/**
+ * Returns a URL for TON Center Streaming API
+ */
+export type getTonCenterStreamingApiUrl$DirectInput = {};
+
+/**
+ * Returns a URL for TON Center Streaming API
+ *
+ * @param {getTonCenterStreamingApiUrl$Input} parameters {@link getTonCenterStreamingApiUrl$Input}
+ * @returns {TonCenterStreamingApiUrl} {@link TonCenterStreamingApiUrl}
+ */
+export type getTonCenterStreamingApiUrl = (
+  parameters: getTonCenterStreamingApiUrl$Input
+) => TonCenterStreamingApiUrl;
 
 /**
  * Returns detailed Telegram Star revenue statistics
@@ -172152,7 +184381,9 @@ export type getMessageStatistics = (
 ) => MessageStatistics;
 
 /**
- * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
+ * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only
+ *
+ * - if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
  */
 export type getMessagePublicForwards$Input = {
   readonly _: "getMessagePublicForwards";
@@ -172183,7 +184414,9 @@ export type getMessagePublicForwards$Input = {
 };
 
 /**
- * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
+ * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only
+ *
+ * - if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
  */
 export type getMessagePublicForwards$DirectInput = {
   /**
@@ -172212,7 +184445,9 @@ export type getMessagePublicForwards$DirectInput = {
 };
 
 /**
- * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
+ * Returns forwarded copies of a channel message to different public channels and public reposts as a story. Can be used only
+ *
+ * - if messageProperties.can_get_statistics == true. For optimal performance, the number of returned messages and stories is chosen by TDLib
  *
  * @param {getMessagePublicForwards$Input} parameters {@link getMessagePublicForwards$Input}
  * @returns {PublicForwards} {@link PublicForwards}
@@ -172344,7 +184579,9 @@ export type getStorageStatistics$Input = {
   readonly _: "getStorageStatistics";
 
   /**
-   * The maximum number of chats with the largest storage usage for which separate statistics need to be returned. All other chats will be grouped in entries with chat_id == 0. If the chat info database is not used, the chat_limit is ignored and is always set to 0
+   * The maximum number of chats with the largest storage usage for which separate statistics need to be returned. All other chats will be grouped in entries with chat_id == 0.
+   *
+   * - If the chat info database is not used, the chat_limit is ignored and is always set to 0
    * @type {int32} {@link int32}
    */
   readonly chat_limit?: int32;
@@ -172355,7 +184592,9 @@ export type getStorageStatistics$Input = {
  */
 export type getStorageStatistics$DirectInput = {
   /**
-   * The maximum number of chats with the largest storage usage for which separate statistics need to be returned. All other chats will be grouped in entries with chat_id == 0. If the chat info database is not used, the chat_limit is ignored and is always set to 0
+   * The maximum number of chats with the largest storage usage for which separate statistics need to be returned. All other chats will be grouped in entries with chat_id == 0.
+   *
+   * - If the chat info database is not used, the chat_limit is ignored and is always set to 0
    * @type {int32} {@link int32}
    */
   readonly chat_limit?: int32;
@@ -173212,7 +185451,9 @@ export type setPassportElementErrors = (
 ) => Ok;
 
 /**
- * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details. Returns a 404 error if unknown
+ * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details.
+ *
+ * - Returns a 404 error if unknown
  */
 export type getPreferredCountryLanguage$Input = {
   readonly _: "getPreferredCountryLanguage";
@@ -173225,7 +185466,9 @@ export type getPreferredCountryLanguage$Input = {
 };
 
 /**
- * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details. Returns a 404 error if unknown
+ * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details.
+ *
+ * - Returns a 404 error if unknown
  */
 export type getPreferredCountryLanguage$DirectInput = {
   /**
@@ -173236,7 +185479,9 @@ export type getPreferredCountryLanguage$DirectInput = {
 };
 
 /**
- * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details. Returns a 404 error if unknown
+ * Returns an IETF language tag of the language preferred in the country, which must be used to fill native fields in Telegram Passport personal details.
+ *
+ * - Returns a 404 error if unknown
  *
  * @param {getPreferredCountryLanguage$Input} parameters {@link getPreferredCountryLanguage$Input}
  * @returns {Text} {@link Text}
@@ -175630,7 +187875,7 @@ export type getConnectedAffiliateProgram$Input = {
   readonly _: "getConnectedAffiliateProgram";
 
   /**
-   * The affiliate to which the affiliate program will be connected
+   * The affiliate to which the affiliate program is connected
    * @type {AffiliateType$Input} {@link AffiliateType}
    */
   readonly affiliate?: AffiliateType$Input;
@@ -175647,7 +187892,7 @@ export type getConnectedAffiliateProgram$Input = {
  */
 export type getConnectedAffiliateProgram$DirectInput = {
   /**
-   * The affiliate to which the affiliate program will be connected
+   * The affiliate to which the affiliate program is connected
    * @type {AffiliateType$Input} {@link AffiliateType}
    */
   readonly affiliate?: AffiliateType$Input;
@@ -176092,7 +188337,9 @@ export type getPhoneNumberInfo = (
 ) => PhoneNumberInfo;
 
 /**
- * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
+ * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing
+ *
+ * - localization to the specified language if properly localized country information is expected. Can be called synchronously
  */
 export type getPhoneNumberInfoSync$Input = {
   readonly _: "getPhoneNumberInfoSync";
@@ -176111,7 +188358,9 @@ export type getPhoneNumberInfoSync$Input = {
 };
 
 /**
- * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
+ * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing
+ *
+ * - localization to the specified language if properly localized country information is expected. Can be called synchronously
  */
 export type getPhoneNumberInfoSync$DirectInput = {
   /**
@@ -176128,7 +188377,9 @@ export type getPhoneNumberInfoSync$DirectInput = {
 };
 
 /**
- * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
+ * Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing
+ *
+ * - localization to the specified language if properly localized country information is expected. Can be called synchronously
  *
  * @param {getPhoneNumberInfoSync$Input} parameters {@link getPhoneNumberInfoSync$Input}
  * @returns {PhoneNumberInfo} {@link PhoneNumberInfo}
@@ -176202,6 +188453,38 @@ export type getDeepLinkInfo$DirectInput = {
  * @returns {DeepLinkInfo} {@link DeepLinkInfo}
  */
 export type getDeepLinkInfo = (parameters: getDeepLinkInfo$Input) => DeepLinkInfo;
+
+/**
+ * Dismisses a received web token without consumption; for official Telegram apps only
+ */
+export type dismissWebToken$Input = {
+  readonly _: "dismissWebToken";
+
+  /**
+   * The token to dismiss
+   * @type {string} {@link string}
+   */
+  readonly token?: string;
+};
+
+/**
+ * Dismisses a received web token without consumption; for official Telegram apps only
+ */
+export type dismissWebToken$DirectInput = {
+  /**
+   * The token to dismiss
+   * @type {string} {@link string}
+   */
+  readonly token?: string;
+};
+
+/**
+ * Dismisses a received web token without consumption; for official Telegram apps only
+ *
+ * @param {dismissWebToken$Input} parameters {@link dismissWebToken$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type dismissWebToken = (parameters: dismissWebToken$Input) => Ok;
 
 /**
  * Returns application config, provided by the server. Can be called before authorization
@@ -176564,6 +188847,104 @@ export type pingProxy$DirectInput = {
  * @returns {Seconds} {@link Seconds}
  */
 export type pingProxy = (parameters: pingProxy$Input) => Seconds;
+
+/**
+ * Passes a message, which the page of a web proxy carrier passed to postMessage of the bridge object, to TDLib. Must be called in the order in which the messages were passed.
+ *
+ * - Can be called before authorization
+ */
+export type processWebProxyCarrierMessage$Input = {
+  readonly _: "processWebProxyCarrierMessage";
+
+  /**
+   * Identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  readonly carrier_id?: int32;
+
+  /**
+   * The received message
+   * @type {WebProxyCarrierMessage$Input} {@link WebProxyCarrierMessage}
+   */
+  readonly message?: WebProxyCarrierMessage$Input;
+};
+
+/**
+ * Passes a message, which the page of a web proxy carrier passed to postMessage of the bridge object, to TDLib. Must be called in the order in which the messages were passed.
+ *
+ * - Can be called before authorization
+ */
+export type processWebProxyCarrierMessage$DirectInput = {
+  /**
+   * Identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  readonly carrier_id?: int32;
+
+  /**
+   * The received message
+   * @type {WebProxyCarrierMessage$Input} {@link WebProxyCarrierMessage}
+   */
+  readonly message?: WebProxyCarrierMessage$Input;
+};
+
+/**
+ * Passes a message, which the page of a web proxy carrier passed to postMessage of the bridge object, to TDLib. Must be called in the order in which the messages were passed.
+ *
+ * - Can be called before authorization
+ *
+ * @param {processWebProxyCarrierMessage$Input} parameters {@link processWebProxyCarrierMessage$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type processWebProxyCarrierMessage = (
+  parameters: processWebProxyCarrierMessage$Input
+) => Ok;
+
+/**
+ * Reports that a web proxy carrier failed. TDLib closes the carrier and decides whether and when to request a new one. Can be called before authorization
+ */
+export type reportWebProxyCarrierError$Input = {
+  readonly _: "reportWebProxyCarrierError";
+
+  /**
+   * Identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  readonly carrier_id?: int32;
+
+  /**
+   * The error
+   * @type {WebProxyCarrierError$Input} {@link WebProxyCarrierError}
+   */
+  readonly error?: WebProxyCarrierError$Input;
+};
+
+/**
+ * Reports that a web proxy carrier failed. TDLib closes the carrier and decides whether and when to request a new one. Can be called before authorization
+ */
+export type reportWebProxyCarrierError$DirectInput = {
+  /**
+   * Identifier of the carrier
+   * @type {int32} {@link int32}
+   */
+  readonly carrier_id?: int32;
+
+  /**
+   * The error
+   * @type {WebProxyCarrierError$Input} {@link WebProxyCarrierError}
+   */
+  readonly error?: WebProxyCarrierError$Input;
+};
+
+/**
+ * Reports that a web proxy carrier failed. TDLib closes the carrier and decides whether and when to request a new one. Can be called before authorization
+ *
+ * @param {reportWebProxyCarrierError$Input} parameters {@link reportWebProxyCarrierError$Input}
+ * @returns {Ok} {@link Ok}
+ */
+export type reportWebProxyCarrierError = (
+  parameters: reportWebProxyCarrierError$Input
+) => Ok;
 
 /**
  * Sets new log stream for internal logging of TDLib. Can be called synchronously
