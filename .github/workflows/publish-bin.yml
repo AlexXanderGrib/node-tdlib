@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         # The new binary version is not published yet; tests download it below.
         run: |
-          npm pkg delete optionalDependencies
+          npm pkg set 'optionalDependencies={}' --json
           npm ci
 
       - name: Download pinned TDLib binary

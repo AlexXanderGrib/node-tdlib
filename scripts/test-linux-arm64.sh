@@ -9,7 +9,7 @@ export TDN_PLATFORM=linux
 export TDN_ARCH=arm64
 
 # Test the downloaded release before its optional npm packages are published.
-npm pkg delete optionalDependencies
+npm pkg set 'optionalDependencies={}' --json
   
 
 if [ "$ID" = "alpine" ]; then
