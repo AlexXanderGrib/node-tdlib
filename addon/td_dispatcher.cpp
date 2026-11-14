@@ -20,7 +20,7 @@ namespace {
 using Clock = std::chrono::steady_clock;
 struct Environment;
 struct Client;
-using Deadlines = std::multimap<Clock::time_point, Client*>;
+using Deadlines = std::multimap<Clock::time_point, std::weak_ptr<Client>>;
 struct Client {
   int id = 0;
   double timeout = 0;
@@ -37,12 +37,16 @@ struct Client {
   bool closing = false;
   bool closed = false;
   bool external_gone = false;
+  bool ready = false; // Listed in Environment::ready for the next delivery.
   const char* failure = nullptr;
 };
 struct Environment {
   napi_env env;
   napi_threadsafe_function tsfn = nullptr;
   std::unordered_map<int, std::shared_ptr<Client>> clients;
+  // Clients whose state changed since the last delivery, so delivery cost
+  // follows traffic rather than the number of clients in this environment.
+  std::vector<std::shared_ptr<Client>> ready;
   bool alive = true;
   bool notified = false;
   bool referenced = false;
@@ -68,8 +72,14 @@ class Dispatcher {
     if (thread.joinable()) thread.join();
   }
 
-  void Notify(const std::shared_ptr<Environment>& owner) {
-    if (!owner || !owner->alive || owner->notified) return;
+  void Notify(const std::shared_ptr<Client>& client) {
+    auto owner = client->owner.lock();
+    if (!owner || !owner->alive) return;
+    if (!client->ready) {
+      client->ready = true;
+      owner->ready.push_back(client);
+    }
+    if (owner->notified) return;
     owner->notified = true;
     auto status = napi_call_threadsafe_function(owner->tsfn, nullptr, napi_tsfn_nonblocking);
     if (status != napi_ok && status != napi_queue_full) owner->notified = false;
@@ -83,7 +93,7 @@ class Dispatcher {
     CancelTimer(*client);
     client->responses.clear();
     client->queued_bytes = 0;
-    Notify(client->owner.lock());
+    Notify(client);
   }
 
   void CancelTimer(Client& client) {
@@ -92,20 +102,26 @@ class Dispatcher {
     client.has_timer = false;
   }
 
-  void Route(std::string response) {
-    const int id = TdJsonEnvelope::ClientId(response);
+  // The envelope (id, closed) is parsed by the caller before taking the lock.
+  void Route(std::string response, int id, bool closed) {
     auto found = clients.find(id);
     if (found == clients.end()) return;
     auto client = found->second;
-    const bool closed = TdJsonEnvelope::Closed(response);
     auto owner = client->owner.lock();
     if (!client->closing && owner && owner->alive) {
       // One oversized response may satisfy an already waiting consumer intact.
       // Backlogs are bounded; overflow closes this client, not the receiver.
-      const bool direct = client->receive != nullptr && client->responses.empty();
-      if (client->responses.size() >= client->max_messages ||
+      // The head response is already claimed by the waiting receive and is
+      // only awaiting JS delivery, so it does not count as backlog.
+      const bool waiting = client->receive != nullptr;
+      const bool direct = waiting && client->responses.empty();
+      const bool claimed = waiting && !client->responses.empty();
+      const size_t backlog_count = client->responses.size() - (claimed ? 1 : 0);
+      const size_t backlog_bytes = client->queued_bytes -
+        (claimed ? client->responses.front().size() : 0);
+      if (backlog_count >= client->max_messages ||
           (!direct && (response.size() > client->max_bytes ||
-            client->queued_bytes > client->max_bytes - response.size()))) {
+            backlog_bytes > client->max_bytes - response.size()))) {
         client->failure = "Client receive queue overflow; client is destroyed";
         BeginClose(client);
       } else {
@@ -119,7 +135,7 @@ class Dispatcher {
       cv.notify_all();
     }
     if (!client->responses.empty() || closed) CancelTimer(*client);
-    if (client->receive || client->close || closed) Notify(owner);
+    if (client->receive || client->close || closed) Notify(client);
   }
 
   void Loop() noexcept {
@@ -138,13 +154,20 @@ class Dispatcher {
       lock.unlock();
       std::string response;
       bool failed = false;
+      int id = 0;
+      bool closed = false;
       try {
         const char* raw = TdLibLoader::td_receive.load()(wait);
-        if (raw) response.assign(raw);
+        if (raw) {
+          response.assign(raw);
+          // Scan large responses before locking so JS threads are not blocked.
+          id = TdJsonEnvelope::ClientId(response);
+          closed = id != 0 && TdJsonEnvelope::Closed(response);
+        }
       } catch (...) { failed = true; }
       lock.lock();
       try {
-        if (!response.empty()) Route(std::move(response));
+        if (id != 0) Route(std::move(response), id, closed);
         now = Clock::now();
         if (failed) {
           for (auto& entry : clients) {
@@ -154,10 +177,14 @@ class Dispatcher {
           }
         }
         while (!deadlines.empty() && deadlines.begin()->first <= now) {
-          auto client = deadlines.begin()->second;
+          auto client = deadlines.begin()->second.lock();
+          if (!client) {
+            deadlines.erase(deadlines.begin());
+            continue;
+          }
           CancelTimer(*client);
           client->timed_out = true;
-          Notify(client->owner.lock());
+          Notify(client);
         }
       } catch (...) {
         // Never propagate a C++ exception out of a native receiver thread.
@@ -192,8 +219,8 @@ bool Active(const std::shared_ptr<Environment>& owner) {
   for (const auto& entry : owner->clients) if (!entry.second->closed) return true;
   return false;
 }
-bool NeedsReference(const std::shared_ptr<Environment>& owner) {
-  for (const auto& entry : owner->clients) {
+bool NeedsReference(const Environment& owner) {
+  for (const auto& entry : owner.clients) {
     auto& client = entry.second;
     if (!client->closed || client->receive || client->close) return true;
   }
@@ -214,10 +241,12 @@ void CallJs(napi_env env, napi_value, void* context, void*) noexcept {
     {
       std::lock_guard<std::recursive_mutex> lock(broker.mutex);
       if (!owner->alive) return;
-      deliveries.reserve(owner->clients.size() * 2);
+      std::vector<std::shared_ptr<Client>> ready;
+      ready.swap(owner->ready);
+      deliveries.reserve(ready.size() * 2);
       owner->notified = false;
-      for (auto it = owner->clients.begin(); it != owner->clients.end();) {
-        auto client = it->second;
+      for (const auto& client : ready) {
+        client->ready = false;
         if (client->receive && (client->closing || client->failure ||
             !client->responses.empty() || client->timed_out || client->closed)) {
           Delivery delivery{client->receive, {}, {}};
@@ -240,10 +269,10 @@ void CallJs(napi_env env, napi_value, void* context, void*) noexcept {
           client->close = nullptr;
         }
         if (client->external_gone && client->closed && !client->receive && !client->close) {
-          it = owner->clients.erase(it);
-        } else ++it;
+          owner->clients.erase(client->id);
+        }
       }
-      if (owner->referenced && !NeedsReference(broker.environments.at(env))) {
+      if (owner->referenced && !NeedsReference(*owner)) {
         napi_unref_threadsafe_function(env, owner->tsfn);
         owner->referenced = false;
       }
@@ -269,20 +298,30 @@ void Cleanup(void* data) noexcept {
   auto& broker = Broker();
   try {
     // No loader lock: the receive thread must drain closure while this hook waits.
+    std::shared_ptr<Environment> owner;
+    {
+      std::unique_lock<std::recursive_mutex> lock(broker.mutex);
+      auto found = broker.environments.find(env);
+      if (found == broker.environments.end()) return;
+      owner = found->second;
+      owner->alive = false;
+      owner->ready.clear();
+      for (auto& entry : owner->clients) {
+        auto& client = entry.second;
+        client->receive = nullptr;
+        client->close = nullptr;
+        client->owner.reset();
+        broker.BeginClose(client);
+      }
+      // Closing can take as long as TDLib needs. Do not hold `lifecycle` here:
+      // td_client_create in another environment holds the loader mutex while
+      // waiting for it, which would stall every native call in the process.
+      broker.cv.wait(lock, [&owner] { return !Active(owner); });
+    }
+    // The environment stays registered until here, so the receiver cannot be
+    // stopped or restarted underneath the wait above.
     std::lock_guard<std::mutex> lifecycle(broker.lifecycle);
     std::unique_lock<std::recursive_mutex> lock(broker.mutex);
-    auto found = broker.environments.find(env);
-    if (found == broker.environments.end()) return;
-    auto owner = found->second;
-    owner->alive = false;
-    for (auto& entry : owner->clients) {
-      auto& client = entry.second;
-      client->receive = nullptr;
-      client->close = nullptr;
-      client->owner.reset();
-      broker.BeginClose(client);
-    }
-    broker.cv.wait(lock, [&owner] { return !Active(owner); });
     owner->clients.clear();
     broker.environments.erase(env);
     napi_release_threadsafe_function(owner->tsfn, napi_tsfn_abort);
@@ -440,14 +479,20 @@ Napi::Value Receive(const Napi::CallbackInfo& info) {
     Reject(info.Env(), deferred, "receive is not finished yet");
     return promise;
   }
+  const bool pending = client->closing || client->closed || client->failure ||
+    !client->responses.empty();
   client->receive = deferred;
   Ref(client->owner.lock());
-  client->timed_out = false;
-  if (client->closing || client->closed || client->failure || !client->responses.empty()) {
-    broker.Notify(client->owner.lock());
+  // The receiver thread cannot notice a zero deadline until its current
+  // td_receive poll returns (up to 100 ms), so expire it here. Delivery still
+  // goes through the thread-safe function: resolving synchronously would let
+  // a `for (;;) await receive()` loop starve the event loop.
+  client->timed_out = !pending && client->timeout == 0;
+  if (pending || client->timed_out) {
+    broker.Notify(client);
   } else {
     auto deadline = Clock::now() + std::chrono::duration_cast<Clock::duration>(std::chrono::duration<double>(client->timeout));
-    client->timer = broker.deadlines.emplace(deadline, client.get());
+    client->timer = broker.deadlines.emplace(deadline, client);
     client->has_timer = true;
   }
   broker.cv.notify_all();
@@ -455,9 +500,15 @@ Napi::Value Receive(const Napi::CallbackInfo& info) {
 }
 void Send(const Napi::CallbackInfo& info) {
   auto request = Request(info, 1);
-  std::lock_guard<std::recursive_mutex> lock(Broker().mutex);
-  auto client = Get(info, true);
-  TdLibLoader::td_send.load()(client->id, request.c_str());
+  int id;
+  {
+    std::lock_guard<std::recursive_mutex> lock(Broker().mutex);
+    id = Get(info, true)->id;
+  }
+  // td_send parses the JSON synchronously; keep the receiver able to route
+  // meanwhile. A request racing with closure gets a TDLib error response for
+  // a client that is no longer routed, which is harmless.
+  TdLibLoader::td_send.load()(id, request.c_str());
 }
 Napi::Value Execute(const Napi::CallbackInfo& info) {
   RequireLoaded(info.Env());
@@ -482,7 +533,7 @@ Napi::Value Destroy(const Napi::CallbackInfo& info) {
   client->close = deferred;
   Ref(client->owner.lock());
   broker.BeginClose(client);
-  if (client->closed) broker.Notify(client->owner.lock());
+  if (client->closed) broker.Notify(client);
   return promise;
 }
 } // namespace TdDispatcher
