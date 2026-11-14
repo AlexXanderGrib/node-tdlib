@@ -527,6 +527,113 @@ const cases = {
           await Promise.all(workers.map((worker) => worker.terminate()));
         }
       }
+    },
+
+  "throwing native calls during worker termination never abort the process":
+    async () => {
+      // napi_throw fails while a worker stops; node-addon-api must swallow that
+      // instead of rethrowing from its catch handler into std::terminate().
+      const source = `
+        const addon = require(${JSON.stringify(addonPath)});
+        require("node:worker_threads").parentPort.postMessage("running");
+        for (;;) {
+          try { addon.td_send("not a client id", "{}"); } catch {}
+        }`;
+      for (let i = 0; i < 20; i++) {
+        const worker = new Worker(source, { eval: true });
+        await new Promise((resolve, reject) => {
+          worker.once("message", resolve);
+          worker.once("error", reject);
+        });
+        await delay(2 + (i % 8));
+        await worker.terminate();
+      }
+    },
+
+  "an oversized response claimed by a waiting receive is not counted as backlog":
+    async () => {
+      addon.load_tdjson(library);
+      const client = addon.td_client_create(1, 256, 1024);
+      const first = addon.td_client_receive(client);
+      // Allowed past the byte limit because a consumer is already waiting.
+      addon.td_client_send(client, JSON.stringify({ big: "x".repeat(4096) }));
+      // Arrives before JS takes the first response; it must not overflow.
+      addon.td_client_send(client, '{"small":true}');
+      assert.equal(JSON.parse(await first).big.length, 4096);
+      assert.equal(JSON.parse(await addon.td_client_receive(client)).small, true);
+      await addon.td_client_destroy(client);
+      assert.equal(JSON.parse(addon.td_execute("stats")).managedClients, 0);
+    },
+
+  "a worker waiting for client closure does not block client creation elsewhere":
+    async () => {
+      addon.load_tdjson(library);
+      const source = `
+        const { parentPort, workerData } = require("node:worker_threads");
+        const addon = require(workerData.addonPath);
+        addon.load_tdjson(workerData.library);
+        parentPort.on("message", (command) => {
+          globalThis.client = addon.td_client_create(1);
+          if (command === "delayClose")
+            addon.td_client_send(globalThis.client, '{"@type":"fixtureDelayClose"}');
+          parentPort.postMessage(command);
+        });`;
+      const spawn = () =>
+        new Worker(source, { eval: true, workerData: { addonPath, library } });
+      const message = (worker) =>
+        new Promise((resolve, reject) => {
+          worker.once("message", resolve);
+          worker.once("error", reject);
+        });
+      const closing = spawn();
+      const creating = spawn();
+      try {
+        closing.postMessage("delayClose");
+        await message(closing);
+        // Its cleanup hook now waits until TDLib reports the delayed closure.
+        const terminated = closing.terminate();
+        await delay(100);
+        creating.postMessage("create");
+        assert.equal(await message(creating), "create");
+        // Native calls from other environments must not stall meanwhile.
+        addon.td_execute("releaseClose");
+        await terminated;
+        assert.equal(JSON.parse(addon.td_execute("stats")).managedClients, 1);
+      } finally {
+        await Promise.all([closing.terminate(), creating.terminate()]);
+      }
+      assert.equal(JSON.parse(addon.td_execute("stats")).managedClients, 0);
+    },
+
+  "zero-timeout managed receives answer empty polls without waiting for the receiver":
+    async () => {
+      addon.load_tdjson(library);
+      const client = addon.td_client_create(0);
+      // A second open client keeps the receiver inside its 100 ms polls.
+      const sibling = addon.td_client_create(1);
+      for (let i = 0; i < 10; i++) {
+        const start = process.hrtime.bigint();
+        assert.equal(await addon.td_client_receive(client), null);
+        assert.ok(Number(process.hrtime.bigint() - start) / 1e6 < 50);
+      }
+      // A tight poll loop must still yield to timers and I/O.
+      let fired = false;
+      setTimeout(() => (fired = true), 0);
+      for (let polls = 0; !fired && polls < 100000; polls++)
+        await addon.td_client_receive(client);
+      assert.ok(fired, "zero-timeout polls starved the event loop");
+      addon.td_client_send(client, '{"value":1}');
+      let response = null;
+      for (let i = 0; i < 200 && response === null; i++) {
+        response = await addon.td_client_receive(client);
+        if (response === null) await delay(5);
+      }
+      assert.equal(JSON.parse(response).value, 1);
+      await Promise.all([
+        addon.td_client_destroy(client),
+        addon.td_client_destroy(sibling)
+      ]);
+      assert.equal(JSON.parse(addon.td_execute("stats")).managedClients, 0);
     }
 };
 

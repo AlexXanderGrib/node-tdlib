@@ -68,12 +68,29 @@ inline std::string_view Member(std::string_view json, std::string_view key) {
   }
   return {};
 }
-inline int ClientId(std::string_view json) {
-  auto field = Member(json, "@client_id");
-  if (field.empty()) return 0;
+inline int PositiveInt(std::string_view digits) {
   int id = 0;
-  auto parsed = std::from_chars(field.data(), field.data() + field.size(), id);
-  return parsed.ec == std::errc{} && parsed.ptr == field.data() + field.size() && id > 0 ? id : 0;
+  auto parsed = std::from_chars(digits.data(), digits.data() + digits.size(), id);
+  return parsed.ec == std::errc{} && parsed.ptr == digits.data() + digits.size() && id > 0 ? id : 0;
+}
+// TDLib appends `,"@client_id":N}` as the final member of every response, so
+// read it from the end in O(1). For valid JSON the match cannot be nested or
+// inside a string: the closing brace ends the top-level object. Anything else
+// falls back to the full member scan.
+inline int TrailingClientId(std::string_view json) {
+  constexpr std::string_view key = ",\"@client_id\":";
+  if (json.empty() || json.back() != '}') return 0;
+  const size_t end = json.size() - 1;
+  size_t start = end;
+  while (start > 0 && json[start - 1] >= '0' && json[start - 1] <= '9') --start;
+  if (start == end || start < key.size() ||
+      json.substr(start - key.size(), key.size()) != key) return 0;
+  return PositiveInt(json.substr(start, end - start));
+}
+inline int ClientId(std::string_view json) {
+  if (int id = TrailingClientId(json)) return id;
+  auto field = Member(json, "@client_id");
+  return field.empty() ? 0 : PositiveInt(field);
 }
 inline bool Closed(std::string_view json) {
   return Member(json, "@type") == "\"updateAuthorizationState\"" &&

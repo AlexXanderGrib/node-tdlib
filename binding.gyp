@@ -10,6 +10,7 @@
       "defines": [
         "NAPI_CPP_EXCEPTIONS",
         "NODE_ADDON_API_CPP_EXCEPTIONS_ALL",
+        "NODE_API_SWALLOW_UNTHROWABLE_EXCEPTIONS",
         "NAPI_VERSION=6"
       ],
       "conditions": [
